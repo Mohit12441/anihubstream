@@ -1,0 +1,390 @@
+{
+  "fetched_at": "2026-10-14T08:41:52.446Z",
+  "titles": [
+    {
+      "id": "miss-kobayashi-s-dragon-maid-s",
+      "sources": {
+        "kitsu": 42149,
+        "anilist": 107717,
+        "mal": 39247
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": "mal/39247",
+      "markers": 22
+    },
+    {
+      "id": "nisekoi",
+      "sources": {
+        "kitsu": 9178,
+        "anilist": 20876,
+        "mal": 27787
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": "mal/27787",
+      "markers": 15
+    },
+    {
+      "id": "amagi-brilliant-park",
+      "sources": {
+        "kitsu": 8259,
+        "anilist": 20602,
+        "mal": 22147
+      },
+      "episodes": 13,
+      "episodeTotal": 13,
+      "skipKey": "mal/22147",
+      "markers": 24
+    },
+    {
+      "id": "btooom",
+      "sources": {
+        "kitsu": 7113,
+        "anilist": 14345,
+        "mal": 14345
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": "anilist/14345",
+      "markers": 18
+    },
+    {
+      "id": "akudama-drive",
+      "sources": {
+        "kitsu": 43067,
+        "anilist": 116566,
+        "mal": 41433
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": "mal/41433",
+      "markers": 18
+    },
+    {
+      "id": "sentenced-to-be-a-hero",
+      "sources": {
+        "kitsu": 47759,
+        "anilist": 167152,
+        "mal": 56009
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": null,
+      "markers": 0
+    },
+    {
+      "id": "made-in-abyss-dawn-of-the-deep-soul",
+      "sources": {
+        "kitsu": 14027,
+        "anilist": 100643,
+        "mal": 36862
+      },
+      "episodes": 1,
+      "episodeTotal": 1,
+      "skipKey": null,
+      "markers": 0
+    },
+    {
+      "id": "the-millionaire-detective-balance-unlimited",
+      "sources": {
+        "kitsu": 43056,
+        "anilist": 114888,
+        "mal": 41120
+      },
+      "episodes": 11,
+      "episodeTotal": 11,
+      "skipKey": "mal/41120",
+      "markers": 22
+    },
+    {
+      "id": "kuroko-s-basketball-3",
+      "sources": {
+        "kitsu": 8524,
+        "anilist": 20725,
+        "mal": 24415
+      },
+      "episodes": 25,
+      "episodeTotal": 25,
+      "skipKey": null,
+      "markers": 0
+    },
+    {
+      "id": "mieruko-chan",
+      "sources": {
+        "kitsu": 44185,
+        "anilist": 131083,
+        "mal": 48483
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": "mal/48483",
+      "markers": 21
+    },
+    {
+      "id": "the-dangers-in-my-heart",
+      "sources": {
+        "kitsu": 46299,
+        "anilist": 153152,
+        "mal": 52578
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": "mal/52578",
+      "markers": 21
+    },
+    {
+      "id": "the-testament-of-sister-new-devil",
+      "sources": {
+        "kitsu": 8652,
+        "anilist": 20678,
+        "mal": 23233
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": null,
+      "markers": 0
+    },
+    {
+      "id": "in-spectre",
+      "sources": {
+        "kitsu": 42117,
+        "anilist": 107201,
+        "mal": 39017
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": "mal/39017",
+      "markers": 22
+    },
+    {
+      "id": "land-of-the-lustrous",
+      "sources": {
+        "kitsu": 13521,
+        "anilist": 98707,
+        "mal": 35557
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": null,
+      "markers": 0
+    },
+    {
+      "id": "the-way-of-the-househusband",
+      "sources": {
+        "kitsu": 43718,
+        "anilist": 125426,
+        "mal": 43692
+      },
+      "episodes": 5,
+      "episodeTotal": 5,
+      "skipKey": null,
+      "markers": 0
+    },
+    {
+      "id": "tsukigakirei",
+      "sources": {
+        "kitsu": 13234,
+        "anilist": 98202,
+        "mal": 34822
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": "mal/34822",
+      "markers": 21
+    },
+    {
+      "id": "yu-yu-hakusho-ghostfiles",
+      "sources": {
+        "kitsu": 359,
+        "anilist": 392,
+        "mal": 392
+      },
+      "episodes": 112,
+      "episodeTotal": 112,
+      "skipKey": "anilist/392",
+      "markers": 162
+    },
+    {
+      "id": "ergo-proxy",
+      "sources": {
+        "kitsu": 705,
+        "anilist": 790,
+        "mal": 790
+      },
+      "episodes": 23,
+      "episodeTotal": 23,
+      "skipKey": "anilist/790",
+      "markers": 24
+    }
+  ],
+  "stats": {
+    "episodesStored": 322,
+    "episodeTotal": 322,
+    "markers": 390,
+    "runtimeFallbacks": 0
+  },
+  "droppedGenres": [
+    "Dragons",
+    "Female Protagonist",
+    "Monster Girl",
+    "Family Life",
+    "Found Family",
+    "Primarily Female Cast",
+    "Maids",
+    "Cute Girls Doing Cute Things",
+    "Reverse Isekai",
+    "Anthropomorphism",
+    "Magic",
+    "Urban Fantasy",
+    "Seinen",
+    "Yuri",
+    "Episodic",
+    "Work",
+    "Iyashikei",
+    "Cohabitation",
+    "Otaku Culture",
+    "LGBTQ+ Themes",
+    "Office Lady",
+    "Nudity",
+    "Philosophy",
+    "Parody",
+    "Kemonomimi",
+    "Outdoor Activities",
+    "Foreign",
+    "School",
+    "Female Harem",
+    "Love Triangle",
+    "Male Protagonist",
+    "Heterosexual",
+    "Shounen",
+    "Tsundere",
+    "Fake Relationship",
+    "Yakuza",
+    "Mafia",
+    "Primarily Teen Cast",
+    "Arranged Marriage",
+    "Kuudere",
+    "Slapstick",
+    "Ensemble Cast",
+    "Fairy",
+    "Amnesia",
+    "Curses",
+    "Economics",
+    "Animals",
+    "Ojou-sama",
+    "Disability",
+    "Mermaid",
+    "Surreal Comedy",
+    "Pirates",
+    "Dungeon",
+    "Guns",
+    "Psychological",
+    "Battle Royale",
+    "Survival",
+    "Death Game",
+    "Video Games",
+    "Coastal",
+    "Wilderness",
+    "Body Horror",
+    "Hikikomori",
+    "Gore",
+    "Achronological Order",
+    "Suicide",
+    "Thriller",
+    "Anti-Hero",
+    "Urban",
+    "Crime",
+    "Cyberpunk",
+    "Fugitive",
+    "Dystopian",
+    "Tragedy",
+    "Primarily Adult Cast",
+    "Politics",
+    "Conspiracy",
+    "Prison",
+    "Yandere",
+    "Tomboy",
+    "Artificial Intelligence",
+    "Unrequited Love",
+    "CGI",
+    "Motorcycles",
+    "Trains",
+    "Virtual World",
+    "Space",
+    "Tanned Skin",
+    "Medieval",
+    "Demons",
+    "Gods",
+    "Revenge",
+    "Military",
+    "Cosmic Horror",
+    "Swordplay",
+    "Body Swapping",
+    "Primarily Child Cast",
+    "Lost Civilization",
+    "Human Experimentation",
+    "Robots",
+    "Amputation",
+    "Eco-Horror",
+    "Dissociative Identities",
+    "Chibi",
+    "Food",
+    "Detective",
+    "Police",
+    "Primarily Male Cast",
+    "Cars",
+    "Butler",
+    "Ships",
+    "Sports",
+    "Basketball",
+    "School Club",
+    "Super Power",
+    "Ghost",
+    "Youkai",
+    "Bullying",
+    "Coming of Age",
+    "Chuunibyou",
+    "Ecchi",
+    "Succubus",
+    "Slavery",
+    "Spearplay",
+    "Henshin",
+    "Kaiju",
+    "Teacher",
+    "Classic Literature",
+    "Age Gap",
+    "Meta",
+    "Writing",
+    "Idol",
+    "Time Skip",
+    "Full CGI",
+    "Agender",
+    "Post-Apocalyptic",
+    "Memory Manipulation",
+    "War",
+    "Shapeshifting",
+    "Snowscape",
+    "Mixed Media",
+    "Language Barrier",
+    "Astronomy",
+    "Twins",
+    "Gangs",
+    "Flash",
+    "Educational",
+    "Athletics",
+    "Dancing",
+    "Boxing",
+    "Delinquents",
+    "Martial Arts",
+    "Afterlife",
+    "Cultivation",
+    "Clone",
+    "Noir",
+    "Travel",
+    "Angels",
+    "Denpa",
+    "Pandemic",
+    "Aviation"
+  ]
+}

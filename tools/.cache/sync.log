@@ -1,0 +1,68 @@
+syncing 15 titles (with AniSkip windows)
+   building the AniDB cross-reference from the anime-offline-database dump (~62 MB, one time)
+   41537 dump entries, 13094 with an AniList + AniDB pair -> tools/.cache/aod-anidb-xref.json
+
+> demon-slayer  kitsu/41370 anilist/101922
+      AniDB 14107 rejected for demon-slayer (no windows or runtime drift)
+   demon-slayer                       26/26    eps    0 skip windows
+
+> jujutsu-kaisen  kitsu/42765 anilist/113415
+      AniDB 15275 rejected for jujutsu-kaisen (no windows or runtime drift)
+   jujutsu-kaisen                     24/24    eps    0 skip windows
+
+> solo-leveling  kitsu/46231 anilist/151807
+      AniDB 17495 rejected for solo-leveling (no windows or runtime drift)
+   solo-leveling                      12/12    eps    0 skip windows
+
+> one-piece  kitsu/12 anilist/21
+      AniDB 69 rejected for one-piece (no windows or runtime drift)
+   one-piece                         200/1410  eps    0 skip windows  airing SUN 14:16 UTC
+
+> naruto-shippuden  kitsu/1555 anilist/1735
+      AniDB 4880 rejected for naruto-shippuden (no windows or runtime drift)
+   naruto-shippuden                  200/500   eps    0 skip windows
+
+> black-clover  kitsu/13209 anilist/97940
+      AniDB 12665 rejected for black-clover (no windows or runtime drift)
+   black-clover                      170/170   eps    0 skip windows
+
+> my-hero-academia  kitsu/11469 anilist/21459
+      AniDB 11739 rejected for my-hero-academia (no windows or runtime drift)
+   my-hero-academia                   13/13    eps    0 skip windows
+
+> sousou-no-frieren  kitsu/46474 anilist/154587
+      AniDB 17617 rejected for sousou-no-frieren (no windows or runtime drift)
+   sousou-no-frieren                  28/28    eps    0 skip windows
+
+> chainsaw-man  kitsu/43806 anilist/127230
+      AniDB 15914 rejected for chainsaw-man (no windows or runtime drift)
+   chainsaw-man                       12/12    eps    0 skip windows
+
+> spy-x-family  kitsu/45398 anilist/140960
+      AniDB 16947 rejected for spy-x-family (no windows or runtime drift)
+   spy-x-family                       12/12    eps    0 skip windows
+
+> kusuriya-no-hitorigoto-3rd-season  kitsu/50021 anilist/195516
+      AniDB 19444 rejected for kusuriya-no-hitorigoto-3rd-season (no windows or runtime drift)
+   FAILED kusuriya-no-hitorigoto-3rd-season: kusuriya-no-hitorigoto-3rd-season: the source published no artwork
+
+> black-clover-season-2  kitsu/50024 anilist/195604
+      AniDB 19433 rejected for black-clover-season-2 (no windows or runtime drift)
+   black-clover-season-2              26/26    eps    0 skip windows  airing SAT 14:00 UTC
+
+> tokyo-revengers-zokuhen  kitsu/48960 anilist/178083
+      AniDB 18693 rejected for tokyo-revengers-zokuhen (no windows or runtime drift)
+   FAILED tokyo-revengers-zokuhen: tokyo-revengers-zokuhen: the source published no artwork
+
+> ao-no-hako-2  kitsu/49752 anilist/189123
+      AniDB 19249 rejected for ao-no-hako-2 (no windows or runtime drift)
+   ao-no-hako-2                      200/25    eps    0 skip windows  airing SUN 07:30 UTC
+
+> cyberpunk-edgerunners-ii  kitsu/50016 anilist/195539
+      AniDB 19445 rejected for cyberpunk-edgerunners-ii (no windows or runtime drift)
+   cyberpunk-edgerunners-ii           10/10    eps    0 skip windows  airing TUE 07:00 UTC
+
+seed.sql: 13 anime, 958 episode rows (the sources list 2293 in total), 0 skip windows
+  rank 1 = sousou-no-frieren | 4 titles carry an air slot
+  genres with no tile on this site (dropped, not invented): Demons, Shounen, Vampire, Swordplay, Male Protagonist, Tragedy, Travel, Primarily Teen Cast, Revenge, Monster Girl, Orphan, Gore, CGI, Mythology, Primarily Male Cast, Rural, Historical, Rotoscoping, Super Power, Body Horror, Curses, Chibi, Time Skip, Animals, Food, Urban Fantasy, Youkai, Exorcism, Dissociative Identities, Urban, Magic, Martial Arts, Ensemble Cast, Shapeshifting, Anthropomorphism, School, Boarding School, Twins, Slapstick, Surreal Comedy, Archery, Baseball, Dungeon, Necromancy, Cultivation, Survival, Anti-Hero, War, Alternate Universe, Gods, Angels, Time Manipulation, Post-Apocalyptic, Heterosexual, Bullying, College, Dragons, Ninja, Pirates, Found Family, Conspiracy, Ships, Prophecy, Politics, Royal Affairs, Dystopian, Slavery, Fugitive, Crime, Lost Civilization, Henshin, Cyborg, Monster Boy, Primarily Adult Cast, Philosophy, Robots, Skeleton, Desert, Anachronism, Guns, Prison, Medicine, Samurai, Espionage, Indigenous Cultures, Drugs, Artificial Intelligence, Marriage, Aromantic, Kuudere, Fairy, Assassins, Battle Royale, Adoption, Mermaid, Dinosaurs, Kabuki, Kaiju, Clone, Zombie, Arranged Marriage, Blackmail, Gender Bending, Unrequited Love, Trains, Human Experimentation, Interspecies, Fake Relationship, Brainwashing, Criminal Organization, Coming of Age, Achronological Order, Military, Terrorism, Aliens, LGBTQ+ Themes, Estranged Family, Medieval, Love Triangle, Elf, Reincarnation, Class Struggle, Episodic, Cult, Disability, Tsundere, Nun, Age Regression, Suicide, Tomboy, Nudity, Superhero, Rescue, Female Protagonist, Foreign, Iyashikei, Asexual, Religion, Snowscape, Spearplay, Horticulture, Psychosexual, Yakuza, Age Gap, Cannibalism, Homeless, Police, Amnesia, POV, Family Life, Parenthood, Parody, Cohabitation, Ancient China, Detective, Seinen, Maids, Work, Delinquents, Gangs, Bisexual, Motorcycles, Mafia, Sports, Badminton, Athletics, School Club, Basketball, Acrobatics, Cyberpunk
+

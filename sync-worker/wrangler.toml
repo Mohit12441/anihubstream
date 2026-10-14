@@ -1,0 +1,14 @@
+name = "anihub-sync"
+main = "index.mjs"
+compatibility_date = "2026-09-28"
+
+# Companion Worker for the Pages site. No cron trigger: AniList answers 403
+# "You have been manually blocked" to Cloudflare's shared datacenter egress
+# (verified 2026-10-13), so the hourly refresh runs from the operator machine
+# via the "AniHubHourlyRefresh" Windows task (tools/hourly-refresh.mjs).
+# What remains here is the read-only /health endpoint reporting the last
+# refresh that landed in D1.
+[[d1_databases]]
+binding = "ANIHUB"
+database_name = "anihub"
+database_id = "b352ef74-e863-4278-bee7-e4409afb11bb"
