@@ -35,6 +35,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { GENRES } from '../src/data/anime.ts';
 import { foldSearch } from '../functions/api/_lib.js';
+import { seasonKey } from './season.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const CACHE = resolve(ROOT, 'tools/.cache');
@@ -266,10 +267,9 @@ async function syncTarget(target, droppedGenres, stats) {
   episodes.forEach((e) => { e.markers ??= []; });
 
   const airing = media.nextAiringEpisode?.airingAt ? new Date(media.nextAiringEpisode.airingAt * 1000) : null;
-  /* The air slot is this week's broadcast, so the season label must come from the
-     airdate — a long-runner like One Piece would otherwise be filed under its 1999 debut. */
-  const airingMonth = airing ? airing.getUTCMonth() : 0;
-  const airingSeason = airingMonth < 3 ? 'Winter' : airingMonth < 6 ? 'Spring' : airingMonth < 9 ? 'Summer' : 'Fall';
+  /* The air slot is this week's broadcast, so the season label comes from the airdate, through the
+     same tools/season.mjs rule the other two writers call — a long-runner like One Piece would
+     otherwise be filed under its 1999 debut. */
   const rating = at.averageRating ? Math.round(at.averageRating) / 10 : media.averageScore ? media.averageScore / 10 : null;
 
   const altSeasons = (media.relations?.edges || [])
@@ -311,7 +311,7 @@ async function syncTarget(target, droppedGenres, stats) {
           dayLabel: DAY_LABEL[airing.getUTCDay()],
           date: `${airing.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })} ${airing.getUTCDate()}`,
           time: `${String(airing.getUTCHours()).padStart(2, '0')}:${String(airing.getUTCMinutes()).padStart(2, '0')}`,
-          season: `${airingSeason} ${airing.getUTCFullYear()}`,
+          season: seasonKey(airing),
         }
       : null,
     sourceIds: JSON.stringify({ kitsu: target.kitsu, anilist: target.anilist, mal: media.idMal ?? null }),

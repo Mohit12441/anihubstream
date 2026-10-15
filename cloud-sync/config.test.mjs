@@ -5,9 +5,10 @@
  * Three things are pinned here:
  *   1. the README's env table and the variables the code actually reads — the same list, both ways;
  *   2. the Kitsu run count and the cron in .github/workflows/kitsu-sync.yml;
- *   3. airSlot()'s formatting and the derivation in tools/hourly-refresh.mjs, column for column.
+ *   3. the air slot every writer stamps — column for column against an independent restatement, and
+ *      the season rule against the site's own function, both executed rather than read as text.
  *
- * 3 matters most: those two functions live in files nothing imports in common, they write the same
+ * 3 matters most: those derivations live in files nothing imports in common, they write the same
  * five columns, and if they ever disagree the schedule shelf changes value on the first pass after
  * every cloud insert. Nothing but a test like this can see that.
  */
@@ -19,6 +20,10 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { airSlot } from './sync-anilist.mjs';
 import { RUNS_PER_DAY } from './sync-kitsu.mjs';
+import { seasonKey } from '../tools/season.mjs';
+/* The site's copy of the same rule, executed rather than pattern-matched. Node strips the types on
+   import — the same thing tools/sync-catalogue.mjs already does for src/data/anime.ts. */
+import { currentSeasonKey } from '../src/data/model.ts';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
@@ -153,12 +158,14 @@ describe('the Kitsu run count and the schedule that produces it', () => {
   });
 });
 
-/* The two writers of sched_* , formatting one column set from one AniList field. If they diverge,
-   the value on a cloud-created row changes on the local task's next pass — once it is harmless, and
-   then nobody notices the shelf flip-flopping weeks later. Both halves of the contract are checked:
-   the shape airSlot emits, and that the legacy source still spells the format the same way. */
+/* The writers of sched_* , formatting one column set from one AniList field. If they diverge, the
+   value on a cloud-created row changes on the local task's next pass — once it is harmless, and then
+   nobody notices the shelf flip-flopping weeks later. Three checks, deliberately of different kinds:
+   airSlot's shape against an independent restatement of the legacy SQL (so a format bug is caught
+   even though both writers now share season.mjs), the shared season rule against the site's own
+   function with both executed, and the clear-to-NULL path against the legacy statement's text. */
 describe('airSlot() and tools/hourly-refresh.mjs format the air slot identically', () => {
-  /* Independent restatement of the legacy derivation (tools/hourly-refresh.mjs:117-119), written
+  /* Independent restatement of the legacy derivation (tools/hourly-refresh.mjs:114 and :119), written
      from the SQL it builds rather than from airSlot, so the two can fail to agree. */
   const legacySlot = (at) => {
     const d = new Date(at * 1000);
@@ -219,17 +226,33 @@ describe('airSlot() and tools/hourly-refresh.mjs format the air slot identically
       assert.match(clear, new RegExp(`${column}=NULL`), `the legacy clear statement no longer nulls ${column}, so the two writers no longer clear the same set`);
     }
     assert.match(legacy, /nextAiringEpisode\{ airingAt \}/, 'the legacy writer must read the same AniList field airSlot reads');
+  });
 
-    /* A third writer of the same five columns, from the same field: tools/sync-catalogue.mjs builds
-       the row a title is first inserted from. It states the quarters as comparisons rather than a
-       table, so it is checked as text — and it is the reason airSlot's table is Jan-Mar Winter. All
-       three existing writers agree; a fourth that disagrees is the bug this catches. */
-    const catalogue = read('tools/sync-catalogue.mjs');
-    assert.match(catalogue, /airingMonth < 3 \? 'Winter' : airingMonth < 6 \? 'Spring' : airingMonth < 9 \? 'Summer' : 'Fall'/,
-      'tools/sync-catalogue.mjs no longer spells the quarters the way src/data/model.ts and hourly-refresh do');
-    /* And the site's own rule, which is the one the schedule page filters on. */
-    const model = read('src/data/model.ts');
-    assert.match(model, /SEASON_START_MONTH = \{ Winter: 0, Spring: 3, Summer: 6, Fall: 9 \}/,
-      'the page\'s season filter moved; sched_season has to move with it or the shelf filters to nothing');
+  /* Three writers stamp sched_season and all three now call the same seasonKey (tools/season.mjs),
+     so they agree by construction and no test is needed for that. The fourth copy of the rule is
+     the one worth executing: src/data/model.ts cannot import a .mjs under its own tsconfig, and it
+     is the file that decides which season the schedule page opens on — so the page's filter and the
+     column it filters on are two derivations that have to be compared, not assumed. Both run here
+     over every month edge for three years. */
+  it('uses the site\'s own season rule, and the writers cannot re-spell it', () => {
+    const edges = [];
+    for (let year = 2025; year <= 2027; year++) {
+      for (let month = 0; month < 12; month++) {
+        edges.push(Date.UTC(year, month, 1), Date.UTC(year, month, new Date(Date.UTC(year, month + 1, 0)).getUTCDate()));
+      }
+    }
+    const mismatches = edges.filter((ms) => seasonKey(new Date(ms)) !== currentSeasonKey(new Date(ms)));
+    assert.deepEqual(mismatches, [], `${mismatches.length} month edge(s) where tools/season.mjs and the page's own rule disagree — every title airing on those dates leaves the shelf it is filed on`);
+
+    /* The failure this fence exists for is a writer that stops calling the shared rule and re-spells
+       the quarter boundaries for itself, which is exactly how the AniList-convention bug got in. */
+    const spelledOut = [];
+    for (const dir of ['tools', 'cloud-sync']) {
+      for (const file of readdirSync(join(ROOT, dir))) {
+        if (file.endsWith('.mjs') && /< 3 \? 'Winter'/.test(read(join(dir, file)))) spelledOut.push(`${dir}/${file}`);
+      }
+    }
+    assert.deepEqual(spelledOut.sort(), ['cloud-sync/config.test.mjs', 'tools/season.mjs'].sort(),
+      'a second hand-written quarter rule exists; writers of sched_season must call tools/season.mjs so one column cannot mean two things');
   });
 });

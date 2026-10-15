@@ -27,6 +27,7 @@
 
 import { discover, anilistSends, noteAnilistSend } from './discover-titles.mjs';
 import { importBacklog } from './import-backlog.mjs';
+import { seasonKey } from './season.mjs';
 
 import { execFileSync } from 'node:child_process';
 import { appendFileSync, existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
@@ -93,8 +94,6 @@ async function fetchTrending(titles) {
   return { stmts, trendingListed: media.length, trendingRanked: ranked };
 }
 
-const seasonOf = (month) => (month < 3 ? 'Winter' : month < 6 ? 'Spring' : month < 9 ? 'Summer' : 'Fall');
-
 /* The next broadcast slot each title's AniList record publishes, formatted exactly
    like tools/sync-catalogue.mjs does (UTC day 1=Mon..7=Sun, 'Oct 20', '14:00').
    Every statement also re-stamps catalogue_synced_at — this task's own mark, never
@@ -117,7 +116,7 @@ async function fetchAiring(titles) {
       }
       const d = new Date(airingAt * 1000);
       slotted++;
-      stmts.push(`UPDATE anime SET sched_day=${d.getUTCDay() === 0 ? 7 : d.getUTCDay()}, sched_day_label=${sqlText(DAY_LABEL[d.getUTCDay()])}, sched_date=${sqlText(`${d.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })} ${d.getUTCDate()}`)}, sched_time=${sqlText(`${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')}`)}, sched_season=${sqlText(`${seasonOf(d.getUTCMonth())} ${d.getUTCFullYear()}`)}, ${STAMP} WHERE id=${sqlText(t.id)};`);
+      stmts.push(`UPDATE anime SET sched_day=${d.getUTCDay() === 0 ? 7 : d.getUTCDay()}, sched_day_label=${sqlText(DAY_LABEL[d.getUTCDay()])}, sched_date=${sqlText(`${d.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })} ${d.getUTCDate()}`)}, sched_time=${sqlText(`${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')}`)}, sched_season=${sqlText(seasonKey(d))}, ${STAMP} WHERE id=${sqlText(t.id)};`);
     });
   }
   return { stmts, airingSlotted: slotted };

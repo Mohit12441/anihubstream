@@ -20,6 +20,8 @@ import { dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { randomUUID } from 'node:crypto';
 import { applySchema, splitStatements } from './apply-schema.mjs';
+import { ANIME_COLUMNS, updateSet } from './sync-anilist.mjs';
+import { FORBIDDEN, compare } from './diff-rows.mjs';
 import { audit } from './verify.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -62,6 +64,9 @@ class World {
     }
     assert.deepEqual(overlapping, ['duplicate column name: catalogue_synced_at'],
       'schema.sql and cloud-sync/schema.sql disagree about more than the column schema.sql now owns');
+    /* This list is meant to empty out. cloud-sync/schema.sql marks its catalogue_synced_at ALTER
+       TRANSITIONAL: once cloud-sync/schema.live.sql shows the column in production, the ALTER comes
+       out and this assertion becomes `deepEqual(overlapping, [])`. */
     for (const [i, id] of GENRE_IDS.entries()) {
       const label = { 'sci-fi': 'Sci-Fi', 'slice-of-life': 'Slice of Life' }[id] ?? id[0].toUpperCase() + id.slice(1);
       this.db.prepare('INSERT INTO genre (id, label, tagline, art, accent, position) VALUES (?,?,?,?,?,?)')
@@ -790,5 +795,56 @@ describe('migration: the four phases against real SQLite', () => {
     const collided = await withShim(world, TAKEOVER, () => audit(opts));
     assert.equal(collided.ok, false, 'a local write after the takeover marker passed the audit');
     assert.match(collided.failures.join('\n'), /no local write after the takeover marker/);
+  });
+});
+
+/* The runbook's pre-flight (README, Deploy step 4) compares two row snapshots with
+   cloud-sync/diff-rows.mjs, whose per-mode forbidden lists are this file's ownership table written a
+   second time — so the two are checked against each other rather than against a paragraph. A column
+   the sync is designed to rewrite must never be forbidden, or the first real run prints a false alarm
+   and the operator learns to ignore the check; a column that is neither written nor forbidden is a
+   silent gap, which is worse. source_ids gets the third case: it is in the write set *and* under a
+   rule, because the merge is allowed to gain keys and never to lose one. */
+describe('the pre-flight diff asserts the same ownership the sync implements', () => {
+  for (const mode of ['mirror', 'delta', 'takeover']) {
+    it(mode + ': every column is either writable or protected, never both and never neither', () => {
+      const writes = new Set(updateSet(mode));
+      const both = FORBIDDEN[mode].filter((c) => writes.has(c));
+      assert.deepEqual(both, [], `diff-rows forbids ${both.join(', ')}, which ${mode} writes on purpose`);
+      const neither = ANIME_COLUMNS.filter((c) => c !== 'id' && !writes.has(c) && !FORBIDDEN[mode].includes(c));
+      assert.deepEqual(neither, [], `diff-rows checks nothing about ${neither.join(', ')}, so a ${mode} run could rewrite them unremarked`);
+    });
+  }
+
+  const row = (over = {}) => ({
+    id: 'a-test-title', rating: 7, episode_total: 12, synopsis: 40, trend_rank: 4, added_at: '2024-01-02',
+    sched_day: 5, sched_season: 'Fall 2026', catalogue_synced_at: 1, cloud_synced_at: null,
+    source_ids: JSON.stringify({ kitsu: '1', anilist: 152 }), ...over,
+  });
+  const byId = (...rows) => new Map(rows.map((r) => [String(r.id), r]));
+  const ids = (report) => report.violations.map((v) => `${v.id}.${v.column}`).join(',');
+
+  it('a merged-in provenance key passes; a lost one, a moved anilist id or a rewritten slot does not', () => {
+    const merged = row({ rating: 8, cloud_synced_at: 9, source_ids: JSON.stringify({ kitsu: '1', anilist: 152, mal: 34 }) });
+    const clean = compare(byId(row()), byId(merged), 'mirror');
+    assert.equal(clean.violations.length, 0, `a mirror run that refreshed metadata and gained idMal must pass: ${ids(clean)}`);
+
+    assert.equal(ids(compare(byId(row()), byId(row({ source_ids: JSON.stringify({ anilist: 152 }) })), 'mirror')),
+      'a-test-title.source_ids', 'json_patch deletes a key whose patch value is null; this run never sends one, so a lost key is the merge breaking');
+    assert.equal(ids(compare(byId(row()), byId(row({ source_ids: JSON.stringify({ kitsu: '1', anilist: 999 }) })), 'mirror')),
+      'a-test-title.source_ids', 'the anilist id decides which upstream record a row is and sync-anilist.mjs:539 refuses to move it');
+    assert.equal(ids(compare(byId(row()), byId(row({ sched_season: 'Winter 2026' })), 'mirror')),
+      'a-test-title.sched_season', 'the air slot belongs to the local task until Phase 3');
+    assert.equal(compare(byId(row()), byId(row({ sched_season: 'Winter 2026', trend_rank: 3 })), 'takeover').violations.length, 0,
+      'takeover owns the slot and the rank, so a change there is the design working');
+    assert.equal(ids(compare(byId(row()), byId(row({ added_at: '2026-01-01' })), 'takeover')),
+      'a-test-title.added_at', 'not even takeover may move when a title entered the catalogue');
+  });
+
+  it('row creation is Phase 2 onward, and no phase deletes', () => {
+    const two = byId(row(), row({ id: 'b-other' }));
+    assert.equal(ids(compare(byId(row()), two, 'mirror')), 'b-other.(row)', 'mirror never inserts');
+    assert.equal(compare(byId(row()), two, 'delta').violations.length, 0, 'delta creating a row is the point of Phase 2');
+    assert.equal(ids(compare(two, byId(row()), 'takeover')), 'b-other.(row)', 'the second snapshot is pinned to the ids of the first, so a missing row is a deletion');
   });
 });

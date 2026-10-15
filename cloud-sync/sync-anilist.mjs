@@ -53,6 +53,9 @@ import {
   acquireLease, budget, getCursor, getThrottle, leaseKeeper, recordRun, releaseLease, setCursor, setThrottle, utcDay,
 } from './state.mjs';
 import { foldSearch } from '../functions/api/_lib.js';
+/* The season rule is the site's, not this job's, so it lives with the other writer that also
+   stamps sched_season rather than being copied here. See tools/season.mjs. */
+import { seasonKey } from '../tools/season.mjs';
 
 const RUN_ID = randomUUID();
 const ENDPOINT = 'anilist';
@@ -148,7 +151,7 @@ const MODE = resolveMode();
 const CREATES_ROWS = MODE !== 'mirror';
 const CLAIMS_SCHEDULE = MODE === 'takeover';
 /* An opt-in hole-filler for the modes that do NOT own the schedule. Off by default: in Phase 2 the
-   local task walks every row in `anime` (tools/hourly-refresh.mjs:133 selects the whole table, not
+   local task walks every row in `anime` (tools/hourly-refresh.mjs:153 selects the whole table, not
    just titles it created), so a row this job inserts is refreshed by it like any other. Turn it on
    only when that task is broken or disabled while LEGACY_WRITER_ACTIVE still says 1 — cloud then
    fills an empty air slot on a row the local writer has never stamped, and never clears one. */
@@ -195,32 +198,32 @@ export const mediaSlug = (media) => slugify(media.title?.english || media.title?
  * functions/api/schedule.js:9 matches sched_season the same way. Writing AniList's own enum
  * spellings ("RELEASING", "tv", "fall 2026") into them would silently drop every refreshed
  * title out of those filters, so each value is translated into the site's vocabulary using
- * tools/sync-catalogue.mjs:161-163 as the source of truth. Where AniList has a state the site
+ * tools/sync-catalogue.mjs:162-164 as the source of truth. Where AniList has a state the site
  * has no word for — CANCELLED, HIATUS — the column is written as NULL, which means "keep what
  * is stored", never as an invented label. */
 const KIND = { TV: 'TV', TV_SHORT: 'TV', OVA: 'OVA', ONA: 'ONA', SPECIAL: 'Special', MUSIC: 'Special', MOVIE: 'Movie' };
 const STATUS = { RELEASING: 'Ongoing', FINISHING: 'Ongoing', FINISHED: 'Finished', NOT_YET_RELEASED: 'Upcoming' };
 const SEASON_NAME = { WINTER: 'Winter', SPRING: 'Spring', SUMMER: 'Summer', FALL: 'Fall' };
 /* Only used to pick an accent for a row this run creates; the site's own palette, copied from
-   tools/sync-catalogue.mjs:166 so a cloud-created tile is not the odd one out. */
+   tools/sync-catalogue.mjs:167 so a cloud-created tile is not the odd one out. */
 const PALETTE = ['#ff1f4a', '#a24bff', '#3b82ff', '#ff9420', '#ffc247', '#2ee6a8', '#24d3ee', '#ff3d8b', '#8b5cf6', '#2f7bff'];
 const paletteAccent = (id) => PALETTE[Math.abs([...id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) | 0, 7)) % PALETTE.length];
 
 /* Indexed by getUTCMonth(), and the quarters are the site's, not AniList's: Winter is
    Jan-Mar, so a March broadcast is 'Winter 2026'. That is what src/data/model.ts:27
-   (SEASON_START_MONTH Winter:0, Spring:3, Summer:6, Fall:9) and tools/hourly-refresh.mjs:95 both
-   compute, and /api/schedule matches this column with an exact `=`, so a row labelled with the
-   AniList convention — where Spring starts in March — is filtered out of the quarter the page opens
-   on. The page cannot be wrong about its own filter, so the sync follows the site here. A
-   lowercase "fall 2026" would likewise be a second, unmatchable facet value on the shelf. */
-const SEASONS = ['Winter', 'Winter', 'Winter', 'Spring', 'Spring', 'Spring', 'Summer', 'Summer', 'Summer', 'Fall', 'Fall', 'Fall'];
+   (SEASON_START_MONTH Winter:0, Spring:3, Summer:6, Fall:9) and both legacy writers compute, and
+   /api/schedule matches this column with an exact `=`, so a row labelled with the AniList
+   convention — where Spring starts in March — is filtered out of the quarter the page opens on.
+   The page cannot be wrong about its own filter, so the sync follows the site here. All three JS
+   writers call the same seasonKey() (tools/season.mjs); a lowercase "fall 2026" would likewise be
+   a second, unmatchable facet value on the shelf. */
 const DAY_LABEL = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 const pad = (n) => String(n).padStart(2, '0');
 
-/* Byte-for-byte the derivation in tools/hourly-refresh.mjs:115 — same Sunday-as-7 numbering,
-   same "Oct 14" and "Fall 2026" formats. Two writers formatting one column differently is how
-   the schedule shelf starts flip-flopping. All five go NULL when a title stops airing, which
-   is the one group of columns that is clearable on purpose (R1). */
+/* Same derivation as tools/hourly-refresh.mjs and tools/sync-catalogue.mjs — same Sunday-as-7
+   numbering, same "Oct 14" and "Fall 2026" formats — because two writers formatting one column
+   differently is how the schedule shelf starts flip-flopping. All five go NULL when a title stops
+   airing, which is the one group of columns that is clearable on purpose (R1). */
 export function airSlot(media) {
   const at = media.nextAiringEpisode?.airingAt;
   if (!Number.isInteger(at) || at <= 0) return { sched_day: null, sched_day_label: null, sched_date: null, sched_time: null, sched_season: null };
@@ -230,7 +233,7 @@ export function airSlot(media) {
     sched_day_label: DAY_LABEL[d.getUTCDay()],
     sched_date: `${d.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })} ${d.getUTCDate()}`,
     sched_time: `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}`,
-    sched_season: `${SEASONS[d.getUTCMonth()]} ${d.getUTCFullYear()}`,
+    sched_season: seasonKey(d),
   };
 }
 
@@ -359,7 +362,7 @@ export function rowFromMedia(media, existing = null, { trendRank = null, now = D
     skip_key_space: existing?.skipKeySpace ?? null,
     episode_total: Number.isInteger(media.episodes) ? media.episodes : null,
     /* 'YYYY-MM-DD HH:MM:SS', i.e. exactly what datetime('now') produces in
-       tools/sync-catalogue.mjs:365, because the "Just Added" shelf sorts this column as text. */
+       tools/sync-catalogue.mjs:364, because the "Just Added" shelf sorts this column as text. */
     added_at: existing?.addedAt ?? new Date(now).toISOString().slice(0, 19).replace('T', ' '),
     search_text: searchable ? foldFor(title, native, kind, status) : null,
     cloud_synced_at: now,

@@ -81,6 +81,11 @@ CREATE TABLE IF NOT EXISTS sync_pending (
 -- (catalogue_synced_at IS NULL AND cloud_synced_at IS NOT NULL), which is the
 -- test CLOUD_OWNS_GENRES=1 uses before it replaces anyone's genre set.
 ALTER TABLE anime ADD COLUMN cloud_synced_at INTEGER;
+-- TRANSITIONAL. Root schema.sql owns the `anime` table and defines catalogue_synced_at there; this
+-- line exists only to bring an existing production database up to the same shape. Once
+-- cloud-sync/schema.live.sql shows the column present in production, delete this line: the
+-- `schema.sql + cloud-sync/schema.sql` composition test in migration.test.mjs tolerates exactly the
+-- one duplicate it produces today and asserts zero duplicates after the deletion.
 ALTER TABLE anime ADD COLUMN catalogue_synced_at INTEGER;
 
 -- Indexes for the audit queries in verify.mjs. They follow the ALTERs because they depend on

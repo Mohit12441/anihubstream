@@ -14,11 +14,13 @@ environment variables — no npm install, no local machine.
 | `state.mjs` | the D1-backed memory: lease, cursor, learned interval, daily budget, run records |
 | `sync-anilist.mjs` | one bounded incremental pass, in mode `mirror` / `delta` / `takeover` |
 | `sync-kitsu.mjs` | Kitsu artwork and episode counts for titles the AniList pass owns |
-| `schema.sql` | `sync_lock`, `api_usage`, `sync_runs`, `sync_pending`, the two stamp columns |
+| `schema.sql` | `sync_lock`, `api_usage`, `sync_runs`, `sync_pending`, the two stamp columns. Root `schema.sql` is the source of truth for `anime`; this file only upgrades an existing database |
 | `apply-schema.mjs` | apply a `.sql` file over the REST API (no wrangler); splits on SQLite's real lexical rules, idempotent |
 | `verify.mjs` | read-only audit: ownership stamps, vocabulary, visibility, rate-control state |
+| `diff-rows.mjs` | read-only pre-flight check: compares two row snapshots by parsed value, per mode, and fails on a column the phase does not own (Deploy step 4) |
 | `rate.test.mjs` | the rate-control and column-ownership criteria, pinned against a stubbed fetch |
-| `migration.test.mjs` | T1-T7 of the migration below, plus the schema re-apply and the audit, against a real throwaway SQLite database |
+| `migration.test.mjs` | T1-T7 of the migration below, plus the schema re-apply, the audit and the diff rules, against a real throwaway SQLite database |
+| `config.test.mjs` | the contracts between files: README's env table vs what the code reads, the Kitsu budget vs its cron, the season rule vs the frontend's copy, the committed schema vs its own seed data |
 
 ## Why this design
 
@@ -48,10 +50,26 @@ than to assume a low volume is safe.
 
    Two commands because they answer two different halves: `sqlite_master` enumerates tables and
    indexes but never a column, and `PRAGMA table_info(anime)` is the only way to read `anime`'s own
-   shape. Do not settle this from the repo — the root `schema.sql` predates both stamp columns (it
-   defines neither `catalogue_synced_at` nor `cloud_synced_at`), while `seed.sql` inserts
-   `catalogue_synced_at` and `tools/hourly-refresh.mjs` writes it, so the live table has already
-   diverged from that file and the database is the only record of what it actually holds.
+   shape. Do not settle this from the repo — the local task has been writing this table in place for
+   as long as it has existed (`seed.sql` inserts `catalogue_synced_at` on every row,
+   `tools/hourly-refresh.mjs` re-stamps it hourly, and 74 rows arrived since the last count), so the
+   live shape is a record of mutations, not of any file. Root `schema.sql` was already found to be
+   behind production once — it defined neither stamp column while both were in use — which is exactly
+   the case this check exists to catch.
+
+   **`PRAGMA table_info(anime)` is a gate, not a note: the scoped run in step 3 — and every scheduled
+   run after it — is blocked until the column list agrees.** `sync-anilist.mjs` writes `anime` by
+   column name (`ANIME_COLUMNS`, and the `UPDATE` sets built from it), so a column production does not
+   have is not a warning — the upsert dies on `no such column: …` mid-batch, having already taken the
+   lease, and the failure says nothing about which assumption broke. Compare the dump against three
+   things: `ANIME_COLUMNS` in `cloud-sync/sync-anilist.mjs` (what the sync writes), the `CREATE TABLE
+   anime` block in root `schema.sql` (what a fresh environment gets, and the file `config.test.mjs`
+   proves can receive `seed.sql`), and `cloud-sync/schema.sql`'s two `ALTER` lines (what the upgrade
+   adds). **If any of the three disagrees with the live list, stop and send the dump before running
+   anything** — the fix is a column, and deciding where it goes (`schema.sql`,
+   `cloud-sync/schema.sql`, or the sync's list) is a review, not something to discover from a failed
+   run at 03:15. Applying `cloud-sync/schema.sql` below is what closes a *missing stamp column*; a
+   mismatch in any other column is not something that file can fix.
 
    **Commit the answer as `cloud-sync/schema.live.sql`** — the same two queries, one under the other:
 
@@ -65,18 +83,22 @@ than to assume a low volume is safe.
 
    It is a record, not a second source of truth — nothing reads it, and `migration.test.mjs` will not
    notice if it goes stale. What keeps it honest is that it is *in git*: after any schema change, the
-   diff is two commands and a `git diff`, instead of an argument about what production holds. Root
-   `schema.sql` is the file that must stay applyable to a fresh environment (that is the reproducibility
-   half of this, and the reason `catalogue_synced_at` is in it now: `seed.sql` inserts it on every row, so
-   a database built without it cannot be seeded at all); `cloud-sync/schema.sql` is the file that upgrades
-   an *existing* one. The committed pair is checked against each other by a test — applying the second on
-   top of the first must tolerate exactly one duplicate column and nothing else, so a new divergence
-   between the two files fails `npm test` rather than surfacing as an operator's error mid-rollout.
+   diff is two commands and a `git diff`, instead of an argument about what production holds. **Root
+   `schema.sql` is the source of truth for `anime`**: it is the file a fresh environment is built from,
+   the one `config.test.mjs` proves can receive `seed.sql`, and the one to edit when the table changes.
+   `cloud-sync/schema.sql` owns only the sync's own state tables plus the two `ALTER`s that upgrade an
+   *existing* database — and `ALTER TABLE anime ADD COLUMN catalogue_synced_at INTEGER` at its line 84
+   is there solely because root `schema.sql` acquired that column after production did. Once
+   `schema.live.sql` shows the column live *and* root defining it, delete that `ALTER`: the committed
+   pair is checked against each other by `migration.test.mjs`, which today tolerates exactly one
+   duplicate column and will assert none after the deletion, so the retirement is an edit-and-run, not a
+   promise. A new divergence between the two files fails `npm test` rather than surfacing as an
+   operator's error mid-rollout.
 
    Read for four names — `sync_lock`, `api_usage`, `sync_runs`, `sync_pending` — and two columns on
    `anime` (`cloud_synced_at`, `catalogue_synced_at`). All present: the file is applied, go to step 3.
    Any missing: it is not, and a Phase 1 run will still work (mirror never reads `sync_pending`;
-   `sync-anilist.mjs:737` only queries it when `CLOUD_CREATES_ROWS=1`) but it will die before the
+   `sync-anilist.mjs:745` only queries it when `CLOUD_CREATES_ROWS=1`) but it will die before the
    loop when it tries to take the lease, reporting `exit_reason: "fatal"` and exit 1 having written
    nothing. Apply it: Actions → cloud-ops → `apply-schema` (needs only the three CF secrets, and no
    wrangler), or locally `wrangler d1 execute anihub --remote --file=cloud-sync/schema.sql`. The file
@@ -151,8 +173,8 @@ right answer for a normal rollout — see *Whose rows does the local task refres
 The site's *vocabulary* is part of ownership. `functions/api/anime/index.js:24-25` validates
 `?kind=`/`?status=` against a closed list and then filters with an exact `=`, and
 `functions/api/schedule.js:9` matches `sched_season` the same way. So the cloud writes `TV` /
-`Ongoing` / `Fall 2026` — the spellings `tools/sync-catalogue.mjs:161-163` and
-`tools/hourly-refresh.mjs:95` use — never AniList's enum (`tv`, `RELEASING`, `fall 2026`). A
+`Ongoing` / `Fall 2026` — the spellings `tools/sync-catalogue.mjs:162-164` and
+`tools/season.mjs:19` use — never AniList's enum (`tv`, `RELEASING`, `fall 2026`). A
 title that AniList has a state for which the site has no word (`CANCELLED`, `HIATUS`) is written
 as absent, which means *keep the stored value*, never as an invented label.
 
@@ -201,27 +223,51 @@ reason about and one you are guessing at.
    ```
 
    Expect `requests_made` ≤ 4 (a slice is `4 × ANILIST_BATCH_SIZE` titles, and 100 titles is one
-   slice: `100 / 25 = 4` aliased documents), `s403: 0`, and `exit_reason: "item_cap"` — the run
-   stopped because you told it to, not because it ran out of anything. If `requests_made` is 5 or
-   more, or `s403` is not 0, stop and read *If 403s still happen* before going further.
+   slice: `100 / 25 = 4` aliased documents), `s403: 0`, `bisects: 0`, and `exit_reason: "item_cap"` —
+   the run stopped because you told it to, not because it ran out of anything. If `requests_made` is 5
+   or more, or `s403` is not 0, stop and read *If 403s still happen* before going further. A non-zero
+   `bisects` is not a stop: it means a 25-alias document was refused as too complex and the batch was
+   halved, which costs requests (read it against the budget) and loses nothing.
 
-4. **Diff exactly the rows that run touched**, before and after, and check the columns the mode is
-   not allowed to change:
+4. **Snapshot the rows, run step 3, snapshot the same rows again, and compare them structurally.** A
+   textual `diff` of two JSON dumps is not that check: `source_ids` is a JSON document stored as text,
+   so a merge that adds one key rewrites the whole string and `diff` flags every such row as a change
+   without saying whether it was allowed — and `idMal` appearing upstream is allowed in Phase 1, by
+   design. `cloud-sync/diff-rows.mjs` parses the column and applies the ownership rules per mode:
+
+   ```
+   SNAPSHOT="SELECT id, rating, episode_total, length(synopsis) AS synopsis, sched_day, sched_season, added_at, source_ids, catalogue_synced_at, cloud_synced_at FROM anime"
+   npx wrangler d1 execute anihub --remote --json --command "$SNAPSHOT ORDER BY id LIMIT 100" > before.json
+   ```
+
+   After step 3, re-snapshot **the same ids**, not `LIMIT` again — a row `delta` creates can sort into
+   the window and push one out, which a second `LIMIT` would report as a deletion:
 
    ```
    npx wrangler d1 execute anihub --remote --json --command \
-     "SELECT id, rating, episode_total, length(synopsis) AS synopsis, sched_day, sched_season, added_at, source_ids, catalogue_synced_at, cloud_synced_at FROM anime ORDER BY id LIMIT 100" > before.json
+     "$SNAPSHOT WHERE id IN ($(node cloud-sync/diff-rows.mjs --ids before.json))" > after.json
+   node cloud-sync/diff-rows.mjs before.json after.json --mode mirror; echo "exit $?"
    ```
 
-   Run step 3, re-run the same SELECT into `after.json`, then `diff before.json after.json`. What
-   may differ: `rating`, `episode_total`, `synopsis` (that is what mirror is *for*) and
-   `cloud_synced_at`. What may not, in Phase 1: `added_at`, any `sched_*`, `catalogue_synced_at`, and
-   any *lost* key in `source_ids` — a key may be *added* by the `json_patch` merge (`idMal` appearing
-   upstream) and that is fine; a key that disappears means the merge is broken, and the response is
-   to go back to the safe phase while it is worked out (`gh variable delete CLOUD_CREATES_ROWS
-   -R <owner>/<repo>` and `gh variable delete MODE -R <owner>/<repo>`, which is `mirror` by
-   derivation). `migration.test.mjs` T1 asserts the same rules against real SQLite, so a failure here
-   means production differs from the tested shape, not that the test was optimistic.
+   Exit 0 is the answer: nothing outside mirror's write set moved, and the lines it prints say what
+   did. What may change in Phase 1 — reported, not flagged: `rating`, `episode_total`, `synopsis`
+   (that is what mirror is *for*), `cloud_synced_at`, and `source_ids` gaining keys. What may not:
+   `added_at`, any `sched_*`, `catalogue_synced_at`, `rank`, `alt_seasons`, the AniSkip keys; a row
+   appearing (mirror never inserts) or disappearing; a `source_ids` key going missing; the `anilist`
+   id inside it moving. The lost-key rule is not decoration: `json_patch` deletes any key whose patch
+   value is `null`, and this run builds the patch from the row's own keys plus `anilist`/`mal` and
+   never sends a null (`sync-anilist.mjs:322`) — so a key that disappears means the merge itself
+   broke. The response to any violation is to go back to the safe phase while it is worked out
+   (`gh variable delete CLOUD_CREATES_ROWS -R <owner>/<repo>` and `gh variable delete MODE
+   -R <owner>/<repo>`, which is `mirror` by derivation).
+
+   `--mode delta` and `--mode takeover` carry the same rules into the later phases: creation becomes
+   allowed, and the air slot plus `trend_rank` are released at takeover. Two tests keep the runbook
+   and the code honest about that: `migration.test.mjs` T1 asserts the partition against real SQLite,
+   and a second block there compares `diff-rows.mjs`'s forbidden lists against `updateSet()` column by
+   column, so the pre-flight can neither drift into flagging a legitimate write nor go quiet on a
+   column nobody owns. A violation on production still means the live table differs from the tested
+   shape, not that the test was optimistic.
 
 5. **Only then** un-scope it. The env line above is a one-off shell invocation; the scheduled run
    takes its values from repo Variables, which you have not touched.
@@ -282,7 +328,7 @@ Now a queued AniList id becomes a row, and the insert-only columns are filled fr
 derivations the local task uses: `added_at` = `datetime('now')` text, `anime_genre` from
 `Media.genres` mapped through the `genre` table's own labels, `trend_rank` = the title's position
 in AniList's trending page, `sched_*` = `airSlot()`, byte-for-byte
-`tools/hourly-refresh.mjs:115` (same Sunday-as-7 numbering, same `Oct 13` / `01:00` / `Fall 2026`).
+`tools/hourly-refresh.mjs:119` (same Sunday-as-7 numbering, same `Oct 13` / `01:00` / `Fall 2026`).
 
 Queue a title — this is the step that replaces `tools/catalogue-sources.json` on the machine:
 
@@ -299,7 +345,7 @@ about it: a title AniList has not published artwork for stays queued (a tile wit
 is worse than a wait), a dead id is dropped so the queue can drain.
 
 **Whose rows does the local task refresh?** Every row in the table, including ones it never created.
-`tools/hourly-refresh.mjs:133` selects `id, source_ids` from `anime` with no `WHERE` — no
+`tools/hourly-refresh.mjs:153` selects `id, source_ids` from `anime` with no `WHERE` — no
 `catalogue_synced_at IS NOT NULL`, no provenance filter — and then writes `trend_rank` for each
 title it finds (`:90`) and the whole five-column air slot for each (`:115`), NULLing the slot when
 AniList reports no `nextAiringEpisode` (`:106`). A row this job inserts in Phase 2 therefore gets
@@ -677,8 +723,8 @@ it, which is why it can be stateless.
 
 Everything about rate control in this directory applies to `cloud-sync/anilist.mjs`. The Windows task
 is a separate process, on a separate IP — the residential one — with its own `fetch` to
-`https://graphql.anilist.co` and **no limiter**: `tools/hourly-refresh.mjs:58` and
-`tools/discover-titles.mjs:60` retry on 429/5xx and back off, which is a policy, but they send the
+`https://graphql.anilist.co` and **no limiter**: `tools/hourly-refresh.mjs:62` and
+`tools/discover-titles.mjs:71` retry on 429/5xx and back off, which is a policy, but they send the
 next request as soon as the last one answered, which is not pacing.
 
 The volume is arithmetic, not a guess. Per run: 1 trending page + one 8-id aliased page per eight
@@ -700,26 +746,35 @@ to its summary line and to `sync_meta.hourly_sync`. Run it for a day and read th
 should get the same floor, and that is a change to make deliberately, with the task's own timing, not
 as a side effect of a migration.
 
-### The two writers agree on the air slot because a test makes them
+### The three writers agree on the air slot because one function and one test make them
 
-`sched_*` is written from `Media.nextAiringEpisode.airingAt` by three files that import nothing from
-each other: `tools/sync-catalogue.mjs:272` (on insert), `tools/hourly-refresh.mjs:117-119` (hourly),
-and `cloud-sync/sync-anilist.mjs` `airSlot()`. All five columns, formatted identically, or the
-schedule shelf shows a title moving when it is only being re-labelled.
+`sched_*` is written from `Media.nextAiringEpisode.airingAt` by three files:
+`tools/sync-catalogue.mjs:314` (on insert), `tools/hourly-refresh.mjs:114` and `:119` (hourly), and
+`cloud-sync/sync-anilist.mjs` `airSlot()`. All five columns, formatted identically, or the schedule
+shelf shows a title moving when it is only being re-labelled.
 
-Two rules were pinned by `config.test.mjs` after the first draft of `airSlot()` broke both:
+The quarter rule is now one function — `tools/season.mjs`, called by all three writers — so they
+cannot disagree about it by construction. That replaced three hand-written copies, including
+`airSlot()`'s first draft, which copied **AniList's** quarters (Spring starting in March) while the
+site's own rule puts Winter at Jan-Mar. `config.test.mjs` pins two things a shared function cannot
+pin by itself:
 
-- **The quarter boundaries are the site's, not AniList's.** `src/data/model.ts:27` — the filter the
-  page itself opens on — puts Winter at Jan-Mar, and `hourly-refresh.mjs:95` and `sync-catalogue.mjs:272`
-  agree with it. AniList's own convention puts Spring at Mar-May. A first draft copied AniList's, which
-  would have made every March, June, September and December cloud row invisible under the season the
-  page is showing, because `functions/api/schedule.js:9` matches that column with an exact `=`.
+- **The JS rule against the frontend's copy, by running both.** `src/data/model.ts:27` computes the
+  season the schedule page opens on, and `functions/api/schedule.js:9` matches `sched_season` with an
+  exact `=` — so the page's filter and the column it filters on are two derivations in two languages
+  that have to be compared over every month edge. The tsconfig covers only `src/`, so the frontend
+  cannot import a `.mjs`; executing both is the strongest agreement available. The test also fails if
+  a writer re-spells the quarter boundaries instead of calling `seasonKey()`, which is how the bug got
+  in. A wrong quarter would have hidden every March, June, September and December cloud row from the
+  season on screen.
 - **Both writers clear the same five columns** when a title stops airing: `airSlot()` returns all-NULL
   for a missing, zero, negative or non-integer `airingAt`, and the legacy statement nulls exactly those
   five. If one cleared and the other left a value, the slot would go stale on one side of the handover.
 
-No production row carries a wrong season label from this: the cloud job has never run. If it had, the
-fix would be a re-run of `mirror`, which recomputes the slot from the same field.
+No production row carries a wrong season label from this: the cloud job has never run, and the local
+task rewrites the slot for every row every hour. Had a wrong label been written, `mirror` could not
+have repaired it — `sched_*` is deliberately not in its write set — so the fix is a takeover run, or
+the local task's next pass, which is the same thing Phase 3 removes.
 
 `cloud-sync/schema.sql` also documents itself as safe to apply to the live database as-is: the
 catalogue tables it touches are only `ALTER`ed, additively, and the three state tables it creates

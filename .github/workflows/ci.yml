@@ -14,6 +14,9 @@ name: tests
 
 on:
   push:
+    # `master`, because that is this repository's default branch — the scheduled sync jobs run
+    # against it and only against it. A `main` guard here would not fail loudly: it would simply
+    # never match, and the gate would go quiet.
     branches: [master]
   pull_request:
   workflow_dispatch:
@@ -33,6 +36,10 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
+          # `'22'` resolves to the newest 22.x, which has to stay true: the suite imports
+          # `node:sqlite` (unflagged since 22.13) and `src/data/model.ts` straight from a test (type
+          # stripping, unflagged since 22.18). Pin lower than that and `npm test` fails on startup,
+          # not on a claim.
           node-version: '22'
           cache: npm
 
