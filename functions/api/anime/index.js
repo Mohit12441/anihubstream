@@ -32,6 +32,30 @@ const KINDS = ['TV', 'Movie', 'OVA', 'ONA', 'Special'];
    returned and the client says so rather than presenting a partial list as the whole one. */
 const SEARCH_SCAN_MAX = 2000;
 
+/* D1 refuses any LIKE/GLOB pattern over 50 bytes — measured on the production endpoint: 50
+   answers, 51 comes back HTTP 400 `LIKE or GLOB pattern too complex`. A viewer's query becomes
+   such a pattern with nothing in between, so a 49-character search was a 500. Cutting the token
+   to the longest prefix that still fits keeps the prefilter a superset of the ranked matcher —
+   a row containing the whole token contains its beginning — so scoring still decides what comes
+   back. The initials shorthand gets no equivalent cut: it is one extra way to match, and
+   initialsPattern bounds characters where D1 bounds bytes (16 CJK characters clear that guard and
+   make a 79-byte pattern), so a pattern too wide for the ceiling falls back to the substring check
+   above rather than to an error. */
+const LIKE_PATTERN_MAX_BYTES = 50;
+const utf8Bytes = (text) => new TextEncoder().encode(text).length;
+
+const likePattern = (token) => {
+  const chars = [...token];
+  let end = chars.length;
+  while (end > 1 && utf8Bytes(`%${chars.slice(0, end).join('')}%`) > LIKE_PATTERN_MAX_BYTES) end -= 1;
+  return `%${chars.slice(0, end).join('')}%`;
+};
+
+const initialsWithinLimit = (token) => {
+  const init = initialsPattern(token);
+  return init !== null && utf8Bytes(init) <= LIKE_PATTERN_MAX_BYTES ? init : null;
+};
+
 export const onRequestGet = async ({ request, env }) => {
   try {
     const url = new URL(request.url);
@@ -85,8 +109,8 @@ export const onRequestGet = async ({ request, env }) => {
          matches — plain substring, the word-initials shorthand, and the same
          two checks over genre labels. Scoring then decides the real order. */
       for (const t of tokens) {
-        const like = `%${t}%`;
-        const init = initialsPattern(t);
+        const like = likePattern(t);
+        const init = initialsWithinLimit(t);
         if (init) {
           add(
             `(a.search_text LIKE @ OR a.search_text LIKE @ OR EXISTS (SELECT 1 FROM anime_genre ag JOIN genre g ON g.id = ag.genre_id WHERE ag.anime_id = a.id AND (lower(g.label) LIKE @ OR lower(g.label) LIKE @)))`,

@@ -14,6 +14,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, relative } from 'node:path';
+import { onRequestGet } from '../functions/api/anime/index.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 /* D1's ceiling, verified live (50 accepted, 51 refused) rather than taken from the docs. */
@@ -96,5 +97,91 @@ describe('D1 LIKE/GLOB pattern limit (50 bytes, measured live)', () => {
       assert.ok(Buffer.byteLength(quoted.slice(1, -1)) <= LIMIT,
         `the added_at check ships a ${Buffer.byteLength(quoted.slice(1, -1))}-byte pattern: ${quoted}`);
     }
+  });
+
+  /* ------------------------------------------- patterns built while a request is served
+     Everything above reads source, so it only sees a pattern somebody wrote down. A viewer's query
+     becomes its pattern at request time, and the Worker put the query string straight inside `%…%`:
+     a 49-character search was a production HTTP 500, and initialsPattern's bound is 16 *characters*
+     where D1 counts *bytes*, so the 79-byte shorthand a token of 16 CJK characters produces failed
+     the same way while 48 ASCII characters passed. node:sqlite enforces no ceiling at all, so the
+     stub below is the only thing in this repo that answers the way production does. It refuses any
+     bound pattern over LIMIT bytes with the error D1 actually returns, and the handler is judged on
+     whether it still asks. */
+  const askSearch = (ceiling = LIMIT) => {
+    const sent = [];
+    /* Every LIKE binding carries a wildcard, whether the substring form `%…%` or the shorthand
+       `g% u% …`; the facet filters this handler also binds carry neither. Keying on the percent is
+       what lets one rule refuse both shapes — keying on the leading percent alone would let an
+       over-wide shorthand through unrecorded, and the test would pass by not looking. */
+    const police = (values) => {
+      for (const value of values) {
+        if (typeof value !== 'string' || !value.includes('%')) continue;
+        sent.push(value);
+        if (Buffer.byteLength(value) > ceiling) {
+          throw new Error('d1: HTTP 400 [{"code":7500,"message":"LIKE or GLOB pattern too complex: SQLITE_ERROR"}]');
+        }
+      }
+    };
+    const statement = (values) => ({
+      all: async () => { police(values); return { results: [] }; },
+      first: async () => { police(values); return { n: 0 }; },
+    });
+    const env = { ANIHUB: { prepare: () => ({
+      bind: (...values) => statement(values),
+      all: () => statement([]).all(),
+      first: () => statement([]).first(),
+    }) } };
+    return async (q) => {
+      sent.length = 0;
+      const url = `https://anihubstream.com/api/anime?sort=relevance&q=${encodeURIComponent(q)}`;
+      const response = await onRequestGet({ request: new Request(url), env });
+      return { status: response.status, patterns: [...sent] };
+    };
+  };
+
+  it('answers a viewer token longer than D1 answers instead of failing the request', async () => {
+    const ask = askSearch();
+    const cases = [
+      ['49 ascii', 'a'.repeat(49)], ['60 ascii', 'a'.repeat(60)], ['120 ascii', 'a'.repeat(120)],
+      ['17 cjk', '\u3042'.repeat(17)], ['24 cjk', '\u3042'.repeat(24)], ['48 cjk', '\u3042'.repeat(48)],
+    ];
+    for (const [name, token] of cases) {
+      const { status, patterns } = await ask(token);
+      assert.equal(status, 200, `${name} (${Buffer.byteLength(token)} bytes) is a ${status}: ${patterns.join(' | ')}`);
+      assert.ok(patterns.length > 0, `${name} never reached the database at all`);
+      for (const pattern of patterns) {
+        assert.ok(Buffer.byteLength(pattern) <= LIMIT,
+          `${name} shipped a ${Buffer.byteLength(pattern)}-byte pattern to D1: ${pattern}`);
+      }
+    }
+  });
+
+  it('cuts an over-long token to a prefix, which keeps the prefilter a superset', async () => {
+    const ask = askSearch();
+    const whole = await ask('a'.repeat(49));
+    assert.ok(whole.patterns.includes(`%${'a'.repeat(48)}%`),
+      `a 49-character token must be searched as the longest prefix D1 answers, not dropped: ${whole.patterns.join(' | ')}`);
+    const cjk = await ask('\u3042'.repeat(17));
+    assert.ok(cjk.patterns.includes(`%${'\u3042'.repeat(16)}%`),
+      `17 CJK characters are 53 bytes of pattern and must cut to 16 (50): ${cjk.patterns.join(' | ')}`);
+  });
+
+  it('keeps the word-initials shorthand D1 can answer and drops the one it cannot', async () => {
+    const ask = askSearch();
+    const shorthand = (token) => [...token].map((c) => `${c}%`).join(' ');
+    const short = await ask('gurren');
+    assert.ok(short.patterns.includes('%gurren%'), 'an ordinary token lost its substring pattern');
+    assert.ok(short.patterns.includes(shorthand('gurren')),
+      `the ceiling is not a switch that turns shorthand off for everyone: ${short.patterns.join(' | ')}`);
+
+    /* 16 CJK characters clear initialsPattern's own character bound and make a 79-byte pattern. */
+    const token = '\u3042'.repeat(16);
+    assert.ok(Buffer.byteLength(shorthand(token)) > LIMIT,
+      'this fixture stopped being the case the test is about — if the ceiling moved, move it here');
+    const wide = await ask(token);
+    assert.ok(!wide.patterns.includes(shorthand(token)),
+      `the over-wide initials pattern is still being sent: ${wide.patterns.join(' | ')}`);
+    assert.ok(wide.patterns.includes(`%${token}%`), 'dropping the shorthand must not drop the substring check with it');
   });
 });

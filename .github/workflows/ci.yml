@@ -58,7 +58,15 @@ jobs:
       # read from the npm script itself because a check that names its own directories can drift from
       # what `npm test` globs, which is the bug it is meant to catch.
       #
-      # TEST_FLOOR is the count this checkout produces: 253, being the 230 at the previous commit plus the
+      # TEST_FLOOR is the count this checkout produces: 256, being the 253 at the previous commit plus the
+      # three the request-time pattern guard added — a `?q=` of 49 ASCII characters, or of 16 CJK ones, was
+      # a production HTTP 500, because the Worker wrapped the viewer's own token in `%…%` and D1 refuses a
+      # pattern over the 50 bytes measured below; `initialsPattern` bounds characters where D1 bounds bytes,
+      # so the shorthand failed for a token its own guard had waved through. The literals scan above cannot
+      # see a pattern built while a request is served, and node:sqlite will not refuse one, so these three
+      # run the handler against a stub that does. Writing them caught a fourth bug: a recorder that matched
+      # only `%…%` let an over-wide shorthand through unrecorded and reported the guard as working.
+      # The 253 was the 230 at the previous commit plus the
       # twenty-three the credential doctor added — the first real sync tick died on `schema_probe_failed`,
       # and the only line the runner could quote was undici's, which names the header value and is
       # therefore masked to `***` at exactly the point where the explanation was. Measured on 24.19 the
@@ -87,8 +95,12 @@ jobs:
       # (`sqlite_master` when `pragma_table_info` is refused) and its parser proved column-for-column
       # against the live PRAGMA, and the probe-failure exit that keeps an unreadable schema from reading
       # as a mismatch. That round raised this comment and missed the value below, which still said 209
-      # until the next commit — the pair is caught up. Every layer above was measured in a throwaway
-      # worktree at HEAD plus its patch, this one included: 253, green.
+      # until the next commit — the pair is caught up. Every layer above was counted in a throwaway
+      # worktree at HEAD plus its patch. The 256 was not: it is the 253 CI confirmed green at e809be2 plus
+      # the three `it`s this commit adds to `cloud-sync/pattern-limit.test.mjs`, whose before-and-after was
+      # read from that file rather than totalled across the suite, because the operator asked that `api/`
+      # not be run. This job is therefore the first place the total is counted — which is what a floor is
+      # for: if the sum is wrong the run goes red and says the number it saw.
       # The floor can only protect what is committed: the working tree holds tests CI never sees — an
       # untracked `tools/serve-static.test.mjs` (13 checks) and uncommitted edits to tracked suites —
       # so **raise the floor in the same commit that lands them**, or their checks sit outside the
@@ -100,7 +112,7 @@ jobs:
       # versions.
       - name: tests
         env:
-          TEST_FLOOR: 253
+          TEST_FLOOR: 256
         run: |
           set -euo pipefail
           total=0
