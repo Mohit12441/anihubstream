@@ -12,3 +12,6 @@ dist-preview/
 .env
 .env.local
 .env.*.local
+.qoder/
+preflight-*.json
+preflight-*.txt

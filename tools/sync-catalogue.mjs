@@ -357,14 +357,18 @@ function emit(rows) {
     ...GENRES.map((g, i) => `INSERT OR REPLACE INTO genre (id,label,tagline,art,accent,position) VALUES (${text(g.id)},${text(g.label)},${text(g.tagline)},${text(artKey(g.art))},${text(g.accent)},${i});`),
     '',
     /* ON CONFLICT (not INSERT OR REPLACE): REPLACE deletes the conflicting row first,
-       which would lose added_at on every rebuild. Only a fresh insert stamps it. */
-    ...rows.map((r) => `INSERT INTO anime (id,title,native,year,rating,season,kind,status,art,key_art,accent,synopsis,rank,alt_seasons,sched_day,sched_day_label,sched_date,sched_time,sched_season,source_ids,skip_key_id,skip_key_space,episode_total,added_at,search_text) VALUES (${[
+       which would lose added_at on every rebuild. Only a fresh insert stamps it.
+       catalogue_synced_at is the local writer's own stamp (cloud-sync owns cloud_synced_at):
+       the two columns together are the proof that the writers never touch the same row for
+       the same reason, and a NULL here is what tells the cloud it may own a row's genres. */
+    ...rows.map((r) => `INSERT INTO anime (id,title,native,year,rating,season,kind,status,art,key_art,accent,synopsis,rank,alt_seasons,sched_day,sched_day_label,sched_date,sched_time,sched_season,source_ids,skip_key_id,skip_key_space,episode_total,added_at,search_text,catalogue_synced_at) VALUES (${[
       text(r.id), text(r.title), text(r.native), num(r.year), num(r.rating ?? 0), text(r.season), text(r.kind), text(r.status),
       text(r.art), text(r.keyArt), text(r.accent), text(r.synopsis), num(r.rank), text(JSON.stringify(r.altSeasons)),
       num(r.schedule?.day), text(r.schedule?.dayLabel), text(r.schedule?.date), text(r.schedule?.time), text(r.schedule?.season),
       text(r.sourceIds), num(r.skipKeyId), text(r.skipKeySpace), num(r.episodeTotal), `datetime('now')`,
-      text([foldSearch(r.title), foldSearch(r.native), r.kind.toLowerCase(), r.status.toLowerCase()].join(' '))].join(',')}) ON CONFLICT(id) DO UPDATE SET ${
-      ['title','native','year','rating','season','kind','status','art','key_art','accent','synopsis','rank','alt_seasons','sched_day','sched_day_label','sched_date','sched_time','sched_season','source_ids','skip_key_id','skip_key_space','episode_total','search_text']
+      text([foldSearch(r.title), foldSearch(r.native), r.kind.toLowerCase(), r.status.toLowerCase()].join(' ')),
+      `CAST(strftime('%s','now') AS INTEGER) * 1000`].join(',')}) ON CONFLICT(id) DO UPDATE SET ${
+      ['title','native','year','rating','season','kind','status','art','key_art','accent','synopsis','rank','alt_seasons','sched_day','sched_day_label','sched_date','sched_time','sched_season','source_ids','skip_key_id','skip_key_space','episode_total','search_text','catalogue_synced_at']
         .map((c) => `${c}=excluded.${c}`).join(',')};`),
     '',
     ...rows.flatMap((r) => r.genres.map((g) => `INSERT OR REPLACE INTO anime_genre (anime_id,genre_id) VALUES (${text(r.id)},${text(g)});`)),

@@ -36,7 +36,7 @@ import { execFileSync } from 'node:child_process';
 import { appendFileSync, existsSync, mkdirSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-import { anilist, appendSource, d1Json, kitsuByMal, removeSource, slugify, wrangler } from './discover-titles.mjs';
+import { anilist, appendSource, d1Json, kitsuByMal, readSources, removeSource, slugify, wrangler } from './discover-titles.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const SEED = resolve(ROOT, 'seed.sql');
@@ -59,6 +59,10 @@ export async function importBacklog({ limit = BATCH } = {}) {
   const animeRows = d1Json('SELECT id, source_ids FROM anime');
   const ids = new Set();
   const anilistIds = new Set();
+  for (const s of readSources()) {
+    if (s.id) ids.add(s.id);
+    if (Number.isInteger(s.anilist)) anilistIds.add(s.anilist);
+  }
   for (const r of animeRows) {
     ids.add(r.id);
     try {

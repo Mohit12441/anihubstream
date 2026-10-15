@@ -473,6 +473,24 @@ describe("5. EBML reader", () => {
     // hi/ta/te/en/ja — which is the live reading transcribed into mkvHead()
     // above and pinned through the whole chain by group 8's audioTruth test.
   });
+
+  // The app has to pick a MIME for a stream it never read (its proxy classifies
+  // from the URL alone), and a browser that demuxes off a wrong label turns a
+  // playable file into MEDIA_ERR_SRC_NOT_SUPPORTED. Same rule here: the sniffed
+  // container decides the family, upstream's own answer names the member.
+  it("labels a container by what it is, keeping upstream's more precise MIME", () => {
+    assert.equal(labelForContainer("mp4"), "video/mp4");
+    assert.equal(labelForContainer("mp4", "application/octet-stream"), "video/mp4",
+      "a lying Content-Type must not talk us out of the magic we read");
+    assert.equal(labelForContainer("matroska"), "video/x-matroska", "no label to borrow");
+    assert.equal(labelForContainer("matroska", "video/x-matroska"), "video/x-matroska");
+    assert.equal(labelForContainer("matroska", "video/webm"), "video/webm",
+      "the same EBML family serves VP9/Opus under a webm label");
+    assert.equal(labelForContainer("matroska", "application/octet-stream"), "video/x-matroska",
+      "a generic label carries no information about the family");
+    assert.equal(labelForContainer("png", "image/png"), "image/png", "a decoy is reported as itself");
+    assert.equal(labelForContainer("png"), "application/octet-stream");
+  });
 });
 
 // ================================================================ 6. audio

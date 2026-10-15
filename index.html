@@ -37,8 +37,9 @@
     <link rel="dns-prefetch" href="https://s4.anilist.co" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- The hero art is the largest element on first paint; start it with the CSS. -->
-    <link rel="preload" as="image" href="/art/hero-demon.jpg" fetchpriority="high" />
+    <!-- No hero-art preload here: the hero is whichever title /api/home puts on top, so a
+         hardcoded href downloads a high-priority image the page then does not show (Chrome
+         warns and drops it). The art the page really uses arrives with that response. -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+JP:wght@500;700&family=Permanent+Marker&family=Bakbak+One&display=swap"
       rel="stylesheet"

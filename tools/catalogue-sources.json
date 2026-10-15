@@ -5,185 +5,2624 @@
     "anilist": 101922,
     "note": "kept from the prototype so existing library and resume rows stay valid"
   },
-  { "id": "jujutsu-kaisen", "kitsu": 42765, "anilist": 113415 },
-  { "id": "solo-leveling", "kitsu": 46231, "anilist": 151807 },
-  { "id": "one-piece", "kitsu": 12, "anilist": 21 },
-  { "id": "naruto-shippuden", "kitsu": 1555, "anilist": 1735 },
-  { "id": "black-clover", "kitsu": 13209, "anilist": 97940 },
-  { "id": "my-hero-academia", "kitsu": 11469, "anilist": 21459 },
-  { "id": "sousou-no-frieren", "kitsu": 46474, "anilist": 154587 },
-  { "id": "chainsaw-man", "kitsu": 43806, "anilist": 127230 },
-  { "id": "spy-x-family", "kitsu": 45398, "anilist": 140960 },
-  { "id": "kusuriya-no-hitorigoto-3rd-season", "kitsu": 50021, "anilist": 195516 },
-  { "id": "black-clover-season-2", "kitsu": 50024, "anilist": 195604 },
-  { "id": "tokyo-revengers-zokuhen", "kitsu": 48960, "anilist": 178083 },
-  { "id": "ao-no-hako-2", "kitsu": 49752, "anilist": 189123 },
-  { "id": "cyberpunk-edgerunners-ii", "kitsu": 50016, "anilist": 195539 },
-  {"id":"the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life","kitsu":51014,"anilist":207329,"note":"discovered 2026-10-13 from the AniList trending list (status RELEASING)"},
-  {"id":"nia-liston-the-merciless-maiden","kitsu":50764,"anilist":206949,"note":"discovered 2026-10-13 from the AniList trending list (status RELEASING)"},
-  {"id":"attack-on-titan","kitsu":7442,"anilist":16498,"note":"imported 2026-10-14 from the AniList popularity backlog (page 1)"},
-  {"id":"death-note","kitsu":1376,"anilist":1535,"note":"imported 2026-10-14 from the AniList popularity backlog (page 1)"},
-  {"id":"hunter-x-hunter-2011","kitsu":6448,"anilist":11061,"note":"imported 2026-10-14 from the AniList popularity backlog (page 1)"},
-  {"id":"neon-genesis-evangelion","kitsu":21,"anilist":30,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"jujutsu-kaisen-season-2","kitsu":45857,"anilist":145064,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"demon-slayer-kimetsu-no-yaiba-entertainment-district-arc","kitsu":44081,"anilist":142329,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"fire-force","kitsu":42068,"anilist":105310,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"spirited-away","kitsu":176,"anilist":199,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"jojo-s-bizarre-adventure-tv","kitsu":7158,"anilist":14719,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"cowboy-bebop","kitsu":1,"anilist":1,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"one-punch-man-season-2","kitsu":12566,"anilist":97668,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"death-parade","kitsu":9969,"anilist":20931,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"that-time-i-got-reincarnated-as-a-slime","kitsu":41024,"anilist":101280,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"mushoku-tensei-jobless-reincarnation","kitsu":42323,"anilist":108465,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"the-rising-of-the-shield-hero","kitsu":13593,"anilist":99263,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"blue-exorcist","kitsu":5940,"anilist":9919,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"kakegurui","kitsu":13252,"anilist":98314,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"sword-art-online-ii","kitsu":8174,"anilist":20594,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"mob-psycho-100-ii","kitsu":41071,"anilist":101338,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"classroom-of-the-elite","kitsu":13503,"anilist":98659,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"tokyo-revengers","kitsu":43321,"anilist":120120,"note":"imported 2026-10-14 from the AniList popularity backlog (page 2)"},
-  {"id":"assassination-classroom-second-season","kitsu":10877,"anilist":21170,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"hell-s-paradise","kitsu":44012,"anilist":128893,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"howl-s-moving-castle","kitsu":395,"anilist":431,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"code-geass-lelouch-of-the-rebellion-r2","kitsu":2634,"anilist":2904,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"demon-slayer-kimetsu-no-yaiba-mugen-train-arc","kitsu":45249,"anilist":129874,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"haikyu-3rd-season","kitsu":11935,"anilist":21698,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"the-disastrous-life-of-saiki-k","kitsu":12127,"anilist":21804,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"weathering-with-you","kitsu":42028,"anilist":106286,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"psycho-pass","kitsu":7000,"anilist":13601,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"love-chunibyo-other-delusions","kitsu":7160,"anilist":14741,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"devilman-crybaby","kitsu":13230,"anilist":98460,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"hyouka","kitsu":6686,"anilist":12189,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"fate-zero","kitsu":6028,"anilist":10087,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"jojo-s-bizarre-adventure-stardust-crusaders","kitsu":8063,"anilist":20474,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"monster","kitsu":10,"anilist":19,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"bakemonogatari","kitsu":3919,"anilist":5081,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"tower-of-god","kitsu":43004,"anilist":115230,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"dr-stone-stone-wars","kitsu":42867,"anilist":113936,"note":"imported 2026-10-14 from the AniList popularity backlog (page 3)"},
-  {"id":"haikyu-to-the-top","kitsu":42059,"anilist":106625,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"durarara","kitsu":4696,"anilist":6746,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"kaguya-sama-love-is-war-ultra-romantic","kitsu":43691,"anilist":125367,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"jojo-s-bizarre-adventure-stardust-crusaders-battle-in-egypt","kitsu":8739,"anilist":20799,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"terror-in-resonance","kitsu":8342,"anilist":20661,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"mashle-magic-and-muscles","kitsu":46229,"anilist":151801,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"sword-art-online-alicization","kitsu":13893,"anilist":100182,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"maid-sama","kitsu":4852,"anilist":7054,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"high-school-of-the-dead","kitsu":5187,"anilist":8074,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"kuroko-s-basketball","kitsu":6595,"anilist":11771,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"the-seven-deadly-sins-revival-of-the-commandments","kitsu":12633,"anilist":99539,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"kaiju-no-8","kitsu":46300,"anilist":153288,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"wonder-egg-priority","kitsu":43620,"anilist":124845,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"call-of-the-night","kitsu":45483,"anilist":141391,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"my-neighbor-totoro","kitsu":482,"anilist":523,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"samurai-champloo","kitsu":181,"anilist":205,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"saga-of-tanya-the-evil","kitsu":11794,"anilist":21613,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"demon-slayer-kimetsu-no-yaiba-hashira-training-arc","kitsu":47635,"anilist":166240,"note":"imported 2026-10-14 from the AniList popularity backlog (page 4)"},
-  {"id":"serial-experiments-lain","kitsu":306,"anilist":339,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"neon-genesis-evangelion-the-end-of-evangelion","kitsu":23,"anilist":32,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"black-lagoon","kitsu":789,"anilist":889,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"kimi-ni-todoke-from-me-to-you","kitsu":4397,"anilist":6045,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"attack-on-titan-final-season-the-final-chapters-special-1","kitsu":46038,"anilist":146984,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"5-centimeters-per-second","kitsu":1517,"anilist":1689,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"deadman-wonderland","kitsu":4765,"anilist":6880,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"prison-school","kitsu":10734,"anilist":20807,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"the-garden-of-words","kitsu":7515,"anilist":16782,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"date-a-live","kitsu":7278,"anilist":15583,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"tonikawa-over-the-moon-for-you","kitsu":43034,"anilist":116267,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"overlord-iii","kitsu":41174,"anilist":101474,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"the-rising-of-the-shield-hero-season-2","kitsu":42530,"anilist":111321,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"chivalry-of-a-failed-knight","kitsu":10745,"anilist":21092,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"perfect-blue","kitsu":400,"anilist":437,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"the-ancient-magus-bride","kitsu":13228,"anilist":98436,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"blue-spring-ride","kitsu":8246,"anilist":20596,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"masamune-kun-s-revenge","kitsu":12267,"anilist":21857,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"serial-experiments-lain","kitsu":306,"anilist":339,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"neon-genesis-evangelion-the-end-of-evangelion","kitsu":23,"anilist":32,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"black-lagoon","kitsu":789,"anilist":889,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"kimi-ni-todoke-from-me-to-you","kitsu":4397,"anilist":6045,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"attack-on-titan-final-season-the-final-chapters-special-1","kitsu":46038,"anilist":146984,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"5-centimeters-per-second","kitsu":1517,"anilist":1689,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"deadman-wonderland","kitsu":4765,"anilist":6880,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"prison-school","kitsu":10734,"anilist":20807,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"the-garden-of-words","kitsu":7515,"anilist":16782,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"date-a-live","kitsu":7278,"anilist":15583,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"tonikawa-over-the-moon-for-you","kitsu":43034,"anilist":116267,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"overlord-iii","kitsu":41174,"anilist":101474,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"the-rising-of-the-shield-hero-season-2","kitsu":42530,"anilist":111321,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"chivalry-of-a-failed-knight","kitsu":10745,"anilist":21092,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"perfect-blue","kitsu":400,"anilist":437,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"the-ancient-magus-bride","kitsu":13228,"anilist":98436,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"blue-spring-ride","kitsu":8246,"anilist":20596,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"masamune-kun-s-revenge","kitsu":12267,"anilist":21857,"note":"imported 2026-10-14 from the AniList popularity backlog (page 5)"},
-  {"id":"boruto-naruto-next-generations","kitsu":13051,"anilist":97938,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"my-teen-romantic-comedy-snafu-climax","kitsu":42194,"anilist":108489,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"ranking-of-kings","kitsu":43849,"anilist":113717,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"clannad-after-story","kitsu":3505,"anilist":4181,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"domestic-girlfriend","kitsu":41479,"anilist":103139,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"steins-gate-0","kitsu":10788,"anilist":21127,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"sakamoto-days","kitsu":48915,"anilist":177709,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"monthly-girls-nozaki-kun","kitsu":8402,"anilist":20668,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"my-hero-academia-two-heroes","kitsu":14084,"anilist":100723,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"sword-art-online-alicization-war-of-underworld","kitsu":42213,"anilist":108759,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"dragon-ball-super","kitsu":10879,"anilist":21175,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"angels-of-death","kitsu":13715,"anilist":99629,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"yona-of-the-dawn","kitsu":8648,"anilist":20770,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"shikimori-s-not-just-a-cutie","kitsu":44159,"anilist":127911,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"march-comes-in-like-a-lion","kitsu":11380,"anilist":21366,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"tengoku-daimakyo","kitsu":46641,"anilist":155783,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"the-fragrant-flower-blooms-with-dignity","kitsu":49205,"anilist":181444,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"mushoku-tensei-jobless-reincarnation-season-2-part-2","kitsu":47694,"anilist":166873,"note":"imported 2026-10-14 from the AniList popularity backlog (page 6)"},
-  {"id":"seraph-of-the-end-battle-in-nagoya","kitsu":10082,"anilist":20993,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"kabaneri-of-the-iron-fortress","kitsu":10036,"anilist":21196,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"high-school-dxd-new","kitsu":7258,"anilist":15451,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"the-eminence-in-shadow-season-2","kitsu":47099,"anilist":161964,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"sword-art-online-alicization-war-of-underworld-part-2","kitsu":42927,"anilist":114308,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"tsuredure-children","kitsu":13258,"anilist":98291,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"black-bullet","kitsu":8052,"anilist":20457,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"sword-art-online-the-movie-ordinal-scale","kitsu":11423,"anilist":21403,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"into-the-forest-of-fireflies-light","kitsu":6169,"anilist":10408,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"my-dress-up-darling-season-2","kitsu":46492,"anilist":154768,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"mushi-shi","kitsu":419,"anilist":457,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"wolf-children","kitsu":6711,"anilist":12355,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"jojo-s-bizarre-adventure-stone-ocean","kitsu":44294,"anilist":131942,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"daily-lives-of-high-school-boys","kitsu":6616,"anilist":11843,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"wind-breaker","kitsu":47271,"anilist":163270,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"a-whisker-away","kitsu":42965,"anilist":114963,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"shangri-la-frontier","kitsu":46241,"anilist":151970,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"dorohedoro","kitsu":42040,"anilist":105228,"note":"imported 2026-10-14 from the AniList popularity backlog (page 7)"},
-  {"id":"blend-s","kitsu":13465,"anilist":97994,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"oshi-no-ko-season-2","kitsu":47659,"anilist":166531,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"overlord-iv","kitsu":44529,"anilist":133844,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"saekano-how-to-raise-a-boring-girlfriend","kitsu":8406,"anilist":20657,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"blue-exorcist-kyoto-saga","kitsu":12275,"anilist":21861,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"wistoria-wand-and-sword","kitsu":48534,"anilist":174576,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"from-the-new-world","kitsu":6887,"anilist":13125,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"tomo-chan-is-a-girl","kitsu":46232,"anilist":151806,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"when-they-cry","kitsu":831,"anilist":934,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"high-school-dxd-born","kitsu":8514,"anilist":20745,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"ghost-in-the-shell","kitsu":25,"anilist":43,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"darker-than-black","kitsu":1824,"anilist":2025,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"fruits-basket-the-final-season","kitsu":43578,"anilist":124194,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"link-click","kitsu":44503,"anilist":126403,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"gto-great-teacher-onizuka","kitsu":220,"anilist":245,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"food-wars-the-fourth-plate","kitsu":42390,"anilist":109963,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"hell-s-paradise-season-2","kitsu":47679,"anilist":166613,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"the-angel-next-door-spoils-me-rotten","kitsu":45715,"anilist":143338,"note":"imported 2026-10-14 from the AniList popularity backlog (page 8)"},
-  {"id":"miss-kobayashi-s-dragon-maid-s","kitsu":42149,"anilist":107717,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"nisekoi","kitsu":9178,"anilist":20876,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"amagi-brilliant-park","kitsu":8259,"anilist":20602,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"btooom","kitsu":7113,"anilist":14345,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"akudama-drive","kitsu":43067,"anilist":116566,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"sentenced-to-be-a-hero","kitsu":47759,"anilist":167152,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"made-in-abyss-dawn-of-the-deep-soul","kitsu":14027,"anilist":100643,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"the-millionaire-detective-balance-unlimited","kitsu":43056,"anilist":114888,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"kuroko-s-basketball-3","kitsu":8524,"anilist":20725,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"mieruko-chan","kitsu":44185,"anilist":131083,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"the-dangers-in-my-heart","kitsu":46299,"anilist":153152,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"the-testament-of-sister-new-devil","kitsu":8652,"anilist":20678,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"in-spectre","kitsu":42117,"anilist":107201,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"land-of-the-lustrous","kitsu":13521,"anilist":98707,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"the-way-of-the-househusband","kitsu":43718,"anilist":125426,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"tsukigakirei","kitsu":13234,"anilist":98202,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"yu-yu-hakusho-ghostfiles","kitsu":359,"anilist":392,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"},
-  {"id":"ergo-proxy","kitsu":705,"anilist":790,"note":"imported 2026-10-14 from the AniList popularity backlog (page 9)"}
+  {
+    "id": "jujutsu-kaisen",
+    "kitsu": 42765,
+    "anilist": 113415
+  },
+  {
+    "id": "solo-leveling",
+    "kitsu": 46231,
+    "anilist": 151807
+  },
+  {
+    "id": "one-piece",
+    "kitsu": 12,
+    "anilist": 21
+  },
+  {
+    "id": "naruto-shippuden",
+    "kitsu": 1555,
+    "anilist": 1735
+  },
+  {
+    "id": "black-clover",
+    "kitsu": 13209,
+    "anilist": 97940
+  },
+  {
+    "id": "my-hero-academia",
+    "kitsu": 11469,
+    "anilist": 21459
+  },
+  {
+    "id": "sousou-no-frieren",
+    "kitsu": 46474,
+    "anilist": 154587
+  },
+  {
+    "id": "chainsaw-man",
+    "kitsu": 43806,
+    "anilist": 127230
+  },
+  {
+    "id": "spy-x-family",
+    "kitsu": 45398,
+    "anilist": 140960
+  },
+  {
+    "id": "kusuriya-no-hitorigoto-3rd-season",
+    "kitsu": 50021,
+    "anilist": 195516
+  },
+  {
+    "id": "black-clover-season-2",
+    "kitsu": 50024,
+    "anilist": 195604
+  },
+  {
+    "id": "tokyo-revengers-zokuhen",
+    "kitsu": 48960,
+    "anilist": 178083
+  },
+  {
+    "id": "ao-no-hako-2",
+    "kitsu": 49752,
+    "anilist": 189123
+  },
+  {
+    "id": "cyberpunk-edgerunners-ii",
+    "kitsu": 50016,
+    "anilist": 195539
+  },
+  {
+    "id": "the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life",
+    "kitsu": 51014,
+    "anilist": 207329,
+    "note": "discovered 2026-10-13 from the AniList trending list (status RELEASING)"
+  },
+  {
+    "id": "nia-liston-the-merciless-maiden",
+    "kitsu": 50764,
+    "anilist": 206949,
+    "note": "discovered 2026-10-13 from the AniList trending list (status RELEASING)"
+  },
+  {
+    "id": "attack-on-titan",
+    "kitsu": 7442,
+    "anilist": 16498,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 1)"
+  },
+  {
+    "id": "death-note",
+    "kitsu": 1376,
+    "anilist": 1535,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 1)"
+  },
+  {
+    "id": "hunter-x-hunter-2011",
+    "kitsu": 6448,
+    "anilist": 11061,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 1)"
+  },
+  {
+    "id": "neon-genesis-evangelion",
+    "kitsu": 21,
+    "anilist": 30,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "jujutsu-kaisen-season-2",
+    "kitsu": 45857,
+    "anilist": 145064,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "demon-slayer-kimetsu-no-yaiba-entertainment-district-arc",
+    "kitsu": 44081,
+    "anilist": 142329,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "fire-force",
+    "kitsu": 42068,
+    "anilist": 105310,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "spirited-away",
+    "kitsu": 176,
+    "anilist": 199,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "jojo-s-bizarre-adventure-tv",
+    "kitsu": 7158,
+    "anilist": 14719,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "cowboy-bebop",
+    "kitsu": 1,
+    "anilist": 1,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "one-punch-man-season-2",
+    "kitsu": 12566,
+    "anilist": 97668,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "death-parade",
+    "kitsu": 9969,
+    "anilist": 20931,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "that-time-i-got-reincarnated-as-a-slime",
+    "kitsu": 41024,
+    "anilist": 101280,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "mushoku-tensei-jobless-reincarnation",
+    "kitsu": 42323,
+    "anilist": 108465,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "the-rising-of-the-shield-hero",
+    "kitsu": 13593,
+    "anilist": 99263,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "blue-exorcist",
+    "kitsu": 5940,
+    "anilist": 9919,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "kakegurui",
+    "kitsu": 13252,
+    "anilist": 98314,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "sword-art-online-ii",
+    "kitsu": 8174,
+    "anilist": 20594,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "mob-psycho-100-ii",
+    "kitsu": 41071,
+    "anilist": 101338,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "classroom-of-the-elite",
+    "kitsu": 13503,
+    "anilist": 98659,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "tokyo-revengers",
+    "kitsu": 43321,
+    "anilist": 120120,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 2)"
+  },
+  {
+    "id": "assassination-classroom-second-season",
+    "kitsu": 10877,
+    "anilist": 21170,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "hell-s-paradise",
+    "kitsu": 44012,
+    "anilist": 128893,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "howl-s-moving-castle",
+    "kitsu": 395,
+    "anilist": 431,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "code-geass-lelouch-of-the-rebellion-r2",
+    "kitsu": 2634,
+    "anilist": 2904,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "demon-slayer-kimetsu-no-yaiba-mugen-train-arc",
+    "kitsu": 45249,
+    "anilist": 129874,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "haikyu-3rd-season",
+    "kitsu": 11935,
+    "anilist": 21698,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "the-disastrous-life-of-saiki-k",
+    "kitsu": 12127,
+    "anilist": 21804,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "weathering-with-you",
+    "kitsu": 42028,
+    "anilist": 106286,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "psycho-pass",
+    "kitsu": 7000,
+    "anilist": 13601,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "love-chunibyo-other-delusions",
+    "kitsu": 7160,
+    "anilist": 14741,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "devilman-crybaby",
+    "kitsu": 13230,
+    "anilist": 98460,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "hyouka",
+    "kitsu": 6686,
+    "anilist": 12189,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "fate-zero",
+    "kitsu": 6028,
+    "anilist": 10087,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "jojo-s-bizarre-adventure-stardust-crusaders",
+    "kitsu": 8063,
+    "anilist": 20474,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "monster",
+    "kitsu": 10,
+    "anilist": 19,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "bakemonogatari",
+    "kitsu": 3919,
+    "anilist": 5081,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "tower-of-god",
+    "kitsu": 43004,
+    "anilist": 115230,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "dr-stone-stone-wars",
+    "kitsu": 42867,
+    "anilist": 113936,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 3)"
+  },
+  {
+    "id": "haikyu-to-the-top",
+    "kitsu": 42059,
+    "anilist": 106625,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "durarara",
+    "kitsu": 4696,
+    "anilist": 6746,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "kaguya-sama-love-is-war-ultra-romantic",
+    "kitsu": 43691,
+    "anilist": 125367,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "jojo-s-bizarre-adventure-stardust-crusaders-battle-in-egypt",
+    "kitsu": 8739,
+    "anilist": 20799,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "terror-in-resonance",
+    "kitsu": 8342,
+    "anilist": 20661,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "mashle-magic-and-muscles",
+    "kitsu": 46229,
+    "anilist": 151801,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "sword-art-online-alicization",
+    "kitsu": 13893,
+    "anilist": 100182,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "maid-sama",
+    "kitsu": 4852,
+    "anilist": 7054,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "high-school-of-the-dead",
+    "kitsu": 5187,
+    "anilist": 8074,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "kuroko-s-basketball",
+    "kitsu": 6595,
+    "anilist": 11771,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "the-seven-deadly-sins-revival-of-the-commandments",
+    "kitsu": 12633,
+    "anilist": 99539,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "kaiju-no-8",
+    "kitsu": 46300,
+    "anilist": 153288,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "wonder-egg-priority",
+    "kitsu": 43620,
+    "anilist": 124845,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "call-of-the-night",
+    "kitsu": 45483,
+    "anilist": 141391,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "my-neighbor-totoro",
+    "kitsu": 482,
+    "anilist": 523,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "samurai-champloo",
+    "kitsu": 181,
+    "anilist": 205,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "saga-of-tanya-the-evil",
+    "kitsu": 11794,
+    "anilist": 21613,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "demon-slayer-kimetsu-no-yaiba-hashira-training-arc",
+    "kitsu": 47635,
+    "anilist": 166240,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 4)"
+  },
+  {
+    "id": "serial-experiments-lain",
+    "kitsu": 306,
+    "anilist": 339,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "neon-genesis-evangelion-the-end-of-evangelion",
+    "kitsu": 23,
+    "anilist": 32,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "black-lagoon",
+    "kitsu": 789,
+    "anilist": 889,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "kimi-ni-todoke-from-me-to-you",
+    "kitsu": 4397,
+    "anilist": 6045,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "attack-on-titan-final-season-the-final-chapters-special-1",
+    "kitsu": 46038,
+    "anilist": 146984,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "5-centimeters-per-second",
+    "kitsu": 1517,
+    "anilist": 1689,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "deadman-wonderland",
+    "kitsu": 4765,
+    "anilist": 6880,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "prison-school",
+    "kitsu": 10734,
+    "anilist": 20807,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "the-garden-of-words",
+    "kitsu": 7515,
+    "anilist": 16782,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "date-a-live",
+    "kitsu": 7278,
+    "anilist": 15583,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "tonikawa-over-the-moon-for-you",
+    "kitsu": 43034,
+    "anilist": 116267,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "overlord-iii",
+    "kitsu": 41174,
+    "anilist": 101474,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "the-rising-of-the-shield-hero-season-2",
+    "kitsu": 42530,
+    "anilist": 111321,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "chivalry-of-a-failed-knight",
+    "kitsu": 10745,
+    "anilist": 21092,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "perfect-blue",
+    "kitsu": 400,
+    "anilist": 437,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "the-ancient-magus-bride",
+    "kitsu": 13228,
+    "anilist": 98436,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "blue-spring-ride",
+    "kitsu": 8246,
+    "anilist": 20596,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "masamune-kun-s-revenge",
+    "kitsu": 12267,
+    "anilist": 21857,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 5)"
+  },
+  {
+    "id": "boruto-naruto-next-generations",
+    "kitsu": 13051,
+    "anilist": 97938,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "my-teen-romantic-comedy-snafu-climax",
+    "kitsu": 42194,
+    "anilist": 108489,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "ranking-of-kings",
+    "kitsu": 43849,
+    "anilist": 113717,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "clannad-after-story",
+    "kitsu": 3505,
+    "anilist": 4181,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "domestic-girlfriend",
+    "kitsu": 41479,
+    "anilist": 103139,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "steins-gate-0",
+    "kitsu": 10788,
+    "anilist": 21127,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "sakamoto-days",
+    "kitsu": 48915,
+    "anilist": 177709,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "monthly-girls-nozaki-kun",
+    "kitsu": 8402,
+    "anilist": 20668,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "my-hero-academia-two-heroes",
+    "kitsu": 14084,
+    "anilist": 100723,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "sword-art-online-alicization-war-of-underworld",
+    "kitsu": 42213,
+    "anilist": 108759,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "dragon-ball-super",
+    "kitsu": 10879,
+    "anilist": 21175,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "angels-of-death",
+    "kitsu": 13715,
+    "anilist": 99629,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "yona-of-the-dawn",
+    "kitsu": 8648,
+    "anilist": 20770,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "shikimori-s-not-just-a-cutie",
+    "kitsu": 44159,
+    "anilist": 127911,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "march-comes-in-like-a-lion",
+    "kitsu": 11380,
+    "anilist": 21366,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "tengoku-daimakyo",
+    "kitsu": 46641,
+    "anilist": 155783,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "the-fragrant-flower-blooms-with-dignity",
+    "kitsu": 49205,
+    "anilist": 181444,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "mushoku-tensei-jobless-reincarnation-season-2-part-2",
+    "kitsu": 47694,
+    "anilist": 166873,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 6)"
+  },
+  {
+    "id": "seraph-of-the-end-battle-in-nagoya",
+    "kitsu": 10082,
+    "anilist": 20993,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "kabaneri-of-the-iron-fortress",
+    "kitsu": 10036,
+    "anilist": 21196,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "high-school-dxd-new",
+    "kitsu": 7258,
+    "anilist": 15451,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "the-eminence-in-shadow-season-2",
+    "kitsu": 47099,
+    "anilist": 161964,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "sword-art-online-alicization-war-of-underworld-part-2",
+    "kitsu": 42927,
+    "anilist": 114308,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "tsuredure-children",
+    "kitsu": 13258,
+    "anilist": 98291,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "black-bullet",
+    "kitsu": 8052,
+    "anilist": 20457,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "sword-art-online-the-movie-ordinal-scale",
+    "kitsu": 11423,
+    "anilist": 21403,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "into-the-forest-of-fireflies-light",
+    "kitsu": 6169,
+    "anilist": 10408,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "my-dress-up-darling-season-2",
+    "kitsu": 46492,
+    "anilist": 154768,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "mushi-shi",
+    "kitsu": 419,
+    "anilist": 457,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "wolf-children",
+    "kitsu": 6711,
+    "anilist": 12355,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "jojo-s-bizarre-adventure-stone-ocean",
+    "kitsu": 44294,
+    "anilist": 131942,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "daily-lives-of-high-school-boys",
+    "kitsu": 6616,
+    "anilist": 11843,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "wind-breaker",
+    "kitsu": 47271,
+    "anilist": 163270,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "a-whisker-away",
+    "kitsu": 42965,
+    "anilist": 114963,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "shangri-la-frontier",
+    "kitsu": 46241,
+    "anilist": 151970,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "dorohedoro",
+    "kitsu": 42040,
+    "anilist": 105228,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 7)"
+  },
+  {
+    "id": "blend-s",
+    "kitsu": 13465,
+    "anilist": 97994,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "oshi-no-ko-season-2",
+    "kitsu": 47659,
+    "anilist": 166531,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "overlord-iv",
+    "kitsu": 44529,
+    "anilist": 133844,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "saekano-how-to-raise-a-boring-girlfriend",
+    "kitsu": 8406,
+    "anilist": 20657,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "blue-exorcist-kyoto-saga",
+    "kitsu": 12275,
+    "anilist": 21861,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "wistoria-wand-and-sword",
+    "kitsu": 48534,
+    "anilist": 174576,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "from-the-new-world",
+    "kitsu": 6887,
+    "anilist": 13125,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "tomo-chan-is-a-girl",
+    "kitsu": 46232,
+    "anilist": 151806,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "when-they-cry",
+    "kitsu": 831,
+    "anilist": 934,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "high-school-dxd-born",
+    "kitsu": 8514,
+    "anilist": 20745,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "ghost-in-the-shell",
+    "kitsu": 25,
+    "anilist": 43,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "darker-than-black",
+    "kitsu": 1824,
+    "anilist": 2025,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "fruits-basket-the-final-season",
+    "kitsu": 43578,
+    "anilist": 124194,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "link-click",
+    "kitsu": 44503,
+    "anilist": 126403,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "gto-great-teacher-onizuka",
+    "kitsu": 220,
+    "anilist": 245,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "food-wars-the-fourth-plate",
+    "kitsu": 42390,
+    "anilist": 109963,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "hell-s-paradise-season-2",
+    "kitsu": 47679,
+    "anilist": 166613,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "the-angel-next-door-spoils-me-rotten",
+    "kitsu": 45715,
+    "anilist": 143338,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 8)"
+  },
+  {
+    "id": "miss-kobayashi-s-dragon-maid-s",
+    "kitsu": 42149,
+    "anilist": 107717,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "nisekoi",
+    "kitsu": 9178,
+    "anilist": 20876,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "amagi-brilliant-park",
+    "kitsu": 8259,
+    "anilist": 20602,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "btooom",
+    "kitsu": 7113,
+    "anilist": 14345,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "akudama-drive",
+    "kitsu": 43067,
+    "anilist": 116566,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "sentenced-to-be-a-hero",
+    "kitsu": 47759,
+    "anilist": 167152,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "made-in-abyss-dawn-of-the-deep-soul",
+    "kitsu": 14027,
+    "anilist": 100643,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "the-millionaire-detective-balance-unlimited",
+    "kitsu": 43056,
+    "anilist": 114888,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "kuroko-s-basketball-3",
+    "kitsu": 8524,
+    "anilist": 20725,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "mieruko-chan",
+    "kitsu": 44185,
+    "anilist": 131083,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "the-dangers-in-my-heart",
+    "kitsu": 46299,
+    "anilist": 153152,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "the-testament-of-sister-new-devil",
+    "kitsu": 8652,
+    "anilist": 20678,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "in-spectre",
+    "kitsu": 42117,
+    "anilist": 107201,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "land-of-the-lustrous",
+    "kitsu": 13521,
+    "anilist": 98707,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "the-way-of-the-househusband",
+    "kitsu": 43718,
+    "anilist": 125426,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "tsukigakirei",
+    "kitsu": 13234,
+    "anilist": 98202,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "yu-yu-hakusho-ghostfiles",
+    "kitsu": 359,
+    "anilist": 392,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "ergo-proxy",
+    "kitsu": 705,
+    "anilist": 790,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 9)"
+  },
+  {
+    "id": "asobi-asobase-workshop-of-fun",
+    "kitsu": 41149,
+    "anilist": 101001,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "date-a-live-ii",
+    "kitsu": 7864,
+    "anilist": 19163,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "my-first-girlfriend-is-a-gal",
+    "kitsu": 12761,
+    "anilist": 97863,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "pokemon",
+    "kitsu": 486,
+    "anilist": 527,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "the-disappearance-of-haruhi-suzumiya",
+    "kitsu": 4938,
+    "anilist": 7311,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "my-next-life-as-a-villainess-all-routes-lead-to-doom",
+    "kitsu": 42277,
+    "anilist": 104647,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "kizumonogatari-part-3-reiketsu",
+    "kitsu": 11407,
+    "anilist": 21400,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "maquia-when-the-promised-flower-blooms",
+    "kitsu": 13612,
+    "anilist": 99457,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "oreimo",
+    "kitsu": 5487,
+    "anilist": 8769,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "hellsing",
+    "kitsu": 245,
+    "anilist": 270,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "fate-stay-night-heaven-s-feel-i-presage-flower",
+    "kitsu": 8675,
+    "anilist": 20791,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "violet-evergarden-eternity-and-the-auto-memory-doll",
+    "kitsu": 42340,
+    "anilist": 109190,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "the-fruit-of-grisaia",
+    "kitsu": 7982,
+    "anilist": 17729,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "and-you-thought-there-is-never-a-girl-online",
+    "kitsu": 11319,
+    "anilist": 21290,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "lucky-star",
+    "kitsu": 1697,
+    "anilist": 1887,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "hajime-no-ippo-the-fighting",
+    "kitsu": 238,
+    "anilist": 263,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "bleach-thousand-year-blood-war-the-separation",
+    "kitsu": 46903,
+    "anilist": 159322,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "evangelion-1-0-you-are-not-alone",
+    "kitsu": 2519,
+    "anilist": 2759,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 10)"
+  },
+  {
+    "id": "high-school-dxd-hero",
+    "kitsu": 12677,
+    "anilist": 97767,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "girls-last-tour",
+    "kitsu": 13597,
+    "anilist": 99420,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "lovely-complex",
+    "kitsu": 1833,
+    "anilist": 2034,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "a-lull-in-the-sea",
+    "kitsu": 7370,
+    "anilist": 16067,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "rent-a-girlfriend-season-2",
+    "kitsu": 43588,
+    "anilist": 124410,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "death-march-to-the-parallel-world-rhapsody",
+    "kitsu": 13276,
+    "anilist": 97907,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "high-rise-invasion",
+    "kitsu": 43703,
+    "anilist": 125428,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "gangsta",
+    "kitsu": 8576,
+    "anilist": 20773,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "sonny-boy",
+    "kitsu": 44501,
+    "anilist": 132126,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "my-hero-academia-final-season",
+    "kitsu": 49279,
+    "anilist": 182896,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "recovery-of-an-mmo-junkie",
+    "kitsu": 13703,
+    "anilist": 99726,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "re-creators",
+    "kitsu": 13055,
+    "anilist": 97980,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "the-100-girlfriends-who-really-really-really-really-really",
+    "kitsu": 47179,
+    "anilist": 162694,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "the-world-god-only-knows",
+    "kitsu": 5374,
+    "anilist": 8525,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "sankarea-undying-love",
+    "kitsu": 6521,
+    "anilist": 11499,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "hunter-x-hunter",
+    "kitsu": 115,
+    "anilist": 136,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "spy-x-family-season-3",
+    "kitsu": 48939,
+    "anilist": 177937,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "evangelion-2-0-you-can-not-advance",
+    "kitsu": 3250,
+    "anilist": 3784,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 11)"
+  },
+  {
+    "id": "how-not-to-summon-a-demon-lord",
+    "kitsu": 43118,
+    "anilist": 117448,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-iv",
+    "kitsu": 44031,
+    "anilist": 129196,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "the-hidden-dungeon-only-i-can-enter",
+    "kitsu": 43301,
+    "anilist": 118375,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "tamako-market",
+    "kitsu": 7425,
+    "anilist": 16417,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "you-and-i-are-polar-opposites",
+    "kitsu": 49372,
+    "anilist": 184951,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "buddy-daddies",
+    "kitsu": 46650,
+    "anilist": 155907,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "aharen-san-wa-hakarenai",
+    "kitsu": 44944,
+    "anilist": 137281,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "to-be-hero-x",
+    "kitsu": 46672,
+    "anilist": 156092,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "natsume-s-book-of-friends-season-1",
+    "kitsu": 3453,
+    "anilist": 4081,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "konosuba-god-s-blessing-on-this-wonderful-world-god-s",
+    "kitsu": 11752,
+    "anilist": 21574,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "strike-the-blood",
+    "kitsu": 7715,
+    "anilist": 18277,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "school-days-tv",
+    "kitsu": 2249,
+    "anilist": 2476,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "aho-girl",
+    "kitsu": 13259,
+    "anilist": 98251,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "id-invaded",
+    "kitsu": 42436,
+    "anilist": 110350,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "banished-from-the-hero-s-party-i-decided-to-live-a-quiet",
+    "kitsu": 44167,
+    "anilist": 126213,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "kemono-jihen",
+    "kitsu": 42922,
+    "anilist": 114085,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "look-back",
+    "kitsu": 48541,
+    "anilist": 174788,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "gate-2",
+    "kitsu": 11376,
+    "anilist": 21364,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 12)"
+  },
+  {
+    "id": "campfire-cooking-in-another-world-with-my-absurd-skill",
+    "kitsu": 46676,
+    "anilist": 156067,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "new-game",
+    "kitsu": 11467,
+    "anilist": 21455,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "world-trigger",
+    "kitsu": 8631,
+    "anilist": 20729,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "tamako-love-story",
+    "kitsu": 8135,
+    "anilist": 20519,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "non-non-biyori",
+    "kitsu": 7711,
+    "anilist": 17549,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "bleach-thousand-year-blood-war-the-conflict",
+    "kitsu": 48015,
+    "anilist": 169755,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "classroom-of-the-elite-4th-season-second-year-first-semester",
+    "kitsu": 49194,
+    "anilist": 180745,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "the-melancholy-of-haruhi-suzumiya-2009",
+    "kitsu": 3579,
+    "anilist": 4382,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "puella-magi-madoka-magica-the-movie-rebellion",
+    "kitsu": 6638,
+    "anilist": 11981,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "worldend-what-are-you-doing-at-the-end-of-the-world-are-you",
+    "kitsu": 12769,
+    "anilist": 21860,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "goblin-slayer-ii",
+    "kitsu": 44010,
+    "anilist": 129188,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "gintama-season-3",
+    "kitsu": 10083,
+    "anilist": 20996,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "ascendance-of-a-bookworm",
+    "kitsu": 42241,
+    "anilist": 108268,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "magi-adventure-of-sinbad",
+    "kitsu": 11431,
+    "anilist": 21394,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "fate-stay-night-heaven-s-feel-iii-spring-song",
+    "kitsu": 12008,
+    "anilist": 21719,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "baka-and-test-summon-the-beasts",
+    "kitsu": 4528,
+    "anilist": 6347,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "dagashi-kashi",
+    "kitsu": 11381,
+    "anilist": 21365,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "reincarnated-as-a-sword",
+    "kitsu": 45242,
+    "anilist": 139587,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 13)"
+  },
+  {
+    "id": "the-tunnel-to-summer-the-exit-of-goodbyes",
+    "kitsu": 45598,
+    "anilist": 142769,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "our-last-crusade-or-the-rise-of-a-new-world",
+    "kitsu": 42638,
+    "anilist": 112667,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "remake-our-life",
+    "kitsu": 42924,
+    "anilist": 114065,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "vermeil-in-gold",
+    "kitsu": 45956,
+    "anilist": 146210,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "shirobako",
+    "kitsu": 8698,
+    "anilist": 20812,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "azumanga-daioh",
+    "kitsu": 47,
+    "anilist": 66,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "eden-of-the-east",
+    "kitsu": 4211,
+    "anilist": 5630,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "oshi-no-ko-season-3",
+    "kitsu": 49264,
+    "anilist": 182587,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "assassins-pride",
+    "kitsu": 42328,
+    "anilist": 104722,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "o-maidens-in-your-savage-season",
+    "kitsu": 42025,
+    "anilist": 105932,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "the-boy-and-the-beast",
+    "kitsu": 10065,
+    "anilist": 20981,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "the-genius-prince-s-guide-to-raising-a-nation-out-of-debt",
+    "kitsu": 44020,
+    "anilist": 129190,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "the-garden-of-sinners-chapter-1-thanatos-overlooking-view",
+    "kitsu": 2357,
+    "anilist": 2593,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "maoyu-archenemy-hero",
+    "kitsu": 7174,
+    "anilist": 14833,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "insomniacs-after-school",
+    "kitsu": 45746,
+    "anilist": 143653,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "relife-final-arc",
+    "kitsu": 13502,
+    "anilist": 98635,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "why-the-hell-are-you-here-teacher",
+    "kitsu": 42060,
+    "anilist": 104325,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "durarara-x2",
+    "kitsu": 8314,
+    "anilist": 20652,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 14)"
+  },
+  {
+    "id": "haganai-next",
+    "kitsu": 7190,
+    "anilist": 14967,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "astra-lost-in-space",
+    "kitsu": 42148,
+    "anilist": 107663,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "sakamoto-days-part-2",
+    "kitsu": 49332,
+    "anilist": 184237,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "call-of-the-night-season-2",
+    "kitsu": 48611,
+    "anilist": 175914,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "saekano-how-to-raise-a-boring-girlfriend-21180",
+    "kitsu": 10909,
+    "anilist": 21180,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "the-asterisk-war-2",
+    "kitsu": 11421,
+    "anilist": 21390,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "ya-boy-kongming",
+    "kitsu": 45506,
+    "anilist": 141774,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "aldnoah-zero",
+    "kitsu": 8297,
+    "anilist": 20632,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "ride-your-wave",
+    "kitsu": 42031,
+    "anilist": 105018,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "my-hero-academia-world-heroes-mission",
+    "kitsu": 44209,
+    "anilist": 126659,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "saga-of-tanya-the-evil-the-movie",
+    "kitsu": 14173,
+    "anilist": 100878,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "no-6",
+    "kitsu": 6059,
+    "anilist": 10161,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "cardcaptor-sakura",
+    "kitsu": 207,
+    "anilist": 232,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "a-sister-s-all-you-need",
+    "kitsu": 11207,
+    "anilist": 98596,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "i-made-friends-with-the-second-prettiest-girl-in-my-class",
+    "kitsu": 47987,
+    "anilist": 169580,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "chillin-in-another-world-with-level-2-super-cheat-powers",
+    "kitsu": 48125,
+    "anilist": 170130,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "don-t-toy-with-me-miss-nagatoro-2nd-attack",
+    "kitsu": 45355,
+    "anilist": 140596,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "interviews-with-monster-girls",
+    "kitsu": 12529,
+    "anilist": 97592,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 15)"
+  },
+  {
+    "id": "iroduku-the-world-in-colors",
+    "kitsu": 41101,
+    "anilist": 101316,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "fruits-basket",
+    "kitsu": 99,
+    "anilist": 120,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-iv-part-2",
+    "kitsu": 46556,
+    "anilist": 155211,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "dead-mount-death-play",
+    "kitsu": 46760,
+    "anilist": 157198,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "undefeated-bahamut-chronicle",
+    "kitsu": 10913,
+    "anilist": 21188,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "engaged-to-the-unidentified",
+    "kitsu": 8027,
+    "anilist": 20483,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "armed-girl-s-machiavellism",
+    "kitsu": 12265,
+    "anilist": 21851,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "haikyu-the-dumpster-battle",
+    "kitsu": 46336,
+    "anilist": 153658,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "sing-yesterday-for-me",
+    "kitsu": 43063,
+    "anilist": 109020,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "mekakucity-actors",
+    "kitsu": 8000,
+    "anilist": 20541,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "boruto-naruto-the-movie",
+    "kitsu": 10089,
+    "anilist": 21220,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "the-disastrous-life-of-saiki-k-reawakened",
+    "kitsu": 42623,
+    "anilist": 112625,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "kaiji-ultimate-survivor",
+    "kitsu": 2713,
+    "anilist": 3002,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "dragon-ball-z-kai",
+    "kitsu": 4394,
+    "anilist": 6033,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "the-strongest-sage-with-the-weakest-crest",
+    "kitsu": 44025,
+    "anilist": 129191,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "the-anthem-of-the-heart",
+    "kitsu": 10056,
+    "anilist": 20968,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "somali-and-the-forest-spirit",
+    "kitsu": 42201,
+    "anilist": 108617,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "run-with-the-wind",
+    "kitsu": 41372,
+    "anilist": 101903,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 16)"
+  },
+  {
+    "id": "heaven-s-lost-property",
+    "kitsu": 4363,
+    "anilist": 5958,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "kamisama-kiss",
+    "kitsu": 8716,
+    "anilist": 20801,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "dusk-maiden-of-amnesia",
+    "kitsu": 6734,
+    "anilist": 12445,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "tonikawa-over-the-moon-for-you-season-2",
+    "kitsu": 45415,
+    "anilist": 141208,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "love-tyrant",
+    "kitsu": 11610,
+    "anilist": 21517,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "mononoke",
+    "kitsu": 2035,
+    "anilist": 2246,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "oreimo-2",
+    "kitsu": 7006,
+    "anilist": 13659,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "aoashi",
+    "kitsu": 44629,
+    "anilist": 134732,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "engage-kiss",
+    "kitsu": 46013,
+    "anilist": 146625,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "wagnaria",
+    "kitsu": 4805,
+    "anilist": 6956,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "one-punch-man-road-to-hero",
+    "kitsu": 11402,
+    "anilist": 21386,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "hokkaido-gals-are-super-adorable",
+    "kitsu": 46663,
+    "anilist": 155963,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "kaguya-sama-wa-kokurasetai-tensaitachi-no-renai-zunousen-ova",
+    "kitsu": 43731,
+    "anilist": 125368,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "teasing-master-takagi-san-season-2",
+    "kitsu": 42110,
+    "anilist": 107068,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "bubble",
+    "kitsu": 45559,
+    "anilist": 142455,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "the-elusive-samurai",
+    "kitsu": 47197,
+    "anilist": 162896,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "the-disastrous-life-of-saiki-k-season-3",
+    "kitsu": 41940,
+    "anilist": 104580,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "cells-at-work",
+    "kitsu": 42202,
+    "anilist": 108631,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 17)"
+  },
+  {
+    "id": "the-cold-sato-san-is-only-sweet-to-me",
+    "kitsu": 51012,
+    "anilist": 209502,
+    "note": "discovered 2026-10-14 from the AniList trending list (status RELEASING)"
+  },
+  {
+    "id": "sasaki-and-peeps-season-2",
+    "kitsu": 48651,
+    "anilist": 176314,
+    "note": "discovered 2026-10-14 from the AniList trending list (status RELEASING)"
+  },
+  {
+    "id": "kuroko-s-basketball-last-game",
+    "kitsu": 11399,
+    "anilist": 21377,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "danganronpa-3-the-end-of-hope-s-peak-high-school-despair-arc",
+    "kitsu": 12105,
+    "anilist": 21825,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "the-dreaming-boy-is-a-realist",
+    "kitsu": 46763,
+    "anilist": 157397,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "bungo-stray-dogs-dead-apple",
+    "kitsu": 13570,
+    "anilist": 98384,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "bofuri-i-don-t-want-to-get-hurt-so-i-ll-max-out-my-defense",
+    "kitsu": 43086,
+    "anilist": 116867,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "just-because",
+    "kitsu": 13530,
+    "anilist": 98820,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "yuruyuri",
+    "kitsu": 6205,
+    "anilist": 10495,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "snow-white-with-the-red-hair-season-2",
+    "kitsu": 11179,
+    "anilist": 21258,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "the-future-diary-redial",
+    "kitsu": 7510,
+    "anilist": 16762,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "eureka-seven",
+    "kitsu": 212,
+    "anilist": 237,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "durarara-x2-the-second-arc",
+    "kitsu": 9726,
+    "anilist": 20879,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "the-familiar-of-zero-knight-of-the-twin-moons",
+    "kitsu": 1657,
+    "anilist": 1840,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "trigun-stampede",
+    "kitsu": 46183,
+    "anilist": 151040,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "nanbaka",
+    "kitsu": 10467,
+    "anilist": 21051,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "d-frag",
+    "kitsu": 8001,
+    "anilist": 20031,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "when-marnie-was-there",
+    "kitsu": 8159,
+    "anilist": 20555,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "afro-samurai",
+    "kitsu": 1165,
+    "anilist": 1292,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "tada-never-falls-in-love",
+    "kitsu": 13888,
+    "anilist": 100179,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 18)"
+  },
+  {
+    "id": "legend-of-the-galactic-heroes",
+    "kitsu": 727,
+    "anilist": 820,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-v",
+    "kitsu": 48216,
+    "anilist": 170732,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "mushoku-tensei-jobless-reincarnation-cour-2-eris-the-goblin",
+    "kitsu": 45492,
+    "anilist": 141534,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "my-status-as-an-assassin-obviously-exceeds-the-hero-s",
+    "kitsu": 49567,
+    "anilist": 186794,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "the-great-jahy-will-not-be-defeated",
+    "kitsu": 44392,
+    "anilist": 132456,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "moriarty-the-patriot-part-2",
+    "kitsu": 43708,
+    "anilist": 124858,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "witch-craft-works",
+    "kitsu": 8017,
+    "anilist": 20503,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "lord-marksman-and-vanadis",
+    "kitsu": 8630,
+    "anilist": 20809,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "yuuna-and-the-haunted-hot-springs",
+    "kitsu": 14090,
+    "anilist": 100483,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "cowboy-bebop-the-movie-knockin-on-heaven-s-door",
+    "kitsu": 2,
+    "anilist": 5,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "penguindrum",
+    "kitsu": 6318,
+    "anilist": 10721,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "gintama-season-2-part-2",
+    "kitsu": 7253,
+    "anilist": 15417,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "i-can-t-understand-what-my-husband-is-saying",
+    "kitsu": 8891,
+    "anilist": 20735,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "sabikui-bisco",
+    "kitsu": 44189,
+    "anilist": 130591,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "doukyuusei-classmates",
+    "kitsu": 10846,
+    "anilist": 21096,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "am-i-actually-the-strongest",
+    "kitsu": 46456,
+    "anilist": 154391,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "hundred",
+    "kitsu": 11029,
+    "anilist": 21362,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "steins-gate-0-23-divide-by-zero",
+    "kitsu": 11574,
+    "anilist": 21624,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 19)"
+  },
+  {
+    "id": "ghost-stories",
+    "kitsu": 1156,
+    "anilist": 1281,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "an-archdemon-s-dilemma-how-to-love-your-elf-bride",
+    "kitsu": 46687,
+    "anilist": 156023,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "the-100-girlfriends-who-really-really-really-really-really-172258",
+    "kitsu": 48348,
+    "anilist": 172258,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "by-the-grace-of-the-gods",
+    "kitsu": 43273,
+    "anilist": 115740,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "the-angel-next-door-spoils-me-rotten2",
+    "kitsu": 48069,
+    "anilist": 170019,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "magical-sempai",
+    "kitsu": 42082,
+    "anilist": 105074,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "durarara-x2-the-third-arc",
+    "kitsu": 9725,
+    "anilist": 20880,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "detective-conan",
+    "kitsu": 210,
+    "anilist": 235,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "this-art-club-has-a-problem",
+    "kitsu": 11466,
+    "anilist": 21457,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "the-kawai-complex-guide-to-manors-and-hostel-behavior",
+    "kitsu": 8094,
+    "anilist": 20529,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "sleepy-princess-in-the-demon-castle",
+    "kitsu": 42551,
+    "anilist": 111428,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "the-saint-s-magic-power-is-omnipotent",
+    "kitsu": 44115,
+    "anilist": 123802,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "the-cat-returns",
+    "kitsu": 552,
+    "anilist": 597,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "love-chunibyo-other-delusions-glimmering-explosive-festival",
+    "kitsu": 7556,
+    "anilist": 16934,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "stars-align",
+    "kitsu": 42094,
+    "anilist": 104052,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "villainess-level-99-i-may-be-the-hidden-boss-but-i-m-not",
+    "kitsu": 47237,
+    "anilist": 163076,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "restaurant-to-another-world",
+    "kitsu": 12535,
+    "anilist": 97617,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "go-go-loser-ranger",
+    "kitsu": 46840,
+    "anilist": 158417,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 20)"
+  },
+  {
+    "id": "the-brilliant-healer-s-new-life-in-the-shadows",
+    "kitsu": 48606,
+    "anilist": 175872,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "sekirei",
+    "kitsu": 3441,
+    "anilist": 4063,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "hell-girl",
+    "kitsu": 203,
+    "anilist": 228,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "mission-yozakura-family",
+    "kitsu": 46869,
+    "anilist": 158898,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "noragami-ova",
+    "kitsu": 8152,
+    "anilist": 20494,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "berserk-2016",
+    "kitsu": 11655,
+    "anilist": 21560,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "campione",
+    "kitsu": 6702,
+    "anilist": 12293,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "sword-of-the-stranger",
+    "kitsu": 2194,
+    "anilist": 2418,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "the-dungeon-of-black-company",
+    "kitsu": 43268,
+    "anilist": 120608,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "arakawa-under-the-bridge",
+    "kitsu": 5067,
+    "anilist": 7647,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "handyman-saitou-in-another-world",
+    "kitsu": 45788,
+    "anilist": 144092,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "ascendance-of-a-bookworm-part-2",
+    "kitsu": 42838,
+    "anilist": 113693,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "may-i-ask-for-one-final-thing",
+    "kitsu": 49206,
+    "anilist": 181447,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "magical-girl-site",
+    "kitsu": 14137,
+    "anilist": 100010,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "dragon-ball-z-battle-of-gods",
+    "kitsu": 7176,
+    "anilist": 14837,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "the-heroic-legend-of-arslan",
+    "kitsu": 9972,
+    "anilist": 20935,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "my-girlfriend-is-shobitch",
+    "kitsu": 13693,
+    "anilist": 98951,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "pandorahearts",
+    "kitsu": 4138,
+    "anilist": 5530,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 21)"
+  },
+  {
+    "id": "fena-pirate-princess",
+    "kitsu": 43456,
+    "anilist": 122052,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "knight-s-magic",
+    "kitsu": 13274,
+    "anilist": 97663,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "the-tale-of-the-princess-kaguya",
+    "kitsu": 7486,
+    "anilist": 16664,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "the-ancient-magus-bride-those-awaiting-a-star",
+    "kitsu": 11913,
+    "anilist": 21688,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "hi-score-girl",
+    "kitsu": 8158,
+    "anilist": 20574,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "anti-magic-academy-the-35th-test-platoon",
+    "kitsu": 8669,
+    "anilist": 20704,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "liz-and-the-blue-bird",
+    "kitsu": 13618,
+    "anilist": 100178,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "akiba-maid-war",
+    "kitsu": 46210,
+    "anilist": 151379,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "reign-of-the-seven-spellblades",
+    "kitsu": 45579,
+    "anilist": 142598,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "i-m-the-villainess-so-i-m-taming-the-final-boss",
+    "kitsu": 45269,
+    "anilist": 139820,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "i-couldn-t-become-a-hero-so-i-reluctantly-decided-to-get-a",
+    "kitsu": 7725,
+    "anilist": 18677,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "a-returner-s-magic-should-be-special",
+    "kitsu": 47240,
+    "anilist": 163142,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "why-raeliana-ended-up-at-the-duke-s-mansion",
+    "kitsu": 46233,
+    "anilist": 151847,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "oniai",
+    "kitsu": 7094,
+    "anilist": 14199,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "wotaku-ni-koi-wa-muzukashii-ova",
+    "kitsu": 42051,
+    "anilist": 104217,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "children-of-the-whales",
+    "kitsu": 13229,
+    "anilist": 98449,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "a-certain-scientific-accelerator",
+    "kitsu": 41980,
+    "anilist": 104463,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "boogiepop-and-others",
+    "kitsu": 41032,
+    "anilist": 101283,
+    "note": "imported 2026-10-14 from the AniList popularity backlog (page 22)"
+  },
+  {
+    "id": "silver-spoon",
+    "kitsu": 7553,
+    "anilist": 16918,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "motto-to-love-ru",
+    "kitsu": 5626,
+    "anilist": 9181,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "sirius-the-jaeger",
+    "kitsu": 41091,
+    "anilist": 101361,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "grimoire-of-zero",
+    "kitsu": 12623,
+    "anilist": 97682,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "fuuka",
+    "kitsu": 12460,
+    "anilist": 21887,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "the-world-is-still-beautiful",
+    "kitsu": 8258,
+    "anilist": 20599,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "uzaki-chan-wants-to-hang-out-season-2",
+    "kitsu": 43581,
+    "anilist": 124395,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "a-galaxy-next-door",
+    "kitsu": 46083,
+    "anilist": 148098,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "didn-t-i-say-to-make-my-abilities-average-in-the-next-life",
+    "kitsu": 42423,
+    "anilist": 101227,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "servamp",
+    "kitsu": 11210,
+    "anilist": 21269,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "the-founder-of-diabolism",
+    "kitsu": 41036,
+    "anilist": 101972,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "grand-blue-dreaming-season-2",
+    "kitsu": 49247,
+    "anilist": 182309,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "ningen-fushin-adventurers-who-don-t-believe-in-humanity",
+    "kitsu": 44982,
+    "anilist": 137909,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "is-the-order-a-rabbit",
+    "kitsu": 8095,
+    "anilist": 20517,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "angel-s-egg",
+    "kitsu": 785,
+    "anilist": 885,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "dark-gathering",
+    "kitsu": 46279,
+    "anilist": 152802,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "mobile-suit-gundam-iron-blooded-orphans",
+    "kitsu": 11206,
+    "anilist": 21268,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "beyond-the-boundary-i-ll-be-here-future",
+    "kitsu": 10043,
+    "anilist": 20963,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 23)"
+  },
+  {
+    "id": "banished-from-the-hero-s-party-i-decided-to-live-a-quiet-156131",
+    "kitsu": 46686,
+    "anilist": 156131,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "peach-boy-riverside",
+    "kitsu": 43870,
+    "anilist": 122441,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "shinobi-no-ittoki",
+    "kitsu": 46134,
+    "anilist": 145604,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "dragon-ball-daima",
+    "kitsu": 48108,
+    "anilist": 170083,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "kuma-kuma-kuma-bear",
+    "kitsu": 43214,
+    "anilist": 114340,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "i-have-a-crush-at-work",
+    "kitsu": 49066,
+    "anilist": 179696,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "ascendance-of-a-bookworm-season-3",
+    "kitsu": 43607,
+    "anilist": 121176,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "initial-d-2nd-stage",
+    "kitsu": 163,
+    "anilist": 186,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "dragon-ball-z-resurrection-f",
+    "kitsu": 8676,
+    "anilist": 20778,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "my-happy-marriage-season-2",
+    "kitsu": 47969,
+    "anilist": 169441,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "gintama-silver-soul-arc",
+    "kitsu": 14095,
+    "anilist": 100784,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "tsurune",
+    "kitsu": 13990,
+    "anilist": 100402,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "kingdom",
+    "kitsu": 6648,
+    "anilist": 12031,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "no-guns-life",
+    "kitsu": 42197,
+    "anilist": 108478,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "tokyo-ghoul-jack",
+    "kitsu": 10789,
+    "anilist": 21132,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "possibly-the-greatest-alchemist-of-all-time",
+    "kitsu": 48842,
+    "anilist": 177506,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "hajime-no-ippo-the-fighting-rising",
+    "kitsu": 7855,
+    "anilist": 19647,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "kokoro-connect-the-ovas",
+    "kitsu": 7355,
+    "anilist": 16001,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {
+    "id": "the-garden-of-sinners-chapter-5-paradox-paradigm",
+    "kitsu": 3546,
+    "anilist": 4282,
+    "note": "imported 2026-10-15 from the AniList popularity backlog (page 26)"
+  },
+  {"id":"you-are-ms-servant","kitsu":48395,"anilist":172190,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"the-new-gate","kitsu":48214,"anilist":170890,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"shaman-king","kitsu":132,"anilist":154,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"campfire-cooking-in-another-world-with-my-absurd-skill-170577","kitsu":48190,"anilist":170577,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"the-foolish-angel-dances-with-the-devil","kitsu":47347,"anilist":164244,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"the-devil-is-a-part-timer-season-2-part-2","kitsu":46550,"anilist":155168,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"ahiru-no-sora","kitsu":41399,"anilist":101239,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"nippon-sangoku-the-three-nations-of-the-crimson-sun","kitsu":50550,"anilist":206914,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"joshiraku","kitsu":6789,"anilist":12679,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"angel-beats-specials","kitsu":5591,"anilist":9062,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"unnamed-memory","kitsu":46921,"anilist":158709,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"gankutsuou-the-count-of-monte-cristo","kitsu":214,"anilist":239,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"uq-holder","kitsu":12273,"anilist":21855,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"love-live-sunshine","kitsu":11745,"anilist":21584,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"in-the-land-of-leadale","kitsu":44186,"anilist":130166,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"punch-line","kitsu":10038,"anilist":20964,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"the-ambition-of-oda-nobuna","kitsu":7657,"anilist":11933,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"},
+  {"id":"the-comic-artist-his-assistants","kitsu":8148,"anilist":20537,"note":"imported 2026-10-15 from the AniList popularity backlog (page 26)"}
 ]

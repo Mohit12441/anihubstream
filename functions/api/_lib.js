@@ -153,7 +153,14 @@ export class HttpError extends Error {
 export const errorResponse = (err) =>
   err instanceof HttpError
     ? fail(err.status, err.code, err.message)
-    : fail(500, 'internal', 'unexpected error serving this request');
+    : (reportFault(err), fail(500, 'internal', 'unexpected error serving this request'));
+
+/* A viewer should not see a stack trace, but a 500 whose only record is that word cannot be
+   diagnosed by anyone. The reason goes to the runtime log — printed by `pages dev` and streamed
+   by Pages Analytics/Tail on the hosted site. */
+const reportFault = (err) => {
+  console.error('[anihub] unexpected failure:', err?.stack ?? err?.message ?? String(err));
+};
 
 export const intParam = (url, name, min, max, fallback) => {
   const raw = url.searchParams.get(name);

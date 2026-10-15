@@ -1,0 +1,42 @@
+name: cloud-discover
+
+# Autonomous title growth for AniHubStream:
+# Scans AniList's currently airing trending anime once a day and queues new titles into sync_pending.
+# The scheduled anilist-sync workflow (*/30 * * * *) automatically hydrates and inserts them.
+# Completely autonomous — runs 100% in GitHub Actions with zero local machine requirements.
+
+on:
+  schedule:
+    # Once a day at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Maximum new titles to queue'
+        required: false
+        default: '4'
+
+permissions: {}
+
+concurrency:
+  group: cloud-discover
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19'
+
+      - name: queue new trending titles
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          LIMIT: ${{ github.event.inputs.limit || '4' }}
+        run: node cloud-sync/discover.mjs --limit=${LIMIT}

@@ -114,24 +114,30 @@ export async function kitsuByMal(malId) {
   };
 }
 
-export function readSources() {
-  return JSON.parse(readFileSync(SOURCES, 'utf8'));
+export function readSources(sourcesPath = SOURCES) {
+  return JSON.parse(readFileSync(sourcesPath, 'utf8'));
 }
 
 /* Keeps the file's existing one-entry-per-line shape: insert before the closing bracket. */
-export function appendSource(entry) {
-  const text = readFileSync(SOURCES, 'utf8');
+export function appendSource(entry, sourcesPath = SOURCES) {
+  const existing = readSources(sourcesPath);
+  if (existing.some((s) => s.id === entry.id || (entry.anilist && s.anilist === entry.anilist))) {
+    console.warn(`[catalogue] refusing duplicate entry for ${entry.id} (anilist ${entry.anilist})`);
+    return false;
+  }
+  const text = readFileSync(sourcesPath, 'utf8');
   const close = text.lastIndexOf(']');
   if (close < 0) throw new Error('catalogue-sources.json has no closing bracket');
   const head = text.slice(0, close).replace(/\s*$/, '');
   const sep = head.endsWith('[') ? '\n' : ',\n';
   const line = `  ${JSON.stringify(entry)}`;
-  writeFileSync(SOURCES, `${head}${sep}${line}\n${text.slice(close)}`, 'utf8');
+  writeFileSync(sourcesPath, `${head}${sep}${line}\n${text.slice(close)}`, 'utf8');
+  return true;
 }
 
-export function removeSource(id) {
-  const list = readSources().filter((t) => t.id !== id);
-  writeFileSync(SOURCES, `${JSON.stringify(list, null, 2)}\n`, 'utf8');
+export function removeSource(id, sourcesPath = SOURCES) {
+  const list = readSources(sourcesPath).filter((t) => t.id !== id);
+  writeFileSync(sourcesPath, `${JSON.stringify(list, null, 2)}\n`, 'utf8');
 }
 
 export function d1Json(command) {
@@ -153,6 +159,10 @@ export async function discover({ rows = null, limit = 2, force = false } = {}) {
   const animeRows = rows ?? d1Json('SELECT id, source_ids FROM anime');
   const anilistIds = new Set();
   const ids = new Set();
+  for (const s of readSources()) {
+    if (s.id) ids.add(s.id);
+    if (Number.isInteger(s.anilist)) anilistIds.add(s.anilist);
+  }
   for (const r of animeRows) {
     ids.add(r.id);
     try {
