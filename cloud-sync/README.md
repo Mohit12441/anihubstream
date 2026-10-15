@@ -287,6 +287,16 @@ first walker.
    the next run will make, and its output is the artifact to keep — then the two dump commands from
    Deploy step 2.
 
+   A probe that fails here on a non-empty `missing` is not a stop — it is the discovery this step
+   exists for. `cloud_synced_at` is the plausible name in that bucket: only
+   `cloud-sync/schema.sql`'s `ALTER` adds it, and production may never have taken that. For a
+   missing stamp the fix is `apply-schema` (Deploy step 2), not a review: apply it, re-probe until
+   `missing` and `unwritable` are empty, and keep both outputs — the before-and-after pair is the
+   record of what the apply changed. A `missing` naming anything else is the review Deploy step 2
+   describes, not an apply. Either way this settles before the snapshot and the scoped run below:
+   where Deploy places that apply ahead of Phase 2, a probe that finds the stamp absent moves it
+   here — one step earlier — and nothing below runs against a database the sync cannot write.
+
 3. **Scope the first run** rather than letting the schedule do 1000 titles at once:
 
    ```

@@ -41,7 +41,12 @@ const ALARM = ['fatal', 'lease_lost', 'legacy_still_running', 'breaker_aborted',
    day. A streak is the failure — the counter resets at UTC midnight, so N consecutive stops mean
    each fresh day is spent before the schedule does any work, which is what a budget scoped below
    the cadence looks like (an ANILIST_DAILY_BUDGET Variable set for one scoped run and never
-   deleted). The audit reads the streak in the run history; this constant is its N. */
+   deleted). The audit reads the streak in the run history; this constant is its N.
+   Calibrated against the default 4000, which a day of ticks spends a fraction of: an honest day
+   cannot exhaust before deep into the evening, so a three-stop streak (the first stop by ~22:30
+   UTC) fires there deliberately — it means the budget is sized below the schedule. Lower the budget
+   on purpose toward the cadence and a late-day stop stops being an anomaly: retune N here rather
+   than read the alarm as a bug. */
 const BUDGET_STREAK_ALARM = 3;
 
 /** Pull the fields an alert is written against out of a run's stored summary JSON. */
