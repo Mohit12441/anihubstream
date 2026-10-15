@@ -48,7 +48,7 @@
 import { randomUUID } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 import { createAnilist, RunAborted, BudgetExhausted } from './anilist.mjs';
-import { d1All, d1First, d1Query, insertRows } from './d1.mjs';
+import { assertLiveColumns, d1All, d1First, d1Query, insertRows } from './d1.mjs';
 import {
   acquireLease, budget, getCursor, getThrottle, leaseKeeper, recordRun, releaseLease, setCursor, setThrottle, utcDay,
 } from './state.mjs';
@@ -637,6 +637,9 @@ const newSummary = () => ({
   bisects: 0,
   effective_interval_ms: 0,
   budget_remaining: 0,
+  /* anime columns production has that this writer never names. Always non-zero on a healthy
+     database — the local task's catalogue_synced_at is one — so it is a number, never a verdict. */
+  extra_columns: 0,
   cursor: null,
   duration_ms: 0,
   exit_reason: 'fatal',
@@ -645,6 +648,30 @@ const newSummary = () => ({
 let summary = newSummary();
 
 async function main({ forceTakeover = process.argv.includes('--force-takeover') } = {}) {
+  /* The schema gate, before anything is read for a decision and before the takeover marker is
+     written: insertRows() names anime's columns, so a column production does not have is not a
+     warning — the first chunked upsert dies on `no such column: …` mid-batch, having already taken
+     the lease, with an error that says nothing about which assumption broke. Extras are the normal
+     state of a shared table (the local task's catalogue_synced_at is one) and only counted.
+     This is what the runbook's PRAGMA dump describes; running here means an operator does not have
+     to remember to run it first. */
+  const columns = await assertLiveColumns({ columns: ANIME_COLUMNS });
+  summary.extra_columns = columns.extra.length;
+  if (columns.missing.length) {
+    summary.exit_reason = 'schema_mismatch';
+    summary.error = `production anime lacks ${columns.missing.join(', ')} — nothing was written; apply cloud-sync/schema.sql if that is one of its two stamp columns, otherwise ANIME_COLUMNS and the live table disagree and one of them has to change`;
+    summary.duration_ms = Date.now() - startedAt;
+    /* Recorded, unlike a held lease: sync_runs is not `anime`, so the write is unaffected by the
+       mismatch, and an operator who reads verify.mjs rather than the Actions log has to see that the
+       schedule is gated — a run that silently never happened looks like a paused schedule. Best
+       effort: on a database where cloud-sync/schema.sql was never applied there is no sync_runs. */
+    await recordRun({ runId: RUN_ID, endpoint: ENDPOINT, startedAt, durationMs: summary.duration_ms, exitReason: 'schema_mismatch', summary })
+      .catch((err) => console.warn(`WARN run record failed: ${err.message}`));
+    console.log(JSON.stringify(summary));
+    process.exitCode = 1;
+    return summary;
+  }
+
   /* Phase 3 guard: claiming sched_* and trend_rank is a promise that the local hourly task
      is stopped. Its heartbeat is the only evidence available, so takeover refuses to start
      while the heartbeat is young unless --force-takeover records an explicit decision. */

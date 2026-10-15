@@ -41,7 +41,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          # Exact minor, matching ci.yml and the sync jobs — see the note in anilist-sync.yml.
+          node-version: '22.18'
 
       # One statement per D1 call, 'duplicate column name' counted as already-applied — see
       # cloud-sync/apply-schema.mjs. Exit 1 only on a statement that failed for another reason.
@@ -64,7 +65,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          # Exact minor, matching ci.yml and the sync jobs — see the note in anilist-sync.yml.
+          node-version: '22.18'
 
       # SELECT-only. Prints the ownership counts, the zero-overlap query, the vocabulary checks
       # and the rate-control state, and fails on a hard invariant.

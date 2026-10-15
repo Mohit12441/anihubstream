@@ -1,10 +1,10 @@
 name: tests
 
-# The sync jobs never run tests — they run the sync. Until this file existed, the 207 checks in
-# `api/`, `tools/` and `cloud-sync/` only ever executed on the one Windows machine that had them,
-# which means `npm test` was a habit rather than a gate, and the two divergences found this round
-# (a phase switch that could only be set wrong, and a schema file that could not receive its own
-# seed data) are exactly the kind a gate catches.
+# The sync jobs never run tests — they run the sync. Until this file existed, the checks in `api/`,
+# `tools/` and `cloud-sync/` only ever ran on the one Windows machine that had them, which means
+# `npm test` was a habit rather than a gate, and the two divergences found this round (a phase switch
+# that could only be set wrong, and a schema file that could not receive its own seed data) are
+# exactly the kind a gate catches.
 #
 # Nothing here needs a secret: every test is hermetic. `rate.test.mjs` and `migration.test.mjs`
 # stub fetch and write to a throwaway SQLite file in the temp directory, so no job in this workflow
@@ -36,11 +36,12 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          # `'22'` resolves to the newest 22.x, which has to stay true: the suite imports
-          # `node:sqlite` (unflagged since 22.13) and `src/data/model.ts` straight from a test (type
-          # stripping, unflagged since 22.18). Pin lower than that and `npm test` fails on startup,
-          # not on a claim.
-          node-version: '22'
+          # Pinned to an exact minor, not `'22'`: setup-node resolves `'22'` to whatever the newest
+          # 22.x is, so a runner-image update can change what runs the tests without a commit. 22.18
+          # is the floor the suite needs — `node:sqlite` is unflagged from 22.13 and `config.test.mjs`
+          # imports `src/data/model.ts` straight from a test, which is type stripping from 22.18. Pin
+          # lower and the job dies on import, looking like a code bug.
+          node-version: '22.18'
           cache: npm
 
       # The sync path deliberately has no dependencies; this is the test and build path, where the
@@ -48,7 +49,43 @@ jobs:
       - name: install
         run: npm ci
 
-      - run: npm test
+      # A gate has to fail when it stops gating. `node --test` exits 0 when a positional glob matches
+      # no file — verified — so this suite could shrink to nothing and the job would still print a green
+      # check. The count floor is the enforcement; the per-glob breakdown is the diagnosis when it moves,
+      # read from the npm script itself because a check that names its own directories can drift from
+      # what `npm test` globs, which is the bug it is meant to catch.
+      #
+      # TEST_FLOOR is the count this checkout produces: 206, being the 199 at the previous commit plus
+      # the column-gate and null-free-patch tests. Raising it is free; lowering it is a decision somebody
+      # has to write down. CI runs fewer checks than the local `npm test` does, because `tools/` has no
+      # committed test file yet — when one lands, raise the floor with it.
+      #
+      # The count line is parsed tolerantly because the summary's format depends on whether stdout is a
+      # TTY (`# tests 199` for TAP, `ℹ tests 199` for spec) and Node has changed that default between
+      # versions.
+      - name: tests
+        env:
+          TEST_FLOOR: 206
+        run: |
+          set -euo pipefail
+          total=0
+          # `while read` rather than `for x in $(…)`: an unquoted command substitution would expand the
+          # globs here, and the log would list files instead of reporting what each glob in the script
+          # matched — which is the thing worth seeing when the count drops. The trailing newline in the
+          # node output is load-bearing: `read` returns false on an unterminated last line, which would
+          # quietly drop the final glob.
+          while IFS= read -r glob; do
+            found=$(ls $glob 2>/dev/null | wc -l || true)
+            echo "$glob: $found test file(s)"
+            total=$((total + found))
+          done < <(node -e "process.stdout.write(require('./package.json').scripts.test.split(/\s+/).filter((a) => a.includes('*')).join('\n') + '\n')")
+          [ "$total" -gt 0 ] || { echo "every glob in the npm test script matched no file in this checkout — the suite is not running"; exit 1; }
+          out=$(npm test 2>&1) || { echo "$out"; exit 1; }
+          echo "$out"
+          n=$(printf '%s\n' "$out" | sed -n 's/^[^0-9]*tests[[:space:]]\{1,\}\([0-9]\{1,\}\)$/\1/p' | tail -1)
+          [ -n "$n" ] || { echo "no test count in the runner's summary — the output format changed, so this floor would pass on nothing"; exit 1; }
+          [ "$n" -ge "$TEST_FLOOR" ] || { echo "test count dropped: $n < $TEST_FLOOR"; exit 1; }
+          echo "test count: $n (floor $TEST_FLOOR)"
 
       # `tsc --noEmit` is the only check that the site's own types still describe the columns the
       # API selects, which is the half of the contract sched_season and the genre ids belong to.

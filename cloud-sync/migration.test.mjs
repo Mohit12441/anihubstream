@@ -20,7 +20,8 @@ import { dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { randomUUID } from 'node:crypto';
 import { applySchema, splitStatements } from './apply-schema.mjs';
-import { ANIME_COLUMNS, updateSet } from './sync-anilist.mjs';
+import { assertLiveColumns, diffLiveColumns } from './d1.mjs';
+import { ANIME_COLUMNS, provenance, rowFromMedia, updateSet } from './sync-anilist.mjs';
 import { FORBIDDEN, compare } from './diff-rows.mjs';
 import { audit } from './verify.mjs';
 
@@ -108,7 +109,7 @@ class World {
     const text = sql.replace(/\?(\d+)/g, (_m, n) => { numbered = true; order.push(params[Number(n) - 1] ?? null); return '?'; });
     const flat = numbered ? order : params.map((p) => (p === undefined ? null : p));
     try {
-      if (/^\s*(select|with|values)\b/i.test(text)) {
+      if (/^\s*(select|with|values|pragma)\b/i.test(text)) {
         return respond({ success: true, result: { results: this.db.prepare(text).all(...flat), meta: { changes: 0 } } });
       }
       const out = this.db.prepare(text).run(...flat);
@@ -433,6 +434,49 @@ describe('migration: the four phases against real SQLite', () => {
     assert.deepEqual(JSON.parse(world.row('no-provenance-yet').source_ids), { anilist: 98597 });
   });
 
+  /* RFC 7396: a null inside a json_patch patch is not "set it to nothing", it is DELETE THE KEY. So
+     "the merge can only add or overwrite" is not a property of SQLite — it holds only while the
+     object this job builds is null-free, which is a property of three lines (sync-anilist.mjs:322-323:
+     spread what was stored, set anilist, add mal only when AniList reports one). The first someone
+     "clears a stale key" with `sourceIds.mal = null` turns every later merge into provenance loss,
+     and the pre-flight diff would report it as a broken merge rather than the new behaviour. */
+  it('T4b the provenance patch is null-free, so the merge cannot delete a key', async () => {
+    const stored = world.stored({ source_ids: JSON.stringify({ kitsu: 11207, anilist: 98596, mal: 35413 }) });
+    const shapes = [
+      /* The three that a null would be tempting for: AniList no longer reports a MAL id, reports 0
+         (which is "no id" for AniList but is a value this writer must read as absent, not delete),
+         and reports one that agrees with what is stored. */
+      { idMal: null }, { idMal: 0 }, { idMal: 35413 },
+      /* And a native-title/genres-free record: nothing else in the row reaches this column. */
+      { idMal: undefined, title: { english: 'A Test Title' }, genres: [] },
+    ];
+    for (const [i, extra] of shapes.entries()) {
+      const media = world.fixture(98596, { id: 98596, ...extra });
+      const patch = JSON.parse(rowFromMedia(media, provenance(stored)).source_ids);
+      assert.deepEqual(Object.entries(patch).filter(([, v]) => v === null), [],
+        `shape ${i} put a null in ${JSON.stringify(patch)}; json_patch reads a null patch value as a delete`);
+
+      /* The consequence, executed rather than argued: merging this patch over what is stored keeps
+         every key that was already there. */
+      const merged = JSON.parse(world.db.prepare('SELECT json_patch(?, ?) AS m').get(stored.source_ids, JSON.stringify(patch)).m);
+      for (const [key, value] of Object.entries(JSON.parse(stored.source_ids))) {
+        assert.equal(merged[key], value, `shape ${i} lost the stored ${key} key`);
+      }
+      assert.equal(merged.anilist, 98596);
+    }
+
+    /* The creation path, where there is nothing stored to lose: the patch is still null-free, and
+       AniList's silence about MAL leaves the key absent rather than null. */
+    const created = JSON.parse(rowFromMedia(world.fixture(98597, { id: 98597, idMal: null, title: { english: 'Fresh' } })).source_ids);
+    assert.deepEqual(created, { anilist: 98597 }, 'a new row carries the id this run learned and no placeholders');
+
+    /* Proof that the rule is the patch's, not the merge's: a null in the patch does delete the key,
+       which is exactly what the assertion above forbids. */
+    const broken = world.db.prepare(`SELECT json_patch('{"kitsu":11207,"anilist":98596}', '{"mal":null}') AS m`).get().m;
+    assert.equal(JSON.parse(broken).kitsu, 11207, 'json_patch is not the guard — it deletes what it is told to');
+    assert.equal('mal' in JSON.parse(broken), false);
+  });
+
   it('T5 Phase 3 refuses while the hourly task is alive; --force-takeover answers with evidence', async () => {
     world.stored();
     world.fixture(98596, { nextAiringEpisode: { airingAt: FRI, episode: 11 } });
@@ -723,6 +767,63 @@ describe('migration: the four phases against real SQLite', () => {
     assert.equal(world.row().title, 'A Test Title');
   });
 
+  /* The runbook tells the operator to read PRAGMA table_info(anime) before the first run, because
+     insertRows() names anime's columns and a column production lacks dies mid-batch. A paragraph is
+     discipline; this is enforcement — the sync asks the same question of the live database before it
+     takes a lease, and stops with a named reason. */
+  it('a column production lacks stops the run before the lease, and names it', async () => {
+    world.stored();
+    world.fixture(98596);
+    /* The drift the gate is for, spelled as a column it dropped before this job existed rather than
+       as one of the two stamp columns — the gate does not get to know which kind of missing it is, it
+       only refuses to write against a table that cannot answer. accent is not indexed, so this is a
+       clean removal. */
+    world.db.exec('ALTER TABLE anime DROP COLUMN accent');
+
+    const { summary, exitCode } = await runPass(world, MIRROR);
+    assert.equal(summary.exit_reason, 'schema_mismatch');
+    assert.equal(exitCode, 1, 'CI must alert: this run would have died mid-write instead');
+    assert.match(summary.error, /accent/, 'the reason must name the column, not just say the schema was wrong');
+    assert.equal(world.row().cloud_synced_at, null, 'a gated run wrote nothing');
+    assert.equal(world.row().accent, undefined);
+    assert.equal(world.count('sync_lock'), 0, 'it did not even take the lease, so a second writer is not blocked');
+    assert.equal(world.meta('cloud_takeover'), null, 'and a gated takeover claims nothing');
+    /* sync_runs is not `anime`, so the gate can still report itself — and it must, or the only record
+       of a permanently blocked schedule is an Actions log nobody opens. */
+    const recorded = world.db.prepare('SELECT exit_reason, summary FROM sync_runs ORDER BY started_at DESC LIMIT 1').get();
+    assert.equal(recorded.exit_reason, 'schema_mismatch');
+    assert.match(JSON.parse(recorded.summary).error, /accent/);
+
+    /* The same answer from the read-only audit, which is what an operator runs instead of a sync. */
+    const gated = await withShim(world, MIRROR, () => audit({ mode: 'mirror', createsRows: false, claimsSchedule: false }));
+    assert.equal(gated.ok, false, 'a gated schema audited clean');
+    assert.match(gated.failures.join('\n'), /anime has every column the sync writes by name.*accent/);
+    assert.match(gated.failures.join('\n'), /the last run ended cleanly/, 'schema_mismatch is an alarm, not a normal stop');
+
+    /* The gate reads, so giving the column back is the whole fix — same code, same run. */
+    world.db.exec(`ALTER TABLE anime ADD COLUMN accent TEXT NOT NULL DEFAULT '#ff1f4a'`);
+    const fixed = await runPass(world, MIRROR);
+    assert.equal(fixed.summary.exit_reason, 'catalogue_end', 'a schema that answers the gate still runs');
+    assert.ok(world.row().cloud_synced_at > 0);
+  });
+
+  it('extra columns — the local task\u0027s own — are counted and never block a run', async () => {
+    /* The other direction, and the one that must NOT be fatal: production's anime has columns this
+       writer never names, chief among them catalogue_synced_at. An equality check on the PRAGMA would
+       fail on a healthy database, so extras are reported and the run proceeds. */
+    world.stored();
+    world.fixture(98596);
+    const extras = await withShim(world, MIRROR, () => assertLiveColumns({ columns: ANIME_COLUMNS }));
+    assert.deepEqual(extras.missing, [], 'the committed schemas must answer the gate the sync applies');
+    assert.ok(extras.extra.includes('catalogue_synced_at'), 'the local stamp is an extra column and the gate is not blind to it');
+
+    world.db.exec('ALTER TABLE anime ADD COLUMN kitsu_slug TEXT');
+    const { summary } = await runPass(world, MIRROR);
+    assert.equal(summary.exit_reason, 'catalogue_end');
+    assert.equal(summary.extra_columns, extras.extra.length + 1, 'the count the operator sees tracks the database');
+    assert.ok(world.row().cloud_synced_at > 0, 'a column nobody here owns did not stop the refresh');
+  });
+
   it('the audit is clean on a mirrored catalogue, and catches a value outside the API vocabulary', async () => {
     world.stored();
     world.db.prepare('INSERT INTO anime_genre (anime_id, genre_id) VALUES (?,?)').run('a-test-title', 'action');
@@ -846,5 +947,36 @@ describe('the pre-flight diff asserts the same ownership the sync implements', (
     assert.equal(ids(compare(byId(row()), two, 'mirror')), 'b-other.(row)', 'mirror never inserts');
     assert.equal(compare(byId(row()), two, 'delta').violations.length, 0, 'delta creating a row is the point of Phase 2');
     assert.equal(ids(compare(two, byId(row()), 'takeover')), 'b-other.(row)', 'the second snapshot is pinned to the ids of the first, so a missing row is a deletion');
+  });
+});
+
+/* The two directions of the column contract mean opposite things, and the whole design of the gate
+   is that only one of them stops a run: a missing column is a statement SQLite will reject, while an
+   extra one is the normal state of a table two writers share. Checked as a pure function because the
+   case that matters most — an empty read — cannot be produced by a database that has the table. */
+describe('the live column diff', () => {
+  const live = (names) => names.map((name, cid) => ({ cid, name }));
+
+  it('separates what a writer cannot name from what it merely does not write', () => {
+    const drift = diffLiveColumns(live([...ANIME_COLUMNS.slice(0, -1), 'catalogue_synced_at']), ANIME_COLUMNS);
+    assert.deepEqual(drift.missing, ['cloud_synced_at'], 'the one dropped column, named');
+    assert.deepEqual(drift.extra, ['catalogue_synced_at'], 'and the local stamp is an extra, not a mismatch');
+  });
+
+  it('an empty read is every column missing, never a pass', () => {
+    /* PRAGMA table_info on a table that does not exist answers with no rows. Read as "nothing is
+       missing", that is a gate that waves a fresh, uncreated database through to write nothing and
+       report success. */
+    assert.deepEqual(diffLiveColumns([], ANIME_COLUMNS).missing, ANIME_COLUMNS);
+  });
+
+  it('accepts bare names as well as PRAGMA rows, so the committed dump can be checked too', () => {
+    assert.deepEqual(diffLiveColumns(ANIME_COLUMNS, ANIME_COLUMNS), { missing: [], extra: [] });
+    assert.deepEqual(diffLiveColumns(['id', 'title'], ['id', 'title', 'year']).missing, ['year']);
+  });
+
+  it('names each column once, so the gate cannot report the same gap twice', () => {
+    const repeated = ANIME_COLUMNS.filter((c, i) => ANIME_COLUMNS.indexOf(c) !== i);
+    assert.deepEqual(repeated, [], 'a duplicate in ANIME_COLUMNS would double the parameter count of every statement too');
   });
 });

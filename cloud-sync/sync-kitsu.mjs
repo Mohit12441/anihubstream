@@ -17,7 +17,7 @@
 
 import { randomUUID } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { d1All, insertRows } from './d1.mjs';
+import { assertLiveColumns, d1All, insertRows } from './d1.mjs';
 import {
   acquireLease, budget, getCursor, leaseKeeper, recordRun, releaseLease, setCursor, utcDay,
 } from './state.mjs';
@@ -158,12 +158,31 @@ const summary = {
   breaker_opens: 0,
   effective_interval_ms: MIN_INTERVAL_MS,
   budget_remaining: 0,
+  extra_columns: 0,
   cursor: null,
   duration_ms: 0,
   exit_reason: 'fatal',
 };
 
 async function main() {
+  /* The same gate the AniList run applies, for the same reason: this job names every ANIME_COLUMNS
+     column in its SELECT and in its INSERT, so a column production lacks fails the whole page
+     rather than one row — and it fails after the lease is held. */
+  const columns = await assertLiveColumns({ columns: ANIME_COLUMNS });
+  summary.extra_columns = columns.extra.length;
+  if (columns.missing.length) {
+    summary.exit_reason = 'schema_mismatch';
+    summary.error = `production anime lacks ${columns.missing.join(', ')} — nothing was written; apply cloud-sync/schema.sql if that is one of its two stamp columns, otherwise ANIME_COLUMNS and the live table disagree and one of them has to change`;
+    summary.duration_ms = Date.now() - startedAt;
+    /* Recorded, best effort, for the same reason the AniList side records it: the gate is worth
+       nothing to an operator if the only evidence is a Actions run nobody opened. */
+    await recordRun({ runId: RUN_ID, endpoint: ENDPOINT, startedAt, durationMs: summary.duration_ms, exitReason: 'schema_mismatch', summary })
+      .catch((err) => console.warn(`WARN run record failed: ${err.message}`));
+    console.log(JSON.stringify(summary));
+    process.exitCode = 1;
+    return;
+  }
+
   if (!(await acquireLease(LEASE, OWNER))) {
     summary.exit_reason = 'lease_held';
     summary.duration_ms = Date.now() - startedAt;

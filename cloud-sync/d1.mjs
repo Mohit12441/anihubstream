@@ -64,6 +64,36 @@ export const d1First = async (sql, params = []) => (await d1All(sql, params))[0]
 export const rowsPerStatement = (columns) => Math.max(1, Math.floor(MAX_PARAMS / columns));
 
 /**
+ * The column set a writer names, checked against the set the database actually has. Both
+ * directions, because they mean opposite things and only one of them is fatal:
+ *
+ *   `missing` — a column in `wanted` that the table does not have. Fatal, and fatal in an
+ *      unhelpful way: insertRows() writes ANIME_COLUMNS by name, so the first chunked upsert
+ *      dies on `no such column: …` mid-batch, with an error that says nothing about which side
+ *      drifted. Checking it before a lease is taken turns that into a named exit.
+ *   `extra` — a column the table has that `wanted` does not name. This is the normal state of a
+ *      shared table: production carries the local task's stamp (catalogue_synced_at) and every
+ *      other column root schema.sql has never carried. A strict equality check would fail on a
+ *      healthy database, so extras are reported and never block a run.
+ *
+ * `live` accepts `PRAGMA table_info` rows or bare names, so the committed production dump
+ * (cloud-sync/schema.live.sql) can be fed to the same function the sync uses. A read that came
+ * back empty is not "no missing columns" but "all of them": PRAGMA on a table that does not
+ * exist returns no rows, and a gate that waves that through is not a gate.
+ */
+export function diffLiveColumns(live, wanted) {
+  const have = new Set(live.map((r) => (typeof r === 'string' ? r : r?.name)).filter(Boolean));
+  return { missing: wanted.filter((c) => !have.has(c)), extra: [...have].filter((c) => !wanted.includes(c)) };
+}
+
+/** `diffLiveColumns` against the live database. Returns the diff rather than throwing: what a
+ *  mismatch costs is the caller's decision, which is the entire point of asking before the lease. */
+export async function assertLiveColumns({ table = 'anime', columns }) {
+  if (!/^[a-z_][a-z0-9_]*$/i.test(table)) throw new Error(`d1: bad table name ${table}`);
+  return diffLiveColumns(await d1All(`PRAGMA table_info(${table})`), columns);
+}
+
+/**
  * Multi-row upsert, chunked by parameter count and by statement size. Never one
  * statement per row (R14). `conflictTarget` is the UNIQUE index (usually the primary
  * key); `update` lists the columns a conflict rewrites, via excluded.* so an update

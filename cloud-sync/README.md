@@ -10,16 +10,16 @@ environment variables — no npm install, no local machine.
 | file | role |
 | --- | --- |
 | `anilist.mjs` | single-flight queue, pacing, alias batching, adaptive throttle, backoff, circuit breaker, budget, rate-header awareness, POST/GET+relay |
-| `d1.mjs` | D1 over REST, chunked multi-row upserts; three write strategies per column — merge (`jsonMerge`), keep-when-absent (`keepExisting`), fill-only (`fillIf`) |
+| `d1.mjs` | D1 over REST, chunked multi-row upserts; three write strategies per column — merge (`jsonMerge`), keep-when-absent (`keepExisting`), fill-only (`fillIf`) — and the live column gate both writers run before they take a lease (`assertLiveColumns`) |
 | `state.mjs` | the D1-backed memory: lease, cursor, learned interval, daily budget, run records |
 | `sync-anilist.mjs` | one bounded incremental pass, in mode `mirror` / `delta` / `takeover` |
 | `sync-kitsu.mjs` | Kitsu artwork and episode counts for titles the AniList pass owns |
 | `schema.sql` | `sync_lock`, `api_usage`, `sync_runs`, `sync_pending`, the two stamp columns. Root `schema.sql` is the source of truth for `anime`; this file only upgrades an existing database |
 | `apply-schema.mjs` | apply a `.sql` file over the REST API (no wrangler); splits on SQLite's real lexical rules, idempotent |
-| `verify.mjs` | read-only audit: ownership stamps, vocabulary, visibility, rate-control state |
+| `verify.mjs` | read-only audit: the column contract, ownership stamps, vocabulary, visibility, rate-control state |
 | `diff-rows.mjs` | read-only pre-flight check: compares two row snapshots by parsed value, per mode, and fails on a column the phase does not own (Deploy step 4) |
 | `rate.test.mjs` | the rate-control and column-ownership criteria, pinned against a stubbed fetch |
-| `migration.test.mjs` | T1-T7 of the migration below, plus the schema re-apply, the audit and the diff rules, against a real throwaway SQLite database |
+| `migration.test.mjs` | T1-T7 of the migration below, plus the schema re-apply, the column gate, the audit and the diff rules, against a real throwaway SQLite database |
 | `config.test.mjs` | the contracts between files: README's env table vs what the code reads, the Kitsu budget vs its cron, the season rule vs the frontend's copy, the committed schema vs its own seed data |
 
 ## Why this design
@@ -57,19 +57,30 @@ than to assume a low volume is safe.
    behind production once — it defined neither stamp column while both were in use — which is exactly
    the case this check exists to catch.
 
-   **`PRAGMA table_info(anime)` is a gate, not a note: the scoped run in step 3 — and every scheduled
-   run after it — is blocked until the column list agrees.** `sync-anilist.mjs` writes `anime` by
-   column name (`ANIME_COLUMNS`, and the `UPDATE` sets built from it), so a column production does not
-   have is not a warning — the upsert dies on `no such column: …` mid-batch, having already taken the
-   lease, and the failure says nothing about which assumption broke. Compare the dump against three
-   things: `ANIME_COLUMNS` in `cloud-sync/sync-anilist.mjs` (what the sync writes), the `CREATE TABLE
-   anime` block in root `schema.sql` (what a fresh environment gets, and the file `config.test.mjs`
-   proves can receive `seed.sql`), and `cloud-sync/schema.sql`'s two `ALTER` lines (what the upgrade
-   adds). **If any of the three disagrees with the live list, stop and send the dump before running
-   anything** — the fix is a column, and deciding where it goes (`schema.sql`,
-   `cloud-sync/schema.sql`, or the sync's list) is a review, not something to discover from a failed
-   run at 03:15. Applying `cloud-sync/schema.sql` below is what closes a *missing stamp column*; a
-   mismatch in any other column is not something that file can fix.
+   **The column list is a gate, and the sync now runs it itself.** Before either writer takes a lease,
+   `assertLiveColumns()` (`cloud-sync/d1.mjs`) reads `PRAGMA table_info(anime)` and diffs it against
+   `ANIME_COLUMNS` in both directions: a column the database lacks stops the run with
+   `exit_reason: "schema_mismatch"`, exit code 1 and `nothing was written` in the error, before the
+   lease and before the takeover marker. It still records itself in `sync_runs`, so the gate shows up
+   in `verify.mjs` as an alarm instead of as a schedule that quietly stopped. That is the failure the paragraph
+   above was written to warn about — `sync-anilist.mjs` and `sync-kitsu.mjs` both name every
+   `ANIME_COLUMNS` column in their SELECT and in their INSERT, so an ALTER nobody applied used to die
+   on `no such column: …` mid-batch, having already taken the lease, with an error naming nothing.
+   Columns the database has and the sync does not name — `catalogue_synced_at` above all — are counted
+   in the run record as `extra_columns` and never block anything: production's `anime` has always had
+   columns this job must not touch.
+
+   So the dump is no longer the enforcement, but it is still the first thing to send, because the gate
+   only answers the half the runbook needs: compare the live list against three things — `ANIME_COLUMNS`
+   in `cloud-sync/sync-anilist.mjs` (what the sync writes), the `CREATE TABLE anime` block in root
+   `schema.sql` (what a fresh environment gets, and the file `config.test.mjs` proves can receive
+   `seed.sql`), and `cloud-sync/schema.sql`'s two `ALTER` lines (what the upgrade adds). **If any of the
+   three disagrees with the live list, stop and send the dump before running anything** — the fix is a
+   column, and deciding where it goes (`schema.sql`, `cloud-sync/schema.sql`, or the sync's list) is a
+   review, not something to discover from a failed run at 03:15. Applying `cloud-sync/schema.sql` below
+   is what closes a *missing stamp column*; a mismatch in any other column is not something that file
+   can fix. `verify.mjs` reports the same comparison as a check, so an operator can read the answer
+   without starting a run.
 
    **Commit the answer as `cloud-sync/schema.live.sql`** — the same two queries, one under the other:
 
@@ -680,12 +691,16 @@ One JSON line per run, also stored in `sync_runs`:
 (a full pass finished), `budget_exhausted` (daily ceiling), `lease_held` (another cloud
 writer owns the lease — expected and harmless), `breaker_aborted` (403s; look at `by403`),
 `legacy_still_running` (takeover with the local task still ticking: disable the task, pass
-`--force-takeover`, or go back to `mirror`), `lease_lost` and `fatal` (exit code 1, alert on
-these).
+`--force-takeover`, or go back to `mirror`), `schema_mismatch` (production `anime` lacks a column
+`ANIME_COLUMNS` names: apply `cloud-sync/schema.sql` or fix the list — the run stopped before the
+lease and wrote nothing but its own run record, so this is a schema decision, not a failure to
+retry), `lease_lost` and `fatal` (exit code 1, alert on these).
 
 `items_processed` counts catalogue rows *read*, not rows written; `created` is how many of them
 were inserts; `unmapped` is how many carry no `source_ids.anilist`, so they cannot be refreshed
-from here at all; `skipped` is the hydrated media this run decided not to write, with the reason
+from here at all; `extra_columns` is how many columns `anime` has that this job never names
+(`catalogue_synced_at` and the rest of the local task's set — a count, not a verdict, and it is
+non-zero on a healthy database). `skipped` is the hydrated media this run decided not to write, with the reason
 per slug. `genre_labels_unmapped` is the AniList labels that have no row in the site's `genre`
 table — a growing list there means the shelves need a new genre row, not a new mapping rule.
 
@@ -754,19 +769,32 @@ as a side effect of a migration.
 shelf shows a title moving when it is only being re-labelled.
 
 The quarter rule is now one function — `tools/season.mjs`, called by all three writers — so they
-cannot disagree about it by construction. That replaced three hand-written copies, including
-`airSlot()`'s first draft, which copied **AniList's** quarters (Spring starting in March) while the
-site's own rule puts Winter at Jan-Mar. `config.test.mjs` pins two things a shared function cannot
-pin by itself:
+cannot disagree about it by construction. That replaced three hand-written spellings of the same
+boundary arithmetic: two ternaries (`tools/hourly-refresh.mjs`, `tools/sync-catalogue.mjs`) and
+`airSlot()`'s twelve-entry month-indexed `SEASONS` array, which was correct but was carried by a
+comment — the array itself does not say whose quarters it holds, and it sat three lines under
+`SEASON_NAME = { WINTER: 'Winter', SPRING: 'Spring', … }`, AniList's own enum, whose quarters are
+different. Nothing tested any of the three against the page that reads the column. What an editor who
+trusted the wrong convention would have produced, month by month:
+
+| airing in | AniList's quarters | the site requires |
+| --- | --- | --- |
+| March 2026 | `Spring 2026` | `Winter 2026` |
+| June 2026 | `Summer 2026` | `Spring 2026` |
+| September 2026 | `Fall 2026` | `Summer 2026` |
+| December 2026 | `Winter 2026` | `Fall 2026` |
+
+Jan/Feb, Apr/May, Jul/Aug and Oct/Nov agree under both rules, which is why a wrong quarter is not loud:
+it hides four months a year from the shelf the page opens on, and shows the same rows on four shelves
+nobody is looking at. `config.test.mjs` pins two things a shared function cannot pin by itself:
 
 - **The JS rule against the frontend's copy, by running both.** `src/data/model.ts:27` computes the
   season the schedule page opens on, and `functions/api/schedule.js:9` matches `sched_season` with an
   exact `=` — so the page's filter and the column it filters on are two derivations in two languages
   that have to be compared over every month edge. The tsconfig covers only `src/`, so the frontend
   cannot import a `.mjs`; executing both is the strongest agreement available. The test also fails if
-  a writer re-spells the quarter boundaries instead of calling `seasonKey()`, which is how the bug got
-  in. A wrong quarter would have hidden every March, June, September and December cloud row from the
-  season on screen.
+  a writer re-spells the quarter boundaries instead of calling `seasonKey()`, which is what keeps the
+  table above from coming back as an index or as a fourth ternary.
 - **Both writers clear the same five columns** when a title stops airing: `airSlot()` returns all-NULL
   for a missing, zero, negative or non-integer `airingAt`, and the legacy statement nulls exactly those
   five. If one cleared and the other left a value, the slot would go stale on one side of the handover.

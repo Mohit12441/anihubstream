@@ -6,7 +6,10 @@
    Fall: 9 }`, `currentSeasonKey()` derives the quarter the schedule page opens on from
    `getUTCMonth()`, and `functions/api/schedule.js:9` matches `sched_season` with an exact `=` — so
    a row labelled with AniList's quarters silently vanishes from the season on screen, and only for
-   March, June, September and December broadcasts.
+   the four months the two conventions disagree about — AniList puts Spring in March, Summer in June,
+   Fall in September and Winter in December, where this rule says Winter, Spring, Summer, Fall. The
+   other eight months agree under both, so a wrong quarter is quiet: it hides one month in each
+   quarter's first position rather than breaking anything.
 
    Three writers stamp that column (tools/hourly-refresh.mjs, tools/sync-catalogue.mjs,
    cloud-sync/sync-anilist.mjs) and the frontend computes a fourth copy, so the JS side calls this

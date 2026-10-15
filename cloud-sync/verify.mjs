@@ -14,8 +14,8 @@
 // than in front of an operator.
 
 import { pathToFileURL } from 'node:url';
-import { d1All, d1First } from './d1.mjs';
-import { CLAIMS_SCHEDULE, CREATES_ROWS, FILL_SCHEDULE, LEGACY_QUIET_MS, MODE } from './sync-anilist.mjs';
+import { assertLiveColumns, d1All, d1First } from './d1.mjs';
+import { ANIME_COLUMNS, CLAIMS_SCHEDULE, CREATES_ROWS, FILL_SCHEDULE, LEGACY_QUIET_MS, MODE } from './sync-anilist.mjs';
 import { recentRuns, utcDay } from './state.mjs';
 
 /* The closed lists the Worker validates against — functions/api/anime/index.js:24-25 and
@@ -27,7 +27,7 @@ export const STATUSES = ['Ongoing', 'Finished', 'Upcoming'];
 export const SEASON_WORDS = ['Winter', 'Spring', 'Summer', 'Fall'];
 
 /** The exit_reasons that mean a human should look, as opposed to a run that stopped on purpose. */
-const ALARM = ['fatal', 'lease_lost', 'legacy_still_running', 'breaker_aborted'];
+const ALARM = ['fatal', 'lease_lost', 'legacy_still_running', 'breaker_aborted', 'schema_mismatch'];
 
 /** Pull the fields an alert is written against out of a run's stored summary JSON. */
 function runLine(summary) {
@@ -67,6 +67,18 @@ export async function audit(overrides = {}) {
     }
   };
   report.ok = true;
+
+  /* ------------------------------------------------------------ column contract */
+
+  /* The same comparison the sync makes before it takes its lease, so an operator can read the
+     answer without starting a run. Everything below this check selects anime's columns by name:
+     if one of them is missing, those queries throw and the report degenerates into a stack trace,
+     which is why the shape is settled first. */
+  const shape = await assertLiveColumns({ columns: ANIME_COLUMNS });
+  report.state.columns = { wanted: ANIME_COLUMNS.length, missing: shape.missing, extra: shape.extra };
+  add('anime has every column the sync writes by name', shape.missing.length === 0,
+    shape.missing.length ? `missing: ${shape.missing.join(', ')}` : `${ANIME_COLUMNS.length} named columns present (${shape.extra.length} extra, owned by the local tools)`,
+    { why: 'apply cloud-sync/schema.sql, or fix ANIME_COLUMNS in cloud-sync/sync-anilist.mjs — a sync run exits schema_mismatch on this until one of them happens' });
 
   /* ---------------------------------------------------------- ownership stamps */
 

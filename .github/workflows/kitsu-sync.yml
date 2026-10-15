@@ -29,7 +29,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          # Exact minor, matching ci.yml and anilist-sync.yml — see the note there.
+          node-version: '22.18'
 
       - name: jitter the start (R11)
         # JITTER_WINDOW_S is read by bash here, never by the Node script, so it is documented in
