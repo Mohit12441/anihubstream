@@ -290,8 +290,11 @@ first walker.
    know about the undo before you need it: `npx wrangler d1 time-travel restore anihub
    --bookmark=<bookmark>` — no `--remote` there either — produces a **new** database from that
    point, it does not rewind `anihub` in place, so an undo means repointing the app (or copying
-   rows back), and the window is short: the free tier keeps 24 hours of history. Restore early or
-   restore nothing.
+   rows back), and the window is finite: Time Travel on the Workers Free plan keeps **7 days** of
+   history (30 on Paid). That comfortably covers this rollout — the active path is about a day and
+   a half — but an undo discovered a week later is no undo at all. The restore endpoint is also
+   rate-limited (10 per 10 minutes per database), so read each attempt's output rather than
+   retrying blind.
 
 2. **Run the schema gate and dump the schema** so the audit's later claims are about data, not
    assumptions. `node --env-file=.env cloud-sync/verify.mjs --probe` first — it is the exact check
