@@ -57,8 +57,17 @@ export function wrangler(args) {
   return execFileSync(WRANGLER_JS, args, { encoding: 'utf8', windowsHide: true, cwd: ROOT });
 }
 
+/* Every AniList POST this process makes, whichever module sent it. The hourly task has no pacing
+   of its own — cloud-sync/anilist.mjs's limiter does not cover it, because they are different
+   processes on different IPs — and it is the writer Phase 3 rolls *back* to, so whether it bursts
+   is worth knowing before, not after, it gets the residential IP throttled. Recorded here because
+   both this file and import-backlog.mjs send through this function; hourly-refresh.mjs reports it. */
+export const anilistSends = [];
+export const noteAnilistSend = (at = Date.now()) => (anilistSends.push(at), at);
+
 export async function anilist(query, variables) {
   for (let attempt = 1; attempt <= 3; attempt++) {
+    noteAnilistSend();
     const res = await fetch(ANILIST, {
       method: 'POST',
       headers: { 'content-type': 'application/json', accept: 'application/json', 'user-agent': UA },

@@ -39,7 +39,16 @@ CREATE TABLE IF NOT EXISTS anime (
   /* Folded title + native + kind + status, built by tools/sync-catalogue.mjs via
      foldSearch() from functions/api/_lib.js. The /api/anime search prefilters on
      this column with LIKE so the ranked matcher never needs a full table scan. */
-  search_text    TEXT
+  search_text    TEXT,
+  /* The LOCAL writer's own stamp, in unix milliseconds: tools/hourly-refresh.mjs:102 re-stamps
+     it on every row it touches and cloud-sync never writes it (that job has cloud_synced_at,
+     added by cloud-sync/schema.sql). The pair is what proves the two writers stayed on
+     disjoint columns. seed.sql sets it on every row, so a database built without this column
+     cannot be seeded at all — `no column named catalogue_synced_at`. It is missing from an
+     older production D1 too, and there ALTER TABLE is the only way in: cloud-sync/schema.sql
+     carries that statement for exactly that case, and re-running it here is a harmless
+     'duplicate column name', which apply-schema counts as already_present. */
+  catalogue_synced_at INTEGER
 );
 
 CREATE INDEX IF NOT EXISTS anime_by_trend ON anime(trend_rank);

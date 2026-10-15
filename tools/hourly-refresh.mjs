@@ -25,7 +25,7 @@
    tools/sync-catalogue.mjs.
    ============================================================ */
 
-import { discover } from './discover-titles.mjs';
+import { discover, anilistSends, noteAnilistSend } from './discover-titles.mjs';
 import { importBacklog } from './import-backlog.mjs';
 
 import { execFileSync } from 'node:child_process';
@@ -57,6 +57,7 @@ function wrangler(args) {
 
 async function anilist(query, variables) {
   for (let attempt = 1; attempt <= 3; attempt++) {
+    noteAnilistSend();   // same log discover-titles.mjs writes to, so one line covers the whole run
     const res = await fetch(ANILIST, {
       method: 'POST',
       headers: { 'content-type': 'application/json', accept: 'application/json', 'user-agent': UA },
@@ -87,7 +88,7 @@ async function fetchTrending(titles) {
   const stmts = titles.map((t) => {
     const rank = position.get(t.anilist) ?? null;
     if (rank) ranked++;
-    return `UPDATE anime SET trend_rank = ${rank ?? 'NULL'} WHERE id = ${sqlText(t.id)};`;
+    return `UPDATE anime SET trend_rank = ${rank ?? 'NULL'}, ${STAMP} WHERE id = ${sqlText(t.id)};`;
   });
   return { stmts, trendingListed: media.length, trendingRanked: ranked };
 }
@@ -95,7 +96,11 @@ async function fetchTrending(titles) {
 const seasonOf = (month) => (month < 3 ? 'Winter' : month < 6 ? 'Spring' : month < 9 ? 'Summer' : 'Fall');
 
 /* The next broadcast slot each title's AniList record publishes, formatted exactly
-   like tools/sync-catalogue.mjs does (UTC day 1=Mon..7=Sun, 'Oct 20', '14:00'). */
+   like tools/sync-catalogue.mjs does (UTC day 1=Mon..7=Sun, 'Oct 20', '14:00').
+   Every statement also re-stamps catalogue_synced_at — this task's own mark, never
+   cloud_synced_at, which belongs to cloud-sync/. The pair is what proves the two writers
+   stayed on disjoint columns during the handover. */
+const STAMP = `catalogue_synced_at=CAST(strftime('%s','now') AS INTEGER) * 1000`;
 async function fetchAiring(titles) {
   const stmts = [];
   let slotted = 0;
@@ -107,12 +112,12 @@ async function fetchAiring(titles) {
     chunk.forEach((t, j) => {
       const airingAt = data?.[`m${j}`]?.nextAiringEpisode?.airingAt;
       if (!airingAt) {
-        stmts.push(`UPDATE anime SET sched_day=NULL, sched_day_label=NULL, sched_date=NULL, sched_time=NULL, sched_season=NULL WHERE id=${sqlText(t.id)};`);
+        stmts.push(`UPDATE anime SET sched_day=NULL, sched_day_label=NULL, sched_date=NULL, sched_time=NULL, sched_season=NULL, ${STAMP} WHERE id=${sqlText(t.id)};`);
         return;
       }
       const d = new Date(airingAt * 1000);
       slotted++;
-      stmts.push(`UPDATE anime SET sched_day=${d.getUTCDay() === 0 ? 7 : d.getUTCDay()}, sched_day_label=${sqlText(DAY_LABEL[d.getUTCDay()])}, sched_date=${sqlText(`${d.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })} ${d.getUTCDate()}`)}, sched_time=${sqlText(`${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')}`)}, sched_season=${sqlText(`${seasonOf(d.getUTCMonth())} ${d.getUTCFullYear()}`)} WHERE id=${sqlText(t.id)};`);
+      stmts.push(`UPDATE anime SET sched_day=${d.getUTCDay() === 0 ? 7 : d.getUTCDay()}, sched_day_label=${sqlText(DAY_LABEL[d.getUTCDay()])}, sched_date=${sqlText(`${d.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })} ${d.getUTCDate()}`)}, sched_time=${sqlText(`${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')}`)}, sched_season=${sqlText(`${seasonOf(d.getUTCMonth())} ${d.getUTCFullYear()}`)}, ${STAMP} WHERE id=${sqlText(t.id)};`);
     });
   }
   return { stmts, airingSlotted: slotted };
@@ -122,6 +127,26 @@ function logLine(line) {
   const dir = join(ROOT, 'logs');
   if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
   appendFileSync(join(dir, 'hourly-refresh.log'), `${new Date().toISOString()} ${line}\n`);
+}
+
+/* What this task actually did to AniList, in the only two numbers that matter: how many it asked
+   for, and how tightly. `peak_per_minute` is the busiest sliding 60s window, which is the shape
+   AniList's own limit is written against, and `min_gap_ms` is the tightest back-to-back pair.
+   Nothing here paces anything — it is a measurement, so that a day of hourly-refresh.log can
+   answer whether the residential IP is being burst at, which is the risk the cloud limiter cannot
+   cover because it is not the process doing it. */
+function anilistRate() {
+  const at = [...anilistSends].sort((a, b) => a - b);
+  if (!at.length) return { requests: 0 };
+  let peak = 1;
+  let minGap = null;
+  for (let i = 0; i < at.length; i++) {
+    let j = i;
+    while (j < at.length && at[j] - at[i] < 60000) j++;
+    peak = Math.max(peak, j - i);
+    if (i) minGap = minGap === null ? at[i] - at[i - 1] : Math.min(minGap, at[i] - at[i - 1]);
+  }
+  return { requests: at.length, peak_per_minute: peak, min_gap_ms: minGap };
 }
 
 async function main() {
@@ -168,6 +193,10 @@ async function main() {
   } catch (err) {
     failures.push(`backlog: ${err.message}`);
   }
+
+/* Taken after the last request and before the write, so it describes this run, and stored with the
+   rest of the summary: sync_meta.hourly_sync is where a day of these lines accumulates. */
+summary.anilist_rate = anilistRate();
 
   stmts.push(
     `INSERT INTO sync_meta (key, value) VALUES ('hourly_sync', ${sqlText(JSON.stringify({ at: new Date().toISOString(), source: 'operator-task', ...summary, failures }))}) ON CONFLICT(key) DO UPDATE SET value = excluded.value;`,

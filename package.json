@@ -6,10 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
+    "build:pages": "tsc --noEmit && vite build --mode pages --outDir dist-pages --emptyOutDir",
     "typecheck": "tsc --noEmit",
-    "test": "node --test api/*.test.mjs",
+    "test": "node --test api/*.test.mjs tools/*.test.mjs cloud-sync/*.test.mjs",
+    "verify": "node tools/verify-runtime.mjs",
+    "pages:dev": "npm run build:pages && wrangler pages dev dist-pages --port 8899",
     "preview": "vite preview",
-    "serve": "node tools/serve-static.mjs"
+    "serve": "node tools/serve-static.mjs",
+    "supervise": "node tools/supervise-origin.mjs"
   },
   "dependencies": {
     "hls.js": "^1.7.3",

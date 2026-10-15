@@ -1,0 +1,726 @@
+# cloud-sync — rate-controlled AniList / Kitsu sync
+
+A catalogue sync whose primary design goal is that **AniList's per-IP limiter never
+fires**. Correctness of rate control is preferred over throughput everywhere the two
+conflict.
+
+It replaces wrangler with the D1 REST API, so a run needs nothing but Node and four
+environment variables — no npm install, no local machine.
+
+| file | role |
+| --- | --- |
+| `anilist.mjs` | single-flight queue, pacing, alias batching, adaptive throttle, backoff, circuit breaker, budget, rate-header awareness, POST/GET+relay |
+| `d1.mjs` | D1 over REST, chunked multi-row upserts; three write strategies per column — merge (`jsonMerge`), keep-when-absent (`keepExisting`), fill-only (`fillIf`) |
+| `state.mjs` | the D1-backed memory: lease, cursor, learned interval, daily budget, run records |
+| `sync-anilist.mjs` | one bounded incremental pass, in mode `mirror` / `delta` / `takeover` |
+| `sync-kitsu.mjs` | Kitsu artwork and episode counts for titles the AniList pass owns |
+| `schema.sql` | `sync_lock`, `api_usage`, `sync_runs`, `sync_pending`, the two stamp columns |
+| `apply-schema.mjs` | apply a `.sql` file over the REST API (no wrangler); splits on SQLite's real lexical rules, idempotent |
+| `verify.mjs` | read-only audit: ownership stamps, vocabulary, visibility, rate-control state |
+| `rate.test.mjs` | the rate-control and column-ownership criteria, pinned against a stubbed fetch |
+| `migration.test.mjs` | T1-T7 of the migration below, plus the schema re-apply and the audit, against a real throwaway SQLite database |
+
+## Why this design
+
+AniList blocks shared egress. This repo already has that in writing —
+`sync-worker/wrangler.toml` records that AniList answers `403 "You have been manually
+blocked"` to Cloudflare's datacenter IPs (verified 2026-10-13), which is why the sync was
+moved to a Windows task on the operator machine. Any free host has the same problem: a
+shared IP whose other tenants you do not control. Keeping *our* volume low is necessary
+and not sufficient, so the system is built to detect pressure, back off, and stop — rather
+than to assume a low volume is safe.
+
+## Deploy
+
+1. **This repo has no git remote yet** (`git remote -v` is empty). Create one on GitHub
+   (free, no card) and push. Nothing below works until that exists.
+2. **Find out what the live database already has, then apply the schema.** This is a question, not a
+   step, because the answer differs per database and nothing in the repo can tell you: the sync's own
+   state tables (`sync_lock`, `api_usage`, `sync_runs`, `sync_pending`) and its two stamp columns
+   exist only once `cloud-sync/schema.sql` has been applied, and this job has never run against
+   production. Ask the database:
+
+   ```
+   npx wrangler d1 execute anihub --remote --command \
+     "SELECT type, name FROM sqlite_master WHERE tbl_name <> 'sqlite_sequence' ORDER BY type, name"
+   npx wrangler d1 execute anihub --remote --command "PRAGMA table_info(anime)"
+   ```
+
+   Two commands because they answer two different halves: `sqlite_master` enumerates tables and
+   indexes but never a column, and `PRAGMA table_info(anime)` is the only way to read `anime`'s own
+   shape. Do not settle this from the repo — the root `schema.sql` predates both stamp columns (it
+   defines neither `catalogue_synced_at` nor `cloud_synced_at`), while `seed.sql` inserts
+   `catalogue_synced_at` and `tools/hourly-refresh.mjs` writes it, so the live table has already
+   diverged from that file and the database is the only record of what it actually holds.
+
+   **Commit the answer as `cloud-sync/schema.live.sql`** — the same two queries, one under the other:
+
+   ```
+   { echo "-- The live shape of D1 database \`anihub\`, captured $(date -u +%Y-%m-%dT%H:%M:%SZ)";
+     echo "-- Regenerate with the two commands in cloud-sync/README.md, Deploy step 2.";
+     npx wrangler d1 execute anihub --remote --json --command \
+       "SELECT type, name, sql FROM sqlite_master WHERE tbl_name <> 'sqlite_sequence' ORDER BY type, name";
+     npx wrangler d1 execute anihub --remote --json --command "PRAGMA table_info(anime)"; } > cloud-sync/schema.live.sql
+   ```
+
+   It is a record, not a second source of truth — nothing reads it, and `migration.test.mjs` will not
+   notice if it goes stale. What keeps it honest is that it is *in git*: after any schema change, the
+   diff is two commands and a `git diff`, instead of an argument about what production holds. Root
+   `schema.sql` is the file that must stay applyable to a fresh environment (that is the reproducibility
+   half of this, and the reason `catalogue_synced_at` is in it now: `seed.sql` inserts it on every row, so
+   a database built without it cannot be seeded at all); `cloud-sync/schema.sql` is the file that upgrades
+   an *existing* one. The committed pair is checked against each other by a test — applying the second on
+   top of the first must tolerate exactly one duplicate column and nothing else, so a new divergence
+   between the two files fails `npm test` rather than surfacing as an operator's error mid-rollout.
+
+   Read for four names — `sync_lock`, `api_usage`, `sync_runs`, `sync_pending` — and two columns on
+   `anime` (`cloud_synced_at`, `catalogue_synced_at`). All present: the file is applied, go to step 3.
+   Any missing: it is not, and a Phase 1 run will still work (mirror never reads `sync_pending`;
+   `sync-anilist.mjs:737` only queries it when `CLOUD_CREATES_ROWS=1`) but it will die before the
+   loop when it tries to take the lease, reporting `exit_reason: "fatal"` and exit 1 having written
+   nothing. Apply it: Actions → cloud-ops → `apply-schema` (needs only the three CF secrets, and no
+   wrangler), or locally `wrangler d1 execute anihub --remote --file=cloud-sync/schema.sql`. The file
+   is idempotent; its last lines (the two `ALTER TABLE anime ADD COLUMN`) are the run-once tail and
+   report `duplicate column name` on a second application. That error is the guard, so the job counts
+   it as `already_present` and still exits 0 — a first application prints `{"statements":10,
+   "applied":10,"already_present":0,"failed":0}`, a re-run `applied:8, already_present:2`, and only a
+   `failed` other than that makes the exit code non-zero. `migration.test.mjs` applies and re-applies
+   this exact file against a real SQLite database, so the tallies above are a test result rather than
+   a claim.
+3. **Repo Settings → Secrets and variables → Actions**
+   - Secrets: `CF_ACCOUNT_ID`, `CF_DATABASE_ID`, `CF_API_TOKEN` (D1:Edit on that account,
+     nothing more), optionally `ANILIST_RELAY_PREFIX`
+   - Variables: leave empty to take the defaults in `.env.example` — which is Phase 1 below
+4. **Leave the phase Variables unset** while the Windows task still runs. Unset is `mirror`,
+   the only mode that is safe beside it. See "Sole writer: the four phases" below for what each
+   mode costs and how to move between them.
+5. **Run it once by hand** (Actions → AniList sync → Run workflow) and read the summary
+   line. `exit_reason: "catalogue_end"` with `requests_made` around
+   `ceil(titles / ANILIST_BATCH_SIZE)` and a non-zero `items_processed` means it worked.
+6. Actions → cloud-ops → `report`, and it must end `OK`. It runs only SELECTs, so it is safe to run
+   while a sync is in flight. Every check is either hard (the job exits 1) or a `WARN` line — the
+   soft ones are states that are normal at some phase, like rows seeded before the stamp columns
+   existed or a lease held by the run currently going. This is the command to re-run after
+   every phase.
+7. Local run against the live database: `node --env-file=.env cloud-sync/sync-anilist.mjs`
+
+## Sole writer: the four phases
+
+The goal is that the operator machine stops writing `anime` altogether. The obstacle is not
+AniList, it is `tools/hourly-refresh.mjs` (the `AniHubHourlyRefresh` task): it writes the same
+table, takes **no lease**, and owns the air-slot and trending columns. Two jobs cannot be kept
+apart by locking when one of them never locks, so they are kept apart by *what each is allowed to
+write*, and the handover happens in phases small enough to check and to reverse. Each phase is one
+repo Variable change plus one `report`; nothing is irreversible except the `ALTER`s, which are
+additive and nullable.
+
+`MODE` decides everything. Left unset, it is derived from the two switches, so they can never
+disagree with it — and an explicit `MODE` that contradicts them is refused at startup rather than
+guessed at, because the difference between the modes is the difference between "safe beside the
+local task" and "claiming the local task's columns".
+
+| `MODE` | derived from | may insert | may overwrite |
+| --- | --- | --- | --- |
+| `mirror` (Phase 1) | `CLOUD_CREATES_ROWS=0` | never | the metadata columns only |
+| `delta` (Phase 2) | `CLOUD_CREATES_ROWS=1`, `LEGACY_WRITER_ACTIVE=1` | from `sync_pending` | the metadata columns only |
+| `takeover` (Phase 3) | `CLOUD_CREATES_ROWS=1`, `LEGACY_WRITER_ACTIVE=0` | from `sync_pending` | metadata **plus** `sched_*` and `trend_rank` |
+
+`delta` and `mirror` share one `updateSet` on purpose: delta differs from mirror only in what it
+may INSERT, never in what it may overwrite. That is what makes the stamp audit meaningful.
+
+`CLOUD_OWNS_SCHEDULE` is the one switch that is not a phase. It does not change `MODE` and it does
+not move a column: in `mirror`/`delta` it adds a *fill-only* path to the five `sched_*` columns, and
+the statement itself refuses everything else (see the guard below). Default off, and off is the
+right answer for a normal rollout — see *Whose rows does the local task refresh?* in Phase 2.
+
+### Who owns which column
+
+| column | Phase 1 `mirror` | Phase 2 `delta` | Phase 3 `takeover` | local task |
+| --- | --- | --- | --- | --- |
+| `title` `native` `year` `rating` `season` `kind` `status` `art` `key_art` `accent` `synopsis` `search_text` `episode_total` | cloud | cloud | cloud | — |
+| `source_ids` | cloud, merged in SQLite | cloud, merged | cloud, merged | — |
+| `sched_day` `sched_day_label` `sched_date` `sched_time` `sched_season` | — (fill only, `CLOUD_OWNS_SCHEDULE=1`) | insert only; fill only with `CLOUD_OWNS_SCHEDULE=1` | cloud | cloud |
+| `trend_rank` | — | insert only | cloud | cloud |
+| `added_at` | — | insert only | insert only | insert only |
+| `anime_genre` rows | created rows always; existing rows only with `CLOUD_OWNS_GENRES=1` and only if nothing else owns them | same | same | yes |
+| `rank` `alt_seasons` `skip_key_id` `skip_key_space` | never | never | never | never |
+| `cloud_synced_at` | cloud | cloud | cloud | — |
+| `catalogue_synced_at` | — | — | — | local tools |
+| row creation | never | from `sync_pending` | from `sync_pending` | yes |
+
+The site's *vocabulary* is part of ownership. `functions/api/anime/index.js:24-25` validates
+`?kind=`/`?status=` against a closed list and then filters with an exact `=`, and
+`functions/api/schedule.js:9` matches `sched_season` the same way. So the cloud writes `TV` /
+`Ongoing` / `Fall 2026` — the spellings `tools/sync-catalogue.mjs:161-163` and
+`tools/hourly-refresh.mjs:95` use — never AniList's enum (`tv`, `RELEASING`, `fall 2026`). A
+title that AniList has a state for which the site has no word (`CANCELLED`, `HIATUS`) is written
+as absent, which means *keep the stored value*, never as an invented label.
+
+### Is an absent value clearable? (per column)
+
+AniList returns an explicit JSON `null` for a field it was asked about but does not have, while
+`0` is a real rating and `''` can be real prose. So "absent" is `=== null` and nothing else — not
+`hasOwn`, not falsy.
+
+| rule | columns | why |
+| --- | --- | --- |
+| **keep the stored value** | `title` `native` `year` `rating` `season` `kind` `status` `art` `key_art` `accent` `synopsis` `episode_total` `search_text` | an airing title has no episode count on AniList and a scoreless title has no rating; blanking either loses data nobody can regenerate |
+| — in SQL | the nullable ones above | `CASE WHEN excluded.col IS NULL THEN anime.col ELSE excluded.col END` (`d1.mjs` `keepExisting`) |
+| — in JS, first | the eleven NOT NULL ones | SQLite checks an `INSERT ... ON CONFLICT`'s VALUES against the table's constraints *before* the `DO UPDATE` runs, so one absent score fails the whole chunked statement, for every row in it, and the CASE never executes. The run therefore reads those columns with the row and keeps what it read (`completeFromStored`) — the same reason `sync-kitsu.mjs` always writes a complete record |
+| **merge, never replace** | `source_ids` | `json_patch(COALESCE(source_ids,'{}'), ?)`. `COALESCE` matters: `json_patch(NULL, x)` is NULL, so without it the first merge onto a row with no provenance would wipe the column instead of filling it |
+| **clearable on purpose** | `sched_day` `sched_day_label` `sched_date` `sched_time` `sched_season` `trend_rank` | a title that stopped airing must lose its slot, a title that left the trending list must lose its rank. Keeping the stale value here is the bug: the shelf would list a finished show as airing |
+| — *except* in a fill | the same five `sched_*` in mirror/delta with `CLOUD_OWNS_SCHEDULE=1` | `CASE WHEN anime.sched_day IS NULL AND … AND anime.catalogue_synced_at IS NULL AND excluded.sched_day IS NOT NULL THEN excluded.sched_day ELSE anime.sched_day END` (`d1.mjs` `fillIf`). Four conditions, all of them load-bearing: no local stamp, the whole slot empty, we actually have a value. It cannot clear, so it cannot fight the local writer over a slot that has an owner |
+| **never written by an update** | `added_at` `rank` `alt_seasons` `skip_key_id` `skip_key_space` | a refresh must not move a title up the Just Added shelf, undo curation, or break the provenance the skip pipeline keyed itself on |
+| **always written** | `cloud_synced_at` | it is the proof of the write itself |
+
+### Pre-flight, before the first run that writes production rows
+
+Phase 1 is not read-only: `mirror` updates real rows. So before the first scheduled tick, do these
+five things in order. They take ten minutes and they are the difference between a rollout you can
+reason about and one you are guessing at.
+
+1. **Bookmark the database.** This run mutates rows and D1 Time Travel is the only undo:
+
+   ```
+   npx wrangler d1 time-travel info anihub --remote
+   npx wrangler d1 execute anihub --remote --json --command "SELECT count(*) AS rows FROM anime" > preflight-counts.json
+   ```
+
+   Write down the `latest_backup_timestamp` it prints. Two things to know about the undo before you
+   need it: `time-travel restore` produces a **new** database from that point — it does not rewind
+   `anihub` in place — so an undo means repointing the app (or copying rows back), and the window is
+   short: the free tier keeps 24 hours of history. Restore early or restore nothing.
+
+2. **Dump the schema** so the audit's later claims are about data, not assumptions. The command and
+   how to read the answer are in Deploy step 2; keep the output next to the counts.
+
+3. **Scope the first run** rather than letting the schedule do 1000 titles at once:
+
+   ```
+   MAX_ITEMS_PER_RUN=100 ANILIST_DAILY_BUDGET=60 node --env-file=.env cloud-sync/sync-anilist.mjs
+   ```
+
+   Expect `requests_made` ≤ 4 (a slice is `4 × ANILIST_BATCH_SIZE` titles, and 100 titles is one
+   slice: `100 / 25 = 4` aliased documents), `s403: 0`, and `exit_reason: "item_cap"` — the run
+   stopped because you told it to, not because it ran out of anything. If `requests_made` is 5 or
+   more, or `s403` is not 0, stop and read *If 403s still happen* before going further.
+
+4. **Diff exactly the rows that run touched**, before and after, and check the columns the mode is
+   not allowed to change:
+
+   ```
+   npx wrangler d1 execute anihub --remote --json --command \
+     "SELECT id, rating, episode_total, length(synopsis) AS synopsis, sched_day, sched_season, added_at, source_ids, catalogue_synced_at, cloud_synced_at FROM anime ORDER BY id LIMIT 100" > before.json
+   ```
+
+   Run step 3, re-run the same SELECT into `after.json`, then `diff before.json after.json`. What
+   may differ: `rating`, `episode_total`, `synopsis` (that is what mirror is *for*) and
+   `cloud_synced_at`. What may not, in Phase 1: `added_at`, any `sched_*`, `catalogue_synced_at`, and
+   any *lost* key in `source_ids` — a key may be *added* by the `json_patch` merge (`idMal` appearing
+   upstream) and that is fine; a key that disappears means the merge is broken, and the response is
+   to go back to the safe phase while it is worked out (`gh variable delete CLOUD_CREATES_ROWS
+   -R <owner>/<repo>` and `gh variable delete MODE -R <owner>/<repo>`, which is `mirror` by
+   derivation). `migration.test.mjs` T1 asserts the same rules against real SQLite, so a failure here
+   means production differs from the tested shape, not that the test was optimistic.
+
+5. **Only then** un-scope it. The env line above is a one-off shell invocation; the scheduled run
+   takes its values from repo Variables, which you have not touched.
+
+**If the pre-flight run is slow, the first lever is `ANILIST_BATCH_SIZE`, not the pacing.** R3 packs
+25 `Media(id: …)` lookups into one document, and AniList's GraphQL layer charges each alias as its
+own query: a batch of 25 costs roughly 25× the *complexity* of a single lookup even though it is one
+request against the 30/min *rate* window. Those are two different ceilings and only the first one a
+batch can hit. The client handles the rejection without losing the titles: `classifyGraphQLError()`
+(`anilist.mjs`) sorts a 200-with-`errors` response three ways, because the status code cannot tell
+them apart and the old code assumed every one of them was permanent. A **transient** message
+(`Too many requests`, `temporarily`, `unavailable`, a timeout) backs off through the same limiter as
+a 5xx and retries inside the attempt budget. A **complexity** message is the batch being too big, not
+the call being wrong, so `mediaByIds()` halves it and asks twice in smaller documents — each half
+paced, each counted in `requests_made`, the whole recovery reported as `bisects` in the summary line.
+Anything **else** is still sent once and thrown, since a malformed document does not become valid on
+retry. The ordering of those checks is not incidental: AniList's rate message contains the words
+"too many", which a complexity pattern would also match, and mis-classifying it would answer a
+request to slow down with twice the requests. `config`-level proof is in `rate.test.mjs` section 6.
+Measure before tuning — `duration_ms / requests_made` from the summary, and the byte size of the
+response — and if a 25-alias document is genuinely the problem, halve it as a repo Variable:
+
+```
+gh variable set ANILIST_BATCH_SIZE --body '10' -R <owner>/<repo>     # 10 titles per request
+```
+
+Nothing else needs to change: `ANILIST_BATCH_SIZE` is the chunking of one document, and the slice
+that reads the catalogue is `4 ×` it, so a run simply makes more, smaller requests at the same
+pacing. The field set is already the lean one — `anilist.mjs:51-54` asks for
+`id idMal title{romaji english native} format type status season seasonYear averageScore
+bannerImage coverImage{large extraLarge color} description genres episodes duration trending
+popularity nextAiringEpisode{airingAt episode} startDate{year}` and no `staff`, `studios`,
+`relations`, `tags`, `externalLinks` or `recommendations`, all of which are the expensive subtrees.
+`description` is the only heavy field left and it is what `synopsis` is made from, so it is the last
+thing to drop, not the first.
+
+### Phase 1 — mirror (the default)
+
+```
+MODE unset   LEGACY_WRITER_ACTIVE unset   CLOUD_CREATES_ROWS unset   CLOUD_OWNS_GENRES=0
+```
+
+Refreshes metadata for titles the catalogue already holds, beside the local task, in the same
+minute. It cannot create a row and cannot write a `sched_*` or `trend_rank` value, so the worst it
+can do is restyle a poster. Leave it here for a few days, then read `report`.
+
+*Check:* `Phase 1 never created a row` must be OK. That count is rows carrying only
+`cloud_synced_at` — in this mode, proof of an insert.
+*Rollback:* nothing to do (it is the default); or stop the workflow. The local task never stopped.
+
+### Phase 2 — delta (the cloud may create rows)
+
+```
+CLOUD_CREATES_ROWS=1        # LEGACY_WRITER_ACTIVE stays unset
+```
+
+Now a queued AniList id becomes a row, and the insert-only columns are filled from the same
+derivations the local task uses: `added_at` = `datetime('now')` text, `anime_genre` from
+`Media.genres` mapped through the `genre` table's own labels, `trend_rank` = the title's position
+in AniList's trending page, `sched_*` = `airSlot()`, byte-for-byte
+`tools/hourly-refresh.mjs:115` (same Sunday-as-7 numbering, same `Oct 13` / `01:00` / `Fall 2026`).
+
+Queue a title — this is the step that replaces `tools/catalogue-sources.json` on the machine:
+
+```sql
+INSERT INTO sync_pending (anilist_id, slug, added_at, note)
+VALUES (98596, 'a-test-title', CAST(strftime('%s','now') AS INTEGER) * 1000, 'operator request');
+```
+
+The slug is advisory: the sync recomputes it from the English (then Romaji) title with the same
+`slugify()` as `tools/discover-titles.mjs`, and refuses to move a row that a *different* AniList id
+already holds — that is a franchise collision, and re-pointing it would misattribute every episode
+and every skip key the row holds. A queue entry is consumed only once the run reached a decision
+about it: a title AniList has not published artwork for stays queued (a tile with a broken poster
+is worse than a wait), a dead id is dropped so the queue can drain.
+
+**Whose rows does the local task refresh?** Every row in the table, including ones it never created.
+`tools/hourly-refresh.mjs:133` selects `id, source_ids` from `anime` with no `WHERE` — no
+`catalogue_synced_at IS NOT NULL`, no provenance filter — and then writes `trend_rank` for each
+title it finds (`:90`) and the whole five-column air slot for each (`:115`), NULLing the slot when
+AniList reports no `nextAiringEpisode` (`:106`). A row this job inserts in Phase 2 therefore gets
+its schedule refreshed by the hourly task on its next tick, exactly like a locally-created row; the
+insert fills the slot from the same field (`airSlot()`), so there is no window in which the row is
+on the shelf with an empty slot and nobody assigned to fill it. That is why Phase 2 does **not**
+need a schedule switch to be complete, and why `CLOUD_OWNS_SCHEDULE` exists at default 0 rather than
+being folded into the mode: it is for the case where that task is broken or disabled while
+`LEGACY_WRITER_ACTIVE` still says `1`.
+
+Which is a state you can now not fall into by accident either: `resolveMode` refuses
+`LEGACY_WRITER_ACTIVE=0` together with `CLOUD_CREATES_ROWS=0` outright (`gives nobody the sched_*
+columns`), because that combination is precisely "the local task is stopped, and the cloud is not
+allowed to write what it owns". The residual gap is the one no config read can see — the task is
+*enabled* in the flag but has stopped succeeding — and `verify.mjs` checks it against data:
+`someone still owns the schedule shelf` WARNs when the `hourly_sync` heartbeat is older than
+`LEGACY_QUIET_MS` while the mode leaves those columns to it.
+
+*Check:* `report` → `every cloud-written row is on a genre shelf` OK. `migration.test.mjs` T7 runs
+the actual `functions/api/anime` and `functions/api/schedule` queries against a real SQLite
+database, so "a cloud-created row is indistinguishable from a locally-created one" is a test, not
+a claim.
+*Rollback to Phase 1:*
+
+```
+gh variable set CLOUD_CREATES_ROWS --body '0' -R <owner>/<repo>    # or: gh variable delete CLOUD_CREATES_ROWS -R <owner>/<repo>
+gh variable set LEGACY_WRITER_ACTIVE --body '1' -R <owner>/<repo>  # Phase 2 never asked you to touch this; it stays 1 — say so explicitly rather than leaving it unset and hoping the derivation is read the same way next month
+gh variable set CLOUD_OWNS_GENRES --body '0' -R <owner>/<repo>     # only if you had turned it on
+gh variable set CLOUD_OWNS_SCHEDULE --body '0' -R <owner>/<repo>   # only if you had turned it on
+gh variable delete MODE -R <owner>/<repo>                          # run this one even if you never set MODE by hand
+```
+
+That last line is not optional hygiene. `resolveMode()` refuses to start a run whose explicit `MODE`
+contradicts the two switches, and rolling back the switches *is* the contradiction: `MODE=delta` held
+while `CLOUD_CREATES_ROWS` goes to `0` means every scheduled run exits 1 and the catalogue stops
+silently, which is the worst possible behaviour for a rollback. Delete `MODE` and the derivation
+(`:426`) lands on `mirror` on its own. The same applies to the Phase 3 and Phase 2 rollbacks below:
+**if you ever set `MODE` explicitly, every later switch change has to delete it in the same breath.**
+
+`--body` takes a literal string — see the warning above the table, this is the command that corrupts
+a rollout when typed as JSON. Rows already created stay: they are ordinary rows, and `delta`'s
+overwrite set is `mirror`'s, so the only local-task column a Phase 2 row ever held is the one its own
+insert filled from `airSlot()` — which the hourly task recomputes on its next tick. Nothing is
+undone by switching back; the queue keeps its entries and `mirror` simply does not read them (the
+report says so as `queued titles can be drained from this mode`).
+
+### Phase 3 — takeover (the handover)
+
+```
+schtasks /Change /TN AniHubHourlyRefresh /DISABLE     # the local task, not this job
+LEGACY_WRITER_ACTIVE=0   CLOUD_CREATES_ROWS=1
+```
+
+`takeover` claims `sched_*` and `trend_rank` on existing rows. It **refuses to start** while the
+task's own heartbeat — `sync_meta.hourly_sync`, written by every local run — is younger than
+`LEGACY_QUIET_MS` (2h: one missed tick plus slack). That is a real check, not a config read:
+disabling the task is a thing you can forget, and this is the one mode that can put two writers on
+one column. It exits `exit_reason: "legacy_still_running"` with exit code 1, so CI alerts.
+
+To cross the window deliberately — you disabled the task an hour ago and the heartbeat is still
+young — answer the interlock with evidence rather than by waiting it out:
+
+```
+node cloud-sync/sync-anilist.mjs --force-takeover      # or tick the box on a dispatched run
+```
+
+That writes `sync_meta.cloud_takeover` (`{at, at_iso, owner, reason}`) and proceeds. The marker is
+durable, so later ticks pass without needing the flag again, and `report` judges every row against
+it.
+
+A takeover run that gets through honestly — the task really was disabled, so the heartbeat was
+already stale — writes the same marker with `reason` naming the quiet window. It is not a record of
+you overriding something; it is the instant this job started owning `sched_*`, which is the instant
+the query below needs to compare against. Without it the Phase 3 audit would have nothing to check,
+because the honest path involves no flag.
+
+*Check — the verification query.* A row stamped by the local tools **after** the marker means a
+second writer is live on a column this job now claims:
+
+```sql
+SELECT count(*) AS overlap_since_takeover
+FROM anime
+WHERE catalogue_synced_at > (
+  SELECT CAST(json_extract(value, '$.at') AS INTEGER) FROM sync_meta WHERE key = 'cloud_takeover');
+```
+
+Must be `0`. It is `verify.mjs`'s `no local write after the takeover marker`. It is only meaningful
+from Phase 3; in Phases 1-2 the local task *should* keep stamping, which is why the disjointness
+there is proved in the other direction:
+
+```sql
+-- Phase 1 only: any row the cloud stamped and the local tools never did is an insert that must not exist.
+SELECT count(*) AS cloud_created_rows FROM anime
+WHERE catalogue_synced_at IS NULL AND cloud_synced_at IS NOT NULL;
+
+-- Any phase: each writer sets only its own stamp, so attribution is never a guess.
+SELECT sum(catalogue_synced_at IS NOT NULL AND cloud_synced_at IS NOT NULL) AS both,
+       sum(catalogue_synced_at IS NULL    AND cloud_synced_at IS NOT NULL) AS cloud_only,
+       sum(catalogue_synced_at IS NOT NULL AND cloud_synced_at IS NULL)    AS local_only,
+       sum(catalogue_synced_at IS NULL    AND cloud_synced_at IS NULL)     AS neither
+FROM anime;
+```
+
+The first is a *data* check. The column sets themselves are disjoint by construction, and that is a
+*code* invariant: `updateSet('mirror')` ∩ `LEGACY_OWNED` is empty, `updateSet` never contains
+`added_at`, `rank`, `alt_seasons` or the skip keys, and the one way `sched_*` can enter a
+non-takeover update list is the fill — which is not a claim on the column, because
+`SCHED_FILL_GUARD` refuses every row the local task has stamped or that already holds any part of a
+slot. All of it is pinned in `rate.test.mjs`, which fails before the cron tick does.
+
+*Rollback:* `gh variable set LEGACY_WRITER_ACTIVE --body '1' -R <owner>/<repo>` and
+`gh variable delete CLOUD_CREATES_ROWS -R <owner>/<repo>` (delete, not `--body '0'`: unset is the
+documented Phase 1, and it removes the chance of the two switches disagreeing with an explicit
+`MODE`) and `gh variable delete MODE -R <owner>/<repo>` — which you must run if `MODE` says
+`takeover`, because `takeover` against `LEGACY_WRITER_ACTIVE=1` is precisely the contradiction the
+derivation refuses to guess at, and `resolveMode` answers it by exiting 1. Then
+`schtasks /Change /TN AniHubHourlyRefresh /ENABLE`. If you had turned on the fill,
+`gh variable set CLOUD_OWNS_SCHEDULE --body '0' -R <owner>/<repo>` too — nothing it wrote needs
+undoing, since it only ever filled a slot that was empty on a row nobody had stamped, and the local
+task recomputes that row on its next tick. Then read it back — `gh variable get LEGACY_WRITER_ACTIVE
+-R <owner>/<repo>` must print `1`. This is the rollback where a JSON `--body` is not a cosmetic
+mistake: a value the cloud cannot parse means the switch it was set to is *not* the switch the cloud
+reads, and Phase 3 is the one mode where reading it wrong puts a second writer on `sched_*`. The
+cloud now refuses to start on a value that is not exactly `0` or `1`, so the failure is a stopped
+cron job with an explanation, not a silent claim. The local task recomputes every column it owns on
+its next run, so nothing Phase 3 wrote needs undoing. The interlock re-arms by itself: once the task
+beats again its heartbeat is newer than any marker, so a later `takeover` refuses until you force
+it. Leave the marker where it is — it is the anchor for the query above, and the next Phase 3 run
+only refreshes it.
+
+### Phase 4 — decommission the machine
+
+Once `report` has been green for a week in Phase 3, the task can stay off and the machine can stop
+being a writer. What none of the above replaces, and still runs there:
+
+- `tools/discover-titles.mjs` and `tools/import-backlog.mjs` — the *choosing* of new titles from
+  AniList's trending and popularity lists. Growth in the cloud is a `sync_pending` insert; the
+  chooser that decides which ids to queue has no cloud equivalent yet. Queue by hand, or keep the
+  task enabled for its choosing only: it writes through `sync-catalogue.mjs`, which stamps
+  `catalogue_synced_at`, so its work stays visible in the queries above.
+- `tools/sync-catalogue.mjs` for a full rebuild, and `seed.sql` application. Both are deliberate
+  and operator-run, and both stamp, so the audit can tell their writes from ours.
+
+### Env, default, phase, rollback
+
+`gh variable set NAME --body VALUE` takes a **literal string**. `--body '{"value":"1"}'` — the shape
+a `gh api` example would give you — stores that JSON text as the variable's value, and the sync
+refuses to start on it. So: `--body '0'`, `--body '1'`, and read it back with
+`gh variable get NAME -R <owner>/<repo>`. The refusal is deliberate rather than forgiving: coerced,
+that text is `NaN`, and `NaN` answers to whichever comparison the parser uses — `!== '0'` reads it
+as *active*, `=== '1'` as *inactive*. Those are opposite phases, and for the switches below the
+difference is who owns `sched_*`, which is the one failure this design must not have.
+
+Everything the code reads, with its default. `--env-file=.env` takes them from the file; a workflow
+takes them from repo Variables (or Secrets, for the four marked *secret*). "Phase" is where the
+value matters: an off-phase setting is either ignored or the default.
+
+| variable | default | phase | one-line rollback |
+| --- | --- | --- | --- |
+| `CF_ACCOUNT_ID` | — *secret, required* | all | rotate it: `gh secret set CF_ACCOUNT_ID -R <owner>/<repo>` (re-paste the value) — `gh secret delete` is the rollback that stops every job with `d1: missing environment`, which is the correct outcome for a leaked one |
+| `CF_DATABASE_ID` | — *secret, required* | all | `gh secret set CF_DATABASE_ID -R <owner>/<repo>` as above; this one identifies the database, so a wrong value points the sync at a different one rather than failing |
+| `CF_API_TOKEN` | — *secret, required* | all | `gh secret set CF_API_TOKEN -R <owner>/<repo>` with a freshly minted token, then revoke the old one in Cloudflare — it can write every row in `anime` |
+| `MODE` | unset → derived (=`mirror`) | 1-3 | `gh variable delete MODE -R <owner>/<repo>` — and delete it in the *same* command batch as any phase-switch change, since `resolveMode()` exits 1 when an explicit `MODE` contradicts the switches it also reads |
+| `CLOUD_CREATES_ROWS` | unset → `0` | 2-3 | `gh variable set CLOUD_CREATES_ROWS --body '0' -R <owner>/<repo>` |
+| `LEGACY_WRITER_ACTIVE` | unset → `1` | 3 | `gh variable set LEGACY_WRITER_ACTIVE --body '1' -R <owner>/<repo>` + `schtasks /Change /TN AniHubHourlyRefresh /ENABLE` |
+| `CLOUD_OWNS_GENRES` | unset → `0` | 1-3 | `gh variable set CLOUD_OWNS_GENRES --body '0' -R <owner>/<repo>` |
+| `CLOUD_OWNS_SCHEDULE` | unset → `0` | 1-2 | `gh variable set CLOUD_OWNS_SCHEDULE --body '0' -R <owner>/<repo>` (not a phase: it cannot change `MODE`, only fill an empty slot on a row nobody stamped) |
+| `LEGACY_QUIET_MS` | `7200000` | 3 | `gh variable delete LEGACY_QUIET_MS -R <owner>/<repo>`; it only guards the handover |
+| `MAX_ITEMS_PER_RUN` | `1000` | 1-3 | `gh variable delete MAX_ITEMS_PER_RUN -R <owner>/<repo>` |
+| `ANILIST_REWALK_AFTER_MS` | `86400000` | 1-3 | `gh variable delete ANILIST_REWALK_AFTER_MS -R <owner>/<repo>` |
+| `ANILIST_TRENDING_PAGE_SIZE` | `50` | 2-3 | `gh variable delete ANILIST_TRENDING_PAGE_SIZE -R <owner>/<repo>` |
+| `ANILIST_ENDPOINT` | `https://graphql.anilist.co` | all | `gh variable delete ANILIST_ENDPOINT -R <owner>/<repo>` |
+| `ANILIST_METHOD` | `auto` | all | `gh variable delete ANILIST_METHOD -R <owner>/<repo>` |
+| `ANILIST_RELAY_PREFIX` | unset → direct | all *secret* | `gh secret delete ANILIST_RELAY_PREFIX -R <owner>/<repo>` — a secret because a relay URL carries its own authorisation; `auto` may fall back to it on a non-JSON 403/405 and **never** on a `blocked` 403 |
+| `ANILIST_USER_AGENT` | `AniHubStream/1.0 (catalogue sync; contact: …)` | all | `gh variable delete ANILIST_USER_AGENT -R <owner>/<repo>` (R13: keep a contact route in it) |
+| `ANILIST_MIN_INTERVAL_MS` | `2500` | all | `gh variable delete ANILIST_MIN_INTERVAL_MS -R <owner>/<repo>`; clamped up if it would breach the ceiling |
+| `ANILIST_RATE_CEILING_RPM` | `24` | all | `gh variable delete ANILIST_RATE_CEILING_RPM -R <owner>/<repo>` — do not raise it; this is the number AniList's window is measured against |
+| `ANILIST_BATCH_SIZE` | `25` | all | `gh variable set ANILIST_BATCH_SIZE --body '10' -R <owner>/<repo>` — the first lever when a batched document is slow or rejected (query complexity, above) |
+| `ANILIST_INTERVAL_CAP_MS` | `30000` | all | `gh variable delete ANILIST_INTERVAL_CAP_MS -R <owner>/<repo>` |
+| `ANILIST_BREAKER_COOLDOWN_MS` | `600000` | all | `gh variable delete ANILIST_BREAKER_COOLDOWN_MS -R <owner>/<repo>` |
+| `ANILIST_DAILY_BUDGET` | `4000` | all | `gh variable set ANILIST_DAILY_BUDGET --body '60' -R <owner>/<repo>` for a scoped run; delete to restore |
+| `D1_MAX_PARAMS_PER_STATEMENT` | `90` | all | `gh variable delete D1_MAX_PARAMS_PER_STATEMENT -R <owner>/<repo>` — Cloudflare's ceiling, not a tuning knob |
+| `D1_MAX_SQL_BYTES` | `90000` | all | `gh variable delete D1_MAX_SQL_BYTES -R <owner>/<repo>` |
+| `D1_TIMEOUT_MS` | `30000` | all | `gh variable delete D1_TIMEOUT_MS -R <owner>/<repo>` |
+| `SYNC_LEASE_TTL_MS` | `1200000` | all | `gh variable delete SYNC_LEASE_TTL_MS -R <owner>/<repo>` |
+| `SYNC_LEASE_RENEW_REQUESTS` | `10` | all | `gh variable delete SYNC_LEASE_RENEW_REQUESTS -R <owner>/<repo>` |
+| `KITSU_BASE_URL` | `https://kitsu.io/api/edge` | kitsu | `gh variable delete KITSU_BASE_URL -R <owner>/<repo>` |
+| `KITSU_MIN_INTERVAL_MS` | `30000` | kitsu | `gh variable delete KITSU_MIN_INTERVAL_MS -R <owner>/<repo>` |
+| `KITSU_PAGE_SIZE` | `20` (clamped to 20) | kitsu | `gh variable set KITSU_PAGE_SIZE --body '20' -R <owner>/<repo>` (or `delete`; 20 is Kitsu's own maximum, so a bigger number is the same run) |
+| `KITSU_PAGES_PER_RUN` | `4` | kitsu | `gh variable set KITSU_PAGES_PER_RUN --body '4' -R <owner>/<repo>` — this is the throughput knob: each page is `KITSU_PAGE_SIZE` titles, so 4 pages per 30 minutes is the real rate, and the budget below has to agree with it |
+| `KITSU_RUNS_PER_DAY` | `48` | kitsu | `gh variable delete KITSU_RUNS_PER_DAY -R <owner>/<repo>` — this is the cron in `kitsu-sync.yml` (`15,45 * * * *` × 24) written down, because a runner cannot ask what schedule woke it. `config.test.mjs` parses that cron and fails if the two disagree, so changing the schedule means changing this number in the same commit |
+| `KITSU_DAILY_BUDGET` | `KITSU_RUNS_PER_DAY × KITSU_PAGES_PER_RUN + 8` (= 200 at the default) | kitsu | `gh variable set KITSU_DAILY_BUDGET --body '200' -R <owner>/<repo>` — 80 was the value that made every run after roughly the 20th of the day a no-op; raise the budget or cut the pages, but do not leave the two disagreeing |
+| `KITSU_TIMEOUT_MS` | `30000` | kitsu | `gh variable set KITSU_TIMEOUT_MS --body '30000' -R <owner>/<repo>` (or `delete` to take the default) |
+| `KITSU_USER_AGENT` | same shape as `ANILIST_USER_AGENT` | kitsu | `gh variable delete KITSU_USER_AGENT -R <owner>/<repo>` |
+| `QUIET` | unset | report | `gh variable delete QUIET -R <owner>/<repo>` — `verify.mjs` prints one line instead of an indented object |
+| *any switch the run refused to parse* | — | 1-3 | `gh variable set <NAME> --body '<0 or 1>' -R <owner>/<repo>` then `gh variable get <NAME>` — see below, a refused run wrote nothing |
+
+**Not in this table on purpose:** `JITTER_WINDOW_S`. It is read by the workflow's bash step, not by
+any Node script, and its default lives next to the `sleep` that uses it — 120s in `anilist-sync.yml`,
+90s in `kitsu-sync.yml`, because that job fires twice an hour and a wider window would start
+colliding with the next tick. A variable a script never reads does not belong in a table of script
+configuration.
+
+**The Kitsu rate, stated as a number rather than as a setting.** `kitsu-sync.yml` fires on
+`15,45 * * * *` — 48 runs a day — and each run takes at most `KITSU_PAGES_PER_RUN` (4) pages of
+`KITSU_PAGE_SIZE` (20) titles, spaced by `KITSU_MIN_INTERVAL_MS` (30s). So: 8 requests an hour,
+192 a day, 160 titles an hour at the outside — against Kitsu's published ~100 requests per hour per
+IP, with the whole margin coming from the run *stopping* rather than from the 30s floor. The budget
+is the other half of that story and it has to be arithmetic, not a guess: the default is
+`KITSU_RUNS_PER_DAY × KITSU_PAGES_PER_RUN + 8` (200), because at 80 — the value that was here before — the budget was
+the binding constraint from roughly the twentieth run of the day onward, and every run after that was
+a no-op that still took the lease, still spent a D1 read, and still recorded a row in `sync_runs`.
+If you cut `KITSU_PAGES_PER_RUN`, cut the budget to match or leave it derived. `KITSU_RUNS_PER_DAY`
+is the schedule written down once, in the one place the budget reads it: it cannot be discovered at
+runtime, so `config.test.mjs` reads `kitsu-sync.yml`, counts the firings, and fails if the constant no
+longer matches the cron. That coupling is deliberate — the bug this table row replaced was exactly a
+number that had stopped agreeing with a schedule.
+
+**A switch the run refused to parse** (any of the four above, `MAX_ITEMS_PER_RUN` and the other
+integers likewise — the error names the variable and shows the value it read):
+
+```
+gh variable set <NAME> --body '<0 or 1>' -R <owner>/<repo> && gh variable get <NAME> -R <owner>/<repo>
+```
+
+Nothing was written by a run that refused, so the rollback is the corrected value and nothing else:
+the cursor, the throttle and the queue are untouched, and the phase you meant to be in is still the
+phase the data is in. `Actions → anilist-sync` will pass on the next tick; check with `report`.
+
+`MODE` is the only variable that changes *what gets written*. `CLOUD_CREATES_ROWS` and
+`LEGACY_WRITER_ACTIVE` change it by deriving it, and an `MODE` that contradicts them is refused.
+`CLOUD_OWNS_GENRES` and `CLOUD_OWNS_SCHEDULE` widen what a mode may write on an existing row without
+changing which mode it is. The rest change how fast, how often, and how loudly it refuses.
+
+## What is structurally guaranteed, and what is not
+
+Guaranteed by the code:
+
+- **≤ 24 req/min to AniList, worst case.** Requests are serialized through one promise
+  chain and spacing is measured start-to-start inside it, so no parallel path can shorten
+  it. `ANILIST_RATE_CEILING_RPM` clamps the floor: an `ANILIST_MIN_INTERVAL_MS` of 100 is
+  refused and clamped to 2500ms with a warning, rather than silently giving 600/min.
+- **No retry storm on a 403.** Three consecutive 403s open the circuit; a second opening
+  aborts the run with state saved. A `blocked` 403 skips straight to the breaker instead
+  of burning attempts.
+- **No overlapping cloud writers.** GitHub Actions `concurrency` group plus the D1 lease,
+  and the lease TTL means a SIGKILLed run cannot hold the lock forever.
+- **No overlapping local writers.** Column ownership, not locking: `updateSet(mode)` and the
+  local task's write set are disjoint in Phase 1-2 (pinned in `rate.test.mjs`), row creation is
+  structurally impossible in `mirror`, and Phase 3 refuses to start while the task's heartbeat is
+  young. `verify.mjs` checks the same claim against the data, via the two stamps. The one exception
+  is `CLOUD_OWNS_SCHEDULE=1`, and there the disjointness moves from columns to *rows*: the fill
+  reaches `sched_*` only inside `SCHED_FILL_GUARD`, which is part of the SQL statement, so a row the
+  local task has ever stamped, or that holds any part of a slot, is not writable by it — and it can
+  never clear a value, which is the direction that actually loses data.
+- **No phase where nobody owns a column.** `LEGACY_WRITER_ACTIVE=0` with `CLOUD_CREATES_ROWS=0` is
+  refused at startup: that combination means the local task is stopped while the mode leaves
+  `sched_*` to it, so the schedule shelf would silently stop moving and every other check would keep
+  passing. The three real answers are in the error (go to `takeover`, put the task back, or turn on
+  the fill), and `verify.mjs` reports the same state from data as `someone still owns the schedule
+  shelf` for the case a config read cannot see — the task enabled, and not running.
+- **No lost or duplicated work.** The cursor advances only after a slice commits, and every
+  write is an upsert keyed by id, so replaying a slice is harmless.
+- **Every tunable is an env var** with a documented default.
+
+Not guaranteed, and you should not pretend otherwise:
+
+- **That AniList never 403s you.** On a shared IP another tenant can warm the limit for
+  you. The breaker and the persisted interval turn that into a slow run, not a ban.
+- **That the lease is atomic.** The take-if-expired statement is one CAS, but two writers
+  reaching it simultaneously can both win. The CI concurrency group is what closes that
+  gap — run one scheduled job per endpoint and do not disable it.
+- **Daily budget precision.** The stored total is re-read every 25 spends, so a concurrent
+  runner can make us overshoot by up to that check interval before noticing.
+- **GitHub Actions cron punctuality.** Scheduled workflows are best-effort and can lag
+  minutes during peak load; jittered start plus the cursor make that harmless.
+- **That a manual rebuild and a cloud run agree on one column.** `source_ids` is merged in
+  SQLite (`json_patch`), so a key the catalogue tools added between our read and our write
+  survives. The plain metadata columns are not merged: if you run `tools/sync-catalogue.mjs` by
+  hand while a cloud run is in flight, whichever commits last decides `title`/`art`/`rating` for
+  that row — and the eleven NOT NULL columns are additionally answered from the row this run read
+  (see the clearability table), so a value the local tools changed mid-slice is written back as we
+  saw it. Nothing stops you; the two use different lease names. Do it deliberately, not
+  simultaneously.
+- **That a cloud-created row is curated.** It gets AniList's genres, AniList's artwork and a
+  palette accent chosen by id, which is what a locally-created row looks like before an operator
+  touches it. `rank`, `alt_seasons` and the AniSkip keys are never written here in any mode, so
+  those stay whoever-else-made-them and NULL until you set them.
+- **That the overlap check sees every local write.** `no local write after the takeover marker`
+  reads `catalogue_synced_at`, which `tools/hourly-refresh.mjs` and `tools/sync-catalogue.mjs` set
+  on every row they write. A task running from an old checkout — one from before the stamp existed
+  — would collide on `sched_*` and leave nothing behind for the audit to find. After Phase 3 the
+  proof is therefore two things: the query, and the task being off. `schtasks /Query /TN AniHubHourlyRefresh`
+  says which one you have. And the two clocks differ in resolution: the local stamp is
+  `strftime('%s') * 1000`, so it is whole seconds, while the marker is milliseconds. A local write
+  in the same second the marker was set is not caught by `>`. Anything from the next second on is.
+
+## If 403s still happen
+
+Raise the interval first — it is the only lever AniList actually measures.
+
+| symptom | change |
+| --- | --- |
+| occasional 429, `by403` empty | `ANILIST_MIN_INTERVAL_MS` 2500 → 4000 |
+| `by403.challenge` | a Cloudflare bot rule, not a rate limit. Lower `ANILIST_DAILY_BUDGET`, slow the cadence; a faster interval will not help |
+| `by403.disabled` | AniList's own outage. Do nothing; the breaker is protecting the IP |
+| `by403.blocked`, `exit_reason: breaker_aborted` | this egress IP is blocked. Nothing here fixes it: stop the schedule and contact AniList. Do **not** point `ANILIST_RELAY_PREFIX` at it |
+| `bisects` > 0 in a summary line | the aliased batch is over AniList's *complexity* budget, so the client is halving it mid-run. Nothing is lost, but each split costs extra requests: set `ANILIST_BATCH_SIZE` **down** (25 → 10), which is the opposite direction from the row below |
+| runs never finish the backlog | `ANILIST_BATCH_SIZE` 25 → 40 (fewer requests per title), not a shorter interval |
+| catalogue grows faster than one pass/day | `ANILIST_REWALK_AFTER_MS` down, or `MAX_ITEMS_PER_RUN` up — both cost requests, so check `budget_remaining` first |
+
+The relay (`ANILIST_RELAY_PREFIX`) exists for a network path that cannot POST. The
+auto-fallback in R12 deliberately refuses to use it when the 403 says *manually blocked* —
+that is AniList declining your IP on purpose, and reaching around it through a third-party
+proxy is an API-terms problem for you and an account-ban problem for a free host. `pnpm
+test`/`node --test` pins that behaviour (`does not fall back to a relay...`).
+
+## Reading a run
+
+One JSON line per run, also stored in `sync_runs`:
+
+```json
+{"run_id":"…","mode":"delta","items_processed":100,"created":2,"requests_made":5,"s403":0,"s429":0,
+ "breaker_opens":0,"bisects":0,"backoffs":1,"unmapped":2,"skipped":1,"skipped_ids":["some-title (held by anilist 152128)"],
+ "genre_labels_unmapped":[["Psychological",34]],
+ "effective_interval_ms":2500,"budget_remaining":3991,
+ "cursor":{"after":"yuruyuri","pendingAfter":98596,"done":false,"doneAt":0},
+ "duration_ms":10240,"exit_reason":"item_cap"}
+```
+
+`exit_reason` — `item_cap` (read its share, resume next run), `catalogue_end`/`cursor_end`
+(a full pass finished), `budget_exhausted` (daily ceiling), `lease_held` (another cloud
+writer owns the lease — expected and harmless), `breaker_aborted` (403s; look at `by403`),
+`legacy_still_running` (takeover with the local task still ticking: disable the task, pass
+`--force-takeover`, or go back to `mirror`), `lease_lost` and `fatal` (exit code 1, alert on
+these).
+
+`items_processed` counts catalogue rows *read*, not rows written; `created` is how many of them
+were inserts; `unmapped` is how many carry no `source_ids.anilist`, so they cannot be refreshed
+from here at all; `skipped` is the hydrated media this run decided not to write, with the reason
+per slug. `genre_labels_unmapped` is the AniList labels that have no row in the site's `genre`
+table — a growing list there means the shelves need a new genre row, not a new mapping rule.
+
+## Environment
+
+The full list, with defaults, phases and one-line rollbacks, is the table in *Env, default, phase,
+rollback* above; `.env.example` is the same set shaped for `--env-file`. The three that decide
+whether you get blocked: `ANILIST_MIN_INTERVAL_MS` (2500), `ANILIST_BATCH_SIZE` (25), and
+`ANILIST_DAILY_BUDGET` (4000).
+
+## Relationship to `tools/`
+
+`tools/hourly-refresh.mjs` is the same kind of job written for one machine that can reach
+AniList: it uses wrangler for D1 and keeps its title list in `tools/catalogue-sources.json`.
+This is the version for an environment where nothing is on disk between runs, so the cursor,
+the learned interval and the budget all live in D1 — and, from Phase 2, the *title list* does
+too, as `sync_pending`.
+
+In Phase 1 they are designed to run side by side, and in Phase 2 they are designed to run side by
+side *on one table with two insertion paths*: the local task creates rows from its own curated list,
+and from Phase 2 the cloud creates rows from `sync_pending`. That is why an insert is an
+`INSERT … ON CONFLICT DO UPDATE` and never `INSERT OR REPLACE` — when both writers reach for the
+same slug in the same hour, the row must survive with the union of what each knows, not be replaced
+by whichever wrote last. The local task owns `trend_rank` and the `sched_*` air slots in both phases
+(it refreshes every row in the table, cloud-created ones included), and cloud-sync owns the metadata
+and whatever it created from the queue. What the local task still does that this job does not
+replace is *choosing* titles — `discover-titles.mjs` and `import-backlog.mjs` decide which AniList ids
+to add by walking the trending and popularity lists; the cloud adds the ones it is told about. Until
+that chooser has a cloud equivalent, its decision can be a `sync_pending` insert made by hand, and
+the task can stay enabled for the choosing while this job does the refreshing (see Phase 4).
+`catalogue-sources.json` is the curation list the local tools use; the cloud job never reads
+it, which is why it can be stateless.
+
+### The local task is a second AniList client, and nothing paces it
+
+Everything about rate control in this directory applies to `cloud-sync/anilist.mjs`. The Windows task
+is a separate process, on a separate IP — the residential one — with its own `fetch` to
+`https://graphql.anilist.co` and **no limiter**: `tools/hourly-refresh.mjs:58` and
+`tools/discover-titles.mjs:60` retry on 429/5xx and back off, which is a policy, but they send the
+next request as soon as the last one answered, which is not pacing.
+
+The volume is arithmetic, not a guess. Per run: 1 trending page + one 8-id aliased page per eight
+titles (`hourly-refresh.mjs:106`) + 1 discovery page when discovery is due + 1 backlog page, so
+**2 + ceil(N/8)** AniList requests per hour at N rows carrying an `anilist` id. At the 198 rows in
+`seed.sql` that is 27 requests an hour; at 364, 48. They are issued back-to-back inside one chunked
+loop, so the peak is not "requests per hour" — it is however many fit in a 60-second window, and on a
+fast network that is a number nobody has measured.
+
+That matters for two reasons, and the second is the one that can cost the rollout. The cloud's budget,
+breaker and learned interval do not protect this IP: if AniList throttles the residential address, the
+cloud job will not notice, and **Phase 3's rollback is "re-enable the Windows task"**. An escape hatch
+that has been blocked for a month is not an escape hatch.
+
+So the task now reports its own shape. Every AniList POST from either module is recorded
+(`noteAnilistSend()`), and each run appends `anilist_rate: { requests, peak_per_minute, min_gap_ms }`
+to its summary line and to `sync_meta.hourly_sync`. Run it for a day and read the worst
+`peak_per_minute` — if it is near or above the 24/min the cloud client holds itself to, the local task
+should get the same floor, and that is a change to make deliberately, with the task's own timing, not
+as a side effect of a migration.
+
+### The two writers agree on the air slot because a test makes them
+
+`sched_*` is written from `Media.nextAiringEpisode.airingAt` by three files that import nothing from
+each other: `tools/sync-catalogue.mjs:272` (on insert), `tools/hourly-refresh.mjs:117-119` (hourly),
+and `cloud-sync/sync-anilist.mjs` `airSlot()`. All five columns, formatted identically, or the
+schedule shelf shows a title moving when it is only being re-labelled.
+
+Two rules were pinned by `config.test.mjs` after the first draft of `airSlot()` broke both:
+
+- **The quarter boundaries are the site's, not AniList's.** `src/data/model.ts:27` — the filter the
+  page itself opens on — puts Winter at Jan-Mar, and `hourly-refresh.mjs:95` and `sync-catalogue.mjs:272`
+  agree with it. AniList's own convention puts Spring at Mar-May. A first draft copied AniList's, which
+  would have made every March, June, September and December cloud row invisible under the season the
+  page is showing, because `functions/api/schedule.js:9` matches that column with an exact `=`.
+- **Both writers clear the same five columns** when a title stops airing: `airSlot()` returns all-NULL
+  for a missing, zero, negative or non-integer `airingAt`, and the legacy statement nulls exactly those
+  five. If one cleared and the other left a value, the slot would go stale on one side of the handover.
+
+No production row carries a wrong season label from this: the cloud job has never run. If it had, the
+fix would be a re-run of `mirror`, which recomputes the slot from the same field.
+
+`cloud-sync/schema.sql` also documents itself as safe to apply to the live database as-is: the
+catalogue tables it touches are only `ALTER`ed, additively, and the three state tables it creates
+are used by nothing but this job.

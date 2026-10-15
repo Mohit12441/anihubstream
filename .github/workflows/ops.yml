@@ -1,0 +1,89 @@
+name: cloud-ops
+
+# Two operator commands against the live database, both dispatched by hand and neither needing
+# a local machine, wrangler or an npm install — the same property the sync jobs have.
+#
+#   Actions → cloud-ops → Run workflow → apply-schema   (idempotent; safe to re-run)
+#   Actions → cloud-ops → Run workflow → report         (read-only audit, exit 1 on a broken invariant)
+#
+# Nothing here runs on a schedule on purpose: a schema change and an audit are decisions, not
+# chores. `report` is what you read after each phase of the migration in cloud-sync/README.md.
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'What to run'
+        required: true
+        type: choice
+        options:
+          - apply-schema
+          - report
+      schema_file:
+        description: 'For apply-schema: the file to apply'
+        required: false
+        type: string
+        default: 'cloud-sync/schema.sql'
+
+permissions: {}
+
+concurrency:
+  group: cloud-ops
+  cancel-in-progress: false
+
+jobs:
+  apply-schema:
+    if: github.event.inputs.action == 'apply-schema'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # One statement per D1 call, 'duplicate column name' counted as already-applied — see
+      # cloud-sync/apply-schema.mjs. Exit 1 only on a statement that failed for another reason.
+      # The file name goes through `env`, never straight into the shell line: this job holds the
+      # D1 token, and a dispatch input is operator-typed text, so it must not be re-read by bash.
+      - name: apply ${{ github.event.inputs.schema_file }}
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          SCHEMA_FILE: ${{ github.event.inputs.schema_file }}
+        run: node cloud-sync/apply-schema.mjs "$SCHEMA_FILE"
+
+  report:
+    if: github.event.inputs.action == 'report'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # SELECT-only. Prints the ownership counts, the zero-overlap query, the vocabulary checks
+      # and the rate-control state, and fails on a hard invariant.
+      - name: audit the catalogue and the sync state
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          # The audit reads exactly the switches the sync reads, for one reason: a check is only
+          # meaningful against the phase the writer believes it is in. "Phase 1 must not have
+          # created a row" is a failure in mirror and normal in delta, and the shelf-ownership WARN
+          # compares the heartbeat against the same LEGACY_QUIET_MS the takeover interlock used. If
+          # a switch is added to anilist-sync.yml it has to appear here too, or report will audit a
+          # different configuration than the one that wrote the data.
+          MODE: ${{ vars.MODE }}
+          LEGACY_WRITER_ACTIVE: ${{ vars.LEGACY_WRITER_ACTIVE }}
+          CLOUD_CREATES_ROWS: ${{ vars.CLOUD_CREATES_ROWS }}
+          CLOUD_OWNS_GENRES: ${{ vars.CLOUD_OWNS_GENRES }}
+          CLOUD_OWNS_SCHEDULE: ${{ vars.CLOUD_OWNS_SCHEDULE }}
+          LEGACY_QUIET_MS: ${{ vars.LEGACY_QUIET_MS }}
+          QUIET: ${{ vars.QUIET }}
+        run: node cloud-sync/verify.mjs

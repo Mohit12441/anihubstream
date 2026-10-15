@@ -1,0 +1,48 @@
+name: tests
+
+# The sync jobs never run tests — they run the sync. Until this file existed, the 207 checks in
+# `api/`, `tools/` and `cloud-sync/` only ever executed on the one Windows machine that had them,
+# which means `npm test` was a habit rather than a gate, and the two divergences found this round
+# (a phase switch that could only be set wrong, and a schema file that could not receive its own
+# seed data) are exactly the kind a gate catches.
+#
+# Nothing here needs a secret: every test is hermetic. `rate.test.mjs` and `migration.test.mjs`
+# stub fetch and write to a throwaway SQLite file in the temp directory, so no job in this workflow
+# can reach AniList, Kitsu or the production D1 — and no `CF_*` credential is exposed to a run that
+# could. That is the property worth keeping: if a future test wants the network or the database, it
+# belongs in a dispatched job with a purpose, not in the gate that runs on every push.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      # The sync path deliberately has no dependencies; this is the test and build path, where the
+      # devDependencies (typescript, vite) are what `typecheck` and the src/ imports need.
+      - name: install
+        run: npm ci
+
+      - run: npm test
+
+      # `tsc --noEmit` is the only check that the site's own types still describe the columns the
+      # API selects, which is the half of the contract sched_season and the genre ids belong to.
+      - run: npm run typecheck

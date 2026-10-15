@@ -4,3 +4,11 @@ dist-pages/
 .wrangler/
 logs/
 *.tsbuildinfo
+dist-preview/
+# Local credentials. The pre-flight run in cloud-sync/README.md tells you to create cloud-sync/.env
+# holding CF_API_TOKEN, which is a token that can write every row in the catalogue — so this rule is
+# the difference between a secret on one machine and a secret in the repository history. `.env.example`
+# is the committed template and must stay un-ignored, which is why these are file names, not `.env*`.
+.env
+.env.local
+.env.*.local
