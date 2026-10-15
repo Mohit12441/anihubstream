@@ -37,6 +37,13 @@ export const SEASON_WORDS = ['Winter', 'Spring', 'Summer', 'Fall'];
 /** The exit_reasons that mean a human should look, as opposed to a run that stopped on purpose. */
 const ALARM = ['fatal', 'lease_lost', 'legacy_still_running', 'breaker_aborted', 'schema_mismatch', 'schema_unwritable', 'schema_probe_failed'];
 
+/* budget_exhausted is deliberately not in ALARM: it exits 0 and one stop is a normal end to a busy
+   day. A streak is the failure — the counter resets at UTC midnight, so N consecutive stops mean
+   each fresh day is spent before the schedule does any work, which is what a budget scoped below
+   the cadence looks like (an ANILIST_DAILY_BUDGET Variable set for one scoped run and never
+   deleted). The audit reads the streak in the run history; this constant is its N. */
+const BUDGET_STREAK_ALARM = 3;
+
 /** Pull the fields an alert is written against out of a run's stored summary JSON. */
 function runLine(summary) {
   try {
@@ -279,6 +286,22 @@ export async function audit(overrides = {}) {
   } else {
     add('the cloud has run at least once', false, 'sync_runs has no anilist rows',
       { hard: false, why: 'the first guarded run has not happened yet' });
+  }
+
+  /* The budget cannot alarm on its own — budget_exhausted exits 0 by design — so this streak is
+     the only place a starved schedule is ever named. Read backwards from the most recent run, so
+     it reports the state an operator would find scrolling the Actions tab, not a historical worst
+     case; a fresh UTC day breaks it on its own, which is exactly what makes N of them mean the
+     budget is being spent faster than the schedule can use it. */
+  let budgetStreak = 0;
+  for (const r of report.state.recent_runs) {
+    if (r.exit_reason !== 'budget_exhausted') break;
+    budgetStreak++;
+  }
+  if (budgetStreak > 0) {
+    add('the daily budget is not starving the schedule', budgetStreak < BUDGET_STREAK_ALARM,
+      `${budgetStreak} consecutive runs stopped at budget_exhausted${budgetStreak === report.state.recent_runs.length ? ' (every run in the window)' : ''}`,
+      { why: `raise ANILIST_DAILY_BUDGET, or delete the Variable and take the default 4000 — each stop exits 0, so nothing before this streak of ${BUDGET_STREAK_ALARM} says the schedule has been quiet` });
   }
 
   /* The queue is how new titles reach the cloud now that the importer does not have to run on the

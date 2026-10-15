@@ -713,6 +713,49 @@ describe('migration: the four phases against real SQLite', () => {
     for (const id of ['t0', 't1', 't2', 't3', 't4', 't5']) assert.ok(world.row(id).cloud_synced_at > 0, `${id} was skipped`);
   });
 
+  it('a budget stop is silent once, and a streak of them is the alarm', async () => {
+    for (let i = 0; i < 6; i++) {
+      world.stored({ id: `t${i}`, title: `T${i}`, source_ids: JSON.stringify({ anilist: 1000 + i }) });
+      /* The shelf check reads any stamped row with no genre rows, and the resumed run below
+         stamps all six — so they need genres for the healed audit to be clean for the right
+         reason rather than the wrong one. */
+      world.db.prepare('INSERT INTO anime_genre (anime_id, genre_id) VALUES (?,?)').run(`t${i}`, 'action');
+      world.fixture(1000 + i, { id: 1000 + i, title: { english: `T${i}`, romaji: null, native: null } });
+    }
+    const opts = { mode: 'mirror', createsRows: false, claimsSchedule: false, fillSchedule: false };
+    /* One request of budget and batches of one, as in the test above: every run after the first
+       stops at budget_exhausted by its second request. Two of these are what the last ticks of a
+       busy day look like — the audit must not cry wolf on them. */
+    const scoped = { ...MIRROR, ANILIST_DAILY_BUDGET: '1', ANILIST_BATCH_SIZE: '1' };
+    for (let i = 0; i < 2; i++) {
+      const stop = await runPass(world, scoped);
+      assert.equal(stop.summary.exit_reason, 'budget_exhausted');
+      assert.equal(stop.exitCode, 0, 'a budget stop is a recorded outcome, not a crash');
+    }
+    const quiet = await withShim(world, MIRROR, () => audit(opts));
+    assert.equal(quiet.state.recent_runs[0].exit_reason, 'budget_exhausted');
+    assert.equal(quiet.checks.find((c) => c.id === 'the last run ended cleanly').ok, true, 'budget_exhausted must stay out of ALARM — one stop is a day ending');
+    assert.doesNotMatch(quiet.failures.join('\n'), /starving the schedule/, 'two stops is a normal end, not an alarm');
+    assert.equal(quiet.ok, true);
+
+    /* The third consecutive stop is the pattern the audit has to fail on: exit 0 means nothing
+       else — CI, the Actions log, the run record — will ever say the schedule has gone quiet. */
+    const third = await runPass(world, scoped);
+    assert.equal(third.summary.exit_reason, 'budget_exhausted');
+    const starved = await withShim(world, MIRROR, () => audit(opts));
+    assert.equal(starved.ok, false, 'three consecutive budget stops passed the audit');
+    assert.match(starved.failures.join('\n'), /the daily budget is not starving the schedule/);
+
+    /* And what heals it: the counter is per UTC day, so a fresh day is a fresh budget. The next
+       run succeeds and the streak the audit reads is gone, even though the stopped runs are still
+       inside its window. */
+    world.db.prepare('UPDATE api_usage SET requests = 0').run();
+    const resumed = await runPass(world, MIRROR);
+    assert.equal(resumed.summary.exit_reason, 'catalogue_end');
+    const healed = await withShim(world, MIRROR, () => audit(opts));
+    assert.ok(healed.ok, `a day that starts clean is not a streak:\n${healed.failures.join('\n')}`);
+  });
+
   it('the lease keeps a second writer out, and a run that loses it stops', async () => {
     world.stored();
     world.fixture(98596);

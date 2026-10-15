@@ -255,7 +255,15 @@ AniList returns an explicit JSON `null` for a field it was asked about but does 
 
 Phase 1 is not read-only: `mirror` updates real rows. So before the first scheduled tick, do these
 five things in order. They take ten minutes and they are the difference between a rollout you can
-reason about and one you are guessing at.
+reason about and one you are guessing at. **If the workflow is already pushed, silence the
+schedule first** — `gh workflow disable anilist-sync.yml -R <owner>/<repo>` and the same for
+`kitsu-sync.yml` (one workflow per invocation), then `gh workflow enable` it again when these five
+steps are green; the `cloud-ops` jobs are a separate workflow and stay dispatchable throughout. A
+tick between the push and the scoped run also eats step 3's evidence: ticks walk the same shared
+cursor (`cloud_anilist_cursor:mirror`), so a tick can finish the walk first and the scoped run then
+exits `cursor_end` with `requests_made: 0` — a green run that proves nothing — instead of the
+`item_cap` signature this pre-flight reads. With the schedule silenced, the scoped run is the
+first walker.
 
 1. **Bookmark the database.** This run mutates rows and D1 Time Travel is the only undo:
 
@@ -295,8 +303,10 @@ reason about and one you are guessing at.
    Keep those two values on the command line. Pinned as repo Variables — the reflex if you scope a
    *dispatched* run instead — they scope every run for the rest of the UTC day, because `api_usage`
    is one shared counter across runners: the ticks and the soak then stop at `budget_exhausted`,
-   which is a recorded outcome and exits 0, so nothing alerts — the day simply goes quiet. If you
-   must scope by Variable, delete it the moment the scoped run's summary is read.
+   they exit 0, and nothing tells you at the time. The audit is the witness — `report` fails on
+   three consecutive stops (`budget_exhausted` is deliberately not alarming on its own; one stop is
+   a day ending) — but three stops is 90 minutes of quiet. If you must scope by Variable, delete it
+   the moment the scoped run's summary is read.
 
 4. **Snapshot the rows, run step 3, snapshot the same rows again, and compare them structurally.** A
    textual `diff` of two JSON dumps is not that check: `source_ids` is a JSON document stored as text,
