@@ -53,13 +53,13 @@ jobs:
           # unparseable switch or an orphaned phase fails both jobs identically instead of only one
           # of them, which is the version of "it worked in Actions" nobody can read.
           MODE: ${{ vars.MODE }}
-          LEGACY_WRITER_ACTIVE: ${{ vars.LEGACY_WRITER_ACTIVE }}
-          CLOUD_CREATES_ROWS: ${{ vars.CLOUD_CREATES_ROWS }}
+          LEGACY_WRITER_ACTIVE: ${{ vars.LEGACY_WRITER_ACTIVE || '0' }}
+          CLOUD_CREATES_ROWS: ${{ vars.CLOUD_CREATES_ROWS || '1' }}
           CLOUD_OWNS_GENRES: ${{ vars.CLOUD_OWNS_GENRES }}
           CLOUD_OWNS_SCHEDULE: ${{ vars.CLOUD_OWNS_SCHEDULE }}
           LEGACY_QUIET_MS: ${{ vars.LEGACY_QUIET_MS }}
           KITSU_MIN_INTERVAL_MS: ${{ vars.KITSU_MIN_INTERVAL_MS }}
-          KITSU_PAGES_PER_RUN: ${{ vars.KITSU_PAGES_PER_RUN }}
+          KITSU_PAGES_PER_RUN: ${{ vars.KITSU_PAGES_PER_RUN || '6' }}
           KITSU_DAILY_BUDGET: ${{ vars.KITSU_DAILY_BUDGET }}
           MAX_ITEMS_PER_RUN: ${{ vars.MAX_ITEMS_PER_RUN }}
         run: node cloud-sync/sync-kitsu.mjs
