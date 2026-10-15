@@ -34,7 +34,16 @@ function account() {
   return { accountId: CF_ACCOUNT_ID, databaseId: CF_DATABASE_ID, token: CF_API_TOKEN };
 }
 
-/** Runs one statement with bound params. Returns { results, meta }. */
+/**
+ * Runs one statement with bound params. Returns { results, meta }.
+ *
+ * `body.result` arrives in two shapes and both have to unwrap to the same pair. The live REST
+ * envelope wraps per-statement results in an array — one entry per statement, each carrying its
+ * own `results`/`meta` — while the object-shaped form puts those fields on `result` directly.
+ * Reading `.results` off the array yields undefined, and an empty read is what the schema gate
+ * reports as every column missing, so a shape this parser does not know reads as a mismatch
+ * verdict rather than a parse error — the unwrap belongs here, once, not in each reader.
+ */
 export async function d1Query(sql, params = []) {
   const { accountId, databaseId, token } = account();
   const res = await fetch(`${BASE}/accounts/${accountId}/d1/database/${databaseId}/query`, {
@@ -53,7 +62,7 @@ export async function d1Query(sql, params = []) {
   if (!res.ok || body.success === false) {
     throw new Error(`d1: HTTP ${res.status} ${JSON.stringify(body.errors ?? body.message ?? text).slice(0, 400)}`);
   }
-  const result = body.result ?? {};
+  const result = (Array.isArray(body.result) ? body.result[0] : body.result) ?? {};
   return { results: result.results ?? [], meta: result.meta ?? result.metadata ?? {} };
 }
 

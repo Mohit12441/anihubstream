@@ -55,15 +55,19 @@ jobs:
       # read from the npm script itself because a check that names its own directories can drift from
       # what `npm test` globs, which is the bug it is meant to catch.
       #
-      # TEST_FLOOR is the count this checkout produces: 218, being the 217 at the previous commit plus
-      # the audit's budget-streak check — `report` fails on three consecutive `budget_exhausted` runs,
-      # because a starved schedule exits 0 and nothing else would ever name it. The 217 was the 209
-      # before it plus the eight the table-gate round added — `requiredTablesFor` both ways, the DDL
-      # fallback (`sqlite_master` when `pragma_table_info` is refused) and its parser proved
-      # column-for-column against the live PRAGMA, and the probe-failure exit that keeps an unreadable
-      # schema from reading as a mismatch. That round raised this comment and missed the value below,
-      # which still said 209 until this commit — the pair is caught up, measured in a throwaway
-      # worktree at HEAD plus this patch: 218, green.
+      # TEST_FLOOR is the count this checkout produces: 228, being the 218 at the previous commit plus the
+      # ten the response-envelope round added — the D1 REST parser proved against both envelope shapes with
+      # a stubbed fetch (the live array-wrapped `result` and the object form), its empty/malformed cases
+      # that must read as zero rows and a named mismatch rather than a healthy schema, and the two probe
+      # readers driven through the live shape. The 218 was the 217 at the previous commit plus the
+      # audit's budget-streak check — `report` fails on three consecutive `budget_exhausted` runs, because
+      # a starved schedule exits 0 and nothing else would ever name it. The 217 was the 209 before it plus
+      # the eight the table-gate round added — `requiredTablesFor` both ways, the DDL fallback
+      # (`sqlite_master` when `pragma_table_info` is refused) and its parser proved column-for-column
+      # against the live PRAGMA, and the probe-failure exit that keeps an unreadable schema from reading
+      # as a mismatch. That round raised this comment and missed the value below, which still said 209
+      # until the next commit — the pair is caught up. Every layer above was measured in a throwaway
+      # worktree at HEAD plus its patch, this one included: 228, green.
       # The floor can only protect what is committed: the working tree holds tests CI never sees — an
       # untracked `tools/serve-static.test.mjs` (13 checks) and uncommitted edits to tracked suites —
       # so **raise the floor in the same commit that lands them**, or their checks sit outside the
@@ -75,7 +79,7 @@ jobs:
       # versions.
       - name: tests
         env:
-          TEST_FLOOR: 218
+          TEST_FLOOR: 228
         run: |
           set -euo pipefail
           total=0
