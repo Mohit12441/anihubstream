@@ -652,14 +652,34 @@ async function main({ forceTakeover = process.argv.includes('--force-takeover') 
      written: insertRows() names anime's columns, so a column production does not have is not a
      warning — the first chunked upsert dies on `no such column: …` mid-batch, having already taken
      the lease, with an error that says nothing about which assumption broke. Extras are the normal
-     state of a shared table (the local task's catalogue_synced_at is one) and only counted.
-     This is what the runbook's PRAGMA dump describes; running here means an operator does not have
-     to remember to run it first. */
-  const columns = await assertLiveColumns({ columns: ANIME_COLUMNS });
+     state of a shared table (the local task's catalogue_synced_at is one) and are only counted —
+     except the one shape of extra that is not normal: NOT NULL with no default, which fails every
+     INSERT that omits it. This is what the runbook's PRAGMA dump describes; running here means an
+     operator does not have to remember to run it first. */
+  let columns;
+  try {
+    columns = await assertLiveColumns({ columns: ANIME_COLUMNS });
+  } catch (err) {
+    /* The probe itself failed — the endpoint refused the statement, the network dropped, the
+       credentials are wrong. Named separately from schema_mismatch on purpose: a run that dies at
+       the gate cannot tell the operator which side is broken, and "a column is missing" would send
+       them hunting a column that was never missing. Exit 2 so CI can tell the two apart. */
+    summary.exit_reason = 'schema_probe_failed';
+    summary.error = `could not read anime's column set (${err.message}) — this says nothing about the schema; verify.mjs runs the same probe and reports it on its own`;
+    summary.duration_ms = Date.now() - startedAt;
+    await recordRun({ runId: RUN_ID, endpoint: ENDPOINT, startedAt, durationMs: summary.duration_ms, exitReason: 'schema_probe_failed', summary })
+      .catch((recErr) => console.warn(`WARN run record failed: ${recErr.message}`));
+    console.log(JSON.stringify(summary));
+    process.exitCode = 2;
+    return summary;
+  }
   summary.extra_columns = columns.extra.length;
-  if (columns.missing.length) {
+  if (columns.missing.length || columns.unwritable.length) {
+    const reasons = [];
+    if (columns.missing.length) reasons.push(`lacks ${columns.missing.join(', ')} — apply cloud-sync/schema.sql if that is one of its two stamp columns, otherwise ANIME_COLUMNS and the live table disagree and one of them has to change`);
+    if (columns.unwritable.length) reasons.push(`has ${columns.unwritable.join(', ')} NOT NULL without a default, so every insert that omits it fails on the constraint`);
     summary.exit_reason = 'schema_mismatch';
-    summary.error = `production anime lacks ${columns.missing.join(', ')} — nothing was written; apply cloud-sync/schema.sql if that is one of its two stamp columns, otherwise ANIME_COLUMNS and the live table disagree and one of them has to change`;
+    summary.error = `production anime: ${reasons.join('; and it ')} — nothing was written`;
     summary.duration_ms = Date.now() - startedAt;
     /* Recorded, unlike a held lease: sync_runs is not `anime`, so the write is unaffected by the
        mismatch, and an operator who reads verify.mjs rather than the Actions log has to see that the

@@ -167,12 +167,28 @@ const summary = {
 async function main() {
   /* The same gate the AniList run applies, for the same reason: this job names every ANIME_COLUMNS
      column in its SELECT and in its INSERT, so a column production lacks fails the whole page
-     rather than one row — and it fails after the lease is held. */
-  const columns = await assertLiveColumns({ columns: ANIME_COLUMNS });
+     rather than one row — and it fails after the lease is held. Same split, too: a failed probe and
+     a disagreeing schema are different afternoons, so they get different exit reasons and codes. */
+  let columns;
+  try {
+    columns = await assertLiveColumns({ columns: ANIME_COLUMNS });
+  } catch (err) {
+    summary.exit_reason = 'schema_probe_failed';
+    summary.error = `could not read anime's column set (${err.message}) — this says nothing about the schema; verify.mjs runs the same probe and reports it on its own`;
+    summary.duration_ms = Date.now() - startedAt;
+    await recordRun({ runId: RUN_ID, endpoint: ENDPOINT, startedAt, durationMs: summary.duration_ms, exitReason: 'schema_probe_failed', summary })
+      .catch((recErr) => console.warn(`WARN run record failed: ${recErr.message}`));
+    console.log(JSON.stringify(summary));
+    process.exitCode = 2;
+    return;
+  }
   summary.extra_columns = columns.extra.length;
-  if (columns.missing.length) {
+  if (columns.missing.length || columns.unwritable.length) {
+    const reasons = [];
+    if (columns.missing.length) reasons.push(`lacks ${columns.missing.join(', ')} — apply cloud-sync/schema.sql if that is one of its two stamp columns, otherwise ANIME_COLUMNS and the live table disagree and one of them has to change`);
+    if (columns.unwritable.length) reasons.push(`has ${columns.unwritable.join(', ')} NOT NULL without a default, so every insert that omits it fails on the constraint`);
     summary.exit_reason = 'schema_mismatch';
-    summary.error = `production anime lacks ${columns.missing.join(', ')} — nothing was written; apply cloud-sync/schema.sql if that is one of its two stamp columns, otherwise ANIME_COLUMNS and the live table disagree and one of them has to change`;
+    summary.error = `production anime: ${reasons.join('; and it ')} — nothing was written`;
     summary.duration_ms = Date.now() - startedAt;
     /* Recorded, best effort, for the same reason the AniList side records it: the gate is worth
        nothing to an operator if the only evidence is a Actions run nobody opened. */

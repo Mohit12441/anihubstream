@@ -79,6 +79,9 @@ class World {
     this.sqlCalls = [];
     /** hook(sql, params): mutate the database between a read and a write, to test the race. */
     this.onSql = null;
+    /** predicate(sql): answer the statement with a failure, the way a REST endpoint that refuses a
+        statement shape would. Used to test that a failed probe is not reported as a mismatch. */
+    this.failSql = null;
   }
 
   install() {
@@ -98,6 +101,9 @@ class World {
     const { sql, params = [] } = JSON.parse(init.body);
     this.sqlCalls.push({ sql, params });
     if (this.onSql) this.onSql(sql, params);
+    if (this.failSql && this.failSql(sql)) {
+      return respond({ success: false, errors: [{ code: 7500, message: 'simulated: the endpoint refused this statement' }] }, false);
+    }
     /* Real SQLite — and D1, which is SQLite — resolves `?N` by NUMBER: every occurrence of `?1` in
        `WHERE ?1 > 0 AND catalogue_synced_at > ?1` takes the same value, from a params array that
        holds it once. node:sqlite hands values out by POSITION, so the numbered placeholders are
@@ -109,7 +115,10 @@ class World {
     const text = sql.replace(/\?(\d+)/g, (_m, n) => { numbered = true; order.push(params[Number(n) - 1] ?? null); return '?'; });
     const flat = numbered ? order : params.map((p) => (p === undefined ? null : p));
     try {
-      if (/^\s*(select|with|values|pragma)\b/i.test(text)) {
+      /* `pragma` is deliberately not a read here: the gate sends the table-valued SELECT, and the
+         shim's job is to answer what the sync actually sends — a bare PRAGMA working in the shim
+         would prove nothing about the REST endpoint it stands in for. */
+      if (/^\s*(select|with|values)\b/i.test(text)) {
         return respond({ success: true, result: { results: this.db.prepare(text).all(...flat), meta: { changes: 0 } } });
       }
       const out = this.db.prepare(text).run(...flat);
@@ -807,6 +816,43 @@ describe('migration: the four phases against real SQLite', () => {
     assert.ok(world.row().cloud_synced_at > 0);
   });
 
+  /* The other way the gate can fail, and the one that must not impersonate a mismatch: the probe
+     itself. The write path has never run against production, and if the REST endpoint refuses even
+     the table-valued SELECT the gate sends, every run would otherwise die at the gate with
+     `schema_mismatch` — sending an operator hunting a column that was never missing. */
+  it('a probe that cannot read is named as a probe failure, not as a schema mismatch', async () => {
+    world.stored();
+    world.fixture(98596);
+    world.failSql = (sql) => /pragma_table_info/.test(sql);
+
+    const { summary, exitCode } = await runPass(world, MIRROR);
+    assert.equal(summary.exit_reason, 'schema_probe_failed');
+    assert.equal(exitCode, 2, 'a different afternoon from a mismatch (1): the fix is the read, not a column');
+    assert.match(summary.error, /could not read anime's column set/);
+    assert.match(summary.error, /simulated/, 'the underlying error is carried, not paraphrased away');
+    assert.equal(world.row().cloud_synced_at, null, 'nothing was written');
+    assert.equal(world.count('sync_lock'), 0, 'and no lease was taken');
+    const recorded = world.db.prepare('SELECT exit_reason FROM sync_runs ORDER BY started_at DESC LIMIT 1').get();
+    assert.equal(recorded.exit_reason, 'schema_probe_failed', 'a schedule gated by an unreadable probe must show up in the audit');
+
+    /* The audit asks the same question and fails it as its own check — and must not paraphrase an
+       unreadable probe as the column contract: no column was ever read, so nothing is claimed. */
+    const auditReport = await withShim(world, MIRROR, () => audit({ mode: 'mirror', createsRows: false, claimsSchedule: false }));
+    assert.equal(auditReport.ok, false);
+    const lines = auditReport.failures.join('\n');
+    assert.match(lines, /the live column set is readable/);
+    assert.doesNotMatch(lines, /anime has every column the sync writes by name/, 'an unread probe is not a mismatch');
+    assert.match(lines, /the last run ended cleanly/, 'schema_probe_failed is an alarm, like schema_mismatch');
+    assert.ok(auditReport.state.columns.error, 'the audit keeps the probe error rather than inventing a diff');
+
+    /* The fix is the read, not the schema: with the endpoint answering again the same run passes the
+       gate and refreshes. */
+    world.failSql = null;
+    const fixed = await runPass(world, MIRROR);
+    assert.equal(fixed.summary.exit_reason, 'catalogue_end');
+    assert.ok(world.row().cloud_synced_at > 0);
+  });
+
   it('extra columns — the local task\u0027s own — are counted and never block a run', async () => {
     /* The other direction, and the one that must NOT be fatal: production's anime has columns this
        writer never names, chief among them catalogue_synced_at. An equality check on the PRAGMA would
@@ -817,11 +863,58 @@ describe('migration: the four phases against real SQLite', () => {
     assert.deepEqual(extras.missing, [], 'the committed schemas must answer the gate the sync applies');
     assert.ok(extras.extra.includes('catalogue_synced_at'), 'the local stamp is an extra column and the gate is not blind to it');
 
+    /* Two more extras: a plain nullable one, and one that is NOT NULL *with* a default — the shape
+       SQLite accepts on ALTER and fills in on every insert that omits it, so it must stay non-fatal.
+       The same column without a default is the next test's subject. */
     world.db.exec('ALTER TABLE anime ADD COLUMN kitsu_slug TEXT');
+    world.db.exec('ALTER TABLE anime ADD COLUMN hidden INTEGER NOT NULL DEFAULT 0');
     const { summary } = await runPass(world, MIRROR);
     assert.equal(summary.exit_reason, 'catalogue_end');
-    assert.equal(summary.extra_columns, extras.extra.length + 1, 'the count the operator sees tracks the database');
+    assert.equal(summary.extra_columns, extras.extra.length + 2, 'the count the operator sees tracks the database');
     assert.ok(world.row().cloud_synced_at > 0, 'a column nobody here owns did not stop the refresh');
+
+    const shape = await withShim(world, MIRROR, () => assertLiveColumns({ columns: ANIME_COLUMNS }));
+    assert.deepEqual(shape.unwritable, [], 'a defaulted NOT NULL extra is a value SQLite fills in, not a stop');
+  });
+
+  /* The one extras shape that IS fatal, and the reason the gate cannot just count extras. SQLite
+     refuses `ADD COLUMN x TEXT NOT NULL` with no default, so this table shape only exists if the
+     table was created with it — which is exactly how production would carry it: some ticket's
+     migration, applied years ago, on a table this job has to write to. */
+  it('an extra that is NOT NULL without a default stops the run, and names the column', async () => {
+    world.stored();
+    /* The second row goes in before the rebuild: stored() writes the schema.sql column set and the
+       rebuilt table would refuse an insert that omits legacy_flag — which is the whole point of the
+       gate, so the fixture may not be the thing that proves it. */
+    world.stored({ id: 'a-second-title', title: 'A Second Title', search_text: 'a second title' });
+    world.fixture(98596);
+    /* Rebuilt from anime's own DDL — what production was created from — plus the one column. */
+    const ddl = world.db.prepare(`SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'anime'`).get().sql;
+    assert.match(ddl, /\)\s*$/, `anime's stored DDL is not in the expected shape: …${ddl.slice(-60)}`);
+    world.db.exec('PRAGMA foreign_keys = OFF');
+    world.db.exec(ddl.replace(/\s*\)\s*$/, ', legacy_flag TEXT NOT NULL)').replace(/CREATE TABLE (IF NOT EXISTS )?anime\b/i, 'CREATE TABLE anime_rebuilt'));
+    const cols = world.db.prepare(`SELECT name FROM pragma_table_info('anime')`).all().map((r) => r.name);
+    world.db.exec(`INSERT INTO anime_rebuilt (${cols.join(', ')}, legacy_flag) SELECT ${cols.join(', ')}, 'kept' FROM anime`);
+    world.db.exec('DROP TABLE anime');
+    world.db.exec('ALTER TABLE anime_rebuilt RENAME TO anime');
+    world.db.exec('PRAGMA foreign_keys = ON');
+    assert.equal(world.row().title, 'A Test Title', 'the rebuild kept the row it had to carry');
+
+    /* The probe answers — the failure is the table's shape, not the read — so this is a mismatch,
+       and the error has to say *why*, because "lacks nothing" would otherwise read as a clean run. */
+    const shape = await withShim(world, MIRROR, () => assertLiveColumns({ columns: ANIME_COLUMNS }));
+    assert.deepEqual(shape.missing, [], 'the rebuild kept every named column');
+    assert.deepEqual(shape.unwritable, ['legacy_flag']);
+
+    const { summary, exitCode } = await runPass(world, MIRROR);
+    assert.equal(summary.exit_reason, 'schema_mismatch');
+    assert.equal(exitCode, 1);
+    assert.match(summary.error, /legacy_flag NOT NULL without a default/, 'the reason must name the column and the shape');
+    assert.equal(world.count('sync_lock'), 0, 'the run stopped before the lease, so nothing was blocked behind it');
+    /* The rows are intact — the gate refused before insertRows() could fail every chunk on the
+       constraint, which is the run this gate exists to make impossible. */
+    assert.equal(world.row('a-second-title').cloud_synced_at, null);
+    assert.equal(world.row().title, 'A Test Title');
   });
 
   it('the audit is clean on a mirrored catalogue, and catches a value outside the API vocabulary', async () => {
@@ -971,8 +1064,26 @@ describe('the live column diff', () => {
   });
 
   it('accepts bare names as well as PRAGMA rows, so the committed dump can be checked too', () => {
-    assert.deepEqual(diffLiveColumns(ANIME_COLUMNS, ANIME_COLUMNS), { missing: [], extra: [] });
+    assert.deepEqual(diffLiveColumns(ANIME_COLUMNS, ANIME_COLUMNS), { missing: [], extra: [], unwritable: [] });
     assert.deepEqual(diffLiveColumns(['id', 'title'], ['id', 'title', 'year']).missing, ['year']);
+  });
+
+  /* The third bucket, and the reason the diff reads `notnull`/`dflt_value` rather than names: an
+     extra that is NOT NULL with no default fails every insert that omits it, so a gate that treats
+     all extras as benign approves a table the sync cannot write to. */
+  it('a NOT NULL extra without a default is the one extras shape that blocks a run', () => {
+    const drift = diffLiveColumns([
+      ...ANIME_COLUMNS.map((name) => ({ name })),
+      { name: 'catalogue_synced_at', notnull: 0, dflt_value: null },
+      { name: 'hidden', notnull: 1, dflt_value: '0' },
+      { name: 'legacy_flag', notnull: 1, dflt_value: null },
+    ], ANIME_COLUMNS);
+    assert.deepEqual(drift.missing, []);
+    assert.deepEqual(drift.extra, ['catalogue_synced_at', 'hidden', 'legacy_flag'], 'all three are extras');
+    assert.deepEqual(drift.unwritable, ['legacy_flag'], 'the default is what separates the last two');
+    /* A bare-name read answers no notnull question at all, so it can neither over- nor under-report
+       this bucket — the columns it names are simply not judged. */
+    assert.deepEqual(diffLiveColumns(['legacy_flag'], ANIME_COLUMNS).unwritable, []);
   });
 
   it('names each column once, so the gate cannot report the same gap twice', () => {

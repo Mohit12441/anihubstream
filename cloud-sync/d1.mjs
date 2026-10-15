@@ -64,8 +64,8 @@ export const d1First = async (sql, params = []) => (await d1All(sql, params))[0]
 export const rowsPerStatement = (columns) => Math.max(1, Math.floor(MAX_PARAMS / columns));
 
 /**
- * The column set a writer names, checked against the set the database actually has. Both
- * directions, because they mean opposite things and only one of them is fatal:
+ * The column set a writer names, checked against the set the database actually has. Three buckets,
+ * because they mean different things and only two of them stop a run:
  *
  *   `missing` — a column in `wanted` that the table does not have. Fatal, and fatal in an
  *      unhelpful way: insertRows() writes ANIME_COLUMNS by name, so the first chunked upsert
@@ -75,22 +75,43 @@ export const rowsPerStatement = (columns) => Math.max(1, Math.floor(MAX_PARAMS /
  *      shared table: production carries the local task's stamp (catalogue_synced_at) and every
  *      other column root schema.sql has never carried. A strict equality check would fail on a
  *      healthy database, so extras are reported and never block a run.
+ *   `unwritable` — the one shape of extra that does block one: NOT NULL with no default. Every
+ *      INSERT that omits it fails on the constraint, for every row in the chunk, while a gate that
+ *      only counted extras would call the schema clean. A default (or a nullable column) is fine,
+ *      because SQLite fills it in.
  *
  * `live` accepts `PRAGMA table_info` rows or bare names, so the committed production dump
- * (cloud-sync/schema.live.sql) can be fed to the same function the sync uses. A read that came
- * back empty is not "no missing columns" but "all of them": PRAGMA on a table that does not
- * exist returns no rows, and a gate that waves that through is not a gate.
+ * (cloud-sync/schema.live.sql) can be fed to the same function the sync uses. Bare names answer
+ * only the first two buckets — there is no notnull in a name — and an empty read is not "no missing
+ * columns" but "all of them": a table that does not exist returns no rows, and a gate that waves
+ * that through is not a gate.
  */
 export function diffLiveColumns(live, wanted) {
-  const have = new Set(live.map((r) => (typeof r === 'string' ? r : r?.name)).filter(Boolean));
-  return { missing: wanted.filter((c) => !have.has(c)), extra: [...have].filter((c) => !wanted.includes(c)) };
+  const rows = live.map((r) => (typeof r === 'string' ? { name: r } : r ?? {})).filter((r) => r.name);
+  const have = new Set(rows.map((r) => r.name));
+  const extras = rows.filter((r) => !wanted.includes(r.name));
+  return {
+    missing: wanted.filter((c) => !have.has(c)),
+    extra: extras.map((r) => r.name),
+    unwritable: extras.filter((r) => Number(r.notnull) === 1 && r.dflt_value === null).map((r) => r.name),
+  };
 }
 
-/** `diffLiveColumns` against the live database. Returns the diff rather than throwing: what a
- *  mismatch costs is the caller's decision, which is the entire point of asking before the lease. */
+/**
+ * `diffLiveColumns` against the live database. Returns the diff rather than throwing on a
+ * disagreement — what a mismatch costs is the caller's decision, which is the entire point of asking
+ * before the lease. A read that cannot happen at all does throw, and callers must treat that as its
+ * own failure: an endpoint that refuses this query shape and a table that lacks a column are two
+ * different afternoons.
+ *
+ * The table-valued form is used deliberately. `PRAGMA table_info(anime)` is a bare pragma statement,
+ * and the REST /query endpoint is stricter about statement shape than a SQLite shell; the
+ * `pragma_table_info()` function is an ordinary SELECT over the same rows and returns `notnull` and
+ * `dflt_value` as columns, which is what the unwritable check needs.
+ */
 export async function assertLiveColumns({ table = 'anime', columns }) {
   if (!/^[a-z_][a-z0-9_]*$/i.test(table)) throw new Error(`d1: bad table name ${table}`);
-  return diffLiveColumns(await d1All(`PRAGMA table_info(${table})`), columns);
+  return diffLiveColumns(await d1All(`SELECT name, type, "notnull", dflt_value FROM pragma_table_info('${table}')`), columns);
 }
 
 /**

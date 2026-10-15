@@ -27,7 +27,7 @@ export const STATUSES = ['Ongoing', 'Finished', 'Upcoming'];
 export const SEASON_WORDS = ['Winter', 'Spring', 'Summer', 'Fall'];
 
 /** The exit_reasons that mean a human should look, as opposed to a run that stopped on purpose. */
-const ALARM = ['fatal', 'lease_lost', 'legacy_still_running', 'breaker_aborted', 'schema_mismatch'];
+const ALARM = ['fatal', 'lease_lost', 'legacy_still_running', 'breaker_aborted', 'schema_mismatch', 'schema_probe_failed'];
 
 /** Pull the fields an alert is written against out of a run's stored summary JSON. */
 function runLine(summary) {
@@ -57,7 +57,12 @@ export async function audit(overrides = {}) {
   const createsRows = overrides.createsRows ?? CREATES_ROWS;
   const claimsSchedule = overrides.claimsSchedule ?? CLAIMS_SCHEDULE;
   const fillSchedule = overrides.fillSchedule ?? FILL_SCHEDULE;
-  const report = { mode, checked_at: new Date().toISOString(), checks: [], state: { columns: { creates_rows: createsRows, claims_schedule: claimsSchedule, fills_empty_schedule: fillSchedule } }, failures: [] };
+  const report = {
+    mode, checked_at: new Date().toISOString(), checks: [], failures: [], ok: true,
+    /* The phase facts every mode-dependent check below keys off, recorded once so the report says
+       which answers it was written under. `state.columns` is the column contract's, set below. */
+    state: { phase: { creates_rows: createsRows, claims_schedule: claimsSchedule, fills_empty_schedule: fillSchedule } },
+  };
   const count = async (sql, ...params) => (await d1First(sql, params))?.n ?? 0;
   const add = (id, ok, detail, { hard = true, why = '' } = {}) => {
     report.checks.push({ id, ok, detail, hard, why });
@@ -66,19 +71,37 @@ export async function audit(overrides = {}) {
       if (hard) report.ok = false;
     }
   };
-  report.ok = true;
 
   /* ------------------------------------------------------------ column contract */
 
   /* The same comparison the sync makes before it takes its lease, so an operator can read the
-     answer without starting a run. Everything below this check selects anime's columns by name:
-     if one of them is missing, those queries throw and the report degenerates into a stack trace,
-     which is why the shape is settled first. */
-  const shape = await assertLiveColumns({ columns: ANIME_COLUMNS });
-  report.state.columns = { wanted: ANIME_COLUMNS.length, missing: shape.missing, extra: shape.extra };
-  add('anime has every column the sync writes by name', shape.missing.length === 0,
-    shape.missing.length ? `missing: ${shape.missing.join(', ')}` : `${ANIME_COLUMNS.length} named columns present (${shape.extra.length} extra, owned by the local tools)`,
-    { why: 'apply cloud-sync/schema.sql, or fix ANIME_COLUMNS in cloud-sync/sync-anilist.mjs — a sync run exits schema_mismatch on this until one of them happens' });
+     answer without starting a run. Two separate questions, because the sync answers them with two
+     different exit reasons: a probe that cannot run at all (the endpoint refused the statement, the
+     credentials are wrong) says nothing about the schema and is reported as its own failure, while a
+     probe that ran and disagreed is the mismatch. Everything below this section selects anime's
+     columns by name, so the shape is settled first: if the probe answered and a column is missing,
+     the report names it before any query after it can throw. */
+  let shape = null;
+  try {
+    shape = await assertLiveColumns({ columns: ANIME_COLUMNS });
+  } catch (err) {
+    report.state.columns = { wanted: ANIME_COLUMNS.length, error: err.message };
+    add('the live column set is readable', false, `the probe failed: ${err.message}`,
+      { why: 'run the runbook\u0027s PRAGMA dump against production — the sync gate asks the same question, so every run exits schema_probe_failed (not schema_mismatch, which would send you hunting a column that is not missing) until this reads' });
+  }
+  if (shape) {
+    report.state.columns = { wanted: ANIME_COLUMNS.length, missing: shape.missing, extra: shape.extra, unwritable: shape.unwritable };
+    add('anime has every column the sync writes by name', shape.missing.length === 0,
+      shape.missing.length ? `missing: ${shape.missing.join(', ')}` : `${ANIME_COLUMNS.length} named columns present (${shape.extra.length} extra, owned by the local tools)`,
+      { why: 'apply cloud-sync/schema.sql, or fix ANIME_COLUMNS in cloud-sync/sync-anilist.mjs — a sync run exits schema_mismatch on this until one of them happens' });
+    /* The extra that is not benign. insertRows() omits every column it does not own, so a NOT NULL
+       extra with no default fails each chunk on the constraint while a check that only counted
+       extras would call the schema clean. This is the same bucket the sync gate refuses on, read
+       through the same helper, so the audit and the run cannot disagree about which extras are fatal. */
+    add('no extra column is NOT NULL without a default', shape.unwritable.length === 0,
+      shape.unwritable.length ? `unwritable: ${shape.unwritable.join(', ')}` : `${shape.extra.length} extra columns, all nullable or defaulted`,
+      { why: 'give the column a default or make it nullable — the sync gate exits schema_mismatch on this shape until one of them happens' });
+  }
 
   /* ---------------------------------------------------------- ownership stamps */
 
