@@ -4,6 +4,11 @@
 //
 //   node --env-file=.env cloud-sync/verify.mjs
 //
+// `--probe` runs just the schema gate (Actions → cloud-ops → probe): the same reads the sync makes
+// before it takes its lease, printed as the buckets this mode depends on. That is what step 2 of
+// cloud-sync/README.md collects, so the artifact an operator reads is written by the check that
+// will later refuse the run, not by an eyeball comparing a dump.
+//
 // It answers the question the four-phase migration turns on — is there still exactly one writer
 // per column? — using the two stamps on `anime`, plus the checks the stamps cannot see: vocabulary
 // that no longer matches the API's filters, rows the browse queries cannot reach, and rate-control
@@ -14,8 +19,8 @@
 // than in front of an operator.
 
 import { pathToFileURL } from 'node:url';
-import { assertLiveColumns, d1All, d1First } from './d1.mjs';
-import { ANIME_COLUMNS, CLAIMS_SCHEDULE, CREATES_ROWS, FILL_SCHEDULE, LEGACY_QUIET_MS, MODE } from './sync-anilist.mjs';
+import { assertLiveColumns, assertLiveTables, d1All, d1First, schemaFaults } from './d1.mjs';
+import { ANIME_COLUMNS, CLAIMS_SCHEDULE, CREATES_ROWS, FILL_SCHEDULE, LEGACY_QUIET_MS, MODE, requiredTablesFor } from './sync-anilist.mjs';
 import { recentRuns, utcDay } from './state.mjs';
 
 /* The closed lists the Worker validates against — functions/api/anime/index.js:24-25 and
@@ -27,7 +32,7 @@ export const STATUSES = ['Ongoing', 'Finished', 'Upcoming'];
 export const SEASON_WORDS = ['Winter', 'Spring', 'Summer', 'Fall'];
 
 /** The exit_reasons that mean a human should look, as opposed to a run that stopped on purpose. */
-const ALARM = ['fatal', 'lease_lost', 'legacy_still_running', 'breaker_aborted', 'schema_mismatch', 'schema_probe_failed'];
+const ALARM = ['fatal', 'lease_lost', 'legacy_still_running', 'breaker_aborted', 'schema_mismatch', 'schema_unwritable', 'schema_probe_failed'];
 
 /** Pull the fields an alert is written against out of a run's stored summary JSON. */
 function runLine(summary) {
@@ -80,19 +85,26 @@ export async function audit(overrides = {}) {
      credentials are wrong) says nothing about the schema and is reported as its own failure, while a
      probe that ran and disagreed is the mismatch. Everything below this section selects anime's
      columns by name, so the shape is settled first: if the probe answered and a column is missing,
-     the report names it before any query after it can throw. */
+     the report names it before any query after it can throw. The tables ride the same try: both
+     probes go over one endpoint, so if either cannot read, the operator wants one failure line about
+     the endpoint, not two. `requiredTablesFor` is the sync's own call — the queue table is only
+     required of the modes that read it, and an audit that asked for a different set than the run
+     would audit a configuration nobody is in. */
   let shape = null;
+  let tableShape = null;
+  const required = requiredTablesFor(createsRows);
   try {
     shape = await assertLiveColumns({ columns: ANIME_COLUMNS });
+    tableShape = await assertLiveTables({ tables: required });
   } catch (err) {
     report.state.columns = { wanted: ANIME_COLUMNS.length, error: err.message };
-    add('the live column set is readable', false, `the probe failed: ${err.message}`,
-      { why: 'run the runbook\u0027s PRAGMA dump against production — the sync gate asks the same question, so every run exits schema_probe_failed (not schema_mismatch, which would send you hunting a column that is not missing) until this reads' });
+    add('the live schema is readable', false, `the probe failed: ${err.message}`,
+      { why: 'run ops → probe against production — the sync gate asks the same question, so every run exits schema_probe_failed (not schema_mismatch, which would send you hunting a column that is not missing) until this reads' });
   }
   if (shape) {
-    report.state.columns = { wanted: ANIME_COLUMNS.length, missing: shape.missing, extra: shape.extra, unwritable: shape.unwritable };
+    report.state.columns = { wanted: ANIME_COLUMNS.length, missing: shape.missing, extra: shape.extra, unwritable: shape.unwritable, via: shape.via };
     add('anime has every column the sync writes by name', shape.missing.length === 0,
-      shape.missing.length ? `missing: ${shape.missing.join(', ')}` : `${ANIME_COLUMNS.length} named columns present (${shape.extra.length} extra, owned by the local tools)`,
+      shape.missing.length ? `missing: ${shape.missing.join(', ')}` : `${ANIME_COLUMNS.length} named columns present (${shape.extra.length} extra, owned by the local tools; probe read via ${shape.via})`,
       { why: 'apply cloud-sync/schema.sql, or fix ANIME_COLUMNS in cloud-sync/sync-anilist.mjs — a sync run exits schema_mismatch on this until one of them happens' });
     /* The extra that is not benign. insertRows() omits every column it does not own, so a NOT NULL
        extra with no default fails each chunk on the constraint while a check that only counted
@@ -100,7 +112,14 @@ export async function audit(overrides = {}) {
        through the same helper, so the audit and the run cannot disagree about which extras are fatal. */
     add('no extra column is NOT NULL without a default', shape.unwritable.length === 0,
       shape.unwritable.length ? `unwritable: ${shape.unwritable.join(', ')}` : `${shape.extra.length} extra columns, all nullable or defaulted`,
-      { why: 'give the column a default or make it nullable — the sync gate exits schema_mismatch on this shape until one of them happens' });
+      { why: 'give the column a default or make it nullable — the sync gate exits schema_unwritable (not schema_mismatch; nothing is missing) on this shape until one of them happens' });
+  }
+  if (tableShape) {
+    report.state.tables = { required, missing: tableShape.missing };
+    add('every table the sync reaches for exists', tableShape.missing.length === 0,
+      tableShape.missing.length ? `missing: ${tableShape.missing.join(', ')}`
+        : `${required.length} tables present${createsRows ? '' : " (sync_pending not required in this mode's set)"}`,
+      { why: 'run ops → apply-schema with cloud-sync/schema.sql — an applied subset is normal mid-rollout, but a sync run reaches every table in its set and exits schema_mismatch naming the missing one' });
   }
 
   /* ---------------------------------------------------------- ownership stamps */
@@ -289,17 +308,63 @@ export async function audit(overrides = {}) {
   return report;
 }
 
+/* ------------------------------------------------------------------- the probe alone */
+
+/**
+ * The schema gate as a standalone report: exactly the reads a run makes at the top of main(),
+ * against exactly the same sets — ANIME_COLUMNS and requiredTablesFor(createsRows) — with the
+ * failure reason from the same `schemaFaults` the writers use. That is the point of running it
+ * from ops.yml for step 2: the artifact an operator collects *is* the gate, so "the table-valued
+ * SELECT answers over REST, and production has every table the code reaches for" is proven by the
+ * thing that will later refuse the run rather than by a parallel script that could drift from it.
+ *
+ * Read-only. Returns a report always; throws never. `probe_error` (exit 2 in the CLI) is the
+ * schema_probe_failed case — the reads themselves refused, which says nothing about the schema.
+ * `ok` false with a `fault` is the schema_mismatch/schema_unwritable case — the reads answered
+ * and the answer is not good enough to run on (exit 1).
+ */
+export async function probeSchema({ mode = MODE, createsRows = CREATES_ROWS } = {}) {
+  const required = requiredTablesFor(createsRows);
+  const out = {
+    checked_at: new Date().toISOString(), mode, ok: false,
+    phase: { creates_rows: createsRows },
+  };
+  try {
+    const shape = await assertLiveColumns({ columns: ANIME_COLUMNS });
+    const tableShape = await assertLiveTables({ tables: required });
+    const fault = schemaFaults({ columns: shape, tables: tableShape });
+    out.via = shape.via;
+    out.columns = { wanted: ANIME_COLUMNS.length, missing: shape.missing, extra: shape.extra, unwritable: shape.unwritable };
+    out.tables = { required, missing: tableShape.missing };
+    out.fault = fault?.reason ?? null;
+    out.error = fault?.error ?? null;
+    out.ok = !fault;
+  } catch (err) {
+    out.probe_error = err.message;
+  }
+  return out;
+}
+
 const invokedDirectly = process.argv[1]
   ? import.meta.url === pathToFileURL(process.argv[1]).href
   : false;
 
 if (invokedDirectly) {
   try {
-    const report = await audit();
-    console.log(JSON.stringify(report, null, process.env.QUIET ? 0 : 2));
-    for (const line of report.failures) console.error(line);
-    if (report.ok) console.error(`OK mode=${report.mode}: ${report.state.catalogue?.n ?? 0} titles, ${report.checks.length} checks`);
-    process.exitCode = report.ok ? 0 : 1;
+    if (process.argv.includes('--probe')) {
+      const probe = await probeSchema();
+      console.log(JSON.stringify(probe, null, process.env.QUIET ? 0 : 2));
+      if (probe.probe_error) console.error(`probe: ${probe.probe_error}`);
+      else if (!probe.ok) console.error(`probe: ${probe.error}`);
+      else console.error(`OK mode=${probe.mode}: columns via ${probe.via}, ${probe.tables.required.length} tables and ${probe.columns.wanted} columns all present`);
+      process.exitCode = probe.probe_error ? 2 : probe.ok ? 0 : 1;
+    } else {
+      const report = await audit();
+      console.log(JSON.stringify(report, null, process.env.QUIET ? 0 : 2));
+      for (const line of report.failures) console.error(line);
+      if (report.ok) console.error(`OK mode=${report.mode}: ${report.state.catalogue?.n ?? 0} titles, ${report.checks.length} checks`);
+      process.exitCode = report.ok ? 0 : 1;
+    }
   } catch (err) {
     /* A missing CF_API_TOKEN is the common case for a hand run, and an unreadable report is
        worse than a one-line reason. */

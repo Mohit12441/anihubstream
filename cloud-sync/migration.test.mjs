@@ -20,10 +20,10 @@ import { dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { randomUUID } from 'node:crypto';
 import { applySchema, splitStatements } from './apply-schema.mjs';
-import { assertLiveColumns, diffLiveColumns } from './d1.mjs';
-import { ANIME_COLUMNS, provenance, rowFromMedia, updateSet } from './sync-anilist.mjs';
+import { assertLiveColumns, assertLiveTables, columnsFromDdl, diffLiveColumns, schemaFaults } from './d1.mjs';
+import { ANIME_COLUMNS, REQUIRED_TABLES, STATE_TABLES, provenance, requiredTablesFor, rowFromMedia, updateSet } from './sync-anilist.mjs';
 import { FORBIDDEN, compare } from './diff-rows.mjs';
-import { audit } from './verify.mjs';
+import { audit, probeSchema } from './verify.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const GENRE_IDS = ['action', 'adventure', 'fantasy', 'isekai', 'romance', 'slice-of-life', 'horror', 'comedy', 'supernatural', 'sci-fi', 'drama', 'mystery'];
@@ -816,20 +816,51 @@ describe('migration: the four phases against real SQLite', () => {
     assert.ok(world.row().cloud_synced_at > 0);
   });
 
-  /* The other way the gate can fail, and the one that must not impersonate a mismatch: the probe
-     itself. The write path has never run against production, and if the REST endpoint refuses even
-     the table-valued SELECT the gate sends, every run would otherwise die at the gate with
-     `schema_mismatch` — sending an operator hunting a column that was never missing. */
-  it('a probe that cannot read is named as a probe failure, not as a schema mismatch', async () => {
+  /* The probe's own fallback, and the thing that makes the preferred shape safe to keep: if the
+     REST endpoint refuses `pragma_table_info()` — the one surface never exercised against
+     production — the gate reads the CREATE TABLE text sqlite_master kept and parses it with the
+     same lexical rules apply-schema.mjs splits files with. A worse probe (it reads the literal,
+     not the type affinity) but a working one, and the run says which read answered. */
+  it('a refused pragma_table_info falls back to the stored DDL instead of failing the run', async () => {
     world.stored();
+    world.db.prepare('INSERT INTO anime_genre (anime_id, genre_id) VALUES (?,?)').run('a-test-title', 'action');
     world.fixture(98596);
     world.failSql = (sql) => /pragma_table_info/.test(sql);
+
+    const shape = await withShim(world, MIRROR, () => assertLiveColumns({ columns: ANIME_COLUMNS }));
+    assert.equal(shape.via, 'sqlite_master', 'the fallback is what answered, and it says so');
+    assert.deepEqual(shape.missing, [], 'the stored DDL keeps every column, the ALTER-appended cloud_synced_at included');
+    assert.deepEqual(shape.unwritable, [], 'and notnull parses the same way the PRAGMA reports it (checked column-for-column in the parser describe)');
+
+    const { summary, exitCode } = await runPass(world, MIRROR);
+    assert.equal(summary.exit_reason, 'catalogue_end', 'a fallback read is enough to run on');
+    assert.equal(exitCode, 0, 'and it is not an alarm code: the schema answered, by its second read');
+    assert.equal(summary.schema_via, 'sqlite_master', 'the run log says which read answered, without having to be asked');
+    assert.ok(world.row().cloud_synced_at > 0, 'the refresh landed');
+
+    /* The audit calls the same helper, so it reports the same via — one probe, one answer. */
+    const report = await withShim(world, MIRROR, () => audit({ mode: 'mirror', createsRows: false, claimsSchedule: false }));
+    assert.equal(report.state.columns.via, 'sqlite_master');
+    assert.ok(report.ok, `the fallback read must audit clean:\n${report.failures.join('\n')}`);
+  });
+
+  /* The other way the gate can fail, and the one that must not impersonate a mismatch: the probe
+     itself, with BOTH reads refused. The write path has never run against production, and if the
+     REST endpoint refuses even the table-valued SELECT the gate sends, every run would otherwise
+     die at the gate with `schema_mismatch` — sending an operator hunting a column that was never
+     missing. Since d1.mjs tries sqlite_master next, a probe failure now means the endpoint
+     answered nothing at all — the shape a dead token or a bad day on Cloudflare's side produces. */
+  it('a probe that cannot read at all is named as a probe failure, not as a schema mismatch', async () => {
+    world.stored();
+    world.fixture(98596);
+    world.failSql = (sql) => /pragma_table_info|sqlite_master/.test(sql);
 
     const { summary, exitCode } = await runPass(world, MIRROR);
     assert.equal(summary.exit_reason, 'schema_probe_failed');
     assert.equal(exitCode, 2, 'a different afternoon from a mismatch (1): the fix is the read, not a column');
-    assert.match(summary.error, /could not read anime's column set/);
+    assert.match(summary.error, /could not read the live schema/);
     assert.match(summary.error, /simulated/, 'the underlying error is carried, not paraphrased away');
+    assert.match(summary.error, /sqlite_master/, 'and it names the fallback too, so the operator sees both reads were tried');
     assert.equal(world.row().cloud_synced_at, null, 'nothing was written');
     assert.equal(world.count('sync_lock'), 0, 'and no lease was taken');
     const recorded = world.db.prepare('SELECT exit_reason FROM sync_runs ORDER BY started_at DESC LIMIT 1').get();
@@ -840,16 +871,19 @@ describe('migration: the four phases against real SQLite', () => {
     const auditReport = await withShim(world, MIRROR, () => audit({ mode: 'mirror', createsRows: false, claimsSchedule: false }));
     assert.equal(auditReport.ok, false);
     const lines = auditReport.failures.join('\n');
-    assert.match(lines, /the live column set is readable/);
+    assert.match(lines, /the live schema is readable/);
     assert.doesNotMatch(lines, /anime has every column the sync writes by name/, 'an unread probe is not a mismatch');
+    assert.doesNotMatch(lines, /every table the sync reaches for exists/, 'and the table read did not happen either — one failure line about the endpoint, not two');
     assert.match(lines, /the last run ended cleanly/, 'schema_probe_failed is an alarm, like schema_mismatch');
     assert.ok(auditReport.state.columns.error, 'the audit keeps the probe error rather than inventing a diff');
+    assert.equal(auditReport.state.tables, undefined, 'a probe that never read claims nothing about tables');
 
     /* The fix is the read, not the schema: with the endpoint answering again the same run passes the
        gate and refreshes. */
     world.failSql = null;
     const fixed = await runPass(world, MIRROR);
     assert.equal(fixed.summary.exit_reason, 'catalogue_end');
+    assert.equal(fixed.summary.schema_via, 'pragma_table_info');
     assert.ok(world.row().cloud_synced_at > 0);
   });
 
@@ -900,21 +934,108 @@ describe('migration: the four phases against real SQLite', () => {
     world.db.exec('PRAGMA foreign_keys = ON');
     assert.equal(world.row().title, 'A Test Title', 'the rebuild kept the row it had to carry');
 
-    /* The probe answers — the failure is the table's shape, not the read — so this is a mismatch,
-       and the error has to say *why*, because "lacks nothing" would otherwise read as a clean run. */
+    /* The probe answers — the failure is the table's shape, not the read — so this is a fault the
+       run can name precisely: nothing is missing, so it is not a mismatch; the table carries a
+       column the writers cannot satisfy, so it gets its own reason and the error says *why*,
+       because "lacks nothing" would otherwise read as a clean run. */
     const shape = await withShim(world, MIRROR, () => assertLiveColumns({ columns: ANIME_COLUMNS }));
     assert.deepEqual(shape.missing, [], 'the rebuild kept every named column');
     assert.deepEqual(shape.unwritable, ['legacy_flag']);
 
     const { summary, exitCode } = await runPass(world, MIRROR);
-    assert.equal(summary.exit_reason, 'schema_mismatch');
-    assert.equal(exitCode, 1);
+    assert.equal(summary.exit_reason, 'schema_unwritable', 'not schema_mismatch: no column is missing, and the fix is a default, not a migration');
+    assert.equal(exitCode, 1, 'still an alarm — the run cannot write — but the reason tells the operator which repair');
     assert.match(summary.error, /legacy_flag NOT NULL without a default/, 'the reason must name the column and the shape');
     assert.equal(world.count('sync_lock'), 0, 'the run stopped before the lease, so nothing was blocked behind it');
     /* The rows are intact — the gate refused before insertRows() could fail every chunk on the
        constraint, which is the run this gate exists to make impossible. */
     assert.equal(world.row('a-second-title').cloud_synced_at, null);
     assert.equal(world.row().title, 'A Test Title');
+
+    /* The audit splits the same two buckets and alarms on the same recorded reason. */
+    const gated = await withShim(world, MIRROR, () => audit({ mode: 'mirror', createsRows: false, claimsSchedule: false }));
+    assert.equal(gated.ok, false);
+    const lines = gated.failures.join('\n');
+    assert.match(lines, /no extra column is NOT NULL without a default.*legacy_flag/);
+    assert.doesNotMatch(lines, /anime has every column the sync writes by name/, 'nothing is missing, and the audit must not say otherwise');
+    assert.match(lines, /the last run ended cleanly/, 'schema_unwritable is an alarm, like schema_mismatch');
+    const recorded = world.db.prepare('SELECT exit_reason FROM sync_runs ORDER BY started_at DESC LIMIT 1').get();
+    assert.equal(recorded.exit_reason, 'schema_unwritable', 'the run record carries the repair-specific reason, not a generic mismatch');
+
+    /* And the standalone probe reports the same reason the run would record — that is the point
+       of it being the same code: what an operator collects in step 2 is what the run enforces. */
+    const probe = await withShim(world, MIRROR, () => probeSchema({ mode: 'mirror', createsRows: false }));
+    assert.equal(probe.ok, false);
+    assert.equal(probe.fault, 'schema_unwritable');
+    assert.deepEqual(probe.columns.unwritable, ['legacy_flag']);
+  });
+
+  /* The gap this round closed: a gate that validated columns and let the run die mid-flight on
+     `no such table: sync_pending` had moved the failure, not prevented it. Whether the queue is
+     touched at all depends on the mode — pendingSlice sits behind `CREATES_ROWS ?` in the run
+     loop — so the requirement is a function of the mode, and this pins both sides of it instead
+     of leaving the answer in a comment that stops being true between Phase 1 and Phase 2. */
+  it('the queue table is required by the modes that read it, and only by those', async () => {
+    world.stored();
+    world.db.prepare('INSERT INTO anime_genre (anime_id, genre_id) VALUES (?,?)').run('a-test-title', 'action');
+    world.fixture(98596);
+    assert.deepEqual(requiredTablesFor(true), [...REQUIRED_TABLES, 'sync_pending'], 'the creating modes drain the queue');
+    assert.deepEqual(requiredTablesFor(false), [...REQUIRED_TABLES], 'mirror needs exactly the always-set');
+
+    /* The step-2 artifact itself, on the same healthy database: this is the JSON an operator
+       collects before the scoped run, so its shape is pinned here. */
+    const cleanProbe = await withShim(world, MIRROR, () => probeSchema({ mode: 'mirror', createsRows: false }));
+    assert.equal(cleanProbe.ok, true, `a healthy schema probes clean: ${cleanProbe.error ?? cleanProbe.probe_error ?? ''}`);
+    assert.equal(cleanProbe.fault, null);
+    assert.equal(cleanProbe.via, 'pragma_table_info', 'the preferred read answered — the fallback is a contingency, not the normal path');
+    assert.deepEqual(cleanProbe.tables.missing, []);
+    assert.deepEqual(cleanProbe.columns.missing, []);
+
+    /* Phase 1 against the production starting point this round was written for: the schema applied
+       additively, minus the queue. Mirror must run on it — that is the run the plan starts with. */
+    world.db.exec('DROP TABLE sync_pending');
+    const mirror = await runPass(world, MIRROR);
+    assert.equal(mirror.summary.exit_reason, 'catalogue_end', 'mirror never queries sync_pending, so a missing queue must not gate it');
+    assert.ok(world.row().cloud_synced_at > 0, 'the Phase 1 refresh landed');
+
+    const auditMirror = await withShim(world, MIRROR, () => audit({ mode: 'mirror', createsRows: false, claimsSchedule: false }));
+    assert.deepEqual(auditMirror.state.tables.missing, [], 'the audit checks the set mirror actually reaches, and it does not name the queue');
+    assert.ok(!auditMirror.state.tables.required.includes('sync_pending'), 'the queue is not quietly made universal by the audit');
+
+    /* Delta reads the queue — it is the only place a new title can come from — so the same
+       database is now a hard stop, named, before the lease: not the mid-flight error this check
+       exists to prevent. */
+    const delta = await runPass(world, DELTA);
+    assert.equal(delta.summary.exit_reason, 'schema_mismatch', 'a missing table the mode reads is a mismatch, and only for that mode');
+    assert.match(delta.summary.error, /sync_pending/, 'the operator is told which table to create');
+    assert.equal(world.count('sync_lock'), 0, 'refused before the lease');
+
+    const auditDelta = await withShim(world, DELTA, () => audit({ mode: 'delta', createsRows: true, claimsSchedule: false }));
+    assert.equal(auditDelta.ok, false, 'what mirror rightly ignores is delta\'s fatal gap, and the audit follows the mode');
+    assert.match(auditDelta.failures.join('\n'), /every table the sync reaches for exists.*sync_pending/);
+    assert.deepEqual(auditDelta.state.tables.missing, ['sync_pending']);
+
+    /* The standalone probe answers the same way both sides do. */
+    const viaProbe = await withShim(world, DELTA, () => probeSchema({ mode: 'delta', createsRows: true }));
+    assert.equal(viaProbe.fault, 'schema_mismatch');
+    assert.deepEqual(viaProbe.tables.missing, ['sync_pending']);
+    assert.match(viaProbe.error, /sync_pending/);
+  });
+
+  /* The fallback probe reads the DDL, so it has to read the DDL the way SQLite does. This is the
+     fidelity proof, column for column against the live PRAGMA on the committed schema — the one
+     comparison that would catch a tokenizer that mishandles the repo's own commenting style
+     (apostrophes inside line and block comments, which is exactly what a split-on-lines fallback
+     gets wrong), or an ALTER-appended column the stored text carries with a leading newline. */
+  it('the DDL fallback reads the same columns the live PRAGMA does, on the committed schema', () => {
+    const normalize = (r) => ({ name: r.name, notnull: Number(r.notnull) === 1 ? 1 : 0, has_default: r.dflt_value !== null });
+    for (const { name, sql } of world.db.prepare(`SELECT name, sql FROM sqlite_master WHERE type = 'table'`).all()) {
+      const parsed = columnsFromDdl(sql).map(normalize);
+      const pragma = world.db.prepare(`SELECT name, "notnull", dflt_value FROM pragma_table_info(?)`).all(name).map(normalize);
+      assert.deepEqual(parsed, pragma, `${name}: the DDL parser and the live PRAGMA disagree`);
+    }
+    const names = columnsFromDdl(world.db.prepare(`SELECT sql FROM sqlite_master WHERE name = 'anime'`).get().sql).map((c) => c.name);
+    assert.ok(names.includes('cloud_synced_at'), 'the ALTER-appended column is part of the comparison, not an afterthought');
   });
 
   it('the audit is clean on a mirrored catalogue, and catches a value outside the API vocabulary', async () => {
@@ -1089,5 +1210,104 @@ describe('the live column diff', () => {
   it('names each column once, so the gate cannot report the same gap twice', () => {
     const repeated = ANIME_COLUMNS.filter((c, i) => ANIME_COLUMNS.indexOf(c) !== i);
     assert.deepEqual(repeated, [], 'a duplicate in ANIME_COLUMNS would double the parameter count of every statement too');
+  });
+});
+
+/* The two table sets and the fault policy are what the writers, the standalone probe and the audit
+   all branch on — shared code, so the tests pin the sharing itself, not just each caller. */
+describe('the schema contract', () => {
+  it('the state tables are the shared four, and the anilist-only additions say who needs them', () => {
+    assert.deepEqual([...STATE_TABLES].sort(), ['api_usage', 'sync_lock', 'sync_meta', 'sync_runs'],
+      'state.mjs reaches exactly these, for every endpoint');
+    assert.deepEqual(REQUIRED_TABLES.filter((t) => !STATE_TABLES.includes(t)), ['genre', 'anime_genre'],
+      'the genre mapping tables, read in every mode by the anilist walk');
+    assert.equal(requiredTablesFor(true).length, requiredTablesFor(false).length + 1);
+    assert.ok(requiredTablesFor(true).includes('sync_pending'), 'the queue is the creating modes\u0027 one extra');
+  });
+
+  it('a missing column or table outranks unwritable, and each reason carries its own fix', () => {
+    const cols = (over = {}) => ({ missing: [], extra: [], unwritable: [], ...over });
+    assert.equal(schemaFaults({ columns: cols(), tables: { missing: [] } }), null, 'a clean shape has no fault');
+    const unwritable = schemaFaults({ columns: cols({ unwritable: ['legacy_flag'] }), tables: { missing: [] } });
+    assert.equal(unwritable.reason, 'schema_unwritable', 'nothing is missing — the repair is a default, not a migration');
+    assert.match(unwritable.error, /legacy_flag/);
+    const mismatch = schemaFaults({ columns: cols({ missing: ['accent'] }), tables: { missing: [] } });
+    assert.equal(mismatch.reason, 'schema_mismatch');
+    assert.match(mismatch.error, /accent/);
+    const tableless = schemaFaults({ columns: cols(), tables: { missing: ['sync_pending'] } });
+    assert.equal(tableless.reason, 'schema_mismatch', 'a table the run reads and cannot is just as unwritable-as-written');
+    assert.match(tableless.error, /sync_pending/);
+    const both = schemaFaults({ columns: cols({ missing: ['accent'], unwritable: ['legacy_flag'] }), tables: { missing: ['sync_pending'] } });
+    assert.equal(both.reason, 'schema_mismatch', 'with both faults present the missing one is the one to fix first');
+    assert.match(both.error, /accent/);
+    assert.match(both.error, /sync_pending/);
+  });
+});
+
+/* The DDL parser's own cases, where a database would be testing the schema rather than the parser.
+   The inputs are the shapes SQLite's stored CREATE text actually takes — comments mid-definition,
+   quoted identifiers, table constraints between column items, every literal a DEFAULT may carry —
+   and where SQLite itself can answer (the literal shapes), the expectations were read off a real
+   PRAGMA, because that is the row shape the fallback has to reproduce. */
+describe('the DDL fallback parser', () => {
+  it('skips comments and table constraints, and unquotes identifiers the way the PRAGMA reports them', () => {
+    const ddl = `
+      -- leading comment: apostrophe's and a comma, NOT NULL
+      /* block comment: 'quoted', NOT NULL DEFAULT 0 */
+      CREATE TABLE IF NOT EXISTS "weird (name" (
+        id TEXT PRIMARY KEY,               -- keywords inside comments must stay out of it
+        "quoted col" VARCHAR(20) NOT NULL,
+        [bracket col] TEXT DEFAULT 'a,b',
+        plain INTEGER,
+        PRIMARY KEY (id),
+        UNIQUE (plain),
+        CHECK (plain > 0),
+        FOREIGN KEY (id) REFERENCES other(id),
+        CONSTRAINT named CHECK (plain IS NOT NULL)
+      ) WITHOUT ROWID`;
+    assert.deepEqual(columnsFromDdl(ddl), [
+      { name: 'id', notnull: 0, dflt_value: null },
+      { name: 'quoted col', notnull: 1, dflt_value: null },
+      { name: 'bracket col', notnull: 0, dflt_value: "'a,b'" },
+      { name: 'plain', notnull: 0, dflt_value: null },
+    ]);
+  });
+
+  it('reads every DEFAULT literal shape the way the PRAGMA reports it (expected values read off SQLite)', () => {
+    const ddl = `CREATE TABLE t (
+      a TEXT DEFAULT 'plain',
+      b INTEGER DEFAULT 0,
+      c REAL DEFAULT -1.5,
+      d TEXT DEFAULT (datetime('now')),
+      e BLOB DEFAULT X'ABCD',
+      f TEXT DEFAULT NULL,
+      g TEXT DEFAULT 'NOT NULL, DEFAULT 5',
+      h INTEGER NOT NULL DEFAULT 7,
+      i INTEGER DEFAULT 7 NOT NULL
+    )`;
+    assert.deepEqual(columnsFromDdl(ddl).map((r) => [r.name, r.notnull, r.dflt_value]), [
+      ['a', 0, "'plain'"],
+      ['b', 0, '0'],
+      ['c', 0, '-1.5'],
+      /* The one deliberate infidelity: outer parens kept. Only nullness is load-bearing, and the
+         fidelity test above compares exactly that. */
+      ['d', 0, "(datetime('now'))"],
+      ['e', 0, "X'ABCD'"],
+      /* DEFAULT NULL is reported by the PRAGMA as the string "NULL" — a default that exists — and
+         this parser must not turn that into "no default", which would invert the unwritable bucket. */
+      ['f', 0, 'NULL'],
+      ['g', 0, "'NOT NULL, DEFAULT 5'"],
+      ['h', 1, '7'],
+      ['i', 1, '7'],
+    ]);
+  });
+
+  it('refuses what it cannot recognise rather than guessing — an unread table is every column missing', () => {
+    assert.deepEqual(columnsFromDdl('CREATE VIRTUAL TABLE fts USING fts5(content)'), [],
+      'a virtual table\u0027s parens are module arguments, not a column list');
+    assert.deepEqual(columnsFromDdl('CREATE TABLE t (a INT'), [], 'an unterminated body is not half a table');
+    assert.deepEqual(columnsFromDdl('SELECT 1'), []);
+    assert.deepEqual(columnsFromDdl('create table t (a integer not null default 5)'),
+      [{ name: 'a', notnull: 1, dflt_value: '5' }], 'SQLite keywords are case-insensitive, and so is the parser');
   });
 });

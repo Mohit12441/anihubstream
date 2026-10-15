@@ -1,13 +1,16 @@
 name: cloud-ops
 
-# Two operator commands against the live database, both dispatched by hand and neither needing
+# Three operator commands against the live database, all dispatched by hand and none needing
 # a local machine, wrangler or an npm install — the same property the sync jobs have.
 #
 #   Actions → cloud-ops → Run workflow → apply-schema   (idempotent; safe to re-run)
+#   Actions → cloud-ops → Run workflow → probe          (the schema gate alone: the reads a sync makes first)
 #   Actions → cloud-ops → Run workflow → report         (read-only audit, exit 1 on a broken invariant)
 #
 # Nothing here runs on a schedule on purpose: a schema change and an audit are decisions, not
-# chores. `report` is what you read after each phase of the migration in cloud-sync/README.md.
+# chores. `probe` is what step 2 of the migration collects — it runs the same assertLiveColumns/
+# assertLiveTables/requiredTablesFor the writers do, so the artifact *is* the gate — and `report`
+# is what you read after each phase of the migration in cloud-sync/README.md.
 
 on:
   workflow_dispatch:
@@ -18,6 +21,7 @@ on:
         type: choice
         options:
           - apply-schema
+          - probe
           - report
       schema_file:
         description: 'For apply-schema: the file to apply'
@@ -55,6 +59,37 @@ jobs:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           SCHEMA_FILE: ${{ github.event.inputs.schema_file }}
         run: node cloud-sync/apply-schema.mjs "$SCHEMA_FILE"
+
+  probe:
+    if: github.event.inputs.action == 'probe'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # Exact minor, matching ci.yml and the sync jobs — see the note in anilist-sync.yml.
+          node-version: '22.18'
+
+      # The run's own gate, standalone: the same ANIME_COLUMNS, requiredTablesFor(CREATES_ROWS)
+      # and schemaFaults cloud-sync/sync-anilist.mjs applies before its lease — with the columns
+      # read through pragma_table_info and the sqlite_master fallback. Exit 0 clean, 1 on a fault
+      # (the reason is in the output), 2 when the probe itself cannot read. This is the artifact
+      # step 2 of the runbook collects, so what an operator reads is what the run enforces.
+      - name: probe the live schema
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          # The three switches that resolve the mode, and only those: requiredTablesFor() must be
+          # computed from the phase the writer believes it is in, or the probe would check a table
+          # set no run in that mode actually requires. The rest of the report job's variables feed
+          # checks the probe does not make.
+          MODE: ${{ vars.MODE }}
+          LEGACY_WRITER_ACTIVE: ${{ vars.LEGACY_WRITER_ACTIVE }}
+          CLOUD_CREATES_ROWS: ${{ vars.CLOUD_CREATES_ROWS }}
+        run: node cloud-sync/verify.mjs --probe
 
   report:
     if: github.event.inputs.action == 'report'

@@ -48,7 +48,7 @@
 import { randomUUID } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 import { createAnilist, RunAborted, BudgetExhausted } from './anilist.mjs';
-import { assertLiveColumns, d1All, d1First, d1Query, insertRows } from './d1.mjs';
+import { assertLiveColumns, assertLiveTables, d1All, d1First, d1Query, insertRows, schemaFaults } from './d1.mjs';
 import {
   acquireLease, budget, getCursor, getThrottle, leaseKeeper, recordRun, releaseLease, setCursor, setThrottle, utcDay,
 } from './state.mjs';
@@ -242,6 +242,24 @@ export const ANIME_COLUMNS = [
   'rank', 'trend_rank', 'alt_seasons', 'sched_day', 'sched_day_label', 'sched_date', 'sched_time', 'sched_season',
   'source_ids', 'skip_key_id', 'skip_key_space', 'episode_total', 'added_at', 'search_text', 'cloud_synced_at',
 ];
+
+/* The four tables every sync process reaches through cloud-sync/state.mjs, whichever endpoint it
+   walks: the lease (sync_lock), the per-endpoint daily budget (api_usage), the run record
+   (sync_runs), and the heartbeat, marker and cursors (sync_meta, which root schema.sql owns).
+   sync-kitsu.mjs needs exactly these and nothing more, so they are named once here. */
+export const STATE_TABLES = Object.freeze(['sync_lock', 'api_usage', 'sync_runs', 'sync_meta']);
+
+/* Plus the two the genre mapping reads, in every mode: `genre` governs which labels map to real
+   ids, and anime_genre is counted in every catalogue slice. */
+export const REQUIRED_TABLES = Object.freeze([...STATE_TABLES, 'genre', 'anime_genre']);
+
+/* sync_pending joins the set only for the modes that read it. pendingSlice sits behind
+   `CREATES_ROWS ?` in the run loop, so mirror never queries the queue — and in the phase where
+   production may not have the table, mirror is the mode that goes first (Phase 1), so requiring
+   it there would block the one run the plan starts with. Asserted both ways in the tests, not
+   reasoned about here: the answer flips between Phase 1 and Phase 2. */
+export const requiredTablesFor = (createsRows) =>
+  (createsRows ? [...REQUIRED_TABLES, 'sync_pending'] : [...REQUIRED_TABLES]);
 
 /* The columns a refresh may rewrite. added_at, rank, alt_seasons and the AniSkip keys are
    never in it: a metadata refresh must not reset when a title entered the catalogue (the
@@ -640,6 +658,10 @@ const newSummary = () => ({
   /* anime columns production has that this writer never names. Always non-zero on a healthy
      database — the local task's catalogue_synced_at is one — so it is a number, never a verdict. */
   extra_columns: 0,
+  /* Which read answered the column probe ('pragma_table_info' or 'sqlite_master'), set at the
+     gate. `sqlite_master` in a log line means the endpoint refused the table-valued SELECT and
+     the columns came from parsed DDL. */
+  schema_via: null,
   cursor: null,
   duration_ms: 0,
   exit_reason: 'fatal',
@@ -654,18 +676,25 @@ async function main({ forceTakeover = process.argv.includes('--force-takeover') 
      the lease, with an error that says nothing about which assumption broke. Extras are the normal
      state of a shared table (the local task's catalogue_synced_at is one) and are only counted —
      except the one shape of extra that is not normal: NOT NULL with no default, which fails every
-     INSERT that omits it. This is what the runbook's PRAGMA dump describes; running here means an
-     operator does not have to remember to run it first. */
+     INSERT that omits it. The tables get the same treatment for the same reason: a run that passes
+     the columns and then dies mid-flight on `no such table: sync_pending` has moved the failure,
+     not prevented it — and which tables the run reaches for depends on the mode, so the check
+     asks requiredTablesFor(CREATES_ROWS) rather than a guess. Both reads are one probe: if either
+     cannot run, that is schema_probe_failed, never a mismatch. This is the check the ops
+     workflow's probe runs and verify.mjs reports; running it here means an operator does not have
+     to remember to run it first. */
   let columns;
+  let tables;
   try {
     columns = await assertLiveColumns({ columns: ANIME_COLUMNS });
+    tables = await assertLiveTables({ tables: requiredTablesFor(CREATES_ROWS) });
   } catch (err) {
     /* The probe itself failed — the endpoint refused the statement, the network dropped, the
        credentials are wrong. Named separately from schema_mismatch on purpose: a run that dies at
        the gate cannot tell the operator which side is broken, and "a column is missing" would send
        them hunting a column that was never missing. Exit 2 so CI can tell the two apart. */
     summary.exit_reason = 'schema_probe_failed';
-    summary.error = `could not read anime's column set (${err.message}) — this says nothing about the schema; verify.mjs runs the same probe and reports it on its own`;
+    summary.error = `could not read the live schema (${err.message}) — this says nothing about the schema; verify.mjs runs the same probe and reports it on its own`;
     summary.duration_ms = Date.now() - startedAt;
     await recordRun({ runId: RUN_ID, endpoint: ENDPOINT, startedAt, durationMs: summary.duration_ms, exitReason: 'schema_probe_failed', summary })
       .catch((recErr) => console.warn(`WARN run record failed: ${recErr.message}`));
@@ -673,19 +702,18 @@ async function main({ forceTakeover = process.argv.includes('--force-takeover') 
     process.exitCode = 2;
     return summary;
   }
+  summary.schema_via = columns.via;
   summary.extra_columns = columns.extra.length;
-  if (columns.missing.length || columns.unwritable.length) {
-    const reasons = [];
-    if (columns.missing.length) reasons.push(`lacks ${columns.missing.join(', ')} — apply cloud-sync/schema.sql if that is one of its two stamp columns, otherwise ANIME_COLUMNS and the live table disagree and one of them has to change`);
-    if (columns.unwritable.length) reasons.push(`has ${columns.unwritable.join(', ')} NOT NULL without a default, so every insert that omits it fails on the constraint`);
-    summary.exit_reason = 'schema_mismatch';
-    summary.error = `production anime: ${reasons.join('; and it ')} — nothing was written`;
+  const fault = schemaFaults({ columns, tables });
+  if (fault) {
+    summary.exit_reason = fault.reason;
+    summary.error = fault.error;
     summary.duration_ms = Date.now() - startedAt;
     /* Recorded, unlike a held lease: sync_runs is not `anime`, so the write is unaffected by the
        mismatch, and an operator who reads verify.mjs rather than the Actions log has to see that the
        schedule is gated — a run that silently never happened looks like a paused schedule. Best
        effort: on a database where cloud-sync/schema.sql was never applied there is no sync_runs. */
-    await recordRun({ runId: RUN_ID, endpoint: ENDPOINT, startedAt, durationMs: summary.duration_ms, exitReason: 'schema_mismatch', summary })
+    await recordRun({ runId: RUN_ID, endpoint: ENDPOINT, startedAt, durationMs: summary.duration_ms, exitReason: fault.reason, summary })
       .catch((err) => console.warn(`WARN run record failed: ${err.message}`));
     console.log(JSON.stringify(summary));
     process.exitCode = 1;

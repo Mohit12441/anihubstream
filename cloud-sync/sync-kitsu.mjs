@@ -17,11 +17,11 @@
 
 import { randomUUID } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { assertLiveColumns, d1All, insertRows } from './d1.mjs';
+import { assertLiveColumns, assertLiveTables, d1All, insertRows, schemaFaults } from './d1.mjs';
 import {
   acquireLease, budget, getCursor, leaseKeeper, recordRun, releaseLease, setCursor, utcDay,
 } from './state.mjs';
-import { ANIME_COLUMNS } from './sync-anilist.mjs';
+import { ANIME_COLUMNS, STATE_TABLES } from './sync-anilist.mjs';
 
 const RUN_ID = randomUUID();
 const ENDPOINT = 'kitsu';
@@ -159,6 +159,9 @@ const summary = {
   effective_interval_ms: MIN_INTERVAL_MS,
   budget_remaining: 0,
   extra_columns: 0,
+  /* Which read answered the column probe — 'pragma_table_info', or 'sqlite_master' when the
+     endpoint refused the table-valued SELECT and the columns came from parsed DDL. */
+  schema_via: null,
   cursor: null,
   duration_ms: 0,
   exit_reason: 'fatal',
@@ -167,14 +170,19 @@ const summary = {
 async function main() {
   /* The same gate the AniList run applies, for the same reason: this job names every ANIME_COLUMNS
      column in its SELECT and in its INSERT, so a column production lacks fails the whole page
-     rather than one row — and it fails after the lease is held. Same split, too: a failed probe and
-     a disagreeing schema are different afternoons, so they get different exit reasons and codes. */
+     rather than one row — and it fails after the lease is held. Same table check too, against the
+     four state tables this job reaches through state.mjs: it reads neither the queue nor the genre
+     tables, so requiring those would gate it on someone else's rollout. Same split, as well: a
+     failed probe and a disagreeing schema are different afternoons, so they get different exit
+     reasons and codes. */
   let columns;
+  let tables;
   try {
     columns = await assertLiveColumns({ columns: ANIME_COLUMNS });
+    tables = await assertLiveTables({ tables: STATE_TABLES });
   } catch (err) {
     summary.exit_reason = 'schema_probe_failed';
-    summary.error = `could not read anime's column set (${err.message}) — this says nothing about the schema; verify.mjs runs the same probe and reports it on its own`;
+    summary.error = `could not read the live schema (${err.message}) — this says nothing about the schema; verify.mjs runs the same probe and reports it on its own`;
     summary.duration_ms = Date.now() - startedAt;
     await recordRun({ runId: RUN_ID, endpoint: ENDPOINT, startedAt, durationMs: summary.duration_ms, exitReason: 'schema_probe_failed', summary })
       .catch((recErr) => console.warn(`WARN run record failed: ${recErr.message}`));
@@ -182,17 +190,16 @@ async function main() {
     process.exitCode = 2;
     return;
   }
+  summary.schema_via = columns.via;
   summary.extra_columns = columns.extra.length;
-  if (columns.missing.length || columns.unwritable.length) {
-    const reasons = [];
-    if (columns.missing.length) reasons.push(`lacks ${columns.missing.join(', ')} — apply cloud-sync/schema.sql if that is one of its two stamp columns, otherwise ANIME_COLUMNS and the live table disagree and one of them has to change`);
-    if (columns.unwritable.length) reasons.push(`has ${columns.unwritable.join(', ')} NOT NULL without a default, so every insert that omits it fails on the constraint`);
-    summary.exit_reason = 'schema_mismatch';
-    summary.error = `production anime: ${reasons.join('; and it ')} — nothing was written`;
+  const fault = schemaFaults({ columns, tables });
+  if (fault) {
+    summary.exit_reason = fault.reason;
+    summary.error = fault.error;
     summary.duration_ms = Date.now() - startedAt;
     /* Recorded, best effort, for the same reason the AniList side records it: the gate is worth
        nothing to an operator if the only evidence is a Actions run nobody opened. */
-    await recordRun({ runId: RUN_ID, endpoint: ENDPOINT, startedAt, durationMs: summary.duration_ms, exitReason: 'schema_mismatch', summary })
+    await recordRun({ runId: RUN_ID, endpoint: ENDPOINT, startedAt, durationMs: summary.duration_ms, exitReason: fault.reason, summary })
       .catch((err) => console.warn(`WARN run record failed: ${err.message}`));
     console.log(JSON.stringify(summary));
     process.exitCode = 1;

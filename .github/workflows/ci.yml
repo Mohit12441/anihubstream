@@ -55,12 +55,16 @@ jobs:
       # read from the npm script itself because a check that names its own directories can drift from
       # what `npm test` globs, which is the bug it is meant to catch.
       #
-      # TEST_FLOOR is the count this checkout produces: 209, being the 206 at the previous commit plus
-      # the probe/mismatch split and unwritable-extra tests. The floor can only protect what is
-      # committed: the working tree holds tests CI never sees — an untracked `tools/serve-static.test.mjs`
-      # (13 checks) and uncommitted edits to tracked suites — so **raise the floor in the same commit
-      # that lands them**, or their checks sit outside the gate's reach and can later be deleted without
-      # the count dropping. Raising it is free; lowering it is a decision somebody has to write down.
+      # TEST_FLOOR is the count this checkout produces: 217, being the 209 at the previous commit plus
+      # the eight this round added — the table gate (`requiredTablesFor` both ways, a missing
+      # `sync_pending` fatal only in the modes that read it), the DDL fallback (`sqlite_master` when
+      # `pragma_table_info` is refused) and its parser proved column-for-column against the live
+      # PRAGMA, and the probe-failure exit that keeps an unreadable schema from reading as a mismatch.
+      # The floor can only protect what is committed: the working tree holds tests CI never sees — an
+      # untracked `tools/serve-static.test.mjs` (13 checks) and uncommitted edits to tracked suites —
+      # so **raise the floor in the same commit that lands them**, or their checks sit outside the
+      # gate's reach and can later be deleted without the count dropping. Raising it is free; lowering
+      # it is a decision somebody has to write down.
       #
       # The count line is parsed tolerantly because the summary's format depends on whether stdout is a
       # TTY (`# tests 199` for TAP, `ℹ tests 199` for spec) and Node has changed that default between

@@ -57,28 +57,52 @@ than to assume a low volume is safe.
    behind production once — it defined neither stamp column while both were in use — which is exactly
    the case this check exists to catch.
 
-   **The column list is a gate, and the sync now runs it itself.** Before either writer takes a lease,
+   **Or simply run the gate.** The check the sync performs before its lease is a command:
+   `node --env-file=.env cloud-sync/verify.mjs --probe` locally, or with no local machine at all,
+   Actions → cloud-ops → probe. It makes exactly the reads the run makes — the same
+   `ANIME_COLUMNS`, the same `requiredTablesFor(CREATES_ROWS)` — and prints the buckets with the
+   same reason strings a run would record, which is the point: the artifact *is* the gate, so
+   "the table-valued `pragma_table_info` SELECT answers over the REST API" and "production has
+   every table the code reaches for" are proven by the thing that will later refuse the run,
+   not by an eyeball. Its exit codes match the run's: 0 clean, 1 a schema fault (the reason is in
+   the output), 2 the probe itself could not read. What it cannot see is column types, constraints
+   and indexes — the dump below is for those.
+
+   **The schema is a gate, and the sync now runs it itself.** Before either writer takes a lease,
    `assertLiveColumns()` (`cloud-sync/d1.mjs`) reads the live shape with
    `SELECT name, type, notnull, dflt_value FROM pragma_table_info('anime')` — the table-valued form,
    not a bare `PRAGMA` statement, because the REST `/query` endpoint is stricter about statement shape
-   than a SQLite shell is. If the read itself fails (the endpoint refuses it, the credentials are
-   wrong), the run stops with `exit_reason: "schema_probe_failed"` and exit code 2: that is a probe
-   failure, not a schema disagreement, and `verify.mjs` reports it as its own check so nobody hunts a
-   column that was never missing. When the probe answers, it is diffed against `ANIME_COLUMNS` in both
-   directions: a column the database lacks stops the run with `exit_reason: "schema_mismatch"`, exit
-   code 1 and `nothing was written` in the error, before the lease and before the takeover marker. So
-   does the one *extra* shape that can fail every insert — a column that is `NOT NULL` with no default,
-   since `insertRows()` omits every column it does not own. Either way the run records itself in
-   `sync_runs`, so the gate shows up in `verify.mjs` as an alarm instead of as a schedule that quietly
-   stopped. That is the failure the paragraph above was written to warn about — `sync-anilist.mjs` and
+   than a SQLite shell is — and `assertLiveTables()` reads
+   `SELECT name FROM sqlite_master WHERE type = 'table'`, checking every table the run reaches: the
+   four state tables always, the two genre tables for the AniList walk, and `sync_pending` only in
+   the modes that read it (`requiredTablesFor(CREATES_ROWS)` — mirror never queries the queue, so a
+   Phase 1 database is not gated on a table Phase 1 was never asked to create). If both reads fail
+   (the endpoint refuses them, the credentials are wrong), the run stops with
+   `exit_reason: "schema_probe_failed"` and exit code 2: that is a probe failure, not a schema
+   disagreement, and `verify.mjs` reports it as its own check so nobody hunts a column that was never
+   missing. `pragma_table_info` has never been exercised against the real endpoint, so the probe
+   carries a fallback: if the table-valued SELECT is refused, the `CREATE TABLE` text `sqlite_master`
+   kept is parsed instead (same lexical rules `apply-schema.mjs` splits files with), and the run
+   record's `schema_via` says which read answered — only when both fail does the probe failure fire.
+   When the reads answer, they are diffed in both directions: a column or a required table the
+   database lacks stops the run with `exit_reason: "schema_mismatch"`, exit code 1 and
+   `nothing was written` in the error, before the lease and before the takeover marker. So does the
+   one *extra* shape that can fail every insert — a column that is `NOT NULL` with no default, since
+   `insertRows()` omits every column it does not own — under its own reason,
+   `exit_reason: "schema_unwritable"` (also exit 1), because nothing is missing there and the repair
+   is a default or a nullable column, not a migration; a report that said "mismatch" would send the
+   operator hunting a column that is not missing. Either way the run records itself in `sync_runs`, so
+   the gate shows up in `verify.mjs` as an alarm instead of as a schedule that quietly stopped. That
+   is the failure the paragraph above was written to warn about — `sync-anilist.mjs` and
    `sync-kitsu.mjs` both name every `ANIME_COLUMNS` column in their SELECT and in their INSERT, so an
    ALTER nobody applied used to die on `no such column: …` mid-batch, having already taken the lease,
    with an error naming nothing. Ordinary extras — `catalogue_synced_at` above all — are counted in the
    run record as `extra_columns` and never block anything: production's `anime` has always had columns
    this job must not touch.
 
-   So the dump is no longer the enforcement, but it is still the first thing to send, because the gate
-   only answers the half the runbook needs: compare the live list against three things — `ANIME_COLUMNS`
+   So send the probe output first — it is the only artifact the run itself consumes, and the only
+   one that can still change the plan — then the dump, for the halves the gate cannot see: compare
+   the live list against three things — `ANIME_COLUMNS`
    in `cloud-sync/sync-anilist.mjs` (what the sync writes), the `CREATE TABLE anime` block in root
    `schema.sql` (what a fresh environment gets, and the file `config.test.mjs` proves can receive
    `seed.sql`), and `cloud-sync/schema.sql`'s two `ALTER` lines (what the upgrade adds). **If any of the
@@ -115,10 +139,13 @@ than to assume a low volume is safe.
 
    Read for four names — `sync_lock`, `api_usage`, `sync_runs`, `sync_pending` — and two columns on
    `anime` (`cloud_synced_at`, `catalogue_synced_at`). All present: the file is applied, go to step 3.
-   Any missing: it is not, and a Phase 1 run will still work (mirror never reads `sync_pending`;
-   `sync-anilist.mjs:745` only queries it when `CLOUD_CREATES_ROWS=1`) but it will die before the
-   loop when it tries to take the lease, reporting `exit_reason: "fatal"` and exit 1 having written
-   nothing. Apply it: Actions → cloud-ops → `apply-schema` (needs only the three CF secrets, and no
+   Any missing: the probe names it before any run does. Three of the four tables are required by
+   every mode and the two columns by every write, so their absence stops a run at the gate with
+   `exit_reason: "schema_mismatch"`, exit 1, naming the item — never a mid-run `fatal` after the
+   lease. `sync_pending` is the one that can wait: it is required only by the modes that read it
+   (`requiredTablesFor(CREATES_ROWS)`; the run loop only calls `pendingSlice()` when
+   `CREATES_ROWS`), so a Phase 1 database without it is a valid starting point and the probe says
+   exactly that. Apply it: Actions → cloud-ops → `apply-schema` (needs only the three CF secrets, and no
    wrangler), or locally `wrangler d1 execute anihub --remote --file=cloud-sync/schema.sql`. The file
    is idempotent; its last lines (the two `ALTER TABLE anime ADD COLUMN`) are the run-once tail and
    report `duplicate column name` on a second application. That error is the guard, so the job counts
@@ -231,8 +258,10 @@ reason about and one you are guessing at.
    `anihub` in place — so an undo means repointing the app (or copying rows back), and the window is
    short: the free tier keeps 24 hours of history. Restore early or restore nothing.
 
-2. **Dump the schema** so the audit's later claims are about data, not assumptions. The command and
-   how to read the answer are in Deploy step 2; keep the output next to the counts.
+2. **Run the schema gate and dump the schema** so the audit's later claims are about data, not
+   assumptions. `node --env-file=.env cloud-sync/verify.mjs --probe` first — it is the exact check
+   the next run will make, and its output is the artifact to keep — then the two dump commands from
+   Deploy step 2.
 
 3. **Scope the first run** rather than letting the schedule do 1000 titles at once:
 
@@ -273,11 +302,11 @@ reason about and one you are guessing at.
    `added_at`, any `sched_*`, `catalogue_synced_at`, `rank`, `alt_seasons`, the AniSkip keys; a row
    appearing (mirror never inserts) or disappearing; a `source_ids` key going missing; the `anilist`
    id inside it moving. The lost-key rule is not decoration: `json_patch` deletes any key whose patch
-   value is `null`, and this run builds the patch from the row's own keys plus `anilist`/`mal` and
-   never sends a null (`sync-anilist.mjs:322`) — so a key that disappears means the merge itself
-   broke. The response to any violation is to go back to the safe phase while it is worked out
-   (`gh variable delete CLOUD_CREATES_ROWS -R <owner>/<repo>` and `gh variable delete MODE
-   -R <owner>/<repo>`, which is `mirror` by derivation).
+   value is `null`, and this run builds the patch in `rowFromMedia` by spreading the stored keys and
+   adding only `anilist`/`mal` — a value that is absent is never written as null — so a key that
+   disappears means the merge itself broke. The response to any violation is to go back to the safe
+   phase while it is worked out (`gh variable delete CLOUD_CREATES_ROWS -R <owner>/<repo>` and
+   `gh variable delete MODE -R <owner>/<repo>`, which is `mirror` by derivation).
 
    `--mode delta` and `--mode takeover` carry the same rules into the later phases: creation becomes
    allowed, and the air slot plus `trend_rank` are released at takeover. Two tests keep the runbook
@@ -699,18 +728,23 @@ One JSON line per run, also stored in `sync_runs`:
 writer owns the lease — expected and harmless), `breaker_aborted` (403s; look at `by403`),
 `legacy_still_running` (takeover with the local task still ticking: disable the task, pass
 `--force-takeover`, or go back to `mirror`), `schema_mismatch` (production `anime` lacks a column
-`ANIME_COLUMNS` names, or carries a `NOT NULL` extra with no default: apply `cloud-sync/schema.sql`
-or fix the list — the run stopped before the lease and wrote nothing but its own run record, so this
-is a schema decision, not a failure to retry), `schema_probe_failed` (exit code 2: the column read
-itself failed — a different failure from a mismatch, and the fix is to make the probe answer, see
-the deploy notes above), `lease_lost` and `fatal` (exit code 1, alert on these).
+`ANIME_COLUMNS` names or lacks a table the run reaches: apply `cloud-sync/schema.sql` or fix the
+list — the run stopped before the lease and wrote nothing but its own run record, so this is a
+schema decision, not a failure to retry), `schema_unwritable` (exit code 1: nothing is missing,
+but `anime` has an extra column that is `NOT NULL` with no default, so every insert that omits it
+would fail — give it a default or make it nullable), `schema_probe_failed` (exit code 2: the reads
+themselves failed — the endpoint refused both the table-valued `pragma_table_info` SELECT and the
+`sqlite_master` fallback — which is a different failure from a mismatch, and the fix is to make the
+probe answer, see the deploy notes above), `lease_lost` and `fatal` (exit code 1, alert on these).
 
 `items_processed` counts catalogue rows *read*, not rows written; `created` is how many of them
 were inserts; `unmapped` is how many carry no `source_ids.anilist`, so they cannot be refreshed
 from here at all; `extra_columns` is how many columns `anime` has that this job never names
 (`catalogue_synced_at` and the rest of the local task's set — a count, not a verdict, and it is
 non-zero on a healthy database; the one extra shape that is a verdict, `NOT NULL` with no default,
-never reaches this count because the run stops as `schema_mismatch` instead). `skipped` is the
+never reaches this count because the run stops as `schema_unwritable` instead). `schema_via` says
+which read answered the gate — `pragma_table_info` normally, `sqlite_master` when the endpoint
+refused the table-valued SELECT and the columns came from parsed DDL. `skipped` is the
 hydrated media this run decided not to write, with the reason
 per slug. `genre_labels_unmapped` is the AniList labels that have no row in the site's `genre`
 table — a growing list there means the shelves need a new genre row, not a new mapping rule.
