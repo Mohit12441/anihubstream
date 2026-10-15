@@ -152,7 +152,9 @@ than to assume a low volume is safe.
    lease. `sync_pending` is the one that can wait: it is required only by the modes that read it
    (`requiredTablesFor(CREATES_ROWS)`; the run loop only calls `pendingSlice()` when
    `CREATES_ROWS`), so a Phase 1 database without it is a valid starting point and the probe says
-   exactly that — and if a mirror run ever dies with `no such table: sync_pending` anyway, the mode
+   exactly that — one direction only: a clean probe in `mirror` does not certify Phase 2, so apply
+   the file before the first `delta` run instead of letting that run stop at the gate naming
+   `sync_pending` — and if a mirror run ever dies with `no such table: sync_pending` anyway, the mode
    conditioning and the query surface have drifted apart: a code assertion that failed, not a
    schema to apply. Apply the file: Actions → cloud-ops → `apply-schema` (needs only the three CF secrets, and no
    wrangler), or locally `wrangler d1 execute anihub --remote --file=cloud-sync/schema.sql`. The file
@@ -262,10 +264,15 @@ reason about and one you are guessing at.
    npx wrangler d1 execute anihub --remote --json --command "SELECT count(*) AS rows FROM anime" > preflight-counts.json
    ```
 
-   Write down the `latest_backup_timestamp` it prints. Two things to know about the undo before you
-   need it: `time-travel restore` produces a **new** database from that point — it does not rewind
-   `anihub` in place — so an undo means repointing the app (or copying rows back), and the window is
-   short: the free tier keeps 24 hours of history. Restore early or restore nothing.
+   Write down the `latest_backup_timestamp` it prints. It has to predate the first cloud *write*,
+   and the first writer can be a scheduled tick: a `schedule:` workflow starts firing as soon as it
+   is on the default branch — every 30 minutes here, with no enable step — so when you are pushing
+   and deploying in one sitting, take this bookmark *before* the push. (A tick that fires before
+   the Secrets are saved stops at the probe with exit 2 — no credentials, no writes.) Two things to
+   know about the undo before you need it: `time-travel restore` produces a **new** database from
+   that point — it does not rewind `anihub` in place — so an undo means repointing the app (or
+   copying rows back), and the window is short: the free tier keeps 24 hours of history. Restore
+   early or restore nothing.
 
 2. **Run the schema gate and dump the schema** so the audit's later claims are about data, not
    assumptions. `node --env-file=.env cloud-sync/verify.mjs --probe` first — it is the exact check
@@ -284,6 +291,12 @@ reason about and one you are guessing at.
    or more, or `s403` is not 0, stop and read *If 403s still happen* before going further. A non-zero
    `bisects` is not a stop: it means a 25-alias document was refused as too complex and the batch was
    halved, which costs requests (read it against the budget) and loses nothing.
+
+   Keep those two values on the command line. Pinned as repo Variables — the reflex if you scope a
+   *dispatched* run instead — they scope every run for the rest of the UTC day, because `api_usage`
+   is one shared counter across runners: the ticks and the soak then stop at `budget_exhausted`,
+   which is a recorded outcome and exits 0, so nothing alerts — the day simply goes quiet. If you
+   must scope by Variable, delete it the moment the scoped run's summary is read.
 
 4. **Snapshot the rows, run step 3, snapshot the same rows again, and compare them structurally.** A
    textual `diff` of two JSON dumps is not that check: `source_ids` is a JSON document stored as text,
@@ -471,6 +484,11 @@ node cloud-sync/sync-anilist.mjs --force-takeover      # or tick the box on a di
 That writes `sync_meta.cloud_takeover` (`{at, at_iso, owner, reason}`) and proceeds. The marker is
 durable, so later ticks pass without needing the flag again, and `report` judges every row against
 it.
+
+**The flag is read only in `takeover`.** `mirror` and `delta` never run an interlock for it to
+override, so a forced dispatch taken while the switches still mean `delta` stamps no marker — and
+the first run after `LEGACY_WRITER_ACTIVE=0` lands on `legacy_still_running` as if the box had never
+been ticked. Switch first, force second: that dispatch *is* the Phase 3 run.
 
 A takeover run that gets through honestly — the task really was disabled, so the heartbeat was
 already stale — writes the same marker with `reason` naming the quiet window. It is not a record of
