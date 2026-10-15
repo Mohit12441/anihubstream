@@ -36,6 +36,11 @@ const TUE = Math.floor(Date.UTC(2026, 9, 13, 1, 0) / 1000);
 const SUN = Math.floor(Date.UTC(2026, 9, 18, 14, 0) / 1000);
 const FRI = Math.floor(Date.UTC(2026, 10, 20, 1, 0) / 1000);
 
+/* node:sqlite hands back null-prototype rows while the fetch shim hands back plain objects built
+   from the same values; deepStrictEqual compares prototypes, so raw-row assertions give both
+   sides a plain copy first. The values, and only the values, are the subject. */
+const plain = (rows) => rows.map((r) => ({ ...r }));
+
 /* ------------------------------------------------------------------ world */
 
 class World {
@@ -831,6 +836,8 @@ describe('migration: the four phases against real SQLite', () => {
     assert.equal(shape.via, 'sqlite_master', 'the fallback is what answered, and it says so');
     assert.deepEqual(shape.missing, [], 'the stored DDL keeps every column, the ALTER-appended cloud_synced_at included');
     assert.deepEqual(shape.unwritable, [], 'and notnull parses the same way the PRAGMA reports it (checked column-for-column in the parser describe)');
+    const ddlRow = { ...world.db.prepare(`SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'anime'`).get() };
+    assert.deepEqual(shape.raw, [ddlRow], 'the raw evidence is the sqlite_master row the fallback parsed, kept exactly as read');
 
     const { summary, exitCode } = await runPass(world, MIRROR);
     assert.equal(summary.exit_reason, 'catalogue_end', 'a fallback read is enough to run on');
@@ -842,6 +849,13 @@ describe('migration: the four phases against real SQLite', () => {
     const report = await withShim(world, MIRROR, () => audit({ mode: 'mirror', createsRows: false, claimsSchedule: false }));
     assert.equal(report.state.columns.via, 'sqlite_master');
     assert.ok(report.ok, `the fallback read must audit clean:\n${report.failures.join('\n')}`);
+
+    /* The step-2 artifact over the same fallback: the pass is labelled and its evidence is the DDL
+       itself, so a run that green-lit over parsed text cannot read like one that hit the API. */
+    const ddlProbe = await withShim(world, MIRROR, () => probeSchema({ mode: 'mirror', createsRows: false }));
+    assert.equal(ddlProbe.ok, true, 'a fallback read is still an answer');
+    assert.equal(ddlProbe.schema_via, 'sqlite_master');
+    assert.deepEqual(ddlProbe.columns.raw, [ddlRow], 'the raw is the DDL text, not a re-summary of what the parser claimed');
   });
 
   /* The other way the gate can fail, and the one that must not impersonate a mismatch: the probe
@@ -877,6 +891,15 @@ describe('migration: the four phases against real SQLite', () => {
     assert.match(lines, /the last run ended cleanly/, 'schema_probe_failed is an alarm, like schema_mismatch');
     assert.ok(auditReport.state.columns.error, 'the audit keeps the probe error rather than inventing a diff');
     assert.equal(auditReport.state.tables, undefined, 'a probe that never read claims nothing about tables');
+
+    /* The standalone probe says the same, and claims as little: a probe_error and no buckets — an
+       empty `columns.missing: []` would read as "no column is missing" when nothing was read. */
+    const failedProbe = await withShim(world, MIRROR, () => probeSchema({ mode: 'mirror', createsRows: false }));
+    assert.match(failedProbe.probe_error ?? '', /failed on both reads/);
+    assert.match(failedProbe.probe_error, /simulated/, 'the underlying refusal is carried, not paraphrased away');
+    assert.equal(failedProbe.columns, undefined);
+    assert.equal(failedProbe.tables, undefined);
+    assert.equal(failedProbe.ok, false);
 
     /* The fix is the read, not the schema: with the endpoint answering again the same run passes the
        gate and refreshes. */
@@ -987,9 +1010,15 @@ describe('migration: the four phases against real SQLite', () => {
     const cleanProbe = await withShim(world, MIRROR, () => probeSchema({ mode: 'mirror', createsRows: false }));
     assert.equal(cleanProbe.ok, true, `a healthy schema probes clean: ${cleanProbe.error ?? cleanProbe.probe_error ?? ''}`);
     assert.equal(cleanProbe.fault, null);
-    assert.equal(cleanProbe.via, 'pragma_table_info', 'the preferred read answered — the fallback is a contingency, not the normal path');
+    assert.equal(cleanProbe.schema_via, 'pragma_table_info', 'the preferred read answered — the fallback is a contingency, not the normal path');
     assert.deepEqual(cleanProbe.tables.missing, []);
     assert.deepEqual(cleanProbe.columns.missing, []);
+    /* The evidence beside the verdict: the probe prints the rows each answer was computed from, so
+       a wrong bucket sits next to the right raw. Compared against the database's own reads — the
+       ground truth the parser fidelity test also uses — not against a second trip through the
+       probe, which could only prove the helper agrees with itself. */
+    assert.deepEqual(plain(cleanProbe.columns.raw), plain(world.db.prepare(`SELECT name, type, "notnull", dflt_value FROM pragma_table_info('anime')`).all()));
+    assert.deepEqual(plain(cleanProbe.tables.raw), plain(world.db.prepare(`SELECT name FROM sqlite_master WHERE type = 'table' ORDER BY name`).all()));
 
     /* Phase 1 against the production starting point this round was written for: the schema applied
        additively, minus the queue. Mirror must run on it — that is the run the plan starts with. */

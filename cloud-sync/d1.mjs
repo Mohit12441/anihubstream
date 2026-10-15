@@ -295,26 +295,32 @@ export function columnsFromDdl(sql) {
  * distinction an operator wants when the two disagree some day. Only when both reads fail does this
  * throw, naming both, so the run's reason says the probe itself never answered rather than pretending
  * to be a mismatch.
+ *
+ * `raw` is what the winning read returned, exactly as it returned it — the pragma rows, or the
+ * single `sqlite_master` row whose DDL was parsed. The probe artifact prints it next to the diff,
+ * so a wrong bucket is visible against the evidence it was computed from instead of every reader
+ * inheriting a bug in this helper. Never re-derived from `rows`: the two may disagree only when
+ * the diff is wrong, which is the case this ships to make visible.
  */
 export async function assertLiveColumns({ table = 'anime', columns }) {
   if (!/^[a-z_][a-z0-9_]*$/i.test(table)) throw new Error(`d1: bad table name ${table}`);
-  let rows;
+  let raw;
   let via = 'pragma_table_info';
   try {
-    rows = await d1All(`SELECT name, type, "notnull", dflt_value FROM pragma_table_info('${table}')`);
+    raw = await d1All(`SELECT name, type, "notnull", dflt_value FROM pragma_table_info('${table}')`);
   } catch (pragmaErr) {
     via = 'sqlite_master';
-    let ddlRow;
     try {
-      ddlRow = await d1First(`SELECT sql FROM sqlite_master WHERE type = 'table' AND name = '${table}'`);
+      const ddlRow = await d1First(`SELECT sql FROM sqlite_master WHERE type = 'table' AND name = '${table}'`);
+      /* A missing row is a missing table, which reads as every column missing — named by the
+         caller, never silently passed. `[]` is also the raw truth: sqlite_master returned nothing. */
+      raw = ddlRow ? [ddlRow] : [];
     } catch (ddlErr) {
       throw new Error(`d1: column probe failed on both reads — pragma_table_info: ${pragmaErr.message}; sqlite_master: ${ddlErr.message}`);
     }
-    /* A missing row is a missing table, which reads as every column missing — named by the
-       caller, never silently passed. */
-    rows = ddlRow?.sql ? columnsFromDdl(ddlRow.sql) : [];
   }
-  return { ...diffLiveColumns(rows, columns), via };
+  const rows = via === 'sqlite_master' ? (raw[0]?.sql ? columnsFromDdl(raw[0].sql) : []) : raw;
+  return { ...diffLiveColumns(rows, columns), via, raw };
 }
 
 /**
@@ -323,12 +329,14 @@ export async function assertLiveColumns({ table = 'anime', columns }) {
  * has moved the failure, not prevented it — and whether a missing queue table kills a run at all
  * depends on a mode switch (the queue is only read by the modes that create rows), an answer that
  * belongs in the gate rather than in a paragraph of reasoning. One sqlite_master read; `missing`,
- * named, is the whole report.
+ * named, is the whole report. `raw` is that read's rows, ordered — the probe prints the full table
+ * list beside the verdict, so "required subset present" is checkable against what the database
+ * actually holds.
  */
 export async function assertLiveTables({ tables }) {
-  const rows = await d1All(`SELECT name FROM sqlite_master WHERE type = 'table'`);
-  const have = new Set(rows.map((r) => r.name));
-  return { missing: tables.filter((t) => !have.has(t)) };
+  const raw = await d1All(`SELECT name FROM sqlite_master WHERE type = 'table' ORDER BY name`);
+  const have = new Set(raw.map((r) => r.name));
+  return { missing: tables.filter((t) => !have.has(t)), raw };
 }
 
 /**

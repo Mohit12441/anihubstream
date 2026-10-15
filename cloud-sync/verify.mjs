@@ -5,9 +5,12 @@
 //   node --env-file=.env cloud-sync/verify.mjs
 //
 // `--probe` runs just the schema gate (Actions → cloud-ops → probe): the same reads the sync makes
-// before it takes its lease, printed as the buckets this mode depends on. That is what step 2 of
-// cloud-sync/README.md collects, so the artifact an operator reads is written by the check that
-// will later refuse the run, not by an eyeball comparing a dump.
+// before it takes its lease, printed as the buckets this mode depends on **and the raw rows each
+// answer was computed from** — `columns.raw`, `tables.raw` — so the verdict ships with its
+// evidence: a wrong bucket is visible next to the right rows, instead of three readers inheriting
+// the same bug in the shared helper. That is what step 2 of cloud-sync/README.md collects, so the
+// artifact an operator reads is written by the check that will later refuse the run, not by an
+// eyeball comparing a dump.
 //
 // It answers the question the four-phase migration turns on — is there still exactly one writer
 // per column? — using the two stamps on `anime`, plus the checks the stamps cannot see: vocabulary
@@ -40,7 +43,7 @@ function runLine(summary) {
     const s = JSON.parse(summary);
     return {
       mode: s.mode, fill_schedule: s.fill_schedule, items_processed: s.items_processed, created: s.created, requests_made: s.requests_made,
-      s403: s.s403, s429: s.s429, breaker_opens: s.breaker_opens, skipped: s.skipped,
+      s403: s.s403, s429: s.s429, breaker_opens: s.breaker_opens, skipped: s.skipped, schema_via: s.schema_via,
       effective_interval_ms: s.effective_interval_ms, budget_remaining: s.budget_remaining, error: s.error,
     };
   } catch {
@@ -319,9 +322,12 @@ export async function audit(overrides = {}) {
  * thing that will later refuse the run rather than by a parallel script that could drift from it.
  *
  * Read-only. Returns a report always; throws never. `probe_error` (exit 2 in the CLI) is the
- * schema_probe_failed case — the reads themselves refused, which says nothing about the schema.
- * `ok` false with a `fault` is the schema_mismatch/schema_unwritable case — the reads answered
- * and the answer is not good enough to run on (exit 1).
+ * schema_probe_failed case — the reads themselves refused, which says nothing about the schema and
+ * claims nothing: no buckets, no raw. `ok` false with a `fault` is the schema_mismatch/
+ * schema_unwritable case — the reads answered and the answer is not good enough to run on (exit 1).
+ * `columns.raw`/`tables.raw` carry the rows each read returned, so the artifact is the verdict and
+ * its ground truth together; `schema_via` names the read that answered, the same field name the
+ * run record uses, so a DDL-answered pass does not read like an API-answered one.
  */
 export async function probeSchema({ mode = MODE, createsRows = CREATES_ROWS } = {}) {
   const required = requiredTablesFor(createsRows);
@@ -333,9 +339,9 @@ export async function probeSchema({ mode = MODE, createsRows = CREATES_ROWS } = 
     const shape = await assertLiveColumns({ columns: ANIME_COLUMNS });
     const tableShape = await assertLiveTables({ tables: required });
     const fault = schemaFaults({ columns: shape, tables: tableShape });
-    out.via = shape.via;
-    out.columns = { wanted: ANIME_COLUMNS.length, missing: shape.missing, extra: shape.extra, unwritable: shape.unwritable };
-    out.tables = { required, missing: tableShape.missing };
+    out.schema_via = shape.via;
+    out.columns = { wanted: ANIME_COLUMNS.length, missing: shape.missing, extra: shape.extra, unwritable: shape.unwritable, raw: shape.raw };
+    out.tables = { required, missing: tableShape.missing, raw: tableShape.raw };
     out.fault = fault?.reason ?? null;
     out.error = fault?.error ?? null;
     out.ok = !fault;
@@ -356,7 +362,7 @@ if (invokedDirectly) {
       console.log(JSON.stringify(probe, null, process.env.QUIET ? 0 : 2));
       if (probe.probe_error) console.error(`probe: ${probe.probe_error}`);
       else if (!probe.ok) console.error(`probe: ${probe.error}`);
-      else console.error(`OK mode=${probe.mode}: columns via ${probe.via}, ${probe.tables.required.length} tables and ${probe.columns.wanted} columns all present`);
+      else console.error(`OK mode=${probe.mode}: columns via ${probe.schema_via}, ${probe.tables.required.length} tables and ${probe.columns.wanted} columns all present`);
       process.exitCode = probe.probe_error ? 2 : probe.ok ? 0 : 1;
     } else {
       const report = await audit();

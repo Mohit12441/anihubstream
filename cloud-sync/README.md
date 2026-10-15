@@ -61,12 +61,19 @@ than to assume a low volume is safe.
    `node --env-file=.env cloud-sync/verify.mjs --probe` locally, or with no local machine at all,
    Actions → cloud-ops → probe. It makes exactly the reads the run makes — the same
    `ANIME_COLUMNS`, the same `requiredTablesFor(CREATES_ROWS)` — and prints the buckets with the
-   same reason strings a run would record, which is the point: the artifact *is* the gate, so
-   "the table-valued `pragma_table_info` SELECT answers over the REST API" and "production has
-   every table the code reaches for" are proven by the thing that will later refuse the run,
-   not by an eyeball. Its exit codes match the run's: 0 clean, 1 a schema fault (the reason is in
-   the output), 2 the probe itself could not read. What it cannot see is column types, constraints
-   and indexes — the dump below is for those.
+   same reason strings a run would record, plus the raw rows each answer was computed from:
+   `columns.raw` (the `pragma_table_info` rows, or the `sqlite_master` row when the fallback
+   answered) and `tables.raw` (every table name on the database). The verdict ships with its
+   evidence, so a wrong bucket is visible next to the right rows instead of agreeing with a bug in
+   the helper all three readers share. `schema_via` names the read that answered — the same field
+   the run record uses — so a pass over the DDL fallback does not read like a pass over the API.
+   That is the point: the artifact *is* the gate, so "the table-valued `pragma_table_info` SELECT
+   answers over the REST API" and "production has every table the code reaches for" are proven by
+   the thing that will later refuse the run, not by an eyeball. Its exit codes match the run's:
+   0 clean, 1 a schema fault (the reason is in the output), 2 the probe itself could not read — and
+   in that case it prints no buckets at all, because an empty `missing: []` would read as "nothing
+   is missing" when nothing was read. What it cannot see is column types, constraints and indexes —
+   the dump below is for those.
 
    **The schema is a gate, and the sync now runs it itself.** Before either writer takes a lease,
    `assertLiveColumns()` (`cloud-sync/d1.mjs`) reads the live shape with
@@ -145,7 +152,9 @@ than to assume a low volume is safe.
    lease. `sync_pending` is the one that can wait: it is required only by the modes that read it
    (`requiredTablesFor(CREATES_ROWS)`; the run loop only calls `pendingSlice()` when
    `CREATES_ROWS`), so a Phase 1 database without it is a valid starting point and the probe says
-   exactly that. Apply it: Actions → cloud-ops → `apply-schema` (needs only the three CF secrets, and no
+   exactly that — and if a mirror run ever dies with `no such table: sync_pending` anyway, the mode
+   conditioning and the query surface have drifted apart: a code assertion that failed, not a
+   schema to apply. Apply the file: Actions → cloud-ops → `apply-schema` (needs only the three CF secrets, and no
    wrangler), or locally `wrangler d1 execute anihub --remote --file=cloud-sync/schema.sql`. The file
    is idempotent; its last lines (the two `ALTER TABLE anime ADD COLUMN`) are the run-once tail and
    report `duplicate column name` on a second application. That error is the guard, so the job counts
@@ -744,7 +753,9 @@ from here at all; `extra_columns` is how many columns `anime` has that this job 
 non-zero on a healthy database; the one extra shape that is a verdict, `NOT NULL` with no default,
 never reaches this count because the run stops as `schema_unwritable` instead). `schema_via` says
 which read answered the gate — `pragma_table_info` normally, `sqlite_master` when the endpoint
-refused the table-valued SELECT and the columns came from parsed DDL. `skipped` is the
+refused the table-valued SELECT and the columns came from parsed DDL — and it is the same field
+the probe prints, there beside `columns.raw`/`tables.raw`, the rows the answer was computed from.
+`skipped` is the
 hydrated media this run decided not to write, with the reason
 per slug. `genre_labels_unmapped` is the AniList labels that have no row in the site's `genre`
 table — a growing list there means the shelves need a new genre row, not a new mapping rule.

@@ -74,9 +74,12 @@ jobs:
 
       # The run's own gate, standalone: the same ANIME_COLUMNS, requiredTablesFor(CREATES_ROWS)
       # and schemaFaults cloud-sync/sync-anilist.mjs applies before its lease — with the columns
-      # read through pragma_table_info and the sqlite_master fallback. Exit 0 clean, 1 on a fault
-      # (the reason is in the output), 2 when the probe itself cannot read. This is the artifact
-      # step 2 of the runbook collects, so what an operator reads is what the run enforces.
+      # read through pragma_table_info and the sqlite_master fallback. The output carries the raw
+      # rows each answer was computed from (`columns.raw`, `tables.raw`) and the read that
+      # answered (`schema_via`), so the verdict can be checked against its evidence. Exit 0 clean,
+      # 1 on a fault (the reason is in the output), 2 when the probe itself cannot read — and then
+      # it prints no buckets at all, because an empty missing-set would read as a pass. This is the
+      # artifact step 2 of the runbook collects, so what an operator reads is what the run enforces.
       - name: probe the live schema
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
