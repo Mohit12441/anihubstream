@@ -37,11 +37,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           # Pinned to an exact minor, not `'22'`: setup-node resolves `'22'` to whatever the newest
-          # 22.x is, so a runner-image update can change what runs the tests without a commit. 22.18
-          # is the floor the suite needs — `node:sqlite` is unflagged from 22.13 and `config.test.mjs`
-          # imports `src/data/model.ts` straight from a test, which is type stripping from 22.18. Pin
-          # lower and the job dies on import, looking like a code bug.
-          node-version: '22.18'
+          # 22.x is, so a runner-image update can change what runs the tests without a commit. 24.19
+          # is the minor the suite was measured green on. The old floor rationale still holds
+          # (`node:sqlite` unflagged from 22.13, and the `src/data/model.ts` import in config.test.mjs
+          # needs 22.18's type stripping — pin lower and the job dies on import, looking like a code
+          # bug), but the 22.x line tops out below the SQLite the migration suite needs: its teardown
+          # runs `ALTER TABLE anime DROP COLUMN` on a table whose body carries block comments, which
+          # fails with 'incomplete input' through 22.23.3 (SQLite 3.51.3) and passes on 24.19's 3.53.3.
+          node-version: '24.19'
           cache: npm
 
       # The sync path deliberately has no dependencies; this is the test and build path, where the

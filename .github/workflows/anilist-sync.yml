@@ -42,7 +42,7 @@ jobs:
           # stripping — fetch and node:crypto only — but having the job that runs this code on a
           # different Node than the job that tests it is a way to find out about the difference at
           # 03:15, so nothing in .github/workflows resolves 'latest of a major'.
-          node-version: '22.18'
+          node-version: '24.19'
 
       - name: jitter the start (R11)
         # JITTER_WINDOW_S is a shell variable for this step only — it is read by bash, never by
