@@ -58,8 +58,15 @@ jobs:
       # read from the npm script itself because a check that names its own directories can drift from
       # what `npm test` globs, which is the bug it is meant to catch.
       #
-      # TEST_FLOOR is the count this checkout produces: 228, being the 218 at the previous commit plus the
-      # ten the response-envelope round added — the D1 REST parser proved against both envelope shapes with
+      # TEST_FLOOR is the count this checkout produces: 230, being the 228 at the previous commit plus the
+      # two the pattern-limit round added — live D1 refuses any LIKE/GLOB pattern over 50 bytes (measured
+      # against the production endpoint: 50 answers, 51 is HTTP 400 `LIKE or GLOB pattern too complex`), and
+      # the audit's added_at check shipped a 75-byte one, which killed `ops → report` at that statement
+      # while the probe before it read fine. node:sqlite enforces no such limit, so only a prod run could
+      # find it: the guards are now a scan of every shipped pattern literal plus a proof that the split
+      # halves flag the shapes the whole flagged, read out of verify.mjs itself. The 228 was the 218 at
+      # the previous commit plus the ten the response-envelope round added — the D1 REST parser proved
+      # against both envelope shapes with
       # a stubbed fetch (the live array-wrapped `result` and the object form), its empty/malformed cases
       # that must read as zero rows and a named mismatch rather than a healthy schema, and the two probe
       # readers driven through the live shape. The 218 was the 217 at the previous commit plus the
@@ -70,7 +77,7 @@ jobs:
       # against the live PRAGMA, and the probe-failure exit that keeps an unreadable schema from reading
       # as a mismatch. That round raised this comment and missed the value below, which still said 209
       # until the next commit — the pair is caught up. Every layer above was measured in a throwaway
-      # worktree at HEAD plus its patch, this one included: 228, green.
+      # worktree at HEAD plus its patch, this one included: 230, green.
       # The floor can only protect what is committed: the working tree holds tests CI never sees — an
       # untracked `tools/serve-static.test.mjs` (13 checks) and uncommitted edits to tracked suites —
       # so **raise the floor in the same commit that lands them**, or their checks sit outside the
@@ -82,7 +89,7 @@ jobs:
       # versions.
       - name: tests
         env:
-          TEST_FLOOR: 228
+          TEST_FLOOR: 230
         run: |
           set -euo pipefail
           total=0

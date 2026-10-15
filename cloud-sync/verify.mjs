@@ -239,8 +239,18 @@ export async function audit(overrides = {}) {
   const badDay = await count('SELECT count(*) AS n FROM anime WHERE sched_day IS NOT NULL AND (sched_day < 1 OR sched_day > 7)');
   add('sched_day is 1..7 with Sunday as 7', badDay === 0, `${badDay} rows`);
 
+  /* Live D1 refuses any LIKE/GLOB pattern longer than 50 bytes — measured against the production
+     endpoint: 50 passes, 51 comes back HTTP 400 'LIKE or GLOB pattern too complex'. The single
+     pattern that pinned this shape is 75, so it never reached a row: the full audit died at this
+     statement while the probe before it read fine. Split into its two halves — the date-shaped
+     head (44) and the time-shaped tail (34) — plus the length that ties them: in a 19-character
+     string whose first 11 are `dddd-dd-dd `, character 11 is the only space there is, so the
+     tail's space can anchor nowhere else. node:sqlite enforces no such limit, which is exactly why
+     the guard is cloud-sync/pattern-limit.test.mjs rather than a run against prod. */
   const badAdded = await count(`SELECT count(*) AS n FROM anime WHERE added_at IS NOT NULL
-    AND added_at NOT GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9] [0-9][0-9]:[0-9][0-9]:[0-9][0-9]'`);
+    AND (length(added_at) <> 19
+      OR added_at NOT GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9] *'
+      OR added_at NOT GLOB '* [0-9][0-9]:[0-9][0-9]:[0-9][0-9]')`);
   add('added_at is datetime text', badAdded === 0, `${badAdded} rows`,
     { why: 'the Just Added shelf sorts this column as text, so a different shape sorts into the wrong decade' });
 
