@@ -174,6 +174,11 @@ than to assume a low volume is safe.
 3. **Repo Settings → Secrets and variables → Actions**
    - Secrets: `CF_ACCOUNT_ID`, `CF_DATABASE_ID`, `CF_API_TOKEN` (D1:Edit on that account,
      nothing more), optionally `ANILIST_RELAY_PREFIX`
+   - Paste each one as a single unbroken line, then run Actions → cloud-ops → `doctor-secrets` before
+     the first sync. It is the only command that can tell a secret with a line break *inside* it apart
+     from a secret that is simply the wrong string, and in a masked job log the two are identical; it
+     writes nothing, reads exactly `SELECT 1`, and prints lengths, character classes, indexes and
+     digests — never a value.
    - Variables: leave empty to take the defaults in `.env.example` — which is Phase 1 below
 4. **Leave the phase Variables unset** while the Windows task still runs. Unset is `mirror`,
    the only mode that is safe beside it. See "Sole writer: the four phases" below for what each
@@ -796,7 +801,12 @@ but `anime` has an extra column that is `NOT NULL` with no default, so every ins
 would fail — give it a default or make it nullable), `schema_probe_failed` (exit code 2: the reads
 themselves failed — the endpoint refused both the table-valued `pragma_table_info` SELECT and the
 `sqlite_master` fallback — which is a different failure from a mismatch, and the fix is to make the
-probe answer, see the deploy notes above), `lease_lost` and `fatal` (exit code 1, alert on these).
+probe answer, see the deploy notes above). Before hunting a column, run `Actions → cloud-ops → doctor-secrets`:
+a stored secret with a line break *inside* it never reaches Cloudflare at all, because `Headers.append`
+refuses the value, and the runner masks exactly that value to `***` in the log — measured on the pinned
+Node, a break at the END of a value is trimmed and sent, so the only version of this failure is a break
+at index 0 or somewhere in the middle, and the doctor's two digests say whether the saved secret is the
+right token pasted badly or a different string entirely. Then `lease_lost` and `fatal` (exit code 1, alert on these).
 
 `items_processed` counts catalogue rows *read*, not rows written; `created` is how many of them
 were inserts; `unmapped` is how many carry no `source_ids.anilist`, so they cannot be refreshed
