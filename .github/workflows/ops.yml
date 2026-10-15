@@ -1,16 +1,29 @@
 name: cloud-ops
 
-# Three operator commands against the live database, all dispatched by hand and none needing
+# Four operator commands against the live database, all dispatched by hand and none needing
 # a local machine, wrangler or an npm install — the same property the sync jobs have.
 #
 #   Actions → cloud-ops → Run workflow → apply-schema   (idempotent; safe to re-run)
 #   Actions → cloud-ops → Run workflow → probe          (the schema gate alone: the reads a sync makes first)
 #   Actions → cloud-ops → Run workflow → report         (read-only audit, exit 1 on a broken invariant)
+#   Actions → cloud-ops → Run workflow → doctor-secrets (the credentials a run dies on, described not printed)
 #
 # Nothing here runs on a schedule on purpose: a schema change and an audit are decisions, not
 # chores. `probe` is what step 2 of the migration collects — it runs the same assertLiveColumns/
 # assertLiveTables/requiredTablesFor the writers do, so the artifact *is* the gate — and `report`
 # is what you read after each phase of the migration in cloud-sync/README.md.
+#
+# `doctor-secrets` is the one that answers a question the other three cannot: they all read the same
+# `${{ secrets.* }}`, so when a secret is malformed every job fails identically and the log masks the
+# value that caused it. It binds the same secrets from the same repository and reports only derived
+# facts — see the header of cloud-sync/doctor-secrets.mjs for why the distinction it draws (a break
+# at the end of a value is trimmed and sent; anywhere else is not) is the useful one.
+#
+# All four jobs pin the Node that ci.yml and the two sync jobs pin, and that parity is a claim about
+# what this workflow proves rather than a housekeeping preference: `probe` is the artifact step 2 of
+# the migration collects because it runs the same schema gate a run runs, so a probe executed under a
+# different engine than the writers is a verdict about a run nobody is doing. (22.18 sat here after
+# the sync jobs moved to 24.19; see anilist-sync.yml for why the minor matters at all.)
 
 on:
   workflow_dispatch:
@@ -23,6 +36,7 @@ on:
           - apply-schema
           - probe
           - report
+          - doctor-secrets
       schema_file:
         description: 'For apply-schema: the file to apply'
         required: false
@@ -45,8 +59,9 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          # Exact minor, matching ci.yml and the sync jobs — see the note in anilist-sync.yml.
-          node-version: '22.18'
+          # The same pin as ci.yml and the two sync jobs — see the note at the top of this file for
+          # why that parity is a claim this workflow makes, not a detail it can drift on.
+          node-version: '24.19'
 
       # One statement per D1 call, 'duplicate column name' counted as already-applied — see
       # cloud-sync/apply-schema.mjs. Exit 1 only on a statement that failed for another reason.
@@ -69,8 +84,9 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          # Exact minor, matching ci.yml and the sync jobs — see the note in anilist-sync.yml.
-          node-version: '22.18'
+          # The same pin as ci.yml and the two sync jobs — see the note at the top of this file for
+          # why that parity is a claim this workflow makes, not a detail it can drift on.
+          node-version: '24.19'
 
       # The run's own gate, standalone: the same ANIME_COLUMNS, requiredTablesFor(CREATES_ROWS)
       # and schemaFaults cloud-sync/sync-anilist.mjs applies before its lease — with the columns
@@ -103,8 +119,9 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          # Exact minor, matching ci.yml and the sync jobs — see the note in anilist-sync.yml.
-          node-version: '22.18'
+          # The same pin as ci.yml and the two sync jobs — see the note at the top of this file for
+          # why that parity is a claim this workflow makes, not a detail it can drift on.
+          node-version: '24.19'
 
       # SELECT-only. Prints the ownership counts, the zero-overlap query, the vocabulary checks
       # and the rate-control state, and fails on a hard invariant.
@@ -127,3 +144,27 @@ jobs:
           LEGACY_QUIET_MS: ${{ vars.LEGACY_QUIET_MS }}
           QUIET: ${{ vars.QUIET }}
         run: node cloud-sync/verify.mjs
+
+  doctor-secrets:
+    if: github.event.inputs.action == 'doctor-secrets'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # The same pin as the other three jobs in this file.
+          node-version: '24.19'
+
+      # Nothing is written and nothing is printed: the report is lengths, character classes, the
+      # index of the break that made a value unusable and a short digest to compare against a copy
+      # held elsewhere — then one `SELECT 1`, so a clean answer covers the URL, the header and the
+      # response envelope rather than only the credential's shape. Exit 1 when a secret is configured
+      # but cannot be a header value; 2 when one is absent or the request never left the runner.
+      - name: describe the D1 credentials
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: node cloud-sync/doctor-secrets.mjs
