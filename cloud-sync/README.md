@@ -35,7 +35,13 @@ than to assume a low volume is safe.
 ## Deploy
 
 1. **This repo has no git remote yet** (`git remote -v` is empty). Create one on GitHub
-   (free, no card) and push. Nothing below works until that exists.
+   (free, no card) — **public** — and push. Public is not a preference: the two sync workflows
+   fire 96 jobs a day between them (`*/30` and `15,45`), every job bills at least one full minute
+   however short it is, and a private repo's free plan stops at 2,000 Actions minutes a month —
+   ≈2,900 a month on that one-minute floor alone, before the jitter sleeps are counted — so the
+   schedule would go dark inside the first month. Public repos run standard runners without a
+   minute cap, which is also why this plan never needs a card. Nothing below works until the repo
+   exists.
 2. **Find out what the live database already has, then apply the schema.** This is a question, not a
    step, because the answer differs per database and nothing in the repo can tell you: the sync's own
    state tables (`sync_lock`, `api_usage`, `sync_runs`, `sync_pending`) and its two stamp columns
@@ -268,19 +274,24 @@ first walker.
 1. **Bookmark the database.** This run mutates rows and D1 Time Travel is the only undo:
 
    ```
-   npx wrangler d1 time-travel info anihub --remote
+   npx wrangler d1 time-travel info anihub
    npx wrangler d1 execute anihub --remote --json --command "SELECT count(*) AS rows FROM anime" > preflight-counts.json
    ```
 
-   Write down the `latest_backup_timestamp` it prints. It has to predate the first cloud *write*,
+   Write down the bookmark the first command prints — `The current bookmark is '<bookmark>'` — and
+   keep it in one place with step 2's probe outputs: that set is the whole restore story if a write
+   goes sideways. `time-travel` takes **no** `--remote`: it always acts on the remote database, and
+   the flag is refused there (unlike `d1 execute`, where it is required) — appended out of habit,
+   it prints help and reads nothing. The bookmark has to predate the first cloud *write*,
    and the first writer can be a scheduled tick: a `schedule:` workflow starts firing as soon as it
    is on the default branch — every 30 minutes here, with no enable step — so when you are pushing
    and deploying in one sitting, take this bookmark *before* the push. (A tick that fires before
    the Secrets are saved stops at the probe with exit 2 — no credentials, no writes.) Two things to
-   know about the undo before you need it: `time-travel restore` produces a **new** database from
-   that point — it does not rewind `anihub` in place — so an undo means repointing the app (or
-   copying rows back), and the window is short: the free tier keeps 24 hours of history. Restore
-   early or restore nothing.
+   know about the undo before you need it: `npx wrangler d1 time-travel restore anihub
+   --bookmark=<bookmark>` — no `--remote` there either — produces a **new** database from that
+   point, it does not rewind `anihub` in place, so an undo means repointing the app (or copying
+   rows back), and the window is short: the free tier keeps 24 hours of history. Restore early or
+   restore nothing.
 
 2. **Run the schema gate and dump the schema** so the audit's later claims are about data, not
    assumptions. `node --env-file=.env cloud-sync/verify.mjs --probe` first — it is the exact check
