@@ -105,7 +105,7 @@ jobs:
       # queue recovery when cursor.pendingAfter exceeds remaining items in sync_pending.
       - name: tests
         env:
-          TEST_FLOOR: 314
+          TEST_FLOOR: 391
         run: |
           set -euo pipefail
           total=0
@@ -130,3 +130,28 @@ jobs:
       # `tsc --noEmit` is the only check that the site's own types still describe the columns the
       # API selects, which is the half of the contract sched_season and the genre ids belong to.
       - run: npm run typecheck
+
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19'
+          cache: npm
+
+      - name: install
+        run: npm ci
+
+      - name: build pages bundle
+        run: npm run build:pages
+
+      - name: deploy to cloudflare pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: npx wrangler pages deploy dist-pages --project-name anihubstream --branch master
