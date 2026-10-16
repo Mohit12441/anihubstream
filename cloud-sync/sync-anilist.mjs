@@ -294,10 +294,42 @@ export function updateSet(mode = MODE_DEFAULT, { fillSchedule = false } = {}) {
   return fillSchedule ? [...METADATA, ...SCHED_COLUMNS] : [...METADATA];
 }
 
-/** The predicate a fill-only write is allowed to land under: never stamped by the local tools,
- *  and no part of the air slot present. Everything else keeps what it has. */
-export const SCHED_FILL_GUARD = SCHED_COLUMNS.map((c) => `anime.${c} IS NULL`).join(' AND ')
-  + ' AND anime.catalogue_synced_at IS NULL';
+/** The predicate ensuring every schedule slot column is empty. */
+export const SCHED_EMPTY_GUARD = SCHED_COLUMNS.map((c) => `anime.${c} IS NULL`).join(' AND ');
+
+/** The predicate a fill-only write is allowed to land under when local writer is active:
+ *  never stamped by the local tools, and no part of the air slot present. Everything else keeps what it has. */
+export const SCHED_FILL_GUARD = `${SCHED_EMPTY_GUARD} AND anime.catalogue_synced_at IS NULL`;
+
+/**
+ * Ownership-aware fill guard for sched_* columns.
+ * When cloud schedule ownership is enabled (fillSchedule = true) and the local writer is
+ * inactive (legacyActive = false), allows filling schedule fields on existing rows whose
+ * entire schedule slot is empty, treating catalogue_synced_at as legacy metadata.
+ * When the local writer is active (legacyActive = true) or cloud ownership is not enabled,
+ * enforces anime.catalogue_synced_at IS NULL to strictly protect local task stamps.
+ */
+export function schedFillGuard({ fillSchedule = true, cloudOwnsSchedule, legacyActive = true } = {}) {
+  const filling = cloudOwnsSchedule !== undefined ? Boolean(cloudOwnsSchedule) : Boolean(fillSchedule);
+  if (filling && !legacyActive) {
+    return SCHED_EMPTY_GUARD;
+  }
+  return SCHED_FILL_GUARD;
+}
+
+/**
+ * Determines whether the legacy local schedule writer is considered active.
+ * Active if a heartbeat is within the quiet window and has not been superseded
+ * by a takeover marker.
+ */
+export function isLegacyWriterActive(heartbeat, marker) {
+  if (!heartbeat) return false;
+  const heartbeatMs = typeof heartbeat === 'string' ? Date.parse(heartbeat) : Number(heartbeat);
+  if (!Number.isFinite(heartbeatMs)) return false;
+  const markerMs = typeof marker === 'string' ? Date.parse(marker) : Number(marker);
+  if (Number.isFinite(markerMs) && markerMs >= heartbeatMs) return false;
+  return true;
+}
 
 /* R1, per column: an absent AniList value is NULL, and NULL means "keep what is stored" —
    AniList returns explicit JSON null for a field it was asked about but does not have,
@@ -831,8 +863,10 @@ async function main({ forceTakeover = process.argv.includes('--force-takeover') 
     onThrottle: (state) => setThrottle(THROTTLE_KEY, state).catch((err) => console.warn(`WARN throttle persist failed: ${err.message}`)),
   });
 
+  const legacyActive = isLegacyWriterActive(heartbeat, markerWritten ? Date.now() : marker);
+  const fillGuard = schedFillGuard({ fillSchedule: FILL_SCHEDULE, legacyActive });
   const update = updateSet(MODE, { fillSchedule: FILL_SCHEDULE });
-  const fillIf = FILL_SCHEDULE ? { columns: SCHED_COLUMNS, when: SCHED_FILL_GUARD } : { columns: [], when: '' };
+  const fillIf = FILL_SCHEDULE ? { columns: SCHED_COLUMNS, when: fillGuard } : { columns: [], when: '' };
   const keepExisting = KEEP_WHEN_ABSENT.filter((c) => update.includes(c));
   const ownsGenres = flagEnv(process.env, 'CLOUD_OWNS_GENRES', { dflt: false });
   const cursorKey = `cloud_anilist_cursor:${MODE}`;

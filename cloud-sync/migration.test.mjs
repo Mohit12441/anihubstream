@@ -656,6 +656,89 @@ describe('migration: the four phases against real SQLite', () => {
     assert.equal(stamped.episode_total, 12);
   });
 
+  it('ownership-aware schedule fill fills empty slots on legacy-stamped rows without corrupting populated or partial slots', async () => {
+    // 1. legacy-stamped row with completely empty schedule
+    world.stored({
+      id: 'legacy-empty',
+      title: 'Legacy Empty',
+      source_ids: '{"anilist":98601}',
+      catalogue_synced_at: 1_700_000_000_000,
+      sched_day: null,
+      sched_day_label: null,
+      sched_date: null,
+      sched_time: null,
+      sched_season: null,
+    });
+    // 2. legacy-stamped row with full existing schedule
+    world.stored({
+      id: 'legacy-full',
+      title: 'Legacy Full',
+      source_ids: '{"anilist":98602}',
+      catalogue_synced_at: 1_700_000_000_000,
+      sched_day: 1,
+      sched_day_label: 'MON',
+      sched_date: 'Oct 12',
+      sched_time: '12:00',
+      sched_season: 'Fall 2026',
+    });
+    // 3. legacy-stamped row with partially populated schedule (e.g. sched_day set, others null)
+    world.stored({
+      id: 'legacy-partial',
+      title: 'Legacy Partial',
+      source_ids: '{"anilist":98603}',
+      catalogue_synced_at: 1_700_000_000_000,
+      sched_day: 2,
+      sched_day_label: null,
+      sched_date: null,
+      sched_time: null,
+      sched_season: null,
+    });
+
+    world.fixture(98601, { id: 98601, title: { english: 'Legacy Empty', romaji: null, native: null }, nextAiringEpisode: { airingAt: FRI, episode: 5 } });
+    world.fixture(98602, { id: 98602, title: { english: 'Legacy Full', romaji: null, native: null }, nextAiringEpisode: { airingAt: WED, episode: 8 } });
+    world.fixture(98603, { id: 98603, title: { english: 'Legacy Partial', romaji: null, native: null }, nextAiringEpisode: { airingAt: TUE, episode: 3 } });
+
+    // Scenario 4: CLOUD_OWNS_SCHEDULE=0 leaves legacy-empty untouched
+    await runPass(world, { ...DELTA, CLOUD_OWNS_SCHEDULE: '0' });
+    assert.equal(world.row('legacy-empty').sched_day, null, 'disabled cloud ownership never fills schedule fields');
+
+    // Scenario 1: CLOUD_OWNS_SCHEDULE=1 with inactive legacy task fills legacy-empty
+    world.resetCursor();
+    await runPass(world, { ...DELTA, CLOUD_OWNS_SCHEDULE: '1' });
+    const filled = world.row('legacy-empty');
+    assert.equal(filled.sched_day, 5, 'fills empty slot on legacy-stamped row when legacy writer is inactive');
+    assert.equal(filled.sched_day_label, 'FRI');
+    assert.equal(filled.sched_season, 'Fall 2026');
+
+    // Scenario 2: Never overwrites existing schedule
+    const full = world.row('legacy-full');
+    assert.equal(full.sched_day, 1, 'preserves existing full schedule');
+    assert.equal(full.sched_day_label, 'MON');
+
+    // Scenario 3: Never overwrites or corrupts partial schedule
+    const partial = world.row('legacy-partial');
+    assert.equal(partial.sched_day, 2, 'preserves partially populated schedule');
+    assert.equal(partial.sched_day_label, null, 'does not partially populate missing slots');
+
+    // Scenario 5: When legacy writer is active, rows with catalogue_synced_at are protected
+    world.stored({
+      id: 'legacy-active-test',
+      title: 'Legacy Active Test',
+      source_ids: '{"anilist":98604}',
+      catalogue_synced_at: 1_700_000_000_000,
+      sched_day: null,
+      sched_day_label: null,
+      sched_date: null,
+      sched_time: null,
+      sched_season: null,
+    });
+    world.fixture(98604, { id: 98604, title: { english: 'Legacy Active Test', romaji: null, native: null }, nextAiringEpisode: { airingAt: FRI, episode: 1 } });
+    world.heartbeat(new Date()); // Active heartbeat
+    world.resetCursor();
+    await runPass(world, { ...DELTA, CLOUD_OWNS_SCHEDULE: '1' });
+    assert.equal(world.row('legacy-active-test').sched_day, null, 'active legacy writer protects catalogue_synced_at rows');
+  });
+
   it('takeover clears the whole air slot when a title stops airing (R1 exception)', async () => {
     world.stored();
     world.fixture(98596, { nextAiringEpisode: null });

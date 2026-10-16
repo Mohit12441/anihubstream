@@ -10,8 +10,8 @@ import assert from 'node:assert/strict';
 import { createAnilist, classify403, classifyGraphQLError, QueryTooComplex, RunAborted, BudgetExhausted } from './anilist.mjs';
 import { insertRows, rowsPerStatement } from './d1.mjs';
 import {
-  ANIME_COLUMNS, KEEP_WHEN_ABSENT, LEGACY_OWNED, MODES, MODE_DEFAULT, NOT_NULL_KEPT, SCHED_COLUMNS, SCHED_FILL_GUARD, airSlot,
-  completeFromStored, flagEnv, genreIndex, mapGenres, planRows, resolveMode, rowFromMedia, toTuple, updateSet, trendingRanks,
+  ANIME_COLUMNS, KEEP_WHEN_ABSENT, LEGACY_OWNED, MODES, MODE_DEFAULT, NOT_NULL_KEPT, SCHED_COLUMNS, SCHED_EMPTY_GUARD, SCHED_FILL_GUARD, airSlot,
+  completeFromStored, flagEnv, genreIndex, isLegacyWriterActive, mapGenres, planRows, resolveMode, rowFromMedia, schedFillGuard, toTuple, updateSet, trendingRanks,
 } from './sync-anilist.mjs';
 
 /** A floor the tests can live with: 20ms spacing, ceiling high enough not to clamp it. */
@@ -403,9 +403,26 @@ describe('5. column ownership by mode (checklist: old task and cloud must not fi
     assert.deepEqual(updateSet(), updateSet(MODES[0]), 'the default is the first mode, mirror');
     assert.equal(MODE_DEFAULT, 'mirror');
     /* What the guard around the fill says, in the SQL it is written into: a row the local tools
-       stamped, or one that already has any part of a slot, is not eligible. */
+       stamped, or one that already has any part of a slot, is not eligible when legacy is active. */
     for (const c of SCHED_COLUMNS) assert.match(SCHED_FILL_GUARD, new RegExp(`anime\\.${c} IS NULL`));
     assert.match(SCHED_FILL_GUARD, /anime\.catalogue_synced_at IS NULL/);
+
+    /* SCHED_EMPTY_GUARD guards that the whole air slot is empty, without requiring catalogue_synced_at IS NULL */
+    for (const c of SCHED_COLUMNS) assert.match(SCHED_EMPTY_GUARD, new RegExp(`anime\\.${c} IS NULL`));
+    assert.equal(SCHED_EMPTY_GUARD.includes('catalogue_synced_at'), false);
+
+    /* schedFillGuard selects SCHED_EMPTY_GUARD only when cloud owns schedule AND legacy writer is inactive */
+    assert.equal(schedFillGuard({ fillSchedule: true, legacyActive: false }), SCHED_EMPTY_GUARD);
+    assert.equal(schedFillGuard({ cloudOwnsSchedule: true, legacyActive: false }), SCHED_EMPTY_GUARD);
+    assert.equal(schedFillGuard({ fillSchedule: true, legacyActive: true }), SCHED_FILL_GUARD);
+    assert.equal(schedFillGuard({ fillSchedule: false, legacyActive: false }), SCHED_FILL_GUARD);
+    assert.equal(schedFillGuard(), SCHED_FILL_GUARD);
+
+    /* isLegacyWriterActive properly handles heartbeat and takeover marker */
+    assert.equal(isLegacyWriterActive(null, null), false);
+    assert.equal(isLegacyWriterActive('2026-01-01T00:00:00.000Z', null), true);
+    assert.equal(isLegacyWriterActive('2026-01-01T00:00:00.000Z', Date.parse('2026-01-01T00:05:00.000Z')), false);
+    assert.equal(isLegacyWriterActive('2026-01-01T00:05:00.000Z', Date.parse('2026-01-01T00:00:00.000Z')), true);
   });
 
   it('takeover is the only mode that claims the legacy columns', () => {

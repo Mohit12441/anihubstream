@@ -101,12 +101,13 @@ jobs:
       # read from that file rather than totalled across the suite, because the operator asked that `api/`
       # not be run. This job is therefore the first place the total is counted — which is what a floor is
       # for: if the sum is wrong the run goes red and says the number it saw.
-      # TEST_FLOOR is 308: 303 from previous round plus five regression checks in cloud-sync/sync-anilist.test.mjs
-      # (canonical ID resolution across slug drift, resolving records outside the catalogue slice,
-      # insert/update/skipped counter accuracy, rerun idempotent counting, and trend/schedule delta protection).
+      # TEST_FLOOR is 310: 308 from previous round plus two regression tests for ownership-aware
+      # schedule fill (one in cloud-sync/sync-anilist.test.mjs covering SQL guard generation across
+      # active/inactive heartbeat and CLOUD_OWNS_SCHEDULE states, and one in cloud-sync/migration.test.mjs
+      # asserting actual SQLite writes for empty, full, partial, and active heartbeat scenarios).
       - name: tests
         env:
-          TEST_FLOOR: 308
+          TEST_FLOOR: 310
         run: |
           set -euo pipefail
           total=0

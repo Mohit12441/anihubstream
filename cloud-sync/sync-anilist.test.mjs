@@ -729,4 +729,77 @@ describe('sync-anilist terminal cursor persistence', () => {
     const updatedRow = mod.rowFromMedia({ id: 9001, title: { english: 'Divergent English' } }, { id: 'canonical-orig' });
     assert.equal(updatedRow.id, 'canonical-orig', 'rowFromMedia reuses canonical id');
   });
+
+  it('generates ownership-aware schedule fill SQL matching guard and column expressions', async () => {
+    process.env.MODE = 'delta';
+    process.env.CLOUD_CREATES_ROWS = '1';
+    process.env.CLOUD_OWNS_SCHEDULE = '1';
+    process.env.MAX_ITEMS_PER_RUN = '10';
+
+    const mockCatalogueRows = [{
+      id: 'existing-stamped-title',
+      title: 'Existing Stamped Title',
+      native: '',
+      year: 2024,
+      rating: 8.0,
+      season: 'Fall 2024',
+      kind: 'TV',
+      status: 'Finished',
+      art: 'art.jpg',
+      key_art: 'key.jpg',
+      accent: '#fff',
+      synopsis: 'synopsis',
+      source_ids: JSON.stringify({ anilist: 9050 }),
+      added_at: '2026-01-01',
+      catalogue_synced_at: 1000,
+    }];
+
+    let capturedSql = '';
+    globalThis.fetch = createSyncMockFetch({
+      catalogueRows: mockCatalogueRows,
+      pendingRows: [],
+      onInsert: ({ sql }) => { capturedSql = sql; },
+    });
+
+    const mod = await import(`./sync-anilist.mjs?case=${Date.now()}-guard-inactive`);
+    await mod.run({ forceTakeover: false });
+
+    // With inactive legacy writer and CLOUD_OWNS_SCHEDULE=1, SQL guard allows filling legacy-stamped row
+    assert.ok(capturedSql.includes('sched_day = CASE WHEN'), 'sched_day is in DO UPDATE SET');
+    for (const c of mod.SCHED_COLUMNS) {
+      assert.ok(capturedSql.includes(`anime.${c} IS NULL`), `guard checks anime.${c} IS NULL`);
+    }
+    assert.equal(capturedSql.includes('anime.catalogue_synced_at IS NULL'), false, 'does not require catalogue_synced_at IS NULL when legacy writer is inactive');
+
+    // When legacy writer is active (heartbeat within quiet window), SQL guard includes catalogue_synced_at IS NULL
+    let capturedActiveSql = '';
+    storedMeta.delete('cloud_anilist_cursor:delta');
+    storedMeta.set('hourly_sync', JSON.stringify({ at: new Date().toISOString() }));
+    globalThis.fetch = createSyncMockFetch({
+      catalogueRows: mockCatalogueRows,
+      pendingRows: [],
+      onInsert: ({ sql }) => { capturedActiveSql = sql; },
+    });
+
+    const modActive = await import(`./sync-anilist.mjs?case=${Date.now()}-guard-active`);
+    await modActive.run({ forceTakeover: false });
+    assert.ok(capturedActiveSql.includes('sched_day = CASE WHEN'), 'sched_day is in DO UPDATE SET');
+    assert.ok(capturedActiveSql.includes('anime.catalogue_synced_at IS NULL'), 'requires catalogue_synced_at IS NULL when legacy writer is active');
+
+    // When CLOUD_OWNS_SCHEDULE=0, sched_* columns are not in DO UPDATE SET
+    process.env.CLOUD_OWNS_SCHEDULE = '0';
+    let capturedDisabledSql = '';
+    storedMeta.delete('cloud_anilist_cursor:delta');
+    storedMeta.delete('hourly_sync');
+    globalThis.fetch = createSyncMockFetch({
+      catalogueRows: mockCatalogueRows,
+      pendingRows: [],
+      onInsert: ({ sql }) => { capturedDisabledSql = sql; },
+    });
+
+    const modDisabled = await import(`./sync-anilist.mjs?case=${Date.now()}-guard-disabled`);
+    await modDisabled.run({ forceTakeover: false });
+    const updateClause = capturedDisabledSql.split('DO UPDATE SET')[1] || '';
+    assert.equal(updateClause.includes('sched_day'), false, 'sched_day excluded from DO UPDATE SET when CLOUD_OWNS_SCHEDULE=0');
+  });
 });

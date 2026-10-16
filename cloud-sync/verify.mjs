@@ -210,7 +210,7 @@ export async function audit(overrides = {}) {
      cloud stamp is either that bug or a hand edit. */
   if (fillSchedule) {
     const halfFilled = await count(`SELECT count(*) AS n FROM anime
-      WHERE catalogue_synced_at IS NULL AND cloud_synced_at IS NOT NULL
+      WHERE cloud_synced_at IS NOT NULL
         AND (sched_day IS NULL) <> (sched_season IS NULL)`);
     add('the schedule fill never wrote a partial slot', halfFilled === 0, `${halfFilled} rows carry half an air slot`,
       { hard: false, why: 'airSlot() writes all five together, so a split means a hand edit or a fill that should not have run' });
