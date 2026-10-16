@@ -127,19 +127,28 @@ export function flagEnv(env, name, { dflt }) {
 export function resolveMode(env = process.env) {
   const legacy = flagEnv(env, 'LEGACY_WRITER_ACTIVE', { dflt: true });
   const creates = flagEnv(env, 'CLOUD_CREATES_ROWS', { dflt: false });
+  const fillSched = flagEnv(env, 'CLOUD_OWNS_SCHEDULE', { dflt: false });
   const derived = creates ? (legacy ? 'delta' : 'takeover') : MODE_DEFAULT;
   const explicit = env.MODE ? String(env.MODE).trim().toLowerCase() : '';
   if (explicit && !MODES.includes(explicit)) throw new Error(`MODE='${explicit}' is not one of ${MODES.join('|')}`);
   const switchesSet = flagSet(env, 'LEGACY_WRITER_ACTIVE') || flagSet(env, 'CLOUD_CREATES_ROWS');
   if (explicit && switchesSet && explicit !== derived) {
-    throw new Error(`MODE=${explicit} contradicts LEGACY_WRITER_ACTIVE=${shown(env.LEGACY_WRITER_ACTIVE)} / CLOUD_CREATES_ROWS=${shown(env.CLOUD_CREATES_ROWS)}, which together mean '${derived}'`);
+    // When CLOUD_OWNS_SCHEDULE=1 is set, allow explicit MODE=delta with LEGACY_WRITER_ACTIVE=0
+    // because delta mode provides the safe, fill-only schedule path while the local task is stopped.
+    if (explicit === 'delta' && !legacy && fillSched) {
+      // Coherent policy: fill-only schedule management under delta mode
+    } else {
+      throw new Error(`MODE=${explicit} contradicts LEGACY_WRITER_ACTIVE=${shown(env.LEGACY_WRITER_ACTIVE)} / CLOUD_CREATES_ROWS=${shown(env.CLOUD_CREATES_ROWS)}, which together mean '${derived}'`);
+    }
   }
   /* The one combination that is not a typo but an orphan: the local task reported stopped while
      the mode that does not claim its columns is selected. Nothing else in the design notices —
      sched_* would simply stop moving, and the schedule shelf would keep displaying whatever it
      froze on. Phase 3 is legacy=0 AND creates=1; Phases 1-2 are legacy=1. */
   if (flagSet(env, 'LEGACY_WRITER_ACTIVE') && !legacy && !creates) {
-    throw new Error(`LEGACY_WRITER_ACTIVE=0 with CLOUD_CREATES_ROWS=0 gives nobody the sched_* columns: the switches mean '${derived}', which leaves them to a task you have just reported stopped. For Phase 3 set CLOUD_CREATES_ROWS=1 as well (takeover). To stay in Phase 1-2, the task is still enabled, so set LEGACY_WRITER_ACTIVE=1. If the task really is broken and you are not moving to Phase 3 yet, CLOUD_OWNS_SCHEDULE=1 lets this job fill empty air slots meanwhile.`);
+    if (!fillSched && explicit !== 'delta') {
+      throw new Error(`LEGACY_WRITER_ACTIVE=0 with CLOUD_CREATES_ROWS=0 gives nobody the sched_* columns: the switches mean '${derived}', which leaves them to a task you have just reported stopped. For Phase 3 set CLOUD_CREATES_ROWS=1 as well (takeover). To stay in Phase 1-2, the task is still enabled, so set LEGACY_WRITER_ACTIVE=1. If the task really is broken and you are not moving to Phase 3 yet, CLOUD_OWNS_SCHEDULE=1 lets this job fill empty air slots meanwhile.`);
+    }
   }
   return explicit || derived;
 }
@@ -150,12 +159,11 @@ const shown = (v) => (v === undefined || String(v).trim() === '' ? 'unset' : Str
 const MODE = resolveMode();
 const CREATES_ROWS = MODE !== 'mirror';
 const CLAIMS_SCHEDULE = MODE === 'takeover';
-/* An opt-in hole-filler for the modes that do NOT own the schedule. Off by default: in Phase 2 the
-   local task walks every row in `anime` (tools/hourly-refresh.mjs:153 selects the whole table, not
-   just titles it created), so a row this job inserts is refreshed by it like any other. Turn it on
-   only when that task is broken or disabled while LEGACY_WRITER_ACTIVE still says 1 — cloud then
-   fills an empty air slot on a row the local writer has never stamped, and never clears one. */
-const FILL_SCHEDULE = flagEnv(process.env, 'CLOUD_OWNS_SCHEDULE', { dflt: false }) && !CLAIMS_SCHEDULE;
+/* An opt-in hole-filler for schedule columns. When CLOUD_OWNS_SCHEDULE=1, both delta and takeover
+   modes write sched_* exclusively through fillIf: empty slots are filled (including on legacy-stamped
+   rows when the local task is inactive), while complete and partial slots are strictly preserved
+   against overwrites or being blanked to null. */
+const FILL_SCHEDULE = flagEnv(process.env, 'CLOUD_OWNS_SCHEDULE', { dflt: false });
 
 /* ---------------------------------------------------------------- mapping */
 

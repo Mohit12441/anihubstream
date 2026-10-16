@@ -231,6 +231,8 @@ const respond = (body, ok = true) => ({
 /* A mode is chosen at module load, so each case gets a fresh instance of the module with its
    own environment. The query string is only the cache buster; the module is unmodified. */
 async function loadModule(env) {
+  delete process.env.MODE;
+  delete process.env.CLOUD_OWNS_SCHEDULE;
   Object.assign(process.env, {
     CF_ACCOUNT_ID: 'test-account', CF_DATABASE_ID: 'test-database', CF_API_TOKEN: 'test-token',
     ANILIST_MIN_INTERVAL_MS: '20', ANILIST_RATE_CEILING_RPM: '3000', ANILIST_DAILY_BUDGET: '500',
@@ -737,6 +739,120 @@ describe('migration: the four phases against real SQLite', () => {
     world.resetCursor();
     await runPass(world, { ...DELTA, CLOUD_OWNS_SCHEDULE: '1' });
     assert.equal(world.row('legacy-active-test').sched_day, null, 'active legacy writer protects catalogue_synced_at rows');
+  });
+
+  it('takeover mode with CLOUD_OWNS_SCHEDULE=1 protects existing schedule slots and updates trend_rank', async () => {
+    world.stored({
+      id: 'takeover-legacy-empty',
+      title: 'Takeover Legacy Empty',
+      source_ids: '{"anilist":98610}',
+      catalogue_synced_at: 1_700_000_000_000,
+      trend_rank: 50,
+      sched_day: null,
+      sched_day_label: null,
+      sched_date: null,
+      sched_time: null,
+      sched_season: null,
+    });
+    world.stored({
+      id: 'takeover-legacy-full',
+      title: 'Takeover Legacy Full',
+      source_ids: '{"anilist":98611}',
+      catalogue_synced_at: 1_700_000_000_000,
+      trend_rank: 50,
+      sched_day: 1,
+      sched_day_label: 'MON',
+      sched_date: 'Oct 12',
+      sched_time: '12:00',
+      sched_season: 'Fall 2026',
+    });
+    world.stored({
+      id: 'takeover-legacy-partial',
+      title: 'Takeover Legacy Partial',
+      source_ids: '{"anilist":98612}',
+      catalogue_synced_at: 1_700_000_000_000,
+      trend_rank: 50,
+      sched_day: 2,
+      sched_day_label: null,
+      sched_date: null,
+      sched_time: null,
+      sched_season: null,
+    });
+
+    world.fixture(98610, { id: 98610, title: { english: 'Takeover Legacy Empty', romaji: null, native: null }, nextAiringEpisode: { airingAt: FRI, episode: 5 } });
+    world.fixture(98611, { id: 98611, title: { english: 'Takeover Legacy Full', romaji: null, native: null }, nextAiringEpisode: { airingAt: WED, episode: 8 } });
+    world.fixture(98612, { id: 98612, title: { english: 'Takeover Legacy Partial', romaji: null, native: null }, nextAiringEpisode: { airingAt: TUE, episode: 3 } });
+
+    world.trending = [98610, 98611, 98612];
+    world.resetCursor();
+
+    const { summary } = await runPass(world, { ...TAKEOVER, CLOUD_OWNS_SCHEDULE: '1' });
+    assert.equal(summary.fill_schedule, true, 'fill_schedule armed in takeover when CLOUD_OWNS_SCHEDULE=1');
+
+    // Empty slot is filled
+    const filled = world.row('takeover-legacy-empty');
+    assert.equal(filled.sched_day, 5, 'fills empty slot in takeover when CLOUD_OWNS_SCHEDULE=1');
+    assert.equal(filled.sched_day_label, 'FRI');
+    assert.equal(filled.trend_rank, 1, 'trend_rank is updated in takeover');
+
+    // Existing full slot is preserved
+    const full = world.row('takeover-legacy-full');
+    assert.equal(full.sched_day, 1, 'preserves existing full schedule in takeover');
+    assert.equal(full.sched_day_label, 'MON');
+    assert.equal(full.trend_rank, 2, 'trend_rank is updated in takeover');
+
+    // Partial slot is preserved
+    const partial = world.row('takeover-legacy-partial');
+    assert.equal(partial.sched_day, 2, 'preserves partial schedule in takeover');
+    assert.equal(partial.sched_day_label, null, 'does not overwrite partial schedule');
+    assert.equal(partial.trend_rank, 3, 'trend_rank is updated in takeover');
+  });
+
+  it('delta mode with LEGACY_WRITER_ACTIVE=0 and CLOUD_OWNS_SCHEDULE=1 runs cleanly and preserves trend_rank', async () => {
+    world.stored({
+      id: 'delta-inact-empty',
+      title: 'Delta Inactive Empty',
+      source_ids: '{"anilist":98620}',
+      catalogue_synced_at: 1_700_000_000_000,
+      trend_rank: 42,
+      sched_day: null,
+      sched_day_label: null,
+      sched_date: null,
+      sched_time: null,
+      sched_season: null,
+    });
+    world.stored({
+      id: 'delta-inact-full',
+      title: 'Delta Inactive Full',
+      source_ids: '{"anilist":98621}',
+      catalogue_synced_at: 1_700_000_000_000,
+      trend_rank: 42,
+      sched_day: 1,
+      sched_day_label: 'MON',
+      sched_date: 'Oct 12',
+      sched_time: '12:00',
+      sched_season: 'Fall 2026',
+    });
+
+    world.fixture(98620, { id: 98620, title: { english: 'Delta Inactive Empty', romaji: null, native: null }, nextAiringEpisode: { airingAt: FRI, episode: 5 } });
+    world.fixture(98621, { id: 98621, title: { english: 'Delta Inactive Full', romaji: null, native: null }, nextAiringEpisode: { airingAt: WED, episode: 8 } });
+    world.trending = [98620, 98621];
+    world.resetCursor();
+
+    const env = { MODE: 'delta', LEGACY_WRITER_ACTIVE: '0', CLOUD_CREATES_ROWS: '1', CLOUD_OWNS_SCHEDULE: '1' };
+    const { summary } = await runPass(world, env);
+    assert.equal(summary.mode, 'delta');
+    assert.equal(summary.fill_schedule, true);
+
+    const filled = world.row('delta-inact-empty');
+    assert.equal(filled.sched_day, 5);
+    assert.equal(filled.sched_day_label, 'FRI');
+    assert.equal(filled.trend_rank, 42, 'trend_rank must NOT be overwritten in delta mode');
+
+    const full = world.row('delta-inact-full');
+    assert.equal(full.sched_day, 1, 'full schedule preserved');
+    assert.equal(full.sched_day_label, 'MON');
+    assert.equal(full.trend_rank, 42, 'trend_rank must NOT be overwritten in delta mode');
   });
 
   it('takeover clears the whole air slot when a title stops airing (R1 exception)', async () => {

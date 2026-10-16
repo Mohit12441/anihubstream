@@ -588,6 +588,9 @@ describe('5. column ownership by mode (checklist: old task and cloud must not fi
     /* The escape hatch names itself in the refusal, because it is the fix for the one case where
        the state is real rather than a typo: the task broke and takeover is not today's decision. */
     assert.match((() => { try { resolveMode({ LEGACY_WRITER_ACTIVE: '0', CLOUD_CREATES_ROWS: '0' }); } catch (err) { return err.message; } })(), /CLOUD_OWNS_SCHEDULE=1/);
+    assert.equal(resolveMode({ MODE: 'delta', LEGACY_WRITER_ACTIVE: '0', CLOUD_CREATES_ROWS: '1', CLOUD_OWNS_SCHEDULE: '1' }), 'delta', 'delta mode allowed when cloud owns schedule and local writer is inactive');
+    assert.equal(resolveMode({ MODE: 'takeover', LEGACY_WRITER_ACTIVE: '0', CLOUD_CREATES_ROWS: '1', CLOUD_OWNS_SCHEDULE: '1' }), 'takeover');
+    assert.equal(resolveMode({ LEGACY_WRITER_ACTIVE: '0', CLOUD_CREATES_ROWS: '0', CLOUD_OWNS_SCHEDULE: '1' }), 'mirror');
   });
 
   /* The switch values are read as exactly 0 or 1, and anything else refuses to start. This is

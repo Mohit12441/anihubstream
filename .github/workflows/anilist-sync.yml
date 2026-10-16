@@ -63,7 +63,7 @@ jobs:
           # each script reads as "take the default" — and the default is Phase 1, the only mode
           # that is safe to run beside the Windows task. See the runbook in cloud-sync/README.md
           # for the order to move them in and the one-line rollback for each.
-          MODE: ${{ vars.MODE }}
+          MODE: ${{ vars.MODE || 'delta' }}
           LEGACY_WRITER_ACTIVE: ${{ vars.LEGACY_WRITER_ACTIVE || '0' }}
           CLOUD_CREATES_ROWS: ${{ vars.CLOUD_CREATES_ROWS || '1' }}
           CLOUD_OWNS_GENRES: ${{ vars.CLOUD_OWNS_GENRES }}
@@ -71,7 +71,7 @@ jobs:
           # local task has never stamped and whose slot is entirely empty. It never overwrites a
           # populated slot and never clears one, so it does not break the column partition — see
           # cloud-sync/.env.example. Not a phase switch: unset stays 0.
-          CLOUD_OWNS_SCHEDULE: ${{ vars.CLOUD_OWNS_SCHEDULE }}
+          CLOUD_OWNS_SCHEDULE: ${{ vars.CLOUD_OWNS_SCHEDULE || '1' }}
           LEGACY_QUIET_MS: ${{ vars.LEGACY_QUIET_MS }}
           ANILIST_ENDPOINT: ${{ vars.ANILIST_ENDPOINT || 'https://graphql.anilist.co' }}
           ANILIST_MIN_INTERVAL_MS: ${{ vars.ANILIST_MIN_INTERVAL_MS }}
@@ -81,7 +81,7 @@ jobs:
           ANILIST_BREAKER_COOLDOWN_MS: ${{ vars.ANILIST_BREAKER_COOLDOWN_MS }}
           ANILIST_TRENDING_PAGE_SIZE: ${{ vars.ANILIST_TRENDING_PAGE_SIZE }}
           ANILIST_REWALK_AFTER_MS: ${{ vars.ANILIST_REWALK_AFTER_MS || '21600000' }}
-          MAX_ITEMS_PER_RUN: ${{ vars.MAX_ITEMS_PER_RUN }}
+          MAX_ITEMS_PER_RUN: ${{ vars.MAX_ITEMS_PER_RUN || '10' }}
           # Only ever '--force-takeover', and only when the operator ticked the box: it records a
           # takeover decision in sync_meta instead of waiting out the heartbeat window, so the
           # checkbox exists to answer the interlock with evidence, not to bypass it silently.

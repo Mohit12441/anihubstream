@@ -802,4 +802,47 @@ describe('sync-anilist terminal cursor persistence', () => {
     const updateClause = capturedDisabledSql.split('DO UPDATE SET')[1] || '';
     assert.equal(updateClause.includes('sched_day'), false, 'sched_day excluded from DO UPDATE SET when CLOUD_OWNS_SCHEDULE=0');
   });
+
+  it('takeover mode with CLOUD_OWNS_SCHEDULE=1 uses fillIf for schedule and direct update for trend_rank', async () => {
+    process.env.MODE = 'takeover';
+    process.env.LEGACY_WRITER_ACTIVE = '0';
+    process.env.CLOUD_CREATES_ROWS = '1';
+    process.env.CLOUD_OWNS_SCHEDULE = '1';
+    process.env.MAX_ITEMS_PER_RUN = '10';
+
+    const mockCatalogueRows = [{
+      id: 'existing-stamped-title',
+      title: 'Existing Stamped Title',
+      native: '',
+      year: 2024,
+      rating: 8.0,
+      season: 'Fall 2024',
+      kind: 'TV',
+      status: 'Finished',
+      art: 'art.jpg',
+      key_art: 'key.jpg',
+      accent: '#fff',
+      synopsis: 'synopsis',
+      source_ids: JSON.stringify({ anilist: 9050 }),
+      added_at: '2026-01-01',
+      catalogue_synced_at: 1000,
+    }];
+
+    let capturedSql = '';
+    globalThis.fetch = createSyncMockFetch({
+      catalogueRows: mockCatalogueRows,
+      pendingRows: [],
+      onInsert: ({ sql }) => { capturedSql = sql; },
+    });
+
+    const mod = await import(`./sync-anilist.mjs?case=${Date.now()}-takeover-sched-fill`);
+    await mod.run({ forceTakeover: false });
+
+    assert.ok(capturedSql.includes('sched_day = CASE WHEN'), 'sched_day is guarded in DO UPDATE SET in takeover when CLOUD_OWNS_SCHEDULE=1');
+    for (const c of mod.SCHED_COLUMNS) {
+      assert.ok(capturedSql.includes(`anime.${c} IS NULL`), `guard checks anime.${c} IS NULL`);
+    }
+    assert.ok(capturedSql.includes('trend_rank=excluded.trend_rank'), 'trend_rank is updated directly in takeover');
+  });
 });
+
