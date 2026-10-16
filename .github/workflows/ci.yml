@@ -101,12 +101,11 @@ jobs:
       # read from that file rather than totalled across the suite, because the operator asked that `api/`
       # not be run. This job is therefore the first place the total is counted — which is what a floor is
       # for: if the sum is wrong the run goes red and says the number it saw.
-      # TEST_FLOOR is 313: 310 from previous round plus three regression tests for mode resolution,
-      # schedule fill in takeover and delta modes with CLOUD_OWNS_SCHEDULE=1 (covering SQL guard generation
-      # and actual SQLite writes for schedule fill and trend_rank protection/updates).
+      # TEST_FLOOR is 314: 313 from previous round plus 1 regression test in sync-anilist covering
+      # queue recovery when cursor.pendingAfter exceeds remaining items in sync_pending.
       - name: tests
         env:
-          TEST_FLOOR: 313
+          TEST_FLOOR: 314
         run: |
           set -euo pipefail
           total=0

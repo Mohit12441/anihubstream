@@ -844,5 +844,34 @@ describe('sync-anilist terminal cursor persistence', () => {
     }
     assert.ok(capturedSql.includes('trend_rank=excluded.trend_rank'), 'trend_rank is updated directly in takeover');
   });
+
+  it('resets cursor.pendingAfter to 0 when pendingAfter is higher than remaining items in queue', async () => {
+    process.env.MODE = 'delta';
+    process.env.CLOUD_CREATES_ROWS = '1';
+    process.env.MAX_ITEMS_PER_RUN = '10';
+
+    // Simulate high pendingAfter stored in sync_meta (e.g. 213805 from past run)
+    storedMeta.set('cloud_anilist_cursor:delta', JSON.stringify({
+      after: 'some-slug',
+      pendingAfter: 213805,
+      done: false,
+      doneAt: 0,
+    }));
+
+    // New items arrived in sync_pending with IDs lower than 213805 (e.g. 159042, 191832)
+    const mockPendingRows = [
+      { id: 1, anilist_id: 159042, slug: 'pending-discovered-1', added_at: Date.now(), note: 'discover' },
+      { id: 2, anilist_id: 191832, slug: 'pending-discovered-2', added_at: Date.now(), note: 'discover' },
+    ];
+
+    globalThis.fetch = createSyncMockFetch({ catalogueRows: [], pendingRows: mockPendingRows });
+
+    const mod = await import(`./sync-anilist.mjs?case=${Date.now()}-queue-recover`);
+    const summary = await mod.run({ forceTakeover: false });
+
+    assert.equal(summary.items_processed, 2, 'processes both newly queued items despite higher stored pendingAfter');
+    assert.equal(summary.created, 2, 'both pending items created');
+  });
 });
+
 
