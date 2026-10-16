@@ -168,7 +168,7 @@ export function PlayerControls(p: Props) {
 
         <button
           type="button"
-          className={`pl__btn${p.theatre ? ' is-on' : ''}`}
+          className={`pl__btn pl__btn--theatre${p.theatre ? ' is-on' : ''}`}
           onClick={p.onTheatre}
           aria-pressed={p.theatre}
           aria-label={p.theatre ? 'Exit theatre mode' : 'Theatre mode'}
@@ -179,7 +179,7 @@ export function PlayerControls(p: Props) {
 
         <button
           type="button"
-          className="pl__btn"
+          className="pl__btn pl__btn--pip"
           onClick={p.onPip}
           disabled={!p.pipAvailable}
           aria-disabled={!p.pipAvailable}

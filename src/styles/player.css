@@ -1217,53 +1217,60 @@
 }
 @media (max-width: 620px) {
   .player__bar {
-    padding: 20px 9px 8px;
+    padding: 16px 8px 6px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.72) 40%, rgba(0, 0, 0, 0.94) 100%);
   }
-  /* the control row wraps to two lines on a phone, so the bar reaches the middle of the
-     frame: a centre button parked under it gets painted over and its taps land on the
-     timeline. It reappears as soon as the chrome is hidden. */
+  /* center play button on mobile remains visible when chrome is visible */
   .player__stage[data-chrome='visible'] .player__big {
-    display: none;
+    display: grid;
+    width: 54px;
+    height: 54px;
   }
   .player,
   .player[data-density='compact'] {
-    /* full-size touch targets on a phone, whatever the saved density preference is */
-    --pl-btn: 40px;
+    --pl-btn: 36px;
+    --pl-gap: 2px;
   }
-  /* more controls than a phone is wide: with a nowrap row the browser shrinks the icon
-     buttons to their glyph (~24px) to make room for the right-hand group, which is too
-     small a target for a finger. Let the row break onto a second line instead. */
   .pl__ctrls {
-    flex-wrap: wrap;
-    row-gap: 4px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 38px;
+    gap: 2px;
+    width: 100%;
   }
   .pl__btn,
   .pl__lab,
   .pl__time {
     flex: 0 0 auto;
   }
-  .pl__ctrls {
-    min-height: 40px;
-  }
   .pl__time span,
   .pl__sim,
-  .pl__vol {
-    display: none;
+  .pl__vol,
+  .pl__btn--theatre,
+  .pl__btn--pip,
+  .pl__pill {
+    display: none !important;
   }
   .pl__time {
     padding-left: 2px;
-    font-size: 12px;
+    font-size: 11.5px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
   }
   .pl__right {
-    gap: 0;
+    gap: 2px;
+    flex-wrap: nowrap;
+    margin-left: auto;
   }
   .pl__lab {
-    padding: 6px 7px;
-    min-height: 40px;
+    padding: 4px 6px;
+    min-height: 36px;
     font-size: 11px;
+    border-radius: 6px;
   }
-  /* a phone frame is ~200px tall: a sheet anchored above the control row would run off the
-     top of the screen, so it docks to the viewport as a bottom sheet instead */
+  /* mobile bottom sheet styles */
   .pop {
     position: fixed;
     left: 8px;
@@ -1273,6 +1280,8 @@
     width: auto;
     margin-bottom: 0;
     max-height: min(76vh, 560px);
+    border-radius: var(--r-lg);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
   }
   .pop__scroll {
     max-height: min(52vh, 340px);
@@ -1287,36 +1296,36 @@
   .nx__syn {
     display: none;
   }
-  /* a portrait phone frame is only ~200px tall, so every overlay layer needs the
-     picture itself: captions and skip sit on the art, and only step aside when the
-     control row is on screen */
   .pl__skip {
-    right: 12px;
-    bottom: 12px;
-    padding: 7px 13px;
-    font-size: 12.5px;
+    right: 10px;
+    bottom: 10px;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 8px;
   }
   .pl__skip small {
     display: none;
   }
-  /* with the control row up, the only free strip is the 32px above it — so the skip
-     button parks there */
   .player__stage[data-chrome='visible'] .pl__skip {
-    bottom: calc(var(--pl-bar) - 20px);
+    bottom: calc(var(--pl-bar) - 16px);
   }
   .cap--bottom {
     bottom: 10px;
   }
   .player__top {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    gap: 6px;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    gap: 4px;
   }
-  /* A phone frame is ~200px tall and its control row ~138px, so a caption at the viewer's
-     size used to be hidden whenever the chrome came up: controls XOR words. The cue now
-     docks above the row and shrinks with the frame (never below 12px, never above the
-     viewer's own choice), so both stay on screen at once. */
+  .player__top .pl__chip {
+    font-size: 11px;
+    padding: 3px 8px;
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   .cap {
     font-size: min(var(--cap-px, 16px), max(12px, calc(var(--pl-stage-h, 240px) * 0.06)));
     max-width: calc(100% - 12px);
@@ -1325,8 +1334,32 @@
     bottom: calc(var(--pl-bar) + 2px);
   }
   .pl__resume {
-    top: 44px;
-    left: 10px;
+    top: 40px;
+    left: 8px;
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 440px) {
+  .pl__ctrls {
+    gap: 0;
+  }
+  .player,
+  .player[data-density='compact'] {
+    --pl-btn: 34px;
+  }
+  .pl__btn {
+    width: 34px;
+    height: 34px;
+  }
+  .pl__btn--main {
+    width: 36px;
+    height: 36px;
+  }
+  .pl__lab {
+    padding: 4px 5px;
+    font-size: 10.5px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
