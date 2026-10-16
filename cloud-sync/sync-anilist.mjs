@@ -819,7 +819,10 @@ async function main({ forceTakeover = process.argv.includes('--force-takeover') 
       const slice = await catalogueSlice(cursor.after, want);
       const pending = CREATES_ROWS ? await pendingSlice(cursor.pendingAfter, want) : EMPTY_PENDING;
       if (!slice.rows.length && !pending.count) {
-        cursor = { ...cursor, after: '', pendingAfter: 0, done: true, doneAt: Date.now() };
+        const finalCursor = { ...cursor, after: '', pendingAfter: 0, done: true, doneAt: Date.now() };
+        await setCursor(cursorKey, finalCursor);
+        summary.cursor = finalCursor;
+        cursor = finalCursor;
         exitReason = 'catalogue_end';
         break;
       }

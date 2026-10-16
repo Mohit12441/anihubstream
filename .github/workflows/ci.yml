@@ -101,12 +101,11 @@ jobs:
       # read from that file rather than totalled across the suite, because the operator asked that `api/`
       # not be run. This job is therefore the first place the total is counted — which is what a floor is
       # for: if the sum is wrong the run goes red and says the number it saw.
-      # TEST_FLOOR is 282: 256 from commit 4d6583e plus eight checks in tools/discover-titles.test.mjs,
-      # four checks in cloud-sync/discover.test.mjs, thirteen checks in tools/serve-static.test.mjs,
-      # and one container MIME sniff check in api/animedubhindi.test.mjs.
+      # TEST_FLOOR is 283: 282 from commit b20ebd3 plus one check in cloud-sync/sync-anilist.test.mjs
+      # verifying terminal cursor persistence on catalogue completion.
       - name: tests
         env:
-          TEST_FLOOR: 282
+          TEST_FLOOR: 283
         run: |
           set -euo pipefail
           total=0

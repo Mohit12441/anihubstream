@@ -522,9 +522,10 @@ describe('migration: the four phases against real SQLite', () => {
     assert.equal(after.catalogue_synced_at, 1_700_000_000_000, 'nor the local stamp');
 
     /* The marker is durable: a later tick, with the same (now stale-in-spirit) heartbeat, gets
-       through without needing --force-takeover again. */
+       through without needing --force-takeover again. Since the terminal cursor was persisted,
+       this tick exits at cursor_end rather than reprocessing. */
     const later = await runPass(world, TAKEOVER);
-    assert.equal(later.summary.exit_reason, 'catalogue_end', 'the recorded decision was not honoured');
+    assert.equal(later.summary.exit_reason, 'cursor_end', 'the recorded decision was not honoured');
   });
 
   it('T6 is in rate.test.mjs: 50 consecutive sends, production floor, real clock', () => {
