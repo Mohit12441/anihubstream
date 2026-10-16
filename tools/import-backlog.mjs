@@ -107,8 +107,7 @@ export async function importBacklog({ limit = BATCH } = {}) {
         continue;
       }
 
-      let id = slugify(label) || `anime-${cand.id}`;
-      if (ids.has(id)) id = `${slugify(label)}-${cand.id}`;
+      let id = slugify(label, { existingIds: ids, collisionId: cand.id }) || `anime-${cand.id}`;
 
       batch.push({ id, anilist: cand.id, kitsu: kitsu.kitsuId, title: label, page });
       ids.add(id);

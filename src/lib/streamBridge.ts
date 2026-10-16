@@ -42,7 +42,9 @@ export interface ResolveFailure {
   message?: string;
 }
 
-const ENV_BASE = ((import.meta.env.VITE_STREAM_BRIDGE as string | undefined) ?? '').replace(/\/+$/, '');
+const ENV_BASE = (
+  ((typeof import.meta !== 'undefined' && (import.meta as any).env?.VITE_STREAM_BRIDGE) || (globalThis as any).process?.env?.VITE_STREAM_BRIDGE) as string | undefined ?? ''
+).replace(/\/+$/, '');
 const LOCAL_BASE = 'http://127.0.0.1:8795';
 const PUBLIC_BASE = 'https://bridge.anihubstream.com';
 
@@ -54,7 +56,7 @@ const PUBLIC_BASE = 'https://bridge.anihubstream.com';
    127.0.0.1 has no bridge anyway. */
 const candidateBases = (): string[] => {
   if (ENV_BASE) return [ENV_BASE];
-  const loopback = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+  const loopback = typeof window !== 'undefined' && window.location ? ['localhost', '127.0.0.1'].includes(window.location.hostname) : false;
   return loopback ? [LOCAL_BASE, PUBLIC_BASE] : [PUBLIC_BASE];
 };
 
@@ -102,9 +104,16 @@ export function bridgeHealth(fresh = false): Promise<boolean> {
   return healthProbe;
 }
 
-const RESOLVE_CACHE_TTL_MS = 2 * 60 * 60 * 1000; // 2 hours
+const RESOLVE_CACHE_TTL_MS = 6 * 60 * 60 * 1000; // 6 hours (up to 24h)
 const memoryCache = new Map<string, { at: number; data: BridgeSource }>();
 const activeResolves = new Map<string, Promise<BridgeSource | ResolveFailure>>();
+
+const slugifyKey = (t: string) =>
+  t.toLowerCase().replace(/[^a-z0-9_-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'anime';
+
+export function streamCacheKey(title: string, ep: number, audio: 'sub' | 'dub'): string {
+  return `stream:${slugifyKey(title)}:${ep}:${audio}`;
+}
 
 export function getCachedSource(key: string): BridgeSource | null {
   const now = Date.now();
@@ -113,7 +122,7 @@ export function getCachedSource(key: string): BridgeSource | null {
     return { ...mem.data, reused: true };
   }
   try {
-    const raw = sessionStorage.getItem(`res_${key}`);
+    const raw = localStorage.getItem(`res_${key}`) || sessionStorage.getItem(`res_${key}`);
     if (raw) {
       const parsed = JSON.parse(raw);
       if (parsed && typeof parsed.at === 'number' && now - parsed.at < RESOLVE_CACHE_TTL_MS) {
@@ -129,7 +138,17 @@ export function setCachedSource(key: string, data: BridgeSource): void {
   const entry = { at: Date.now(), data };
   memoryCache.set(key, entry);
   try {
+    localStorage.setItem(`res_${key}`, JSON.stringify(entry));
     sessionStorage.setItem(`res_${key}`, JSON.stringify(entry));
+  } catch {}
+
+  // Asynchronously persist to D1 stream_cache with 6h TTL
+  try {
+    void fetch('/api/stream/cache', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ key, data, ttlSeconds: 21600 }),
+    }).catch(() => {});
   } catch {}
 }
 
@@ -140,7 +159,7 @@ export async function prefetchEpisode(
   audio: 'sub' | 'dub',
 ): Promise<void> {
   if (!title || ep < 1) return;
-  const key = `${title.toLowerCase().trim()}|${ep}|${audio}`;
+  const key = streamCacheKey(title, ep, audio);
   if (getCachedSource(key)) return;
   void bridgeResolve(title, ep, audio);
 }
@@ -150,7 +169,7 @@ export async function bridgeResolve(
   ep: number,
   audio: 'sub' | 'dub',
 ): Promise<BridgeSource | ResolveFailure> {
-  const key = `${title.toLowerCase().trim()}|${ep}|${audio}`;
+  const key = streamCacheKey(title, ep, audio);
   const cached = getCachedSource(key);
   if (cached) return cached;
 
@@ -159,6 +178,21 @@ export async function bridgeResolve(
   }
 
   const promise = (async () => {
+    // Check D1 remote cache first before hitting bridge (<200ms)
+    try {
+      const cacheRes = await fetch(`/api/stream/cache?key=${encodeURIComponent(key)}`, {
+        signal: AbortSignal.timeout(500),
+      });
+      if (cacheRes.ok) {
+        const cacheJson = (await cacheRes.json()) as { hit?: boolean; data?: BridgeSource };
+        if (cacheJson.hit && cacheJson.data) {
+          const remoteData = { ...cacheJson.data, reused: true };
+          memoryCache.set(key, { at: Date.now(), data: remoteData });
+          return remoteData;
+        }
+      }
+    } catch {}
+
     try {
       const res = await fetch(
         bridgeUrl(`/resolve?title=${encodeURIComponent(title)}&ep=${ep}&audio=${audio}`),

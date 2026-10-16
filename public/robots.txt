@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Allow: /anime
+Allow: /watch
+Disallow: /api/
 
 Sitemap: https://anihubstream.com/sitemap.xml

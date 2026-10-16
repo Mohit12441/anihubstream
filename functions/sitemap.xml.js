@@ -27,7 +27,18 @@ export async function onRequestGet({ env }) {
         `SELECT id, added_at, episode_total FROM anime ORDER BY id ASC`
       ).all();
 
+      const RETIRED_SLUGS = new Set([
+        'demon-slayer-kimetsu-no-yaiba',
+        'frieren-beyond-journey-s-end',
+        'tokyo-revengers-war-of-the-three-titans-arc',
+        'blue-box-season-2',
+        'the-apothecary-diaries-season-3',
+        'cyberpunk-edgerunners-2',
+        'the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on',
+      ]);
+
       for (const row of results || []) {
+        if (RETIRED_SLUGS.has(row.id)) continue;
         const lastmod = row.added_at ? String(row.added_at).slice(0, 10) : now;
         animeUrls.push({
           loc: `${origin}/watch/${row.id}`,

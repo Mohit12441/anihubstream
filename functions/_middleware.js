@@ -66,13 +66,16 @@ export async function onRequest(context) {
 
         const animeTitle = row.title || id;
         const yearStr = row.year ? ` (${row.year})` : '';
-        if (epNum) {
+        const cleanSynopsis = (row.synopsis || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+        desc = cleanSynopsis ? cleanSynopsis.slice(0, 150).trim() : `Watch ${animeTitle} free online in high definition on AniHubStream.`;
+
+        if (epNum && epNum > 1) {
           title = `${animeTitle} Episode ${epNum} — Watch Online Free | AniHubStream`;
-          desc = `Watch ${animeTitle} Episode ${epNum} in HD with English subtitles and dub. ${row.synopsis ? row.synopsis.slice(0, 120) : ''}...`;
+          canonical = `${origin}/watch/${id}/${epNum}`;
           ogType = 'video.episode';
         } else {
           title = `${animeTitle}${yearStr} — Watch Online Free | AniHubStream`;
-          desc = row.synopsis ? `${row.synopsis.slice(0, 150)}...` : `Watch ${animeTitle} free online in high definition on AniHubStream.`;
+          canonical = `${origin}/watch/${id}`;
           ogType = 'video.tv_show';
         }
 
@@ -83,7 +86,7 @@ export async function onRequest(context) {
           '@type': epNum ? 'TVEpisode' : 'TVSeries',
           name: epNum ? `${animeTitle} Episode ${epNum}` : animeTitle,
           alternateName: row.native || undefined,
-          description: row.synopsis || desc,
+          description: desc,
           image: ogImage,
           url: canonical,
           ...(epNum ? { episodeNumber: epNum } : {}),
@@ -102,6 +105,18 @@ export async function onRequest(context) {
         console.error('Middleware D1 lookup failed:', e);
       }
     }
+  } else if (path === '/') {
+    jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'AniHubStream',
+      url: origin,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${origin}/anime?search={search_term_string}`,
+        'query-input': 'required name=search_term_string',
+      },
+    };
   } else if (path === '/anime') {
     title = 'Browse Anime Catalogue — Discover Series & Movies | AniHubStream';
     desc = 'Explore the full AniHubStream anime catalogue. Filter by genre, release year, format (TV, Movie, OVA), and rating.';

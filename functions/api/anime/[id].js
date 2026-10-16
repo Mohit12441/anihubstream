@@ -1,10 +1,27 @@
 import { CARD_COLUMNS, HttpError, cardFromRow, episodeFromRow, errorResponse, ok } from '../_lib.js';
 
-export const onRequestGet = async ({ params, env }) => {
+const SLUG_REDIRECTS = {
+  'demon-slayer-kimetsu-no-yaiba': 'demon-slayer',
+  'frieren-beyond-journey-s-end': 'sousou-no-frieren',
+  'tokyo-revengers-war-of-the-three-titans-arc': 'tokyo-revengers-zokuhen',
+  'blue-box-season-2': 'ao-no-hako-2',
+  'the-apothecary-diaries-season-3': 'kusuriya-no-hitorigoto-3rd-season',
+  'cyberpunk-edgerunners-2': 'cyberpunk-edgerunners-ii',
+  'the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on': 'the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life',
+};
+
+export const onRequestGet = async ({ request, params, env }) => {
   try {
     const id = decodeURIComponent(params.id);
     if (!/^[A-Za-z0-9_-]{1,80}$/.test(id)) {
       throw new HttpError(400, 'bad_request', 'anime id may contain letters, digits, dash and underscore only');
+    }
+
+    if (SLUG_REDIRECTS[id]) {
+      const canonical = SLUG_REDIRECTS[id];
+      const targetUrl = new URL(request.url);
+      targetUrl.pathname = `/api/anime/${canonical}`;
+      return Response.redirect(targetUrl.toString(), 301);
     }
 
     const card = await env.ANIHUB.prepare(`SELECT ${CARD_COLUMNS} FROM anime a WHERE a.id = ?1`)
@@ -23,7 +40,7 @@ export const onRequestGet = async ({ params, env }) => {
       `SELECT a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status,
               a.art, a.key_art, a.accent, a.synopsis, a.rank, a.trend_rank, a.alt_seasons,
               a.sched_day, a.sched_day_label, a.sched_date, a.sched_time, a.sched_season,
-              a.episode_total,
+              a.episode_total, a.source_ids, a.skip_key_id, a.skip_key_space,
               (SELECT group_concat(genre_id) FROM anime_genre ag2 WHERE ag2.anime_id = a.id) AS genre_ids,
               (SELECT count(*) FROM episode e2 WHERE e2.anime_id = a.id) AS episode_count
          FROM anime_genre ag

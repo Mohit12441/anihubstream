@@ -87,7 +87,7 @@ export function HeroBanner({ query, onQuery, onSearch, activeGenre, onGenre }: P
         </div>
 
         <div className="vj hero__vj" aria-hidden="true">
-          <span className="vj__jp">{HERO.jp}</span>
+          <span className="vj__jp" lang="ja">{HERO.jp}</span>
           <span className="vj__en">{HERO.en}</span>
         </div>
       </div>

@@ -2,12 +2,9 @@ import { Link } from 'react-router-dom';
 import { Github, Instagram, Send, Twitter } from 'lucide-react';
 import { Logo } from './Logo';
 import { useCatalogue } from '../state/catalogue';
-import { useToast } from '../lib/Toast';
 
 export function Footer() {
   const { GENRES } = useCatalogue();
-  const { notify } = useToast();
-  const demo = (label: string) => () => notify(`${label} is a demo link in this frontend prototype.`);
 
   return (
     <footer className="site-footer">
@@ -67,6 +64,9 @@ export function Footer() {
                 <Link to="/about">About Us</Link>
               </li>
               <li>
+                <Link to="/contact">Support & Contact</Link>
+              </li>
+              <li>
                 <Link to="/dmca">DMCA Notice</Link>
               </li>
               <li>
@@ -76,7 +76,12 @@ export function Footer() {
                 <Link to="/terms">Terms of Service</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <a href="https://github.com/Mohit12441/anihubstream/releases" target="_blank" rel="noopener noreferrer">
+                  Release Notes
+                </a>
+              </li>
+              <li>
+                <Link to="/about">Press Kit</Link>
               </li>
             </ul>
           </nav>
@@ -85,15 +90,33 @@ export function Footer() {
         <div className="site-footer__bottom">
           <p>© {new Date().getFullYear()} AniHubStream. UI concept — catalogue data and artwork from Kitsu and AniList.</p>
           <div className="site-footer__social">
-            <button type="button" className="icon-btn" onClick={demo('X / Twitter')} aria-label="X / Twitter">
+            <a
+              href="https://x.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-btn"
+              aria-label="X / Twitter"
+            >
               <Twitter size={17} />
-            </button>
-            <button type="button" className="icon-btn" onClick={demo('Instagram')} aria-label="Instagram">
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-btn"
+              aria-label="Instagram"
+            >
               <Instagram size={17} />
-            </button>
-            <button type="button" className="icon-btn" onClick={demo('GitHub')} aria-label="GitHub">
+            </a>
+            <a
+              href="https://github.com/Mohit12441/anihubstream"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-btn"
+              aria-label="GitHub"
+            >
               <Github size={17} />
-            </button>
+            </a>
           </div>
         </div>
       </div>

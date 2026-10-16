@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Play, RefreshCw, SkipForward, WifiOff, X } from 'lucide-react';
 import type { Anime, Episode, Marker } from '../../data/model';
+import { toSeconds } from '../../data/model';
+import { fetchSkipTimes } from '../../lib/aniskip';
 import { LIVE_SERVER, type ServerStatus } from '../../data/servers';
 import { useToast } from '../../lib/Toast';
 import { usePrefersReducedMotion } from '../../lib/motion';
@@ -39,6 +41,7 @@ interface Props {
   restoreAppearance: () => void;
   resumeAt: number;
   onProgress: (t: number) => void;
+  onStreamResolved?: (resolved: boolean) => void;
 }
 
 /** The prefixed members Safari exposes are not in the DOM typings. */
@@ -49,7 +52,7 @@ const webkitDoc = () =>
   };
 
 export function AdvancedPlayer(props: Props) {
-  const { anime, episode, next, hasPrev, hasNext, onPrev, onNext, theatre, onTheatre, prefs, patch } = props;
+  const { anime, episode, next, hasPrev, hasNext, onPrev, onNext, theatre, onTheatre, prefs, patch, onStreamResolved } = props;
   const { notify } = useToast();
   const reduced = usePrefersReducedMotion();
 
@@ -106,19 +109,62 @@ export function AdvancedPlayer(props: Props) {
   const serverStatus: ServerStatus =
     live.status === 'ready' ? 'online' : live.status === 'resolving' ? 'degraded' : 'unavailable';
 
-  /* the timeline is real only once media metadata has landed */
-  const timelineDuration = liveReady && live.duration > 0 ? live.duration : 0;
+  /* Media duration from live stream, falling back to episode catalog runtime while loading */
+  const fallbackDuration = episode.runtime ? toSeconds(episode.runtime) : 0;
+  const timelineDuration = liveReady && live.duration > 0 ? live.duration : fallbackDuration;
+
+  useEffect(() => {
+    onStreamResolved?.(liveReady);
+  }, [liveReady, onStreamResolved]);
+
+  /* Dynamically query AniSkip v2 timestamps for the anime MAL ID and episode */
+  const [aniSkipMarkers, setAniSkipMarkers] = useState<Marker[]>([]);
+  useEffect(() => {
+    let active = true;
+    if (!anime.malId || anime.malId <= 0) {
+      setAniSkipMarkers([]);
+      return;
+    }
+    const epLength = timelineDuration > 0 ? timelineDuration : toSeconds(episode.runtime);
+    fetchSkipTimes(anime.malId, episode.n, epLength)
+      .then((m) => {
+        if (active) setAniSkipMarkers(m);
+      })
+      .catch(() => {
+        if (active) setAniSkipMarkers([]);
+      });
+    return () => {
+      active = false;
+    };
+  }, [anime.malId, episode.n, timelineDuration, episode.runtime]);
+
   /* the provider's skip windows (via the bridge) take over once the stream is
      ready; the catalogue's synced AniSkip windows stand in until then */
   const liveMarkers = useMemo<Marker[]>(() => {
     const s = live.info?.skip;
     if (!s) return [];
     const out: Marker[] = [];
-    if (s.intro) out.push({ kind: 'intro', label: 'Intro', start: s.intro[0], end: s.intro[1] });
-    if (s.outro) out.push({ kind: 'outro', label: 'Outro', start: s.outro[0], end: s.outro[1] });
+    if (s.intro) out.push({ kind: 'intro', label: 'Opening', start: s.intro[0], end: s.intro[1] });
+    if (s.outro) out.push({ kind: 'outro', label: 'Ending', start: s.outro[0], end: s.outro[1] });
     return out;
   }, [live.info]);
-  const markers = liveReady && liveMarkers.length ? liveMarkers : episode.markers;
+
+  const markers = useMemo<Marker[]>(() => {
+    const secondary = liveReady && liveMarkers.length ? liveMarkers : episode.markers;
+    if (!aniSkipMarkers.length) return secondary;
+    // AniSkip community markers take priority for intro, outro, and recap
+    const merged: Marker[] = [...aniSkipMarkers];
+    const hasIntro = merged.some((m) => m.kind === 'intro');
+    const hasOutro = merged.some((m) => m.kind === 'outro');
+    for (const m of secondary) {
+      if (m.kind === 'intro' && !hasIntro) merged.push(m);
+      else if (m.kind === 'outro' && !hasOutro) merged.push(m);
+      else if (m.kind !== 'intro' && m.kind !== 'outro' && !merged.some((c) => c.kind === m.kind)) {
+        merged.push(m);
+      }
+    }
+    return merged;
+  }, [aniSkipMarkers, liveReady, liveMarkers, episode.markers]);
 
   const engine = usePlayerEngine({
     duration: timelineDuration,
@@ -540,8 +586,17 @@ export function AdvancedPlayer(props: Props) {
      one non-playing state where the line goes, because the picture is over. */
   const showCaptions = prefs.subtitles.enabled && !engine.ended && liveCues.length > 0;
 
-  const skipTarget = liveReady ? (engine.inIntro ? engine.intro : engine.inOutro ? engine.outro : undefined) : undefined;
-  const skipLabel = engine.inIntro ? 'Skip Intro' : 'Skip Outro';
+  const canSeek = engine.canSeek !== false;
+  const skipTarget = canSeek
+    ? (engine.inIntro ? engine.intro : engine.inOutro ? engine.outro : engine.inRecap ? engine.recap : undefined)
+    : undefined;
+  const skipLabel = engine.inIntro
+    ? 'Skip Opening'
+    : engine.inOutro
+      ? 'Skip Ending'
+      : engine.inRecap
+        ? 'Skip Recap'
+        : 'Skip';
 
   return (
     <div
@@ -603,7 +658,7 @@ export function AdvancedPlayer(props: Props) {
             }
           >
             {liveReady
-              ? `Live · ${live.info?.audio === 'dub' ? 'DUB' : 'SUB'} · ${live.info?.quality ?? 1080}p`
+              ? `Live · ${live.info?.audio === 'dub' ? 'DUB' : 'SUB'} · ${live.info?.quality ?? 1080}p${live.firstFrameLatency ? ` · ${live.firstFrameLatency}ms` : ''}`
               : live.status === 'resolving'
                 ? 'Connecting to bridge…'
                 : /* a refusal from the bridge is not the bridge being down: saying so would blame
@@ -615,9 +670,27 @@ export function AdvancedPlayer(props: Props) {
         </div>
 
         {live.status === 'resolving' && (
-          <span className="pl__live-wait" role="status">
-            Resolving stream through AniKoto… ({live.resolvingElapsed}s)
-          </span>
+          <div className="pl__live-wait" role="status" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center' }}>
+            <span>Resolving stream through AniKoto… ({live.resolvingElapsed}s)</span>
+            {live.resolvingElapsed >= 8 && (
+              <div className="pl__stall-retry" role="alert" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                <span style={{ fontSize: '0.85rem', color: '#ffc247' }}>Stream taking longer than usual —</span>
+                <button type="button" className="btn btn--sm btn--primary" onClick={live.retry}>
+                  <RefreshCw size={12} aria-hidden="true" /> Retry
+                </button>
+                <button
+                  type="button"
+                  className="btn btn--sm btn--ghost"
+                  onClick={() => {
+                    live.retry();
+                    notify('Switching stream server…');
+                  }}
+                >
+                  Switch Server
+                </button>
+              </div>
+            )}
+          </div>
         )}
 
         {(live.status === 'unavailable' || live.status === 'error') && (
@@ -700,7 +773,9 @@ export function AdvancedPlayer(props: Props) {
               notify(
                 engine.inIntro
                   ? `Jumped to ${stamp(skipTarget.end)} — opening marker for episode ${episode.n}.`
-                  : `Jumped to ${stamp(skipTarget.end)} — ending marker for episode ${episode.n}.`,
+                  : engine.inOutro
+                    ? `Jumped to ${stamp(skipTarget.end)} — ending marker for episode ${episode.n}.`
+                    : `Jumped to ${stamp(skipTarget.end)} — recap marker for episode ${episode.n}.`,
               );
             }}
           >

@@ -258,59 +258,99 @@ async function buildSource({ title, ep, audio }) {
   const { embeds, skip } = await sources(episode.id, { audioType: audio, signal });
   if (!embeds.length) throw Object.assign(new Error(`no ${audio} embeds for episode ${ep}`), { code: 'NO_EMBEDS' });
 
-  const failures = [];
-  for (const embed of rankEmbeds(embeds).slice(0, 3)) {
-    try {
-      const r = await resolve(embed, { referer: UA_REFERER, signal });
-      const sniffed = await snackPlayable(r, signal);
-      if (!sniffed) { failures.push(`${embed.split('/').slice(0, 3).join('/')}: no playable variant`); continue; }
+  const candidates = rankEmbeds(embeds).slice(0, 3);
+  const STAGGER_MS = 3000;
 
-      const mediaUrl = r.master.url;
-      const mediaBase = new URL(mediaUrl);
-      const dir = mediaBase.pathname.replace(/\/[^/]*\.m3u8$/i, '');
-      const sid = randomUUID();
-      const session = {
-        sid,
-        at: Date.now(),
-        title: media.title,
-        episode: { number: episode.number, title: episode.title },
-        audio: r.audio ?? audio,
-        skip: skip ?? undefined,
-        quality: sniffed.variant.quality,
-        variants: [...new Set((r.variants ?? []).map((v) => v.quality))],
-        proof: sniffed.proof,
-        referer: r.master.headers?.referer ?? UA_REFERER,
-        signed: { host: mediaBase.host, dir },
-        mediaUrl,
-        episodeRef: episode.id,
-        allowedHosts: new Set([mediaBase.host]),
-        subUrls: (r.subtitles ?? []).map((t) => ({ url: t.url, referer: t.headers?.referer ?? r.master.headers?.referer ?? UA_REFERER })),
-        subtitles: (r.subtitles ?? []).map((t, i) => ({
-          language: t.language,
-          ...(t.name ? { name: t.name } : {}),
-          url: `/stream/${sid}/sub/${i}.vtt`,
-        })),
-      };
-      sessions.set(sid, session);
-      const meta = {
-        session: sid,
-        title: media.title,
-        episode: session.episode,
-        quality: session.quality,
-        variants: session.variants,
-        audio: session.audio,
-        skip: session.skip ?? null,
-        proof: session.proof,
-        master: `/stream/${sid}/master.m3u8`,
-        subtitles: session.subtitles,
-      };
-      recent.set(`${title.toLowerCase()}|${ep}|${audio}`, { at: Date.now(), sid });
-      return meta;
-    } catch (e) {
-      failures.push(`${embed.split('/').slice(0, 3).join('/')}: ${e?.code ?? e?.message ?? e}`);
-    }
+  async function resolveSingleEmbed(embed) {
+    const r = await resolve(embed, { referer: UA_REFERER, signal });
+    const sniffed = await snackPlayable(r, signal);
+    if (!sniffed) throw new Error(`${embed.split('/').slice(0, 3).join('/')}: no playable variant`);
+
+    const mediaUrl = r.master.url;
+    const mediaBase = new URL(mediaUrl);
+    const dir = mediaBase.pathname.replace(/\/[^/]*\.m3u8$/i, '');
+    const sid = randomUUID();
+    const session = {
+      sid,
+      at: Date.now(),
+      title: media.title,
+      episode: { number: episode.number, title: episode.title },
+      audio: r.audio ?? audio,
+      skip: skip ?? undefined,
+      quality: sniffed.variant.quality,
+      variants: [...new Set((r.variants ?? []).map((v) => v.quality))],
+      proof: sniffed.proof,
+      referer: r.master.headers?.referer ?? UA_REFERER,
+      signed: { host: mediaBase.host, dir },
+      mediaUrl,
+      episodeRef: episode.id,
+      allowedHosts: new Set([mediaBase.host]),
+      subUrls: (r.subtitles ?? []).map((t) => ({ url: t.url, referer: t.headers?.referer ?? r.master.headers?.referer ?? UA_REFERER })),
+      subtitles: (r.subtitles ?? []).map((t, i) => ({
+        language: t.language,
+        ...(t.name ? { name: t.name } : {}),
+        url: `/stream/${sid}/sub/${i}.vtt`,
+      })),
+    };
+    sessions.set(sid, session);
+    const meta = {
+      session: sid,
+      title: media.title,
+      episode: session.episode,
+      quality: session.quality,
+      variants: session.variants,
+      audio: session.audio,
+      skip: session.skip ?? null,
+      proof: session.proof,
+      master: `/stream/${sid}/master.m3u8`,
+      subtitles: session.subtitles,
+    };
+    return meta;
   }
-  throw Object.assign(new Error(`no playable source (${failures.join('; ')})`), { code: 'RESOLVE_FAILED' });
+
+  return new Promise((resolveAll, rejectAll) => {
+    let resolved = false;
+    let pending = 0;
+    const failures = [];
+    const timers = [];
+
+    const cleanup = () => {
+      timers.forEach((t) => clearTimeout(t));
+    };
+
+    const runCandidate = (index) => {
+      if (resolved || index >= candidates.length) return;
+      const embed = candidates[index];
+      pending++;
+
+      resolveSingleEmbed(embed)
+        .then((meta) => {
+          if (!resolved) {
+            resolved = true;
+            cleanup();
+            recent.set(`${title.toLowerCase()}|${ep}|${audio}`, { at: Date.now(), sid: meta.session });
+            resolveAll(meta);
+          }
+        })
+        .catch((e) => {
+          failures.push(`${embed.split('/').slice(0, 3).join('/')}: ${e?.code ?? e?.message ?? e}`);
+          pending--;
+          if (!resolved && pending === 0 && index >= candidates.length - 1) {
+            cleanup();
+            rejectAll(Object.assign(new Error(`no playable source (${failures.join('; ')})`), { code: 'RESOLVE_FAILED' }));
+          }
+        });
+
+      if (index + 1 < candidates.length) {
+        const timer = setTimeout(() => {
+          if (!resolved) runCandidate(index + 1);
+        }, STAGGER_MS);
+        timers.push(timer);
+      }
+    };
+
+    runCandidate(0);
+  });
 }
 
 /* ------------------------------------------------------- audio availability */

@@ -16,6 +16,8 @@ export interface LiveController {
   play: () => void;
   pause: () => void;
   seek: (t: number) => void;
+  /** False if media is an uncontrollable or cross-origin embed that refuses seeking */
+  canSeek?: boolean | (() => boolean);
   current: () => {
     time: number;
     playing: boolean;
@@ -49,8 +51,11 @@ export interface PlayerEngine {
   progress: number;
   intro?: Marker;
   outro?: Marker;
+  recap?: Marker;
   inIntro: boolean;
   inOutro: boolean;
+  inRecap: boolean;
+  canSeek: boolean;
   play: () => void;
   pause: () => void;
   toggle: () => void;
@@ -119,11 +124,19 @@ export function usePlayerEngine(o: EngineOptions): PlayerEngine {
     return () => window.clearInterval(id);
   }, [live]);
 
+  const canSeek = useMemo(() => {
+    if (typeof live.canSeek === 'function') return live.canSeek();
+    if (typeof live.canSeek === 'boolean') return live.canSeek;
+    return true;
+  }, [live]);
+
   const intro = useMemo(() => o.markers.find((m) => m.kind === 'intro'), [o.markers]);
   const outro = useMemo(() => o.markers.find((m) => m.kind === 'outro'), [o.markers]);
+  const recap = useMemo(() => o.markers.find((m) => m.kind === 'recap'), [o.markers]);
 
   const inIntro = !!intro && time >= intro.start && time < intro.end;
   const inOutro = !!outro && time >= outro.start && time < outro.end;
+  const inRecap = !!recap && time >= recap.start && time < recap.end;
 
   const skipped = useRef('');
   useEffect(() => {
@@ -131,7 +144,7 @@ export function usePlayerEngine(o: EngineOptions): PlayerEngine {
   }, [o.markers]);
 
   useEffect(() => {
-    if (!playing) return;
+    if (!playing || !canSeek) return;
     if (o.autoSkipIntro && intro && inIntro && !skipped.current.includes('i')) {
       skipped.current += 'i';
       seek(intro.end + 0.2);
@@ -142,7 +155,7 @@ export function usePlayerEngine(o: EngineOptions): PlayerEngine {
       seek(outro.end + 0.2);
       skipRef.current?.('outro');
     }
-  }, [playing, inIntro, inOutro, intro, outro, o.autoSkipIntro, o.autoSkipOutro, seek]);
+  }, [playing, canSeek, inIntro, inOutro, intro, outro, o.autoSkipIntro, o.autoSkipOutro, seek]);
 
   const reset = useCallback(
     (t: number) => {
@@ -166,8 +179,11 @@ export function usePlayerEngine(o: EngineOptions): PlayerEngine {
     progress: o.duration > 0 ? time / o.duration : 0,
     intro,
     outro,
+    recap,
     inIntro,
     inOutro,
+    inRecap,
+    canSeek,
     play: useCallback(() => {
       live.play();
     }, [live]),

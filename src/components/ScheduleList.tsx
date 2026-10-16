@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Clock, Play } from 'lucide-react';
 import { Art } from './Art';
-import { episodeTotalOf, type ScheduleEntry } from '../data/model';
+import { CardMeta } from './CardMeta';
+import { type ScheduleEntry } from '../data/model';
 
 interface Props {
   entries: ScheduleEntry[];
@@ -38,10 +39,7 @@ export function ScheduleList({ entries, highlightId }: Props) {
             <Link to={`/watch/${e.anime.id}`} className="tl__title">
               {e.anime.title}
             </Link>
-            <p className="tl__meta">
-              {e.anime.season.replace(/Season\s/i, 'S')} · {episodeTotalOf(e.anime)} EP
-              <span className="tl__tag">{e.season}</span>
-            </p>
+            <CardMeta anime={e.anime} className="tl__meta" />
             <p className="tl__syn">{e.anime.synopsis}</p>
           </div>
 

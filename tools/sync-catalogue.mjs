@@ -33,6 +33,7 @@
 
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { GENRES } from '../src/data/anime.ts';
 import { foldSearch } from '../functions/api/_lib.js';
 import { seasonKey } from './season.mjs';
@@ -234,9 +235,12 @@ async function syncTarget(target, droppedGenres, stats) {
   if (!media) throw new Error(`${target.id}: no AniList row for ${target.anilist}`);
   const at = k.data.attributes;
 
-  const { rows: eps, total: epTotal } = await fetchEpisodes(target.kitsu, at.episodeCount);
+  const kitsuCount = (at.episodeCount && at.episodeCount > 0) ? at.episodeCount : null;
+  const wantedCount = kitsuCount || (media.episodes && media.episodes > 0 ? media.episodes : null);
+  const { rows: eps, total: epTotal } = await fetchEpisodes(target.kitsu, wantedCount);
+  const resolvedEpisodeTotal = (epTotal && epTotal > 0) ? epTotal : ((media.episodes && media.episodes > 0) ? media.episodes : null);
 
-  const fallbackLength = at.episodeLength || media.duration || null;
+  const fallbackLength = (at.episodeLength && at.episodeLength > 0) ? at.episodeLength : ((media.duration && media.duration > 0) ? media.duration : null);
   let runtimeFallbacks = 0;
   const episodes = eps.map((e) => {
     const minutes = e.length ?? fallbackLength;
@@ -317,7 +321,7 @@ async function syncTarget(target, droppedGenres, stats) {
     sourceIds: JSON.stringify({ kitsu: target.kitsu, anilist: target.anilist, mal: media.idMal ?? null }),
     skipKeyId: skipKey?.id ?? null,
     skipKeySpace: skipKey?.space ?? null,
-    episodeTotal: epTotal,
+    episodeTotal: resolvedEpisodeTotal,
     genres: mapGenres(media, droppedGenres),
     episodes,
   };
@@ -377,43 +381,161 @@ function emit(rows) {
       text(`${r.id}#${e.n}`), text(r.id), num(e.n), text(e.title), text(e.runtime ?? '—'), num(e.runtimeSeconds ?? 0),
       text(e.thumb ?? ''), text(e.synopsis), text(JSON.stringify(e.markers)), text(e.airdate), text(e.externalId)].join(',')});`)),
     '',
+    '',
   ];
   return out.join('\n');
 }
 
-/* ---------------- main ---------------- */
+/* ---------------- deduplication & merge ---------------- */
 
-console.log(`syncing ${TARGETS.length} titles${wantSkips ? ' (with AniSkip windows)' : ' (AniSkip pass disabled)'}`);
-mkdirSync(CACHE, { recursive: true });
-const droppedGenres = new Set();
-const stats = { episodesStored: 0, episodeTotal: 0, markers: 0, runtimeFallbacks: 0 };
+export function canonicalMergeKey(item) {
+  let sources = {};
+  if (item.sourceIds) {
+    try {
+      sources = typeof item.sourceIds === 'string' ? JSON.parse(item.sourceIds) : item.sourceIds;
+    } catch {}
+  }
+  const anilistId = item.anilist ?? sources.anilist;
+  if (anilistId) return `anilist:${anilistId}`;
+  const kitsuId = item.kitsu ?? sources.kitsu;
+  if (kitsuId) return `kitsu:${kitsuId}`;
+  const normTitle = (item.titleRomaji || item.title_romaji || item.native || item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const year = item.year || '';
+  const format = (item.kind || item.format || '').toLowerCase();
+  return `norm:${normTitle}:${year}:${format}`;
+}
 
-const rows = [];
-for (const target of TARGETS) {
-  if (only.size && !only.has(target.id)) continue;
-  console.log(`\n> ${target.id}  kitsu/${target.kitsu} anilist/${target.anilist}`);
-  try {
-    rows.push(await syncTarget(target, droppedGenres, stats));
-  } catch (err) {
-    console.error(`   FAILED ${target.id}: ${err.message}`);
-    process.exitCode = 1;
+export function scoreSlug(slug) {
+  let score = 0;
+  // Penalty for trailing numeric digit suffix (e.g. -2, -3)
+  if (/(?:-season)?-\d+$/.test(slug)) score += 20;
+  // Penalty for truncated mid-word or dangling preposition
+  if (slug.endsWith('-') || /-(on|in|at|to|for|of|with|a|an|the)$/.test(slug)) score += 50;
+  // Length penalty (shorter length preferred)
+  score += slug.length;
+  return score;
+}
+
+export function chooseStableSlug(slugA, slugB) {
+  if (!slugA) return slugB;
+  if (!slugB) return slugA;
+  if (slugA === slugB) return slugA;
+  const scoreA = scoreSlug(slugA);
+  const scoreB = scoreSlug(slugB);
+  if (scoreA < scoreB) return slugA;
+  if (scoreB < scoreA) return slugB;
+  return slugA < slugB ? slugA : slugB;
+}
+
+export function mergeRows(canonical, other) {
+  const chosenSlug = chooseStableSlug(canonical.id, other.id);
+
+  const cSources = typeof canonical.sourceIds === 'string' ? JSON.parse(canonical.sourceIds) : (canonical.sourceIds || {});
+  const oSources = typeof other.sourceIds === 'string' ? JSON.parse(other.sourceIds) : (other.sourceIds || {});
+  const mergedSources = {
+    kitsu: cSources.kitsu ?? oSources.kitsu ?? null,
+    anilist: cSources.anilist ?? oSources.anilist ?? null,
+    mal: cSources.mal ?? oSources.mal ?? null,
+  };
+
+  // When merging: prefer AniList for episode counts, airing schedule, rating;
+  // prefer Kitsu for missing attributes; keep combined source_ids.
+  const rating = canonical.rating ?? other.rating ?? null;
+  const episodeTotal = canonical.episodeTotal || other.episodeTotal || 0;
+  const schedule = canonical.schedule || other.schedule || null;
+
+  const episodes = (canonical.episodes && canonical.episodes.length >= (other.episodes?.length || 0))
+    ? canonical.episodes
+    : (other.episodes || []);
+
+  const genreSet = new Set([...(canonical.genres || []), ...(other.genres || [])]);
+  const altSet = new Set([...(canonical.altSeasons || []), ...(other.altSeasons || [])]);
+
+  return {
+    ...other,
+    ...canonical,
+    id: chosenSlug,
+    sourceIds: JSON.stringify(mergedSources),
+    rating,
+    episodeTotal,
+    schedule,
+    episodes,
+    genres: [...genreSet],
+    altSeasons: [...altSet],
+  };
+}
+
+export function deduplicateRows(rows) {
+  const byKey = new Map();
+  for (const row of rows) {
+    const key = canonicalMergeKey(row);
+    if (byKey.has(key)) {
+      const existing = byKey.get(key);
+      byKey.set(key, mergeRows(existing, row));
+    } else {
+      byKey.set(key, row);
+    }
+  }
+  return [...byKey.values()];
+}
+
+export function assertNoDuplicateMergeKeys(rows) {
+  const seen = new Map();
+  for (const row of rows) {
+    const key = canonicalMergeKey(row);
+    if (seen.has(key)) {
+      throw new Error(`Duplicate merge key '${key}' detected for '${row.id}' (conflicts with '${seen.get(key)}')`);
+    }
+    seen.set(key, row.id);
   }
 }
 
-if (!only.size) {
-  const ranked = [...rows].sort((a, b) => (b.rating ?? -1) - (a.rating ?? -1));
-  ranked.forEach((r, i) => { if (r.rating) r.rank = i + 1; });
-}
+/* ---------------- main ---------------- */
 
-const sql = emit(rows);
-writeFileSync(resolve(ROOT, 'seed.sql'), sql, 'utf8');
-writeFileSync(
-  resolve(CACHE, 'last-sync.json'),
-  JSON.stringify({ fetched_at: new Date().toISOString(), titles: rows.map((r) => ({ id: r.id, sources: JSON.parse(r.sourceIds), episodes: r.episodes.length, episodeTotal: r.episodeTotal, skipKey: r.skipKeyId ? `${r.skipKeySpace}/${r.skipKeyId}` : null, markers: r.episodes.reduce((n, e) => n + e.markers.length, 0) })), stats, droppedGenres: [...droppedGenres] }, null, 2),
-  'utf8',
-);
+async function main() {
+  console.log(`syncing ${TARGETS.length} titles${wantSkips ? ' (with AniSkip windows)' : ' (AniSkip pass disabled)'}`);
+  mkdirSync(CACHE, { recursive: true });
+  const droppedGenres = new Set();
+  const stats = { episodesStored: 0, episodeTotal: 0, markers: 0, runtimeFallbacks: 0 };
 
-console.log(`
+  const rawRows = [];
+  for (const target of TARGETS) {
+    if (only.size && !only.has(target.id)) continue;
+    console.log(`\n> ${target.id}  kitsu/${target.kitsu} anilist/${target.anilist}`);
+    try {
+      rawRows.push(await syncTarget(target, droppedGenres, stats));
+    } catch (err) {
+      console.error(`   FAILED ${target.id}: ${err.message}`);
+      process.exitCode = 1;
+    }
+  }
+
+  const rows = deduplicateRows(rawRows);
+  assertNoDuplicateMergeKeys(rows);
+
+  if (!only.size) {
+    const ranked = [...rows].sort((a, b) => (b.rating ?? -1) - (a.rating ?? -1));
+    ranked.forEach((r, i) => { if (r.rating) r.rank = i + 1; });
+  }
+
+  const sql = emit(rows);
+  writeFileSync(resolve(ROOT, 'seed.sql'), sql, 'utf8');
+  writeFileSync(
+    resolve(CACHE, 'last-sync.json'),
+    JSON.stringify({ fetched_at: new Date().toISOString(), titles: rows.map((r) => ({ id: r.id, sources: JSON.parse(r.sourceIds), episodes: r.episodes.length, episodeTotal: r.episodeTotal, skipKey: r.skipKeyId ? `${r.skipKeySpace}/${r.skipKeyId}` : null, markers: r.episodes.reduce((n, e) => n + e.markers.length, 0) })), stats, droppedGenres: [...droppedGenres] }, null, 2),
+    'utf8',
+  );
+
+  console.log(`
 seed.sql: ${rows.length} anime, ${stats.episodesStored} episode rows (the sources list ${stats.episodeTotal} in total), ${stats.markers} skip windows
   rank 1 = ${rows.find((r) => r.rank === 1)?.id ?? 'n/a'} | ${rows.filter((r) => r.schedule).length} titles carry an air slot
 ${stats.runtimeFallbacks ? `  ${stats.runtimeFallbacks} episodes had no published length and used the title's own default\n` : ''}${droppedGenres.size ? `  ${droppedGenres.size} AniList genres have no tile on this site and were dropped, not invented (e.g. ${[...droppedGenres].slice(0, 8).join(', ')})\n` : ''}`);
+}
+
+const isDirectRun = process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href;
+if (isDirectRun) {
+  main().catch((err) => {
+    console.error('Fatal sync failure:', err);
+    process.exit(1);
+  });
+}

@@ -119,12 +119,16 @@ export function useLiveStream(o: Options) {
   }, []);
 
   const [resolvingElapsed, setResolvingElapsed] = useState(0);
+  const [firstFrameLatency, setFirstFrameLatency] = useState<number | null>(null);
+  const resolveStart = useRef<number>(Date.now());
 
   /* ---------- resolve ---------- */
   useEffect(() => {
     const fresh = freshRef.current;
     freshRef.current = false;
     startOnce.current = true;
+    resolveStart.current = Date.now();
+    setFirstFrameLatency(null);
     setDuration(0);
     setCues([]);
     shownTrack.current = null;
@@ -246,8 +250,14 @@ export function useLiveStream(o: Options) {
       setStatus('error');
       setError('The media element rejected the stream.');
     };
+    const onPlaying = () => {
+      const elapsed = Date.now() - resolveStart.current;
+      setFirstFrameLatency(elapsed);
+      console.log(`[Playback] First frame rendered in ${elapsed}ms (${info?.reused ? 'cached' : 'fresh'})`);
+    };
     v.addEventListener('loadedmetadata', onMetadata);
     v.addEventListener('error', onError);
+    v.addEventListener('playing', onPlaying, { once: true });
 
     let hls: Hls | null = null;
     void (async () => {
@@ -290,6 +300,7 @@ export function useLiveStream(o: Options) {
       cancelled = true;
       v.removeEventListener('loadedmetadata', onMetadata);
       v.removeEventListener('error', onError);
+      v.removeEventListener('playing', onPlaying);
       hls?.destroy();
       if (hlsRef.current === hls) hlsRef.current = null;
       v.removeAttribute('src');
@@ -441,6 +452,15 @@ export function useLiveStream(o: Options) {
           /* metadata not ready yet — the mirror will settle on the next tick */
         }
       },
+      canSeek: () => {
+        const v = videoEl;
+        if (!v) return false;
+        try {
+          return Boolean(v.seekable && v.seekable.length > 0);
+        } catch {
+          return false;
+        }
+      },
       current: () => {
         const v = videoEl;
         if (!v) return { time: 0, playing: false, ended: false, bufferedEnd: 0, duration: 0 };
@@ -469,6 +489,7 @@ export function useLiveStream(o: Options) {
       play: () => {},
       pause: () => {},
       seek: () => {},
+      canSeek: false,
       current: () => ({ time: startAtRef.current, playing: false, ended: false, bufferedEnd: 0, duration: 0 }),
     }),
     [],
@@ -526,5 +547,6 @@ export function useLiveStream(o: Options) {
     pip,
     retry,
     resolvingElapsed,
+    firstFrameLatency,
   };
 }

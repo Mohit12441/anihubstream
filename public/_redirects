@@ -1,1 +1,38 @@
+# 301 Redirects for deduplicated anime slugs
+/watch/demon-slayer-kimetsu-no-yaiba              /watch/demon-slayer                                            301
+/watch/demon-slayer-kimetsu-no-yaiba/*            /watch/demon-slayer/:splat                                     301
+/anime/demon-slayer-kimetsu-no-yaiba              /watch/demon-slayer                                            301
+/anime/demon-slayer-kimetsu-no-yaiba/*            /watch/demon-slayer/:splat                                     301
+
+/watch/frieren-beyond-journey-s-end               /watch/sousou-no-frieren                                       301
+/watch/frieren-beyond-journey-s-end/*             /watch/sousou-no-frieren/:splat                                301
+/anime/frieren-beyond-journey-s-end               /watch/sousou-no-frieren                                       301
+/anime/frieren-beyond-journey-s-end/*             /watch/sousou-no-frieren/:splat                                301
+
+/watch/tokyo-revengers-war-of-the-three-titans-arc /watch/tokyo-revengers-zokuhen                               301
+/watch/tokyo-revengers-war-of-the-three-titans-arc/* /watch/tokyo-revengers-zokuhen/:splat                        301
+/anime/tokyo-revengers-war-of-the-three-titans-arc /watch/tokyo-revengers-zokuhen                               301
+/anime/tokyo-revengers-war-of-the-three-titans-arc/* /watch/tokyo-revengers-zokuhen/:splat                        301
+
+/watch/blue-box-season-2                          /watch/ao-no-hako-2                                            301
+/watch/blue-box-season-2/*                        /watch/ao-no-hako-2/:splat                                     301
+/anime/blue-box-season-2                          /watch/ao-no-hako-2                                            301
+/anime/blue-box-season-2/*                        /watch/ao-no-hako-2/:splat                                     301
+
+/watch/the-apothecary-diaries-season-3            /watch/kusuriya-no-hitorigoto-3rd-season                       301
+/watch/the-apothecary-diaries-season-3/*          /watch/kusuriya-no-hitorigoto-3rd-season/:splat                301
+/anime/the-apothecary-diaries-season-3            /watch/kusuriya-no-hitorigoto-3rd-season                       301
+/anime/the-apothecary-diaries-season-3/*          /watch/kusuriya-no-hitorigoto-3rd-season/:splat                301
+
+/watch/cyberpunk-edgerunners-2                    /watch/cyberpunk-edgerunners-ii                                301
+/watch/cyberpunk-edgerunners-2/*                  /watch/cyberpunk-edgerunners-ii/:splat                         301
+/anime/cyberpunk-edgerunners-2                    /watch/cyberpunk-edgerunners-ii                                301
+/anime/cyberpunk-edgerunners-2/*                  /watch/cyberpunk-edgerunners-ii/:splat                         301
+
+/watch/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on   /watch/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life         301
+/watch/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on/* /watch/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life/:splat   301
+/anime/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on   /watch/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life         301
+/anime/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on/* /watch/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life/:splat   301
+
+# SPA fallback
 /*    /index.html   200

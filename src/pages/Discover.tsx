@@ -104,7 +104,7 @@ export function Discover() {
           </a>
         </div>
         <div className="vj discover__vj" aria-hidden="true">
-          <span className="vj__jp">冒険は続く</span>
+          <span className="vj__jp" lang="ja">冒険は続く</span>
           <span className="vj__en">The adventure continues</span>
         </div>
       </section>

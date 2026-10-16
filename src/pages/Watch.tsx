@@ -12,6 +12,9 @@ import { positionKey } from '../lib/playerPrefs';
 import { useAnimeDetail, useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
 import { useSEO } from '../lib/useSEO';
+import { SLUG_REDIRECTS } from '../data/redirects';
+import { prefetchEpisode } from '../lib/streamBridge';
+import { warmStreamOrigins } from '../lib/warmConnections';
 import '../styles/watch.css';
 import '../styles/player.css';
 
@@ -19,6 +22,15 @@ export function Watch() {
   const { id = '', ep } = useParams<{ id: string; ep?: string }>();
   const [params] = useSearchParams();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (id && SLUG_REDIRECTS[id]) {
+      const canonical = SLUG_REDIRECTS[id];
+      const target = ep ? `/watch/${canonical}/${ep}` : `/watch/${canonical}`;
+      navigate(target, { replace: true });
+    }
+  }, [id, ep, navigate]);
+
   const { notify } = useToast();
   const { status, error, missing, anime, related, reload } = useAnimeDetail(id);
   const { genreLabel } = useCatalogue();
@@ -27,30 +39,107 @@ export function Watch() {
 
   const [epNum, setEpNum] = useState(1);
   const [theatre, setTheatre] = useState(false);
+  const [isStreamResolved, setIsStreamResolved] = useState(false);
 
-  /* Path param or ?ep= is read when title resolves */
-  const initialised = useRef('');
+  /* Reset stream resolved state on anime or episode change */
   useEffect(() => {
-    if (!anime || initialised.current === anime.id) return;
-    initialised.current = anime.id;
-    const epPath = ep ? Number.parseInt(ep, 10) : NaN;
-    const fromUrl = Number.isFinite(epPath) ? epPath : Number.parseInt(params.get('ep') ?? '', 10);
-    const wanted = Number.isFinite(fromUrl) && fromUrl >= 1 ? fromUrl : Math.min(8, anime.episodes.length);
-    setEpNum(Math.min(Math.max(wanted, 1), anime.episodes.length));
-  }, [anime, ep, params]);
+    setIsStreamResolved(false);
+  }, [id, epNum]);
+
+  /* Path param :ep sync with edge-case clamping and resume fallback */
+  useEffect(() => {
+    if (!anime || anime.episodes.length === 0) return;
+
+    if (ep !== undefined) {
+      const parsed = Number.parseInt(ep, 10);
+      const total = anime.episodes.length;
+      if (!Number.isFinite(parsed) || parsed < 1) {
+        // Non-numeric or < 1 -> default to 1, replace URL
+        navigate(`/watch/${anime.id}/1`, { replace: true });
+        setEpNum(1);
+      } else if (parsed > total) {
+        // Exceeds total -> clamp to max episode, replace URL
+        navigate(`/watch/${anime.id}/${total}`, { replace: true });
+        setEpNum(total);
+      } else {
+        // Valid episode -> set player
+        setEpNum(parsed);
+      }
+    } else {
+      // /watch/:id without :ep -> redirect to saved resume episode (or ep 1)
+      const queryEp = Number.parseInt(params.get('ep') ?? '', 10);
+      let targetEp = 1;
+      if (Number.isFinite(queryEp) && queryEp >= 1) {
+        targetEp = Math.min(queryEp, anime.episodes.length);
+      } else {
+        const savedKey = Object.keys(positions).find((k) => k.startsWith(`${anime.id}#`));
+        if (savedKey) {
+          const match = /#(\d+)$/.exec(savedKey);
+          if (match) {
+            const resumeEp = Number.parseInt(match[1], 10);
+            if (Number.isFinite(resumeEp) && resumeEp >= 1 && resumeEp <= anime.episodes.length) {
+              targetEp = resumeEp;
+            }
+          }
+        }
+      }
+      navigate(`/watch/${anime.id}/${targetEp}`, { replace: true });
+      setEpNum(targetEp);
+    }
+  }, [anime, ep, params, navigate, positions]);
 
   const episode = useMemo(() => {
     if (!anime) return undefined;
     return anime.episodes[Math.min(Math.max(epNum, 1), anime.episodes.length) - 1];
   }, [anime, epNum]);
 
+  const cleanSynopsis = useMemo(() => {
+    if (!anime?.synopsis) return 'Watch high definition anime with English subtitles and dub on AniHubStream.';
+    return anime.synopsis.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 150);
+  }, [anime?.synopsis]);
+
+  const canonicalUrl = useMemo(() => {
+    if (!anime) return undefined;
+    return epNum && epNum > 1
+      ? `https://anihubstream.com/watch/${anime.id}/${epNum}`
+      : `https://anihubstream.com/watch/${anime.id}`;
+  }, [anime, epNum]);
+
+  const jsonLd = useMemo(() => {
+    if (!anime) return null;
+    return {
+      '@context': 'https://schema.org',
+      '@type': episode ? 'TVEpisode' : 'TVSeries',
+      name: episode ? `${anime.title} Episode ${episode.n}` : anime.title,
+      alternateName: anime.native || undefined,
+      description: cleanSynopsis,
+      image: anime.key || anime.poster,
+      url: canonicalUrl,
+      ...(episode ? { episodeNumber: episode.n } : {}),
+      ...(!episode && anime.episodeTotal ? { numberOfEpisodes: anime.episodeTotal } : {}),
+      ...(anime.rating > 0
+        ? {
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: anime.rating,
+              bestRating: 10,
+              worstRating: 0,
+              ratingCount: 150,
+            },
+          }
+        : {}),
+    };
+  }, [anime, episode, cleanSynopsis, canonicalUrl]);
+
   useSEO({
     title: anime
       ? `${anime.title}${episode ? ` Episode ${episode.n}` : ` (${anime.year})`} — Watch Online Free | AniHubStream`
       : 'Watch Anime Free | AniHubStream',
-    description: anime?.synopsis || 'Watch high definition anime with English subtitles and dub on AniHubStream.',
+    description: cleanSynopsis,
     image: anime?.key || anime?.poster,
     type: episode ? 'video.episode' : 'video.tv_show',
+    canonicalUrl,
+    jsonLd,
   });
 
   const idx = episode?.n ?? 1;
@@ -59,13 +148,34 @@ export function Watch() {
 
   const selectEpisode = useCallback(
     (n: number) => {
-      if (!anime) return;
+      if (!anime || anime.episodes.length === 0) return;
       const clamped = Math.min(Math.max(n, 1), anime.episodes.length);
       setEpNum(clamped);
-      navigate(`/watch/${anime.id}/${clamped}`, { replace: true });
+      navigate(`/watch/${anime.id}/${clamped}`);
     },
     [anime, navigate],
   );
+
+  const prefetchedNext = useRef<number | null>(null);
+
+  useEffect(() => {
+    prefetchedNext.current = null;
+    warmStreamOrigins();
+  }, [anime?.id, epNum]);
+
+  // Prefetch next episode after 2 minutes on watch page
+  useEffect(() => {
+    if (!anime) return;
+    const nextEp = epNum + 1;
+    if (nextEp > anime.episodes.length) return;
+    const timer = window.setTimeout(() => {
+      if (prefetchedNext.current !== nextEp) {
+        prefetchedNext.current = nextEp;
+        void prefetchEpisode(anime.title, nextEp, prefs.audio ?? 'sub');
+      }
+    }, 120_000);
+    return () => window.clearTimeout(timer);
+  }, [anime, epNum, prefs.audio]);
 
   const save = async () => {
     if (!anime) return;
@@ -177,19 +287,28 @@ export function Watch() {
             onProgress={(t) => {
               record(key, t, runtime);
               recordPosition(anime, idx, episode.title, t, runtime);
+              // Prefetch next episode when reaching 80% progress
+              if (runtime > 0 && t / runtime >= 0.8 && anime && idx < anime.episodes.length) {
+                const nextEp = idx + 1;
+                if (prefetchedNext.current !== nextEp) {
+                  prefetchedNext.current = nextEp;
+                  void prefetchEpisode(anime.title, nextEp, prefs.audio ?? 'sub');
+                }
+              }
             }}
+            onStreamResolved={setIsStreamResolved}
           />
 
           <div className="watch__meta">
             <div className="watch__meta-head">
               <h1>
-                {anime.title} <span>– {anime.season} Episode {idx}</span>
+                {anime.title}{anime.season ? <span> – {anime.season} Episode {idx}</span> : <span> – Episode {idx}</span>}
               </h1>
-              <p className="watch__native">{anime.native}</p>
+              <p className="watch__native" lang="ja">{anime.native}</p>
             </div>
 
             <ul className="watch__badges">
-              <li className="badge badge--accent">HD</li>
+              {isStreamResolved && <li className="badge badge--accent">HD</li>}
               <li className="badge">Sub</li>
               {anime.genres.map((g) => (
                 <li key={g} className="badge">
@@ -220,7 +339,7 @@ export function Watch() {
               </div>
               <div>
                 <dt>Runtime</dt>
-                <dd>{episode.runtime}</dd>
+                <dd>{episode.runtime && episode.runtime !== '0:00' && episode.runtime !== '0m' ? episode.runtime : '—'}</dd>
               </div>
               <div>
                 <dt>Your position</dt>

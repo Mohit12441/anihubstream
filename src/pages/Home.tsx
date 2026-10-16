@@ -10,6 +10,7 @@ import { listCatalogue } from '../data/api';
 import { artUrl, hydrateCard } from '../data/model';
 import type { Anime } from '../data/model';
 import { useCatalogue } from '../state/catalogue';
+import { useSEO } from '../lib/useSEO';
 import '../styles/home.css';
 
 const MOODS = [
@@ -51,6 +52,22 @@ export function Home() {
   const [query, setQuery] = useState('');
   const [genre, setGenre] = useState<string | null>(null);
   const [seed, setSeed] = useState(0);
+
+  useSEO({
+    title: 'AniHubStream — Watch Anime Free Anytime, Anywhere',
+    description: 'Watch high-quality anime online free on AniHubStream. Stream subbed and dubbed anime with fast playback, clean schedules, and full episode guides.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'AniHubStream',
+      url: 'https://anihubstream.com',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://anihubstream.com/anime?search={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  });
 
   /* The genre shelf asks the database, not the 60-title spine: the catalogue
      grows by hundreds of titles a day, so "every Action title" only exists
@@ -288,7 +305,6 @@ function Row({
               anime={a}
               variant={poster ? 'poster' : 'key'}
               badge={a.status === 'Ongoing' ? 'ONGOING' : undefined}
-              episode={poster ? undefined : a.native}
             />
           ))
         ) : (

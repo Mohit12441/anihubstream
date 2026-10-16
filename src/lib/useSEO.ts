@@ -6,14 +6,16 @@ interface SEOProps {
   description?: string;
   image?: string;
   type?: string;
+  canonicalUrl?: string;
+  jsonLd?: Record<string, unknown> | null;
 }
 
-export function useSEO({ title, description, image, type = 'website' }: SEOProps = {}) {
+export function useSEO({ title, description, image, type = 'website', canonicalUrl, jsonLd }: SEOProps = {}) {
   const { pathname } = useLocation();
 
   useEffect(() => {
     const origin = 'https://anihubstream.com';
-    const fullUrl = `${origin}${pathname}`;
+    const fullUrl = canonicalUrl || `${origin}${pathname}`;
 
     if (title) {
       document.title = title;
@@ -52,5 +54,25 @@ export function useSEO({ title, description, image, type = 'website' }: SEOProps
 
     const ogType = document.querySelector('meta[property="og:type"]');
     if (ogType) ogType.setAttribute('content', type);
-  }, [title, description, image, type, pathname]);
+
+    let twCard = document.querySelector('meta[name="twitter:card"]');
+    if (!twCard) {
+      twCard = document.createElement('meta');
+      twCard.setAttribute('name', 'twitter:card');
+      document.head.appendChild(twCard);
+    }
+    twCard.setAttribute('content', 'summary_large_image');
+
+    let script = document.querySelector('script[type="application/ld+json"]');
+    if (jsonLd) {
+      if (!script) {
+        script = document.createElement('script');
+        script.setAttribute('type', 'application/ld+json');
+        document.head.appendChild(script);
+      }
+      script.textContent = JSON.stringify(jsonLd);
+    } else if (script) {
+      script.remove();
+    }
+  }, [title, description, image, type, canonicalUrl, jsonLd, pathname]);
 }

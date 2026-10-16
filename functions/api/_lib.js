@@ -90,6 +90,32 @@ export const withViewer = (response, setCookie) => {
 
 const splitGenres = (ids) => (ids ? ids.split(',') : []);
 
+const safeJsonParse = (str, fallback) => {
+  try {
+    return JSON.parse(str);
+  } catch {
+    return fallback;
+  }
+};
+
+export const resolveMalId = (sourceIdsRaw, skipKeyId, skipKeySpace) => {
+  if (sourceIdsRaw) {
+    try {
+      const parsed = typeof sourceIdsRaw === 'string' ? JSON.parse(sourceIdsRaw) : sourceIdsRaw;
+      if (parsed && typeof parsed.mal === 'number' && Number.isInteger(parsed.mal) && parsed.mal > 0) {
+        return parsed.mal;
+      }
+    } catch {}
+  }
+  if (skipKeySpace === 'mal') {
+    const keyId = typeof skipKeyId === 'number' ? skipKeyId : Number.parseInt(skipKeyId, 10);
+    if (Number.isInteger(keyId) && keyId > 0) {
+      return keyId;
+    }
+  }
+  return null;
+};
+
 export const cardFromRow = (r) => ({
   id: r.id,
   title: r.title,
@@ -106,7 +132,7 @@ export const cardFromRow = (r) => ({
   synopsis: r.synopsis,
   rank: r.rank ?? null,
   trendRank: r.trend_rank ?? null,
-  altSeasons: r.alt_seasons ? JSON.parse(r.alt_seasons) : [],
+  altSeasons: r.alt_seasons ? safeJsonParse(r.alt_seasons, []) : [],
   schedule:
     r.sched_day === null || r.sched_day === undefined
       ? null
@@ -119,6 +145,10 @@ export const cardFromRow = (r) => ({
         },
   episodeCount: r.episode_count,
   episodeTotal: r.episode_total ?? null,
+  malId: resolveMalId(r.source_ids, r.skip_key_id, r.skip_key_space),
+  sourceIds: r.source_ids ? (typeof r.source_ids === 'string' ? safeJsonParse(r.source_ids, null) : r.source_ids) : null,
+  skipKeyId: r.skip_key_id ?? null,
+  skipKeySpace: r.skip_key_space ?? null,
 });
 
 export const episodeFromRow = (r) => ({
@@ -129,7 +159,7 @@ export const episodeFromRow = (r) => ({
   runtimeSeconds: r.runtime_seconds,
   art: r.thumb,
   synopsis: r.synopsis,
-  markers: JSON.parse(r.markers),
+  markers: safeJsonParse(r.markers, []),
   airdate: r.airdate ?? null,
 });
 
@@ -137,7 +167,7 @@ export const CARD_COLUMNS = `
   a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status,
   a.art, a.key_art, a.accent, a.synopsis, a.rank, a.trend_rank, a.alt_seasons,
   a.sched_day, a.sched_day_label, a.sched_date, a.sched_time, a.sched_season,
-  a.episode_total,
+  a.episode_total, a.source_ids, a.skip_key_id, a.skip_key_space,
   (SELECT group_concat(genre_id) FROM anime_genre ag WHERE ag.anime_id = a.id) AS genre_ids,
   (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) AS episode_count
 `;

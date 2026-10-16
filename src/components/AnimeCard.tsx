@@ -1,10 +1,13 @@
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play, Star } from 'lucide-react';
 import { Art } from './Art';
 import { stamp } from '../lib/time';
-import { episodeTotalOf, type Anime } from '../data/model';
+import { type Anime } from '../data/model';
+import { CardMeta } from './CardMeta';
 import { useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
+import { warmStreamOrigins } from '../lib/warmConnections';
 
 interface Props {
   anime: Anime;
@@ -23,11 +26,30 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
   const tint = rank ? rankTint[(rank - 1) % rankTint.length] : anime.accent;
   const resume = history.find((h) => h.anime.id === anime.id);
 
+  const hoverTimer = useRef<number | null>(null);
+  const handleMouseEnter = () => {
+    hoverTimer.current = window.setTimeout(() => {
+      warmStreamOrigins();
+    }, 300);
+  };
+  const handleMouseLeave = () => {
+    if (hoverTimer.current) {
+      window.clearTimeout(hoverTimer.current);
+      hoverTimer.current = null;
+    }
+  };
+
   if (variant === 'poster') {
     return (
-      <Link to={to} className="acard acard--poster" style={{ '--tint': anime.accent } as React.CSSProperties}>
+      <Link
+        to={to}
+        className="acard acard--poster"
+        style={{ '--tint': anime.accent } as React.CSSProperties}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="acard__media acard__media--poster">
-          <Art sources={[anime.poster, anime.key]} alt={`${anime.title} poster art`} fill />
+          <Art sources={[anime.poster, anime.key]} alt={`${anime.title} poster art`} fill width={280} height={400} />
           <div className="acard__scrim" />
           {badge && <span className="acard__flag">{badge}</span>}
           {/* A title the databases have no score for yet shows no score rather than a zero. */}
@@ -43,9 +65,7 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
         </div>
         <div className="acard__foot">
           <h3 className="acard__title">{anime.title}</h3>
-          <p className="acard__meta">
-            {anime.kind} · {anime.year} · {episode ?? `${episodeTotalOf(anime)} EP`}
-          </p>
+          <CardMeta anime={anime} episode={episode} />
         </div>
       </Link>
     );
@@ -53,9 +73,15 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
 
   if (variant === 'wide') {
     return (
-      <Link to={to} className="acard acard--wide" style={{ '--tint': anime.accent } as React.CSSProperties}>
+      <Link
+        to={to}
+        className="acard acard--wide"
+        style={{ '--tint': anime.accent } as React.CSSProperties}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="acard__media acard__media--wide">
-          <Art sources={[anime.key, anime.poster]} alt={`${anime.title} key art`} fill />
+          <Art sources={[anime.key, anime.poster]} alt={`${anime.title} key art`} fill width={320} height={180} />
           <div className="acard__scrim" />
         </div>
         <div className="acard__body">
@@ -63,9 +89,7 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
             <h3 className="acard__title">{anime.title}</h3>
             {badge && <span className="acard__flag acard__flag--inline">{badge}</span>}
           </div>
-          <p className="acard__meta">
-            {anime.native} · {anime.season} · {anime.year}
-          </p>
+          <CardMeta anime={anime} episode={episode} />
           <p className="acard__syn">{anime.synopsis}</p>
           <div className="acard__tags">
             {anime.genres.slice(0, 3).map((g) => (
@@ -87,9 +111,11 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
       to={to}
       className={`acard acard--key${rank ? ' acard--ranked' : ''}`}
       style={{ '--tint': tint } as React.CSSProperties}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="acard__media acard__media--key">
-        <Art sources={[anime.key, anime.poster]} alt={`${anime.title} key art`} fill />
+        <Art sources={[anime.key, anime.poster]} alt={`${anime.title} key art`} fill width={360} height={202} />
         <div className="acard__scrim" />
         {badge && <span className="acard__flag">{badge}</span>}
       </div>
@@ -101,12 +127,13 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
         )}
         <div className="acard__names">
           <h3 className="acard__title">{anime.title}</h3>
-          <p className="acard__meta">
-            {episode ??
-              (resume
-                ? `Resume EP ${resume.episodeNumber} · ${stamp(resume.seconds)}`
-                : anime.native)}
-          </p>
+          {resume ? (
+            <p className="acard__meta">
+              Resume EP {resume.episodeNumber} · {stamp(resume.seconds)}
+            </p>
+          ) : (
+            <CardMeta anime={anime} episode={episode} />
+          )}
         </div>
         <span className="acard__go" aria-hidden="true">
           <ArrowRight size={16} />

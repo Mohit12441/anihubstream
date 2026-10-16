@@ -84,6 +84,8 @@ export interface Anime {
   episodeCount: number;
   /** The source's own episode count, which can be larger than the list we store. */
   episodeTotal?: number;
+  /** MyAnimeList ID used for AniSkip timestamp lookups; null/undefined when unmapped */
+  malId?: number | null;
   episodes: Episode[];
 }
 
@@ -112,11 +114,25 @@ export const DAYS = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'] as const;
    path yields '' so a missing prototype key never becomes a broken /art/.jpg request. */
 export const artUrl = (path: string) => (path.trim() ? `/${path.replace(/^\/+/, '')}` : '');
 
+export const normalizeArtUrl = (url: string | null | undefined): string => {
+  const k = (url ?? '').trim();
+  if (!k) return '';
+  if (k.includes('backblazeb2.com')) {
+    try {
+      const u = new URL(k);
+      return `https://media.kitsu.app${u.pathname}`;
+    } catch {
+      return k;
+    }
+  }
+  return k;
+};
+
 /** Prototype rows store a key into /art; rows pulled from the catalogue databases store
     the source's own absolute CDN url. Both arrive here, so a resolved url passes through.
     An empty key (no artwork for the row) returns '' rather than a request that can only 404. */
 export const artKeyUrl = (key: string | null | undefined) => {
-  const k = (key ?? '').trim();
+  const k = normalizeArtUrl(key);
   if (!k) return '';
   return /^https?:\/\//i.test(k) ? k : artUrl(`/art/${k}.jpg`);
 };
@@ -130,6 +146,25 @@ export function toSeconds(runtime: string): number {
 }
 
 export const episodeIdOf = (animeId: string, n: number) => `${animeId}#${n}`;
+
+export const resolveMalId = (
+  sourceIdsRaw?: Record<string, unknown> | string | null,
+  skipKeyId?: number | string | null,
+  skipKeySpace?: string | null,
+): number | null => {
+  if (sourceIdsRaw) {
+    try {
+      const parsed = typeof sourceIdsRaw === 'string' ? JSON.parse(sourceIdsRaw) : sourceIdsRaw;
+      const mal = Number((parsed as any)?.mal);
+      if (Number.isInteger(mal) && mal > 0) return mal;
+    } catch {}
+  }
+  if (skipKeySpace === 'mal') {
+    const keyId = typeof skipKeyId === 'number' ? skipKeyId : Number.parseInt(String(skipKeyId), 10);
+    if (Number.isInteger(keyId) && keyId > 0) return keyId;
+  }
+  return null;
+};
 
 /* ---------------- API payload ---------------- */
 
@@ -153,6 +188,10 @@ export interface ApiCard {
   schedule: Schedule | null;
   episodeCount: number;
   episodeTotal: number | null;
+  malId?: number | null;
+  sourceIds?: Record<string, unknown> | null;
+  skipKeyId?: number | null;
+  skipKeySpace?: string | null;
 }
 
 export interface ApiEpisode {
@@ -187,13 +226,33 @@ export interface ApiPosition {
   anime: ApiCard;
 }
 
+export const formatSeason = (season?: string | null, scheduleSeason?: string | null, year?: number | null): string => {
+  if (season && season !== '—' && season !== 'null' && season !== 'undefined' && season.trim() !== '') {
+    return season.trim();
+  }
+  if (scheduleSeason && scheduleSeason.trim() !== '') {
+    return scheduleSeason.trim();
+  }
+  if (year && Number.isFinite(year) && year > 1900) {
+    return String(year);
+  }
+  return '';
+};
+
+export const formatRuntime = (runtime?: string | null): string => {
+  if (!runtime || runtime === '0' || runtime === '0:00' || runtime === '0m' || runtime === '0 min' || runtime === 'null') {
+    return '—';
+  }
+  return runtime;
+};
+
 export const hydrateCard = (c: ApiCard): Anime => ({
   id: c.id,
   title: c.title,
   native: c.native,
   year: c.year,
   rating: c.rating,
-  season: c.season,
+  season: formatSeason(c.season, c.schedule?.season, c.year),
   kind: c.kind,
   status: c.status,
   genres: c.genres ?? [],
@@ -210,6 +269,7 @@ export const hydrateCard = (c: ApiCard): Anime => ({
   altSeasons: c.altSeasons ?? [],
   episodeCount: c.episodeCount,
   episodeTotal: c.episodeTotal ?? undefined,
+  malId: c.malId ?? resolveMalId(c.sourceIds, c.skipKeyId, c.skipKeySpace) ?? undefined,
   episodes: [],
 });
 
@@ -220,7 +280,7 @@ const stillOf = (art: string | null | undefined) => (art && art !== '—' ? artK
 export const hydrateEpisode = (e: ApiEpisode): Episode => ({
   n: e.n,
   title: e.title,
-  runtime: e.runtime,
+  runtime: formatRuntime(e.runtime),
   thumb: stillOf(e.art),
   synopsis: e.synopsis,
   markers: e.markers ?? [],
@@ -246,6 +306,12 @@ export const ratingLabel = (rating: number | null | undefined) =>
     otherwise how many rows this site actually holds. */
 export const episodeTotalOf = (a: Pick<Anime, 'episodeCount' | 'episodeTotal'>) =>
   a.episodeTotal && a.episodeTotal > a.episodeCount ? a.episodeTotal : a.episodeCount;
+
+/** Format episode count label: e.g. "12 EP" or "TBA" if unknown or 0 */
+export const formatEpisodeCount = (a: Pick<Anime, 'episodeCount' | 'episodeTotal'>): string => {
+  const count = episodeTotalOf(a);
+  return count && count > 0 ? `${count} EP` : 'TBA';
+};
 
 export const HERO = {
   jp: '限界はない',

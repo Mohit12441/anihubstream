@@ -186,16 +186,47 @@ export function plain(html) {
 
 /* Identical rule to slugify() in tools/discover-titles.mjs — a divergent copy would
    silently create a second row for a title the catalogue already owns. */
-export const slugify = (s) => {
-  const slug = String(s)
+export const slugify = (s, { maxLength = 80, existingIds = null, collisionId = null } = {}) => {
+  if (!s) return '';
+
+  let slug = String(s)
     .normalize('NFKD')
-    .replace(/\p{M}/gu, '')
+    .replace(/[\u0300-\u036f]/g, '')
+    // 1. Strip apostrophes so they don't turn into "-s" or "-"
+    .replace(/['’‘ʼʻ`]/g, '')
     .toLowerCase()
+    // 2. Replace non-alphanumeric characters with hyphens
     .replace(/[^a-z0-9]+/g, '-')
+    // 3. Collapse multiple hyphens
+    .replace(/-+/g, '-')
+    // 4. Trim leading and trailing hyphens
     .replace(/^-+|-+$/g, '');
-  if (slug.length <= 60) return slug;
-  const cut = slug.slice(0, 60);
-  return (cut.includes('-') ? cut.slice(0, cut.lastIndexOf('-')) : cut).replace(/-+$/, '');
+
+  // 5. Collapse consecutive repeated words (e.g. really-really-really -> really)
+  slug = slug.replace(/\b([a-z0-9]+)(?:-\1)+\b/g, '$1');
+
+  // 6. Cap length without truncating mid-word
+  if (slug.length > maxLength) {
+    const cut = slug.slice(0, maxLength);
+    const lastHyphen = cut.lastIndexOf('-');
+    slug = (lastHyphen > 0 ? cut.slice(0, lastHyphen) : cut).replace(/-+$/, '');
+    // Strip trailing dangling prepositions/articles if truncation left one at the end
+    slug = slug.replace(/-(?:on|in|at|to|for|of|with|a|an|the)$/, '');
+  }
+
+  // 7. If collision occurs against existingIds, append a short deterministic hash
+  if (existingIds && (typeof existingIds.has === 'function' ? existingIds.has(slug) : existingIds.includes(slug))) {
+    const seed = collisionId ? String(collisionId) : slug;
+    let h = 0x811c9dc5;
+    for (let i = 0; i < seed.length; i++) {
+      h ^= seed.charCodeAt(i);
+      h = Math.imul(h, 0x01000193);
+    }
+    const shortHash = (h >>> 0).toString(36).slice(0, 4);
+    slug = `${slug}-${shortHash}`;
+  }
+
+  return slug;
 };
 
 export const mediaSlug = (media) => slugify(media.title?.english || media.title?.romaji || `anilist-${media.id}`);

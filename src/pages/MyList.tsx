@@ -6,8 +6,9 @@ import { Art } from '../components/Art';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { Embers } from '../components/Embers';
 import { getAnime } from '../data/api';
-import { artUrl, episodeTotalOf, hydrateCard } from '../data/model';
+import { artUrl, hydrateCard } from '../data/model';
 import type { Anime } from '../data/model';
+import { CardMeta } from '../components/CardMeta';
 import { pct, stamp } from '../lib/time';
 import { useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
@@ -149,9 +150,7 @@ export function MyList() {
                         <Link className="lrow__title" to={`/watch/${a.id}`}>
                           {a.title}
                         </Link>
-                        <p className="lrow__meta">
-                          {a.kind} · {a.year} · {episodeTotalOf(a)} EP · {a.status}
-                        </p>
+                        <CardMeta anime={a} className="lrow__meta" />
                       </div>
                       <button
                         type="button"
