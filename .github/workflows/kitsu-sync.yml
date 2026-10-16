@@ -9,7 +9,7 @@ name: kitsu-sync
 
 on:
   schedule:
-    - cron: '15,45 * * * *'
+    - cron: '17,47 * * * *'
   workflow_dispatch: {}
 
 permissions: {}
@@ -26,6 +26,19 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+
+      - name: log execution metadata (R15)
+        run: |
+          echo "=== GitHub Actions Run Telemetry ==="
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "Run ID: ${{ github.run_id }}"
+          echo "Run Attempt: ${{ github.run_attempt }}"
+          echo "Commit SHA: ${{ github.sha }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Scheduled Cadence: Every 30 min (at :17 and :47 UTC)"
+          echo "UTC Timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          echo "==================================="
 
       - uses: actions/setup-node@v4
         with:

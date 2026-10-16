@@ -11,7 +11,7 @@ name: anilist-sync
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '7,37 * * * *'
   workflow_dispatch:
     inputs:
       force_takeover:
@@ -35,6 +35,19 @@ jobs:
     timeout-minutes: 28
     steps:
       - uses: actions/checkout@v4
+
+      - name: log execution metadata (R15)
+        run: |
+          echo "=== GitHub Actions Run Telemetry ==="
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "Run ID: ${{ github.run_id }}"
+          echo "Run Attempt: ${{ github.run_attempt }}"
+          echo "Commit SHA: ${{ github.sha }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Scheduled Cadence: Every 30 min (at :07 and :37 UTC)"
+          echo "UTC Timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          echo "==================================="
 
       - uses: actions/setup-node@v4
         with:
