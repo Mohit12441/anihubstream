@@ -84,6 +84,66 @@ query($n: Int) {
 }
 `;
 
+const POPULAR_QUERY = `
+query($page: Int, $n: Int) {
+  Page(page: $page, perPage: $n) {
+    media(sort: POPULARITY_DESC, type: ANIME, isAdult: false) {
+      id
+      idMal
+      seasonYear
+      title {
+        romaji
+        english
+      }
+    }
+  }
+}
+`;
+
+export async function fetchPopular(page = 1, depth = 50, fetchImpl = globalThis.fetch, options = {}) {
+  const maxAttempts = options.maxAttempts ?? 3;
+  const backoffBaseMs = options.backoffBaseMs ?? 50;
+  const sleep = options.sleep ?? ((ms) => new Promise((r) => setTimeout(r, ms)));
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    if (options.paceIntervalMs !== undefined) await pace(options.paceIntervalMs, sleep);
+    let res;
+    try {
+      res = await fetchImpl(ANILIST_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          accept: 'application/json',
+          'user-agent': USER_AGENT,
+        },
+        body: JSON.stringify({ query: POPULAR_QUERY, variables: { page, n: depth } }),
+      });
+    } catch (netErr) {
+      if (attempt === maxAttempts) throw netErr;
+      const wait = backoffBaseMs * 2 ** (attempt - 1);
+      await sleep(wait);
+      continue;
+    }
+
+    if (res.status === 429 || (res.status >= 500 && res.status <= 599)) {
+      if (attempt === maxAttempts) throw new Error(`AniList returned HTTP ${res.status}`);
+      const retryAfter = parseRetryAfter(res.headers?.get?.('retry-after'));
+      const wait = retryAfter ?? backoffBaseMs * 2 ** (attempt - 1);
+      await sleep(wait);
+      continue;
+    }
+
+    if (!res.ok) throw new Error(`AniList returned HTTP ${res.status}`);
+
+    const body = await res.json();
+    if (body.errors) {
+      throw new Error(`AniList GraphQL error: ${JSON.stringify(body.errors[0]?.message || body.errors)}`);
+    }
+    return body.data?.Page?.media ?? [];
+  }
+  throw new Error('AniList: fetchPopular attempts exceeded');
+}
+
 export async function fetchTrending(depth = 50, fetchImpl = globalThis.fetch, options = {}) {
   const maxAttempts = options.maxAttempts ?? 3;
   const backoffBaseMs = options.backoffBaseMs ?? 50;
@@ -176,7 +236,7 @@ export async function discoverTrending({
     if (Number.isInteger(p.anilist_id)) knownAnilistIds.add(p.anilist_id);
   }
 
-  // 2. Fetch candidates from AniList
+  // 2. Fetch candidates from AniList (trending first)
   const media = await fetchTrending(depth, fetchImpl, { paceIntervalMs, sleep: sleepImpl });
 
   // 3. Filter candidates
@@ -194,6 +254,29 @@ export async function discoverTrending({
     });
     knownAnilistIds.add(item.id);
     knownSlugs.add(slug);
+  }
+
+  // 3b. If trending candidates did not satisfy the requested limit, backfill from popular catalogue
+  if (queued.length < limit) {
+    try {
+      const popularMedia = await fetchPopular(1, depth, fetchImpl, { paceIntervalMs, sleep: sleepImpl });
+      for (const item of popularMedia) {
+        if (queued.length >= limit) break;
+        if (knownAnilistIds.has(item.id)) continue;
+        const slug = mediaSlug(item);
+        if (!slug || knownSlugs.has(slug)) continue;
+
+        queued.push({
+          anilist_id: item.id,
+          slug,
+          title: item.title?.english || item.title?.romaji || slug,
+        });
+        knownAnilistIds.add(item.id);
+        knownSlugs.add(slug);
+      }
+    } catch (popErr) {
+      console.warn('[discover] Popular fallback error:', popErr.message);
+    }
   }
 
   // 4. Queue into sync_pending

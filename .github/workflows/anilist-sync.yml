@@ -54,6 +54,14 @@ jobs:
           echo "sleeping ${offset}s so this run does not start on the minute boundary"
           sleep "$offset"
 
+      - name: queue new trending titles if needed
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          LIMIT: ${{ vars.DISCOVER_LIMIT || '5' }}
+        run: node cloud-sync/discover.mjs --limit=${LIMIT}
+
       - name: sync AniList
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
