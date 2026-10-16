@@ -6,6 +6,7 @@ import { AnimeCarousel } from '../components/AnimeCarousel';
 import { Logo } from '../components/Logo';
 import { Embers } from '../components/Embers';
 import { artUrl } from '../data/model';
+import { useSEO } from '../lib/useSEO';
 import { useCatalogue } from '../state/catalogue';
 import { useTheme } from '../lib/useTheme';
 import { useToast } from '../lib/Toast';
@@ -19,6 +20,12 @@ export function Discover() {
   const [nav, setNav] = useState(false);
   const navigate = useNavigate();
   const items = popular();
+
+  useSEO({
+    title: 'Discover Trending & Popular Anime | AniHubStream',
+    description: 'Find your next favorite anime series. Browse trending releases, community favorites, and staff picks.',
+    canonicalUrl: 'https://anihubstream.com/discover',
+  });
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();

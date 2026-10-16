@@ -10,6 +10,7 @@ import { artUrl, hydrateCard } from '../data/model';
 import type { Anime } from '../data/model';
 import { CardMeta } from '../components/CardMeta';
 import { pct, stamp } from '../lib/time';
+import { useSEO } from '../lib/useSEO';
 import { useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
 import '../styles/pages.css';
@@ -17,6 +18,12 @@ import '../styles/pages.css';
 export function MyList() {
   const { byId } = useCatalogue();
   const { status, error, reload, items, history, favourites, isBusy, toggle, toggleFavourite } = useLibrary();
+
+  useSEO({
+    title: 'My List & Watch History — Saved Anime | AniHubStream',
+    description: 'Track your personal anime watchlist, resume playback from saved positions, and manage favorites on AniHubStream.',
+    canonicalUrl: 'https://anihubstream.com/mylist',
+  });
 
   /* The provider spine only carries the curated head of the catalogue; a
      favourite picked from deeper pages is fetched by id so the list never

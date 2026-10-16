@@ -6,6 +6,7 @@ import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { GenreChips } from '../components/GenreChips';
 import { listCatalogue } from '../data/api';
 import { hydrateCard, type Anime, type AnimeKind, type AnimeStatus } from '../data/model';
+import { useSEO } from '../lib/useSEO';
 import { useCatalogue } from '../state/catalogue';
 import '../styles/pages.css';
 
@@ -55,6 +56,16 @@ export function AnimeCatalogue() {
       : (sortParam as SortId | null) ?? (searching ? 'relevance' : 'popularity');
 
   useEffect(() => setTerm(q), [q]);
+
+  useSEO({
+    title: needle
+      ? `Search results for "${needle}" — Anime Catalogue | AniHubStream`
+      : genre
+        ? `${genreLabel(genre)} Anime — Watch Free | AniHubStream`
+        : 'Browse Anime Catalogue — Discover Series & Movies | AniHubStream',
+    description: 'Explore the full AniHubStream anime catalogue. Filter by genre, release year, format (TV, Movie, OVA), and rating.',
+    canonicalUrl: 'https://anihubstream.com/anime',
+  });
 
   const query = useMemo(
     () => ({

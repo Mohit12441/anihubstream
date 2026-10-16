@@ -6,6 +6,7 @@ import { ScheduleList } from '../components/ScheduleList';
 import { artUrl, currentSeasonKey } from '../data/model';
 import type { SeasonKey } from '../data/model';
 import { convertSlotTimezone, getUserTimezoneLabel } from '../lib/scheduleTime';
+import { useSEO } from '../lib/useSEO';
 import { useCatalogue } from '../state/catalogue';
 import '../styles/pages.css';
 
@@ -15,6 +16,12 @@ export function Schedule() {
   const [year, setYear] = useState('All years');
   const [day, setDay] = useState<number | null>(null);
   const [useLocalTime, setUseLocalTime] = useState(true);
+
+  useSEO({
+    title: 'Anime Broadcast Schedule — Airing This Week | AniHubStream',
+    description: 'Live weekly anime release schedule. Check episode air dates, broadcast times, and currently airing seasons.',
+    canonicalUrl: 'https://anihubstream.com/schedule',
+  });
 
   const tzLabel = useMemo(() => getUserTimezoneLabel(), []);
   const current = currentSeasonKey();

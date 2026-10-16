@@ -7,6 +7,7 @@ import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { Embers } from '../components/Embers';
 import { listCatalogue } from '../data/api';
 import { artUrl, hydrateCard, type Anime, type AnimeKind } from '../data/model';
+import { useSEO } from '../lib/useSEO';
 import { useCatalogue } from '../state/catalogue';
 import '../styles/pages.css';
 
@@ -36,6 +37,14 @@ export function Genres() {
   const genre = params.get('genre');
   const [kind, setKind] = useState<AnimeKind | 'All'>('All');
   const [sort, setSort] = useState<SortId>('popularity');
+
+  useSEO({
+    title: genre
+      ? `${genreLabel(genre)} Anime — Browse Categories | AniHubStream`
+      : 'Anime Genres & Categories — Explore Collections | AniHubStream',
+    description: 'Browse anime by genre: Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Slice of Life, and more.',
+    canonicalUrl: genre ? `https://anihubstream.com/genres?genre=${genre}` : 'https://anihubstream.com/genres',
+  });
 
   const pick = (id: string) => {
     if (genre === id) setParams(new URLSearchParams());

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import { BookmarkPlus, ChevronRight, Download, Heart, Play, Share2 } from 'lucide-react';
+import { BookmarkPlus, ChevronRight, Clock, Download, Heart, Play, Share2 } from 'lucide-react';
 import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
 import { AnimeCard } from '../components/AnimeCard';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
@@ -216,15 +216,36 @@ export function Watch() {
     );
   }
 
-  if (status !== 'ready' || !anime || !episode) {
+  if (status !== 'ready' || !anime) {
     return (
-      /* The real watch layout is very tall (the episode rail alone is hundreds of
-         rows), so a short skeleton would leave the footer on screen and then drag
-         it thousands of pixels down the moment data lands — a huge layout shift.
-         Holding the loading state at least a viewport tall keeps the footer below
-         the fold in both states, so nothing visible moves when the swap happens. */
       <div className="page watch watch--loading shell">
         <CatalogueLoading grid={false} rows={4} />
+      </div>
+    );
+  }
+
+  // Graceful empty state for newly announced/ongoing shows that have no episodes released yet
+  if (anime.episodes.length === 0 || !episode) {
+    return (
+      <div className="page watch shell" style={{ '--tint': anime.accent, ...accentVars(prefs.accent) } as React.CSSProperties}>
+        <nav className="watch__crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><Link to="/">Home</Link><ChevronRight size={13} aria-hidden="true" /></li>
+            <li><Link to="/anime">Anime</Link><ChevronRight size={13} aria-hidden="true" /></li>
+            <li><span aria-current="page">{anime.title}</span></li>
+          </ol>
+        </nav>
+        <div className="watch__empty-banner" style={{ textAlign: 'center', padding: '60px 20px', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', margin: '20px 0' }}>
+          <Clock size={48} style={{ opacity: 0.6, marginBottom: '16px' }} />
+          <h2>Episodes Coming Soon</h2>
+          <p style={{ maxWidth: '500px', margin: '12px auto 24px', opacity: 0.8 }}>
+            <strong>{anime.title}</strong> is currently {anime.status.toLowerCase()} ({anime.season || anime.year}). Episodes will appear here as soon as they air.
+          </p>
+          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
+            <Link className="btn btn--primary" to="/schedule">Check Release Schedule</Link>
+            <Link className="btn btn--ghost" to="/anime">Browse Catalogue</Link>
+          </div>
+        </div>
       </div>
     );
   }
