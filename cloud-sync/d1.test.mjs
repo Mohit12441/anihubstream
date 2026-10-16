@@ -11,7 +11,7 @@
 //   node --test cloud-sync/d1.test.mjs
 import { describe, it, beforeEach, afterEach } from 'node:test';
 import assert from 'node:assert/strict';
-import { d1Query, d1All, d1First, assertLiveColumns, assertLiveTables } from './d1.mjs';
+import { d1Query, d1All, d1First, assertLiveColumns, assertLiveTables, parseRetryAfter, isD1Transient } from './d1.mjs';
 
 const ENV = { CF_ACCOUNT_ID: 'test-account-id', CF_DATABASE_ID: 'test-database-id', CF_API_TOKEN: 'test-token' };
 const realFetch = globalThis.fetch;
@@ -132,3 +132,90 @@ describe('probe readers through the live envelope', () => {
     assert.deepEqual(out.raw.map((r) => r.name), names);
   });
 });
+
+describe('parseRetryAfter', () => {
+  it('parses numeric seconds into milliseconds', () => {
+    assert.equal(parseRetryAfter('120'), 120000);
+    assert.equal(parseRetryAfter('0'), 0);
+    assert.equal(parseRetryAfter('1.5'), 1500);
+  });
+
+  it('parses HTTP Date into milliseconds difference', () => {
+    const future = new Date(Date.now() + 5000).toUTCString();
+    const diff = parseRetryAfter(future);
+    assert.ok(diff >= 4000 && diff <= 6000, `expected around 5000ms, got ${diff}`);
+
+    const past = new Date(Date.now() - 5000).toUTCString();
+    assert.equal(parseRetryAfter(past), 0);
+  });
+
+  it('returns null for missing, negative or invalid headers', () => {
+    assert.equal(parseRetryAfter(null), null);
+    assert.equal(parseRetryAfter(undefined), null);
+    assert.equal(parseRetryAfter(''), null);
+    assert.equal(parseRetryAfter('-5'), null);
+    assert.equal(parseRetryAfter('not-a-number'), null);
+  });
+});
+
+describe('d1Query transient retries and security', () => {
+  it('retries on 429 with retry-after header and recovers on next attempt', async () => {
+    let sleeps = [];
+    installFetch((attempt) => {
+      if (attempt === 1) {
+        return {
+          status: 429,
+          ok: false,
+          headers: new Headers({ 'retry-after': '1' }),
+          text: () => Promise.resolve(JSON.stringify({ success: false, errors: [{ message: 'rate limit' }] })),
+        };
+      }
+      return jsonResponse(envelope({ results: [{ recovered: 1 }] }));
+    });
+
+    const out = await d1Query('SELECT 1', [], { sleep: (ms) => { sleeps.push(ms); return Promise.resolve(); } });
+    assert.deepEqual(out.results, [{ recovered: 1 }]);
+    assert.equal(calls.length, 2);
+    assert.equal(sleeps.length, 1);
+    assert.equal(sleeps[0], 1000);
+  });
+
+  it('retries on transient 502/503 and recovers', async () => {
+    let sleeps = [];
+    installFetch((attempt) => {
+      if (attempt === 1) return { status: 502, ok: false, text: () => Promise.resolve('<html>bad gateway') };
+      return jsonResponse(envelope({ results: [{ recovered: 2 }] }));
+    });
+
+    const out = await d1Query('SELECT 2', [], { sleep: (ms) => { sleeps.push(ms); return Promise.resolve(); } });
+    assert.deepEqual(out.results, [{ recovered: 2 }]);
+    assert.equal(calls.length, 2);
+  });
+
+  it('does NOT retry permanent 400 SQL error or 401 unauthorized', async () => {
+    installFetch(() => ({
+      status: 400,
+      ok: false,
+      text: () => Promise.resolve(JSON.stringify({ success: false, errors: [{ message: 'near "SYNTAX": syntax error' }] })),
+    }));
+
+    await assert.rejects(d1Query('SYNTAX ERROR'), /syntax error/);
+    assert.equal(calls.length, 1, 'permanent error must fail immediately on attempt 1 without retry');
+  });
+
+  it('redacts CF_API_TOKEN from error messages', async () => {
+    const leakToken = ENV.CF_API_TOKEN;
+    installFetch(() => ({
+      status: 403,
+      ok: false,
+      text: () => Promise.resolve(JSON.stringify({ success: false, errors: [{ message: `bad token: ${leakToken}` }] })),
+    }));
+
+    await assert.rejects(d1Query('SELECT 1'), (err) => {
+      assert.ok(!err.message.includes(leakToken), 'token must be redacted from error message');
+      assert.ok(err.message.includes('[REDACTED]'), 'error message should contain [REDACTED]');
+      return true;
+    });
+  });
+});
+

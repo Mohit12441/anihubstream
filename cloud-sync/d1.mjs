@@ -34,36 +34,91 @@ function account() {
   return { accountId: CF_ACCOUNT_ID, databaseId: CF_DATABASE_ID, token: CF_API_TOKEN };
 }
 
+export function parseRetryAfter(header) {
+  if (header === null || header === undefined) return null;
+  const trimmed = String(header).trim();
+  if (!trimmed) return null;
+  const sec = Number(trimmed);
+  if (Number.isFinite(sec)) {
+    return sec >= 0 ? Math.round(sec * 1000) : null;
+  }
+  const date = Date.parse(trimmed);
+  if (Number.isFinite(date)) {
+    const diff = date - Date.now();
+    return Math.max(0, diff);
+  }
+  return null;
+}
+
+export function isD1Transient(status, err) {
+  if (status === 429) return true;
+  if (status >= 500 && status <= 599) return true;
+  if (err && (err.name === 'TimeoutError' || /timeout|fetch failed|econnreset|econnrefused|network/i.test(err.message))) {
+    return true;
+  }
+  return false;
+}
+
 /**
  * Runs one statement with bound params. Returns { results, meta }.
- *
- * `body.result` arrives in two shapes and both have to unwrap to the same pair. The live REST
- * envelope wraps per-statement results in an array — one entry per statement, each carrying its
- * own `results`/`meta` — while the object-shaped form puts those fields on `result` directly.
- * Reading `.results` off the array yields undefined, and an empty read is what the schema gate
- * reports as every column missing, so a shape this parser does not know reads as a mismatch
- * verdict rather than a parse error — the unwrap belongs here, once, not in each reader.
+ * Retries on transient network and server errors (429, 5xx, timeouts) with bounded exponential backoff.
+ * Redacts tokens from error messages to protect credentials.
  */
-export async function d1Query(sql, params = []) {
+export async function d1Query(sql, params = [], options = {}) {
   const { accountId, databaseId, token } = account();
-  const res = await fetch(`${BASE}/accounts/${accountId}/d1/database/${databaseId}/query`, {
-    method: 'POST',
-    headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json', accept: 'application/json' },
-    body: JSON.stringify({ sql, params }),
-    signal: AbortSignal.timeout(QUERY_TIMEOUT_MS),
-  });
-  const text = await res.text();
-  let body = null;
-  try {
-    body = JSON.parse(text);
-  } catch {
-    throw new Error(`d1: HTTP ${res.status} non-JSON response: ${text.slice(0, 200)}`);
+  const maxAttempts = options.maxAttempts ?? intEnv('D1_MAX_ATTEMPTS', 4);
+  const backoffBaseMs = options.backoffBaseMs ?? intEnv('D1_BACKOFF_BASE_MS', 100);
+  const backoffCapMs = options.backoffCapMs ?? intEnv('D1_BACKOFF_CAP_MS', 10_000);
+  const sleep = options.sleep ?? ((ms) => new Promise((r) => setTimeout(r, ms)));
+
+  const redact = (msg) => (token ? String(msg).replaceAll(token, '[REDACTED]') : String(msg));
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    let res;
+    try {
+      res = await fetch(`${BASE}/accounts/${accountId}/d1/database/${databaseId}/query`, {
+        method: 'POST',
+        headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json', accept: 'application/json' },
+        body: JSON.stringify({ sql, params }),
+        signal: AbortSignal.timeout(QUERY_TIMEOUT_MS),
+      });
+    } catch (netErr) {
+      if (attempt === maxAttempts || !isD1Transient(0, netErr)) {
+        throw new Error(`d1: network error: ${redact(netErr.message)}`);
+      }
+      const wait = Math.min(backoffCapMs, backoffBaseMs * 2 ** (attempt - 1));
+      await sleep(wait);
+      continue;
+    }
+
+    const text = await res.text();
+    let body = null;
+    try {
+      body = JSON.parse(text);
+    } catch {
+      if (attempt < maxAttempts && isD1Transient(res.status)) {
+        const retryAfterMs = parseRetryAfter(res.headers?.get?.('retry-after'));
+        const wait = retryAfterMs ?? Math.min(backoffCapMs, backoffBaseMs * 2 ** (attempt - 1));
+        await sleep(wait);
+        continue;
+      }
+      throw new Error(`d1: HTTP ${res.status} non-JSON response: ${redact(text.slice(0, 200))}`);
+    }
+
+    if (!res.ok || body.success === false) {
+      if (attempt < maxAttempts && isD1Transient(res.status)) {
+        const retryAfterMs = parseRetryAfter(res.headers?.get?.('retry-after'));
+        const wait = retryAfterMs ?? Math.min(backoffCapMs, backoffBaseMs * 2 ** (attempt - 1));
+        await sleep(wait);
+        continue;
+      }
+      throw new Error(`d1: HTTP ${res.status} ${redact(JSON.stringify(body.errors ?? body.message ?? text).slice(0, 400))}`);
+    }
+
+    const result = (Array.isArray(body.result) ? body.result[0] : body.result) ?? {};
+    return { results: result.results ?? [], meta: result.meta ?? result.metadata ?? {} };
   }
-  if (!res.ok || body.success === false) {
-    throw new Error(`d1: HTTP ${res.status} ${JSON.stringify(body.errors ?? body.message ?? text).slice(0, 400)}`);
-  }
-  const result = (Array.isArray(body.result) ? body.result[0] : body.result) ?? {};
-  return { results: result.results ?? [], meta: result.meta ?? result.metadata ?? {} };
+  throw new Error('d1: max attempts exceeded');
 }
 
 export const d1All = async (sql, params = []) => (await d1Query(sql, params)).results;

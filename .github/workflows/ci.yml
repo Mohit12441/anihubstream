@@ -101,11 +101,12 @@ jobs:
       # read from that file rather than totalled across the suite, because the operator asked that `api/`
       # not be run. This job is therefore the first place the total is counted — which is what a floor is
       # for: if the sum is wrong the run goes red and says the number it saw.
-      # TEST_FLOOR is 287: 285 from commit ef0cf4a plus two checks in cloud-sync/sync-anilist.test.mjs
-      # proving strict MAX_ITEMS_PER_RUN budget allocation across queue and catalogue.
+      # TEST_FLOOR is 297: 287 from commit 795ae3c plus ten checks (seven in cloud-sync/d1.test.mjs
+      # for parseRetryAfter, transient retries and token redaction, plus three in cloud-sync/discover.test.mjs
+      # for fetchTrending retry on 429/5xx and 85 RPM pace pacing).
       - name: tests
         env:
-          TEST_FLOOR: 287
+          TEST_FLOOR: 297
         run: |
           set -euo pipefail
           total=0

@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { discoverTrending, fetchTrending } from './discover.mjs';
+import { discoverTrending, fetchTrending, pace, resetPacing, MIN_INTERVAL_MS, RATE_CEILING_RPM } from './discover.mjs';
 
 const mockMedia = [
   {
@@ -46,6 +46,66 @@ describe('cloud-sync/discover.mjs', () => {
         () => fetchTrending(10, mockFetch),
         /AniList GraphQL error: "Rate limit exceeded"/
       );
+    });
+
+    it('retries on 429 with retry-after header and recovers on attempt 2', async () => {
+      let attempts = 0;
+      let slept = [];
+      const mockFetch = async () => {
+        attempts++;
+        if (attempts === 1) {
+          return {
+            status: 429,
+            ok: false,
+            headers: new Headers({ 'retry-after': '1' }),
+            json: async () => ({ errors: [{ message: 'Too many requests' }] }),
+          };
+        }
+        return {
+          ok: true,
+          status: 200,
+          json: async () => ({ data: { Page: { media: [{ id: 999, title: { english: 'Recovered' } }] } } }),
+        };
+      };
+      const items = await fetchTrending(10, mockFetch, {
+        sleep: (ms) => { slept.push(ms); return Promise.resolve(); }
+      });
+      assert.equal(attempts, 2);
+      assert.equal(items.length, 1);
+      assert.equal(items[0].id, 999);
+      assert.equal(slept.length, 1);
+      assert.equal(slept[0], 1000);
+    });
+
+    it('retries on transient 500/502/503 server error and recovers', async () => {
+      let attempts = 0;
+      const mockFetch = async () => {
+        attempts++;
+        if (attempts === 1) {
+          return { status: 502, ok: false, text: async () => 'Bad Gateway' };
+        }
+        return {
+          ok: true,
+          status: 200,
+          json: async () => ({ data: { Page: { media: [{ id: 888, title: { english: 'Ok' } }] } } }),
+        };
+      };
+      const items = await fetchTrending(10, mockFetch, { sleep: () => Promise.resolve() });
+      assert.equal(attempts, 2);
+      assert.equal(items[0].id, 888);
+    });
+  });
+
+  describe('pace and rate ceiling', () => {
+    it('spaces consecutive operations by the configured interval (85 RPM = ~706ms)', async () => {
+      const sleeps = [];
+      resetPacing();
+      await pace(706, (ms) => { sleeps.push(ms); return Promise.resolve(); });
+      assert.equal(sleeps.length, 0, 'first call should not wait');
+
+      await pace(706, (ms) => { sleeps.push(ms); return Promise.resolve(); });
+      assert.equal(sleeps.length, 1, 'second call should pace');
+      assert.ok(sleeps[0] > 0 && sleeps[0] <= 706);
     });
   });
 

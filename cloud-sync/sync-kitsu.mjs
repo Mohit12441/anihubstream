@@ -17,7 +17,7 @@
 
 import { randomUUID } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { assertLiveColumns, assertLiveTables, d1All, insertRows, schemaFaults } from './d1.mjs';
+import { assertLiveColumns, assertLiveTables, d1All, insertRows, parseRetryAfter, schemaFaults } from './d1.mjs';
 import {
   acquireLease, budget, getCursor, leaseKeeper, recordRun, releaseLease, setCursor, utcDay,
 } from './state.mjs';
@@ -97,13 +97,16 @@ async function fetchPage(offset, stats) {
 
     if (fetched.res.status === 429) {
       /* Kitsu says how long to wait; that is authoritative, so take it over any guess. */
-      const retryAfter = Number(fetched.res.headers.get('retry-after'));
-      const wait = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000 : MIN_INTERVAL_MS * attempt;
+      const retryAfter = parseRetryAfter(fetched.res.headers.get('retry-after'));
+      const wait = retryAfter !== null && retryAfter > 0 ? retryAfter : MIN_INTERVAL_MS * attempt;
       console.warn(`[kitsu] 429 on attempt ${attempt}: waiting ${Math.round(wait / 1000)}s`);
       stats.s429++;
       stats.backoffs++;
       await sleep(Math.max(wait, MIN_INTERVAL_MS));
       continue;
+    }
+    if (fetched.res.status === 400 || fetched.res.status === 404) {
+      throw new Error(`kitsu: HTTP ${fetched.res.status} permanent error: ${fetched.text.slice(0, 160)}`);
     }
     if (fetched.res.status === 403) {
       stats.s403++;

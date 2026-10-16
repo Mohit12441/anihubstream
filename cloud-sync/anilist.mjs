@@ -23,6 +23,8 @@
 // block of your IP is a terms problem for the API and an account-ban problem for the free
 // host. If you get `blocked`, stop, and contact AniList.
 
+import { parseRetryAfter } from './d1.mjs';
+
 export const ANILIST_DEFAULTS = {
   endpoint: 'https://graphql.anilist.co',
   minIntervalMs: 2500,
@@ -268,8 +270,8 @@ export function createAnilist(options = {}) {
           stats.s429++;
           widen('429');
           if (attempt === cfg.maxAttempts) throw new Error('anilist: still rate limited after all attempts');
-          const retryAfter = Number(res.headers.get('retry-after'));
-          const wait = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000
+          const retryAfter = parseRetryAfter(res.headers.get('retry-after'));
+          const wait = retryAfter !== null && retryAfter > 0 ? retryAfter
             : jitter(Math.min(cfg.backoffCapMs, cfg.backoffBaseMs * cfg.backoffFactor ** (attempt - 1)));
           stats.backoffs++;
           warn(`429 on attempt ${attempt}: waiting ${Math.round(wait / 1000)}s`);
