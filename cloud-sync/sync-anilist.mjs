@@ -816,8 +816,13 @@ async function main({ forceTakeover = process.argv.includes('--force-takeover') 
       const now = Date.now();
       const want = Math.min(MAX_ITEMS - summary.items_processed, api.cfg.batchSize * 4);
 
-      const slice = await catalogueSlice(cursor.after, want);
+      /* Prioritize pending queue items, then allocate the remaining budget to the catalogue slice
+         so summary.items_processed strictly never exceeds MAX_ITEMS. */
       const pending = CREATES_ROWS ? await pendingSlice(cursor.pendingAfter, want) : EMPTY_PENDING;
+      const catalogueWant = want - pending.count;
+      const slice = catalogueWant > 0
+        ? await catalogueSlice(cursor.after, catalogueWant)
+        : { rows: [], known: new Map(), anilistIds: [], unmapped: [], after: cursor.after };
       if (!slice.rows.length && !pending.count) {
         const finalCursor = { ...cursor, after: '', pendingAfter: 0, done: true, doneAt: Date.now() };
         await setCursor(cursorKey, finalCursor);

@@ -198,39 +198,9 @@ describe('sync-anilist terminal cursor persistence', () => {
     assert.equal(persisted.doneAt, summary.cursor.doneAt);
   });
 
-  it('processes queued titles alongside catalogue slice and exits at item_cap when items_processed >= MAX_ITEMS', async () => {
-    process.env.MODE = 'delta';
-    process.env.CLOUD_CREATES_ROWS = '1';
-    process.env.MAX_ITEMS_PER_RUN = '10';
-
-    const mockCatalogueRows = Array.from({ length: 10 }, (_, i) => ({
-      id: `catalogue-${i}`,
-      title: `Catalogue ${i}`,
-      native: '',
-      year: 2024,
-      rating: 8.0,
-      season: 'Fall 2024',
-      kind: 'TV',
-      status: 'Finished',
-      art: 'art.jpg',
-      key_art: 'key.jpg',
-      accent: '#fff',
-      synopsis: 'synopsis',
-      source_ids: JSON.stringify({ anilist: 2000 + i }),
-      added_at: '2026-01-01',
-      catalogue_synced_at: 1000,
-    }));
-
-    const mockPendingRows = Array.from({ length: 4 }, (_, i) => ({
-      id: i + 1,
-      anilist_id: 3000 + i,
-      slug: `pending-${i}`,
-      added_at: Date.now(),
-      note: 'test',
-    }));
-
+  function createSyncMockFetch({ catalogueRows = [], pendingRows = [] }) {
     const prevFetch = globalThis.fetch;
-    globalThis.fetch = async (url, init = {}) => {
+    return async (url, init = {}) => {
       const u = String(url);
       if (u.includes('graphql.anilist.co')) {
         const body = init.body ? JSON.parse(init.body) : {};
@@ -282,21 +252,23 @@ describe('sync-anilist terminal cursor persistence', () => {
 
       if (sql.includes('FROM anime WHERE id > ? ORDER BY id')) {
         const after = params[0] || '';
-        const results = after === '' ? mockCatalogueRows : [];
+        const limit = Number(sql.match(/LIMIT\s+(\d+)/)?.[1] ?? 100);
+        const filtered = catalogueRows.filter((r) => r.id > after).slice(0, limit);
         return {
           status: 200,
           ok: true,
-          text: async () => JSON.stringify({ success: true, result: [{ results, success: true, meta: {} }] }),
+          text: async () => JSON.stringify({ success: true, result: [{ results: filtered, success: true, meta: {} }] }),
         };
       }
 
       if (sql.includes('FROM sync_pending')) {
         const after = params[0] || 0;
-        const results = after === 0 ? mockPendingRows : [];
+        const limit = Number(sql.match(/LIMIT\s+(\d+)/)?.[1] ?? 100);
+        const filtered = pendingRows.filter((r) => r.anilist_id > after).slice(0, limit);
         return {
           status: 200,
           ok: true,
-          text: async () => JSON.stringify({ success: true, result: [{ results, success: true, meta: {} }] }),
+          text: async () => JSON.stringify({ success: true, result: [{ results: filtered, success: true, meta: {} }] }),
         };
       }
 
@@ -310,12 +282,117 @@ describe('sync-anilist terminal cursor persistence', () => {
 
       return prevFetch(url, init);
     };
+  }
 
-    const mod = await import(`./sync-anilist.mjs?case=${Date.now()}`);
+  it('prioritizes pending queue items then allocates remaining budget to catalogue slice under strict cap', async () => {
+    process.env.MODE = 'delta';
+    process.env.CLOUD_CREATES_ROWS = '1';
+    process.env.MAX_ITEMS_PER_RUN = '10';
+
+    const mockCatalogueRows = Array.from({ length: 10 }, (_, i) => ({
+      id: `catalogue-${i}`,
+      title: `Catalogue ${i}`,
+      native: '',
+      year: 2024,
+      rating: 8.0,
+      season: 'Fall 2024',
+      kind: 'TV',
+      status: 'Finished',
+      art: 'art.jpg',
+      key_art: 'key.jpg',
+      accent: '#fff',
+      synopsis: 'synopsis',
+      source_ids: JSON.stringify({ anilist: 2000 + i }),
+      added_at: '2026-01-01',
+      catalogue_synced_at: 1000,
+    }));
+
+    const mockPendingRows = Array.from({ length: 4 }, (_, i) => ({
+      id: i + 1,
+      anilist_id: 3000 + i,
+      slug: `pending-${i}`,
+      added_at: Date.now(),
+      note: 'test',
+    }));
+
+    globalThis.fetch = createSyncMockFetch({ catalogueRows: mockCatalogueRows, pendingRows: mockPendingRows });
+
+    const mod = await import(`./sync-anilist.mjs?case=${Date.now()}-strict1`);
     const summary = await mod.run({ forceTakeover: false });
 
-    assert.equal(summary.items_processed, 14, 'processes both slices in the batch (10 catalogue + 4 pending)');
-    assert.equal(summary.created, 4, 'all 4 queued items were created');
-    assert.equal(summary.exit_reason, 'item_cap', 'halts with item_cap when items_processed reaches or exceeds MAX_ITEMS');
+    // Cap of 10 with 4 pending items: processes 4 pending items + 6 catalogue items = exactly 10
+    assert.equal(summary.items_processed, 10, 'strictly respects MAX_ITEMS_PER_RUN cap');
+    assert.equal(summary.created, 4, 'all 4 pending queue entries created');
+    assert.equal(summary.exit_reason, 'item_cap');
+    assert.equal(summary.cursor.pendingAfter, 3003, 'all 4 pending queue entries consumed');
+    assert.equal(summary.cursor.after, 'catalogue-5', 'catalogue cursor advanced to the 6th row (index 5)');
+  });
+
+  it('enforces strict cap when pending queue has more items than remaining budget', async () => {
+    process.env.MODE = 'delta';
+    process.env.CLOUD_CREATES_ROWS = '1';
+    process.env.MAX_ITEMS_PER_RUN = '3';
+
+    const mockCatalogueRows = Array.from({ length: 10 }, (_, i) => ({
+      id: `catalogue-${i}`,
+      title: `Catalogue ${i}`,
+      native: '',
+      year: 2024,
+      rating: 8.0,
+      season: 'Fall 2024',
+      kind: 'TV',
+      status: 'Finished',
+      art: 'art.jpg',
+      key_art: 'key.jpg',
+      accent: '#fff',
+      synopsis: 'synopsis',
+      source_ids: JSON.stringify({ anilist: 2000 + i }),
+      added_at: '2026-01-01',
+      catalogue_synced_at: 1000,
+    }));
+
+    const mockPendingRows = Array.from({ length: 5 }, (_, i) => ({
+      id: i + 1,
+      anilist_id: 3000 + i,
+      slug: `pending-${i}`,
+      added_at: Date.now(),
+      note: 'test',
+    }));
+
+    globalThis.fetch = createSyncMockFetch({ catalogueRows: mockCatalogueRows, pendingRows: mockPendingRows });
+
+    const mod = await import(`./sync-anilist.mjs?case=${Date.now()}-strict2`);
+    const summary = await mod.run({ forceTakeover: false });
+
+    // Cap of 3 with 5 pending items: processes exactly 3 pending items and 0 catalogue items
+    assert.equal(summary.items_processed, 3, 'strictly halts at cap without reading catalogue rows');
+    assert.equal(summary.created, 3, 'first 3 pending queue entries created');
+    assert.equal(summary.exit_reason, 'item_cap');
+    assert.equal(summary.cursor.pendingAfter, 3002, 'pending cursor advanced to 3rd entry (index 2)');
+    assert.equal(summary.cursor.after, '', 'catalogue cursor left untouched since no catalogue rows read');
+  });
+
+  it('processes pending queue items and halts with catalogue_end when catalogue slice is empty', async () => {
+    process.env.MODE = 'delta';
+    process.env.CLOUD_CREATES_ROWS = '1';
+    process.env.MAX_ITEMS_PER_RUN = '10';
+
+    const mockPendingRows = Array.from({ length: 4 }, (_, i) => ({
+      id: i + 1,
+      anilist_id: 3000 + i,
+      slug: `pending-${i}`,
+      added_at: Date.now(),
+      note: 'test',
+    }));
+
+    globalThis.fetch = createSyncMockFetch({ catalogueRows: [], pendingRows: mockPendingRows });
+
+    const mod = await import(`./sync-anilist.mjs?case=${Date.now()}-strict3`);
+    const summary = await mod.run({ forceTakeover: false });
+
+    assert.equal(summary.items_processed, 4, 'processes all 4 pending items');
+    assert.equal(summary.created, 4, 'creates all 4 pending items');
+    assert.equal(summary.exit_reason, 'catalogue_end', 'reaches catalogue_end when catalogue is empty');
+    assert.equal(summary.cursor.done, true, 'persists terminal cursor with done: true');
   });
 });
