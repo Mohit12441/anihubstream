@@ -970,3 +970,80 @@
     margin-left: 0;
   }
 }
+
+/* Trust & Informational Pages */
+.page-block {
+  padding-top: clamp(28px, 4vw, 56px);
+  padding-bottom: clamp(48px, 6vw, 96px);
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: clamp(24px, 3.5vw, 40px);
+  padding-bottom: clamp(16px, 2.5vw, 24px);
+  border-bottom: 1px solid var(--line);
+}
+
+.page-title {
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+  color: var(--text-1);
+}
+
+.page-sub {
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: var(--text-3);
+  margin: 0;
+}
+
+.prose {
+  display: grid;
+  gap: clamp(24px, 3.5vw, 36px);
+  line-height: 1.7;
+  color: var(--text-2);
+  font-size: 15.5px;
+}
+
+.prose section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(18px, 2.8vw, 32px);
+}
+
+.prose h2 {
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prose p {
+  margin: 0 0 14px;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose a {
+  color: var(--crimson-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  color: var(--crimson);
+}
+
+.inline-icon {
+  color: var(--crimson);
+  flex-shrink: 0;
+}
+

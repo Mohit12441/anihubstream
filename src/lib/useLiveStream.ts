@@ -21,6 +21,7 @@ import {
   bridgeUrl,
   fetchVtt,
   isResolveFailure,
+  prefetchEpisode,
   type BridgeSource,
   type Cue,
 } from './streamBridge';
@@ -117,6 +118,8 @@ export function useLiveStream(o: Options) {
     setNonce((n) => n + 1);
   }, []);
 
+  const [resolvingElapsed, setResolvingElapsed] = useState(0);
+
   /* ---------- resolve ---------- */
   useEffect(() => {
     const fresh = freshRef.current;
@@ -128,43 +131,68 @@ export function useLiveStream(o: Options) {
     setError(null);
     setRetryable(false);
     setAudioFallback(false);
+    setResolvingElapsed(0);
     let cancel = false;
     setStatus('resolving');
     setInfo(null);
+
+    const timer = window.setInterval(() => {
+      setResolvingElapsed((s) => s + 1);
+    }, 1000);
+
+    const timeoutId = window.setTimeout(() => {
+      if (!cancel && status === 'resolving') {
+        setStatus('error');
+        setRetryable(true);
+        setError('Resolution timed out after 15s. Click Retry to try again.');
+      }
+    }, 15_000);
+
     void (async () => {
-      const up = await bridgeHealth(fresh);
-      if (cancel) return;
-      if (!up) {
-        setStatus('unavailable');
-        return;
-      }
-      autoTries.current = 0;
-      errorTries.current = 0;
-      let res = await bridgeResolve(o.title, o.episode, o.audio);
-      if (cancel) return;
-      if (isResolveFailure(res)) {
-        /* a dub ask for an episode that has no dubbed file falls back to the original
-           rather than leaving the viewer with an error — the audio the episode actually
-           carries wins over the stored intent */
-        if (o.audio === 'dub' && res.error === 'NO_EMBEDS') {
-          const sub = await bridgeResolve(o.title, o.episode, 'sub');
-          if (cancel) return;
-          if (!isResolveFailure(sub)) {
-            setAudioFallback(true);
-            setInfo(sub);
-            return;
-          }
-          res = sub;
+      try {
+        const up = await bridgeHealth(fresh);
+        if (cancel) return;
+        if (!up) {
+          setStatus('unavailable');
+          return;
         }
-        setRetryable(TRANSIENT_REFUSALS.has(res.error));
-        setStatus(res.error === 'BRIDGE_UNREACHABLE' ? 'unavailable' : 'error');
-        setError(res.message ? `${res.error} — ${res.message}` : res.error);
-        return;
+        autoTries.current = 0;
+        errorTries.current = 0;
+        let res = await bridgeResolve(o.title, o.episode, o.audio);
+        if (cancel) return;
+        if (isResolveFailure(res)) {
+          /* a dub ask for an episode that has no dubbed file falls back to the original
+             rather than leaving the viewer with an error — the audio the episode actually
+             carries wins over the stored intent */
+          if (o.audio === 'dub' && res.error === 'NO_EMBEDS') {
+            const sub = await bridgeResolve(o.title, o.episode, 'sub');
+            if (cancel) return;
+            if (!isResolveFailure(sub)) {
+              setAudioFallback(true);
+              setInfo(sub);
+              // Prefetch next episode in the background
+              prefetchEpisode(o.title, o.episode + 1, 'sub');
+              return;
+            }
+            res = sub;
+          }
+          setRetryable(TRANSIENT_REFUSALS.has(res.error));
+          setStatus(res.error === 'BRIDGE_UNREACHABLE' ? 'unavailable' : 'error');
+          setError(res.message ? `${res.error} — ${res.message}` : res.error);
+          return;
+        }
+        setInfo(res);
+        // Automatically warm and prefetch the next episode so autoplay/bingeing is instant!
+        prefetchEpisode(o.title, o.episode + 1, o.audio);
+      } finally {
+        window.clearInterval(timer);
+        window.clearTimeout(timeoutId);
       }
-      setInfo(res);
     })();
     return () => {
       cancel = true;
+      window.clearInterval(timer);
+      window.clearTimeout(timeoutId);
     };
   }, [o.title, o.episode, o.audio, nonce]);
 
@@ -497,5 +525,6 @@ export function useLiveStream(o: Options) {
     retryable,
     pip,
     retry,
+    resolvingElapsed,
   };
 }

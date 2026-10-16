@@ -198,7 +198,6 @@ export function Genres() {
                       anime={a}
                       variant="poster"
                       badge={a.status === 'Ongoing' ? 'ONGOING' : a.status === 'Upcoming' ? 'UPCOMING' : undefined}
-                      episode={`${a.kind} · ${a.year}`}
                     />
                   </li>
                 ))}

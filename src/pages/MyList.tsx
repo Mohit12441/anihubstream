@@ -189,7 +189,7 @@ export function MyList() {
                     (a) =>
                       a && (
                         <li key={a.id}>
-                          <AnimeCard anime={a} variant="poster" episode={`${a.kind} · ${a.year}`} />
+                          <AnimeCard anime={a} variant="poster" />
                           <button
                             type="button"
                             className="btn btn--sm btn--ghost mylist__unfav"

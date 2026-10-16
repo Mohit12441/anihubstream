@@ -16,6 +16,7 @@ import { toSeconds } from '../data/model';
 import type { Anime, Episode } from '../data/model';
 import { positionKey, type PositionMap } from '../lib/playerPrefs';
 import { stamp } from '../lib/time';
+import { prefetchEpisode } from '../lib/streamBridge';
 import { Art } from './Art';
 
 type Filter = 'all' | 'todo' | 'done';
@@ -146,7 +147,12 @@ export function EpisodeSidebar({ anime, current, onSelect, autoNext, onAutoNext,
           </div>
 
           {next && (
-            <button type="button" className="eps__next" onClick={() => onSelect(next.n)}>
+            <button
+              type="button"
+              className="eps__next"
+              onClick={() => onSelect(next.n)}
+              onMouseEnter={() => prefetchEpisode(anime.title, next.n, 'sub')}
+            >
               <Art sources={[next.thumb, anime.key, anime.poster]} alt="" iconSize={16} />
               <span>
                 <b>Next up · Episode {next.n}</b>
@@ -171,6 +177,7 @@ export function EpisodeSidebar({ anime, current, onSelect, autoNext, onAutoNext,
                     type="button"
                     className={`eps__item${isCurrent ? ' is-current' : ''}`}
                     onClick={() => onSelect(ep.n)}
+                    onMouseEnter={() => prefetchEpisode(anime.title, ep.n, 'sub')}
                     aria-current={isCurrent ? 'true' : undefined}
                   >
                     <span className="eps__thumb">

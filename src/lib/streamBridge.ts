@@ -102,25 +102,84 @@ export function bridgeHealth(fresh = false): Promise<boolean> {
   return healthProbe;
 }
 
+const RESOLVE_CACHE_TTL_MS = 2 * 60 * 60 * 1000; // 2 hours
+const memoryCache = new Map<string, { at: number; data: BridgeSource }>();
+const activeResolves = new Map<string, Promise<BridgeSource | ResolveFailure>>();
+
+export function getCachedSource(key: string): BridgeSource | null {
+  const now = Date.now();
+  const mem = memoryCache.get(key);
+  if (mem && now - mem.at < RESOLVE_CACHE_TTL_MS) {
+    return { ...mem.data, reused: true };
+  }
+  try {
+    const raw = sessionStorage.getItem(`res_${key}`);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed && typeof parsed.at === 'number' && now - parsed.at < RESOLVE_CACHE_TTL_MS) {
+        memoryCache.set(key, parsed);
+        return { ...parsed.data, reused: true };
+      }
+    }
+  } catch {}
+  return null;
+}
+
+export function setCachedSource(key: string, data: BridgeSource): void {
+  const entry = { at: Date.now(), data };
+  memoryCache.set(key, entry);
+  try {
+    sessionStorage.setItem(`res_${key}`, JSON.stringify(entry));
+  } catch {}
+}
+
+/** Non-blocking prefetch of an upcoming episode */
+export async function prefetchEpisode(
+  title: string,
+  ep: number,
+  audio: 'sub' | 'dub',
+): Promise<void> {
+  if (!title || ep < 1) return;
+  const key = `${title.toLowerCase().trim()}|${ep}|${audio}`;
+  if (getCachedSource(key)) return;
+  void bridgeResolve(title, ep, audio);
+}
+
 export async function bridgeResolve(
   title: string,
   ep: number,
   audio: 'sub' | 'dub',
 ): Promise<BridgeSource | ResolveFailure> {
-  try {
-    const res = await fetch(
-      bridgeUrl(`/resolve?title=${encodeURIComponent(title)}&ep=${ep}&audio=${audio}`),
-      { signal: AbortSignal.timeout(90_000) },
-    );
-    const body = (await res.json()) as BridgeSource | ResolveFailure;
-    if (!res.ok) {
-      const fail = body as ResolveFailure;
-      return { error: fail?.error ?? `HTTP ${res.status}`, message: fail?.message };
-    }
-    return body;
-  } catch (e) {
-    return { error: 'BRIDGE_UNREACHABLE', message: (e as Error).message };
+  const key = `${title.toLowerCase().trim()}|${ep}|${audio}`;
+  const cached = getCachedSource(key);
+  if (cached) return cached;
+
+  if (activeResolves.has(key)) {
+    return activeResolves.get(key)!;
   }
+
+  const promise = (async () => {
+    try {
+      const res = await fetch(
+        bridgeUrl(`/resolve?title=${encodeURIComponent(title)}&ep=${ep}&audio=${audio}`),
+        { signal: AbortSignal.timeout(30_000) },
+      );
+      const body = (await res.json()) as BridgeSource | ResolveFailure;
+      if (!res.ok) {
+        const fail = body as ResolveFailure;
+        return { error: fail?.error ?? `HTTP ${res.status}`, message: fail?.message };
+      }
+      setCachedSource(key, body as BridgeSource);
+      return body;
+    } catch (e) {
+      return { error: 'BRIDGE_UNREACHABLE', message: (e as Error).message };
+    } finally {
+      activeResolves.delete(key);
+    }
+  })();
+
+  activeResolves.set(key, promise);
+  return promise;
 }
 
 export const isResolveFailure = <T extends object>(v: T | ResolveFailure): v is ResolveFailure =>

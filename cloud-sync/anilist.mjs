@@ -99,17 +99,18 @@ const SORTS = new Set(['POPULARITY_DESC', 'TRENDING_DESC', 'SCORE_DESC', 'START_
 export function createAnilist(options = {}) {
   const cfg = { ...ANILIST_DEFAULTS, ...options };
   const envNumber = (name, key) => (process.env[name] ? Number(process.env[name]) : cfg[key]);
-  cfg.endpoint = options.endpoint ?? process.env.ANILIST_ENDPOINT ?? ANILIST_DEFAULTS.endpoint;
-  cfg.relayPrefix = options.relayPrefix ?? process.env.ANILIST_RELAY_PREFIX ?? '';
-  cfg.method = options.method ?? process.env.ANILIST_METHOD ?? 'auto';
+  const envString = (raw, dflt) => (raw !== undefined && String(raw).trim() !== '' ? String(raw).trim() : dflt);
+  cfg.endpoint = options.endpoint ?? envString(process.env.ANILIST_ENDPOINT, ANILIST_DEFAULTS.endpoint);
+  cfg.relayPrefix = options.relayPrefix ?? envString(process.env.ANILIST_RELAY_PREFIX, '');
+  cfg.method = options.method ?? envString(process.env.ANILIST_METHOD, 'auto');
   cfg.minIntervalMs = envNumber('ANILIST_MIN_INTERVAL_MS', 'minIntervalMs');
   cfg.rateCeilingRpm = envNumber('ANILIST_RATE_CEILING_RPM', 'rateCeilingRpm');
   cfg.batchSize = envNumber('ANILIST_BATCH_SIZE', 'batchSize');
   cfg.intervalCapMs = envNumber('ANILIST_INTERVAL_CAP_MS', 'intervalCapMs');
   cfg.breakerCooldownMs = envNumber('ANILIST_BREAKER_COOLDOWN_MS', 'breakerCooldownMs');
-  cfg.dailyBudget = options.dailyBudget ?? Number(process.env.ANILIST_DAILY_BUDGET ?? 4000);
-  cfg.userAgent = options.userAgent ?? process.env.ANILIST_USER_AGENT ??
-    'AniHubStream/1.0 (catalogue sync; contact: https://anihubstream.com/about)';
+  cfg.dailyBudget = options.dailyBudget ?? (process.env.ANILIST_DAILY_BUDGET ? Number(process.env.ANILIST_DAILY_BUDGET) : 4000);
+  cfg.userAgent = options.userAgent ?? envString(process.env.ANILIST_USER_AGENT,
+    'AniHubStream/1.0 (catalogue sync; contact: https://anihubstream.com/about)');
 
   /* R2's floor and the R12-style ceiling cannot both be honoured by trusting an env
      number: 60000/ceiling is the smallest spacing that satisfies the ceiling, so the

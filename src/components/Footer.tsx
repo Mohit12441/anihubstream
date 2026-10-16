@@ -60,29 +60,26 @@ export function Footer() {
             </ul>
           </nav>
 
-          <div>
-            <h3>Prototype</h3>
+          <nav aria-label="Legal & About">
+            <h3>Legal & About</h3>
             <ul>
               <li>
-                <Link to="/watch/demon-slayer">Watch Page</Link>
+                <Link to="/about">About Us</Link>
               </li>
               <li>
-                <button type="button" onClick={demo('Release notes')}>
-                  Release Notes
-                </button>
+                <Link to="/dmca">DMCA Notice</Link>
               </li>
               <li>
-                <button type="button" onClick={demo('Support')}>
-                  Support
-                </button>
+                <Link to="/privacy">Privacy Policy</Link>
               </li>
               <li>
-                <button type="button" onClick={demo('Press kit')}>
-                  Press Kit
-                </button>
+                <Link to="/terms">Terms of Service</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
 
         <div className="site-footer__bottom">

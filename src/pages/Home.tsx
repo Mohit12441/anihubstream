@@ -7,7 +7,7 @@ import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { HeroBanner } from '../components/HeroBanner';
 import { genreIcon } from '../components/genreIcons';
 import { listCatalogue } from '../data/api';
-import { artUrl, episodeTotalOf, hydrateCard } from '../data/model';
+import { artUrl, hydrateCard } from '../data/model';
 import type { Anime } from '../data/model';
 import { useCatalogue } from '../state/catalogue';
 import '../styles/home.css';
@@ -288,7 +288,7 @@ function Row({
               anime={a}
               variant={poster ? 'poster' : 'key'}
               badge={a.status === 'Ongoing' ? 'ONGOING' : undefined}
-              episode={poster ? `${episodeTotalOf(a)} EP · ${a.year}` : a.native}
+              episode={poster ? undefined : a.native}
             />
           ))
         ) : (

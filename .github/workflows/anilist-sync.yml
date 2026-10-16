@@ -73,7 +73,7 @@ jobs:
           # cloud-sync/.env.example. Not a phase switch: unset stays 0.
           CLOUD_OWNS_SCHEDULE: ${{ vars.CLOUD_OWNS_SCHEDULE }}
           LEGACY_QUIET_MS: ${{ vars.LEGACY_QUIET_MS }}
-          ANILIST_ENDPOINT: ${{ vars.ANILIST_ENDPOINT }}
+          ANILIST_ENDPOINT: ${{ vars.ANILIST_ENDPOINT || 'https://graphql.anilist.co' }}
           ANILIST_MIN_INTERVAL_MS: ${{ vars.ANILIST_MIN_INTERVAL_MS }}
           ANILIST_BATCH_SIZE: ${{ vars.ANILIST_BATCH_SIZE || '10' }}
           ANILIST_DAILY_BUDGET: ${{ vars.ANILIST_DAILY_BUDGET }}

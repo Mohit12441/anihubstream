@@ -47,27 +47,24 @@ const HOST = '127.0.0.1';
 const UA_REFERER = 'https://anikototv.to/';
 const RESOLVE_TIMEOUT_MS = 75_000;
 const SNACK_BYTES = 131_072;
-const DETAILS_TTL = 30 * 60 * 1000;
+const DETAILS_TTL = 12 * 60 * 60 * 1000;
 /* Idle time and how many viewers the process holds, overridable so the eviction path can
    be driven through HTTP in seconds instead of hours, and so the operator can tune a
-   machine without editing it. Defaults unchanged: 3 h idle, 32 concurrent sessions. */
+   machine without editing it. Defaults: 3 h idle, 128 concurrent sessions. */
 const SESSION_TTL = Number(process.env.ANIKOTO_SESSION_TTL_MS ?? 3 * 60 * 60 * 1000);
-const SESSION_CAP = Number(process.env.ANIKOTO_SESSION_CAP ?? 32);
+const SESSION_CAP = Number(process.env.ANIKOTO_SESSION_CAP ?? 128);
 /* Repeat visits (reload, rewatch, next-episode jumps) reuse the session
-   instead of paying a fresh ~minute-long provider resolve; sessions store
+   instead of paying a fresh provider resolve; sessions store
    tokenless URLs and re-sign per request, so reuse stays valid. */
-const RECENT_TTL = 10 * 60 * 1000;
+const RECENT_TTL = 6 * 60 * 60 * 1000;
 /* audio availability (is there a real second audio?) is a property of the episode,
    so it is cached far longer than a session — the byte-pair probe is the costly part */
 const AUDIO_TTL = 60 * 60 * 1000;
 
-/* /resolve and /audios drive several provider hops and can hold a request open for
-   a minute. Anyone who can name the tunnel hostname can call them, so a caller gets
-   a bounded number of them per minute. The limits are far above what one viewer
-   produces by switching servers and episodes, and the operator's own loopback calls
-   (no cf-connecting-ip) are exempt so local tooling is not the thing that trips it. */
+/* /resolve and /audios drive several provider hops. Limits accommodate
+   background prefetching while guarding against abuse. */
 const RATE_WINDOW_MS = 60_000;
-const RATE_MAX = { '/resolve': 30, '/audios': 30, '/search': 60 };
+const RATE_MAX = { '/resolve': 120, '/audios': 120, '/search': 120 };
 
 /* Which pages may drive the bridge. Compared on hostname only — the same site is
    served from several ports (dev servers, the 8787 origin, Pages previews). */

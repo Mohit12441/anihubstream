@@ -311,7 +311,6 @@ export function AnimeCatalogue() {
                     anime={a}
                     variant={view === 'grid' ? 'poster' : 'wide'}
                     badge={a.status === 'Ongoing' ? 'ONGOING' : a.status === 'Upcoming' ? 'UPCOMING' : undefined}
-                    episode={view === 'grid' ? `${a.kind} · ${a.year}` : undefined}
                   />
                 </li>
               ))}

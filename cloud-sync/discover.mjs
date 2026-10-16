@@ -4,8 +4,10 @@
 import { d1All, d1Query } from './d1.mjs';
 import { mediaSlug } from './sync-anilist.mjs';
 
-const ANILIST_ENDPOINT = process.env.ANILIST_ENDPOINT || 'https://graphql.anilist.co';
-const USER_AGENT = process.env.ANILIST_USER_AGENT || 'AniHubStream/1.0 (cloud-discovery; contact: https://anihubstream.com/about)';
+const ANILIST_ENDPOINT = process.env.ANILIST_ENDPOINT?.trim() || 'https://graphql.anilist.co';
+const USER_AGENT = process.env.ANILIST_USER_AGENT?.trim() || 'AniHubStream/1.0 (cloud-discovery; contact: https://anihubstream.com/about)';
+export const RATE_CEILING_RPM = Number(process.env.ANILIST_RATE_CEILING_RPM || 85);
+export const MIN_INTERVAL_MS = Math.ceil(60000 / RATE_CEILING_RPM); // ~706ms at 85 RPM
 
 const TRENDING_QUERY = `
 query($n: Int) {

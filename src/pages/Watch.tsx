@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Link, useParams, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { BookmarkPlus, ChevronRight, Download, Heart, Play, Share2 } from 'lucide-react';
 import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
 import { AnimeCard } from '../components/AnimeCard';
@@ -11,12 +11,14 @@ import { accentVars, usePlayerPreferences } from '../lib/usePlayerPrefs';
 import { positionKey } from '../lib/playerPrefs';
 import { useAnimeDetail, useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
+import { useSEO } from '../lib/useSEO';
 import '../styles/watch.css';
 import '../styles/player.css';
 
 export function Watch() {
-  const { id = '' } = useParams();
-  const [params, setParams] = useSearchParams();
+  const { id = '', ep } = useParams<{ id: string; ep?: string }>();
+  const [params] = useSearchParams();
+  const navigate = useNavigate();
   const { notify } = useToast();
   const { status, error, missing, anime, related, reload } = useAnimeDetail(id);
   const { genreLabel } = useCatalogue();
@@ -26,20 +28,30 @@ export function Watch() {
   const [epNum, setEpNum] = useState(1);
   const [theatre, setTheatre] = useState(false);
 
-  /* ?ep= is only read when the title resolves — the list arrives after mount. */
+  /* Path param or ?ep= is read when title resolves */
   const initialised = useRef('');
   useEffect(() => {
     if (!anime || initialised.current === anime.id) return;
     initialised.current = anime.id;
-    const fromUrl = Number.parseInt(params.get('ep') ?? '', 10);
+    const epPath = ep ? Number.parseInt(ep, 10) : NaN;
+    const fromUrl = Number.isFinite(epPath) ? epPath : Number.parseInt(params.get('ep') ?? '', 10);
     const wanted = Number.isFinite(fromUrl) && fromUrl >= 1 ? fromUrl : Math.min(8, anime.episodes.length);
     setEpNum(Math.min(Math.max(wanted, 1), anime.episodes.length));
-  }, [anime, params]);
+  }, [anime, ep, params]);
 
   const episode = useMemo(() => {
     if (!anime) return undefined;
     return anime.episodes[Math.min(Math.max(epNum, 1), anime.episodes.length) - 1];
   }, [anime, epNum]);
+
+  useSEO({
+    title: anime
+      ? `${anime.title}${episode ? ` Episode ${episode.n}` : ` (${anime.year})`} — Watch Online Free | AniHubStream`
+      : 'Watch Anime Free | AniHubStream',
+    description: anime?.synopsis || 'Watch high definition anime with English subtitles and dub on AniHubStream.',
+    image: anime?.key || anime?.poster,
+    type: episode ? 'video.episode' : 'video.tv_show',
+  });
 
   const idx = episode?.n ?? 1;
   const key = anime ? positionKey(anime.id, idx) : '';
@@ -50,11 +62,9 @@ export function Watch() {
       if (!anime) return;
       const clamped = Math.min(Math.max(n, 1), anime.episodes.length);
       setEpNum(clamped);
-      const next = new URLSearchParams(params);
-      next.set('ep', String(clamped));
-      setParams(next, { replace: true });
+      navigate(`/watch/${anime.id}/${clamped}`, { replace: true });
     },
-    [anime, params, setParams],
+    [anime, navigate],
   );
 
   const save = async () => {

@@ -616,7 +616,7 @@ export function AdvancedPlayer(props: Props) {
 
         {live.status === 'resolving' && (
           <span className="pl__live-wait" role="status">
-            Resolving this episode through the AniKoto bridge…
+            Resolving stream through AniKoto… ({live.resolvingElapsed}s)
           </span>
         )}
 

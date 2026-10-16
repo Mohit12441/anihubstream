@@ -128,7 +128,7 @@ export function Discover() {
             </p>
           ) : items.length ? (
             items.map((a) => (
-              <AnimeCard key={a.id} anime={a} variant="poster" episode={`${a.kind} · ${a.year}`} />
+              <AnimeCard key={a.id} anime={a} variant="poster" />
             ))
           ) : (
             <p className="empty-row" role="status">

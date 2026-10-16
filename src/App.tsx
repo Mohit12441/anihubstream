@@ -9,6 +9,11 @@ import { Genres } from './pages/Genres';
 import { MyList } from './pages/MyList';
 import { Schedule } from './pages/Schedule';
 import { Discover } from './pages/Discover';
+import { About } from './pages/About';
+import { Dmca } from './pages/Dmca';
+import { Privacy } from './pages/Privacy';
+import { Terms } from './pages/Terms';
+import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
 
 function ScrollToTop() {
@@ -34,11 +39,17 @@ export function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/watch/:id" element={<Watch />} />
+          <Route path="/watch/:id/:ep" element={<Watch />} />
           <Route path="/anime" element={<AnimeCatalogue />} />
           <Route path="/genres" element={<Genres />} />
           <Route path="/my-list" element={<MyList />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/discover" element={<Discover />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dmca" element={<Dmca />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
