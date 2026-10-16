@@ -1,6 +1,9 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { discoverTrending, fetchTrending, pace, resetPacing, MIN_INTERVAL_MS, RATE_CEILING_RPM } from './discover.mjs';
+import {
+  discoverTrending, fetchTrending, pace, resetPacing, getCurrentInterval,
+  calculateRateSpread, MIN_INTERVAL_MS, RATE_CEILING_RPM,
+} from './discover.mjs';
 
 const mockMedia = [
   {
@@ -97,15 +100,68 @@ describe('cloud-sync/discover.mjs', () => {
   });
 
   describe('pace and rate ceiling', () => {
-    it('spaces consecutive operations by the configured interval (85 RPM = ~706ms)', async () => {
+    it('defaults to 24 RPM ceiling with 2500ms spacing to respect degraded rate limits', () => {
+      assert.equal(RATE_CEILING_RPM, 24);
+      assert.equal(MIN_INTERVAL_MS, 2500);
+    });
+
+    it('spaces consecutive operations by the configured interval', async () => {
       const sleeps = [];
       resetPacing();
-      await pace(706, (ms) => { sleeps.push(ms); return Promise.resolve(); });
+      await pace(2500, (ms) => { sleeps.push(ms); return Promise.resolve(); });
       assert.equal(sleeps.length, 0, 'first call should not wait');
 
-      await pace(706, (ms) => { sleeps.push(ms); return Promise.resolve(); });
+      await pace(2500, (ms) => { sleeps.push(ms); return Promise.resolve(); });
       assert.equal(sleeps.length, 1, 'second call should pace');
-      assert.ok(sleeps[0] > 0 && sleeps[0] <= 706);
+      assert.ok(sleeps[0] > 0 && sleeps[0] <= 2500);
+    });
+
+    it('widens spacing dynamically when response headers indicate low remaining quota', async () => {
+      resetPacing();
+      const headers = new Headers({
+        'x-ratelimit-remaining': '3',
+        'x-ratelimit-reset': String(Math.floor((Date.now() + 30000) / 1000)),
+      });
+      const mockFetch = async () => ({
+        ok: true,
+        status: 200,
+        headers,
+        json: async () => ({ data: { Page: { media: [{ id: 1, title: { english: 'T' } }] } } }),
+      });
+
+      let observedSpread = 0;
+      await fetchTrending(10, mockFetch, { onSpread: (s) => { observedSpread = s; } });
+      assert.ok(observedSpread >= 9000, `expected widened spread >= 9000ms, got ${observedSpread}`);
+      assert.equal(getCurrentInterval(), observedSpread);
+    });
+  });
+
+  describe('calculateRateSpread', () => {
+    it('returns default interval when remaining requests are plentiful', () => {
+      const headers = new Headers({
+        'x-ratelimit-remaining': '50',
+        'x-ratelimit-reset': String(Math.floor((Date.now() + 60000) / 1000)),
+      });
+      assert.equal(calculateRateSpread(headers, { defaultIntervalMs: 2500 }), 2500);
+    });
+
+    it('spreads remaining requests across window when remaining is below floor', () => {
+      const now = 1000000;
+      const headers = new Headers({
+        'x-ratelimit-remaining': '2',
+        'x-ratelimit-reset': '1030', // 30s remaining
+      });
+      // 30,000ms / 2 = 15,000ms spread
+      const spread = calculateRateSpread(headers, { defaultIntervalMs: 2500, remainingFloor: 10, now });
+      assert.equal(spread, 15000);
+    });
+
+    it('prioritizes Retry-After header when present', () => {
+      const headers = new Headers({
+        'retry-after': '45',
+        'x-ratelimit-remaining': '50',
+      });
+      assert.equal(calculateRateSpread(headers, { defaultIntervalMs: 2500 }), 45000);
     });
   });
 

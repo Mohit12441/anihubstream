@@ -66,9 +66,9 @@ export function isD1Transient(status, err) {
  */
 export async function d1Query(sql, params = [], options = {}) {
   const { accountId, databaseId, token } = account();
-  const maxAttempts = options.maxAttempts ?? intEnv('D1_MAX_ATTEMPTS', 4);
-  const backoffBaseMs = options.backoffBaseMs ?? intEnv('D1_BACKOFF_BASE_MS', 100);
-  const backoffCapMs = options.backoffCapMs ?? intEnv('D1_BACKOFF_CAP_MS', 10_000);
+  const maxAttempts = options.maxAttempts ?? 4;
+  const backoffBaseMs = options.backoffBaseMs ?? 100;
+  const backoffCapMs = options.backoffCapMs ?? 10_000;
   const sleep = options.sleep ?? ((ms) => new Promise((r) => setTimeout(r, ms)));
 
   const redact = (msg) => (token ? String(msg).replaceAll(token, '[REDACTED]') : String(msg));

@@ -39,7 +39,8 @@ const intEnv = (name, fallback) => {
   if (!Number.isFinite(n) || n <= 0) throw new Error(`${name} must be a positive integer, got ${raw}`);
   return n;
 };
-const MIN_INTERVAL_MS = intEnv('KITSU_MIN_INTERVAL_MS', 30000);
+export const KITSU_SAFE_HOURLY_CEILING = 80;
+export const MIN_INTERVAL_MS = intEnv('KITSU_MIN_INTERVAL_MS', 45000);
 const PAGE_SIZE = Math.min(20, intEnv('KITSU_PAGE_SIZE', 20));
 /* The two numbers have to agree with each other, and did not: the job fires twice an hour, so 4
    pages per run needs 8 requests an hour and 192 a day. A budget under that is not a safety margin,

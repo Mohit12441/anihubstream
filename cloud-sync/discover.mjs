@@ -6,19 +6,63 @@ import { mediaSlug } from './sync-anilist.mjs';
 
 const ANILIST_ENDPOINT = process.env.ANILIST_ENDPOINT?.trim() || 'https://graphql.anilist.co';
 const USER_AGENT = process.env.ANILIST_USER_AGENT?.trim() || 'AniHubStream/1.0 (cloud-discovery; contact: https://anihubstream.com/about)';
-export const RATE_CEILING_RPM = Number(process.env.ANILIST_RATE_CEILING_RPM || 85);
-export const MIN_INTERVAL_MS = Math.ceil(60000 / RATE_CEILING_RPM); // ~706ms at 85 RPM
+export const RATE_CEILING_RPM = Number(process.env.ANILIST_RATE_CEILING_RPM || 24);
+export const MIN_INTERVAL_MS = Math.ceil(60000 / RATE_CEILING_RPM); // 2500ms at 24 RPM (safe degraded ceiling)
 
 let lastStartAt = 0;
+let dynamicIntervalMs = MIN_INTERVAL_MS;
+
 export function resetPacing() {
   lastStartAt = 0;
+  dynamicIntervalMs = MIN_INTERVAL_MS;
 }
 
-export async function pace(intervalMs = MIN_INTERVAL_MS, sleepImpl = (ms) => new Promise((r) => setTimeout(r, ms))) {
-  if (lastStartAt > 0 && intervalMs > 0) {
+export function getCurrentInterval() {
+  return dynamicIntervalMs;
+}
+
+/**
+ * Calculates adaptive spacing based on AniList rate headers.
+ * When X-RateLimit-Remaining drops below remainingFloor, spreads remaining requests across the reset window.
+ * Respects Retry-After when present.
+ */
+export function calculateRateSpread(headers, {
+  remainingFloor = 10,
+  defaultIntervalMs = MIN_INTERVAL_MS,
+  maxSpreadMs = 120_000,
+  now = Date.now(),
+} = {}) {
+  if (!headers || typeof headers.get !== 'function') return defaultIntervalMs;
+
+  const retryAfter = parseRetryAfter(headers.get('retry-after'));
+  if (retryAfter !== null && retryAfter > 0) {
+    return Math.max(defaultIntervalMs, retryAfter);
+  }
+
+  const rawRemaining = headers.get('x-ratelimit-remaining');
+  if (rawRemaining === null || rawRemaining === '') return defaultIntervalMs;
+  const remaining = Number(rawRemaining);
+  if (!Number.isFinite(remaining) || remaining < 0) return defaultIntervalMs;
+
+  if (remaining < remainingFloor) {
+    const rawReset = headers.get('x-ratelimit-reset');
+    const reset = rawReset === null || rawReset === '' ? NaN : Number(rawReset);
+    const windowMs = Number.isFinite(reset) && reset > now / 1000
+      ? reset * 1000 - now
+      : 60_000;
+    const spread = Math.min(maxSpreadMs, Math.ceil(windowMs / Math.max(1, remaining)));
+    return Math.max(defaultIntervalMs, spread);
+  }
+
+  return defaultIntervalMs;
+}
+
+export async function pace(intervalMs = dynamicIntervalMs, sleepImpl = (ms) => new Promise((r) => setTimeout(r, ms))) {
+  const target = Math.max(intervalMs, dynamicIntervalMs);
+  if (lastStartAt > 0 && target > 0) {
     const elapsed = Date.now() - lastStartAt;
-    if (elapsed < intervalMs) {
-      await sleepImpl(intervalMs - elapsed);
+    if (elapsed < target) {
+      await sleepImpl(target - elapsed);
     }
   }
   lastStartAt = Date.now();
@@ -46,7 +90,7 @@ export async function fetchTrending(depth = 50, fetchImpl = globalThis.fetch, op
   const sleep = options.sleep ?? ((ms) => new Promise((r) => setTimeout(r, ms)));
 
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-    if (options.paceIntervalMs) await pace(options.paceIntervalMs, sleep);
+    if (options.paceIntervalMs !== undefined) await pace(options.paceIntervalMs, sleep);
     let res;
     try {
       res = await fetchImpl(ANILIST_ENDPOINT, {
@@ -65,12 +109,19 @@ export async function fetchTrending(depth = 50, fetchImpl = globalThis.fetch, op
       continue;
     }
 
+    const spread = calculateRateSpread(res.headers, {
+      defaultIntervalMs: options.paceIntervalMs ?? MIN_INTERVAL_MS,
+    });
+    dynamicIntervalMs = spread;
+    if (typeof options.onSpread === 'function') options.onSpread(spread);
+
     if (res.status === 429 || (res.status >= 500 && res.status <= 599)) {
       if (attempt === maxAttempts) {
         throw new Error(`AniList returned HTTP ${res.status}`);
       }
       const retryAfter = parseRetryAfter(res.headers?.get?.('retry-after'));
       const wait = retryAfter ?? backoffBaseMs * 2 ** (attempt - 1);
+      dynamicIntervalMs = Math.max(dynamicIntervalMs, wait);
       await sleep(wait);
       continue;
     }

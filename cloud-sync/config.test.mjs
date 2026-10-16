@@ -19,7 +19,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { airSlot } from './sync-anilist.mjs';
-import { RUNS_PER_DAY } from './sync-kitsu.mjs';
+import { RUNS_PER_DAY, MIN_INTERVAL_MS, KITSU_SAFE_HOURLY_CEILING } from './sync-kitsu.mjs';
 import { seasonKey } from '../tools/season.mjs';
 /* The site's copy of the same rule, executed rather than pattern-matched. Node strips the types on
    import — the same thing tools/sync-catalogue.mjs already does for src/data/anime.ts. */
@@ -155,6 +155,13 @@ describe('the Kitsu run count and the schedule that produces it', () => {
     const perDay = count(minute, 60) * count(hour, 24);
     assert.equal(RUNS_PER_DAY, perDay,
       `kitsu-sync.yml fires ${perDay} times a day ('${crons[0]}') but sync-kitsu.mjs budgets for ${RUNS_PER_DAY}; change one deliberately, not one by accident`);
+  });
+
+  it('enforces a safe hourly ceiling of at most 80 requests per hour (>= 45s spacing)', () => {
+    assert.equal(KITSU_SAFE_HOURLY_CEILING, 80);
+    assert.ok(MIN_INTERVAL_MS >= 45000, `expected spacing >= 45000ms, got ${MIN_INTERVAL_MS}`);
+    const maxContinuousPerHour = Math.floor(3600000 / MIN_INTERVAL_MS);
+    assert.ok(maxContinuousPerHour <= 80, `continuous caller throughput ${maxContinuousPerHour} exceeds 80 req/hr ceiling`);
   });
 });
 

@@ -646,7 +646,7 @@ value matters: an off-phase setting is either ignored or the default.
 | `SYNC_LEASE_TTL_MS` | `1200000` | all | `gh variable delete SYNC_LEASE_TTL_MS -R <owner>/<repo>` |
 | `SYNC_LEASE_RENEW_REQUESTS` | `10` | all | `gh variable delete SYNC_LEASE_RENEW_REQUESTS -R <owner>/<repo>` |
 | `KITSU_BASE_URL` | `https://kitsu.io/api/edge` | kitsu | `gh variable delete KITSU_BASE_URL -R <owner>/<repo>` |
-| `KITSU_MIN_INTERVAL_MS` | `30000` | kitsu | `gh variable delete KITSU_MIN_INTERVAL_MS -R <owner>/<repo>` |
+| `KITSU_MIN_INTERVAL_MS` | `45000` | kitsu | `gh variable delete KITSU_MIN_INTERVAL_MS -R <owner>/<repo>` |
 | `KITSU_PAGE_SIZE` | `20` (clamped to 20) | kitsu | `gh variable set KITSU_PAGE_SIZE --body '20' -R <owner>/<repo>` (or `delete`; 20 is Kitsu's own maximum, so a bigger number is the same run) |
 | `KITSU_PAGES_PER_RUN` | `4` | kitsu | `gh variable set KITSU_PAGES_PER_RUN --body '4' -R <owner>/<repo>` — this is the throughput knob: each page is `KITSU_PAGE_SIZE` titles, so 4 pages per 30 minutes is the real rate, and the budget below has to agree with it |
 | `KITSU_RUNS_PER_DAY` | `48` | kitsu | `gh variable delete KITSU_RUNS_PER_DAY -R <owner>/<repo>` — this is the cron in `kitsu-sync.yml` (`15,45 * * * *` × 24) written down, because a runner cannot ask what schedule woke it. `config.test.mjs` parses that cron and fails if the two disagree, so changing the schedule means changing this number in the same commit |
@@ -664,9 +664,9 @@ configuration.
 
 **The Kitsu rate, stated as a number rather than as a setting.** `kitsu-sync.yml` fires on
 `15,45 * * * *` — 48 runs a day — and each run takes at most `KITSU_PAGES_PER_RUN` (4) pages of
-`KITSU_PAGE_SIZE` (20) titles, spaced by `KITSU_MIN_INTERVAL_MS` (30s). So: 8 requests an hour,
+`KITSU_PAGE_SIZE` (20) titles, spaced by `KITSU_MIN_INTERVAL_MS` (45s). So: 8 requests an hour,
 192 a day, 160 titles an hour at the outside — against Kitsu's published ~100 requests per hour per
-IP, with the whole margin coming from the run *stopping* rather than from the 30s floor. The budget
+IP (capping single-caller throughput to 80 requests/hour at the 45s floor), with the whole margin coming from the run *stopping* rather than from the floor alone. The budget
 is the other half of that story and it has to be arithmetic, not a guess: the default is
 `KITSU_RUNS_PER_DAY × KITSU_PAGES_PER_RUN + 8` (200), because at 80 — the value that was here before — the budget was
 the binding constraint from roughly the twentieth run of the day onward, and every run after that was
