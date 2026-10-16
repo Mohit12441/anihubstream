@@ -455,10 +455,13 @@ export function schemaFaults({ columns, tables }) {
  *
  * `fillIf` is for a column another writer owns, where this run may only FILL a hole:
  * `{ columns: [...], when: '<sql predicate over table columns>' }`. A conflicting row is
- * written only while it still satisfies `when` and only where this row carries a value;
- * anything else keeps the stored value, including a stored NULL — clearing a column that
- * belongs to someone else is not this writer's call. `when` is written by the caller, never
- * assembled from data, and is rejected if it holds a statement separator or a quote.
+ * `when` is written by the caller, never assembled from data, and is rejected if it holds
+ * a statement separator or a quote.
+ *
+ * Note: SQLite and Cloudflare D1 report changes = 1 for both an INSERT and an ON CONFLICT DO UPDATE.
+ * Callers that need to distinguish newly inserted rows from existing updated rows must perform
+ * identity resolution beforehand, rather than relying on response meta.changes.
+ *
  * Returns the number of statements executed.
  */
 export async function insertRows({ table, columns, rows, conflictTarget = ['id'], update = [], jsonMerge = [], keepExisting = [], fillIf = { columns: [], when: '' } }) {

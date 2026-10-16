@@ -356,7 +356,7 @@ export function rowFromMedia(media, existing = null, { trendRank = null, now = D
      text the local tool wrote. */
   const searchable = title && kind && status;
   const row = {
-    id: mediaSlug(media),
+    id: existing?.id || mediaSlug(media),
     title,
     native,
     year,
@@ -428,6 +428,7 @@ export function provenance(row) {
   let sourceIds = {};
   try { sourceIds = JSON.parse(row.source_ids ?? '{}'); } catch { /* unreadable provenance still owns its id */ }
   return {
+    id: row.id,
     sourceIds,
     skipKeyId: row.skip_key_id,
     skipKeySpace: row.skip_key_space,
@@ -499,10 +500,10 @@ async function pendingSlice(after, limit) {
     /* a.id is NULL for a queued title that is not stored yet — that one is a creation. */
     if (r.id) known.set(r.id, provenance(r));
   }
-  return { ids, known, count: rows.length, after: ids.length ? Math.max(...ids) : after };
+  return { rows, ids, known, count: rows.length, after: ids.length ? Math.max(...ids) : after };
 }
 
-const EMPTY_PENDING = Object.freeze({ ids: [], known: new Map(), count: 0, after: 0 });
+const EMPTY_PENDING = Object.freeze({ rows: [], ids: [], known: new Map(), count: 0, after: 0 });
 
 /** Ids are our own integers read back from the queue, but the placeholder count still matches
  *  the list one for one, so nothing user-shaped can reach the statement. Chunked to stay under
@@ -519,6 +520,40 @@ async function deletePending(ids) {
 }
 
 /**
+ * Parameterized query finding existing catalogue rows by canonical stored id or AniList source ID
+ * beyond the current catalogue slice. Bounded to stay under SQLite's parameter limits.
+ */
+export const resolveExistingRecordsSql = (slugCount, anilistCount) => {
+  const conditions = [];
+  if (slugCount > 0) conditions.push(`anime.id IN (${Array(slugCount).fill('?').join(',')})`);
+  if (anilistCount > 0) conditions.push(`json_extract(anime.source_ids, '$.anilist') IN (${Array(anilistCount).fill('?').join(',')})`);
+  return `SELECT ${ANIME_READ_COLUMNS.split(', ').map((c) => `anime.${c}`).join(', ')}, ${GENRE_COUNT.replace('%TABLE%', 'anime')}
+   FROM anime WHERE ${conditions.join(' OR ')}`;
+};
+
+export async function resolveExistingRecords({ slugs = [], anilistIds = [] } = {}) {
+  const cleanSlugs = [...new Set(slugs.filter((s) => typeof s === 'string' && s.length > 0))];
+  const cleanAnilistIds = [...new Set(anilistIds.filter((n) => Number.isInteger(n) && n > 0))];
+  if (!cleanSlugs.length && !cleanAnilistIds.length) return new Map();
+
+  const found = new Map();
+  const CHUNK_SIZE = 25;
+  for (let i = 0; i < Math.max(cleanSlugs.length, cleanAnilistIds.length); i += CHUNK_SIZE) {
+    const slugChunk = cleanSlugs.slice(i, i + CHUNK_SIZE);
+    const anilistChunk = cleanAnilistIds.slice(i, i + CHUNK_SIZE);
+    if (!slugChunk.length && !anilistChunk.length) continue;
+    const sql = resolveExistingRecordsSql(slugChunk.length, anilistChunk.length);
+    const params = [...slugChunk, ...anilistChunk];
+    const rows = await d1All(sql, params);
+    for (const r of rows) {
+      const p = provenance(r);
+      found.set(r.id, p);
+    }
+  }
+  return found;
+}
+
+/**
  * Which hydrated media become writes, and why the rest do not. Pure, so the column-ownership
  * rules can be tested without a database.
  *
@@ -526,13 +561,24 @@ async function deletePending(ids) {
  * whose slug is not in it is a creation, which only delta/takeover may do — in mirror it is
  * reported and dropped.
  */
-export function planRows(mediaList, known, { mode = 'mirror', trendRanks = new Map(), now = Date.now() } = {}) {
+export function planRows(mediaList, known, { mode = 'mirror', trendRanks = new Map(), now = Date.now(), knownByAnilist = null } = {}) {
   const rows = [];
   const skipped = [];
   const created = [];
+  const updated = [];
+  const seenBatch = new Map();
+
+  const anilistIndex = knownByAnilist instanceof Map ? knownByAnilist : new Map();
+  if (!knownByAnilist && known instanceof Map) {
+    for (const p of known.values()) {
+      const a = p?.sourceIds?.anilist;
+      if (Number.isInteger(a) && a > 0) anilistIndex.set(a, p);
+    }
+  }
+
   for (const media of mediaList) {
     const slug = mediaSlug(media);
-    const prior = known.get(slug);
+    const prior = anilistIndex.get(media.id) || known.get(slug);
     if (!prior) {
       if (!CREATES_ROWS_BY(mode)) {
         skipped.push({ id: media.id, slug, why: `mode ${mode} does not create rows`, retryable: false });
@@ -545,9 +591,19 @@ export function planRows(mediaList, known, { mode = 'mirror', trendRanks = new M
         skipped.push({ id: media.id, slug, why: 'AniList published no artwork', retryable: true });
         continue;
       }
+      if (seenBatch.has(slug)) {
+        const first = seenBatch.get(slug);
+        if (first.id === media.id) {
+          skipped.push({ id: media.id, slug, why: 'duplicate media in batch', retryable: false });
+        } else {
+          skipped.push({ id: media.id, slug, why: `batch slug collision with media ${first.id}`, retryable: false });
+        }
+        continue;
+      }
       const row = rowFromMedia(media, null, { trendRank: trendRanks.get(media.id) ?? null, now });
       rows.push(row);
       created.push(row.id);
+      seenBatch.set(slug, { id: media.id, row });
       continue;
     }
     /* A slug already owned by a different AniList id is a franchise collision — two
@@ -558,9 +614,11 @@ export function planRows(mediaList, known, { mode = 'mirror', trendRanks = new M
       skipped.push({ id: media.id, slug, why: `held by anilist ${prior.sourceIds.anilist}`, retryable: false });
       continue;
     }
-    rows.push(completeFromStored(rowFromMedia(media, prior, { trendRank: trendRanks.get(media.id) ?? null, now }), prior));
+    const row = completeFromStored(rowFromMedia(media, prior, { trendRank: trendRanks.get(media.id) ?? null, now }), prior);
+    rows.push(row);
+    updated.push(row.id);
   }
-  return { rows, skipped, created };
+  return { rows, skipped, created, updated };
 }
 
 export const CREATES_ROWS_BY = (mode) => mode !== 'mirror';
@@ -647,7 +705,10 @@ const newSummary = () => ({
   mode: MODE,
   fill_schedule: FILL_SCHEDULE,
   items_processed: 0,
+  planned_creates: 0,
   created: 0,
+  updated: 0,
+  skipped: 0,
   requests_made: 0,
   s403: 0,
   s429: 0,
@@ -841,9 +902,33 @@ async function main({ forceTakeover = process.argv.includes('--force-takeover') 
       const ids = [...new Set([...slice.anilistIds, ...pending.ids])];
       if (ids.length) {
         const media = await api.mediaByIds(ids);
-        const plan = planRows(media, known, { mode: MODE, trendRanks, now });
+
+        /* Resolve relevant existing records beyond current slice by canonical id and AniList source ID */
+        const candidateSlugs = [];
+        const candidateAnilistIds = [];
+        for (const m of media) {
+          candidateSlugs.push(mediaSlug(m));
+          candidateAnilistIds.push(m.id);
+        }
+        for (const r of pending.rows || []) {
+          if (r.slug) candidateSlugs.push(r.slug);
+        }
+        const extra = await resolveExistingRecords({ slugs: candidateSlugs, anilistIds: candidateAnilistIds });
+        for (const [id, p] of extra) {
+          if (!known.has(id)) known.set(id, p);
+        }
+
+        const knownByAnilist = new Map();
+        for (const p of known.values()) {
+          const a = p?.sourceIds?.anilist;
+          if (Number.isInteger(a) && a > 0) knownByAnilist.set(a, p);
+        }
+
+        const plan = planRows(media, known, { mode: MODE, trendRanks, now, knownByAnilist });
         skipped.push(...plan.skipped);
+        summary.planned_creates = (summary.planned_creates ?? 0) + plan.created.length;
         summary.created += plan.created.length;
+        summary.updated = (summary.updated ?? 0) + plan.updated.length;
 
         if (plan.rows.length) {
           /* source_ids is merged in SQLite, not from this run's read: the catalogue tools can
