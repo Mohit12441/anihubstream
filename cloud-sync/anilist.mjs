@@ -378,7 +378,7 @@ export function createAnilist(options = {}) {
       const p = int(page, 'page');
       const n = Math.min(50, int(perPage, 'perPage'));
       if (!SORTS.has(sort)) throw new Error(`anilist: unsupported sort ${sort}`);
-      return request(`{ Page(page: ${p}, perPage: ${n}, type: ANIME) { pageInfo{ hasNextPage } media(sort: ${sort}, type: ANIME, isAdult: false) { id } } }`)
+      return request(`{ Page(page: ${p}, perPage: ${n}) { pageInfo{ hasNextPage } media(sort: ${sort}, type: ANIME, isAdult: false) { id } } }`)
         .then((d) => ({ ids: (d?.Page?.media ?? []).map((m) => m.id), hasNextPage: !!d?.Page?.pageInfo?.hasNextPage }));
     },
 

@@ -11,7 +11,7 @@ import { createAnilist, classify403, classifyGraphQLError, QueryTooComplex, RunA
 import { insertRows, rowsPerStatement } from './d1.mjs';
 import {
   ANIME_COLUMNS, KEEP_WHEN_ABSENT, LEGACY_OWNED, MODES, MODE_DEFAULT, NOT_NULL_KEPT, SCHED_COLUMNS, SCHED_FILL_GUARD, airSlot,
-  completeFromStored, flagEnv, genreIndex, mapGenres, planRows, resolveMode, rowFromMedia, toTuple, updateSet,
+  completeFromStored, flagEnv, genreIndex, mapGenres, planRows, resolveMode, rowFromMedia, toTuple, updateSet, trendingRanks,
 } from './sync-anilist.mjs';
 
 /** A floor the tests can live with: 20ms spacing, ceiling high enough not to clamp it. */
@@ -237,6 +237,35 @@ describe('3. budget and batching', () => {
     const api = createAnilist({ ...FAST });
     await api.request('{ a }');
     assert.match(seen[0].init.headers['user-agent'], /AniHubStream.*contact/);
+  });
+
+  it('formats pageIds query with pagination on Page and type filter on media', async () => {
+    const seen = installFetch(() => json({
+      data: {
+        Page: {
+          pageInfo: { hasNextPage: false },
+          media: [{ id: 101 }, { id: 202 }, { id: 303 }],
+        },
+      },
+    }));
+    const api = createAnilist({ ...FAST });
+    const result = await api.pageIds({ page: 1, perPage: 10, sort: 'TRENDING_DESC' });
+
+    assert.deepEqual(result, { ids: [101, 202, 303], hasNextPage: false });
+    assert.equal(seen.length, 1);
+    const body = JSON.parse(seen[0].init.body);
+    // Page must have pagination arguments (page, perPage) and NO type argument
+    assert.match(body.query, /Page\(page:\s*1,\s*perPage:\s*10\)/);
+    assert.doesNotMatch(body.query, /Page\([^)]*type:/);
+    // media must have type: ANIME filter
+    assert.match(body.query, /media\(sort:\s*TRENDING_DESC,\s*type:\s*ANIME,\s*isAdult:\s*false\)/);
+
+    // Verify trendingRanks correctly transforms the response into a 1-based rank map
+    const ranks = await trendingRanks(api, 10);
+    assert.equal(ranks.get(101), 1);
+    assert.equal(ranks.get(202), 2);
+    assert.equal(ranks.get(303), 3);
+    assert.equal(ranks.get(999), undefined);
   });
 });
 

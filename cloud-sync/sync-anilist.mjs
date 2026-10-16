@@ -629,7 +629,7 @@ async function writeTakeoverMarker(reason) {
  * is deliberately not used as a substitute: it is a 24-hour delta, and writing it into a rank
  * column would put a number with a different meaning into the same field two writers share.
  */
-async function trendingRanks(api, size) {
+export async function trendingRanks(api, size) {
   const page = await api.pageIds({ page: 1, perPage: size, sort: 'TRENDING_DESC' });
   const map = new Map();
   page.ids.forEach((id, i) => map.set(id, i + 1));

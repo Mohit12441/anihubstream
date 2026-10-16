@@ -73,7 +73,7 @@ describe('sync-anilist terminal cursor persistence', () => {
 
       if (sql.includes('FROM sqlite_master WHERE type =')) {
         const tables = [
-          'anime', 'genre', 'anime_genre', 'sync_lock', 'api_usage', 'sync_runs', 'sync_meta',
+          'anime', 'genre', 'anime_genre', 'sync_lock', 'api_usage', 'sync_runs', 'sync_meta', 'sync_pending',
         ].map((name) => ({ name }));
         return {
           status: 200,
@@ -196,5 +196,126 @@ describe('sync-anilist terminal cursor persistence', () => {
     assert.equal(persisted.after, '');
     assert.equal(persisted.pendingAfter, 0);
     assert.equal(persisted.doneAt, summary.cursor.doneAt);
+  });
+
+  it('processes queued titles alongside catalogue slice and exits at item_cap when items_processed >= MAX_ITEMS', async () => {
+    process.env.MODE = 'delta';
+    process.env.CLOUD_CREATES_ROWS = '1';
+    process.env.MAX_ITEMS_PER_RUN = '10';
+
+    const mockCatalogueRows = Array.from({ length: 10 }, (_, i) => ({
+      id: `catalogue-${i}`,
+      title: `Catalogue ${i}`,
+      native: '',
+      year: 2024,
+      rating: 8.0,
+      season: 'Fall 2024',
+      kind: 'TV',
+      status: 'Finished',
+      art: 'art.jpg',
+      key_art: 'key.jpg',
+      accent: '#fff',
+      synopsis: 'synopsis',
+      source_ids: JSON.stringify({ anilist: 2000 + i }),
+      added_at: '2026-01-01',
+      catalogue_synced_at: 1000,
+    }));
+
+    const mockPendingRows = Array.from({ length: 4 }, (_, i) => ({
+      id: i + 1,
+      anilist_id: 3000 + i,
+      slug: `pending-${i}`,
+      added_at: Date.now(),
+      note: 'test',
+    }));
+
+    const prevFetch = globalThis.fetch;
+    globalThis.fetch = async (url, init = {}) => {
+      const u = String(url);
+      if (u.includes('graphql.anilist.co')) {
+        const body = init.body ? JSON.parse(init.body) : {};
+        const q = body.query || '';
+        if (q.includes('Page(')) {
+          return {
+            status: 200,
+            headers: new Headers(),
+            ok: true,
+            text: async () => JSON.stringify({ data: { Page: { pageInfo: { hasNextPage: false }, media: [] } } }),
+          };
+        }
+        const data = {};
+        for (const [, alias, id] of q.matchAll(/m(\d+):\s*Media\(id:\s*(\d+)\)/g)) {
+          const numId = Number(id);
+          const title = numId >= 3000 ? `Pending ${numId - 3000}` : `Catalogue ${numId - 2000}`;
+          data[`m${alias}`] = {
+            id: numId,
+            idMal: null,
+            title: { english: title, romaji: null, native: null },
+            format: 'TV',
+            type: 'ANIME',
+            status: 'FINISHED',
+            season: 'FALL',
+            seasonYear: 2024,
+            averageScore: 80,
+            episodes: 12,
+            duration: 24,
+            coverImage: { large: 'https://art/poster.jpg', extraLarge: null, color: '#22aa44' },
+            bannerImage: null,
+            description: 'desc',
+            genres: ['Action'],
+            trending: 50,
+            nextAiringEpisode: null,
+            startDate: { year: 2024 },
+          };
+        }
+        return {
+          status: 200,
+          headers: new Headers(),
+          ok: true,
+          text: async () => JSON.stringify({ data }),
+        };
+      }
+
+      const body = init.body ? JSON.parse(init.body) : {};
+      const sql = body.sql || '';
+      const params = body.params || [];
+
+      if (sql.includes('FROM anime WHERE id > ? ORDER BY id')) {
+        const after = params[0] || '';
+        const results = after === '' ? mockCatalogueRows : [];
+        return {
+          status: 200,
+          ok: true,
+          text: async () => JSON.stringify({ success: true, result: [{ results, success: true, meta: {} }] }),
+        };
+      }
+
+      if (sql.includes('FROM sync_pending')) {
+        const after = params[0] || 0;
+        const results = after === 0 ? mockPendingRows : [];
+        return {
+          status: 200,
+          ok: true,
+          text: async () => JSON.stringify({ success: true, result: [{ results, success: true, meta: {} }] }),
+        };
+      }
+
+      if (sql.includes('DELETE FROM sync_pending WHERE id IN')) {
+        return {
+          status: 200,
+          ok: true,
+          text: async () => JSON.stringify({ success: true, result: [{ results: [], success: true, meta: { changes: params.length } }] }),
+        };
+      }
+
+      return prevFetch(url, init);
+    };
+
+    const mod = await import(`./sync-anilist.mjs?case=${Date.now()}`);
+    const summary = await mod.run({ forceTakeover: false });
+
+    assert.equal(summary.items_processed, 14, 'processes both slices in the batch (10 catalogue + 4 pending)');
+    assert.equal(summary.created, 4, 'all 4 queued items were created');
+    assert.equal(summary.exit_reason, 'item_cap', 'halts with item_cap when items_processed reaches or exceeds MAX_ITEMS');
   });
 });
