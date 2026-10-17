@@ -10,8 +10,6 @@ name: anilist-sync
 #   the job never touches secrets in code — everything comes from repo secrets below.
 
 on:
-  schedule:
-    - cron: '7,37 * * * *'
   repository_dispatch:
     types: [anilist-sync, catalog-sync]
   workflow_dispatch:

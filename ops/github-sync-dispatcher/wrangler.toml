@@ -2,6 +2,8 @@ name = "anihubstream-sync-dispatcher"
 main = "src/index.mjs"
 compatibility_date = "2026-10-17"
 
-# Run every 30 minutes on the dot
+# Two separate staggered cron schedules:
+# 1. AniList sync: every 30 minutes on :07 and :37
+# 2. Kitsu sync: every 30 minutes on :17 and :47
 [triggers]
-crons = ["*/30 * * * *"]
+crons = ["7,37 * * * *", "17,47 * * * *"]
