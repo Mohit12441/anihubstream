@@ -1,0 +1,7 @@
+name = "anihubstream-sync-dispatcher"
+main = "src/index.mjs"
+compatibility_date = "2026-10-17"
+
+# Run every 30 minutes on the dot
+[triggers]
+crons = ["*/30 * * * *"]
