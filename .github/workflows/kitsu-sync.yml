@@ -10,6 +10,8 @@ name: kitsu-sync
 on:
   schedule:
     - cron: '17,47 * * * *'
+  repository_dispatch:
+    types: [kitsu-sync]
   workflow_dispatch: {}
 
 permissions: {}

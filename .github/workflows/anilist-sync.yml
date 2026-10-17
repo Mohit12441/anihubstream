@@ -12,6 +12,8 @@ name: anilist-sync
 on:
   schedule:
     - cron: '7,37 * * * *'
+  repository_dispatch:
+    types: [anilist-sync, catalog-sync]
   workflow_dispatch:
     inputs:
       force_takeover:
