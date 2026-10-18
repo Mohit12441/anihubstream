@@ -124,6 +124,7 @@ export function useLiveStream(o: Options) {
   const resolveStart = useRef<number>(Date.now());
   const [levels, setLevels] = useState<{ index: number; height: number; bitrate: number; label: string }[]>([]);
   const [currentLevelIndex, setCurrentLevelIndex] = useState<number>(-1);
+  const [buffering, setBuffering] = useState(false);
 
   /* ---------- resolve ---------- */
   useEffect(() => {
@@ -141,6 +142,7 @@ export function useLiveStream(o: Options) {
     setRetryable(false);
     setAudioFallback(false);
     setResolvingElapsed(0);
+    setBuffering(false);
     let cancel = false;
     setStatus('resolving');
     setInfo(null);
@@ -256,13 +258,21 @@ export function useLiveStream(o: Options) {
       setError('The media element rejected the stream.');
     };
     const onPlaying = () => {
+      setBuffering(false);
       const elapsed = Date.now() - resolveStart.current;
       setFirstFrameLatency(elapsed);
       console.log(`[Playback] First frame rendered in ${elapsed}ms (${info?.reused ? 'cached' : 'fresh'})`);
     };
+    const onWaiting = () => setBuffering(true);
+    const onClearBuffer = () => setBuffering(false);
+
     v.addEventListener('loadedmetadata', onMetadata);
     v.addEventListener('error', onError);
-    v.addEventListener('playing', onPlaying, { once: true });
+    v.addEventListener('playing', onPlaying);
+    v.addEventListener('waiting', onWaiting);
+    v.addEventListener('stalled', onWaiting);
+    v.addEventListener('canplay', onClearBuffer);
+    v.addEventListener('seeked', onClearBuffer);
 
     let hls: Hls | null = null;
     void (async () => {
@@ -331,6 +341,10 @@ export function useLiveStream(o: Options) {
       v.removeEventListener('loadedmetadata', onMetadata);
       v.removeEventListener('error', onError);
       v.removeEventListener('playing', onPlaying);
+      v.removeEventListener('waiting', onWaiting);
+      v.removeEventListener('stalled', onWaiting);
+      v.removeEventListener('canplay', onClearBuffer);
+      v.removeEventListener('seeked', onClearBuffer);
       hls?.destroy();
       if (hlsRef.current === hls) hlsRef.current = null;
       v.removeAttribute('src');
@@ -560,6 +574,7 @@ export function useLiveStream(o: Options) {
   return {
     status,
     info,
+    buffering,
     error,
     /** a dub ask fell back to the original because this episode has no dub file */
     audioFallback,

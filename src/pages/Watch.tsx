@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { BookmarkPlus, ChevronRight, Clock, Download, Heart, Play, Share2 } from 'lucide-react';
 import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
+import { DownloadModal } from '../components/player/DownloadModal';
 import { AnimeCard } from '../components/AnimeCard';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { EpisodeSidebar } from '../components/EpisodeSidebar';
@@ -13,7 +14,7 @@ import { useAnimeDetail, useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
 import { useSEO } from '../lib/useSEO';
 import { SLUG_REDIRECTS } from '../data/redirects';
-import { prefetchEpisode } from '../lib/streamBridge';
+import { prefetchEpisode, type BridgeSource } from '../lib/streamBridge';
 import { warmStreamOrigins } from '../lib/warmConnections';
 import '../styles/watch.css';
 import '../styles/player.css';
@@ -40,10 +41,13 @@ export function Watch() {
   const [epNum, setEpNum] = useState(1);
   const [theatre, setTheatre] = useState(false);
   const [isStreamResolved, setIsStreamResolved] = useState(false);
+  const [downloadOpen, setDownloadOpen] = useState(false);
+  const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
 
   /* Reset stream resolved state on anime or episode change */
   useEffect(() => {
     setIsStreamResolved(false);
+    setCurrentStream(null);
   }, [id, epNum]);
 
   /* Path param :ep sync with edge-case clamping and resume fallback */
@@ -318,6 +322,7 @@ export function Watch() {
               }
             }}
             onStreamResolved={setIsStreamResolved}
+            onStreamInfo={setCurrentStream}
           />
 
           <div className="watch__meta">
@@ -382,7 +387,7 @@ export function Watch() {
               <button
                 type="button"
                 className="btn btn--ghost"
-                onClick={() => notify('Downloads are not offered for bridge streams.')}
+                onClick={() => setDownloadOpen(true)}
               >
                 <Download size={17} aria-hidden="true" />
                 Download
@@ -443,6 +448,15 @@ export function Watch() {
           )}
         </div>
       </section>
+
+      <DownloadModal
+        isOpen={downloadOpen}
+        onClose={() => setDownloadOpen(false)}
+        anime={anime}
+        episode={episode}
+        currentStream={currentStream}
+        notify={notify}
+      />
     </div>
   );
 }

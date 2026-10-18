@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Play, RefreshCw, SkipForward, WifiOff, X } from 'lucide-react';
+import { Loader2, Play, RefreshCw, SkipForward, WifiOff, X } from 'lucide-react';
 import type { Anime, Episode, Marker } from '../../data/model';
 import { toSeconds } from '../../data/model';
 import { fetchSkipTimes } from '../../lib/aniskip';
@@ -49,6 +49,7 @@ interface Props {
   resumeAt: number;
   onProgress: (t: number) => void;
   onStreamResolved?: (resolved: boolean) => void;
+  onStreamInfo?: (info: import('../../lib/streamBridge').BridgeSource | null) => void;
 }
 
 /** The prefixed members Safari exposes are not in the DOM typings. */
@@ -59,7 +60,7 @@ const webkitDoc = () =>
   };
 
 export function AdvancedPlayer(props: Props) {
-  const { anime, episode, next, hasPrev, hasNext, onPrev, onNext, theatre, onTheatre, prefs, patch, onStreamResolved } = props;
+  const { anime, episode, next, hasPrev, hasNext, onPrev, onNext, theatre, onTheatre, prefs, patch, onStreamResolved, onStreamInfo } = props;
   const { notify } = useToast();
   const reduced = usePrefersReducedMotion();
 
@@ -126,7 +127,8 @@ export function AdvancedPlayer(props: Props) {
 
   useEffect(() => {
     onStreamResolved?.(liveReady);
-  }, [liveReady, onStreamResolved]);
+    onStreamInfo?.(live.info);
+  }, [liveReady, live.info, onStreamResolved, onStreamInfo]);
 
   /* Dynamically query AniSkip v2 timestamps for the anime MAL ID and episode */
   const [aniSkipMarkers, setAniSkipMarkers] = useState<Marker[]>([]);
@@ -683,27 +685,9 @@ export function AdvancedPlayer(props: Props) {
           </span>
         </div>
 
-        {live.status === 'resolving' && (
-          <div className="pl__live-wait" role="status" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center' }}>
-            <span>Resolving stream through AniKoto… ({live.resolvingElapsed}s)</span>
-            {live.resolvingElapsed >= 8 && (
-              <div className="pl__stall-retry" role="alert" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.85rem', color: '#ffc247' }}>Stream taking longer than usual —</span>
-                <button type="button" className="btn btn--sm btn--primary" onClick={live.retry}>
-                  <RefreshCw size={12} aria-hidden="true" /> Retry
-                </button>
-                <button
-                  type="button"
-                  className="btn btn--sm btn--ghost"
-                  onClick={() => {
-                    live.retry();
-                    notify('Switching stream server…');
-                  }}
-                >
-                  Switch Server
-                </button>
-              </div>
-            )}
+        {(live.status === 'resolving' || (liveReady && live.buffering)) && (
+          <div className="pl__buffering" role="status" aria-label="Loading video">
+            <Loader2 className="pl__spinner" size={44} aria-hidden="true" />
           </div>
         )}
 

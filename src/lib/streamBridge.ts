@@ -40,6 +40,8 @@ export interface BridgeSource {
   reused?: boolean;
   raceMs?: number;
   winner?: string;
+  downloadPage?: string | null;
+  downloadUrl?: string | null;
 }
 
 export interface ResolveFailure {
@@ -332,6 +334,32 @@ export async function fetchVtt(path: string): Promise<VttFile | null> {
     if (!res.ok) return null;
     const text = await res.text();
     return { cues: parseVtt(text), chars: text.length };
+  } catch {
+    return null;
+  }
+}
+
+export interface DownloadOption {
+  provider: string;
+  name: string;
+  badge: string;
+  format: string;
+  quality: string;
+  type: 'direct' | 'portal' | 'stream';
+  audio: string;
+  description: string;
+}
+
+export async function fetchDownloadOptions(
+  title: string,
+  ep: number,
+): Promise<{ title: string; episode: number; options: DownloadOption[] } | null> {
+  try {
+    const res = await fetch(bridgeUrl(`/downloads?title=${encodeURIComponent(title)}&ep=${ep}`), {
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!res.ok) return null;
+    return (await res.json()) as { title: string; episode: number; options: DownloadOption[] };
   } catch {
     return null;
   }

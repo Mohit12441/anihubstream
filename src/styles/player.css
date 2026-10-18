@@ -175,19 +175,29 @@
     opacity: 0.3;
   }
 }
-.pl__live-wait {
+.pl__buffering {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  padding: 8px 14px;
-  border-radius: var(--r-xs);
-  border: 1px dashed rgba(255, 255, 255, 0.35);
-  background: rgba(6, 6, 12, 0.66);
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 12.5px;
-  letter-spacing: 0.02em;
-  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 4;
+}
+.pl__spinner {
+  color: var(--pl-accent, #ff3366);
+  animation: plSpin 0.85s linear infinite;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.7));
+}
+@keyframes plSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 /* honest dead-end: the bridge is the only source, so when it is down the stage
    says so and offers a retry instead of pretending to play anything */

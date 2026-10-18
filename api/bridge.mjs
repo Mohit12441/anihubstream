@@ -251,6 +251,7 @@ function createHlsSession({ provider, media, episode, resolvedResult, sniffed, d
     mediaUrl,
     episodeRef: episode.id || episode.ref,
     allowedHosts: new Set([mediaBase.host]),
+    downloadPage: resolvedResult.downloadPage ?? null,
     subUrls: (resolvedResult.subtitles ?? []).map((t) => ({ url: t.url, referer: t.headers?.referer ?? referer })),
     subtitles: (resolvedResult.subtitles ?? []).map((t, i) => ({
       language: t.language,
@@ -272,6 +273,8 @@ function createHlsSession({ provider, media, episode, resolvedResult, sniffed, d
     skip: session.skip ?? null,
     proof: session.proof,
     master: `/stream/${sid}/master.m3u8`,
+    downloadPage: session.downloadPage,
+    downloadUrl: session.downloadPage ?? `/stream/${sid}/master.m3u8`,
     subtitles: session.subtitles,
   };
 }
@@ -417,6 +420,8 @@ async function buildSourceAdb({ title, ep, audio }) {
         skip: null,
         proof: session.proof,
         master: `/stream/${sid}/media.mkv`,
+        downloadUrl: `/stream/${sid}/media.mkv?download=1`,
+        downloadPage: null,
         subtitles: [],
       };
       recent.set(`${title.toLowerCase()}|${ep}|${audio}|animedubhindi`, { at: Date.now(), sid });
@@ -481,6 +486,8 @@ async function buildSourceWatchanimeworld({ title, ep, audio }) {
         skip: null,
         proof: session.proof,
         master: `/stream/${sid}/media.mp4`,
+        downloadUrl: `/stream/${sid}/media.mp4?download=1`,
+        downloadPage: null,
         subtitles: [],
       };
       recent.set(`${title.toLowerCase()}|${ep}|${audio}|watchanimeworld`, { at: Date.now(), sid });
@@ -822,6 +829,9 @@ function rewritePlaylist(session, text, baseUrl) {
 }
 
 async function serveWawStream(req, res, session, signal) {
+  const reqUrl = new URL(req.url, 'http://127.0.0.1');
+  const isDownload = reqUrl.searchParams.get('download') === '1';
+
   if (session.mockBytes) {
     const rangeHeader = req.headers.range;
     let start = 0;
@@ -841,6 +851,10 @@ async function serveWawStream(req, res, session, signal) {
     res.setHeader('content-length', String(chunk.length));
     if (status === 206) {
       res.setHeader('content-range', `bytes ${start}-${end}/${session.mockBytes.length}`);
+    }
+    if (isDownload) {
+      const cleanTitle = (session.title || 'video').replace(/[^a-zA-Z0-9_-]/g, '_');
+      res.setHeader('content-disposition', `attachment; filename="${cleanTitle}_EP${session.episode?.number || 1}.mp4"`);
     }
     res.setHeader('content-type', 'video/mp4');
     res.end(chunk);
@@ -869,6 +883,10 @@ async function serveWawStream(req, res, session, signal) {
   res.setHeader('content-length', String(end - start + 1));
   if (parsedRange) {
     res.setHeader('content-range', `bytes ${start}-${end}/${spec.s}`);
+  }
+  if (isDownload) {
+    const cleanTitle = (session.title || 'video').replace(/[^a-zA-Z0-9_-]/g, '_');
+    res.setHeader('content-disposition', `attachment; filename="${cleanTitle}_EP${session.episode?.number || 1}.mp4"`);
   }
   res.setHeader('content-type', 'video/mp4');
 
@@ -904,6 +922,9 @@ async function serveWawStream(req, res, session, signal) {
 }
 
 async function serveStream(req, res, session, target, signal) {
+  const reqUrl = new URL(req.url, 'http://127.0.0.1');
+  const isDownload = reqUrl.searchParams.get('download') === '1';
+
   if (session.mockBytes) {
     const rangeHeader = req.headers.range;
     let start = 0;
@@ -923,6 +944,11 @@ async function serveStream(req, res, session, target, signal) {
     res.setHeader('content-length', String(chunk.length));
     if (status === 206) {
       res.setHeader('content-range', `bytes ${start}-${end}/${session.mockBytes.length}`);
+    }
+    if (isDownload) {
+      const cleanTitle = (session.title || 'video').replace(/[^a-zA-Z0-9_-]/g, '_');
+      const ext = session.container === 'matroska' ? 'mkv' : 'mp4';
+      res.setHeader('content-disposition', `attachment; filename="${cleanTitle}_EP${session.episode?.number || 1}.${ext}"`);
     }
     res.setHeader('content-type', session.container === 'matroska' ? 'video/x-matroska' : 'video/mp4');
     res.end(chunk);
@@ -956,6 +982,11 @@ async function serveStream(req, res, session, target, signal) {
     const text = await res2.text();
     res.end(rewritePlaylist(session, text, upstream));
     return;
+  }
+  if (isDownload) {
+    const cleanTitle = (session.title || 'video').replace(/[^a-zA-Z0-9_-]/g, '_');
+    const ext = session.container === 'matroska' ? 'mkv' : 'mp4';
+    res.setHeader('content-disposition', `attachment; filename="${cleanTitle}_EP${session.episode?.number || 1}.${ext}"`);
   }
   res.setHeader('content-type', type || (session.container === 'matroska' ? 'video/x-matroska' : 'video/mp4'));
   const body = res2.body;
@@ -1025,6 +1056,8 @@ const server = createServer(async (req, res) => {
           title: s.title, episode: s.episode, quality: s.quality,
           variants: s.variants, audio: s.audio, skip: s.skip ?? null, proof: s.proof,
           master: s.kind === 'progressive' ? `/stream/${reuse.sid}/media.${s.container === 'matroska' ? 'mkv' : 'mp4'}` : `/stream/${reuse.sid}/master.m3u8`,
+          downloadUrl: s.kind === 'progressive' ? `/stream/${reuse.sid}/media.${s.container === 'matroska' ? 'mkv' : 'mp4'}?download=1` : (s.downloadPage ?? `/stream/${reuse.sid}/master.m3u8`),
+          downloadPage: s.downloadPage ?? null,
           subtitles: s.subtitles, reused: true,
         });
       }
@@ -1043,6 +1076,66 @@ const server = createServer(async (req, res) => {
       const meta = await buildAudios({ title, ep });
       audioCache.set(key, { at: Date.now(), meta });
       return json(res, 200, meta);
+    }
+
+    if (url.pathname === '/downloads') {
+      const title = url.searchParams.get('title') ?? '';
+      const ep = Number(url.searchParams.get('ep') ?? '0');
+      if (!title.trim() || !Number.isInteger(ep) || ep < 1) return json(res, 400, { error: 'TITLE_EP_REQUIRED' });
+
+      const options = [
+        {
+          provider: 'animedubhindi',
+          name: 'AnimeDubHindi',
+          badge: 'Hindi Dub',
+          format: 'MKV (Multi-Audio: Hindi + Jap)',
+          quality: '1080p / 720p',
+          type: 'direct',
+          audio: 'hindi',
+          description: 'Direct progressive MKV download with dual Hindi and Japanese audio tracks.',
+        },
+        {
+          provider: 'watchanimeworld',
+          name: 'WatchAnimeWorld',
+          badge: 'Multi-Audio',
+          format: 'MP4 (Hindi / Eng / Jap)',
+          quality: '1080p / 720p',
+          type: 'direct',
+          audio: 'dub',
+          description: 'Direct progressive MP4 file with multi-audio selection.',
+        },
+        {
+          provider: 'hianime',
+          name: 'HiAnime Portal',
+          badge: 'Multi-Quality',
+          format: 'MP4 Download Portal',
+          quality: '1080p / 720p / 480p / 360p',
+          type: 'portal',
+          audio: 'sub',
+          description: 'HiAnime download portal with individual quality MP4 downloads.',
+        },
+        {
+          provider: 'aniwatch',
+          name: 'AniWatch Stream',
+          badge: 'Sub / Dub',
+          format: 'HLS Master Stream (.m3u8)',
+          quality: '1080p HD',
+          type: 'stream',
+          audio: 'sub',
+          description: 'HLS stream master URL for offline downloaders, VLC, and mpv.',
+        },
+        {
+          provider: 'anikoto',
+          name: 'AniKoto Stream',
+          badge: 'Sub / Dub',
+          format: 'HLS Master Stream (.m3u8)',
+          quality: '1080p / 720p',
+          type: 'stream',
+          audio: 'sub',
+          description: 'Adaptive HLS master playlist.',
+        },
+      ];
+      return json(res, 200, { title, episode: ep, options });
     }
 
     const mkv = url.pathname.match(/^\/stream\/([\w-]+)\/(media(?:\.[\w]+)?)$/);
@@ -1109,7 +1202,7 @@ const server = createServer(async (req, res) => {
 
     return json(res, 404, {
       error: 'NOT_FOUND',
-      endpoints: ['/health', '/search?q=&provider=', '/resolve?title=&ep=&audio=&provider=', '/audios?title=&ep=', '/stream/:sid/media.mkv', '/stream/:sid/media.mp4', '/stream/:sid/master.m3u8', '/stream/:sid/play?u=', '/stream/:sid/sub/:i.vtt'],
+      endpoints: ['/health', '/search?q=&provider=', '/resolve?title=&ep=&audio=&provider=', '/audios?title=&ep=', '/downloads?title=&ep=', '/stream/:sid/media.mkv', '/stream/:sid/media.mp4', '/stream/:sid/master.m3u8', '/stream/:sid/play?u=', '/stream/:sid/sub/:i.vtt'],
     });
   } catch (e) {
     const timedOut = e?.name === 'TimeoutError' || e?.name === 'AbortError';
