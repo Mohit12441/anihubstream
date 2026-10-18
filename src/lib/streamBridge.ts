@@ -234,7 +234,7 @@ export const isResolveFailure = <T extends object>(v: T | ResolveFailure): v is 
 
 /** One audio the episode could be played in. */
 export interface AudioOption {
-  id: 'sub' | 'dub';
+  id: 'sub' | 'dub' | 'hindi' | string;
   label: string;
   /** safe to offer as a real, distinct choice */
   available: boolean;
@@ -242,6 +242,7 @@ export interface AudioOption {
   state?: 'verified' | 'copy' | 'unknown' | 'absent';
   /** honest reason when it is not available */
   reason?: string;
+  provider?: string;
 }
 
 export interface AudioList {
@@ -291,8 +292,13 @@ const cueTime = (t: string) =>
 
 export function parseVtt(text: string): Cue[] {
   const cues: Cue[] = [];
-  for (const block of text.replace(/\r/g, '').split('\n\n')) {
-    const lines = block.split('\n').filter(Boolean);
+  // Strip UTF-8 BOM if present
+  const cleanText = text.charCodeAt(0) === 0xFEFF ? text.slice(1) : text;
+  // Robustly split on blank lines, allowing carriage returns, spaces, or tabs between newlines
+  const blocks = cleanText.split(/\r?\n[ \t]*\r?\n+/);
+
+  for (const block of blocks) {
+    const lines = block.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
     const idx = lines.findIndex((l) => l.includes('-->'));
     if (idx < 0) continue;
     const [a, b] = lines[idx].split('-->');
@@ -303,6 +309,11 @@ export function parseVtt(text: string): Cue[] {
       .slice(idx + 1)
       .join('\n')
       .replace(/<[^>]+>/g, '')
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;|&apos;/g, "'")
       .trim();
     if (body && Number.isFinite(start) && Number.isFinite(end)) cues.push({ start, end, text: body });
   }

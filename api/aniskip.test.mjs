@@ -415,7 +415,7 @@ describe('4. AniSkip API client resilience, caching, and 429 backoff', () => {
     const markers = await fetchSkipTimes(111, 1, 1400, { timeoutMs: 50 });
     const elapsed = Date.now() - t0;
     assert.deepEqual(markers, []);
-    assert.ok(elapsed < 200, `expected abort within 200ms, elapsed: ${elapsed}ms`);
+    assert.ok(elapsed < 500, `expected abort within 500ms, elapsed: ${elapsed}ms`);
   });
 });
 

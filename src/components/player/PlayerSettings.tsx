@@ -14,6 +14,7 @@ import type { StreamServer } from '../../data/servers';
 import {
   ACCENTS,
   ASPECTS,
+  QUALITIES,
   SPEEDS,
   SUB_LANG_NAMES,
   subLangLabel,
@@ -30,6 +31,7 @@ import { useMenuNav } from './useMenuNav';
 
 export type SettingsTab =
   | 'root'
+  | 'quality'
   | 'speed'
   | 'aspect'
   | 'audio'
@@ -40,6 +42,7 @@ export type SettingsTab =
 
 const TITLES: Record<SettingsTab, string> = {
   root: 'Settings',
+  quality: 'Quality',
   speed: 'Playback speed',
   aspect: 'Aspect ratio',
   audio: 'Audio',
@@ -70,6 +73,10 @@ interface Props {
   audioStatus: 'idle' | 'loading' | 'ready' | 'error';
   audioError: string | null;
   onAudio: (id: AudioId) => void;
+  qualities?: { id: string; label: string; index: number }[];
+  currentQualityIndex?: number;
+  currentQualityLabel?: string;
+  onQualityPick?: (index: number, label: string) => void;
 }
 
 export function PlayerSettings({
@@ -90,6 +97,10 @@ export function PlayerSettings({
   audioStatus,
   audioError,
   onAudio,
+  qualities,
+  currentQualityIndex,
+  currentQualityLabel,
+  onQualityPick,
 }: Props) {
   const { ref, focusFirst } = useMenuNav<HTMLDivElement>(true);
 
@@ -105,15 +116,23 @@ export function PlayerSettings({
       footer={
         tab === 'root'
           ? 'Preferences are stored on this device only.'
-          : tab === 'aspect'
-            ? 'Fit letterboxes and Fill crops the frame. Ratios never stretch the artwork.'
-            : tab === 'subs'
-              ? 'Captions use the provider track that arrives with the stream, when it carries one.'
-              : undefined
+          : tab === 'quality'
+            ? 'Quality switches instantly via adaptive bitrate levels.'
+            : tab === 'aspect'
+              ? 'Fit letterboxes and Fill crops the frame. Ratios never stretch the artwork.'
+              : tab === 'subs'
+                ? 'Captions use the provider track that arrives with the stream, when it carries one.'
+                : undefined
       }
     >
       {tab === 'root' && (
         <>
+          <PopRow
+            icon={<SlidersHorizontal size={16} aria-hidden="true" />}
+            label="Quality"
+            value={currentQualityLabel ?? (prefs.quality === 'auto' ? 'Auto' : prefs.quality)}
+            onClick={() => onTab('quality')}
+          />
           <PopRow
             icon={<Gauge size={16} aria-hidden="true" />}
             label="Playback speed"
@@ -129,7 +148,13 @@ export function PlayerSettings({
           <PopRow
             icon={<AudioWaveform size={16} aria-hidden="true" />}
             label="Audio"
-            value={playingAudio === 'dub' ? 'DUB' : 'Original'}
+            value={
+              playingAudio === 'dub'
+                ? 'DUB'
+                : playingAudio === 'hindi'
+                  ? 'HINDI'
+                  : 'Original'
+            }
             onClick={() => onTab('audio')}
           />
           <PopRow
@@ -144,7 +169,7 @@ export function PlayerSettings({
             onClick={() => onTab('subs')}
           />
           <PopRow
-            icon={<SlidersHorizontal size={16} aria-hidden="true" />}
+            icon={<LayoutTemplate size={16} aria-hidden="true" />}
             label="Behaviour"
             value={prefs.autoNext ? 'Auto-next on' : 'Auto-next off'}
             onClick={() => onTab('behaviour')}
@@ -167,6 +192,48 @@ export function PlayerSettings({
             onClick={() => onTab('shortcuts')}
           />
         </>
+      )}
+
+      {tab === 'quality' && (
+        <PopGroup title="Resolution">
+          <PopRow
+            radio
+            label="Auto"
+            note="Adaptive Bitrate (ABR)"
+            active={currentQualityIndex === -1}
+            onClick={() => {
+              patch({ quality: 'auto' });
+              onQualityPick?.(-1, 'Auto');
+            }}
+          />
+          {qualities && qualities.length > 0 ? (
+            qualities.map((q) => (
+              <PopRow
+                key={q.id}
+                radio
+                label={q.label}
+                active={currentQualityIndex === q.index}
+                onClick={() => {
+                  patch({ quality: q.label as any });
+                  onQualityPick?.(q.index, q.label);
+                }}
+              />
+            ))
+          ) : (
+            QUALITIES.filter((q) => q.id !== 'auto').map((q) => (
+              <PopRow
+                key={q.id}
+                radio
+                label={q.label}
+                active={prefs.quality === q.id}
+                onClick={() => {
+                  patch({ quality: q.id });
+                  onQualityPick?.(-1, q.label);
+                }}
+              />
+            ))
+          )}
+        </PopGroup>
       )}
 
       {tab === 'speed' && (
@@ -213,51 +280,72 @@ export function PlayerSettings({
           return (
             <>
               <PopGroup title="Track">
-                <PopRow
-                  radio
-                  label="Original (Japanese)"
-                  note={playingAudio === 'sub' ? 'playing now' : undefined}
-                  active={playingAudio === 'sub'}
-                  onClick={() => onAudio('sub')}
-                />
-                <PopRow
-                  radio
-                  label="Dubbed (English)"
-                  note={
-                    playingAudio === 'dub'
-                      ? 'playing now'
-                      : audioStatus === 'error'
-                        ? 'unverified'
-                        : checking
-                          ? 'checking…'
-                          : dubAvailable
-                            ? 'verified second audio'
-                            : 'not offered'
-                  }
-                  active={playingAudio === 'dub'}
-                  disabled={!dubAvailable}
-                  onClick={() => onAudio('dub')}
-                />
+                {audioList?.audios && audioList.audios.length > 0 ? (
+                  audioList.audios.map((a) => (
+                    <PopRow
+                      key={a.id}
+                      radio
+                      label={a.label}
+                      note={
+                        playingAudio === a.id
+                          ? 'playing now'
+                          : a.available
+                            ? (a.state === 'verified' ? 'verified audio' : 'available')
+                            : checking
+                              ? 'checking…'
+                              : 'not offered'
+                      }
+                      active={playingAudio === a.id}
+                      disabled={!a.available && !checking}
+                      onClick={() => onAudio(a.id as AudioId)}
+                    />
+                  ))
+                ) : (
+                  <>
+                    <PopRow
+                      radio
+                      label="Original (Japanese)"
+                      note={playingAudio === 'sub' ? 'playing now' : undefined}
+                      active={playingAudio === 'sub'}
+                      onClick={() => onAudio('sub')}
+                    />
+                    <PopRow
+                      radio
+                      label="Dubbed (English)"
+                      note={
+                        playingAudio === 'dub'
+                          ? 'playing now'
+                          : checking
+                            ? 'checking…'
+                            : dubAvailable
+                              ? 'verified second audio'
+                              : 'not offered'
+                      }
+                      active={playingAudio === 'dub'}
+                      disabled={!dubAvailable && !checking}
+                      onClick={() => onAudio('dub')}
+                    />
+                  </>
+                )}
               </PopGroup>
 
               {checking && (
                 <p className="pop__hint" role="status">
-                  Measuring whether this source really carries a second audio…
+                  Measuring available audio tracks across providers…
                 </p>
               )}
               {audioStatus === 'error' && (
                 <p className="pop__warn" role="status">
-                  {audioError ?? 'The dubbed audio could not be checked right now.'}
+                  {audioError ?? 'Audio tracks could not be verified right now.'}
                 </p>
               )}
               {audioStatus === 'ready' && !dubAvailable && (
                 <p className="pop__hint">
-                  {dubOpt?.reason ?? 'This source has no verified dubbed audio for this episode.'}
+                  {dubOpt?.reason ?? 'This title has no verified dubbed audio for this episode.'}
                 </p>
               )}
               <p className="pop__hint">
-                A dub is selectable only when the bridge proves the source carries audio that differs from the
-                original — never on the site's label alone.
+                Multi-audio and dubbed streams are selectable across all providers with automated fallback.
               </p>
             </>
           );

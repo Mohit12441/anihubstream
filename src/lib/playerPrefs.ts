@@ -11,7 +11,7 @@ export type Density = 'comfortable' | 'compact';
 export type CaptionPosition = 'bottom' | 'middle' | 'top';
 export type CaptionBackdrop = 'none' | 'box' | 'shadow';
 /** which audio to ask the bridge for; a dub the source does not really carry falls back to 'sub' */
-export type AudioId = 'sub' | 'dub';
+export type AudioId = 'sub' | 'dub' | 'hindi' | string;
 
 export interface SubtitleSettings {
   enabled: boolean;

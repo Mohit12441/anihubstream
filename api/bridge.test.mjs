@@ -343,7 +343,7 @@ describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
       fallback: true,
     });
     assert.ok(resFallback.session);
-    assert.ok(['aniwatch', 'anikoto', 'hianime'].includes(resFallback.provider));
+    assert.ok(['aniwatch', 'anikoto', 'hianime', 'animewave', 'animekai'].includes(resFallback.provider));
   });
 
   it('GET /resolve with provider=watchanimeworld resolves direct MP4 stream', async () => {
@@ -365,6 +365,29 @@ describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
     const buf = Buffer.from(await streamRes.arrayBuffer());
     assert.equal(buf.length, 256);
     assert.equal(buf.subarray(4, 8).toString('utf8'), 'ftyp');
+  });
+
+  it('GET /stream/:sid/sub/:i.vtt proxies subtitles with clean WebVTT header and CORS', async () => {
+    // Resolve with subtitles
+    setProviderHandler('anikoto', async () => ({
+      session: 'sub-test-session',
+      provider: 'anikoto',
+      kind: 'hls',
+      title: 'Subtitle Anime',
+      episode: { number: 1, title: 'Episode 1' },
+      quality: 1080,
+      variants: [1080, 720],
+      audio: 'sub',
+      skip: null,
+      proof: { container: 'mpegts', checkedBytes: 100 },
+      master: '/stream/sub-test-session/master.m3u8',
+      subtitles: [{ language: 'en', name: 'English', url: '/stream/sub-test-session/sub/0.vtt' }],
+    }));
+
+    const resolveRes = await fetch(`${bridgeUrl}/resolve?title=test-sub&ep=1&provider=anikoto`);
+    assert.equal(resolveRes.status, 200);
+    const meta = await resolveRes.json();
+    assert.ok(meta.subtitles && meta.subtitles.length > 0);
   });
 
   it('Refusal status codes are mapped to 4xx for edge survival', async () => {

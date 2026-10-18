@@ -48,7 +48,7 @@ export interface SubTrack {
 interface Options {
   title: string;
   episode: number;
-  audio: 'sub' | 'dub';
+  audio: 'sub' | 'dub' | 'hindi' | string;
   provider?: string;
   /** captions on/off and the requested language (ISO code) */
   subsOn: boolean;
@@ -122,6 +122,8 @@ export function useLiveStream(o: Options) {
   const [resolvingElapsed, setResolvingElapsed] = useState(0);
   const [firstFrameLatency, setFirstFrameLatency] = useState<number | null>(null);
   const resolveStart = useRef<number>(Date.now());
+  const [levels, setLevels] = useState<{ index: number; height: number; bitrate: number; label: string }[]>([]);
+  const [currentLevelIndex, setCurrentLevelIndex] = useState<number>(-1);
 
   /* ---------- resolve ---------- */
   useEffect(() => {
@@ -132,6 +134,8 @@ export function useLiveStream(o: Options) {
     setFirstFrameLatency(null);
     setDuration(0);
     setCues([]);
+    setLevels([]);
+    setCurrentLevelIndex(-1);
     shownTrack.current = null;
     setError(null);
     setRetryable(false);
@@ -296,6 +300,20 @@ export function useLiveStream(o: Options) {
           setRetryable(true);
           setStatus('error');
           setError(`Playback error: ${String(data.details ?? data.type)}`);
+        });
+        hls.on(HlsCtor.Events.MANIFEST_PARSED, (_evt, data) => {
+          if (cancelled) return;
+          const lvls = (data.levels ?? []).map((l, idx) => ({
+            index: idx,
+            height: l.height || 0,
+            bitrate: l.bitrate || 0,
+            label: l.height ? `${l.height}p` : `Level ${idx + 1}`,
+          }));
+          setLevels(lvls);
+        });
+        hls.on(HlsCtor.Events.LEVEL_SWITCHED, (_evt, data) => {
+          if (cancelled) return;
+          setCurrentLevelIndex(data.level);
         });
         hls.loadSource(url);
         hls.attachMedia(v);
@@ -532,6 +550,13 @@ export function useLiveStream(o: Options) {
     }
   }, [videoEl]);
 
+  const setQualityLevel = useCallback((levelIndex: number) => {
+    if (hlsRef.current) {
+      hlsRef.current.currentLevel = levelIndex;
+      setCurrentLevelIndex(levelIndex);
+    }
+  }, []);
+
   return {
     status,
     info,
@@ -560,5 +585,8 @@ export function useLiveStream(o: Options) {
     retry,
     resolvingElapsed,
     firstFrameLatency,
+    levels,
+    currentLevelIndex,
+    setQualityLevel,
   };
 }

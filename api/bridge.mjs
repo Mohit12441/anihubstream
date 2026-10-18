@@ -633,9 +633,9 @@ async function buildSource({ title, ep, audio, provider = 'auto', fallback = tru
   if (audio === 'hindi') {
     candidates = ['animedubhindi'];
   } else if (audio === 'dub') {
-    candidates = ['aniwatch', 'anikoto', 'hianime', 'watchanimeworld', 'animedubhindi'];
+    candidates = ['aniwatch', 'anikoto', 'hianime', 'animewave', 'animekai', 'watchanimeworld', 'animedubhindi'];
   } else {
-    candidates = ['aniwatch', 'anikoto', 'hianime'];
+    candidates = ['aniwatch', 'anikoto', 'hianime', 'animewave', 'animekai'];
   }
 
   try {
@@ -722,6 +722,29 @@ async function buildAudios({ title, ep }) {
     { id: 'sub', label: 'Japanese (original)', available: true },
     { id: 'dub', label: 'English (dub)', available: false, state: 'unknown', reason: 'Provider check unavailable.' },
   ];
+
+  // If dub is not yet verified from anikoto, check other providers
+  const dubEntry = audios.find((a) => a.id === 'dub');
+  if (dubEntry && !dubEntry.available) {
+    for (const prov of ['aniwatch', 'hianime', 'animewave', 'animekai']) {
+      try {
+        const { episodes } = await detailsForProvider(prov, title);
+        const epObj = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
+        if (epObj) {
+          const mod = prov === 'aniwatch' ? aniwatch : prov === 'hianime' ? hianime : prov === 'animewave' ? animewave : animekai;
+          const s = await mod.sources(epObj.id || epObj.ref, { audioType: 'dub', signal: AbortSignal.timeout(4000) });
+          if (s && s.embeds && s.embeds.length > 0) {
+            dubEntry.available = true;
+            dubEntry.state = 'verified';
+            delete dubEntry.reason;
+            break;
+          }
+        }
+      } catch {
+        // try next
+      }
+    }
+  }
 
   try {
     const { episodes } = await detailsForProvider('animedubhindi', title);
@@ -1056,14 +1079,31 @@ const server = createServer(async (req, res) => {
       if (!session) return json(res, 404, { error: 'NO_SESSION' });
       const track = session.subUrls[Number(sub[2])];
       if (!track) return json(res, 404, { error: 'NO_TRACK' });
-      const up = await fetch(track.url, { headers: { referer: track.referer }, signal: AbortSignal.timeout(30_000) });
+      const referer = track.referer || session.referer || 'https://megaplay.buzz/';
+      let origin;
+      try { origin = new URL(referer).origin; } catch {}
+      const headers = {
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+        'accept': 'text/vtt,text/plain,*/*',
+        'accept-language': 'en-US,en;q=0.9',
+        ...(referer ? { referer } : {}),
+        ...(origin ? { origin } : {}),
+      };
+      const up = await fetch(track.url, { headers, signal: AbortSignal.timeout(30_000) });
       if (!up.ok) {
         await up.body?.cancel().catch(() => {});
         return json(res, refusalStatus(up.status), { error: 'UPSTREAM', status: up.status, track: Number(sub[2]) });
       }
+      let rawText = await up.text();
+      // Strip UTF-8 BOM if present
+      if (rawText.charCodeAt(0) === 0xFEFF) rawText = rawText.slice(1);
+      // Ensure WEBVTT header is present so browsers and players parse it reliably
+      if (!rawText.trimStart().startsWith('WEBVTT')) {
+        rawText = 'WEBVTT\n\n' + rawText;
+      }
       cors(res, 'text/vtt; charset=utf-8');
       res.statusCode = 200;
-      res.end(await up.text());
+      res.end(rawText);
       return;
     }
 

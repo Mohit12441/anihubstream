@@ -202,11 +202,13 @@ export function AdvancedPlayer(props: Props) {
       switchSeekRef.current = at > 1 ? at : null;
       switchSeekFor.current = episodeTag;
       patch({ audio: next });
-      notify(
+      const label =
         next === 'dub'
-          ? 'Switching to the dubbed audio — the bridge is re-resolving this episode.'
-          : 'Switching to the original Japanese audio — the bridge is re-resolving this episode.',
-      );
+          ? 'dubbed English'
+          : next === 'hindi'
+            ? 'Hindi multi-audio'
+            : 'original Japanese';
+      notify(`Switching to the ${label} audio — the bridge is re-resolving this episode.`);
     },
     [prefs.audio, patch, episodeTag, notify],
   );
@@ -841,14 +843,16 @@ export function AdvancedPlayer(props: Props) {
           onVolume={volume}
           onMute={() => patch({ muted: !prefs.muted })}
           speed={prefs.speed}
-          quality={live.info ? `${live.info.quality}p` : 'Auto'}
-          onQuality={() =>
-            notify(
-              live.info
-                ? `The bridge is streaming the provider's ${live.info.quality}p variant.`
-                : 'The bridge streams the provider\u2019s best variant once the episode resolves.',
-            )
+          quality={
+            live.currentLevelIndex >= 0 && live.levels[live.currentLevelIndex]
+              ? live.levels[live.currentLevelIndex].label
+              : prefs.quality !== 'auto'
+                ? prefs.quality
+                : live.info
+                  ? `${live.info.quality}p`
+                  : 'Auto'
           }
+          onQuality={() => setMenu({ kind: 'settings', tab: 'quality' })}
           subOn={prefs.subtitles.enabled}
           subLang={prefs.subtitles.language}
           onToggleCaptions={toggleCaptions}
@@ -890,11 +894,24 @@ export function AdvancedPlayer(props: Props) {
             subTracks={live.subTracks}
             subState={live.subState}
             subReady={liveReady}
-            playingAudio={live.info?.audio === 'dub' ? 'dub' : 'sub'}
+            playingAudio={(live.info?.audio ?? prefs.audio) as AudioId}
             audioList={audioList}
             audioStatus={audioStatus}
             audioError={audioError}
             onAudio={setAudio}
+            qualities={live.levels.map((l) => ({ id: String(l.height), label: l.label, index: l.index }))}
+            currentQualityIndex={live.currentLevelIndex}
+            currentQualityLabel={
+              live.currentLevelIndex >= 0 && live.levels[live.currentLevelIndex]
+                ? live.levels[live.currentLevelIndex].label
+                : prefs.quality !== 'auto'
+                  ? prefs.quality
+                  : 'Auto'
+            }
+            onQualityPick={(index, label) => {
+              live.setQualityLevel(index);
+              notify(index === -1 ? 'Quality set to Auto (ABR)' : `Switched video quality to ${label}`);
+            }}
           />
         )}
 

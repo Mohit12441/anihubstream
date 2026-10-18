@@ -86,9 +86,18 @@ export function SubtitlePanel({ subs, patch, restore, tracks, state, loaded, har
         ) : (
           <>
             <PopGrid
-              options={tracks.map((t) => ({ id: t.key, label: t.label }))}
-              value={selectedId}
-              onPick={(id) => patch({ language: id, enabled: true })}
+              options={[
+                { id: 'off', label: 'Off' },
+                ...tracks.map((t) => ({ id: t.key, label: t.label })),
+              ]}
+              value={subs.enabled ? selectedId : 'off'}
+              onPick={(id) => {
+                if (id === 'off') {
+                  patch({ enabled: false });
+                } else {
+                  patch({ language: id, enabled: true });
+                }
+              }}
             />
             {subs.enabled && line && (
               <p className="pop__hint" role="status">
