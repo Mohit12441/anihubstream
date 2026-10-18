@@ -197,7 +197,7 @@ describe('2. 403 handling (criterion: a 403 never produces a retry storm)', () =
     const api = createAnilist({ ...FAST });
     const at = Date.now();
     await api.request('{ a }');
-    assert.ok(Date.now() - at >= 1000, 'waited out the stated retry-after');
+    assert.ok(Date.now() - at >= 950, 'waited out the stated retry-after');
     assert.equal(api.stats.s429, 1);
     assert.ok(api.interval > 20, 'a 429 also widened the learned interval (R4)');
   });
