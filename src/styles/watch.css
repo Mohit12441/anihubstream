@@ -797,6 +797,7 @@
 .dl-modal__active-actions {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .dl-modal__section-heading {

@@ -171,11 +171,22 @@ export const SERVERS: StreamServer[] = [
   ANIMEKAI_SERVER,
 ];
 
-export const serverById = (id: string): StreamServer =>
-  SERVERS.find((s) => s.id === id) ?? SERVERS[0];
+export const serverById = (id: string): StreamServer => {
+  if (id.startsWith('anikoto:')) {
+    const mirror = id.slice('anikoto:'.length);
+    return {
+      ...LIVE_SERVER,
+      id,
+      name: `AniKoto (${mirror})`,
+      note: `AniKoto ${mirror} mirror server`,
+    };
+  }
+  return SERVERS.find((s) => s.id === id) ?? SERVERS[0];
+};
 
 export function providerFromId(serverId: string): string {
   if (serverId === 'auto-fastest') return 'auto';
+  if (serverId.startsWith('anikoto:')) return serverId;
   if (serverId === 'aniwatch-live') return 'aniwatch';
   if (serverId === 'hianime-live') return 'hianime';
   if (serverId === 'anikoto-live') return 'anikoto';
@@ -188,6 +199,7 @@ export function providerFromId(serverId: string): string {
 
 export function serverIdFromProvider(provider?: string): string {
   if (!provider) return 'auto-fastest';
+  if (provider.startsWith('anikoto:')) return provider;
   const norm = provider.toLowerCase();
   if (norm === 'aniwatch') return 'aniwatch-live';
   if (norm === 'hianime') return 'hianime-live';

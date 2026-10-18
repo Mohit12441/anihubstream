@@ -45,7 +45,7 @@ import {
 
 const PORT = Number(process.env.ANIKOTO_BRIDGE_PORT ?? 8795);
 const HOST = '127.0.0.1';
-const UA_REFERER = 'https://anikototv.to/';
+const UA_REFERER = anikoto.defaultAniKotoReferer ?? (process.env.ANIKOTO_ORIGIN ? `${process.env.ANIKOTO_ORIGIN}/` : 'https://anikoto.cz/');
 const RESOLVE_TIMEOUT_MS = 75_000;
 const SNACK_BYTES = 131_072;
 const DETAILS_TTL = 12 * 60 * 60 * 1000;
@@ -304,6 +304,8 @@ function createHlsSession({ provider, media, episode, resolvedResult, sniffed, d
       ...(t.name ? { name: t.name } : {}),
       url: `/stream/${sid}/sub/${i}.vtt`,
     })),
+    downloads: downloads || [],
+    servers: servers || [],
   };
   sessions.set(sid, session);
 
@@ -331,13 +333,13 @@ function createHlsSession({ provider, media, episode, resolvedResult, sniffed, d
 
 /* ------------------------------------------------------------- provider resolvers */
 
-async function buildSourceAnikoto({ title, ep, audio }) {
+async function buildSourceAnikoto({ title, ep, audio, server }) {
   const signal = AbortSignal.timeout(RESOLVE_TIMEOUT_MS);
   const { media, episodes } = await detailsForProvider('anikoto', title);
   const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
   if (!episode) throw Object.assign(new Error(`episode ${ep} is not in AniKoto list (${episodes.length} listed)`), { code: 'NO_SUCH_EPISODE' });
 
-  const { embeds, skip, downloads, servers } = await anikoto.sources(episode.id, { audioType: audio, signal });
+  const { embeds, skip, downloads, servers } = await anikoto.sources(episode.id, { audioType: audio, server, signal });
   if (!embeds.length) throw Object.assign(new Error(`no ${audio} embeds for episode ${ep}`), { code: 'NO_EMBEDS' });
 
   const candidates = rankEmbeds(embeds).slice(0, 3);
@@ -630,11 +632,16 @@ function setSearchHandler(provider, handler) {
   searchHandlers[provider.toLowerCase()] = handler;
 }
 
-async function buildSourceProvider(provider, { title, ep, audio }) {
-  const norm = provider.toLowerCase();
+async function buildSourceProvider(provider, { title, ep, audio, server }) {
+  let norm = provider.toLowerCase();
+  let selectedServer = server;
+  if (norm.startsWith('anikoto:')) {
+    selectedServer = norm.slice('anikoto:'.length);
+    norm = 'anikoto';
+  }
   const handler = providerHandlers[norm];
   if (!handler) throw new Error(`Unsupported provider: ${provider}`);
-  return await handler({ title, ep, audio });
+  return await handler({ title, ep, audio, server: selectedServer });
 }
 
 /* ------------------------------------------------------------- race dispatcher */
@@ -673,13 +680,13 @@ async function raceProviders(candidates, { title, ep, audio }) {
   });
 }
 
-async function buildSource({ title, ep, audio, provider = 'auto', fallback = true }) {
+async function buildSource({ title, ep, audio, provider = 'auto', server, fallback = true }) {
   const normProvider = (provider || 'auto').toLowerCase();
 
   // If a specific provider is requested:
   if (normProvider !== 'auto' && normProvider !== 'fastest') {
     try {
-      return await buildSourceProvider(normProvider, { title, ep, audio });
+      return await buildSourceProvider(normProvider, { title, ep, audio, server });
     } catch (e) {
       if (!fallback) throw e;
       console.warn(`[Bridge] Specific provider "${normProvider}" failed, falling back to race:`, e.message);
@@ -1101,11 +1108,12 @@ const server = createServer(async (req, res) => {
       const title = url.searchParams.get('title') ?? '';
       const ep = Number(url.searchParams.get('ep') ?? '0');
       const audioParam = url.searchParams.get('audio') ?? 'sub';
-      const audio = audioParam === 'hindi' ? 'hindi' : audioParam === 'dub' ? 'dub' : 'sub';
+      const audio = audioParam === 'hindi' ? 'hindi' : audioParam === 'dub' ? 'dub' : audioParam === 'hsub' ? 'hsub' : 'sub';
       const requestedProvider = url.searchParams.get('provider') ?? (audioParam === 'hindi' ? 'animedubhindi' : 'auto');
+      const serverParam = url.searchParams.get('server') ?? undefined;
       const fallback = url.searchParams.get('fallback') !== 'false';
       if (!title.trim() || !Number.isInteger(ep) || ep < 1) return json(res, 400, { error: 'TITLE_EP_REQUIRED' });
-      const key = `${title.toLowerCase()}|${ep}|${audio}|${requestedProvider}`;
+      const key = `${title.toLowerCase()}|${ep}|${audio}|${requestedProvider}|${serverParam ?? ''}`;
       const reuse = recent.get(key);
       if (reuse && sessions.has(reuse.sid)) {
         const s = useSession(reuse.sid);
@@ -1116,10 +1124,12 @@ const server = createServer(async (req, res) => {
           master: s.kind === 'progressive' ? `/stream/${reuse.sid}/media.${s.container === 'matroska' ? 'mkv' : 'mp4'}` : `/stream/${reuse.sid}/master.m3u8`,
           downloadUrl: s.kind === 'progressive' ? `/stream/${reuse.sid}/media.${s.container === 'matroska' ? 'mkv' : 'mp4'}?download=1` : (s.downloadPage ?? `/stream/${reuse.sid}/master.m3u8`),
           downloadPage: s.downloadPage ?? null,
+          downloads: s.downloads || [],
+          servers: s.servers || [],
           subtitles: s.subtitles, reused: true,
         });
       }
-      const meta = await buildSource({ title, ep, audio, provider: requestedProvider, fallback });
+      const meta = await buildSource({ title, ep, audio, provider: requestedProvider, server: serverParam, fallback });
       recent.set(key, { at: Date.now(), sid: meta.session });
       return json(res, 200, meta);
     }
@@ -1184,13 +1194,13 @@ const server = createServer(async (req, res) => {
         },
         {
           provider: 'anikoto',
-          name: 'AniKoto Stream',
-          badge: 'Sub / Dub',
-          format: 'HLS Master Stream (.m3u8)',
-          quality: '1080p / 720p',
-          type: 'stream',
+          name: 'AniKoto Direct & Stream',
+          badge: '1080p / 720p / 360p',
+          format: 'Direct MP4 & HLS Master',
+          quality: '1080p / 720p / 360p',
+          type: 'direct',
           audio: 'sub',
-          description: 'Adaptive HLS master playlist.',
+          description: 'Direct multi-mirror downloads (Pahe, NekoStream) and adaptive HLS master playlist.',
         },
       ];
       return json(res, 200, { title, episode: ep, options });

@@ -71,14 +71,14 @@ const PROVIDER_OPTIONS: ProviderOption[] = [
   },
   {
     id: 'anikoto',
-    name: 'AniKoto Stream',
-    badge: 'Sub / Dub',
+    name: 'AniKoto Direct & Stream',
+    badge: '1080p / 720p / 360p',
     badgeColor: '#e11d48',
-    format: 'HLS Master Stream (.m3u8)',
-    quality: '1080p / 720p',
-    type: 'stream',
+    format: 'Direct MP4 & HLS Master',
+    quality: '1080p / 720p / 360p',
+    type: 'direct',
     audio: 'sub',
-    description: 'Adaptive HLS master playlist for high definition streaming.',
+    description: 'Direct multi-mirror downloads (Pahe, NekoStream) and adaptive HLS master playlist.',
   },
 ];
 
@@ -109,6 +109,11 @@ export function DownloadModal({ isOpen, onClose, anime, episode, currentStream, 
   const handleDownloadProvider = async (opt: ProviderOption) => {
     // If the active stream already matches this provider, use its stream directly
     if (currentStream && currentStream.provider === opt.id) {
+      if (currentStream.downloads && currentStream.downloads.length > 0) {
+        window.open(currentStream.downloads[0].url, '_blank', 'noopener,noreferrer');
+        notify(`Opening ${currentStream.downloads[0].name} download link…`);
+        return;
+      }
       if (opt.type === 'direct') {
         const url = bridgeUrl(currentStream.master);
         const ext = currentStream.container === 'matroska' ? 'mkv' : 'mp4';
@@ -134,6 +139,12 @@ export function DownloadModal({ isOpen, onClose, anime, episode, currentStream, 
       const res = await bridgeResolve(anime.title, episode.n, opt.audio, opt.id);
       if (isResolveFailure(res)) {
         notify(`Could not fetch download for ${opt.name}: ${res.error}`);
+        return;
+      }
+
+      if (res.downloads && res.downloads.length > 0) {
+        window.open(res.downloads[0].url, '_blank', 'noopener,noreferrer');
+        notify(`Opening ${res.downloads[0].name} download link…`);
         return;
       }
 
@@ -198,11 +209,29 @@ export function DownloadModal({ isOpen, onClose, anime, episode, currentStream, 
                 <span className="dl-modal__quality-badge">{currentStream.quality}p</span>
               </div>
               <p className="dl-modal__active-desc">
-                {currentStream.kind === 'progressive'
+                {currentStream.downloads && currentStream.downloads.length > 0
+                  ? `Direct file downloads available in multiple resolutions (${currentStream.downloads.map(d => d.quality).filter(Boolean).join(', ')}).`
+                  : currentStream.kind === 'progressive'
                   ? `Direct progressive file download (${currentStream.container === 'matroska' ? 'MKV' : 'MP4'}) with instant browser save.`
                   : 'Currently playing via HLS adaptive stream.'}
               </p>
               <div className="dl-modal__active-actions">
+                {currentStream.downloads && currentStream.downloads.length > 0 && (
+                  currentStream.downloads.map((dl, idx) => (
+                    <button
+                      key={`${dl.url}-${idx}`}
+                      type="button"
+                      className="btn btn--primary btn--sm"
+                      onClick={() => {
+                        window.open(dl.url, '_blank', 'noopener,noreferrer');
+                        notify(`Opening ${dl.name} download link…`);
+                      }}
+                    >
+                      <Download size={14} aria-hidden="true" />
+                      {dl.name}
+                    </button>
+                  ))
+                )}
                 {currentStream.kind === 'progressive' ? (
                   <button
                     type="button"
@@ -220,7 +249,7 @@ export function DownloadModal({ isOpen, onClose, anime, episode, currentStream, 
                 ) : currentStream.downloadPage ? (
                   <button
                     type="button"
-                    className="btn btn--primary btn--sm"
+                    className="btn btn--ghost btn--sm"
                     onClick={() => {
                       window.open(currentStream.downloadPage!, '_blank', 'noopener,noreferrer');
                       notify('Opening download portal…');

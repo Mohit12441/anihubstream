@@ -8,7 +8,9 @@ const STREAM_ORIGINS = [
   'https://megaplay.buzz',
   'https://vidwish.live',
   'https://vidtube.site',
+  'https://anikoto.cz',
   'https://anikototv.to',
+  'https://mapper.nekostream.site',
 ];
 
 const warmed = new Set<string>();

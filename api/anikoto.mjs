@@ -37,7 +37,8 @@ import { Readable } from "node:stream";
 import { once } from "node:events";
 import { makeDubPairVerdict } from "./dubAudio.mjs";
 
-const ANIKOTO_MAIN = process.env.ANIKOTO_ORIGIN ?? "https://anikoto.cz";
+export const ANIKOTO_MAIN = process.env.ANIKOTO_ORIGIN ?? "https://anikoto.cz";
+export const defaultAniKotoReferer = `${ANIKOTO_MAIN}/`;
 const MEGAPLAY_HOSTS = [
   "megaplay.buzz", "megaplay-1.buzz",
   "vidwish.live", "vidwish.to",
@@ -401,21 +402,32 @@ function parseServerLinks(html) {
 }
 
 /** episode id (opaque ref) -> embed URLs + skip marks, scoped to the audio asked for. */
-export async function sources(episodeId, { audioType, signal } = {}) {
+export async function sources(episodeId, { audioType, server, signal } = {}) {
   const ref = decodeEpisodeRef(episodeId);
   if (!ref?.serverIds) throw new ApiError("AniKoto episode id carries no server set", 0);
-  const referer = ref.watchUrl ?? `${ANIKOTO_MAIN}/`;
+  const referer = ref.watchUrl ?? defaultAniKotoReferer;
   if (!/^[A-Za-z0-9+/=_-]{1,1024}$/.test(ref.serverIds)) throw new ApiError("AniKoto server set is not a valid opaque token", 0);
   const serverHtml = jsonHtml(await getAjax(`${ANIKOTO_MAIN}/ajax/server/list?servers=${encodeURIComponent(ref.serverIds)}`, referer, signal));
   if (!serverHtml) return { embeds: [], subtitles: [], skip: undefined, downloads: [], servers: [] };
   const entries = parseServerLinks(serverHtml);
   // The caller's ask wins; the ref's label (encoded from the listing row) is the
-  // default for callers who did not ask.  Hardsubs ("hsub") count as sub.
-  const requested = audioType === "dub" || audioType === "sub" ? audioType : ref.audioType;
-  const wanted = requested === "dub" ? ["dub"] : ["sub", "hsub"];
+  // default for callers who did not ask. Hardsubs ("hsub") count as sub unless explicitly requested.
+  const requested = audioType === "dub" || audioType === "sub" || audioType === "hsub" ? audioType : ref.audioType;
+  const wanted = requested === "dub" ? ["dub"] : requested === "hsub" ? ["hsub"] : ["sub", "hsub"];
   const typed = entries.filter((e) => e.type !== "");
-  const scoped = typed.filter((e) => wanted.includes(e.type));
-  const usable = typed.length === 0 ? entries : scoped;
+  let scoped = typed.filter((e) => wanted.includes(e.type));
+  if (scoped.length === 0 && requested === "hsub") {
+    scoped = typed.filter((e) => e.type === "sub");
+  }
+  let usable = typed.length === 0 ? entries : scoped;
+  if (server) {
+    const sNorm = server.trim().toLowerCase();
+    usable = [...usable].sort((a, b) => {
+      const aMatch = a.name.toLowerCase().includes(sNorm) || a.linkId === server;
+      const bMatch = b.name.toLowerCase().includes(sNorm) || b.linkId === server;
+      return Number(bMatch) - Number(aMatch);
+    });
+  }
   const embeds = [];
   const seenLink = new Set();
   const published = new Set();
@@ -590,8 +602,8 @@ export function audioOfEmbed(embedUrl) {
 }
 
 /** embed URL -> playable HLS (signed master + best-first variants) + subtitles + claimed audio. */
-export async function resolve(embedUrl, { referer, signal } = {}) {
-  let page = await getText(embedUrl, { ...(referer ? { referer } : {}), signal });
+export async function resolve(embedUrl, { referer = defaultAniKotoReferer, signal } = {}) {
+  let page = await getText(embedUrl, { referer, signal });
   if (!extractPlayerDataId(page.body)) {
     const inner = familyIframeUrl(page.body, MEGAPLAY_HOSTS);
     if (inner) page = await getText(inner, { referer: page.url, signal });
@@ -884,7 +896,6 @@ export class ApiError extends Error {
 }
 
 export const PROVIDER = { id: "anikoto", name: "AniKoto", baseUrl: ANIKOTO_MAIN, language: "en" };
-export const defaultAniKotoReferer = `${ANIKOTO_MAIN}/`;
 
 /**
  * Is THIS site's `/dub` file its own bytes or a copy of its `/sub`?  Measures the

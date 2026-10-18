@@ -16,7 +16,7 @@ import { usePrefersReducedMotion } from '../../lib/motion';
 import { usePlayerEngine, type PlayerEngine } from '../../lib/usePlayerEngine';
 import { useLiveStream } from '../../lib/useLiveStream';
 import { actionFor, isEditable, type ShortcutAction } from '../../lib/shortcuts';
-import type { AudioId, PlayerPrefs, SubtitleSettings } from '../../lib/playerPrefs';
+import type { AudioId, PlayerPrefs, QualityId, SubtitleSettings } from '../../lib/playerPrefs';
 import { bridgeAudios, isResolveFailure, type AudioList } from '../../lib/streamBridge';
 import { stamp } from '../../lib/time';
 import { Art } from '../Art';
@@ -901,22 +901,51 @@ export function AdvancedPlayer(props: Props) {
 
         {menu.kind === 'server' && (
           <ServerSelector
-            servers={SERVERS.map((s) => {
-              const isCurrent = s.id === selectedServerId;
-              const isWinningProvider = s.id === serverIdFromProvider(live.info?.provider);
-              let note = s.note;
-              if (s.id === AUTO_SERVER.id && live.info?.provider) {
-                const winnerName = serverById(serverIdFromProvider(live.info.provider)).name;
-                note = live.info.raceMs
-                  ? `⚡ Race winner: ${winnerName} (${(live.info.raceMs / 1000).toFixed(1)}s latency)`
-                  : `⚡ Connected to ${winnerName}`;
+            servers={(() => {
+              const baseServers = SERVERS.map((s) => {
+                const isCurrent = s.id === selectedServerId;
+                const isWinningProvider = s.id === serverIdFromProvider(live.info?.provider);
+                let note = s.note;
+                if (s.id === AUTO_SERVER.id && live.info?.provider) {
+                  const winnerName = serverById(serverIdFromProvider(live.info.provider)).name;
+                  note = live.info.raceMs
+                    ? `⚡ Race winner: ${winnerName} (${(live.info.raceMs / 1000).toFixed(1)}s latency)`
+                    : `⚡ Connected to ${winnerName}`;
+                }
+                return {
+                  ...s,
+                  status: isCurrent ? serverStatus : isWinningProvider ? 'online' : s.status,
+                  note,
+                };
+              });
+
+              if (live.info?.servers && live.info.servers.length > 0 && live.info.provider === 'anikoto') {
+                const mirrorServers = live.info.servers.map((ms) => {
+                  const mirrorId = `anikoto:${ms.name}`;
+                  const isCurrent = selectedServerId === mirrorId;
+                  const t = ms.type || 'sub';
+                  const tUpper = t.toUpperCase();
+                  return {
+                    id: mirrorId,
+                    name: `AniKoto · ${ms.name} (${tUpper})`,
+                    region: 'CDN Mirror',
+                    status: (isCurrent ? serverStatus : 'online') as ServerStatus,
+                    capabilities: {
+                      qualities: ['auto', '1080p'] as QualityId[],
+                      subtitleLanguages: [],
+                      subtitleType: (t === 'hsub' ? 'hardsub' : 'selectable') as 'hardsub' | 'selectable',
+                      audioLanguages: t === 'dub' ? ['English (dub)'] : ['Japanese (original)'],
+                    },
+                    sourceUrl: 'http://127.0.0.1:8795',
+                    responseMs: 0,
+                    note: `Direct ${ms.name} mirror (${tUpper})`,
+                  };
+                });
+                return [...baseServers, ...mirrorServers];
               }
-              return {
-                ...s,
-                status: isCurrent ? serverStatus : isWinningProvider ? 'online' : s.status,
-                note,
-              };
-            })}
+
+              return baseServers;
+            })()}
             currentId={selectedServerId}
             onSelect={(id) => pickServer(id)}
             onRetry={live.retry}
