@@ -144,12 +144,29 @@ export const ANIMEKAI_SERVER: StreamServer = {
   note: 'Failover mirror with dedicated dual-audio stream branches.',
 };
 
+export const WATCHANIMEWORLD_SERVER: StreamServer = {
+  id: 'watchanimeworld-live',
+  name: 'WatchAnimeWorld',
+  region: 'Abyss Direct MP4',
+  status: 'online',
+  capabilities: {
+    qualities: ['auto', '1080p', '720p', '360p'],
+    subtitleLanguages: [],
+    subtitleType: 'none',
+    audioLanguages: ['English (dub)'],
+  },
+  sourceUrl: 'http://127.0.0.1:8795',
+  responseMs: 0,
+  note: 'Direct encrypted MP4 stream stitched on-the-fly from Abyss CDN parts.',
+};
+
 export const SERVERS: StreamServer[] = [
   AUTO_SERVER,
   ANIWATCH_SERVER,
   HIANIME_SERVER,
   LIVE_SERVER,
   ANIMEDUBHINDI_SERVER,
+  WATCHANIMEWORLD_SERVER,
   ANIMEWAVE_SERVER,
   ANIMEKAI_SERVER,
 ];
@@ -163,6 +180,7 @@ export function providerFromId(serverId: string): string {
   if (serverId === 'hianime-live') return 'hianime';
   if (serverId === 'anikoto-live') return 'anikoto';
   if (serverId === 'animedubhindi-live') return 'animedubhindi';
+  if (serverId === 'watchanimeworld-live') return 'watchanimeworld';
   if (serverId === 'animewave-live') return 'animewave';
   if (serverId === 'animekai-live') return 'animekai';
   return 'auto';
@@ -175,6 +193,7 @@ export function serverIdFromProvider(provider?: string): string {
   if (norm === 'hianime') return 'hianime-live';
   if (norm === 'anikoto') return 'anikoto-live';
   if (norm === 'animedubhindi') return 'animedubhindi-live';
+  if (norm === 'watchanimeworld') return 'watchanimeworld-live';
   if (norm === 'animewave') return 'animewave-live';
   if (norm === 'animekai') return 'animekai-live';
   return 'auto-fastest';

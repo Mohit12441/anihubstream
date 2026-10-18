@@ -10,6 +10,7 @@
  *   - HiAnime (High-speed JSON API, multi-quality 1080p/360p)
  *   - AniKoto (Rich HLS, intro/outro skip times, 9 subtitle tracks)
  *   - AnimeDubHindi (Progressive Multi-Audio MKV with Hindi dub)
+ *   - WatchAnimeWorld (Direct encrypted MP4 stream with Abyss part stitching)
  *   - AnimeWave (Failover mirror)
  *   - AnimeKai (Failover mirror)
  *
@@ -18,10 +19,11 @@
  *
  *   GET /health
  *   GET /search?q=<term>&provider=<name>
- *   GET /resolve?title=<t>&ep=<n>&audio=<sub|dub|hindi>&provider=<auto|aniwatch|hianime|anikoto|animedubhindi>
+ *   GET /resolve?title=<t>&ep=<n>&audio=<sub|dub|hindi>&provider=<auto|aniwatch|hianime|anikoto|animedubhindi|watchanimeworld>
  *   GET /audios?title=<t>&ep=<n>
  *   GET /stream/:sid/master.m3u8
  *   GET /stream/:sid/media.mkv
+ *   GET /stream/:sid/media.mp4
  *   GET /stream/:sid/play?u=<b64url>&name=...
  *   GET /stream/:sid/sub/:idx.vtt
  */
@@ -34,6 +36,7 @@ import * as hianime from './hianime.mjs';
 import * as aniwatch from './aniwatch.mjs';
 import * as animewave from './animewave.mjs';
 import * as animekai from './animekai.mjs';
+import * as watchanimeworld from './watchanimeworld.mjs';
 import {
   sniffContainer,
   buildMegaPlayToken,
@@ -208,12 +211,13 @@ async function detailsForProvider(provider, title) {
   else if (norm === 'aniwatch') mod = aniwatch;
   else if (norm === 'animewave') mod = animewave;
   else if (norm === 'animekai') mod = animekai;
+  else if (norm === 'watchanimeworld') mod = watchanimeworld;
   else throw new Error(`Unknown provider: ${norm}`);
 
   const hits = await mod.search(title, { signal });
   if (!hits || !hits.length) throw Object.assign(new Error(`no ${provider} result for "${title}"`), { code: 'NO_MATCH' });
   const picked = hits[0];
-  const slug = picked.slug || picked.id;
+  const slug = (picked.id || picked.slug).replace(/^watchanimeworld:/, '');
   const { media, episodes } = await mod.details(slug, { signal });
   const entry = { at: Date.now(), media, episodes };
   providerDetailsCache.set(key, entry);
@@ -425,6 +429,69 @@ async function buildSourceAdb({ title, ep, audio }) {
   throw Object.assign(new Error(`no playable AnimeDubHindi source (${lastError?.message ?? 'mirror resolution failed'})`), { code: 'RESOLVE_FAILED' });
 }
 
+async function buildSourceWatchanimeworld({ title, ep, audio }) {
+  const signal = AbortSignal.timeout(RESOLVE_TIMEOUT_MS);
+  const { media, episodes } = await detailsForProvider('watchanimeworld', title);
+  const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
+  if (!episode) throw Object.assign(new Error(`episode ${ep} is not in WatchAnimeWorld list`), { code: 'NO_SUCH_EPISODE' });
+
+  const src = await watchanimeworld.sources(episode.id, { audioType: audio, signal });
+  if (!src.direct || !src.direct.length) {
+    throw Object.assign(new Error(`no direct sources for episode ${ep}`), { code: 'NO_EMBEDS' });
+  }
+
+  for (const candidate of src.direct) {
+    try {
+      const valid = await watchanimeworld.probeCopy(candidate.spec, { signal });
+      if (!valid) continue;
+
+      const sid = randomUUID();
+      const session = {
+        sid,
+        at: Date.now(),
+        provider: 'watchanimeworld',
+        kind: 'progressive',
+        container: 'mp4',
+        spec: candidate.spec,
+        title: media.title,
+        episode: { number: episode.number, title: episode.title },
+        audio: candidate.audio ?? 'dub',
+        quality: candidate.quality ?? 'auto',
+        variants: [...new Set(src.direct.map((d) => d.quality))],
+        proof: { container: 'mp4', checkedBytes: candidate.spec.s },
+        referer: 'https://player.abyssplayer.com/',
+        signed: { host: `${candidate.spec.h}.sssrr.org`, dir: '' },
+        mediaUrl: watchanimeworld.abyssPartUrl(candidate.spec, 0),
+        episodeRef: episode.id,
+        allowedHosts: new Set([`${candidate.spec.h}.sssrr.org`]),
+        subUrls: [],
+        subtitles: [],
+      };
+      sessions.set(sid, session);
+      const meta = {
+        session: sid,
+        provider: 'watchanimeworld',
+        kind: 'progressive',
+        container: 'mp4',
+        title: media.title,
+        episode: session.episode,
+        quality: session.quality,
+        variants: session.variants,
+        audio: session.audio,
+        skip: null,
+        proof: session.proof,
+        master: `/stream/${sid}/media.mp4`,
+        subtitles: [],
+      };
+      recent.set(`${title.toLowerCase()}|${ep}|${audio}|watchanimeworld`, { at: Date.now(), sid });
+      return meta;
+    } catch {
+      // try next candidate
+    }
+  }
+  throw Object.assign(new Error('no playable WatchAnimeWorld rendition'), { code: 'RESOLVE_FAILED' });
+}
+
 async function buildSourceAnimewave({ title, ep, audio }) {
   const signal = AbortSignal.timeout(RESOLVE_TIMEOUT_MS);
   const { media, episodes } = await detailsForProvider('animewave', title);
@@ -483,6 +550,7 @@ async function buildSourceProvider(provider, { title, ep, audio }) {
   if (norm === 'hianime') return await buildSourceHianime({ title, ep, audio });
   if (norm === 'anikoto') return await buildSourceAnikoto({ title, ep, audio });
   if (norm === 'animedubhindi') return await buildSourceAdb({ title, ep, audio });
+  if (norm === 'watchanimeworld') return await buildSourceWatchanimeworld({ title, ep, audio });
   if (norm === 'animewave') return await buildSourceAnimewave({ title, ep, audio });
   if (norm === 'animekai') return await buildSourceAnimekai({ title, ep, audio });
   throw new Error(`Unsupported provider: ${provider}`);
@@ -542,7 +610,7 @@ async function buildSource({ title, ep, audio, provider = 'auto', fallback = tru
   if (audio === 'hindi') {
     candidates = ['animedubhindi'];
   } else if (audio === 'dub') {
-    candidates = ['aniwatch', 'anikoto', 'hianime', 'animedubhindi'];
+    candidates = ['aniwatch', 'anikoto', 'hianime', 'watchanimeworld', 'animedubhindi'];
   } else {
     candidates = ['aniwatch', 'anikoto', 'hianime'];
   }
@@ -649,7 +717,7 @@ async function buildAudios({ title, ep }) {
 /* ----------------------------------------------------------- stream proxy */
 
 function freshSignedUrl(session, target) {
-  if (session.kind === 'progressive' || session.provider === 'animedubhindi' || session.provider === 'hianime') {
+  if (session.kind === 'progressive' || session.provider === 'animedubhindi' || session.provider === 'hianime' || session.provider === 'watchanimeworld') {
     return target;
   }
   const u = new URL(target);
@@ -699,7 +767,68 @@ function rewritePlaylist(session, text, baseUrl) {
     .join('\n');
 }
 
+async function serveWawStream(req, res, session, signal) {
+  const spec = session.spec;
+  const rangeHeader = req.headers.range;
+  const parsedRange = watchanimeworld.parseAbyssRange(rangeHeader, spec.s);
+  if (parsedRange === 'unsatisfiable') {
+    cors(res);
+    res.statusCode = 416;
+    res.setHeader('content-range', `bytes */${spec.s}`);
+    res.end();
+    return;
+  }
+
+  const start = parsedRange ? parsedRange.start : 0;
+  const requestedEnd = parsedRange ? parsedRange.end : spec.s - 1;
+  const end = Math.min(requestedEnd, start + 8 * 1024 * 1024 - 1);
+
+  cors(res);
+  res.statusCode = parsedRange ? 206 : 200;
+  res.setHeader('cache-control', 'no-store');
+  res.setHeader('accept-ranges', 'bytes');
+  res.setHeader('content-length', String(end - start + 1));
+  if (parsedRange) {
+    res.setHeader('content-range', `bytes ${start}-${end}/${spec.s}`);
+  }
+  res.setHeader('content-type', 'video/mp4');
+
+  const chunkLen = watchanimeworld.ABYSS_PART_SIZE;
+  const startPart = Math.floor(start / chunkLen);
+  const endPart = Math.floor(end / chunkLen);
+
+  for (let p = startPart; p <= endPart; p++) {
+    if (res.writableEnded || res.destroyed) break;
+    const pStart = p === startPart ? (start % chunkLen) : 0;
+    const pEnd = p === endPart ? (end % chunkLen) : (watchanimeworld.abyssPartLength(spec.s, p) - 1);
+    const partUrl = watchanimeworld.abyssPartUrl(spec, p);
+    try {
+      const partRes = await fetch(partUrl, {
+        headers: {
+          referer: 'https://player.abyssplayer.com/',
+          range: `bytes=${pStart}-${pEnd}`,
+        },
+        signal,
+      });
+      if (!partRes.ok && partRes.status !== 206) break;
+      const body = partRes.body;
+      if (body) {
+        for await (const chunk of body) {
+          if (!res.write(chunk)) await new Promise((r) => res.once('drain', r));
+        }
+      }
+    } catch {
+      break;
+    }
+  }
+  res.end();
+}
+
 async function serveStream(req, res, session, target, signal) {
+  if (session.provider === 'watchanimeworld' && session.spec) {
+    return await serveWawStream(req, res, session, signal);
+  }
+
   const upstream = freshSignedUrl(session, target);
   const res2 = await fetch(upstream, {
     headers: { referer: session.referer, ...(req.headers.range ? { range: req.headers.range } : {}) },
@@ -755,7 +884,7 @@ const server = createServer(async (req, res) => {
     if (url.pathname === '/health') {
       return json(res, 200, {
         ok: true,
-        providers: ['auto', 'aniwatch', 'hianime', 'anikoto', 'animedubhindi', 'animewave', 'animekai'],
+        providers: ['auto', 'aniwatch', 'hianime', 'anikoto', 'animedubhindi', 'watchanimeworld', 'animewave', 'animekai'],
         dispatcher: true,
         race: true,
         bridge: 'api/bridge.mjs',
@@ -772,6 +901,7 @@ const server = createServer(async (req, res) => {
       if (targetProv === 'animedubhindi') mod = animedubhindi;
       else if (targetProv === 'hianime') mod = hianime;
       else if (targetProv === 'aniwatch') mod = aniwatch;
+      else if (targetProv === 'watchanimeworld') mod = watchanimeworld;
       else if (targetProv === 'animewave') mod = animewave;
       else if (targetProv === 'animekai') mod = animekai;
 
@@ -797,7 +927,7 @@ const server = createServer(async (req, res) => {
           session: reuse.sid, provider: s.provider ?? 'anikoto', kind: s.kind ?? 'hls', container: s.container,
           title: s.title, episode: s.episode, quality: s.quality,
           variants: s.variants, audio: s.audio, skip: s.skip ?? null, proof: s.proof,
-          master: s.kind === 'progressive' ? `/stream/${reuse.sid}/media.mkv` : `/stream/${reuse.sid}/master.m3u8`,
+          master: s.kind === 'progressive' ? `/stream/${reuse.sid}/media.${s.container === 'matroska' ? 'mkv' : 'mp4'}` : `/stream/${reuse.sid}/master.m3u8`,
           subtitles: s.subtitles, reused: true,
         });
       }
@@ -865,7 +995,7 @@ const server = createServer(async (req, res) => {
 
     return json(res, 404, {
       error: 'NOT_FOUND',
-      endpoints: ['/health', '/search?q=&provider=', '/resolve?title=&ep=&audio=&provider=', '/audios?title=&ep=', '/stream/:sid/media.mkv', '/stream/:sid/master.m3u8', '/stream/:sid/play?u=', '/stream/:sid/sub/:i.vtt'],
+      endpoints: ['/health', '/search?q=&provider=', '/resolve?title=&ep=&audio=&provider=', '/audios?title=&ep=', '/stream/:sid/media.mkv', '/stream/:sid/media.mp4', '/stream/:sid/master.m3u8', '/stream/:sid/play?u=', '/stream/:sid/sub/:i.vtt'],
     });
   } catch (e) {
     const timedOut = e?.name === 'TimeoutError' || e?.name === 'AbortError';
@@ -888,6 +1018,7 @@ export {
   buildSourceAniwatch,
   buildSourceHianime,
   buildSourceAdb,
+  buildSourceWatchanimeworld,
   buildSourceAnimewave,
   buildSourceAnimekai,
   buildAudios,

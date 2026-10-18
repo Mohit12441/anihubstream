@@ -171,6 +171,27 @@ describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
     assert.ok(['aniwatch', 'anikoto', 'hianime'].includes(resFallback.provider));
   });
 
+  it('GET /resolve with provider=watchanimeworld resolves direct MP4 stream', async () => {
+    const res = await fetch(`${bridgeUrl}/resolve?title=naruto&ep=1&audio=dub&provider=watchanimeworld`);
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.ok(body.session, 'has session id');
+    assert.equal(body.provider, 'watchanimeworld');
+    assert.equal(body.kind, 'progressive');
+    assert.equal(body.container, 'mp4');
+    assert.ok(body.master.startsWith('/stream/'));
+    assert.ok(body.master.includes('/media.mp4'));
+
+    // Verify chunked stream range request
+    const streamRes = await fetch(`${bridgeUrl}${body.master}`, {
+      headers: { range: 'bytes=0-255' },
+    });
+    assert.equal(streamRes.status, 206);
+    const buf = Buffer.from(await streamRes.arrayBuffer());
+    assert.equal(buf.length, 256);
+    assert.equal(buf.subarray(4, 8).toString('utf8'), 'ftyp');
+  });
+
   it('Refusal status codes are mapped to 4xx for edge survival', async () => {
     const res = await fetch(`${bridgeUrl}/resolve?title=slime&ep=9999&provider=animedubhindi&fallback=false`);
     assert.ok(res.status >= 400 && res.status < 500, `status ${res.status} is 4xx`);

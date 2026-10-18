@@ -8,6 +8,8 @@ name: kitsu-sync
 # Same double lock as the AniList job: concurrency group here, D1 lease in the script.
 
 on:
+  schedule:
+    - cron: '17,47 * * * *'
   repository_dispatch:
     types: [kitsu-sync]
   workflow_dispatch: {}
