@@ -444,8 +444,8 @@ export async function sources(episodeId, { audioType, signal } = {}) {
     const mapData = await fetchMapperData(ref.malId, ref.epSlug, ref.timestamp, signal);
     if (mapData && typeof mapData === "object") {
       for (const [providerName, provData] of Object.entries(mapData)) {
-        if (!provData || typeof provData !== "object" || providerName === "status") continue;
-        for (const lang of ["sub", "dub"]) {
+        const langOrder = requested === "dub" ? ["dub", "sub"] : ["sub", "dub"];
+        for (const lang of langOrder) {
           const langData = provData[lang];
           if (!langData) continue;
           if (langData.download && typeof langData.download === "object") {
