@@ -5,16 +5,18 @@
 const VIEWER_COOKIE = 'anihub_viewer';
 const VIEWER_AGE = 60 * 60 * 24 * 730; // two years — the library is meant to survive
 
-export const json = (data, { status = 200, cache = 'no-store', headers = {} } = {}) =>
-  new Response(JSON.stringify(data), {
+export const json = (data, { status = 200, cache = 'no-store', isPrivate = false, headers = {} } = {}) => {
+  const isPublic = !isPrivate && cache.includes('public');
+  return new Response(JSON.stringify(data), {
     status,
     headers: {
       'content-type': 'application/json; charset=utf-8',
       'cache-control': cache,
-      vary: 'Cookie',
+      vary: isPublic ? 'Accept-Encoding' : 'Cookie',
       ...headers,
     },
   });
+};
 
 export const ok = (data, opts = {}) => json(data, { cache: 'public, max-age=60', ...opts });
 export const fail = (status, code, message) => json({ error: code, message }, { status });

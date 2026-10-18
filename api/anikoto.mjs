@@ -37,7 +37,7 @@ import { Readable } from "node:stream";
 import { once } from "node:events";
 import { makeDubPairVerdict } from "./dubAudio.mjs";
 
-const ANIKOTO_MAIN = "https://anikototv.to";
+const ANIKOTO_MAIN = process.env.ANIKOTO_ORIGIN ?? "https://anikoto.cz";
 const MEGAPLAY_HOSTS = [
   "megaplay.buzz", "megaplay-1.buzz",
   "vidwish.live", "vidwish.to",
@@ -278,16 +278,27 @@ function watchUrlFor(id) {
   return `${ANIKOTO_MAIN}/watch/${bare}`;
 }
 
-function encodeEpisodeRef({ watchId, serverIds, audioType, watchUrl }) {
-  return ["anikoto", watchId, serverIds, audioType, ...(watchUrl ? [watchUrl] : [])].join("|");
+function encodeEpisodeRef({ watchId, serverIds, audioType, watchUrl, malId, epSlug, timestamp }) {
+  return ["anikoto", watchId, serverIds, audioType, watchUrl || "", malId || "", epSlug || "", timestamp || ""].join("|");
 }
 
 function decodeEpisodeRef(id) {
   if (!id.startsWith("anikoto|")) return null;
   const parts = id.split("|");
   if (parts.length < 4) return null;
-  const watchUrl = parts[4]?.trim();
-  return { watchId: parts[1] ?? "", serverIds: (parts[2] ?? "").trim(), audioType: (parts[3] ?? "sub").trim() || "sub", ...(watchUrl ? { watchUrl } : {}) };
+  const watchUrl = parts[4]?.trim() || undefined;
+  const malId = parts[5]?.trim() || undefined;
+  const epSlug = parts[6]?.trim() || undefined;
+  const timestamp = parts[7]?.trim() || undefined;
+  return {
+    watchId: parts[1] ?? "",
+    serverIds: (parts[2] ?? "").trim(),
+    audioType: (parts[3] ?? "sub").trim() || "sub",
+    ...(watchUrl ? { watchUrl } : {}),
+    ...(malId ? { malId } : {}),
+    ...(epSlug ? { epSlug } : {}),
+    ...(timestamp ? { timestamp } : {}),
+  };
 }
 
 const ajaxHeaders = { "x-requested-with": "XMLHttpRequest", accept: "application/json, text/javascript, */*;" };
@@ -295,6 +306,25 @@ const ajaxHeaders = { "x-requested-with": "XMLHttpRequest", accept: "application
 async function getAjax(url, referer, signal) {
   const { body } = await getText(url, { headers: ajaxHeaders, referer, signal });
   return body;
+}
+
+async function fetchMapperData(malId, epSlug, timestamp, signal) {
+  if (!malId) return null;
+  const slug = epSlug || "1";
+  const ts = timestamp || "0";
+  try {
+    const res = await fetch(`https://mapper.nekostream.site/api/mal/${encodeURIComponent(malId)}/${encodeURIComponent(slug)}/${encodeURIComponent(ts)}`, {
+      headers: {
+        referer: `${ANIKOTO_MAIN}/`,
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)',
+      },
+      signal: signal ? AbortSignal.any([signal, AbortSignal.timeout(4000)]) : AbortSignal.timeout(4000),
+    });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
 }
 
 async function episodesFor(watchId, mediaId, watchUrl, signal) {
@@ -315,10 +345,15 @@ async function episodesFor(watchId, mediaId, watchUrl, signal) {
     const title = clean(tag.match(/class="[^"]*d-title[^"]*"[^>]*>([\s\S]*?)<\/[^>]*>/i)?.[1] ?? "") ||
       attr(tag, /data-jp="([^"]*)"/i)?.trim() || `Episode ${number}`;
     const mal = attr(tag, /data-mal="(\d+)"/i);
+    const epSlug = attr(tag, /data-slug="([^"]*)"/i)?.trim() || String(number);
+    const timestamp = attr(tag, /data-timestamp="([^"]*)"/i)?.trim();
     if (mal && !malId) malId = mal;
     episodes.push({
-      id: encodeEpisodeRef({ watchId, serverIds, audioType: audioType === "dub" ? "dub" : "sub", watchUrl }),
+      id: encodeEpisodeRef({ watchId, serverIds, audioType: audioType === "dub" ? "dub" : "sub", watchUrl, malId: mal, epSlug, timestamp }),
       mediaId, seasonNumber: 1, number, title, url: watchUrl, audioType,
+      ...(mal ? { malId: mal } : {}),
+      ...(epSlug ? { epSlug } : {}),
+      ...(timestamp ? { timestamp } : {}),
     });
   }
   return { episodes, malId };
@@ -372,7 +407,7 @@ export async function sources(episodeId, { audioType, signal } = {}) {
   const referer = ref.watchUrl ?? `${ANIKOTO_MAIN}/`;
   if (!/^[A-Za-z0-9+/=_-]{1,1024}$/.test(ref.serverIds)) throw new ApiError("AniKoto server set is not a valid opaque token", 0);
   const serverHtml = jsonHtml(await getAjax(`${ANIKOTO_MAIN}/ajax/server/list?servers=${encodeURIComponent(ref.serverIds)}`, referer, signal));
-  if (!serverHtml) return { embeds: [], subtitles: [], skip: undefined };
+  if (!serverHtml) return { embeds: [], subtitles: [], skip: undefined, downloads: [], servers: [] };
   const entries = parseServerLinks(serverHtml);
   // The caller's ask wins; the ref's label (encoded from the listing row) is the
   // default for callers who did not ask.  Hardsubs ("hsub") count as sub.
@@ -380,12 +415,6 @@ export async function sources(episodeId, { audioType, signal } = {}) {
   const wanted = requested === "dub" ? ["dub"] : ["sub", "hsub"];
   const typed = entries.filter((e) => e.type !== "");
   const scoped = typed.filter((e) => wanted.includes(e.type));
-  // The fallback is for layout variance only — a page whose items carry no
-  // `data-type` at all.  When the page IS typed and the asked group is simply
-  // absent the answer is zero embeds: a `sub` item is the Japanese audio, and
-  // opening it on a dub ask is how a caller comes to advertise Japanese as
-  // English (measured live 2026-10-12 on the sibling HiAnime API, where
-  // `link={sub:1,dub:0}` rows do exist).
   const usable = typed.length === 0 ? entries : scoped;
   const embeds = [];
   const seenLink = new Set();
@@ -407,7 +436,51 @@ export async function sources(episodeId, { audioType, signal } = {}) {
       if (e?.name === "AbortError") break;
     }
   }
-  return { embeds, subtitles: [], audioType: requested, ...(skip ? { skip } : {}) };
+
+  // Mapper downloads & servers discovery:
+  const downloads = [];
+  const mappedServers = [];
+  if (ref.malId) {
+    const mapData = await fetchMapperData(ref.malId, ref.epSlug, ref.timestamp, signal);
+    if (mapData && typeof mapData === "object") {
+      for (const [providerName, provData] of Object.entries(mapData)) {
+        if (!provData || typeof provData !== "object" || providerName === "status") continue;
+        for (const lang of ["sub", "dub"]) {
+          const langData = provData[lang];
+          if (!langData) continue;
+          if (langData.download && typeof langData.download === "object") {
+            for (const [quality, dlUrl] of Object.entries(langData.download)) {
+              if (dlUrl && typeof dlUrl === "string") {
+                downloads.push({
+                  name: `${providerName} (${lang.toUpperCase()}) ${quality}`,
+                  quality,
+                  url: dlUrl,
+                  provider: providerName.toLowerCase(),
+                  audio: lang,
+                });
+              }
+            }
+          }
+          if (langData.url && typeof langData.url === "string") {
+            mappedServers.push({
+              name: `${providerName} (${lang.toUpperCase()})`,
+              linkId: langData.url,
+              type: lang,
+            });
+          }
+        }
+      }
+    }
+  }
+
+  return {
+    embeds,
+    subtitles: [],
+    audioType: requested,
+    ...(skip ? { skip } : {}),
+    downloads,
+    servers: [...usable, ...mappedServers],
+  };
 }
 
 // ------------------------------------------------------------ Megaplay embed

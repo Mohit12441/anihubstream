@@ -291,7 +291,24 @@ export function useLiveStream(o: Options) {
       const { default: HlsCtor } = await import('hls.js');
       if (cancelled) return;
       if (HlsCtor.isSupported()) {
-        hls = new HlsCtor({ maxBufferLength: 30, backBufferLength: 30 });
+        hls = new HlsCtor({
+          enableWorker: true,
+          maxBufferLength: 60,
+          maxMaxBufferLength: 120,
+          backBufferLength: 60,
+          maxBufferSize: 60 * 1024 * 1024,
+          maxBufferHole: 0.5,
+          highBufferWatchdogPeriod: 2,
+          nudgeOffset: 0.1,
+          nudgeMaxRetry: 5,
+          manifestLoadingTimeOut: 10000,
+          levelLoadingTimeOut: 10000,
+          fragLoadingTimeOut: 15000,
+          fragLoadingMaxRetry: 4,
+          fragLoadingRetryDelay: 500,
+          startLevel: -1,
+          testBandwidth: true,
+        });
         hlsRef.current = hls;
         /* 'ready' is set from the video's own loadedmetadata (real media data
            appended) — a parsed manifest alone is not playback. */

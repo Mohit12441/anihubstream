@@ -273,7 +273,7 @@ async function detailsForProvider(provider, title) {
 const detailsForAnikoto = (title) => detailsForProvider('anikoto', title);
 const detailsForAdb = (title) => detailsForProvider('animedubhindi', title);
 
-function createHlsSession({ provider, media, episode, resolvedResult, sniffed, defaultReferer, skip, audio }) {
+function createHlsSession({ provider, media, episode, resolvedResult, sniffed, defaultReferer, skip, audio, downloads = [], servers = [] }) {
   const mediaUrl = typeof resolvedResult.master === 'object' ? resolvedResult.master.url : resolvedResult.master;
   const mediaBase = new URL(mediaUrl);
   const dir = mediaBase.pathname.replace(/\/[^/]*\.m3u8$/i, '');
@@ -307,6 +307,8 @@ function createHlsSession({ provider, media, episode, resolvedResult, sniffed, d
   };
   sessions.set(sid, session);
 
+  const primaryDownloadUrl = (downloads && downloads.length > 0 ? downloads[0].url : null) ?? session.downloadPage ?? `/stream/${sid}/master.m3u8`;
+
   return {
     session: sid,
     provider,
@@ -320,7 +322,9 @@ function createHlsSession({ provider, media, episode, resolvedResult, sniffed, d
     proof: session.proof,
     master: `/stream/${sid}/master.m3u8`,
     downloadPage: session.downloadPage,
-    downloadUrl: session.downloadPage ?? `/stream/${sid}/master.m3u8`,
+    downloadUrl: primaryDownloadUrl,
+    downloads: downloads || [],
+    servers: servers || [],
     subtitles: session.subtitles,
   };
 }
@@ -333,7 +337,7 @@ async function buildSourceAnikoto({ title, ep, audio }) {
   const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
   if (!episode) throw Object.assign(new Error(`episode ${ep} is not in AniKoto list (${episodes.length} listed)`), { code: 'NO_SUCH_EPISODE' });
 
-  const { embeds, skip } = await anikoto.sources(episode.id, { audioType: audio, signal });
+  const { embeds, skip, downloads, servers } = await anikoto.sources(episode.id, { audioType: audio, signal });
   if (!embeds.length) throw Object.assign(new Error(`no ${audio} embeds for episode ${ep}`), { code: 'NO_EMBEDS' });
 
   const candidates = rankEmbeds(embeds).slice(0, 3);
@@ -344,6 +348,7 @@ async function buildSourceAnikoto({ title, ep, audio }) {
       if (sniffed) {
         return createHlsSession({
           provider: 'anikoto', media, episode, resolvedResult: r, sniffed, defaultReferer: UA_REFERER, skip, audio,
+          downloads, servers,
         });
       }
     } catch {
@@ -1017,9 +1022,16 @@ async function serveStream(req, res, session, target, signal) {
   const type = res2.headers.get('content-type') ?? '';
   const path = new URL(upstream).pathname.toLowerCase();
   const looksPlaylist = (/mpegurl/i.test(type) || path.endsWith('.m3u8')) && session.kind !== 'progressive';
+  const isMediaSegment = path.endsWith('.ts') || path.endsWith('.m4s') || path.endsWith('.mp4');
   cors(res);
   res.statusCode = res2.status;
-  res.setHeader('cache-control', 'no-store');
+  if (looksPlaylist) {
+    res.setHeader('cache-control', 'public, max-age=5, stale-while-revalidate=10');
+  } else if (isMediaSegment) {
+    res.setHeader('cache-control', 'public, max-age=86400, immutable');
+  } else {
+    res.setHeader('cache-control', 'no-store');
+  }
   if (res2.headers.get('accept-ranges')) res.setHeader('accept-ranges', res2.headers.get('accept-ranges'));
   if (res2.headers.get('content-length')) res.setHeader('content-length', res2.headers.get('content-length'));
   if (res2.headers.get('content-range')) res.setHeader('content-range', res2.headers.get('content-range'));

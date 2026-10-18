@@ -42,6 +42,8 @@ export interface BridgeSource {
   winner?: string;
   downloadPage?: string | null;
   downloadUrl?: string | null;
+  downloads?: { name: string; quality?: string; url: string; provider?: string; audio?: string }[];
+  servers?: { name: string; linkId: string; type?: string }[];
 }
 
 export interface ResolveFailure {
