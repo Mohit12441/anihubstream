@@ -57,7 +57,23 @@ export const LIVE_SERVER: StreamServer = {
   note: 'Real playback through the AniKoto bridge — it resolves the episode and proxies the stream; the player reports whether the bridge answers.',
 };
 
-export const SERVERS: StreamServer[] = [LIVE_SERVER];
+export const ANIMEDUBHINDI_SERVER: StreamServer = {
+  id: 'animedubhindi-live',
+  name: 'AnimeDubHindi',
+  region: 'Hindi Dub (Multi-Audio)',
+  status: 'online',
+  capabilities: {
+    qualities: ['auto', '1080p', '720p', '480p'],
+    subtitleLanguages: [],
+    subtitleType: 'none',
+    audioLanguages: ['Hindi (dub)', 'Multi Audio (Hindi, Tamil, Telugu, English, Japanese)'],
+  },
+  sourceUrl: 'http://127.0.0.1:8795',
+  responseMs: 0,
+  note: 'Real Hindi dub and multi-audio playback through AnimeDubHindi via the stream bridge.',
+};
+
+export const SERVERS: StreamServer[] = [LIVE_SERVER, ANIMEDUBHINDI_SERVER];
 
 export const serverById = (id: string): StreamServer =>
   SERVERS.find((s) => s.id === id) ?? SERVERS[0];

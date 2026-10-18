@@ -25,6 +25,9 @@ export interface BridgeSubtitle {
 
 export interface BridgeSource {
   session: string;
+  provider?: string;
+  kind?: 'hls' | 'progressive';
+  container?: string;
   title: string;
   episode: { number: number; title: string };
   quality: number | string;
@@ -111,8 +114,14 @@ const activeResolves = new Map<string, Promise<BridgeSource | ResolveFailure>>()
 const slugifyKey = (t: string) =>
   t.toLowerCase().replace(/[^a-z0-9_-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'anime';
 
-export function streamCacheKey(title: string, ep: number, audio: 'sub' | 'dub'): string {
-  return `stream:${slugifyKey(title)}:${ep}:${audio}`;
+export function streamCacheKey(
+  title: string,
+  ep: number,
+  audio: 'sub' | 'dub' | string,
+  provider: string = 'auto',
+): string {
+  const provSuffix = provider && provider !== 'auto' ? `:${provider}` : '';
+  return `stream:${slugifyKey(title)}:${ep}:${audio}${provSuffix}`;
 }
 
 export function getCachedSource(key: string): BridgeSource | null {
@@ -156,20 +165,22 @@ export function setCachedSource(key: string, data: BridgeSource): void {
 export async function prefetchEpisode(
   title: string,
   ep: number,
-  audio: 'sub' | 'dub',
+  audio: 'sub' | 'dub' | string,
+  provider: string = 'auto',
 ): Promise<void> {
   if (!title || ep < 1) return;
-  const key = streamCacheKey(title, ep, audio);
+  const key = streamCacheKey(title, ep, audio, provider);
   if (getCachedSource(key)) return;
-  void bridgeResolve(title, ep, audio);
+  void bridgeResolve(title, ep, audio, provider);
 }
 
 export async function bridgeResolve(
   title: string,
   ep: number,
-  audio: 'sub' | 'dub',
+  audio: 'sub' | 'dub' | string,
+  provider: string = 'auto',
 ): Promise<BridgeSource | ResolveFailure> {
-  const key = streamCacheKey(title, ep, audio);
+  const key = streamCacheKey(title, ep, audio, provider);
   const cached = getCachedSource(key);
   if (cached) return cached;
 
@@ -195,8 +206,8 @@ export async function bridgeResolve(
 
     try {
       const res = await fetch(
-        bridgeUrl(`/resolve?title=${encodeURIComponent(title)}&ep=${ep}&audio=${audio}`),
-        { signal: AbortSignal.timeout(30_000) },
+        bridgeUrl(`/resolve?title=${encodeURIComponent(title)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}`),
+        { signal: AbortSignal.timeout(45_000) },
       );
       const body = (await res.json()) as BridgeSource | ResolveFailure;
       if (!res.ok) {

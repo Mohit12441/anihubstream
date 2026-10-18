@@ -3,7 +3,7 @@ import { Play, RefreshCw, SkipForward, WifiOff, X } from 'lucide-react';
 import type { Anime, Episode, Marker } from '../../data/model';
 import { toSeconds } from '../../data/model';
 import { fetchSkipTimes } from '../../lib/aniskip';
-import { LIVE_SERVER, type ServerStatus } from '../../data/servers';
+import { LIVE_SERVER, SERVERS, serverById, type ServerStatus } from '../../data/servers';
 import { useToast } from '../../lib/Toast';
 import { usePrefersReducedMotion } from '../../lib/motion';
 import { usePlayerEngine, type PlayerEngine } from '../../lib/usePlayerEngine';
@@ -89,10 +89,14 @@ export function AdvancedPlayer(props: Props) {
       ? switchSeekRef.current
       : resumeRef.current;
 
+  const [selectedServerId, setSelectedServerId] = useState<string>(LIVE_SERVER.id);
+  const server = serverById(selectedServerId);
+
   const live = useLiveStream({
     title: anime.title,
     episode: episode.n,
     audio: prefs.audio,
+    provider: selectedServerId === 'animedubhindi-live' ? 'animedubhindi' : 'anikoto',
     subsOn: prefs.subtitles.enabled,
     subLanguage: prefs.subtitles.language,
     startAt: startAtForLive,
@@ -105,7 +109,6 @@ export function AdvancedPlayer(props: Props) {
      switch it off entirely; a control that can only ever fail should not be drawn. live.pip()
      still reports the truth when the request itself is refused. */
   const pipSupported = document.pictureInPictureEnabled !== false;
-  const server = LIVE_SERVER;
   const serverStatus: ServerStatus =
     live.status === 'ready' ? 'online' : live.status === 'resolving' ? 'degraded' : 'unavailable';
 
@@ -442,11 +445,12 @@ export function AdvancedPlayer(props: Props) {
   }, [autoNextOpen, prefs.autoNext, hasNext, onNext]);
 
   /* ---------- server ---------- */
-  /* AniKoto is the only source; re-picking it (or its retry) re-probes the bridge */
-  const pickServer = () => {
+  const pickServer = (id: string = selectedServerId) => {
+    setSelectedServerId(id);
     setMenu({ kind: 'none' });
+    const sName = serverById(id).name;
+    notify(`Switched to ${sName} server`);
     if (!liveReady && live.status !== 'resolving') {
-      notify('Re-probing the AniKoto bridge…');
       live.retry();
     }
   };
@@ -888,9 +892,12 @@ export function AdvancedPlayer(props: Props) {
 
         {menu.kind === 'server' && (
           <ServerSelector
-            servers={[{ ...LIVE_SERVER, status: serverStatus }]}
-            currentId={LIVE_SERVER.id}
-            onSelect={() => pickServer()}
+            servers={SERVERS.map((s) => ({
+              ...s,
+              status: s.id === selectedServerId ? serverStatus : 'online',
+            }))}
+            currentId={selectedServerId}
+            onSelect={(id) => pickServer(id)}
             onRetry={live.retry}
             onClose={() => setMenu({ kind: 'none' })}
           />

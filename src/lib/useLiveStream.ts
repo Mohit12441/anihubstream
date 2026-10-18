@@ -49,6 +49,7 @@ interface Options {
   title: string;
   episode: number;
   audio: 'sub' | 'dub';
+  provider?: string;
   /** captions on/off and the requested language (ISO code) */
   subsOn: boolean;
   subLanguage: string | null;
@@ -162,20 +163,20 @@ export function useLiveStream(o: Options) {
         }
         autoTries.current = 0;
         errorTries.current = 0;
-        let res = await bridgeResolve(o.title, o.episode, o.audio);
+        let res = await bridgeResolve(o.title, o.episode, o.audio, o.provider ?? 'auto');
         if (cancel) return;
         if (isResolveFailure(res)) {
           /* a dub ask for an episode that has no dubbed file falls back to the original
              rather than leaving the viewer with an error — the audio the episode actually
              carries wins over the stored intent */
           if (o.audio === 'dub' && res.error === 'NO_EMBEDS') {
-            const sub = await bridgeResolve(o.title, o.episode, 'sub');
+            const sub = await bridgeResolve(o.title, o.episode, 'sub', o.provider ?? 'auto');
             if (cancel) return;
             if (!isResolveFailure(sub)) {
               setAudioFallback(true);
               setInfo(sub);
               // Prefetch next episode in the background
-              prefetchEpisode(o.title, o.episode + 1, 'sub');
+              prefetchEpisode(o.title, o.episode + 1, 'sub', o.provider ?? 'auto');
               return;
             }
             res = sub;
@@ -187,7 +188,7 @@ export function useLiveStream(o: Options) {
         }
         setInfo(res);
         // Automatically warm and prefetch the next episode so autoplay/bingeing is instant!
-        prefetchEpisode(o.title, o.episode + 1, o.audio);
+        prefetchEpisode(o.title, o.episode + 1, o.audio, o.provider ?? 'auto');
       } finally {
         window.clearInterval(timer);
         window.clearTimeout(timeoutId);
@@ -198,7 +199,7 @@ export function useLiveStream(o: Options) {
       window.clearInterval(timer);
       window.clearTimeout(timeoutId);
     };
-  }, [o.title, o.episode, o.audio, nonce]);
+  }, [o.title, o.episode, o.audio, o.provider, nonce]);
 
   /* ---------- self-heal a transient offline, or a refusal a re-resolve can clear ---------- */
   useEffect(() => {
@@ -262,6 +263,17 @@ export function useLiveStream(o: Options) {
     let hls: Hls | null = null;
     void (async () => {
       const url = bridgeUrl(info.master);
+      const isProgressive = info.kind === 'progressive' ||
+        info.container === 'matroska' ||
+        info.container === 'mp4' ||
+        (!url.includes('.m3u8') && !url.includes('.m3u'));
+
+      if (isProgressive) {
+        v.src = url;
+        v.load();
+        return;
+      }
+
       const { default: HlsCtor } = await import('hls.js');
       if (cancelled) return;
       if (HlsCtor.isSupported()) {
