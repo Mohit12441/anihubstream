@@ -41,7 +41,7 @@ export function Genres() {
   useSEO({
     title: genre
       ? `${genreLabel(genre)} Anime — Browse Categories | AniHubStream`
-      : 'Anime Genres & Categories — Explore Collections | AniHubStream',
+      : 'Anime Genres & Categories | AniHubStream',
     description: 'Browse anime by genre: Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Slice of Life, and more.',
     canonicalUrl: genre ? `https://anihubstream.com/genres?genre=${genre}` : 'https://anihubstream.com/genres',
   });

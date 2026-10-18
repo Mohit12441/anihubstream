@@ -62,7 +62,7 @@ export function AnimeCatalogue() {
       ? `Search results for "${needle}" — Anime Catalogue | AniHubStream`
       : genre
         ? `${genreLabel(genre)} Anime — Watch Free | AniHubStream`
-        : 'Browse Anime Catalogue — Discover Series & Movies | AniHubStream',
+        : 'Anime Catalogue — Discover Series & Movies | AniHubStream',
     description: 'Explore the full AniHubStream anime catalogue. Filter by genre, release year, format (TV, Movie, OVA), and rating.',
     canonicalUrl: 'https://anihubstream.com/anime',
   });

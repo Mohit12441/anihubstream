@@ -70,20 +70,19 @@ export async function onRequest(context) {
         const cleanSynopsis = (row.synopsis || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
         desc = cleanSynopsis ? cleanSynopsis.slice(0, 150).trim() : `Watch ${animeTitle} free online in high definition on AniHubStream.`;
 
-        if (epNum && epNum > 1) {
-          title = `${animeTitle} Episode ${epNum} — Watch Online Free | AniHubStream`;
+        if (epNum && epNum >= 1) {
+          title = `${animeTitle} Ep ${epNum} — Watch Free | AniHubStream`;
           canonical = `${origin}/watch/${id}/${epNum}`;
           ogType = 'video.episode';
         } else {
-          title = `${animeTitle}${yearStr} — Watch Online Free | AniHubStream`;
+          title = `${animeTitle}${yearStr} — Watch Free | AniHubStream`;
           canonical = `${origin}/watch/${id}`;
           ogType = 'video.tv_show';
         }
 
         ogImage = row.key_art || row.art || ogImage;
 
-        jsonLd = {
-          '@context': 'https://schema.org',
+        const mainEntity = {
           '@type': epNum ? 'TVEpisode' : 'TVSeries',
           name: epNum ? `${animeTitle} Episode ${epNum}` : animeTitle,
           alternateName: row.native || undefined,
@@ -102,6 +101,41 @@ export async function onRequest(context) {
             }
           } : {}),
         };
+
+        const breadcrumbs = {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Home',
+              item: origin,
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Anime',
+              item: `${origin}/anime`,
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: animeTitle,
+              item: `${origin}/watch/${id}`,
+            },
+            ...(epNum ? [{
+              '@type': 'ListItem',
+              position: 4,
+              name: `Episode ${epNum}`,
+              item: canonical,
+            }] : []),
+          ],
+        };
+
+        jsonLd = {
+          '@context': 'https://schema.org',
+          '@graph': [mainEntity, breadcrumbs],
+        };
       } catch (e) {
         console.error('Middleware D1 lookup failed:', e);
       }
@@ -119,7 +153,7 @@ export async function onRequest(context) {
       },
     };
   } else if (path === '/anime') {
-    title = 'Browse Anime Catalogue — Discover Series & Movies | AniHubStream';
+    title = 'Anime Catalogue — Discover Series & Movies | AniHubStream';
     desc = 'Explore the full AniHubStream anime catalogue. Filter by genre, release year, format (TV, Movie, OVA), and rating.';
   } else if (path === '/genres') {
     title = 'Anime Genres & Categories | AniHubStream';
@@ -145,6 +179,20 @@ export async function onRequest(context) {
   } else if (path === '/contact') {
     title = 'Contact AniHubStream';
     desc = 'Get in touch with the AniHubStream team for inquiries, bug reports, and feedback.';
+  }
+
+  // Generate crawler-visible semantic HTML body for thin content resolution
+  let preHtml = null;
+  if (path === '/about') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>About AniHubStream</h1><p>AniHubStream is a high-performance anime streaming platform engineered to provide instant playback, comprehensive metadata, and an ad-free viewing experience. Our catalog features subbed and dubbed anime across TV series, movies, and OVAs, synchronized with leading industry databases including Kitsu and AniList. Designed with edge caching, automated episode guides, and seamless bookmarks.</p></main>`;
+  } else if (path === '/dmca') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>DMCA & Copyright Policy</h1><p>AniHubStream respects intellectual property rights and complies with the Digital Millennium Copyright Act (DMCA). AniHubStream does not host media files on its servers; streams are embedded or linked from third-party services. If you believe your copyrighted work is accessible without authorization, please submit a formal takedown request containing the specific URL, description of work, and contact details.</p></main>`;
+  } else if (path === '/privacy') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Privacy Policy</h1><p>AniHubStream is committed to user privacy and minimal data retention. We do not require account registration to stream. Playback positions, preferences, and watchlist bookmarks are stored locally on your device using browser storage. Server logs are strictly anonymized for infrastructure health, caching performance, and DDoS prevention.</p></main>`;
+  } else if (path === '/terms') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Terms of Service</h1><p>Welcome to AniHubStream. By accessing our platform, you agree to these Terms of Service. AniHubStream provides an informational catalog and video streaming client for personal, non-commercial entertainment. Users agree not to misuse platform infrastructure, reverse-engineer proprietary services, or conduct automated scraping that degrades system stability.</p></main>`;
+  } else if (path === '/contact') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Contact AniHubStream</h1><p>Have questions, suggestions, or need to report a playback issue? Contact the AniHubStream development and support team. We continuously refine stream health, subtitle rendering, and catalog accuracy.</p></main>`;
   }
 
   // Use HTMLRewriter to dynamically rewrite head tags
@@ -209,6 +257,14 @@ export async function onRequest(context) {
     rewriter = rewriter.on('head', {
       element(e) {
         e.append(`\n    <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`, { html: true });
+      },
+    });
+  }
+
+  if (preHtml) {
+    rewriter = rewriter.on('#root', {
+      element(e) {
+        e.setInnerContent(preHtml, { html: true });
       },
     });
   }

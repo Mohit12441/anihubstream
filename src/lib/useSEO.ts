@@ -8,9 +8,10 @@ interface SEOProps {
   type?: string;
   canonicalUrl?: string;
   jsonLd?: Record<string, unknown> | null;
+  noindex?: boolean;
 }
 
-export function useSEO({ title, description, image, type = 'website', canonicalUrl, jsonLd }: SEOProps = {}) {
+export function useSEO({ title, description, image, type = 'website', canonicalUrl, jsonLd, noindex = false }: SEOProps = {}) {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -63,6 +64,18 @@ export function useSEO({ title, description, image, type = 'website', canonicalU
     }
     twCard.setAttribute('content', 'summary_large_image');
 
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (noindex) {
+      if (!metaRobots) {
+        metaRobots = document.createElement('meta');
+        metaRobots.setAttribute('name', 'robots');
+        document.head.appendChild(metaRobots);
+      }
+      metaRobots.setAttribute('content', 'noindex, follow');
+    } else if (metaRobots) {
+      metaRobots.setAttribute('content', 'index, follow');
+    }
+
     let script = document.querySelector('script[type="application/ld+json"]');
     if (jsonLd) {
       if (!script) {
@@ -74,5 +87,5 @@ export function useSEO({ title, description, image, type = 'website', canonicalU
     } else if (script) {
       script.remove();
     }
-  }, [title, description, image, type, canonicalUrl, jsonLd, pathname]);
+  }, [title, description, image, type, canonicalUrl, jsonLd, noindex, pathname]);
 }

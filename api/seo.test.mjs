@@ -167,4 +167,96 @@ test('TASK 5 (P1) SEO: _middleware injects episode metadata and TVEpisode JSON-L
   assert.ok(html.includes('"@type":"TVEpisode"'), 'Must inject TVEpisode JSON-LD');
   assert.ok(html.includes('"episodeNumber":4'));
   assert.ok(html.includes('"url":"https://anihubstream.com/watch/frieren-beyond-journey-s-end/4"'));
+  assert.ok(html.includes('"@type":"BreadcrumbList"'), 'Must inject BreadcrumbList JSON-LD');
 });
+
+test('TASK 5 (P1) SEO: episode 1 receives dedicated Episode 1 title, canonical, and TVEpisode JSON-LD', async () => {
+  const animeRecord = {
+    title: '5 Centimeters per Second',
+    year: 2007,
+    rating: 8.5,
+    synopsis: 'A tale of two people who were close friends.',
+    art: 'https://media.kitsu.app/5cm-poster.jpg',
+    key_art: 'https://media.kitsu.app/5cm-banner.jpg',
+    episode_total: 3,
+    kind: 'movie',
+  };
+
+  const mockD1 = {
+    prepare: (query) => ({
+      bind: (slug) => ({
+        first: async () => animeRecord,
+      }),
+    }),
+  };
+
+  let titleSet = '';
+  let canonicalSet = '';
+  globalThis.HTMLRewriter = class MockHTMLRewriter {
+    constructor() {
+      this.handlers = [];
+    }
+    on(selector, handler) {
+      this.handlers.push({ selector, handler });
+      return this;
+    }
+    async transform(res) {
+      let html = await res.text();
+      for (const { selector, handler } of this.handlers) {
+        if (selector === 'title' && handler.element) {
+          handler.element({
+            setInnerContent(t) {
+              titleSet = t;
+            },
+          });
+        }
+        if (selector === 'link[rel="canonical"]' && handler.element) {
+          handler.element({
+            setAttribute(k, v) {
+              if (k === 'href') canonicalSet = v;
+            },
+          });
+        }
+        if (selector === 'head' && handler.element) {
+          handler.element({
+            append(content) {
+              html = html.replace('</head>', `${content}</head>`);
+            },
+          });
+        }
+      }
+      return new Response(html, { headers: res.headers });
+    }
+  };
+
+  const context = {
+    request: new Request('https://anihubstream.com/watch/5-centimeters-per-second/1'),
+    next: async () => new Response('<!doctype html><html><head><title>Default</title><link rel="canonical" href="default"></head><body>SPA</body></html>', {
+      headers: { 'content-type': 'text/html' },
+    }),
+    env: { ANIHUB: mockD1 },
+  };
+
+  const res = await onRequest(context);
+  assert.equal(titleSet, '5 Centimeters per Second Ep 1 — Watch Free | AniHubStream');
+  assert.equal(canonicalSet, 'https://anihubstream.com/watch/5-centimeters-per-second/1');
+  const html = await res.text();
+  assert.ok(html.includes('"@type":"TVEpisode"'), 'Episode 1 must be TVEpisode');
+  assert.ok(html.includes('"episodeNumber":1'));
+});
+
+test('TASK 5 (P1) SEO: security headers file includes HSTS and Permissions-Policy', () => {
+  const headersPath = path.resolve(process.cwd(), 'public/_headers');
+  assert.ok(fs.existsSync(headersPath), '_headers must exist');
+  const content = fs.readFileSync(headersPath, 'utf8');
+
+  assert.match(content, /Strict-Transport-Security:\s*max-age=31536000/i, 'Must configure HSTS max-age=31536000');
+  assert.match(content, /Permissions-Policy:/i, 'Must configure Permissions-Policy');
+});
+
+test('TASK 5 (P1) SEO: robots.txt disallows /mylist to prevent crawling empty user history', () => {
+  const robotsPath = path.resolve(process.cwd(), 'public/robots.txt');
+  const content = fs.readFileSync(robotsPath, 'utf8');
+  assert.match(content, /Disallow:\s*\/mylist/i, 'robots.txt must disallow /mylist');
+});
+

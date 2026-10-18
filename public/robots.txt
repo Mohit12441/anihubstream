@@ -3,5 +3,6 @@ Allow: /
 Allow: /anime
 Allow: /watch
 Disallow: /api/
+Disallow: /mylist
 
 Sitemap: https://anihubstream.com/sitemap.xml

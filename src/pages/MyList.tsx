@@ -23,6 +23,7 @@ export function MyList() {
     title: 'My List & Watch History — Saved Anime | AniHubStream',
     description: 'Track your personal anime watchlist, resume playback from saved positions, and manage favorites on AniHubStream.',
     canonicalUrl: 'https://anihubstream.com/mylist',
+    noindex: true,
   });
 
   /* The provider spine only carries the curated head of the catalogue; a

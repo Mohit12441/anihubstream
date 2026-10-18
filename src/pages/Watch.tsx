@@ -104,15 +104,15 @@ export function Watch() {
 
   const canonicalUrl = useMemo(() => {
     if (!anime) return undefined;
-    return epNum && epNum > 1
+    return epNum && epNum >= 1
       ? `https://anihubstream.com/watch/${anime.id}/${epNum}`
       : `https://anihubstream.com/watch/${anime.id}`;
   }, [anime, epNum]);
 
   const jsonLd = useMemo(() => {
     if (!anime) return null;
-    return {
-      '@context': 'https://schema.org',
+    const origin = 'https://anihubstream.com';
+    const mainEntity = {
       '@type': episode ? 'TVEpisode' : 'TVSeries',
       name: episode ? `${anime.title} Episode ${episode.n}` : anime.title,
       alternateName: anime.native || undefined,
@@ -133,11 +133,46 @@ export function Watch() {
           }
         : {}),
     };
+
+    const breadcrumbs = {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: origin,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Anime',
+          item: `${origin}/anime`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: anime.title,
+          item: `${origin}/watch/${anime.id}`,
+        },
+        ...(episode ? [{
+          '@type': 'ListItem',
+          position: 4,
+          name: `Episode ${episode.n}`,
+          item: canonicalUrl,
+        }] : []),
+      ],
+    };
+
+    return {
+      '@context': 'https://schema.org',
+      '@graph': [mainEntity, breadcrumbs],
+    };
   }, [anime, episode, cleanSynopsis, canonicalUrl]);
 
   useSEO({
     title: anime
-      ? `${anime.title}${episode ? ` Episode ${episode.n}` : ` (${anime.year})`} — Watch Online Free | AniHubStream`
+      ? `${anime.title}${episode ? ` Ep ${episode.n}` : anime.year ? ` (${anime.year})` : ''} — Watch Free | AniHubStream`
       : 'Watch Anime Free | AniHubStream',
     description: cleanSynopsis,
     image: anime?.key || anime?.poster,
