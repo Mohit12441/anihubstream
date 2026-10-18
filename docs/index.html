@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AniHubStream API Reference & Documentation</title>
+  <link rel="icon" href="/emblem.svg" type="image/svg+xml">
+  <!-- Scalar Modern API Reference CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #07070b;
+      color: #f0f0f5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    #loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-size: 1.2rem;
+      color: #8fe9ff;
+    }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(143, 233, 255, 0.2);
+      border-top-color: #8fe9ff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 1rem;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <div class="spinner"></div>
+    <div>Loading AniHubStream API Reference...</div>
+  </div>
+
+  <script id="api-reference" data-url="./openapi.json"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const loader = document.getElementById('loading');
+      if (loader) {
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 800);
+      }
+    });
+  </script>
+</body>
+</html>

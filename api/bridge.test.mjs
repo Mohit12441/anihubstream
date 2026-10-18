@@ -399,4 +399,56 @@ describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
     const body = await res.json();
     assert.ok(body.error);
   });
+
+  it('GET /resolve with audio=hindi reaches AnimeDubHindi and preserves hindi audio', async () => {
+    setProviderHandler('animedubhindi', async ({ title, ep, audio }) => {
+      const sid = 'test-hindi-session';
+      sessions.set(sid, {
+        sid,
+        provider: 'animedubhindi',
+        kind: 'progressive',
+        container: 'matroska',
+        title,
+        episode: { number: ep, title: `Episode ${ep}` },
+        quality: 1080,
+        variants: [1080],
+        audio,
+        proof: { container: 'matroska', checkedBytes: 256 },
+        mediaUrl: 'https://workers.dev/mock-hindi.mkv',
+        mockBytes: mkvMockBytes,
+      });
+      return {
+        session: sid,
+        provider: 'animedubhindi',
+        kind: 'progressive',
+        container: 'matroska',
+        title,
+        episode: ep,
+        quality: 1080,
+        variants: [1080],
+        audio,
+        proof: { container: 'matroska', checkedBytes: 256 },
+        master: `/stream/${sid}/media.mkv`,
+      };
+    });
+
+    const res = await fetch(`${bridgeUrl}/resolve?title=naruto-hindi-test&ep=1&audio=hindi`);
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.equal(body.provider, 'animedubhindi');
+    assert.equal(body.audio, 'hindi');
+    assert.equal(body.container, 'matroska');
+  });
+
+  it('GET /resolve with audio=hindi falls back to sub when Hindi is unavailable and fallback=true', async () => {
+    setProviderHandler('animedubhindi', async () => {
+      throw Object.assign(new Error('no hindi stream available'), { code: 'RESOLVE_FAILED' });
+    });
+
+    const res = await fetch(`${bridgeUrl}/resolve?title=Solo+Leveling&ep=1&audio=hindi&fallback=true`);
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.ok(body.session);
+    assert.equal(body.audio, 'sub');
+  });
 });

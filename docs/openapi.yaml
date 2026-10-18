@@ -1,0 +1,678 @@
+openapi: 3.0.3
+info:
+  title: AniHubStream Backend API Specification
+  description: >-
+    Unified OpenAPI 3.0 contract for the AniHubStream dual-tier architecture:
+    Cloudflare Pages D1 Edge API and the Node.js Stream Bridge Multi-Provider Dispatcher.
+  version: 1.0.0
+  contact:
+    name: AniHubStream Engineering
+    url: https://anihubstream.com
+
+servers:
+  - url: https://anihubstream.com/api
+    description: Production Edge API (Cloudflare Pages Functions + D1 SQLite)
+  - url: https://bridge.anihubstream.com
+    description: Production Stream Bridge & Dispatcher (Public Tunnel)
+  - url: http://127.0.0.1:8795
+    description: Local Development Stream Bridge Daemon
+
+tags:
+  - name: Catalogue
+    description: Anime browsing, search, and detail endpoints
+  - name: Shelves
+    description: Home page dynamic shelf queries
+  - name: Viewer
+    description: Anonymous viewer watchlist and resume positions
+  - name: Stream Cache
+    description: Ephemeral edge stream resolution cache
+  - name: Dispatcher
+    description: Stream Bridge provider racing, audio resolution, and media delivery
+
+paths:
+  /anime:
+    get:
+      tags: [Catalogue]
+      summary: Search and filter anime titles
+      description: >-
+        Queries the anime catalog with optional full-text search, genre filter,
+        kind, status, year, and ranked sorting. Prefilters with safe byte-clamped
+        LIKE matching before scoring.
+      parameters:
+        - name: q
+          in: query
+          schema:
+            type: string
+          description: Search keyword or title initials
+        - name: genre
+          in: query
+          schema:
+            type: string
+          description: Genre slug (e.g. action, fantasy)
+        - name: kind
+          in: query
+          schema:
+            type: string
+            enum: [All, TV, Movie, OVA, ONA, Special]
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [All, Ongoing, Finished, Upcoming]
+        - name: year
+          in: query
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          schema:
+            type: string
+            enum: [relevance, popularity, rating, year, added, az]
+          description: Sorting criteria
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 48
+            maximum: 48
+      responses:
+        '200':
+          description: Catalogue results page
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  page:
+                    type: integer
+                  pageSize:
+                    type: integer
+                  total:
+                    type: integer
+                  results:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/AnimeCard'
+                  capped:
+                    type: boolean
+
+  /anime/{id}:
+    get:
+      tags: [Catalogue]
+      summary: Fetch anime details by slug or ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Anime canonical slug or identifier
+      responses:
+        '200':
+          description: Anime detailed payload with episode list and related titles
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnimeDetail'
+        '301':
+          description: Redirect for retired duplicate slug
+        '400':
+          description: Invalid slug identifier format
+        '404':
+          description: Anime not found
+
+  /home:
+    get:
+      tags: [Shelves]
+      summary: Fetch home shelves in a single batch query
+      responses:
+        '200':
+          description: Pre-grouped shelf arrays
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  trending:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/AnimeCard'
+                  ongoing:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/AnimeCard'
+                  topRated:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/AnimeCard'
+                  fresh:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/AnimeCard'
+                  added:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/AnimeCard'
+
+  /genres:
+    get:
+      tags: [Catalogue]
+      summary: List all anime genres and categories
+      responses:
+        '200':
+          description: Array of genre metadata items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GenreItem'
+
+  /schedule:
+    get:
+      tags: [Catalogue]
+      summary: Weekly anime broadcast airing schedule
+      parameters:
+        - name: tz
+          in: query
+          schema:
+            type: string
+          description: Viewer timezone identifier (e.g. Asia/Kolkata, UTC)
+      responses:
+        '200':
+          description: Schedule entries grouped by weekday
+
+  /me/library:
+    get:
+      tags: [Viewer]
+      summary: Retrieve viewer watchlist
+      responses:
+        '200':
+          description: Viewer saved anime titles
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/AnimeCard'
+    post:
+      tags: [Viewer]
+      summary: Add or remove anime from viewer watchlist
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [animeId, action]
+              properties:
+                animeId:
+                  type: string
+                action:
+                  type: string
+                  enum: [add, remove]
+      responses:
+        '200':
+          description: Watchlist update response with Set-Cookie for new viewers
+
+  /me/positions:
+    get:
+      tags: [Viewer]
+      summary: Retrieve playback resume positions
+      responses:
+        '200':
+          description: Keyed map of resume positions
+    post:
+      tags: [Viewer]
+      summary: Record episode playback position
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [animeId, episodeNumber, position, duration]
+              properties:
+                animeId:
+                  type: string
+                episodeNumber:
+                  type: integer
+                position:
+                  type: number
+                duration:
+                  type: number
+      responses:
+        '200':
+          description: Position saved
+
+  /stream/cache:
+    get:
+      tags: [Stream Cache]
+      summary: Query edge stream resolution cache
+      parameters:
+        - name: key
+          in: query
+          required: true
+          schema:
+            type: string
+            pattern: '^stream:[a-zA-Z0-9_-]+:\d+:(sub|dub|hindi)(:[a-zA-Z0-9_-]+)?$'
+          description: Stream cache key e.g. stream:solo-leveling:1:sub or stream:demon-slayer:1:hindi
+      responses:
+        '200':
+          description: Cache check result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  hit:
+                    type: boolean
+                  data:
+                    type: object
+                  expiresAt:
+                    type: integer
+        '400':
+          description: Invalid key format
+    post:
+      tags: [Stream Cache]
+      summary: Store resolved stream source in edge cache
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [key, data]
+              properties:
+                key:
+                  type: string
+                  pattern: '^stream:[a-zA-Z0-9_-]+:\d+:(sub|dub|hindi)(:[a-zA-Z0-9_-]+)?$'
+                data:
+                  type: object
+                ttlSeconds:
+                  type: integer
+                  default: 21600
+      responses:
+        '200':
+          description: Source cached successfully
+        '400':
+          description: Invalid key format or payload
+
+  /stats:
+    get:
+      tags: [Catalogue]
+      summary: Global catalogue stats
+      responses:
+        '200':
+          description: Total counts for titles, episodes, and genres
+
+  /health:
+    get:
+      tags: [Dispatcher]
+      summary: Stream Bridge liveness and provider readiness
+      responses:
+        '200':
+          description: Health status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    example: true
+                  providers:
+                    type: array
+                    items:
+                      type: string
+                  dispatcher:
+                    type: boolean
+                  race:
+                    type: boolean
+                  role:
+                    type: string
+
+  /search:
+    get:
+      tags: [Dispatcher]
+      summary: Provider search proxy
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: provider
+          in: query
+          schema:
+            type: string
+            default: auto
+      responses:
+        '200':
+          description: Matched provider search items
+
+  /resolve:
+    get:
+      tags: [Dispatcher]
+      summary: Resolve playable stream source with provider latency racing
+      parameters:
+        - name: title
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: ep
+          in: query
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+        - name: audio
+          in: query
+          schema:
+            type: string
+            enum: [sub, dub, hindi]
+            default: sub
+        - name: provider
+          in: query
+          schema:
+            type: string
+            enum: [auto, fastest, aniwatch, hianime, anikoto, animedubhindi, watchanimeworld, animewave, animekai]
+            default: auto
+        - name: fallback
+          in: query
+          schema:
+            type: boolean
+            default: true
+      responses:
+        '200':
+          description: Playable stream source with session id and playlist/media path
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BridgeSource'
+        '400':
+          description: Missing title or episode
+        '429':
+          description: Rate limited
+        '502':
+          description: Upstream resolution failed
+
+  /audios:
+    get:
+      tags: [Dispatcher]
+      summary: Check audio availability (Sub, English Dub, Hindi Multi-Audio)
+      parameters:
+        - name: title
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: ep
+          in: query
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        '200':
+          description: Available audio tracks
+
+  /downloads:
+    get:
+      tags: [Dispatcher]
+      summary: Fetch download options for an episode
+      parameters:
+        - name: title
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: ep
+          in: query
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        '200':
+          description: Download providers and links
+
+  /stream/{sid}/master.m3u8:
+    get:
+      tags: [Dispatcher]
+      summary: Live HLS master playlist proxy with token signing & segment URL rewriting
+      parameters:
+        - name: sid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: HLS master manifest
+          content:
+            application/vnd.apple.mpegurl: {}
+        '404':
+          description: Session expired or not found
+
+  /stream/{sid}/media.{ext}:
+    get:
+      tags: [Dispatcher]
+      summary: Progressive byte-range binary proxy for MKV and MP4 video streams
+      parameters:
+        - name: sid
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: ext
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [mkv, mp4]
+        - name: download
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Complete binary video file
+        '206':
+          description: Byte-range chunk
+        '404':
+          description: Session expired or not found
+
+  /stream/{sid}/sub/{idx}.vtt:
+    get:
+      tags: [Dispatcher]
+      summary: Proxied WebVTT subtitles with CORS headers
+      parameters:
+        - name: sid
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: idx
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: WebVTT subtitle track
+          content:
+            text/vtt: {}
+
+components:
+  schemas:
+    AnimeCard:
+      type: object
+      properties:
+        id:
+          type: string
+          example: solo-leveling
+        title:
+          type: string
+          example: Solo Leveling
+        native:
+          type: string
+          example: 나 혼자만 레벨업
+        year:
+          type: integer
+          example: 2024
+        rating:
+          type: number
+          example: 8.7
+        season:
+          type: string
+          example: Winter 2024
+        kind:
+          type: string
+          example: TV
+        status:
+          type: string
+          example: Ongoing
+        art:
+          type: string
+        key_art:
+          type: string
+        accent:
+          type: string
+          example: '#3b82f6'
+        synopsis:
+          type: string
+        rank:
+          type: integer
+          nullable: true
+        trend_rank:
+          type: integer
+          nullable: true
+        episode_total:
+          type: integer
+          nullable: true
+        genres:
+          type: array
+          items:
+            type: string
+
+    AnimeDetail:
+      allOf:
+        - $ref: '#/components/schemas/AnimeCard'
+        - type: object
+          properties:
+            episodes:
+              type: array
+              items:
+                $ref: '#/components/schemas/EpisodeItem'
+            related:
+              type: array
+              items:
+                $ref: '#/components/schemas/AnimeCard'
+
+    EpisodeItem:
+      type: object
+      properties:
+        id:
+          type: string
+          example: solo-leveling#1
+        n:
+          type: integer
+          example: 1
+        title:
+          type: string
+          example: I'm Used to It
+        runtime:
+          type: string
+          example: 24m
+        runtime_seconds:
+          type: integer
+          example: 1420
+        thumb:
+          type: string
+        synopsis:
+          type: string
+        markers:
+          type: array
+          items:
+            type: object
+        airdate:
+          type: string
+          nullable: true
+
+    GenreItem:
+      type: object
+      properties:
+        id:
+          type: string
+          example: action
+        label:
+          type: string
+          example: Action
+        tagline:
+          type: string
+        art:
+          type: string
+        accent:
+          type: string
+        position:
+          type: integer
+
+    BridgeSource:
+      type: object
+      properties:
+        session:
+          type: string
+        provider:
+          type: string
+          example: animedubhindi
+        kind:
+          type: string
+          enum: [hls, progressive]
+        container:
+          type: string
+          example: matroska
+        title:
+          type: string
+        episode:
+          type: integer
+        quality:
+          type: string
+          example: 1080p
+        variants:
+          type: array
+          items:
+            type: string
+        audio:
+          type: string
+          example: hindi
+        master:
+          type: string
+          example: /stream/sid-123/media.mkv
+        downloadUrl:
+          type: string
+        downloadPage:
+          type: string
+          nullable: true
+        subtitles:
+          type: array
+          items:
+            type: object
+        proof:
+          type: object
+        raceMs:
+          type: number
+          description: Latency in milliseconds of fastest winning provider
+        winner:
+          type: string
+        reused:
+          type: boolean

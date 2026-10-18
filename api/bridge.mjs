@@ -648,7 +648,7 @@ async function buildSource({ title, ep, audio, provider = 'auto', fallback = tru
   try {
     return await raceProviders(candidates, { title, ep, audio });
   } catch (err) {
-    if (audio === 'dub' && fallback) {
+    if ((audio === 'dub' || audio === 'hindi') && fallback) {
       return await buildSource({ title, ep, audio: 'sub', provider: 'auto', fallback: false });
     }
     throw err;
@@ -1043,7 +1043,7 @@ const server = createServer(async (req, res) => {
       const title = url.searchParams.get('title') ?? '';
       const ep = Number(url.searchParams.get('ep') ?? '0');
       const audioParam = url.searchParams.get('audio') ?? 'sub';
-      const audio = audioParam === 'dub' || audioParam === 'hindi' ? 'dub' : 'sub';
+      const audio = audioParam === 'hindi' ? 'hindi' : audioParam === 'dub' ? 'dub' : 'sub';
       const requestedProvider = url.searchParams.get('provider') ?? (audioParam === 'hindi' ? 'animedubhindi' : 'auto');
       const fallback = url.searchParams.get('fallback') !== 'false';
       if (!title.trim() || !Number.isInteger(ep) || ep < 1) return json(res, 400, { error: 'TITLE_EP_REQUIRED' });

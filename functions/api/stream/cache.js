@@ -4,7 +4,7 @@ export const onRequestGet = async ({ request, env }) => {
   try {
     const url = new URL(request.url);
     const key = url.searchParams.get('key');
-    if (!key || !/^stream:[a-zA-Z0-9_-]+:\d+:(sub|dub)$/.test(key)) {
+    if (!key || !/^stream:[a-zA-Z0-9_-]+:\d+:(sub|dub|hindi)(:[a-zA-Z0-9_-]+)?$/.test(key)) {
       throw new HttpError(400, 'bad_request', 'Invalid stream cache key format');
     }
 
@@ -39,7 +39,7 @@ export const onRequestPost = async ({ request, env }) => {
     }
 
     const key = String(body.key);
-    if (!/^stream:[a-zA-Z0-9_-]+:\d+:(sub|dub)$/.test(key)) {
+    if (!/^stream:[a-zA-Z0-9_-]+:\d+:(sub|dub|hindi)(:[a-zA-Z0-9_-]+)?$/.test(key)) {
       throw new HttpError(400, 'bad_request', 'Invalid stream cache key format');
     }
 
