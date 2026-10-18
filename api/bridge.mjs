@@ -544,16 +544,39 @@ async function buildSourceAnimekai({ title, ep, audio }) {
   throw Object.assign(new Error(`no playable AnimeKai variant`), { code: 'RESOLVE_FAILED' });
 }
 
+const providerHandlers = {
+  aniwatch: buildSourceAniwatch,
+  hianime: buildSourceHianime,
+  anikoto: buildSourceAnikoto,
+  animedubhindi: buildSourceAdb,
+  watchanimeworld: buildSourceWatchanimeworld,
+  animewave: buildSourceAnimewave,
+  animekai: buildSourceAnimekai,
+};
+
+function setProviderHandler(provider, handler) {
+  providerHandlers[provider.toLowerCase()] = handler;
+}
+
+const searchHandlers = {
+  aniwatch: (q, opts) => aniwatch.search(q, opts),
+  hianime: (q, opts) => hianime.search(q, opts),
+  anikoto: (q, opts) => anikoto.search(q, opts),
+  animedubhindi: (q, opts) => animedubhindi.search(q, opts),
+  watchanimeworld: (q, opts) => watchanimeworld.search(q, opts),
+  animewave: (q, opts) => animewave.search(q, opts),
+  animekai: (q, opts) => animekai.search(q, opts),
+};
+
+function setSearchHandler(provider, handler) {
+  searchHandlers[provider.toLowerCase()] = handler;
+}
+
 async function buildSourceProvider(provider, { title, ep, audio }) {
   const norm = provider.toLowerCase();
-  if (norm === 'aniwatch') return await buildSourceAniwatch({ title, ep, audio });
-  if (norm === 'hianime') return await buildSourceHianime({ title, ep, audio });
-  if (norm === 'anikoto') return await buildSourceAnikoto({ title, ep, audio });
-  if (norm === 'animedubhindi') return await buildSourceAdb({ title, ep, audio });
-  if (norm === 'watchanimeworld') return await buildSourceWatchanimeworld({ title, ep, audio });
-  if (norm === 'animewave') return await buildSourceAnimewave({ title, ep, audio });
-  if (norm === 'animekai') return await buildSourceAnimekai({ title, ep, audio });
-  throw new Error(`Unsupported provider: ${provider}`);
+  const handler = providerHandlers[norm];
+  if (!handler) throw new Error(`Unsupported provider: ${provider}`);
+  return await handler({ title, ep, audio });
 }
 
 /* ------------------------------------------------------------- race dispatcher */
@@ -679,7 +702,15 @@ async function buildAudiosAnikoto({ title, ep }) {
   return { title: media.title, episode: { number: episode.number, title: episode.title }, audios };
 }
 
+let customAudiosHandler = null;
+function setAudiosHandler(handler) {
+  customAudiosHandler = handler;
+}
+
 async function buildAudios({ title, ep }) {
+  if (customAudiosHandler) {
+    return await customAudiosHandler({ title, ep });
+  }
   let anikotoRes = null;
   try {
     anikotoRes = await buildAudiosAnikoto({ title, ep });
@@ -768,6 +799,31 @@ function rewritePlaylist(session, text, baseUrl) {
 }
 
 async function serveWawStream(req, res, session, signal) {
+  if (session.mockBytes) {
+    const rangeHeader = req.headers.range;
+    let start = 0;
+    let end = session.mockBytes.length - 1;
+    let status = 200;
+    if (rangeHeader && rangeHeader.startsWith('bytes=')) {
+      const parts = rangeHeader.slice(6).split('-');
+      start = parseInt(parts[0], 10) || 0;
+      if (parts[1]) end = Math.min(parseInt(parts[1], 10), session.mockBytes.length - 1);
+      status = 206;
+    }
+    const chunk = session.mockBytes.subarray(start, end + 1);
+    cors(res);
+    res.statusCode = status;
+    res.setHeader('cache-control', 'no-store');
+    res.setHeader('accept-ranges', 'bytes');
+    res.setHeader('content-length', String(chunk.length));
+    if (status === 206) {
+      res.setHeader('content-range', `bytes ${start}-${end}/${session.mockBytes.length}`);
+    }
+    res.setHeader('content-type', 'video/mp4');
+    res.end(chunk);
+    return;
+  }
+
   const spec = session.spec;
   const rangeHeader = req.headers.range;
   const parsedRange = watchanimeworld.parseAbyssRange(rangeHeader, spec.s);
@@ -825,6 +881,31 @@ async function serveWawStream(req, res, session, signal) {
 }
 
 async function serveStream(req, res, session, target, signal) {
+  if (session.mockBytes) {
+    const rangeHeader = req.headers.range;
+    let start = 0;
+    let end = session.mockBytes.length - 1;
+    let status = 200;
+    if (rangeHeader && rangeHeader.startsWith('bytes=')) {
+      const parts = rangeHeader.slice(6).split('-');
+      start = parseInt(parts[0], 10) || 0;
+      if (parts[1]) end = Math.min(parseInt(parts[1], 10), session.mockBytes.length - 1);
+      status = 206;
+    }
+    const chunk = session.mockBytes.subarray(start, end + 1);
+    cors(res);
+    res.statusCode = status;
+    res.setHeader('cache-control', 'no-store');
+    res.setHeader('accept-ranges', 'bytes');
+    res.setHeader('content-length', String(chunk.length));
+    if (status === 206) {
+      res.setHeader('content-range', `bytes ${start}-${end}/${session.mockBytes.length}`);
+    }
+    res.setHeader('content-type', session.container === 'matroska' ? 'video/x-matroska' : 'video/mp4');
+    res.end(chunk);
+    return;
+  }
+
   if (session.provider === 'watchanimeworld' && session.spec) {
     return await serveWawStream(req, res, session, signal);
   }
@@ -897,15 +978,8 @@ const server = createServer(async (req, res) => {
       const prov = (url.searchParams.get('provider') ?? 'auto').toLowerCase();
       if (!q.trim()) return json(res, 400, { error: 'Q_REQUIRED' });
       const targetProv = prov === 'auto' ? 'aniwatch' : prov;
-      let mod = anikoto;
-      if (targetProv === 'animedubhindi') mod = animedubhindi;
-      else if (targetProv === 'hianime') mod = hianime;
-      else if (targetProv === 'aniwatch') mod = aniwatch;
-      else if (targetProv === 'watchanimeworld') mod = watchanimeworld;
-      else if (targetProv === 'animewave') mod = animewave;
-      else if (targetProv === 'animekai') mod = animekai;
-
-      const hits = await mod.search(q, { signal: AbortSignal.timeout(30_000) });
+      const searchFn = searchHandlers[targetProv] || ((q, opts) => anikoto.search(q, opts));
+      const hits = await searchFn(q, { signal: AbortSignal.timeout(30_000) });
       return json(res, 200, (hits ?? []).map((h) => ({
         id: h.id, slug: h.slug ?? h.id, title: h.title, coverUrl: h.coverUrl ?? null, provider: targetProv,
       })));
@@ -1025,7 +1099,11 @@ export {
   buildAudiosAnikoto,
   detailsForProvider,
   detailsForAnikoto,
-  detailsForAdb,
+  providerHandlers,
+  setProviderHandler,
+  searchHandlers,
+  setSearchHandler,
+  setAudiosHandler,
   sessions,
   recent,
   audioCache,

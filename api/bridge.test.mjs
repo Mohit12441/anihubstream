@@ -4,14 +4,14 @@ import assert from 'node:assert/strict';
 import {
   server,
   buildSource,
-  buildSourceAnikoto,
-  buildSourceAdb,
-  buildSourceAniwatch,
-  buildSourceHianime,
-  buildAudios,
   sessions,
   recent,
   audioCache,
+  providerHandlers,
+  setProviderHandler,
+  searchHandlers,
+  setSearchHandler,
+  setAudiosHandler,
 } from './bridge.mjs';
 
 /**
@@ -20,6 +20,16 @@ import {
 describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
   let bridgePort;
   let bridgeUrl;
+  const realProviderHandlers = { ...providerHandlers };
+  const realSearchHandlers = { ...searchHandlers };
+
+  // Mock binary stream fixtures
+  const mkvMockBytes = Buffer.alloc(1024);
+  mkvMockBytes.write('1a45dfa3', 0, 4, 'hex');
+
+  const mp4MockBytes = Buffer.alloc(1024);
+  mp4MockBytes.writeUInt32BE(24, 0);
+  mp4MockBytes.write('ftyp', 4, 4, 'utf8');
 
   before(async () => {
     // Bind bridge server to an ephemeral port for testing
@@ -32,9 +42,170 @@ describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
         res(null);
       });
     });
+
+    // Install hermetic stubs for upstream providers
+    setSearchHandler('animedubhindi', async (q) => [
+      { id: 'animedubhindi:slime-s1', slug: 'slime-s1', title: 'That Time I Got Reincarnated as a Slime Season 01' },
+    ]);
+
+    setProviderHandler('animedubhindi', async ({ title, ep, audio }) => {
+      if (ep === 9999) {
+        throw Object.assign(new Error(`episode ${ep} is not in AnimeDubHindi list`), { code: 'NO_SUCH_EPISODE' });
+      }
+      const sid = 'test-adb-session-1';
+      sessions.set(sid, {
+        sid,
+        provider: 'animedubhindi',
+        kind: 'progressive',
+        container: 'matroska',
+        title,
+        episode: { number: ep, title: `Episode ${ep}` },
+        quality: 480,
+        variants: [480],
+        audio,
+        proof: { container: 'matroska', checkedBytes: 256 },
+        mediaUrl: 'https://workers.dev/mock-slime.mkv',
+        mockBytes: mkvMockBytes,
+      });
+      return {
+        session: sid,
+        provider: 'animedubhindi',
+        kind: 'progressive',
+        container: 'matroska',
+        title,
+        episode: ep,
+        quality: 480,
+        variants: [480],
+        audio,
+        proof: { container: 'matroska', checkedBytes: 256 },
+        master: `/stream/${sid}/media.mkv`,
+      };
+    });
+
+    setProviderHandler('watchanimeworld', async ({ title, ep, audio }) => {
+      const sid = 'test-waw-session-1';
+      sessions.set(sid, {
+        sid,
+        provider: 'watchanimeworld',
+        kind: 'progressive',
+        container: 'mp4',
+        title,
+        episode: { number: ep, title: `Episode ${ep}` },
+        quality: '1080p',
+        variants: ['1080p'],
+        audio,
+        proof: { container: 'mp4', checkedBytes: 1048576 },
+        spec: { s: 1048576, h: 'cdn1' },
+        mockBytes: mp4MockBytes,
+      });
+      return {
+        session: sid,
+        provider: 'watchanimeworld',
+        kind: 'progressive',
+        container: 'mp4',
+        title,
+        episode: ep,
+        quality: '1080p',
+        variants: ['1080p'],
+        audio,
+        proof: { container: 'mp4', checkedBytes: 1048576 },
+        master: `/stream/${sid}/media.mp4`,
+      };
+    });
+
+    setProviderHandler('anikoto', async ({ title, ep, audio }) => {
+      const sid = 'test-anikoto-session-1';
+      sessions.set(sid, {
+        sid,
+        provider: 'anikoto',
+        kind: 'hls',
+        container: 'hls',
+        title,
+        episode: { number: ep, title: `Episode ${ep}` },
+        quality: '1080p',
+        variants: ['1080p'],
+        audio,
+        proof: { container: 'hls', checkedBytes: 256 },
+      });
+      return {
+        session: sid,
+        provider: 'anikoto',
+        kind: 'hls',
+        title,
+        episode: ep,
+        quality: '1080p',
+        variants: ['1080p'],
+        audio,
+        master: `/stream/${sid}/master.m3u8`,
+      };
+    });
+
+    setProviderHandler('aniwatch', async ({ title, ep, audio }) => {
+      await new Promise((r) => setTimeout(r, 10)); // slightly slower than anikoto
+      const sid = 'test-aniwatch-session-1';
+      sessions.set(sid, {
+        sid,
+        provider: 'aniwatch',
+        kind: 'hls',
+        title,
+        episode: { number: ep, title: `Episode ${ep}` },
+        quality: '720p',
+        variants: ['720p'],
+        audio,
+      });
+      return {
+        session: sid,
+        provider: 'aniwatch',
+        kind: 'hls',
+        title,
+        episode: ep,
+        quality: '720p',
+        variants: ['720p'],
+        audio,
+      };
+    });
+
+    setProviderHandler('hianime', async ({ title, ep, audio }) => {
+      await new Promise((r) => setTimeout(r, 20));
+      const sid = 'test-hianime-session-1';
+      sessions.set(sid, {
+        sid,
+        provider: 'hianime',
+        kind: 'hls',
+        title,
+        episode: { number: ep, title: `Episode ${ep}` },
+        quality: '720p',
+        variants: ['720p'],
+        audio,
+      });
+      return {
+        session: sid,
+        provider: 'hianime',
+        kind: 'hls',
+        title,
+        episode: ep,
+        quality: '720p',
+        variants: ['720p'],
+        audio,
+      };
+    });
+
+    setAudiosHandler(async ({ title, ep }) => ({
+      title,
+      episode: { number: ep, title: `Episode ${ep}` },
+      audios: [
+        { id: 'sub', label: 'Japanese (original)', available: true },
+        { id: 'dub', label: 'English (dub)', available: true, state: 'verified' },
+        { id: 'hindi', label: 'Hindi (Multi-Audio)', available: true, state: 'verified' },
+      ],
+    }));
   });
 
   after(async () => {
+    // Restore original handlers
+    for (const [k, v] of Object.entries(realProviderHandlers)) setProviderHandler(k, v);
+    for (const [k, v] of Object.entries(realSearchHandlers)) setSearchHandler(k, v);
+    setAudiosHandler(null);
     await new Promise((res) => server.close(res));
   });
 
@@ -49,6 +220,7 @@ describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
     assert.ok(body.providers.includes('hianime'));
     assert.ok(body.providers.includes('anikoto'));
     assert.ok(body.providers.includes('animedubhindi'));
+    assert.ok(body.providers.includes('watchanimeworld'));
     assert.equal(body.dispatcher, true);
     assert.equal(body.race, true);
   });
@@ -109,7 +281,6 @@ describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
     assert.ok(session);
     assert.equal(session.provider, 'animedubhindi');
     assert.equal(session.kind, 'progressive');
-    assert.ok(session.mediaUrl.startsWith('https://'));
   });
 
   it('GET /resolve reuses cached session on subsequent requests', async () => {
@@ -160,6 +331,10 @@ describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
   });
 
   it('Fallback logic gracefully handles provider failures without throwing', async () => {
+    setProviderHandler('animedubhindi', async () => {
+      throw Object.assign(new Error('animedubhindi upstream fault'), { code: 'NO_SUCH_EPISODE' });
+    });
+
     const resFallback = await buildSource({
       title: 'Solo Leveling',
       ep: 1,
@@ -193,6 +368,9 @@ describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
   });
 
   it('Refusal status codes are mapped to 4xx for edge survival', async () => {
+    setProviderHandler('animedubhindi', async () => {
+      throw Object.assign(new Error('episode 9999 is not in AnimeDubHindi list'), { code: 'NO_SUCH_EPISODE' });
+    });
     const res = await fetch(`${bridgeUrl}/resolve?title=slime&ep=9999&provider=animedubhindi&fallback=false`);
     assert.ok(res.status >= 400 && res.status < 500, `status ${res.status} is 4xx`);
     const body = await res.json();
