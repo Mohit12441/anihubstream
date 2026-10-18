@@ -43,9 +43,17 @@ export function Art({
   /** explicit height attribute to prevent layout shifts */
   height?: number | string;
 }) {
+  const isSmallCard = Boolean(width && Number(width) <= 320);
   const chain = sources
     .filter((s): s is string => Boolean(s))
-    .map(normalizeArtUrl)
+    .flatMap((s) => {
+      const norm = normalizeArtUrl(s);
+      if (isSmallCard && norm.includes('/anime/cover/large/')) {
+        const med = norm.replace('/anime/cover/large/', '/anime/cover/medium/');
+        return [med, norm];
+      }
+      return [norm];
+    })
     .filter(Boolean);
 
   const sig = chain.join('|');
