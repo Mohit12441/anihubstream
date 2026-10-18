@@ -31,7 +31,7 @@ export function ServerSelector({ servers, currentId, onSelect, onRetry, onClose 
     <PopShell
       label="Stream server"
       innerRef={ref}
-      footer="AniKoto is the real source — the bridge resolves each episode and proxies the provider's stream. The status shown here is what the player actually reached."
+      footer="The stream bridge resolves each episode across providers and proxies playback. 'Auto (Fastest)' races providers in real time to guarantee the lowest latency."
     >
       <ul className="pop__list no-bar">
         {servers.map((s) => {

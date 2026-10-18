@@ -1,12 +1,13 @@
 // @ts-check
 import { describe, it, before, after } from 'node:test';
 import assert from 'node:assert/strict';
-import { createServer } from 'node:http';
 import {
   server,
   buildSource,
   buildSourceAnikoto,
   buildSourceAdb,
+  buildSourceAniwatch,
+  buildSourceHianime,
   buildAudios,
   sessions,
   recent,
@@ -14,9 +15,9 @@ import {
 } from './bridge.mjs';
 
 /**
- * Hermetic tests for bridge.mjs dispatcher & AnimeDubHindi integration.
+ * Hermetic tests for bridge.mjs multi-provider dispatcher & latency race.
  */
-describe('Bridge & AnimeDubHindi Integration Tests', () => {
+describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
   let bridgePort;
   let bridgeUrl;
 
@@ -37,16 +38,19 @@ describe('Bridge & AnimeDubHindi Integration Tests', () => {
     await new Promise((res) => server.close(res));
   });
 
-  it('GET /health answers with ok and lists both providers', async () => {
+  it('GET /health answers with ok and lists all providers with race enabled', async () => {
     const res = await fetch(`${bridgeUrl}/health`);
     assert.equal(res.status, 200);
     const body = await res.json();
     assert.equal(body.ok, true);
-    assert.equal(body.provider, 'anikoto');
     assert.ok(Array.isArray(body.providers));
+    assert.ok(body.providers.includes('auto'));
+    assert.ok(body.providers.includes('aniwatch'));
+    assert.ok(body.providers.includes('hianime'));
     assert.ok(body.providers.includes('anikoto'));
     assert.ok(body.providers.includes('animedubhindi'));
     assert.equal(body.dispatcher, true);
+    assert.equal(body.race, true);
   });
 
   it('GET /search validates parameters and supports provider selection', async () => {
@@ -74,6 +78,17 @@ describe('Bridge & AnimeDubHindi Integration Tests', () => {
 
     const resBadEp = await fetch(`${bridgeUrl}/resolve?title=Slime&ep=0`);
     assert.equal(resBadEp.status, 400);
+  });
+
+  it('GET /resolve with provider=auto races providers and returns fastest winner', async () => {
+    const res = await fetch(`${bridgeUrl}/resolve?title=Solo+Leveling&ep=1&audio=sub&provider=auto`);
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.ok(body.session, 'has session id');
+    assert.ok(body.provider, 'has winning provider');
+    assert.equal(body.kind, 'hls');
+    assert.ok(body.master.startsWith('/stream/'));
+    assert.ok(typeof body.raceMs === 'number' || body.reused === true);
   });
 
   it('GET /resolve with provider=animedubhindi resolves progressive MKV stream', async () => {
@@ -111,12 +126,10 @@ describe('Bridge & AnimeDubHindi Integration Tests', () => {
   });
 
   it('GET /stream/:sid/media passes range requests and serves binary chunks', async () => {
-    // Resolve an animedubhindi episode to get a session
     const resResolve = await fetch(`${bridgeUrl}/resolve?title=slime&ep=1&audio=dub&provider=animedubhindi`);
     assert.equal(resResolve.status, 200);
     const { session, master } = await resResolve.json();
 
-    // Stream a 256-byte slice with HTTP Range
     const resStream = await fetch(`${bridgeUrl}${master}`, {
       headers: { range: 'bytes=0-255' },
     });
@@ -147,7 +160,6 @@ describe('Bridge & AnimeDubHindi Integration Tests', () => {
   });
 
   it('Fallback logic gracefully handles provider failures without throwing', async () => {
-    // When AnimeDubHindi fails with NO_MATCH and fallback=true, fallback to AniKoto
     const resFallback = await buildSource({
       title: 'Solo Leveling',
       ep: 1,
@@ -156,11 +168,10 @@ describe('Bridge & AnimeDubHindi Integration Tests', () => {
       fallback: true,
     });
     assert.ok(resFallback.session);
-    assert.equal(resFallback.provider, 'anikoto');
+    assert.ok(['aniwatch', 'anikoto', 'hianime'].includes(resFallback.provider));
   });
 
   it('Refusal status codes are mapped to 4xx for edge survival', async () => {
-    // Non-existent episode on AnimeDubHindi with fallback=false should return 404
     const res = await fetch(`${bridgeUrl}/resolve?title=slime&ep=9999&provider=animedubhindi&fallback=false`);
     assert.ok(res.status >= 400 && res.status < 500, `status ${res.status} is 4xx`);
     const body = await res.json();

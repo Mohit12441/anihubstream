@@ -38,6 +38,8 @@ export interface BridgeSource {
   master: string;
   subtitles: BridgeSubtitle[];
   reused?: boolean;
+  raceMs?: number;
+  winner?: string;
 }
 
 export interface ResolveFailure {

@@ -1,47 +1,44 @@
 // @ts-check
 /**
- * AniKoto bridge — exposes the api/anikoto.mjs chain to the site with the
- * same-origin playback proxy the README's "Playback contract" requires.
- * Binds loopback (127.0.0.1), so the LAN cannot see it, but visitors reach it
- * through the Cloudflare tunnel (bridge.<domain> -> this port). It serves the
- * public, not only the operator: hence an Origin gate, a per-IP bound on the
- * expensive routes, no upstream URL in any response body, and refusals carried
- * as 4xx so the edge cannot swallow them.  Dependency-free; run with:
+ * Stream Bridge & Multi-Provider Dispatcher — exposes all supported anime
+ * providers to the site with a same-origin playback proxy and real-time
+ * latency racing. Binds loopback (127.0.0.1) and is reached by visitors
+ * through the Cloudflare tunnel (bridge.<domain> -> this port).
  *
- *   node api/bridge.mjs                    # http://127.0.0.1:8795
- *   ANIKOTO_BRIDGE_PORT=9000 node api/bridge.mjs
+ * Supported providers:
+ *   - AniWatch (Fastest Megaplay HLS)
+ *   - HiAnime (High-speed JSON API, multi-quality 1080p/360p)
+ *   - AniKoto (Rich HLS, intro/outro skip times, 9 subtitle tracks)
+ *   - AnimeDubHindi (Progressive Multi-Audio MKV with Hindi dub)
+ *   - AnimeWave (Failover mirror)
+ *   - AnimeKai (Failover mirror)
+ *
+ * When provider=auto or provider=fastest, candidate providers race in parallel;
+ * the fastest provider that yields a verified playable stream wins the race.
  *
  *   GET /health
- *   GET /search?q=<term>
- *   GET /resolve?title=<t>&ep=<n>&audio=<sub|dub>
- *   GET /audios?title=<t>&ep=<n>          which audio the episode really carries
- *   GET /stream/:sid/master.m3u8                   the rewired master
- *   GET /stream/:sid/play?u=<b64url&name=...>      playlists (rewritten) and
- *                                                  segment bytes (Range passed)
- *   GET /stream/:sid/sub/:idx.vtt                  subtitle track, proxied
- *
- * Token freshness: the megaplay token signs the CDN *directory* against the
- * unix-seconds clock, so a stored tokenized URL expires.  Every proxied
- * request re-signs from the stored tokenless URL (README: "re-resolve, never
- * cache") — the client never holds an upstream URL at all.
- *
- * Playability: /resolve only hands out a source after one real segment sniffs
- * as mpegts/mp4 (sniffContainer), and the decoy CDN (first-listed `?s=tcdn`
- * embed answers with PNG segments) is tried last, then skipped.
+ *   GET /search?q=<term>&provider=<name>
+ *   GET /resolve?title=<t>&ep=<n>&audio=<sub|dub|hindi>&provider=<auto|aniwatch|hianime|anikoto|animedubhindi>
+ *   GET /audios?title=<t>&ep=<n>
+ *   GET /stream/:sid/master.m3u8
+ *   GET /stream/:sid/media.mkv
+ *   GET /stream/:sid/play?u=<b64url>&name=...
+ *   GET /stream/:sid/sub/:idx.vtt
  */
 
 import { createServer } from 'node:http';
 import { randomUUID } from 'node:crypto';
+import * as anikoto from './anikoto.mjs';
+import * as animedubhindi from './animedubhindi.mjs';
+import * as hianime from './hianime.mjs';
+import * as aniwatch from './aniwatch.mjs';
+import * as animewave from './animewave.mjs';
+import * as animekai from './animekai.mjs';
 import {
-  search as anikotoSearch,
-  details as anikotoDetails,
-  sources as anikotoSources,
-  resolve as anikotoResolve,
   sniffContainer,
   buildMegaPlayToken,
   dubPairVerdict,
 } from './anikoto.mjs';
-import * as animedubhindi from './animedubhindi.mjs';
 
 const PORT = Number(process.env.ANIKOTO_BRIDGE_PORT ?? 8795);
 const HOST = '127.0.0.1';
@@ -49,26 +46,14 @@ const UA_REFERER = 'https://anikototv.to/';
 const RESOLVE_TIMEOUT_MS = 75_000;
 const SNACK_BYTES = 131_072;
 const DETAILS_TTL = 12 * 60 * 60 * 1000;
-/* Idle time and how many viewers the process holds, overridable so the eviction path can
-   be driven through HTTP in seconds instead of hours, and so the operator can tune a
-   machine without editing it. Defaults: 3 h idle, 128 concurrent sessions. */
 const SESSION_TTL = Number(process.env.ANIKOTO_SESSION_TTL_MS ?? 3 * 60 * 60 * 1000);
 const SESSION_CAP = Number(process.env.ANIKOTO_SESSION_CAP ?? 128);
-/* Repeat visits (reload, rewatch, next-episode jumps) reuse the session
-   instead of paying a fresh provider resolve; sessions store
-   tokenless URLs and re-sign per request, so reuse stays valid. */
 const RECENT_TTL = 6 * 60 * 60 * 1000;
-/* audio availability (is there a real second audio?) is a property of the episode,
-   so it is cached far longer than a session — the byte-pair probe is the costly part */
 const AUDIO_TTL = 60 * 60 * 1000;
 
-/* /resolve and /audios drive several provider hops. Limits accommodate
-   background prefetching while guarding against abuse. */
 const RATE_WINDOW_MS = 60_000;
 const RATE_MAX = { '/resolve': 120, '/audios': 120, '/search': 120 };
 
-/* Which pages may drive the bridge. Compared on hostname only — the same site is
-   served from several ports (dev servers, the 8787 origin, Pages previews). */
 const ALLOWED_ORIGIN_HOSTS = new Set([
   'anihubstream.com',
   'app.anihubstream.com',
@@ -77,25 +62,19 @@ const ALLOWED_ORIGIN_HOSTS = new Set([
   '127.0.0.1',
 ]);
 const ALLOWED_ORIGIN_SUFFIXES = ['.anihubstream.pages.dev'];
-
-/* A playlist names its own segment hosts, so the allowlist grows from provider data.
-   Bounding it keeps a hostile or confused embed from turning the bridge into a
-   general proxy; past the bound its extra hosts simply are not admitted. */
-const ALLOWED_HOSTS_CAP = 8;
+const ALLOWED_HOSTS_CAP = 16;
 
 /* ------------------------------------------------------------------ state */
 
 /** @type {Map<string, { at: number, media: any, episodes: any[] }>} */
-const detailsCache = new Map();
-/** @type {Map<string, { at: number, media: any, episodes: any[] }>} */
-const adbDetailsCache = new Map();
+const providerDetailsCache = new Map();
 /** @type {Map<string, any>} */
 const sessions = new Map();
 /** @type {Map<string, { at: number, sid: string }>} */
 const recent = new Map();
-/** @type {Map<string, { at: number, meta: any }>} audio availability is stable per episode */
+/** @type {Map<string, { at: number, meta: any }>} */
 const audioCache = new Map();
-/** @type {Map<string, { at: number, n: number }>} route|ip -> requests in the current window */
+/** @type {Map<string, { at: number, n: number }>} */
 const rateHits = new Map();
 
 const b64url = (s) => Buffer.from(s, 'utf8').toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
@@ -103,12 +82,8 @@ const unb64url = (s) => Buffer.from(String(s).replace(/-/g, '+').replace(/_/g, '
 
 function prune() {
   const now = Date.now();
-  /* session.at is the last PROXIED request, not the create time (see useSession),
-     so both of these are least-recently-used: an abandoned tab gives up its slot to
-     whoever is actually watching instead of a viewer being dropped mid-episode. */
   for (const [k, v] of sessions) if (now - v.at > SESSION_TTL) sessions.delete(k);
-  for (const [k, v] of detailsCache) if (now - v.at > DETAILS_TTL) detailsCache.delete(k);
-  for (const [k, v] of adbDetailsCache) if (now - v.at > DETAILS_TTL) adbDetailsCache.delete(k);
+  for (const [k, v] of providerDetailsCache) if (now - v.at > DETAILS_TTL) providerDetailsCache.delete(k);
   for (const [k, v] of recent) if (now - v.at > RECENT_TTL) recent.delete(k);
   for (const [k, v] of audioCache) if (now - v.at > AUDIO_TTL) audioCache.delete(k);
   for (const [k, v] of rateHits) if (now - v.at > RATE_WINDOW_MS) rateHits.delete(k);
@@ -136,16 +111,8 @@ const json = (res, status, body) => {
   res.end(JSON.stringify(body));
 };
 
-/* Cloudflare's edge replaces any 5xx coming back from a tunnel with its own
-   header-less HTML error page: the JSON body and the CORS headers are gone before
-   the browser sees them, so the player can only conclude "bridge unreachable".
-   Anything the provider refused is therefore answered with a 4xx, which passes
-   through intact and carries the reason the viewer needs. */
 const refusalStatus = (upstream) => (upstream >= 400 && upstream < 500 ? upstream : 422);
 
-/* Behind the tunnel the socket peer is always cloudflared; the visitor's own
-   address is in cf-connecting-ip. A loopback socket with no such header is the
-   operator's tooling on this machine. */
 const clientIp = (req) => {
   const cf = req.headers['cf-connecting-ip'];
   if (typeof cf === 'string' && cf.trim()) return cf.trim();
@@ -153,17 +120,10 @@ const clientIp = (req) => {
 };
 
 const fromLoopback = (req) => ['127.0.0.1', '::1', '::ffff:127.0.0.1'].includes(req.socket.remoteAddress ?? '');
-
-/* Only a process on this machine can arrive on the loopback interface without the
-   tunnel's cf-connecting-ip — the bridge binds 127.0.0.1, so nothing remote can.
-   That is the operator's own tooling, and it is exempt from the per-IP bound (which
-   is there for visitors, not for the harness that checks them). */
 const operatorLocal = (req) => fromLoopback(req) && !req.headers['cf-connecting-ip'];
 
-/** The origin a page may drive the bridge from, or null when the request is allowed. */
 function blockedOrigin(req) {
   const raw = req.headers.origin;
-  /* GETs that are not CORS requests send no Origin at all — curl, the tunnel's own probes. */
   if (typeof raw !== 'string' || !raw || raw === 'null') return null;
   let host;
   try {
@@ -176,7 +136,6 @@ function blockedOrigin(req) {
   return host;
 }
 
-/** Seconds until the window resets, or null when this route+ip is under its bound. */
 function rateTake(path, ip) {
   const max = RATE_MAX[path];
   if (!max) return null;
@@ -192,35 +151,8 @@ function rateTake(path, ip) {
   return Math.max(1, Math.ceil((RATE_WINDOW_MS - (now - hit.at)) / 1000));
 }
 
-/* -------------------------------------------------------------- resolution */
+/* -------------------------------------------------------------- details & helpers */
 
-async function detailsForAnikoto(title) {
-  const key = title.trim().toLowerCase();
-  const hit = detailsCache.get(key);
-  if (hit && Date.now() - hit.at < DETAILS_TTL) return hit;
-  const hits = await anikotoSearch(title, { signal: AbortSignal.timeout(30_000) });
-  if (!hits.length) throw Object.assign(new Error(`no AniKoto result for "${title}"`), { code: 'NO_MATCH' });
-  const picked = hits[0];
-  const { media, episodes } = await anikotoDetails(picked.id, { signal: AbortSignal.timeout(30_000) });
-  const entry = { at: Date.now(), media, episodes };
-  detailsCache.set(key, entry);
-  return entry;
-}
-
-async function detailsForAdb(title) {
-  const key = title.trim().toLowerCase();
-  const hit = adbDetailsCache.get(key);
-  if (hit && Date.now() - hit.at < DETAILS_TTL) return hit;
-  const hits = await animedubhindi.search(title, { signal: AbortSignal.timeout(30_000) });
-  if (!hits.length) throw Object.assign(new Error(`no AnimeDubHindi result for "${title}"`), { code: 'NO_MATCH' });
-  const picked = hits[0];
-  const { media, episodes } = await animedubhindi.details(picked.id, { signal: AbortSignal.timeout(30_000) });
-  const entry = { at: Date.now(), media, episodes };
-  adbDetailsCache.set(key, entry);
-  return entry;
-}
-
-/** Prefer embeds without the `s=tcdn` selector: measured, that one is the decoy. */
 function rankEmbeds(embeds) {
   const decoy = (u) => /[?&]s=tcdn(?:&|$)/i.test(u);
   return [...embeds].sort((a, b) => Number(decoy(a)) - Number(decoy(b)));
@@ -239,10 +171,6 @@ function firstSegmentOf(playlistText, baseUrl) {
   return undefined;
 }
 
-/**
- * Fetch the best variant's playlist and sniff its first segment before the
- * source is called playable.  Returns the winning variant + measured proof.
- */
 async function snackPlayable(source, signal) {
   for (const variant of source.variants ?? []) {
     const headers = variant.headers ?? source.master?.headers ?? {};
@@ -260,124 +188,175 @@ async function snackPlayable(source, signal) {
         return { variant, proof: { container: kind, checkedBytes: buf.length } };
       }
     } catch {
-      /* try the next variant */
+      // try next variant
     }
   }
   return undefined;
 }
 
+async function detailsForProvider(provider, title) {
+  const norm = provider.toLowerCase();
+  const key = `${norm}:${title.trim().toLowerCase()}`;
+  const hit = providerDetailsCache.get(key);
+  if (hit && Date.now() - hit.at < DETAILS_TTL) return hit;
+
+  const signal = AbortSignal.timeout(30_000);
+  let mod;
+  if (norm === 'anikoto') mod = anikoto;
+  else if (norm === 'animedubhindi') mod = animedubhindi;
+  else if (norm === 'hianime') mod = hianime;
+  else if (norm === 'aniwatch') mod = aniwatch;
+  else if (norm === 'animewave') mod = animewave;
+  else if (norm === 'animekai') mod = animekai;
+  else throw new Error(`Unknown provider: ${norm}`);
+
+  const hits = await mod.search(title, { signal });
+  if (!hits || !hits.length) throw Object.assign(new Error(`no ${provider} result for "${title}"`), { code: 'NO_MATCH' });
+  const picked = hits[0];
+  const slug = picked.slug || picked.id;
+  const { media, episodes } = await mod.details(slug, { signal });
+  const entry = { at: Date.now(), media, episodes };
+  providerDetailsCache.set(key, entry);
+  return entry;
+}
+
+const detailsForAnikoto = (title) => detailsForProvider('anikoto', title);
+const detailsForAdb = (title) => detailsForProvider('animedubhindi', title);
+
+function createHlsSession({ provider, media, episode, resolvedResult, sniffed, defaultReferer, skip, audio }) {
+  const mediaUrl = typeof resolvedResult.master === 'object' ? resolvedResult.master.url : resolvedResult.master;
+  const mediaBase = new URL(mediaUrl);
+  const dir = mediaBase.pathname.replace(/\/[^/]*\.m3u8$/i, '');
+  const sid = randomUUID();
+  const referer = resolvedResult.master?.headers?.referer ?? defaultReferer;
+
+  const session = {
+    sid,
+    at: Date.now(),
+    provider,
+    kind: 'hls',
+    title: media.title,
+    episode: { number: episode.number, title: episode.title },
+    audio: resolvedResult.audio ?? audio,
+    skip: skip ?? undefined,
+    quality: sniffed.variant.quality,
+    variants: [...new Set((resolvedResult.variants ?? []).map((v) => v.quality))],
+    proof: sniffed.proof,
+    referer,
+    signed: { host: mediaBase.host, dir },
+    mediaUrl,
+    episodeRef: episode.id || episode.ref,
+    allowedHosts: new Set([mediaBase.host]),
+    subUrls: (resolvedResult.subtitles ?? []).map((t) => ({ url: t.url, referer: t.headers?.referer ?? referer })),
+    subtitles: (resolvedResult.subtitles ?? []).map((t, i) => ({
+      language: t.language,
+      ...(t.name ? { name: t.name } : {}),
+      url: `/stream/${sid}/sub/${i}.vtt`,
+    })),
+  };
+  sessions.set(sid, session);
+
+  return {
+    session: sid,
+    provider,
+    kind: 'hls',
+    title: media.title,
+    episode: session.episode,
+    quality: session.quality,
+    variants: session.variants,
+    audio: session.audio,
+    skip: session.skip ?? null,
+    proof: session.proof,
+    master: `/stream/${sid}/master.m3u8`,
+    subtitles: session.subtitles,
+  };
+}
+
+/* ------------------------------------------------------------- provider resolvers */
+
 async function buildSourceAnikoto({ title, ep, audio }) {
   const signal = AbortSignal.timeout(RESOLVE_TIMEOUT_MS);
-  const { media, episodes } = await detailsForAnikoto(title);
+  const { media, episodes } = await detailsForProvider('anikoto', title);
   const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
-  if (!episode) throw Object.assign(new Error(`episode ${ep} is not in this title's list (${episodes.length} listed)`), { code: 'NO_SUCH_EPISODE' });
+  if (!episode) throw Object.assign(new Error(`episode ${ep} is not in AniKoto list (${episodes.length} listed)`), { code: 'NO_SUCH_EPISODE' });
 
-  const { embeds, skip } = await anikotoSources(episode.id, { audioType: audio, signal });
+  const { embeds, skip } = await anikoto.sources(episode.id, { audioType: audio, signal });
   if (!embeds.length) throw Object.assign(new Error(`no ${audio} embeds for episode ${ep}`), { code: 'NO_EMBEDS' });
 
   const candidates = rankEmbeds(embeds).slice(0, 3);
-  const STAGGER_MS = 3000;
-
-  async function resolveSingleEmbed(embed) {
-    const r = await anikotoResolve(embed, { referer: UA_REFERER, signal });
-    const sniffed = await snackPlayable(r, signal);
-    if (!sniffed) throw new Error(`${embed.split('/').slice(0, 3).join('/')}: no playable variant`);
-
-    const mediaUrl = r.master.url;
-    const mediaBase = new URL(mediaUrl);
-    const dir = mediaBase.pathname.replace(/\/[^/]*\.m3u8$/i, '');
-    const sid = randomUUID();
-    const session = {
-      sid,
-      at: Date.now(),
-      provider: 'anikoto',
-      kind: 'hls',
-      title: media.title,
-      episode: { number: episode.number, title: episode.title },
-      audio: r.audio ?? audio,
-      skip: skip ?? undefined,
-      quality: sniffed.variant.quality,
-      variants: [...new Set((r.variants ?? []).map((v) => v.quality))],
-      proof: sniffed.proof,
-      referer: r.master.headers?.referer ?? UA_REFERER,
-      signed: { host: mediaBase.host, dir },
-      mediaUrl,
-      episodeRef: episode.id,
-      allowedHosts: new Set([mediaBase.host]),
-      subUrls: (r.subtitles ?? []).map((t) => ({ url: t.url, referer: t.headers?.referer ?? r.master.headers?.referer ?? UA_REFERER })),
-      subtitles: (r.subtitles ?? []).map((t, i) => ({
-        language: t.language,
-        ...(t.name ? { name: t.name } : {}),
-        url: `/stream/${sid}/sub/${i}.vtt`,
-      })),
-    };
-    sessions.set(sid, session);
-    const meta = {
-      session: sid,
-      provider: 'anikoto',
-      kind: 'hls',
-      title: media.title,
-      episode: session.episode,
-      quality: session.quality,
-      variants: session.variants,
-      audio: session.audio,
-      skip: session.skip ?? null,
-      proof: session.proof,
-      master: `/stream/${sid}/master.m3u8`,
-      subtitles: session.subtitles,
-    };
-    return meta;
-  }
-
-  return new Promise((resolveAll, rejectAll) => {
-    let resolved = false;
-    let pending = 0;
-    const failures = [];
-    const timers = [];
-
-    const cleanup = () => {
-      timers.forEach((t) => clearTimeout(t));
-    };
-
-    const runCandidate = (index) => {
-      if (resolved || index >= candidates.length) return;
-      const embed = candidates[index];
-      pending++;
-
-      resolveSingleEmbed(embed)
-        .then((meta) => {
-          if (!resolved) {
-            resolved = true;
-            cleanup();
-            recent.set(`${title.toLowerCase()}|${ep}|${audio}|anikoto`, { at: Date.now(), sid: meta.session });
-            recent.set(`${title.toLowerCase()}|${ep}|${audio}|auto`, { at: Date.now(), sid: meta.session });
-            resolveAll(meta);
-          }
-        })
-        .catch((e) => {
-          failures.push(`${embed.split('/').slice(0, 3).join('/')}: ${e?.code ?? e?.message ?? e}`);
-          pending--;
-          if (!resolved && pending === 0 && index >= candidates.length - 1) {
-            cleanup();
-            rejectAll(Object.assign(new Error(`no playable source (${failures.join('; ')})`), { code: 'RESOLVE_FAILED' }));
-          }
+  for (const embed of candidates) {
+    try {
+      const r = await anikoto.resolve(embed, { referer: UA_REFERER, signal });
+      const sniffed = await snackPlayable(r, signal);
+      if (sniffed) {
+        return createHlsSession({
+          provider: 'anikoto', media, episode, resolvedResult: r, sniffed, defaultReferer: UA_REFERER, skip, audio,
         });
-
-      if (index + 1 < candidates.length) {
-        const timer = setTimeout(() => {
-          if (!resolved) runCandidate(index + 1);
-        }, STAGGER_MS);
-        timers.push(timer);
       }
-    };
+    } catch {
+      // try next embed
+    }
+  }
+  throw Object.assign(new Error(`no playable AniKoto variant`), { code: 'RESOLVE_FAILED' });
+}
 
-    runCandidate(0);
-  });
+async function buildSourceAniwatch({ title, ep, audio }) {
+  const signal = AbortSignal.timeout(RESOLVE_TIMEOUT_MS);
+  const { media, episodes } = await detailsForProvider('aniwatch', title);
+  const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
+  if (!episode) throw Object.assign(new Error(`episode ${ep} is not in AniWatch list (${episodes.length} listed)`), { code: 'NO_SUCH_EPISODE' });
+
+  const audioType = audio === 'dub' ? 'dub' : 'sub';
+  const { embeds } = await aniwatch.sources(episode.id || episode.ref, { audioType, signal });
+  if (!embeds || !embeds.length) throw Object.assign(new Error(`no ${audio} embeds for episode ${ep}`), { code: 'NO_EMBEDS' });
+
+  const candidates = rankEmbeds(embeds).slice(0, 3);
+  for (const embed of candidates) {
+    try {
+      const r = await aniwatch.resolve(embed, { referer: 'https://aniwatch.co.at/', signal });
+      const sniffed = await snackPlayable(r, signal);
+      if (sniffed) {
+        return createHlsSession({
+          provider: 'aniwatch', media, episode, resolvedResult: r, sniffed, defaultReferer: 'https://megaplay.buzz/', skip: null, audio,
+        });
+      }
+    } catch {
+      // try next embed
+    }
+  }
+  throw Object.assign(new Error(`no playable AniWatch variant`), { code: 'RESOLVE_FAILED' });
+}
+
+async function buildSourceHianime({ title, ep, audio }) {
+  const signal = AbortSignal.timeout(RESOLVE_TIMEOUT_MS);
+  const { media, episodes } = await detailsForProvider('hianime', title);
+  const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
+  if (!episode) throw Object.assign(new Error(`episode ${ep} is not in HiAnime list (${episodes.length} listed)`), { code: 'NO_SUCH_EPISODE' });
+
+  const audioType = audio === 'dub' ? 'dub' : 'sub';
+  const { embeds } = await hianime.sources(episode.id, { audioType, signal });
+  if (!embeds || !embeds.length) throw Object.assign(new Error(`no ${audio} embeds for episode ${ep}`), { code: 'NO_EMBEDS' });
+
+  const candidates = rankEmbeds(embeds).slice(0, 3);
+  for (const embed of candidates) {
+    try {
+      const r = await hianime.resolve(embed, { signal });
+      const sniffed = await snackPlayable(r, signal);
+      if (sniffed) {
+        return createHlsSession({
+          provider: 'hianime', media, episode, resolvedResult: r, sniffed, defaultReferer: 'https://zokoanime.video/', skip: r.skip ?? null, audio,
+        });
+      }
+    } catch {
+      // try next embed
+    }
+  }
+  throw Object.assign(new Error(`no playable HiAnime variant`), { code: 'RESOLVE_FAILED' });
 }
 
 async function buildSourceAdb({ title, ep, audio }) {
   const signal = AbortSignal.timeout(RESOLVE_TIMEOUT_MS);
-  const { media, episodes } = await detailsForAdb(title);
+  const { media, episodes } = await detailsForProvider('animedubhindi', title);
   const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
   if (!episode) {
     throw Object.assign(new Error(`episode ${ep} is not in AnimeDubHindi list (${episodes.length} listed)`), { code: 'NO_SUCH_EPISODE' });
@@ -388,7 +367,6 @@ async function buildSourceAdb({ title, ep, audio }) {
     throw Object.assign(new Error(`no embeds for episode ${ep}`), { code: 'NO_EMBEDS' });
   }
 
-  // Filter for adhlinks-re mirrors (which resolve directly to progressive MKV stream)
   const reMirrors = embeds.filter((u) => animedubhindi.classifyMirror(u) === 'adhlinks-re');
   const candidates = reMirrors.length ? reMirrors : embeds;
 
@@ -447,65 +425,148 @@ async function buildSourceAdb({ title, ep, audio }) {
   throw Object.assign(new Error(`no playable AnimeDubHindi source (${lastError?.message ?? 'mirror resolution failed'})`), { code: 'RESOLVE_FAILED' });
 }
 
+async function buildSourceAnimewave({ title, ep, audio }) {
+  const signal = AbortSignal.timeout(RESOLVE_TIMEOUT_MS);
+  const { media, episodes } = await detailsForProvider('animewave', title);
+  const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
+  if (!episode) throw Object.assign(new Error(`episode ${ep} is not in AnimeWave list`), { code: 'NO_SUCH_EPISODE' });
+
+  const { embeds } = await animewave.sources(episode.id || episode.ref, { audioType: audio, signal });
+  if (!embeds || !embeds.length) throw Object.assign(new Error(`no ${audio} embeds for episode ${ep}`), { code: 'NO_EMBEDS' });
+
+  const candidates = rankEmbeds(embeds).slice(0, 3);
+  for (const embed of candidates) {
+    try {
+      const r = await animewave.resolve(embed, { referer: 'https://animewave.to/', signal });
+      const sniffed = await snackPlayable(r, signal);
+      if (sniffed) {
+        return createHlsSession({
+          provider: 'animewave', media, episode, resolvedResult: r, sniffed, defaultReferer: 'https://megaplay.buzz/', skip: null, audio,
+        });
+      }
+    } catch {
+      // try next
+    }
+  }
+  throw Object.assign(new Error(`no playable AnimeWave variant`), { code: 'RESOLVE_FAILED' });
+}
+
+async function buildSourceAnimekai({ title, ep, audio }) {
+  const signal = AbortSignal.timeout(RESOLVE_TIMEOUT_MS);
+  const { media, episodes } = await detailsForProvider('animekai', title);
+  const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
+  if (!episode) throw Object.assign(new Error(`episode ${ep} is not in AnimeKai list`), { code: 'NO_SUCH_EPISODE' });
+
+  const { embeds } = await animekai.sources(episode.id || episode.ref, { audioType: audio, signal });
+  if (!embeds || !embeds.length) throw Object.assign(new Error(`no ${audio} embeds for episode ${ep}`), { code: 'NO_EMBEDS' });
+
+  const candidates = rankEmbeds(embeds).slice(0, 3);
+  for (const embed of candidates) {
+    try {
+      const r = await animekai.resolve(embed, { referer: 'https://animekai.be/', signal });
+      const sniffed = await snackPlayable(r, signal);
+      if (sniffed) {
+        return createHlsSession({
+          provider: 'animekai', media, episode, resolvedResult: r, sniffed, defaultReferer: 'https://megaplay.buzz/', skip: null, audio,
+        });
+      }
+    } catch {
+      // try next
+    }
+  }
+  throw Object.assign(new Error(`no playable AnimeKai variant`), { code: 'RESOLVE_FAILED' });
+}
+
+async function buildSourceProvider(provider, { title, ep, audio }) {
+  const norm = provider.toLowerCase();
+  if (norm === 'aniwatch') return await buildSourceAniwatch({ title, ep, audio });
+  if (norm === 'hianime') return await buildSourceHianime({ title, ep, audio });
+  if (norm === 'anikoto') return await buildSourceAnikoto({ title, ep, audio });
+  if (norm === 'animedubhindi') return await buildSourceAdb({ title, ep, audio });
+  if (norm === 'animewave') return await buildSourceAnimewave({ title, ep, audio });
+  if (norm === 'animekai') return await buildSourceAnimekai({ title, ep, audio });
+  throw new Error(`Unsupported provider: ${provider}`);
+}
+
+/* ------------------------------------------------------------- race dispatcher */
+
+async function raceProviders(candidates, { title, ep, audio }) {
+  const startTime = Date.now();
+  console.log(`[Bridge Race] Racing [${candidates.join(', ')}] for "${title}" ep ${ep} (${audio})`);
+  return new Promise((resolveRace, rejectRace) => {
+    let resolved = false;
+    let pending = candidates.length;
+    const errors = [];
+
+    for (const prov of candidates) {
+      buildSourceProvider(prov, { title, ep, audio })
+        .then((meta) => {
+          if (!resolved) {
+            resolved = true;
+            const elapsed = Date.now() - startTime;
+            console.log(`[Bridge Race] Winner: ${prov} in ${elapsed}ms!`);
+            meta.raceMs = elapsed;
+            meta.winner = prov;
+            recent.set(`${title.toLowerCase()}|${ep}|${audio}|auto`, { at: Date.now(), sid: meta.session });
+            recent.set(`${title.toLowerCase()}|${ep}|${audio}|fastest`, { at: Date.now(), sid: meta.session });
+            recent.set(`${title.toLowerCase()}|${ep}|${audio}|${prov}`, { at: Date.now(), sid: meta.session });
+            resolveRace(meta);
+          }
+        })
+        .catch((err) => {
+          errors.push(`${prov}: ${err.message || err.code || err}`);
+          pending--;
+          if (pending === 0 && !resolved) {
+            rejectRace(Object.assign(new Error(`All providers in race failed (${errors.join('; ')})`), { code: 'RESOLVE_FAILED' }));
+          }
+        });
+    }
+  });
+}
+
 async function buildSource({ title, ep, audio, provider = 'auto', fallback = true }) {
   const normProvider = (provider || 'auto').toLowerCase();
 
-  if (normProvider === 'animedubhindi') {
+  // If a specific provider is requested:
+  if (normProvider !== 'auto' && normProvider !== 'fastest') {
     try {
-      return await buildSourceAdb({ title, ep, audio });
+      return await buildSourceProvider(normProvider, { title, ep, audio });
     } catch (e) {
-      if (fallback) {
-        return await buildSourceAnikoto({ title, ep, audio: audio === 'dub' ? 'dub' : 'sub' });
-      }
-      throw e;
+      if (!fallback) throw e;
+      console.warn(`[Bridge] Specific provider "${normProvider}" failed, falling back to race:`, e.message);
     }
   }
 
-  if (normProvider === 'anikoto') {
-    try {
-      return await buildSourceAnikoto({ title, ep, audio });
-    } catch (e) {
-      if (fallback && audio === 'dub') {
-        return await buildSourceAdb({ title, ep, audio });
-      }
-      throw e;
-    }
+  // Auto / Fastest race mode:
+  let candidates;
+  if (audio === 'hindi') {
+    candidates = ['animedubhindi'];
+  } else if (audio === 'dub') {
+    candidates = ['aniwatch', 'anikoto', 'hianime', 'animedubhindi'];
+  } else {
+    candidates = ['aniwatch', 'anikoto', 'hianime'];
   }
 
-  // provider === 'auto':
-  if (audio === 'dub' || audio === 'hindi') {
-    try {
-      return await buildSourceAnikoto({ title, ep, audio: 'dub' });
-    } catch {
-      try {
-        return await buildSourceAdb({ title, ep, audio: 'dub' });
-      } catch {
-        return await buildSourceAnikoto({ title, ep, audio: 'sub' });
-      }
+  try {
+    return await raceProviders(candidates, { title, ep, audio });
+  } catch (err) {
+    if (audio === 'dub' && fallback) {
+      return await buildSource({ title, ep, audio: 'sub', provider: 'auto', fallback: false });
     }
+    throw err;
   }
-
-  return await buildSourceAnikoto({ title, ep, audio: 'sub' });
 }
 
 /* ------------------------------------------------------- audio availability */
 
-/**
- * Which audio tracks this episode ACTUALLY carries, decided by evidence — not the
- * site's `/dub` label.  The dub is offered only when a byte comparison against the
- * sub proves a second audio (dubPairVerdict "distinct"); a "copy" verdict means the
- * site's dub file is the original again, and "unknown" means we could not measure
- * it — neither becomes a selectable option, because offering a dub that plays
- * Japanese audio mislabeled as English is the exact fabrication this site refuses.
- */
 async function buildAudiosAnikoto({ title, ep }) {
   const signal = AbortSignal.timeout(RESOLVE_TIMEOUT_MS);
-  const { media, episodes } = await detailsForAnikoto(title);
+  const { media, episodes } = await detailsForProvider('anikoto', title);
   const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
   if (!episode) throw Object.assign(new Error(`episode ${ep} is not in this title's list (${episodes.length} listed)`), { code: 'NO_SUCH_EPISODE' });
 
-  const subEmbeds = rankEmbeds((await anikotoSources(episode.id, { audioType: 'sub', signal })).embeds);
-  const dubEmbeds = rankEmbeds((await anikotoSources(episode.id, { audioType: 'dub', signal })).embeds);
+  const subEmbeds = rankEmbeds((await anikoto.sources(episode.id, { audioType: 'sub', signal })).embeds);
+  const dubEmbeds = rankEmbeds((await anikoto.sources(episode.id, { audioType: 'dub', signal })).embeds);
 
   const audios = [{ id: 'sub', label: 'Japanese (original)', available: subEmbeds.length > 0 }];
 
@@ -518,31 +579,53 @@ async function buildAudiosAnikoto({ title, ep }) {
     reason = 'The original could not be read to compare the dub against.';
   } else {
     let sawCopy = false;
-    for (const du of dubEmbeds.slice(0, 3)) {
-      if (du === subEmbeds[0]) continue;
-      const v = await dubPairVerdict(subEmbeds[0], du, { signal });
-      if (v.verdict === 'distinct') { state = 'verified'; break; }
-      if (v.verdict === 'copy') { sawCopy = true; reason = v.reason; }
-      else reason = v.reason;
+    for (const dEmbed of dubEmbeds.slice(0, 2)) {
+      for (const sEmbed of subEmbeds.slice(0, 2)) {
+        try {
+          const verdict = await dubPairVerdict({ subEmbedUrl: sEmbed, dubEmbedUrl: dEmbed, signal });
+          if (verdict.verdict === 'distinct') {
+            state = 'verified';
+            break;
+          }
+          if (verdict.verdict === 'copy') sawCopy = true;
+        } catch {
+          // try next pair
+        }
+      }
+      if (state === 'verified') break;
     }
-    if (state !== 'verified') {
-      state = sawCopy ? 'copy' : 'unknown';
-      reason = sawCopy
-        ? "The source's dub file is byte-identical to its original — it carries no second audio."
-        : `A second audio could not be measured on this source${reason ? ` (${reason})` : ''}.`;
+    if (state !== 'verified' && sawCopy) {
+      state = 'copy';
+      reason = 'The site-labeled dub was measured to be identical to the original audio.';
     }
   }
-  audios.push({ id: 'dub', label: 'English (dub)', available: state === 'verified', state, ...(reason ? { reason } : {}) });
+
+  audios.push({
+    id: 'dub',
+    label: 'English (dub)',
+    available: state === 'verified',
+    state,
+    ...(reason ? { reason } : {}),
+  });
 
   return { title: media.title, episode: { number: episode.number, title: episode.title }, audios };
 }
 
 async function buildAudios({ title, ep }) {
-  const anikotoRes = await buildAudiosAnikoto({ title, ep }).catch(() => null);
-  const audios = anikotoRes?.audios ?? [{ id: 'sub', label: 'Japanese (original)', available: false }];
+  let anikotoRes = null;
+  try {
+    anikotoRes = await buildAudiosAnikoto({ title, ep });
+  } catch {
+    // anikoto error
+  }
+
+  const audios = anikotoRes ? [...anikotoRes.audios] : [
+    { id: 'sub', label: 'Japanese (original)', available: true },
+    { id: 'dub', label: 'English (dub)', available: false, state: 'unknown', reason: 'Provider check unavailable.' },
+  ];
 
   try {
-    const { episodes } = await detailsForAdb(title);
+    const { episodes } = await detailsForProvider('animedubhindi', title);
     const hasEp = episodes.some((e) => e.number === ep);
     if (hasEp) {
       audios.push({
@@ -553,7 +636,7 @@ async function buildAudios({ title, ep }) {
       });
     }
   } catch {
-    // title or ep not on AnimeDubHindi
+    // not on animedubhindi
   }
 
   return {
@@ -566,7 +649,7 @@ async function buildAudios({ title, ep }) {
 /* ----------------------------------------------------------- stream proxy */
 
 function freshSignedUrl(session, target) {
-  if (session.kind === 'progressive' || session.provider === 'animedubhindi') {
+  if (session.kind === 'progressive' || session.provider === 'animedubhindi' || session.provider === 'hianime') {
     return target;
   }
   const u = new URL(target);
@@ -578,7 +661,6 @@ function freshSignedUrl(session, target) {
   return u.toString();
 }
 
-/** Marks a host the playlist named as proxyable, up to ALLOWED_HOSTS_CAP. */
 function admitHost(session, host) {
   if (session.allowedHosts.has(host) || session.allowedHosts.size < ALLOWED_HOSTS_CAP) {
     session.allowedHosts.add(host);
@@ -588,12 +670,6 @@ function admitHost(session, host) {
   return false;
 }
 
-/**
- * Every proxied request — segments, playlists, caption fetches — refreshes the
- * session's timestamp, which is what makes SESSION_TTL an idle timeout and
- * SESSION_CAP an eviction of the least recently used viewer rather than whoever
- * happened to be resolved first. Without it a long rewatch is dropped mid-episode.
- */
 function useSession(id) {
   const session = sessions.get(id);
   if (session) session.at = Date.now();
@@ -631,9 +707,6 @@ async function serveStream(req, res, session, target, signal) {
   });
   if (!res2.ok && res2.status !== 206) {
     await res2.body?.cancel().catch(() => {});
-    /* The CDN refusing a segment (expired token, object gone) is a 4xx the site can act
-       on and the edge passes through; its 5xx is reported as 422 so the reason survives.
-       Never the upstream URL itself — the client is not given one to hold. */
     return json(res, refusalStatus(res2.status), { error: 'UPSTREAM', status: res2.status, path: new URL(upstream).pathname });
   }
   const type = res2.headers.get('content-type') ?? '';
@@ -668,10 +741,6 @@ const server = createServer(async (req, res) => {
   const url = new URL(req.url ?? '/', `http://${HOST}:${PORT}`);
   prune();
 
-  /* /health is what the site probes to decide whether real playback exists at all, so
-     it answers whoever asks. Everything that costs the provider a request does not:
-     the origin of the page must be one of ours, and a single caller gets a bounded
-     number of the expensive routes per minute. */
   if (url.pathname !== '/health') {
     const blocked = blockedOrigin(req);
     if (blocked) return json(res, 403, { error: 'ORIGIN_NOT_ALLOWED', origin: blocked });
@@ -686,24 +755,30 @@ const server = createServer(async (req, res) => {
     if (url.pathname === '/health') {
       return json(res, 200, {
         ok: true,
-        provider: 'anikoto',
-        providers: ['anikoto', 'animedubhindi'],
+        providers: ['auto', 'aniwatch', 'hianime', 'anikoto', 'animedubhindi', 'animewave', 'animekai'],
         dispatcher: true,
+        race: true,
         bridge: 'api/bridge.mjs',
-        role: 'stream bridge & provider dispatcher — resolves and relays real playback; binds loopback and is reached by visitors through the tunnel',
+        role: 'stream bridge & multi-provider dispatcher with real-time latency racing',
       });
     }
 
     if (url.pathname === '/search') {
       const q = url.searchParams.get('q') ?? '';
-      const prov = (url.searchParams.get('provider') ?? 'anikoto').toLowerCase();
+      const prov = (url.searchParams.get('provider') ?? 'auto').toLowerCase();
       if (!q.trim()) return json(res, 400, { error: 'Q_REQUIRED' });
-      if (prov === 'animedubhindi') {
-        const hits = await animedubhindi.search(q, { signal: AbortSignal.timeout(30_000) });
-        return json(res, 200, hits.map((h) => ({ id: h.id, slug: h.slug, title: h.title, coverUrl: h.coverUrl ?? null, provider: 'animedubhindi' })));
-      }
-      const hits = await anikotoSearch(q, { signal: AbortSignal.timeout(30_000) });
-      return json(res, 200, hits.map((h) => ({ id: h.id, slug: h.slug, title: h.title, coverUrl: h.coverUrl ?? null, provider: 'anikoto' })));
+      const targetProv = prov === 'auto' ? 'aniwatch' : prov;
+      let mod = anikoto;
+      if (targetProv === 'animedubhindi') mod = animedubhindi;
+      else if (targetProv === 'hianime') mod = hianime;
+      else if (targetProv === 'aniwatch') mod = aniwatch;
+      else if (targetProv === 'animewave') mod = animewave;
+      else if (targetProv === 'animekai') mod = animekai;
+
+      const hits = await mod.search(q, { signal: AbortSignal.timeout(30_000) });
+      return json(res, 200, (hits ?? []).map((h) => ({
+        id: h.id, slug: h.slug ?? h.id, title: h.title, coverUrl: h.coverUrl ?? null, provider: targetProv,
+      })));
     }
 
     if (url.pathname === '/resolve') {
@@ -735,7 +810,7 @@ const server = createServer(async (req, res) => {
       const title = url.searchParams.get('title') ?? '';
       const ep = Number(url.searchParams.get('ep') ?? '0');
       if (!title.trim() || !Number.isInteger(ep) || ep < 1) return json(res, 400, { error: 'TITLE_EP_REQUIRED' });
-      const key = `${title.trim().toLowerCase()}|${ep}`;
+      const key = `${title.toLowerCase()}|${ep}`;
       const hit = audioCache.get(key);
       if (hit && Date.now() - hit.at < AUDIO_TTL) return json(res, 200, hit.meta);
       const meta = await buildAudios({ title, ep });
@@ -743,9 +818,16 @@ const server = createServer(async (req, res) => {
       return json(res, 200, meta);
     }
 
-    const mediaStream = url.pathname.match(/^\/stream\/([\w-]+)\/(media(?:\.[\w]+)?|master\.m3u8)$/);
-    if (mediaStream) {
-      const session = useSession(mediaStream[1]);
+    const mkv = url.pathname.match(/^\/stream\/([\w-]+)\/(media(?:\.[\w]+)?)$/);
+    if (mkv) {
+      const session = useSession(mkv[1]);
+      if (!session) return json(res, 404, { error: 'NO_SESSION' });
+      return await serveStream(req, res, session, session.mediaUrl, AbortSignal.timeout(60_000));
+    }
+
+    const master = url.pathname.match(/^\/stream\/([\w-]+)\/master\.m3u8$/);
+    if (master) {
+      const session = useSession(master[1]);
       if (!session) return json(res, 404, { error: 'NO_SESSION' });
       return await serveStream(req, res, session, session.mediaUrl, AbortSignal.timeout(60_000));
     }
@@ -786,11 +868,6 @@ const server = createServer(async (req, res) => {
       endpoints: ['/health', '/search?q=&provider=', '/resolve?title=&ep=&audio=&provider=', '/audios?title=&ep=', '/stream/:sid/media.mkv', '/stream/:sid/master.m3u8', '/stream/:sid/play?u=', '/stream/:sid/sub/:i.vtt'],
     });
   } catch (e) {
-    /* A refusal from the provider is not a bridge fault. Anything in 5xx coming back through
-       the tunnel is replaced by Cloudflare's own edge page — no body, no CORS headers — so the
-       reason the viewer needs ("episode 8 is not in this title's list") never reaches the
-       browser and the player can only call the bridge unreachable. Refusals travel as 4xx.
-       A genuine bridge fault stays 5xx: "the bridge broke" is the honest report there. */
     const timedOut = e?.name === 'TimeoutError' || e?.name === 'AbortError';
     const refusal = {
       NO_MATCH: 404, NO_SUCH_EPISODE: 404, NO_EMBEDS: 404, RESOLVE_FAILED: 422,
@@ -805,10 +882,17 @@ const server = createServer(async (req, res) => {
 export {
   server,
   buildSource,
+  buildSourceProvider,
+  raceProviders,
   buildSourceAnikoto,
+  buildSourceAniwatch,
+  buildSourceHianime,
   buildSourceAdb,
+  buildSourceAnimewave,
+  buildSourceAnimekai,
   buildAudios,
   buildAudiosAnikoto,
+  detailsForProvider,
   detailsForAnikoto,
   detailsForAdb,
   sessions,
@@ -818,7 +902,7 @@ export {
 
 if (process.argv[1] && process.argv[1].endsWith('bridge.mjs')) {
   server.listen(PORT, HOST, () => {
-    console.log(`stream bridge & provider dispatcher on http://${HOST}:${PORT} — loopback bind; visitors arrive through the tunnel`);
+    console.log(`stream bridge & multi-provider dispatcher on http://${HOST}:${PORT} — loopback bind; visitors arrive through tunnel`);
     console.log('endpoints: /health /search?q=&provider= /resolve?title=&ep=&audio=&provider= /audios?title=&ep= /stream/:sid/...');
   });
 }

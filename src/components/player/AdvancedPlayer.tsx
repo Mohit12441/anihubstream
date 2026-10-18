@@ -3,7 +3,14 @@ import { Play, RefreshCw, SkipForward, WifiOff, X } from 'lucide-react';
 import type { Anime, Episode, Marker } from '../../data/model';
 import { toSeconds } from '../../data/model';
 import { fetchSkipTimes } from '../../lib/aniskip';
-import { LIVE_SERVER, SERVERS, serverById, type ServerStatus } from '../../data/servers';
+import {
+  AUTO_SERVER,
+  SERVERS,
+  serverById,
+  providerFromId,
+  serverIdFromProvider,
+  type ServerStatus,
+} from '../../data/servers';
 import { useToast } from '../../lib/Toast';
 import { usePrefersReducedMotion } from '../../lib/motion';
 import { usePlayerEngine, type PlayerEngine } from '../../lib/usePlayerEngine';
@@ -89,14 +96,15 @@ export function AdvancedPlayer(props: Props) {
       ? switchSeekRef.current
       : resumeRef.current;
 
-  const [selectedServerId, setSelectedServerId] = useState<string>(LIVE_SERVER.id);
+  const [selectedServerId, setSelectedServerId] = useState<string>(AUTO_SERVER.id);
   const server = serverById(selectedServerId);
 
+  const provider = providerFromId(selectedServerId);
   const live = useLiveStream({
     title: anime.title,
     episode: episode.n,
     audio: prefs.audio,
-    provider: selectedServerId === 'animedubhindi-live' ? 'animedubhindi' : 'anikoto',
+    provider,
     subsOn: prefs.subtitles.enabled,
     subLanguage: prefs.subtitles.language,
     startAt: startAtForLive,
@@ -892,10 +900,22 @@ export function AdvancedPlayer(props: Props) {
 
         {menu.kind === 'server' && (
           <ServerSelector
-            servers={SERVERS.map((s) => ({
-              ...s,
-              status: s.id === selectedServerId ? serverStatus : 'online',
-            }))}
+            servers={SERVERS.map((s) => {
+              const isCurrent = s.id === selectedServerId;
+              const isWinningProvider = s.id === serverIdFromProvider(live.info?.provider);
+              let note = s.note;
+              if (s.id === AUTO_SERVER.id && live.info?.provider) {
+                const winnerName = serverById(serverIdFromProvider(live.info.provider)).name;
+                note = live.info.raceMs
+                  ? `⚡ Race winner: ${winnerName} (${(live.info.raceMs / 1000).toFixed(1)}s latency)`
+                  : `⚡ Connected to ${winnerName}`;
+              }
+              return {
+                ...s,
+                status: isCurrent ? serverStatus : isWinningProvider ? 'online' : s.status,
+                note,
+              };
+            })}
             currentId={selectedServerId}
             onSelect={(id) => pickServer(id)}
             onRetry={live.retry}
