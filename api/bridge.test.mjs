@@ -12,6 +12,10 @@ import {
   searchHandlers,
   setSearchHandler,
   setAudiosHandler,
+  ProviderError,
+  StreamNotFoundError,
+  ProviderTimeoutError,
+  TIMEOUTS,
 } from './bridge.mjs';
 
 /**
@@ -450,5 +454,38 @@ describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
     const body = await res.json();
     assert.ok(body.session);
     assert.equal(body.audio, 'sub');
+  });
+
+  it('Phase 3: StreamNotFoundError returns structured 404 response with provider provenance', async () => {
+    setProviderHandler('aniwatch', async () => {
+      throw new StreamNotFoundError('Episode 99 does not exist on AniWatch', 'aniwatch');
+    });
+
+    const res = await fetch(`${bridgeUrl}/resolve?title=Test&ep=99&provider=aniwatch&fallback=false`);
+    assert.equal(res.status, 404);
+    const body = await res.json();
+    assert.equal(body.error, 'NO_SUCH_EPISODE');
+    assert.equal(body.provider, 'aniwatch');
+    assert.ok(body.message.includes('Episode 99'));
+  });
+
+  it('Phase 3: ProviderTimeoutError maps cleanly to 504 Gateway Timeout', async () => {
+    setProviderHandler('hianime', async () => {
+      throw new ProviderTimeoutError('HiAnime stream extraction timed out after 20s', 'hianime');
+    });
+
+    const res = await fetch(`${bridgeUrl}/resolve?title=Test&ep=1&provider=hianime&fallback=false`);
+    assert.equal(res.status, 504);
+    const body = await res.json();
+    assert.equal(body.error, 'PROVIDER_TIMEOUT');
+    assert.equal(body.provider, 'hianime');
+  });
+
+  it('Phase 3: TIMEOUTS constants are properly configured and bounded', () => {
+    assert.ok(Number.isFinite(TIMEOUTS.SEARCH) && TIMEOUTS.SEARCH > 0);
+    assert.ok(Number.isFinite(TIMEOUTS.DETAILS) && TIMEOUTS.DETAILS > 0);
+    assert.ok(Number.isFinite(TIMEOUTS.EMBED) && TIMEOUTS.EMBED > 0);
+    assert.ok(Number.isFinite(TIMEOUTS.SNACK) && TIMEOUTS.SNACK > 0);
+    assert.ok(Number.isFinite(TIMEOUTS.RESOLVE) && TIMEOUTS.RESOLVE > 0);
   });
 });

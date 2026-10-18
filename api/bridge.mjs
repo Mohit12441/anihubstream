@@ -67,6 +67,44 @@ const ALLOWED_ORIGIN_HOSTS = new Set([
 const ALLOWED_ORIGIN_SUFFIXES = ['.anihubstream.pages.dev'];
 const ALLOWED_HOSTS_CAP = 16;
 
+/* ------------------------------------------------------------------ errors & timeouts */
+
+class ProviderError extends Error {
+  constructor(message, code = 'PROVIDER_ERROR', provider = 'unknown', status = 502) {
+    super(message);
+    this.name = 'ProviderError';
+    this.code = code;
+    this.provider = provider;
+    this.status = status;
+  }
+}
+
+class StreamNotFoundError extends ProviderError {
+  constructor(message, provider = 'unknown') {
+    super(message, 'NO_SUCH_EPISODE', provider, 404);
+    this.name = 'StreamNotFoundError';
+  }
+}
+
+class ProviderTimeoutError extends ProviderError {
+  constructor(message, provider = 'unknown') {
+    super(message, 'PROVIDER_TIMEOUT', provider, 504);
+    this.name = 'ProviderTimeoutError';
+  }
+}
+
+const TIMEOUTS = {
+  SEARCH: 15_000,
+  DETAILS: 30_000,
+  EMBED: 20_000,
+  SNACK: 15_000,
+  RESOLVE: RESOLVE_TIMEOUT_MS,
+};
+
+const DETAILS_CAP = 256;
+const RECENT_CAP = 512;
+const AUDIO_CAP = 256;
+
 /* ------------------------------------------------------------------ state */
 
 /** @type {Map<string, { at: number, media: any, episodes: any[] }>} */
@@ -90,10 +128,18 @@ function prune() {
   for (const [k, v] of recent) if (now - v.at > RECENT_TTL) recent.delete(k);
   for (const [k, v] of audioCache) if (now - v.at > AUDIO_TTL) audioCache.delete(k);
   for (const [k, v] of rateHits) if (now - v.at > RATE_WINDOW_MS) rateHits.delete(k);
-  if (sessions.size > SESSION_CAP) {
-    const lru = [...sessions.entries()].sort((a, b) => a[1].at - b[1].at);
-    for (const [k] of lru.slice(0, sessions.size - SESSION_CAP)) sessions.delete(k);
-  }
+
+  const evictOldest = (map, cap) => {
+    if (map.size > cap) {
+      const lru = [...map.entries()].sort((a, b) => a[1].at - b[1].at);
+      for (const [k] of lru.slice(0, map.size - cap)) map.delete(k);
+    }
+  };
+
+  evictOldest(sessions, SESSION_CAP);
+  evictOldest(providerDetailsCache, DETAILS_CAP);
+  evictOldest(recent, RECENT_CAP);
+  evictOldest(audioCache, AUDIO_CAP);
 }
 
 /* ------------------------------------------------------------------- http */
@@ -1205,14 +1251,19 @@ const server = createServer(async (req, res) => {
       endpoints: ['/health', '/search?q=&provider=', '/resolve?title=&ep=&audio=&provider=', '/audios?title=&ep=', '/downloads?title=&ep=', '/stream/:sid/media.mkv', '/stream/:sid/media.mp4', '/stream/:sid/master.m3u8', '/stream/:sid/play?u=', '/stream/:sid/sub/:i.vtt'],
     });
   } catch (e) {
-    const timedOut = e?.name === 'TimeoutError' || e?.name === 'AbortError';
+    const timedOut = e?.name === 'TimeoutError' || e?.name === 'AbortError' || e?.code === 'PROVIDER_TIMEOUT';
     const refusal = {
       NO_MATCH: 404, NO_SUCH_EPISODE: 404, NO_EMBEDS: 404, RESOLVE_FAILED: 422,
-      ...(timedOut ? { BRIDGE_TIMEOUT: 422 } : {}),
+      ...(timedOut ? { BRIDGE_TIMEOUT: 422, PROVIDER_TIMEOUT: 504 } : {}),
     };
-    const code = timedOut ? 'BRIDGE_TIMEOUT' : (e?.code ?? 'BRIDGE_ERROR');
-    if (!refusal[code]) console.error(`bridge fault: ${e?.stack ?? e}`);
-    return json(res, refusal[code] ?? 502, { error: code, message: e?.message ?? String(e) });
+    const code = timedOut ? (e?.code === 'PROVIDER_TIMEOUT' ? 'PROVIDER_TIMEOUT' : 'BRIDGE_TIMEOUT') : (e?.code ?? 'BRIDGE_ERROR');
+    const status = e?.status ?? refusal[code] ?? 502;
+    if (!refusal[code] && status >= 500) console.error(`bridge fault: ${e?.stack ?? e}`);
+    return json(res, status, {
+      error: code,
+      message: e?.message ?? String(e),
+      ...(e?.provider ? { provider: e.provider } : {}),
+    });
   }
 });
 
@@ -1240,6 +1291,10 @@ export {
   sessions,
   recent,
   audioCache,
+  ProviderError,
+  StreamNotFoundError,
+  ProviderTimeoutError,
+  TIMEOUTS,
 };
 
 if (process.argv[1] && process.argv[1].endsWith('bridge.mjs')) {
