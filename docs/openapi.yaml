@@ -401,10 +401,26 @@ paths:
                 $ref: '#/components/schemas/BridgeSource'
         '400':
           description: Missing title or episode
+        '404':
+          description: Stream or episode not found on provider (StreamNotFoundError)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BridgeError'
         '429':
           description: Rate limited
         '502':
-          description: Upstream resolution failed
+          description: Upstream provider error (ProviderError)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BridgeError'
+        '504':
+          description: Provider resolution timeout (ProviderTimeoutError)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BridgeError'
 
   /audios:
     get:
@@ -676,3 +692,17 @@ components:
           type: string
         reused:
           type: boolean
+
+    BridgeError:
+      type: object
+      required: [error, message]
+      properties:
+        error:
+          type: string
+          example: NO_SUCH_EPISODE
+        message:
+          type: string
+          example: Episode 99 does not exist on provider
+        provider:
+          type: string
+          example: aniwatch
