@@ -34,5 +34,10 @@
 /anime/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on   /watch/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life         301
 /anime/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on/* /watch/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life/:splat   301
 
+# Static crawlers & sitemap passthrough
+/sitemap.xml                                       /sitemap.xml                                                   200
+/robots.txt                                        /robots.txt                                                    200
+/llms.txt                                          /llms.txt                                                      200
+
 # SPA fallback
 /*    /index.html   200

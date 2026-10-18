@@ -11,6 +11,26 @@ const DEPLOY_BASE = '/wp-content/uploads/anihub/';
 export default defineConfig(({ command, mode }) => ({
   base: command === 'build' && mode !== 'pages' ? DEPLOY_BASE : '/',
   plugins: [react()],
+  build: {
+    target: 'es2022',
+    cssCodeSplit: true,
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (
+            id.includes('node_modules/react/') ||
+            id.includes('node_modules/react-dom/') ||
+            id.includes('node_modules/react-router-dom/')
+          ) {
+            return 'vendor-react';
+          }
+          if (id.includes('node_modules/lucide-react/')) {
+            return 'vendor-icons';
+          }
+        },
+      },
+    },
+  },
   server: { port: 5178, host: true, proxy: { '/api': 'http://localhost:8790' } },
   preview: { port: 5178, host: true },
 }));

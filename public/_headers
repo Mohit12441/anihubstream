@@ -1,0 +1,35 @@
+# Cloudflare Pages Cache and Security Headers
+
+# Hashed assets: cache for 1 year immutable
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+# Static artwork: cache for 30 days immutable
+/art/*
+  Cache-Control: public, max-age=2592000, immutable
+
+# Branding assets
+/emblem.svg
+  Cache-Control: public, max-age=2592000, immutable
+/og.png
+  Cache-Control: public, max-age=2592000, immutable
+
+# Crawler definitions
+/robots.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
+
+/llms.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
+
+# General security headers for all routes
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin

@@ -47,7 +47,15 @@ export function HeroBanner({ query, onQuery, onSearch, activeGenre, onGenre }: P
   return (
     <section className="hero" ref={ref} aria-label="AniHubStream featured">
       <div className="hero__art" style={{ transform: `translate3d(0, ${offset}px, 0) scale(1.06)` }}>
-        <img src={HERO.art} alt="" aria-hidden="true" decoding="async" />
+        <img
+          src={HERO.art}
+          alt=""
+          aria-hidden="true"
+          fetchPriority="high"
+          decoding="async"
+          width={1920}
+          height={1080}
+        />
       </div>
       <div className="hero__veil" />
       <div className="hero__vignette" />

@@ -1,17 +1,18 @@
-// functions/_middleware.js
-// Cloudflare Pages edge middleware for dynamic SEO, per-route metadata,
-// self-referencing canonicals, Open Graph, Twitter cards, and rich JSON-LD schema.
+import { onRequestGet as sitemapHandler } from './sitemap.xml.js';
 
 export async function onRequest(context) {
   const { request, next, env } = context;
   const url = new URL(request.url);
   const path = url.pathname;
 
-  // Static assets, api routes, and sitemap pass through untouched
+  if (path === '/sitemap.xml') {
+    return sitemapHandler(context);
+  }
+
+  // Static assets and api routes pass through untouched
   if (
     path.startsWith('/api/') ||
     path === '/api' ||
-    path === '/sitemap.xml' ||
     path.startsWith('/art/') ||
     path.startsWith('/assets/') ||
     path.endsWith('.js') ||

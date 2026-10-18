@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#07070b" />
     <meta
       name="description"
-      content="AniHubStream — watch anime free anytime, anywhere. Explore a world beyond limits."
+      content="Watch high-quality anime online free on AniHubStream. Stream subbed and dubbed anime with fast playback, clean weekly schedules, and full episode guides."
     />
     <link rel="canonical" href="https://anihubstream.com/" />
     <meta property="og:type" content="website" />
@@ -14,7 +14,7 @@
     <meta property="og:title" content="AniHubStream — Watch Anime Free Anytime, Anywhere" />
     <meta
       property="og:description"
-      content="AniHubStream — watch anime free anytime, anywhere. Explore a world beyond limits."
+      content="Watch high-quality anime online free on AniHubStream. Stream subbed and dubbed anime with fast playback, clean weekly schedules, and full episode guides."
     />
     <meta property="og:url" content="https://anihubstream.com/" />
     <meta property="og:image" content="https://anihubstream.com/og.png" />
@@ -25,29 +25,68 @@
     <meta name="twitter:title" content="AniHubStream — Watch Anime Free Anytime, Anywhere" />
     <meta
       name="twitter:description"
-      content="AniHubStream — watch anime free anytime, anywhere. Explore a world beyond limits."
+      content="Watch high-quality anime online free on AniHubStream. Stream subbed and dubbed anime with fast playback, clean weekly schedules, and full episode guides."
     />
     <meta name="twitter:image" content="https://anihubstream.com/og.png" />
     <meta name="twitter:image:alt" content="AniHubStream wordmark over a dark, ember-lit background" />
     <title>AniHubStream — Watch Anime Free Anytime, Anywhere</title>
-    <!-- Card art loads from these two CDNs; warm the connections while the bundle boots. -->
-    <link rel="preconnect" href="https://media.kitsu.app" />
+    <!-- Preconnect to critical domains -->
     <link rel="preconnect" href="https://s4.anilist.co" />
-    <link rel="dns-prefetch" href="https://media.kitsu.app" />
     <link rel="dns-prefetch" href="https://s4.anilist.co" />
+    <link rel="dns-prefetch" href="https://media.kitsu.app" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- No hero-art preload here: the hero is whichever title /api/home puts on top, so a
-         hardcoded href downloads a high-priority image the page then does not show (Chrome
-         warns and drops it). The art the page really uses arrives with that response. -->
+    <!-- Preload LCP hero image for instant rendering -->
+    <link rel="preload" as="image" href="/art/hero-demon.jpg" fetchpriority="high" />
+    <!-- Non-blocking asynchronous font loading -->
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+JP:wght@500;700&family=Permanent+Marker&family=Bakbak+One&display=swap"
-      rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+JP:wght@500;700&family=Permanent+Marker&family=Bakbak+One&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+JP:wght@500;700&family=Permanent+Marker&family=Bakbak+One&display=swap"
+      />
+    </noscript>
     <link rel="icon" href="/emblem.svg" type="image/svg+xml" />
+    <!-- Structured JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AniHubStream",
+      "url": "https://anihubstream.com/",
+      "description": "Watch high-quality anime online free on AniHubStream. Stream subbed and dubbed anime with fast playback, clean weekly schedules, and full episode guides.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://anihubstream.com/anime?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+        <h1>AniHubStream — Watch Anime Free Anytime, Anywhere</h1>
+        <p>Watch high-quality anime online free on AniHubStream. Stream subbed and dubbed anime with fast playback, clean weekly schedules, and full episode guides.</p>
+        <nav aria-label="Main Navigation">
+          <a href="/anime">Browse Anime Catalogue</a>
+          <a href="/genres">Anime Genres</a>
+          <a href="/schedule">Broadcast Schedule</a>
+          <a href="/discover">Discover Trending Anime</a>
+          <a href="/about">About AniHubStream</a>
+        </nav>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
