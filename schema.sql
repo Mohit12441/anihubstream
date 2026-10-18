@@ -53,6 +53,10 @@ CREATE TABLE IF NOT EXISTS anime (
 
 CREATE INDEX IF NOT EXISTS anime_by_trend ON anime(trend_rank);
 CREATE INDEX IF NOT EXISTS anime_by_added ON anime(added_at DESC);
+CREATE INDEX IF NOT EXISTS anime_by_status ON anime(status);
+CREATE INDEX IF NOT EXISTS anime_by_rating ON anime(rating DESC);
+CREATE INDEX IF NOT EXISTS anime_by_year ON anime(year DESC, rating DESC);
+CREATE INDEX IF NOT EXISTS anime_by_skip_key ON anime(skip_key_space, skip_key_id);
 
 CREATE TABLE IF NOT EXISTS genre (
   id       TEXT PRIMARY KEY,

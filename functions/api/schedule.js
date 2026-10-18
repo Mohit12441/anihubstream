@@ -18,7 +18,10 @@ export const onRequestGet = async ({ request, env }) => {
       entries: results.filter((r) => r.sched_day === i + 1).map(cardFromRow),
     }));
 
-    return ok({ seasons: [...new Set(results.map((r) => r.sched_season))].sort(), days });
+    return ok(
+      { seasons: [...new Set(results.map((r) => r.sched_season))].sort(), days },
+      { cache: 'public, max-age=60, s-maxage=600, stale-while-revalidate=60', headers: { vary: 'Accept-Encoding' } },
+    );
   } catch (err) {
     return errorResponse(err);
   }

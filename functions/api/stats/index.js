@@ -13,7 +13,7 @@ export const onRequestGet = async ({ env }) => {
       titles: titles.n,
       ongoing: ongoing.n,
       genres: Object.fromEntries(genres.results.map((g) => [g.id, g.n])),
-    });
+    }, { cache: 'public, max-age=60, s-maxage=600, stale-while-revalidate=60', headers: { vary: 'Accept-Encoding' } });
   } catch (err) {
     return errorResponse(err);
   }

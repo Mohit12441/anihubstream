@@ -16,7 +16,7 @@ export const onRequestGet = async ({ env }) => {
         accent: g.accent,
         animeCount: g.anime_count,
       })),
-    });
+    }, { cache: 'public, max-age=120, s-maxage=900, stale-while-revalidate=60', headers: { vary: 'Accept-Encoding' } });
   } catch (err) {
     return errorResponse(err);
   }

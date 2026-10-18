@@ -24,7 +24,7 @@ export const onRequestGet = async ({ env }) => {
       topRated: topRated.results.map(cardFromRow),
       fresh: fresh.results.map(cardFromRow),
       added: added.results.map(cardFromRow),
-    });
+    }, { cache: 'public, max-age=60, s-maxage=300, stale-while-revalidate=60', headers: { vary: 'Accept-Encoding' } });
   } catch (err) {
     return errorResponse(err);
   }
