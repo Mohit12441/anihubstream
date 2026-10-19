@@ -93,7 +93,7 @@ export function Watch() {
   const [playServers, setPlayServers] = useState<PlayServer[]>([]);
   const targetProvider = (params.get('provider') || '').toLowerCase();
   const [activeServerId, setActiveServerId] = useState<string>(
-    targetProvider ? serverIdFromProvider(targetProvider) : 'auto-fastest'
+    targetProvider ? serverIdFromProvider(targetProvider) : 'anikoto:HD-1'
   );
 
   /* Reset stream resolved state on anime or episode change */
@@ -107,7 +107,7 @@ export function Watch() {
     if (!anime) return;
     let cancelled = false;
 
-    const providerQuery = targetProvider ? `&provider=${encodeURIComponent(targetProvider)}` : '';
+    const providerQuery = targetProvider ? `&provider=${encodeURIComponent(targetProvider)}` : '&provider=anikoto';
     const titleQuery = anime.title ? `&title=${encodeURIComponent(anime.title)}` : '';
 
     fetch(`/api/play?id=${encodeURIComponent(anime.id)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}${titleQuery}${providerQuery}`)
@@ -126,6 +126,8 @@ export function Watch() {
             setActiveServerId(matchedServer.id);
           } else if (targetProvider) {
             setActiveServerId(serverIdFromProvider(targetProvider));
+          } else if (!data.servers.some((s: PlayServer) => s.id === activeServerId)) {
+            setActiveServerId(data.servers[0].id);
           }
         }
       })
@@ -386,8 +388,7 @@ export function Watch() {
   const goPrev = () => idx > 1 && selectEpisode(idx - 1);
 
   const handleSelectServer = (server: PlayServer) => {
-    const sId = serverIdFromProvider(server.provider || server.id);
-    setActiveServerId(sId || server.id);
+    setActiveServerId(server.id);
     notify(`Switched to ${server.name}`);
   };
 

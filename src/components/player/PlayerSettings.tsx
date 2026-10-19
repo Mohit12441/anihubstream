@@ -7,10 +7,8 @@ import {
   Keyboard,
   LayoutTemplate,
   Palette,
-  Server,
   SlidersHorizontal,
 } from 'lucide-react';
-import type { StreamServer } from '../../data/servers';
 import {
   ACCENTS,
   ASPECTS,
@@ -55,13 +53,11 @@ const TITLES: Record<SettingsTab, string> = {
 interface Props {
   tab: SettingsTab;
   onTab: (t: SettingsTab) => void;
-  onServers: () => void;
   prefs: PlayerPrefs;
   patch: (p: Partial<PlayerPrefs>) => void;
   patchSubs: (p: Partial<SubtitleSettings>) => void;
   restoreSubs: () => void;
   restoreAppearance: () => void;
-  server: StreamServer;
   /** caption tracks the resolved stream actually carries */
   subTracks: SubTrack[];
   subState: SubStatus;
@@ -82,13 +78,11 @@ interface Props {
 export function PlayerSettings({
   tab,
   onTab,
-  onServers,
   prefs,
   patch,
   patchSubs,
   restoreSubs,
   restoreAppearance,
-  server,
   subTracks,
   subState,
   subReady,
@@ -179,12 +173,6 @@ export function PlayerSettings({
             label="Appearance"
             value={ACCENTS.find((a) => a.id === prefs.accent)?.label}
             onClick={() => onTab('appearance')}
-          />
-          <PopRow
-            icon={<Server size={16} aria-hidden="true" />}
-            label="Server"
-            value={server.name}
-            onClick={onServers}
           />
           <PopRow
             icon={<Keyboard size={16} aria-hidden="true" />}
@@ -359,7 +347,7 @@ export function PlayerSettings({
           tracks={subTracks}
           state={subState}
           loaded={subReady}
-          hardsub={server.capabilities.subtitleType === 'hardsub'}
+          hardsub={false}
         />
       )}
 

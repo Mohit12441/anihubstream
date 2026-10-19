@@ -4,32 +4,26 @@ import type { Anime, Episode, Marker } from '../../data/model';
 import { toSeconds } from '../../data/model';
 import { fetchSkipTimes } from '../../lib/aniskip';
 import {
-  AUTO_SERVER,
-  SERVERS,
-  serverById,
   providerFromId,
-  serverIdFromProvider,
-  type ServerStatus,
 } from '../../data/servers';
 import { useToast } from '../../lib/Toast';
 import { usePrefersReducedMotion } from '../../lib/motion';
 import { usePlayerEngine, type PlayerEngine } from '../../lib/usePlayerEngine';
 import { useLiveStream } from '../../lib/useLiveStream';
 import { actionFor, isEditable, type ShortcutAction } from '../../lib/shortcuts';
-import type { AudioId, PlayerPrefs, QualityId, SubtitleSettings } from '../../lib/playerPrefs';
+import type { AudioId, PlayerPrefs, SubtitleSettings } from '../../lib/playerPrefs';
 import { bridgeAudios, isResolveFailure, type AudioList } from '../../lib/streamBridge';
 import { stamp } from '../../lib/time';
 import { Art } from '../Art';
 import { PlayerControls } from './PlayerControls';
 import { PlayerSettings, type SettingsTab } from './PlayerSettings';
 import { PlayerTimeline } from './PlayerTimeline';
-import { ServerSelector } from './ServerSelector';
 import { NextEpisodeOverlay } from './NextEpisodeOverlay';
 import { captionAnchor, captionStyle } from './captionStyle';
 
 const COUNTDOWN = 8;
 
-type Menu = { kind: 'none' } | { kind: 'settings'; tab: SettingsTab } | { kind: 'server' };
+type Menu = { kind: 'none' } | { kind: 'settings'; tab: SettingsTab };
 
 interface Props {
   anime: Anime;
@@ -99,14 +93,13 @@ export function AdvancedPlayer(props: Props) {
       ? switchSeekRef.current
       : resumeRef.current;
 
-  const [selectedServerId, setSelectedServerId] = useState<string>(props.serverId || AUTO_SERVER.id);
+  const [selectedServerId, setSelectedServerId] = useState<string>(props.serverId || 'anikoto:HD-1');
 
   useEffect(() => {
     if (props.serverId && props.serverId !== selectedServerId) {
       setSelectedServerId(props.serverId);
     }
   }, [props.serverId, selectedServerId]);
-  const server = serverById(selectedServerId);
 
   const provider = providerFromId(selectedServerId);
   const live = useLiveStream({
@@ -126,8 +119,6 @@ export function AdvancedPlayer(props: Props) {
      switch it off entirely; a control that can only ever fail should not be drawn. live.pip()
      still reports the truth when the request itself is refused. */
   const pipSupported = document.pictureInPictureEnabled !== false;
-  const serverStatus: ServerStatus =
-    live.status === 'ready' ? 'online' : live.status === 'resolving' ? 'degraded' : 'unavailable';
 
   /* Media duration from live stream, falling back to episode catalog runtime while loading */
   const fallbackDuration = episode.runtime ? toSeconds(episode.runtime) : 0;
@@ -463,18 +454,6 @@ export function AdvancedPlayer(props: Props) {
     }, 1000);
     return () => window.clearInterval(id);
   }, [autoNextOpen, prefs.autoNext, hasNext, onNext]);
-
-  /* ---------- server ---------- */
-  const pickServer = (id: string = selectedServerId) => {
-    setSelectedServerId(id);
-    props.onServerChange?.(id);
-    setMenu({ kind: 'none' });
-    const sName = serverById(id).name;
-    notify(`Switched to ${sName} server`);
-    if (!liveReady && live.status !== 'resolving') {
-      live.retry();
-    }
-  };
 
   /* ---------- keyboard ---------- */
   const run = useRef<(a: ShortcutAction) => void>(() => {});
@@ -851,10 +830,6 @@ export function AdvancedPlayer(props: Props) {
           onToggleCaptions={toggleCaptions}
           settingsOpen={menu.kind === 'settings'}
           onSettings={() => setMenu((m) => (m.kind === 'settings' ? { kind: 'none' } : { kind: 'settings', tab: 'root' }))}
-          serversOpen={menu.kind === 'server'}
-          onServers={() => setMenu((m) => (m.kind === 'server' ? { kind: 'none' } : { kind: 'server' }))}
-          serverName={server.name}
-          serverStatus={serverStatus}
           theatre={theatre}
           onTheatre={() => onTheatre(!theatre)}
           full={full}
@@ -877,13 +852,11 @@ export function AdvancedPlayer(props: Props) {
           <PlayerSettings
             tab={menu.tab}
             onTab={(tab) => setMenu({ kind: 'settings', tab })}
-            onServers={() => setMenu({ kind: 'server' })}
             prefs={prefs}
             patch={patch}
             patchSubs={props.patchSubs}
             restoreSubs={props.restoreSubs}
             restoreAppearance={props.restoreAppearance}
-            server={server}
             subTracks={live.subTracks}
             subState={live.subState}
             subReady={liveReady}
@@ -905,60 +878,6 @@ export function AdvancedPlayer(props: Props) {
               live.setQualityLevel(index);
               notify(index === -1 ? 'Quality set to Auto (ABR)' : `Switched video quality to ${label}`);
             }}
-          />
-        )}
-
-        {menu.kind === 'server' && (
-          <ServerSelector
-            servers={(() => {
-              const baseServers = SERVERS.map((s) => {
-                const isCurrent = s.id === selectedServerId;
-                const isWinningProvider = s.id === serverIdFromProvider(live.info?.provider);
-                let note = s.note;
-                if (s.id === AUTO_SERVER.id && live.info?.provider) {
-                  const winnerName = serverById(serverIdFromProvider(live.info.provider)).name;
-                  note = live.info.raceMs
-                    ? `⚡ Race winner: ${winnerName} (${(live.info.raceMs / 1000).toFixed(1)}s latency)`
-                    : `⚡ Connected to ${winnerName}`;
-                }
-                return {
-                  ...s,
-                  status: isCurrent ? serverStatus : isWinningProvider ? 'online' : s.status,
-                  note,
-                };
-              });
-
-              if (live.info?.servers && live.info.servers.length > 0 && live.info.provider === 'anikoto') {
-                const mirrorServers = live.info.servers.map((ms) => {
-                  const mirrorId = `anikoto:${ms.name}`;
-                  const isCurrent = selectedServerId === mirrorId;
-                  const t = ms.type || 'sub';
-                  const tUpper = t.toUpperCase();
-                  return {
-                    id: mirrorId,
-                    name: `AniKoto · ${ms.name} (${tUpper})`,
-                    region: 'CDN Mirror',
-                    status: (isCurrent ? serverStatus : 'online') as ServerStatus,
-                    capabilities: {
-                      qualities: ['auto', '1080p'] as QualityId[],
-                      subtitleLanguages: [],
-                      subtitleType: (t === 'hsub' ? 'hardsub' : 'selectable') as 'hardsub' | 'selectable',
-                      audioLanguages: t === 'dub' ? ['English (dub)'] : ['Japanese (original)'],
-                    },
-                    sourceUrl: 'http://127.0.0.1:8795',
-                    responseMs: 0,
-                    note: `Direct ${ms.name} mirror (${tUpper})`,
-                  };
-                });
-                return [...baseServers, ...mirrorServers];
-              }
-
-              return baseServers;
-            })()}
-            currentId={selectedServerId}
-            onSelect={(id) => pickServer(id)}
-            onRetry={live.retry}
-            onClose={() => setMenu({ kind: 'none' })}
           />
         )}
       </div>

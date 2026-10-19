@@ -689,36 +689,28 @@ async function raceProviders(candidates, { title, ep, audio }) {
   });
 }
 
-async function buildSource({ title, ep, audio, provider = 'auto', server, fallback = true }) {
-  const normProvider = (provider || 'auto').toLowerCase();
-
-  // If a specific provider is requested:
-  if (normProvider !== 'auto' && normProvider !== 'fastest') {
-    try {
-      return await buildSourceProvider(normProvider, { title, ep, audio, server });
-    } catch (e) {
-      if (!fallback) throw e;
-      console.warn(`[Bridge] Specific provider "${normProvider}" failed, falling back to race:`, e.message);
-    }
-  }
-
-  // Auto / Fastest race mode:
-  let candidates;
-  if (audio === 'hindi') {
-    candidates = ['animedubhindi'];
-  } else if (audio === 'dub') {
-    candidates = ['aniwatch', 'anikoto', 'hianime', 'animewave', 'animekai', 'watchanimeworld', 'animedubhindi'];
-  } else {
-    candidates = ['aniwatch', 'anikoto', 'hianime', 'animewave', 'animekai'];
-  }
+async function buildSource({ title, ep, audio, provider = 'anikoto', server, fallback = true }) {
+  const normProvider = (provider || 'anikoto').toLowerCase();
+  const effectiveProvider = (normProvider === 'auto' || normProvider === 'fastest') ? 'anikoto' : normProvider;
 
   try {
-    return await raceProviders(candidates, { title, ep, audio });
-  } catch (err) {
-    if ((audio === 'dub' || audio === 'hindi') && fallback) {
-      return await buildSource({ title, ep, audio: 'sub', provider: 'auto', fallback: false });
+    const meta = await buildSourceProvider(effectiveProvider, { title, ep, audio, server });
+    if (normProvider === 'auto' || normProvider === 'fastest') {
+      meta.raceMs = 0;
+      meta.winner = meta.provider;
     }
-    throw err;
+    return meta;
+  } catch (e) {
+    if (!fallback) throw e;
+    console.warn(`[Bridge] Provider "${effectiveProvider}" failed, trying fallback:`, e.message);
+    if (effectiveProvider !== 'anikoto') {
+      return await buildSource({ title, ep, audio, provider: 'anikoto', server, fallback: false });
+    }
+    // If anikoto failed for dub/hindi, try sub
+    if ((audio === 'dub' || audio === 'hindi') && fallback) {
+      return await buildSource({ title, ep, audio: 'sub', provider: 'anikoto', server, fallback: false });
+    }
+    throw e;
   }
 }
 
@@ -1118,7 +1110,7 @@ const server = createServer(async (req, res) => {
       const ep = Number(url.searchParams.get('ep') ?? '0');
       const audioParam = url.searchParams.get('audio') ?? 'sub';
       const audio = audioParam === 'hindi' ? 'hindi' : audioParam === 'dub' ? 'dub' : audioParam === 'hsub' ? 'hsub' : 'sub';
-      const requestedProvider = url.searchParams.get('provider') ?? (audioParam === 'hindi' ? 'animedubhindi' : 'auto');
+      const requestedProvider = url.searchParams.get('provider') ?? (audioParam === 'hindi' ? 'animedubhindi' : 'anikoto');
       const serverParam = url.searchParams.get('server') ?? undefined;
       const fallback = url.searchParams.get('fallback') !== 'false';
       if (!title.trim() || !Number.isInteger(ep) || ep < 1) return json(res, 400, { error: 'TITLE_EP_REQUIRED' });

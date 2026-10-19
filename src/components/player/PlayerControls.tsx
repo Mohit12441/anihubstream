@@ -8,7 +8,6 @@ import {
   PictureInPicture,
   Play,
   Rewind,
-  Server,
   Settings2,
   SkipBack,
   SkipForward,
@@ -17,7 +16,6 @@ import {
   Volume2,
   VolumeX,
 } from 'lucide-react';
-import type { ServerStatus } from '../../data/servers';
 import { stamp } from '../../lib/time';
 
 interface Props {
@@ -41,10 +39,6 @@ interface Props {
   onToggleCaptions: () => void;
   settingsOpen: boolean;
   onSettings: () => void;
-  serversOpen: boolean;
-  onServers: () => void;
-  serverName: string;
-  serverStatus: ServerStatus;
   theatre: boolean;
   onTheatre: () => void;
   full: boolean;
@@ -156,18 +150,6 @@ export function PlayerControls(p: Props) {
           title="Settings (S)"
         >
           <Settings2 size={18} />
-        </button>
-
-        <button
-          type="button"
-          className={`pl__lab pl__lab--server${p.serversOpen ? ' is-on' : ''}`}
-          onClick={p.onServers}
-          aria-expanded={p.serversOpen}
-          aria-label={`Stream server: ${p.serverName}, ${p.serverStatus}`}
-          title="Stream server"
-        >
-          <Server size={14} aria-hidden="true" />
-          {p.serverName}
         </button>
 
         <button

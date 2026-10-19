@@ -161,10 +161,9 @@ export const WATCHANIMEWORLD_SERVER: StreamServer = {
 };
 
 export const SERVERS: StreamServer[] = [
-  AUTO_SERVER,
+  LIVE_SERVER,
   ANIWATCH_SERVER,
   HIANIME_SERVER,
-  LIVE_SERVER,
   ANIMEDUBHINDI_SERVER,
   WATCHANIMEWORLD_SERVER,
   ANIMEWAVE_SERVER,
@@ -177,15 +176,15 @@ export const serverById = (id: string): StreamServer => {
     return {
       ...LIVE_SERVER,
       id,
-      name: `AniKoto (${mirror})`,
+      name: `AniKoto · ${mirror}`,
       note: `AniKoto ${mirror} mirror server`,
     };
   }
-  return SERVERS.find((s) => s.id === id) ?? SERVERS[0];
+  return SERVERS.find((s) => s.id === id) ?? LIVE_SERVER;
 };
 
 export function providerFromId(serverId: string): string {
-  if (!serverId || serverId === 'auto-fastest') return 'auto';
+  if (!serverId || serverId === 'auto-fastest') return 'anikoto';
   if (serverId.startsWith('anikoto:')) return serverId;
   if (serverId.includes(':')) {
     const prov = serverId.split(':')[0].toLowerCase();
@@ -200,21 +199,21 @@ export function providerFromId(serverId: string): string {
   if (serverId === 'watchanimeworld-live') return 'watchanimeworld';
   if (serverId === 'animewave-live') return 'animewave';
   if (serverId === 'animekai-live') return 'animekai';
-  return 'auto';
+  return 'anikoto';
 }
 
 export function serverIdFromProvider(provider?: string): string {
-  if (!provider) return 'auto-fastest';
+  if (!provider) return 'anikoto:HD-1';
   if (provider.startsWith('anikoto:')) return provider;
   const norm = (provider.includes(':') ? provider.split(':')[0] : provider).toLowerCase();
   if (norm === 'aniwatch') return 'aniwatch-live';
   if (norm === 'hianime') return 'hianime-live';
-  if (norm === 'anikoto') return 'anikoto-live';
+  if (norm === 'anikoto') return 'anikoto:HD-1';
   if (norm === 'animedubhindi') return 'animedubhindi-live';
   if (norm === 'watchanimeworld') return 'watchanimeworld-live';
   if (norm === 'animewave') return 'animewave-live';
   if (norm === 'animekai') return 'animekai-live';
-  return 'auto-fastest';
+  return 'anikoto:HD-1';
 }
 
 export const SERVER_STATUS_LABEL: Record<ServerStatus, string> = {
