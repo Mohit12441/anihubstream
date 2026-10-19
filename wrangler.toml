@@ -8,3 +8,11 @@ compatibility_date = "2026-09-28"
 binding = "ANIHUB"
 database_name = "anihub"
 database_id = "b352ef74-e863-4278-bee7-e4409afb11bb"
+
+[observability.logs]
+enabled = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+

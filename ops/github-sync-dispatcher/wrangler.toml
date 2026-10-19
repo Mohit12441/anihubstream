@@ -7,3 +7,11 @@ compatibility_date = "2026-10-17"
 # 2. Kitsu sync: every 30 minutes on :17 and :47
 [triggers]
 crons = ["7,37 * * * *", "17,47 * * * *"]
+
+[observability.logs]
+enabled = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+
