@@ -41,5 +41,12 @@ describe('TASK 10 (P1) — Image Robustness & Signed URL Handling', () => {
     const badDomainReq = new Request('https://anihubstream.com/api/img?url=https://malicious-site.com/test.jpg');
     const badDomainRes = await imageProxy({ request: badDomainReq });
     assert.equal(badDomainRes.status, 403);
+
+    // Allows trusted provider image domains
+    const aniwatchImgReq = new Request('https://anihubstream.com/api/img?url=' + encodeURIComponent('https://aniwatch.co.at/wp-content/uploads/sample.jpg'));
+    // Since upstream fetch may fail in mock/offline, ensure it does NOT return 403 Forbidden
+    const aniwatchImgRes = await imageProxy({ request: aniwatchImgReq });
+    assert.notEqual(aniwatchImgRes.status, 403, 'aniwatch.co.at must be allowed by image proxy');
   });
 });
+

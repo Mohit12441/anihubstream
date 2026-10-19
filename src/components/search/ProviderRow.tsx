@@ -155,9 +155,21 @@ export function ProviderRow({ providerKey, meta, items }: ProviderRowProps) {
                   src={item.coverUrl}
                   alt={item.title}
                   loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.dataset.proxied && item.coverUrl) {
+                      target.dataset.proxied = 'true';
+                      target.src = `/api/img?url=${encodeURIComponent(item.coverUrl)}`;
+                    } else {
+                      target.style.display = 'none';
+                    }
+                  }}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               ) : (
+
                 <div
                   style={{
                     width: '100%',

@@ -20,14 +20,29 @@ export async function onRequestGet(context) {
     } catch {}
   }
 
-  // Only allow proxying from trusted anime CDNs
+  // Strip WordPress Jetpack CDN wrapper (i0.wp.com / i1.wp.com / i2.wp.com) which aggressively rate limits edge proxies
+  if (/^https?:\/\/i\d+\.wp\.com\//i.test(cleanTarget)) {
+    try {
+      const u = new URL(cleanTarget);
+      const rawPath = u.pathname.replace(/^\/+/, '');
+      cleanTarget = `https://${rawPath}`;
+    } catch {}
+  }
+
+
+  // Only allow proxying from trusted anime CDNs and integrated streaming providers
   const allowed = [
     'media.kitsu.app',
     's4.anilist.co',
     'cdn.myanimelist.net',
     'kitsu.io',
     'kitsu-production-media.s3.us-west-002.backblazeb2.com',
+    'aniwatch.co.at',
+    'wp.com',
+    'blogger.googleusercontent.com',
+    'googleusercontent.com',
   ];
+
 
   try {
     const targetUrl = new URL(cleanTarget);
