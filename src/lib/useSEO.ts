@@ -15,7 +15,7 @@ export function useSEO({ title, description, image, type = 'website', canonicalU
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const origin = 'https://anihubstream.com';
+    const origin = typeof window !== 'undefined' && window.location.origin ? window.location.origin : 'https://anihubstream.com';
     const fullUrl = canonicalUrl || `${origin}${pathname}`;
 
     if (title) {

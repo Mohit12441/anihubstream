@@ -5,6 +5,7 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 
 const Watch = lazy(() => import('./pages/Watch').then((m) => ({ default: m.Watch })));
+const AnimeDetail = lazy(() => import('./pages/AnimeDetail').then((m) => ({ default: m.AnimeDetail })));
 const AnimeCatalogue = lazy(() => import('./pages/AnimeCatalogue').then((m) => ({ default: m.AnimeCatalogue })));
 const Genres = lazy(() => import('./pages/Genres').then((m) => ({ default: m.Genres })));
 const MyList = lazy(() => import('./pages/MyList').then((m) => ({ default: m.MyList })));
@@ -44,8 +45,10 @@ export function App() {
             <Route path="/watch/:id" element={<Watch />} />
             <Route path="/watch/:id/:ep" element={<Watch />} />
             <Route path="/anime" element={<AnimeCatalogue />} />
+            <Route path="/anime/:id" element={<AnimeDetail />} />
             <Route path="/genres" element={<Genres />} />
             <Route path="/my-list" element={<MyList />} />
+            <Route path="/watchlist" element={<MyList />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/discover" element={<Discover />} />
             <Route path="/search" element={<Search />} />

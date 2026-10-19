@@ -76,15 +76,60 @@
   <body>
     <div id="root">
       <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
-        <h1>AniHubStream — Watch Anime Free Anytime, Anywhere</h1>
-        <p>Watch high-quality anime online free on AniHubStream. Stream subbed and dubbed anime with fast playback, clean weekly schedules, and full episode guides.</p>
-        <nav aria-label="Main Navigation">
-          <a href="/anime">Browse Anime Catalogue</a>
-          <a href="/genres">Anime Genres</a>
-          <a href="/schedule">Broadcast Schedule</a>
-          <a href="/discover">Discover Trending Anime</a>
-          <a href="/about">About AniHubStream</a>
-        </nav>
+        <header>
+          <h1>AniHubStream — Watch High Quality Anime Online Free Anytime, Anywhere</h1>
+          <p>
+            Welcome to AniHubStream, the next-generation anime streaming platform offering seamless high-definition anime playback,
+            synchronized subtitle streams, instant server switching, and comprehensive episodic navigation across all major releases.
+            Stream subbed and dubbed anime with ultra-low latency, clean weekly broadcast schedules, community ratings, and full episode guides.
+          </p>
+        </header>
+
+        <section aria-labelledby="anime-catalog-guide">
+          <h2 id="anime-catalog-guide">Explore Anime Genres and Collections</h2>
+          <p>
+            Dive into thousands of anime titles spanning action, adventure, fantasy, romance, comedy, supernatural, sci-fi, horror,
+            slice of life, mystery, thriller, sports, psychological, mecha, historical, and shounen series. Every anime title features
+            complete episode metadata, air dates, duration, native Japanese titles, English titles, and studio details.
+          </p>
+          <nav aria-label="Genre Navigation">
+            <a href="/genres?name=Action">Action Anime</a> |
+            <a href="/genres?name=Adventure">Adventure Anime</a> |
+            <a href="/genres?name=Fantasy">Fantasy Anime</a> |
+            <a href="/genres?name=Sci-Fi">Sci-Fi Anime</a> |
+            <a href="/genres?name=Romance">Romance Anime</a> |
+            <a href="/genres?name=Comedy">Comedy Anime</a> |
+            <a href="/genres?name=Shounen">Shounen Anime</a> |
+            <a href="/genres?name=Mystery">Mystery Anime</a> |
+            <a href="/genres?name=Supernatural">Supernatural Anime</a> |
+            <a href="/genres?name=Slice%20of%20Life">Slice of Life Anime</a>
+          </nav>
+        </section>
+
+        <section aria-labelledby="features-guide">
+          <h2 id="features-guide">Features and Streaming Architecture</h2>
+          <p>
+            AniHubStream delivers multi-source provider redundancy across AniKoto, HiAnime, AniWatch, and regional dub providers.
+            Equipped with a decoupled 4-layer player architecture, instant typeahead search, AniSkip opening and ending skip support,
+            customizable subtitles, resume playback positions, and personal watchlists for anonymous and registered anime enthusiasts.
+          </p>
+        </section>
+
+        <footer aria-label="Quick Links">
+          <nav aria-label="Directory Navigation">
+            <a href="/anime">Browse Full Catalogue</a> |
+            <a href="/genres">All Anime Genres</a> |
+            <a href="/schedule">Broadcast Schedule & Airtimes</a> |
+            <a href="/discover">Discover Trending Anime</a> |
+            <a href="/search">Federated Multi-Provider Search</a> |
+            <a href="/watchlist">Personal Anime Watchlist</a> |
+            <a href="/about">About Us</a> |
+            <a href="/dmca">DMCA Policy</a> |
+            <a href="/privacy">Privacy Notice</a> |
+            <a href="/terms">Terms of Service</a> |
+            <a href="/contact">Contact Support</a>
+          </nav>
+        </footer>
       </div>
     </div>
     <script type="module" src="/src/main.tsx"></script>

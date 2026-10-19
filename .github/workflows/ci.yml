@@ -104,7 +104,7 @@ jobs:
       # TEST_FLOOR is 436: locked across all phases of the federated architecture test suite.
       - name: tests
         env:
-          TEST_FLOOR: 436
+          TEST_FLOOR: 440
         run: |
           set -euo pipefail
           total=0
