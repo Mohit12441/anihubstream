@@ -1102,6 +1102,49 @@ const server = createServer(async (req, res) => {
         const homeData = await hianime.home({ signal: AbortSignal.timeout(25_000) });
         return json(res, 200, { ok: true, provider: 'hianime', ...homeData });
       }
+      if (prov === 'all' || prov === 'providers') {
+        const signal = AbortSignal.timeout(25_000);
+        const [hianimeRes, anikotoHits, aniwatchHits, adbHits, wawHits] = await Promise.allSettled([
+          hianime.home({ signal }).catch(() => null),
+          anikoto.search('naruto', { signal }).catch(() => []),
+          aniwatch.search('solo leveling', { signal }).catch(() => []),
+          animedubhindi.search('hindi', { signal }).catch(() => []),
+          watchanimeworld.search('titan', { signal }).catch(() => []),
+        ]);
+
+        const hianimeList = hianimeRes.status === 'fulfilled' && hianimeRes.value
+          ? [...(hianimeRes.value.trending || []), ...(hianimeRes.value.featured || [])].map((m) => ({
+              id: m.slug || m.id,
+              slug: m.slug || m.id,
+              title: m.title,
+              coverUrl: m.coverUrl || m.bannerUrl || null,
+              provider: 'hianime',
+            }))
+          : [];
+
+        const mapHits = (settled, providerName) =>
+          settled.status === 'fulfilled' && Array.isArray(settled.value)
+            ? settled.value.map((h) => ({
+                id: h.id || h.slug,
+                slug: h.slug || h.id,
+                title: h.title,
+                coverUrl: h.coverUrl || null,
+                provider: providerName,
+              }))
+            : [];
+
+        return json(res, 200, {
+          ok: true,
+          provider: 'all',
+          providers: {
+            hianime: hianimeList,
+            anikoto: mapHits(anikotoHits, 'anikoto'),
+            aniwatch: mapHits(aniwatchHits, 'aniwatch'),
+            animedubhindi: mapHits(adbHits, 'animedubhindi'),
+            watchanimeworld: mapHits(wawHits, 'watchanimeworld'),
+          },
+        });
+      }
       return json(res, 400, { error: 'PROVIDER_NOT_SUPPORTED', message: `Provider ${prov} does not expose a home feed` });
     }
 

@@ -133,20 +133,56 @@ export function Home() {
   useEffect(() => {
     let active = true;
     setProviderLoading(true);
-    fetch('/api/search?q=demon+slayer')
+
+    const targetUrl = providerFilter === 'all'
+      ? '/api/home?provider=providers'
+      : `/api/home?provider=${encodeURIComponent(providerFilter)}`;
+
+    fetch(targetUrl)
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
-        if (!active || !data?.providers) return;
-        setProviderStreams(data.providers);
+        if (!active || !data) return;
+        if (data.providers) {
+          setProviderStreams(data.providers);
+        } else if (data.provider && (data.trending || data.featured || data.popular || data.ongoing || data.fresh)) {
+          const rawItems: any[] = [
+            ...(data.featured || []),
+            ...(data.trending || []),
+            ...(data.popular || []),
+            ...(data.ongoing || []),
+            ...(data.fresh || []),
+          ];
+
+          const items: ProviderSearchResult[] = rawItems.map((a) => ({
+            id: a.id || a.slug,
+            slug: a.id || a.slug,
+            title: a.title,
+            coverUrl: a.art || a.keyArt || null,
+            provider: data.provider,
+          }));
+
+          const seen = new Set<string>();
+          const uniqueItems = items.filter((it) => {
+            if (!it.id || seen.has(it.id)) return false;
+            seen.add(it.id);
+            return true;
+          });
+
+          setProviderStreams((prev) => ({
+            ...prev,
+            [data.provider]: uniqueItems,
+          }));
+        }
       })
       .catch(() => {})
       .finally(() => {
         if (active) setProviderLoading(false);
       });
+
     return () => {
       active = false;
     };
-  }, []);
+  }, [providerFilter]);
 
   const providerCategoryPills = useMemo<CategoryPillItem[]>(() => {
     let totalCount = 0;
@@ -157,22 +193,20 @@ export function Home() {
       {
         id: 'all',
         label: 'All Streams',
-        count: totalCount,
+        count: totalCount || undefined,
         color: 'var(--brand, #6366f1)',
       },
     ];
 
     for (const [key, meta] of Object.entries(PROVIDER_METAS)) {
       const items = providerStreams[key] || [];
-      if (items.length > 0) {
-        pills.push({
-          id: key,
-          label: meta.name,
-          badge: meta.badge,
-          count: items.length,
-          color: meta.color,
-        });
-      }
+      pills.push({
+        id: key,
+        label: meta.name,
+        badge: meta.badge,
+        count: items.length || undefined,
+        color: meta.color,
+      });
     }
     return pills;
   }, [providerStreams]);
@@ -263,7 +297,7 @@ export function Home() {
             <h2 id="row-providers">
               <Radio size={21} aria-hidden="true" style={{ color: 'var(--brand, #6366f1)' }} />
               Live Provider Streams
-              <Link to="/search?q=demon+slayer" className="sec-head__link" aria-label="Open multi-provider search">
+              <Link to="/anime" className="sec-head__link" aria-label="Browse full anime catalog">
                 <ArrowRight size={18} aria-hidden="true" />
               </Link>
             </h2>
@@ -278,9 +312,15 @@ export function Home() {
             />
           </div>
 
-          {providerLoading && Object.keys(providerStreams).length === 0 && (
+          {providerLoading && (
             <div style={{ padding: '24px 0', color: '#94a3b8', fontSize: '0.88rem' }}>
-              Fetching real-time streams from AniKoto, HiAnime, and Hindi Dub mirrors...
+              Fetching real-time catalog streams...
+            </div>
+          )}
+
+          {!providerLoading && activeProviderRows.length === 0 && (
+            <div style={{ padding: '24px 0', color: '#94a3b8', fontSize: '0.88rem' }}>
+              No catalog titles currently available for {PROVIDER_METAS[providerFilter]?.name || 'this provider'}. Check back shortly.
             </div>
           )}
 
