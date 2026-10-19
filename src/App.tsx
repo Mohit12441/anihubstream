@@ -15,6 +15,7 @@ const Dmca = lazy(() => import('./pages/Dmca').then((m) => ({ default: m.Dmca })
 const Privacy = lazy(() => import('./pages/Privacy').then((m) => ({ default: m.Privacy })));
 const Terms = lazy(() => import('./pages/Terms').then((m) => ({ default: m.Terms })));
 const Contact = lazy(() => import('./pages/Contact').then((m) => ({ default: m.Contact })));
+const Search = lazy(() => import('./pages/Search').then((m) => ({ default: m.Search })));
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
 function ScrollToTop() {
@@ -47,6 +48,7 @@ export function App() {
             <Route path="/my-list" element={<MyList />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/discover" element={<Discover />} />
+            <Route path="/search" element={<Search />} />
             <Route path="/about" element={<About />} />
             <Route path="/dmca" element={<Dmca />} />
             <Route path="/privacy" element={<Privacy />} />

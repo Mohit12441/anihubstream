@@ -2,7 +2,11 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { BookmarkPlus, ChevronRight, Clock, Download, Heart, Play, Share2 } from 'lucide-react';
 import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
+import { UniversalPlayer, type UniversalPlayerRef } from '../components/player/UniversalPlayer';
+import { AniSkipButton } from '../components/player/AniSkipButton';
 import { DownloadModal } from '../components/player/DownloadModal';
+import { ServerSwitcher } from '../components/player/ServerSwitcher';
+import { toPlayerInput, type AniSkipData, type PlayServer } from '../components/player/PlayerInput';
 import { AnimeCard } from '../components/AnimeCard';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { EpisodeSidebar } from '../components/EpisodeSidebar';
@@ -43,12 +47,49 @@ export function Watch() {
   const [isStreamResolved, setIsStreamResolved] = useState(false);
   const [downloadOpen, setDownloadOpen] = useState(false);
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
+  const [playServers, setPlayServers] = useState<PlayServer[]>([]);
+  const [activeServerId, setActiveServerId] = useState<string>('');
+  const [playerEngine, setPlayerEngine] = useState<'universal' | 'classic'>('universal');
+  const [aniskipData, setAniskipData] = useState<AniSkipData | null>(null);
+  const [playerCurrentTime, setPlayerCurrentTime] = useState(0);
+  const universalPlayerRef = useRef<UniversalPlayerRef>(null);
 
   /* Reset stream resolved state on anime or episode change */
   useEffect(() => {
     setIsStreamResolved(false);
     setCurrentStream(null);
   }, [id, epNum]);
+
+  /* Lazy/eager server list fetch from Layer 1 API */
+  useEffect(() => {
+    if (!anime) return;
+    let cancelled = false;
+
+    fetch(`/api/play?id=${encodeURIComponent(anime.id)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}`)
+      .then((res) => {
+        if (!res.ok) throw new Error('Play API failed');
+        return res.json();
+      })
+      .then((data) => {
+        if (cancelled) return;
+        if (Array.isArray(data.servers) && data.servers.length > 0) {
+          setPlayServers(data.servers);
+          if (!activeServerId || !data.servers.some((s: PlayServer) => s.id === activeServerId)) {
+            setActiveServerId(data.servers[0].id);
+          }
+        }
+        if (data?.aniskip) {
+          setAniskipData(data.aniskip);
+        }
+      })
+      .catch(() => {
+        // Handled gracefully
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [anime, epNum, prefs.audio, activeServerId]);
 
   /* Path param :ep sync with edge-case clamping and resume fallback */
   useEffect(() => {
@@ -296,6 +337,39 @@ export function Watch() {
   const goNext = () => idx < last && selectEpisode(idx + 1);
   const goPrev = () => idx > 1 && selectEpisode(idx - 1);
 
+  const handleSelectServer = (server: PlayServer) => {
+    setActiveServerId(server.id);
+    if (server.status === 'loading' || !server.streamUrl.includes('/stream/')) {
+      const prov = server.provider;
+      const sId = server.id.includes(':') ? server.id.split(':')[1] : '';
+      fetch(`/api/play/resolve?title=${encodeURIComponent(anime?.title || '')}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}&provider=${encodeURIComponent(prov)}&server=${encodeURIComponent(sId)}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data?.server) {
+            setPlayServers((prev) =>
+              prev.map((s) => (s.id === server.id ? { ...data.server, status: 'ready' } : s))
+            );
+            notify(`Connected to ${server.name} ✅`);
+          }
+        })
+        .catch(() => {
+          notify(`Failed to resolve ${server.name}`);
+        });
+    } else {
+      notify(`Switched to ${server.name}`);
+    }
+  };
+
+  const activePlayServer = useMemo(
+    () => playServers.find((s) => s.id === activeServerId) || playServers[0] || null,
+    [playServers, activeServerId]
+  );
+
+  const playerInput = useMemo(() => {
+    if (!activePlayServer) return null;
+    return toPlayerInput(activePlayServer, aniskipData, resumeAt);
+  }, [activePlayServer, aniskipData, resumeAt]);
+
   const crumbs = [
     { label: 'Home', to: '/' },
     { label: 'Anime', to: '/anime' },
@@ -328,37 +402,117 @@ export function Watch() {
 
       <div className="watch__grid shell">
         <div className="watch__main">
-          <AdvancedPlayer
-            anime={anime}
-            episode={episode}
-            next={anime.episodes[idx] ?? null}
-            hasPrev={idx > 1}
-            hasNext={idx < last}
-            onPrev={goPrev}
-            onNext={goNext}
-            theatre={theatre}
-            onTheatre={setTheatre}
-            prefs={prefs}
-            patch={patch}
-            patchSubs={patchSubs}
-            restoreSubs={restoreSubs}
-            restoreAppearance={restoreAppearance}
-            resumeAt={resumeAt}
-            onProgress={(t) => {
-              record(key, t, runtime);
-              recordPosition(anime, idx, episode.title, t, runtime);
-              // Prefetch next episode when reaching 80% progress
-              if (runtime > 0 && t / runtime >= 0.8 && anime && idx < anime.episodes.length) {
-                const nextEp = idx + 1;
-                if (prefetchedNext.current !== nextEp) {
-                  prefetchedNext.current = nextEp;
-                  void prefetchEpisode(anime.title, nextEp, prefs.audio ?? 'sub');
+          {/* Engine Selector */}
+          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '8px', gap: '8px', alignItems: 'center' }}>
+            <span style={{ fontSize: '0.75rem', opacity: 0.7, color: '#94a3b8' }}>Player Engine:</span>
+            <div style={{ display: 'flex', background: 'rgba(255,255,255,0.06)', borderRadius: '6px', padding: '2px' }}>
+              <button
+                type="button"
+                onClick={() => setPlayerEngine('universal')}
+                style={{
+                  padding: '3px 8px',
+                  fontSize: '0.72rem',
+                  fontWeight: 600,
+                  borderRadius: '4px',
+                  border: 'none',
+                  background: playerEngine === 'universal' ? 'var(--brand, #6366f1)' : 'transparent',
+                  color: playerEngine === 'universal' ? '#fff' : '#94a3b8',
+                  cursor: 'pointer',
+                }}
+              >
+                Universal ✨
+              </button>
+              <button
+                type="button"
+                onClick={() => setPlayerEngine('classic')}
+                style={{
+                  padding: '3px 8px',
+                  fontSize: '0.72rem',
+                  fontWeight: 600,
+                  borderRadius: '4px',
+                  border: 'none',
+                  background: playerEngine === 'classic' ? 'var(--brand, #6366f1)' : 'transparent',
+                  color: playerEngine === 'classic' ? '#fff' : '#94a3b8',
+                  cursor: 'pointer',
+                }}
+              >
+                Classic
+              </button>
+            </div>
+          </div>
+
+          {playerEngine === 'universal' && playerInput ? (
+            <div style={{ position: 'relative', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
+              <UniversalPlayer
+                ref={universalPlayerRef}
+                input={playerInput}
+                theatre={theatre}
+                onTimeUpdate={(t) => {
+                  setPlayerCurrentTime(t);
+                  record(key, t, runtime);
+                  recordPosition(anime, idx, episode.title, t, runtime);
+                  if (runtime > 0 && t / runtime >= 0.8 && anime && idx < anime.episodes.length) {
+                    const nextEp = idx + 1;
+                    if (prefetchedNext.current !== nextEp) {
+                      prefetchedNext.current = nextEp;
+                      void prefetchEpisode(anime.title, nextEp, prefs.audio ?? 'sub');
+                    }
+                  }
+                }}
+                onEnded={goNext}
+                onError={() => {
+                  notify('Primary server encountered an error, trying secondary...');
+                }}
+              />
+              <AniSkipButton
+                aniskip={aniskipData}
+                currentTime={playerCurrentTime}
+                onSkip={(targetTime) => universalPlayerRef.current?.seek(targetTime)}
+              />
+            </div>
+          ) : (
+            <AdvancedPlayer
+              anime={anime}
+              episode={episode}
+              next={anime.episodes[idx] ?? null}
+              hasPrev={idx > 1}
+              hasNext={idx < last}
+              onPrev={goPrev}
+              onNext={goNext}
+              theatre={theatre}
+              onTheatre={setTheatre}
+              prefs={prefs}
+              patch={patch}
+              patchSubs={patchSubs}
+              restoreSubs={restoreSubs}
+              restoreAppearance={restoreAppearance}
+              resumeAt={resumeAt}
+              onProgress={(t) => {
+                record(key, t, runtime);
+                recordPosition(anime, idx, episode.title, t, runtime);
+                // Prefetch next episode when reaching 80% progress
+                if (runtime > 0 && t / runtime >= 0.8 && anime && idx < anime.episodes.length) {
+                  const nextEp = idx + 1;
+                  if (prefetchedNext.current !== nextEp) {
+                    prefetchedNext.current = nextEp;
+                    void prefetchEpisode(anime.title, nextEp, prefs.audio ?? 'sub');
+                  }
                 }
-              }
-            }}
-            onStreamResolved={setIsStreamResolved}
-            onStreamInfo={setCurrentStream}
-          />
+              }}
+              onStreamResolved={setIsStreamResolved}
+              onStreamInfo={setCurrentStream}
+            />
+          )}
+
+          {playServers.length > 0 && (
+            <div style={{ margin: '20px 0' }}>
+              <ServerSwitcher
+                servers={playServers}
+                activeServerId={activeServerId}
+                onSelectServer={handleSelectServer}
+              />
+            </div>
+          )}
 
           <div className="watch__meta">
             <div className="watch__meta-head">

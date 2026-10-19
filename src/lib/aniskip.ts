@@ -15,7 +15,8 @@
 
 import type { Marker, MarkerKind } from '../data/model';
 
-export const DEFAULT_ANISKIP_BASE = 'https://api.aniskip.com/v2';
+export const DEFAULT_ANISKIP_BASE =
+  typeof window !== 'undefined' ? '/api/aniskip' : 'https://api.aniskip.com/v2';
 export const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
 export const DEFAULT_TIMEOUT_MS = 5000;
 

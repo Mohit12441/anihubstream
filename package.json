@@ -13,7 +13,9 @@
     "pages:dev": "npm run build:pages && wrangler pages dev dist-pages --port 8899",
     "preview": "vite preview",
     "serve": "node tools/serve-static.mjs",
-    "supervise": "node tools/supervise-origin.mjs"
+    "supervise": "node tools/supervise-origin.mjs",
+    "meili:setup": "node tools/meilisearch/setup-index.mjs && node tools/meilisearch/sync-meilisearch.mjs",
+    "db:seed-id-map": "node tools/apply-id-map.mjs"
   },
   "dependencies": {
     "hls.js": "^1.7.3",

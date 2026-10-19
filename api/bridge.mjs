@@ -305,7 +305,7 @@ function createHlsSession({ provider, media, episode, resolvedResult, sniffed, d
       url: `/stream/${sid}/sub/${i}.vtt`,
     })),
     downloads: downloads || [],
-    servers: servers || [],
+    servers: servers && servers.length > 0 ? servers : [{ id: 'default', name: provider.toUpperCase(), type: 'hls' }],
   };
   sessions.set(sid, session);
 
@@ -458,6 +458,8 @@ async function buildSourceAdb({ title, ep, audio }) {
         allowedHosts: new Set([terminalBase.host]),
         subUrls: [],
         subtitles: [],
+        downloads: [{ name: 'AnimeDubHindi MKV (Dual Audio)', quality: '1080p', url: `/stream/${sid}/media.mkv?download=1` }],
+        servers: [{ id: 'default', name: 'Direct MKV', type: 'mp4' }],
       };
       sessions.set(sid, session);
       const meta = {
@@ -475,6 +477,8 @@ async function buildSourceAdb({ title, ep, audio }) {
         master: `/stream/${sid}/media.mkv`,
         downloadUrl: `/stream/${sid}/media.mkv?download=1`,
         downloadPage: null,
+        downloads: session.downloads,
+        servers: session.servers,
         subtitles: [],
       };
       recent.set(`${title.toLowerCase()}|${ep}|${audio}|animedubhindi`, { at: Date.now(), sid });
@@ -524,6 +528,8 @@ async function buildSourceWatchanimeworld({ title, ep, audio }) {
         allowedHosts: new Set([`${candidate.spec.h}.sssrr.org`]),
         subUrls: [],
         subtitles: [],
+        downloads: [{ name: 'WatchAnimeWorld MP4', quality: '1080p', url: `/stream/${sid}/media.mp4?download=1` }],
+        servers: [{ id: 'default', name: 'Direct MP4', type: 'mp4' }],
       };
       sessions.set(sid, session);
       const meta = {
@@ -541,6 +547,8 @@ async function buildSourceWatchanimeworld({ title, ep, audio }) {
         master: `/stream/${sid}/media.mp4`,
         downloadUrl: `/stream/${sid}/media.mp4?download=1`,
         downloadPage: null,
+        downloads: session.downloads,
+        servers: session.servers,
         subtitles: [],
       };
       recent.set(`${title.toLowerCase()}|${ep}|${audio}|watchanimeworld`, { at: Date.now(), sid });

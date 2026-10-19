@@ -122,7 +122,7 @@ export function Home() {
       <HeroBanner
         query={query}
         onQuery={setQuery}
-        onSearch={(q) => navigate(`/anime?q=${encodeURIComponent(q)}`)}
+        onSearch={(q) => navigate(`/search?q=${encodeURIComponent(q)}`)}
         activeGenre={genre}
         onGenre={(id) => setGenre((cur) => (cur === id ? null : id))}
       />
