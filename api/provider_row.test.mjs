@@ -30,3 +30,13 @@ test('Watch.tsx: supports ?provider= URL parameter for eager server matching', (
   assert.match(content, /params\.get\(['"]provider['"]\)/, 'Watch.tsx must extract provider parameter');
   assert.match(content, /matchedServer/, 'Watch.tsx must match server based on provider param');
 });
+
+test('Home.tsx: renders live multi-provider rows and CategoryPills (Option B)', () => {
+  const homePath = path.join(rootDir, 'src', 'pages', 'Home.tsx');
+  const content = fs.readFileSync(homePath, 'utf8');
+
+  assert.match(content, /import\s*\{[^}]*ProviderRow[^}]*\}\s*from\s*['"]\.\.\/components\/search\/ProviderRow['"]/, 'Home.tsx must import ProviderRow');
+  assert.match(content, /<ProviderRow/, 'Home.tsx must render ProviderRow component');
+  assert.match(content, /<CategoryPills/, 'Home.tsx must render CategoryPills component');
+});
+

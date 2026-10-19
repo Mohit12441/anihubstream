@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ArrowRight, Compass, Flame, Sparkles, Star, X } from 'lucide-react';
+import { ArrowRight, Compass, Flame, Radio, Sparkles, Star, X } from 'lucide-react';
 import { AnimeCard } from '../components/AnimeCard';
 import { AnimeCarousel } from '../components/AnimeCarousel';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
@@ -11,7 +11,18 @@ import { artUrl, hydrateCard } from '../data/model';
 import type { Anime } from '../data/model';
 import { useCatalogue } from '../state/catalogue';
 import { useSEO } from '../lib/useSEO';
+import { ProviderRow, type ProviderMeta, type ProviderSearchResult } from '../components/search/ProviderRow';
+import { CategoryPills, type CategoryPillItem } from '../components/ui/CategoryPills';
 import '../styles/home.css';
+
+const PROVIDER_METAS: Record<string, ProviderMeta> = {
+  anikoto: { name: 'AniKoto', badge: 'HLS 1080p', color: '#6366f1' },
+  hianime: { name: 'HiAnime', badge: 'JSON Stream', color: '#ec4899' },
+  aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6' },
+  animedubhindi: { name: 'AnimeDubHindi', badge: 'Hindi Dub', color: '#f59e0b' },
+  watchanimeworld: { name: 'WatchAnimeWorld', badge: 'Direct MP4', color: '#10b981' },
+};
+
 
 const MOODS = [
   {
@@ -115,7 +126,65 @@ export function Home() {
     [seed, home],
   );
 
+  const [providerStreams, setProviderStreams] = useState<Record<string, ProviderSearchResult[]>>({});
+  const [providerFilter, setProviderFilter] = useState<string>('all');
+  const [providerLoading, setProviderLoading] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    setProviderLoading(true);
+    fetch('/api/search?q=demon+slayer')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (!active || !data?.providers) return;
+        setProviderStreams(data.providers);
+      })
+      .catch(() => {})
+      .finally(() => {
+        if (active) setProviderLoading(false);
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  const providerCategoryPills = useMemo<CategoryPillItem[]>(() => {
+    let totalCount = 0;
+    for (const list of Object.values(providerStreams)) {
+      totalCount += list.length;
+    }
+    const pills: CategoryPillItem[] = [
+      {
+        id: 'all',
+        label: 'All Streams',
+        count: totalCount,
+        color: 'var(--brand, #6366f1)',
+      },
+    ];
+
+    for (const [key, meta] of Object.entries(PROVIDER_METAS)) {
+      const items = providerStreams[key] || [];
+      if (items.length > 0) {
+        pills.push({
+          id: key,
+          label: meta.name,
+          badge: meta.badge,
+          count: items.length,
+          color: meta.color,
+        });
+      }
+    }
+    return pills;
+  }, [providerStreams]);
+
+  const activeProviderRows = useMemo(() => {
+    const entries = Object.entries(providerStreams).filter(([_, items]) => items && items.length > 0);
+    if (providerFilter === 'all') return entries;
+    return entries.filter(([key]) => key === providerFilter);
+  }, [providerStreams, providerFilter]);
+
   const heading = genre ? genreLabel(genre) : 'Trending Now';
+
 
   return (
     <div className="page home">
@@ -187,6 +256,52 @@ export function Home() {
             ))}
           </div>
         </section>
+
+        {/* Live Multi-Provider Streams Shelf */}
+        <section className="home__row home__provider-streams" aria-labelledby="row-providers">
+          <div className="sec-head">
+            <h2 id="row-providers">
+              <Radio size={21} aria-hidden="true" style={{ color: 'var(--brand, #6366f1)' }} />
+              Live Provider Streams
+              <Link to="/search?q=demon+slayer" className="sec-head__link" aria-label="Open multi-provider search">
+                <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+            </h2>
+            <p className="sec-head__hint">Real-time streams across AniKoto, HiAnime, AniWatch & Hindi Dub</p>
+          </div>
+
+          <div style={{ marginBottom: '18px', overflowX: 'auto', paddingBottom: '4px' }}>
+            <CategoryPills
+              categories={providerCategoryPills}
+              activeId={providerFilter}
+              onSelect={setProviderFilter}
+            />
+          </div>
+
+          {providerLoading && Object.keys(providerStreams).length === 0 && (
+            <div style={{ padding: '24px 0', color: '#94a3b8', fontSize: '0.88rem' }}>
+              Fetching real-time streams from AniKoto, HiAnime, and Hindi Dub mirrors...
+            </div>
+          )}
+
+          {activeProviderRows.map(([providerKey, items]) => {
+
+            const meta = PROVIDER_METAS[providerKey] || {
+              name: providerKey.toUpperCase(),
+              badge: 'Stream',
+              color: '#6366f1',
+            };
+            return (
+              <ProviderRow
+                key={providerKey}
+                providerKey={providerKey}
+                meta={meta}
+                items={items}
+              />
+            );
+          })}
+        </section>
+
 
         <Row
           id="row-ongoing"
