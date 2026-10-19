@@ -104,7 +104,12 @@ export class Session {
   static async open(port) {
     const list = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json();
     const page = list.find((t) => t.type === 'page');
-    const s = new Session(new WebSocket(page.webSocketDebuggerUrl));
+    const ws = new WebSocket(page.webSocketDebuggerUrl);
+    await new Promise((resolve, reject) => {
+      ws.addEventListener('open', resolve, { once: true });
+      ws.addEventListener('error', reject, { once: true });
+    });
+    const s = new Session(ws);
     await sleep(150);
     return s;
   }
