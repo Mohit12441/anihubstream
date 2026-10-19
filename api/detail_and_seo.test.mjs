@@ -54,3 +54,14 @@ test('Component: AnimeDetail page exists and imports useAnimeDetail', () => {
   assert.ok(content.includes('useAnimeDetail'), 'AnimeDetail must use useAnimeDetail hook');
   assert.ok(content.includes('/api/play?id='), 'AnimeDetail must preview available servers');
 });
+
+test('Edge Middleware: functions/_middleware.js uses url.origin and handles /anime/:id and /watchlist', () => {
+  const mwPath = path.join(rootDir, 'functions', '_middleware.js');
+  const content = fs.readFileSync(mwPath, 'utf8');
+
+  assert.ok(content.includes('url.origin'), '_middleware.js must use url.origin dynamically');
+  assert.ok(content.includes('/anime/'), '_middleware.js must handle /anime/:id');
+  assert.ok(content.includes('/watchlist'), '_middleware.js must handle /watchlist');
+  assert.ok(content.includes('/search'), '_middleware.js must handle /search');
+});
+

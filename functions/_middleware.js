@@ -34,7 +34,7 @@ export async function onRequest(context) {
     return response;
   }
 
-  const origin = 'https://anihubstream.com';
+  const origin = url.origin || 'https://anihubstream.com';
   let title = 'AniHubStream — Watch Anime Free Anytime, Anywhere';
   let desc = 'Watch high-quality anime online free on AniHubStream. Stream subbed and dubbed anime with fast playback, clean schedules, and full episode guides.';
   let canonical = `${origin}${path}`;
@@ -44,9 +44,12 @@ export async function onRequest(context) {
 
   // Match /watch/:id or /watch/:id/:ep
   const watchMatch = path.match(/^\/watch\/([A-Za-z0-9_-]+)(?:\/(\d+))?$/);
-  if (watchMatch) {
-    const id = watchMatch[1];
-    const epNum = watchMatch[2] ? Number(watchMatch[2]) : null;
+  // Match /anime/:id (Detail page)
+  const animeMatch = path.match(/^\/anime\/([A-Za-z0-9_-]+)$/);
+
+  if (watchMatch || animeMatch) {
+    const id = watchMatch ? watchMatch[1] : animeMatch[1];
+    const epNum = watchMatch && watchMatch[2] ? Number(watchMatch[2]) : null;
 
     if (env.ANIHUB) {
       try {
@@ -54,8 +57,8 @@ export async function onRequest(context) {
           `SELECT title, native, year, rating, synopsis, art, key_art, episode_total, kind FROM anime WHERE id = ?1`
         ).bind(id).first();
 
-        if (!row) {
-          // Real 404 for non-existent anime
+        if (!row && watchMatch) {
+          // Real 404 for non-existent anime on watch page
           return new Response(
             `<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Anime Not Found | AniHubStream</title><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>body{background:#07070b;color:#f0f0f5;font-family:sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center;}a{color:#ff1f4a;text-decoration:none;font-weight:bold;}</style></head><body><div><h1>404 — Anime Not Found</h1><p>The anime "${id}" could not be found.</p><p><a href="/">Return to Homepage</a></p></div></body></html>`,
             {
@@ -65,77 +68,83 @@ export async function onRequest(context) {
           );
         }
 
-        const animeTitle = row.title || id;
-        const yearStr = row.year ? ` (${row.year})` : '';
-        const cleanSynopsis = (row.synopsis || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-        desc = cleanSynopsis ? cleanSynopsis.slice(0, 150).trim() : `Watch ${animeTitle} free online in high definition on AniHubStream.`;
+        if (row) {
+          const animeTitle = row.title || id;
+          const yearStr = row.year ? ` (${row.year})` : '';
+          const cleanSynopsis = (row.synopsis || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+          desc = cleanSynopsis ? cleanSynopsis.slice(0, 150).trim() : `Watch ${animeTitle} free online in high definition on AniHubStream.`;
 
-        if (epNum && epNum >= 1) {
-          title = `${animeTitle} Ep ${epNum} — Watch Free | AniHubStream`;
-          canonical = `${origin}/watch/${id}/${epNum}`;
-          ogType = 'video.episode';
-        } else {
-          title = `${animeTitle}${yearStr} — Watch Free | AniHubStream`;
-          canonical = `${origin}/watch/${id}`;
-          ogType = 'video.tv_show';
+          if (animeMatch) {
+            title = `${animeTitle}${yearStr} — Overview & Episode Guide | AniHubStream`;
+            canonical = `${origin}/anime/${id}`;
+            ogType = 'video.tv_show';
+          } else if (epNum && epNum >= 1) {
+            title = `${animeTitle} Ep ${epNum} — Watch Free | AniHubStream`;
+            canonical = `${origin}/watch/${id}/${epNum}`;
+            ogType = 'video.episode';
+          } else {
+            title = `${animeTitle}${yearStr} — Watch Free | AniHubStream`;
+            canonical = `${origin}/watch/${id}`;
+            ogType = 'video.tv_show';
+          }
+
+          ogImage = row.key_art || row.art || ogImage;
+
+          const mainEntity = {
+            '@type': epNum ? 'TVEpisode' : 'TVSeries',
+            name: epNum ? `${animeTitle} Episode ${epNum}` : animeTitle,
+            alternateName: row.native || undefined,
+            description: desc,
+            image: ogImage,
+            url: canonical,
+            ...(epNum ? { episodeNumber: epNum } : {}),
+            ...(!epNum && row.episode_total ? { numberOfEpisodes: row.episode_total } : {}),
+            ...(row.rating > 0 ? {
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: row.rating,
+                bestRating: 10,
+                worstRating: 0,
+                ratingCount: 150,
+              }
+            } : {}),
+          };
+
+          const breadcrumbs = {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: origin,
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Anime',
+                item: `${origin}/anime`,
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: animeTitle,
+                item: `${origin}/anime/${id}`,
+              },
+              ...(epNum ? [{
+                '@type': 'ListItem',
+                position: 4,
+                name: `Episode ${epNum}`,
+                item: canonical,
+              }] : []),
+            ],
+          };
+
+          jsonLd = {
+            '@context': 'https://schema.org',
+            '@graph': [mainEntity, breadcrumbs],
+          };
         }
-
-        ogImage = row.key_art || row.art || ogImage;
-
-        const mainEntity = {
-          '@type': epNum ? 'TVEpisode' : 'TVSeries',
-          name: epNum ? `${animeTitle} Episode ${epNum}` : animeTitle,
-          alternateName: row.native || undefined,
-          description: desc,
-          image: ogImage,
-          url: canonical,
-          ...(epNum ? { episodeNumber: epNum } : {}),
-          ...(!epNum && row.episode_total ? { numberOfEpisodes: row.episode_total } : {}),
-          ...(row.rating > 0 ? {
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: row.rating,
-              bestRating: 10,
-              worstRating: 0,
-              ratingCount: 150,
-            }
-          } : {}),
-        };
-
-        const breadcrumbs = {
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Home',
-              item: origin,
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: 'Anime',
-              item: `${origin}/anime`,
-            },
-            {
-              '@type': 'ListItem',
-              position: 3,
-              name: animeTitle,
-              item: `${origin}/watch/${id}`,
-            },
-            ...(epNum ? [{
-              '@type': 'ListItem',
-              position: 4,
-              name: `Episode ${epNum}`,
-              item: canonical,
-            }] : []),
-          ],
-        };
-
-        jsonLd = {
-          '@context': 'https://schema.org',
-          '@graph': [mainEntity, breadcrumbs],
-        };
       } catch (e) {
         console.error('Middleware D1 lookup failed:', e);
       }
@@ -156,8 +165,16 @@ export async function onRequest(context) {
     title = 'Anime Catalogue — Discover Series & Movies | AniHubStream';
     desc = 'Explore the full AniHubStream anime catalogue. Filter by genre, release year, format (TV, Movie, OVA), and rating.';
   } else if (path === '/genres') {
-    title = 'Anime Genres & Categories | AniHubStream';
-    desc = 'Browse anime by genre: Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Slice of Life, and more.';
+    const genreName = url.searchParams.get('name');
+    title = genreName ? `${genreName} Anime — Stream Online Free | AniHubStream` : 'Anime Genres & Categories | AniHubStream';
+    desc = genreName ? `Browse and stream the best ${genreName} anime series and movies online free.` : 'Browse anime by genre: Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Slice of Life, and more.';
+  } else if (path === '/search') {
+    const q = url.searchParams.get('q');
+    title = q ? `Search results for "${q}" | AniHubStream` : 'Federated Multi-Provider Anime Search | AniHubStream';
+    desc = 'Search subbed and dubbed anime across multiple providers with real-time stream resolution.';
+  } else if (path === '/watchlist' || path === '/my-list') {
+    title = 'My Anime Watchlist & Saved Titles | AniHubStream';
+    desc = 'Manage your saved anime series, movies, and track your episodic progress on AniHubStream.';
   } else if (path === '/schedule') {
     title = 'Anime Broadcast Schedule — Airing This Week | AniHubStream';
     desc = 'Live weekly anime release schedule. Check episode air dates, broadcast times, and currently airing seasons.';
@@ -193,6 +210,16 @@ export async function onRequest(context) {
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Terms of Service</h1><p>Welcome to AniHubStream. By accessing our platform, you agree to these Terms of Service. AniHubStream provides an informational catalog and video streaming client for personal, non-commercial entertainment. Users agree not to misuse platform infrastructure, reverse-engineer proprietary services, or conduct automated scraping that degrades system stability.</p></main>`;
   } else if (path === '/contact') {
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Contact AniHubStream</h1><p>Have questions, suggestions, or need to report a playback issue? Contact the AniHubStream development and support team. We continuously refine stream health, subtitle rendering, and catalog accuracy.</p></main>`;
+  } else if (path === '/search') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Federated Anime Search</h1><p>Search across thousands of subbed and dubbed anime series and movies. AniHubStream connects to high-speed stream providers with automatic server fallback and instant title matching.</p></main>`;
+  } else if (path === '/watchlist' || path === '/my-list') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Personal Anime Watchlist</h1><p>Keep track of anime you are currently watching, plan to watch, or completed. All bookmarks and episodic progress are saved securely on your device with instant resume capability.</p></main>`;
+  } else if (path === '/genres') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Anime Genres & Categories</h1><p>Browse anime series categorized by themes: Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Supernatural, and Slice of Life. Each collection includes full episode guides and high-definition video playback.</p></main>`;
+  } else if (path === '/schedule') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Anime Broadcast Schedule</h1><p>Discover when new anime episodes air weekly with local timezone conversion. Stay updated on premiere dates, seasonal broadcast slots, and episode countdowns.</p></main>`;
+  } else if (path === '/discover') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Discover Trending Anime</h1><p>Explore currently trending anime titles, seasonal fan favorites, top-rated series, and recommended hidden gems updated in real-time from community watch metrics.</p></main>`;
   }
 
   // Use HTMLRewriter to dynamically rewrite head tags
