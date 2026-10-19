@@ -508,7 +508,7 @@ export const onRequestGet = async ({ request, env }) => {
         recap: finalRecap,
       },
     }, {
-      cache: 'public, max-age=600, s-maxage=1800',
+      cache: 'no-store, no-cache, must-revalidate',
     });
   } catch (err) {
     return errorResponse(err);
