@@ -74,7 +74,16 @@ export function Watch() {
         if (cancelled) return;
         if (Array.isArray(data.servers) && data.servers.length > 0) {
           setPlayServers(data.servers);
-          if (!activeServerId || !data.servers.some((s: PlayServer) => s.id === activeServerId)) {
+          
+          // Check if user arrived with a specific ?provider= preference
+          const targetProvider = (params.get('provider') || '').toLowerCase();
+          const matchedServer = targetProvider
+            ? data.servers.find((s: PlayServer) => s.id?.toLowerCase().includes(targetProvider) || s.name?.toLowerCase().includes(targetProvider))
+            : null;
+
+          if (matchedServer) {
+            setActiveServerId(matchedServer.id);
+          } else if (!activeServerId || !data.servers.some((s: PlayServer) => s.id === activeServerId)) {
             setActiveServerId(data.servers[0].id);
           }
         }
@@ -89,7 +98,7 @@ export function Watch() {
     return () => {
       cancelled = true;
     };
-  }, [anime, epNum, prefs.audio, activeServerId]);
+  }, [anime, epNum, prefs.audio, activeServerId, params]);
 
   /* Path param :ep sync with edge-case clamping and resume fallback */
   useEffect(() => {

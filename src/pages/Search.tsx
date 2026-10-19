@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
-import { Film, Loader2, Play, Search as SearchIcon, Server } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { Film, Loader2, Search as SearchIcon } from 'lucide-react';
 import { useSEO } from '../lib/useSEO';
 import { useToast } from '../lib/Toast';
+import { ProviderRow, type ProviderSearchResult } from '../components/search/ProviderRow';
 import '../styles/pages.css';
-
-interface ProviderSearchResult {
-  id: string;
-  slug: string;
-  title: string;
-  coverUrl: string | null;
-  provider: string;
-}
 
 interface FederatedSearchResponse {
   query: string;
@@ -142,7 +135,7 @@ export function Search() {
       )}
 
       {!loading && data && data.count > 0 && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
           {Object.entries(data.providers).map(([providerKey, items]) => {
             if (!items || items.length === 0) return null;
             const meta = PROVIDER_NAMES[providerKey] || {
@@ -152,118 +145,12 @@ export function Search() {
             };
 
             return (
-              <section key={providerKey}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <Server size={18} style={{ color: meta.color }} />
-                    <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#f8fafc', margin: 0 }}>
-                      {meta.name}
-                    </h2>
-                    <span
-                      style={{
-                        fontSize: '0.7rem',
-                        fontWeight: 600,
-                        padding: '2px 8px',
-                        borderRadius: '9999px',
-                        background: `${meta.color}25`,
-                        color: meta.color,
-                        border: `1px solid ${meta.color}40`,
-                      }}
-                    >
-                      {meta.badge}
-                    </span>
-                  </div>
-                  <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>
-                    {items.length} {items.length === 1 ? 'result' : 'results'}
-                  </span>
-                </div>
-
-                <div
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
-                    gap: '16px',
-                  }}
-                >
-                  {items.map((item) => (
-                    <Link
-                      key={`${providerKey}-${item.id}`}
-                      to={`/watch/${encodeURIComponent(item.slug || item.id)}/1`}
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        background: 'rgba(255, 255, 255, 0.03)',
-                        borderRadius: '10px',
-                        overflow: 'hidden',
-                        border: '1px solid rgba(255, 255, 255, 0.06)',
-                        textDecoration: 'none',
-                        color: 'inherit',
-                        transition: 'transform 0.15s ease, border-color 0.15s ease',
-                      }}
-                      className="search-card"
-                    >
-                      <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4', background: '#1e293b' }}>
-                        {item.coverUrl ? (
-                          <img
-                            src={item.coverUrl}
-                            alt={item.title}
-                            loading="lazy"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                          />
-                        ) : (
-                          <div
-                            style={{
-                              width: '100%',
-                              height: '100%',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              color: '#64748b',
-                            }}
-                          >
-                            <Film size={32} />
-                          </div>
-                        )}
-                        <div
-                          style={{
-                            position: 'absolute',
-                            inset: 0,
-                            background: 'rgba(0,0,0,0.35)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            opacity: 0,
-                            transition: 'opacity 0.2s ease',
-                          }}
-                          className="search-card__hover"
-                        >
-                          <Play size={36} style={{ color: '#fff' }} />
-                        </div>
-                      </div>
-
-                      <div style={{ padding: '12px' }}>
-                        <h3
-                          style={{
-                            fontSize: '0.9rem',
-                            fontWeight: 600,
-                            margin: '0 0 6px 0',
-                            color: '#f8fafc',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            whiteSpace: 'nowrap',
-                          }}
-                          title={item.title}
-                        >
-                          {item.title}
-                        </h3>
-                        <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
-                          Watch on {meta.name}
-                        </span>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </section>
+              <ProviderRow
+                key={providerKey}
+                providerKey={providerKey}
+                meta={meta}
+                items={items}
+              />
             );
           })}
         </div>
