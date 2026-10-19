@@ -583,7 +583,7 @@ export async function fetchDownloads(target, { signal } = {}) {
  * hand a dub-seeker the Japanese audio and label it dub, which is the exact
  * defect AniKoto's export lists as an open gap.
  */
-export async function sources(episodeId, { audioType, signal, server } = {}) {
+export async function sources(episodeId, { audioType, signal, server, includeDownloads = false } = {}) {
   const ref = decodeEpisodeRef(episodeId);
   if (!ref?.animeId || !ref.number) throw new ApiError("HiAnime episode id carries no anime id + number", 0, "ERROR");
   // The caller's request wins; the ref's label is only a default for callers who
@@ -606,19 +606,20 @@ export async function sources(episodeId, { audioType, signal, server } = {}) {
   for (const [idx, embed] of embeds.entries()) {
     const isZoko = hostMatches(embed, ZOKO_HOSTS) || /zokoanime/i.test(embed);
     const isMega = hostMatches(embed, MEGAPLAY_HOSTS) || /megaplay/i.test(embed);
-    const label = isZoko ? `HiAnime · HD-${idx + 1}` : isMega ? `HiAnime · MegaPlay` : `HiAnime · Server ${idx + 1}`;
+    const serverId = isZoko ? `HD-${idx + 1}` : isMega ? `MegaPlay` : `Server-${idx + 1}`;
+    const label = `HiAnime · ${serverId}`;
     servers.push({
-      id: `hianime-${idx + 1}`,
+      id: serverId,
       name: label,
       embedUrl: embed,
       type: "hls",
     });
   }
 
-  // Pre-fetch direct multi-quality downloads if available from ZokoAnime embed
+  // Direct multi-quality downloads are fetched on demand via /downloads endpoint to avoid blocking stream resolution.
   let downloads = [];
   const zokoEmbed = embeds.find((u) => hostMatches(u, ZOKO_HOSTS) || /zokoanime/i.test(u));
-  if (zokoEmbed) {
+  if (zokoEmbed && includeDownloads) {
     downloads = await fetchDownloads(zokoEmbed, { signal }).catch(() => []);
   }
 

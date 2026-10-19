@@ -5,7 +5,7 @@ import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
 import { DownloadModal } from '../components/player/DownloadModal';
 import { ServerSwitcher } from '../components/player/ServerSwitcher';
 import type { PlayServer } from '../components/player/PlayerInput';
-import { serverIdFromProvider } from '../data/servers';
+import { providerFromId, serverIdFromProvider } from '../data/servers';
 import { AnimeCard } from '../components/AnimeCard';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { EpisodeSidebar } from '../components/EpisodeSidebar';
@@ -126,8 +126,11 @@ export function Watch() {
         if (cancelled) return;
         if (Array.isArray(data.servers) && data.servers.length > 0) {
           setPlayServers(data.servers);
+          const matchingActive = data.servers.find((s: PlayServer) => s.id === activeServerId);
           const matchedServer = targetProvider
-            ? data.servers.find((s: PlayServer) => s.id?.toLowerCase().includes(targetProvider) || s.name?.toLowerCase().includes(targetProvider))
+            ? (matchingActive && (matchingActive.id.toLowerCase().includes(targetProvider) || matchingActive.provider.toLowerCase() === targetProvider)
+                ? matchingActive
+                : data.servers.find((s: PlayServer) => s.id?.toLowerCase().includes(targetProvider) || s.provider?.toLowerCase() === targetProvider || s.name?.toLowerCase().includes(targetProvider)))
             : null;
           if (matchedServer) {
             setActiveServerId(matchedServer.id);
@@ -396,6 +399,10 @@ export function Watch() {
 
   const handleSelectServer = (server: PlayServer) => {
     setActiveServerId(server.id);
+    const newProv = server.provider || providerFromId(server.id).split(':')[0];
+    const newParams = new URLSearchParams(params);
+    newParams.set('provider', newProv);
+    navigate(`/watch/${encodeURIComponent(anime?.id || id || '')}/${epNum}?${newParams.toString()}`, { replace: true });
     notify(`Switched to ${server.name}`);
   };
 

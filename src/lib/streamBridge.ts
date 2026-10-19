@@ -211,8 +211,9 @@ export async function bridgeResolve(
     } catch {}
 
     try {
+      const fallbackQuery = (provider && provider !== 'auto') ? '&fallback=false' : '';
       const res = await fetch(
-        bridgeUrl(`/resolve?title=${encodeURIComponent(title)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}`),
+        bridgeUrl(`/resolve?title=${encodeURIComponent(title)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}${fallbackQuery}`),
         { signal: AbortSignal.timeout(45_000) },
       );
       const body = (await res.json()) as BridgeSource | ResolveFailure;

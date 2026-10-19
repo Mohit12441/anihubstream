@@ -32,7 +32,9 @@ function formatServerName(provider, serverId) {
     animekai: 'AnimeKai',
   };
   const base = provNames[provider?.toLowerCase()] || (provider ? provider.toUpperCase() : 'Server');
-  return serverId ? `${base} · ${serverId}` : base;
+  if (!serverId) return base;
+  const cleanServer = String(serverId).replace(/^.*?\s*·\s*/, '').trim();
+  return `${base} · ${cleanServer}`;
 }
 
 function buildAudioTracks(audio) {
@@ -230,17 +232,57 @@ export const onRequestGet = async ({ request, env }) => {
 
     // If stream bridge is cold or external to Cloudflare edge, return candidate servers
     if (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl)) {
+      const isHiAnimePrimary = provider.toLowerCase().startsWith('hianime');
       const defaultServers = [
         {
           id: 'anikoto:HD-1',
           name: 'AniKoto · HD-1',
           provider: 'anikoto',
           status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=${audio}&provider=anikoto&server=HD-1`,
+          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=sub&provider=anikoto&server=HD-1`,
           type: 'hls',
           quality: '1080',
-          audio,
-          audioTracks: [{ id: 'audio-0', language: audio, label: audio.toUpperCase(), default: true }],
+          audio: 'sub',
+          audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+          subtitles: [],
+          downloads: [],
+        },
+        {
+          id: 'hianime:HD-1',
+          name: 'HiAnime · HD-1',
+          provider: 'hianime',
+          status: 'ready',
+          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=sub&provider=hianime&server=HD-1`,
+          type: 'hls',
+          quality: '1080p',
+          audio: 'sub',
+          audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+          subtitles: [],
+          downloads: [],
+        },
+        {
+          id: 'hianime:HD-2',
+          name: 'HiAnime · HD-2',
+          provider: 'hianime',
+          status: 'ready',
+          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=sub&provider=hianime&server=HD-2`,
+          type: 'hls',
+          quality: '1080p',
+          audio: 'sub',
+          audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+          subtitles: [],
+          downloads: [],
+        },
+        {
+          id: 'hianime:MegaPlay',
+          name: 'HiAnime · MegaPlay',
+          provider: 'hianime',
+          status: 'ready',
+          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=sub&provider=hianime&server=MegaPlay`,
+          type: 'hls',
+          quality: '1080p',
+          audio: 'sub',
+          audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
           subtitles: [],
           downloads: [],
         },
@@ -285,6 +327,10 @@ export const onRequestGet = async ({ request, env }) => {
         },
       ];
 
+      if (isHiAnimePrimary) {
+        defaultServers.sort((a, b) => (a.provider === 'hianime' ? -1 : b.provider === 'hianime' ? 1 : 0));
+      }
+
       return ok({
         title: resolvedTitle,
         episode: ep,
@@ -317,10 +363,11 @@ export const onRequestGet = async ({ request, env }) => {
     }));
 
     // Construct primary server entry
-    const activeServerId = `${prov}:${serverParam || 'HD-1'}`;
+    const cleanPrimaryServer = String(serverParam || 'HD-1').replace(/^.*?\s*·\s*/, '').trim();
+    const activeServerId = `${prov}:${cleanPrimaryServer}`;
     const primaryServer = {
       id: activeServerId,
-      name: formatServerName(prov, serverParam || 'HD-1'),
+      name: formatServerName(prov, cleanPrimaryServer),
       provider: prov,
       status: 'ready',
       streamUrl,
@@ -337,14 +384,16 @@ export const onRequestGet = async ({ request, env }) => {
     // If bridge supplied other server choices, add them as alternatives
     if (Array.isArray(meta.servers)) {
       for (const s of meta.servers) {
-        const sId = `${prov}:${s.id || s.name}`;
+        const rawServerId = s.id || s.name;
+        const cleanServerId = String(rawServerId).replace(/^.*?\s*·\s*/, '').trim();
+        const sId = `${prov}:${cleanServerId}`;
         if (sId !== activeServerId && !servers.some((existing) => existing.id === sId)) {
           servers.push({
             id: sId,
-            name: formatServerName(prov, s.name || s.id),
+            name: formatServerName(prov, cleanServerId),
             provider: prov,
             status: 'ready',
-            streamUrl: `${bridgeBase}/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=${audio}&provider=${prov}&server=${encodeURIComponent(s.id || s.name)}`,
+            streamUrl: `${bridgeBase}/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=${audio}&provider=${prov}&server=${encodeURIComponent(cleanServerId)}`,
             type: s.type || 'hls',
             quality: '1080p',
             audio,
@@ -353,6 +402,38 @@ export const onRequestGet = async ({ request, env }) => {
             downloads: [],
           });
         }
+      }
+    }
+
+    // Always include cross-provider alternatives so user can switch between AniKoto and HiAnime in ServerSwitcher
+    const candidateCrossServers = prov === 'hianime'
+      ? [
+          { id: 'anikoto:HD-1', name: 'AniKoto · HD-1', provider: 'anikoto', type: 'hls', quality: '1080', audio: 'sub' },
+          { id: 'anikoto:Vidstream-2', name: 'AniKoto · Vidstream-2', provider: 'anikoto', type: 'dub', quality: '1080p', audio: 'dub' },
+          { id: 'anikoto:Vidstream-1', name: 'AniKoto · Vidstream-1', provider: 'anikoto', type: 'dub', quality: '1080p', audio: 'dub' },
+          { id: 'anikoto:HD-2', name: 'AniKoto · HD-2', provider: 'anikoto', type: 'dub', quality: '1080p', audio: 'dub' },
+        ]
+      : [
+          { id: 'hianime:HD-1', name: 'HiAnime · HD-1', provider: 'hianime', type: 'hls', quality: '1080p', audio: 'sub' },
+          { id: 'hianime:HD-2', name: 'HiAnime · HD-2', provider: 'hianime', type: 'hls', quality: '1080p', audio: 'sub' },
+          { id: 'hianime:MegaPlay', name: 'HiAnime · MegaPlay', provider: 'hianime', type: 'hls', quality: '1080p', audio: 'sub' },
+        ];
+
+    for (const alt of candidateCrossServers) {
+      if (!servers.some((existing) => existing.id === alt.id)) {
+        servers.push({
+          id: alt.id,
+          name: alt.name,
+          provider: alt.provider,
+          status: 'ready',
+          streamUrl: `${bridgeBase}/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=${alt.audio}&provider=${alt.id}`,
+          type: alt.type,
+          quality: alt.quality,
+          audio: alt.audio,
+          audioTracks: buildAudioTracks(alt.audio),
+          subtitles: [],
+          downloads: [],
+        });
       }
     }
 

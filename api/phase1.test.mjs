@@ -281,7 +281,7 @@ describe('Phase 1: Edge APIs & Layer 1 Data Contract', () => {
 
         // Verify servers array
         assert.ok(Array.isArray(data.servers));
-        assert.strictEqual(data.servers.length, 2);
+        assert.ok(data.servers.length >= 2);
 
         const primary = data.servers[0];
         assert.strictEqual(primary.provider, 'anikoto');

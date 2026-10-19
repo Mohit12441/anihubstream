@@ -687,6 +687,9 @@ async function buildSourceProvider(provider, { title, ep, audio, server }) {
   } else if (norm.startsWith('hianime:')) {
     selectedServer = norm.slice('hianime:'.length);
     norm = 'hianime';
+  } else if (norm.startsWith('aniwatch:')) {
+    selectedServer = norm.slice('aniwatch:'.length);
+    norm = 'aniwatch';
   }
   const handler = providerHandlers[norm];
   if (!handler) throw new Error(`Unsupported provider: ${provider}`);
@@ -729,7 +732,7 @@ async function raceProviders(candidates, { title, ep, audio }) {
   });
 }
 
-async function buildSource({ title, ep, audio, provider = 'anikoto', server, fallback = true }) {
+async function buildSource({ title, ep, audio, provider = 'anikoto', server, fallback = false }) {
   const normProvider = (provider || 'anikoto').toLowerCase();
   const effectiveProvider = (normProvider === 'auto' || normProvider === 'fastest') ? 'anikoto' : normProvider;
 
@@ -1231,7 +1234,10 @@ const server = createServer(async (req, res) => {
       const audio = audioParam === 'hindi' ? 'hindi' : audioParam === 'dub' ? 'dub' : audioParam === 'hsub' ? 'hsub' : 'sub';
       const requestedProvider = url.searchParams.get('provider') ?? (audioParam === 'hindi' ? 'animedubhindi' : 'anikoto');
       const serverParam = url.searchParams.get('server') ?? undefined;
-      const fallback = url.searchParams.get('fallback') !== 'false';
+      const fallbackParam = url.searchParams.get('fallback');
+      const fallback = fallbackParam !== null
+        ? fallbackParam === 'true'
+        : (!url.searchParams.get('provider') || requestedProvider === 'auto' || requestedProvider === 'fastest');
       if (!title.trim() || !Number.isInteger(ep) || ep < 1) return json(res, 400, { error: 'TITLE_EP_REQUIRED' });
       const key = `${title.toLowerCase()}|${ep}|${audio}|${requestedProvider}|${serverParam ?? ''}`;
       const reuse = recent.get(key);

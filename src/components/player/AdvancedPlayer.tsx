@@ -648,29 +648,6 @@ export function AdvancedPlayer(props: Props) {
           <span className="pl__chip pl__chip--dim">
             {anime.season} · EP {episode.n}
           </span>
-          <span className="pl__spacer" />
-          <span
-            className={`pl__sim pl__sim--${liveReady ? 'live' : live.status === 'resolving' ? 'wait' : 'off'}`}
-            title={
-              liveReady
-                ? 'Real playback: hls.js streams the verified AniKoto source through the bridge — the timeline and buffer band reflect the actual media.'
-                : live.status === 'resolving'
-                  ? 'Asking the AniKoto bridge to resolve this episode. Playback starts once the stream is verified.'
-                  : live.status === 'error'
-                    ? `The bridge answered — it just has nothing playable for this episode: ${live.error ?? 'no source listed'}. Nothing is streamed in its place.`
-                    : 'The AniKoto bridge is not reachable — real playback needs it. Nothing is streamed in its place.'
-            }
-          >
-            {liveReady
-              ? `Live · ${live.info?.audio === 'dub' ? 'DUB' : 'SUB'} · ${live.info?.quality ?? 1080}p${live.firstFrameLatency ? ` · ${live.firstFrameLatency}ms` : ''}`
-              : live.status === 'resolving'
-                ? 'Connecting to bridge…'
-                : /* a refusal from the bridge is not the bridge being down: saying so would blame
-                     the wrong thing and send the viewer to retry a connection that is fine */
-                  live.status === 'error'
-                  ? 'No stream for this episode'
-                  : 'Bridge offline'}
-          </span>
         </div>
 
         {(live.status === 'resolving' || (liveReady && live.buffering)) && (
@@ -682,11 +659,11 @@ export function AdvancedPlayer(props: Props) {
         {(live.status === 'unavailable' || live.status === 'error') && (
           <div className="pl__offline" role="alert">
             <WifiOff size={26} aria-hidden="true" />
-            <b>{live.status === 'unavailable' ? 'Streaming bridge unreachable' : 'This episode could not be streamed'}</b>
+            <b>{live.status === 'unavailable' ? 'Stream temporarily unavailable' : 'This episode could not be streamed'}</b>
             <p>
               {live.status === 'unavailable'
-                ? 'Real playback runs through the AniKoto bridge, which is not answering right now. Nothing is streamed in its place.'
-                : `${live.error ?? 'The bridge could not resolve this episode.'} Nothing is streamed in its place.`}
+                ? 'The stream bridge is currently reconnecting. Click Retry to reload.'
+                : `${live.error ?? 'The stream could not be loaded.'}`}
             </p>
             <button type="button" className="btn btn--sm btn--primary" onClick={live.retry}>
               <RefreshCw size={14} aria-hidden="true" /> Retry

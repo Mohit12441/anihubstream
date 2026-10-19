@@ -185,35 +185,40 @@ export const serverById = (id: string): StreamServer => {
 
 export function providerFromId(serverId: string): string {
   if (!serverId || serverId === 'auto-fastest') return 'anikoto';
-  if (serverId.startsWith('anikoto:')) return serverId;
-  if (serverId.includes(':')) {
-    const prov = serverId.split(':')[0].toLowerCase();
+  const clean = serverId.trim();
+  const lower = clean.toLowerCase();
+
+  // If serverId is in "provider:server" format (e.g. anikoto:HD-1, hianime:HD-1, hianime:MegaPlay, aniwatch:HD-1)
+  if (lower.includes(':')) {
+    const prov = lower.split(':')[0];
     if (['aniwatch', 'hianime', 'anikoto', 'animedubhindi', 'watchanimeworld', 'animewave', 'animekai'].includes(prov)) {
-      return prov;
+      return clean; // preserve provider:server so the exact server is triggered
     }
   }
-  if (serverId === 'aniwatch-live') return 'aniwatch';
-  if (serverId === 'hianime-live') return 'hianime';
-  if (serverId === 'anikoto-live') return 'anikoto';
-  if (serverId === 'animedubhindi-live') return 'animedubhindi';
-  if (serverId === 'watchanimeworld-live') return 'watchanimeworld';
-  if (serverId === 'animewave-live') return 'animewave';
-  if (serverId === 'animekai-live') return 'animekai';
-  return 'anikoto';
+
+  // Handle provider-server format (e.g. hianime-1, hianime-2, aniwatch-1)
+  for (const prov of ['hianime', 'aniwatch', 'anikoto', 'animedubhindi', 'watchanimeworld', 'animewave', 'animekai']) {
+    if (lower === `${prov}-live` || lower === prov) {
+      return prov;
+    }
+    if (lower.startsWith(`${prov}-`)) {
+      return `${prov}:${clean}`;
+    }
+  }
+
+  return clean;
 }
 
 export function serverIdFromProvider(provider?: string): string {
   if (!provider) return 'anikoto:HD-1';
-  if (provider.startsWith('anikoto:')) return provider;
-  const norm = (provider.includes(':') ? provider.split(':')[0] : provider).toLowerCase();
-  if (norm === 'aniwatch') return 'aniwatch-live';
-  if (norm === 'hianime') return 'hianime-live';
+  if (provider.includes(':')) return provider;
+  const norm = provider.toLowerCase();
+  if (norm === 'hianime') return 'hianime:HD-1';
   if (norm === 'anikoto') return 'anikoto:HD-1';
-  if (norm === 'animedubhindi') return 'animedubhindi-live';
-  if (norm === 'watchanimeworld') return 'watchanimeworld-live';
-  if (norm === 'animewave') return 'animewave-live';
-  if (norm === 'animekai') return 'animekai-live';
-  return 'anikoto:HD-1';
+  if (norm === 'aniwatch') return 'aniwatch:HD-1';
+  if (norm === 'animedubhindi') return 'animedubhindi:default';
+  if (norm === 'watchanimeworld') return 'watchanimeworld:default';
+  return `${norm}:HD-1`;
 }
 
 export const SERVER_STATUS_LABEL: Record<ServerStatus, string> = {
