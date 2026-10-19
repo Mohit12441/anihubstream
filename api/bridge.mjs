@@ -285,6 +285,7 @@ function createHlsSession({ provider, media, episode, resolvedResult, sniffed, d
     sid,
     at: Date.now(),
     provider,
+    extractor: resolvedResult.extractor ?? null,
     kind: 'hls',
     title: media.title,
     episode: { number: episode.number, title: episode.title },
@@ -840,7 +841,10 @@ async function buildAudios({ title, ep }) {
 /* ----------------------------------------------------------- stream proxy */
 
 function freshSignedUrl(session, target) {
-  if (session.kind === 'progressive' || session.provider === 'animedubhindi' || session.provider === 'hianime' || session.provider === 'watchanimeworld') {
+  if (session.kind === 'progressive' || session.provider === 'animedubhindi' || session.provider === 'watchanimeworld') {
+    return target;
+  }
+  if (session.provider === 'hianime' && session.extractor !== 'megaplay') {
     return target;
   }
   const u = new URL(target);
@@ -850,6 +854,15 @@ function freshSignedUrl(session, target) {
     if (token) u.searchParams.set('token', token);
   }
   return u.toString();
+}
+
+function ontoOrigin(url, originUrl) {
+  try {
+    const u = new URL(url);
+    const base = new URL(originUrl);
+    if (u.host === base.host) return u.toString();
+    return `${base.origin}${u.pathname}${u.search}`;
+  } catch { return url; }
 }
 
 function admitHost(session, host) {
@@ -870,7 +883,10 @@ function useSession(id) {
 function rewritePlaylist(session, text, baseUrl) {
   const mapUri = (uri) => {
     try {
-      const abs = new URL(uri, baseUrl).toString();
+      let abs = new URL(uri, baseUrl).toString();
+      if (session.provider === 'hianime' && session.mediaUrl) {
+        abs = ontoOrigin(abs, session.mediaUrl);
+      }
       admitHost(session, new URL(abs).host);
       return `/stream/${session.sid}/play?u=${b64url(abs)}&name=${encodeURIComponent(new URL(abs).pathname.split('/').pop() ?? 'u')}`;
     } catch {
@@ -1022,8 +1038,14 @@ async function serveStream(req, res, session, target, signal) {
   }
 
   const upstream = freshSignedUrl(session, target);
+  let origin;
+  try { origin = new URL(session.referer).origin; } catch {}
   const res2 = await fetch(upstream, {
-    headers: { referer: session.referer, ...(req.headers.range ? { range: req.headers.range } : {}) },
+    headers: {
+      referer: session.referer,
+      ...(origin ? { origin } : {}),
+      ...(req.headers.range ? { range: req.headers.range } : {}),
+    },
     signal,
   });
   if (!res2.ok && res2.status !== 206) {
@@ -1033,7 +1055,7 @@ async function serveStream(req, res, session, target, signal) {
   const type = res2.headers.get('content-type') ?? '';
   const path = new URL(upstream).pathname.toLowerCase();
   const looksPlaylist = (/mpegurl/i.test(type) || path.endsWith('.m3u8')) && session.kind !== 'progressive';
-  const isMediaSegment = path.endsWith('.ts') || path.endsWith('.m4s') || path.endsWith('.mp4');
+  const isMediaSegment = path.endsWith('.ts') || path.endsWith('.m4s') || path.endsWith('.mp4') || path.endsWith('.ts.jpg') || /video\/mp2t/i.test(type);
   cors(res);
   res.statusCode = res2.status;
   if (looksPlaylist) {
@@ -1044,12 +1066,14 @@ async function serveStream(req, res, session, target, signal) {
     res.setHeader('cache-control', 'no-store');
   }
   if (res2.headers.get('accept-ranges')) res.setHeader('accept-ranges', res2.headers.get('accept-ranges'));
-  if (res2.headers.get('content-length')) res.setHeader('content-length', res2.headers.get('content-length'));
+  if (!looksPlaylist && res2.headers.get('content-length')) res.setHeader('content-length', res2.headers.get('content-length'));
   if (res2.headers.get('content-range')) res.setHeader('content-range', res2.headers.get('content-range'));
   if (looksPlaylist) {
     res.setHeader('content-type', 'application/vnd.apple.mpegurl');
     const text = await res2.text();
-    res.end(rewritePlaylist(session, text, upstream));
+    const rewritten = rewritePlaylist(session, text, upstream);
+    res.setHeader('content-length', String(Buffer.byteLength(rewritten, 'utf8')));
+    res.end(rewritten);
     return;
   }
   if (isDownload) {
@@ -1057,7 +1081,11 @@ async function serveStream(req, res, session, target, signal) {
     const ext = session.container === 'matroska' ? 'mkv' : 'mp4';
     res.setHeader('content-disposition', `attachment; filename="${cleanTitle}_EP${session.episode?.number || 1}.${ext}"`);
   }
-  res.setHeader('content-type', type || (session.container === 'matroska' ? 'video/x-matroska' : 'video/mp4'));
+  if (isMediaSegment && (!type || type.includes('image') || type.includes('octet-stream'))) {
+    res.setHeader('content-type', 'video/mp2t');
+  } else {
+    res.setHeader('content-type', type || (session.container === 'matroska' ? 'video/x-matroska' : 'video/mp4'));
+  }
   const body = res2.body;
   if (!body) { res.end(); return; }
   for await (const chunk of body) {
