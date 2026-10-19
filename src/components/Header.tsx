@@ -52,7 +52,7 @@ export function Header() {
       notify('Type a title or genre — the search runs against the titles this catalogue serves.');
       return;
     }
-    navigate(`/anime?q=${encodeURIComponent(term)}`);
+    navigate(`/search?q=${encodeURIComponent(term)}`);
     setQ('');
     setOpen(false);
   };

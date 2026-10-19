@@ -185,8 +185,14 @@ export const serverById = (id: string): StreamServer => {
 };
 
 export function providerFromId(serverId: string): string {
-  if (serverId === 'auto-fastest') return 'auto';
+  if (!serverId || serverId === 'auto-fastest') return 'auto';
   if (serverId.startsWith('anikoto:')) return serverId;
+  if (serverId.includes(':')) {
+    const prov = serverId.split(':')[0].toLowerCase();
+    if (['aniwatch', 'hianime', 'anikoto', 'animedubhindi', 'watchanimeworld', 'animewave', 'animekai'].includes(prov)) {
+      return prov;
+    }
+  }
   if (serverId === 'aniwatch-live') return 'aniwatch';
   if (serverId === 'hianime-live') return 'hianime';
   if (serverId === 'anikoto-live') return 'anikoto';
@@ -200,7 +206,7 @@ export function providerFromId(serverId: string): string {
 export function serverIdFromProvider(provider?: string): string {
   if (!provider) return 'auto-fastest';
   if (provider.startsWith('anikoto:')) return provider;
-  const norm = provider.toLowerCase();
+  const norm = (provider.includes(':') ? provider.split(':')[0] : provider).toLowerCase();
   if (norm === 'aniwatch') return 'aniwatch-live';
   if (norm === 'hianime') return 'hianime-live';
   if (norm === 'anikoto') return 'anikoto-live';

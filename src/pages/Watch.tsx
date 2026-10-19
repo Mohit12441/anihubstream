@@ -2,11 +2,10 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { BookmarkPlus, ChevronRight, Clock, Download, Heart, Play, Share2 } from 'lucide-react';
 import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
-import { UniversalPlayer, type UniversalPlayerRef } from '../components/player/UniversalPlayer';
-import { AniSkipButton } from '../components/player/AniSkipButton';
 import { DownloadModal } from '../components/player/DownloadModal';
 import { ServerSwitcher } from '../components/player/ServerSwitcher';
-import { toPlayerInput, type AniSkipData, type PlayServer } from '../components/player/PlayerInput';
+import type { PlayServer } from '../components/player/PlayerInput';
+import { serverIdFromProvider } from '../data/servers';
 import { AnimeCard } from '../components/AnimeCard';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { EpisodeSidebar } from '../components/EpisodeSidebar';
@@ -92,11 +91,10 @@ export function Watch() {
   const [downloadOpen, setDownloadOpen] = useState(false);
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
   const [playServers, setPlayServers] = useState<PlayServer[]>([]);
-  const [activeServerId, setActiveServerId] = useState<string>('');
-  const [playerEngine, setPlayerEngine] = useState<'universal' | 'classic'>('universal');
-  const [aniskipData, setAniskipData] = useState<AniSkipData | null>(null);
-  const [playerCurrentTime, setPlayerCurrentTime] = useState(0);
-  const universalPlayerRef = useRef<UniversalPlayerRef>(null);
+  const targetProvider = (params.get('provider') || '').toLowerCase();
+  const [activeServerId, setActiveServerId] = useState<string>(
+    targetProvider ? serverIdFromProvider(targetProvider) : 'auto-fastest'
+  );
 
   /* Reset stream resolved state on anime or episode change */
   useEffect(() => {
@@ -109,7 +107,6 @@ export function Watch() {
     if (!anime) return;
     let cancelled = false;
 
-    const targetProvider = (params.get('provider') || '').toLowerCase();
     const providerQuery = targetProvider ? `&provider=${encodeURIComponent(targetProvider)}` : '';
     const titleQuery = anime.title ? `&title=${encodeURIComponent(anime.title)}` : '';
 
@@ -122,20 +119,14 @@ export function Watch() {
         if (cancelled) return;
         if (Array.isArray(data.servers) && data.servers.length > 0) {
           setPlayServers(data.servers);
-          
-          // Check if user arrived with a specific ?provider= preference
           const matchedServer = targetProvider
             ? data.servers.find((s: PlayServer) => s.id?.toLowerCase().includes(targetProvider) || s.name?.toLowerCase().includes(targetProvider))
             : null;
-
           if (matchedServer) {
             setActiveServerId(matchedServer.id);
-          } else {
-            setActiveServerId((prev) => (prev && data.servers.some((s: PlayServer) => s.id === prev) ? prev : data.servers[0].id));
+          } else if (targetProvider) {
+            setActiveServerId(serverIdFromProvider(targetProvider));
           }
-        }
-        if (data?.aniskip) {
-          setAniskipData(data.aniskip);
         }
       })
       .catch(() => {
@@ -395,64 +386,10 @@ export function Watch() {
   const goPrev = () => idx > 1 && selectEpisode(idx - 1);
 
   const handleSelectServer = (server: PlayServer) => {
-    setActiveServerId(server.id);
-    if (server.status === 'loading' || !server.streamUrl.includes('/stream/')) {
-      const prov = server.provider;
-      const sId = server.id.includes(':') ? server.id.split(':')[1] : '';
-      fetch(`/api/play/resolve?title=${encodeURIComponent(anime?.title || '')}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}&provider=${encodeURIComponent(prov)}&server=${encodeURIComponent(sId)}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data?.server) {
-            setPlayServers((prev) =>
-              prev.map((s) => (s.id === server.id ? { ...data.server, status: 'ready' } : s))
-            );
-            notify(`Connected to ${server.name} ✅`);
-          }
-        })
-        .catch(() => {
-          notify(`Failed to resolve ${server.name}`);
-        });
-    } else {
-      notify(`Switched to ${server.name}`);
-    }
+    const sId = serverIdFromProvider(server.provider || server.id);
+    setActiveServerId(sId || server.id);
+    notify(`Switched to ${server.name}`);
   };
-
-  const activePlayServer = useMemo(
-    () => playServers.find((s) => s.id === activeServerId) || playServers[0] || null,
-    [playServers, activeServerId]
-  );
-
-  // Auto-resolve stream if active server is not yet resolved
-  useEffect(() => {
-    if (!activePlayServer || !anime) return;
-    if (activePlayServer.status === 'loading' || (activePlayServer.streamUrl && activePlayServer.streamUrl.startsWith('/api/play/resolve'))) {
-      const prov = activePlayServer.provider;
-      const sId = activePlayServer.id.includes(':') ? activePlayServer.id.split(':')[1] : '';
-      const animeTitle = anime.title || params.get('title') || '';
-      fetch(`/api/play/resolve?title=${encodeURIComponent(animeTitle)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}&provider=${encodeURIComponent(prov)}&server=${encodeURIComponent(sId)}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data?.server) {
-            setPlayServers((prev) =>
-              prev.map((s) => (s.id === activePlayServer.id ? { ...data.server, status: 'ready' } : s))
-            );
-          }
-        })
-        .catch(() => {});
-    }
-  }, [activePlayServer?.id, activePlayServer?.status, activePlayServer?.streamUrl, anime?.title, epNum, prefs.audio, params]);
-
-  const isServerReady = Boolean(
-    activePlayServer &&
-    activePlayServer.status === 'ready' &&
-    activePlayServer.streamUrl &&
-    !activePlayServer.streamUrl.startsWith('/api/play/resolve')
-  );
-
-  const playerInput = useMemo(() => {
-    if (!isServerReady || !activePlayServer || !anime) return null;
-    return toPlayerInput(activePlayServer, aniskipData, resumeAt, anime.title, epNum);
-  }, [isServerReady, activePlayServer, aniskipData, resumeAt, anime, epNum]);
 
   const crumbs = [
     { label: 'Home', to: '/' },
@@ -486,145 +423,39 @@ export function Watch() {
 
       <div className="watch__grid shell">
         <div className="watch__main">
-          {/* Engine Selector */}
-          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '8px', gap: '8px', alignItems: 'center' }}>
-            <span style={{ fontSize: '0.75rem', opacity: 0.7, color: '#94a3b8' }}>Player Engine:</span>
-            <div style={{ display: 'flex', background: 'rgba(255,255,255,0.06)', borderRadius: '6px', padding: '2px' }}>
-              <button
-                type="button"
-                onClick={() => setPlayerEngine('universal')}
-                style={{
-                  padding: '3px 8px',
-                  fontSize: '0.72rem',
-                  fontWeight: 600,
-                  borderRadius: '4px',
-                  border: 'none',
-                  background: playerEngine === 'universal' ? 'var(--brand, #6366f1)' : 'transparent',
-                  color: playerEngine === 'universal' ? '#fff' : '#94a3b8',
-                  cursor: 'pointer',
-                }}
-              >
-                Universal ✨
-              </button>
-              <button
-                type="button"
-                onClick={() => setPlayerEngine('classic')}
-                style={{
-                  padding: '3px 8px',
-                  fontSize: '0.72rem',
-                  fontWeight: 600,
-                  borderRadius: '4px',
-                  border: 'none',
-                  background: playerEngine === 'classic' ? 'var(--brand, #6366f1)' : 'transparent',
-                  color: playerEngine === 'classic' ? '#fff' : '#94a3b8',
-                  cursor: 'pointer',
-                }}
-              >
-                Classic
-              </button>
-            </div>
-          </div>
-
-          {playerEngine === 'universal' ? (
-            playerInput ? (
-              <div style={{ position: 'relative', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
-                <UniversalPlayer
-                  ref={universalPlayerRef}
-                  input={playerInput}
-                  theatre={theatre}
-                  onTimeUpdate={(t) => {
-                    setPlayerCurrentTime(t);
-                    record(key, t, runtime);
-                    recordPosition(anime, idx, episode.title, t, runtime);
-                    if (runtime > 0 && t / runtime >= 0.8 && anime && idx < episodes.length) {
-                      const nextEp = idx + 1;
-                      if (prefetchedNext.current !== nextEp) {
-                        prefetchedNext.current = nextEp;
-                        void prefetchEpisode(anime.title, nextEp, prefs.audio ?? 'sub');
-                      }
-                    }
-                  }}
-                  onEnded={goNext}
-                  onError={() => {
-                    notify('Primary server encountered an error, trying secondary...');
-                  }}
-                />
-                <AniSkipButton
-                  aniskip={aniskipData}
-                  currentTime={playerCurrentTime}
-                  onSkip={(targetTime) => universalPlayerRef.current?.seek(targetTime)}
-                />
-              </div>
-            ) : (
-              <div
-                style={{
-                  position: 'relative',
-                  width: '100%',
-                  aspectRatio: '16 / 9',
-                  backgroundColor: '#0a0a0f',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '16px',
-                  boxShadow: '0 8px 30px rgba(0,0,0,0.5)',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                }}
-              >
-                <div
-                  style={{
-                    width: '44px',
-                    height: '44px',
-                    borderRadius: '50%',
-                    border: '3px solid rgba(99, 102, 241, 0.2)',
-                    borderTopColor: '#6366f1',
-                    animation: 'spin 1s linear infinite',
-                  }}
-                />
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: '1rem', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>
-                    Connecting to Stream Server...
-                  </div>
-                  <div style={{ fontSize: '0.82rem', color: '#94a3b8' }}>
-                    {activePlayServer ? `Handshaking with ${activePlayServer.name}` : 'Finding high-speed sources'}
-                  </div>
-                </div>
-              </div>
-            )
-          ) : (
-            <AdvancedPlayer
-              anime={anime}
-              episode={episode}
-              next={episodes[idx] ?? null}
-              hasPrev={idx > 1}
-              hasNext={idx < last}
-              onPrev={goPrev}
-              onNext={goNext}
-              theatre={theatre}
-              onTheatre={setTheatre}
-              prefs={prefs}
-              patch={patch}
-              patchSubs={patchSubs}
-              restoreSubs={restoreSubs}
-              restoreAppearance={restoreAppearance}
-              resumeAt={resumeAt}
-              onProgress={(t) => {
-                record(key, t, runtime);
-                recordPosition(anime, idx, episode.title, t, runtime);
-                // Prefetch next episode when reaching 80% progress
-                if (runtime > 0 && t / runtime >= 0.8 && anime && idx < anime.episodes.length) {
-                  const nextEp = idx + 1;
-                  if (prefetchedNext.current !== nextEp) {
-                    prefetchedNext.current = nextEp;
-                    void prefetchEpisode(anime.title, nextEp, prefs.audio ?? 'sub');
-                  }
+          <AdvancedPlayer
+            anime={anime}
+            episode={episode}
+            next={episodes[idx] ?? null}
+            hasPrev={idx > 1}
+            hasNext={idx < last}
+            onPrev={goPrev}
+            onNext={goNext}
+            theatre={theatre}
+            onTheatre={setTheatre}
+            prefs={prefs}
+            patch={patch}
+            patchSubs={patchSubs}
+            restoreSubs={restoreSubs}
+            restoreAppearance={restoreAppearance}
+            resumeAt={resumeAt}
+            onProgress={(t) => {
+              record(key, t, runtime);
+              recordPosition(anime, idx, episode.title, t, runtime);
+              // Prefetch next episode when reaching 80% progress
+              if (runtime > 0 && t / runtime >= 0.8 && anime && idx < anime.episodes.length) {
+                const nextEp = idx + 1;
+                if (prefetchedNext.current !== nextEp) {
+                  prefetchedNext.current = nextEp;
+                  void prefetchEpisode(anime.title, nextEp, prefs.audio ?? 'sub');
                 }
-              }}
-              onStreamResolved={setIsStreamResolved}
-              onStreamInfo={setCurrentStream}
-            />
-          )}
+              }
+            }}
+            onStreamResolved={setIsStreamResolved}
+            onStreamInfo={setCurrentStream}
+            serverId={activeServerId}
+            onServerChange={setActiveServerId}
+          />
 
           {playServers.length > 0 && (
             <div style={{ margin: '20px 0' }}>

@@ -250,6 +250,42 @@ export function AnimeCatalogue() {
           </div>
         </div>
 
+        {needle && (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              gap: '12px',
+              padding: '14px 20px',
+              margin: '16px 0 24px',
+              background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%)',
+              border: '1px solid rgba(99, 102, 241, 0.3)',
+              borderRadius: '12px',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span style={{ fontSize: '1.2rem' }}>⚡</span>
+              <div>
+                <strong style={{ color: '#fff', fontSize: '0.95rem' }}>
+                  Looking for multi-provider live streams for &ldquo;{needle}&rdquo;?
+                </strong>
+                <p style={{ margin: 0, fontSize: '0.82rem', color: '#cbd5e1' }}>
+                  Search across AniKoto, HiAnime, AniWatch, and Hindi Dub mirrors simultaneously.
+                </p>
+              </div>
+            </div>
+            <Link
+              to={`/search?q=${encodeURIComponent(needle)}`}
+              className="btn btn--primary"
+              style={{ fontSize: '0.85rem', padding: '8px 18px' }}
+            >
+              View Multi-Provider Results &rarr;
+            </Link>
+          </div>
+        )}
+
         <div className="filters filters--wrap" role="group" aria-label="Format and genre">
           <div className="filters__group">
             {KINDS.map((k) => (

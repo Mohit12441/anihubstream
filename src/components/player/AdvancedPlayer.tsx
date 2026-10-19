@@ -50,6 +50,8 @@ interface Props {
   onProgress: (t: number) => void;
   onStreamResolved?: (resolved: boolean) => void;
   onStreamInfo?: (info: import('../../lib/streamBridge').BridgeSource | null) => void;
+  serverId?: string;
+  onServerChange?: (serverId: string) => void;
 }
 
 /** The prefixed members Safari exposes are not in the DOM typings. */
@@ -97,7 +99,13 @@ export function AdvancedPlayer(props: Props) {
       ? switchSeekRef.current
       : resumeRef.current;
 
-  const [selectedServerId, setSelectedServerId] = useState<string>(AUTO_SERVER.id);
+  const [selectedServerId, setSelectedServerId] = useState<string>(props.serverId || AUTO_SERVER.id);
+
+  useEffect(() => {
+    if (props.serverId && props.serverId !== selectedServerId) {
+      setSelectedServerId(props.serverId);
+    }
+  }, [props.serverId, selectedServerId]);
   const server = serverById(selectedServerId);
 
   const provider = providerFromId(selectedServerId);
@@ -459,6 +467,7 @@ export function AdvancedPlayer(props: Props) {
   /* ---------- server ---------- */
   const pickServer = (id: string = selectedServerId) => {
     setSelectedServerId(id);
+    props.onServerChange?.(id);
     setMenu({ kind: 'none' });
     const sName = serverById(id).name;
     notify(`Switched to ${sName} server`);
