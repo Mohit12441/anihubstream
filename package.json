@@ -15,7 +15,10 @@
     "serve": "node tools/serve-static.mjs",
     "supervise": "node tools/supervise-origin.mjs",
     "meili:setup": "node tools/meilisearch/setup-index.mjs && node tools/meilisearch/sync-meilisearch.mjs",
-    "db:seed-id-map": "node tools/apply-id-map.mjs"
+    "db:seed-id-map": "node tools/apply-id-map.mjs",
+    "sync:hianime": "node cloud-sync/sync-hianime.mjs",
+    "sync:anilist": "node cloud-sync/sync-anilist.mjs",
+    "sync:kitsu": "node cloud-sync/sync-kitsu.mjs"
   },
   "dependencies": {
     "hls.js": "^1.7.3",

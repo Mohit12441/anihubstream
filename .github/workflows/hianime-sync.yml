@@ -43,21 +43,10 @@ jobs:
         with:
           node-version: '24.19'
 
-      - name: verify required D1 credentials
-        run: |
-          missing=()
-          [ -z "${{ secrets.CF_ACCOUNT_ID }}" ] && missing+=("CF_ACCOUNT_ID")
-          [ -z "${{ secrets.CF_DATABASE_ID }}" ] && missing+=("CF_DATABASE_ID")
-          [ -z "${{ secrets.CF_API_TOKEN }}" ] && missing+=("CF_API_TOKEN")
-          if [ ${#missing[@]} -gt 0 ]; then
-            echo "::error::Missing D1 secrets: ${missing[*]}"
-            exit 1
-          fi
-
       - name: run hianime cloud sync
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          HIANIME_PAGES_PER_RUN: ${{ inputs.pages || '4' }}
+          HIANIME_PAGES_PER_RUN: ${{ github.event.inputs.pages || '4' }}
         run: node cloud-sync/sync-hianime.mjs
