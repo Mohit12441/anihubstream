@@ -27,8 +27,11 @@ function checkWranglerObservability(relPath) {
   );
 }
 
-test('Wrangler Observability: root wrangler.toml configures logs and traces', () => {
-  checkWranglerObservability('wrangler.toml');
+test('Wrangler Observability: root wrangler.toml is Pages valid without unsupported observability', () => {
+  const filePath = path.join(rootDir, 'wrangler.toml');
+  assert.ok(fs.existsSync(filePath), 'wrangler.toml must exist');
+  const content = fs.readFileSync(filePath, 'utf8');
+  assert.ok(!content.includes('[observability'), 'root wrangler.toml is a Pages project config and must not contain unsupported observability section');
 });
 
 test('Wrangler Observability: sync-worker/wrangler.toml configures logs and traces', () => {

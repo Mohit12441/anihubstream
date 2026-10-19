@@ -218,7 +218,7 @@ export function AnimeDetail() {
             {/* Play CTA Button */}
             <div style={{ marginTop: '1rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>
               <Link
-                to={`/watch/${anime.id}?ep=1`}
+                to={`/watch/${anime.id}/1`}
                 className="btn-primary"
                 style={{
                   display: 'inline-flex',
@@ -298,7 +298,7 @@ export function AnimeDetail() {
               anime.episodes.map((ep) => (
                 <Link
                   key={ep.n}
-                  to={`/watch/${anime.id}?ep=${ep.n}`}
+                  to={`/watch/${anime.id}/${ep.n}`}
                   className="episode-card"
                   style={{
                     display: 'flex',
@@ -344,7 +344,7 @@ export function AnimeDetail() {
               Array.from({ length: epCount }, (_, i) => i + 1).map((n) => (
                 <Link
                   key={n}
-                  to={`/watch/${anime.id}?ep=${n}`}
+                  to={`/watch/${anime.id}/${n}`}
                   style={{
                     padding: '1rem',
                     background: 'rgba(15, 17, 23, 0.6)',

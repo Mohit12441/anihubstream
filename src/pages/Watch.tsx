@@ -10,7 +10,7 @@ import { toPlayerInput, type AniSkipData, type PlayServer } from '../components/
 import { AnimeCard } from '../components/AnimeCard';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { EpisodeSidebar } from '../components/EpisodeSidebar';
-import { ratingLabel, toSeconds } from '../data/model';
+import { ratingLabel, toSeconds, type Episode } from '../data/model';
 import { useToast } from '../lib/Toast';
 import { accentVars, usePlayerPreferences } from '../lib/usePlayerPrefs';
 import { positionKey } from '../lib/playerPrefs';
@@ -38,6 +38,23 @@ export function Watch() {
 
   const { notify } = useToast();
   const { status, error, missing, anime, related, reload } = useAnimeDetail(id);
+
+  const episodes: Episode[] = useMemo(() => {
+    if (!anime) return [];
+    if (anime.episodes && anime.episodes.length > 0) return anime.episodes;
+    if (anime.status === 'Upcoming') return [];
+    const count = Math.max(1, Math.min(anime.episodeTotal || 1, 2000));
+    return Array.from({ length: count }, (_, i) => ({
+      n: i + 1,
+      title: `Episode ${i + 1}`,
+      runtime: '24m',
+      thumb: anime.key || anime.poster || '',
+      synopsis: '',
+      markers: [],
+      airdate: null,
+    }));
+  }, [anime]);
+
   const { genreLabel } = useCatalogue();
   const { has, isBusy, toggle, favourites, toggleFavourite, recordPosition } = useLibrary();
   const { prefs, patch, patchSubs, restoreSubs, restoreAppearance, positions, record } = usePlayerPreferences();
@@ -104,11 +121,11 @@ export function Watch() {
 
   /* Path param :ep sync with edge-case clamping and resume fallback */
   useEffect(() => {
-    if (!anime || anime.episodes.length === 0) return;
+    if (!anime || episodes.length === 0) return;
 
     if (ep !== undefined) {
       const parsed = Number.parseInt(ep, 10);
-      const total = anime.episodes.length;
+      const total = episodes.length;
       if (!Number.isFinite(parsed) || parsed < 1) {
         // Non-numeric or < 1 -> default to 1, replace URL
         navigate(`/watch/${anime.id}/1`, { replace: true });
@@ -126,14 +143,14 @@ export function Watch() {
       const queryEp = Number.parseInt(params.get('ep') ?? '', 10);
       let targetEp = 1;
       if (Number.isFinite(queryEp) && queryEp >= 1) {
-        targetEp = Math.min(queryEp, anime.episodes.length);
+        targetEp = Math.min(queryEp, episodes.length);
       } else {
         const savedKey = Object.keys(positions).find((k) => k.startsWith(`${anime.id}#`));
         if (savedKey) {
           const match = /#(\d+)$/.exec(savedKey);
           if (match) {
             const resumeEp = Number.parseInt(match[1], 10);
-            if (Number.isFinite(resumeEp) && resumeEp >= 1 && resumeEp <= anime.episodes.length) {
+            if (Number.isFinite(resumeEp) && resumeEp >= 1 && resumeEp <= episodes.length) {
               targetEp = resumeEp;
             }
           }
@@ -142,12 +159,13 @@ export function Watch() {
       navigate(`/watch/${anime.id}/${targetEp}`, { replace: true });
       setEpNum(targetEp);
     }
-  }, [anime, ep, params, navigate, positions]);
+  }, [anime, ep, episodes, params, navigate, positions]);
+
 
   const episode = useMemo(() => {
-    if (!anime) return undefined;
-    return anime.episodes[Math.min(Math.max(epNum, 1), anime.episodes.length) - 1];
-  }, [anime, epNum]);
+    if (!episodes.length) return undefined;
+    return episodes[Math.min(Math.max(epNum, 1), episodes.length) - 1];
+  }, [episodes, epNum]);
 
   const cleanSynopsis = useMemo(() => {
     if (!anime?.synopsis) return 'Watch high definition anime with English subtitles and dub on AniHubStream.';
@@ -239,12 +257,12 @@ export function Watch() {
 
   const selectEpisode = useCallback(
     (n: number) => {
-      if (!anime || anime.episodes.length === 0) return;
-      const clamped = Math.min(Math.max(n, 1), anime.episodes.length);
+      if (!anime || episodes.length === 0) return;
+      const clamped = Math.min(Math.max(n, 1), episodes.length);
       setEpNum(clamped);
       navigate(`/watch/${anime.id}/${clamped}`);
     },
-    [anime, navigate],
+    [anime, episodes, navigate],
   );
 
   const prefetchedNext = useRef<number | null>(null);
@@ -258,7 +276,7 @@ export function Watch() {
   useEffect(() => {
     if (!anime) return;
     const nextEp = epNum + 1;
-    if (nextEp > anime.episodes.length) return;
+    if (nextEp > episodes.length) return;
     const timer = window.setTimeout(() => {
       if (prefetchedNext.current !== nextEp) {
         prefetchedNext.current = nextEp;
@@ -316,7 +334,7 @@ export function Watch() {
   }
 
   // Graceful empty state for newly announced/ongoing shows that have no episodes released yet
-  if (anime.episodes.length === 0 || !episode) {
+  if (episodes.length === 0 || !episode) {
     return (
       <div className="page watch shell" style={{ '--tint': anime.accent, ...accentVars(prefs.accent) } as React.CSSProperties}>
         <nav className="watch__crumbs" aria-label="Breadcrumb">
@@ -341,7 +359,7 @@ export function Watch() {
     );
   }
 
-  const last = anime.episodes.length;
+  const last = episodes.length;
   const inList = has(anime.id);
   const busy = isBusy(anime.id);
   const faved = favourites.has(anime.id);
@@ -481,7 +499,7 @@ export function Watch() {
                   setPlayerCurrentTime(t);
                   record(key, t, runtime);
                   recordPosition(anime, idx, episode.title, t, runtime);
-                  if (runtime > 0 && t / runtime >= 0.8 && anime && idx < anime.episodes.length) {
+                  if (runtime > 0 && t / runtime >= 0.8 && anime && idx < episodes.length) {
                     const nextEp = idx + 1;
                     if (prefetchedNext.current !== nextEp) {
                       prefetchedNext.current = nextEp;
@@ -504,7 +522,7 @@ export function Watch() {
             <AdvancedPlayer
               anime={anime}
               episode={episode}
-              next={anime.episodes[idx] ?? null}
+              next={episodes[idx] ?? null}
               hasPrev={idx > 1}
               hasNext={idx < last}
               onPrev={goPrev}
@@ -641,7 +659,7 @@ export function Watch() {
         </div>
 
         <EpisodeSidebar
-          anime={anime}
+          anime={{ ...anime, episodes }}
           current={idx}
           onSelect={selectEpisode}
           autoNext={prefs.autoNext}

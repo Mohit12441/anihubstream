@@ -36,6 +36,25 @@ export const onRequestGet = async ({ request, params, env }) => {
       .bind(id)
       .all();
 
+    let episodes = episodeRows.map(episodeFromRow);
+
+    // If database has no explicit episode rows for this anime, but anime is released/ongoing,
+    // synthesize addressable episode entries up to episode_total (or at least episode 1)
+    if (episodes.length === 0 && card.status !== 'Upcoming') {
+      const count = Math.max(1, Math.min(card.episode_total || 1, 2000));
+      episodes = Array.from({ length: count }, (_, i) => ({
+        id: `${card.id}#${i + 1}`,
+        n: i + 1,
+        title: `Episode ${i + 1}`,
+        runtime: '24m',
+        runtimeSeconds: 1440,
+        art: card.art || card.key_art || '',
+        synopsis: '',
+        markers: [],
+        airdate: null,
+      }));
+    }
+
     const { results: related } = await env.ANIHUB.prepare(
       `SELECT a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status,
               a.art, a.key_art, a.accent, a.synopsis, a.rank, a.trend_rank, a.alt_seasons,
@@ -56,7 +75,7 @@ export const onRequestGet = async ({ request, params, env }) => {
 
     return ok({
       ...cardFromRow(card),
-      episodes: episodeRows.map(episodeFromRow),
+      episodes,
       related: related.map(cardFromRow),
     });
   } catch (err) {
