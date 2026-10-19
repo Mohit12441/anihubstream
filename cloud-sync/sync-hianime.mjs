@@ -156,6 +156,7 @@ export function mapHiAnimeItem(item, existingRow = null) {
     key_art: item.landScapeImage ? String(item.landScapeImage).trim() : null,
     accent: paletteAccent(id),
     synopsis: item.synopsis ? String(item.synopsis).trim() : null,
+    episode_total: episodeCount,
     episode_count: episodeCount,
     source_ids: JSON.stringify(mergedSources),
     search_text: searchText,
@@ -228,10 +229,11 @@ export async function syncHiAnime({ pagesPerRun = PAGES_PER_RUN, force = false }
               art = COALESCE(?2, art),
               key_art = COALESCE(?3, key_art),
               synopsis = COALESCE(?4, synopsis),
-              source_ids = ?5,
-              cloud_synced_at = ?6
-            WHERE id = ?7`,
-            [record.rating, record.art, record.key_art, record.synopsis, record.source_ids, record.cloud_synced_at, record.id],
+              episode_total = COALESCE(?5, episode_total),
+              source_ids = ?6,
+              cloud_synced_at = ?7
+            WHERE id = ?8`,
+            [record.rating, record.art, record.key_art, record.synopsis, record.episode_total, record.source_ids, record.cloud_synced_at, record.id],
           );
           itemsUpdated++;
         } else {
@@ -239,7 +241,7 @@ export async function syncHiAnime({ pagesPerRun = PAGES_PER_RUN, force = false }
           await d1Query(
             `INSERT INTO anime (
               id, title, native, year, rating, season, kind, status,
-              art, key_art, accent, synopsis, episode_count, source_ids, search_text, cloud_synced_at
+              art, key_art, accent, synopsis, episode_total, source_ids, search_text, cloud_synced_at
             ) VALUES (
               ?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8,
               ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16
@@ -248,7 +250,7 @@ export async function syncHiAnime({ pagesPerRun = PAGES_PER_RUN, force = false }
               cloud_synced_at = excluded.cloud_synced_at`,
             [
               record.id, record.title, record.native, record.year, record.rating, record.season, record.kind, record.status,
-              record.art, record.key_art, record.accent, record.synopsis, record.episode_count, record.source_ids, record.search_text, record.cloud_synced_at,
+              record.art, record.key_art, record.accent, record.synopsis, record.episode_total, record.source_ids, record.search_text, record.cloud_synced_at,
             ],
           );
           itemsCreated++;
