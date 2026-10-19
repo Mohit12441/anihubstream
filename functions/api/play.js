@@ -202,7 +202,7 @@ export const onRequestGet = async ({ request, env }) => {
     }
 
     // Determine Stream Bridge base
-    const bridgeBase = env.STREAM_BRIDGE_URL || 'http://127.0.0.1:8795';
+    const bridgeBase = env.STREAM_BRIDGE_URL || 'https://bridge.anihubstream.com';
 
     // Parallel fetch: AniSkip timestamps and Bridge Stream Resolution
     const [aniskipData, bridgeRes] = await Promise.all([

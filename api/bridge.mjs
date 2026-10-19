@@ -61,10 +61,11 @@ const ALLOWED_ORIGIN_HOSTS = new Set([
   'anihubstream.com',
   'app.anihubstream.com',
   'bridge.anihubstream.com',
+  'anihubstream.pages.dev',
   'localhost',
   '127.0.0.1',
 ]);
-const ALLOWED_ORIGIN_SUFFIXES = ['.anihubstream.pages.dev'];
+const ALLOWED_ORIGIN_SUFFIXES = ['.anihubstream.pages.dev', '.pages.dev'];
 const ALLOWED_HOSTS_CAP = 16;
 
 /* ------------------------------------------------------------------ errors & timeouts */

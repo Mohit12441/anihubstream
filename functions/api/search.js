@@ -20,7 +20,7 @@ export const onRequestGet = async ({ request, env }) => {
       throw new HttpError(400, 'bad_request', 'q query parameter is required');
     }
 
-    const bridgeBase = env.STREAM_BRIDGE_URL || 'http://127.0.0.1:8795';
+    const bridgeBase = env.STREAM_BRIDGE_URL || 'https://bridge.anihubstream.com';
 
     // Parallel fan-out to providers with individual error boundaries
     const searches = SEARCH_PROVIDERS.map(async (provider) => {

@@ -54,7 +54,7 @@ export const onRequestGet = async ({ request, env }) => {
       throw new HttpError(400, 'bad_request', 'title query parameter is required');
     }
 
-    const bridgeBase = env.STREAM_BRIDGE_URL || 'http://127.0.0.1:8795';
+    const bridgeBase = env.STREAM_BRIDGE_URL || 'https://bridge.anihubstream.com';
 
     const resolveUrl = new URL(`${bridgeBase}/resolve`);
     resolveUrl.searchParams.set('title', title);

@@ -65,7 +65,10 @@ export function Watch() {
     if (!anime) return;
     let cancelled = false;
 
-    fetch(`/api/play?id=${encodeURIComponent(anime.id)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}`)
+    const targetProvider = (params.get('provider') || '').toLowerCase();
+    const providerQuery = targetProvider ? `&provider=${encodeURIComponent(targetProvider)}` : '';
+
+    fetch(`/api/play?id=${encodeURIComponent(anime.id)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}${providerQuery}`)
       .then((res) => {
         if (!res.ok) throw new Error('Play API failed');
         return res.json();
@@ -76,7 +79,6 @@ export function Watch() {
           setPlayServers(data.servers);
           
           // Check if user arrived with a specific ?provider= preference
-          const targetProvider = (params.get('provider') || '').toLowerCase();
           const matchedServer = targetProvider
             ? data.servers.find((s: PlayServer) => s.id?.toLowerCase().includes(targetProvider) || s.name?.toLowerCase().includes(targetProvider))
             : null;
@@ -373,6 +375,25 @@ export function Watch() {
     () => playServers.find((s) => s.id === activeServerId) || playServers[0] || null,
     [playServers, activeServerId]
   );
+
+  // Auto-resolve stream if active server is not yet resolved
+  useEffect(() => {
+    if (!activePlayServer || !anime) return;
+    if (activePlayServer.status === 'loading' || (activePlayServer.streamUrl && activePlayServer.streamUrl.startsWith('/api/play/resolve'))) {
+      const prov = activePlayServer.provider;
+      const sId = activePlayServer.id.includes(':') ? activePlayServer.id.split(':')[1] : '';
+      fetch(`/api/play/resolve?title=${encodeURIComponent(anime.title)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}&provider=${encodeURIComponent(prov)}&server=${encodeURIComponent(sId)}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data?.server) {
+            setPlayServers((prev) =>
+              prev.map((s) => (s.id === activePlayServer.id ? { ...data.server, status: 'ready' } : s))
+            );
+          }
+        })
+        .catch(() => {});
+    }
+  }, [activePlayServer?.id, activePlayServer?.status, activePlayServer?.streamUrl, anime?.title, epNum, prefs.audio]);
 
   const playerInput = useMemo(() => {
     if (!activePlayServer) return null;
