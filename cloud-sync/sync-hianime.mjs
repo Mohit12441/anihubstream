@@ -294,9 +294,32 @@ export async function syncHiAnime({ pagesPerRun = PAGES_PER_RUN, force = false }
       durationMs,
     };
 
-    await recordRun(RUN_ID, ENDPOINT, startedAt, durationMs, 'success', JSON.stringify(summary));
+    if (leaseHeld) {
+      await recordRun({
+        runId: RUN_ID,
+        endpoint: ENDPOINT,
+        startedAt,
+        durationMs,
+        exitReason: 'success',
+        summary,
+      }).catch((recErr) => console.warn(`[hianime-sync] recordRun failed:`, recErr.message));
+    }
+
     console.log(`[hianime-sync] completed successfully:`, summary);
     return summary;
+  } catch (err) {
+    if (leaseHeld) {
+      const durationMs = Date.now() - startedAt;
+      await recordRun({
+        runId: RUN_ID,
+        endpoint: ENDPOINT,
+        startedAt,
+        durationMs,
+        exitReason: 'fatal',
+        summary: { error: err.message.slice(0, 400), itemsProcessed, itemsCreated, itemsUpdated },
+      }).catch(() => {});
+    }
+    throw err;
   } finally {
     if (leaseHeld) {
       await releaseLease(LEASE, OWNER).catch(() => {});
