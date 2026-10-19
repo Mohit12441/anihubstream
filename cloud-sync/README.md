@@ -653,6 +653,10 @@ value matters: an off-phase setting is either ignored or the default.
 | `KITSU_DAILY_BUDGET` | `KITSU_RUNS_PER_DAY × KITSU_PAGES_PER_RUN + 8` (= 200 at the default) | kitsu | `gh variable set KITSU_DAILY_BUDGET --body '200' -R <owner>/<repo>` — 80 was the value that made every run after roughly the 20th of the day a no-op; raise the budget or cut the pages, but do not leave the two disagreeing |
 | `KITSU_TIMEOUT_MS` | `30000` | kitsu | `gh variable set KITSU_TIMEOUT_MS --body '30000' -R <owner>/<repo>` (or `delete` to take the default) |
 | `KITSU_USER_AGENT` | same shape as `ANILIST_USER_AGENT` | kitsu | `gh variable delete KITSU_USER_AGENT -R <owner>/<repo>` |
+| `HIANIME_PAGES_PER_RUN` | `4` | hianime | `gh variable set HIANIME_PAGES_PER_RUN --body '4' -R <owner>/<repo>` |
+| `HIANIME_PAGE_SIZE` | `50` (clamped to 50) | hianime | `gh variable set HIANIME_PAGE_SIZE --body '50' -R <owner>/<repo>` |
+| `HIANIME_TIMEOUT_MS` | `25000` | hianime | `gh variable set HIANIME_TIMEOUT_MS --body '25000' -R <owner>/<repo>` |
+| `HIANIME_PAGE_DELAY_MS` | `1500` | hianime | `gh variable delete HIANIME_PAGE_DELAY_MS -R <owner>/<repo>` |
 | `QUIET` | unset | report | `gh variable delete QUIET -R <owner>/<repo>` — `verify.mjs` prints one line instead of an indented object |
 | *any switch the run refused to parse* | — | 1-3 | `gh variable set <NAME> --body '<0 or 1>' -R <owner>/<repo>` then `gh variable get <NAME>` — see below, a refused run wrote nothing |
 
