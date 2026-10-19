@@ -132,7 +132,7 @@ export function ProviderRow({ providerKey, meta, items }: ProviderRowProps) {
         {items.map((item) => (
           <Link
             key={`${providerKey}-${item.id}`}
-            to={`/watch/${encodeURIComponent(item.slug || item.id)}/1?provider=${encodeURIComponent(providerKey)}`}
+            to={`/watch/${encodeURIComponent(item.slug || item.id)}/1?provider=${encodeURIComponent(providerKey)}&title=${encodeURIComponent(item.title)}${item.coverUrl ? `&poster=${encodeURIComponent(item.coverUrl)}` : ''}`}
             style={{
               flex: '0 0 170px',
               maxWidth: '170px',

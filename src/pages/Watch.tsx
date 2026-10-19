@@ -10,7 +10,7 @@ import { toPlayerInput, type AniSkipData, type PlayServer } from '../components/
 import { AnimeCard } from '../components/AnimeCard';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { EpisodeSidebar } from '../components/EpisodeSidebar';
-import { ratingLabel, toSeconds, type Episode } from '../data/model';
+import { ratingLabel, toSeconds, type Anime, type Episode } from '../data/model';
 import { useToast } from '../lib/Toast';
 import { accentVars, usePlayerPreferences } from '../lib/usePlayerPrefs';
 import { positionKey } from '../lib/playerPrefs';
@@ -37,7 +37,34 @@ export function Watch() {
   }, [id, ep, navigate]);
 
   const { notify } = useToast();
-  const { status, error, missing, anime, related, reload } = useAnimeDetail(id);
+  const { status, error, missing, anime: loadedAnime, related, reload } = useAnimeDetail(id);
+
+  // Federated/fallback anime for search results and external provider cards
+  const anime = useMemo<Anime | null>(() => {
+    if (loadedAnime) return loadedAnime;
+    if (!id) return null;
+    const queryTitle = params.get('title') || '';
+    const queryPoster = params.get('poster') || '';
+    const fallbackTitle = queryTitle || id.replace(/^[a-z0-9_-]+:/i, '').replace(/[-_:]+/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+    return {
+      id,
+      title: fallbackTitle,
+      native: '',
+      year: new Date().getFullYear(),
+      rating: 8.0,
+      season: '',
+      kind: 'TV',
+      status: 'Finished',
+      genres: [],
+      poster: queryPoster,
+      key: queryPoster,
+      accent: '#6366f1',
+      synopsis: `Watch ${fallbackTitle} streaming online on AniHubStream.`,
+      episodeCount: 1,
+      episodeTotal: 24,
+      episodes: [],
+    };
+  }, [loadedAnime, id, params]);
 
   const episodes: Episode[] = useMemo(() => {
     if (!anime) return [];
@@ -84,8 +111,9 @@ export function Watch() {
 
     const targetProvider = (params.get('provider') || '').toLowerCase();
     const providerQuery = targetProvider ? `&provider=${encodeURIComponent(targetProvider)}` : '';
+    const titleQuery = anime.title ? `&title=${encodeURIComponent(anime.title)}` : '';
 
-    fetch(`/api/play?id=${encodeURIComponent(anime.id)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}${providerQuery}`)
+    fetch(`/api/play?id=${encodeURIComponent(anime.id)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}${titleQuery}${providerQuery}`)
       .then((res) => {
         if (!res.ok) throw new Error('Play API failed');
         return res.json();
@@ -102,8 +130,8 @@ export function Watch() {
 
           if (matchedServer) {
             setActiveServerId(matchedServer.id);
-          } else if (!activeServerId || !data.servers.some((s: PlayServer) => s.id === activeServerId)) {
-            setActiveServerId(data.servers[0].id);
+          } else {
+            setActiveServerId((prev) => (prev && data.servers.some((s: PlayServer) => s.id === prev) ? prev : data.servers[0].id));
           }
         }
         if (data?.aniskip) {
@@ -117,7 +145,7 @@ export function Watch() {
     return () => {
       cancelled = true;
     };
-  }, [anime, epNum, prefs.audio, activeServerId, params]);
+  }, [anime?.id, anime?.title, epNum, prefs.audio, params]);
 
   /* Path param :ep sync with edge-case clamping and resume fallback */
   useEffect(() => {
@@ -298,7 +326,7 @@ export function Watch() {
   // a finished episode restarts from 0 rather than opening straight onto the end card
   const resumeAt = saved && !saved.finished ? Math.min(saved.t, Math.max(0, runtime - 5)) : 0;
 
-  if (missing) {
+  if (missing && !loadedAnime && !params.get('title') && !params.get('provider')) {
     return (
       <div className="page watch__missing shell">
         <h1>This title isn&rsquo;t in the catalogue</h1>
@@ -317,7 +345,7 @@ export function Watch() {
     );
   }
 
-  if (status === 'error') {
+  if (status === 'error' && !loadedAnime && !params.get('title') && !params.get('provider')) {
     return (
       <div className="page watch shell">
         <CatalogueError error={error} onRetry={reload} />
@@ -325,7 +353,7 @@ export function Watch() {
     );
   }
 
-  if (status !== 'ready' || !anime) {
+  if ((status !== 'ready' && !anime) || !anime) {
     return (
       <div className="page watch watch--loading shell">
         <CatalogueLoading grid={false} rows={4} />
@@ -400,7 +428,8 @@ export function Watch() {
     if (activePlayServer.status === 'loading' || (activePlayServer.streamUrl && activePlayServer.streamUrl.startsWith('/api/play/resolve'))) {
       const prov = activePlayServer.provider;
       const sId = activePlayServer.id.includes(':') ? activePlayServer.id.split(':')[1] : '';
-      fetch(`/api/play/resolve?title=${encodeURIComponent(anime.title)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}&provider=${encodeURIComponent(prov)}&server=${encodeURIComponent(sId)}`)
+      const animeTitle = anime.title || params.get('title') || '';
+      fetch(`/api/play/resolve?title=${encodeURIComponent(animeTitle)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}&provider=${encodeURIComponent(prov)}&server=${encodeURIComponent(sId)}`)
         .then((res) => res.json())
         .then((data) => {
           if (data?.server) {
@@ -411,12 +440,19 @@ export function Watch() {
         })
         .catch(() => {});
     }
-  }, [activePlayServer?.id, activePlayServer?.status, activePlayServer?.streamUrl, anime?.title, epNum, prefs.audio]);
+  }, [activePlayServer?.id, activePlayServer?.status, activePlayServer?.streamUrl, anime?.title, epNum, prefs.audio, params]);
+
+  const isServerReady = Boolean(
+    activePlayServer &&
+    activePlayServer.status === 'ready' &&
+    activePlayServer.streamUrl &&
+    !activePlayServer.streamUrl.startsWith('/api/play/resolve')
+  );
 
   const playerInput = useMemo(() => {
-    if (!activePlayServer) return null;
-    return toPlayerInput(activePlayServer, aniskipData, resumeAt);
-  }, [activePlayServer, aniskipData, resumeAt]);
+    if (!isServerReady || !activePlayServer || !anime) return null;
+    return toPlayerInput(activePlayServer, aniskipData, resumeAt, anime.title, epNum);
+  }, [isServerReady, activePlayServer, aniskipData, resumeAt, anime, epNum]);
 
   const crumbs = [
     { label: 'Home', to: '/' },
@@ -489,35 +525,73 @@ export function Watch() {
             </div>
           </div>
 
-          {playerEngine === 'universal' && playerInput ? (
-            <div style={{ position: 'relative', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
-              <UniversalPlayer
-                ref={universalPlayerRef}
-                input={playerInput}
-                theatre={theatre}
-                onTimeUpdate={(t) => {
-                  setPlayerCurrentTime(t);
-                  record(key, t, runtime);
-                  recordPosition(anime, idx, episode.title, t, runtime);
-                  if (runtime > 0 && t / runtime >= 0.8 && anime && idx < episodes.length) {
-                    const nextEp = idx + 1;
-                    if (prefetchedNext.current !== nextEp) {
-                      prefetchedNext.current = nextEp;
-                      void prefetchEpisode(anime.title, nextEp, prefs.audio ?? 'sub');
+          {playerEngine === 'universal' ? (
+            playerInput ? (
+              <div style={{ position: 'relative', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
+                <UniversalPlayer
+                  ref={universalPlayerRef}
+                  input={playerInput}
+                  theatre={theatre}
+                  onTimeUpdate={(t) => {
+                    setPlayerCurrentTime(t);
+                    record(key, t, runtime);
+                    recordPosition(anime, idx, episode.title, t, runtime);
+                    if (runtime > 0 && t / runtime >= 0.8 && anime && idx < episodes.length) {
+                      const nextEp = idx + 1;
+                      if (prefetchedNext.current !== nextEp) {
+                        prefetchedNext.current = nextEp;
+                        void prefetchEpisode(anime.title, nextEp, prefs.audio ?? 'sub');
+                      }
                     }
-                  }
+                  }}
+                  onEnded={goNext}
+                  onError={() => {
+                    notify('Primary server encountered an error, trying secondary...');
+                  }}
+                />
+                <AniSkipButton
+                  aniskip={aniskipData}
+                  currentTime={playerCurrentTime}
+                  onSkip={(targetTime) => universalPlayerRef.current?.seek(targetTime)}
+                />
+              </div>
+            ) : (
+              <div
+                style={{
+                  position: 'relative',
+                  width: '100%',
+                  aspectRatio: '16 / 9',
+                  backgroundColor: '#0a0a0f',
+                  borderRadius: '12px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '16px',
+                  boxShadow: '0 8px 30px rgba(0,0,0,0.5)',
+                  border: '1px solid rgba(255,255,255,0.08)',
                 }}
-                onEnded={goNext}
-                onError={() => {
-                  notify('Primary server encountered an error, trying secondary...');
-                }}
-              />
-              <AniSkipButton
-                aniskip={aniskipData}
-                currentTime={playerCurrentTime}
-                onSkip={(targetTime) => universalPlayerRef.current?.seek(targetTime)}
-              />
-            </div>
+              >
+                <div
+                  style={{
+                    width: '44px',
+                    height: '44px',
+                    borderRadius: '50%',
+                    border: '3px solid rgba(99, 102, 241, 0.2)',
+                    borderTopColor: '#6366f1',
+                    animation: 'spin 1s linear infinite',
+                  }}
+                />
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{ fontSize: '1rem', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>
+                    Connecting to Stream Server...
+                  </div>
+                  <div style={{ fontSize: '0.82rem', color: '#94a3b8' }}>
+                    {activePlayServer ? `Handshaking with ${activePlayServer.name}` : 'Finding high-speed sources'}
+                  </div>
+                </div>
+              </div>
+            )
           ) : (
             <AdvancedPlayer
               anime={anime}
@@ -573,7 +647,7 @@ export function Watch() {
             <ul className="watch__badges">
               {isStreamResolved && <li className="badge badge--accent">HD</li>}
               <li className="badge">Sub</li>
-              {anime.genres.map((g) => (
+              {anime.genres.map((g: string) => (
                 <li key={g} className="badge">
                   <Link to={`/genres?genre=${g}`}>{genreLabel(g)}</Link>
                 </li>

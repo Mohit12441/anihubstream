@@ -107,7 +107,12 @@ export const UniversalPlayer = forwardRef<UniversalPlayerRef, UniversalPlayerPro
       setErrorMessage(null);
       setActiveFallbackIndex(-1);
 
-      const targetSrc = input.src;
+      const targetSrc = input?.src || '';
+      if (!targetSrc || targetSrc.startsWith('/api/play/resolve')) {
+        setIsLoading(true);
+        return;
+      }
+
       const isHls = input.type === 'hls' || targetSrc.includes('.m3u8');
 
       // Cleanup prior HLS instance
@@ -134,8 +139,13 @@ export const UniversalPlayer = forwardRef<UniversalPlayerRef, UniversalPlayerPro
             video.currentTime = input.startTime;
           }
           if (autoPlay) {
-            void video.play().catch(() => {
-              setIsPlaying(false);
+            video.play().catch(() => {
+              // Browser policy fallback: try muted autoplay if audio-unmuted play is blocked
+              video.muted = true;
+              setIsMuted(true);
+              video.play().catch(() => {
+                setIsPlaying(false);
+              });
             });
           }
         });

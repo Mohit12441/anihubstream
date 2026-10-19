@@ -44,13 +44,13 @@ function buildAudioTracks(audio) {
 export const onRequestGet = async ({ request, env }) => {
   try {
     const url = new URL(request.url);
-    const title = url.searchParams.get('title') || '';
+    const title = (url.searchParams.get('title') || url.searchParams.get('id') || url.searchParams.get('slug') || '').trim();
     const ep = Math.max(1, Number.parseInt(url.searchParams.get('ep') ?? '1', 10) || 1);
     const audio = url.searchParams.get('audio') === 'hindi' ? 'hindi' : url.searchParams.get('audio') === 'dub' ? 'dub' : 'sub';
     const provider = url.searchParams.get('provider') || 'auto';
     const serverParam = url.searchParams.get('server') || '';
 
-    if (!title.trim()) {
+    if (!title) {
       throw new HttpError(400, 'bad_request', 'title query parameter is required');
     }
 

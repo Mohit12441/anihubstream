@@ -83,7 +83,7 @@ export function HeroBanner({ query, onQuery, onSearch, activeGenre, onGenre }: P
 
           <div className="hero__cta">
             {HERO_ANIME && (
-              <Link className="btn btn--primary" to={`/watch/${HERO_ANIME.id}`}>
+              <Link className="btn btn--primary" to={`/watch/${HERO_ANIME.id}/1`}>
                 <Play size={17} fill="currentColor" strokeWidth={0} aria-hidden="true" />
                 Watch Now
               </Link>
