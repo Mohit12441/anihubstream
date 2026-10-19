@@ -153,15 +153,27 @@ export const onRequestGet = async ({ request, env }) => {
     // Look up anime metadata and ID mappings in D1
     if (env.ANIHUB) {
       if (id) {
-        const animeRow = await env.ANIHUB.prepare(
-          `SELECT a.id, a.title, a.source_ids, a.skip_key_id, a.skip_key_space,
-                  e.runtime_seconds,
-                  m.mal_id, m.kitsu_id, m.anilist_id
-           FROM anime a
-           LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
-           LEFT JOIN anime_id_map m ON m.anime_id = a.id
-           WHERE a.id = ?1`
-        ).bind(id, ep).first();
+        let animeRow = null;
+        try {
+          animeRow = await env.ANIHUB.prepare(
+            `SELECT a.id, a.title, a.source_ids, a.skip_key_id, a.skip_key_space,
+                    e.runtime_seconds,
+                    m.mal_id, m.kitsu_id, m.anilist_id
+             FROM anime a
+             LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
+             LEFT JOIN anime_id_map m ON m.anime_id = a.id
+             WHERE a.id = ?1`
+          ).bind(id, ep).first();
+        } catch {
+          // If anime_id_map table does not exist in production D1 yet, query anime directly
+          animeRow = await env.ANIHUB.prepare(
+            `SELECT a.id, a.title, a.source_ids, a.skip_key_id, a.skip_key_space,
+                    e.runtime_seconds
+             FROM anime a
+             LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
+             WHERE a.id = ?1`
+          ).bind(id, ep).first().catch(() => null);
+        }
 
         if (animeRow) {
           if (!resolvedTitle) resolvedTitle = animeRow.title;
@@ -216,8 +228,57 @@ export const onRequestGet = async ({ request, env }) => {
       })(),
     ]);
 
+    // If stream bridge is cold or external to Cloudflare edge, return candidate servers
     if (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl)) {
-      throw new HttpError(502, 'provider_error', 'Stream bridge failed to resolve playable streams for this title and episode');
+      const defaultServers = [
+        {
+          id: 'anikoto:HD-1',
+          name: 'AniKoto · HD-1',
+          provider: 'anikoto',
+          status: 'ready',
+          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=${audio}&provider=anikoto&server=HD-1`,
+          type: 'hls',
+          quality: '1080p',
+          audio,
+          audioTracks: [{ id: 'audio-0', language: audio, label: audio.toUpperCase(), default: true }],
+          subtitles: [],
+          downloads: [],
+        },
+        {
+          id: 'aniwatch:HD-1',
+          name: 'AniWatch · HD-1',
+          provider: 'aniwatch',
+          status: 'loading',
+          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=${audio}&provider=aniwatch&server=HD-1`,
+          type: 'hls',
+          quality: '1080p',
+          audio,
+          audioTracks: [{ id: 'audio-0', language: audio, label: audio.toUpperCase(), default: true }],
+          subtitles: [],
+          downloads: [],
+        },
+        {
+          id: 'hianime:HD-1',
+          name: 'HiAnime · HD-1',
+          provider: 'hianime',
+          status: 'loading',
+          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=${audio}&provider=hianime&server=HD-1`,
+          type: 'hls',
+          quality: '1080p',
+          audio,
+          audioTracks: [{ id: 'audio-0', language: audio, label: audio.toUpperCase(), default: true }],
+          subtitles: [],
+          downloads: [],
+        },
+      ];
+
+      return ok({
+        title: resolvedTitle,
+        episode: ep,
+        malId: resolvedMalId || null,
+        servers: defaultServers,
+        aniskip: aniskipData || null,
+      });
     }
 
     const meta = bridgeRes;
