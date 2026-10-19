@@ -603,17 +603,37 @@ export async function sources(episodeId, { audioType, signal, server, includeDow
   for (const u of candidates) if (!seen.has(u)) { seen.add(u); embeds.push(u); }
 
   const servers = [];
-  for (const [idx, embed] of embeds.entries()) {
-    const isZoko = hostMatches(embed, ZOKO_HOSTS) || /zokoanime/i.test(embed);
-    const isMega = hostMatches(embed, MEGAPLAY_HOSTS) || /megaplay/i.test(embed);
-    const serverId = isZoko ? `HD-${idx + 1}` : isMega ? `MegaPlay` : `Server-${idx + 1}`;
-    const label = `HiAnime · ${serverId}`;
-    servers.push({
-      id: serverId,
-      name: label,
-      embedUrl: embed,
-      type: "hls",
+  const buildServerList = (embedList, audioGroup) => {
+    return embedList.map((embed, idx) => {
+      const isZoko = hostMatches(embed, ZOKO_HOSTS) || /zokoanime/i.test(embed);
+      const isMega = hostMatches(embed, MEGAPLAY_HOSTS) || /megaplay/i.test(embed);
+      const serverId = isZoko ? `HD-${idx + 1}` : isMega ? `MegaPlay` : `Server-${idx + 1}`;
+      const uniqueId = audioGroup === 'dub' ? `${serverId}-dub` : serverId;
+      const label = `HiAnime · ${serverId}`;
+      return {
+        id: uniqueId,
+        name: label,
+        embedUrl: embed,
+        audio: audioGroup,
+        type: audioGroup === 'dub' ? 'dub' : 'hls',
+        quality: '1080p',
+        provider: 'hianime',
+      };
     });
+  };
+
+  if (known) {
+    const subEmbeds = pick('sub');
+    const dubEmbeds = pick('dub');
+    if (wanted === 'dub') {
+      servers.push(...buildServerList(dubEmbeds, 'dub'));
+      servers.push(...buildServerList(subEmbeds, 'sub'));
+    } else {
+      servers.push(...buildServerList(subEmbeds, 'sub'));
+      servers.push(...buildServerList(dubEmbeds, 'dub'));
+    }
+  } else {
+    servers.push(...buildServerList(embeds, wanted));
   }
 
   // Direct multi-quality downloads are fetched on demand via /downloads endpoint to avoid blocking stream resolution.
@@ -626,8 +646,13 @@ export async function sources(episodeId, { audioType, signal, server, includeDow
   // If a specific server was requested, order that server first
   let orderedEmbeds = embeds;
   if (server) {
-    const normServer = String(server).toLowerCase();
-    const matchedIdx = servers.findIndex((s) => s.id.toLowerCase() === normServer || s.name.toLowerCase().includes(normServer));
+    const normServer = String(server).toLowerCase().replace(/-dub$/, '');
+    const matchedIdx = embeds.findIndex((embed, idx) => {
+      const isZoko = hostMatches(embed, ZOKO_HOSTS) || /zokoanime/i.test(embed);
+      const isMega = hostMatches(embed, MEGAPLAY_HOSTS) || /megaplay/i.test(embed);
+      const sId = isZoko ? `hd-${idx + 1}` : isMega ? `megaplay` : `server-${idx + 1}`;
+      return sId === normServer || normServer.includes(sId);
+    });
     if (matchedIdx > 0) {
       orderedEmbeds = [embeds[matchedIdx], ...embeds.filter((_, i) => i !== matchedIdx)];
     }

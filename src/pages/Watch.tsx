@@ -399,11 +399,17 @@ export function Watch() {
 
   const handleSelectServer = (server: PlayServer) => {
     setActiveServerId(server.id);
+    const srvAudio = (server.audio || (server.type?.toLowerCase() === 'dub' ? 'dub' : 'sub')).toLowerCase();
+    if (srvAudio === 'dub' || srvAudio === 'sub') {
+      if (prefs.audio !== srvAudio) {
+        patch({ audio: srvAudio });
+      }
+    }
     const newProv = server.provider || providerFromId(server.id).split(':')[0];
     const newParams = new URLSearchParams(params);
     newParams.set('provider', newProv);
     navigate(`/watch/${encodeURIComponent(anime?.id || id || '')}/${epNum}?${newParams.toString()}`, { replace: true });
-    notify(`Switched to ${server.name}`);
+    notify(`Switched to ${server.name} (${srvAudio.toUpperCase()})`);
   };
 
   const crumbs = [

@@ -46,9 +46,14 @@ export const onRequestGet = async ({ request, env }) => {
     const url = new URL(request.url);
     const title = (url.searchParams.get('title') || url.searchParams.get('id') || url.searchParams.get('slug') || '').trim();
     const ep = Math.max(1, Number.parseInt(url.searchParams.get('ep') ?? '1', 10) || 1);
-    const audio = url.searchParams.get('audio') === 'hindi' ? 'hindi' : url.searchParams.get('audio') === 'dub' ? 'dub' : 'sub';
+    const rawServerParam = url.searchParams.get('server') || '';
+    let serverParam = rawServerParam;
+    let audio = url.searchParams.get('audio') === 'hindi' ? 'hindi' : url.searchParams.get('audio') === 'dub' ? 'dub' : 'sub';
+    if (serverParam.endsWith('-dub')) {
+      audio = 'dub';
+      serverParam = serverParam.replace(/-dub$/, '');
+    }
     const provider = url.searchParams.get('provider') || 'auto';
-    const serverParam = url.searchParams.get('server') || '';
 
     if (!title) {
       throw new HttpError(400, 'bad_request', 'title query parameter is required');
@@ -102,12 +107,12 @@ export const onRequestGet = async ({ request, env }) => {
     }));
 
     const resolvedServer = {
-      id: `${prov}:${serverParam || 'HD-1'}`,
+      id: `${prov}:${rawServerParam || 'HD-1'}`,
       name: formatServerName(prov, serverParam || 'HD-1'),
       provider: prov,
       status: 'ready',
       streamUrl,
-      type: meta.kind === 'progressive' ? 'mp4' : 'hls',
+      type: (meta.audio || audio) === 'dub' ? 'dub' : (meta.kind === 'progressive' ? 'mp4' : 'hls'),
       quality: meta.quality || '1080p',
       audio: meta.audio || audio,
       audioTracks: buildAudioTracks(meta.audio || audio),

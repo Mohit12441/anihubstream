@@ -681,6 +681,7 @@ function setSearchHandler(provider, handler) {
 async function buildSourceProvider(provider, { title, ep, audio, server }) {
   let norm = provider.toLowerCase();
   let selectedServer = server;
+  let targetAudio = audio;
   if (norm.startsWith('anikoto:')) {
     selectedServer = norm.slice('anikoto:'.length);
     norm = 'anikoto';
@@ -691,9 +692,13 @@ async function buildSourceProvider(provider, { title, ep, audio, server }) {
     selectedServer = norm.slice('aniwatch:'.length);
     norm = 'aniwatch';
   }
+  if (selectedServer && selectedServer.endsWith('-dub')) {
+    targetAudio = 'dub';
+    selectedServer = selectedServer.replace(/-dub$/, '');
+  }
   const handler = providerHandlers[norm];
   if (!handler) throw new Error(`Unsupported provider: ${provider}`);
-  return await handler({ title, ep, audio, server: selectedServer });
+  return await handler({ title, ep, audio: targetAudio, server: selectedServer });
 }
 
 /* ------------------------------------------------------------- race dispatcher */

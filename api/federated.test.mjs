@@ -147,4 +147,37 @@ describe('Federated Architecture: Edge Services & Proxy Tests', () => {
       }
     });
   });
+
+  describe('Universal Server Fetching & Sub/Dub Filtering', () => {
+    it('functions/api/play/resolve.js resolves dub server cleanly and sets audio to dub', async () => {
+      const originalFetch = globalThis.fetch;
+      let requestedUrl = '';
+      // @ts-ignore
+      globalThis.fetch = async (url) => {
+        requestedUrl = url.toString();
+        return new Response(JSON.stringify({
+          master: '/stream/hianime-dub-session/master.m3u8',
+          provider: 'hianime',
+          audio: 'dub',
+          kind: 'hls',
+        }), { status: 200, headers: { 'content-type': 'application/json' } });
+      };
+
+      try {
+        const req = new Request('http://localhost/api/play/resolve?title=Attack%20on%20Titan&ep=1&provider=hianime&server=HD-1-dub');
+        const env = { STREAM_BRIDGE_URL: 'http://127.0.0.1:8795' };
+        const res = await resolveServer({ request: req, env });
+        assert.strictEqual(res.status, 200);
+
+        const data = await res.json();
+        assert.strictEqual(data.server.provider, 'hianime');
+        assert.strictEqual(data.server.audio, 'dub');
+        assert.strictEqual(data.server.name, 'HiAnime · HD-1');
+        assert.ok(requestedUrl.includes('audio=dub'));
+        assert.ok(requestedUrl.includes('server=HD-1'));
+      } finally {
+        globalThis.fetch = originalFetch;
+      }
+    });
+  });
 });
