@@ -44,7 +44,14 @@ export function Watch() {
     if (!id) return null;
     const queryTitle = params.get('title') || '';
     const queryPoster = params.get('poster') || '';
-    const fallbackTitle = queryTitle || id.replace(/^[a-z0-9_-]+:/i, '').replace(/[-_:]+/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+    const fallbackTitle =
+      queryTitle ||
+      id
+        .replace(/^[a-z0-9_-]+:/i, '')
+        .replace(/-[a-z0-9]{5,8}$/i, '')
+        .replace(/[-_:]+/g, ' ')
+        .trim()
+        .replace(/\b\w/g, (c) => c.toUpperCase());
     return {
       id,
       title: fallbackTitle,

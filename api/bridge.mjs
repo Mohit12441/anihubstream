@@ -246,7 +246,8 @@ async function snackPlayable(source, signal) {
 
 async function detailsForProvider(provider, title) {
   const norm = provider.toLowerCase();
-  const key = `${norm}:${title.trim().toLowerCase()}`;
+  const rawTitle = title.trim();
+  const key = `${norm}:${rawTitle.toLowerCase()}`;
   const hit = providerDetailsCache.get(key);
   if (hit && Date.now() - hit.at < DETAILS_TTL) return hit;
 
@@ -261,10 +262,45 @@ async function detailsForProvider(provider, title) {
   else if (norm === 'watchanimeworld') mod = watchanimeworld;
   else throw new Error(`Unknown provider: ${norm}`);
 
-  const hits = await mod.search(title, { signal });
-  if (!hits || !hits.length) throw Object.assign(new Error(`no ${provider} result for "${title}"`), { code: 'NO_MATCH' });
+  // Fast-path: if HiAnime and input looks like a slug (e.g. one-piece-n0aido or hianime:one-piece-n0aido)
+  if (norm === 'hianime') {
+    const slugCandidate = rawTitle.toLowerCase().replace(/^hianime:/i, '').replace(/\s+/g, '-');
+    if (slugCandidate.includes('-') && /-[a-z0-9]{4,10}$/i.test(slugCandidate)) {
+      try {
+        const direct = await mod.details(slugCandidate, { signal });
+        if (direct && direct.media && direct.episodes && direct.episodes.length) {
+          const entry = { at: Date.now(), media: direct.media, episodes: direct.episodes };
+          providerDetailsCache.set(key, entry);
+          return entry;
+        }
+      } catch {
+        // Fall through to search below
+      }
+    }
+  }
+
+  // Search with original title
+  let hits = await mod.search(rawTitle, { signal }).catch(() => []);
+
+  // If no hits and title has a trailing slug hash (e.g. "One Piece N0aido" -> "One Piece"), retry with cleaned title
+  if ((!hits || !hits.length) && /\s+[a-z0-9]{4,10}$/i.test(rawTitle)) {
+    const cleanTitle = rawTitle.replace(/\s+[a-z0-9]{4,10}$/i, '').trim();
+    if (cleanTitle) {
+      hits = await mod.search(cleanTitle, { signal }).catch(() => []);
+    }
+  }
+
+  // If still no hits and title contains colon, try main title part
+  if ((!hits || !hits.length) && rawTitle.includes(':')) {
+    const mainTitle = rawTitle.split(':')[0].trim();
+    if (mainTitle && mainTitle !== rawTitle) {
+      hits = await mod.search(mainTitle, { signal }).catch(() => []);
+    }
+  }
+
+  if (!hits || !hits.length) throw Object.assign(new Error(`no ${provider} result for "${rawTitle}"`), { code: 'NO_MATCH' });
   const picked = hits[0];
-  const slug = (picked.id || picked.slug).replace(/^watchanimeworld:/, '');
+  const slug = (picked.id || picked.slug).replace(/^watchanimeworld:/, '').replace(/^hianime:/, '');
   const { media, episodes } = await mod.details(slug, { signal });
   const entry = { at: Date.now(), media, episodes };
   providerDetailsCache.set(key, entry);
@@ -1379,7 +1415,8 @@ const server = createServer(async (req, res) => {
       ...(timedOut ? { BRIDGE_TIMEOUT: 422, PROVIDER_TIMEOUT: 504 } : {}),
     };
     const code = timedOut ? (e?.code === 'PROVIDER_TIMEOUT' ? 'PROVIDER_TIMEOUT' : 'BRIDGE_TIMEOUT') : (e?.code ?? 'BRIDGE_ERROR');
-    const status = e?.status ?? refusal[code] ?? 502;
+    const validStatus = (typeof e?.status === 'number' && e.status >= 100 && e.status <= 599) ? e.status : null;
+    const status = validStatus ?? refusal[code] ?? 502;
     if (!refusal[code] && status >= 500) console.error(`bridge fault: ${e?.stack ?? e}`);
     return json(res, status, {
       error: code,
@@ -1387,6 +1424,13 @@ const server = createServer(async (req, res) => {
       ...(e?.provider ? { provider: e.provider } : {}),
     });
   }
+});
+
+process.on('uncaughtException', (err) => {
+  console.error('[Bridge UncaughtException]:', err?.stack ?? err);
+});
+process.on('unhandledRejection', (reason) => {
+  console.error('[Bridge UnhandledRejection]:', reason);
 });
 
 export {
