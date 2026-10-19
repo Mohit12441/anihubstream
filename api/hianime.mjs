@@ -388,6 +388,47 @@ export async function browse({ page = 1, limit = 24, type, status, cursor, signa
   };
 }
 
+/**
+ * HiAnime home feed — featured, trending, popular, airing, finished, latest anime & latest episodes.
+ * Fetches `GET https://animehot.cc/api/home`.
+ */
+export async function home({ signal } = {}) {
+  const { json } = await getJson(`${HIAnime_MAIN}/api/home`, { referer: `${HIAnime_MAIN}/`, signal });
+  if (!json || typeof json !== "object") {
+    throw new ApiError("HiAnime /api/home returned empty body", 0);
+  }
+  const parseList = (arr) => (Array.isArray(arr) ? arr : []).map((item) => mediaFrom(item?.anime ?? item)).filter(Boolean);
+
+  const featured = (Array.isArray(json.featured) ? json.featured : []).map((item) => mediaFrom(item?.anime ?? item)).filter(Boolean);
+  const trending = parseList(json.trending?.animes);
+  const popular = parseList(json.popular?.animes);
+  const currentlyAiring = parseList(json.currentlyAiring?.animes);
+  const finishedAiring = parseList(json.finishedAiring?.animes);
+  const latestAnime = parseList(json.latestAnime?.animes);
+
+  const latestEpisodes = (Array.isArray(json.latestEpisodes?.episodes) ? json.latestEpisodes.episodes : []).map((ep) => {
+    const anime = ep.anime_info;
+    const media = anime ? mediaFrom(anime) : undefined;
+    return {
+      id: ep._id,
+      episodeNumber: numeric(ep.episodeNumber) ?? 1,
+      title: text(ep.title) || `Episode ${ep.episodeNumber ?? 1}`,
+      slug: text(ep.slug),
+      media,
+    };
+  });
+
+  return {
+    featured,
+    trending,
+    popular,
+    currentlyAiring,
+    finishedAiring,
+    latestAnime,
+    latestEpisodes,
+  };
+}
+
 // ------------------------------------------------------------------- details
 
 function encodeEpisodeRef({ animeId, number, audioType, slug }) {
@@ -485,6 +526,54 @@ export async function episodes(idOrSlug, { signal } = {}) {
 }
 
 /**
+ * Resolves direct multi-quality download links from ZokoAnime.
+ *
+ * Target can be an embed URL (e.g. `https://zokoanime.video/stream/mal/52299/1/sub`),
+ * a download URL, or an object `{ source, id, episode, track }`.
+ */
+export async function fetchDownloads(target, { signal } = {}) {
+  let source, id, ep, track;
+  if (typeof target === "string") {
+    const m = /\/(?:stream|download)\/([^/]+)\/([^/]+)\/([^/]+)\/([^/?]+)/i.exec(target);
+    if (!m) return [];
+    [, source, id, ep, track] = m;
+  } else if (target && typeof target === "object") {
+    ({ source = "mal", id, episode: ep, track = "sub" } = target);
+  }
+  if (!id || !ep) return [];
+  const cleanTrack = String(track).toLowerCase().startsWith("dub") ? "dub" : "sub";
+  const path = `${source}/${id}/${ep}/${cleanTrack}`;
+  const referer = `https://zokoanime.video/download/${path}`;
+  try {
+    const tokenRes = await request(`https://zokoanime.video/api/downloads/token/${path}`, {
+      referer,
+      signal,
+    });
+    if (!tokenRes.ok) return [];
+    const tokenData = await tokenRes.json().catch(() => null);
+    if (!tokenData?.token) return [];
+    const dlRes = await request(`https://zokoanime.video/api/downloads/${path}?t=${encodeURIComponent(tokenData.token)}`, {
+      referer,
+      signal,
+    });
+    if (!dlRes.ok) return [];
+    const data = await dlRes.json().catch(() => null);
+    if (!Array.isArray(data?.downloads)) return [];
+    return data.downloads.map((d) => ({
+      name: `HiAnime (${(d.kind || cleanTrack).toUpperCase()}) ${d.label || "Direct"}`,
+      label: d.label || "Direct",
+      quality: d.label || "unknown",
+      url: d.url,
+      provider: "hianime",
+      audio: d.kind || cleanTrack,
+      type: d.type || "download",
+    }));
+  } catch {
+    return [];
+  }
+}
+
+/**
  * Episode ref -> the embed URLs of the requested audio group.
  *
  * `audioType` is honoured here, and it is honoured strictly: this API keeps the
@@ -494,7 +583,7 @@ export async function episodes(idOrSlug, { signal } = {}) {
  * hand a dub-seeker the Japanese audio and label it dub, which is the exact
  * defect AniKoto's export lists as an open gap.
  */
-export async function sources(episodeId, { audioType, signal } = {}) {
+export async function sources(episodeId, { audioType, signal, server } = {}) {
   const ref = decodeEpisodeRef(episodeId);
   if (!ref?.animeId || !ref.number) throw new ApiError("HiAnime episode id carries no anime id + number", 0, "ERROR");
   // The caller's request wins; the ref's label is only a default for callers who
@@ -512,12 +601,45 @@ export async function sources(episodeId, { audioType, signal } = {}) {
   const seen = new Set();
   const candidates = known ? pick(wanted) : groups.flatMap(([, v]) => v).filter((x) => typeof x === "string" && /^https?:\/\//.test(x));
   for (const u of candidates) if (!seen.has(u)) { seen.add(u); embeds.push(u); }
+
+  const servers = [];
+  for (const [idx, embed] of embeds.entries()) {
+    const isZoko = hostMatches(embed, ZOKO_HOSTS) || /zokoanime/i.test(embed);
+    const isMega = hostMatches(embed, MEGAPLAY_HOSTS) || /megaplay/i.test(embed);
+    const label = isZoko ? `HiAnime · HD-${idx + 1}` : isMega ? `HiAnime · MegaPlay` : `HiAnime · Server ${idx + 1}`;
+    servers.push({
+      id: `hianime-${idx + 1}`,
+      name: label,
+      embedUrl: embed,
+      type: "hls",
+    });
+  }
+
+  // Pre-fetch direct multi-quality downloads if available from ZokoAnime embed
+  let downloads = [];
+  const zokoEmbed = embeds.find((u) => hostMatches(u, ZOKO_HOSTS) || /zokoanime/i.test(u));
+  if (zokoEmbed) {
+    downloads = await fetchDownloads(zokoEmbed, { signal }).catch(() => []);
+  }
+
+  // If a specific server was requested, order that server first
+  let orderedEmbeds = embeds;
+  if (server) {
+    const normServer = String(server).toLowerCase();
+    const matchedIdx = servers.findIndex((s) => s.id.toLowerCase() === normServer || s.name.toLowerCase().includes(normServer));
+    if (matchedIdx > 0) {
+      orderedEmbeds = [embeds[matchedIdx], ...embeds.filter((_, i) => i !== matchedIdx)];
+    }
+  }
+
   return {
-    embeds,
+    embeds: orderedEmbeds,
     subtitles: [],
     audioType: wanted,
-    ...(embeds.length ? { embedAudio: audioOfEmbed(embeds[0]) } : {}),
+    ...(orderedEmbeds.length ? { embedAudio: audioOfEmbed(orderedEmbeds[0]) } : {}),
     available: Object.fromEntries(groups.map(([k, v]) => [k, v.length])),
+    downloads,
+    servers,
   };
 }
 
@@ -762,7 +884,7 @@ export function sniffContainer(buf) {
   if (!buf || buf.length < 8) return "empty";
   if (buf[0] === 0x47 && buf.length > 188 && [...Array(Math.min(40, Math.floor(buf.length / 188)))].every((_, i) => buf[i * 188] === 0x47)) return "mpegts";
   if (buf.subarray(4, 8).toString("latin1") === "ftyp") return "mp4";
-  if (buf.subarray(0, 5).toString("latin1").startsWith("#EXTM3U")) return "m3u8";
+  if (buf.subarray(0, 7).toString("latin1").startsWith("#EXTM3U")) return "m3u8";
   if (buf[0] === 0x89 && buf.subarray(1, 4).toString("latin1") === "PNG") return "png";
   if (buf.subarray(0, 3).toString("latin1") === "ID3" || (buf[0] === 0xff && (buf[1] & 0xe0) === 0xe0)) return "audio";
   if (buf[0] === 0x1f && buf[1] === 0x8b) return "gzip";

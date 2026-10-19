@@ -488,4 +488,24 @@ describe('Bridge Multi-Provider Dispatcher & Race Tests', () => {
     assert.ok(Number.isFinite(TIMEOUTS.SNACK) && TIMEOUTS.SNACK > 0);
     assert.ok(Number.isFinite(TIMEOUTS.RESOLVE) && TIMEOUTS.RESOLVE > 0);
   });
+
+  it('GET /home?provider=hianime returns HiAnime catalog home feed', async () => {
+    const res = await fetch(`${bridgeUrl}/home?provider=hianime`);
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.equal(body.ok, true);
+    assert.equal(body.provider, 'hianime');
+    assert.ok(Array.isArray(body.featured));
+    assert.ok(Array.isArray(body.trending));
+  });
+
+  it('GET /downloads returns available options and handles provider filter', async () => {
+    const res = await fetch(`${bridgeUrl}/downloads?title=Solo+Leveling&ep=1`);
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.equal(body.title, 'Solo Leveling');
+    assert.equal(body.episode, 1);
+    assert.ok(Array.isArray(body.options));
+    assert.ok(body.options.some((o) => o.provider === 'hianime'));
+  });
 });

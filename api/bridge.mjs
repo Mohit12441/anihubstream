@@ -388,14 +388,14 @@ async function buildSourceAniwatch({ title, ep, audio }) {
   throw Object.assign(new Error(`no playable AniWatch variant`), { code: 'RESOLVE_FAILED' });
 }
 
-async function buildSourceHianime({ title, ep, audio }) {
+async function buildSourceHianime({ title, ep, audio, server }) {
   const signal = AbortSignal.timeout(RESOLVE_TIMEOUT_MS);
   const { media, episodes } = await detailsForProvider('hianime', title);
   const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
   if (!episode) throw Object.assign(new Error(`episode ${ep} is not in HiAnime list (${episodes.length} listed)`), { code: 'NO_SUCH_EPISODE' });
 
   const audioType = audio === 'dub' ? 'dub' : 'sub';
-  const { embeds } = await hianime.sources(episode.id, { audioType, signal });
+  const { embeds, downloads, servers } = await hianime.sources(episode.id, { audioType, signal, server });
   if (!embeds || !embeds.length) throw Object.assign(new Error(`no ${audio} embeds for episode ${ep}`), { code: 'NO_EMBEDS' });
 
   const candidates = rankEmbeds(embeds).slice(0, 3);
@@ -405,7 +405,7 @@ async function buildSourceHianime({ title, ep, audio }) {
       const sniffed = await snackPlayable(r, signal);
       if (sniffed) {
         return createHlsSession({
-          provider: 'hianime', media, episode, resolvedResult: r, sniffed, defaultReferer: 'https://zokoanime.video/', skip: r.skip ?? null, audio,
+          provider: 'hianime', media, episode, resolvedResult: r, sniffed, defaultReferer: 'https://zokoanime.video/', skip: r.skip ?? null, audio, downloads, servers,
         });
       }
     } catch {
@@ -647,6 +647,9 @@ async function buildSourceProvider(provider, { title, ep, audio, server }) {
   if (norm.startsWith('anikoto:')) {
     selectedServer = norm.slice('anikoto:'.length);
     norm = 'anikoto';
+  } else if (norm.startsWith('hianime:')) {
+    selectedServer = norm.slice('hianime:'.length);
+    norm = 'hianime';
   }
   const handler = providerHandlers[norm];
   if (!handler) throw new Error(`Unsupported provider: ${provider}`);
@@ -1093,6 +1096,15 @@ const server = createServer(async (req, res) => {
       });
     }
 
+    if (url.pathname === '/home') {
+      const prov = (url.searchParams.get('provider') ?? 'hianime').toLowerCase();
+      if (prov === 'hianime') {
+        const homeData = await hianime.home({ signal: AbortSignal.timeout(25_000) });
+        return json(res, 200, { ok: true, provider: 'hianime', ...homeData });
+      }
+      return json(res, 400, { error: 'PROVIDER_NOT_SUPPORTED', message: `Provider ${prov} does not expose a home feed` });
+    }
+
     if (url.pathname === '/search') {
       const q = url.searchParams.get('q') ?? '';
       const prov = (url.searchParams.get('provider') ?? 'auto').toLowerCase();
@@ -1150,7 +1162,23 @@ const server = createServer(async (req, res) => {
     if (url.pathname === '/downloads') {
       const title = url.searchParams.get('title') ?? '';
       const ep = Number(url.searchParams.get('ep') ?? '0');
+      const prov = url.searchParams.get('provider')?.toLowerCase();
       if (!title.trim() || !Number.isInteger(ep) || ep < 1) return json(res, 400, { error: 'TITLE_EP_REQUIRED' });
+
+      if (prov === 'hianime') {
+        try {
+          const { episodes } = await detailsForProvider('hianime', title);
+          const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
+          if (episode) {
+            const { downloads } = await hianime.sources(episode.id, { signal: AbortSignal.timeout(25_000) });
+            if (downloads && downloads.length) {
+              return json(res, 200, { title, episode: ep, provider: 'hianime', downloads });
+            }
+          }
+        } catch {
+          // fall through to default options
+        }
+      }
 
       const options = [
         {
@@ -1271,7 +1299,7 @@ const server = createServer(async (req, res) => {
 
     return json(res, 404, {
       error: 'NOT_FOUND',
-      endpoints: ['/health', '/search?q=&provider=', '/resolve?title=&ep=&audio=&provider=', '/audios?title=&ep=', '/downloads?title=&ep=', '/stream/:sid/media.mkv', '/stream/:sid/media.mp4', '/stream/:sid/master.m3u8', '/stream/:sid/play?u=', '/stream/:sid/sub/:i.vtt'],
+      endpoints: ['/health', '/home?provider=', '/search?q=&provider=', '/resolve?title=&ep=&audio=&provider=', '/audios?title=&ep=', '/downloads?title=&ep=', '/stream/:sid/media.mkv', '/stream/:sid/media.mp4', '/stream/:sid/master.m3u8', '/stream/:sid/play?u=', '/stream/:sid/sub/:i.vtt'],
     });
   } catch (e) {
     const timedOut = e?.name === 'TimeoutError' || e?.name === 'AbortError' || e?.code === 'PROVIDER_TIMEOUT';
