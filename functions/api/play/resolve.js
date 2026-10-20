@@ -109,16 +109,22 @@ export const onRequestGet = async ({ request, env }) => {
       url: dl.url?.startsWith('http') ? dl.url : `${bridgeBase}${dl.url}`,
     }));
 
+    const resolvedAudio = meta.audio || audio;
+    let serverName = formatServerName(prov, serverParam || 'HD-1');
+    if (audio === 'dub' && resolvedAudio === 'sub') {
+      serverName += ' (Sub Only)';
+    }
+
     const resolvedServer = {
       id: `${prov}:${rawServerParam || 'HD-1'}`,
-      name: formatServerName(prov, serverParam || 'HD-1'),
+      name: serverName,
       provider: prov,
       status: 'ready',
       streamUrl,
-      type: (meta.audio || audio) === 'dub' ? 'dub' : (meta.kind === 'progressive' ? 'mp4' : 'hls'),
+      type: resolvedAudio === 'dub' ? 'dub' : (meta.kind === 'progressive' ? 'mp4' : 'hls'),
       quality: meta.quality || '1080p',
-      audio: meta.audio || audio,
-      audioTracks: buildAudioTracks(meta.audio || audio),
+      audio: resolvedAudio,
+      audioTracks: buildAudioTracks(resolvedAudio),
       subtitles,
       downloads,
     };

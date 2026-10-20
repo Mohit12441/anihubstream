@@ -13,14 +13,18 @@ export interface ServerSwitcherProps {
 type AudioCategory = 'sub' | 'dub' | 'hindi';
 
 function getAudioCategory(server: PlayServer): AudioCategory {
+  const aud = (server.audio || '').toLowerCase();
   const name = (server.name || '').toLowerCase();
   const prov = (server.provider || '').toLowerCase();
-  const aud = (server.audio || '').toLowerCase();
   const id = (server.id || '').toLowerCase();
   const type = (server.type || '').toLowerCase();
 
+  if (aud === 'sub' && (name.includes('sub only') || aud === 'sub' && !name.includes('dub') && !id.includes('-dub'))) return 'sub';
   if (aud === 'hindi' || name.includes('hindi') || prov.includes('hindi') || id.includes('hindi')) return 'hindi';
-  if (aud === 'dub' || name.includes('dub') || prov.includes('dub') || id.includes('dub') || type === 'dub') return 'dub';
+  if (aud === 'dub' || name.includes('dub') || prov.includes('dub') || id.includes('dub') || type === 'dub') {
+    if (aud === 'sub') return 'sub';
+    return 'dub';
+  }
   return 'sub';
 }
 

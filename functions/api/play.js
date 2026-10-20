@@ -464,16 +464,22 @@ export const onRequestGet = async ({ request, env }) => {
     // Construct primary server entry
     const cleanPrimaryServer = String(serverParam || 'HD-1').replace(/^.*?\s*·\s*/, '').trim();
     const activeServerId = `${prov}:${cleanPrimaryServer}`;
+    const resolvedAudio = meta.audio || audio;
+    let primaryServerName = formatServerName(prov, cleanPrimaryServer);
+    if (audio === 'dub' && resolvedAudio === 'sub') {
+      primaryServerName += ' (Sub Only)';
+    }
+
     const primaryServer = {
       id: activeServerId,
-      name: formatServerName(prov, cleanPrimaryServer),
+      name: primaryServerName,
       provider: prov,
       status: 'ready',
       streamUrl,
       type: meta.kind === 'progressive' ? 'mp4' : 'hls',
       quality: meta.quality || '1080p',
-      audio: meta.audio || audio,
-      audioTracks: buildAudioTracks(meta.audio || audio),
+      audio: resolvedAudio,
+      audioTracks: buildAudioTracks(resolvedAudio),
       subtitles,
       downloads,
     };

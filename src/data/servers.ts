@@ -206,7 +206,7 @@ export function providerFromId(serverId: string): string {
     }
   }
 
-  return clean;
+  return ['hianime', 'aniwatch', 'anikoto', 'animedubhindi', 'watchanimeworld', 'animewave', 'animekai'].includes(lower) ? lower : 'anikoto';
 }
 
 export function serverIdFromProvider(provider?: string): string {
