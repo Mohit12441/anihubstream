@@ -155,10 +155,10 @@ export function Home() {
 
           const items: ProviderSearchResult[] = rawItems.map((a) => ({
             id: a.id || a.slug,
-            slug: a.id || a.slug,
+            slug: a.slug || a.id,
             title: a.title,
-            coverUrl: a.art || a.keyArt || null,
-            provider: data.provider,
+            coverUrl: a.coverUrl || a.art || a.keyArt || null,
+            provider: a.provider || data.provider,
           }));
 
           const seen = new Set<string>();
@@ -212,7 +212,7 @@ export function Home() {
   }, [providerStreams]);
 
   const activeProviderRows = useMemo(() => {
-    const entries = Object.entries(providerStreams).filter(([_, items]) => items && items.length > 0);
+    const entries = Object.entries(providerStreams).filter(([key, items]) => Boolean(PROVIDER_METAS[key]) && items && items.length > 0);
     if (providerFilter === 'all') return entries;
     return entries.filter(([key]) => key === providerFilter);
   }, [providerStreams, providerFilter]);
