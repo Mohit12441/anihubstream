@@ -184,3 +184,24 @@ CREATE TABLE IF NOT EXISTS sync_pending (
   note       TEXT
 );
 
+CREATE TABLE IF NOT EXISTS anime_id_map (
+  anime_id      TEXT PRIMARY KEY REFERENCES anime(id) ON DELETE CASCADE,
+  mal_id        INTEGER,
+  anilist_id    INTEGER,
+  kitsu_id      INTEGER,
+  anikoto_slug  TEXT,
+  hianime_slug  TEXT,
+  aniwatch_slug TEXT,
+  adb_slug      TEXT,
+  waw_slug      TEXT,
+  confidence    REAL DEFAULT 1.0,
+  updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS id_map_by_mal ON anime_id_map(mal_id);
+CREATE INDEX IF NOT EXISTS id_map_by_anilist ON anime_id_map(anilist_id);
+CREATE INDEX IF NOT EXISTS id_map_by_kitsu ON anime_id_map(kitsu_id);
+CREATE INDEX IF NOT EXISTS id_map_by_anikoto_slug ON anime_id_map(anikoto_slug);
+CREATE INDEX IF NOT EXISTS id_map_by_hianime_slug ON anime_id_map(hianime_slug);
+
+

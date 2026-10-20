@@ -358,7 +358,9 @@ export function ServerSwitcher({
             border: '1px dashed rgba(255, 255, 255, 0.1)',
           }}
         >
-          No {selectedCategory.toUpperCase()} servers available for {selectedProvider === 'all' ? 'this title' : selectedProvider}.
+          {servers.length === 0
+            ? 'No streaming servers currently available for this title.'
+            : `No ${selectedCategory.toUpperCase()} servers available for ${selectedProvider === 'all' ? 'this title' : selectedProvider}.`}
         </div>
       ) : (
         <div
