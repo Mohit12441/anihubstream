@@ -16,3 +16,5 @@ dist-preview/
 preflight-*.json
 preflight-*.txt
 pre-dedupe.sql
+tools/anikoto-slugs-progress.json
+tools/anime-titles.json

@@ -12,6 +12,7 @@ import { resolve } from 'node:path';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const SOURCES_FILE = resolve(ROOT, 'tools/catalogue-sources.json');
+const ANIKOTO_SLUGS_FILE = resolve(ROOT, 'tools/anikoto-slugs.json');
 const OUTPUT_SQL = resolve(ROOT, 'tools/id-map-seed.sql');
 
 function normalizeSlug(str) {
@@ -31,6 +32,13 @@ export function buildIdMappings() {
     throw new Error(`catalogue-sources.json not found at ${SOURCES_FILE}`);
   }
 
+  let anikotoSlugs = {};
+  if (existsSync(ANIKOTO_SLUGS_FILE)) {
+    try {
+      anikotoSlugs = JSON.parse(readFileSync(ANIKOTO_SLUGS_FILE, 'utf8'));
+    } catch {}
+  }
+
   const raw = readFileSync(SOURCES_FILE, 'utf8');
   const entries = JSON.parse(raw);
   const mappings = [];
@@ -43,8 +51,8 @@ export function buildIdMappings() {
 
     const baseSlug = normalizeSlug(animeId);
 
-    // Compute provider slugs with default heuristic confidence
-    const anikotoSlug = item.anikoto || baseSlug;
+    // Compute provider slugs with single-source-of-truth priority
+    const anikotoSlug = anikotoSlugs[animeId] || item.anikoto || null;
     const hianimeSlug = item.hianime || null;
     const aniwatchSlug = item.aniwatch || null;
     const adbSlug = item.adb || null;
