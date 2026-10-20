@@ -162,7 +162,7 @@ export const onRequestGet = async ({ request, env }) => {
             id = r.to_id;
           } else {
             const m = await env.ANIHUB.prepare(
-              `SELECT anime_id FROM anime_id_map WHERE anikoto_slug = ?1 UNION ALL SELECT anime_id FROM anime_id_map WHERE hianime_slug = ?1 LIMIT 1`
+              `SELECT anime_id FROM anime_id_map WHERE anikoto_slug = ?1 UNION ALL SELECT anime_id FROM anime_id_map WHERE hianime_slug = ?1 ORDER BY 1 LIMIT 1`
             ).bind(id).first().catch(() => null);
             if (m?.anime_id) {
               id = m.anime_id;
