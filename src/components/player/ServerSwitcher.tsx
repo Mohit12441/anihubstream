@@ -91,20 +91,19 @@ export function ServerSwitcher({
       if (ib !== -1) return 1;
       return a.name.localeCompare(b.name);
     });
-    return list;
+    // Add "All Providers" option at the start so user is not locked into a single provider
+    return [{ key: 'all', name: 'All', icon: '🌐' }, ...list];
   }, [servers]);
 
   const activeServer = servers.find((s) => s.id === activeServerId);
-  const initialProvider = activeServer ? getProviderKey(activeServer) : (availableProviders[0]?.key || 'anikoto');
-  const [selectedProvider, setSelectedProvider] = useState<string>(initialProvider);
+  const [selectedProvider, setSelectedProvider] = useState<string>('all');
 
   const initialCategory = activeServer ? getAudioCategory(activeServer) : 'sub';
   const [selectedCategory, setSelectedCategory] = useState<AudioCategory>(initialCategory);
 
-  // Synchronize state when activeServerId changes externally
+  // Synchronize category when activeServerId changes externally, keeping provider as 'all' unless specified
   useEffect(() => {
     if (activeServer) {
-      setSelectedProvider(getProviderKey(activeServer));
       setSelectedCategory(getAudioCategory(activeServer));
     }
   }, [activeServerId, activeServer]);
@@ -112,61 +111,73 @@ export function ServerSwitcher({
   // Ensure selectedProvider is valid
   useEffect(() => {
     if (availableProviders.length > 0 && !availableProviders.some((p) => p.key === selectedProvider)) {
-      setSelectedProvider(availableProviders[0].key);
+      setSelectedProvider('all');
     }
   }, [availableProviders, selectedProvider]);
 
-  // Filter servers strictly by the selected provider
-  const providerServers = useMemo(() => {
-    const matching = servers.filter((s) => getProviderKey(s) === selectedProvider);
-    return matching.length > 0 ? matching : servers;
-  }, [servers, selectedProvider]);
-
-  // Available audio categories for the selected provider
+  // Available audio categories across all servers
   const availableCategories = useMemo(() => {
     const set = new Set<AudioCategory>();
-    for (const s of providerServers) {
+    for (const s of servers) {
       set.add(getAudioCategory(s));
     }
     const order: AudioCategory[] = ['sub', 'dub', 'hindi'];
     const filtered = order.filter((c) => set.has(c));
     return filtered.length > 0 ? filtered : (['sub'] as AudioCategory[]);
-  }, [providerServers]);
+  }, [servers]);
 
-  // Ensure selectedCategory is valid for the current provider
+  // Ensure selectedCategory is valid
   useEffect(() => {
     if (availableCategories.length > 0 && !availableCategories.includes(selectedCategory)) {
       setSelectedCategory(availableCategories[0]);
     }
   }, [availableCategories, selectedCategory]);
 
-  // Servers matching both selected provider and selected audio category
+  // Servers matching both selected audio category and selected provider
   const displayedServers = useMemo(() => {
-    const matching = providerServers.filter((s) => getAudioCategory(s) === selectedCategory);
-    return matching.length > 0 ? matching : providerServers;
-  }, [providerServers, selectedCategory]);
+    // 1. Filter by language category (SUB / DUB / HINDI)
+    const categoryMatches = servers.filter((s) => getAudioCategory(s) === selectedCategory);
+    const pool = categoryMatches.length > 0 ? categoryMatches : servers;
 
-  // Handler when clicking a provider button: immediately triggers that provider's stream
+    // 2. Filter by provider if a specific provider is chosen
+    if (selectedProvider === 'all') return pool;
+    const providerMatches = pool.filter((s) => getProviderKey(s) === selectedProvider);
+    return providerMatches.length > 0 ? providerMatches : pool;
+  }, [servers, selectedCategory, selectedProvider]);
+
+  // Handler when clicking a provider button
   const handleProviderClick = (provKey: string) => {
     setSelectedProvider(provKey);
-    const provMatching = servers.filter((s) => getProviderKey(s) === provKey);
-    if (provMatching.length > 0) {
-      // Find server matching current audio preference, or fallback to first
-      const sameAudio = provMatching.find((s) => getAudioCategory(s) === selectedCategory);
-      const target = sameAudio || provMatching[0];
-      setSelectedCategory(getAudioCategory(target));
-      onSelectServer(target);
+    const pool = servers.filter((s) => getAudioCategory(s) === selectedCategory);
+    const base = pool.length > 0 ? pool : servers;
+    const matching = provKey === 'all' ? base : base.filter((s) => getProviderKey(s) === provKey);
+    if (matching.length > 0) {
+      const currentInMatching = matching.find((s) => s.id === activeServerId);
+      if (!currentInMatching) {
+        onSelectServer(matching[0]);
+      }
     }
   };
 
-  // Handler when clicking an audio tab: immediately triggers the matching server within provider
+  // Handler when clicking an audio tab: immediately triggers the matching server
   const handleTabClick = (cat: AudioCategory) => {
     setSelectedCategory(cat);
-    const matching = providerServers.filter((s) => getAudioCategory(s) === cat);
+    const matching = servers.filter((s) => {
+      const catMatch = getAudioCategory(s) === cat;
+      const provMatch = selectedProvider === 'all' || getProviderKey(s) === selectedProvider;
+      return catMatch && provMatch;
+    });
     if (matching.length > 0) {
       const currentMatching = matching.find((s) => s.id === activeServerId);
       if (!currentMatching) {
         onSelectServer(matching[0]);
+      }
+    } else {
+      // Fallback across all providers if current provider doesn't have this audio category
+      const anyMatching = servers.filter((s) => getAudioCategory(s) === cat);
+      if (anyMatching.length > 0) {
+        setSelectedProvider('all');
+        onSelectServer(anyMatching[0]);
       }
     }
   };
