@@ -65,18 +65,34 @@ export const onRequestGet = async ({ request, env }) => {
     let resolvedMalId = mal ? Number.parseInt(mal, 10) : 0;
     if (!resolvedMalId && env.ANIHUB) {
       try {
-        const row = await env.ANIHUB.prepare(
-          `SELECT a.mal_id, a.source_ids, m.mal_id as map_mal_id
-           FROM anime a
-           LEFT JOIN anime_id_map m ON m.anime_id = a.id
-           WHERE a.id = ?1 OR a.title = ?1 OR m.anikoto_slug = ?1 OR m.hianime_slug = ?1
+        const mapRow = await env.ANIHUB.prepare(
+          `SELECT mal_id FROM anime_id_map
+           WHERE anime_id = ?1 OR anikoto_slug = ?1 OR hianime_slug = ?1
            LIMIT 1`
-        ).bind(title).first();
-        if (row?.map_mal_id) resolvedMalId = row.map_mal_id;
-        else if (row?.mal_id) resolvedMalId = row.mal_id;
-        else if (row?.source_ids) {
-          const s = JSON.parse(row.source_ids);
-          if (s.mal) resolvedMalId = Number(s.mal);
+        ).bind(title).first().catch(() => null);
+
+        if (mapRow?.mal_id) {
+          resolvedMalId = Number(mapRow.mal_id);
+        }
+
+        if (!resolvedMalId) {
+          const animeRow = await env.ANIHUB.prepare(
+            `SELECT id, source_ids, skip_key_id, skip_key_space
+             FROM anime
+             WHERE id = ?1 OR title = ?1
+             LIMIT 1`
+          ).bind(title).first().catch(() => null);
+
+          if (animeRow) {
+            if (animeRow.skip_key_space === 'mal' && animeRow.skip_key_id) {
+              resolvedMalId = Number(animeRow.skip_key_id);
+            } else if (animeRow.source_ids) {
+              try {
+                const s = JSON.parse(animeRow.source_ids);
+                if (s.mal) resolvedMalId = Number(s.mal);
+              } catch {}
+            }
+          }
         }
       } catch {
         // Ignore D1 lookup error
@@ -149,6 +165,56 @@ export const onRequestGet = async ({ request, env }) => {
       }
       bridgeRes = await res.json();
     } catch (err) {
+      // If external bridge threw 530, timed out, or crashed: attempt title-to-MAL resolution via Jikan
+      if (canUseEdgeDirect) {
+        try {
+          const cleanTitle = title
+            .replace(/^[a-z0-9_-]+:/i, '')
+            .replace(/-[a-z0-9]{5,8}$/i, '')
+            .replace(/[-_:]+/g, ' ')
+            .trim();
+          const jikanRes = await fetch(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(cleanTitle)}&limit=1`, {
+            signal: AbortSignal.timeout(4000),
+          });
+          if (jikanRes.ok) {
+            const jikanData = await jikanRes.json();
+            const foundMalId = jikanData?.data?.[0]?.mal_id;
+            if (foundMalId) {
+              const directRes = await resolveMegaplayDirect({ malId: foundMalId, ep, audio });
+              if (directRes?.streamUrl) {
+                const proxyBase = `${url.origin}/api/proxy`;
+                const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=https://megaplay.buzz/`;
+
+                const subtitles = (directRes.subtitles || []).map((sub) => ({
+                  ...sub,
+                  url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=https://megaplay.buzz/` : '',
+                }));
+
+                const resolvedServer = {
+                  id: `${directRes.provider}:${rawServerParam || 'HD-1'}`,
+                  name: formatServerName(directRes.provider, serverParam || 'HD-1'),
+                  provider: directRes.provider,
+                  status: 'ready',
+                  streamUrl: proxiedStreamUrl,
+                  type: audio === 'dub' ? 'dub' : 'hls',
+                  quality: directRes.quality || '1080p',
+                  audio,
+                  audioTracks: buildAudioTracks(audio),
+                  subtitles,
+                  downloads: [],
+                  intro: directRes.intro || null,
+                  outro: directRes.outro || null,
+                };
+
+                return ok({ server: resolvedServer }, { cache: 'public, max-age=600, s-maxage=1800' });
+              }
+            }
+          }
+        } catch {
+          // ignore fallback error
+        }
+      }
+
       if (err instanceof HttpError) throw err;
       throw new HttpError(504, 'upstream_timeout', 'Stream bridge resolution timed out');
     }
