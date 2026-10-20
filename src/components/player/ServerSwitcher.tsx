@@ -148,12 +148,11 @@ export function ServerSwitcher({
   const displayedServers = useMemo(() => {
     // 1. Filter by language category (SUB / DUB / HINDI)
     const categoryMatches = servers.filter((s) => getAudioCategory(s) === selectedCategory);
-    const pool = categoryMatches.length > 0 ? categoryMatches : servers;
+    if (categoryMatches.length === 0) return [];
 
     // 2. Filter by provider if a specific provider is chosen
-    if (selectedProvider === 'all') return pool;
-    const providerMatches = pool.filter((s) => getProviderKey(s) === selectedProvider);
-    return providerMatches.length > 0 ? providerMatches : pool;
+    if (selectedProvider === 'all') return categoryMatches;
+    return categoryMatches.filter((s) => getProviderKey(s) === selectedProvider);
   }, [servers, selectedCategory, selectedProvider]);
 
   // Handler when clicking a provider button
@@ -347,14 +346,28 @@ export function ServerSwitcher({
       </div>
 
       {/* Grid of Servers for Selected Provider & Audio */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-          gap: '10px',
-        }}
-      >
-        {displayedServers.map((server) => {
+      {displayedServers.length === 0 ? (
+        <div
+          style={{
+            padding: '24px 16px',
+            textAlign: 'center',
+            color: '#94a3b8',
+            fontSize: '0.85rem',
+            background: 'rgba(0, 0, 0, 0.2)',
+            borderRadius: '8px',
+            border: '1px dashed rgba(255, 255, 255, 0.1)',
+          }}
+        >
+          No {selectedCategory.toUpperCase()} servers available for {selectedProvider === 'all' ? 'this title' : selectedProvider}.
+        </div>
+      ) : (
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+            gap: '10px',
+          }}
+        >{displayedServers.map((server) => {
           const isActive = server.id === activeServerId;
           const isReady = server.status === 'ready';
           const isLoading = server.status === 'loading';
@@ -434,6 +447,7 @@ export function ServerSwitcher({
           );
         })}
       </div>
+      )}
     </div>
   );
 }

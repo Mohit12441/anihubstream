@@ -161,10 +161,17 @@ export const onRequestGet = async ({ request, env }) => {
           if (r?.to_id) {
             id = r.to_id;
           } else {
-            const p = await env.ANIHUB.prepare(
-              `SELECT id FROM anime WHERE json_extract(source_ids, '$.hianime') = ?1 OR json_extract(source_ids, '$.anikoto') = ?1 LIMIT 1`
-            ).bind(id).first();
-            if (p?.id) id = p.id;
+            const m = await env.ANIHUB.prepare(
+              `SELECT anime_id FROM anime_id_map WHERE anikoto_slug = ?1 OR hianime_slug = ?1 LIMIT 1`
+            ).bind(id).first().catch(() => null);
+            if (m?.anime_id) {
+              id = m.anime_id;
+            } else {
+              const p = await env.ANIHUB.prepare(
+                `SELECT id FROM anime WHERE json_extract(source_ids, '$.hianime') = ?1 OR json_extract(source_ids, '$.anikoto') = ?1 LIMIT 1`
+              ).bind(id).first();
+              if (p?.id) id = p.id;
+            }
           }
         } catch {
           // anime_redirect table may not exist yet or no redirect
