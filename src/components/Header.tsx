@@ -45,7 +45,76 @@ export function Header() {
     return () => document.removeEventListener('keydown', onKey);
   }, [open]);
 
-  const submit = (e: React.FormEvent) => {
+  const [suggestions, setSuggestions] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
+  const abortControllerRef = useRef<AbortController | null>(null);
+
+  // Debounced fetch for instant suggestions
+  useEffect(() => {
+    if (!open || !q.trim()) {
+      setSuggestions([]);
+      return;
+    }
+    const handler = setTimeout(() => {
+      // Abort previous request
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort();
+      }
+      const controller = new AbortController();
+      abortControllerRef.current = controller;
+      setLoading(true);
+      fetch(`/api/search/instant?q=${encodeURIComponent(q)}&limit=8`, { signal: controller.signal })
+        .then(res => res.json())
+        .then(data => {
+          setSuggestions(data.hits || []);
+          setLoading(false);
+        })
+        .catch(() => {
+          setSuggestions([]);
+          setLoading(false);
+        });
+    }, 150);
+    return () => clearTimeout(handler);
+  }, [q, open]);
+
+  const clearSuggestions = () => {
+    setSuggestions([]);
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQ(e.target.value);
+  };
+
+  const handleSuggestionClick = (hit: any) => {
+    navigate(`/anime/${hit.id}`);
+    setQ('');
+    setOpen(false);
+    clearSuggestions();
+  };
+
+  const renderSuggestions = () => {
+    if (loading) {
+      return <div className="suggestions-loading">Loading…</div>;
+    }
+    if (!suggestions.length) return null;
+    return (
+      <ul className="instant-suggestions" role="listbox">
+        {suggestions.map((hit: any) => (
+          <li key={hit.id} className="suggestion-item" onClick={() => handleSuggestionClick(hit)}>
+            <img src={hit.art} alt="" className="suggestion-thumb" />
+            <span className="suggestion-title">{hit.title}</span>
+            {hit.year && <span className="suggestion-year">{hit.year}</span>}
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
+  // Adjust submit to also clear suggestions
+  const submit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const term = q.trim();
     if (!term) {
@@ -55,6 +124,7 @@ export function Header() {
     navigate(`/search?q=${encodeURIComponent(term)}`);
     setQ('');
     setOpen(false);
+    clearSuggestions();
   };
 
   return (
@@ -88,13 +158,15 @@ export function Header() {
               type="search"
               placeholder="Search anime..."
               value={q}
-              onChange={(e) => setQ(e.target.value)}
+              onChange={handleInputChange}
               autoComplete="off"
             />
             <button type="submit" className="search__go" aria-label="Run search">
               <Search size={15} aria-hidden="true" />
             </button>
-          </form>
+        </form>
+        {renderSuggestions()}
+
 
           <Link
             to="/discover"
@@ -154,7 +226,7 @@ export function Header() {
             type="search"
             placeholder="Search anime, movies, or genres..."
             value={q}
-            onChange={(e) => setQ(e.target.value)}
+            onChange={handleInputChange}
             aria-label="Search anime"
             tabIndex={open ? 0 : -1}
           />

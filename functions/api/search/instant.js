@@ -69,15 +69,17 @@ export const onRequestGet = async ({ request, env }) => {
 
     // 2. Fallback to D1 SQLite Catalogue
     if (env.ANIHUB) {
-      const pattern = `%${q.toLowerCase()}%`;
+      // Build FTS5 MATCH query: tokenize terms, require all terms (AND) and allow prefix matching
+      const ftsQuery = q.trim().split(/\s+/).map(term => `${term.replace(/"/g, '\"')}*`).join(' ');
+
       const rows = await env.ANIHUB.prepare(
-        `SELECT id, title, native, year, rating, season, kind, status, art, key_art, accent, synopsis
-         FROM anime
-         WHERE search_text LIKE ?1 OR title LIKE ?1
-         ORDER BY rating DESC, year DESC
+        `SELECT a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status, a.art, a.key_art, a.accent, a.synopsis
+         FROM anime_fts f JOIN anime a ON a.rowid = f.rowid
+         WHERE f.anime_fts MATCH ?1
+         ORDER BY bm25(f) DESC, a.rating DESC, a.year DESC
          LIMIT ?2`
       )
-        .bind(pattern, limit)
+        .bind(ftsQuery, limit)
         .all();
 
       const hits = (rows.results || []).map((r) => cardFromRow(r));
