@@ -8,6 +8,8 @@ export interface ServerSwitcherProps {
   activeServerId: string;
   onSelectServer: (server: PlayServer) => void;
   className?: string;
+  scopedProviderUnavailable?: boolean;
+  scopedProvider?: string | null;
 }
 
 type AudioCategory = 'sub' | 'dub' | 'hindi';
@@ -70,6 +72,8 @@ export function ServerSwitcher({
   activeServerId,
   onSelectServer,
   className = '',
+  scopedProviderUnavailable = false,
+  scopedProvider = null,
 }: ServerSwitcherProps) {
   if (!servers || servers.length === 0) return null;
 
@@ -205,6 +209,27 @@ export function ServerSwitcher({
         border: '1px solid rgba(255, 255, 255, 0.08)',
       }}
     >
+      {scopedProviderUnavailable && (
+        <div
+          style={{
+            padding: '10px 14px',
+            borderRadius: '8px',
+            background: 'rgba(234, 179, 8, 0.1)',
+            border: '1px solid rgba(234, 179, 8, 0.25)',
+            color: '#fef08a',
+            fontSize: '0.85rem',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+          }}
+        >
+          <span>⚠️</span>
+          <span>
+            Not available on {scopedProvider ? getProviderDisplayName(scopedProvider) : 'requested provider'} — showing available alternate servers.
+          </span>
+        </div>
+      )}
+
       {/* Top Header & Filters */}
       <div
         style={{

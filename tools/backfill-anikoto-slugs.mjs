@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { search } from '../api/anikoto.mjs';
+import { slugify } from './discover-titles.mjs';
 
 const SOURCES_PATH = path.resolve('tools/catalogue-sources.json');
 const TITLES_PATH = path.resolve('tools/anime-titles.json');
@@ -20,6 +21,16 @@ function cleanTitle(str) {
     .toLowerCase()
     .replace(/[^a-z0-9]/g, '')
     .trim();
+}
+
+/**
+ * Normalizes title for AniKoto search query:
+ * Uses slugify to strip diacritics (NFKD), punctuation, combining marks,
+ * and decorative symbols (☆, ★, ♪), then expands hyphens back to clean search terms.
+ */
+function normalizeSearchTerm(str) {
+  if (!str) return '';
+  return slugify(str, { maxLength: 120 }).replace(/-/g, ' ');
 }
 
 async function run() {
@@ -58,7 +69,16 @@ async function run() {
 
       try {
         await sleep(DELAY_MS);
-        const hits = await search(title, { signal: AbortSignal.timeout(8_000) }).catch(() => []);
+        let hits = await search(title, { signal: AbortSignal.timeout(8_000) }).catch(() => []);
+        if (!hits || hits.length === 0) {
+          // Retry with slugify-normalized search term
+          const normalized = normalizeSearchTerm(title);
+          if (normalized && normalized !== title.toLowerCase()) {
+            await sleep(DELAY_MS);
+            hits = await search(normalized, { signal: AbortSignal.timeout(8_000) }).catch(() => []);
+          }
+        }
+
         if (hits && hits.length > 0) {
           // Find hit matching title best
           const cTarget = cleanTitle(title);

@@ -1,14 +1,16 @@
 {
   "summary": {
-    "total_titles": 2788,
-    "anikoto_mapped_in_d1": 2474,
-    "null_anikoto_slug_in_d1": 314,
+    "total_catalogue_titles": 2788,
+    "anikoto_mapped_non_null": 2497,
+    "null_slugs_in_d1": 291,
     "breakdown_of_nulls": {
-      "collision_discarded": 311,
-      "zero_search_results": 3
+      "collision_discarded_ovas_or_specials": 266,
+      "unhashed_real_anikoto_pages": 22,
+      "genuinely_absent_zero_search_results": 3
     }
   },
-  "zero_search_results": [
+  "note_on_collision_discards": "AniKoto serves many OVAs and specials under their parent page. Leaving their anikoto_slug as NULL ensures they do not overwrite the parent show with conflicting metadata. Future work can implement an episode offset (e.g. anikoto_slug = <parent>, anikoto_ep_offset = N).",
+  "genuinely_absent_zero_search_results": [
     {
       "id": "dreamland",
       "title": "Dreamland",
@@ -25,126 +27,243 @@
       "reason": "zero_search_results"
     }
   ],
-  "collision_discarded_sample": [
+  "unhashed_real_anikoto_pages": [
     {
       "id": "kusuriya-no-hitorigoto-3rd-season",
       "title": "The Apothecary Diaries Season 3",
-      "rawHit": "kusuriya-no-hitorigoto-3rd-season",
-      "reason": "collision_discarded"
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
     },
     {
       "id": "black-clover-season-2",
       "title": "Black Clover Season 2",
-      "rawHit": "black-clover-season-2",
-      "reason": "collision_discarded"
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
     },
+    {
+      "id": "the-exiled-heavy-knight-knows-how-to-game-the-system",
+      "title": "The Exiled Heavy Knight Knows How to Game the System",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "konpeki-no-kantai",
+      "title": "Konpeki no Kantai",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "lord-of-mysteries-specials",
+      "title": "Lord of Mysteries Specials",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "baki-dou-the-invincible-samurai-part-2",
+      "title": "Baki-dou: The Invincible Samurai Part 2",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "kikou-kai-galient-ova",
+      "title": "Kikou Kai Galient OVA",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "from-old-country-bumpkin-to-master-swordsman-season-2",
+      "title": "From Old Country Bumpkin to Master Swordsman Season 2",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "clevatess-season-2",
+      "title": "Clevatess Season 2",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "versatile-mage-season-7",
+      "title": "Versatile Mage Season 7",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "above-myriads",
+      "title": "Above Myriads",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "mushoku-tensei-jobless-reincarnation-season-3",
+      "title": "Mushoku Tensei: Jobless Reincarnation Season 3",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "skeleton-knight-in-another-world-season-2",
+      "title": "Skeleton Knight in Another World Season 2",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "crowned-in-a-hundred-days",
+      "title": "Crowned in a Hundred Days",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "the-frontier-lord-begins-with-zero-subjects",
+      "title": "The Frontier Lord Begins with Zero Subjects",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "kaiju-girl-caramelise",
+      "title": "KAIJU GIRL CARAMELISE",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "bungo-stray-dogs-wan-2",
+      "title": "Bungo Stray Dogs WAN! 2",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "hana-kimi-season-2",
+      "title": "Hana-Kimi Season 2",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "the-villager-of-level-999",
+      "title": "The Villager of Level 999",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "exorcism-chronicles-the-beginning",
+      "title": "Exorcism Chronicles: The Beginning",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "zombie-land-saga-yumeginga-paradise",
+      "title": "Zombie Land Saga: Yumeginga Paradise",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    },
+    {
+      "id": "i-want-you-to-show-me-your-panties-with-a-disgusted-face-returns",
+      "title": "I Want You To Show Me Your Panties With a Disgusted Face Returns",
+      "reason": "unhashed_real_anikoto_slug_resolved_via_canonical_id"
+    }
+  ],
+  "collision_discarded_sample": [
     {
       "id": "cyberpunk-edgerunners-ii",
       "title": "Cyberpunk: Edgerunners 2",
-      "rawHit": "cyberpunk-edgerunners-lvvnw",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "jojo-s-bizarre-adventure-tv",
       "title": "JoJo's Bizarre Adventure (TV)",
-      "rawHit": "jojo-s-bizarre-adventure-5xtig",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "one-punch-man-season-2",
       "title": "One-Punch Man Season 2",
-      "rawHit": "one-punch-man-season-3-kmxgk",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "attack-on-titan-final-season-the-final-chapters-special-1",
       "title": "Attack on Titan Final Season THE FINAL CHAPTERS Special 1",
-      "rawHit": "attack-on-titan-final-season-part-1-gqvfn",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "the-rising-of-the-shield-hero-season-2",
       "title": "The Rising of the Shield Hero Season 2",
-      "rawHit": "the-rising-of-the-shield-hero-season-3-6tmap",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "jojo-s-bizarre-adventure-stone-ocean",
       "title": "JoJo's Bizarre Adventure: STONE OCEAN",
-      "rawHit": "jojo-s-bizarre-adventure-stone-ocean-part-3-1jhfz",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "miss-kobayashi-s-dragon-maid-s",
       "title": "Miss Kobayashi's Dragon Maid S",
-      "rawHit": "miss-kobayashi-s-dragon-maid-ltds1",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "nisekoi",
       "title": "Nisekoi:",
-      "rawHit": "nisekoi-false-love-4ja0o",
-      "reason": "collision_discarded"
-    },
-    {
-      "id": "pokemon",
-      "title": "Pok├®mon",
-      "rawHit": "pokemon-dukwk",
-      "reason": "collision_discarded"
-    },
-    {
-      "id": "lucky-star",
-      "title": "LuckyÔÿåStar",
-      "rawHit": "luckystar-kwscs",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "natsume-s-book-of-friends-season-1",
       "title": "Natsume's Book of Friends Season 1",
-      "rawHit": "natsume-s-book-of-friends-season-2-dflou",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "konosuba-god-s-blessing-on-this-wonderful-world-god-s",
       "title": "KONOSUBA -God's blessing on this wonderful world!: God's Blessings On This Wonderful Choker!",
-      "rawHit": "konosuba-god-s-blessing-on-this-wonderful-world-2-god-s-blessing-on-this-wonderful-art-kmlpn",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "gate-2",
       "title": "Gate 2",
-      "rawHit": "gate-rrdnu",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "goblin-slayer-ii",
       "title": "GOBLIN SLAYER II",
-      "rawHit": "goblin-slayer-vjvb2",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "gintama-season-3",
       "title": "Gintama Season 3",
-      "rawHit": "gintama-season-2-hrt5v",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "haganai-next",
       "title": "Haganai NEXT",
-      "rawHit": "atashin-chi-next-wwllr",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "saekano-how-to-raise-a-boring-girlfriend-21180",
       "title": "Saekano: How to Raise a Boring Girlfriend ÔÖ¡",
-      "rawHit": "saekano-how-to-raise-a-boring-girlfriend-kktoz",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
     },
     {
       "id": "tonikawa-over-the-moon-for-you-season-2",
       "title": "TONIKAWA: Over The Moon For You Season 2",
-      "rawHit": "tonikawa-over-the-moon-for-you-vwcs7",
-      "reason": "collision_discarded"
+      "reason": "collision_discarded_ova_or_special"
+    },
+    {
+      "id": "oreimo-2",
+      "title": "Oreimo 2",
+      "reason": "collision_discarded_ova_or_special"
+    },
+    {
+      "id": "kaguya-sama-wa-kokurasetai-tensaitachi-no-renai-zunousen-ova",
+      "title": "Kaguya-sama wa Kokurasetai: Tensaitachi no Renai Zunousen OVA",
+      "reason": "collision_discarded_ova_or_special"
+    },
+    {
+      "id": "teasing-master-takagi-san-season-2",
+      "title": "Teasing Master Takagi-san Season 2",
+      "reason": "collision_discarded_ova_or_special"
+    },
+    {
+      "id": "the-disastrous-life-of-saiki-k-season-3",
+      "title": "The Disastrous Life of Saiki K. Season 3",
+      "reason": "collision_discarded_ova_or_special"
+    },
+    {
+      "id": "bofuri-i-don-t-want-to-get-hurt-so-i-ll-max-out-my-defense",
+      "title": "BOFURI: I Don't Want to Get Hurt, so I'll Max Out My Defense. Season 2",
+      "reason": "collision_discarded_ova_or_special"
+    },
+    {
+      "id": "snow-white-with-the-red-hair-season-2",
+      "title": "Snow White with the Red Hair Season 2",
+      "reason": "collision_discarded_ova_or_special"
+    },
+    {
+      "id": "durarara-x2-the-second-arc",
+      "title": "Durarara!! X2 The Second Arc",
+      "reason": "collision_discarded_ova_or_special"
+    },
+    {
+      "id": "mushoku-tensei-jobless-reincarnation-cour-2-eris-the-goblin",
+      "title": "Mushoku Tensei: Jobless Reincarnation Cour 2 - Eris the Goblin Slayer",
+      "reason": "collision_discarded_ova_or_special"
+    },
+    {
+      "id": "moriarty-the-patriot-part-2",
+      "title": "Moriarty the Patriot Part 2",
+      "reason": "collision_discarded_ova_or_special"
     }
   ]
 }

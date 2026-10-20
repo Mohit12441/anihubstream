@@ -98,6 +98,7 @@ export function Watch() {
   const [downloadOpen, setDownloadOpen] = useState(false);
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
   const [playServers, setPlayServers] = useState<PlayServer[]>([]);
+  const [scopedProviderUnavailable, setScopedProviderUnavailable] = useState(false);
   const targetProvider = (params.get('provider') || '').toLowerCase();
   const [activeServerId, setActiveServerId] = useState<string>(
     targetProvider ? serverIdFromProvider(targetProvider) : 'anikoto:HD-1'
@@ -124,6 +125,7 @@ export function Watch() {
       })
       .then((data) => {
         if (cancelled) return;
+        setScopedProviderUnavailable(Boolean(data.scopedProviderUnavailable));
         if (Array.isArray(data.servers) && data.servers.length > 0) {
           setPlayServers(data.servers);
           const matchingActive = data.servers.find((s: PlayServer) => s.id === activeServerId);
@@ -484,6 +486,8 @@ export function Watch() {
                 servers={playServers}
                 activeServerId={activeServerId}
                 onSelectServer={handleSelectServer}
+                scopedProviderUnavailable={scopedProviderUnavailable}
+                scopedProvider={targetProvider}
               />
             </div>
           )}
