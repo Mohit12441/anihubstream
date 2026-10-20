@@ -1,5 +1,6 @@
 // @ts-check
 import { HttpError, errorResponse, json, ok } from './_lib.js';
+import { resolveMegaplayDirect } from './_megaplay.js';
 
 const BRIDGE_TIMEOUT_MS = 25_000;
 const ANISKIP_TIMEOUT_MS = 5_000;
@@ -238,9 +239,25 @@ export const onRequestGet = async ({ request, env }) => {
     // Determine Stream Bridge base
     const bridgeBase = env.STREAM_BRIDGE_URL || 'https://bridge.anihubstream.com';
 
-    // Parallel fetch: AniSkip timestamps and Bridge Stream Resolution
-    const [aniskipData, bridgeRes] = await Promise.all([
+    const canUseEdgeDirect =
+      provider === 'auto' ||
+      provider === 'anikoto' ||
+      provider === 'aniwatch' ||
+      serverParam.toLowerCase().includes('mega') ||
+      serverParam.toLowerCase().includes('hd') ||
+      serverParam.toLowerCase().includes('vidstream');
+
+    // Parallel fetch: AniSkip timestamps, Direct Edge Resolution, and Bridge Stream Resolution
+    const [aniskipData, directRes, bridgeRes] = await Promise.all([
       fetchAniSkip(resolvedMalId, ep, durationSeconds),
+      (async () => {
+        if (!resolvedMalId || !canUseEdgeDirect) return null;
+        try {
+          return await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio });
+        } catch {
+          return null;
+        }
+      })(),
       (async () => {
         const resolveBridgeUrl = new URL(`${bridgeBase}/resolve`);
         resolveBridgeUrl.searchParams.set('title', resolvedTitle);
@@ -431,8 +448,46 @@ export const onRequestGet = async ({ request, env }) => {
       },
     ];
 
-    // If stream bridge is cold or external to Cloudflare edge, return candidate servers
+    // If stream bridge is cold or external to Cloudflare edge, check if Direct Edge Extractor resolved
     if (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl)) {
+      if (directRes?.streamUrl) {
+        const proxyBase = `${url.origin}/api/proxy`;
+        const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=https://megaplay.buzz/`;
+
+        const subtitles = (directRes.subtitles || []).map((sub) => ({
+          ...sub,
+          url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=https://megaplay.buzz/` : '',
+        }));
+
+        const primaryServer = {
+          id: `${directRes.provider}:${serverParam || 'HD-1'}`,
+          name: formatServerName(directRes.provider, serverParam || 'HD-1'),
+          provider: directRes.provider,
+          status: 'ready',
+          streamUrl: proxiedStreamUrl,
+          type: audio === 'dub' ? 'dub' : 'hls',
+          quality: directRes.quality || '1080p',
+          audio,
+          audioTracks: buildAudioTracks(audio),
+          subtitles,
+          downloads: [],
+        };
+
+        const otherServers = defaultServers.filter((s) => s.id !== primaryServer.id);
+
+        return ok({
+          title: resolvedTitle,
+          episode: ep,
+          malId: resolvedMalId || null,
+          scopedProvider: isScoped ? requested : null,
+          scopedProviderUnavailable: false,
+          servers: [primaryServer, ...otherServers],
+          aniskip: aniskipData || null,
+        }, {
+          cache: 'public, max-age=300, s-maxage=600',
+        });
+      }
+
       const scoped = isScoped ? defaultServers.filter((s) => s.provider === requested) : defaultServers;
       const isScopedUnavailable = isScoped && animeRow && !animeRow[`${requested}_slug`];
 

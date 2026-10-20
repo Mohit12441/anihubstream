@@ -1,6 +1,7 @@
 export async function onRequestGet({ request }) {
   return new Response(
     JSON.stringify({
+      ok: true,
       status: 'healthy',
       service: 'anihubstream-edge',
       timestamp: new Date().toISOString(),

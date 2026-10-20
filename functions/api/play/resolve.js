@@ -1,5 +1,6 @@
 // @ts-check
 import { HttpError, errorResponse, ok } from '../_lib.js';
+import { resolveMegaplayDirect } from '../_megaplay.js';
 
 const BRIDGE_TIMEOUT_MS = 25_000;
 
@@ -61,6 +62,72 @@ export const onRequestGet = async ({ request, env }) => {
       throw new HttpError(400, 'bad_request', 'title query parameter is required');
     }
 
+    let resolvedMalId = mal ? Number.parseInt(mal, 10) : 0;
+    if (!resolvedMalId && env.ANIHUB) {
+      try {
+        const row = await env.ANIHUB.prepare(
+          `SELECT a.mal_id, a.source_ids, m.mal_id as map_mal_id
+           FROM anime a
+           LEFT JOIN anime_id_map m ON m.anime_id = a.id
+           WHERE a.id = ?1 OR a.title = ?1 OR m.anikoto_slug = ?1 OR m.hianime_slug = ?1
+           LIMIT 1`
+        ).bind(title).first();
+        if (row?.map_mal_id) resolvedMalId = row.map_mal_id;
+        else if (row?.mal_id) resolvedMalId = row.mal_id;
+        else if (row?.source_ids) {
+          const s = JSON.parse(row.source_ids);
+          if (s.mal) resolvedMalId = Number(s.mal);
+        }
+      } catch {
+        // Ignore D1 lookup error
+      }
+    }
+
+    // Direct Edge Resolution (Method C: Pure Edge Extractor)
+    // Megaplay powers AniKoto, MegaPlay, and HD-1 / Vidstream servers directly
+    const canUseEdgeDirect =
+      provider === 'auto' ||
+      provider === 'anikoto' ||
+      provider === 'aniwatch' ||
+      serverParam.toLowerCase().includes('mega') ||
+      serverParam.toLowerCase().includes('hd') ||
+      serverParam.toLowerCase().includes('vidstream');
+
+    if (resolvedMalId > 0 && canUseEdgeDirect) {
+      try {
+        const directRes = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio });
+        if (directRes?.streamUrl) {
+          const proxyBase = `${url.origin}/api/proxy`;
+          const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=https://megaplay.buzz/`;
+
+          const subtitles = (directRes.subtitles || []).map((sub) => ({
+            ...sub,
+            url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=https://megaplay.buzz/` : '',
+          }));
+
+          const resolvedServer = {
+            id: `${directRes.provider}:${rawServerParam || 'HD-1'}`,
+            name: formatServerName(directRes.provider, serverParam || 'HD-1'),
+            provider: directRes.provider,
+            status: 'ready',
+            streamUrl: proxiedStreamUrl,
+            type: audio === 'dub' ? 'dub' : 'hls',
+            quality: directRes.quality || '1080p',
+            audio,
+            audioTracks: buildAudioTracks(audio),
+            subtitles,
+            downloads: [],
+            intro: directRes.intro || null,
+            outro: directRes.outro || null,
+          };
+
+          return ok({ server: resolvedServer }, { cache: 'public, max-age=600, s-maxage=1800' });
+        }
+      } catch {
+        // Fall back to external stream bridge
+      }
+    }
+
     const bridgeBase = env.STREAM_BRIDGE_URL || 'https://bridge.anihubstream.com';
 
     const resolveUrl = new URL(`${bridgeBase}/resolve`);
@@ -69,7 +136,7 @@ export const onRequestGet = async ({ request, env }) => {
     resolveUrl.searchParams.set('audio', audio);
     if (provider) resolveUrl.searchParams.set('provider', provider);
     if (serverParam) resolveUrl.searchParams.set('server', serverParam);
-    if (mal) resolveUrl.searchParams.set('mal', mal);
+    if (resolvedMalId) resolveUrl.searchParams.set('mal', String(resolvedMalId));
 
     let bridgeRes;
     try {

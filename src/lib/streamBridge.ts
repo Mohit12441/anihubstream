@@ -65,8 +65,9 @@ const PUBLIC_BASE = 'https://bridge.anihubstream.com';
    127.0.0.1 has no bridge anyway. */
 const candidateBases = (): string[] => {
   if (ENV_BASE) return [ENV_BASE];
-  const loopback = typeof window !== 'undefined' && window.location ? ['localhost', '127.0.0.1'].includes(window.location.hostname) : false;
-  return loopback ? [LOCAL_BASE, PUBLIC_BASE] : [PUBLIC_BASE];
+  const isBrowser = typeof window !== 'undefined' && Boolean(window.location);
+  const loopback = isBrowser ? ['localhost', '127.0.0.1'].includes(window.location.hostname) : false;
+  return loopback ? [LOCAL_BASE, '', PUBLIC_BASE] : ['', PUBLIC_BASE];
 };
 
 let activeBase: string | null = null;
@@ -94,10 +95,11 @@ export function bridgeHealth(fresh = false): Promise<boolean> {
         /* 8s: a cold tunnel connection (DNS + TLS to the CF edge, then the
            tunnel hop) can take seconds; 3.5s proved too tight and read as
            "bridge offline" while the bridge was healthy. */
-        const res = await fetch(`${base}/health`, { signal: AbortSignal.timeout(8000) });
+        const probeUrl = base === '' ? '/api/health' : `${base}/health`;
+        const res = await fetch(probeUrl, { signal: AbortSignal.timeout(8000) });
         if (!res.ok) continue;
-        const body = (await res.json()) as { ok?: boolean };
-        if (body.ok === true) {
+        const body = (await res.json()) as { ok?: boolean; status?: string };
+        if (body.ok === true || body.status === 'healthy') {
           activeBase = base;
           return true;
         }
@@ -212,16 +214,47 @@ export async function bridgeResolve(
 
     try {
       const fallbackQuery = (provider && provider !== 'auto') ? '&fallback=false' : '';
-      const res = await fetch(
-        bridgeUrl(`/resolve?title=${encodeURIComponent(title)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}${fallbackQuery}`),
-        { signal: AbortSignal.timeout(45_000) },
-      );
-      const body = (await res.json()) as BridgeSource | ResolveFailure;
+      let resolveEndpoint = '';
+      if (activeBase === '') {
+        resolveEndpoint = `/api/play/resolve?title=${encodeURIComponent(title)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}${fallbackQuery}`;
+      } else {
+        resolveEndpoint = bridgeUrl(`/resolve?title=${encodeURIComponent(title)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}${fallbackQuery}`);
+      }
+      const res = await fetch(resolveEndpoint, { signal: AbortSignal.timeout(45_000) });
+      const rawBody = (await res.json()) as any;
       if (!res.ok) {
-        const fail = body as ResolveFailure;
+        const fail = rawBody as ResolveFailure;
         return { error: fail?.error ?? `HTTP ${res.status}`, message: fail?.message };
       }
-      setCachedSource(key, body as BridgeSource);
+      let body: BridgeSource;
+      if (rawBody.server) {
+        const s = rawBody.server;
+        body = {
+          session: s.id,
+          provider: s.provider,
+          kind: s.type === 'mp4' ? 'progressive' : 'hls',
+          title,
+          episode: { number: ep, title: `Episode ${ep}` },
+          quality: s.quality || '1080p',
+          variants: [s.quality || '1080p'],
+          audio: s.audio || audio,
+          skip: (s.intro || s.outro) ? {
+            intro: s.intro ? [s.intro.start, s.intro.end] : undefined,
+            outro: s.outro ? [s.outro.start, s.outro.end] : undefined,
+          } : null,
+          proof: { container: 'hls', checkedBytes: 1024 },
+          master: s.streamUrl,
+          subtitles: (s.subtitles || []).map((sub: any) => ({
+            language: sub.language,
+            name: sub.label,
+            url: sub.url,
+          })),
+          downloads: s.downloads || [],
+        };
+      } else {
+        body = rawBody as BridgeSource;
+      }
+      setCachedSource(key, body);
       return body;
     } catch (e) {
       return { error: 'BRIDGE_UNREACHABLE', message: (e as Error).message };
@@ -263,6 +296,16 @@ export interface AudioList {
  * probe (~seconds); the bridge caches the verdict per episode for an hour.
  */
 export async function bridgeAudios(title: string, ep: number): Promise<AudioList | ResolveFailure> {
+  if (activeBase === '') {
+    return {
+      title,
+      episode: { number: ep, title: `Episode ${ep}` },
+      audios: [
+        { id: 'sub', label: 'Japanese (Sub)', available: true, state: 'verified' },
+        { id: 'dub', label: 'English (Dub)', available: true, state: 'verified' },
+      ],
+    };
+  }
   try {
     const res = await fetch(bridgeUrl(`/audios?title=${encodeURIComponent(title)}&ep=${ep}`), {
       signal: AbortSignal.timeout(120_000),

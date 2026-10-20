@@ -3,6 +3,12 @@ import { HttpError, errorResponse } from './_lib.js';
 
 const PROXY_TIMEOUT_MS = 25_000;
 
+const AD_DOMAIN_REGEX = /(googleads|doubleclick|adservice|adserver|popcash|propeller|adsterra|monetag|juicyads|exoclick|syndication|outbrain|taboola|trafficjunky|ad-maven)/i;
+
+/**
+ * Sanitizes HLS .m3u8 manifests by removing injected advertisement blocks,
+ * SCTE-35 ad cue tags, foreign ad tracker URLs, and rewriting all legitimate URIs.
+ */
 function rewriteM3u8(text, baseUrl, referer, proxyBase) {
   const mapUri = (uri) => {
     try {
@@ -15,26 +21,64 @@ function rewriteM3u8(text, baseUrl, referer, proxyBase) {
     }
   };
 
-  return text
-    .split(/\r?\n/)
-    .map((raw) => {
-      const line = raw.trim();
-      if (!line) return line;
-      if (line.startsWith('#')) {
-        return line.replace(/URI="([^"]+)"/g, (_m, uri) => `URI="${mapUri(uri)}"`);
+  const lines = text.split(/\r?\n/);
+  const result = [];
+  let skippingAdCue = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    const raw = lines[i];
+    const line = raw.trim();
+    if (!line) continue;
+
+    // Detect SCTE-35 and HLS Ad Insertion Cue markers
+    if (line.startsWith('#EXT-X-CUE-OUT') || line.startsWith('#EXT-OATCLS-SCTE35')) {
+      skippingAdCue = true;
+      continue;
+    }
+    if (line.startsWith('#EXT-X-CUE-IN')) {
+      skippingAdCue = false;
+      continue;
+    }
+
+    if (skippingAdCue) {
+      continue;
+    }
+
+    // Drop injected ad segment URLs
+    if (AD_DOMAIN_REGEX.test(line)) {
+      if (result.length > 0 && result[result.length - 1].startsWith('#EXTINF')) {
+        result.pop();
       }
-      return mapUri(line);
-    })
-    .join('\n');
+      continue;
+    }
+
+    if (line.startsWith('#')) {
+      // Rewrite URIs inside tags like #EXT-X-KEY, #EXT-X-MAP, #EXT-X-MEDIA
+      if (line.includes('URI=')) {
+        result.push(line.replace(/URI="([^"]+)"/g, (_m, uri) => `URI="${mapUri(uri)}"`));
+      } else {
+        result.push(line);
+      }
+      continue;
+    }
+
+    // Legitimate video / sub-playlist URI
+    result.push(mapUri(line));
+  }
+
+  return result.join('\n');
 }
 
 /**
  * Edge Proxy Endpoint:
  * Proxies .m3u8 manifests and media segments, rewriting URIs to bypass CORS and anti-hotlink protections.
+ * Implements Ghost Proxy edge caching via Cloudflare Cache API for video segments.
  *
  * GET /api/proxy?url=<targetUrl>&referer=<referer>
  */
-export const onRequest = async ({ request }) => {
+export const onRequest = async (context) => {
+  const { request, waitUntil } = context;
+
   if (request.method === 'OPTIONS') {
     return new Response(null, {
       status: 204,
@@ -75,6 +119,26 @@ export const onRequest = async ({ request }) => {
       throw new HttpError(400, 'bad_request', 'Only HTTP and HTTPS URLs are supported');
     }
 
+    const isPlaylist =
+      targetUrl.includes('.m3u8') ||
+      parsedTarget.pathname.endsWith('.m3u8');
+
+    // Ghost Proxy Edge Caching: Check Cloudflare Cache API for immutable segments
+    // @ts-ignore
+    const edgeCache = typeof caches !== 'undefined' && caches.default ? caches.default : null;
+    if (edgeCache && !isPlaylist && request.method === 'GET' && !request.headers.get('range')) {
+      const cachedRes = await edgeCache.match(request);
+      if (cachedRes) {
+        const hitHeaders = new Headers(cachedRes.headers);
+        hitHeaders.set('X-Edge-Cache', 'HIT');
+        hitHeaders.set('Access-Control-Allow-Origin', '*');
+        return new Response(cachedRes.body, {
+          status: cachedRes.status,
+          headers: hitHeaders,
+        });
+      }
+    }
+
     const referer = customReferer || `${parsedTarget.origin}/`;
     const upstreamHeaders = {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
@@ -94,26 +158,26 @@ export const onRequest = async ({ request }) => {
       signal: AbortSignal.timeout(PROXY_TIMEOUT_MS),
     });
 
-    const isPlaylist =
-      targetUrl.includes('.m3u8') ||
+    const isUpstreamPlaylist =
+      isPlaylist ||
       (upstreamRes.headers.get('content-type') || '').includes('mpegurl');
 
     const responseHeaders = new Headers();
     responseHeaders.set('Access-Control-Allow-Origin', '*');
     responseHeaders.set('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS');
     responseHeaders.set('Access-Control-Allow-Headers', 'Range, Accept-Encoding');
-    responseHeaders.set('Access-Control-Expose-Headers', 'Content-Length, Content-Range, Accept-Ranges');
+    responseHeaders.set('Access-Control-Expose-Headers', 'Content-Length, Content-Range, Accept-Ranges, X-Edge-Cache');
 
     const acceptRanges = upstreamRes.headers.get('accept-ranges');
     if (acceptRanges) responseHeaders.set('Accept-Ranges', acceptRanges);
 
     const contentLength = upstreamRes.headers.get('content-length');
-    if (contentLength && !isPlaylist) responseHeaders.set('Content-Length', contentLength);
+    if (contentLength && !isUpstreamPlaylist) responseHeaders.set('Content-Length', contentLength);
 
     const contentRange = upstreamRes.headers.get('content-range');
     if (contentRange) responseHeaders.set('Content-Range', contentRange);
 
-    if (isPlaylist) {
+    if (isUpstreamPlaylist) {
       responseHeaders.set('Content-Type', 'application/vnd.apple.mpegurl; charset=utf-8');
       responseHeaders.set('Cache-Control', 'public, max-age=10, s-maxage=30');
 
@@ -131,15 +195,27 @@ export const onRequest = async ({ request }) => {
       });
     }
 
-    // Media segment or video stream
+    // Media segment or video stream: cache permanently at the edge (Ghost Proxy)
     const contentType = upstreamRes.headers.get('content-type') || 'video/mp2t';
     responseHeaders.set('Content-Type', contentType);
-    responseHeaders.set('Cache-Control', 'public, max-age=86400, s-maxage=86400, immutable');
+    responseHeaders.set('Cache-Control', 'public, max-age=31536000, s-maxage=31536000, immutable');
+    responseHeaders.set('X-Edge-Cache', 'MISS');
 
-    return new Response(upstreamRes.body, {
+    const finalResponse = new Response(upstreamRes.body, {
       status: upstreamRes.status,
       headers: responseHeaders,
     });
+
+    // Asynchronously store segment in Cloudflare Edge Cache
+    if (edgeCache && upstreamRes.status === 200 && request.method === 'GET' && !range) {
+      const cacheClone = finalResponse.clone();
+      const wait = typeof waitUntil === 'function' ? waitUntil : (context?.waitUntil?.bind(context));
+      if (wait) {
+        wait(edgeCache.put(request, cacheClone).catch(() => {}));
+      }
+    }
+
+    return finalResponse;
   } catch (err) {
     return errorResponse(err);
   }

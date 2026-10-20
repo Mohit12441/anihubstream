@@ -107,7 +107,7 @@ export const onRequestGet = async ({ request, env }) => {
           query: q,
           hits,
           estimatedTotalHits: hits.length,
-          engine: engineUsed,
+          engine: 'd1_fallback',
         },
         { cache: 'public, max-age=60, s-maxage=180' }
       );
