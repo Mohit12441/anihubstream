@@ -69,26 +69,45 @@ export const onRequestGet = async ({ request, env }) => {
 
     // 2. Fallback to D1 SQLite Catalogue
     if (env.ANIHUB) {
-      // Build FTS5 MATCH query: tokenize terms, require all terms (AND) and allow prefix matching
-      const ftsQuery = q.trim().split(/\s+/).map(term => `${term.replace(/"/g, '\"')}*`).join(' ');
+      let rows = null;
+      let engineUsed = 'd1_fts5';
 
-      const rows = await env.ANIHUB.prepare(
-        `SELECT a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status, a.art, a.key_art, a.accent, a.synopsis
-         FROM anime_fts f JOIN anime a ON a.rowid = f.rowid
-         WHERE f.anime_fts MATCH ?1
-         ORDER BY bm25(f) DESC, a.rating DESC, a.year DESC
-         LIMIT ?2`
-      )
-        .bind(ftsQuery, limit)
-        .all();
+      try {
+        // Build FTS5 MATCH query: tokenize terms, require all terms (AND) and allow prefix matching
+        const ftsQuery = q.trim().split(/\s+/).map((term) => `"${term.replace(/"/g, '""')}"*`).join(' ');
+        rows = await env.ANIHUB.prepare(
+          `SELECT a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status, a.art, a.key_art, a.accent, a.synopsis
+           FROM anime_fts f JOIN anime a ON a.rowid = f.rowid
+           WHERE f.anime_fts MATCH ?1
+           ORDER BY bm25(f) DESC, a.rating DESC, a.year DESC
+           LIMIT ?2`
+        )
+          .bind(ftsQuery, limit)
+          .all();
+      } catch {
+        // Fallback to indexed LIKE search if anime_fts virtual table is not yet provisioned in D1
+        engineUsed = 'd1_fallback';
+        const folded = foldSearch(q);
+        const pattern = `%${folded}%`;
+        rows = await env.ANIHUB.prepare(
+          `SELECT a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status, a.art, a.key_art, a.accent, a.synopsis
+           FROM anime a
+           WHERE a.search_text LIKE ?1 OR a.title LIKE ?2
+           ORDER BY a.rating DESC, a.year DESC
+           LIMIT ?3`
+        )
+          .bind(pattern, `%${q}%`, limit)
+          .all()
+          .catch(() => ({ results: [] }));
+      }
 
-      const hits = (rows.results || []).map((r) => cardFromRow(r));
+      const hits = (rows?.results || []).map((r) => cardFromRow(r));
       return ok(
         {
           query: q,
           hits,
           estimatedTotalHits: hits.length,
-          engine: 'd1_fallback',
+          engine: engineUsed,
         },
         { cache: 'public, max-age=60, s-maxage=180' }
       );
