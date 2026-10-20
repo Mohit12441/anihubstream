@@ -288,6 +288,30 @@ export async function syncHiAnime({ pagesPerRun = PAGES_PER_RUN, force = false }
           itemsCreated++;
         }
 
+        // Keep anime_provider_mapping and anime_id_map synchronized
+        try {
+          const rawSlug = String(item.slug).trim();
+          await d1Query(
+            `INSERT INTO anime_provider_mapping (anime_id, provider_id, provider_slug, confidence)
+             VALUES (?1, 'hianime', ?2, 1.0)
+             ON CONFLICT(anime_id, provider_id) DO UPDATE SET
+               provider_slug = excluded.provider_slug,
+               confidence = excluded.confidence,
+               updated_at = datetime('now')`,
+            [record.id, rawSlug]
+          ).catch(() => null);
+
+          await d1Query(
+            `INSERT INTO anime_id_map (anime_id, mal_id, hianime_slug, confidence)
+             VALUES (?1, ?2, ?3, 1.0)
+             ON CONFLICT(anime_id) DO UPDATE SET
+               mal_id = coalesce(excluded.mal_id, anime_id_map.mal_id),
+               hianime_slug = excluded.hianime_slug,
+               updated_at = datetime('now')`,
+            [record.id, malId, rawSlug]
+          ).catch(() => null);
+        } catch {}
+
         itemsProcessed++;
       }
 

@@ -39,11 +39,17 @@ export const onRequestGet = async ({ request, params, env }) => {
 
       if (!card) {
         try {
-          const mapped = await env.ANIHUB.prepare(
-            `SELECT anime_id FROM anime_id_map
-             WHERE anikoto_slug = ?1 OR hianime_slug = ?1 OR aniwatch_slug = ?1 OR adb_slug = ?1 OR waw_slug = ?1
-             LIMIT 1`
-          ).bind(id).first();
+          let mapped = await env.ANIHUB.prepare(
+            `SELECT anime_id FROM anime_provider_mapping WHERE provider_slug = ?1 LIMIT 1`
+          ).bind(id).first().catch(() => null);
+
+          if (!mapped?.anime_id) {
+            mapped = await env.ANIHUB.prepare(
+              `SELECT anime_id FROM anime_id_map
+               WHERE anikoto_slug = ?1 OR hianime_slug = ?1 OR aniwatch_slug = ?1 OR adb_slug = ?1 OR waw_slug = ?1
+               LIMIT 1`
+            ).bind(id).first().catch(() => null);
+          }
 
           if (mapped?.anime_id) {
             card = await env.ANIHUB.prepare(`SELECT ${CARD_COLUMNS} FROM anime a WHERE a.id = ?1`)
@@ -52,7 +58,7 @@ export const onRequestGet = async ({ request, params, env }) => {
               .catch(() => null);
           }
         } catch {
-          // anime_id_map table optional in edge environment
+          // provider mapping table optional in edge environment
         }
       }
     }

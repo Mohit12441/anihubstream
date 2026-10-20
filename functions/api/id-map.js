@@ -80,6 +80,17 @@ export const onRequestGet = async ({ request, env }) => {
       return json({ found: false }, { status: 404, cache: 'public, max-age=300' });
     }
 
+    let providers = [];
+    try {
+      const targetId = row ? row.anime_id : animeId;
+      if (targetId) {
+        const { results: provs } = await env.ANIHUB.prepare(
+          `SELECT provider_id, provider_slug, confidence FROM anime_provider_mapping WHERE anime_id = ?1`
+        ).bind(targetId).all();
+        providers = provs || [];
+      }
+    } catch {}
+
     return ok({
       animeId: row.anime_id,
       malId: row.mal_id,
@@ -90,6 +101,7 @@ export const onRequestGet = async ({ request, env }) => {
       aniwatchSlug: row.aniwatch_slug,
       adbSlug: row.adb_slug,
       wawSlug: row.waw_slug,
+      providers,
       updatedAt: row.updated_at,
       found: true,
     });
@@ -134,6 +146,27 @@ export const onRequestPost = async ({ request, env }) => {
       animeId, malId, anilistId, kitsuId,
       anikotoSlug, hianimeSlug, aniwatchSlug, adbSlug, wawSlug
     ).run();
+
+    // Synchronize into normalized anime_provider_mapping table
+    const providerEntries = [
+      { id: 'anikoto', slug: anikotoSlug },
+      { id: 'hianime', slug: hianimeSlug },
+      { id: 'aniwatch', slug: aniwatchSlug },
+      { id: 'animedubhindi', slug: adbSlug },
+      { id: 'watchanimeworld', slug: wawSlug },
+    ];
+
+    for (const p of providerEntries) {
+      if (p.slug) {
+        await env.ANIHUB.prepare(
+          `INSERT INTO anime_provider_mapping (anime_id, provider_id, provider_slug, confidence)
+           VALUES (?1, ?2, ?3, 1.0)
+           ON CONFLICT(anime_id, provider_id) DO UPDATE SET
+             provider_slug = excluded.provider_slug,
+             updated_at = datetime('now')`
+        ).bind(animeId, p.id, p.slug).run().catch(() => null);
+      }
+    }
 
     return ok({ success: true, animeId });
   } catch (err) {

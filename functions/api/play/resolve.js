@@ -65,11 +65,18 @@ export const onRequestGet = async ({ request, env }) => {
     let resolvedMalId = mal ? Number.parseInt(mal, 10) : 0;
     if (!resolvedMalId && env.ANIHUB) {
       try {
-        const mapRow = await env.ANIHUB.prepare(
-          `SELECT mal_id FROM anime_id_map
-           WHERE anime_id = ?1 OR anikoto_slug = ?1 OR hianime_slug = ?1
-           LIMIT 1`
+        let mapRow = await env.ANIHUB.prepare(
+          `SELECT a.mal_id FROM anime_provider_mapping m JOIN anime a ON a.id = m.anime_id
+           WHERE m.provider_slug = ?1 LIMIT 1`
         ).bind(title).first().catch(() => null);
+
+        if (!mapRow?.mal_id) {
+          mapRow = await env.ANIHUB.prepare(
+            `SELECT mal_id FROM anime_id_map
+             WHERE anime_id = ?1 OR anikoto_slug = ?1 OR hianime_slug = ?1
+             LIMIT 1`
+          ).bind(title).first().catch(() => null);
+        }
 
         if (mapRow?.mal_id) {
           resolvedMalId = Number(mapRow.mal_id);
