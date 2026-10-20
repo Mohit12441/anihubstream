@@ -49,6 +49,7 @@ export const onRequestGet = async ({ request, env }) => {
     const ep = Math.max(1, Number.parseInt(url.searchParams.get('ep') ?? '1', 10) || 1);
     const rawServerParam = url.searchParams.get('server') || '';
     let serverParam = rawServerParam;
+    if (serverParam.toLowerCase() === 'mega') serverParam = 'MegaPlay';
     let audio = url.searchParams.get('audio') === 'hindi' ? 'hindi' : url.searchParams.get('audio') === 'dub' ? 'dub' : 'sub';
     if (serverParam.endsWith('-dub')) {
       audio = 'dub';

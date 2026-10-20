@@ -1,4 +1,5 @@
 import { useMemo, useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { CheckCircle2, Headphones, Loader2, Server, Sparkles } from 'lucide-react';
 import type { PlayServer } from './PlayerInput';
 
@@ -95,25 +96,31 @@ export function ServerSwitcher({
     return [{ key: 'all', name: 'All', icon: '🌐' }, ...list];
   }, [servers]);
 
+  const [searchParams] = useSearchParams();
+  const urlProvider = (searchParams.get('provider') || '').toLowerCase();
   const activeServer = servers.find((s) => s.id === activeServerId);
-  const [selectedProvider, setSelectedProvider] = useState<string>('all');
+
+  const initialProvider = (urlProvider && urlProvider !== 'all' && urlProvider !== 'providers') ? urlProvider : 'all';
+  const [selectedProvider, setSelectedProvider] = useState<string>(initialProvider);
 
   const initialCategory = activeServer ? getAudioCategory(activeServer) : 'sub';
   const [selectedCategory, setSelectedCategory] = useState<AudioCategory>(initialCategory);
 
-  // Synchronize category when activeServerId changes externally, keeping provider as 'all' unless specified
+  // Synchronize category when activeServerId changes externally
   useEffect(() => {
     if (activeServer) {
       setSelectedCategory(getAudioCategory(activeServer));
     }
   }, [activeServerId, activeServer]);
 
-  // Ensure selectedProvider is valid
+  // Synchronize provider from URL param or ensure selectedProvider is valid in available list
   useEffect(() => {
-    if (availableProviders.length > 0 && !availableProviders.some((p) => p.key === selectedProvider)) {
+    if (urlProvider && urlProvider !== 'all' && urlProvider !== 'providers' && availableProviders.some((p) => p.key === urlProvider)) {
+      setSelectedProvider(urlProvider);
+    } else if (availableProviders.length > 0 && !availableProviders.some((p) => p.key === selectedProvider)) {
       setSelectedProvider('all');
     }
-  }, [availableProviders, selectedProvider]);
+  }, [urlProvider, availableProviders, selectedProvider]);
 
   // Available audio categories across all servers
   const availableCategories = useMemo(() => {

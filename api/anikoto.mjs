@@ -911,17 +911,20 @@ const malDataIdCache = new Map(); // ${mal}:${ep}:${lang} -> { dataId, exp } (12
 const malMissCache = new Map();   // ${mal}:${ep}:${lang} -> exp (10m TTL)
 const malDubDownCache = new Map(); // ${mal}:${ep} -> exp (30m TTL)
 
-export async function resolveByMal(malId, ep, audio = 'sub', { signal } = {}) {
+export async function resolveByMal(malId, ep, audio = 'sub', { signal, deadline = Date.now() + 12_000 } = {}) {
   if (process.env.MAL_RESOLVE === 'off') return null;
   const numMal = Number(malId);
   const numEp = Number(ep);
   if (!numMal || numMal <= 0 || !numEp || numEp <= 0) return null;
 
+  const budget = () => Math.max(1_000, deadline - Date.now());
+  if (deadline - Date.now() <= 500) return null;
+
   const lang = audio === 'dub' ? 'dub' : 'sub';
   const cacheKey = `${numMal}:${numEp}:${lang}`;
 
   if (lang === 'dub' && (malDubDownCache.get(`${numMal}:${numEp}`) ?? 0) > Date.now()) {
-    return resolveByMal(numMal, numEp, 'sub', { signal });
+    return resolveByMal(numMal, numEp, 'sub', { signal, deadline });
   }
 
   const missExp = malMissCache.get(cacheKey);
@@ -932,7 +935,10 @@ export async function resolveByMal(malId, ep, audio = 'sub', { signal } = {}) {
   const fail = () => {
     if (lang === 'dub') {
       malDubDownCache.set(`${numMal}:${numEp}`, Date.now() + 30 * 60 * 1000);
-      return resolveByMal(numMal, numEp, 'sub', { signal });
+      if (deadline - Date.now() > 1_000) {
+        return resolveByMal(numMal, numEp, 'sub', { signal, deadline });
+      }
+      return null;
     }
     markMiss();
     return null;
@@ -945,7 +951,7 @@ export async function resolveByMal(malId, ep, audio = 'sub', { signal } = {}) {
       dataId = cached.dataId;
     } else {
       const embedUrl = `https://megaplay.buzz/stream/mal/${numMal}/${numEp}/${lang}`;
-      const embedTimeout = AbortSignal.timeout(8_000);
+      const embedTimeout = AbortSignal.timeout(Math.min(8_000, budget()));
       const embedSignal = signal && typeof AbortSignal.any === 'function'
         ? AbortSignal.any([signal, embedTimeout])
         : embedTimeout;
@@ -973,7 +979,7 @@ export async function resolveByMal(malId, ep, audio = 'sub', { signal } = {}) {
     }
 
     const sourcesUrl = `https://megaplay.buzz/stream/getSources?id=${encodeURIComponent(dataId)}&platform=OTHER`;
-    const sourcesTimeout = AbortSignal.timeout(8_000);
+    const sourcesTimeout = AbortSignal.timeout(Math.min(8_000, budget()));
     const sourcesSignal = signal && typeof AbortSignal.any === 'function'
       ? AbortSignal.any([signal, sourcesTimeout])
       : sourcesTimeout;
@@ -1005,7 +1011,11 @@ export async function resolveByMal(malId, ep, audio = 'sub', { signal } = {}) {
     // Expand master into per-variant media playlists so snackPlayable can sniff MPEG-TS/MP4 segments
     let variants = [{ url: streamUrl, quality: masterQuality, headers }];
     try {
-      const master = await getText(streamUrl, { headers, signal });
+      const masterTimeout = AbortSignal.timeout(Math.min(5_000, budget()));
+      const masterSignal = signal && typeof AbortSignal.any === 'function'
+        ? AbortSignal.any([signal, masterTimeout])
+        : masterTimeout;
+      const master = await getText(streamUrl, { headers, signal: masterSignal });
       const dir = new URL(media).pathname.replace(/\/[^/]*\.m3u8$/i, "");
       const byQuality = new Map();
       for (const v of parseVariants(master.body, streamUrl)) {

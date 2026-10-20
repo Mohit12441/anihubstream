@@ -776,6 +776,9 @@ async function buildSourceProvider(provider, { title, ep, audio, server, mal }) 
   if (selectedServer && selectedServer.endsWith('-dub')) {
     targetAudio = 'dub';
     selectedServer = selectedServer.replace(/-dub$/, '');
+  if (selectedServer && selectedServer.toLowerCase() === 'mega') {
+    selectedServer = 'MegaPlay';
+  }
   }
   const handler = providerHandlers[norm];
   if (!handler) throw new Error(`Unsupported provider: ${provider}`);

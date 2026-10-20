@@ -146,7 +146,8 @@ export const onRequestGet = async ({ request, env }) => {
     const ep = Math.max(1, Number.parseInt(url.searchParams.get('ep') ?? '1', 10) || 1);
     const audio = url.searchParams.get('audio') === 'hindi' ? 'hindi' : url.searchParams.get('audio') === 'dub' ? 'dub' : 'sub';
     const provider = url.searchParams.get('provider') || 'anikoto';
-    const serverParam = url.searchParams.get('server') || '';
+    let serverParam = url.searchParams.get('server') || '';
+    if (serverParam.toLowerCase() === 'mega') serverParam = 'MegaPlay';
 
     let resolvedTitle = titleParam;
     let resolvedMalId = malIdParam ? Number.parseInt(malIdParam, 10) : 0;

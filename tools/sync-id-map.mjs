@@ -44,14 +44,14 @@ export function buildIdMappings() {
     const baseSlug = normalizeSlug(animeId);
 
     // Compute provider slugs with default heuristic confidence
-    const anikotoSlug = baseSlug;
-    const hianimeSlug = baseSlug;
-    const aniwatchSlug = baseSlug;
-    const adbSlug = baseSlug;
-    const wawSlug = baseSlug;
+    const anikotoSlug = item.anikoto || baseSlug;
+    const hianimeSlug = item.hianime || null;
+    const aniwatchSlug = item.aniwatch || null;
+    const adbSlug = item.adb || null;
+    const wawSlug = item.waw || null;
 
-    // Confidence is 1.0 when both Kitsu and AniList IDs are present and confirmed
-    const confidence = kitsuId && anilistId ? 1.0 : 0.85;
+    // Confidence is 1.0 when MAL or (Kitsu and AniList) are present and confirmed
+    const confidence = malId ? 1.0 : (kitsuId && anilistId ? 1.0 : 0.85);
 
     mappings.push({
       anime_id: animeId,
