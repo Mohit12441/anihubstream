@@ -182,7 +182,8 @@ export const onRequestGet = async ({ request, env }) => {
           animeRow = await env.ANIHUB.prepare(
             `SELECT a.id, a.title, a.source_ids, a.skip_key_id, a.skip_key_space,
                     e.runtime_seconds,
-                    m.mal_id, m.kitsu_id, m.anilist_id
+                    m.mal_id, m.kitsu_id, m.anilist_id,
+                    m.anikoto_slug, m.hianime_slug
              FROM anime a
              LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
              LEFT JOIN anime_id_map m ON m.anime_id = a.id
@@ -433,13 +434,15 @@ export const onRequestGet = async ({ request, env }) => {
     // If stream bridge is cold or external to Cloudflare edge, return candidate servers
     if (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl)) {
       const scoped = isScoped ? defaultServers.filter((s) => s.provider === requested) : defaultServers;
+      const isScopedUnavailable = isScoped && animeRow && !animeRow[`${requested}_slug`];
 
       return ok({
         title: resolvedTitle,
         episode: ep,
         malId: resolvedMalId || null,
         scopedProvider: isScoped && scoped.length ? requested : null,
-        servers: scoped.length ? scoped : defaultServers,
+        scopedProviderUnavailable: Boolean(isScopedUnavailable),
+        servers: isScopedUnavailable ? defaultServers : (scoped.length ? scoped : defaultServers),
         aniskip: aniskipData || null,
       }, {
         cache: 'no-store, no-cache, must-revalidate',
