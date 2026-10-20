@@ -903,3 +903,148 @@ export const PROVIDER = { id: "anikoto", name: "AniKoto", baseUrl: ANIKOTO_MAIN,
  * rule); `audio`/`audioType` above is only the site's claim.
  */
 export const dubPairVerdict = makeDubPairVerdict(resolve, defaultAniKotoReferer);
+
+
+// ------------------------------------------------- MAL Direct Resolution
+// Caching only dataId (12h TTL) and re-running getSources per play keeps the token fresh on every play.
+const malDataIdCache = new Map(); // ${mal}:${ep}:${lang} -> { dataId, exp } (12h TTL)
+const malMissCache = new Map();   // ${mal}:${ep}:${lang} -> exp (10m TTL)
+const malDubDownCache = new Map(); // ${mal}:${ep} -> exp (30m TTL)
+
+export async function resolveByMal(malId, ep, audio = 'sub', { signal } = {}) {
+  if (process.env.MAL_RESOLVE === 'off') return null;
+  const numMal = Number(malId);
+  const numEp = Number(ep);
+  if (!numMal || numMal <= 0 || !numEp || numEp <= 0) return null;
+
+  const lang = audio === 'dub' ? 'dub' : 'sub';
+  const cacheKey = `${numMal}:${numEp}:${lang}`;
+
+  if (lang === 'dub' && (malDubDownCache.get(`${numMal}:${numEp}`) ?? 0) > Date.now()) {
+    return resolveByMal(numMal, numEp, 'sub', { signal });
+  }
+
+  const missExp = malMissCache.get(cacheKey);
+  if (missExp && missExp > Date.now()) return null;
+
+  const markMiss = () => malMissCache.set(cacheKey, Date.now() + 10 * 60 * 1000);
+
+  const fail = () => {
+    if (lang === 'dub') {
+      malDubDownCache.set(`${numMal}:${numEp}`, Date.now() + 30 * 60 * 1000);
+      return resolveByMal(numMal, numEp, 'sub', { signal });
+    }
+    markMiss();
+    return null;
+  };
+
+  try {
+    let dataId;
+    const cached = malDataIdCache.get(cacheKey);
+    if (cached && cached.exp > Date.now()) {
+      dataId = cached.dataId;
+    } else {
+      const embedUrl = `https://megaplay.buzz/stream/mal/${numMal}/${numEp}/${lang}`;
+      const embedTimeout = AbortSignal.timeout(8_000);
+      const embedSignal = signal && typeof AbortSignal.any === 'function'
+        ? AbortSignal.any([signal, embedTimeout])
+        : embedTimeout;
+
+      const embedRes = await fetch(embedUrl, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+          Referer: 'https://megaplay.buzz/',
+        },
+        signal: embedSignal,
+      });
+
+      if (!embedRes.ok) {
+        await embedRes.body?.cancel().catch(() => {});
+        return fail();
+      }
+
+      const html = await embedRes.text();
+      dataId = html.match(/data-id=["']([^"']+)["']/i)?.[1]?.trim();
+      if (!dataId) {
+        return fail();
+      }
+
+      malDataIdCache.set(cacheKey, { dataId, exp: Date.now() + 12 * 60 * 60 * 1000 });
+    }
+
+    const sourcesUrl = `https://megaplay.buzz/stream/getSources?id=${encodeURIComponent(dataId)}&platform=OTHER`;
+    const sourcesTimeout = AbortSignal.timeout(8_000);
+    const sourcesSignal = signal && typeof AbortSignal.any === 'function'
+      ? AbortSignal.any([signal, sourcesTimeout])
+      : sourcesTimeout;
+
+    const sourcesRes = await fetch(sourcesUrl, {
+      headers: {
+        Referer: `https://megaplay.buzz/stream/mal/${numMal}/${numEp}/${lang}`,
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+      signal: sourcesSignal,
+    });
+
+    if (!sourcesRes.ok) {
+      await sourcesRes.body?.cancel().catch(() => {});
+      return fail();
+    }
+
+    const payload = await sourcesRes.json().catch(() => null);
+    if (!payload) return fail();
+
+    const media = recoverFileUrl(payload);
+    if (!media) return fail();
+
+    const token = buildMegaPlayToken(media);
+    const streamUrl = token ? `${media}?token=${token}` : media;
+    const headers = { referer: 'https://megaplay.buzz/' };
+    const masterQuality = typeof payload.RESOLUTION === "string" ? qualityFromName(payload.RESOLUTION) : "unknown";
+
+    // Expand master into per-variant media playlists so snackPlayable can sniff MPEG-TS/MP4 segments
+    let variants = [{ url: streamUrl, quality: masterQuality, headers }];
+    try {
+      const master = await getText(streamUrl, { headers, signal });
+      const dir = new URL(media).pathname.replace(/\/[^/]*\.m3u8$/i, "");
+      const byQuality = new Map();
+      for (const v of parseVariants(master.body, streamUrl)) {
+        let path; try { path = new URL(v.url).pathname; } catch { continue; }
+        if (!path.startsWith(`${dir}/`) || v.url === streamUrl) continue;
+        const q = v.height ?? "unknown";
+        if (byQuality.has(q) && byQuality.get(q).bandwidth >= v.bandwidth) continue;
+        byQuality.set(q, v);
+      }
+      if (byQuality.size > 0) {
+        variants = [...byQuality.values()]
+          .sort((a, b) => (b.height ?? 0) - (a.height ?? 0) || b.bandwidth - a.bandwidth)
+          .map((v) => ({ url: `${v.url}${token ? `?token=${token}` : ""}`, quality: v.height ?? "unknown", headers }));
+      }
+    } catch { /* keep the master hand-out */ }
+
+    const subtitles = parseTracks(payload, headers.referer);
+
+    const pair = (v) => {
+      if (!v) return undefined;
+      if (Array.isArray(v) && v.length >= 2 && (v[0] > 0 || v[1] > 0)) return [Number(v[0]), Number(v[1])];
+      if (typeof v === 'object' && (v.start > 0 || v.end > 0)) return [Number(v.start), Number(v.end)];
+      return undefined;
+    };
+    const intro = pair(payload.intro);
+    const outro = pair(payload.outro);
+    const skip = (intro || outro) ? { ...(intro ? { intro } : {}), ...(outro ? { outro } : {}) } : undefined;
+
+    return {
+      provider: 'anikoto',
+      extractor: 'megaplay',
+      master: { url: streamUrl, headers },
+      variants,
+      subtitles,
+      skip,
+      audio: lang,
+    };
+  } catch (e) {
+    if (process.env.MAL_DEBUG) console.warn('[megaplay-mal]', malId, ep, lang, e.message);
+    return fail();
+  }
+}

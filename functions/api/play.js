@@ -140,7 +140,7 @@ async function fetchAniSkip(malId, ep, duration) {
 export const onRequestGet = async ({ request, env }) => {
   try {
     const url = new URL(request.url);
-    const id = url.searchParams.get('id') || url.searchParams.get('animeId') || '';
+    let id = url.searchParams.get('id') || url.searchParams.get('animeId') || '';
     const titleParam = url.searchParams.get('title') || '';
     const malIdParam = url.searchParams.get('malId') || '';
     const ep = Math.max(1, Number.parseInt(url.searchParams.get('ep') ?? '1', 10) || 1);
@@ -155,6 +155,20 @@ export const onRequestGet = async ({ request, env }) => {
     // Look up anime metadata and ID mappings in D1
     if (env.ANIHUB) {
       if (id) {
+        try {
+          const r = await env.ANIHUB.prepare('SELECT to_id FROM anime_redirect WHERE from_id = ?1').bind(id).first();
+          if (r?.to_id) {
+            id = r.to_id;
+          } else {
+            const p = await env.ANIHUB.prepare(
+              `SELECT id FROM anime WHERE json_extract(source_ids, '$.hianime') = ?1 OR json_extract(source_ids, '$.anikoto') = ?1 LIMIT 1`
+            ).bind(id).first();
+            if (p?.id) id = p.id;
+          }
+        } catch {
+          // anime_redirect table may not exist yet or no redirect
+        }
+
         let animeRow = null;
         try {
           animeRow = await env.ANIHUB.prepare(
@@ -199,6 +213,15 @@ export const onRequestGet = async ({ request, env }) => {
       }
     }
 
+    if (!resolvedTitle && id) {
+      resolvedTitle = id
+        .replace(/^[a-z0-9_-]+:/i, '')
+        .replace(/-[a-z0-9]{5,8}$/i, '')
+        .replace(/[-_:]+/g, ' ')
+        .trim()
+        .replace(/\b\w/g, (c) => c.toUpperCase());
+    }
+
     if (!resolvedTitle) {
       throw new HttpError(400, 'bad_request', 'Could not determine anime title from id or title query parameter');
     }
@@ -210,15 +233,16 @@ export const onRequestGet = async ({ request, env }) => {
     const [aniskipData, bridgeRes] = await Promise.all([
       fetchAniSkip(resolvedMalId, ep, durationSeconds),
       (async () => {
-        const resolveUrl = new URL(`${bridgeBase}/resolve`);
-        resolveUrl.searchParams.set('title', resolvedTitle);
-        resolveUrl.searchParams.set('ep', String(ep));
-        resolveUrl.searchParams.set('audio', audio);
-        if (provider) resolveUrl.searchParams.set('provider', provider);
-        if (serverParam) resolveUrl.searchParams.set('server', serverParam);
+        const resolveBridgeUrl = new URL(`${bridgeBase}/resolve`);
+        resolveBridgeUrl.searchParams.set('title', resolvedTitle);
+        resolveBridgeUrl.searchParams.set('ep', String(ep));
+        resolveBridgeUrl.searchParams.set('audio', audio);
+        if (provider) resolveBridgeUrl.searchParams.set('provider', provider);
+        if (serverParam) resolveBridgeUrl.searchParams.set('server', serverParam);
+        if (resolvedMalId) resolveBridgeUrl.searchParams.set('mal', String(resolvedMalId));
 
         try {
-          const res = await fetch(resolveUrl.toString(), {
+          const res = await fetch(resolveBridgeUrl.toString(), {
             headers: { accept: 'application/json' },
             signal: AbortSignal.timeout(BRIDGE_TIMEOUT_MS),
           });
@@ -230,178 +254,187 @@ export const onRequestGet = async ({ request, env }) => {
       })(),
     ]);
 
+    const resolveUrl = (extra) => {
+      const p = new URLSearchParams({ title: resolvedTitle, ep: String(ep), ...extra });
+      if (resolvedMalId) p.set('mal', String(resolvedMalId));
+      return `/api/play/resolve?${p}`;
+    };
+
+    const requested = (url.searchParams.get('provider') || '').toLowerCase();
+    const isScoped = requested && !['all', 'providers', 'auto'].includes(requested);
+
+    const defaultServers = [
+      {
+        id: 'anikoto:HD-1',
+        name: 'AniKoto · HD-1',
+        provider: 'anikoto',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'anikoto', server: 'HD-1' }),
+        type: 'hls',
+        quality: '1080',
+        audio: 'sub',
+        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'anikoto:Vidstream-1',
+        name: 'AniKoto · Vidstream-1',
+        provider: 'anikoto',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'anikoto', server: 'Vidstream-1' }),
+        type: 'hls',
+        quality: '1080',
+        audio: 'sub',
+        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'anikoto:Vidstream-2',
+        name: 'AniKoto · Vidstream-2',
+        provider: 'anikoto',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'anikoto', server: 'Vidstream-2' }),
+        type: 'hls',
+        quality: '1080',
+        audio: 'sub',
+        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'anikoto:HD-2',
+        name: 'AniKoto · HD-2',
+        provider: 'anikoto',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'dub', provider: 'anikoto', server: 'HD-2' }),
+        type: 'dub',
+        quality: '1080p',
+        audio: 'dub',
+        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'hianime:HD',
+        name: 'HiAnime · HD',
+        provider: 'hianime',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'hianime', server: 'HD' }),
+        type: 'hls',
+        quality: '1080p',
+        audio: 'sub',
+        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'hianime:HD-1',
+        name: 'HiAnime · HD-1',
+        provider: 'hianime',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'hianime', server: 'HD-1' }),
+        type: 'hls',
+        quality: '1080p',
+        audio: 'sub',
+        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'hianime:HD-2',
+        name: 'HiAnime · HD-2',
+        provider: 'hianime',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'hianime', server: 'HD-2' }),
+        type: 'hls',
+        quality: '1080p',
+        audio: 'sub',
+        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'hianime:mega',
+        name: 'HiAnime · mega',
+        provider: 'hianime',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'hianime', server: 'mega' }),
+        type: 'hls',
+        quality: '1080p',
+        audio: 'sub',
+        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'hianime:Fast',
+        name: 'HiAnime · Fast',
+        provider: 'hianime',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'hianime', server: 'Fast' }),
+        type: 'mp4',
+        quality: '720p',
+        audio: 'sub',
+        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'hianime:HD-dub',
+        name: 'HiAnime · HD',
+        provider: 'hianime',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'dub', provider: 'hianime', server: 'HD' }),
+        type: 'dub',
+        quality: '1080p',
+        audio: 'dub',
+        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'hianime:HD-1-dub',
+        name: 'HiAnime · HD-1',
+        provider: 'hianime',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'dub', provider: 'hianime', server: 'HD-1' }),
+        type: 'dub',
+        quality: '1080p',
+        audio: 'dub',
+        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'hianime:HD-2-dub',
+        name: 'HiAnime · HD-2',
+        provider: 'hianime',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'dub', provider: 'hianime', server: 'HD-2' }),
+        type: 'dub',
+        quality: '1080p',
+        audio: 'dub',
+        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+    ];
+
     // If stream bridge is cold or external to Cloudflare edge, return candidate servers
     if (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl)) {
-      const isHiAnimePrimary = provider.toLowerCase().startsWith('hianime');
-      const defaultServers = [
-        {
-          id: 'anikoto:HD-1',
-          name: 'AniKoto · HD-1',
-          provider: 'anikoto',
-          status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=sub&provider=anikoto&server=HD-1`,
-          type: 'hls',
-          quality: '1080',
-          audio: 'sub',
-          audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-          subtitles: [],
-          downloads: [],
-        },
-        {
-          id: 'hianime:HD',
-          name: 'HiAnime · HD',
-          provider: 'hianime',
-          status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=sub&provider=hianime&server=HD`,
-          type: 'hls',
-          quality: '1080p',
-          audio: 'sub',
-          audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-          subtitles: [],
-          downloads: [],
-        },
-        {
-          id: 'hianime:HD-1',
-          name: 'HiAnime · HD-1',
-          provider: 'hianime',
-          status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=sub&provider=hianime&server=HD-1`,
-          type: 'hls',
-          quality: '1080p',
-          audio: 'sub',
-          audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-          subtitles: [],
-          downloads: [],
-        },
-        {
-          id: 'hianime:HD-2',
-          name: 'HiAnime · HD-2',
-          provider: 'hianime',
-          status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=sub&provider=hianime&server=HD-2`,
-          type: 'hls',
-          quality: '1080p',
-          audio: 'sub',
-          audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-          subtitles: [],
-          downloads: [],
-        },
-        {
-          id: 'hianime:mega',
-          name: 'HiAnime · mega',
-          provider: 'hianime',
-          status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=sub&provider=hianime&server=mega`,
-          type: 'hls',
-          quality: '1080p',
-          audio: 'sub',
-          audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-          subtitles: [],
-          downloads: [],
-        },
-        {
-          id: 'hianime:Fast',
-          name: 'HiAnime · Fast',
-          provider: 'hianime',
-          status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=sub&provider=hianime&server=Fast`,
-          type: 'mp4',
-          quality: '720p',
-          audio: 'sub',
-          audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-          subtitles: [],
-          downloads: [],
-        },
-        {
-          id: 'anikoto:Vidstream-2',
-          name: 'AniKoto · Vidstream-2',
-          provider: 'anikoto',
-          status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=dub&provider=anikoto&server=Vidstream-2`,
-          type: 'dub',
-          quality: '1080p',
-          audio: 'dub',
-          audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
-          subtitles: [],
-          downloads: [],
-        },
-        {
-          id: 'anikoto:Vidstream-1',
-          name: 'AniKoto · Vidstream-1',
-          provider: 'anikoto',
-          status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=dub&provider=anikoto&server=Vidstream-1`,
-          type: 'dub',
-          quality: '1080p',
-          audio: 'dub',
-          audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
-          subtitles: [],
-          downloads: [],
-        },
-        {
-          id: 'anikoto:HD-2',
-          name: 'AniKoto · HD-2',
-          provider: 'anikoto',
-          status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=dub&provider=anikoto&server=HD-2`,
-          type: 'dub',
-          quality: '1080p',
-          audio: 'dub',
-          audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
-          subtitles: [],
-          downloads: [],
-        },
-        {
-          id: 'hianime:HD-dub',
-          name: 'HiAnime · HD',
-          provider: 'hianime',
-          status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=dub&provider=hianime&server=HD`,
-          type: 'dub',
-          quality: '1080p',
-          audio: 'dub',
-          audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
-          subtitles: [],
-          downloads: [],
-        },
-        {
-          id: 'hianime:HD-1-dub',
-          name: 'HiAnime · HD-1',
-          provider: 'hianime',
-          status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=dub&provider=hianime&server=HD-1`,
-          type: 'dub',
-          quality: '1080p',
-          audio: 'dub',
-          audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
-          subtitles: [],
-          downloads: [],
-        },
-        {
-          id: 'hianime:HD-2-dub',
-          name: 'HiAnime · HD-2',
-          provider: 'hianime',
-          status: 'ready',
-          streamUrl: `/api/play/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=dub&provider=hianime&server=HD-2`,
-          type: 'dub',
-          quality: '1080p',
-          audio: 'dub',
-          audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
-          subtitles: [],
-          downloads: [],
-        },
-      ];
-
-      if (isHiAnimePrimary) {
-        defaultServers.sort((a, b) => (a.provider === 'hianime' ? -1 : b.provider === 'hianime' ? 1 : 0));
-      }
+      const scoped = isScoped ? defaultServers.filter((s) => s.provider === requested) : defaultServers;
 
       return ok({
         title: resolvedTitle,
         episode: ep,
         malId: resolvedMalId || null,
-        servers: defaultServers,
+        scopedProvider: isScoped && scoped.length ? requested : null,
+        servers: scoped.length ? scoped : defaultServers,
         aniskip: aniskipData || null,
+      }, {
+        cache: 'no-store, no-cache, must-revalidate',
       });
     }
 
@@ -458,7 +491,7 @@ export const onRequestGet = async ({ request, env }) => {
             name: formatServerName(prov, cleanServerId),
             provider: prov,
             status: 'ready',
-            streamUrl: `${bridgeBase}/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=${audio}&provider=${prov}&server=${encodeURIComponent(cleanServerId)}`,
+            streamUrl: resolveUrl({ audio, provider: prov, server: cleanServerId }),
             type: s.type || 'hls',
             quality: '1080p',
             audio,
@@ -470,38 +503,19 @@ export const onRequestGet = async ({ request, env }) => {
       }
     }
 
-    // Always include cross-provider alternatives so user can switch between AniKoto and HiAnime in ServerSwitcher
-    const candidateCrossServers = [
-      { id: 'anikoto:HD-1', name: 'AniKoto · HD-1', provider: 'anikoto', type: 'hls', quality: '1080', audio: 'sub' },
-      { id: 'hianime:HD', name: 'HiAnime · HD', provider: 'hianime', type: 'hls', quality: '1080p', audio: 'sub' },
-      { id: 'hianime:HD-1', name: 'HiAnime · HD-1', provider: 'hianime', type: 'hls', quality: '1080p', audio: 'sub' },
-      { id: 'hianime:HD-2', name: 'HiAnime · HD-2', provider: 'hianime', type: 'hls', quality: '1080p', audio: 'sub' },
-      { id: 'hianime:mega', name: 'HiAnime · mega', provider: 'hianime', type: 'hls', quality: '1080p', audio: 'sub' },
-      { id: 'hianime:Fast', name: 'HiAnime · Fast', provider: 'hianime', type: 'mp4', quality: '720p', audio: 'sub' },
-      { id: 'anikoto:Vidstream-2', name: 'AniKoto · Vidstream-2', provider: 'anikoto', type: 'dub', quality: '1080p', audio: 'dub' },
-      { id: 'anikoto:Vidstream-1', name: 'AniKoto · Vidstream-1', provider: 'anikoto', type: 'dub', quality: '1080p', audio: 'dub' },
-      { id: 'anikoto:HD-2', name: 'AniKoto · HD-2', provider: 'anikoto', type: 'dub', quality: '1080p', audio: 'dub' },
-      { id: 'hianime:HD-dub', name: 'HiAnime · HD', provider: 'hianime', type: 'dub', quality: '1080p', audio: 'dub' },
-      { id: 'hianime:HD-1-dub', name: 'HiAnime · HD-1', provider: 'hianime', type: 'dub', quality: '1080p', audio: 'dub' },
-      { id: 'hianime:HD-2-dub', name: 'HiAnime · HD-2', provider: 'hianime', type: 'dub', quality: '1080p', audio: 'dub' },
-    ];
+    // Ensure all provider servers from defaultServers are available
+    for (const def of defaultServers) {
+      if (def.provider === prov && !servers.some((s) => s.id === def.id)) {
+        servers.push(def);
+      }
+    }
 
-    for (const alt of candidateCrossServers) {
-      if (!servers.some((existing) => existing.id === alt.id)) {
-        const altServerParam = alt.id.includes(':') ? alt.id.split(':')[1].replace(/-dub$/, '') : alt.id.replace(/-dub$/, '');
-        servers.push({
-          id: alt.id,
-          name: alt.name,
-          provider: alt.provider,
-          status: 'ready',
-          streamUrl: `${bridgeBase}/resolve?title=${encodeURIComponent(resolvedTitle)}&ep=${ep}&audio=${alt.audio}&provider=${alt.provider}&server=${encodeURIComponent(altServerParam)}`,
-          type: alt.type,
-          quality: alt.quality,
-          audio: alt.audio,
-          audioTracks: buildAudioTracks(alt.audio),
-          subtitles: [],
-          downloads: [],
-        });
+    // For unscoped requests, make cross-provider candidate servers available
+    if (!isScoped) {
+      for (const def of defaultServers) {
+        if (!servers.some((s) => s.id === def.id)) {
+          servers.push(def);
+        }
       }
     }
 
@@ -510,26 +524,31 @@ export const onRequestGet = async ({ request, env }) => {
     let finalEd = aniskipData?.ed || null;
     let finalRecap = aniskipData?.recap || null;
 
-    if (!finalOp && meta.skip?.intro?.start !== undefined && meta.skip?.intro?.end !== undefined) {
-      finalOp = {
-        start: meta.skip.intro.start,
-        end: meta.skip.intro.end,
-        label: 'Opening',
-      };
+    if (!finalOp && meta.skip?.intro) {
+      const s = meta.skip.intro;
+      const start = Array.isArray(s) ? s[0] : s.start;
+      const end = Array.isArray(s) ? s[1] : s.end;
+      if (start !== undefined && end !== undefined && (start > 0 || end > 0)) {
+        finalOp = { start, end, label: 'Opening' };
+      }
     }
-    if (!finalEd && meta.skip?.outro?.start !== undefined && meta.skip?.outro?.end !== undefined) {
-      finalEd = {
-        start: meta.skip.outro.start,
-        end: meta.skip.outro.end,
-        label: 'Ending',
-      };
+    if (!finalEd && meta.skip?.outro) {
+      const s = meta.skip.outro;
+      const start = Array.isArray(s) ? s[0] : s.start;
+      const end = Array.isArray(s) ? s[1] : s.end;
+      if (start !== undefined && end !== undefined && (start > 0 || end > 0)) {
+        finalEd = { start, end, label: 'Ending' };
+      }
     }
+
+    const scoped = isScoped ? servers.filter((s) => s.provider === requested) : servers;
 
     return ok({
       title: resolvedTitle,
       episode: ep,
       malId: resolvedMalId || null,
-      servers,
+      scopedProvider: isScoped && scoped.length ? requested : null,
+      servers: scoped.length ? scoped : servers,
       aniskip: {
         op: finalOp,
         ed: finalEd,

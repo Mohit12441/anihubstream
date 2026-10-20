@@ -139,3 +139,48 @@ CREATE INDEX IF NOT EXISTS id_map_by_mal ON anime_id_map(mal_id);
 CREATE INDEX IF NOT EXISTS id_map_by_anilist ON anime_id_map(anilist_id);
 CREATE INDEX IF NOT EXISTS id_map_by_kitsu ON anime_id_map(kitsu_id);
 
+
+CREATE TABLE IF NOT EXISTS anime_redirect (
+  from_id TEXT PRIMARY KEY,
+  to_id   TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS redirect_to ON anime_redirect(to_id);
+
+CREATE TABLE IF NOT EXISTS stream_cache (
+  key        TEXT PRIMARY KEY,
+  data       TEXT NOT NULL,
+  expires_at INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS sync_lock (
+  name       TEXT PRIMARY KEY,
+  owner      TEXT NOT NULL,
+  expires_at INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS api_usage (
+  day       TEXT NOT NULL,
+  endpoint  TEXT NOT NULL,
+  requests  INTEGER NOT NULL DEFAULT 0,
+  PRIMARY KEY (day, endpoint)
+);
+
+CREATE TABLE IF NOT EXISTS sync_runs (
+  run_id      TEXT PRIMARY KEY,
+  endpoint    TEXT NOT NULL,
+  started_at  INTEGER NOT NULL,
+  duration_ms INTEGER NOT NULL,
+  exit_reason TEXT NOT NULL,
+  summary     TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS sync_runs_by_endpoint ON sync_runs(endpoint, started_at DESC);
+CREATE INDEX IF NOT EXISTS api_usage_by_day ON api_usage(day);
+
+CREATE TABLE IF NOT EXISTS sync_pending (
+  anilist_id INTEGER PRIMARY KEY,
+  slug       TEXT NOT NULL,
+  added_at   INTEGER NOT NULL,
+  note       TEXT
+);
+

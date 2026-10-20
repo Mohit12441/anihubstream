@@ -192,7 +192,7 @@ export function providerFromId(serverId: string): string {
   if (lower.includes(':')) {
     const prov = lower.split(':')[0];
     if (['aniwatch', 'hianime', 'anikoto', 'animedubhindi', 'watchanimeworld', 'animewave', 'animekai'].includes(prov)) {
-      return clean; // preserve provider:server so the exact server is triggered
+      return prov;
     }
   }
 
@@ -202,7 +202,7 @@ export function providerFromId(serverId: string): string {
       return prov;
     }
     if (lower.startsWith(`${prov}-`)) {
-      return `${prov}:${clean}`;
+      return prov;
     }
   }
 

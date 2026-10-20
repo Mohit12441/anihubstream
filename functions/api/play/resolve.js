@@ -45,6 +45,7 @@ export const onRequestGet = async ({ request, env }) => {
   try {
     const url = new URL(request.url);
     const title = (url.searchParams.get('title') || url.searchParams.get('id') || url.searchParams.get('slug') || '').trim();
+    const mal = url.searchParams.get('mal') || '';
     const ep = Math.max(1, Number.parseInt(url.searchParams.get('ep') ?? '1', 10) || 1);
     const rawServerParam = url.searchParams.get('server') || '';
     let serverParam = rawServerParam;
@@ -67,6 +68,7 @@ export const onRequestGet = async ({ request, env }) => {
     resolveUrl.searchParams.set('audio', audio);
     if (provider) resolveUrl.searchParams.set('provider', provider);
     if (serverParam) resolveUrl.searchParams.set('server', serverParam);
+    if (mal) resolveUrl.searchParams.set('mal', mal);
 
     let bridgeRes;
     try {

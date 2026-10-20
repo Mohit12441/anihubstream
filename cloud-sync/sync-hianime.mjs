@@ -214,12 +214,30 @@ export async function syncHiAnime({ pagesPerRun = PAGES_PER_RUN, force = false }
 
       for (const item of batch.results) {
         if (!item?.title || !item?.slug) continue;
-        const targetSlug = slugify(item.title) || item.slug;
+        const malId = Number(item.mal_id) > 0 ? Number(item.mal_id) : null;
 
-        // Check if row already exists
-        const existing = await d1First('SELECT id, source_ids FROM anime WHERE id = ?1', [targetSlug]);
+        let existing = null;
+        if (malId) {
+          existing = await d1First(
+            `SELECT a.id, a.source_ids FROM anime a
+             WHERE json_extract(a.source_ids,'$.mal') = ?1
+                OR json_extract(a.source_ids,'$.hianime') = ?2
+             ORDER BY
+               (EXISTS(SELECT 1 FROM library l WHERE l.anime_id=a.id)) DESC,
+               (json_extract(a.source_ids,'$.anilist') IS NOT NULL) DESC,
+               length(a.id) ASC
+             LIMIT 1`,
+            [malId, item.slug],
+          );
+        }
+        if (!existing) {
+          const targetSlug = slugify(item.title) || item.slug;
+          existing = await d1First('SELECT id, source_ids FROM anime WHERE id = ?1', [targetSlug]);
+        }
+
         const record = mapHiAnimeItem(item, existing);
         if (!record) continue;
+        if (existing) record.id = existing.id;
 
         if (existing) {
           // Update existing row

@@ -57,6 +57,9 @@ const AUDIO_TTL = 60 * 60 * 1000;
 const RATE_WINDOW_MS = 60_000;
 const RATE_MAX = { '/resolve': 120, '/audios': 120, '/search': 120 };
 
+let malResolveHits = 0;
+let malResolveMisses = 0;
+
 const ALLOWED_ORIGIN_HOSTS = new Set([
   'anihubstream.com',
   'app.anihubstream.com',
@@ -371,8 +374,38 @@ function createHlsSession({ provider, media, episode, resolvedResult, sniffed, d
 
 /* ------------------------------------------------------------- provider resolvers */
 
-async function buildSourceAnikoto({ title, ep, audio, server }) {
+async function buildSourceAnikoto({ title, ep, audio, server, mal }) {
   const signal = AbortSignal.timeout(RESOLVE_TIMEOUT_MS);
+
+  if (mal && (audio === 'sub' || audio === 'dub')) {
+    try {
+      const malResult = await anikoto.resolveByMal(mal, ep, audio, { signal });
+      if (malResult) {
+        const sniffed = await snackPlayable(malResult, signal);
+        if (sniffed) {
+          malResolveHits++;
+          console.log(`[bridge] MAL hit (#${malResolveHits}) for MAL ${mal} ep ${ep} (${audio})`);
+          return createHlsSession({
+            provider: 'anikoto',
+            media: { id: `mal:${mal}`, title: title || `MAL:${mal}` },
+            episode: { number: ep, title: `Episode ${ep}` },
+            resolvedResult: malResult,
+            sniffed,
+            defaultReferer: 'https://megaplay.buzz/',
+            skip: malResult.skip,
+            audio: malResult.audio,
+            downloads: [],
+            servers: [],
+          });
+        }
+      }
+    } catch (e) {
+      if (process.env.MAL_DEBUG) console.warn('[bridge] MAL resolution exception:', e.message);
+    }
+    malResolveMisses++;
+    if (process.env.MAL_DEBUG) console.warn(`[bridge] MAL miss (#${malResolveMisses}) for MAL ${mal} ep ${ep} -> falling back to search`);
+  }
+
   const { media, episodes } = await detailsForProvider('anikoto', title);
   const episode = episodes.find((e) => e.number === ep) ?? episodes[ep - 1];
   if (!episode) throw Object.assign(new Error(`episode ${ep} is not in AniKoto list (${episodes.length} listed)`), { code: 'NO_SUCH_EPISODE' });
@@ -726,7 +759,7 @@ function setSearchHandler(provider, handler) {
   searchHandlers[provider.toLowerCase()] = handler;
 }
 
-async function buildSourceProvider(provider, { title, ep, audio, server }) {
+async function buildSourceProvider(provider, { title, ep, audio, server, mal }) {
   let norm = provider.toLowerCase();
   let selectedServer = server;
   let targetAudio = audio;
@@ -746,7 +779,7 @@ async function buildSourceProvider(provider, { title, ep, audio, server }) {
   }
   const handler = providerHandlers[norm];
   if (!handler) throw new Error(`Unsupported provider: ${provider}`);
-  return await handler({ title, ep, audio: targetAudio, server: selectedServer });
+  return await handler({ title, ep, audio: targetAudio, server: selectedServer, mal });
 }
 
 /* ------------------------------------------------------------- race dispatcher */
@@ -785,12 +818,12 @@ async function raceProviders(candidates, { title, ep, audio }) {
   });
 }
 
-async function buildSource({ title, ep, audio, provider = 'anikoto', server, fallback = false }) {
+async function buildSource({ title, ep, audio, provider = 'anikoto', server, fallback = false, mal = 0 }) {
   const normProvider = (provider || 'anikoto').toLowerCase();
   const effectiveProvider = (normProvider === 'auto' || normProvider === 'fastest') ? 'anikoto' : normProvider;
 
   try {
-    const meta = await buildSourceProvider(effectiveProvider, { title, ep, audio, server });
+    const meta = await buildSourceProvider(effectiveProvider, { title, ep, audio, server, mal });
     if (normProvider === 'auto' || normProvider === 'fastest') {
       meta.raceMs = 0;
       meta.winner = meta.provider;
@@ -800,11 +833,11 @@ async function buildSource({ title, ep, audio, provider = 'anikoto', server, fal
     if (!fallback) throw e;
     console.warn(`[Bridge] Provider "${effectiveProvider}" failed, trying fallback:`, e.message);
     if (effectiveProvider !== 'anikoto') {
-      return await buildSource({ title, ep, audio, provider: 'anikoto', server, fallback: false });
+      return await buildSource({ title, ep, audio, provider: 'anikoto', server, fallback: false, mal });
     }
     // If anikoto failed for dub/hindi, try sub
     if ((audio === 'dub' || audio === 'hindi') && fallback) {
-      return await buildSource({ title, ep, audio: 'sub', provider: 'anikoto', server, fallback: false });
+      return await buildSource({ title, ep, audio: 'sub', provider: 'anikoto', server, fallback: false, mal });
     }
     throw e;
   }
@@ -1213,6 +1246,12 @@ const server = createServer(async (req, res) => {
         race: true,
         bridge: 'api/bridge.mjs',
         role: 'stream bridge & multi-provider dispatcher with real-time latency racing',
+        mal: {
+          hits: malResolveHits,
+          misses: malResolveMisses,
+          total: malResolveHits + malResolveMisses,
+          hitRatio: (malResolveHits + malResolveMisses) > 0 ? Number((malResolveHits / (malResolveHits + malResolveMisses)).toFixed(3)) : 0,
+        },
       });
     }
 
@@ -1282,6 +1321,7 @@ const server = createServer(async (req, res) => {
 
     if (url.pathname === '/resolve') {
       const title = url.searchParams.get('title') ?? '';
+      const mal = Number(url.searchParams.get('mal') ?? '0') || 0;
       const ep = Number(url.searchParams.get('ep') ?? '0');
       const audioParam = url.searchParams.get('audio') ?? 'sub';
       const audio = audioParam === 'hindi' ? 'hindi' : audioParam === 'dub' ? 'dub' : audioParam === 'hsub' ? 'hsub' : 'sub';
@@ -1292,7 +1332,7 @@ const server = createServer(async (req, res) => {
         ? fallbackParam === 'true'
         : (!url.searchParams.get('provider') || requestedProvider === 'auto' || requestedProvider === 'fastest');
       if (!title.trim() || !Number.isInteger(ep) || ep < 1) return json(res, 400, { error: 'TITLE_EP_REQUIRED' });
-      const key = `${title.toLowerCase()}|${ep}|${audio}|${requestedProvider}|${serverParam ?? ''}`;
+      const key = `${title.toLowerCase()}|${mal}|${ep}|${audio}|${requestedProvider}|${serverParam ?? ''}`;
       const reuse = recent.get(key);
       if (reuse && sessions.has(reuse.sid)) {
         const s = useSession(reuse.sid);
@@ -1308,7 +1348,7 @@ const server = createServer(async (req, res) => {
           subtitles: s.subtitles, reused: true,
         });
       }
-      const meta = await buildSource({ title, ep, audio, provider: requestedProvider, server: serverParam, fallback });
+      const meta = await buildSource({ title, ep, audio, provider: requestedProvider, server: serverParam, fallback, mal });
       recent.set(key, { at: Date.now(), sid: meta.session });
       return json(res, 200, meta);
     }
