@@ -293,11 +293,13 @@ export function useLiveStream(o: Options) {
       if (HlsCtor.isSupported()) {
         hls = new HlsCtor({
           enableWorker: true,
-          maxBufferLength: 60,
-          maxMaxBufferLength: 120,
-          backBufferLength: 60,
+          lowLatencyMode: true,
+          startLevel: -1,
+          maxBufferLength: 30,
+          maxMaxBufferLength: 60,
+          backBufferLength: 30,
           maxBufferSize: 60 * 1024 * 1024,
-          maxBufferHole: 0.5,
+          maxBufferHole: 0.3,
           highBufferWatchdogPeriod: 2,
           nudgeOffset: 0.1,
           nudgeMaxRetry: 5,
@@ -306,7 +308,6 @@ export function useLiveStream(o: Options) {
           fragLoadingTimeOut: 15000,
           fragLoadingMaxRetry: 4,
           fragLoadingRetryDelay: 500,
-          startLevel: -1,
           testBandwidth: true,
         });
         hlsRef.current = hls;

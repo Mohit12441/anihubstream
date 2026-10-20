@@ -38,7 +38,7 @@
  *    selectable — the one thing AniKoto and AniWatch could not offer.
  */
 
-import { createDecipheriv, createHmac } from "node:crypto";
+import { createDecipheriv, createHmac, createHash, randomBytes } from "node:crypto";
 import { createWriteStream } from "node:fs";
 import { mkdir, rm, stat } from "node:fs/promises";
 import { dirname } from "node:path";
@@ -53,6 +53,9 @@ const MEGAPLAY_HOSTS = [
   "vidtube.site", "vidtube.me",
   "1anime.site",
 ];
+const MEGAPLAY_SU_HOSTS = ["megaplay.su"];
+const VIDNEST_HOSTS = ["vidnest.fun", "new.vidnest.fun"];
+const VIDNEST_SECRET = "F9k2mR8vL4qP7wY1zN0fG3bS6tH5jC8d_x4R7vN2mP9qL1";
 /** The ASCII key the delivered ZokoAnime player script XORs `window.__P` against. */
 const ZOKO_XOR_KEY = "otaku-embed-v1";
 const USER_AGENT =
@@ -606,8 +609,20 @@ export async function sources(episodeId, { audioType, signal, server, includeDow
   const buildServerList = (embedList, audioGroup) => {
     return embedList.map((embed, idx) => {
       const isZoko = hostMatches(embed, ZOKO_HOSTS) || /zokoanime/i.test(embed);
-      const isMega = hostMatches(embed, MEGAPLAY_HOSTS) || /megaplay/i.test(embed);
-      const serverId = isZoko ? `HD-${idx + 1}` : isMega ? `MegaPlay` : `Server-${idx + 1}`;
+      const isMega = hostMatches(embed, MEGAPLAY_HOSTS) || /megaplay\.buzz/i.test(embed);
+      const isMegaSu = hostMatches(embed, MEGAPLAY_SU_HOSTS) || /megaplay\.su/i.test(embed);
+      const isVidnest = hostMatches(embed, VIDNEST_HOSTS) || /vidnest/i.test(embed);
+      const isTryembed = /tryembed/i.test(embed);
+      const isBlogger = /source=blogger/i.test(embed);
+
+      let serverId = `HD-${idx + 1}`;
+      if (isMega) serverId = 'HD';
+      else if (isTryembed) serverId = 'HD-1';
+      else if (isVidnest) serverId = 'HD-2';
+      else if (isMegaSu) serverId = 'mega';
+      else if (isBlogger) serverId = 'Fast';
+      else if (isZoko) serverId = idx === 0 ? 'HD' : `HD-${idx + 1}`;
+
       const uniqueId = audioGroup === 'dub' ? `${serverId}-dub` : serverId;
       const label = `HiAnime · ${serverId}`;
       return {
@@ -615,7 +630,7 @@ export async function sources(episodeId, { audioType, signal, server, includeDow
         name: label,
         embedUrl: embed,
         audio: audioGroup,
-        type: audioGroup === 'dub' ? 'dub' : 'hls',
+        type: audioGroup === 'dub' ? 'dub' : isBlogger ? 'mp4' : 'hls',
         quality: '1080p',
         provider: 'hianime',
       };
@@ -860,6 +875,120 @@ export async function resolve(embedUrl, { referer, signal, quality } = {}) {
       ...(audio ? { audio } : {}),
       ...(skip ? { skip } : {}),
       note: "token is directory-scoped and expires by unix-seconds freshness; re-resolve, never cache",
+    };
+  }
+
+  if (hostMatches(embedUrl, VIDNEST_HOSTS) || /vidnest/i.test(embedUrl)) {
+    const m = /\/anime\/([^/]+)\/([^/]+)\/([^/?]+)/i.exec(embedUrl);
+    if (!m) throw new ApiError(`invalid VidNest URL: ${embedUrl}`, 0, "INVALID_URL");
+    const [, anilistId, ep, aud] = m;
+    const cleanAud = aud.toLowerCase().startsWith('dub') ? 'dub' : 'sub';
+    const nonce = randomBytes(16).toString('base64url');
+    const apiUrl = `https://new.vidnest.fun/hianime/anime/${anilistId}/${ep}/${cleanAud}/hd-2?_n=${encodeURIComponent(nonce)}`;
+    const res = await request(apiUrl, {
+      referer: 'https://vidnest.fun/',
+      signal
+    });
+    if (!res.ok) { await drain(res); throw new ApiError(`VidNest backend error: ${res.status}`, res.status); }
+    const json = await res.json().catch(() => null);
+    if (!json?.d || !json?.n) throw new ApiError("missing cipher payload in VidNest response", 0, "EMPTY_STREAM");
+
+    const keyHash = createHash('sha256').update(`${json.n}|${VIDNEST_SECRET}`).digest();
+    const rawCipher = Buffer.from(json.d, 'base64url');
+    const iv = rawCipher.subarray(0, 12);
+    const ciphertext = rawCipher.subarray(12, rawCipher.length - 16);
+    const authTag = rawCipher.subarray(rawCipher.length - 16);
+
+    const decipher = createDecipheriv('aes-256-gcm', keyHash, iv);
+    decipher.setAuthTag(authTag);
+    const decrypted = Buffer.concat([decipher.update(ciphertext), decipher.final()]);
+    let data;
+    try { data = JSON.parse(decrypted.toString('utf8')); }
+    catch { throw new ApiError("failed to parse decrypted VidNest payload", 0, "INVALID_PAYLOAD"); }
+
+    const file = data.sources?.[0]?.file;
+    if (!file) throw new ApiError("no file stream in VidNest payload", 0, "EMPTY_STREAM");
+
+    const token = buildMegaPlayToken(file);
+    const streamUrl = token ? `${file}?token=${encodeURIComponent(token)}` : file;
+    const headers = { referer: 'https://megaplay.buzz/' };
+
+    let variants = [{ url: streamUrl, quality: "1080p", headers: { ...headers } }];
+    try {
+      const master = await getText(streamUrl, { headers, signal });
+      const dir = new URL(file).pathname.replace(/\/[^/]*\.m3u8$/i, "");
+      const byQuality = new Map();
+      for (const v of parseVariants(master.body, streamUrl)) {
+        let path; try { path = new URL(v.url).pathname; } catch { continue; }
+        if (!path.startsWith(`${dir}/`)) continue;
+        const q = v.height ?? "unknown";
+        if (byQuality.has(q) && (byQuality.get(q).bandwidth ?? 0) >= (v.bandwidth ?? 0)) continue;
+        byQuality.set(q, v);
+      }
+      if (byQuality.size) {
+        variants = [...byQuality.values()]
+          .sort((a, b) => (b.height ?? 0) - (a.height ?? 0) || (b.bandwidth ?? 0) - (a.bandwidth ?? 0))
+          .map((v) => ({ url: `${v.url}${token ? `?token=${encodeURIComponent(token)}` : ""}`, quality: v.height ?? "unknown", headers: { ...headers } }));
+      }
+    } catch {}
+
+    const intro = parseSkip(data.intro), outro = parseSkip(data.outro);
+    const skip = intro || outro ? { ...(intro ? { intro } : {}), ...(outro ? { outro } : {}) } : undefined;
+
+    return {
+      provider: "hianime",
+      extractor: "vidnest",
+      master: { url: streamUrl, headers: { ...headers } },
+      variants: quality && quality !== "auto" ? variants.filter((v) => String(v.quality) === String(quality)) : variants,
+      subtitles: (Array.isArray(data.tracks) ? data.tracks : [])
+        .filter((t) => t?.kind === "captions" || t?.kind === "subtitles")
+        .map((t, i) => t?.file ? subtitleFrom(t.file, t.label, i, 'https://vidnest.fun/', 'vidnest') : undefined)
+        .filter(Boolean),
+      ...(audio ? { audio } : {}),
+      ...(skip ? { skip } : {}),
+      note: "AES-256-GCM decrypted from VidNest backend",
+    };
+  }
+
+  if (hostMatches(embedUrl, MEGAPLAY_SU_HOSTS) || /megaplay\.su/i.test(embedUrl)) {
+    const pageText = page.body;
+    const file = pageText.match(/file\s*:\s*["'](https?:\/\/[^"']+\.m3u8[^"']*)["']/i)?.[1]
+      || pageText.match(/https?:\/\/[^\s"'<>]+\.m3u8[^\s"'<>]*/i)?.[0];
+    if (!file) throw new ApiError("no m3u8 playlist found on megaplay.su", 0, "EMPTY_STREAM");
+
+    const headers = { referer: 'https://megaplay.su/' };
+    return {
+      provider: "hianime",
+      extractor: "megaplay-su",
+      master: { url: file, headers: { ...headers } },
+      variants: [{ url: file, quality: "1080p", headers: { ...headers } }],
+      subtitles: [],
+      ...(audio ? { audio } : {}),
+    };
+  }
+
+  if (/source=blogger/i.test(embedUrl) || /blogger/i.test(page.url)) {
+    const html = page.body;
+    const fileUrl = html.match(/var\s+fileUrl\s*=\s*["']([^"']+)["']/i)?.[1];
+    const sourcesMatch = html.match(/var\s+sources\s*=\s*(\[[^\]]+\]);/i)?.[1];
+    let sourcesList = [];
+    if (sourcesMatch) {
+      try { sourcesList = JSON.parse(sourcesMatch); } catch {}
+    }
+    const primary = sourcesList[0]?.file || fileUrl;
+    if (!primary) throw new ApiError("no mp4 source in blogger player", 0, "EMPTY_STREAM");
+
+    return {
+      provider: "hianime",
+      extractor: "blogger",
+      kind: "progressive",
+      master: { url: primary },
+      variants: sourcesList.map((s) => ({
+        quality: s.label || "360p",
+        url: s.file,
+      })),
+      subtitles: [],
+      ...(audio ? { audio } : {}),
     };
   }
 

@@ -439,10 +439,58 @@ async function buildSourceHianime({ title, ep, audio, server }) {
   for (const embed of candidates) {
     try {
       const r = await hianime.resolve(embed, { signal });
+      if (r.kind === 'progressive') {
+        const sid = randomUUID();
+        const mediaUrl = typeof r.master === 'object' ? r.master.url : r.master;
+        const mediaBase = new URL(mediaUrl);
+        const session = {
+          sid,
+          at: Date.now(),
+          provider: 'hianime',
+          extractor: r.extractor || 'blogger',
+          kind: 'progressive',
+          container: 'mp4',
+          title: media.title,
+          episode: { number: episode.number, title: episode.title },
+          audio,
+          quality: r.variants?.[0]?.quality ?? '720p',
+          variants: (r.variants || []).map((v) => v.quality),
+          proof: { container: 'mp4', checkedBytes: 0 },
+          referer: 'https://hianime.ro/',
+          signed: { host: mediaBase.host, dir: '' },
+          mediaUrl,
+          episodeRef: episode.id,
+          allowedHosts: new Set([mediaBase.host]),
+          subUrls: [],
+          subtitles: [],
+          downloads: (r.variants || []).map((v) => ({ name: `HiAnime MP4 (${v.quality})`, quality: v.quality, url: `/stream/${sid}/media.mp4?download=1` })),
+          servers: servers && servers.length > 0 ? servers : [{ id: 'Fast', name: 'Fast', type: 'mp4' }],
+        };
+        sessions.set(sid, session);
+        return {
+          session: sid,
+          provider: 'hianime',
+          kind: 'progressive',
+          container: 'mp4',
+          title: media.title,
+          episode: session.episode,
+          quality: session.quality,
+          variants: session.variants,
+          audio: session.audio,
+          skip: null,
+          proof: session.proof,
+          master: `/stream/${sid}/media.mp4`,
+          downloadUrl: `/stream/${sid}/media.mp4?download=1`,
+          downloadPage: null,
+          downloads: session.downloads,
+          servers: session.servers,
+          subtitles: [],
+        };
+      }
       const sniffed = await snackPlayable(r, signal);
       if (sniffed) {
         return createHlsSession({
-          provider: 'hianime', media, episode, resolvedResult: r, sniffed, defaultReferer: 'https://zokoanime.video/', skip: r.skip ?? null, audio, downloads, servers,
+          provider: 'hianime', media, episode, resolvedResult: r, sniffed, defaultReferer: 'https://megaplay.buzz/', skip: r.skip ?? null, audio, downloads, servers,
         });
       }
     } catch {

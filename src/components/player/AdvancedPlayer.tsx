@@ -638,7 +638,7 @@ export function AdvancedPlayer(props: Props) {
           data-on={liveReady || undefined}
           poster={anime.key || anime.poster}
           playsInline
-          preload="metadata"
+          preload="auto"
           aria-label={`AniKoto stream — ${anime.title} episode ${episode.n}`}
         />
         <div className="player__grade" />
