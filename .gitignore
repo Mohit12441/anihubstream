@@ -19,3 +19,5 @@ pre-dedupe.sql
 tools/anikoto-slugs-progress.json
 tools/anime-titles.json
 tools/batch-*.sql
+remote-*.sql
+.dev.vars
