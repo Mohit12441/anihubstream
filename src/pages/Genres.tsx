@@ -34,16 +34,23 @@ const PAGE_SIZE = 24;
 export function Genres() {
   const { status, error, reload, GENRES, genreLabel, stats } = useCatalogue();
   const [params, setParams] = useSearchParams();
-  const genre = params.get('genre');
+  const rawGenre = params.get('genre') || params.get('name');
+  const genre = useMemo(() => {
+    if (!rawGenre) return null;
+    const lower = rawGenre.toLowerCase();
+    const match = GENRES.find((g) => g.id.toLowerCase() === lower || g.label.toLowerCase() === lower);
+    return match ? match.id : lower;
+  }, [rawGenre, GENRES]);
   const [kind, setKind] = useState<AnimeKind | 'All'>('All');
   const [sort, setSort] = useState<SortId>('popularity');
 
+  const origin = typeof window !== 'undefined' && window.location.origin ? window.location.origin : 'https://anihubstream.com';
   useSEO({
     title: genre
       ? `${genreLabel(genre)} Anime — Browse Categories | AniHubStream`
       : 'Anime Genres & Categories | AniHubStream',
     description: 'Browse anime by genre: Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Slice of Life, and more.',
-    canonicalUrl: genre ? `https://anihubstream.com/genres?genre=${genre}` : 'https://anihubstream.com/genres',
+    canonicalUrl: genre ? `${origin}/genres?genre=${encodeURIComponent(genre)}` : `${origin}/genres`,
   });
 
   const pick = (id: string) => {

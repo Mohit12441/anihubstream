@@ -165,11 +165,19 @@ export async function onRequest(context) {
     title = 'Anime Catalogue — Discover Series & Movies | AniHubStream';
     desc = 'Explore the full AniHubStream anime catalogue. Filter by genre, release year, format (TV, Movie, OVA), and rating.';
   } else if (path === '/genres') {
-    const genreName = url.searchParams.get('name');
-    title = genreName ? `${genreName} Anime — Stream Online Free | AniHubStream` : 'Anime Genres & Categories | AniHubStream';
-    desc = genreName ? `Browse and stream the best ${genreName} anime series and movies online free.` : 'Browse anime by genre: Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Slice of Life, and more.';
+    const genreParam = url.searchParams.get('genre') || url.searchParams.get('name');
+    if (genreParam) {
+      canonical = `${origin}/genres?genre=${encodeURIComponent(genreParam.toLowerCase())}`;
+      const genreName = genreParam.charAt(0).toUpperCase() + genreParam.slice(1);
+      title = `${genreName} Anime — Stream Online Free | AniHubStream`;
+      desc = `Browse and stream the best ${genreName} anime series and movies online free on AniHubStream with high-definition playback, Japanese audio, and subtitles.`;
+    } else {
+      title = 'Anime Genres & Categories | AniHubStream';
+      desc = 'Browse anime by genre: Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Slice of Life, and more.';
+    }
   } else if (path === '/search') {
     const q = url.searchParams.get('q');
+    if (q) canonical = `${origin}/search?q=${encodeURIComponent(q)}`;
     title = q ? `Search results for "${q}" | AniHubStream` : 'Federated Multi-Provider Anime Search | AniHubStream';
     desc = 'Search subbed and dubbed anime across multiple providers with real-time stream resolution.';
   } else if (path === '/watchlist' || path === '/my-list') {
@@ -215,7 +223,13 @@ export async function onRequest(context) {
   } else if (path === '/watchlist' || path === '/my-list') {
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Personal Anime Watchlist</h1><p>Keep track of anime you are currently watching, plan to watch, or completed. All bookmarks and episodic progress are saved securely on your device with instant resume capability.</p></main>`;
   } else if (path === '/genres') {
-    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Anime Genres & Categories</h1><p>Browse anime series categorized by themes: Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Supernatural, and Slice of Life. Each collection includes full episode guides and high-definition video playback.</p></main>`;
+    const genreParam = url.searchParams.get('genre') || url.searchParams.get('name');
+    if (genreParam) {
+      const gName = genreParam.charAt(0).toUpperCase() + genreParam.slice(1);
+      preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>${gName} Anime — Stream Online Free</h1><p>Explore our extensive curated catalogue of ${gName} anime titles. AniHubStream brings you top-rated ${gName} anime series, feature-length movies, and seasonal releases with synchronized English subtitles, multi-audio dub options, and verified video streams. Watch popular franchises and discover hidden gems in full high definition with zero ads. Filter by broadcast season, release year, and community score to find your next favorite show.</p><p>Our collection is synchronized daily with top anime databases like AniList and Kitsu to guarantee comprehensive metadata, episode schedules, and character information. Start watching now on desktop, mobile, or tablet with seamless instant playback and cross-device bookmarking.</p></main>`;
+    } else {
+      preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Anime Genres & Categories</h1><p>Browse thousands of anime series categorized across diverse genres: Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Supernatural, Mystery, Slice of Life, and more. Each genre collection features complete episode listings, release dates, and high-definition video playback. Whether you are looking for adrenaline-fueled shounen battles, heartwarming romance, mind-bending psychological thrillers, or relaxing slice-of-life comedy, AniHubStream provides seamless navigation and fast edge-streamed video.</p><p>All entries are catalogued with rich metadata, studio attributions, voice actor credits, and airing countdowns. Enjoy ad-free anime streaming with multiple provider fallbacks, subtitle options, and automatic intro skip functionality on any device.</p></main>`;
+    }
   } else if (path === '/schedule') {
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Anime Broadcast Schedule</h1><p>Discover when new anime episodes air weekly with local timezone conversion. Stay updated on premiere dates, seasonal broadcast slots, and episode countdowns.</p></main>`;
   } else if (path === '/discover') {

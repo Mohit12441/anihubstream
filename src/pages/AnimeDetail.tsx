@@ -197,7 +197,7 @@ export function AnimeDetail() {
                 {anime.genres.map((g) => (
                   <Link
                     key={g}
-                    to={`/genres?name=${encodeURIComponent(genreLabel(g))}`}
+                    to={`/genres?genre=${encodeURIComponent(g)}`}
                     className="pill-tag"
                     style={{ fontSize: '0.8rem', padding: '0.25rem 0.6rem', textDecoration: 'none' }}
                   >
