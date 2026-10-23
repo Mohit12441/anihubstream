@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, cleanDisplayTitle, errorResponse, ok } from '../_lib.js';
+import { HttpError, cleanDisplayTitle, errorResponse, ok, safeLikePattern } from '../_lib.js';
 
 const ANIKOTO_MAIN = 'https://anikoto.cz';
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';

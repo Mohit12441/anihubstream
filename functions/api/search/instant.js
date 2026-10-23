@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, cardFromRow, errorResponse, foldSearch, ok } from '../_lib.js';
+import { HttpError, cardFromRow, errorResponse, foldSearch, ok, safeLikePattern } from '../_lib.js';
 
 const MEILISEARCH_TIMEOUT_MS = 2_000;
 

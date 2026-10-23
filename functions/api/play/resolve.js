@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, cleanDisplayTitle, errorResponse, ok } from '../_lib.js';
+import { HttpError, cleanDisplayTitle, errorResponse, ok, resolveMalId } from '../_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from '../_megaplay.js';
 import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
 
@@ -65,21 +65,25 @@ export const onRequestGet = async ({ request, env }) => {
     let resolvedMalId = mal ? Number.parseInt(mal, 10) : 0;
     if (!resolvedMalId && env.ANIHUB) {
       try {
-        let mapRow = await env.ANIHUB.prepare(
-          `SELECT a.mal_id FROM anime_provider_mapping m JOIN anime a ON a.id = m.anime_id
+        const mapRow = await env.ANIHUB.prepare(
+          `SELECT a.source_ids, a.skip_key_id, a.skip_key_space FROM anime_provider_mapping m JOIN anime a ON a.id = m.anime_id
            WHERE m.provider_slug = ?1 LIMIT 1`
         ).bind(title).first().catch(() => null);
 
-        if (!mapRow?.mal_id) {
-          mapRow = await env.ANIHUB.prepare(
+        if (mapRow) {
+          resolvedMalId = resolveMalId(mapRow.source_ids, mapRow.skip_key_id, mapRow.skip_key_space) || 0;
+        }
+
+        if (!resolvedMalId) {
+          const idMapRow = await env.ANIHUB.prepare(
             `SELECT mal_id FROM anime_id_map
              WHERE anime_id = ?1 OR anikoto_slug = ?1 OR hianime_slug = ?1
              LIMIT 1`
           ).bind(title).first().catch(() => null);
-        }
 
-        if (mapRow?.mal_id) {
-          resolvedMalId = Number(mapRow.mal_id);
+          if (idMapRow?.mal_id) {
+            resolvedMalId = Number(idMapRow.mal_id);
+          }
         }
 
         if (!resolvedMalId) {
@@ -91,14 +95,7 @@ export const onRequestGet = async ({ request, env }) => {
           ).bind(title).first().catch(() => null);
 
           if (animeRow) {
-            if (animeRow.skip_key_space === 'mal' && animeRow.skip_key_id) {
-              resolvedMalId = Number(animeRow.skip_key_id);
-            } else if (animeRow.source_ids) {
-              try {
-                const s = JSON.parse(animeRow.source_ids);
-                if (s.mal) resolvedMalId = Number(s.mal);
-              } catch {}
-            }
+            resolvedMalId = resolveMalId(animeRow.source_ids, animeRow.skip_key_id, animeRow.skip_key_space) || 0;
           }
         }
       } catch {

@@ -25,7 +25,7 @@ export function Terms() {
         </section>
 
         <section>
-          <h2><Scale size={20} className="inline-icon" /> 2. Content & Service Nature</h2>
+          <h2><Scale size={20} className="inline-icon" /> 2. Content &amp; Service Nature</h2>
           <p>
             AniHubStream is an indexing and metadata discovery platform. AniHubStream does not host, upload, or store any
             video media files on its servers. All streaming links and streams are indexed from independent third-party sources

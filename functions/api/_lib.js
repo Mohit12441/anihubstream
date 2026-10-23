@@ -485,6 +485,19 @@ export const initialsPattern = (token) =>
     ? [...token].map((c, i) => (i ? ' ' : '') + c + '%').join('')
     : null;
 
+/* D1 enforces a strict 50-byte maximum limit on LIKE and GLOB expressions.
+   Truncates the interior search term to ensure '%term%' never exceeds maxBytes. */
+export const safeLikePattern = (text, maxBytes = 50) => {
+  if (!text) return '%%';
+  const chars = [...String(text).toLowerCase()];
+  let end = chars.length;
+  const encoder = new TextEncoder();
+  while (end > 0 && encoder.encode('%' + chars.slice(0, end).join('') + '%').length > maxBytes) {
+    end -= 1;
+  }
+  return '%' + chars.slice(0, end).join('') + '%';
+};
+
 /* Scored exactly like the client matcher: every token must hit some field
    (AND), title/native weigh most, an exact or prefix title match is boosted. */
 export const scoreSearchRow = (row, folded, tokens, genreLabels) => {

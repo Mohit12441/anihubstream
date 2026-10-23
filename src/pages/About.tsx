@@ -35,7 +35,7 @@ export function About() {
         </section>
 
         <section>
-          <h2><Shield size={20} className="inline-icon" /> Community Attribution & Rights</h2>
+          <h2><Shield size={20} className="inline-icon" /> Community Attribution &amp; Rights</h2>
           <p>
             AniHubStream features community-contributed episode skip markers. All anime titles, artwork, posters,
             and promotional media belong to their respective creators, production committees, and copyright holders.

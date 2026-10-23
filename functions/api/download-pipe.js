@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, errorResponse } from './_lib.js';
+import { HttpError, errorResponse, resolveMalId } from './_lib.js';
 import { resolveMegaplayDirect } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
 
@@ -102,7 +102,7 @@ export const onRequestGet = async ({ request, env }) => {
     if (env.ANIHUB) {
       try {
         const match = await env.ANIHUB.prepare(
-          `SELECT a.id, a.title, a.skip_key_id, m.mal_id
+          `SELECT a.id, a.title, a.skip_key_id, a.skip_key_space, a.source_ids, m.mal_id
            FROM anime a
            LEFT JOIN anime_id_map m ON a.id = m.anime_id
            WHERE a.id = ?1 OR m.anikoto_slug = ?1 OR m.hianime_slug = ?1 OR lower(a.title) = lower(?1)
@@ -110,18 +110,18 @@ export const onRequestGet = async ({ request, env }) => {
         ).bind(cleanSlug).first();
 
         if (match) {
-          malId = Number(match.mal_id || match.skip_key_id) || null;
+          malId = Number(match.mal_id) || resolveMalId(match.source_ids, match.skip_key_id, match.skip_key_space);
           if (match.title) animeTitle = match.title;
         } else {
           const provMatch = await env.ANIHUB.prepare(
-            `SELECT a.id, a.title, a.skip_key_id, a.mal_id
+            `SELECT a.id, a.title, a.skip_key_id, a.skip_key_space, a.source_ids
              FROM anime_provider_mapping m
              JOIN anime a ON a.id = m.anime_id
              WHERE m.provider_slug = ?1 LIMIT 1`
           ).bind(cleanSlug).first().catch(() => null);
 
           if (provMatch) {
-            malId = Number(provMatch.mal_id || provMatch.skip_key_id) || null;
+            malId = resolveMalId(provMatch.source_ids, provMatch.skip_key_id, provMatch.skip_key_space);
             if (provMatch.title) animeTitle = provMatch.title;
           }
         }

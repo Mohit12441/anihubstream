@@ -11,7 +11,7 @@ export function Dmca() {
   return (
     <div className="shell page-block">
       <header className="page-header">
-        <h1 className="page-title">DMCA & Copyright Policy</h1>
+        <h1 className="page-title">DMCA &amp; Copyright Policy</h1>
         <p className="page-sub">Notice and takedown procedure for copyright holders.</p>
       </header>
 

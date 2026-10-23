@@ -55,14 +55,14 @@ export function Footer() {
             </ul>
           </nav>
 
-          <nav aria-label="Legal & About">
-            <h3>Legal & About</h3>
+          <nav aria-label="Legal and About">
+            <h3>Legal &amp; About</h3>
             <ul>
               <li>
                 <Link to="/about">About Us</Link>
               </li>
               <li>
-                <Link to="/contact">Support & Contact</Link>
+                <Link to="/contact">Support &amp; Contact</Link>
               </li>
               <li>
                 <Link to="/dmca">DMCA Notice</Link>

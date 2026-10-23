@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, cardFromRow, cleanDisplayTitle, errorResponse, ok } from './_lib.js';
+import { HttpError, cardFromRow, cleanDisplayTitle, errorResponse, ok, safeLikePattern } from './_lib.js';
 
 const FAN_OUT_TIMEOUT_MS = 3_500;
 const KNOWN_PROVIDERS = {
