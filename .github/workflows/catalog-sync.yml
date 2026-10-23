@@ -32,6 +32,7 @@ on:
           - providers
           - schedule
           - episodes
+          - maintenance
       force:
         description: 'Force execution even if lease is held'
         required: false
@@ -156,4 +157,18 @@ jobs:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           EPISODES_BATCH_LIMIT: ${{ vars.EPISODES_BATCH_LIMIT || '50' }}
         run: node cloud-sync/sync-episodes.mjs ${{ github.event.inputs.force == 'true' && '--force' || '' }}
+
+      # -----------------------------------------------------------
+      # Phase 8: D1 Database Retention, Pruning & Search Vector Healing
+      # -----------------------------------------------------------
+      - name: phase 8 — db telemetry retention & search vector healing
+        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'maintenance' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        continue-on-error: true
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          PRUNE_RETENTION_DAYS: ${{ vars.PRUNE_RETENTION_DAYS || '30' }}
+        run: node cloud-sync/prune-maintenance.mjs
+
 

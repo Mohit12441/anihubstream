@@ -659,6 +659,7 @@ value matters: an off-phase setting is either ignored or the default.
 | `HIANIME_PAGE_DELAY_MS` | `1500` | hianime | `gh variable delete HIANIME_PAGE_DELAY_MS -R <owner>/<repo>` |
 | `PROVIDERS_BATCH_SIZE` | `50` | providers | `gh variable set PROVIDERS_BATCH_SIZE --body '50' -R <owner>/<repo>` |
 | `EPISODES_BATCH_LIMIT` | `50` | episodes | `gh variable set EPISODES_BATCH_LIMIT --body '50' -R <owner>/<repo>` |
+| `PRUNE_RETENTION_DAYS` | `30` | maintenance | `gh variable set PRUNE_RETENTION_DAYS --body '30' -R <owner>/<repo>` |
 | `QUIET` | unset | report | `gh variable delete QUIET -R <owner>/<repo>` — `verify.mjs` prints one line instead of an indented object |
 | *any switch the run refused to parse* | — | 1-3 | `gh variable set <NAME> --body '<0 or 1>' -R <owner>/<repo>` then `gh variable get <NAME>` — see below, a refused run wrote nothing |
 

@@ -12,6 +12,7 @@ We have implemented and deployed the master orchestrated catalog workflow (`.git
 5. **Phase 5: Franchise Relations Graph**: Recomputes bidirectional prequels, sequels, side-stories, movies, and chronological ordering in `anime_franchise_relation`.
 6. **Phase 6: Ongoing Broadcast Schedules**: Queries AniList for live airing dates, upcoming episode numbers, and cleans stale slots for completed anime.
 7. **Phase 7: Cloud Episode Ingestion & AniSkip Markers**: Generates missing episode rows for newly debuted and ongoing anime, syncs Kitsu thumbnails/titles, and ingests verified intro/outro skip times from AniSkip API.
+8. **Phase 8: D1 Retention Pruning & Search Vector Healing**: Prunes rolling run logs and rate-limiting telemetry older than 30 days (`sync_runs`, `api_usage`), purges expired locks, and self-heals missing `search_text` vectors.
 
 ## Key Assumptions to Validate
 - [x] Cloudflare D1 Free Tier allows 100,000 row writes per 24-hour UTC window (`d1.platform.limits`).
