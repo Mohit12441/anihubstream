@@ -37,7 +37,9 @@ test('TASK 5 (P1) SEO: sitemap.xml excludes retired duplicate slugs', async () =
   assert.equal(response.headers.get('Content-Type'), 'application/xml; charset=utf-8');
 
   const xml = await response.text();
+  assert.ok(xml.includes('https://anihubstream.com/anime/sousou-no-frieren'), 'Canonical /anime/ overview page must be present');
   assert.ok(xml.includes('https://anihubstream.com/watch/sousou-no-frieren'), 'Canonical sousou-no-frieren must be present');
+  assert.ok(xml.includes('https://anihubstream.com/anime/demon-slayer'), 'Canonical /anime/ overview page must be present');
   assert.ok(xml.includes('https://anihubstream.com/watch/demon-slayer'), 'Canonical demon-slayer must be present');
   assert.ok(xml.includes('https://anihubstream.com/watch/naruto'));
   assert.ok(!xml.includes('https://anihubstream.com/watch/frieren-beyond-journey-s-end'), 'Retired duplicate frieren-beyond-journey-s-end must be excluded');

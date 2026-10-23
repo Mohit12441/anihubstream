@@ -40,6 +40,16 @@ export async function onRequestGet({ env }) {
       for (const row of results || []) {
         if (RETIRED_SLUGS.has(row.id)) continue;
         const lastmod = row.added_at ? String(row.added_at).slice(0, 10) : now;
+
+        // 1. Primary canonical Anime Overview & SEO Landing Page
+        animeUrls.push({
+          loc: `${origin}/anime/${row.id}`,
+          lastmod,
+          changefreq: 'weekly',
+          priority: '0.9',
+        });
+
+        // 2. Canonical Player Entry Page
         animeUrls.push({
           loc: `${origin}/watch/${row.id}`,
           lastmod,
@@ -47,9 +57,9 @@ export async function onRequestGet({ env }) {
           priority: '0.8',
         });
 
-        // Add episode URLs
+        // 3. Key watchable episode deep links (capped to maintain total sitemap below Google 50k limit)
         const total = Number.isInteger(row.episode_total) && row.episode_total > 0
-          ? Math.min(row.episode_total, 250)
+          ? Math.min(row.episode_total, 24)
           : 0;
         for (let ep = 1; ep <= total; ep++) {
           animeUrls.push({
