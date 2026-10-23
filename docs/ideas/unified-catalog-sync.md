@@ -13,6 +13,9 @@ We have implemented and deployed the master orchestrated catalog workflow (`.git
 6. **Phase 6: Ongoing Broadcast Schedules**: Queries AniList for live airing dates, upcoming episode numbers, and cleans stale slots for completed anime.
 7. **Phase 7: Cloud Episode Ingestion & AniSkip Markers**: Generates missing episode rows for newly debuted and ongoing anime, syncs Kitsu thumbnails/titles, and ingests verified intro/outro skip times from AniSkip API.
 8. **Phase 8: D1 Retention Pruning & Search Vector Healing**: Prunes rolling run logs and rate-limiting telemetry older than 30 days (`sync_runs`, `api_usage`), purges expired locks, and self-heals missing `search_text` vectors.
+9. **Phase 9: Provider Mirror Health & Availability Validator**: Probes a rolling sample of stream provider slugs (AniKoto, HiAnime, AniWatch) to detect upstream domain renames or 404s, auto-downgrading broken slugs so the player falls back to live sources.
+
+In addition, an automated edge canary workflow (`.github/workflows/health-canary.yml`) runs every 12 hours to verify end-to-end edge uptime across `/api/health`, `/api/anime`, `/api/schedule`, and `/sitemap.xml`.
 
 ## Key Assumptions to Validate
 - [x] Cloudflare D1 Free Tier allows 100,000 row writes per 24-hour UTC window (`d1.platform.limits`).

@@ -33,6 +33,7 @@ on:
           - schedule
           - episodes
           - maintenance
+          - health
       force:
         description: 'Force execution even if lease is held'
         required: false
@@ -170,5 +171,19 @@ jobs:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           PRUNE_RETENTION_DAYS: ${{ vars.PRUNE_RETENTION_DAYS || '30' }}
         run: node cloud-sync/prune-maintenance.mjs
+
+      # -----------------------------------------------------------
+      # Phase 9: Provider Mirror Health & Availability Validator
+      # -----------------------------------------------------------
+      - name: phase 9 — validate provider health & dead-slug detection
+        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'health' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        continue-on-error: true
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          PROVIDER_HEALTH_SAMPLE_SIZE: ${{ vars.PROVIDER_HEALTH_SAMPLE_SIZE || '20' }}
+        run: node cloud-sync/validate-providers.mjs
+
 
 
