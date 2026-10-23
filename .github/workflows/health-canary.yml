@@ -47,11 +47,11 @@ jobs:
           node -e '
             const fs = require("fs");
             const data = JSON.parse(fs.readFileSync("anime.json", "utf8"));
-            if (!data.ok || !Array.isArray(data.data?.items) || data.data.items.length === 0) {
+            if (!Array.isArray(data.results) || data.results.length === 0) {
               console.error("❌ Malformed D1 catalog response:", data);
               process.exit(1);
             }
-            console.log("✅ D1 Database query active. Sample title:", data.data.items[0].title);
+            console.log("✅ D1 Database query active. Total catalog titles:", data.total, "| Sample title:", data.results[0].title);
           '
 
       - name: probe /api/schedule
