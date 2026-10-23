@@ -46,12 +46,12 @@ const PAGE_SIZE = Math.min(20, intEnv('KITSU_PAGE_SIZE', 20));
    pages per run needs 8 requests an hour and 192 a day. A budget under that is not a safety margin,
    it is a hidden stop — the run still takes the lease, still spends a Kitsu request to discover it
    is out, and does no artwork work for the rest of the day.
-   RUNS_PER_DAY is the schedule in .github/workflows/kitsu-sync.yml written down once. It cannot be
+   RUNS_PER_DAY is the schedule in .github/workflows/catalog-sync.yml written down once. It cannot be
    read at runtime — a runner does not know what cron it was woken by — so it is a constant, and
-   rate.test.mjs parses the cron out of that file and fails if the two disagree. Editing the cron
+   config.test.mjs parses the cron out of that file and fails if the two disagree. Editing the cron
    without editing this is therefore a test failure rather than a budget that quietly stops
    matching the schedule, which is the same class of bug as the 80 that was here before. */
-export const RUNS_PER_DAY = intEnv('KITSU_RUNS_PER_DAY', 48);   // `15,45 * * * *` × 24
+export const RUNS_PER_DAY = intEnv('KITSU_RUNS_PER_DAY', 2);   // `0 2,14 * * *` × 2 (catalog-sync.yml)
 const PAGES_PER_RUN = intEnv('KITSU_PAGES_PER_RUN', 4);
 const DAILY_BUDGET = intEnv('KITSU_DAILY_BUDGET', RUNS_PER_DAY * PAGES_PER_RUN + 8);
 const MAX_ITEMS = intEnv('MAX_ITEMS_PER_RUN', 1000);

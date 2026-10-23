@@ -23,7 +23,7 @@ name: cloud-ops
 # what this workflow proves rather than a housekeeping preference: `probe` is the artifact step 2 of
 # the migration collects because it runs the same schema gate a run runs, so a probe executed under a
 # different engine than the writers is a verdict about a run nobody is doing. (22.18 sat here after
-# the sync jobs moved to 24.19; see anilist-sync.yml for why the minor matters at all.)
+# the sync jobs moved to 24.19; see catalog-sync.yml for why the minor matters at all.)
 
 on:
   workflow_dispatch:
@@ -134,7 +134,7 @@ jobs:
           # meaningful against the phase the writer believes it is in. "Phase 1 must not have
           # created a row" is a failure in mirror and normal in delta, and the shelf-ownership WARN
           # compares the heartbeat against the same LEGACY_QUIET_MS the takeover interlock used. If
-          # a switch is added to anilist-sync.yml it has to appear here too, or report will audit a
+          # a switch is added to catalog-sync.yml it has to appear here too, or report will audit a
           # different configuration than the one that wrote the data.
           MODE: ${{ vars.MODE }}
           LEGACY_WRITER_ACTIVE: ${{ vars.LEGACY_WRITER_ACTIVE }}

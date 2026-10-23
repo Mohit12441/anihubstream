@@ -6,7 +6,7 @@
  * maps metadata into Cloudflare D1 database (`anime`, `anime_genre`, `source_ids`),
  * preserves distributed leases (`sync_lock`), and persists cursor progress in `sync_meta`.
  *
- * Runs on a recurring schedule in GitHub Actions (`.github/workflows/hianime-sync.yml`)
+ * Runs as Phase 3 in GitHub Actions (`.github/workflows/catalog-sync.yml`)
  * and can be run standalone:
  *
  *   node cloud-sync/sync-hianime.mjs

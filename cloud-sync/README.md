@@ -267,8 +267,7 @@ AniList returns an explicit JSON `null` for a field it was asked about but does 
 Phase 1 is not read-only: `mirror` updates real rows. So before the first scheduled tick, do these
 five things in order. They take ten minutes and they are the difference between a rollout you can
 reason about and one you are guessing at. **If the workflow is already pushed, silence the
-schedule first** — `gh workflow disable anilist-sync.yml -R <owner>/<repo>` and the same for
-`kitsu-sync.yml` (one workflow per invocation), then `gh workflow enable` it again when these five
+schedule first** — `gh workflow disable catalog-sync.yml -R <owner>/<repo>`, then `gh workflow enable` it again when these five
 steps are green; the `cloud-ops` jobs are a separate workflow and stay dispatchable throughout. A
 tick between the push and the scoped run also eats step 3's evidence: ticks walk the same shared
 cursor (`cloud_anilist_cursor:mirror`), so a tick can finish the walk first and the scoped run then
@@ -649,7 +648,7 @@ value matters: an off-phase setting is either ignored or the default.
 | `KITSU_MIN_INTERVAL_MS` | `45000` | kitsu | `gh variable delete KITSU_MIN_INTERVAL_MS -R <owner>/<repo>` |
 | `KITSU_PAGE_SIZE` | `20` (clamped to 20) | kitsu | `gh variable set KITSU_PAGE_SIZE --body '20' -R <owner>/<repo>` (or `delete`; 20 is Kitsu's own maximum, so a bigger number is the same run) |
 | `KITSU_PAGES_PER_RUN` | `4` | kitsu | `gh variable set KITSU_PAGES_PER_RUN --body '4' -R <owner>/<repo>` — this is the throughput knob: each page is `KITSU_PAGE_SIZE` titles, so 4 pages per 30 minutes is the real rate, and the budget below has to agree with it |
-| `KITSU_RUNS_PER_DAY` | `48` | kitsu | `gh variable delete KITSU_RUNS_PER_DAY -R <owner>/<repo>` — this is the cron in `kitsu-sync.yml` (`15,45 * * * *` × 24) written down, because a runner cannot ask what schedule woke it. `config.test.mjs` parses that cron and fails if the two disagree, so changing the schedule means changing this number in the same commit |
+| `KITSU_RUNS_PER_DAY` | `2` | kitsu | `gh variable set KITSU_RUNS_PER_DAY --body '2' -R <owner>/<repo>` — this is the cron in `catalog-sync.yml` (`0 2,14 * * *` × 2) written down, because a runner cannot ask what schedule woke it. `config.test.mjs` parses that cron and fails if the two disagree, so changing the schedule means changing this number in the same commit |
 | `KITSU_DAILY_BUDGET` | `KITSU_RUNS_PER_DAY × KITSU_PAGES_PER_RUN + 8` (= 200 at the default) | kitsu | `gh variable set KITSU_DAILY_BUDGET --body '200' -R <owner>/<repo>` — 80 was the value that made every run after roughly the 20th of the day a no-op; raise the budget or cut the pages, but do not leave the two disagreeing |
 | `KITSU_TIMEOUT_MS` | `30000` | kitsu | `gh variable set KITSU_TIMEOUT_MS --body '30000' -R <owner>/<repo>` (or `delete` to take the default) |
 | `KITSU_USER_AGENT` | same shape as `ANILIST_USER_AGENT` | kitsu | `gh variable delete KITSU_USER_AGENT -R <owner>/<repo>` |
@@ -665,23 +664,15 @@ value matters: an off-phase setting is either ignored or the default.
 | *any switch the run refused to parse* | — | 1-3 | `gh variable set <NAME> --body '<0 or 1>' -R <owner>/<repo>` then `gh variable get <NAME>` — see below, a refused run wrote nothing |
 
 **Not in this table on purpose:** `JITTER_WINDOW_S`. It is read by the workflow's bash step, not by
-any Node script, and its default lives next to the `sleep` that uses it — 120s in `anilist-sync.yml`,
-90s in `kitsu-sync.yml`, because that job fires twice an hour and a wider window would start
-colliding with the next tick. A variable a script never reads does not belong in a table of script
+any Node script, and its default lives next to the `sleep` that uses it in `catalog-sync.yml`. A variable a script never reads does not belong in a table of script
 configuration.
 
-**The Kitsu rate, stated as a number rather than as a setting.** `kitsu-sync.yml` fires on
-`15,45 * * * *` — 48 runs a day — and each run takes at most `KITSU_PAGES_PER_RUN` (4) pages of
-`KITSU_PAGE_SIZE` (20) titles, spaced by `KITSU_MIN_INTERVAL_MS` (45s). So: 8 requests an hour,
-192 a day, 160 titles an hour at the outside — against Kitsu's published ~100 requests per hour per
-IP (capping single-caller throughput to 80 requests/hour at the 45s floor), with the whole margin coming from the run *stopping* rather than from the floor alone. The budget
-is the other half of that story and it has to be arithmetic, not a guess: the default is
-`KITSU_RUNS_PER_DAY × KITSU_PAGES_PER_RUN + 8` (200), because at 80 — the value that was here before — the budget was
-the binding constraint from roughly the twentieth run of the day onward, and every run after that was
-a no-op that still took the lease, still spent a D1 read, and still recorded a row in `sync_runs`.
-If you cut `KITSU_PAGES_PER_RUN`, cut the budget to match or leave it derived. `KITSU_RUNS_PER_DAY`
-is the schedule written down once, in the one place the budget reads it: it cannot be discovered at
-runtime, so `config.test.mjs` reads `kitsu-sync.yml`, counts the firings, and fails if the constant no
+**The Kitsu rate, stated as a number rather than as a setting.** `catalog-sync.yml` fires on
+`0 2,14 * * *` — 2 runs a day — and each run takes at most `KITSU_PAGES_PER_RUN` (4) pages of
+`KITSU_PAGE_SIZE` (20) titles, spaced by `KITSU_MIN_INTERVAL_MS` (45s).
+The default budget is `KITSU_RUNS_PER_DAY × KITSU_PAGES_PER_RUN + 8` (16).
+`KITSU_RUNS_PER_DAY` is the schedule written down once, in the one place the budget reads it: it cannot be discovered at
+runtime, so `config.test.mjs` reads `catalog-sync.yml`, counts the firings, and fails if the constant no
 longer matches the cron. That coupling is deliberate — the bug this table row replaced was exactly a
 number that had stopped agreeing with a schedule.
 
@@ -694,7 +685,7 @@ gh variable set <NAME> --body '<0 or 1>' -R <owner>/<repo> && gh variable get <N
 
 Nothing was written by a run that refused, so the rollback is the corrected value and nothing else:
 the cursor, the throttle and the queue are untouched, and the phase you meant to be in is still the
-phase the data is in. `Actions → anilist-sync` will pass on the next tick; check with `report`.
+phase the data is in. `Actions → catalog-sync` will pass on the next tick; check with `report`.
 
 `MODE` is the only variable that changes *what gets written*. `CLOUD_CREATES_ROWS` and
 `LEGACY_WRITER_ACTIVE` change it by deriving it, and an `MODE` that contradicts them is refused.

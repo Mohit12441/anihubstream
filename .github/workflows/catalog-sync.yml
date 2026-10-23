@@ -16,7 +16,7 @@ on:
   schedule:
     - cron: '0 2,14 * * *'
   repository_dispatch:
-    types: [catalog-sync]
+    types: [catalog-sync, anilist-sync, kitsu-sync, hianime-sync, providers-sync]
   workflow_dispatch:
     inputs:
       target:

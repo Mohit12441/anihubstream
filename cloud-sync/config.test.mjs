@@ -4,7 +4,7 @@
  *
  * Three things are pinned here:
  *   1. the README's env table and the variables the code actually reads — the same list, both ways;
- *   2. the Kitsu run count and the cron in .github/workflows/kitsu-sync.yml;
+ *   2. the Kitsu run count and the cron in .github/workflows/catalog-sync.yml;
  *   3. the air slot every writer stamps — column for column against an independent restatement, and
  *      the season rule against the site's own function, both executed rather than read as text.
  *
@@ -144,8 +144,8 @@ describe('a fresh database built from the committed schema can be seeded', () =>
    coupling is checked from the file that holds the schedule. Changing the cron and not this is the
    same class of bug as the daily budget of 80 that made every late run a no-op. */
 describe('the Kitsu run count and the schedule that produces it', () => {
-  it('equals what kitsu-sync.yml actually fires', () => {
-    const workflow = read('.github/workflows/kitsu-sync.yml');
+  it('equals what catalog-sync.yml actually fires', () => {
+    const workflow = read('.github/workflows/catalog-sync.yml');
     const crons = [...workflow.matchAll(/-\s*cron:\s*['"]([^'"]+)['"]/g)].map((m) => m[1]);
     assert.equal(crons.length, 1, `expected one schedule entry, found ${crons.length}`);
     const [minute, hour, dayOfMonth, month, dayOfWeek] = crons[0].split(/\s+/);
@@ -154,7 +154,7 @@ describe('the Kitsu run count and the schedule that produces it', () => {
       `the derivation assumes an every-day schedule, got '${crons[0]}'`);
     const perDay = count(minute, 60) * count(hour, 24);
     assert.equal(RUNS_PER_DAY, perDay,
-      `kitsu-sync.yml fires ${perDay} times a day ('${crons[0]}') but sync-kitsu.mjs budgets for ${RUNS_PER_DAY}; change one deliberately, not one by accident`);
+      `catalog-sync.yml fires ${perDay} times a day ('${crons[0]}') but sync-kitsu.mjs budgets for ${RUNS_PER_DAY}; change one deliberately, not one by accident`);
   });
 
   it('enforces a safe hourly ceiling of at most 80 requests per hour (>= 45s spacing)', () => {
