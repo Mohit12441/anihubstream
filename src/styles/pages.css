@@ -583,8 +583,20 @@
   background: linear-gradient(180deg, rgba(255, 31, 74, 0.2), rgba(255, 31, 74, 0.05));
   box-shadow: 0 0 0 3px rgba(255, 31, 74, 0.14);
 }
-.day.is-on b {
-  color: var(--crimson-soft);
+.day.is-today {
+  border-color: color-mix(in srgb, var(--crimson) 50%, var(--line));
+}
+.day__today-pill {
+  display: block;
+  font-size: 8.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--crimson);
+  margin-top: 1px;
+}
+.day.is-on .day__today-pill {
+  color: #fff;
 }
 
 .tl {

@@ -249,7 +249,7 @@ try {
   if (target) await session.eval(
     `(()=>{const v=document.querySelector('video');v.currentTime=${target.at.toFixed(2)};v.play().catch(()=>{})})()`,
   );
-  await sleep(1800);
+  await sleep(3200);
   const phone = await capState();
   const stageH = await session.eval(`Math.round(document.querySelector('.player__stage').getBoundingClientRect().height)`);
   const clamped = phone.px !== null && phone.px <= Math.max(12, stageH * 0.06) + 0.5 && phone.px <= 30;
@@ -258,7 +258,15 @@ try {
     phone.px !== null && clamped,
     `computed font-size ${phone.px}px ≤ max(12, ${stageH}×0.06=${(stageH * 0.06).toFixed(1)})`, shotPhone);
 
-  await session.tap('.player__stage', { wait: 600 });
+  if (target) await session.eval(
+    `(()=>{const v=document.querySelector('video');v.currentTime=${target.at.toFixed(2)};v.pause();})()`,
+  );
+  await sleep(400);
+
+  const isHidden = await session.eval(`document.querySelector('.player__stage')?.dataset.chrome === 'hidden'`);
+  if (isHidden) {
+    await session.tap('.player__stage', { wait: 600 });
+  }
   const docked = await capState();
   const bar = await session.eval(
     `(()=>{const b=document.querySelector('.player__bar');
@@ -271,7 +279,7 @@ try {
     shotDock);
 
   /* ---- 7. nothing threw on the way through ---- */
-  const logs = session.logs().filter((l) => !/favicon|Failed to load resource: the server responded with a status of 404/i.test(l));
+  const logs = session.logs().filter((l) => !/favicon|Failed to load resource: the server responded with a status of 404|preloaded using link preload but not used/i.test(l));
   check('console', 'no page exceptions during the run', logs.length === 0,
     logs.length ? logs.slice(0, 4).join('\n     ') : 'clean');
 

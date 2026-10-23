@@ -76,6 +76,81 @@ html[data-theme='light'] .wordmark__oni {
   color: var(--text-3);
 }
 
+.site-header__search-wrap {
+  position: relative;
+}
+
+.instant-suggestions {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: max(100%, 280px);
+  background: var(--bg-card, #12151f);
+  border: 1px solid var(--line, rgba(255, 255, 255, 0.1));
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  padding: 6px;
+  margin: 0;
+  list-style: none;
+  z-index: 100;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.suggestions-loading {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: max(100%, 280px);
+  background: var(--bg-card, #12151f);
+  border: 1px solid var(--line, rgba(255, 255, 255, 0.1));
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  padding: 12px 16px;
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-3, #94a3b8);
+  z-index: 100;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.suggestion-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.suggestion-thumb {
+  width: 32px;
+  height: 44px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.suggestion-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-1, #fff);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.suggestion-year {
+  font-size: 0.75rem;
+  color: var(--text-3, #94a3b8);
+  margin-left: auto;
+}
+
 /* ---------- primary nav ---------- */
 .site-nav {
   flex: 1;

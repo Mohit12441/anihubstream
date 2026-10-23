@@ -1,10 +1,13 @@
 import { HttpError, errorResponse, ok } from '../_lib.js';
+import { isMegaplayTokenValid } from '../_megaplay.js';
+
+const STREAM_KEY_REGEX = /^stream:[a-zA-Z0-9_-]+(?::[a-zA-Z0-9_-]+)*:\d+:(sub|dub|hindi)(:[a-zA-Z0-9_-]+)?$/;
 
 export const onRequestGet = async ({ request, env }) => {
   try {
     const url = new URL(request.url);
     const key = url.searchParams.get('key');
-    if (!key || !/^stream:[a-zA-Z0-9_-]+:\d+:(sub|dub|hindi)(:[a-zA-Z0-9_-]+)?$/.test(key)) {
+    if (!key || !STREAM_KEY_REGEX.test(key)) {
       throw new HttpError(400, 'bad_request', 'Invalid stream cache key format');
     }
 
@@ -25,6 +28,11 @@ export const onRequestGet = async ({ request, env }) => {
       return ok({ hit: false });
     }
 
+    const testUrl = parsed?.master || parsed?.streamUrl;
+    if (testUrl && !isMegaplayTokenValid(testUrl)) {
+      return ok({ hit: false });
+    }
+
     return ok({ hit: true, data: parsed, expiresAt: row.expires_at });
   } catch (err) {
     return errorResponse(err);
@@ -39,11 +47,11 @@ export const onRequestPost = async ({ request, env }) => {
     }
 
     const key = String(body.key);
-    if (!/^stream:[a-zA-Z0-9_-]+:\d+:(sub|dub|hindi)(:[a-zA-Z0-9_-]+)?$/.test(key)) {
+    if (!STREAM_KEY_REGEX.test(key)) {
       throw new HttpError(400, 'bad_request', 'Invalid stream cache key format');
     }
 
-    const ttlSeconds = Number.isFinite(body.ttlSeconds) ? Math.min(Math.max(body.ttlSeconds, 3600), 86400) : 21600; // 6h default, max 24h
+    const ttlSeconds = Number.isFinite(body.ttlSeconds) ? Math.min(Math.max(body.ttlSeconds, 60), 86400) : 1200; // default 20m, max 24h
     const expiresAt = Date.now() + ttlSeconds * 1000;
     const dataStr = typeof body.data === 'string' ? body.data : JSON.stringify(body.data);
 

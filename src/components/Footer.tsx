@@ -13,15 +13,13 @@ export function Footer() {
           <div className="site-footer__brand">
             <Logo />
             <p className="site-footer__lede">
-              AniHubStream is a cinematic anime browsing interface. Titles, posters, episode lists and air times
-              come from the Kitsu and AniList community databases, copied into this site's own catalogue database
-              by a build-time sync and an hourly refresh of air times and trending ranks — nothing is fetched from
-              those services while you browse.
+              AniHubStream is your cinematic destination to watch anime online free in high definition.
+              Discover trending series, explore comprehensive weekly schedules, and stream subbed and dubbed anime
+              with fast playback and synchronized subtitles.
             </p>
             <span className="site-footer__note">
-              <Send size={14} aria-hidden="true" /> Data: Kitsu · AniList · AniSkip. Artwork belongs to its
-              respective rights holders. Playback streams real sources through the AniKoto bridge — the player
-              reports the bridge's status and offers a retry when it is unreachable.
+              <Send size={14} aria-hidden="true" /> AniHubStream does not store media files on its servers.
+              All streams and artwork belong to their respective copyright holders.
             </span>
           </div>
 
@@ -88,7 +86,7 @@ export function Footer() {
         </div>
 
         <div className="site-footer__bottom">
-          <p>© {new Date().getFullYear()} AniHubStream. UI concept — catalogue data and artwork from Kitsu and AniList.</p>
+          <p>© {new Date().getFullYear()} AniHubStream. All rights reserved. Free anime streaming for fans worldwide.</p>
           <div className="site-footer__social">
             <a
               href="https://x.com"

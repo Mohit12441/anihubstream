@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build --mode pages --outDir dist-pages --emptyOutDir",
     "build:pages": "tsc --noEmit && vite build --mode pages --outDir dist-pages --emptyOutDir",
     "typecheck": "tsc --noEmit",
     "test": "node --test api/*.test.mjs tools/*.test.mjs cloud-sync/*.test.mjs",
     "verify": "node tools/verify-runtime.mjs",
     "pages:dev": "npm run build:pages && wrangler pages dev dist-pages --port 8899",
+    "db:init": "node tools/init-local-db.mjs",
     "preview": "vite preview",
     "serve": "node tools/serve-static.mjs",
     "start:local": "node tools/start-local.mjs",
@@ -19,7 +20,9 @@
     "db:seed-id-map": "node tools/apply-id-map.mjs",
     "sync:hianime": "node cloud-sync/sync-hianime.mjs",
     "sync:anilist": "node cloud-sync/sync-anilist.mjs",
-    "sync:kitsu": "node cloud-sync/sync-kitsu.mjs"
+    "sync:kitsu": "node cloud-sync/sync-kitsu.mjs",
+    "sync:franchises": "node tools/auto-sync-franchises.mjs",
+    "sync:schedule": "node tools/sync-ongoing-schedules.mjs"
   },
   "dependencies": {
     "hls.js": "^1.7.3",

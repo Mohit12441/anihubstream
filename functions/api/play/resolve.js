@@ -1,6 +1,7 @@
 // @ts-check
-import { HttpError, errorResponse, ok } from '../_lib.js';
-import { resolveMegaplayDirect } from '../_megaplay.js';
+import { HttpError, cleanDisplayTitle, errorResponse, ok } from '../_lib.js';
+import { resolveMegaplayDirect, isMegaplayTokenValid } from '../_megaplay.js';
+import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
 
 const BRIDGE_TIMEOUT_MS = 25_000;
 
@@ -9,7 +10,6 @@ function formatServerName(provider, serverId) {
     anikoto: 'AniKoto',
     hianime: 'HiAnime',
     aniwatch: 'AniWatch',
-    animedubhindi: 'AnimeDubHindi',
     watchanimeworld: 'WatchAnimeWorld',
     animewave: 'AnimeWave',
     animekai: 'AnimeKai',
@@ -111,6 +111,7 @@ export const onRequestGet = async ({ request, env }) => {
     const canUseEdgeDirect =
       provider === 'auto' ||
       provider === 'anikoto' ||
+      provider === 'hianime' ||
       provider === 'aniwatch' ||
       serverParam.toLowerCase().includes('mega') ||
       serverParam.toLowerCase().includes('hd') ||
@@ -118,14 +119,54 @@ export const onRequestGet = async ({ request, env }) => {
 
     if (resolvedMalId > 0 && canUseEdgeDirect) {
       try {
-        const directRes = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio });
+        const cacheKey = `stream:${provider === 'hianime' ? 'hianime' : 'anikoto'}:${resolvedMalId}:${ep}:${audio}`;
+        let directRes = null;
+        if (env.ANIHUB) {
+          try {
+            const cached = await env.ANIHUB.prepare(
+              'SELECT data FROM stream_cache WHERE key = ?1 AND expires_at > ?2'
+            ).bind(cacheKey, Date.now()).first();
+            if (cached?.data) {
+              const parsed = JSON.parse(cached.data);
+              if (parsed?.streamUrl && isMegaplayTokenValid(parsed.streamUrl)) {
+                directRes = parsed;
+              }
+            }
+          } catch {}
+        }
+        if (!directRes) {
+          if (provider === 'hianime') {
+            const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
+            const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) });
+            if (zokoRes?.masterUrl) {
+              directRes = {
+                streamUrl: zokoRes.masterUrl,
+                referer: 'https://zokoanime.video/',
+                quality: zokoRes.defaultQuality || '1080p',
+                subtitles: [],
+                provider: 'hianime',
+                skip: zokoRes.skip,
+              };
+            }
+          }
+          if (!directRes) {
+            directRes = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio });
+          }
+          if (env.ANIHUB && directRes?.streamUrl) {
+            const ttl = Date.now() + 20 * 60 * 1000;
+            env.ANIHUB.prepare(
+              'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
+            ).bind(cacheKey, JSON.stringify(directRes), ttl).run().catch(() => {});
+          }
+        }
         if (directRes?.streamUrl) {
           const proxyBase = `${url.origin}/api/proxy`;
-          const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=https://megaplay.buzz/`;
+          const activeReferer = directRes.referer || 'https://megaplay.buzz/';
+          const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=${encodeURIComponent(activeReferer)}`;
 
           const subtitles = (directRes.subtitles || []).map((sub) => ({
             ...sub,
-            url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=https://megaplay.buzz/` : '',
+            url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}` : '',
           }));
 
           const resolvedServer = {
@@ -151,32 +192,36 @@ export const onRequestGet = async ({ request, env }) => {
       }
     }
 
-    const bridgeBase = env.STREAM_BRIDGE_URL || 'https://bridge.anihubstream.com';
+    const bridgeBase = env.STREAM_BRIDGE_URL || '';
 
-    const resolveUrl = new URL(`${bridgeBase}/resolve`);
-    resolveUrl.searchParams.set('title', title);
-    resolveUrl.searchParams.set('ep', String(ep));
-    resolveUrl.searchParams.set('audio', audio);
-    if (provider) resolveUrl.searchParams.set('provider', provider);
-    if (serverParam) resolveUrl.searchParams.set('server', serverParam);
-    if (resolvedMalId) resolveUrl.searchParams.set('mal', String(resolvedMalId));
+    let bridgeRes = null;
+    if (bridgeBase) {
+      const cleanTitle = cleanDisplayTitle(title);
+      const resolveUrl = new URL(`${bridgeBase}/resolve`);
+      resolveUrl.searchParams.set('title', cleanTitle || title);
+      resolveUrl.searchParams.set('ep', String(ep));
+      resolveUrl.searchParams.set('audio', audio);
+      if (provider) resolveUrl.searchParams.set('provider', provider);
+      if (serverParam) resolveUrl.searchParams.set('server', serverParam);
+      if (resolvedMalId) resolveUrl.searchParams.set('mal', String(resolvedMalId));
 
-    let bridgeRes;
-    try {
-      const res = await fetch(resolveUrl.toString(), {
-        headers: { accept: 'application/json' },
-        signal: AbortSignal.timeout(BRIDGE_TIMEOUT_MS),
-      });
-      if (!res.ok) {
-        throw new HttpError(res.status === 404 ? 404 : 502, 'provider_error', `Upstream bridge returned ${res.status}`);
-      }
-      bridgeRes = await res.json();
-    } catch (err) {
-      // If external bridge threw 530, timed out, or crashed: attempt title-to-MAL resolution via Jikan
+      try {
+        const res = await fetch(resolveUrl.toString(), {
+          headers: { accept: 'application/json' },
+          signal: AbortSignal.timeout(2000),
+        });
+        if (res.ok) {
+          bridgeRes = await res.json();
+        }
+      } catch {}
+    }
+
+    if (!bridgeRes) {
+      // If no bridge configured or bridge timed out: attempt title-to-MAL resolution via Jikan
       if (canUseEdgeDirect) {
         try {
           const cleanTitle = title
-            .replace(/^[a-z0-9_-]+:/i, '')
+            .replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai):/i, '')
             .replace(/-[a-z0-9]{5,8}$/i, '')
             .replace(/[-_:]+/g, ' ')
             .trim();
@@ -222,8 +267,7 @@ export const onRequestGet = async ({ request, env }) => {
         }
       }
 
-      if (err instanceof HttpError) throw err;
-      throw new HttpError(504, 'upstream_timeout', 'Stream bridge resolution timed out');
+      throw new HttpError(504, 'upstream_timeout', 'Stream bridge resolution timed out or unavailable');
     }
 
     if (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl)) {

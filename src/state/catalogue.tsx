@@ -30,6 +30,7 @@ interface HomeRows {
   top: Anime[];
   fresh: Anime[];
   added: Anime[];
+  providers?: Record<string, { id: string; slug: string; title: string; coverUrl: string | null; provider: string }[]>;
 }
 
 interface Stats {
@@ -127,6 +128,7 @@ export function CatalogueProvider({ children }: { children: ReactNode }) {
           top: homeBody.topRated.map(hydrateCard),
           fresh: homeBody.fresh.map(hydrateCard),
           added: homeBody.added.map(hydrateCard),
+          providers: homeBody.providers,
         });
         setStats(statsBody);
         setStatus('ready');

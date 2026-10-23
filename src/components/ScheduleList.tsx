@@ -6,15 +6,16 @@ import { type ScheduleEntry } from '../data/model';
 
 interface Props {
   entries: ScheduleEntry[];
-  highlightId: string | null;
+  highlightId?: string | null;
+  todayDay?: number;
 }
 
-export function ScheduleList({ entries, highlightId }: Props) {
+export function ScheduleList({ entries, highlightId, todayDay }: Props) {
   if (!entries.length) {
     return (
       <div className="empty" role="status">
         <p>
-          <b>No title in the catalogue airs on this day.</b>
+          <b>No anime scheduled to air on this day.</b>
           Pick another day or switch the season filter back to All.
         </p>
       </div>
@@ -24,7 +25,11 @@ export function ScheduleList({ entries, highlightId }: Props) {
   return (
     <ol className="tl">
       {entries.map((e) => (
-        <li key={`${e.anime.id}-${e.time}`} className="tl__row" data-today={e.anime.id === highlightId || undefined}>
+        <li
+          key={`${e.anime.id}-${e.time}`}
+          className="tl__row"
+          data-today={todayDay !== undefined ? (e.day === todayDay || undefined) : (e.anime.id === highlightId || undefined)}
+        >
           <div className="tl__day">
             <span className="tl__dot" aria-hidden="true" />
             <b>{e.dayLabel}</b>

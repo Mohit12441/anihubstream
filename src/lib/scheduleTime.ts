@@ -50,16 +50,18 @@ export function convertSlotTimezone(
   if (daysDiff === -6) deltaDays = 1;
   else if (daysDiff === 6) deltaDays = -1;
 
+const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
   if (deltaDays !== 0 && slot.date) {
     const parts = slot.date.trim().split(/\s+/);
     if (parts.length === 2) {
-      const monthStr = parts[0];
+      const monthIdx = MONTH_NAMES.indexOf(parts[0]);
       const dayNum = Number.parseInt(parts[1], 10);
-      if (!isNaN(dayNum)) {
-        const shiftedDay = dayNum + deltaDays;
-        if (shiftedDay > 0 && shiftedDay <= 31) {
-          localDate = `${monthStr} ${shiftedDay}`;
-        }
+      if (monthIdx !== -1 && !isNaN(dayNum)) {
+        const currentYear = new Date().getFullYear();
+        const d = new Date(Date.UTC(currentYear, monthIdx, dayNum));
+        d.setUTCDate(d.getUTCDate() + deltaDays);
+        localDate = `${MONTH_NAMES[d.getUTCMonth()]} ${d.getUTCDate()}`;
       }
     }
   }

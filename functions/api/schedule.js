@@ -19,7 +19,7 @@ export const onRequestGet = async ({ request, env }) => {
     }));
 
     return ok(
-      { seasons: [...new Set(results.map((r) => r.sched_season))].sort(), days },
+      { seasons: [...new Set(results.map((r) => r.sched_season).filter(Boolean))].sort(), days },
       { cache: 'public, max-age=60, s-maxage=600, stale-while-revalidate=60', headers: { vary: 'Accept-Encoding' } },
     );
   } catch (err) {

@@ -54,6 +54,8 @@ export interface PlayServer {
   subtitles?: SubtitleTrack[];
   downloads?: DownloadOption[];
   fallbackUrls?: string[];
+  intro?: { start: number; end: number } | null;
+  outro?: { start: number; end: number } | null;
 }
 
 export interface Layer1PlayResponse {

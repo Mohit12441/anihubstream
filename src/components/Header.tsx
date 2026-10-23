@@ -35,6 +35,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [q, setQ] = useState('');
   const panelRef = useRef<HTMLDivElement>(null);
+  const searchWrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => setOpen(false), [pathname, search]);
 
@@ -49,9 +50,21 @@ export function Header() {
   const [loading, setLoading] = useState(false);
   const abortControllerRef = useRef<AbortController | null>(null);
 
+  // Close suggestions on outside click
+  useEffect(() => {
+    const onDocClick = (e: MouseEvent) => {
+      if (searchWrapRef.current && !searchWrapRef.current.contains(e.target as Node)) {
+        clearSuggestions();
+      }
+    };
+    document.addEventListener('mousedown', onDocClick);
+    return () => document.removeEventListener('mousedown', onDocClick);
+  }, []);
+
   // Debounced fetch for instant suggestions
   useEffect(() => {
-    if (!open || !q.trim()) {
+    const trimmed = q.trim();
+    if (!trimmed) {
       setSuggestions([]);
       return;
     }
@@ -63,7 +76,7 @@ export function Header() {
       const controller = new AbortController();
       abortControllerRef.current = controller;
       setLoading(true);
-      fetch(`/api/search/instant?q=${encodeURIComponent(q)}&limit=8`, { signal: controller.signal })
+      fetch(`/api/search/instant?q=${encodeURIComponent(trimmed)}&limit=8`, { signal: controller.signal })
         .then(res => res.json())
         .then(data => {
           setSuggestions(data.hits || []);
@@ -75,7 +88,7 @@ export function Header() {
         });
     }, 150);
     return () => clearTimeout(handler);
-  }, [q, open]);
+  }, [q]);
 
   const clearSuggestions = () => {
     setSuggestions([]);
@@ -118,7 +131,7 @@ export function Header() {
     e.preventDefault();
     const term = q.trim();
     if (!term) {
-      notify('Type a title or genre — the search runs against the titles this catalogue serves.');
+      notify('Please enter an anime title, character, or genre to search.');
       return;
     }
     navigate(`/search?q=${encodeURIComponent(term)}`);
@@ -148,24 +161,26 @@ export function Header() {
         </nav>
 
         <div className="site-header__tools">
-          <form className="site-header__search" onSubmit={submit} role="search">
-            <label className="sr-only" htmlFor="hdr-search">
-              Search anime
-            </label>
-            <Search size={16} aria-hidden="true" />
-            <input
-              id="hdr-search"
-              type="search"
-              placeholder="Search anime..."
-              value={q}
-              onChange={handleInputChange}
-              autoComplete="off"
-            />
-            <button type="submit" className="search__go" aria-label="Run search">
-              <Search size={15} aria-hidden="true" />
-            </button>
-        </form>
-        {renderSuggestions()}
+          <div className="site-header__search-wrap" ref={searchWrapRef}>
+            <form className="site-header__search" onSubmit={submit} role="search">
+              <label className="sr-only" htmlFor="hdr-search">
+                Search anime
+              </label>
+              <Search size={16} aria-hidden="true" />
+              <input
+                id="hdr-search"
+                type="search"
+                placeholder="Search anime..."
+                value={q}
+                onChange={handleInputChange}
+                autoComplete="off"
+              />
+              <button type="submit" className="search__go" aria-label="Run search">
+                <Search size={15} aria-hidden="true" />
+              </button>
+            </form>
+            {renderSuggestions()}
+          </div>
 
 
           <Link

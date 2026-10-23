@@ -2,9 +2,11 @@ name = "anihubstream"
 pages_build_output_dir = "dist-pages"
 compatibility_date = "2026-09-28"
 
-# The catalogue and the anonymous viewer library. Art is served as static files,
-# so only app data lives here — no stream URLs, no credentials.
+# The catalogue, provider ID mappings, and viewer library.
 [[d1_databases]]
 binding = "ANIHUB"
 database_name = "anihub"
 database_id = "b352ef74-e863-4278-bee7-e4409afb11bb"
+
+[vars]
+VITE_P2P_SIGNAL_URL = "wss://anihub-p2p-signal.workers.dev/p2p-signal"

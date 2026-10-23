@@ -54,19 +54,48 @@ async function buildToken(fileUrl, nowSec = Math.floor(Date.now() / 1000)) {
 }
 
 /**
- * Edge Resolver: Resolves Megaplay stream directly using Web standards
- * @param {{ malId: number, ep: number, audio?: string }} param0
+ * Validates that a Megaplay stream URL or token has not expired.
+ * Upstream CDN enforces HMAC timestamp window (~1-2 hours); we enforce 30 minutes (1800s) max age.
+ * @param {string} urlOrToken
+ * @param {number} [maxAgeSec=1800]
+ * @returns {boolean}
  */
-export async function resolveMegaplayDirect({ malId, ep = 1, audio = 'sub' }) {
-  if (!malId || malId <= 0) return null;
+export function isMegaplayTokenValid(urlOrToken, maxAgeSec = 1800) {
+  if (!urlOrToken || typeof urlOrToken !== 'string') return false;
+  try {
+    let token = urlOrToken;
+    if (token.includes('token=')) {
+      const match = token.match(/token=([A-Za-z0-9_-]+\.[A-Za-z0-9_-]+)/);
+      token = match ? match[1] : '';
+    } else if (token.includes('/') || token.includes(':')) {
+      return true;
+    }
+    if (!token) return true; // not a Megaplay tokenized url
+    const part = token.split('.')[0];
+    if (!part) return true;
+    const b64 = part.replace(/-/g, '+').replace(/_/g, '/');
+    const decoded = atob(b64);
+    const parts = decoded.split('|');
+    const tokenSec = parseInt(parts[0], 10);
+    if (!Number.isFinite(tokenSec) || tokenSec <= 0) return true;
+    const nowSec = Math.floor(Date.now() / 1000);
+    return (nowSec - tokenSec) < maxAgeSec && (tokenSec - nowSec) < 300;
+  } catch {
+    return true;
+  }
+}
 
-  const lang = audio === 'dub' ? 'dub' : 'sub';
-  const embedUrl = `https://megaplay.buzz/stream/mal/${malId}/${ep}/${lang}`;
+/**
+ * Edge Resolver: Resolves Megaplay stream directly from an embed URL
+ * @param {string} embedUrl
+ */
+export async function resolveMegaplayEmbed(embedUrl) {
+  if (!embedUrl || typeof embedUrl !== 'string') return null;
 
   const embedRes = await fetch(embedUrl, {
     headers: {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
-      Referer: 'https://anikoto.cz/',
+      Referer: 'https://animehot.cc/',
       Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     },
     signal: AbortSignal.timeout(6000),
@@ -120,6 +149,22 @@ export async function resolveMegaplayDirect({ malId, ep = 1, audio = 'sub' }) {
     subtitles,
     intro: payload.intro || null,
     outro: payload.outro || null,
+  };
+}
+
+/**
+ * Edge Resolver: Resolves Megaplay stream directly using Web standards
+ * @param {{ malId: number, ep: number, audio?: string }} param0
+ */
+export async function resolveMegaplayDirect({ malId, ep = 1, audio = 'sub' }) {
+  if (!malId || malId <= 0) return null;
+
+  const lang = audio === 'dub' ? 'dub' : 'sub';
+  const embedUrl = `https://megaplay.buzz/stream/mal/${malId}/${ep}/${lang}`;
+  const res = await resolveMegaplayEmbed(embedUrl);
+  if (!res) return null;
+  return {
+    ...res,
     provider: 'anikoto',
   };
 }

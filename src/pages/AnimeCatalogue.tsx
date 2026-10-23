@@ -12,6 +12,12 @@ import '../styles/pages.css';
 
 const KINDS: (AnimeKind | 'All')[] = ['All', 'TV', 'Movie', 'OVA', 'ONA', 'Special'];
 const STATUSES: (AnimeStatus | 'All')[] = ['All', 'Ongoing', 'Finished', 'Upcoming'];
+const PROVIDER_OPTIONS = [
+  { id: 'All', label: 'All Providers', icon: '🌐', color: '#6366f1', badge: 'All Providers' },
+  { id: 'anikoto', label: 'AniKoto', icon: '⚡', color: '#6366f1', badge: '1080p HLS · 9 Subs' },
+  { id: 'aniwatch', label: 'AniWatch', icon: '🛡️', color: '#3b82f6', badge: 'Megaplay Global CDN' },
+  { id: 'hianime', label: 'HiAnime', icon: '🌸', color: '#ec4899', badge: 'Multi-Quality 1080p/360p' },
+] as const;
 const SORTS = [
   { id: 'relevance', label: 'Best match' },
   { id: 'popularity', label: 'Popularity' },
@@ -41,6 +47,7 @@ export function AnimeCatalogue() {
   const genre = params.get('genre');
   const status = (params.get('status') ?? 'All') as AnimeStatus | 'All';
   const kind = (params.get('kind') ?? 'All') as AnimeKind | 'All';
+  const provider = params.get('provider') ?? 'All';
   const [view, setView] = useState<'grid' | 'list'>('grid');
   const [term, setTerm] = useState(q);
 
@@ -60,11 +67,25 @@ export function AnimeCatalogue() {
   useSEO({
     title: needle
       ? `Search results for "${needle}" — Anime Catalogue | AniHubStream`
-      : genre
-        ? `${genreLabel(genre)} Anime — Watch Free | AniHubStream`
-        : 'Anime Catalogue — Discover Series & Movies | AniHubStream',
+      : provider !== 'All'
+        ? `${PROVIDER_OPTIONS.find((p) => p.id.toLowerCase() === provider.toLowerCase())?.label ?? 'Provider'} Anime Catalogue — Watch Free | AniHubStream`
+        : genre
+          ? `${genreLabel(genre)} Anime — Watch Free | AniHubStream`
+          : 'Anime Catalogue — Discover Series & Movies | AniHubStream',
     description: 'Explore the full AniHubStream anime catalogue. Filter by genre, release year, format (TV, Movie, OVA), and rating.',
     canonicalUrl: 'https://anihubstream.com/anime',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'AniHubStream Anime Catalogue',
+      description: 'Explore the full AniHubStream anime catalogue. Filter by genre, release year, format (TV, Movie, OVA), and rating.',
+      url: 'https://anihubstream.com/anime',
+      author: {
+        '@type': 'Organization',
+        name: 'AniHubStream',
+        url: 'https://anihubstream.com',
+      },
+    },
   });
 
   const query = useMemo(
@@ -75,8 +96,9 @@ export function AnimeCatalogue() {
       kind: kind !== 'All' ? kind : undefined,
       sort: SERVER_SORT[sort],
       limit: PAGE_SIZE,
+      provider: provider !== 'All' ? provider.toLowerCase() : undefined,
     }),
-    [needle, genre, status, kind, sort],
+    [needle, genre, status, kind, sort, provider],
   );
 
   const [rows, setRows] = useState<Anime[]>([]);
@@ -138,21 +160,21 @@ export function AnimeCatalogue() {
   };
 
   const clearAll = () => setParams(new URLSearchParams(), { replace: true });
-  const hasFilters = Boolean(q || genre) || status !== 'All' || kind !== 'All';
+  const hasFilters = Boolean(q || genre) || status !== 'All' || kind !== 'All' || provider !== 'All';
 
   return (
     <div className="page catalogue">
       <div className="shell">
         <header className="catalogue__head">
           <div>
-            <p className="eyebrow">Catalogue</p>
-            <h1>All Anime</h1>
+            <p className="eyebrow">Anime Library</p>
+            <h1>{provider !== 'All' ? `${PROVIDER_OPTIONS.find((p) => p.id.toLowerCase() === provider.toLowerCase())?.label} Anime` : 'All Anime'}</h1>
             <p className="catalogue__lede">
-              Every title this site serves —{' '}
-              {stats
-                ? `${stats.titles} series and films read from the catalogue database.`
-                : 'the count appears once the catalogue database answers.'}{' '}
-              Filter, sort and open the immersive watch page.
+              {provider !== 'All'
+                ? `Browsing titles available on ${PROVIDER_OPTIONS.find((p) => p.id.toLowerCase() === provider.toLowerCase())?.label} servers (${PROVIDER_OPTIONS.find((p) => p.id.toLowerCase() === provider.toLowerCase())?.badge}).`
+                : stats
+                ? `Explore over ${stats.titles} anime series and movies. Filter, sort, and watch free in HD.`
+                : 'Filter, sort, and watch your favorite anime series in HD.'}
             </p>
           </div>
           <div className="catalogue__stats">
@@ -167,6 +189,96 @@ export function AnimeCatalogue() {
           </div>
         </header>
 
+        {/* Provider Source Bar */}
+        <div
+          className="catalogue__provider-bar"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '12px',
+            padding: '12px 16px',
+            margin: '0 0 18px',
+            background: 'rgba(255, 255, 255, 0.02)',
+            borderRadius: '12px',
+            border: '1px solid rgba(255, 255, 255, 0.06)',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              Provider Source:
+            </span>
+          </div>
+
+          <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }} role="tablist" aria-label="Provider Catalogue Selection">
+            {PROVIDER_OPTIONS.map((po) => {
+              const isActive = provider.toLowerCase() === po.id.toLowerCase();
+              return (
+                <button
+                  key={po.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  className={`pill${isActive ? ' is-active' : ''}`}
+                  style={
+                    isActive
+                      ? {
+                          borderColor: po.color,
+                          background: `${po.color}26`,
+                          color: '#fff',
+                          fontWeight: 700,
+                          boxShadow: `0 0 10px -2px ${po.color}66`,
+                        }
+                      : {}
+                  }
+                  onClick={() => patch({ provider: po.id === 'All' ? null : po.id })}
+                >
+                  <span>{po.icon}</span>
+                  <span>{po.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {provider !== 'All' && (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '12px',
+              padding: '12px 18px',
+              margin: '0 0 18px',
+              background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '10px',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span style={{ fontSize: '1.25rem' }}>
+                {PROVIDER_OPTIONS.find((p) => p.id.toLowerCase() === provider.toLowerCase())?.icon || '⚡'}
+              </span>
+              <div>
+                <strong style={{ color: '#fff', fontSize: '0.92rem' }}>
+                  {PROVIDER_OPTIONS.find((p) => p.id.toLowerCase() === provider.toLowerCase())?.label} Streaming Catalogue
+                </strong>
+                <p style={{ margin: 0, fontSize: '0.8rem', color: '#cbd5e1' }}>
+                  Showing anime with direct streams on {PROVIDER_OPTIONS.find((p) => p.id.toLowerCase() === provider.toLowerCase())?.label} ({PROVIDER_OPTIONS.find((p) => p.id.toLowerCase() === provider.toLowerCase())?.badge}).
+                </p>
+              </div>
+            </div>
+            <button
+              type="button"
+              className="btn btn--sm btn--ghost"
+              onClick={() => patch({ provider: null })}
+            >
+              Show All Providers
+            </button>
+          </div>
+        )}
+
         <div className="catalogue__controls">
           <form
             className="search catalogue__search"
@@ -178,7 +290,7 @@ export function AnimeCatalogue() {
           >
             <Search size={16} aria-hidden="true" />
             <label className="sr-only" htmlFor="cat-search">
-              Search the catalogue
+              Search anime titles
             </label>
             <input
               id="cat-search"
@@ -272,7 +384,7 @@ export function AnimeCatalogue() {
                   Looking for multi-provider live streams for &ldquo;{needle}&rdquo;?
                 </strong>
                 <p style={{ margin: 0, fontSize: '0.82rem', color: '#cbd5e1' }}>
-                  Search across AniKoto, HiAnime, AniWatch, and Hindi Dub mirrors simultaneously.
+                  Search across AniKoto, HiAnime, and AniWatch mirrors simultaneously.
                 </p>
               </div>
             </div>
@@ -334,6 +446,12 @@ export function AnimeCatalogue() {
                   · <b>{status}</b>
                 </>
               )}
+              {provider !== 'All' && (
+                <>
+                  {' '}
+                  · Provider: <b>{PROVIDER_OPTIONS.find((p) => p.id.toLowerCase() === provider.toLowerCase())?.label}</b>
+                </>
+              )}
             </p>
             <button type="button" className="btn btn--sm btn--ghost" onClick={clearAll}>
               <X size={14} aria-hidden="true" /> Clear all
@@ -358,6 +476,7 @@ export function AnimeCatalogue() {
                     anime={a}
                     variant={view === 'grid' ? 'poster' : 'wide'}
                     badge={a.status === 'Ongoing' ? 'ONGOING' : a.status === 'Upcoming' ? 'UPCOMING' : undefined}
+                    provider={provider !== 'All' ? provider.toLowerCase() : undefined}
                   />
                 </li>
               ))}

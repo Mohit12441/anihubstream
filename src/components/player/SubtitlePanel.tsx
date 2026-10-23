@@ -47,15 +47,15 @@ interface Props {
 function stateLine(state: SubStatus, chosen: SubTrack | undefined, requestedLabel: string): string | null {
   switch (state) {
     case 'loading':
-      return 'Loading the chosen caption file through the bridge…';
+      return 'Loading subtitles…';
     case 'shown':
-      return `Showing the ${chosen?.label ?? requestedLabel} track from this source.`;
+      return `Showing ${chosen?.label ?? requestedLabel} subtitles.`;
     case 'missing':
-      return `This episode's stream does not carry ${requestedLabel}. Pick a track above to change it.`;
+      return `This episode does not have ${requestedLabel} subtitles. Pick a track above to change it.`;
     case 'unreadable':
-      return `The ${chosen?.label ?? requestedLabel} file arrived but holds no readable cues — the provider sent an empty or unsupported track.`;
+      return `The ${chosen?.label ?? requestedLabel} track contains no readable cues. Please pick another track.`;
     case 'failed':
-      return 'The caption file could not be fetched through the bridge. Try again or pick another track.';
+      return 'Unable to load subtitles. Try again or pick another track.';
     default:
       return null;
   }
@@ -77,7 +77,7 @@ export function SubtitlePanel({ subs, patch, restore, tracks, state, loaded, har
           </p>
         )}
         {!loaded ? (
-          <p className="pop__hint">Caption tracks are listed once this episode resolves through the bridge.</p>
+          <p className="pop__hint">Available subtitles will appear here once loaded.</p>
         ) : tracks.length === 0 ? (
           <p className="pop__hint">
             This stream carries no selectable caption track — the provider did not list one for this episode. Nothing is

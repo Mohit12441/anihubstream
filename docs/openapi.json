@@ -344,7 +344,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "enum": ["auto", "fastest", "aniwatch", "hianime", "anikoto", "animedubhindi", "watchanimeworld", "animewave", "animekai"],
+              "enum": ["auto", "fastest", "aniwatch", "hianime", "anikoto", "watchanimeworld", "animewave", "animekai"],
               "default": "auto"
             }
           },
@@ -527,7 +527,7 @@
         "type": "object",
         "properties": {
           "session": { "type": "string" },
-          "provider": { "type": "string", "example": "animedubhindi" },
+          "provider": { "type": "string", "example": "watchanimeworld" },
           "kind": { "type": "string", "enum": ["hls", "progressive"] },
           "container": { "type": "string", "example": "matroska" },
           "title": { "type": "string" },

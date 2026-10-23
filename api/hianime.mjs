@@ -515,12 +515,22 @@ export async function details(idOrSlug, { signal } = {}) {
   // out-of-range start returns zero rows, so ask for exactly what exists.
   const rows = [];
   if (total > 0) {
-    const { json: listJson } = await getJson(`${HIAnime_MAIN}/api/episodes/${animeId}?start=1&end=${total}`, { referer: `${HIAnime_MAIN}/`, signal });
-    for (const [i, row] of (Array.isArray(listJson?.episodes) ? listJson.episodes : []).entries()) {
+    try {
+      const { json: listJson } = await getJson(`${HIAnime_MAIN}/api/episodes/${animeId}?start=1&end=${total}`, { referer: `${HIAnime_MAIN}/`, signal });
+      for (const [i, row] of (Array.isArray(listJson?.episodes) ? listJson.episodes : []).entries()) {
+        const ep = episodeFrom(row, media.id, animeId, slug, i + 1);
+        if (ep) rows.push(ep);
+      }
+    } catch {
+      // fallback below
+    }
+  }
+  if (rows.length === 0 && Array.isArray(anime?.episodes) && anime.episodes.length > 0) {
+    for (const [i, row] of anime.episodes.entries()) {
       const ep = episodeFrom(row, media.id, animeId, slug, i + 1);
       if (ep) rows.push(ep);
     }
-  }
+  }
   return { media, episodes: rows };
 }
 

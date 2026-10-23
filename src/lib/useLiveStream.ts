@@ -19,13 +19,16 @@ import {
   bridgeHealth,
   bridgeResolve,
   bridgeUrl,
+  bridgeWsUrl,
   fetchVtt,
+  isMegaplayTokenValid,
   isResolveFailure,
   prefetchEpisode,
   type BridgeSource,
   type Cue,
 } from './streamBridge';
 import { subLangCode, subLangLabel } from './playerPrefs';
+import { P2PEngine, buildSwarmId, type P2PStats } from './p2pEngine';
 
 export type LiveStatus = 'resolving' | 'ready' | 'error' | 'unavailable';
 /** what the caption track the viewer asked for actually did */
@@ -57,6 +60,8 @@ interface Options {
   volume: number;
   muted: boolean;
   rate: number;
+  enableP2P?: boolean;
+  initialSource?: BridgeSource | null;
 }
 
 /* Refusals that a fresh resolve could clear: the provider was mid-response, a CDN object
@@ -111,6 +116,9 @@ export function useLiveStream(o: Options) {
   const media = useRef({ volume: o.volume, muted: o.muted, rate: o.rate });
   media.current = { volume: o.volume, muted: o.muted, rate: o.rate };
 
+  const [p2pStats, setP2PStats] = useState<P2PStats | null>(null);
+  const p2pRef = useRef<P2PEngine | null>(null);
+
   const videoRef = useCallback((el: HTMLVideoElement | null) => setVideoEl(el), []);
 
   const retry = useCallback(() => {
@@ -161,6 +169,12 @@ export function useLiveStream(o: Options) {
 
     void (async () => {
       try {
+        if (!fresh && o.initialSource && o.initialSource.master && isMegaplayTokenValid(o.initialSource.master)) {
+          setInfo(o.initialSource);
+          prefetchEpisode(o.title, o.episode + 1, o.audio, o.provider ?? 'auto');
+          return;
+        }
+
         const up = await bridgeHealth(fresh);
         if (cancel) return;
         if (!up) {
@@ -205,7 +219,7 @@ export function useLiveStream(o: Options) {
       window.clearInterval(timer);
       window.clearTimeout(timeoutId);
     };
-  }, [o.title, o.episode, o.audio, o.provider, nonce]);
+  }, [o.title, o.episode, o.audio, o.provider, nonce, o.initialSource]);
 
   /* ---------- self-heal a transient offline, or a refusal a re-resolve can clear ---------- */
   useEffect(() => {
@@ -253,9 +267,17 @@ export function useLiveStream(o: Options) {
     const onError = () => {
       if (cancelled) return;
       /* a fresh resolve means fresh segment URLs and, usually, a different embed */
+      const mediaErr = v.error;
+      const codeMsg = mediaErr ? (
+        mediaErr.code === 1 ? 'Playback was aborted.' :
+        mediaErr.code === 2 ? 'Network error occurred while loading the video stream.' :
+        mediaErr.code === 3 ? 'Video decoding failed or codec is unsupported.' :
+        mediaErr.code === 4 ? 'Format not supported or video segment unreachable.' :
+        'The media element rejected the stream.'
+      ) : 'The media element rejected the stream.';
       setRetryable(true);
       setStatus('error');
-      setError('The media element rejected the stream.');
+      setError(codeMsg);
     };
     const onPlaying = () => {
       setBuffering(false);
@@ -291,7 +313,16 @@ export function useLiveStream(o: Options) {
       const { default: HlsCtor } = await import('hls.js');
       if (cancelled) return;
       if (HlsCtor.isSupported()) {
-        hls = new HlsCtor({
+        let p2p: P2PEngine | null = null;
+        if (o.enableP2P) {
+          const swarmId = buildSwarmId(o.title, o.episode);
+          const signalUrl = (import.meta as any).env?.VITE_P2P_SIGNAL_URL || bridgeWsUrl('/p2p-signal');
+          p2p = new P2PEngine(true, swarmId, { signalUrl });
+          p2pRef.current = p2p;
+          p2p.subscribe(setP2PStats);
+        }
+
+        const hlsConfig: any = {
           enableWorker: true,
           lowLatencyMode: true,
           startLevel: -1,
@@ -309,7 +340,44 @@ export function useLiveStream(o: Options) {
           fragLoadingMaxRetry: 4,
           fragLoadingRetryDelay: 500,
           testBandwidth: true,
-        });
+          xhrSetup: (xhr: XMLHttpRequest) => {
+            xhr.withCredentials = false;
+          },
+        };
+
+        if (o.enableP2P && p2p) {
+          class P2PFragLoader extends HlsCtor.DefaultConfig.loader {
+            constructor(cfg: any) {
+              super(cfg);
+              const defaultLoad = this.load.bind(this);
+              this.load = (ctx: any, c: any, cb: any) => {
+                p2p!
+                  .loadSegment(
+                    ctx.url,
+                    async (u: string) => {
+                      const res = await fetch(u, { headers: ctx.headers });
+                      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                      return await res.arrayBuffer();
+                    },
+                    1200
+                  )
+                  .then(({ data }) => {
+                    cb.onSuccess(
+                      { url: ctx.url, data },
+                      { stats: { trequest: performance.now(), tfirst: performance.now(), tload: performance.now(), total: data.byteLength, loaded: data.byteLength } },
+                      ctx
+                    );
+                  })
+                  .catch(() => {
+                    defaultLoad(ctx, c, cb);
+                  });
+              };
+            }
+          }
+          hlsConfig.fLoader = P2PFragLoader;
+        }
+
+        hls = new HlsCtor(hlsConfig);
         hlsRef.current = hls;
         /* 'ready' is set from the video's own loadedmetadata (real media data
            appended) — a parsed manifest alone is not playback. */
@@ -365,6 +433,8 @@ export function useLiveStream(o: Options) {
       v.removeEventListener('seeked', onClearBuffer);
       hls?.destroy();
       if (hlsRef.current === hls) hlsRef.current = null;
+      p2pRef.current?.destroy();
+      p2pRef.current = null;
       v.removeAttribute('src');
       v.load();
     };
@@ -621,5 +691,6 @@ export function useLiveStream(o: Options) {
     levels,
     currentLevelIndex,
     setQualityLevel,
+    p2pStats,
   };
 }

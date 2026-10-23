@@ -118,12 +118,38 @@ export const resolveMalId = (sourceIdsRaw, skipKeyId, skipKeySpace) => {
   return null;
 };
 
+const RESERVED_TITLE_WORDS = /^(season|part|cour|act|episode|vol|volume|movie|ova|ona|special|final|first|second|third|fourth|order|zero|live|climax|deluxe|edition)$/i;
+const COMMON_6_LETTER = /^(action|attack|heroes|dragon|naruto|hunter|clover|haikyu|magica|kamui|sailor|online|future|school|prince|summer|winter|spring|autumn|master|legend|island|family|sister|puzzle|spiral|knight|border|heaven|secret|shadow|spirit|silver|golden|yellow|orange|purple|violet|cinema|circus|studio|reborn|border|planet|galaxy|origin|battle|castle|flight|zombie|vampire)$/i;
+
+const isHashToken = (token) => {
+  const clean = token.trim();
+  if (RESERVED_TITLE_WORDS.test(clean)) return false;
+  if (clean.length < 4 || clean.length > 8) return false;
+  if (/\d/.test(clean)) return true;
+  if (/^[b-df-hj-np-tv-z]{4,8}$/i.test(clean)) return true;
+  return false;
+};
+
+export const cleanDisplayTitle = (t) => {
+  if (!t || typeof t !== 'string') return '';
+  return t
+    .replace(/\s+([a-z0-9]{4,8})\s*([-–—]\s*(?:episode|ep|part|season|vol|volume)\b.*)$/i, (match, code, rest) => {
+      if (isHashToken(code)) return ' ' + rest;
+      return match;
+    })
+    .replace(/\s*[-–—]?\s*([a-z0-9]{4,8})$/i, (match, code) => {
+      if (isHashToken(code)) return '';
+      return match;
+    })
+    .trim();
+};
+
 export const cardFromRow = (r) => ({
   id: r.id,
-  title: r.title,
+  title: cleanDisplayTitle(r.title),
   native: r.native,
   year: r.year,
-  rating: r.rating,
+  rating: r.rating != null && r.rating > 0 ? Number((r.rating > 10 ? r.rating / 10 : r.rating).toFixed(1)) : 0,
   season: r.season,
   kind: r.kind,
   status: r.status,
@@ -135,6 +161,7 @@ export const cardFromRow = (r) => ({
   rank: r.rank ?? null,
   trendRank: r.trend_rank ?? null,
   altSeasons: r.alt_seasons ? safeJsonParse(r.alt_seasons, []) : [],
+  seasons: r.seasons ? (typeof r.seasons === 'string' ? safeJsonParse(r.seasons, []) : r.seasons) : [],
   schedule:
     r.sched_day === null || r.sched_day === undefined
       ? null
@@ -153,17 +180,224 @@ export const cardFromRow = (r) => ({
   skipKeySpace: r.skip_key_space ?? null,
 });
 
-export const episodeFromRow = (r) => ({
-  id: r.id,
-  n: r.n,
-  title: r.title,
-  runtime: r.runtime,
-  runtimeSeconds: r.runtime_seconds,
-  art: r.thumb,
-  synopsis: r.synopsis,
-  markers: safeJsonParse(r.markers, []),
-  airdate: r.airdate ?? null,
-});
+export const episodeFromRow = (r, fallbackArt = '') => {
+  const thumb = r.thumb || fallbackArt || '';
+  return {
+    id: r.id,
+    n: r.n,
+    title: r.title,
+    runtime: r.runtime,
+    runtimeSeconds: r.runtime_seconds,
+    art: thumb,
+    thumb: thumb,
+    synopsis: r.synopsis || '',
+    markers: safeJsonParse(r.markers, []),
+    airdate: r.airdate ?? null,
+  };
+};
+
+
+
+export async function resolveFranchiseSeasons(db, card) {
+  if (!db || !card) return [];
+
+  const seasonsMap = new Map();
+  const currentTitle = cleanDisplayTitle(card.title);
+
+  seasonsMap.set(card.id, {
+    id: card.id,
+    title: currentTitle,
+    season: card.season || '',
+    year: card.year || null,
+    kind: card.kind || 'TV',
+    isCurrent: true,
+  });
+
+  // 0. Primary indexed query: Check pre-indexed anime_franchise_relation in D1
+  try {
+    const { results: dbRelations } = await db.prepare(
+      `SELECT r.related_id, a.id, a.title, a.season, a.year, a.kind, r.relation_type, r.chronology_order
+       FROM anime_franchise_relation r
+       JOIN anime a ON a.id = r.related_id
+       WHERE r.anime_id = ?1
+       ORDER BY r.chronology_order ASC, a.year ASC`
+    ).bind(card.id).all().catch(() => ({ results: [] }));
+
+    if (Array.isArray(dbRelations) && dbRelations.length > 0) {
+      for (const rel of dbRelations) {
+        if (!seasonsMap.has(rel.id)) {
+          seasonsMap.set(rel.id, {
+            id: rel.id,
+            title: cleanDisplayTitle(rel.title),
+            season: rel.season || '',
+            year: rel.year || null,
+            kind: rel.kind || 'TV',
+            isCurrent: false,
+          });
+        }
+      }
+    }
+  } catch {}
+
+  // 1. Direct alt_seasons parsing
+  let altList = [];
+  if (card.alt_seasons) {
+    try {
+      altList = typeof card.alt_seasons === 'string' ? safeJsonParse(card.alt_seasons, []) : card.alt_seasons;
+    } catch {}
+  }
+  if (!Array.isArray(altList)) altList = [];
+
+  for (const altTitle of altList) {
+    if (!altTitle || typeof altTitle !== 'string') continue;
+    const cleanedTitle = cleanDisplayTitle(altTitle.replace(/\s*\(\d{4}\)$/, '').trim());
+    if (!cleanedTitle) continue;
+
+    try {
+      const match = await db.prepare(
+        'SELECT id, title, season, year, kind FROM anime WHERE lower(title) = lower(?1) LIMIT 1'
+      ).bind(cleanedTitle).first().catch(() => null);
+      if (match && !seasonsMap.has(match.id)) {
+        seasonsMap.set(match.id, {
+          id: match.id,
+          title: cleanDisplayTitle(match.title),
+          season: match.season || '',
+          year: match.year || null,
+          kind: match.kind || 'TV',
+          isCurrent: false,
+        });
+      } else if (!match) {
+        const fallbackSlug = cleanedTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        if (fallbackSlug && !seasonsMap.has(fallbackSlug)) {
+          const yearMatch = altTitle.match(/\((\d{4})\)/);
+          seasonsMap.set(fallbackSlug, {
+            id: fallbackSlug,
+            title: cleanedTitle,
+            season: yearMatch ? ('Year ' + yearMatch[1]) : '',
+            year: yearMatch ? Number.parseInt(yearMatch[1], 10) : null,
+            kind: 'TV',
+            isCurrent: false,
+          });
+        }
+      }
+    } catch {}
+  }
+
+  // 2. Inverse check: find anime records whose alt_seasons contains this title
+  try {
+    if (currentTitle && currentTitle.length >= 4) {
+      const { results: inverseMatches } = await db.prepare(
+        'SELECT id, title, season, year, kind FROM anime WHERE alt_seasons LIKE ?1 LIMIT 6'
+      ).bind('%' + currentTitle + '%').all().catch(() => ({ results: [] }));
+      for (const m of inverseMatches || []) {
+        if (!seasonsMap.has(m.id)) {
+          seasonsMap.set(m.id, {
+            id: m.id,
+            title: cleanDisplayTitle(m.title),
+            season: m.season || '',
+            year: m.year || null,
+            kind: m.kind || 'TV',
+            isCurrent: false,
+          });
+        }
+      }
+    }
+  } catch {}
+
+  // 3. Hierarchical slug prefix lookup (e.g. "jujutsu-kaisen", "my-hero-academia", "demon-slayer")
+  try {
+    const baseSlug = card.id
+      .replace(/-season-\d+.*$/i, '')
+      .replace(/-part-\d+.*$/i, '')
+      .replace(/-cour-\d+.*$/i, '')
+      .replace(/-final-season.*$/i, '')
+      .replace(/-2nd-season.*$/i, '')
+      .replace(/-3rd-season.*$/i, '')
+      .replace(/-the-movie.*$/i, '')
+      .replace(/-arc.*$/i, '')
+      .replace(/-0$/, '');
+
+    if (baseSlug && baseSlug.length >= 4) {
+      const { results: slugSiblings } = await db.prepare(
+        'SELECT id, title, season, year, kind FROM anime WHERE (id = ?1 OR id LIKE ?2) AND kind IN (\'TV\', \'Movie\') LIMIT 15'
+      ).bind(baseSlug, baseSlug + '-%').all().catch(() => ({ results: [] }));
+      for (const s of slugSiblings || []) {
+        if (!seasonsMap.has(s.id)) {
+          seasonsMap.set(s.id, {
+            id: s.id,
+            title: cleanDisplayTitle(s.title),
+            season: s.season || '',
+            year: s.year || null,
+            kind: s.kind || 'TV',
+            isCurrent: false,
+          });
+        }
+      }
+    }
+  } catch {}
+
+  const items = Array.from(seasonsMap.values());
+  if (items.length <= 1) return [];
+
+  // Sort chronologically: by year ascending, then title ascending
+  items.sort((a, b) => {
+    const ya = a.year || 9999;
+    const yb = b.year || 9999;
+    if (ya !== yb) return ya - yb;
+    return a.title.localeCompare(b.title);
+  });
+
+  return items;
+}
+
+export const KNOWN_PROVIDER_REGEX = /^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai):/i;
+
+export const deriveSlugCandidates = (id) => {
+  if (!id || typeof id !== 'string') return [];
+  const rawSlug = id.replace(KNOWN_PROVIDER_REGEX, '').trim();
+  const rawSlugNoHash = rawSlug.replace(/-[a-z0-9]{4,8}$/i, '');
+  const cleanSlug = rawSlug.replace(/:+/g, '-');
+  const cleanSlugNoHash = cleanSlug.replace(/-[a-z0-9]{4,8}$/i, '');
+  const normalizedNoHash = cleanSlugNoHash.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  const normalizedRaw = rawSlug.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
+  return Array.from(new Set([
+    id,
+    rawSlug,
+    rawSlugNoHash,
+    cleanSlug,
+    cleanSlugNoHash,
+    normalizedNoHash,
+    normalizedRaw
+  ].filter(Boolean)));
+};
+
+export const findAnimeByCandidates = async (db, candidates) => {
+  if (!db || !Array.isArray(candidates) || candidates.length === 0) return null;
+  for (const cand of candidates) {
+    const card = await db.prepare(`SELECT ${CARD_COLUMNS} FROM anime a WHERE a.id = ?1`).bind(cand).first().catch(() => null);
+    if (card) return card;
+  }
+  for (const cand of candidates) {
+    let mapped = await db.prepare(
+      `SELECT anime_id FROM anime_provider_mapping WHERE provider_slug = ?1 LIMIT 1`
+    ).bind(cand).first().catch(() => null);
+
+    if (!mapped?.anime_id) {
+      mapped = await db.prepare(
+        `SELECT anime_id FROM anime_id_map
+         WHERE anikoto_slug = ?1 OR hianime_slug = ?1 OR aniwatch_slug = ?1 OR waw_slug = ?1
+         LIMIT 1`
+      ).bind(cand).first().catch(() => null);
+    }
+
+    if (mapped?.anime_id) {
+      const card = await db.prepare(`SELECT ${CARD_COLUMNS} FROM anime a WHERE a.id = ?1`).bind(mapped.anime_id).first().catch(() => null);
+      if (card) return card;
+    }
+  }
+  return null;
+};
 
 export const CARD_COLUMNS = `
   a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status,

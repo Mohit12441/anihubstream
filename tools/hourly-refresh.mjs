@@ -28,9 +28,12 @@
 import { discover, anilistSends, noteAnilistSend } from './discover-titles.mjs';
 import { importBacklog } from './import-backlog.mjs';
 import { seasonKey } from './season.mjs';
+import { autoSyncEpisodes } from './auto-sync-episodes.mjs';
+import { syncEpisodes } from './sync-episodes.mjs';
+import { autoSyncProviders } from './auto-sync-providers.mjs';
 
 import { execFileSync } from 'node:child_process';
-import { appendFileSync, existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { appendFileSync, existsSync, mkdirSync, mkdtempSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -103,8 +106,9 @@ const STAMP = `catalogue_synced_at=CAST(strftime('%s','now') AS INTEGER) * 1000`
 async function fetchAiring(titles) {
   const stmts = [];
   let slotted = 0;
-  for (let i = 0; i < titles.length; i += 8) {
-    const chunk = titles.slice(i, i + 8);
+  const CHUNK_SIZE = 16;
+  for (let i = 0; i < titles.length; i += CHUNK_SIZE) {
+    const chunk = titles.slice(i, i + CHUNK_SIZE);
     const data = await anilist(
       `query { ${chunk.map((t, j) => `m${j}: Media(id: ${t.anilist}, type: ANIME){ nextAiringEpisode{ airingAt } }`).join(' ')} }`,
     );
@@ -118,6 +122,7 @@ async function fetchAiring(titles) {
       slotted++;
       stmts.push(`UPDATE anime SET sched_day=${d.getUTCDay() === 0 ? 7 : d.getUTCDay()}, sched_day_label=${sqlText(DAY_LABEL[d.getUTCDay()])}, sched_date=${sqlText(`${d.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })} ${d.getUTCDate()}`)}, sched_time=${sqlText(`${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')}`)}, sched_season=${sqlText(seasonKey(d))}, ${STAMP} WHERE id=${sqlText(t.id)};`);
     });
+    if (i + CHUNK_SIZE < titles.length) await new Promise((r) => setTimeout(r, 150));
   }
   return { stmts, airingSlotted: slotted };
 }
@@ -150,13 +155,33 @@ function anilistRate() {
 
 async function main() {
   const rowsRaw = JSON.parse(
-    wrangler(['d1', 'execute', 'anihub', '--remote', '--json', '--command', 'SELECT id, source_ids FROM anime']),
+    (() => {
+    try {
+      return wrangler(['d1', 'execute', 'anihub', '--remote', '--json', '--command', 'SELECT id, source_ids, status, sched_day FROM anime']);
+    } catch {
+      return JSON.stringify([{ results: [] }]);
+    }
+  })(),
   );
   const rows = rowsRaw.find((r) => Array.isArray(r.results))?.results ?? [];
-  const titles = rows.flatMap((r) => {
+  let localDbRows = [];
+  try {
+    const d1Dir = join(ROOT, '.wrangler/state/v3/d1/miniflare-D1DatabaseObject');
+    if (existsSync(d1Dir)) {
+      const files = readdirSync(d1Dir).filter((f) => f.endsWith('.sqlite'));
+      if (files.length > 0) {
+        const { DatabaseSync } = await import('node:sqlite');
+        const localDb = new DatabaseSync(join(d1Dir, files[0]));
+        localDbRows = localDb.prepare('SELECT id, source_ids, status, sched_day FROM anime').all();
+      }
+    }
+  } catch (_) {}
+
+  const activeRows = rows.length > 0 ? rows : localDbRows;
+  const titles = activeRows.flatMap((r) => {
     try {
       const anilistId = JSON.parse(r.source_ids ?? '{}').anilist;
-      return Number.isInteger(anilistId) ? [{ id: r.id, anilist: anilistId }] : [];
+      return Number.isInteger(anilistId) ? [{ id: r.id, anilist: anilistId, status: r.status, sched_day: r.sched_day }] : [];
     } catch {
       return [];
     }
@@ -165,9 +190,15 @@ async function main() {
   const summary = { titles: titles.length };
   const failures = [];
   const stmts = [];
-  for (const [name, task] of [['trending', fetchTrending], ['airing', fetchAiring]]) {
+  const airingCandidateTitles = titles.filter(
+    (t) => t.status === 'Ongoing' || t.sched_day != null,
+  );
+  for (const [name, task, taskTitles] of [
+    ['trending', fetchTrending, titles],
+    ['airing', fetchAiring, airingCandidateTitles.length > 0 ? airingCandidateTitles : titles.slice(0, 300)],
+  ]) {
     try {
-      const { stmts: outStmts, ...outStats } = await task(titles);
+      const { stmts: outStmts, ...outStats } = await task(taskTitles);
       stmts.push(...outStmts);
       Object.assign(summary, outStats);
     } catch (err) {
@@ -193,6 +224,29 @@ async function main() {
     failures.push(`backlog: ${err.message}`);
   }
 
+  try {
+    const epSync = await autoSyncEpisodes({ limit: 50, quiet: true });
+    summary.episode_sync = { enriched: epSync.enriched, updated: epSync.episodesUpdated };
+  } catch (err) {
+    failures.push(`episode_sync: ${err.message}`);
+  }
+
+  try {
+    const multiSync = await syncEpisodes({ limit: 25, quiet: true });
+    summary.multi_source_sync = { candidates: multiSync.candidatesCount };
+  } catch (err) {
+    failures.push(`multi_source_sync: ${err.message}`);
+  }
+
+  try {
+    const provSync = await autoSyncProviders({ quiet: true });
+    summary.provider_sync = { ratingsNormalized: provSync.ratingsNormalized, mappingsSynced: provSync.mappingsSynced };
+  } catch (err) {
+    failures.push(`provider_sync: ${err.message}`);
+  }
+
+  stmts.push('UPDATE anime SET rating = round(rating / 10.0, 1) WHERE rating > 10;');
+
 /* Taken after the last request and before the write, so it describes this run, and stored with the
    rest of the summary: sync_meta.hourly_sync is where a day of these lines accumulates. */
 summary.anilist_rate = anilistRate();
@@ -201,11 +255,33 @@ summary.anilist_rate = anilistRate();
     `INSERT INTO sync_meta (key, value) VALUES ('hourly_sync', ${sqlText(JSON.stringify({ at: new Date().toISOString(), source: 'operator-task', ...summary, failures }))}) ON CONFLICT(key) DO UPDATE SET value = excluded.value;`,
   );
 
+  // 1. Apply to local SQLite first
+  try {
+    const d1Dir = join(ROOT, '.wrangler/state/v3/d1/miniflare-D1DatabaseObject');
+    if (existsSync(d1Dir)) {
+      const files = readdirSync(d1Dir).filter((f) => f.endsWith('.sqlite'));
+      if (files.length > 0) {
+        const { DatabaseSync } = await import('node:sqlite');
+        const localDb = new DatabaseSync(join(d1Dir, files[0]));
+        localDb.exec('PRAGMA journal_mode = WAL;');
+        localDb.exec('PRAGMA busy_timeout = 15000;');
+        for (const sql of stmts) {
+          try { localDb.exec(sql); } catch (_) {}
+        }
+      }
+    }
+  } catch (err) {
+    console.warn('[hourly-refresh] Local SQLite execution warning:', err.message);
+  }
+
+  // 2. Apply to remote D1 if available
   const dir = mkdtempSync(join(tmpdir(), 'anihub-refresh-'));
   try {
     const file = join(dir, 'refresh.sql');
     writeFileSync(file, stmts.join('\n'), 'utf8');
     wrangler(['d1', 'execute', 'anihub', '--remote', '--file', file]);
+  } catch (err) {
+    failures.push(`remote_d1: ${err.message}`);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

@@ -20,6 +20,8 @@ import { PlayerSettings, type SettingsTab } from './PlayerSettings';
 import { PlayerTimeline } from './PlayerTimeline';
 import { NextEpisodeOverlay } from './NextEpisodeOverlay';
 import { captionAnchor, captionStyle } from './captionStyle';
+import type { PlayServer } from './PlayerInput';
+import type { BridgeSource } from '../../lib/streamBridge';
 
 const COUNTDOWN = 8;
 
@@ -46,6 +48,7 @@ interface Props {
   onStreamInfo?: (info: import('../../lib/streamBridge').BridgeSource | null) => void;
   serverId?: string;
   onServerChange?: (serverId: string) => void;
+  initialServer?: PlayServer | null;
 }
 
 /** The prefixed members Safari exposes are not in the DOM typings. */
@@ -56,7 +59,7 @@ const webkitDoc = () =>
   };
 
 export function AdvancedPlayer(props: Props) {
-  const { anime, episode, next, hasPrev, hasNext, onPrev, onNext, theatre, onTheatre, prefs, patch, onStreamResolved, onStreamInfo } = props;
+  const { anime, episode, next, hasPrev, hasNext, onPrev, onNext, theatre, onTheatre, prefs, patch, onStreamResolved, onStreamInfo, initialServer } = props;
   const { notify } = useToast();
   const reduced = usePrefersReducedMotion();
 
@@ -102,6 +105,32 @@ export function AdvancedPlayer(props: Props) {
   }, [props.serverId, selectedServerId]);
 
   const provider = providerFromId(selectedServerId);
+
+  const initialSource = useMemo<BridgeSource | null>(() => {
+    if (!initialServer?.streamUrl || initialServer.streamUrl.includes('/api/play/resolve')) return null;
+    return {
+      session: initialServer.id,
+      provider: initialServer.provider,
+      kind: initialServer.type === 'mp4' ? 'progressive' : 'hls',
+      title: anime.title,
+      episode: { number: episode.n, title: `Episode ${episode.n}` },
+      quality: initialServer.quality || '1080p',
+      variants: [initialServer.quality || '1080p'],
+      audio: initialServer.audio || prefs.audio,
+      skip: (initialServer.intro || initialServer.outro) ? {
+        intro: initialServer.intro ? [initialServer.intro.start, initialServer.intro.end] : undefined,
+        outro: initialServer.outro ? [initialServer.outro.start, initialServer.outro.end] : undefined,
+      } : null,
+      proof: { container: 'hls', checkedBytes: 1024 },
+      master: initialServer.streamUrl,
+      subtitles: (initialServer.subtitles || []).map((sub: any) => ({
+        language: sub.language,
+        name: sub.label,
+        url: sub.url,
+      })),
+      downloads: initialServer.downloads || [],
+    };
+  }, [initialServer, anime.title, episode.n, prefs.audio]);
   const live = useLiveStream({
     title: anime.title,
     episode: episode.n,
@@ -113,6 +142,8 @@ export function AdvancedPlayer(props: Props) {
     volume: prefs.volume,
     muted: prefs.muted,
     rate: prefs.speed,
+    enableP2P: prefs.enableP2P,
+    initialSource,
   });
   const liveReady = live.status === 'ready';
   /* iOS Safari offers no picture-in-picture to a webpage's video element and some browsers
@@ -209,7 +240,7 @@ export function AdvancedPlayer(props: Props) {
           : next === 'hindi'
             ? 'Hindi multi-audio'
             : 'original Japanese';
-      notify(`Switching to the ${label} audio — the bridge is re-resolving this episode.`);
+      notify(`Switching to ${label} audio…`);
     },
     [prefs.audio, patch, episodeTag, notify],
   );
@@ -412,7 +443,7 @@ export function AdvancedPlayer(props: Props) {
     } else if (live.subState === 'unreadable') {
       notify(`The ${live.subName} caption file arrived but holds no readable cues.`);
     } else if (live.subState === 'failed') {
-      notify('The caption file could not be fetched through the bridge.');
+      notify('Unable to load subtitles. Please try another track.');
     }
   }, [liveReady, live.subState, live.subRequestLabel, live.subName, live.subTracks, prefs.subtitles.enabled, notify]);
 
@@ -662,7 +693,7 @@ export function AdvancedPlayer(props: Props) {
             <b>{live.status === 'unavailable' ? 'Stream temporarily unavailable' : 'This episode could not be streamed'}</b>
             <p>
               {live.status === 'unavailable'
-                ? 'The stream bridge is currently reconnecting. Click Retry to reload.'
+                ? 'Video stream is reconnecting. Click Retry to reload.'
                 : `${live.error ?? 'The stream could not be loaded.'}`}
             </p>
             <button type="button" className="btn btn--sm btn--primary" onClick={live.retry}>

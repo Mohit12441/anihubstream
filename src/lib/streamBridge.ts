@@ -54,8 +54,6 @@ export interface ResolveFailure {
 const ENV_BASE = (
   ((typeof import.meta !== 'undefined' && (import.meta as any).env?.VITE_STREAM_BRIDGE) || (globalThis as any).process?.env?.VITE_STREAM_BRIDGE) as string | undefined ?? ''
 ).replace(/\/+$/, '');
-const LOCAL_BASE = 'http://127.0.0.1:8795';
-const PUBLIC_BASE = 'https://bridge.anihubstream.com';
 
 /* Explicit env wins outright. The operator's dev origin tries loopback first
    (fastest, no tunnel hop) and keeps the tunnel as fallback. A public origin
@@ -65,16 +63,34 @@ const PUBLIC_BASE = 'https://bridge.anihubstream.com';
    127.0.0.1 has no bridge anyway. */
 const candidateBases = (): string[] => {
   if (ENV_BASE) return [ENV_BASE];
-  const isBrowser = typeof window !== 'undefined' && Boolean(window.location);
-  const loopback = isBrowser ? ['localhost', '127.0.0.1'].includes(window.location.hostname) : false;
-  return loopback ? [LOCAL_BASE, '', PUBLIC_BASE] : ['', PUBLIC_BASE];
+  return [''];
 };
 
 let activeBase: string | null = null;
 
 export const bridgeUrl = (path: string) => {
+  if (!path) return '';
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
   const base = activeBase ?? (ENV_BASE || candidateBases()[0]);
   return `${base}${path.startsWith('/') ? path : `/${path}`}`;
+};
+
+export const bridgeWsUrl = (path: string) => {
+  const httpUrl = bridgeUrl(path);
+  if (httpUrl.startsWith('http://')) {
+    return httpUrl.replace(/^http:\/\//, 'ws://');
+  }
+  if (httpUrl.startsWith('https://')) {
+    return httpUrl.replace(/^https:\/\//, 'wss://');
+  }
+  if (httpUrl.startsWith('/') && typeof window !== 'undefined' && window.location) {
+    const loc = window.location;
+    const proto = loc.protocol === 'https:' ? 'wss:' : 'ws:';
+    return `${proto}//${loc.host}${httpUrl}`;
+  }
+  return httpUrl;
 };
 
 let healthProbe: Promise<boolean> | null = null;
@@ -115,7 +131,32 @@ export function bridgeHealth(fresh = false): Promise<boolean> {
   return healthProbe;
 }
 
-const RESOLVE_CACHE_TTL_MS = 6 * 60 * 60 * 1000; // 6 hours (up to 24h)
+export function isMegaplayTokenValid(urlOrToken: string, maxAgeSec = 1800): boolean {
+  if (!urlOrToken || typeof urlOrToken !== 'string') return false;
+  try {
+    let token = urlOrToken;
+    if (token.includes('token=')) {
+      const match = token.match(/token=([A-Za-z0-9_-]+\.[A-Za-z0-9_-]+)/);
+      token = match ? match[1] : '';
+    } else if (token.includes('/') || token.includes(':')) {
+      return true;
+    }
+    if (!token) return true; // not a Megaplay tokenized url
+    const part = token.split('.')[0];
+    if (!part) return true;
+    const b64 = part.replace(/-/g, '+').replace(/_/g, '/');
+    const decoded = atob(b64);
+    const parts = decoded.split('|');
+    const tokenSec = parseInt(parts[0], 10);
+    if (!Number.isFinite(tokenSec) || tokenSec <= 0) return true;
+    const nowSec = Math.floor(Date.now() / 1000);
+    return (nowSec - tokenSec) < maxAgeSec && (tokenSec - nowSec) < 300;
+  } catch {
+    return true;
+  }
+}
+
+const RESOLVE_CACHE_TTL_MS = 20 * 60 * 1000; // 20 minutes (aligned with upstream token validity)
 const memoryCache = new Map<string, { at: number; data: BridgeSource }>();
 const activeResolves = new Map<string, Promise<BridgeSource | ResolveFailure>>();
 
@@ -136,15 +177,22 @@ export function getCachedSource(key: string): BridgeSource | null {
   const now = Date.now();
   const mem = memoryCache.get(key);
   if (mem && now - mem.at < RESOLVE_CACHE_TTL_MS) {
-    return { ...mem.data, reused: true };
+    if (isMegaplayTokenValid(mem.data.master)) {
+      return { ...mem.data, reused: true };
+    }
+    memoryCache.delete(key);
   }
   try {
     const raw = localStorage.getItem(`res_${key}`) || sessionStorage.getItem(`res_${key}`);
     if (raw) {
       const parsed = JSON.parse(raw);
       if (parsed && typeof parsed.at === 'number' && now - parsed.at < RESOLVE_CACHE_TTL_MS) {
-        memoryCache.set(key, parsed);
-        return { ...parsed.data, reused: true };
+        if (isMegaplayTokenValid(parsed.data?.master)) {
+          memoryCache.set(key, parsed);
+          return { ...parsed.data, reused: true };
+        }
+        localStorage.removeItem(`res_${key}`);
+        sessionStorage.removeItem(`res_${key}`);
       }
     }
   } catch {}
@@ -159,12 +207,12 @@ export function setCachedSource(key: string, data: BridgeSource): void {
     sessionStorage.setItem(`res_${key}`, JSON.stringify(entry));
   } catch {}
 
-  // Asynchronously persist to D1 stream_cache with 6h TTL
+  // Asynchronously persist to D1 stream_cache with 20m TTL
   try {
     void fetch('/api/stream/cache', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ key, data, ttlSeconds: 21600 }),
+      body: JSON.stringify({ key, data, ttlSeconds: 1200 }),
     }).catch(() => {});
   } catch {}
 }
@@ -179,6 +227,20 @@ export async function prefetchEpisode(
   if (!title || ep < 1) return;
   const key = streamCacheKey(title, ep, audio, provider);
   if (getCachedSource(key)) return;
+
+  // Speculatively pre-warm Edge Function streams in the background
+  try {
+    const cleanId = encodeURIComponent(title);
+    if (provider === 'hianime' || provider === 'auto') {
+      void fetch(`/api/hianime/play?id=${cleanId}&ep=${ep}&audio=${audio}`, {
+        priority: 'low' as RequestPriority,
+      }).catch(() => {});
+    }
+    void fetch(`/api/play?id=${cleanId}&ep=${ep}&audio=${audio}`, {
+      priority: 'low' as RequestPriority,
+    }).catch(() => {});
+  } catch {}
+
   void bridgeResolve(title, ep, audio, provider);
 }
 
@@ -205,9 +267,11 @@ export async function bridgeResolve(
       if (cacheRes.ok) {
         const cacheJson = (await cacheRes.json()) as { hit?: boolean; data?: BridgeSource };
         if (cacheJson.hit && cacheJson.data) {
-          const remoteData = { ...cacheJson.data, reused: true };
-          memoryCache.set(key, { at: Date.now(), data: remoteData });
-          return remoteData;
+          if (isMegaplayTokenValid(cacheJson.data.master)) {
+            const remoteData = { ...cacheJson.data, reused: true };
+            memoryCache.set(key, { at: Date.now(), data: remoteData });
+            return remoteData;
+          }
         }
       }
     } catch {}

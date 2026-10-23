@@ -95,6 +95,10 @@ export const onRequestGet = async ({ request, env }) => {
     if (season) add('a.sched_season = @', season);
     if (status) add('a.status = @', status);
     if (kind) add('a.kind = @', kind);
+    const provider = strParam(url, 'provider');
+    if (provider) {
+      add('EXISTS (SELECT 1 FROM anime_provider_mapping pm WHERE pm.anime_id = a.id AND pm.provider_id = @)', provider.toLowerCase().trim());
+    }
 
     const tokens = q ? foldSearch(q).split(' ').filter(Boolean) : [];
     if (sortKey === 'relevance') {
@@ -165,7 +169,7 @@ export const onRequestGet = async ({ request, env }) => {
       .bind(...bindings.slice(0, limitIndex - 1))
       .first();
 
-    return ok({ page, limit, total: total.n, count: results.length, results: results.map(cardFromRow) });
+    return ok({ page, limit, total: total?.n ?? 0, count: results.length, results: results.map(cardFromRow) });
   } catch (err) {
     return errorResponse(err);
   }

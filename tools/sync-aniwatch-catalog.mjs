@@ -92,18 +92,42 @@ async function searchAniWatch(keyword) {
   }
 }
 
+const KNOWN_ALIASES = {
+  'my-star-season-2': 'oshi-no-ko-season-2',
+  'my-star': 'oshi-no-ko',
+  'heavenly-delusion': 'tengoku-daimakyo',
+  'case-closed': 'detective-conan',
+  'the-misfit-of-demon-king-academy': 'the-misfit-of-demon-king-academy',
+  'the-misfit-of-demon-king-academy-ii': 'the-misfit-of-demon-king-academy-ii',
+  'haikyu-2nd-season': 'haikyu-to-the-top',
+  'friends-game': 'tomodachi-game',
+  'summer-time-rendering': 'summertime-render',
+  'black-summoner': 'black-summoner',
+  'baki': 'baki-the-grappler',
+  'redo-of-healer-uncensored': 'redo-of-healer',
+  'worlds-end-harem-uncensored': 'worlds-end-harem',
+  'tokyo-revengers-uncensored': 'tokyo-revengers',
+  'overflow-uncensored': 'overflow',
+  'ragna-crimson': 'ragna-crimson',
+  'fureru': 'fureru',
+};
+
 async function main() {
   const slugs = await fetchAniWatchSitemap();
   console.log(`Fetched ${slugs.length} anime slugs from AniWatch sitemap.`);
 
-  // Prepare SQLite statements
-  const findById = db.prepare('SELECT id, title, native FROM anime WHERE id = ?');
-  const findByExactTitle = db.prepare('SELECT id, title FROM anime WHERE lower(title) = lower(?)');
+  const allAnime = db.prepare('SELECT id, title, native FROM anime').all();
+  const animeByNormTitle = new Map();
+  const animeBySlug = new Map();
+
+  for (const a of allAnime) {
+    animeBySlug.set(a.id, a);
+    animeByNormTitle.set(normalizeTitle(a.title), a);
+    if (a.native) animeByNormTitle.set(normalizeTitle(a.native), a);
+  }
+
   const findByProviderSlug = db.prepare(
     'SELECT anime_id FROM anime_provider_mapping WHERE provider_slug = ? LIMIT 1'
-  );
-  const findByTitleLike = db.prepare(
-    'SELECT id, title FROM anime WHERE title LIKE ? LIMIT 5'
   );
 
   const insertMapping = db.prepare(`
@@ -116,9 +140,12 @@ async function main() {
   `);
 
   const updateIdMap = db.prepare(`
-    UPDATE anime_id_map
-    SET aniwatch_slug = ?, updated_at = ?
-    WHERE anime_id = ?
+    INSERT INTO anime_id_map (anime_id, aniwatch_slug, confidence, updated_at)
+    VALUES (?, ?, ?, datetime('now'))
+    ON CONFLICT(anime_id) DO UPDATE SET
+      aniwatch_slug = excluded.aniwatch_slug,
+      confidence = max(anime_id_map.confidence, excluded.confidence),
+      updated_at = datetime('now')
   `);
 
   const now = Date.now();
@@ -126,18 +153,28 @@ async function main() {
   let skippedCount = 0;
 
   for (let i = 0; i < slugs.length; i++) {
-    const slug = slugs[i];
+    const rawSlug = slugs[i];
+    const slug = decodeURIComponent(rawSlug).toLowerCase();
     let matchedAnimeId = null;
     let confidence = 0.9;
 
     // Strategy 1: Direct ID match
-    const directAnime = findById.get(slug);
-    if (directAnime) {
-      matchedAnimeId = directAnime.id;
+    let found = animeBySlug.get(slug);
+    if (found) {
+      matchedAnimeId = found.id;
       confidence = 1.0;
     }
 
-    // Strategy 2: Match from existing provider mapping (e.g. HiAnime / AniKoto shared slug)
+    // Strategy 2: Known alias
+    if (!matchedAnimeId && KNOWN_ALIASES[slug]) {
+      const aliasId = KNOWN_ALIASES[slug];
+      if (animeBySlug.has(aliasId)) {
+        matchedAnimeId = aliasId;
+        confidence = 0.98;
+      }
+    }
+
+    // Strategy 3: Match from existing provider mapping (e.g. HiAnime / AniKoto shared slug)
     if (!matchedAnimeId) {
       const provMatch = findByProviderSlug.get(slug);
       if (provMatch?.anime_id) {
@@ -146,25 +183,24 @@ async function main() {
       }
     }
 
-    // Strategy 3: Slug title inference
+    // Strategy 4: Exact normalized title match
     if (!matchedAnimeId) {
-      const titleFromSlug = slug.replace(/-/g, ' ');
-      const titleMatch = findByExactTitle.get(titleFromSlug);
-      if (titleMatch) {
-        matchedAnimeId = titleMatch.id;
+      found = animeByNormTitle.get(normalizeTitle(slug));
+      if (found) {
+        matchedAnimeId = found.id;
         confidence = 0.95;
       }
     }
 
-    // Strategy 4: Clean suffix hashes (e.g. "one-piece-vss" -> "one-piece")
+    // Strategy 5: Clean suffix hashes (e.g. "one-piece-vss" -> "one-piece", "frieren-...-qwe")
     if (!matchedAnimeId && /-[a-z0-9]{3,5}$/i.test(slug)) {
-      const strippedSlug = slug.replace(/-[a-z0-9]{3,5}$/i, '');
-      const strippedAnime = findById.get(strippedSlug);
-      if (strippedAnime) {
-        matchedAnimeId = strippedAnime.id;
-        confidence = 0.9;
+      const stripped = slug.replace(/-[a-z0-9]{3,5}$/i, '');
+      found = animeBySlug.get(stripped) || animeByNormTitle.get(normalizeTitle(stripped));
+      if (found) {
+        matchedAnimeId = found.id;
+        confidence = 0.92;
       } else {
-        const strippedProv = findByProviderSlug.get(strippedSlug);
+        const strippedProv = findByProviderSlug.get(stripped);
         if (strippedProv?.anime_id) {
           matchedAnimeId = strippedProv.anime_id;
           confidence = 0.9;
@@ -172,26 +208,33 @@ async function main() {
       }
     }
 
-    // Strategy 5: Substring / LIKE matching
+    // Strategy 6: Substring / Word Overlap
     if (!matchedAnimeId) {
-      const baseName = slug.split('-')[0];
-      if (baseName.length > 3) {
-        const candidates = findByTitleLike.all(`${baseName}%`);
-        const normSlug = normalizeTitle(slug);
-        for (const cand of candidates) {
-          const normCand = normalizeTitle(cand.title);
-          if (normCand === normSlug || normSlug.startsWith(normCand) || normCand.startsWith(normSlug)) {
-            matchedAnimeId = cand.id;
-            confidence = 0.85;
-            break;
+      const slugWords = normalizeTitle(slug).split(' ').filter((w) => w.length > 2 && !['season', 'part', 'the', '2nd', '3rd', 'arc', 'act'].includes(w));
+      if (slugWords.length >= 2) {
+        let bestCandidate = null;
+        let maxOverlap = 0;
+        for (const a of allAnime) {
+          const titleWords = new Set(normalizeTitle(a.title).split(' '));
+          let overlap = 0;
+          for (const w of slugWords) {
+            if (titleWords.has(w)) overlap++;
           }
+          if (overlap > maxOverlap && overlap >= Math.min(slugWords.length, 3)) {
+            maxOverlap = overlap;
+            bestCandidate = a;
+          }
+        }
+        if (bestCandidate && maxOverlap / slugWords.length >= 0.75) {
+          matchedAnimeId = bestCandidate.id;
+          confidence = 0.85;
         }
       }
     }
 
     if (matchedAnimeId) {
-      insertMapping.run(matchedAnimeId, slug, confidence, now);
-      updateIdMap.run(slug, now, matchedAnimeId);
+      insertMapping.run(matchedAnimeId, rawSlug, confidence, now);
+      updateIdMap.run(matchedAnimeId, rawSlug, confidence);
       mappedCount++;
     } else {
       skippedCount++;
@@ -202,25 +245,27 @@ async function main() {
     }
   }
 
-  // Also query our DB's top popular anime to see if AniWatch has them via search suggestions
-  console.log('\n🔍 Searching AniWatch suggestions for top popular database anime...');
+  // Also query top unmapped popular anime to see if AniWatch has them via search suggestions
+  console.log('\n🔍 Searching AniWatch suggestions for top unmapped database anime...');
   const topAnime = db.prepare(`
     SELECT a.id, a.title
     FROM anime a
     LEFT JOIN anime_provider_mapping m ON m.anime_id = a.id AND m.provider_id = 'aniwatch'
-    WHERE m.provider_slug IS NULL AND a.rating > 80
+    WHERE m.provider_slug IS NULL AND a.rating >= 7.5
     ORDER BY a.rating DESC
-    LIMIT 100
+    LIMIT 30
   `).all();
 
   let discoveredCount = 0;
   for (const item of topAnime) {
-    const hits = await searchAniWatch(item.title);
+    const cleanTerm = item.title.replace(/[:;–—\(\)]+/g, ' ').replace(/\s+/g, ' ').trim();
+    const hits = await searchAniWatch(cleanTerm);
     if (hits.length > 0) {
       const bestSlug = hits[0];
       insertMapping.run(item.id, bestSlug, 0.88, now);
-      updateIdMap.run(bestSlug, now, item.id);
+      updateIdMap.run(item.id, bestSlug, 0.88);
       discoveredCount++;
+      console.log(`Discovered: "${item.title}" -> ${bestSlug}`);
     }
   }
 
@@ -229,8 +274,11 @@ async function main() {
   const totalAniwatchMapped = db.prepare(
     "SELECT count(*) as c FROM anime_provider_mapping WHERE provider_id = 'aniwatch'"
   ).get().c;
+  const totalIdMapCount = db.prepare(
+    "SELECT count(aniwatch_slug) as c FROM anime_id_map"
+  ).get().c;
 
-  console.log(`\n✓ Sync Complete! Total AniWatch Mappings: ${totalAniwatchMapped}`);
+  console.log(`\n✓ Sync Complete! Total AniWatch Mappings: ${totalAniwatchMapped} | anime_id_map: ${totalIdMapCount}`);
 }
 
 main().catch((err) => {

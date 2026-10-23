@@ -1,6 +1,6 @@
-import { useMemo, useState, useEffect } from 'react';
+import { useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { CheckCircle2, Headphones, Loader2, Server, Sparkles } from 'lucide-react';
+import { CheckCircle2, Loader2, Server, Sparkles } from 'lucide-react';
 import type { PlayServer } from './PlayerInput';
 
 export interface ServerSwitcherProps {
@@ -10,6 +10,7 @@ export interface ServerSwitcherProps {
   className?: string;
   scopedProviderUnavailable?: boolean;
   scopedProvider?: string | null;
+  onSwitchProvider?: (provider: string) => void;
 }
 
 type AudioCategory = 'sub' | 'dub' | 'hindi';
@@ -35,7 +36,6 @@ function getProviderKey(server: PlayServer): string {
   if (p.includes('hianime')) return 'hianime';
   if (p.includes('anikoto')) return 'anikoto';
   if (p.includes('aniwatch')) return 'aniwatch';
-  if (p.includes('animedubhindi')) return 'animedubhindi';
   return p;
 }
 
@@ -43,16 +43,7 @@ function getProviderDisplayName(key: string): string {
   if (key === 'anikoto') return 'AniKoto';
   if (key === 'hianime') return 'HiAnime';
   if (key === 'aniwatch') return 'AniWatch';
-  if (key === 'animedubhindi') return 'AnimeDubHindi';
   return key.charAt(0).toUpperCase() + key.slice(1);
-}
-
-function getProviderIcon(key: string): string {
-  if (key === 'anikoto') return '⚡';
-  if (key === 'hianime') return '🌸';
-  if (key === 'aniwatch') return '🛡️';
-  if (key === 'animedubhindi') return '🇮🇳';
-  return '📺';
 }
 
 function cleanServerDisplayName(server: PlayServer): string {
@@ -74,127 +65,163 @@ export function ServerSwitcher({
   className = '',
   scopedProviderUnavailable = false,
   scopedProvider = null,
+  onSwitchProvider,
 }: ServerSwitcherProps) {
   if (!servers || servers.length === 0) return null;
 
-  // Extract all available providers from server pool
-  const availableProviders = useMemo(() => {
-    const map = new Map<string, string>();
-    for (const s of servers) {
-      const k = getProviderKey(s);
-      if (!map.has(k)) {
-        map.set(k, getProviderDisplayName(k));
-      }
-    }
-    const list = Array.from(map.entries()).map(([key, name]) => ({
-      key,
-      name,
-      icon: getProviderIcon(key),
-    }));
-    const order = ['anikoto', 'hianime', 'aniwatch', 'animedubhindi'];
-    list.sort((a, b) => {
-      const ia = order.indexOf(a.key);
-      const ib = order.indexOf(b.key);
-      if (ia !== -1 && ib !== -1) return ia - ib;
-      if (ia !== -1) return -1;
-      if (ib !== -1) return 1;
-      return a.name.localeCompare(b.name);
-    });
-    // Add "All Providers" option at the start so user is not locked into a single provider
-    return [{ key: 'all', name: 'All', icon: '🌐' }, ...list];
-  }, [servers]);
-
   const [searchParams] = useSearchParams();
   const urlProvider = (searchParams.get('provider') || '').toLowerCase();
-  const activeServer = servers.find((s) => s.id === activeServerId);
 
-  const initialProvider = (urlProvider && urlProvider !== 'all' && urlProvider !== 'providers') ? urlProvider : 'all';
-  const [selectedProvider, setSelectedProvider] = useState<string>(initialProvider);
+  const currentProvider = (urlProvider && ['anikoto', 'aniwatch', 'hianime'].includes(urlProvider))
+    ? urlProvider
+    : (scopedProvider && ['anikoto', 'aniwatch', 'hianime'].includes(scopedProvider))
+    ? scopedProvider
+    : (servers[0] ? getProviderKey(servers[0]) : 'anikoto');
 
-  const initialCategory = activeServer ? getAudioCategory(activeServer) : 'sub';
-  const [selectedCategory, setSelectedCategory] = useState<AudioCategory>(initialCategory);
-
-  // Synchronize category when activeServerId changes externally
-  useEffect(() => {
-    if (activeServer) {
-      setSelectedCategory(getAudioCategory(activeServer));
-    }
-  }, [activeServerId, activeServer]);
-
-  // Synchronize provider from URL param or ensure selectedProvider is valid in available list
-  useEffect(() => {
-    if (urlProvider && urlProvider !== 'all' && urlProvider !== 'providers' && availableProviders.some((p) => p.key === urlProvider)) {
-      setSelectedProvider(urlProvider);
-    } else if (availableProviders.length > 0 && !availableProviders.some((p) => p.key === selectedProvider)) {
-      setSelectedProvider('all');
-    }
-  }, [urlProvider, availableProviders, selectedProvider]);
-
-  // Available audio categories across all servers
-  const availableCategories = useMemo(() => {
-    const set = new Set<AudioCategory>();
-    for (const s of servers) {
-      set.add(getAudioCategory(s));
-    }
-    const order: AudioCategory[] = ['sub', 'dub', 'hindi'];
-    const filtered = order.filter((c) => set.has(c));
-    return filtered.length > 0 ? filtered : (['sub'] as AudioCategory[]);
-  }, [servers]);
-
-  // Ensure selectedCategory is valid
-  useEffect(() => {
-    if (availableCategories.length > 0 && !availableCategories.includes(selectedCategory)) {
-      setSelectedCategory(availableCategories[0]);
-    }
-  }, [availableCategories, selectedCategory]);
-
-  // Servers matching both selected audio category and selected provider
+  // Display all servers belonging to the active provider
   const displayedServers = useMemo(() => {
-    // 1. Filter by language category (SUB / DUB / HINDI)
-    const categoryMatches = servers.filter((s) => getAudioCategory(s) === selectedCategory);
-    if (categoryMatches.length === 0) return [];
+    const matching = servers.filter((s) => getProviderKey(s) === currentProvider);
+    return matching.length > 0 ? matching : servers;
+  }, [servers, currentProvider]);
 
-    // 2. Filter by provider if a specific provider is chosen
-    if (selectedProvider === 'all') return categoryMatches;
-    return categoryMatches.filter((s) => getProviderKey(s) === selectedProvider);
-  }, [servers, selectedCategory, selectedProvider]);
+  const availableProviders = [
+    { key: 'anikoto', name: 'AniKoto', icon: '⚡' },
+    { key: 'hianime', name: 'HiAnime', icon: '🌸' },
+    { key: 'aniwatch', name: 'AniWatch', icon: '🛡️' },
+  ];
 
-  // Handler when clicking a provider button
-  const handleProviderClick = (provKey: string) => {
-    setSelectedProvider(provKey);
-    const pool = servers.filter((s) => getAudioCategory(s) === selectedCategory);
-    const base = pool.length > 0 ? pool : servers;
-    const matching = provKey === 'all' ? base : base.filter((s) => getProviderKey(s) === provKey);
-    if (matching.length > 0) {
-      const currentInMatching = matching.find((s) => s.id === activeServerId);
-      if (!currentInMatching) {
-        onSelectServer(matching[0]);
-      }
-    }
-  };
+  if (displayedServers.length === 1) {
+    const s = displayedServers[0];
+    const category = getAudioCategory(s);
+    const serverName = cleanServerDisplayName(s);
+    const providerDisplay = getProviderDisplayName(getProviderKey(s));
 
-  // Handler when clicking an audio tab: immediately triggers the matching server
-  const handleTabClick = (cat: AudioCategory) => {
-    setSelectedCategory(cat);
-    const matching = servers.filter((s) => {
-      const catMatch = getAudioCategory(s) === cat;
-      const provMatch = selectedProvider === 'all' || getProviderKey(s) === selectedProvider;
-      return catMatch && provMatch;
-    });
-    if (matching.length > 0) {
-      const currentMatching = matching.find((s) => s.id === activeServerId);
-      if (!currentMatching) {
-        onSelectServer(matching[0]);
-      }
-    } else {
-      // Fallback across all providers if current provider doesn't have this audio category
-      const anyMatching = servers.filter((s) => getAudioCategory(s) === cat);
-      if (anyMatching.length > 0) {
-        setSelectedProvider('all');
-        onSelectServer(anyMatching[0]);
-      }
-    }
-  };
+    return (
+      <div
+        className={`server-switcher ${className}`}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '12px',
+          padding: '12px 16px',
+          background: 'rgba(255, 255, 255, 0.03)',
+          borderRadius: '10px',
+          border: '1px solid rgba(255, 255, 255, 0.08)',
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: '12px',
+            flexWrap: 'wrap',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <Server size={16} style={{ color: 'var(--brand, #6366f1)' }} />
+            <span style={{ fontSize: '0.88rem', fontWeight: 600, color: '#f8fafc' }}>
+              Streaming Server:
+            </span>
+            <span
+              style={{
+                fontSize: '0.82rem',
+                fontWeight: 600,
+                color: '#a5b4fc',
+                background: 'rgba(99, 102, 241, 0.15)',
+                padding: '3px 10px',
+                borderRadius: '6px',
+                border: '1px solid rgba(99, 102, 241, 0.3)',
+              }}
+            >
+              {providerDisplay} · {serverName}
+            </span>
+            <span
+              style={{
+                fontSize: '0.72rem',
+                textTransform: 'uppercase',
+                padding: '2px 7px',
+                borderRadius: '4px',
+                background: category === 'dub' ? 'rgba(234, 179, 8, 0.2)' : 'rgba(99, 102, 241, 0.2)',
+                color: category === 'dub' ? '#facc15' : '#a5b4fc',
+                fontWeight: 700,
+              }}
+            >
+              {category.toUpperCase()}
+            </span>
+            <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
+              {s.quality || '1080p'}
+            </span>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span
+              style={{
+                width: '8px',
+                height: '8px',
+                borderRadius: '50%',
+                background: '#22c55e',
+                boxShadow: '0 0 8px #22c55e',
+                display: 'inline-block',
+              }}
+            />
+            <span style={{ fontSize: '0.8rem', color: '#22c55e', fontWeight: 600 }}>
+              Online · Direct Stream
+            </span>
+          </div>
+        </div>
+
+        {/* Provider Switcher Bar */}
+        {onSwitchProvider && (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              paddingTop: '8px',
+              borderTop: '1px solid rgba(255, 255, 255, 0.05)',
+              flexWrap: 'wrap',
+            }}
+          >
+            <span style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 600 }}>
+              Stream Provider:
+            </span>
+            {availableProviders.map((prov) => {
+              const isCurrent = currentProvider === prov.key;
+              return (
+                <button
+                  key={prov.key}
+                  type="button"
+                  onClick={() => onSwitchProvider(prov.key)}
+                  style={{
+                    padding: '4px 10px',
+                    borderRadius: '6px',
+                    fontSize: '0.78rem',
+                    fontWeight: isCurrent ? 600 : 500,
+                    border: isCurrent
+                      ? '1px solid var(--brand, #6366f1)'
+                      : '1px solid rgba(255, 255, 255, 0.08)',
+                    background: isCurrent
+                      ? 'rgba(99, 102, 241, 0.2)'
+                      : 'rgba(255, 255, 255, 0.03)',
+                    color: isCurrent ? '#fff' : '#94a3b8',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                    transition: 'all 0.15s ease',
+                  }}
+                >
+                  <span>{prov.icon}</span>
+                  <span>{prov.name}</span>
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div
@@ -230,7 +257,7 @@ export function ServerSwitcher({
         </div>
       )}
 
-      {/* Top Header & Filters */}
+      {/* Top Header */}
       <div
         style={{
           display: 'flex',
@@ -260,117 +287,9 @@ export function ServerSwitcher({
             {displayedServers.length} available
           </span>
         </div>
-
-        {/* Filter Controls: Provider Selection + Audio Selection */}
-        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
-          {/* Provider Selection Tabs */}
-          {availableProviders.length > 1 && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#94a3b8', textTransform: 'uppercase' }}>
-                Provider:
-              </span>
-              <div
-                style={{
-                  display: 'flex',
-                  gap: '4px',
-                  background: 'rgba(0, 0, 0, 0.35)',
-                  padding: '3px',
-                  borderRadius: '8px',
-                  border: '1px solid rgba(255, 255, 255, 0.05)',
-                }}
-              >
-                {availableProviders.map(({ key, name, icon }) => {
-                  const isSelected = key === selectedProvider;
-                  return (
-                    <button
-                      key={key}
-                      type="button"
-                      onClick={() => handleProviderClick(key)}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '6px',
-                        padding: '5px 12px',
-                        borderRadius: '6px',
-                        fontSize: '0.8rem',
-                        fontWeight: 700,
-                        cursor: 'pointer',
-                        border: 'none',
-                        background: isSelected ? 'var(--brand, #6366f1)' : 'transparent',
-                        color: isSelected ? '#fff' : '#94a3b8',
-                        boxShadow: isSelected ? '0 2px 8px rgba(99, 102, 241, 0.4)' : 'none',
-                        transition: 'all 0.15s ease',
-                      }}
-                    >
-                      <span>{icon}</span>
-                      <span>{name}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* Audio Category Tabs (SUB / DUB / HINDI) */}
-          {availableCategories.length > 1 && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#94a3b8', textTransform: 'uppercase' }}>
-                Audio:
-              </span>
-              <div
-                style={{
-                  display: 'flex',
-                  gap: '4px',
-                  background: 'rgba(0, 0, 0, 0.35)',
-                  padding: '3px',
-                  borderRadius: '8px',
-                  border: '1px solid rgba(255, 255, 255, 0.05)',
-                }}
-              >
-                {availableCategories.map((cat) => {
-                  const isSelected = cat === selectedCategory;
-                  return (
-                    <button
-                      key={cat}
-                      type="button"
-                      onClick={() => handleTabClick(cat)}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '5px',
-                        padding: '5px 12px',
-                        borderRadius: '6px',
-                        fontSize: '0.78rem',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        cursor: 'pointer',
-                        border: 'none',
-                        background: isSelected
-                          ? cat === 'dub'
-                            ? '#d97706'
-                            : 'var(--brand, #6366f1)'
-                          : 'transparent',
-                        color: isSelected ? '#fff' : '#94a3b8',
-                        boxShadow: isSelected
-                          ? cat === 'dub'
-                            ? '0 2px 8px rgba(217, 119, 6, 0.4)'
-                            : '0 2px 8px rgba(99, 102, 241, 0.4)'
-                          : 'none',
-                        transition: 'all 0.15s ease',
-                      }}
-                    >
-                      <Headphones size={12} />
-                      {cat}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-        </div>
       </div>
 
-      {/* Grid of Servers for Selected Provider & Audio */}
+      {/* Grid of Servers for Active Provider */}
       {displayedServers.length === 0 ? (
         <div
           style={{
@@ -383,9 +302,7 @@ export function ServerSwitcher({
             border: '1px dashed rgba(255, 255, 255, 0.1)',
           }}
         >
-          {servers.length === 0
-            ? 'No streaming servers currently available for this title.'
-            : `No ${selectedCategory.toUpperCase()} servers available for ${selectedProvider === 'all' ? 'this title' : selectedProvider}.`}
+          No streaming servers currently available for this title.
         </div>
       ) : (
         <div

@@ -9,8 +9,7 @@ export function NotFound() {
       <p className="notfound__code">404</p>
       <h1>This page drifted off the map</h1>
       <p>
-        The route you followed isn&rsquo;t part of AniHubStream. Everything below is reachable from the catalogue of
-        titles this site holds.
+        The page you followed does not exist on AniHubStream. Explore our anime library or discover trending titles below.
       </p>
       <div className="notfound__cta">
         <Link className="btn btn--primary" to="/">

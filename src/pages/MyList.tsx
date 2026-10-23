@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BookmarkX, Clock, Heart, Info, Play } from 'lucide-react';
 import { AnimeCard } from '../components/AnimeCard';
@@ -30,10 +30,17 @@ export function MyList() {
      favourite picked from deeper pages is fetched by id so the list never
      silently drops a title the viewer saved. */
   const [deepFaves, setDeepFaves] = useState<Record<string, Anime>>({});
+  const attemptedFavesRef = useRef<Set<string>>(new Set());
+
   useEffect(() => {
     let live = true;
-    const missing = [...favourites].filter((id) => !byId(id) && !deepFaves[id]);
+    const missing = [...favourites].filter((id) => !byId(id) && !deepFaves[id] && !attemptedFavesRef.current.has(id));
     if (!missing.length) return;
+
+    for (const id of missing) {
+      attemptedFavesRef.current.add(id);
+    }
+
     Promise.allSettled(missing.map((id) => getAnime(id).then((d) => [id, hydrateCard(d)] as const))).then(
       (res) => {
         if (!live) return;

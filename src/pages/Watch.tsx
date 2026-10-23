@@ -9,7 +9,7 @@ import { providerFromId, serverIdFromProvider } from '../data/servers';
 import { AnimeCard } from '../components/AnimeCard';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { EpisodeSidebar } from '../components/EpisodeSidebar';
-import { ratingLabel, toSeconds, type Anime, type Episode } from '../data/model';
+import { cleanAnimeTitle, ratingLabel, toSeconds, type Anime, type Episode } from '../data/model';
 import { useToast } from '../lib/Toast';
 import { accentVars, usePlayerPreferences } from '../lib/usePlayerPrefs';
 import { positionKey } from '../lib/playerPrefs';
@@ -22,13 +22,37 @@ import { warmStreamOrigins } from '../lib/warmConnections';
 import '../styles/watch.css';
 import '../styles/player.css';
 
+const PROVIDER_THEMES: Record<string, { name: string; icon: string; badge: string; color: string; desc: string }> = {
+  anikoto: {
+    name: 'AniKoto',
+    icon: '⚡',
+    badge: '1080p HLS · 9 Subs',
+    color: '#6366f1',
+    desc: 'Direct HLS streams · 9 Subtitle Tracks · Intro Skip',
+  },
+  aniwatch: {
+    name: 'AniWatch',
+    icon: '🛡️',
+    badge: 'Megaplay Global CDN',
+    color: '#3b82f6',
+    desc: 'Instant zero-buffer · Official Zoro-Tv episode list',
+  },
+  hianime: {
+    name: 'HiAnime',
+    icon: '🌸',
+    badge: 'Multi-Quality (1080p/360p)',
+    color: '#ec4899',
+    desc: 'Complete archive · Adaptive ladders · Multi-Audio',
+  },
+};
+
 export function Watch() {
   const { id = '', ep } = useParams<{ id: string; ep?: string }>();
   const [params] = useSearchParams();
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (id && SLUG_REDIRECTS[id]) {
+    if (id && SLUG_REDIRECTS[id] && SLUG_REDIRECTS[id] !== id) {
       const canonical = SLUG_REDIRECTS[id];
       const target = ep ? `/watch/${canonical}/${ep}` : `/watch/${canonical}`;
       navigate(target, { replace: true });
@@ -40,18 +64,26 @@ export function Watch() {
 
   // Federated/fallback anime for search results and external provider cards
   const anime = useMemo<Anime | null>(() => {
-    if (loadedAnime) return loadedAnime;
+    if (loadedAnime) {
+      return {
+        ...loadedAnime,
+        title: cleanAnimeTitle(loadedAnime.title),
+      };
+    }
     if (!id) return null;
     const queryTitle = params.get('title') || '';
     const queryPoster = params.get('poster') || '';
+    const cleanBase = id
+      .replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai):/i, '')
+      .replace(/-[a-z0-9]{4,8}$/i, '')
+      .replace(/[-_:]+/g, ' ')
+      .trim();
     const fallbackTitle =
-      queryTitle ||
-      id
-        .replace(/^[a-z0-9_-]+:/i, '')
-        .replace(/-[a-z0-9]{5,8}$/i, '')
-        .replace(/[-_:]+/g, ' ')
-        .trim()
-        .replace(/\b\w/g, (c) => c.toUpperCase());
+      cleanAnimeTitle(queryTitle) ||
+      cleanBase.replace(/\b\w/g, (c) => c.toUpperCase());
+    const isMovie = cleanBase.toLowerCase().includes('movie') || id.toLowerCase().includes('movie');
+    const totalEps = isMovie ? 1 : 12;
+
     return {
       id,
       title: fallbackTitle,
@@ -59,15 +91,15 @@ export function Watch() {
       year: new Date().getFullYear(),
       rating: 8.0,
       season: '',
-      kind: 'TV',
+      kind: isMovie ? 'Movie' : 'TV',
       status: 'Finished',
       genres: [],
       poster: queryPoster,
       key: queryPoster,
       accent: '#6366f1',
       synopsis: `Watch ${fallbackTitle} streaming online on AniHubStream.`,
-      episodeCount: 1,
-      episodeTotal: 24,
+      episodeCount: totalEps,
+      episodeTotal: totalEps,
       episodes: [],
     };
   }, [loadedAnime, id, params]);
@@ -76,13 +108,14 @@ export function Watch() {
     if (!anime) return [];
     if (anime.episodes && anime.episodes.length > 0) return anime.episodes;
     if (anime.status === 'Upcoming') return [];
-    const count = Math.max(1, Math.min(anime.episodeTotal || 1, 2000));
+    const isMovie = (anime.kind && anime.kind.toLowerCase() === 'movie') || anime.title.toLowerCase().includes('movie');
+    const count = isMovie ? 1 : Math.max(1, Math.min(anime.episodeTotal || 1, 2000));
     return Array.from({ length: count }, (_, i) => ({
       n: i + 1,
       title: `Episode ${i + 1}`,
-      runtime: '24m',
+      runtime: isMovie ? '90m' : '24m',
       thumb: anime.key || anime.poster || '',
-      synopsis: '',
+      synopsis: isMovie ? anime.synopsis : '',
       markers: [],
       airdate: null,
     }));
@@ -99,7 +132,10 @@ export function Watch() {
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
   const [playServers, setPlayServers] = useState<PlayServer[]>([]);
   const [scopedProviderUnavailable, setScopedProviderUnavailable] = useState(false);
-  const targetProvider = (params.get('provider') || '').toLowerCase();
+  const targetProvider = (
+    params.get('provider') ||
+    (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : '')
+  ).toLowerCase();
   const [activeServerId, setActiveServerId] = useState<string>(
     targetProvider ? serverIdFromProvider(targetProvider) : 'anikoto:HD-1'
   );
@@ -117,8 +153,9 @@ export function Watch() {
 
     const providerQuery = targetProvider ? `&provider=${encodeURIComponent(targetProvider)}` : '&provider=anikoto';
     const titleQuery = anime.title ? `&title=${encodeURIComponent(anime.title)}` : '';
+    const malIdQuery = anime.malId ? `&malId=${anime.malId}` : '';
 
-    fetch(`/api/play?id=${encodeURIComponent(anime.id)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}${titleQuery}${providerQuery}`)
+    fetch(`/api/play?id=${encodeURIComponent(anime.id)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}${titleQuery}${providerQuery}${malIdQuery}`)
       .then((res) => {
         if (!res.ok) throw new Error('Play API failed');
         return res.json();
@@ -126,20 +163,21 @@ export function Watch() {
       .then((data) => {
         if (cancelled) return;
         setScopedProviderUnavailable(Boolean(data.scopedProviderUnavailable));
-        if (Array.isArray(data.servers) && data.servers.length > 0) {
-          setPlayServers(data.servers);
-          const matchingActive = data.servers.find((s: PlayServer) => s.id === activeServerId);
+        const serverList = Array.isArray(data.servers) ? data.servers : (Array.isArray(data.data?.servers) ? data.data.servers : []);
+        if (serverList.length > 0) {
+          setPlayServers(serverList);
+          const matchingActive = serverList.find((s: PlayServer) => s.id === activeServerId);
           const matchedServer = targetProvider
             ? (matchingActive && (matchingActive.id.toLowerCase().includes(targetProvider) || matchingActive.provider.toLowerCase() === targetProvider)
                 ? matchingActive
-                : data.servers.find((s: PlayServer) => s.id?.toLowerCase().includes(targetProvider) || s.provider?.toLowerCase() === targetProvider || s.name?.toLowerCase().includes(targetProvider)))
+                : serverList.find((s: PlayServer) => s.id?.toLowerCase().includes(targetProvider) || s.provider?.toLowerCase() === targetProvider || s.name?.toLowerCase().includes(targetProvider)))
             : null;
           if (matchedServer) {
             setActiveServerId(matchedServer.id);
           } else if (targetProvider) {
             setActiveServerId(serverIdFromProvider(targetProvider));
-          } else if (!data.servers.some((s: PlayServer) => s.id === activeServerId)) {
-            setActiveServerId(data.servers[0].id);
+          } else if (!serverList.some((s: PlayServer) => s.id === activeServerId)) {
+            setActiveServerId(serverList[0].id);
           }
         }
       })
@@ -163,7 +201,7 @@ export function Watch() {
         // Non-numeric or < 1 -> default to 1, replace URL
         navigate(`/watch/${anime.id}/1`, { replace: true });
         setEpNum(1);
-      } else if (parsed > total) {
+      } else if (parsed > total && total >= (anime.episodeTotal || anime.episodeCount || total)) {
         // Exceeds total -> clamp to max episode, replace URL
         navigate(`/watch/${anime.id}/${total}`, { replace: true });
         setEpNum(total);
@@ -176,11 +214,15 @@ export function Watch() {
       const queryEp = Number.parseInt(params.get('ep') ?? '', 10);
       let targetEp = 1;
       if (Number.isFinite(queryEp) && queryEp >= 1) {
-        targetEp = Math.min(queryEp, episodes.length);
+        targetEp = episodes.length >= (anime.episodeTotal || anime.episodeCount || 1)
+          ? Math.min(queryEp, episodes.length)
+          : queryEp;
       } else {
-        const savedKey = Object.keys(positions).find((k) => k.startsWith(`${anime.id}#`));
+        const savedKey = Object.keys(positions).find(
+          (k) => k.startsWith(`${anime.id}:e`) || k.startsWith(`${anime.id}#`)
+        );
         if (savedKey) {
-          const match = /#(\d+)$/.exec(savedKey);
+          const match = /(?:#|:e)(\d+)$/.exec(savedKey);
           if (match) {
             const resumeEp = Number.parseInt(match[1], 10);
             if (Number.isFinite(resumeEp) && resumeEp >= 1 && resumeEp <= episodes.length) {
@@ -228,7 +270,7 @@ export function Watch() {
         ? {
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: anime.rating,
+              ratingValue: anime.rating > 10 ? Number((anime.rating / 10).toFixed(1)) : anime.rating,
               bestRating: 10,
               worstRating: 0,
               ratingCount: 150,
@@ -298,6 +340,15 @@ export function Watch() {
     [anime, episodes, navigate],
   );
 
+
+  const selectSeason = useCallback(
+    (seasonId: string) => {
+      if (!seasonId || seasonId === anime?.id) return;
+      navigate(`/watch/${seasonId}/1`);
+    },
+    [anime?.id, navigate],
+  );
+
   const prefetchedNext = useRef<number | null>(null);
 
   useEffect(() => {
@@ -327,16 +378,21 @@ export function Watch() {
     else notify(wasSaved ? 'Removed from your list.' : 'Saved to your list.');
   };
 
+  const queryTime = Number(params.get('time') || params.get('t')) || 0;
   const saved = prefs.rememberPosition ? positions[key] : undefined;
-  // a finished episode restarts from 0 rather than opening straight onto the end card
-  const resumeAt = saved && !saved.finished ? Math.min(saved.t, Math.max(0, runtime - 5)) : 0;
+  // query parameter time/t takes precedence; otherwise resume from saved position
+  const resumeAt = queryTime > 0
+    ? queryTime
+    : saved && !saved.finished
+      ? Math.min(saved.t, Math.max(0, runtime - 5))
+      : 0;
 
   if (missing && !loadedAnime && !params.get('title') && !params.get('provider')) {
     return (
       <div className="page watch__missing shell">
-        <h1>This title isn&rsquo;t in the catalogue</h1>
+        <h1>Anime Not Found</h1>
         <p>
-          {error ?? `Nothing with the id “${id}” is served by this site.`} Pick one from the catalogue instead.
+          {error ?? `We couldn't find an anime with the id “${id}”.`} Explore popular series and movies instead.
         </p>
         <div className="watch__missing-cta">
           <Link className="btn btn--primary" to="/anime">
@@ -385,7 +441,7 @@ export function Watch() {
           </p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
             <Link className="btn btn--primary" to="/schedule">Check Release Schedule</Link>
-            <Link className="btn btn--ghost" to="/anime">Browse Catalogue</Link>
+            <Link className="btn btn--ghost" to="/anime">Browse Anime</Link>
           </div>
         </div>
       </div>
@@ -414,10 +470,27 @@ export function Watch() {
     notify(`Switched to ${server.name} (${srvAudio.toUpperCase()})`);
   };
 
+  const currentProviderKey = useMemo(() => {
+    if (targetProvider && PROVIDER_THEMES[targetProvider]) return targetProvider;
+    if (activeServerId) {
+      const prov = providerFromId(activeServerId);
+      if (PROVIDER_THEMES[prov]) return prov;
+    }
+    return 'anikoto';
+  }, [targetProvider, activeServerId]);
+
+  const handleSwitchProvider = (provKey: string) => {
+    const newParams = new URLSearchParams(params);
+    newParams.set('provider', provKey);
+    setActiveServerId(serverIdFromProvider(provKey));
+    navigate(`/watch/${encodeURIComponent(anime?.id || id || '')}/${epNum}?${newParams.toString()}`, { replace: true });
+    notify(`Switched provider to ${PROVIDER_THEMES[provKey]?.name || provKey}`);
+  };
+
   const crumbs = [
     { label: 'Home', to: '/' },
     { label: 'Anime', to: '/anime' },
-    { label: anime.title, to: `/watch/${anime.id}` },
+    { label: anime.title, to: `/anime/${anime.id}` },
     ...(anime.genres.length
       ? [{ label: genreLabel(anime.genres[0]), to: `/anime?genre=${anime.genres[0]}` }]
       : []),
@@ -464,7 +537,7 @@ export function Watch() {
             resumeAt={resumeAt}
             onProgress={(t) => {
               record(key, t, runtime);
-              recordPosition(anime, idx, episode.title, t, runtime);
+              recordPosition(anime, idx, episode?.title || `Episode ${idx}`, t, runtime);
               // Prefetch next episode when reaching 80% progress
               if (runtime > 0 && t / runtime >= 0.8 && anime && idx < anime.episodes.length) {
                 const nextEp = idx + 1;
@@ -478,6 +551,7 @@ export function Watch() {
             onStreamInfo={setCurrentStream}
             serverId={activeServerId}
             onServerChange={setActiveServerId}
+            initialServer={playServers.find((s) => s.id === activeServerId) || playServers[0] || null}
           />
 
           {playServers.length > 0 && (
@@ -486,8 +560,9 @@ export function Watch() {
                 servers={playServers}
                 activeServerId={activeServerId}
                 onSelectServer={handleSelectServer}
+                onSwitchProvider={handleSwitchProvider}
                 scopedProviderUnavailable={scopedProviderUnavailable}
-                scopedProvider={targetProvider}
+                scopedProvider={targetProvider || currentProviderKey}
               />
             </div>
           )}
@@ -495,7 +570,17 @@ export function Watch() {
           <div className="watch__meta">
             <div className="watch__meta-head">
               <h1>
-                {anime.title}{anime.season ? <span> – {anime.season} Episode {idx}</span> : <span> – Episode {idx}</span>}
+                {anime.title}
+                {episode ? (
+                  <span>
+                    {' – '}Episode {idx}
+                    {episode.title && episode.title.trim().toLowerCase() !== `episode ${idx}` ? (
+                      <span className="watch__ep-title">: {episode.title}</span>
+                    ) : null}
+                  </span>
+                ) : (
+                  anime.season ? <span> – {anime.season}</span> : null
+                )}
               </h1>
               <p className="watch__native" lang="ja">{anime.native}</p>
             </div>
@@ -510,8 +595,75 @@ export function Watch() {
               ))}
             </ul>
 
+            {episode && (
+              <div
+                className="watch__ep-details"
+                style={{
+                  margin: '20px 0',
+                  padding: '16px',
+                  background: 'rgba(255, 255, 255, 0.03)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  borderRadius: '10px',
+                  display: 'flex',
+                  gap: '16px',
+                  alignItems: 'flex-start',
+                }}
+              >
+                {episode.thumb ? (
+                  <img
+                    src={episode.thumb}
+                    alt={episode.title}
+                    style={{
+                      width: '160px',
+                      aspectRatio: '16/9',
+                      borderRadius: '6px',
+                      objectFit: 'cover',
+                      flexShrink: 0,
+                    }}
+                    loading="lazy"
+                  />
+                ) : null}
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      flexWrap: 'wrap',
+                      marginBottom: '6px',
+                    }}
+                  >
+                    <span style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--text-1)' }}>
+                      Episode {idx}
+                      {episode.title && episode.title.trim().toLowerCase() !== `episode ${idx}`
+                        ? `: ${episode.title}`
+                        : ''}
+                    </span>
+                    {episode.runtime && episode.runtime !== '—' && (
+                      <span className="badge" style={{ fontSize: '11px' }}>
+                        {episode.runtime}
+                      </span>
+                    )}
+                    {episode.airdate && (
+                      <span style={{ fontSize: '12px', color: 'var(--text-3)' }}>
+                        Aired: {episode.airdate}
+                      </span>
+                    )}
+                  </div>
+                  {episode.synopsis ? (
+                    <p style={{ margin: 0, fontSize: '13.5px', color: 'var(--text-2)', lineHeight: '1.6' }}>
+                      {episode.synopsis}
+                    </p>
+                  ) : (
+                    <p style={{ margin: 0, fontSize: '13px', color: 'var(--text-3)', fontStyle: 'italic' }}>
+                      No synopsis available for this episode.
+                    </p>
+                  )}
+                </div>
+              </div>
+            )}
+
             <p className="watch__syn">{anime.synopsis}</p>
-            <p className="watch__syn watch__syn--ep">{episode.synopsis}</p>
 
             <dl className="watch__facts">
               <div>
@@ -532,7 +684,7 @@ export function Watch() {
               </div>
               <div>
                 <dt>Runtime</dt>
-                <dd>{episode.runtime && episode.runtime !== '0:00' && episode.runtime !== '0m' ? episode.runtime : '—'}</dd>
+                <dd>{episode?.runtime && episode.runtime !== '0:00' && episode.runtime !== '0m' ? episode.runtime : '—'}</dd>
               </div>
               <div>
                 <dt>Your position</dt>
@@ -592,6 +744,7 @@ export function Watch() {
           anime={{ ...anime, episodes }}
           current={idx}
           onSelect={selectEpisode}
+          onSelectSeason={selectSeason}
           autoNext={prefs.autoNext}
           onAutoNext={(v) => patch({ autoNext: v })}
           positions={positions}
@@ -622,6 +775,7 @@ export function Watch() {
         anime={anime}
         episode={episode}
         currentStream={currentStream}
+        activeProvider={targetProvider || currentStream?.provider || (activeServerId ? providerFromId(activeServerId).split(':')[0] : 'anikoto')}
         notify={notify}
       />
     </div>

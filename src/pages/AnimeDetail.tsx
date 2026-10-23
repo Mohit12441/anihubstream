@@ -20,14 +20,14 @@ export function AnimeDetail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (id && SLUG_REDIRECTS[id]) {
+    if (id && SLUG_REDIRECTS[id] && SLUG_REDIRECTS[id] !== id) {
       navigate(`/anime/${SLUG_REDIRECTS[id]}`, { replace: true });
     }
   }, [id, navigate]);
 
   const { status, error, missing, anime, related, reload } = useAnimeDetail(id);
   const { genreLabel } = useCatalogue();
-  const { has, isBusy, toggle, favourites, toggleFavourite } = useLibrary();
+  const { has, isBusy, toggle, favourites, toggleFavourite, history } = useLibrary();
 
   const [servers, setServers] = useState<ServerPreview[]>([]);
   const [serversLoading, setServersLoading] = useState(true);
@@ -81,6 +81,8 @@ export function AnimeDetail() {
 
   const inList = has(anime.id);
   const isFav = favourites.has(anime.id);
+  const resume = history.find((h) => h.anime.id === anime.id);
+  const targetEp = resume?.episodeNumber && resume.episodeNumber > 0 ? resume.episodeNumber : 1;
   const epCount = anime.episodes?.length || anime.episodeCount || 1;
   const ratingFormatted = anime.rating ? (anime.rating > 10 ? (anime.rating / 10).toFixed(1) : anime.rating.toFixed(1)) : '—';
 
@@ -218,7 +220,7 @@ export function AnimeDetail() {
             {/* Play CTA Button */}
             <div style={{ marginTop: '1rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>
               <Link
-                to={`/watch/${anime.id}/1`}
+                to={`/watch/${anime.id}/${targetEp}`}
                 className="btn-primary"
                 style={{
                   display: 'inline-flex',
@@ -232,7 +234,7 @@ export function AnimeDetail() {
                 }}
               >
                 <Play size={18} fill="currentColor" />
-                <span>Watch Episode 1</span>
+                <span>{resume?.episodeNumber ? `Resume Episode ${resume.episodeNumber}` : 'Watch Episode 1'}</span>
               </Link>
             </div>
 
@@ -328,7 +330,7 @@ export function AnimeDetail() {
                   )}
                   <div style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                     <div style={{ fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.2rem' }}>
-                      EP {ep.n}: {ep.title || `Episode ${ep.n}`}
+                      EP {ep.n}{ep.title && ep.title.trim().toLowerCase() !== `episode ${ep.n}` ? `: ${ep.title}` : ''}
                     </div>
                     {ep.runtime && (
                       <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>

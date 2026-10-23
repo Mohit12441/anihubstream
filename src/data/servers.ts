@@ -3,7 +3,7 @@
 
    Multi-provider integration with real-time latency racing:
    Auto (Fastest) concurrently races AniWatch, HiAnime, AniKoto,
-   and AnimeDubHindi, connecting to whichever proves a playable
+   connecting to whichever proves a playable
    stream fastest. Specific servers can also be selected manually.
    ============================================================ */
 
@@ -96,22 +96,6 @@ export const LIVE_SERVER: StreamServer = {
   note: 'Full-featured AniKoto integration with intro/outro timestamps and 9 subtitle tracks.',
 };
 
-export const ANIMEDUBHINDI_SERVER: StreamServer = {
-  id: 'animedubhindi-live',
-  name: 'AnimeDubHindi',
-  region: 'Hindi Dub (Multi-Audio)',
-  status: 'online',
-  capabilities: {
-    qualities: ['auto', '1080p', '720p', '480p'],
-    subtitleLanguages: [],
-    subtitleType: 'none',
-    audioLanguages: ['Hindi (dub)', 'Multi Audio (Hindi, Tamil, Telugu, English, Japanese)'],
-  },
-  sourceUrl: 'http://127.0.0.1:8795',
-  responseMs: 0,
-  note: 'Real Hindi dub and multi-audio playback through AnimeDubHindi via progressive streaming.',
-};
-
 export const ANIMEWAVE_SERVER: StreamServer = {
   id: 'animewave-live',
   name: 'AnimeWave',
@@ -164,7 +148,7 @@ export const SERVERS: StreamServer[] = [
   LIVE_SERVER,
   ANIWATCH_SERVER,
   HIANIME_SERVER,
-  ANIMEDUBHINDI_SERVER,
+
   WATCHANIMEWORLD_SERVER,
   ANIMEWAVE_SERVER,
   ANIMEKAI_SERVER,
@@ -191,13 +175,13 @@ export function providerFromId(serverId: string): string {
   // If serverId is in "provider:server" format (e.g. anikoto:HD-1, hianime:HD-1, hianime:MegaPlay, aniwatch:HD-1)
   if (lower.includes(':')) {
     const prov = lower.split(':')[0];
-    if (['aniwatch', 'hianime', 'anikoto', 'animedubhindi', 'watchanimeworld', 'animewave', 'animekai'].includes(prov)) {
+    if (['aniwatch', 'hianime', 'anikoto', 'watchanimeworld', 'animewave', 'animekai'].includes(prov)) {
       return prov;
     }
   }
 
   // Handle provider-server format (e.g. hianime-1, hianime-2, aniwatch-1)
-  for (const prov of ['hianime', 'aniwatch', 'anikoto', 'animedubhindi', 'watchanimeworld', 'animewave', 'animekai']) {
+  for (const prov of ['hianime', 'aniwatch', 'anikoto', 'watchanimeworld', 'animewave', 'animekai']) {
     if (lower === `${prov}-live` || lower === prov) {
       return prov;
     }
@@ -206,7 +190,7 @@ export function providerFromId(serverId: string): string {
     }
   }
 
-  return ['hianime', 'aniwatch', 'anikoto', 'animedubhindi', 'watchanimeworld', 'animewave', 'animekai'].includes(lower) ? lower : 'anikoto';
+  return ['hianime', 'aniwatch', 'anikoto', 'watchanimeworld', 'animewave', 'animekai'].includes(lower) ? lower : 'anikoto';
 }
 
 export function serverIdFromProvider(provider?: string): string {
@@ -216,7 +200,6 @@ export function serverIdFromProvider(provider?: string): string {
   if (norm === 'hianime') return 'hianime:HD-1';
   if (norm === 'anikoto') return 'anikoto:HD-1';
   if (norm === 'aniwatch') return 'aniwatch:HD-1';
-  if (norm === 'animedubhindi') return 'animedubhindi:default';
   if (norm === 'watchanimeworld') return 'watchanimeworld:default';
   return `${norm}:HD-1`;
 }

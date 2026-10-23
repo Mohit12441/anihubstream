@@ -26,6 +26,7 @@ interface Props {
   anime: Anime;
   current: number;
   onSelect: (n: number) => void;
+  onSelectSeason?: (seasonId: string) => void;
   autoNext: boolean;
   onAutoNext: (v: boolean) => void;
   positions: PositionMap;
@@ -41,13 +42,12 @@ const state = (ep: Episode, anime: Anime, positions: PositionMap) => {
   return { status: 'progress' as const, ratio: d > 0 ? Math.min(1, p.t / d) : 0 };
 };
 
-export function EpisodeSidebar({ anime, current, onSelect, autoNext, onAutoNext, positions, theatre, onTheatre }: Props) {
+export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoNext, onAutoNext, positions, theatre, onTheatre }: Props) {
   const [term, setTerm] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
   const [open, setOpen] = useState(true);
-  const [season, setSeason] = useState(anime.season);
 
-  const seasons = [anime.season, ...(anime.altSeasons ?? [])];
+  const seasons = anime.seasons && anime.seasons.length > 1 ? anime.seasons : null;
   const total = anime.episodes.length;
   const next = anime.episodes[current] ?? null;
 
@@ -95,21 +95,24 @@ export function EpisodeSidebar({ anime, current, onSelect, autoNext, onAutoNext,
         </button>
       </div>
 
-      {seasons.length > 1 && (
+      {seasons && (
         <label className="eps__season">
-          <span>Season</span>
-          <select value={season} onChange={(e) => setSeason(e.target.value)}>
+          <span>Season / Part</span>
+          <select
+            value={anime.id}
+            onChange={(e) => {
+              const targetId = e.target.value;
+              if (targetId && targetId !== anime.id && onSelectSeason) {
+                onSelectSeason(targetId);
+              }
+            }}
+          >
             {seasons.map((s) => (
-              <option key={s} value={s}>
-                {s}
+              <option key={s.id} value={s.id}>
+                {s.title}{s.season ? ` (${s.season})` : s.year ? ` (${s.year})` : ''}
               </option>
             ))}
           </select>
-          {season !== anime.season && (
-            <p className="eps__warn" role="status">
-              {season} has no episode list on this site — the list below is still {anime.season}.
-            </p>
-          )}
         </label>
       )}
 
@@ -212,7 +215,9 @@ export function EpisodeSidebar({ anime, current, onSelect, autoNext, onAutoNext,
                           </em>
                         )}
                       </b>
-                      <span className="eps__title">{ep.title}</span>
+                      {ep.title && ep.title.trim().toLowerCase() !== `episode ${ep.n}` ? (
+                        <span className="eps__title">{ep.title}</span>
+                      ) : null}
                       <span className="eps__run">
                         {ep.runtime && ep.runtime !== '—' && (
                           <>
@@ -275,8 +280,8 @@ export function EpisodeSidebar({ anime, current, onSelect, autoNext, onAutoNext,
             </label>
             <p className="eps__note">
               {anime.episodeTotal && anime.episodeTotal > total
-                ? `Titles this long are listed here from episode 1 up to ${total}; the source lists ${anime.episodeTotal} in all. `
-                : 'Episode titles, air dates and run times are read from this site’s own catalogue database. '}
+                ? `Episodes 1 to ${total} are listed below out of ${anime.episodeTotal} total episodes. `
+                : 'Browse episodes, release dates, and runtimes. '}
               Your position in each one is kept in this browser and mirrored to your anonymous viewer record on the
               server.
             </p>

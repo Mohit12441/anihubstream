@@ -1,4 +1,4 @@
-import { CARD_COLUMNS, HttpError, cardFromRow, errorResponse, existingViewer, getViewer, json, withViewer } from '../_lib.js';
+import { CARD_COLUMNS, HttpError, cardFromRow, deriveSlugCandidates, errorResponse, existingViewer, findAnimeByCandidates, getViewer, json, withViewer } from '../_lib.js';
 const LIST = `SELECT ${CARD_COLUMNS}, l.added_at
                 FROM library l JOIN anime a ON a.id = l.anime_id
                WHERE l.viewer_id = ?1
@@ -22,8 +22,12 @@ const bodyAnimeId = async (request) => {
 };
 
 const knownAnime = async (env, animeId) => {
+  const candidates = deriveSlugCandidates(animeId);
+  const found = await findAnimeByCandidates(env.ANIHUB, candidates);
+  if (found) return found;
   const row = await env.ANIHUB.prepare('SELECT id FROM anime WHERE id = ?1').bind(animeId).first();
   if (!row) throw new HttpError(404, 'not_found', `anime "${animeId}" not found`);
+  return row;
 };
 
 export const onRequestGet = async ({ request, env }) => {
@@ -42,8 +46,9 @@ export const onRequestGet = async ({ request, env }) => {
 
 export const onRequestPost = async ({ request, env }) => {
   try {
-    const animeId = await bodyAnimeId(request);
-    await knownAnime(env, animeId);
+    const rawAnimeId = await bodyAnimeId(request);
+    const anime = await knownAnime(env, rawAnimeId);
+    const animeId = anime.id;
     const { id, setCookie } = await getViewer(env, request);
     await env.ANIHUB.prepare('INSERT OR IGNORE INTO library (viewer_id, anime_id) VALUES (?1, ?2)')
       .bind(id, animeId)
@@ -59,13 +64,20 @@ export const onRequestPost = async ({ request, env }) => {
 
 export const onRequestDelete = async ({ request, env }) => {
   try {
-    const animeId = new URL(request.url).searchParams.get('animeId');
-    if (!animeId) throw new HttpError(400, 'bad_request', 'animeId query parameter is required');
+    const rawAnimeId = new URL(request.url).searchParams.get('animeId');
+    if (!rawAnimeId) throw new HttpError(400, 'bad_request', 'animeId query parameter is required');
+    const candidates = deriveSlugCandidates(rawAnimeId);
+    const anime = await findAnimeByCandidates(env.ANIHUB, candidates);
+    const targetIds = anime ? [anime.id, rawAnimeId] : [rawAnimeId];
     const { id, setCookie } = await getViewer(env, request);
-    const { meta } = await env.ANIHUB.prepare('DELETE FROM library WHERE viewer_id = ?1 AND anime_id = ?2')
-      .bind(id, animeId)
-      .run();
-    return withViewer(json({ removed: meta.changes > 0, count: await size(env, id) }), setCookie);
+    let removed = false;
+    for (const aid of targetIds) {
+      const { meta } = await env.ANIHUB.prepare('DELETE FROM library WHERE viewer_id = ?1 AND anime_id = ?2')
+        .bind(id, aid)
+        .run();
+      if (meta.changes > 0) removed = true;
+    }
+    return withViewer(json({ removed, count: await size(env, id) }), setCookie);
   } catch (err) {
     return errorResponse(err);
   }

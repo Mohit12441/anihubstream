@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Compass, Flame, Radio, Sparkles, Star, X } from 'lucide-react';
 import { AnimeCard } from '../components/AnimeCard';
 import { AnimeCarousel } from '../components/AnimeCarousel';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
-import { HeroBanner } from '../components/HeroBanner';
+import { ContinueWatchingRow } from '../components/ContinueWatchingRow';
+import { HeroSlideshow } from '../components/HeroSlideshow';
 import { genreIcon } from '../components/genreIcons';
 import { listCatalogue } from '../data/api';
 import { artUrl, hydrateCard } from '../data/model';
@@ -19,7 +20,6 @@ const PROVIDER_METAS: Record<string, ProviderMeta> = {
   anikoto: { name: 'AniKoto', badge: 'HLS 1080p', color: '#6366f1' },
   hianime: { name: 'HiAnime', badge: 'JSON Stream', color: '#ec4899' },
   aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6' },
-  animedubhindi: { name: 'AnimeDubHindi', badge: 'Hindi Dub', color: '#f59e0b' },
   watchanimeworld: { name: 'WatchAnimeWorld', badge: 'Direct MP4', color: '#10b981' },
 };
 
@@ -58,9 +58,7 @@ const rotate = <T,>(arr: T[], seed: number) => {
 };
 
 export function Home() {
-  const navigate = useNavigate();
   const { status, error, reload, GENRES, genreLabel, home } = useCatalogue();
-  const [query, setQuery] = useState('');
   const [genre, setGenre] = useState<string | null>(null);
   const [seed, setSeed] = useState(0);
 
@@ -128,61 +126,12 @@ export function Home() {
 
   const [providerStreams, setProviderStreams] = useState<Record<string, ProviderSearchResult[]>>({});
   const [providerFilter, setProviderFilter] = useState<string>('all');
-  const [providerLoading, setProviderLoading] = useState(false);
 
   useEffect(() => {
-    let active = true;
-    setProviderLoading(true);
-
-    const targetUrl = providerFilter === 'all'
-      ? '/api/home?provider=providers'
-      : `/api/home?provider=${encodeURIComponent(providerFilter)}`;
-
-    fetch(targetUrl)
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data) => {
-        if (!active || !data) return;
-        if (data.providers) {
-          setProviderStreams(data.providers);
-        } else if (data.provider && (data.trending || data.featured || data.popular || data.ongoing || data.fresh)) {
-          const rawItems: any[] = [
-            ...(data.featured || []),
-            ...(data.trending || []),
-            ...(data.popular || []),
-            ...(data.ongoing || []),
-            ...(data.fresh || []),
-          ];
-
-          const items: ProviderSearchResult[] = rawItems.map((a) => ({
-            id: a.id || a.slug,
-            slug: a.slug || a.id,
-            title: a.title,
-            coverUrl: a.coverUrl || a.art || a.keyArt || null,
-            provider: a.provider || data.provider,
-          }));
-
-          const seen = new Set<string>();
-          const uniqueItems = items.filter((it) => {
-            if (!it.id || seen.has(it.id)) return false;
-            seen.add(it.id);
-            return true;
-          });
-
-          setProviderStreams((prev) => ({
-            ...prev,
-            [data.provider]: uniqueItems,
-          }));
-        }
-      })
-      .catch(() => {})
-      .finally(() => {
-        if (active) setProviderLoading(false);
-      });
-
-    return () => {
-      active = false;
-    };
-  }, [providerFilter]);
+    if (home.providers && Object.keys(home.providers).length > 0) {
+      setProviderStreams(home.providers);
+    }
+  }, [home.providers]);
 
   const providerCategoryPills = useMemo<CategoryPillItem[]>(() => {
     let totalCount = 0;
@@ -200,13 +149,15 @@ export function Home() {
 
     for (const [key, meta] of Object.entries(PROVIDER_METAS)) {
       const items = providerStreams[key] || [];
-      pills.push({
-        id: key,
-        label: meta.name,
-        badge: meta.badge,
-        count: items.length || undefined,
-        color: meta.color,
-      });
+      if (items.length > 0) {
+        pills.push({
+          id: key,
+          label: meta.name,
+          badge: meta.badge,
+          count: items.length || undefined,
+          color: meta.color,
+        });
+      }
     }
     return pills;
   }, [providerStreams]);
@@ -222,13 +173,7 @@ export function Home() {
 
   return (
     <div className="page home">
-      <HeroBanner
-        query={query}
-        onQuery={setQuery}
-        onSearch={(q) => navigate(`/search?q=${encodeURIComponent(q)}`)}
-        activeGenre={genre}
-        onGenre={(id) => setGenre((cur) => (cur === id ? null : id))}
-      />
+      <HeroSlideshow items={home.trending} genres={GENRES} />
 
       <div className="home__rows shell">
         {status !== 'ready' ? (
@@ -239,7 +184,9 @@ export function Home() {
           )
         ) : (
           <>
-        <section className="home__row" aria-labelledby="row-trending">
+            <ContinueWatchingRow />
+
+            <section className="home__row" aria-labelledby="row-trending">
           <div className="sec-head">
             <h2 id="row-trending">
               <Flame size={21} aria-hidden="true" />
@@ -268,7 +215,7 @@ export function Home() {
                   genre
                     ? shelfBusy
                       ? `Gathering ${heading} titles…`
-                      : `No title in the catalogue is tagged ${heading} yet.`
+                      : `No anime currently found for ${heading}.`
                     : 'The trending list is empty right now — check back soon.'
                 }
               />
@@ -290,58 +237,6 @@ export function Home() {
             ))}
           </div>
         </section>
-
-        {/* Live Multi-Provider Streams Shelf */}
-        <section className="home__row home__provider-streams" aria-labelledby="row-providers">
-          <div className="sec-head">
-            <h2 id="row-providers">
-              <Radio size={21} aria-hidden="true" style={{ color: 'var(--brand, #6366f1)' }} />
-              Live Provider Streams
-              <Link to="/anime" className="sec-head__link" aria-label="Browse full anime catalog">
-                <ArrowRight size={18} aria-hidden="true" />
-              </Link>
-            </h2>
-            <p className="sec-head__hint">Real-time streams across AniKoto, HiAnime, AniWatch & Hindi Dub</p>
-          </div>
-
-          <div style={{ marginBottom: '18px', overflowX: 'auto', paddingBottom: '4px' }}>
-            <CategoryPills
-              categories={providerCategoryPills}
-              activeId={providerFilter}
-              onSelect={setProviderFilter}
-            />
-          </div>
-
-          {providerLoading && (
-            <div style={{ padding: '24px 0', color: '#94a3b8', fontSize: '0.88rem' }}>
-              Fetching real-time catalog streams...
-            </div>
-          )}
-
-          {!providerLoading && activeProviderRows.length === 0 && (
-            <div style={{ padding: '24px 0', color: '#94a3b8', fontSize: '0.88rem' }}>
-              No catalog titles currently available for {PROVIDER_METAS[providerFilter]?.name || 'this provider'}. Check back shortly.
-            </div>
-          )}
-
-          {activeProviderRows.map(([providerKey, items]) => {
-
-            const meta = PROVIDER_METAS[providerKey] || {
-              name: providerKey.toUpperCase(),
-              badge: 'Stream',
-              color: '#6366f1',
-            };
-            return (
-              <ProviderRow
-                key={providerKey}
-                providerKey={providerKey}
-                meta={meta}
-                items={items}
-              />
-            );
-          })}
-        </section>
-
 
         <Row
           id="row-ongoing"
@@ -370,6 +265,45 @@ export function Home() {
           toLabel="Recently added"
           poster
         />
+
+        {activeProviderRows.length > 0 && (
+          <section className="home__row home__provider-streams" aria-labelledby="row-providers">
+            <div className="sec-head">
+              <h2 id="row-providers">
+                <Radio size={21} aria-hidden="true" style={{ color: 'var(--brand, #6366f1)' }} />
+                Popular Streaming Servers
+                <Link to="/anime" className="sec-head__link" aria-label="Browse full anime catalog">
+                  <ArrowRight size={18} aria-hidden="true" />
+                </Link>
+              </h2>
+              <p className="sec-head__hint">Watch across AniKoto, HiAnime & AniWatch servers</p>
+            </div>
+
+            <div style={{ marginBottom: '18px', overflowX: 'auto', paddingBottom: '4px' }}>
+              <CategoryPills
+                categories={providerCategoryPills}
+                activeId={providerFilter}
+                onSelect={setProviderFilter}
+              />
+            </div>
+
+            {activeProviderRows.map(([providerKey, items]) => {
+              const meta = PROVIDER_METAS[providerKey] || {
+                name: providerKey.toUpperCase(),
+                badge: 'Stream',
+                color: '#6366f1',
+              };
+              return (
+                <ProviderRow
+                  key={providerKey}
+                  providerKey={providerKey}
+                  meta={meta}
+                  items={items}
+                />
+              );
+            })}
+          </section>
+        )}
 
         <section className="home__row" aria-labelledby="row-genres">
           <div className="spot">
@@ -409,7 +343,7 @@ export function Home() {
 
         <Row
           id="row-fresh"
-          title="Newest in the Catalogue"
+          title="Latest Anime Releases"
           icon={<Compass size={20} aria-hidden="true" />}
           items={rows.fresh}
           to="/anime"

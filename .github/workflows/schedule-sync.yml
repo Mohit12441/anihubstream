@@ -1,0 +1,45 @@
+name: daily-schedule-sync
+
+# Daily Broadcast Schedule Sync
+# Synchronizes upcoming episode broadcast times, dates, and seasons from AniList for all ongoing anime.
+# Clears stale schedule slots for anime that finished airing.
+# Runs once every day at 03:00 UTC.
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: daily-schedule-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: log execution metadata
+        run: |
+          echo "=== GitHub Actions Daily Schedule Sync ==="
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "Run ID: ${{ github.run_id }}"
+          echo "Scheduled Cadence: Once daily at 03:00 UTC"
+          echo "UTC Timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          echo "=========================================="
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19'
+
+      - name: run schedule sync
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: node tools/sync-ongoing-schedules.mjs --remote

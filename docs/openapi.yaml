@@ -385,7 +385,7 @@ paths:
           in: query
           schema:
             type: string
-            enum: [auto, fastest, aniwatch, hianime, anikoto, animedubhindi, watchanimeworld, animewave, animekai]
+            enum: [auto, fastest, aniwatch, hianime, anikoto, watchanimeworld, animewave, animekai]
             default: auto
         - name: fallback
           in: query
@@ -650,7 +650,7 @@ components:
           type: string
         provider:
           type: string
-          example: animedubhindi
+          example: watchanimeworld
         kind:
           type: string
           enum: [hls, progressive]

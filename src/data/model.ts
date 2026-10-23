@@ -59,6 +59,16 @@ export interface Schedule {
   season: SeasonKey;
 }
 
+
+export interface AnimeSeasonItem {
+  id: string;
+  title: string;
+  season: string;
+  year?: number | null;
+  kind?: AnimeKind;
+  isCurrent?: boolean;
+}
+
 export interface Anime {
   id: string;
   title: string;
@@ -80,12 +90,16 @@ export interface Anime {
   schedule?: Schedule;
   /** Other seasons of this title that exist in the franchise but are not loaded in the catalogue. */
   altSeasons?: string[];
+  seasons?: AnimeSeasonItem[];
   /** Cards from the list endpoint carry a count only; the watch page loads the full episode list. */
   episodeCount: number;
   /** The source's own episode count, which can be larger than the list we store. */
   episodeTotal?: number;
   /** MyAnimeList ID used for AniSkip timestamp lookups; null/undefined when unmapped */
   malId?: number | null;
+  /** Available streaming providers registered for this title */
+  providers?: string[];
+  providerMappings?: Record<string, string>;
   episodes: Episode[];
 }
 
@@ -185,6 +199,7 @@ export interface ApiCard {
   rank: number | null;
   trendRank: number | null;
   altSeasons: string[];
+  seasons?: AnimeSeasonItem[];
   schedule: Schedule | null;
   episodeCount: number;
   episodeTotal: number | null;
@@ -192,6 +207,8 @@ export interface ApiCard {
   sourceIds?: Record<string, unknown> | null;
   skipKeyId?: number | null;
   skipKeySpace?: string | null;
+  providers?: string[];
+  providerMappings?: Record<string, string>;
 }
 
 export interface ApiEpisode {
@@ -246,9 +263,36 @@ export const formatRuntime = (runtime?: string | null): string => {
   return runtime;
 };
 
+const RESERVED_TITLE_WORDS = /^(season|part|cour|act|episode|vol|volume|movie|ova|ona|special|final|first|second|third|fourth|order|zero|live|climax|deluxe|edition)$/i;
+const COMMON_6_LETTER = /^(action|attack|heroes|dragon|naruto|hunter|clover|haikyu|magica|kamui|sailor|online|future|school|prince|summer|winter|spring|autumn|master|legend|island|family|sister|puzzle|spiral|knight|border|heaven|secret|shadow|spirit|silver|golden|yellow|orange|purple|violet|cinema|circus|studio|reborn|border|planet|galaxy|origin|battle|castle|flight|zombie|vampire)$/i;
+
+const isHashToken = (token: string): boolean => {
+  const clean = token.trim();
+  if (RESERVED_TITLE_WORDS.test(clean)) return false;
+  if (clean.length < 4 || clean.length > 8) return false;
+  if (/\d/.test(clean)) return true;
+  if (/^[b-df-hj-np-tv-z]{4,8}$/i.test(clean)) return true;
+  if (/^[a-z]{6}$/i.test(clean) && !COMMON_6_LETTER.test(clean)) return true;
+  return false;
+};
+
+export const cleanAnimeTitle = (title?: string | null): string => {
+  if (!title) return '';
+  return title
+    .replace(/\s+([a-z0-9]{4,8})\s*([-–—]\s*(?:episode|ep|part|season|vol|volume)\b.*)$/i, (match, code, rest) => {
+      if (isHashToken(code)) return ' ' + rest;
+      return match;
+    })
+    .replace(/\s*[-–—]?\s*([a-z0-9]{4,8})$/i, (match, code) => {
+      if (isHashToken(code)) return '';
+      return match;
+    })
+    .trim();
+};
+
 export const hydrateCard = (c: ApiCard): Anime => ({
   id: c.id,
-  title: c.title,
+  title: cleanAnimeTitle(c.title),
   native: c.native,
   year: c.year,
   rating: c.rating,
@@ -267,9 +311,12 @@ export const hydrateCard = (c: ApiCard): Anime => ({
   trendRank: c.trendRank ?? undefined,
   schedule: c.schedule ?? undefined,
   altSeasons: c.altSeasons ?? [],
+  seasons: c.seasons ?? [],
   episodeCount: c.episodeCount,
   episodeTotal: c.episodeTotal ?? undefined,
   malId: c.malId ?? resolveMalId(c.sourceIds, c.skipKeyId, c.skipKeySpace) ?? undefined,
+  providers: c.providers ?? undefined,
+  providerMappings: c.providerMappings ?? undefined,
   episodes: [],
 });
 
@@ -299,8 +346,11 @@ export const hydrateGenre = (g: ApiGenre): Genre => ({
 
 /** An unrated title is one the databases have no score for yet — usually not released.
     Showing 0.0 would read as a verdict, so callers use this instead. */
-export const ratingLabel = (rating: number | null | undefined) =>
-  !rating ? 'Not yet rated' : `${rating.toFixed(1)} / 10`;
+export const ratingLabel = (rating: number | null | undefined) => {
+  if (!rating) return 'Not yet rated';
+  const val = rating > 10 ? rating / 10 : rating;
+  return `${val.toFixed(1)} / 10`;
+};
 
 /** How many episodes the title runs for: the source's own count where it publishes one,
     otherwise how many rows this site actually holds. */
@@ -320,6 +370,6 @@ export const HERO = {
   title: ['AniHub', 'Stream'],
   sub: 'Explore a world beyond limits',
   copy:
-    'Every title, episode list, air slot and artwork below is read from this site\u2019s own catalogue database, which tools/sync-catalogue.mjs fills from the Kitsu and AniList community databases. Playback streams through the AniKoto bridge, which resolves each episode from real provider sources.',
+    'Stream thousands of popular and trending anime titles with English subbed and dubbed audio, ultra-fast servers, and crisp high-definition video playback.',
   art: artKeyUrl('hero-demon'),
 };

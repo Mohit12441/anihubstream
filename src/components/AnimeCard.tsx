@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Play, Star } from 'lucide-react';
 import { Art } from './Art';
 import { stamp } from '../lib/time';
-import { type Anime } from '../data/model';
+import { type Anime, cleanAnimeTitle } from '../data/model';
 import { CardMeta } from './CardMeta';
 import { useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
@@ -15,16 +15,20 @@ interface Props {
   rank?: number;
   badge?: string;
   episode?: string;
+  provider?: string;
 }
 
 const rankTint = ['#8fe9ff', '#b57bff', '#ff5470', '#ff9420', '#ffc247'];
 
-export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Props) {
+export function AnimeCard({ anime, variant = 'key', rank, badge, episode, provider }: Props) {
   const { genreLabel } = useCatalogue();
   const { history } = useLibrary();
   const resume = history.find((h) => h.anime.id === anime.id);
+  const cleanTitle = cleanAnimeTitle(anime.title);
   const targetEp = resume?.episodeNumber && resume.episodeNumber > 0 ? resume.episodeNumber : 1;
-  const to = `/watch/${anime.id}/${targetEp}`;
+  const to = provider
+    ? `/watch/${anime.id}/${targetEp}?provider=${encodeURIComponent(provider)}${cleanTitle ? `&title=${encodeURIComponent(cleanTitle)}` : ''}`
+    : `/watch/${anime.id}/${targetEp}`;
   const tint = rank ? rankTint[(rank - 1) % rankTint.length] : anime.accent;
 
   const hoverTimer = useRef<number | null>(null);
@@ -57,7 +61,7 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
           {anime.rating > 0 && (
             <span className="acard__rating">
               <Star size={11} fill="currentColor" strokeWidth={0} aria-hidden="true" />
-              {anime.rating.toFixed(1)}
+              {(anime.rating > 10 ? anime.rating / 10 : anime.rating).toFixed(1)}
             </span>
           )}
           <span className="acard__play" aria-hidden="true">
@@ -65,7 +69,7 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
           </span>
         </div>
         <div className="acard__foot">
-          <h3 className="acard__title">{anime.title}</h3>
+          <h3 className="acard__title">{cleanTitle}</h3>
           <CardMeta anime={anime} episode={episode} />
         </div>
       </Link>
@@ -87,7 +91,7 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
         </div>
         <div className="acard__body">
           <div className="acard__row">
-            <h3 className="acard__title">{anime.title}</h3>
+            <h3 className="acard__title">{cleanTitle}</h3>
             {badge && <span className="acard__flag acard__flag--inline">{badge}</span>}
           </div>
           <CardMeta anime={anime} episode={episode} />
@@ -127,7 +131,7 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
           </span>
         )}
         <div className="acard__names">
-          <h3 className="acard__title">{anime.title}</h3>
+          <h3 className="acard__title">{cleanTitle}</h3>
           {resume ? (
             <p className="acard__meta">
               Resume EP {resume.episodeNumber} · {stamp(resume.seconds)}

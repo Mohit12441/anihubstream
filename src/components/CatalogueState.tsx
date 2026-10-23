@@ -4,7 +4,7 @@ import '../styles/pages.css';
 export function CatalogueLoading({ grid = true, rows = 10 }: { grid?: boolean; rows?: number }) {
   return (
     <div className="catalogue-loading" role="status" aria-live="polite">
-      <p className="catalogue-loading__note">Loading the catalogue…</p>
+      <p className="catalogue-loading__note">Loading anime…</p>
       <ul className={grid ? 'pgrid' : 'lgrid'} aria-busy="true">
         {Array.from({ length: rows }, (_, i) => (
           <li key={i}>
@@ -20,9 +20,9 @@ export function CatalogueError({ error, onRetry }: { error: string | null; onRet
   return (
     <div className="empty" role="alert">
       <p>
-        <b>The catalogue service did not answer.</b>
+        <b>Unable to load anime right now.</b>
         <br />
-        {error ?? 'No titles could be loaded.'}
+        {error ?? 'Please check your connection and retry.'}
       </p>
       <div className="empty__cta">
         <button type="button" className="btn btn--sm btn--primary" onClick={onRetry}>
@@ -32,7 +32,7 @@ export function CatalogueError({ error, onRetry }: { error: string | null; onRet
       </div>
       <p className="note">
         <AlertTriangle size={14} aria-hidden="true" />
-        Nothing is bundled into the page as a stand-in — the shelves show what the database actually returns.
+        Please check your internet connection or try again in a few moments.
       </p>
     </div>
   );

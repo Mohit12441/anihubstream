@@ -125,7 +125,7 @@ export function PlayerControls(p: Props) {
           onClick={p.onQuality}
           aria-haspopup="dialog"
           aria-label={`Quality: ${p.quality}`}
-          title="Stream quality — resolved by the bridge"
+          title="Stream quality"
         >
           {p.quality}
         </button>

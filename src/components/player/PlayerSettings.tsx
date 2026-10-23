@@ -243,7 +243,7 @@ export function PlayerSettings({
             </div>
           </PopGroup>
           <p className="pop__hint">
-            Speed applies directly to the real stream playback rate — the bridge stream is not re-fetched.
+            Speed applies directly to the video playback rate without re-buffering.
           </p>
         </>
       )}
@@ -376,6 +376,12 @@ export function PlayerSettings({
               hint="Resumes this episode where you stopped"
               checked={prefs.rememberPosition}
               onChange={(v) => patch({ rememberPosition: v })}
+            />
+            <PopSwitch
+              label="P2P Mesh Streaming (Experimental)"
+              hint="Shares buffered video chunks directly with concurrent peers via WebRTC to reduce server bandwidth"
+              checked={prefs.enableP2P ?? false}
+              onChange={(v) => patch({ enableP2P: v })}
             />
           </PopGroup>
 

@@ -31,7 +31,7 @@ export function ServerSelector({ servers, currentId, onSelect, onRetry, onClose 
     <PopShell
       label="Stream server"
       innerRef={ref}
-      footer="The stream bridge resolves each episode across providers and proxies playback. 'Auto (Fastest)' races providers in real time to guarantee the lowest latency."
+      footer="Choose your streaming server. 'Auto (Fastest)' automatically connects to the server with the lowest latency."
     >
       <ul className="pop__list no-bar">
         {servers.map((s) => {

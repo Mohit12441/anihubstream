@@ -14,7 +14,7 @@
 //                                                        + is that dub its own bytes?
 //   node verify.mjs --provider=watchanimeworld             # NO embeds: probes the
 //                                                        abyss parts and stitches one
-//   node verify.mjs --provider=animedubhindi --audio=dub   # NO HLS: walks the ad
+//   node verify.mjs --provider=watchanimeworld --audio=dub   # NO HLS: walks the ad
 //                                                        funnel to one progressive
 //                                                        MKV and reads its track list
 import { readFile, rm, stat } from "node:fs/promises";
@@ -23,7 +23,6 @@ import * as aniwatch from "./aniwatch.mjs";
 import * as animekai from "./animekai.mjs";
 import * as animewave from "./animewave.mjs";
 import * as watchanimeworld from "./watchanimeworld.mjs";
-import * as animedubhindi from "./animedubhindi.mjs";
 import * as hianime from "./hianime.mjs";
 
 const argv = process.argv.slice(2);
@@ -45,7 +44,6 @@ const PROVIDERS = {
   watchanimeworld: { api: watchanimeworld, referer: watchanimeworld.defaultWatchAnimeWorldReferer, slug: "watchanimeworld:naruto", probe: "naruto", defaultAudio: "dub" },
   // Same dub-first catalogue, but its episodes are download funnels: the slug is a
   // live series page and the audio answer lives inside one Multi Audio MKV.
-  animedubhindi: { api: animedubhindi, referer: animedubhindi.defaultAnimeDubHindiReferer, slug: "animedubhindi:that-time-i-got-reincarnated-as-a-slime-season-01-hindi-multi-audio", probe: "slime", defaultAudio: "dub" },
 };
 const provider = PROVIDERS[providerId];
 if (!provider) {

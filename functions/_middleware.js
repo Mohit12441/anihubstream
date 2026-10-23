@@ -165,7 +165,14 @@ export async function onRequest(context) {
     title = 'Anime Catalogue — Discover Series & Movies | AniHubStream';
     desc = 'Explore the full AniHubStream anime catalogue. Filter by genre, release year, format (TV, Movie, OVA), and rating.';
   } else if (path === '/genres') {
-    const genreParam = url.searchParams.get('genre') || url.searchParams.get('name');
+    if (url.searchParams.has('name') && !url.searchParams.has('genre')) {
+      const nameVal = url.searchParams.get('name') || '';
+      const redirectUrl = new URL(request.url);
+      redirectUrl.searchParams.delete('name');
+      redirectUrl.searchParams.set('genre', nameVal.toLowerCase().replace(/\s+/g, '-'));
+      return Response.redirect(redirectUrl.toString(), 301);
+    }
+    const genreParam = url.searchParams.get('genre');
     if (genreParam) {
       canonical = `${origin}/genres?genre=${encodeURIComponent(genreParam.toLowerCase())}`;
       const genreName = genreParam.charAt(0).toUpperCase() + genreParam.slice(1);
@@ -178,8 +185,8 @@ export async function onRequest(context) {
   } else if (path === '/search') {
     const q = url.searchParams.get('q');
     if (q) canonical = `${origin}/search?q=${encodeURIComponent(q)}`;
-    title = q ? `Search results for "${q}" | AniHubStream` : 'Federated Multi-Provider Anime Search | AniHubStream';
-    desc = 'Search subbed and dubbed anime across multiple providers with real-time stream resolution.';
+    title = q ? `Search results for "${q}" | AniHubStream` : 'Search Anime — Watch Subbed & Dubbed Anime Online Free | AniHubStream';
+    desc = 'Search thousands of subbed and dubbed anime series and movies with instant HD streaming on AniHubStream.';
   } else if (path === '/watchlist' || path === '/my-list') {
     title = 'My Anime Watchlist & Saved Titles | AniHubStream';
     desc = 'Manage your saved anime series, movies, and track your episodic progress on AniHubStream.';

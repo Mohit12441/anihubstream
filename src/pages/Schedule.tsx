@@ -163,6 +163,7 @@ export function Schedule() {
             <span>{convertedAll.length} slots</span>
           </button>
           {DAYS.map((d, i) => {
+            const isToday = i + 1 === todayDay;
             const n = convertedAll.filter((e) => e.day === i + 1).length;
             return (
               <button
@@ -170,10 +171,14 @@ export function Schedule() {
                 type="button"
                 role="tab"
                 aria-selected={day === i + 1}
-                className={`day${day === i + 1 ? ' is-on' : ''}`}
+                className={`day${day === i + 1 ? ' is-on' : ''}${isToday ? ' is-today' : ''}`}
                 onClick={() => setDay(day === i + 1 ? null : i + 1)}
+                title={isToday ? `${d} (Today)` : d}
               >
-                <b>{d}</b>
+                <b>
+                  {d}
+                  {isToday && <span className="day__today-pill">Today</span>}
+                </b>
                 <span>{n ? `${n} airing` : '—'}</span>
               </button>
             );
@@ -194,15 +199,14 @@ export function Schedule() {
         {status === 'loading' && <CatalogueLoading grid={false} rows={6} />}
         {status === 'ready' && (
           <div>
-            <ScheduleList entries={entries} highlightId={airingToday} />
+            <ScheduleList entries={entries} todayDay={todayDay} highlightId={airingToday} />
           </div>
         )}
 
         <p className="note">
           <Info size={14} aria-hidden="true" />
-          Air times are the next broadcast slot each title's AniList record publishes, automatically converted
-          to your local timezone ({tzLabel}) with UTC toggle available. A title only appears here while it has an
-          airing slot in the active season.
+          Air times are automatically converted to your local timezone ({tzLabel}) with UTC toggle available.
+          Titles appear according to their weekly broadcast slots in the active season.
         </p>
       </div>
     </div>

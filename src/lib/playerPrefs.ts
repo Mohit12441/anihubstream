@@ -43,6 +43,8 @@ export interface PlayerPrefs {
   subtitles: SubtitleSettings;
   accent: AccentId;
   density: Density;
+  /** Experimental P2P segment sharing between concurrent viewers (WebRTC mesh) */
+  enableP2P: boolean;
 }
 
 export const SPEEDS = [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2] as const;
@@ -173,6 +175,7 @@ export const DEFAULT_PREFS: PlayerPrefs = {
   subtitles: DEFAULT_SUBTITLES,
   accent: 'crimson',
   density: 'comfortable',
+  enableP2P: false,
 };
 
 const PREFS_KEY = 'anihub:player-prefs';

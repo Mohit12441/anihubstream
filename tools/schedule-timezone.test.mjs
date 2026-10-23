@@ -68,6 +68,36 @@ describe('TASK 9 (P2) — Schedule Timezone Conversion & Year Filter', () => {
     assert.equal(converted.date, 'Oct 16');
   });
 
+  it('rolls forward month date boundary cleanly (e.g. Oct 31 to Nov 1)', () => {
+    const slot = {
+      day: 7, // Sunday
+      dayLabel: 'SUN',
+      time: '20:00',
+      date: 'Oct 31',
+    };
+
+    const converted = convertSlotTimezone(slot, true, 540); // UTC+9
+    assert.equal(converted.day, 1);
+    assert.equal(converted.dayLabel, 'MON');
+    assert.equal(converted.time, '05:00');
+    assert.equal(converted.date, 'Nov 1', 'Date must roll forward across month boundary');
+  });
+
+  it('rolls backward month date boundary cleanly (e.g. Nov 1 to Oct 31)', () => {
+    const slot = {
+      day: 1, // Monday
+      dayLabel: 'MON',
+      time: '02:00',
+      date: 'Nov 1',
+    };
+
+    const converted = convertSlotTimezone(slot, true, -240); // UTC-4
+    assert.equal(converted.day, 7);
+    assert.equal(converted.dayLabel, 'SUN');
+    assert.equal(converted.time, '22:00');
+    assert.equal(converted.date, 'Oct 31', 'Date must roll backward across month boundary');
+  });
+
   it('getUserTimezoneLabel returns valid timezone descriptor', () => {
     const label = getUserTimezoneLabel();
     assert.ok(typeof label === 'string' && label.length > 0);

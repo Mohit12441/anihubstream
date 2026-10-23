@@ -31,7 +31,7 @@ export function Discover() {
     e.preventDefault();
     const term = q.trim();
     if (!term) {
-      notify('Type a title or genre — the search runs against the titles this catalogue serves.');
+      notify('Please enter an anime title, character, or genre to search.');
       return;
     }
     navigate(`/search?q=${encodeURIComponent(term)}`);
@@ -90,8 +90,8 @@ export function Discover() {
             <Link to="/">Home</Link>
             <Link to="/anime">Anime</Link>
             <Link to="/genres">Genres</Link>
-            <Link to="/schedule">Ongoing</Link>
-            <Link to="/watch/demon-slayer">Watch page</Link>
+            <Link to="/schedule">Schedule</Link>
+            <Link to="/my-list">My List</Link>
           </nav>
         </div>
       )}
@@ -128,7 +128,7 @@ export function Discover() {
         <AnimeCarousel label="Popular this week">
           {status === 'error' ? (
             <p className="empty-row" role="alert">
-              {error ?? 'The catalogue service did not answer.'}{' '}
+              {error ?? 'Unable to load anime right now.'}{' '}
               <button type="button" className="btn btn--sm btn--ghost" onClick={reload}>
                 Try again
               </button>

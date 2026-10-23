@@ -73,6 +73,7 @@ export interface CatalogueQuery {
   sort?: string;
   page?: number;
   limit?: number;
+  provider?: string;
 }
 
 /** One server-paged window of the catalogue — the database holds every title
@@ -100,6 +101,7 @@ export interface HomeBody {
   topRated: ApiCard[];
   fresh: ApiCard[];
   added: ApiCard[];
+  providers?: Record<string, { id: string; slug: string; title: string; coverUrl: string | null; provider: string }[]>;
 }
 export const getHome = () => request<HomeBody>('/home');
 export const getStats = () =>
@@ -109,6 +111,19 @@ export const getSchedule = () =>
   request<{ seasons: string[]; days: { day: number; dayLabel: string; entries: ApiCard[] }[] }>('/schedule');
 export const getAnime = (id: string) =>
   request<ApiCard & { episodes: ApiEpisode[]; related: ApiCard[] }>(`/anime/${encodeURIComponent(id)}`);
+
+// Provider-Isolated API clients (HiAnime & AniKoto)
+export const getHianimeHome = () => request<any>('/hianime/home');
+export const getHianimeSearch = (q: string) => request<any>(`/hianime/search?q=${encodeURIComponent(q)}`);
+export const getHianimeAnime = (id: string) => request<any>(`/hianime/${encodeURIComponent(id)}`);
+export const getHianimePlay = (id: string, ep = 1, audio = 'sub') =>
+  request<any>(`/hianime/play?id=${encodeURIComponent(id)}&ep=${ep}&audio=${encodeURIComponent(audio)}`);
+
+export const getAnikotoHome = () => request<any>('/anikoto/home');
+export const getAnikotoSearch = (q: string) => request<any>(`/anikoto/search?q=${encodeURIComponent(q)}`);
+export const getAnikotoAnime = (id: string) => request<any>(`/anikoto/${encodeURIComponent(id)}`);
+export const getAnikotoPlay = (id: string, ep = 1, audio = 'sub') =>
+  request<any>(`/anikoto/play?id=${encodeURIComponent(id)}&ep=${ep}&audio=${encodeURIComponent(audio)}`);
 
 export const getLibrary = () => request<{ count: number; items: { addedAt: string; anime: ApiCard }[] }>('/me/library');
 export const addToLibrary = (animeId: string) =>
@@ -130,4 +145,9 @@ export const savePosition = (episodeId: string, seconds: number) =>
     method: 'PUT',
     body: JSON.stringify({ episodeId, seconds }),
     keepalive: true,
+  });
+
+export const removePosition = (episodeId: string) =>
+  request<{ removed: boolean }>(`/me/positions?episodeId=${encodeURIComponent(episodeId)}`, {
+    method: 'DELETE',
   });

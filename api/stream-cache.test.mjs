@@ -23,8 +23,8 @@ describe('Task 3: Playback Startup Latency & Stream Caching', () => {
         'stream:demon-slayer:1:hindi',
       );
       assert.equal(
-        streamCacheKey('Demon Slayer', 1, 'hindi', 'animedubhindi'),
-        'stream:demon-slayer:1:hindi:animedubhindi',
+        streamCacheKey('Demon Slayer', 1, 'hindi', 'watchanimeworld'),
+        'stream:demon-slayer:1:hindi:watchanimeworld',
       );
     });
   });
@@ -127,7 +127,7 @@ describe('Task 3: Playback Startup Latency & Stream Caching', () => {
         container: 'matroska',
         quality: 1080,
         audio: 'hindi',
-        provider: 'animedubhindi',
+        provider: 'watchanimeworld',
       };
       const hindiPostReq = new Request('https://anihubstream.com/api/stream/cache', {
         method: 'POST',
@@ -145,7 +145,7 @@ describe('Task 3: Playback Startup Latency & Stream Caching', () => {
       const hindiGetJson = await hindiGetRes.json();
       assert.equal(hindiGetJson.hit, true);
       assert.equal(hindiGetJson.data.audio, 'hindi');
-      assert.equal(hindiGetJson.data.provider, 'animedubhindi');
+      assert.equal(hindiGetJson.data.provider, 'watchanimeworld');
     });
 
     it('rejects invalid key formats with 400', async () => {
@@ -160,6 +160,31 @@ describe('Task 3: Playback Startup Latency & Stream Caching', () => {
       });
       const badPostRes = await onRequestPost({ request: badPostReq, env });
       assert.equal(badPostRes.status, 400);
+    });
+
+    it('propagates database failures as 500 and does NOT silently treat them as cache misses', async () => {
+      const failingEnv = {
+        ANIHUB: {
+          prepare: () => {
+            throw new Error('D1 connection failure: disk I/O error');
+          },
+        },
+      };
+
+      const getReq = new Request('https://anihubstream.com/api/stream/cache?key=stream:frieren:1:sub');
+      const getRes = await onRequestGet({ request: getReq, env: failingEnv });
+      assert.equal(getRes.status, 500, 'database failure must return 500');
+      const getJson = await getRes.json();
+      assert.equal(getJson.error, 'internal');
+      assert.notEqual(getJson.hit, false, 'database failure must not be masked as a normal cache miss');
+
+      const postReq = new Request('https://anihubstream.com/api/stream/cache', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ key: 'stream:frieren:1:sub', data: { quality: 1080 } }),
+      });
+      const postRes = await onRequestPost({ request: postReq, env: failingEnv });
+      assert.equal(postRes.status, 500, 'database write failure must return 500');
     });
   });
 });

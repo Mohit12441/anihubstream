@@ -2,7 +2,6 @@
 import * as anikoto from '../anikoto.mjs';
 import * as hianime from '../hianime.mjs';
 import * as aniwatch from '../aniwatch.mjs';
-import * as animedubhindi from '../animedubhindi.mjs';
 import * as watchanimeworld from '../watchanimeworld.mjs';
 import * as animewave from '../animewave.mjs';
 import * as animekai from '../animekai.mjs';
@@ -67,17 +66,6 @@ registerAdapter({
   details: (slug, opts) => aniwatch.details(slug, opts),
   sources: (epId, opts) => aniwatch.sources(epId, opts),
   resolve: (embed, opts) => aniwatch.resolve(embed, opts),
-});
-
-registerAdapter({
-  id: 'animedubhindi',
-  name: 'AnimeDubHindi',
-  supportedAudio: ['hindi'],
-  defaultType: 'mp4',
-  priority: 85,
-  search: (q, opts) => animedubhindi.search(q, opts),
-  details: (slug, opts) => animedubhindi.details(slug, opts),
-  sources: (epId, opts) => animedubhindi.sources(epId, opts),
 });
 
 registerAdapter({

@@ -24,8 +24,8 @@
  *   node cli.mjs --provider=animewave episodes "animewave:solo-leveling-season-2-arise-from-the-shadow-3eukp"
  *   node cli.mjs --provider=watchanimeworld sources "watchanimeworld|naruto|1|1|https://watchanimeworld.one/episode/naruto-1x1/"
  *   node cli.mjs --provider=watchanimeworld download "naruto" 1 out.mp4 --max-parts=2
- *   node cli.mjs --provider=animedubhindi audio-truth "<animedubhindi|slug|1|https://new.adhlinks.com/episode/…/>"
- *   node cli.mjs --provider=animedubhindi download "slime" 1 out.mkv --max-bytes=300000 --quality=480
+ *   node cli.mjs --provider=watchanimeworld audio-truth "<watchanimeworld|slug|1|https://new.adhlinks.com/episode/…/>"
+ *   node cli.mjs --provider=watchanimeworld download "slime" 1 out.mkv --max-bytes=300000 --quality=480
  *
  * --provider=hianime also takes the `episodes`/`sources` refs that module stamps
  * ("hianime|<mongoId>|<number>|<audioType>|<slug>"), and its downloads pick a
@@ -39,7 +39,7 @@
  * `resolve` has nothing to resolve, and its `download` stitches parts into a real
  * .mp4 — so it takes --max-parts, not --max-segments.
  *
- * --provider=animedubhindi is the one without HLS at all: its `sources` rows are
+ * --provider=watchanimeworld is the one without HLS at all: its `sources` rows are
  * ad-funnel hand-outs (five mirrors × three renditions per episode), `resolve`
  * walks re.php → the filesforever gate → the workers.dev terminal that serves the
  * MKV, and `download` writes a real Matroska cut with --max-bytes.  Its audio
@@ -57,7 +57,6 @@ import * as aniwatch from "./aniwatch.mjs";
 import * as animekai from "./animekai.mjs";
 import * as animewave from "./animewave.mjs";
 import * as watchanimeworld from "./watchanimeworld.mjs";
-import * as animedubhindi from "./animedubhindi.mjs";
 import * as hianime from "./hianime.mjs";
 
 const { values, positionals } = parseArgs({ allowPositionals: true, options: {
@@ -97,7 +96,6 @@ const PROVIDERS = {
   // No HLS either, but the other way round: its rows are ad-funnel hand-outs that
   // resolve() walks to one progressive MKV, and its audio truth is a track count
   // inside that file rather than a sub/dub pair.
-  animedubhindi: { api: animedubhindi, referer: animedubhindi.defaultAnimeDubHindiReferer, honoursAudioFlag: true },
   hianime: { api: hianime, referer: hianime.defaultHiAnimeReferer, honoursAudioFlag: true },
 };
 const providerId = values["provider"] ?? "anikoto";
@@ -195,7 +193,7 @@ async function run({ api }) {
           console.log(`      url:  ${d.url}`);
           console.log(`      part: ${d.partUrl}`);
         }
-        // AnimeDubHindi's rows are the mirrors of ONE file, not streams: five hosts
+        // WatchAnimeWorld's rows are the mirrors of ONE file, not streams: five hosts
         // per rendition, and only the re.php class is a walk this chain owns — the
         // drive pages belong to their own extractors and MEGA needs a client.
         const classify = provider?.api?.classifyMirror;
@@ -335,8 +333,8 @@ async function run({ api }) {
         console.log("          (browse is HiAnime-only: the rest publish no catalogue route here)");
         console.log('example:  node cli.mjs --provider=watchanimeworld lang-check "<watchanimeworld|slug|season|number|episodeUrl>"');
         console.log("          (lang-check is WatchAnimeWorld-only: its audio labels are languages, and its dub-check has no sub peer)");
-        console.log('example:  node cli.mjs --provider=animedubhindi audio-truth "<animedubhindi|slug|1|https://new.adhlinks.com/episode/…/>" --quality=480');
-        console.log("          (audio-truth is AnimeDubHindi-only: it counts the audio tracks inside one Multi Audio MKV)");
+        console.log('example:  node cli.mjs --provider=watchanimeworld audio-truth "<watchanimeworld|slug|1|https://new.adhlinks.com/episode/…/>" --quality=480');
+        console.log("          (audio-truth is WatchAnimeWorld-only: it counts the audio tracks inside one Multi Audio MKV)");
     }
   } catch (error) {
     // fail() prints and sets the code itself; the sentinel only says "already

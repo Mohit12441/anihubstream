@@ -152,7 +152,6 @@ export const onRequestPost = async ({ request, env }) => {
       { id: 'anikoto', slug: anikotoSlug },
       { id: 'hianime', slug: hianimeSlug },
       { id: 'aniwatch', slug: aniwatchSlug },
-      { id: 'animedubhindi', slug: adbSlug },
       { id: 'watchanimeworld', slug: wawSlug },
     ];
 

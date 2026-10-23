@@ -47,11 +47,11 @@ describe('Layer 2: PlayerInput Adapter Tests', () => {
   it('clamps negative start times to 0 and provides sensible defaults for missing audioTracks', () => {
     /** @type {import('../src/components/player/PlayerInput.ts').PlayServer} */
     const server = {
-      id: 'adb-hindi',
-      name: 'AnimeDubHindi',
-      provider: 'animedubhindi',
+      id: 'waw-hindi',
+      name: 'WatchAnimeWorld',
+      provider: 'watchanimeworld',
       status: 'ready',
-      streamUrl: 'http://127.0.0.1:8795/stream/sid-adb/media.mkv',
+      streamUrl: 'http://127.0.0.1:8795/stream/sid-waw/media.mkv',
       type: 'mp4',
       audio: 'hindi',
     };

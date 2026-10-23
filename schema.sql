@@ -184,24 +184,37 @@ CREATE TABLE IF NOT EXISTS sync_pending (
   note       TEXT
 );
 
-CREATE TABLE IF NOT EXISTS anime_id_map (
-  anime_id      TEXT PRIMARY KEY REFERENCES anime(id) ON DELETE CASCADE,
-  mal_id        INTEGER,
-  anilist_id    INTEGER,
-  kitsu_id      INTEGER,
-  anikoto_slug  TEXT,
-  hianime_slug  TEXT,
-  aniwatch_slug TEXT,
-  adb_slug      TEXT,
-  waw_slug      TEXT,
-  confidence    REAL DEFAULT 1.0,
-  updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
+CREATE TABLE IF NOT EXISTS anime_provider_mapping (
+  anime_id       TEXT NOT NULL,
+  provider_id    TEXT NOT NULL,
+  provider_slug  TEXT NOT NULL,
+  media_id       TEXT,
+  dub_available  INTEGER DEFAULT 0,
+  confidence     REAL DEFAULT 1.0,
+  updated_at     TEXT DEFAULT (datetime('now')),
+  PRIMARY KEY (anime_id, provider_id),
+  FOREIGN KEY (anime_id) REFERENCES anime(id) ON DELETE CASCADE
 );
 
-CREATE INDEX IF NOT EXISTS id_map_by_mal ON anime_id_map(mal_id);
-CREATE INDEX IF NOT EXISTS id_map_by_anilist ON anime_id_map(anilist_id);
-CREATE INDEX IF NOT EXISTS id_map_by_kitsu ON anime_id_map(kitsu_id);
+CREATE INDEX IF NOT EXISTS idx_provider_reverse 
+ON anime_provider_mapping(provider_id, provider_slug);
+
+CREATE INDEX IF NOT EXISTS idx_provider_anime 
+ON anime_provider_mapping(anime_id);
 CREATE INDEX IF NOT EXISTS id_map_by_anikoto_slug ON anime_id_map(anikoto_slug);
 CREATE INDEX IF NOT EXISTS id_map_by_hianime_slug ON anime_id_map(hianime_slug);
+
+-- Automated franchise and season relations for instant, bidirectional season switching
+CREATE TABLE IF NOT EXISTS anime_franchise_relation (
+  anime_id         TEXT NOT NULL REFERENCES anime(id) ON DELETE CASCADE,
+  related_id       TEXT NOT NULL REFERENCES anime(id) ON DELETE CASCADE,
+  relation_type    TEXT NOT NULL DEFAULT 'sequel', -- 'sequel', 'prequel', 'movie', 'main'
+  chronology_order INTEGER DEFAULT 0,
+  created_at       TEXT DEFAULT (datetime('now')),
+  PRIMARY KEY (anime_id, related_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_afr_anime ON anime_franchise_relation(anime_id, chronology_order ASC);
+CREATE INDEX IF NOT EXISTS idx_afr_related ON anime_franchise_relation(related_id);
 
 
