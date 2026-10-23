@@ -1,0 +1,144 @@
+name: catalog-sync
+
+# Master Multi-Provider Catalog Synchronization
+# Orchestrates 6 sequential phases across all providers:
+#   Phase 1: Trending Discovery & AniList Metadata
+#   Phase 2: Kitsu Artwork & Episode Totals
+#   Phase 3: HiAnime Slugs & Video Stream Alignment
+#   Phase 4: AniKoto & AniWatch Provider Mapping & Rating Normalization
+#   Phase 5: Franchise Relations & Season Graph Linking
+#   Phase 6: Daily Ongoing Broadcast Schedules Refresh
+#
+# Cadence: Twice daily (02:00 and 14:00 UTC) + on-demand manual dispatch.
+# Safely consumes <9% of Cloudflare D1 free-tier daily write budget.
+
+on:
+  schedule:
+    - cron: '0 2,14 * * *'
+  repository_dispatch:
+    types: [catalog-sync]
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Which stage to run'
+        required: true
+        type: choice
+        default: 'all'
+        options:
+          - all
+          - anilist
+          - kitsu
+          - hianime
+          - providers
+          - schedule
+      force:
+        description: 'Force execution even if lease is held'
+        required: false
+        type: boolean
+        default: false
+
+permissions: {}
+
+concurrency:
+  group: catalog-sync-master
+  cancel-in-progress: false
+
+jobs:
+  orchestrate-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: log execution metadata
+        run: |
+          echo "=========================================================="
+          echo "AniHubStream — Master Multi-Provider Catalog Sync"
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "Run ID: ${{ github.run_id }}"
+          echo "Target Stage: ${{ github.event.inputs.target || 'all' }}"
+          echo "UTC Timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          echo "=========================================================="
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19'
+
+      # -----------------------------------------------------------
+      # Phase 1: Trending Discovery & AniList Metadata
+      # -----------------------------------------------------------
+      - name: phase 1 — discover trending titles
+        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'anilist' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        continue-on-error: true
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          LIMIT: ${{ vars.DISCOVER_LIMIT || '5' }}
+        run: node cloud-sync/discover.mjs --limit=${LIMIT}
+
+      - name: phase 1 — sync anilist metadata
+        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'anilist' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        continue-on-error: true
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          MODE: ${{ vars.MODE || 'delta' }}
+          LEGACY_WRITER_ACTIVE: '0'
+          CLOUD_CREATES_ROWS: ${{ vars.CLOUD_CREATES_ROWS || '1' }}
+          CLOUD_OWNS_SCHEDULE: ${{ vars.CLOUD_OWNS_SCHEDULE || '1' }}
+        run: node cloud-sync/sync-anilist.mjs ${{ github.event.inputs.force == 'true' && '--force-takeover' || '' }}
+
+      # -----------------------------------------------------------
+      # Phase 2: Kitsu Media Enrichment
+      # -----------------------------------------------------------
+      - name: phase 2 — sync kitsu artwork & episode totals
+        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'kitsu' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        continue-on-error: true
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          KITSU_PAGES_PER_RUN: ${{ vars.KITSU_PAGES_PER_RUN || '6' }}
+          MAX_ITEMS_PER_RUN: ${{ vars.MAX_ITEMS_PER_RUN || '10' }}
+        run: node cloud-sync/sync-kitsu.mjs
+
+      # -----------------------------------------------------------
+      # Phase 3: HiAnime Slugs & Streams Alignment
+      # -----------------------------------------------------------
+      - name: phase 3 — sync hianime slugs & stream catalog
+        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'hianime' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        continue-on-error: true
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          HIANIME_PAGES_PER_RUN: ${{ vars.HIANIME_PAGES_PER_RUN || '6' }}
+        run: node cloud-sync/sync-hianime.mjs
+
+      # -----------------------------------------------------------
+      # Phase 4 & 5: AniKoto, AniWatch & Franchise Relations
+      # -----------------------------------------------------------
+      - name: phase 4 & 5 — sync anikoto, aniwatch & franchise relations
+        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'providers' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        continue-on-error: true
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          PROVIDERS_BATCH_SIZE: ${{ vars.PROVIDERS_BATCH_SIZE || '50' }}
+        run: node cloud-sync/sync-providers.mjs ${{ github.event.inputs.force == 'true' && '--force' || '' }}
+
+      # -----------------------------------------------------------
+      # Phase 6: Ongoing Broadcast Schedules Refresh
+      # -----------------------------------------------------------
+      - name: phase 6 — sync ongoing broadcast schedules
+        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'schedule' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        continue-on-error: true
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: node tools/sync-ongoing-schedules.mjs --remote

@@ -27,8 +27,10 @@ export default {
     const cronId = `${event.scheduledTime || Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
     
     // Select event type based on cron expression or minute
-    let eventType = 'anilist-sync';
-    if (cron === '45 */6 * * *') {
+    let eventType = 'catalog-sync';
+    if (cron === '0 2,14 * * *' || cron === '0 */12 * * *') {
+      eventType = 'catalog-sync';
+    } else if (cron === '45 */6 * * *') {
       eventType = 'providers-sync';
     } else if (cron === '27,57 * * * *') {
       eventType = 'hianime-sync';
@@ -82,8 +84,8 @@ export default {
       return new Response(JSON.stringify({
         status: 'ok',
         worker: 'anihubstream-sync-dispatcher',
-        supported_events: ['anilist-sync', 'kitsu-sync', 'hianime-sync', 'providers-sync'],
-        schedules: ['7,37 * * * * (anilist-sync)', '17,47 * * * * (kitsu-sync)', '27,57 * * * * (hianime-sync)', '45 */6 * * * (providers-sync)'],
+        supported_events: ['catalog-sync', 'anilist-sync', 'kitsu-sync', 'hianime-sync', 'providers-sync'],
+        schedules: ['0 2,14 * * * (catalog-sync)', '7,37 * * * * (anilist-sync)', '17,47 * * * * (kitsu-sync)', '27,57 * * * * (hianime-sync)', '45 */6 * * * (providers-sync)'],
       }), {
         status: 200,
         headers: {
