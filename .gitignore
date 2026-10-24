@@ -21,6 +21,7 @@ tools/anime-titles.json
 tools/batch-*.sql
 remote-*.sql
 .dev.vars
+*gsc*.json
 *.db
 *.sqlite
 *.sqlite-shm

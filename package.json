@@ -22,7 +22,9 @@
     "sync:anilist": "node cloud-sync/sync-anilist.mjs",
     "sync:kitsu": "node cloud-sync/sync-kitsu.mjs",
     "sync:franchises": "node tools/auto-sync-franchises.mjs",
-    "sync:schedule": "node tools/sync-ongoing-schedules.mjs"
+    "sync:schedule": "node tools/sync-ongoing-schedules.mjs",
+    "gsc:status": "node tools/gsc-telemetry.mjs",
+    "gsc:analytics": "node tools/gsc-telemetry.mjs --analytics"
   },
   "dependencies": {
     "hls.js": "^1.7.3",
