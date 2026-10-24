@@ -88,3 +88,54 @@ export function getUserTimezoneLabel(): string {
     return 'Local time';
   }
 }
+
+export interface EpisodeReleaseStatus {
+  type: 'released' | 'countdown' | 'upcoming';
+  label: string;
+  countdown?: string;
+}
+
+export function getEpisodeReleaseStatus(
+  day: number,
+  timeStr: string,
+  todayDay: number,
+  now: Date = new Date()
+): EpisodeReleaseStatus {
+  const [hStr = '0', mStr = '0'] = (timeStr || '00:00').split(':');
+  const slotHour = parseInt(hStr, 10);
+  const slotMin = parseInt(mStr, 10);
+
+  if (day === todayDay) {
+    const curHour = now.getHours();
+    const curMin = now.getMinutes();
+    const currentMins = curHour * 60 + curMin;
+    const slotMins = slotHour * 60 + slotMin;
+
+    if (currentMins >= slotMins) {
+      return {
+        type: 'released',
+        label: 'Episode Released',
+      };
+    } else {
+      const diff = slotMins - currentMins;
+      const hours = Math.floor(diff / 60);
+      const mins = diff % 60;
+      const countdown = hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
+      return {
+        type: 'countdown',
+        label: `Airing in ${countdown}`,
+        countdown,
+      };
+    }
+  } else if (day < todayDay) {
+    return {
+      type: 'released',
+      label: 'Episode Released',
+    };
+  } else {
+    return {
+      type: 'upcoming',
+      label: 'Coming Soon',
+    };
+  }
+}

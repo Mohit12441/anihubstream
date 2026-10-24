@@ -14,7 +14,7 @@ const NAV = [
   { label: 'Ongoing', to: '/anime?status=Ongoing' },
   { label: 'Top Anime', to: '/anime?sort=rating' },
   { label: 'My List', to: '/my-list' },
-  { label: 'Schedule', to: '/schedule' },
+  { label: 'Episode Schedule', to: '/schedule' },
 ];
 
 function isActive(to: string, pathname: string, search: string) {

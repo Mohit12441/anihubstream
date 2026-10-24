@@ -814,16 +814,36 @@
   color: #fff;
 }
 
+.schedule__quick-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-bottom: 8px;
+}
+
+.pill--today {
+  border-color: rgba(255, 31, 74, 0.4);
+  color: #ff5470;
+}
+
+.pill--today.is-active {
+  background: var(--crimson, #ff1f4a);
+  color: #fff;
+  border-color: var(--crimson, #ff1f4a);
+  box-shadow: 0 0 16px rgba(255, 31, 74, 0.5);
+}
+
 .tl {
   display: grid;
-  gap: 10px;
+  gap: 12px;
 }
 .tl__row {
   display: grid;
-  grid-template-columns: 96px 152px minmax(0, 1fr) auto;
+  grid-template-columns: 96px 90px minmax(0, 1fr) auto;
   align-items: center;
   gap: clamp(12px, 1.6vw, 22px);
-  padding: 14px 16px 14px 8px;
+  padding: 14px 18px 14px 10px;
   border-radius: var(--r-lg);
   border: 1px solid var(--line);
   background: var(--surface);
@@ -832,13 +852,13 @@
 }
 .tl__row:hover {
   transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--blue) 50%, transparent);
+  border-color: rgba(255, 31, 74, 0.45);
   background: var(--surface-2);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 8px 30px color-mix(in srgb, var(--blue) 18%, transparent);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(255, 31, 74, 0.2);
 }
 .tl__row[data-today] {
-  border-color: color-mix(in srgb, var(--crimson) 70%, transparent);
-  box-shadow: 0 0 0 3px rgba(255, 31, 74, 0.12);
+  border-color: var(--crimson, #ff1f4a);
+  box-shadow: 0 0 0 2px rgba(255, 31, 74, 0.25), 0 0 20px rgba(255, 31, 74, 0.15);
 }
 .tl__day {
   position: relative;
@@ -873,25 +893,42 @@
   border: 2px solid var(--line-2);
 }
 .tl__row[data-today] .tl__dot {
-  background: var(--crimson);
-  border-color: rgba(255, 31, 74, 0.35);
-  box-shadow: 0 0 0 4px rgba(255, 31, 74, 0.16);
+  background: var(--crimson, #ff1f4a);
+  border-color: rgba(255, 31, 74, 0.4);
+  box-shadow: 0 0 0 4px rgba(255, 31, 74, 0.2);
 }
 .tl__day b {
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.07em;
 }
-.tl__day > span:last-child {
+.tl__day > span:nth-child(3) {
   font-size: 12px;
   color: var(--text-3);
 }
+.tl__today-badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--crimson, #ff1f4a);
+  color: #fff;
+  width: fit-content;
+  margin-top: 3px;
+  box-shadow: 0 0 8px rgba(255, 31, 74, 0.4);
+}
 .tl__thumb {
+  position: relative;
   display: block;
-  aspect-ratio: 16 / 9;
+  width: 86px;
+  aspect-ratio: 2 / 3;
   border-radius: var(--r-sm);
   overflow: hidden;
   background: var(--surface-3);
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 .tl__thumb img {
   width: 100%;
@@ -900,10 +937,91 @@
   transition: transform var(--dur-3) var(--ease-out);
 }
 .tl__row:hover .tl__thumb img {
-  transform: scale(1.07);
+  transform: scale(1.08);
+}
+.tl__thumb-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity var(--dur-2) var(--ease);
+}
+.tl__row:hover .tl__thumb-overlay {
+  opacity: 1;
 }
 .tl__body {
   min-width: 0;
+}
+.tl__badges {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.tl__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.tl__status--released {
+  background: rgba(46, 230, 168, 0.14);
+  border: 1px solid rgba(46, 230, 168, 0.45);
+  color: #2ee6a8;
+  box-shadow: 0 0 10px rgba(46, 230, 168, 0.2);
+}
+.tl__status--countdown {
+  background: rgba(255, 31, 74, 0.15);
+  border: 1px solid var(--crimson, #ff1f4a);
+  color: #ff5470;
+  box-shadow: 0 0 12px rgba(255, 31, 74, 0.35);
+  animation: tlPulse 2s infinite ease-in-out;
+}
+.tl__status--upcoming {
+  background: rgba(59, 130, 255, 0.12);
+  border: 1px solid rgba(59, 130, 255, 0.35);
+  color: #8fe9ff;
+}
+@keyframes tlPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(0.98); }
+}
+.tl__ep-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--line-2);
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+}
+.tl__rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 99px;
+  background: rgba(255, 194, 71, 0.14);
+  border: 1px solid rgba(255, 194, 71, 0.35);
+  color: #ffc247;
+  font-size: 11px;
+  font-weight: 700;
+}
+.tl__native {
+  font-family: var(--font-jp);
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 2px;
 }
 .tl__title {
   font-size: 17px;
@@ -912,7 +1030,7 @@
   transition: color var(--dur-2) var(--ease);
 }
 .tl__title:hover {
-  color: var(--blue);
+  color: var(--crimson, #ff1f4a);
 }
 .tl__meta {
   display: flex;
@@ -964,10 +1082,29 @@
   color: var(--text-3);
 }
 .tl__watch {
-  --btn-bg: linear-gradient(135deg, var(--crimson-soft), var(--crimson-deep));
-  --btn-fg: #fff;
-  --btn-bd: transparent;
-  box-shadow: 0 8px 22px rgba(255, 31, 74, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(135deg, var(--crimson-soft), var(--crimson-deep));
+  color: #fff !important;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 18px rgba(255, 31, 74, 0.4);
+  transition: transform var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease), filter var(--dur-2) var(--ease);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.tl__watch:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 26px rgba(255, 31, 74, 0.65);
+  filter: brightness(1.1);
+}
+.tl__watch:active {
+  transform: translateY(0) scale(0.98);
 }
 
 /* ---------- 404 ---------- */
@@ -1100,14 +1237,7 @@
 /* ---------- responsive ---------- */
 @media (max-width: 1080px) {
   .tl__row {
-    grid-template-columns: 88px 132px minmax(0, 1fr);
-  }
-  .tl__end {
-    grid-column: 1 / -1;
-    grid-auto-flow: column;
-    justify-content: start;
-    align-items: center;
-    gap: 12px;
+    grid-template-columns: 88px 84px minmax(0, 1fr) auto;
   }
   .tl__syn {
     display: none;
@@ -1131,34 +1261,67 @@
   .ggrid {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 168px), 1fr));
   }
+  .tl__row {
+    grid-template-columns: 78px 76px minmax(0, 1fr);
+  }
+  .tl__end {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--line);
+  }
+  .tl__watch {
+    flex: none;
+  }
 }
 
 @media (max-width: 560px) {
   .tl__row {
-    grid-template-columns: 74px minmax(0, 1fr);
+    grid-template-columns: 72px minmax(0, 1fr);
     padding: 12px;
-  }
-  /* The full-width thumb sits between the day and the body in the DOM, so without
-     explicit rows the body would auto-place into the 74px day column. */
-  .tl__thumb {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    aspect-ratio: 21 / 9;
-    border-radius: var(--r-md);
+    gap: 12px;
   }
   .tl__day {
+    display: none;
+  }
+  .tl__thumb {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 1;
+    width: 72px;
+    aspect-ratio: 2 / 3;
+    border-radius: var(--r-sm);
   }
   .tl__body {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
   }
   .tl__end {
-    grid-row: 3;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+    margin-top: 6px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--line);
+  }
+  .tl__time {
+    justify-content: center;
+  }
+  .tl__watch {
+    width: 100%;
+    max-width: none;
+    justify-content: center;
+    padding: 10px;
+    font-size: 13.5px;
   }
   .tl__title {
-    font-size: 15.5px;
+    font-size: 15px;
   }
   .day {
     min-width: 74px;
