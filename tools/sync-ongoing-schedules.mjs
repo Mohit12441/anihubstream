@@ -109,15 +109,23 @@ async function main() {
     `).all();
   } else if (hasRestCreds) {
     // Remote D1 REST API mode (preferred in CI/Cloud environments)
-    await d1Query(`
-      UPDATE anime SET
-        sched_day = NULL,
-        sched_day_label = NULL,
-        sched_date = NULL,
-        sched_time = NULL,
-        sched_season = NULL
-      WHERE sched_day IS NOT NULL AND status IN ('Finished', 'Cancelled', 'Upcoming')
-    `);
+    try {
+      await d1Query(`
+        UPDATE anime SET
+          sched_day = NULL,
+          sched_day_label = NULL,
+          sched_date = NULL,
+          sched_time = NULL,
+          sched_season = NULL
+        WHERE sched_day IS NOT NULL AND status IN ('Finished', 'Cancelled', 'Upcoming')
+      `);
+    } catch (err) {
+      if (err.message && (err.message.includes('7500') || err.message.includes('daily row write limit'))) {
+        console.warn('⚠️ Cloudflare D1 daily write limit currently reached. Schedule sync will resume automatically once quota resets at 00:00 UTC.');
+        return;
+      }
+      throw err;
+    }
 
     ongoingRows = await d1All(`
       SELECT DISTINCT a.id,
