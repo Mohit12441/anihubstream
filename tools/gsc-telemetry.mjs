@@ -148,6 +148,16 @@ export async function queryAnalytics(accessToken, { siteUrl = DEFAULT_SITE_URL, 
 /**
  * Lists sitemaps registered in Google Search Console
  */
+export async function listSites(accessToken) {
+  const res = await fetch('https://www.googleapis.com/webmasters/v3/sites', {
+    headers: { Authorization: `Bearer ${accessToken}` },
+    signal: AbortSignal.timeout(10000),
+  });
+  if (!res.ok) return [];
+  const data = await res.json();
+  return (data.siteEntry || []).map((s) => s.siteUrl);
+}
+
 export async function listSitemaps(accessToken, siteUrl = DEFAULT_SITE_URL) {
   const endpoint = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(siteUrl)}/sitemaps`;
   const res = await fetch(endpoint, {
@@ -182,6 +192,25 @@ async function main() {
   const token = await getAccessToken(credentials);
   console.log('✅ Access Token acquired successfully!\n');
 
+  const sites = await listSites(token);
+  if (!sites.length) {
+    console.warn('⚠️ No verified properties found for this service account yet.');
+    console.warn('\n👉 To grant access in Google Search Console:');
+    console.warn('1. Open: https://search.google.com/search-console');
+    console.warn('2. Select your property in the top-left dropdown (e.g. https://anihubstream.pages.dev/)');
+    console.warn('3. Go to: Settings (bottom-left) ➔ Users and permissions ➔ Add user');
+    console.warn(`4. Paste email: ${credentials.client_email}`);
+    console.warn('5. Permission: Full (or Owner) ➔ Click "Add"');
+    console.warn('\nOnce added, re-run: npm run gsc:status\n');
+    return;
+  } else {
+    console.log(`🌐 Accessible Properties: ${sites.join(', ')}\n`);
+  }
+
+  const activeSiteUrl = sites.includes(DEFAULT_SITE_URL)
+    ? DEFAULT_SITE_URL
+    : sites[0] || DEFAULT_SITE_URL;
+
   const inspectArg = process.argv.find((a) => a.startsWith('--inspect='));
   const isAnalytics = process.argv.includes('--analytics');
   const isSitemaps = process.argv.includes('--sitemaps');
@@ -189,7 +218,7 @@ async function main() {
   if (inspectArg) {
     const targetUrl = inspectArg.split('=')[1];
     console.log(`🔍 Inspecting URL: ${targetUrl}`);
-    const result = await inspectUrl(targetUrl, token);
+    const result = await inspectUrl(targetUrl, token, activeSiteUrl);
     const indexResult = result?.indexStatusResult;
     console.log('\n--- Indexing Status ---');
     console.log(`Verdict:        ${indexResult?.verdict || 'UNKNOWN'}`);
@@ -200,8 +229,8 @@ async function main() {
     console.log(`User Canonical: ${indexResult?.userCanonical || 'Not declared'}`);
     console.log(`Google Canonical: ${indexResult?.googleCanonical || 'Pending'}`);
   } else if (isAnalytics) {
-    console.log(`📊 Querying Search Analytics (Property: ${DEFAULT_SITE_URL})...`);
-    const data = await queryAnalytics(token);
+    console.log(`📊 Querying Search Analytics (Property: ${activeSiteUrl})...`);
+    const data = await queryAnalytics(token, activeSiteUrl);
     console.log('\n--- Top Queries & Traffic ---');
     if (data.rows && data.rows.length) {
       for (const row of data.rows) {
@@ -211,12 +240,12 @@ async function main() {
       console.log('No click/impression traffic recorded in this date range yet.');
     }
   } else if (isSitemaps) {
-    console.log(`🗺️ Listing Sitemaps for ${DEFAULT_SITE_URL}...`);
-    const sitemaps = await listSitemaps(token);
+    console.log(`🗺️ Listing Sitemaps for ${activeSiteUrl}...`);
+    const sitemaps = await listSitemaps(token, activeSiteUrl);
     console.log(JSON.stringify(sitemaps, null, 2));
   } else {
-    console.log(`Default Check: Inspecting Homepage (${DEFAULT_SITE_URL})...`);
-    const result = await inspectUrl(DEFAULT_SITE_URL, token);
+    console.log(`Default Check: Inspecting Homepage (${activeSiteUrl})...`);
+    const result = await inspectUrl(activeSiteUrl, token, activeSiteUrl);
     console.log(JSON.stringify(result?.indexStatusResult || result, null, 2));
   }
 }
