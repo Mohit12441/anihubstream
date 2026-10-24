@@ -6,14 +6,13 @@ import path from 'node:path';
 describe('TASK 8 (P2) — Dead links and missing pages', () => {
   const root = process.cwd();
 
-  it('Footer contains real <a> links for GitHub, X/Twitter, and Instagram with valid hrefs', () => {
+  it('Footer contains real <a> links for social channels (X/Twitter and Instagram) with valid hrefs', () => {
     const footerContent = fs.readFileSync(path.join(root, 'src/components/Footer.tsx'), 'utf8');
 
     // No dead buttons in site-footer__social
     assert.ok(!footerContent.includes('onClick={demo('), 'Footer must not use demo button click handlers');
 
     // Social links have real hrefs and security attributes
-    assert.match(footerContent, /href="https:\/\/github\.com\/Mohit12441\/anihubstream"/);
     assert.match(footerContent, /href="https:\/\/x\.com"/);
     assert.match(footerContent, /href="https:\/\/instagram\.com"/);
     assert.match(footerContent, /target="_blank"/);

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Github, Instagram, Send, Twitter } from 'lucide-react';
+import { Instagram, Send, Twitter } from 'lucide-react';
 import { Logo } from './Logo';
 import { useCatalogue } from '../state/catalogue';
 
@@ -105,15 +105,6 @@ export function Footer() {
               aria-label="Instagram"
             >
               <Instagram size={17} />
-            </a>
-            <a
-              href="https://github.com/Mohit12441/anihubstream"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-btn"
-              aria-label="GitHub"
-            >
-              <Github size={17} />
             </a>
           </div>
         </div>
