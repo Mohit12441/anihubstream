@@ -4,6 +4,7 @@ import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import fs from 'node:fs';
 import { seasonKey } from './season.mjs';
+import { d1All, d1Query } from '../cloud-sync/d1.mjs';
 
 const isRemote = process.argv.includes('--remote');
 const WEEK = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
@@ -55,10 +56,15 @@ async function fetchAiringBatch(ids) {
 const sqlEscape = (val) => `'${String(val).replace(/'/g, "''")}'`;
 
 async function main() {
-  console.log(`🚀 Synchronizing Daily Broadcast Schedules (Mode: ${isRemote ? 'Remote D1' : 'Local SQLite'})...\n`);
+  const hasRestCreds = Boolean(process.env.CF_API_TOKEN && process.env.CF_ACCOUNT_ID && process.env.CF_DATABASE_ID);
+  console.log(
+    `🚀 Synchronizing Daily Broadcast Schedules (Mode: ${
+      isRemote ? (hasRestCreds ? 'Remote D1 REST API' : 'Remote D1 Wrangler CLI') : 'Local SQLite'
+    })...\n`,
+  );
 
   let db = null;
-  /** @type {Array<{ id: string, anilist_id: number }>} */
+  /** @type {Array<{ id: string, anilist_id: number, sched_day?: number|null, sched_day_label?: string|null, sched_date?: string|null, sched_time?: string|null, sched_season?: string|null }>} */
   let ongoingRows = [];
 
   if (!isRemote) {
@@ -90,18 +96,53 @@ async function main() {
     // @ts-ignore
     ongoingRows = db.prepare(`
       SELECT DISTINCT a.id,
+        a.sched_day,
+        a.sched_day_label,
+        a.sched_date,
+        a.sched_time,
+        a.sched_season,
         COALESCE(m.anilist_id, CAST(json_extract(a.source_ids, '$.anilist') AS INTEGER)) as anilist_id
       FROM anime a
       LEFT JOIN anime_id_map m ON a.id = m.anime_id
       WHERE a.status = 'Ongoing'
         AND COALESCE(m.anilist_id, CAST(json_extract(a.source_ids, '$.anilist') AS INTEGER)) IS NOT NULL
     `).all();
+  } else if (hasRestCreds) {
+    // Remote D1 REST API mode (preferred in CI/Cloud environments)
+    await d1Query(`
+      UPDATE anime SET
+        sched_day = NULL,
+        sched_day_label = NULL,
+        sched_date = NULL,
+        sched_time = NULL,
+        sched_season = NULL
+      WHERE sched_day IS NOT NULL AND status IN ('Finished', 'Cancelled', 'Upcoming')
+    `);
+
+    ongoingRows = await d1All(`
+      SELECT DISTINCT a.id,
+        a.sched_day,
+        a.sched_day_label,
+        a.sched_date,
+        a.sched_time,
+        a.sched_season,
+        COALESCE(m.anilist_id, CAST(json_extract(a.source_ids, '$.anilist') AS INTEGER)) as anilist_id
+      FROM anime a
+      LEFT JOIN anime_id_map m ON a.id = m.anime_id
+      WHERE a.status = 'Ongoing'
+        AND COALESCE(m.anilist_id, CAST(json_extract(a.source_ids, '$.anilist') AS INTEGER)) IS NOT NULL
+    `);
   } else {
-    // Remote D1 mode: fetch ongoing titles using wrangler
+    // Remote D1 mode fallback: fetch ongoing titles using wrangler CLI
     const output = execFileSync(
       process.platform === 'win32' ? 'npx.cmd' : 'npx',
       ['wrangler', 'd1', 'execute', 'anihub', '--remote', '--json', '--command', `
         SELECT DISTINCT a.id,
+          a.sched_day,
+          a.sched_day_label,
+          a.sched_date,
+          a.sched_time,
+          a.sched_season,
           COALESCE(m.anilist_id, CAST(json_extract(a.source_ids, '$.anilist') AS INTEGER)) as anilist_id
         FROM anime a
         LEFT JOIN anime_id_map m ON a.id = m.anime_id
@@ -116,8 +157,10 @@ async function main() {
 
   console.log(`Found ${ongoingRows.length} ongoing anime with AniList IDs.`);
 
+  const rowBySlug = new Map(ongoingRows.map((r) => [r.id, r]));
   let updatedCount = 0;
   let clearedCount = 0;
+  let unchangedCount = 0;
   const BATCH_SIZE = 40;
   const remoteSqlStatements = [];
 
@@ -134,6 +177,8 @@ async function main() {
       const animeSlug = idToSlug.get(m.id);
       if (!animeSlug) continue;
 
+      const existing = rowBySlug.get(animeSlug);
+
       if (m.nextAiringEpisode?.airingAt) {
         const d = new Date(m.nextAiringEpisode.airingAt * 1000);
         const dayIdx = d.getUTCDay(); // 0 is Sunday
@@ -145,6 +190,20 @@ async function main() {
         const timeStr = `${hours}:${mins}`;
         const sKey = seasonKey(d);
 
+        // Delta check: skip write if already matching stored values
+        const isUnchanged =
+          existing &&
+          existing.sched_day === schedDay &&
+          existing.sched_day_label === dayLabel &&
+          existing.sched_date === dateStr &&
+          existing.sched_time === timeStr &&
+          existing.sched_season === sKey;
+
+        if (isUnchanged) {
+          unchangedCount++;
+          continue;
+        }
+
         if (db) {
           db.prepare(`
             UPDATE anime SET
@@ -155,14 +214,25 @@ async function main() {
               sched_season = ?5
             WHERE id = ?6
           `).run(schedDay, dayLabel, dateStr, timeStr, sKey, animeSlug);
+        } else if (hasRestCreds) {
+          await d1Query(
+            `UPDATE anime SET sched_day = ?1, sched_day_label = ?2, sched_date = ?3, sched_time = ?4, sched_season = ?5 WHERE id = ?6`,
+            [schedDay, dayLabel, dateStr, timeStr, sKey, animeSlug],
+          );
         } else {
           remoteSqlStatements.push(
-            `UPDATE anime SET sched_day=${schedDay}, sched_day_label=${sqlEscape(dayLabel)}, sched_date=${sqlEscape(dateStr)}, sched_time=${sqlEscape(timeStr)}, sched_season=${sqlEscape(sKey)} WHERE id=${sqlEscape(animeSlug)};`
+            `UPDATE anime SET sched_day=${schedDay}, sched_day_label=${sqlEscape(dayLabel)}, sched_date=${sqlEscape(dateStr)}, sched_time=${sqlEscape(timeStr)}, sched_season=${sqlEscape(sKey)} WHERE id=${sqlEscape(animeSlug)};`,
           );
         }
         updatedCount++;
       } else {
-        // Anime has no active upcoming episode on AniList -> Clear schedule slot
+        // Anime has no active upcoming episode on AniList -> Clear schedule slot if not already clear
+        const isAlreadyCleared = !existing || (existing.sched_day == null && existing.sched_date == null);
+        if (isAlreadyCleared) {
+          unchangedCount++;
+          continue;
+        }
+
         if (db) {
           db.prepare(`
             UPDATE anime SET
@@ -173,9 +243,14 @@ async function main() {
               sched_season = NULL
             WHERE id = ?1
           `).run(animeSlug);
+        } else if (hasRestCreds) {
+          await d1Query(
+            `UPDATE anime SET sched_day = NULL, sched_day_label = NULL, sched_date = NULL, sched_time = NULL, sched_season = NULL WHERE id = ?1`,
+            [animeSlug],
+          );
         } else {
           remoteSqlStatements.push(
-            `UPDATE anime SET sched_day=NULL, sched_day_label=NULL, sched_date=NULL, sched_time=NULL, sched_season=NULL WHERE id=${sqlEscape(animeSlug)};`
+            `UPDATE anime SET sched_day=NULL, sched_day_label=NULL, sched_date=NULL, sched_time=NULL, sched_season=NULL WHERE id=${sqlEscape(animeSlug)};`,
           );
         }
         clearedCount++;
@@ -183,14 +258,14 @@ async function main() {
     }
 
     console.log(
-      `Processed ${Math.min(ongoingRows.length, i + BATCH_SIZE)}/${ongoingRows.length} | Airing: ${updatedCount} | Cleared: ${clearedCount}`,
+      `Processed ${Math.min(ongoingRows.length, i + BATCH_SIZE)}/${ongoingRows.length} | Airing: ${updatedCount} | Cleared: ${clearedCount} | Unchanged: ${unchangedCount}`,
     );
     await new Promise((r) => setTimeout(r, 600));
   }
 
-  // If in remote mode, execute batched SQL statements
-  if (isRemote && remoteSqlStatements.length > 0) {
-    console.log(`\nExecuting ${remoteSqlStatements.length} remote schedule update statements...`);
+  // If in remote mode with wrangler CLI fallback, execute batched SQL statements
+  if (isRemote && !hasRestCreds && remoteSqlStatements.length > 0) {
+    console.log(`\nExecuting ${remoteSqlStatements.length} remote schedule update statements via wrangler...`);
     const CHUNK_SQL = 50;
     for (let i = 0; i < remoteSqlStatements.length; i += CHUNK_SQL) {
       const batchSql = remoteSqlStatements.slice(i, i + CHUNK_SQL).join('\n');
@@ -203,8 +278,9 @@ async function main() {
   }
 
   console.log(`\n✓ Schedule Sync Complete!`);
-  console.log(`  - Active airing schedules: ${updatedCount}`);
+  console.log(`  - Active airing schedules written: ${updatedCount}`);
   console.log(`  - Stale/finished slots cleared: ${clearedCount}`);
+  console.log(`  - Unchanged slots skipped (zero D1 writes): ${unchangedCount}`);
 
   if (db) {
     // @ts-ignore
