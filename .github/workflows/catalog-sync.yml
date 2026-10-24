@@ -16,7 +16,7 @@ on:
   schedule:
     - cron: '0 2,14 * * *'
   repository_dispatch:
-    types: [catalog-sync, anilist-sync, kitsu-sync, hianime-sync, providers-sync]
+    types: [catalog-sync, pulse, anilist-sync, kitsu-sync, hianime-sync, providers-sync]
   workflow_dispatch:
     inputs:
       target:
@@ -26,6 +26,7 @@ on:
         default: 'all'
         options:
           - all
+          - pulse
           - anilist
           - kitsu
           - hianime
@@ -60,9 +61,37 @@ jobs:
           echo "Workflow: ${{ github.workflow }}"
           echo "Event: ${{ github.event_name }}"
           echo "Run ID: ${{ github.run_id }}"
-          echo "Target Stage: ${{ github.event.inputs.target || 'all' }}"
+          echo "Target Stage Input: ${{ github.event.inputs.target || '' }}"
+          echo "Client Payload Target: ${{ github.event.client_payload.target || '' }}"
           echo "UTC Timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
           echo "=========================================================="
+
+      - name: determine execution stage
+        id: stage
+        run: |
+          TARGET="${{ github.event.inputs.target || github.event.client_payload.target || '' }}"
+          EVENT_TYPE="${{ github.event.client_payload.eventType || github.event.action || '' }}"
+
+          if [ -n "$TARGET" ]; then
+            SELECTED_TARGET="$TARGET"
+          elif [ "$EVENT_TYPE" = "pulse" ]; then
+            SELECTED_TARGET="pulse"
+          elif [ "$EVENT_TYPE" = "anilist-sync" ]; then
+            SELECTED_TARGET="anilist"
+          elif [ "$EVENT_TYPE" = "kitsu-sync" ]; then
+            SELECTED_TARGET="kitsu"
+          elif [ "$EVENT_TYPE" = "hianime-sync" ]; then
+            SELECTED_TARGET="hianime"
+          elif [ "$EVENT_TYPE" = "providers-sync" ]; then
+            SELECTED_TARGET="providers"
+          elif [ "${{ github.event_name }}" = "schedule" ]; then
+            SELECTED_TARGET="all"
+          else
+            SELECTED_TARGET="pulse"
+          fi
+
+          echo "selected_target=$SELECTED_TARGET" >> $GITHUB_OUTPUT
+          echo ">>> Selected Target Stage: $SELECTED_TARGET <<<"
 
       - uses: actions/setup-node@v4
         with:
@@ -72,7 +101,7 @@ jobs:
       # Phase 1: Trending Discovery & AniList Metadata
       # -----------------------------------------------------------
       - name: phase 1 — discover trending titles
-        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'anilist' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        if: steps.stage.outputs.selected_target == 'all' || steps.stage.outputs.selected_target == 'pulse' || steps.stage.outputs.selected_target == 'anilist'
         continue-on-error: true
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -82,7 +111,7 @@ jobs:
         run: node cloud-sync/discover.mjs --limit=${LIMIT}
 
       - name: phase 1 — sync anilist metadata
-        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'anilist' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        if: steps.stage.outputs.selected_target == 'all' || steps.stage.outputs.selected_target == 'pulse' || steps.stage.outputs.selected_target == 'anilist'
         continue-on-error: true
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -98,7 +127,7 @@ jobs:
       # Phase 2: Kitsu Media Enrichment
       # -----------------------------------------------------------
       - name: phase 2 — sync kitsu artwork & episode totals
-        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'kitsu' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        if: steps.stage.outputs.selected_target == 'all' || steps.stage.outputs.selected_target == 'kitsu'
         continue-on-error: true
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -112,7 +141,7 @@ jobs:
       # Phase 3: HiAnime Slugs & Streams Alignment
       # -----------------------------------------------------------
       - name: phase 3 — sync hianime slugs & stream catalog
-        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'hianime' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        if: steps.stage.outputs.selected_target == 'all' || steps.stage.outputs.selected_target == 'hianime'
         continue-on-error: true
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -125,7 +154,7 @@ jobs:
       # Phase 4 & 5: AniKoto, AniWatch & Franchise Relations
       # -----------------------------------------------------------
       - name: phase 4 & 5 — sync anikoto, aniwatch & franchise relations
-        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'providers' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        if: steps.stage.outputs.selected_target == 'all' || steps.stage.outputs.selected_target == 'providers'
         continue-on-error: true
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -138,7 +167,7 @@ jobs:
       # Phase 6: Ongoing Broadcast Schedules Refresh
       # -----------------------------------------------------------
       - name: phase 6 — sync ongoing broadcast schedules
-        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'schedule' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        if: steps.stage.outputs.selected_target == 'all' || steps.stage.outputs.selected_target == 'pulse' || steps.stage.outputs.selected_target == 'schedule'
         continue-on-error: true
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -150,7 +179,7 @@ jobs:
       # Phase 7: Cloud Episode Generation, Metadata & AniSkip Markers
       # -----------------------------------------------------------
       - name: phase 7 — sync episodes & aniskip skip markers
-        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'episodes' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        if: steps.stage.outputs.selected_target == 'all' || steps.stage.outputs.selected_target == 'episodes'
         continue-on-error: true
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -163,7 +192,7 @@ jobs:
       # Phase 8: D1 Database Retention, Pruning & Search Vector Healing
       # -----------------------------------------------------------
       - name: phase 8 — db telemetry retention & search vector healing
-        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'maintenance' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        if: steps.stage.outputs.selected_target == 'all' || steps.stage.outputs.selected_target == 'maintenance'
         continue-on-error: true
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -176,7 +205,7 @@ jobs:
       # Phase 9: Provider Mirror Health & Availability Validator
       # -----------------------------------------------------------
       - name: phase 9 — validate provider health & dead-slug detection
-        if: github.event.inputs.target == 'all' || github.event.inputs.target == 'health' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch'
+        if: steps.stage.outputs.selected_target == 'all' || steps.stage.outputs.selected_target == 'health'
         continue-on-error: true
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}

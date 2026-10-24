@@ -1,60 +1,12 @@
 {
-  "fetched_at": "2026-10-23T15:55:45.197Z",
+  "fetched_at": "2026-10-24T02:24:05.120Z",
   "titles": [
     {
-      "id": "link-click-episode-5",
+      "id": "joshi-kausei",
       "sources": {
-        "kitsu": 44789,
-        "anilist": 136145,
-        "mal": 49200
-      },
-      "episodes": 1,
-      "episodeTotal": 1,
-      "skipKey": null,
-      "markers": 0
-    },
-    {
-      "id": "free-the-final-stroke-the-first-volume",
-      "sources": {
-        "kitsu": 42357,
-        "anilist": 107203,
-        "mal": 38400
-      },
-      "episodes": 1,
-      "episodeTotal": 1,
-      "skipKey": null,
-      "markers": 0
-    },
-    {
-      "id": "rec",
-      "sources": {
-        "kitsu": 644,
-        "anilist": 710,
-        "mal": 710
-      },
-      "episodes": 9,
-      "episodeTotal": 9,
-      "skipKey": null,
-      "markers": 0
-    },
-    {
-      "id": "sk8-the-infinity-extra-part",
-      "sources": {
-        "kitsu": 44870,
-        "anilist": 136381,
-        "mal": 49363
-      },
-      "episodes": 1,
-      "episodeTotal": 1,
-      "skipKey": null,
-      "markers": 0
-    },
-    {
-      "id": "girly-air-force",
-      "sources": {
-        "kitsu": 41375,
-        "anilist": 101930,
-        "mal": 37998
+        "kitsu": 41941,
+        "anilist": 104147,
+        "mal": 38295
       },
       "episodes": 12,
       "episodeTotal": 12,
@@ -62,11 +14,11 @@
       "markers": 0
     },
     {
-      "id": "hanamaru-kindergarten",
+      "id": "afterlost",
       "sources": {
-        "kitsu": 4618,
-        "anilist": 6574,
-        "mal": 6574
+        "kitsu": 41451,
+        "anilist": 101814,
+        "mal": 37952
       },
       "episodes": 12,
       "episodeTotal": 12,
@@ -74,11 +26,35 @@
       "markers": 0
     },
     {
-      "id": "to-love-ru-darkness-2nd-ova",
+      "id": "fuuto-pi",
       "sources": {
-        "kitsu": 11418,
-        "anilist": 21853,
-        "mal": 31380
+        "kitsu": 44323,
+        "anilist": 131912,
+        "mal": 48649
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": "mal/48649",
+      "markers": 15
+    },
+    {
+      "id": "arifureta-shokugyou-de-sekai-saikyou-2nd-season-special",
+      "sources": {
+        "kitsu": 46047,
+        "anilist": 143846,
+        "mal": 50916
+      },
+      "episodes": 1,
+      "episodeTotal": 1,
+      "skipKey": null,
+      "markers": 0
+    },
+    {
+      "id": "wu-shan-wu-xing-zhuo-yuan-shen-huo",
+      "sources": {
+        "kitsu": 41361,
+        "anilist": 107069,
+        "mal": 37936
       },
       "episodes": 3,
       "episodeTotal": 3,
@@ -86,35 +62,11 @@
       "markers": 0
     },
     {
-      "id": "rurouni-kenshin-kyoto-disturbance",
+      "id": "fate-grand-order-moonlight-lostroom",
       "sources": {
-        "kitsu": 48393,
-        "anilist": 171637,
-        "mal": 57554
-      },
-      "episodes": 23,
-      "episodeTotal": 23,
-      "skipKey": null,
-      "markers": 0
-    },
-    {
-      "id": "queens-blade-the-exiled-virgin",
-      "sources": {
-        "kitsu": 7762,
-        "anilist": 4719,
-        "mal": 4719
-      },
-      "episodes": 12,
-      "episodeTotal": 12,
-      "skipKey": null,
-      "markers": 0
-    },
-    {
-      "id": "nekopara-ova",
-      "sources": {
-        "kitsu": 13121,
-        "anilist": 99939,
-        "mal": 34658
+        "kitsu": 14096,
+        "anilist": 100728,
+        "mal": 36915
       },
       "episodes": 1,
       "episodeTotal": 1,
@@ -122,95 +74,11 @@
       "markers": 0
     },
     {
-      "id": "mobile-suit-gundam-the-08th-ms-team",
+      "id": "afro-samurai-resurrection",
       "sources": {
-        "kitsu": 60,
-        "anilist": 81,
-        "mal": 81
-      },
-      "episodes": 12,
-      "episodeTotal": 12,
-      "skipKey": "anilist/81",
-      "markers": 15
-    },
-    {
-      "id": "persona-3-the-movie-3-falling-down",
-      "sources": {
-        "kitsu": 8711,
-        "anilist": 20737,
-        "mal": 24543
-      },
-      "episodes": 1,
-      "episodeTotal": 1,
-      "skipKey": null,
-      "markers": 0
-    },
-    {
-      "id": "dragon-quest-the-adventure-of-dai",
-      "sources": {
-        "kitsu": 42900,
-        "anilist": 114099,
-        "mal": 40906
-      },
-      "episodes": 100,
-      "episodeTotal": 100,
-      "skipKey": null,
-      "markers": 0
-    },
-    {
-      "id": "sonic-x",
-      "sources": {
-        "kitsu": 1633,
-        "anilist": 1816,
-        "mal": 1816
-      },
-      "episodes": 78,
-      "episodeTotal": 78,
-      "skipKey": null,
-      "markers": 0
-    },
-    {
-      "id": "the-hill-dyed-rose-madder",
-      "sources": {
-        "kitsu": 3772,
-        "anilist": 4744,
-        "mal": 4744
-      },
-      "episodes": 12,
-      "episodeTotal": 12,
-      "skipKey": null,
-      "markers": 0
-    },
-    {
-      "id": "fragtime",
-      "sources": {
-        "kitsu": 42195,
-        "anilist": 108487,
-        "mal": 39545
-      },
-      "episodes": 1,
-      "episodeTotal": 1,
-      "skipKey": null,
-      "markers": 0
-    },
-    {
-      "id": "haruka-nogizakas-secret",
-      "sources": {
-        "kitsu": 3032,
-        "anilist": 3467,
-        "mal": 3467
-      },
-      "episodes": 12,
-      "episodeTotal": 12,
-      "skipKey": null,
-      "markers": 0
-    },
-    {
-      "id": "hanasaku-iroha-the-movie-home-sweet-home",
-      "sources": {
-        "kitsu": 7090,
-        "anilist": 14175,
-        "mal": 14175
+        "kitsu": 3870,
+        "anilist": 4970,
+        "mal": 4970
       },
       "episodes": 1,
       "episodeTotal": 1,
@@ -219,130 +87,75 @@
     }
   ],
   "stats": {
-    "episodesStored": 292,
-    "episodeTotal": 292,
+    "episodesStored": 42,
+    "episodeTotal": 42,
     "markers": 15,
     "runtimeFallbacks": 0
   },
   "droppedGenres": [
-    "Heterosexual",
-    "Martial Arts",
-    "Time Manipulation",
-    "Urban Fantasy",
-    "Body Swapping",
-    "Male Protagonist",
-    "Primarily Adult Cast",
-    "Photography",
-    "Sports",
-    "Swimming",
-    "Primarily Male Cast",
-    "Athletics",
-    "Coming of Age",
-    "Ensemble Cast",
-    "College",
-    "Foreign",
-    "Primarily Teen Cast",
-    "Cute Boys Doing Cute Things",
-    "Acting",
-    "Work",
-    "Cohabitation",
-    "Female Protagonist",
-    "Seinen",
-    "Meta",
-    "Bar",
-    "Skateboarding",
-    "Slapstick",
-    "School",
-    "LGBTQ+ Themes",
-    "Karuta",
-    "Horticulture",
-    "Boys' Love",
-    "Language Barrier",
-    "Food",
-    "Aviation",
-    "War",
-    "Military",
-    "Kuudere",
-    "Primarily Female Cast",
-    "CGI",
-    "Female Harem",
-    "Age Gap",
+    "No Dialogue",
     "Cute Girls Doing Cute Things",
-    "Primarily Child Cast",
-    "Teacher",
-    "Unrequited Love",
-    "Chibi",
-    "Crossover",
-    "Ojou-sama",
-    "Ecchi",
-    "Nudity",
-    "Interspecies",
-    "Psychosexual",
-    "Shounen",
-    "Aliens",
-    "Tsundere",
-    "Gender Bending",
-    "Swordplay",
-    "Samurai",
-    "Historical",
-    "Travel",
-    "Found Family",
-    "Assassins",
-    "Ninja",
-    "Ships",
-    "Love Triangle",
-    "Bondage",
-    "Battle Royale",
-    "Shrine Maiden",
-    "Rape",
-    "Elf",
-    "Yuri",
-    "Magic",
-    "Monster Girl",
-    "Cultivation",
-    "Maids",
-    "Angels",
-    "Nekomimi",
-    "Restaurant",
-    "Kemonomimi",
-    "Mecha",
-    "Real Robot",
-    "Politics",
-    "Space",
-    "Psychological",
-    "Super Power",
-    "Robots",
-    "School Club",
-    "Demons",
-    "Mythology",
-    "Gods",
-    "Cosmic Horror",
-    "Tragedy",
-    "Guns",
-    "Proxy Battle",
+    "Primarily Female Cast",
+    "Female Protagonist",
+    "School",
     "Philosophy",
-    "Dragons",
-    "Dungeon",
-    "Animals",
-    "Spearplay",
-    "Amnesia",
-    "Creature Taming",
-    "Gore",
-    "Reverse Isekai",
-    "Kids",
-    "Lost Civilization",
-    "Urban",
-    "Primarily Animal Cast",
-    "Butler",
-    "Alternate Universe",
-    "Anthropomorphism",
-    "Incest",
-    "Super Robot",
-    "Bullying",
-    "Rehabilitation",
-    "Otaku Culture",
-    "Parody",
     "Rural",
-    "Inn"
+    "Iyashikei",
+    "Thriller",
+    "Amnesia",
+    "Motorcycles",
+    "Tragedy",
+    "Travel",
+    "Male Protagonist",
+    "Super Power",
+    "Ensemble Cast",
+    "Alternate Universe",
+    "Idol",
+    "Urban Fantasy",
+    "CGI",
+    "Henshin",
+    "Detective",
+    "Tokusatsu",
+    "Heterosexual",
+    "Primarily Adult Cast",
+    "Seinen",
+    "Otaku Culture",
+    "Cannibalism",
+    "Conspiracy",
+    "Video Games",
+    "Psychological",
+    "Anti-Hero",
+    "Vampire",
+    "Magic",
+    "Female Harem",
+    "Love Triangle",
+    "Primarily Teen Cast",
+    "Guns",
+    "Dragons",
+    "Kemonomimi",
+    "Slapstick",
+    "Medieval",
+    "Martial Arts",
+    "Gods",
+    "Foreign",
+    "Ancient China",
+    "Demons",
+    "Shapeshifting",
+    "Swordplay",
+    "Aliens",
+    "Spearplay",
+    "Post-Apocalyptic",
+    "Cosmic Horror",
+    "Urban",
+    "Revenge",
+    "Samurai",
+    "Robots",
+    "Ghost",
+    "Tanned Skin",
+    "Gore",
+    "Orphan",
+    "Anachronism",
+    "Nudity",
+    "Primarily Male Cast"
   ]
 }

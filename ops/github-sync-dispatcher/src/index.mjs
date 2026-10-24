@@ -25,32 +25,40 @@ export default {
   async scheduled(event, env, ctx) {
     const cron = event.cron;
     const cronId = `${event.scheduledTime || Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    const utcHour = new Date(event.scheduledTime || Date.now()).getUTCHours();
     
-    // Select event type based on cron expression or minute
-    let eventType = 'catalog-sync';
-    if (cron === '0 2,14 * * *' || cron === '0 */12 * * *') {
+    // Select event type and execution target based on schedule:
+    // - 02:00 & 14:00 UTC -> Full deep catalog sync (event: 'catalog-sync', target: 'all')
+    // - Hourly ticks -> Fast 45-second pulse (event: 'pulse', target: 'pulse')
+    let eventType = 'pulse';
+    let target = 'pulse';
+
+    if (cron === '0 2,14 * * *' || (cron === '0 * * * *' && (utcHour === 2 || utcHour === 14))) {
       eventType = 'catalog-sync';
+      target = 'all';
+    } else if (cron === '0 * * * *') {
+      eventType = 'pulse';
+      target = 'pulse';
     } else if (cron === '45 */6 * * *') {
       eventType = 'providers-sync';
+      target = 'providers';
     } else if (cron === '27,57 * * * *') {
       eventType = 'hianime-sync';
+      target = 'hianime';
     } else if (cron === '17,47 * * * *') {
       eventType = 'kitsu-sync';
+      target = 'kitsu';
     } else if (cron === '7,37 * * * *') {
       eventType = 'anilist-sync';
+      target = 'anilist';
     } else {
-      // Fallback: check scheduled time minute if cron string differs
-      const min = new Date(event.scheduledTime || Date.now()).getUTCMinutes();
-      if ((min >= 15 && min <= 25) || (min >= 45 && min <= 55)) {
-        eventType = 'kitsu-sync';
-      } else if ((min >= 25 && min <= 35) || (min >= 55 || min <= 5)) {
-        eventType = 'hianime-sync';
-      }
+      eventType = 'pulse';
+      target = 'pulse';
     }
 
-    console.log(`[cron:${cronId}] Triggered cron: "${cron}" -> Dispatching event_type: "${eventType}"`);
+    console.log(`[cron:${cronId}] Triggered cron: "${cron}" -> Dispatching event_type: "${eventType}" (target: "${target}")`);
 
-    const result = await triggerDispatch(env, cronId, eventType);
+    const result = await triggerDispatch(env, cronId, eventType, target);
 
     if (!result.success) {
       const errMsg = `Scheduled dispatch failed for "${eventType}": ${result.error || `HTTP ${result.status}`}`;
@@ -59,7 +67,7 @@ export default {
       throw new Error(errMsg);
     }
 
-    console.log(`[cron:${cronId}] EXECUTION_SUCCESS: Dispatched "${eventType}" (HTTP 204)`);
+    console.log(`[cron:${cronId}] EXECUTION_SUCCESS: Dispatched "${eventType}" (target: "${target}") (HTTP 204)`);
     return result;
   },
 
@@ -84,8 +92,8 @@ export default {
       return new Response(JSON.stringify({
         status: 'ok',
         worker: 'anihubstream-sync-dispatcher',
-        supported_events: ['catalog-sync', 'anilist-sync', 'kitsu-sync', 'hianime-sync', 'providers-sync'],
-        schedules: ['0 2,14 * * * (catalog-sync)', '7,37 * * * * (anilist-sync)', '17,47 * * * * (kitsu-sync)', '27,57 * * * * (hianime-sync)', '45 */6 * * * (providers-sync)'],
+        supported_events: ['pulse', 'catalog-sync', 'anilist-sync', 'kitsu-sync', 'hianime-sync', 'providers-sync'],
+        schedules: ['0 * * * * (hourly pulse on :00, deep sync on 02:00/14:00 UTC)'],
       }), {
         status: 200,
         headers: {
@@ -109,7 +117,7 @@ export default {
  * Sends a repository_dispatch event to GitHub Actions.
  * Never logs credentials or secrets.
  */
-export async function triggerDispatch(env, execId, eventType = 'anilist-sync') {
+export async function triggerDispatch(env, execId, eventType = 'pulse', target = '') {
   const token = env?.GH_DISPATCH_TOKEN?.trim();
 
   if (!token) {
@@ -123,6 +131,7 @@ export async function triggerDispatch(env, execId, eventType = 'anilist-sync') {
       source: 'cloudflare-worker-cron',
       execId,
       eventType,
+      target: target || (eventType === 'pulse' ? 'pulse' : (eventType === 'catalog-sync' ? 'all' : eventType)),
       timestamp: new Date().toISOString(),
     },
   };

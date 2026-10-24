@@ -2,12 +2,10 @@ name = "anihubstream-sync-dispatcher"
 main = "src/index.mjs"
 compatibility_date = "2026-10-17"
 
-# Three separate staggered cron schedules:
-# 1. AniList sync: every 30 minutes on :07 and :37
-# 2. Kitsu sync: every 30 minutes on :17 and :47
-# 3. HiAnime sync: every 30 minutes on :27 and :57
+# Hourly cron schedule:
+# Fires every hour at :00 (runs 45s pulse, and deep sync at 02:00 and 14:00 UTC)
 [triggers]
-crons = ["7,37 * * * *", "17,47 * * * *", "27,57 * * * *"]
+crons = ["0 * * * *"]
 
 [observability.logs]
 enabled = true

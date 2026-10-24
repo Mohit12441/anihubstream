@@ -62,7 +62,7 @@ describe('github-sync-dispatcher worker', () => {
       const data = JSON.parse(bodyText);
       assert.equal(data.status, 'ok');
       assert.equal(data.worker, 'anihubstream-sync-dispatcher');
-      assert.deepEqual(data.supported_events, ['catalog-sync', 'anilist-sync', 'kitsu-sync', 'hianime-sync', 'providers-sync']);
+      assert.deepEqual(data.supported_events, ['pulse', 'catalog-sync', 'anilist-sync', 'kitsu-sync', 'hianime-sync', 'providers-sync']);
       assert.ok(Array.isArray(data.schedules));
     });
 
@@ -183,6 +183,33 @@ describe('github-sync-dispatcher worker', () => {
       const payload = JSON.parse(capturedOpts.body);
       assert.equal(payload.event_type, 'catalog-sync');
       assert.equal(payload.client_payload.eventType, 'catalog-sync');
+    });
+
+    it('dispatches pulse for hourly cron "0 * * * *" outside 02:00/14:00', async () => {
+      let capturedUrl = null;
+      let capturedOpts = null;
+
+      globalThis.fetch = async (url, opts) => {
+        capturedUrl = url;
+        capturedOpts = opts;
+        return new Response(null, { status: 204 });
+      };
+
+      // Set scheduledTime to 05:00 UTC
+      const date = new Date('2026-10-24T05:00:00Z');
+      const event = { cron: '0 * * * *', scheduledTime: date.getTime() };
+      const env = { GH_DISPATCH_TOKEN: 'secret-token-xyz' };
+      const ctx = { waitUntil: (p) => p };
+
+      const result = await worker.scheduled(event, env, ctx);
+      assert.equal(result.success, true);
+      assert.equal(result.status, 204);
+      assert.equal(result.event_type, 'pulse');
+
+      const payload = JSON.parse(capturedOpts.body);
+      assert.equal(payload.event_type, 'pulse');
+      assert.equal(payload.client_payload.eventType, 'pulse');
+      assert.equal(payload.client_payload.target, 'pulse');
     });
 
     it('dispatches providers-sync for cron "45 */6 * * *"', async () => {
