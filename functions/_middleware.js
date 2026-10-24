@@ -9,6 +9,26 @@ export async function onRequest(context) {
     return sitemapHandler(context);
   }
 
+  if (path === '/robots.txt') {
+    const robots = [
+      'User-agent: *',
+      'Allow: /',
+      'Allow: /anime',
+      'Allow: /watch',
+      'Disallow: /api/',
+      'Disallow: /mylist',
+      '',
+      `Sitemap: ${url.origin}/sitemap.xml`,
+    ].join('\n');
+    return new Response(robots, {
+      status: 200,
+      headers: {
+        'content-type': 'text/plain; charset=utf-8',
+        'cache-control': 'public, max-age=3600, s-maxage=86400',
+      },
+    });
+  }
+
   // Static assets and api routes pass through untouched
   if (
     path.startsWith('/api/') ||

@@ -2,8 +2,9 @@
 // Generates a live XML sitemap dynamically from the Cloudflare D1 database.
 // Caches at the edge for 24 hours.
 
-export async function onRequestGet({ env }) {
-  const origin = 'https://anihubstream.com';
+export async function onRequestGet(context) {
+  const { request, env } = context;
+  const origin = request?.url ? new URL(request.url).origin : 'https://anihubstream.com';
   const now = new Date().toISOString().slice(0, 10);
 
   const staticUrls = [
