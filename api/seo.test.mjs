@@ -105,10 +105,24 @@ test('TASK 5 (P1) SEO: _middleware injects series metadata and TVSeries JSON-LD'
       let html = await res.text();
       // Apply mock replacements
       for (const { selector, handler } of this.handlers) {
+        if (selector === '#root' && handler.element) {
+          handler.element({
+            setInnerContent(content) {
+              html = html.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${content}</div>`);
+            },
+          });
+        }
         if (selector === 'head' && handler.element) {
           handler.element({
             append(content) {
               html = html.replace('</head>', `${content}</head>`);
+            },
+          });
+        }
+        if (selector === '#root' && handler.element) {
+          handler.element({
+            setInnerContent(content) {
+              html = html.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${content}</div>`);
             },
           });
         }
@@ -219,6 +233,13 @@ test('TASK 5 (P1) SEO: episode 1 receives dedicated Episode 1 title, canonical, 
             },
           });
         }
+        if (selector === '#root' && handler.element) {
+          handler.element({
+            setInnerContent(content) {
+              html = html.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${content}</div>`);
+            },
+          });
+        }
         if (selector === 'head' && handler.element) {
           handler.element({
             append(content) {
@@ -261,4 +282,42 @@ test('TASK 5 (P1) SEO: robots.txt disallows /mylist to prevent crawling empty us
   const content = fs.readFileSync(robotsPath, 'utf8');
   assert.match(content, /Disallow:\s*\/mylist/i, 'robots.txt must disallow /mylist');
 });
+
+test('TASK 5 (P1) SEO: _middleware injects rich semantic crawler shell into #root for anime watch pages', async () => {
+  const mockD1 = {
+    prepare: () => ({
+      bind: () => ({
+        first: async () => ({
+          title: 'Attack on Titan',
+          native: '進撃の巨人',
+          year: 2013,
+          rating: 9.0,
+          synopsis: 'Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called Titans.',
+          art: 'https://media.kitsu.app/aot-poster.jpg',
+          episode_total: 25,
+          kind: 'tv',
+        }),
+      }),
+    }),
+  };
+
+  const context = {
+    request: new Request('https://anihubstream.com/watch/attack-on-titan'),
+    next: async () => new Response('<!doctype html><html><head><title>Default</title></head><body><div id="root"><p>Old generic boilerplate</p></div></body></html>', {
+      headers: { 'content-type': 'text/html' },
+    }),
+    env: { ANIHUB: mockD1 },
+  };
+
+  const res = await onRequest(context);
+  const html = await res.text();
+
+  assert.ok(html.includes('<h1>Watch Attack on Titan (2013) Online Free</h1>'), 'Must render unique H1 matching anime title');
+  assert.ok(html.includes('進撃の巨人'), 'Must render native Japanese title');
+  assert.ok(html.includes('Centuries ago, mankind was slaughtered'), 'Must render real anime synopsis');
+  assert.ok(html.includes('25 Episodes'), 'Must render total episode count badge');
+  assert.ok(html.includes('Ep 1'), 'Must render episode navigation links');
+  assert.ok(!html.includes('Old generic boilerplate'), 'Old generic boilerplate must be completely replaced');
+});
+
 

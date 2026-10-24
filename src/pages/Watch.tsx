@@ -210,13 +210,15 @@ export function Watch() {
         setEpNum(parsed);
       }
     } else {
-      // /watch/:id without :ep -> redirect to saved resume episode (or ep 1)
+      // /watch/:id without :ep -> load saved resume episode (or ep 1)
       const queryEp = Number.parseInt(params.get('ep') ?? '', 10);
       let targetEp = 1;
+      let hasExplicitTarget = false;
       if (Number.isFinite(queryEp) && queryEp >= 1) {
         targetEp = episodes.length >= (anime.episodeTotal || anime.episodeCount || 1)
           ? Math.min(queryEp, episodes.length)
           : queryEp;
+        hasExplicitTarget = true;
       } else {
         const savedKey = Object.keys(positions).find(
           (k) => k.startsWith(`${anime.id}:e`) || k.startsWith(`${anime.id}#`)
@@ -227,11 +229,15 @@ export function Watch() {
             const resumeEp = Number.parseInt(match[1], 10);
             if (Number.isFinite(resumeEp) && resumeEp >= 1 && resumeEp <= episodes.length) {
               targetEp = resumeEp;
+              hasExplicitTarget = true;
             }
           }
         }
       }
-      navigate(`/watch/${anime.id}/${targetEp}`, { replace: true });
+      // Only navigate if there is a saved resume target beyond episode 1, preserving clean HTTP 200 for bots/landing
+      if (hasExplicitTarget && targetEp !== 1) {
+        navigate(`/watch/${anime.id}/${targetEp}`, { replace: true });
+      }
       setEpNum(targetEp);
     }
   }, [anime, ep, episodes, params, navigate, positions]);
@@ -249,10 +255,10 @@ export function Watch() {
 
   const canonicalUrl = useMemo(() => {
     if (!anime) return undefined;
-    return epNum && epNum >= 1
+    return ep !== undefined && epNum && epNum >= 1
       ? `https://anihubstream.com/watch/${anime.id}/${epNum}`
       : `https://anihubstream.com/watch/${anime.id}`;
-  }, [anime, epNum]);
+  }, [anime, ep, epNum]);
 
   const jsonLd = useMemo(() => {
     if (!anime) return null;

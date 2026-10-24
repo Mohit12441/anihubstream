@@ -61,6 +61,7 @@ export async function onRequest(context) {
   let ogImage = `${origin}/og.png`;
   let ogType = 'website';
   let jsonLd = null;
+  let preHtml = null;
 
   // Match /watch/:id or /watch/:id/:ep
   const watchMatch = path.match(/^\/watch\/([A-Za-z0-9_-]+)(?:\/(\d+))?$/);
@@ -164,6 +165,45 @@ export async function onRequest(context) {
             '@context': 'https://schema.org',
             '@graph': [mainEntity, breadcrumbs],
           };
+
+          // Generate rich semantic HTML crawler shell to prevent duplicate content flags
+          const safeTitle = (animeTitle || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+          const safeNative = (row.native || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+          const safeSynopsis = (cleanSynopsis || `Stream ${animeTitle} online free in high definition with English subtitles and dub on AniHubStream.`).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+          const ratingBadge = row.rating > 0 ? `<span style="background:#27273a;padding:0.2rem 0.5rem;border-radius:4px;color:#facc15;">★ ${Number(row.rating).toFixed(1)}/10</span>` : '';
+          const formatBadge = row.kind ? `<span style="background:#27273a;padding:0.2rem 0.5rem;border-radius:4px;color:#94a3b8;text-transform:uppercase;">${row.kind}</span>` : '';
+          const totalEpBadge = row.episode_total ? `<span style="background:#27273a;padding:0.2rem 0.5rem;border-radius:4px;color:#94a3b8;">${row.episode_total} Episodes</span>` : '';
+          const epHeading = epNum ? ` — Episode ${epNum}` : '';
+
+          let epLinksHtml = '';
+          if (row.episode_total && row.episode_total > 1) {
+            const displayCount = Math.min(row.episode_total, 24);
+            const links = [];
+            for (let i = 1; i <= displayCount; i++) {
+              links.push(`<a href="${origin}/watch/${id}/${i}" style="margin:0.25rem 0.4rem 0.25rem 0;display:inline-block;padding:0.35rem 0.75rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:4px;text-decoration:none;">Ep ${i}</a>`);
+            }
+            if (row.episode_total > displayCount) {
+              links.push(`<span style="color:#888;font-size:0.9rem;margin-left:0.5rem;">+ ${row.episode_total - displayCount} more episodes</span>`);
+            }
+            epLinksHtml = `<section class="crawler-episodes" style="margin-top:1.5rem;"><h2>Episode Guide</h2><nav aria-label="Episode List" style="display:flex;flex-wrap:wrap;align-items:center;">${links.join('')}</nav></section>`;
+          }
+
+          preHtml = `<main class="crawler-content" style="padding:2rem;max-width:850px;margin:0 auto;line-height:1.6;color:#e2e8f0;">` +
+            `<h1>Watch ${safeTitle}${yearStr}${epHeading} Online Free</h1>` +
+            (safeNative ? `<p class="native-title" lang="ja" style="font-size:1.15rem;color:#94a3b8;margin-top:-0.5rem;">${safeNative}</p>` : '') +
+            `<div class="crawler-meta" style="display:flex;gap:0.75rem;margin:1rem 0;font-size:0.9rem;align-items:center;flex-wrap:wrap;">` +
+              (ratingBadge || '') +
+              (row.year ? `<span style="background:#27273a;padding:0.2rem 0.5rem;border-radius:4px;color:#94a3b8;">Year: ${row.year}</span>` : '') +
+              (formatBadge || '') +
+              (totalEpBadge || '') +
+            `</div>` +
+            `<section class="crawler-synopsis" style="margin:1.5rem 0;">` +
+              `<h2>Synopsis</h2>` +
+              `<p>${safeSynopsis}</p>` +
+            `</section>` +
+            epLinksHtml +
+            `<p style="margin-top:2rem;"><a href="${origin}/watch/${id}${epNum ? `/${epNum}` : ''}" style="display:inline-block;padding:0.75rem 1.5rem;background:#ff1f4a;color:#fff;border-radius:6px;font-weight:bold;text-decoration:none;">Stream ${safeTitle} Now</a></p>` +
+          `</main>`;
         }
       } catch (e) {
         console.error('Middleware D1 lookup failed:', e);
@@ -234,7 +274,6 @@ export async function onRequest(context) {
   }
 
   // Generate crawler-visible semantic HTML body for thin content resolution
-  let preHtml = null;
   if (path === '/about') {
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>About AniHubStream</h1><p>AniHubStream is a high-performance anime streaming platform engineered to provide instant playback, comprehensive metadata, and an ad-free viewing experience. Our catalog features subbed and dubbed anime across TV series, movies, and OVAs, synchronized with leading industry databases including Kitsu and AniList. Designed with edge caching, automated episode guides, and seamless bookmarks.</p></main>`;
   } else if (path === '/dmca') {
