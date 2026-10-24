@@ -50,7 +50,7 @@ export async function onRequestGet(context) {
           priority: '0.9',
         });
 
-        // 2. Canonical Player Entry Page
+        // 2. Canonical Player Entry Page (HTTP 200)
         animeUrls.push({
           loc: `${origin}/watch/${row.id}`,
           lastmod,
@@ -58,16 +58,13 @@ export async function onRequestGet(context) {
           priority: '0.8',
         });
 
-        // 3. Key watchable episode deep links (capped to maintain total sitemap below Google 50k limit)
-        const total = Number.isInteger(row.episode_total) && row.episode_total > 0
-          ? Math.min(row.episode_total, 24)
-          : 0;
-        for (let ep = 1; ep <= total; ep++) {
+        // 3. Episode 1 deep link for episodic series (Focuses crawl budget on highest-volume search queries)
+        if (row.episode_total && row.episode_total > 1) {
           animeUrls.push({
-            loc: `${origin}/watch/${row.id}/${ep}`,
+            loc: `${origin}/watch/${row.id}/1`,
             lastmod,
-            changefreq: 'monthly',
-            priority: '0.6',
+            changefreq: 'weekly',
+            priority: '0.8',
           });
         }
       }

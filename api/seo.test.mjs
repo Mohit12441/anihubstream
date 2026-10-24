@@ -320,4 +320,53 @@ test('TASK 5 (P1) SEO: _middleware injects rich semantic crawler shell into #roo
   assert.ok(!html.includes('Old generic boilerplate'), 'Old generic boilerplate must be completely replaced');
 });
 
+test('TASK 5 (P1) SEO: _middleware enriches specific episode requests with distinct episode title & synopsis', async () => {
+  const mockD1 = {
+    prepare: (query) => ({
+      bind: (...args) => ({
+        first: async () => {
+          if (query.includes('FROM anime')) {
+            return {
+              title: 'Attack on Titan',
+              native: '進撃の巨人',
+              year: 2013,
+              rating: 9.0,
+              synopsis: 'Centuries ago, mankind was slaughtered by Titans.',
+              art: 'https://media.kitsu.app/aot-poster.jpg',
+              episode_total: 25,
+              kind: 'tv',
+            };
+          }
+          if (query.includes('FROM episode')) {
+            return {
+              title: 'To You Two Thousand Years Later',
+              synopsis: 'The Fall of Shiganshina, Part 1. After one hundred years of peace, humanity is reminded of the terror.',
+              thumb: 'https://media.kitsu.app/episodes/1.jpg',
+              runtime: '24:00',
+              airdate: '2013-04-06',
+            };
+          }
+          return null;
+        },
+      }),
+    }),
+  };
+
+  const context = {
+    request: new Request('https://anihubstream.com/watch/attack-on-titan/1'),
+    next: async () => new Response('<!doctype html><html><head><title>Default</title></head><body><div id="root"></div></body></html>', {
+      headers: { 'content-type': 'text/html' },
+    }),
+    env: { ANIHUB: mockD1 },
+  };
+
+  const res = await onRequest(context);
+  const html = await res.text();
+
+  assert.ok(html.includes('To You Two Thousand Years Later'), 'Must include official episode title');
+  assert.ok(html.includes('Fall of Shiganshina'), 'Must include specific episode synopsis');
+  assert.ok(html.includes('Episode 1 Overview'), 'Must render dedicated episode overview section');
+  assert.ok(html.includes('"datePublished":"2013-04-06"'), 'Must include episode airdate in schema');
+});
+
 

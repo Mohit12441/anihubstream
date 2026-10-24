@@ -95,12 +95,31 @@ export async function onRequest(context) {
           const cleanSynopsis = (row.synopsis || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
           desc = cleanSynopsis ? cleanSynopsis.slice(0, 150).trim() : `Watch ${animeTitle} free online in high definition on AniHubStream.`;
 
+          // Query episode-level metadata for specific episode watch requests
+          let epRow = null;
+          if (epNum && epNum >= 1) {
+            try {
+              epRow = await env.ANIHUB.prepare(
+                `SELECT title, synopsis, thumb, runtime, airdate FROM episode WHERE anime_id = ?1 AND n = ?2 LIMIT 1`
+              ).bind(id, epNum).first();
+            } catch (_) {}
+          }
+
+          const hasDistinctEpTitle = epRow?.title &&
+            epRow.title.toLowerCase().trim() !== animeTitle.toLowerCase().trim() &&
+            !/^episode\s*\d+$/i.test(epRow.title.trim());
+          const epTitleStr = hasDistinctEpTitle ? `: ${epRow.title}` : '';
+          const cleanEpSynopsis = (epRow?.synopsis || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+          if (cleanEpSynopsis) {
+            desc = cleanEpSynopsis.slice(0, 150).trim();
+          }
+
           if (animeMatch) {
             title = `${animeTitle}${yearStr} — Overview & Episode Guide | AniHubStream`;
             canonical = `${origin}/anime/${id}`;
             ogType = 'video.tv_show';
           } else if (epNum && epNum >= 1) {
-            title = `${animeTitle} Ep ${epNum} — Watch Free | AniHubStream`;
+            title = `${animeTitle} Ep ${epNum}${epTitleStr} — Watch Free | AniHubStream`;
             canonical = `${origin}/watch/${id}/${epNum}`;
             ogType = 'video.episode';
           } else {
@@ -109,16 +128,17 @@ export async function onRequest(context) {
             ogType = 'video.tv_show';
           }
 
-          ogImage = row.key_art || row.art || ogImage;
+          ogImage = epRow?.thumb || row.key_art || row.art || ogImage;
 
           const mainEntity = {
             '@type': epNum ? 'TVEpisode' : 'TVSeries',
-            name: epNum ? `${animeTitle} Episode ${epNum}` : animeTitle,
+            name: epNum ? `${animeTitle} Episode ${epNum}${epTitleStr}` : animeTitle,
             alternateName: row.native || undefined,
             description: desc,
             image: ogImage,
             url: canonical,
             ...(epNum ? { episodeNumber: epNum } : {}),
+            ...(epRow?.airdate ? { datePublished: epRow.airdate } : {}),
             ...(!epNum && row.episode_total ? { numberOfEpisodes: row.episode_total } : {}),
             ...(row.rating > 0 ? {
               aggregateRating: {
@@ -170,10 +190,12 @@ export async function onRequest(context) {
           const safeTitle = (animeTitle || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
           const safeNative = (row.native || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
           const safeSynopsis = (cleanSynopsis || `Stream ${animeTitle} online free in high definition with English subtitles and dub on AniHubStream.`).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+          const safeEpTitle = epRow?.title ? `: ${(epRow.title || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])}` : '';
+          const safeEpSynopsis = cleanEpSynopsis ? (cleanEpSynopsis || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]) : '';
           const ratingBadge = row.rating > 0 ? `<span style="background:#27273a;padding:0.2rem 0.5rem;border-radius:4px;color:#facc15;">★ ${Number(row.rating).toFixed(1)}/10</span>` : '';
           const formatBadge = row.kind ? `<span style="background:#27273a;padding:0.2rem 0.5rem;border-radius:4px;color:#94a3b8;text-transform:uppercase;">${row.kind}</span>` : '';
           const totalEpBadge = row.episode_total ? `<span style="background:#27273a;padding:0.2rem 0.5rem;border-radius:4px;color:#94a3b8;">${row.episode_total} Episodes</span>` : '';
-          const epHeading = epNum ? ` — Episode ${epNum}` : '';
+          const epHeading = epNum ? ` — Episode ${epNum}${safeEpTitle}` : '';
 
           let epLinksHtml = '';
           if (row.episode_total && row.episode_total > 1) {
@@ -197,8 +219,9 @@ export async function onRequest(context) {
               (formatBadge || '') +
               (totalEpBadge || '') +
             `</div>` +
+            (safeEpSynopsis ? `<section class="crawler-episode-synopsis" style="margin:1.5rem 0;background:#181824;padding:1rem;border-radius:6px;border-left:4px solid #ff1f4a;"><h2>Episode ${epNum} Overview</h2><p>${safeEpSynopsis}</p></section>` : '') +
             `<section class="crawler-synopsis" style="margin:1.5rem 0;">` +
-              `<h2>Synopsis</h2>` +
+              `<h2>Series Synopsis</h2>` +
               `<p>${safeSynopsis}</p>` +
             `</section>` +
             epLinksHtml +
