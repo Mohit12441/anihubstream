@@ -8,7 +8,7 @@ const TIMEOUT_MS = 6000;
  * Edge proxy for AniSkip v2 API with Cloudflare edge caching,
  * relation rules remapping, and negative caching to shield upstream.
  */
-export const onRequestGet = async ({ request }) => {
+export const onRequestGet = async ({ request, env }) => {
   try {
     const url = new URL(request.url);
 
@@ -145,6 +145,34 @@ export const onRequestGet = async ({ request }) => {
       if (type === 'op' || type === 'mixed-op') op ??= formatted;
       else if (type === 'ed' || type === 'mixed-ed') ed ??= formatted;
       else if (type === 'recap') recap ??= formatted;
+    }
+
+    // Edge Write-Through: Persist discovered skip markers into episode.markers in D1
+    const markers = [];
+    if (op) markers.push({ kind: 'intro', start: Math.round(op.start), end: Math.round(op.end), label: op.label });
+    if (ed) markers.push({ kind: 'outro', start: Math.round(ed.start), end: Math.round(ed.end), label: ed.label });
+    if (recap) markers.push({ kind: 'recap', start: Math.round(recap.start), end: Math.round(recap.end), label: recap.label });
+
+    if (env?.ANIHUB && markers.length > 0) {
+      try {
+        const animeRow = await env.ANIHUB.prepare(
+          `SELECT a.id FROM anime a
+           LEFT JOIN anime_id_map m ON m.anime_id = a.id
+           WHERE m.mal_id = ?1 OR json_extract(a.source_ids, '$.mal') = ?1
+           LIMIT 1`,
+        ).bind(targetMalId).first().catch(() => null);
+
+        if (animeRow?.id) {
+          const epId = `${animeRow.id}:${targetEp}`;
+          await env.ANIHUB.prepare(
+            `UPDATE episode SET markers = ?1
+             WHERE (id = ?2 OR (anime_id = ?3 AND n = ?4))
+               AND (markers IS NULL OR markers = '[]')`,
+          ).bind(JSON.stringify(markers), epId, animeRow.id, targetEp).run().catch(() => {});
+        }
+      } catch {
+        // Non-blocking write-through
+      }
     }
 
     return json(

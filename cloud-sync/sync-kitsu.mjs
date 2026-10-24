@@ -126,6 +126,91 @@ async function fetchPage(offset, stats) {
   throw new Error('kitsu: page failed after 5 attempts');
 }
 
+/**
+ * Resolves a Kitsu anime record using Kitsu's external mapping endpoint by MAL ID.
+ */
+export async function fetchKitsuMappingByMalId(malId, stats) {
+  const url = `${BASE}/mappings?filter%5Bexternal_site%5D=myanimelist%2Fanime&filter%5Bexternal_id%5D=${encodeURIComponent(malId)}&include=item`;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    let fetched;
+    try {
+      fetched = await getJSON(url, { lastStartAt: stats.lastStartAt, stats });
+    } catch (err) {
+      const backoff = Math.min(60000, 3000 * attempt);
+      stats.backoffs++;
+      await sleep(backoff);
+      continue;
+    }
+    stats.lastStartAt = fetched.startAt;
+    if (fetched.res.ok && fetched.body) {
+      const item = Array.isArray(fetched.body.included)
+        ? fetched.body.included.find((i) => i.type === 'anime')
+        : null;
+      if (item) return item;
+    }
+    if (fetched.res.status === 404) return null;
+    if (fetched.res.status === 429) {
+      const retryAfter = parseRetryAfter(fetched.res.headers.get('retry-after'));
+      const wait = retryAfter !== null && retryAfter > 0 ? retryAfter : MIN_INTERVAL_MS * attempt;
+      stats.s429++;
+      stats.backoffs++;
+      await sleep(Math.max(wait, MIN_INTERVAL_MS));
+      continue;
+    }
+    if (fetched.res.status >= 400 && fetched.res.status < 500) return null;
+  }
+  return null;
+}
+
+/**
+ * Direct cross-referencing pass: Enriches anime that possess a MAL ID but lack a Kitsu ID or artwork.
+ */
+export async function enrichUnmappedByMalId({ maxEnrich = 10, spend, touch, stats } = {}) {
+  const candidates = await d1All(`
+    SELECT id, source_ids, art, key_art, episode_total
+    FROM anime
+    WHERE (source_ids LIKE '%"mal":%' OR source_ids LIKE '%"mal": %')
+      AND (source_ids NOT LIKE '%"kitsu":%' OR art IS NULL OR art = '' OR key_art IS NULL OR key_art = '')
+    LIMIT ?1
+  `, [maxEnrich]);
+
+  if (!candidates.length) return 0;
+  console.log(`[kitsu] Identified ${candidates.length} unmapped/missing-art anime to cross-reference via MAL ID...`);
+
+  let enriched = 0;
+  for (const r of candidates) {
+    if (stopRequested) break;
+    const sources = safeJson(r.source_ids);
+    const malId = Number(sources.mal);
+    if (!Number.isInteger(malId) || malId <= 0) continue;
+
+    if (!(await spend.reserve())) break;
+
+    const item = await fetchKitsuMappingByMalId(malId, stats);
+    if (item?.attributes) {
+      const a = item.attributes;
+      const kitsuId = Number(item.id);
+      const newArt = artOf(a) ?? r.art;
+      const newCover = coverOf(a) ?? r.key_art;
+      const epTotal = Number.isInteger(a.episodeCount) && a.episodeCount > 0 ? a.episodeCount : r.episode_total;
+
+      await d1Query(
+        `UPDATE anime SET
+           art = COALESCE(?1, art),
+           key_art = COALESCE(?2, key_art),
+           episode_total = COALESCE(?3, episode_total),
+           source_ids = json_patch(COALESCE(source_ids, '{}'), ?4)
+         WHERE id = ?5`,
+        [newArt, newCover, epTotal, JSON.stringify({ kitsu: kitsuId }), r.id],
+      );
+      enriched++;
+      console.log(`[kitsu] Enriched ${r.id} -> Kitsu ID ${kitsuId}`);
+    }
+    await touch();
+  }
+  return enriched;
+}
+
 /** Kitsu rows that matter to us: those whose id already appears in the catalogue. */
 async function catalogueByKitsuId() {
   const rows = await d1All('SELECT id, source_ids FROM anime WHERE source_ids IS NOT NULL');
@@ -228,6 +313,9 @@ async function main() {
   let exitReason = 'complete';
   let pages = 0;
   try {
+    const enrichedCount = await enrichUnmappedByMalId({ maxEnrich: 6, spend, touch, stats });
+    summary.items_processed += enrichedCount;
+
     while (pages < PAGES_PER_RUN && summary.items_processed < MAX_ITEMS) {
       if (stopRequested) { exitReason = 'signal'; break; }
       if (!(await spend.reserve())) { exitReason = 'budget_exhausted'; break; }

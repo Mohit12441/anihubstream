@@ -231,6 +231,38 @@ export const onRequestGet = async ({ request, env }) => {
             if (foundMalId) {
               const directRes = await resolveMegaplayDirect({ malId: foundMalId, ep, audio });
               if (directRes?.streamUrl) {
+                if (env.ANIHUB && foundMalId > 0) {
+                  const animeSlug = title.replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai):/i, '');
+                  env.ANIHUB.prepare(
+                    `INSERT INTO anime_id_map (anime_id, mal_id, confidence, updated_at)
+                     VALUES (?1, ?2, 0.9, datetime('now'))
+                     ON CONFLICT(anime_id) DO UPDATE SET
+                       mal_id = coalesce(excluded.mal_id, anime_id_map.mal_id),
+                       updated_at = datetime('now')`,
+                  ).bind(animeSlug, foundMalId).run().catch(() => {});
+
+                  env.ANIHUB.prepare(
+                    `UPDATE anime SET
+                       source_ids = json_patch(COALESCE(source_ids, '{}'), ?1)
+                     WHERE id = ?2`,
+                  ).bind(JSON.stringify({ mal: foundMalId }), animeSlug).run().catch(() => {});
+
+                  env.ANIHUB.prepare(
+                    `INSERT INTO anime_provider_mapping (anime_id, provider_id, provider_slug, confidence)
+                     VALUES (?1, 'anikoto', ?2, 0.9)
+                     ON CONFLICT(anime_id, provider_id) DO UPDATE SET
+                       provider_slug = excluded.provider_slug,
+                       confidence = excluded.confidence,
+                       updated_at = unixepoch()`,
+                  ).bind(animeSlug, animeSlug).run().catch(() => {});
+
+                  const ttl = Date.now() + 20 * 60 * 1000;
+                  const cacheKey = `stream:${directRes.provider || 'anikoto'}:${foundMalId}:${ep}:${audio}`;
+                  env.ANIHUB.prepare(
+                    'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)',
+                  ).bind(cacheKey, JSON.stringify(directRes), ttl).run().catch(() => {});
+                }
+
                 const proxyBase = `${url.origin}/api/proxy`;
                 const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=https://megaplay.buzz/`;
 
