@@ -72,11 +72,30 @@ export function Genres() {
 
   const [rows, setRows] = useState<Anime[]>([]);
   const [total, setTotal] = useState<number | null>(null);
-  const [busy, setBusy] = useState<'load' | 'more' | null>('load');
+  const [busy, setBusy] = useState<'load' | 'more' | null>(genre ? 'load' : null);
   const [fetchError, setFetchError] = useState<string | null>(null);
   const pageNo = useRef(1);
+  const resultsRef = useRef<HTMLDivElement>(null);
+  const prevGenreRef = useRef<string | null>(genre);
+
+  const active = genre ? genreLabel(genre) : undefined;
+  const [cachedLabel, setCachedLabel] = useState<string>(active || 'Anime');
 
   useEffect(() => {
+    if (active) {
+      setCachedLabel(active);
+    }
+  }, [active]);
+
+  const displayLabel = active || cachedLabel;
+
+  useEffect(() => {
+    if (!genre) {
+      setBusy(null);
+      setFetchError(null);
+      return;
+    }
+
     let live = true;
     setBusy('load');
     setFetchError(null);
@@ -96,10 +115,31 @@ export function Genres() {
     return () => {
       live = false;
     };
-  }, [query]);
+  }, [query, genre]);
+
+  // Smooth scroll into view when a genre is selected
+  useEffect(() => {
+    if (genre && genre !== prevGenreRef.current) {
+      const timer = setTimeout(() => {
+        if (resultsRef.current) {
+          const rect = resultsRef.current.getBoundingClientRect();
+          if (rect.top > window.innerHeight * 0.45 || rect.top < 60) {
+            const headerOffset = 80;
+            const targetY = window.scrollY + rect.top - headerOffset;
+            window.scrollTo({
+              top: targetY,
+              behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            });
+          }
+        }
+      }, 120);
+      return () => clearTimeout(timer);
+    }
+    prevGenreRef.current = genre;
+  }, [genre]);
 
   const loadMore = () => {
-    if (busy) return;
+    if (busy || !genre) return;
     const next = pageNo.current + 1;
     setBusy('more');
     setFetchError(null);
@@ -115,8 +155,6 @@ export function Genres() {
         setBusy(null);
       });
   };
-
-  const active = genre ? genreLabel(genre) : undefined;
 
   return (
     <div className="page genres">
@@ -151,118 +189,151 @@ export function Genres() {
       )}
 
       {status === 'ready' && (
-      <div className="shell genres__body">
-        <GenreGrid genres={GENRES} active={genre} counts={counts} onSelect={pick} />
+        <div className="shell genres__body">
+          <GenreGrid genres={GENRES} active={genre} counts={counts} onSelect={pick} />
 
-        <section className="genres__results" aria-labelledby="genres-results" aria-busy={busy === 'load'}>
-          <div className="filters">
-            <div className="filters__group" role="group" aria-label="Filter by format">
-              {KINDS.map((k) => (
-                <button
-                  key={k}
-                  type="button"
-                  className={`pill${kind === k ? ' is-active' : ''}`}
-                  onClick={() => setKind(k)}
-                  aria-pressed={kind === k}
-                >
-                  {k}
-                </button>
-              ))}
-            </div>
-
-            <div className="filters__group filters__group--right">
-              <label className="select">
-                <ArrowDownUp size={14} aria-hidden="true" />
-                <span className="sr-only">Sort anime</span>
-                <select value={sort} onChange={(e) => setSort(e.target.value as SortId)}>
-                  {SORTS.map((s) => (
-                    <option key={s.id} value={s.id}>
-                      Sort: {s.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              {genre && (
-                <button type="button" className="pill" style={{ '--pc': '#a24bff' } as React.CSSProperties} onClick={() => setParams(new URLSearchParams())}>
-                  <X size={13} aria-hidden="true" /> {active}
-                </button>
-              )}
-            </div>
-          </div>
-
-          <div className="sec-head">
-            <h2 id="genres-results">
-              <Sparkles size={19} aria-hidden="true" />
-              {active ? `${active} anime` : 'All anime'}
-            </h2>
-            <p className="sec-head__hint">
-              {total === null ? '—' : total} {total === 1 ? 'result' : 'results'}
-              {kind !== 'All' ? ` · ${kind} only` : ''}
-            </p>
-          </div>
-
-          {busy === 'load' && rows.length === 0 ? (
-            <CatalogueLoading grid rows={6} />
-          ) : fetchError && rows.length === 0 ? (
-            <CatalogueError error={fetchError} onRetry={() => setParams(new URLSearchParams(params))} />
-          ) : rows.length ? (
-            <>
-              <ul className="pgrid">
-                {rows.map((a) => (
-                  <li key={a.id}>
-                    <AnimeCard
-                      anime={a}
-                      variant="poster"
-                      badge={a.status === 'Ongoing' ? 'ONGOING' : a.status === 'Upcoming' ? 'UPCOMING' : undefined}
-                    />
-                  </li>
-                ))}
-              </ul>
-              <div className="catalogue__more">
-                {busy === 'more' ? (
-                  <span className="btn btn--ghost" role="status">
-                    Loading more…
-                  </span>
-                ) : fetchError ? (
-                  <>
-                    <span className="catalogue__more-err" role="alert">
-                      {fetchError}
-                    </span>
-                    <button type="button" className="btn btn--sm btn--ghost" onClick={loadMore}>
-                      Try again
-                    </button>
-                  </>
-                ) : total !== null && rows.length < total ? (
-                  <button type="button" className="btn btn--ghost" onClick={loadMore}>
-                    Load more — {rows.length} of {total}
-                  </button>
-                ) : (
-                  <span className="catalogue__more-end" role="status">
-                    All {rows.length} shown.
-                  </span>
-                )}
-              </div>
-            </>
-          ) : (
-            <div className="empty" role="status">
-              <p>
-                <b>No titles in the catalogue match this combination.</b>
-                Try a different format, or clear the genre filter.
-              </p>
-              <button
-                type="button"
-                className="btn btn--sm btn--ghost"
-                onClick={() => {
-                  setKind('All');
-                  setParams(new URLSearchParams());
-                }}
-              >
-                Reset filters
-              </button>
+          {!genre && (
+            <div className="genre-prompt" role="status">
+              <span>
+                <Sparkles size={16} aria-hidden="true" />
+                Select any genre above to reveal its top anime collection
+              </span>
             </div>
           )}
-        </section>
-      </div>
+
+          <div
+            id="genres-reveal-section"
+            ref={resultsRef}
+            className={`genre-reveal${genre ? ' is-open' : ''}`}
+            aria-hidden={!genre}
+          >
+            <div className="genre-reveal__inner">
+              <div className="genre-reveal__content">
+                <div className="genre-reveal__header">
+                  <div className="genre-reveal__title-group">
+                    <span className="genre-reveal__badge">
+                      <Sparkles size={13} aria-hidden="true" />
+                      <span>{displayLabel}</span>
+                    </span>
+                    <h2 id="genres-results" className="genre-reveal__title">
+                      {displayLabel} Anime
+                    </h2>
+                    <span className="genre-reveal__meta">
+                      {total === null ? 'Loading titles…' : `${total} ${total === 1 ? 'title' : 'titles'} found`}
+                      {kind !== 'All' ? ` · ${kind} only` : ''}
+                    </span>
+                  </div>
+
+                  <button
+                    type="button"
+                    className="genre-reveal__close-btn"
+                    onClick={() => setParams(new URLSearchParams())}
+                    aria-label={`Close ${displayLabel} anime reveal section`}
+                  >
+                    <X size={15} aria-hidden="true" />
+                    <span>Close</span>
+                  </button>
+                </div>
+
+                <section className="genres__results" aria-labelledby="genres-results" aria-busy={busy === 'load'}>
+                  <div className="filters">
+                    <div className="filters__group" role="group" aria-label="Filter by format">
+                      {KINDS.map((k) => (
+                        <button
+                          key={k}
+                          type="button"
+                          className={`pill${kind === k ? ' is-active' : ''}`}
+                          onClick={() => setKind(k)}
+                          aria-pressed={kind === k}
+                        >
+                          {k}
+                        </button>
+                      ))}
+                    </div>
+
+                    <div className="filters__group filters__group--right">
+                      <label className="select">
+                        <ArrowDownUp size={14} aria-hidden="true" />
+                        <span className="sr-only">Sort anime</span>
+                        <select value={sort} onChange={(e) => setSort(e.target.value as SortId)}>
+                          {SORTS.map((s) => (
+                            <option key={s.id} value={s.id}>
+                              Sort: {s.label}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+
+                  {busy === 'load' && rows.length === 0 ? (
+                    <CatalogueLoading grid rows={6} />
+                  ) : fetchError && rows.length === 0 ? (
+                    <CatalogueError error={fetchError} onRetry={() => setParams(new URLSearchParams(params))} />
+                  ) : rows.length ? (
+                    <>
+                      <ul className="pgrid">
+                        {rows.map((a, idx) => (
+                          <li
+                            key={a.id}
+                            className="genre-card-animate"
+                            style={{ '--card-index': idx } as React.CSSProperties}
+                          >
+                            <AnimeCard
+                              anime={a}
+                              variant="poster"
+                              badge={a.status === 'Ongoing' ? 'ONGOING' : a.status === 'Upcoming' ? 'UPCOMING' : undefined}
+                            />
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="catalogue__more">
+                        {busy === 'more' ? (
+                          <span className="btn btn--ghost" role="status">
+                            Loading more…
+                          </span>
+                        ) : fetchError ? (
+                          <>
+                            <span className="catalogue__more-err" role="alert">
+                              {fetchError}
+                            </span>
+                            <button type="button" className="btn btn--sm btn--ghost" onClick={loadMore}>
+                              Try again
+                            </button>
+                          </>
+                        ) : total !== null && rows.length < total ? (
+                          <button type="button" className="btn btn--ghost" onClick={loadMore}>
+                            Load more — {rows.length} of {total}
+                          </button>
+                        ) : (
+                          <span className="catalogue__more-end" role="status">
+                            All {rows.length} shown.
+                          </span>
+                        )}
+                      </div>
+                    </>
+                  ) : (
+                    <div className="empty" role="status">
+                      <p>
+                        <b>No titles in the catalogue match this combination.</b>
+                        Try a different format, or clear the format filter.
+                      </p>
+                      <button
+                        type="button"
+                        className="btn btn--sm btn--ghost"
+                        onClick={() => {
+                          setKind('All');
+                        }}
+                      >
+                        Reset format filter
+                      </button>
+                    </div>
+                  )}
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

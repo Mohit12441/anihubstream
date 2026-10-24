@@ -27,6 +27,8 @@ export function GenreGrid({ genres, active, counts, onSelect }: Props) {
                 onSelect(g.id);
               }}
               aria-pressed={on}
+              aria-expanded={on}
+              aria-controls="genres-reveal-section"
             >
               <span className="gcard__art">
                 <img src={g.art} alt="" aria-hidden="true" loading="lazy" decoding="async" />
