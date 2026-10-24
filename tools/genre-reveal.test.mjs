@@ -35,6 +35,12 @@ test('Genres Animated Reveal Component Contract', () => {
     genresPage.includes('displayLabel'),
     'Genres.tsx must use displayLabel to smoothly preserve genre title during collapse'
   );
+
+  // Must have removed the redundant banner lede line
+  assert.ok(
+    !genresPage.includes('Twelve shelves, one catalogue'),
+    'Genres.tsx must not contain the removed "Twelve shelves, one catalogue" text'
+  );
 });
 
 test('GenreGrid Accessible Controls Contract', () => {
@@ -74,5 +80,15 @@ test('Genre Reveal CSS & Reduced Motion Tokens', () => {
   assert.ok(
     css.includes('@media (prefers-reduced-motion: reduce)'),
     'pages.css must respect prefers-reduced-motion'
+  );
+
+  // Compact poster styling
+  assert.ok(
+    css.includes('.genres__results .pgrid {'),
+    'pages.css must define compact .genres__results .pgrid sizing'
+  );
+  assert.ok(
+    css.includes('minmax(min(100%, 142px), 1fr)'),
+    'pages.css must use sleek 142px minimum column width for genre anime posters'
   );
 });

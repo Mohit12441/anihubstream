@@ -170,10 +170,6 @@ export function Genres() {
               <span className="banner__title-b">Genres</span>
             </h1>
             <p className="banner__sub">Find your next favorite anime</p>
-            <p className="banner__lede">
-              Twelve shelves, one catalogue. Pick a genre to filter the grid below — every count comes from the
-              titles this site's database returns.
-            </p>
           </div>
         </div>
       </header>

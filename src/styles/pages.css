@@ -423,6 +423,46 @@
   gap: 8px;
 }
 
+/* Compact anime posters for genre reveal results */
+.genres__results .pgrid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 142px), 1fr));
+  gap: clamp(10px, 1.2vw, 16px);
+}
+
+.genres__results .acard--poster .acard__foot {
+  padding: 8px 10px 10px;
+}
+
+.genres__results .acard--poster .acard__title {
+  font-size: 13.5px;
+  line-height: 1.3;
+}
+
+.genres__results .acard--poster .card-meta {
+  font-size: 11.5px;
+  gap: 6px;
+}
+
+@media (max-width: 1080px) {
+  .genres__results .pgrid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 124px), 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .genres__results .pgrid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 105px), 1fr));
+    gap: 8px;
+  }
+  .genres__results .acard--poster .acard__foot {
+    padding: 6px 8px 8px;
+  }
+  .genres__results .acard--poster .acard__title {
+    font-size: 12px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .genre-reveal,
   .genre-reveal__inner,
