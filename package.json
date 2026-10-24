@@ -24,7 +24,9 @@
     "sync:franchises": "node tools/auto-sync-franchises.mjs",
     "sync:schedule": "node tools/sync-ongoing-schedules.mjs",
     "gsc:status": "node tools/gsc-telemetry.mjs",
-    "gsc:analytics": "node tools/gsc-telemetry.mjs --analytics"
+    "gsc:analytics": "node tools/gsc-telemetry.mjs --analytics",
+    "indexnow": "node tools/indexnow.mjs",
+    "indexnow:sitemap": "node tools/indexnow.mjs --sitemap"
   },
   "dependencies": {
     "hls.js": "^1.7.3",
