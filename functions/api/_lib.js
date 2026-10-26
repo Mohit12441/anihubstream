@@ -455,7 +455,7 @@ export async function resolveFranchiseSeasons(db, card) {
 
     if (baseSlug && baseSlug.length >= 4) {
       const { results: slugSiblings } = await db.prepare(
-        'SELECT id, title, season, year, kind FROM anime WHERE (id = ?1 OR id LIKE ?2) AND kind IN (\'TV\', \'Movie\') LIMIT 15'
+        'SELECT id, title, season, year, kind FROM anime WHERE (id = ?1 OR id LIKE ?2) AND kind IN (\'TV\', \'Movie\', \'ONA\', \'OVA\', \'Special\') LIMIT 15'
       ).bind(baseSlug, baseSlug + '-%').all().catch(() => ({ results: [] }));
       for (const s of slugSiblings || []) {
         if (!seasonsMap.has(s.id)) {
