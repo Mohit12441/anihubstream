@@ -77,3 +77,38 @@ test('Schedule page includes quick filters for Today, Upcoming, and Released', (
     'Schedule.tsx must include Episode Released quick filter'
   );
 });
+
+test('Watch.tsx auto-expands virtual episode shells for high episode numbers (e.g. Ep 61)', () => {
+  const watchSrc = fs.readFileSync(path.resolve(ROOT, 'src/pages/Watch.tsx'), 'utf8');
+
+  // Must support parsing and expanding up to requestedEp
+  assert.ok(
+    watchSrc.includes('validRequested'),
+    'Watch.tsx must validate requested episode number from URL'
+  );
+
+  // Must expand missing episode shells up to count
+  assert.ok(
+    watchSrc.includes('// Expand missing episode shells up to count'),
+    'Watch.tsx must expand missing shells up to requested episode count'
+  );
+
+  // Must not clamp to 1 when navigating to high episode
+  assert.ok(
+    watchSrc.includes('for (let i = existingCount + 1; i <= count; i++)'),
+    'Watch.tsx must loop and populate shells from existingCount + 1 up to count'
+  );
+});
+
+test('sync-episodes supports high episode numbers without artificial 50-episode cap', () => {
+  const syncSrc = fs.readFileSync(path.resolve(ROOT, 'cloud-sync/sync-episodes.mjs'), 'utf8');
+
+  assert.ok(
+    !syncSrc.includes('Math.min(Math.max(anime.episode_total || 1, 1), 50)'),
+    'sync-episodes must not artificially cap ongoing shows at 50 episodes'
+  );
+  assert.ok(
+    syncSrc.includes('2000'),
+    'sync-episodes must support episode ceiling up to 2000 for long-running series'
+  );
+});

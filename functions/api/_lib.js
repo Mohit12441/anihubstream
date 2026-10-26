@@ -21,6 +21,141 @@ export const json = (data, { status = 200, cache = 'no-store', isPrivate = false
 export const ok = (data, opts = {}) => json(data, { cache: 'public, max-age=60', ...opts });
 export const fail = (status, code, message) => json({ error: code, message }, { status });
 
+/* --- Zero-Read Edge & In-Memory Shield ----------------------------------- */
+const devMemoryCache = new Map();
+const inFlightRequests = new Map();
+
+function normalizeCacheKey(requestUrl, allowedParams) {
+  const url = new URL(requestUrl);
+  const cleanParams = new URLSearchParams();
+  if (Array.isArray(allowedParams)) {
+    for (const key of allowedParams) {
+      if (url.searchParams.has(key)) {
+        cleanParams.set(key, url.searchParams.get(key).toLowerCase().trim());
+      }
+    }
+  } else {
+    const keys = Array.from(url.searchParams.keys()).sort();
+    for (const k of keys) {
+      if (!k.startsWith('utm_') && k !== '_' && k !== 'fbclid') {
+        cleanParams.set(k, url.searchParams.get(k).trim());
+      }
+    }
+  }
+  const search = cleanParams.toString();
+  return `${url.origin}${url.pathname}${search ? '?' + search : ''}`;
+}
+
+export async function withEdgeCache(request, env, ttlSeconds, computeFn, { allowedParams = null, waitUntil = null } = {}) {
+  if (!request || request.method !== 'GET') {
+    return computeFn();
+  }
+
+  const url = new URL(request.url);
+  const bypass = url.searchParams.get('bypass') === '1' || request.headers?.get?.('x-bypass-cache') === '1';
+  if (bypass) {
+    const fresh = await computeFn();
+    fresh.headers.set('X-D1-Read', '1-d1-bypassed');
+    return fresh;
+  }
+
+  const normalizedUrl = normalizeCacheKey(request.url, allowedParams);
+  const hasCloudflareCache = typeof caches !== 'undefined' && caches.default;
+  const cacheKeyReq = new Request(normalizedUrl, { method: 'GET' });
+
+  // 1. Check Cloudflare Edge Cache (Production)
+  if (hasCloudflareCache) {
+    try {
+      const match = await caches.default.match(cacheKeyReq);
+      if (match) {
+        const hit = new Response(match.body, match);
+        hit.headers.set('X-D1-Read', '0-edge-cache-hit');
+        return hit;
+      }
+    } catch {
+      // Ignore cache match errors and fallback
+    }
+  } else {
+    // Local Dev In-Memory Cache
+    const devItem = devMemoryCache.get(normalizedUrl);
+    if (devItem && Date.now() < devItem.expires) {
+      const hit = new Response(devItem.body, {
+        status: devItem.status,
+        headers: new Headers(devItem.headers),
+      });
+      hit.headers.set('X-D1-Read', '0-dev-memory-hit');
+      return hit;
+    }
+  }
+
+  // 2. In-Flight Single-Flight (prevents cache stampede / concurrent duplicate D1 queries)
+  let computePromise = inFlightRequests.get(normalizedUrl);
+  let isPiggyback = false;
+
+  if (computePromise) {
+    isPiggyback = true;
+  } else {
+    computePromise = (async () => {
+      try {
+        return await computeFn();
+      } finally {
+        inFlightRequests.delete(normalizedUrl);
+      }
+    })();
+    inFlightRequests.set(normalizedUrl, computePromise);
+  }
+
+  const freshRes = await computePromise;
+  if (!freshRes) return freshRes;
+
+  const responseToCache = freshRes.clone();
+
+  if (isPiggyback) {
+    const piggybackRes = new Response(responseToCache.body, responseToCache);
+    piggybackRes.headers.set('X-D1-Read', '0-inflight-piggyback');
+    return piggybackRes;
+  }
+
+  // 3. Populate Cache if successful (200 OK)
+  if (responseToCache.status === 200) {
+    const publicHeaders = new Headers(responseToCache.headers);
+    publicHeaders.set(
+      'Cache-Control',
+      `public, max-age=${ttlSeconds}, s-maxage=${ttlSeconds}, stale-while-revalidate=300`
+    );
+    publicHeaders.set('Vary', 'Accept-Encoding');
+    publicHeaders.delete('Set-Cookie'); // Crucial: Set-Cookie prevents CDN caching!
+    publicHeaders.set('X-D1-Read', '1-d1-fresh');
+
+    const cachedResponse = new Response(responseToCache.body, {
+      status: responseToCache.status,
+      statusText: responseToCache.statusText,
+      headers: publicHeaders,
+    });
+
+    if (hasCloudflareCache) {
+      const putPromise = caches.default.put(cacheKeyReq, cachedResponse.clone()).catch(() => {});
+      if (waitUntil) waitUntil(putPromise);
+      else await putPromise;
+    } else {
+      try {
+        const bodyText = await cachedResponse.clone().text();
+        devMemoryCache.set(normalizedUrl, {
+          body: bodyText,
+          status: cachedResponse.status,
+          headers: Object.fromEntries(cachedResponse.headers.entries()),
+          expires: Date.now() + ttlSeconds * 1000,
+        });
+      } catch {}
+    }
+
+    return cachedResponse;
+  }
+
+  return responseToCache;
+}
+
+
 function cookieHeader(request) {
   return request.headers.get('cookie') || request.headers.get('Cookie') || '';
 }
@@ -171,6 +306,7 @@ export const cardFromRow = (r) => ({
           date: r.sched_date,
           time: r.sched_time,
           season: r.sched_season,
+          episode: r.sched_episode ?? null,
         },
   episodeCount: r.episode_count,
   episodeTotal: r.episode_total ?? null,
@@ -402,7 +538,7 @@ export const findAnimeByCandidates = async (db, candidates) => {
 export const CARD_COLUMNS = `
   a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status,
   a.art, a.key_art, a.accent, a.synopsis, a.rank, a.trend_rank, a.alt_seasons,
-  a.sched_day, a.sched_day_label, a.sched_date, a.sched_time, a.sched_season,
+  a.sched_day, a.sched_day_label, a.sched_date, a.sched_time, a.sched_season, a.sched_episode,
   a.episode_total, a.source_ids, a.skip_key_id, a.skip_key_space,
   (SELECT group_concat(genre_id) FROM anime_genre ag WHERE ag.anime_id = a.id) AS genre_ids,
   (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) AS episode_count

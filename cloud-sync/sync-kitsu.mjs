@@ -17,7 +17,7 @@
 
 import { randomUUID } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { assertLiveColumns, assertLiveTables, d1All, insertRows, parseRetryAfter, schemaFaults } from './d1.mjs';
+import { assertLiveColumns, assertLiveTables, d1All, d1Query, insertRows, parseRetryAfter, schemaFaults } from './d1.mjs';
 import {
   acquireLease, budget, getCursor, leaseKeeper, recordRun, releaseLease, setCursor, utcDay,
 } from './state.mjs';

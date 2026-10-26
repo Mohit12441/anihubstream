@@ -80,9 +80,10 @@ interface ApiResponse<T> {
 ## 9. Automated Regression Testing & Verification
 Before claiming any bug fix or feature complete:
 1. Run TypeScript compilation check (`npm run build` or `npx tsc --noEmit`).
-2. Verify local server health: `curl -s http://127.0.0.1:8899/api/health`.
-3. Test edge endpoints directly against `127.0.0.1:8899` or bridge `127.0.0.1:8795`.
-4. Provide tangible output logs as evidence before asserting success.
+2. Run edge cache regression suite (`npm run test:cache`).
+3. Verify local server health: `curl -s http://127.0.0.1:8899/api/health`.
+4. Test edge endpoints directly against `127.0.0.1:8899` or bridge `127.0.0.1:8795`.
+5. Provide tangible output logs as evidence before asserting success.
 
 ---
 
@@ -91,7 +92,21 @@ Whenever executing non-trivial features, refactors, or bug fixes:
 1. **DISCOVER**: Map files, schema, and contracts.
 2. **RESEARCH**: Identify unknowns and authoritative references.
 3. **REASON**: Propose at least 2 solution approaches with tradeoffs.
-4. **PLAN**: Architecture approval gate.
+4. **PLAN (Mandatory Pre-Flight Audit Gate)**: Before touching any code, the agent MUST automatically perform and present a 3-part pre-mortem:
+   - **Plan Loopholes & Traps**: Hidden race conditions, cache-bypass traps, circular logic, or silent regressions.
+   - **Platform & Environment Limitations**: Free-tier quotas (Cloudflare D1, Pages, GitHub Actions), memory bounds, browser/WebKit constraints.
+   - **Pre-Emptive Solutions**: Concrete code/architectural safeguards designed into the plan before writing code.
 5. **IMPLEMENT**: Minimal surgical diffs.
-6. **VERIFY**: Deterministic builds and test runs.
+6. **VERIFY**: Deterministic builds and test runs (`npm run build`, `npm run test:cache`, `npm test`).
 7. **REVIEW**: 13-point adversarial review against regressions.
+
+---
+
+## 11. Zero-Read D1 Edge Caching Law
+To keep AniHubStream 100% free forever on Cloudflare's free tier, D1 row reads must be minimized to near-zero:
+- **Mandatory Wrapper**: All public catalog read endpoints (`/api/home`, `/api/anime/*`, `/api/genres`, `/api/schedule`, `/api/search/*`) MUST be wrapped in `withEdgeCache(...)` from `functions/api/_lib.js`.
+- **Never Query D1 Directly on Public GETs**: Any new public endpoint must check `caches.default` / `withEdgeCache` first. Direct queries without caching are strictly forbidden.
+- **Cache Normalization**: Query parameters must be stripped of tracking tags (`utm_*`, `fbclid`) and sorted to avoid cache-key explosion.
+- **Cookie Stripping**: Public cached endpoints must delete `Set-Cookie` and `Cookie` dependencies so Cloudflare's global CDN caches responses with 0 D1 queries.
+- **Single-Flight Concurrency**: Any database fetch wrapped in `withEdgeCache` automatically prevents thundering herds via worker-level Promise coalescing.
+- **Verification Gate**: Any change to API endpoints must pass `npm run test:cache`.

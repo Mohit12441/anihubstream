@@ -1,4 +1,4 @@
-import { CARD_COLUMNS, HttpError, cardFromRow, cleanDisplayTitle, deriveSlugCandidates, episodeFromRow, errorResponse, findAnimeByCandidates, ok, resolveFranchiseSeasons } from '../_lib.js';
+import { CARD_COLUMNS, HttpError, cardFromRow, cleanDisplayTitle, deriveSlugCandidates, episodeFromRow, errorResponse, findAnimeByCandidates, ok, resolveFranchiseSeasons, withEdgeCache } from '../_lib.js';
 
 const SLUG_REDIRECTS = {
   'demon-slayer-kimetsu-no-yaiba': 'demon-slayer',
@@ -12,7 +12,8 @@ const SLUG_REDIRECTS = {
 
 const PROVIDER_PREFIX_REGEX = /^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai):/i;
 
-export const onRequestGet = async ({ request, params, env }) => {
+export const onRequestGet = async ({ request, params, env, waitUntil }) => {
+  return withEdgeCache(request, env, 86400, async () => {
   try {
     const id = decodeURIComponent(params.id);
     if (!/^[A-Za-z0-9_.:\-!()'"+~@, %]{1,200}$/.test(id)) {
@@ -406,4 +407,5 @@ export const onRequestGet = async ({ request, params, env }) => {
   } catch (err) {
     return errorResponse(err);
   }
+  }, { waitUntil });
 };

@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, cardFromRow, errorResponse, foldSearch, ok, safeLikePattern } from '../_lib.js';
+import { HttpError, cardFromRow, errorResponse, foldSearch, ok, safeLikePattern, withEdgeCache } from '../_lib.js';
 
 const MEILISEARCH_TIMEOUT_MS = 2_000;
 
@@ -10,7 +10,8 @@ const MEILISEARCH_TIMEOUT_MS = 2_000;
  *
  * GET /api/search/instant?q=<term>&limit=<n>
  */
-export const onRequestGet = async ({ request, env }) => {
+export const onRequestGet = async ({ request, env, waitUntil }) => {
+  return withEdgeCache(request, env, 1800, async () => {
   try {
     const url = new URL(request.url);
     const q = (url.searchParams.get('q') || '').trim();
@@ -117,4 +118,5 @@ export const onRequestGet = async ({ request, env }) => {
   } catch (err) {
     return errorResponse(err);
   }
+  }, { allowedParams: ['q', 'limit'], waitUntil });
 };

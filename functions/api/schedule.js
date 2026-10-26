@@ -1,8 +1,9 @@
-import { CARD_COLUMNS, cardFromRow, errorResponse, ok, strParam } from './_lib.js';
+import { CARD_COLUMNS, cardFromRow, errorResponse, ok, strParam, withEdgeCache } from './_lib.js';
 
 const WEEK = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 
-export const onRequestGet = async ({ request, env }) => {
+export const onRequestGet = async ({ request, env, waitUntil }) => {
+  return withEdgeCache(request, env, 3600, async () => {
   try {
     const url = new URL(request.url);
     const season = strParam(url, 'season');
@@ -25,4 +26,5 @@ export const onRequestGet = async ({ request, env }) => {
   } catch (err) {
     return errorResponse(err);
   }
+  }, { allowedParams: ['season'], waitUntil });
 };

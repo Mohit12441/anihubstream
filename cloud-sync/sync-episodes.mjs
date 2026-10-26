@@ -102,10 +102,11 @@ export async function syncEpisodes({ limit = EPISODES_BATCH_LIMIT, force = false
     // 1. Find anime needing episode generation:
     // Prioritize ongoing anime, then recently added anime where episode count < episode_total
     const animeNeedingEps = await d1All(`
-      SELECT a.id, a.title, a.kind, a.art, a.key_art, a.synopsis, a.source_ids, a.episode_total,
+      SELECT a.id, a.title, a.kind, a.art, a.key_art, a.synopsis, a.source_ids, a.episode_total, a.status,
              (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) as current_episodes
       FROM anime a
-      WHERE COALESCE(a.episode_total, 1) > (SELECT count(*) FROM episode e WHERE e.anime_id = a.id)
+      WHERE (a.status = 'Ongoing' AND (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) < COALESCE(a.episode_total, 2000))
+         OR (a.episode_total IS NOT NULL AND a.episode_total > (SELECT count(*) FROM episode e WHERE e.anime_id = a.id))
       ORDER BY (CASE WHEN a.status = 'Ongoing' THEN 0 ELSE 1 END), a.rating DESC
       LIMIT 10
     `);
@@ -123,7 +124,7 @@ export async function syncEpisodes({ limit = EPISODES_BATCH_LIMIT, force = false
       const malId = Number(sources.mal) || null;
       const kitsuId = sources.kitsu || null;
 
-      const targetTotal = Math.min(Math.max(anime.episode_total || 1, 1), 50);
+      const targetTotal = Math.min(Math.max(anime.episode_total || (anime.status === 'Ongoing' ? (anime.current_episodes || 0) + 15 : 24), 1), 2000);
       const startEp = (anime.current_episodes || 0) + 1;
 
       // Fetch Kitsu episodes for enrichment if available

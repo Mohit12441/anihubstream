@@ -106,20 +106,55 @@ export function Watch() {
 
   const episodes: Episode[] = useMemo(() => {
     if (!anime) return [];
-    if (anime.episodes && anime.episodes.length > 0) return anime.episodes;
-    if (anime.status === 'Upcoming') return [];
     const isMovie = (anime.kind && anime.kind.toLowerCase() === 'movie') || anime.title.toLowerCase().includes('movie');
-    const count = isMovie ? 1 : Math.max(1, Math.min(anime.episodeTotal || 1, 2000));
-    return Array.from({ length: count }, (_, i) => ({
-      n: i + 1,
-      title: `Episode ${i + 1}`,
-      runtime: isMovie ? '90m' : '24m',
-      thumb: anime.key || anime.poster || '',
-      synopsis: isMovie ? anime.synopsis : '',
-      markers: [],
-      airdate: null,
-    }));
-  }, [anime]);
+    if (isMovie) {
+      if (anime.episodes && anime.episodes.length > 0) return anime.episodes;
+      return [{
+        n: 1,
+        title: anime.title || 'Movie',
+        runtime: '90m',
+        thumb: anime.key || anime.poster || '',
+        synopsis: anime.synopsis || '',
+        markers: [],
+        airdate: null,
+      }];
+    }
+
+    const requestedEp = Number.parseInt(ep ?? '', 10);
+    const validRequested = Number.isFinite(requestedEp) && requestedEp > 0 ? requestedEp : 1;
+    const queryEp = Number.parseInt(params.get('ep') ?? '', 10);
+    const validQueryEp = Number.isFinite(queryEp) && queryEp > 0 ? queryEp : 1;
+
+    const count = Math.max(
+      1,
+      Math.min(
+        Math.max(anime.episodeTotal || 0, anime.episodeCount || 0, validRequested, validQueryEp, anime.episodes?.length || 0),
+        2000
+      )
+    );
+
+    const baseList = (anime.episodes && anime.episodes.length > 0) ? [...anime.episodes] : [];
+    const existingCount = baseList.length;
+
+    if (existingCount >= count) {
+      return baseList;
+    }
+
+    // Expand missing episode shells up to count so schedule links and deep links never clamp down to ep 1
+    for (let i = existingCount + 1; i <= count; i++) {
+      baseList.push({
+        n: i,
+        title: `Episode ${i}`,
+        runtime: '24m',
+        thumb: anime.key || anime.poster || '',
+        synopsis: '',
+        markers: [],
+        airdate: null,
+      });
+    }
+
+    return baseList;
+  }, [anime, ep, params]);
 
   const { genreLabel } = useCatalogue();
   const { has, isBusy, toggle, favourites, toggleFavourite, recordPosition } = useLibrary();

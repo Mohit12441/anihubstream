@@ -57,6 +57,7 @@ export interface Schedule {
   date: string;
   time: string;
   season: SeasonKey;
+  episode?: number | null;
 }
 
 
@@ -119,6 +120,7 @@ export interface ScheduleEntry {
   date: string;
   time: string;
   season: SeasonKey;
+  episode?: number | null;
 }
 
 export const DAYS = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'] as const;

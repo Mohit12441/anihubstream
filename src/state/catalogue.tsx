@@ -116,6 +116,7 @@ export function CatalogueProvider({ children }: { children: ReactNode }) {
                       date: c.schedule.date,
                       time: c.schedule.time,
                       season: c.schedule.season,
+                      episode: (c.schedule as any).episode ?? null,
                     },
                   ]
                 : [],

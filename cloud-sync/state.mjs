@@ -133,12 +133,24 @@ export const budget = (endpoint, limit, { day = utcDay(), checkEvery = 25 } = {}
 
 /* ------------------------------------------------------------ run records (R15) */
 
-export const recordRun = ({ runId, endpoint, startedAt, durationMs, exitReason, summary }) =>
-  d1Query(`INSERT INTO sync_runs (run_id, endpoint, started_at, duration_ms, exit_reason, summary)
+export const recordRun = (arg1, arg2, arg3) => {
+  let runId, endpoint, startedAt, durationMs, exitReason, summary;
+  if (typeof arg1 === 'object' && arg1 !== null && !Array.isArray(arg1)) {
+    ({ runId, endpoint, startedAt, durationMs, exitReason, summary } = arg1);
+  } else {
+    runId = String(arg1 || 'run');
+    endpoint = runId.split('-')[0] || runId;
+    startedAt = typeof arg2 === 'number' ? arg2 : Date.now();
+    durationMs = Date.now() - startedAt;
+    summary = arg3 || {};
+    exitReason = summary?.status || summary?.exit_reason || 'ok';
+  }
+  return d1Query(`INSERT INTO sync_runs (run_id, endpoint, started_at, duration_ms, exit_reason, summary)
     VALUES (?1, ?2, ?3, ?4, ?5, ?6)
     ON CONFLICT(run_id) DO UPDATE SET duration_ms = excluded.duration_ms, exit_reason = excluded.exit_reason, summary = excluded.summary`, [
-    runId, endpoint, startedAt, durationMs, exitReason, JSON.stringify(summary),
+    runId || String(Date.now()), endpoint || 'sync', startedAt || Date.now(), durationMs || 0, exitReason || 'ok', JSON.stringify(summary || {}),
   ]);
+};
 
 /** The most recent runs, for the health check and for post-mortems. */
 export const recentRuns = (endpoint, limit = 10) =>

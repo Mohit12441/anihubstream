@@ -4,7 +4,7 @@ import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import fs from 'node:fs';
 import { seasonKey } from './season.mjs';
-import { d1All, d1Query } from '../cloud-sync/d1.mjs';
+import { d1All, d1First, d1Query } from '../cloud-sync/d1.mjs';
 
 const isRemote = process.argv.includes('--remote');
 const WEEK = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
@@ -85,7 +85,8 @@ async function main() {
         sched_day_label = NULL,
         sched_date = NULL,
         sched_time = NULL,
-        sched_season = NULL
+        sched_season = NULL,
+        sched_episode = NULL
       WHERE sched_day IS NOT NULL AND status IN ('Finished', 'Cancelled', 'Upcoming')
     `).run();
     if (cleaned.changes > 0) {
@@ -101,6 +102,7 @@ async function main() {
         a.sched_date,
         a.sched_time,
         a.sched_season,
+        a.sched_episode,
         COALESCE(m.anilist_id, CAST(json_extract(a.source_ids, '$.anilist') AS INTEGER)) as anilist_id
       FROM anime a
       LEFT JOIN anime_id_map m ON a.id = m.anime_id
@@ -116,7 +118,8 @@ async function main() {
           sched_day_label = NULL,
           sched_date = NULL,
           sched_time = NULL,
-          sched_season = NULL
+          sched_season = NULL,
+        sched_episode = NULL
         WHERE sched_day IS NOT NULL AND status IN ('Finished', 'Cancelled', 'Upcoming')
       `);
     } catch (err) {
@@ -134,6 +137,7 @@ async function main() {
         a.sched_date,
         a.sched_time,
         a.sched_season,
+        a.sched_episode,
         COALESCE(m.anilist_id, CAST(json_extract(a.source_ids, '$.anilist') AS INTEGER)) as anilist_id
       FROM anime a
       LEFT JOIN anime_id_map m ON a.id = m.anime_id
@@ -151,6 +155,7 @@ async function main() {
           a.sched_date,
           a.sched_time,
           a.sched_season,
+        a.sched_episode,
           COALESCE(m.anilist_id, CAST(json_extract(a.source_ids, '$.anilist') AS INTEGER)) as anilist_id
         FROM anime a
         LEFT JOIN anime_id_map m ON a.id = m.anime_id
@@ -198,6 +203,9 @@ async function main() {
         const timeStr = `${hours}:${mins}`;
         const sKey = seasonKey(d);
 
+        const nextEpNum = Number(m.nextAiringEpisode.episode) || 0;
+        const latestAiredEp = nextEpNum > 1 ? nextEpNum - 1 : (nextEpNum === 1 ? 1 : 0);
+
         // Delta check: skip write if already matching stored values
         const isUnchanged =
           existing &&
@@ -205,34 +213,67 @@ async function main() {
           existing.sched_day_label === dayLabel &&
           existing.sched_date === dateStr &&
           existing.sched_time === timeStr &&
-          existing.sched_season === sKey;
+          existing.sched_season === sKey &&
+          existing.sched_episode === (nextEpNum || null);
 
-        if (isUnchanged) {
-          unchangedCount++;
-          continue;
-        }
-
-        if (db) {
-          db.prepare(`
-            UPDATE anime SET
-              sched_day = ?1,
-              sched_day_label = ?2,
-              sched_date = ?3,
-              sched_time = ?4,
-              sched_season = ?5
-            WHERE id = ?6
-          `).run(schedDay, dayLabel, dateStr, timeStr, sKey, animeSlug);
-        } else if (hasRestCreds) {
-          await d1Query(
-            `UPDATE anime SET sched_day = ?1, sched_day_label = ?2, sched_date = ?3, sched_time = ?4, sched_season = ?5 WHERE id = ?6`,
-            [schedDay, dayLabel, dateStr, timeStr, sKey, animeSlug],
-          );
+        if (!isUnchanged) {
+          if (db) {
+            db.prepare(`
+              UPDATE anime SET
+                sched_day = ?1,
+                sched_day_label = ?2,
+                sched_date = ?3,
+                sched_time = ?4,
+                sched_season = ?5,
+                sched_episode = ?6
+              WHERE id = ?7
+            `).run(schedDay, dayLabel, dateStr, timeStr, sKey, nextEpNum || null, animeSlug);
+          } else if (hasRestCreds) {
+            await d1Query(
+              `UPDATE anime SET sched_day = ?1, sched_day_label = ?2, sched_date = ?3, sched_time = ?4, sched_season = ?5, sched_episode = ?6 WHERE id = ?7`,
+              [schedDay, dayLabel, dateStr, timeStr, sKey, nextEpNum || null, animeSlug],
+            );
+          } else {
+            remoteSqlStatements.push(
+              `UPDATE anime SET sched_day=${schedDay}, sched_day_label=${sqlEscape(dayLabel)}, sched_date=${sqlEscape(dateStr)}, sched_time=${sqlEscape(timeStr)}, sched_season=${sqlEscape(sKey)}, sched_episode=${nextEpNum > 0 ? nextEpNum : 'NULL'} WHERE id=${sqlEscape(animeSlug)};`,
+            );
+          }
+          updatedCount++;
         } else {
-          remoteSqlStatements.push(
-            `UPDATE anime SET sched_day=${schedDay}, sched_day_label=${sqlEscape(dayLabel)}, sched_date=${sqlEscape(dateStr)}, sched_time=${sqlEscape(timeStr)}, sched_season=${sqlEscape(sKey)} WHERE id=${sqlEscape(animeSlug)};`,
-          );
+          unchangedCount++;
         }
-        updatedCount++;
+
+        // Auto-generate missing episode shells up to latestAiredEp so schedule links always work
+        const targetEpCount = Math.max(latestAiredEp, 1);
+        if (targetEpCount > 0) {
+          if (db) {
+            // @ts-ignore
+            const countRow = db.prepare('SELECT count(*) as count FROM episode WHERE anime_id = ?1').get(animeSlug);
+            // @ts-ignore
+            const curEpCount = countRow?.count || 0;
+            if (curEpCount < targetEpCount) {
+              const insertStmt = db.prepare(`
+                INSERT OR IGNORE INTO episode (id, anime_id, n, title, runtime, runtime_seconds, thumb, synopsis, markers)
+                VALUES (?1, ?2, ?3, ?4, '24m', 1440, '', '', '[]')
+              `);
+              for (let epIdx = curEpCount + 1; epIdx <= targetEpCount; epIdx++) {
+                insertStmt.run(`${animeSlug}#${epIdx}`, animeSlug, epIdx, `Episode ${epIdx}`);
+              }
+            }
+          } else if (hasRestCreds) {
+            const res = await d1First(`SELECT count(*) as count FROM episode WHERE anime_id = ?1`, [animeSlug]);
+            // @ts-ignore
+            const curCount = res?.count || 0;
+            if (curCount < targetEpCount) {
+              for (let epIdx = curCount + 1; epIdx <= targetEpCount; epIdx++) {
+                await d1Query(
+                  `INSERT OR IGNORE INTO episode (id, anime_id, n, title, runtime, runtime_seconds, thumb, synopsis, markers) VALUES (?1, ?2, ?3, ?4, '24m', 1440, '', '', '[]')`,
+                  [`${animeSlug}#${epIdx}`, animeSlug, epIdx, `Episode ${epIdx}`],
+                );
+              }
+            }
+          }
+        }
       } else {
         // Anime has no active upcoming episode on AniList -> Clear schedule slot if not already clear
         const isAlreadyCleared = !existing || (existing.sched_day == null && existing.sched_date == null);
@@ -248,12 +289,14 @@ async function main() {
               sched_day_label = NULL,
               sched_date = NULL,
               sched_time = NULL,
-              sched_season = NULL
+              sched_season = NULL,
+        sched_episode = NULL
             WHERE id = ?1
           `).run(animeSlug);
         } else if (hasRestCreds) {
           await d1Query(
-            `UPDATE anime SET sched_day = NULL, sched_day_label = NULL, sched_date = NULL, sched_time = NULL, sched_season = NULL WHERE id = ?1`,
+            `UPDATE anime SET sched_day = NULL, sched_day_label = NULL, sched_date = NULL, sched_time = NULL, sched_season = NULL,
+        sched_episode = NULL WHERE id = ?1`,
             [animeSlug],
           );
         } else {

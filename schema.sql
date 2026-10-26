@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS anime (
   sched_date       TEXT,
   sched_time       TEXT,
   sched_season     TEXT,
+  sched_episode    INTEGER,
   /* Provenance for rows pulled from the community databases by tools/sync-catalogue.mjs:
      source_ids is a JSON object of {kitsu, anilist, mal}; episode_total is the source's own
      episode count, which can be larger than the number of rows we actually store;

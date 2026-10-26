@@ -38,7 +38,11 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
     <ol className="tl">
       {entries.map((e, idx) => {
         const cleanTitle = cleanAnimeTitle(e.anime.title);
-        const targetEp = e.anime.episodeCount && e.anime.episodeCount > 0 ? e.anime.episodeCount : 1;
+        const targetEp = e.episode && e.episode > 0
+          ? e.episode
+          : (e.anime.schedule?.episode && e.anime.schedule.episode > 0
+            ? e.anime.schedule.episode
+            : (e.anime.episodeCount && e.anime.episodeCount > 0 ? e.anime.episodeCount : 1));
         const toWatch = `/watch/${e.anime.id}/${targetEp}`;
         const status = getEpisodeReleaseStatus(e.day, e.time, effectiveTodayDay, now);
         const isToday = e.day === effectiveTodayDay;

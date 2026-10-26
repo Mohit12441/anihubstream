@@ -1,4 +1,4 @@
-import { CARD_COLUMNS, cardFromRow, cleanDisplayTitle, errorResponse, ok } from '../_lib.js';
+import { CARD_COLUMNS, cardFromRow, cleanDisplayTitle, errorResponse, ok, withEdgeCache } from '../_lib.js';
 
 /* The home shelves in one round trip. The catalogue grows ~900 titles a day, so
    the rows are picked by the database instead of shipping the whole thing to the
@@ -6,7 +6,8 @@ import { CARD_COLUMNS, cardFromRow, cleanDisplayTitle, errorResponse, ok } from 
 const ROW_LIMIT = 20;
 const FRESH_FROM_YEAR = 2024;
 
-export const onRequestGet = async ({ request, env }) => {
+export const onRequestGet = async ({ request, env, waitUntil }) => {
+  return withEdgeCache(request, env, 7200, async () => {
   try {
     const url = new URL(request.url);
     const provider = (url.searchParams.get('provider') || '').toLowerCase().trim();
@@ -113,4 +114,5 @@ export const onRequestGet = async ({ request, env }) => {
   } catch (err) {
     return errorResponse(err);
   }
+  }, { allowedParams: ['provider'], waitUntil });
 };

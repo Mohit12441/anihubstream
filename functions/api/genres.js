@@ -1,6 +1,7 @@
-import { errorResponse, ok } from './_lib.js';
+import { errorResponse, ok, withEdgeCache } from './_lib.js';
 
-export const onRequestGet = async ({ env }) => {
+export const onRequestGet = async ({ request, env, waitUntil }) => {
+  return withEdgeCache(request, env, 86400, async () => {
   try {
     const { results } = await env.ANIHUB.prepare(
       `SELECT g.id, g.label, g.tagline, g.art, g.accent,
@@ -20,4 +21,5 @@ export const onRequestGet = async ({ env }) => {
   } catch (err) {
     return errorResponse(err);
   }
+  }, { waitUntil });
 };
