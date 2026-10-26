@@ -98,6 +98,44 @@ test('Watch.tsx auto-expands virtual episode shells for high episode numbers (e.
     watchSrc.includes('for (let i = existingCount + 1; i <= count; i++)'),
     'Watch.tsx must loop and populate shells from existingCount + 1 up to count'
   );
+
+  // Must lazily initialize epNum from URL to eliminate 1-frame episode 1 flash
+  assert.ok(
+    watchSrc.includes('const [epNum, setEpNum] = useState<number>(() =>'),
+    'Watch.tsx must lazily initialize epNum from URL route or query param'
+  );
+
+  // Must size fallback anime with validRequested to avoid artificial 12-episode clamping
+  assert.ok(
+    watchSrc.includes('const totalEps = isMovie ? 1 : Math.max(validRequested, validQueryEp, 12);'),
+    'Watch.tsx must size fallback anime with validRequested instead of hardcoded 12'
+  );
+});
+
+test('catalogue.tsx resets stale anime state when switching anime to prevent episode cross-clamping', () => {
+  const catSrc = fs.readFileSync(path.resolve(ROOT, 'src/state/catalogue.tsx'), 'utf8');
+
+  assert.ok(
+    catSrc.includes('const isSameAnime = s.anime?.id === id;'),
+    'catalogue.tsx must check if cached anime matches requested id'
+  );
+  assert.ok(
+    catSrc.includes('anime: isSameAnime ? s.anime : null,'),
+    'catalogue.tsx must reset anime to null when id changes to avoid leaking previous anime'
+  );
+});
+
+test('ScheduleList differentiates between released episodes and upcoming countdowns', () => {
+  const listSrc = fs.readFileSync(path.resolve(ROOT, 'src/components/ScheduleList.tsx'), 'utf8');
+
+  assert.ok(
+    listSrc.includes('const isReleased = status.type === \'released\' || (nextEp !== null && (e.anime.episodeCount ?? 0) >= nextEp);'),
+    'ScheduleList must determine release status by status.type or database episodeCount'
+  );
+  assert.ok(
+    listSrc.includes('nextEp && nextEp > 1'),
+    'ScheduleList must safely handle upcoming episodes without producing episode 0'
+  );
 });
 
 test('sync-episodes supports high episode numbers without artificial 50-episode cap', () => {

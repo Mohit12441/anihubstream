@@ -82,7 +82,11 @@ export function Watch() {
       cleanAnimeTitle(queryTitle) ||
       cleanBase.replace(/\b\w/g, (c) => c.toUpperCase());
     const isMovie = cleanBase.toLowerCase().includes('movie') || id.toLowerCase().includes('movie');
-    const totalEps = isMovie ? 1 : 12;
+    const requestedEp = Number.parseInt(ep ?? '', 10);
+    const validRequested = Number.isFinite(requestedEp) && requestedEp > 0 ? Math.min(requestedEp, 2000) : 1;
+    const queryEp = Number.parseInt(params.get('ep') ?? '', 10);
+    const validQueryEp = Number.isFinite(queryEp) && queryEp > 0 ? Math.min(queryEp, 2000) : 1;
+    const totalEps = isMovie ? 1 : Math.max(validRequested, validQueryEp, 12);
 
     return {
       id,
@@ -160,7 +164,16 @@ export function Watch() {
   const { has, isBusy, toggle, favourites, toggleFavourite, recordPosition } = useLibrary();
   const { prefs, patch, patchSubs, restoreSubs, restoreAppearance, positions, record } = usePlayerPreferences();
 
-  const [epNum, setEpNum] = useState(1);
+  const [epNum, setEpNum] = useState<number>(() => {
+    const rawEp = ep ?? params.get('ep');
+    if (rawEp) {
+      const parsed = Number.parseInt(rawEp, 10);
+      if (Number.isFinite(parsed) && parsed > 0) {
+        return Math.min(parsed, 2000);
+      }
+    }
+    return 1;
+  });
   const [theatre, setTheatre] = useState(false);
   const [isStreamResolved, setIsStreamResolved] = useState(false);
   const [downloadOpen, setDownloadOpen] = useState(false);
@@ -241,8 +254,8 @@ export function Watch() {
         navigate(`/watch/${anime.id}/${total}`, { replace: true });
         setEpNum(total);
       } else {
-        // Valid episode -> set player
-        setEpNum(parsed);
+        // Valid episode -> set player if changed
+        setEpNum((prev) => (prev === parsed ? prev : parsed));
       }
     } else {
       // /watch/:id without :ep -> load saved resume episode (or ep 1)

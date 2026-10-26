@@ -38,14 +38,25 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
     <ol className="tl">
       {entries.map((e, idx) => {
         const cleanTitle = cleanAnimeTitle(e.anime.title);
-        const targetEp = e.episode && e.episode > 0
+        const status = getEpisodeReleaseStatus(e.day, e.time, effectiveTodayDay, now);
+        const isToday = e.day === effectiveTodayDay;
+
+        const nextEp = e.episode && e.episode > 0
           ? e.episode
           : (e.anime.schedule?.episode && e.anime.schedule.episode > 0
             ? e.anime.schedule.episode
+            : null);
+
+        const isReleased = status.type === 'released' || (nextEp !== null && (e.anime.episodeCount ?? 0) >= nextEp);
+
+        const targetEp = isReleased
+          ? (nextEp ?? (e.anime.episodeCount && e.anime.episodeCount > 0 ? e.anime.episodeCount : 1))
+          : (nextEp && nextEp > 1
+            ? nextEp - 1
             : (e.anime.episodeCount && e.anime.episodeCount > 0 ? e.anime.episodeCount : 1));
+
         const toWatch = `/watch/${e.anime.id}/${targetEp}`;
-        const status = getEpisodeReleaseStatus(e.day, e.time, effectiveTodayDay, now);
-        const isToday = e.day === effectiveTodayDay;
+        const pillEpLabel = (!isReleased && nextEp) ? `Next: Ep ${nextEp}` : `Ep ${targetEp}`;
 
         return (
           <li
@@ -96,7 +107,7 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
                 {/* Latest Episode Badge */}
                 <span className="tl__ep-pill">
                   <Film size={11} aria-hidden="true" />
-                  Ep {targetEp}{e.anime.episodeTotal ? ` / ${e.anime.episodeTotal}` : ''}
+                  {pillEpLabel}{e.anime.episodeTotal ? ` / ${e.anime.episodeTotal}` : ''}
                 </span>
 
                 {/* Rating */}

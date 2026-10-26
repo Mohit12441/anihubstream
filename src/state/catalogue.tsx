@@ -213,7 +213,17 @@ export function useAnimeDetail(id: string): AnimeDetail {
   useEffect(() => {
     if (!id) return;
     let live = true;
-    setState((s) => ({ ...s, status: s.anime ? 'ready' : 'loading', error: null }));
+    setState((s) => {
+      const isSameAnime = s.anime?.id === id;
+      return {
+        ...s,
+        status: isSameAnime ? (s.status === 'ready' ? 'ready' : 'loading') : 'loading',
+        error: null,
+        missing: false,
+        anime: isSameAnime ? s.anime : null,
+        related: isSameAnime ? s.related : [],
+      };
+    });
     getAnime(id)
       .then((d) => {
         if (!live) return;
