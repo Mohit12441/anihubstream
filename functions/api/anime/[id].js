@@ -329,8 +329,9 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
     // Filter out unreleased episodes for ongoing shows so Watch page renders strictly streamable episodes
     if (card.status === 'Ongoing' || card.status === 'Airing') {
       const today = new Date().toISOString().split('T')[0];
+      const maxAired = Math.max(1, card.sched_episode && card.sched_episode > 1 ? card.sched_episode - 1 : (card.episode_count || 1));
       episodes = episodes.filter((ep) => {
-        if (!ep.airdate) return ep.n === 1 || Boolean(ep.external_id);
+        if (!ep.airdate) return ep.n <= maxAired || Boolean(ep.external_id);
         return ep.airdate <= today;
       });
     }

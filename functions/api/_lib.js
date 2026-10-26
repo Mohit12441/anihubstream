@@ -440,17 +440,11 @@ export async function resolveFranchiseSeasons(db, card) {
     }
   } catch {}
 
-  // 3. Hierarchical slug prefix lookup (e.g. "jujutsu-kaisen", "my-hero-academia", "demon-slayer")
+  // 3. Hierarchical slug prefix lookup (e.g. "jujutsu-kaisen", "my-hero-academia", "demon-slayer", "fullmetal-alchemist", "naruto")
   try {
     const baseSlug = card.id
-      .replace(/-season-\d+.*$/i, '')
-      .replace(/-part-\d+.*$/i, '')
-      .replace(/-cour-\d+.*$/i, '')
-      .replace(/-final-season.*$/i, '')
-      .replace(/-2nd-season.*$/i, '')
-      .replace(/-3rd-season.*$/i, '')
-      .replace(/-the-movie.*$/i, '')
-      .replace(/-arc.*$/i, '')
+      .replace(/-(?:season|part|cour|act|vol|volume)-\d+.*$/i, '')
+      .replace(/-(?:final-season|2nd-season|3rd-season|4th-season|the-movie|movie|arc|brotherhood|shippuden|z|super|re|root-a|specials?|ova-collection|ovas?|picture-drama|4-koma-theater|reflections|the-sacred-star-of-milos|slaying-the-blood-progenitor).*$/i, '')
       .replace(/-0$/, '');
 
     if (baseSlug && baseSlug.length >= 4) {
@@ -465,7 +459,7 @@ export async function resolveFranchiseSeasons(db, card) {
             season: s.season || '',
             year: s.year || null,
             kind: s.kind || 'TV',
-            isCurrent: false,
+            isCurrent: s.id === card.id,
           });
         }
       }

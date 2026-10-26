@@ -47,14 +47,18 @@ export const onRequestGet = async ({ request, env }) => {
                   a.sched_day, a.sched_day_label, a.sched_date, a.sched_time, a.sched_season,
                   a.episode_total, a.source_ids, a.skip_key_id, a.skip_key_space,
                   (SELECT group_concat(genre_id) FROM anime_genre ag WHERE ag.anime_id = a.id) AS genre_ids,
+                  (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) AS episode_count,
                   GROUP_CONCAT(pm.provider_id || ':' || COALESCE(pm.provider_slug, a.id)) AS provider_pairs
            FROM anime a
            LEFT JOIN anime_provider_mapping pm ON pm.anime_id = a.id
            WHERE a.search_text LIKE ?1 OR a.title LIKE ?1 OR a.id LIKE ?1
            GROUP BY a.id
-           ORDER BY a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC
+           ORDER BY 
+             CASE WHEN lower(a.title) = lower(?2) THEN 0 WHEN lower(a.title) LIKE (?2 || '%') THEN 1 ELSE 2 END ASC,
+             CASE WHEN a.kind IN ('Special', 'Movie') AND (a.episode_total <= 1 OR a.episode_total IS NULL) THEN 1 ELSE 0 END ASC,
+             a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC
            LIMIT 40`
-        ).bind(likeTerm).all().catch(() => ({ results: [] }));
+        ).bind(likeTerm, q).all().catch(() => ({ results: [] }));
 
         for (const row of d1Rows.results || []) {
           const rawPairs = row.provider_pairs ? String(row.provider_pairs).split(',') : [];

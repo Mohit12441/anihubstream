@@ -281,6 +281,47 @@ export function AnimeDetail() {
           </div>
         </div>
 
+        {/* Franchise Seasons & Specials */}
+        {anime.seasons && anime.seasons.length > 1 && (
+          <section style={{ marginTop: '2rem' }}>
+            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.85rem' }}>
+              Franchise Seasons & Specials
+            </h2>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.65rem' }}>
+              {anime.seasons.map((s) => {
+                const isCurrent = s.id === anime.id;
+                return (
+                  <Link
+                    key={s.id}
+                    to={isCurrent ? '#' : `/anime/${s.id}`}
+                    style={{
+                      padding: '8px 14px',
+                      borderRadius: '8px',
+                      fontSize: '0.88rem',
+                      fontWeight: isCurrent ? 700 : 500,
+                      textDecoration: 'none',
+                      border: isCurrent ? '1.5px solid var(--brand, #6366f1)' : '1px solid rgba(255, 255, 255, 0.1)',
+                      background: isCurrent ? 'rgba(99, 102, 241, 0.2)' : 'rgba(255, 255, 255, 0.04)',
+                      color: isCurrent ? '#fff' : '#cbd5e1',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                    }}
+                  >
+                    <span>{s.title}</span>
+                    {s.kind && s.kind !== 'TV' && (
+                      <span style={{ fontSize: '0.7rem', padding: '1px 5px', borderRadius: '4px', background: 'rgba(255,255,255,0.1)', color: '#94a3b8' }}>
+                        {s.kind}
+                      </span>
+                    )}
+                    {s.year ? <span style={{ fontSize: '0.75rem', opacity: 0.6 }}>({s.year})</span> : null}
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
         {/* Episodes Section */}
         <section style={{ marginTop: '2.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>

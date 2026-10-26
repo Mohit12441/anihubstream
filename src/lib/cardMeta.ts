@@ -13,7 +13,15 @@ export function formatCardMeta(
 ): string {
   const parts: string[] = [];
 
-  const format = anime.kind ? String(anime.kind).trim() : '';
+  let format = anime.kind ? String(anime.kind).trim() : '';
+  const total = anime.episodeTotal || anime.episodeCount || 0;
+  if (total === 1 && (format.toLowerCase() === 'special' || format.toLowerCase() === 'movie' || format.toLowerCase() === 'ona' || format.toLowerCase() === 'ova')) {
+    if (format.toLowerCase() === 'movie') {
+      format = 'Movie';
+    } else {
+      format = 'Special';
+    }
+  }
   if (format && format !== '—' && format !== 'null' && format !== 'undefined') {
     parts.push(format);
   }
