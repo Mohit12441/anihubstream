@@ -445,6 +445,7 @@ export async function resolveFranchiseSeasons(db, card) {
     const baseSlug = card.id
       .replace(/-(?:season|part|cour|act|vol|volume)-\d+.*$/i, '')
       .replace(/-(?:final-season|2nd-season|3rd-season|4th-season|the-movie|movie|arc|brotherhood|shippuden|z|super|re|root-a|specials?|ova-collection|ovas?|picture-drama|4-koma-theater|reflections|the-sacred-star-of-milos|slaying-the-blood-progenitor).*$/i, '')
+      .replace(/-[a-z0-9]{4}$/i, '')
       .replace(/-0$/, '');
 
     if (baseSlug && baseSlug.length >= 4) {
@@ -466,7 +467,24 @@ export async function resolveFranchiseSeasons(db, card) {
     }
   } catch {}
 
-  const items = Array.from(seasonsMap.values());
+  // Deduplicate by normalized title to prevent hash-slug duplicates (e.g. -6pb0, -5iet)
+  const dedupedByTitle = new Map();
+  for (const item of seasonsMap.values()) {
+    const key = item.title.toLowerCase().trim();
+    if (!dedupedByTitle.has(key)) {
+      dedupedByTitle.set(key, item);
+    } else {
+      const existing = dedupedByTitle.get(key);
+      // Prefer current active card, or prefer canonical slug without random 4-char hash
+      if (item.isCurrent) {
+        dedupedByTitle.set(key, item);
+      } else if (!existing.isCurrent && /-[a-z0-9]{4}$/i.test(existing.id) && !/-[a-z0-9]{4}$/i.test(item.id)) {
+        dedupedByTitle.set(key, item);
+      }
+    }
+  }
+
+  const items = Array.from(dedupedByTitle.values());
   if (items.length <= 1) return [];
 
   // Sort chronologically: by year ascending, then title ascending
@@ -507,6 +525,13 @@ export const findAnimeByCandidates = async (db, candidates) => {
   for (const cand of candidates) {
     const card = await db.prepare(`SELECT ${CARD_COLUMNS} FROM anime a WHERE a.id = ?1`).bind(cand).first().catch(() => null);
     if (card) return card;
+  }
+  for (const cand of candidates) {
+    const redirected = await db.prepare(`SELECT to_id FROM anime_redirect WHERE from_id = ?1 LIMIT 1`).bind(cand).first().catch(() => null);
+    if (redirected?.to_id) {
+      const card = await db.prepare(`SELECT ${CARD_COLUMNS} FROM anime a WHERE a.id = ?1`).bind(redirected.to_id).first().catch(() => null);
+      if (card) return card;
+    }
   }
   for (const cand of candidates) {
     let mapped = await db.prepare(
