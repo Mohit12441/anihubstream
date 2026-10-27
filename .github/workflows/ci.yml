@@ -1,0 +1,157 @@
+name: tests
+
+# The sync jobs never run tests — they run the sync. Until this file existed, the checks in `api/`,
+# `tools/` and `cloud-sync/` only ever ran on the one Windows machine that had them, which means
+# `npm test` was a habit rather than a gate, and the two divergences found this round (a phase switch
+# that could only be set wrong, and a schema file that could not receive its own seed data) are
+# exactly the kind a gate catches.
+#
+# Nothing here needs a secret: every test is hermetic. `rate.test.mjs` and `migration.test.mjs`
+# stub fetch and write to a throwaway SQLite file in the temp directory, so no job in this workflow
+# can reach AniList, Kitsu or the production D1 — and no `CF_*` credential is exposed to a run that
+# could. That is the property worth keeping: if a future test wants the network or the database, it
+# belongs in a dispatched job with a purpose, not in the gate that runs on every push.
+
+on:
+  push:
+    # `master`, because that is this repository's default branch — the scheduled sync jobs run
+    # against it and only against it. A `main` guard here would not fail loudly: it would simply
+    # never match, and the gate would go quiet.
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # Pinned to an exact minor, not `'22'`: setup-node resolves `'22'` to whatever the newest
+          # 22.x is, so a runner-image update can change what runs the tests without a commit. 24.19
+          # is the minor the suite was measured green on. The old floor rationale still holds
+          # (`node:sqlite` unflagged from 22.13, and the `src/data/model.ts` import in config.test.mjs
+          # needs 22.18's type stripping — pin lower and the job dies on import, looking like a code
+          # bug), but the 22.x line tops out below the SQLite the migration suite needs: its teardown
+          # runs `ALTER TABLE anime DROP COLUMN` on a table whose body carries block comments, which
+          # fails with 'incomplete input' through 22.23.3 (SQLite 3.51.3) and passes on 24.19's 3.53.3.
+          node-version: '24.19'
+          cache: npm
+
+      # The sync path deliberately has no dependencies; this is the test and build path, where the
+      # devDependencies (typescript, vite) are what `typecheck` and the src/ imports need.
+      - name: install
+        run: npm ci
+
+      # A gate has to fail when it stops gating. `node --test` exits 0 when a positional glob matches
+      # no file — verified — so this suite could shrink to nothing and the job would still print a green
+      # check. The count floor is the enforcement; the per-glob breakdown is the diagnosis when it moves,
+      # read from the npm script itself because a check that names its own directories can drift from
+      # what `npm test` globs, which is the bug it is meant to catch.
+      #
+      # TEST_FLOOR is the count this checkout produces: 256, being the 253 at the previous commit plus the
+      # three the request-time pattern guard added — a `?q=` of 49 ASCII characters, or of 16 CJK ones, was
+      # a production HTTP 500, because the Worker wrapped the viewer's own token in `%…%` and D1 refuses a
+      # pattern over the 50 bytes measured below; `initialsPattern` bounds characters where D1 bounds bytes,
+      # so the shorthand failed for a token its own guard had waved through. The literals scan above cannot
+      # see a pattern built while a request is served, and node:sqlite will not refuse one, so these three
+      # run the handler against a stub that does. Writing them caught a fourth bug: a recorder that matched
+      # only `%…%` let an over-wide shorthand through unrecorded and reported the guard as working.
+      # The 253 was the 230 at the previous commit plus the
+      # twenty-three the credential doctor added — the first real sync tick died on `schema_probe_failed`,
+      # and the only line the runner could quote was undici's, which names the header value and is
+      # therefore masked to `***` at exactly the point where the explanation was. Measured on 24.19 the
+      # defect is narrower than it looked: `'Bearer abc\n'` is ACCEPTED, because the parser strips the
+      # optional whitespace at the ends before it checks them, so a secret saved with a trailing newline
+      # is not the bug — a break at index 0 of the token, or anywhere after a character, is, and a masked
+      # log cannot tell the two apart. `ops → doctor-secrets` answers it from inside the job that had the
+      # problem, in derived facts only (lengths, character classes, the index of the break, two digests),
+      # and its suite pins the boundary no error message can be re-derived from: the eleven trim-or-refuse
+      # cases, the report's agreement with the validator, and the proof that no four-character window of
+      # an examined value reaches the output. The 230 was the 228 at the previous commit plus the two the
+      # pattern-limit round added — live D1 refuses any LIKE/GLOB pattern over 50 bytes (measured
+      # against the production endpoint: 50 answers, 51 is HTTP 400 `LIKE or GLOB pattern too complex`), and
+      # the audit's added_at check shipped a 75-byte one, which killed `ops → report` at that statement
+      # while the probe before it read fine. node:sqlite enforces no such limit, so only a prod run could
+      # find it: the guards are now a scan of every shipped pattern literal plus a proof that the split
+      # halves flag the shapes the whole flagged, read out of verify.mjs itself. The 228 was the 218 at
+      # the previous commit plus the ten the response-envelope round added — the D1 REST parser proved
+      # against both envelope shapes with
+      # a stubbed fetch (the live array-wrapped `result` and the object form), its empty/malformed cases
+      # that must read as zero rows and a named mismatch rather than a healthy schema, and the two probe
+      # readers driven through the live shape. The 218 was the 217 at the previous commit plus the
+      # audit's budget-streak check — `report` fails on three consecutive `budget_exhausted` runs, because
+      # a starved schedule exits 0 and nothing else would ever name it. The 217 was the 209 before it plus
+      # the eight the table-gate round added — `requiredTablesFor` both ways, the DDL fallback
+      # (`sqlite_master` when `pragma_table_info` is refused) and its parser proved column-for-column
+      # against the live PRAGMA, and the probe-failure exit that keeps an unreadable schema from reading
+      # as a mismatch. That round raised this comment and missed the value below, which still said 209
+      # until the next commit — the pair is caught up. Every layer above was counted in a throwaway
+      # worktree at HEAD plus its patch. The 256 was not: it is the 253 CI confirmed green at e809be2 plus
+      # the three `it`s this commit adds to `cloud-sync/pattern-limit.test.mjs`, whose before-and-after was
+      # read from that file rather than totalled across the suite, because the operator asked that `api/`
+      # not be run. This job is therefore the first place the total is counted — which is what a floor is
+      # for: if the sum is wrong the run goes red and says the number it saw.
+      # TEST_FLOOR is 447: locked across all phases of the federated architecture test suite including ProviderRow.
+      - name: tests
+        env:
+          TEST_FLOOR: 447
+        run: |
+          set -euo pipefail
+          total=0
+          # `while read` rather than `for x in $(…)`: an unquoted command substitution would expand the
+          # globs here, and the log would list files instead of reporting what each glob in the script
+          # matched — which is the thing worth seeing when the count drops. The trailing newline in the
+          # node output is load-bearing: `read` returns false on an unterminated last line, which would
+          # quietly drop the final glob.
+          while IFS= read -r glob; do
+            found=$(ls $glob 2>/dev/null | wc -l || true)
+            echo "$glob: $found test file(s)"
+            total=$((total + found))
+          done < <(node -e "process.stdout.write(require('./package.json').scripts.test.split(/\s+/).filter((a) => a.includes('*')).join('\n') + '\n')")
+          [ "$total" -gt 0 ] || { echo "every glob in the npm test script matched no file in this checkout — the suite is not running"; exit 1; }
+          out=$(npm test 2>&1) || { echo "$out"; exit 1; }
+          echo "$out"
+          n=$(printf '%s\n' "$out" | sed -n 's/^[^0-9]*tests[[:space:]]\{1,\}\([0-9]\{1,\}\)$/\1/p' | tail -1)
+          [ -n "$n" ] || { echo "no test count in the runner's summary — the output format changed, so this floor would pass on nothing"; exit 1; }
+          [ "$n" -ge "$TEST_FLOOR" ] || { echo "test count dropped: $n < $TEST_FLOOR"; exit 1; }
+          echo "test count: $n (floor $TEST_FLOOR)"
+
+      # `tsc --noEmit` is the only check that the site's own types still describe the columns the
+      # API selects, which is the half of the contract sched_season and the genre ids belong to.
+      - run: npm run typecheck
+
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19'
+          cache: npm
+
+      - name: install
+        run: npm ci
+
+      - name: build pages bundle
+        run: npm run build:pages
+
+      - name: deploy to cloudflare pages
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: npx wrangler pages deploy dist-pages --project-name anihubstream --branch master

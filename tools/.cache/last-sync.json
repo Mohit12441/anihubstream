@@ -1,0 +1,161 @@
+{
+  "fetched_at": "2026-10-24T02:24:05.120Z",
+  "titles": [
+    {
+      "id": "joshi-kausei",
+      "sources": {
+        "kitsu": 41941,
+        "anilist": 104147,
+        "mal": 38295
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": null,
+      "markers": 0
+    },
+    {
+      "id": "afterlost",
+      "sources": {
+        "kitsu": 41451,
+        "anilist": 101814,
+        "mal": 37952
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": null,
+      "markers": 0
+    },
+    {
+      "id": "fuuto-pi",
+      "sources": {
+        "kitsu": 44323,
+        "anilist": 131912,
+        "mal": 48649
+      },
+      "episodes": 12,
+      "episodeTotal": 12,
+      "skipKey": "mal/48649",
+      "markers": 15
+    },
+    {
+      "id": "arifureta-shokugyou-de-sekai-saikyou-2nd-season-special",
+      "sources": {
+        "kitsu": 46047,
+        "anilist": 143846,
+        "mal": 50916
+      },
+      "episodes": 1,
+      "episodeTotal": 1,
+      "skipKey": null,
+      "markers": 0
+    },
+    {
+      "id": "wu-shan-wu-xing-zhuo-yuan-shen-huo",
+      "sources": {
+        "kitsu": 41361,
+        "anilist": 107069,
+        "mal": 37936
+      },
+      "episodes": 3,
+      "episodeTotal": 3,
+      "skipKey": null,
+      "markers": 0
+    },
+    {
+      "id": "fate-grand-order-moonlight-lostroom",
+      "sources": {
+        "kitsu": 14096,
+        "anilist": 100728,
+        "mal": 36915
+      },
+      "episodes": 1,
+      "episodeTotal": 1,
+      "skipKey": null,
+      "markers": 0
+    },
+    {
+      "id": "afro-samurai-resurrection",
+      "sources": {
+        "kitsu": 3870,
+        "anilist": 4970,
+        "mal": 4970
+      },
+      "episodes": 1,
+      "episodeTotal": 1,
+      "skipKey": null,
+      "markers": 0
+    }
+  ],
+  "stats": {
+    "episodesStored": 42,
+    "episodeTotal": 42,
+    "markers": 15,
+    "runtimeFallbacks": 0
+  },
+  "droppedGenres": [
+    "No Dialogue",
+    "Cute Girls Doing Cute Things",
+    "Primarily Female Cast",
+    "Female Protagonist",
+    "School",
+    "Philosophy",
+    "Rural",
+    "Iyashikei",
+    "Thriller",
+    "Amnesia",
+    "Motorcycles",
+    "Tragedy",
+    "Travel",
+    "Male Protagonist",
+    "Super Power",
+    "Ensemble Cast",
+    "Alternate Universe",
+    "Idol",
+    "Urban Fantasy",
+    "CGI",
+    "Henshin",
+    "Detective",
+    "Tokusatsu",
+    "Heterosexual",
+    "Primarily Adult Cast",
+    "Seinen",
+    "Otaku Culture",
+    "Cannibalism",
+    "Conspiracy",
+    "Video Games",
+    "Psychological",
+    "Anti-Hero",
+    "Vampire",
+    "Magic",
+    "Female Harem",
+    "Love Triangle",
+    "Primarily Teen Cast",
+    "Guns",
+    "Dragons",
+    "Kemonomimi",
+    "Slapstick",
+    "Medieval",
+    "Martial Arts",
+    "Gods",
+    "Foreign",
+    "Ancient China",
+    "Demons",
+    "Shapeshifting",
+    "Swordplay",
+    "Aliens",
+    "Spearplay",
+    "Post-Apocalyptic",
+    "Cosmic Horror",
+    "Urban",
+    "Revenge",
+    "Samurai",
+    "Robots",
+    "Ghost",
+    "Tanned Skin",
+    "Gore",
+    "Orphan",
+    "Anachronism",
+    "Nudity",
+    "Primarily Male Cast"
+  ]
+}

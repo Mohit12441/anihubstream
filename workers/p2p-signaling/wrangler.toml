@@ -1,0 +1,12 @@
+name = "anihub-p2p-signal"
+main = "index.js"
+compatibility_date = "2026-09-28"
+
+[durable_objects]
+bindings = [
+  { name = "SWARM_DO", class_name = "SwarmDurableObject" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["SwarmDurableObject"]

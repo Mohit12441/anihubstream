@@ -1,0 +1,23 @@
+import { Link } from 'react-router-dom';
+
+export function Logo({ className = '' }: { className?: string }) {
+  return (
+    <Link to="/" className={`wordmark ${className}`} aria-label="AniHubStream — home">
+      <svg className="wordmark__emblem" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <path
+          fill="currentColor"
+          className="wordmark__shield"
+          d="M32 2 6 14v18c0 12 10.6 24.4 26 28 15.4-3.6 26-16 26-28V14L32 2Zm0 6.5 19.4 9v14.6c0 9.3-8 19.2-19.4 22.6-11.4-3.4-19.4-13.3-19.4-22.6V17.5L32 8.5Z"
+        />
+        <path
+          fill="currentColor"
+          className="wordmark__oni"
+          d="M20.5 19.5c4.2 2.4 7.6 5.6 10 9.4l1.5 2.6 1.5-2.6c2.4-3.8 5.8-7 10-9.4l-3.1 8.9 4.4 7.8c-1.1 6.6-5.4 11.9-11.3 14.4l-1.5-3.1-1.5 3.1c-5.9-2.5-10.2-7.8-11.3-14.4l4.4-7.8-3.1-8.9Zm7.2 15.2a2.3 2.3 0 1 0 0 4.6 2.3 2.3 0 0 0 0-4.6Zm8.6 0a2.3 2.3 0 1 0 0 4.6 2.3 2.3 0 0 0 0-4.6Z"
+        />
+      </svg>
+      <span className="wordmark__text">
+        ANIHUB<em>STREAM</em>
+      </span>
+    </Link>
+  );
+}
