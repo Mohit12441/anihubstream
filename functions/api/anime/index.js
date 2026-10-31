@@ -9,6 +9,7 @@ import {
   ok,
   scoreSearchRow,
   strParam,
+  withEdgeCache,
 } from '../_lib.js';
 
 const SORTS = {
@@ -56,9 +57,14 @@ const initialsWithinLimit = (token) => {
   return init !== null && utf8Bytes(init) <= LIKE_PATTERN_MAX_BYTES ? init : null;
 };
 
-export const onRequestGet = async ({ request, env }) => {
-  try {
-    const url = new URL(request.url);
+export const onRequestGet = async ({ request, env, waitUntil }) => {
+  return withEdgeCache(
+    request,
+    env,
+    300,
+    async () => {
+      try {
+        const url = new URL(request.url);
     const q = strParam(url, 'q', 120);
     const genre = strParam(url, 'genre');
     const season = strParam(url, 'season');
@@ -173,4 +179,5 @@ export const onRequestGet = async ({ request, env }) => {
   } catch (err) {
     return errorResponse(err);
   }
+}, { allowedParams: ['q', 'genre', 'season', 'status', 'kind', 'sort', 'limit', 'page', 'provider'], waitUntil });
 };

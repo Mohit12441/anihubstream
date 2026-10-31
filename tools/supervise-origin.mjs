@@ -33,6 +33,7 @@
 import { execFile, spawn } from 'node:child_process';
 import { createServer } from 'node:net';
 import { appendFile, mkdir, rename } from 'node:fs/promises';
+import { homedir } from 'node:os';
 import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -40,8 +41,12 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LOG_FILE = process.env.ANIKOTO_ORIGIN_LOG ?? join(ROOT, 'logs', 'origin.log');
 const MAX_LOG_BYTES = 2_000_000;
 const CLOUDFLARED =
-  process.env.ANIKOTO_CLOUDFLARED ?? 'C:\\Users\\My\\qoder_scratch\\cloudflared\\cloudflared.exe';
-const TUNNEL_CONFIG = process.env.ANIKOTO_TUNNEL_CONFIG ?? 'C:\\Users\\My\\.cloudflared\\config.yml';
+  process.env.ANIKOTO_CLOUDFLARED ??
+  (process.platform === 'win32'
+    ? join(homedir(), 'cloudflared', 'cloudflared.exe')
+    : 'cloudflared');
+const TUNNEL_CONFIG =
+  process.env.ANIKOTO_TUNNEL_CONFIG ?? join(homedir(), '.cloudflared', 'config.yml');
 const ORIGIN_PORT = Number(process.env.ANIKOTO_ORIGIN_PORT ?? 8787);
 const BRIDGE_PORT = Number(process.env.ANIKOTO_BRIDGE_PORT ?? 8795);
 const LOCK_PORT = Number(process.env.ANIKOTO_SUPERVISOR_PORT ?? 8794);

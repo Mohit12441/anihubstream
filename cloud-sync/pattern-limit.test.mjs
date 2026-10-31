@@ -135,7 +135,7 @@ describe('D1 LIKE/GLOB pattern limit (50 bytes, measured live)', () => {
     return async (q) => {
       sent.length = 0;
       const url = `https://anihubstream.com/api/anime?sort=relevance&q=${encodeURIComponent(q)}`;
-      const response = await onRequestGet({ request: new Request(url), env });
+      const response = await onRequestGet({ request: new Request(url, { headers: { 'x-bypass-cache': '1' } }), env });
       return { status: response.status, patterns: [...sent] };
     };
   };

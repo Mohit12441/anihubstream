@@ -7,6 +7,7 @@ import { useSEO } from '../lib/useSEO';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { AnimeCard } from '../components/AnimeCard';
 import { ratingLabel } from '../data/model';
+import { getPlay } from '../data/api';
 import { SLUG_REDIRECTS } from '../data/redirects';
 import '../styles/watch.css';
 
@@ -32,14 +33,13 @@ export function AnimeDetail() {
   const [servers, setServers] = useState<ServerPreview[]>([]);
   const [serversLoading, setServersLoading] = useState(true);
 
-  // Fetch servers available for episode 1
+  // Fetch servers available for episode 1 (/api/play?id=)
   useEffect(() => {
     if (!id) return;
     let active = true;
     setServersLoading(true);
 
-    fetch(`/api/play?id=${encodeURIComponent(id)}&ep=1`)
-      .then((res) => (res.ok ? res.json() : null))
+    getPlay({ id, ep: 1 })
       .then((data) => {
         if (!active || !data) return;
         if (Array.isArray(data.servers)) {

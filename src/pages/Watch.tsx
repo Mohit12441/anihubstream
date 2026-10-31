@@ -10,6 +10,7 @@ import { AnimeCard } from '../components/AnimeCard';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { EpisodeSidebar } from '../components/EpisodeSidebar';
 import { cleanAnimeTitle, ratingLabel, toSeconds, type Anime, type Episode } from '../data/model';
+import { getPlay } from '../data/api';
 import { useToast } from '../lib/Toast';
 import { accentVars, usePlayerPreferences } from '../lib/usePlayerPrefs';
 import { positionKey } from '../lib/playerPrefs';
@@ -199,15 +200,14 @@ export function Watch() {
     if (!anime) return;
     let cancelled = false;
 
-    const providerQuery = targetProvider ? `&provider=${encodeURIComponent(targetProvider)}` : '&provider=anikoto';
-    const titleQuery = anime.title ? `&title=${encodeURIComponent(anime.title)}` : '';
-    const malIdQuery = anime.malId ? `&malId=${anime.malId}` : '';
-
-    fetch(`/api/play?id=${encodeURIComponent(anime.id)}&ep=${epNum}&audio=${encodeURIComponent(prefs.audio ?? 'sub')}${titleQuery}${providerQuery}${malIdQuery}`)
-      .then((res) => {
-        if (!res.ok) throw new Error('Play API failed');
-        return res.json();
-      })
+    getPlay({
+      id: anime.id,
+      ep: epNum,
+      audio: prefs.audio ?? 'sub',
+      title: anime.title || undefined,
+      provider: targetProvider || 'anikoto',
+      malId: anime.malId || undefined,
+    })
       .then((data) => {
         if (cancelled) return;
         setScopedProviderUnavailable(Boolean(data.scopedProviderUnavailable));

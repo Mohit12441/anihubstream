@@ -112,6 +112,39 @@ export const getSchedule = () =>
 export const getAnime = (id: string) =>
   request<ApiCard & { episodes: ApiEpisode[]; related: ApiCard[] }>(`/anime/${encodeURIComponent(id)}`);
 
+export interface PlayQuery {
+  id: string;
+  ep?: number;
+  audio?: string;
+  title?: string;
+  provider?: string;
+  malId?: number | string;
+  server?: string;
+}
+
+export interface PlayResponse {
+  ok?: boolean;
+  scopedProviderUnavailable?: boolean;
+  servers?: any[];
+  server?: any;
+  subtitles?: any[];
+  skip?: any;
+  data?: {
+    servers?: any[];
+    [key: string]: any;
+  };
+  [key: string]: any;
+}
+
+export const getPlay = (query: PlayQuery, init?: RequestInit): Promise<PlayResponse> => {
+  const params = new URLSearchParams();
+  for (const [key, value] of Object.entries(query)) {
+    if (value !== undefined && value !== null && value !== '') params.set(key, String(value));
+  }
+  const qs = params.toString();
+  return request<PlayResponse>(`/play${qs ? `?${qs}` : ''}`, init);
+};
+
 // Provider-Isolated API clients (HiAnime & AniKoto)
 export const getHianimeHome = () => request<any>('/hianime/home');
 export const getHianimeSearch = (q: string) => request<any>(`/hianime/search?q=${encodeURIComponent(q)}`);
