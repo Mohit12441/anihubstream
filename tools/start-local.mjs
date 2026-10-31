@@ -40,6 +40,7 @@ async function main() {
   const pagesProc = spawn(wranglerCmd, ['wrangler', 'pages', 'dev', 'dist-pages', '--port', '8899'], {
     stdio: 'inherit',
     windowsHide: false,
+    shell: isWindows,
   });
 
   pagesProc.on('exit', (code) => {
