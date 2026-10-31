@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "memory": {
+      "command": "C:/Users/mohai/AppData/Local/Programs/Python/Python312/python.exe",
+      "args": [
+        "C:/Users/mohai/agy-memory-engine/agy_memory_mcp.py"
+      ],
+      "env": {
+        "AGY_MEMORY_DB": "C:/Users/mohai/.gemini/memory.db"
+      }
+    }
+  }
+}

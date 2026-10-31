@@ -110,3 +110,28 @@ To keep AniHubStream 100% free forever on Cloudflare's free tier, D1 row reads m
 - **Cookie Stripping**: Public cached endpoints must delete `Set-Cookie` and `Cookie` dependencies so Cloudflare's global CDN caches responses with 0 D1 queries.
 - **Single-Flight Concurrency**: Any database fetch wrapped in `withEdgeCache` automatically prevents thundering herds via worker-level Promise coalescing.
 - **Verification Gate**: Any change to API endpoints must pass `npm run test:cache`.
+
+---
+
+## 12. Permanent DevFlow Protocol & Quality Gates
+All automated and interactive agent sessions operating on this codebase MUST follow the permanent DevFlow engineering lifecycle:
+1. **Spec & Discover**: Read contracts and dependencies before modifying code.
+2. **Pre-Flight Audit**: Explicitly evaluate loopholes, D1 quotas, and edge caching safeguards before implementing.
+3. **Surgical Implementation**: Minimal changes respecting module boundaries (`functions/api/` edge workers vs `api/bridge.mjs` stream bridge).
+4. **Mandatory Verification**: Every code modification MUST pass deterministic validation:
+   - `npm run build` (or `npx tsc --noEmit`)
+   - `npm run test:cache` (Zero-Read D1 cache validation)
+   - Local health checks when server is running
+5. **Clean Recovery Invariant**: Never leave modified, failing, or uncommitted code in the repository on failure. If tests fail and cannot be solved immediately, restore using `git checkout -- <file>`.
+
+---
+
+# AGENTS.md — Permanent Project Rules
+Before any task:
+1. Read `CONTEXT.md` if it exists.
+2. Apply the `devflow` workflow rules when the task involves code changes.
+3. Respect all human approval gates. Never bypass the PreToolUse gatekeeper.
+4. Use Git checkpoints for recovery; do not rely solely on `/rewind`.
+5. If a task is long-running and autonomous, prefer `/goal` mode over repeated manual prompts.
+
+
