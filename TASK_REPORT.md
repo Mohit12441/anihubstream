@@ -509,6 +509,30 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 - `npm run test:cache`: **PASSED** (8/8 assertions in 102ms).
 - `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 17.80s).
 
+---
+
+## 16. Phase 6: Frontend Streaming UX & Player Polish
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `b898f13`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **Long-Running Anime Episode Pagination / Batch Selector:**
+   - In [`src/components/EpisodeSidebar.tsx`](file:///C:/anihubstream-local/src/components/EpisodeSidebar.tsx), added chunking of episodes into batches of 50 (e.g. `Episodes 1 - 50`, `Episodes 51 - 100`) for series with > 50 episodes (like *One Piece*, *Bleach*, *Naruto*, *Detective Conan*).
+   - Automatically synchronizes selected batch to whichever range contains the actively playing episode (`current`).
+   - Seamlessly bypasses batching when searching via episode search filter so users can find any episode across the entire series instantly.
+2. **Player Controls & Polish Verification:**
+   - Expanded [`tools/player-polish.test.mjs`](file:///C:/anihubstream-local/tools/player-polish.test.mjs) with test coverage verifying `EpisodeSidebar` batch selection, range computation, and accessibility attributes.
+   - Retained and verified all player features including AniSkip intro/outro skipping, theater mode, autoplay next, and playback rate preferences.
+
+### What Was Verified:
+- `npm run test:cache`: **PASSED** (8/8 assertions in 89ms).
+- `node --test tools/player-polish.test.mjs`: **PASSED** (4/4 tests).
+- `node --test api/*.test.mjs tools/*.test.mjs`: **PASSED** (**329 / 329 tests across 86 suites** in 6.1s).
+- `npm run build`: **PASSED** (0 TypeScript compile errors, production bundle built in 6.46s).
+
+
 
 
 

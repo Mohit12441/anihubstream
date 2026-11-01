@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   Check,
   ChevronDown,
@@ -42,6 +42,8 @@ const state = (ep: Episode, anime: Anime, positions: PositionMap) => {
   return { status: 'progress' as const, ratio: d > 0 ? Math.min(1, p.t / d) : 0 };
 };
 
+const BATCH_SIZE = 50;
+
 export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoNext, onAutoNext, positions, theatre, onTheatre }: Props) {
   const [term, setTerm] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
@@ -51,9 +53,23 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
   const total = anime.episodes.length;
   const next = anime.episodes[current] ?? null;
 
+  const hasBatches = total > BATCH_SIZE;
+  const [selectedBatch, setSelectedBatch] = useState(() => Math.floor(Math.max(0, current - 1) / BATCH_SIZE));
+
+  useEffect(() => {
+    if (hasBatches) {
+      const currentBatch = Math.floor(Math.max(0, current - 1) / BATCH_SIZE);
+      setSelectedBatch(currentBatch);
+    }
+  }, [current, hasBatches]);
+
   const list = useMemo(() => {
     const needle = term.trim().toLowerCase();
-    return anime.episodes.filter((ep) => {
+    const sourceEpisodes = (!needle && hasBatches)
+      ? anime.episodes.slice(selectedBatch * BATCH_SIZE, (selectedBatch + 1) * BATCH_SIZE)
+      : anime.episodes;
+
+    return sourceEpisodes.filter((ep) => {
       const s = state(ep, anime, positions);
       if (filter === 'todo' && s.status === 'watched') return false;
       if (filter === 'done' && s.status !== 'watched') return false;
@@ -65,7 +81,7 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
         ep.title.toLowerCase().includes(needle)
       );
     });
-  }, [anime, positions, term, filter]);
+  }, [anime, positions, term, filter, hasBatches, selectedBatch]);
 
   const watched = anime.episodes.filter((ep) => state(ep, anime, positions).status === 'watched').length;
 
@@ -112,6 +128,27 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
                 {s.title}{s.season ? ` (${s.season})` : s.year ? ` (${s.year})` : ''}
               </option>
             ))}
+          </select>
+        </label>
+      )}
+
+      {hasBatches && !term && (
+        <label className="eps__season" style={{ borderTop: seasons ? '1px solid var(--line)' : undefined }}>
+          <span>Episode Range</span>
+          <select
+            value={selectedBatch}
+            onChange={(e) => setSelectedBatch(Number(e.target.value))}
+            aria-label="Select episode range"
+          >
+            {Array.from({ length: Math.ceil(total / BATCH_SIZE) }, (_, i) => {
+              const start = i * BATCH_SIZE + 1;
+              const end = Math.min((i + 1) * BATCH_SIZE, total);
+              return (
+                <option key={i} value={i}>
+                  Episodes {start} - {end}
+                </option>
+              );
+            })}
           </select>
         </label>
       )}

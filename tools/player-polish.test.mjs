@@ -47,4 +47,17 @@ describe('TASK 11 (P2) — Player Polish', () => {
     const discoverContent = fs.readFileSync(path.join(root, 'src/pages/Discover.tsx'), 'utf8');
     assert.match(discoverContent, /<span className="vj__jp" lang="ja">冒険は続く<\/span>/);
   });
+
+  it('EpisodeSidebar provides chunked batch selection for long-running series (>50 episodes)', () => {
+    const sidebarContent = fs.readFileSync(path.join(root, 'src/components/EpisodeSidebar.tsx'), 'utf8');
+
+    // Batch size constant and threshold
+    assert.match(sidebarContent, /const\s+BATCH_SIZE\s*=\s*50;/);
+    assert.match(sidebarContent, /const\s+hasBatches\s*=\s*total\s*>\s*BATCH_SIZE;/);
+
+    // Range selector and slice calculation
+    assert.match(sidebarContent, /anime\.episodes\.slice\(selectedBatch\s*\*\s*BATCH_SIZE,\s*\(selectedBatch\s*\+\s*1\)\s*\*\s*BATCH_SIZE\)/);
+    assert.match(sidebarContent, /aria-label="Select episode range"/);
+    assert.match(sidebarContent, /Episodes\s*\{start\}\s*-\s*\{end\}/);
+  });
 });
