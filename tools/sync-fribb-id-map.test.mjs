@@ -133,4 +133,22 @@ describe('Universal ID Map (Fribb/anime-lists) Suite', () => {
     assert.equal(jjkRow.anilist_id, 113415);
     assert.equal(jjkRow.kitsu_id, 42765);
   });
+
+  it('resolveFribbIds correctly resolves swapped high AniList IDs placed in the mal field', () => {
+    const indexes = buildFribbIndexes(sampleFribbEntries);
+    // 101922 is Demon Slayer's AniList ID; if placed in mal field by mistake:
+    const resolved = resolveFribbIds({ mal: 101922 }, indexes);
+    assert.ok(resolved);
+    assert.equal(resolved.mal, 38000);
+    assert.equal(resolved.anilist, 101922);
+    assert.equal(resolved.kitsu, 41370);
+  });
+
+  it('resolveFribbIds handles string numeric inputs gracefully', () => {
+    const indexes = buildFribbIndexes(sampleFribbEntries);
+    const resolved = resolveFribbIds({ mal: '38000', anilist: '101922' }, indexes);
+    assert.ok(resolved);
+    assert.equal(resolved.mal, 38000);
+    assert.equal(resolved.anilist, 101922);
+  });
 });

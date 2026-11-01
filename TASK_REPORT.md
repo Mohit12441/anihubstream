@@ -326,6 +326,41 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 1. **Offline Cache Staleness:**
    - `tools/.cache/anime-list-mini.json` is cached locally to prevent network overhead. Running `npm run sync:fribb` with `--refresh` periodically ensures newly airing seasonal anime ID mappings stay updated.
 
+---
+
+## 11. Phase 1 Deep Audit, Stress Testing & Edge Hardening
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `e367ddb`  
+**Branch:** `agent-workflow-baseline`  
+
+### Deep Audit Findings & Edge Cases Traced:
+1. **Misplaced AniList IDs in `mal` Fields:**
+   - Identified that several raw catalog source entries (e.g. *Punirunes Puni 4* `mal: 216860`, *Battle Spirits* `mal: 187990`, *One Room* `mal: 205068`) had AniList IDs stored inside the `mal` field. Because MAL IDs have never exceeded ~66,000, any ID > 70,000 in `mal` failed lookup.
+   - **Remedy:** Added heuristic recovery in [`resolveFribbIds`](file:///C:/anihubstream-local/tools/sync-fribb-id-map.mjs#L140-L165): if `mal > 70000` and not found in `byMal`, it automatically evaluates against `byAnilist` and recovers the true MAL, AniList, and Kitsu IDs.
+2. **Analysis of Remaining Unmatched Titles:**
+   - Traced the remaining titles in `catalogue-sources.json` that lack Kitsu or MAL IDs:
+     - Non-Japanese anime (e.g. *Blue Eye Samurai*, *Dreamland*): Netflix/French animations not listed on MyAnimeList.
+     - 18+ ONAs and adult series (e.g. *Overflow*, *Tiny Evil*, *Chuhai Lips*): unindexed or merged under parent IDs on Kitsu.
+     - Brand new unreleased 2026/2027 announcements (e.g. *Mao Mao Season 3*, *Dawang Raoming 3*): lack Kitsu pages.
+3. **Database Integrity & Foreign Key Audit:**
+   - Verified 100% database consistency:
+     - `anime` count: **2,789**
+     - `anime_id_map` count: **2,789**
+     - Orphan rows: **0**
+     - Index plans (`id_map_by_mal`, `id_map_by_anilist`): **Active and fully utilized**.
+     - `source_ids` JSON validation: **0 corrupted rows**.
+4. **Edge API Zero-Read Cache Gap Repaired:**
+   - Found that [`functions/api/id-map.js`](file:///C:/anihubstream-local/functions/api/id-map.js) was querying D1 directly without caching.
+   - Wrapped `onRequestGet` in `withEdgeCache(...)` with allowed parameters (`['animeId', 'malId', 'anilistId', 'kitsuId']`) and 86,400s (24h) TTL, protecting ID map lookups under Rule 11.
+   - Added unit test suite [`api/id-map.test.mjs`](file:///C:/anihubstream-local/api/id-map.test.mjs) verifying contract, cache headers, bypass flag, and 400/404 handling (5/5 tests passing).
+
+### What Was Verified:
+- `npm run test:cache`: **PASSED** (5/5 Zero-Read shield tests in 84ms).
+- `node --test api/*.test.mjs tools/*.test.mjs`: **PASSED** (**311 / 311 tests across 84 suites** in 5.18s).
+- `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 6.26s).
+
+
 
 
 

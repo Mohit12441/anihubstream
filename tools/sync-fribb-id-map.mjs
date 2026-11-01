@@ -74,7 +74,7 @@ export async function fetchFribbList({ forceRefresh = false } = {}) {
   }
 
   console.log(`[fribb-sync] Fetching universal anime list from ${FRIBB_URL}...`);
-  const res = await fetch(FRIBB_URL);
+  const res = await fetch(FRIBB_URL, { signal: AbortSignal.timeout(15000) });
   if (!res.ok) {
     throw new Error(`Failed to download Fribb dataset: HTTP ${res.status}`);
   }
@@ -146,6 +146,9 @@ export function resolveFribbIds(ids, indexes) {
     matched = indexes.byMal.get(Number(ids.mal));
   } else if (ids.anilist && indexes.byAnilist.has(Number(ids.anilist))) {
     matched = indexes.byAnilist.get(Number(ids.anilist));
+  } else if (ids.mal && Number(ids.mal) > 70000 && indexes.byAnilist.has(Number(ids.mal))) {
+    // Heuristic: If mal > 70000 and not in byMal, it is an AniList ID misplaced into the mal field
+    matched = indexes.byAnilist.get(Number(ids.mal));
   } else if (ids.kitsu && indexes.byKitsu.has(Number(ids.kitsu))) {
     matched = indexes.byKitsu.get(Number(ids.kitsu));
   } else if (ids.anidb && indexes.byAnidb.has(Number(ids.anidb))) {
@@ -155,8 +158,8 @@ export function resolveFribbIds(ids, indexes) {
   if (!matched) return null;
 
   return {
-    mal: matched.mal_id || (ids.mal ? Number(ids.mal) : null),
-    anilist: matched.anilist_id || (ids.anilist ? Number(ids.anilist) : null),
+    mal: matched.mal_id || (ids.mal && Number(ids.mal) < 70000 ? Number(ids.mal) : null),
+    anilist: matched.anilist_id || (ids.anilist ? Number(ids.anilist) : (ids.mal && Number(ids.mal) > 70000 ? Number(ids.mal) : null)),
     kitsu: matched.kitsu_id || (ids.kitsu ? Number(ids.kitsu) : null),
     anidb: matched.anidb_id || (ids.anidb ? Number(ids.anidb) : null),
     type: matched.type || null,
@@ -195,6 +198,11 @@ export async function enrichCatalogueSources({
 
     if (resolved) {
       let changed = false;
+      if (s.mal && Number(s.mal) > 70000 && resolved.anilist === Number(s.mal)) {
+        s.anilist = Number(s.mal);
+        s.mal = resolved.mal || null;
+        changed = true;
+      }
       if (!s.mal && resolved.mal) {
         s.mal = resolved.mal;
         changed = true;
