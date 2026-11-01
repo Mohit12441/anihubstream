@@ -113,4 +113,29 @@ describe('Local Autonomous Sync Daemon Suite', () => {
     assert.equal(parsed.providers.providersActive.anikoto, 2000);
     db.close();
   });
+
+  it('correctly detects missing catalog titles between sources and SQLite', () => {
+    const db = new DatabaseSync(':memory:');
+    db.exec(`
+      CREATE TABLE anime (
+        id TEXT PRIMARY KEY,
+        title TEXT
+      );
+      INSERT INTO anime (id, title) VALUES ('title-1', 'Title 1');
+    `);
+
+    const mockSources = [
+      { id: 'title-1', title: 'Title 1' },
+      { id: 'title-2', title: 'Title 2' },
+      { id: 'title-3', title: 'Title 3' },
+    ];
+
+    // @ts-ignore
+    const dbIds = new Set(db.prepare('SELECT id FROM anime').all().map((r) => r.id));
+    const missing = mockSources.filter((s) => !dbIds.has(s.id));
+
+    assert.equal(missing.length, 2);
+    assert.deepEqual(missing.map((m) => m.id), ['title-2', 'title-3']);
+    db.close();
+  });
 });

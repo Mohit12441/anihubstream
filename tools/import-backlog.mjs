@@ -33,10 +33,11 @@
    ============================================================ */
 
 import { execFileSync } from 'node:child_process';
-import { appendFileSync, existsSync, mkdirSync, statSync } from 'node:fs';
+import { appendFileSync, existsSync, mkdirSync, readFileSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { DatabaseSync } from 'node:sqlite';
 
-import { anilist, appendSource, d1Json, kitsuByMal, readSources, removeSource, slugify, wrangler } from './discover-titles.mjs';
+import { anilist, appendSource, d1Json, kitsuByMal, readSources, removeSource, slugify, wrangler, findSqlitePath } from './discover-titles.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const SEED = resolve(ROOT, 'seed.sql');
@@ -141,7 +142,21 @@ export async function importBacklog({ limit = BATCH } = {}) {
        smaller scope and its deletes would take out everything imported since. */
     const fresh = existsSync(SEED) && statSync(SEED).mtimeMs >= startedAt - 2000;
     if (fresh) {
-      wrangler(['d1', 'execute', 'anihub', '--remote', '--file', SEED]);
+      const isRemote = process.argv.includes('--remote');
+      if (isRemote) {
+        wrangler(['d1', 'execute', 'anihub', '--remote', '--file', SEED]);
+      } else {
+        const sqlitePath = findSqlitePath();
+        if (sqlitePath) {
+          const db = new DatabaseSync(sqlitePath);
+          try {
+            const sql = readFileSync(SEED, 'utf8');
+            db.exec(sql);
+          } finally {
+            db.close();
+          }
+        }
+      }
       const landed = new Set(
         d1Json(`SELECT id FROM anime WHERE id IN (${batch.map((b) => sqlText(b.id)).join(',')})`).map((r) => r.id),
       );
@@ -159,10 +174,23 @@ export async function importBacklog({ limit = BATCH } = {}) {
   }
 
   const value = JSON.stringify({ page, at: new Date().toISOString(), limit, scannedPages: scanned, added: added.length, skipped, failures });
-  wrangler([
-    'd1', 'execute', 'anihub', '--remote',
-    '--command', `INSERT INTO sync_meta (key, value) VALUES ('backlog', ${sqlText(value)}) ON CONFLICT(key) DO UPDATE SET value = excluded.value;`,
-  ]);
+  const isRemote = process.argv.includes('--remote');
+  if (isRemote) {
+    wrangler([
+      'd1', 'execute', 'anihub', '--remote',
+      '--command', `INSERT INTO sync_meta (key, value) VALUES ('backlog', ${sqlText(value)}) ON CONFLICT(key) DO UPDATE SET value = excluded.value;`,
+    ]);
+  } else {
+    const sqlitePath = findSqlitePath();
+    if (sqlitePath) {
+      const db = new DatabaseSync(sqlitePath);
+      try {
+        db.prepare("INSERT INTO sync_meta (key, value) VALUES ('backlog', ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value").run(value);
+      } finally {
+        db.close();
+      }
+    }
+  }
   return { due: true, page, added, skipped, failures };
 }
 

@@ -228,4 +228,60 @@ The audit identified significant dead code, obsolete scratch files, and legacy o
 1. **Cloudflare REST Synchronization (`cloud-sync/`):**
    - The scripts in `cloud-sync/` (`sync-anilist.mjs`, `sync-hianime.mjs`, `sync-kitsu.mjs`) communicate strictly with the remote Cloudflare D1 REST API and will fail when run locally without `CF_API_TOKEN`. For all local development and offline catalog operations, `tools/local-sync-daemon.mjs` (`npm run sync:local`) must be used instead.
 
+---
+
+## 9. Phase 4: Catalog Growth Root Cause Analysis & Local Ingestion Engine
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `544a336`  
+**Branch:** `agent-workflow-baseline`  
+
+### Root Cause Analysis: Why Catalog Size Stayed Static
+Investigation revealed 5 precise blockers that prevented the anime catalog from increasing:
+1. **Broken Global Wrangler Assumption:**
+   - Both [`tools/discover-titles.mjs`](file:///C:/anihubstream-local/tools/discover-titles.mjs) and [`tools/import-backlog.mjs`](file:///C:/anihubstream-local/tools/import-backlog.mjs) hardcoded `WRANGLER_JS = resolve(process.env.APPDATA, 'npm', 'node_modules', 'wrangler', 'bin', 'wrangler.js')`. This path does not exist in standard dev setups, immediately crashing execution with `MODULE_NOT_FOUND`.
+2. **Hardcoded Remote Cloudflare Flag (`--remote`):**
+   - Ingestion tools exclusively executed `wrangler d1 execute anihub --remote`. Without Cloudflare production API tokens (`CF_API_TOKEN`), executions aborted with `missing environment: CF_API_TOKEN`. No fallback to local Miniflare SQLite existed.
+3. **Missing Catalog Expansion Stage in Sync Daemon:**
+   - [`tools/local-sync-daemon.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.mjs) maintained 4 stages for *existing* database records (schedules, provider mappings, franchise graph, episode metadata) but lacked any stage to discover or import new anime backlog entries.
+4. **808 Unimported Backlog Titles:**
+   - `tools/catalogue-sources.json` contained 3,595 catalog definitions, while the local Miniflare SQLite database contained only 2,787 entries. 808 anime were defined in sources but never seeded into the active database.
+5. **Missing Upstream IDs in Raw Source Entries:**
+   - A subset of backlog entries in `catalogue-sources.json` had only MAL IDs without Kitsu/AniList IDs, causing unhandled HTTP 400 rejections from `sync-catalogue.mjs`.
+
+### What Changed:
+1. **Dual Local / Remote Execution in Discovery Tools:**
+   - Modified [`tools/discover-titles.mjs`](file:///C:/anihubstream-local/tools/discover-titles.mjs):
+     - Added `findSqlitePath()` auto-discovery.
+     - Replaced fragile global `WRANGLER_JS` require with resilient child process spawning (`npx.cmd wrangler` / `npx wrangler`).
+     - Added local SQLite query engine in `d1Json()` using `node:sqlite` when running without `--remote`.
+     - In local mode, `discover()` directly executes generated `seed.sql` batches against Miniflare D1 SQLite and writes telemetry to `sync_meta`.
+2. **Local Miniflare Ingestion Support in Import Backlog:**
+   - Modified [`tools/import-backlog.mjs`](file:///C:/anihubstream-local/tools/import-backlog.mjs) to import `findSqlitePath`, support `--local` execution flag, and write imported titles directly into Miniflare SQLite.
+3. **Stage 5: Catalog Growth Added to Sync Daemon:**
+   - Enhanced [`tools/local-sync-daemon.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.mjs) with `syncGrowthStage(db, { limit })`:
+     - Compares unimported source IDs in `catalogue-sources.json` against `anime.id` in SQLite.
+     - Filters for entries with verified Kitsu and AniList IDs (`s.kitsu && s.anilist`).
+     - Calls `sync-catalogue.mjs` to fetch full canonical metadata, poster URLs, and episode lists.
+     - Executes generated SQL batches atomically against local SQLite.
+     - Added `--expand=<n>` CLI argument (default: 3 titles per run).
+4. **Deterministic Unit Test Added:**
+   - Updated [`tools/local-sync-daemon.test.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.test.mjs) with a test verifying detection and filtering of unimported backlog titles against SQLite.
+
+### What Was Verified:
+1. **Live Local Ingestion & Catalog Growth:**
+   - Executed `node tools/local-sync-daemon.mjs --once --expand=2`.
+   - Ingested new backlog anime: *Why Does Nobody Remember Me in This World?* (`why-does-nobody-remember-me-in-this-world-yekf`).
+   - Verified local D1 SQLite anime count increased from **2,787 to 2,788**.
+2. **Deterministic Quality Gates:**
+   - `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 6.48s).
+   - `npm run test:cache`: **PASSED** (5/5 Zero-Read shield tests in 98ms).
+   - `node --test tools/*.test.mjs`: **PASSED** (96/96 tests in 2.94s).
+   - `node --test api/*.test.mjs`: **PASSED** (203/203 tests in 4.65s).
+
+### What Remains Risky:
+1. **Third-Party Upstream Rate Limiting on Rapid Growth:**
+   - Rapidly ingesting large batches of backlog titles (>50 titles per run) will trigger rate limits on Kitsu (HTTP 429) or AniList GraphQL. The default limit of 3 titles per cycle in the daemon is tuned to stay well within public rate limits.
+
+
 

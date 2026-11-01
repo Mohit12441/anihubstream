@@ -31,7 +31,8 @@
    ============================================================ */
 
 import { execFileSync } from 'node:child_process';
-import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { DatabaseSync } from 'node:sqlite';
 import { resolve } from 'node:path';
 
 const ROOT = resolve(import.meta.dirname, '..');
@@ -48,13 +49,23 @@ const WRANGLER_JS =
   process.env.ANIHUB_WRANGLER_JS ??
   (process.env.APPDATA ? resolve(process.env.APPDATA, 'npm', 'node_modules', 'wrangler', 'bin', 'wrangler.js') : 'wrangler');
 
+export function findSqlitePath() {
+  const d1Dir = resolve(ROOT, '.wrangler/state/v3/d1/miniflare-D1DatabaseObject');
+  if (existsSync(d1Dir)) {
+    const files = readdirSync(d1Dir).filter((f) => f.endsWith('.sqlite') && !f.startsWith('metadata'));
+    if (files.length > 0) return resolve(d1Dir, files[0]);
+  }
+  return null;
+}
+
 const sqlText = (v) => `'${String(v).replace(/'/g, "''")}'`;
 
 export function wrangler(args) {
-  if (WRANGLER_JS.endsWith('.js')) {
+  if (WRANGLER_JS && existsSync(WRANGLER_JS)) {
     return execFileSync(process.execPath, [WRANGLER_JS, ...args], { encoding: 'utf8', windowsHide: true, cwd: ROOT });
   }
-  return execFileSync(WRANGLER_JS, args, { encoding: 'utf8', windowsHide: true, cwd: ROOT });
+  const npxCmd = process.platform === 'win32' ? 'npx.cmd' : 'npx';
+  return execFileSync(npxCmd, ['wrangler', ...args], { encoding: 'utf8', windowsHide: true, cwd: ROOT });
 }
 
 /* Every AniList POST this process makes, whichever module sent it. The hourly task has no pacing
@@ -172,9 +183,34 @@ export function removeSource(id, sourcesPath = SOURCES) {
 }
 
 export function d1Json(command) {
-  const out = wrangler(['d1', 'execute', 'anihub', '--remote', '--json', '--command', command]);
-  const parsed = JSON.parse(out);
-  return parsed.find((r) => Array.isArray(r.results))?.results ?? [];
+  const isRemote = process.argv.includes('--remote');
+  if (!isRemote) {
+    const sqlitePath = findSqlitePath();
+    if (sqlitePath) {
+      const db = new DatabaseSync(sqlitePath);
+      try {
+        return db.prepare(command).all();
+      } finally {
+        db.close();
+      }
+    }
+  }
+  try {
+    const out = wrangler(['d1', 'execute', 'anihub', '--remote', '--json', '--command', command]);
+    const parsed = JSON.parse(out);
+    return parsed.find((r) => Array.isArray(r.results))?.results ?? [];
+  } catch (err) {
+    const sqlitePath = findSqlitePath();
+    if (sqlitePath) {
+      const db = new DatabaseSync(sqlitePath);
+      try {
+        return db.prepare(command).all();
+      } finally {
+        db.close();
+      }
+    }
+    throw err;
+  }
 }
 
 /* Returns { due, added:[{id,anilist,kitsu,title}], skipped:[reason], failures:[reason] }.
@@ -250,7 +286,21 @@ export async function discover({ rows = null, limit = 2, force = false } = {}) {
         cwd: ROOT,
       });
       if (!existsSync(SEED)) throw new Error('sync wrote no seed.sql');
-      wrangler(['d1', 'execute', 'anihub', '--remote', '--file', SEED]);
+      const isRemote = process.argv.includes('--remote');
+      if (isRemote) {
+        wrangler(['d1', 'execute', 'anihub', '--remote', '--file', SEED]);
+      } else {
+        const sqlitePath = findSqlitePath();
+        if (sqlitePath) {
+          const db = new DatabaseSync(sqlitePath);
+          try {
+            const sql = readFileSync(SEED, 'utf8');
+            db.exec(sql);
+          } finally {
+            db.close();
+          }
+        }
+      }
     } catch (err) {
       removeSource(id);
       failures.push(`${label}: build failed (${String(err.message).split('\n')[0].slice(0, 160)})`);
@@ -263,10 +313,23 @@ export async function discover({ rows = null, limit = 2, force = false } = {}) {
   }
 
   const value = JSON.stringify({ at: new Date().toISOString(), limit, added, skipped, failures });
-  wrangler([
-    'd1', 'execute', 'anihub', '--remote',
-    '--command', `INSERT INTO sync_meta (key, value) VALUES ('discovery', ${sqlText(value)}) ON CONFLICT(key) DO UPDATE SET value = excluded.value;`,
-  ]);
+  const isRemote = process.argv.includes('--remote');
+  if (isRemote) {
+    wrangler([
+      'd1', 'execute', 'anihub', '--remote',
+      '--command', `INSERT INTO sync_meta (key, value) VALUES ('discovery', ${sqlText(value)}) ON CONFLICT(key) DO UPDATE SET value = excluded.value;`,
+    ]);
+  } else {
+    const sqlitePath = findSqlitePath();
+    if (sqlitePath) {
+      const db = new DatabaseSync(sqlitePath);
+      try {
+        db.prepare("INSERT INTO sync_meta (key, value) VALUES ('discovery', ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value").run(value);
+      } finally {
+        db.close();
+      }
+    }
+  }
   return { due: true, added, skipped, failures };
 }
 

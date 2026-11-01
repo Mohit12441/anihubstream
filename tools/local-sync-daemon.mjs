@@ -21,12 +21,14 @@
 import { DatabaseSync } from 'node:sqlite';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { existsSync, readdirSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 
 import { syncOngoingSchedules } from './sync-ongoing-schedules.mjs';
 import { autoSyncProviders } from './auto-sync-providers.mjs';
 import { computeFranchiseGraph, persistRelations } from './auto-sync-franchises.mjs';
 import { autoSyncEpisodes } from './auto-sync-episodes.mjs';
+import { discover } from './discover-titles.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -75,7 +77,7 @@ async function syncSchedulesStage(quiet) {
  * @param {boolean} quiet
  */
 async function syncProvidersStage(quiet) {
-  if (!quiet) console.log('\n[Stage 2/4] ⚡ Synchronizing Provider Slugs & Ratings (AniKoto, HiAnime, AniWatch)...');
+  if (!quiet) console.log('\n[Stage 2/5] ⚡ Synchronizing Provider Slugs & Ratings (AniKoto, HiAnime, AniWatch)...');
   const res = await autoSyncProviders({ quiet });
   if (!quiet) {
     console.log(`  ✓ Active mappings: AniKoto=${res.providersActive.anikoto || 0}, HiAnime=${res.providersActive.hianime || 0}, AniWatch=${res.providersActive.aniwatch || 0}`);
@@ -90,7 +92,7 @@ async function syncProvidersStage(quiet) {
  */
 async function syncFranchisesStage(db, quiet) {
   const start = Date.now();
-  if (!quiet) console.log('\n[Stage 3/4] 🔗 Rebuilding Franchise Relations Graph...');
+  if (!quiet) console.log('\n[Stage 3/5] 🔗 Rebuilding Franchise Relations Graph...');
 
   const rows = db.prepare(`
     SELECT id, title, native, year, rating, season, kind, status, rank, alt_seasons, source_ids
@@ -111,17 +113,85 @@ async function syncFranchisesStage(db, quiet) {
  * @param {boolean} quiet
  */
 async function syncEpisodesStage(quiet) {
-  if (!quiet) console.log('\n[Stage 4/4] 📺 Checking Newly Released Episode Metadata...');
+  if (!quiet) console.log('\n[Stage 4/5] 📺 Checking Newly Released Episode Metadata...');
   const res = await autoSyncEpisodes({ quiet });
   return res;
 }
 
 /**
- * Execute one full synchronization cycle across all 4 stages
+ * Stage 5: Ingest new catalog titles from sources backlog or AniList discovery
+ * @param {DatabaseSync} db
+ * @param {boolean} quiet
+ * @param {number} batchSize
+ */
+async function syncGrowthStage(db, quiet, batchSize = 3) {
+  if (batchSize <= 0) return { added: 0, skipped: 'disabled' };
+  const start = Date.now();
+  if (!quiet) console.log('\n[Stage 5/5] 🌱 Expanding Catalog (Backlog & Discovery)...');
+
+  const sourcesPath = resolve(__dirname, 'catalogue-sources.json');
+  if (!existsSync(sourcesPath)) {
+    return { added: 0, error: 'sources_missing' };
+  }
+
+  const sources = JSON.parse(readFileSync(sourcesPath, 'utf8'));
+  const dbIds = new Set(db.prepare('SELECT id FROM anime').all().map((r) => r.id));
+  const missing = sources.filter((s) => !dbIds.has(s.id) && s.kitsu && s.anilist);
+
+  let addedCount = 0;
+  const toIngest = missing.slice(0, batchSize);
+
+  if (toIngest.length > 0) {
+    for (const item of toIngest) {
+      try {
+        if (!quiet) console.log(`  -> Ingesting new title: ${item.id} (Kitsu: ${item.kitsu}, AniList: ${item.anilist})...`);
+        execFileSync(
+          process.execPath,
+          [resolve(__dirname, 'sync-catalogue.mjs'), `--title=${item.id}`, '--no-skips'],
+          { encoding: 'utf8', windowsHide: true, cwd: resolve(__dirname, '..') }
+        );
+
+        const seedPath = resolve(__dirname, '../seed.sql');
+        if (existsSync(seedPath)) {
+          const sql = readFileSync(seedPath, 'utf8');
+          db.exec(sql);
+          addedCount++;
+        }
+      } catch (err) {
+        if (!quiet) console.warn(`  Warning: failed to ingest ${item.id}:`, err?.message || err);
+      }
+    }
+  } else {
+    // If backlog is completely caught up, check for new trending releases from AniList!
+    try {
+      if (!quiet) console.log('  Backlog caught up. Checking AniList for new trending releases...');
+      const d = await discover({ limit: Math.min(batchSize, 2), force: false });
+      addedCount = d.added?.length || 0;
+    } catch (err) {
+      if (!quiet) console.warn('  Discovery warning:', err?.message || err);
+    }
+  }
+
+  const currentTotal = db.prepare('SELECT count(*) as c FROM anime').get().c;
+  if (!quiet) {
+    console.log(`  ✓ Catalog expansion complete: +${addedCount} new titles (Current Total: ${currentTotal}, Remaining Backlog: ${Math.max(0, missing.length - addedCount)}) in ${Date.now() - start}ms`);
+  }
+
+  return {
+    added: addedCount,
+    remainingBacklog: Math.max(0, missing.length - addedCount),
+    currentTotal,
+    durationMs: Date.now() - start,
+  };
+}
+
+/**
+ * Execute one full synchronization cycle across all 5 stages
  * @param {Object} [options]
  * @param {boolean} [options.quiet=false]
+ * @param {number} [options.expand=3]
  */
-export async function runSyncCycle({ quiet = false } = {}) {
+export async function runSyncCycle({ quiet = false, expand = 3 } = {}) {
   const cycleStart = Date.now();
   const sqlitePath = findSqlitePath();
 
@@ -147,6 +217,7 @@ export async function runSyncCycle({ quiet = false } = {}) {
     providers: null,
     franchises: null,
     episodes: null,
+    growth: null,
     durationMs: 0,
     ok: true,
   };
@@ -156,6 +227,7 @@ export async function runSyncCycle({ quiet = false } = {}) {
     metrics.providers = await syncProvidersStage(quiet).catch((e) => ({ error: e.message }));
     metrics.franchises = await syncFranchisesStage(db, quiet).catch((e) => ({ error: e.message }));
     metrics.episodes = await syncEpisodesStage(quiet).catch((e) => ({ error: e.message }));
+    metrics.growth = await syncGrowthStage(db, quiet, expand).catch((e) => ({ error: e.message }));
   } catch (err) {
     metrics.ok = false;
     console.error('[local-sync] Cycle error:', err);
@@ -188,23 +260,26 @@ async function main() {
   const delayArg = args.find((a) => a.startsWith('--delay='));
   const delaySec = delayArg ? Math.max(0, Number(delayArg.split('=')[1]) || 5) : 5;
 
+  const expandArg = args.find((a) => a.startsWith('--expand='));
+  const expand = expandArg ? Number(expandArg.split('=')[1]) : 3;
+
   if (isOnce) {
-    const res = await runSyncCycle({ quiet: isQuiet });
+    const res = await runSyncCycle({ quiet: isQuiet, expand });
     process.exit(res.ok ? 0 : 1);
   }
 
-  console.log(`[local-sync-daemon] Starting background daemon (Interval: ${intervalMin}m, Initial delay: ${delaySec}s)...`);
+  console.log(`[local-sync-daemon] Starting background daemon (Interval: ${intervalMin}m, Initial delay: ${delaySec}s, Growth batch: ${expand})...`);
   if (delaySec > 0) {
     await sleep(delaySec * 1000);
   }
 
   // Initial immediate cycle
-  await runSyncCycle({ quiet: isQuiet }).catch((err) => console.error('[local-sync-daemon] Initial cycle error:', err));
+  await runSyncCycle({ quiet: isQuiet, expand }).catch((err) => console.error('[local-sync-daemon] Initial cycle error:', err));
 
   // Recurring loop
   setInterval(async () => {
     try {
-      await runSyncCycle({ quiet: isQuiet });
+      await runSyncCycle({ quiet: isQuiet, expand });
     } catch (err) {
       console.error('[local-sync-daemon] Interval cycle error:', err);
     }
