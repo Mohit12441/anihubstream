@@ -245,38 +245,6 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
         } else {
           unchangedCount++;
         }
-
-        // Auto-generate missing episode shells up to latestAiredEp so schedule links always work
-        const targetEpCount = Math.max(latestAiredEp, 1);
-        if (targetEpCount > 0) {
-          if (db) {
-            // @ts-ignore
-            const countRow = db.prepare('SELECT count(*) as count FROM episode WHERE anime_id = ?1').get(animeSlug);
-            // @ts-ignore
-            const curEpCount = countRow?.count || 0;
-            if (curEpCount < targetEpCount) {
-              const insertStmt = db.prepare(`
-                INSERT OR IGNORE INTO episode (id, anime_id, n, title, runtime, runtime_seconds, thumb, synopsis, markers)
-                VALUES (?1, ?2, ?3, ?4, '24m', 1440, '', '', '[]')
-              `);
-              for (let epIdx = curEpCount + 1; epIdx <= targetEpCount; epIdx++) {
-                insertStmt.run(`${animeSlug}#${epIdx}`, animeSlug, epIdx, `Episode ${epIdx}`);
-              }
-            }
-          } else if (hasRestCreds) {
-            const res = await d1First(`SELECT count(*) as count FROM episode WHERE anime_id = ?1`, [animeSlug]);
-            // @ts-ignore
-            const curCount = res?.count || 0;
-            if (curCount < targetEpCount) {
-              for (let epIdx = curCount + 1; epIdx <= targetEpCount; epIdx++) {
-                await d1Query(
-                  `INSERT OR IGNORE INTO episode (id, anime_id, n, title, runtime, runtime_seconds, thumb, synopsis, markers) VALUES (?1, ?2, ?3, ?4, '24m', 1440, '', '', '[]')`,
-                  [`${animeSlug}#${epIdx}`, animeSlug, epIdx, `Episode ${epIdx}`],
-                );
-              }
-            }
-          }
-        }
       } else {
         // Anime has no active upcoming episode on AniList -> Clear schedule slot if not already clear
         const isAlreadyCleared = !existing || (existing.sched_day == null && existing.sched_date == null);

@@ -5,7 +5,7 @@
    ============================================================ */
 
 export type AnimeKind = 'TV' | 'Movie' | 'OVA' | 'ONA' | 'Special';
-export type AnimeStatus = 'Ongoing' | 'Finished' | 'Upcoming';
+export type AnimeStatus = 'Ongoing' | 'Finished' | 'Upcoming' | 'NOT_YET_RELEASED';
 /** Broadcast seasons arrive as '<Season> <Year>' from the catalogue database, so the
     type is whatever the database says — 'Fall 2026' is not a literal we can enumerate. */
 export type SeasonKey = string;

@@ -102,11 +102,14 @@ export async function syncEpisodes({ limit = EPISODES_BATCH_LIMIT, force = false
     // 1. Find anime needing episode generation:
     // Prioritize ongoing anime, then recently added anime where episode count < episode_total
     const animeNeedingEps = await d1All(`
-      SELECT a.id, a.title, a.kind, a.art, a.key_art, a.synopsis, a.source_ids, a.episode_total, a.status,
+      SELECT a.id, a.title, a.kind, a.art, a.key_art, a.synopsis, a.source_ids, a.episode_total, a.status, a.sched_episode,
              (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) as current_episodes
       FROM anime a
-      WHERE (a.status = 'Ongoing' AND (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) < COALESCE(a.episode_total, 2000))
-         OR (a.episode_total IS NOT NULL AND a.episode_total > (SELECT count(*) FROM episode e WHERE e.anime_id = a.id))
+      WHERE a.status NOT IN ('Upcoming', 'NOT_YET_RELEASED')
+        AND (
+          (a.status = 'Ongoing' AND (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) < COALESCE(a.episode_total, 2000))
+          OR (a.episode_total IS NOT NULL AND a.episode_total > (SELECT count(*) FROM episode e WHERE e.anime_id = a.id))
+        )
       ORDER BY (CASE WHEN a.status = 'Ongoing' THEN 0 ELSE 1 END), a.rating DESC
       LIMIT 10
     `);
@@ -124,8 +127,16 @@ export async function syncEpisodes({ limit = EPISODES_BATCH_LIMIT, force = false
       const malId = Number(sources.mal) || null;
       const kitsuId = sources.kitsu || null;
 
-      const targetTotal = Math.min(Math.max(anime.episode_total || (anime.status === 'Ongoing' ? (anime.current_episodes || 0) + 15 : 24), 1), 2000);
+      // Determine max allowed episodes: for Ongoing with known next scheduled episode, never exceed next episode - 1
+      let maxAllowed = 2000;
+      if (anime.status === 'Ongoing' && Number(anime.sched_episode) > 0) {
+        maxAllowed = Math.max(0, Number(anime.sched_episode) - 1);
+      } else if (anime.episode_total) {
+        maxAllowed = anime.episode_total;
+      }
+      const targetTotal = Math.min(maxAllowed, anime.episode_total || maxAllowed);
       const startEp = (anime.current_episodes || 0) + 1;
+      if (startEp > targetTotal) continue;
 
       // Fetch Kitsu episodes for enrichment if available
       let kitsuEpisodes = [];

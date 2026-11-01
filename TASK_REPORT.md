@@ -532,6 +532,56 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 - `node --test api/*.test.mjs tools/*.test.mjs`: **PASSED** (**329 / 329 tests across 86 suites** in 6.1s).
 - `npm run build`: **PASSED** (0 TypeScript compile errors, production bundle built in 6.46s).
 
+---
+
+## 17. Elimination of Dummy / Unreleased Episodes in Upcoming and Ongoing Anime
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `245e83f`  
+**Branch:** `agent-workflow-baseline`  
+
+### Root Cause Analysis:
+1. **API Episode Filtering Gap:** `functions/api/anime/[id].js` only performed episode filtering when `card.status === 'Ongoing' || card.status === 'Airing'`. `Upcoming` and `NOT_YET_RELEASED` anime bypassed the filter entirely, serving any placeholder episodes stored in the database. Furthermore, for ongoing anime, if upstream metadata had placeholder airdates in the past (e.g. *Aoashi Season 2* with dummy 2024 dates for episodes 5-12), they leaked past the `airdate <= today` check despite `sched_episode = 5` explicitly marking them as unreleased.
+2. **Frontend Synthetic Episode Fabrication in `Watch.tsx`:** `Watch.tsx` evaluated `Math.max(anime.episodeTotal || 0, ...)` to generate synthetic episode cards up to the total count (e.g. 10 or 24) when the episode list was shorter. This bypassed the "Episodes Coming Soon" empty state and rendered clickable broken episode buttons for upcoming and ongoing anime.
+3. **Frontend Routing & CTA Leak in `AnimeDetail.tsx` & `AnimeCard.tsx`:** `AnimeCard.tsx` routed all clicks to `/watch/:id/1` even when the anime had zero released episodes. `AnimeDetail.tsx` initiated stream fetching on mount (`getPlay({ id, ep: 1 })`) and rendered a "Watch Episode 1" CTA for unreleased anime.
+4. **Sync Script Generation of Phantom Episode Shells:** `tools/sync-ongoing-schedules.mjs` ran an `INSERT OR IGNORE INTO episode` loop generating empty shells up to `latestAiredEp`. When `nextEpNum` was 1, it treated it as `latestAiredEp = 1`, fabricating dummy `Episode 1` shells for unreleased anime. In ongoing series like *Shin Chan* (ep 1360), it generated 1,327 empty shells with no stream, thumbnail, or airdate. `cloud-sync/sync-episodes.mjs` also lacked an exclusion for `Upcoming` anime.
+
+### What Changed:
+1. **Edge API Route (`functions/api/anime/[id].js`):**
+   - Added `isUpcoming` detection (`status === 'Upcoming' || status === 'NOT_YET_RELEASED'`).
+   - For upcoming titles, strictly returns `episodes: []` and sets `episodeCount: 0`.
+   - For ongoing titles, filters out any episode where `ep.n >= card.sched_episode` (unreleased future episodes) or `ep.airdate > today`, and purges unpopulated placeholder shells (`!ep.airdate && !ep.external_id && !ep.synopsis && ep.title === 'Episode ' + ep.n`).
+   - Overrides `episodeCount: episodes.length` in the response contract.
+2. **Frontend Player (`src/pages/Watch.tsx`):**
+   - Returns empty list if `isUpcoming`, allowing the native "Episodes Coming Soon" banner to render.
+   - Refactored `effectiveEpisodes` to never pad unreleased future episodes up to `episodeTotal`. Only expands shells if a specific episode was explicitly requested via URL/query param, or if the series is finished and lacks individual episode records.
+3. **Frontend Detail Page (`src/pages/AnimeDetail.tsx`):**
+   - Guarded `getPlay({ id, ep: 1 })` to skip stream queries when anime is `Upcoming` or `NOT_YET_RELEASED`.
+   - Replaced "Watch Episode 1" CTA with "Upcoming · View Release Schedule" (linking to `/schedule`) when upcoming or when no episodes have aired yet.
+   - Replaced empty fallback episode grid with an informative "No Episodes Released Yet" message.
+4. **AnimeCard Component (`src/components/AnimeCard.tsx`):**
+   - Changed target navigation URL for `Upcoming` anime to detail page `/anime/${anime.id}` instead of broken `/watch/${anime.id}/1`.
+5. **Data Models (`src/data/model.ts`):**
+   - Updated `AnimeStatus` type to `'Ongoing' | 'Finished' | 'Upcoming' | 'NOT_YET_RELEASED'`.
+6. **Schedule & Episode Sync Tools:**
+   - In [`tools/sync-ongoing-schedules.mjs`](file:///C:/anihubstream-local/tools/sync-ongoing-schedules.mjs), removed the harmful auto-generation of empty episode shells.
+   - In [`cloud-sync/sync-episodes.mjs`](file:///C:/anihubstream-local/cloud-sync/sync-episodes.mjs), excluded `Upcoming` / `NOT_YET_RELEASED` anime from episode generation queries and capped ongoing generation to `sched_episode - 1`.
+   - Added [`tools/clean-dummy-episodes.mjs`](file:///C:/anihubstream-local/tools/clean-dummy-episodes.mjs) which purged 3,393 phantom dummy episodes and 10 upcoming placeholder records from the local SQLite D1 database.
+
+### What Was Verified:
+- `node tools/audit-sync-status.mjs`:
+  - Total episodes: 37,767.
+  - Phantom unreleased dummy episodes in ongoing anime: **0 (PERFECT ZERO)**.
+- Live API validation (`http://127.0.0.1:8899/api/anime/:id?bypass=1`):
+  - `cyberpunk-edgerunners-ii` (Upcoming): `episodeCount: 0`, `episodes: []`.
+  - `aoashi-season-2` (Ongoing, next ep 5): exactly 4 aired episodes returned, episodes 5-12 filtered out.
+  - `crayon-shin-chan` (Ongoing): all 1,327 dummy placeholder shells removed.
+- `npm run test:cache`: **PASSED** (8/8 tests in 174ms).
+- `node --test api/*.test.mjs tools/*.test.mjs`: **PASSED** (**329/329 tests across 86 suites**).
+- `node --test cloud-sync/*.test.mjs`: **PASSED** (**185/185 tests across 32 suites**).
+- `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 27.59s).
+
+
 
 
 

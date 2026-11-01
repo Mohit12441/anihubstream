@@ -33,9 +33,12 @@ export function AnimeDetail() {
   const [servers, setServers] = useState<ServerPreview[]>([]);
   const [serversLoading, setServersLoading] = useState(true);
 
-  // Fetch servers available for episode 1 (/api/play?id=)
+  // Fetch servers available for episode 1 (/api/play?id=) only for aired anime
   useEffect(() => {
-    if (!id) return;
+    if (!id || anime?.status === 'Upcoming' || anime?.status === 'NOT_YET_RELEASED') {
+      setServersLoading(false);
+      return;
+    }
     let active = true;
     setServersLoading(true);
 
@@ -79,11 +82,13 @@ export function AnimeDetail() {
     );
   }
 
+  const isUpcoming = anime.status === 'Upcoming' || anime.status === 'NOT_YET_RELEASED';
+  const hasReleasedEpisodes = Boolean(anime.episodes && anime.episodes.length > 0);
   const inList = has(anime.id);
   const isFav = favourites.has(anime.id);
   const resume = history.find((h) => h.anime.id === anime.id);
   const targetEp = resume?.episodeNumber && resume.episodeNumber > 0 ? resume.episodeNumber : 1;
-  const epCount = anime.episodes?.length || anime.episodeCount || 1;
+  const epCount = isUpcoming ? 0 : (anime.episodes?.length || anime.episodeCount || 0);
   const ratingFormatted = anime.rating ? (anime.rating > 10 ? (anime.rating / 10).toFixed(1) : anime.rating.toFixed(1)) : '—';
 
   return (
@@ -217,25 +222,46 @@ export function AnimeDetail() {
               </p>
             </div>
 
-            {/* Play CTA Button */}
+            {/* Play / Status CTA Button */}
             <div style={{ marginTop: '1rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>
-              <Link
-                to={`/watch/${anime.id}/${targetEp}`}
-                className="btn-primary"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.6rem',
-                  padding: '0.85rem 1.75rem',
-                  borderRadius: '12px',
-                  fontWeight: 700,
-                  fontSize: '1.05rem',
-                  textDecoration: 'none',
-                }}
-              >
-                <Play size={18} fill="currentColor" />
-                <span>{resume?.episodeNumber ? `Resume Episode ${resume.episodeNumber}` : 'Watch Episode 1'}</span>
-              </Link>
+              {isUpcoming || (!hasReleasedEpisodes && anime.status === 'Ongoing') ? (
+                <Link
+                  to="/schedule"
+                  className="btn-primary"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.6rem',
+                    padding: '0.85rem 1.75rem',
+                    borderRadius: '12px',
+                    fontWeight: 700,
+                    fontSize: '1.05rem',
+                    textDecoration: 'none',
+                    background: 'rgba(255, 255, 255, 0.12)',
+                  }}
+                >
+                  <Clock size={18} />
+                  <span>{isUpcoming ? 'Upcoming · View Release Schedule' : 'Coming Soon · View Schedule'}</span>
+                </Link>
+              ) : (
+                <Link
+                  to={`/watch/${anime.id}/${targetEp}`}
+                  className="btn-primary"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.6rem',
+                    padding: '0.85rem 1.75rem',
+                    borderRadius: '12px',
+                    fontWeight: 700,
+                    fontSize: '1.05rem',
+                    textDecoration: 'none',
+                  }}
+                >
+                  <Play size={18} fill="currentColor" />
+                  <span>{resume?.episodeNumber ? `Resume Episode ${resume.episodeNumber}` : 'Watch Episode 1'}</span>
+                </Link>
+              )}
             </div>
 
             {/* Available Servers Preview */}
@@ -326,18 +352,18 @@ export function AnimeDetail() {
         <section style={{ marginTop: '2.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
             <h2 style={{ fontSize: '1.4rem', fontWeight: 700, margin: 0 }}>
-              Episodes ({anime.episodes?.length || epCount})
+              Episodes ({isUpcoming ? 0 : (anime.episodes?.length ?? epCount)})
             </h2>
           </div>
 
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+              gridTemplateColumns: isUpcoming || (!hasReleasedEpisodes && anime.status === 'Ongoing') ? '1fr' : 'repeat(auto-fill, minmax(280px, 1fr))',
               gap: '1rem',
             }}
           >
-            {anime.episodes && anime.episodes.length > 0 ? (
+            {hasReleasedEpisodes ? (
               anime.episodes.map((ep) => (
                 <Link
                   key={ep.n}
@@ -382,8 +408,26 @@ export function AnimeDetail() {
                   </div>
                 </Link>
               ))
+            ) : isUpcoming || anime.status === 'Ongoing' ? (
+              <div style={{
+                padding: '2.5rem 1.5rem',
+                background: 'rgba(15, 17, 23, 0.6)',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
+                borderRadius: '12px',
+                textAlign: 'center',
+              }}>
+                <Clock size={40} style={{ opacity: 0.5, marginBottom: '0.75rem' }} />
+                <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem', fontWeight: 600, color: '#f3f4f6' }}>
+                  {isUpcoming ? 'No Episodes Released Yet' : 'Episodes Coming Soon'}
+                </h3>
+                <p style={{ margin: 0, fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)' }}>
+                  {isUpcoming
+                    ? `${anime.title} is an upcoming title. Episodes will appear here as soon as they air.`
+                    : 'Episodes for this ongoing title will appear here once broadcast commences.'}
+                </p>
+              </div>
             ) : (
-              // Fallback numerical episode grid
+              // Fallback numerical episode grid only for finished series
               Array.from({ length: epCount }, (_, i) => i + 1).map((n) => (
                 <Link
                   key={n}

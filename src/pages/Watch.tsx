@@ -125,21 +125,32 @@ export function Watch() {
       }];
     }
 
-    const requestedEp = Number.parseInt(ep ?? '', 10);
-    const validRequested = Number.isFinite(requestedEp) && requestedEp > 0 ? requestedEp : 1;
-    const queryEp = Number.parseInt(params.get('ep') ?? '', 10);
-    const validQueryEp = Number.isFinite(queryEp) && queryEp > 0 ? queryEp : 1;
+    const isUpcoming = anime.status === 'Upcoming' || anime.status === 'NOT_YET_RELEASED';
+    if (isUpcoming) {
+      return [];
+    }
 
-    const count = Math.max(
-      1,
-      Math.min(
-        Math.max(anime.episodeTotal || 0, anime.episodeCount || 0, validRequested, validQueryEp, anime.episodes?.length || 0),
-        2000
-      )
-    );
+    const requestedEp = Number.parseInt(ep ?? '', 10);
+    const validRequested = Number.isFinite(requestedEp) && requestedEp > 0 ? requestedEp : 0;
+    const queryEp = Number.parseInt(params.get('ep') ?? '', 10);
+    const validQueryEp = Number.isFinite(queryEp) && queryEp > 0 ? queryEp : 0;
 
     const baseList = (anime.episodes && anime.episodes.length > 0) ? [...anime.episodes] : [];
     const existingCount = baseList.length;
+
+    // Only expand shells if a specific episode was requested beyond the current list (e.g. via schedule deep link)
+    // or if the anime has 0 episodes in DB and is finished
+    const isFinished = anime.status === 'Finished';
+    const targetExplicit = Math.max(validRequested, validQueryEp);
+    const count = Math.max(
+      existingCount,
+      Math.min(
+        targetExplicit > 0
+          ? targetExplicit
+          : (existingCount === 0 && isFinished ? (anime.episodeCount || anime.episodeTotal || 1) : existingCount),
+        2000
+      )
+    );
 
     if (existingCount >= count) {
       return baseList;

@@ -232,9 +232,11 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
 
     let episodes = episodeRows.map((r) => episodeFromRow(r, fallbackArt));
 
+    const isUpcoming = card.status === 'Upcoming' || card.status === 'NOT_YET_RELEASED';
+
     // If database has no explicit episode rows for this anime, but anime is released/ongoing,
     // attempt JIT discovery or synthesize addressable episode entries up to episode_total
-    if (episodes.length === 0 && card.status !== 'Upcoming') {
+    if (episodes.length === 0 && !isUpcoming) {
       try {
         const provMap = await env.ANIHUB.prepare(
           `SELECT provider_slug FROM anime_provider_mapping WHERE anime_id = ?1 AND provider_id = 'anikoto' LIMIT 1`
@@ -308,7 +310,7 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
         }
       } catch {}
 
-      if (episodes.length === 0) {
+      if (episodes.length === 0 && !isUpcoming) {
         const isOngoing = card.status === 'Ongoing' || card.status === 'Airing';
         const count = card.kind === 'Movie' ? 1 : (isOngoing ? 1 : Math.max(1, Math.min(card.episode_total || 1, 2000)));
         episodes = Array.from({ length: count }, (_, i) => ({
@@ -326,13 +328,22 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
       }
     }
 
-    // Filter out unreleased episodes for ongoing shows so Watch page renders strictly streamable episodes
-    if (card.status === 'Ongoing' || card.status === 'Airing') {
+    // Filter out unreleased episodes so client renders strictly streamable episodes
+    if (isUpcoming) {
+      episodes = [];
+    } else if (card.status === 'Ongoing' || card.status === 'Airing') {
       const today = new Date().toISOString().split('T')[0];
-      const maxAired = Math.max(1, card.sched_episode && card.sched_episode > 1 ? card.sched_episode - 1 : (card.episode_count || 1));
+      const nextAiringEp = card.sched_episode && card.sched_episode > 0 ? card.sched_episode : null;
       episodes = episodes.filter((ep) => {
-        if (!ep.airdate) return ep.n <= maxAired || Boolean(ep.external_id);
-        return ep.airdate <= today;
+        // If next airing episode is known, any episode >= nextAiringEp has not aired yet
+        if (nextAiringEp !== null && ep.n >= nextAiringEp) return false;
+        // If airdate is explicitly in the future, it has not aired yet
+        if (ep.airdate && ep.airdate > today) return false;
+        // If no airdate and no external provider ID and no synopsis, it's an unpopulated phantom shell
+        if (!ep.airdate && !ep.external_id && !ep.synopsis && ep.title === `Episode ${ep.n}`) {
+          return false;
+        }
+        return true;
       });
     }
 
@@ -399,6 +410,7 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
 
     return ok({
       ...cardFromRow(card),
+      episodeCount: episodes.length,
       episodes,
       seasons,
       providers: (provRows || []).map((p) => p.provider_id),
