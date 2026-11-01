@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play, Star } from 'lucide-react';
 import { Art } from './Art';
+import { AiringCountdown } from './AiringCountdown';
 import { stamp } from '../lib/time';
 import { type Anime, cleanAnimeTitle } from '../data/model';
 import { CardMeta } from './CardMeta';
@@ -59,7 +60,13 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode, provid
         <div className="acard__media acard__media--poster">
           <Art sources={[anime.poster, anime.key]} alt={`${anime.title} poster art`} fill width={280} height={400} />
           <div className="acard__scrim" />
-          {badge && <span className="acard__flag">{badge}</span>}
+          {badge ? (
+            <span className="acard__flag">{badge}</span>
+          ) : (
+            anime.schedule?.day && anime.schedule?.time && (
+              <AiringCountdown anime={anime} variant="compact" showRemindMe={false} />
+            )
+          )}
           {/* A title the databases have no score for yet shows no score rather than a zero. */}
           {anime.rating > 0 && (
             <span className="acard__rating">
@@ -125,7 +132,13 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode, provid
       <div className="acard__media acard__media--key">
         <Art sources={[anime.key, anime.poster]} alt={`${anime.title} key art`} fill width={360} height={202} />
         <div className="acard__scrim" />
-        {badge && <span className="acard__flag">{badge}</span>}
+        {badge ? (
+          <span className="acard__flag">{badge}</span>
+        ) : (
+          anime.schedule?.day && anime.schedule?.time && (
+            <AiringCountdown anime={anime} variant="compact" showRemindMe={false} />
+          )
+        )}
       </div>
       <div className="acard__foot">
         {rank && (

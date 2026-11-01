@@ -6,6 +6,7 @@ import { useLibrary } from '../state/library';
 import { useSEO } from '../lib/useSEO';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { AnimeCard } from '../components/AnimeCard';
+import { AiringCountdown } from '../components/AiringCountdown';
 import { FranchiseTimeline } from '../components/franchise/FranchiseTimeline';
 import { ratingLabel } from '../data/model';
 import { getPlay } from '../data/api';
@@ -222,6 +223,23 @@ export function AnimeDetail() {
                 {anime.synopsis || 'No synopsis available for this title.'}
               </p>
             </div>
+
+            {/* Airing Countdown & Notification Bell */}
+            {anime.schedule?.day && anime.schedule?.time && (
+              <AiringCountdown
+                anime={{
+                  id: anime.id,
+                  title: anime.title,
+                  poster: anime.poster,
+                  status: anime.status,
+                  schedule: anime.schedule,
+                  episodeTotal: anime.episodeTotal,
+                  episodeCount: anime.episodes?.length ?? anime.episodeCount,
+                }}
+                variant="banner"
+                showRemindMe
+              />
+            )}
 
             {/* Play / Status CTA Button */}
             <div style={{ marginTop: '1rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>

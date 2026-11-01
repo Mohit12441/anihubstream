@@ -355,7 +355,7 @@ export async function resolveFranchiseSeasons(db, card) {
     poster: card.art || card.key_art || null,
     rating: card.rating || null,
     relationType: 'current',
-    chronologyOrder: card.year || 0,
+    chronologyOrder: card.chronology_order ?? card.year ?? 0,
     isCurrent: true,
   });
 
@@ -525,14 +525,14 @@ export async function resolveFranchiseSeasons(db, card) {
   const items = Array.from(dedupedByTitle.values());
   if (items.length <= 1) return [];
 
-  // Sort chronologically: by chronology order ascending, then year ascending, then title ascending
+  // Sort chronologically: by release year ascending, then chronology order, then title
   items.sort((a, b) => {
-    const ca = a.chronologyOrder || a.year || 9999;
-    const cb = b.chronologyOrder || b.year || 9999;
+    if (a.year && b.year && a.year !== b.year) {
+      return a.year - b.year;
+    }
+    const ca = a.chronologyOrder ?? 0;
+    const cb = b.chronologyOrder ?? 0;
     if (ca !== cb) return ca - cb;
-    const ya = a.year || 9999;
-    const yb = b.year || 9999;
-    if (ya !== yb) return ya - yb;
     return a.title.localeCompare(b.title);
   });
 

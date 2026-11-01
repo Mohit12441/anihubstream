@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
+import { checkAiringAlerts } from './lib/notifications';
 
 const Watch = lazy(() => import('./pages/Watch').then((m) => ({ default: m.Watch })));
 const AnimeDetail = lazy(() => import('./pages/AnimeDetail').then((m) => ({ default: m.AnimeDetail })));
@@ -30,6 +31,21 @@ function ScrollToTop() {
 export function App() {
   const { pathname } = useLocation();
   const bare = pathname === '/discover';
+
+  useEffect(() => {
+    // Airing notification polling
+    const initialTimer = setTimeout(() => {
+      checkAiringAlerts().catch(() => {});
+    }, 3000);
+    const intervalTimer = setInterval(() => {
+      checkAiringAlerts().catch(() => {});
+    }, 60000);
+
+    return () => {
+      clearTimeout(initialTimer);
+      clearInterval(intervalTimer);
+    };
+  }, []);
 
   return (
     <>

@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, CheckCircle2, Clock, Film, Play, Star, Timer } from 'lucide-react';
+import { Bell, BellOff, Calendar, CheckCircle2, Clock, Film, Play, Star, Timer } from 'lucide-react';
 import { Art } from './Art';
 import { CardMeta } from './CardMeta';
 import { cleanAnimeTitle, type ScheduleEntry } from '../data/model';
 import { getEpisodeReleaseStatus } from '../lib/scheduleTime';
+import { isNotificationSupported, isSubscribed, toggleSubscription } from '../lib/notifications';
 
 interface Props {
   entries: ScheduleEntry[];
@@ -14,6 +15,36 @@ interface Props {
 
 export function ScheduleList({ entries, highlightId, todayDay }: Props) {
   const [now, setNow] = useState(() => new Date());
+  const [subscribedMap, setSubscribedMap] = useState<Record<string, boolean>>({});
+
+  // Sync subscription states
+  useEffect(() => {
+    const map: Record<string, boolean> = {};
+    for (const e of entries) {
+      if (e.anime?.id) {
+        map[e.anime.id] = isSubscribed(e.anime.id);
+      }
+    }
+    setSubscribedMap(map);
+  }, [entries]);
+
+  const handleToggleSub = async (e: React.MouseEvent, entry: ScheduleEntry, nextEp: number | null) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const nextState = await toggleSubscription({
+      id: entry.anime.id,
+      title: entry.anime.title,
+      poster: entry.anime.poster,
+      schedule: {
+        day: entry.day,
+        dayLabel: entry.dayLabel,
+        time: entry.time,
+        date: entry.date,
+        episode: nextEp,
+      },
+    });
+    setSubscribedMap((prev) => ({ ...prev, [entry.anime.id]: nextState }));
+  };
 
   // Keep countdown updated every minute
   useEffect(() => {
@@ -139,6 +170,18 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
                 <Clock size={13} aria-hidden="true" />
                 <span>{e.time}</span>
               </span>
+
+              {isNotificationSupported() && !isReleased && (
+                <button
+                  type="button"
+                  className={`tl__remind ${subscribedMap[e.anime.id] ? 'tl__remind--active' : ''}`}
+                  onClick={(ev) => handleToggleSub(ev, e, nextEp)}
+                  title={subscribedMap[e.anime.id] ? 'Subscribed to notifications' : 'Get notified when episode airs'}
+                >
+                  {subscribedMap[e.anime.id] ? <BellOff size={13} /> : <Bell size={13} />}
+                  <span>{subscribedMap[e.anime.id] ? 'Alerted' : 'Notify'}</span>
+                </button>
+              )}
 
               <Link className="tl__watch" to={toWatch} title={`Stream ${cleanTitle} Episode ${targetEp}`}>
                 <Play size={14} fill="currentColor" strokeWidth={0} aria-hidden="true" />

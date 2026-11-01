@@ -975,14 +975,59 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 28. Recommended Next Targets & Architecture Roadmap
+## 28. Episode Airing Countdown Timer & Desktop Push Notifications
 
-1. **Target 6: Episode Airing Countdown Timer & Desktop Push Notifications**
-   - Add live countdown ticker to ongoing anime cards and opt-in Web Push Notifications via Service Worker for newly aired episodes.
-2. **Target 7: Automated Video Thumbnail Preview Sprites (VTT) Extractor**
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `03ba201`  
+**Completion Commit Hash:** `15668ea`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **Airing Countdown & Schedule Timing Engine ([`src/lib/airingCountdown.ts`](file:///C:/anihubstream-local/src/lib/airingCountdown.ts)):**
+   - Implemented `getUtcDayIndex` mapping weekdays accurately (1 = Mon to 7 = Sun).
+   - Built `getNextAiringDate(schedule, now)` computing future broadcast target dates across weekly boundaries, auto-advancing to next week (+7 days) when the current week's slot has elapsed.
+   - Built `computeAiringCountdown` calculating precise duration breakdown (`days`, `hours`, `minutes`, `seconds`), formatted labels (`"2d 4h 15m"`, `"15m 30s"`), urgent thresholds (`isAiringSoon: <= 3600s`), and next expected episode number.
+2. **Web Push & Local Notification Subsystem ([`src/lib/notifications.ts`](file:///C:/anihubstream-local/src/lib/notifications.ts)):**
+   - Implemented `NotificationPreferences` in localStorage with subscription management, notification history tracking, and 30-day alert deduplication.
+   - Added `requestNotificationPermission()` handling modern browser user-gesture permission flows.
+   - Built `toggleSubscription()` allowing 1-click subscription to ongoing series broadcast alerts.
+   - Built `sendLocalNotification()` targeting Service Worker `self.registration.showNotification` (with mobile/Android PWA support) and graceful fallback to `new Notification()`.
+   - Built `checkAiringAlerts()` polling engine checking subscribed anime against current time with customizable lead time (default: 15 mins).
+3. **Service Worker Interactive Alert Handling ([`public/sw.js`](file:///C:/anihubstream-local/public/sw.js)):**
+   - Added `notificationclick` event listener: closes notification on click and focuses active tab or opens target watch URL (`/watch/:id/:ep` or `/anime/:id`).
+4. **Interactive Airing Countdown UI Components ([`src/components/AiringCountdown.tsx`](file:///C:/anihubstream-local/src/components/AiringCountdown.tsx)):**
+   - Responsive multi-variant timer component (`banner`, `badge`, `compact`).
+   - Dynamic tick frequency: 1-second precision when airing soon (<1h), 30-second low-power interval otherwise.
+   - Integrated opt-in `[Remind Me]` / `[Subscribed]` toggle button with Lucide bell icons and loading states.
+5. **Card, Detail, and Schedule Page Integration:**
+   - **Anime Detail ([`src/pages/AnimeDetail.tsx`](file:///C:/anihubstream-local/src/pages/AnimeDetail.tsx))**: Renders prominent glassmorphic Airing Banner with live countdown and subscription button for ongoing anime.
+   - **Anime Card ([`src/components/AnimeCard.tsx`](file:///C:/anihubstream-local/src/components/AnimeCard.tsx))**: Renders compact floating countdown pill (`airing-pill`) for ongoing scheduled anime across home/trending/catalogue.
+   - **Schedule Page ([`src/components/ScheduleList.tsx`](file:///C:/anihubstream-local/src/components/ScheduleList.tsx))**: Renders 1-click notification toggle (`tl__remind`) next to upcoming episodes.
+   - **App Lifecycle ([`src/App.tsx`](file:///C:/anihubstream-local/src/App.tsx))**: Runs background notification polling interval every 60s.
+6. **Franchise Chronology Sort Refinement ([`functions/api/_lib.js`](file:///C:/anihubstream-local/functions/api/_lib.js)):**
+   - Refined `resolveFranchiseSeasons` to sort primarily by release `year` when available, with fallback to `chronologyOrder` and title, fixing chronology inversion across franchise prequels and sequels.
+7. **Deterministic Unit Test Suite ([`tools/airing-countdown.test.mjs`](file:///C:/anihubstream-local/tools/airing-countdown.test.mjs)):**
+   - 6/6 unit tests verifying UTC weekday indices, same-week future calculations, weekly wrap-around, countdown breakdown, urgent 60m threshold detection, and service worker `notificationclick` contracts.
+
+### What Was Verified:
+- `node --test tools/airing-countdown.test.mjs`: **6/6 tests PASSED**.
+- `node --test api/seasons.test.mjs tools/franchise-timeline.test.mjs tools/airing-countdown.test.mjs`: **14/14 tests PASSED**.
+- `npm run test:cache`: **8/8 tests PASSED** (Zero-Read Edge Shield verified).
+- `curl.exe -i -s http://127.0.0.1:8899/api/health`: **HTTP 200 OK**, `status: healthy`.
+- `npx tsc --noEmit`: **PASSED** (0 TypeScript errors).
+- `npm run build`: **PASSED** (0 TypeScript errors, Vite pages bundle emitted in 6.70s).
+
+---
+
+## 29. Recommended Next Targets & Architecture Roadmap
+
+1. **Target 7: Automated Video Thumbnail Preview Sprites (VTT) Extractor**
    - Generate scrubbing hover thumbnail sprites for player progress bar when upstream providers do not provide `thumbnails.vtt`.
-3. **Target 8: Multi-Source Torrent / WebTorrent P2P Fallback Streamer**
+2. **Target 8: Multi-Source Torrent / WebTorrent P2P Fallback Streamer**
    - Peer-to-peer resilient streaming layer when CDN providers encounter upstream rate limits or downtime.
+3. **Target 9: User Watch Party & Real-Time Synchronized Playback (WebSockets/WebRTC)**
+   - Synchronized episode viewing with friends with real-time play/pause room state and live chat.
+
 
 
 
