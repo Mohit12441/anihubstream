@@ -6,6 +6,7 @@ import {
   buildFribbIndexes,
   resolveFribbIds,
   populateLocalIdMap,
+  populateRemoteIdMap,
 } from './sync-fribb-id-map.mjs';
 
 describe('Universal ID Map (Fribb/anime-lists) Suite', () => {
@@ -150,5 +151,21 @@ describe('Universal ID Map (Fribb/anime-lists) Suite', () => {
     assert.ok(resolved);
     assert.equal(resolved.mal, 38000);
     assert.equal(resolved.anilist, 101922);
+  });
+
+  it('populateRemoteIdMap fails gracefully when Cloudflare credentials are missing', async () => {
+    const originalEnv = { ...process.env };
+    delete process.env.CF_ACCOUNT_ID;
+    delete process.env.CF_DATABASE_ID;
+    delete process.env.CF_API_TOKEN;
+
+    await assert.rejects(
+      async () => {
+        await populateRemoteIdMap();
+      },
+      /missing environment/i
+    );
+
+    Object.assign(process.env, originalEnv);
   });
 });

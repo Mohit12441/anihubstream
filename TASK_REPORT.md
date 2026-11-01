@@ -397,6 +397,43 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
+## 13. Phase 3: Autonomous Catalog Expansion Engine & Targeted Batch Ingestion
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `ab52f6b`  
+**Completion Commit Hash:** `bed13ae`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **Stage-Targeted Execution in [`tools/local-sync-daemon.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.mjs):**
+   - Added support for `--stage=<name>` and `--growth-only` flags.
+   - Decoupled catalog expansion from lengthy episode title searches (which take ~50s), allowing rapid catalog ingestion cycles in ~20s.
+   - Enhanced `runSyncCycle({ stage })` to execute only targeted pipeline stages while preserving database connection pooling and heartbeat logging to `sync_meta`.
+2. **NPM Script Integration:**
+   - Added `"sync:growth": "node tools/local-sync-daemon.mjs --once --growth-only"` to [`package.json`](file:///C:/anihubstream-local/package.json).
+3. **Live Backlog Batch Ingestion:**
+   - Executed live targeted expansion (`node tools/local-sync-daemon.mjs --once --growth-only --expand=3`).
+   - Ingested 3 new backlog series with full metadata, artwork, and episode schemas:
+     - *Naruto Shippuden the Movie* (`naruto-shippuden-the-movie-8hj8`): 1 episode, MAL `2472`, AniList `2472`, Kitsu `2245`.
+     - *Infinite Dendrogram* (`infinite-dendrogram`): 13 episodes, MAL `38909`, AniList `107420`, Kitsu `42131`.
+     - *The Legend of the Legendary Heroes* (`the-legend-of-the-legendary-heroes-gavf`): 24 episodes, MAL `8086`, AniList `8086`, Kitsu `5191`.
+   - Populated companion records into `anime_id_map` for all 3 titles.
+   - **Local D1 SQLite anime count increased from `2,789` to `2,792`** (38 new episodes stored).
+4. **Deterministic Unit Tests Added:**
+   - Updated [`tools/local-sync-daemon.test.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.test.mjs) with a test verifying that `runSyncCycle` respects stage filters and cleanly skips non-targeted stages (7/7 tests passing).
+
+### What Was Verified:
+- `node --test tools/local-sync-daemon.test.mjs`: **PASSED** (7/7 tests in 14ms).
+- `node --test api/*.test.mjs tools/*.test.mjs`: **PASSED** (**318 / 318 tests across 85 suites** in 6.49s).
+- `npm run test:cache`: **PASSED** (5/5 Zero-Read shield tests in 102ms).
+- `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 7.76s).
+
+### What Remains Risky:
+1. **Third-Party API Rate Limits on Large Batches:**
+   - Ingesting more than 30 titles consecutively in a single command may trigger AniList GraphQL rate limits. Expansion batches between 3 and 10 titles per cycle are recommended.
+
+---
+
 ## 14. Phase 4: Zero-Read Edge Optimization & Free-Tier Verification
 
 **Date:** 2026-11-01  
@@ -439,38 +476,39 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 1. **Dynamic Stream Expiration:**
    - `/api/play` and `/api/play/resolve` cache stream links for 5-10 minutes. If a streaming host rotates temporary CDN tokens in under 5 minutes, clients may need to request with `bypass=1` to force fresh token generation. Current upstream token lifetimes exceed 20 minutes, safely covering this window.
 
+---
+
+## 15. Phase 5: Cloud Synchronization & GitHub Actions Dispatcher
 
 **Date:** 2026-11-01  
-**Pre-DevFlow Checkpoint Commit Hash:** `ab52f6b`  
+**Pre-DevFlow Checkpoint Commit Hash:** `050cd14`  
 **Branch:** `agent-workflow-baseline`  
 
 ### What Changed:
-1. **Stage-Targeted Execution in [`tools/local-sync-daemon.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.mjs):**
-   - Added support for `--stage=<name>` and `--growth-only` flags.
-   - Decoupled catalog expansion from lengthy episode title searches (which take ~50s), allowing rapid catalog ingestion cycles in ~20s.
-   - Enhanced `runSyncCycle({ stage })` to execute only targeted pipeline stages while preserving database connection pooling and heartbeat logging to `sync_meta`.
-2. **NPM Script Integration:**
-   - Added `"sync:growth": "node tools/local-sync-daemon.mjs --once --growth-only"` to [`package.json`](file:///C:/anihubstream-local/package.json).
-3. **Live Backlog Batch Ingestion:**
-   - Executed live targeted expansion (`node tools/local-sync-daemon.mjs --once --growth-only --expand=3`).
-   - Ingested 3 new backlog series with full metadata, artwork, and episode schemas:
-     - *Naruto Shippuden the Movie* (`naruto-shippuden-the-movie-8hj8`): 1 episode, MAL `2472`, AniList `2472`, Kitsu `2245`.
-     - *Infinite Dendrogram* (`infinite-dendrogram`): 13 episodes, MAL `38909`, AniList `107420`, Kitsu `42131`.
-     - *The Legend of the Legendary Heroes* (`the-legend-of-the-legendary-heroes-gavf`): 24 episodes, MAL `8086`, AniList `8086`, Kitsu `5191`.
-   - Populated companion records into `anime_id_map` for all 3 titles.
-   - **Local D1 SQLite anime count increased from `2,789` to `2,792`** (38 new episodes stored).
-4. **Deterministic Unit Tests Added:**
-   - Updated [`tools/local-sync-daemon.test.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.test.mjs) with a test verifying that `runSyncCycle` respects stage filters and cleanly skips non-targeted stages (7/7 tests passing).
+1. **Universal ID Map Cloud Integration:**
+   - Extended [`tools/sync-fribb-id-map.mjs`](file:///C:/anihubstream-local/tools/sync-fribb-id-map.mjs) to support `--remote` mode via `populateRemoteIdMap`.
+   - Batches remote D1 upserts in chunks of 8 (80 parameters <= 90 max parameter limit) via `d1Query`.
+   - Added pre-flight check in `tools/sync-fribb-id-map.test.mjs` verifying graceful failure when Cloudflare credentials are missing.
+2. **GitHub Actions Workflow Orchestrator:**
+   - Updated [`.github/workflows/catalog-sync.yml`](file:///C:/anihubstream-local/.github/workflows/catalog-sync.yml):
+     - Added Phase 0 (`fribb-sync` / `fribb`) to synchronize 39,000+ cross-referenced IDs into remote D1.
+     - Added `pre-flight credentials audit` step running `cloud-sync/doctor-secrets.mjs` to proactively identify missing or malformed secrets before executing downstream stages.
+     - Added `fribb` to manual dispatch options and `fribb-sync` to repository dispatch triggers.
+3. **Comprehensive Setup Documentation:**
+   - Created [`docs/cloud-sync-setup.md`](file:///C:/anihubstream-local/docs/cloud-sync-setup.md) detailing:
+     - Remote git repository setup instructions (`git remote add origin ...`).
+     - Required GitHub repository secrets (`CF_ACCOUNT_ID`, `CF_DATABASE_ID`, `CF_API_TOKEN`).
+     - Dual-mode workflow usage (Local Miniflare vs Cloudflare D1 REST).
+     - Manual dispatch and automated scheduling (02:00 and 14:00 UTC).
 
 ### What Was Verified:
-- `node --test tools/local-sync-daemon.test.mjs`: **PASSED** (7/7 tests in 14ms).
-- `node --test api/*.test.mjs tools/*.test.mjs`: **PASSED** (**318 / 318 tests across 85 suites** in 6.49s).
-- `npm run test:cache`: **PASSED** (5/5 Zero-Read shield tests in 102ms).
-- `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 7.76s).
+- `node --test tools/sync-fribb-id-map.test.mjs`: **PASSED** (8/8 tests in 231ms).
+- `node --test cloud-sync/config.test.mjs`: **PASSED** (9/9 tests in 238ms).
+- `node --test cloud-sync/*.test.mjs`: **PASSED** (185/185 tests in 135s).
+- `node --test api/*.test.mjs tools/*.test.mjs`: **PASSED** (**328 / 328 tests across 86 suites** in 6.27s).
+- `npm run test:cache`: **PASSED** (8/8 assertions in 102ms).
+- `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 17.80s).
 
-### What Remains Risky:
-1. **Third-Party API Rate Limits on Large Batches:**
-   - Ingesting more than 30 titles consecutively in a single command may trigger AniList GraphQL rate limits. Expansion batches between 3 and 10 titles per cycle are recommended.
 
 
 

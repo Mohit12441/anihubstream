@@ -16,7 +16,7 @@ on:
   schedule:
     - cron: '0 2,14 * * *'
   repository_dispatch:
-    types: [catalog-sync, pulse, anilist-sync, kitsu-sync, hianime-sync, providers-sync]
+    types: [catalog-sync, pulse, fribb-sync, anilist-sync, kitsu-sync, hianime-sync, providers-sync]
   workflow_dispatch:
     inputs:
       target:
@@ -27,6 +27,7 @@ on:
         options:
           - all
           - pulse
+          - fribb
           - anilist
           - kitsu
           - hianime
@@ -82,6 +83,8 @@ jobs:
             SELECTED_TARGET="$TARGET"
           elif [ "$EVENT_TYPE" = "pulse" ]; then
             SELECTED_TARGET="pulse"
+          elif [ "$EVENT_TYPE" = "fribb-sync" ]; then
+            SELECTED_TARGET="fribb"
           elif [ "$EVENT_TYPE" = "anilist-sync" ]; then
             SELECTED_TARGET="anilist"
           elif [ "$EVENT_TYPE" = "kitsu-sync" ]; then
@@ -102,6 +105,26 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24.19'
+
+      - name: pre-flight credentials audit
+        continue-on-error: true
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: node cloud-sync/doctor-secrets.mjs
+
+      # -----------------------------------------------------------
+      # Phase 0: Universal ID Map Ingestion (Fribb/anime-lists)
+      # -----------------------------------------------------------
+      - name: phase 0 — sync universal id map
+        if: steps.stage.outputs.selected_target == 'all' || steps.stage.outputs.selected_target == 'pulse' || steps.stage.outputs.selected_target == 'fribb'
+        continue-on-error: true
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: node tools/sync-fribb-id-map.mjs --remote
 
       # -----------------------------------------------------------
       # Phase 1: Trending Discovery & AniList Metadata

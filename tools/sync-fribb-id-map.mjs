@@ -337,13 +337,116 @@ export async function populateLocalIdMap(dbInstance, { sourcesPath = SOURCES_FIL
   return { insertedOrUpdated: count };
 }
 
+/**
+ * Ingests cross-referenced IDs into remote Cloudflare D1 `anime_id_map` via REST API.
+ * @param {{ sourcesPath?: string, indexes?: FribbIndexes }} [options]
+ * @returns {Promise<{ insertedOrUpdated: number }>}
+ */
+export async function populateRemoteIdMap({ sourcesPath = SOURCES_FILE, indexes = null } = {}) {
+  const { d1Query, d1All } = await import('../cloud-sync/d1.mjs');
+  const fribbIndexes = indexes || (await getFribbIndexes());
+  const sources = JSON.parse(readFileSync(sourcesPath, 'utf8'));
+
+  // Ensure anime_id_map table exists on remote D1
+  await d1Query(`
+    CREATE TABLE IF NOT EXISTS anime_id_map (
+      anime_id      TEXT PRIMARY KEY REFERENCES anime(id) ON DELETE CASCADE,
+      mal_id        INTEGER,
+      anilist_id    INTEGER,
+      kitsu_id      INTEGER,
+      anikoto_slug  TEXT,
+      hianime_slug  TEXT,
+      aniwatch_slug TEXT,
+      adb_slug      TEXT,
+      waw_slug      TEXT,
+      confidence    REAL DEFAULT 1.0,
+      updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
+    )
+  `);
+
+  await d1Query(`CREATE INDEX IF NOT EXISTS id_map_by_mal ON anime_id_map(mal_id)`);
+  await d1Query(`CREATE INDEX IF NOT EXISTS id_map_by_anilist ON anime_id_map(anilist_id)`);
+  await d1Query(`CREATE INDEX IF NOT EXISTS id_map_by_kitsu ON anime_id_map(kitsu_id)`);
+
+  const existingRows = await d1All('SELECT id FROM anime');
+  const existingIds = new Set(existingRows.map((r) => r.id));
+
+  const validEntries = [];
+  for (const s of sources) {
+    if (!existingIds.has(s.id)) continue;
+
+    const resolved = resolveFribbIds(
+      { mal: s.mal, anilist: s.anilist, kitsu: s.kitsu, anidb: s.anidb },
+      fribbIndexes
+    );
+
+    const malId = resolved?.mal ?? s.mal ?? null;
+    const anilistId = resolved?.anilist ?? s.anilist ?? null;
+    const kitsuId = resolved?.kitsu ?? s.kitsu ?? null;
+    const confidence = malId ? 1.0 : (anilistId && kitsuId ? 1.0 : 0.85);
+
+    validEntries.push([
+      s.id,
+      malId,
+      anilistId,
+      kitsuId,
+      s.anikoto ?? null,
+      s.hianime ?? null,
+      s.aniwatch ?? null,
+      s.adb ?? null,
+      s.waw ?? null,
+      confidence,
+    ]);
+  }
+
+  // 10 params per row, max 90 params per statement => chunk size 8
+  const CHUNK_SIZE = 8;
+  let count = 0;
+
+  for (let i = 0; i < validEntries.length; i += CHUNK_SIZE) {
+    const chunk = validEntries.slice(i, i + CHUNK_SIZE);
+    const valuePlaceholders = [];
+    const params = [];
+
+    for (let r = 0; r < chunk.length; r++) {
+      const row = chunk[r];
+      const offset = r * 10;
+      valuePlaceholders.push(
+        `(?${offset + 1}, ?${offset + 2}, ?${offset + 3}, ?${offset + 4}, ?${offset + 5}, ?${offset + 6}, ?${offset + 7}, ?${offset + 8}, ?${offset + 9}, ?${offset + 10}, datetime('now'))`
+      );
+      params.push(...row);
+    }
+
+    const sql = `
+      INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anikoto_slug, hianime_slug, aniwatch_slug, adb_slug, waw_slug, confidence, updated_at)
+      VALUES ${valuePlaceholders.join(',\n')}
+      ON CONFLICT(anime_id) DO UPDATE SET
+        mal_id = coalesce(excluded.mal_id, anime_id_map.mal_id),
+        anilist_id = coalesce(excluded.anilist_id, anime_id_map.anilist_id),
+        kitsu_id = coalesce(excluded.kitsu_id, anime_id_map.kitsu_id),
+        anikoto_slug = coalesce(excluded.anikoto_slug, anime_id_map.anikoto_slug),
+        hianime_slug = coalesce(excluded.hianime_slug, anime_id_map.hianime_slug),
+        aniwatch_slug = coalesce(excluded.aniwatch_slug, anime_id_map.aniwatch_slug),
+        confidence = excluded.confidence,
+        updated_at = datetime('now')
+    `;
+
+    await d1Query(sql, params);
+    count += chunk.length;
+  }
+
+  console.log(`[fribb-sync] Populated ${count} active anime records into remote Cloudflare D1 anime_id_map.`);
+  return { insertedOrUpdated: count };
+}
+
 // CLI runner
 if (process.argv[1] && resolve(process.argv[1]) === resolve(__filename)) {
   const forceRefresh = process.argv.includes('--refresh');
   const dryRun = process.argv.includes('--dry-run');
+  const isRemote = process.argv.includes('--remote');
 
   try {
-    console.log('[fribb-sync] Starting Universal ID Map synchronization...');
+    console.log(`[fribb-sync] Starting Universal ID Map synchronization (${isRemote ? 'Remote D1' : 'Local SQLite'})...`);
     const indexes = await getFribbIndexes(forceRefresh);
     console.log(`[fribb-sync] Indexed: MAL=${indexes.byMal.size}, AniList=${indexes.byAnilist.size}, Kitsu=${indexes.byKitsu.size}`);
 
@@ -351,7 +454,9 @@ if (process.argv[1] && resolve(process.argv[1]) === resolve(__filename)) {
     console.log(`[fribb-sync] Enrichment summary: ${enrichStats.enriched} enriched, ${enrichStats.missingAfter} still missing out of ${enrichStats.total} titles.`);
 
     if (!dryRun) {
-      const dbStats = await populateLocalIdMap(null, { indexes });
+      const dbStats = isRemote
+        ? await populateRemoteIdMap({ indexes })
+        : await populateLocalIdMap(null, { indexes });
       console.log(`[fribb-sync] Database sync complete: ${dbStats.insertedOrUpdated} records committed to anime_id_map.`);
     }
 
