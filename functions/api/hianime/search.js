@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, cleanDisplayTitle, errorResponse, ok } from '../_lib.js';
+import { HttpError, cleanDisplayTitle, errorResponse, ok, withEdgeCache } from '../_lib.js';
 
 const HIANIME_MAIN = 'https://animehot.cc';
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
@@ -16,9 +16,14 @@ function normalizeSearch(text) {
  * HiAnime Isolated Search Edge Endpoint:
  * GET /api/hianime/search?q=<query>&page=1&limit=24
  */
-export const onRequestGet = async ({ request, env }) => {
-  try {
-    const url = new URL(request.url);
+export const onRequestGet = async ({ request, env, waitUntil }) => {
+  return withEdgeCache(
+    request,
+    env,
+    1800,
+    async () => {
+      try {
+        const url = new URL(request.url);
     const q = (url.searchParams.get('q') || '').trim();
     const page = Math.max(1, Number(url.searchParams.get('page')) || 1);
     const limit = Math.min(50, Math.max(1, Number(url.searchParams.get('limit')) || 24));
@@ -86,6 +91,9 @@ export const onRequestGet = async ({ request, env }) => {
       provider: 'hianime',
     }, { cache: 'public, max-age=180, s-maxage=300' });
   } catch (err) {
-    return errorResponse(err);
-  }
+        return errorResponse(err);
+      }
+    },
+    { allowedParams: ['q', 'page', 'limit'], waitUntil },
+  );
 };

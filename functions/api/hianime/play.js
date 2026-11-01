@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, errorResponse, ok } from '../_lib.js';
+import { HttpError, errorResponse, ok, withEdgeCache } from '../_lib.js';
 import { resolveZokoEmbedEdge } from './_zoko.js';
 import { isMegaplayTokenValid, resolveMegaplayEmbed } from '../_megaplay.js';
 
@@ -21,9 +21,14 @@ function formatProxyUrl(rawUrl, referer, origin) {
  *
  * GET /api/hianime/play?id=:id&ep=:n&audio=:audio&server=:server
  */
-export const onRequestGet = async ({ request, env }) => {
-  try {
-    const url = new URL(request.url);
+export const onRequestGet = async ({ request, env, waitUntil }) => {
+  return withEdgeCache(
+    request,
+    env,
+    300,
+    async () => {
+      try {
+        const url = new URL(request.url);
     const origin = url.origin;
     const rawId = (url.searchParams.get('id') || '').trim();
     const ep = Math.max(1, Number(url.searchParams.get('ep')) || 1);
@@ -264,6 +269,9 @@ export const onRequestGet = async ({ request, env }) => {
 
     return ok(responsePayload, { cache: 'public, max-age=180, s-maxage=300' });
   } catch (err) {
-    return errorResponse(err);
-  }
+        return errorResponse(err);
+      }
+    },
+    { allowedParams: ['id', 'ep', 'audio', 'server'], waitUntil },
+  );
 };

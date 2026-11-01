@@ -408,5 +408,5 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
   } catch (err) {
     return errorResponse(err);
   }
-  }, { waitUntil });
+  }, { allowedParams: [], waitUntil });
 };

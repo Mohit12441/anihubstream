@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, cardFromRow, cleanDisplayTitle, errorResponse, ok, safeLikePattern } from './_lib.js';
+import { HttpError, cardFromRow, cleanDisplayTitle, errorResponse, ok, safeLikePattern, withEdgeCache } from './_lib.js';
 
 const FAN_OUT_TIMEOUT_MS = 3_500;
 const KNOWN_PROVIDERS = {
@@ -19,10 +19,15 @@ const KNOWN_PROVIDERS = {
  *
  * GET /api/search?q=<query>
  */
-export const onRequestGet = async ({ request, env }) => {
-  try {
-    const url = new URL(request.url);
-    const q = (url.searchParams.get('q') || '').trim();
+export const onRequestGet = async ({ request, env, waitUntil }) => {
+  return withEdgeCache(
+    request,
+    env,
+    1800,
+    async () => {
+      try {
+        const url = new URL(request.url);
+        const q = (url.searchParams.get('q') || '').trim();
 
     if (!q) {
       throw new HttpError(400, 'bad_request', 'q query parameter is required');
@@ -219,6 +224,9 @@ export const onRequestGet = async ({ request, env }) => {
       }
     );
   } catch (err) {
-    return errorResponse(err);
-  }
+        return errorResponse(err);
+      }
+    },
+    { allowedParams: ['q'], waitUntil },
+  );
 };

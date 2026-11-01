@@ -23,6 +23,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         return errorResponse(err);
       }
     },
-    { waitUntil },
+    { allowedParams: [], waitUntil },
   );
 };

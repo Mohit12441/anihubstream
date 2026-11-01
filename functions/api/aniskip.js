@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, errorResponse, json } from './_lib.js';
+import { HttpError, errorResponse, json, withEdgeCache } from './_lib.js';
 
 const ANISKIP_BASE = 'https://api.aniskip.com/v2';
 const TIMEOUT_MS = 6000;
@@ -8,9 +8,14 @@ const TIMEOUT_MS = 6000;
  * Edge proxy for AniSkip v2 API with Cloudflare edge caching,
  * relation rules remapping, and negative caching to shield upstream.
  */
-export const onRequestGet = async ({ request, env }) => {
-  try {
-    const url = new URL(request.url);
+export const onRequestGet = async ({ request, env, waitUntil }) => {
+  return withEdgeCache(
+    request,
+    env,
+    86400,
+    async () => {
+      try {
+        const url = new URL(request.url);
 
     // Support relation rules query or path: /api/aniskip/relation-rules/:malId
     const rulePathMatch = url.pathname.match(/\/relation-rules\/(\d+)/);
@@ -191,6 +196,9 @@ export const onRequestGet = async ({ request, env }) => {
       }
     );
   } catch (err) {
-    return errorResponse(err);
-  }
+        return errorResponse(err);
+      }
+    },
+    { allowedParams: ['malId', 'ep', 'duration', 'episodeLength', 'relationRules'], waitUntil },
+  );
 };

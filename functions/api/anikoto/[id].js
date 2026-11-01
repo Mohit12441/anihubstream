@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, cleanDisplayTitle, errorResponse, ok } from '../_lib.js';
+import { HttpError, cleanDisplayTitle, errorResponse, ok, withEdgeCache } from '../_lib.js';
 
 const ANIKOTO_MAIN = 'https://anikoto.cz';
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
@@ -21,9 +21,14 @@ function cleanText(text) {
  * AniKoto Isolated Anime Details Edge Endpoint:
  * GET /api/anikoto/:id
  */
-export const onRequestGet = async ({ params, env }) => {
-  try {
-    const rawId = decodeURIComponent(params.id || '').trim();
+export const onRequestGet = async ({ request, params, env, waitUntil }) => {
+  return withEdgeCache(
+    request,
+    env,
+    86400,
+    async () => {
+      try {
+        const rawId = decodeURIComponent(params.id || '').trim();
     if (!rawId) {
       throw new HttpError(400, 'bad_request', 'anime id is required');
     }
@@ -194,6 +199,9 @@ export const onRequestGet = async ({ params, env }) => {
       provider: 'anikoto',
     }, { cache: 'public, max-age=300, s-maxage=600' });
   } catch (err) {
-    return errorResponse(err);
-  }
+        return errorResponse(err);
+      }
+    },
+    { allowedParams: [], waitUntil },
+  );
 };

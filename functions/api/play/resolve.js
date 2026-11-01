@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, cleanDisplayTitle, errorResponse, ok, resolveMalId } from '../_lib.js';
+import { HttpError, cleanDisplayTitle, errorResponse, ok, resolveMalId, withEdgeCache } from '../_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from '../_megaplay.js';
 import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
 
@@ -42,9 +42,14 @@ function buildAudioTracks(audio) {
  *
  * GET /api/play/resolve?title=<title>&ep=<ep>&audio=<audio>&provider=<prov>&server=<server>
  */
-export const onRequestGet = async ({ request, env }) => {
-  try {
-    const url = new URL(request.url);
+export const onRequestGet = async ({ request, env, waitUntil }) => {
+  return withEdgeCache(
+    request,
+    env,
+    600,
+    async () => {
+      try {
+        const url = new URL(request.url);
     const title = (url.searchParams.get('title') || url.searchParams.get('id') || url.searchParams.get('slug') || '').trim();
     const mal = url.searchParams.get('mal') || '';
     const ep = Math.max(1, Number.parseInt(url.searchParams.get('ep') ?? '1', 10) || 1);
@@ -320,6 +325,9 @@ export const onRequestGet = async ({ request, env }) => {
 
     return ok({ server: resolvedServer }, { cache: 'public, max-age=600, s-maxage=1800' });
   } catch (err) {
-    return errorResponse(err);
-  }
+        return errorResponse(err);
+      }
+    },
+    { allowedParams: ['title', 'id', 'slug', 'mal', 'ep', 'audio', 'provider', 'server'], waitUntil },
+  );
 };

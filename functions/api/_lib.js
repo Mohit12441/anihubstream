@@ -25,6 +25,11 @@ export const fail = (status, code, message) => json({ error: code, message }, { 
 const devMemoryCache = new Map();
 const inFlightRequests = new Map();
 
+export function clearEdgeMemoryCache() {
+  devMemoryCache.clear();
+  inFlightRequests.clear();
+}
+
 function normalizeCacheKey(requestUrl, allowedParams) {
   const url = new URL(requestUrl);
   const cleanParams = new URLSearchParams();
@@ -42,6 +47,7 @@ function normalizeCacheKey(requestUrl, allowedParams) {
       }
     }
   }
+  cleanParams.sort();
   const search = cleanParams.toString();
   return `${url.origin}${url.pathname}${search ? '?' + search : ''}`;
 }

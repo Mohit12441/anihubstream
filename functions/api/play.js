@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, json, ok } from './_lib.js';
+import { HttpError, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, json, ok, withEdgeCache } from './_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
 
@@ -222,9 +222,14 @@ async function resolveSkipTimes(db, malId, ep, duration, rawEpisodeMarkers, anim
  *
  * GET /api/play?id=<animeId>&ep=<ep>&audio=<sub|dub|hindi>&provider=<name>&server=<name>
  */
-export const onRequestGet = async ({ request, env }) => {
-  try {
-    const url = new URL(request.url);
+export const onRequestGet = async ({ request, env, waitUntil }) => {
+  return withEdgeCache(
+    request,
+    env,
+    300,
+    async () => {
+      try {
+        const url = new URL(request.url);
     let id = url.searchParams.get('id') || url.searchParams.get('animeId') || '';
     const titleParam = url.searchParams.get('title') || '';
     const malIdParam = url.searchParams.get('malId') || '';
@@ -638,6 +643,9 @@ export const onRequestGet = async ({ request, env }) => {
       cache: 'no-store, no-cache, must-revalidate',
     });
   } catch (err) {
-    return errorResponse(err);
-  }
+        return errorResponse(err);
+      }
+    },
+    { allowedParams: ['id', 'animeId', 'title', 'malId', 'ep', 'audio', 'provider', 'server'], waitUntil },
+  );
 };

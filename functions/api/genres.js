@@ -21,5 +21,5 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
   } catch (err) {
     return errorResponse(err);
   }
-  }, { waitUntil });
+  }, { allowedParams: [], waitUntil });
 };
