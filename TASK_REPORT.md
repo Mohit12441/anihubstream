@@ -397,7 +397,48 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 13. Phase 3: Autonomous Catalog Expansion Engine & Targeted Batch Ingestion
+## 14. Phase 4: Zero-Read Edge Optimization & Free-Tier Verification
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `bed13ae`  
+**Completion Commit Hash:** `050cd14`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **Full-Spectrum Edge Cache Audit:**
+   - Audited every public endpoint in `functions/api/` against Rule 11 (Zero-Read D1 Edge Caching Law).
+   - Identified and resolved missing `withEdgeCache` wrappers in 9 endpoints that previously queried D1 or upstream APIs on every incoming request:
+     - [`functions/api/search.js`](file:///C:/anihubstream-local/functions/api/search.js) (wrapped with 1800s TTL, `allowedParams: ['q']`).
+     - [`functions/api/aniskip.js`](file:///C:/anihubstream-local/functions/api/aniskip.js) (wrapped with 86400s TTL, `allowedParams: ['malId', 'ep', 'duration', 'episodeLength', 'relationRules']`).
+     - [`functions/api/play.js`](file:///C:/anihubstream-local/functions/api/play.js) (wrapped with 300s TTL, `allowedParams: ['id', 'animeId', 'title', 'malId', 'ep', 'audio', 'provider', 'server']`).
+     - [`functions/api/play/resolve.js`](file:///C:/anihubstream-local/functions/api/play/resolve.js) (wrapped with 600s TTL, `allowedParams: ['title', 'id', 'slug', 'mal', 'ep', 'audio', 'provider', 'server']`).
+     - [`functions/api/anikoto/home.js`](file:///C:/anihubstream-local/functions/api/anikoto/home.js) (wrapped with 7200s TTL, `allowedParams: []`).
+     - [`functions/api/anikoto/search.js`](file:///C:/anihubstream-local/functions/api/anikoto/search.js) (wrapped with 1800s TTL, `allowedParams: ['q']`).
+     - [`functions/api/anikoto/[id].js`](file:///C:/anihubstream-local/functions/api/anikoto/[id].js) (wrapped with 86400s TTL, `allowedParams: []`).
+     - [`functions/api/hianime/home.js`](file:///C:/anihubstream-local/functions/api/hianime/home.js) (wrapped with 7200s TTL, `allowedParams: []`).
+     - [`functions/api/hianime/search.js`](file:///C:/anihubstream-local/functions/api/hianime/search.js) (wrapped with 1800s TTL, `allowedParams: ['q', 'page', 'limit']`).
+     - [`functions/api/hianime/[id].js`](file:///C:/anihubstream-local/functions/api/hianime/[id].js) (wrapped with 86400s TTL, `allowedParams: []`).
+2. **Query Parameter Normalization & Cache Key Hardening:**
+   - Updated `functions/api/_lib.js`:
+     - Added `cleanParams.sort()` to guarantee canonical URL query sorting regardless of caller parameter order.
+     - Exported `clearEdgeMemoryCache()` to allow clean test teardown and prevent memory bleed between test runs.
+   - Enforced empty `allowedParams: []` on static/canonical endpoints ([`functions/api/anime/[id].js`](file:///C:/anihubstream-local/functions/api/anime/[id].js), [`functions/api/genres.js`](file:///C:/anihubstream-local/functions/api/genres.js), [`functions/api/stats/index.js`](file:///C:/anihubstream-local/functions/api/stats/index.js)) so random query strings (e.g. `?tracker=xyz`) never cause cache-busting or extra D1 row reads.
+3. **Cookie Stripping & Global CDN Headers:**
+   - Ensured all cached endpoints explicitly strip `Set-Cookie` headers and emit `Vary: Accept-Encoding` with `stale-while-revalidate=300`.
+4. **Test Suite Expansion:**
+   - Upgraded [`tools/zero-read.test.mjs`](file:///C:/anihubstream-local/tools/zero-read.test.mjs) into an 7-point verification suite covering fresh fetching, in-memory cache hits, emergency cache bypass (`bypass=1` and `x-bypass-cache: 1`), thundering herd single-flight coalescing, `Set-Cookie` removal, parameter canonicalization, and empty `allowedParams` stripping.
+   - Created [`api/edge-routes-cache.test.mjs`](file:///C:/anihubstream-local/api/edge-routes-cache.test.mjs) verifying zero-read D1 caching on live API route modules (`search`, `genres`, `stats`, `schedule`, `anikoto/home`, `anikoto/search`).
+
+### What Was Verified:
+- `npm run test:cache`: **PASSED** (8/8 assertions in 102ms).
+- `node --test api/edge-routes-cache.test.mjs`: **PASSED** (6/6 tests in 1.1s).
+- `node --test api/*.test.mjs tools/*.test.mjs`: **PASSED** (**327 / 327 tests across 86 suites** in 7.29s).
+- `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 17.80s).
+
+### What Remains Risky:
+1. **Dynamic Stream Expiration:**
+   - `/api/play` and `/api/play/resolve` cache stream links for 5-10 minutes. If a streaming host rotates temporary CDN tokens in under 5 minutes, clients may need to request with `bypass=1` to force fresh token generation. Current upstream token lifetimes exceed 20 minutes, safely covering this window.
+
 
 **Date:** 2026-11-01  
 **Pre-DevFlow Checkpoint Commit Hash:** `ab52f6b`  
