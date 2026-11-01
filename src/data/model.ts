@@ -68,6 +68,10 @@ export interface AnimeSeasonItem {
   year?: number | null;
   kind?: AnimeKind;
   isCurrent?: boolean;
+  poster?: string | null;
+  rating?: number | null;
+  relationType?: 'prequel' | 'sequel' | 'movie' | 'side_story' | 'spin_off' | 'current' | string;
+  chronologyOrder?: number;
 }
 
 export interface Anime {

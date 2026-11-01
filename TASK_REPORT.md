@@ -867,14 +867,47 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 25. Recommended Next Targets & Architecture Roadmap
+## 25. Franchise Chronology Visual Timeline View
 
-1. **Target 3: Franchise Chronology Visual Timeline View**
-   - Enhance [`src/pages/AnimeDetail.tsx`](file:///C:/anihubstream-local/src/pages/AnimeDetail.tsx) to render a visual release order / timeline tree using the existing 1,480 franchise edges in `anime_franchise_relation`.
-2. **Target 4: Intelligent Auto-Skip & AniSkip Fallback Optimizer**
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `e101dff`  
+**Completion Commit Hash:** `20ffb88`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **D1 Franchise Graph Enrichment in [`functions/api/_lib.js`](file:///C:/anihubstream-local/functions/api/_lib.js):**
+   - Updated `resolveFranchiseSeasons` to query `art`, `key_art`, `rating`, `relation_type`, and `chronology_order` from `anime_franchise_relation` and the `anime` table.
+   - Enriched every franchise relation node with `poster`, `rating`, `relationType` (`'current'`, `'prequel'`, `'sequel'`, `'movie'`, `'side_story'`), and `chronologyOrder`.
+   - Re-ordered the returned franchise graph by sequence order (`chronologyOrder ASC, year ASC, title ASC`).
+2. **TypeScript Domain Model Enrichment ([`src/data/model.ts`](file:///C:/anihubstream-local/src/data/model.ts)):**
+   - Expanded `AnimeSeasonItem` to include `poster?: string | null`, `rating?: number | null`, `relationType?: string`, and `chronologyOrder?: number`.
+3. **Interactive Franchise Timeline Component ([`src/components/franchise/FranchiseTimeline.tsx`](file:///C:/anihubstream-local/src/components/franchise/FranchiseTimeline.tsx)):**
+   - Built a responsive visual franchise chronology tree with a view switcher between **Timeline View** and **Grid View**.
+   - **Timeline View**: Renders chronological sequence numbers (`#1`, `#2`, `#3`...), glowing node pulses highlighting the currently viewed title, relation pills (`Now Viewing`, `Prequel`, `Sequel`, `Movie`, `Side Story`), poster thumbnails, format chips (`TV`, `Movie`, `OVA`), release year, and star ratings.
+   - **Grid View**: Compact card layout for dense navigation across large franchises.
+4. **Integration in Anime Details ([`src/pages/AnimeDetail.tsx`](file:///C:/anihubstream-local/src/pages/AnimeDetail.tsx)):**
+   - Replaced basic season text chips with `<FranchiseTimeline seasons={anime.seasons} currentAnimeId={anime.id} />`.
+5. **Deterministic Unit Test Suite ([`tools/franchise-timeline.test.mjs`](file:///C:/anihubstream-local/tools/franchise-timeline.test.mjs)):**
+   - 2/2 unit tests verifying multi-season relation extraction, chronological sort ordering, poster/rating preservation, and clean handling of standalone titles.
+
+### What Was Verified:
+- `node --test tools/franchise-timeline.test.mjs`: **2/2 tests PASSED**.
+- `npm run test:cache`: **8/8 tests PASSED** (Zero-Read Edge Shield verified).
+- `curl.exe -m 8 -s "http://127.0.0.1:8899/api/anime/jujutsu-kaisen?bypass=1"`:
+  - Returns 7 chronological installments with posters, ratings, formats, and relation types.
+- `npm run build`: **PASSED** (0 TypeScript errors, Vite pages build bundled in 6.79s).
+
+---
+
+## 26. Recommended Next Targets & Architecture Roadmap
+
+1. **Target 4: Intelligent Auto-Skip & AniSkip Fallback Optimizer**
    - Add local learning/heuristics to detect recap/intro timestamps for anime without AniSkip v2 entries by analyzing black frames or audio silence signatures.
-3. **Target 5: Multi-Language Subtitle Style Presets & Font Customizer**
+2. **Target 5: Multi-Language Subtitle Style Presets & Font Customizer**
    - Enhance player subtitle styling with customizable text shadows, font families, and opacity presets saved to local storage.
+3. **Target 6: Episode Airing Countdown Timer & Desktop Push Notifications**
+   - Add live countdown ticker to ongoing anime cards and opt-in Web Push Notifications via Service Worker for newly aired episodes.
+
 
 
 

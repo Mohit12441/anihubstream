@@ -352,13 +352,18 @@ export async function resolveFranchiseSeasons(db, card) {
     season: card.season || '',
     year: card.year || null,
     kind: card.kind || 'TV',
+    poster: card.art || card.key_art || null,
+    rating: card.rating || null,
+    relationType: 'current',
+    chronologyOrder: card.year || 0,
     isCurrent: true,
   });
 
   // 0. Primary indexed query: Check pre-indexed anime_franchise_relation in D1
   try {
     const { results: dbRelations } = await db.prepare(
-      `SELECT r.related_id, a.id, a.title, a.season, a.year, a.kind, r.relation_type, r.chronology_order
+      `SELECT r.related_id, a.id, a.title, a.season, a.year, a.kind, a.art, a.key_art, a.rating,
+              r.relation_type, r.chronology_order
        FROM anime_franchise_relation r
        JOIN anime a ON a.id = r.related_id
        WHERE r.anime_id = ?1
@@ -374,6 +379,10 @@ export async function resolveFranchiseSeasons(db, card) {
             season: rel.season || '',
             year: rel.year || null,
             kind: rel.kind || 'TV',
+            poster: rel.art || rel.key_art || null,
+            rating: rel.rating || null,
+            relationType: rel.relation_type || 'sequel',
+            chronologyOrder: rel.chronology_order || rel.year || 0,
             isCurrent: false,
           });
         }
@@ -397,27 +406,38 @@ export async function resolveFranchiseSeasons(db, card) {
 
     try {
       const match = await db.prepare(
-        'SELECT id, title, season, year, kind FROM anime WHERE lower(title) = lower(?1) LIMIT 1'
+        'SELECT id, title, season, year, kind, art, key_art, rating FROM anime WHERE lower(title) = lower(?1) LIMIT 1'
       ).bind(cleanedTitle).first().catch(() => null);
       if (match && !seasonsMap.has(match.id)) {
+        const isMovie = (match.kind || '').toLowerCase() === 'movie';
+        const relType = isMovie ? 'movie' : ((match.year || 0) >= (card.year || 0) ? 'sequel' : 'prequel');
         seasonsMap.set(match.id, {
           id: match.id,
           title: cleanDisplayTitle(match.title),
           season: match.season || '',
           year: match.year || null,
           kind: match.kind || 'TV',
+          poster: match.art || match.key_art || null,
+          rating: match.rating || null,
+          relationType: relType,
+          chronologyOrder: match.year || 0,
           isCurrent: false,
         });
       } else if (!match) {
         const fallbackSlug = cleanedTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
         if (fallbackSlug && !seasonsMap.has(fallbackSlug)) {
           const yearMatch = altTitle.match(/\((\d{4})\)/);
+          const matchedYear = yearMatch ? Number.parseInt(yearMatch[1], 10) : null;
           seasonsMap.set(fallbackSlug, {
             id: fallbackSlug,
             title: cleanedTitle,
             season: yearMatch ? ('Year ' + yearMatch[1]) : '',
-            year: yearMatch ? Number.parseInt(yearMatch[1], 10) : null,
+            year: matchedYear,
             kind: 'TV',
+            poster: null,
+            rating: null,
+            relationType: (matchedYear || 0) >= (card.year || 0) ? 'sequel' : 'prequel',
+            chronologyOrder: matchedYear || 0,
             isCurrent: false,
           });
         }
@@ -429,16 +449,22 @@ export async function resolveFranchiseSeasons(db, card) {
   try {
     if (currentTitle && currentTitle.length >= 4) {
       const { results: inverseMatches } = await db.prepare(
-        'SELECT id, title, season, year, kind FROM anime WHERE alt_seasons LIKE ?1 LIMIT 6'
+        'SELECT id, title, season, year, kind, art, key_art, rating FROM anime WHERE alt_seasons LIKE ?1 LIMIT 6'
       ).bind('%' + currentTitle + '%').all().catch(() => ({ results: [] }));
       for (const m of inverseMatches || []) {
         if (!seasonsMap.has(m.id)) {
+          const isMovie = (m.kind || '').toLowerCase() === 'movie';
+          const relType = isMovie ? 'movie' : ((m.year || 0) >= (card.year || 0) ? 'sequel' : 'prequel');
           seasonsMap.set(m.id, {
             id: m.id,
             title: cleanDisplayTitle(m.title),
             season: m.season || '',
             year: m.year || null,
             kind: m.kind || 'TV',
+            poster: m.art || m.key_art || null,
+            rating: m.rating || null,
+            relationType: relType,
+            chronologyOrder: m.year || 0,
             isCurrent: false,
           });
         }
@@ -456,16 +482,22 @@ export async function resolveFranchiseSeasons(db, card) {
 
     if (baseSlug && baseSlug.length >= 4) {
       const { results: slugSiblings } = await db.prepare(
-        'SELECT id, title, season, year, kind FROM anime WHERE (id = ?1 OR id LIKE ?2) AND kind IN (\'TV\', \'Movie\', \'ONA\', \'OVA\', \'Special\') LIMIT 15'
+        'SELECT id, title, season, year, kind, art, key_art, rating FROM anime WHERE (id = ?1 OR id LIKE ?2) AND kind IN (\'TV\', \'Movie\', \'ONA\', \'OVA\', \'Special\') LIMIT 15'
       ).bind(baseSlug, baseSlug + '-%').all().catch(() => ({ results: [] }));
       for (const s of slugSiblings || []) {
         if (!seasonsMap.has(s.id)) {
+          const isMovie = (s.kind || '').toLowerCase() === 'movie';
+          const relType = isMovie ? 'movie' : ((s.year || 0) >= (card.year || 0) ? 'sequel' : 'prequel');
           seasonsMap.set(s.id, {
             id: s.id,
             title: cleanDisplayTitle(s.title),
             season: s.season || '',
             year: s.year || null,
             kind: s.kind || 'TV',
+            poster: s.art || s.key_art || null,
+            rating: s.rating || null,
+            relationType: relType,
+            chronologyOrder: s.year || 0,
             isCurrent: s.id === card.id,
           });
         }
@@ -493,8 +525,11 @@ export async function resolveFranchiseSeasons(db, card) {
   const items = Array.from(dedupedByTitle.values());
   if (items.length <= 1) return [];
 
-  // Sort chronologically: by year ascending, then title ascending
+  // Sort chronologically: by chronology order ascending, then year ascending, then title ascending
   items.sort((a, b) => {
+    const ca = a.chronologyOrder || a.year || 9999;
+    const cb = b.chronologyOrder || b.year || 9999;
+    if (ca !== cb) return ca - cb;
     const ya = a.year || 9999;
     const yb = b.year || 9999;
     if (ya !== yb) return ya - yb;
