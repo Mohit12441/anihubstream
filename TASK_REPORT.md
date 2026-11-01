@@ -77,3 +77,57 @@ All deterministic validation gates were executed and confirmed passing:
    - Full video stream downloads (`functions/api/download-pipe.js`) iterate over segments inside Edge Workers. Large 1080p episodes with >50 segments will encounter subrequest limits unless handled through client-side service workers or the dedicated stream bridge.
 2. **Third-Party Upstream Extraction Changes:**
    - Streaming extractors (`hianime.mjs`, `anikoto.mjs`, `aniwatch.mjs`) rely on external DOM and token patterns. If upstream providers modify their obfuscation, automated provider fallbacks will trigger until scrapers are updated.
+
+---
+
+## 5. Root Cause Analysis: Automatic Catalog Update Failures
+
+An architectural investigation was conducted to determine why AniList, Kitsu, AniSkip, HiAnime, AniKoto, and AniWatch synchronizations fail to run automatically:
+
+### 1. Inactive Background Schedulers
+1. **GitHub Actions Workflow Inactive (`.github/workflows/catalog-sync.yml`):**
+   - The master 9-phase sync pipeline is defined in `catalog-sync.yml` on cron `0 2,14 * * *`.
+   - **Root Cause:** The repository has no configured Git remote (`git remote -v` is empty). It was never pushed to a remote GitHub repository. Consequently, GitHub Actions cron events never trigger.
+2. **Missing Windows Scheduled Task:**
+   - `tools/hourly-refresh.mjs` was intended to be run every 30 minutes via Windows Task Scheduler (`AniHubHourlyRefresh`).
+   - Querying `schtasks /query /tn "AniHubHourlyRefresh"` reveals that the task was never registered on the operating system.
+3. **Cloudflare Worker Cron Trigger Disabled:**
+   - `sync-worker/wrangler.toml` explicitly removed its cron trigger because AniList's API blocks Cloudflare datacenter IP addresses with HTTP 403 (`You have been manually blocked`).
+
+### 2. Dual Incompatible Sync Architectures
+1. **Cloudflare REST Architecture (`cloud-sync/`):**
+   - Requires remote Cloudflare REST credentials (`CF_ACCOUNT_ID`, `CF_DATABASE_ID`, `CF_API_TOKEN`).
+   - `.env` lacks `CF_API_TOKEN`, and `package.json` scripts do not pass `--env-file=.env`. Running `npm run sync:anilist` immediately throws `missing environment: CF_API_TOKEN`.
+   - These scripts cannot write directly to the local Miniflare D1 database (`.wrangler/state/v3/d1/...`).
+2. **Local Direct SQLite Architecture (`tools/`):**
+   - Tools like `auto-sync-episodes.mjs`, `auto-sync-franchises.mjs`, and `sync-ongoing-schedules.mjs` connect directly to local Miniflare SQLite using `node:sqlite`.
+   - They function cleanly when executed manually via CLI, but have no background daemon or loop to run them automatically.
+
+### 3. Broken Tooling Dependencies
+- In `tools/hourly-refresh.mjs` line 50, `WRANGLER_JS` defaults to `join(process.env.APPDATA, 'npm', 'node_modules', 'wrangler', 'bin', 'wrangler.js')`, which does not exist on this machine, causing invocation failures.
+
+---
+
+## 6. Dead Code & Obsolete Artifacts Inventory
+
+The audit identified significant dead code, obsolete scratch files, and legacy one-off scripts:
+
+| Category | File / Path | Size | Reason for Dead/Obsolete Status |
+|---|---|---|---|
+| **Abandoned Worker** | `sync-worker/` | — | Cron trigger removed due to AniList 403 block; now a redundant skeleton. |
+| **Scratch Scraper Dumps** | `tools/anikoto-slugs-progress.json` | 197.5 KB | Temporary progress dump from one-off 2026-10-20 scraper run. |
+| **Scratch Scraper Dumps** | `tools/anikoto-slugs-review.json` | 9.3 KB | Temporary review file from 2026-10-20 scraper run. |
+| **Static Data Snapshot** | `tools/anikoto-slugs.json` | 175.3 KB | Slugs already merged into `id-map-seed.sql` and D1 tables. |
+| **Static Data Snapshot** | `tools/anime-titles.json` | 184.7 KB | Stale title dump from 2026-10-20. |
+| **Test Build Artifacts** | `ops/github-sync-dispatcher/dist-test/` | 8.9 KB | Outdated bundled test output. |
+| **One-Off Backfill Script**| `tools/backfill-anikoto-slugs.mjs` | 6.5 KB | One-time backfill script; superseded by `auto-sync-providers.mjs`. |
+| **One-Off Backfill Script**| `tools/backfill-anilist-ids.mjs` | 6.0 KB | One-time ID map backfill script. |
+| **One-Off Backfill Script**| `tools/backfill-search-text.mjs` | 1.9 KB | One-time search text generator; incorporated into `sync-catalogue.mjs`. |
+| **One-Off Backfill Script**| `tools/apply-anikoto-slugs-d1.mjs` | 2.3 KB | One-time SQL generator for AniKoto provider slugs. |
+| **Obsolete Importer** | `tools/import-local-dump.mjs` | 2.2 KB | References non-existent `anime_fts` virtual table. |
+| **Abandoned Seed Gen** | `tools/gen-seed.mjs` | 3.5 KB | Superseded by `tools/sync-catalogue.mjs`. |
+| **Unsupported Schema** | `tools/setup_fts5.sql` | 0.9 KB | FTS5 virtual table unsupported/disabled in standard D1 deployments. |
+| **Scratch Benchmarks** | `tools/benchmark-anikoto.mjs` | 6.6 KB | One-off benchmark script not connected to test harnesses. |
+| **Scratch Benchmarks** | `tools/benchmark-hianime.mjs` | 7.2 KB | One-off benchmark script. |
+| **Scratch Benchmarks** | `tools/benchmark-search.mjs` | 2.3 KB | One-off benchmark script. |
+
