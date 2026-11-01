@@ -177,3 +177,55 @@ The audit identified significant dead code, obsolete scratch files, and legacy o
 2. **Shift to GitHub Actions:**
    - Before shifting to GitHub Actions (`.github/workflows/catalog-sync.yml`), the user must configure a remote Git repository (`git remote add origin <url>`) and configure Cloudflare secrets (`CF_ACCOUNT_ID`, `CF_DATABASE_ID`, `CF_API_TOKEN`) in GitHub repository secrets.
 
+---
+
+## 8. Phase 3: Exhaustive Sync Subsystem Testing & Verification
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `eccd06b`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **Contract Harmonization Between Schedules and Daemon:**
+   - Modified [`tools/sync-ongoing-schedules.mjs`](file:///C:/anihubstream-local/tools/sync-ongoing-schedules.mjs) to cleanly export `syncOngoingSchedules({ isRemote, quiet })`, returning structured execution metrics (`updated`, `cleared`, `unchanged`, `totalTitles`, `durationMs`).
+   - Wired [`tools/local-sync-daemon.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.mjs) Stage 1 directly to `syncOngoingSchedules`, ensuring `sched_day` (1=Mon ... 7=Sun), `sched_day_label`, `sched_date`, `sched_season`, and `sched_episode` adhere strictly to Edge API contracts (`functions/api/schedule.js`).
+2. **Deterministic Regression Test Suite Added:**
+   - Created [`tools/local-sync-daemon.test.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.test.mjs) covering:
+     - Miniflare D1 SQLite database path auto-discovery (`findSqlitePath`).
+     - Async cycle executor contract (`runSyncCycle`).
+     - In-memory franchise graph edge persistence into `anime_franchise_relation`.
+     - 10-point rating scale normalization logic.
+     - `sync_meta` heartbeat JSON serialization and storage.
+
+### What Was Verified:
+1. **Live External Upstream API Diagnostics:**
+   - Probed all 6 external community & provider endpoints live:
+     - **AniList GraphQL:** Status 200 (Sample: *Cowboy Bebop* in 658ms).
+     - **Kitsu API:** Status 200 (Sample: *Sousou no Frieren* in 614ms).
+     - **AniSkip API:** Status 200 (Marker found: `true` in 1000ms).
+     - **HiAnime Scraper:** Functional (4 search hits in 775ms).
+     - **AniWatch Scraper:** Functional (2 search hits in 1110ms).
+     - **AniKoto Scraper:** Functional (8 search hits in 422ms).
+2. **Local Autonomous Sync Run (`node tools/local-sync-daemon.mjs --once`):**
+   - **Stage 1 (Schedules):** 283 ongoing anime verified; 0 stale slots, 283 unchanged (0 unnecessary D1 writes) in 9.6s.
+   - **Stage 2 (Providers & Ratings):** Verified 2,521 AniKoto, 2,591 HiAnime, and 452 AniWatch active mappings.
+   - **Stage 3 (Franchises):** 1,480 franchise relation links indexed in 128ms.
+   - **Stage 4 (Episodes):** Enriched 62 anime (874 total episodes) in 54s.
+   - **Full cycle runtime:** 64.4s, exiting cleanly with status 0 and telemetry stored in `sync_meta`.
+3. **Database Consistency Verification:**
+   - Total Anime: 2,787
+   - Active Schedule Entries: 88
+   - Franchise Relations: 1,480
+   - Total Episodes: 41,166 (30,315 canonical named episodes)
+4. **Deterministic Quality Gates:**
+   - `npm run build`: **PASSED** (0 TypeScript errors, Vite bundle built in 7.12s).
+   - `npm run test:cache`: **PASSED** (5/5 Zero-Read shield tests in 91ms).
+   - `node --test tools/*.test.mjs`: **PASSED** (95/95 tests in 2.67s).
+   - `node --test api/*.test.mjs`: **PASSED** (203/203 tests in 3.05s).
+   - `node --test cloud-sync/sync-*.test.mjs`: **PASSED** (23/23 tests).
+
+### What Remains Risky:
+1. **Cloudflare REST Synchronization (`cloud-sync/`):**
+   - The scripts in `cloud-sync/` (`sync-anilist.mjs`, `sync-hianime.mjs`, `sync-kitsu.mjs`) communicate strictly with the remote Cloudflare D1 REST API and will fail when run locally without `CF_API_TOKEN`. For all local development and offline catalog operations, `tools/local-sync-daemon.mjs` (`npm run sync:local`) must be used instead.
+
+

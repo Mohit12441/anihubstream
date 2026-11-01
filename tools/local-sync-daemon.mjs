@@ -23,13 +23,14 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { existsSync, readdirSync } from 'node:fs';
 
+import { syncOngoingSchedules } from './sync-ongoing-schedules.mjs';
 import { autoSyncProviders } from './auto-sync-providers.mjs';
 import { computeFranchiseGraph, persistRelations } from './auto-sync-franchises.mjs';
 import { autoSyncEpisodes } from './auto-sync-episodes.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-function findSqlitePath() {
+export function findSqlitePath() {
   const d1Dir = resolve(__dirname, '../.wrangler/state/v3/d1/miniflare-D1DatabaseObject');
   if (existsSync(d1Dir)) {
     const files = readdirSync(d1Dir).filter((f) => f.endsWith('.sqlite') && f !== 'metadata.sqlite');
@@ -58,90 +59,15 @@ function recordHeartbeat(db, summary) {
 
 /**
  * Stage 1: Synchronize ongoing broadcast schedules from AniList
- * @param {DatabaseSync} db
  * @param {boolean} quiet
  */
-async function syncSchedulesStage(db, quiet) {
-  const start = Date.now();
+async function syncSchedulesStage(quiet) {
   if (!quiet) console.log('\n[Stage 1/4] 📅 Synchronizing Airing Schedules from AniList...');
-
-  const rows = db.prepare(`
-    SELECT a.id, m.anilist_id, a.sched_day, a.sched_time, a.sched_season, a.sched_episode
-    FROM anime a
-    LEFT JOIN anime_id_map m ON a.id = m.anime_id
-    WHERE a.status IN ('Ongoing', 'Airing') AND m.anilist_id IS NOT NULL AND m.anilist_id > 0
-    LIMIT 100
-  `).all();
-
-  if (rows.length === 0) {
-    if (!quiet) console.log('  No ongoing anime requiring schedule updates.');
-    return { updated: 0, durationMs: Date.now() - start };
+  const res = await syncOngoingSchedules({ isRemote: false, quiet: true });
+  if (!quiet) {
+    console.log(`  ✓ Updated ${res.updated} anime schedules (cleared ${res.cleared}, unchanged ${res.unchanged}) in ${res.durationMs}ms`);
   }
-
-  const query = `
-    query ($ids: [Int]) {
-      Page(page: 1, perPage: 50) {
-        media(id_in: $ids, type: ANIME) {
-          id
-          status
-          nextAiringEpisode {
-            airingAt
-            episode
-          }
-        }
-      }
-    }
-  `;
-
-  let updatedCount = 0;
-  const BATCH_SIZE = 40;
-  const WEEK = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
-  const updateStmt = db.prepare(`
-    UPDATE anime
-    SET sched_day = ?, sched_day_label = ?, sched_date = ?, sched_time = ?, sched_episode = ?
-    WHERE id = ?
-  `);
-
-  for (let i = 0; i < rows.length; i += BATCH_SIZE) {
-    const chunk = rows.slice(i, i + BATCH_SIZE);
-    // @ts-ignore
-    const idMap = new Map(chunk.map((r) => [r.anilist_id, r]));
-    const ids = Array.from(idMap.keys());
-
-    try {
-      const res = await fetch('https://graphql.anilist.co', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'User-Agent': 'AniHubStream/1.0 LocalSync' },
-        body: JSON.stringify({ query, variables: { ids } }),
-        signal: AbortSignal.timeout(10000),
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        const mediaList = data?.data?.Page?.media || [];
-        for (const item of mediaList) {
-          const next = item.nextAiringEpisode;
-          const anime = idMap.get(item.id);
-          if (next?.airingAt && anime) {
-            const airDate = new Date(next.airingAt * 1000);
-            const dayIdx = (airDate.getUTCDay() + 6) % 7;
-            const dayLabel = WEEK[dayIdx];
-            const dateStr = airDate.toISOString().split('T')[0];
-            const timeStr = airDate.toISOString().split('T')[1].slice(0, 5);
-
-            updateStmt.run(dayIdx, dayLabel, dateStr, timeStr, next.episode, anime.id);
-            updatedCount++;
-          }
-        }
-      }
-    } catch (err) {
-      if (!quiet) console.warn('  Schedule batch fetch warning:', err?.message || err);
-    }
-    await sleep(600);
-  }
-
-  if (!quiet) console.log(`  ✓ Updated ${updatedCount} anime schedules in ${Date.now() - start}ms`);
-  return { updated: updatedCount, durationMs: Date.now() - start };
+  return res;
 }
 
 /**
@@ -226,7 +152,7 @@ export async function runSyncCycle({ quiet = false } = {}) {
   };
 
   try {
-    metrics.schedules = await syncSchedulesStage(db, quiet).catch((e) => ({ error: e.message }));
+    metrics.schedules = await syncSchedulesStage(quiet).catch((e) => ({ error: e.message }));
     metrics.providers = await syncProvidersStage(quiet).catch((e) => ({ error: e.message }));
     metrics.franchises = await syncFranchisesStage(db, quiet).catch((e) => ({ error: e.message }));
     metrics.episodes = await syncEpisodesStage(quiet).catch((e) => ({ error: e.message }));

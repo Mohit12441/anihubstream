@@ -55,13 +55,16 @@ async function fetchAiringBatch(ids) {
 
 const sqlEscape = (val) => `'${String(val).replace(/'/g, "''")}'`;
 
-async function main() {
+export async function syncOngoingSchedules({ isRemote = process.argv.includes('--remote'), quiet = false } = {}) {
+  const start = Date.now();
   const hasRestCreds = Boolean(process.env.CF_API_TOKEN && process.env.CF_ACCOUNT_ID && process.env.CF_DATABASE_ID);
-  console.log(
-    `🚀 Synchronizing Daily Broadcast Schedules (Mode: ${
-      isRemote ? (hasRestCreds ? 'Remote D1 REST API' : 'Remote D1 Wrangler CLI') : 'Local SQLite'
-    })...\n`,
-  );
+  if (!quiet) {
+    console.log(
+      `🚀 Synchronizing Daily Broadcast Schedules (Mode: ${
+        isRemote ? (hasRestCreds ? 'Remote D1 REST API' : 'Remote D1 Wrangler CLI') : 'Local SQLite'
+      })...\n`,
+    );
+  }
 
   let db = null;
   /** @type {Array<{ id: string, anilist_id: number, sched_day?: number|null, sched_day_label?: string|null, sched_date?: string|null, sched_time?: string|null, sched_season?: string|null }>} */
@@ -328,16 +331,29 @@ async function main() {
     }
   }
 
-  console.log(`\n✓ Schedule Sync Complete!`);
-  console.log(`  - Active airing schedules written: ${updatedCount}`);
-  console.log(`  - Stale/finished slots cleared: ${clearedCount}`);
-  console.log(`  - Unchanged slots skipped (zero D1 writes): ${unchangedCount}`);
+  if (!quiet) {
+    console.log(`\n✓ Schedule Sync Complete!`);
+    console.log(`  - Active airing schedules written: ${updatedCount}`);
+    console.log(`  - Stale/finished slots cleared: ${clearedCount}`);
+    console.log(`  - Unchanged slots skipped (zero D1 writes): ${unchangedCount}`);
+  }
 
+  let totalSched = 0;
   if (db) {
     // @ts-ignore
-    const totalSched = db.prepare('SELECT count(*) as count FROM anime WHERE sched_day IS NOT NULL').get().count;
-    console.log(`  - Total titles now on Schedule page: ${totalSched}\n`);
+    totalSched = db.prepare('SELECT count(*) as count FROM anime WHERE sched_day IS NOT NULL').get().count;
+    if (!quiet) console.log(`  - Total titles now on Schedule page: ${totalSched}\n`);
   }
+
+  return {
+    updated: updatedCount,
+    cleared: clearedCount,
+    unchanged: unchangedCount,
+    totalTitles: totalSched,
+    durationMs: Date.now() - start,
+  };
 }
 
-main().catch(console.error);
+if (process.argv[1] && process.argv[1].endsWith('sync-ongoing-schedules.mjs')) {
+  syncOngoingSchedules({ isRemote: process.argv.includes('--remote') }).catch(console.error);
+}
