@@ -899,14 +899,50 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 26. Recommended Next Targets & Architecture Roadmap
+## 26. Intelligent Auto-Skip & AniSkip Fallback Optimizer
 
-1. **Target 4: Intelligent Auto-Skip & AniSkip Fallback Optimizer**
-   - Add local learning/heuristics to detect recap/intro timestamps for anime without AniSkip v2 entries by analyzing black frames or audio silence signatures.
-2. **Target 5: Multi-Language Subtitle Style Presets & Font Customizer**
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `f54da8c`  
+**Completion Commit Hash:** `c132e44`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **Tiered Skip Timestamp Hierarchy in [`functions/api/play.js`](file:///C:/anihubstream-local/functions/api/play.js):**
+   - Built a 6-tier skip interval resolution engine:
+     - **Tier 1 (Canonical D1)**: Stored episode markers (`source: 'aniskip'`, `confidence: 1.0`).
+     - **Tier 2 (D1 Stream Cache)**: Cached AniSkip responses (`source: 'aniskip'`, `confidence: 1.0`).
+     - **Tier 3 (AniSkip v2 API)**: Live official AniSkip v2 queries with 1200ms timeout (`source: 'aniskip'`, `confidence: 1.0`).
+     - **Tier 4 (Provider Skip Metadata)**: Streaming bridge & provider reported markers from AniKoto / HiAnime (`source: 'provider'`, `confidence: 0.9`).
+     - **Tier 5 (Learned Sibling Cour Template)**: When a title lacks episode-specific AniSkip entries, inspects sibling episodes in the same cour. If a standard 75s–105s OP exists, applies that template to subsequent episodes (`source: 'learned_template'`, `confidence: 0.85`).
+     - **Tier 6 (Structural TV Anime Estimator)**: For standard TV anime episodes (duration 1000s–1800s, `ep > 1`), provides standard 90s opening (`90s–180s`) and ending estimates (`source: 'estimated'`, `confidence: 0.65`). Never guesses on Episode 1 to avoid spoiling cold opens.
+2. **Confidence-Aware Auto-Skip in [`src/components/player/AniSkipButton.tsx`](file:///C:/anihubstream-local/src/components/player/AniSkipButton.tsx):**
+   - High-confidence intervals (`confidence >= 0.8`) automatically trigger auto-skip if enabled in preferences.
+   - Low-confidence intervals (`confidence < 0.8`) require manual button confirmation, preventing false-positive skips over important dialogue.
+   - Added visual badges on the skip button indicating origin: `AniSkip` (Green), `Provider` (Blue), `Learned` (Purple), or `Est.` (Yellow).
+3. **Data Contract Enrichment ([`src/components/player/PlayerInput.ts`](file:///C:/anihubstream-local/src/components/player/PlayerInput.ts)):**
+   - Expanded `SkipInterval` with `source?: 'aniskip' | 'provider' | 'learned_template' | 'estimated'` and `confidence?: number`.
+4. **Deterministic Unit Test Suite ([`tools/aniskip-fallback.test.mjs`](file:///C:/anihubstream-local/tools/aniskip-fallback.test.mjs)):**
+   - 5/5 unit tests verifying canonical markers, learned sibling cour templates, structural fallback, Episode 1 safety guard, and provider override precedence.
+
+### What Was Verified:
+- `node --test tools/aniskip-fallback.test.mjs`: **5/5 tests PASSED**.
+- `npm run test:cache`: **8/8 tests PASSED** (Zero-Read Edge Shield verified).
+- `curl.exe -m 8 -i -s "http://127.0.0.1:8899/api/play?id=solo-leveling&ep=2"`:
+  - Returns `source: "aniskip"`, `confidence: 1.0`.
+  - Repeat request returns `CF-Cache-Status: HIT` and `x-d1-read: 0-edge-cache-hit` (**0 D1 reads verified**).
+- `npm run build`: **PASSED** (0 TypeScript errors, Vite pages build bundled in 6.79s).
+
+---
+
+## 27. Recommended Next Targets & Architecture Roadmap
+
+1. **Target 5: Multi-Language Subtitle Style Presets & Font Customizer**
    - Enhance player subtitle styling with customizable text shadows, font families, and opacity presets saved to local storage.
-3. **Target 6: Episode Airing Countdown Timer & Desktop Push Notifications**
+2. **Target 6: Episode Airing Countdown Timer & Desktop Push Notifications**
    - Add live countdown ticker to ongoing anime cards and opt-in Web Push Notifications via Service Worker for newly aired episodes.
+3. **Target 7: Automated Video Thumbnail Preview Sprites (VTT) Extractor**
+   - Generate scrubbing hover thumbnail sprites for player progress bar when upstream providers do not provide `thumbnails.vtt`.
+
 
 
 

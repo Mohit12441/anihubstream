@@ -27,6 +27,8 @@ export interface SkipInterval {
   start: number;
   end: number;
   label: string;
+  source?: 'aniskip' | 'provider' | 'learned_template' | 'estimated';
+  confidence?: number;
 }
 
 export interface AniSkipData {

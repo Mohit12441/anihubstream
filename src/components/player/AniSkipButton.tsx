@@ -38,10 +38,16 @@ export function AniSkipButton({
     return null;
   }, [aniskip, currentTime]);
 
-  // Handle auto-skip preference
+  // Handle auto-skip preference (only auto-skip if confidence is high >= 0.80)
   useEffect(() => {
     if (!autoSkip || !activeInterval) {
       if (!activeInterval) hasAutoSkipped.current = null;
+      return;
+    }
+
+    const confidence = activeInterval.confidence ?? 1.0;
+    if (confidence < 0.8) {
+      // Lower confidence interval requires manual click to prevent skipping dialogue
       return;
     }
 
@@ -53,6 +59,19 @@ export function AniSkipButton({
   }, [autoSkip, activeInterval, onSkip]);
 
   if (!activeInterval) return null;
+
+  const sourceBadge = (() => {
+    switch (activeInterval.source) {
+      case 'estimated':
+        return { label: 'Est.', bg: 'rgba(234, 179, 8, 0.2)', color: '#facc15' };
+      case 'learned_template':
+        return { label: 'Learned', bg: 'rgba(99, 102, 241, 0.25)', color: '#c7d2fe' };
+      case 'provider':
+        return { label: 'Provider', bg: 'rgba(59, 130, 246, 0.2)', color: '#93c5fd' };
+      default:
+        return { label: 'AniSkip', bg: 'rgba(34, 197, 94, 0.2)', color: '#86efac' };
+    }
+  })();
 
   return (
     <button
@@ -83,6 +102,20 @@ export function AniSkipButton({
     >
       <FastForward size={18} style={{ color: 'var(--brand, #6366f1)' }} />
       <span>Skip {activeInterval.label}</span>
+      <span
+        style={{
+          fontSize: '0.65rem',
+          padding: '1px 6px',
+          borderRadius: '4px',
+          background: sourceBadge.bg,
+          color: sourceBadge.color,
+          fontWeight: 700,
+          textTransform: 'uppercase',
+          letterSpacing: '0.03em',
+        }}
+      >
+        {sourceBadge.label}
+      </span>
     </button>
   );
 }

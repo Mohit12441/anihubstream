@@ -168,6 +168,8 @@ async function resolveSkipTimes(db, malId, ep, duration, rawEpisodeMarkers, anim
             start: m.start,
             end: m.end,
             label: m.label || (m.kind === 'outro' ? 'Ending' : m.kind === 'recap' ? 'Recap' : 'Opening'),
+            source: 'aniskip',
+            confidence: 1.0,
           };
           if (m.kind === 'intro') op ??= formatted;
           else if (m.kind === 'outro') ed ??= formatted;
@@ -182,37 +184,108 @@ async function resolveSkipTimes(db, malId, ep, duration, rawEpisodeMarkers, anim
     }
   }
 
-  if (!malId || malId <= 0) return null;
-
   // 2. Check stream_cache in D1 (1ms)
-  const cacheKey = `aniskip:${malId}:${ep}`;
-  if (db) {
+  if (malId && malId > 0 && db) {
+    const cacheKey = `aniskip:${malId}:${ep}`;
     try {
       const cached = await db.prepare(
         'SELECT data FROM stream_cache WHERE key = ?1 AND expires_at > ?2'
       ).bind(cacheKey, Date.now()).first();
       if (cached?.data) {
         const parsed = JSON.parse(cached.data);
-        return parsed.empty ? null : parsed;
+        if (!parsed.empty) {
+          return {
+            op: parsed.op ? { ...parsed.op, source: 'aniskip', confidence: 1.0 } : null,
+            ed: parsed.ed ? { ...parsed.ed, source: 'aniskip', confidence: 1.0 } : null,
+            recap: parsed.recap ? { ...parsed.recap, source: 'aniskip', confidence: 1.0 } : null,
+          };
+        }
       }
-    } catch {
-      // stream_cache may not exist or query error
+    } catch {}
+
+    // 3. Fallback to AniSkip API with short 1200ms timeout
+    const skip = await fetchAniSkip(db, malId, ep, duration);
+    if (skip && (skip.op || skip.ed || skip.recap)) {
+      const expiresAt = Date.now() + 30 * 24 * 3600 * 1000;
+      db.prepare(
+        'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
+      ).bind(cacheKey, JSON.stringify(skip), expiresAt).run().catch(() => {});
+      return {
+        op: skip.op ? { ...skip.op, source: 'aniskip', confidence: 1.0 } : null,
+        ed: skip.ed ? { ...skip.ed, source: 'aniskip', confidence: 1.0 } : null,
+        recap: skip.recap ? { ...skip.recap, source: 'aniskip', confidence: 1.0 } : null,
+      };
+    } else {
+      const expiresAt = Date.now() + 7 * 24 * 3600 * 1000;
+      db.prepare(
+        'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
+      ).bind(cacheKey, JSON.stringify({ empty: true }), expiresAt).run().catch(() => {});
     }
   }
 
-  // 3. Fallback to AniSkip API with short 1200ms timeout
-  const skip = await fetchAniSkip(db, malId, ep, duration);
+  // 4. Sibling Episode Learned Template (Cour pattern heuristic)
+  if (db && animeId && ep > 1) {
+    try {
+      const { results: siblings } = await db.prepare(
+        `SELECT markers FROM episode WHERE anime_id = ?1 AND markers IS NOT NULL AND markers != '[]' LIMIT 4`
+      ).bind(animeId).all().catch(() => ({ results: [] }));
 
-  // 4. Cache result for 30 days in D1 asynchronously (7 days for empty)
-  if (db) {
-    const expiresAt = Date.now() + (skip ? 30 : 7) * 24 * 3600 * 1000;
-    const toStore = skip || { empty: true };
-    db.prepare(
-      'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
-    ).bind(cacheKey, JSON.stringify(toStore), expiresAt).run().catch(() => {});
+      if (Array.isArray(siblings) && siblings.length > 0) {
+        for (const sib of siblings) {
+          try {
+            const sibMarkers = typeof sib.markers === 'string' ? JSON.parse(sib.markers) : sib.markers;
+            const sibIntro = sibMarkers?.find((m) => m.kind === 'intro');
+            const sibOutro = sibMarkers?.find((m) => m.kind === 'outro');
+
+            // Standard TV OP is between 75s and 105s in length
+            if (sibIntro && (sibIntro.end - sibIntro.start) >= 75 && (sibIntro.end - sibIntro.start) <= 105) {
+              const op = {
+                start: sibIntro.start,
+                end: sibIntro.end,
+                label: 'Opening',
+                source: 'learned_template',
+                confidence: 0.85,
+              };
+              let ed = null;
+              if (sibOutro && duration > 600) {
+                ed = {
+                  start: Math.min(sibOutro.start, duration - 100),
+                  end: Math.min(sibOutro.end, duration - 10),
+                  label: 'Ending',
+                  source: 'learned_template',
+                  confidence: 0.85,
+                };
+              }
+              return { op, ed, recap: null };
+            }
+          } catch {}
+        }
+      }
+    } catch {}
   }
 
-  return skip;
+  // 5. Structural TV Anime Estimator (Standard 90-second TV window)
+  if (duration >= 1000 && duration <= 1800 && ep > 1) {
+    return {
+      op: {
+        start: 90,
+        end: 180,
+        label: 'Opening',
+        source: 'estimated',
+        confidence: 0.65,
+      },
+      ed: {
+        start: Math.max(duration - 120, 0),
+        end: Math.max(duration - 30, 0),
+        label: 'Ending',
+        source: 'estimated',
+        confidence: 0.65,
+      },
+      recap: null,
+    };
+  }
+
+  return null;
 }
 
 /**
@@ -682,25 +755,25 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       }
     }
 
-    // Merge AniSkip: Prefer AniSkip v2, fallback to provider-reported skip times (from AniKoto/HiAnime)
+    // Merge AniSkip: Prefer AniSkip v2 / learned template, fallback to provider-reported skip times (from AniKoto/HiAnime)
     let finalOp = aniskipData?.op || null;
     let finalEd = aniskipData?.ed || null;
     let finalRecap = aniskipData?.recap || null;
 
-    if (!finalOp && meta.skip?.intro) {
+    if ((!finalOp || (finalOp.confidence && finalOp.confidence < 0.8)) && meta.skip?.intro) {
       const s = meta.skip.intro;
       const start = Array.isArray(s) ? s[0] : s.start;
       const end = Array.isArray(s) ? s[1] : s.end;
       if (start !== undefined && end !== undefined && (start > 0 || end > 0)) {
-        finalOp = { start, end, label: 'Opening' };
+        finalOp = { start, end, label: 'Opening', source: 'provider', confidence: 0.9 };
       }
     }
-    if (!finalEd && meta.skip?.outro) {
+    if ((!finalEd || (finalEd.confidence && finalEd.confidence < 0.8)) && meta.skip?.outro) {
       const s = meta.skip.outro;
       const start = Array.isArray(s) ? s[0] : s.start;
       const end = Array.isArray(s) ? s[1] : s.end;
       if (start !== undefined && end !== undefined && (start > 0 || end > 0)) {
-        finalEd = { start, end, label: 'Ending' };
+        finalEd = { start, end, label: 'Ending', source: 'provider', confidence: 0.9 };
       }
     }
 
