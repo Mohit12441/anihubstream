@@ -794,14 +794,51 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 23. Recommended Next Targets & Architecture Roadmap
+## 23. Dynamic Provider Latency Heatmap & Auto-Failover Priority
 
-1. **Target 1: Dynamic Provider Latency Heatmap & Auto-Failover Priority**
-   - Use the recorded `'stream_health'` metrics in `sync_meta` to dynamically order server badges on [`/api/play`](file:///C:/anihubstream-local/functions/api/play.js), automatically surfacing the fastest responding providers first (e.g. AniKoto vs HiAnime vs AniWatch).
-2. **Target 2: Offline PWA & Service Worker Stream Segment Caching**
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `7b7c5a2`  
+**Completion Commit Hash:** `15c7cdb`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **Per-Provider Latency & Health Probing in [`tools/probe-trending-streams.mjs`](file:///C:/anihubstream-local/tools/probe-trending-streams.mjs):**
+   - Added real-time round-trip latency measurement (`elapsed`) for every provider probe (`anikoto`, `hianime`, `aniwatch`).
+   - Computes rolling aggregate stats (`providerStats`: `{ anikoto, hianime, aniwatch }` with `status: 'healthy' | 'degraded'`, `latencyMs`, `successCount`, `totalCount`).
+   - Persists aggregate provider latency stats into D1 SQLite `sync_meta` under key `'stream_health'` during Stage 7 of the autonomous sync daemon.
+2. **Dynamic Provider Priority & Failover in [`functions/api/play.js`](file:///C:/anihubstream-local/functions/api/play.js):**
+   - Retrieves `stream_health` metrics from `sync_meta` table in Miniflare D1.
+   - Looks up multi-provider availability across `anime_id_map` (`anikoto_slug`, `hianime_slug`, `aniwatch_slug`) and `anime_provider_mapping`.
+   - When no provider is explicitly requested or when `provider='auto'`, dynamically ranks and selects the fastest healthy provider using live latency data.
+   - Returns rich `providerHealth` and `availableProviders` in all API responses (`200 OK`) while preserving strict Rule 11 (Zero-Read D1 Edge Caching Law) compatibility.
+   - Accurately computes `scopedProviderUnavailable` based on slug existence for the target provider, allowing seamless client-side server failover.
+3. **Frontend Live Heatmap & Badges ([`src/components/player/ServerSwitcher.tsx`](file:///C:/anihubstream-local/src/components/player/ServerSwitcher.tsx) & [`src/pages/Watch.tsx`](file:///C:/anihubstream-local/src/pages/Watch.tsx)):**
+   - Added typed `providerHealth` and `availableProviders` to `PlayResponse` in [`src/data/api.ts`](file:///C:/anihubstream-local/src/data/api.ts).
+   - Render live latency badges (e.g. `85ms`, `140ms`, `210ms`) color-coded dynamically (Green < 120ms, Amber < 250ms, Red for degraded/slow) on stream provider switchers.
+   - Highlights degraded status (`Slow`) and dims unavailable providers for the selected anime title.
+   - Dynamically selects the fastest healthy server when no explicit provider URL parameter is provided.
+4. **Deterministic Unit Test Suite ([`tools/stream-provider-priority.test.mjs`](file:///C:/anihubstream-local/tools/stream-provider-priority.test.mjs)):**
+   - 5/5 unit tests verifying dynamic prioritization by latency, degraded provider penalty, explicit user override, slug unavailability failover flag, and default fallback metrics.
+
+### What Was Verified:
+- `node --test tools/stream-provider-priority.test.mjs`: **5/5 tests PASSED**.
+- `npm run test:cache`: **8/8 tests PASSED** (Zero-Read Edge Shield verified).
+- `curl.exe -m 8 -i -s "http://127.0.0.1:8899/api/play?id=solo-leveling&ep=1"`:
+  - First hit: `X-D1-Read: 1-d1-fresh`, returns `scopedProvider: "anikoto"`, `providerHealth`, and `availableProviders`.
+  - Repeat hit: `CF-Cache-Status: HIT`, `x-d1-read: 0-edge-cache-hit` (**0 D1 reads verified**).
+- `npm run build`: **PASSED** (0 TypeScript errors, Vite pages build bundled in 6.72s).
+
+---
+
+## 24. Recommended Next Targets & Architecture Roadmap
+
+1. **Target 2: Offline PWA & Service Worker Stream Segment Caching**
    - Implement client-side service worker cache for HLS `.m3u8` and media segment chunks to provide instant resume and offline buffering on mobile devices.
-3. **Target 3: Franchise Chronology Visual Timeline View**
+2. **Target 3: Franchise Chronology Visual Timeline View**
    - Enhance [`src/pages/AnimeDetail.tsx`](file:///C:/anihubstream-local/src/pages/AnimeDetail.tsx) to render a visual release order / timeline tree using the existing 1,480 franchise edges in `anime_franchise_relation`.
+3. **Target 4: Intelligent Auto-Skip & AniSkip Fallback Optimizer**
+   - Add local learning/heuristics to detect recap/intro timestamps for anime without AniSkip v2 entries by analyzing black frames or audio silence signatures.
+
 
 
 

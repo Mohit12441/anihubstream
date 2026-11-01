@@ -11,6 +11,8 @@ export interface ServerSwitcherProps {
   scopedProviderUnavailable?: boolean;
   scopedProvider?: string | null;
   onSwitchProvider?: (provider: string) => void;
+  providerHealth?: Record<string, { status?: string; latencyMs?: number }>;
+  availableProvidersList?: { id: string; name: string; available: boolean; status?: string; latencyMs?: number }[];
 }
 
 type AudioCategory = 'sub' | 'dub' | 'hindi';
@@ -66,6 +68,8 @@ export function ServerSwitcher({
   scopedProviderUnavailable = false,
   scopedProvider = null,
   onSwitchProvider,
+  providerHealth,
+  availableProvidersList,
 }: ServerSwitcherProps) {
   if (!servers || servers.length === 0) return null;
 
@@ -238,11 +242,27 @@ export function ServerSwitcher({
           </span>
           {availableProviders.map((prov) => {
             const isCurrent = currentProvider === prov.key;
+            const health = providerHealth?.[prov.key];
+            const isDegraded = health?.status === 'degraded';
+            const latency = health?.latencyMs;
+            const isAvailable = availableProvidersList ? availableProvidersList.find((p) => p.id === prov.key)?.available !== false : true;
+
+            const latencyColor = isDegraded
+              ? '#ef4444'
+              : !latency
+              ? '#94a3b8'
+              : latency < 120
+              ? '#22c55e'
+              : latency < 250
+              ? '#eab308'
+              : '#f97316';
+
             return (
               <button
                 key={prov.key}
                 type="button"
                 onClick={() => onSwitchProvider(prov.key)}
+                title={health ? `${prov.name}: ${health.status} (${health.latencyMs}ms)` : prov.name}
                 style={{
                   padding: '4px 10px',
                   borderRadius: '6px',
@@ -258,12 +278,38 @@ export function ServerSwitcher({
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '4px',
+                  gap: '6px',
                   transition: 'all 0.15s ease',
+                  opacity: !isAvailable ? 0.6 : 1,
                 }}
               >
                 <span>{prov.icon}</span>
                 <span>{prov.name}</span>
+                {latency !== undefined && (
+                  <span
+                    style={{
+                      fontSize: '0.68rem',
+                      padding: '1px 5px',
+                      borderRadius: '4px',
+                      background: 'rgba(0, 0, 0, 0.3)',
+                      color: latencyColor,
+                      fontWeight: 600,
+                    }}
+                  >
+                    {latency}ms
+                  </span>
+                )}
+                {isDegraded && (
+                  <span
+                    style={{
+                      fontSize: '0.65rem',
+                      color: '#ef4444',
+                      fontWeight: 700,
+                    }}
+                  >
+                    Slow
+                  </span>
+                )}
               </button>
             );
           })}

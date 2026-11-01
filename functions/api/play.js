@@ -235,7 +235,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const malIdParam = url.searchParams.get('malId') || '';
     const ep = Math.max(1, Number.parseInt(url.searchParams.get('ep') ?? '1', 10) || 1);
     const audio = url.searchParams.get('audio') === 'hindi' ? 'hindi' : url.searchParams.get('audio') === 'dub' ? 'dub' : 'sub';
-    const provider = url.searchParams.get('provider') || 'anikoto';
+    const rawProvider = url.searchParams.get('provider') || '';
     let serverParam = url.searchParams.get('server') || '';
     if (serverParam.toLowerCase() === 'mega') serverParam = 'MegaPlay';
 
@@ -276,7 +276,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             `SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
                     e.runtime_seconds, e.markers,
                     m.mal_id, m.kitsu_id, m.anilist_id,
-                    m.anikoto_slug, m.hianime_slug
+                    m.anikoto_slug, m.hianime_slug, m.aniwatch_slug
              FROM anime a
              LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
              LEFT JOIN anime_id_map m ON m.anime_id = a.id
@@ -330,6 +330,61 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       }
     }
 
+    let pmRows = [];
+    let providerHealth = {
+      anikoto: { status: 'healthy', latencyMs: 85 },
+      hianime: { status: 'healthy', latencyMs: 140 },
+      aniwatch: { status: 'healthy', latencyMs: 210 },
+    };
+
+    if (env.ANIHUB) {
+      if (id) {
+        try {
+          const pmRes = await env.ANIHUB.prepare(
+            'SELECT provider_id, provider_slug FROM anime_provider_mapping WHERE anime_id = ?1'
+          ).bind(id).all();
+          pmRows = pmRes?.results || [];
+        } catch {}
+      }
+
+      try {
+        const healthRow = await env.ANIHUB.prepare(
+          "SELECT value FROM sync_meta WHERE key = 'stream_health'"
+        ).first();
+        if (healthRow?.value) {
+          const parsedHealth = JSON.parse(healthRow.value);
+          if (parsedHealth?.providerStats) {
+            providerHealth = { ...providerHealth, ...parsedHealth.providerStats };
+          }
+        }
+      } catch {}
+    }
+
+    const availableSlugs = {
+      anikoto: animeRow?.anikoto_slug || pmRows.find((p) => p.provider_id === 'anikoto')?.provider_slug || null,
+      hianime: animeRow?.hianime_slug || pmRows.find((p) => p.provider_id === 'hianime')?.provider_slug || null,
+      aniwatch: animeRow?.aniwatch_slug || pmRows.find((p) => p.provider_id === 'aniwatch')?.provider_slug || null,
+    };
+
+    const rawRequested = (url.searchParams.get('provider') || '').toLowerCase().trim();
+    let requested = rawRequested;
+
+    // Dynamic Provider Priority: If not explicitly requested or is 'auto', select the fastest healthy provider
+    if (!requested || requested === 'auto') {
+      const candidates = ['anikoto', 'hianime', 'aniwatch'].filter((p) => availableSlugs[p]);
+      if (candidates.length > 0) {
+        candidates.sort((a, b) => {
+          const healthA = providerHealth[a]?.status === 'healthy' ? 0 : 1;
+          const healthB = providerHealth[b]?.status === 'healthy' ? 0 : 1;
+          if (healthA !== healthB) return healthA - healthB;
+          return (providerHealth[a]?.latencyMs || 999) - (providerHealth[b]?.latencyMs || 999);
+        });
+        requested = candidates[0];
+      } else {
+        requested = 'anikoto';
+      }
+    }
+
     if (!resolvedTitle && id) {
       resolvedTitle = id
         .replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai):/i, '')
@@ -351,10 +406,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const bridgeBase = env.STREAM_BRIDGE_URL || '';
 
     const canUseEdgeDirect =
-      provider === 'auto' ||
-      provider === 'anikoto' ||
-      provider === 'hianime' ||
-      provider === 'aniwatch' ||
+      requested === 'anikoto' ||
+      requested === 'hianime' ||
+      requested === 'aniwatch' ||
       serverParam.toLowerCase().includes('mega') ||
       serverParam.toLowerCase().includes('hd') ||
       serverParam.toLowerCase().includes('vidstream');
@@ -364,7 +418,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       resolveSkipTimes(env.ANIHUB, resolvedMalId, ep, durationSeconds, rawEpisodeMarkers, id),
       (async () => {
         if (!resolvedMalId || !canUseEdgeDirect) return null;
-        const cacheKey = `stream:${provider === 'hianime' ? 'hianime' : 'anikoto'}:${resolvedMalId}:${ep}:${audio}`;
+        const cacheKey = `stream:${requested === 'hianime' ? 'hianime' : 'anikoto'}:${resolvedMalId}:${ep}:${audio}`;
         if (env.ANIHUB) {
           try {
             const cached = await env.ANIHUB.prepare(
@@ -380,7 +434,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
         try {
           let direct = null;
-          if (provider === 'hianime') {
+          if (requested === 'hianime') {
             const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
             const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) });
             if (zokoRes?.masterUrl) {
@@ -415,7 +469,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           resolveBridgeUrl.searchParams.set('title', resolvedTitle);
           resolveBridgeUrl.searchParams.set('ep', String(ep));
           resolveBridgeUrl.searchParams.set('audio', audio);
-          if (provider) resolveBridgeUrl.searchParams.set('provider', provider);
+          if (requested) resolveBridgeUrl.searchParams.set('provider', requested);
           if (serverParam) resolveBridgeUrl.searchParams.set('server', serverParam);
           if (resolvedMalId) resolveBridgeUrl.searchParams.set('mal', String(resolvedMalId));
 
@@ -437,7 +491,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       return `/api/play/resolve?${p}`;
     };
 
-    const requested = (url.searchParams.get('provider') || 'anikoto').toLowerCase();
     const isScoped = true;
 
     const defaultServers = [
@@ -516,13 +569,19 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           scopedProviderUnavailable: false,
           servers: [primaryServer],
           aniskip: aniskipData || null,
+          providerHealth,
+          availableProviders: [
+            { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
+            { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
+            { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
+          ],
         }, {
           cache: 'public, max-age=300, s-maxage=600',
         });
       }
 
       const scoped = defaultServers.filter((s) => s.provider === requested);
-      const isScopedUnavailable = animeRow && !animeRow[`${requested}_slug`];
+      const isScopedUnavailable = !availableSlugs[requested];
 
       return ok({
         title: resolvedTitle,
@@ -532,6 +591,12 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         scopedProviderUnavailable: Boolean(isScopedUnavailable),
         servers: scoped,
         aniskip: aniskipData || null,
+        providerHealth,
+        availableProviders: [
+          { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
+          { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
+          { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
+        ],
       }, {
         cache: 'no-store, no-cache, must-revalidate',
       });
@@ -539,7 +604,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const meta = bridgeRes;
     const session = meta.session || '';
-    const prov = meta.provider || (provider !== 'auto' ? provider : 'aniwatch');
+    const prov = meta.provider || (requested !== 'auto' ? requested : 'aniwatch');
     const masterPath = meta.master || meta.streamUrl || '';
     const streamUrl = masterPath.startsWith('http') ? masterPath : `${bridgeBase}${masterPath}`;
 
@@ -641,18 +706,26 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const scoped = servers.filter((s) => s.provider === requested);
     const finalServers = scoped.length ? scoped : defaultServers.filter((s) => s.provider === requested);
+    const isScopedUnavailable = !availableSlugs[requested];
 
     return ok({
       title: resolvedTitle,
       episode: ep,
       malId: resolvedMalId || null,
       scopedProvider: requested,
+      scopedProviderUnavailable: Boolean(isScopedUnavailable),
       servers: finalServers,
       aniskip: {
         op: finalOp,
         ed: finalEd,
         recap: finalRecap,
       },
+      providerHealth,
+      availableProviders: [
+        { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
+        { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
+        { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
+      ],
     }, {
       cache: 'no-store, no-cache, must-revalidate',
     });

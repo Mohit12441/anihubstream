@@ -124,7 +124,10 @@ export interface PlayQuery {
 
 export interface PlayResponse {
   ok?: boolean;
+  scopedProvider?: string;
   scopedProviderUnavailable?: boolean;
+  providerHealth?: Record<string, { status?: string; latencyMs?: number }>;
+  availableProviders?: { id: string; name: string; available: boolean; status?: string; latencyMs?: number }[];
   servers?: any[];
   server?: any;
   subtitles?: any[];

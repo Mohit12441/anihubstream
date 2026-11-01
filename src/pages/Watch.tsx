@@ -198,6 +198,8 @@ export function Watch() {
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
   const [playServers, setPlayServers] = useState<PlayServer[]>([]);
   const [scopedProviderUnavailable, setScopedProviderUnavailable] = useState(false);
+  const [providerHealth, setProviderHealth] = useState<Record<string, { status?: string; latencyMs?: number }>>({});
+  const [availableProvidersList, setAvailableProvidersList] = useState<{ id: string; name: string; available: boolean; status?: string; latencyMs?: number }[]>([]);
   const targetProvider = (
     params.get('provider') ||
     (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : '')
@@ -222,20 +224,27 @@ export function Watch() {
       ep: epNum,
       audio: prefs.audio ?? 'sub',
       title: anime.title || undefined,
-      provider: targetProvider || 'anikoto',
+      provider: targetProvider || undefined,
       malId: anime.malId || undefined,
     })
       .then((data) => {
         if (cancelled) return;
         setScopedProviderUnavailable(Boolean(data.scopedProviderUnavailable));
+        if (data.providerHealth) {
+          setProviderHealth(data.providerHealth);
+        }
+        if (Array.isArray(data.availableProviders)) {
+          setAvailableProvidersList(data.availableProviders);
+        }
         const serverList = Array.isArray(data.servers) ? data.servers : (Array.isArray(data.data?.servers) ? data.data.servers : []);
         if (serverList.length > 0) {
           setPlayServers(serverList);
           const matchingActive = serverList.find((s: PlayServer) => s.id === activeServerId);
-          const matchedServer = targetProvider
-            ? (matchingActive && (matchingActive.id.toLowerCase().includes(targetProvider) || matchingActive.provider.toLowerCase() === targetProvider)
+          const effectiveProvider = targetProvider || data.scopedProvider;
+          const matchedServer = effectiveProvider
+            ? (matchingActive && (matchingActive.id.toLowerCase().includes(effectiveProvider) || matchingActive.provider.toLowerCase() === effectiveProvider)
                 ? matchingActive
-                : serverList.find((s: PlayServer) => s.id?.toLowerCase().includes(targetProvider) || s.provider?.toLowerCase() === targetProvider || s.name?.toLowerCase().includes(targetProvider)))
+                : serverList.find((s: PlayServer) => s.id?.toLowerCase().includes(effectiveProvider) || s.provider?.toLowerCase() === effectiveProvider || s.name?.toLowerCase().includes(effectiveProvider)))
             : null;
           if (matchedServer) {
             setActiveServerId(matchedServer.id);
@@ -634,6 +643,8 @@ export function Watch() {
                 onSwitchProvider={handleSwitchProvider}
                 scopedProviderUnavailable={scopedProviderUnavailable}
                 scopedProvider={targetProvider || currentProviderKey}
+                providerHealth={providerHealth}
+                availableProvidersList={availableProvidersList}
               />
             </div>
           )}
