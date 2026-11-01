@@ -26,3 +26,4 @@ remote-*.sql
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
+tools/.cache/

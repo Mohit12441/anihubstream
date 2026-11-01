@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-11-01T05:10:00.862Z",
+  "fetched_at": "2026-11-01T06:17:18.549Z",
   "titles": [
     {
-      "id": "why-does-nobody-remember-me-in-this-world-yekf",
+      "id": "kakegurui-compulsive-gambler",
       "sources": {
-        "kitsu": 47786,
-        "anilist": 167419,
-        "mal": 56062
+        "kitsu": 13252,
+        "anilist": 98314,
+        "mal": 34933
       },
       "episodes": 12,
       "episodeTotal": 12,
@@ -21,19 +21,30 @@
     "runtimeFallbacks": 0
   },
   "droppedGenres": [
-    "Alternate Universe",
-    "Demons",
-    "Amnesia",
-    "Post-Apocalyptic",
-    "Female Harem",
-    "Elf",
-    "Fairy",
-    "Angels",
-    "Swordplay",
+    "Psychological",
+    "Gambling",
+    "Female Protagonist",
+    "School",
+    "Primarily Female Cast",
+    "Masochism",
+    "Primarily Teen Cast",
+    "Ojou-sama",
+    "Poker",
+    "Anti-Hero",
+    "Body Horror",
+    "School Club",
+    "Bullying",
+    "Shounen",
+    "Slavery",
+    "Villainess",
+    "Yandere",
+    "Death Game",
+    "Male Protagonist",
+    "Idol",
+    "Board Game",
+    "Delinquents",
+    "Battle Royale",
     "Guns",
-    "Lost Civilization",
-    "Succubus",
-    "Kemonomimi",
-    "Heterosexual"
+    "CGI"
   ]
 }

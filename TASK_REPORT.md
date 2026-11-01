@@ -283,5 +283,49 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 1. **Third-Party Upstream Rate Limiting on Rapid Growth:**
    - Rapidly ingesting large batches of backlog titles (>50 titles per run) will trigger rate limits on Kitsu (HTTP 429) or AniList GraphQL. The default limit of 3 titles per cycle in the daemon is tuned to stay well within public rate limits.
 
+---
+
+## 10. Phase 5: Universal ID Mapping Ingestion (`Fribb/anime-lists`) & Backlog Unblocking
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `119c4d8`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **Universal Cross-Reference Ingestion Tool (`tools/sync-fribb-id-map.mjs`):**
+   - Implemented streaming and offline caching for `Fribb/anime-lists` (`anime-list-mini.json`, 39,597 cross-referenced anime).
+   - Indexed MyAnimeList (30,909 entries), AniList (20,892 entries), Kitsu (22,389 entries), and AniDB (15,200+ entries) in memory.
+   - Built [`resolveFribbIds`](file:///C:/anihubstream-local/tools/sync-fribb-id-map.mjs#L140-L175) to resolve any missing ID from companion provider spaces.
+   - Built [`enrichCatalogueSources`](file:///C:/anihubstream-local/tools/sync-fribb-id-map.mjs#L180-L235) to backfill missing IDs in `catalogue-sources.json`.
+   - Built [`populateLocalIdMap`](file:///C:/anihubstream-local/tools/sync-fribb-id-map.mjs#L240-L320) to populate `anime_id_map` for all active anime in local Miniflare D1 SQLite while respecting foreign key constraints.
+2. **Backlog Catalog Sources Enriched:**
+   - Out of 3,595 titles in `catalogue-sources.json`, **3,159 missing IDs were automatically enriched**.
+   - Backlog ingestion readiness: **807 out of 807 unimported titles** now have verified AniList and Kitsu IDs (0 missing companion IDs).
+3. **Database Population:**
+   - Populated **2,788 active anime records into `anime_id_map`** in local Miniflare D1 SQLite with 100% ID coverage.
+4. **Sync Daemon Auto-Mapping Extension:**
+   - Modified [`tools/local-sync-daemon.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.mjs) Stage 5 to automatically insert `anime_id_map` records when newly ingested titles are written into `anime`.
+5. **NPM Script Integration:**
+   - Added `"sync:fribb": "node tools/sync-fribb-id-map.mjs"` to `package.json`.
+6. **Deterministic Test Suite:**
+   - Created [`tools/sync-fribb-id-map.test.mjs`](file:///C:/anihubstream-local/tools/sync-fribb-id-map.test.mjs) verifying index creation, cross-provider resolution, and SQLite transactions (5/5 tests passing).
+
+### What Was Verified:
+1. **Live Resolution & Catalog Growth:**
+   - Successfully ingested *Kakegurui – Compulsive Gambler* (`kakegurui-compulsive-gambler`), which previously failed with HTTP 400 due to missing Kitsu/AniList IDs.
+   - Enriched IDs: MAL `34933`, AniList `98314`, Kitsu `13252`.
+   - Local D1 SQLite anime count increased from **2,788 to 2,789**.
+   - Verified both `anime` and `anime_id_map` rows exist in local SQLite.
+2. **Deterministic Quality Gates:**
+   - `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 6.50s).
+   - `npm run test:cache`: **PASSED** (5/5 Zero-Read shield tests in 91ms).
+   - `node --test tools/*.test.mjs`: **PASSED** (101/101 tests across 27 suites in 4.02s).
+   - `node --test tools/sync-fribb-id-map.test.mjs`: **PASSED** (5/5 tests in 4.1ms).
+
+### What Remains Risky:
+1. **Offline Cache Staleness:**
+   - `tools/.cache/anime-list-mini.json` is cached locally to prevent network overhead. Running `npm run sync:fribb` with `--refresh` periodically ensures newly airing seasonal anime ID mappings stay updated.
+
+
 
 
