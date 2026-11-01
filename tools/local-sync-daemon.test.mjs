@@ -143,6 +143,7 @@ describe('Local Autonomous Sync Daemon Suite', () => {
     // When expand=0, growth is cleanly disabled without network calls
     const res = await runSyncCycle({ quiet: true, expand: 0, stage: 'growth' });
     assert.equal(res.ok, true);
+    assert.equal(res.trending, null, 'trending stage must be skipped');
     assert.equal(res.schedules, null, 'schedules stage must be skipped');
     assert.equal(res.providers, null, 'providers stage must be skipped');
     assert.equal(res.franchises, null, 'franchises stage must be skipped');

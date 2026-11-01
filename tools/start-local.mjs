@@ -56,17 +56,29 @@ async function main() {
     shell: isWindows,
   });
 
+  // 3. Start Local Sync Daemon in background (automatic sync every 30m)
+  console.log('⚡ Starting Local Autonomous Sync Daemon in background...');
+  const syncProc = spawn(process.execPath, ['tools/local-sync-daemon.mjs', '--delay=5', '--interval=30'], {
+    stdio: 'inherit',
+    windowsHide: false,
+  });
+
+  const cleanup = () => {
+    if (bridgeProc) bridgeProc.kill();
+    if (syncProc) syncProc.kill();
+    pagesProc.kill();
+    process.exit(0);
+  };
+
   pagesProc.on('exit', (code) => {
     if (bridgeProc) bridgeProc.kill();
+    if (syncProc) syncProc.kill();
     console.log(`Pages process exited with code ${code}`);
     process.exit(code ?? 0);
   });
 
-  process.on('SIGINT', () => {
-    if (bridgeProc) bridgeProc.kill();
-    pagesProc.kill();
-    process.exit(0);
-  });
+  process.on('SIGINT', cleanup);
+  process.on('SIGTERM', cleanup);
 }
 
 main().catch((err) => {

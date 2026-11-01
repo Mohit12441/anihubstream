@@ -48,11 +48,15 @@ const DAY_LABEL = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
    ComSpec is not a usable cmd.exe, so call wrangler's JS entry with node directly. */
 const WRANGLER_JS =
   process.env.ANIHUB_WRANGLER_JS ??
-  (process.env.APPDATA ? join(process.env.APPDATA, 'npm', 'node_modules', 'wrangler', 'bin', 'wrangler.js') : 'wrangler');
+  (process.env.APPDATA && existsSync(join(process.env.APPDATA, 'npm', 'node_modules', 'wrangler', 'bin', 'wrangler.js')) ? join(process.env.APPDATA, 'npm', 'node_modules', 'wrangler', 'bin', 'wrangler.js') : 'npx');
 
 const sqlText = (v) => `'${String(v).replace(/'/g, "''")}'`;
 
 function wrangler(args) {
+  if (WRANGLER_JS === 'npx') {
+    const cmd = process.platform === 'win32' ? 'npx.cmd' : 'npx';
+    return execFileSync(cmd, ['wrangler', ...args], { encoding: 'utf8', windowsHide: true });
+  }
   if (WRANGLER_JS.endsWith('.js')) {
     return execFileSync(process.execPath, [WRANGLER_JS, ...args], { encoding: 'utf8', windowsHide: true });
   }

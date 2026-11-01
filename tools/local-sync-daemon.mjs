@@ -25,6 +25,7 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 
 import { syncOngoingSchedules } from './sync-ongoing-schedules.mjs';
+import { syncTrendingRanks } from './sync-trending.mjs';
 import { autoSyncProviders } from './auto-sync-providers.mjs';
 import { computeFranchiseGraph, persistRelations } from './auto-sync-franchises.mjs';
 import { autoSyncEpisodes } from './auto-sync-episodes.mjs';
@@ -60,11 +61,22 @@ function recordHeartbeat(db, summary) {
 }
 
 /**
- * Stage 1: Synchronize ongoing broadcast schedules from AniList
+ * Stage 1: Synchronize trending ranks from AniList
+ * @param {DatabaseSync} db
+ * @param {boolean} quiet
+ */
+async function syncTrendingStage(db, quiet) {
+  if (!quiet) console.log('\n[Stage 1/6] 🔥 Synchronizing Trending Ranks from AniList...');
+  const res = await syncTrendingRanks({ db, limit: 50, quiet });
+  return res;
+}
+
+/**
+ * Stage 2: Synchronize ongoing broadcast schedules from AniList
  * @param {boolean} quiet
  */
 async function syncSchedulesStage(quiet) {
-  if (!quiet) console.log('\n[Stage 1/4] 📅 Synchronizing Airing Schedules from AniList...');
+  if (!quiet) console.log('\n[Stage 2/6] 📅 Synchronizing Airing Schedules from AniList...');
   const res = await syncOngoingSchedules({ isRemote: false, quiet: true });
   if (!quiet) {
     console.log(`  ✓ Updated ${res.updated} anime schedules (cleared ${res.cleared}, unchanged ${res.unchanged}) in ${res.durationMs}ms`);
@@ -73,11 +85,11 @@ async function syncSchedulesStage(quiet) {
 }
 
 /**
- * Stage 2: Normalize ratings and synchronize provider mappings
+ * Stage 3: Normalize ratings and synchronize provider mappings
  * @param {boolean} quiet
  */
 async function syncProvidersStage(quiet) {
-  if (!quiet) console.log('\n[Stage 2/5] ⚡ Synchronizing Provider Slugs & Ratings (AniKoto, HiAnime, AniWatch)...');
+  if (!quiet) console.log('\n[Stage 3/6] ⚡ Synchronizing Provider Slugs & Ratings (AniKoto, HiAnime, AniWatch)...');
   const res = await autoSyncProviders({ quiet });
   if (!quiet) {
     console.log(`  ✓ Active mappings: AniKoto=${res.providersActive.anikoto || 0}, HiAnime=${res.providersActive.hianime || 0}, AniWatch=${res.providersActive.aniwatch || 0}`);
@@ -86,13 +98,13 @@ async function syncProvidersStage(quiet) {
 }
 
 /**
- * Stage 3: Recompute franchise relationship graphs
+ * Stage 4: Recompute franchise relationship graphs
  * @param {DatabaseSync} db
  * @param {boolean} quiet
  */
 async function syncFranchisesStage(db, quiet) {
   const start = Date.now();
-  if (!quiet) console.log('\n[Stage 3/5] 🔗 Rebuilding Franchise Relations Graph...');
+  if (!quiet) console.log('\n[Stage 4/6] 🔗 Rebuilding Franchise Relations Graph...');
 
   const rows = db.prepare(`
     SELECT id, title, native, year, rating, season, kind, status, rank, alt_seasons, source_ids
@@ -109,17 +121,17 @@ async function syncFranchisesStage(db, quiet) {
 }
 
 /**
- * Stage 4: Sync episode titles and air dates
+ * Stage 5: Sync episode titles and air dates
  * @param {boolean} quiet
  */
 async function syncEpisodesStage(quiet) {
-  if (!quiet) console.log('\n[Stage 4/5] 📺 Checking Newly Released Episode Metadata...');
+  if (!quiet) console.log('\n[Stage 5/6] 📺 Checking Newly Released Episode Metadata...');
   const res = await autoSyncEpisodes({ quiet });
   return res;
 }
 
 /**
- * Stage 5: Ingest new catalog titles from sources backlog or AniList discovery
+ * Stage 6: Ingest new catalog titles from sources backlog or AniList discovery
  * @param {DatabaseSync} db
  * @param {boolean} quiet
  * @param {number} batchSize
@@ -127,7 +139,7 @@ async function syncEpisodesStage(quiet) {
 async function syncGrowthStage(db, quiet, batchSize = 3) {
   if (batchSize <= 0) return { added: 0, skipped: 'disabled' };
   const start = Date.now();
-  if (!quiet) console.log('\n[Stage 5/5] 🌱 Expanding Catalog (Backlog & Discovery)...');
+  if (!quiet) console.log('\n[Stage 6/6] 🌱 Expanding Catalog (Backlog & Discovery)...');
 
   const sourcesPath = resolve(__dirname, 'catalogue-sources.json');
   if (!existsSync(sourcesPath)) {
@@ -238,6 +250,7 @@ export async function runSyncCycle({ quiet = false, expand = 3, stage = null } =
 
   const metrics = {
     startedAt: new Date().toISOString(),
+    trending: null,
     schedules: null,
     providers: null,
     franchises: null,
@@ -248,6 +261,9 @@ export async function runSyncCycle({ quiet = false, expand = 3, stage = null } =
   };
 
   try {
+    if (!stage || stage === 'trending') {
+      metrics.trending = await syncTrendingStage(db, quiet).catch((e) => ({ error: e.message }));
+    }
     if (!stage || stage === 'schedules') {
       metrics.schedules = await syncSchedulesStage(quiet).catch((e) => ({ error: e.message }));
     }

@@ -615,6 +615,45 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 - `node --test api/*.test.mjs tools/*.test.mjs`: **335/335 tests PASSED**.
 - `npm run build`: **PASSED** (0 TypeScript errors).
 
+---
+
+## 19. Automatic Daily Sync Pipeline Audit & Real-time Trending Sync Integration
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `2f00a76`  
+**Branch:** `agent-workflow-baseline`  
+
+### Root Cause Analysis of Sync Automation:
+1. **Missing Trending Ranks Sync in Local Pipeline:**
+   - While [`tools/local-sync-daemon.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.mjs) automated schedules, providers, franchises, episodes, and backlog growth, it completely lacked a stage to sync `trend_rank`.
+   - `tools/hourly-refresh.mjs` was crashing on startup due to a hardcoded path assumption for global `wrangler` in `%APPDATA%`, preventing trending rank refreshes.
+   - As a result, the home page's trending anime order was frozen and out of date compared to live AniList metrics.
+2. **Local Environment Autonomous Lifecycle:**
+   - [`tools/start-local.mjs`](file:///C:/anihubstream-local/tools/start-local.mjs) initialized the database, started the stream bridge, and started the Cloudflare Pages dev server, but did not automatically supervise the background sync daemon.
+
+### What Changed:
+1. **Dedicated Trending Sync Engine ([`tools/sync-trending.mjs`](file:///C:/anihubstream-local/tools/sync-trending.mjs)):**
+   - Created `syncTrendingRanks` to query AniList GraphQL for the live top 50 trending anime.
+   - Maps AniList IDs via `anime_id_map` and `anime.source_ids`.
+   - Updates `trend_rank` in D1 SQLite and clears `trend_rank = NULL` for titles that dropped off.
+   - Verified live execution: 49 active ranked titles synchronized in <1s.
+2. **Integration into Local Autonomous Sync Daemon ([`tools/local-sync-daemon.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.mjs)):**
+   - Added Stage 1: `syncTrendingStage` as the first step of the sync cycle.
+   - Supported standalone targeting via `--stage=trending` and npm script `npm run sync:trending`.
+3. **Automatic Startup Orchestration ([`tools/start-local.mjs`](file:///C:/anihubstream-local/tools/start-local.mjs)):**
+   - Configured `start-local.mjs` to automatically spawn `tools/local-sync-daemon.mjs` in the background with a 30-minute recurring interval and clean SIGINT/SIGTERM lifecycle management.
+4. **Portability Fix in `tools/hourly-refresh.mjs`:**
+   - Resolved the missing wrangler binary crash by gracefully falling back to `npx wrangler`.
+
+### What Was Verified:
+- `node tools/sync-trending.mjs`: **PASSED** (49 active ranked, 44 updated, 12 cleared in 923ms).
+- `node tools/local-sync-daemon.mjs --once --stage=trending`: **PASSED**.
+- `node --test tools/local-sync-daemon.test.mjs`: **7/7 tests PASSED**.
+- `npm run test:cache`: **8/8 tests PASSED**.
+- `node --test api/*.test.mjs tools/*.test.mjs`: **335/335 tests PASSED**.
+- `npm run build`: **PASSED** (0 TypeScript errors).
+
+
 
 
 
