@@ -1,23 +1,95 @@
 // @ts-check
 /**
  * Meilisearch Catalog Sync Script
- * Extracts anime records from the catalogue (seed.sql or D1) and syncs them into Meilisearch.
+ * Extracts anime records from the catalogue (live D1 SQLite database or seed.sql)
+ * and synchronizes them into Meilisearch with real-time delta and full-sync support.
  *
  * Run with: node tools/meilisearch/sync-meilisearch.mjs
  */
 
-import { readFileSync, existsSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { DatabaseSync } from 'node:sqlite';
 
-const ROOT = resolve(import.meta.dirname, '../..');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = resolve(__dirname, '../..');
 const SEED_FILE = resolve(ROOT, 'seed.sql');
 const MEILISEARCH_HOST = process.env.MEILISEARCH_HOST || 'http://127.0.0.1:7700';
 const MEILISEARCH_KEY = process.env.MEILISEARCH_KEY || '';
 const INDEX_UID = 'anime';
 const BATCH_SIZE = 100;
 
+export function findSqlitePath() {
+  const d1Dir = resolve(ROOT, '.wrangler/state/v3/d1/miniflare-D1DatabaseObject');
+  if (existsSync(d1Dir)) {
+    const files = readdirSync(d1Dir).filter((f) => f.endsWith('.sqlite') && f !== 'metadata.sqlite');
+    if (files.length > 0) return resolve(d1Dir, files[0]);
+  }
+  return null;
+}
+
+/**
+ * Checks whether Meilisearch server is reachable and healthy.
+ * @param {string} [host]
+ * @param {number} [timeoutMs]
+ * @returns {Promise<boolean>}
+ */
+export async function isMeilisearchHealthy(host = MEILISEARCH_HOST, timeoutMs = 1200) {
+  try {
+    const res = await fetch(`${host}/health`, {
+      signal: AbortSignal.timeout(timeoutMs),
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Extracts structured anime documents directly from D1 SQLite database.
+ * @param {DatabaseSync} db
+ * @param {string[]|null} [ids]
+ * @returns {Array<any>}
+ */
+export function getAnimeDocumentsFromDb(db, ids = null) {
+  let query = `
+    SELECT id, title, native, year, rating, season, kind, status, art, key_art, accent, synopsis, rank, trend_rank
+    FROM anime
+  `;
+  const params = [];
+  if (Array.isArray(ids) && ids.length > 0) {
+    const placeholders = ids.map(() => '?').join(',');
+    query += ` WHERE id IN (${placeholders})`;
+    params.push(...ids);
+  } else {
+    query += ` ORDER BY id ASC`;
+  }
+
+  const rows = db.prepare(query).all(...params);
+  return rows.map((r) => ({
+    id: r.id,
+    title: r.title,
+    romajiTitle: r.title,
+    nativeTitle: r.native || '',
+    year: Number(r.year) || 0,
+    rating: Number(r.rating) || 0,
+    season: r.season || '',
+    kind: r.kind || 'TV',
+    status: r.status || 'Finished',
+    art: r.art || '',
+    key_art: r.key_art || '',
+    accent: r.accent || '#ff1f4a',
+    synopsis: r.synopsis || '',
+    rank: r.rank !== null ? Number(r.rank) : null,
+    trend_rank: r.trend_rank !== null ? Number(r.trend_rank) : null,
+    synonyms: [r.title],
+  }));
+}
+
 /**
  * Parses anime INSERT statements from seed.sql.
+ * @param {string} [seedPath]
  * @returns {Array<any>}
  */
 export function parseAnimeFromSeed(seedPath = SEED_FILE) {
@@ -29,7 +101,6 @@ export function parseAnimeFromSeed(seedPath = SEED_FILE) {
   /** @type {Map<string, any>} */
   const docMap = new Map();
 
-  // Match multiline INSERT statements: INSERT INTO anime (...) VALUES (...) [ON CONFLICT ...]
   const insertRegex = /INSERT INTO anime\s*\([^)]+\)\s*VALUES\s*\(([\s\S]*?)\)\s*(?:ON CONFLICT|;)/gi;
   let match;
 
@@ -98,7 +169,6 @@ export function parseAnimeFromSeed(seedPath = SEED_FILE) {
     }
   }
 
-  // Also enrich with catalogue-sources.json so all catalog anime are indexed
   const sourcesPath = resolve(ROOT, 'tools/catalogue-sources.json');
   if (existsSync(sourcesPath)) {
     try {
@@ -127,9 +197,7 @@ export function parseAnimeFromSeed(seedPath = SEED_FILE) {
           });
         }
       }
-    } catch {
-      // fallback silently if catalogue sources cannot be parsed
-    }
+    } catch {}
   }
 
   return Array.from(docMap.values());
@@ -147,7 +215,6 @@ export async function syncDocumentsToMeilisearch(
   apiKey = MEILISEARCH_KEY
 ) {
   if (!documents.length) {
-    console.log('[Meilisearch Sync] No documents to sync.');
     return { count: 0, taskUids: [] };
   }
 
@@ -157,7 +224,6 @@ export async function syncDocumentsToMeilisearch(
   };
 
   const taskUids = [];
-  console.log(`[Meilisearch Sync] Uploading ${documents.length} anime documents in batches of ${BATCH_SIZE}...`);
 
   for (let i = 0; i < documents.length; i += BATCH_SIZE) {
     const chunk = documents.slice(i, i + BATCH_SIZE);
@@ -174,25 +240,92 @@ export async function syncDocumentsToMeilisearch(
 
     const task = await res.json();
     taskUids.push(task.taskUid);
-    console.log(`  Uploaded batch ${i / BATCH_SIZE + 1} (${chunk.length} items). Task: ${task.taskUid}`);
   }
 
-  console.log(`[Meilisearch Sync] All ${documents.length} documents submitted successfully!`);
   return { count: documents.length, taskUids };
 }
 
-if (process.argv[1] && process.argv[1].endsWith('sync-meilisearch.mjs')) {
-  try {
-    const docs = parseAnimeFromSeed();
-    console.log(`Parsed ${docs.length} anime records from seed.sql.`);
-    syncDocumentsToMeilisearch(docs)
-      .then(() => process.exit(0))
-      .catch((err) => {
-        console.error('Sync failed:', err.message);
-        process.exit(1);
-      });
-  } catch (err) {
-    console.error('Error during Meilisearch sync:', err.message);
-    process.exit(1);
+/**
+ * Synchronizes anime records from D1 or seed.sql to Meilisearch with health check.
+ * @param {Object} [options]
+ * @param {DatabaseSync|null} [options.db]
+ * @param {string} [options.host]
+ * @param {string} [options.apiKey]
+ * @param {string[]|null} [options.ids]
+ * @param {boolean} [options.silent]
+ */
+export async function syncAnimeToMeilisearch({
+  db = null,
+  host = MEILISEARCH_HOST,
+  apiKey = MEILISEARCH_KEY,
+  ids = null,
+  silent = false,
+} = {}) {
+  const healthy = await isMeilisearchHealthy(host);
+  if (!healthy) {
+    if (!silent) {
+      console.log(`[Meilisearch] Host ${host} offline. Active search fallback: D1 SQLite FTS5/LIKE.`);
+    }
+    return { ok: false, status: 'offline', synced: 0, reason: 'meilisearch_offline' };
   }
+
+  let localDb = db;
+  let closeDb = false;
+  if (!localDb) {
+    const p = findSqlitePath();
+    if (p) {
+      localDb = new DatabaseSync(p);
+      closeDb = true;
+    }
+  }
+
+  let docs = [];
+  if (localDb) {
+    docs = getAnimeDocumentsFromDb(localDb, ids);
+  } else {
+    docs = parseAnimeFromSeed();
+    if (Array.isArray(ids) && ids.length > 0) {
+      const idSet = new Set(ids);
+      docs = docs.filter((d) => idSet.has(d.id));
+    }
+  }
+
+  if (closeDb && localDb) {
+    try {
+      localDb.close();
+    } catch {}
+  }
+
+  if (docs.length === 0) {
+    return { ok: true, status: 'empty', synced: 0 };
+  }
+
+  try {
+    const result = await syncDocumentsToMeilisearch(docs, host, apiKey);
+    if (!silent) {
+      console.log(`[Meilisearch] Synchronized ${result.count} anime documents successfully.`);
+    }
+    return { ok: true, status: 'synced', synced: result.count, taskUids: result.taskUids };
+  } catch (err) {
+    if (!silent) {
+      console.warn(`[Meilisearch] Sync error:`, err.message);
+    }
+    return { ok: false, status: 'error', synced: 0, error: err.message };
+  }
+}
+
+if (process.argv[1] && process.argv[1].endsWith('sync-meilisearch.mjs')) {
+  syncAnimeToMeilisearch({ silent: false })
+    .then((res) => {
+      if (res.ok) {
+        console.log(`Meilisearch sync completed successfully.`);
+      } else {
+        console.log(`Meilisearch sync finished: ${res.status} (${res.reason || res.error || 'skipped'})`);
+      }
+      process.exit(0);
+    })
+    .catch((err) => {
+      console.error('Error during Meilisearch sync:', err.message);
+      process.exit(1);
+    });
 }

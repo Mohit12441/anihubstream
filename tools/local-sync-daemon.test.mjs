@@ -149,6 +149,7 @@ describe('Local Autonomous Sync Daemon Suite', () => {
     assert.equal(res.franchises, null, 'franchises stage must be skipped');
     assert.equal(res.episodes, null, 'episodes stage must be skipped');
     assert.equal(res.health, null, 'health stage must be skipped');
+    assert.equal(res.search, null, 'search stage must be skipped');
     assert.equal(res.growth.added, 0);
     assert.equal(res.growth.skipped, 'disabled');
   });

@@ -31,6 +31,7 @@ import { computeFranchiseGraph, persistRelations } from './auto-sync-franchises.
 import { autoSyncEpisodes } from './auto-sync-episodes.mjs';
 import { discover } from './discover-titles.mjs';
 import { probeTrendingStreams } from './probe-trending-streams.mjs';
+import { syncAnimeToMeilisearch } from './meilisearch/sync-meilisearch.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -245,6 +246,37 @@ async function syncHealthStage(db, quiet) {
 }
 
 /**
+ * Stage 8: Real-time search engine synchronization (Meilisearch)
+ * @param {DatabaseSync} db
+ * @param {boolean} quiet
+ */
+async function syncSearchStage(db, quiet) {
+  if (!quiet) console.log('\n[Stage 8/8] 🔍 Checking Search Engine Index (Meilisearch)...');
+  const res = await syncAnimeToMeilisearch({ db, silent: quiet });
+  if (db) {
+    try {
+      db.prepare(`
+        INSERT OR REPLACE INTO sync_meta (key, value)
+        VALUES ('search_engine', ?)
+      `).run(JSON.stringify({
+        updatedAt: new Date().toISOString(),
+        engine: res.ok ? 'meilisearch' : 'd1_fallback',
+        status: res.status,
+        synced: res.synced || 0,
+      }));
+    } catch {}
+  }
+  if (!quiet) {
+    if (res.ok) {
+      console.log(`  ✓ Search Engine: Meilisearch updated with ${res.synced} documents`);
+    } else {
+      console.log(`  ✓ Search Engine: D1 SQLite FTS5/LIKE fallback active (Meilisearch offline)`);
+    }
+  }
+  return res;
+}
+
+/**
  * Execute one full synchronization cycle across all 5 stages
  * @param {Object} [options]
  * @param {boolean} [options.quiet=false]
@@ -280,6 +312,7 @@ export async function runSyncCycle({ quiet = false, expand = 3, stage = null } =
     episodes: null,
     growth: null,
     health: null,
+    search: null,
     durationMs: 0,
     ok: true,
   };
@@ -305,6 +338,9 @@ export async function runSyncCycle({ quiet = false, expand = 3, stage = null } =
     }
     if (!stage || stage === 'health') {
       metrics.health = await syncHealthStage(db, quiet).catch((e) => ({ error: e.message }));
+    }
+    if (!stage || stage === 'search') {
+      metrics.search = await syncSearchStage(db, quiet).catch((e) => ({ error: e.message }));
     }
   } catch (err) {
     metrics.ok = false;

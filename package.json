@@ -8,7 +8,7 @@
     "build": "tsc --noEmit && vite build --mode pages --outDir dist-pages --emptyOutDir",
     "build:pages": "tsc --noEmit && vite build --mode pages --outDir dist-pages --emptyOutDir",
     "typecheck": "tsc --noEmit",
-    "test": "node --test api/*.test.mjs tools/*.test.mjs cloud-sync/*.test.mjs",
+    "test": "node --test api/*.test.mjs tools/*.test.mjs tools/meilisearch/*.test.mjs cloud-sync/*.test.mjs",
     "test:cache": "node --test tools/zero-read.test.mjs",
     "test:streams": "node tools/probe-trending-streams.mjs",
     "verify": "node tools/verify-runtime.mjs",
