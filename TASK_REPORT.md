@@ -653,6 +653,76 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 - `node --test api/*.test.mjs tools/*.test.mjs`: **335/335 tests PASSED**.
 - `npm run build`: **PASSED** (0 TypeScript errors).
 
+---
+
+## 20. Elimination of Dummy Episode Generation in Provider APIs & Universal Stream Health Probing
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `26fe096`  
+**Completion Commit Hash:** `2f392b9`  
+**Branch:** `agent-workflow-baseline`  
+
+### Root Cause Analysis:
+1. **Schema Mismatch in `functions/api/anikoto/[id].js`:**
+   - Line 58 previously attempted to query `thumbnail_url` from the `episode` table. The canonical schema column is `thumb`.
+   - The unhandled column error was silently caught by `.catch(() => ({ results: [] }))`, causing every valid catalogue anime (such as *Frieren: Beyond Journey’s End*) to report 0 episode rows.
+   - The subsequent fallback logic unconditionally generated synthetic dummy episodes (`Episode 1`, `Episode 2`, etc.) without real titles, runtimes, or thumbnails.
+   - For unreleased titles with declared `episode_total` (e.g. 12 episodes), it synthesized 12 dummy episodes for anime that had not even aired.
+2. **Unconditional Dummy Episode 1 in `functions/api/hianime/[id].js`:**
+   - When upstream HiAnime returned 0 episodes or was queried for an unreleased/upcoming title, line 86 unconditionally populated `[{ id: 'hianime:...#1', n: 1, title: 'Episode 1', ... }]`.
+3. **Missing Early Return in `functions/api/play.js`:**
+   - Navigating to `/api/play` for an upcoming title attempted to query the bridge and external upstream providers, wasting 25 seconds of worker latency before timing out or failing.
+4. **Ordering Glitch in `src/pages/Watch.tsx`:**
+   - The `isMovie` check evaluated before `isUpcoming`, causing upcoming unreleased movies to synthesize a 1-episode shell rather than rendering the native "Episodes Coming Soon" banner.
+   - Newly ongoing series with 0 released episodes were expanded into dummy shells when accessed with query params.
+
+### What Changed:
+1. **Edge API Route ([`functions/api/anikoto/[id].js`](file:///C:/anihubstream-local/functions/api/anikoto/[id].js)):**
+   - Corrected SQL query to select canonical column `thumb`.
+   - Populated `thumbnail: e.thumb || fallbackArt` and real episode titles and runtimes.
+   - Added `isUpcoming` check so synthetic episodes are NEVER generated for unreleased anime.
+2. **Edge API Route ([`functions/api/hianime/[id].js`](file:///C:/anihubstream-local/functions/api/hianime/[id].js)):**
+   - Added `isUpcoming` detection (`anime.Status` checking and 0 total sub/dub episodes).
+   - Suppressed fallback Episode 1 generation for upcoming anime, ensuring `episodes: []`.
+3. **Playback Edge Route ([`functions/api/play.js`](file:///C:/anihubstream-local/functions/api/play.js)):**
+   - Selected `a.status` in D1 queries.
+   - Added instant 4ms short-circuit returning `{ servers: [], status: 'unreleased', error: 'This anime has not yet been released.' }` when status is `Upcoming` or `NOT_YET_RELEASED`.
+4. **Watch Page ([`src/pages/Watch.tsx`](file:///C:/anihubstream-local/src/pages/Watch.tsx)):**
+   - Re-ordered checks: `isUpcoming` and `(anime.status === 'Ongoing' && existingCount === 0)` now evaluate before `isMovie`.
+   - Guaranteed that upcoming anime and newly announced ongoing titles with 0 released episodes cleanly render the native "Episodes Coming Soon" banner.
+5. **Stream Health Diagnostics ([`tools/probe-trending-streams.mjs`](file:///C:/anihubstream-local/tools/probe-trending-streams.mjs)):**
+   - Added standalone probe script and `"test:streams"` script to [`package.json`](file:///C:/anihubstream-local/package.json) to probe and verify live HLS playback across all top trending titles.
+
+### What Was Verified:
+- Live endpoint `http://127.0.0.1:8899/api/anikoto/sousou-no-frieren?bypass=1`:
+  - Episode 1: `title: "The Journey's End"`, `duration: 1440`, `thumbnail: "https://media.kitsu.app/episode/353471/thumbnail/medium-4218a1887e2d33e701be955a9d0315bc.jpeg"`. (Dummy fallback eliminated).
+- Live endpoint `http://127.0.0.1:8899/api/anikoto/cyberpunk-edgerunners-ii?bypass=1` (Upcoming):
+  - Returns `episodes: []` (length 0). (Synthetic episodes eliminated).
+- Live endpoint `http://127.0.0.1:8899/api/play?id=cyberpunk-edgerunners-ii&ep=1&bypass=1`:
+  - Instant response in 4ms with `status: 'unreleased'` and `servers: []`.
+- `npm run test:streams`:
+  - **100% playable streams** for all released top 20 trending anime (*Black Clover S2*, *Aoashi S2*, *One Piece*, *Bleach*, *Steel Ball Run*, *Romelia War Chronicle*, *Bleach TYBW*, *Naruto Shippuden*).
+  - All unreleased / 0-episode titles cleanly skipped.
+- `npm run test:cache`: **PASSED** (8/8 Zero-Read assertions).
+- `npm test`: **PASSED** (**520 / 520 tests across 118 suites** with 0 failures).
+- `npm run build`: **PASSED** (0 TypeScript errors, production bundle built cleanly).
+
+### What Remains Risky:
+1. **Third-Party Upstream Video Host Stability:**
+   - While all released titles currently resolve working HLS streams via AniKoto, external hosts periodically cycle domains. The new `"npm run test:streams"` script provides instant validation to detect upstream disruptions early.
+
+---
+
+## 21. Recommended Next Targets & Architecture Roadmap
+
+1. **Target 1: Local Daemon Stream Health Probe Integration**
+   - Run `tools/probe-trending-streams.mjs` as an autonomous stage in `local-sync-daemon.mjs` or as a periodic health check, caching stream status to proactively mark temporary provider outages before users trigger them.
+2. **Target 2: Instant Search (Meilisearch) Index Sync**
+   - Wire newly ingested anime from `syncGrowthStage` and `syncTrendingStage` directly into `tools/meilisearch/sync-meilisearch.mjs` so new catalogue additions are indexed immediately for fuzzy search.
+3. **Target 3: Automated Artwork Fallback Backfill**
+   - Run a batch migration in D1 SQLite to update any remaining legacy episodes where `thumb = ''` to `COALESCE(e.thumb, a.key_art, a.art)`, reducing client-side fallback computation to absolute zero.
+
+
 
 
 
