@@ -54,15 +54,17 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
 
         if (d1Anime) {
           const canonicalId = d1Anime.id;
+          const fallbackArt = d1Anime.key_art || d1Anime.art || '';
           const epRows = await env.ANIHUB.prepare(
-            `SELECT n, title, runtime_seconds, markers, thumbnail_url
+            `SELECT n, title, runtime_seconds, markers, thumb
              FROM episode
              WHERE anime_id = ?1
              ORDER BY n ASC`
           ).bind(canonicalId).all().catch(() => ({ results: [] }));
 
           const epList = epRows.results || [];
-          const totalEp = Number(d1Anime.episode_total) || epList.length || 1;
+          const isUpcoming = d1Anime.status === 'Upcoming' || d1Anime.status === 'NOT_YET_RELEASED';
+          const totalEp = Number(d1Anime.episode_total) || epList.length || 0;
 
           // Format episodes
           if (epList.length > 0) {
@@ -72,15 +74,17 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
               title: e.title || `Episode ${e.n}`,
               audioType: 'both',
               duration: e.runtime_seconds || 1440,
+              thumbnail: e.thumb || fallbackArt,
             }));
-          } else if (totalEp > 0) {
-            // Generate synthetic episode sequence if catalogue has declared count
+          } else if (!isUpcoming && totalEp > 0) {
+            // Generate synthetic episode sequence only for released catalogue titles without backfilled episode rows
             for (let i = 1; i <= Math.min(totalEp, 2000); i++) {
               episodes.push({
                 id: `anikoto:${d1Anime.anikoto_slug || slug}#${i}`,
                 n: i,
                 title: `Episode ${i}`,
                 audioType: 'both',
+                thumbnail: fallbackArt,
               });
             }
           }

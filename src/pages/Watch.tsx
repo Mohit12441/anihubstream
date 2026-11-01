@@ -111,9 +111,23 @@ export function Watch() {
 
   const episodes: Episode[] = useMemo(() => {
     if (!anime) return [];
+
+    const isUpcoming = anime.status === 'Upcoming' || anime.status === 'NOT_YET_RELEASED';
+    if (isUpcoming) {
+      return [];
+    }
+
+    const baseList = (anime.episodes && anime.episodes.length > 0) ? [...anime.episodes] : [];
+    const existingCount = baseList.length;
+
+    // For ongoing series that have not yet aired any episodes, show empty state instead of phantom shells
+    if (anime.status === 'Ongoing' && existingCount === 0) {
+      return [];
+    }
+
     const isMovie = (anime.kind && anime.kind.toLowerCase() === 'movie') || anime.title.toLowerCase().includes('movie');
     if (isMovie) {
-      if (anime.episodes && anime.episodes.length > 0) return anime.episodes;
+      if (existingCount > 0) return baseList;
       return [{
         n: 1,
         title: anime.title || 'Movie',
@@ -125,18 +139,10 @@ export function Watch() {
       }];
     }
 
-    const isUpcoming = anime.status === 'Upcoming' || anime.status === 'NOT_YET_RELEASED';
-    if (isUpcoming) {
-      return [];
-    }
-
     const requestedEp = Number.parseInt(ep ?? '', 10);
     const validRequested = Number.isFinite(requestedEp) && requestedEp > 0 ? requestedEp : 0;
     const queryEp = Number.parseInt(params.get('ep') ?? '', 10);
     const validQueryEp = Number.isFinite(queryEp) && queryEp > 0 ? queryEp : 0;
-
-    const baseList = (anime.episodes && anime.episodes.length > 0) ? [...anime.episodes] : [];
-    const existingCount = baseList.length;
 
     // Only expand shells if a specific episode was requested beyond the current list (e.g. via schedule deep link)
     // or if the anime has 0 episodes in DB and is finished

@@ -273,7 +273,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         animeRow = null;
         try {
           animeRow = await env.ANIHUB.prepare(
-            `SELECT a.id, a.title, a.source_ids, a.skip_key_id, a.skip_key_space,
+            `SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
                     e.runtime_seconds, e.markers,
                     m.mal_id, m.kitsu_id, m.anilist_id,
                     m.anikoto_slug, m.hianime_slug
@@ -285,7 +285,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         } catch {
           // If anime_id_map table does not exist in production D1 yet, query anime directly
           animeRow = await env.ANIHUB.prepare(
-            `SELECT a.id, a.title, a.source_ids, a.skip_key_id, a.skip_key_space,
+            `SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
                     e.runtime_seconds, e.markers
              FROM anime a
              LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
@@ -297,6 +297,20 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           if (!resolvedTitle) resolvedTitle = animeRow.title;
           if (animeRow.runtime_seconds) durationSeconds = animeRow.runtime_seconds;
           if (animeRow.markers) rawEpisodeMarkers = animeRow.markers;
+
+          if (animeRow.status === 'Upcoming' || animeRow.status === 'NOT_YET_RELEASED') {
+            return ok({
+              title: resolvedTitle,
+              episode: ep,
+              status: 'unreleased',
+              error: 'This anime has not yet been released.',
+              servers: [],
+              subtitles: [],
+              audioTracks: buildAudioTracks(audio),
+              aniskip: null,
+              downloads: [],
+            });
+          }
 
           if (!resolvedMalId) {
             if (animeRow.mal_id) {

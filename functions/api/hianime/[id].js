@@ -82,7 +82,12 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
       }
     }
 
-    if (episodes.length === 0) {
+    const isUpcoming =
+      (anime.Status || '').toLowerCase().includes('upcoming') ||
+      (anime.Status || '').toLowerCase().includes('not yet') ||
+      (Number(anime.totalEpisodes || 0) === 0 && Number(anime.totalSubbed || 0) === 0 && Number(anime.totalDubbed || 0) === 0);
+
+    if (episodes.length === 0 && !isUpcoming && totalEpisodes > 0) {
       episodes = [{
         id: `hianime:${slug}#1`,
         n: 1,
