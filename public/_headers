@@ -28,6 +28,17 @@
   Cache-Control: public, max-age=86400
   Content-Type: text/plain; charset=utf-8
 
+# Service Worker: never cache on CDN, revalidate immediately
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+  Service-Worker-Allowed: /
+  Content-Type: application/javascript; charset=utf-8
+
+# Web Manifest
+/manifest.webmanifest
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json; charset=utf-8
+
 # General security headers for all routes
 /*
   X-Content-Type-Options: nosniff

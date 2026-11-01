@@ -830,14 +830,52 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 24. Recommended Next Targets & Architecture Roadmap
+## 24. Offline PWA & Service Worker Stream Segment Caching
 
-1. **Target 2: Offline PWA & Service Worker Stream Segment Caching**
-   - Implement client-side service worker cache for HLS `.m3u8` and media segment chunks to provide instant resume and offline buffering on mobile devices.
-2. **Target 3: Franchise Chronology Visual Timeline View**
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `1082d99`  
+**Completion Commit Hash:** `c71cf47`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **PWA Web App Manifest ([`public/manifest.webmanifest`](file:///C:/anihubstream-local/public/manifest.webmanifest)):**
+   - Configured full Progressive Web App manifest with standalone display mode, `#07070b` theme color, and application shortcuts (`/anime`, `/discover`, `/schedule`).
+   - Defined SVG vector icon and maskable icon definitions for desktop and mobile home screen installation.
+2. **Offline & Stream Segment Service Worker ([`public/sw.js`](file:///C:/anihubstream-local/public/sw.js)):**
+   - Multi-tier cache separation: `anihub-shell-v1` for static application assets and `anihub-stream-v1` for HLS video media segments.
+   - Built LRU eviction mechanism (`pruneLru`) that bounds the stream segment cache to 45 items (~20–40MB), preventing storage exhaustion on mobile devices.
+   - Media segment caching: Cache-First strategy for `.ts`, `.m4s`, and proxied video fragments (`/api/proxy?url=...`), enabling instant scrubbing and zero-network rewind.
+   - Playlist caching: Network-First with cache fallback for `.m3u8` manifests, allowing playback to continue smoothly across momentary connectivity drops.
+   - Navigation: Network-First with fallback to cached `/index.html` for complete offline SPA resilience.
+   - Service Worker messaging API: Added handlers for `SKIP_WAITING`, `CLEAR_STREAM_CACHE`, and `GET_CACHE_STATS`.
+3. **Cloudflare Headers & Scope ([`public/_headers`](file:///C:/anihubstream-local/public/_headers)):**
+   - Added strict headers for `/sw.js` (`Cache-Control: public, max-age=0, must-revalidate`, `Service-Worker-Allowed: /`, `Content-Type: application/javascript; charset=utf-8`).
+   - Added `application/manifest+json; charset=utf-8` for `/manifest.webmanifest`.
+4. **App Integration & Player Settings ([`src/main.tsx`](file:///C:/anihubstream-local/src/main.tsx), [`src/lib/pwa.ts`](file:///C:/anihubstream-local/src/lib/pwa.ts), [`src/components/player/PlayerSettings.tsx`](file:///C:/anihubstream-local/src/components/player/PlayerSettings.tsx)):**
+   - Implemented `registerServiceWorker()`, `getStreamCacheStats()`, and `clearStreamCache()`.
+   - Wired service worker registration on window load in `src/main.tsx`.
+   - Added live "Offline Stream Buffer (PWA)" monitor row to the player settings menu with real-time segment counter and one-click cache clearing.
+5. **Deterministic Unit Test Suite ([`tools/pwa-sw.test.mjs`](file:///C:/anihubstream-local/tools/pwa-sw.test.mjs)):**
+   - 5/5 unit tests verifying manifest schema, service worker lifecycle, segment and playlist pattern matchers, headers, and HTML meta tags.
+
+### What Was Verified:
+- `node --test tools/pwa-sw.test.mjs`: **5/5 tests PASSED**.
+- `npm run test:cache`: **8/8 tests PASSED** (Zero-Read Edge Shield verified).
+- `curl.exe -i -s "http://127.0.0.1:8899/manifest.webmanifest"`: **HTTP 200 OK**, `Content-Type: application/manifest+json`.
+- `curl.exe -i -s "http://127.0.0.1:8899/sw.js"`: **HTTP 200 OK**, `Service-Worker-Allowed: /`, `max-age=0, must-revalidate`.
+- `npm run build`: **PASSED** (0 TypeScript errors, Vite pages build bundled in 6.83s, `sw.js` and `manifest.webmanifest` verified in `dist-pages/`).
+
+---
+
+## 25. Recommended Next Targets & Architecture Roadmap
+
+1. **Target 3: Franchise Chronology Visual Timeline View**
    - Enhance [`src/pages/AnimeDetail.tsx`](file:///C:/anihubstream-local/src/pages/AnimeDetail.tsx) to render a visual release order / timeline tree using the existing 1,480 franchise edges in `anime_franchise_relation`.
-3. **Target 4: Intelligent Auto-Skip & AniSkip Fallback Optimizer**
+2. **Target 4: Intelligent Auto-Skip & AniSkip Fallback Optimizer**
    - Add local learning/heuristics to detect recap/intro timestamps for anime without AniSkip v2 entries by analyzing black frames or audio silence signatures.
+3. **Target 5: Multi-Language Subtitle Style Presets & Font Customizer**
+   - Enhance player subtitle styling with customizable text shadows, font families, and opacity presets saved to local storage.
+
 
 
 

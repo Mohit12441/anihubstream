@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {
   AudioWaveform,
   Captions,
@@ -22,6 +22,7 @@ import {
 } from '../../lib/playerPrefs';
 import type { SubStatus, SubTrack } from '../../lib/useLiveStream';
 import type { AudioList } from '../../lib/streamBridge';
+import { clearStreamCache, getStreamCacheStats, type CacheStats } from '../../lib/pwa';
 import { PopGrid, PopGroup, PopHead, PopRow, PopShell, PopSwitch } from './PopRows';
 import { ShortcutsPanel } from './KeyboardShortcuts';
 import { SubtitlePanel } from './SubtitlePanel';
@@ -97,6 +98,13 @@ export function PlayerSettings({
   onQualityPick,
 }: Props) {
   const { ref, focusFirst } = useMenuNav<HTMLDivElement>(true);
+  const [cacheStats, setCacheStats] = useState<CacheStats | null>(null);
+
+  useEffect(() => {
+    if (tab === 'behaviour') {
+      getStreamCacheStats().then(setCacheStats);
+    }
+  }, [tab]);
 
   useEffect(() => {
     focusFirst();
@@ -382,6 +390,19 @@ export function PlayerSettings({
               hint="Shares buffered video chunks directly with concurrent peers via WebRTC to reduce server bandwidth"
               checked={prefs.enableP2P ?? false}
               onChange={(v) => patch({ enableP2P: v })}
+            />
+          </PopGroup>
+
+          <PopGroup title="Offline Stream Buffer (PWA)">
+            <PopRow
+              label="Stream Segment Cache"
+              value={cacheStats ? `${cacheStats.streamSegments} / ${cacheStats.maxSegments} segments` : 'Active'}
+              note="Cached HLS chunks enable instant rewind and offline buffering. Click to clear."
+              onClick={() => {
+                clearStreamCache().then(() => {
+                  getStreamCacheStats().then(setCacheStats);
+                });
+              }}
             />
           </PopGroup>
 

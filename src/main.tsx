@@ -5,6 +5,7 @@ import './styles/tokens.css';
 import './styles/base.css';
 import './styles/cards.css';
 import { App } from './App';
+import { registerServiceWorker } from './lib/pwa';
 import { ThemeProvider } from './lib/useTheme';
 import { ToastProvider } from './lib/Toast';
 import { CatalogueProvider } from './state/catalogue';
@@ -16,6 +17,8 @@ const BASE = import.meta.env.BASE_URL;
 if (/\/index\.html?$/.test(window.location.pathname)) {
   window.history.replaceState(null, '', BASE);
 }
+
+registerServiceWorker();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

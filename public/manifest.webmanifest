@@ -1,0 +1,45 @@
+{
+  "name": "AniHubStream — Watch Anime Free",
+  "short_name": "AniHubStream",
+  "description": "Stream high-definition anime online with ultra-low latency, synchronized subtitles, and offline stream buffering.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#07070b",
+  "theme_color": "#07070b",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/emblem.svg",
+      "sizes": "64x64 128x128 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/og.png",
+      "sizes": "1792x1024",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Browse Catalogue",
+      "short_name": "Catalogue",
+      "url": "/anime",
+      "icons": [{ "src": "/emblem.svg", "sizes": "64x64", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Trending Anime",
+      "short_name": "Trending",
+      "url": "/discover",
+      "icons": [{ "src": "/emblem.svg", "sizes": "64x64", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Weekly Schedule",
+      "short_name": "Schedule",
+      "url": "/schedule",
+      "icons": [{ "src": "/emblem.svg", "sizes": "64x64", "type": "image/svg+xml" }]
+    }
+  ],
+  "categories": ["entertainment", "video", "multimedia"]
+}
