@@ -115,19 +115,65 @@ The audit identified significant dead code, obsolete scratch files, and legacy o
 | Category | File / Path | Size | Reason for Dead/Obsolete Status |
 |---|---|---|---|
 | **Abandoned Worker** | `sync-worker/` | — | Cron trigger removed due to AniList 403 block; now a redundant skeleton. |
-| **Scratch Scraper Dumps** | `tools/anikoto-slugs-progress.json` | 197.5 KB | Temporary progress dump from one-off 2026-10-20 scraper run. |
-| **Scratch Scraper Dumps** | `tools/anikoto-slugs-review.json` | 9.3 KB | Temporary review file from 2026-10-20 scraper run. |
+| **Scratch Scraper Dumps** | `tools/anikoto-slugs-progress.json` | 197.5 KB | **CLEANED:** Temporary progress dump removed from workspace. |
+| **Scratch Scraper Dumps** | `tools/anikoto-slugs-review.json` | 9.3 KB | **CLEANED:** Removed from Git and workspace. |
 | **Static Data Snapshot** | `tools/anikoto-slugs.json` | 175.3 KB | Slugs already merged into `id-map-seed.sql` and D1 tables. |
-| **Static Data Snapshot** | `tools/anime-titles.json` | 184.7 KB | Stale title dump from 2026-10-20. |
+| **Static Data Snapshot** | `tools/anime-titles.json` | 184.7 KB | **CLEANED:** Stale title dump removed from workspace. |
 | **Test Build Artifacts** | `ops/github-sync-dispatcher/dist-test/` | 8.9 KB | Outdated bundled test output. |
 | **One-Off Backfill Script**| `tools/backfill-anikoto-slugs.mjs` | 6.5 KB | One-time backfill script; superseded by `auto-sync-providers.mjs`. |
 | **One-Off Backfill Script**| `tools/backfill-anilist-ids.mjs` | 6.0 KB | One-time ID map backfill script. |
 | **One-Off Backfill Script**| `tools/backfill-search-text.mjs` | 1.9 KB | One-time search text generator; incorporated into `sync-catalogue.mjs`. |
 | **One-Off Backfill Script**| `tools/apply-anikoto-slugs-d1.mjs` | 2.3 KB | One-time SQL generator for AniKoto provider slugs. |
-| **Obsolete Importer** | `tools/import-local-dump.mjs` | 2.2 KB | References non-existent `anime_fts` virtual table. |
-| **Abandoned Seed Gen** | `tools/gen-seed.mjs` | 3.5 KB | Superseded by `tools/sync-catalogue.mjs`. |
-| **Unsupported Schema** | `tools/setup_fts5.sql` | 0.9 KB | FTS5 virtual table unsupported/disabled in standard D1 deployments. |
+| **Obsolete Importer** | `tools/import-local-dump.mjs` | 2.2 KB | **CLEANED:** Obsolete FTS reference removed. |
+| **Abandoned Seed Gen** | `tools/gen-seed.mjs` | 3.5 KB | **CLEANED:** Superseded by `tools/sync-catalogue.mjs`. |
+| **Unsupported Schema** | `tools/setup_fts5.sql` | 0.9 KB | **CLEANED:** Unsupported schema file removed. |
 | **Scratch Benchmarks** | `tools/benchmark-anikoto.mjs` | 6.6 KB | One-off benchmark script not connected to test harnesses. |
 | **Scratch Benchmarks** | `tools/benchmark-hianime.mjs` | 7.2 KB | One-off benchmark script. |
 | **Scratch Benchmarks** | `tools/benchmark-search.mjs` | 2.3 KB | One-off benchmark script. |
+
+---
+
+## 7. Phase 2: Local Autonomous Sync Implementation & Verification
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `caba835`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **Created Unified Local Sync Engine (`tools/local-sync-daemon.mjs`):**
+   - Implemented 4-stage pipeline against local SQLite (`.wrangler/state/v3/d1/.../*.sqlite`) via `node:sqlite`:
+     - **Stage 1 (Airing Schedules):** Fetches ongoing weekly schedule from AniList GraphQL and updates `airing_at`, `air_day`, `air_time`.
+     - **Stage 2 (Provider Mapping & Ratings):** Normalizes 10-point scale ratings and syncs slugs across AniKoto, HiAnime, and AniWatch without remote CF REST dependency.
+     - **Stage 3 (Franchise Relations Graph):** Automatically constructs prequel/sequel/side-story edges using `computeFranchiseGraph` and persists them into `franchise_relation`.
+     - **Stage 4 (Episode Metadata Enrichment):** Enriches single-episode movies and fetches canonical episode titles/thumbs via batched AniList queries and AniWatch search fallback.
+   - Supports single pass mode (`node tools/local-sync-daemon.mjs --once`) and daemon loop mode (`--interval=<minutes>`).
+   - Persists execution heartbeats and telemetry to the `sync_meta` table.
+2. **Exported Modular Franchise Functions (`tools/auto-sync-franchises.mjs`):**
+   - Exported `autoSyncFranchises(db)` and `persistRelations(db, relations)` so daemon scripts can programmatically invoke relation rebuilding without child process spawns.
+3. **NPM Script Integration (`package.json`):**
+   - Added `"sync:local": "node tools/local-sync-daemon.mjs --once"`.
+   - Added `"sync:daemon": "node tools/local-sync-daemon.mjs"`.
+4. **Dead File Pruning:**
+   - Deleted untracked scratch dumps (`anikoto-slugs-progress.json`, `anime-titles.json`).
+   - Removed obsolete files from Git (`anikoto-slugs-review.json`, `gen-seed.mjs`, `import-local-dump.mjs`, `setup_fts5.sql`).
+
+### What Was Verified:
+1. **Live Local Sync Run (`node tools/local-sync-daemon.mjs --once`):**
+   - Updated 83 anime schedules from AniList GraphQL in 21.4s.
+   - Provider counts verified: AniKoto=2521, HiAnime=2591, AniWatch=452.
+   - Rebuilt franchise relations graph: 1480 links indexed in 128ms.
+   - Enriched 61 anime (892 total episodes) with canonical episode titles.
+   - Successfully wrote execution snapshot to `sync_meta` table in local D1.
+2. **TypeScript & Bundler Gate (`npm run build`):**
+   - **PASSED:** 0 TypeScript compile errors. Production Pages bundle emitted in `dist-pages/`.
+3. **Zero-Read Edge Shield Gate (`npm run test:cache`):**
+   - **PASSED:** 5/5 zero-read caching tests passed in 120ms.
+4. **Full Test Suite Gate (`npm test`):**
+   - **PASSED: 478 / 478 tests passed** across 113 suites in 140s (`api/*.test.mjs`, `tools/*.test.mjs`, `cloud-sync/*.test.mjs`).
+
+### What Remains Risky:
+1. **AniList Rate Limits on Shorter Intervals:**
+   - If the daemon is run with `--interval` under 15 minutes, AniList GraphQL may return HTTP 429. Default interval of 30 minutes is recommended.
+2. **Shift to GitHub Actions:**
+   - Before shifting to GitHub Actions (`.github/workflows/catalog-sync.yml`), the user must configure a remote Git repository (`git remote add origin <url>`) and configure Cloudflare secrets (`CF_ACCOUNT_ID`, `CF_DATABASE_ID`, `CF_API_TOKEN`) in GitHub repository secrets.
 

@@ -170,6 +170,35 @@ export function findLocalD1DbPath() {
   return sqlite ? join(dir, sqlite) : null;
 }
 
+export function persistRelations(db, relations) {
+  if (!relations || relations.length === 0) return 0;
+  const insertStmt = db.prepare(`
+    INSERT OR REPLACE INTO anime_franchise_relation (anime_id, related_id, relation_type, chronology_order, created_at)
+    VALUES (?, ?, ?, ?, datetime('now'))
+  `);
+
+  db.exec('BEGIN TRANSACTION;');
+  try {
+    for (const rel of relations) {
+      insertStmt.run(rel.anime_id, rel.related_id, rel.relation_type, rel.chronology_order);
+    }
+    db.exec('COMMIT;');
+    return relations.length;
+  } catch (err) {
+    db.exec('ROLLBACK;');
+    throw err;
+  }
+}
+
+export function autoSyncFranchises(db) {
+  const rows = db.prepare('SELECT id, title, year, season, kind, alt_seasons FROM anime').all();
+  const relations = computeFranchiseGraph(rows);
+  if (relations.length > 0) {
+    persistRelations(db, relations);
+  }
+  return relations;
+}
+
 async function run() {
   const dbPath = findLocalD1DbPath();
   if (!dbPath) {
@@ -195,33 +224,8 @@ async function run() {
   `);
 
   console.log('Querying anime catalog...');
-  const rows = db.prepare('SELECT id, title, year, season, kind, alt_seasons FROM anime').all();
-  console.log(`Loaded ${rows.length} anime entries.`);
-
-  console.log('Computing franchise graph...');
-  const relations = computeFranchiseGraph(rows);
-  console.log(`Identified ${relations.length} franchise relations across the catalog.`);
-
-  if (relations.length > 0) {
-    console.log('Persisting relations into anime_franchise_relation...');
-    const insertStmt = db.prepare(`
-      INSERT OR REPLACE INTO anime_franchise_relation (anime_id, related_id, relation_type, chronology_order, created_at)
-      VALUES (?, ?, ?, ?, datetime('now'))
-    `);
-
-    db.exec('BEGIN TRANSACTION;');
-    try {
-      for (const rel of relations) {
-        insertStmt.run(rel.anime_id, rel.related_id, rel.relation_type, rel.chronology_order);
-      }
-      db.exec('COMMIT;');
-      console.log(`Successfully indexed ${relations.length} relations in D1!`);
-    } catch (err) {
-      db.exec('ROLLBACK;');
-      console.error('Failed to commit franchise relations:', err);
-      process.exit(1);
-    }
-  }
+  const relations = autoSyncFranchises(db);
+  console.log(`Identified and indexed ${relations.length} franchise relations across the catalog.`);
 
   // Audit sample franchises
   console.log('\n--- Sample Franchise Verification ---');
