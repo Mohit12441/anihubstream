@@ -753,14 +753,56 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 22. Recommended Next Targets & Architecture Roadmap
+## 22. Instant Search (Meilisearch) Real-Time Synchronization & Autonomous Daemon Integration
 
-1. **Target 1: Instant Search (Meilisearch) Real-Time Synchronization**
-   - Integrate `tools/meilisearch/sync-meilisearch.mjs` into `syncGrowthStage` and `syncTrendingStage` so new anime and trending ranking changes sync into Meilisearch indexes automatically without manual `npm run meili:setup`.
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `b347290`  
+**Completion Commit Hash:** `b763dde`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **Live D1 SQLite Ingestion in [`tools/meilisearch/sync-meilisearch.mjs`](file:///C:/anihubstream-local/tools/meilisearch/sync-meilisearch.mjs):**
+   - Previously, Meilisearch synchronization only read static files (`seed.sql` and `catalogue-sources.json`), missing dynamically ingested titles and real-time AniList trending rank updates in D1 SQLite.
+   - Built `getAnimeDocumentsFromDb(db, ids)` to query the live Miniflare D1 database directly.
+   - Preserves complete document schemas including `trend_rank`, `rating`, `year`, `synopsis`, and `synonyms`.
+   - Added support for targeted delta sync (`ids: ['...']`) for new titles and updated ranks.
+2. **Resilient Health Probing & Offline Fallback:**
+   - Added `isMeilisearchHealthy(host, timeoutMs)` probing `${host}/health` in <5ms with a 1.2s timeout.
+   - When Meilisearch is offline or unprovisioned, `syncAnimeToMeilisearch` gracefully skips and reports `active search fallback: D1 SQLite FTS5/LIKE` without throwing or stalling the pipeline.
+3. **Autonomous Daemon Stage Integration ([`tools/local-sync-daemon.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.mjs)):**
+   - Added Stage 8: `syncSearchStage` into the autonomous local sync daemon.
+   - Stores current search engine status into D1 table `sync_meta` under key `'search_engine'` (`engine: 'meilisearch' | 'd1_fallback'`).
+   - Supports targeted execution via `--stage=search`.
+4. **Deterministic Unit Tests Added ([`tools/meilisearch/sync-meilisearch.test.mjs`](file:///C:/anihubstream-local/tools/meilisearch/sync-meilisearch.test.mjs)):**
+   - Verified SQLite document extraction with full type preservation (`rating`, `trend_rank`, `synonyms`).
+   - Verified targeted delta extraction by ID array.
+   - Verified graceful offline health check and clean fallback status reporting (4/4 tests passing).
+   - Added `tools/meilisearch/*.test.mjs` to `package.json` `"test"` script.
+
+### What Was Verified:
+- `node tools/meilisearch/sync-meilisearch.mjs`:
+  - Gracefully detects offline host: `[Meilisearch] Host http://127.0.0.1:7700 offline. Active search fallback: D1 SQLite FTS5/LIKE. (meilisearch_offline)`.
+- `node tools/local-sync-daemon.mjs --once --stage=search`:
+  - Stage 8 executed in **48ms**: records engine status to `sync_meta` and cleanly falls back to D1 FTS5/LIKE.
+- Live edge search check `http://127.0.0.1:8899/api/search/instant?q=frieren&bypass=1`:
+  - Returns 3 instant hits seamlessly via `d1_fallback` with zero downtime.
+- `node --test tools/meilisearch/sync-meilisearch.test.mjs`: **4/4 tests PASSED**.
+- `node --test api/*.test.mjs tools/*.test.mjs tools/meilisearch/*.test.mjs`: **340/340 tests PASSED**.
+- `npm run test:cache`: **8/8 tests PASSED**.
+- `npm run test:streams`: **100% playable HLS streams verified**.
+- `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 6.64s).
+
+---
+
+## 23. Recommended Next Targets & Architecture Roadmap
+
+1. **Target 1: Dynamic Provider Latency Heatmap & Auto-Failover Priority**
+   - Use the recorded `'stream_health'` metrics in `sync_meta` to dynamically order server badges on [`/api/play`](file:///C:/anihubstream-local/functions/api/play.js), automatically surfacing the fastest responding providers first (e.g. AniKoto vs HiAnime vs AniWatch).
 2. **Target 2: Offline PWA & Service Worker Stream Segment Caching**
    - Implement client-side service worker cache for HLS `.m3u8` and media segment chunks to provide instant resume and offline buffering on mobile devices.
-3. **Target 3: Automated Provider Latency Heatmap & Auto-Failover Priority**
-   - Use the recorded `'stream_health'` metrics in `sync_meta` to dynamically order server badges on [`/api/play`](file:///C:/anihubstream-local/functions/api/play.js) (ranking fastest responding providers first, e.g. AniKoto vs HiAnime vs AniWatch).
+3. **Target 3: Franchise Chronology Visual Timeline View**
+   - Enhance [`src/pages/AnimeDetail.tsx`](file:///C:/anihubstream-local/src/pages/AnimeDetail.tsx) to render a visual release order / timeline tree using the existing 1,480 franchise edges in `anime_franchise_relation`.
+
 
 
 
