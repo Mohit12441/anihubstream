@@ -713,14 +713,55 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 21. Recommended Next Targets & Architecture Roadmap
+## 21. Autonomous Stream Health Monitoring Daemon Stage & Episode Artwork Migration
 
-1. **Target 1: Local Daemon Stream Health Probe Integration**
-   - Run `tools/probe-trending-streams.mjs` as an autonomous stage in `local-sync-daemon.mjs` or as a periodic health check, caching stream status to proactively mark temporary provider outages before users trigger them.
-2. **Target 2: Instant Search (Meilisearch) Index Sync**
-   - Wire newly ingested anime from `syncGrowthStage` and `syncTrendingStage` directly into `tools/meilisearch/sync-meilisearch.mjs` so new catalogue additions are indexed immediately for fuzzy search.
-3. **Target 3: Automated Artwork Fallback Backfill**
-   - Run a batch migration in D1 SQLite to update any remaining legacy episodes where `thumb = ''` to `COALESCE(e.thumb, a.key_art, a.art)`, reducing client-side fallback computation to absolute zero.
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `5825936`  
+**Completion Commit Hash:** `943f698`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **D1 SQLite Episode Artwork Fallback Migration ([`tools/migrate-episode-thumbs.mjs`](file:///C:/anihubstream-local/tools/migrate-episode-thumbs.mjs)):**
+   - Discovered that 12,639 legacy episodes in the local SQLite database had missing or empty `thumb` attributes.
+   - Built an atomic SQL migration executing:
+     `UPDATE episode SET thumb = (SELECT coalesce(nullif(a.key_art, ''), nullif(a.art, ''), '') FROM anime a WHERE a.id = episode.anime_id) WHERE (thumb IS NULL OR thumb = '')`.
+   - Successfully backfilled **12,639 episode thumbnails** in a single pass, bringing remaining missing thumbnails to **0 (PERFECT ZERO)**.
+   - Added `"db:migrate-thumbs": "node tools/migrate-episode-thumbs.mjs"` to [`package.json`](file:///C:/anihubstream-local/package.json).
+   - Created unit test [`tools/migrate-episode-thumbs.test.mjs`](file:///C:/anihubstream-local/tools/migrate-episode-thumbs.test.mjs) (1/1 tests passing).
+2. **Episode Ingestion Pipeline Fallback Hardening ([`tools/auto-sync-episodes.mjs`](file:///C:/anihubstream-local/tools/auto-sync-episodes.mjs)):**
+   - Enhanced `updateEpisodeStmt` in `auto-sync-episodes.mjs` to automatically fall back to `a.key_art || a.art` when AniList or Kitsu publishes empty thumbnails for older catalog episodes.
+3. **Autonomous Stream Health Daemon Stage ([`tools/local-sync-daemon.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.mjs)):**
+   - Added Stage 7: `syncHealthStage` into the local sync daemon cycle.
+   - Supervised by `tools/start-local.mjs` and runnable on demand via `node tools/local-sync-daemon.mjs --once --stage=health`.
+   - Records live stream health status, uptime, and server availability directly into D1 table `sync_meta` under key `'stream_health'`.
+   - Enhanced [`tools/probe-trending-streams.mjs`](file:///C:/anihubstream-local/tools/probe-trending-streams.mjs) to export programmatic `probeTrendingStreams({ limit, baseUrl, silent })` returning structured metrics.
+   - Updated [`tools/local-sync-daemon.test.mjs`](file:///C:/anihubstream-local/tools/local-sync-daemon.test.mjs) to verify `metrics.health` stage handling (7/7 tests passing).
+
+### What Was Verified:
+- `node tools/migrate-episode-thumbs.mjs`:
+  - Before: **12,639 missing thumb**
+  - Updated: **12,639 rows**
+  - Remaining: **0 (PERFECT ZERO)**.
+- `node tools/local-sync-daemon.mjs --once --stage=health`:
+  - Executed cleanly in 280ms: **4 streamable, 6 unreleased skipped, 0 failed**.
+- `npm run test:streams`:
+  - **100% playable HLS streams** across all released ongoing/finished top-trending series.
+- `npm run test:cache`: **8/8 tests PASSED**.
+- `node --test tools/local-sync-daemon.test.mjs`: **7/7 tests PASSED**.
+- `node --test tools/migrate-episode-thumbs.test.mjs`: **1/1 test PASSED**.
+- `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 6.82s).
+
+---
+
+## 22. Recommended Next Targets & Architecture Roadmap
+
+1. **Target 1: Instant Search (Meilisearch) Real-Time Synchronization**
+   - Integrate `tools/meilisearch/sync-meilisearch.mjs` into `syncGrowthStage` and `syncTrendingStage` so new anime and trending ranking changes sync into Meilisearch indexes automatically without manual `npm run meili:setup`.
+2. **Target 2: Offline PWA & Service Worker Stream Segment Caching**
+   - Implement client-side service worker cache for HLS `.m3u8` and media segment chunks to provide instant resume and offline buffering on mobile devices.
+3. **Target 3: Automated Provider Latency Heatmap & Auto-Failover Priority**
+   - Use the recorded `'stream_health'` metrics in `sync_meta` to dynamically order server badges on [`/api/play`](file:///C:/anihubstream-local/functions/api/play.js) (ranking fastest responding providers first, e.g. AniKoto vs HiAnime vs AniWatch).
+
 
 
 
