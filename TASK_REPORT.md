@@ -360,6 +360,42 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 - `node --test api/*.test.mjs tools/*.test.mjs`: **PASSED** (**311 / 311 tests across 84 suites** in 5.18s).
 - `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 6.26s).
 
+---
+
+## 12. Phase 2: Stream Bridge Hardening & Decryptor Multi-Provider Fallback
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `84e0f24`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **Multi-Provider Priority Cascade in [`api/bridge.mjs`](file:///C:/anihubstream-local/api/bridge.mjs):**
+   - Replaced single-provider attempt with full multi-provider fallback cascade.
+   - When the primary requested provider fails or lacks stream sources, the bridge now iterates through all registered adapters from [`api/adapters/registry.mjs`](file:///C:/anihubstream-local/api/adapters/registry.mjs) in descending priority order (`aniwatch` &rarr; `anikoto` &rarr; `hianime` &rarr; `watchanimeworld` &rarr; `animewave` &rarr; `animekai`).
+2. **Direct Slug Resolution Support:**
+   - Added support for `slug` and `providerSlug` query parameters in `/resolve`, enabling direct details resolution without relying on fuzzy title searching.
+3. **Session Cache Management & Programmatic Lifecycle:**
+   - Added `/cache` and `/cache/clear` endpoints for inspection and deterministic cache invalidation.
+   - Exported `startBridge(port, host)`, `stopBridge()`, `clearSessionCache()`, and `getSessionCacheSize()`.
+   - Prevented auto-listen port collision when importing `bridge.mjs` as an ES module in test harnesses.
+4. **Local Dev Environment Integration:**
+   - Enabled `STREAM_BRIDGE_URL=http://127.0.0.1:8795` in `.dev.vars` to connect [`functions/api/play/resolve.js`](file:///C:/anihubstream-local/functions/api/play/resolve.js) directly to the local stream bridge.
+   - Updated [`tools/start-local.mjs`](file:///C:/anihubstream-local/tools/start-local.mjs) to automatically check and spawn the bridge microservice on port 8795 alongside Pages on 8899.
+   - Added `"bridge": "node api/bridge.mjs"` to [`package.json`](file:///C:/anihubstream-local/package.json).
+5. **Deterministic Unit Test Suite Added:**
+   - Created [`api/bridge.test.mjs`](file:///C:/anihubstream-local/api/bridge.test.mjs) testing `/health`, `/cache`, `/resolve` with fallback cascade, slug routing, in-memory session reuse (`reused: true`), and CORS OPTIONS preflights (6/6 tests passing).
+
+### What Was Verified:
+- `node --test api/bridge.test.mjs`: **PASSED** (6/6 tests in 86ms).
+- `node --test api/*.test.mjs tools/*.test.mjs`: **PASSED** (**317 / 317 tests across 85 suites** in 9.94s).
+- `npm run test:cache`: **PASSED** (5/5 Zero-Read shield tests in 100ms).
+- `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 7.22s).
+
+### What Remains Risky:
+1. **Upstream Streaming Host Domain Changes:**
+   - External video hosts (`megaplay.buzz`, `vidwish.to`, `zokoanime.video`) occasionally rotate domains. The multi-provider fallback cascade protects playback by falling back to alternative providers in real time, but host domain lists in `api/hianime.mjs` and `api/anikoto.mjs` must be audited if an entire host network migrates.
+
+
 
 
 

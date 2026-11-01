@@ -2,7 +2,7 @@
 // @ts-check
 import http from 'node:http';
 import { URL } from 'node:url';
-import { getAdapter } from './adapters/registry.mjs';
+import { getAdapter, listAdapters } from './adapters/registry.mjs';
 import * as anikoto from './anikoto.mjs';
 
 const PORT = Number(process.env.ANIKOTO_BRIDGE_PORT || process.env.PORT || 8795);
@@ -20,12 +20,20 @@ const malStats = {
 const sessionCache = new Map();
 const SESSION_TTL_MS = 5 * 60 * 1000;
 
+export function clearSessionCache() {
+  sessionCache.clear();
+}
+
+export function getSessionCacheSize() {
+  return sessionCache.size;
+}
+
 function sendJson(res, statusCode, data) {
   const payload = JSON.stringify(data);
   res.writeHead(statusCode, {
     'content-type': 'application/json',
     'access-control-allow-origin': '*',
-    'access-control-allow-methods': 'GET, HEAD, OPTIONS',
+    'access-control-allow-methods': 'GET, HEAD, POST, OPTIONS',
     'access-control-allow-headers': '*',
     'content-length': Buffer.byteLength(payload),
   });
@@ -36,7 +44,7 @@ const server = http.createServer(async (req, res) => {
   if (req.method === 'OPTIONS') {
     res.writeHead(204, {
       'access-control-allow-origin': '*',
-      'access-control-allow-methods': 'GET, HEAD, OPTIONS',
+      'access-control-allow-methods': 'GET, HEAD, POST, OPTIONS',
       'access-control-allow-headers': '*',
     });
     res.end();
@@ -51,6 +59,7 @@ const server = http.createServer(async (req, res) => {
       ok: true,
       status: 'healthy',
       uptime: process.uptime(),
+      cacheSize: sessionCache.size,
       mal: {
         hits: malStats.hits,
         misses: malStats.misses,
@@ -60,8 +69,20 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  if (pathname === '/cache') {
+    sendJson(res, 200, { ok: true, size: sessionCache.size });
+    return;
+  }
+
+  if (pathname === '/cache/clear' && (req.method === 'POST' || req.method === 'GET')) {
+    clearSessionCache();
+    sendJson(res, 200, { ok: true, cleared: true, size: 0 });
+    return;
+  }
+
   if (pathname === '/resolve') {
     const title = reqUrl.searchParams.get('title') || '';
+    const slug = reqUrl.searchParams.get('slug') || reqUrl.searchParams.get('providerSlug') || '';
     const ep = Number(reqUrl.searchParams.get('ep') || '1');
     const audio = reqUrl.searchParams.get('audio') || 'sub';
     const provider = (reqUrl.searchParams.get('provider') || 'anikoto').toLowerCase();
@@ -69,7 +90,7 @@ const server = http.createServer(async (req, res) => {
     const mal = reqUrl.searchParams.get('mal') ? Number(reqUrl.searchParams.get('mal')) : null;
     const fallback = reqUrl.searchParams.get('fallback') !== 'false';
 
-    const sessionKey = `${title}:${ep}:${audio}:${provider}:${mal ?? 'nomal'}:${serverParam}`;
+    const sessionKey = `${title}:${slug}:${ep}:${audio}:${provider}:${mal ?? 'nomal'}:${serverParam}`;
     const cached = sessionCache.get(sessionKey);
     if (cached && cached.exp > Date.now()) {
       sendJson(res, 200, { ...cached.data, reused: true });
@@ -79,12 +100,15 @@ const server = http.createServer(async (req, res) => {
     try {
       let resolved = null;
       let effectiveAudio = audio;
+      let effectiveProvider = provider;
 
+      // 1. Direct MAL Gate Resolution (Ultra-fast MegaPlay token derivation)
       if (mal && mal > 0) {
-        resolved = await anikoto.resolveByMal(mal, ep, audio);
+        resolved = await anikoto.resolveByMal(mal, ep, audio).catch(() => null);
         if (resolved?.master?.url) {
           malStats.hits++;
           effectiveAudio = resolved.audio || audio;
+          effectiveProvider = 'anikoto';
         } else {
           malStats.misses++;
           if (!fallback) {
@@ -94,21 +118,44 @@ const server = http.createServer(async (req, res) => {
         }
       }
 
+      // 2. Multi-Provider Fallback Cascade
       if (!resolved?.master?.url && fallback) {
-        const adapter = getAdapter(provider) || getAdapter('anikoto');
-        if (adapter) {
-          const searchResults = await adapter.search(title).catch(() => []);
-          if (searchResults && searchResults.length > 0) {
-            const first = searchResults[0];
-            const details = await adapter.details(first.slug || first.id).catch(() => null);
-            const epList = details?.episodes || [];
-            const targetEp = epList.find((e) => e.number === ep) || epList[0];
-            if (targetEp) {
-              const src = await adapter.sources(targetEp.id || targetEp.ref).catch(() => null);
-              if (src?.embedUrl && adapter.resolve) {
-                resolved = await adapter.resolve(src.embedUrl).catch(() => null);
+        const primaryAdapter = getAdapter(provider);
+        const allAdapters = listAdapters();
+        const candidateAdapters = primaryAdapter
+          ? [primaryAdapter, ...allAdapters.filter((a) => a.id !== primaryAdapter.id)]
+          : allAdapters;
+
+        for (const adapter of candidateAdapters) {
+          try {
+            let details = null;
+            if (slug && adapter.id === provider) {
+              details = await adapter.details(slug).catch(() => null);
+            }
+            if (!details && title) {
+              const searchResults = await adapter.search(title).catch(() => []);
+              if (searchResults && searchResults.length > 0) {
+                const first = searchResults[0];
+                details = await adapter.details(first.slug || first.id).catch(() => null);
               }
             }
+
+            if (details) {
+              const epList = details.episodes || [];
+              const targetEp = epList.find((e) => e.number === ep) || (ep === 1 ? epList[0] : null);
+              if (targetEp) {
+                const src = await adapter.sources(targetEp.id || targetEp.ref, { audioType: audio }).catch(() => null);
+                if (src?.embedUrl && adapter.resolve) {
+                  resolved = await adapter.resolve(src.embedUrl, { quality: serverParam }).catch(() => null);
+                  if (resolved?.master?.url || resolved?.streamUrl) {
+                    effectiveProvider = adapter.id;
+                    break;
+                  }
+                }
+              }
+            }
+          } catch {
+            // Non-fatal: proceed to next provider in fallback cascade
           }
         }
       }
@@ -126,7 +173,7 @@ const server = http.createServer(async (req, res) => {
 
       const responseData = {
         session: `sid-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
-        provider,
+        provider: effectiveProvider,
         title,
         episode: { number: ep, title: `Episode ${ep}` },
         quality: resolved.quality || '1080p',
@@ -149,7 +196,29 @@ const server = http.createServer(async (req, res) => {
   sendJson(res, 404, { error: 'not_found', path: pathname });
 });
 
-if (process.env.NODE_ENV !== 'test') {
+export function startBridge(port = PORT, host = HOST) {
+  return new Promise((resolve, reject) => {
+    server.listen(port, host, () => {
+      const address = server.address();
+      const actualPort = typeof address === 'object' && address ? address.port : port;
+      resolve({ server, port: actualPort, host });
+    });
+    server.once('error', reject);
+  });
+}
+
+export function stopBridge() {
+  return new Promise((resolve) => {
+    server.close(() => resolve(true));
+  });
+}
+
+import { fileURLToPath } from 'node:url';
+import { resolve as pathResolve } from 'node:path';
+
+const isDirectRun = process.argv[1] && pathResolve(process.argv[1]) === pathResolve(fileURLToPath(import.meta.url));
+
+if (isDirectRun) {
   server.listen(PORT, HOST, () => {
     console.log(`Stream Bridge listening on http://${HOST}:${PORT}`);
   });

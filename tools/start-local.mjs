@@ -33,7 +33,20 @@ async function main() {
     console.error('Database initialization warning:', err);
   }
 
-  // 1. Start Cloudflare Pages local emulator on 8899
+  // 1. Ensure Stream Bridge is running on port 8795
+  const bridgeRunning = await isPortOpen(8795);
+  let bridgeProc = null;
+  if (!bridgeRunning) {
+    console.log('⚡ Starting Stream Bridge on http://127.0.0.1:8795...');
+    bridgeProc = spawn(process.execPath, ['api/bridge.mjs'], {
+      stdio: 'inherit',
+      windowsHide: false,
+    });
+  } else {
+    console.log('⚡ Stream Bridge is already active on port 8795.');
+  }
+
+  // 2. Start Cloudflare Pages local emulator on 8899
   console.log('⚡ Starting Cloudflare Pages edge emulator on http://localhost:8899...');
   const isWindows = process.platform === 'win32';
   const wranglerCmd = isWindows ? 'npx.cmd' : 'npx';
@@ -44,8 +57,15 @@ async function main() {
   });
 
   pagesProc.on('exit', (code) => {
+    if (bridgeProc) bridgeProc.kill();
     console.log(`Pages process exited with code ${code}`);
     process.exit(code ?? 0);
+  });
+
+  process.on('SIGINT', () => {
+    if (bridgeProc) bridgeProc.kill();
+    pagesProc.kill();
+    process.exit(0);
   });
 }
 
