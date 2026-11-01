@@ -30,6 +30,7 @@ import { autoSyncProviders } from './auto-sync-providers.mjs';
 import { computeFranchiseGraph, persistRelations } from './auto-sync-franchises.mjs';
 import { autoSyncEpisodes } from './auto-sync-episodes.mjs';
 import { discover } from './discover-titles.mjs';
+import { probeTrendingStreams } from './probe-trending-streams.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -222,6 +223,28 @@ async function syncGrowthStage(db, quiet, batchSize = 3) {
 }
 
 /**
+ * Stage 7: Proactive stream health check & provider availability probe
+ * @param {DatabaseSync} db
+ * @param {boolean} quiet
+ */
+async function syncHealthStage(db, quiet) {
+  if (!quiet) console.log('\n[Stage 7/7] 🩺 Probing Stream Health & Upstream Availability...');
+  const res = await probeTrendingStreams({ limit: 10, silent: quiet });
+  if (db && res.ok !== undefined) {
+    try {
+      db.prepare(`
+        INSERT OR REPLACE INTO sync_meta (key, value)
+        VALUES ('stream_health', ?)
+      `).run(JSON.stringify(res));
+    } catch {}
+  }
+  if (!quiet) {
+    console.log(`  ✓ Stream Health: ${res.streamableCount} streamable, ${res.skippedCount} skipped, ${res.failedCount} failed`);
+  }
+  return res;
+}
+
+/**
  * Execute one full synchronization cycle across all 5 stages
  * @param {Object} [options]
  * @param {boolean} [options.quiet=false]
@@ -256,6 +279,7 @@ export async function runSyncCycle({ quiet = false, expand = 3, stage = null } =
     franchises: null,
     episodes: null,
     growth: null,
+    health: null,
     durationMs: 0,
     ok: true,
   };
@@ -278,6 +302,9 @@ export async function runSyncCycle({ quiet = false, expand = 3, stage = null } =
     }
     if (!stage || stage === 'growth') {
       metrics.growth = await syncGrowthStage(db, quiet, expand).catch((e) => ({ error: e.message }));
+    }
+    if (!stage || stage === 'health') {
+      metrics.health = await syncHealthStage(db, quiet).catch((e) => ({ error: e.message }));
     }
   } catch (err) {
     metrics.ok = false;

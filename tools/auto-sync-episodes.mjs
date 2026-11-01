@@ -47,7 +47,11 @@ const BATCH_SIZE = 25;
 const updateEpisodeStmt = db.prepare(`
   UPDATE episode
   SET title = ?,
-      thumb = coalesce(nullif(?, ''), thumb),
+      thumb = coalesce(
+        nullif(?, ''),
+        nullif(thumb, ''),
+        (SELECT coalesce(nullif(a.key_art, ''), a.art) FROM anime a WHERE a.id = episode.anime_id)
+      ),
       synopsis = coalesce(nullif(?, ''), synopsis),
       airdate = coalesce(nullif(?, ''), airdate)
   WHERE anime_id = ? AND n = ?

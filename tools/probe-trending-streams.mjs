@@ -1,34 +1,100 @@
-async function probeTrendingStreams() {
-  const homeRes = await fetch('http://127.0.0.1:8899/api/home?bypass=1');
-  const homeData = await homeRes.json();
-  const trending = homeData.trending || [];
+// @ts-check
 
-  console.log(`Probing stream availability for top ${trending.length} trending anime...\n`);
+export async function probeTrendingStreams({ limit = 20, baseUrl = 'http://127.0.0.1:8899', silent = false } = {}) {
+  let homeData;
+  try {
+    const homeRes = await fetch(`${baseUrl}/api/home?bypass=1`, {
+      signal: AbortSignal.timeout(6000),
+    });
+    homeData = await homeRes.json();
+  } catch (err) {
+    if (!silent) console.warn('[Stream Probe] Could not reach home API:', err.message);
+    return { ok: false, error: err.message, results: [] };
+  }
+
+  const allTrending = homeData.trending || [];
+  const trending = allTrending.slice(0, limit);
+
+  if (!silent) {
+    console.log(`Probing stream availability for top ${trending.length} trending anime...\n`);
+  }
+
+  const results = [];
+  let streamableCount = 0;
+  let skippedCount = 0;
+  let failedCount = 0;
 
   for (let i = 0; i < trending.length; i++) {
     const anime = trending[i];
     if (anime.status === 'Upcoming' || anime.status === 'NOT_YET_RELEASED' || anime.episodeCount === 0) {
-      console.log(`[${i + 1}/${trending.length}] ⏳ ${anime.title} (${anime.id}) - SKIPPED (Unreleased / 0 episodes)`);
+      if (!silent) {
+        console.log(`[${i + 1}/${trending.length}] ⏳ ${anime.title} (${anime.id}) - SKIPPED (Unreleased / 0 episodes)`);
+      }
+      skippedCount++;
+      results.push({ id: anime.id, title: anime.title, status: 'skipped', streamOk: true });
       continue;
     }
 
     try {
-      const playRes = await fetch(`http://127.0.0.1:8899/api/play?id=${anime.id}&ep=1`);
+      const playRes = await fetch(`${baseUrl}/api/play?id=${encodeURIComponent(anime.id)}&ep=1`, {
+        signal: AbortSignal.timeout(10000),
+      });
       const playData = await playRes.json();
-      
-      const serverCount = playData.servers?.length || 0;
-      const readyServers = playData.servers?.filter(s => s.status === 'ready' && s.streamUrl) || [];
+
+      const readyServers = playData.servers?.filter((s) => s.status === 'ready' && s.streamUrl) || [];
       const hasStream = readyServers.length > 0;
-      
+
       if (hasStream) {
-        console.log(`[${i + 1}/${trending.length}] ✅ ${anime.title} (${anime.id}) - Stream OK (${readyServers[0].name}: ${readyServers[0].streamUrl.slice(0, 50)}...)`);
+        streamableCount++;
+        results.push({
+          id: anime.id,
+          title: anime.title,
+          status: 'ok',
+          streamOk: true,
+          server: readyServers[0].name,
+        });
+        if (!silent) {
+          console.log(`[${i + 1}/${trending.length}] ✅ ${anime.title} (${anime.id}) - Stream OK (${readyServers[0].name}: ${readyServers[0].streamUrl.slice(0, 50)}...)`);
+        }
       } else {
-        console.log(`[${i + 1}/${trending.length}] ⚠️ ${anime.title} (${anime.id}) - ${serverCount} servers found, 0 ready streams:`, playData.error || 'no ready stream');
+        failedCount++;
+        results.push({
+          id: anime.id,
+          title: anime.title,
+          status: 'no_stream',
+          streamOk: false,
+          error: playData.error || 'no ready servers',
+        });
+        if (!silent) {
+          console.log(`[${i + 1}/${trending.length}] ⚠️ ${anime.title} (${anime.id}) - 0 ready streams:`, playData.error || 'no ready stream');
+        }
       }
     } catch (err) {
-      console.log(`[${i + 1}/${trending.length}] ❌ ${anime.title} (${anime.id}) - Error: ${err.message}`);
+      failedCount++;
+      results.push({
+        id: anime.id,
+        title: anime.title,
+        status: 'error',
+        streamOk: false,
+        error: err.message,
+      });
+      if (!silent) {
+        console.log(`[${i + 1}/${trending.length}] ❌ ${anime.title} (${anime.id}) - Error: ${err.message}`);
+      }
     }
   }
+
+  return {
+    ok: failedCount === 0,
+    timestamp: new Date().toISOString(),
+    checkedCount: trending.length,
+    streamableCount,
+    skippedCount,
+    failedCount,
+    results,
+  };
 }
 
-probeTrendingStreams().catch(console.error);
+if (process.argv[1] && process.argv[1].endsWith('probe-trending-streams.mjs')) {
+  probeTrendingStreams().catch(console.error);
+}
