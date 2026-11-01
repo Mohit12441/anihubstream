@@ -214,8 +214,9 @@ async function syncGrowthStage(db, quiet, batchSize = 3) {
  * @param {Object} [options]
  * @param {boolean} [options.quiet=false]
  * @param {number} [options.expand=3]
+ * @param {string|null} [options.stage=null]
  */
-export async function runSyncCycle({ quiet = false, expand = 3 } = {}) {
+export async function runSyncCycle({ quiet = false, expand = 3, stage = null } = {}) {
   const cycleStart = Date.now();
   const sqlitePath = findSqlitePath();
 
@@ -229,7 +230,7 @@ export async function runSyncCycle({ quiet = false, expand = 3 } = {}) {
 
   if (!quiet) {
     console.log('====================================================');
-    console.log('🔄 AniHubStream Local Autonomous Sync Cycle');
+    console.log(`🔄 AniHubStream Local Autonomous Sync Cycle ${stage ? `[Stage: ${stage}]` : ''}`);
     console.log(`   Target DB: ${sqlitePath}`);
     console.log(`   Timestamp: ${new Date().toISOString()}`);
     console.log('====================================================');
@@ -247,11 +248,21 @@ export async function runSyncCycle({ quiet = false, expand = 3 } = {}) {
   };
 
   try {
-    metrics.schedules = await syncSchedulesStage(quiet).catch((e) => ({ error: e.message }));
-    metrics.providers = await syncProvidersStage(quiet).catch((e) => ({ error: e.message }));
-    metrics.franchises = await syncFranchisesStage(db, quiet).catch((e) => ({ error: e.message }));
-    metrics.episodes = await syncEpisodesStage(quiet).catch((e) => ({ error: e.message }));
-    metrics.growth = await syncGrowthStage(db, quiet, expand).catch((e) => ({ error: e.message }));
+    if (!stage || stage === 'schedules') {
+      metrics.schedules = await syncSchedulesStage(quiet).catch((e) => ({ error: e.message }));
+    }
+    if (!stage || stage === 'providers') {
+      metrics.providers = await syncProvidersStage(quiet).catch((e) => ({ error: e.message }));
+    }
+    if (!stage || stage === 'franchises') {
+      metrics.franchises = await syncFranchisesStage(db, quiet).catch((e) => ({ error: e.message }));
+    }
+    if (!stage || stage === 'episodes') {
+      metrics.episodes = await syncEpisodesStage(quiet).catch((e) => ({ error: e.message }));
+    }
+    if (!stage || stage === 'growth') {
+      metrics.growth = await syncGrowthStage(db, quiet, expand).catch((e) => ({ error: e.message }));
+    }
   } catch (err) {
     metrics.ok = false;
     console.error('[local-sync] Cycle error:', err);
@@ -277,6 +288,10 @@ async function main() {
   const isOnce = args.includes('--once');
   const isQuiet = args.includes('--quiet');
   
+  const isGrowthOnly = args.includes('--growth-only');
+  const stageArg = args.find((a) => a.startsWith('--stage='));
+  const stage = isGrowthOnly ? 'growth' : (stageArg ? stageArg.split('=')[1] : null);
+
   const intervalArg = args.find((a) => a.startsWith('--interval='));
   const intervalMin = intervalArg ? Math.max(5, Number(intervalArg.split('=')[1]) || 30) : 30;
   const intervalMs = intervalMin * 60 * 1000;
@@ -288,22 +303,22 @@ async function main() {
   const expand = expandArg ? Number(expandArg.split('=')[1]) : 3;
 
   if (isOnce) {
-    const res = await runSyncCycle({ quiet: isQuiet, expand });
+    const res = await runSyncCycle({ quiet: isQuiet, expand, stage });
     process.exit(res.ok ? 0 : 1);
   }
 
-  console.log(`[local-sync-daemon] Starting background daemon (Interval: ${intervalMin}m, Initial delay: ${delaySec}s, Growth batch: ${expand})...`);
+  console.log(`[local-sync-daemon] Starting background daemon (Interval: ${intervalMin}m, Initial delay: ${delaySec}s, Growth batch: ${expand}${stage ? `, Stage: ${stage}` : ''})...`);
   if (delaySec > 0) {
     await sleep(delaySec * 1000);
   }
 
   // Initial immediate cycle
-  await runSyncCycle({ quiet: isQuiet, expand }).catch((err) => console.error('[local-sync-daemon] Initial cycle error:', err));
+  await runSyncCycle({ quiet: isQuiet, expand, stage }).catch((err) => console.error('[local-sync-daemon] Initial cycle error:', err));
 
   // Recurring loop
   setInterval(async () => {
     try {
-      await runSyncCycle({ quiet: isQuiet, expand });
+      await runSyncCycle({ quiet: isQuiet, expand, stage });
     } catch (err) {
       console.error('[local-sync-daemon] Interval cycle error:', err);
     }

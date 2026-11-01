@@ -138,4 +138,16 @@ describe('Local Autonomous Sync Daemon Suite', () => {
     assert.deepEqual(missing.map((m) => m.id), ['title-2', 'title-3']);
     db.close();
   });
+
+  it('runSyncCycle respects stage filter and skips non-targeted stages', async () => {
+    // When expand=0, growth is cleanly disabled without network calls
+    const res = await runSyncCycle({ quiet: true, expand: 0, stage: 'growth' });
+    assert.equal(res.ok, true);
+    assert.equal(res.schedules, null, 'schedules stage must be skipped');
+    assert.equal(res.providers, null, 'providers stage must be skipped');
+    assert.equal(res.franchises, null, 'franchises stage must be skipped');
+    assert.equal(res.episodes, null, 'episodes stage must be skipped');
+    assert.equal(res.growth.added, 0);
+    assert.equal(res.growth.skipped, 'disabled');
+  });
 });

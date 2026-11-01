@@ -1,50 +1,34 @@
 {
-  "fetched_at": "2026-11-01T06:17:18.549Z",
+  "fetched_at": "2026-11-01T07:59:47.941Z",
   "titles": [
     {
-      "id": "kakegurui-compulsive-gambler",
+      "id": "the-legend-of-the-legendary-heroes-gavf",
       "sources": {
-        "kitsu": 13252,
-        "anilist": 98314,
-        "mal": 34933
+        "kitsu": 5191,
+        "anilist": 8086,
+        "mal": 8086
       },
-      "episodes": 12,
-      "episodeTotal": 12,
+      "episodes": 24,
+      "episodeTotal": 24,
       "skipKey": null,
       "markers": 0
     }
   ],
   "stats": {
-    "episodesStored": 12,
-    "episodeTotal": 12,
+    "episodesStored": 24,
+    "episodeTotal": 24,
     "markers": 0,
     "runtimeFallbacks": 0
   },
   "droppedGenres": [
-    "Psychological",
-    "Gambling",
-    "Female Protagonist",
-    "School",
-    "Primarily Female Cast",
-    "Masochism",
-    "Primarily Teen Cast",
-    "Ojou-sama",
-    "Poker",
-    "Anti-Hero",
-    "Body Horror",
-    "School Club",
-    "Bullying",
-    "Shounen",
-    "Slavery",
-    "Villainess",
-    "Yandere",
-    "Death Game",
+    "Magic",
+    "War",
+    "Rape",
+    "Swordplay",
+    "Politics",
+    "Military",
     "Male Protagonist",
-    "Idol",
-    "Board Game",
-    "Delinquents",
-    "Battle Royale",
-    "Guns",
-    "CGI"
+    "Slapstick",
+    "Kuudere"
   ]
 }
