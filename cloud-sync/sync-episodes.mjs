@@ -110,7 +110,7 @@ export async function syncEpisodes({ limit = EPISODES_BATCH_LIMIT, force = false
           (a.status = 'Ongoing' AND (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) < COALESCE(a.episode_total, 2000))
           OR (a.episode_total IS NOT NULL AND a.episode_total > (SELECT count(*) FROM episode e WHERE e.anime_id = a.id))
         )
-      ORDER BY (CASE WHEN a.status = 'Ongoing' THEN 0 ELSE 1 END), a.rating DESC
+      ORDER BY (CASE WHEN a.status = 'Ongoing' THEN 0 ELSE 1 END), (CASE WHEN a.trend_rank IS NOT NULL THEN 0 ELSE 1 END), a.trend_rank ASC, a.rating DESC
       LIMIT 10
     `);
 

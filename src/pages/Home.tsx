@@ -207,7 +207,7 @@ export function Home() {
           <AnimeCarousel label={heading} onShuffle={() => setSeed((s) => s + 1)}>
             {featured.length ? (
               featured.map((a, i) => (
-                <AnimeCard key={a.id} anime={a} variant="key" rank={genre ? undefined : i + 1} />
+                <AnimeCard key={a.id} anime={a} variant="key" rank={genre ? undefined : (a.trendRank ?? i + 1)} />
               ))
             ) : (
               <EmptyRow

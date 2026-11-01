@@ -85,7 +85,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       db.prepare(`SELECT ${CARD_COLUMNS} FROM anime a ${where} ORDER BY ${order} LIMIT ${ROW_LIMIT}`).all();
 
     const [trending, ongoing, topRated, fresh, added, anikotoRows, aniwatchRows, hianimeRows] = await Promise.all([
-      q('WHERE a.trend_rank IS NOT NULL', 'a.trend_rank ASC'),
+      q('', 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
       q("WHERE a.status = 'Ongoing'", 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
       q('', 'a.rating DESC'),
       q(`WHERE a.year >= ${FRESH_FROM_YEAR}`, 'a.year DESC, a.rating DESC'),

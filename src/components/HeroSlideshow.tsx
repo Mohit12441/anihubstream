@@ -132,6 +132,8 @@ export function HeroSlideshow({ items, genres }: Props) {
   const current = activeItems[currentIndex];
   const accentColor = current.accent || '#ff1f4a';
   const genresToShow = genres.slice(0, 8);
+  const isUpcoming = current.status === 'Upcoming' || current.status === 'NOT_YET_RELEASED';
+  const hasNoEpisodes = isUpcoming || (current.status === 'Ongoing' && (current.episodeCount ?? 0) === 0);
 
   return (
     <section
@@ -194,10 +196,13 @@ export function HeroSlideshow({ items, genres }: Props) {
           <div className="hero-slideshow__badge-row">
             <span className="hero-slideshow__rank-badge">
               <Flame size={15} aria-hidden="true" className="hero-slideshow__rank-icon" />
-              <span>#{currentIndex + 1} Trending This Week</span>
+              <span>#{current.trendRank || (currentIndex + 1)} Trending This Week</span>
             </span>
             {current.status === 'Ongoing' && (
               <span className="hero-slideshow__status-badge">ONGOING</span>
+            )}
+            {isUpcoming && (
+              <span className="hero-slideshow__status-badge hero-slideshow__status-badge--upcoming">UPCOMING</span>
             )}
           </div>
 
@@ -225,7 +230,9 @@ export function HeroSlideshow({ items, genres }: Props) {
               </span>
             )}
             <span className="hero-slideshow__meta-item">
-              {current.episodeCount > 0
+              {isUpcoming
+                ? 'Coming Soon'
+                : current.episodeCount > 0
                 ? `${current.episodeCount} ${current.episodeCount === 1 ? 'Episode' : 'Episodes'}`
                 : current.episodeTotal
                 ? `${current.episodeTotal} Episodes`
@@ -251,19 +258,29 @@ export function HeroSlideshow({ items, genres }: Props) {
 
           {/* Action CTA Buttons */}
           <div className="hero-slideshow__actions">
+            {hasNoEpisodes ? (
+              <Link
+                to={`/anime/${current.id}`}
+                className="btn btn--primary hero-slideshow__btn-watch"
+              >
+                <Info size={18} aria-hidden="true" />
+                <span>View Details</span>
+              </Link>
+            ) : (
+              <Link
+                to={`/watch/${current.id}/1`}
+                className="btn btn--primary hero-slideshow__btn-watch"
+              >
+                <Play size={18} fill="currentColor" strokeWidth={0} aria-hidden="true" />
+                <span>Watch Now</span>
+              </Link>
+            )}
             <Link
-              to={`/watch/${current.id}/1`}
-              className="btn btn--primary hero-slideshow__btn-watch"
-            >
-              <Play size={18} fill="currentColor" strokeWidth={0} aria-hidden="true" />
-              <span>Watch Now</span>
-            </Link>
-            <Link
-              to={`/anime/${current.id}`}
+              to={hasNoEpisodes ? '/schedule' : `/anime/${current.id}`}
               className="btn btn--ghost hero-slideshow__btn-details"
             >
-              <Info size={17} aria-hidden="true" />
-              <span>Details</span>
+              {hasNoEpisodes ? <Sparkles size={17} aria-hidden="true" /> : <Info size={17} aria-hidden="true" />}
+              <span>{hasNoEpisodes ? 'Release Schedule' : 'Details'}</span>
             </Link>
           </div>
         </div>

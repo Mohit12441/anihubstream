@@ -581,6 +581,41 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 - `node --test cloud-sync/*.test.mjs`: **PASSED** (**185/185 tests across 32 suites**).
 - `npm run build`: **PASSED** (0 TypeScript errors, bundle emitted in 27.59s).
 
+---
+
+## 18. Home Page Trending Section & Hero Slideshow Live Verification
+
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `f295202`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Was Investigated:
+1. **Live `/api/home` API Contract:**
+   - Evaluated whether trending items were properly populated, ordered, and formatted.
+   - Identified that `q('WHERE a.trend_rank IS NOT NULL', 'a.trend_rank ASC')` risked returning an incomplete or empty list if the catalogue had fewer than 20 indexed trending ranks.
+   - Upgraded query to `q('', 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC')` to guarantee 20 items in top trending order with seamless fallback to highest rated titles.
+2. **HeroSlideshow Component (`src/components/HeroSlideshow.tsx`):**
+   - Investigated hero slide action buttons when a trending anime is `Upcoming` or has 0 released episodes (e.g. *Cyberpunk: Edgerunners 2* at #2).
+   - "Watch Now" previously navigated directly to `/watch/:id/1` even when the title had 0 released episodes.
+   - Added contextual CTA routing: when `hasNoEpisodes` (`isUpcoming` or ongoing with 0 episodes), the primary action renders `"View Details"` linking to `/anime/:id` and secondary action renders `"Release Schedule"` linking to `/schedule`.
+   - Added `UPCOMING` status badge (`.hero-slideshow__status-badge--upcoming`) alongside existing `ONGOING` badge.
+   - Replaced misleading episode counts for upcoming titles (e.g. "Full Season" or "10 Episodes") with `"Coming Soon"`.
+3. **Home Trending Carousel (`src/pages/Home.tsx`):**
+   - Fixed `rank` prop in the trending carousel to respect `a.trendRank ?? i + 1`, ensuring that shuffle/rotation maintains each anime's authentic trending rank number badge.
+4. **Episode Sync Priority (`cloud-sync/sync-episodes.mjs`):**
+   - Prioritized trending ongoing anime in the episode generation queue (`ORDER BY ... trend_rank ASC, rating DESC`) so that high-demand trending shows have their episodes synced first.
+
+### What Was Verified:
+- Live endpoint `http://127.0.0.1:8899/api/home`:
+  - Returns 20 trending items sorted monotonically by `trendRank` (1 through 20).
+  - Multi-provider stream shelf properly populated for `anikoto`, `hianime`, and `aniwatch`.
+  - Zero-read edge caching and cache-control headers verified.
+- New test suite [`tools/trending-home.test.mjs`](file:///C:/anihubstream-local/tools/trending-home.test.mjs): **6/6 tests PASSED**.
+- `npm run test:cache`: **8/8 tests PASSED**.
+- `node --test api/*.test.mjs tools/*.test.mjs`: **335/335 tests PASSED**.
+- `npm run build`: **PASSED** (0 TypeScript errors).
+
+
 
 
 
