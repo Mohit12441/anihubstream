@@ -10,6 +10,8 @@ export type AccentId = 'crimson' | 'purple' | 'blue' | 'emerald' | 'neutral';
 export type Density = 'comfortable' | 'compact';
 export type CaptionPosition = 'bottom' | 'middle' | 'top';
 export type CaptionBackdrop = 'none' | 'box' | 'shadow';
+export type CaptionFont = 'sans' | 'classic' | 'serif' | 'mono' | 'display';
+export type CaptionShadow = 'outline' | 'heavy' | 'glow' | 'drop' | 'none';
 /** which audio to ask the bridge for; a dub the source does not really carry falls back to 'sub' */
 export type AudioId = 'sub' | 'dub' | 'hindi' | string;
 
@@ -23,6 +25,9 @@ export interface SubtitleSettings {
   backdrop: CaptionBackdrop;
   outline: boolean;
   position: CaptionPosition;
+  font?: CaptionFont;
+  shadow?: CaptionShadow;
+  offset?: number;
 }
 
 export interface PlayerPrefs {
@@ -157,7 +162,72 @@ export const DEFAULT_SUBTITLES: SubtitleSettings = {
   backdrop: 'box',
   outline: true,
   position: 'bottom',
+  font: 'sans',
+  shadow: 'outline',
+  offset: 0,
 };
+
+export interface SubtitlePreset {
+  id: string;
+  name: string;
+  description: string;
+  settings: Partial<SubtitleSettings>;
+}
+
+export const SUBTITLE_PRESETS: SubtitlePreset[] = [
+  {
+    id: 'anime_classic',
+    name: 'Anime Classic',
+    description: 'Vibrant yellow text with thick outline (classic fansub style)',
+    settings: {
+      color: '#ffe066',
+      font: 'classic',
+      backdrop: 'none',
+      shadow: 'heavy',
+      outline: true,
+      background: 0,
+    },
+  },
+  {
+    id: 'modern_crisp',
+    name: 'Modern Crisp',
+    description: 'Clean white typography with subtle dark translucent box',
+    settings: {
+      color: '#ffffff',
+      font: 'sans',
+      backdrop: 'box',
+      background: 0.55,
+      shadow: 'outline',
+      outline: true,
+    },
+  },
+  {
+    id: 'cinema_serif',
+    name: 'Cinema Serif',
+    description: 'Cinematic literary serif with ambient soft shadow glow',
+    settings: {
+      color: '#ffffff',
+      font: 'serif',
+      backdrop: 'shadow',
+      shadow: 'glow',
+      outline: false,
+      background: 0,
+    },
+  },
+  {
+    id: 'cyberpunk_mono',
+    name: 'Cyberpunk Mono',
+    description: 'Futuristic cyan monospace on dark high-contrast box',
+    settings: {
+      color: '#7dd3fc',
+      font: 'mono',
+      backdrop: 'box',
+      background: 0.75,
+      shadow: 'glow',
+      outline: true,
+    },
+  },
+];
 
 export const DEFAULT_PREFS: PlayerPrefs = {
   speed: 1,
@@ -252,6 +322,9 @@ function sanitizeSubs(input?: SubtitleSettings): SubtitleSettings {
   if (!/^#[0-9a-f]{6}$/i.test(s.color)) s.color = '#ffffff';
   if (s.position !== 'middle' && s.position !== 'top') s.position = 'bottom';
   if (s.backdrop !== 'shadow' && s.backdrop !== 'none') s.backdrop = 'box';
+  if (!['sans', 'classic', 'serif', 'mono', 'display'].includes(s.font || '')) s.font = 'sans';
+  if (!['outline', 'heavy', 'glow', 'drop', 'none'].includes(s.shadow || '')) s.shadow = 'outline';
+  s.offset = Math.min(5, Math.max(-5, Number(s.offset) || 0));
   return s;
 }
 

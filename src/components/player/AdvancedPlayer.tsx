@@ -614,7 +614,8 @@ export function AdvancedPlayer(props: Props) {
   };
 
   /* ---------- caption line ---------- */
-  const liveCues = liveReady ? live.cuesAt(engine.time) : [];
+  const effectiveCueTime = Math.max(0, engine.time + (prefs.subtitles.offset || 0));
+  const liveCues = liveReady ? live.cuesAt(effectiveCueTime) : [];
   /* A paused frame is precisely when a viewer wants to read the line, and the cue still
      covers this instant. Gating on engine.playing deleted the caption the moment anyone
      stopped the video — the audit caught it at 6.13s on Jujutsu Kaisen. "Ended" is the

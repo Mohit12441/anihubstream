@@ -934,14 +934,56 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 27. Recommended Next Targets & Architecture Roadmap
+## 27. Multi-Language Subtitle Style Presets & Font Customizer
 
-1. **Target 5: Multi-Language Subtitle Style Presets & Font Customizer**
-   - Enhance player subtitle styling with customizable text shadows, font families, and opacity presets saved to local storage.
-2. **Target 6: Episode Airing Countdown Timer & Desktop Push Notifications**
+**Date:** 2026-11-01  
+**Pre-DevFlow Checkpoint Commit Hash:** `700fb13`  
+**Completion Commit Hash:** `4573e27`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **Domain Model & User Preferences Extension ([`src/lib/playerPrefs.ts`](file:///C:/anihubstream-local/src/lib/playerPrefs.ts)):**
+   - Added `CaptionFont` type: `'sans'` (Inter, Helvetica), `'classic'` (Trebuchet MS fansub standard), `'serif'` (Georgia, Merriweather), `'mono'` (JetBrains Mono, Roboto Mono), and `'display'` (Cabinet Grotesk, Impact).
+   - Added `CaptionShadow` type: `'outline'` (1.5px clean outline), `'heavy'` (2px dense fansub stroke), `'glow'` (ambient neon back-shadow), `'drop'` (classic 2px drop shadow), and `'none'`.
+   - Extended `SubtitleSettings` interface to include `font?`, `shadow?`, and `offset?` (audio sync correction from `-5.0s` to `+5.0s`).
+   - Defined `SUBTITLE_PRESETS` array with 4 complete presets:
+     - **Anime Classic**: Trebuchet fansub typography with dense black outline and semi-transparent backing.
+     - **Modern Crisp**: Clean sans-serif typography with crisp stroke and transparent background.
+     - **Cinema Serif**: High-contrast dramatic serif styling with soft drop shadow.
+     - **Cyberpunk Mono**: Yellow monospace styling with dark cyan glow backing.
+   - Updated `DEFAULT_SUBTITLES` and `sanitizeSubs` sanitizer with boundary clamping for offset and fallback defaults.
+2. **Dynamic Caption Styling Engine ([`src/components/player/captionStyle.ts`](file:///C:/anihubstream-local/src/components/player/captionStyle.ts)):**
+   - Implemented `FONT_MAP` mapping font presets to font family fallbacks.
+   - Implemented shadow styling presets (`OUTLINE_LIGHT`, `OUTLINE_HEAVY` 2px fansub stroke, `SHADOW_GLOW`, `SHADOW_DROP`).
+   - Generates responsive CSS properties (`fontFamily`, `textShadow`, `--cap-px`).
+3. **Real-Time Audio / Subtitle Synchronization ([`src/components/player/AdvancedPlayer.tsx`](file:///C:/anihubstream-local/src/components/player/AdvancedPlayer.tsx)):**
+   - Integrated `effectiveCueTime = Math.max(0, engine.time + (prefs.subtitles.offset || 0))` on line 617.
+   - Dynamically advances or delays subtitle cue lookups in real-time without modifying or reloading VTT files.
+4. **Interactive Subtitle Customizer Panel ([`src/components/player/SubtitlePanel.tsx`](file:///C:/anihubstream-local/src/components/player/SubtitlePanel.tsx)):**
+   - Built Style Presets picker grid with 1-click preset switching.
+   - Built Typography font family selector chips.
+   - Built Text Shadow & Outline selector chips.
+   - Built Audio Sync Offset adjustment controls with live slider (`-5.0s` to `+5.0s`) and quick-step buttons (`−0.5s`, `Reset`, `+0.5s`).
+5. **Deterministic Unit Test Suite ([`tools/subtitle-customizer.test.mjs`](file:///C:/anihubstream-local/tools/subtitle-customizer.test.mjs)):**
+   - 4/4 unit tests verifying font map generation, text shadow styles, preset integrity, and sync offset cue calculations.
+
+### What Was Verified:
+- `node --test tools/subtitle-customizer.test.mjs`: **4/4 tests PASSED**.
+- `npm run test:cache`: **8/8 tests PASSED** (Zero-Read Edge Shield verified).
+- `npx tsc --noEmit`: **PASSED** (0 TypeScript errors).
+- `npm run build`: **PASSED** (0 TypeScript errors, Vite pages build bundled in 7.11s).
+
+---
+
+## 28. Recommended Next Targets & Architecture Roadmap
+
+1. **Target 6: Episode Airing Countdown Timer & Desktop Push Notifications**
    - Add live countdown ticker to ongoing anime cards and opt-in Web Push Notifications via Service Worker for newly aired episodes.
-3. **Target 7: Automated Video Thumbnail Preview Sprites (VTT) Extractor**
+2. **Target 7: Automated Video Thumbnail Preview Sprites (VTT) Extractor**
    - Generate scrubbing hover thumbnail sprites for player progress bar when upstream providers do not provide `thumbnails.vtt`.
+3. **Target 8: Multi-Source Torrent / WebTorrent P2P Fallback Streamer**
+   - Peer-to-peer resilient streaming layer when CDN providers encounter upstream rate limits or downtime.
+
 
 
 
