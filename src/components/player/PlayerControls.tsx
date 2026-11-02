@@ -12,6 +12,7 @@ import {
   SkipBack,
   SkipForward,
   Theater,
+  Users,
   Volume1,
   Volume2,
   VolumeX,
@@ -47,6 +48,9 @@ interface Props {
   onPip: () => void;
   time: number;
   duration: number;
+  partyOpen?: boolean;
+  partyMemberCount?: number;
+  onToggleParty?: () => void;
 }
 
 export function PlayerControls(p: Props) {
@@ -151,6 +155,22 @@ export function PlayerControls(p: Props) {
         >
           <Settings2 size={18} />
         </button>
+
+        {p.onToggleParty && (
+          <button
+            type="button"
+            className={`pl__btn pl__btn--party${p.partyOpen ? ' is-on' : ''}`}
+            onClick={p.onToggleParty}
+            aria-label="Watch Party"
+            aria-pressed={p.partyOpen}
+            title="Watch Party"
+          >
+            <Users size={18} />
+            {typeof p.partyMemberCount === 'number' && p.partyMemberCount > 0 && (
+              <span className="pl__party-badge">{p.partyMemberCount}</span>
+            )}
+          </button>
+        )}
 
         <button
           type="button"

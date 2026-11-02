@@ -19,6 +19,8 @@ import { PlayerControls } from './PlayerControls';
 import { PlayerSettings, type SettingsTab } from './PlayerSettings';
 import { PlayerTimeline } from './PlayerTimeline';
 import { NextEpisodeOverlay } from './NextEpisodeOverlay';
+import { WatchPartyPanel } from './WatchPartyPanel';
+import { WatchPartyClient, calculateDrift, shouldSync } from '../../lib/watchParty';
 import { captionAnchor, captionStyle } from './captionStyle';
 import type { PlayServer } from './PlayerInput';
 import type { BridgeSource } from '../../lib/streamBridge';
@@ -49,6 +51,7 @@ interface Props {
   serverId?: string;
   onServerChange?: (serverId: string) => void;
   initialServer?: PlayServer | null;
+  initialPartyRoom?: string | null;
 }
 
 /** The prefixed members Safari exposes are not in the DOM typings. */
@@ -226,6 +229,115 @@ export function AdvancedPlayer(props: Props) {
   /* the live playhead, readable from event handlers that fire between renders */
   const engineRef = useRef<PlayerEngine>(engine);
   engineRef.current = engine;
+
+  /* ---------- watch party ---------- */
+  const [partyClient, setPartyClient] = useState<WatchPartyClient | null>(null);
+  const [partyOpen, setPartyOpen] = useState(false);
+  const [partyDrift, setPartyDrift] = useState(0);
+
+  const handleInitParty = useCallback((code: string, isHost: boolean) => {
+    if (partyClient) {
+      partyClient.destroy();
+    }
+    const client = new WatchPartyClient(code, anime.id, episode.n, 'Viewer', isHost);
+    setPartyClient(client);
+    setPartyOpen(true);
+    notify(`Connected to Watch Party: ${client.roomId}`);
+  }, [partyClient, anime.id, episode.n, notify]);
+
+  const handleLeaveParty = useCallback(() => {
+    if (partyClient) {
+      partyClient.destroy();
+      setPartyClient(null);
+      setPartyOpen(false);
+      notify('Left Watch Party');
+    }
+  }, [partyClient, notify]);
+
+  useEffect(() => {
+    if (props.initialPartyRoom && !partyClient) {
+      handleInitParty(props.initialPartyRoom, false);
+    }
+  }, [props.initialPartyRoom, partyClient, handleInitParty]);
+
+  useEffect(() => {
+    return () => {
+      partyClient?.destroy();
+    };
+  }, [partyClient]);
+
+  // Sync playback from remote party messages
+  useEffect(() => {
+    if (!partyClient) return;
+
+    const unsub = partyClient.subscribe((event) => {
+      if (event.type === 'state') {
+        const remoteState = event.payload;
+        const drift = calculateDrift(engineRef.current.time, remoteState);
+        setPartyDrift(drift);
+
+        if (shouldSync(drift)) {
+          partyClient.setApplyingRemoteState(true);
+          const targetTime = remoteState.playing
+            ? remoteState.time + Math.max(0, (Date.now() - remoteState.timestamp) / 1000) * (remoteState.rate || 1)
+            : remoteState.time;
+          engineRef.current.seek(targetTime);
+          if (remoteState.playing && !engineRef.current.playing) {
+            engineRef.current.play();
+          } else if (!remoteState.playing && engineRef.current.playing) {
+            engineRef.current.pause();
+          }
+          setTimeout(() => {
+            partyClient.setApplyingRemoteState(false);
+          }, 350);
+        }
+      }
+    });
+
+    return () => {
+      unsub();
+    };
+  }, [partyClient]);
+
+  // Periodic heartbeat broadcast for host
+  useEffect(() => {
+    if (!partyClient || !partyClient.isHost) return;
+    const interval = setInterval(() => {
+      partyClient.broadcastPlayback(engineRef.current.playing, engineRef.current.time, 'play', prefs.speed);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [partyClient, prefs.speed]);
+
+  // Periodic drift computation
+  useEffect(() => {
+    if (!partyClient || partyClient.isHost) return;
+    const interval = setInterval(() => {
+      const drift = calculateDrift(engineRef.current.time, partyClient.room.playbackState);
+      setPartyDrift(drift);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [partyClient]);
+
+  const handlePartyTogglePlay = useCallback(() => {
+    if (engine.playing) {
+      engine.pause();
+      if (partyClient) {
+        partyClient.broadcastPlayback(false, engine.time, 'pause', prefs.speed);
+      }
+    } else {
+      engine.play();
+      if (partyClient) {
+        partyClient.broadcastPlayback(true, engine.time, 'play', prefs.speed);
+      }
+    }
+  }, [engine, partyClient, prefs.speed]);
+
+  const handlePartySeek = useCallback((t: number) => {
+    engine.seek(t);
+    if (partyClient) {
+      partyClient.broadcastPlayback(engine.playing, t, 'seek', prefs.speed);
+    }
+  }, [engine, partyClient, prefs.speed]);
 
   /* ---------- audio: switch, and probe what the source really carries ---------- */
   const setAudio = useCallback(
@@ -803,19 +915,23 @@ export function AdvancedPlayer(props: Props) {
 
       <div className={`player__bar${chrome ? '' : ' is-hidden'}`} ref={barRef}>
         <PlayerTimeline
+
+
+
           time={engine.time}
           duration={timelineDuration}
+
           buffered={engine.buffered}
           markers={markers}
           thumbnailsUrl={live.info?.thumbnails?.url || initialServer?.thumbnails?.url || null}
           fallbackArt={episode.thumb || anime.key || anime.poster || null}
-          onSeek={engine.seek}
+          onSeek={handlePartySeek}
           onScrub={setScrubbing}
         />
 
         <PlayerControls
           playing={engine.playing}
-          onToggle={engine.toggle}
+          onToggle={handlePartyTogglePlay}
           onBack10={() => jump(-10)}
           onFwd10={() => jump(10)}
           hasPrev={hasPrev}
@@ -846,6 +962,9 @@ export function AdvancedPlayer(props: Props) {
           onTheatre={() => onTheatre(!theatre)}
           full={full}
           onFull={toggleFull}
+          partyOpen={partyOpen}
+          partyMemberCount={partyClient?.room.members.length || 0}
+          onToggleParty={() => setPartyOpen((o) => !o)}
           pipAvailable={liveReady && pipSupported}
           onPip={() => {
             if (!liveReady) {
@@ -856,8 +975,12 @@ export function AdvancedPlayer(props: Props) {
               if (!ok) notify('Picture-in-picture was blocked or is unavailable in this browser.');
             });
           }}
+
+
+
           time={engine.time}
           duration={timelineDuration}
+
         />
 
         {menu.kind === 'settings' && (
@@ -893,6 +1016,15 @@ export function AdvancedPlayer(props: Props) {
           />
         )}
       </div>
+
+      <WatchPartyPanel
+        partyClient={partyClient}
+        isOpen={partyOpen}
+        onClose={() => setPartyOpen(false)}
+        onInitParty={handleInitParty}
+        onLeaveParty={handleLeaveParty}
+        drift={partyDrift}
+      />
     </div>
   );
 }

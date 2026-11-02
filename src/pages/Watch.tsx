@@ -632,6 +632,7 @@ export function Watch() {
             serverId={activeServerId}
             onServerChange={setActiveServerId}
             initialServer={playServers.find((s) => s.id === activeServerId) || playServers[0] || null}
+            initialPartyRoom={params.get('party')}
           />
 
           {playServers.length > 0 && (

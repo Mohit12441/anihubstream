@@ -4,6 +4,7 @@ import http from 'node:http';
 import { URL } from 'node:url';
 import { getAdapter, listAdapters } from './adapters/registry.mjs';
 import * as anikoto from './anikoto.mjs';
+import { attachPartyRelay, getRoom, getRooms } from './party-relay.mjs';
 
 const PORT = Number(process.env.ANIKOTO_BRIDGE_PORT || process.env.PORT || 8795);
 const HOST = process.env.ANIKOTO_BRIDGE_HOST || '0.0.0.0';
@@ -71,6 +72,41 @@ const server = http.createServer(async (req, res) => {
 
   if (pathname === '/cache') {
     sendJson(res, 200, { ok: true, size: sessionCache.size });
+    return;
+  }
+
+  if (pathname === '/party/rooms') {
+    const all = Array.from(getRooms().entries()).map(([id, r]) => ({
+      roomId: id,
+      membersCount: r.members.size,
+      playbackState: r.playbackState,
+      createdAt: r.createdAt,
+    }));
+    sendJson(res, 200, { ok: true, rooms: all });
+    return;
+  }
+
+  if (pathname === '/party/room') {
+    const roomId = reqUrl.searchParams.get('room');
+    if (!roomId) {
+      sendJson(res, 400, { ok: false, error: 'missing_room_param' });
+      return;
+    }
+    const r = getRoom(roomId);
+    if (!r) {
+      sendJson(res, 404, { ok: false, error: 'room_not_found' });
+      return;
+    }
+    sendJson(res, 200, {
+      ok: true,
+      room: {
+        roomId: r.roomId,
+        membersCount: r.members.size,
+        playbackState: r.playbackState,
+        messagesCount: r.messages.length,
+        createdAt: r.createdAt,
+      },
+    });
     return;
   }
 
@@ -196,6 +232,8 @@ const server = http.createServer(async (req, res) => {
 
   sendJson(res, 404, { error: 'not_found', path: pathname });
 });
+
+attachPartyRelay(server);
 
 export function startBridge(port = PORT, host = HOST) {
   return new Promise((resolve, reject) => {
