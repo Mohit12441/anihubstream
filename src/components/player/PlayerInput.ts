@@ -54,6 +54,7 @@ export interface PlayServer {
   audio?: string;
   audioTracks?: AudioTrack[];
   subtitles?: SubtitleTrack[];
+  thumbnails?: { url: string } | null;
   downloads?: DownloadOption[];
   fallbackUrls?: string[];
   intro?: { start: number; end: number } | null;
@@ -78,6 +79,7 @@ export interface PlayerInput {
   audio?: string;
   audioTracks: AudioTrack[];
   subtitles: SubtitleTrack[];
+  thumbnails?: { url: string } | null;
   aniskip?: AniSkipData;
   fallbackUrls: string[];
   provider: string;
@@ -127,6 +129,7 @@ export function toPlayerInput(
     audio: server.audio || 'sub',
     audioTracks,
     subtitles,
+    thumbnails: server.thumbnails || null,
     aniskip: aniskip ?? undefined,
     fallbackUrls,
     provider: server.provider || 'unknown',

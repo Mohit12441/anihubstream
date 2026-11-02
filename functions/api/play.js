@@ -631,6 +631,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           audio,
           audioTracks: buildAudioTracks(audio),
           subtitles,
+          thumbnails: directRes.thumbnails?.url ? { url: `${proxyBase}?url=${encodeURIComponent(directRes.thumbnails.url)}&referer=${encodeURIComponent(activeReferer)}` } : null,
           downloads: [],
         };
 
@@ -717,6 +718,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       audio: resolvedAudio,
       audioTracks: buildAudioTracks(resolvedAudio),
       subtitles,
+      thumbnails: meta.thumbnails?.url ? { url: `${proxyBase}?url=${encodeURIComponent(meta.thumbnails.url)}` } : null,
       downloads,
     };
 

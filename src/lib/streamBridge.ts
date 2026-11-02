@@ -37,6 +37,7 @@ export interface BridgeSource {
   proof: { container: string; checkedBytes: number };
   master: string;
   subtitles: BridgeSubtitle[];
+  thumbnails?: { url: string } | null;
   reused?: boolean;
   raceMs?: number;
   winner?: string;

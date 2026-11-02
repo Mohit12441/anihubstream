@@ -1,6 +1,7 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Marker } from '../../data/model';
 import { stamp } from '../../lib/time';
+import { parseThumbnailVtt, findThumbnailCue, type ThumbnailCue } from '../../lib/thumbnailParser';
 
 interface Props {
   time: number;
@@ -8,6 +9,8 @@ interface Props {
   /** media buffered range end, in seconds (0 until the stream is ready) */
   buffered: number;
   markers: Marker[];
+  thumbnailsUrl?: string | null;
+  fallbackArt?: string | null;
   onSeek: (t: number) => void;
   onScrub: (active: boolean) => void;
 }
@@ -20,10 +23,46 @@ const MARKER_HINT: Record<Marker['kind'], string> = {
   preview: 'Next preview',
 };
 
-export function PlayerTimeline({ time, duration, buffered, markers, onSeek, onScrub }: Props) {
+export function PlayerTimeline({
+  time,
+  duration,
+  buffered,
+  markers,
+  thumbnailsUrl,
+  fallbackArt,
+  onSeek,
+  onScrub,
+}: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [hover, setHover] = useState<{ x: number; t: number; marker?: Marker } | null>(null);
   const [dragging, setDragging] = useState(false);
+  const [cues, setCues] = useState<ThumbnailCue[]>([]);
+
+  useEffect(() => {
+    if (!thumbnailsUrl) {
+      setCues([]);
+      return;
+    }
+
+    let active = true;
+    fetch(thumbnailsUrl)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.text();
+      })
+      .then((vtt) => {
+        if (!active) return;
+        const parsed = parseThumbnailVtt(vtt, thumbnailsUrl);
+        setCues(parsed);
+      })
+      .catch(() => {
+        if (active) setCues([]);
+      });
+
+    return () => {
+      active = false;
+    };
+  }, [thumbnailsUrl]);
 
   const at = useCallback(
     (clientX: number) => {
@@ -126,14 +165,62 @@ export function PlayerTimeline({ time, duration, buffered, markers, onSeek, onSc
       <span className="ptl__knob" style={{ left: `${pct}%` }} aria-hidden="true" />
 
       {hover && (
-        <span className="ptl__tip" style={{ left: `${Math.min(Math.max(hover.x, 6), 94)}%` }} aria-hidden="true">
-          <b>{stamp(hover.t)}</b>
-          {hover.marker && (
-            <em className={`ptl__tip-mk ptl__tip-mk--${hover.marker.kind}`}>
-              {MARKER_HINT[hover.marker.kind]}
-              {hover.marker.locked ? ' · unavailable' : ''}
-            </em>
-          )}
+        <span
+          className="ptl__tip"
+          style={{ left: `${Math.min(Math.max(hover.x, 8), 92)}%` }}
+          aria-hidden="true"
+        >
+          {(() => {
+            const cue = cues.length > 0 ? findThumbnailCue(cues, hover.t) : null;
+            if (cue) {
+              return (
+                <div
+                  className="ptl__thumb-box"
+                  style={
+                    cue.isSprite
+                      ? {
+                          backgroundImage: `url(${cue.url})`,
+                          backgroundPosition: `-${cue.x || 0}px -${cue.y || 0}px`,
+                          backgroundSize: 'auto',
+                          width: `${cue.width || 160}px`,
+                          height: `${cue.height || 90}px`,
+                        }
+                      : {
+                          backgroundImage: `url(${cue.url})`,
+                          backgroundPosition: 'center',
+                          backgroundSize: 'cover',
+                          width: '160px',
+                          height: '90px',
+                        }
+                  }
+                />
+              );
+            }
+            if (fallbackArt) {
+              return (
+                <div
+                  className="ptl__thumb-box ptl__thumb-box--fallback"
+                  style={{
+                    backgroundImage: `url(${fallbackArt})`,
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    width: '160px',
+                    height: '90px',
+                  }}
+                />
+              );
+            }
+            return null;
+          })()}
+          <span className="ptl__tip-text">
+            <b>{stamp(hover.t)}</b>
+            {hover.marker && (
+              <em className={`ptl__tip-mk ptl__tip-mk--${hover.marker.kind}`}>
+                {MARKER_HINT[hover.marker.kind]}
+                {hover.marker.locked ? ' · unavailable' : ''}
+              </em>
+            )}
+          </span>
         </span>
       )}
     </div>

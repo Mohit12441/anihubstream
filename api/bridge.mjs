@@ -183,6 +183,7 @@ const server = http.createServer(async (req, res) => {
         proof,
         master: streamUrl,
         subtitles: resolved.subtitles || [],
+        thumbnails: resolved.thumbnails || null,
       };
 
       sessionCache.set(sessionKey, { exp: Date.now() + SESSION_TTL_MS, data: responseData });

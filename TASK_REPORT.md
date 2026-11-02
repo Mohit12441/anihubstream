@@ -1019,14 +1019,60 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 29. Recommended Next Targets & Architecture Roadmap
+## 29. Automated Video Thumbnail Preview Sprites (VTT) Extractor
 
-1. **Target 7: Automated Video Thumbnail Preview Sprites (VTT) Extractor**
-   - Generate scrubbing hover thumbnail sprites for player progress bar when upstream providers do not provide `thumbnails.vtt`.
-2. **Target 8: Multi-Source Torrent / WebTorrent P2P Fallback Streamer**
+**Date:** 2026-11-02  
+**Pre-DevFlow Checkpoint Commit Hash:** `e6ced3a`  
+**Completion Commit Hash:** `25d7e29`  
+**Branch:** `agent-workflow-baseline`  
+
+### What Changed:
+1. **WebVTT Thumbnail & Sprite Coordinates Parser ([`src/lib/thumbnailParser.ts`](file:///C:/anihubstream-local/src/lib/thumbnailParser.ts)):**
+   - Implemented `parseVttTime` parsing both `"HH:MM:SS.mmm"` and `"MM:SS.mmm"` WebVTT timestamps with comma/dot decimal compatibility.
+   - Built `resolveRelativeUrl` to resolve relative sprite file paths (`sprite_0.jpg`) against the base VTT URL.
+   - Built `parseThumbnailVtt` parsing WebVTT cue blocks and extracting spatial `#xywh=x,y,w,h` coordinates for sprite sheets and standalone image URLs.
+   - Built `findThumbnailCue` with $O(\log n)$ binary search lookup over parsed cues, ensuring sub-millisecond frame resolution on scrubbing without UI hitching.
+2. **Upstream Extraction & Bridge Pipeline ([`api/hianime.mjs`](file:///C:/anihubstream-local/api/hianime.mjs) & [`api/bridge.mjs`](file:///C:/anihubstream-local/api/bridge.mjs)):**
+   - Updated HiAnime MegaPlay and VidNest extractors to detect `kind === 'thumbnails'` from upstream tracks and preserve `thumbnails: { url: ... }` in resolved stream payloads.
+   - Updated `api/bridge.mjs` to forward `thumbnails` to caller clients.
+3. **Edge Layer API Proxy Forwarding ([`functions/api/play.js`](file:///C:/anihubstream-local/functions/api/play.js)):**
+   - Forwarded `thumbnails` through Cloudflare Pages Functions `/api/play` with proxy wrapping (`/api/proxy?url=...`), guaranteeing cross-origin CORS compliance for CDN sprite sheets.
+4. **Data Contract Enrichment ([`src/components/player/PlayerInput.ts`](file:///C:/anihubstream-local/src/components/player/PlayerInput.ts) & [`src/lib/streamBridge.ts`](file:///C:/anihubstream-local/src/lib/streamBridge.ts)):**
+   - Added `thumbnails?: { url: string } | null` to `PlayServer`, `PlayerInput`, and `BridgeSource`.
+   - Mapped `server.thumbnails` in `toPlayerInput` adapter.
+5. **Interactive Video Player Timeline Preview ([`src/components/player/PlayerTimeline.tsx`](file:///C:/anihubstream-local/src/components/player/PlayerTimeline.tsx) & [`src/components/player/AdvancedPlayer.tsx`](file:///C:/anihubstream-local/src/components/player/AdvancedPlayer.tsx)):**
+   - Loaded and cached thumbnail cues on timeline mount / stream load.
+   - Rendered responsive 16:9 thumbnail preview card (`ptl__thumb-box`) inside the hover tooltip (`ptl__tip`).
+   - Slices sprite sheets dynamically using `backgroundPosition` and `backgroundSize`, or displays standalone frames.
+   - Features automated scene preview fallback (`ptl__thumb-box--fallback`) using episode thumbnail / anime poster when an upstream source lacks VTT thumbnails (e.g. AniKoto).
+   - Position-clamped between 8% and 92% to prevent viewport clipping on screen edges.
+6. **Player Timeline CSS Styling ([`src/styles/player.css`](file:///C:/anihubstream-local/src/styles/player.css)):**
+   - Styled `.ptl__thumb-box` with 6px border radius, subtle border, and deep box shadow.
+   - Styled `.ptl__thumb-box--fallback` with calibrated contrast and "PREVIEW" badge.
+   - Upgraded `.ptl__tip` with glassmorphic backdrop-filter blur and tabular timestamps.
+7. **Deterministic Unit Test Suite ([`tools/thumbnail-preview.test.mjs`](file:///C:/anihubstream-local/tools/thumbnail-preview.test.mjs)):**
+   - 6/6 unit tests verifying timestamp parsing, relative URL resolution, sprite sheet `#xywh` extraction, standalone image parsing, binary search cue lookups, and `toPlayerInput` contract mapping.
+
+### What Was Verified:
+- `node --test tools/thumbnail-preview.test.mjs`: **6/6 tests PASSED**.
+- `node --test tools/airing-countdown.test.mjs api/seasons.test.mjs`: **12/12 tests PASSED**.
+- `npm run test:cache`: **8/8 tests PASSED** (Zero-Read Edge Shield verified).
+- `curl.exe -i -s http://127.0.0.1:8795/health`: **HTTP 200 OK**, `status: healthy`.
+- `curl.exe -i -s http://127.0.0.1:8899/api/health`: **HTTP 200 OK**, `status: healthy`.
+- `npx tsc --noEmit`: **PASSED** (0 TypeScript errors).
+- `npm run build`: **PASSED** (0 TypeScript errors, Vite pages bundle emitted in 14.32s).
+
+---
+
+## 30. Recommended Next Targets & Architecture Roadmap
+
+1. **Target 8: Multi-Source Torrent / WebTorrent P2P Fallback Streamer**
    - Peer-to-peer resilient streaming layer when CDN providers encounter upstream rate limits or downtime.
-3. **Target 9: User Watch Party & Real-Time Synchronized Playback (WebSockets/WebRTC)**
+2. **Target 9: User Watch Party & Real-Time Synchronized Playback (WebSockets/WebRTC)**
    - Synchronized episode viewing with friends with real-time play/pause room state and live chat.
+3. **Target 10: Anime Recommendation Engine & Personalized Discovery Graph**
+   - Collaborative and content-based recommendation shelf based on user's watch history and genre affinity.
+
 
 
 

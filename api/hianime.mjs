@@ -876,6 +876,7 @@ export async function resolve(embedUrl, { referer, signal, quality } = {}) {
     } catch { /* keep the master hand-out */ }
     return {
       provider: "hianime", extractor: "megaplay",
+      thumbnails: (Array.isArray(payload.tracks) ? payload.tracks : []).find((t) => t?.kind === "thumbnails" && t?.file)?.file ? { url: (Array.isArray(payload.tracks) ? payload.tracks : []).find((t) => t?.kind === "thumbnails" && t?.file).file } : null,
       master: { url: streamUrl, headers: { ...headers } },
       variants: quality && quality !== "auto" ? variants.filter((v) => String(v.quality) === String(quality)) : variants,
       subtitles: (Array.isArray(payload.tracks) ? payload.tracks : [])
@@ -948,6 +949,7 @@ export async function resolve(embedUrl, { referer, signal, quality } = {}) {
     return {
       provider: "hianime",
       extractor: "vidnest",
+      thumbnails: (Array.isArray(data.tracks) ? data.tracks : []).find((t) => t?.kind === "thumbnails" && t?.file)?.file ? { url: (Array.isArray(data.tracks) ? data.tracks : []).find((t) => t?.kind === "thumbnails" && t?.file).file } : null,
       master: { url: streamUrl, headers: { ...headers } },
       variants: quality && quality !== "auto" ? variants.filter((v) => String(v.quality) === String(quality)) : variants,
       subtitles: (Array.isArray(data.tracks) ? data.tracks : [])

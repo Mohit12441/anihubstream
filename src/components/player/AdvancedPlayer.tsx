@@ -128,6 +128,7 @@ export function AdvancedPlayer(props: Props) {
         name: sub.label,
         url: sub.url,
       })),
+      thumbnails: initialServer.thumbnails?.url ? { url: initialServer.thumbnails.url } : null,
       downloads: initialServer.downloads || [],
     };
   }, [initialServer, anime.title, episode.n, prefs.audio]);
@@ -806,6 +807,8 @@ export function AdvancedPlayer(props: Props) {
           duration={timelineDuration}
           buffered={engine.buffered}
           markers={markers}
+          thumbnailsUrl={live.info?.thumbnails?.url || initialServer?.thumbnails?.url || null}
+          fallbackArt={episode.thumb || anime.key || anime.poster || null}
           onSeek={engine.seek}
           onScrub={setScrubbing}
         />
