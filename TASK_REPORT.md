@@ -1198,7 +1198,42 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 33. Recommended Next Targets & Architecture Roadmap
+## 33. Dead Code & Obsolete Files Cleanup (COMPLETED)
+
+### What Was Done:
+1. **Removed Dead Prototype & Mock Data:**
+   - Deleted `src/data/anime.ts` (370 lines of mock prototype seed data that was superseded by dynamic D1 catalog sync). Re-routed `tools/sync-catalogue.mjs` directly to `src/data/genres.ts`.
+   - Deleted `src/components/HeroBanner.tsx` (104 lines of obsolete static banner superseded by `HeroSlideshow.tsx`).
+   - Deleted `src/components/player/AniSkipButton.tsx` (121 lines of obsolete prototype skip button superseded by inline AniSkip engine in `AdvancedPlayer.tsx`).
+
+2. **Removed Dead Build Artifacts & Outdated Bundles:**
+   - Deleted `ops/github-sync-dispatcher/dist-test/` (`index.js`, `index.js.map`, `README.md`) which were outdated test build artifacts checked into Git.
+
+3. **Removed Dead One-Off Backfill, Benchmark & Migration Scripts:**
+   - Deleted `tools/apply-anikoto-slugs-d1.mjs` (superseded by `auto-sync-providers.mjs`).
+   - Deleted `tools/backfill-anikoto-slugs.mjs` (superseded by `auto-sync-providers.mjs`).
+   - Deleted `tools/backfill-anilist-ids.mjs` (superseded by `tools/sync-fribb-id-map.mjs`).
+   - Deleted `tools/backfill-search-text.mjs` (superseded by `tools/sync-catalogue.mjs`).
+   - Deleted `tools/clean-dummy-episodes.mjs` (one-off repair script).
+   - Deleted `tools/migrate-provider-mapping.mjs` (one-off repair script).
+   - Deleted `tools/test-mal-gate.mjs` (one-off scratch test).
+   - Deleted `tools/benchmark-anikoto.mjs` (unreferenced scratch benchmark).
+   - Deleted `tools/benchmark-hianime.mjs` (unreferenced scratch benchmark).
+   - Deleted `tools/benchmark-search.mjs` (unreferenced scratch benchmark).
+
+4. **Updated Test Assertions ([`tools/player-polish.test.mjs`](file:///C:/anihubstream-local/tools/player-polish.test.mjs)):**
+   - Updated Japanese typography assertion to check the live active `HeroSlideshow.tsx` instead of the removed `HeroBanner.tsx`.
+
+### What Was Verified:
+- `npx tsc --noEmit`: **PASSED** (0 TypeScript errors).
+- `node --test tools/recommendations.test.mjs tools/watch-party.test.mjs tools/player-polish.test.mjs api/bridge.test.mjs`: **21/21 tests PASSED**.
+- `npm run test:cache`: **8/8 tests PASSED** (Zero-Read Edge Shield verified).
+- `npm run build`: **PASSED** (0 TypeScript errors, Vite pages build in 9.05s).
+- Total removed: **16 dead/obsolete files** and ~1,100 lines of dead code.
+
+---
+
+## 34. Recommended Next Targets & Architecture Roadmap
 
 1. **Target 11: Automated High-Efficiency Video Downloader & MP4/MKV Packager**
    - Progressive stream segment muxer with subtitle burning / softsub attachment for offline viewing.

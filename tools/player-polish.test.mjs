@@ -41,8 +41,8 @@ describe('TASK 11 (P2) — Player Polish', () => {
     const watchContent = fs.readFileSync(path.join(root, 'src/pages/Watch.tsx'), 'utf8');
     assert.match(watchContent, /<p className="watch__native" lang="ja">\{anime\.native\}<\/p>/);
 
-    const heroContent = fs.readFileSync(path.join(root, 'src/components/HeroBanner.tsx'), 'utf8');
-    assert.match(heroContent, /<span className="vj__jp" lang="ja">\{HERO\.jp\}<\/span>/);
+    const heroContent = fs.readFileSync(path.join(root, 'src/components/HeroSlideshow.tsx'), 'utf8');
+    assert.match(heroContent, /<span className="vj__jp" lang="ja">/);
 
     const discoverContent = fs.readFileSync(path.join(root, 'src/pages/Discover.tsx'), 'utf8');
     assert.match(discoverContent, /<span className="vj__jp" lang="ja">冒険は続く<\/span>/);

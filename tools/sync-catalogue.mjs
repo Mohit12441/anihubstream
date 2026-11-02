@@ -34,7 +34,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { GENRES } from '../src/data/anime.ts';
+import { GENRES } from '../src/data/genres.ts';
 import { foldSearch } from '../functions/api/_lib.js';
 import { seasonKey } from './season.mjs';
 
