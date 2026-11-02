@@ -304,6 +304,13 @@ export function useLiveStream(o: Options) {
         info.container === 'mp4' ||
         (!url.includes('.m3u8') && !url.includes('.m3u'));
 
+      if (info.provider === 'torrent' || info.master?.startsWith('magnet:')) {
+        const { P2PTorrentStreamer } = await import('./webtorrentStreamer');
+        const streamer = new P2PTorrentStreamer(o.title, o.episode, '1080p');
+        await streamer.attach(v, isProgressive ? url : undefined);
+        return;
+      }
+
       if (isProgressive) {
         v.src = url;
         v.load();

@@ -38,6 +38,7 @@ function getProviderKey(server: PlayServer): string {
   if (p.includes('hianime')) return 'hianime';
   if (p.includes('anikoto')) return 'anikoto';
   if (p.includes('aniwatch')) return 'aniwatch';
+  if (p.includes('torrent')) return 'torrent';
   return p;
 }
 
@@ -45,6 +46,7 @@ function getProviderDisplayName(key: string): string {
   if (key === 'anikoto') return 'AniKoto';
   if (key === 'hianime') return 'HiAnime';
   if (key === 'aniwatch') return 'AniWatch';
+  if (key === 'torrent') return 'P2P Swarm';
   return key.charAt(0).toUpperCase() + key.slice(1);
 }
 
@@ -76,9 +78,9 @@ export function ServerSwitcher({
   const [searchParams] = useSearchParams();
   const urlProvider = (searchParams.get('provider') || '').toLowerCase();
 
-  const currentProvider = (urlProvider && ['anikoto', 'aniwatch', 'hianime'].includes(urlProvider))
+  const currentProvider = (urlProvider && ['anikoto', 'aniwatch', 'hianime', 'torrent'].includes(urlProvider))
     ? urlProvider
-    : (scopedProvider && ['anikoto', 'aniwatch', 'hianime'].includes(scopedProvider))
+    : (scopedProvider && ['anikoto', 'aniwatch', 'hianime', 'torrent'].includes(scopedProvider))
     ? scopedProvider
     : (servers[0] ? getProviderKey(servers[0]) : 'anikoto');
 
@@ -92,6 +94,7 @@ export function ServerSwitcher({
     { key: 'anikoto', name: 'AniKoto', icon: '⚡' },
     { key: 'hianime', name: 'HiAnime', icon: '🌸' },
     { key: 'aniwatch', name: 'AniWatch', icon: '🛡️' },
+    { key: 'torrent', name: 'P2P Swarm', icon: '🧲' },
   ];
 
   const activeServer = displayedServers.find((s) => s.id === activeServerId) || displayedServers[0] || servers[0];

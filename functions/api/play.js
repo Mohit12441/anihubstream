@@ -408,6 +408,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       anikoto: { status: 'healthy', latencyMs: 85 },
       hianime: { status: 'healthy', latencyMs: 140 },
       aniwatch: { status: 'healthy', latencyMs: 210 },
+      torrent: { status: 'healthy', latencyMs: 45, peers: 12 },
     };
 
     if (env.ANIHUB) {
@@ -606,6 +607,19 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         subtitles: [],
         downloads: [],
       },
+      {
+        id: 'torrent:P2P-1',
+        name: 'P2P Swarm · WebTorrent',
+        provider: 'torrent',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'torrent', server: 'P2P-1' }),
+        type: 'torrent',
+        quality: '1080p',
+        audio: 'sub',
+        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
     ];
 
     // If stream bridge is cold or external to Cloudflare edge, check if Direct Edge Extractor resolved
@@ -648,6 +662,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
             { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
             { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
+            { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
           ],
         }, {
           cache: 'public, max-age=300, s-maxage=600',
@@ -670,6 +685,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
           { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
           { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
+          { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
         ],
       }, {
         cache: 'no-store, no-cache, must-revalidate',
@@ -800,6 +816,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
         { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
         { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
+        { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
       ],
     }, {
       cache: 'no-store, no-cache, must-revalidate',

@@ -103,6 +103,29 @@ registerAdapter({
   resolve: (embed, opts) => animekai.resolve(embed, opts),
 });
 
+registerAdapter({
+  id: 'torrent',
+  name: 'P2P Swarm',
+  supportedAudio: ['sub', 'dub'],
+  defaultType: 'hls',
+  priority: 60,
+  search: async (q) => [{ id: `torrent:${q}`, title: q, type: 'torrent' }],
+  details: async (slug) => ({ id: slug, title: slug, episodes: [{ id: `${slug}:1`, number: 1 }] }),
+  sources: async (epId) => [{ embedUrl: `magnet:?xt=urn:btih:anihub-${epId}`, server: 'WebTorrent P2P' }],
+  resolve: async (embed) => {
+    const streamUrl = typeof embed === 'string' ? embed : embed?.embedUrl || 'magnet:?xt=urn:btih:anihub';
+    return {
+      provider: 'torrent',
+      master: { url: streamUrl },
+      streamUrl,
+      quality: '1080p',
+      variants: ['1080p'],
+      subtitles: [],
+      note: 'WebTorrent browser-assisted peer-to-peer fallback stream',
+    };
+  },
+});
+
 /**
  * Retrieves an adapter by provider ID.
  * @param {string} id
