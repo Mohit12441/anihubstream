@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, Menu, Moon, Search, Sun, X } from 'lucide-react';
 import { AnimeCard } from '../components/AnimeCard';
 import { AnimeCarousel } from '../components/AnimeCarousel';
+import { RecommendedShelf } from '../components/RecommendedShelf';
 import { Logo } from '../components/Logo';
 import { Embers } from '../components/Embers';
 import { artUrl } from '../data/model';
@@ -143,6 +144,13 @@ export function Discover() {
             </p>
           )}
         </AnimeCarousel>
+      </section>
+
+      <section className="discover__row shell" style={{ marginTop: '2rem' }}>
+        <RecommendedShelf
+          title="Recommended For You"
+          subtitle="Dynamic picks based on your watch patterns and high-affinity genres"
+        />
       </section>
 
       <section className="discover__moods shell" aria-label="More ways to browse">

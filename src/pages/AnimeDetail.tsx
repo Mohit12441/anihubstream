@@ -5,9 +5,9 @@ import { useAnimeDetail, useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
 import { useSEO } from '../lib/useSEO';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
-import { AnimeCard } from '../components/AnimeCard';
 import { AiringCountdown } from '../components/AiringCountdown';
 import { FranchiseTimeline } from '../components/franchise/FranchiseTimeline';
+import { RecommendedShelf } from '../components/RecommendedShelf';
 import { ratingLabel } from '../data/model';
 import { getPlay } from '../data/api';
 import { SLUG_REDIRECTS } from '../data/redirects';
@@ -28,7 +28,7 @@ export function AnimeDetail() {
     }
   }, [id, navigate]);
 
-  const { status, error, missing, anime, related, reload } = useAnimeDetail(id);
+  const { status, error, missing, anime, reload } = useAnimeDetail(id);
   const { genreLabel } = useCatalogue();
   const { has, isBusy, toggle, favourites, toggleFavourite, history } = useLibrary();
 
@@ -435,22 +435,16 @@ export function AnimeDetail() {
           </div>
         </section>
 
-        {/* Related Titles */}
-        {related && related.length > 0 && (
-          <section style={{ marginTop: '3rem' }}>
-            <h2 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '1.25rem' }}>You Might Also Like</h2>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
-                gap: '1.25rem',
-              }}
-            >
-              {related.slice(0, 6).map((item) => (
-                <AnimeCard key={item.id} anime={item} />
-              ))}
-            </div>
-          </section>
+        {/* Recommendations */}
+        {anime && (
+          <div style={{ marginTop: '2.5rem' }}>
+            <RecommendedShelf
+              targetAnime={anime}
+              title="You Might Also Like"
+              subtitle={`Curated titles sharing themes and genres with ${anime.title}`}
+              limit={8}
+            />
+          </div>
         )}
       </div>
     </div>

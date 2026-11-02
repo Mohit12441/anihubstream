@@ -187,3 +187,14 @@ export const removePosition = (episodeId: string) =>
   request<{ removed: boolean }>(`/me/positions?episodeId=${encodeURIComponent(episodeId)}`, {
     method: 'DELETE',
   });
+
+export interface ApiRecommendation extends ApiCard {
+  matchPercentage?: number;
+  reason?: string;
+  seedTitle?: string;
+}
+
+export const getRecommendations = (animeId?: string, limit: number = 10) => {
+  const query = animeId ? `?id=${encodeURIComponent(animeId)}&limit=${limit}` : `?limit=${limit}`;
+  return request<{ target?: ApiCard; items: ApiRecommendation[]; total: number }>(`/recommendations${query}`);
+};

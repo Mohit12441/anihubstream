@@ -1149,13 +1149,60 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 32. Recommended Next Targets & Architecture Roadmap
+## 32. Target 10: Anime Recommendation Engine & Personalized Discovery Graph (COMPLETED)
 
-1. **Target 10: Anime Recommendation Engine & Personalized Discovery Graph**
-   - Hybrid recommendation shelf computing anime similarity via TF-IDF over genres, themes, studios, and synopsis tags combined with user's local watch history and high-affinity titles.
-2. **Target 11: Automated High-Efficiency Video Downloader & MP4/MKV Packager**
+### What Was Done:
+1. **Core Recommendation & Similarity Engine ([`src/lib/recommendations.ts`](file:///C:/anihubstream-local/src/lib/recommendations.ts)):**
+   - Implemented tokenization and stop-word filtering (`tokenizeText()`) extracting salient keywords from titles and synopses.
+   - Built Jaccard similarity metric (`calculateJaccard()`) for genres and token overlap.
+   - Built composite hybrid similarity evaluator (`calculateAnimeSimilarity(a, b)`):
+     - Genre Jaccard overlap (45% weight)
+     - Format/Kind matching (10% weight)
+     - Rating quality score (15% weight)
+     - Synopsis token overlap (30% weight)
+   - Built user affinity profile builder (`buildUserProfile()`):
+     - Computes normalized genre weight distribution from user's `history` (weighted by watch completion ratio 0.1 to 1.0) and `favourites` (1.5x multiplier).
+     - Gathers top seed anime.
+   - Built personalized ranker (`getPersonalizedRecommendations()`):
+     - Ranks candidate anime, guarantees exclusion of already-watched/watching titles.
+     - Produces intuitive match percentages (65%–99%) and human-readable explanations (e.g. *"Because you watched Solo Leveling · Action, Fantasy"*).
+   - Built target anime content recommender (`getContentRecommendations()`) for detail/watch page *"More Like This"*.
+
+2. **Public Edge Recommendation Endpoint ([`functions/api/recommendations.js`](file:///C:/anihubstream-local/functions/api/recommendations.js)):**
+   - Built Cloudflare Pages Function `/api/recommendations?id=:id&limit=:limit`.
+   - Strictly wrapped in `withEdgeCache(request, env, 86400, ...)` with normalized cache parameters (`['id', 'limit']`), ensuring 100% compliance with Rule 11 (Zero-Read D1 Edge Caching Law).
+   - Serves content similarity recommendations with 0 D1 reads on repeated edge hits (`x-d1-read: 0-edge-cache-hit`).
+
+3. **Interactive Recommended Shelf Component ([`src/components/RecommendedShelf.tsx`](file:///C:/anihubstream-local/src/components/RecommendedShelf.tsx) & [`src/styles/recommended-shelf.css`](file:///C:/anihubstream-local/src/styles/recommended-shelf.css)):**
+   - Created reusable carousel shelf rendering match percentage badges (`98% Match`), reason captions, and dynamic seed rotation via *"Refresh Picks"*.
+   - Added color-coded match badge tiers (`.is-high-match` emerald for >= 85%, `.is-mid-match` cyan for >= 75%).
+
+4. **Integration Across Key Pages:**
+   - **Homepage ([`src/pages/Home.tsx`](file:///C:/anihubstream-local/src/pages/Home.tsx)):** Placed `<RecommendedShelf />` immediately below *"Continue Watching"*, greeting returning users with tailored recommendations or curated high-affinity community gems.
+   - **Anime Detail ([`src/pages/AnimeDetail.tsx`](file:///C:/anihubstream-local/src/pages/AnimeDetail.tsx)):** Upgraded static related list to content-based `<RecommendedShelf targetAnime={anime} title="You Might Also Like" />`.
+   - **Discover ([`src/pages/Discover.tsx`](file:///C:/anihubstream-local/src/pages/Discover.tsx)):** Added personalized discovery graph section.
+   - **Typed API Client ([`src/data/api.ts`](file:///C:/anihubstream-local/src/data/api.ts)):** Exported typed `getRecommendations()` helper.
+
+5. **Deterministic Unit Test Suite ([`tools/recommendations.test.mjs`](file:///C:/anihubstream-local/tools/recommendations.test.mjs)):**
+   - 6/6 unit tests verifying tokenization/stop words, Jaccard similarity, composite anime similarity, user profile affinity modeling, personalized ranking with watch exclusion, and content-based recommendations.
+
+### What Was Verified:
+- `node --test tools/recommendations.test.mjs`: **6/6 tests PASSED** in 173ms.
+- `node --test tools/watch-party.test.mjs`: **5/5 tests PASSED**.
+- `npm run test:cache`: **8/8 tests PASSED** (Zero-Read Edge Shield verified).
+- Edge API verification:
+  - First hit: `http://127.0.0.1:8899/api/recommendations?id=solo-leveling&limit=5` -> `HTTP 200 OK`, `X-D1-Read: 1-d1-fresh`.
+  - Second hit: `http://127.0.0.1:8899/api/recommendations?id=solo-leveling&limit=5` -> `HTTP 200 OK`, `X-D1-Read: 0-edge-cache-hit`, `CF-Cache-Status: HIT` (**0 D1 reads verified**).
+- `npx tsc --noEmit`: **PASSED** (0 TypeScript errors).
+- `npm run build`: **PASSED** (0 TypeScript errors, Vite pages built in 7.06s).
+
+---
+
+## 33. Recommended Next Targets & Architecture Roadmap
+
+1. **Target 11: Automated High-Efficiency Video Downloader & MP4/MKV Packager**
    - Progressive stream segment muxer with subtitle burning / softsub attachment for offline viewing.
-3. **Target 12: Offline Progressive Web App (PWA) with Background Sync & Cache Storage**
+2. **Target 12: Offline Progressive Web App (PWA) with Background Sync & Cache Storage**
    - Service worker cache strategies for offline shell, episode manifests, and saved library items.
 
 

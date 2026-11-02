@@ -5,6 +5,7 @@ import { AnimeCard } from '../components/AnimeCard';
 import { AnimeCarousel } from '../components/AnimeCarousel';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { ContinueWatchingRow } from '../components/ContinueWatchingRow';
+import { RecommendedShelf } from '../components/RecommendedShelf';
 import { HeroSlideshow } from '../components/HeroSlideshow';
 import { genreIcon } from '../components/genreIcons';
 import { listCatalogue } from '../data/api';
@@ -185,6 +186,7 @@ export function Home() {
         ) : (
           <>
             <ContinueWatchingRow />
+            <RecommendedShelf />
 
             <section className="home__row" aria-labelledby="row-trending">
           <div className="sec-head">
