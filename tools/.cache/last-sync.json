@@ -1,34 +1,54 @@
 {
-  "fetched_at": "2026-11-03T12:49:14.113Z",
+  "fetched_at": "2026-11-03T15:22:28.234Z",
   "titles": [
     {
-      "id": "tokyo-ghoul-pinto-1fmv",
+      "id": "golden-kamuy-season-3-4zc3",
       "sources": {
-        "kitsu": 11294,
-        "anilist": 21326,
-        "mal": 31297
+        "kitsu": 42435,
+        "anilist": 110355,
+        "mal": 40059
       },
-      "episodes": 1,
-      "episodeTotal": 1,
+      "episodes": 12,
+      "episodeTotal": 12,
       "skipKey": null,
       "markers": 0
     }
   ],
   "stats": {
-    "episodesStored": 1,
-    "episodeTotal": 1,
+    "episodesStored": 12,
+    "episodeTotal": 12,
     "markers": 0,
     "runtimeFallbacks": 0
   },
   "droppedGenres": [
-    "Gore",
-    "Photography",
-    "Body Horror",
-    "Tragedy",
-    "Survival",
-    "Female Protagonist",
+    "Historical",
+    "Seinen",
+    "Primarily Adult Cast",
+    "Ensemble Cast",
+    "Foreign",
+    "Outdoor Activities",
+    "Indigenous Cultures",
+    "Educational",
+    "Guns",
+    "Military",
+    "Primarily Male Cast",
+    "Anti-Hero",
+    "Revenge",
     "Male Protagonist",
-    "Maids",
-    "Mahjong"
+    "Food",
+    "Politics",
+    "Survival",
+    "Language Barrier",
+    "Snowscape",
+    "Animals",
+    "Gore",
+    "Crime",
+    "Archery",
+    "Prison",
+    "Swordplay",
+    "Samurai",
+    "Gender Bending",
+    "Circus",
+    "Travel"
   ]
 }
