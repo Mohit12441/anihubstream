@@ -219,6 +219,7 @@ export async function comparePair(subEmbed, dubEmbed, resolve, { referer, signal
   } catch (error) {
     return { verdict: "unknown", reason: `resolve failed: ${String(error?.message ?? error).slice(0, 80)}` };
   }
+  if (!sub || !dub) return { verdict: "unknown", reason: "resolve returned no stream payload" };
   const rung = sharedRung(sub.variants ?? [], dub.variants ?? [], quality);
   if (!rung) return { verdict: "unknown", reason: "no rendition on both sides" };
 

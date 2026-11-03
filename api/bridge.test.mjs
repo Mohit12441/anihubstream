@@ -123,4 +123,70 @@ describe('Stream Bridge Microservice Suite (:8795)', () => {
     assert.equal(res.status, 204);
     assert.equal(res.headers.get('access-control-allow-origin'), '*');
   });
+
+  it('GET /providers lists registered adapters and audio capabilities', async () => {
+    const res = await fetch(`${bridgeUrl}/providers`);
+    assert.equal(res.status, 200);
+    const data = await res.json();
+    assert.equal(data.ok, true);
+    assert.ok(Array.isArray(data.providers));
+    const ids = data.providers.map((p) => p.id);
+    assert.ok(ids.includes('mock-cascade-provider'));
+    assert.ok(ids.includes('anikoto'));
+    assert.ok(ids.includes('watchanimeworld'));
+    const waw = data.providers.find((p) => p.id === 'watchanimeworld');
+    assert.ok(waw.supportedAudio.includes('hindi'));
+    assert.equal(waw.defaultType, 'mp4');
+  });
+
+  it('GET /search returns normalized items for specific provider and federated search', async () => {
+    // 1. Missing q parameter yields 400
+    const errRes = await fetch(`${bridgeUrl}/search`);
+    assert.equal(errRes.status, 400);
+
+    // 2. Specific provider search returns array
+    const res = await fetch(`${bridgeUrl}/search?q=test-cascade&provider=mock-cascade-provider`);
+    assert.equal(res.status, 200);
+    const data = await res.json();
+    assert.ok(Array.isArray(data));
+    assert.equal(data.length, 1);
+    assert.equal(data[0].id, 'mock-test-id');
+    assert.equal(data[0].provider, 'mock-cascade-provider');
+
+    // 3. Federated all-provider search
+    const allRes = await fetch(`${bridgeUrl}/search?q=test-cascade&provider=all`);
+    assert.equal(allRes.status, 200);
+    const allData = await allRes.json();
+    assert.ok(Array.isArray(allData));
+    assert.ok(allData.some((item) => item.provider === 'mock-cascade-provider'));
+  });
+
+  it('GET /details and GET /episodes return upstream metadata and episode lists', async () => {
+    const res = await fetch(`${bridgeUrl}/details?provider=mock-cascade-provider&slug=test-cascade-slug`);
+    assert.equal(res.status, 200);
+    const data = await res.json();
+    assert.equal(data.ok, true);
+    assert.equal(data.provider, 'mock-cascade-provider');
+    assert.equal(data.details.media.title, 'Test Cascade Anime');
+
+    const epRes = await fetch(`${bridgeUrl}/episodes?provider=mock-cascade-provider&slug=test-cascade-slug`);
+    assert.equal(epRes.status, 200);
+    const epData = await epRes.json();
+    assert.equal(epData.ok, true);
+    assert.equal(epData.episodes.length, 1);
+    assert.equal(epData.episodes[0].number, 1);
+  });
+
+  it('GET /dub-check validates parameters and rejects missing embed URLs', async () => {
+    const errRes = await fetch(`${bridgeUrl}/dub-check`);
+    assert.equal(errRes.status, 400);
+    const errData = await errRes.json();
+    assert.equal(errData.ok, false);
+
+    const testRes = await fetch(`${bridgeUrl}/dub-check?sub=https://mock.sub/embed&dub=https://mock.dub/embed&provider=mock-cascade-provider`);
+    assert.equal(testRes.status, 200);
+    const testData = await testRes.json();
+    assert.equal(testData.ok, true);
+    assert.ok(['copy', 'distinct', 'unknown'].includes(testData.verdict));
+  });
 });

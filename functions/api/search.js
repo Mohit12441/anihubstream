@@ -7,6 +7,8 @@ const KNOWN_PROVIDERS = {
   hianime: { name: 'HiAnime', badge: 'Multi-Quality', color: '#ec4899', icon: '🌸' },
   aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6', icon: '🛡️' },
   watchanimeworld: { name: 'WatchAnimeWorld', badge: 'Direct MP4', color: '#10b981', icon: '🌐' },
+  animewave: { name: 'AnimeWave', badge: 'HLS Fast', color: '#8b5cf6', icon: '🌊' },
+  animekai: { name: 'AnimeKai', badge: 'Ultra Stream', color: '#f59e0b', icon: '⚡' },
 };
 
 /**
@@ -39,6 +41,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       hianime: [],
       aniwatch: [],
       watchanimeworld: [],
+      animewave: [],
+      animekai: [],
     };
     const results = [];
     let source = 'd1';
@@ -143,7 +147,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       const bridgeBase = env.STREAM_BRIDGE_URL || '';
 
       if (bridgeBase) {
-        const bridgeSearches = ['aniwatch', 'hianime', 'anikoto', 'watchanimeworld'].map(async (provider) => {
+        const bridgeSearches = ['aniwatch', 'hianime', 'anikoto', 'watchanimeworld', 'animewave', 'animekai'].map(async (provider) => {
           try {
             const searchUrl = new URL(`${bridgeBase}/search`);
             searchUrl.searchParams.set('q', q);
@@ -155,10 +159,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             });
             if (res.ok) {
               const data = await res.json().catch(() => []);
-              if (Array.isArray(data)) {
+              const rawItems = Array.isArray(data)
+                ? data
+                : (Array.isArray(data?.data) ? data.data : (Array.isArray(data?.results) ? data.results : []));
+              if (rawItems.length > 0) {
                 return {
                   provider,
-                  items: data.map((item) => ({
+                  items: rawItems.map((item) => ({
                     id: item.id || item.slug,
                     slug: item.slug || item.id,
                     title: cleanDisplayTitle(item.title || ''),

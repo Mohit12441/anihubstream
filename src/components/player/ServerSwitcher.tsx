@@ -38,6 +38,9 @@ function getProviderKey(server: PlayServer): string {
   if (p.includes('hianime')) return 'hianime';
   if (p.includes('anikoto')) return 'anikoto';
   if (p.includes('aniwatch')) return 'aniwatch';
+  if (p.includes('watchanimeworld') || p.includes('waw')) return 'watchanimeworld';
+  if (p.includes('animewave')) return 'animewave';
+  if (p.includes('animekai')) return 'animekai';
   if (p.includes('torrent')) return 'torrent';
   return p;
 }
@@ -46,6 +49,9 @@ function getProviderDisplayName(key: string): string {
   if (key === 'anikoto') return 'AniKoto';
   if (key === 'hianime') return 'HiAnime';
   if (key === 'aniwatch') return 'AniWatch';
+  if (key === 'watchanimeworld' || key === 'waw') return 'WatchAnimeWorld';
+  if (key === 'animewave') return 'AnimeWave';
+  if (key === 'animekai') return 'AnimeKai';
   if (key === 'torrent') return 'P2P Swarm';
   return key.charAt(0).toUpperCase() + key.slice(1);
 }

@@ -408,6 +408,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       anikoto: { status: 'healthy', latencyMs: 85 },
       hianime: { status: 'healthy', latencyMs: 140 },
       aniwatch: { status: 'healthy', latencyMs: 210 },
+      watchanimeworld: { status: 'healthy', latencyMs: 120 },
+      animewave: { status: 'healthy', latencyMs: 110 },
+      animekai: { status: 'healthy', latencyMs: 130 },
       torrent: { status: 'healthy', latencyMs: 45, peers: 12 },
     };
 
@@ -438,14 +441,27 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       anikoto: animeRow?.anikoto_slug || pmRows.find((p) => p.provider_id === 'anikoto')?.provider_slug || null,
       hianime: animeRow?.hianime_slug || pmRows.find((p) => p.provider_id === 'hianime')?.provider_slug || null,
       aniwatch: animeRow?.aniwatch_slug || pmRows.find((p) => p.provider_id === 'aniwatch')?.provider_slug || null,
+      watchanimeworld: animeRow?.waw_slug || animeRow?.watchanimeworld_slug || pmRows.find((p) => p.provider_id === 'watchanimeworld')?.provider_slug || null,
+      animewave: animeRow?.animewave_slug || pmRows.find((p) => p.provider_id === 'animewave')?.provider_slug || null,
+      animekai: animeRow?.animekai_slug || pmRows.find((p) => p.provider_id === 'animekai')?.provider_slug || null,
     };
 
     const rawRequested = (url.searchParams.get('provider') || '').toLowerCase().trim();
     let requested = rawRequested;
 
+    const getAvailableProvidersList = () => [
+      { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
+      { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
+      { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
+      { id: 'watchanimeworld', name: 'WatchAnimeWorld', available: Boolean(availableSlugs.watchanimeworld), ...(providerHealth.watchanimeworld || {}) },
+      { id: 'animewave', name: 'AnimeWave', available: Boolean(availableSlugs.animewave), ...(providerHealth.animewave || {}) },
+      { id: 'animekai', name: 'AnimeKai', available: Boolean(availableSlugs.animekai), ...(providerHealth.animekai || {}) },
+      { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
+    ];
+
     // Dynamic Provider Priority: If not explicitly requested or is 'auto', select the fastest healthy provider
     if (!requested || requested === 'auto') {
-      const candidates = ['anikoto', 'hianime', 'aniwatch'].filter((p) => availableSlugs[p]);
+      const candidates = ['anikoto', 'hianime', 'aniwatch', 'watchanimeworld', 'animewave', 'animekai'].filter((p) => availableSlugs[p]);
       if (candidates.length > 0) {
         candidates.sort((a, b) => {
           const healthA = providerHealth[a]?.status === 'healthy' ? 0 : 1;
@@ -658,12 +674,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           servers: [primaryServer],
           aniskip: aniskipData || null,
           providerHealth,
-          availableProviders: [
-            { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
-            { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
-            { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
-            { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
-          ],
+          availableProviders: getAvailableProvidersList(),
         }, {
           cache: 'public, max-age=300, s-maxage=600',
         });
@@ -681,12 +692,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         servers: scoped,
         aniskip: aniskipData || null,
         providerHealth,
-        availableProviders: [
-          { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
-          { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
-          { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
-          { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
-        ],
+        availableProviders: getAvailableProvidersList(),
       }, {
         cache: 'no-store, no-cache, must-revalidate',
       });
@@ -812,12 +818,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         recap: finalRecap,
       },
       providerHealth,
-      availableProviders: [
-        { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
-        { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
-        { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
-        { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
-      ],
+      availableProviders: getAvailableProvidersList(),
     }, {
       cache: 'no-store, no-cache, must-revalidate',
     });

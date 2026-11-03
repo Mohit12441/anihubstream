@@ -1233,7 +1233,48 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 
 ---
 
-## 34. Recommended Next Targets & Architecture Roadmap
+## 34. Stream Bridge & Edge Federated Architecture Gap Resolution (COMPLETED)
+
+### What Was Audited & Identified:
+1. **Edge vs. Stream Bridge Architectural Disconnect:**
+   - Edge layer (`functions/api/search.js`) attempted upstream federated search fallback at `${bridgeBase}/search?q=...&provider=...`, but `api/bridge.mjs` lacked a `/search` handler, returning 404.
+   - Provider registry (`api/adapters/registry.mjs`) had 7 provider adapters registered (`aniwatch`, `anikoto`, `hianime`, `watchanimeworld`, `animewave`, `animekai`, `torrent`), but `bridge.mjs` exposed no introspection endpoint (`/providers`), preventing client/edge discovery of audio capabilities (`hindi`, `sub`, `dub`), default types (`hls`, `mp4`), and priorities.
+   - Live episode/details endpoints (`/details`, `/episodes`) were missing from `bridge.mjs`.
+   - Audio authenticity validator (`api/dubAudio.mjs`) with first-media-segment MD5 fingerprinting was never exposed via HTTP (`/dub-check`) on `bridge.mjs`.
+2. **Edge Play & Search Provider Omission:**
+   - In [`functions/api/play.js`](file:///C:/anihubstream-local/functions/api/play.js), `availableSlugs` and `candidates` omitted `watchanimeworld`, `animewave`, and `animekai`. `availableProviders` hardcoded only 4 providers.
+   - In [`functions/api/search.js`](file:///C:/anihubstream-local/functions/api/search.js), `KNOWN_PROVIDERS` and `bridgeSearches` lacked `animewave` and `animekai`.
+3. **Direct MP4 Stream Abyss Cascade Gap:**
+   - `watchanimeworld` uses AES-256-CTR MP4 Abyss parts rather than HLS embeds. In [`api/adapters/registry.mjs`](file:///C:/anihubstream-local/api/adapters/registry.mjs), it lacked a `resolve` method, causing the cascade in `bridge.mjs` to skip it.
+4. **Player Server Switcher Display Mapping:**
+   - In [`src/components/player/ServerSwitcher.tsx`](file:///C:/anihubstream-local/src/components/player/ServerSwitcher.tsx), `getProviderKey` and `getProviderDisplayName` were missing display mappings for `WatchAnimeWorld`, `AnimeWave`, and `AnimeKai`.
+
+### What Was Implemented:
+1. **Added Comprehensive Bridge Microservice Endpoints ([`api/bridge.mjs`](file:///C:/anihubstream-local/api/bridge.mjs)):**
+   - `GET /providers`: Returns all registered adapters with ID, name, supported audio types (`sub`, `dub`, `hindi`), default stream container types (`hls`, `mp4`), and priorities.
+   - `GET /search?q=<query>&provider=<provider>&limit=<limit>`: Normalizes upstream search results across single or federated adapters matching the edge search fallback contract.
+   - `GET /details?provider=<provider>&slug=<slug>` & `GET /episodes`: Live metadata and episode list proxy.
+   - `GET /dub-check?sub=<url>&dub=<url>&provider=<provider>`: Audio segment MD5 fingerprinting and fake-dub detection using `comparePair`.
+   - Enhanced `GET /resolve` cascade to natively support direct MP4 Abyss streams (`src.direct`).
+2. **Updated Adapter Registry ([`api/adapters/registry.mjs`](file:///C:/anihubstream-local/api/adapters/registry.mjs)):**
+   - Added `resolve` wrapper for `watchanimeworld` producing normalized MP4 direct stream metadata and proof.
+3. **Synchronized Edge Endpoints ([`functions/api/play.js`](file:///C:/anihubstream-local/functions/api/play.js), [`functions/api/search.js`](file:///C:/anihubstream-local/functions/api/search.js)):**
+   - Added `watchanimeworld`, `animewave`, and `animekai` to `availableSlugs`, `candidates`, `providerHealth`, and `availableProviders`.
+   - Added `animewave` and `animekai` to `KNOWN_PROVIDERS`, `grouped`, and `bridgeSearches`.
+4. **Synchronized UI Component ([`src/components/player/ServerSwitcher.tsx`](file:///C:/anihubstream-local/src/components/player/ServerSwitcher.tsx)):**
+   - Added keys and display names for `WatchAnimeWorld`, `AnimeWave`, and `AnimeKai`.
+5. **Integrated Automated Verification Suite ([`tools/bridge-gap.test.mjs`](file:///C:/anihubstream-local/tools/bridge-gap.test.mjs), [`api/bridge.test.mjs`](file:///C:/anihubstream-local/api/bridge.test.mjs)):**
+   - Verified `/providers`, `/search`, `/details`, `/episodes`, `/dub-check`, and direct MP4 cascade.
+
+### What Was Verified:
+- `node --test api/bridge.test.mjs tools/bridge-gap.test.mjs`: **15/15 tests PASSED** (0 failures).
+- `npm run test:cache`: **8/8 tests PASSED** (Zero-Read Edge Shield verified).
+- `npx tsc --noEmit`: **PASSED** (0 TypeScript errors).
+- `npm run build`: **PASSED** (Vite pages build in 14.90s).
+
+---
+
+## 35. Recommended Next Targets & Architecture Roadmap
 
 1. **Target 11: Automated High-Efficiency Video Downloader & MP4/MKV Packager**
    - Progressive stream segment muxer with subtitle burning / softsub attachment for offline viewing.

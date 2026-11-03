@@ -5,6 +5,7 @@ import { URL } from 'node:url';
 import { getAdapter, listAdapters } from './adapters/registry.mjs';
 import * as anikoto from './anikoto.mjs';
 import { attachPartyRelay, getRoom, getRooms } from './party-relay.mjs';
+import { comparePair } from './dubAudio.mjs';
 
 const PORT = Number(process.env.ANIKOTO_BRIDGE_PORT || process.env.PORT || 8795);
 const HOST = process.env.ANIKOTO_BRIDGE_HOST || '0.0.0.0';
@@ -116,6 +117,152 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  if (pathname === '/providers') {
+    const all = listAdapters().map((a) => ({
+      id: a.id,
+      name: a.name,
+      supportedAudio: a.supportedAudio,
+      defaultType: a.defaultType,
+      priority: a.priority,
+    }));
+    sendJson(res, 200, { ok: true, providers: all });
+    return;
+  }
+
+  if (pathname === '/search') {
+    const q = (reqUrl.searchParams.get('q') || '').trim();
+    const providerParam = (reqUrl.searchParams.get('provider') || '').toLowerCase().trim();
+    const limitParam = reqUrl.searchParams.get('limit');
+    const limit = limitParam ? Number(limitParam) : null;
+
+    if (!q) {
+      sendJson(res, 400, { ok: false, error: 'missing_query' });
+      return;
+    }
+
+    try {
+      if (providerParam && providerParam !== 'all') {
+        const adapter = getAdapter(providerParam);
+        if (!adapter) {
+          sendJson(res, 200, []);
+          return;
+        }
+        const raw = await adapter.search(q).catch(() => []);
+        const items = (raw || []).map((it) => ({
+          id: it.id || it.slug,
+          slug: it.slug || it.id,
+          title: it.title || it.name || '',
+          coverUrl: it.coverUrl || it.poster || it.image || null,
+          provider: adapter.id,
+        }));
+        sendJson(res, 200, limit && limit > 0 ? items.slice(0, limit) : items);
+        return;
+      }
+
+      const searches = listAdapters().map(async (adapter) => {
+        try {
+          const raw = await adapter.search(q);
+          return (raw || []).map((it) => ({
+            id: it.id || it.slug,
+            slug: it.slug || it.id,
+            title: it.title || it.name || '',
+            coverUrl: it.coverUrl || it.poster || it.image || null,
+            provider: adapter.id,
+          }));
+        } catch {
+          return [];
+        }
+      });
+      const settled = await Promise.all(searches);
+      const combined = settled.flat();
+      sendJson(res, 200, limit && limit > 0 ? combined.slice(0, limit) : combined);
+    } catch (err) {
+      sendJson(res, 500, { ok: false, error: 'search_failed', message: err?.message || String(err) });
+    }
+    return;
+  }
+
+  if (pathname === '/details') {
+    const providerParam = (reqUrl.searchParams.get('provider') || '').toLowerCase().trim();
+    const slug = (reqUrl.searchParams.get('slug') || reqUrl.searchParams.get('id') || '').trim();
+
+    if (!providerParam || !slug) {
+      sendJson(res, 400, { ok: false, error: 'missing_provider_or_slug' });
+      return;
+    }
+
+    const adapter = getAdapter(providerParam);
+    if (!adapter) {
+      sendJson(res, 404, { ok: false, error: 'provider_not_found' });
+      return;
+    }
+
+    try {
+      const details = await adapter.details(slug).catch(() => null);
+      if (!details) {
+        sendJson(res, 404, { ok: false, error: 'details_not_found' });
+        return;
+      }
+      sendJson(res, 200, { ok: true, provider: adapter.id, details });
+    } catch (err) {
+      sendJson(res, 500, { ok: false, error: 'details_failed', message: err?.message || String(err) });
+    }
+    return;
+  }
+
+  if (pathname === '/episodes') {
+    const providerParam = (reqUrl.searchParams.get('provider') || '').toLowerCase().trim();
+    const slug = (reqUrl.searchParams.get('slug') || reqUrl.searchParams.get('id') || '').trim();
+
+    if (!providerParam || !slug) {
+      sendJson(res, 400, { ok: false, error: 'missing_provider_or_slug' });
+      return;
+    }
+
+    const adapter = getAdapter(providerParam);
+    if (!adapter) {
+      sendJson(res, 404, { ok: false, error: 'provider_not_found' });
+      return;
+    }
+
+    try {
+      const details = await adapter.details(slug).catch(() => null);
+      const epList = details?.episodes || [];
+      sendJson(res, 200, { ok: true, provider: adapter.id, episodes: epList });
+    } catch (err) {
+      sendJson(res, 500, { ok: false, error: 'episodes_failed', message: err?.message || String(err) });
+    }
+    return;
+  }
+
+  if (pathname === '/dub-check') {
+    const providerParam = (reqUrl.searchParams.get('provider') || 'anikoto').toLowerCase().trim();
+    const subEmbed = reqUrl.searchParams.get('sub');
+    const dubEmbed = reqUrl.searchParams.get('dub');
+
+    if (!subEmbed || !dubEmbed) {
+      sendJson(res, 400, { ok: false, error: 'missing_sub_or_dub_param' });
+      return;
+    }
+
+    const adapter = getAdapter(providerParam);
+    if (!adapter || !adapter.resolve) {
+      sendJson(res, 400, { ok: false, error: 'provider_has_no_resolver' });
+      return;
+    }
+
+    try {
+      const verdict = await comparePair(subEmbed, dubEmbed, adapter.resolve).catch((err) => ({
+        verdict: 'unknown',
+        reason: err?.message || String(err),
+      }));
+      sendJson(res, 200, { ok: true, ...verdict });
+    } catch (err) {
+      sendJson(res, 200, { ok: true, verdict: 'unknown', reason: err?.message || String(err) });
+    }
+    return;
+  }
+
   if (pathname === '/resolve') {
     const title = reqUrl.searchParams.get('title') || '';
     const slug = reqUrl.searchParams.get('slug') || reqUrl.searchParams.get('providerSlug') || '';
@@ -181,12 +328,25 @@ const server = http.createServer(async (req, res) => {
               const targetEp = epList.find((e) => e.number === ep) || (ep === 1 ? epList[0] : null);
               if (targetEp) {
                 const src = await adapter.sources(targetEp.id || targetEp.ref, { audioType: audio }).catch(() => null);
-                if (src?.embedUrl && adapter.resolve) {
-                  resolved = await adapter.resolve(src.embedUrl, { quality: serverParam }).catch(() => null);
+                const firstEmbed = src?.embedUrl || (Array.isArray(src?.embeds) && src.embeds[0]) || (Array.isArray(src?.direct) && src.direct[0]?.url) || src?.direct?.[0];
+                if (firstEmbed && adapter.resolve) {
+                  resolved = await adapter.resolve(firstEmbed, { quality: serverParam }).catch(() => null);
                   if (resolved?.master?.url || resolved?.streamUrl) {
                     effectiveProvider = adapter.id;
                     break;
                   }
+                } else if (Array.isArray(src?.direct) && src.direct.length > 0) {
+                  const d = src.direct[0];
+                  resolved = {
+                    master: { url: d.url },
+                    streamUrl: d.url,
+                    quality: d.quality ? `${d.quality}p` : '1080p',
+                    variants: src.direct.map((x) => (x.quality ? `${x.quality}p` : '720p')),
+                    subtitles: src.subtitles || [],
+                    proof: { container: d.container || 'mp4', checkedBytes: 65 },
+                  };
+                  effectiveProvider = adapter.id;
+                  break;
                 }
               }
             }
