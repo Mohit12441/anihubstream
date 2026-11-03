@@ -65,10 +65,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     // 2. Multi-Provider Aggregate Shelf (for Home Page "All Streams", strictly from D1)
     if (provider === 'providers') {
-      const [anikotoRows, aniwatchRows, hianimeRows] = await Promise.all([
+      const [anikotoRows, aniwatchRows, hianimeRows, wawRows, waveRows, kaiRows] = await Promise.all([
         getProviderRows('anikoto', 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
         getProviderRows('aniwatch', 'a.rating DESC, a.year DESC'),
         getProviderRows('hianime', 'a.rating DESC, a.year DESC'),
+        getProviderRows('watchanimeworld', 'a.rating DESC, a.year DESC'),
+        getProviderRows('animewave', 'a.rating DESC, a.year DESC'),
+        getProviderRows('animekai', 'a.rating DESC, a.year DESC'),
       ]);
 
       return ok({
@@ -76,6 +79,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           anikoto: (anikotoRows.results || []).map((r) => mapSearchResult(r, 'anikoto')),
           hianime: (hianimeRows.results || []).map((r) => mapSearchResult(r, 'hianime')),
           aniwatch: (aniwatchRows.results || []).map((r) => mapSearchResult(r, 'aniwatch')),
+          watchanimeworld: (wawRows.results || []).map((r) => mapSearchResult(r, 'watchanimeworld')),
+          animewave: (waveRows.results || []).map((r) => mapSearchResult(r, 'animewave')),
+          animekai: (kaiRows.results || []).map((r) => mapSearchResult(r, 'animekai')),
         },
       }, { cache: 'public, max-age=300, s-maxage=600, stale-while-revalidate=120' });
     }
@@ -84,7 +90,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const q = (where, order) =>
       db.prepare(`SELECT ${CARD_COLUMNS} FROM anime a ${where} ORDER BY ${order} LIMIT ${ROW_LIMIT}`).all();
 
-    const [trending, ongoing, topRated, fresh, added, anikotoRows, aniwatchRows, hianimeRows] = await Promise.all([
+    const [trending, ongoing, topRated, fresh, added, anikotoRows, aniwatchRows, hianimeRows, wawRows, waveRows, kaiRows] = await Promise.all([
       q('', 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
       q("WHERE a.status = 'Ongoing'", 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
       q('', 'a.rating DESC'),
@@ -93,6 +99,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       getProviderRows('anikoto', 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
       getProviderRows('aniwatch', 'a.rating DESC, a.year DESC'),
       getProviderRows('hianime', 'a.rating DESC, a.year DESC'),
+      getProviderRows('watchanimeworld', 'a.rating DESC, a.year DESC'),
+      getProviderRows('animewave', 'a.rating DESC, a.year DESC'),
+      getProviderRows('animekai', 'a.rating DESC, a.year DESC'),
     ]);
 
     return ok({
@@ -106,6 +115,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         anikoto: (anikotoRows.results || []).map((r) => mapSearchResult(r, 'anikoto')),
         hianime: (hianimeRows.results || []).map((r) => mapSearchResult(r, 'hianime')),
         aniwatch: (aniwatchRows.results || []).map((r) => mapSearchResult(r, 'aniwatch')),
+        watchanimeworld: (wawRows.results || []).map((r) => mapSearchResult(r, 'watchanimeworld')),
+        animewave: (waveRows.results || []).map((r) => mapSearchResult(r, 'animewave')),
+        animekai: (kaiRows.results || []).map((r) => mapSearchResult(r, 'animekai')),
       },
     }, {
       cache: 'public, max-age=120, s-maxage=600, stale-while-revalidate=120',

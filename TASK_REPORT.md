@@ -1267,11 +1267,18 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
    - Verified `/providers`, `/search`, `/details`, `/episodes`, `/dub-check`, direct MP4 cascade, and live Edge fallback resolution.
    - Optimized direct slug lookup in [`functions/api/play.js`](file:///C:/anihubstream-local/functions/api/play.js), [`functions/api/play/resolve.js`](file:///C:/anihubstream-local/functions/api/play/resolve.js), and [`api/bridge.mjs`](file:///C:/anihubstream-local/api/bridge.mjs) when `provider === 'auto'`.
 
+6. **Full Project Structure & UI Separation Audit (Rule 8 & Provider Completeness):**
+   - **Typed Network Clients ([`src/data/api.ts`](file:///C:/anihubstream-local/src/data/api.ts)):** Added `searchFederated`, `searchInstant`, and `getDownloads` to replace direct `fetch` calls in [`src/pages/Search.tsx`](file:///C:/anihubstream-local/src/pages/Search.tsx), [`src/components/Header.tsx`](file:///C:/anihubstream-local/src/components/Header.tsx), and [`src/components/player/DownloadModal.tsx`](file:///C:/anihubstream-local/src/components/player/DownloadModal.tsx).
+   - **Edge Proxy Domain Authorization ([`functions/api/proxy.js`](file:///C:/anihubstream-local/functions/api/proxy.js)):** Added `watchanimeworld.one`, `watchanimeworld.in`, and `animekai.to` to `ALLOWED_STREAMING_DOMAINS` to prevent 403 SSRF blocks on video chunks and subtitles.
+   - **Edge Home Multi-Provider Shelves ([`functions/api/home/index.js`](file:///C:/anihubstream-local/functions/api/home/index.js)):** Added `watchanimeworld`, `animewave`, and `animekai` to aggregate provider rows.
+   - **UI Provider Metadata & Theme Parity ([`src/pages/Home.tsx`](file:///C:/anihubstream-local/src/pages/Home.tsx), [`src/pages/Watch.tsx`](file:///C:/anihubstream-local/src/pages/Watch.tsx), [`src/pages/Search.tsx`](file:///C:/anihubstream-local/src/pages/Search.tsx), [`src/components/player/DownloadModal.tsx`](file:///C:/anihubstream-local/src/components/player/DownloadModal.tsx)):** Added `animewave`, `animekai`, `watchanimeworld`, and `torrent` to `PROVIDER_THEMES`, `PROVIDER_METAS`, and `PROVIDER_NAMES`, fixing a bug where switching to `watchanimeworld` fell back to `anikoto`.
+   - **Stream Bridge Audio & Download Contracts ([`api/bridge.mjs`](file:///C:/anihubstream-local/api/bridge.mjs)):** Implemented `GET /audios` and `GET /downloads` matching client expectations in `streamBridge.ts`.
+
 ### What Was Verified:
-- `node --test api/bridge.test.mjs tools/bridge-gap.test.mjs tools/e2e-api-bridge.test.mjs`: **22/22 tests PASSED** (0 failures).
+- `node --test api/bridge.test.mjs tools/bridge-gap.test.mjs tools/e2e-api-bridge.test.mjs`: **24/24 tests PASSED** (0 failures).
 - `npm run test:cache`: **8/8 tests PASSED** (Zero-Read Edge Shield verified).
 - `npx tsc --noEmit`: **PASSED** (0 TypeScript errors).
-- `npm run build`: **PASSED** (Vite pages build in 6.29s).
+- `npm run build`: **PASSED** (Vite pages build in 14.96s).
 
 ---
 

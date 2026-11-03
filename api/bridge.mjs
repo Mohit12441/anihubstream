@@ -263,6 +263,75 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  if (pathname === '/audios') {
+    const title = reqUrl.searchParams.get('title') || 'Anime';
+    const ep = Number(reqUrl.searchParams.get('ep') || '1');
+    const audios = [
+      { id: 'sub', label: 'Japanese (Sub)', available: true, state: 'verified' },
+      { id: 'dub', label: 'English (Dub)', available: true, state: 'verified' },
+      { id: 'hindi', label: 'Hindi (Multi-Audio)', available: true, state: 'verified' },
+    ];
+    sendJson(res, 200, {
+      title,
+      episode: { number: ep, title: `Episode ${ep}` },
+      audios,
+    });
+    return;
+  }
+
+  if (pathname === '/downloads') {
+    const title = reqUrl.searchParams.get('title') || 'Anime';
+    const ep = Number(reqUrl.searchParams.get('ep') || '1');
+    const options = [
+      {
+        provider: 'anikoto',
+        name: 'AniKoto · Direct (1080p)',
+        badge: '1080p MP4',
+        format: 'MP4',
+        quality: '1080p',
+        type: 'direct',
+        audio: 'sub',
+        description: 'Direct multi-mirror download',
+      },
+      {
+        provider: 'aniwatch',
+        name: 'AniWatch · Stream (1080p)',
+        badge: 'HLS to MP4',
+        format: 'MP4',
+        quality: '1080p',
+        type: 'stream',
+        audio: 'sub',
+        description: 'Direct in-browser HLS stream-to-video assembler',
+      },
+      {
+        provider: 'hianime',
+        name: 'HiAnime · Multi-Quality',
+        badge: 'Adaptive MP4',
+        format: 'MP4',
+        quality: '1080p',
+        type: 'portal',
+        audio: 'sub',
+        description: 'Adaptive ladder download portal',
+      },
+      {
+        provider: 'watchanimeworld',
+        name: 'WatchAnimeWorld · Multi-Audio (1080p)',
+        badge: 'Direct MP4',
+        format: 'MP4',
+        quality: '1080p',
+        type: 'direct',
+        audio: 'hindi',
+        description: 'Direct progressive MP4 file with Hindi audio',
+      },
+    ];
+    sendJson(res, 200, {
+      title,
+      episode: ep,
+      options,
+    });
+    return;
+  }
+
   if (pathname === '/resolve') {
     const title = reqUrl.searchParams.get('title') || '';
     const slug = reqUrl.searchParams.get('slug') || reqUrl.searchParams.get('providerSlug') || '';

@@ -198,3 +198,64 @@ export const getRecommendations = (animeId?: string, limit: number = 10) => {
   const query = animeId ? `?id=${encodeURIComponent(animeId)}&limit=${limit}` : `?limit=${limit}`;
   return request<{ target?: ApiCard; items: ApiRecommendation[]; total: number }>(`/recommendations${query}`);
 };
+
+export interface FederatedSearchResponse {
+  query: string;
+  total: number;
+  count: number;
+  results?: any[];
+  providers: Record<string, any[]>;
+  source?: string;
+}
+
+export const searchFederated = (q: string, init?: RequestInit): Promise<FederatedSearchResponse> => {
+  return request<FederatedSearchResponse>(`/search?q=${encodeURIComponent(q.trim())}`, init);
+};
+
+export interface InstantSearchResult {
+  hits: {
+    id: string;
+    title: string;
+    year?: number | null;
+    art?: string;
+    kind?: string;
+  }[];
+}
+
+export const searchInstant = (q: string, limit: number = 8, init?: RequestInit): Promise<InstantSearchResult> => {
+  return request<InstantSearchResult>(`/search/instant?q=${encodeURIComponent(q.trim())}&limit=${limit}`, init);
+};
+
+export interface DownloadQuery {
+  id: string;
+  ep: number;
+  provider?: string;
+  audio?: string;
+}
+
+export interface DownloadResponse {
+  ok: boolean;
+  data?: {
+    provider: string;
+    title: string;
+    episode: number;
+    audio: string;
+    available: boolean;
+    error: string | null;
+    downloads: any[];
+    downloadPage: string | null;
+    streamUrl: string | null;
+    command: string;
+    availableProviders: string[];
+  };
+}
+
+export const getDownloads = (query: DownloadQuery, init?: RequestInit): Promise<DownloadResponse> => {
+  const params = new URLSearchParams({
+    id: query.id,
+    ep: String(query.ep),
+  });
+  if (query.provider) params.set('provider', query.provider);
+  if (query.audio) params.set('audio', query.audio);
+  return request<DownloadResponse>(`/download?${params.toString()}`, init);
+};

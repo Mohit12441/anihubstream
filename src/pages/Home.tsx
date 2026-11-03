@@ -22,6 +22,8 @@ const PROVIDER_METAS: Record<string, ProviderMeta> = {
   hianime: { name: 'HiAnime', badge: 'JSON Stream', color: '#ec4899' },
   aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6' },
   watchanimeworld: { name: 'WatchAnimeWorld', badge: 'Direct MP4', color: '#10b981' },
+  animewave: { name: 'AnimeWave', badge: 'HLS Fast', color: '#8b5cf6' },
+  animekai: { name: 'AnimeKai', badge: 'Ultra Stream', color: '#f59e0b' },
 };
 
 

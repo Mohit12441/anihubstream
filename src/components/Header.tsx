@@ -5,6 +5,7 @@ import { Logo } from './Logo';
 import { useTheme } from '../lib/useTheme';
 import { useToast } from '../lib/Toast';
 import { useLibrary } from '../state/library';
+import { searchInstant } from '../data/api';
 import '../styles/header.css';
 
 const NAV = [
@@ -76,8 +77,7 @@ export function Header() {
       const controller = new AbortController();
       abortControllerRef.current = controller;
       setLoading(true);
-      fetch(`/api/search/instant?q=${encodeURIComponent(trimmed)}&limit=8`, { signal: controller.signal })
-        .then(res => res.json())
+      searchInstant(trimmed, 8, { signal: controller.signal })
         .then(data => {
           setSuggestions(data.hits || []);
           setLoading(false);

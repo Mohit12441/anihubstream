@@ -3,6 +3,7 @@ import { Check, Copy, Download, ExternalLink, Film, Loader2, Sparkles, X, Termin
 import type { Anime, Episode } from '../../data/model';
 import type { BridgeSource } from '../../lib/streamBridge';
 import { downloadHlsStream, type DownloadProgress } from '../../lib/hlsDownloader';
+import { getDownloads } from '../../data/api';
 
 interface Props {
   isOpen: boolean;
@@ -52,6 +53,18 @@ const PROVIDER_METAS: Record<string, { name: string; color: string; badge: strin
     color: '#10b981',
     badge: 'HLS Stream Downloader',
     description: 'Direct in-browser HLS stream-to-MP4 video downloader and IDM/VLC link generator.',
+  },
+  animewave: {
+    name: 'AnimeWave',
+    color: '#8b5cf6',
+    badge: 'HLS Stream Downloader',
+    description: 'High-speed HLS stream-to-MP4 video assembly and direct mirror downloads.',
+  },
+  animekai: {
+    name: 'AnimeKai',
+    color: '#f59e0b',
+    badge: 'Ultra Stream Downloader',
+    description: 'Stream-to-MP4 extraction and fast progressive video downloads.',
   },
 };
 
@@ -122,15 +135,12 @@ export function DownloadModal({
     setLoading(true);
     setProviderError(null);
 
-    const query = new URLSearchParams({
+    getDownloads({
       id: anime.id,
       provider: selectedProvider,
-      ep: String(episode.n),
+      ep: episode.n,
       audio: selectedAudio,
-    });
-
-    fetch(`/api/download?${query.toString()}`)
-      .then((res) => res.json())
+    })
       .then((data: any) => {
         if (!live) return;
         if (data?.ok && data?.data) {

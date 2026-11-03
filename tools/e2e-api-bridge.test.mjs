@@ -268,4 +268,32 @@ describe('End-to-End Bridge, Edge & Provider Integration Suite', () => {
     assert.equal(streamMeta.master, 'https://stream.e2e.example/hls/master.m3u8');
     assert.equal(streamMeta.quality, '1080p');
   });
+
+  it('8. GET /audios returns multi-audio list matching streamBridge client contract', async () => {
+    const res = await fetch(`${bridgeUrl}/audios?title=Solo%20Leveling&ep=1`);
+    assert.equal(res.status, 200);
+    const data = await res.json();
+    assert.equal(data.title, 'Solo Leveling');
+    assert.equal(data.episode.number, 1);
+    assert.ok(Array.isArray(data.audios));
+    const audioIds = data.audios.map((a) => a.id);
+    assert.ok(audioIds.includes('sub'));
+    assert.ok(audioIds.includes('dub'));
+    assert.ok(audioIds.includes('hindi'));
+  });
+
+  it('9. GET /downloads returns provider download options matching streamBridge contract', async () => {
+    const res = await fetch(`${bridgeUrl}/downloads?title=Solo%20Leveling&ep=1`);
+    assert.equal(res.status, 200);
+    const data = await res.json();
+    assert.equal(data.title, 'Solo Leveling');
+    assert.equal(data.episode, 1);
+    assert.ok(Array.isArray(data.options));
+    assert.ok(data.options.length >= 3);
+    const optProviders = data.options.map((o) => o.provider);
+    assert.ok(optProviders.includes('anikoto'));
+    assert.ok(optProviders.includes('aniwatch'));
+    assert.ok(optProviders.includes('hianime'));
+    assert.ok(optProviders.includes('watchanimeworld'));
+  });
 });

@@ -45,6 +45,34 @@ const PROVIDER_THEMES: Record<string, { name: string; icon: string; badge: strin
     color: '#ec4899',
     desc: 'Complete archive · Adaptive ladders · Multi-Audio',
   },
+  watchanimeworld: {
+    name: 'WatchAnimeWorld',
+    icon: '🌐',
+    badge: 'Direct MP4 · Multi-Audio',
+    color: '#10b981',
+    desc: 'Direct MP4 video files with Hindi, English, and Japanese audio',
+  },
+  animewave: {
+    name: 'AnimeWave',
+    icon: '🌊',
+    badge: 'HLS Fast Stream',
+    color: '#8b5cf6',
+    desc: 'Fast redundant mirror with multi-audio support',
+  },
+  animekai: {
+    name: 'AnimeKai',
+    icon: '⚡',
+    badge: 'Ultra Stream',
+    color: '#f59e0b',
+    desc: 'Direct failover stream with dual-audio branches',
+  },
+  torrent: {
+    name: 'P2P Swarm',
+    icon: '🧲',
+    badge: 'WebTorrent P2P',
+    color: '#06b6d4',
+    desc: 'Decentralized peer-to-peer browser video swarm',
+  },
 };
 
 export function Watch() {

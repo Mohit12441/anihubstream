@@ -15,6 +15,7 @@ import { useSEO } from '../lib/useSEO';
 import { useToast } from '../lib/Toast';
 import { ProviderRow, type ProviderSearchResult } from '../components/search/ProviderRow';
 import { CategoryPills, type CategoryPillItem } from '../components/ui/CategoryPills';
+import { searchFederated } from '../data/api';
 import '../styles/pages.css';
 
 export interface SearchProviderBadge {
@@ -58,6 +59,8 @@ const PROVIDER_NAMES: Record<string, { name: string; badge: string; color: strin
   hianime: { name: 'HiAnime', badge: 'Multi-Quality', color: '#ec4899', icon: '🌸' },
   aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6', icon: '🛡️' },
   watchanimeworld: { name: 'WatchAnimeWorld', badge: 'Direct MP4', color: '#10b981', icon: '🌐' },
+  animewave: { name: 'AnimeWave', badge: 'HLS Fast', color: '#8b5cf6', icon: '🌊' },
+  animekai: { name: 'AnimeKai', badge: 'Ultra Stream', color: '#f59e0b', icon: '⚡' },
 };
 
 const POPULAR_SEARCHES = [
@@ -125,13 +128,7 @@ export function Search() {
     const controller = new AbortController();
     setLoading(true);
 
-    fetch(`/api/search?q=${encodeURIComponent(activeQuery)}`, {
-      signal: controller.signal,
-    })
-      .then((res) => {
-        if (!res.ok) throw new Error('Search failed');
-        return res.json();
-      })
+    searchFederated(activeQuery, { signal: controller.signal })
       .then((json: FederatedSearchResponse) => {
         setData(json);
         setLoading(false);
