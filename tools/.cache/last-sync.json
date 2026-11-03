@@ -1,33 +1,34 @@
 {
-  "fetched_at": "2026-11-03T02:27:43.653Z",
+  "fetched_at": "2026-11-03T12:49:14.113Z",
   "titles": [
     {
-      "id": "sky-wizards-academy",
+      "id": "tokyo-ghoul-pinto-1fmv",
       "sources": {
-        "kitsu": 8650,
-        "anilist": 20774,
-        "mal": 25283
+        "kitsu": 11294,
+        "anilist": 21326,
+        "mal": 31297
       },
-      "episodes": 12,
-      "episodeTotal": 12,
+      "episodes": 1,
+      "episodeTotal": 1,
       "skipKey": null,
       "markers": 0
     }
   ],
   "stats": {
-    "episodesStored": 12,
-    "episodeTotal": 12,
+    "episodesStored": 1,
+    "episodeTotal": 1,
     "markers": 0,
     "runtimeFallbacks": 0
   },
   "droppedGenres": [
-    "Ecchi",
-    "Magic",
-    "School",
-    "Swordplay",
+    "Gore",
+    "Photography",
+    "Body Horror",
+    "Tragedy",
+    "Survival",
+    "Female Protagonist",
     "Male Protagonist",
-    "Female Harem",
-    "Primarily Female Cast",
-    "Nudity"
+    "Maids",
+    "Mahjong"
   ]
 }
