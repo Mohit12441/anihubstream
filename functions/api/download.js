@@ -319,7 +319,16 @@ export const onRequestGet = async ({ request, env }) => {
       if (rawId.startsWith('hianime:')) provider = 'hianime';
       else if (rawId.startsWith('anikoto:')) provider = 'anikoto';
       else if (rawId.startsWith('aniwatch:')) provider = 'aniwatch';
+      else if (rawId.startsWith('anipm:')) provider = 'anipm';
+      else if (rawId.startsWith('anidisk:')) provider = 'anidisk';
+      else if (rawId.startsWith('animeflv:')) provider = 'animeflv';
+      else if (rawId.startsWith('hdrezka:')) provider = 'hdrezka';
+      else if (rawId.startsWith('jkanime:')) provider = 'jkanime';
       else if (rawId.startsWith('watchanimeworld:')) provider = 'watchanimeworld';
+      else if (rawId.startsWith('animewave:')) provider = 'animewave';
+      else if (rawId.startsWith('animekai:')) provider = 'animekai';
+      else if (rawId.startsWith('animedubhindi:')) provider = 'animedubhindi';
+      else if (rawId.startsWith('desidubanime:')) provider = 'desidubanime';
       else provider = 'anikoto';
     }
 
@@ -618,6 +627,34 @@ export const onRequestGet = async ({ request, env }) => {
       downloadPage = `https://megaplay.buzz/stream/mal/${malId || cleanSlug}/${ep}/${audio}`;
       downloads = [];
       streamUrl = null;
+    }
+
+    const bridgeBase = env.STREAM_BRIDGE_URL || '';
+    if (downloads.length === 0 && bridgeBase) {
+      try {
+        const bRes = await fetch(`${bridgeBase}/downloads?title=${encodeURIComponent(animeTitle)}&ep=${ep}`);
+        if (bRes.ok) {
+          const bData = await bRes.json();
+          if (Array.isArray(bData?.options)) {
+            for (const opt of bData.options) {
+              if (opt.provider === provider || !provider) {
+                downloads.push({
+                  name: opt.name,
+                  label: opt.quality || '1080p',
+                  quality: opt.quality || '1080p',
+                  url: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=${opt.provider}&audio=${opt.audio || audio}`,
+                  proxiedUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=${opt.provider}&audio=${opt.audio || audio}`,
+                  pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=${opt.provider}&audio=${opt.audio || audio}`,
+                  provider: opt.provider,
+                  audio: opt.audio || audio,
+                  type: 'stream-download',
+                  format: opt.format || 'MP4',
+                });
+              }
+            }
+          }
+        }
+      } catch (_) {}
     }
 
     if (isPipe) {

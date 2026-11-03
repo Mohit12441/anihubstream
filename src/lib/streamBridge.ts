@@ -368,6 +368,9 @@ export async function bridgeAudios(title: string, ep: number): Promise<AudioList
       audios: [
         { id: 'sub', label: 'Japanese (Sub)', available: true, state: 'verified' },
         { id: 'dub', label: 'English (Dub)', available: true, state: 'verified' },
+        { id: 'hindi', label: 'Hindi (Multi-Audio)', available: true, state: 'verified' },
+        { id: 'spanish', label: 'Spanish / Audio Latino', available: true, state: 'verified' },
+        { id: 'russian', label: 'Russian / Ukrainian', available: true, state: 'verified' },
       ],
     };
   }
