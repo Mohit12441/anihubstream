@@ -5,6 +5,13 @@ import * as aniwatch from '../aniwatch.mjs';
 import * as watchanimeworld from '../watchanimeworld.mjs';
 import * as animewave from '../animewave.mjs';
 import * as animekai from '../animekai.mjs';
+import * as anipm from '../anipm.mjs';
+import * as anidisk from '../anidisk.mjs';
+import * as animeflv from '../animeflv.mjs';
+import * as hdrezka from '../hdrezka.mjs';
+import * as jkanime from '../jkanime.mjs';
+import * as animedubhindi from '../animedubhindi.mjs';
+import * as desidubanime from '../desidubanime.mjs';
 
 /**
  * @typedef {Object} AdapterDefinition
@@ -114,6 +121,90 @@ registerAdapter({
   details: (slug, opts) => animekai.details(slug, opts),
   sources: (epId, opts) => animekai.sources(epId, opts),
   resolve: (embed, opts) => animekai.resolve(embed, opts),
+});
+
+registerAdapter({
+  id: 'anipm',
+  name: 'AniPM',
+  supportedAudio: ['sub', 'dub'],
+  defaultType: 'hls',
+  priority: 88,
+  search: (q, opts) => anipm.search(q, opts),
+  details: (slug, opts) => anipm.details(slug, opts),
+  sources: (epId, opts) => anipm.sources(epId, opts),
+  resolve: (embed, opts) => anipm.resolve(embed, opts),
+});
+
+registerAdapter({
+  id: 'anidisk',
+  name: 'AniDisk',
+  supportedAudio: ['sub', 'dub', 'hindi', 'tamil', 'telugu'],
+  defaultType: 'mp4',
+  priority: 82,
+  search: (q, opts) => anidisk.search(q, opts),
+  details: (slug, opts) => anidisk.details(slug, opts),
+  sources: (epId, opts) => anidisk.sources(epId, opts),
+  resolve: (embed, opts) => anidisk.resolve(embed, opts),
+});
+
+registerAdapter({
+  id: 'animeflv',
+  name: 'AnimeFLV',
+  supportedAudio: ['sub', 'spanish'],
+  defaultType: 'hls',
+  priority: 81,
+  search: (q, opts) => animeflv.search(q, opts),
+  details: (slug, opts) => animeflv.details(slug, opts),
+  sources: (epId, opts) => animeflv.sources(epId, opts),
+  resolve: (embed, opts) => animeflv.resolve(embed, opts),
+});
+
+registerAdapter({
+  id: 'hdrezka',
+  name: 'HDRezka',
+  supportedAudio: ['sub', 'russian', 'dub'],
+  defaultType: 'hls',
+  priority: 79,
+  search: (q, opts) => hdrezka.search(q, opts),
+  details: (slug, opts) => hdrezka.details(slug, opts),
+  sources: (epId, opts) => hdrezka.sources(epId, opts),
+  resolve: (embed, opts) => hdrezka.resolve(embed, opts),
+});
+
+registerAdapter({
+  id: 'jkanime',
+  name: 'JKAnime',
+  supportedAudio: ['sub', 'spanish'],
+  defaultType: 'hls',
+  priority: 78,
+  search: (q, opts) => jkanime.search(q, opts),
+  details: (slug, opts) => jkanime.details(slug, opts),
+  sources: (epId, opts) => jkanime.sources(epId, opts),
+  resolve: (embed, opts) => jkanime.resolve(embed, opts),
+});
+
+registerAdapter({
+  id: 'animedubhindi',
+  name: 'AnimeDubHindi',
+  supportedAudio: ['sub', 'dub', 'hindi', 'tamil', 'telugu'],
+  defaultType: 'mp4',
+  priority: 74,
+  search: (q, opts) => animedubhindi.search(q, opts),
+  details: (slug, opts) => animedubhindi.details(slug, opts),
+  sources: (epId, opts) => animedubhindi.sources(epId, opts),
+  resolve: (embed, opts) => animedubhindi.resolve(embed, opts),
+});
+
+registerAdapter({
+  id: 'desidubanime',
+  name: 'DesiDubAnime',
+  supportedAudio: ['sub', 'dub', 'hindi', 'tamil', 'telugu'],
+  defaultType: 'mp4',
+  priority: 73,
+  search: (q, opts) => desidubanime.search(q, opts),
+  details: (slug, opts) => desidubanime.details(slug, opts),
+  sources: (epId, opts) => desidubanime.sources(epId, opts),
+  resolve: (embed, opts) => desidubanime.resolve(embed, opts),
 });
 
 registerAdapter({

@@ -137,21 +137,139 @@ export const WATCHANIMEWORLD_SERVER: StreamServer = {
     qualities: ['auto', '1080p', '720p', '360p'],
     subtitleLanguages: [],
     subtitleType: 'none',
-    audioLanguages: ['English (dub)'],
+    audioLanguages: ['English (dub)', 'Hindi'],
   },
   sourceUrl: 'http://127.0.0.1:8795',
   responseMs: 0,
   note: 'Direct encrypted MP4 stream stitched on-the-fly from Abyss CDN parts.',
 };
 
+export const ANIPM_SERVER: StreamServer = {
+  id: 'anipm-live',
+  name: 'AniPM',
+  region: 'Settlar High-Speed HLS',
+  status: 'online',
+  capabilities: {
+    qualities: ['auto', '1080p', '720p'],
+    subtitleLanguages: [],
+    subtitleType: 'selectable',
+    audioLanguages: ['Japanese (original)', 'English (dub)'],
+  },
+  sourceUrl: 'http://127.0.0.1:8795',
+  responseMs: 0,
+  note: 'Open partner Settlar session stream with precise skip intervals.',
+};
+
+export const ANIDISK_SERVER: StreamServer = {
+  id: 'anidisk-live',
+  name: 'AniDisk',
+  region: 'Regional Dubbed Network',
+  status: 'online',
+  capabilities: {
+    qualities: ['auto', '1080p', '720p'],
+    subtitleLanguages: [],
+    subtitleType: 'none',
+    audioLanguages: ['Hindi', 'Tamil', 'Telugu', 'English', 'Japanese'],
+  },
+  sourceUrl: 'http://127.0.0.1:8795',
+  responseMs: 0,
+  note: '15 regional Indian dubbed audio channels via EarnVids and Hydrax.',
+};
+
+export const ANIMEFLV_SERVER: StreamServer = {
+  id: 'animeflv-live',
+  name: 'AnimeFLV',
+  region: 'Audio Latino & Castellano',
+  status: 'online',
+  capabilities: {
+    qualities: ['auto', '1080p', '720p'],
+    subtitleLanguages: [],
+    subtitleType: 'selectable',
+    audioLanguages: ['Spanish (Latino)', 'Castellano', 'Japanese (Sub)'],
+  },
+  sourceUrl: 'http://127.0.0.1:8795',
+  responseMs: 0,
+  note: 'Direct Zilla Networks decoupled Spanish stream.',
+};
+
+export const HDREZKA_SERVER: StreamServer = {
+  id: 'hdrezka-live',
+  name: 'HDRezka',
+  region: 'Ultra HD Voidboost CDN',
+  status: 'online',
+  capabilities: {
+    qualities: ['auto', '1080p', '720p', '480p'],
+    subtitleLanguages: [],
+    subtitleType: 'selectable',
+    audioLanguages: ['Russian', 'Ukrainian', 'English (Original)'],
+  },
+  sourceUrl: 'http://127.0.0.1:8795',
+  responseMs: 0,
+  note: 'High-bitrate Voidboost multi-quality HLS and direct MP4.',
+};
+
+export const JKANIME_SERVER: StreamServer = {
+  id: 'jkanime-live',
+  name: 'JKAnime',
+  region: 'Desu / Magi Spanish HLS',
+  status: 'online',
+  capabilities: {
+    qualities: ['auto', '1080p', '720p'],
+    subtitleLanguages: [],
+    subtitleType: 'selectable',
+    audioLanguages: ['Spanish', 'Japanese (Sub)'],
+  },
+  sourceUrl: 'http://127.0.0.1:8795',
+  responseMs: 0,
+  note: 'Desu & Magi direct HLS streaming mirrors.',
+};
+
+export const ANIMEDUBHINDI_SERVER: StreamServer = {
+  id: 'animedubhindi-live',
+  name: 'AnimeDubHindi',
+  region: 'Hindi Regional Cloud',
+  status: 'online',
+  capabilities: {
+    qualities: ['auto', '1080p', '720p'],
+    subtitleLanguages: [],
+    subtitleType: 'none',
+    audioLanguages: ['Hindi', 'Tamil', 'Telugu', 'English'],
+  },
+  sourceUrl: 'http://127.0.0.1:8795',
+  responseMs: 0,
+  note: 'Regional Indian anime dubs and high-speed direct downloads.',
+};
+
+export const DESIDUBANIME_SERVER: StreamServer = {
+  id: 'desidubanime-live',
+  name: 'DesiDubAnime',
+  region: 'Desi Multi-Audio Stream',
+  status: 'online',
+  capabilities: {
+    qualities: ['auto', '1080p', '720p'],
+    subtitleLanguages: [],
+    subtitleType: 'none',
+    audioLanguages: ['Hindi', 'Tamil', 'Telugu', 'Malayalam'],
+  },
+  sourceUrl: 'http://127.0.0.1:8795',
+  responseMs: 0,
+  note: 'Multi-server streaming mirrors with Hindi and regional voice tracks.',
+};
+
 export const SERVERS: StreamServer[] = [
   LIVE_SERVER,
   ANIWATCH_SERVER,
   HIANIME_SERVER,
-
+  ANIPM_SERVER,
+  ANIDISK_SERVER,
+  ANIMEFLV_SERVER,
+  HDREZKA_SERVER,
+  JKANIME_SERVER,
   WATCHANIMEWORLD_SERVER,
   ANIMEWAVE_SERVER,
   ANIMEKAI_SERVER,
+  ANIMEDUBHINDI_SERVER,
+  DESIDUBANIME_SERVER,
 ];
 
 export const serverById = (id: string): StreamServer => {
@@ -167,21 +285,37 @@ export const serverById = (id: string): StreamServer => {
   return SERVERS.find((s) => s.id === id) ?? LIVE_SERVER;
 };
 
+const ALL_PROVIDER_IDS = [
+  'aniwatch',
+  'hianime',
+  'anikoto',
+  'anipm',
+  'anidisk',
+  'animeflv',
+  'hdrezka',
+  'jkanime',
+  'watchanimeworld',
+  'animewave',
+  'animekai',
+  'animedubhindi',
+  'desidubanime',
+];
+
 export function providerFromId(serverId: string): string {
   if (!serverId || serverId === 'auto-fastest') return 'anikoto';
   const clean = serverId.trim();
   const lower = clean.toLowerCase();
 
-  // If serverId is in "provider:server" format (e.g. anikoto:HD-1, hianime:HD-1, hianime:MegaPlay, aniwatch:HD-1)
+  // If serverId is in "provider:server" format
   if (lower.includes(':')) {
     const prov = lower.split(':')[0];
-    if (['aniwatch', 'hianime', 'anikoto', 'watchanimeworld', 'animewave', 'animekai'].includes(prov)) {
+    if (ALL_PROVIDER_IDS.includes(prov)) {
       return prov;
     }
   }
 
   // Handle provider-server format (e.g. hianime-1, hianime-2, aniwatch-1)
-  for (const prov of ['hianime', 'aniwatch', 'anikoto', 'watchanimeworld', 'animewave', 'animekai']) {
+  for (const prov of ALL_PROVIDER_IDS) {
     if (lower === `${prov}-live` || lower === prov) {
       return prov;
     }
@@ -190,7 +324,7 @@ export function providerFromId(serverId: string): string {
     }
   }
 
-  return ['hianime', 'aniwatch', 'anikoto', 'watchanimeworld', 'animewave', 'animekai'].includes(lower) ? lower : 'anikoto';
+  return ALL_PROVIDER_IDS.includes(lower) ? lower : 'anikoto';
 }
 
 export function serverIdFromProvider(provider?: string): string {
@@ -200,6 +334,11 @@ export function serverIdFromProvider(provider?: string): string {
   if (norm === 'hianime') return 'hianime:HD-1';
   if (norm === 'anikoto') return 'anikoto:HD-1';
   if (norm === 'aniwatch') return 'aniwatch:HD-1';
+  if (norm === 'anipm') return 'anipm:default';
+  if (norm === 'anidisk') return 'anidisk:default';
+  if (norm === 'animeflv') return 'animeflv:default';
+  if (norm === 'hdrezka') return 'hdrezka:default';
+  if (norm === 'jkanime') return 'jkanime:default';
   if (norm === 'watchanimeworld') return 'watchanimeworld:default';
   return `${norm}:HD-1`;
 }

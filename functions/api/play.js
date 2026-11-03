@@ -31,6 +31,13 @@ function formatServerName(provider, serverId) {
     watchanimeworld: 'WatchAnimeWorld',
     animewave: 'AnimeWave',
     animekai: 'AnimeKai',
+    anipm: 'AniPM',
+    anidisk: 'AniDisk',
+    animeflv: 'AnimeFLV',
+    hdrezka: 'HDRezka',
+    jkanime: 'JKAnime',
+    animedubhindi: 'AnimeDubHindi',
+    desidubanime: 'DesiDubAnime',
   };
   const base = provNames[provider?.toLowerCase()] || (provider ? provider.toUpperCase() : 'Server');
   if (!serverId) return base;
@@ -42,6 +49,18 @@ function buildAudioTracks(audio) {
   if (audio === 'hindi') {
     return [
       { id: 'hin', language: 'hi', label: 'Hindi (Multi-Audio)', default: true },
+      { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
+    ];
+  }
+  if (audio === 'spanish') {
+    return [
+      { id: 'es', language: 'es', label: 'Spanish (Latino/Castellano)', default: true },
+      { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
+    ];
+  }
+  if (audio === 'russian') {
+    return [
+      { id: 'ru', language: 'ru', label: 'Russian (Multi-Voice)', default: true },
       { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
     ];
   }
@@ -411,6 +430,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       watchanimeworld: { status: 'healthy', latencyMs: 120 },
       animewave: { status: 'healthy', latencyMs: 110 },
       animekai: { status: 'healthy', latencyMs: 130 },
+      anipm: { status: 'healthy', latencyMs: 105 },
+      anidisk: { status: 'healthy', latencyMs: 125 },
+      animeflv: { status: 'healthy', latencyMs: 140 },
+      hdrezka: { status: 'healthy', latencyMs: 135 },
+      jkanime: { status: 'healthy', latencyMs: 145 },
+      animedubhindi: { status: 'healthy', latencyMs: 150 },
+      desidubanime: { status: 'healthy', latencyMs: 155 },
       torrent: { status: 'healthy', latencyMs: 45, peers: 12 },
     };
 
@@ -444,6 +470,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       watchanimeworld: animeRow?.waw_slug || animeRow?.watchanimeworld_slug || pmRows.find((p) => p.provider_id === 'watchanimeworld')?.provider_slug || null,
       animewave: animeRow?.animewave_slug || pmRows.find((p) => p.provider_id === 'animewave')?.provider_slug || null,
       animekai: animeRow?.animekai_slug || pmRows.find((p) => p.provider_id === 'animekai')?.provider_slug || null,
+      anipm: animeRow?.anipm_slug || pmRows.find((p) => p.provider_id === 'anipm')?.provider_slug || null,
+      anidisk: animeRow?.anidisk_slug || pmRows.find((p) => p.provider_id === 'anidisk')?.provider_slug || null,
+      animeflv: animeRow?.animeflv_slug || pmRows.find((p) => p.provider_id === 'animeflv')?.provider_slug || null,
+      hdrezka: animeRow?.hdrezka_slug || pmRows.find((p) => p.provider_id === 'hdrezka')?.provider_slug || null,
+      jkanime: animeRow?.jkanime_slug || pmRows.find((p) => p.provider_id === 'jkanime')?.provider_slug || null,
+      animedubhindi: animeRow?.animedubhindi_slug || pmRows.find((p) => p.provider_id === 'animedubhindi')?.provider_slug || null,
+      desidubanime: animeRow?.desidubanime_slug || pmRows.find((p) => p.provider_id === 'desidubanime')?.provider_slug || null,
     };
 
     const rawRequested = (url.searchParams.get('provider') || '').toLowerCase().trim();
@@ -453,15 +486,22 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
       { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
       { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
+      { id: 'anipm', name: 'AniPM', available: Boolean(availableSlugs.anipm), ...(providerHealth.anipm || {}) },
+      { id: 'anidisk', name: 'AniDisk', available: Boolean(availableSlugs.anidisk), ...(providerHealth.anidisk || {}) },
+      { id: 'animeflv', name: 'AnimeFLV', available: Boolean(availableSlugs.animeflv), ...(providerHealth.animeflv || {}) },
+      { id: 'hdrezka', name: 'HDRezka', available: Boolean(availableSlugs.hdrezka), ...(providerHealth.hdrezka || {}) },
+      { id: 'jkanime', name: 'JKAnime', available: Boolean(availableSlugs.jkanime), ...(providerHealth.jkanime || {}) },
       { id: 'watchanimeworld', name: 'WatchAnimeWorld', available: Boolean(availableSlugs.watchanimeworld), ...(providerHealth.watchanimeworld || {}) },
       { id: 'animewave', name: 'AnimeWave', available: Boolean(availableSlugs.animewave), ...(providerHealth.animewave || {}) },
       { id: 'animekai', name: 'AnimeKai', available: Boolean(availableSlugs.animekai), ...(providerHealth.animekai || {}) },
+      { id: 'animedubhindi', name: 'AnimeDubHindi', available: Boolean(availableSlugs.animedubhindi), ...(providerHealth.animedubhindi || {}) },
+      { id: 'desidubanime', name: 'DesiDubAnime', available: Boolean(availableSlugs.desidubanime), ...(providerHealth.desidubanime || {}) },
       { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
     ];
 
     // Dynamic Provider Priority: If not explicitly requested or is 'auto', select the fastest healthy provider
     if (!requested || requested === 'auto') {
-      const candidates = ['anikoto', 'hianime', 'aniwatch', 'watchanimeworld', 'animewave', 'animekai'].filter((p) => availableSlugs[p]);
+      const candidates = ['anikoto', 'hianime', 'aniwatch', 'anipm', 'anidisk', 'animeflv', 'hdrezka', 'jkanime', 'watchanimeworld', 'animewave', 'animekai', 'animedubhindi', 'desidubanime'].filter((p) => availableSlugs[p]);
       if (candidates.length > 0) {
         candidates.sort((a, b) => {
           const healthA = providerHealth[a]?.status === 'healthy' ? 0 : 1;
@@ -477,7 +517,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     if (!resolvedTitle && id) {
       resolvedTitle = id
-        .replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai):/i, '')
+        .replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai|anipm|anidisk|animeflv|hdrezka|jkanime|animedubhindi|desidubanime|torrent):/i, '')
         .replace(/-[a-z0-9]{5,8}$/i, '')
         .replace(/[-_:]+/g, ' ')
         .trim()

@@ -539,7 +539,7 @@ export async function resolveFranchiseSeasons(db, card) {
   return items;
 }
 
-export const KNOWN_PROVIDER_REGEX = /^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai):/i;
+export const KNOWN_PROVIDER_REGEX = /^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai|anipm|anidisk|animeflv|hdrezka|jkanime|animedubhindi|desidubanime|torrent):/i;
 
 export const deriveSlugCandidates = (id) => {
   if (!id || typeof id !== 'string') return [];

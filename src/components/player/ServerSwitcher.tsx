@@ -15,7 +15,7 @@ export interface ServerSwitcherProps {
   availableProvidersList?: { id: string; name: string; available: boolean; status?: string; latencyMs?: number }[];
 }
 
-type AudioCategory = 'sub' | 'dub' | 'hindi';
+type AudioCategory = 'sub' | 'dub' | 'hindi' | 'spanish' | 'russian';
 
 function getAudioCategory(server: PlayServer): AudioCategory {
   const aud = (server.audio || '').toLowerCase();
@@ -24,8 +24,10 @@ function getAudioCategory(server: PlayServer): AudioCategory {
   const id = (server.id || '').toLowerCase();
   const type = (server.type || '').toLowerCase();
 
+  if (aud === 'spanish' || name.includes('latino') || name.includes('spanish') || name.includes('castellano') || prov.includes('flv') || prov.includes('jkanime')) return 'spanish';
+  if (aud === 'russian' || name.includes('russian') || name.includes('ukrainian') || name.includes('русс') || prov.includes('rezka')) return 'russian';
+  if (aud === 'hindi' || name.includes('hindi') || prov.includes('hindi') || id.includes('hindi') || prov.includes('anidisk') || prov.includes('desidub')) return 'hindi';
   if (aud === 'sub' && (name.includes('sub only') || aud === 'sub' && !name.includes('dub') && !id.includes('-dub'))) return 'sub';
-  if (aud === 'hindi' || name.includes('hindi') || prov.includes('hindi') || id.includes('hindi')) return 'hindi';
   if (aud === 'dub' || name.includes('dub') || prov.includes('dub') || id.includes('dub') || type === 'dub') {
     if (aud === 'sub') return 'sub';
     return 'dub';
@@ -38,9 +40,16 @@ function getProviderKey(server: PlayServer): string {
   if (p.includes('hianime')) return 'hianime';
   if (p.includes('anikoto')) return 'anikoto';
   if (p.includes('aniwatch')) return 'aniwatch';
+  if (p.includes('anipm')) return 'anipm';
+  if (p.includes('anidisk')) return 'anidisk';
+  if (p.includes('animeflv')) return 'animeflv';
+  if (p.includes('hdrezka')) return 'hdrezka';
+  if (p.includes('jkanime')) return 'jkanime';
   if (p.includes('watchanimeworld') || p.includes('waw')) return 'watchanimeworld';
   if (p.includes('animewave')) return 'animewave';
   if (p.includes('animekai')) return 'animekai';
+  if (p.includes('animedubhindi')) return 'animedubhindi';
+  if (p.includes('desidubanime')) return 'desidubanime';
   if (p.includes('torrent')) return 'torrent';
   return p;
 }
@@ -49,9 +58,16 @@ function getProviderDisplayName(key: string): string {
   if (key === 'anikoto') return 'AniKoto';
   if (key === 'hianime') return 'HiAnime';
   if (key === 'aniwatch') return 'AniWatch';
+  if (key === 'anipm') return 'AniPM';
+  if (key === 'anidisk') return 'AniDisk';
+  if (key === 'animeflv') return 'AnimeFLV';
+  if (key === 'hdrezka') return 'HDRezka';
+  if (key === 'jkanime') return 'JKAnime';
   if (key === 'watchanimeworld' || key === 'waw') return 'WatchAnimeWorld';
   if (key === 'animewave') return 'AnimeWave';
   if (key === 'animekai') return 'AnimeKai';
+  if (key === 'animedubhindi') return 'AnimeDubHindi';
+  if (key === 'desidubanime') return 'DesiDubAnime';
   if (key === 'torrent') return 'P2P Swarm';
   return key.charAt(0).toUpperCase() + key.slice(1);
 }
@@ -84,9 +100,26 @@ export function ServerSwitcher({
   const [searchParams] = useSearchParams();
   const urlProvider = (searchParams.get('provider') || '').toLowerCase();
 
-  const currentProvider = (urlProvider && ['anikoto', 'aniwatch', 'hianime', 'torrent'].includes(urlProvider))
+  const VALID_PROVIDERS = [
+    'anikoto',
+    'aniwatch',
+    'hianime',
+    'anipm',
+    'anidisk',
+    'animeflv',
+    'hdrezka',
+    'jkanime',
+    'watchanimeworld',
+    'animewave',
+    'animekai',
+    'animedubhindi',
+    'desidubanime',
+    'torrent',
+  ];
+
+  const currentProvider = (urlProvider && VALID_PROVIDERS.includes(urlProvider))
     ? urlProvider
-    : (scopedProvider && ['anikoto', 'aniwatch', 'hianime', 'torrent'].includes(scopedProvider))
+    : (scopedProvider && VALID_PROVIDERS.includes(scopedProvider))
     ? scopedProvider
     : (servers[0] ? getProviderKey(servers[0]) : 'anikoto');
 
@@ -98,8 +131,16 @@ export function ServerSwitcher({
 
   const availableProviders = [
     { key: 'anikoto', name: 'AniKoto', icon: '⚡' },
-    { key: 'hianime', name: 'HiAnime', icon: '🌸' },
     { key: 'aniwatch', name: 'AniWatch', icon: '🛡️' },
+    { key: 'hianime', name: 'HiAnime', icon: '🌸' },
+    { key: 'anipm', name: 'AniPM', icon: '⚡' },
+    { key: 'anidisk', name: 'AniDisk', icon: '📀' },
+    { key: 'animeflv', name: 'AnimeFLV', icon: '🔥' },
+    { key: 'hdrezka', name: 'HDRezka', icon: '🎬' },
+    { key: 'jkanime', name: 'JKAnime', icon: '🌸' },
+    { key: 'watchanimeworld', name: 'WatchAnimeWorld', icon: '🌐' },
+    { key: 'animewave', name: 'AnimeWave', icon: '🌊' },
+    { key: 'animekai', name: 'AnimeKai', icon: '⚡' },
     { key: 'torrent', name: 'P2P Swarm', icon: '🧲' },
   ];
 

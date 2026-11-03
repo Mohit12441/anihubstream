@@ -65,13 +65,18 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     // 2. Multi-Provider Aggregate Shelf (for Home Page "All Streams", strictly from D1)
     if (provider === 'providers') {
-      const [anikotoRows, aniwatchRows, hianimeRows, wawRows, waveRows, kaiRows] = await Promise.all([
+      const [anikotoRows, aniwatchRows, hianimeRows, wawRows, waveRows, kaiRows, anipmRows, anidiskRows, flvRows, rezkaRows, jkanimeRows] = await Promise.all([
         getProviderRows('anikoto', 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
         getProviderRows('aniwatch', 'a.rating DESC, a.year DESC'),
         getProviderRows('hianime', 'a.rating DESC, a.year DESC'),
         getProviderRows('watchanimeworld', 'a.rating DESC, a.year DESC'),
         getProviderRows('animewave', 'a.rating DESC, a.year DESC'),
         getProviderRows('animekai', 'a.rating DESC, a.year DESC'),
+        getProviderRows('anipm', 'a.rating DESC, a.year DESC'),
+        getProviderRows('anidisk', 'a.rating DESC, a.year DESC'),
+        getProviderRows('animeflv', 'a.rating DESC, a.year DESC'),
+        getProviderRows('hdrezka', 'a.rating DESC, a.year DESC'),
+        getProviderRows('jkanime', 'a.rating DESC, a.year DESC'),
       ]);
 
       return ok({
@@ -82,6 +87,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           watchanimeworld: (wawRows.results || []).map((r) => mapSearchResult(r, 'watchanimeworld')),
           animewave: (waveRows.results || []).map((r) => mapSearchResult(r, 'animewave')),
           animekai: (kaiRows.results || []).map((r) => mapSearchResult(r, 'animekai')),
+          anipm: (anipmRows.results || []).map((r) => mapSearchResult(r, 'anipm')),
+          anidisk: (anidiskRows.results || []).map((r) => mapSearchResult(r, 'anidisk')),
+          animeflv: (flvRows.results || []).map((r) => mapSearchResult(r, 'animeflv')),
+          hdrezka: (rezkaRows.results || []).map((r) => mapSearchResult(r, 'hdrezka')),
+          jkanime: (jkanimeRows.results || []).map((r) => mapSearchResult(r, 'jkanime')),
         },
       }, { cache: 'public, max-age=300, s-maxage=600, stale-while-revalidate=120' });
     }
@@ -90,7 +100,24 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const q = (where, order) =>
       db.prepare(`SELECT ${CARD_COLUMNS} FROM anime a ${where} ORDER BY ${order} LIMIT ${ROW_LIMIT}`).all();
 
-    const [trending, ongoing, topRated, fresh, added, anikotoRows, aniwatchRows, hianimeRows, wawRows, waveRows, kaiRows] = await Promise.all([
+    const [
+      trending,
+      ongoing,
+      topRated,
+      fresh,
+      added,
+      anikotoRows,
+      aniwatchRows,
+      hianimeRows,
+      wawRows,
+      waveRows,
+      kaiRows,
+      anipmRows,
+      anidiskRows,
+      flvRows,
+      rezkaRows,
+      jkanimeRows,
+    ] = await Promise.all([
       q('', 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
       q("WHERE a.status = 'Ongoing'", 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
       q('', 'a.rating DESC'),
@@ -102,6 +129,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       getProviderRows('watchanimeworld', 'a.rating DESC, a.year DESC'),
       getProviderRows('animewave', 'a.rating DESC, a.year DESC'),
       getProviderRows('animekai', 'a.rating DESC, a.year DESC'),
+      getProviderRows('anipm', 'a.rating DESC, a.year DESC'),
+      getProviderRows('anidisk', 'a.rating DESC, a.year DESC'),
+      getProviderRows('animeflv', 'a.rating DESC, a.year DESC'),
+      getProviderRows('hdrezka', 'a.rating DESC, a.year DESC'),
+      getProviderRows('jkanime', 'a.rating DESC, a.year DESC'),
     ]);
 
     return ok({
@@ -118,6 +150,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         watchanimeworld: (wawRows.results || []).map((r) => mapSearchResult(r, 'watchanimeworld')),
         animewave: (waveRows.results || []).map((r) => mapSearchResult(r, 'animewave')),
         animekai: (kaiRows.results || []).map((r) => mapSearchResult(r, 'animekai')),
+        anipm: (anipmRows.results || []).map((r) => mapSearchResult(r, 'anipm')),
+        anidisk: (anidiskRows.results || []).map((r) => mapSearchResult(r, 'anidisk')),
+        animeflv: (flvRows.results || []).map((r) => mapSearchResult(r, 'animeflv')),
+        hdrezka: (rezkaRows.results || []).map((r) => mapSearchResult(r, 'hdrezka')),
+        jkanime: (jkanimeRows.results || []).map((r) => mapSearchResult(r, 'jkanime')),
       },
     }, {
       cache: 'public, max-age=120, s-maxage=600, stale-while-revalidate=120',

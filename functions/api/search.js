@@ -6,9 +6,16 @@ const KNOWN_PROVIDERS = {
   anikoto: { name: 'AniKoto', badge: 'HLS 1080p', color: '#6366f1', icon: '⚡' },
   hianime: { name: 'HiAnime', badge: 'Multi-Quality', color: '#ec4899', icon: '🌸' },
   aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6', icon: '🛡️' },
+  anipm: { name: 'AniPM', badge: 'Settlar HLS', color: '#8b5cf6', icon: '⚡' },
+  anidisk: { name: 'AniDisk', badge: 'Regional Dub', color: '#f97316', icon: '📀' },
+  animeflv: { name: 'AnimeFLV', badge: 'Audio Latino', color: '#ef4444', icon: '🔥' },
+  hdrezka: { name: 'HDRezka', badge: 'Ultra HD', color: '#06b6d4', icon: '🎬' },
+  jkanime: { name: 'JKAnime', badge: 'Desu HLS', color: '#14b8a6', icon: '🌸' },
   watchanimeworld: { name: 'WatchAnimeWorld', badge: 'Direct MP4', color: '#10b981', icon: '🌐' },
   animewave: { name: 'AnimeWave', badge: 'HLS Fast', color: '#8b5cf6', icon: '🌊' },
   animekai: { name: 'AnimeKai', badge: 'Ultra Stream', color: '#f59e0b', icon: '⚡' },
+  animedubhindi: { name: 'AnimeDubHindi', badge: 'Hindi Dub', color: '#eab308', icon: '🇮🇳' },
+  desidubanime: { name: 'DesiDubAnime', badge: 'Desi Dub', color: '#f59e0b', icon: '🎧' },
 };
 
 /**
@@ -40,9 +47,16 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       anikoto: [],
       hianime: [],
       aniwatch: [],
+      anipm: [],
+      anidisk: [],
+      animeflv: [],
+      hdrezka: [],
+      jkanime: [],
       watchanimeworld: [],
       animewave: [],
       animekai: [],
+      animedubhindi: [],
+      desidubanime: [],
     };
     const results = [];
     let source = 'd1';
@@ -147,7 +161,21 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       const bridgeBase = env.STREAM_BRIDGE_URL || '';
 
       if (bridgeBase) {
-        const bridgeSearches = ['aniwatch', 'hianime', 'anikoto', 'watchanimeworld', 'animewave', 'animekai'].map(async (provider) => {
+        const bridgeSearches = [
+          'aniwatch',
+          'hianime',
+          'anikoto',
+          'anipm',
+          'anidisk',
+          'animeflv',
+          'hdrezka',
+          'jkanime',
+          'watchanimeworld',
+          'animewave',
+          'animekai',
+          'animedubhindi',
+          'desidubanime',
+        ].map(async (provider) => {
           try {
             const searchUrl = new URL(`${bridgeBase}/search`);
             searchUrl.searchParams.set('q', q);
