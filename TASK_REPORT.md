@@ -1289,6 +1289,38 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
 2. **Target 12: Offline Progressive Web App (PWA) with Background Sync & Cache Storage**
    - Service worker cache strategies for offline shell, episode manifests, and saved library items.
 
+---
+
+## 36. Multi-Provider Toolkits Integration Report (`C:\api` -> AniHubStream)
+
+**Checkpoint Commit:** `097f24b`  
+**Date:** 2026-11-03  
+**Status:** COMPLETE & DETERMINISTICALLY VERIFIED  
+
+### 1. Architectural Overview & Context
+Reverse engineered tools and clients located in `C:\api` were inspected, adapted, and seamlessly integrated into the hybrid Edge (`functions/api/`) + Stream Bridge (`api/`) architecture:
+- **`anipm` ([`api/anipm.mjs`](file:///C:/anihubstream-local/api/anipm.mjs)):** High-speed Settlar HLS stream integration with OP/ED intro/outro skip intervals and multi-lingual WebVTT subtitle tracks.
+- **`anidisk` ([`api/anidisk.mjs`](file:///C:/anihubstream-local/api/anidisk.mjs)):** 15 Indian Regional Dubbed Languages (Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, etc.) resolving through `api.deadbase.host` (EarnVids & Hydrax).
+- **`animeflv` ([`api/animeflv.mjs`](file:///C:/anihubstream-local/api/animeflv.mjs)):** Spanish & Audio Latino streaming decoupler resolving Zilla Networks HLS playlists (`player.zilla-networks.com`) and Base64 embed mirrors.
+- **`hdrezka` ([`api/hdrezka.mjs`](file:///C:/anihubstream-local/api/hdrezka.mjs)):** Voidboost CDN multi-quality HLS manifests & direct MP4 streams (360p - 1080p Ultra) with Russian, Ukrainian, and English multi-voice audio.
+- **`jkanime` ([`api/jkanime.mjs`](file:///C:/anihubstream-local/api/jkanime.mjs)):** Spanish Desu & Magi direct HLS streaming decoupler with Base64 remote server mirrors.
+- **`animedubhindi` ([`api/animedubhindi.mjs`](file:///C:/anihubstream-local/api/animedubhindi.mjs)):** Regional Indian anime dubs and high-speed cloud mirrors.
+- **`desidubanime` ([`api/desidubanime.mjs`](file:///C:/anihubstream-local/api/desidubanime.mjs)):** Multi-server streaming mirrors with Hindi and regional audio tracks.
+
+### 2. Edge & Frontend Layer Integration
+- **Adapter Registry ([`api/adapters/registry.mjs`](file:///C:/anihubstream-local/api/adapters/registry.mjs)):** All 7 new adapters registered with priority ranking, default stream types (`hls` / `mp4`), and audio capability metadata.
+- **Stream Bridge Endpoints ([`api/bridge.mjs`](file:///C:/anihubstream-local/api/bridge.mjs)):** Expanded `/audios` (with Spanish and Russian) and `/downloads` options for all new providers.
+- **Edge Proxy Whitelist ([`functions/api/proxy.js`](file:///C:/anihubstream-local/functions/api/proxy.js)):** Whitelisted 16 upstream domains (`ani.pm`, `settlar.io`, `anidisk.org`, `deadbase.host`, `animeflv.com.ua`, `zilla-networks.com`, `hello-rezka.tv`, `hdrezka.co`, `voidboost.net`, `jkanime.net`, `jkdesa.com`, `animedubhindi.link`, `desidubanime.me`).
+- **Edge Routing & Federated Search ([`functions/api/play.js`](file:///C:/anihubstream-local/functions/api/play.js), [`functions/api/search.js`](file:///C:/anihubstream-local/functions/api/search.js), [`functions/api/home/index.js`](file:///C:/anihubstream-local/functions/api/home/index.js), [`functions/api/_lib.js`](file:///C:/anihubstream-local/functions/api/_lib.js)):** Added provider mapping rows, health tracking, and priority candidate sorting for all providers.
+- **UI Presentation Components ([`src/data/servers.ts`](file:///C:/anihubstream-local/src/data/servers.ts), [`src/components/player/ServerSwitcher.tsx`](file:///C:/anihubstream-local/src/components/player/ServerSwitcher.tsx), [`src/pages/Watch.tsx`](file:///C:/anihubstream-local/src/pages/Watch.tsx), [`src/pages/Home.tsx`](file:///C:/anihubstream-local/src/pages/Home.tsx)):** Added server definitions, theme badges, and audio taxonomy categories (`sub`, `dub`, `hindi`, `spanish`, `russian`).
+
+### 3. Verification & Compliance
+- **Zero-Read D1 Law (Rule 11):** `npm run test:cache` verified with 8/8 tests passing (100% cache hit, 0 unhedged D1 reads).
+- **TypeScript Integrity:** `npx tsc --noEmit` passed with 0 errors.
+- **Vite Pages Build:** `npm run build` completed cleanly in 6.17s.
+- **Provider & Bridge Integration Suite:** `node --test tools/bridge-gap.test.mjs tools/e2e-api-bridge.test.mjs tools/new-providers.test.mjs` passed with **23/23 tests passing** (0 failures).
+
+
 
 
 
