@@ -1263,14 +1263,15 @@ Investigation revealed 5 precise blockers that prevented the anime catalog from 
    - Added `animewave` and `animekai` to `KNOWN_PROVIDERS`, `grouped`, and `bridgeSearches`.
 4. **Synchronized UI Component ([`src/components/player/ServerSwitcher.tsx`](file:///C:/anihubstream-local/src/components/player/ServerSwitcher.tsx)):**
    - Added keys and display names for `WatchAnimeWorld`, `AnimeWave`, and `AnimeKai`.
-5. **Integrated Automated Verification Suite ([`tools/bridge-gap.test.mjs`](file:///C:/anihubstream-local/tools/bridge-gap.test.mjs), [`api/bridge.test.mjs`](file:///C:/anihubstream-local/api/bridge.test.mjs)):**
-   - Verified `/providers`, `/search`, `/details`, `/episodes`, `/dub-check`, and direct MP4 cascade.
+5. **Integrated Automated Verification & End-to-End Suites ([`tools/e2e-api-bridge.test.mjs`](file:///C:/anihubstream-local/tools/e2e-api-bridge.test.mjs), [`tools/bridge-gap.test.mjs`](file:///C:/anihubstream-local/tools/bridge-gap.test.mjs), [`api/bridge.test.mjs`](file:///C:/anihubstream-local/api/bridge.test.mjs)):**
+   - Verified `/providers`, `/search`, `/details`, `/episodes`, `/dub-check`, direct MP4 cascade, and live Edge fallback resolution.
+   - Optimized direct slug lookup in [`functions/api/play.js`](file:///C:/anihubstream-local/functions/api/play.js), [`functions/api/play/resolve.js`](file:///C:/anihubstream-local/functions/api/play/resolve.js), and [`api/bridge.mjs`](file:///C:/anihubstream-local/api/bridge.mjs) when `provider === 'auto'`.
 
 ### What Was Verified:
-- `node --test api/bridge.test.mjs tools/bridge-gap.test.mjs`: **15/15 tests PASSED** (0 failures).
+- `node --test api/bridge.test.mjs tools/bridge-gap.test.mjs tools/e2e-api-bridge.test.mjs`: **22/22 tests PASSED** (0 failures).
 - `npm run test:cache`: **8/8 tests PASSED** (Zero-Read Edge Shield verified).
 - `npx tsc --noEmit`: **PASSED** (0 TypeScript errors).
-- `npm run build`: **PASSED** (Vite pages build in 14.90s).
+- `npm run build`: **PASSED** (Vite pages build in 6.29s).
 
 ---
 

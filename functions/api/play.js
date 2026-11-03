@@ -562,6 +562,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           if (requested) resolveBridgeUrl.searchParams.set('provider', requested);
           if (serverParam) resolveBridgeUrl.searchParams.set('server', serverParam);
           if (resolvedMalId) resolveBridgeUrl.searchParams.set('mal', String(resolvedMalId));
+          const provSlug = (requested && availableSlugs[requested]) || availableSlugs.anikoto || availableSlugs.hianime || availableSlugs.aniwatch || null;
+          if (provSlug) resolveBridgeUrl.searchParams.set('slug', provSlug);
 
           const res = await fetch(resolveBridgeUrl.toString(), {
             headers: { accept: 'application/json' },

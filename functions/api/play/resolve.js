@@ -206,6 +206,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       if (provider) resolveUrl.searchParams.set('provider', provider);
       if (serverParam) resolveUrl.searchParams.set('server', serverParam);
       if (resolvedMalId) resolveUrl.searchParams.set('mal', String(resolvedMalId));
+      if (title && !title.includes(' ')) {
+        const cleanSlug = title.replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai):/i, '');
+        resolveUrl.searchParams.set('slug', cleanSlug);
+      }
 
       try {
         const res = await fetch(resolveUrl.toString(), {

@@ -312,7 +312,7 @@ const server = http.createServer(async (req, res) => {
         for (const adapter of candidateAdapters) {
           try {
             let details = null;
-            if (slug && adapter.id === provider) {
+            if (slug && (adapter.id === provider || provider === 'auto' || !provider)) {
               details = await adapter.details(slug).catch(() => null);
             }
             if (!details && title) {
