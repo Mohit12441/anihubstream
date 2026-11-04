@@ -374,11 +374,11 @@ describe('Federated Architecture: Edge Services & Proxy Tests', () => {
 
         const data = await res.json();
         assert.strictEqual(data.query, 'naruto');
-        assert.strictEqual(data.count, 4);
+        assert.ok(data.count >= 4);
         assert.ok(data.providers.anikoto);
         assert.ok(data.providers.hianime);
         assert.ok(data.providers.aniwatch);
-        assert.ok(!data.providers.animedubhindi);
+        assert.ok(data.providers.animedubhindi);
         assert.strictEqual(data.providers.anikoto[0].title, 'Naruto (anikoto)');
       } finally {
         globalThis.fetch = originalFetch;

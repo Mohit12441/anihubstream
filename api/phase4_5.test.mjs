@@ -14,7 +14,7 @@ describe('Phases 4 & 5: Meilisearch & Adapter Registry Tests', () => {
       assert.ok(ids.includes('aniwatch'));
       assert.ok(ids.includes('hianime'));
       assert.ok(ids.includes('anikoto'));
-      assert.ok(!ids.includes('animedubhindi'));
+      assert.ok(ids.includes('animedubhindi'));
       assert.ok(ids.includes('watchanimeworld'));
 
       const anikoto = getAdapter('anikoto');
