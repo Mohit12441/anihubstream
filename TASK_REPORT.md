@@ -1395,3 +1395,42 @@ Authenticate the production deployment toolchains (`gh` GitHub CLI and `wrangler
    - Reconciled initial snapshot graph divergence with `origin/master` (`9d31036`) via git parent grafting.
    - Fast-forwarded local `master` with all 40+ atomic enhancement commits.
    - Pushed `master` and `agent-workflow-baseline` cleanly to `https://github.com/Mohit12441/anihubstream.git`.
+
+
+---
+
+## 39. GitHub CI Pipeline & Cloudflare Pages Git Build Root Cause Resolution
+
+### 1. Root Cause Analysis
+
+#### A. Cloudflare Pages Automatic Git Build Failure
+- **Symptom**: Cloudflare Pages builds for commits pushed from GitHub timed out with `Failed: build exceeded the time limit and was terminated` after 20 minutes.
+- **Root Cause**: Cloudflare Pages project `anihubstream` had `build_config.build_command` configured as an empty string `""` with `destination_dir: "dist-pages"`. Because `dist-pages/` is in `.gitignore` and not committed to git, the Cloudflare build container waited/hung indefinitely attempting to locate the unbuilt directory until the 20-minute ceiling was hit.
+- **Remediation**:
+  1. Updated the Cloudflare Pages project build configuration via the Cloudflare API to set `build_command: "npm run build:pages"` and `destination_dir: "dist-pages"`.
+  2. Added `.nvmrc` pinning Node version `20.18.0` for consistent build environments.
+
+#### B. GitHub Actions CI (`ci.yml`) Test Failure
+- **Symptom**: GitHub Actions workflow run `41667371982` failed during `npm test` inside the `test` job.
+- **Root Causes**:
+  1. **Top-Level `process.exit(1)` on Import**: `tools/auto-sync-providers.mjs`, `tools/auto-sync-episodes.mjs`, and `tools/sync-episodes.mjs` attempted to connect to `.wrangler/state/v3/d1/...` at top-level module load time and called `process.exit(1)` if the file did not exist on disk. Because `.wrangler/` is git-ignored, running tests in a fresh CI container terminated the entire test process on import.
+  2. **Raw `fetch(http://127.0.0.1:8899)`**: `tools/trending-home.test.mjs` was globbed into `npm test` and attempted live HTTP requests against `127.0.0.1:8899`, which is not running in CI, resulting in `ECONNREFUSED`.
+  3. **Outdated Provider Assertions**: `api/federated.test.mjs` asserted exactly 4 providers and asserted `!animedubhindi`, while `api/phase4_5.test.mjs` asserted `!ids.includes('animedubhindi')`, breaking after the integration of the 7 new C:\api streaming providers.
+  4. **Strict `findSqlitePath` assertions**: `tools/local-sync-daemon.test.mjs` asserted that a local SQLite database always existed on disk.
+- **Remediation**:
+  1. Converted `auto-sync-providers.mjs`, `auto-sync-episodes.mjs`, and `sync-episodes.mjs` to lazy-initialize SQLite connections via `getDb()` only when sync functions are actually invoked.
+  2. Updated `trending-home.test.mjs` with an `isServerUp()` probe that skips live integration checks gracefully when no local dev server is running.
+  3. Updated provider assertions in `api/federated.test.mjs` and `api/phase4_5.test.mjs` to account for all 13 providers including `animedubhindi`.
+  4. Updated `local-sync-daemon.test.mjs` to handle CI environments where `.wrangler/` is absent.
+
+### 2. Verification Evidence
+1. **GitHub Actions CI Workflow Run `41760592801`**:
+   - `test` job: **PASSED (Green)** in 2m36s (all 594 suite tests passed).
+   - `typecheck` step: **PASSED (Green)** with 0 TypeScript errors.
+   - `deploy` job: **PASSED (Green)** in 34s.
+2. **Cloudflare Pages Production Deployment (`9997da15-e9bd-4bba-a14e-bc0e7ddbaad9`)**:
+   - Status: **SUCCESS (Deploy)**.
+   - Built and deployed automatically via Cloudflare's git build pipeline.
+3. **Live Health Verification**:
+   - `curl -s https://anihubstream.pages.dev/api/health` returned HTTP 200:
+     `{"ok":true,"status":"healthy","service":"anihubstream-edge","edge":true}`.
