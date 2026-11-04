@@ -26,15 +26,16 @@ function findSqlitePath() {
   return null;
 }
 
-const sqlitePath = findSqlitePath();
-if (!sqlitePath) {
-  console.error('Local D1 SQLite database not found.');
-  process.exit(1);
+let _db = null;
+function getDb() {
+  if (_db) return _db;
+  const sqlitePath = findSqlitePath();
+  if (!sqlitePath) return null;
+  _db = new DatabaseSync(sqlitePath);
+  _db.exec('PRAGMA journal_mode = WAL;');
+  _db.exec('PRAGMA busy_timeout = 15000;');
+  return _db;
 }
-
-const db = new DatabaseSync(sqlitePath);
-db.exec('PRAGMA journal_mode = WAL;');
-db.exec('PRAGMA busy_timeout = 15000;');
 
 /**
  * Automatically normalize rating scale and synchronize provider mappings
@@ -47,6 +48,12 @@ export async function autoSyncProviders({ quiet = false } = {}) {
     mappingsSynced: 0,
     providersActive: {},
   };
+
+  const db = getDb();
+  if (!db) {
+    if (!quiet) console.error('Local D1 SQLite database not found.');
+    return summary;
+  }
 
   // 1. Enforce 10-point scale on all catalog ratings
   const ratingRes = db.prepare('UPDATE anime SET rating = round(rating / 10.0, 1) WHERE rating > 10').run();

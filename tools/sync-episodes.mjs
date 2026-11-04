@@ -28,15 +28,16 @@ function findSqlitePath() {
   return null;
 }
 
-const sqlitePath = findSqlitePath();
-if (!sqlitePath) {
-  console.error('Local D1 SQLite database not found.');
-  process.exit(1);
+let _db = null;
+function getDb() {
+  if (_db) return _db;
+  const sqlitePath = findSqlitePath();
+  if (!sqlitePath) return null;
+  _db = new DatabaseSync(sqlitePath);
+  _db.exec('PRAGMA journal_mode = WAL;');
+  _db.exec('PRAGMA busy_timeout = 15000;');
+  return _db;
 }
-
-const db = new DatabaseSync(sqlitePath);
-db.exec('PRAGMA journal_mode = WAL;');
-db.exec('PRAGMA busy_timeout = 15000;');
 
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

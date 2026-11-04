@@ -29,39 +29,41 @@ function findSqlitePath() {
   return null;
 }
 
-const sqlitePath = findSqlitePath();
-if (!sqlitePath) {
-  console.error('Local D1 SQLite database not found.');
-  process.exit(1);
-}
+let _db = null;
+let updateEpisodeStmt = null;
+let updateMapStmt = null;
 
-const db = new DatabaseSync(sqlitePath);
-db.exec('PRAGMA journal_mode = WAL;');
-db.exec('PRAGMA busy_timeout = 15000;');
+function getDb() {
+  if (_db) return _db;
+  const sqlitePath = findSqlitePath();
+  if (!sqlitePath) return null;
+  _db = new DatabaseSync(sqlitePath);
+  _db.exec('PRAGMA journal_mode = WAL;');
+  _db.exec('PRAGMA busy_timeout = 15000;');
+  updateEpisodeStmt = _db.prepare(`
+    UPDATE episode
+    SET title = ?,
+        thumb = coalesce(
+          nullif(?, ''),
+          nullif(thumb, ''),
+          (SELECT coalesce(nullif(a.key_art, ''), a.art) FROM anime a WHERE a.id = episode.anime_id)
+        ),
+        synopsis = coalesce(nullif(?, ''), synopsis),
+        airdate = coalesce(nullif(?, ''), airdate)
+    WHERE anime_id = ? AND n = ?
+  `);
+  updateMapStmt = _db.prepare(`
+    UPDATE anime_id_map
+    SET aniwatch_slug = ?
+    WHERE anime_id = ? AND (aniwatch_slug IS NULL OR aniwatch_slug = '')
+  `);
+  return _db;
+}
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const ANILIST_GRAPHQL = 'https://graphql.anilist.co';
 const BATCH_SIZE = 25;
-
-const updateEpisodeStmt = db.prepare(`
-  UPDATE episode
-  SET title = ?,
-      thumb = coalesce(
-        nullif(?, ''),
-        nullif(thumb, ''),
-        (SELECT coalesce(nullif(a.key_art, ''), a.art) FROM anime a WHERE a.id = episode.anime_id)
-      ),
-      synopsis = coalesce(nullif(?, ''), synopsis),
-      airdate = coalesce(nullif(?, ''), airdate)
-  WHERE anime_id = ? AND n = ?
-`);
-
-const updateMapStmt = db.prepare(`
-  UPDATE anime_id_map
-  SET aniwatch_slug = ?
-  WHERE anime_id = ? AND (aniwatch_slug IS NULL OR aniwatch_slug = '')
-`);
 
 const BATCH_QUERY = `
 query($ids: [Int]) {
