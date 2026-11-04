@@ -143,6 +143,13 @@ describe('Local Autonomous Sync Daemon Suite', () => {
   });
 
   it('runSyncCycle respects stage filter and skips non-targeted stages', async () => {
+    const dbPath = findSqlitePath();
+    if (!dbPath) {
+      const res = await runSyncCycle({ quiet: true, expand: 0, stage: 'growth' });
+      assert.equal(res.ok, false);
+      assert.equal(res.error, 'database_not_found');
+      return;
+    }
     // When expand=0, growth is cleanly disabled without network calls
     const res = await runSyncCycle({ quiet: true, expand: 0, stage: 'growth' });
     assert.equal(res.ok, true);
