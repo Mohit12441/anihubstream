@@ -34,143 +34,71 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
     const cleanSlug = candidates[3] || rawSlug;
     let card = await findAnimeByCandidates(env.ANIHUB, candidates);
 
-    // 3. Fallback: dynamically fetch from HiAnime API
+    // 3. Fallback: dynamically fetch from AniList GraphQL API
     if (!card) {
       try {
-        const fetchTarget = encodeURIComponent(rawSlug).replace(/%3A/gi, ':');
-        const hianimeRes = await fetch(`https://animehot.cc/api/anime/${fetchTarget}`, {
-          headers: { referer: 'https://animehot.cc/', 'user-agent': 'Mozilla/5.0' },
-          signal: AbortSignal.timeout(1500),
+        const queryTerm = cleanSlug.replace(/[-_]+/g, ' ').trim();
+        const aniRes = await fetch('https://graphql.anilist.co', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'User-Agent': 'AniHubStream/1.0' },
+          body: JSON.stringify({
+            query: `query ($search: String) {
+              Media(search: $search, type: ANIME) {
+                id
+                idMal
+                title { romaji english native }
+                format
+                status
+                episodes
+                duration
+                averageScore
+                bannerImage
+                coverImage { large extraLarge }
+                startDate { year }
+                description
+                genres
+              }
+            }`,
+            variables: { search: queryTerm },
+          }),
+          signal: AbortSignal.timeout(2000),
         });
-        if (hianimeRes.ok) {
-          const hData = await hianimeRes.json();
-          const hAnime = hData?.anime;
-          if (hAnime && hAnime.title) {
-            // Check if HiAnime provides a mal_id, match it with our local D1 database!
-            if (hAnime.mal_id) {
-              const byMal = await env.ANIHUB.prepare(
-                `SELECT ${CARD_COLUMNS} FROM anime a 
-                 LEFT JOIN anime_id_map m ON a.id = m.anime_id 
-                 WHERE m.mal_id = ?1 OR a.skip_key_id = ?1 OR json_extract(a.source_ids, '$.mal') = ?1 
-                 LIMIT 1`
-              ).bind(hAnime.mal_id).first().catch(() => null);
-
-              if (byMal) {
-                card = byMal;
-                try {
-                  await env.ANIHUB.prepare(
-                    `INSERT OR REPLACE INTO anime_provider_mapping (anime_id, provider_id, provider_slug, confidence, updated_at)
-                     VALUES (?1, 'hianime', ?2, 1.0, datetime('now'))`
-                  ).bind(card.id, rawSlug).run();
-                } catch (_) {}
-              }
-            }
-
-            // If not matched in D1 by mal_id, check title similarity in D1
-            if (!card && hAnime.title) {
-              const cleanTitle = cleanDisplayTitle(hAnime.title);
-              const byTitle = await env.ANIHUB.prepare(
-                `SELECT ${CARD_COLUMNS} FROM anime a WHERE lower(a.title) = lower(?1) LIMIT 1`
-              ).bind(cleanTitle).first().catch(() => null);
-              if (byTitle) {
-                card = byTitle;
-                try {
-                  await env.ANIHUB.prepare(
-                    `INSERT OR REPLACE INTO anime_provider_mapping (anime_id, provider_id, provider_slug, confidence, updated_at)
-                     VALUES (?1, 'hianime', ?2, 0.9, datetime('now'))`
-                  ).bind(card.id, rawSlug).run();
-                } catch (_) {}
-              }
-            }
-
-            // If still not in D1, construct complete HiAnime profile with real episodes
-            if (!card) {
-              let hiEpisodes = [];
-              const epCount = Number(hAnime.totalEpisodes) || Number(hAnime.totalSubbed) || (Array.isArray(hAnime.episodes) ? hAnime.episodes.length : 1);
-              if (hAnime._id && epCount > 1) {
-                try {
-                  const epFetch = await fetch(`https://animehot.cc/api/episodes/${hAnime._id}?start=1&end=${epCount}`, {
-                    headers: { referer: 'https://animehot.cc/', 'user-agent': 'Mozilla/5.0' },
-                    signal: AbortSignal.timeout(3500),
-                  });
-                  if (epFetch.ok) {
-                    const epJson = await epFetch.json();
-                    if (Array.isArray(epJson?.episodes) && epJson.episodes.length > 0) {
-                      hiEpisodes = epJson.episodes.map((ep, i) => ({
-                        id: `${rawSlug}#${ep.episodeNumber || i + 1}`,
-                        n: Number(ep.episodeNumber) || i + 1,
-                        title: cleanDisplayTitle(ep.title?.trim() || `Episode ${ep.episodeNumber || i + 1}`),
-                        runtime: hAnime.Duration || '24m',
-                        runtimeSeconds: 1440,
-                        art: hAnime.image || '',
-                        thumb: hAnime.image || '',
-                        synopsis: ep.synopsis || (epCount === 1 ? (hAnime.synopsis || '') : ''),
-                        markers: [],
-                        airdate: null,
-                      }));
-                    }
-                  }
-                } catch (_) {}
-              }
-
-              if (hiEpisodes.length === 0 && Array.isArray(hAnime.episodes) && hAnime.episodes.length > 0) {
-                hiEpisodes = hAnime.episodes.map((ep, i) => ({
-                  id: `${rawSlug}#${ep.episodeNumber || i + 1}`,
-                  n: Number(ep.episodeNumber) || i + 1,
-                  title: cleanDisplayTitle(ep.title?.trim() || `Episode ${ep.episodeNumber || i + 1}`),
-                  runtime: hAnime.Duration || '24m',
-                  runtimeSeconds: 1440,
-                  art: hAnime.image || '',
-                  thumb: hAnime.image || '',
-                  synopsis: ep.synopsis || (epCount === 1 ? (hAnime.synopsis || '') : ''),
-                  markers: [],
-                  airdate: null,
-                }));
-              }
-
-              const score = Number(hAnime.Score);
-              const normRating = !isNaN(score) && score > 0 ? (score > 10 ? score / 10 : score) : 8.0;
-              const isMovie = (hAnime.Type || '').toLowerCase().includes('movie') || cleanSlug.includes('movie');
-              const finalTitle = cleanDisplayTitle(hAnime.title);
-
-              return ok({
-                id,
-                title: finalTitle,
-                native: hAnime.Japanese || '',
-                year: hAnime.Aired ? Number.parseInt(hAnime.Aired.slice(0, 4), 10) || new Date().getFullYear() : new Date().getFullYear(),
-                rating: Number(normRating.toFixed(1)),
-                season: hAnime.Premiered || '',
-                kind: (hAnime.Type || (isMovie ? 'Movie' : 'TV')).toUpperCase(),
-                status: hAnime.Status?.includes('Finished') ? 'Finished' : 'Ongoing',
-                genres: Array.isArray(hAnime.genres) ? hAnime.genres : [],
-                art: hAnime.image || '',
-                keyArt: hAnime.landScapeImage || hAnime.image || '',
-                accent: '#6366f1',
-                synopsis: hAnime.synopsis || `Stream ${finalTitle} online on AniHubStream.`,
-                rank: null,
-                trendRank: null,
-                altSeasons: [],
-                seasons: [],
-                schedule: null,
-                episodeCount: hiEpisodes.length || (isMovie ? 1 : epCount),
-                episodeTotal: isMovie ? 1 : epCount,
-                episodes: hiEpisodes.length > 0 ? hiEpisodes : Array.from({ length: isMovie ? 1 : epCount }, (_, i) => ({
-                  id: `${id}#${i + 1}`,
-                  n: i + 1,
-                  title: `Episode ${i + 1}`,
-                  runtime: hAnime.Duration || '24m',
-                  runtimeSeconds: 1440,
-                  art: hAnime.image || '',
-                  thumb: hAnime.image || '',
-                  synopsis: isMovie ? (hAnime.synopsis || '') : '',
-                  markers: [],
-                  airdate: null,
-                })),
-                providers: ['hianime'],
-                providerMappings: { hianime: rawSlug },
-                related: [],
-              });
-            }
+        if (aniRes.ok) {
+          const aniJson = await aniRes.json();
+          const media = aniJson?.data?.Media;
+          if (media && media.title) {
+            const canonicalTitle = media.title.english || media.title.romaji || queryTerm;
+            const isMovie = media.format === 'MOVIE';
+            const epCount = media.episodes || (isMovie ? 1 : 12);
+            const poster = media.coverImage?.extraLarge || media.coverImage?.large || '';
+            const banner = media.bannerImage || poster;
+            card = {
+              id: rawSlug,
+              title: canonicalTitle,
+              native: media.title.native || '',
+              year: media.startDate?.year || new Date().getFullYear(),
+              rating: media.averageScore ? media.averageScore / 10 : 8.0,
+              season: media.startDate?.year ? `Year ${media.startDate.year}` : '',
+              kind: isMovie ? 'Movie' : (media.format || 'TV'),
+              status: media.status === 'RELEASING' ? 'Ongoing' : (media.status === 'NOT_YET_RELEASED' ? 'Upcoming' : 'Finished'),
+              art: poster,
+              key_art: banner,
+              accent: '#6366f1',
+              synopsis: (media.description || `Stream ${canonicalTitle} online on AniHubStream.`).replace(/<[^>]+>/g, ''),
+              rank: null,
+              trend_rank: null,
+              alt_seasons: JSON.stringify([]),
+              sched_day: null,
+              sched_day_label: null,
+              sched_date: null,
+              sched_time: null,
+              sched_season: null,
+              sched_episode: null,
+              episode_total: epCount,
+              source_ids: JSON.stringify({ anilist: media.id, mal: media.idMal }),
+              skip_key_id: media.idMal || null,
+              skip_key_space: media.idMal ? 'mal' : null,
+            };
           }
         }
       } catch (_) {}
@@ -234,82 +162,7 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
 
     const isUpcoming = card.status === 'Upcoming' || card.status === 'NOT_YET_RELEASED';
 
-    // If database has no explicit episode rows for this anime, but anime is released/ongoing,
-    // attempt JIT discovery or synthesize addressable episode entries up to episode_total
-    if (episodes.length === 0 && !isUpcoming) {
-      try {
-        const provMap = await env.ANIHUB.prepare(
-          `SELECT provider_slug FROM anime_provider_mapping WHERE anime_id = ?1 AND provider_id = 'anikoto' LIMIT 1`
-        ).bind(card.id).first().catch(() => null);
-        const anikotoSlug = provMap?.provider_slug;
-        if (anikotoSlug) {
-          const watchRes = await fetch(`https://anikoto.cz/watch/${encodeURIComponent(anikotoSlug)}`, {
-            headers: { referer: 'https://anikoto.cz/', 'user-agent': 'Mozilla/5.0' },
-            signal: AbortSignal.timeout(1800),
-          });
-          if (watchRes.ok) {
-            const watchHtml = await watchRes.text();
-            const watchId = watchHtml.match(/<[^>]+\bid="watch-main"[^>]+\bdata-id="([^"]*)"/i)?.[1];
-            if (watchId) {
-              const epRes = await fetch(`https://anikoto.cz/ajax/episode/list/${watchId}?vrf=`, {
-                headers: {
-                  'x-requested-with': 'XMLHttpRequest',
-                  referer: `https://anikoto.cz/watch/${anikotoSlug}`,
-                  'user-agent': 'Mozilla/5.0',
-                },
-                signal: AbortSignal.timeout(1800),
-              });
-              if (epRes.ok) {
-                const epJson = await epRes.json();
-                const epHtml = epJson?.result || epJson?.html || '';
-                const parsedEps = [];
-                for (const m of epHtml.matchAll(/<a\b[^>]*data-ids="[^"]*"[^>]*>[\s\S]*?<\/a>/gi)) {
-                  const tag = m[0];
-                  const numRaw = tag.match(/data-num="([^"]*)"/i)?.[1]?.trim() ?? '';
-                  const num = /^\d+$/.test(numRaw) ? Number(numRaw) : parsedEps.length + 1;
-                  const ts = tag.match(/data-timestamp="([^"]*)"/i)?.[1]?.trim();
-                  const airdate = ts && /^\d+$/.test(ts) ? new Date(Number(ts) * 1000).toISOString().split('T')[0] : null;
-                  const epTitle = tag.match(/class="[^"]*d-title[^"]*"[^>]*>([\s\S]*?)<\/[^>]*>/i)?.[1]?.trim() || `Episode ${num}`;
-                  parsedEps.push({
-                    id: `${card.id}#${num}`,
-                    anime_id: card.id,
-                    n: num,
-                    title: epTitle,
-                    runtime: '24m',
-                    runtime_seconds: 1440,
-                    thumb: fallbackArt,
-                    synopsis: '',
-                    markers: '[]',
-                    airdate,
-                    external_id: `anikoto:${watchId}:${num}`,
-                  });
-                }
-                if (parsedEps.length > 0) {
-                  episodes = parsedEps.map((p) => ({
-                    id: p.id,
-                    n: p.n,
-                    title: p.title,
-                    runtime: p.runtime,
-                    runtimeSeconds: p.runtime_seconds,
-                    art: p.thumb,
-                    thumb: p.thumb,
-                    synopsis: p.synopsis,
-                    markers: [],
-                    airdate: p.airdate,
-                  }));
-                  for (const p of parsedEps) {
-                    env.ANIHUB.prepare(
-                      `INSERT OR IGNORE INTO episode (id, anime_id, n, title, runtime, runtime_seconds, thumb, synopsis, markers, airdate, external_id)
-                       VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11)`
-                    ).bind(p.id, p.anime_id, p.n, p.title, p.runtime, p.runtime_seconds, p.thumb, p.synopsis, p.markers, p.airdate, p.external_id).run().catch(() => {});
-                  }
-                }
-              }
-            }
-          }
-        }
-      } catch {}
-
+    // If database has no explicit episode rows for this anime, synthesize addressable episode entries up to episode_total
       if (episodes.length === 0 && !isUpcoming) {
         const isOngoing = card.status === 'Ongoing' || card.status === 'Airing';
         const count = card.kind === 'Movie' ? 1 : (isOngoing ? 1 : Math.max(1, Math.min(card.episode_total || 1, 2000)));
