@@ -10,6 +10,7 @@
 import { DatabaseSync } from 'node:sqlite';
 import { existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { loadFranchiseCache, mergeFranchiseRelations } from './sync-franchise-relations.mjs';
 
 // Clean title words to prevent matching artifacts
 const RESERVED_WORDS = /^(season|part|cour|act|episode|vol|volume|movie|ova|ona|special|final|first|second|third|fourth|order|zero|live|climax|deluxe|edition)$/i;
@@ -172,6 +173,20 @@ export function findLocalD1DbPath() {
 
 export function persistRelations(db, relations) {
   if (!relations || relations.length === 0) return 0;
+
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS anime_franchise_relation (
+      anime_id         TEXT NOT NULL REFERENCES anime(id) ON DELETE CASCADE,
+      related_id       TEXT NOT NULL REFERENCES anime(id) ON DELETE CASCADE,
+      relation_type    TEXT NOT NULL DEFAULT 'sequel',
+      chronology_order INTEGER DEFAULT 0,
+      created_at       TEXT DEFAULT (datetime('now')),
+      PRIMARY KEY (anime_id, related_id)
+    );
+    CREATE INDEX IF NOT EXISTS idx_afr_anime ON anime_franchise_relation(anime_id, chronology_order ASC);
+    CREATE INDEX IF NOT EXISTS idx_afr_related ON anime_franchise_relation(related_id);
+  `);
+
   const insertStmt = db.prepare(`
     INSERT OR REPLACE INTO anime_franchise_relation (anime_id, related_id, relation_type, chronology_order, created_at)
     VALUES (?, ?, ?, ?, datetime('now'))
@@ -190,13 +205,15 @@ export function persistRelations(db, relations) {
   }
 }
 
-export function autoSyncFranchises(db) {
+export function autoSyncFranchises(db, { authoritativeRelations } = {}) {
   const rows = db.prepare('SELECT id, title, year, season, kind, alt_seasons FROM anime').all();
-  const relations = computeFranchiseGraph(rows);
-  if (relations.length > 0) {
-    persistRelations(db, relations);
+  const heuristicRelations = computeFranchiseGraph(rows);
+  const cached = authoritativeRelations || loadFranchiseCache()?.relations || [];
+  const merged = mergeFranchiseRelations(heuristicRelations, cached);
+  if (merged.length > 0) {
+    persistRelations(db, merged);
   }
-  return relations;
+  return merged;
 }
 
 async function run() {

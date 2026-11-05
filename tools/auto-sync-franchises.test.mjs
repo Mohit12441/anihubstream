@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { computeFranchiseGraph } from './auto-sync-franchises.mjs';
+import { computeFranchiseGraph, autoSyncFranchises } from './auto-sync-franchises.mjs';
+import { DatabaseSync } from 'node:sqlite';
 
 test('auto-sync-franchises: computeFranchiseGraph', async (t) => {
   await t.test('computes bidirectional relations across a multi-season TV franchise', () => {
@@ -63,5 +64,28 @@ test('auto-sync-franchises: computeFranchiseGraph', async (t) => {
     const graph = computeFranchiseGraph(mockCatalog);
     assert.ok(graph.some((r) => r.anime_id === 'original-series' && r.related_id === 'another-arc-id'));
     assert.ok(graph.some((r) => r.anime_id === 'another-arc-id' && r.related_id === 'original-series'));
+  });
+
+  await t.test('autoSyncFranchises merges authoritative franchise relations into D1 table', () => {
+    const db = new DatabaseSync(':memory:');
+    db.exec(`
+      CREATE TABLE anime (id TEXT PRIMARY KEY, title TEXT, year INTEGER, season TEXT, kind TEXT, alt_seasons TEXT);
+      INSERT INTO anime VALUES
+        ('solo-leveling', 'Solo Leveling', 2024, 'Winter 2024', 'TV', NULL),
+        ('solo-leveling-season-2', 'Solo Leveling Season 2: Arise from the Shadow', 2025, 'Winter 2025', 'TV', NULL);
+    `);
+
+    const authoritative = [
+      { anime_id: 'solo-leveling', related_id: 'solo-leveling-season-2', relation_type: 'sequel', chronology_order: 2025 },
+      { anime_id: 'solo-leveling-season-2', related_id: 'solo-leveling', relation_type: 'prequel', chronology_order: 2024 },
+    ];
+
+    const res = autoSyncFranchises(db, { authoritativeRelations: authoritative });
+    assert.ok(res.length >= 2);
+
+    const rows = db.prepare('SELECT * FROM anime_franchise_relation ORDER BY chronology_order ASC').all();
+    assert.equal(rows.length, 2);
+    assert.equal(rows[0].relation_type, 'prequel');
+    assert.equal(rows[1].relation_type, 'sequel');
   });
 });
