@@ -430,7 +430,7 @@ const server = http.createServer(async (req, res) => {
           ? [primaryAdapter, ...allAdapters.filter((a) => a.id !== primaryAdapter.id)]
           : allAdapters;
 
-        for (const adapter of candidateAdapters) {
+        const resolveFromAdapter = async (adapter) => {
           try {
             let details = null;
             if (slug && (adapter.id === provider || provider === 'auto' || !provider)) {
@@ -451,14 +451,11 @@ const server = http.createServer(async (req, res) => {
                 const src = await adapter.sources(targetEp.id || targetEp.ref, { audioType: audio }).catch(() => null);
                 const firstEmbed = src?.embedUrl || (Array.isArray(src?.embeds) && src.embeds[0]) || (Array.isArray(src?.direct) && src.direct[0]?.url) || src?.direct?.[0];
                 if (firstEmbed && adapter.resolve) {
-                  resolved = await adapter.resolve(firstEmbed, { quality: serverParam }).catch(() => null);
-                  if (resolved?.master?.url || resolved?.streamUrl) {
-                    effectiveProvider = adapter.id;
-                    break;
-                  }
+                  const res = await adapter.resolve(firstEmbed, { quality: serverParam }).catch(() => null);
+                  if (res?.master?.url || res?.streamUrl) return res;
                 } else if (Array.isArray(src?.direct) && src.direct.length > 0) {
                   const d = src.direct[0];
-                  resolved = {
+                  return {
                     master: { url: d.url },
                     streamUrl: d.url,
                     quality: d.quality ? `${d.quality}p` : '1080p',
@@ -466,13 +463,46 @@ const server = http.createServer(async (req, res) => {
                     subtitles: src.subtitles || [],
                     proof: { container: d.container || 'mp4', checkedBytes: 65 },
                   };
-                  effectiveProvider = adapter.id;
-                  break;
                 }
               }
             }
-          } catch {
-            // Non-fatal: proceed to next provider in fallback cascade
+          } catch {}
+          return null;
+        };
+
+        // Sub-150ms Parallel Fast-Provider Racing for Tier 1 extractors (priority >= 105)
+        const isAuto = !provider || provider === 'auto';
+        if (isAuto) {
+          const fastTier = candidateAdapters.filter((a) => a.priority >= 105);
+          if (fastTier.length > 0) {
+            let raceWinner = null;
+            await Promise.all(
+              fastTier.map(async (adapter) => {
+                if (raceWinner) return;
+                const res = await resolveFromAdapter(adapter);
+                if (res?.master?.url || res?.streamUrl) {
+                  if (!raceWinner) {
+                    raceWinner = { resolved: res, providerId: adapter.id };
+                  }
+                }
+              })
+            );
+            if (raceWinner) {
+              resolved = raceWinner.resolved;
+              effectiveProvider = raceWinner.providerId;
+            }
+          }
+        }
+
+        // Sequential fallback cascade across candidate adapters
+        if (!resolved?.master?.url && !resolved?.streamUrl) {
+          for (const adapter of candidateAdapters) {
+            const res = await resolveFromAdapter(adapter);
+            if (res?.master?.url || res?.streamUrl) {
+              resolved = res;
+              effectiveProvider = adapter.id;
+              break;
+            }
           }
         }
       }
