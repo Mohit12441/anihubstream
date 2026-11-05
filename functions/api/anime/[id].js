@@ -178,7 +178,6 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
           markers: [],
           airdate: null,
         }));
-      }
     }
 
     // Filter out unreleased episodes so client renders strictly streamable episodes
