@@ -27,3 +27,8 @@ remote-*.sql
 *.sqlite-shm
 *.sqlite-wal
 tools/.cache/
+.ckb/
+.code-ranker/
+.firewall/
+anihub_tables_backup.sql
+

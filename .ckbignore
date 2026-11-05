@@ -1,0 +1,25 @@
+# Documentation & data — not code
+**/*.md
+**/*.txt
+**/*.json
+**/*.jsonc
+**/*.yaml
+**/*.yml
+**/*.csv
+**/*.lock
+
+# Build & cache artifacts
+**/node_modules/**
+**/dist/**
+**/build/**
+**/.cache/**
+**/.next/**
+**/coverage/**
+**/.code-ranker/**
+**/.firewall/**
+**/.ckb/**
+
+# Generated
+**/*.min.js
+**/*.map
+**/*.d.ts
