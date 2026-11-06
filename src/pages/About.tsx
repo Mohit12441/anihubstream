@@ -28,8 +28,7 @@ export function About() {
         <section>
           <h2><Zap size={20} className="inline-icon" /> Next-Generation Streaming Technology</h2>
           <p>
-            AniHubStream is powered by ultra-low-latency global edge streaming with multi-server redundancy across
-            AniKoto, HiAnime, and AniWatch. Trending rankings, release schedules, and video sources update in real time
+            AniHubStream is powered by ultra-low-latency global edge streaming with multi-server redundancy. Trending rankings, release schedules, and video sources update in real time
             to deliver the smoothest streaming experience across all devices.
           </p>
         </section>

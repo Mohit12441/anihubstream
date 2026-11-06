@@ -202,8 +202,6 @@ ON anime_provider_mapping(provider_id, provider_slug);
 
 CREATE INDEX IF NOT EXISTS idx_provider_anime 
 ON anime_provider_mapping(anime_id);
-CREATE INDEX IF NOT EXISTS id_map_by_anikoto_slug ON anime_id_map(anikoto_slug);
-CREATE INDEX IF NOT EXISTS id_map_by_hianime_slug ON anime_id_map(hianime_slug);
 
 -- Automated franchise and season relations for instant, bidirectional season switching
 CREATE TABLE IF NOT EXISTS anime_franchise_relation (

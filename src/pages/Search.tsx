@@ -230,7 +230,7 @@ export function Search() {
           Search Anime
         </h1>
         <p style={{ color: '#94a3b8', fontSize: '0.95rem', marginBottom: '24px' }}>
-          Search thousands of anime series and movies across <strong style={{ color: '#6366f1' }}>AniKoto</strong>, <strong style={{ color: '#ec4899' }}>HiAnime</strong>, and <strong style={{ color: '#3b82f6' }}>AniWatch</strong> with zero buffering.
+          Search thousands of anime series and movies with real-time metadata and multi-server HD streaming.
         </p>
 
         {/* Live Search Input with Instant Clear and Loading Indicator */}

@@ -287,7 +287,7 @@ export function Home() {
                   <ArrowRight size={18} aria-hidden="true" />
                 </Link>
               </h2>
-              <p className="sec-head__hint">Watch across AniKoto, HiAnime & AniWatch servers</p>
+              <p className="sec-head__hint">Stream subbed & dubbed anime in HD across fast servers</p>
             </div>
 
             <div style={{ marginBottom: '18px', overflowX: 'auto', paddingBottom: '4px' }}>
