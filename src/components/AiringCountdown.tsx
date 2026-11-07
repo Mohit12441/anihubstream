@@ -47,12 +47,11 @@ export function AiringCountdown({
 
     update();
 
-    // High precision (1s) when airing soon (<1h), lower frequency (30s) otherwise
-    const intervalMs = (countdown?.totalSeconds ?? 0) <= 3600 ? 1000 : 30000;
-    const timer = setInterval(update, intervalMs);
+    // Live countdown update every second
+    const timer = setInterval(update, 1000);
 
     return () => clearInterval(timer);
-  }, [anime.schedule, anime.episodeTotal, anime.episodeCount, countdown?.totalSeconds]);
+  }, [anime.schedule, anime.episodeTotal, anime.episodeCount]);
 
   if (!countdown) return null;
 

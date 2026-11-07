@@ -33,8 +33,8 @@ const PROVIDER_METAS: Record<string, { name: string; color: string; badge: strin
   anikoto: {
     name: 'AniKoto',
     color: '#e11d48',
-    badge: 'Multi-Mirror Direct',
-    description: 'Direct multi-mirror downloads (Pahe, NekoStream) in 1080p, 720p, and 360p.',
+    badge: 'Kiwi Direct Mirror',
+    description: 'Direct high-speed MP4 downloads from Kiwi CDN in 1080p, 720p, and 360p.',
   },
   hianime: {
     name: 'HiAnime',

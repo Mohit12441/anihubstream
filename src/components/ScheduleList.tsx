@@ -46,9 +46,9 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
     setSubscribedMap((prev) => ({ ...prev, [entry.anime.id]: nextState }));
   };
 
-  // Keep countdown updated every minute
+  // Keep countdown updated live every second
   useEffect(() => {
-    const timer = setInterval(() => setNow(new Date()), 60000);
+    const timer = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
 
@@ -87,6 +87,7 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
             : (e.anime.episodeCount && e.anime.episodeCount > 0 ? e.anime.episodeCount : 1));
 
         const toWatch = `/watch/${e.anime.id}/${targetEp}`;
+
         const pillEpLabel = (!isReleased && nextEp) ? `Next: Ep ${nextEp}` : `Ep ${targetEp}`;
 
         return (
@@ -167,6 +168,7 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
             {/* Time & Direct Watch Action */}
             <div className="tl__end">
               <span className="tl__time" title={`Release airtime: ${e.time}`}>
+                <span className="tl__mobile-day">{e.dayLabel}</span>
                 <Clock size={13} aria-hidden="true" />
                 <span>{e.time}</span>
               </span>

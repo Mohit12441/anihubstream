@@ -16,18 +16,9 @@
 import { DatabaseSync } from 'node:sqlite';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { existsSync, readdirSync } from 'node:fs';
+import { findSqlitePath } from './discover-titles.mjs';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
-export function findSqlitePath() {
-  const d1Dir = resolve(__dirname, '../.wrangler/state/v3/d1/miniflare-D1DatabaseObject');
-  if (existsSync(d1Dir)) {
-    const files = readdirSync(d1Dir).filter((f) => f.endsWith('.sqlite'));
-    if (files.length > 0) return resolve(d1Dir, files[0]);
-  }
-  return null;
-}
+export { findSqlitePath };
 
 let _db = null;
 export function getDb() {

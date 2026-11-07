@@ -313,7 +313,7 @@ export async function bridgeResolve(
           master: s.streamUrl,
           subtitles: (s.subtitles || []).map((sub: any) => ({
             language: sub.language,
-            name: sub.label,
+            name: sub.label || sub.name || 'English',
             url: sub.url,
           })),
           downloads: s.downloads || [],
@@ -362,22 +362,28 @@ export interface AudioList {
  * audio), so this is evidence, not the site's `/dub` label. Cold calls run the
  * probe (~seconds); the bridge caches the verdict per episode for an hour.
  */
-export async function bridgeAudios(title: string, ep: number): Promise<AudioList | ResolveFailure> {
+export async function bridgeAudios(title: string, ep: number, provider = 'anikoto'): Promise<AudioList | ResolveFailure> {
+  const isSubOnly = provider.toLowerCase() === 'anipm' || provider.toLowerCase() === 'torrent';
+  const isHindi = provider.toLowerCase().includes('hindi') || title.toLowerCase().includes('hindi');
+  const baseAudios: AudioOption[] = [
+    { id: 'sub', label: 'Japanese (Sub)', available: true, state: 'verified' },
+  ];
+  if (!isSubOnly) {
+    baseAudios.push({ id: 'dub', label: 'English (Dub)', available: true, state: 'verified' });
+  }
+  if (isHindi) {
+    baseAudios.push({ id: 'hindi', label: 'Hindi (Multi-Audio)', available: true, state: 'verified' });
+  }
+
   if (activeBase === '') {
     return {
       title,
       episode: { number: ep, title: `Episode ${ep}` },
-      audios: [
-        { id: 'sub', label: 'Japanese (Sub)', available: true, state: 'verified' },
-        { id: 'dub', label: 'English (Dub)', available: true, state: 'verified' },
-        { id: 'hindi', label: 'Hindi (Multi-Audio)', available: true, state: 'verified' },
-        { id: 'spanish', label: 'Spanish / Audio Latino', available: true, state: 'verified' },
-        { id: 'russian', label: 'Russian / Ukrainian', available: true, state: 'verified' },
-      ],
+      audios: baseAudios,
     };
   }
   try {
-    const res = await fetch(bridgeUrl(`/audios?title=${encodeURIComponent(title)}&ep=${ep}`), {
+    const res = await fetch(bridgeUrl(`/audios?title=${encodeURIComponent(title)}&ep=${ep}&provider=${encodeURIComponent(provider)}`), {
       signal: AbortSignal.timeout(120_000),
     });
     const body = (await res.json()) as AudioList | ResolveFailure;
@@ -446,7 +452,11 @@ export interface VttFile {
 
 export async function fetchVtt(path: string): Promise<VttFile | null> {
   try {
-    const res = await fetch(bridgeUrl(path), { signal: AbortSignal.timeout(20_000) });
+    let target = bridgeUrl(path);
+    if (target.startsWith('http') && (target.includes('mysubsplay.com') || target.includes('subsplay.com') || target.includes('megaplay.buzz')) && !target.includes('/api/proxy')) {
+      target = `/api/proxy?url=${encodeURIComponent(target)}&referer=${encodeURIComponent('https://megaplay.buzz/')}`;
+    }
+    const res = await fetch(target, { signal: AbortSignal.timeout(20_000) });
     if (!res.ok) return null;
     const text = await res.text();
     return { cues: parseVtt(text), chars: text.length };

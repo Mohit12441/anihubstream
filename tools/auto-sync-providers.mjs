@@ -82,6 +82,17 @@ export async function autoSyncProviders({ quiet = false } = {}) {
     totalMapped += changes;
   }
 
+  // 2b. Backfill AniWatch provider mapping from verified MAL IDs (Edge Direct MegaPlay coverage)
+  const malAniwatchRes = db.prepare(`
+    INSERT OR IGNORE INTO anime_provider_mapping (anime_id, provider_id, provider_slug, confidence, updated_at)
+    SELECT anime_id, 'aniwatch', 'mal:' || mal_id, 0.95, unixepoch()
+    FROM anime_id_map
+    WHERE mal_id IS NOT NULL AND mal_id > 0
+  `).run();
+  if (malAniwatchRes.changes > 0) {
+    totalMapped += Number(malAniwatchRes.changes);
+  }
+
   // 3. Synchronize from anime.source_ids JSON into anime_provider_mapping
   const rowsWithSourceIds = db.prepare(`
     SELECT id, source_ids

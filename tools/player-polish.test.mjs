@@ -18,7 +18,7 @@ describe('TASK 11 (P2) — Player Polish', () => {
     // Must be gated on isStreamResolved
     assert.match(
       watchContent,
-      /\{isStreamResolved\s*&&\s*<li className="badge badge--accent">HD<\/li>\}/,
+      /\{isStreamResolved\s*&&\s*<(li|span) className="badge badge--accent">(1080p )?HD<\/(li|span)>\}/,
       'HD badge must be gated on isStreamResolved state',
     );
   });

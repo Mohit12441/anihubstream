@@ -27,6 +27,7 @@ remote-*.sql
 *.sqlite-shm
 *.sqlite-wal
 tools/.cache/
+scratch/
 .ckb/
 .playwright-mcp/
 .code-ranker/

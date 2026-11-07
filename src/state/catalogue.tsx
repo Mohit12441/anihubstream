@@ -232,7 +232,7 @@ export function useAnimeDetail(id: string): AnimeDetail {
           status: 'ready',
           error: null,
           missing: false,
-          anime: { ...hydrateCard(card), episodes: episodes.map(hydrateEpisode) },
+          anime: { ...hydrateCard(card), episodes: episodes.map(hydrateEpisode), themes: card.themes ?? [] },
           related: related.map(hydrateCard),
         });
       })

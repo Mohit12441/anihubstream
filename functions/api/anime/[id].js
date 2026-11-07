@@ -152,7 +152,7 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
 
     const fallbackArt = card.key_art || card.art || '';
     const { results: episodeRows } = await env.ANIHUB.prepare(
-      `SELECT id, n, title, runtime, runtime_seconds, thumb, synopsis, markers, airdate
+      `SELECT id, n, title, runtime, runtime_seconds, thumb, synopsis, markers, airdate, external_id
          FROM episode WHERE anime_id = ?1 ORDER BY n`,
     )
       .bind(card.id)
@@ -187,8 +187,12 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
       const today = new Date().toISOString().split('T')[0];
       const nextAiringEp = card.sched_episode && card.sched_episode > 0 ? card.sched_episode : null;
       episodes = episodes.filter((ep) => {
+        // Episode 1 has always aired for any ongoing anime
+        if (ep.n === 1) return true;
         // If next airing episode is known, any episode >= nextAiringEp has not aired yet
         if (nextAiringEp !== null && ep.n >= nextAiringEp) return false;
+        // If next airing episode is known and ep.n < nextAiringEp, it has already aired
+        if (nextAiringEp !== null && ep.n < nextAiringEp) return true;
         // If airdate is explicitly in the future, it has not aired yet
         if (ep.airdate && ep.airdate > today) return false;
         // If no airdate and no external provider ID and no synopsis, it's an unpopulated phantom shell
@@ -260,6 +264,13 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
       `SELECT provider_id, provider_slug FROM anime_provider_mapping WHERE anime_id = ?1`
     ).bind(card.id).all().catch(() => ({ results: [] }));
 
+    const { results: themeRows } = await env.ANIHUB.prepare(
+      `SELECT kind, sequence, title, artist, episodes FROM anime_theme WHERE anime_id = ?1 ORDER BY kind DESC, sequence ASC`
+    ).bind(card.id).all().catch(() => ({ results: [] }));
+
+    const isOngoing = card.status === 'Ongoing' || card.status === 'Airing';
+    const cacheTtl = isOngoing ? 1800 : 86400;
+
     return ok({
       ...cardFromRow(card),
       episodeCount: episodes.length,
@@ -268,6 +279,9 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
       providers: (provRows || []).map((p) => p.provider_id),
       providerMappings: Object.fromEntries((provRows || []).map((p) => [p.provider_id, p.provider_slug])),
       related: related.map(cardFromRow),
+      themes: themeRows || [],
+    }, {
+      cache: `public, max-age=${cacheTtl}, s-maxage=${cacheTtl}, stale-while-revalidate=120`,
     });
   } catch (err) {
     return errorResponse(err);

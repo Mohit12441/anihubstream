@@ -1,0 +1,525 @@
+/* ============================================================
+   Anime Detail Page — Cinema Redesign
+   ============================================================ */
+
+.ad-page {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+  color: #f8fafc;
+}
+
+.ad-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 520px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ad-backdrop__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(48px) brightness(0.24) saturate(1.4);
+  transform: scale(1.1);
+}
+
+.ad-backdrop__glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 20%, color-mix(in srgb, var(--tint, #ff2a5f) 28%, transparent), transparent 70%);
+}
+
+.ad-backdrop__fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(7, 7, 11, 0.2) 0%, rgba(7, 7, 11, 0.8) 65%, var(--bg, #07070b) 100%);
+}
+
+.ad-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+/* Breadcrumbs */
+.ad-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.ad-crumbs a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color var(--dur-2, 0.2s) ease;
+}
+
+.ad-crumbs a:hover {
+  color: var(--tint, #ff2a5f);
+}
+
+.ad-crumbs [aria-current='page'] {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+/* Hero Card */
+.ad-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 2.5rem;
+  background: linear-gradient(135deg, rgba(16, 18, 28, 0.84), rgba(10, 11, 18, 0.94));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  padding: 2.25rem;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 860px) {
+  .ad-hero {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1.75rem;
+  }
+}
+
+/* Poster Column */
+.ad-poster-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.ad-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: transform var(--dur-2, 0.2s) ease;
+}
+
+.ad-poster-wrap:hover .ad-poster {
+  transform: scale(1.02);
+}
+
+.ad-poster-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.ad-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--dur-2, 0.2s) ease;
+}
+
+.ad-action-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.ad-action-btn.is-active {
+  background: color-mix(in srgb, var(--tint, #ff2a5f) 20%, transparent);
+  border-color: color-mix(in srgb, var(--tint, #ff2a5f) 65%, transparent);
+  color: #fff;
+}
+
+.ad-action-btn.is-fav.is-active {
+  color: #ff3b69;
+}
+
+/* Meta & Details */
+.ad-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ad-native-title {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.ad-title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.18;
+  margin: 0;
+  color: #fff;
+}
+
+/* Badges */
+.ad-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.ad-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+
+.ad-badge--rating {
+  background: rgba(234, 179, 8, 0.15);
+  border-color: rgba(234, 179, 8, 0.3);
+  color: #eab308;
+}
+
+.ad-badge--status {
+  text-transform: capitalize;
+}
+
+/* Genre Tags */
+.ad-genres-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ad-genre-pill {
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all var(--dur-2, 0.2s) ease;
+}
+
+.ad-genre-pill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Synopsis */
+.ad-synopsis h2,
+.ad-synopsis h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  margin: 0 0 0.4rem;
+}
+
+.ad-synopsis p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* CTA Buttons */
+.ad-cta-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.ad-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, var(--tint, #ff2a5f), color-mix(in srgb, var(--tint, #ff2a5f) 80%, #000));
+  box-shadow: 0 0 24px color-mix(in srgb, var(--tint, #ff2a5f) 45%, transparent), 0 4px 16px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--dur-2, 0.2s) ease;
+}
+
+.ad-cta-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 32px color-mix(in srgb, var(--tint, #ff2a5f) 60%, transparent), 0 8px 24px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.ad-cta-btn--upcoming {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  color: #e2e8f0;
+}
+
+.ad-cta-btn--upcoming:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Streaming Providers Preview Box */
+.ad-servers-box {
+  padding: 14px 16px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+
+.ad-servers-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.ad-servers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ad-server-chip {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.ad-server-chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* Episodes Section */
+.ad-section {
+  margin-top: 3rem;
+}
+
+.ad-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.ad-section-head h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ad-episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1rem;
+}
+
+.ad-ep-card {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  background: rgba(14, 16, 26, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--dur-2, 0.2s) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ad-ep-card:hover {
+  background: rgba(20, 24, 38, 0.9);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.ad-ep-thumb-wrap {
+  position: relative;
+  width: 110px;
+  height: 66px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #181926;
+  flex-shrink: 0;
+}
+
+.ad-ep-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-3, 0.5s) var(--ease-out, ease-out);
+}
+
+.ad-ep-card:hover .ad-ep-thumb {
+  transform: scale(1.08);
+}
+
+.ad-ep-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.ad-ep-title {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #fff;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ad-ep-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.ad-ep-empty-banner {
+  padding: 3rem 1.5rem;
+  background: rgba(14, 16, 26, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.ad-ep-empty-banner h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.ad-ep-empty-banner p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #94a3b8;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Theme Songs */
+.ad-themes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 0.85rem;
+}
+
+.ad-theme-card {
+  padding: 12px 16px;
+  background: rgba(14, 16, 26, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all var(--dur-2, 0.2s) ease;
+}
+
+.ad-theme-card:hover {
+  background: rgba(20, 24, 38, 0.9);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.ad-theme-badge {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.ad-theme-badge--op {
+  background: rgba(56, 189, 248, 0.18);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.ad-theme-badge--ed {
+  background: rgba(168, 85, 247, 0.18);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+.ad-theme-info {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ad-theme-title {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #fff;
+}
+
+.ad-theme-artist {
+  color: #94a3b8;
+  font-size: 12.5px;
+  margin-left: 6px;
+}

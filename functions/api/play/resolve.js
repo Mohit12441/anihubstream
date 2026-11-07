@@ -131,7 +131,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
         if (resolvedMalId > 0 && canUseEdgeDirect) {
           try {
-            const cacheKey = `stream:${provider === 'hianime' ? 'hianime' : 'anikoto'}:${resolvedMalId}:${ep}:${audio}`;
+            const cacheKey = `stream:${provider || 'auto'}:${resolvedMalId}:${ep}:${audio}`;
             let directRes = null;
             if (env.ANIHUB) {
               try {
@@ -162,7 +162,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 }
               }
               if (!directRes) {
-                directRes = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio });
+                directRes = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider });
               }
               if (env.ANIHUB && directRes?.streamUrl) {
                 const ttl = Date.now() + 20 * 60 * 1000;
@@ -173,18 +173,24 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             }
             if (directRes?.streamUrl) {
               const proxyBase = `${url.origin}/api/proxy`;
-              const activeReferer = directRes.referer || 'https://megaplay.buzz/';
+              const activeReferer = directRes.referer || (provider === 'hianime' ? 'https://zokoanime.video/' : 'https://megaplay.buzz/');
               const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=${encodeURIComponent(activeReferer)}`;
 
               const subtitles = (directRes.subtitles || []).map((sub) => ({
                 ...sub,
+                label: sub.label || sub.name || 'English',
+                name: sub.name || sub.label || 'English',
                 url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}` : '',
               }));
 
+              const effectiveProvider = (provider && provider !== 'auto') ? provider : directRes.provider;
+              const cleanServerId = rawServerParam || 'HD-1';
+              const serverIdWithAudio = audio === 'dub' && !cleanServerId.includes('-dub') ? `${cleanServerId}-dub` : cleanServerId;
+              const serverNameWithAudio = audio === 'dub' && !serverParam.includes('(DUB)') ? `${serverParam || 'HD-1'} (DUB)` : (serverParam || 'HD-1');
               const resolvedServer = {
-                id: `${directRes.provider}:${rawServerParam || 'HD-1'}`,
-                name: formatServerName(directRes.provider, serverParam || 'HD-1'),
-                provider: directRes.provider,
+                id: `${effectiveProvider}:${serverIdWithAudio}`,
+                name: formatServerName(effectiveProvider, serverNameWithAudio),
+                provider: effectiveProvider,
                 status: 'ready',
                 streamUrl: proxiedStreamUrl,
                 type: audio === 'dub' ? 'dub' : 'hls',
@@ -263,12 +269,17 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
                     const subtitles = (directRes.subtitles || []).map((sub) => ({
                       ...sub,
+                      label: sub.label || sub.name || 'English',
+                      name: sub.name || sub.label || 'English',
                       url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=https://megaplay.buzz/` : '',
                     }));
 
+                    const cleanServerId = rawServerParam || 'HD-1';
+                    const serverIdWithAudio = audio === 'dub' && !cleanServerId.includes('-dub') ? `${cleanServerId}-dub` : cleanServerId;
+                    const serverNameWithAudio = audio === 'dub' && !serverParam.includes('(DUB)') ? `${serverParam || 'HD-1'} (DUB)` : (serverParam || 'HD-1');
                     const resolvedServer = {
-                      id: `${directRes.provider}:${rawServerParam || 'HD-1'}`,
-                      name: formatServerName(directRes.provider, serverParam || 'HD-1'),
+                      id: `${directRes.provider}:${serverIdWithAudio}`,
+                      name: formatServerName(directRes.provider, serverNameWithAudio),
                       provider: directRes.provider,
                       status: 'ready',
                       streamUrl: proxiedStreamUrl,
@@ -300,20 +311,39 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
         const metaData = bridgeRes;
         const prov = metaData.provider || provider;
+        const proxyBase = `${url.origin}/api/proxy`;
         const masterPath = metaData.master || metaData.streamUrl || '';
-        const streamUrl = masterPath.startsWith('http') ? masterPath : `${bridgeBase}${masterPath}`;
+        const activeReferer = metaData.referer || (prov === 'hianime' ? 'https://zokoanime.video/' : (prov === 'aniwatch' || prov === 'anikoto' ? 'https://megaplay.buzz/' : ''));
+        let streamUrl;
+        if (masterPath.includes('/api/proxy')) {
+          streamUrl = masterPath.startsWith('http') ? masterPath : `${url.origin}${masterPath}`;
+        } else if (masterPath.startsWith('http')) {
+          streamUrl = activeReferer
+            ? `${proxyBase}?url=${encodeURIComponent(masterPath)}&referer=${encodeURIComponent(activeReferer)}`
+            : `${proxyBase}?url=${encodeURIComponent(masterPath)}`;
+        } else {
+          streamUrl = `${bridgeBase}${masterPath}`;
+        }
 
         if (metaData.kind === 'embed' || metaData.type === 'embed' || streamUrl.includes('morencius') || (!streamUrl.includes('.m3u8') && !streamUrl.includes('.mp4') && streamUrl.includes('/embed'))) {
           throw new HttpError(404, 'not_found', 'Direct stream not available; embeds disabled');
         }
 
         const subtitles = (metaData.subtitles || []).map((sub, idx) => {
-          const subUrl = sub.url || sub.proxyUrl || sub.uri || '';
+          let subUrl = sub.url || sub.proxyUrl || sub.uri || '';
+          if (subUrl.startsWith('http') && !subUrl.includes('/api/proxy')) {
+            subUrl = activeReferer
+              ? `${proxyBase}?url=${encodeURIComponent(subUrl)}&referer=${encodeURIComponent(activeReferer)}`
+              : `${proxyBase}?url=${encodeURIComponent(subUrl)}`;
+          } else if (subUrl && !subUrl.startsWith('http')) {
+            subUrl = `${bridgeBase}${subUrl}`;
+          }
           return {
             id: sub.id ? String(sub.id) : `sub-${idx}`,
             language: sub.language || sub.lang || 'en',
-            label: sub.name || sub.label || sub.language?.toUpperCase() || 'English',
-            url: subUrl ? (subUrl.startsWith('http') ? subUrl : `${bridgeBase}${subUrl}`) : '',
+            label: sub.label || sub.name || sub.language?.toUpperCase() || 'English',
+            name: sub.name || sub.label || sub.language?.toUpperCase() || 'English',
+            url: subUrl,
             default: sub.default !== undefined ? Boolean(sub.default) : idx === 0,
           };
         });

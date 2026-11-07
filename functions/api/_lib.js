@@ -124,10 +124,19 @@ export async function withEdgeCache(request, env, ttlSeconds, computeFn, { allow
 
   // 3. Populate Cache if successful (200 OK)
   if (responseToCache.status === 200) {
+    let effectiveTtl = ttlSeconds;
+    const existingCacheControl = responseToCache.headers.get('Cache-Control');
+    if (existingCacheControl) {
+      const match = existingCacheControl.match(/s-maxage=(\d+)/i) || existingCacheControl.match(/max-age=(\d+)/i);
+      if (match) {
+        effectiveTtl = Number(match[1]);
+      }
+    }
+
     const publicHeaders = new Headers(responseToCache.headers);
     publicHeaders.set(
       'Cache-Control',
-      `public, max-age=${ttlSeconds}, s-maxage=${ttlSeconds}, stale-while-revalidate=300`
+      `public, max-age=${effectiveTtl}, s-maxage=${effectiveTtl}, stale-while-revalidate=300`
     );
     publicHeaders.set('Vary', 'Accept-Encoding');
     publicHeaders.delete('Set-Cookie'); // Crucial: Set-Cookie prevents CDN caching!
@@ -150,7 +159,7 @@ export async function withEdgeCache(request, env, ttlSeconds, computeFn, { allow
           body: bodyText,
           status: cachedResponse.status,
           headers: Object.fromEntries(cachedResponse.headers.entries()),
-          expires: Date.now() + ttlSeconds * 1000,
+          expires: Date.now() + effectiveTtl * 1000,
         });
       } catch {}
     }
@@ -303,6 +312,8 @@ export const cardFromRow = (r) => ({
   trendRank: r.trend_rank ?? null,
   altSeasons: r.alt_seasons ? safeJsonParse(r.alt_seasons, []) : [],
   seasons: r.seasons ? (typeof r.seasons === 'string' ? safeJsonParse(r.seasons, []) : r.seasons) : [],
+  sched_sub_at: r.sched_sub_at ?? null,
+  sched_dub_at: r.sched_dub_at ?? null,
   schedule:
     r.sched_day === null || r.sched_day === undefined
       ? null
@@ -313,6 +324,8 @@ export const cardFromRow = (r) => ({
           time: r.sched_time,
           season: r.sched_season,
           episode: r.sched_episode ?? null,
+          subAt: r.sched_sub_at ?? null,
+          dubAt: r.sched_dub_at ?? null,
         },
   episodeCount: r.episode_count,
   episodeTotal: r.episode_total ?? null,
@@ -335,6 +348,7 @@ export const episodeFromRow = (r, fallbackArt = '') => {
     synopsis: r.synopsis || '',
     markers: safeJsonParse(r.markers, []),
     airdate: r.airdate ?? null,
+    external_id: r.external_id ?? null,
   };
 };
 

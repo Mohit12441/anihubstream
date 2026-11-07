@@ -9,7 +9,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const season = strParam(url, 'season');
     const filter = season ? 'WHERE a.sched_day IS NOT NULL AND a.sched_season = ?1' : 'WHERE a.sched_day IS NOT NULL';
     const stmt = env.ANIHUB.prepare(
-      `SELECT ${CARD_COLUMNS} FROM anime a ${filter} ORDER BY a.sched_day, a.sched_time`,
+      `SELECT ${CARD_COLUMNS}, a.sched_sub_at, a.sched_dub_at 
+       FROM anime a ${filter} ORDER BY a.sched_day, a.sched_time`,
     );
     const { results } = await (season ? stmt.bind(season) : stmt).all();
 

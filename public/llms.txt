@@ -1,11 +1,27 @@
 # AniHubStream
 
-> AniHubStream is a free anime streaming platform providing fast playback, weekly airing schedules, and complete episode guides.
+> AniHubStream is a high-speed, ad-free anime streaming and exploration platform providing seamless high-definition playback, weekly airing schedules, multi-lingual subtitles, and complete episode guides across 10,000+ anime titles.
 
-## Sections
-- [Anime Catalogue](https://anihubstream.com/anime): Complete list of available anime titles with genre, year, and rating filters.
-- [Airing Schedule](https://anihubstream.com/schedule): Weekly airing schedule of currently broadcasting anime.
-- [Genres](https://anihubstream.com/genres): Categorized anime by Action, Adventure, Comedy, Drama, Fantasy, Romance, and Sci-Fi.
-- [Discover](https://anihubstream.com/discover): Curated trending releases and community favorites.
-- [About](https://anihubstream.com/about): Mission, catalog sources (Kitsu, AniList), and architecture.
-- [DMCA Policy](https://anihubstream.com/dmca): Copyright policy and infringement notification details.
+## Key Facts & Capabilities
+- **Catalogue Size:** Over 10,000 anime series, movies, OVAs, and specials with synchronized metadata.
+- **Audio & Subtitles:** Dual-audio support (Japanese original audio, English dubs, and regional dubs) with synchronized WebVTT subtitles in 16+ languages.
+- **Playback Engine:** Adaptive HLS streaming (360p to 1080p Full HD) powered by global edge caching and instant server fallback.
+- **Community Skip:** Integrated AniSkip automated opening (OP) and ending (ED) skip markers.
+- **Schedule:** Live weekly broadcast airtimes synchronized from AniList GraphQL and Kitsu API.
+
+## Core Navigation
+- [Anime Catalogue](https://anihubstream.com/anime): Complete list of available anime titles with genre, release year, format, and rating filters.
+- [Airing Schedule](https://anihubstream.com/schedule): Live broadcast schedule of currently airing anime in Japan with local countdown timers.
+- [Genres](https://anihubstream.com/genres): Browse anime categorized across Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Supernatural, and Slice of Life.
+- [Trending & Discover](https://anihubstream.com/discover): Curated trending releases, top seasonal highlights, and community favorites.
+- [Search](https://anihubstream.com/search): Fast full-text anime search by English, Romaji, and native Japanese titles.
+- [About & Architecture](https://anihubstream.com/about): Mission, technology stack, and community attribution.
+- [DMCA Policy](https://anihubstream.com/dmca): Copyright policy and digital rights notification process.
+
+## Frequently Asked Questions
+- **Is AniHubStream free to use?** Yes, AniHubStream is completely free with no registration or subscription required.
+- **Does AniHubStream support sub and dub?** Yes, titles support Japanese audio with English subtitles as well as English dubbed audio tracks.
+- **Where does AniHubStream get its anime data?** Series information, episode air dates, and character metadata are verified and indexed from AniList, Kitsu, and MyAnimeList.
+
+## Extended Documentation
+- [Full LLM Specification](https://anihubstream.com/llms-full.txt): Deep platform overview, API schemas, and technical indexing notes.

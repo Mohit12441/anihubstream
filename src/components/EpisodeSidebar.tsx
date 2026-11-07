@@ -13,6 +13,7 @@ import {
   SkipBack,
   SkipForward,
   Theater,
+  X,
 } from 'lucide-react';
 import { toSeconds } from '../data/model';
 import type { Anime, Episode } from '../data/model';
@@ -34,6 +35,8 @@ interface Props {
   positions: PositionMap;
   theatre: boolean;
   onTheatre: (v: boolean) => void;
+  isDrawer?: boolean;
+  onCloseDrawer?: () => void;
 }
 
 const state = (ep: Episode, anime: Anime, positions: PositionMap) => {
@@ -46,7 +49,19 @@ const state = (ep: Episode, anime: Anime, positions: PositionMap) => {
 
 const BATCH_SIZE = 50;
 
-export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoNext, onAutoNext, positions, theatre, onTheatre }: Props) {
+export function EpisodeSidebar({
+  anime,
+  current,
+  onSelect,
+  onSelectSeason,
+  autoNext,
+  onAutoNext,
+  positions,
+  theatre,
+  onTheatre,
+  isDrawer,
+  onCloseDrawer,
+}: Props) {
   const [term, setTerm] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
   const [open, setOpen] = useState(true);
@@ -91,8 +106,15 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
 
   const watched = anime.episodes.filter((ep) => state(ep, anime, positions).status === 'watched').length;
 
-  return (
-    <aside className={`eps${theatre ? ' is-theatre' : ''}`} aria-label="Episodes">
+  const handleSelectEp = (n: number) => {
+    onSelect(n);
+    if (isDrawer && onCloseDrawer) {
+      onCloseDrawer();
+    }
+  };
+
+  const asideContent = (
+    <aside className={`eps${theatre ? ' is-theatre' : ''}${isDrawer ? ' eps--drawer' : ''}`} aria-label="Episodes">
       <div className="eps__head">
         <div>
           <h2>
@@ -116,15 +138,28 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
           >
             {viewMode === 'list' ? <LayoutGrid size={15} /> : <List size={15} />}
           </button>
-          <button
-            type="button"
-            className="eps__fold"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-label={open ? 'Collapse episode list' : 'Expand episode list'}
-          >
-            {open ? <PanelRightClose size={15} /> : <PanelRightOpen size={15} />}
-          </button>
+          {!isDrawer && (
+            <button
+              type="button"
+              className="eps__fold"
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
+              aria-label={open ? 'Collapse episode list' : 'Expand episode list'}
+            >
+              {open ? <PanelRightClose size={15} /> : <PanelRightOpen size={15} />}
+            </button>
+          )}
+          {isDrawer && onCloseDrawer && (
+            <button
+              type="button"
+              className="eps__fold eps__close"
+              onClick={onCloseDrawer}
+              aria-label="Close episodes drawer"
+              title="Close (Esc)"
+            >
+              <X size={16} />
+            </button>
+          )}
         </div>
       </div>
 
@@ -209,7 +244,7 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
             <button
               type="button"
               className="eps__next"
-              onClick={() => onSelect(next.n)}
+              onClick={() => handleSelectEp(next.n)}
               onMouseEnter={() => {
                 warmStreamOrigins();
                 prefetchEpisode(anime.title, next.n, 'sub');
@@ -240,7 +275,7 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
                   <button
                     type="button"
                     className={`eps__item${isCurrent ? ' is-current' : ''}`}
-                    onClick={() => onSelect(ep.n)}
+                    onClick={() => handleSelectEp(ep.n)}
                     onMouseEnter={() => {
                       warmStreamOrigins();
                       prefetchEpisode(anime.title, ep.n, 'sub');
@@ -296,7 +331,7 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
               <button
                 type="button"
                 className="btn btn--ghost btn--sm"
-                onClick={() => onSelect(Math.max(1, current - 1))}
+                onClick={() => handleSelectEp(Math.max(1, current - 1))}
                 disabled={current <= 1}
               >
                 <SkipBack size={14} aria-hidden="true" /> Previous
@@ -304,7 +339,7 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
               <button
                 type="button"
                 className="btn btn--ghost btn--sm"
-                onClick={() => onSelect(Math.min(total, current + 1))}
+                onClick={() => handleSelectEp(Math.min(total, current + 1))}
                 disabled={current >= total}
               >
                 Next <SkipForward size={14} aria-hidden="true" />
@@ -349,4 +384,20 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
       )}
     </aside>
   );
+
+  if (isDrawer) {
+    return (
+      <div className="eps-drawer">
+        <div className="eps-drawer__backdrop" onClick={onCloseDrawer} aria-hidden="true" />
+        <div className="eps-drawer__sheet" role="dialog" aria-modal="true" aria-label="Episodes Drawer">
+          <div className="eps-drawer__handle-bar" onClick={onCloseDrawer}>
+            <div className="eps-drawer__handle" />
+          </div>
+          {asideContent}
+        </div>
+      </div>
+    );
+  }
+
+  return asideContent;
 }

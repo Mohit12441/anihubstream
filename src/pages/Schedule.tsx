@@ -18,6 +18,7 @@ export function Schedule() {
   const [year, setYear] = useState('All years');
   const [day, setDay] = useState<number | null>(null);
   const [useLocalTime, setUseLocalTime] = useState(true);
+  const [scheduleType, setScheduleType] = useState<'sub' | 'dub'>('sub');
   const [releaseFilter, setReleaseFilter] = useState<ReleaseFilter>('all');
 
   useSEO({
@@ -56,15 +57,26 @@ export function Schedule() {
     () =>
       all.map((e) => {
         const converted = convertSlotTimezone(e, useLocalTime);
+        const schedSubAt = e.sched_sub_at ?? e.subAt ?? e.anime.sched_sub_at ?? e.anime.schedule?.subAt ?? null;
+        const schedDubAt = e.sched_dub_at ?? e.dubAt ?? e.anime.sched_dub_at ?? e.anime.schedule?.dubAt ?? null;
+        const displayTime =
+          scheduleType === 'dub' && schedDubAt
+            ? new Date(schedDubAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
+            : (scheduleType === 'sub' && schedSubAt
+              ? new Date(schedSubAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
+              : converted.time);
+
         return {
           ...e,
           day: converted.day,
           dayLabel: converted.dayLabel,
-          time: converted.time,
+          time: displayTime,
           date: converted.date,
+          sched_sub_at: schedSubAt,
+          sched_dub_at: schedDubAt,
         };
       }),
-    [all, useLocalTime],
+    [all, useLocalTime, scheduleType],
   );
 
   const now = new Date();
@@ -81,12 +93,23 @@ export function Schedule() {
     if (activeYear !== 'All years' && !list.some((e) => String(e.anime.year) === activeYear)) {
       list = allScheduleEntries.map((e) => {
         const converted = convertSlotTimezone(e, useLocalTime);
+        const schedSubAt = e.sched_sub_at ?? e.subAt ?? e.anime.sched_sub_at ?? e.anime.schedule?.subAt ?? null;
+        const schedDubAt = e.sched_dub_at ?? e.dubAt ?? e.anime.sched_dub_at ?? e.anime.schedule?.dubAt ?? null;
+        const displayTime =
+          scheduleType === 'dub' && schedDubAt
+            ? new Date(schedDubAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
+            : (scheduleType === 'sub' && schedSubAt
+              ? new Date(schedSubAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
+              : converted.time);
+
         return {
           ...e,
           day: converted.day,
           dayLabel: converted.dayLabel,
-          time: converted.time,
+          time: displayTime,
           date: converted.date,
+          sched_sub_at: schedSubAt,
+          sched_dub_at: schedDubAt,
         };
       });
     }
@@ -115,6 +138,22 @@ export function Schedule() {
   const airingToday = entries.find((e) => e.day === todayDay)?.anime?.id ?? null;
   const todayCount = convertedAll.filter((e) => e.day === todayDay).length;
 
+  const upcomingCount = useMemo(() => {
+    return convertedAll.filter((e) => {
+      const [hStr = '0', mStr = '0'] = e.time.split(':');
+      const slotTotal = parseInt(hStr, 10) * 60 + parseInt(mStr, 10);
+      return e.day > todayDay || (e.day === todayDay && slotTotal > curTotal);
+    }).length;
+  }, [convertedAll, todayDay, curTotal]);
+
+  const releasedCount = useMemo(() => {
+    return convertedAll.filter((e) => {
+      const [hStr = '0', mStr = '0'] = e.time.split(':');
+      const slotTotal = parseInt(hStr, 10) * 60 + parseInt(mStr, 10);
+      return e.day < todayDay || (e.day === todayDay && slotTotal <= curTotal);
+    }).length;
+  }, [convertedAll, todayDay, curTotal]);
+
   return (
     <div className="page schedule">
       <header className="banner banner--blue">
@@ -138,10 +177,34 @@ export function Schedule() {
       </header>
 
       <div className="shell schedule__body">
+        {/* Sub / Dub Schedule Toggle */}
+        <div className="schedule-toggle" role="group" aria-label="Audio schedule filter" style={{ display: 'flex', gap: '8px', marginBottom: '16px' }}>
+          <button 
+            type="button"
+            className={`pill${scheduleType === 'sub' ? ' is-active' : ''}`}
+            onClick={() => setScheduleType('sub')}
+            aria-pressed={scheduleType === 'sub'}
+            style={{ fontWeight: 600, padding: '0.45rem 1.1rem' }}
+          >
+            Sub Times
+          </button>
+          <button 
+            type="button"
+            className={`pill${scheduleType === 'dub' ? ' is-active' : ''}`}
+            onClick={() => setScheduleType('dub')}
+            aria-pressed={scheduleType === 'dub'}
+            style={{ fontWeight: 600, padding: '0.45rem 1.1rem' }}
+          >
+            Dub Times
+          </button>
+        </div>
+
         {/* Quick Release Filter Tabs */}
         <div className="schedule__quick-bar" role="tablist" aria-label="Episode release status filter">
           <button
             type="button"
+            role="tab"
+            aria-selected={releaseFilter === 'all' && day === null}
             className={`pill${releaseFilter === 'all' && day === null ? ' is-active' : ''}`}
             onClick={() => {
               setReleaseFilter('all');
@@ -154,6 +217,8 @@ export function Schedule() {
 
           <button
             type="button"
+            role="tab"
+            aria-selected={releaseFilter === 'today'}
             className={`pill pill--today${releaseFilter === 'today' ? ' is-active' : ''}`}
             onClick={() => {
               setReleaseFilter('today');
@@ -166,6 +231,8 @@ export function Schedule() {
 
           <button
             type="button"
+            role="tab"
+            aria-selected={releaseFilter === 'upcoming'}
             className={`pill${releaseFilter === 'upcoming' ? ' is-active' : ''}`}
             onClick={() => {
               setReleaseFilter('upcoming');
@@ -173,18 +240,20 @@ export function Schedule() {
             }}
           >
             <Timer size={13} aria-hidden="true" />
-            Upcoming
+            Upcoming ({upcomingCount})
           </button>
 
           <button
             type="button"
+            role="tab"
+            aria-selected={releaseFilter === 'released'}
             className={`pill${releaseFilter === 'released' ? ' is-active' : ''}`}
             onClick={() => {
               setReleaseFilter('released');
               setDay(null);
             }}
           >
-            Episode Released
+            Episode Released ({releasedCount})
           </button>
         </div>
 

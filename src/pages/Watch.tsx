@@ -1,9 +1,23 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import { BookmarkPlus, ChevronRight, Clock, Download, Heart, Play, Share2 } from 'lucide-react';
+import {
+  BookmarkPlus,
+  ChevronRight,
+  Clock,
+  Download,
+  Heart,
+  Info,
+  ListVideo,
+  Play,
+  Server,
+  Share2,
+  SkipBack,
+  SkipForward,
+  Tv,
+} from 'lucide-react';
 import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
 import { DownloadModal } from '../components/player/DownloadModal';
-import { ServerSwitcher } from '../components/player/ServerSwitcher';
+import { cleanServerName, getProvider } from '../components/player/ServerPopover';
 import type { PlayServer } from '../components/player/PlayerInput';
 import { providerFromId, serverIdFromProvider } from '../data/servers';
 import { AnimeCard } from '../components/AnimeCard';
@@ -34,44 +48,6 @@ export function titleMatches(a?: string | null, b?: string | null): boolean {
   const ratio = overlap / Math.max(setA.size, wordsB.length);
   return ratio >= 0.5;
 }
-
-const PROVIDER_THEMES: Record<string, { name: string; icon: string; badge: string; color: string; desc: string }> = {
-  anikoto: {
-    name: 'AniKoto',
-    icon: '⚡',
-    badge: '1080p HLS · 9 Subs',
-    color: '#6366f1',
-    desc: 'Direct HLS streams · 9 Subtitle Tracks · Intro Skip',
-  },
-  aniwatch: {
-    name: 'AniWatch',
-    icon: '🛡️',
-    badge: 'Megaplay Global CDN',
-    color: '#3b82f6',
-    desc: 'Instant zero-buffer · Official Zoro-Tv episode list',
-  },
-  hianime: {
-    name: 'HiAnime',
-    icon: '🌸',
-    badge: 'Multi-Quality (1080p/360p)',
-    color: '#ec4899',
-    desc: 'Complete archive · Adaptive ladders · Multi-Audio',
-  },
-  anipm: {
-    name: 'AniPM',
-    icon: '⚡',
-    badge: 'Settlar 1080p HLS',
-    color: '#8b5cf6',
-    desc: 'Open partner Settlar session stream with precise skip intervals',
-  },
-  torrent: {
-    name: 'P2P Swarm',
-    icon: '🧲',
-    badge: 'WebTorrent P2P',
-    color: '#06b6d4',
-    desc: 'Decentralized peer-to-peer browser video swarm',
-  },
-};
 
 export function Watch() {
   const { id = '', ep } = useParams<{ id: string; ep?: string }>();
@@ -226,18 +202,28 @@ export function Watch() {
   const [theatre, setTheatre] = useState(false);
   const [isStreamResolved, setIsStreamResolved] = useState(false);
   const [downloadOpen, setDownloadOpen] = useState(false);
+  const [epDrawerOpen, setEpDrawerOpen] = useState(false);
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
   const lastFallbackNotified = useRef<string>('');
   const DEFAULT_PLAY_SERVERS: PlayServer[] = [
-    { id: 'hianime:HD-1', name: 'HiAnime · HD-1', provider: 'hianime', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
     { id: 'anikoto:HD-1', name: 'AniKoto · HD-1', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'anikoto:Vidstream-2', name: 'AniKoto · Vidstream-2', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'anikoto:Vidstream-1', name: 'AniKoto · Vidstream-1', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'anikoto:HD-2', name: 'AniKoto · HD-2', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'anikoto:HD-1-dub', name: 'AniKoto · HD-1 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'anikoto:Vidstream-2-dub', name: 'AniKoto · Vidstream-2 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'anikoto:Vidstream-1-dub', name: 'AniKoto · Vidstream-1 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'anikoto:HD-2-dub', name: 'AniKoto · HD-2 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'hianime:HD-1', name: 'HiAnime · HD-1', provider: 'hianime', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
     { id: 'aniwatch:HD-1', name: 'AniWatch · HD-1', provider: 'aniwatch', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'aniwatch:HD-1-dub', name: 'AniWatch · HD-1 (DUB)', provider: 'aniwatch', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
     { id: 'anipm:default', name: 'AniPM · Settlar HD', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'torrent:p2p', name: 'P2P Swarm · WebTorrent', provider: 'torrent', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
   ];
   const [playServers, setPlayServers] = useState<PlayServer[]>(DEFAULT_PLAY_SERVERS);
-  const [scopedProviderUnavailable, setScopedProviderUnavailable] = useState(false);
-  const [providerHealth, setProviderHealth] = useState<Record<string, { status?: string; latencyMs?: number }>>({});
-  const [availableProvidersList, setAvailableProvidersList] = useState<{ id: string; name: string; available: boolean; status?: string; latencyMs?: number }[]>([]);
+  const [_scopedProviderUnavailable, setScopedProviderUnavailable] = useState(false);
+  const [_providerHealth, setProviderHealth] = useState<Record<string, { status?: string; latencyMs?: number }>>({});
+  const [_availableProvidersList, setAvailableProvidersList] = useState<{ id: string; name: string; available: boolean; status?: string; latencyMs?: number }[]>([]);
   const targetProvider = (
     params.get('provider') ||
     (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : '')
@@ -245,15 +231,48 @@ export function Watch() {
   const [activeServerId, setActiveServerId] = useState<string>(
     targetProvider ? serverIdFromProvider(targetProvider) : 'anikoto:HD-1'
   );
+  const [activeTab, setActiveTab] = useState<'episode' | 'anime'>('episode');
 
-  const currentProviderKey = useMemo(() => {
-    if (targetProvider && PROVIDER_THEMES[targetProvider]) return targetProvider;
-    if (activeServerId) {
-      const prov = providerFromId(activeServerId);
-      if (PROVIDER_THEMES[prov]) return prov;
+  const activeServer = useMemo(() => {
+    return playServers.find((s) => s.id === activeServerId) || playServers[0] || null;
+  }, [playServers, activeServerId]);
+
+  const activeProvider = useMemo(() => {
+    return getProvider(activeServer || playServers[0]);
+  }, [activeServer, playServers]);
+
+  const currentSubservers = useMemo(() => {
+    const isDub = prefs.audio === 'dub';
+    const provServers = playServers.filter((s) => getProvider(s).toLowerCase() === activeProvider.toLowerCase());
+    const audioMatching = provServers.filter((s) => {
+      const sDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
+      return isDub ? sDub : !sDub;
+    });
+    return audioMatching.length > 0 ? audioMatching : provServers;
+  }, [playServers, activeProvider, prefs.audio]);
+
+  const hasDubForProvider = useMemo(() => {
+    const provServers = playServers.filter((s) => getProvider(s).toLowerCase() === activeProvider.toLowerCase());
+    return provServers.some((s) => s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub');
+  }, [playServers, activeProvider]);
+
+  const switchAudioMode = (targetAudio: 'sub' | 'dub') => {
+    if (prefs.audio === targetAudio) return;
+    patch({ audio: targetAudio });
+    const matching = playServers.find((s) => {
+      const isProv = getProvider(s).toLowerCase() === activeProvider.toLowerCase();
+      const isDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
+      return isProv && (targetAudio === 'dub' ? isDub : !isDub);
+    });
+    if (matching) {
+      handleSelectServer(matching);
+    } else {
+      const newParams = new URLSearchParams(params);
+      newParams.set('audio', targetAudio);
+      navigate(`/watch/${encodeURIComponent(anime?.id || id || '')}/${epNum}?${newParams.toString()}`, { replace: true });
+      notify(`Audio switched to ${targetAudio.toUpperCase()}`);
     }
-    return 'anikoto';
-  }, [targetProvider, activeServerId]);
+  };
 
   /* Reset stream resolved state on anime or episode change */
   useEffect(() => {
@@ -302,13 +321,17 @@ export function Watch() {
           return true;
         });
         if (serverList.length > 0) {
-          setPlayServers(serverList);
-          const matchingActive = serverList.find((s: PlayServer) => s.id === activeServerId);
+          const mergedServers = [
+            ...serverList,
+            ...DEFAULT_PLAY_SERVERS.filter((def) => !serverList.some((s: PlayServer) => s.id === def.id)),
+          ];
+          setPlayServers(mergedServers);
+          const matchingActive = mergedServers.find((s: PlayServer) => s.id === activeServerId);
           const effectiveProvider = targetProvider || data.scopedProvider;
           const matchedServer = effectiveProvider
             ? (matchingActive && (matchingActive.id.toLowerCase().includes(effectiveProvider) || matchingActive.provider.toLowerCase() === effectiveProvider)
                 ? matchingActive
-                : serverList.find((s: PlayServer) => s.id?.toLowerCase().includes(effectiveProvider) || s.provider?.toLowerCase() === effectiveProvider || s.name?.toLowerCase().includes(effectiveProvider)))
+                : mergedServers.find((s: PlayServer) => s.id?.toLowerCase().includes(effectiveProvider) || s.provider?.toLowerCase() === effectiveProvider || s.name?.toLowerCase().includes(effectiveProvider)))
             : null;
           if (matchedServer) {
             setActiveServerId(matchedServer.id);
@@ -316,8 +339,8 @@ export function Watch() {
             let finalActiveId = targetProvider
               ? serverIdFromProvider(targetProvider)
               : activeServerId;
-            if (!serverList.some((s: PlayServer) => s.id === finalActiveId)) {
-              finalActiveId = serverList[0].id;
+            if (!mergedServers.some((s: PlayServer) => s.id === finalActiveId)) {
+              finalActiveId = mergedServers[0].id;
             }
             setActiveServerId(finalActiveId);
           }
@@ -605,25 +628,17 @@ export function Watch() {
 
   const handleSelectServer = (server: PlayServer) => {
     setActiveServerId(server.id);
-    const srvAudio = (server.audio || (server.type?.toLowerCase() === 'dub' ? 'dub' : 'sub')).toLowerCase();
-    if (srvAudio === 'dub' || srvAudio === 'sub') {
-      if (prefs.audio !== srvAudio) {
-        patch({ audio: srvAudio });
-      }
-    }
+    const isDub = server.id.includes('-dub') || server.audio?.toLowerCase() === 'dub' || server.type?.toLowerCase() === 'dub';
+    const srvAudio: 'dub' | 'sub' = isDub ? 'dub' : 'sub';
+    patch({ audio: srvAudio });
     const newProv = server.provider || providerFromId(server.id).split(':')[0];
     const newParams = new URLSearchParams(params);
     newParams.set('provider', newProv);
+    const serverNameOnly = server.id.includes(':') ? server.id.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '') : server.id;
+    newParams.set('server', serverNameOnly);
+    newParams.set('audio', srvAudio);
     navigate(`/watch/${encodeURIComponent(anime?.id || id || '')}/${epNum}?${newParams.toString()}`, { replace: true });
     notify(`Switched to ${server.name} (${srvAudio.toUpperCase()})`);
-  };
-
-  const handleSwitchProvider = (provKey: string) => {
-    const newParams = new URLSearchParams(params);
-    newParams.set('provider', provKey);
-    setActiveServerId(serverIdFromProvider(provKey));
-    navigate(`/watch/${encodeURIComponent(anime?.id || id || '')}/${epNum}?${newParams.toString()}`, { replace: true });
-    notify(`Switched provider to ${PROVIDER_THEMES[provKey]?.name || provKey}`);
   };
 
   const crumbs = [
@@ -691,213 +706,342 @@ export function Watch() {
             onStreamInfo={setCurrentStream}
             serverId={activeServerId}
             onServerChange={setActiveServerId}
+            servers={playServers}
+            onSelectServer={handleSelectServer}
             initialServer={playServers.find((s) => s.id === activeServerId) || playServers[0] || null}
             initialPartyRoom={params.get('party')}
           />
 
-          {playServers.length > 0 && (
-            <div style={{ marginTop: '16px', marginBottom: '24px' }}>
-              <ServerSwitcher
-                servers={playServers}
-                activeServerId={activeServerId}
-                onSelectServer={handleSelectServer}
-                onSwitchProvider={handleSwitchProvider}
-                scopedProviderUnavailable={scopedProviderUnavailable}
-                scopedProvider={targetProvider || currentProviderKey}
-                providerHealth={providerHealth}
-                availableProvidersList={availableProvidersList}
-              />
+          {/* EXTERNAL SUBSERVER SELECTOR */}
+          {currentSubservers.length > 0 && (
+            <div className="watch__servers-external">
+              <div className="watch__ext-subservers-row">
+                <span className="watch__ext-label">
+                  <Server size={13} aria-hidden="true" />
+                  <span>{activeProvider} ({prefs.audio === 'dub' ? 'DUB' : 'SUB'}):</span>
+                </span>
+                <div className="watch__ext-subservers-list">
+                  {currentSubservers.map((s) => {
+                    const isSelected = s.id === activeServerId;
+                    const name = cleanServerName(s);
+                    return (
+                      <button
+                        key={s.id}
+                        type="button"
+                        className={`watch__ext-subserver-btn${isSelected ? ' is-active' : ''}`}
+                        onClick={() => handleSelectServer(s)}
+                        title={`Switch to ${s.name}`}
+                      >
+                        <span className="watch__ext-subserver-dot" />
+                        <span>{name}</span>
+                        {isSelected && <span className="watch__ext-active-badge">Active</span>}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           )}
 
-          <div className="watch__meta">
-            <div className="watch__meta-head">
-              <h1>
-                {anime.title}
-                {episode ? (
-                  <span>
-                    {' – '}Episode {idx}
-                    {episode.title && episode.title.trim().toLowerCase() !== `episode ${idx}` ? (
-                      <span className="watch__ep-title">: {episode.title}</span>
-                    ) : null}
-                  </span>
-                ) : (
-                  anime.season ? <span> – {anime.season}</span> : null
-                )}
-              </h1>
-              <p className="watch__native" lang="ja">{anime.native}</p>
+          {/* STREAM UTILITY TOOLBAR */}
+          <div className="watch__toolbar">
+            {/* Quick Episode Navigation */}
+            <div className="watch__tb-nav">
+              <button
+                type="button"
+                className="watch__tb-btn"
+                onClick={goPrev}
+                disabled={idx <= 1}
+                title="Previous Episode"
+                aria-label="Previous Episode"
+              >
+                <SkipBack size={15} />
+                <span className="watch__tb-label">Prev</span>
+              </button>
+              <button
+                type="button"
+                className="watch__tb-ep-badge watch__tb-ep-btn"
+                onClick={() => setEpDrawerOpen(true)}
+                title="View all episodes (open drawer)"
+                aria-label={`Episode ${idx} of ${last}. Click to open episode list.`}
+              >
+                <ListVideo size={13} className="watch__tb-ep-icon" aria-hidden="true" />
+                <span>EP</span>
+                <strong>{idx}</strong>
+                <span className="watch__tb-ep-total">/ {last}</span>
+              </button>
+              <button
+                type="button"
+                className="watch__tb-btn"
+                onClick={goNext}
+                disabled={idx >= last}
+                title="Next Episode"
+                aria-label="Next Episode"
+              >
+                <span className="watch__tb-label">Next</span>
+                <SkipForward size={15} />
+              </button>
             </div>
 
-            <ul className="watch__badges">
-              {isStreamResolved && <li className="badge badge--accent">HD</li>}
-              <li className="badge">Sub</li>
-              {anime.genres.map((g: string) => (
-                <li key={g} className="badge">
-                  <Link to={`/genres?genre=${g}`}>{genreLabel(g)}</Link>
-                </li>
-              ))}
-            </ul>
-
-            {episode && (
-              <div
-                className="watch__ep-details"
-                style={{
-                  margin: '20px 0',
-                  padding: '16px',
-                  background: 'rgba(255, 255, 255, 0.03)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  borderRadius: '10px',
-                  display: 'flex',
-                  gap: '16px',
-                  alignItems: 'flex-start',
-                }}
-              >
-                {episode.thumb ? (
-                  <img
-                    src={episode.thumb}
-                    alt={episode.title}
-                    style={{
-                      width: '160px',
-                      aspectRatio: '16/9',
-                      borderRadius: '6px',
-                      objectFit: 'cover',
-                      flexShrink: 0,
-                    }}
-                    loading="lazy"
-                  />
-                ) : null}
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      flexWrap: 'wrap',
-                      marginBottom: '6px',
-                    }}
+            {/* Quick Audio Switcher */}
+            <div className="watch__tb-stream">
+              <div className="watch__tb-audio-switch" role="group" aria-label="Audio selection">
+                <button
+                  type="button"
+                  className={`watch__tb-audio-pill${prefs.audio !== 'dub' ? ' is-active' : ''}`}
+                  onClick={() => switchAudioMode('sub')}
+                  aria-pressed={prefs.audio !== 'dub'}
+                >
+                  <span className="watch__tb-audio-dot" />
+                  <span>SUB</span>
+                </button>
+                {hasDubForProvider && (
+                  <button
+                    type="button"
+                    className={`watch__tb-audio-pill${prefs.audio === 'dub' ? ' is-active' : ''}`}
+                    onClick={() => switchAudioMode('dub')}
+                    aria-pressed={prefs.audio === 'dub'}
                   >
-                    <span style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--text-1)' }}>
-                      Episode {idx}
-                      {episode.title && episode.title.trim().toLowerCase() !== `episode ${idx}`
-                        ? `: ${episode.title}`
-                        : ''}
-                    </span>
-                    {episode.runtime && episode.runtime !== '—' && (
-                      <span className="badge" style={{ fontSize: '11px' }}>
-                        {episode.runtime}
-                      </span>
+                    <span className="watch__tb-audio-dot" />
+                    <span>DUB</span>
+                  </button>
+                )}
+              </div>
+            </div>
+
+            {/* Quick Utility Actions */}
+            <div className="watch__tb-actions">
+              <button
+                type="button"
+                className={`watch__tb-btn${inList ? ' is-active' : ''}`}
+                onClick={() => void save()}
+                disabled={busy}
+                title={inList ? 'In My List' : 'Add to My List'}
+              >
+                <BookmarkPlus size={16} />
+                <span className="watch__tb-label">{busy ? 'Saving…' : inList ? 'Saved' : 'List'}</span>
+              </button>
+
+              <button
+                type="button"
+                className="watch__tb-btn"
+                onClick={() => setDownloadOpen(true)}
+                title="Download Episode (High Speed Kiwi CDN)"
+              >
+                <Download size={16} />
+                <span className="watch__tb-label">Download</span>
+              </button>
+
+              <button
+                type="button"
+                className="watch__tb-btn"
+                onClick={() => {
+                  void navigator.clipboard
+                    ?.writeText(window.location.href)
+                    .then(() => notify('Link copied to clipboard.'))
+                    .catch(() => notify(window.location.href));
+                }}
+                title="Share Episode"
+              >
+                <Share2 size={16} />
+                <span className="watch__tb-label">Share</span>
+              </button>
+
+              <button
+                type="button"
+                className={`watch__tb-btn watch__tb-fav${faved ? ' is-faved' : ''}`}
+                onClick={() => {
+                  toggleFavourite(anime.id);
+                  notify(faved ? 'Removed from favourites.' : 'Saved to favourites.');
+                }}
+                title={faved ? 'Remove from Favourites' : 'Add to Favourites'}
+                aria-pressed={faved}
+              >
+                <Heart size={16} fill={faved ? 'currentColor' : 'none'} />
+              </button>
+            </div>
+          </div>
+
+          {/* TABBED METADATA CONTAINER */}
+          <div className="watch__tabs-card">
+            {/* Tab Nav Headers */}
+            <div className="watch__tabs-header" role="tablist">
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activeTab === 'episode'}
+                className={`watch__tab-btn${activeTab === 'episode' ? ' is-active' : ''}`}
+                onClick={() => setActiveTab('episode')}
+              >
+                <Tv size={16} aria-hidden="true" />
+                <span>Episode Overview</span>
+                <span className="watch__tab-badge">Ep {idx}</span>
+              </button>
+
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activeTab === 'anime'}
+                className={`watch__tab-btn${activeTab === 'anime' ? ' is-active' : ''}`}
+                onClick={() => setActiveTab('anime')}
+              >
+                <Info size={16} aria-hidden="true" />
+                <span>About Series</span>
+                {anime.rating ? (
+                  <span className="watch__tab-badge watch__tab-badge--rating">★ {ratingLabel(anime.rating)}</span>
+                ) : null}
+              </button>
+            </div>
+
+            {/* TAB 1: EPISODE DETAILS */}
+            {activeTab === 'episode' && (
+              <div className="watch__tab-panel" role="tabpanel">
+                <div className="watch__ep-overview">
+                  {episode?.thumb ? (
+                    <div className="watch__ep-thumb-wrap">
+                      <img
+                        src={episode.thumb}
+                        alt={episode.title || `Episode ${idx}`}
+                        className="watch__ep-thumb"
+                        loading="lazy"
+                      />
+                      <span className="watch__ep-thumb-duration">{episode.runtime || '24m'}</span>
+                    </div>
+                  ) : null}
+
+                  <div className="watch__ep-info">
+                    <div className="watch__ep-head">
+                      <h2>
+                        Episode {idx}
+                        {episode?.title && episode.title.trim().toLowerCase() !== `episode ${idx}` ? (
+                          <span className="watch__ep-subtitle">: {episode.title}</span>
+                        ) : null}
+                      </h2>
+                      <div className="watch__ep-chips">
+                        {isStreamResolved && <span className="badge badge--accent">1080p HD</span>}
+                        <span className="badge">{prefs.audio === 'dub' ? 'English Dub' : 'Japanese Sub'}</span>
+                        {episode?.airdate && (
+                          <span className="badge badge--subtle">
+                            <Clock size={11} aria-hidden="true" /> Aired: {episode.airdate}
+                          </span>
+                        )}
+                        {episode?.runtime && episode.runtime !== '—' && (
+                          <span className="badge badge--subtle">{episode.runtime}</span>
+                        )}
+                      </div>
+                    </div>
+
+                    <p className="watch__ep-synopsis">
+                      {episode?.synopsis
+                        ? episode.synopsis
+                        : anime.synopsis
+                          ? anime.synopsis
+                          : 'No synopsis available for this episode.'}
+                    </p>
+
+                    {/* Up Next Mini-Card */}
+                    {idx < last && episodes[idx] && (
+                      <div className="watch__ep-next-teaser" onClick={goNext} role="button" tabIndex={0}>
+                        <span className="watch__ep-next-label">UP NEXT</span>
+                        <span className="watch__ep-next-title">
+                          Episode {idx + 1}: {episodes[idx]?.title || `Episode ${idx + 1}`}
+                        </span>
+                        <ChevronRight size={14} aria-hidden="true" />
+                      </div>
                     )}
-                    {episode.airdate && (
-                      <span style={{ fontSize: '12px', color: 'var(--text-3)' }}>
-                        Aired: {episode.airdate}
-                      </span>
+
+                    {/* Live Broadcast Airing Countdown */}
+                    {anime.schedule?.day && anime.schedule?.time && anime.status === 'Ongoing' && (
+                      <div style={{ marginTop: '16px' }}>
+                        <AiringCountdown
+                          anime={{
+                            id: anime.id,
+                            title: anime.title,
+                            poster: anime.poster,
+                            status: anime.status,
+                            schedule: anime.schedule,
+                            episodeTotal: anime.episodeTotal,
+                            episodeCount: anime.episodes?.length ?? anime.episodeCount,
+                          }}
+                          variant="banner"
+                          showRemindMe
+                        />
+                      </div>
                     )}
                   </div>
-                  {episode.synopsis ? (
-                    <p style={{ margin: 0, fontSize: '13.5px', color: 'var(--text-2)', lineHeight: '1.6' }}>
-                      {episode.synopsis}
-                    </p>
-                  ) : (
-                    <p style={{ margin: 0, fontSize: '13px', color: 'var(--text-3)', fontStyle: 'italic' }}>
-                      No synopsis available for this episode.
-                    </p>
-                  )}
                 </div>
               </div>
             )}
 
-            <p className="watch__syn">{anime.synopsis}</p>
+            {/* TAB 2: ANIME DETAILS */}
+            {activeTab === 'anime' && (
+              <div className="watch__tab-panel" role="tabpanel">
+                <div className="watch__anime-overview">
+                  <div className="watch__anime-title-row">
+                    <div>
+                      <h2>{anime.title}</h2>
+                      {anime.native && <p className="watch__native" lang="ja">{anime.native}</p>}
+                    </div>
+                    {anime.season && <span className="badge badge--accent">{anime.season}</span>}
+                  </div>
 
-            <dl className="watch__facts">
-              <div>
-                <dt>Rating</dt>
-                <dd>{ratingLabel(anime.rating)}</dd>
-              </div>
-              <div>
-                <dt>Year</dt>
-                <dd>{anime.year}</dd>
-              </div>
-              <div>
-                <dt>Format</dt>
-                <dd>{anime.kind}</dd>
-              </div>
-              <div>
-                <dt>Status</dt>
-                <dd>{anime.status}</dd>
-              </div>
-              <div>
-                <dt>Runtime</dt>
-                <dd>{episode?.runtime && episode.runtime !== '0:00' && episode.runtime !== '0m' ? episode.runtime : '—'}</dd>
-              </div>
-              <div>
-                <dt>Your position</dt>
-                <dd>{positions[key] ? `${Math.round(positions[key].t / 60)} min in` : 'Not started'}</dd>
-              </div>
-            </dl>
+                  <ul className="watch__badges">
+                    {anime.genres.map((g: string) => (
+                      <li key={g} className="badge">
+                        <Link to={`/genres?genre=${g}`}>{genreLabel(g)}</Link>
+                      </li>
+                    ))}
+                  </ul>
 
-            {anime.schedule?.day && anime.schedule?.time && (
-              <div style={{ margin: '14px 0' }}>
-                <AiringCountdown
-                  anime={{
-                    id: anime.id,
-                    title: anime.title,
-                    poster: anime.poster,
-                    status: anime.status,
-                    schedule: anime.schedule,
-                    episodeTotal: anime.episodeTotal,
-                    episodeCount: anime.episodes?.length ?? anime.episodeCount,
-                  }}
-                  variant="banner"
-                  showRemindMe
-                />
+                  <p className="watch__syn">{anime.synopsis}</p>
+
+                  <dl className="watch__facts">
+                    <div>
+                      <dt>Rating</dt>
+                      <dd>{ratingLabel(anime.rating)}</dd>
+                    </div>
+                    <div>
+                      <dt>Year</dt>
+                      <dd>{anime.year}</dd>
+                    </div>
+                    <div>
+                      <dt>Format</dt>
+                      <dd>{anime.kind}</dd>
+                    </div>
+                    <div>
+                      <dt>Status</dt>
+                      <dd>{anime.status}</dd>
+                    </div>
+                    <div>
+                      <dt>Total Episodes</dt>
+                      <dd>{anime.episodeTotal || anime.episodes?.length || anime.episodeCount || last}</dd>
+                    </div>
+                    <div>
+                      <dt>Your Position</dt>
+                      <dd>{positions[key] ? `${Math.round(positions[key].t / 60)} min in` : 'Not started'}</dd>
+                    </div>
+                  </dl>
+
+                  {anime.schedule?.day && anime.schedule?.time && (
+                    <div style={{ marginTop: '18px' }}>
+                      <AiringCountdown
+                        anime={{
+                          id: anime.id,
+                          title: anime.title,
+                          poster: anime.poster,
+                          status: anime.status,
+                          schedule: anime.schedule,
+                          episodeTotal: anime.episodeTotal,
+                          episodeCount: anime.episodes?.length ?? anime.episodeCount,
+                        }}
+                        variant="banner"
+                        showRemindMe
+                      />
+                    </div>
+                  )}
+                </div>
               </div>
             )}
-
-            <div className="watch__actions">
-              <button
-                type="button"
-                className={`btn btn--ghost${inList ? ' is-on' : ''}`}
-                onClick={() => void save()}
-                disabled={busy}
-                aria-live="polite"
-              >
-                <BookmarkPlus size={17} aria-hidden="true" />
-                {busy ? 'Saving…' : inList ? 'In My List' : 'Add to List'}
-              </button>
-              <button
-                type="button"
-                className="btn btn--ghost"
-                onClick={() => setDownloadOpen(true)}
-              >
-                <Download size={17} aria-hidden="true" />
-                Download
-              </button>
-              <button
-                type="button"
-                className="btn btn--ghost"
-                onClick={() => {
-                  void navigator.clipboard
-                    ?.writeText(window.location.href)
-                    .then(() => notify('Link copied to your clipboard.'))
-                    .catch(() => notify(window.location.href));
-                }}
-              >
-                <Share2 size={17} aria-hidden="true" />
-                Share
-              </button>
-              <button
-                type="button"
-                className={`btn btn--icon watch__fav${faved ? ' is-on' : ''}`}
-                aria-pressed={faved}
-                aria-label={faved ? 'Remove from favourites' : 'Add to favourites'}
-                onClick={() => {
-                  toggleFavourite(anime.id);
-                  notify(faved ? 'Removed from favourites on this device.' : 'Saved to favourites on this device.');
-                }}
-              >
-                <Heart size={18} fill={faved ? 'currentColor' : 'none'} />
-              </button>
-            </div>
           </div>
         </div>
 
@@ -912,6 +1056,22 @@ export function Watch() {
           theatre={theatre}
           onTheatre={setTheatre}
         />
+
+        {epDrawerOpen && (
+          <EpisodeSidebar
+            anime={{ ...anime, episodes }}
+            current={idx}
+            onSelect={selectEpisode}
+            onSelectSeason={selectSeason}
+            autoNext={prefs.autoNext}
+            onAutoNext={(v) => patch({ autoNext: v })}
+            positions={positions}
+            theatre={theatre}
+            onTheatre={setTheatre}
+            isDrawer
+            onCloseDrawer={() => setEpDrawerOpen(false)}
+          />
+        )}
       </div>
 
       <section className="watch__more shell" aria-labelledby="watch-more">

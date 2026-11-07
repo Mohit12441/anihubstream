@@ -280,7 +280,11 @@ const server = http.createServer(async (req, res) => {
 
       const searches = listAdapters().map(async (adapter) => {
         try {
-          const raw = await adapter.search(q);
+          const timeout = AbortSignal.timeout(800);
+          const raw = await Promise.race([
+            adapter.search(q, { signal: timeout }),
+            new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 800)),
+          ]);
           return (raw || []).map((it) => ({
             id: it.id || it.slug,
             slug: it.slug || it.id,
@@ -385,13 +389,15 @@ const server = http.createServer(async (req, res) => {
   if (pathname === '/audios') {
     const title = reqUrl.searchParams.get('title') || 'Anime';
     const ep = Number(reqUrl.searchParams.get('ep') || '1');
+    const provider = (reqUrl.searchParams.get('provider') || 'anikoto').toLowerCase();
+    const isSubOnly = provider === 'anipm' || provider === 'torrent';
     const audios = [
       { id: 'sub', label: 'Japanese (Sub)', available: true, state: 'verified' },
-      { id: 'dub', label: 'English (Dub)', available: true, state: 'verified' },
-      { id: 'hindi', label: 'Hindi (Multi-Audio)', available: true, state: 'verified' },
-      { id: 'spanish', label: 'Spanish (Latino/Castellano)', available: true, state: 'verified' },
-      { id: 'russian', label: 'Russian (Multi-Voice)', available: true, state: 'verified' },
     ];
+    if (!isSubOnly) {
+      audios.push({ id: 'dub', label: 'English (Dub)', available: true, state: 'verified' });
+      audios.push({ id: 'hindi', label: 'Hindi (Multi-Audio)', available: true, state: 'verified' });
+    }
     sendJson(res, 200, {
       title,
       episode: { number: ep, title: `Episode ${ep}` },
@@ -714,9 +720,14 @@ const server = http.createServer(async (req, res) => {
         skip: resolved.skip || null,
         proof,
         master: streamUrl,
+        referer: resolved.master?.headers?.referer || resolved.referer || (effectiveProvider === 'hianime' ? 'https://zokoanime.video/' : (effectiveProvider === 'anikoto' || effectiveProvider === 'aniwatch') ? 'https://megaplay.buzz/' : undefined),
         type: resolved.type || (streamUrl.includes('.m3u8') ? 'hls' : 'embed'),
         defaultEmbed: resolved.defaultEmbed || undefined,
-        subtitles: resolved.subtitles || [],
+        subtitles: (resolved.subtitles || []).map((s) => ({
+          ...s,
+          label: s.label || s.name || 'English',
+          name: s.name || s.label || 'English',
+        })),
         thumbnails: resolved.thumbnails || null,
       };
 

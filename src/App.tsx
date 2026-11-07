@@ -3,7 +3,10 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
+import { AmbientBackground } from './components/AmbientBackground';
 import { checkAiringAlerts } from './lib/notifications';
+import { useMouseGlow } from './lib/useMouseGlow';
+import './styles/interactive-effects.css';
 
 const Watch = lazy(() => import('./pages/Watch').then((m) => ({ default: m.Watch })));
 const AnimeDetail = lazy(() => import('./pages/AnimeDetail').then((m) => ({ default: m.AnimeDetail })));
@@ -32,6 +35,8 @@ export function App() {
   const { pathname } = useLocation();
   const bare = pathname === '/discover';
 
+  useMouseGlow();
+
   useEffect(() => {
     // Airing notification polling
     const initialTimer = setTimeout(() => {
@@ -53,29 +58,32 @@ export function App() {
         Skip to content
       </a>
       <ScrollToTop />
+      <AmbientBackground />
       {!bare && <Header />}
       <main id="main">
-        <Suspense fallback={<div className="page-loading" style={{ minHeight: '60vh' }} />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/watch/:id" element={<Watch />} />
-            <Route path="/watch/:id/:ep" element={<Watch />} />
-            <Route path="/anime" element={<AnimeCatalogue />} />
-            <Route path="/anime/:id" element={<AnimeDetail />} />
-            <Route path="/genres" element={<Genres />} />
-            <Route path="/my-list" element={<MyList />} />
-            <Route path="/watchlist" element={<MyList />} />
-            <Route path="/schedule" element={<Schedule />} />
-            <Route path="/discover" element={<Discover />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/dmca" element={<Dmca />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
+        <div className="page-transition-wrap" key={pathname}>
+          <Suspense fallback={<div className="page-loading" style={{ minHeight: '60vh' }} />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/watch/:id" element={<Watch />} />
+              <Route path="/watch/:id/:ep" element={<Watch />} />
+              <Route path="/anime" element={<AnimeCatalogue />} />
+              <Route path="/anime/:id" element={<AnimeDetail />} />
+              <Route path="/genres" element={<Genres />} />
+              <Route path="/my-list" element={<MyList />} />
+              <Route path="/watchlist" element={<MyList />} />
+              <Route path="/schedule" element={<Schedule />} />
+              <Route path="/discover" element={<Discover />} />
+              <Route path="/search" element={<Search />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/dmca" element={<Dmca />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </div>
       </main>
       <Footer />
     </>

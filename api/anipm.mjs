@@ -324,7 +324,7 @@ export async function resolveStream({ anilistId, ep, lang = 'sub', refresh = fal
       url: s.proxyUrl,
     })),
     skip: settlarData.skip,
-    expiresAt: Date.now() + TTL,
+    expiresAt: Date.now() + TTL.token,
     proof: { container: 'hls', checkedBytes: 188 },
   };
 }
@@ -421,12 +421,8 @@ export async function details(slugOrId) {
     title: cleanId.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
     poster: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=400',
     synopsis: 'AniPM multi-track anime stream.',
-    totalEpisodes: 2000,
-    episodes: Array.from({ length: 2000 }, (_, i) => ({
-      id: `${cleanId}:${i + 1}`,
-      number: i + 1,
-      title: `Episode ${i + 1}`,
-    })),
+    totalEpisodes: 1,
+    episodes: [{ id: `${cleanId}:1`, number: 1, title: 'Episode 1' }],
   };
 }
 

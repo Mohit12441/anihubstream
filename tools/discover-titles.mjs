@@ -31,7 +31,7 @@
    ============================================================ */
 
 import { execFileSync } from 'node:child_process';
-import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
 import { resolve } from 'node:path';
 
@@ -52,8 +52,12 @@ const WRANGLER_JS =
 export function findSqlitePath() {
   const d1Dir = resolve(ROOT, '.wrangler/state/v3/d1/miniflare-D1DatabaseObject');
   if (existsSync(d1Dir)) {
-    const files = readdirSync(d1Dir).filter((f) => f.endsWith('.sqlite') && !f.startsWith('metadata'));
-    if (files.length > 0) return resolve(d1Dir, files[0]);
+    const files = readdirSync(d1Dir)
+      .filter((f) => f.endsWith('.sqlite') && !f.startsWith('metadata'))
+      .map((f) => ({ path: resolve(d1Dir, f), size: statSync(resolve(d1Dir, f)).size }))
+      .filter((f) => f.size > 0)
+      .sort((a, b) => b.size - a.size);
+    if (files.length > 0) return files[0].path;
   }
   return null;
 }

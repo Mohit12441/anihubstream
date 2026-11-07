@@ -8,6 +8,7 @@ import {
   PictureInPicture,
   Play,
   Rewind,
+  Server,
   Settings2,
   SkipBack,
   SkipForward,
@@ -18,6 +19,8 @@ import {
   VolumeX,
 } from 'lucide-react';
 import { stamp } from '../../lib/time';
+import type { PlayServer } from './PlayerInput';
+import { ServerPopover } from './ServerPopover';
 
 interface Props {
   playing: boolean;
@@ -40,6 +43,12 @@ interface Props {
   onToggleCaptions: () => void;
   settingsOpen: boolean;
   onSettings: () => void;
+  serverOpen?: boolean;
+  onToggleServer?: () => void;
+  servers?: PlayServer[];
+  activeServerId?: string;
+  onSelectServer?: (server: PlayServer) => void;
+  onCloseServer?: () => void;
   theatre: boolean;
   onTheatre: () => void;
   full: boolean;
@@ -93,25 +102,27 @@ export function PlayerControls(p: Props) {
           <SkipForward size={18} />
         </button>
 
-        <button
-          type="button"
-          className={`pl__btn${p.muted ? ' is-on' : ''}`}
-          onClick={p.onMute}
-          aria-label={p.muted || p.volume === 0 ? 'Unmute' : 'Mute'}
-        >
-          <Vol size={18} />
-        </button>
-        <input
-          className="pl__vol"
-          type="range"
-          min={0}
-          max={1}
-          step={0.01}
-          value={p.muted ? 0 : p.volume}
-          onChange={(e) => p.onVolume(Number(e.target.value))}
-          aria-label="Volume"
-          aria-valuetext={`${Math.round((p.muted ? 0 : p.volume) * 100)} percent`}
-        />
+        <div className="pl__vol-wrap">
+          <button
+            type="button"
+            className={`pl__btn${p.muted ? ' is-on' : ''}`}
+            onClick={p.onMute}
+            aria-label={p.muted || p.volume === 0 ? 'Unmute' : 'Mute'}
+          >
+            <Vol size={18} />
+          </button>
+          <input
+            className="pl__vol"
+            type="range"
+            min={0}
+            max={1}
+            step={0.01}
+            value={p.muted ? 0 : p.volume}
+            onChange={(e) => p.onVolume(Number(e.target.value))}
+            aria-label="Volume"
+            aria-valuetext={`${Math.round((p.muted ? 0 : p.volume) * 100)} percent`}
+          />
+        </div>
 
         <span className="pl__time">
           <span className="pl__time-cur">{stamp(p.time)}</span>
@@ -145,6 +156,19 @@ export function PlayerControls(p: Props) {
         >
           <PictureInPicture size={18} />
         </button>
+
+        {p.onToggleServer && (
+          <button
+            type="button"
+            className={`pl__btn pl__btn--server${p.serverOpen ? ' is-on' : ''}`}
+            onClick={p.onToggleServer}
+            aria-label="Streaming servers"
+            aria-expanded={p.serverOpen}
+            title="Servers"
+          >
+            <Server size={18} />
+          </button>
+        )}
 
         <button
           type="button"
@@ -205,6 +229,16 @@ export function PlayerControls(p: Props) {
           {p.full ? <Minimize size={18} /> : <Maximize size={18} />}
         </button>
       </div>
+
+      {p.serverOpen && p.servers && p.servers.length > 0 && (
+        <ServerPopover
+          servers={p.servers}
+          activeServerId={p.activeServerId || ''}
+          onSelectServer={p.onSelectServer || (() => {})}
+          isOpen={p.serverOpen}
+          onClose={p.onCloseServer || p.onToggleServer || (() => {})}
+        />
+      )}
     </div>
   );
 }

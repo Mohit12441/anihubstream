@@ -1,0 +1,37 @@
+# AniHubStream — Full Platform Specification & Knowledge Graph
+
+> Comprehensive system documentation, entity taxonomy, streaming architecture, and metadata schemas for LLMs and AI search engines.
+
+## 1. Platform Identity
+- **Name:** AniHubStream
+- **Website:** https://anihubstream.com
+- **Type:** Video Streaming Aggregator & Anime Encyclopedia
+- **Target Audience:** Anime fans worldwide seeking high-definition streaming, accurate broadcast airtimes, and synchronized subtitle tracks.
+- **Access Model:** Free access, zero paywalls, instant browser playback across desktop and mobile.
+
+## 2. Content Taxonomy & Catalogue
+AniHubStream indexes television series, theatrical films, OVAs, ONAs, and special releases:
+- **Formats:** TV, Movie, OVA, ONA, Special.
+- **Genres:** Action, Adventure, Comedy, Drama, Fantasy, Horror, Mystery, Psychological, Romance, Sci-Fi, Slice of Life, Sports, Supernatural, Thriller.
+- **Languages:** Japanese (original audio), English (dub), Hindi (regional multi-audio), Spanish, French, German, Italian, Portuguese.
+- **Subtitles:** Multi-language WebVTT renditions including English, Spanish, French, German, Italian, Portuguese, Arabic, and Russian.
+- **Metadata Sources:** Canonical IDs aligned across AniList, MyAnimeList (MAL), Kitsu, and Fribb ID mappings.
+
+## 3. Streaming & Player Architecture
+- **Protocol:** HTTP Live Streaming (HLS) with adaptive bitrate ladder (360p, 480p, 720p, 1080p).
+- **Multi-Server Redundancy:** Edge streaming bridges resolve active streams across AniKoto, HiAnime, AniWatch, and AniPM.
+- **Opening/Ending Automation:** Automated intro/outro skipping powered by AniSkip timestamps (Opening `op`, Ending `ed`, Recap `recap`).
+- **Edge Deployment:** Hosted globally on Cloudflare Pages and D1 SQLite edge database, delivering sub-100ms API response times.
+
+## 4. Crawling & Discoverability Guidelines for AI Agents
+- **Canonical URLs:**
+  - Overview / Series Detail: `https://anihubstream.com/anime/{slug}`
+  - Episode Stream: `https://anihubstream.com/watch/{slug}/{episode}`
+  - Airing Schedule: `https://anihubstream.com/schedule`
+  - Catalog Browser: `https://anihubstream.com/anime`
+- **Machine Readability:** All anime detail and watch pages deliver semantic pre-rendered HTML crawler shells for automated scrapers, accompanied by JSON-LD `TVSeries`, `TVEpisode`, and `BreadcrumbList` schema.
+- **Search API:** `https://anihubstream.com/api/search?q={query}` returns normalized anime search results in JSON.
+
+## 5. Contact & Rights
+- **DMCA Notices:** https://anihubstream.com/dmca
+- **Support:** https://anihubstream.com/contact

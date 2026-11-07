@@ -186,21 +186,33 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const proxiedStreamUrl = formatProxyUrl(streamResult.streamUrl, streamResult.referer, origin);
 
+    const isDub = audio === 'dub';
     const primaryServer = {
-      id: `anikoto:${selectedServerName}`,
-      name: `AniKoto · ${selectedServerName}`,
+      id: `anikoto:${selectedServerName}${isDub ? '-dub' : ''}`,
+      name: `AniKoto · ${selectedServerName}${isDub ? ' (DUB)' : ''}`,
       provider: 'anikoto',
       status: 'ready',
       streamUrl: proxiedStreamUrl,
       type: 'hls',
       quality: streamResult.quality,
       audio,
-      audioTracks: audio === 'dub'
+      audioTracks: isDub
         ? [{ id: 'en', language: 'en', label: 'English Dub', default: true }]
         : [{ id: 'ja', language: 'ja', label: 'Japanese (Original)', default: true }],
       subtitles: streamResult.subtitles || [],
       downloads: [],
     };
+
+    const allAniKotoServers = [
+      { id: 'anikoto:HD-1', name: 'AniKoto · HD-1', provider: 'anikoto', status: 'ready', streamUrl: '', type: 'hls', quality: '1080p', audio: 'sub', audioTracks: [{ id: 'ja', language: 'ja', label: 'Japanese (Original)', default: true }], subtitles: [], downloads: [] },
+      { id: 'anikoto:Vidstream-2', name: 'AniKoto · Vidstream-2', provider: 'anikoto', status: 'ready', streamUrl: '', type: 'hls', quality: '1080p', audio: 'sub', audioTracks: [{ id: 'ja', language: 'ja', label: 'Japanese (Original)', default: true }], subtitles: [], downloads: [] },
+      { id: 'anikoto:Vidstream-1', name: 'AniKoto · Vidstream-1', provider: 'anikoto', status: 'ready', streamUrl: '', type: 'hls', quality: '1080p', audio: 'sub', audioTracks: [{ id: 'ja', language: 'ja', label: 'Japanese (Original)', default: true }], subtitles: [], downloads: [] },
+      { id: 'anikoto:HD-2', name: 'AniKoto · HD-2', provider: 'anikoto', status: 'ready', streamUrl: '', type: 'hls', quality: '1080p', audio: 'sub', audioTracks: [{ id: 'ja', language: 'ja', label: 'Japanese (Original)', default: true }], subtitles: [], downloads: [] },
+      { id: 'anikoto:HD-1-dub', name: 'AniKoto · HD-1 (DUB)', provider: 'anikoto', status: 'ready', streamUrl: '', type: 'hls', quality: '1080p', audio: 'dub', audioTracks: [{ id: 'en', language: 'en', label: 'English Dub', default: true }], subtitles: [], downloads: [] },
+      { id: 'anikoto:Vidstream-2-dub', name: 'AniKoto · Vidstream-2 (DUB)', provider: 'anikoto', status: 'ready', streamUrl: '', type: 'hls', quality: '1080p', audio: 'dub', audioTracks: [{ id: 'en', language: 'en', label: 'English Dub', default: true }], subtitles: [], downloads: [] },
+      { id: 'anikoto:Vidstream-1-dub', name: 'AniKoto · Vidstream-1 (DUB)', provider: 'anikoto', status: 'ready', streamUrl: '', type: 'hls', quality: '1080p', audio: 'dub', audioTracks: [{ id: 'en', language: 'en', label: 'English Dub', default: true }], subtitles: [], downloads: [] },
+      { id: 'anikoto:HD-2-dub', name: 'AniKoto · HD-2 (DUB)', provider: 'anikoto', status: 'ready', streamUrl: '', type: 'hls', quality: '1080p', audio: 'dub', audioTracks: [{ id: 'en', language: 'en', label: 'English Dub', default: true }], subtitles: [], downloads: [] },
+    ];
 
     const responsePayload = {
       ok: true,
@@ -209,7 +221,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         episode: ep,
         malId,
         provider: 'anikoto',
-        servers: [primaryServer],
+        servers: [primaryServer, ...allAniKotoServers.filter((s) => s.id !== primaryServer.id)],
         source: {
           streamType: 'hls',
           url: proxiedStreamUrl,

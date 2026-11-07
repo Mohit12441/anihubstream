@@ -5,6 +5,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { seasonKey } from './season.mjs';
 import { d1All, d1First, d1Query } from '../cloud-sync/d1.mjs';
+import { findSqlitePath } from './discover-titles.mjs';
 
 const isRemote = process.argv.includes('--remote');
 const WEEK = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
@@ -71,13 +72,8 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
   let ongoingRows = [];
 
   if (!isRemote) {
-    const D1_DIR = './.wrangler/state/v3/d1/miniflare-D1DatabaseObject';
-    if (!fs.existsSync(D1_DIR)) {
-      throw new Error(`Local D1 directory not found: ${D1_DIR}`);
-    }
-    const files = fs.readdirSync(D1_DIR).filter((f) => f.endsWith('.sqlite') && f !== 'metadata.sqlite');
-    if (!files.length) throw new Error('No local D1 sqlite file found.');
-    const dbPath = path.join(D1_DIR, files[0]);
+    const dbPath = findSqlitePath();
+    if (!dbPath) throw new Error('No local D1 sqlite file found.');
     console.log('Target Database:', dbPath);
     db = new DatabaseSync(dbPath);
 

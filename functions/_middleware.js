@@ -18,6 +18,41 @@ export async function onRequest(context) {
       'Disallow: /api/',
       'Disallow: /mylist',
       '',
+      'User-agent: GPTBot',
+      'Allow: /',
+      'Allow: /anime',
+      'Allow: /watch',
+      'Disallow: /api/',
+      'Disallow: /mylist',
+      '',
+      'User-agent: ChatGPT-User',
+      'Allow: /',
+      'Allow: /anime',
+      'Allow: /watch',
+      'Disallow: /api/',
+      'Disallow: /mylist',
+      '',
+      'User-agent: ClaudeBot',
+      'Allow: /',
+      'Allow: /anime',
+      'Allow: /watch',
+      'Disallow: /api/',
+      'Disallow: /mylist',
+      '',
+      'User-agent: PerplexityBot',
+      'Allow: /',
+      'Allow: /anime',
+      'Allow: /watch',
+      'Disallow: /api/',
+      'Disallow: /mylist',
+      '',
+      'User-agent: Google-Extended',
+      'Allow: /',
+      'Allow: /anime',
+      'Allow: /watch',
+      'Disallow: /api/',
+      'Disallow: /mylist',
+      '',
       `Sitemap: ${url.origin}/sitemap.xml`,
     ].join('\n');
     return new Response(robots, {
@@ -187,6 +222,13 @@ export async function onRequest(context) {
             description: desc,
             image: ogImage,
             url: canonical,
+            inLanguage: ['ja', 'en'],
+            countryOfOrigin: 'JP',
+            speakable: {
+              '@type': 'SpeakableSpecification',
+              cssSelector: ['.crawler-synopsis p', '.crawler-episode-synopsis p'],
+            },
+            ...(row.kind ? { genre: row.kind } : {}),
             ...(epNum ? { episodeNumber: epNum } : {}),
             ...(epRow?.airdate ? { datePublished: epRow.airdate } : {}),
             ...(!epNum && row.episode_total ? { numberOfEpisodes: row.episode_total } : {}),
@@ -285,14 +327,36 @@ export async function onRequest(context) {
   } else if (path === '/') {
     jsonLd = {
       '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: 'AniHubStream',
-      url: origin,
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: `${origin}/anime?search={search_term_string}`,
-        'query-input': 'required name=search_term_string',
-      },
+      '@graph': [
+        {
+          '@type': 'WebSite',
+          '@id': `${origin}/#website`,
+          name: 'AniHubStream',
+          url: origin,
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: `${origin}/anime?search={search_term_string}`,
+            'query-input': 'required name=search_term_string',
+          },
+          publisher: {
+            '@id': `${origin}/#organization`,
+          },
+        },
+        {
+          '@type': 'Organization',
+          '@id': `${origin}/#organization`,
+          name: 'AniHubStream',
+          url: origin,
+          logo: `${origin}/emblem.svg`,
+          image: `${origin}/og.png`,
+          description: 'Next-generation anime streaming and exploration platform with multi-server redundancy, weekly airing schedules, and ad-free playback.',
+          sameAs: [
+            'https://github.com/anihubstream',
+            'https://discord.gg/anihubstream',
+            'https://twitter.com/anihubstream',
+          ],
+        },
+      ],
     };
   } else if (path === '/anime') {
     title = 'Anime Catalogue — Discover Series & Movies | AniHubStream';
@@ -332,6 +396,62 @@ export async function onRequest(context) {
   } else if (path === '/about') {
     title = 'About AniHubStream — Free Anime Streaming Platform';
     desc = 'Learn about AniHubStream, our mission, catalog data sources (Kitsu, AniList), and high-performance streaming architecture.';
+    jsonLd = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'AboutPage',
+          name: 'About AniHubStream',
+          url: `${origin}/about`,
+          description: desc,
+        },
+        {
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What is AniHubStream?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'AniHubStream is a free, high-speed anime streaming platform providing subbed and dubbed anime with fast playback, weekly airing schedules, and full episode guides.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Is AniHubStream free to use?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes, AniHubStream is completely free with no registration, subscription, or paywalls required.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Does AniHubStream support subbed and dubbed anime?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes, AniHubStream supports original Japanese audio with multi-language subtitles as well as English and regional dubbed audio streams.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Where does AniHubStream source its anime metadata?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'All series information, episode synopses, and broadcast schedules are verified and synchronized from AniList, Kitsu, and MyAnimeList.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Does AniHubStream support auto-skipping openings and endings?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes, AniHubStream integrates AniSkip community timestamps to automatically skip intros and outros.',
+              },
+            },
+          ],
+        },
+      ],
+    };
   } else if (path === '/dmca') {
     title = 'DMCA & Copyright Policy | AniHubStream';
     desc = 'AniHubStream DMCA copyright infringement notification guidelines and content policy.';
@@ -348,7 +468,18 @@ export async function onRequest(context) {
 
   // Generate crawler-visible semantic HTML body for thin content resolution
   if (path === '/about') {
-    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>About AniHubStream</h1><p>AniHubStream is a high-performance anime streaming platform engineered to provide instant playback, comprehensive metadata, and an ad-free viewing experience. Our catalog features subbed and dubbed anime across TV series, movies, and OVAs, synchronized with leading industry databases including Kitsu and AniList. Designed with edge caching, automated episode guides, and seamless bookmarks.</p></main>`;
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;">` +
+      `<h1>About AniHubStream</h1>` +
+      `<p>AniHubStream is a high-performance anime streaming platform engineered to provide instant playback, comprehensive metadata, and an ad-free viewing experience. Our catalog features subbed and dubbed anime across TV series, movies, and OVAs, synchronized with leading industry databases including Kitsu and AniList. Designed with edge caching, automated episode guides, and seamless bookmarks.</p>` +
+      `<section class="crawler-faq" style="margin-top:2rem;">` +
+        `<h2>Frequently Asked Questions</h2>` +
+        `<h3>What is AniHubStream?</h3><p>AniHubStream is a free, high-speed anime streaming platform providing subbed and dubbed anime with fast playback, weekly airing schedules, and full episode guides.</p>` +
+        `<h3>Is AniHubStream free to use?</h3><p>Yes, AniHubStream is completely free with no registration, subscription, or paywalls required.</p>` +
+        `<h3>Does AniHubStream support subbed and dubbed anime?</h3><p>Yes, AniHubStream supports original Japanese audio with multi-language subtitles as well as English and regional dubbed audio streams.</p>` +
+        `<h3>Where does AniHubStream source its anime metadata?</h3><p>All series information, episode synopses, and broadcast schedules are verified and synchronized from AniList, Kitsu, and MyAnimeList.</p>` +
+        `<h3>Does AniHubStream support auto-skipping openings and endings?</h3><p>Yes, AniHubStream integrates AniSkip community timestamps to automatically skip intros and outros.</p>` +
+      `</section>` +
+    `</main>`;
   } else if (path === '/dmca') {
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>DMCA & Copyright Policy</h1><p>AniHubStream respects intellectual property rights and complies with the Digital Millennium Copyright Act (DMCA). AniHubStream does not host media files on its servers; streams are embedded or linked from third-party services. If you believe your copyrighted work is accessible without authorization, please submit a formal takedown request containing the specific URL, description of work, and contact details.</p></main>`;
   } else if (path === '/privacy') {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { BookmarkPlus, Calendar, ChevronRight, Clock, Film, Heart, Play, Server, Star } from 'lucide-react';
+import { BookmarkPlus, Calendar, ChevronRight, Clock, Film, Heart, Music, Play, Server, Star } from 'lucide-react';
 import { useAnimeDetail, useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
 import { useSEO } from '../lib/useSEO';
@@ -8,10 +8,10 @@ import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { AiringCountdown } from '../components/AiringCountdown';
 import { FranchiseTimeline } from '../components/franchise/FranchiseTimeline';
 import { RecommendedShelf } from '../components/RecommendedShelf';
-import { ratingLabel } from '../data/model';
-import { getPlay } from '../data/api';
+import { ratingLabel, type AnimeTheme } from '../data/model';
+import { getAnimeThemes, getPlay } from '../data/api';
 import { SLUG_REDIRECTS } from '../data/redirects';
-import '../styles/watch.css';
+import '../styles/anime-detail.css';
 
 interface ServerPreview {
   name: string;
@@ -34,6 +34,27 @@ export function AnimeDetail() {
 
   const [servers, setServers] = useState<ServerPreview[]>([]);
   const [serversLoading, setServersLoading] = useState(true);
+  const [themes, setThemes] = useState<AnimeTheme[]>([]);
+
+  // Fetch theme songs (OP/ED)
+  useEffect(() => {
+    if (!id) return;
+    if (anime?.themes && anime.themes.length > 0) {
+      setThemes(anime.themes);
+      return;
+    }
+    let active = true;
+    getAnimeThemes(id)
+      .then((data) => {
+        if (active && Array.isArray(data)) {
+          setThemes(data);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      active = false;
+    };
+  }, [id, anime?.themes]);
 
   // Fetch servers available for episode 1 (/api/play?id=) only for aired anime
   useEffect(() => {
@@ -94,70 +115,55 @@ export function AnimeDetail() {
   const ratingFormatted = anime.rating ? (anime.rating > 10 ? (anime.rating / 10).toFixed(1) : anime.rating.toFixed(1)) : '—';
 
   return (
-    <div className="watch-page" style={{ paddingBottom: '4rem' }}>
+    <div className="ad-page" style={{ '--tint': anime.accent || '#ff2a5f' } as React.CSSProperties}>
       {/* Hero Banner Backdrop */}
-      <div
-        className="watch-backdrop"
-        style={{
-          backgroundImage: `url(${anime.poster})`,
-          height: '340px',
-          filter: 'blur(32px) brightness(0.28)',
-        }}
-      />
+      <div className="ad-backdrop">
+        <img
+          src={anime.key || anime.poster}
+          alt=""
+          className="ad-backdrop__img"
+          aria-hidden="true"
+        />
+        <div className="ad-backdrop__glow" />
+        <div className="ad-backdrop__fade" />
+      </div>
 
-      <div className="watch-shell" style={{ position: 'relative', zIndex: 2, paddingTop: '1.5rem' }}>
+      <div className="ad-shell">
         {/* Breadcrumb Navigation */}
-        <nav className="watch-breadcrumb" aria-label="Breadcrumb">
+        <nav className="ad-crumbs" aria-label="Breadcrumb">
           <Link to="/">Home</Link>
-          <ChevronRight size={14} />
+          <ChevronRight size={13} aria-hidden="true" />
           <Link to="/anime">Anime</Link>
-          <ChevronRight size={14} />
+          <ChevronRight size={13} aria-hidden="true" />
           <span aria-current="page">{anime.title}</span>
         </nav>
 
         {/* Anime Header Card */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-            gap: '2rem',
-            background: 'rgba(15, 17, 23, 0.75)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
-            borderRadius: '16px',
-            padding: '2rem',
-            backdropFilter: 'blur(20px)',
-            marginTop: '1rem',
-          }}
-        >
+        <div className="ad-hero">
           {/* Poster Column */}
-          <div style={{ maxWidth: '280px', margin: '0 auto', width: '100%' }}>
+          <div className="ad-poster-wrap">
             <img
               src={anime.poster}
               alt={anime.title}
-              style={{
-                width: '100%',
-                borderRadius: '12px',
-                boxShadow: '0 12px 36px rgba(0,0,0,0.6)',
-                aspectRatio: '2/3',
-                objectFit: 'cover',
-              }}
+              className="ad-poster"
             />
-            <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem' }}>
+            <div className="ad-poster-actions">
               <button
                 type="button"
-                className={`watch-action-btn ${inList ? 'active' : ''}`}
+                className={`ad-action-btn ${inList ? 'is-active' : ''}`}
                 onClick={() => toggle(anime.id)}
                 disabled={isBusy(anime.id)}
-                style={{ flex: 1, justifyContent: 'center' }}
+                style={{ flex: 1 }}
               >
                 <BookmarkPlus size={16} />
-                <span>{inList ? 'In Watchlist' : 'Add to Watchlist'}</span>
+                <span>{inList ? 'In List' : 'Add to List'}</span>
               </button>
               <button
                 type="button"
-                className={`watch-action-btn ${isFav ? 'active' : ''}`}
+                className={`ad-action-btn ad-action-btn--fav ${isFav ? 'is-active is-fav' : ''}`}
                 onClick={() => toggleFavourite(anime.id)}
-                title="Favorite"
+                title={isFav ? 'Remove from Favourites' : 'Add to Favourites'}
+                aria-label={isFav ? 'Remove from Favourites' : 'Add to Favourites'}
               >
                 <Heart size={16} fill={isFav ? 'currentColor' : 'none'} />
               </button>
@@ -165,36 +171,36 @@ export function AnimeDetail() {
           </div>
 
           {/* Metadata & Actions Column */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div className="ad-meta">
             <div>
               {anime.native && (
-                <div lang="ja" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.9rem', marginBottom: '0.25rem' }}>
+                <div lang="ja" className="ad-native-title">
                   {anime.native}
                 </div>
               )}
-              <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: '0 0 0.5rem', lineHeight: 1.2 }}>
+              <h1 className="ad-title">
                 {anime.title}
               </h1>
             </div>
 
             {/* Badges Row */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', alignItems: 'center' }}>
-              <span className="badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', background: 'rgba(234, 179, 8, 0.15)', color: '#eab308' }}>
+            <div className="ad-badges-row">
+              <span className="ad-badge ad-badge--rating">
                 <Star size={14} fill="currentColor" />
                 {ratingFormatted} {ratingLabel(anime.rating)}
               </span>
-              <span className="badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+              <span className="ad-badge">
                 <Film size={14} />
                 {anime.kind || 'TV'} · {epCount} EP
               </span>
               {anime.year && (
-                <span className="badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                <span className="ad-badge">
                   <Calendar size={14} />
                   {anime.year}
                 </span>
               )}
               {anime.status && (
-                <span className="badge" style={{ textTransform: 'capitalize' }}>
+                <span className="ad-badge ad-badge--status">
                   {anime.status}
                 </span>
               )}
@@ -202,13 +208,12 @@ export function AnimeDetail() {
 
             {/* Genres */}
             {anime.genres && anime.genres.length > 0 && (
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginTop: '0.25rem' }}>
+              <div className="ad-genres-row">
                 {anime.genres.map((g) => (
                   <Link
                     key={g}
                     to={`/genres?genre=${encodeURIComponent(g)}`}
-                    className="pill-tag"
-                    style={{ fontSize: '0.8rem', padding: '0.25rem 0.6rem', textDecoration: 'none' }}
+                    className="ad-genre-pill"
                   >
                     {genreLabel(g)}
                   </Link>
@@ -217,9 +222,9 @@ export function AnimeDetail() {
             )}
 
             {/* Synopsis */}
-            <div style={{ marginTop: '0.5rem' }}>
-              <h3 style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: '0.4rem' }}>Synopsis</h3>
-              <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.95rem', lineHeight: 1.6, margin: 0 }}>
+            <div className="ad-synopsis">
+              <h2>Synopsis</h2>
+              <p>
                 {anime.synopsis || 'No synopsis available for this title.'}
               </p>
             </div>
@@ -242,22 +247,11 @@ export function AnimeDetail() {
             )}
 
             {/* Play / Status CTA Button */}
-            <div style={{ marginTop: '1rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>
+            <div className="ad-cta-row">
               {isUpcoming || (!hasReleasedEpisodes && anime.status === 'Ongoing') ? (
                 <Link
                   to="/schedule"
-                  className="btn-primary"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.6rem',
-                    padding: '0.85rem 1.75rem',
-                    borderRadius: '12px',
-                    fontWeight: 700,
-                    fontSize: '1.05rem',
-                    textDecoration: 'none',
-                    background: 'rgba(255, 255, 255, 0.12)',
-                  }}
+                  className="ad-cta-btn ad-cta-btn--upcoming"
                 >
                   <Clock size={18} />
                   <span>{isUpcoming ? 'Upcoming · View Release Schedule' : 'Coming Soon · View Schedule'}</span>
@@ -265,17 +259,7 @@ export function AnimeDetail() {
               ) : (
                 <Link
                   to={`/watch/${anime.id}/${targetEp}`}
-                  className="btn-primary"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.6rem',
-                    padding: '0.85rem 1.75rem',
-                    borderRadius: '12px',
-                    fontWeight: 700,
-                    fontSize: '1.05rem',
-                    textDecoration: 'none',
-                  }}
+                  className="ad-cta-btn"
                 >
                   <Play size={18} fill="currentColor" />
                   <span>{resume?.episodeNumber ? `Resume Episode ${resume.episodeNumber}` : 'Watch Episode 1'}</span>
@@ -284,42 +268,32 @@ export function AnimeDetail() {
             </div>
 
             {/* Available Servers Preview */}
-            <div style={{ marginTop: '0.5rem', padding: '1rem', background: 'rgba(0,0,0,0.3)', borderRadius: '10px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                <Server size={16} color="#60a5fa" />
-                <span style={{ fontSize: '0.9rem', fontWeight: 600 }}>Streaming Providers & Servers</span>
+            <div className="ad-servers-box">
+              <div className="ad-servers-header">
+                <Server size={15} color="#38bdf8" />
+                <span>Multi-Source Streaming Providers</span>
               </div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+              <div className="ad-servers-list">
                 {serversLoading ? (
-                  <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.5)' }}>Checking server availability...</span>
+                  <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Checking server availability...</span>
                 ) : servers.length > 0 ? (
                   servers.map((s) => (
                     <span
                       key={s.name}
-                      style={{
-                        fontSize: '0.8rem',
-                        padding: '0.2rem 0.6rem',
-                        borderRadius: '6px',
-                        background: 'rgba(255,255,255,0.06)',
-                        border: '1px solid rgba(255,255,255,0.1)',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '0.3rem',
-                      }}
+                      className="ad-server-chip"
                     >
                       <span
+                        className="ad-server-chip-dot"
                         style={{
-                          width: '6px',
-                          height: '6px',
-                          borderRadius: '50%',
-                          background: s.status === 'ready' ? '#22c55e' : '#f59e0b',
+                          background: s.status === 'ready' ? '#34d399' : '#f59e0b',
+                          boxShadow: `0 0 6px ${s.status === 'ready' ? '#34d399' : '#f59e0b'}`,
                         }}
                       />
                       {s.name}
                     </span>
                   ))
                 ) : (
-                  <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.5)' }}>Multi-source servers available on player</span>
+                  <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Fast Edge CDN & P2P available on player</span>
                 )}
               </div>
             </div>
@@ -332,78 +306,51 @@ export function AnimeDetail() {
         )}
 
         {/* Episodes Section */}
-        <section style={{ marginTop: '2.5rem' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
-            <h2 style={{ fontSize: '1.4rem', fontWeight: 700, margin: 0 }}>
+        <section className="ad-section">
+          <div className="ad-section-head">
+            <h2>
               Episodes ({isUpcoming ? 0 : (anime.episodes?.length ?? epCount)})
             </h2>
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: isUpcoming || (!hasReleasedEpisodes && anime.status === 'Ongoing') ? '1fr' : 'repeat(auto-fill, minmax(280px, 1fr))',
-              gap: '1rem',
-            }}
-          >
+          <div className="ad-episodes-grid">
             {hasReleasedEpisodes ? (
               anime.episodes.map((ep) => (
                 <Link
                   key={ep.n}
                   to={`/watch/${anime.id}/${ep.n}`}
-                  className="episode-card"
-                  style={{
-                    display: 'flex',
-                    gap: '0.75rem',
-                    padding: '0.75rem',
-                    background: 'rgba(15, 17, 23, 0.6)',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    borderRadius: '10px',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    transition: 'all 0.2s ease',
-                  }}
+                  className="ad-ep-card"
                 >
                   {ep.thumb && (
-                    <img
-                      src={ep.thumb}
-                      alt={ep.title || `Episode ${ep.n}`}
-                      style={{
-                        width: '100px',
-                        height: '62px',
-                        borderRadius: '6px',
-                        objectFit: 'cover',
-                        flexShrink: 0,
-                      }}
-                      loading="lazy"
-                    />
+                    <div className="ad-ep-thumb-wrap">
+                      <img
+                        src={ep.thumb}
+                        alt={ep.title || `Episode ${ep.n}`}
+                        className="ad-ep-thumb"
+                        loading="lazy"
+                      />
+                    </div>
                   )}
-                  <div style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                    <div style={{ fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.2rem' }}>
+                  <div className="ad-ep-info">
+                    <div className="ad-ep-title">
                       EP {ep.n}{ep.title && ep.title.trim().toLowerCase() !== `episode ${ep.n}` ? `: ${ep.title}` : ''}
                     </div>
                     {ep.runtime && (
-                      <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                      <div className="ad-ep-meta">
                         <Clock size={12} />
-                        {ep.runtime}
+                        <span>{ep.runtime}</span>
                       </div>
                     )}
                   </div>
                 </Link>
               ))
             ) : isUpcoming || anime.status === 'Ongoing' ? (
-              <div style={{
-                padding: '2.5rem 1.5rem',
-                background: 'rgba(15, 17, 23, 0.6)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                borderRadius: '12px',
-                textAlign: 'center',
-              }}>
-                <Clock size={40} style={{ opacity: 0.5, marginBottom: '0.75rem' }} />
-                <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem', fontWeight: 600, color: '#f3f4f6' }}>
+              <div className="ad-ep-empty-banner" style={{ gridColumn: '1 / -1' }}>
+                <Clock size={40} style={{ opacity: 0.5, marginBottom: '0.75rem', color: '#94a3b8' }} />
+                <h3>
                   {isUpcoming ? 'No Episodes Released Yet' : 'Episodes Coming Soon'}
                 </h3>
-                <p style={{ margin: 0, fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)' }}>
+                <p>
                   {isUpcoming
                     ? `${anime.title} is an upcoming title. Episodes will appear here as soon as they air.`
                     : 'Episodes for this ongoing title will appear here once broadcast commences.'}
@@ -415,29 +362,50 @@ export function AnimeDetail() {
                 <Link
                   key={n}
                   to={`/watch/${anime.id}/${n}`}
-                  style={{
-                    padding: '1rem',
-                    background: 'rgba(15, 17, 23, 0.6)',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    borderRadius: '10px',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                  }}
+                  className="ad-ep-card"
+                  style={{ alignItems: 'center', justifyContent: 'space-between' }}
                 >
-                  <span style={{ fontWeight: 600 }}>Episode {n}</span>
-                  <Play size={16} color="#60a5fa" />
+                  <span style={{ fontWeight: 700, fontSize: '13.5px' }}>Episode {n}</span>
+                  <Play size={15} color="#38bdf8" />
                 </Link>
               ))
             )}
           </div>
         </section>
 
+        {/* Theme Songs */}
+        {themes.length > 0 && (
+          <section className="ad-section">
+            <div className="ad-section-head">
+              <h2>
+                <Music size={19} color="#38bdf8" aria-hidden="true" />
+                <span>Theme Songs</span>
+              </h2>
+            </div>
+            <div className="ad-themes-grid">
+              {themes.map((t, idx) => (
+                <div
+                  key={`${t.kind}-${t.sequence}-${idx}`}
+                  className="ad-theme-card"
+                >
+                  <span
+                    className={`ad-theme-badge ${t.kind === 'OP' ? 'ad-theme-badge--op' : 'ad-theme-badge--ed'}`}
+                  >
+                    {t.kind} {t.sequence}
+                  </span>
+                  <div className="ad-theme-info">
+                    <span className="ad-theme-title">"{t.title}"</span>
+                    <span className="ad-theme-artist">by {t.artist}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Recommendations */}
         {anime && (
-          <div style={{ marginTop: '2.5rem' }}>
+          <div style={{ marginTop: '3rem' }}>
             <RecommendedShelf
               targetAnime={anime}
               title="You Might Also Like"

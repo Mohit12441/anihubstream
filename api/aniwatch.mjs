@@ -470,7 +470,7 @@ function parseTracks(payload, referer) {
       const url = typeof t.file === "string" ? t.file : "";
       const label = typeof t.label === "string" ? t.label : undefined;
       const language = languageFromVttUrl(url) ?? (label ? label.toLowerCase() : "unknown");
-      return { id: `megaplay-${i}`, url, language, ...(label ? { name: label } : {}), ...(referer ? { headers: { referer } } : {}) };
+      return { id: `megaplay-${i}`, url, language, label: label || "English", name: label || "English", ...(referer ? { headers: { referer } } : {}) };
     })
     .filter((s) => s.url.length);
 }

@@ -5,4 +5,54 @@ Allow: /watch
 Disallow: /api/
 Disallow: /mylist
 
+# Explicit AI Search Engine & LLM Crawler Access
+User-agent: GPTBot
+Allow: /
+Allow: /anime
+Allow: /watch
+Disallow: /api/
+Disallow: /mylist
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /anime
+Allow: /watch
+Disallow: /api/
+Disallow: /mylist
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /anime
+Allow: /watch
+Disallow: /api/
+Disallow: /mylist
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /anime
+Allow: /watch
+Disallow: /api/
+Disallow: /mylist
+
+User-agent: Google-Extended
+Allow: /
+Allow: /anime
+Allow: /watch
+Disallow: /api/
+Disallow: /mylist
+
+User-agent: Applebot-Extended
+Allow: /
+Allow: /anime
+Allow: /watch
+Disallow: /api/
+Disallow: /mylist
+
+User-agent: cohere-ai
+Allow: /
+Allow: /anime
+Allow: /watch
+Disallow: /api/
+Disallow: /mylist
+
 Sitemap: https://anihubstream.com/sitemap.xml

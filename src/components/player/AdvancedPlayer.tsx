@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Loader2, Play, RefreshCw, SkipForward, WifiOff, X } from 'lucide-react';
+import { Loader2, Play, RefreshCw, Server, SkipForward, WifiOff, X } from 'lucide-react';
 import type { Anime, Episode, Marker } from '../../data/model';
 import { toSeconds } from '../../data/model';
 import { fetchSkipTimes } from '../../lib/aniskip';
@@ -23,11 +23,12 @@ import { WatchPartyPanel } from './WatchPartyPanel';
 import { WatchPartyClient, calculateDrift, shouldSync } from '../../lib/watchParty';
 import { captionAnchor, captionStyle } from './captionStyle';
 import type { PlayServer } from './PlayerInput';
+import { cleanServerName } from './ServerPopover';
 import type { BridgeSource } from '../../lib/streamBridge';
 
 const COUNTDOWN = 8;
 
-type Menu = { kind: 'none' } | { kind: 'settings'; tab: SettingsTab };
+type Menu = { kind: 'none' } | { kind: 'settings'; tab: SettingsTab } | { kind: 'server' };
 
 interface Props {
   anime: Anime;
@@ -51,6 +52,8 @@ interface Props {
   onStreamInfo?: (info: import('../../lib/streamBridge').BridgeSource | null) => void;
   serverId?: string;
   onServerChange?: (serverId: string) => void;
+  servers?: PlayServer[];
+  onSelectServer?: (server: PlayServer) => void;
   initialServer?: PlayServer | null;
   initialPartyRoom?: string | null;
 }
@@ -66,6 +69,8 @@ export function AdvancedPlayer(props: Props) {
   const { anime, animeId, episode, next, hasPrev, hasNext, onPrev, onNext, theatre, onTheatre, prefs, patch, onStreamResolved, onStreamInfo, initialServer } = props;
   const { notify } = useToast();
   const reduced = usePrefersReducedMotion();
+
+  const activeServer = props.servers?.find((s) => s.id === (props.serverId || initialServer?.id)) || initialServer || null;
 
   const rootRef = useRef<HTMLDivElement>(null);
   const [menu, setMenu] = useState<Menu>({ kind: 'none' });
@@ -131,7 +136,7 @@ export function AdvancedPlayer(props: Props) {
       master: initialServer.streamUrl,
       subtitles: (initialServer.subtitles || []).map((sub: any) => ({
         language: sub.language,
-        name: sub.label,
+        name: sub.label || sub.name || 'English',
         url: sub.url,
       })),
       thumbnails: initialServer.thumbnails?.url ? { url: initialServer.thumbnails.url } : null,
@@ -345,11 +350,24 @@ export function AdvancedPlayer(props: Props) {
   /* ---------- audio: switch, and probe what the source really carries ---------- */
   const setAudio = useCallback(
     (next: AudioId) => {
-      if (next === prefs.audio) return;
       const at = engineRef.current.time;
       switchSeekRef.current = at > 1 ? at : null;
       switchSeekFor.current = episodeTag;
       patch({ audio: next });
+      if (props.servers && props.onSelectServer) {
+        const currentProvider = activeServer?.provider || 'anikoto';
+        const matching = props.servers.find((s) => {
+          const provMatch = (s.provider || '').toLowerCase() === currentProvider.toLowerCase();
+          const isDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
+          return provMatch && (next === 'dub' ? isDub : !isDub);
+        }) || props.servers.find((s) => {
+          const isDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
+          return next === 'dub' ? isDub : !isDub;
+        });
+        if (matching && matching.id !== activeServer?.id) {
+          props.onSelectServer(matching);
+        }
+      }
       const label =
         next === 'dub'
           ? 'dubbed English'
@@ -358,14 +376,15 @@ export function AdvancedPlayer(props: Props) {
             : 'original Japanese';
       notify(`Switching to ${label} audio…`);
     },
-    [prefs.audio, patch, episodeTag, notify],
+    [patch, episodeTag, notify, props.servers, props.onSelectServer, activeServer],
   );
 
   const ensureAudios = useCallback(() => {
     if (audioStatus === 'loading' || audioStatus === 'ready') return;
     setAudioStatus('loading');
     setAudioError(null);
-    void bridgeAudios(anime.title, episode.n).then((r) => {
+    const activeProvider = props.servers?.find((s) => s.id === (props.serverId || initialServer?.id))?.provider || 'anikoto';
+    void bridgeAudios(anime.title, episode.n, activeProvider).then((r) => {
       if (isResolveFailure(r)) {
         setAudioStatus('error');
         setAudioError(r.message ? `${r.error} — ${r.message}` : r.error);
@@ -374,13 +393,13 @@ export function AdvancedPlayer(props: Props) {
       setAudioList(r);
       setAudioStatus('ready');
     });
-  }, [audioStatus, anime.title, episode.n]);
+  }, [audioStatus, anime.title, episode.n, props.servers, props.serverId, initialServer]);
 
-  /* a fresh episode re-probes (and a stored dub intent that fell back tells the viewer why) */
+  /* a fresh episode or server change re-probes */
   useEffect(() => {
     setAudioList(null);
     setAudioStatus('idle');
-  }, [episodeTag]);
+  }, [episodeTag, props.serverId]);
 
   const fallbackAnnounced = useRef<string | null>(null);
   useEffect(() => {
@@ -860,8 +879,22 @@ export function AdvancedPlayer(props: Props) {
         <div className="player__top">
           <span className="pl__chip">{anime.title}</span>
           <span className="pl__chip pl__chip--dim">
-            {anime.season} · EP {episode.n}
+            {anime.season ? `${anime.season} · ` : ''}EP {episode.n}
           </span>
+          {activeServer && props.servers && props.servers.length > 0 && (
+            <button
+              type="button"
+              className="pl__chip pl__chip--server"
+              onClick={() => setMenu((m) => (m.kind === 'server' ? { kind: 'none' } : { kind: 'server' }))}
+              title="Click to switch streaming server"
+            >
+              <Server size={12} aria-hidden="true" />
+              <span>{cleanServerName(activeServer)}</span>
+              <span className={`pl__chip-tag pl__chip-tag--${(activeServer.audio || 'sub').toLowerCase()}`}>
+                {(activeServer.audio || 'sub').toUpperCase()}
+              </span>
+            </button>
+          )}
         </div>
 
         {(live.status === 'resolving' || (!isEmbed && liveReady && live.buffering)) && (
@@ -914,12 +947,6 @@ export function AdvancedPlayer(props: Props) {
 
         {showCaptions && (
           <p className={`cap ${captionAnchor(prefs.subtitles)}`} style={captionStyle(prefs.subtitles)}>
-            <span className="cap__tag" aria-hidden="true">
-              CC · {live.subName ?? 'this source'}
-            </span>
-            {/* dir="auto" decides from the first strong character of its own text, so it has to sit
-                on the cue line: on the paragraph the tag's Latin "CC" came first and pinned every
-                track — Arabic included — to left-to-right. */}
             {liveCues.map((cue) => (
               <span key={cue} className="cap__text" dir="auto" lang={live.subCode ?? undefined}>
                 {cue}
@@ -1022,6 +1049,16 @@ export function AdvancedPlayer(props: Props) {
             subOn={prefs.subtitles.enabled}
             subLang={prefs.subtitles.language}
             onToggleCaptions={toggleCaptions}
+            serverOpen={menu.kind === 'server'}
+            onToggleServer={props.servers && props.servers.length > 0 ? () => setMenu((m) => (m.kind === 'server' ? { kind: 'none' } : { kind: 'server' })) : undefined}
+            servers={props.servers}
+            activeServerId={props.serverId || ''}
+            onSelectServer={(s) => {
+              props.onSelectServer?.(s);
+              props.onServerChange?.(s.id);
+              setMenu({ kind: 'none' });
+            }}
+            onCloseServer={() => setMenu({ kind: 'none' })}
             settingsOpen={menu.kind === 'settings'}
             onSettings={() => setMenu((m) => (m.kind === 'settings' ? { kind: 'none' } : { kind: 'settings', tab: 'root' }))}
             theatre={theatre}
@@ -1057,7 +1094,13 @@ export function AdvancedPlayer(props: Props) {
               subTracks={live.subTracks}
               subState={live.subState}
               subReady={liveReady}
-              playingAudio={(live.info?.audio ?? prefs.audio) as AudioId}
+              playingAudio={
+                (activeServer?.id.includes('-dub') || activeServer?.audio === 'dub' || live.info?.audio === 'dub' || (prefs.audio === 'dub' && !activeServer?.id.includes('-sub')))
+                  ? 'dub'
+                  : (activeServer?.id.includes('hindi') || live.info?.audio === 'hindi' || prefs.audio === 'hindi')
+                    ? 'hindi'
+                    : 'sub'
+              }
               audioList={audioList}
               audioStatus={audioStatus}
               audioError={audioError}

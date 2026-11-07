@@ -1078,6 +1078,9 @@
   font-weight: 800;
   font-variant-numeric: tabular-nums;
 }
+.tl__mobile-day {
+  display: none;
+}
 .tl__time svg {
   color: var(--text-3);
 }
@@ -1343,6 +1346,14 @@
   }
   .tl__time {
     justify-content: center;
+  }
+  .tl__mobile-day {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--cyan);
+    margin-right: 4px;
+    letter-spacing: 0.04em;
   }
   .tl__watch {
     width: 100%;

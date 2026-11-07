@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, cardFromRow, cleanDisplayTitle, errorResponse, ok, safeLikePattern, withEdgeCache } from './_lib.js';
+import { HttpError, cardFromRow, cleanDisplayTitle, errorResponse, foldSearch, initialsPattern, ok, safeLikePattern, withEdgeCache } from './_lib.js';
 
 const FAN_OUT_TIMEOUT_MS = 3_500;
 const KNOWN_PROVIDERS = {
@@ -7,6 +7,28 @@ const KNOWN_PROVIDERS = {
   hianime: { name: 'HiAnime', badge: 'Multi-Quality', color: '#ec4899', icon: '🌸' },
   aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6', icon: '🛡️' },
   anipm: { name: 'AniPM', badge: 'Settlar HLS', color: '#8b5cf6', icon: '⚡' },
+};
+
+// Common fandom abbreviations mapped to canonical search phrases
+const ACRONYMS = {
+  jjk: 'jujutsu kaisen',
+  mha: 'my hero academia',
+  bnha: 'boku no hero academia',
+  aot: 'attack on titan',
+  snk: 'shingeki no kyojin',
+  ds: 'demon slayer',
+  op: 'one piece',
+  csm: 'chainsaw man',
+  fma: 'fullmetal alchemist',
+  fmab: 'fullmetal alchemist brotherhood',
+  kny: 'kimetsu no yaiba',
+  sao: 'sword art online',
+  ngnl: 'no game no life',
+  sl: 'solo leveling',
+  hxh: 'hunter x hunter',
+  bleach: 'bleach',
+  naruto: 'naruto',
+  boruto: 'boruto',
 };
 
 /**
@@ -33,7 +55,16 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       throw new HttpError(400, 'bad_request', 'q query parameter is required');
     }
 
-    const likeTerm = `%${q.toLowerCase()}%`;
+    const trimmedQ = q.trim();
+    const normalizedQ = trimmedQ.replace(/\bs(\d+)\b/gi, 'season $1');
+    const acronymExpanded = ACRONYMS[normalizedQ.toLowerCase()] || ACRONYMS[trimmedQ.toLowerCase()] || normalizedQ;
+    const foldedQ = foldSearch(acronymExpanded);
+    const rawWords = foldedQ.split(' ').filter((w) => w.length > 0);
+    const words = rawWords.filter((w) => rawWords.length === 1 || w.length > 1).slice(0, 5);
+    const likeTerm = safeLikePattern(acronymExpanded, 48);
+    const initPattern = initialsPattern(trimmedQ.toLowerCase());
+    const initTerm = initPattern ? `%${initPattern}` : likeTerm;
+
     const grouped = {
       anikoto: [],
       hianime: [],
@@ -46,8 +77,22 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     // --- STEP 1: Single-Pass Direct Cloudflare D1 Indexed Search (<10ms) ---
     if (env.ANIHUB) {
       try {
-        const d1Rows = await env.ANIHUB.prepare(
-          `SELECT a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status,
+        let whereClause = "a.id = ?2 OR a.title LIKE (?2 || '%') OR a.search_text LIKE ?1 OR a.title LIKE ?1 OR a.id LIKE ?1";
+        const params = [likeTerm, acronymExpanded, initTerm];
+
+        if (initPattern) {
+          whereClause += ' OR a.search_text LIKE ?3';
+        }
+
+        if (words.length > 1) {
+          const wordChecks = words.map((w) => {
+            params.push(safeLikePattern(w, 32));
+            return `a.search_text LIKE ?${params.length}`;
+          });
+          whereClause = `(${whereClause}) OR (${wordChecks.join(' AND ')})`;
+        }
+
+        const querySql = `SELECT a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status,
                   a.art, a.key_art, a.accent, a.synopsis, a.rank, a.trend_rank, a.alt_seasons,
                   a.sched_day, a.sched_day_label, a.sched_date, a.sched_time, a.sched_season,
                   a.episode_total, a.source_ids, a.skip_key_id, a.skip_key_space,
@@ -56,14 +101,15 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                   GROUP_CONCAT(pm.provider_id || ':' || COALESCE(pm.provider_slug, a.id)) AS provider_pairs
            FROM anime a
            LEFT JOIN anime_provider_mapping pm ON pm.anime_id = a.id
-           WHERE a.search_text LIKE ?1 OR a.title LIKE ?1 OR a.id LIKE ?1
+           WHERE ${whereClause}
            GROUP BY a.id
            ORDER BY 
              CASE WHEN lower(a.title) = lower(?2) THEN 0 WHEN lower(a.title) LIKE (?2 || '%') THEN 1 ELSE 2 END ASC,
              CASE WHEN a.kind IN ('Special', 'Movie') AND (a.episode_total <= 1 OR a.episode_total IS NULL) THEN 1 ELSE 0 END ASC,
              a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC
-           LIMIT 40`
-        ).bind(likeTerm, q).all().catch(() => ({ results: [] }));
+           LIMIT 40`;
+
+        const d1Rows = await env.ANIHUB.prepare(querySql).bind(...params).all().catch(() => ({ results: [] }));
 
         for (const row of d1Rows.results || []) {
           const rawPairs = row.provider_pairs ? String(row.provider_pairs).split(',') : [];
@@ -143,15 +189,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       const bridgeBase = env.STREAM_BRIDGE_URL || '';
 
       if (bridgeBase) {
-        const bridgeSearches = [
-          'aniwatch',
-          'hianime',
-          'anikoto',
-          'anipm',
-        ].map(async (provider) => {
+        const bridgeSearches = ['aniwatch', 'hianime', 'anikoto', 'anipm'].map(async (provider) => {
           try {
             const searchUrl = new URL(`${bridgeBase}/search`);
-            searchUrl.searchParams.set('q', q);
+            searchUrl.searchParams.set('q', acronymExpanded);
             searchUrl.searchParams.set('provider', provider);
 
             const res = await fetch(searchUrl.toString(), {

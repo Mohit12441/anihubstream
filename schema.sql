@@ -25,6 +25,8 @@ CREATE TABLE IF NOT EXISTS anime (
   sched_time       TEXT,
   sched_season     TEXT,
   sched_episode    INTEGER,
+  sched_sub_at     INTEGER,
+  sched_dub_at     INTEGER,
   /* Provenance for rows pulled from the community databases by tools/sync-catalogue.mjs:
      source_ids is a JSON object of {kitsu, anilist, mal}; episode_total is the source's own
      episode count, which can be larger than the number of rows we actually store;
@@ -58,6 +60,8 @@ CREATE INDEX IF NOT EXISTS anime_by_status ON anime(status);
 CREATE INDEX IF NOT EXISTS anime_by_rating ON anime(rating DESC);
 CREATE INDEX IF NOT EXISTS anime_by_year ON anime(year DESC, rating DESC);
 CREATE INDEX IF NOT EXISTS anime_by_skip_key ON anime(skip_key_space, skip_key_id);
+CREATE INDEX IF NOT EXISTS anime_by_search_text ON anime(search_text);
+CREATE INDEX IF NOT EXISTS anime_by_title ON anime(title);
 
 CREATE TABLE IF NOT EXISTS genre (
   id       TEXT PRIMARY KEY,
@@ -73,6 +77,7 @@ CREATE TABLE IF NOT EXISTS anime_genre (
   genre_id TEXT NOT NULL REFERENCES genre(id),
   PRIMARY KEY (anime_id, genre_id)
 );
+CREATE INDEX IF NOT EXISTS idx_anime_genre_genre ON anime_genre(genre_id);
 
 CREATE TABLE IF NOT EXISTS episode (
   id              TEXT PRIMARY KEY,      -- '<anime_id>#<n>'
@@ -88,6 +93,19 @@ CREATE TABLE IF NOT EXISTS episode (
   external_id     TEXT,                  -- the source's own episode id
   UNIQUE (anime_id, n)
 );
+
+CREATE TABLE IF NOT EXISTS anime_theme (
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  anime_id    TEXT NOT NULL,
+  kind        TEXT NOT NULL,      -- 'OP' or 'ED'
+  sequence    INTEGER NOT NULL,   -- 1, 2, 3...
+  title       TEXT NOT NULL,
+  artist      TEXT NOT NULL,
+  episodes    TEXT,               -- e.g. '1-12'
+  FOREIGN KEY (anime_id) REFERENCES anime(id) ON DELETE CASCADE
+);
+
+CREATE INDEX IF NOT EXISTS idx_theme_anime ON anime_theme(anime_id);
 
 -- A viewer is an anonymous id in an HttpOnly cookie; nothing here is personally identifying.
 CREATE TABLE IF NOT EXISTS viewer (
@@ -110,7 +128,6 @@ CREATE TABLE IF NOT EXISTS position (
   PRIMARY KEY (viewer_id, episode_id)
 );
 
-CREATE INDEX IF NOT EXISTS episode_by_anime ON episode(anime_id, n);
 CREATE INDEX IF NOT EXISTS library_by_viewer ON library(viewer_id, added_at DESC);
 CREATE INDEX IF NOT EXISTS position_by_viewer ON position(viewer_id, updated_at DESC);
 
@@ -136,9 +153,9 @@ CREATE TABLE IF NOT EXISTS anime_id_map (
   updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
-CREATE INDEX IF NOT EXISTS id_map_by_mal ON anime_id_map(mal_id);
-CREATE INDEX IF NOT EXISTS id_map_by_anilist ON anime_id_map(anilist_id);
-CREATE INDEX IF NOT EXISTS id_map_by_kitsu ON anime_id_map(kitsu_id);
+CREATE UNIQUE INDEX IF NOT EXISTS uk_id_map_mal ON anime_id_map(mal_id) WHERE mal_id IS NOT NULL;
+CREATE UNIQUE INDEX IF NOT EXISTS uk_id_map_anilist ON anime_id_map(anilist_id) WHERE anilist_id IS NOT NULL;
+CREATE UNIQUE INDEX IF NOT EXISTS uk_id_map_kitsu ON anime_id_map(kitsu_id) WHERE kitsu_id IS NOT NULL;
 
 
 CREATE TABLE IF NOT EXISTS anime_redirect (
@@ -176,7 +193,6 @@ CREATE TABLE IF NOT EXISTS sync_runs (
 );
 
 CREATE INDEX IF NOT EXISTS sync_runs_by_endpoint ON sync_runs(endpoint, started_at DESC);
-CREATE INDEX IF NOT EXISTS api_usage_by_day ON api_usage(day);
 
 CREATE TABLE IF NOT EXISTS sync_pending (
   anilist_id INTEGER PRIMARY KEY,
@@ -197,11 +213,8 @@ CREATE TABLE IF NOT EXISTS anime_provider_mapping (
   FOREIGN KEY (anime_id) REFERENCES anime(id) ON DELETE CASCADE
 );
 
-CREATE INDEX IF NOT EXISTS idx_provider_reverse 
+CREATE UNIQUE INDEX IF NOT EXISTS uk_provider_map_slug 
 ON anime_provider_mapping(provider_id, provider_slug);
-
-CREATE INDEX IF NOT EXISTS idx_provider_anime 
-ON anime_provider_mapping(anime_id);
 
 -- Automated franchise and season relations for instant, bidirectional season switching
 CREATE TABLE IF NOT EXISTS anime_franchise_relation (
@@ -229,9 +242,6 @@ CREATE TABLE IF NOT EXISTS provider_route (
   resolved_title   TEXT,
   PRIMARY KEY (anime_id, provider_id, server)
 );
-
-CREATE INDEX IF NOT EXISTS idx_provider_route_lookup 
-ON provider_route(anime_id, provider_id, server);
 
 
 

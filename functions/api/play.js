@@ -3,9 +3,13 @@ import { HttpError, cleanDisplayTitle, deriveSlugCandidates, errorResponse, find
 import { resolveMegaplayDirect, isMegaplayTokenValid } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
 
-const BRIDGE_TIMEOUT_MS = 25_000;
-const ANISKIP_TIMEOUT_MS = 1_200;
+const BRIDGE_TIMEOUT_MS = 8_000;
+const ANISKIP_TIMEOUT_MS = 500;
 const ANISKIP_BASE = 'https://api.aniskip.com/v2';
+
+// In-worker ephemeral memory cache for direct streams (avoids burning D1 monthly write quota)
+const STREAM_MEM_CACHE = new Map();
+const STREAM_MEM_TTL_MS = 20 * 60 * 1000;
 
 function formatLanguageLabel(code) {
   if (!code) return 'English';
@@ -35,16 +39,6 @@ function formatServerName(provider, serverId) {
   if (!serverId) return base;
   const cleanServer = String(serverId).replace(/^.*?\s*·\s*/, '').trim();
   return `${base} · ${cleanServer}`;
-}
-
-function pathAnilist(path) {
-  const n = Number(String(path || '').split('-')[0]);
-  return Number.isFinite(n) ? n : 0;
-}
-
-function pathValid(path, anilistId) {
-  const idNum = Number(anilistId);
-  return Number.isFinite(idNum) && idNum > 0 && pathAnilist(path) === idNum;
 }
 
 function buildAudioTracks(audio) {
@@ -109,9 +103,11 @@ async function fetchAniSkip(db, malId, ep, duration) {
         }
         if (db) {
           const ruleTtl = Date.now() + 30 * 24 * 3600 * 1000;
-          db.prepare(
-            'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
-          ).bind(ruleCacheKey, JSON.stringify(rules), ruleTtl).run().catch(() => {});
+          try {
+            db.prepare(
+              'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
+            ).bind(ruleCacheKey, JSON.stringify(rules), ruleTtl).run?.()?.catch?.(() => {});
+          } catch {}
         }
       } catch {
         // Continue with targetMalId
@@ -228,9 +224,11 @@ async function resolveSkipTimes(db, malId, ep, duration, rawEpisodeMarkers, anim
     const skip = await fetchAniSkip(db, malId, ep, duration);
     if (skip && (skip.op || skip.ed || skip.recap)) {
       const expiresAt = Date.now() + 30 * 24 * 3600 * 1000;
-      db.prepare(
-        'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
-      ).bind(cacheKey, JSON.stringify(skip), expiresAt).run().catch(() => {});
+      try {
+        db.prepare(
+          'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
+        ).bind(cacheKey, JSON.stringify(skip), expiresAt).run?.()?.catch?.(() => {});
+      } catch {}
       return {
         op: skip.op ? { ...skip.op, source: 'aniskip', confidence: 1.0 } : null,
         ed: skip.ed ? { ...skip.ed, source: 'aniskip', confidence: 1.0 } : null,
@@ -238,9 +236,11 @@ async function resolveSkipTimes(db, malId, ep, duration, rawEpisodeMarkers, anim
       };
     } else {
       const expiresAt = Date.now() + 7 * 24 * 3600 * 1000;
-      db.prepare(
-        'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
-      ).bind(cacheKey, JSON.stringify({ empty: true }), expiresAt).run().catch(() => {});
+      try {
+        db.prepare(
+          'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
+        ).bind(cacheKey, JSON.stringify({ empty: true }), expiresAt).run?.()?.catch?.(() => {});
+      } catch {}
     }
   }
 
@@ -425,7 +425,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     }
 
     let pmRows = [];
-    let providerRoutes = [];
     let providerHealth = {
       anikoto: { status: 'healthy', latencyMs: 85 },
       hianime: { status: 'healthy', latencyMs: 140 },
@@ -441,13 +440,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             'SELECT provider_id, provider_slug FROM anime_provider_mapping WHERE anime_id = ?1'
           ).bind(id).all();
           pmRows = pmRes?.results || [];
-        } catch {}
-
-        try {
-          const prRes = await env.ANIHUB.prepare(
-            "SELECT server, path, status, checked_ep, checked_at, resolved_anilist, resolved_title FROM provider_route WHERE anime_id = ?1 AND provider_id = 'anipm'"
-          ).bind(id).all();
-          providerRoutes = prRes?.results || [];
         } catch {}
       }
 
@@ -531,7 +523,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       resolveSkipTimes(env.ANIHUB, resolvedMalId, ep, durationSeconds, rawEpisodeMarkers, id),
       (async () => {
         if (!resolvedMalId || !canUseEdgeDirect) return null;
-        const cacheKey = `stream:${requested === 'hianime' ? 'hianime' : 'anikoto'}:${resolvedMalId}:${ep}:${audio}`;
+        const cacheKey = `stream:${requested || 'auto'}:${resolvedMalId}:${ep}:${audio}:${serverParam || 'HD-1'}`;
+        const memCached = STREAM_MEM_CACHE.get(cacheKey);
+        if (memCached && memCached.expiresAt > Date.now()) {
+          if (memCached.data?.streamUrl && isMegaplayTokenValid(memCached.data.streamUrl)) {
+            return memCached.data;
+          }
+        }
         if (env.ANIHUB) {
           try {
             const cached = await env.ANIHUB.prepare(
@@ -540,6 +538,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             if (cached?.data) {
               const parsed = JSON.parse(cached.data);
               if (parsed?.streamUrl && isMegaplayTokenValid(parsed.streamUrl)) {
+                STREAM_MEM_CACHE.set(cacheKey, { data: parsed, expiresAt: Date.now() + STREAM_MEM_TTL_MS });
                 return parsed;
               }
             }
@@ -562,13 +561,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             }
           }
           if (!direct) {
-            direct = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio });
+            direct = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider: requested });
           }
-          if (env.ANIHUB && direct?.streamUrl) {
-            const ttl = Date.now() + 20 * 60 * 1000;
-            env.ANIHUB.prepare(
-              'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
-            ).bind(cacheKey, JSON.stringify(direct), ttl).run().catch(() => {});
+          if (direct?.streamUrl) {
+            // shortcut: in-memory cache only; avoids exhausting Cloudflare D1 monthly write quota on ephemeral 20-min tokens
+            STREAM_MEM_CACHE.set(cacheKey, { data: direct, expiresAt: Date.now() + STREAM_MEM_TTL_MS });
           }
           return direct;
         } catch {
@@ -590,13 +587,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
           const res = await fetch(resolveBridgeUrl.toString(), {
             headers: { accept: 'application/json' },
-            signal: AbortSignal.timeout(1200),
+            signal: AbortSignal.timeout(BRIDGE_TIMEOUT_MS),
           });
-          if (!res.ok) return null;
-          return await res.json().catch(() => null);
-        } catch {
-          return null;
-        }
+          if (res.ok) return await res.json().catch(() => null);
+        } catch {}
+        return null;
       })(),
     ]);
 
@@ -616,6 +611,97 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         quality: '1080p',
         audio: 'sub',
         audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'anikoto:Vidstream-2',
+        name: 'AniKoto · Vidstream-2',
+        provider: 'anikoto',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'anikoto', server: 'Vidstream-2' }),
+        type: 'hls',
+        quality: '1080p',
+        audio: 'sub',
+        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'anikoto:Vidstream-1',
+        name: 'AniKoto · Vidstream-1',
+        provider: 'anikoto',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'anikoto', server: 'Vidstream-1' }),
+        type: 'hls',
+        quality: '1080p',
+        audio: 'sub',
+        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'anikoto:HD-2',
+        name: 'AniKoto · HD-2',
+        provider: 'anikoto',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'anikoto', server: 'HD-2' }),
+        type: 'hls',
+        quality: '1080p',
+        audio: 'sub',
+        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'anikoto:HD-1-dub',
+        name: 'AniKoto · HD-1 (DUB)',
+        provider: 'anikoto',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'dub', provider: 'anikoto', server: 'HD-1' }),
+        type: 'dub',
+        quality: '1080p',
+        audio: 'dub',
+        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'anikoto:Vidstream-2-dub',
+        name: 'AniKoto · Vidstream-2 (DUB)',
+        provider: 'anikoto',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'dub', provider: 'anikoto', server: 'Vidstream-2' }),
+        type: 'dub',
+        quality: '1080p',
+        audio: 'dub',
+        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'anikoto:Vidstream-1-dub',
+        name: 'AniKoto · Vidstream-1 (DUB)',
+        provider: 'anikoto',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'dub', provider: 'anikoto', server: 'Vidstream-1' }),
+        type: 'dub',
+        quality: '1080p',
+        audio: 'dub',
+        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
+      {
+        id: 'anikoto:HD-2-dub',
+        name: 'AniKoto · HD-2 (DUB)',
+        provider: 'anikoto',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'dub', provider: 'anikoto', server: 'HD-2' }),
+        type: 'dub',
+        quality: '1080p',
+        audio: 'dub',
+        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
         subtitles: [],
         downloads: [],
       },
@@ -645,22 +731,29 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         subtitles: [],
         downloads: [],
       },
+      {
+        id: 'aniwatch:HD-1-dub',
+        name: 'AniWatch · HD-1 (DUB)',
+        provider: 'aniwatch',
+        status: 'ready',
+        streamUrl: resolveUrl({ audio: 'dub', provider: 'aniwatch', server: 'HD-1' }),
+        type: 'hls',
+        quality: '1080p',
+        audio: 'dub',
+        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
+        subtitles: [],
+        downloads: [],
+      },
       ...(() => {
-        const betaRoute = providerRoutes.find((r) => r.server === 'beta');
-        const betaIsMissing = betaRoute?.status === 'missing' && (betaRoute.checked_ep === Number(ep) || !betaRoute.checked_ep);
-        const anilistId = animeRow?.anilist_id;
-        const isPathValid = betaRoute?.path ? (anilistId ? pathValid(betaRoute.path, anilistId) : true) : false;
-        const hasBetaPath = isPathValid;
-        const list = [];
-
-        if (!betaIsMissing && hasBetaPath) {
-          list.push({
+        if (!animeRow?.anilist_id) return [];
+        return [
+          {
             id: 'anipm:beta',
             name: 'AniPM · Beta Master (11 Audios)',
             provider: 'anipm',
             status: 'ready',
             streamUrl: resolveUrl({ audio: 'sub', provider: 'anipm', server: 'beta' }),
-            resolvedTitle: betaRoute?.resolved_title || resolvedTitle,
+            resolvedTitle,
             type: 'hls',
             quality: '1080p',
             audio: 'sub',
@@ -673,14 +766,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             ],
             subtitles: [],
             downloads: [],
-          });
-        }
-
-        // Settlar is offered for any title with an AniList id; the bridge decides
-        // at playback time whether ani.pm actually has an embed. There are no
-        // provider_route.server='settlar' rows to check yet (writer not implemented).
-        if (animeRow?.anilist_id) {
-          list.push({
+          },
+          {
             id: 'anipm:settlar',
             name: 'AniPM · Settlar HD (16 Subs)',
             provider: 'anipm',
@@ -692,10 +779,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
             subtitles: [],
             downloads: [],
-          });
-        }
-
-        return list;
+          },
+        ];
       })(),
       {
         id: 'torrent:P2P-1',
@@ -721,13 +806,16 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
         const subtitles = (directRes.subtitles || []).map((sub) => ({
           ...sub,
+          label: sub.label || sub.name || 'English',
+          name: sub.name || sub.label || 'English',
           url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}` : '',
         }));
 
+        const effectiveProvider = requested && requested !== 'auto' ? requested : directRes.provider;
         const primaryServer = {
-          id: `${directRes.provider}:${serverParam || 'HD-1'}`,
-          name: formatServerName(directRes.provider, serverParam || 'HD-1'),
-          provider: directRes.provider,
+          id: `${effectiveProvider}:${serverParam || 'HD-1'}${audio === 'dub' ? '-dub' : ''}`,
+          name: formatServerName(effectiveProvider, `${serverParam || 'HD-1'}${audio === 'dub' ? ' (DUB)' : ''}`),
+          provider: effectiveProvider,
           status: 'ready',
           streamUrl: proxiedStreamUrl,
           type: audio === 'dub' ? 'dub' : 'hls',
@@ -745,7 +833,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           malId: resolvedMalId || null,
           scopedProvider: requested,
           scopedProviderUnavailable: false,
-          servers: [primaryServer],
+          servers: [primaryServer, ...defaultServers.filter((s) => s.id !== primaryServer.id)],
           aniskip: aniskipData || null,
           providerHealth,
           availableProviders: getAvailableProvidersList(),
@@ -754,9 +842,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         });
       }
 
-      const scoped = defaultServers.filter((s) => s.provider === requested);
       const isScopedUnavailable = !availableSlugs[requested];
-      const serversToReturn = scoped.length > 0 ? scoped : defaultServers;
+      const serversToReturn = defaultServers;
 
       return ok({
         title: resolvedTitle,
@@ -776,17 +863,39 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const meta = bridgeRes;
     const session = meta.session || '';
     const prov = meta.provider || (requested !== 'auto' ? requested : 'aniwatch');
+    const proxyBase = `${url.origin}/api/proxy`;
     const masterPath = meta.master || meta.streamUrl || '';
-    const streamUrl = masterPath.startsWith('http') ? masterPath : `${bridgeBase}${masterPath}`;
+    const activeReferer = meta.referer || (prov === 'hianime' ? 'https://zokoanime.video/' : (prov === 'aniwatch' || prov === 'anikoto' ? 'https://megaplay.buzz/' : ''));
+    let streamUrl;
+    if (masterPath.includes('/api/proxy')) {
+      streamUrl = masterPath.startsWith('http') ? masterPath : `${url.origin}${masterPath}`;
+    } else if (masterPath.startsWith('http')) {
+      streamUrl = activeReferer
+        ? `${proxyBase}?url=${encodeURIComponent(masterPath)}&referer=${encodeURIComponent(activeReferer)}`
+        : `${proxyBase}?url=${encodeURIComponent(masterPath)}`;
+    } else {
+      streamUrl = `${bridgeBase}${masterPath}`;
+    }
 
     // Subtitles format
-    const subtitles = (meta.subtitles || []).map((sub, idx) => ({
-      id: `sub-${idx}`,
-      language: sub.language || 'en',
-      label: sub.name || formatLanguageLabel(sub.language),
-      url: sub.url?.startsWith('http') ? sub.url : `${bridgeBase}${sub.url}`,
-      default: idx === 0,
-    }));
+    const subtitles = (meta.subtitles || []).map((sub, idx) => {
+      let subUrl = sub.url || '';
+      if (subUrl.startsWith('http') && !subUrl.includes('/api/proxy')) {
+        subUrl = activeReferer
+          ? `${proxyBase}?url=${encodeURIComponent(subUrl)}&referer=${encodeURIComponent(activeReferer)}`
+          : `${proxyBase}?url=${encodeURIComponent(subUrl)}`;
+      } else if (subUrl && !subUrl.startsWith('http')) {
+        subUrl = `${bridgeBase}${subUrl}`;
+      }
+      return {
+        id: `sub-${idx}`,
+        language: sub.language || 'en',
+        label: sub.label || sub.name || formatLanguageLabel(sub.language),
+        name: sub.name || sub.label || formatLanguageLabel(sub.language),
+        url: subUrl,
+        default: idx === 0,
+      };
+    });
 
     // Downloads format
     const downloads = (meta.downloads || []).map((dl) => ({

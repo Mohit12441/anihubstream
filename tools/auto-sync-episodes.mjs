@@ -15,19 +15,10 @@
 import { DatabaseSync } from 'node:sqlite';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { existsSync, readdirSync } from 'node:fs';
+import { findSqlitePath } from './discover-titles.mjs';
 import { details as aniwatchDetails, search as aniwatchSearch } from '../api/aniwatch.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
-function findSqlitePath() {
-  const d1Dir = resolve(__dirname, '../.wrangler/state/v3/d1/miniflare-D1DatabaseObject');
-  if (existsSync(d1Dir)) {
-    const files = readdirSync(d1Dir).filter((f) => f.endsWith('.sqlite'));
-    if (files.length > 0) return resolve(d1Dir, files[0]);
-  }
-  return null;
-}
 
 let _db = null;
 let updateEpisodeStmt = null;
@@ -98,6 +89,8 @@ function cleanSearchQuery(title) {
  * Step 1: Enrich Single-Episode anime, Movies, and standalone Specials
  */
 function enrichSingleAndMovies(quiet = false) {
+  const db = getDb();
+  if (!db) return 0;
   const singles = db.prepare(`
     SELECT a.id, a.title, a.kind, a.synopsis, a.art
     FROM anime a
@@ -129,6 +122,11 @@ function enrichSingleAndMovies(quiet = false) {
  * @param {boolean} [options.quiet=false]
  */
 export async function autoSyncEpisodes({ limit = 1500, quiet = false } = {}) {
+  const db = getDb();
+  if (!db) {
+    console.warn('[auto-sync-episodes] SQLite database not found.');
+    return { processed: 0, enriched: 0, episodesUpdated: 0 };
+  }
   let totalEnriched = 0;
   let totalEpisodesUpdated = 0;
 

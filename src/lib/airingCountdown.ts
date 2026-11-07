@@ -99,7 +99,7 @@ export function computeAiringCountdown(
   let shortLabel = '';
 
   if (days > 0) {
-    formatted = `${days}d ${hours}h ${minutes}m`;
+    formatted = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     shortLabel = `${days}d ${hours}h`;
   } else if (hours > 0) {
     formatted = `${hours}h ${minutes}m ${seconds}s`;

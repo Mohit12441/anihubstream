@@ -134,11 +134,12 @@ export async function resolveMegaplayEmbed(embedUrl) {
   const streamUrl = token ? `${fileUrl}?token=${token}` : fileUrl;
 
   const subtitles = (payload.tracks || [])
-    .filter((t) => t.kind === 'captions' || t.kind === 'subtitles' || t.file?.endsWith('.vtt'))
+    .filter((t) => (t.kind === 'captions' || t.kind === 'subtitles' || t.file?.endsWith('.vtt')) && !t.file?.includes('thumbnails.vtt') && !t.file?.includes('/preview/'))
     .map((t, idx) => ({
       id: `sub-${idx}`,
       language: t.label?.slice(0, 3)?.toLowerCase() || 'en',
-      label: t.label || 'English',
+      label: t.label || t.name || 'English',
+      name: t.label || t.name || 'English',
       url: t.file,
       default: t.default === true || idx === 0,
     }));
@@ -154,17 +155,25 @@ export async function resolveMegaplayEmbed(embedUrl) {
 
 /**
  * Edge Resolver: Resolves Megaplay stream directly using Web standards
- * @param {{ malId: number, ep: number, audio?: string }} param0
+ * @param {{ malId: number, ep: number, audio?: string, server?: string, provider?: string }} param0
  */
-export async function resolveMegaplayDirect({ malId, ep = 1, audio = 'sub' }) {
+export async function resolveMegaplayDirect({ malId, ep = 1, audio = 'sub', server = 'HD-1', provider = 'anikoto' }) {
   if (!malId || malId <= 0) return null;
 
   const lang = audio === 'dub' ? 'dub' : 'sub';
-  const embedUrl = `https://megaplay.buzz/stream/mal/${malId}/${ep}/${lang}`;
+  const cleanServer = (server || 'HD-1').toLowerCase();
+  let embedUrl = `https://megaplay.buzz/stream/mal/${malId}/${ep}/${lang}`;
+  if (cleanServer.includes('hd-1')) {
+    embedUrl += '?s=tcdn';
+  } else if (cleanServer.includes('vidstream-1')) {
+    embedUrl = `https://megaplay.buzz/videojs/stream/mal/${malId}/${ep}/${lang}`;
+  } else if (cleanServer.includes('hd-2')) {
+    embedUrl = `https://megaplay-1.buzz/stream/mal/${malId}/${ep}/${lang}`;
+  }
   const res = await resolveMegaplayEmbed(embedUrl);
   if (!res) return null;
   return {
     ...res,
-    provider: 'anikoto',
+    provider: provider && provider !== 'auto' ? provider : 'anikoto',
   };
 }

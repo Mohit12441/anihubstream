@@ -38,6 +38,8 @@
     <link rel="preconnect" href="https://s4.anilist.co" />
     <link rel="dns-prefetch" href="https://s4.anilist.co" />
     <link rel="dns-prefetch" href="https://media.kitsu.app" />
+    <link rel="dns-prefetch" href="https://megaplay.buzz" />
+    <link rel="dns-prefetch" href="https://animehot.cc" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Preload LCP hero image for instant rendering -->
@@ -71,15 +73,37 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "AniHubStream",
-      "url": "https://anihubstream.com/",
-      "description": "Watch high-quality anime online free on AniHubStream. Stream subbed and dubbed anime with fast playback, clean weekly schedules, and full episode guides.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://anihubstream.com/anime?search={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://anihubstream.com/#website",
+          "name": "AniHubStream",
+          "url": "https://anihubstream.com/",
+          "description": "Watch high-quality anime online free on AniHubStream. Stream subbed and dubbed anime with fast playback, clean weekly schedules, and full episode guides.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://anihubstream.com/anime?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+          },
+          "publisher": {
+            "@id": "https://anihubstream.com/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://anihubstream.com/#organization",
+          "name": "AniHubStream",
+          "url": "https://anihubstream.com/",
+          "logo": "https://anihubstream.com/emblem.svg",
+          "image": "https://anihubstream.com/og.png",
+          "description": "Next-generation anime streaming and exploration platform with multi-server redundancy, weekly airing schedules, and ad-free playback.",
+          "sameAs": [
+            "https://github.com/anihubstream",
+            "https://discord.gg/anihubstream",
+            "https://twitter.com/anihubstream"
+          ]
+        }
+      ]
     }
     </script>
   </head>

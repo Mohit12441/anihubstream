@@ -7,7 +7,7 @@ const ROW_LIMIT = 20;
 const FRESH_FROM_YEAR = 2024;
 
 export const onRequestGet = async ({ request, env, waitUntil }) => {
-  return withEdgeCache(request, env, 7200, async () => {
+  return withEdgeCache(request, env, 1800, async () => {
   try {
     const url = new URL(request.url);
     const provider = (url.searchParams.get('provider') || '').toLowerCase().trim();

@@ -15,7 +15,6 @@ const CACHE_TTL_MS = 20 * 60 * 1000; // 20 minutes
  */
 async function extractAnikotoDownloads(malId, ep, audio, signal) {
   if (!malId) return [];
-  const cleanAudio = audio === 'dub' ? 'dub' : 'sub';
   try {
     const res = await fetch(`https://mapper.nekostream.site/api/mal/${encodeURIComponent(malId)}/${encodeURIComponent(ep)}/1`, {
       headers: {
@@ -29,22 +28,26 @@ async function extractAnikotoDownloads(malId, ep, audio, signal) {
     if (!data || typeof data !== 'object') return [];
 
     const downloads = [];
+    const langs = audio === 'dub' ? ['dub', 'sub'] : ['sub', 'dub'];
     for (const [providerName, provData] of Object.entries(data)) {
-      if (!provData || typeof provData !== 'object') continue;
-      const langData = provData[cleanAudio] || (cleanAudio === 'dub' ? provData.sub : provData.dub);
-      if (langData?.download && typeof langData.download === 'object') {
-        for (const [quality, dlUrl] of Object.entries(langData.download)) {
-          if (dlUrl && typeof dlUrl === 'string') {
-            downloads.push({
-              name: `AniKoto · ${providerName} (${quality.toUpperCase()})`,
-              label: quality,
-              quality,
-              url: dlUrl,
-              provider: 'anikoto',
-              audio: cleanAudio,
-              type: 'direct',
-              format: 'MP4',
-            });
+      if (!provData || typeof provData !== 'object' || providerName === 'status') continue;
+      const cleanProvName = providerName.toLowerCase() === 'kiwi' ? 'Kiwi' : providerName;
+      for (const lang of langs) {
+        const langData = provData[lang];
+        if (langData?.download && typeof langData.download === 'object') {
+          for (const [quality, dlUrl] of Object.entries(langData.download)) {
+            if (dlUrl && typeof dlUrl === 'string') {
+              downloads.push({
+                name: `${cleanProvName} ${lang === 'dub' ? 'Dub' : 'Sub'} (${quality.toUpperCase()})`,
+                label: `${cleanProvName} ${quality}`,
+                quality,
+                url: dlUrl,
+                provider: 'anikoto',
+                audio: lang,
+                type: 'direct',
+                format: 'MP4',
+              });
+            }
           }
         }
       }
@@ -410,35 +413,37 @@ export const onRequestGet = async ({ request, env }) => {
         masterUrlToPipe = direct.streamUrl;
         pipeReferer = 'https://megaplay.buzz/';
         streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(direct.streamUrl)}&referer=https://megaplay.buzz/`;
-        // Prepend high-speed in-browser stream downloads
-        downloads.unshift(
-          {
-            name: 'AniKoto · 1080p (Stream to Video)',
-            label: '1080p',
-            quality: '1080p',
-            url: direct.streamUrl,
-            proxiedUrl: streamUrl,
-            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=anikoto&audio=${audio}&quality=1080p`,
-            provider: 'anikoto',
-            audio,
-            type: 'stream-download',
-            format: 'TS / MP4',
-            referer: 'https://megaplay.buzz/',
-          },
-          {
-            name: 'AniKoto · 720p (Stream to Video)',
-            label: '720p',
-            quality: '720p',
-            url: direct.streamUrl,
-            proxiedUrl: streamUrl,
-            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=anikoto&audio=${audio}&quality=720p`,
-            provider: 'anikoto',
-            audio,
-            type: 'stream-download',
-            format: 'TS / MP4',
-            referer: 'https://megaplay.buzz/',
-          }
-        );
+        // Add fallback stream-to-video only if no direct Kiwi mirrors exist
+        if (downloads.length === 0) {
+          downloads.push(
+            {
+              name: 'AniKoto · 1080p (Stream to Video)',
+              label: '1080p',
+              quality: '1080p',
+              url: direct.streamUrl,
+              proxiedUrl: streamUrl,
+              pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=anikoto&audio=${audio}&quality=1080p`,
+              provider: 'anikoto',
+              audio,
+              type: 'stream-download',
+              format: 'TS / MP4',
+              referer: 'https://megaplay.buzz/',
+            },
+            {
+              name: 'AniKoto · 720p (Stream to Video)',
+              label: '720p',
+              quality: '720p',
+              url: direct.streamUrl,
+              proxiedUrl: streamUrl,
+              pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=anikoto&audio=${audio}&quality=720p`,
+              provider: 'anikoto',
+              audio,
+              type: 'stream-download',
+              format: 'TS / MP4',
+              referer: 'https://megaplay.buzz/',
+            }
+          );
+        }
       } else {
         streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(`https://megaplay.buzz/stream/mal/${malId || cleanSlug}/${ep}/${audio}`)}&referer=https://megaplay.buzz/`;
       }

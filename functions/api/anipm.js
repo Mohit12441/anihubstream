@@ -21,7 +21,10 @@ export const onRequestGet = async ({ request, env }) => {
       headers: { accept: 'application/json' },
     });
 
-    const data = await res.json();
+    const data = await res.json().catch(() => null);
+    if (!res.ok) {
+      throw new HttpError(res.status, data?.error || 'bridge_error', data?.detail || 'AniPM resolution failed');
+    }
     return ok(data, { cache: 'no-store' });
   } catch (err) {
     return errorResponse(err);

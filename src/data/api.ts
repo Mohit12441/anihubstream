@@ -4,7 +4,7 @@
    service shows as an error the viewer can see and retry.
    ============================================================ */
 
-import type { ApiCard, ApiEpisode, ApiGenre, ApiPosition } from './model';
+import type { ApiCard, ApiEpisode, ApiGenre, ApiPosition, AnimeTheme } from './model';
 
 const ROOT = `${(import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '')}/api`;
 
@@ -110,7 +110,9 @@ export const getGenres = () => request<ListBody<ApiGenre>>('/genres');
 export const getSchedule = () =>
   request<{ seasons: string[]; days: { day: number; dayLabel: string; entries: ApiCard[] }[] }>('/schedule');
 export const getAnime = (id: string) =>
-  request<ApiCard & { episodes: ApiEpisode[]; related: ApiCard[] }>(`/anime/${encodeURIComponent(id)}`);
+  request<ApiCard & { episodes: ApiEpisode[]; related: ApiCard[]; themes?: AnimeTheme[] }>(`/anime/${encodeURIComponent(id)}`);
+export const getAnimeThemes = (id: string) =>
+  request<AnimeTheme[]>(`/anime/${encodeURIComponent(id)}/themes`);
 
 export interface PlayQuery {
   id: string;

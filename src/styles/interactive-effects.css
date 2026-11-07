@@ -1,0 +1,233 @@
+/* ============================================================
+   Awwwards-Grade Interactive Effects & Animations Suite
+   ============================================================ */
+
+/* ---------- 1. Smooth Page Transition ---------- */
+.page-transition-wrap {
+  animation: pageEnter 0.36s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes pageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.995);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Ensure main content sits above the ambient background */
+#main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ---------- 2. Ambient Mesh / Aurora Background ---------- */
+.ambient-mesh {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+  transition: opacity 0.5s ease;
+}
+
+.ambient-mesh__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  will-change: transform;
+  pointer-events: none;
+}
+
+.ambient-mesh__orb--1 {
+  top: -10%;
+  left: 8%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(255, 31, 74, 0.28) 0%, transparent 68%);
+  animation: ambientDrift1 22s ease-in-out infinite alternate;
+}
+
+.ambient-mesh__orb--2 {
+  top: 36%;
+  right: -6%;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, rgba(162, 75, 255, 0.24) 0%, transparent 68%);
+  animation: ambientDrift2 26s ease-in-out infinite alternate;
+}
+
+.ambient-mesh__orb--3 {
+  bottom: -8%;
+  left: 25%;
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, rgba(36, 211, 238, 0.18) 0%, transparent 68%);
+  animation: ambientDrift3 20s ease-in-out infinite alternate;
+}
+
+@keyframes ambientDrift1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, 40px) scale(1.1); }
+  100% { transform: translate(-40px, -30px) scale(0.92); }
+}
+
+@keyframes ambientDrift2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, -45px) scale(1.08); }
+  100% { transform: translate(30px, 35px) scale(0.94); }
+}
+
+@keyframes ambientDrift3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-40px, 30px) scale(1.12); }
+  100% { transform: translate(50px, -40px) scale(0.96); }
+}
+
+/* ---------- 3. Interactive Mouse Spotlight on Cards ---------- */
+.acard {
+  position: relative;
+  overflow: hidden;
+  will-change: transform, box-shadow;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease !important;
+}
+
+/* Card interactive glare */
+.acard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: radial-gradient(
+    320px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 42, 95, 0.35) 30%,
+    transparent 65%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 5;
+}
+
+.acard:hover::before {
+  opacity: 1;
+}
+
+/* Smooth 3D tilt micro-elevation */
+.acard:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: color-mix(in srgb, var(--tint, #ff2a5f) 70%, #fff) !important;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.75), 0 0 30px color-mix(in srgb, var(--tint, #ff2a5f) 40%, transparent) !important;
+}
+
+/* ---------- 4. Scroll Reveal & Stagger Animation ---------- */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay utility */
+.stagger-1 { transition-delay: 50ms; }
+.stagger-2 { transition-delay: 100ms; }
+.stagger-3 { transition-delay: 150ms; }
+.stagger-4 { transition-delay: 200ms; }
+.stagger-5 { transition-delay: 250ms; }
+
+/* ---------- 5. Awwwards Navigation Menu & Dock Glow ---------- */
+.site-header {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.site-nav {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4px 6px;
+  border-radius: var(--r-pill, 999px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.site-nav a {
+  padding: 7px 14px;
+  border-radius: var(--r-pill, 999px);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: all var(--dur-2, 0.2s) var(--ease, ease);
+}
+
+.site-nav a::after {
+  display: none !important;
+}
+
+.site-nav a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.site-nav a.is-current {
+  background: color-mix(in srgb, var(--accent, #ff2a5f) 22%, rgba(255, 255, 255, 0.06));
+  border: 1px solid color-mix(in srgb, var(--accent, #ff2a5f) 50%, transparent);
+  color: #fff;
+  box-shadow: 0 0 16px color-mix(in srgb, var(--accent, #ff2a5f) 35%, transparent);
+}
+
+/* ---------- 6. Smooth Sliders & Carousel Scroll Snap ---------- */
+.carousel__track {
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel__track::-webkit-scrollbar {
+  height: 5px;
+}
+
+.carousel__track::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 99px;
+}
+
+.carousel__track::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 99px;
+  transition: background var(--dur-2, 0.2s) var(--ease, ease);
+}
+
+.carousel__track::-webkit-scrollbar-thumb:hover {
+  background: var(--accent, #ff2a5f);
+}
+
+/* Respect user's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .page-transition-wrap,
+  .ambient-mesh,
+  .acard::before,
+  .acard:hover {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}

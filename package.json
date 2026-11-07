@@ -24,6 +24,7 @@
     "db:seed-id-map": "node tools/apply-id-map.mjs",
     "sync:fribb": "node tools/sync-fribb-id-map.mjs",
     "sync:growth": "node tools/local-sync-daemon.mjs --once --growth-only",
+    "sync:pulse": "node tools/pulse-airing.mjs",
     "sync:local": "node tools/local-sync-daemon.mjs --once",
     "sync:daemon": "node tools/local-sync-daemon.mjs",
     "sync:hianime": "node cloud-sync/sync-hianime.mjs",

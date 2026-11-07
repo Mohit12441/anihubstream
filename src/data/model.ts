@@ -51,6 +51,16 @@ export interface Episode {
   airdate?: string | null;
 }
 
+export interface AnimeTheme {
+  id?: number;
+  anime_id?: string;
+  kind: 'OP' | 'ED';
+  sequence: number;
+  title: string;
+  artist: string;
+  episodes?: string | null;
+}
+
 export interface Schedule {
   day: number;
   dayLabel: string;
@@ -58,6 +68,8 @@ export interface Schedule {
   time: string;
   season: SeasonKey;
   episode?: number | null;
+  subAt?: number | null;
+  dubAt?: number | null;
 }
 
 
@@ -105,6 +117,9 @@ export interface Anime {
   /** Available streaming providers registered for this title */
   providers?: string[];
   providerMappings?: Record<string, string>;
+  themes?: AnimeTheme[];
+  sched_sub_at?: number | null;
+  sched_dub_at?: number | null;
   episodes: Episode[];
 }
 
@@ -125,6 +140,10 @@ export interface ScheduleEntry {
   time: string;
   season: SeasonKey;
   episode?: number | null;
+  subAt?: number | null;
+  dubAt?: number | null;
+  sched_sub_at?: number | null;
+  sched_dub_at?: number | null;
 }
 
 export const DAYS = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'] as const;
@@ -215,6 +234,9 @@ export interface ApiCard {
   skipKeySpace?: string | null;
   providers?: string[];
   providerMappings?: Record<string, string>;
+  themes?: AnimeTheme[];
+  sched_sub_at?: number | null;
+  sched_dub_at?: number | null;
 }
 
 export interface ApiEpisode {
@@ -322,6 +344,9 @@ export const hydrateCard = (c: ApiCard): Anime => ({
   malId: c.malId ?? resolveMalId(c.sourceIds, c.skipKeyId, c.skipKeySpace) ?? undefined,
   providers: c.providers ?? undefined,
   providerMappings: c.providerMappings ?? undefined,
+  themes: c.themes ?? undefined,
+  sched_sub_at: c.sched_sub_at ?? c.schedule?.subAt ?? null,
+  sched_dub_at: c.sched_dub_at ?? c.schedule?.dubAt ?? null,
   episodes: [],
 });
 

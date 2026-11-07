@@ -96,7 +96,7 @@ export function PlayerSettings({
   audioStatus,
   audioError,
   onAudio,
-  switchableAudio,
+  switchableAudio: _switchableAudio,
   hlsAudioTracks,
   currentHlsAudioTrack,
   onSwitchHlsAudioTrack,
@@ -127,7 +127,9 @@ export function PlayerSettings({
         tab === 'root'
           ? 'Preferences are stored on this device only.'
           : tab === 'quality'
-            ? 'Quality switches instantly via adaptive bitrate levels.'
+            ? (qualities && qualities.length <= 1
+                ? 'Stream is direct 1080p source. 720p & 360p available via Download.'
+                : 'Quality switches instantly via adaptive bitrate levels.')
             : tab === 'aspect'
               ? 'Fit letterboxes and Fill crops the frame. Ratios never stretch the artwork.'
               : tab === 'subs'
@@ -159,13 +161,15 @@ export function PlayerSettings({
             icon={<AudioWaveform size={16} aria-hidden="true" />}
             label="Audio"
             value={
-              switchableAudio && currentHlsAudioTrack !== undefined && currentHlsAudioTrack !== -1 && hlsAudioTracks?.[currentHlsAudioTrack]
-                ? hlsAudioTracks[currentHlsAudioTrack].name
+              hlsAudioTracks && hlsAudioTracks.length > 0 && currentHlsAudioTrack !== undefined && currentHlsAudioTrack !== -1 && hlsAudioTracks[currentHlsAudioTrack]
+                ? (hlsAudioTracks[currentHlsAudioTrack].name && !hlsAudioTracks[currentHlsAudioTrack].name.startsWith('Audio Track')
+                    ? hlsAudioTracks[currentHlsAudioTrack].name
+                    : (playingAudio === 'dub' ? 'English (Dub)' : 'Japanese (Original)'))
                 : (playingAudio === 'dub'
-                    ? 'DUB'
+                    ? 'English (Dub)'
                     : playingAudio === 'hindi'
-                      ? 'HINDI'
-                      : 'Original')
+                      ? 'Hindi'
+                      : 'Japanese (Original)')
             }
             onClick={() => onTab('audio')}
           />
@@ -218,6 +222,7 @@ export function PlayerSettings({
                 key={q.id}
                 radio
                 label={q.label}
+                note={qualities.length === 1 ? 'direct source' : undefined}
                 active={currentQualityIndex === q.index}
                 onClick={() => {
                   patch({ quality: q.label as any });
@@ -280,19 +285,24 @@ export function PlayerSettings({
 
       {tab === 'audio' &&
         (() => {
-          if (switchableAudio && hlsAudioTracks && hlsAudioTracks.length > 0) {
+          if (hlsAudioTracks && hlsAudioTracks.length > 0) {
             return (
-              <PopGroup title="Track (Multi-Audio)">
-                {hlsAudioTracks.map((t) => (
-                  <PopRow
-                    key={t.id}
-                    radio
-                    label={t.name}
-                    note={currentHlsAudioTrack === t.id ? 'playing now' : undefined}
-                    active={currentHlsAudioTrack === t.id}
-                    onClick={() => onSwitchHlsAudioTrack?.(t.id)}
-                  />
-                ))}
+              <PopGroup title="Audio Tracks">
+                {hlsAudioTracks.map((t, idx) => {
+                  const defaultLabel = playingAudio === 'dub' ? 'English (Dub)' : 'Japanese (Original)';
+                  const trackLabel = t.name && !t.name.startsWith('Audio Track') ? t.name : (idx === 0 ? defaultLabel : (t.name || `Audio Track ${idx + 1}`));
+                  const isCurrent = currentHlsAudioTrack === t.id || (currentHlsAudioTrack === -1 && idx === 0);
+                  return (
+                    <PopRow
+                      key={t.id}
+                      radio
+                      label={trackLabel}
+                      note={isCurrent ? 'playing now' : undefined}
+                      active={isCurrent}
+                      onClick={() => onSwitchHlsAudioTrack?.(t.id)}
+                    />
+                  );
+                })}
               </PopGroup>
             );
           }
@@ -341,10 +351,10 @@ export function PlayerSettings({
                             ? 'checking…'
                             : dubAvailable
                               ? 'verified second audio'
-                              : 'not offered'
+                              : 'switch to dub'
                       }
                       active={playingAudio === 'dub'}
-                      disabled={!dubAvailable && !checking}
+                      disabled={audioStatus === 'ready' && !dubAvailable && Boolean(audioList)}
                       onClick={() => onAudio('dub')}
                     />
                   </>

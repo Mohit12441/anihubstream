@@ -4,7 +4,7 @@
  * Scope: /
  */
 
-const SHELL_CACHE = 'anihub-shell-v2';
+const SHELL_CACHE = 'anihub-shell-v3';
 const STREAM_CACHE = 'anihub-stream-v2';
 const MAX_STREAM_SEGMENTS = 45;
 

@@ -34,6 +34,8 @@ const ALLOWED_STREAMING_DOMAINS = [
   'drama1.cfd',
   'zokoanime.video',
   'anikoto.cz',
+  'aniwatch.co.at',
+  'aniwatchtv.to',
   '1anime.site',
   'vizcloud.online',
   'vizcloud.co',
@@ -48,6 +50,8 @@ const ALLOWED_STREAMING_DOMAINS = [
   'cno.to',
   'beta.cno.to',
   'flashpod.top',
+  'mysubsplay.com',
+  'subsplay.com',
   'kitsu.app',
   'anilist.co',
   'myanimelist.net',
@@ -90,7 +94,7 @@ export function isHostAllowed(hostname, targetUrl = '', customReferer = '') {
   // 2. Verified stream CDN pattern:
   // Upstream extractors (like Megaplay, AniKoto, HiAnime) dynamically rotate domain names for CDN video chunks.
   // Any public non-private domain requested with a trusted streaming Referer and anime media asset path/extension is authorized.
-  const trustedReferers = ['megaplay.buzz', 'anikoto.cz', 'abyssplayer.com', 'aniwatchtv.to', 'hianime.to', 'beta.cno.to', 'cno.to', 'ani.pm'];
+  const trustedReferers = ['megaplay.buzz', 'anikoto.cz', 'abyssplayer.com', 'aniwatchtv.to', 'aniwatch.co.at', 'hianime.to', 'zokoanime.video', 'dramahot.top', 'animehot.cc', 'beta.cno.to', 'cno.to', 'ani.pm'];
   const hasTrustedReferer = customReferer && trustedReferers.some((r) => customReferer.includes(r));
   if (hasTrustedReferer) {
     const isStreamAsset =
@@ -468,6 +472,11 @@ export const onRequest = async (context) => {
     responseHeaders.set('Content-Type', contentType);
     responseHeaders.set('Cache-Control', 'public, max-age=31536000, s-maxage=31536000, immutable');
     responseHeaders.set('X-Edge-Cache', rangeHeader ? 'BYPASS' : 'MISS');
+
+    const upstreamContentType = upstreamRes.headers.get('content-type') || '';
+    if (upstreamRes.status >= 400 || (upstreamContentType.includes('text/html') && !isPlaylist)) {
+      return new Response(null, { status: 410, headers: responseHeaders });
+    }
 
     const finalResponse = new Response(upstreamRes.body, {
       status: upstreamRes.status,
