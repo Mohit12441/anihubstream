@@ -1,4 +1,4 @@
-import { CARD_COLUMNS, cardFromRow, cleanDisplayTitle, errorResponse, ok, withEdgeCache } from '../_lib.js';
+import { CARD_COLUMNS, cardFromRow, errorResponse, ok, withEdgeCache } from '../_lib.js';
 
 /* The home shelves in one round trip. The catalogue grows ~900 titles a day, so
    the rows are picked by the database instead of shipping the whole thing to the
@@ -21,91 +21,19 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         topRated: [],
         fresh: [],
         added: [],
-        providers: {},
       });
     }
 
-    const mapSearchResult = (r, provName) => ({
-      id: r.id,
-      slug: r.id,
-      title: cleanDisplayTitle(r.title),
-      coverUrl: r.coverUrl || r.art || r.key_art || null,
-      provider: provName,
-    });
-
-    const getProviderRows = (provId, orderClause) => {
-      return db.prepare(
-        `SELECT ${CARD_COLUMNS}
-         FROM anime a
-         JOIN anime_provider_mapping pm ON pm.anime_id = a.id AND pm.provider_id = ?1
-         ORDER BY ${orderClause}
-         LIMIT ${ROW_LIMIT}`
-      ).bind(provId).all().catch(() => ({ results: [] }));
-    };
-
-    // 1. Specific Provider Feeds (Strictly from D1 indexed joins)
-    if (provider && provider !== 'all' && provider !== 'providers') {
-      const order = provider === 'anikoto'
-        ? 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'
-        : 'a.rating DESC, a.year DESC';
-
-      const rows = await getProviderRows(provider, order);
-      const cards = (rows.results || []).map(cardFromRow);
-      return ok({
-        provider,
-        featured: cards,
-        trending: cards,
-        popular: cards,
-        ongoing: cards.filter((c) => c.status === 'Ongoing'),
-        topRated: cards,
-        fresh: cards,
-        added: cards,
-      }, { cache: 'public, max-age=300, s-maxage=600, stale-while-revalidate=120' });
-    }
-
-    // 2. Multi-Provider Aggregate Shelf (for Home Page "All Streams", strictly from D1)
-    if (provider === 'providers') {
-      const [anikotoRows, aniwatchRows, hianimeRows, anipmRows] = await Promise.all([
-        getProviderRows('anikoto', 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
-        getProviderRows('aniwatch', 'a.rating DESC, a.year DESC'),
-        getProviderRows('hianime', 'a.rating DESC, a.year DESC'),
-        getProviderRows('anipm', 'a.rating DESC, a.year DESC'),
-      ]);
-
-      return ok({
-        providers: {
-          anikoto: (anikotoRows.results || []).map((r) => mapSearchResult(r, 'anikoto')),
-          hianime: (hianimeRows.results || []).map((r) => mapSearchResult(r, 'hianime')),
-          aniwatch: (aniwatchRows.results || []).map((r) => mapSearchResult(r, 'aniwatch')),
-          anipm: (anipmRows.results || []).map((r) => mapSearchResult(r, 'anipm')),
-        },
-      }, { cache: 'public, max-age=300, s-maxage=600, stale-while-revalidate=120' });
-    }
-
-    // 3. Default / All providers: query core database and include provider shelves in a single round-trip
+    // 1. Default / All providers: query core database in a single round-trip
     const q = (where, order) =>
       db.prepare(`SELECT ${CARD_COLUMNS} FROM anime a ${where} ORDER BY ${order} LIMIT ${ROW_LIMIT}`).all();
 
-    const [
-      trending,
-      ongoing,
-      topRated,
-      fresh,
-      added,
-      anikotoRows,
-      aniwatchRows,
-      hianimeRows,
-      anipmRows,
-    ] = await Promise.all([
+    const [trending, ongoing, topRated, fresh, added] = await Promise.all([
       q('', 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
       q("WHERE a.status = 'Ongoing'", 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
       q('', 'a.rating DESC'),
       q(`WHERE a.year >= ${FRESH_FROM_YEAR}`, 'a.year DESC, a.rating DESC'),
       q('', 'a.added_at IS NULL, a.added_at DESC, a.rating DESC'),
-      getProviderRows('anikoto', 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
-      getProviderRows('aniwatch', 'a.rating DESC, a.year DESC'),
-      getProviderRows('hianime', 'a.rating DESC, a.year DESC'),
-      getProviderRows('anipm', 'a.rating DESC, a.year DESC'),
     ]);
 
     return ok({
@@ -115,12 +43,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       topRated: topRated.results.map(cardFromRow),
       fresh: fresh.results.map(cardFromRow),
       added: added.results.map(cardFromRow),
-      providers: {
-        anikoto: (anikotoRows.results || []).map((r) => mapSearchResult(r, 'anikoto')),
-        hianime: (hianimeRows.results || []).map((r) => mapSearchResult(r, 'hianime')),
-        aniwatch: (aniwatchRows.results || []).map((r) => mapSearchResult(r, 'aniwatch')),
-        anipm: (anipmRows.results || []).map((r) => mapSearchResult(r, 'anipm')),
-      },
     }, {
       cache: 'public, max-age=120, s-maxage=600, stale-while-revalidate=120',
       headers: { vary: 'Accept-Encoding' },

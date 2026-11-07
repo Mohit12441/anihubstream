@@ -28,7 +28,6 @@ test('Home API & Trending Verification Suite', async (t) => {
     assert.ok(Array.isArray(body.topRated), 'topRated is an array');
     assert.ok(Array.isArray(body.fresh), 'fresh is an array');
     assert.ok(Array.isArray(body.added), 'added is an array');
-    assert.ok(body.providers && typeof body.providers === 'object', 'providers is an object');
   });
 
   await t.test('2. Trending items are sorted monotonically by trendRank', { skip: !serverUp ? 'Local dev server 127.0.0.1:8899 not running' : false }, async () => {
@@ -69,18 +68,5 @@ test('Home API & Trending Verification Suite', async (t) => {
     assert.ok(cacheHeader.includes('max-age'), 'Cache-Control must include max-age');
     assert.ok(cacheHeader.includes('s-maxage'), 'Cache-Control must include s-maxage');
     assert.equal(res1.headers.get('set-cookie'), null, 'Set-Cookie must be stripped on public home cache');
-  });
-
-  await t.test('5. Multi-provider streams shelf is populated', { skip: !serverUp ? 'Local dev server 127.0.0.1:8899 not running' : false }, async () => {
-    const res = await fetch(`${BASE_URL}/api/home?bypass=1`);
-    const body = await res.json();
-    
-    assert.ok(Array.isArray(body.providers.anikoto), 'anikoto provider shelf is an array');
-    assert.ok(Array.isArray(body.providers.hianime), 'hianime provider shelf is an array');
-    assert.ok(Array.isArray(body.providers.aniwatch), 'aniwatch provider shelf is an array');
-    
-    assert.ok(body.providers.anikoto.length > 0, 'anikoto has items');
-    assert.ok(body.providers.hianime.length > 0, 'hianime has items');
-    assert.ok(body.providers.aniwatch.length > 0, 'aniwatch has items');
   });
 });

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Compass, Flame, Radio, Sparkles, Star, X } from 'lucide-react';
+import { ArrowRight, Compass, Flame, Sparkles, Star, X } from 'lucide-react';
 import { AnimeCard } from '../components/AnimeCard';
 import { AnimeCarousel } from '../components/AnimeCarousel';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
@@ -13,17 +13,7 @@ import { artUrl, hydrateCard } from '../data/model';
 import type { Anime } from '../data/model';
 import { useCatalogue } from '../state/catalogue';
 import { useSEO } from '../lib/useSEO';
-import { ProviderRow, type ProviderMeta, type ProviderSearchResult } from '../components/search/ProviderRow';
-import { CategoryPills, type CategoryPillItem } from '../components/ui/CategoryPills';
 import '../styles/home.css';
-
-const PROVIDER_METAS: Record<string, ProviderMeta> = {
-  anikoto: { name: 'AniKoto', badge: 'HLS 1080p', color: '#6366f1' },
-  hianime: { name: 'HiAnime', badge: 'JSON Stream', color: '#ec4899' },
-  aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6' },
-  anipm: { name: 'AniPM', badge: 'Settlar HLS', color: '#8b5cf6' },
-};
-
 
 const MOODS = [
   {
@@ -125,50 +115,6 @@ export function Home() {
     [seed, home],
   );
 
-  const [providerStreams, setProviderStreams] = useState<Record<string, ProviderSearchResult[]>>({});
-  const [providerFilter, setProviderFilter] = useState<string>('all');
-
-  useEffect(() => {
-    if (home.providers && Object.keys(home.providers).length > 0) {
-      setProviderStreams(home.providers);
-    }
-  }, [home.providers]);
-
-  const providerCategoryPills = useMemo<CategoryPillItem[]>(() => {
-    let totalCount = 0;
-    for (const list of Object.values(providerStreams)) {
-      totalCount += list.length;
-    }
-    const pills: CategoryPillItem[] = [
-      {
-        id: 'all',
-        label: 'All Streams',
-        count: totalCount || undefined,
-        color: 'var(--brand, #6366f1)',
-      },
-    ];
-
-    for (const [key, meta] of Object.entries(PROVIDER_METAS)) {
-      const items = providerStreams[key] || [];
-      if (items.length > 0) {
-        pills.push({
-          id: key,
-          label: meta.name,
-          badge: meta.badge,
-          count: items.length || undefined,
-          color: meta.color,
-        });
-      }
-    }
-    return pills;
-  }, [providerStreams]);
-
-  const activeProviderRows = useMemo(() => {
-    const entries = Object.entries(providerStreams).filter(([key, items]) => Boolean(PROVIDER_METAS[key]) && items && items.length > 0);
-    if (providerFilter === 'all') return entries;
-    return entries.filter(([key]) => key === providerFilter);
-  }, [providerStreams, providerFilter]);
-
   const heading = genre ? genreLabel(genre) : 'Trending Now';
 
 
@@ -267,45 +213,6 @@ export function Home() {
           toLabel="Recently added"
           poster
         />
-
-        {activeProviderRows.length > 0 && (
-          <section className="home__row home__provider-streams" aria-labelledby="row-providers">
-            <div className="sec-head">
-              <h2 id="row-providers">
-                <Radio size={21} aria-hidden="true" style={{ color: 'var(--brand, #6366f1)' }} />
-                Popular Streaming Servers
-                <Link to="/anime" className="sec-head__link" aria-label="Browse full anime catalog">
-                  <ArrowRight size={18} aria-hidden="true" />
-                </Link>
-              </h2>
-              <p className="sec-head__hint">Stream subbed & dubbed anime in HD across fast servers</p>
-            </div>
-
-            <div style={{ marginBottom: '18px', overflowX: 'auto', paddingBottom: '4px' }}>
-              <CategoryPills
-                categories={providerCategoryPills}
-                activeId={providerFilter}
-                onSelect={setProviderFilter}
-              />
-            </div>
-
-            {activeProviderRows.map(([providerKey, items]) => {
-              const meta = PROVIDER_METAS[providerKey] || {
-                name: providerKey.toUpperCase(),
-                badge: 'Stream',
-                color: '#6366f1',
-              };
-              return (
-                <ProviderRow
-                  key={providerKey}
-                  providerKey={providerKey}
-                  meta={meta}
-                  items={items}
-                />
-              );
-            })}
-          </section>
-        )}
 
         <section className="home__row" aria-labelledby="row-genres">
           <div className="spot">
