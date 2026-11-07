@@ -136,13 +136,14 @@ export function PlayerControls(p: Props) {
 
         <button
           type="button"
-          className={`pl__btn pl__btn--captions${p.subOn ? ' is-on' : ''}`}
-          onClick={p.onToggleCaptions}
-          aria-pressed={p.subOn}
-          aria-label={p.subOn ? `Captions on, ${p.subLang}` : 'Captions off'}
-          title="Captions (C)"
+          className="pl__btn pl__btn--pip"
+          onClick={p.onPip}
+          disabled={!p.pipAvailable}
+          aria-disabled={!p.pipAvailable}
+          aria-label="Picture-in-picture"
+          title={p.pipAvailable ? 'Picture-in-picture' : 'Available once the stream is ready'}
         >
-          {p.subOn ? <Captions size={18} /> : <CaptionsOff size={18} />}
+          <PictureInPicture size={18} />
         </button>
 
         <button
@@ -154,6 +155,17 @@ export function PlayerControls(p: Props) {
           title="Settings (S)"
         >
           <Settings2 size={18} />
+        </button>
+
+        <button
+          type="button"
+          className={`pl__btn pl__btn--captions${p.subOn ? ' is-on' : ''}`}
+          onClick={p.onToggleCaptions}
+          aria-pressed={p.subOn}
+          aria-label={p.subOn ? `Captions on, ${p.subLang}` : 'Captions off'}
+          title="Captions (C)"
+        >
+          {p.subOn ? <Captions size={18} /> : <CaptionsOff size={18} />}
         </button>
 
         {p.onToggleParty && (
@@ -181,18 +193,6 @@ export function PlayerControls(p: Props) {
           title="Theatre (T)"
         >
           <Theater size={18} />
-        </button>
-
-        <button
-          type="button"
-          className="pl__btn pl__btn--pip"
-          onClick={p.onPip}
-          disabled={!p.pipAvailable}
-          aria-disabled={!p.pipAvailable}
-          aria-label="Picture-in-picture"
-          title={p.pipAvailable ? 'Picture-in-picture' : 'Available once the stream is ready'}
-        >
-          <PictureInPicture size={18} />
         </button>
 
         <button

@@ -4,8 +4,8 @@
  * Scope: /
  */
 
-const SHELL_CACHE = 'anihub-shell-v1';
-const STREAM_CACHE = 'anihub-stream-v1';
+const SHELL_CACHE = 'anihub-shell-v2';
+const STREAM_CACHE = 'anihub-stream-v2';
 const MAX_STREAM_SEGMENTS = 45;
 
 const PRECACHE_URLS = [
@@ -262,6 +262,35 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
+// Web Push Handler: Receive remote push notifications from VAPID dispatch worker
+self.addEventListener('push', (event) => {
+  let payload = {};
+  if (event.data) {
+    try {
+      payload = event.data.json();
+    } catch {
+      payload = { body: event.data.text() };
+    }
+  }
+
+  const title = payload.title || 'AniHubStream Airing Alert';
+  const options = {
+    body: payload.body || 'A new anime episode has aired!',
+    icon: payload.icon || '/emblem.svg',
+    badge: payload.badge || '/emblem.svg',
+    tag: payload.tag || 'airing_notification',
+    data: payload.data || { url: payload.url || '/' },
+    actions: [
+      {
+        action: 'watch',
+        title: 'Watch Now',
+      },
+    ],
+  };
+
+  event.waitUntil(self.registration.showNotification(title, options));
+});
+
 // Notification Click: Focus existing client or open target watch URL
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
@@ -280,4 +309,5 @@ self.addEventListener('notificationclick', (event) => {
     })
   );
 });
+
 

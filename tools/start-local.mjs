@@ -56,12 +56,20 @@ async function main() {
     shell: isWindows,
   });
 
-  // 3. Start Local Sync Daemon in background (automatic sync every 30m)
-  console.log('⚡ Starting Local Autonomous Sync Daemon in background...');
-  const syncProc = spawn(process.execPath, ['tools/local-sync-daemon.mjs', '--delay=5', '--interval=30'], {
-    stdio: 'inherit',
-    windowsHide: false,
-  });
+  // 3. Start Local Sync Daemon in background — OPT-IN ONLY
+  // Set START_DAEMON=1 in the shell before launching to enable.
+  // Default is off so that DB audits, cleanup, and verify runs aren't
+  // mutated by background writes mid-check.
+  let syncProc = null;
+  if (process.env.START_DAEMON === '1') {
+    console.log('⚡ Starting Local Autonomous Sync Daemon in background...');
+    syncProc = spawn(process.execPath, ['tools/local-sync-daemon.mjs', '--delay=5', '--interval=30'], {
+      stdio: 'inherit',
+      windowsHide: false,
+    });
+  } else {
+    console.log('💡 Sync daemon skipped (set START_DAEMON=1 to enable background sync)');
+  }
 
   const cleanup = () => {
     if (bridgeProc) bridgeProc.kill();

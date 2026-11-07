@@ -4,11 +4,118 @@ import http from 'node:http';
 import { URL } from 'node:url';
 import { getAdapter, listAdapters } from './adapters/registry.mjs';
 import * as anikoto from './anikoto.mjs';
+import anipmHandler, { resolveTracks as anipmResolveTracks } from './anipm.mjs';
+import tracksHandler from './tracks.mjs';
 import { attachPartyRelay, getRoom, getRooms } from './party-relay.mjs';
 import { comparePair } from './dubAudio.mjs';
+import { curlOpen } from '../lib/tls.mjs';
+import { PROVIDERS, upstreamHeaders, assertAllowed } from '../lib/providers.mjs';
 
 const PORT = Number(process.env.ANIKOTO_BRIDGE_PORT || process.env.PORT || 8795);
 const HOST = process.env.ANIKOTO_BRIDGE_HOST || '0.0.0.0';
+const TAG_URI_RE = /(URI=")([^"]+)(")/g;
+
+function inferType(url) {
+  const p = new URL(url).pathname.toLowerCase();
+  if (p.endsWith('.m3u8')) return 'application/vnd.apple.mpegurl';
+  if (p.endsWith('.ts')) return 'video/mp2t';
+  if (p.endsWith('.m4s') || p.endsWith('.mp4')) return 'video/iso.segment';
+  if (p.endsWith('.vtt')) return 'text/vtt';
+  if (p.endsWith('.key')) return 'application/octet-stream';
+  return 'application/octet-stream';
+}
+
+function rewriteManifest(body, base, key) {
+  const wrap = (u) => {
+    let abs;
+    try { abs = new URL(u, base).href; } catch { return u; }
+    if (!/^https?:/.test(abs)) return u;
+    return `/api/proxy?u=${encodeURIComponent(abs)}&p=${key}`;
+  };
+
+  // EXT-X-MEDIA (audio + all subtitle renditions), EXT-X-KEY, EXT-X-MAP
+  body = body.replace(TAG_URI_RE, (_, a, u, c) => a + wrap(u) + c);
+  // variant playlists and segments
+  body = body.replace(/^(?!#)(\S+)\s*$/gm, (line) => wrap(line.trim()));
+  return body;
+}
+
+function cors(res) {
+  res.setHeader('access-control-allow-origin', '*');
+  res.setHeader('access-control-allow-methods', 'GET, HEAD, POST, OPTIONS');
+  res.setHeader('access-control-allow-headers', '*');
+  res.setHeader('access-control-expose-headers', 'content-length, content-range, accept-ranges, x-stream-expired');
+}
+
+export async function handleProxy(req, res) {
+  const url = new URL(req.url, `http://${req.headers.host || `127.0.0.1:${PORT}`}`);
+  const target = url.searchParams.get('u') || url.searchParams.get('url');
+  const key = url.searchParams.get('p') || url.searchParams.get('provider') || 'settlar';
+
+  if (!target || !/^https?:\/\//.test(target)) {
+    cors(res);
+    res.writeHead(400, { 'content-type': 'text/plain' });
+    return res.end('bad target');
+  }
+
+  try {
+    assertAllowed(target, key);
+  } catch (e) {
+    cors(res);
+    res.writeHead(403, { 'content-type': 'text/plain' });
+    return res.end(e.message);
+  }
+
+  let up;
+  try {
+    up = await curlOpen(target, upstreamHeaders(key, {
+      range: req.headers.range || '',
+      'if-none-match': req.headers['if-none-match'] || '',
+    }), { method: req.method === 'HEAD' ? 'HEAD' : 'GET' });
+  } catch (e) {
+    cors(res);
+    res.writeHead(502, { 'content-type': 'text/plain' });
+    return res.end('upstream unreachable');
+  }
+
+  cors(res);
+
+  // 403 = expired Settlar token. Tell the player to re-resolve.
+  if (up.status === 403) {
+    try { up.stream.destroy(); } catch {}
+    res.setHeader('x-stream-expired', '1');
+    res.writeHead(403, { 'content-type': 'text/plain' });
+    return res.end('expired');
+  }
+
+  if (up.status >= 400) {
+    try { up.stream.destroy(); } catch {}
+    res.writeHead(up.status, { 'content-type': 'text/plain' });
+    return res.end();
+  }
+
+  const isManifest = /\.m3u8(\?|$)/.test(target) || (up.contentType && up.contentType.includes('mpegurl'));
+
+  if (isManifest) {
+    let body = '';
+    for await (const chunk of up.stream) body += chunk;
+    res.setHeader('content-type', 'application/vnd.apple.mpegurl');
+    res.setHeader('cache-control', 'no-store');
+    return res.end(rewriteManifest(body, target, key));
+  }
+
+  res.statusCode = up.status;
+  res.setHeader('content-type', up.contentType || inferType(target));
+  res.setHeader('cache-control', 'public, max-age=86400, immutable');
+  if (up.contentLength) res.setHeader('content-length', up.contentLength);
+  if (up.contentRange) res.setHeader('content-range', up.contentRange);
+  if (up.acceptRanges) res.setHeader('accept-ranges', up.acceptRanges);
+
+  up.stream.pipe(res);
+  req.on('close', () => {
+    try { up.child.kill('SIGKILL'); } catch {}
+  });
+}
 
 const malStats = {
   hits: 0,
@@ -55,6 +162,18 @@ const server = http.createServer(async (req, res) => {
 
   const reqUrl = new URL(req.url || '/', `http://${req.headers.host || '127.0.0.1'}`);
   const pathname = reqUrl.pathname;
+
+  if (pathname === '/api/proxy' || pathname === '/proxy') {
+    return handleProxy(req, res);
+  }
+
+  if (pathname === '/api/anipm' || pathname === '/anipm') {
+    return anipmHandler(req, res);
+  }
+
+  if (pathname === '/api/tracks' || pathname === '/tracks') {
+    return tracksHandler(req, res);
+  }
 
   if (pathname === '/health' || pathname === '/') {
     sendJson(res, 200, {
@@ -385,16 +504,23 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (pathname === '/resolve') {
+    const animeId = reqUrl.searchParams.get('anime_id') || '';
     const title = reqUrl.searchParams.get('title') || '';
     const slug = reqUrl.searchParams.get('slug') || reqUrl.searchParams.get('providerSlug') || '';
     const ep = Number(reqUrl.searchParams.get('ep') || '1');
     const audio = reqUrl.searchParams.get('audio') || 'sub';
     const provider = (reqUrl.searchParams.get('provider') || 'anikoto').toLowerCase();
     const serverParam = reqUrl.searchParams.get('server') || 'default';
-    const mal = reqUrl.searchParams.get('mal') ? Number(reqUrl.searchParams.get('mal')) : null;
+
+    // Accept both new (anilist_id/mal_id) and legacy (anilist/mal) param names
+    const anilistRaw = reqUrl.searchParams.get('anilist_id') || reqUrl.searchParams.get('anilist');
+    const malRaw = reqUrl.searchParams.get('mal_id') || reqUrl.searchParams.get('mal');
+    const anilist = anilistRaw ? Number(anilistRaw) : null;
+    const mal = malRaw ? Number(malRaw) : null;
+
     const fallback = reqUrl.searchParams.get('fallback') !== 'false';
 
-    const sessionKey = `${title}:${slug}:${ep}:${audio}:${provider}:${mal ?? 'nomal'}:${serverParam}`;
+    const sessionKey = `${animeId || title}:${ep}:${audio}:${provider}:${serverParam}`;
     const cached = sessionCache.get(sessionKey);
     if (cached && cached.exp > Date.now()) {
       sendJson(res, 200, { ...cached.data, reused: true });
@@ -406,8 +532,61 @@ const server = http.createServer(async (req, res) => {
       let effectiveAudio = audio;
       let effectiveProvider = provider;
 
+      // 0. Dedicated Native HLS Resolution for AniPM
+      if (provider === 'anipm') {
+        if (anilist && Number.isFinite(anilist) && anilist > 0) {
+          const explicitServer = serverParam && serverParam !== 'default' && serverParam !== 'HD-1' ? serverParam : null;
+          let tracks = null;
+
+          // 1. Try explicit server if the client asked for one
+          if (explicitServer) {
+            tracks = await anipmResolveTracks({
+              anilistId: anilist, ep, lang: audio, server: explicitServer, slug: slug || undefined,
+            }).catch(() => null);
+          }
+
+          // 2. Try beta (preferred — 11 audios)
+          if (!tracks?.proxiedMaster && (!explicitServer || explicitServer === 'beta')) {
+            tracks = await anipmResolveTracks({
+              anilistId: anilist, ep, lang: audio, server: 'beta', slug: slug || undefined,
+            }).catch(() => null);
+          }
+
+          // 3. Fallback to settlar (more reliable, 16 subs)
+          if (!tracks?.proxiedMaster && (!explicitServer || explicitServer === 'beta' || explicitServer === 'settlar')) {
+            console.log(`[bridge] anipm beta failed for anilist=${anilist} ep=${ep}, trying settlar`);
+            tracks = await anipmResolveTracks({
+              anilistId: anilist, ep, lang: audio, server: 'settlar', slug: slug || undefined,
+            }).catch(() => null);
+          }
+
+          if (tracks?.proxiedMaster) {
+            resolved = {
+              master: { url: tracks.proxiedMaster },
+              streamUrl: tracks.proxiedMaster,
+              quality: '1080p',
+              variants: (tracks.qualities || []).map((q) => `${q.height}p`),
+              subtitles: (tracks.subtitles || []).map((s) => ({
+                language: s.lang || s.language || 'en',
+                name: s.label || s.name || 'Subtitle',
+                url: s.proxyUrl || s.uri || s.url || '',
+                default: Boolean(s.default),
+              })),
+              skip: tracks.skip,
+              type: 'hls',
+              kind: 'hls',
+            };
+            effectiveProvider = 'anipm';
+          } else {
+            console.warn(`[bridge] anipm exhausted all servers for anilist=${anilist} ep=${ep}`);
+          }
+        } else {
+          console.warn(`[bridge] anipm skipped — no anilist_id for title="${title}" mal_id=${mal}`);
+        }
+      }
+
       // 1. Direct MAL Gate Resolution (Ultra-fast MegaPlay token derivation)
-      if (mal && mal > 0) {
+      if (!resolved && mal && mal > 0 && (provider === 'anikoto' || provider === 'auto')) {
         resolved = await anikoto.resolveByMal(mal, ep, audio).catch(() => null);
         if (resolved?.master?.url) {
           malStats.hits++;
@@ -451,8 +630,14 @@ const server = http.createServer(async (req, res) => {
                 const src = await adapter.sources(targetEp.id || targetEp.ref, { audioType: audio }).catch(() => null);
                 const firstEmbed = src?.embedUrl || (Array.isArray(src?.embeds) && src.embeds[0]) || (Array.isArray(src?.direct) && src.direct[0]?.url) || src?.direct?.[0];
                 if (firstEmbed && adapter.resolve) {
-                  const res = await adapter.resolve(firstEmbed, { quality: serverParam }).catch(() => null);
-                  if (res?.master?.url || res?.streamUrl) return res;
+                  const res = await adapter.resolve(firstEmbed, { quality: serverParam, skip: src?.skip }).catch(() => null);
+                  const streamCandidate = res?.master?.url || res?.streamUrl;
+                  if (streamCandidate) {
+                    if (res.kind === 'embed' || res.type === 'embed' || streamCandidate.includes('morencius') || (!streamCandidate.includes('.m3u8') && !streamCandidate.includes('.mp4') && streamCandidate.includes('/embed'))) {
+                      return null; // Reject dead iframe embeds
+                    }
+                    return res;
+                  }
                 } else if (Array.isArray(src?.direct) && src.direct.length > 0) {
                   const d = src.direct[0];
                   return {
@@ -529,6 +714,8 @@ const server = http.createServer(async (req, res) => {
         skip: resolved.skip || null,
         proof,
         master: streamUrl,
+        type: resolved.type || (streamUrl.includes('.m3u8') ? 'hls' : 'embed'),
+        defaultEmbed: resolved.defaultEmbed || undefined,
         subtitles: resolved.subtitles || [],
         thumbnails: resolved.thumbnails || null,
       };

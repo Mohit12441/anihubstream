@@ -44,7 +44,7 @@ export function isCellularOrSaveData(): boolean {
 export function buildSwarmId(titleOrId: string, episode: number, quality: string = '1080p'): string {
   const cleanId = String(titleOrId || 'anime')
     .toLowerCase()
-    .replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld):/i, '')
+    .replace(/^(?:hianime|anikoto|aniwatch):/i, '')
     .replace(/[^a-z0-9_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
   return `anihub:${cleanId}:ep${episode}:${quality}`;

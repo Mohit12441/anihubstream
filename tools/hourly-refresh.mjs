@@ -1,3 +1,19 @@
+// tools/hourly-refresh.mjs
+//
+// ⚠️ IMPORTANT: This file is NOT dead code, even though the
+// Windows Scheduled Task ("AniHubHourlyRefresh") was never
+// registered on any machine and this script never runs in
+// production.
+//
+// It is retained because cloud-sync/config.test.mjs reads it
+// as a structural fixture. The test verifies that the
+// cloud-sync writer's air-slot clearing SQL matches this
+// file's SQL byte-for-byte. If the two drift, the test fails.
+//
+// Do not delete without also updating cloud-sync/config.test.mjs.
+// Do not modify the SQL below without understanding that the
+// corresponding cloud-sync statements must change identically.
+
 /* ============================================================
    AniHubStream — catalogue refresh pipeline, run from this machine
    (Windows Task Scheduler task "AniHubHourlyRefresh", every 30 minutes

@@ -43,6 +43,7 @@ export function initLocalDatabase() {
     'viewer',
     'library',
     'position',
+    'provider_route',
   ];
 
   const existingRows = db.prepare("SELECT name FROM sqlite_master WHERE type='table'").all();
@@ -52,6 +53,18 @@ export function initLocalDatabase() {
   if (missing.length > 0) {
     throw new Error(`[db:init] Failed to create tables: ${missing.join(', ')}`);
   }
+
+  // Migrate provider_route columns if missing
+  try {
+    const cols = db.prepare("PRAGMA table_info(provider_route)").all();
+    const colNames = new Set(cols.map((c) => /** @type {any} */ (c).name));
+    if (!colNames.has('resolved_anilist')) {
+      db.exec("ALTER TABLE provider_route ADD COLUMN resolved_anilist INTEGER;");
+    }
+    if (!colNames.has('resolved_title')) {
+      db.exec("ALTER TABLE provider_route ADD COLUMN resolved_title TEXT;");
+    }
+  } catch {}
 
   console.log(`[db:init] Schema verified: all ${requiredTables.length} critical tables present (including stream_cache and anime_provider_mapping).`);
   return { dbPath, tables: Array.from(existingSet) };

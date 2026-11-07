@@ -133,10 +133,10 @@ describe('Stream Bridge Microservice Suite (:8795)', () => {
     const ids = data.providers.map((p) => p.id);
     assert.ok(ids.includes('mock-cascade-provider'));
     assert.ok(ids.includes('anikoto'));
-    assert.ok(ids.includes('watchanimeworld'));
-    const waw = data.providers.find((p) => p.id === 'watchanimeworld');
-    assert.ok(waw.supportedAudio.includes('hindi'));
-    assert.equal(waw.defaultType, 'mp4');
+    assert.ok(ids.includes('hianime'));
+    const hia = data.providers.find((p) => p.id === 'hianime');
+    assert.ok(hia.supportedAudio.includes('sub'));
+    assert.equal(hia.defaultType, 'hls');
   });
 
   it('GET /search returns normalized items for specific provider and federated search', async () => {

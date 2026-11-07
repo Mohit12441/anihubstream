@@ -54,60 +54,6 @@ const PROVIDER_METAS: Record<string, { name: string; color: string; badge: strin
     badge: 'Settlar HLS Downloader',
     description: 'Settlar session stream-to-video assembler with skip timestamps.',
   },
-  anidisk: {
-    name: 'AniDisk',
-    color: '#f97316',
-    badge: 'Regional Dubbed MP4',
-    description: 'EarnVids / Hydrax direct MP4 video files with 15 Indian regional dubbed tracks.',
-  },
-  animeflv: {
-    name: 'AnimeFLV',
-    color: '#ef4444',
-    badge: 'Audio Latino & Castellano',
-    description: 'Zilla Networks decoupled Spanish stream-to-MP4 video packager.',
-  },
-  hdrezka: {
-    name: 'HDRezka',
-    color: '#06b6d4',
-    badge: 'Ultra HD 1080p Ultra',
-    description: 'Voidboost CDN direct high-bitrate MP4 download with Russian & Ukrainian voiceovers.',
-  },
-  jkanime: {
-    name: 'JKAnime',
-    color: '#14b8a6',
-    badge: 'Desu / Magi Spanish',
-    description: 'Desu and Magi direct HLS to MP4 video converter.',
-  },
-  watchanimeworld: {
-    name: 'WatchAnimeWorld',
-    color: '#38bdf8',
-    badge: 'Multi-Audio MP4',
-    description: 'Direct progressive MP4 file with Hindi, English, and Japanese audio.',
-  },
-  animewave: {
-    name: 'AnimeWave',
-    color: '#8b5cf6',
-    badge: 'HLS Stream Downloader',
-    description: 'High-speed HLS stream-to-MP4 video assembly and direct mirror downloads.',
-  },
-  animekai: {
-    name: 'AnimeKai',
-    color: '#f59e0b',
-    badge: 'Ultra Stream Downloader',
-    description: 'Stream-to-MP4 extraction and fast progressive video downloads.',
-  },
-  animedubhindi: {
-    name: 'AnimeDubHindi',
-    color: '#eab308',
-    badge: 'Hindi Regional Cloud',
-    description: 'High-speed direct cloud downloads in 480p, 720p, and 1080p with Hindi dub.',
-  },
-  desidubanime: {
-    name: 'DesiDubAnime',
-    color: '#f59e0b',
-    badge: 'Desi Multi-Audio Stream',
-    description: 'Direct Google Drive / Streamp2p mirrors with Hindi and regional voice tracks.',
-  },
 };
 
 export function DownloadModal({
@@ -126,15 +72,6 @@ export function DownloadModal({
     if (clean.includes('hianime')) return 'hianime';
     if (clean.includes('aniwatch')) return 'aniwatch';
     if (clean.includes('anipm')) return 'anipm';
-    if (clean.includes('anidisk')) return 'anidisk';
-    if (clean.includes('animeflv')) return 'animeflv';
-    if (clean.includes('hdrezka')) return 'hdrezka';
-    if (clean.includes('jkanime')) return 'jkanime';
-    if (clean.includes('watchanimeworld')) return 'watchanimeworld';
-    if (clean.includes('animewave')) return 'animewave';
-    if (clean.includes('animekai')) return 'animekai';
-    if (clean.includes('animedubhindi')) return 'animedubhindi';
-    if (clean.includes('desidubanime')) return 'desidubanime';
     return 'anikoto';
   }, [activeProvider, currentStream]);
 
@@ -440,36 +377,6 @@ export function DownloadModal({
                 >
                   DUB
                 </button>
-                {['watchanimeworld', 'anidisk', 'animedubhindi', 'desidubanime'].includes(selectedProvider) && (
-                  <button
-                    type="button"
-                    className={`dl-modal__audio-btn ${selectedAudio === 'hindi' ? 'is-active' : ''}`}
-                    onClick={() => !downloadingItem && setSelectedAudio('hindi')}
-                    disabled={Boolean(downloadingItem)}
-                  >
-                    HINDI
-                  </button>
-                )}
-                {['animeflv', 'jkanime'].includes(selectedProvider) && (
-                  <button
-                    type="button"
-                    className={`dl-modal__audio-btn ${selectedAudio === 'spanish' ? 'is-active' : ''}`}
-                    onClick={() => !downloadingItem && setSelectedAudio('spanish')}
-                    disabled={Boolean(downloadingItem)}
-                  >
-                    LATINO
-                  </button>
-                )}
-                {selectedProvider === 'hdrezka' && (
-                  <button
-                    type="button"
-                    className={`dl-modal__audio-btn ${selectedAudio === 'russian' ? 'is-active' : ''}`}
-                    onClick={() => !downloadingItem && setSelectedAudio('russian')}
-                    disabled={Boolean(downloadingItem)}
-                  >
-                    RUSSIAN
-                  </button>
-                )}
               </div>
             </div>
             <p className="dl-modal__active-desc">{currentMeta.description}</p>

@@ -7,9 +7,10 @@ import { ServerSwitcher } from '../components/player/ServerSwitcher';
 import type { PlayServer } from '../components/player/PlayerInput';
 import { providerFromId, serverIdFromProvider } from '../data/servers';
 import { AnimeCard } from '../components/AnimeCard';
+import { AiringCountdown } from '../components/AiringCountdown';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { EpisodeSidebar } from '../components/EpisodeSidebar';
-import { cleanAnimeTitle, ratingLabel, toSeconds, type Anime, type Episode } from '../data/model';
+import { cleanAnimeTitle, isHashToken, ratingLabel, toSeconds, type Anime, type Episode } from '../data/model';
 import { getPlay } from '../data/api';
 import { useToast } from '../lib/Toast';
 import { accentVars, usePlayerPreferences } from '../lib/usePlayerPrefs';
@@ -22,6 +23,17 @@ import { prefetchEpisode, type BridgeSource } from '../lib/streamBridge';
 import { warmStreamOrigins } from '../lib/warmConnections';
 import '../styles/watch.css';
 import '../styles/player.css';
+
+export function titleMatches(a?: string | null, b?: string | null): boolean {
+  if (!a || !b) return true;
+  const wordsA = a.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(/\s+/).filter(Boolean);
+  const wordsB = b.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(/\s+/).filter(Boolean);
+  if (wordsA.length === 0 || wordsB.length === 0) return true;
+  const setA = new Set(wordsA);
+  const overlap = wordsB.filter((w) => setA.has(w)).length;
+  const ratio = overlap / Math.max(setA.size, wordsB.length);
+  return ratio >= 0.5;
+}
 
 const PROVIDER_THEMES: Record<string, { name: string; icon: string; badge: string; color: string; desc: string }> = {
   anikoto: {
@@ -51,69 +63,6 @@ const PROVIDER_THEMES: Record<string, { name: string; icon: string; badge: strin
     badge: 'Settlar 1080p HLS',
     color: '#8b5cf6',
     desc: 'Open partner Settlar session stream with precise skip intervals',
-  },
-  anidisk: {
-    name: 'AniDisk',
-    icon: '📀',
-    badge: 'Regional Dubs (15 Langs)',
-    color: '#f97316',
-    desc: 'EarnVids & Hydrax decrypted streams with Hindi, Tamil, and Telugu audio',
-  },
-  animeflv: {
-    name: 'AnimeFLV',
-    icon: '🔥',
-    badge: 'Audio Latino & Castellano',
-    color: '#ef4444',
-    desc: 'Zilla Networks decoupled Spanish & Latino HLS streams',
-  },
-  hdrezka: {
-    name: 'HDRezka',
-    icon: '🎬',
-    badge: 'Ultra HD 1080p',
-    color: '#06b6d4',
-    desc: 'Voidboost CDN high-bitrate MP4 & HLS with Russian and Ukrainian audio',
-  },
-  jkanime: {
-    name: 'JKAnime',
-    icon: '🌸',
-    badge: 'Desu / Magi HLS',
-    color: '#14b8a6',
-    desc: 'Direct Desu and Magi Spanish HLS streaming players',
-  },
-  animedubhindi: {
-    name: 'AnimeDubHindi',
-    icon: '🇮🇳',
-    badge: 'Hindi Regional Cloud',
-    color: '#eab308',
-    desc: 'Regional Indian anime dubs and high-speed direct downloads',
-  },
-  desidubanime: {
-    name: 'DesiDubAnime',
-    icon: '🎧',
-    badge: 'Desi Multi-Audio',
-    color: '#f59e0b',
-    desc: 'Multi-server streaming mirrors with Hindi and regional voice tracks',
-  },
-  watchanimeworld: {
-    name: 'WatchAnimeWorld',
-    icon: '🌐',
-    badge: 'Direct MP4 · Multi-Audio',
-    color: '#10b981',
-    desc: 'Direct MP4 video files with Hindi, English, and Japanese audio',
-  },
-  animewave: {
-    name: 'AnimeWave',
-    icon: '🌊',
-    badge: 'HLS Fast Stream',
-    color: '#8b5cf6',
-    desc: 'Fast redundant mirror with multi-audio support',
-  },
-  animekai: {
-    name: 'AnimeKai',
-    icon: '⚡',
-    badge: 'Ultra Stream',
-    color: '#f59e0b',
-    desc: 'Direct failover stream with dual-audio branches',
   },
   torrent: {
     name: 'P2P Swarm',
@@ -148,12 +97,17 @@ export function Watch() {
         title: cleanAnimeTitle(loadedAnime.title),
       };
     }
+    // If we are still loading a catalog anime (not an external provider id and no explicit title query),
+    // wait for loadedAnime to arrive so we don't flash mutilated fallback titles or kick off premature stream resolution
+    if (status === 'loading' && !params.get('title') && !id?.includes(':')) {
+      return null;
+    }
     if (!id) return null;
     const queryTitle = params.get('title') || '';
     const queryPoster = params.get('poster') || '';
     const cleanBase = id
       .replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai):/i, '')
-      .replace(/-[a-z0-9]{4,8}$/i, '')
+      .replace(/-([a-z0-9]{4,8})$/i, (match, token) => (isHashToken(token) ? '' : match))
       .replace(/[-_:]+/g, ' ')
       .trim();
     const fallbackTitle =
@@ -273,7 +227,14 @@ export function Watch() {
   const [isStreamResolved, setIsStreamResolved] = useState(false);
   const [downloadOpen, setDownloadOpen] = useState(false);
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
-  const [playServers, setPlayServers] = useState<PlayServer[]>([]);
+  const lastFallbackNotified = useRef<string>('');
+  const DEFAULT_PLAY_SERVERS: PlayServer[] = [
+    { id: 'hianime:HD-1', name: 'HiAnime · HD-1', provider: 'hianime', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'anikoto:HD-1', name: 'AniKoto · HD-1', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'aniwatch:HD-1', name: 'AniWatch · HD-1', provider: 'aniwatch', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+    { id: 'anipm:default', name: 'AniPM · Settlar HD', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  ];
+  const [playServers, setPlayServers] = useState<PlayServer[]>(DEFAULT_PLAY_SERVERS);
   const [scopedProviderUnavailable, setScopedProviderUnavailable] = useState(false);
   const [providerHealth, setProviderHealth] = useState<Record<string, { status?: string; latencyMs?: number }>>({});
   const [availableProvidersList, setAvailableProvidersList] = useState<{ id: string; name: string; available: boolean; status?: string; latencyMs?: number }[]>([]);
@@ -285,11 +246,30 @@ export function Watch() {
     targetProvider ? serverIdFromProvider(targetProvider) : 'anikoto:HD-1'
   );
 
+  const currentProviderKey = useMemo(() => {
+    if (targetProvider && PROVIDER_THEMES[targetProvider]) return targetProvider;
+    if (activeServerId) {
+      const prov = providerFromId(activeServerId);
+      if (PROVIDER_THEMES[prov]) return prov;
+    }
+    return 'anikoto';
+  }, [targetProvider, activeServerId]);
+
   /* Reset stream resolved state on anime or episode change */
   useEffect(() => {
     setIsStreamResolved(false);
     setCurrentStream(null);
   }, [id, epNum]);
+
+  /* Fallback toast notification when requested provider differs from resolved stream */
+  useEffect(() => {
+    if (!currentStream?.provider || !targetProvider || targetProvider === 'auto') return;
+    if (currentStream.provider === targetProvider) return;
+    const key = `${targetProvider}->${currentStream.provider}`;
+    if (lastFallbackNotified.current === key) return;
+    lastFallbackNotified.current = key;
+    notify(`Requested ${targetProvider} unavailable — streaming from ${currentStream.provider}`);
+  }, [currentStream?.provider, targetProvider, notify]);
 
   /* Lazy/eager server list fetch from Layer 1 API */
   useEffect(() => {
@@ -313,7 +293,14 @@ export function Watch() {
         if (Array.isArray(data.availableProviders)) {
           setAvailableProvidersList(data.availableProviders);
         }
-        const serverList = Array.isArray(data.servers) ? data.servers : (Array.isArray(data.data?.servers) ? data.data.servers : []);
+        const rawServerList = Array.isArray(data.servers) ? data.servers : (Array.isArray(data.data?.servers) ? data.data.servers : []);
+        const serverList = rawServerList.filter((s: PlayServer) => {
+          if (s.resolvedTitle && !titleMatches(s.resolvedTitle, anime.title)) {
+            notify(`Server title mismatch: ${s.resolvedTitle} — falling back`);
+            return false;
+          }
+          return true;
+        });
         if (serverList.length > 0) {
           setPlayServers(serverList);
           const matchingActive = serverList.find((s: PlayServer) => s.id === activeServerId);
@@ -325,10 +312,14 @@ export function Watch() {
             : null;
           if (matchedServer) {
             setActiveServerId(matchedServer.id);
-          } else if (targetProvider) {
-            setActiveServerId(serverIdFromProvider(targetProvider));
-          } else if (!serverList.some((s: PlayServer) => s.id === activeServerId)) {
-            setActiveServerId(serverList[0].id);
+          } else {
+            let finalActiveId = targetProvider
+              ? serverIdFromProvider(targetProvider)
+              : activeServerId;
+            if (!serverList.some((s: PlayServer) => s.id === finalActiveId)) {
+              finalActiveId = serverList[0].id;
+            }
+            setActiveServerId(finalActiveId);
           }
         }
       })
@@ -521,7 +512,7 @@ export function Watch() {
     const timer = window.setTimeout(() => {
       if (prefetchedNext.current !== nextEp) {
         prefetchedNext.current = nextEp;
-        void prefetchEpisode(anime.title, nextEp, prefs.audio ?? 'sub');
+        void prefetchEpisode(anime.id, nextEp, prefs.audio ?? 'sub');
       }
     }, 120_000);
     return () => window.clearTimeout(timer);
@@ -627,15 +618,6 @@ export function Watch() {
     notify(`Switched to ${server.name} (${srvAudio.toUpperCase()})`);
   };
 
-  const currentProviderKey = useMemo(() => {
-    if (targetProvider && PROVIDER_THEMES[targetProvider]) return targetProvider;
-    if (activeServerId) {
-      const prov = providerFromId(activeServerId);
-      if (PROVIDER_THEMES[prov]) return prov;
-    }
-    return 'anikoto';
-  }, [targetProvider, activeServerId]);
-
   const handleSwitchProvider = (provKey: string) => {
     const newParams = new URLSearchParams(params);
     newParams.set('provider', provKey);
@@ -678,6 +660,7 @@ export function Watch() {
         <div className="watch__main">
           <AdvancedPlayer
             anime={anime}
+            animeId={anime.id}
             episode={episode}
             next={episodes[idx] ?? null}
             hasPrev={idx > 1}
@@ -700,7 +683,7 @@ export function Watch() {
                 const nextEp = idx + 1;
                 if (prefetchedNext.current !== nextEp) {
                   prefetchedNext.current = nextEp;
-                  void prefetchEpisode(anime.title, nextEp, prefs.audio ?? 'sub');
+                  void prefetchEpisode(anime.id, nextEp, prefs.audio ?? 'sub');
                 }
               }
             }}
@@ -713,7 +696,7 @@ export function Watch() {
           />
 
           {playServers.length > 0 && (
-            <div style={{ margin: '20px 0' }}>
+            <div style={{ marginTop: '16px', marginBottom: '24px' }}>
               <ServerSwitcher
                 servers={playServers}
                 activeServerId={activeServerId}
@@ -851,6 +834,24 @@ export function Watch() {
                 <dd>{positions[key] ? `${Math.round(positions[key].t / 60)} min in` : 'Not started'}</dd>
               </div>
             </dl>
+
+            {anime.schedule?.day && anime.schedule?.time && (
+              <div style={{ margin: '14px 0' }}>
+                <AiringCountdown
+                  anime={{
+                    id: anime.id,
+                    title: anime.title,
+                    poster: anime.poster,
+                    status: anime.status,
+                    schedule: anime.schedule,
+                    episodeTotal: anime.episodeTotal,
+                    episodeCount: anime.episodes?.length ?? anime.episodeCount,
+                  }}
+                  variant="banner"
+                  showRemindMe
+                />
+              </div>
+            )}
 
             <div className="watch__actions">
               <button

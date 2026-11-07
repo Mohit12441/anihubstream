@@ -3364,7 +3364,8 @@
   {
     "id": "dawang-raoming-3",
     "mal": 60597,
-    "anilist": 199353
+    "anilist": 199353,
+    "kitsu": 51152
   },
   {
     "id": "psyren",
@@ -27356,7 +27357,25 @@
     "note": "imported 2026-10-24 from the AniList popularity backlog (page 56)",
     "mal": 4970
   },
-  {"id":"86-eighty-six","kitsu":43066,"anilist":116589,"note":"imported 2026-11-01 from the AniList popularity backlog (page 3)"},
-  {"id":"komi-cant-communicate-pj35","kitsu":44551,"anilist":133965,"note":"imported 2026-11-01 from the AniList popularity backlog (page 3)"},
-  {"id":"the-eminence-in-shadow","kitsu":44107,"anilist":130298,"note":"imported 2026-11-01 from the AniList popularity backlog (page 3)"}
+  {
+    "id": "86-eighty-six",
+    "kitsu": 43066,
+    "anilist": 116589,
+    "note": "imported 2026-11-01 from the AniList popularity backlog (page 3)",
+    "mal": 41457
+  },
+  {
+    "id": "komi-cant-communicate-pj35",
+    "kitsu": 44551,
+    "anilist": 133965,
+    "note": "imported 2026-11-01 from the AniList popularity backlog (page 3)",
+    "mal": 48926
+  },
+  {
+    "id": "the-eminence-in-shadow",
+    "kitsu": 44107,
+    "anilist": 130298,
+    "note": "imported 2026-11-01 from the AniList popularity backlog (page 3)",
+    "mal": 48316
+  }
 ]

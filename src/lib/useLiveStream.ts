@@ -48,8 +48,15 @@ export interface SubTrack {
   url: string;
 }
 
+export interface LiveAudioTrack {
+  id: number;
+  name: string;
+  lang?: string;
+  default?: boolean;
+}
+
 interface Options {
-  title: string;
+  animeId: string;
   episode: number;
   audio: 'sub' | 'dub' | 'hindi' | string;
   provider?: string;
@@ -132,7 +139,16 @@ export function useLiveStream(o: Options) {
   const resolveStart = useRef<number>(Date.now());
   const [levels, setLevels] = useState<{ index: number; height: number; bitrate: number; label: string }[]>([]);
   const [currentLevelIndex, setCurrentLevelIndex] = useState<number>(-1);
+  const [audioTracks, setAudioTracks] = useState<LiveAudioTrack[]>([]);
+  const [currentAudioTrack, setCurrentAudioTrack] = useState<number>(-1);
   const [buffering, setBuffering] = useState(false);
+
+  const setAudioTrack = useCallback((trackId: number) => {
+    if (hlsRef.current) {
+      hlsRef.current.audioTrack = trackId;
+      setCurrentAudioTrack(trackId);
+    }
+  }, []);
 
   /* ---------- resolve ---------- */
   useEffect(() => {
@@ -145,6 +161,8 @@ export function useLiveStream(o: Options) {
     setCues([]);
     setLevels([]);
     setCurrentLevelIndex(-1);
+    setAudioTracks([]);
+    setCurrentAudioTrack(-1);
     shownTrack.current = null;
     setError(null);
     setRetryable(false);
@@ -171,7 +189,7 @@ export function useLiveStream(o: Options) {
       try {
         if (!fresh && o.initialSource && o.initialSource.master && isMegaplayTokenValid(o.initialSource.master)) {
           setInfo(o.initialSource);
-          prefetchEpisode(o.title, o.episode + 1, o.audio, o.provider ?? 'auto');
+          prefetchEpisode(o.animeId, o.episode + 1, o.audio, o.provider ?? 'auto');
           return;
         }
 
@@ -183,20 +201,20 @@ export function useLiveStream(o: Options) {
         }
         autoTries.current = 0;
         errorTries.current = 0;
-        let res = await bridgeResolve(o.title, o.episode, o.audio, o.provider ?? 'auto');
+        let res = await bridgeResolve(o.animeId, o.episode, o.audio, o.provider ?? 'auto');
         if (cancel) return;
         if (isResolveFailure(res)) {
           /* a dub ask for an episode that has no dubbed file falls back to the original
              rather than leaving the viewer with an error — the audio the episode actually
              carries wins over the stored intent */
           if (o.audio === 'dub' && res.error === 'NO_EMBEDS') {
-            const sub = await bridgeResolve(o.title, o.episode, 'sub', o.provider ?? 'auto');
+            const sub = await bridgeResolve(o.animeId, o.episode, 'sub', o.provider ?? 'auto');
             if (cancel) return;
             if (!isResolveFailure(sub)) {
               setAudioFallback(true);
               setInfo(sub);
               // Prefetch next episode in the background
-              prefetchEpisode(o.title, o.episode + 1, 'sub', o.provider ?? 'auto');
+              prefetchEpisode(o.animeId, o.episode + 1, 'sub', o.provider ?? 'auto');
               return;
             }
             res = sub;
@@ -208,7 +226,7 @@ export function useLiveStream(o: Options) {
         }
         setInfo(res);
         // Automatically warm and prefetch the next episode so autoplay/bingeing is instant!
-        prefetchEpisode(o.title, o.episode + 1, o.audio, o.provider ?? 'auto');
+        prefetchEpisode(o.animeId, o.episode + 1, o.audio, o.provider ?? 'auto');
       } finally {
         window.clearInterval(timer);
         window.clearTimeout(timeoutId);
@@ -219,7 +237,7 @@ export function useLiveStream(o: Options) {
       window.clearInterval(timer);
       window.clearTimeout(timeoutId);
     };
-  }, [o.title, o.episode, o.audio, o.provider, nonce, o.initialSource]);
+  }, [o.animeId, o.episode, o.audio, o.provider, nonce, o.initialSource]);
 
   /* ---------- self-heal a transient offline, or a refusal a re-resolve can clear ---------- */
   useEffect(() => {
@@ -299,14 +317,31 @@ export function useLiveStream(o: Options) {
     let hls: Hls | null = null;
     void (async () => {
       const url = bridgeUrl(info.master);
-      const isProgressive = info.kind === 'progressive' ||
+      const isHls = info.kind === 'hls' || info.type === 'hls' || url.includes('.m3u8') || url.includes('.m3u');
+      const isProgressive = !isHls && (
+        info.kind === 'progressive' ||
         info.container === 'matroska' ||
         info.container === 'mp4' ||
-        (!url.includes('.m3u8') && !url.includes('.m3u'));
+        url.includes('.mp4') ||
+        url.includes('.mkv')
+      );
+
+      if (
+        !isHls &&
+        !url.includes('/api/proxy') &&
+        (
+          info.kind === 'embed' ||
+          info.type === 'embed'
+        )
+      ) {
+        setStatus('ready');
+        setBuffering(false);
+        return;
+      }
 
       if (info.provider === 'torrent' || info.master?.startsWith('magnet:')) {
         const { P2PTorrentStreamer } = await import('./webtorrentStreamer');
-        const streamer = new P2PTorrentStreamer(o.title, o.episode, '1080p');
+        const streamer = new P2PTorrentStreamer(o.animeId, o.episode, '1080p');
         await streamer.attach(v, isProgressive ? url : undefined);
         return;
       }
@@ -322,7 +357,7 @@ export function useLiveStream(o: Options) {
       if (HlsCtor.isSupported()) {
         let p2p: P2PEngine | null = null;
         if (o.enableP2P) {
-          const swarmId = buildSwarmId(o.title, o.episode);
+          const swarmId = buildSwarmId(o.animeId, o.episode);
           const signalUrl = (import.meta as any).env?.VITE_P2P_SIGNAL_URL || bridgeWsUrl('/p2p-signal');
           p2p = new P2PEngine(true, swarmId, { signalUrl });
           p2pRef.current = p2p;
@@ -390,6 +425,11 @@ export function useLiveStream(o: Options) {
            appended) — a parsed manifest alone is not playback. */
         hls.on(HlsCtor.Events.ERROR, (_evt, data) => {
           if (cancelled || !data.fatal) return;
+          if ((data as any).response?.code === 403) {
+            // Expired token (e.g. Settlar): trigger fresh re-resolve
+            setNonce((n) => n + 1);
+            return;
+          }
           if (data.type === HlsCtor.ErrorTypes.NETWORK_ERROR && !netTried) {
             netTried = true;
             hls?.startLoad();
@@ -413,6 +453,32 @@ export function useLiveStream(o: Options) {
             label: l.height ? `${l.height}p` : `Level ${idx + 1}`,
           }));
           setLevels(lvls);
+
+          const aTracks = (hls?.audioTracks ?? []).map((t: any, idx: number) => ({
+            id: t.id ?? idx,
+            name: t.name || t.lang || `Track ${idx + 1}`,
+            lang: t.lang || '',
+            default: !!t.default,
+          }));
+          setAudioTracks(aTracks);
+          if (aTracks.length > 0) {
+            const active = hls && hls.audioTrack !== -1 ? hls.audioTrack : (aTracks.find((a) => a.default)?.id ?? 0);
+            setCurrentAudioTrack(active);
+          }
+        });
+        hls.on(HlsCtor.Events.AUDIO_TRACK_SWITCHED, (_evt, data) => {
+          if (cancelled) return;
+          setCurrentAudioTrack(data.id);
+        });
+        hls.on(HlsCtor.Events.AUDIO_TRACKS_UPDATED, (_evt, data) => {
+          if (cancelled) return;
+          const aTracks = (data.audioTracks ?? []).map((t: any, idx: number) => ({
+            id: t.id ?? idx,
+            name: t.name || t.lang || `Track ${idx + 1}`,
+            lang: t.lang || '',
+            default: !!t.default,
+          }));
+          setAudioTracks(aTracks);
         });
         hls.on(HlsCtor.Events.LEVEL_SWITCHED, (_evt, data) => {
           if (cancelled) return;
@@ -698,6 +764,10 @@ export function useLiveStream(o: Options) {
     levels,
     currentLevelIndex,
     setQualityLevel,
+    audioTracks,
+    currentAudioTrack,
+    setAudioTrack,
+    switchableAudio: audioTracks.length > 1,
     p2pStats,
   };
 }

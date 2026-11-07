@@ -14,17 +14,17 @@ describe('Phases 4 & 5: Meilisearch & Adapter Registry Tests', () => {
       assert.ok(ids.includes('aniwatch'));
       assert.ok(ids.includes('hianime'));
       assert.ok(ids.includes('anikoto'));
-      assert.ok(ids.includes('animedubhindi'));
-      assert.ok(ids.includes('watchanimeworld'));
+      assert.ok(ids.includes('anipm'));
+      assert.ok(ids.includes('torrent'));
 
       const anikoto = getAdapter('anikoto');
       assert.strictEqual(anikoto?.name, 'AniKoto');
       assert.strictEqual(anikoto?.defaultType, 'hls');
 
-      const waw = getAdapter('watchanimeworld');
-      assert.strictEqual(waw?.name, 'WatchAnimeWorld');
-      assert.strictEqual(waw?.defaultType, 'mp4');
-      assert.ok(waw?.supportedAudio.includes('hindi'));
+      const anipm = getAdapter('anipm');
+      assert.strictEqual(anipm?.name, 'AniPM');
+      assert.strictEqual(anipm?.defaultType, 'hls');
+      assert.ok(anipm?.supportedAudio.includes('sub'));
     });
 
     it('allows registering a new provider with zero side-effects', () => {

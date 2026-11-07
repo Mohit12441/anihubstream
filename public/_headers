@@ -43,6 +43,7 @@
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' https: blob: data:; frame-src 'self' https: blob: data:; media-src 'self' https: blob: data: http:; connect-src 'self' https: wss: ws: blob: data: http://127.0.0.1:* ws://127.0.0.1:*; img-src 'self' https: data: blob:; worker-src 'self' blob:;
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   Permissions-Policy: camera=(), microphone=(), geolocation=()

@@ -1,54 +1,42 @@
 {
-  "fetched_at": "2026-11-03T15:22:28.234Z",
+  "fetched_at": "2026-11-07T00:57:51.678Z",
   "titles": [
     {
-      "id": "golden-kamuy-season-3-4zc3",
+      "id": "mobile-suit-gundam-wing",
       "sources": {
-        "kitsu": 42435,
-        "anilist": 110355,
-        "mal": 40059
+        "kitsu": 69,
+        "anilist": 90,
+        "mal": 90
       },
-      "episodes": 12,
-      "episodeTotal": 12,
+      "episodes": 49,
+      "episodeTotal": 49,
       "skipKey": null,
       "markers": 0
     }
   ],
   "stats": {
-    "episodesStored": 12,
-    "episodeTotal": 12,
+    "episodesStored": 49,
+    "episodeTotal": 49,
     "markers": 0,
     "runtimeFallbacks": 0
   },
   "droppedGenres": [
-    "Historical",
-    "Seinen",
-    "Primarily Adult Cast",
-    "Ensemble Cast",
-    "Foreign",
-    "Outdoor Activities",
-    "Indigenous Cultures",
-    "Educational",
-    "Guns",
-    "Military",
-    "Primarily Male Cast",
-    "Anti-Hero",
-    "Revenge",
-    "Male Protagonist",
-    "Food",
+    "Mecha",
     "Politics",
-    "Survival",
-    "Language Barrier",
-    "Snowscape",
-    "Animals",
-    "Gore",
-    "Crime",
-    "Archery",
-    "Prison",
-    "Swordplay",
-    "Samurai",
-    "Gender Bending",
+    "Space",
+    "Military",
+    "Real Robot",
+    "War",
+    "Ensemble Cast",
+    "Terrorism",
+    "Primarily Male Cast",
+    "Coming of Age",
+    "Male Protagonist",
+    "Philosophy",
+    "Foreign",
     "Circus",
-    "Travel"
+    "Amnesia",
+    "Suicide",
+    "Espionage"
   ]
 }

@@ -58,9 +58,7 @@ const PROVIDER_NAMES: Record<string, { name: string; badge: string; color: strin
   anikoto: { name: 'AniKoto', badge: 'HLS 1080p', color: '#6366f1', icon: '⚡' },
   hianime: { name: 'HiAnime', badge: 'Multi-Quality', color: '#ec4899', icon: '🌸' },
   aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6', icon: '🛡️' },
-  watchanimeworld: { name: 'WatchAnimeWorld', badge: 'Direct MP4', color: '#10b981', icon: '🌐' },
-  animewave: { name: 'AnimeWave', badge: 'HLS Fast', color: '#8b5cf6', icon: '🌊' },
-  animekai: { name: 'AnimeKai', badge: 'Ultra Stream', color: '#f59e0b', icon: '⚡' },
+  anipm: { name: 'AniPM', badge: 'Settlar HLS', color: '#8b5cf6', icon: '⚡' },
 };
 
 const POPULAR_SEARCHES = [

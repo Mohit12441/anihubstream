@@ -31,6 +31,6 @@ export default defineConfig(({ command, mode }) => ({
       },
     },
   },
-  server: { port: 5178, host: true, proxy: { '/api': 'http://localhost:8790' } },
+  server: { port: 5178, host: true, proxy: { '/api': 'http://127.0.0.1:8899' } },
   preview: { port: 5178, host: true },
 }));

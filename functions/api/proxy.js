@@ -43,28 +43,11 @@ const ALLOWED_STREAMING_DOMAINS = [
   'dokicloud.one',
   'rapid-cloud.co',
   'vidstream.pro',
-  'watchanimeworld.net',
-  'watchanimeworld.org',
-  'watchanimeworld.one',
-  'watchanimeworld.in',
-  'animewave.to',
-  'animekai.to',
   'ani.pm',
   'settlar.io',
-  'anidisk.org',
-  'deadbase.host',
-  'animeflv.com.ua',
-  'zilla-networks.com',
-  'hello-rezka.tv',
-  'hdrezka.co',
-  'hdrezka.ag',
-  'rezka.ag',
-  'voidboost.net',
-  'jkanime.net',
-  'jkdesa.com',
-  'animedubhindi.link',
-  'adhlinks.com',
-  'desidubanime.me',
+  'cno.to',
+  'beta.cno.to',
+  'flashpod.top',
   'kitsu.app',
   'anilist.co',
   'myanimelist.net',
@@ -107,7 +90,7 @@ export function isHostAllowed(hostname, targetUrl = '', customReferer = '') {
   // 2. Verified stream CDN pattern:
   // Upstream extractors (like Megaplay, AniKoto, HiAnime) dynamically rotate domain names for CDN video chunks.
   // Any public non-private domain requested with a trusted streaming Referer and anime media asset path/extension is authorized.
-  const trustedReferers = ['megaplay.buzz', 'anikoto.cz', 'abyssplayer.com', 'aniwatchtv.to', 'hianime.to'];
+  const trustedReferers = ['megaplay.buzz', 'anikoto.cz', 'abyssplayer.com', 'aniwatchtv.to', 'hianime.to', 'beta.cno.to', 'cno.to', 'ani.pm'];
   const hasTrustedReferer = customReferer && trustedReferers.some((r) => customReferer.includes(r));
   if (hasTrustedReferer) {
     const isStreamAsset =
@@ -270,7 +253,7 @@ export function rewriteM3u8(text, baseUrl, referer, proxyBase, options = {}) {
  * GET /api/proxy?url=<targetUrl>&referer=<referer>
  */
 export const onRequest = async (context) => {
-  const { request, waitUntil } = context;
+  const { request, env = {}, waitUntil } = context;
 
   if (request.method === 'OPTIONS') {
     return new Response(null, {
@@ -290,8 +273,9 @@ export const onRequest = async (context) => {
 
   try {
     const reqUrl = new URL(request.url);
-    const targetUrlRaw = reqUrl.searchParams.get('url');
+    const targetUrlRaw = reqUrl.searchParams.get('url') || reqUrl.searchParams.get('u');
     const customReferer = reqUrl.searchParams.get('referer') || '';
+    const provParam = reqUrl.searchParams.get('p') || reqUrl.searchParams.get('provider') || '';
 
     if (!targetUrlRaw) {
       throw new HttpError(400, 'bad_request', 'url query parameter is required');
@@ -354,6 +338,31 @@ export const onRequest = async (context) => {
           status: cachedRes.status,
           headers: hitHeaders,
         });
+      }
+    }
+
+    // Bridge forwarder for Settlar and Beta (bypasses Cloudflare JA3 bot fingerprinting via native transport)
+    const bridgeBase = env?.STREAM_BRIDGE_URL || 'http://127.0.0.1:8795';
+    if (parsedTarget.hostname.includes('settlar.io') || provParam === 'settlar' || parsedTarget.hostname.includes('cno.to') || provParam === 'beta') {
+      try {
+        const effectiveP = provParam || (parsedTarget.hostname.includes('cno.to') ? 'beta' : 'settlar');
+        const bridgeProxyUrl = `${bridgeBase}/api/proxy?u=${encodeURIComponent(targetUrl)}&p=${effectiveP}`;
+        const fwdHeaders = new Headers();
+        if (rangeHeader) fwdHeaders.set('range', rangeHeader);
+        if (request.headers.get('if-none-match')) fwdHeaders.set('if-none-match', request.headers.get('if-none-match'));
+        const bRes = await fetch(bridgeProxyUrl, {
+          method: request.method,
+          headers: fwdHeaders,
+          signal: AbortSignal.timeout(PROXY_TIMEOUT_MS),
+        });
+        const bHeaders = new Headers(bRes.headers);
+        bHeaders.set('Access-Control-Allow-Origin', '*');
+        return new Response(bRes.body, {
+          status: bRes.status,
+          headers: bHeaders,
+        });
+      } catch (bridgeErr) {
+        console.warn('[PROXY BRIDGE FALLBACK FAILED]', bridgeErr);
       }
     }
 

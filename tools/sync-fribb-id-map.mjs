@@ -260,6 +260,7 @@ export async function populateLocalIdMap(dbInstance, { sourcesPath = SOURCES_FIL
       mal_id        INTEGER,
       anilist_id    INTEGER,
       kitsu_id      INTEGER,
+      anidb_id      INTEGER,
       anikoto_slug  TEXT,
       hianime_slug  TEXT,
       aniwatch_slug TEXT,
@@ -271,6 +272,7 @@ export async function populateLocalIdMap(dbInstance, { sourcesPath = SOURCES_FIL
     CREATE INDEX IF NOT EXISTS id_map_by_mal ON anime_id_map(mal_id);
     CREATE INDEX IF NOT EXISTS id_map_by_anilist ON anime_id_map(anilist_id);
     CREATE INDEX IF NOT EXISTS id_map_by_kitsu ON anime_id_map(kitsu_id);
+    CREATE INDEX IF NOT EXISTS id_map_by_anidb ON anime_id_map(anidb_id);
   `);
 
   // Query existing anime in database to respect FOREIGN KEY constraint
@@ -278,12 +280,13 @@ export async function populateLocalIdMap(dbInstance, { sourcesPath = SOURCES_FIL
   const existingIds = new Set(existingRows.map((r) => r.id));
 
   const stmt = db.prepare(`
-    INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anikoto_slug, hianime_slug, aniwatch_slug, adb_slug, waw_slug, confidence, updated_at)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+    INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anidb_id, anikoto_slug, hianime_slug, aniwatch_slug, adb_slug, waw_slug, confidence, updated_at)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
     ON CONFLICT(anime_id) DO UPDATE SET
       mal_id = coalesce(excluded.mal_id, anime_id_map.mal_id),
       anilist_id = coalesce(excluded.anilist_id, anime_id_map.anilist_id),
       kitsu_id = coalesce(excluded.kitsu_id, anime_id_map.kitsu_id),
+      anidb_id = coalesce(excluded.anidb_id, anime_id_map.anidb_id),
       anikoto_slug = coalesce(excluded.anikoto_slug, anime_id_map.anikoto_slug),
       hianime_slug = coalesce(excluded.hianime_slug, anime_id_map.hianime_slug),
       aniwatch_slug = coalesce(excluded.aniwatch_slug, anime_id_map.aniwatch_slug),
@@ -292,6 +295,7 @@ export async function populateLocalIdMap(dbInstance, { sourcesPath = SOURCES_FIL
   `);
 
   let count = 0;
+  let skipped = 0;
   db.exec('BEGIN TRANSACTION');
   try {
     for (const s of sources) {
@@ -307,21 +311,49 @@ export async function populateLocalIdMap(dbInstance, { sourcesPath = SOURCES_FIL
       const malId = resolved?.mal ?? s.mal ?? null;
       const anilistId = resolved?.anilist ?? s.anilist ?? null;
       const kitsuId = resolved?.kitsu ?? s.kitsu ?? null;
+      const anidbId = resolved?.anidb ?? s.anidb ?? null;
       const confidence = malId ? 1.0 : (anilistId && kitsuId ? 1.0 : 0.85);
 
-      stmt.run(
-        s.id,
-        malId,
-        anilistId,
-        kitsuId,
-        s.anikoto ?? null,
-        s.hianime ?? null,
-        s.aniwatch ?? null,
-        s.adb ?? null,
-        s.waw ?? null,
-        confidence
-      );
-      count++;
+      try {
+        stmt.run(
+          s.id,
+          malId,
+          anilistId,
+          kitsuId,
+          anidbId,
+          s.anikoto ?? null,
+          s.hianime ?? null,
+          s.aniwatch ?? null,
+          s.adb ?? null,
+          s.waw ?? null,
+          confidence
+        );
+        count++;
+      } catch (err) {
+        if (err.message && err.message.includes('UNIQUE constraint failed')) {
+          try {
+            // Retry with colliding external IDs nulled out so slugs and anidb_id are preserved without violating uniqueness
+            stmt.run(
+              s.id,
+              null,
+              null,
+              null,
+              anidbId,
+              s.anikoto ?? null,
+              s.hianime ?? null,
+              s.aniwatch ?? null,
+              s.adb ?? null,
+              s.waw ?? null,
+              0.5
+            );
+            count++;
+          } catch {
+            skipped++;
+          }
+        } else {
+          throw err;
+        }
+      }
     }
     db.exec('COMMIT');
   } catch (err) {
@@ -354,6 +386,7 @@ export async function populateRemoteIdMap({ sourcesPath = SOURCES_FILE, indexes 
       mal_id        INTEGER,
       anilist_id    INTEGER,
       kitsu_id      INTEGER,
+      anidb_id      INTEGER,
       anikoto_slug  TEXT,
       hianime_slug  TEXT,
       aniwatch_slug TEXT,
@@ -367,6 +400,7 @@ export async function populateRemoteIdMap({ sourcesPath = SOURCES_FILE, indexes 
   await d1Query(`CREATE INDEX IF NOT EXISTS id_map_by_mal ON anime_id_map(mal_id)`);
   await d1Query(`CREATE INDEX IF NOT EXISTS id_map_by_anilist ON anime_id_map(anilist_id)`);
   await d1Query(`CREATE INDEX IF NOT EXISTS id_map_by_kitsu ON anime_id_map(kitsu_id)`);
+  await d1Query(`CREATE INDEX IF NOT EXISTS id_map_by_anidb ON anime_id_map(anidb_id)`);
 
   const existingRows = await d1All('SELECT id FROM anime');
   const existingIds = new Set(existingRows.map((r) => r.id));
@@ -383,6 +417,7 @@ export async function populateRemoteIdMap({ sourcesPath = SOURCES_FILE, indexes 
     const malId = resolved?.mal ?? s.mal ?? null;
     const anilistId = resolved?.anilist ?? s.anilist ?? null;
     const kitsuId = resolved?.kitsu ?? s.kitsu ?? null;
+    const anidbId = resolved?.anidb ?? s.anidb ?? null;
     const confidence = malId ? 1.0 : (anilistId && kitsuId ? 1.0 : 0.85);
 
     validEntries.push([
@@ -390,6 +425,7 @@ export async function populateRemoteIdMap({ sourcesPath = SOURCES_FILE, indexes 
       malId,
       anilistId,
       kitsuId,
+      anidbId,
       s.anikoto ?? null,
       s.hianime ?? null,
       s.aniwatch ?? null,
@@ -399,8 +435,9 @@ export async function populateRemoteIdMap({ sourcesPath = SOURCES_FILE, indexes 
     ]);
   }
 
-  // 10 params per row, max 90 params per statement => chunk size 8
-  const CHUNK_SIZE = 8;
+  // 11 params per row, max 90 params per statement => chunk size 7
+  // (8 would be 88 params — safe but tight; 7 leaves headroom at 77)
+  const CHUNK_SIZE = 7;
   let count = 0;
 
   for (let i = 0; i < validEntries.length; i += CHUNK_SIZE) {
@@ -410,20 +447,21 @@ export async function populateRemoteIdMap({ sourcesPath = SOURCES_FILE, indexes 
 
     for (let r = 0; r < chunk.length; r++) {
       const row = chunk[r];
-      const offset = r * 10;
+      const offset = r * 11;
       valuePlaceholders.push(
-        `(?${offset + 1}, ?${offset + 2}, ?${offset + 3}, ?${offset + 4}, ?${offset + 5}, ?${offset + 6}, ?${offset + 7}, ?${offset + 8}, ?${offset + 9}, ?${offset + 10}, datetime('now'))`
+        `(?${offset + 1}, ?${offset + 2}, ?${offset + 3}, ?${offset + 4}, ?${offset + 5}, ?${offset + 6}, ?${offset + 7}, ?${offset + 8}, ?${offset + 9}, ?${offset + 10}, ?${offset + 11}, datetime('now'))`
       );
       params.push(...row);
     }
 
     const sql = `
-      INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anikoto_slug, hianime_slug, aniwatch_slug, adb_slug, waw_slug, confidence, updated_at)
+      INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anidb_id, anikoto_slug, hianime_slug, aniwatch_slug, adb_slug, waw_slug, confidence, updated_at)
       VALUES ${valuePlaceholders.join(',\n')}
       ON CONFLICT(anime_id) DO UPDATE SET
         mal_id = coalesce(excluded.mal_id, anime_id_map.mal_id),
         anilist_id = coalesce(excluded.anilist_id, anime_id_map.anilist_id),
         kitsu_id = coalesce(excluded.kitsu_id, anime_id_map.kitsu_id),
+        anidb_id = coalesce(excluded.anidb_id, anime_id_map.anidb_id),
         anikoto_slug = coalesce(excluded.anikoto_slug, anime_id_map.anikoto_slug),
         hianime_slug = coalesce(excluded.hianime_slug, anime_id_map.hianime_slug),
         aniwatch_slug = coalesce(excluded.aniwatch_slug, anime_id_map.aniwatch_slug),

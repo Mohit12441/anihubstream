@@ -31,6 +31,7 @@ type Menu = { kind: 'none' } | { kind: 'settings'; tab: SettingsTab };
 
 interface Props {
   anime: Anime;
+  animeId: string;
   episode: Episode;
   next: Episode | null;
   hasPrev: boolean;
@@ -62,7 +63,7 @@ const webkitDoc = () =>
   };
 
 export function AdvancedPlayer(props: Props) {
-  const { anime, episode, next, hasPrev, hasNext, onPrev, onNext, theatre, onTheatre, prefs, patch, onStreamResolved, onStreamInfo, initialServer } = props;
+  const { anime, animeId, episode, next, hasPrev, hasNext, onPrev, onNext, theatre, onTheatre, prefs, patch, onStreamResolved, onStreamInfo, initialServer } = props;
   const { notify } = useToast();
   const reduced = usePrefersReducedMotion();
 
@@ -80,6 +81,7 @@ export function AdvancedPlayer(props: Props) {
   const [audioList, setAudioList] = useState<AudioList | null>(null);
   const [audioStatus, setAudioStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
   const [audioError, setAudioError] = useState<string | null>(null);
+  const [showEmbedEscape, setShowEmbedEscape] = useState(false);
 
   const open = menu.kind !== 'none';
 
@@ -114,7 +116,8 @@ export function AdvancedPlayer(props: Props) {
     return {
       session: initialServer.id,
       provider: initialServer.provider,
-      kind: initialServer.type === 'mp4' ? 'progressive' : 'hls',
+      kind: initialServer.type === 'mp4' ? 'progressive' : (initialServer.type === 'embed' ? 'embed' : 'hls'),
+      type: initialServer.type || 'hls',
       title: anime.title,
       episode: { number: episode.n, title: `Episode ${episode.n}` },
       quality: initialServer.quality || '1080p',
@@ -124,7 +127,7 @@ export function AdvancedPlayer(props: Props) {
         intro: initialServer.intro ? [initialServer.intro.start, initialServer.intro.end] : undefined,
         outro: initialServer.outro ? [initialServer.outro.start, initialServer.outro.end] : undefined,
       } : null,
-      proof: { container: 'hls', checkedBytes: 1024 },
+      proof: { container: initialServer.type === 'embed' ? 'embed' : 'hls', checkedBytes: 1024 },
       master: initialServer.streamUrl,
       subtitles: (initialServer.subtitles || []).map((sub: any) => ({
         language: sub.language,
@@ -136,7 +139,7 @@ export function AdvancedPlayer(props: Props) {
     };
   }, [initialServer, anime.title, episode.n, prefs.audio]);
   const live = useLiveStream({
-    title: anime.title,
+    animeId,
     episode: episode.n,
     audio: prefs.audio,
     provider,
@@ -747,6 +750,26 @@ export function AdvancedPlayer(props: Props) {
         ? 'Skip Recap'
         : 'Skip';
 
+  const isEmbed = Boolean(
+    liveReady &&
+    !live.info?.master?.includes('.m3u8') &&
+    !live.info?.master?.includes('/api/proxy') &&
+    (
+      live.info?.kind === 'embed' ||
+      live.info?.type === 'embed'
+    )
+  );
+  const resolvedEmbedUrl = isEmbed ? live.info?.master : null;
+
+  useEffect(() => {
+    if (!isEmbed || !resolvedEmbedUrl) {
+      setShowEmbedEscape(false);
+      return;
+    }
+    const t = window.setTimeout(() => setShowEmbedEscape(true), 3500);
+    return () => window.clearTimeout(t);
+  }, [isEmbed, resolvedEmbedUrl]);
+
   return (
     <div
       className="player"
@@ -780,12 +803,58 @@ export function AdvancedPlayer(props: Props) {
         <video
           ref={live.videoRef}
           className="player__live"
-          data-on={liveReady || undefined}
+          data-on={(!isEmbed && liveReady) || undefined}
           poster={anime.key || anime.poster}
           playsInline
           preload="auto"
-          aria-label={`AniKoto stream — ${anime.title} episode ${episode.n}`}
+          aria-label={`Stream — ${anime.title} episode ${episode.n}`}
+          style={isEmbed ? { display: 'none' } : undefined}
         />
+        {isEmbed && resolvedEmbedUrl && (
+          <div className="player__embed-wrapper" style={{ position: 'absolute', inset: 0, zIndex: 2 }}>
+            <iframe
+              src={resolvedEmbedUrl}
+              className="player__embed-frame"
+              title={`${anime.title} Episode ${episode.n}`}
+              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              loading="eager"
+              style={{
+                width: '100%',
+                height: '100%',
+                border: 'none',
+              }}
+            />
+            {showEmbedEscape && (
+              <a
+                href={resolvedEmbedUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pl__embed-escape"
+                style={{
+                  position: 'absolute',
+                  bottom: '16px',
+                  right: '16px',
+                  zIndex: 10,
+                  fontSize: '0.8rem',
+                  padding: '6px 12px',
+                  background: 'rgba(15, 23, 42, 0.85)',
+                  color: '#fff',
+                  borderRadius: '6px',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
+                }}
+              >
+                <span>Player blocked? Open directly ↗</span>
+              </a>
+            )}
+          </div>
+        )}
         <div className="player__grade" />
 
         <div className="player__top">
@@ -795,7 +864,7 @@ export function AdvancedPlayer(props: Props) {
           </span>
         </div>
 
-        {(live.status === 'resolving' || (liveReady && live.buffering)) && (
+        {(live.status === 'resolving' || (!isEmbed && liveReady && live.buffering)) && (
           <div className="pl__buffering" role="status" aria-label="Loading video">
             <Loader2 className="pl__spinner" size={44} aria-hidden="true" />
           </div>
@@ -816,7 +885,7 @@ export function AdvancedPlayer(props: Props) {
           </div>
         )}
 
-        {liveReady && !engine.playing && !engine.ended && (
+        {!isEmbed && liveReady && !engine.playing && !engine.ended && (
           <button
             type="button"
             className="player__big"
@@ -913,109 +982,107 @@ export function AdvancedPlayer(props: Props) {
         )}
       </div>
 
-      <div className={`player__bar${chrome ? '' : ' is-hidden'}`} ref={barRef}>
-        <PlayerTimeline
+      {!isEmbed && (
+        <div className={`player__bar${chrome ? '' : ' is-hidden'}`} ref={barRef}>
+          <PlayerTimeline
+            time={engine.time}
+            duration={timelineDuration}
+            buffered={engine.buffered}
+            markers={markers}
+            thumbnailsUrl={live.info?.thumbnails?.url || initialServer?.thumbnails?.url || null}
+            fallbackArt={episode.thumb || anime.key || anime.poster || null}
+            onSeek={handlePartySeek}
+            onScrub={setScrubbing}
+          />
 
-
-
-          time={engine.time}
-          duration={timelineDuration}
-
-          buffered={engine.buffered}
-          markers={markers}
-          thumbnailsUrl={live.info?.thumbnails?.url || initialServer?.thumbnails?.url || null}
-          fallbackArt={episode.thumb || anime.key || anime.poster || null}
-          onSeek={handlePartySeek}
-          onScrub={setScrubbing}
-        />
-
-        <PlayerControls
-          playing={engine.playing}
-          onToggle={handlePartyTogglePlay}
-          onBack10={() => jump(-10)}
-          onFwd10={() => jump(10)}
-          hasPrev={hasPrev}
-          hasNext={hasNext}
-          onPrev={onPrev}
-          onNext={onNext}
-          volume={prefs.volume}
-          muted={prefs.muted}
-          onVolume={volume}
-          onMute={() => patch({ muted: !prefs.muted })}
-          speed={prefs.speed}
-          quality={
-            live.currentLevelIndex >= 0 && live.levels[live.currentLevelIndex]
-              ? live.levels[live.currentLevelIndex].label
-              : prefs.quality !== 'auto'
-                ? prefs.quality
-                : live.info
-                  ? `${live.info.quality}p`
-                  : 'Auto'
-          }
-          onQuality={() => setMenu({ kind: 'settings', tab: 'quality' })}
-          subOn={prefs.subtitles.enabled}
-          subLang={prefs.subtitles.language}
-          onToggleCaptions={toggleCaptions}
-          settingsOpen={menu.kind === 'settings'}
-          onSettings={() => setMenu((m) => (m.kind === 'settings' ? { kind: 'none' } : { kind: 'settings', tab: 'root' }))}
-          theatre={theatre}
-          onTheatre={() => onTheatre(!theatre)}
-          full={full}
-          onFull={toggleFull}
-          partyOpen={partyOpen}
-          partyMemberCount={partyClient?.room.members.length || 0}
-          onToggleParty={() => setPartyOpen((o) => !o)}
-          pipAvailable={liveReady && pipSupported}
-          onPip={() => {
-            if (!liveReady) {
-              notify('Picture-in-picture needs a ready stream.');
-              return;
-            }
-            void live.pip().then((ok) => {
-              if (!ok) notify('Picture-in-picture was blocked or is unavailable in this browser.');
-            });
-          }}
-
-
-
-          time={engine.time}
-          duration={timelineDuration}
-
-        />
-
-        {menu.kind === 'settings' && (
-          <PlayerSettings
-            tab={menu.tab}
-            onTab={(tab) => setMenu({ kind: 'settings', tab })}
-            prefs={prefs}
-            patch={patch}
-            patchSubs={props.patchSubs}
-            restoreSubs={props.restoreSubs}
-            restoreAppearance={props.restoreAppearance}
-            subTracks={live.subTracks}
-            subState={live.subState}
-            subReady={liveReady}
-            playingAudio={(live.info?.audio ?? prefs.audio) as AudioId}
-            audioList={audioList}
-            audioStatus={audioStatus}
-            audioError={audioError}
-            onAudio={setAudio}
-            qualities={live.levels.map((l) => ({ id: String(l.height), label: l.label, index: l.index }))}
-            currentQualityIndex={live.currentLevelIndex}
-            currentQualityLabel={
+          <PlayerControls
+            playing={engine.playing}
+            onToggle={handlePartyTogglePlay}
+            onBack10={() => jump(-10)}
+            onFwd10={() => jump(10)}
+            hasPrev={hasPrev}
+            hasNext={hasNext}
+            onPrev={onPrev}
+            onNext={onNext}
+            volume={prefs.volume}
+            muted={prefs.muted}
+            onVolume={volume}
+            onMute={() => patch({ muted: !prefs.muted })}
+            speed={prefs.speed}
+            quality={
               live.currentLevelIndex >= 0 && live.levels[live.currentLevelIndex]
                 ? live.levels[live.currentLevelIndex].label
                 : prefs.quality !== 'auto'
                   ? prefs.quality
-                  : 'Auto'
+                  : live.info
+                    ? `${live.info.quality}p`
+                    : 'Auto'
             }
-            onQualityPick={(index, label) => {
-              live.setQualityLevel(index);
-              notify(index === -1 ? 'Quality set to Auto (ABR)' : `Switched video quality to ${label}`);
+            onQuality={() => setMenu({ kind: 'settings', tab: 'quality' })}
+            subOn={prefs.subtitles.enabled}
+            subLang={prefs.subtitles.language}
+            onToggleCaptions={toggleCaptions}
+            settingsOpen={menu.kind === 'settings'}
+            onSettings={() => setMenu((m) => (m.kind === 'settings' ? { kind: 'none' } : { kind: 'settings', tab: 'root' }))}
+            theatre={theatre}
+            onTheatre={() => onTheatre(!theatre)}
+            full={full}
+            onFull={toggleFull}
+            partyOpen={partyOpen}
+            partyMemberCount={partyClient?.room.members.length || 0}
+            onToggleParty={() => setPartyOpen((o) => !o)}
+            pipAvailable={liveReady && pipSupported}
+            onPip={() => {
+              if (!liveReady) {
+                notify('Picture-in-picture needs a ready stream.');
+                return;
+              }
+              void live.pip().then((ok) => {
+                if (!ok) notify('Picture-in-picture was blocked or is unavailable in this browser.');
+              });
             }}
+            time={engine.time}
+            duration={timelineDuration}
           />
-        )}
-      </div>
+
+          {menu.kind === 'settings' && (
+            <PlayerSettings
+              tab={menu.tab}
+              onTab={(tab) => setMenu({ kind: 'settings', tab })}
+              prefs={prefs}
+              patch={patch}
+              patchSubs={props.patchSubs}
+              restoreSubs={props.restoreSubs}
+              restoreAppearance={props.restoreAppearance}
+              subTracks={live.subTracks}
+              subState={live.subState}
+              subReady={liveReady}
+              playingAudio={(live.info?.audio ?? prefs.audio) as AudioId}
+              audioList={audioList}
+              audioStatus={audioStatus}
+              audioError={audioError}
+              onAudio={setAudio}
+              switchableAudio={live.switchableAudio}
+              hlsAudioTracks={live.audioTracks}
+              currentHlsAudioTrack={live.currentAudioTrack}
+              onSwitchHlsAudioTrack={live.setAudioTrack}
+              qualities={live.levels.map((l) => ({ id: String(l.height), label: l.label, index: l.index }))}
+              currentQualityIndex={live.currentLevelIndex}
+              currentQualityLabel={
+                live.currentLevelIndex >= 0 && live.levels[live.currentLevelIndex]
+                  ? live.levels[live.currentLevelIndex].label
+                  : prefs.quality !== 'auto'
+                    ? prefs.quality
+                    : 'Auto'
+              }
+              onQualityPick={(index, label) => {
+                live.setQualityLevel(index);
+                notify(index === -1 ? 'Quality set to Auto (ABR)' : `Switched video quality to ${label}`);
+              }}
+            />
+          )}
+        </div>
+      )}
 
       <WatchPartyPanel
         partyClient={partyClient}

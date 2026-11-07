@@ -4,6 +4,8 @@ import {
   ChevronDown,
   Clock,
   Eye,
+  LayoutGrid,
+  List,
   ListVideo,
   PanelRightClose,
   PanelRightOpen,
@@ -48,8 +50,12 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
   const [term, setTerm] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
   const [open, setOpen] = useState(true);
+  const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
 
-  const seasons = anime.seasons && anime.seasons.length > 1 ? anime.seasons : null;
+  const seasonsList = useMemo(() => {
+    if (anime.seasons && anime.seasons.length > 0) return anime.seasons;
+    return [{ id: anime.id, title: anime.title, season: anime.season, year: anime.year }];
+  }, [anime]);
   const total = anime.episodes.length;
   const next = anime.episodes[current] ?? null;
 
@@ -100,20 +106,31 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
             · {watched} watched
           </p>
         </div>
-        <button
-          type="button"
-          className="eps__fold"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-label={open ? 'Collapse episode list' : 'Expand episode list'}
-        >
-          {open ? <PanelRightClose size={16} /> : <PanelRightOpen size={16} />}
-        </button>
+        <div className="eps__head-actions">
+          <button
+            type="button"
+            className="eps__view-btn"
+            onClick={() => setViewMode((m) => (m === 'list' ? 'grid' : 'list'))}
+            title={viewMode === 'list' ? 'Grid view' : 'List view'}
+            aria-label={viewMode === 'list' ? 'Switch to grid view' : 'Switch to list view'}
+          >
+            {viewMode === 'list' ? <LayoutGrid size={15} /> : <List size={15} />}
+          </button>
+          <button
+            type="button"
+            className="eps__fold"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-label={open ? 'Collapse episode list' : 'Expand episode list'}
+          >
+            {open ? <PanelRightClose size={15} /> : <PanelRightOpen size={15} />}
+          </button>
+        </div>
       </div>
 
-      {seasons && (
-        <label className="eps__season">
-          <span>Season / Part</span>
+      <label className="eps__season">
+        <span>SEASON / PART</span>
+        <div className="eps__season-wrap">
           <select
             value={anime.id}
             onChange={(e) => {
@@ -123,17 +140,18 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
               }
             }}
           >
-            {seasons.map((s) => (
+            {seasonsList.map((s) => (
               <option key={s.id} value={s.id}>
                 {s.title}{s.season ? ` (${s.season})` : s.year ? ` (${s.year})` : ''}
               </option>
             ))}
           </select>
-        </label>
-      )}
+          <ChevronDown size={14} className="eps__season-arrow" aria-hidden="true" />
+        </div>
+      </label>
 
       {hasBatches && !term && (
-        <label className="eps__season" style={{ borderTop: seasons ? '1px solid var(--line)' : undefined }}>
+        <label className="eps__season" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.06)' }}>
           <span>Episode Range</span>
           <select
             value={selectedBatch}
@@ -197,23 +215,21 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
                 prefetchEpisode(anime.title, next.n, 'sub');
               }}
             >
-              <Art sources={[next.thumb, anime.key, anime.poster]} alt="" iconSize={16} />
-              <span>
-                <b>Next up · Episode {next.n}</b>
-                <span>{next.title}</span>
-                <small>
-                  {next.runtime && next.runtime !== '—' && (
-                    <>
-                      <Clock size={11} aria-hidden="true" /> {next.runtime}
-                    </>
-                  )}
+              <div className="eps__next-thumb">
+                <Art sources={[next.thumb, anime.key, anime.poster]} alt="" iconSize={16} />
+              </div>
+              <div className="eps__next-info">
+                <span className="eps__next-kicker">NEXT UP · EPISODE {next.n}</span>
+                <b className="eps__next-title">{next.title}</b>
+                <span className="eps__next-dur">
+                  <Clock size={11} aria-hidden="true" /> {next.runtime && next.runtime !== '—' ? next.runtime : '23:00'}
                   {positions[positionKey(anime.id, next.n)] ? ' · started' : ''}
-                </small>
-              </span>
+                </span>
+              </div>
             </button>
           )}
 
-          <ul className="eps__list no-bar">
+          <ul className={`eps__list no-bar${viewMode === 'grid' ? ' eps__list--grid' : ''}`}>
             {list.map((ep) => {
               const isCurrent = ep.n === current;
               const s = state(ep, anime, positions);
@@ -239,8 +255,8 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
                       )}
                     </span>
                     <span className="eps__body">
-                      <b>
-                        Episode {ep.n}
+                      <b className="eps__ep-title-row">
+                        <span>Episode {ep.n}</span>
                         {s.status === 'watched' && (
                           <em className="eps__seen">
                             <Check size={11} aria-hidden="true" /> Watched
@@ -248,7 +264,7 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
                         )}
                         {s.status === 'progress' && (
                           <em className="eps__seen eps__seen--part">
-                            {Math.round(s.ratio * 100)}% · {stamp(s.ratio * toSeconds(ep.runtime))}
+                            {Math.round(s.ratio * 100)}%
                           </em>
                         )}
                       </b>
@@ -256,12 +272,10 @@ export function EpisodeSidebar({ anime, current, onSelect, onSelectSeason, autoN
                         <span className="eps__title">{ep.title}</span>
                       ) : null}
                       <span className="eps__run">
-                        {ep.runtime && ep.runtime !== '—' && (
-                          <>
-                            <Clock size={11} aria-hidden="true" />
-                            {ep.runtime}
-                          </>
-                        )}
+                        <span className="eps__time-val">
+                          <Clock size={11} aria-hidden="true" />
+                          {ep.runtime && ep.runtime !== '—' ? ep.runtime : '23:00'}
+                        </span>
                         {op && <i className="eps__mk eps__mk--op">OP {stamp(op.start)}</i>}
                         {ed && <i className="eps__mk eps__mk--ed">ED {stamp(ed.start)}</i>}
                       </span>

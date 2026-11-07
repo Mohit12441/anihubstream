@@ -167,7 +167,7 @@ export function AnimeCatalogue() {
           </div>
           <div className="catalogue__stats">
             <span>
-              <b>{total ?? '—'}</b>
+              <b>{hasFilters ? (total ?? '—') : (stats?.titles ?? total ?? '—')}</b>
               matching
             </span>
             <span>

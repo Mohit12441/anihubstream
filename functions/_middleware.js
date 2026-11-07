@@ -85,20 +85,59 @@ export async function onRequest(context) {
 
     if (env.ANIHUB) {
       try {
-        const row = await env.ANIHUB.prepare(
-          `SELECT title, native, year, rating, synopsis, art, key_art, episode_total, kind FROM anime WHERE id = ?1`
-        ).bind(id).first();
+      // STEP 1 — Direct canonical lookup
+      let row = await env.ANIHUB.prepare(
+        `SELECT title, native, year, rating, synopsis, art, key_art, episode_total, kind FROM anime WHERE id = ?1`
+      ).bind(id).first();
 
-        if (!row && watchMatch) {
-          // Real 404 for non-existent anime on watch page
-          return new Response(
-            `<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Anime Not Found | AniHubStream</title><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>body{background:#07070b;color:#f0f0f5;font-family:sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center;}a{color:#ff1f4a;text-decoration:none;font-weight:bold;}</style></head><body><div><h1>404 — Anime Not Found</h1><p>The anime "${id}" could not be found.</p><p><a href="/">Return to Homepage</a></p></div></body></html>`,
-            {
-              status: 404,
-              headers: { 'content-type': 'text/html; charset=utf-8' },
-            }
-          );
+      // STEP 2 — If not canonical, try alternate ID resolutions
+      let resolvedId = null;
+
+      if (!row) {
+        // Try anime_redirect (deleted slug → canonical)
+        const redirectRow = await env.ANIHUB.prepare(
+          `SELECT to_id FROM anime_redirect WHERE from_id = ?1 LIMIT 1`
+        ).bind(id).first().catch(() => null);
+        if (redirectRow?.to_id) {
+          resolvedId = redirectRow.to_id;
         }
+      }
+
+      if (!row && !resolvedId && /^\d+$/.test(id)) {
+        // Numeric — try anilist_id, mal_id, kitsu_id in order
+        const idNum = parseInt(id, 10);
+        for (const col of ['anilist_id', 'mal_id', 'kitsu_id']) {
+          const mapRow = await env.ANIHUB.prepare(
+            `SELECT anime_id FROM anime_id_map WHERE ${col} = ?1 LIMIT 1`
+          ).bind(idNum).first().catch(() => null);
+          if (mapRow?.anime_id) {
+            resolvedId = mapRow.anime_id;
+            break;
+          }
+        }
+      }
+
+      // STEP 3 — 301 redirect to canonical URL if we resolved to a different ID
+      if (resolvedId && resolvedId !== id) {
+        const redirectUrl = new URL(request.url);
+        if (watchMatch) {
+          redirectUrl.pathname = `/watch/${resolvedId}${epNum ? '/' + epNum : ''}`;
+        } else {
+          redirectUrl.pathname = `/anime/${resolvedId}`;
+        }
+        return Response.redirect(redirectUrl.toString(), 301);
+      }
+
+      // STEP 4 — Real 404 only if none of the resolution paths worked
+      if (!row && watchMatch) {
+        return new Response(
+          `<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Anime Not Found | AniHubStream</title><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>body{background:#07070b;color:#f0f0f5;font-family:sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center;}a{color:#ff1f4a;text-decoration:none;font-weight:bold;}</style></head><body><div><h1>404 — Anime Not Found</h1><p>The anime "${id}" could not be found.</p><p><a href="/">Return to Homepage</a></p></div></body></html>`,
+          {
+            status: 404,
+            headers: { 'content-type': 'text/html; charset=utf-8' },
+          }
+        );
+      }
 
         if (row) {
           const animeTitle = row.title || id;

@@ -216,4 +216,23 @@ CREATE TABLE IF NOT EXISTS anime_franchise_relation (
 CREATE INDEX IF NOT EXISTS idx_afr_anime ON anime_franchise_relation(anime_id, chronology_order ASC);
 CREATE INDEX IF NOT EXISTS idx_afr_related ON anime_franchise_relation(related_id);
 
+-- Dynamic streaming server routes with negative caching and confidence-scored discovery
+CREATE TABLE IF NOT EXISTS provider_route (
+  anime_id         TEXT NOT NULL,
+  provider_id      TEXT NOT NULL,
+  server           TEXT NOT NULL,                          -- 'beta' | 'settlar'
+  path             TEXT,                                   -- '113415-jujutsu-kaisen'
+  status           TEXT NOT NULL DEFAULT 'unresolved',      -- unresolved | ok | missing | ambiguous
+  checked_ep       INTEGER,
+  checked_at       INTEGER,
+  resolved_anilist INTEGER,
+  resolved_title   TEXT,
+  PRIMARY KEY (anime_id, provider_id, server)
+);
+
+CREATE INDEX IF NOT EXISTS idx_provider_route_lookup 
+ON provider_route(anime_id, provider_id, server);
+
+
+
 

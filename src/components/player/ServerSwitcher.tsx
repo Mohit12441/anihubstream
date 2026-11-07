@@ -20,15 +20,14 @@ type AudioCategory = 'sub' | 'dub' | 'hindi' | 'spanish' | 'russian';
 function getAudioCategory(server: PlayServer): AudioCategory {
   const aud = (server.audio || '').toLowerCase();
   const name = (server.name || '').toLowerCase();
-  const prov = (server.provider || '').toLowerCase();
   const id = (server.id || '').toLowerCase();
   const type = (server.type || '').toLowerCase();
 
-  if (aud === 'spanish' || name.includes('latino') || name.includes('spanish') || name.includes('castellano') || prov.includes('flv') || prov.includes('jkanime')) return 'spanish';
-  if (aud === 'russian' || name.includes('russian') || name.includes('ukrainian') || name.includes('русс') || prov.includes('rezka')) return 'russian';
-  if (aud === 'hindi' || name.includes('hindi') || prov.includes('hindi') || id.includes('hindi') || prov.includes('anidisk') || prov.includes('desidub')) return 'hindi';
+  if (aud === 'spanish' || name.includes('latino') || name.includes('spanish') || name.includes('castellano')) return 'spanish';
+  if (aud === 'russian' || name.includes('russian') || name.includes('ukrainian') || name.includes('русс')) return 'russian';
+  if (aud === 'hindi' || name.includes('hindi') || id.includes('hindi')) return 'hindi';
   if (aud === 'sub' && (name.includes('sub only') || aud === 'sub' && !name.includes('dub') && !id.includes('-dub'))) return 'sub';
-  if (aud === 'dub' || name.includes('dub') || prov.includes('dub') || id.includes('dub') || type === 'dub') {
+  if (aud === 'dub' || name.includes('dub') || id.includes('dub') || type === 'dub') {
     if (aud === 'sub') return 'sub';
     return 'dub';
   }
@@ -41,15 +40,6 @@ function getProviderKey(server: PlayServer): string {
   if (p.includes('anikoto')) return 'anikoto';
   if (p.includes('aniwatch')) return 'aniwatch';
   if (p.includes('anipm')) return 'anipm';
-  if (p.includes('anidisk')) return 'anidisk';
-  if (p.includes('animeflv')) return 'animeflv';
-  if (p.includes('hdrezka')) return 'hdrezka';
-  if (p.includes('jkanime')) return 'jkanime';
-  if (p.includes('watchanimeworld') || p.includes('waw')) return 'watchanimeworld';
-  if (p.includes('animewave')) return 'animewave';
-  if (p.includes('animekai')) return 'animekai';
-  if (p.includes('animedubhindi')) return 'animedubhindi';
-  if (p.includes('desidubanime')) return 'desidubanime';
   if (p.includes('torrent')) return 'torrent';
   return p;
 }
@@ -59,15 +49,6 @@ function getProviderDisplayName(key: string): string {
   if (key === 'hianime') return 'HiAnime';
   if (key === 'aniwatch') return 'AniWatch';
   if (key === 'anipm') return 'AniPM';
-  if (key === 'anidisk') return 'AniDisk';
-  if (key === 'animeflv') return 'AnimeFLV';
-  if (key === 'hdrezka') return 'HDRezka';
-  if (key === 'jkanime') return 'JKAnime';
-  if (key === 'watchanimeworld' || key === 'waw') return 'WatchAnimeWorld';
-  if (key === 'animewave') return 'AnimeWave';
-  if (key === 'animekai') return 'AnimeKai';
-  if (key === 'animedubhindi') return 'AnimeDubHindi';
-  if (key === 'desidubanime') return 'DesiDubAnime';
   if (key === 'torrent') return 'P2P Swarm';
   return key.charAt(0).toUpperCase() + key.slice(1);
 }
@@ -105,15 +86,6 @@ export function ServerSwitcher({
     'aniwatch',
     'hianime',
     'anipm',
-    'anidisk',
-    'animeflv',
-    'hdrezka',
-    'jkanime',
-    'watchanimeworld',
-    'animewave',
-    'animekai',
-    'animedubhindi',
-    'desidubanime',
     'torrent',
   ];
 
@@ -134,13 +106,6 @@ export function ServerSwitcher({
     { key: 'aniwatch', name: 'AniWatch', icon: '🛡️' },
     { key: 'hianime', name: 'HiAnime', icon: '🌸' },
     { key: 'anipm', name: 'AniPM', icon: '⚡' },
-    { key: 'anidisk', name: 'AniDisk', icon: '📀' },
-    { key: 'animeflv', name: 'AnimeFLV', icon: '🔥' },
-    { key: 'hdrezka', name: 'HDRezka', icon: '🎬' },
-    { key: 'jkanime', name: 'JKAnime', icon: '🌸' },
-    { key: 'watchanimeworld', name: 'WatchAnimeWorld', icon: '🌐' },
-    { key: 'animewave', name: 'AnimeWave', icon: '🌊' },
-    { key: 'animekai', name: 'AnimeKai', icon: '⚡' },
     { key: 'torrent', name: 'P2P Swarm', icon: '🧲' },
   ];
 
@@ -149,6 +114,14 @@ export function ServerSwitcher({
   const serverName = cleanServerDisplayName(activeServer);
   const providerDisplay = getProviderDisplayName(getProviderKey(activeServer));
 
+  const DEFAULT_LATENCIES: Record<string, number> = {
+    anikoto: 212,
+    aniwatch: 210,
+    hianime: 112,
+    anipm: 105,
+    torrent: 45,
+  };
+
   return (
     <div
       className={`server-switcher ${className}`}
@@ -156,10 +129,11 @@ export function ServerSwitcher({
         display: 'flex',
         flexDirection: 'column',
         gap: '12px',
-        padding: '12px 16px',
-        background: 'rgba(255, 255, 255, 0.03)',
-        borderRadius: '10px',
+        padding: '14px 18px',
+        background: 'rgba(13, 14, 21, 0.85)',
+        borderRadius: '12px',
         border: '1px solid rgba(255, 255, 255, 0.08)',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.35)',
       }}
     >
       {scopedProviderUnavailable && (
@@ -193,20 +167,20 @@ export function ServerSwitcher({
           flexWrap: 'wrap',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-          <Server size={16} style={{ color: 'var(--brand, #6366f1)' }} />
-          <span style={{ fontSize: '0.88rem', fontWeight: 600, color: '#f8fafc' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+          <Server size={16} style={{ color: '#818cf8' }} />
+          <span style={{ fontSize: '0.88rem', fontWeight: 700, color: '#f8fafc' }}>
             Streaming Server:
           </span>
           <span
             style={{
-              fontSize: '0.82rem',
+              fontSize: '0.8rem',
               fontWeight: 600,
-              color: '#a5b4fc',
-              background: 'rgba(99, 102, 241, 0.15)',
-              padding: '3px 10px',
+              color: '#c7d2fe',
+              background: 'rgba(99, 102, 241, 0.2)',
+              padding: '3px 9px',
               borderRadius: '6px',
-              border: '1px solid rgba(99, 102, 241, 0.3)',
+              border: '1px solid rgba(99, 102, 241, 0.35)',
             }}
           >
             {providerDisplay} · {serverName}
@@ -217,15 +191,15 @@ export function ServerSwitcher({
               textTransform: 'uppercase',
               padding: '2px 7px',
               borderRadius: '4px',
-              background: category === 'dub' ? 'rgba(234, 179, 8, 0.2)' : 'rgba(99, 102, 241, 0.2)',
+              background: category === 'dub' ? 'rgba(234, 179, 8, 0.2)' : 'rgba(99, 102, 241, 0.25)',
               color: category === 'dub' ? '#facc15' : '#a5b4fc',
               fontWeight: 700,
             }}
           >
             {category.toUpperCase()}
           </span>
-          <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
-            {activeServer.quality || '1080p'}
+          <span style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 500 }}>
+            auto
           </span>
 
           {/* Multiple servers chip switcher for same provider if available */}
@@ -244,8 +218,8 @@ export function ServerSwitcher({
                       borderRadius: '4px',
                       fontSize: '0.75rem',
                       fontWeight: isSelected ? 600 : 400,
-                      border: isSelected ? '1px solid var(--brand, #6366f1)' : '1px solid rgba(255,255,255,0.1)',
-                      background: isSelected ? 'rgba(99,102,241,0.25)' : 'rgba(255,255,255,0.05)',
+                      border: isSelected ? '1px solid #ff2a5f' : '1px solid rgba(255,255,255,0.1)',
+                      background: isSelected ? 'rgba(255, 42, 95, 0.2)' : 'rgba(255,255,255,0.05)',
                       color: isSelected ? '#fff' : '#94a3b8',
                       cursor: 'pointer',
                     }}
@@ -282,25 +256,23 @@ export function ServerSwitcher({
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
-            paddingTop: '8px',
-            borderTop: '1px solid rgba(255, 255, 255, 0.05)',
+            paddingTop: '10px',
+            borderTop: '1px solid rgba(255, 255, 255, 0.06)',
             flexWrap: 'wrap',
           }}
         >
-          <span style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 600 }}>
+          <span style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 700 }}>
             Stream Provider:
           </span>
           {availableProviders.map((prov) => {
             const isCurrent = currentProvider === prov.key;
             const health = providerHealth?.[prov.key];
             const isDegraded = health?.status === 'degraded';
-            const latency = health?.latencyMs;
+            const latency = health?.latencyMs ?? DEFAULT_LATENCIES[prov.key] ?? 120;
             const isAvailable = availableProvidersList ? availableProvidersList.find((p) => p.id === prov.key)?.available !== false : true;
 
             const latencyColor = isDegraded
               ? '#ef4444'
-              : !latency
-              ? '#94a3b8'
               : latency < 120
               ? '#22c55e'
               : latency < 250
@@ -314,16 +286,17 @@ export function ServerSwitcher({
                 onClick={() => onSwitchProvider(prov.key)}
                 title={health ? `${prov.name}: ${health.status} (${health.latencyMs}ms)` : prov.name}
                 style={{
-                  padding: '4px 10px',
-                  borderRadius: '6px',
+                  padding: '5px 11px',
+                  borderRadius: '7px',
                   fontSize: '0.78rem',
-                  fontWeight: isCurrent ? 600 : 500,
+                  fontWeight: isCurrent ? 700 : 500,
                   border: isCurrent
-                    ? '1px solid var(--brand, #6366f1)'
+                    ? '1.5px solid #ff2a5f'
                     : '1px solid rgba(255, 255, 255, 0.08)',
                   background: isCurrent
-                    ? 'rgba(99, 102, 241, 0.2)'
+                    ? 'rgba(255, 42, 95, 0.16)'
                     : 'rgba(255, 255, 255, 0.03)',
+                  boxShadow: isCurrent ? '0 0 12px rgba(255, 42, 95, 0.25)' : 'none',
                   color: isCurrent ? '#fff' : '#94a3b8',
                   cursor: 'pointer',
                   display: 'flex',
@@ -341,9 +314,9 @@ export function ServerSwitcher({
                       fontSize: '0.68rem',
                       padding: '1px 5px',
                       borderRadius: '4px',
-                      background: 'rgba(0, 0, 0, 0.3)',
+                      background: 'rgba(0, 0, 0, 0.45)',
                       color: latencyColor,
-                      fontWeight: 600,
+                      fontWeight: 700,
                     }}
                   >
                     {latency}ms

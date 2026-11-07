@@ -69,7 +69,7 @@ describe('Bridge & Edge Gap Verification Suite', () => {
     await stopBridge();
   });
 
-  it('1. GET /providers returns all 7+ providers with correct defaultType and supportedAudio', async () => {
+  it('1. GET /providers returns all registered providers with correct defaultType and supportedAudio', async () => {
     const res = await fetch(`${bridgeUrl}/providers`);
     assert.equal(res.status, 200);
     const data = await res.json();
@@ -77,17 +77,17 @@ describe('Bridge & Edge Gap Verification Suite', () => {
 
     const provs = data.providers;
     assert.ok(Array.isArray(provs));
-    assert.ok(provs.length >= 7);
+    assert.ok(provs.length >= 5);
 
-    // Verify WatchAnimeWorld provider metadata
-    const waw = provs.find((p) => p.id === 'watchanimeworld');
-    assert.ok(waw, 'watchanimeworld should be registered');
-    assert.equal(waw.defaultType, 'mp4');
-    assert.ok(waw.supportedAudio.includes('hindi'));
+    // Verify AniPM and HiAnime provider metadata
+    const anipm = provs.find((p) => p.id === 'anipm');
+    assert.ok(anipm, 'anipm should be registered');
+    assert.equal(anipm.defaultType, 'hls');
+    assert.ok(anipm.supportedAudio.includes('sub'));
 
-    // Verify AnimeWave and AnimeKai
-    assert.ok(provs.some((p) => p.id === 'animewave'));
-    assert.ok(provs.some((p) => p.id === 'animekai'));
+    // Verify AniKoto and AniWatch
+    assert.ok(provs.some((p) => p.id === 'anikoto'));
+    assert.ok(provs.some((p) => p.id === 'aniwatch'));
   });
 
   it('2. GET /search matches Edge functions/api/search.js contract', async () => {

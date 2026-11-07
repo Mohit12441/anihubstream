@@ -70,6 +70,10 @@ interface Props {
   audioStatus: 'idle' | 'loading' | 'ready' | 'error';
   audioError: string | null;
   onAudio: (id: AudioId) => void;
+  switchableAudio?: boolean;
+  hlsAudioTracks?: { id: number; name: string; lang?: string; default?: boolean }[];
+  currentHlsAudioTrack?: number;
+  onSwitchHlsAudioTrack?: (id: number) => void;
   qualities?: { id: string; label: string; index: number }[];
   currentQualityIndex?: number;
   currentQualityLabel?: string;
@@ -92,6 +96,10 @@ export function PlayerSettings({
   audioStatus,
   audioError,
   onAudio,
+  switchableAudio,
+  hlsAudioTracks,
+  currentHlsAudioTrack,
+  onSwitchHlsAudioTrack,
   qualities,
   currentQualityIndex,
   currentQualityLabel,
@@ -151,11 +159,13 @@ export function PlayerSettings({
             icon={<AudioWaveform size={16} aria-hidden="true" />}
             label="Audio"
             value={
-              playingAudio === 'dub'
-                ? 'DUB'
-                : playingAudio === 'hindi'
-                  ? 'HINDI'
-                  : 'Original'
+              switchableAudio && currentHlsAudioTrack !== undefined && currentHlsAudioTrack !== -1 && hlsAudioTracks?.[currentHlsAudioTrack]
+                ? hlsAudioTracks[currentHlsAudioTrack].name
+                : (playingAudio === 'dub'
+                    ? 'DUB'
+                    : playingAudio === 'hindi'
+                      ? 'HINDI'
+                      : 'Original')
             }
             onClick={() => onTab('audio')}
           />
@@ -270,6 +280,22 @@ export function PlayerSettings({
 
       {tab === 'audio' &&
         (() => {
+          if (switchableAudio && hlsAudioTracks && hlsAudioTracks.length > 0) {
+            return (
+              <PopGroup title="Track (Multi-Audio)">
+                {hlsAudioTracks.map((t) => (
+                  <PopRow
+                    key={t.id}
+                    radio
+                    label={t.name}
+                    note={currentHlsAudioTrack === t.id ? 'playing now' : undefined}
+                    active={currentHlsAudioTrack === t.id}
+                    onClick={() => onSwitchHlsAudioTrack?.(t.id)}
+                  />
+                ))}
+              </PopGroup>
+            );
+          }
           const dubOpt = audioList?.audios.find((a) => a.id === 'dub');
           const checking = audioStatus === 'idle' || audioStatus === 'loading';
           const dubAvailable = audioStatus === 'ready' && Boolean(dubOpt?.available);

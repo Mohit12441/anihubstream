@@ -160,7 +160,6 @@ export const onRequestPost = async ({ request, env }) => {
       { id: 'anikoto', slug: anikotoSlug },
       { id: 'hianime', slug: hianimeSlug },
       { id: 'aniwatch', slug: aniwatchSlug },
-      { id: 'watchanimeworld', slug: wawSlug },
     ];
 
     for (const p of providerEntries) {

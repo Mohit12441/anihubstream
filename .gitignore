@@ -28,6 +28,7 @@ remote-*.sql
 *.sqlite-wal
 tools/.cache/
 .ckb/
+.playwright-mcp/
 .code-ranker/
 .firewall/
 anihub_tables_backup.sql

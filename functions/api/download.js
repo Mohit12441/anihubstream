@@ -320,15 +320,6 @@ export const onRequestGet = async ({ request, env }) => {
       else if (rawId.startsWith('anikoto:')) provider = 'anikoto';
       else if (rawId.startsWith('aniwatch:')) provider = 'aniwatch';
       else if (rawId.startsWith('anipm:')) provider = 'anipm';
-      else if (rawId.startsWith('anidisk:')) provider = 'anidisk';
-      else if (rawId.startsWith('animeflv:')) provider = 'animeflv';
-      else if (rawId.startsWith('hdrezka:')) provider = 'hdrezka';
-      else if (rawId.startsWith('jkanime:')) provider = 'jkanime';
-      else if (rawId.startsWith('watchanimeworld:')) provider = 'watchanimeworld';
-      else if (rawId.startsWith('animewave:')) provider = 'animewave';
-      else if (rawId.startsWith('animekai:')) provider = 'animekai';
-      else if (rawId.startsWith('animedubhindi:')) provider = 'animedubhindi';
-      else if (rawId.startsWith('desidubanime:')) provider = 'desidubanime';
       else provider = 'anikoto';
     }
 
@@ -370,7 +361,6 @@ export const onRequestGet = async ({ request, env }) => {
           if (match.anikoto_slug) availableProviders.add('anikoto');
           if (match.hianime_slug) availableProviders.add('hianime');
           if (match.aniwatch_slug) availableProviders.add('aniwatch');
-          if (match.waw_slug) availableProviders.add('watchanimeworld');
         } else {
           const provMatch = await env.ANIHUB.prepare(
             `SELECT a.id, a.title, a.skip_key_id, a.skip_key_space, a.source_ids, m.provider_id
@@ -619,10 +609,6 @@ export const onRequestGet = async ({ request, env }) => {
       }
       downloadPage = `https://aniwatch.co.at/anime/${cleanSlug}/`;
 
-    } else if (provider === 'watchanimeworld') {
-      downloadPage = `https://watchanimeworld.in/watch/${cleanSlug}`;
-      downloads = [];
-      streamUrl = null;
     } else {
       downloadPage = `https://megaplay.buzz/stream/mal/${malId || cleanSlug}/${ep}/${audio}`;
       downloads = [];

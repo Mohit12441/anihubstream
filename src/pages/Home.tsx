@@ -22,15 +22,6 @@ const PROVIDER_METAS: Record<string, ProviderMeta> = {
   hianime: { name: 'HiAnime', badge: 'JSON Stream', color: '#ec4899' },
   aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6' },
   anipm: { name: 'AniPM', badge: 'Settlar HLS', color: '#8b5cf6' },
-  anidisk: { name: 'AniDisk', badge: 'Regional Dub', color: '#f97316' },
-  animeflv: { name: 'AnimeFLV', badge: 'Audio Latino', color: '#ef4444' },
-  hdrezka: { name: 'HDRezka', badge: 'Ultra HD', color: '#06b6d4' },
-  jkanime: { name: 'JKAnime', badge: 'Desu HLS', color: '#14b8a6' },
-  watchanimeworld: { name: 'WatchAnimeWorld', badge: 'Direct MP4', color: '#10b981' },
-  animewave: { name: 'AnimeWave', badge: 'HLS Fast', color: '#8b5cf6' },
-  animekai: { name: 'AnimeKai', badge: 'Ultra Stream', color: '#f59e0b' },
-  animedubhindi: { name: 'AnimeDubHindi', badge: 'Hindi Dub', color: '#eab308' },
-  desidubanime: { name: 'DesiDubAnime', badge: 'Desi Dub', color: '#f59e0b' },
 };
 
 

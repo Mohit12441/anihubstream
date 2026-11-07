@@ -32,6 +32,7 @@ import { autoSyncEpisodes } from './auto-sync-episodes.mjs';
 import { discover } from './discover-titles.mjs';
 import { probeTrendingStreams } from './probe-trending-streams.mjs';
 import { syncAnimeToMeilisearch } from './meilisearch/sync-meilisearch.mjs';
+import { prewarmRoute } from './discover-routes.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -194,6 +195,10 @@ async function syncGrowthStage(db, quiet, batchSize = 3) {
               item.mal ? 1.0 : (item.anilist && item.kitsu ? 1.0 : 0.85)
             );
           } catch {}
+
+          try {
+            await prewarmRoute(db, item.id, 1, { quiet });
+          } catch {}
         }
       } catch (err) {
         if (!quiet) console.warn(`  Warning: failed to ingest ${item.id}:`, err?.message || err);
@@ -335,6 +340,15 @@ export async function runSyncCycle({ quiet = false, expand = 3, stage = null } =
     }
     if (!stage || stage === 'growth') {
       metrics.growth = await syncGrowthStage(db, quiet, expand).catch((e) => ({ error: e.message }));
+    }
+    if ((!stage || stage === 'growth' || stage === 'routes') && expand > 0) {
+      try {
+        const { syncAllRoutes } = await import('./discover-routes.mjs');
+        const r = await syncAllRoutes({ limit: 20, quiet: true });
+        if (!quiet && r.total > 0) console.log(`  [route-backfill] ${r.success}/${r.total}`);
+      } catch (e) {
+        if (!quiet) console.warn('  [route-backfill] failed:', e?.message || e);
+      }
     }
     if (!stage || stage === 'health') {
       metrics.health = await syncHealthStage(db, quiet).catch((e) => ({ error: e.message }));

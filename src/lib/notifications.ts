@@ -4,7 +4,7 @@
  * browser permission negotiation, and service worker notification dispatch.
  */
 
-import { computeAiringCountdown, type ScheduleInfo } from './airingCountdown';
+import { computeAiringCountdown, type ScheduleInfo } from './airingCountdown.ts';
 
 export interface NotificationSubscription {
   animeId: string;
@@ -123,6 +123,10 @@ export async function toggleSubscription(
 
   prefs.subscriptions.push(newSub);
   saveNotificationPrefs(prefs);
+
+  // Remote push is retired (endpoints deleted). Local in-browser alerts
+  // are handled entirely by checkAiringAlerts() using the schedule data
+  // saved above. No server round-trip needed.
 
   // Send a confirmation toast / test alert if supported
   sendLocalNotification(`Subscribed to ${anime.title}`, {

@@ -33,8 +33,8 @@ test('Service Worker sw.js defines cache names, LRU eviction, and matching regex
   const swCode = fs.readFileSync(SW_PATH, 'utf-8');
 
   // Cache names & constants
-  assert.ok(swCode.includes("SHELL_CACHE = 'anihub-shell-v1'"), 'SHELL_CACHE defined');
-  assert.ok(swCode.includes("STREAM_CACHE = 'anihub-stream-v1'"), 'STREAM_CACHE defined');
+  assert.ok(/SHELL_CACHE = 'anihub-shell-v\d+'/.test(swCode), 'SHELL_CACHE defined');
+  assert.ok(/STREAM_CACHE = 'anihub-stream-v\d+'/.test(swCode), 'STREAM_CACHE defined');
   assert.ok(swCode.includes('MAX_STREAM_SEGMENTS'), 'MAX_STREAM_SEGMENTS defined');
 
   // Core functions

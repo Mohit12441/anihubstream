@@ -100,9 +100,9 @@ describe('End-to-End Bridge, Edge & Provider Integration Suite', () => {
     assert.deepEqual(e2e.supportedAudio, ['sub', 'dub', 'hindi']);
     assert.equal(e2e.defaultType, 'hls');
 
-    const waw = data.providers.find((p) => p.id === 'watchanimeworld');
-    assert.ok(waw, 'watchanimeworld should be listed');
-    assert.equal(waw.defaultType, 'mp4');
+    const hia = data.providers.find((p) => p.id === 'hianime');
+    assert.ok(hia, 'hianime should be listed');
+    assert.equal(hia.defaultType, 'hls');
   });
 
   it('3. GET /search contract matches Edge functions/api/search.js requirements', async () => {

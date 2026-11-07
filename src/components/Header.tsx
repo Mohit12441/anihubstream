@@ -13,7 +13,6 @@ const NAV = [
   { label: 'Anime', to: '/anime' },
   { label: 'Genres', to: '/genres' },
   { label: 'Ongoing', to: '/anime?status=Ongoing' },
-  { label: 'Top Anime', to: '/anime?sort=rating' },
   { label: 'My List', to: '/my-list' },
   { label: 'Episode Schedule', to: '/schedule' },
 ];
@@ -21,9 +20,9 @@ const NAV = [
 function isActive(to: string, pathname: string, search: string) {
   const [path, query] = to.split('?');
   if (path === '/') return pathname === '/';
-  if (!pathname.startsWith(path)) return false;
-  if (!query) return true;
-  return search.includes(query);
+  if (pathname !== path && !pathname.startsWith(`${path}/`)) return false;
+  if (query) return search.includes(query);
+  return !search || search === '?';
 }
 
 export function Header() {

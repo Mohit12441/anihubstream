@@ -270,15 +270,14 @@ export const formatRuntime = (runtime?: string | null): string => {
 };
 
 const RESERVED_TITLE_WORDS = /^(season|part|cour|act|episode|vol|volume|movie|ova|ona|special|final|first|second|third|fourth|order|zero|live|climax|deluxe|edition)$/i;
-const COMMON_6_LETTER = /^(action|attack|heroes|dragon|naruto|hunter|clover|haikyu|magica|kamui|sailor|online|future|school|prince|summer|winter|spring|autumn|master|legend|island|family|sister|puzzle|spiral|knight|border|heaven|secret|shadow|spirit|silver|golden|yellow|orange|purple|violet|cinema|circus|studio|reborn|border|planet|galaxy|origin|battle|castle|flight|zombie|vampire)$/i;
 
-const isHashToken = (token: string): boolean => {
+export const isHashToken = (token: string): boolean => {
   const clean = token.trim();
   if (RESERVED_TITLE_WORDS.test(clean)) return false;
   if (clean.length < 4 || clean.length > 8) return false;
+  // Must have at least one digit or be all consonants to be a hash token
   if (/\d/.test(clean)) return true;
   if (/^[b-df-hj-np-tv-z]{4,8}$/i.test(clean)) return true;
-  if (/^[a-z]{6}$/i.test(clean) && !COMMON_6_LETTER.test(clean)) return true;
   return false;
 };
 

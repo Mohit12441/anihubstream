@@ -28,21 +28,23 @@ function formatServerName(provider, serverId) {
     anikoto: 'AniKoto',
     hianime: 'HiAnime',
     aniwatch: 'AniWatch',
-    watchanimeworld: 'WatchAnimeWorld',
-    animewave: 'AnimeWave',
-    animekai: 'AnimeKai',
     anipm: 'AniPM',
-    anidisk: 'AniDisk',
-    animeflv: 'AnimeFLV',
-    hdrezka: 'HDRezka',
-    jkanime: 'JKAnime',
-    animedubhindi: 'AnimeDubHindi',
-    desidubanime: 'DesiDubAnime',
+    torrent: 'P2P Swarm',
   };
   const base = provNames[provider?.toLowerCase()] || (provider ? provider.toUpperCase() : 'Server');
   if (!serverId) return base;
   const cleanServer = String(serverId).replace(/^.*?\s*·\s*/, '').trim();
   return `${base} · ${cleanServer}`;
+}
+
+function pathAnilist(path) {
+  const n = Number(String(path || '').split('-')[0]);
+  return Number.isFinite(n) ? n : 0;
+}
+
+function pathValid(path, anilistId) {
+  const idNum = Number(anilistId);
+  return Number.isFinite(idNum) && idNum > 0 && pathAnilist(path) === idNum;
 }
 
 function buildAudioTracks(audio) {
@@ -423,20 +425,12 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     }
 
     let pmRows = [];
+    let providerRoutes = [];
     let providerHealth = {
       anikoto: { status: 'healthy', latencyMs: 85 },
       hianime: { status: 'healthy', latencyMs: 140 },
       aniwatch: { status: 'healthy', latencyMs: 210 },
-      watchanimeworld: { status: 'healthy', latencyMs: 120 },
-      animewave: { status: 'healthy', latencyMs: 110 },
-      animekai: { status: 'healthy', latencyMs: 130 },
       anipm: { status: 'healthy', latencyMs: 105 },
-      anidisk: { status: 'healthy', latencyMs: 125 },
-      animeflv: { status: 'healthy', latencyMs: 140 },
-      hdrezka: { status: 'healthy', latencyMs: 135 },
-      jkanime: { status: 'healthy', latencyMs: 145 },
-      animedubhindi: { status: 'healthy', latencyMs: 150 },
-      desidubanime: { status: 'healthy', latencyMs: 155 },
       torrent: { status: 'healthy', latencyMs: 45, peers: 12 },
     };
 
@@ -447,6 +441,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             'SELECT provider_id, provider_slug FROM anime_provider_mapping WHERE anime_id = ?1'
           ).bind(id).all();
           pmRows = pmRes?.results || [];
+        } catch {}
+
+        try {
+          const prRes = await env.ANIHUB.prepare(
+            "SELECT server, path, status, checked_ep, checked_at, resolved_anilist, resolved_title FROM provider_route WHERE anime_id = ?1 AND provider_id = 'anipm'"
+          ).bind(id).all();
+          providerRoutes = prRes?.results || [];
         } catch {}
       }
 
@@ -467,16 +468,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       anikoto: animeRow?.anikoto_slug || pmRows.find((p) => p.provider_id === 'anikoto')?.provider_slug || null,
       hianime: animeRow?.hianime_slug || pmRows.find((p) => p.provider_id === 'hianime')?.provider_slug || null,
       aniwatch: animeRow?.aniwatch_slug || pmRows.find((p) => p.provider_id === 'aniwatch')?.provider_slug || null,
-      watchanimeworld: animeRow?.waw_slug || animeRow?.watchanimeworld_slug || pmRows.find((p) => p.provider_id === 'watchanimeworld')?.provider_slug || null,
-      animewave: animeRow?.animewave_slug || pmRows.find((p) => p.provider_id === 'animewave')?.provider_slug || null,
-      animekai: animeRow?.animekai_slug || pmRows.find((p) => p.provider_id === 'animekai')?.provider_slug || null,
-      anipm: animeRow?.anipm_slug || pmRows.find((p) => p.provider_id === 'anipm')?.provider_slug || null,
-      anidisk: animeRow?.anidisk_slug || pmRows.find((p) => p.provider_id === 'anidisk')?.provider_slug || null,
-      animeflv: animeRow?.animeflv_slug || pmRows.find((p) => p.provider_id === 'animeflv')?.provider_slug || null,
-      hdrezka: animeRow?.hdrezka_slug || pmRows.find((p) => p.provider_id === 'hdrezka')?.provider_slug || null,
-      jkanime: animeRow?.jkanime_slug || pmRows.find((p) => p.provider_id === 'jkanime')?.provider_slug || null,
-      animedubhindi: animeRow?.animedubhindi_slug || pmRows.find((p) => p.provider_id === 'animedubhindi')?.provider_slug || null,
-      desidubanime: animeRow?.desidubanime_slug || pmRows.find((p) => p.provider_id === 'desidubanime')?.provider_slug || null,
+      anipm: animeRow?.anilist_id ? String(animeRow.anilist_id) : null,
     };
 
     const rawRequested = (url.searchParams.get('provider') || '').toLowerCase().trim();
@@ -487,21 +479,12 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
       { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
       { id: 'anipm', name: 'AniPM', available: Boolean(availableSlugs.anipm), ...(providerHealth.anipm || {}) },
-      { id: 'anidisk', name: 'AniDisk', available: Boolean(availableSlugs.anidisk), ...(providerHealth.anidisk || {}) },
-      { id: 'animeflv', name: 'AnimeFLV', available: Boolean(availableSlugs.animeflv), ...(providerHealth.animeflv || {}) },
-      { id: 'hdrezka', name: 'HDRezka', available: Boolean(availableSlugs.hdrezka), ...(providerHealth.hdrezka || {}) },
-      { id: 'jkanime', name: 'JKAnime', available: Boolean(availableSlugs.jkanime), ...(providerHealth.jkanime || {}) },
-      { id: 'watchanimeworld', name: 'WatchAnimeWorld', available: Boolean(availableSlugs.watchanimeworld), ...(providerHealth.watchanimeworld || {}) },
-      { id: 'animewave', name: 'AnimeWave', available: Boolean(availableSlugs.animewave), ...(providerHealth.animewave || {}) },
-      { id: 'animekai', name: 'AnimeKai', available: Boolean(availableSlugs.animekai), ...(providerHealth.animekai || {}) },
-      { id: 'animedubhindi', name: 'AnimeDubHindi', available: Boolean(availableSlugs.animedubhindi), ...(providerHealth.animedubhindi || {}) },
-      { id: 'desidubanime', name: 'DesiDubAnime', available: Boolean(availableSlugs.desidubanime), ...(providerHealth.desidubanime || {}) },
       { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
     ];
 
     // Dynamic Provider Priority: If not explicitly requested or is 'auto', select the fastest healthy provider
     if (!requested || requested === 'auto') {
-      const candidates = ['anikoto', 'hianime', 'aniwatch', 'anipm', 'anidisk', 'animeflv', 'hdrezka', 'jkanime', 'watchanimeworld', 'animewave', 'animekai', 'animedubhindi', 'desidubanime'].filter((p) => availableSlugs[p]);
+      const candidates = ['anikoto', 'hianime', 'aniwatch', 'anipm'].filter((p) => availableSlugs[p]);
       if (candidates.length > 0) {
         candidates.sort((a, b) => {
           const healthA = providerHealth[a]?.status === 'healthy' ? 0 : 1;
@@ -532,8 +515,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       throw new HttpError(400, 'bad_request', 'Could not determine anime title from id or title query parameter');
     }
 
-    // Determine Stream Bridge base (only queried if explicitly configured)
-    const bridgeBase = env.STREAM_BRIDGE_URL || '';
+    // Determine Stream Bridge base (fallback to local bridge on 8795)
+    const bridgeBase = env.STREAM_BRIDGE_URL || 'http://127.0.0.1:8795';
 
     const canUseEdgeDirect =
       requested === 'anikoto' ||
@@ -618,12 +601,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     ]);
 
     const resolveUrl = (extra) => {
-      const p = new URLSearchParams({ title: resolvedTitle, ep: String(ep), ...extra });
-      if (resolvedMalId) p.set('mal', String(resolvedMalId));
+      const p = new URLSearchParams({ anime_id: id, ep: String(ep), ...extra });
       return `/api/play/resolve?${p}`;
     };
-
-    const isScoped = true;
 
     const defaultServers = [
       {
@@ -665,6 +645,58 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         subtitles: [],
         downloads: [],
       },
+      ...(() => {
+        const betaRoute = providerRoutes.find((r) => r.server === 'beta');
+        const betaIsMissing = betaRoute?.status === 'missing' && (betaRoute.checked_ep === Number(ep) || !betaRoute.checked_ep);
+        const anilistId = animeRow?.anilist_id;
+        const isPathValid = betaRoute?.path ? (anilistId ? pathValid(betaRoute.path, anilistId) : true) : false;
+        const hasBetaPath = isPathValid;
+        const list = [];
+
+        if (!betaIsMissing && hasBetaPath) {
+          list.push({
+            id: 'anipm:beta',
+            name: 'AniPM · Beta Master (11 Audios)',
+            provider: 'anipm',
+            status: 'ready',
+            streamUrl: resolveUrl({ audio: 'sub', provider: 'anipm', server: 'beta' }),
+            resolvedTitle: betaRoute?.resolved_title || resolvedTitle,
+            type: 'hls',
+            quality: '1080p',
+            audio: 'sub',
+            audioTracks: [
+              { id: 'audio-ja', language: 'ja', label: 'Japanese [CR]', default: true },
+              { id: 'audio-en', language: 'en', label: 'English [CR]', default: false },
+              { id: 'audio-hi', language: 'hi', label: 'Hindi [CR]', default: false },
+              { id: 'audio-ta', language: 'ta', label: 'Tamil [CR]', default: false },
+              { id: 'audio-te', language: 'te', label: 'Telugu [CR]', default: false },
+            ],
+            subtitles: [],
+            downloads: [],
+          });
+        }
+
+        // Settlar is offered for any title with an AniList id; the bridge decides
+        // at playback time whether ani.pm actually has an embed. There are no
+        // provider_route.server='settlar' rows to check yet (writer not implemented).
+        if (animeRow?.anilist_id) {
+          list.push({
+            id: 'anipm:settlar',
+            name: 'AniPM · Settlar HD (16 Subs)',
+            provider: 'anipm',
+            status: 'ready',
+            streamUrl: resolveUrl({ audio: 'sub', provider: 'anipm', server: 'settlar' }),
+            type: 'hls',
+            quality: '1080p',
+            audio: 'sub',
+            audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+            subtitles: [],
+            downloads: [],
+          });
+        }
+
+        return list;
+      })(),
       {
         id: 'torrent:P2P-1',
         name: 'P2P Swarm · WebTorrent',
@@ -724,6 +756,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
       const scoped = defaultServers.filter((s) => s.provider === requested);
       const isScopedUnavailable = !availableSlugs[requested];
+      const serversToReturn = scoped.length > 0 ? scoped : defaultServers;
 
       return ok({
         title: resolvedTitle,
@@ -731,7 +764,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         malId: resolvedMalId || null,
         scopedProvider: requested,
         scopedProviderUnavailable: Boolean(isScopedUnavailable),
-        servers: scoped,
+        servers: serversToReturn,
         aniskip: aniskipData || null,
         providerHealth,
         availableProviders: getAvailableProvidersList(),
@@ -777,13 +810,17 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       provider: prov,
       status: 'ready',
       streamUrl,
-      type: meta.kind === 'progressive' ? 'mp4' : 'hls',
+      type: meta.type || (meta.kind === 'progressive' ? 'mp4' : 'hls'),
       quality: meta.quality || '1080p',
       audio: resolvedAudio,
       audioTracks: buildAudioTracks(resolvedAudio),
       subtitles,
-      thumbnails: meta.thumbnails?.url ? { url: `${proxyBase}?url=${encodeURIComponent(meta.thumbnails.url)}` } : null,
+      thumbnails: meta.thumbnails?.url
+        ? { url: `${url.origin}/api/proxy?url=${encodeURIComponent(meta.thumbnails.url)}` }
+        : null,
       downloads,
+      intro: meta.skip?.intro ? { start: meta.skip.intro[0], end: meta.skip.intro[1] } : undefined,
+      outro: meta.skip?.outro ? { start: meta.skip.outro[0], end: meta.skip.outro[1] } : undefined,
     };
 
     const servers = [primaryServer];

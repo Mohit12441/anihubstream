@@ -378,7 +378,7 @@ describe('Federated Architecture: Edge Services & Proxy Tests', () => {
         assert.ok(data.providers.anikoto);
         assert.ok(data.providers.hianime);
         assert.ok(data.providers.aniwatch);
-        assert.ok(data.providers.animedubhindi);
+        assert.ok(data.providers.anipm);
         assert.strictEqual(data.providers.anikoto[0].title, 'Naruto (anikoto)');
       } finally {
         globalThis.fetch = originalFetch;

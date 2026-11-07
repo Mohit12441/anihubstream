@@ -26,7 +26,8 @@ export interface BridgeSubtitle {
 export interface BridgeSource {
   session: string;
   provider?: string;
-  kind?: 'hls' | 'progressive';
+  kind?: 'hls' | 'progressive' | 'embed';
+  type?: string;
   container?: string;
   title: string;
   episode: { number: number; title: string };
@@ -161,33 +162,37 @@ const RESOLVE_CACHE_TTL_MS = 20 * 60 * 1000; // 20 minutes (aligned with upstrea
 const memoryCache = new Map<string, { at: number; data: BridgeSource }>();
 const activeResolves = new Map<string, Promise<BridgeSource | ResolveFailure>>();
 
-const slugifyKey = (t: string) =>
-  t.toLowerCase().replace(/[^a-z0-9_-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'anime';
-
 export function streamCacheKey(
-  title: string,
+  animeId: string,
   ep: number,
   audio: 'sub' | 'dub' | string,
   provider: string = 'auto',
 ): string {
+  const normId = (animeId || '').toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   const provSuffix = provider && provider !== 'auto' ? `:${provider}` : '';
-  return `stream:${slugifyKey(title)}:${ep}:${audio}${provSuffix}`;
+  return `stream:${normId}:${ep}:${audio}${provSuffix}`;
 }
 
 export function getCachedSource(key: string): BridgeSource | null {
   const now = Date.now();
   const mem = memoryCache.get(key);
   if (mem && now - mem.at < RESOLVE_CACHE_TTL_MS) {
-    if (isMegaplayTokenValid(mem.data.master)) {
+    if (mem.data.kind === 'embed' || mem.data.type === 'embed' || mem.data.master?.includes('morencius')) {
+      memoryCache.delete(key);
+    } else if (isMegaplayTokenValid(mem.data.master)) {
       return { ...mem.data, reused: true };
+    } else {
+      memoryCache.delete(key);
     }
-    memoryCache.delete(key);
   }
   try {
     const raw = localStorage.getItem(`res_${key}`) || sessionStorage.getItem(`res_${key}`);
     if (raw) {
       const parsed = JSON.parse(raw);
-      if (parsed && typeof parsed.at === 'number' && now - parsed.at < RESOLVE_CACHE_TTL_MS) {
+      if (parsed?.data?.kind === 'embed' || parsed?.data?.type === 'embed' || parsed?.data?.master?.includes('morencius')) {
+        localStorage.removeItem(`res_${key}`);
+        sessionStorage.removeItem(`res_${key}`);
+      } else if (parsed && typeof parsed.at === 'number' && now - parsed.at < RESOLVE_CACHE_TTL_MS) {
         if (isMegaplayTokenValid(parsed.data?.master)) {
           memoryCache.set(key, parsed);
           return { ...parsed.data, reused: true };
@@ -201,6 +206,9 @@ export function getCachedSource(key: string): BridgeSource | null {
 }
 
 export function setCachedSource(key: string, data: BridgeSource): void {
+  if (data.kind === 'embed' || data.type === 'embed' || data.master?.includes('morencius')) {
+    return; // Never persist embed fallbacks
+  }
   const entry = { at: Date.now(), data };
   memoryCache.set(key, entry);
   try {
@@ -220,38 +228,32 @@ export function setCachedSource(key: string, data: BridgeSource): void {
 
 /** Non-blocking prefetch of an upcoming episode */
 export async function prefetchEpisode(
-  title: string,
+  animeId: string,
   ep: number,
   audio: 'sub' | 'dub' | string,
   provider: string = 'auto',
 ): Promise<void> {
-  if (!title || ep < 1) return;
-  const key = streamCacheKey(title, ep, audio, provider);
+  if (!animeId || ep < 1) return;
+  const key = streamCacheKey(animeId, ep, audio, provider);
   if (getCachedSource(key)) return;
 
-  // Speculatively pre-warm Edge Function streams in the background
   try {
-    const cleanId = encodeURIComponent(title);
-    if (provider === 'hianime' || provider === 'auto') {
-      void fetch(`/api/hianime/play?id=${cleanId}&ep=${ep}&audio=${audio}`, {
-        priority: 'low' as RequestPriority,
-      }).catch(() => {});
-    }
+    const cleanId = encodeURIComponent(animeId);
     void fetch(`/api/play?id=${cleanId}&ep=${ep}&audio=${audio}`, {
       priority: 'low' as RequestPriority,
     }).catch(() => {});
   } catch {}
 
-  void bridgeResolve(title, ep, audio, provider);
+  void bridgeResolve(animeId, ep, audio, provider);
 }
 
 export async function bridgeResolve(
-  title: string,
+  animeId: string,
   ep: number,
   audio: 'sub' | 'dub' | string,
   provider: string = 'auto',
 ): Promise<BridgeSource | ResolveFailure> {
-  const key = streamCacheKey(title, ep, audio, provider);
+  const key = streamCacheKey(animeId, ep, audio, provider);
   const cached = getCachedSource(key);
   if (cached) return cached;
 
@@ -278,12 +280,11 @@ export async function bridgeResolve(
     } catch {}
 
     try {
-      const fallbackQuery = (provider && provider !== 'auto') ? '&fallback=false' : '';
       let resolveEndpoint = '';
       if (activeBase === '') {
-        resolveEndpoint = `/api/play/resolve?title=${encodeURIComponent(title)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}${fallbackQuery}`;
+        resolveEndpoint = `/api/play/resolve?anime_id=${encodeURIComponent(animeId)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}`;
       } else {
-        resolveEndpoint = bridgeUrl(`/resolve?title=${encodeURIComponent(title)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}${fallbackQuery}`);
+        resolveEndpoint = bridgeUrl(`/resolve?anime_id=${encodeURIComponent(animeId)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}`);
       }
       const res = await fetch(resolveEndpoint, { signal: AbortSignal.timeout(45_000) });
       const rawBody = (await res.json()) as any;
@@ -297,8 +298,9 @@ export async function bridgeResolve(
         body = {
           session: s.id,
           provider: s.provider,
-          kind: s.type === 'mp4' ? 'progressive' : 'hls',
-          title,
+          kind: s.type === 'mp4' ? 'progressive' : (s.type === 'embed' ? 'embed' : 'hls'),
+          type: s.type || 'hls',
+          title: animeId,
           episode: { number: ep, title: `Episode ${ep}` },
           quality: s.quality || '1080p',
           variants: [s.quality || '1080p'],
@@ -307,7 +309,7 @@ export async function bridgeResolve(
             intro: s.intro ? [s.intro.start, s.intro.end] : undefined,
             outro: s.outro ? [s.outro.start, s.outro.end] : undefined,
           } : null,
-          proof: { container: 'hls', checkedBytes: 1024 },
+          proof: { container: s.type === 'embed' ? 'embed' : 'hls', checkedBytes: 1024 },
           master: s.streamUrl,
           subtitles: (s.subtitles || []).map((sub: any) => ({
             language: sub.language,
