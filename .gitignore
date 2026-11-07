@@ -34,3 +34,5 @@ scratch/
 .firewall/
 anihub_tables_backup.sql
 
+
+remote-user-tables-backup.json
