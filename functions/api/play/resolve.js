@@ -299,11 +299,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                     return ok({ server: resolvedServer }, { cache: 'public, max-age=600, s-maxage=1800' });
                   }
                 }
-              }
             } catch {
               // ignore fallback error
             }
-          }
 
           throw new HttpError(504, 'upstream_timeout', 'Stream bridge resolution timed out or unavailable');
         }
