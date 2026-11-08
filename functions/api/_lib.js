@@ -555,14 +555,27 @@ export async function resolveFranchiseSeasons(db, card) {
 
 export const KNOWN_PROVIDER_REGEX = /^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai|anipm|anidisk|animeflv|hdrezka|jkanime|animedubhindi|desidubanime|torrent):/i;
 
+const stripHashToken = (s) => {
+  const m = s.match(/-([a-z0-9]{4,8})$/i);
+  if (m && isHashToken(m[1])) {
+    return s.slice(0, -m[0].length);
+  }
+  return s;
+};
+
 export const deriveSlugCandidates = (id) => {
   if (!id || typeof id !== 'string') return [];
   const rawSlug = id.replace(KNOWN_PROVIDER_REGEX, '').trim();
-  const rawSlugNoHash = rawSlug.replace(/-[a-z0-9]{4,8}$/i, '');
+  const rawSlugNoHash = stripHashToken(rawSlug);
   const cleanSlug = rawSlug.replace(/:+/g, '-');
-  const cleanSlugNoHash = cleanSlug.replace(/-[a-z0-9]{4,8}$/i, '');
+  const cleanSlugNoHash = stripHashToken(cleanSlug);
   const normalizedNoHash = cleanSlugNoHash.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   const normalizedRaw = rawSlug.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  const seasonFromOrdinal = normalizedNoHash.replace(/(\d+)(?:st|nd|rd|th)-season/i, (m, n) => `season-${n}`);
+  const ordinalFromSeason = normalizedNoHash.replace(/season-(\d+)/i, (m, n) => {
+    const suf = n === '1' ? '1st' : n === '2' ? '2nd' : n === '3' ? '3rd' : `${n}th`;
+    return `${suf}-season`;
+  });
 
   return Array.from(new Set([
     id,
@@ -571,7 +584,9 @@ export const deriveSlugCandidates = (id) => {
     cleanSlug,
     cleanSlugNoHash,
     normalizedNoHash,
-    normalizedRaw
+    normalizedRaw,
+    seasonFromOrdinal,
+    ordinalFromSeason,
   ].filter(Boolean)));
 };
 

@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, errorResponse, ok, withEdgeCache } from '../_lib.js';
+import { HttpError, deriveSlugCandidates, errorResponse, findAnimeByCandidates, ok, withEdgeCache } from '../_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from '../_megaplay.js';
 import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
 
@@ -71,6 +71,17 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         let animeId = animeIdParam;
 
         if (animeIdParam && env.ANIHUB) {
+          try {
+            const redir = await env.ANIHUB.prepare('SELECT to_id FROM anime_redirect WHERE from_id = ?1').bind(animeIdParam).first();
+            if (redir?.to_id) {
+              animeId = redir.to_id;
+            } else {
+              const candidates = deriveSlugCandidates(animeIdParam);
+              const found = await findAnimeByCandidates(env.ANIHUB, candidates);
+              if (found?.id) animeId = found.id;
+            }
+          } catch {}
+
           meta = await env.ANIHUB.prepare(`
             SELECT a.id, a.title, a.status,
                    m.mal_id, m.anilist_id, m.kitsu_id,
@@ -80,7 +91,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             LEFT JOIN anime_provider_mapping pm
               ON pm.anime_id = a.id AND pm.provider_id = ?2
             WHERE a.id = ?1
-          `).bind(animeIdParam, provider).first();
+          `).bind(animeId, provider).first();
         }
 
         // Backward-compat: allow title-only lookups for legacy callers
@@ -99,13 +110,33 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           if (meta) animeId = meta.id;
         }
 
+        // Fuzzy fallback in D1 before giving up
+        if (!meta && animeIdParam && env.ANIHUB) {
+          try {
+            const cleanPattern = `%${animeIdParam.replace(/[-_]+/g, '%').slice(0, 30)}%`;
+            meta = await env.ANIHUB.prepare(`
+              SELECT a.id, a.title, a.status,
+                     m.mal_id, m.anilist_id, m.kitsu_id,
+                     pm.provider_slug
+              FROM anime a
+              LEFT JOIN anime_id_map m ON m.anime_id = a.id
+              LEFT JOIN anime_provider_mapping pm
+                ON pm.anime_id = a.id AND pm.provider_id = ?2
+              WHERE a.id LIKE ?1 OR LOWER(a.title) LIKE ?1
+              LIMIT 1
+            `).bind(cleanPattern, provider).first();
+            if (meta) animeId = meta.id;
+          } catch {}
+        }
+
         if (!meta) {
-          if (!env.ANIHUB && (animeIdParam || titleParam)) {
-            meta = { id: animeIdParam || titleParam, title: titleParam || animeIdParam, status: 'Released' };
-            animeId = meta.id;
-          } else {
-            throw new HttpError(404, 'not_found', `Unknown anime: ${animeIdParam || titleParam || 'no id/title'}`);
-          }
+          const fallbackTitle = titleParam || animeIdParam
+            .replace(/^(?:hianime|anikoto|aniwatch|anipm):/i, '')
+            .replace(/-[a-z0-9]{5,8}$/i, '')
+            .replace(/[-_:]+/g, ' ')
+            .trim();
+          meta = { id: animeIdParam || titleParam, title: fallbackTitle || animeIdParam, status: 'Released', mal_id: 0 };
+          animeId = meta.id;
         }
 
         const resolvedTitle = meta.title || animeId;

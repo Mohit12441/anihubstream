@@ -266,23 +266,6 @@ export async function bridgeResolve(
   }
 
   const promise = (async () => {
-    // Check D1 remote cache first before hitting bridge (<200ms)
-    try {
-      const cacheRes = await fetch(`/api/stream/cache?key=${encodeURIComponent(key)}`, {
-        signal: AbortSignal.timeout(500),
-      });
-      if (cacheRes.ok) {
-        const cacheJson = (await cacheRes.json()) as { hit?: boolean; data?: BridgeSource };
-        if (cacheJson.hit && cacheJson.data) {
-          if (isMegaplayTokenValid(cacheJson.data.master)) {
-            const remoteData = { ...cacheJson.data, reused: true };
-            memoryCache.set(key, { at: Date.now(), data: remoteData });
-            return remoteData;
-          }
-        }
-      }
-    } catch {}
-
     try {
       let resolveEndpoint = '';
       const srvParam = server ? `&server=${encodeURIComponent(server)}` : '';

@@ -1,11 +1,13 @@
 // functions/sitemap.xml.js
 // Generates a live XML sitemap dynamically from the Cloudflare D1 database.
 // Caches at the edge for 24 hours.
+import { withEdgeCache } from './api/_lib.js';
 
 export async function onRequestGet(context) {
   const { request, env } = context;
-  const origin = request?.url ? new URL(request.url).origin : 'https://anihubstream.com';
-  const now = new Date().toISOString().slice(0, 10);
+  return withEdgeCache(request, env, 86400, async () => {
+    const origin = request?.url ? new URL(request.url).origin : 'https://anihubstream.com';
+    const now = new Date().toISOString().slice(0, 10);
 
   const staticUrls = [
     { loc: `${origin}/`, priority: '1.0', changefreq: 'daily' },
@@ -89,11 +91,12 @@ ${allUrls
   .join('\n')}
 </urlset>`;
 
-  return new Response(xml, {
-    status: 200,
-    headers: {
-      'content-type': 'application/xml; charset=utf-8',
-      'cache-control': 'public, max-age=3600, s-maxage=86400',
-    },
+    return new Response(xml, {
+      status: 200,
+      headers: {
+        'content-type': 'application/xml; charset=utf-8',
+        'cache-control': 'public, max-age=3600, s-maxage=86400',
+      },
+    });
   });
 }
