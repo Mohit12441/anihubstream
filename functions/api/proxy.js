@@ -473,9 +473,8 @@ export const onRequest = async (context) => {
     responseHeaders.set('Cache-Control', 'public, max-age=31536000, s-maxage=31536000, immutable');
     responseHeaders.set('X-Edge-Cache', rangeHeader ? 'BYPASS' : 'MISS');
 
-    const upstreamContentType = upstreamRes.headers.get('content-type') || '';
-    if (upstreamRes.status >= 400 || (upstreamContentType.includes('text/html') && !isPlaylist)) {
-      return new Response(null, { status: 410, headers: responseHeaders });
+    if (upstreamRes.status >= 400) {
+      return new Response(null, { status: upstreamRes.status, headers: responseHeaders });
     }
 
     const finalResponse = new Response(upstreamRes.body, {
