@@ -18,7 +18,7 @@ import { randomUUID } from 'node:crypto';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { d1All, d1First, d1Query } from './d1.mjs';
+import { d1All, d1First, d1Query, insertRows } from './d1.mjs';
 import { acquireLease, leaseKeeper, recordRun, releaseLease } from './state.mjs';
 import { computeFranchiseGraph } from '../tools/auto-sync-franchises.mjs';
 
@@ -64,45 +64,43 @@ export async function syncAniKotoMappings() {
     return 0;
   }
 
-  let mappedCount = 0;
   try {
     const rawData = JSON.parse(readFileSync(slugsFile, 'utf8'));
     const entries = Object.entries(rawData).filter(([animeId, slug]) => slug && slug !== animeId);
 
-    for (let i = 0; i < entries.length; i += BATCH_SIZE) {
-      const chunk = entries.slice(i, i + BATCH_SIZE);
-      for (const [animeId, slug] of chunk) {
-        try {
-          await d1Query(
-            `INSERT INTO anime_provider_mapping (anime_id, provider_id, provider_slug, confidence, updated_at)
-             VALUES (?1, 'anikoto', ?2, 1.0, unixepoch())
-             ON CONFLICT(anime_id, provider_id) DO UPDATE SET
-               provider_slug = excluded.provider_slug,
-               confidence = excluded.confidence,
-               updated_at = unixepoch()`,
-            [animeId, slug]
-          );
+    // Delta check: only sync slugs not already in D1
+    const existingRows = await d1All("SELECT anime_id, provider_slug FROM anime_provider_mapping WHERE provider_id = 'anikoto'");
+    const existingMap = new Map(existingRows.map((r) => [r.anime_id, r.provider_slug]));
+    const delta = entries.filter(([animeId, slug]) => existingMap.get(animeId) !== slug);
 
-          await d1Query(
-            `INSERT INTO anime_id_map (anime_id, anikoto_slug, confidence, updated_at)
-             VALUES (?1, ?2, 1.0, datetime('now'))
-             ON CONFLICT(anime_id) DO UPDATE SET
-               anikoto_slug = excluded.anikoto_slug,
-               confidence = excluded.confidence,
-               updated_at = datetime('now')`,
-            [animeId, slug]
-          );
-          mappedCount++;
-        } catch (e) {
-          // ignore single item failure
-        }
-      }
+    if (delta.length === 0) {
+      console.log(`[sync-providers] ✅ All ${entries.length} AniKoto provider mappings already up to date.`);
+      return 0;
     }
-    console.log(`[sync-providers] ✅ Synced ${mappedCount} AniKoto provider mappings.`);
+
+    console.log(`[sync-providers] Inserting ${delta.length} AniKoto delta mappings...`);
+    await insertRows({
+      table: 'anime_provider_mapping',
+      columns: ['anime_id', 'provider_id', 'provider_slug', 'confidence', 'updated_at'],
+      rows: delta.map(([animeId, slug]) => [animeId, 'anikoto', slug, 1.0, Math.floor(Date.now() / 1000)]),
+      conflictTarget: ['anime_id', 'provider_id'],
+      update: ['provider_slug', 'confidence', 'updated_at'],
+    });
+
+    await insertRows({
+      table: 'anime_id_map',
+      columns: ['anime_id', 'anikoto_slug', 'confidence', 'updated_at'],
+      rows: delta.map(([animeId, slug]) => [animeId, slug, 1.0, new Date().toISOString()]),
+      conflictTarget: ['anime_id'],
+      update: ['anikoto_slug', 'confidence', 'updated_at'],
+    });
+
+    console.log(`[sync-providers] ✅ Synced ${delta.length} AniKoto delta provider mappings.`);
+    return delta.length;
   } catch (err) {
     console.error('[sync-providers] Error syncing AniKoto mappings:', err.message);
+    return 0;
   }
-  return mappedCount;
 }
 
 /**
@@ -185,31 +183,37 @@ export async function syncAniWatchMappings() {
  */
 export async function syncFranchiseRelations() {
   console.log('[sync-providers] 🔄 Computing and synchronizing franchise relations graph...');
-  let syncedRelations = 0;
   try {
     const rows = await d1All('SELECT id, title, year, season, kind, alt_seasons FROM anime');
     console.log(`[sync-providers] Computing franchise graph for ${rows.length} anime...`);
     const relations = computeFranchiseGraph(rows);
     console.log(`[sync-providers] Identified ${relations.length} franchise relations.`);
 
-    for (let i = 0; i < relations.length; i += BATCH_SIZE) {
-      const chunk = relations.slice(i, i + BATCH_SIZE);
-      for (const rel of chunk) {
-        try {
-          await d1Query(
-            `INSERT OR REPLACE INTO anime_franchise_relation (anime_id, related_id, relation_type, chronology_order, created_at)
-             VALUES (?1, ?2, ?3, ?4, datetime('now'))`,
-            [rel.anime_id, rel.related_id, rel.relation_type, rel.chronology_order]
-          );
-          syncedRelations++;
-        } catch {}
-      }
+    // Delta check: only sync relations that do not already exist in D1
+    const existingRows = await d1All('SELECT anime_id, related_id FROM anime_franchise_relation');
+    const existingSet = new Set(existingRows.map((r) => `${r.anime_id}:${r.related_id}`));
+    const delta = relations.filter((rel) => !existingSet.has(`${rel.anime_id}:${rel.related_id}`));
+
+    if (delta.length === 0) {
+      console.log(`[sync-providers] ✅ All ${relations.length} franchise relations already up to date.`);
+      return 0;
     }
-    console.log(`[sync-providers] ✅ Successfully updated ${syncedRelations} franchise relations.`);
+
+    console.log(`[sync-providers] Inserting ${delta.length} delta franchise relations...`);
+    const inserted = await insertRows({
+      table: 'anime_franchise_relation',
+      columns: ['anime_id', 'related_id', 'relation_type', 'chronology_order', 'created_at'],
+      rows: delta.map((rel) => [rel.anime_id, rel.related_id, rel.relation_type, rel.chronology_order, new Date().toISOString()]),
+      conflictTarget: ['anime_id', 'related_id'],
+      update: ['relation_type', 'chronology_order'],
+    });
+
+    console.log(`[sync-providers] ✅ Successfully updated ${delta.length} franchise relations across ${inserted} batch statements.`);
+    return delta.length;
   } catch (err) {
     console.error('[sync-providers] Error computing franchise relations:', err.message);
+    return 0;
   }
-  return syncedRelations;
 }
 
 /**
