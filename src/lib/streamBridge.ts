@@ -167,10 +167,12 @@ export function streamCacheKey(
   ep: number,
   audio: 'sub' | 'dub' | string,
   provider: string = 'auto',
+  server?: string,
 ): string {
   const normId = (animeId || '').toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   const provSuffix = provider && provider !== 'auto' ? `:${provider}` : '';
-  return `stream:${normId}:${ep}:${audio}${provSuffix}`;
+  const srvSuffix = server ? `:${server}` : '';
+  return `stream:${normId}:${ep}:${audio}${provSuffix}${srvSuffix}`;
 }
 
 export function getCachedSource(key: string): BridgeSource | null {
@@ -232,9 +234,10 @@ export async function prefetchEpisode(
   ep: number,
   audio: 'sub' | 'dub' | string,
   provider: string = 'auto',
+  server?: string,
 ): Promise<void> {
   if (!animeId || ep < 1) return;
-  const key = streamCacheKey(animeId, ep, audio, provider);
+  const key = streamCacheKey(animeId, ep, audio, provider, server);
   if (getCachedSource(key)) return;
 
   try {
@@ -244,7 +247,7 @@ export async function prefetchEpisode(
     }).catch(() => {});
   } catch {}
 
-  void bridgeResolve(animeId, ep, audio, provider);
+  void bridgeResolve(animeId, ep, audio, provider, server);
 }
 
 export async function bridgeResolve(
@@ -252,8 +255,9 @@ export async function bridgeResolve(
   ep: number,
   audio: 'sub' | 'dub' | string,
   provider: string = 'auto',
+  server?: string,
 ): Promise<BridgeSource | ResolveFailure> {
-  const key = streamCacheKey(animeId, ep, audio, provider);
+  const key = streamCacheKey(animeId, ep, audio, provider, server);
   const cached = getCachedSource(key);
   if (cached) return cached;
 
@@ -281,10 +285,11 @@ export async function bridgeResolve(
 
     try {
       let resolveEndpoint = '';
+      const srvParam = server ? `&server=${encodeURIComponent(server)}` : '';
       if (activeBase === '') {
-        resolveEndpoint = `/api/play/resolve?anime_id=${encodeURIComponent(animeId)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}`;
+        resolveEndpoint = `/api/play/resolve?anime_id=${encodeURIComponent(animeId)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}${srvParam}`;
       } else {
-        resolveEndpoint = bridgeUrl(`/resolve?anime_id=${encodeURIComponent(animeId)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}`);
+        resolveEndpoint = bridgeUrl(`/resolve?anime_id=${encodeURIComponent(animeId)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}${srvParam}`);
       }
       const res = await fetch(resolveEndpoint, { signal: AbortSignal.timeout(45_000) });
       const rawBody = (await res.json()) as any;

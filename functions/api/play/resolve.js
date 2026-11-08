@@ -3,7 +3,7 @@ import { HttpError, errorResponse, ok, withEdgeCache } from '../_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from '../_megaplay.js';
 import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
 
-const BRIDGE_TIMEOUT_MS = 25_000;
+const BRIDGE_TIMEOUT_MS = 6_000;
 
 function formatServerName(provider, serverId) {
   const provNames = {
@@ -239,9 +239,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
 
         if (!bridgeRes) {
-          // If no bridge configured or bridge timed out: attempt title-to-MAL resolution via Jikan
-          if (canUseEdgeDirect) {
-            try {
+          // If bridge unavailable, attempt edge direct fallback via known MAL ID or Jikan lookup
+          try {
+            let targetMalId = resolvedMalId || 0;
+            if (!targetMalId) {
               const cleanTitle = resolvedTitle
                 .replace(/^(?:hianime|anikoto|aniwatch|anipm):/i, '')
                 .replace(/-[a-z0-9]{5,8}$/i, '')
@@ -252,17 +253,19 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               });
               if (jikanRes.ok) {
                 const jikanData = await jikanRes.json();
-                const foundMalId = jikanData?.data?.[0]?.mal_id;
-                if (foundMalId) {
-                  const directRes = await resolveMegaplayDirect({ malId: foundMalId, ep, audio });
-                  if (directRes?.streamUrl) {
-                    if (env.ANIHUB && foundMalId > 0) {
-                      const ttl = Date.now() + 20 * 60 * 1000;
-                      const cacheKey = `stream:${directRes.provider || 'anikoto'}:${foundMalId}:${ep}:${audio}`;
-                      env.ANIHUB.prepare(
-                        'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)',
-                      ).bind(cacheKey, JSON.stringify(directRes), ttl).run().catch(() => {});
-                    }
+                targetMalId = jikanData?.data?.[0]?.mal_id || 0;
+              }
+            }
+            if (targetMalId > 0) {
+              const directRes = await resolveMegaplayDirect({ malId: targetMalId, ep, audio });
+              if (directRes?.streamUrl) {
+                if (env.ANIHUB && targetMalId > 0) {
+                  const ttl = Date.now() + 20 * 60 * 1000;
+                  const cacheKey = `stream:${directRes.provider || 'anikoto'}:${targetMalId}:${ep}:${audio}`;
+                  env.ANIHUB.prepare(
+                    'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)',
+                  ).bind(cacheKey, JSON.stringify(directRes), ttl).run().catch(() => {});
+                }
 
                     const proxyBase = `${url.origin}/api/proxy`;
                     const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=https://megaplay.buzz/`;

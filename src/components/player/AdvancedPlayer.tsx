@@ -115,6 +115,9 @@ export function AdvancedPlayer(props: Props) {
   }, [props.serverId, selectedServerId]);
 
   const provider = providerFromId(selectedServerId);
+  const serverName = selectedServerId.includes(':')
+    ? selectedServerId.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '')
+    : selectedServerId;
 
   const initialSource = useMemo<BridgeSource | null>(() => {
     if (!initialServer?.streamUrl || initialServer.streamUrl.includes('/api/play/resolve')) return null;
@@ -148,6 +151,7 @@ export function AdvancedPlayer(props: Props) {
     episode: episode.n,
     audio: prefs.audio,
     provider,
+    server: serverName,
     subsOn: prefs.subtitles.enabled,
     subLanguage: prefs.subtitles.language,
     startAt: startAtForLive,

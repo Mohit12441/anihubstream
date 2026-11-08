@@ -69,6 +69,7 @@ interface Options {
   rate: number;
   enableP2P?: boolean;
   initialSource?: BridgeSource | null;
+  server?: string;
 }
 
 /* Refusals that a fresh resolve could clear: the provider was mid-response, a CDN object
@@ -81,6 +82,10 @@ const TRANSIENT_REFUSALS = new Set([
   'UPSTREAM',
   'NETWORK',
   'RATE_LIMITED',
+  'HTTP 504',
+  '504',
+  'upstream_timeout',
+  'BRIDGE_UNREACHABLE',
 ]);
 
 export function useLiveStream(o: Options) {
@@ -201,20 +206,30 @@ export function useLiveStream(o: Options) {
         }
         autoTries.current = 0;
         errorTries.current = 0;
-        let res = await bridgeResolve(o.animeId, o.episode, o.audio, o.provider ?? 'auto');
+        let res = await bridgeResolve(o.animeId, o.episode, o.audio, o.provider ?? 'auto', o.server);
         if (cancel) return;
         if (isResolveFailure(res)) {
+          /* if explicit provider failed or timed out, attempt auto fallback before failing */
+          if (o.provider && o.provider !== 'auto') {
+            const autoRes = await bridgeResolve(o.animeId, o.episode, o.audio, 'auto');
+            if (cancel) return;
+            if (!isResolveFailure(autoRes)) {
+              setInfo(autoRes);
+              prefetchEpisode(o.animeId, o.episode + 1, o.audio, 'auto');
+              return;
+            }
+          }
           /* a dub ask for an episode that has no dubbed file falls back to the original
              rather than leaving the viewer with an error — the audio the episode actually
              carries wins over the stored intent */
           if (o.audio === 'dub' && res.error === 'NO_EMBEDS') {
-            const sub = await bridgeResolve(o.animeId, o.episode, 'sub', o.provider ?? 'auto');
+            const sub = await bridgeResolve(o.animeId, o.episode, 'sub', o.provider ?? 'auto', o.server);
             if (cancel) return;
             if (!isResolveFailure(sub)) {
               setAudioFallback(true);
               setInfo(sub);
               // Prefetch next episode in the background
-              prefetchEpisode(o.animeId, o.episode + 1, 'sub', o.provider ?? 'auto');
+              prefetchEpisode(o.animeId, o.episode + 1, 'sub', o.provider ?? 'auto', o.server);
               return;
             }
             res = sub;
@@ -226,7 +241,7 @@ export function useLiveStream(o: Options) {
         }
         setInfo(res);
         // Automatically warm and prefetch the next episode so autoplay/bingeing is instant!
-        prefetchEpisode(o.animeId, o.episode + 1, o.audio, o.provider ?? 'auto');
+        prefetchEpisode(o.animeId, o.episode + 1, o.audio, o.provider ?? 'auto', o.server);
       } finally {
         window.clearInterval(timer);
         window.clearTimeout(timeoutId);
@@ -237,7 +252,7 @@ export function useLiveStream(o: Options) {
       window.clearInterval(timer);
       window.clearTimeout(timeoutId);
     };
-  }, [o.animeId, o.episode, o.audio, o.provider, nonce, o.initialSource]);
+  }, [o.animeId, o.episode, o.audio, o.provider, o.server, nonce, o.initialSource]);
 
   /* ---------- self-heal a transient offline, or a refusal a re-resolve can clear ---------- */
   useEffect(() => {
