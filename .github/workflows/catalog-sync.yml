@@ -180,9 +180,9 @@ jobs:
         run: node cloud-sync/sync-hianime.mjs
 
       # -----------------------------------------------------------
-      # Phase 4 & 5: AniKoto, AniWatch & Franchise Relations
+      # Phase 4 & 5: Franchise Relations Graph & Rating Normalization
       # -----------------------------------------------------------
-      - name: phase 4 & 5 — sync anikoto, aniwatch & franchise relations
+      - name: phase 4 & 5 — sync franchise relations & rating normalization
         if: steps.stage.outputs.selected_target == 'all' || steps.stage.outputs.selected_target == 'providers'
         continue-on-error: true
         env:

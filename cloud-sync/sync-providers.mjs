@@ -54,131 +54,17 @@ function normalizeTitle(t) {
 }
 
 /**
- * 1. Sync AniKoto Slugs
+ * @deprecated One-ID architecture resolves AniKoto dynamically via mal_id at playback time.
  */
 export async function syncAniKotoMappings() {
-  console.log('[sync-providers] 🔄 Synchronizing AniKoto provider mappings...');
-  const slugsFile = resolve(__dirname, '../tools/anikoto-slugs.json');
-  if (!existsSync(slugsFile)) {
-    console.warn('[sync-providers] tools/anikoto-slugs.json not found, skipping static slug set.');
-    return 0;
-  }
-
-  try {
-    const rawData = JSON.parse(readFileSync(slugsFile, 'utf8'));
-    const entries = Object.entries(rawData).filter(([animeId, slug]) => slug && slug !== animeId);
-
-    // Delta check: only sync slugs for existing anime where neither id nor slug are claimed
-    const validAnimeRows = await d1All("SELECT id FROM anime");
-    const validAnimeIds = new Set(validAnimeRows.map((r) => r.id));
-    const existingRows = await d1All("SELECT anime_id, provider_slug FROM anime_provider_mapping WHERE provider_id = 'anikoto'");
-    const existingIds = new Set(existingRows.map((r) => r.anime_id));
-    const existingSlugs = new Set(existingRows.map((r) => r.provider_slug));
-    const delta = entries.filter(([animeId, slug]) => validAnimeIds.has(animeId) && !existingIds.has(animeId) && !existingSlugs.has(slug));
-
-    if (delta.length === 0) {
-      console.log(`[sync-providers] ✅ All ${entries.length} AniKoto provider mappings already up to date.`);
-      return 0;
-    }
-
-    console.log(`[sync-providers] Inserting ${delta.length} AniKoto delta mappings...`);
-    await insertRows({
-      table: 'anime_provider_mapping',
-      columns: ['anime_id', 'provider_id', 'provider_slug', 'confidence', 'updated_at'],
-      rows: delta.map(([animeId, slug]) => [animeId, 'anikoto', slug, 1.0, Math.floor(Date.now() / 1000)]),
-      conflictTarget: ['anime_id', 'provider_id'],
-      update: ['provider_slug', 'confidence', 'updated_at'],
-    });
-
-    await insertRows({
-      table: 'anime_id_map',
-      columns: ['anime_id', 'anikoto_slug', 'confidence', 'updated_at'],
-      rows: delta.map(([animeId, slug]) => [animeId, slug, 1.0, new Date().toISOString()]),
-      conflictTarget: ['anime_id'],
-      update: ['anikoto_slug', 'confidence', 'updated_at'],
-    });
-
-    console.log(`[sync-providers] ✅ Synced ${delta.length} AniKoto delta provider mappings.`);
-    return delta.length;
-  } catch (err) {
-    console.error('[sync-providers] Error syncing AniKoto mappings:', err.message);
-    return 0;
-  }
+  return 0;
 }
 
 /**
- * 2. Sync AniWatch Catalog
+ * @deprecated One-ID architecture resolves AniWatch dynamically via MegaPlay/Zoko.
  */
 export async function syncAniWatchMappings() {
-  console.log('[sync-providers] 🔄 Synchronizing AniWatch provider mappings...');
-  let mappedCount = 0;
-  try {
-    const res = await fetch('https://aniwatch.co.at/anime-sitemap.xml', {
-      headers: { 'User-Agent': USER_AGENT },
-      signal: AbortSignal.timeout(15000),
-    });
-    if (!res.ok) {
-      console.warn(`[sync-providers] AniWatch sitemap returned HTTP ${res.status}`);
-      return 0;
-    }
-
-    const xml = await res.text();
-    const locMatches = [...xml.matchAll(/<loc>(https?:\/\/[^<]+)<\/loc>/gi)];
-    const slugs = locMatches
-      .map((m) => {
-        try {
-          const url = new URL(m[1]);
-          const segs = url.pathname.split('/').filter(Boolean);
-          return segs[segs.length - 1];
-        } catch {
-          return null;
-        }
-      })
-      .filter((s) => s && s !== 'anime' && !s.endsWith('.xml') && !s.includes('sitemap'));
-
-    console.log(`[sync-providers] Found ${slugs.length} AniWatch sitemap entries.`);
-
-    // Match each against anime table in D1
-    const animeRows = await d1All('SELECT id, title, source_ids FROM anime');
-    const byId = new Map(animeRows.map((r) => [r.id, r]));
-    const byTitle = new Map(animeRows.map((r) => [normalizeTitle(r.title), r]));
-
-    for (const slug of slugs) {
-      let matched = byId.get(slug);
-      if (!matched) {
-        matched = byTitle.get(normalizeTitle(slug.replace(/-/g, ' ')));
-      }
-
-      if (matched) {
-        try {
-          await d1Query(
-            `INSERT INTO anime_provider_mapping (anime_id, provider_id, provider_slug, confidence, updated_at)
-             VALUES (?1, 'aniwatch', ?2, 0.95, unixepoch())
-             ON CONFLICT(anime_id, provider_id) DO UPDATE SET
-               provider_slug = excluded.provider_slug,
-               confidence = excluded.confidence,
-               updated_at = unixepoch()`,
-            [matched.id, slug]
-          );
-
-          await d1Query(
-            `INSERT INTO anime_id_map (anime_id, aniwatch_slug, confidence, updated_at)
-             VALUES (?1, ?2, 0.95, datetime('now'))
-             ON CONFLICT(anime_id) DO UPDATE SET
-               aniwatch_slug = excluded.aniwatch_slug,
-               confidence = excluded.confidence,
-               updated_at = datetime('now')`,
-            [matched.id, slug]
-          );
-          mappedCount++;
-        } catch {}
-      }
-    }
-    console.log(`[sync-providers] ✅ Synced ${mappedCount} AniWatch provider mappings.`);
-  } catch (err) {
-    console.warn('[sync-providers] Note: AniWatch sitemap unreachable or timed out:', err.message);
-  }
-  return mappedCount;
+  return 0;
 }
 
 /**
@@ -250,8 +136,6 @@ export async function runProvidersSync({ force = false } = {}) {
 
   const keeper = leaseKeeper(LEASE, OWNER);
   const results = {
-    anikoto: 0,
-    aniwatch: 0,
     franchises: 0,
     ratings: 0,
   };
@@ -259,12 +143,6 @@ export async function runProvidersSync({ force = false } = {}) {
   try {
     await keeper();
     results.ratings = await normalizeRatings();
-    
-    await keeper();
-    results.anikoto = await syncAniKotoMappings();
-
-    await keeper();
-    results.aniwatch = await syncAniWatchMappings();
 
     await keeper();
     results.franchises = await syncFranchiseRelations();
@@ -273,7 +151,7 @@ export async function runProvidersSync({ force = false } = {}) {
       status: 'success',
       ...results,
     });
-    console.log('[sync-providers] 🎉 Multi-Provider Sync Completed successfully:', results);
+    console.log('[sync-providers] 🎉 Metadata & Franchise Graph Sync Completed successfully:', results);
     return { status: 'success', results };
   } catch (err) {
     console.error('[sync-providers] Fatal error during provider sync:', err);
