@@ -35,6 +35,7 @@
     "sync:schedule": "node tools/sync-ongoing-schedules.mjs",
     "gsc:status": "node tools/gsc-telemetry.mjs",
     "gsc:analytics": "node tools/gsc-telemetry.mjs --analytics",
+    "gsc:sitemap": "node tools/gsc-telemetry.mjs --submit-sitemap",
     "indexnow": "node tools/indexnow.mjs",
     "indexnow:sitemap": "node tools/indexnow.mjs --sitemap"
   },

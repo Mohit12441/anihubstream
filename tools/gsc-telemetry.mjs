@@ -18,7 +18,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 
-const SCOPES = 'https://www.googleapis.com/auth/webmasters.readonly';
+const SCOPES = 'https://www.googleapis.com/auth/webmasters';
 const TOKEN_URI = 'https://oauth2.googleapis.com/token';
 const DEFAULT_SITE_URL = process.env.GSC_SITE_URL || 'https://anihubstream.pages.dev/';
 
@@ -173,6 +173,25 @@ export async function listSitemaps(accessToken, siteUrl = DEFAULT_SITE_URL) {
   return await res.json();
 }
 
+/**
+ * Submits or refreshes a sitemap in Google Search Console (HTTP PUT)
+ */
+export async function submitSitemap(accessToken, siteUrl = DEFAULT_SITE_URL, sitemapUrl = 'https://anihubstream.com/sitemap.xml') {
+  const endpoint = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(siteUrl)}/sitemaps/${encodeURIComponent(sitemapUrl)}`;
+  const res = await fetch(endpoint, {
+    method: 'PUT',
+    headers: { Authorization: `Bearer ${accessToken}` },
+    signal: AbortSignal.timeout(15000),
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`GSC Sitemaps submit API error HTTP ${res.status}: ${text}`);
+  }
+
+  return { ok: true, status: res.status };
+}
+
 async function main() {
   const credPath = findCredentialsFile();
   if (!credPath) {
@@ -232,6 +251,9 @@ async function main() {
   const inspectArg = process.argv.find((a) => a.startsWith('--inspect='));
   const isAnalytics = process.argv.includes('--analytics');
   const isSitemaps = process.argv.includes('--sitemaps');
+  const isSubmitSitemap = process.argv.includes('--submit-sitemap') || process.argv.includes('--sitemap-submit');
+  const sitemapArg = process.argv.find((a) => a.startsWith('--sitemap-url='));
+  const targetSitemap = sitemapArg ? sitemapArg.split('=')[1] : 'https://anihubstream.com/sitemap.xml';
 
   if (inspectArg) {
     const targetUrl = inspectArg.split('=')[1];
@@ -262,6 +284,14 @@ async function main() {
     } else {
       console.log('No click/impression traffic recorded in this date range yet.');
     }
+  } else if (isSubmitSitemap) {
+    const property = sites[0] || DEFAULT_SITE_URL;
+    console.log(`📤 Submitting sitemap "${targetSitemap}" for ${property}...`);
+    await submitSitemap(token, property, targetSitemap);
+    console.log('✅ Sitemap submitted successfully to Google Search Console (HTTP 204)!');
+    const sitemaps = await listSitemaps(token, property);
+    console.log('\n--- Current Registered Sitemaps in GSC ---');
+    console.log(JSON.stringify(sitemaps, null, 2));
   } else if (isSitemaps) {
     const property = sites[0] || DEFAULT_SITE_URL;
     console.log(`🗺️ Listing Sitemaps for ${property}...`);
