@@ -192,6 +192,25 @@ export async function submitSitemap(accessToken, siteUrl = DEFAULT_SITE_URL, sit
   return { ok: true, status: res.status };
 }
 
+/**
+ * Deletes an existing sitemap from Google Search Console (HTTP DELETE)
+ */
+export async function deleteSitemap(accessToken, siteUrl = DEFAULT_SITE_URL, sitemapUrl = 'https://anihubstream.com/sitemap.xml') {
+  const endpoint = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(siteUrl)}/sitemaps/${encodeURIComponent(sitemapUrl)}`;
+  const res = await fetch(endpoint, {
+    method: 'DELETE',
+    headers: { Authorization: `Bearer ${accessToken}` },
+    signal: AbortSignal.timeout(15000),
+  });
+
+  if (!res.ok && res.status !== 404) {
+    const text = await res.text();
+    throw new Error(`GSC Sitemaps delete API error HTTP ${res.status}: ${text}`);
+  }
+
+  return { ok: true, status: res.status };
+}
+
 async function main() {
   const credPath = findCredentialsFile();
   if (!credPath) {
@@ -252,6 +271,8 @@ async function main() {
   const isAnalytics = process.argv.includes('--analytics');
   const isSitemaps = process.argv.includes('--sitemaps');
   const isSubmitSitemap = process.argv.includes('--submit-sitemap') || process.argv.includes('--sitemap-submit');
+  const isDeleteSitemap = process.argv.includes('--delete-sitemap') || process.argv.includes('--remove-sitemap');
+  const isResetSitemap = process.argv.includes('--reset-sitemap');
   const sitemapArg = process.argv.find((a) => a.startsWith('--sitemap-url='));
   const targetSitemap = sitemapArg ? sitemapArg.split('=')[1] : 'https://anihubstream.com/sitemap.xml';
 
@@ -289,6 +310,25 @@ async function main() {
     console.log(`📤 Submitting sitemap "${targetSitemap}" for ${property}...`);
     await submitSitemap(token, property, targetSitemap);
     console.log('✅ Sitemap submitted successfully to Google Search Console (HTTP 204)!');
+    const sitemaps = await listSitemaps(token, property);
+    console.log('\n--- Current Registered Sitemaps in GSC ---');
+    console.log(JSON.stringify(sitemaps, null, 2));
+  } else if (isDeleteSitemap) {
+    const property = sites[0] || DEFAULT_SITE_URL;
+    console.log(`🗑️ Deleting sitemap "${targetSitemap}" from ${property}...`);
+    await deleteSitemap(token, property, targetSitemap);
+    console.log('✅ Sitemap deleted successfully from Google Search Console!');
+    const sitemaps = await listSitemaps(token, property);
+    console.log('\n--- Current Registered Sitemaps in GSC ---');
+    console.log(JSON.stringify(sitemaps, null, 2));
+  } else if (isResetSitemap) {
+    const property = sites[0] || DEFAULT_SITE_URL;
+    console.log(`🔄 Resetting sitemap "${targetSitemap}" for ${property}...`);
+    console.log('1. Deleting stale sitemap record...');
+    await deleteSitemap(token, property, targetSitemap).catch(() => {});
+    console.log('2. Re-submitting fresh sitemap...');
+    await submitSitemap(token, property, targetSitemap);
+    console.log('✅ Sitemap cleanly reset and submitted to Google Search Console!');
     const sitemaps = await listSitemaps(token, property);
     console.log('\n--- Current Registered Sitemaps in GSC ---');
     console.log(JSON.stringify(sitemaps, null, 2));

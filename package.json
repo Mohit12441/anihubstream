@@ -36,6 +36,8 @@
     "gsc:status": "node tools/gsc-telemetry.mjs",
     "gsc:analytics": "node tools/gsc-telemetry.mjs --analytics",
     "gsc:sitemap": "node tools/gsc-telemetry.mjs --submit-sitemap",
+    "gsc:delete-sitemap": "node tools/gsc-telemetry.mjs --delete-sitemap",
+    "gsc:reset-sitemap": "node tools/gsc-telemetry.mjs --reset-sitemap",
     "indexnow": "node tools/indexnow.mjs",
     "indexnow:sitemap": "node tools/indexnow.mjs --sitemap"
   },

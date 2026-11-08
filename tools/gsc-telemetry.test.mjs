@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { getAccessToken, inspectUrl, queryAnalytics, listSitemaps, submitSitemap } from './gsc-telemetry.mjs';
+import { getAccessToken, inspectUrl, queryAnalytics, listSitemaps, submitSitemap, deleteSitemap } from './gsc-telemetry.mjs';
 
 describe('GSC Telemetry Client Contract', () => {
   it('exports expected telemetry inspection methods', () => {
@@ -9,5 +9,6 @@ describe('GSC Telemetry Client Contract', () => {
     assert.equal(typeof queryAnalytics, 'function');
     assert.equal(typeof listSitemaps, 'function');
     assert.equal(typeof submitSitemap, 'function');
+    assert.equal(typeof deleteSitemap, 'function');
   });
 });
