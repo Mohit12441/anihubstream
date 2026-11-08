@@ -68,11 +68,13 @@ export async function syncAniKotoMappings() {
     const rawData = JSON.parse(readFileSync(slugsFile, 'utf8'));
     const entries = Object.entries(rawData).filter(([animeId, slug]) => slug && slug !== animeId);
 
-    // Delta check: only sync slugs not already assigned in D1 (neither id nor slug claimed)
+    // Delta check: only sync slugs for existing anime where neither id nor slug are claimed
+    const validAnimeRows = await d1All("SELECT id FROM anime");
+    const validAnimeIds = new Set(validAnimeRows.map((r) => r.id));
     const existingRows = await d1All("SELECT anime_id, provider_slug FROM anime_provider_mapping WHERE provider_id = 'anikoto'");
     const existingIds = new Set(existingRows.map((r) => r.anime_id));
     const existingSlugs = new Set(existingRows.map((r) => r.provider_slug));
-    const delta = entries.filter(([animeId, slug]) => !existingIds.has(animeId) && !existingSlugs.has(slug));
+    const delta = entries.filter(([animeId, slug]) => validAnimeIds.has(animeId) && !existingIds.has(animeId) && !existingSlugs.has(slug));
 
     if (delta.length === 0) {
       console.log(`[sync-providers] ✅ All ${entries.length} AniKoto provider mappings already up to date.`);
