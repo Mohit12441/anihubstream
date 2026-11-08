@@ -922,11 +922,13 @@ async function main({ forceTakeover = process.argv.includes('--force-takeover') 
      reprocess the same title (R9) while the catalogue still keeps up with new seasons. */
   if (cursor.done && Date.now() - cursor.doneAt >= REWALK_AFTER_MS) cursor = { ...cursor, after: '', pendingAfter: 0, done: false };
 
-  /* If the saved pending cursor has reached the end of the queue or is beyond all current pending items,
-     reset pendingAfter to 0 so newly inserted pending items (e.g. from discovery) are not starved. */
-  if (CREATES_ROWS && cursor.pendingAfter > 0) {
-    const nextPending = await d1First('SELECT 1 FROM sync_pending WHERE anilist_id > ? LIMIT 1', [cursor.pendingAfter]);
-    if (!nextPending) cursor = { ...cursor, pendingAfter: 0 };
+  /* When creating modes have pending items in the queue, wake up the cursor so newly discovered
+     titles are ingested immediately even if the catalogue mirror walk is done. */
+  if (CREATES_ROWS) {
+    const hasPending = await d1First('SELECT 1 FROM sync_pending LIMIT 1');
+    if (hasPending) {
+      cursor = { ...cursor, done: false, pendingAfter: 0 };
+    }
   }
   summary.cursor = cursor;
 
