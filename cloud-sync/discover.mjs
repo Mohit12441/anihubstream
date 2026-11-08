@@ -256,23 +256,55 @@ export async function discoverTrending({
     knownSlugs.add(slug);
   }
 
-  // 3b. If trending candidates did not satisfy the requested limit, backfill from popular catalogue
+  // 3b. Backfill unimported pre-vetted titles from catalogue-sources.json backlog
   if (queued.length < limit) {
     try {
-      const popularMedia = await fetchPopular(1, depth, fetchImpl, { paceIntervalMs, sleep: sleepImpl });
-      for (const item of popularMedia) {
-        if (queued.length >= limit) break;
-        if (knownAnilistIds.has(item.id)) continue;
-        const slug = mediaSlug(item);
-        if (!slug || knownSlugs.has(slug)) continue;
+      const sourcesFile = new URL('../tools/catalogue-sources.json', import.meta.url);
+      const { readFileSync, existsSync } = await import('node:fs');
+      if (existsSync(sourcesFile)) {
+        const sources = JSON.parse(readFileSync(sourcesFile, 'utf8'));
+        for (const item of sources) {
+          if (queued.length >= limit) break;
+          const anilistId = Number(item?.anilist || item?.anilist_id);
+          const slug = item?.id;
+          if (!anilistId || !slug) continue;
+          if (knownAnilistIds.has(anilistId) || knownSlugs.has(slug)) continue;
 
-        queued.push({
-          anilist_id: item.id,
-          slug,
-          title: item.title?.english || item.title?.romaji || slug,
-        });
-        knownAnilistIds.add(item.id);
-        knownSlugs.add(slug);
+          queued.push({
+            anilist_id: anilistId,
+            slug,
+            title: item.title || slug,
+          });
+          knownAnilistIds.add(anilistId);
+          knownSlugs.add(slug);
+        }
+      }
+    } catch (err) {
+      console.warn('[discover] Backlog fallback error:', err.message);
+    }
+  }
+
+  // 3c. If candidates still did not satisfy requested limit, page popular catalogue
+  if (queued.length < limit) {
+    try {
+      let page = 1;
+      while (queued.length < limit && page <= 5) {
+        const popularMedia = await fetchPopular(page++, depth, fetchImpl, { paceIntervalMs, sleep: sleepImpl });
+        if (!popularMedia?.length) break;
+        for (const item of popularMedia) {
+          if (queued.length >= limit) break;
+          if (knownAnilistIds.has(item.id)) continue;
+          const slug = mediaSlug(item);
+          if (!slug || knownSlugs.has(slug)) continue;
+
+          queued.push({
+            anilist_id: item.id,
+            slug,
+            title: item.title?.english || item.title?.romaji || slug,
+          });
+          knownAnilistIds.add(item.id);
+          knownSlugs.add(slug);
+        }
       }
     } catch (popErr) {
       console.warn('[discover] Popular fallback error:', popErr.message);
