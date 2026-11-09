@@ -1,0 +1,98 @@
+[
+  {
+    "id": "action",
+    "label": "Action",
+    "tagline": "Explosive Battles",
+    "art": "key-demon-slayer",
+    "accent": "#ff1f4a",
+    "position": 0
+  },
+  {
+    "id": "adventure",
+    "label": "Adventure",
+    "tagline": "Epic Journeys",
+    "art": "key-golden-pirate",
+    "accent": "#ff9420",
+    "position": 1
+  },
+  {
+    "id": "fantasy",
+    "label": "Fantasy",
+    "tagline": "Magical Worlds",
+    "art": "key-elf-mage",
+    "accent": "#a24bff",
+    "position": 2
+  },
+  {
+    "id": "isekai",
+    "label": "Isekai",
+    "tagline": "Another Realms",
+    "art": "genres-purple",
+    "accent": "#3b82ff",
+    "position": 3
+  },
+  {
+    "id": "romance",
+    "label": "Romance",
+    "tagline": "Heartfelt Stories",
+    "art": "genre-romance",
+    "accent": "#ff3d8b",
+    "position": 4
+  },
+  {
+    "id": "slice-of-life",
+    "label": "Slice of Life",
+    "tagline": "Everyday Moments",
+    "art": "discover-sunset",
+    "accent": "#ffc247",
+    "position": 5
+  },
+  {
+    "id": "horror",
+    "label": "Horror",
+    "tagline": "Dark Thrills",
+    "art": "hero-demon",
+    "accent": "#c2002a",
+    "position": 6
+  },
+  {
+    "id": "comedy",
+    "label": "Comedy",
+    "tagline": "Endless Laughs",
+    "art": "key-amber-ninja",
+    "accent": "#ffd54a",
+    "position": 7
+  },
+  {
+    "id": "supernatural",
+    "label": "Supernatural",
+    "tagline": "Beyond Reason",
+    "art": "key-cursed-sorcerer",
+    "accent": "#8b5cf6",
+    "position": 8
+  },
+  {
+    "id": "sci-fi",
+    "label": "Sci-Fi",
+    "tagline": "Future Tensions",
+    "art": "key-iron-hero",
+    "accent": "#24d3ee",
+    "position": 9
+  },
+  {
+    "id": "drama",
+    "label": "Drama",
+    "tagline": "Heavy Hearts",
+    "art": "watch-scene",
+    "accent": "#2f7bff",
+    "position": 10
+  },
+  {
+    "id": "mystery",
+    "label": "Mystery",
+    "tagline": "Unfinished Cases",
+    "art": "key-shadow-hunter",
+    "accent": "#2ee6a8",
+    "position": 11
+  }
+]

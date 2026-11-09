@@ -1,0 +1,65 @@
+name: deploy-catalog-d1
+
+# GitOps Automated Deployment to Cloudflare D1
+# Triggers on push to master when data/ catalog or reference files change.
+# Computes exact Git diff, enforces write quota ceilings, and deploys
+# minimal UPSERT batches to Cloudflare D1 with ZERO reads on D1.
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'data/**'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force deployment even if quota ceiling exceeded'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-catalog-d1
+  cancel-in-progress: false
+
+jobs:
+  deploy-d1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+    steps:
+      - name: Checkout repository with Git history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run Schema & Data Validation Tests
+        run: |
+          node --test tools/data-*.test.mjs
+
+      - name: Deploy Git Delta to Cloudflare D1
+        run: |
+          FORCE_FLAG="${{ github.event.inputs.force == 'true' && '--force' || '' }}"
+          BEFORE_SHA="${{ github.event.before }}"
+          AFTER_SHA="${{ github.sha }}"
+          
+          # If initial commit or before SHA is zero hash, compare against HEAD~1
+          if [ -z "$BEFORE_SHA" ] || [ "$BEFORE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            BEFORE_SHA="HEAD~1"
+          fi
+          
+          echo "Comparing Git changes: $BEFORE_SHA .. $AFTER_SHA"
+          node tools/data-diff-to-d1.mjs --from="$BEFORE_SHA" --to="$AFTER_SHA" $FORCE_FLAG
