@@ -1,89 +1,108 @@
-# Blueprint: Local-First Git-Driven Cloudflare D1 Sync Pipeline
-**Architecture: Local Files (Edit & Test) ➔ GitHub Repository (Audit & Diff) ➔ Cloudflare D1 (Target Edge DB)**
+# Blueprint: Pure 1:1 Data Mirror & Local-First GitOps Cloudflare D1 Sync Pipeline
+**Architecture: Pure Complete Data Mirror in GitHub & Cloudflare D1 + Local Editing + Zero-Read Delta Deployment**
 
 ---
 
 ## Executive Summary & Objectives
 
-### Problem
-Directly synchronizing and editing Cloudflare D1 from remote automated crons or exploratory scripts consumes significant D1 resources:
-1. **D1 Read Burn**: Repeated scans (`SELECT EXISTS(...)`, foreign key verifications, and discovery crawls) burn against Cloudflare's **5,000,000 daily read limit**.
-2. **D1 Write Amplification**: Re-saving entire catalog tables or bulk updates quickly exhausts Cloudflare's **100,000 daily write limit**.
-3. **No Local Validation & Version History**: Changes applied directly to remote D1 lack side-by-side git diffs, PR reviews, rollback points, and offline testing capabilities.
+### The Goal
+Establish a **100% pure complete copy of all data** in both **Cloudflare D1** and the **GitHub Repository**, coupled with a local-first GitOps workflow:
+1. **Pure All Data Parity**: GitHub holds the full, uncompressed, uncorrupted source of truth for **all database tables** (anime, episodes, genres, franchise relations, themes, ID cross-references, provider routes, and redirects). Anyone cloning the repo gets a 100% working, identical database replica locally.
+2. **Cloudflare D1 Quota Shield**:
+   - **Zero reads on D1** during sync: Diff calculation is 100% computed from Git history in GitHub Actions.
+   - **Minimal exact writes**: Editing files locally only updates the changed records in D1.
+   - **Avoid D1 Free-Tier Limits**: Keeps daily operations within Cloudflare's **100,000 writes/day** and **5,000,000 reads/day** thresholds.
+3. **Local Editing with Instant Preview**: Edit anime or metadata locally, test on local Miniflare SQLite, commit to GitHub, and let GitHub Actions push the minimal delta to Cloudflare D1.
 
-### Solution
-A **3-Tier GitOps Architecture** where Git serves as the single source of truth for all catalog and metadata files:
 ```
-┌─────────────────────────────────┐
-│ 1. LOCAL WORKSPACE              │
-│    - data/catalog/<slug>.json   │
-│    - Edit, import, or fix files │
-│    - Validate against schema    │
-│    - Test on local Miniflare D1 │
-└───────────────┬─────────────────┘
-                │ git commit & push
-                ▼
-┌─────────────────────────────────┐
-│ 2. GITHUB REPOSITORY            │
-│    - Version history & audit    │
-│    - Pull request reviews       │
-│    - Instant rollback (git rev) │
-└───────────────┬─────────────────┘
-                │ push to master (data/**)
-                ▼
-┌─────────────────────────────────┐
-│ 3. GITHUB ACTIONS (CI/CD)       │
-│    - Git-Diff Delta Engine      │
-│    - 0 reads on Cloudflare D1   │
-│    - Batched UPSERT transactions│
-│    - Quota guard (<10k writes)  │
-└───────────────┬─────────────────┘
-                │ wrangler d1 execute / REST
-                ▼
-┌─────────────────────────────────┐
-│ 4. CLOUDFLARE D1 (PRODUCTION)   │
-│    - Minimal exact writes only  │
-│    - Free-tier limits protected │
-└─────────────────────────────────┘
+┌────────────────────────────────────────────────────────┐
+│ 1. LOCAL WORKSPACE                                     │
+│    - data/catalog/<slug>.json  (All 3,131 Anime Docs)  │
+│    - data/reference/*.json     (Genres, Routes, Maps)  │
+│    - Edit, test, and preview locally on Miniflare D1   │
+└───────────────────────────┬────────────────────────────┘
+                            │ git commit & push
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│ 2. GITHUB REPOSITORY (100% PURE COMPLETE DATA MIRROR)   │
+│    - 1:1 Pure copy of all Cloudflare D1 tables         │
+│    - Full Git audit log, PR reviews, & blame history   │
+│    - Instant rollback (git revert)                     │
+└───────────────────────────┬────────────────────────────┘
+                            │ push to master (data/**)
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│ 3. GITHUB ACTIONS (DELTA & PARITY ENGINE)              │
+│    - Computes git diff (0 reads on Cloudflare D1)      │
+│    - Generates chunked atomic SQL UPSERT batches       │
+│    - Quota guard (<5,000 writes per push ceiling)      │
+└───────────────────────────┬────────────────────────────┘
+                            │ wrangler d1 execute / REST
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│ 4. CLOUDFLARE D1 (PRODUCTION EDGE DATABASE)            │
+│    - 1:1 Parity with GitHub Repository                 │
+│    - Exact writes only (leaves 95%+ quota free)        │
+└────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Key Metrics & Quota Protection Analysis
+## Scope of "Pure All Data" (Complete D1 Schema Coverage)
 
-| Metric | Traditional Remote Cron / Direct API | Proposed GitOps Delta Architecture |
-| :--- | :--- | :--- |
-| **D1 Reads per Sync Run** | 10,000 – 150,000 reads (scanning tables) | **0 reads** (100% computed from Git diffs) |
-| **D1 Writes for 5 Edited Anime** | 3,131 writes (full table rewrite) | **5 – 80 writes** (exact modified rows only) |
-| **Daily Write Budget Impact** | Up to 80% – 100% of 100,000 limit | **< 1% – 5%** of 100,000 limit |
-| **Failure Blast Radius** | Corrupts remote D1 directly | Caught in local validation or CI gate |
-| **Rollback Mechanism** | Manual SQL scripts or DB restore | `git revert HEAD` & push (automatic sync) |
+The system mirrors **100% of all catalog and reference tables** between Cloudflare D1 and GitHub:
+
+| Table | Live Count | Description | Storage in GitHub (`data/`) |
+| :--- | :--- | :--- | :--- |
+| `anime` | 3,131 rows | Canonical anime titles, art, ratings, synopsis, air schedules | `data/catalog/<slug>.json` |
+| `episode` | 45,143 rows | All episode thumbnails, runtimes, titles, air dates, markers | `data/catalog/<slug>.json` (`episodes: []`) |
+| `genre` | 12 rows | Canonical genres (Action, Sci-Fi, Romance, etc.) | `data/reference/genres.json` |
+| `anime_genre` | ~12,500 rows | Many-to-many anime to genre links | `data/catalog/<slug>.json` (`genres: []`) |
+| `anime_franchise_relation`| 1,480+ rows | Graph of sequels, prequels, spin-offs, side stories | `data/reference/franchise_relations.json` |
+| `anime_theme` | ~4,200 rows | Openings (OP) and Endings (ED) song metadata | `data/catalog/<slug>.json` (`themes: []`) |
+| `anime_id_map` | 2,788+ rows | Universal ID cross-references (MAL, AniList, Kitsu, AniDB) | `data/reference/id_map.json` |
+| `provider_route` | 20+ rows | Dynamic streaming route resolution rules | `data/reference/provider_routes.json` |
+| `anime_redirect` | ~50 rows | Slug aliases and 301 canonical redirects | `data/reference/redirects.json` |
+
+*(Note: Ephemeral user tables like `viewer`, `library`, `position`, and `stream_cache` remain live on Cloudflare D1 and are not tracked in git).*
 
 ---
 
-## System Architecture & File Structure
+## Directory & File Structure in GitHub
 
 ```
 anihubstream/
 ├── data/
-│   ├── catalog/                          <-- Individual JSON files per anime
+│   ├── catalog/                          <-- 100% Pure copy of all anime + episodes
 │   │   ├── frieren-beyond-journeys-end.json
-│   │   ├── naruto.json
-│   │   └── ... (3,131 files)
-│   ├── genres.json                       <-- 12 canonical genres
-│   └── manifest.json                     <-- Fast SHA-256 hash index for diffing
+│   │   ├── fullmetal-alchemist-brotherhood.json
+│   │   ├── naruto-shippuden.json
+│   │   └── ... (3,131 individual JSON files)
+│   │
+│   ├── reference/                        <-- Pure copy of relational & routing tables
+│   │   ├── genres.json                   <-- 12 canonical genres
+│   │   ├── franchise_relations.json      <-- 1,480+ franchise graph edges
+│   │   ├── id_map.json                   <-- Universal cross-provider ID mapping
+│   │   ├── provider_routes.json          <-- Video routing rules & edge overrides
+│   │   └── redirects.json                <-- Slug alias mapping
+│   │
+│   ├── schema/
+│   │   └── anime.schema.json             <-- JSON Schema definition for validation
+│   └── manifest.json                     <-- SHA-256 integrity hash for fast parity audits
 │
 ├── tools/
-│   ├── data-pull.mjs                     <-- Pulls remote D1 / local SQLite -> data/
-│   ├── data-validate.mjs                 <-- Validates JSON files against schema
-│   ├── data-build-local.mjs              <-- Compiles data/ into local Miniflare SQLite
-│   ├── data-diff-to-d1.mjs               <-- Calculates git diff and emits D1 SQL
+│   ├── data-pull-pure.mjs                <-- Extracts 100% pure data from D1 -> data/
+│   ├── data-verify-parity.mjs            <-- Audit engine comparing D1 vs GitHub parity
+│   ├── data-validate.mjs                 <-- Schema validator for local data files
+│   ├── data-build-local.mjs              <-- Rebuilds local Miniflare SQLite from data/
+│   ├── data-diff-to-d1.mjs               <-- Calculates Git diff & emits D1 batch SQL
 │   └── test/
-│       └── data-pipeline.test.mjs        <-- Unit & integration tests
+│       └── data-pipeline.test.mjs        <-- Unit and integration test suite
 │
 └── .github/
     └── workflows/
-        └── deploy-catalog-d1.yml         <-- Automated GitHub Action on data/** push
+        ├── deploy-catalog-d1.yml         <-- Runs on push to data/** (Delta deploy to D1)
+        └── parity-audit.yml              <-- Weekly scheduled D1 vs GitHub integrity check
 ```
 
 ---
@@ -92,11 +111,12 @@ anihubstream/
 
 ```mermaid
 flowchart TD
-    Step1["Step 1: Canonical Data Specification & Schema Contract"] --> Step2["Step 2: Bidirectional Data Pull & Export Tooling"]
-    Step2 --> Step3["Step 3: Local Validator & Local SQLite Compiler"]
-    Step3 --> Step4["Step 4: Git-Diff Delta Engine & SQL Batch Builder"]
-    Step4 --> Step5["Step 5: GitHub Actions Automated D1 Deployment"]
-    Step5 --> Step6["Step 6: Quota Guardrails, Rollback & End-to-End Tests"]
+    Step1["Step 1: Canonical Data Specification & Schema Contract"] --> Step2["Step 2: Pure All-Data Extraction Engine (data-pull-pure.mjs)"]
+    Step2 --> Step3["Step 3: Database-to-Git Parity Auditor (data-verify-parity.mjs)"]
+    Step3 --> Step4["Step 4: Local SQLite Compiler & Local Test Environment"]
+    Step4 --> Step5["Step 5: Git-Diff Delta Engine & Batched SQL Generator"]
+    Step5 --> Step6["Step 6: GitHub Actions Automated D1 Deployment Workflow"]
+    Step6 --> Step7["Step 7: Quota Guardrails, Rollback Protocol & Integration Tests"]
 ```
 
 ---
@@ -104,162 +124,180 @@ flowchart TD
 ## Detailed Construction Steps
 
 ### Step 1: Canonical Data Specification & Schema Contract
-- **Objective**: Establish the canonical schema definition for `data/catalog/<slug>.json` and `data/genres.json` to guarantee strict typing and avoid schema drift.
+- **Objective**: Define strict schema contracts for `data/catalog/<slug>.json` and all reference files in `data/reference/`.
 - **Context Brief**:
-  Cloudflare D1 tables `anime`, `episode`, `genre`, `anime_genre`, `anime_franchise_relation`, and `anime_theme` will be represented as a cohesive document per anime title. Every anime will have its own file named `<slug>.json` containing metadata, genres, episodes, themes, and source mappings.
+  To guarantee that data in GitHub is 100% pure and convertible to SQL without loss of fidelity, every JSON file must adhere to explicit contracts. An anime JSON document encapsulates the anime row, its genres, its episode array, its themes, and its external IDs.
 - **Task List**:
-  - [ ] Define JSON schema specification in `data/schema/anime.schema.json`.
-  - [ ] Create `data/genres.json` holding the 12 canonical genres (`action`, `adventure`, etc.).
-  - [ ] Implement validator helper `lib/data-schema.mjs` using native Node.js validation assertions (zero third-party dependencies).
-  - [ ] Add unit tests in `tools/data-schema.test.mjs` verifying validation passes on valid schemas and rejects invalid types.
+  - [ ] Create `data/schema/anime.schema.json` validating anime metadata, episode arrays, and themes.
+  - [ ] Implement `lib/data-schema.mjs` using native Node.js validation assertions.
+  - [ ] Create test fixtures in `tools/test/fixtures/` and unit test `tools/data-schema.test.mjs`.
 - **Verification Commands**:
   ```bash
   node --test tools/data-schema.test.mjs
   ```
 - **Exit Criteria**:
-  Schema validator validates test fixtures and rejects malformed fields (e.g. missing `id`, negative episode numbers, invalid ratings).
+  Schema validator verifies valid documents and rejects missing IDs, invalid status values, or malformed episode arrays.
 
 ---
 
-### Step 2: Bidirectional Data Pull & Export Tooling (`tools/data-pull.mjs`)
-- **Objective**: Build `tools/data-pull.mjs` to dump existing Cloudflare D1 or local Miniflare SQLite records into individual `data/catalog/<slug>.json` files.
+### Step 2: Pure All-Data Extraction Engine (`tools/data-pull-pure.mjs`)
+- **Objective**: Extract 100% pure data from Cloudflare D1 (or local SQLite) into `data/catalog/` and `data/reference/`.
 - **Context Brief**:
-  The existing catalog contains 3,131 anime and ~45,140 episodes in D1/SQLite. We need an automated exporter that reads each anime row, aggregates its genre mappings, episodes, and theme songs, and writes formatted JSON files into `data/catalog/`.
+  Cloudflare D1 holds 3,131 anime, 45,143 episodes, and thousands of relations. Querying all 45,000 episodes in a single query fails due to D1 size and timeout limits. This tool uses chunked keyset pagination to pull pure data cleanly without timeout or memory exhaustion.
 - **Task List**:
-  - [ ] Implement `tools/data-pull.mjs` with `--source=local` (default) and `--source=remote` options.
-  - [ ] Read from local SQLite using `node:sqlite` `DatabaseSync`.
-  - [ ] Read from remote Cloudflare D1 using `npx wrangler d1 execute` or Cloudflare REST API in paged batches.
-  - [ ] Generate individual JSON files at `data/catalog/<slug>.json`.
-  - [ ] Generate `data/manifest.json` containing SHA-256 hashes of every file for sub-millisecond local change detection.
-  - [ ] Add npm script `"data:pull": "node tools/data-pull.mjs"`.
+  - [ ] Implement `tools/data-pull-pure.mjs` supporting `--source=remote` and `--source=local`.
+  - [ ] Extract reference tables: `genre` -> `data/reference/genres.json`, `provider_route` -> `data/reference/provider_routes.json`, `anime_franchise_relation` -> `data/reference/franchise_relations.json`, `anime_id_map` -> `data/reference/id_map.json`, `anime_redirect` -> `data/reference/redirects.json`.
+  - [ ] Extract all 3,131 anime and join episodes, genres, and themes into `data/catalog/<slug>.json` using chunked queries (100 anime per chunk).
+  - [ ] Generate `data/manifest.json` with SHA-256 checksums of all exported files.
+  - [ ] Add npm script `"data:pull-pure": "node tools/data-pull-pure.mjs"`.
 - **Verification Commands**:
   ```bash
-  npm run data:pull -- --source=local --limit=10
-  node -e "assert(fs.existsSync('data/catalog'))"
+  npm run data:pull-pure -- --source=local --limit=20
+  node -e "assert(fs.existsSync('data/catalog') && fs.existsSync('data/reference/genres.json'))"
   ```
 - **Exit Criteria**:
-  Running `npm run data:pull` populates `data/catalog/` with clean JSON files matching existing database records.
+  Tool extracts 100% of data with 0 missing rows and writes cleanly formatted JSON files.
 
 ---
 
-### Step 3: Local Validator & Local SQLite Compiler (`tools/data-build-local.mjs`)
-- **Objective**: Build `tools/data-build-local.mjs` to compile `data/catalog/*.json` back into local Miniflare SQLite with zero remote calls.
+### Step 3: Database-to-Git Parity Auditor (`tools/data-verify-parity.mjs`)
+- **Objective**: Create an automated parity verification tool to prove that the GitHub folder copy is 100% identical to Cloudflare D1.
 - **Context Brief**:
-  Developers must be able to edit JSON files locally, run a local build command, and preview the changes in the local app (`npm run dev` / `npm run pages:dev`) without sending any network requests or consuming Cloudflare D1 limits.
+  To confirm that the copy in GitHub is "pure", this tool checks:
+  1. Total row count parity across all tables.
+  2. Primary key set equality (no missing or orphan slugs).
+  3. Sample row deep-equality between JSON and D1.
 - **Task List**:
-  - [ ] Implement `tools/data-validate.mjs` to scan `data/catalog/*.json` and report syntax errors or missing required fields.
-  - [ ] Implement `tools/data-build-local.mjs` which reads `data/catalog/*.json` and executes idempotent `INSERT OR REPLACE` into `.wrangler/state/v3/d1/miniflare-D1DatabaseObject/*.sqlite`.
-  - [ ] Add npm script `"data:validate": "node tools/data-validate.mjs"`.
+  - [ ] Implement `tools/data-verify-parity.mjs` to compare D1 row counts against files in `data/`.
+  - [ ] Produce a clean parity report showing count diffs, missing slugs, and integrity status.
+  - [ ] Add npm script `"data:verify-parity": "node tools/data-verify-parity.mjs"`.
+- **Verification Commands**:
+  ```bash
+  npm run data:verify-parity
+  ```
+- **Exit Criteria**:
+  Parity audit outputs `Status: 100% PARITY (0 mismatches)` across all tables.
+
+---
+
+### Step 4: Local SQLite Compiler & Local Test Environment (`tools/data-build-local.mjs`)
+- **Objective**: Build local database compiler that rebuilds `.wrangler/state/v3/d1/.../*.sqlite` entirely from GitHub's `data/` folder.
+- **Context Brief**:
+  Allows any developer to clone the GitHub repo, run one command, and have a fully seeded local database with 3,131 anime and 45,000 episodes ready for `npm run dev` with ZERO calls to Cloudflare.
+- **Task List**:
+  - [ ] Implement `tools/data-build-local.mjs` using `node:sqlite` `DatabaseSync`.
+  - [ ] Execute `schema.sql` to initialize local SQLite tables.
+  - [ ] Read `data/reference/*.json` and bulk-insert reference rows.
+  - [ ] Read `data/catalog/*.json` and bulk-insert anime, episodes, genres, and themes in transactions of 500 rows.
   - [ ] Add npm script `"data:build": "node tools/data-build-local.mjs"`.
-  - [ ] Add unit test verifying that compiled SQLite matches input JSON data exactly.
 - **Verification Commands**:
   ```bash
-  npm run data:validate
   npm run data:build
-  node -e "const { DatabaseSync } = require('node:sqlite'); /* verify row count */"
+  node -e "const { DatabaseSync } = require('node:sqlite'); /* verify local counts match */"
   ```
 - **Exit Criteria**:
-  Any modification in `data/catalog/<slug>.json` immediately reflects in the local Miniflare SQLite database upon running `npm run data:build`.
+  Local Miniflare SQLite is 100% populated from `data/` and UI functions identically to production.
 
 ---
 
-### Step 4: Git-Diff Delta Engine & SQL Batch Builder (`tools/data-diff-to-d1.mjs`)
-- **Objective**: Build the core delta engine that detects which files changed in Git and generates minimal, batched Cloudflare D1 SQL statements.
+### Step 5: Git-Diff Delta Engine & Batched SQL Generator (`tools/data-diff-to-d1.mjs`)
+- **Objective**: Compute Git diffs between commits and emit minimal, chunked D1 SQL statements.
 - **Context Brief**:
-  This is the primary mechanism for avoiding Cloudflare D1 limits. Instead of uploading the entire database, the engine runs `git diff --name-only <base_sha> <head_sha> -- data/catalog/`. For each modified or deleted file, it creates idempotent SQL statements (`INSERT ... ON CONFLICT DO UPDATE` or `DELETE`).
+  Instead of rewriting the entire database, this engine identifies exactly which files changed:
+  - If `data/catalog/frieren.json` changed -> generate UPSERT for `frieren` and its episodes.
+  - If `data/reference/genres.json` changed -> generate UPSERT for modified genres.
+  - If a file is deleted -> generate soft/hard DELETE for that anime.
+  - Statements are chunked into 50 statements per transaction to stay within D1 limits.
 - **Task List**:
-  - [ ] Implement `tools/data-diff-to-d1.mjs` accepting `--from=<git_ref>` and `--to=<git_ref>` (defaults to `HEAD~1` and `HEAD`).
-  - [ ] Support `--dry-run` to print the exact SQL and estimated write operations without applying to D1.
-  - [ ] Group statements into chunked transactions of 50 statements per transaction to stay well within D1 query size and 30s timeout limits.
-  - [ ] Implement D1 executor via `npx wrangler d1 execute anihub --remote --file=<temp_batch.sql>`.
-  - [ ] Log metrics to stdout: number of files changed, SQL statements generated, estimated D1 writes, execution duration.
+  - [ ] Implement `tools/data-diff-to-d1.mjs` with `--from=<sha>` and `--to=<sha>` (default `HEAD~1` to `HEAD`).
+  - [ ] Implement `--dry-run` to preview generated SQL and estimated write operations.
+  - [ ] Chunk transactions into 50 statements per batch.
+  - [ ] Execute via `npx wrangler d1 execute anihub --remote --file=<batch.sql>`.
 - **Verification Commands**:
   ```bash
   node tools/data-diff-to-d1.mjs --dry-run
   node --test tools/test/data-diff.test.mjs
   ```
 - **Exit Criteria**:
-  Modifying 1 anime file produces exactly 1 anime UPSERT + N episode UPSERTs, and dry-run confirms 0 reads and minimal writes.
+  Editing 1 file emits only the SQL for that 1 file; zero untouched rows are written.
 
 ---
 
-### Step 5: GitHub Actions Automated D1 Deployment (`.github/workflows/deploy-catalog-d1.yml`)
-- **Objective**: Create the GitHub Actions workflow that executes the delta engine whenever changes to `data/**` are pushed to `master`.
+### Step 6: GitHub Actions Automated D1 Deployment (`.github/workflows/deploy-catalog-d1.yml`)
+- **Objective**: Continuous deployment workflow that pushes data updates to Cloudflare D1 whenever commits touch `data/**`.
 - **Context Brief**:
-  When a developer or PR merges into `master`, this workflow runs in Ubuntu, computes the git diff using `${{ github.event.before }}` and `${{ github.sha }}`, validates changed files, and pushes the delta SQL to Cloudflare D1.
+  Runs in CI when a commit or PR is merged into `master`. Computes git diff, validates schema, applies delta SQL to Cloudflare D1, and logs remaining D1 quota.
 - **Task List**:
-  - [ ] Create `.github/workflows/deploy-catalog-d1.yml` triggered on `push: branches: [master], paths: ['data/**']` and `workflow_dispatch`.
-  - [ ] Step 1: `actions/checkout@v4` with `fetch-depth: 2` (to allow diffing with parent commit).
-  - [ ] Step 2: Set up Node.js 20/22.
-  - [ ] Step 3: Run `npm run data:validate`.
-  - [ ] Step 4: Run `node tools/data-diff-to-d1.mjs --from=${{ github.event.before }} --to=${{ github.sha }}` with `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
-  - [ ] Step 5: Generate GitHub Actions Step Summary with exact rows updated and D1 write budget consumed.
+  - [ ] Create `.github/workflows/deploy-catalog-d1.yml` on push to `data/**`.
+  - [ ] Step 1: `actions/checkout@v4` with `fetch-depth: 2`.
+  - [ ] Step 2: Validate modified files with `node tools/data-validate.mjs`.
+  - [ ] Step 3: Run `node tools/data-diff-to-d1.mjs --from=${{ github.event.before }} --to=${{ github.sha }}` using `CLOUDFLARE_API_TOKEN`.
+  - [ ] Step 4: Output summary of rows updated and writes consumed in GitHub Actions Step Summary.
 - **Verification Commands**:
   ```bash
   gh workflow view deploy-catalog-d1.yml
   ```
 - **Exit Criteria**:
-  Pushing a commit touching `data/catalog/xyz.json` triggers the action and updates remote D1 in < 30 seconds with minimal writes.
+  Pushing a modified JSON file to GitHub deploys to Cloudflare D1 within 30 seconds with 0 reads and minimal writes.
 
 ---
 
-### Step 6: Quota Guardrails, Rollback & End-to-End Tests
-- **Objective**: Add strict safety ceilings to prevent runaway write loops and verify one-command rollback.
+### Step 7: Quota Guardrails, Rollback Protocol & Integration Tests
+- **Objective**: Enforce safety limits to protect Cloudflare D1 free-tier limits and test instant rollback.
 - **Context Brief**:
-  Cloudflare D1 allows 100,000 writes per day on the free tier. A bug or mass rename could accidentally trigger 50,000 writes. We must implement a hard ceiling (e.g. max 5,000 writes per single automated push without manual `--force`).
+  Prevent human or automated errors from accidentally rewriting thousands of rows.
 - **Task List**:
-  - [ ] Add quota ceiling check in `tools/data-diff-to-d1.mjs`: if total writes exceed `MAX_WRITES_PER_PUSH` (default 5,000), fail the run unless `--force` is specified.
-  - [ ] Implement rollback test: verify that running `git revert HEAD` and pushing automatically reverts the changes on remote D1.
-  - [ ] Add end-to-end integration test in `tools/test/data-pipeline.test.mjs` verifying:
-    1. Local JSON edit
-    2. Local SQLite compilation
-    3. Delta SQL generation
-    4. Rollback SQL generation
+  - [ ] Add quota ceiling: abort if a single push generates >5,000 writes unless `--force` is set.
+  - [ ] Implement rollback test: verify that `git revert HEAD` reverses changes on Cloudflare D1.
+  - [ ] Add end-to-end integration test in `tools/test/data-pipeline.test.mjs`.
 - **Verification Commands**:
   ```bash
   node --test tools/test/data-pipeline.test.mjs
   ```
 - **Exit Criteria**:
-  All pipeline tests pass; quota ceiling stops accidental mass writes; rollback via `git revert` functions seamlessly.
+  Pipeline tests pass; quota guard stops excessive writes; `git revert` cleanly rolls back D1 changes.
 
 ---
 
-## Adversarial Review & Risk Analysis
+## Adversarial Review & Safeguards
 
 | Risk | Mitigation |
 | :--- | :--- |
-| **D1 Execution Timeout on large commits** | SQL transactions chunked into batches of 50 statements; each batch executed in separate D1 calls. |
-| **First-time clone size** | JSON files compressed in git; 3,100 files totaling ~15MB adds negligible overhead to repo. |
-| **Merge conflicts on simultaneous edits** | Files are partitioned 1-file-per-anime (`<slug>.json`). Conflicts only occur if two people edit the exact same anime. |
-| **Accidental quota blowouts** | Built-in ceiling: automated CI run rejects any push with >5,000 writes unless explicitly triggered with `force: true`. |
-| **D1 Read Limit Exhaustion** | D1 is never queried during diff calculation; Git commit log determines 100% of diffs. |
+| **D1 Timeout during initial full export** | `tools/data-pull-pure.mjs` uses keyset pagination in chunks of 100 anime, avoiding memory and query execution limits. |
+| **Data Drift between D1 and GitHub** | Weekly automated audit workflow (`parity-audit.yml`) verifies checksum parity between D1 and Git. |
+| **Accidental Quota Burn** | 5,000 write hard ceiling on CI runs stops runaway scripts or mass accidents. |
+| **Zero D1 Read Burn** | Git commit diff computes 100% of change sets. Cloudflare D1 is never scanned during sync. |
+| **Git Clone Overhead** | Storing 3,131 individual JSON files totals ~15MB, which is lightweight for Git and avoids merge conflict collisions. |
 
 ---
 
 ## Execution Command Sequence
 
 ```bash
-# 1. Pull existing database to populate initial local data folder
-npm run data:pull
+# 1. Extract 100% pure data from Cloudflare D1 into GitHub data/ folder
+npm run data:pull-pure -- --source=remote
 
-# 2. Commit initial catalog to git
+# 2. Verify 100% parity
+npm run data:verify-parity
+
+# 3. Commit pure data copy to GitHub (initial baseline)
 git add data/
-git commit -m "chore(data): initialize local git catalog mirror"
+git commit -m "chore(data): initialize 100% pure complete data mirror in github"
 git push origin master
 
-# 3. Edit any anime locally
+# 4. Routine editing: edit any anime or reference file locally
 # e.g., edit data/catalog/frieren-beyond-journeys-end.json
 
-# 4. Test locally
+# 5. Test locally on Miniflare SQLite (0 Cloudflare API calls)
 npm run data:validate
 npm run data:build
 
-# 5. Push to GitHub
+# 6. Push to GitHub
 git add data/catalog/frieren-beyond-journeys-end.json
-git commit -m "feat(catalog): update frieren metadata and thumbnail"
+git commit -m "feat(catalog): update frieren episode metadata"
 git push origin master
 
-# -> GitHub Actions automatically detects 1 modified file
-# -> Compiles delta SQL
-# -> Pushes exact UPSERT to Cloudflare D1 (~1-2 writes, 0 reads)
+# -> GitHub Action computes diff
+# -> Applies exact UPSERT to Cloudflare D1 (0 reads, ~2 writes)
+# -> Pure 1:1 parity maintained in both GitHub and Cloudflare D1!
 ```
