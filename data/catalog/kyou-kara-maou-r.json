@@ -1,0 +1,100 @@
+{
+  "id": "kyou-kara-maou-r",
+  "title": "Kyo Kara Maoh R",
+  "native": "今日からマ王！R",
+  "year": 2007,
+  "rating": 7,
+  "season": "Fall 2007",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2971-7ZapuZNnTdzE.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2971-7ZapuZNnTdzE.jpg",
+  "accent": "#e45d93",
+  "synopsis": "Life has returned to some form of normalcy after the end of the series, and so His Majesty Yuuri Shibuya travels to oversee how things are going. While doing so, he runs into the king of Small Shimeron--Sararegi. But it seems there may be something more to him than the friendly king he presents himself as. Yuuri go back to Shimaron to relax and meet some friends, when the \"king\" of Little Shimaron suddenly joins the group and wants the Maou to come to his country. The Original king sends a message to Yuuri's brother and his friend that Yuuri is in trouble.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kyou-kara-maou!-r-83guqn",
+    "mal": 2971,
+    "anilist": 2971,
+    "kitsu": 2688
+  },
+  "skip_key_id": 2971,
+  "skip_key_space": "mal",
+  "episode_total": 5,
+  "added_at": null,
+  "search_text": "kyo kara maoh r 今日からマ王 r ova finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Flushed Into an Alternate World",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/390805354e3d4b32b1a708f67b45e3691557381547_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "45464"
+    },
+    {
+      "n": 2,
+      "title": "Duel! Hot Boy Vs. Baseball Boy",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/d50ac62ab69bc177ab5c3ba5cb710e0c1557381854_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "45465"
+    },
+    {
+      "n": 3,
+      "title": "Yuri Shibuya! I Am the Demon King!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/bfd1b0eb462df6f8f37f0b095789dfa51557382284_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "45466"
+    },
+    {
+      "n": 4,
+      "title": "What's Next? The Ultimate Weapon!?",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/fba1cddbd08b88e57109544ca7b3557e1557382273_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "45467"
+    },
+    {
+      "n": 5,
+      "title": "Sailors and a Spoiled Brat",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b62c2b3f1e2f16e287b2c1918d22dad91557382341_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "45468"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

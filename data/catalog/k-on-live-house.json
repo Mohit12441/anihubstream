@@ -1,0 +1,119 @@
+{
+  "id": "k-on-live-house",
+  "title": "K-ON!: Live House!",
+  "native": "けいおん!「ライブハウス！」",
+  "year": 2010,
+  "rating": 7.7,
+  "season": "Winter 2010",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/6862.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/6862.jpg",
+  "accent": "#e4781a",
+  "synopsis": "Ritsu's middle school friend invites the band to perform live on New Year's Eve. The girls get acquainted with other bands, and become a little nervous as the performance approaches. When the time comes, will they be able to rock the house?\n\n(Source: Hidive)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "k-on!-live-house!-zclrlw",
+    "mal": 6862,
+    "anilist": 6862,
+    "kitsu": 4758
+  },
+  "skip_key_id": 6862,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "k on live house けいおん ライフ ハウス ova finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "\"Live House!\"",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/76031/original.jpg",
+      "synopsis": "Ritsu's old middle school friend invites the band to perform at a live house on New Year's Eve. How will the evening pan out?",
+      "airdate": "2010-01-19",
+      "markers": [],
+      "external_id": "76031"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ichiban Ippai (いちばんいっぱい)",
+      "artist": "Ho-Kago Tea Time",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Singing!",
+      "artist": "Ho-Kago Tea Time",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "GO! GO! MANIAC",
+      "artist": "Ho-Kago Tea Time [Yui Hirasawa, Mio Akiyama, Ritsu Tainaka, Tsumugi Kotobuki, and Azusa Nakano [Aki Toyosaki, Yōko Hikasa, Satomi Satou, Minako Kotobuki, and Ayana Taketatsu]]",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Listen!!",
+      "artist": "Ho-Kago Tea Time [Yui Hirasawa, Mio Akiyama, Ritsu Tainaka, Tsumugi Kotobuki, and Azusa Nakano [Aki Toyosaki, Yōko Hikasa, Satomi Satou, Minako Kotobuki, and Ayana Taketatsu]]",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cagayake! GIRLS (5-nin Ver.)",
+      "artist": "Aki Toyosaki with Yoko Hikasa, Satomi Satou, Minako Kotobuki and Ayana Taketatsu",
+      "episodes": "9-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cagayake! GIRLS",
+      "artist": "Aki Toyosaki with Yoko Hikasa, Satomi Satou and Minako Kotobuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Don't say ''lazy''",
+      "artist": "Yoko Hikasa with Aki Toyosaki, Satomi Satou and Minako Kotobuki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Utauyo!! MIRACLE",
+      "artist": "Ho-Kago Tea Time [Yui Hirasawa, Mio Akiyama, Ritsu Tainaka, Tsumugi Kotobuki, and Azusa Nakano [Aki Toyosaki, Yōko Hikasa, Satomi Satou, Minako Kotobuki, and Ayana Taketatsu]]",
+      "episodes": "14-27"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "NO,Thank You!",
+      "artist": "Ho-Kago Tea Time [Yui Hirasawa, Mio Akiyama, Ritsu Tainaka, Tsumugi Kotobuki, and Azusa Nakano [Aki Toyosaki, Yōko Hikasa, Satomi Satou, Minako Kotobuki, and Ayana Taketatsu]]",
+      "episodes": "14-27"
+    }
+  ],
+  "relations": []
+}

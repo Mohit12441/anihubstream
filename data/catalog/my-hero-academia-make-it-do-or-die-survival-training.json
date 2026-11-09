@@ -1,0 +1,355 @@
+{
+  "id": "my-hero-academia-make-it-do-or-die-survival-training",
+  "title": "My Hero Academia: Make It! Do-or-Die Survival Training",
+  "native": "僕のヒーローアカデミア 生き残れ！決死のサバイバル訓練",
+  "year": 2020,
+  "rating": 7,
+  "season": "Summer 2020",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx122349-DkEdG7N1231n.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx122349-DkEdG7N1231n.jpg",
+  "accent": "#783528",
+  "synopsis": "In this brand-new adventure, some Class 1-A students are sent to hone their survival skills at a training course. Having yet to receive their provisional licenses, they're eager to cut loose and have a little fun. They quickly discover that the danger they face is no simulation! It's going to take their combined training, teamwork, and quick thinking if they're going to pass this assignment!\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "my-hero-academia:-make-it!-do-or-die-survival-training-t3lyk7",
+    "mal": 42603,
+    "anilist": 122349,
+    "kitsu": 43485
+  },
+  "skip_key_id": 42603,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "my hero academia make it do or die survival training 僕のヒーローアカテ ミア 生き残れ 決死のサハ イハ ル訓練 ona finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "In the Nick of Time! A Big-Time Maverick from the West",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/dea3db6993a42fdc04bb28348093f9e91714791613_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284960"
+    },
+    {
+      "n": 2,
+      "title": "Specter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/ec5157c085df652f0d411d6dc4d4a20a1715361412_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284961"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE REVO",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I",
+      "artist": "BUMP OF CHICKEN",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Homunculus",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gift",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE DAY",
+      "artist": "Porno Graffitti",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tagatame (誰我為)",
+      "artist": "TK from Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubomi (蕾)",
+      "artist": "Omoinotake",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "SKETCH",
+      "artist": "Kiro Akiyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Empathy",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "No.1",
+      "artist": "DISH//",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ashiato (足跡)",
+      "artist": "the peggies",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Higher Ground",
+      "artist": "sumika",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Polaris",
+      "artist": "BLUE ENCOUNT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Koukai no Uta",
+      "artist": "Sayuri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Long Hope Philia (ロングホープ・フィリア)",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Odd Future",
+      "artist": "UVERworld",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Update",
+      "artist": "miwa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dakara, Hitori ja nai (だから、ひとりじゃない)",
+      "artist": "Little Glee Monster",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Day",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Curtain Call",
+      "artist": "Yūri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rokutousei (六等星)",
+      "artist": "Zarame",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Bokura no",
+      "artist": "Eve",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Uso ja nai (嘘じゃない)",
+      "artist": "Soushi Sakiyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Starmarker",
+      "artist": "KANA-BOON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Make my story",
+      "artist": "Lenny Code Fiction",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Sora ni Utaeba (空に歌えば)",
+      "artist": "Amazarashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Datte Atashi no Hero (だってアタシのヒーロー.)",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": "4"
+    }
+  ],
+  "relations": []
+}

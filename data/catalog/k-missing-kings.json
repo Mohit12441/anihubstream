@@ -1,0 +1,65 @@
+{
+  "id": "k-missing-kings",
+  "title": "K: MISSING KINGS",
+  "native": "K MISSING KINGS",
+  "year": 2014,
+  "rating": 7.4,
+  "season": "Summer 2014",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16904-MqA6kzSdRDsK.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16904-MqA6kzSdRDsK.jpg",
+  "accent": "#0078ae",
+  "synopsis": "Ever since the School Island Incident, in which the four Kings were involved, the Silver Clansman, Kuroh Yatogami and Neko were on their search for their master Shiro. Unable to find any leads to Shiro, the two were in a gloomy mood until they ran into Homura members, Rikio Kamamoto and Anna Kushima, who were apparently being chased by someone...\n\n(Source: Official Movie Pamphlet)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "K (2012)",
+    "K: RETURN OF KINGS (2015)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7546,
+    "anilist": 16904,
+    "mal": 16904
+  },
+  "skip_key_id": 16904,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-21 08:55:40",
+  "search_text": "k missing kings k missing kings movie finished",
+  "genres": [
+    "action",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Knight",
+      "runtime": "73:00",
+      "runtime_seconds": 4380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/108193/original.jpeg",
+      "synopsis": "Ashinaka High School is known for its unique setting: the entire campus is built on an island. Yashiro Isana, aka Shiro, is having lunch with a cat on one of the school rooftops. Shiro goes on an errand for his classmate Kukuri.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "108193"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Different colors",
+      "artist": "Angela",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

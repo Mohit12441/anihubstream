@@ -1,0 +1,558 @@
+{
+  "id": "mission-yozakura-family",
+  "title": "Mission: Yozakura Family",
+  "native": "夜桜さんちの大作戦",
+  "year": 2024,
+  "rating": 7.4,
+  "season": "Spring 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx158898-O3egiBNkxLQO.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx158898-O3egiBNkxLQO.png",
+  "accent": "#3593e4",
+  "synopsis": "Taiyou Asano is a super shy high school student and the only person he can talk to is his childhood friend, Mutsumi Yozakura. It turns out that Mutsumi is the daughter of the ultimate spy family! Even worse, Mutsumi is being harassed by her overprotective, nightmare of a brother, Kyouichirou. What drastic steps will Taiyou have to take to save Mutsumi?! A spy family comedy - the mission begins!\n\n(Source: MANGA Plus)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Mission: Yozakura Family Season 2 (2026)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46869,
+    "anilist": 158898,
+    "mal": 53865,
+    "hianime": "mission:-yozakura-family-vf8465"
+  },
+  "skip_key_id": 53865,
+  "skip_key_space": "mal",
+  "episode_total": 27,
+  "added_at": "2026-10-14 16:05:22",
+  "search_text": "mission yozakura family 夜桜さんちの大作戦 tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Cherry Blossom Ring",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/364310/thumbnail/medium-807fa54a068622737bee384199b7133f.jpeg",
+      "synopsis": "Shy student Taiyo's life is threatened when his vice principal reveals a dark secret. (Source: Hulu)",
+      "airdate": "2024-04-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 75,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1362,
+          "end": 1440
+        }
+      ],
+      "external_id": "364310"
+    },
+    {
+      "n": 2,
+      "title": "The Yozakura's Lifeline",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/364311/thumbnail/medium-c2030258c1f77d898e3f1509fcb0c4b1.jpeg",
+      "synopsis": "Taiyo and Mutsumi wed despite Kyoichiro's interference. Bomb threat leads to Taiyo's first mission. (Source: Hulu)",
+      "airdate": "2024-04-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 111,
+          "end": 201
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1386
+        }
+      ],
+      "external_id": "364311"
+    },
+    {
+      "n": 3,
+      "title": "Feelings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/364473/thumbnail/medium-493fb653e262f9bdf9d961b89a3748f8.jpeg",
+      "synopsis": "Taiyo's training leads to a hellish life at the Yozakura Mansion, causing anguish for Mutsumi. (Source: Hulu)",
+      "airdate": "2024-04-21",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1433
+        }
+      ],
+      "external_id": "364473"
+    },
+    {
+      "n": 4,
+      "title": "Kengo/Shinzo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/364474/thumbnail/medium-93879040ca775c55faa370158d92ba2f.jpeg",
+      "synopsis": "Mutsumi catches Kengo's incomplete report, igniting a spy game of tag as she tracks him down... (Source: Hulu)",
+      "airdate": "2024-04-28",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1426
+        }
+      ],
+      "external_id": "364474"
+    },
+    {
+      "n": 5,
+      "title": "Interrogation/Date",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/364475/thumbnail/medium-8cac4ff6e219129f85d67573245a96c5.jpeg",
+      "synopsis": "Hotokeyama arrests Taiyo and interrogates him about Mutsumi but lacks proof. (Source: Hulu)",
+      "airdate": "2024-05-05",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1422
+        }
+      ],
+      "external_id": "364475"
+    },
+    {
+      "n": 6,
+      "title": "Bug",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/364476/thumbnail/medium-0e4c3f21882330a570553b53e0b51767.jpeg",
+      "synopsis": "Obsessed stalker Ayaka transfers to Taiyo's class, and aims to kill her crush after a data leak. (Source: Hulu)",
+      "airdate": "2024-05-12",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1425
+        }
+      ],
+      "external_id": "364476"
+    },
+    {
+      "n": 7,
+      "title": "Government Spies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/364477/thumbnail/medium-79b2dc6948fe80c50abe86ce79fe2507.jpeg",
+      "synopsis": "Nanao eats a bioweapon while undercover; Taiyo joins the hunt, unaware it's to kill Nanao. (Source: Hulu)",
+      "airdate": "2024-05-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 45,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1425
+        }
+      ],
+      "external_id": "364477"
+    },
+    {
+      "n": 8,
+      "title": "The Kuroyuri Party",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/364478/thumbnail/medium-5fbf4d6d8fc3582c404a5d2f344cfa5c.jpeg",
+      "synopsis": "Mutsumi's visit to Hinagiku HQ ignites a clash between Rin and Kyoichiro. (Source: Hulu)",
+      "airdate": "2024-05-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 47,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1440
+        }
+      ],
+      "external_id": "364478"
+    },
+    {
+      "n": 9,
+      "title": "The Flower Meaning Of Kuroyuri (Black Lily)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/364479/thumbnail/medium-58df98bc6ee333810a35d48ec5b9d750.jpeg",
+      "synopsis": "Ex-spy Kurogao kidnaps Deputy Prime Minister for revenge; Taiyo halts livestream to face him. (Source: Hulu)",
+      "airdate": "2024-06-02",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1426
+        }
+      ],
+      "external_id": "364479"
+    },
+    {
+      "n": 10,
+      "title": "The Yozakura Family Maid/Affair",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/364480/thumbnail/medium-feb575d70c49cbc6f85e62150723ccb2.jpeg",
+      "synopsis": "Taiyo and Mutsumi are at a celebration party. Taiyo eyes a box with his dead family's info. (Source: Hulu)",
+      "airdate": "2024-06-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1425
+        }
+      ],
+      "external_id": "364480"
+    },
+    {
+      "n": 11,
+      "title": "Yozakura Ghost Stories/Spy License",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/364481/thumbnail/medium-ee9d3d6cbc67dffad7bd40f56d437e7a.jpeg",
+      "synopsis": "Futaba faints as she has an intense fear of ghosts and curses. Siblings aid her phobia. (Source: Hulu)",
+      "airdate": "2024-06-16",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1251,
+          "end": 1336
+        }
+      ],
+      "external_id": "364481"
+    },
+    {
+      "n": 12,
+      "title": "Prison Break Grandpa",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/364482/thumbnail/medium-8c11983781133e645a24a1ac662ff56d.jpeg",
+      "synopsis": "Ban escapes jail, takes Taiyo to club for grandkids' wedding, dodging Kyoichiro's capture attempts. (Source: Crunchyroll)",
+      "airdate": "2024-06-23",
+      "markers": [],
+      "external_id": "364482"
+    },
+    {
+      "n": 13,
+      "title": "Tanpopo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365701/thumbnail/medium-406a18861ef542491fe813e8cf9023a4.jpeg",
+      "synopsis": "Taiyo uncovers parents' tie to Yozakura. He and Shion probe their fatal end in a deadly library. (Source: Hulu)",
+      "airdate": "2024-06-30",
+      "markers": [],
+      "external_id": "365701"
+    },
+    {
+      "n": 14,
+      "title": "Aim for the Suite Room",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365702/thumbnail/medium-b92a0e978eace2035493eaa309f1e7a9.jpeg",
+      "synopsis": "Taiyo on a ship battles spies lured by Kyoichiro until a torpedo hits. (Source: Hulu)",
+      "airdate": "2024-07-07",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1357,
+          "end": 1440
+        }
+      ],
+      "external_id": "365702"
+    },
+    {
+      "n": 15,
+      "title": "Yozakura Blood",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365703/thumbnail/medium-6be8803679a4d317796984829fab0606.jpeg",
+      "synopsis": "Taiyo investigates Kawashita; drugged Nohmen takes hostages. Shinzo aids, facing tough odds. (Source: Hulu)",
+      "airdate": "2024-07-14",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1356,
+          "end": 1440
+        }
+      ],
+      "external_id": "365703"
+    },
+    {
+      "n": 16,
+      "title": "Cleaning the Yard",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365704/thumbnail/medium-446cc152726245fd45bcf6976e4449d6.jpeg",
+      "synopsis": "Yozakura Mansion locks in all; Kyoichiro seeks ring thief; Mutsumi aids Taiyo. (Source: Hulu)",
+      "airdate": "2024-07-21",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "365704"
+    },
+    {
+      "n": 17,
+      "title": "Nanao’s Medicine",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365705/thumbnail/medium-ecce424b937636acf8f4ec36dc987db9.jpeg",
+      "synopsis": "Nanao's mutation needs a vaccine, forcing school exit. Taiyo aids him in preserving his school life. (Source: Hulu)",
+      "airdate": "2024-07-28",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1356,
+          "end": 1440
+        }
+      ],
+      "external_id": "365705"
+    },
+    {
+      "n": 18,
+      "title": "Yozakura Hot Spring Story",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365706/thumbnail/medium-beee4182af55f16baf8b650a4b05c640.jpeg",
+      "synopsis": "Yozakura family wins a unique hot spring trip, faces hurdles, then relaxes, but...?! (Source: Hulu)",
+      "airdate": "2024-08-04",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1356,
+          "end": 1440
+        }
+      ],
+      "external_id": "365706"
+    },
+    {
+      "n": 19,
+      "title": "A Drug Called Tanpopo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365707/thumbnail/medium-40542dd3aa7ebd97afd90b327e6e3bb6.jpeg",
+      "synopsis": "Taiyo sneaks on a train, tracking Tanpopo, seeking Momo, and a complaint sparks suspicion. (Source: Hulu)",
+      "airdate": "2024-08-11",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "365707"
+    },
+    {
+      "n": 20,
+      "title": "Sun Earrings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365708/thumbnail/medium-33247c6675efb8936733e30b71313c72.jpeg",
+      "synopsis": "Hakuja and Taiyo are in a fierce battle on the train, where she unveils the truth about his parents. (Source: Hulu)",
+      "airdate": "2024-08-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1356,
+          "end": 1440
+        }
+      ],
+      "external_id": "365708"
+    },
+    {
+      "n": 21,
+      "title": "Yozakura Front Lines / The Blooming",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365709/thumbnail/medium-27343592aa97541b01f5dcccdb6adbf4.jpeg",
+      "synopsis": "Kyoichiro and Yozakura plan an attack on Tanpopo's lair; Taiyo preps with Ban. (Source: Hulu)",
+      "airdate": "2024-08-25",
+      "markers": [],
+      "external_id": "365709"
+    },
+    {
+      "n": 22,
+      "title": "Cherry Blossom Viewing Party",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365710/thumbnail/medium-f3ca328f0ce19164d09c37f4cda2873f.jpeg",
+      "synopsis": "Cherry blossom party lifts spirits before Skeleton Island siege on Tanpopo's plan. (Source: Hulu)",
+      "airdate": "2024-09-01",
+      "markers": [],
+      "external_id": "365710"
+    },
+    {
+      "n": 23,
+      "title": "Easterly Wind / Weapon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365711/thumbnail/medium-489377c459fb8b702d7d356aabbf6abc.jpeg",
+      "synopsis": "Futaba fights Akai; Taiyo's team sneaks in and repels the spear with Kurosawa's aid. (Source: Hulu)",
+      "airdate": "2024-09-08",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1430
+        }
+      ],
+      "external_id": "365711"
+    },
+    {
+      "n": 24,
+      "title": "Shion & Kengo vs. Chacha & Aonuma",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365712/thumbnail/medium-422b895082e25e862ea15eee980ef472.jpeg",
+      "synopsis": "Shinzo's Blooming wipes out mercenaries. Kawashita flees. Shion and Kengo battle Chacha and Aonuma. (Source: Hulu)",
+      "airdate": "2024-09-15",
+      "markers": [],
+      "external_id": "365712"
+    },
+    {
+      "n": 25,
+      "title": "Ai and Mizuki",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365713/thumbnail/medium-7aaf7d5e4925db04c2a90fac137eefb8.jpeg",
+      "synopsis": "Taiyo and Kyoichiro find a video of Nanao attacked by Mizuki, who resents society over her past. (Source: Hulu)",
+      "airdate": "2024-09-22",
+      "markers": [],
+      "external_id": "365713"
+    },
+    {
+      "n": 26,
+      "title": "Old Blood",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365714/thumbnail/medium-73d764bfefaae885e5b8d7fea24acacd.jpeg",
+      "synopsis": "Kawashita and Taiyo fight over the detonator. Taiyo's power floods Kawashita's mind with memories. (Source: Hulu)",
+      "airdate": "2024-09-29",
+      "markers": [],
+      "external_id": "365714"
+    },
+    {
+      "n": 27,
+      "title": "Mission Complete/Reception",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/365715/thumbnail/medium-8f133a382dc2ca7ecfa9f1c25b7b0e78.jpeg",
+      "synopsis": "Taiyo corners Kawashita, but the Yozakuras' attacks fail. Taiyo tries again. Will it succeed? (Source: Hulu)",
+      "airdate": "2024-10-06",
+      "markers": [],
+      "external_id": "365715"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Forever Song (フォーエバーソング)",
+      "artist": "Humbreaders",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I'm still breathing",
+      "artist": "KID PHENOMENON",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "What's 'KAZOKU'",
+      "artist": "Sakurazaka46",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shalala",
+      "artist": "Pilaf Seijin",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Unmei-chan (Fate)",
+      "artist": "Ikimono-gakari",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "fam!",
+      "artist": "CHiCO",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Secret Operation",
+      "artist": "fripSide feat. Yoshino Nanjo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kekkon Koushinkyoku",
+      "artist": "ASOBI Doumei",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

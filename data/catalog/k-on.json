@@ -1,0 +1,251 @@
+{
+  "id": "k-on",
+  "title": "K-ON!",
+  "native": "けいおん!",
+  "year": 2009,
+  "rating": 7.8,
+  "season": "Spring 2009",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx5680-r3AI3Cwfv0Aq.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5680-r3AI3Cwfv0Aq.png",
+  "accent": "#e47843",
+  "synopsis": "Hirasawa Yui, a young, carefree girl entering high school, has her imagination instantly captured when she sees a poster advertising the ‘Light Music Club’. Being the carefree girl that she is, she quickly signs up. However, Yui has a problem, she is unable to play an instrument.\n\nWhen Yui goes to the clubroom to explain, she's greeted by the other members: Ritsu, Mio and Tsumugi. Although disheartened at Yui’s lack of musical know-how, they still try to convince her to stay to prevent the club’s disbandment. After playing Yui a short piece which re-ignites her imagination, they succeed in keeping their new member and guitarist.\n\nAlong with the tasks of school and homework, Yui begins to learn the guitar with the help of the other band members, experiencing many mishaps along the way. However, with the school-festival drawing near and Yui getting stuck with her practice, will the Light Music Club be ready in time for their debut?\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "k-on!-jqmfkz",
+    "mal": 5680,
+    "anilist": 5680,
+    "kitsu": 4240
+  },
+  "skip_key_id": 5680,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "k on けいおん tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Disband the Club!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69839/original.jpg",
+      "synopsis": "Just starting high school, Yui is having trouble fitting in and decides to join the light music club. But first, she must buy and learn guitar.",
+      "airdate": "2009-04-03",
+      "markers": [],
+      "external_id": "69839"
+    },
+    {
+      "n": 2,
+      "title": "Instruments!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69840/original.jpg",
+      "synopsis": "Yui wants a guitar that is too expensive so the band girls get part-time jobs to save up for the guitar. Yui might actually get it through a twist of fate.",
+      "airdate": "2009-04-10",
+      "markers": [],
+      "external_id": "69840"
+    },
+    {
+      "n": 3,
+      "title": "Cram Session!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69841/original.jpg",
+      "synopsis": "It’s time to take midterm exams, but Yui is too busy practicing guitar that she ends up failing. She must pass the retest or the band must breakup.",
+      "airdate": "2009-04-17",
+      "markers": [],
+      "external_id": "69841"
+    },
+    {
+      "n": 4,
+      "title": "Training Camp!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69842/original.jpg",
+      "synopsis": "Mio is inspired by finding a tape from the previous club's performance, and gets the band together to practice over the summer for an upcoming school festival.",
+      "airdate": "2009-04-24",
+      "markers": [],
+      "external_id": "69842"
+    },
+    {
+      "n": 5,
+      "title": "Advisor!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69843/original.jpg",
+      "synopsis": "Three days left 'til the music festival, and the girls are still not officially recognized as a club. Ritsu blackmails a previous club member to be their advisor.",
+      "airdate": "2009-05-01",
+      "markers": [],
+      "external_id": "69843"
+    },
+    {
+      "n": 6,
+      "title": "School Festival!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69844/original.jpg",
+      "synopsis": "The band performs at the school festival. Mio trips and exposes her underwear to the entire audience. She ends up getting a fan club, but is scarred by the embarrassment.",
+      "airdate": "2009-05-08",
+      "markers": [],
+      "external_id": "69844"
+    },
+    {
+      "n": 7,
+      "title": "Christmas!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69845/original.jpg",
+      "synopsis": "It’s Christmas time and Ritsu decides to hold a Christmas party at Yui’s house.",
+      "airdate": "2009-05-15",
+      "markers": [],
+      "external_id": "69845"
+    },
+    {
+      "n": 8,
+      "title": "Freshman Reception!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69846/original.jpg",
+      "synopsis": "The second year of school begins! The Light Music Club tries to gather by any means necessary.",
+      "airdate": "2009-05-22",
+      "markers": [],
+      "external_id": "69846"
+    },
+    {
+      "n": 9,
+      "title": "New Club Member!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69847/original.jpg",
+      "synopsis": "Azusa Nakano joins the Light Music Club, but realizes that the laidback club might not be for her, and Azusa’s membership is at stake.",
+      "airdate": "2009-05-29",
+      "markers": [],
+      "external_id": "69847"
+    },
+    {
+      "n": 10,
+      "title": "Training Camp Again!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69848/original.jpg",
+      "synopsis": "The girls go on another training camp with their new member. despite Azusa’s nagging, she’s the one that played the most.",
+      "airdate": "2009-06-05",
+      "markers": [],
+      "external_id": "69848"
+    },
+    {
+      "n": 11,
+      "title": "Crisis!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69849/original.jpg",
+      "synopsis": "The annual school festival is getting closer and the Light Music club will be performing again, however Mio and Ritsu get into an argument.",
+      "airdate": "2009-06-12",
+      "markers": [],
+      "external_id": "69849"
+    },
+    {
+      "n": 12,
+      "title": "Light Music!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69850/original.jpg",
+      "synopsis": "Yui catches a fever and is unable to practice for the festival. The club feels uneasy performing without her but in the end everyone in the Light Music Club puts on a great performance.",
+      "airdate": "2009-06-19",
+      "markers": [],
+      "external_id": "69850"
+    },
+    {
+      "n": 13,
+      "title": "\"Winter Days\"",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69851/original.jpg",
+      "synopsis": "Yui wants to enjoy hot soup with the other girls, but they're all busy! Will Yui be forced to spend the cold winter holiday alone?",
+      "airdate": "2009-06-26",
+      "markers": [],
+      "external_id": "69851"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ichiban Ippai (いちばんいっぱい)",
+      "artist": "Ho-Kago Tea Time",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Singing!",
+      "artist": "Ho-Kago Tea Time",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "GO! GO! MANIAC",
+      "artist": "Ho-Kago Tea Time [Yui Hirasawa, Mio Akiyama, Ritsu Tainaka, Tsumugi Kotobuki, and Azusa Nakano [Aki Toyosaki, Yōko Hikasa, Satomi Satou, Minako Kotobuki, and Ayana Taketatsu]]",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Listen!!",
+      "artist": "Ho-Kago Tea Time [Yui Hirasawa, Mio Akiyama, Ritsu Tainaka, Tsumugi Kotobuki, and Azusa Nakano [Aki Toyosaki, Yōko Hikasa, Satomi Satou, Minako Kotobuki, and Ayana Taketatsu]]",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cagayake! GIRLS (5-nin Ver.)",
+      "artist": "Aki Toyosaki with Yoko Hikasa, Satomi Satou, Minako Kotobuki and Ayana Taketatsu",
+      "episodes": "9-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cagayake! GIRLS",
+      "artist": "Aki Toyosaki with Yoko Hikasa, Satomi Satou and Minako Kotobuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Don't say ''lazy''",
+      "artist": "Yoko Hikasa with Aki Toyosaki, Satomi Satou and Minako Kotobuki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Utauyo!! MIRACLE",
+      "artist": "Ho-Kago Tea Time [Yui Hirasawa, Mio Akiyama, Ritsu Tainaka, Tsumugi Kotobuki, and Azusa Nakano [Aki Toyosaki, Yōko Hikasa, Satomi Satou, Minako Kotobuki, and Ayana Taketatsu]]",
+      "episodes": "14-27"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "NO,Thank You!",
+      "artist": "Ho-Kago Tea Time [Yui Hirasawa, Mio Akiyama, Ritsu Tainaka, Tsumugi Kotobuki, and Azusa Nakano [Aki Toyosaki, Yōko Hikasa, Satomi Satou, Minako Kotobuki, and Ayana Taketatsu]]",
+      "episodes": "14-27"
+    }
+  ],
+  "relations": []
+}

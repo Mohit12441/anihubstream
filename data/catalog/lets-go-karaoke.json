@@ -1,0 +1,98 @@
+{
+  "id": "lets-go-karaoke",
+  "title": "Let's Go Karaoke!",
+  "native": "カラオケ行こ！",
+  "year": 2025,
+  "rating": 7.5,
+  "season": "Summer 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx183127-NuhBFFae2NYe.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx183127-NuhBFFae2NYe.jpg",
+  "accent": "#d628e4",
+  "synopsis": "The president of the chorus club, Satomi Oka, is approached by a yakuza named Kyoji Narita. Kyoji’s yakuza group holds a customary karaoke competition, and whoever earns the title of worst singer must get a tattoo. Since he was asked to be Kyoji’s singing teacher, Satomi has no choice but to go along with these practice sessions. Brought together by karaoke, where will Satomi and Kyoji end up?\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "let's-go-karaoke!-nnhsf8",
+    "mal": 60131,
+    "anilist": 183127,
+    "kitsu": 49285
+  },
+  "skip_key_id": 60131,
+  "skip_key_space": "mal",
+  "episode_total": 5,
+  "added_at": null,
+  "search_text": "let s go karaoke カラオケ行こ tv finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Encounter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/87ceede85b00218a87f890d3672249061753359058_full.jpg",
+      "synopsis": "Satomi Oka, the leader of the choir, is suddenly called out by a yakuza to go karaoke to get singing lessons.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-24",
+      "markers": [],
+      "external_id": "385286"
+    },
+    {
+      "n": 2,
+      "title": "Nightmare",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/855fd100e725e839b83e9d0b4b5fdfe41753950699_full.jpg",
+      "synopsis": "Satomi finds himself having nightmares, only for it to worsen when a group of Yakuza ask him for help.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-31",
+      "markers": [],
+      "external_id": "385287"
+    },
+    {
+      "n": 3,
+      "title": "Parting Ways",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "With the big day coming up, Satomi must sort out his feelings as his time with Kyouji draws closer to an end.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-07",
+      "markers": [],
+      "external_id": "385288"
+    },
+    {
+      "n": 4,
+      "title": "Crimson",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Left in disbelief, Satomi knew there was only one place to go if he wanted to find out Kyouji's condition.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-14",
+      "markers": [],
+      "external_id": "386343"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "386420"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

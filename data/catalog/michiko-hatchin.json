@@ -1,0 +1,308 @@
+{
+  "id": "michiko-hatchin",
+  "title": "Michiko & Hatchin",
+  "native": "ミチコとハッチン",
+  "year": 2008,
+  "rating": 7.6,
+  "season": "Fall 2008",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx4087-TMc9A0GSKiJf.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4087-TMc9A0GSKiJf.png",
+  "accent": "#ffc91a",
+  "synopsis": "After escaping from prison, the criminal Michiko rescues an abused girl known as Hatchin. The two are about as opposite as they come, but their fates become intertwined through the connection of a man from both their pasts. On the run from the police and Hatchin's abusive foster parents, the unlikely duo set out to find this man and ultimately discover their freedom. \n\n(Source: FUNimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "michiko-and-hatchin-unshy0",
+    "mal": 4087,
+    "anilist": 4087,
+    "kitsu": 3458
+  },
+  "skip_key_id": 4087,
+  "skip_key_space": "mal",
+  "episode_total": 22,
+  "added_at": null,
+  "search_text": "michiko hatchin ミチコとハッチン tv finished",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Farewell, Cruel Paradise!",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58412/original.jpg",
+      "synopsis": "Hana Morenos always wished for someone to appear and take her away from her abusive foster family, until one day she meets Michiko Malandro, a mysterious woman who recently broke out of jail.",
+      "airdate": "2008-10-15",
+      "markers": [],
+      "external_id": "58412"
+    },
+    {
+      "n": 2,
+      "title": "The Brown Sugar Outlaw",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58413/original.jpg",
+      "synopsis": "Michiko tries to convince Hana, whom she nicknamed \"Hatchin\", to cooperate with her, while detective Atsuko Jackson, an old acquaintance of hers, is on their trail.",
+      "airdate": "2008-10-29",
+      "markers": [],
+      "external_id": "58413"
+    },
+    {
+      "n": 3,
+      "title": "Like a Frantic Pinball",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58414/original.jpg",
+      "synopsis": "Michiko steals some tennis shoes for Hatchin to wear, but Hatchin decides to work on a Chinese restaurant to pay for them. Meanwhile, Michiko looks for clues about Hiroshi's whereabouts.",
+      "airdate": "2008-11-05",
+      "markers": [],
+      "external_id": "58414"
+    },
+    {
+      "n": 4,
+      "title": "Stray Cat Milky Way",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58415/original.jpg",
+      "synopsis": "Michiko and Hatchin meet Pepe Lima, a famous stripper who claims to have information about Hiroshi, and is saving money in order to start a new life with her younger sister.",
+      "airdate": "2008-11-12",
+      "markers": [],
+      "external_id": "58415"
+    },
+    {
+      "n": 5,
+      "title": "The Saudade of Fools, Part 1",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58416/original.jpg",
+      "synopsis": "Michiko returns to her hometown looking for Satoshi, an old friend of Hiroshi's. However, she ends up targeted by the leader of the crime syndicate \"Fantasma\" who has an old score to settle with her.",
+      "airdate": "2008-11-19",
+      "markers": [],
+      "external_id": "58416"
+    },
+    {
+      "n": 6,
+      "title": "The Saudade of Fools, Part 2",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58417/original.jpg",
+      "synopsis": "Michiko learns that Hatchin was kidnapped by members of \"Fantasma\", and gets infiltrated on a bullfight arena to rescue her, despite knowing that they are waiting for her.",
+      "airdate": "2008-11-19",
+      "markers": [],
+      "external_id": "58417"
+    },
+    {
+      "n": 7,
+      "title": "The Rain that Falls in Monotone",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58418/original.jpg",
+      "synopsis": "Michiko is approached by Bruno, a charming man who insists to flirt with her even after she finds that he is married. Her growing interest on him ends up putting a strain in her relationship with Hatchin.",
+      "airdate": "2008-12-03",
+      "markers": [],
+      "external_id": "58418"
+    },
+    {
+      "n": 8,
+      "title": "Black Noise and a Dope Game",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58419/original.jpg",
+      "synopsis": "While following Satoshi's trail, Michiko ends up meeting a gang of thugs pretending to be him and his subordinates. However, she gets herself set up in a deadly game by Shinsuke, one of the real Satoshi's henchmen.",
+      "airdate": "2008-12-10",
+      "markers": [],
+      "external_id": "58419"
+    },
+    {
+      "n": 9,
+      "title": "The Chocolate Girl in Love",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58420/original.jpg",
+      "synopsis": "Separated from Michiko, Hatchin befriends Rita, a girl of her age who is suffering because her love for an older man is unrequited.",
+      "airdate": "2008-12-17",
+      "markers": [],
+      "external_id": "58420"
+    },
+    {
+      "n": 10,
+      "title": "The Carnival of Hyenas",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58421/original.jpg",
+      "synopsis": "After settling an old score, Satoshi has Michiko delivered to him in order to sell her to Atsuko, but the deal is blown when Atsuko's partner betrays her.",
+      "airdate": "2008-12-17",
+      "markers": [],
+      "external_id": "58421"
+    },
+    {
+      "n": 11,
+      "title": "Starting Line Downpour",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58422/original.jpg",
+      "synopsis": "While living at the circus with Rita, Hatchin is found by Michiko, but is unwilling to leave with her. Little she knows that the circus' owners have other plans for her.",
+      "airdate": "2009-01-07",
+      "markers": [],
+      "external_id": "58422"
+    },
+    {
+      "n": 12,
+      "title": "Purgatory: 108°C Telepathy",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58423/original.jpg",
+      "synopsis": "Hatchin brings a sick Michiko to a quack doctor and end up taking a dangerous job to pay for the expenses.",
+      "airdate": "2009-01-14",
+      "markers": [],
+      "external_id": "58423"
+    },
+    {
+      "n": 13,
+      "title": "Goldfish of the Marsh",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58424/original.jpg",
+      "synopsis": "Stripped of her position as a detective, Atsuko is transferred to a countryside precinct and meets a young girl who makes her reminisce about her relationship with Michiko.",
+      "airdate": "2009-01-21",
+      "markers": [],
+      "external_id": "58424"
+    },
+    {
+      "n": 14,
+      "title": "The Daredevil Explosive Runner",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58425/original.jpg",
+      "synopsis": "Michiko must deal with assassins sent by Satoshi to dispose of her.",
+      "airdate": "2009-01-29",
+      "markers": [],
+      "external_id": "58425"
+    },
+    {
+      "n": 15,
+      "title": "Graffiti in Vain",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58426/original.jpg",
+      "synopsis": "Hatchin meets Lenine, a young librarian who falls in love with her at first sight.",
+      "airdate": "2009-02-05",
+      "markers": [],
+      "external_id": "58426"
+    },
+    {
+      "n": 16,
+      "title": "Etude of Crimson Inconstancy",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58427/original.jpg",
+      "synopsis": "Michiko and Hatchin reach a research facility where Hiroshi used to work, just to find that he had already left.",
+      "airdate": "2009-02-12",
+      "markers": [],
+      "external_id": "58427"
+    },
+    {
+      "n": 17,
+      "title": "Buckets of Blood! Opera that Stirs the Heart",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58428/original.jpg",
+      "synopsis": "Michiko is kidnapped by the Chinese Mafia and Hatchin meets a kind stranger who offers his help to find her.",
+      "airdate": "2009-02-12",
+      "markers": [],
+      "external_id": "58428"
+    },
+    {
+      "n": 18,
+      "title": "The Fool's Ballistic Samba",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58429/original.jpg",
+      "synopsis": "Michiko gets depressed when she figures that Hiroshi does not speak about her to anyone, and Hatchin comes up with a risky plan to cheer her up.",
+      "airdate": "2009-02-19",
+      "markers": [],
+      "external_id": "58429"
+    },
+    {
+      "n": 19,
+      "title": "Nettlesome Light-Blocking Butterfly",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58430/original.jpg",
+      "synopsis": "Michiko and Hatchin hide themselves in a train to evade the police, but little they know that Atsuko and Satoshi are also aboard, and a heated confrontation takes place.",
+      "airdate": "2009-03-05",
+      "markers": [],
+      "external_id": "58430"
+    },
+    {
+      "n": 20,
+      "title": "Rendezvous of Extermination",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58431/original.jpg",
+      "synopsis": "Now traveling with Hatchin, Satoshi is attacked by Shinsuke's party and decides to settle matters with him once and for all.",
+      "airdate": "2009-03-05",
+      "markers": [],
+      "external_id": "58431"
+    },
+    {
+      "n": 21,
+      "title": "Last Waltz Blooming Out of Season",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58432/original.jpg",
+      "synopsis": "Michiko, Hatchin and Satoshi reach the city where Hiroshi's hidden. But the trio end up getting themselves in serious trouble with local criminals and the police.",
+      "airdate": "2009-03-12",
+      "markers": [],
+      "external_id": "58432"
+    },
+    {
+      "n": 22,
+      "title": "Run As You Are",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58433/original.jpg",
+      "synopsis": "At last, Michiko and Hatchin are reunited with Hiroshi, but when the trio is about to escape together, Michiko comes with a surprising decision.",
+      "airdate": "2009-03-19",
+      "markers": [],
+      "external_id": "58433"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Paraiso",
+      "artist": "SOIL & \"PIMP\" SESSIONS",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Best Friend",
+      "artist": "Karutetto",
+      "episodes": "1-21"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Nada pode me parar agora",
+      "artist": "Aurea Martins",
+      "episodes": "22"
+    }
+  ],
+  "relations": []
+}

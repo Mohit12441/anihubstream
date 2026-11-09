@@ -1,0 +1,72 @@
+{
+  "id": "mononoke-the-movie-phantom-in-the-rain",
+  "title": "Mononoke The Movie: The Phantom in the Rain",
+  "native": "モノノ怪 唐傘",
+  "year": 2024,
+  "rating": 8,
+  "season": "Summer 2024",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151117-AOcwR3mXCDx7.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151117-AOcwR3mXCDx7.jpg",
+  "accent": "#f1bb35",
+  "synopsis": "Asa and Kame strike up an immediate friendship when they arrive at the same time for their first day of duty at the Ooku, the splendid pleasure palace housing the harem of Lord Tenshi. The two young women are there to join the many hundreds of other maidservants—men are barred from entering, with immediate beheading the price of trespassing. It soon becomes clear that behind the luxurious lifestyle and ritualized routines of the Ooku lie sinister schemes and cynical rivalries. Meanwhile, a mysterious wandering potion-peddler known only as the Medicine Seller subtly insinuates himself into the Ooku, just as an uncanny, otherworldly menace begins to reveal itself.\n\n(Source: Fantasia Film Festival)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "mononoke-the-movie:-phantom-in-the-rain-5gpwha",
+    "mal": 52107,
+    "anilist": 151117,
+    "kitsu": 46188
+  },
+  "skip_key_id": 52107,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "mononoke the movie the phantom in the rain モノノ怪 唐傘 movie finished",
+  "genres": [
+    "fantasy",
+    "horror",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Mononoke the Movie: Phantom in the Rain (Movie)",
+      "runtime": "89:00",
+      "runtime_seconds": 5340,
+      "thumb": "https://animehot.cc/storage/media/2026/09/68fca45921ec43f22171fabf-landscape.webp",
+      "synopsis": "Asa and Kame strike up an immediate friendship when they arrive at the same time for their first day of duty at the Ooku, the splendid pleasure palace housing the harem of Lord Tenshi. The two young women are there to join the many hundreds of other maidservants—men are barred from entering, with immediate beheading the price of trespassing. It soon becomes clear that behind the luxurious lifestyle and ritualized routines of the Ooku lie sinister schemes and cynical rivalries. Meanwhile, a mysterious wandering potion-peddler known only as the Medicine Seller subtly insinuates himself into the Ooku, just as an uncanny, otherworldly menace begins to reveal itself.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330729"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Katsubō (渇望)",
+      "artist": "AiNA THE END",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Love Sick",
+      "artist": "Aina The End",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

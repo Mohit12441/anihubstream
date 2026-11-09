@@ -1,0 +1,77 @@
+{
+  "id": "magic-knight-rayearth-2026",
+  "title": "Magic Knight Rayearth (2026)",
+  "native": "魔法騎士レイアース (2026)",
+  "year": 2026,
+  "rating": 6.9,
+  "season": "Fall 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx178868-mfp0HIHNJNAm.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178868-mfp0HIHNJNAm.jpg",
+  "accent": "#e4a150",
+  "synopsis": "Hikaru Shidou, Umi Ryuuzaki, and Fuu Hououji aren't from Cephiro. While on a school field trip to the Tokyo Tower, the three girls' minds are on anything but different worlds filled with magic and wonder. That is, until Princess Emeraude, the Pillar of Cephiro, cries out for the Magic Knights to save her world--and that just happens to be those three!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": 3,
+  "sched_day_label": "WED",
+  "sched_date": "Nov 11",
+  "sched_time": "14:46",
+  "sched_season": "Fall 2026",
+  "sched_episode": 6,
+  "sched_sub_at": null,
+  "sched_dub_at": 1793809800000,
+  "source_ids": {
+    "anilist": 178868,
+    "mal": 59204,
+    "hianime": "magic-knight-rayearth-(2026)-ava4rj",
+    "kitsu": 49008
+  },
+  "skip_key_id": 59204,
+  "skip_key_space": "mal",
+  "episode_total": 21,
+  "added_at": "2026-10-17 04:15:49",
+  "search_text": "magic knight rayearth 2026 魔法騎士レイアース 2026 tv ongoing",
+  "genres": [
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "From Another World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369943/thumbnail/01f656a6268b6e3a51a6bb02d73a837b.jpg",
+      "synopsis": "Three girls meet on a school trip and find themselves transported to a world of monsters and magic.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-10-07",
+      "markers": [],
+      "external_id": "369943"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

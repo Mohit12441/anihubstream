@@ -1,0 +1,241 @@
+{
+  "id": "legend-of-the-galactic-heroes-die-neue-these",
+  "title": "Legend of the Galactic Heroes: Die Neue These",
+  "native": "銀河英雄伝説 -Die Neue These- 邂逅",
+  "year": 2018,
+  "rating": 7.5,
+  "season": "Spring 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx20628-46V7oj6rr9Ma.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20628-46V7oj6rr9Ma.jpg",
+  "accent": "#a24bff",
+  "synopsis": "In humanity's distant future, two interstellar states—the monarchic Galactic Empire and the democratic Free Planets Alliance—are embroiled in a never-ending war. The story focuses on the exploits of rivals Reinhard von Müsel and Yang Wen Li as they rise to power and fame in the Galactic Empire and the Free Planets Alliance.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "legend-of-the-galactic-heroes:-die-neue-these-c54x52",
+    "mal": 31433,
+    "anilist": 20628,
+    "kitsu": 11331
+  },
+  "skip_key_id": 31433,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "legend of the galactic heroes die neue these 銀河英雄伝説 die neue these 邂逅 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "In the Eternal Night",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242973/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-04-03",
+      "markers": [],
+      "external_id": "242973"
+    },
+    {
+      "n": 2,
+      "title": "The Battle of Astarte",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242974/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-04-10",
+      "markers": [],
+      "external_id": "242974"
+    },
+    {
+      "n": 3,
+      "title": "An Indomitable Prodigy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242975/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-04-17",
+      "markers": [],
+      "external_id": "242975"
+    },
+    {
+      "n": 4,
+      "title": "The Unbeatable Magician",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242976/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-04-24",
+      "markers": [],
+      "external_id": "242976"
+    },
+    {
+      "n": 5,
+      "title": "Birth of the 13th Fleet",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242977/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-05-01",
+      "markers": [],
+      "external_id": "242977"
+    },
+    {
+      "n": 6,
+      "title": "The Capture of Iserlohn (Part 1)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242978/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-05-08",
+      "markers": [],
+      "external_id": "242978"
+    },
+    {
+      "n": 7,
+      "title": "The Capture of Iserlohn (Part 2)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242979/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-05-15",
+      "markers": [],
+      "external_id": "242979"
+    },
+    {
+      "n": 8,
+      "title": "The Castrop Rebellion",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242980/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-05-22",
+      "markers": [],
+      "external_id": "242980"
+    },
+    {
+      "n": 9,
+      "title": "Each Person's Star",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242981/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-06-05",
+      "markers": [],
+      "external_id": "242981"
+    },
+    {
+      "n": 10,
+      "title": "Interlude",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242982/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "242982"
+    },
+    {
+      "n": 11,
+      "title": "The Verge of Death (Part 1)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242983/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "242983"
+    },
+    {
+      "n": 12,
+      "title": "The Verge of Death (Part 2)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242984/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-06-26",
+      "markers": [],
+      "external_id": "242984"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "dust",
+      "artist": "SennaRin",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "dust",
+      "artist": "SennaRin",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "melt",
+      "artist": "SennaRin",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Binary Star",
+      "artist": "SawanoHiroyuki[nZk]:Uru",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tranquility",
+      "artist": "SawanoHiroyuki[nZk]:Anly",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Binary Star",
+      "artist": "SawanoHiroyuki[nZk] with Uru",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Wish",
+      "artist": "ELISA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "CRY",
+      "artist": "SawanoHiroyuki[nZk]:mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hikari no Hoshi (光の星)",
+      "artist": "ELISA",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

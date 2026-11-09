@@ -1,0 +1,86 @@
+{
+  "id": "kimi-ni-todoke-from-me-to-you-season-2",
+  "title": "Kimi ni Todoke: From Me to You Season 2",
+  "native": "君に届け 2ND SEASON",
+  "year": 2011,
+  "rating": 7.9,
+  "season": "Winter 2011",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9656-vckh2wNj3FwY.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9656-vckh2wNj3FwY.jpg",
+  "accent": "#f18635",
+  "synopsis": "Sawako Kuronuma and her friends have just begun their second year of high school and they are in the same class together again. To make matters more interesting a male student newly transferred into their class is seated right next to Kuronuma and has taken an interest in her. What hurdles will Sawako and Kazehaya face next?\n\nNote: Includes episode 0, \"Kataomoi/A Crush\".",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kimi-ni-todoke:-from-me-to-you-season-2-cfi53f",
+    "mal": 9656,
+    "anilist": 9656,
+    "kitsu": 5820
+  },
+  "skip_key_id": 9656,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "kimi ni todoke from me to you season 2 君に届け 2nd season tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Prologue",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0a1b6c1a3b7f8d0965146bbc5c47b3591349716268_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "91500"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sawakaze (爽風)",
+      "artist": "Tomofumi Tanizawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kimi ni Todoke...",
+      "artist": "MAY'S",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kimi ni Todoke (きみにとどけ)",
+      "artist": "Tomofumi Tanizawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kataomoi (片想い)",
+      "artist": "Chara",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

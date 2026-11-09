@@ -1,0 +1,110 @@
+{
+  "id": "lockdown-zone-lv-x-season-2",
+  "title": "Lockdown Zone: Level X Season 2",
+  "native": "監禁区域レベルX 続編",
+  "year": 2025,
+  "rating": 6,
+  "season": "Winter 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx182877-In2sD6eEJdvw.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx182877-In2sD6eEJdvw.png",
+  "accent": "#ff1f4a",
+  "synopsis": "A sequel to Kankin Kuiki Level X.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "lockdown-zone:-lv.-x-season-2-xabfse",
+    "mal": 60094,
+    "anilist": 182877,
+    "kitsu": 49283
+  },
+  "skip_key_id": 60094,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": null,
+  "search_text": "lockdown zone level x season 2 監禁区域レヘ ルx 続編 tv finished",
+  "genres": [
+    "horror",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373992"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373993"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373994"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373995"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373996"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373997"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

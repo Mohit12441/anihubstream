@@ -1,0 +1,238 @@
+{
+  "id": "little-busters-refrain",
+  "title": "Little Busters! Refrain",
+  "native": "リトルバスターズ! ~Refrain~",
+  "year": 2013,
+  "rating": 8,
+  "season": "Fall 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx18195-r62KJesiZQWb.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx18195-r62KJesiZQWb.png",
+  "accent": "#24d3ee",
+  "synopsis": "Riki Naoe and his teammates have finally formed a complete baseball team for the Little Busters. When the Little Busters reunite, there's a strange sense of déjà vu, as the personal mysteries and idiosyncrasies that have permeated the game coalesce into something unexpected. As the team members fall into their roles, the pieces of the puzzle begin to fall into place. And as Riki learns the secrets behind his narcolepsy, a stunning truth about this world will be revealed, one that will change everything. Will the game continue into extra innings, or will it be called before the final player goes to bat? Riki made the team and his teammates came, but the next pitch may throw everyone in LITTLE BUSTERS! REFRAIN!\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "little-busters!-~refrain~-jv9pns",
+    "mal": 18195,
+    "anilist": 18195,
+    "kitsu": 7704
+  },
+  "skip_key_id": 18195,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "little busters refrain リトルハ スタース refrain tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "It Struck Without Warning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171299/original.jpeg",
+      "synopsis": "The Little Busters hold a pancake party after their first real game. Later, jealousy gets the best of one girl, and Kud ends up a victim of revenge.",
+      "airdate": "2013-10-05",
+      "markers": [],
+      "external_id": "171299"
+    },
+    {
+      "n": 2,
+      "title": "It Was Also Raining at That Time",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171300/original.jpeg",
+      "synopsis": "The boys scheme to get Riki to confess to Kurugaya with a fireworks displays, while Riki continues to have feelings of de ja vu.",
+      "airdate": "2013-10-12",
+      "markers": [],
+      "external_id": "171300"
+    },
+    {
+      "n": 3,
+      "title": "I Wanted to Stay Here Forever",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171303/original.jpeg",
+      "synopsis": "Riki continues to relive June 20th. With no end in sight, he goes to Kurugaya for help.",
+      "airdate": "2013-10-19",
+      "markers": [],
+      "external_id": "171303"
+    },
+    {
+      "n": 4,
+      "title": "Riki and Rin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171301/original.jpeg",
+      "synopsis": "Riki contemplates a possible relationship with Rin. Rin, being Rin, beats him to the punch.",
+      "airdate": "2013-10-26",
+      "markers": [],
+      "external_id": "171301"
+    },
+    {
+      "n": 5,
+      "title": "The Final Task",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171302/original.jpeg",
+      "synopsis": "With Riki and Rin still figuring out their budding relationship, a life changing event takes place that puts into question into question for Riki.",
+      "airdate": "2013-11-02",
+      "markers": [],
+      "external_id": "171302"
+    },
+    {
+      "n": 6,
+      "title": "At the End of the Escape",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171305/original.jpeg",
+      "synopsis": "Kyousuke's true intentions for Rin come to light. Riki refuses to accept this truth and goes in search for answers.",
+      "airdate": "2013-11-09",
+      "markers": [],
+      "external_id": "171305"
+    },
+    {
+      "n": 7,
+      "title": "May 13",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171304/original.jpeg",
+      "synopsis": "Riki tries to bring back Rin's smile, and decides that they should form…a baseball team?",
+      "airdate": "2013-11-16",
+      "markers": [],
+      "external_id": "171304"
+    },
+    {
+      "n": 8,
+      "title": "Proof of the Strongest",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171306/original.jpeg",
+      "synopsis": "Masato sets out to prove he is the strongest, destroying everyone in his path. Riki and Rin try to get him to join the Little Busters.",
+      "airdate": "2013-11-23",
+      "markers": [],
+      "external_id": "171306"
+    },
+    {
+      "n": 9,
+      "title": "A Friend's Tears",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171307/original.jpeg",
+      "synopsis": "Rin, Riki and Masato try to convince Kengo to join. Knowing that he wont be able to defeat him at his own game, Riki challenges Kengo to a baseball game.",
+      "airdate": "2013-11-30",
+      "markers": [],
+      "external_id": "171307"
+    },
+    {
+      "n": 10,
+      "title": "And So I'll Do It Over Again",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171308/original.jpeg",
+      "synopsis": "Kyousuke looks back upon his successes and failures in trying to make Rin and Riki as strong as possible. As the end grows near, he questions his significance and life's meaning.",
+      "airdate": "2013-12-07",
+      "markers": [],
+      "external_id": "171308"
+    },
+    {
+      "n": 11,
+      "title": "The End of the World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171309/original.jpeg",
+      "synopsis": "With everything they've ever known crumbling around them, Kyousuke reveals the secret behind their world and his true intentions for Riki and Rin.",
+      "airdate": "2013-12-14",
+      "markers": [],
+      "external_id": "171309"
+    },
+    {
+      "n": 12,
+      "title": "A Single Request",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171310/original.jpeg",
+      "synopsis": "Riki and Rin return to the real world, both refusing to let their friends go, and both dealing with it in their own ways.",
+      "airdate": "2013-12-21",
+      "markers": [],
+      "external_id": "171310"
+    },
+    {
+      "n": 13,
+      "title": "Little Busters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171311/original.jpeg",
+      "synopsis": "A race against time to save their friends lies before Riki and Rin, but thanks to Kyousuke, they may be strong enough to take the challenge head on in the bittersweet conclusion of Little Busters! Refrain.",
+      "airdate": "2013-12-28",
+      "markers": [],
+      "external_id": "171311"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Boys be Smile",
+      "artist": "Suzuyu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kimi to no Nakushi Mono (君とのなくしもの;The Thing I Lost With You)",
+      "artist": "Ayaka Kitazawa",
+      "episodes": "1-2,4-5,7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Song for friends",
+      "artist": "Rita",
+      "episodes": "3,8-9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Hanabi",
+      "artist": "Lia",
+      "episodes": "6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Boys be Smile",
+      "artist": "Suzuyu",
+      "episodes": "10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Haruka Kanata (遥か彼方;Far Beyond)",
+      "artist": "Rita",
+      "episodes": "11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Little Busters! -Little Jumper Ver.-",
+      "artist": "Rita",
+      "episodes": "13"
+    }
+  ],
+  "relations": []
+}

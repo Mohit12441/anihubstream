@@ -1,0 +1,119 @@
+{
+  "id": "k-on-the-movie",
+  "title": "K-ON!: The Movie",
+  "native": "映画けいおん！",
+  "year": 2011,
+  "rating": 8.4,
+  "season": "Fall 2011",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9617-Z2RA1TIkcNEg.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9617-Z2RA1TIkcNEg.png",
+  "accent": "#a18628",
+  "synopsis": "With graduation right around the corner, every member of the Light Music Club except for Azusa will be leaving for good. But the girls aren’t going to let something as silly as graduation tear them apart! For their final hurrah, the girls are going on the ultimate vacation tour— all the way to London! Their overseas journey will lead them on a trip of discovery and friendship as they take the stage one last time for their final encore together.\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "k-on!-the-movie-sa7npo",
+    "mal": 9617,
+    "anilist": 9617,
+    "kitsu": 5810
+  },
+  "skip_key_id": 9617,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "k on the movie 映画けいおん movie finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "K-ON! The Movie",
+      "runtime": "110:00",
+      "runtime_seconds": 6600,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/79355/original.jpg",
+      "synopsis": "With graduation right around the corner, the girls of the Light Music Club are headed to London for one last hurrah! Their overseas journey will lead them on a trip of discovery and friendship as they prepare for one last amazing encore.",
+      "airdate": "2011-12-03",
+      "markers": [],
+      "external_id": "79355"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ichiban Ippai (いちばんいっぱい)",
+      "artist": "Ho-Kago Tea Time",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Singing!",
+      "artist": "Ho-Kago Tea Time",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "GO! GO! MANIAC",
+      "artist": "Ho-Kago Tea Time [Yui Hirasawa, Mio Akiyama, Ritsu Tainaka, Tsumugi Kotobuki, and Azusa Nakano [Aki Toyosaki, Yōko Hikasa, Satomi Satou, Minako Kotobuki, and Ayana Taketatsu]]",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Listen!!",
+      "artist": "Ho-Kago Tea Time [Yui Hirasawa, Mio Akiyama, Ritsu Tainaka, Tsumugi Kotobuki, and Azusa Nakano [Aki Toyosaki, Yōko Hikasa, Satomi Satou, Minako Kotobuki, and Ayana Taketatsu]]",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cagayake! GIRLS (5-nin Ver.)",
+      "artist": "Aki Toyosaki with Yoko Hikasa, Satomi Satou, Minako Kotobuki and Ayana Taketatsu",
+      "episodes": "9-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cagayake! GIRLS",
+      "artist": "Aki Toyosaki with Yoko Hikasa, Satomi Satou and Minako Kotobuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Don't say ''lazy''",
+      "artist": "Yoko Hikasa with Aki Toyosaki, Satomi Satou and Minako Kotobuki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Utauyo!! MIRACLE",
+      "artist": "Ho-Kago Tea Time [Yui Hirasawa, Mio Akiyama, Ritsu Tainaka, Tsumugi Kotobuki, and Azusa Nakano [Aki Toyosaki, Yōko Hikasa, Satomi Satou, Minako Kotobuki, and Ayana Taketatsu]]",
+      "episodes": "14-27"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "NO,Thank You!",
+      "artist": "Ho-Kago Tea Time [Yui Hirasawa, Mio Akiyama, Ritsu Tainaka, Tsumugi Kotobuki, and Azusa Nakano [Aki Toyosaki, Yōko Hikasa, Satomi Satou, Minako Kotobuki, and Ayana Taketatsu]]",
+      "episodes": "14-27"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,273 @@
+{
+  "id": "major-message",
+  "title": "Major: Message",
+  "native": "メジャー・メッセージ",
+  "year": 2010,
+  "rating": 7.9,
+  "season": "Winter 2011",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9890-Z1Kz2GqDLfB4.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9890-Z1Kz2GqDLfB4.png",
+  "accent": "#005d93",
+  "synopsis": "10 years have passed. Following an injury that put Goro's career as a pitcher into a standstill, he prepares to restart his baseball career as a fielder. His family struggles with his decisions; especially his daughter Izumi, who doesn't know enough about her father to understand why he is so absent from their lives. Goro will stop at nothing until he's in the game once again; everything is now for the sake of the only gift he has to offer his children: Baseball.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "major:-message-e6wc8o",
+    "mal": 9890,
+    "anilist": 9890,
+    "kitsu": 5926
+  },
+  "skip_key_id": 9890,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "major message メシ ャー メッセーシ ova finished",
+  "genres": [
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Major: Message",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9890-Z1Kz2GqDLfB4.png",
+      "synopsis": "10 years have passed. Following an injury that put Goro's career as a pitcher into a standstill, he prepares to restart his baseball career as a fielder. His family struggles with his decisions; especially his daughter Izumi, who doesn't know enough about her father to understand why he is so absent from their lives. Goro will stop at nothing until he's in the game once again; everything is now for the sake of the only gift he has to offer his children: Baseball.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "89513"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Answer",
+      "artist": "Leo Ieiri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "One",
+      "artist": "SHE'S",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Koete Ike (Go Beyond It)",
+      "artist": "Kyūso Nekokami",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Pride",
+      "artist": "Yuu Takahashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubasa",
+      "artist": "Remioromen",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kokoro E (<i>心絵</i>)",
+      "artist": "Road of Major",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Step",
+      "artist": "Beni Arashiro",
+      "episodes": "1-16"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Shiroi Doro (白い泥)",
+      "artist": "Mone Kamishiraishi",
+      "episodes": "14-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "IDENTITY",
+      "artist": "Ame no Parade",
+      "episodes": "14-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Dreamcatcher",
+      "artist": "Berry Goodman",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "SAIREN",
+      "artist": "Reol",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Saraba Aoki Omokage (<i>さらば碧き面影</i>)",
+      "artist": "Road of Major",
+      "episodes": "27-52"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Faraway",
+      "artist": "Paradise GO!! GO!!",
+      "episodes": "17-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Play the Game",
+      "artist": "Road of Major",
+      "episodes": "53-77"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Wonderland",
+      "artist": "May",
+      "episodes": "27-39"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Rise",
+      "artist": "Kouhei Ootomo",
+      "episodes": "80-104"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Shoboi Kao Sunna yo Baby (<i>しょぼい顔すんなよベイベー</i>)",
+      "artist": "The Loose Dogs",
+      "episodes": "40-51"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Hey! Hey! Alright",
+      "artist": "SCHA DARA PARR feat. Kaela Kimura",
+      "episodes": "106-128"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Saraba Aoki Omokage (<i>さらば碧き面影</i>)",
+      "artist": "Road of Major",
+      "episodes": "52"
+    },
+    {
+      "kind": "OP",
+      "sequence": 6,
+      "title": "Kokoro e (心絵)",
+      "artist": "TRIPLANE",
+      "episodes": "131-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Strike Party!!!",
+      "artist": "BeForU",
+      "episodes": "53-67"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Yoru ni Nareba (<i>夜になれば</i>)",
+      "artist": "The Loose Dogs",
+      "episodes": "68-77"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Play the Game",
+      "artist": "Road of Major",
+      "episodes": "78"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "One Day",
+      "artist": "The Loose Dogs",
+      "episodes": "79-95"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "Ame Nochi Niji Iro (<i>雨のち虹色</i>)",
+      "artist": "Goro Shigeno x The Loose Dogs feat. Maki Ohguro",
+      "episodes": "96-104"
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "Stay with me",
+      "artist": "Hitomi Shimatani",
+      "episodes": "105-120"
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "Jibun Color",
+      "artist": "Yuu Nakamura",
+      "episodes": "121-129"
+    },
+    {
+      "kind": "ED",
+      "sequence": 13,
+      "title": "Kokoro e (心絵)",
+      "artist": "Road of Major",
+      "episodes": "129"
+    },
+    {
+      "kind": "ED",
+      "sequence": 14,
+      "title": "Twilight Star (トワイライトスター)",
+      "artist": "Megamasso",
+      "episodes": "130-142"
+    },
+    {
+      "kind": "ED",
+      "sequence": 15,
+      "title": "For Years...",
+      "artist": "French Kiss",
+      "episodes": "143-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 16,
+      "title": "Kokoro e (心絵)",
+      "artist": "Road of Major",
+      "episodes": "154"
+    }
+  ],
+  "relations": []
+}

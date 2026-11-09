@@ -1,0 +1,89 @@
+{
+  "id": "kamisama-kiss-ova",
+  "title": "Kamisama Kiss◎ OVA",
+  "native": "神様はじめました ～過去編～",
+  "year": 2015,
+  "rating": 8.2,
+  "season": "Summer 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/10880/medium.jpg",
+  "key_art": "https://media.kitsu.app/anime/cover_images/10880/original.png",
+  "accent": "#2ee6a8",
+  "synopsis": "OVAs based on the \"past arc\" of the series, which spans the 14th through 17th volumes of the manga. (Source: MAL News)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 10880,
+    "anilist": 21186,
+    "mal": 30709
+  },
+  "skip_key_id": 30709,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": "2026-11-06 11:07:38",
+  "search_text": "kamisama kiss ova 神様はし めました 過去編 tv finished",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Kamisama, Kako ni Tobu",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "Episode 1",
+      "airdate": "2015-08-20",
+      "markers": [],
+      "external_id": "176266"
+    },
+    {
+      "n": 2,
+      "title": "Kitsune, Koi ni Ochiru",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "Episode 2",
+      "airdate": "2015-12-18",
+      "markers": [],
+      "external_id": "176267"
+    },
+    {
+      "n": 3,
+      "title": "Kamisama, Hanayome ni Naru",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "Episode 3",
+      "airdate": "2016-04-20",
+      "markers": [],
+      "external_id": "179186"
+    },
+    {
+      "n": 4,
+      "title": "Kamisama, Mukae ni Iku",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "Episode 4",
+      "airdate": "2016-08-19",
+      "markers": [],
+      "external_id": "179187"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

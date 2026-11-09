@@ -1,0 +1,322 @@
+{
+  "id": "kemono-jihen",
+  "title": "Kemono Jihen",
+  "native": "怪物事変",
+  "year": 2021,
+  "rating": 7.2,
+  "season": "Winter 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx114085-2w5rYZTOa7ER.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114085-2w5rYZTOa7ER.jpg",
+  "accent": "#e4a15d",
+  "synopsis": "Special detective Kohachi Inugami is sent to investigate a grisly phenomenon involving animal corpses near a remote mountain village. But after meeting a strange boy who agrees to help, he discovers cursed supernatural forces at work. Little by little, Inugami uncovers the truth behind the killings and the boy who may not even be human.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42922,
+    "anilist": 114085,
+    "mal": 40908
+  },
+  "skip_key_id": 40908,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 10:34:33",
+  "search_text": "kemono jihen 怪物事変 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Kabane",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ceee50f8b7e933d0a186620e56c28b801643379553_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 4,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1380
+        }
+      ],
+      "external_id": "293118"
+    },
+    {
+      "n": 2,
+      "title": "The Kemonoist",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/2671d98de1eb82f42dcc5997a95715211643379672_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 14,
+          "end": 104
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1380
+        }
+      ],
+      "external_id": "293119"
+    },
+    {
+      "n": 3,
+      "title": "Foxes",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/11ece169db717ee3f67d8d0714706d021643379788_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 106,
+          "end": 196
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1328,
+          "end": 1380
+        }
+      ],
+      "external_id": "293120"
+    },
+    {
+      "n": 4,
+      "title": "Mission",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/413e163f5a66887f9702514f64fa7e4c1643379906_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 55,
+          "end": 145
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1380
+        }
+      ],
+      "external_id": "294135"
+    },
+    {
+      "n": 5,
+      "title": "Intrusion",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0609327a44324d9843a9d6e457b45e271643379940_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 134
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "294136"
+    },
+    {
+      "n": 6,
+      "title": "Awakening",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e5d5add6a3827416b7e7c7d5fb3e0a9b1643379925_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 100
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "294137"
+    },
+    {
+      "n": 7,
+      "title": "Home",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/6d8472855524c8fb707b756303cdbc5c1643380047_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "294138"
+    },
+    {
+      "n": 8,
+      "title": "Truth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a8696310e3f781a073c2cbed306e79311643380030_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 45,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "294139"
+    },
+    {
+      "n": 9,
+      "title": "Family",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3c8130f582e6887c2e45b34c7d2395c51643380149_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "296117"
+    },
+    {
+      "n": 10,
+      "title": "Twins",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/5b0891f4bf5069fd75ff9acffcd3f6391643380388_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1380
+        }
+      ],
+      "external_id": "296630"
+    },
+    {
+      "n": 11,
+      "title": "Memories",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/f52b5b9f1f23bb10bb073b258079ffad1643380911_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 90,
+          "end": 180
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1380
+        }
+      ],
+      "external_id": "296637"
+    },
+    {
+      "n": 12,
+      "title": "Kemono Incidents",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/6d0c453e6c3262091a2e020768c267b01643380883_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "296638"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kemonomichi",
+      "artist": "Daisuke Ono",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shirube (Guiding Sign)",
+      "artist": "Sayaka Sasaki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

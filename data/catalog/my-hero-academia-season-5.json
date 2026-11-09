@@ -1,0 +1,609 @@
+{
+  "id": "my-hero-academia-season-5",
+  "title": "My Hero Academia Season 5",
+  "native": "僕のヒーローアカデミア５",
+  "year": 2021,
+  "rating": 7.3,
+  "season": "Spring 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx117193-E75BlZmDh1aB.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx117193-E75BlZmDh1aB.jpg",
+  "accent": "#e4501a",
+  "synopsis": "The rivalry between Class 1-A and Class 1-B heats up in a joint training battle. Eager to be a part of the hero course, brainwashing buff Shinso is tasked with competing on both sides.\n\nBut as each team faces their own weaknesses and discovers new strengths, this showdown might just become a toss-up.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "my-hero-academia-season-5-5vf2c7",
+    "mal": 41587,
+    "anilist": 117193,
+    "kitsu": 43108
+  },
+  "skip_key_id": 41587,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": null,
+  "search_text": "my hero academia season 5 僕のヒーローアカテ ミア5 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "All Hands on Deck! Class 1-A",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278112/original.png",
+      "synopsis": "There's an emergency drill at U.A. High School, and Class 1-A is requested to report for duty!\n\n(Source: Crunchyroll)",
+      "airdate": "2021-03-27",
+      "markers": [],
+      "external_id": "278112"
+    },
+    {
+      "n": 2,
+      "title": "Vestiges",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278113/original.png",
+      "synopsis": "After their fight with the Nomu, Hawks and Endeavor return to daily life, and Izuku dreams of One For All...\n\n(Source: Crunchyroll)",
+      "airdate": "2021-04-03",
+      "markers": [],
+      "external_id": "278113"
+    },
+    {
+      "n": 3,
+      "title": "Clash! Class A vs. Class B!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278114/original.png",
+      "synopsis": "Class A and Class B are joined by a special guest as they battle it out during their joint combat training.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-04-10",
+      "markers": [],
+      "external_id": "278114"
+    },
+    {
+      "n": 4,
+      "title": "Make It Happen, Shinso!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278115/original.png",
+      "synopsis": "The Class A team tries to put Shinso and his new equipment to good use in the first match against Class B.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-04-17",
+      "markers": [],
+      "external_id": "278115"
+    },
+    {
+      "n": 5,
+      "title": "Operation New Improv Moves",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278116/original.png",
+      "synopsis": "It's darkness versus darkness as Tokoyami and Kuroiro face off in the second match of the class battles!\n\n(Source: Crunchyroll)",
+      "airdate": "2021-04-24",
+      "markers": [],
+      "external_id": "278116"
+    },
+    {
+      "n": 6,
+      "title": "Foresight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278119/original.png",
+      "synopsis": "Separated from her team, Yaoyorozu's leadership skills are put to the test in the second match of the class battles.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-05-01",
+      "markers": [],
+      "external_id": "278119"
+    },
+    {
+      "n": 7,
+      "title": "Match 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278120/original.png",
+      "synopsis": "In the third match of the class battles, Honenuki leads the Class B team against a well-balanced Class A team.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-05-08",
+      "markers": [],
+      "external_id": "278120"
+    },
+    {
+      "n": 8,
+      "title": "Match 3 - Conclusion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278135/original.png",
+      "synopsis": "It's still anybody's game as the third match continues with an endurance battle between Todoroki and Tetsutetsu.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-05-15",
+      "markers": [],
+      "external_id": "278135"
+    },
+    {
+      "n": 9,
+      "title": "Early Bird",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278139/original.png",
+      "synopsis": "Bakugo shows a different side of himself in the fourth team match as the class battles continue.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-05-22",
+      "markers": [],
+      "external_id": "278139"
+    },
+    {
+      "n": 10,
+      "title": "That Which Is Inherited",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278143/original.png",
+      "synopsis": "Midoriya and Shinso face off for the first time since the sports festival in the last fight of the class battles.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-05-29",
+      "markers": [],
+      "external_id": "278143"
+    },
+    {
+      "n": 11,
+      "title": "Our Brawl",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278145/original.png",
+      "synopsis": "It's an all-out brawl as the last two teams from Class A and Class B fight it out to the finish!\n\n(Source: Crunchyroll)",
+      "airdate": "2021-06-05",
+      "markers": [],
+      "external_id": "278145"
+    },
+    {
+      "n": 12,
+      "title": "The New Power and All For One",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278148/original.png",
+      "synopsis": "As the class battles conclude, Midoriya works with All Might and Bakugo on learning more about his new power.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-06-12",
+      "markers": [],
+      "external_id": "278148"
+    },
+    {
+      "n": 13,
+      "title": "Have a Merry Christmas!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/278154/original.jpg",
+      "synopsis": "It's Christmas at U.A. and the Class 1-A students celebrate with a Christmas party.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-06-19",
+      "markers": [],
+      "external_id": "278154"
+    },
+    {
+      "n": 14,
+      "title": "Off to Endeavor's Agency!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/298589/original.png",
+      "synopsis": "Hawks acts strange when he meets Endeavor and his work study students on their way to Endeavor Agency.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-06-26",
+      "markers": [],
+      "external_id": "298589"
+    },
+    {
+      "n": 15,
+      "title": "One Thing at a Time",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/298590/original.png",
+      "synopsis": "As the villains continue to move behind the scenes, Endeavor helps his work-study students with the next steps in their training.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-07-10",
+      "markers": [],
+      "external_id": "298590"
+    },
+    {
+      "n": 16,
+      "title": "Long Time No See, Selkie",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/298591/original.png",
+      "synopsis": "Ryukyu brings her work study students with her when Selkie asks her to team up with him.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-07-17",
+      "markers": [],
+      "external_id": "298591"
+    },
+    {
+      "n": 17,
+      "title": "The Hellish Todoroki Family",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/298592/original.png",
+      "synopsis": "Endeavor brings his work study students over for dinner at Fuyumi's request but faces awkward conversations at home.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-07-24",
+      "markers": [],
+      "external_id": "298592"
+    },
+    {
+      "n": 18,
+      "title": "The Unforgiven",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/298593/original.png",
+      "synopsis": "One of Endeavor's biggest fans shows up to settle some unfinished business, and he expects far more than an autograph.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-07-31",
+      "markers": [],
+      "external_id": "298593"
+    },
+    {
+      "n": 19,
+      "title": "More of a Hero Than Anyone",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/298594/original.png",
+      "synopsis": "When an unsettling discovery is made regarding Kurogiri, Aizawa and Present Mic are summoned to interrogate him.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-08-14",
+      "markers": [],
+      "external_id": "298594"
+    },
+    {
+      "n": 20,
+      "title": "My Villain Academia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/298595/original.jpg",
+      "synopsis": "A series of surprise encounters helps give Shigaraki a new sense of direction for the League of Villains.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-08-21",
+      "markers": [],
+      "external_id": "298595"
+    },
+    {
+      "n": 21,
+      "title": "Revival Party",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/298596/original.png",
+      "synopsis": "The League of Villains waits for Gigantomachia to wake up as they clash with the Meta Liberation Army.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-08-28",
+      "markers": [],
+      "external_id": "298596"
+    },
+    {
+      "n": 22,
+      "title": "Sad Man's Parade",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/298597/original.png",
+      "synopsis": "As Twice tries to save Toga, he thinks back on his past and makes a realization that helps him overcome it.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-09-04",
+      "markers": [],
+      "external_id": "298597"
+    },
+    {
+      "n": 23,
+      "title": "Tenko Shimura: Origin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/298598/original.png",
+      "synopsis": "Memories from Shigaraki's past as Tenko Shimura resurface as he confronts Re-Destro.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-09-11",
+      "markers": [],
+      "external_id": "298598"
+    },
+    {
+      "n": 24,
+      "title": "Tomura Shigaraki: Origin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/298599/thumbnail/a4cae69c8f8f32f40e54542cbcdd4209.jpg",
+      "synopsis": "Shigaraki remembers his first encounter with All For One during the climax of his battle with Re-Destro.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-09-18",
+      "markers": [],
+      "external_id": "298599"
+    },
+    {
+      "n": 25,
+      "title": "The High, Deep Blue Sky",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/298600/thumbnail/eab498a9815a598f90edd9ff1fd37e12.jpg",
+      "synopsis": "Both sides prepare for the confrontation between the heroes and the Paranormal Liberation Front as Class 1-A finishes their first year of high school.\n\n(Source: Crunchyroll)",
+      "airdate": "2021-09-25",
+      "markers": [],
+      "external_id": "298600"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE REVO",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I",
+      "artist": "BUMP OF CHICKEN",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Homunculus",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gift",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE DAY",
+      "artist": "Porno Graffitti",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tagatame (誰我為)",
+      "artist": "TK from Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubomi (蕾)",
+      "artist": "Omoinotake",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "SKETCH",
+      "artist": "Kiro Akiyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Empathy",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "No.1",
+      "artist": "DISH//",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ashiato (足跡)",
+      "artist": "the peggies",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Higher Ground",
+      "artist": "sumika",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Polaris",
+      "artist": "BLUE ENCOUNT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Koukai no Uta",
+      "artist": "Sayuri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Long Hope Philia (ロングホープ・フィリア)",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Odd Future",
+      "artist": "UVERworld",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Update",
+      "artist": "miwa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dakara, Hitori ja nai (だから、ひとりじゃない)",
+      "artist": "Little Glee Monster",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Day",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Curtain Call",
+      "artist": "Yūri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rokutousei (六等星)",
+      "artist": "Zarame",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Bokura no",
+      "artist": "Eve",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Uso ja nai (嘘じゃない)",
+      "artist": "Soushi Sakiyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Starmarker",
+      "artist": "KANA-BOON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Make my story",
+      "artist": "Lenny Code Fiction",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Sora ni Utaeba (空に歌えば)",
+      "artist": "Amazarashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Datte Atashi no Hero (だってアタシのヒーロー.)",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": "4"
+    }
+  ],
+  "relations": []
+}

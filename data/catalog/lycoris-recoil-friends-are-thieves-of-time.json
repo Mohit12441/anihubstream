@@ -1,0 +1,110 @@
+{
+  "id": "lycoris-recoil-friends-are-thieves-of-time",
+  "title": "Lycoris Recoil -Friends are thieves of time.-",
+  "native": "リコリス・リコイル Friends are thieves of time.",
+  "year": 2025,
+  "rating": 7.7,
+  "season": "Spring 2025",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx179706-NvVrmMxnDatB.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx179706-NvVrmMxnDatB.jpg",
+  "accent": "#e45043",
+  "synopsis": "A series of shorts showing the daily lives of Chisato, Takina, and others employed in Cafe LycoReco.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "lycoris-recoil:-friends-are-thieves-of-time.-0eupqi",
+    "mal": 59369,
+    "anilist": 179706,
+    "kitsu": 49069
+  },
+  "skip_key_id": 59369,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": null,
+  "search_text": "lycoris recoil friends are thieves of time リコリス リコイル friends are thieves of time ona finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Take it easy",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b9f3e08145a45aaa7ebe3f303a7413ee1744804109_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370831"
+    },
+    {
+      "n": 2,
+      "title": "Miles away",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/be1736ce2d66de9b9a45a87c9a53d3101745385971_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370832"
+    },
+    {
+      "n": 3,
+      "title": "Scintillation of genius",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a5cfd5b9436af266707b5dcd8f3832621746005062_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370833"
+    },
+    {
+      "n": 4,
+      "title": "Watch out!",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6058f343b95f7e91beae6874701072ff1746616596_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370834"
+    },
+    {
+      "n": 5,
+      "title": "Bittersweet First Love",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/8997b92892c59776031d7ce900892bbc1747222115_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370835"
+    },
+    {
+      "n": 6,
+      "title": "Brief respite",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/332281bd6e8c18bab1ef705b698683de1747805156_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370836"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,330 @@
+{
+  "id": "mieruko-chan",
+  "title": "Mieruko-chan",
+  "native": "見える子ちゃん",
+  "year": 2021,
+  "rating": 7.2,
+  "season": "Fall 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx131083-sKGHkpVDksaZ.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx131083-sKGHkpVDksaZ.png",
+  "accent": "#93c9e4",
+  "synopsis": "She can see dead people…she just chooses to ignore them. That’s Miko’s plan, anyway, but it doesn’t seem to be working for her in this love letter to the horror genre that will send shivers down your spine—and occasionally tickle your funny bone.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44185,
+    "anilist": 131083,
+    "mal": 48483,
+    "hianime": "mieruko-chan-ruvyu8"
+  },
+  "skip_key_id": 48483,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 08:43:21",
+  "search_text": "mieruko chan 見える子ちゃん tv finished",
+  "genres": [
+    "comedy",
+    "horror",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Can You See Them?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/948262533c0c8f5209d0eb6b00636bba1655118881_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 190,
+          "end": 280
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "298786"
+    },
+    {
+      "n": 2,
+      "title": "She Totally Sees Them",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/8af039047319c1e4efb499e22110a4bd1655118966_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 85,
+          "end": 175
+        }
+      ],
+      "external_id": "298787"
+    },
+    {
+      "n": 3,
+      "title": "She Still Sees Them",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/508f9d7aa891df159f29b13a43a271971655119095_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 97,
+          "end": 187
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1299,
+          "end": 1380
+        }
+      ],
+      "external_id": "309272"
+    },
+    {
+      "n": 4,
+      "title": "Yep, She Sees Them",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/476546db759777b07a8d1506cf01abc81655119265_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1227,
+          "end": 1316
+        }
+      ],
+      "external_id": "309273"
+    },
+    {
+      "n": 5,
+      "title": "She Sees Them, Too",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/58544c70e0c359c15960c9bb9913782a1655119398_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 166,
+          "end": 256
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1303,
+          "end": 1380
+        }
+      ],
+      "external_id": "309274"
+    },
+    {
+      "n": 6,
+      "title": "She Sees Real Crazy Ones",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0e9b261a0cff61c734953a01019b3f181655119571_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 125,
+          "end": 216
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1362
+        }
+      ],
+      "external_id": "309275"
+    },
+    {
+      "n": 7,
+      "title": "Did You See That?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/dd4f839226762196fcbd7f7358ea027b1655119752_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 99,
+          "end": 189
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1250,
+          "end": 1340
+        }
+      ],
+      "external_id": "309276"
+    },
+    {
+      "n": 8,
+      "title": "The Things She Sees",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/f740fb70db9a5313a8f6d436d4a6b5a11655119756_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 76,
+          "end": 166
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1243,
+          "end": 1333
+        }
+      ],
+      "external_id": "309277"
+    },
+    {
+      "n": 9,
+      "title": "Things She's Seen Before",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ab9b9e77c52663c4de0bed6c1e523a881655119867_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 119,
+          "end": 209
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1243,
+          "end": 1333
+        }
+      ],
+      "external_id": "309278"
+    },
+    {
+      "n": 10,
+      "title": "Don't Look",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e91a89635516586bee8d65224130d04b1655119988_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 174,
+          "end": 266
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1236,
+          "end": 1326
+        }
+      ],
+      "external_id": "309279"
+    },
+    {
+      "n": 11,
+      "title": "She Looks",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c4f5e1687f3963fab3f0281a39878ae61655120106_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 174,
+          "end": 265
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "309280"
+    },
+    {
+      "n": 12,
+      "title": "The Girl Who Sees, Mieruko-chan",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/12b7a1e6f03fa360079190551a16702c1655120229_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "309281"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mienai kara ne!?",
+      "artist": "Sora Amamiya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mita na? Mita yo ne?? Miteru yo ne???",
+      "artist": "Sora Amamiya",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

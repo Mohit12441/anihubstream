@@ -1,0 +1,248 @@
+{
+  "id": "made-in-abyss",
+  "title": "Made in Abyss",
+  "native": "メイドインアビス",
+  "year": 2017,
+  "rating": 8.4,
+  "season": "Summer 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97986-TQ7dCgbS3y5s.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97986-TQ7dCgbS3y5s.jpg",
+  "accent": "#e4c9ae",
+  "synopsis": "The \"Abyss\" is the last unexplored place in the world. Strange and wonderful creatures roam within, and it is full of precious relics that present humans can't recreate. Those that dare to explore the depths are known as \"Cave Raiders.\" An orphan girl named Riko lives on the rim. Her dream is to become a Cave Raider like her mother and solve the mysteries of the cave system. One day, Riko starts exploring the caves and discovers a robot who resembles a human boy.\n\n(Source: Anime News Network, edited)\n\nNote: The last episode aired with a runtime of ~48 minutes as opposed to the standard 24 minute long episode.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "made-in-abyss-s4f968",
+    "mal": 34599,
+    "anilist": 97986,
+    "kitsu": 13273
+  },
+  "skip_key_id": 34599,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "made in abyss メイト インアヒ ス tv finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "fantasy",
+    "horror",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The City of the Great Pit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201744/original.jpg",
+      "synopsis": "While exploring the Abyss, Riko comes across something she has never seen before. How does this new discovery impact her?",
+      "airdate": "2017-07-07",
+      "markers": [],
+      "external_id": "201744"
+    },
+    {
+      "n": 2,
+      "title": "Resurrection Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201745/original.jpg",
+      "synopsis": "Riko and Reg find out more about their past but the question still remains, who or what exactly is Reg?",
+      "airdate": "2017-07-14",
+      "markers": [],
+      "external_id": "201745"
+    },
+    {
+      "n": 3,
+      "title": "Departure",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201746/original.jpg",
+      "synopsis": "Reg goes on his first cave raid! Meanwhile, Riko makes preparations to go into the abyss to find her mother.",
+      "airdate": "2017-07-21",
+      "markers": [],
+      "external_id": "201746"
+    },
+    {
+      "n": 4,
+      "title": "The Edge of the Abyss",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201747/original.jpg",
+      "synopsis": "Riko and Reg start their adventure into the Abyss, while there they run into an unexpected familiar face.",
+      "airdate": "2017-07-28",
+      "markers": [],
+      "external_id": "201747"
+    },
+    {
+      "n": 5,
+      "title": "Incinerator",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201748/original.jpg",
+      "synopsis": "Riko and Reg descend into the Forest of Temptation. What new dangers will they find laying in wait for them there?",
+      "airdate": "2017-08-04",
+      "markers": [],
+      "external_id": "201748"
+    },
+    {
+      "n": 6,
+      "title": "Seeker Camp",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201749/original.jpg",
+      "synopsis": "Reg and Riko make it to the Seeker Camp where they meet Ozen the Immovable, the person who saved Riko all those years ago. But there is more to Ozen than meets the eye.",
+      "airdate": "2017-08-11",
+      "markers": [],
+      "external_id": "201749"
+    },
+    {
+      "n": 7,
+      "title": "The Unmovable Sovereign",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201750/original.jpg",
+      "synopsis": "Ozen reveals more about the Abyss as well as the truth behind Riko's origins. What will happen when Ozen shows her true colors?",
+      "airdate": "2017-08-18",
+      "markers": [],
+      "external_id": "201750"
+    },
+    {
+      "n": 8,
+      "title": "Survival Training",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201751/original.jpg",
+      "synopsis": "Ozen tasks Riko and Reg to survive alone outside the Seeker Camp. Do they come out alive and unscathed? Or does the Abyss have a dirty trick up its sleeve?",
+      "airdate": "2017-08-25",
+      "markers": [],
+      "external_id": "201751"
+    },
+    {
+      "n": 9,
+      "title": "The Great Fault",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201752/original.jpg",
+      "synopsis": "Reg and Riko continue their descent after they leave Ozen's Seeker Camp. Riko's mettle is tested as Reg passes out and she has to fend for herself.",
+      "airdate": "2017-09-01",
+      "markers": [],
+      "external_id": "201752"
+    },
+    {
+      "n": 10,
+      "title": "Poison and the Curse",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201753/original.jpg",
+      "synopsis": "Reg and Riko run into trouble deep in the fourth layer where they meet an interesting creature, but is she friend of foe?",
+      "airdate": "2017-09-08",
+      "markers": [],
+      "external_id": "201753"
+    },
+    {
+      "n": 11,
+      "title": "Nanachi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201754/original.jpg",
+      "synopsis": "Nanachi sends Reg on a mission to find certain items that could possibly save Riko. Meanwhile, Nanachi reveals a little more about themself.",
+      "airdate": "2017-09-15",
+      "markers": [],
+      "external_id": "201754"
+    },
+    {
+      "n": 12,
+      "title": "The True Nature of the Curse",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201755/original.jpg",
+      "synopsis": "Nanachi shows Reg the truth about the Abyss. Meanwhile, Riko is still recovering from her injuries when she has a strange dream.",
+      "airdate": "2017-09-22",
+      "markers": [],
+      "external_id": "201755"
+    },
+    {
+      "n": 13,
+      "title": "The Challengers",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/201756/original.jpg",
+      "synopsis": "Nanachi and Mitty's past is revealed. How did they become what they are and who is responsible for it? Meanwhile, Riko is on the mend after her injuries.",
+      "airdate": "2017-09-29",
+      "markers": [],
+      "external_id": "201756"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Katachi (かたち)",
+      "artist": "Riko Azuna",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Endless Embrace",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Forever Lost",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Forever Lost",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Underground River (opening version ft. Raj Ramayya)",
+      "artist": "Kevin Penkin",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Deep in Abyss",
+      "artist": "Miyu Tomita & Mariya Ise",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tabi no Hidarite, Saihate no Migite",
+      "artist": "Miyu Tomita, Mariya Ise, & Shiori Izawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "reBirth",
+      "artist": "Takeshi Saitou & Kevin Penkin",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

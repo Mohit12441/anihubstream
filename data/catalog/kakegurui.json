@@ -1,0 +1,354 @@
+{
+  "id": "kakegurui",
+  "title": "Kakegurui",
+  "native": "賭ケグルイ",
+  "year": 2017,
+  "rating": 7,
+  "season": "Summer 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b98314-TSJykxVwCCQN.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b98314-TSJykxVwCCQN.jpg",
+  "accent": "#e44328",
+  "synopsis": "During daylight hours, an exclusive, elite private school prepares its illustrious students for careers in business, politics, and high society. But when darkness falls, the halls of this esteemed establishment transform into an underground gambling den where bright-eyed youngsters learn the timeless art of bluffing, backdoor dealings and social manipulation. In this school for the rich and elite, money is power, and the tyrant of the betting books rules with an iron fist. So when the beautiful Yumeko Jabami upsets the academy hierarchy with her voracious appetite for the thrill of the gamble, the entire student body mobilizes to send her house of cards tumbling down.\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Kakegurui xx (2019)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 14172,
+    "anilist": 100876,
+    "mal": 37086,
+    "hianime": "kakegurui-lyygin"
+  },
+  "skip_key_id": 34933,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 02:14:09",
+  "search_text": "kakegurui 賭ケク ルイ tv finished",
+  "genres": [
+    "drama",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A Woman Named Yumeko Jabami",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 118,
+          "end": 214
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1359,
+          "end": 1449
+        }
+      ],
+      "external_id": "200595"
+    },
+    {
+      "n": 2,
+      "title": "A Boring Woman",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 93,
+          "end": 190
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1357,
+          "end": 1447
+        }
+      ],
+      "external_id": "200596"
+    },
+    {
+      "n": 3,
+      "title": "Slit-Eyed Woman",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 186,
+          "end": 282
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1359,
+          "end": 1449
+        }
+      ],
+      "external_id": "200597"
+    },
+    {
+      "n": 4,
+      "title": "The Woman Who Became Livestock",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 148
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1359,
+          "end": 1455
+        }
+      ],
+      "external_id": "200598"
+    },
+    {
+      "n": 5,
+      "title": "The Woman Who Became Human",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 169,
+          "end": 265
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1359,
+          "end": 1455
+        }
+      ],
+      "external_id": "200599"
+    },
+    {
+      "n": 6,
+      "title": "Tempting Woman",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 184,
+          "end": 280
+        }
+      ],
+      "external_id": "200600"
+    },
+    {
+      "n": 7,
+      "title": "Refusing Women",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 111,
+          "end": 207
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1359,
+          "end": 1455
+        }
+      ],
+      "external_id": "200601"
+    },
+    {
+      "n": 8,
+      "title": "Idol Woman",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 66,
+          "end": 162
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1359,
+          "end": 1455
+        }
+      ],
+      "external_id": "200602"
+    },
+    {
+      "n": 9,
+      "title": "The Dreaming Woman",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-09-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 19,
+          "end": 115
+        }
+      ],
+      "external_id": "200603"
+    },
+    {
+      "n": 10,
+      "title": "Selective Woman",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-09-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 23,
+          "end": 119
+        }
+      ],
+      "external_id": "200604"
+    },
+    {
+      "n": 11,
+      "title": "The Woman Who Bets Her Life",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-09-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 166
+        }
+      ],
+      "external_id": "200605"
+    },
+    {
+      "n": 12,
+      "title": "Gambling Woman",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-09-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 155,
+          "end": 251
+        }
+      ],
+      "external_id": "200606"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sono Otome Musou (ソノ乙女ム双)",
+      "artist": "Tomohisa Ishikawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Queens Bluff",
+      "artist": "i☆Ris",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kono Yubi Tomare",
+      "artist": "JUNNA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "AlegriA",
+      "artist": "D-Selections",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Deal with devil",
+      "artist": "Tia",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Koi no Russian Roulette (恋のロシアンルーレット; Russian Roulette of Love)",
+      "artist": "Saori Hayami and Yū Serizawa",
+      "episodes": "9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "LAYon-theLINE",
+      "artist": "D-Selections",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

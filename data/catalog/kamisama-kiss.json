@@ -1,0 +1,323 @@
+{
+  "id": "kamisama-kiss",
+  "title": "Kamisama Kiss",
+  "native": "神様はじめました◎",
+  "year": 2015,
+  "rating": 8.1,
+  "season": "Winter 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/691ee8d006abcc570fb8f200-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/691ee8d006abcc570fb8f200-landscape.webp",
+  "accent": "#aef1f1",
+  "synopsis": "High schooler Nanami Momozono has quite a few problems of late, beginning with her absentee father being in such extreme debt that they lose everything. Downtrodden and homeless, she runs into a man being harassed by a dog. After helping him, she explains her situation, and to her surprise, he offers her his home in gratitude. But when she discovers that said home is a rundown shrine, she tries to leave; however, she is caught by two shrine spirits and a fox familiar named Tomoe. They mistake her for the man Nanami rescued—the land god of the shrine, Mikage. Realizing that Mikage must have sent her there as a replacement god, Tomoe leaves abruptly, refusing to serve a human.\n\nRather than going back to being homeless, Nanami immerses herself in her divine duties. But if she must keep things running smoothly, she will need the help of a certain hot-headed fox. In her fumbling attempt to seek out Tomoe, she lands in trouble and ends up sealing a contract with him. Now the two must traverse the path of godhood together as god and familiar; but it will not be easy, for new threats arise in the form of a youkai who wants to devour the girl, a snake that wants to marry her, and Nanami's own unexpected feelings for her new familiar.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Kamisama Kiss (2012)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7157,
+    "anilist": 14713,
+    "mal": 14713,
+    "hianime": "kamisama-kiss-j3wspf"
+  },
+  "skip_key_id": 25681,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 13:05:21",
+  "search_text": "kamisama kiss 神様はし めました tv finished",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I've Started the 'Being a God' Thing Again",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-01-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 99,
+          "end": 189
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1349,
+          "end": 1380
+        }
+      ],
+      "external_id": "198866"
+    },
+    {
+      "n": 2,
+      "title": "The God Goes to Izumo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 138
+        }
+      ],
+      "external_id": "198867"
+    },
+    {
+      "n": 3,
+      "title": "The God Falls Into the Netherworld",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 24,
+          "end": 114
+        }
+      ],
+      "external_id": "198868"
+    },
+    {
+      "n": 4,
+      "title": "The God Races Across the Netherworld",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 119
+        }
+      ],
+      "external_id": "198869"
+    },
+    {
+      "n": 5,
+      "title": "The God Makes Her Second Romantic Confession",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 6,
+          "end": 96
+        }
+      ],
+      "external_id": "198870"
+    },
+    {
+      "n": 6,
+      "title": "The God Meets a Little Tengu",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "198871"
+    },
+    {
+      "n": 7,
+      "title": "The God Goes to Mount Kurama",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 16,
+          "end": 106
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1352,
+          "end": 1380
+        }
+      ],
+      "external_id": "198872"
+    },
+    {
+      "n": 8,
+      "title": "The God Sneaks in",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 38,
+          "end": 128
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1351,
+          "end": 1380
+        }
+      ],
+      "external_id": "198873"
+    },
+    {
+      "n": 9,
+      "title": "The God Is Blindsided",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 129
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1349,
+          "end": 1380
+        }
+      ],
+      "external_id": "198874"
+    },
+    {
+      "n": 10,
+      "title": "The God Receives a Romantic Confession",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 19,
+          "end": 109
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1328,
+          "end": 1380
+        }
+      ],
+      "external_id": "198875"
+    },
+    {
+      "n": 11,
+      "title": "The God Goes Back to Being a Child",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 60,
+          "end": 150
+        }
+      ],
+      "external_id": "198876"
+    },
+    {
+      "n": 12,
+      "title": "The God Receives a Marriage Proposal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 18,
+          "end": 108
+        }
+      ],
+      "external_id": "170875"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kamisama no Kamisama (神様の神様; God of God)",
+      "artist": "Hanae",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ototoi Oide (おとといおいで;Come Another Day)",
+      "artist": "Hanae",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kamisama Hajimemashita",
+      "artist": "Hanae",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kamisama Onegai",
+      "artist": "Hanae",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kamisama Onegai",
+      "artist": "Daisuke Kishio",
+      "episodes": "10"
+    }
+  ],
+  "relations": []
+}

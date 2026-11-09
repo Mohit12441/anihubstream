@@ -1,0 +1,291 @@
+{
+  "id": "jujutsu-kaisen-the-culling-game-part-1",
+  "title": "JUJUTSU KAISEN Season 3: The Culling Game Part 1",
+  "native": "呪術廻戦 死滅回游 前編",
+  "year": 2026,
+  "rating": 8.6,
+  "season": "Winter 2026",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx172463-LnXqHzt74SJL.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx172463-LnXqHzt74SJL.jpg",
+  "accent": "#78aee4",
+  "synopsis": "After the Shibuya Incident, a deadly jujutsu battle known as the Culling Game orchestrated by Noritoshi Kamo erupts across ten colonies in Japan.\n\nHaunted by guilt over the mass killings in Shibuya and wary of Sukuna’s interest in Fushiguro, Itadori chooses not to return to Jujutsu High. Instead, he teams up with Choso to exorcise the countless cursed spirits unleashed by Noritoshi Kamo.\nAmid this chaos, the Jujutsu Headquarters revokes Yuji Itadori’s suspended death sentence and appoints special-grade sorcerer Yuta Okkotsu as his executioner. \n\nNewly awakened modern sorcerers and resurrected ancient ones, now fighting as players in the Culling Game, collide with conflicting motives, driving the world once more toward an age ruled by jujutsu.\n\n(Source: TOHO Animation)",
+  "rank": null,
+  "trend_rank": 41,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "jujutsu-kaisen:-the-culling-game-part-1-vdna0o",
+    "mal": 57658,
+    "anilist": 172463,
+    "kitsu": 48363
+  },
+  "skip_key_id": 57658,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "jujutsu kaisen season 3 the culling game part 1 呪術廻戦 死滅回游 前編 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Execution",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/362164/thumbnail/87177eeeb00aa33ec9c4159e651352ec.jpg",
+      "synopsis": "While Yuji grapples with the weight of his sins, Naoya Zen'in and Yuta Okkotsu set out to execute him.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-13",
+      "markers": [
+        {
+          "kind": "outro",
+          "start": 1332,
+          "end": 1421,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "362164"
+    },
+    {
+      "n": 2,
+      "title": "One More Time",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/362165/thumbnail/d7879761e157249069b6bbe4521950d1.jpg",
+      "synopsis": "After fighting Yuta, Yuji learns his real objective. Megumi asks for Yuji's help to save his sister.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "362165"
+    },
+    {
+      "n": 3,
+      "title": "About the Culling Game",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/362166/thumbnail/bd7961c0b9006e95e84e44095e3eb93a.jpg",
+      "synopsis": "Itadori and his friends speak with Tengen about Kenjaku's objectives and their plans for the Culling Game.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "362166"
+    },
+    {
+      "n": 4,
+      "title": "Perfect Preparation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/362167/thumbnail/c6c8985317b1849697527967f89a1c52.jpg",
+      "synopsis": "After going to collect their Cursed Tools, Maki awakens her true potential and slaughters the whole Zen'in Clan.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-13",
+      "markers": [],
+      "external_id": "362167"
+    },
+    {
+      "n": 5,
+      "title": "Passion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/362168/thumbnail/4916b25905101c096821b0720136e07c.jpg",
+      "synopsis": "Yaga is executed. Yuji and Fushiguro go to Hakari's fight club hoping to meet him and recruit him.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 381,
+          "end": 469,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1332,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "362168"
+    },
+    {
+      "n": 6,
+      "title": "Cog",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/362169/thumbnail/712ffdf0922f61744f9eb5495ca04a09.jpg",
+      "synopsis": "Fushiguro and Panda fight Kirara to try to persuade them while Yuji attempts to convince Hakari.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 198,
+          "end": 288,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "362169"
+    },
+    {
+      "n": 7,
+      "title": "Tokyo Colony No. 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/362170/thumbnail/aaa4ec7209fe12dc83198f50564f52eb.jpg",
+      "synopsis": "Yuji's group enters two of the colonies and fight the Culling Game's newbie hunters.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 183,
+          "end": 273,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "362170"
+    },
+    {
+      "n": 8,
+      "title": "Tokyo Colony No. 1 - Part 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/362171/thumbnail/718f28e81a3bd20c43b61731a5a99b82.jpg",
+      "synopsis": "Yuji meets Higuruma and tries to persuade him, while Fushiguro is falsely led to Reggie.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "362171"
+    },
+    {
+      "n": 9,
+      "title": "Tokyo Colony No. 1 - Part 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/362172/thumbnail/94d84ff83a3f358791e401a1ef401246.jpg",
+      "synopsis": "Yuji Itadori fights Hiromi Higuruma.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 1,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1229,
+          "end": 1319,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "362172"
+    },
+    {
+      "n": 10,
+      "title": "Tokyo Colony No. 1 - Part 4",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/362173/thumbnail/9b84db7d59f390c3e8b6631582ae07b9.jpg",
+      "synopsis": "Takaba handles the minions while Fushiguro has his showdown with Reggie.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "362173"
+    },
+    {
+      "n": 11,
+      "title": "Tokyo Colony No. 1 - Part 5",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/362174/thumbnail/68d8ee283979d2adee9e7a4b14c4ef41.jpg",
+      "synopsis": "Fushiguro deploys his Domain Expansion in his climactic fight against Reggie.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-13",
+      "markers": [],
+      "external_id": "362174"
+    },
+    {
+      "n": 12,
+      "title": "Sendai Colony",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/362175/thumbnail/44663849ac9263b41b86081acd90ce6a.jpg",
+      "synopsis": "Okkotsu fights three powerful sorcerers in Sendai Colony.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-13",
+      "markers": [],
+      "external_id": "362175"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "AIZO",
+      "artist": "King Gnu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yoake no Uta",
+      "artist": "jo0ji",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

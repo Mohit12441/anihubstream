@@ -1,0 +1,698 @@
+{
+  "id": "kaleido-star",
+  "title": "Kaleido Star",
+  "native": "カレイドスター",
+  "year": 2003,
+  "rating": 7.6,
+  "season": "Spring 2003",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx427-nzHOyyTX2jLO.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx427-nzHOyyTX2jLO.jpg",
+  "accent": "#5daef1",
+  "synopsis": "Sora, a young girl from Japan, comes to America in search of her dream. She wants, with all her heart, to be a member of the Kaleido Stage, a world famous circus, with a combination of musicals, acrobatics and magical effects. With the help of her friends, she struggles to make this dream come true.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kaleido-star-fj0xj1",
+    "mal": 427,
+    "anilist": 427,
+    "kitsu": 391
+  },
+  "skip_key_id": 427,
+  "skip_key_space": "mal",
+  "episode_total": 51,
+  "added_at": null,
+  "search_text": "kaleido star カレイト スター tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "My Amazing Stage Debut!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163656/original.jpeg",
+      "synopsis": "Sora dreams of becoming a star of the Kaleido Stage, but when a scumbag steals her luggage and makes her miss the only audition of the year, it will take a miracle - or an accident - for her dream to come true!",
+      "airdate": "2003-04-03",
+      "markers": [],
+      "external_id": "163656"
+    },
+    {
+      "n": 2,
+      "title": "My Amazing and Lonely Challenge!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163660/original.jpeg",
+      "synopsis": "Sora is given one week to learn the death-defying Golden Phoenix: the signature move of the Kaleido Stage's leading lady. If she fails, she'll be forced to pack up and return home forever!",
+      "airdate": "2003-04-17",
+      "markers": [],
+      "external_id": "163660"
+    },
+    {
+      "n": 3,
+      "title": "The Amazing Distant Stage",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163664/original.jpeg",
+      "synopsis": "The Kaleido Stage is putting on a fabulous production of Cinderella, but instead of performing on stage, Sora is forced to dress up like a clown and hand out toys during intermission. Can she contain her disappointment?",
+      "airdate": "2003-04-24",
+      "markers": [],
+      "external_id": "163664"
+    },
+    {
+      "n": 4,
+      "title": "Try Hard and You'll Get an Amazing Chance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163665/original.jpeg",
+      "synopsis": "Sora gets a second chance to appear in the upcoming production of Cinderella, but she'll need to master a daring, three-person technique known as the Triple Illusion to earn a spot on stage.",
+      "airdate": "2003-05-01",
+      "markers": [],
+      "external_id": "163665"
+    },
+    {
+      "n": 5,
+      "title": "My Amazingly Distant Family",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163685/original.jpeg",
+      "synopsis": "Sora and her friends are stung by their failures on stage and a nasty review in the local paper. As if things couldn't get any worse, Sora's dad is about to pay her a visit, and he's no fan of her Kaleido Stage shenanigans.",
+      "airdate": "2003-05-05",
+      "markers": [],
+      "external_id": "163685"
+    },
+    {
+      "n": 6,
+      "title": "The Amazing Seal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163691/original.jpeg",
+      "synopsis": "Pets may be forbidden in her dorm, but when Sora stumbles upon an abandoned seal, she can't resist the urge to bring the little guy home with her! Does her new pet have what it takes to be a new breed of Kaleido Star?",
+      "airdate": "2003-05-08",
+      "markers": [],
+      "external_id": "163691"
+    },
+    {
+      "n": 7,
+      "title": "The Amazing Girl Who Doesn't Smile",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163701/original.jpeg",
+      "synopsis": "When a Diablo prodigy blows her big shot at becoming a Kaleido Stage regular, Sora is given the task of helping the young girl rediscover her love of performing!",
+      "airdate": "2003-05-15",
+      "markers": [],
+      "external_id": "163701"
+    },
+    {
+      "n": 8,
+      "title": "An Amazing Star Even In Tough Times",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163704/original.jpeg",
+      "synopsis": "Layla appears to have everything a girl could want. She's rich, she's gorgeous, and she's the biggest star in the Kaleido Stage universe! But when her dad misses her birthday, it'll take Sora to cheer her up!",
+      "airdate": "2003-05-22",
+      "markers": [],
+      "external_id": "163704"
+    },
+    {
+      "n": 9,
+      "title": "My Amazing Challenge for the Lead Role",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163705/original.jpeg",
+      "synopsis": "When Sora suffers a devastating fall during an audition for the new, mermaid-themed production, she'll need the help of a close friend and a martial arts expert to regain her competitive edge!",
+      "airdate": "2003-05-29",
+      "markers": [],
+      "external_id": "163705"
+    },
+    {
+      "n": 10,
+      "title": "Facing an Amazing Wall",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163711/original.jpeg",
+      "synopsis": "Sora finally landed the part that could make her wildest dreams come true, but if she can't figure out a way to breathe new life into the role of a broken-hearted mermaid, her days as a leading lady will be numbered!",
+      "airdate": "2003-06-05",
+      "markers": [],
+      "external_id": "163711"
+    },
+    {
+      "n": 11,
+      "title": "Anna's Not So Amazing Father",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163712/original.jpeg",
+      "synopsis": "Painful memories from Anna's childhood resurface when her dad - a struggling standup comedian - performs at a local comedy club. Can this father-daughter duo find a way to laugh at the past?",
+      "airdate": "2003-06-12",
+      "markers": [],
+      "external_id": "163712"
+    },
+    {
+      "n": 12,
+      "title": "An Amazingly Hot New Production",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163715/original.jpeg",
+      "synopsis": "Sora has always idolized Layla, and now, she's got a chance to star alongside her hero in the newest Kaleido Stage production. There's just one thing standing in her way: a flaming tightrope of doom!",
+      "airdate": "2003-06-19",
+      "markers": [],
+      "external_id": "163715"
+    },
+    {
+      "n": 13,
+      "title": "The Amazing Competition Calls Up a Storm",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163717/original.jpeg",
+      "synopsis": "Layla moves in with Sora so the two leading ladies can learn to perform as one. When conventional training proves useless, the girls take their routine to the high seas and put on a show in the middle of a storm!",
+      "airdate": "2003-06-26",
+      "markers": [],
+      "external_id": "163717"
+    },
+    {
+      "n": 14,
+      "title": "Mysterious Amazing Circus",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163720/original.jpeg",
+      "synopsis": "When Sora is sent on a special assignment to perform with a travelling circus, she learns a valuable lesson about making the audience happy - no matter what role you have to play.",
+      "airdate": "2003-07-03",
+      "markers": [],
+      "external_id": "163720"
+    },
+    {
+      "n": 15,
+      "title": "The Diva's Amazing Love",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163728/original.jpeg",
+      "synopsis": "Sarah is courted by a music producer who wants to make her a star, but Sora can't understand why she'd want to leave Kaleido Stage - or how Kalos could let her go.",
+      "airdate": "2003-07-10",
+      "markers": [],
+      "external_id": "163728"
+    },
+    {
+      "n": 16,
+      "title": "An Amazing Sinister Rumor",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163731/original.jpeg",
+      "synopsis": "A bossy friend from Japan makes Sora nervous when she pays the Kaleido Star a surprise visit. Meanwhile, rumors about a possible Kaleido closing put the cast on edge.",
+      "airdate": "2003-07-17",
+      "markers": [],
+      "external_id": "163731"
+    },
+    {
+      "n": 17,
+      "title": "Fire It Up! Amazing Mia",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163733/original.jpeg",
+      "synopsis": "Mia is given one week to write the show that will save Kaleido Stage, and Yuri finally tells Sora the painful motive behind his attempt to sabotage the man who made him a star.",
+      "airdate": "2003-07-24",
+      "markers": [],
+      "external_id": "163733"
+    },
+    {
+      "n": 18,
+      "title": "Yuri's Amazing Trap",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163737/original.jpeg",
+      "synopsis": "Mia's new show is a hit with the audience, but Kaleido Stage isn't out of the woods, yet. Now that Yuri's in charge, Sora and her friends must prepare for what could be their last performance ever.",
+      "airdate": "2003-07-31",
+      "markers": [],
+      "external_id": "163737"
+    },
+    {
+      "n": 19,
+      "title": "Amazing Family Ties",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163743/original.jpeg",
+      "synopsis": "Sora's search for a new place to live is interrupted by big news from Japan: her parents are going to have a baby! Will this new addition to her family put an end to the leading lady's performing career?",
+      "airdate": "2003-08-07",
+      "markers": [],
+      "external_id": "163743"
+    },
+    {
+      "n": 20,
+      "title": "An Amazing Change from Zero to Hero",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163749/original.jpeg",
+      "synopsis": "Miss Sarah lands the girls a gig at an amusement park, and Sora reassembles the old gang for one more shot at stardom! When the show finally starts, a masked performer swoops in and steals the spotlight!",
+      "airdate": "2003-08-14",
+      "markers": [],
+      "external_id": "163749"
+    },
+    {
+      "n": 21,
+      "title": "The Amazing Mystery Star",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163753/original.jpeg",
+      "synopsis": "Thanks to the masked acrobat, Sora and her friends are offered a contract at the amusement park. There's just one problem: the park owner wants the mysterious performer center stage, but no one knows who she is!",
+      "airdate": "2003-08-21",
+      "markers": [],
+      "external_id": "163753"
+    },
+    {
+      "n": 22,
+      "title": "The Amazing Resolve Beneath the Mask",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163758/original.jpeg",
+      "synopsis": "Yuri sabotages the Freedom Lights performance company, forcing them to travel to Canada for a fresh start. Layla wants to be there for her friends, but will she risk disappointing her father?",
+      "airdate": "2003-08-28",
+      "markers": [],
+      "external_id": "163758"
+    },
+    {
+      "n": 23,
+      "title": "The Legendary Amazing Maneuver",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163761/original.jpeg",
+      "synopsis": "With a little help from The Fool, Layla and Sora hatch a plan to beat Yuri at his own game. If they can learn the Legendary Great Maneuver in one month, Kalos will regain control of Kaledio Stage!",
+      "airdate": "2003-09-04",
+      "markers": [],
+      "external_id": "163761"
+    },
+    {
+      "n": 24,
+      "title": "The Amazing Intensive Training Continues",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163763/original.jpeg",
+      "synopsis": "Layla and Sora continue their super-intensive training as they prepare to attempt the death-defying Legendary Great Maneuver, but when Sora's confidence is shaken, it could spell the end for them both!",
+      "airdate": "2003-09-11",
+      "markers": [],
+      "external_id": "163763"
+    },
+    {
+      "n": 25,
+      "title": "An Amazing Bond",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163767/original.jpeg",
+      "synopsis": "The girls return to Kaledio Stage to continue rehearsing for the Legendary Great Maneuver, but after a heated argument with Yuri, Layla is no longer able to hide her devastating injury!",
+      "airdate": "2003-09-18",
+      "markers": [],
+      "external_id": "163767"
+    },
+    {
+      "n": 26,
+      "title": "An Amazing Comeback",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163771/original.jpeg",
+      "synopsis": "Despite her very serious injury, Layla is determined to give the greatest performance of her life! All she needs is Sora by her side - and a little help from the mischievous Fool!",
+      "airdate": "2003-09-25",
+      "markers": [],
+      "external_id": "163771"
+    },
+    {
+      "n": 27,
+      "title": "Amazing Prologue To Stardom (Part 1)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Fool, the mysterious spirit of the theater, narrates this stirring recap of Sora’s initiation into the high-flying world of Kaleido Stage!",
+      "airdate": "2003-10-04",
+      "markers": [],
+      "external_id": "163776"
+    },
+    {
+      "n": 28,
+      "title": "Amazing Prologue To Stardom (Part 2)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Fool continues the recap of Sora’s early days with Kaleido Stage, including her partnership with Layla and her daring performance of the Legendary Great Maneuver.",
+      "airdate": "2003-10-11",
+      "markers": [],
+      "external_id": "163781"
+    },
+    {
+      "n": 29,
+      "title": "An Amazing New Rival",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "After Layla retires, Sora feels added pressure to perform under the spotlight, and it doesn’t help that Kaleido Stage’s newest leading man is giving her the cold shoulder!",
+      "airdate": "2003-10-18",
+      "markers": [],
+      "external_id": "163784"
+    },
+    {
+      "n": 30,
+      "title": "The Amazing Newcomer",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Layla’s plans to win over Leon - and her fiery new rival - by throwing a welcome party are interrupted by a surprise visit from the young diablo champion, Rosetta!",
+      "airdate": "2003-10-25",
+      "markers": [],
+      "external_id": "163790"
+    },
+    {
+      "n": 31,
+      "title": "The Amazing Passionate Rival",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sora and May both want to star alongside Leon in the new vampire-themed production, but there’s only room for one leading lady. Whoever can master the deadly screw spin first will win the role of a lifetime!",
+      "airdate": "2003-11-01",
+      "markers": [],
+      "external_id": "163796"
+    },
+    {
+      "n": 32,
+      "title": "Amazing Match on Ice",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The fierce competition between Sora and May shifts from the high wire to the skating rink as the determined performers vie for the right to play Leon’s love interest in the new show!",
+      "airdate": "2003-11-08",
+      "markers": [],
+      "external_id": "163798"
+    },
+    {
+      "n": 33,
+      "title": "Amazing Rosetta of Sweat and Tears",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Rosetta has three days to become a high-flying trapeze artist, or she’ll have to quit Kaleido Stage. Lucky for her, she’s got Sora for a teacher!",
+      "airdate": "2003-11-15",
+      "markers": [],
+      "external_id": "163801"
+    },
+    {
+      "n": 34,
+      "title": "The Ever Amazing Miss Layla",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sora’s all set for an off-Broadway reunion with the great Layla Hamilton, but May bursts onto the scene with intentions to steal the show. Can Sora recover her competitive edge in time to shine on stage?",
+      "airdate": "2003-11-22",
+      "markers": [],
+      "external_id": "163804"
+    },
+    {
+      "n": 35,
+      "title": "Marion's Amazing Debut",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sora and her friends are determined to build an amazing stage just for kids, but first they must convince Marion to return to the high-flying life of a trampoline artist!",
+      "airdate": "2003-11-29",
+      "markers": [],
+      "external_id": "163809"
+    },
+    {
+      "n": 36,
+      "title": "Amazing Training With Leon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "May and Sora compete for the honor of performing alongside Leon at the International Circus Festival, but the surly trapeze artist’s special training could destroy them both!",
+      "airdate": "2003-12-06",
+      "markers": [],
+      "external_id": "163817"
+    },
+    {
+      "n": 37,
+      "title": "The Two Amazing Demons",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "A moment’s hesitation threatens to ruin Sora’s chances of performing at the International Circus Festival, and May tries to get back in the game by inventing a devilish new maneuver!",
+      "airdate": "2003-12-13",
+      "markers": [],
+      "external_id": "163825"
+    },
+    {
+      "n": 38,
+      "title": "Amazing Angelic Counterattack",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sora is crushed when Leon chooses May as his partner, but her dreams of competing in the International Circus Festival may not be dead yet. A handsome face from her past has the power to fix everything!",
+      "airdate": "2003-12-20",
+      "markers": [],
+      "external_id": "163828"
+    },
+    {
+      "n": 39,
+      "title": "Cruel Amazing Festival",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Yuri and Sora are working hard to get ready for the performance of a lifetime, but will Sora’s lack of fundamentals - and a pair of cutthroat competitors - spoil their chances at victory?",
+      "airdate": "2003-12-27",
+      "markers": [],
+      "external_id": "163830"
+    },
+    {
+      "n": 40,
+      "title": "Amazing and Sad Homecoming",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "After her embarrassing performance at the International Circus Festival, Sora runs away from Kaleido Stage and moves back in with her parents. Can a heart-to-heart chat with an old friend convince her not to give up on her dreams?",
+      "airdate": "2004-01-10",
+      "markers": [],
+      "external_id": "163835"
+    },
+    {
+      "n": 41,
+      "title": "My Amazing Fresh Start",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sora returns to Kaleido Stage with a new dream: creating a competition-free show that everyone can enjoy! Unfortunately, May and Leon have other plans for the former leading lady.",
+      "airdate": "2004-01-17",
+      "markers": [],
+      "external_id": "163837"
+    },
+    {
+      "n": 42,
+      "title": "An Amazingly Humiliating Performance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Leon’s strange behavior continues as he mistakes Sora for a mysterious woman from his past. When he drags her into the spotlight mid-performance, a tragic accident shocks the audience!",
+      "airdate": "2004-01-24",
+      "markers": [],
+      "external_id": "163843"
+    },
+    {
+      "n": 43,
+      "title": "Mr. Policeman's Amazing Proposal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Ken finally finds the courage to ask Sora out on a date, but his plan to win her heart is interrupted by a lovesick police man and the world’s most unlucky bank robber!",
+      "airdate": "2004-01-31",
+      "markers": [],
+      "external_id": "163847"
+    },
+    {
+      "n": 44,
+      "title": "Launching An Amazing Smile!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "A performance at a car dealership gets Sora back on stage, May learns the importance of a smile, and Rosetta makes her long-awaited trapeze debut!",
+      "airdate": "2004-02-07",
+      "markers": [],
+      "external_id": "163849"
+    },
+    {
+      "n": 45,
+      "title": "Leon's Amazing Past",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The Kaleido Stage crew travels to Paris, and Rosetta begins working with a mysterious trapeze teacher. When the aging master reveals the truth about Leon’s past, Sora becomes determined to perfect the Angel’s Manuever!",
+      "airdate": "2004-02-14",
+      "markers": [],
+      "external_id": "163853"
+    },
+    {
+      "n": 46,
+      "title": "The Amazing Fated Duel",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sora lands the starring role in Kaleido Stage’s new production of Swan Lake, but her leading man has yet to be determined. Yuri and Leon draw swords and take to the air as they battle for the right to fly alongside her!",
+      "airdate": "2004-02-21",
+      "markers": [],
+      "external_id": "163857"
+    },
+    {
+      "n": 47,
+      "title": "Flight of the Amazing Angel",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sora’s doubts about her ability to perfect the Angel’s Maneuver are put to rest by a chance meeting with a special seeing-eye dog and a former Kaleido Star!",
+      "airdate": "2004-02-28",
+      "markers": [],
+      "external_id": "163860"
+    },
+    {
+      "n": 48,
+      "title": "The Amazing Injured Swan",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "A lack of balance threatens to derail Sora’s attempt to perfect the Angel’s Maneuver, and Leon is ready to throw in the towel. Will the leading lady give up on her dream - or push her body to the breaking point?",
+      "airdate": "2004-03-06",
+      "markers": [],
+      "external_id": "163864"
+    },
+    {
+      "n": 49,
+      "title": "Our Amazing Futures",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "While Sora and Leon continue their special training, May and Rosetta form an unlikely partnership. Meanwhile, a face from the past emerges from the shadows to steal Sora’s spotlight.",
+      "airdate": "2004-03-13",
+      "markers": [],
+      "external_id": "163868"
+    },
+    {
+      "n": 50,
+      "title": "A Most Amazing and Inescapable Showdown",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The great Layla Hamilton returns to the stage to challenge Sora for the privilege of performing the Angel’s Maneuver in the upcoming production of Swan Lake!",
+      "airdate": "2004-03-20",
+      "markers": [],
+      "external_id": "163872"
+    },
+    {
+      "n": 51,
+      "title": "To the Amazing Promised Place",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Opening night has arrived, and Sora takes the stage on a mission to make her wildest dreams come true. If she successfully performs the Angel’s Maneuver, she’ll finally be a true Kaleido Star!",
+      "airdate": "2004-03-27",
+      "markers": [],
+      "external_id": "163877"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ray of Light",
+      "artist": "Sayaka Ohara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Golden Phoenix~Nando demo~",
+      "artist": "Sayaka Ohara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yakusoku no Basho e",
+      "artist": "Kaleido Stars",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sora no Theme",
+      "artist": "Mina Kubota",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Blanc et Noir",
+      "artist": "Sora Naegino & Rosetta Passel",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tattoo Kiss",
+      "artist": "r.o.r/s",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "TAKE IT SHAKE IT",
+      "artist": "Sugar",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "real Identity",
+      "artist": "Sugar",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Yakusoku no basho e",
+      "artist": "Chihiro Yonekura",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Boku wa kokoni iru",
+      "artist": "SOPHIA",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Tattoo Kiss",
+      "artist": "r.o.r/s",
+      "episodes": "27-51"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Escape",
+      "artist": "r.o.r/s",
+      "episodes": "27-50"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Yakusoku no basho e",
+      "artist": "Chihiro Yonekura with Kaleido Stars",
+      "episodes": "51"
+    }
+  ],
+  "relations": []
+}

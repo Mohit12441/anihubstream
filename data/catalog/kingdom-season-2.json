@@ -1,0 +1,627 @@
+{
+  "id": "kingdom-season-2",
+  "title": "Kingdom Season 2",
+  "native": "キングダム 第2シリーズ",
+  "year": 2013,
+  "rating": 8,
+  "season": "Summer 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx17389-KcR0AiBMuvzg.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx17389-KcR0AiBMuvzg.png",
+  "accent": "#e4c9ae",
+  "synopsis": "A year after the devastating battle against the formidable Zhao, the State of Qin has returned its focus to pursuing King Ying Zheng's ambition of conquering the other six states and unifying China. Their next target is Wei, a smaller state which stands as a geographic stepping stone for the sake of conquest.\n\nXin, now a three hundred man commander of the swiftly rising Fei Xin Unit, continues to seek out lofty achievements in order to garner recognition for himself and his soldiers, motivated by those previously lost in battle. In the preliminary battles ahead of Qin's invasion of Wei, Xin finds competition in other young commanders who are of a higher social status than him. Back in Qin, the royal palace faces turmoil as opposing factions begin to make their move against Ying Zheng's regime.\n\nWith their hands full both abroad and at home, Zheng and Xin must lead the way in this era of unending war, resolved to etch their names in history by creating a unified China.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kingdom:-season-2-ebk3em",
+    "mal": 17389,
+    "anilist": 17389,
+    "kitsu": 7680
+  },
+  "skip_key_id": 17389,
+  "skip_key_space": "mal",
+  "episode_total": 39,
+  "added_at": null,
+  "search_text": "kingdom season 2 キンク タ ム 第2シリース tv finished",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A New Era",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107302/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-06-08",
+      "markers": [],
+      "external_id": "107302"
+    },
+    {
+      "n": 2,
+      "title": "The Silent Battlefield",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107303/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-06-15",
+      "markers": [],
+      "external_id": "107303"
+    },
+    {
+      "n": 3,
+      "title": "A Tempestuous Feast",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107304/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-06-22",
+      "markers": [],
+      "external_id": "107304"
+    },
+    {
+      "n": 4,
+      "title": "The King and the Ant",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107305/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-06-29",
+      "markers": [],
+      "external_id": "107305"
+    },
+    {
+      "n": 5,
+      "title": "The Third Force",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107306/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-07-06",
+      "markers": [],
+      "external_id": "107306"
+    },
+    {
+      "n": 6,
+      "title": "Exquisite Poison",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107307/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-07-13",
+      "markers": [],
+      "external_id": "107307"
+    },
+    {
+      "n": 7,
+      "title": "The Cursed Prince",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107308/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-07-20",
+      "markers": [],
+      "external_id": "107308"
+    },
+    {
+      "n": 8,
+      "title": "Zheng and Zi Xia",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107309/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-07-27",
+      "markers": [],
+      "external_id": "107309"
+    },
+    {
+      "n": 9,
+      "title": "Connecting Wishes",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107310/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-08-03",
+      "markers": [],
+      "external_id": "107310"
+    },
+    {
+      "n": 10,
+      "title": "Shattered Love",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107311/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-08-10",
+      "markers": [],
+      "external_id": "107311"
+    },
+    {
+      "n": 11,
+      "title": "The Lineup",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107312/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-08-17",
+      "markers": [],
+      "external_id": "107312"
+    },
+    {
+      "n": 12,
+      "title": "The Siege of Gaolang Castle",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107313/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-08-24",
+      "markers": [],
+      "external_id": "107313"
+    },
+    {
+      "n": 13,
+      "title": "The Way I Fight",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107314/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-08-31",
+      "markers": [],
+      "external_id": "107314"
+    },
+    {
+      "n": 14,
+      "title": "The Man Lian Po",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107315/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-09-07",
+      "markers": [],
+      "external_id": "107315"
+    },
+    {
+      "n": 15,
+      "title": "The Air of a General",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107316/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-09-14",
+      "markers": [],
+      "external_id": "107316"
+    },
+    {
+      "n": 16,
+      "title": "The Great General at Midnight",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107317/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-09-21",
+      "markers": [],
+      "external_id": "107317"
+    },
+    {
+      "n": 17,
+      "title": "The Night Before Battle",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107318/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-09-28",
+      "markers": [],
+      "external_id": "107318"
+    },
+    {
+      "n": 18,
+      "title": "Charge!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107319/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-10-06",
+      "markers": [],
+      "external_id": "107319"
+    },
+    {
+      "n": 19,
+      "title": "Xuan Feng's Cunning Scheme",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107320/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-10-13",
+      "markers": [],
+      "external_id": "107320"
+    },
+    {
+      "n": 20,
+      "title": "The Fei Xin Force Retaliates",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107321/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-10-20",
+      "markers": [],
+      "external_id": "107321"
+    },
+    {
+      "n": 21,
+      "title": "Robber vs. Strategist",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107322/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-10-27",
+      "markers": [],
+      "external_id": "107322"
+    },
+    {
+      "n": 22,
+      "title": "Meng Tian's Proposal",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107323/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-11-03",
+      "markers": [],
+      "external_id": "107323"
+    },
+    {
+      "n": 23,
+      "title": "Three Forces United",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107324/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-11-10",
+      "markers": [],
+      "external_id": "107324"
+    },
+    {
+      "n": 24,
+      "title": "A Wall to be Overcome",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107325/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-11-17",
+      "markers": [],
+      "external_id": "107325"
+    },
+    {
+      "n": 25,
+      "title": "Behind the Behind",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107326/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-11-24",
+      "markers": [],
+      "external_id": "107326"
+    },
+    {
+      "n": 26,
+      "title": "General Caliber",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107327/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-12-01",
+      "markers": [],
+      "external_id": "107327"
+    },
+    {
+      "n": 27,
+      "title": "Showdown",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107328/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-12-08",
+      "markers": [],
+      "external_id": "107328"
+    },
+    {
+      "n": 28,
+      "title": "The Final Twist",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107329/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-12-15",
+      "markers": [],
+      "external_id": "107329"
+    },
+    {
+      "n": 29,
+      "title": "In a Heartbeat",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107330/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-12-22",
+      "markers": [],
+      "external_id": "107330"
+    },
+    {
+      "n": 30,
+      "title": "A Good Friend",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107331/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-12-29",
+      "markers": [],
+      "external_id": "107331"
+    },
+    {
+      "n": 31,
+      "title": "Meng Ao Stays Firm",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107332/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-01-05",
+      "markers": [],
+      "external_id": "107332"
+    },
+    {
+      "n": 32,
+      "title": "An Era Undiminished",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107333/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-01-12",
+      "markers": [],
+      "external_id": "107333"
+    },
+    {
+      "n": 33,
+      "title": "Victory and What Follows",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107334/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-01-19",
+      "markers": [],
+      "external_id": "107334"
+    },
+    {
+      "n": 34,
+      "title": "The Tactician Arrives",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107335/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-01-26",
+      "markers": [],
+      "external_id": "107335"
+    },
+    {
+      "n": 35,
+      "title": "Ordeal and Resolve",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107336/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-02-02",
+      "markers": [],
+      "external_id": "107336"
+    },
+    {
+      "n": 36,
+      "title": "Going Up",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107337/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-02-09",
+      "markers": [],
+      "external_id": "107337"
+    },
+    {
+      "n": 37,
+      "title": "Distant Thunder",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107338/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-02-16",
+      "markers": [],
+      "external_id": "107338"
+    },
+    {
+      "n": 38,
+      "title": "A Staging Area for Intrigue",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107339/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-02-23",
+      "markers": [],
+      "external_id": "107339"
+    },
+    {
+      "n": 39,
+      "title": "A New Legend",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/107340/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-03-02",
+      "markers": [],
+      "external_id": "107340"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ikite, Sansan (生きて、燦々)",
+      "artist": "Ikimono-gakari",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hōkō (Roar)",
+      "artist": "Sora Tomonari",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kieru Made (Until it Disappears)",
+      "artist": "Hana Hope",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Prayer",
+      "artist": "Who-ya Extended",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rei -ray-",
+      "artist": "Suiren",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Genyō (Dazzling)",
+      "artist": "Haku",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "TOMORROW",
+      "artist": "BiSH",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Deep inside",
+      "artist": "waterweed",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "GLORY DAYS",
+      "artist": "D☆DATE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "21",
+      "artist": "The Sketchbook",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pride",
+      "artist": "Nothing's Carved in Stone",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Voice of Soul",
+      "artist": "Takumi Ishida",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kakudo",
+      "artist": "Sae",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hechitashiho",
+      "artist": "Sae",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "geki",
+      "artist": "zonji",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Believe",
+      "artist": "Misaki",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "STACKiNG",
+      "artist": "BiSH",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "kIng",
+      "artist": "Emiko Suzuki",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "EXIT",
+      "artist": "The Sketchbook",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Destiny Sky",
+      "artist": "Yūki Wakai",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Soko ni Kimi ga Aru",
+      "artist": "The Sketchbook",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Never Ending",
+      "artist": "Dasoku",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

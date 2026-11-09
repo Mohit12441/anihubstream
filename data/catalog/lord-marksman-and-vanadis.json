@@ -1,0 +1,350 @@
+{
+  "id": "lord-marksman-and-vanadis",
+  "title": "Lord Marksman and Vanadis",
+  "native": "魔弾の王と戦姫 (ヴァナディース)",
+  "year": 2014,
+  "rating": 6.7,
+  "season": "Fall 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20809-QJQM3RI8PI4a.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20809-QJQM3RI8PI4a.jpg",
+  "accent": "#3b82ff",
+  "synopsis": "Tigrevurmud Vorn, the young lord of a remote region far from the kingdom's center, is commanded by the king to go fight the war against a neighboring country. The leader of the enemy is Eleonora Viltaria, one of the seven Vanadis given supernatural arms from a dragon.\n\nThe moment when an archer boy and the silver-haired beautiful war maiden meet, it is the beginning for the legend of a hero that will be told for generations to come.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8630,
+    "anilist": 20809,
+    "mal": 24455
+  },
+  "skip_key_id": 24455,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 14:34:57",
+  "search_text": "lord marksman and vanadis 魔弾の王と戦姫 ウ ァナテ ィース tv finished",
+  "genres": [
+    "adventure",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Wind Princess of the Battlefield",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149134/original.jpg",
+      "synopsis": "Count Tigrevurmud Vorn of the Brunish territory of Alsace is taken prisoner by Eleonora Viltaria, a war maiden of the neighboring kingdom of Zhcted. She will return him to Brune if his ransom is paid, but she has another reason for keeping him.",
+      "airdate": "2014-10-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 24,
+          "end": 114
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1415
+        }
+      ],
+      "external_id": "149134"
+    },
+    {
+      "n": 2,
+      "title": "The Return Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149135/original.jpg",
+      "synopsis": "Duke Thenardier sends his son Zion to raze Tigre's fiefdom of Alsace. Tigre prepares to return and defend his home, but as her prisoner, Elen imposes conditions on letting him go. Titta defends the Vorn estate while she awaits Tigre's return.",
+      "airdate": "2014-10-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 146
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1428
+        }
+      ],
+      "external_id": "149135"
+    },
+    {
+      "n": 3,
+      "title": "Return of the Magic Marksman",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149136/original.jpg",
+      "synopsis": "With the town safe, Elen and Tigre make plans to drive Zion's army out of Alsace. They are still outnumbered three-to-one, however, and must come up with some brilliant strategies if they are to succeed in defending Tigre's homeland.",
+      "airdate": "2014-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 68,
+          "end": 158
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 241,
+          "end": 331
+        }
+      ],
+      "external_id": "149136"
+    },
+    {
+      "n": 4,
+      "title": "Snow Princess of the Frozen Ripple",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149137/original.jpg",
+      "synopsis": "Elen returns to Jhcted, and answers to the king for invading Brune without his permission, while Tigre tries to muster more help. Ludmilla, one of the other war maidens, may prove to be an obstacle in Tigre and Elen's war against Thenardier.",
+      "airdate": "2014-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 27,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1422
+        }
+      ],
+      "external_id": "149137"
+    },
+    {
+      "n": 5,
+      "title": "The Storming of the Tatra Mountains",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149138/original.jpg",
+      "synopsis": "When Mila abruptly leaves Rodnik, Elen fears that it spells hostilities between their two lands. Their two armies meet on a snowy battlefield, but when Mila's forces retreat to a safe haven, Elen must figure out how she is going to claim victory.",
+      "airdate": "2014-11-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 54,
+          "end": 144
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "149138"
+    },
+    {
+      "n": 6,
+      "title": "The Black Knight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149139/original.jpg",
+      "synopsis": "Mila and Tigre reach an understanding. A united army of men from both Brune and Zhcted is formed, led by Tigre and Elen, but it is not without its difficulties. Sofy reaches Elen with bad news, while Roland, the Black Knight, is sent to deal with Tigre.",
+      "airdate": "2014-11-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 30,
+          "end": 120
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "149139"
+    },
+    {
+      "n": 7,
+      "title": "To Protect",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149140/original.jpg",
+      "synopsis": "With Tigre seriously injured, Elen takes command of his men and prepares to fight Roland's forces the next day. Mashas returns from the capital with news of the king. Tigre and Titta follow the black bow's guidance in search of greater power.",
+      "airdate": "2014-11-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 46,
+          "end": 136
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "149140"
+    },
+    {
+      "n": 8,
+      "title": "2,000 vs. 20,000",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149141/original.jpg",
+      "synopsis": "Elen is called back to Zhcted on urgent business, leaving Tigre and Rurick in charge of 1000 of her men. Roland heads to the royal capital to plead Tigre's case before the king. A massive invasion force from Muozinel threatens all of Brune.",
+      "airdate": "2014-11-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 85,
+          "end": 175
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1419
+        }
+      ],
+      "external_id": "149141"
+    },
+    {
+      "n": 9,
+      "title": "Thunder Swirl and Luminous Flame",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149142/original.jpg",
+      "synopsis": "Elen visits Sasha, and learns that Elizaveta, one of the other war maidens, is attacking her lands over a perceived slight. Meanwhile, Mila and Tigre negotiate the terms of her assistance in driving the invading Muozinel army out of the land.",
+      "airdate": "2014-11-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 77,
+          "end": 167
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1419
+        }
+      ],
+      "external_id": "149142"
+    },
+    {
+      "n": 10,
+      "title": "The Ormea Campaign",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149143/original.jpg",
+      "synopsis": "With overwhelming numbers, the Muozinellan army lays siege to the makeshift hilltop fortress, as Tigre and Mila's forces strike back. But with such a long battle ahead of them, will they be able to last long enough to achieve victory?",
+      "airdate": "2014-12-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 158
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1440
+        }
+      ],
+      "external_id": "149143"
+    },
+    {
+      "n": 11,
+      "title": "Two War Maidens",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The battle against Muozinel behind them, the Silver Meteor Storm camps in Perche, where Regin makes a surprise announcement to Tigre and the others. With his dragons now mature, Thenardier sends his army to attack the Silver Meteor Storm.",
+      "airdate": "2014-12-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 146
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1440
+        }
+      ],
+      "external_id": "149144"
+    },
+    {
+      "n": 12,
+      "title": "The Holy Grotto (Saint-Groel)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "After resting up briefly from the battle with Thenardier's army, Tigre and the others plan to make their way into the Holy Grotto beneath Artesium, to establish Regin's royal identity. However, Thenardier has other plans for them once they arrive.",
+      "airdate": "2014-12-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1421
+        }
+      ],
+      "external_id": "149145"
+    },
+    {
+      "n": 13,
+      "title": "The Widening World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Devastated by his surrogate father's loss, Tigre is comforted by Elen. Badouin shows up, and invites Regin back to see the king, who has regained his senses. However, Thenardier stands in their way, and a final showdown between him and Tigre awaits!",
+      "airdate": "2014-12-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 84,
+          "end": 174
+        }
+      ],
+      "external_id": "149146"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,108 @@
+{
+  "id": "love-chunibyo-other-delusions-lite",
+  "title": "Love, Chunibyo & Other Delusions Lite",
+  "native": "中二病でも恋がしたい！Lite",
+  "year": 2012,
+  "rating": 7.2,
+  "season": "Fall 2012",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/7293/medium.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n15687-Y3h2YRsf0WyG.jpg",
+  "accent": "#ff1f4a",
+  "synopsis": "Short episodes aired on KyoAni's official YouTube channel.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7293,
+    "anilist": 15687,
+    "mal": 15687
+  },
+  "skip_key_id": 15687,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": "2026-11-06 17:21:37",
+  "search_text": "love chunibyo other delusions lite 中二病て も恋か したい lite tv finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Volleyball",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "With Rikka refusing to take off her eyepatch, Yūta attempts to train her in playing volleyball to compensate for her lack of depth perception",
+      "airdate": "2012-09-27",
+      "markers": [],
+      "external_id": "101869"
+    },
+    {
+      "n": 2,
+      "title": "Wicked Eye: Daybreak Chapter",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "In junior high school, Rikka's friend Tomo has to deal with Rikka's slow descent into delusion.",
+      "airdate": "2012-10-04",
+      "markers": [],
+      "external_id": "101870"
+    },
+    {
+      "n": 3,
+      "title": "My Older Brother",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "Yuuta's younger sister, Kuzuha, deals with her brother during his delusional phase.",
+      "airdate": "2012-10-11",
+      "markers": [],
+      "external_id": "101871"
+    },
+    {
+      "n": 4,
+      "title": "We'll Make Meat and Potato Stew!",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "Yuuta's little sister Yumeha goes with Rikka to shop for cooking ingredients.",
+      "airdate": "2012-10-17",
+      "markers": [],
+      "external_id": "101872"
+    },
+    {
+      "n": 5,
+      "title": "The Sleeping After School Beauty",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "Kumin talks about her hobby of sleeping and her observations of the other club members.",
+      "airdate": "2012-10-24",
+      "markers": [],
+      "external_id": "101873"
+    },
+    {
+      "n": 6,
+      "title": "Dekomori vs. Nibutani",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "Shinka and Sanae get into a heated water balloon fight against each other.",
+      "airdate": "2012-10-31",
+      "markers": [],
+      "external_id": "101874"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

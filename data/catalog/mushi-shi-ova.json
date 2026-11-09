@@ -1,0 +1,59 @@
+{
+  "id": "mushi-shi-ova",
+  "title": "MUSHI-SHI OVA",
+  "native": "蟲師 特別篇「日蝕む翳」",
+  "year": 2014,
+  "rating": 8.3,
+  "season": "Winter 2014",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20526-PmuD69J3rkDF.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20526-PmuD69J3rkDF.png",
+  "accent": "#a24bff",
+  "synopsis": "When an eclipse occurs, the sun remains dark in one area. The mushi expert Ginko must come and determine how to return the sun to the village before their crops die. The secret seems connected to twin girls who live nearby.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "MUSHI-SHI The Next Passage (2014)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8112,
+    "anilist": 20526,
+    "mal": 21329
+  },
+  "skip_key_id": 21329,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-22 09:26:56",
+  "search_text": "mushi shi ova 蟲師 特別篇 日蝕む翳 special finished",
+  "genres": [
+    "adventure",
+    "fantasy",
+    "mystery",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "MUSHI-SHI OVA",
+      "runtime": "45:00",
+      "runtime_seconds": 2700,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20526-PmuD69J3rkDF.png",
+      "synopsis": "When an eclipse occurs, the sun remains dark in one area. The mushi expert Ginko must come and determine how to return the sun to the village before their crops die. The secret seems connected to twin girls who live nearby.\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "113048"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

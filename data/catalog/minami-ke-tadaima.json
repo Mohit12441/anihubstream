@@ -1,0 +1,209 @@
+{
+  "id": "minami-ke-tadaima",
+  "title": "Minami-ke Tadaima",
+  "native": "みなみけ ただいま",
+  "year": 2013,
+  "rating": 7.4,
+  "season": "Winter 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx14511-OiJu2uyufahP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx14511-OiJu2uyufahP.jpg",
+  "accent": "#ff9420",
+  "synopsis": "The everyday lives of the Minami sisters continue. Chiaki, the youngest, continues to call people idiots while worshipping her eldest sister. Kana, the middle, still can't figure out that Fujioka's feelings for her are a crush, not a grudge. Haruka, the eldest, still unknowingly avoids Hosaka's advances to invite her to the volleyball team, and after a long day of excitement, the sisters enjoy sitting at the table at their home.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "minami-ke-tadaima-gtv35n",
+    "mal": 14511,
+    "anilist": 14511,
+    "kitsu": 7128
+  },
+  "skip_key_id": 14511,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "minami ke tadaima みなみけ たた いま tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Spring Is Here, and So Are the Minamis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101155/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-01-06",
+      "markers": [],
+      "external_id": "101155"
+    },
+    {
+      "n": 2,
+      "title": "Let's be Ourselves",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101156/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-01-13",
+      "markers": [],
+      "external_id": "101156"
+    },
+    {
+      "n": 3,
+      "title": "Simply Put, It's a Roundabout Confession",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101157/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-01-20",
+      "markers": [],
+      "external_id": "101157"
+    },
+    {
+      "n": 4,
+      "title": "The Man Sweats Under the Blue Summer Sky",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101158/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-01-27",
+      "markers": [],
+      "external_id": "101158"
+    },
+    {
+      "n": 5,
+      "title": "Making Chilled Noodles",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101159/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-02-03",
+      "markers": [],
+      "external_id": "101159"
+    },
+    {
+      "n": 6,
+      "title": "A Girl Cannot Hide Her Sunburn, Nor Her Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101160/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-02-10",
+      "markers": [],
+      "external_id": "101160"
+    },
+    {
+      "n": 7,
+      "title": "Coming for a Late Summer Visit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101161/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-02-17",
+      "markers": [],
+      "external_id": "101161"
+    },
+    {
+      "n": 8,
+      "title": "Vegetables with Your Merry Friends on Your Day Off",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101162/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-02-24",
+      "markers": [],
+      "external_id": "101162"
+    },
+    {
+      "n": 9,
+      "title": "Love Begins Now",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101163/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-03-03",
+      "markers": [],
+      "external_id": "101163"
+    },
+    {
+      "n": 10,
+      "title": "We Started Living Green",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101164/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-03-10",
+      "markers": [],
+      "external_id": "101164"
+    },
+    {
+      "n": 11,
+      "title": "The Goddess Descends on the Holy Night",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101165/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-03-17",
+      "markers": [],
+      "external_id": "101165"
+    },
+    {
+      "n": 12,
+      "title": "Start Planning Your Year From New Year's Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101166/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-03-24",
+      "markers": [],
+      "external_id": "101166"
+    },
+    {
+      "n": 13,
+      "title": "What's Said Here, Stays Here",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101167/original.jpg",
+      "synopsis": "",
+      "airdate": "2013-03-31",
+      "markers": [],
+      "external_id": "101167"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shiawase☆High Tension↑↑ (Happiness High Tension)",
+      "artist": "Rina Satou, Marina Inoue, and Minori Chihara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kyūsekkin Lucky DAYS (Fast-Approaching Lucky Days)",
+      "artist": "Rina Satou, Marina Inoue, and Minori Chihara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Christmas no Yoru (クリスマスの夜;Christmas Night)",
+      "artist": "Daisuke Ono",
+      "episodes": "11"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,54 @@
+{
+  "id": "maid-sama-its-an-extra",
+  "title": "Maid-Sama! It's an extra!",
+  "native": "会長はメイド様！おまけだよ！",
+  "year": 2011,
+  "rating": 7.3,
+  "season": "Spring 2011",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9366-R2IiAvs2YmZG.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9366-R2IiAvs2YmZG.png",
+  "accent": "#e450ae",
+  "synopsis": "Extra episode included in Blu-ray and DVD volume 10, entitled \"Omake dayo (It's an extra!)\".",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "maid-sama!:-it's-an-extra!-qbiof6",
+    "mal": 9366,
+    "anilist": 9366,
+    "kitsu": 5705
+  },
+  "skip_key_id": 9366,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "maid sama it s an extra 会長はメイト 様 おまけた よ special finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Maid Sama!: It's an Extra!",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9366-R2IiAvs2YmZG.png",
+      "synopsis": "Extra episode included in Blu-ray and DVD volume 10, entitled \"Omake dayo (It's an extra!)\".",
+      "airdate": null,
+      "markers": [],
+      "external_id": "71041"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

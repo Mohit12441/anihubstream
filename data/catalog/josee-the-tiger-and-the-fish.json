@@ -1,0 +1,71 @@
+{
+  "id": "josee-the-tiger-and-the-fish",
+  "title": "Josee, the Tiger and the Fish",
+  "native": "ジョゼと虎と魚たち",
+  "year": 2020,
+  "rating": 8.2,
+  "season": "Fall 2020",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx113596-LKA0bYJGjLnB.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113596-LKA0bYJGjLnB.jpg",
+  "accent": "#a1e4ff",
+  "synopsis": "The story centers on the relationship between Tsuneo and Josee. Tsuneo is a university student, and Josee is a young girl who has rarely gone out of the house by herself due to her being unable to walk. The two meet when Tsuneo finds Josee's grandmother taking her out for a morning walk.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "josee-the-tiger-and-the-fish-h84ngf",
+    "mal": 40787,
+    "anilist": 113596,
+    "kitsu": 42825
+  },
+  "skip_key_id": 40787,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "josee the tiger and the fish シ ョセ と虎と魚たち movie finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Josee, the Tiger and the Fish (Movie)",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ad4cc4ca79c62b971c83c4f-landscape.jpg",
+      "synopsis": "The story centers on the relationship between Tsuneo and Josee. Tsuneo is a university student, and Josee is a young girl who has rarely gone out of the house by herself due to her being unable to walk. The two meet when Tsuneo finds Josee's grandmother taking her out for a morning walk.\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "294086"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tale Me Far Away",
+      "artist": "Ai Ichikawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ao no Waltz (Blue Waltz)",
+      "artist": "Eve",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

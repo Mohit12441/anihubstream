@@ -1,0 +1,87 @@
+{
+  "id": "magical-sisters-lulutto-lilly-part-2",
+  "title": "Magical Sisters LuluttoLilly Part 2",
+  "native": "魔法の姉妹ルルットリリィ 第2クール",
+  "year": 2026,
+  "rating": 6.2,
+  "season": "Fall 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx209032-R0gP5IFdk7Vd.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx209032-R0gP5IFdk7Vd.jpg",
+  "accent": "#e45df1",
+  "synopsis": "The second half of Mahou no Shimai LuluttoLilly.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": 7,
+  "sched_day_label": "SUN",
+  "sched_date": "Nov 8",
+  "sched_time": "13:30",
+  "sched_season": "Fall 2026",
+  "sched_episode": 6,
+  "sched_sub_at": null,
+  "sched_dub_at": 1793811600000,
+  "source_ids": {
+    "hianime": "magical-sisters-lulutto-lilly-part-2-ctpd1c",
+    "mal": 63667,
+    "anilist": 209032,
+    "kitsu": 50996
+  },
+  "skip_key_id": 63667,
+  "skip_key_space": "mal",
+  "episode_total": 22,
+  "added_at": null,
+  "search_text": "magical sisters luluttolilly part 2 魔法の姉妹ルルットリリィ 第2クール tv ongoing",
+  "genres": [
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

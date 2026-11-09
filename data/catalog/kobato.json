@@ -1,0 +1,339 @@
+{
+  "id": "kobato",
+  "title": "Kobato.",
+  "native": "Kobato.",
+  "year": 2009,
+  "rating": 7.9,
+  "season": "Year 2009",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/6930111b258775f6b9a64890-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/6930111b258775f6b9a64890-landscape.webp",
+  "accent": "#2ee6a8",
+  "synopsis": "The friendly and sincere Kobato Hanato has a wish to go to a particular place no matter what. To fulfill this desire, she is tasked with helping people in their times of distress. For each mended broken heart, a small candy-like fragment is produced and fills a special bottle. Once the bottle is full, her wish will be granted.\n\nAs Kobato carries out her mission alongside her stuffed toy companion, Ioryogi, she encounters various people troubled by their different situations. From a child struggling with his parents, a high school girl troubled about romance, and everything in between, Kobato's naturally sweet smile and outgoing personality are ready to brighten their day!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kobato.-9dx3a7",
+    "mal": 5678,
+    "anilist": 5678,
+    "kitsu": 4239
+  },
+  "skip_key_id": 5678,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "kobato kobato",
+  "genres": [
+    "comedy",
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "…A Girl’s Wish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69814/original.jpg",
+      "synopsis": "Kobato Hanato has a wish. In order to collect all the wounded hearts, she must embark on a mission and succeed and so begins her story.",
+      "airdate": "2009-10-06",
+      "markers": [],
+      "external_id": "69814"
+    },
+    {
+      "n": 2,
+      "title": "…The Shining Kompeito",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69815/original.jpg",
+      "synopsis": "Kobato barely manages to pass her initial test to get her bottle. Now she must fill it to the brim with wounded hearts in order to have her wish granted. Not wasting a moment, she sets out about town looking for people in need of help. But Kobato is at a loss as to how broken hearts are mended.",
+      "airdate": "2009-10-13",
+      "markers": [],
+      "external_id": "69815"
+    },
+    {
+      "n": 3,
+      "title": "…A Gift from the Rain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69816/original.jpg",
+      "synopsis": "Kobato and Ioryogi stay inside an unused sewer pipe in the park to avoid getting wet. Ms. Sayaka, the head of Yomogi Kindergarten, decides to take Kobato to an apartment her friend Chitose looks after. Moved by Ms. Sayaka’s kindness, Kobato heads to the kindergarten to help out.",
+      "airdate": "2009-10-20",
+      "markers": [],
+      "external_id": "69816"
+    },
+    {
+      "n": 4,
+      "title": "…Spring Green and the Flutter of the Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69817/original.jpg",
+      "synopsis": "Kobato is off on her usual search for people with broken hearts so that she can collect \"kompeitos\" in her bottle. Ioryogi’s anxiety mounts as Kobato bungles again and again.Kobato is lured to the front of a small church where she meets Kohaku, an angel from Tenkai (Heavens) with a most beautiful heart.",
+      "airdate": "2009-10-27",
+      "markers": [],
+      "external_id": "69817"
+    },
+    {
+      "n": 5,
+      "title": "…Firefly Promise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69818/original.jpg",
+      "synopsis": "Kobato reads a book to the children at Yomogi Kindergarten, but she cannot read well, which Fujimoto quickly and meanly points out.  Kobato practices at the park where she meets the book’s author. Having lost his girlfriend, this man is left with a broken heart. Upon learning that he had lost all will to write picture books, Kobato decides to take action…",
+      "airdate": "2009-11-10",
+      "markers": [],
+      "external_id": "69818"
+    },
+    {
+      "n": 6,
+      "title": "…Hide-and-Seek",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69819/original.jpg",
+      "synopsis": "It’s early summer, and Kobato is going on a picnic with all of the children at Yomogi Kindergarten. While playing in the park, Marina goes missing. Kobato and Fujimoto do everything they can to search for her. Meanwhile, Ioryogi heads off alone to see Genko from Ikai regarding some debt trouble the kindergarten is in…",
+      "airdate": "2009-11-17",
+      "markers": [],
+      "external_id": "69819"
+    },
+    {
+      "n": 7,
+      "title": "…Gentle Person",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69820/original.jpg",
+      "synopsis": "Fujimoto has headed off to university without his essay, and Ms. Sayaka asks Kobato to deliver it. Excited about being able to show the ever-so-mean Fujimoto up, Kobato sets off to find him at school. There she meets Domoto, who helps her look for Fujimoto. Somehow, this puts Ioryogi in a bad mood…",
+      "airdate": "2009-11-24",
+      "markers": [],
+      "external_id": "69820"
+    },
+    {
+      "n": 8,
+      "title": "…A Kitten’s Lullaby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69821/original.jpg",
+      "synopsis": "In town, Kobato hears the helpless cry of a kitten coming from a box. Against the advice of both Ioryogi and Fujimoto, who tell her not to get involved if she can’t take care of it, she takes the kitten back to her apartment. Chiho and Chise, the landlord’s twin daughters help Kobato look for a home for the kitten…",
+      "airdate": "2009-12-01",
+      "markers": [],
+      "external_id": "69821"
+    },
+    {
+      "n": 9,
+      "title": "…Memories of Summer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69822/original.jpg",
+      "synopsis": "It’s summer vacation for Yomogi Kindergarten. While Kobato is washing Ioryogi, the summer festival leaflet gets blown away by the wind. A high school girl picks it up. As she returns the leaflet to Kobato, she notices that Kobato’s hands are wet and lends her a handkerchief. Kobato finds out which school the girl goes to and sets out to see her…",
+      "airdate": "2009-12-08",
+      "markers": [],
+      "external_id": "69822"
+    },
+    {
+      "n": 10,
+      "title": "…The Boy’s Organ Days",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69823/original.jpg",
+      "synopsis": "It’s a beautiful day, and Kobato decides to make herself useful. She goes to the kindergarten to air out the futons. On the way, she is clumsy as usual and nearly bumps into Fujimoto, who badmouths her yet again. At the kindergarten, Ms. Sayaka tells her the story of Fujimoto’s childhood. Perhaps he’s not such a mean guy after all…",
+      "airdate": "2009-12-15",
+      "markers": [],
+      "external_id": "69823"
+    },
+    {
+      "n": 11,
+      "title": "…Detective Kobato Hanato",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69824/original.jpg",
+      "synopsis": "Done helping at Yomogi Kindergarten, Kobato finds a classifieds magazine on Fujimoto’s desk. Wishing to help the kindergarten, she decides to find a job too. Chitose introduces her to Hiroyasu Ueda, the manager of a coffee shop called Bakery Tirol. Kobato gets the job but, as it usually does, trouble soon finds her!",
+      "airdate": "2009-12-22",
+      "markers": [],
+      "external_id": "69824"
+    },
+    {
+      "n": 12,
+      "title": "…Silver Eyes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69825/original.jpg",
+      "synopsis": "Marina ties a cute ribbon around Ioryogi, who is sitting in Kobato’s bag as always. Kobato doesn’t notice how upset Ioryogi is about this. Meanwhile, Ginsei shows up at the Bear’s Baumkuchen shop looking for Genko. He says he wants to know why Ioryogi continues to stay with Kobato as a stuffed doll. What could his real purpose be…?",
+      "airdate": "2010-01-05",
+      "markers": [],
+      "external_id": "69825"
+    },
+    {
+      "n": 13,
+      "title": "…Angel and the Protector",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69826/original.jpg",
+      "synopsis": "While taking a walk with Ioryogi, enjoying the fragrance of autumn, Kobato finds a huge ginkgo tree. She takes the children to see the tree after Toshihiko has a fight over building blocks. They decide to use the beautiful fallen leaves to make pictures. While they are collecting the leaves, they find out that the tree is going to be cut down…",
+      "airdate": "2010-01-12",
+      "markers": [],
+      "external_id": "69826"
+    },
+    {
+      "n": 14,
+      "title": "…Twilight Search",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69827/original.jpg",
+      "synopsis": "It’s sweet potato-digging day at Yomogi Kindergarten. Kobato excitedly gets ready for her first ever experience, but Ioryogi is quick to comment on her inappropriate behavior. At the farm, everyone is having fun digging when Kobato notices a boy who seems out of place. Fujimoto calls to him and he runs away, sweet potatoes in hand.",
+      "airdate": "2010-01-19",
+      "markers": [],
+      "external_id": "69827"
+    },
+    {
+      "n": 15,
+      "title": "…Hidden Prayer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69828/original.jpg",
+      "synopsis": "Kobato receives some beautiful origami from her landlady, Chisato. Not knowing what to do with the paper, Kobato cuts it up to decorate the kindergarten. Ioryogi scolds her and tells her how it’s supposed to be used. Kobato decides to take the rest of the origami to the kindergarten and gives it to Ms. Sayaka, but Ms. Sayaka suddenly falls ill…!",
+      "airdate": "2010-01-26",
+      "markers": [],
+      "external_id": "69828"
+    },
+    {
+      "n": 16,
+      "title": "…Mysterious Life Form",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69829/original.jpg",
+      "synopsis": "Returning to her apartment after helping at Yomogi Kindergarten, Kobato hears from Chitose, Chiho and Chise about a bazaar being held at the elementary school. Thinking a bazaar might help the kindergarten’s financial crisis Kobato suggests it to Ms. Sayaka. Fujimoto says it’s a waste of time, but Ms. Sayaka is willing to give it a try…",
+      "airdate": "2010-02-02",
+      "markers": [],
+      "external_id": "69829"
+    },
+    {
+      "n": 17,
+      "title": "…Mysterious Life Form II",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69830/original.jpg",
+      "synopsis": "On the day of the bazaar, Ioryogi heads out to Genko’s to find something that would surely sell. When he gets there, the Bear’s Baumkuchen Shop is overflowing with customers! Zuisho is helping out just to keep things going. Even Ginsei is out doing deliveries. Ioryogi is full of sarcasm for them, but they take no note of it.",
+      "airdate": "2010-02-09",
+      "markers": [],
+      "external_id": "69830"
+    },
+    {
+      "n": 18,
+      "title": "…Warmth of the Wintry Wind",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69831/original.jpg",
+      "synopsis": "It’s winter, and Kobato is thrilled at the sight of Christmas trees. But at the kindergarten, that debt collector who had been by to hassle them before, is by the gate. Unable to do anything about a man just standing there, Fujimoto holds back his frustration. Meanwhile, the children are happily decorating for Christmas. Even Domoto comes to help…",
+      "airdate": "2010-02-16",
+      "markers": [],
+      "external_id": "69831"
+    },
+    {
+      "n": 19,
+      "title": "…White Christmas",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69832/original.jpg",
+      "synopsis": "Preparations for the Christmas party are underway. Fujimoto, who always dresses as Santa Claus, is ironing his suit. His attitude bothers Kobato because every time their eyes meet, he turns away. On such a day, Domoto waits for Kobato at the kindergarten. It is late, so he offers to walk her home. As they’re walking through town, who would coincidentally appear before them, but Fujimoto…?",
+      "airdate": "2010-02-23",
+      "markers": [],
+      "external_id": "69832"
+    },
+    {
+      "n": 20,
+      "title": "…The Travelers",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69833/original.jpg",
+      "synopsis": "One February evening when the air is still cold, Kobato tells Ioryogi about all the magazines she saw with pictures of chocolates on them. Ioryogi explains Valentine’s Day, and Kobato talks to Fujimoto about having a Valentine’s Day party at the kindergarten. As the kindergarten lacks funds, she decides to work at Bakery Tirol in return for a supply of ingredients to make chocolates…",
+      "airdate": "2010-03-02",
+      "markers": [],
+      "external_id": "69833"
+    },
+    {
+      "n": 21,
+      "title": "…Footsteps of Spring",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69834/original.jpg",
+      "synopsis": "Kobato is helping out at the kindergarten as usual, when Kazuto Okiura, the man who promises to shut the place down, shows up saying he’s willing to talk. Kobato and Fujimoto are wary, but Sayaka accepts Okiura’s demands…",
+      "airdate": "2010-03-09",
+      "markers": [],
+      "external_id": "69834"
+    },
+    {
+      "n": 22,
+      "title": "...Day to Say Goodbye",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69835/original.jpg",
+      "synopsis": "Kobato and Sayaka are tidying up at the kindergarten. Having taken on even more jobs, Fujimoto hasn’t had time to show up at the kindergarten anymore. Kobato worries about him… Meanwhile, Ioryogi heads over to the Bear’s Baumkuchen Shop to see Genko with a secret plan for an extension on the deadline to gather kompeito…",
+      "airdate": "2010-03-16",
+      "markers": [],
+      "external_id": "69835"
+    },
+    {
+      "n": 23,
+      "title": "…Kobato’s Wish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69836/original.jpg",
+      "synopsis": "Worried about Fujimoto who injured himself at work, Kobato visits his apartment every morning. He appears to be dubious, but still Kobato is determined to help him out. Ignoring Ioryogi’s anxieties about filling the \"bottle\" full of kompeito before the approaching deadline, Kobato invites Fujimoto to go on a walk. At the park, Fujimoto, as usual, seems to be bothered by Kobato’s presence…",
+      "airdate": "2010-03-23",
+      "markers": [],
+      "external_id": "69836"
+    },
+    {
+      "n": 24,
+      "title": "The Day to Come…",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/69837/original.jpg",
+      "synopsis": "Early morning, awakened by chirping birds, Fujimoto lies in bed and gazes up at the ceiling. He heads off to university but cannot concentrate on his studies. His notebook is open to a blank page… Later, while delivering pizza, Fujimoto encounters Sayaka…",
+      "airdate": "2010-03-23",
+      "markers": [],
+      "external_id": "69837"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Magic Number (マジックナンバー)",
+      "artist": "Maaya Sakamoto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Jellyfish's Confession (ジェリーフィッシュの告白)",
+      "artist": "Megumi Nakajima",
+      "episodes": "1-19"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Watashi ni Dekiru Koto",
+      "artist": "Megumi Nakajima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Ashita Kuru Hi (あした来る日)",
+      "artist": "Kana Hanazawa",
+      "episodes": "24"
+    }
+  ],
+  "relations": []
+}

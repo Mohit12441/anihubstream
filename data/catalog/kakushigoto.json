@@ -1,0 +1,70 @@
+{
+  "id": "kakushigoto",
+  "title": "Kakushigoto",
+  "native": "かくしごと",
+  "year": 2020,
+  "rating": 7.8,
+  "season": "Spring 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx113311-6bSvvCHBpjpI.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113311-6bSvvCHBpjpI.jpg",
+  "accent": "#43aee4",
+  "synopsis": "Single father Kakushi Gotou has a secret. He’s a top-selling artist of popular erotic manga, but his impressionable young daughter, Hime, can never find out! Now he’s having to bend over backwards just to keep her inquisitive little mind from discovering what he does for a living. A father-daughter tale of love and laughter.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kakushigoto-8hgy2z",
+    "mal": 40716,
+    "anilist": 113311,
+    "kitsu": 42722
+  },
+  "skip_key_id": 40716,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "kakushigoto かくしこ と tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Secrets / Wishes",
+      "runtime": "42:00",
+      "runtime_seconds": 2520,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c20c8fbdbe4162d57a96243807e045cf1645068728_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201790"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Chiisana Hibi (ちいさな日々; Little Days)",
+      "artist": "flumpool",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kimi wa Tennenshoku (君は天然色; Your Natural Colors)",
+      "artist": "Eiichi Ootaki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

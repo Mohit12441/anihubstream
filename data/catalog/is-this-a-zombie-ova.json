@@ -1,0 +1,67 @@
+{
+  "id": "is-this-a-zombie-ova",
+  "title": "Is this a Zombie? OVA",
+  "native": "これはゾンビですか? OVA",
+  "year": 2011,
+  "rating": 7,
+  "season": "Summer 2011",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/10209.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/10209.jpg",
+  "accent": "#e4ae43",
+  "synopsis": "Two OVAs released with the 8th and 10th volumes of the original novel. They fall chronologically between the first and second seasons.\n\nSeason 1, Episode 13:\n\nHaruna is given the task to hold a Spring Festival at the local shrine, in her own magical-Equipment-girl way, of course... Seraphim does not want to be a freeloader at Haruna's and Ayumu's place, so she starts cooking... And a concentration-game contest in the school's main assembly hall pushes Ayumu and Orito to their limits... \n\nSeason 2, Episode 0 part 1:\n\nHaruna wants to play more with Hellscythe at a swimming pool\n\nSeason 2, Episode 0 part 2:\n\nHellscythe's birthday is near! Haruna prepares a birthday party for Hellscythe in her own magical-Equipment-girl-way. What kind of party could Haruna be holding? What kind of birthday presents will Ayumu and gang give to Hellscythe?",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "is-this-a-zombie-ova-b9dl66",
+    "mal": 10209,
+    "anilist": 10209,
+    "kitsu": 6079
+  },
+  "skip_key_id": 10209,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "is this a zombie ova これはソ ンヒ て すか ova ova finished",
+  "genres": [
+    "action",
+    "comedy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Yes, This is 1% Miracle / Welcome, to the Danger Zone / The Sun Illuminates the Ground Most of the Year",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Haruna throws a carnival where Eu is the prize. Later, Sera tries her hand at cooking, and Ayumu is repeatedly probed in a very uncomfortable area!",
+      "airdate": "2011-06-10",
+      "markers": [],
+      "external_id": "91672"
+    },
+    {
+      "n": 2,
+      "title": "Is This a Zombie? Of the Dead: Yes, Thank You for This Encore",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Ayumu tries to keep the peace as Haruna scours the local pool for signs of a sea monster. Later, the necromancer’s birthday celebration is disrupted by a demonic void.",
+      "airdate": "2012-04-24",
+      "markers": [],
+      "external_id": "91673"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

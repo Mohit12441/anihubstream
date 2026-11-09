@@ -1,0 +1,70 @@
+{
+  "id": "minami-ke-betsubara",
+  "title": "Minami-ke: Betsubara",
+  "native": "みなみけ べつばら",
+  "year": 2009,
+  "rating": 7.1,
+  "season": "Summer 2009",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/5713.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/5713.jpg",
+  "accent": "#a24bff",
+  "synopsis": "Valentine's Day is approaching; Hosaka is still trying to express his love to Haruka by cooking, cross-dressing Mako-chan fears to be found out, Kana-\"sensei\" teaches the other girls how to \"win\" Valentine's Day, and Fujioka is desperately trying to receive Kana's chocolate.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "minami-ke-betsubara-pu2laq",
+    "mal": 5713,
+    "anilist": 5713,
+    "kitsu": 4254
+  },
+  "skip_key_id": 5713,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "minami ke betsubara みなみけ へ つは ら ova finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Minami-ke Betsubara",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6953a9a9e09917f9c79aea96-poster.jpg",
+      "synopsis": "Valentine's Day is approaching; Hosaka is still trying to express his love to Haruka by cooking, cross-dressing Mako-chan fears to be found out, Kana-\"sensei\" teaches the other girls how to \"win\" Valentine's Day, and Fujioka is desperately trying to receive Kana's chocolate.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "70055"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shunkashuutou Festival♪ (春夏秋冬フェスティバル♪; Four Seasons Festival♪)",
+      "artist": "Minori Chihara, Marina Inoue and Rina Satou",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Arigatou Sankyu (ありがとうサンキュ; Thank You Thank You)",
+      "artist": "Minori Chihara, Marina Inoue and Rina Satou",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

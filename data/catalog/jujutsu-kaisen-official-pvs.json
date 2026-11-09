@@ -1,0 +1,76 @@
+{
+  "id": "jujutsu-kaisen-official-pvs",
+  "title": "Jujutsu Kaisen PV",
+  "native": "呪術廻戦PV",
+  "year": 2018,
+  "rating": 6.8,
+  "season": "2018",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b147463-LmoLwL9DbYAn.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b147463-LmoLwL9DbYAn.jpg",
+  "accent": "#35d6e4",
+  "synopsis": "PV1 (『呪術廻戦』公式PV　第一弾「虎杖」篇（c.v.中村悠一）) features Satoru Gojo's animation and manga panels, and explaining about series main character Yuji Itadori.\n\nPV2 (『呪術廻戦』公式PV　第二弾「同級生」篇（c.v.中村悠一）) features Satoru Gojo's animation and manga panels, and explaining about series main characters Megumi Fushiguro and Nobara Kugisaki.\n\nPV3 (『呪術廻戦』公式PV　第三弾「呪術高専」篇（c.v.中村悠一）) features Satoru Gojo's animation and manga panels, and explaining about series sorcerer school and curses.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "jujutsu-kaisen-official-pvs-2c5tkq",
+    "mal": 38777,
+    "anilist": 147463,
+    "kitsu": 43748
+  },
+  "skip_key_id": 38777,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "jujutsu kaisen pv 呪術廻戦pv ona finished",
+  "genres": [
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "292505"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "292506"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "292507"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

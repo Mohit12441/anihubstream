@@ -1,0 +1,56 @@
+{
+  "id": "kaibutsu-oujo-konsui-oujo",
+  "title": "Princess Resurrection Special",
+  "native": "怪物王女：昏睡王女",
+  "year": 2008,
+  "rating": 6.6,
+  "season": "Winter 2008",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4082.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4082.jpg",
+  "accent": "#f1d650",
+  "synopsis": "Flandre has gone missing within the mansion and Reiri, Riza, Hiro, and Hime have been left without any of their powers. They quickly deduce they’re in a nightmare after exposing an illusion by setting a curtain ablaze. They have to work to find their way out of the nightmare while facing tough opponents.\n\n(Source: Wikipedia, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kaibutsu-oujo:-konsui-oujo-a7w7c2",
+    "mal": 4082,
+    "anilist": 4082,
+    "kitsu": 1927
+  },
+  "skip_key_id": 4082,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "princess resurrection special 怪物王女 昏睡王女 special finished",
+  "genres": [
+    "comedy",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Princess Resurrection",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/58326/original.jpeg",
+      "synopsis": "Hiro saves a girl from being killed in an accident, but loses his life in the process. The girl turns out to be the Princess Of All Monsters and tells Hiro she will revive him if he promises to be her servant for the rest of his life.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "58326"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,209 @@
+{
+  "id": "jojo-s-bizarre-adventure-stone-ocean",
+  "title": "JoJo's Bizarre Adventure: STONE OCEAN",
+  "native": "ジョジョの奇妙な冒険 ストーンオーシャン",
+  "year": 2021,
+  "rating": 8,
+  "season": "Fall 2021",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx131942-rermlZ9lplHX.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx131942-rermlZ9lplHX.png",
+  "accent": "#288678",
+  "synopsis": "In Florida, 2011, Jolyne Kuujou sits in a jail cell like her father Joutarou once did; yet this situation is not of her own choice. Framed for a crime she didn’t commit, and manipulated into serving a longer sentence, Jolyne is ready to resign to a dire fate as a prisoner of Green Dolphin Street Jail. Though all hope seems lost, a gift from Joutarou ends up awakening her latent abilities, manifesting into her Stand, Stone Free. Now armed with the power to change her fate, Jolyne sets out to find an escape from the stone ocean that holds her.\n\nHowever, she soon discovers that her incarceration is merely a small part of a grand plot: one that not only takes aim at her family, but has additional far-reaching consequences. What's more, the mastermind is lurking within the very same prison, and is under the protection of a lineup of menacing Stand users. Finding unlikely allies to help her cause, Jolyne sets course to stop their plot, clear her name, and take back her life.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "JoJo's Bizarre Adventure: Golden Wind (2018)",
+    "JoJo's Bizarre Adventure: STONE OCEAN Part 2 (2022)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44294,
+    "anilist": 131942,
+    "mal": 48661
+  },
+  "skip_key_id": 48661,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 06:39:36",
+  "search_text": "jojo s bizarre adventure stone ocean シ ョシ ョの奇妙な冒険 ストーンオーシャン ona finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Stone Ocean",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/300058/thumbnail/medium-e93f5280e94d73c7fccd72fe0485c530.jpeg",
+      "synopsis": "Florida, 2011. Framed for a DUI and imprisoned, young Jolyne gains a mysterious new power after receiving a bizarre item from her estranged father. (Source: Netflix)",
+      "airdate": "2021-12-01",
+      "markers": [],
+      "external_id": "300058"
+    },
+    {
+      "n": 2,
+      "title": "Prisoner FE40536: Jolyne Cujoh",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/300059/thumbnail/medium-e2b0c96b82881443945653a8a3e11c91.jpeg",
+      "synopsis": "Jolyne gets acquainted with Green Dolphin Street Prison with her two-faced cellmate, Gwess, who has obtained Jolyne's locket and a pint-sized new Stand. (Source: Netflix)",
+      "airdate": "2021-12-01",
+      "markers": [],
+      "external_id": "300059"
+    },
+    {
+      "n": 3,
+      "title": "The Visitor (1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/300060/thumbnail/medium-2b75b36121a5d57711231be93a0765c6.jpeg",
+      "synopsis": "Jolyne acclimates to prison, but a mysterious boy delivers an ominous message before Jolyne receives a visit from her father and an enemy Stand user. (Source: Netflix)",
+      "airdate": "2021-12-01",
+      "markers": [],
+      "external_id": "300060"
+    },
+    {
+      "n": 4,
+      "title": "The Visitor (2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/300061/thumbnail/medium-6012d407ae2379356e291229216f99f0.jpeg",
+      "synopsis": "DIO's follower, Johngalli A. aims for revenge. The boy risks his safety to help Jotaro and Jolyne, but she refuses to leave the kid behind. (Source: Netflix)",
+      "airdate": "2021-12-01",
+      "markers": [],
+      "external_id": "300061"
+    },
+    {
+      "n": 5,
+      "title": "Prisoner of Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/300062/thumbnail/medium-ed2511ffaa48f866b99ed88049a76c55.jpeg",
+      "synopsis": "Father and daughter try to escape the visiting room's trap and the prison, but an enemy Stand extracts two discs from Jotaro. One holds Star Platinum. (Source: Netflix)",
+      "airdate": "2021-12-01",
+      "markers": [],
+      "external_id": "300062"
+    },
+    {
+      "n": 6,
+      "title": "Ermes's Stickers",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/300063/thumbnail/medium-2ae7e04d969383f11395264fac5e28c2.jpeg",
+      "synopsis": "Jolyne returns to prison to retrieve Jotaro's discs. Ermes Costello discovers her new ability and a guard with discs in his head before she's attacked. (Source: Netflix)",
+      "airdate": "2021-12-01",
+      "markers": [],
+      "external_id": "300063"
+    },
+    {
+      "n": 7,
+      "title": "There's Six of Us!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/300064/thumbnail/medium-be5f147d9a1395623230c6a0ccc264f9.jpeg",
+      "synopsis": "After people go missing from the prison's farm, Jolyne and Ermes volunteer to join the search party as a way to look for Pale Snake and the discs. (Source: Netflix)",
+      "airdate": "2021-12-01",
+      "markers": [],
+      "external_id": "300064"
+    },
+    {
+      "n": 8,
+      "title": "F.F.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/300065/thumbnail/medium-025ae1244e83bd8db58889ada8ea15cf.jpeg",
+      "synopsis": "Jolyne and Ermes unravel the mystery of F.F. and its user, who admits to helping Pale Snake in his efforts to steal their Stands. (Source: Netflix)",
+      "airdate": "2021-12-01",
+      "markers": [],
+      "external_id": "300065"
+    },
+    {
+      "n": 9,
+      "title": "Debt Collector Mary Lynn Manson",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/300066/thumbnail/medium-cb02e9fc23603043160331b4eeb1d4b0.jpeg",
+      "synopsis": "Pale Snake's user, Father Pucchi, makes his entrance. A baseball game in the yard against Miraschon heats up when F.F.and Stone Ocean get involved. (Source: Netflix)",
+      "airdate": "2021-12-01",
+      "markers": [],
+      "external_id": "300066"
+    },
+    {
+      "n": 10,
+      "title": "Operation Savage Guardian (Head to the Courtyard!) (1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/300067/thumbnail/medium-442e8e143be5bc6eae5230df19fb18cd.jpeg",
+      "synopsis": "Assisted by Emporio and his friend Weather Forecast, Jolyne rushes to the courtyard to pass Jotaro's Stand disc to the Speedwagon Foundation. (Source: Netflix)",
+      "airdate": "2021-12-01",
+      "markers": [],
+      "external_id": "300067"
+    },
+    {
+      "n": 11,
+      "title": "Operation Savage Guardian (Head to the Courtyard!) (2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/300068/thumbnail/medium-68d26a77e2a964839653de40e1a42504.jpeg",
+      "synopsis": "Father Pucchi learns some damning information. Jolyne and Weather's bodies strain under Jumpin' Jack Spark's ability as the fight continues. (Source: Netflix)",
+      "airdate": "2021-12-01",
+      "markers": [],
+      "external_id": "300068"
+    },
+    {
+      "n": 12,
+      "title": "Torrential Downpour Warning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/300069/thumbnail/medium-e5292f37251d6943276fbbb6c4881edb.jpeg",
+      "synopsis": "Jolyne reaches the courtyard. Pucchi recalls his talks with DIO and his reason for hunting Jotaro when Weather unleashes a squall of poison dart frogs. (Source: Netflix)",
+      "airdate": "2021-12-01",
+      "markers": [],
+      "external_id": "300069"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Stone Ocean",
+      "artist": "ichigo from Kishida Kyōdan & The Akeboshi Rockets",
+      "episodes": "2-24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Distant Dreamer",
+      "artist": "Duffy",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Heaven's falling down",
+      "artist": "sana from sajou no hana",
+      "episodes": "25-38"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Roundabout",
+      "artist": "Yes",
+      "episodes": "38"
+    }
+  ],
+  "relations": []
+}

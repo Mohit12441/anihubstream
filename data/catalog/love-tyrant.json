@@ -1,0 +1,282 @@
+{
+  "id": "love-tyrant",
+  "title": "Love Tyrant",
+  "native": "恋愛暴君",
+  "year": 2017,
+  "rating": 6.2,
+  "season": "Spring 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21517-huYdImj17Sr3.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21517-huYdImj17Sr3.jpg",
+  "accent": "#f1d628",
+  "synopsis": "A Kiss Note is a powerful notebook that makes anyone who has their name written together will instantly fall in love if they kiss each other regardless of any circumstances. This magical and very familiar item belongs to an angel named Guri whose job as cupid is to create couples. However, she accidentally writes down Aino Seiji, a regular high school student, and unless he kisses someone, Guri will die. She convinces Seiji to go kiss his crush, Hiyama Akane, the school's popular girl who turns out has even stronger feelings for him, bordering on obsessive and psychotic. Eventually Akane and Seiji come together but not before Guri decides that she likes Seiji as well. What seems awesome to most guys becomes hell for Seiji who just wants a normal relationship with girls.\n\n(Source: IMDB)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11610,
+    "anilist": 21517,
+    "mal": 32262
+  },
+  "skip_key_id": 32262,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 13:05:21",
+  "search_text": "love tyrant 恋愛暴君 tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I'm Getting In on This, Too x Whoa! Forbidden Love?!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5439/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-04-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 111,
+          "end": 201
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "5439"
+    },
+    {
+      "n": 2,
+      "title": "Sniff Sniff x The Only One Who May Hurt Seiji-kun... Is Me",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5440/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-04-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 130
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1334,
+          "end": 1380
+        }
+      ],
+      "external_id": "5440"
+    },
+    {
+      "n": 3,
+      "title": "I Can Handle This Myself! x Wassup",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5441/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-04-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 34,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "5441"
+    },
+    {
+      "n": 4,
+      "title": "I'm Not Going to Lose! x Are You Like Me?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-04-28",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "199214"
+    },
+    {
+      "n": 5,
+      "title": "What Is Love? x Kami Is Prostrating Himself Now lolol",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "199215"
+    },
+    {
+      "n": 6,
+      "title": "Go to the Beach With Me? x It's Not a Matter of Knowing or Not",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "199216"
+    },
+    {
+      "n": 7,
+      "title": "It's a Festival x How Did It Come to This?!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 38,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "199217"
+    },
+    {
+      "n": 8,
+      "title": "Farewell x We're Rivals, Obviously!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-26",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "199218"
+    },
+    {
+      "n": 9,
+      "title": "Absolutely... Nothing... x There's Just Something Wrong With Me...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-06-02",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "199219"
+    },
+    {
+      "n": 10,
+      "title": "I'm Here to Stay the Night x I'm... Growing Up, Too",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-06-09",
+      "markers": [],
+      "external_id": "199220"
+    },
+    {
+      "n": 11,
+      "title": "Where Did She Go? x I Apologize for Troubling You Until Now",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-06-16",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "199221"
+    },
+    {
+      "n": 12,
+      "title": "Right, Let's All Die! x I Finally Understand",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-06-23",
+      "markers": [],
+      "external_id": "199222"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

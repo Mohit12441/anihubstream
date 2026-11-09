@@ -1,0 +1,206 @@
+{
+  "id": "kemono-friends",
+  "title": "Kemono Friends",
+  "native": "けものフレンズ",
+  "year": 2017,
+  "rating": 7.2,
+  "season": "Winter 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx87496-pB2CXbFGucn0.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx87496-pB2CXbFGucn0.png",
+  "accent": "#e4a150",
+  "synopsis": "The anime's story takes place in Japari Park, a \"gigantic integrated zoo.\" In the zoo, due to the mysterious \"sand star\" substance, the animals start turning into human-shaped creatures called Animal Girls. Japari Park is a place where many people visit and have fun at, but one day a lost child wanders into the park. The lost child starts a journey to return, but because so many Animal Girls join in on the quest it becomes an unexpected grand adventure.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kemono-friends-xffcqj",
+    "mal": 33089,
+    "anilist": 87496,
+    "kitsu": 12707
+  },
+  "skip_key_id": 33089,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "kemono friends けものフレンス tv finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Savanna Area",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/9c15f083d95a08b08949c8a5825392b01484061708_full.jpg",
+      "synopsis": "",
+      "airdate": "2017-01-11",
+      "markers": [],
+      "external_id": "200129"
+    },
+    {
+      "n": 2,
+      "title": "Jungle Area",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/7691a739ce13ea7f5cc17135cd6e6e021484639933_full.jpg",
+      "synopsis": "",
+      "airdate": "2017-01-18",
+      "markers": [],
+      "external_id": "200130"
+    },
+    {
+      "n": 3,
+      "title": "Mountain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/168049ba4931e2b9e2daefffd51ec2ef1485212212_full.jpg",
+      "synopsis": "",
+      "airdate": "2017-01-25",
+      "markers": [],
+      "external_id": "200131"
+    },
+    {
+      "n": 4,
+      "title": "Desert Area",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/df9c07981f24c6ddc0aa4fdfa67dacdf1485814667_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "200132"
+    },
+    {
+      "n": 5,
+      "title": "Lake Shore",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/15bacbbc2795fa4b0c7a6f078bb15f6c1485901369_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "200133"
+    },
+    {
+      "n": 6,
+      "title": "Plains",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/445bb6eae28bb02ca876e9fa5eac9c7f1487082692_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "200134"
+    },
+    {
+      "n": 7,
+      "title": "Japari Library",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/cf26699730065b6be5573674607a3b9c1487671141_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "200135"
+    },
+    {
+      "n": 8,
+      "title": "PPP Live",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/2fb69b43f8204b9f724e43df538241061487905500_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "200136"
+    },
+    {
+      "n": 9,
+      "title": "Snowy Mountains Area",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2500165ed49b074c1c7438f4c365e9871488884830_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "200137"
+    },
+    {
+      "n": 10,
+      "title": "Lodge",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a7845372a016cbdc0926a09096ae1f1e1489446903_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "200138"
+    },
+    {
+      "n": 11,
+      "title": "Cerulean",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b3ad350e44071f57fa5224479a00a1bc1490044222_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "200139"
+    },
+    {
+      "n": 12,
+      "title": "Amusement Park",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/53953bff34754e0c0ed9304debd1340b1490637659_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "200140"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Notteke~ Japari Beat (Get on Board! Japari Beat)",
+      "artist": "Dōbutsu Biscuits x PPP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hoshi wo Tsunagete (Connecting stars)",
+      "artist": "Gothic x Luck",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yōkoso Japari Park e (Welcome to Japari Park)",
+      "artist": "Dōbutsu Biscuit x PPP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Boku no Friend (My Friend)",
+      "artist": "Mewhan",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

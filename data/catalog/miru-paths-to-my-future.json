@@ -1,0 +1,100 @@
+{
+  "id": "miru-paths-to-my-future",
+  "title": "MIRU: Paths to My Future",
+  "native": "未ル わたしのみらい",
+  "year": 2025,
+  "rating": 5,
+  "season": "Spring 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx166373-97U2bjAxD3l7.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx166373-97U2bjAxD3l7.jpg",
+  "accent": "#ffae1a",
+  "synopsis": "\"未ル(Miru): Paths To My Future\", an anthology anime series by five animation studios.\n\nA Story of Encounters between Humanity and a Robot.\n\nBorn in a distant future, MIRU, a weaponless robot, travels across time to support people from different eras.\nMIRU meets individuals from different times and places, people who, despite their struggles, live their lives with determination.\n\nThrough their encounters with MIRU, people take small yet meaningful steps forward. These steps, like the \"Butterfly Effect,\" create waves of change, moving toward a brighter future.\n\n\"The future is in our hands.\"\n\nA story that reminds us of the power in every small beginning.\n\n(Source: It's Anime powered by REMOW)\n\nContains:\n\n1) Episode 079:「スターダストメモリー」 \"Stardust Memory\"\n\n2) Episode 101: 「The King of the Forest」\n\n3) Episode 217: 「この世の波風さわぎ」\"Londonderry Air\"\n\n4) Episode 630: 「Re: MIRU」\n\n5) Episode 926: 「待ってて、今行く」 \"Wait, I'll Be There\"",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "miru:-paths-to-my-future-f9zzzq",
+    "mal": 55727,
+    "anilist": 166373,
+    "kitsu": 49848
+  },
+  "skip_key_id": 55727,
+  "skip_key_space": "mal",
+  "episode_total": 5,
+  "added_at": null,
+  "search_text": "miru paths to my future 未ル わたしのみらい tv finished",
+  "genres": [
+    "adventure",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381632"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381633"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381634"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381635"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381636"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

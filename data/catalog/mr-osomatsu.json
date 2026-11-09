@@ -1,0 +1,425 @@
+{
+  "id": "mr-osomatsu",
+  "title": "Mr. Osomatsu",
+  "native": "Osomatsu-san",
+  "year": 2015,
+  "rating": 7.9,
+  "season": "Year 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/692c1e6553755d883a676478-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/692c1e6553755d883a676478-landscape.webp",
+  "accent": "#3b82ff",
+  "synopsis": "The majority of the Matsuno household is comprised of six identical siblings: self-centered leader Osomatsu, manly Karamatsu, voice of reason Choromatsu, cynical Ichimatsu, hyperactive Juushimatsu, and lovable Todomatsu. Despite each one of them being over the age of 20, they are incredibly lazy and have absolutely no motivation to get a job, choosing to live as NEETs instead. In the rare occurrence that they try to look for employment and are somehow able to land an interview, their unique personalities generally lead to their swift rejection.\n\nFrom trying to pick up girlfriends to finding the perfect job, the daily activities of the Matsuno brothers are never dull as they go on all sorts of crazy, and often downright bizarre, adventures. Though they desperately search for a way to improve their social standing, it won't be possible if they can't survive the various challenges that come with being sextuplets!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "mr.-osomatsu-rrhwgi",
+    "mal": 31174,
+    "anilist": 21261,
+    "kitsu": 11178
+  },
+  "skip_key_id": 31174,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": null,
+  "search_text": "mr osomatsu osomatsu san",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Osomatsu-kun Returns",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179990/original.jpg",
+      "synopsis": "The popular Osomatsu brothers are now back?! However, times have changed and the sextuplets try to figure out the best way to come back that will appeal to the current TV audience...",
+      "airdate": "2015-10-05",
+      "markers": [],
+      "external_id": "179990"
+    },
+    {
+      "n": 2,
+      "title": "Let's Get a Job / The Melancholy of Osomatsu",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179991/original.jpg",
+      "synopsis": "The sextuplets attempt to find a job, and Osomatsu tries to find where all of his brothers went off to.",
+      "airdate": "2015-10-12",
+      "markers": [],
+      "external_id": "179991"
+    },
+    {
+      "n": 3,
+      "title": "Tidbits Collection",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179992/original.jpg",
+      "synopsis": "This week's episode is the tidbits collection. Everything from Dekapan-man, to what happens if you try to horde your pachinko winnings, to a bath house quiz.",
+      "airdate": "2015-10-19",
+      "markers": [],
+      "external_id": "179992"
+    },
+    {
+      "n": 4,
+      "title": "Let's Become Independent / This Is Totoko",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179993/original.jpg",
+      "synopsis": "Choromatsu is worried that his brothers are depending too much on their parents.",
+      "airdate": "2015-10-26",
+      "markers": [],
+      "external_id": "179993"
+    },
+    {
+      "n": 5,
+      "title": "The Karamatsu Incident / ESP Kitty",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179994/original.jpg",
+      "synopsis": "Karamatsu is taken hostage and demands the Matsuno brothers pay off their tab for his oden stand.",
+      "airdate": "2015-11-02",
+      "markers": [],
+      "external_id": "179994"
+    },
+    {
+      "n": 6,
+      "title": "It's a Birthday Party, Dajo / Iyami's Great Discovery",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179995/original.jpg",
+      "synopsis": "The Matsunos are invited to Hatabou's birthday party, becoming surprised to discover he is living the rich life.",
+      "airdate": "2015-11-09",
+      "markers": [],
+      "external_id": "179995"
+    },
+    {
+      "n": 7,
+      "title": "Todomatsu and the 5 Demons / To the North",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179996/original.jpg",
+      "synopsis": "Todomatsu faces the biggest threat to his social life when his brothers show up at his workplace just as his co-workers are about to invite him to a mixer.",
+      "airdate": "2015-11-16",
+      "markers": [],
+      "external_id": "179996"
+    },
+    {
+      "n": 8,
+      "title": "The Calming Osomatsu / Totoko's Dream",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179997/original.jpg",
+      "synopsis": "Osomatsu plays as a detective who calms down people working on murder cases with his buffoonery instead of actually solving them.",
+      "airdate": "2015-11-23",
+      "markers": [],
+      "external_id": "179997"
+    },
+    {
+      "n": 9,
+      "title": "Chibita and Oden / Juushimatsu Falls in Love",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179998/original.jpg",
+      "synopsis": "While discussing his career plans, Karamatsu somehow winds up as Chibita's apprentice at his oden stand.",
+      "airdate": "2015-11-30",
+      "markers": [],
+      "external_id": "179998"
+    },
+    {
+      "n": 10,
+      "title": "Iyami and Chibita's Rental Girlfriend",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179999/original.jpg",
+      "synopsis": "Looking to earn some easy money, Iyami and Chibita set up their own \"Rental Girlfriend\" business, which gets no business due to how ugly they look.",
+      "airdate": "2015-12-07",
+      "markers": [],
+      "external_id": "179999"
+    },
+    {
+      "n": 11,
+      "title": "Christmas Osomatsu-san",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/180000/original.jpg",
+      "synopsis": "A series of Christmas-themed skits. Ichimatsu takes on the role of a Black Santa interrupting a romantic couple's date, while Karamatsu finds himself on a date with an unfortunate ending.",
+      "airdate": "2015-12-14",
+      "markers": [],
+      "external_id": "180000"
+    },
+    {
+      "n": 12,
+      "title": "Year-End Special-san",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/180001/original.jpg",
+      "synopsis": "Recap episode.\nOsomatsu and Totoko host an end-of-the-year special broadcast, looking back on previous episodes.",
+      "airdate": "2015-12-21",
+      "markers": [],
+      "external_id": "180001"
+    },
+    {
+      "n": 13,
+      "title": "Accident?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181025/original.jpg",
+      "synopsis": "This episode features a down-on-his-luck salaryman named Sanematsu who faces hardships from his co-workers, and imaginary sextuplet brothers.\nAlso, genderbent versions of the Matsuno siblings argue with each other over guys.",
+      "airdate": "2016-01-04",
+      "markers": [],
+      "external_id": "181025"
+    },
+    {
+      "n": 14,
+      "title": "We Caught a Cold / Todomatsu's Line",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181026/original.jpg",
+      "synopsis": "The brothers all catch colds, with whoever's left healthy causing a lot of trouble while trying to take care of the others.",
+      "airdate": "2016-01-11",
+      "markers": [],
+      "external_id": "181026"
+    },
+    {
+      "n": 15,
+      "title": "Interview / The Life of Chibita's Flower",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181027/original.jpg",
+      "synopsis": "Jyushimatsu goes to a job interview, proving to be a total nuisance for the interviewers, while the Girlymatsu sisters try to pass the time while on vacation.",
+      "airdate": "2016-01-18",
+      "markers": [],
+      "external_id": "181027"
+    },
+    {
+      "n": 16,
+      "title": "The Ichimatsu Incident",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181028/original.jpg",
+      "synopsis": "In a post-apocalyptic world, the Idol Matsunos battle against Iyami and Dekapan, who are robbing the dry-skinned citizens of all of their lotion.",
+      "airdate": "2016-01-25",
+      "markers": [],
+      "external_id": "181028"
+    },
+    {
+      "n": 17,
+      "title": "Juushimatsu Festival",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181029/original.jpg",
+      "synopsis": "A series of skits all revolving around Jyushimatsu's odd personality as well as the brothers' view on him.",
+      "airdate": "2016-02-01",
+      "markers": [],
+      "external_id": "181029"
+    },
+    {
+      "n": 18,
+      "title": "Iyami's Counterattack",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181030/original.jpg",
+      "synopsis": "Wanting to become the main protagonist of the franchise again, Iyami holds a bizarre kart race to determine who the protagonist of Osomatsu-san will be.",
+      "airdate": "2016-02-08",
+      "markers": [],
+      "external_id": "181030"
+    },
+    {
+      "n": 19,
+      "title": "Jidaigeki Osomatsu-san / Choromatsu Rising",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181031/original.jpg",
+      "synopsis": "The concept of a Hijirisawa Shōnosuke-san anime quickly gets dropped due to lack of ideas, replaced with a series of skits set during the Sengoku era.",
+      "airdate": "2016-02-15",
+      "markers": [],
+      "external_id": "181031"
+    },
+    {
+      "n": 20,
+      "title": "Iyami's School",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181032/original.jpg",
+      "synopsis": "Kicked out of his own company, Hatabou starts his own catering service in order to regain his fortune, leaving the Matsuno siblings curious about what meat he has been using.",
+      "airdate": "2016-02-22",
+      "markers": [],
+      "external_id": "181032"
+    },
+    {
+      "n": 21,
+      "title": "Mahjong / Godmatsu",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181033/original.jpg",
+      "synopsis": "On a rainy evening, the brothers play a game of mahjong, with each brother showing his own strengths and glaring weaknesses.",
+      "airdate": "2016-02-29",
+      "markers": [],
+      "external_id": "181033"
+    },
+    {
+      "n": 22,
+      "title": "The Star of Hope, Todomatsu / Final Sheeeh",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181034/original.jpg",
+      "synopsis": "Todomatsu holds auditions to take one of his brothers with him to a mixer, struggling to find anyone worth taking.",
+      "airdate": "2016-03-07",
+      "markers": [],
+      "external_id": "181034"
+    },
+    {
+      "n": 23,
+      "title": "Kerosene / Dayon Tribe",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181035/original.jpg",
+      "synopsis": "When the family heater runs out of kerosene, the brothers find themselves in an underground village populated by a tribe of Dayon people.",
+      "airdate": "2016-03-14",
+      "markers": [],
+      "external_id": "181035"
+    },
+    {
+      "n": 24,
+      "title": "Totoko's Huge Panic / Letter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181036/original.jpg",
+      "synopsis": "Totoko experiences jealousy for the first time after people start getting more success than her, leading her on a quest to find an oil magnate to marry.",
+      "airdate": "2016-03-21",
+      "markers": [],
+      "external_id": "181036"
+    },
+    {
+      "n": 25,
+      "title": "Osomatsu-san, Such As It Was",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184350/original.jpg",
+      "synopsis": "The brothers quickly abandon their new lifestyles upon learning they have been invited to a baseball tournament. After failing miserably the first time, the family soon grow stronger and reach the final round of the next tournament. Facing off against a ruthless team of aliens that murder the rest of their team, the brothers are spurned on by the chance to lose their virginities, but end up losing anyway.",
+      "airdate": "2016-03-28",
+      "markers": [],
+      "external_id": "184350"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Osomatsu-san no Bomba Sheeh!",
+      "artist": "DA PUMP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "バディ (Buddy)",
+      "artist": "Hitomi from Atarayo & the Osomatsu sextuplets",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "nice to NEET you!",
+      "artist": "AŌP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Max Charm Faces ~彼女は最高!!!!!!~ トト子 Type A",
+      "artist": "Shuta Sueyoshi ft. Totoko, Nyaa & Sextuplets",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kimishi Ayauku mo Chikau yore (君氏危うくも近うよれ)",
+      "artist": "AŌP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Iyami Ondo (イヤミ音頭)",
+      "artist": "Kenichi Suzumura",
+      "episodes": "6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Let's Go! Muttsu Go! ~6-Shoku no Niji~ (レッツゴー！ムッツゴー！～6色の虹～)",
+      "artist": "ROOTS66 Party with the 6 Matsuno Brothers",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hanamaru Pippi wa Yoiko Dake (The Hanamaru Whistle Is Only For Good Kids)",
+      "artist": "AŌP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Six Same Faces ~Kon'ya wa Saikō! (SIX SAME FACES ～今夜は最高!!!!!!～)",
+      "artist": "Kenichi Suzumura, Takahiro Sakurai, Yuichi Nakamura, Hiroshi Kamiya, Jun Fukuyama, Daisuke Ono, & Miyu Irino",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Mutsugo no Tamashii Nayuta Made (６つ子の魂ナユタまで)",
+      "artist": "AŌP",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Amazing Intelligence ~Kuzu wa Saiko!~ (Amazing Intelligence ~クズは最高!~)",
+      "artist": "Riceballs & Osomatsu-san all-stars",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Maboroshi Wink (Illusion Wink)",
+      "artist": "AŌP & AŌP Zero",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Otona ÷6 × Kodomo × 6",
+      "artist": "The Osomatsu-sans",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Zenryoku Batankyū (全力バタンキュー)",
+      "artist": "AŌP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "SIX SHAME FACES ~Kon'ya mo Saikō~!!!!!! (SIX SHAME FACES ～今夜も最高!!!!!!～)",
+      "artist": "Aya Endo, Kenichi Suzumura, Takahiro Sakurai, Yuichi Nakamura, Hiroshi Kamiya, Jun Fukuyama, Daisuke Ono, & Miyu Irino",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

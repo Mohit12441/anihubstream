@@ -1,0 +1,112 @@
+{
+  "id": "magic-maker-how-to-make-magic-in-another-world",
+  "title": "Magic Maker: How to Make Magic in Another World",
+  "native": "マジック・メイカー　～異世界魔法の作り方～",
+  "year": 2025,
+  "rating": 6.6,
+  "season": "Winter 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx179297-qaG8nCqMpR3o.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx179297-qaG8nCqMpR3o.jpg",
+  "accent": "#e4935d",
+  "synopsis": "On the night of his 30th birthday, one man’s dreams of wielding magic come true after he unexpectedly passes away. He wakes as Sion, a young child in another world. He and his elder sister, Marie, are the children of a lower-class noble family who govern their region. After receiving conflicting messages from their father, Sion and Marie set out on an adventure to uncover the magic.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "magic-maker:-how-to-make-magic-in-another-world-p8y3pv",
+    "mal": 59265,
+    "anilist": 179297,
+    "kitsu": 49063
+  },
+  "skip_key_id": 59265,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "magic maker how to make magic in another world マシ ック メイカー 異世界魔法の作り方 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Marie and Shion",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/85978161e765b2c9f22b5158be5171d61736342864_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "100468"
+    },
+    {
+      "n": 2,
+      "title": "There Is No Magic in This Other World",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/f62353b123a3847e63b941df0518c9811736957184_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "100469"
+    },
+    {
+      "n": 3,
+      "title": "Goblin Attack",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/23cf98f9ea49727501ccfe58fcebbb541737561796_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "100470"
+    },
+    {
+      "n": 4,
+      "title": "Magical Research Begins in Earnest",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/62ed9c7a04ab0fe60ad607729602a8251738163855_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "100471"
+    },
+    {
+      "n": 5,
+      "title": "Lightning Ore and Bolt",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/8a60034790685d5622b00f0e059affa61738770361_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "100472"
+    },
+    {
+      "n": 6,
+      "title": "Guild and Monster Suppression",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b93c90f17d0c69661901448794c537bb1739375756_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "100473"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

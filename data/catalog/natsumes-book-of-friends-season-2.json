@@ -1,0 +1,267 @@
+{
+  "id": "natsumes-book-of-friends-season-2",
+  "title": "Natsume's Book of Friends Season 2",
+  "native": "続 夏目友人帳",
+  "year": 2009,
+  "rating": 8.3,
+  "season": "Winter 2009",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx5300-t9N4PoOkPAdS.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5300-t9N4PoOkPAdS.jpg",
+  "accent": "#aec9e4",
+  "synopsis": "As with its prequel, Zoku Natsume Yuujinchou is about Natsume Takashi, a boy who has had the ability to see youkai since he was young, and his bodyguard youkai, Madara, nicknamed Nyanko-sensei. Natsume attempts to return names written in his Book of Friends, which he inherited from his grandmother Reiko, to youkai in his village. Throughout these adventures, he meets some youkai that are friendly, some that want to steal the Book of Friends, and some that want to kill him. Natsume learns about himself and his relationship with youkai along the way.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "natsume's-book-of-friends-season-2-oo6r7o",
+    "mal": 5300,
+    "anilist": 5300,
+    "kitsu": 4044
+  },
+  "skip_key_id": 5300,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "natsume s book of friends season 2 続 夏目友人帳 tv finished",
+  "genres": [
+    "drama",
+    "fantasy",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Stolen Book Of Friends",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67927/original.jpg",
+      "synopsis": "While outside during school Natsume is hit with a ball while reading. He goes to retrieve the ball and ends up breaking a Youkai's seal (much like he had with Nyanko-sensei). Later that night Natsume and Nyanko-sensei discover a look-a-like of Nyanko, only to have him steal the Book Of Friends!",
+      "airdate": "2009-01-05",
+      "markers": [],
+      "external_id": "67927"
+    },
+    {
+      "n": 2,
+      "title": "Melting Into Spring",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67928/original.jpg",
+      "synopsis": "While fooling around in the snow, Natsume and Nyanko-sensei run into Gen, a forest guardian who lives inside a statue. Gen tries to take over Natsume's body, but instead takes over a snow rabbit that Natsume had made. Gen pleads Natsume to help him find an evil spirit who destroyed Sui, his guardian partner, and Natsume agrees. But it seems Gen isn't telling everything he knows...",
+      "airdate": "2009-01-12",
+      "markers": [],
+      "external_id": "67928"
+    },
+    {
+      "n": 3,
+      "title": "Youkai Exorcism Amid The Steaming Springs",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67929/original.jpg",
+      "synopsis": "Natori invites Natsume on a Hot Spring trip. But noises from the closet and a kimono-clad figure dangled from the ceiling make Natsume uneasy. Not wanting to trouble Natori because of his kind gesture to enjoy the Hot Spring with him, Natsume investigates the Hot Spring himself. During the night Natsume meets with the Youkai, where she comments that he is too soft, and attacks!",
+      "airdate": "2009-01-19",
+      "markers": [],
+      "external_id": "67929"
+    },
+    {
+      "n": 4,
+      "title": "A Chick Hatches",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67930/original.jpg",
+      "synopsis": "Natsume takes care of an abandoned egg from a nest, not considering it could be a Youkai. After it hatches, it turns out it is a rare baby spirit called Tatsumi, who thinks that Natsume is its parent. Natsume can't help but get attached to the little spirit even as Tatsumi grows tired and sick. But as Natsume takes care of Tatsumi, a mysterious spirit comes and wants to take away Tatsumi for his master... who wants to eat him!",
+      "airdate": "2009-01-26",
+      "markers": [],
+      "external_id": "67930"
+    },
+    {
+      "n": 5,
+      "title": "The Promised Tree",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67931/original.jpg",
+      "synopsis": "Natsume encounters a spirit who was enslaved by his grandmother Reiko 50 years ago by writing his name on a torn page from the Book of Friends, and tying it to a tree in a forest. Can Natsume help locate the torn page? What was Reiko's intention of tying it to a tree?",
+      "airdate": "2009-02-02",
+      "markers": [],
+      "external_id": "67931"
+    },
+    {
+      "n": 6,
+      "title": "The Maiden's Circle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67932/original.jpg",
+      "synopsis": "There is a new girl in school, Taki Tooru. With her appearance at the school, circles resembling crop circles begin to appear. As Natsume tries to find out more about the circles and Taki, he is visited by another Youkai. Only this time the Youkai isn't looking for his name, but for a snack.",
+      "airdate": "2009-02-09",
+      "markers": [],
+      "external_id": "67932"
+    },
+    {
+      "n": 7,
+      "title": "That Which You Must Not Call",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67933/original.jpg",
+      "synopsis": "Natsume is dragged off into the cave of the evil spirit that is after Taki. He temporarily loses the ability to see youkai after being poisoned by the spirit. Will he be able to stop the youkai from eating Taki without his sight?",
+      "airdate": "2009-02-16",
+      "markers": [],
+      "external_id": "67933"
+    },
+    {
+      "n": 8,
+      "title": "Emotions Undying",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67934/original.jpg",
+      "synopsis": "Natsume, Kitamoto and Nishimura take a trip to an old inn to spend some time doing their homework. Surrounding the inn there is a lake; in which is believed to live a mermaid.",
+      "airdate": "2009-02-24",
+      "markers": [],
+      "external_id": "67934"
+    },
+    {
+      "n": 9,
+      "title": "He of the Row of Cherry Blossoms",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67935/original.jpg",
+      "synopsis": "From the day where a picture of a row of cherry trees in a desolate winter was obtained, every time Natsume wakes up, his rooms is covered in petals. Trying to solve the root of this activity, Natsume and Nyanko Sensei try and return the picture to Miya, a shadow figure who accompanies the picture. But why can't they return it to Miya...?",
+      "airdate": "2009-03-03",
+      "markers": [],
+      "external_id": "67935"
+    },
+    {
+      "n": 10,
+      "title": "Temporary House",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67936/original.jpg",
+      "synopsis": "Strange things start happening at Natsume's home, like Toukou's plants get destroyed, and a strange Youkai starts wandering around his house. Natsume then learns more about Reiko and her life in this town. He also learns how to get rid of the Youkai who's wandering around the house.",
+      "airdate": "2009-03-10",
+      "markers": [],
+      "external_id": "67936"
+    },
+    {
+      "n": 11,
+      "title": "Assembly of the Witch Doctors",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67937/original.jpg",
+      "synopsis": "While out with Tōko-san, Natsume spots a hurt youkai. Quickly he chases after it but as he goes to help it, it is eaten by a much bigger youkai. Natori and Hiiragi appear right after the youkai escapes and they invite Natsume to the Assembly of Conjurers. Here Natsume can not distinguish between human and youkai and is hopeful of finding people who understand him. Though this may be what Natsume has always wanted; he is too soft-heartened to realize everyone's intent.",
+      "airdate": "2009-03-17",
+      "markers": [],
+      "external_id": "67937"
+    },
+    {
+      "n": 12,
+      "title": "The Boy From The Empty House",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67938/original.jpg",
+      "synopsis": "Natsume encounters a young boy named Kai sealed in a coffin in an abandoned house. Natsume sets Kai free and finds out that Kai is being stalked by a youkai. After a time, Natsume becomes the target of this youkai and stops the youkai's stalking with Nyanko-sensei's help. In the end Natori who turns out to be the stalker and who sealed Kai in the coffin, tells Natsume that Kai is a Youkai.",
+      "airdate": "2009-03-24",
+      "markers": [],
+      "external_id": "67938"
+    },
+    {
+      "n": 13,
+      "title": "Humans and Youkai",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67939/original.jpg",
+      "synopsis": "Natori tells Natsume of a well near the mansion that holds a group of Oni. They are calling out to any Youkai. He also learns that Kai came down from the mountains to free the Oni. While looking for Kai, Natsume sets off one of Natori's traps in the mansion. Kai saves Natsume and heads off to kill Natori.Natsume follows him,to save Natori from getting killed. After he encounters him, he is forced to make an important decision. Which ones are more important to him? Humans or Youkai?",
+      "airdate": "2009-03-31",
+      "markers": [],
+      "external_id": "67939"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Alca",
+      "artist": "Hinata Kashiwagi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Komari Warai",
+      "artist": "Toshiki Kondō",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ima, Kono Toki (今、このとき)",
+      "artist": "Hiiragi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Takaramono (たからもの)",
+      "artist": "Marina Kawano",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Treasure",
+      "artist": "Marina Kawano",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Boku ni Dekiru Koto",
+      "artist": "HOW MERRY MARRY",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kimi no Kakera feat. Miyamoto Emiri",
+      "artist": "Kōsuke Atari",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ano hi Time Machine",
+      "artist": "LONG SHOT PARTY",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aishiteru (愛してる)",
+      "artist": "Callin",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Issei no Sei (一斉の声)",
+      "artist": "Shūhei Kita",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Natsu Yūzora (夏夕空)",
+      "artist": "Kōsuke Atari",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

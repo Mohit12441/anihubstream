@@ -1,0 +1,55 @@
+{
+  "id": "naruto-ut",
+  "title": "NARUTO×UT",
+  "native": "NARUTO×UT",
+  "year": 2011,
+  "rating": 6.9,
+  "season": "Winter 2011",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/10075.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/10075.jpg",
+  "accent": "#0d6bf1",
+  "synopsis": "UNIQLO clothing stores throughout Japan will be offering a Naruto x UT Original DVD with all-new animation on January 1. The DVD will contain an original Naruto anime video set to an exclusive version of Mayonaka no Orchestra, the upcoming song by the Japanese rock band Aqua Timez. A limited number of the DVDs will be offered as presents to people who buy UNIQLO's Naruto graphic T-shirts online or in stores.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "narutout-m19i8m",
+    "mal": 10075,
+    "anilist": 10075,
+    "kitsu": 6022
+  },
+  "skip_key_id": 10075,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "naruto ut naruto ut ova finished",
+  "genres": [
+    "action",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "NARUTO×UT",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a93ec0080ce44fd7ccccc6a-poster.jpg",
+      "synopsis": "UNIQLO clothing stores throughout Japan will be offering a Naruto x UT Original DVD with all-new animation on January 1. The DVD will contain an original Naruto anime video set to an exclusive version of Mayonaka no Orchestra, the upcoming song by the Japanese rock band Aqua Timez. A limited number of the DVDs will be offered as presents to people who buy UNIQLO's Naruto graphic T-shirts online or in stores.\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "90975"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,202 @@
+{
+  "id": "minami-ke-okawari",
+  "title": "Minami-ke: Okawari",
+  "native": "みなみけ～おかわり～",
+  "year": 2008,
+  "rating": 7,
+  "season": "Winter 2008",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b3225-o0alpa3uDh0S.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b3225-o0alpa3uDh0S.png",
+  "accent": "#e4c9a1",
+  "synopsis": "A new year has started, and the three Minami sisters—Haruka, Kana, and Chiaki—are still living together without adult supervision. As the seasons pass, the girls continue to make friends and find new interests. No matter where they are or who they hang out with, the sisters' time remains ever vibrant.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "minami-ke-okawari-hs8ozp",
+    "mal": 3225,
+    "anilist": 3225,
+    "kitsu": 2868
+  },
+  "skip_key_id": 3225,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "minami ke okawari みなみけ おかわり tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hot Springs, Let's Eat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48517/original.jpg",
+      "synopsis": "The Minami sisters, Makoto, Touma, Fujioka, and Takeru go on a hot spring trip for New Years.",
+      "airdate": "2008-01-06",
+      "markers": [],
+      "external_id": "48517"
+    },
+    {
+      "n": 2,
+      "title": "Taste is Something Inherited Over Generations",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48518/original.jpg",
+      "synopsis": "Kana decides to help her sister become the Great Bancho once more by making the Kana army, but Chiaki on the other hand couldn't help because she considered her friends useless. In the end of the episode they find out Haruka was just refusing a phone call to become class rep.",
+      "airdate": "2008-01-13",
+      "markers": [],
+      "external_id": "48518"
+    },
+    {
+      "n": 3,
+      "title": "Evening Hospitality, Hesitantly Offered",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48519/original.jpg",
+      "synopsis": "Chiaki's classmates invite themselves to the Minami home for a group homework session and sleepover. Kana declares it a 'pyjama festival' and puts herself in charge of hospitality, to Chiaki's annoyance. To feed all her guests, Haruka prepares a family-style nabe meal, and she invites Fujioka and Makoto to dinner. Everyone has a good time, but no-one gets much homework done.",
+      "airdate": "2008-01-20",
+      "markers": [],
+      "external_id": "48519"
+    },
+    {
+      "n": 4,
+      "title": "Is It All Right to Clean Up?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48520/original.jpg",
+      "synopsis": "During a routine garbage disposal trip, Haruka encounters a boy of Chiaki's age named Fuyuki who is warmly praised by his neighbors for his willingness to freely volunteer his assistance. It is during this encounter that Fuyuki's participation in the weekend neighborhood clean-up is mentioned. Kana's reluctance to take part prompts Haruka to force her and Chiaki to also participate. Later on, Kana summons a few of her classmates, as well as Chiaki's friends to lighten the workload. During the actual clean-up event, it becomes apparent that the work crew Kana assembled was so that Kana could watch while everybody else does all the work.",
+      "airdate": "2008-01-27",
+      "markers": [],
+      "external_id": "48520"
+    },
+    {
+      "n": 5,
+      "title": "Can't Take Back a Served Tea Cup",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48521/original.jpg",
+      "synopsis": "Kana and Chiaki break a glass rabbit necklace that Haruka had bought. Worried that the rabbit was a gift to Haruka that she treasures, both Kana and Chiaki try to repair the rabbit. After the repairs go badly, Kana tries to get Fujioka, Keiko, and Yoshino to look for another to replace the broken rabbit. In the end, Haruka discovers the truth.",
+      "airdate": "2008-02-03",
+      "markers": [],
+      "external_id": "48521"
+    },
+    {
+      "n": 6,
+      "title": "My Rice is Warm Even After It's Cooled",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48522/original.jpg",
+      "synopsis": "The power goes out and the Minami sisters invite Fuyuki over.",
+      "airdate": "2008-02-10",
+      "markers": [],
+      "external_id": "48522"
+    },
+    {
+      "n": 7,
+      "title": "The More You Chew It, The Sweeter It Becomes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48523/original.jpg",
+      "synopsis": "It's Valentines Day and the Minami sisters are making chocolates to give out. Kana tries to eat Fujioka's chocolates, but he tries to keep them a secret from her, hoping that Kana will give him chocolate.",
+      "airdate": "2008-02-17",
+      "markers": [],
+      "external_id": "48523"
+    },
+    {
+      "n": 8,
+      "title": "There's Always Time for the Pool",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48524/original.jpg",
+      "synopsis": "A local shop owner gives Haruka tickets to a new indoor pool. We learn that Chiaki doesn't know how to swim and doesn't want the others to find out. Later, Kana tries to teach Chiaki how to swim and help Chiaki meet her goal to swim 100 meters. Haruka sleeps the entire time, trying to ignore her sisters, until her highschool friends throw her into the pool.",
+      "airdate": "2008-02-24",
+      "markers": [],
+      "external_id": "48524"
+    },
+    {
+      "n": 9,
+      "title": "Does It Hurt Yet? Secrets of Mako-chan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48525/original.jpg",
+      "synopsis": "Kana believes she has prophetic dreams and can predict the next nights dinner. Makoto is almost caught crossdressing by Yoshino, and Kana worries whether she is a bad influence on Makoto. Haruka is told that she has been selected to study abroad and is having a hard time with the prospect of leaving.",
+      "airdate": "2008-03-02",
+      "markers": [],
+      "external_id": "48525"
+    },
+    {
+      "n": 10,
+      "title": "'Dumplings Rather than Flowers' Age",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48526/original.jpg",
+      "synopsis": "Spring has sprung and the Minami sisters are sitting around the kotatsu talking. Chiaki confuses 'skirt steak' (harami) with 'flower viewing' (hanami) and is teased by Kana. To save Chiaki, Haruka suggests going flower viewing, though it is still too early.",
+      "airdate": "2008-03-09",
+      "markers": [],
+      "external_id": "48526"
+    },
+    {
+      "n": 11,
+      "title": "As Expected, It's Getting Bad",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48527/original.jpg",
+      "synopsis": "Toma's secret is almost revealed to Fujioka when he sees her in a girls uniform. Kana covers for her by making Fujioka believe that everyone must crossdress at her place and tries to force Fujioka to comply. Kana feigns a cold on Saturday to avoid doing the city cleanup; Chiaki stays to keep an eye on Kana and figures out she was faking. The next day, she truly catches a cold and tries to avoid being found out, all the while recruiting Uchida and Mako-chan for help.",
+      "airdate": "2008-03-16",
+      "markers": [],
+      "external_id": "48527"
+    },
+    {
+      "n": 12,
+      "title": "Even One Bite More Is Painful",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48528/original.jpg",
+      "synopsis": "Chiaki helps to prepare for a school sports meet. Meanwhile, the sisters learn that Fuyuki is moving and is forced to leave in the middle of the sports meet. Kana learns that Haruka has been selected to study abroad.",
+      "airdate": "2008-03-23",
+      "markers": [],
+      "external_id": "48528"
+    },
+    {
+      "n": 13,
+      "title": "Everyone At Once, 'Thank You for the Meal'",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48529/original.jpg",
+      "synopsis": "Frightened of the prospect of Haruka studying abroad, Kana and Chiaki decide to step up to the plate and exert more of an effort with the cooking and cleaning as well as the other domestic chores in order to put Haruka's mind at ease after sending her off with a smile. It quickly becomes evident that the prospect of having to actually take care of themselves in Haruka's absence is much more than Kana and Chiaki can endure. While being tearfully embraced and exhorted to stay with them, Haruka explains to Kana and Chiaki that she has no intention of studying abroad anyway.",
+      "airdate": "2008-03-30",
+      "markers": [],
+      "external_id": "48529"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kokoro no Tsubasa (ココロノツバサ)",
+      "artist": "Rina Satou, Marina Inoue & Minori Chihara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sono Koe ga Kiki Takute (その声が聞きたくて)",
+      "artist": "Rina Satou, Marina Inoue & Minori Chihara",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

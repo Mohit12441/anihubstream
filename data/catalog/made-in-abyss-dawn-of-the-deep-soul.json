@@ -1,0 +1,79 @@
+{
+  "id": "made-in-abyss-dawn-of-the-deep-soul",
+  "title": "Made in Abyss: Dawn of the Deep Soul",
+  "native": "メイドインアビス 深き魂の黎明",
+  "year": 2020,
+  "rating": 8.5,
+  "season": "Winter 2020",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx100643-fPH9OgEKKvcI.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100643-fPH9OgEKKvcI.jpg",
+  "accent": "#e49343",
+  "synopsis": "Dawn of the Deep Soul continues the epic adventure of plucky Riko and Reg who are joined by their new friend Nanachi. Together they descend into the Abyss’ treacherous fifth layer, the Sea of Corpses, and encounter the mysterious Bondrewd, a legendary White Whistle whose shadow looms over Nanachi’s troubled past. Bondrewd is ingratiatingly hospitable, but the brave adventurers know things are not always as they seem in the enigmatic Abyss...\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Made in Abyss (2017)",
+    "Made in Abyss: Wandering Twilight (2019)",
+    "Made in Abyss: The Golden City of the Scorching Sun (2022)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 14027,
+    "anilist": 100643,
+    "mal": 36862,
+    "hianime": "made-in-abyss:-dawn-of-the-deep-soul-u54m91"
+  },
+  "skip_key_id": 36862,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 08:43:21",
+  "search_text": "made in abyss dawn of the deep soul メイト インアヒ ス 深き魂の黎明 movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "horror",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Made in Abyss: Dawn of the Deep Soul (Movie)",
+      "runtime": "105:00",
+      "runtime_seconds": 6300,
+      "thumb": "https://animehot.cc/storage/media/2026/09/690a3bb7543081759bdccda6-landscape.webp",
+      "synopsis": "After bonding over a tragic loss, the long-suffering Nanachi joins Riko and Reg on their journey into the depths of the Abyss. Awaiting the children is the Sea of Corpses—the Abyss's fifth layer, and the deepest level from which a traveler can return without losing their human form.\n\nThe masked sadist Bondrewd stands between the children and the rest of their adventure. Bondrewd's horrific laboratory serves as a final checkpoint for those wishing to traverse deeper into the Abyss, and the sociopathic scientist has no desire to allow Riko's party to pass through at no cost. Deeply scarred by Bondrewd's impact on their childhood, Nanachi is engulfed in turmoil over his resurgence in their life.\n\nBondrewd's only apparent weakness is Prushka, a brash child who claims to be his daughter. Riko, Reg, and Nanachi befriend Prushka and work with the girl to overcome her father's machinations and breach the Abyss's sixth layer.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "230307"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Forever Lost",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Forever Lost",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,444 @@
+{
+  "id": "kakuriyo-bed-breakfast-for-spirits",
+  "title": "Kakuriyo -Bed & Breakfast for Spirits-",
+  "native": "かくりよの宿飯",
+  "year": 2018,
+  "rating": 7.3,
+  "season": "Spring 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx100500-D1InEy2GriJV.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100500-D1InEy2GriJV.jpg",
+  "accent": "#e4bb35",
+  "synopsis": "The series centers on a female college student named Aoi, who inherited the ability to see spirits from her late grandfather. Aoi prides herself on her cooking, and one day she's feeding some agricultural spirits when suddenly a god and the master of the \"Tenshinya\" (Heavenly Inn) appears and takes Aoi away. He says that due to her grandfather's debts, she must become his bride. Aoi hates this idea and instead declares that she will pay back her grandfather's debt by working at the Tenshinya. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kakuriyo-bed-and-breakfast-for-spirits-3vftt0",
+    "mal": 36754,
+    "anilist": 100500,
+    "kitsu": 40580
+  },
+  "skip_key_id": 36754,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "kakuriyo bed breakfast for spirits かくりよの宿飯 tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I'm Marrying into an Inn for Spirits.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242986/original.jpg",
+      "synopsis": "On her way to school, Aoi, who can see ayakashi, encounters an ayakashi she's never seen and is abducted to Tenjin-ya, an inn in the hidden realm. There, she learns that her grandfather promised that she'd marry the master innkeeper to pay off his debt",
+      "airdate": "2018-04-02",
+      "markers": [],
+      "external_id": "242986"
+    },
+    {
+      "n": 2,
+      "title": "I've Found a Job at the Inn for Spirits.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242987/original.jpg",
+      "synopsis": "Ginji, the young master of Tenjin-ya, suggested that Aoi open up an eatery. But before she has a chance to even think about it, she gets dragged into a commotion caused by the tengu guests. Will she ever be able to find a job at Tenjin-ya?",
+      "airdate": "2018-04-09",
+      "markers": [],
+      "external_id": "242987"
+    },
+    {
+      "n": 3,
+      "title": "I Took a Trip to the Capital of the Hidden Realm",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242988/original.jpg",
+      "synopsis": "The ayakashi world is ruled by eight great yokai called the Hachiyo. After Aoi succeeded in offering hospitality to Matsuba, one of the Hachiyo, the master innkeeper takes her out to the capital of the hidden realm as a reward for her achievement.",
+      "airdate": "2018-04-16",
+      "markers": [],
+      "external_id": "242988"
+    },
+    {
+      "n": 4,
+      "title": "I Looked After a Snow Woman and an Earth-Spider.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242989/original.jpg",
+      "synopsis": "After they come back to Tenjin-ya, the snow woman O-Ryo collapses from fever and Aoi ends up looking after her with her cooking. Then, a fight breaks out between Suzuran, who wants to go to the apparent realm, and Akatsuki, who is against her going.",
+      "airdate": "2018-04-23",
+      "markers": [],
+      "external_id": "242989"
+    },
+    {
+      "n": 5,
+      "title": "I Should Not Forget My Promise to the Ayakashi",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242990/original.jpg",
+      "synopsis": "After having a big fight with his younger sister, Akatsuki stays in the form of a spider and does not even eat the food Aoi cooked. Thinking that it'd be too sad if they went their separate ways without reconciling, Aoi decides to do something about it.",
+      "airdate": "2018-04-30",
+      "markers": [],
+      "external_id": "242990"
+    },
+    {
+      "n": 6,
+      "title": "I'm Opening up an Eatery in an Ayakashi Inn",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242991/original.jpg",
+      "synopsis": "The day has finally come for Aoi's eatery to open. With the name Moonflower from Matsuba, she opens it in great spirits; however, things don't seem to go so well at this unluckiest place in the northeast area.",
+      "airdate": "2018-05-07",
+      "markers": [],
+      "external_id": "242991"
+    },
+    {
+      "n": 7,
+      "title": "Taking A Walk with the Master in the Rain.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242992/original.jpg",
+      "synopsis": "When Aoi is summoned by Byakuya, the chief of the accounting office, he points out that she hasn't made any sales yet. He also tells her that if she cannot produce results, Moonflower will be closed.",
+      "airdate": "2018-05-14",
+      "markers": [],
+      "external_id": "242992"
+    },
+    {
+      "n": 8,
+      "title": "Shopping with the Nine-Tailed Young Master.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242993/original.jpg",
+      "synopsis": "After receiving a request from the Imperial Court to cook anniversary dishes for Nuinoin and his wife, Aoi visits the eastern land where a foreign delicacy market is being held in order to obtain the ingredients.",
+      "airdate": "2018-05-21",
+      "markers": [],
+      "external_id": "242993"
+    },
+    {
+      "n": 9,
+      "title": "An Elderly Ayakashi Couple's Wedding Anniversary.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242994/original.jpg",
+      "synopsis": "In the dark place where Aoi is locked up, the noise of rain and thunder reminds her of the day her mother left her. As she loses consciousness, she's rescued by the master; however, when she wakes up, it's already the royal couple's anniversary day.",
+      "airdate": "2018-05-28",
+      "markers": [],
+      "external_id": "242994"
+    },
+    {
+      "n": 10,
+      "title": "A Rival Has Arrived at the Ayakashi Inn.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242995/original.jpg",
+      "synopsis": "In preparation for the Tanabata Festival, the town and Tenjin-ya are becoming quite lively. At Moonflower, Ritsuko visits Aoi, who is also preparing for Tanabata, and tells her stories about her and Nuinoin's past.",
+      "airdate": "2018-06-04",
+      "markers": [],
+      "external_id": "242995"
+    },
+    {
+      "n": 11,
+      "title": "The Nure-Onna Bath Caretaker and Her Shiranui Teacher.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242996/original.jpg",
+      "synopsis": "While the master is away, Hatori and Tokihiko, the front desk manager and bath caretaker from Tenjin-ya's rival inn Orio-ya, suddenly show up at Tenjin-ya. Although they say they came as guests, a tense mood prevails among the employees.",
+      "airdate": "2018-06-11",
+      "markers": [],
+      "external_id": "242996"
+    },
+    {
+      "n": 12,
+      "title": "There's a Secret in the Basement at Tenjin-ya.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242997/original.jpg",
+      "synopsis": "Akatsuki and Ginji have been acting a little strange since Hatori arrived. Meanwhile, the children from one of the families staying at Tenjin-ya go missing. In order to look for them with Akatsuki, Aoi goes down to Tenjin-ya's basement for the first time.",
+      "airdate": "2018-06-18",
+      "markers": [],
+      "external_id": "242997"
+    },
+    {
+      "n": 13,
+      "title": "A Grand Banquet at an Ayakashi Inn",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242998/original.jpg",
+      "synopsis": "After resolving the missing children incident, Aoi comes back to Moonflower and finds a collapsed Ginji in his fox-cub form. While looking after him, she recalls the white-masked ayakashi who saved her when she was a child.",
+      "airdate": "2018-06-25",
+      "markers": [],
+      "external_id": "242998"
+    },
+    {
+      "n": 14,
+      "title": "A Black Ship Arrives from the Southern Land.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242999/original.jpg",
+      "synopsis": "Aoi realizes that she has found a place she can belong to in Tenjin-ya. Then, Orio-ya's air ship suddenly shows up with a long-haired ayakashi on board, who's wearing a white mask that reminds her of the ayakashi in her childhood memory.",
+      "airdate": "2018-07-02",
+      "markers": [],
+      "external_id": "242999"
+    },
+    {
+      "n": 15,
+      "title": "I Was Abducted from an Ayakashi Inn.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243000/original.jpg",
+      "synopsis": "After being taken to Orio-ya, Tenjin-ya's rival inn, Aoi is put in a confinement room. Although she is all by herself in a strange place, she decides to escape in order to find out who the ayakashi she met when she was a child was.",
+      "airdate": "2018-07-09",
+      "markers": [],
+      "external_id": "243000"
+    },
+    {
+      "n": 16,
+      "title": "The Twin Chefs and a Rain Woman from a Rich Family.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243001/original.jpg",
+      "synopsis": "At Ginji's suggestion, Aoi now cooks breakfast for Matsuba, who is staying at Orio-ya, and is given permission to use the kitchen in the old building. In the meantime, the light comes on at Moonflower while Aoi and Ginji are gone.",
+      "airdate": "2018-07-16",
+      "markers": [],
+      "external_id": "243001"
+    },
+    {
+      "n": 17,
+      "title": "The Secret of the Ceremony in the Southern Land.",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243002/original.jpg",
+      "synopsis": "At the tsuru-douji's request, Aoi decides to entertain Yodoko, a spoiled daughter of a rich family who wants to eat an interesting food, by serving monjayaki. Though Yodoko first appears puzzled, she becomes intrigued when the food is cooked before her.",
+      "airdate": "2018-07-23",
+      "markers": [],
+      "external_id": "243002"
+    },
+    {
+      "n": 18,
+      "title": "A Big Fight between a Tengu Father and His Son.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243003/original.jpg",
+      "synopsis": "After hearing the explosion from Orio-ya, Aoi rushes back only to find an angered Matsuba and a beat-up Hatori. Matsuba's anger was triggered by Hatori directly asking him for some of the tengu’s secret liquor, one of the items needed for the ceremony.",
+      "airdate": "2018-07-30",
+      "markers": [],
+      "external_id": "243003"
+    },
+    {
+      "n": 19,
+      "title": "A Silver Beast on a Moonlit Night.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243004/original.jpg",
+      "synopsis": "After Aoi helped the tengu father and son reconcile, Raiju, a noble from the capital, becomes interested in Aoi. Meanwhile, Aoi follows Nobunaga to the back of the pine grove only to find a large silver beast collapsed in front of a crumbling shrine.",
+      "airdate": "2018-08-06",
+      "markers": [],
+      "external_id": "243004"
+    },
+    {
+      "n": 20,
+      "title": "Traces of a Dream in the Dragon Palace.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243005/original.jpg",
+      "synopsis": "Aoi needs to find the mermaid scale, so she goes to the ruins of the dragon palace, a place with a strong curse, with the master. Aoi and the master aren't affected by the miasma, but they get separated when she hears a voice calling her name.",
+      "airdate": "2018-08-13",
+      "markers": [],
+      "external_id": "243005"
+    },
+    {
+      "n": 21,
+      "title": "Orio-ya's Young Hostess and Young Master.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243006/original.jpg",
+      "synopsis": "O-Ryo, the former young hostess at Tenjin-ya, comes by Orio-ya as an inn guest. The Orio-ya employees become alarmed at the rival inn employee's arrival. Nene, Orio-ya's young hostess, seems to be especially bothered by O-Ryo's visit.",
+      "airdate": "2018-08-20",
+      "markers": [],
+      "external_id": "243006"
+    },
+    {
+      "n": 22,
+      "title": "Raiju's Warning.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243007/original.jpg",
+      "synopsis": "While Aoi is contemplating the dishes for the ceremony, Raiju, a noble from Youto, suddenly appears before her. Although she runs around trying to get away from him, he follows her around suspiciously and directs his malicious intent towards her.",
+      "airdate": "2018-08-27",
+      "markers": [],
+      "external_id": "243007"
+    },
+    {
+      "n": 23,
+      "title": "The Sealed Power and the Opening Heart.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243008/original.jpg",
+      "synopsis": "After drinking the tengu's secret liquor, Aoi suddenly collapses. When she wakes up, she realizes that not only did she lose her voice, but she also lost her sense of taste, and so it was decided that she wouldn't cook the dishes made of ocean treasure.",
+      "airdate": "2018-09-03",
+      "markers": [],
+      "external_id": "243008"
+    },
+    {
+      "n": 24,
+      "title": "Life-or-Death Hunt for the Gem Branch.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243009/original.jpg",
+      "synopsis": "It turned out that one of the Hourai's gem branches had been kept inside the enclosed space in an ink brush painting belonging to Nuinoin and his wife. With Byakuya's help, Aoi enters the world of the ink brush painting with Ginji, Ranmaru, and Chibi.",
+      "airdate": "2018-09-10",
+      "markers": [],
+      "external_id": "243009"
+    },
+    {
+      "n": 25,
+      "title": "A Fireworks Event with Ayakashi.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243010/original.jpg",
+      "synopsis": "After coming back from the world of the ink brush painting, Aoi decides to cook the dishes made of ocean treasure for the second time. On the day of the fireworks event, when Orio-ya is swarming with guests, Tenjin-ya's air ships arrive as well.",
+      "airdate": "2018-09-17",
+      "markers": [],
+      "external_id": "243010"
+    },
+    {
+      "n": 26,
+      "title": "Delicious Dishes are Served at the Inn for Spirits.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243089/original.jpg",
+      "synopsis": "The kagura hall is lit up and the ceremony has started. Lured by the smell of cucumber, Chibi goes inside the screen. After hearing his scream, Aoi pulls up the screen only to find out that the umi-bouzu has the same feelings that she had in the past.",
+      "airdate": "2018-09-24",
+      "markers": [],
+      "external_id": "243089"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tōryanse",
+      "artist": "Nao Tōyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Namida no Recipe (The Recipe for Tears)",
+      "artist": "Nao Tōyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tō no Manimani (灯火のまにまに)",
+      "artist": "Nao Tōyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sai -color- (彩 -color-)",
+      "artist": "Manami Numakura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hitosaji no Hikari (ひと匙の光)",
+      "artist": "Katsuyuki Konishi",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Utsushiyo no Yume (ウツシヨノユメ; copy of a dream)",
+      "artist": "Nano",
+      "episodes": "15-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Negai Hana (願い花; Wish Flower)",
+      "artist": "Katsuyuki Konishi",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Namida no Recipe × Hitosaji no Hikari (涙のレシピ×ひと匙の光)",
+      "artist": "Nao Tōyama × Katsuyuki Konishi",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Toki no Suna (時の砂; Sands of Time)",
+      "artist": "Yūma Uchida and Maaya Uchida",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "My sweet sweet love",
+      "artist": "Atsushi Tamaru",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Shiranai Kimochi (Unknown Feelings)",
+      "artist": "Megumi Nakajima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Kaze (風, wind)",
+      "artist": "Shunichi Toki",
+      "episodes": "13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Yashiho no Hana (ヤシホノハナ)",
+      "artist": "Takuma Terashima",
+      "episodes": "18"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Koi mamori uta (恋守唄)",
+      "artist": "Tetsuya Kakihara",
+      "episodes": "21"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Setsuna no kirameki (刹那の煌めき)",
+      "artist": "Satoshi Hino",
+      "episodes": "23"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "Eien no kizuna (永遠の絆, eternal bond)",
+      "artist": "Kaito Ishikawa",
+      "episodes": "25"
+    }
+  ],
+  "relations": []
+}

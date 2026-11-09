@@ -1,0 +1,220 @@
+{
+  "id": "kingdom-season-5",
+  "title": "Kingdom Season 5",
+  "native": "キングダム 第5シリーズ",
+  "year": 2024,
+  "rating": 8.5,
+  "season": "Winter 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx155227-ZEAyBcZjSeet.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx155227-ZEAyBcZjSeet.jpg",
+  "accent": "#50a1e4",
+  "synopsis": "The fifth season of Kingdom.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kingdom:-season-5-zr0pfo",
+    "mal": 53223,
+    "anilist": 155227,
+    "kitsu": 46564
+  },
+  "skip_key_id": 53223,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "kingdom season 5 キンク タ ム 第5シリース tv finished",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Monsters Take the Field",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b135cb96c6ee1ae265ca8ddd7e84e2bd1704542337_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "323132"
+    },
+    {
+      "n": 2,
+      "title": "The Stench of the Battlefield",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/cbf7d2bf11bf5541f1e74f491d650ca51705777341_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "323133"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ikite, Sansan (生きて、燦々)",
+      "artist": "Ikimono-gakari",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hōkō (Roar)",
+      "artist": "Sora Tomonari",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kieru Made (Until it Disappears)",
+      "artist": "Hana Hope",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Prayer",
+      "artist": "Who-ya Extended",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rei -ray-",
+      "artist": "Suiren",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Genyō (Dazzling)",
+      "artist": "Haku",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "TOMORROW",
+      "artist": "BiSH",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Deep inside",
+      "artist": "waterweed",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "GLORY DAYS",
+      "artist": "D☆DATE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "21",
+      "artist": "The Sketchbook",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pride",
+      "artist": "Nothing's Carved in Stone",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Voice of Soul",
+      "artist": "Takumi Ishida",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kakudo",
+      "artist": "Sae",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hechitashiho",
+      "artist": "Sae",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "geki",
+      "artist": "zonji",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Believe",
+      "artist": "Misaki",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "STACKiNG",
+      "artist": "BiSH",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "kIng",
+      "artist": "Emiko Suzuki",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "EXIT",
+      "artist": "The Sketchbook",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Destiny Sky",
+      "artist": "Yūki Wakai",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Soko ni Kimi ga Aru",
+      "artist": "The Sketchbook",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Never Ending",
+      "artist": "Dasoku",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

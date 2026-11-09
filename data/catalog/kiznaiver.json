@@ -1,0 +1,192 @@
+{
+  "id": "kiznaiver",
+  "title": "Kiznaiver",
+  "native": "キズナイーバー",
+  "year": 2016,
+  "rating": 7.1,
+  "season": "Spring 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21421-5y8ryXsMB7aJ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21421-5y8ryXsMB7aJ.jpg",
+  "accent": "#e4e45d",
+  "synopsis": "The fictional Japanese city named Sugomori City is built on reclaimed land. But as the years go by, the city's population is decreasing. One day, Sonozaki tells her classmate Katsuhira: \"You have been selected to be a Kiznaiver.\" The Kizuna System, which allows Katsuhira to share his wounds, connects him to the classmates whose lives and personalities completely differ from his. The Kizuna System is an incomplete system for the implementation of world peace that connects people through wounds. All those who are connected to this system are called Kiznaivers. When one Kiznaiver is wounded, the system divides and transmits the wound among the other Kiznaivers.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kiznaiver-gaqy6e",
+    "mal": 31798,
+    "anilist": 21421,
+    "kitsu": 11437
+  },
+  "skip_key_id": 31798,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "kiznaiver キス ナイーハ ー tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sometimes, a Bond Can Bloom from the First Day Eye Contact Is Made",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185384/original.jpg",
+      "synopsis": "Agata Katsuhira is a strange young man who doesn't feel pain. One day, he encounters a mysterious young woman named Sonozaki Noriko, who changes his life, as well as the lives of his classmates forever.",
+      "airdate": "2016-04-09",
+      "markers": [],
+      "external_id": "185384"
+    },
+    {
+      "n": 2,
+      "title": "If You Can Swallow a Bizarre Situation Like This So Easily, Two Buckets of Barium Shouldn't Be a Problem",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185385/original.jpg",
+      "synopsis": "The kids are forced into doing self introductions... However, it appears that the self introductions that Sonozaki wants them to do requires much more than the usual name and what class they're in. They find out that every wrong answer has a penalty, and painfully learn that they are indeed connected to each other...",
+      "airdate": "2016-04-16",
+      "markers": [],
+      "external_id": "185385"
+    },
+    {
+      "n": 3,
+      "title": "Depending on How You Look At It, I Think We Could Get Through Anything... Right?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185386/original.jpg",
+      "synopsis": "The kids find out that there's actually one other Kiznaiver, and they go to find this mysterious figure.",
+      "airdate": "2016-04-23",
+      "markers": [],
+      "external_id": "185386"
+    },
+    {
+      "n": 4,
+      "title": "Now That We're All Connected, Let's All Get to Know Each Other Better, 'Kay?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185387/original.jpg",
+      "synopsis": "The kids get to know Hisomu and Sonozaki promises to let them know a secret about Kiznaivers if they agree to go to a summer training camp.",
+      "airdate": "2016-04-30",
+      "markers": [],
+      "external_id": "185387"
+    },
+    {
+      "n": 5,
+      "title": "Wahoo! It's a Training Camp! Let's Step in Deer Poop and Have Pillow Fights! Go! Go!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185388/original.jpg",
+      "synopsis": "The Kiznaivers get to their training camp and are faced with the summer favorite, the test of bravery. Meanwhile, Chidori runs off on her own and the others realize that they might be connected by other means than just their pain.",
+      "airdate": "2016-05-07",
+      "markers": [],
+      "external_id": "185388"
+    },
+    {
+      "n": 6,
+      "title": "Nothing Good Comes From Being Around All Of You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185389/original.jpg",
+      "synopsis": "Something from Honoka's past comes back to haunt her, and Nico makes another attempt at becoming her friend.",
+      "airdate": "2016-05-14",
+      "markers": [],
+      "external_id": "185389"
+    },
+    {
+      "n": 7,
+      "title": "A Battle Touching Upon the Identity of the Pain that's Seven Times the Pain of One-Seventh of a Pain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185390/original.jpg",
+      "synopsis": "The Kiznaivers find out the truth about Maki's past, and try to help her overcome it.",
+      "airdate": "2016-05-21",
+      "markers": [],
+      "external_id": "185390"
+    },
+    {
+      "n": 8,
+      "title": "Happy Times Don't Tend to Last Very Long",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185391/original.jpg",
+      "synopsis": "The Kiznaivers get stuck in a building during a typhoon and some hidden feelings start to come to light.",
+      "airdate": "2016-05-28",
+      "markers": [],
+      "external_id": "185391"
+    },
+    {
+      "n": 9,
+      "title": "It's All Over... I Think",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185392/original.jpg",
+      "synopsis": "The Kiznaivers start to hear each others thoughts, which makes things even more complicated. Meanwhile, a secret about Sonozaki and Katsuhira is revealed.",
+      "airdate": "2016-06-04",
+      "markers": [],
+      "external_id": "185392"
+    },
+    {
+      "n": 10,
+      "title": "You Knew Very Well That Your Romantic Feelings Might Be Unrequited, Right?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185393/original.jpg",
+      "synopsis": "The Kiznaivers all go their own ways. Meanwhile, Katsuhira finds out the truth about the Kizna Experiment and about Sonozaki's past.",
+      "airdate": "2016-06-11",
+      "markers": [],
+      "external_id": "185393"
+    },
+    {
+      "n": 11,
+      "title": "We Have To Contact Each Other And Confirm Our Feelings. Because We're Friends!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185394/original.jpg",
+      "synopsis": "Katsuhira finds out what happened to the friends from his childhood and Sonozaki is intent on making the Kizna Experiment successful no matter what.",
+      "airdate": "2016-06-18",
+      "markers": [],
+      "external_id": "185394"
+    },
+    {
+      "n": 12,
+      "title": "If The Kizna System Spread Throughout The World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185395/original.jpg",
+      "synopsis": "Katsuhira catches up to Sonozaki in order to try to stop her from trying to connect everyone to the Kizna System.",
+      "airdate": "2016-06-25",
+      "markers": [],
+      "external_id": "185395"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "LAY YOUR HANDS ON ME",
+      "artist": "BOOM BOOM SATELLITES",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hajimari no Sokudo (はじまりの速度)",
+      "artist": "Sangatsu no Phantasia",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

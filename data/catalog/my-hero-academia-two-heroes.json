@@ -1,0 +1,67 @@
+{
+  "id": "my-hero-academia-two-heroes",
+  "title": "My Hero Academia: Two Heroes",
+  "native": "僕のヒーローアカデミア THE MOVIE 〜2人の英雄〜",
+  "year": 2018,
+  "rating": 7.4,
+  "season": "Summer 2018",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx100723-7f5e1BCTCDoB.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100723-7f5e1BCTCDoB.jpg",
+  "accent": "#5dbbe4",
+  "synopsis": "The climactic finals are over, and U.A. is getting ready for the summer training camp. Deku and All Might receive an invitation from a certain person to go overseas to a giant artificial moving city called I-Island. This island, a kind of “science Hollywood” that gathers the knowledge of scientists from around the world, is holding an exhibition called I-Expo showcasing the results of Quirk and hero item research. In the midst of all this, Deku meets a Quirkless girl named Melissa and remembers his own Quirkless past. Out of the blue, the impregnable security system the island boasts is hacked by villains, and all the people on the island are taken as hostages! Now, a plan that could shake hero society has been put into motion! The man who holds the key to it all is the number one hero and Symbol of Peace, All Might.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Everyone Is Someone's Hero"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 14084,
+    "anilist": 100723,
+    "mal": 36896,
+    "hianime": "my-hero-academia:-two-heroes-endo3f"
+  },
+  "skip_key_id": 36896,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 06:14:32",
+  "search_text": "my hero academia two heroes 僕のヒーローアカテ ミア the movie 2人の英雄 movie finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "My Hero Academia: Two Heroes (Movie)",
+      "runtime": "96:00",
+      "runtime_seconds": 5760,
+      "thumb": "https://animehot.cc/storage/media/2026/09/68fdee6c6004946a13eee2fc-landscape.webp",
+      "synopsis": "U.A. High School's students of Class 1-A have made it to summer break. Izuku Midoriya accompanies his mentor All Might to a celebratory superhero festival on I-Island, an isolated patch of land dedicated to researching Quirks and everything else associated with the hero business. Midoriya is granted the opportunity to meet All Might's friend Dave and Dave's daughter Melissa, two talented hero equipment engineers. He also encounters his classmates, most of whom have been given the opportunity to spend part of their summer break at the festival.\n\nHowever, a mysterious squad of villains infiltrates I-Island, and it is up to Midoriya and his friends to confront them, using their developing Quirks to fight off the new enemy and uncover a treacherous plot.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "230403"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Long Hope Philia (ロングホープ・フィリア)",
+      "artist": "Masaki Suda",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

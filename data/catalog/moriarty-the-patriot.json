@@ -1,0 +1,222 @@
+{
+  "id": "moriarty-the-patriot",
+  "title": "Moriarty the Patriot",
+  "native": "憂国のモリアーティ",
+  "year": 2020,
+  "rating": 8,
+  "season": "Fall 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx114124-def92qPuIVeK.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114124-def92qPuIVeK.jpg",
+  "accent": "#f14328",
+  "synopsis": "In the late 19th century, the British Empire nobility reigns while its working class suffers at their hands. Sympathetic to their plight, William James Moriarty wants to topple it all. Frustrated by the systemic inequity, Moriarty strategizes to fix the entire nation. Not even consulting detective Sherlock Holmes can stand in his way. It's time for crime to revolutionize the world!\n\n(Source: Funimation)\n\nNote: The first episode received an early screening on September 21st, 2020. The regular TV broadcast started on October 11th, 2020.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "moriarty-the-patriot-01kpns",
+    "mal": 40911,
+    "anilist": 114124,
+    "kitsu": 43448
+  },
+  "skip_key_id": 40911,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": null,
+  "search_text": "moriarty the patriot 憂国のモリアーティ tv finished",
+  "genres": [
+    "drama",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Earl's Crime",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1e9e03bd1af2d976441d9071c357195c1645514849_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284484"
+    },
+    {
+      "n": 2,
+      "title": "The Scarlet Eyes Act 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/37dfc2e2351d1c8d710715a335b5d9ad1645514959_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284485"
+    },
+    {
+      "n": 3,
+      "title": "The Scarlet Eyes Act 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/ee81588959755d3316671eebf92f895f1645515008_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284486"
+    },
+    {
+      "n": 4,
+      "title": "A Rare Breed",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/65547e36ece87fe2ff0271c62772b3fa1645515186_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284487"
+    },
+    {
+      "n": 5,
+      "title": "The Dancers on the Bridge",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/71d5d4ec787f1ae7ce86b35dec75baf41645515317_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284488"
+    },
+    {
+      "n": 6,
+      "title": "The \"Noahtic\" Act 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e34635cce39010fcfc8142bbdbb81cb51645515426_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284489"
+    },
+    {
+      "n": 7,
+      "title": "The \"Noahtic\" Act 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c7fcb49bc8cc88d9d2f604213d70e8a31645515436_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284490"
+    },
+    {
+      "n": 8,
+      "title": "A Study in \"S\" Act 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/5ca5a9de444f2de18b83575b0b5d5ade1645515577_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284491"
+    },
+    {
+      "n": 9,
+      "title": "A Study in \"S\" Act 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/19b81b861f56602e58810c17a9b97ae01645515667_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284492"
+    },
+    {
+      "n": 10,
+      "title": "The Two Detectives Act 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/d8272ad239983c649b88091cb5cd2df71645515787_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284493"
+    },
+    {
+      "n": 11,
+      "title": "The Two Detectives Act 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/972812046f8056b0cc04df9461a4b86b1645515968_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "284494"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "DYING WISH",
+      "artist": "Tasuku Hatanaka",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ALPHA",
+      "artist": "Stereo Dive Foundation",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "TWISTED HEARTS",
+      "artist": "Tasuku Hatanaka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "OMEGA",
+      "artist": "STEREO DIVE FOUNDATION",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "DYING WISH",
+      "artist": "Tasuku Hatanaka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ALPHA",
+      "artist": "STEREO DIVE FOUNDATION",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "TWISTED HEARTS",
+      "artist": "Tasuku Hatanaka",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "OMEGA",
+      "artist": "Stereo Dive Foundation",
+      "episodes": "2"
+    }
+  ],
+  "relations": []
+}

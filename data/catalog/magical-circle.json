@@ -1,0 +1,338 @@
+{
+  "id": "magical-circle",
+  "title": "MAGICAL CIRCLE GURU-GURU",
+  "native": "魔法陣グルグル",
+  "year": 2017,
+  "rating": 7.5,
+  "season": "Summer 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98144-HSKSb1FD5Vzm.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98144-HSKSb1FD5Vzm.jpg",
+  "accent": "#e45dae",
+  "synopsis": "A new adaptation of the Mahoujin Guru Guru manga.\n\nThe seal that for hundreds of years had confined the demon king Giri has worn off. A young boy named Nike is chosen (against his will) as the hero. Together with Kukuri, a girl who is the lone survivor of the tribe that had used black magic to seal Giri, they set off to save the world, RPG style.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "magical-circle-4mi9d9",
+    "mal": 34745,
+    "anilist": 98144,
+    "kitsu": 13402
+  },
+  "skip_key_id": 34745,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "magical circle guru guru 魔法陣ク ルク ル tv finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Departure! Boering Village!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-12",
+      "markers": [],
+      "external_id": "201843"
+    },
+    {
+      "n": 2,
+      "title": "Dance! North Town!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-19",
+      "markers": [],
+      "external_id": "201844"
+    },
+    {
+      "n": 3,
+      "title": "Battle! On Saw Mountain!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-26",
+      "markers": [],
+      "external_id": "201845"
+    },
+    {
+      "n": 4,
+      "title": "Off to the Training House!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-02",
+      "markers": [],
+      "external_id": "201846"
+    },
+    {
+      "n": 5,
+      "title": "Rescue! Dohgma Village!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-09",
+      "markers": [],
+      "external_id": "201847"
+    },
+    {
+      "n": 6,
+      "title": "A Rival Appears! Yondor Village!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201848"
+    },
+    {
+      "n": 7,
+      "title": "Discovery! The Fairy Forest!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201849"
+    },
+    {
+      "n": 8,
+      "title": "Reunion! Cattongue Valley!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201850"
+    },
+    {
+      "n": 9,
+      "title": "Mystery! Ruins of the Migu Migu Clan!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201851"
+    },
+    {
+      "n": 10,
+      "title": "Clearing the Endless Tower!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201852"
+    },
+    {
+      "n": 11,
+      "title": "Apprenticeship! Copa's Forest!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201853"
+    },
+    {
+      "n": 12,
+      "title": "Fight! Copahl Castle!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201854"
+    },
+    {
+      "n": 13,
+      "title": "Legends! Tellum Village!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201855"
+    },
+    {
+      "n": 14,
+      "title": "Enigmatic! Alahabica!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201856"
+    },
+    {
+      "n": 15,
+      "title": "Love! In the Uncanny Lands!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201857"
+    },
+    {
+      "n": 16,
+      "title": "Defense! The Panfos Ruins!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201858"
+    },
+    {
+      "n": 17,
+      "title": "Beat It! Erueru Village!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201859"
+    },
+    {
+      "n": 18,
+      "title": "Bloom! The Land of Flowers!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201860"
+    },
+    {
+      "n": 19,
+      "title": "Sing! The Tower of Batoha!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201861"
+    },
+    {
+      "n": 20,
+      "title": "Escape! Lef Island!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201862"
+    },
+    {
+      "n": 21,
+      "title": "Revived! Demon King Giri!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201863"
+    },
+    {
+      "n": 22,
+      "title": "Sneaking in! The Jitari Ruins!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201864"
+    },
+    {
+      "n": 23,
+      "title": "Battle! Giri's Castle!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201865"
+    },
+    {
+      "n": 24,
+      "title": "Engaged! A Heart in Love!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "201866"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Trip Trip Trip",
+      "artist": "ORESAMA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Round&Round&Round",
+      "artist": "TECHNOBOYS PULCRAFT GREEN-FUND ft. Bonjour Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Ryūsei Dance Floor",
+      "artist": "ORESAMA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Magical Circle",
+      "artist": "TECHNOBOYS PULCRAFT GREEN-FUND feat. Shoko Nakagawa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

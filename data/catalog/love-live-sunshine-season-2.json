@@ -1,0 +1,349 @@
+{
+  "id": "love-live-sunshine-season-2",
+  "title": "Love Live! Sunshine!! Season 2",
+  "native": "ラブライブ！サンシャイン!! 2nd Season",
+  "year": 2017,
+  "rating": 7.6,
+  "season": "Fall 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/13299/medium.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/98349-PT5hOWDQJzqo.jpg",
+  "accent": "#ff3d8b",
+  "synopsis": "Second season of Love Live! Sunshine!!.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Love Live! Sunshine!! The School Idol Movie: Over the Rainbow (2019)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13299,
+    "anilist": 98349,
+    "mal": 34973
+  },
+  "skip_key_id": 34973,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-11-06 11:07:21",
+  "search_text": "love live sunshine season 2 ラフ ライフ サンシャイン 2nd season tv finished",
+  "genres": [
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Next Step",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307119"
+    },
+    {
+      "n": 2,
+      "title": "The Sound of Rain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307120"
+    },
+    {
+      "n": 3,
+      "title": "Rainbow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307121"
+    },
+    {
+      "n": 4,
+      "title": "Don't Be So Formal with Me",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307122"
+    },
+    {
+      "n": 5,
+      "title": "Taking in A Dog",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307123"
+    },
+    {
+      "n": 6,
+      "title": "Aqours Wave",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307124"
+    },
+    {
+      "n": 7,
+      "title": "The Time Left",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307125"
+    },
+    {
+      "n": 8,
+      "title": "Hakodate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307126"
+    },
+    {
+      "n": 9,
+      "title": "Awaken the Power",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307127"
+    },
+    {
+      "n": 10,
+      "title": "Finding a Way to Shine",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307128"
+    },
+    {
+      "n": 11,
+      "title": "Uranohoshi Girls' High School",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307129"
+    },
+    {
+      "n": 12,
+      "title": "Sea of Light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307130"
+    },
+    {
+      "n": 13,
+      "title": "Our Own Radiance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "307131"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Bokura no Hashittekita Michi wa... (僕らの走ってきた道は…)",
+      "artist": "Aqours",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Next SPARKLING!!",
+      "artist": "Aqours",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mirai no Bokura wa Shitteru yo",
+      "artist": "Aqours",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
+      "artist": "Anju Inami, Rikako Aida & Shuka Saitou",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Aozora Jumping Heart (青空Jumping Heart)",
+      "artist": "Aqours",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kimeta yo Hand in Hand (決めたよHand in Hand)",
+      "artist": "Anju Inami, Rikako Aida & Shuka Saitou",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Aozora Jumping Heart (青空Jumping Heart)",
+      "artist": "Aqours",
+      "episodes": "13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
+      "artist": "Aqours",
+      "episodes": "2,7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
+      "artist": "Chika Takami",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Kimi no Kokoro wa Kagayaiteru kai? (君のこころは輝いてるかい？)",
+      "artist": "Aqours",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
+      "artist": "Aqours",
+      "episodes": "3,12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
+      "artist": "Arisa Komiya",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
+      "artist": "Kanako Takatsuki & Ai Furihata",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
+      "artist": "Rikako Aida & Aika Kobayashi",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
+      "artist": "Aika Kobayashi",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
+      "artist": "Ai Furihata, Aika Kobayashi & Kanako Takatsuki",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
+      "artist": "Nanaka Suwa, Arisa Komiya & Aina Suzuki",
+      "episodes": "6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
+      "artist": "Nanaka Suwa, Arisa Komiya & Aina Suzuki",
+      "episodes": "10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
+      "artist": "Aika Kobayashi, Kanako Takatsuki & Ai Furihata",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
+      "artist": "Aqours & Supporting characters",
+      "episodes": "11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
+      "artist": "Anju Inami, Rikako Aida, Shuka Saitou, Aika Kobayashi, Kanako Takatsuki & Ai Furihata",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
+      "artist": "Anju Inami & Rikako Aida",
+      "episodes": "10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
+      "artist": "Shuka Saitou",
+      "episodes": "11"
+    }
+  ],
+  "relations": []
+}

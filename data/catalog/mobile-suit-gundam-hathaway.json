@@ -1,0 +1,85 @@
+{
+  "id": "mobile-suit-gundam-hathaway",
+  "title": "Mobile Suit Gundam Hathaway",
+  "native": "機動戦士ガンダム 閃光のハサウェイ",
+  "year": 2021,
+  "rating": 7.8,
+  "season": "Spring 2021",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx105595-40ugr6S9NfOb.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105595-40ugr6S9NfOb.jpg",
+  "accent": "#e49350",
+  "synopsis": "The year is U.C. 0105. Twelve years have passed since the end of the second Neo Zeon War (Char’s Rebellion). Even after “the Axis Shock,” which seemed to indicate the future of humanity and the Universal Century, the world is still in a chaotic situation where intermittent military conflicts continue to break out. The Earth Federation government is more corrupt than ever, and its leadership has not only accelerated Earth's pollution, but also implemented an inhuman \"Man Hunting\" policy in which civilians are forcibly exiled to outer space.\n\nThe anti-Federation government organization “Mafty,” led by someone called “Mafty Navue Erin,\" has taken a stand against the corruption of the Earth Sphere. Mafty carries out fierce acts of terrorism, assassinating high officials of the Federation government one after another, but it gains a certain level of support from the populace who are growing more opposed to the Federation government.\n\nThe person who calls himself “Mafty” and leads this organization is Hathaway Noa, the son of Bright Noa, an officer of the Earth Federation Forces who once participated in the One Year War. Hathaway himself joined the forces trying to stop Char’s Rebellion. With firsthand knowledge of the ideals and ideologies of Amuro Ray and Char Aznable, he has become a warrior following in their footsteps, and plans to clear a path forward through armed resistance. His destiny, however, is drastically altered as he encounters the Federation Forces officer Kenneth Sleg and a mysterious young beauty named Gigi Andalucia.\n\n(Source: Gundam.info)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "mobile-suit-gundam-hathaway-4eoidd",
+    "mal": 37765,
+    "anilist": 105595,
+    "kitsu": 41224
+  },
+  "skip_key_id": 37765,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "mobile suit gundam hathaway 機動戦士カ ンタ ム 閃光のハサウェイ movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Mobile Suit Gundam Hathaway (Movie)",
+      "runtime": "90:00",
+      "runtime_seconds": 5400,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a950e1c80ce44fd7c15efa7-landscape.jpg",
+      "synopsis": "The year is U.C. 0105. Twelve years have passed since the end of the second Neo Zeon War (Char’s Rebellion). Even after “the Axis Shock,” which seemed to indicate the future of humanity and the Universal Century, the world is still in a chaotic situation where intermittent military conflicts continue to break out. The Earth Federation government is more corrupt than ever, and its leadership has not only accelerated Earth's pollution, but also implemented an inhuman \"Man Hunting\" policy in which civilians are forcibly exiled to outer space.\n\n\n\nThe anti-Federation government organization “Mafty,” led by someone called “Mafty Navue Erin,\" has taken a stand against the corruption of the Earth Sphere. Mafty carries out fierce acts of terrorism, assassinating high officials of the Federation government one after another, but it gains a certain level of support from the populace who are growing more opposed to the Federation government.\n\n\n\nThe person who calls himself “Mafty” and leads this organization is Hathaway Noa, the son of Bright Noa, an officer of the Earth Federation Forces who once participated in the One Year War. Hathaway himself joined the forces trying to stop Char’s Rebellion. With firsthand knowledge of the ideals and ideologies of Amuro Ray and Char Aznable, he has become a warrior following in their footsteps, and plans to clear a path forward through armed resistance. His destiny, however, is drastically altered as he encounters the Federation Forces officer Kenneth Sleg and a mysterious young beauty named Gigi Andalucia.\n\n\n\n(Source: Gundam.info)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "305482"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Snooze",
+      "artist": "SZA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sweet Child o’ Mine",
+      "artist": "Guns N’ Roses",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Möbius",
+      "artist": "mpi, Laco and Benjamin",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Senkou",
+      "artist": "[Alexandros]",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

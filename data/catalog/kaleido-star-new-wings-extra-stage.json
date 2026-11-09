@@ -1,0 +1,70 @@
+{
+  "id": "kaleido-star-new-wings-extra-stage",
+  "title": "Kaleido Star: New Wings Extra Stage",
+  "native": "カレイドスター ～新たなる翼～ EXTRA STAGE",
+  "year": 2004,
+  "rating": 7,
+  "season": "Fall 2004",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx428-Urdr4P2f26hc.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx428-Urdr4P2f26hc.png",
+  "accent": "#e4bb43",
+  "synopsis": "Sora Naegino has finally consolidated herself as Kaleido Stage's greatest star ever, and a new star starts to shine as Rosetta Passel is selected to participate in the next attraction in a main role. But when things start to go wrong in the rehearsals, Rosetta starts to question her abillity to take the role, as her own capacity to remain in Kaleido Stage. Meanwhile, Fool also struggles with his demons from the past.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kaleido-star:-new-wings-extra-stage-yof25h",
+    "mal": 428,
+    "anilist": 428,
+    "kitsu": 392
+  },
+  "skip_key_id": 428,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "kaleido star new wings extra stage カレイト スター 新たなる翼 extra stage ova finished",
+  "genres": [
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Kaleido Star: New Wings Extra Stage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ad48cdaa79c62b971c2c4e7-poster.png",
+      "synopsis": "Sora Naegino has finally consolidated herself as Kaleido Stage's greatest star ever, and a new star starts to shine as Rosetta Passel is selected to participate in the next attraction in a main role. But when things start to go wrong in the rehearsals, Rosetta starts to question her abillity to take the role, as her own capacity to remain in Kaleido Stage. Meanwhile, Fool also struggles with his demons from the past.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "9713"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Blanc et Noir",
+      "artist": "Sora Naegino & Rosetta Passel",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tattoo Kiss",
+      "artist": "r.o.r/s",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

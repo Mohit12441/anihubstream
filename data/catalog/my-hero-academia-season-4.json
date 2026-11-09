@@ -1,0 +1,610 @@
+{
+  "id": "my-hero-academia-season-4",
+  "title": "My Hero Academia Season 4",
+  "native": "僕のヒーローアカデミア４",
+  "year": 2019,
+  "rating": 7.8,
+  "season": "Fall 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx104276-SnEowMvesWIE.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx104276-SnEowMvesWIE.png",
+  "accent": "#fec950",
+  "synopsis": "The villain world teeters on the brink of war now that All For One is out of the picture. Shigaraki of the League of Villains squares off with Overhaul of the yakuza, vying for total control of the shadows. Meanwhile, Deku gets tangled in another dangerous internship as he struggles to keep pace with his upperclassman—Mirio.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 104276,
+    "mal": 38408,
+    "hianime": "my-hero-academia-season-4-xf5jwg",
+    "kitsu": 41971
+  },
+  "skip_key_id": 38408,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": "2026-10-18 02:38:10",
+  "search_text": "my hero academia season 4 僕のヒーローアカテ ミア4 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Scoop on U.A. Class 1-A",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256041/original.jpg",
+      "synopsis": "After All Might announces his retirement, freelance reporter Taneo Tokuda goes to the dorms to investigate U.A. Class 1-A.\n\n(Source: Crunchyroll)",
+      "airdate": "2019-10-12",
+      "markers": [],
+      "external_id": "256041"
+    },
+    {
+      "n": 2,
+      "title": "Overhaul",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256042/original.jpg",
+      "synopsis": "Overhaul pays a visit to the League of Villains, and Midoriya tries to find a place to do his work study.",
+      "airdate": "2019-10-19",
+      "markers": [],
+      "external_id": "256042"
+    },
+    {
+      "n": 3,
+      "title": "Boy Meets...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256043/original.jpg",
+      "synopsis": "Izuku battles Sir Nighteye so he can do his work study at Nighteye's agency, but Nighteye has someone else in mind to be All Might's successor...",
+      "airdate": "2019-10-26",
+      "markers": [],
+      "external_id": "256043"
+    },
+    {
+      "n": 4,
+      "title": "Fighting Fate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256044/original.jpg",
+      "synopsis": "Izuku's mind is swirling with feelings from his work study, so he goes and talks to All Might about it and learns about All Might's fate.",
+      "airdate": "2019-11-09",
+      "markers": [],
+      "external_id": "256044"
+    },
+    {
+      "n": 5,
+      "title": "Let's Go, Gutsy Red Riot",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256045/original.jpg",
+      "synopsis": "The U.A. work study students go out with their respective heroes and become involved in some big fights.",
+      "airdate": "2019-11-16",
+      "markers": [],
+      "external_id": "256045"
+    },
+    {
+      "n": 6,
+      "title": "An Unpleasant Talk",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256046/original.jpg",
+      "synopsis": "The work study students from U.A. attend a meeting of heroes gathered by Sir Nighteye and leave with new resolve.",
+      "airdate": "2019-11-23",
+      "markers": [],
+      "external_id": "256046"
+    },
+    {
+      "n": 7,
+      "title": "GO!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256047/original.jpg",
+      "synopsis": "The work study students wait until the pro heroes find Eri and it's time to start the operation to save her.\n\n(Source: Crunchyroll)",
+      "airdate": "2019-11-30",
+      "markers": [],
+      "external_id": "256047"
+    },
+    {
+      "n": 8,
+      "title": "Suneater of the Big Three",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256048/original.png",
+      "synopsis": "The Shie Hassaikai is going all out to stop the heroes, and Suneater volunteers to take out the first batch of Eight Bullets members in their way.\n\n(Source: Crunchyroll)",
+      "airdate": "2019-12-07",
+      "markers": [],
+      "external_id": "256048"
+    },
+    {
+      "n": 9,
+      "title": "Red Riot",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256049/original.png",
+      "synopsis": "As the fight with the Shie Hassaikai continues, Kirishima has to face his past when he and Fat Gum get separated from the others.\n\n(Source: Crunchyroll)",
+      "airdate": "2019-12-14",
+      "markers": [],
+      "external_id": "256049"
+    },
+    {
+      "n": 10,
+      "title": "Temp Squad",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256050/original.png",
+      "synopsis": "The Hassaikai gets some help from the League of Villains as the heroes continue to make their way to Chisaki to rescue Eri.\n\n(Source: Crunchyroll)",
+      "airdate": "2019-12-21",
+      "markers": [],
+      "external_id": "256050"
+    },
+    {
+      "n": 11,
+      "title": "Lemillion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256051/original.png",
+      "synopsis": "The League of Villains stay true to their name in their fight. Meanwhile, Togata catches up to Chisaki and Eri first... \n\n(Source: Crunchyroll)",
+      "airdate": "2019-12-28",
+      "markers": [],
+      "external_id": "256051"
+    },
+    {
+      "n": 12,
+      "title": "Unforeseen Hope",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256052/original.png",
+      "synopsis": "Izuku, Eraser Head, and Sir Nighteye finally reach the area where Chisaki and the others are and find Togata past his limit...\n\n(Source: Crunchyroll)",
+      "airdate": "2020-01-04",
+      "markers": [],
+      "external_id": "256052"
+    },
+    {
+      "n": 13,
+      "title": "Infinite 100%",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256053/original.png",
+      "synopsis": "As the fight with the Shie Hassaikai reaches its climax, Chisaki looks back on how it all started, and Izuku uses All For One at 100%.\n\n(Source: Crunchyroll)",
+      "airdate": "2020-01-11",
+      "markers": [],
+      "external_id": "256053"
+    },
+    {
+      "n": 14,
+      "title": "Bright Future",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264168/original.png",
+      "synopsis": "As the heroes deal with the aftermath of the fight with the Shie Hassaikai, the vehicle transporting Chisaki has an encounter with the League of Villains...\n\n(Source: Crunchyroll)",
+      "airdate": "2020-01-18",
+      "markers": [],
+      "external_id": "264168"
+    },
+    {
+      "n": 15,
+      "title": "Smoldering Flames",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264169/original.png",
+      "synopsis": "After the fight with the Shie Hassaikai, a new villain emerges, and the students who participated reflect on their own roles as future heroes.\n\n(Source: Crunchyroll)",
+      "airdate": "2020-01-25",
+      "markers": [],
+      "external_id": "264169"
+    },
+    {
+      "n": 16,
+      "title": "Win Those Kids' Hearts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264170/original.png",
+      "synopsis": "Camie joins the provisional license training course and is added to the team working with the kids from Masegaki. Meanwhile, Endeavor has a serious talk with All Might.\n\n(Source: Crunchyroll)",
+      "airdate": "2020-02-01",
+      "markers": [],
+      "external_id": "264170"
+    },
+    {
+      "n": 17,
+      "title": "Relief for License Trainees",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/265284/original.png",
+      "synopsis": "The trainees bond with the precocious Masegaki kids and life at U.A. goes back to normal as autumn approaches, but Aoyama has been acting strangely...\n\n(Source: Crunchyroll)",
+      "airdate": "2020-02-08",
+      "markers": [],
+      "external_id": "265284"
+    },
+    {
+      "n": 18,
+      "title": "School Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/265286/original.png",
+      "synopsis": "Class 1-A needs to decide what they want to do for the upcoming school festival, and Midoriya and Togata pay Eri a visit at the hospital.\n\n(Source: Crunchyroll)",
+      "airdate": "2020-02-15",
+      "markers": [],
+      "external_id": "265286"
+    },
+    {
+      "n": 19,
+      "title": "Prepping for the School Festival Is the Funnest Part",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267604/original.png",
+      "synopsis": "Class 1-A needs to decide what they want to do for the upcoming school festival, and Midoriya and Togata pay Eri a visit at the hospital.\n\n(Source: Crunchyroll)",
+      "airdate": "2020-02-22",
+      "markers": [],
+      "external_id": "267604"
+    },
+    {
+      "n": 20,
+      "title": "Golden Tips Imperial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267605/original.png",
+      "synopsis": "Eri visits U.A. while the students are preparing for the school festival, and Gentle finalizes his plans.\n\n(Source: Crunchyroll)",
+      "airdate": "2020-02-29",
+      "markers": [],
+      "external_id": "267605"
+    },
+    {
+      "n": 21,
+      "title": "Deku vs. Gentle Criminal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267606/original.png",
+      "synopsis": "As Deku buys some last-minute supplies for the school festival, he encounters a mysterious man wrapped in a trench coat...\n\n(Source: Crunchyroll)",
+      "airdate": "2020-03-07",
+      "markers": [],
+      "external_id": "267606"
+    },
+    {
+      "n": 22,
+      "title": "School Festival Start!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267607/original.png",
+      "synopsis": "Izuku must stop Gentle Criminal and his partner, La Brava, or else the school festival will be canceled.\n\n(Source: Crunchyroll)",
+      "airdate": "2020-03-14",
+      "markers": [],
+      "external_id": "267607"
+    },
+    {
+      "n": 23,
+      "title": "Let It Flow! School Festival!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267608/original.png",
+      "synopsis": "Izuku rushes back to the school festival after his encounter with Gentleman and La Brava, but will he make it in time for his performance?\n\n(Source: Crunchyroll)",
+      "airdate": "2020-03-21",
+      "markers": [],
+      "external_id": "267608"
+    },
+    {
+      "n": 24,
+      "title": "Japanese Hero Billboard Chart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267609/original.png",
+      "synopsis": "It's time for the next Japanese Hero Billboard Chart rankings to be announced, and this time, all the top ten heroes make an appearance.\n\n(Source: Crunchyroll)",
+      "airdate": "2020-03-28",
+      "markers": [],
+      "external_id": "267609"
+    },
+    {
+      "n": 25,
+      "title": "His Start",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267610/original.png",
+      "synopsis": "Endeavor and Hawks are up against High-End, and it's Endeavor's chance to show the world what the new number one hero is like.\n\n(Source: Crunchyroll)",
+      "airdate": "2020-04-04",
+      "markers": [],
+      "external_id": "267610"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE REVO",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I",
+      "artist": "BUMP OF CHICKEN",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Homunculus",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gift",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE DAY",
+      "artist": "Porno Graffitti",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tagatame (誰我為)",
+      "artist": "TK from Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubomi (蕾)",
+      "artist": "Omoinotake",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "SKETCH",
+      "artist": "Kiro Akiyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Empathy",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "No.1",
+      "artist": "DISH//",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ashiato (足跡)",
+      "artist": "the peggies",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Higher Ground",
+      "artist": "sumika",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Polaris",
+      "artist": "BLUE ENCOUNT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Koukai no Uta",
+      "artist": "Sayuri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Long Hope Philia (ロングホープ・フィリア)",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Odd Future",
+      "artist": "UVERworld",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Update",
+      "artist": "miwa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dakara, Hitori ja nai (だから、ひとりじゃない)",
+      "artist": "Little Glee Monster",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Day",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Curtain Call",
+      "artist": "Yūri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rokutousei (六等星)",
+      "artist": "Zarame",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Bokura no",
+      "artist": "Eve",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Uso ja nai (嘘じゃない)",
+      "artist": "Soushi Sakiyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Starmarker",
+      "artist": "KANA-BOON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Make my story",
+      "artist": "Lenny Code Fiction",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Sora ni Utaeba (空に歌えば)",
+      "artist": "Amazarashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Datte Atashi no Hero (だってアタシのヒーロー.)",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": "4"
+    }
+  ],
+  "relations": []
+}

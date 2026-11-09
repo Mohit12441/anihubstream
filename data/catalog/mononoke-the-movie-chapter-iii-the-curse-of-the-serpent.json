@@ -1,0 +1,72 @@
+{
+  "id": "mononoke-the-movie-chapter-iii-the-curse-of-the-serpent",
+  "title": "Mononoke The Movie: Chapter Ⅲ - The Curse of the Serpent",
+  "native": "モノノ怪 蛇神",
+  "year": 2026,
+  "rating": 8.2,
+  "season": "Spring 2026",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx179874-XT4IXUuAeixL.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx179874-XT4IXUuAeixL.jpg",
+  "accent": "#6b28f1",
+  "synopsis": "The third movie in the Mononoke movie trilogy.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "mononoke-the-movie:-chapter-the-curse-of-the-serpent-d2yqci",
+    "mal": 61202,
+    "anilist": 179874,
+    "kitsu": 49675
+  },
+  "skip_key_id": 61202,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "mononoke the movie chapter iii the curse of the serpent モノノ怪 蛇神 movie finished",
+  "genres": [
+    "fantasy",
+    "horror",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Mononoke The Movie: Chapter Ⅲ - The Curse of the Serpent (Movie)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6abb89cd9c7ad5b1fd5aefce-landscape.jpg",
+      "synopsis": "The third movie in the Mononoke movie trilogy.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "379221"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Katsubō (渇望)",
+      "artist": "AiNA THE END",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Love Sick",
+      "artist": "Aina The End",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

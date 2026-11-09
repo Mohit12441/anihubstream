@@ -1,0 +1,121 @@
+{
+  "id": "kyoukai-no-kanata-mini-gekijou",
+  "title": "Beyond the Boundary: Mini Theater",
+  "native": "境界の彼方 ミニ劇場",
+  "year": 2014,
+  "rating": 6.7,
+  "season": "Winter 2014",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20531.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20531.jpg",
+  "accent": "#e45d5d",
+  "synopsis": "Short mini-theater specials included in BD/DVD volumes.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kyoukai-no-kanata:-mini-gekijou-89wr7z",
+    "mal": 20909,
+    "anilist": 20531,
+    "kitsu": 8088
+  },
+  "skip_key_id": 20909,
+  "skip_key_space": "mal",
+  "episode_total": 7,
+  "added_at": null,
+  "search_text": "beyond the boundary mini theater 境界の彼方 ミニ劇場 special finished",
+  "genres": [
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Beyond the Boundary Mini Theatre 1: I Love My Brother!",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "Hiroomi talks about his memories of the Nase family. In order to become a great Spirit World Warrior, Hiroomi is taught to persevere at an early age. Alongside Mitsuki, his loving little sister, is the strict and tender Izumi, who watches over the siblings.",
+      "airdate": "2014-01-08",
+      "markers": [],
+      "external_id": "148991"
+    },
+    {
+      "n": 2,
+      "title": "Beyond the Boundary Mini Theatre 2: Mirai's Bright Plan to Get Rich Fast",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "As usual, Mirai runs out of money. Out of concern for Mirai, Akihito advises her to hunt some youmu to earn some cash. The two head to Ayaka, who seems to suggest taking out youmu, but as always, can Mirai be able to do the task at hand for a large sum of money!? Will she be able to pay this month's rent!!?",
+      "airdate": "2014-02-05",
+      "markers": [],
+      "external_id": "148992"
+    },
+    {
+      "n": 3,
+      "title": "Beyond the Boundary Mini Theatre 3: Apparent Age for Women in Their 20's to Find Big Love",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "\"The one jilted by her boyfriends\", Shizuku Ninomiya, comes begging to Izumi in the Nase Residence. After getting herself drunk, Shizuku thinks of giving up on entering a relationship when her conversation with Izumi heads to an unexpected turn... Will Shizuku finally find happiness?",
+      "airdate": "2014-03-05",
+      "markers": [],
+      "external_id": "148993"
+    },
+    {
+      "n": 4,
+      "title": "Beyond the Boundary Mini Theatre 4: A Road to Idol!",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "After taking on the stinky youmu, the idol-obssesed Ai gathers Akihito, Mirai, Mitsuki and Hiroomi and offers a shocking proposal: to become idols!",
+      "airdate": "2014-04-02",
+      "markers": [],
+      "external_id": "148994"
+    },
+    {
+      "n": 5,
+      "title": "Beyond the Boundary Mini Theatre 5: Pyjamas Party",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "The no-boys-allowed girls-only pajama party begins. When we talk about girls spending the night talking about different things, of course, love is a guaranteed topic! Mirai, Mitsuki, Ai and Sakura... what's their status regarding love!?",
+      "airdate": "2014-05-14",
+      "markers": [],
+      "external_id": "148995"
+    },
+    {
+      "n": 6,
+      "title": "Beyond the Boundary Mini Theatre 6: Let's Go on a Field Trip!",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "As Hiroomi loses his wits over the repetitive anthology screening he does everyday, he suggests going on a beach training camp to Akihito. After some talking through, it seems that Akihito is slowly gaining interest. Will they ever get Mitsuki and Mirai to say yes!?",
+      "airdate": "2014-06-04",
+      "markers": [],
+      "external_id": "148996"
+    },
+    {
+      "n": 7,
+      "title": "Beyond the Boundary Mini Theatre 7: A Letter from My Mother",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "Akihito once more absorbs Beyond the Boundary into his body. His life begins anew like usual... or so he thought. One day, he receives a letter from his mother Yayoi. What are the shocking words she sent by mail for her son?",
+      "airdate": "2014-07-02",
+      "markers": [],
+      "external_id": "148997"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

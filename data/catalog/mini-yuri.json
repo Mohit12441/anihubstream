@@ -1,0 +1,88 @@
+{
+  "id": "mini-yuri",
+  "title": "Mini Yuri",
+  "native": "みにゆり",
+  "year": 2019,
+  "rating": 6.6,
+  "season": "Fall 2019",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx110382-TMOFR9PIjyt3.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110382-TMOFR9PIjyt3.png",
+  "accent": "#ff1f4a",
+  "synopsis": "A short series released on the web, featuring the cast as mini characters.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "mini-yuri-emqyoj",
+    "mal": 40369,
+    "anilist": 110382,
+    "kitsu": 42540
+  },
+  "skip_key_id": 40369,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": null,
+  "search_text": "mini yuri みにゆり ona finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269193"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269194"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269195"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269196"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

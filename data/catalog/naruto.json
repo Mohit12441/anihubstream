@@ -1,0 +1,2131 @@
+{
+  "id": "naruto",
+  "title": "Naruto",
+  "native": "NARUTO -ナルト-",
+  "year": 2002,
+  "rating": 8,
+  "season": "Fall 2002",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20-dE6UHbFFg1A5.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20-dE6UHbFFg1A5.jpg",
+  "accent": "#e47850",
+  "synopsis": "Naruto Uzumaki, a hyperactive and knuckle-headed ninja, lives in Konohagakure, the Hidden Leaf village. Moments prior to his birth, a huge demon known as the Kyuubi, the Nine-tailed Fox, attacked Konohagakure and wreaked havoc. In order to put an end to the Kyuubi's rampage, the leader of the village, the 4th Hokage, sacrificed his life and sealed the monstrous beast inside the newborn Naruto. \n\nShunned because of the presence of the Kyuubi inside him, Naruto struggles to find his place in the village. He strives to become the Hokage of Konohagakure, and he meets many friends and foes along the way. \n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": 32,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 20,
+    "mal": 20,
+    "hianime": "naruto-vwgihd",
+    "kitsu": 11
+  },
+  "skip_key_id": 20,
+  "skip_key_space": "mal",
+  "episode_total": 220,
+  "added_at": "2026-10-17 06:37:57",
+  "search_text": "naruto naruto ナルト tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "drama",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Enter: Naruto Uzumaki!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/451/original.jpg",
+      "synopsis": "Welcome to the Village Hidden in the Leaves, where deadly serious Ninja roam the landscape and the seriously mischievous Naruto Uzumaki causes trouble everywhere he goes. But when he steals the ancient scroll of sealing, he unleashes a rare power rarely seen in a 12-year-old boy!",
+      "airdate": "2002-10-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 63,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1281,
+          "end": 1375,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "451"
+    },
+    {
+      "n": 2,
+      "title": "My Name is Konohamaru!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/452/original.jpg",
+      "synopsis": "Naruto finally graduates from the Ninja Academy and claims to know it all. Well, at least that what he tells Konohamaru, the Village elder's pint-size grandson. Much to the dismay of Ebisu, Konohamaru's teacher and mentor, Naruto teaches him the hormonally lethal \"Sexy Jutsu!\"",
+      "airdate": "2002-10-10",
+      "markers": [],
+      "external_id": "452"
+    },
+    {
+      "n": 3,
+      "title": "Sasuke and Sakura: Friends or Foes?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/453/original.jpg",
+      "synopsis": "Naruto is preparing himself for the Genin orientation. It's all a happy story until Sensei picks a team for all the ninjas. Naruto was teamed up with his crush, Sakura, and his worst enemy, Sasuke. Can Naruto learn to work together with two people whom despise him?",
+      "airdate": "2002-10-17",
+      "markers": [],
+      "external_id": "453"
+    },
+    {
+      "n": 4,
+      "title": "Pass or Fail: Survival Test",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/454/original.jpg",
+      "synopsis": "Naruto finally meets his new sensei. His name is Kakashi Hatake. He tells the group that before they could become Genin, they will have to pass his survival test. The problem is, the test has a 66% chance of failure, and if they fail they'll be sent back to the academy. To make matters even worse, one of them will fail no matter what. Can the three pass Kakashi's test?",
+      "airdate": "2002-10-24",
+      "markers": [],
+      "external_id": "454"
+    },
+    {
+      "n": 5,
+      "title": "You Failed! Kakashi's Final Decision",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/455/original.jpg",
+      "synopsis": "Time is running out for Naruto and his group. With Sasuke the only one left, he tries to succeed where the others failed. Will they be able to get the bells before time runs out?",
+      "airdate": "2002-10-31",
+      "markers": [],
+      "external_id": "455"
+    },
+    {
+      "n": 6,
+      "title": "A Dangerous Mission! Journey to the Land of Waves!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/456/original.jpg",
+      "synopsis": "Tired of doing lame missions, Naruto asks the Hokage to give them something challenging. The Hokage caves and gives them a C-rank mission. They will be bodyguards for a bridge builder. It appears to be a simple mission, until the group is attacked by something more than common thugs...other ninja!",
+      "airdate": "2002-11-07",
+      "markers": [],
+      "external_id": "456"
+    },
+    {
+      "n": 7,
+      "title": "The Assassin of the Mist!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/457/original.jpg",
+      "synopsis": "Team Kakashi and Tazuna are on their way to his home. On the way there they run across a ninja named, Zabuza Momochi. Is the Sharingan enough to defeat this new enemy, or is team Kakashi's first mission over before its even begun?",
+      "airdate": "2002-11-14",
+      "markers": [],
+      "external_id": "457"
+    },
+    {
+      "n": 8,
+      "title": "The Oath of Pain",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/458/original.jpg",
+      "synopsis": "With Kakashi captured, Naruto, Sasuke and Sakura must defend against Zabuza's attacks. Naruto realizes that working together with Sasuke may be the only way to save Kakashi. Will the combined effort of the two be enough to free Kakashi and defeat Zabuza?",
+      "airdate": "2002-11-21",
+      "markers": [],
+      "external_id": "458"
+    },
+    {
+      "n": 9,
+      "title": "Kakashi: Sharingan Warrior",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/459/original.jpg",
+      "synopsis": "With Kakashi free, the fight between him and Zabuza resumes. Kakashi decides to show Zabuza what the Sharingan is really capable of. Can Kakashi's Sharingan defeat Zabuza? And who is the mysterious person watching the fight?",
+      "airdate": "2002-11-28",
+      "markers": [],
+      "external_id": "459"
+    },
+    {
+      "n": 10,
+      "title": "The Forest of Chakra",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/460/original.jpg",
+      "synopsis": "With Zabuza gone things are now settling and Tazuna can go and build the bridge without fear. Or so everyone thinks. Kakashi believes something is wrong with Zabuza's death and teaches Naruto, Sakura, and Sasuke a way to train so they could better use their chakra. Is Zabuza really dead?",
+      "airdate": "2002-12-05",
+      "markers": [],
+      "external_id": "460"
+    },
+    {
+      "n": 11,
+      "title": "The Land Where a Hero Once Lived",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/461/original.jpg",
+      "synopsis": "While Naruto and Sasuke train, Sakura watches over Tazuna. During a nice dinner, Sakura notices a man's face torn from a picture. The man's name was Kaiza, and he was what the country called...a \"hero\". What happened to cause Inari so much pain?",
+      "airdate": "2002-12-12",
+      "markers": [],
+      "external_id": "461"
+    },
+    {
+      "n": 12,
+      "title": "Battle on the Bridge! Zabuza Returns!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/462/original.jpg",
+      "synopsis": "Naruto has a dangerous encounter with Haku in the forest, but is Haku there to cause trouble? Naruto and Sasuke better complete their training, as Zabuza is alive and has returned for round 2. Will Kakashi, Sasuke, and Sakura be able to defeat the Demon of the Mist? And, can Naruto arrive in time to help out?",
+      "airdate": "2002-12-19",
+      "markers": [],
+      "external_id": "462"
+    },
+    {
+      "n": 13,
+      "title": "Haku's Secret Jutsu: Crystal Ice Mirrors",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/463/original.jpg",
+      "synopsis": "Round two with Zabuza has started, but this time...Zabuza has Haku fighting along side him. Haku and Sasuke go at it with Sasuke falling behind until he manages to get a kick in. Meanwhile Naruto deals with some of Gato's henchmen. Back at the bridge Haku uses his secret jutsu, Demonic Ice Mirrors. What does this jutsu hold in store for Sasuke? Will Naruto make it to the bridge in time and save Tsunami and Inari as well?",
+      "airdate": "2002-12-26",
+      "markers": [],
+      "external_id": "463"
+    },
+    {
+      "n": 14,
+      "title": "The Number One Hyperactive, Knucklehead Ninja Joins the Fight!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/464/original.jpg",
+      "synopsis": "Naruto finally joins the battle on the bridge. But when Naruto stupidly gets caught in the middle of Haku's jutsu as well, he and Sasuke must work together to escape. Kakashi is unable to help them, as he must deal with Zabuza to protect Sakura and Tazuna. How will the two escape from the ice mirrors without any help?",
+      "airdate": "2003-01-09",
+      "markers": [],
+      "external_id": "464"
+    },
+    {
+      "n": 15,
+      "title": "Zero Visibility: The Sharingan Shatters",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/465/original.jpg",
+      "synopsis": "Naruto and Sasuke continue to fight Haku and are getting beaten bad. After having Naruto try and escape a few times, Sasuke begins to see a pattern. Meanwhile, outside Kakashi and Zabuza begin their fight. Can Naruto and Sasuke escape from Haku's jutsu? What plan does Zabuza have to defeat the Sharingan?",
+      "airdate": "2003-01-16",
+      "markers": [],
+      "external_id": "465"
+    },
+    {
+      "n": 16,
+      "title": "The Broken Seal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/466/original.jpg",
+      "synopsis": "Naruto and Sasuke continue their rigorous battle against Haku. When Haku targets a vulnerable Naruto, Sasuke risks everything to save him. Seeing his friend lie before him, a powerful force awakens inside Naruto. Has Kyubi been set free. If so, can anyone stop him?",
+      "airdate": "2003-01-23",
+      "markers": [],
+      "external_id": "466"
+    },
+    {
+      "n": 17,
+      "title": "White Past: Hidden Ambition",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/467/original.jpg",
+      "synopsis": "Naruto takes out his rage on Haku, who doesn't stand a chance. However, Naruto realises that Haku is the boy he met back at the forest. Haku tells Naruto the story of his past and asks for Naruto to do him one favour..... Will Naruto do the one thing he could never do just as Haku wishes?",
+      "airdate": "2003-01-30",
+      "markers": [],
+      "external_id": "467"
+    },
+    {
+      "n": 18,
+      "title": "The Weapons Known as Shinobi",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/468/original.jpg",
+      "synopsis": "Kakashi prepares to stop Zabuza once and for all, but Haku has other plans. Zabuza's employer shows up and he's decided to take matters into his own hands...",
+      "airdate": "2003-02-06",
+      "markers": [],
+      "external_id": "468"
+    },
+    {
+      "n": 19,
+      "title": "The Demon in the Snow",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/469/original.jpg",
+      "synopsis": "Zabuza is no longer Kakashi's enemy, and thanks to a little speech by Naruto about how ninja are, Zabuza takes on Gato's men single handedly. The Demon of the Hidden Mist takes his vengeance on Gato and all of those dumb enough to follow him, and apologizes to Haku for what he did to the kind little boy. After the group takes care of the rest of Gato's men, Zabuza asks Kakashi one final request, to see Haku one final time. This is Zabuza's requiem.",
+      "airdate": "2003-02-13",
+      "markers": [],
+      "external_id": "469"
+    },
+    {
+      "n": 20,
+      "title": "A New Chapter Begins: The Chunin Exam!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/470/original.jpg",
+      "synopsis": "With their latest mission complete, it's time once again for the group to go back to mediocre missions. After all are done, Konohamaru and his friends pay a visit to Naruto. All which result in being chased by Sakura. Everyone is soon over though, as two mysterious ninja block their way, and one of them isn't too happy with Konohamaru. Sasuke arrives to save the day, but the leader of the group shows up, with stealth skills that surprise even Sasuke. Meanwhile, the Third Hokage announces that it's time once again for the Chuunin selection exams.",
+      "airdate": "2003-02-20",
+      "markers": [],
+      "external_id": "470"
+    },
+    {
+      "n": 21,
+      "title": "Identify Yourself: Powerful New Rivals",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/471/original.jpg",
+      "synopsis": "After the three ninjas take their leave, Sasuke realizes he has a powerful rival out there. The next day, Kakashi announces that he has recommended all of them for the Chuunin Exams. While Naruto and Sasuke are pleased, Sakura is afraid of letting everyone down. Also, someone decides they aren't ready and decides to test their abilities.",
+      "airdate": "2003-02-27",
+      "markers": [],
+      "external_id": "471"
+    },
+    {
+      "n": 22,
+      "title": "Chunin Challenge: Rock Lee vs. Sasuke!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/472/original.jpg",
+      "synopsis": "Rock Lee challenges Sasuke to a one-on-one fight. Naruto grows angry and attacks him, only to be beaten in one attack. Sasuke realizes the challenge and eagerly accepts. But will Sasuke be defeated just as easily by this mysterious ninja? Sasuke's only advantage seems to be his Sharingan, but what happens when not even that will work?",
+      "airdate": "2003-03-06",
+      "markers": [],
+      "external_id": "472"
+    },
+    {
+      "n": 23,
+      "title": "Genin Takedown! All Nine Rookies Face Off!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/473/original.jpg",
+      "synopsis": "A reunion of all the rookies isn't a very happy one, as all of them prepare to take the Chuunin Exam. With so many rivals around, Naruto's team will need help from a fellow ninja named Kabuto to know what they're up against. Will the group be able to last through the exam?",
+      "airdate": "2003-03-13",
+      "markers": [],
+      "external_id": "473"
+    },
+    {
+      "n": 24,
+      "title": "Start Your Engines: The Chunin Exam Begins!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/474/original.jpg",
+      "synopsis": "The first test of the Chuunin Exam is just that, a written test. When Ibiki issues a strict set of rules, Naruto fails to realize that the objective of the test is to cheat without getting caught. Can Naruto realize the truth before time runs out? And what about the tenth question?",
+      "airdate": "2003-03-20",
+      "markers": [],
+      "external_id": "474"
+    },
+    {
+      "n": 25,
+      "title": "The Tenth Question: All or Nothing!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/475/original.jpg",
+      "synopsis": "As time ticks away, Naruto's only hope of passing the test lies in the final question. However, there is a requirement to answering the final question. If you choose not to answer it, you fail the test and can try again next time. But, if you choose to answer it and get it wrong, you can never take the test again and must stay a Genin forever! What will Naruto's choice be?",
+      "airdate": "2003-03-27",
+      "markers": [],
+      "external_id": "475"
+    },
+    {
+      "n": 26,
+      "title": "Special Report: Live from the Forest of Death!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/476/original.jpg",
+      "synopsis": "Before the second exam can begin, Konohamaru and his friends pull the members of Team 7 aside for interviews, where they retell the storyline to this point.",
+      "airdate": "2003-04-02",
+      "markers": [],
+      "external_id": "476"
+    },
+    {
+      "n": 27,
+      "title": "The Chunin Exam Stage 2: The Forest of Death",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/477/original.jpg",
+      "synopsis": "The second exam is about to begin, and every ninja must sign a form so that their team can get either the Heaven or Earth Scroll. The goal is to get one of each scroll and make it to the tower in five days. The groups get their scrolls and the exam begins. Naruto is ambushed by a ninja who poses as him. This ninja doesn't fool Sasuke, who immediately figures it out. Meanwhile, a new foe seeks them out, but who is this foe?",
+      "airdate": "2003-04-02",
+      "markers": [],
+      "external_id": "477"
+    },
+    {
+      "n": 28,
+      "title": "Eat or be Eaten: Panic in the Forest",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/478/original.jpg",
+      "synopsis": "To prevent further problems, Sasuke thinks up a password to determine friend from foe, but will it be that simple? Meanwhile Naruto has his hands full with a giant snake. Can he handle this on his own and what about Sasuke and Sakura, can they survive the ordeal?",
+      "airdate": "2003-04-09",
+      "markers": [],
+      "external_id": "478"
+    },
+    {
+      "n": 29,
+      "title": "Naruto's Counterattack: Never Give In!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/479/original.jpg",
+      "synopsis": "Sasuke is about to give up and give their scroll to the enemy, when Naruto stops him and accuses him of being a fake. Naruto then turns his attention to the Grass Ninja.... The battle is intense and when the Grass Ninja appears to get the upper hand, can Sasuke muster up the courage to fight?",
+      "airdate": "2003-04-16",
+      "markers": [],
+      "external_id": "479"
+    },
+    {
+      "n": 30,
+      "title": "The Sharingan Revived: Dragon-Flame Jutsu!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/480/original.jpg",
+      "synopsis": "Sasuke is still stuck in his trance and even Sakura's pleas can't get him back to normal. Meanwhile, Anko searches for the grass ninja fake. When the team appear to get the upper hand the question begs to be asked. Are the ninja truly defeated, or is there more to them than meets the eye?",
+      "airdate": "2003-04-23",
+      "markers": [],
+      "external_id": "480"
+    },
+    {
+      "n": 31,
+      "title": "Bushy Brow's Pledge: Undying Love and Protection!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/481/original.jpg",
+      "synopsis": "Since Sakura was the only one who did not get injured in the previous battle she must watch over and protect her teammates. Unknown to her though, there are enemies watching from the trees.... They attack, but a friend arrives to help. Will it be enough?",
+      "airdate": "2003-04-30",
+      "markers": [],
+      "external_id": "481"
+    },
+    {
+      "n": 32,
+      "title": "Sakura Blossoms!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/482/original.jpg",
+      "synopsis": "Lee in his weakened state is having trouble defeating Dosu. Sakura realises everyone has been protecting her until now and that its her time to protect them! Can Sakura succeed where even Lee failed?",
+      "airdate": "2003-05-07",
+      "markers": [],
+      "external_id": "482"
+    },
+    {
+      "n": 33,
+      "title": "Battle Formation: Ino-Shika-Cho!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/483/original.jpg",
+      "synopsis": "With Sakura defeated and facing certain death, more reinforcements step into the fray. However, they sense an even bigger level of power, and its not coming from the sound trio! Meanwhile Sasuke wakes up with an ominous dark aura surrounding him and the mysterious seal spreading over his body. He has but one goal....make his enemies pay!",
+      "airdate": "2003-05-14",
+      "markers": [],
+      "external_id": "483"
+    },
+    {
+      "n": 34,
+      "title": "Akamaru Trembles: Gaara's Cruel Strength!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/484/original.jpg",
+      "synopsis": "Kiba, Shino, and Hinata decide to try and eliminate their opponents by taking more scrolls. They arrive upon a battlefield where three Rain ninjas are battling Gaara, Kankuro, and Temari. They remain hidden and observe the battle, thinking one of the Rain ninjas is a dangerous foe. After realizing Gaara's amazing abilities, they discover who is the really the dangerous one, and will be lucky if they can sneak away with their lives!",
+      "airdate": "2003-05-21",
+      "markers": [],
+      "external_id": "484"
+    },
+    {
+      "n": 35,
+      "title": "The Scroll's Secret: No Peeking Allowed",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/485/original.jpg",
+      "synopsis": "Team Kakashi still has only one scroll and there is only a day left before the test ends. Naruto decides they need to make a fake scroll and goes to open their Earth scroll, when Kabuto shows up and stops him, explaining that the scroll will knock them out until after the exam ends. He then tells them he will help them find the scroll they need. They seem to be the ones on the hunt, but what happens when they fall into a trap set by the enemy?",
+      "airdate": "2003-05-28",
+      "markers": [],
+      "external_id": "485"
+    },
+    {
+      "n": 36,
+      "title": "Clone vs. Clone: Mine are Better than Yours!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172591/original.jpeg",
+      "synopsis": "Naruto's team joins Kabuto on their journey to the tower, but on the way, they are trapped by the genjutsu (illusion technique) of the Hidden Rain Village's genin (low rank ninja), Oboro's team.",
+      "airdate": "2003-06-04",
+      "markers": [],
+      "external_id": "172591"
+    },
+    {
+      "n": 37,
+      "title": "Surviving the Cut! The Rookie Nine Together Again!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172592/original.jpeg",
+      "synopsis": "When Naruto and his team open the two scrolls after reaching the tower, Iruka suddenly appears.",
+      "airdate": "2003-06-11",
+      "markers": [],
+      "external_id": "172592"
+    },
+    {
+      "n": 38,
+      "title": "Narrowing the Field: Sudden Death Elimination!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172593/original.jpeg",
+      "synopsis": "The 21 ninjas that passed the second exam assemble for their next challenge.",
+      "airdate": "2003-06-18",
+      "markers": [],
+      "external_id": "172593"
+    },
+    {
+      "n": 39,
+      "title": "Bushy Brow's Jealousy: Lions Barrage Unleashed!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172594/original.jpeg",
+      "synopsis": "The preliminaries for the third exam are one on one combat, and the first match is between Sasuke and Orochimaru's minion Yoroi.",
+      "airdate": "2003-07-02",
+      "markers": [],
+      "external_id": "172594"
+    },
+    {
+      "n": 40,
+      "title": "Kakashi and Orochimaru: Face-to-Face!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172595/original.jpeg",
+      "synopsis": "As Kakashi safely releases Sasuke from the spell, Orochimaru suddenly shows up. Orochimaru expresses his desire for the power of Sharingan that the Uchiha clan holds in order to fulfill his ambitions.",
+      "airdate": "2003-07-09",
+      "markers": [],
+      "external_id": "172595"
+    },
+    {
+      "n": 41,
+      "title": "Kunoichi Rumble: The Rivals Get Serious!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172596/original.jpeg",
+      "synopsis": "The preliminaries continue as the next match pits Sand ninja Gaara's teammate Kankuro against Orochimaru's minion Misumi.",
+      "airdate": "2003-07-16",
+      "markers": [],
+      "external_id": "172596"
+    },
+    {
+      "n": 42,
+      "title": "The Ultimate Battle: Cha!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172597/original.jpeg",
+      "synopsis": "The fourth match is between Sakura and Ino, who are childhood friends and competitors for the affection of Sasuke.",
+      "airdate": "2003-07-23",
+      "markers": [],
+      "external_id": "172597"
+    },
+    {
+      "n": 43,
+      "title": "Killer Kunoichi and a Shaky Shikamaru",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172598/original.jpeg",
+      "synopsis": "The fifth match is between Tenten and Temari. The sixth match is Shikamaru versus Kin.",
+      "airdate": "2003-07-30",
+      "markers": [],
+      "external_id": "172598"
+    },
+    {
+      "n": 44,
+      "title": "Akamaru Unleashed! Who's Top Dog Now?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172599/original.jpeg",
+      "synopsis": "In the seventh match, Naruto clashes against Kiba, who brings along his dog Akamaru.",
+      "airdate": "2003-08-06",
+      "markers": [],
+      "external_id": "172599"
+    },
+    {
+      "n": 45,
+      "title": "Surprise Attack! Naruto's Secret Weapon!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172600/original.jpeg",
+      "synopsis": "By consuming Food Pills, Kiba and Akamaru increase their chakra levels and start their counterattack on Naruto.",
+      "airdate": "2003-08-13",
+      "markers": [],
+      "external_id": "172600"
+    },
+    {
+      "n": 46,
+      "title": "Byakugan Battle: Hinata Grows Bold!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172601/original.jpeg",
+      "synopsis": "Cousins Hinata and Neji of the Hyuga clan confront each other in the eighth match.",
+      "airdate": "2003-08-20",
+      "markers": [],
+      "external_id": "172601"
+    },
+    {
+      "n": 47,
+      "title": "A Failure Stands Tall!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172602/original.jpeg",
+      "synopsis": "Hinata goes up against Neji, but he hits her pressure point by using his Byakugan (white eyes). Hinata's flow of chakra is stopped, and she almost loses consciousness.",
+      "airdate": "2003-08-27",
+      "markers": [],
+      "external_id": "172602"
+    },
+    {
+      "n": 48,
+      "title": "Gaara vs. Rock Lee: The Power of Youth Explodes!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172603/original.jpeg",
+      "synopsis": "Gaara finally appears in the ninth match, and his opponent is taijutsu (physical technique) specialist Lee.",
+      "airdate": "2003-09-03",
+      "markers": [],
+      "external_id": "172603"
+    },
+    {
+      "n": 49,
+      "title": "Lee's Hidden Strength: Forbidden Secret Jutsu!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/499/original.jpeg",
+      "synopsis": "Lee uses the banned technique Primary Lotus to attack Gaara.",
+      "airdate": "2003-09-10",
+      "markers": [],
+      "external_id": "499"
+    },
+    {
+      "n": 50,
+      "title": "The Fifth Gate: A Splendid Ninja is Born",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/500/original.jpeg",
+      "synopsis": "Lee decides to use the forbidden move, Hidden Lotus, as a last resort.",
+      "airdate": "2003-09-17",
+      "markers": [],
+      "external_id": "500"
+    },
+    {
+      "n": 51,
+      "title": "A Shadow in Darkness: Danger Approaches Sasuke",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/501/original.jpeg",
+      "synopsis": "In the final match of the preliminaries, Choji fights against Orochimaru's minion Dosu. The preliminaries are finally over, and the Hokage reveals the third exam.",
+      "airdate": "2003-09-24",
+      "markers": [],
+      "external_id": "501"
+    },
+    {
+      "n": 52,
+      "title": "Ebisu Returns: Naruto's Toughest Training Yet!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/502/original.jpeg",
+      "synopsis": "In preparation for the third exam that starts in a month, Naruto's former mentor, Kakashi, chooses Ebisu to train the young ninja.",
+      "airdate": "2003-10-01",
+      "markers": [],
+      "external_id": "502"
+    },
+    {
+      "n": 53,
+      "title": "Long Time No See: Jiraiya Returns!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167771/original.jpg",
+      "synopsis": "Naruto and the gang realise they have been caught in an illusionary technique and then they are attacked! Can the four defeat the ninja when they can't even see them and what are Kabuto's true reasons for helping out the group?",
+      "airdate": "2003-06-04",
+      "markers": [],
+      "external_id": "167771"
+    },
+    {
+      "n": 54,
+      "title": "The Summoning Jutsu: Wisdom of the Toad Sage!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167772/original.jpg",
+      "synopsis": "The exam is over, but did they truly pass? An old friend arrives to explain and show his concern. Meanwhile, Anko informs the ANBU about Orochimaru, the S-Class criminal who even they cannot stop. Later the Third Hokage explains to everyone what the third exam truly means....",
+      "airdate": "2003-06-11",
+      "markers": [],
+      "external_id": "167772"
+    },
+    {
+      "n": 55,
+      "title": "A Feeling of Yearning, A Flower Full of Hope",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167773/original.jpg",
+      "synopsis": "With so many participants still left, the groups are told that they will be pitted against each other in preliminary matches. Kabuto leaves, then Sasuke is told he has to fight. They know that Sasuke was given the cursed seal and if it takes over they will stop him. Can Sasuke stop the seal from taking over again and still win?",
+      "airdate": "2003-06-18",
+      "markers": [],
+      "external_id": "167773"
+    },
+    {
+      "n": 56,
+      "title": "Live or Die: Risk it All to Win it All!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167774/original.jpg",
+      "synopsis": "Unable to use his chakra against Akado, Sasuke has to rely on good old-fashioned taijutsu to defeat him. Kakashi senses something is wrong with Sasuke and takes him away after the match.",
+      "airdate": "2003-07-02",
+      "markers": [],
+      "external_id": "167774"
+    },
+    {
+      "n": 57,
+      "title": "He Flies! He Jumps! He Lurks! Chief Toad Appears!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167775/original.jpg",
+      "synopsis": "While Shino and Zaku finish their fight, Kakashi works on Sasuke's cursed seal. However, someone sinister shows up to ruin things, will Kakashi be able to protect Sasuke from this skilled foe?",
+      "airdate": "2003-07-09",
+      "markers": [],
+      "external_id": "167775"
+    },
+    {
+      "n": 58,
+      "title": "Hospital Besieged: The Evil Hand Revealed!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167776/original.jpg",
+      "synopsis": "Kankuro takes on Kabuto's teammate, Misumi, in a quick battle, proving how tough the Sand ninja really are. However, the real match comes when Sakura and Ino are pitted against one another!",
+      "airdate": "2003-07-16",
+      "markers": [],
+      "external_id": "167776"
+    },
+    {
+      "n": 59,
+      "title": "The Final Rounds: Rush to the Battle Arena!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167777/original.jpg",
+      "synopsis": "Sakura and Ino prepare to settle the score once and for all! However, when Sakura becomes the victim of Ino's Mind-Body Switch Justu, will she be forced to give up the match?",
+      "airdate": "2003-07-23",
+      "markers": [],
+      "external_id": "167777"
+    },
+    {
+      "n": 60,
+      "title": "Byakugan vs. Shadow Clone",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167778/original.jpg",
+      "synopsis": "Temari of the Sand Village battles against Tenten from the Leaf Village. After the battle its Shikamaru's turn, but can he defeat an opponent who has already seen his moves once before?",
+      "airdate": "2003-07-30",
+      "markers": [],
+      "external_id": "167778"
+    },
+    {
+      "n": 61,
+      "title": "Ultimate Defense: Zero Blind Spot!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167779/original.jpg",
+      "synopsis": "The match between Kiba and Naruto kicks off, with Kiba immediately proving he has the upper hand in the battle. Everyone still believes Naruto is the weak ninja he's always been, everyone except for Hinata, Kakashi, and Sakura. Now it's Naruto's time to shine, and this time...everyone will be watching him!",
+      "airdate": "2003-08-06",
+      "markers": [],
+      "external_id": "167779"
+    },
+    {
+      "n": 62,
+      "title": "A Failure's True Power",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167780/original.jpg",
+      "synopsis": "The battle between Naruto and Kiba draws to a close, with each of them giving it everything they've got. After being tricked by Naruto, Kiba can no longer rely on Akamaru's help. Naruto decides now is the time to release his new jutsu, only Kiba won't give him time to prepare it!",
+      "airdate": "2003-08-20",
+      "markers": [],
+      "external_id": "167780"
+    },
+    {
+      "n": 63,
+      "title": "Hit it or Quit it: The Final Rounds Get Complicated!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167781/original.jpg",
+      "synopsis": "Kiba alerts Hinata, as he's being taken away, that there are only a few fighters left. He warns her that if she fights Gaara, she has to give up immediately or she could be killed. He also tells her to give up if paired against Neji, because Neji already has issues with her. Just then, the board shows the next fight...Hinata vs. Neji. Just how far will Hinata go to prove herself?",
+      "airdate": "2003-08-20",
+      "markers": [],
+      "external_id": "167781"
+    },
+    {
+      "n": 64,
+      "title": "Zero Motivation: The Guy with Cloud Envy!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167782/original.jpg",
+      "synopsis": "Hinata will not give up so easily, especially with Naruto watching her. Will Hinata be willing to give up her own life in order to prove herself, or will the match be stopped before Neji can connect a killing move?",
+      "airdate": "2003-08-27",
+      "markers": [],
+      "external_id": "167782"
+    },
+    {
+      "n": 65,
+      "title": "Dancing Leaf, Squirming Sand",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167783/original.jpg",
+      "synopsis": "The second-to-last match finally arrives!  Rock Lee must face down the mysterious and dangerous Gaara, a ninja who is said to have never been truly injured in a fight before.",
+      "airdate": "2003-09-03",
+      "markers": [],
+      "external_id": "167783"
+    },
+    {
+      "n": 66,
+      "title": "Bushy Brow's Jutsu: Sasuke Style!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167784/original.jpg",
+      "synopsis": "As the battle between Lee and Gaara continues, Gai remembers how hard Lee used to train and how Lee has pretty much no ninjutsu or genjutsu skills. Lee is also a dropout, like Naruto. In order to defeat Gaara, Lee will have to use the move Gai forbade him to use.",
+      "airdate": "2003-09-10",
+      "markers": [],
+      "external_id": "167784"
+    },
+    {
+      "n": 67,
+      "title": "Late for the Show, But Ready to Go! The Ultimate Secret Technique is Born!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167785/original.jpg",
+      "synopsis": "The match between Gaara and Lee draws to an end as Lee unleashes his ultimate move. But will even this be enough to defeat Gaara? Even if Lee does make it out in one piece, even more shocking news awaits him.",
+      "airdate": "2003-09-17",
+      "markers": [],
+      "external_id": "167785"
+    },
+    {
+      "n": 68,
+      "title": "Zero Hour! The Destruction of the Hidden Leaf Village Begins!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167786/original.jpg",
+      "synopsis": "As Chouji faces off against Dosu, Orochimaru gives an order for Kabuto to abduct Sasuke. He also tells Kabuto that if he wants to stop him, he'll have to kill Sasuke. As Kabuto approaches Sasuke, he hesitates on what to do. His spy cover is soon blown though, as Kakashi appears on the scene. Will Kakashi save Sasuke from Kabuto's grasp?",
+      "airdate": "2003-09-24",
+      "markers": [],
+      "external_id": "167786"
+    },
+    {
+      "n": 69,
+      "title": "Village in Distress: A New A-Ranked Mission!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167787/original.jpg",
+      "synopsis": "Naruto wants Kakashi to train him, but Kakashi has other plans. Ebisu arrives to an unhappy Naruto and makes a deal with him. If Naruto can get away from Ebisu, he'll make Kakashi train him. Naruto decides to accept Ebisu's challenge, but can he win?",
+      "airdate": "2003-10-01",
+      "markers": [],
+      "external_id": "167787"
+    },
+    {
+      "n": 70,
+      "title": "A Shirker's Call to Action: A Layabout No More!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167788/original.jpg",
+      "synopsis": "While Ebisu trains Naruto at a hotspring, he spots someone trying to peep on the women bathing! Ebisu attacks, but it doesn't go quite as planned. Naruto then demands that the stranger become his teacher instead, but he's going to need some convincing. Does Naruto have any special Jutsu for this situation?",
+      "airdate": "2003-10-08",
+      "markers": [],
+      "external_id": "167788"
+    },
+    {
+      "n": 71,
+      "title": "An Unrivaled Match: Hokage Battle Royale!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167789/original.jpg",
+      "synopsis": "While Jiraiya attempts to teach Naruto the Summoning Jutsu, while doing research as well, Dosu learns the hard way why Gaara is so dangerous. Meanwhile, Baki and Kabuto secretly meet and reveal a sinister plot against Konoha. When Hayate discovers this dark secret, he attempts to warn the Hokage. However, he'll have to get through Baki first!",
+      "airdate": "2003-10-15",
+      "markers": [],
+      "external_id": "167789"
+    },
+    {
+      "n": 72,
+      "title": "A Mistake from the Past: A Face Revealed!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167790/original.jpg",
+      "synopsis": "Sakura goes to visit Sasuke and Lee in the hospital, along the way, she meets up with Ino and the two make the trip together. Lee tries to resume his training with limited success, making Sakura worry more about him and Sasuke.",
+      "airdate": "2003-10-22",
+      "markers": [],
+      "external_id": "167790"
+    },
+    {
+      "n": 73,
+      "title": "Forbidden Secret Technique: Reaper Death Seal!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167791/original.jpg",
+      "synopsis": "Since Naruto is having little to no success at summoning frogs, Jiraiya figures that if Naruto's to learn how summon Kyubi's chakra, he's going to need to be put into a life-threating situation. After having Naruto do a bunch of tasks, he throws Naruto off a cliff. Naruto's only hope of survival lies within an encounter with the Nine-Tailed Demon Fox himself. But, will Kyubi be willing to help him?",
+      "airdate": "2003-10-29",
+      "markers": [],
+      "external_id": "167791"
+    },
+    {
+      "n": 74,
+      "title": "Astonishing Truth! Gaara's Identity Emerges!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167792/original.jpg",
+      "synopsis": "Overjoyed at his success, Naruto manages to enrage Gamabunta. With him not willing to accept that Naruto was able to summon him, Naruto challenges Gamabunta to accept him as his subordinate if he is able to stay on his back until sundown.",
+      "airdate": "2003-11-05",
+      "markers": [],
+      "external_id": "167792"
+    },
+    {
+      "n": 75,
+      "title": "Sasuke's Decision: Pushed to the Edge!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167793/original.jpg",
+      "synopsis": "Due to the events with Gamabunta, Naruto is now stuck in the hospital. Shikamaru unexpectedly pays him a visit, saying the two of them are the types who never get girls to visit them. Meanwhile, Gaara approaches an unconscious Rock Lee, with the full intention of taking his life. Luckily for Lee, Naruto and Shikamaru are there to protect him. However, can they save even themselves after learning Gaara's shocking secret? What is it that Naruto has realized about Gaara?",
+      "airdate": "2003-11-12",
+      "markers": [],
+      "external_id": "167793"
+    },
+    {
+      "n": 76,
+      "title": "Assassin of the Moonlit Night",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167794/original.jpg",
+      "synopsis": "Waking up late, Naruto hurries to the stadium where the Chuunin matches will be held, along the way he stops at his old training ground and meets up with Hinata.  Naruto tells Hinata that he's afraid he'll lose, but with Hinata's encouragement and sort-of-confession of her feelings, Naruto is filled with renewed confidence and proceeds to the stadium leaving a shellshocked Hinata in his wake. Now Naruto must try to make it the stadium before it's too late, and Konohamaru has a plan to help him out.",
+      "airdate": "2003-11-19",
+      "markers": [],
+      "external_id": "167794"
+    },
+    {
+      "n": 77,
+      "title": "Light vs. Dark: The Two Faces of Gaara",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167795/original.jpg",
+      "synopsis": "The opening ceremony to the Final Matches begins and Sasuke is missing, worrying Naruto. The ceremony ends and Naruto starts his fight with Neji. Will Naruto's confidence lead him to a victory or are Neji's skills to much for him? And where is Sasuke?",
+      "airdate": "2003-11-26",
+      "markers": [],
+      "external_id": "167795"
+    },
+    {
+      "n": 78,
+      "title": "Naruto's Ninja Handbook",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167796/original.jpg",
+      "synopsis": "Naruto begins his assault with his Shadow Clones but Neji analyses Naruto's actions and determines what he believes to be the real one. Unable to figure out why Naruto won't admit defeat, he takes off his headband and reveals a mysterious mark on his forehead. What is the truth about his hatred towards the main family of the Hyuuga Clan?",
+      "airdate": "2003-12-03",
+      "markers": [],
+      "external_id": "167796"
+    },
+    {
+      "n": 79,
+      "title": "Beyond the Limit of Darkness and Light",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167797/original.jpg",
+      "synopsis": "When it looks as if Naruto can't win, Neji continues to tell him that he cannot change his fate and that he has no idea what it feels like to carry a seal that cannot be removed. Naruto thinks back about his childhood and how he was treated because of the Nine-Tails sealed inside him. However, that same curse may prove to be his only chance at winning...",
+      "airdate": "2003-12-10",
+      "markers": [],
+      "external_id": "167797"
+    },
+    {
+      "n": 80,
+      "title": "The Third Hokage, Forever...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167798/original.jpg",
+      "synopsis": "With Sasuke still absent, and everyone anxiously anticipating his match against Gaara, the tournament is forced to move on to the next round. Meanwhile, Neji learns the shocking truth about his father.",
+      "airdate": "2003-12-17",
+      "markers": [],
+      "external_id": "167798"
+    },
+    {
+      "n": 81,
+      "title": "Return of the Morning Mist",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167799/original.jpg",
+      "synopsis": "Shikamaru takes on Temari, only he doesn't want to fight. Can the lazy Shikamaru even last the round? Or is there more to Shikamaru than meets the eye?",
+      "airdate": "2003-12-24",
+      "markers": [],
+      "external_id": "167799"
+    },
+    {
+      "n": 82,
+      "title": "Eye to Eye: Sharingan vs. Sharingan!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167800/original.jpg",
+      "synopsis": "It's time for Sasuke's match against Gaara, only Sasuke has yet to show up. Normally they'd disqualify him, but everyone's anxiously awaiting the match. Therefore, they give Sasuke a time limit before disqualifying him. As time slowly begins to run out, only one question remains on everyone's mind...where's Sasuke?",
+      "airdate": "2004-01-07",
+      "markers": [],
+      "external_id": "167800"
+    },
+    {
+      "n": 83,
+      "title": "Jiraiya: Naruto's Potential Disaster!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167801/original.jpg",
+      "synopsis": "Sasuke's match against Gaara finally begins! Gaara seems to have the upper hand at the beginning, until Sasuke shows off his newly found taijutsu techniques. Gaara is reliving the battle against Rock Lee all over again, only this time he's facing an opponent who can use more than simple taijutsu attacks.",
+      "airdate": "2004-01-14",
+      "markers": [],
+      "external_id": "167801"
+    },
+    {
+      "n": 84,
+      "title": "Roar, Chidori! Brother vs. Brother!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167802/original.jpg",
+      "synopsis": "With Gaara's ultimate defense in place, Sasuke's only hope of winning lies within the move Kakashi taught him...Chidori. But, how will Gaara react when Sasuke causes him to bleed?",
+      "airdate": "2004-01-14",
+      "markers": [],
+      "external_id": "167802"
+    },
+    {
+      "n": 85,
+      "title": "Hate Among the Uchihas: The Last of the Clan!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167803/original.jpg",
+      "synopsis": "Sasuke's match is interrupted when Orochimaru puts his plan into action. Temari and Kankuro are ordered to get Gaara to safety until he recovers, leaving Sasuke to chase after them. War has begun!",
+      "airdate": "2004-01-28",
+      "markers": [],
+      "external_id": "167803"
+    },
+    {
+      "n": 86,
+      "title": "A New Training Begins: I Will Be Strong!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167804/original.jpg",
+      "synopsis": "Knowing that Sasuke is in over his head, Kakashi sends Naruto, Sakura, and Shikamaru, being guided by a dog named Pakkun, to stop Sasuke from pursuing Gaara.",
+      "airdate": "2004-02-04",
+      "markers": [],
+      "external_id": "167804"
+    },
+    {
+      "n": 87,
+      "title": "Keep on Training: Pop Goes the Water Balloon!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167805/original.jpg",
+      "synopsis": "Naruto, Sakura, Shikamaru, and Pakkun are being chased down by several Sound ninja. Shikamaru decides to stop and try to hold them off so the others can catch up to Sasuke without fear of pursuit. Shikamaru is the logical choice because of his Shadow Possession Jutsu...needless to say, Shikamaru's not too thrilled by this.",
+      "airdate": "2004-02-11",
+      "markers": [],
+      "external_id": "167805"
+    },
+    {
+      "n": 88,
+      "title": "Focal Point: The Mark of the Leaf",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/486/original.jpg",
+      "synopsis": "The battle of kings has begun as Orochimaru has summoned some unexpected help. How can the Third Hokage handle this uncomfortable situation? Meanwhile, Sasuke finally catches up with Kakurou, Gaara and Temari...",
+      "airdate": "2004-02-18",
+      "markers": [],
+      "external_id": "486"
+    },
+    {
+      "n": 89,
+      "title": "An Impossible Choice: The Pain Within Tsunade's Heart",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/487/original.jpg",
+      "synopsis": "While Naruto and Sakura continue to catch up to Sasuke, Temari trys to stall Sasuke long enough for Kankuro to get Gaara to safety, but Sasuke doesn't have time to waste on her! Meanwhile, The Third Hokage continues his battle with Orochimaru and is ready to use a move that not even he knows...",
+      "airdate": "2004-02-25",
+      "markers": [],
+      "external_id": "487"
+    },
+    {
+      "n": 90,
+      "title": "Unforgivable! A Total Lack of Respect!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/488/original.jpg",
+      "synopsis": "An unlikely ally appears to help Sasuke and allows him to continue to pursue Gaara. Meanwhile, the Hokage prepares to make the ultimate sacrifice to rid his village of Orochimaru!",
+      "airdate": "2004-03-03",
+      "markers": [],
+      "external_id": "488"
+    },
+    {
+      "n": 91,
+      "title": "Inheritence! The Necklace of Death!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/489/original.jpg",
+      "synopsis": "While Shino and Kankuro fight the match they should've fought back during the Chuunin Exam, Naruto, Sakura, and Pakkun slowly catch up to Sasuke. Meanwhile, Sasuke has finally caught up with Gaara and Temari, but is he ready to face true horror when Gaara reveals his demon form?",
+      "airdate": "2004-03-10",
+      "markers": [],
+      "external_id": "489"
+    },
+    {
+      "n": 92,
+      "title": "A Dubious Offer! Tsunade's Choice!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/490/original.jpg",
+      "synopsis": "Sasuke struggles to keep up with Gaara's monstrous capacity. Only able to use Chidori twice in normal circumstances, Sasuke remembers that tragic day when his family died and realises he must risk the use of Chidori beyond his limit if he is to defeat Gaara. That is, if he can...",
+      "airdate": "2004-03-17",
+      "markers": [],
+      "external_id": "490"
+    },
+    {
+      "n": 93,
+      "title": "Breakdown! The Deal is Off!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/491/original.jpg",
+      "synopsis": "As Sasuke is about to be defeated, Naruto and Sakura show up to save him. With this Gaara begins to have flashbacks of his childhood. What happened in Gaara's past to make him experience so much suffering?",
+      "airdate": "2004-03-24",
+      "markers": [],
+      "external_id": "491"
+    },
+    {
+      "n": 94,
+      "title": "Attack! Fury of the Rasengan!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/492/original.jpg",
+      "synopsis": "Gaara continues to talk about his past. When Gaara states that Naruto can't become stronger when he fights for everyone else, Naruto recalls that if he didn't meet his friends, he would be the same as Gaara. Realizing that he has to protect his friends, Naruto overcomes his fear and decides to take on Gaara.",
+      "airdate": "2004-03-31",
+      "markers": [],
+      "external_id": "492"
+    },
+    {
+      "n": 95,
+      "title": "The Fifth Hokage! A Life on the Line!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/493/original.jpg",
+      "synopsis": "Naruto and Gaara continue their fight.  Naruto begins to get an advantage, and Gaara transforms into the final form of Shukaku of the Sand. As he begins to put the squeeze on Naruto, Naruto summons Gamabunta Oyabun, and his comeback begins. Once again, Naruto begins to get an advantage, but Gaara casts the technique of fake sleep, releasing the full power of Shukaku. Now that the demon is free, what will Naruto do?",
+      "airdate": "2004-04-07",
+      "markers": [],
+      "external_id": "493"
+    },
+    {
+      "n": 96,
+      "title": "Deadlock! Sannin Showdown!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/494/original.jpg",
+      "synopsis": "Transformed into Kyubi, Naruto and Gamabunta prepare to stop Shukaku by waking Gaara up. Though they succeed, the battle is far from over as Gaara won't stop until Naruto is dead. Naruto and Gaara prepare for their final attacks. Meanwhile, Sarutobi continues trying to defeat Orochimaru. And even though Sarutobi isn't strong enough to kill Orochimaru, he does have enough strength to take away Orochimaru's most prized possession...the use of his arms!",
+      "airdate": "2004-04-14",
+      "markers": [],
+      "external_id": "494"
+    },
+    {
+      "n": 97,
+      "title": "Kidnapped! Naruto's Hot Spring Adventure!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/495/original.jpg",
+      "synopsis": "As the war draws to a close, Gaara admits his defeat to Naruto, and Orochimaru is forced to retreat as Sarutobi took away his arms. Now, all of the Konoha shinobi gather together to pay their respects to the person whom they respected the most...Sarutobi, the Third Hokage.",
+      "airdate": "2004-04-21",
+      "markers": [],
+      "external_id": "495"
+    },
+    {
+      "n": 98,
+      "title": "Tsunade's Warning: Ninja No More!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/496/original.jpg",
+      "synopsis": "Two mysterious ninja infiltrate Konoha, and one of them bares the Sharingan. Just what are these two after? Why has Itachi Uchiha returned to Konoha?",
+      "airdate": "2004-04-28",
+      "markers": [],
+      "external_id": "496"
+    },
+    {
+      "n": 99,
+      "title": "The Will of Fire Still Burns!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/497/original.jpg",
+      "synopsis": "Kakashi takes on Itachi, with both of them using the Sharingan. However, Kakashi soon realizes that he stands no chance against the legendary ninja. Itachi reveals that he has not come for his little brother, but instead he's come to do something else...abduct Naruto, and Kyubi as well!",
+      "airdate": "2004-05-05",
+      "markers": [],
+      "external_id": "497"
+    },
+    {
+      "n": 100,
+      "title": "Sensei and Student: The Bond of the Shinobi",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/498/original.jpg",
+      "synopsis": "Jiraiya and Naruto begin their search for Tsunade, but are constantly sidetracked by Jiraiya's peeping and hitting on pretty girls. Jiraiya tells Naruto some stories about the 3rd and 4th Hokages. Meanwhile, Sasuke learns that his brother, Itachi, is after Naruto and goes to warn him.",
+      "airdate": "2004-05-12",
+      "markers": [],
+      "external_id": "498"
+    },
+    {
+      "n": 101,
+      "title": "Gotta See! Gotta Know! Kakashi-Sensei's True Face!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167807/original.jpg",
+      "synopsis": "Sasuke remembers the day that Itachi single-handedly wiped out the entire Uchiha clan as he desperately searches for Naruto. However, Itachi and Kisame have already found him.",
+      "airdate": "2004-05-19",
+      "markers": [],
+      "external_id": "167807"
+    },
+    {
+      "n": 102,
+      "title": "Mission: Help an Old Friend in the Land of Tea",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167808/original.jpg",
+      "synopsis": "Jiraiya and Naruto look on as Sasuke takes on Itachi alone. However, when the young ninja is severely outclassed, Jiraiya is forced to step in. Itachi and Kisame try to flee, but Jiraiya isn't about to let them get away so easily.",
+      "airdate": "2004-05-26",
+      "markers": [],
+      "external_id": "167808"
+    },
+    {
+      "n": 103,
+      "title": "The Race is on! Trouble on the High Seas!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167810/original.jpg",
+      "synopsis": "Now that Sasuke is in safe hands, Naruto and Jiraiya can continue their search for Tsunade. When they arrive at a city with a festival on the way, Jiraiya and Naruto have some fun, at least until Naruto puts a stain on a man's shirt. Jiraiya uses a new technique that easily defeats the man and offers to teach it to Naruto. What is this new technique and can Naruto master it?",
+      "airdate": "2004-06-02",
+      "markers": [],
+      "external_id": "167810"
+    },
+    {
+      "n": 104,
+      "title": "Run Idate Run! Nagi Island Awaits!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167811/original.jpg",
+      "synopsis": "Jiraiya gives Naruto the task of rotating the water in a balloon until it pops. Naruto is confident that he will accomplish this stage of the training by night, but soon learns it's not as easy as expected.",
+      "airdate": "2004-06-09",
+      "markers": [],
+      "external_id": "167811"
+    },
+    {
+      "n": 105,
+      "title": "A Fierce Battle of Rolling Thunder!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167813/original.jpg",
+      "synopsis": "After passing stage one of the training, Naruto moves into stage two: power training. Jiraiya realizes that, like him, Naruto has a hard time concentrating, so he paints a spiral in the palm of Naruto's hand to help him to focus. With the aid of the spiral and a quick flashback to Iruka-sensei, Naruto completes stage two. Meanwhile, Tsunade's luck has become uncommonly good, which worries her. After being talked into sightseeing by her assistant, Tsunade meets Orochimaru...and she doesn't look at all pleased.",
+      "airdate": "2004-06-16",
+      "markers": [],
+      "external_id": "167813"
+    },
+    {
+      "n": 106,
+      "title": "The Last Leg: A Final Act of Desperation",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167816/original.jpg",
+      "synopsis": "Naruto continues his training of the Rasengan, having mastered the stages of spin and power. The final stage proves to be the most difficult: control. Meanwhile, Orochimaru and Kabuto accost Tsunade and ask her to restore Orochimaru's arms. If she restores Orochimaru's arms, he promises to use his Rebirth of the Impure World kinjutsu to revive her lost lover and little brother.",
+      "airdate": "2004-06-23",
+      "markers": [],
+      "external_id": "167816"
+    },
+    {
+      "n": 107,
+      "title": "The Battle Begins: Naruto vs. Sasuke",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167818/original.jpg",
+      "synopsis": "Jiraiya and Naruto catch up to Tsunade, whereupon she learns that Konoha wants her to be the 5th Hokage. She refuses the title, angering Naruto, who mistakes her for being a weakling. Naruto learns first-hand how strong she really is. Naruto decides now is the time to try out the Rasengan, only he hasn't perfected it yet.",
+      "airdate": "2004-07-07",
+      "markers": [],
+      "external_id": "167818"
+    },
+    {
+      "n": 108,
+      "title": "Bitter Rivals and Broken Bonds",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167820/original.jpg",
+      "synopsis": "Naruto makes a bet with Tsunade, that if he can master the Rasengan in one week, she'll give him a necklace belonging the to the First Hokage. However, Shizune reveals some startling information. Everybody, except for Tsunade, who's worn that necklace has died the next day!",
+      "airdate": "2004-07-14",
+      "markers": [],
+      "external_id": "167820"
+    },
+    {
+      "n": 109,
+      "title": "An Invitation from the Sound",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167822/original.jpg",
+      "synopsis": "While Naruto continues to try and master the third step, Tsunade continues to think about Orochimaru's offer. Jiraiya tries to convince her by taking her out for a drink, only she slipped a paralyzing potion into his drink while he wasn't looking. Will Tsunade agree to Orochimaru's offer? And will Naruto master the Rasengan before the week is up?",
+      "airdate": "2004-07-21",
+      "markers": [],
+      "external_id": "167822"
+    },
+    {
+      "n": 110,
+      "title": "Formation! The Sasuke Retrieval Squad",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167824/original.jpg",
+      "synopsis": "Because Orochimaru lied to her about not attacking Konoha, Tsunade begins her onslaught against him and Kabuto. Kabuto eats a food pill and begins to attack Tsunade with his medical techniques but are they enough to defeat her? Will Jiraiya, Shizune and Naruto show up in time?",
+      "airdate": "2004-07-28",
+      "markers": [],
+      "external_id": "167824"
+    },
+    {
+      "n": 111,
+      "title": "Sound vs. Leaf",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167828/original.jpg",
+      "synopsis": "With Tsunade still paralized with fear and Naruto being a low level ninja, it is up to Shizune and Jiraiya to defeat Kabuto and Orochimaru. Orochimaru and Kabuto summon two giant snakes while Jiraiya summons Gamakichi, who does nothing. Naruto tries to help Jiraya, but he too only summons a small frog that also does nothing. Orochimaru and Kabuto attack and Shizune is easily defeated. Naruto tries Rasengan but fails. Can he master the technique before Kabuto does anything to Tsunade? How far will he go to master it?",
+      "airdate": "2004-08-04",
+      "markers": [],
+      "external_id": "167828"
+    },
+    {
+      "n": 112,
+      "title": "Squad Mutiny: Everything Falls Apart!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167830/original.jpg",
+      "synopsis": "Naruto finally lands a Rasengan into Kabuto's stomach, but not before Kabuto assures Naruto's certain death. Can Tsunade save him and protect him from Orochimaru?",
+      "airdate": "2004-08-11",
+      "markers": [],
+      "external_id": "167830"
+    },
+    {
+      "n": 113,
+      "title": "Full Throttle Power! Choji, Ablaze!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167831/original.jpg",
+      "synopsis": "With Tsunade in her current conidtion, and Jiraiya still under the effects of the drug, Tsunade and Jiraiya must work together to defeat Orochimaru. And with all three ninja having summoned their signature beasts, it's sure to be one heck of a battle!",
+      "airdate": "2004-08-11",
+      "markers": [],
+      "external_id": "167831"
+    },
+    {
+      "n": 114,
+      "title": "Good-bye Old Friend...! I'll Always Believe in You!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167835/original.jpg",
+      "synopsis": "The group are on their way back to Konoha when they stop at a town with hotsprings. Unknown to them they are being watched by men looking for Tsunade. Naruto's room gets raided and the necklace he was given goes missing with nothing but a ransom note left behind. What does it all mean? Can Naruto get the necklace back and why are they looking for Tsunade in the first place?",
+      "airdate": "2004-08-18",
+      "markers": [],
+      "external_id": "167835"
+    },
+    {
+      "n": 115,
+      "title": "Your Opponent Is Me!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167837/original.jpg",
+      "synopsis": "Naruto, Tsunade, and Shizune finally return to Konoha so Tsunade can take over and become Hokage. Konohamaru finds out that Tsunade is the Fifth but refuses to believe it. Naruto then takes Tsunade to the hospital so she can heal Sasuke, Kakashi, and Lee. She heals Sasuke and Kakashi just fine...However, her diagnosis of Rock Lee has heartbreaking consequences for him and his future.",
+      "airdate": "2004-08-25",
+      "markers": [],
+      "external_id": "167837"
+    },
+    {
+      "n": 116,
+      "title": "360 Degrees of Vision: The Byakugan's Blind Spot",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167840/original.jpg",
+      "synopsis": "Konohamaru locks himself in the office used by the 3rd to stop them from replacing his grandfather, the previous Hokage.  Tsunade spends the day locked out of her office and researches a way to heal Rock Lee so he has a better chance of surviving the operation,",
+      "airdate": "2004-09-01",
+      "markers": [],
+      "external_id": "167840"
+    },
+    {
+      "n": 117,
+      "title": "Losing is Not an Option!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167843/original.jpg",
+      "synopsis": "As Lee decides whether or not to go through with the operation, Gai decides to give him some motivation. Meanwhile, Tsunade frantically struggles to increase the operation's success rate.",
+      "airdate": "2004-09-08",
+      "markers": [],
+      "external_id": "167843"
+    },
+    {
+      "n": 118,
+      "title": "The Vessel Arrives Too Late",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167848/original.jpg",
+      "synopsis": "After their mission, Naruto persuades Sakura and Sasuke to help him unmask their sensei, Kakashi. However, Squad 7 soon finds out that this is easier said than done...",
+      "airdate": "2004-09-15",
+      "markers": [],
+      "external_id": "167848"
+    },
+    {
+      "n": 119,
+      "title": "Miscalculation: A New Enemy Appears!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167851/original.jpg",
+      "synopsis": "Naruto, Sakura and Sasuke find out their newest mission will be without Kakashi who has responsibilities elsewhere. Tsunade sends them to the Tea Country to protect someone, but the details are vague at best. Along the way they meet Idate Morino who causes the group a lot of trouble, especially when they discover who they have to protect!",
+      "airdate": "2004-09-22",
+      "markers": [],
+      "external_id": "167851"
+    },
+    {
+      "n": 120,
+      "title": "Roar and Howl! The Ultimate Tag Team",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167854/original.jpg",
+      "synopsis": "The trio continue to follow Idate while fending off attacks by three Shinobi sent to kill him. They find out later just how important winning this race is to the Wasabi clan's future...",
+      "airdate": "2004-09-29",
+      "markers": [],
+      "external_id": "167854"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Future Eve",
+      "artist": "OKAMOTO'S",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Give Lee Give Lee Rock Lee",
+      "artist": "ANIMETAL USA and Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Twinkle Twinkle",
+      "artist": "Secret",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Michi ~ to you all",
+      "artist": "aluto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Otakebi",
+      "artist": "Yusuke",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "if",
+      "artist": "Kana Nishino",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dareka Ga",
+      "artist": "PUFFY",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "NO RAIN, NO RAINBOW",
+      "artist": "HOME MADE Kazoku",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lie-Lie-Lie",
+      "artist": "DJ OZMA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gyu-Ru-Ru",
+      "artist": "Junko Takeuchi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hero's Come Back!!",
+      "artist": "nobodyknows+",
+      "episodes": "1-30"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Zetsuzetsu (絶絶; Death)",
+      "artist": "Swimy",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nagare Boshi ~Shooting Star~",
+      "artist": "HOME MADE Kazoku",
+      "episodes": "1-18"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubomi",
+      "artist": "MARIA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ding! Dong! Dang!",
+      "artist": "TUBE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rise",
+      "artist": "Jeremy Sweet and Ian Nickus [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Naruto Main Theme",
+      "artist": "Toshiro Masuda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Naruto Main Theme",
+      "artist": "Toshiro Masuda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Home Sweet Home",
+      "artist": "YUKI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Never Give Up",
+      "artist": "Jeremy Sweet [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rise",
+      "artist": "Jeremy Sweet and Ian Nickus [English Version]",
+      "episodes": "1-52"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rocks",
+      "artist": "Hound Dog",
+      "episodes": "1-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Wind",
+      "artist": "Akeboshi",
+      "episodes": "1-25"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Love Song",
+      "artist": "OKAMOTO'S",
+      "episodes": "27-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Go! Go! Here We Go!",
+      "artist": "Shiritsu Ebisu Chugaku",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "distance",
+      "artist": "LONG SHOT PARTY",
+      "episodes": "31-53"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Michi ~ to you all",
+      "artist": "aluto",
+      "episodes": "19-30"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Haruka Kanata (遥か彼方)",
+      "artist": "Asian Kung-Fu Generation",
+      "episodes": "26-53"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Harmonia (ハルモニア)",
+      "artist": "Rythem",
+      "episodes": "26-51"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Daijoubu Bokura",
+      "artist": "RAM WIRE",
+      "episodes": "27-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "BLUE BIRD",
+      "artist": "Ikimono-Gakari",
+      "episodes": "54-77"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "KIMI MONOGATARI",
+      "artist": "little by little",
+      "episodes": "31-41"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Kanashimi wo Yasashisani (悲しみをやさしさに)",
+      "artist": "little by little",
+      "episodes": "54-77"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Viva Rock ~Japanese Side~ (ビバ★ロック ～japanese side～)",
+      "artist": "Orange Range",
+      "episodes": "52-64"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Icha Icha Chu Chu Kyappi Kyappi Love Love Suri Suri Doki Doki",
+      "artist": "HAPPY BIRTHDAY",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "CLOSER",
+      "artist": "Joe Inoue",
+      "episodes": "78-102"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Mezamero! Yasei",
+      "artist": "MATCHY with QUESTION?",
+      "episodes": "42-52"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "GO!!!",
+      "artist": "FLOW",
+      "episodes": "78-103"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "ALIVE",
+      "artist": "Raiko",
+      "episodes": "65-77"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Hotaru no Hikari",
+      "artist": "Ikimono-Gakari",
+      "episodes": "103-128"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Sunao na Niji",
+      "artist": "surface",
+      "episodes": "54-63"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Seishun Kyosokyoku (青春狂騒曲)",
+      "artist": "Sambomaster",
+      "episodes": "104-128"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Ima made Nando mo (今まで何度も)",
+      "artist": "the Mass Missile",
+      "episodes": "78-89"
+    },
+    {
+      "kind": "OP",
+      "sequence": 6,
+      "title": "Sign",
+      "artist": "FLOW",
+      "episodes": "129-153"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Broken Youth",
+      "artist": "NICO TOUCHES THE WALLS",
+      "episodes": "64-77"
+    },
+    {
+      "kind": "OP",
+      "sequence": 6,
+      "title": "No Boy, No Cry (ノーボーイ・ノークライ)",
+      "artist": "Stance Punks",
+      "episodes": "129-153"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Ryusei (流星)",
+      "artist": "Tia",
+      "episodes": "90-103"
+    },
+    {
+      "kind": "OP",
+      "sequence": 7,
+      "title": "Tōmei Datta Sekai (透明だった世界)",
+      "artist": "Motohiro Hata",
+      "episodes": "154-179"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Long Kiss Good Bye",
+      "artist": "HALCALI",
+      "episodes": "78-90"
+    },
+    {
+      "kind": "OP",
+      "sequence": 7,
+      "title": "Namikaze Satellite (波風サテライト)",
+      "artist": "Snowkel",
+      "episodes": "154-178"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Mountain A Go Go Too (マウンテン・ア・ゴーゴー・ツー)",
+      "artist": "Captain Stridum",
+      "episodes": "104-115"
+    },
+    {
+      "kind": "OP",
+      "sequence": 8,
+      "title": "Diver",
+      "artist": "NICO Touches the Walls",
+      "episodes": "180-205"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "BACCHIKOI!!!",
+      "artist": "DEV PARADE",
+      "episodes": "91-102"
+    },
+    {
+      "kind": "OP",
+      "sequence": 8,
+      "title": "Re:member",
+      "artist": "FLOW",
+      "episodes": "179-202"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Hajimete Kimi to Shabetta (はじめて君としゃべった)",
+      "artist": "GagagaSP",
+      "episodes": "116-128"
+    },
+    {
+      "kind": "OP",
+      "sequence": 9,
+      "title": "Lovers",
+      "artist": "7!!",
+      "episodes": "206-230"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Shinkokyū",
+      "artist": "SUPER BEAVER",
+      "episodes": "103-115"
+    },
+    {
+      "kind": "OP",
+      "sequence": 9,
+      "title": "YURA YURA",
+      "artist": "Hearts Grow",
+      "episodes": "203-220"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Nakushita Kotoba (失くした言葉)",
+      "artist": "No Regret Life",
+      "episodes": "129-141"
+    },
+    {
+      "kind": "OP",
+      "sequence": 10,
+      "title": "Newsong",
+      "artist": "tacica",
+      "episodes": "231-256"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "My Answer",
+      "artist": "Seamo",
+      "episodes": "116-128"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "スピード (Speed)",
+      "artist": "Analog Fish",
+      "episodes": "142-153"
+    },
+    {
+      "kind": "OP",
+      "sequence": 11,
+      "title": "Totsugeki Rock (突撃ロック, Assault Rock)",
+      "artist": "THE CRO-MAGNONS",
+      "episodes": "257-281"
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "It Was You",
+      "artist": "Kishidan",
+      "episodes": "129-141"
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "Soba ni Iru Kara (そばにいるから)",
+      "artist": "Amadori",
+      "episodes": "154-165"
+    },
+    {
+      "kind": "OP",
+      "sequence": 12,
+      "title": "Moshimo",
+      "artist": "Daisuke",
+      "episodes": "282-306"
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "For You",
+      "artist": "AZU",
+      "episodes": "142-153"
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "Parade (パレード)",
+      "artist": "CHABA",
+      "episodes": "166-178"
+    },
+    {
+      "kind": "OP",
+      "sequence": 13,
+      "title": "Niwaka Ame Nimo Makezu (ニワカ雨ニモ負ケズ)",
+      "artist": "NICO Touches the Walls",
+      "episodes": "307-332"
+    },
+    {
+      "kind": "ED",
+      "sequence": 13,
+      "title": "Jitensha (自転車; Bicycle)",
+      "artist": "OreSkaBand",
+      "episodes": "154-166"
+    },
+    {
+      "kind": "ED",
+      "sequence": 13,
+      "title": "Yellow Moon",
+      "artist": "Akeboshi",
+      "episodes": "179-191"
+    },
+    {
+      "kind": "OP",
+      "sequence": 14,
+      "title": "Tsuki no Ookisa (月の大きさ)",
+      "artist": "Nogizaka46",
+      "episodes": "333-356"
+    },
+    {
+      "kind": "ED",
+      "sequence": 14,
+      "title": "Utakata Hanabi",
+      "artist": "Supercell",
+      "episodes": "167-179"
+    },
+    {
+      "kind": "ED",
+      "sequence": 14,
+      "title": "Pinocchio",
+      "artist": "Ore Ska Band",
+      "episodes": "192-202"
+    },
+    {
+      "kind": "OP",
+      "sequence": 15,
+      "title": "Guren (紅蓮)",
+      "artist": "DOES",
+      "episodes": "357-379"
+    },
+    {
+      "kind": "ED",
+      "sequence": 15,
+      "title": "U Can Do It",
+      "artist": "Domino",
+      "episodes": "180-192"
+    },
+    {
+      "kind": "ED",
+      "sequence": 15,
+      "title": "Scenario",
+      "artist": "SABOTEN",
+      "episodes": "203-220"
+    },
+    {
+      "kind": "OP",
+      "sequence": 16,
+      "title": "Silhouette (シルエット)",
+      "artist": "KANA-BOON",
+      "episodes": "380-405"
+    },
+    {
+      "kind": "ED",
+      "sequence": 16,
+      "title": "Orchestra of Midnight",
+      "artist": "Aqua Timez",
+      "episodes": "193-205"
+    },
+    {
+      "kind": "OP",
+      "sequence": 17,
+      "title": "Kaze (風;Wind)",
+      "artist": "Yamazaru",
+      "episodes": "406-431"
+    },
+    {
+      "kind": "ED",
+      "sequence": 17,
+      "title": "FREEDOM",
+      "artist": "HOME MADE Kazoku",
+      "episodes": "206-218"
+    },
+    {
+      "kind": "OP",
+      "sequence": 18,
+      "title": "LINE",
+      "artist": "Sukima Switch",
+      "episodes": "432-458"
+    },
+    {
+      "kind": "ED",
+      "sequence": 18,
+      "title": "Yokubō o Sakebe!!! (Shout Out Your Desires!!!)",
+      "artist": "OKAMOTO'S",
+      "episodes": "219-230"
+    },
+    {
+      "kind": "OP",
+      "sequence": 19,
+      "title": "Blood Circulator",
+      "artist": "Asian Kung-Fu Generation",
+      "episodes": "459-479"
+    },
+    {
+      "kind": "ED",
+      "sequence": 19,
+      "title": "Place to Try",
+      "artist": "TOTALFAT",
+      "episodes": "231-242"
+    },
+    {
+      "kind": "OP",
+      "sequence": 20,
+      "title": "Kara no Kokoro",
+      "artist": "Anly",
+      "episodes": "480-500"
+    },
+    {
+      "kind": "ED",
+      "sequence": 20,
+      "title": "By My Side",
+      "artist": "Hemenway",
+      "episodes": "243-256"
+    },
+    {
+      "kind": "ED",
+      "sequence": 21,
+      "title": "カスケード (Cascade)",
+      "artist": "UNLIMITS",
+      "episodes": "257-268"
+    },
+    {
+      "kind": "ED",
+      "sequence": 22,
+      "title": "Kono Koe Karashite (この声枯らして)",
+      "artist": "AISHA feat. CHEHON)",
+      "episodes": "269-281"
+    },
+    {
+      "kind": "ED",
+      "sequence": 23,
+      "title": "MOTHER",
+      "artist": "MUCC",
+      "episodes": "282-295"
+    },
+    {
+      "kind": "ED",
+      "sequence": 24,
+      "title": "Sayonara Memory (さよならメモリー Sayonara Memori)",
+      "artist": "7!!",
+      "episodes": "296-306"
+    },
+    {
+      "kind": "ED",
+      "sequence": 25,
+      "title": "I Can Hear",
+      "artist": "DISH//",
+      "episodes": "307-319"
+    },
+    {
+      "kind": "ED",
+      "sequence": 26,
+      "title": "Yume o Daite ~Hajimari no Clisroad~",
+      "artist": "Rake",
+      "episodes": "320-332"
+    },
+    {
+      "kind": "ED",
+      "sequence": 27,
+      "title": "Black Night Town (ブラックナイトタウン)",
+      "artist": "Akihisa Kondou",
+      "episodes": "333-343"
+    },
+    {
+      "kind": "ED",
+      "sequence": 28,
+      "title": "Niji",
+      "artist": "Shinku-horou",
+      "episodes": "344-356"
+    },
+    {
+      "kind": "ED",
+      "sequence": 29,
+      "title": "FLAME",
+      "artist": "DISH//",
+      "episodes": "357-366"
+    },
+    {
+      "kind": "ED",
+      "sequence": 30,
+      "title": "Never Change ft. Lyu:Lyu",
+      "artist": "SHUN",
+      "episodes": "367-379"
+    },
+    {
+      "kind": "ED",
+      "sequence": 31,
+      "title": "Dame Dame da (だめだめだ;It's Absolutely No Good)",
+      "artist": "Shiori Tomita",
+      "episodes": "380-393"
+    },
+    {
+      "kind": "ED",
+      "sequence": 32,
+      "title": "Spinning World",
+      "artist": "Diana Garnet",
+      "episodes": "394-405"
+    },
+    {
+      "kind": "ED",
+      "sequence": 33,
+      "title": "Kotoba ni Naranai Yakusoku (言葉のいらない約束;A Promise That Doesn't Need Words)",
+      "artist": "sana",
+      "episodes": "406-418"
+    },
+    {
+      "kind": "ED",
+      "sequence": 34,
+      "title": "Niji no Sora (虹の空; Rainbow's Sky)",
+      "artist": "FLOW",
+      "episodes": "419-431"
+    },
+    {
+      "kind": "ED",
+      "sequence": 35,
+      "title": "Trouble Maker (トラブルメイカー)",
+      "artist": "KANIKAPILA",
+      "episodes": "432-443"
+    },
+    {
+      "kind": "ED",
+      "sequence": 36,
+      "title": "Sonna Kimi, Konna Boku",
+      "artist": "Thinking Dogs",
+      "episodes": "444-454"
+    },
+    {
+      "kind": "ED",
+      "sequence": 37,
+      "title": "Ao no Lullaby",
+      "artist": "Kuroneko Chelsea",
+      "episodes": "455-466"
+    },
+    {
+      "kind": "ED",
+      "sequence": 38,
+      "title": "Pino to Ameri (Pino and Amélie)",
+      "artist": "Huwie Ishizaki",
+      "episodes": "467-479"
+    },
+    {
+      "kind": "ED",
+      "sequence": 39,
+      "title": "Tabidachi no Uta",
+      "artist": "Ayumikurikamaki",
+      "episodes": "480-488"
+    },
+    {
+      "kind": "ED",
+      "sequence": 40,
+      "title": "Zetsu (絶絶)",
+      "artist": "Swimy",
+      "episodes": "489-500"
+    }
+  ],
+  "relations": []
+}

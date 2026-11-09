@@ -1,0 +1,207 @@
+{
+  "id": "mononoke",
+  "title": "Mononoke",
+  "native": "モノノ怪",
+  "year": 2007,
+  "rating": 8.2,
+  "season": "Summer 2007",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2246-WHkSkgyuxfgD.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2246-WHkSkgyuxfgD.jpg",
+  "accent": "#f1c928",
+  "synopsis": "In feudal Japan, evil spirits known as mononoke plague both households and the countryside, leaving a trail of fear in their wake. One mysterious person has the power to slay the mononoke where they stand; he is known only as the Medicine Seller, and he vanquishes the spirits using the power of his Exorcism Sword. However, in order to draw his sword he must first understand the Form, Truth and Reason of the mononoke. Armed with a sharp wit and keen intellect, the Medicine Seller wanders from place to place, striking down the evil spirits in his wake.\n\n(Source: Discotek)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 2035,
+    "anilist": 2246,
+    "mal": 2246,
+    "hianime": "mononoke-xkz1mt"
+  },
+  "skip_key_id": 2246,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 13:05:21",
+  "search_text": "mononoke モノノ怪 tv finished",
+  "genres": [
+    "fantasy",
+    "horror",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Zashikiwarashi: Part 1",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34634/original.jpg",
+      "synopsis": "The Medicine Seller checks into the last room of a traditional inn, just as a pregnant woman named Shino desperately asks for shelter. She is given a secret room - a room possessed by a group of ghosts.",
+      "airdate": "2007-07-13",
+      "markers": [],
+      "external_id": "34634"
+    },
+    {
+      "n": 2,
+      "title": "Zashikiwarashi: Part 2",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34635/original.jpg",
+      "synopsis": "The Medicine Seller delves into the inn's past as he attempts to understand the ghost's motivations and history, before it can interfere with Shino.",
+      "airdate": "2007-07-20",
+      "markers": [],
+      "external_id": "34635"
+    },
+    {
+      "n": 3,
+      "title": "Sea Bishop: Part 1",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34636/original.jpg",
+      "synopsis": "The Medicine Seller takes a journey on a merchant's luxurious ship, but before long the craft is diverted into the Dragon's Triangle, an area of the sea infested with ghosts.",
+      "airdate": "2007-07-27",
+      "markers": [],
+      "external_id": "34636"
+    },
+    {
+      "n": 4,
+      "title": "Sea Bishop: Part 2",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34637/original.jpg",
+      "synopsis": "The Medicine Seller tries to find out who diverted the ship and why, as the crew is terrorised by a ghost who forces them to reveal their deepest fears.",
+      "airdate": "2007-08-03",
+      "markers": [],
+      "external_id": "34637"
+    },
+    {
+      "n": 5,
+      "title": "Sea Bishop: Finale",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34638/original.jpg",
+      "synopsis": "Genkei the monk explains what happened to him when he was younger as the Medicine Seller inspects the submerged craft thrown up by the seamonster.",
+      "airdate": "2007-08-10",
+      "markers": [],
+      "external_id": "34638"
+    },
+    {
+      "n": 6,
+      "title": "Faceless Monster: Part 1",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34639/original.jpg",
+      "synopsis": "Trapped in jail, a woman named Ochou confesses to the murder of her husband and his family. The Medicine Seller has reason to doubt this and visits her, coming across a creature with thousands of faces.",
+      "airdate": "2007-08-17",
+      "markers": [],
+      "external_id": "34639"
+    },
+    {
+      "n": 7,
+      "title": "Faceless Monster: Part 2",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34640/original.jpg",
+      "synopsis": "The Medicine Seller unmasks the masked creature while revealing the life of Ochou, the enslaved housewife.",
+      "airdate": "2007-08-24",
+      "markers": [],
+      "external_id": "34640"
+    },
+    {
+      "n": 8,
+      "title": "Japanese Chimera: Part 1",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34641/original.jpg",
+      "synopsis": "Four men should have turned up to the house of Lady Ruri in a bid to win her hand in marriage. However, one of them has disappeared, so the Medicine Seller takes his place in the traditional incense competition taking place.",
+      "airdate": "2007-08-31",
+      "markers": [],
+      "external_id": "34641"
+    },
+    {
+      "n": 9,
+      "title": "Japanese Chimera: Part 2",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34642/original.jpg",
+      "synopsis": "The Medicine Seller takes over the responsibility of refereeing the incense competition while prying into the real reason these three men have gathered here - the Toudaiji.",
+      "airdate": "2007-09-07",
+      "markers": [],
+      "external_id": "34642"
+    },
+    {
+      "n": 10,
+      "title": "Goblin Cat: Part 1",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34643/original.jpg",
+      "synopsis": "Skipping ahead a few centuries, the Medicine Seller boards a train filled with seemingly unrelated people, and before long find themselves trapped in limbo.",
+      "airdate": "2007-09-14",
+      "markers": [],
+      "external_id": "34643"
+    },
+    {
+      "n": 11,
+      "title": "Goblin Cat: Part 2",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34644/original.jpg",
+      "synopsis": "Unable to leave the train under threat of death, the passengers reveal what they know about an event that affected them all.",
+      "airdate": "2007-09-21",
+      "markers": [],
+      "external_id": "34644"
+    },
+    {
+      "n": 12,
+      "title": "Goblin Cat: Finale",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34645/original.jpg",
+      "synopsis": "The Medicine Seller unravels the mystery and finds the truth behind the passenger's stories.",
+      "airdate": "2007-09-28",
+      "markers": [],
+      "external_id": "34645"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Katsubō (渇望)",
+      "artist": "AiNA THE END",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Love Sick",
+      "artist": "Aina The End",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kagen no Tsuki",
+      "artist": "Ryōta Komatsu and Charlie Kōsei",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Natsu no Hana",
+      "artist": "JUJU",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

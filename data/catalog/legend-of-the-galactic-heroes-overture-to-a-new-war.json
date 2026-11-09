@@ -1,0 +1,190 @@
+{
+  "id": "legend-of-the-galactic-heroes-overture-to-a-new-war",
+  "title": "Legend of the Galactic Heroes: Overture to a New War",
+  "native": "銀河英雄伝説外伝　新たなる戦いの序曲[オーヴァチュア]",
+  "year": 1993,
+  "rating": 7.8,
+  "season": "Fall 1993",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx3016-ubCyMga7qCq6.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx3016-ubCyMga7qCq6.png",
+  "accent": "#d61a1a",
+  "synopsis": "Led by Reinhard von Müsel, the Galactic Empire crushes the Free Planets Alliance in the Fourth Battle of Tiamat. Arriving in the Imperial capital of Odin to a hero's welcome, Reinhard's victory earns him a promotion to High Admiral and the distinguished title of Count von Lohengramm. On the other side, Yang Wen-li safely returns to the Alliance capital of Heinessen without fanfare and reunites with his dear friends.\n\nReinhard and Yang look forward to a long-awaited reprieve. However, at the request of the scheming Duke Otho von Braunschweig, the Imperial High Command orders the new High Admiral to invade the Alliance with a fleet of twenty thousand ships. After the Duke leaks the plan to the Alliance government, three fleets totalling forty thousand ships are sent to counter the incoming attack and recreate the famous Battle of Dagon. But even though Reinhard is outnumbered two to one, he has an ingenious plan—and Yang sees right through it. Will Yang's superiors heed his warning before it is too late?\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "legend-of-the-galactic-heroes:-overture-to-a-new-war-v4v0mp",
+    "mal": 3016,
+    "anilist": 3016,
+    "kitsu": 2726
+  },
+  "skip_key_id": 3016,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "legend of the galactic heroes overture to a new war 銀河英雄伝説外伝 新たなる戦いの序曲 オーウ ァチュア movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Legend of the Galactic Heroes: Overture to a New War (Movie)",
+      "runtime": "90:00",
+      "runtime_seconds": 5400,
+      "thumb": "https://animehot.cc/storage/media/2026/09/69557003794ba63d7b41ffea-landscape.webp",
+      "synopsis": "Led by Reinhard von Müsel, the Galactic Empire crushes the Free Planets Alliance in the Fourth Battle of Tiamat. Arriving in the Imperial capital of Odin to a hero's welcome, Reinhard's victory earns him a promotion to High Admiral and the distinguished title of Count von Lohengramm. On the other side, Yang Wen-li safely returns to the Alliance capital of Heinessen without fanfare and reunites with his dear friends.\n\nReinhard and Yang look forward to a long-awaited reprieve. However, at the request of the scheming Duke Otho von Braunschweig, the Imperial High Command orders the new High Admiral to invade the Alliance with a fleet of twenty thousand ships. After the Duke leaks the plan to the Alliance government, three fleets totalling forty thousand ships are sent to counter the incoming attack and recreate the famous Battle of Dagon. But even though Reinhard is outnumbered two to one, he has an ingenious plan—and Yang sees right through it. Will Yang's superiors heed his warning before it is too late?",
+      "airdate": null,
+      "markers": [],
+      "external_id": "46400"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "dust",
+      "artist": "SennaRin",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "dust",
+      "artist": "SennaRin",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "melt",
+      "artist": "SennaRin",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Binary Star",
+      "artist": "SawanoHiroyuki[nZk]:Uru",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tranquility",
+      "artist": "SawanoHiroyuki[nZk]:Anly",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Binary Star",
+      "artist": "SawanoHiroyuki[nZk] with Uru",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Wish",
+      "artist": "ELISA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kid",
+      "artist": "AKEMI",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Skies of Love",
+      "artist": "Michiru Akiyoshi",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hikari no Hashi o Koete (光の橋を越えて)",
+      "artist": "Kei Ogura",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "CRY",
+      "artist": "SawanoHiroyuki[nZk]:mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hikari no Hoshi (光の星)",
+      "artist": "ELISA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "I Am Waiting for You",
+      "artist": "Michiru Akiyoshi",
+      "episodes": "27-54"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Tabidachi no Jokyoku (旅立ちの序曲)",
+      "artist": "Kei Ogura",
+      "episodes": "27-54"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Bolero",
+      "artist": "Ravel [final battle theme-song]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Sea of the Stars",
+      "artist": "LISA",
+      "episodes": "55-86"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Kansō no Uta (歓送の歌)",
+      "artist": "Kei Ogura",
+      "episodes": "55-86"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Must Be Something",
+      "artist": "Hitomi Konno",
+      "episodes": "87-110"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Uchū no Kakehashi (宇宙の掛け橋)",
+      "artist": "Kei Ogura",
+      "episodes": "87-110"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,100 @@
+{
+  "id": "my-next-life-as-a-villainess-all-routes-lead-to-doom-movie",
+  "title": "My Next Life as a Villainess: All Routes Lead to Doom! Movie",
+  "native": "映画 乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…",
+  "year": 2023,
+  "rating": 7.2,
+  "season": "Fall 2023",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx139359-JiHbeMddI3mx.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139359-JiHbeMddI3mx.jpg",
+  "accent": "#e4865d",
+  "synopsis": "After Katarina avoids her own death flag, she and her friends run into a mysterious young man traveling with a caravan. Who is this young man and what does he want?",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "my-next-life-as-a-villainess:-all-routes-lead-to-doom!-movie-v2ly4g",
+    "mal": 49842,
+    "anilist": 139359,
+    "kitsu": 45213
+  },
+  "skip_key_id": 49842,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "my next life as a villainess all routes lead to doom movie 映画 乙女ケ ームの破滅フラク しかない悪役令嬢に転生してしまった movie finished",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "My Next Life as a Villainess: All Routes Lead to Doom! Movie (Movie)",
+      "runtime": "90:00",
+      "runtime_seconds": 5400,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a93d1a096ab6f1200073c41-landscape.jpg",
+      "synopsis": "After Katarina avoids her own death flag, she and her friends run into a mysterious young man traveling with a caravan. Who is this young man and what does he want?",
+      "airdate": null,
+      "markers": [],
+      "external_id": "311282"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Andante ni Koi o Shite!",
+      "artist": "angela",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Andante ni Koi o Shite!",
+      "artist": "angela",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shōjo no Route wa Hitotsu Janai! (The Girl's Routes Are Not Only One)",
+      "artist": "angela",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bad End",
+      "artist": "Shouta Aoi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "give me ♡ me",
+      "artist": "Shouta Aoi",
+      "episodes": "2-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Shōjo no Route wa Hitotsu Janai! (The Girl's Routes Are Not Only One)",
+      "artist": "angela",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,129 @@
+{
+  "id": "mission-yozakura-family-season-2",
+  "title": "Mission: Yozakura Family Season 2",
+  "native": "夜桜さんちの大作戦 第2期",
+  "year": 2026,
+  "rating": 7.6,
+  "season": "Spring 2026",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx182578-Te8W0EwesgrS.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx182578-Te8W0EwesgrS.jpg",
+  "accent": "#50d6e4",
+  "synopsis": "Taiyou Asano has settled into his career, having married into the Yozakura spy family. While he still struggles to control the powers granted to him by his wife, Mutsumi Yozakura, Taiyou works hard to complete missions alongside his new siblings. After taking down the organization Tanpopo, Taiyou and the Yozakuras agree to look after six-year-old Ai, one of Tanpopo's test subjects.\n\nHowever, Taiyou's health soon begins to decline due to the Yozakura blood within his body. He dreams that the first head of the family, Tsubomi Yozakura, gives him a new mission: to kill her. To that end, he will have to learn more about his new family, become a silver-ranked spy, and push himself even more to succeed and continue protecting his family.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "mission:-yozakura-family-season-2-hnrdnq",
+    "mal": 60055,
+    "anilist": 182578,
+    "kitsu": 49269
+  },
+  "skip_key_id": 60055,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "mission yozakura family season 2 夜桜さんちの大作戦 第2期 tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "romance"
+  ],
+  "episodes": [],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Forever Song (フォーエバーソング)",
+      "artist": "Humbreaders",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I'm still breathing",
+      "artist": "KID PHENOMENON",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "What's 'KAZOKU'",
+      "artist": "Sakurazaka46",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shalala",
+      "artist": "Pilaf Seijin",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Unmei-chan (Fate)",
+      "artist": "Ikimono-gakari",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "fam!",
+      "artist": "CHiCO",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "E☆Secrets (E☆シークレッツ)",
+      "artist": "ZOOM FLICKER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Feel so Easy!",
+      "artist": "Momoi Haruko",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Secret Operation",
+      "artist": "fripSide feat. Yoshino Nanjo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kekkon Koushinkyoku",
+      "artist": "ASOBI Doumei",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Feel so Easy! ビリビリver.",
+      "artist": "Momoi, Haruko",
+      "episodes": "3,4,5,8,10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Kimi kara no Kiseki (きみからの奇跡)",
+      "artist": "Inamura, Yuna",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

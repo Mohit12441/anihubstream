@@ -1,0 +1,607 @@
+{
+  "id": "my-hero-academia-season-6",
+  "title": "My Hero Academia Season 6",
+  "native": "僕のヒーローアカデミア６",
+  "year": 2022,
+  "rating": 8.2,
+  "season": "Fall 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx139630-3v4gxWtNZxLV.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139630-3v4gxWtNZxLV.jpg",
+  "accent": "#f16b0d",
+  "synopsis": "With Tomura Shigaraki at its helm, the former Liberation Army is now known as the Paranormal Liberation Front. This organized criminal group poses an immense threat to the Hero Association, not only because of its sheer size and strength, but also the overpowering quirks of Jin \"Twice\" Bubaigawara and Gigantomachia.\n\nAs new intel from the covert hero Keigo \"Hawks\" Takami confirms that Shigaraki is nowhere to be seen, the Hero Association decides to strike the enemy headquarters with a surprise attack using the entirety of its assets—and the UA students find themselves on the battlefield once again. As the fight rages on, the unsuspecting villains must regroup and push back, but the brave heroes are determined to eradicate every last one of them.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "my-hero-academia-season-6-f1a1cq",
+    "mal": 49918,
+    "anilist": 139630,
+    "kitsu": 45240
+  },
+  "skip_key_id": 49918,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": null,
+  "search_text": "my hero academia season 6 僕のヒーローアカテ ミア6 tv finished",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A Quiet Beginning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311423/thumbnail/e6fd9ffe5490cd7006a911c11addaac1.jpg",
+      "synopsis": "Using the information Hawks gathered, the heroes and their work-study students get ready for an attack on the Paranormal Liberation Front led by Shigaraki.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-10-01",
+      "markers": [],
+      "external_id": "311423"
+    },
+    {
+      "n": 2,
+      "title": "Mirko, the No.5 Hero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311424/thumbnail/90ee7a57c687886fd389baea026aaafe.jpg",
+      "synopsis": "Mirko chases after Garaki while the rest of Team Endeavor deals with Nomus at Jaku Hospital. Meanwhile, Team Edge Shot charges in for a surprise attack at Gunga Villa.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-10-08",
+      "markers": [],
+      "external_id": "311424"
+    },
+    {
+      "n": 3,
+      "title": "One's Justice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311425/thumbnail/267874d89dbfd6811026a73684940a93.jpg",
+      "synopsis": "Inside Gunga Villa, the Paranormal Liberation Front realizes that they are under attack, and Twice confronts Hawks about his betrayal.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-10-15",
+      "markers": [],
+      "external_id": "311425"
+    },
+    {
+      "n": 4,
+      "title": "Inheritance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311426/thumbnail/73be77e56c6ba80d932ac25b0e047471.jpg",
+      "synopsis": "Hawks's confrontation with Dabi leads him to think back on his past. Meanwhile, at the hospital, Mirko fights her way through multiple High Ends to get to Doctor and Shigaraki.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-10-22",
+      "markers": [],
+      "external_id": "311426"
+    },
+    {
+      "n": 5,
+      "title": "The Thrill of Destruction",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311427/thumbnail/9661d905a7617f0d9d88addfc4a83130.jpg",
+      "synopsis": "After reinforcements finally arrive, the tide is just starting to turn in the heroes' favor when Shigaraki wakes up.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-10-29",
+      "markers": [],
+      "external_id": "311427"
+    },
+    {
+      "n": 6,
+      "title": "Encounter, Part 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311428/thumbnail/9e00dfd5462c06523490ee47de308965.jpg",
+      "synopsis": "As Endeavor tells his team that he's fighting Shigaraki, Midoriya realizes that Shigaraki is after One For All and uses himself as bait to try to lure Shigaraki away from the civilians.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-11-05",
+      "markers": [],
+      "external_id": "311428"
+    },
+    {
+      "n": 7,
+      "title": "Disaster Walker",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311429/thumbnail/01b896dbad6e6194b63a0ff84da047a3.jpg",
+      "synopsis": "Team Endeavor is up against Shigaraki while Gigantomachia breaks through the heroes surrounding Gunga Villa and is headed toward Team Edge Shot's rear guard.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-11-12",
+      "markers": [],
+      "external_id": "311429"
+    },
+    {
+      "n": 8,
+      "title": "League of Villains vs. U.A. Students",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311430/thumbnail/b0ac8068654b7579d9a492c491184d1d.jpg",
+      "synopsis": "Led by Yaoyoruzu, the U.A. Class 1-A and 1-B work-study students take on Gigantomachia as he heads their way with the League of Villains on his back!\n\n(Source: Crunchyroll)",
+      "airdate": "2022-11-19",
+      "markers": [],
+      "external_id": "311430"
+    },
+    {
+      "n": 9,
+      "title": "Katsuki Bakugo: Rising",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311431/thumbnail/92d5150a3dfe000e9a235df4e7ca820e.jpg",
+      "synopsis": "As Midoriya goes up against Shigaraki, Bakugo remembers a conversation he had with All Might when he was helping Midoriya train.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-11-26",
+      "markers": [],
+      "external_id": "311431"
+    },
+    {
+      "n": 10,
+      "title": "The Ones Within Us",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311432/thumbnail/f1cd67c48be060fd0748fb75ee8f700b.jpg",
+      "synopsis": "Midoriya and Shigaraki enter the world of One For All as Gigantomachia continues north and Toga makes a detour.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-12-03",
+      "markers": [],
+      "external_id": "311432"
+    },
+    {
+      "n": 11,
+      "title": "Dabi's Dance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311433/thumbnail/a86c40b629bb3a5c4fe0530d5d5a8886.jpg",
+      "synopsis": "As Ochaco and Toga exchange words and blows, Gigantomachia reaches Shigaraki and the heroes, and Dabi reveals the secret of his past. \n\n(Source: Crunchyroll)",
+      "airdate": "2022-12-10",
+      "markers": [],
+      "external_id": "311433"
+    },
+    {
+      "n": 12,
+      "title": "Threads of Hope",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311434/thumbnail/9de9fcec8925127993d740de6131ff61.jpg",
+      "synopsis": "Best Jeanist appears and spins together the hopes of all the heroes in this fight as the climax of the all-out war draws near.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-12-17",
+      "markers": [],
+      "external_id": "311434"
+    },
+    {
+      "n": 13,
+      "title": "Final Performance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311435/thumbnail/f8e7048a50100bc00891c7b23c56e385.jpg",
+      "synopsis": "Thinking of his great-great-grandfather, Mr. Compress performs his greatest trick in order to save the League of Villains.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-12-24",
+      "markers": [],
+      "external_id": "311435"
+    },
+    {
+      "n": 14,
+      "title": "Hellish Hell",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311436/thumbnail/2c0298c5dcfbf76556923425b44f068e.jpg",
+      "synopsis": "The heroes wrestle with changing public opinion as they deal with the aftermath of the fierce battle and mourn those they lost in the fight.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-01-07",
+      "markers": [],
+      "external_id": "311436"
+    },
+    {
+      "n": 15,
+      "title": "Tartarus",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311437/thumbnail/fda5e1a201ed8a4bd1951d487dd57b70.jpg",
+      "synopsis": "Under All For One's control, Shigaraki attacks Tartarus with the Nomus to free All For One's body, freeing many other prisoners in the process.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-01-14",
+      "markers": [],
+      "external_id": "311437"
+    },
+    {
+      "n": 16,
+      "title": "The Hellish Todoroki Family, Part 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311438/thumbnail/4952ea76720f7669b0ff8767b87085fa.jpg",
+      "synopsis": "As heroes deal with criticism from the public, Hawks thinks back on his past with his family, and Endeavor's family visits him in the hospital.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-01-21",
+      "markers": [],
+      "external_id": "311438"
+    },
+    {
+      "n": 17,
+      "title": "The Wrong Way to Put Out a Fire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311439/thumbnail/23c96727afd9a2ae5d1882fbbd92b47b.jpg",
+      "synopsis": "Endeavor and his family reflect on Toya's past and the events that led to his death, and Hawks and Best Jeanist bring them a proposition.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-01-28",
+      "markers": [],
+      "external_id": "311439"
+    },
+    {
+      "n": 18,
+      "title": "Izuku Midoriya and Tomura Shigaraki",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311440/thumbnail/987ae680cbee8e2a07bbba769e61ca96.jpg",
+      "synopsis": "Inside One For All, Izuku talks with the past wielders as the top three heroes deal with public sentiment after Dabi's revelation.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-02-04",
+      "markers": [],
+      "external_id": "311440"
+    },
+    {
+      "n": 19,
+      "title": "Full Power!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311441/thumbnail/031c50a364ba4bd021d690361a2223c9.jpg",
+      "synopsis": "After Izuku decides not to go back to U.A., he finds himself facing Muscular, who was broken out of jail, again and uses the Quirks of the past wielders against him.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-02-11",
+      "markers": [],
+      "external_id": "311441"
+    },
+    {
+      "n": 20,
+      "title": "Hired Gun",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311442/thumbnail/fd45b54db163a50fd6bf5ad565bb0428.jpg",
+      "synopsis": "The top three heroes continue to face criticism as they deal with jailbreakers and look for hints about All For One and Shigaraki's whereabouts, and Izuku comes across a villain from Tartarus.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-02-18",
+      "markers": [],
+      "external_id": "311442"
+    },
+    {
+      "n": 21,
+      "title": "The Lovely Lady Nagant",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311443/thumbnail/f494ff987c3e7495c31a18c1d12d112a.jpg",
+      "synopsis": "During Izuku's fight with Lady Nagant, she tells him secrets about hero society that further solidify his resolve to help those who need his help.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-02-25",
+      "markers": [],
+      "external_id": "311443"
+    },
+    {
+      "n": 22,
+      "title": "Friend",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311444/thumbnail/804a6b2e76c448671c16d03385eb3afe.jpg",
+      "synopsis": "As Izuku goes off alone in his quest for justice, his classmates realize something is wrong and try to find a way to help him.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-03-04",
+      "markers": [],
+      "external_id": "311444"
+    },
+    {
+      "n": 23,
+      "title": "Deku vs. Class A",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311445/thumbnail/198b668fa1cced354e0bd922fa941e17.jpg",
+      "synopsis": "As Deku tries to run away, Class A draws him back by recounting their memories with him and reminding him of his own words.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-03-11",
+      "markers": [],
+      "external_id": "311445"
+    },
+    {
+      "n": 24,
+      "title": "A Young Woman's Declaration",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311446/thumbnail/107975dda46bb68bc2afa6afe0b852d1.jpg",
+      "synopsis": "As the evacuees at U.A. voice their dissent, Ochaco speaks up to try and sway them. Onlookers with ties to Izuku try to figure out if it's time for them to speak out, too.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-03-18",
+      "markers": [],
+      "external_id": "311446"
+    },
+    {
+      "n": 25,
+      "title": "No Man Is an Island",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311447/thumbnail/d4dfbc47b92a58abc13c8c318a67bfee.jpg",
+      "synopsis": "As Izuku tries to rest and recover back at U.A. with his classmates, All Might has an encounter with Stain that leads to new information about Shigaraki and All For One.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-03-25",
+      "markers": [],
+      "external_id": "311447"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE REVO",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I",
+      "artist": "BUMP OF CHICKEN",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Homunculus",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gift",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE DAY",
+      "artist": "Porno Graffitti",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tagatame (誰我為)",
+      "artist": "TK from Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubomi (蕾)",
+      "artist": "Omoinotake",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "SKETCH",
+      "artist": "Kiro Akiyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Empathy",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "No.1",
+      "artist": "DISH//",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ashiato (足跡)",
+      "artist": "the peggies",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Higher Ground",
+      "artist": "sumika",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Polaris",
+      "artist": "BLUE ENCOUNT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Koukai no Uta",
+      "artist": "Sayuri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Long Hope Philia (ロングホープ・フィリア)",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Odd Future",
+      "artist": "UVERworld",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Update",
+      "artist": "miwa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dakara, Hitori ja nai (だから、ひとりじゃない)",
+      "artist": "Little Glee Monster",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Day",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Curtain Call",
+      "artist": "Yūri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rokutousei (六等星)",
+      "artist": "Zarame",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Bokura no",
+      "artist": "Eve",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Uso ja nai (嘘じゃない)",
+      "artist": "Soushi Sakiyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Starmarker",
+      "artist": "KANA-BOON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Make my story",
+      "artist": "Lenny Code Fiction",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Sora ni Utaeba (空に歌えば)",
+      "artist": "Amazarashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Datte Atashi no Hero (だってアタシのヒーロー.)",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": "4"
+    }
+  ],
+  "relations": []
+}

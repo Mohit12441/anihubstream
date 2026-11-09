@@ -1,0 +1,70 @@
+{
+  "id": "jujutsu-kaisen-0",
+  "title": "JUJUTSU KAISEN 0",
+  "native": "呪術廻戦 0",
+  "year": 2021,
+  "rating": 8.3,
+  "season": "Fall 2021",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx131573-rpl82vDEDRm6.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx131573-rpl82vDEDRm6.jpg",
+  "accent": "#f1c95d",
+  "synopsis": "Yuta Okkotsu is a nervous high school student who is suffering from a serious problem—his childhood friend Rika has turned into a curse and won't leave him alone. Since Rika is no ordinary curse, his plight is noticed by Satoru Gojo, a teacher at Jujutsu High, a school where fledgling exorcists learn how to combat curses. Gojo convinces Yuta to enroll, but can he learn enough in time to confront the curse that haunts him?\n\n(Source: VIZ Media)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "jujutsu-kaisen-0-hzpgoy",
+    "mal": 48561,
+    "anilist": 131573,
+    "kitsu": 44212
+  },
+  "skip_key_id": 48561,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "jujutsu kaisen 0 呪術廻戦 0 movie finished",
+  "genres": [
+    "action",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Jujutsu Kaisen 0 (Movie)",
+      "runtime": "105:00",
+      "runtime_seconds": 6300,
+      "thumb": "https://animehot.cc/storage/media/2026/09/693009b2258775f6b990b07c-landscape.webp",
+      "synopsis": "Violent misfortunes frequently occur around 16-year-old Yuuta Okkotsu, a timid victim of high school bullying. Yuuta is saddled with a monstrous curse, a power that dishes out brutal revenge against his bullies. Rika Orimoto, Yuuta's curse, is a shadow from his tragic childhood and a potentially lethal threat to anyone who dares wrong him.\n\nYuuta's unique situation catches the attention of Satoru Gojou, a powerful sorcerer who teaches at Tokyo Prefectural Jujutsu High School. Gojou sees immense potential in Yuuta, and he hopes to help the boy channel his deadly burden into a force for good. Yet Yuuta struggles to find his place among his talented classmates: the selectively mute Toge Inumaki, weapons expert Maki Zenin, and Panda.\n\nYuuta clumsily utilizes Rika on missions with the other first-year students, but the grisly aftermath of Rika's tremendous displays of power draws the interest of the calculating curse user Suguru Getou. As Getou strives to claim Rika's strength and use it to eliminate all non-jujutsu users from the world, Yuuta fights alongside his friends to stop the genocidal plot.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "298550"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ichizu",
+      "artist": "King Gnu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sakayume",
+      "artist": "King Gnu",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

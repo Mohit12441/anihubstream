@@ -1,0 +1,344 @@
+{
+  "id": "love-live-superstar",
+  "title": "Love Live! Superstar!!",
+  "native": "ラブライブ!スーパースター!!",
+  "year": 2021,
+  "rating": 7.8,
+  "season": "Summer 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx114979-H9anmAB2Z7uo.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114979-H9anmAB2Z7uo.jpg",
+  "accent": "#febb50",
+  "synopsis": "Tokyo’s brand-new Yuigaoka Girls’ High School has no history, no upperclassmen, and no reputation—its first students are starting from scratch! A team of five girls led by Kanon Shibuya discover school idols, and their hopes to do something with singing begin to grow. They begin the “School Idol Project” with a blank slate and infinite potential. It’s time for their Love Live to take flight!\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "love-live!-superstar!!-k36icq",
+    "mal": 41169,
+    "anilist": 114979,
+    "kitsu": 44124
+  },
+  "skip_key_id": 41169,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "love live superstar ラフ ライフ スーハ ースター tv finished",
+  "genres": [
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Path I've Chosen",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/29d2cfec7e77b7f2d73e825550bdad3d1728345899_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306289"
+    },
+    {
+      "n": 2,
+      "title": "Tomakanote",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/504fbf31d2b7eee4d079267d0379a3cc1728934568_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306290"
+    },
+    {
+      "n": 3,
+      "title": "The White-Colored Center",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d8d966f8cd5b9d9d7a93a3bc1b3c8c9e1729545482_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306291"
+    },
+    {
+      "n": 4,
+      "title": "No Rain, No Rainbow",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/dc9f8318cca6c2f54d09e7cee416c8ed1730138856_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306292"
+    },
+    {
+      "n": 5,
+      "title": "Ni hao! Shanghai! Xiaolongbao!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/869b87865607eeaf03503590057205d11730757876_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306293"
+    },
+    {
+      "n": 6,
+      "title": "Treasure",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/7e1e006db25ce481a77dadec6c2060e61731368323_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306294"
+    },
+    {
+      "n": 7,
+      "title": "In Order to Win Against Liella!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/114357c9650b1b68b6161446e1ba3cc11731960011_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306295"
+    },
+    {
+      "n": 8,
+      "title": "Yuigaoka VS Yuigaoka",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a5eec11422c37d3e37ca492bacfe34771732570585_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306296"
+    },
+    {
+      "n": 9,
+      "title": "Salzburger Nockerl",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/8f6009283f21e5610e06fa1d98412fd01733170719_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306297"
+    },
+    {
+      "n": 10,
+      "title": "Kinako Sakurakoji",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/acc2f8a733a5f84738ab676b0314f4651733772002_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306298"
+    },
+    {
+      "n": 11,
+      "title": "Superstar!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/be27caa6bab23e555c9a5aef92f8f1641734377735_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306299"
+    },
+    {
+      "n": 12,
+      "title": "Forever and Ever!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/50b893c021eb6537e18d3d9de312f0361734976473_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306300"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Let's be ONE",
+      "artist": "Liella!",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "DAISUKI FULL POWER",
+      "artist": "Liella!",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "WE WILL!!",
+      "artist": "Liella!",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Oikakeru Yume no Saki de (追いかける夢の先で)",
+      "artist": "Nozomi Suzuhara",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "START!! True dreams",
+      "artist": "Liella!",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai wa Kaze no You ni",
+      "artist": "Liella!",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai wa Kaze no You ni",
+      "artist": "Liyuu and Naomi Payton",
+      "episodes": "10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai wa Kaze no You ni",
+      "artist": "Liyuu, Naomi Payton, Nako Misaki and Nagisa Aoyama",
+      "episodes": "9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai wa Kaze no You ni",
+      "artist": "Nagisa Aoyama",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai wa Kaze no You ni",
+      "artist": "Nako Misaki",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai wa Kaze no You ni",
+      "artist": "Naomi Payton",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai wa Kaze no You ni",
+      "artist": "Sayuri Date",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai wa Kaze no You ni",
+      "artist": "Sayuri Date and Liyuu",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai wa Kaze no You ni",
+      "artist": "Sayuri Date, Liyuu, Naomi Payton and Nako Misaki",
+      "episodes": "6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Oikakeru Yume no Saki de (追いかける夢の先で)",
+      "artist": "Sayuri Date, Naomi Payton, Nagisa Aoyama, Liyuu, Nako Misaki, Nozomi Suzuhara",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Oikakeru Yume no Saki de (追いかける夢の先で)",
+      "artist": "Akane Yabushima, Wakana Ōkuma",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Oikakeru Yume no Saki de (追いかける夢の先で)",
+      "artist": "Aya Emori",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Oikakeru Yume no Saki de (追いかける夢の先で)",
+      "artist": "Sayuri Date, Liyuu, Nako Misaki, Naomi Payton, Nagisa Aoyama, Nozomi Suzuhara, Akane Yabushima, Wakana Ōkuma, Aya Emori",
+      "episodes": "6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Oikakeru Yume no Saki de (追いかける夢の先で)",
+      "artist": "Nagisa Aoyama",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Oikakeru Yume no Saki de (追いかける夢の先で)",
+      "artist": "Nozomi Suzuhara, Akane Yabushima, Wakana Ōkuma, Aya Emori",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Oikakeru Yume no Saki de (追いかける夢の先で)",
+      "artist": "Liyuu, Naomi Payton",
+      "episodes": "9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Oikakeru Yume no Saki de (追いかける夢の先で)",
+      "artist": "Liella!",
+      "episodes": "10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "Oikakeru Yume no Saki de (追いかける夢の先で)",
+      "artist": "Sayuri Date",
+      "episodes": "11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "Oikakeru Yume no Saki de (追いかける夢の先で)",
+      "artist": "Sayuri Date, Liyuu, Nako Misaki, Naomi Payton, Nagisa Aoyama, Nozomi Suzuhara, Akane Yabushima, Wakana Ōkuma, Aya Emori",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

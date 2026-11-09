@@ -1,0 +1,67 @@
+{
+  "id": "monster-musume-everyday-life-with-monster-girls-ova",
+  "title": "Monster Musume: Everyday Life With Monster Girls OVA",
+  "native": "モンスター娘のいる日常SP",
+  "year": 2016,
+  "rating": 6.8,
+  "season": "Year 2016",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21650-qFjRMXrw1jku.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21650-qFjRMXrw1jku.jpg",
+  "accent": "#ff1f4a",
+  "synopsis": "Bundled with the 11th and 12th volumes of the manga.\n\n\n\nThe OVA adapts the manga's chapter 17 from the fourth volume, where Miia, Cerea, Mero, and Kurusu go to the gym's pool.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "monster-musume:-everyday-life-with-monster-girls-ova-7msrza",
+    "mal": 32698,
+    "anilist": 21650,
+    "kitsu": 11836
+  },
+  "skip_key_id": 32698,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "monster musume everyday life with monster girls ova モンスター娘のいる日常sp",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Gym de Pool na Nichijou",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "2016-11-12",
+      "markers": [],
+      "external_id": "182205"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190655"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,220 @@
+{
+  "id": "my-happy-marriage",
+  "title": "My Happy Marriage",
+  "native": "わたしの幸せな結婚",
+  "year": 2023,
+  "rating": 7.6,
+  "season": "Summer 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx147103-Om2LOXlhHNAe.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx147103-Om2LOXlhHNAe.png",
+  "accent": "#e4d6a1",
+  "synopsis": "Despite being born into a noble family, Miyo lost her birth mother at a young age and grew up being abused by her stepmother, stepsister, and father.\n\nWhen she finally receives news that she's to be married off, she finds out that her husband-to-be is Kiyoka, a soldier with a reputation for being cruel and heartless. In fact, he's had numerous previous fiancées who have all fled his household; none lasting even a mere three days. \n\n Resigned to the fact that her family had abandoned her, Miyo knocks on the gate of the Kudou household to find herself greeted by a beautiful man with pale skin. Despite the poor treatment she receives from her husband-to-be during their first meeting, Miyo is unable to return to her old home and spends her time cooking and doing chores. However, as the days pass, Miyo and Kiyoka being to slowly open their hearts to each other... \n\n(Source: KADOKAWA, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "my-happy-marriage-zeah6i",
+    "mal": 51552,
+    "anilist": 147103,
+    "kitsu": 46050
+  },
+  "skip_key_id": 51552,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "my happy marriage わたしの幸せな結婚 tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Meeting",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/330708/thumbnail/fc7f8333b08622a77b4d69c006bffb07.jpg",
+      "synopsis": "Despised by her stepmother and sister, Miyo is treated like a servant in her own home; one day, her father calls her in to discuss her future.\n\n(Source: Netflix)",
+      "airdate": "2023-07-05",
+      "markers": [],
+      "external_id": "330708"
+    },
+    {
+      "n": 2,
+      "title": "About My Husband-To-Be",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/330709/thumbnail/e02cfb56bcce513d751d4d38dc74164a.jpg",
+      "synopsis": "Determined to be of use, Miyo wakes up early and prepares breakfast, but Kiyoka accuses her of trying to poison him and refuses to take a bite.\n\n(Source: Netflix)",
+      "airdate": "2023-07-12",
+      "markers": [],
+      "external_id": "330709"
+    },
+    {
+      "n": 3,
+      "title": "Our First Date",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/352941/thumbnail/c3b59a6b90c54106001fcb7745645b56.jpg",
+      "synopsis": "When Kiyoka takes Miyo out, he quickly notices that she behaves very differently from other wealthy daughters he's encountered.\n\n(Source: Netflix)",
+      "airdate": "2023-07-19",
+      "markers": [],
+      "external_id": "352941"
+    },
+    {
+      "n": 4,
+      "title": "The Gift",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/352942/thumbnail/7e928630cf4bce6cc68234933f4f1bb9.jpg",
+      "synopsis": "To surprise Kiyoka with a handmade gift, Miyo goes into town to shop for some material; meanwhile, Kiyoka pays Miyo's parents a visit.\n\n(Source: Netflix)",
+      "airdate": "2023-07-26",
+      "markers": [],
+      "external_id": "352942"
+    },
+    {
+      "n": 5,
+      "title": "Ripples",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/352943/thumbnail/ede1f5e14bb4957805712d7285281ad7.jpg",
+      "synopsis": "Overcome with jealousy, Kaya attempts to sabotage Miyo's engagement to Kiyoka; Miyo leaves the house without the good luck charm Kiyoka handed her.\n\n(Source: Netflix)",
+      "airdate": "2023-08-02",
+      "markers": [],
+      "external_id": "352943"
+    },
+    {
+      "n": 6,
+      "title": "Determination and Thunder",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/352944/thumbnail/09527bd8ed9d7571014ab18b4960aec9.jpg",
+      "synopsis": "Miyo wakes up to her sister and stepmother threatening her; together with Koji, Kiyoka arrives at the Saimori home and demands to see his fiancée.\n\n(Source: Netflix)",
+      "airdate": "2023-08-09",
+      "markers": [],
+      "external_id": "352944"
+    },
+    {
+      "n": 7,
+      "title": "Glamorous Lady of Summer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/352945/thumbnail/81d50e023b2726a4f9f57b723d765977.jpg",
+      "synopsis": "Kiyoka accompanies Miyo to the remains of the Saimori home at her request; later, a stunning visitor comes by their home.\n\n(Source: Netflix)",
+      "airdate": "2023-08-16",
+      "markers": [],
+      "external_id": "352945"
+    },
+    {
+      "n": 8,
+      "title": "Nightmares and Ominous Shadows",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/352946/thumbnail/322e718b41a1401d998f9e2d6ef70f7a.jpg",
+      "synopsis": "Hazuki and Miyo grow closer through their lessons; worried, Kiyoka tries to get to the bottom of Miyo's nightmares.\n\n(Source: Netflix)",
+      "airdate": "2023-08-23",
+      "markers": [],
+      "external_id": "352946"
+    },
+    {
+      "n": 9,
+      "title": "Drowning in Dreams",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/352947/thumbnail/851cb8f2cd3626f49a8937dc6d12271e.jpg",
+      "synopsis": "Though distressed by her nightmares, Miyo keeps pushing herself to be a supportive wife; Arata Tsuruki comes to speak to her while Kiyoka is away.\n\n(Source: Netflix)",
+      "airdate": "2023-08-30",
+      "markers": [],
+      "external_id": "352947"
+    },
+    {
+      "n": 10,
+      "title": "Summer Cherry Blossoms, and the Mistake",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/352948/thumbnail/6bbf777e627a417b8d0d732898f73538.jpg",
+      "synopsis": "Arata reveals his true identity and introduces Miyo to the grandfather she never knew; they claim they can cure her nightmares, on one condition.\n\n(Source: Netflix)",
+      "airdate": "2023-09-06",
+      "markers": [],
+      "external_id": "352948"
+    },
+    {
+      "n": 11,
+      "title": "My Mother's Legacy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/352949/thumbnail/e041fefd670f1836d5fd7f569cd3908c.jpg",
+      "synopsis": "Yoshiro Usuba talks with Miyo about how her mother came to marry her father and why she made a decision that changed Miyo's life forever.\n\n(Source: Netflix)",
+      "airdate": "2023-09-13",
+      "markers": [],
+      "external_id": "352949"
+    },
+    {
+      "n": 12,
+      "title": "Light in the Darkness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/352950/thumbnail/ca64e082f36482f1889867c47b0db3f7.jpg",
+      "synopsis": "Miyo's powers are everyone's last hope of waking Kiyoka from his unconscious state; however, before she can rescue him, she must face the shadow of her past.\n\n(Source: Netflix)",
+      "airdate": "2023-09-20",
+      "markers": [],
+      "external_id": "352950"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shiawase de Namida ga Deru no wa. (幸せで涙が出るのは。)",
+      "artist": "Riria.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Prelude no Temae ni: ~for me&you~ (プレリュードの手前に 〜for me&you〜)",
+      "artist": "Kashitarō Itō",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shiawase no Yakusoku (幸せな約束。)",
+      "artist": "Riria.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsukikage Okuri (月影おくり)",
+      "artist": "Kashitarō Itō",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Anata no Soba ni. (貴方の側に。)",
+      "artist": "Riria.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Vita Philosophica (ヰタ・フィロソフィカ)",
+      "artist": "Kashitarō Itō",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

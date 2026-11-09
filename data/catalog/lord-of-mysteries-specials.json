@@ -1,0 +1,80 @@
+{
+  "id": "lord-of-mysteries-specials",
+  "title": "Lord of Mysteries Specials",
+  "native": "诡秘之主 特别篇",
+  "year": 2026,
+  "rating": 8.6,
+  "season": "2026",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx199448-BuqzEdkuPSEm.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199448-BuqzEdkuPSEm.png",
+  "accent": "#e4a143",
+  "synopsis": "Special episodes of Lord of Mysteries, taking place in season 1. Covering important scenes skipped after the end credits in Episode 10, as included:\n\nCity of Silver (Episode 1): Above the undying gray fog, Klein Moretti, the enigmatic The Fool, presided over the Tarot Club when a new, distant prayer echoed through the mists. Reaching across the veil, he summoned Derrick Berg from the City of Silver—a cursed bastion trapped within the Forsaken Land of God. Through Derrick’s haunting tales, the grim history of this sunless city was unveiled. Seeking salvation for his people, Derrick pledged his soul to The Fool’s grace. From the twenty-two Major Arcana, he chose his mantle: \"The Sun.\"\n\nThe Marked Hunt (Episodes 2 and 3): The gathering then turned to matters of blood and ambition. \"The Hanged Man,\" Alger Wilson, proposed a high-stakes exchange. He sought the head of Qilangos, one of the infamous seven Pirate Admirals, and tasked \"Justice,\" Audrey Hall, with leveraging her noble influence in Backlund to hunt the wind-blessed killer.\n\nIn the foggy streets of the Loen capital, Audrey’s quest led her to the Beyonder duo, Fors Wall and Xio Derecha. As the web tightened around the Admiral, Klein sought the intervention of his mentor, the mysterious Mr. Azik. By weaving together the threads of divinity, ancient power, and mortal cunning, The Fool ensured the Tarot Club’s first great triumph: the fall of Qilangos.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "lord-of-mysteries-specials-z6zw25",
+    "mal": 62276,
+    "anilist": 199448,
+    "kitsu": 50455
+  },
+  "skip_key_id": 62276,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "lord of mysteries specials 诡秘之主 特别篇 ona finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "392507"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "392508"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "404272"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

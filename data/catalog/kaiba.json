@@ -1,0 +1,193 @@
+{
+  "id": "kaiba",
+  "title": "Kaiba",
+  "native": "カイバ",
+  "year": 2008,
+  "rating": 7.9,
+  "season": "Spring 2008",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx3701-ooD3N9dD2rqa.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx3701-ooD3N9dD2rqa.jpg",
+  "accent": "#ffd643",
+  "synopsis": "It is now possible to store memory data, so that the death of your body is not actually \"death\". As memories are stored in databanks, they can be \"transferred\" to new bodies. Because so-called \"memory trading\" now occurs, it is now possible to steal memories and illegally alter them.\n\nSociety has fallen apart as authority has become lost and stagnant.\n\nOne day, a man awakens in a ruined room. His name is Kaiba. He has no memories, but he does have a pendant with a picture of an unknown woman inside.\n\nIn the skies are roiling clouds and electrical storms, impossible to pass without losing one's memories; above them lies the elusive realm of the rich and powerful, who barter others' bodies and memories for their own enjoyment and longevity. Below lies a troubled and dangerous world where good bodies are hard to come by and real money is scarce.\n\nAfter suddenly being attacked, Kaiba escapes into space, and during his travels meets all sorts of people and regains his memories. Throughout it, he continues to be troubled by the world's problems, as well as his own existence. And what of the woman in the pendant, Neiro?",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kaiba-jt28t1",
+    "mal": 3701,
+    "anilist": 3701,
+    "kitsu": 3201
+  },
+  "skip_key_id": 3701,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "kaiba カイハ tv finished",
+  "genres": [
+    "adventure",
+    "mystery",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Your Name is Warp",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/54078/original.jpg",
+      "synopsis": "A young man awakens in a ruined room, when all of a sudden he is saved from being eaten. Having no memory of himself, he finds himself in a community of people, with a boy trying to find his brother who had his egg eaten by a Skonk. He later becomes acquainted with the person who saved him named Popo, who helps him escape into space.",
+      "airdate": "2008-04-11",
+      "markers": [],
+      "external_id": "54078"
+    },
+    {
+      "n": 2,
+      "title": "Stowaway",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/54079/original.jpg",
+      "synopsis": "Onboard the freight ship to Tehaisa, Kaiba is now a stowaway amongst the packages, when he gets acquainted with another stowaway named Kochu and her boyfriend Butter. Later on planet Lala one of the memory tanks explodes, causing the memories of 200,000 people to leak into the sky and the suspect is the same person in Kaiba's locket.",
+      "airdate": "2008-04-17",
+      "markers": [],
+      "external_id": "54079"
+    },
+    {
+      "n": 3,
+      "title": "Cronico's Boots",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/54080/original.jpg",
+      "synopsis": "After escaping the freight ship, Kaiba and his companion crash land onto a nearby planet and just when they are about to be discovered a young girl named Chroniko helps them. Chroniko tells Kaiba about how she is planning to sell her body to help her family, but the next day, something unexpected happens during the procedure. Kaiba later learns of the truth about Chroniko's family situation.",
+      "airdate": "2008-04-25",
+      "markers": [],
+      "external_id": "54080"
+    },
+    {
+      "n": 4,
+      "title": "The Room of Grandma's Memories",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/54081/original.jpg",
+      "synopsis": "On a strange small planet, Kaiba is in Chroniko's body, being followed by Vanilla. After losing Vanilla, in the hippo body, Kaiba is then drag off by some Grandma who fixes the scar on his hippo body. But soon some trouble arises and Kaiba is then forced to go inside Grandma's memories to look for the treasure.",
+      "airdate": "2008-05-02",
+      "markers": [],
+      "external_id": "54081"
+    },
+    {
+      "n": 5,
+      "title": "Abipa, the Promised Planet",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/54082/original.jpg",
+      "synopsis": "Kaiba is now on a rich planet known as Abipa and subsequent to some unforeseen circumstances; his cheap hippo body is taken to a junk factory. On his way to get his body back, Kaiba learns about the famous body designer 'Patch' and his pet dog 'Quilt'.",
+      "airdate": "2008-05-09",
+      "markers": [],
+      "external_id": "54082"
+    },
+    {
+      "n": 6,
+      "title": "The Muscled Woman",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/54083/original.jpg",
+      "synopsis": "The freight ship Kaiba &amp; Vanilla are on is headed to a planet, named Lolo, where the memories of the living and the dead tend to collect at the largest memory tank. Whilst landing, the freight ship collides with another smaller ship. Kaiba is worried and investigate the crash site, to find an old couple receiving some help, from a strange woman in a man’s body.",
+      "airdate": "2008-05-16",
+      "markers": [],
+      "external_id": "54083"
+    },
+    {
+      "n": 7,
+      "title": "A Forgettable Man",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/54084/original.jpg",
+      "synopsis": "Kaiba and Vanilla find themselves on the weird underwater planet Nene and they later go to check out the moon. It isn't long before Vanilla finds out that they are wanted, for being involved, in the explosion on Lolo. Later on Kaiba looks into the memories of Gel, which he copied and it is then he discovers that Gel is Neiro and is also responsible for the explosions.",
+      "airdate": "2008-05-23",
+      "markers": [],
+      "external_id": "54084"
+    },
+    {
+      "n": 8,
+      "title": "False Face",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/54085/original.jpg",
+      "synopsis": "We get some insight into the goings on of the notorious Issoudan group and how Popo is related to it. It's also revealed what Warp, the king of memories, is and also that the current Warp on the throne is nothing but a fake.",
+      "airdate": "2008-06-13",
+      "markers": [],
+      "external_id": "54085"
+    },
+    {
+      "n": 9,
+      "title": "Kill Warp!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/54086/original.jpg",
+      "synopsis": "Popo is now aware that the Warp in the heavens is a fake and decides to take this as an opportunity to form an uprising, with Neiro leading the charge. Kaiba has return to his original Warp body, so Popo gets Neiro to try and kill him, but she begins to question her memories of hate towards Warp.",
+      "airdate": "2008-06-20",
+      "markers": [],
+      "external_id": "54086"
+    },
+    {
+      "n": 10,
+      "title": "Kaiba",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/54087/original.jpg",
+      "synopsis": "Neiro regains her true memories of Warp/Kaiba and what really happened between them, is revealed.",
+      "airdate": "2008-07-11",
+      "markers": [],
+      "external_id": "54087"
+    },
+    {
+      "n": 11,
+      "title": "Spinning Fans",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/54088/original.jpg",
+      "synopsis": "After defeating Warp, Popo is now elated that his dream is finally coming true and he doesn't allow such things like the electrolytic clouds or skonk faze him. However he no longer has anyone to share this moment with, neither his Mom nor Cheki. Elsewhere it seems Kaiba has survived and even regained his memories.",
+      "airdate": "2008-07-18",
+      "markers": [],
+      "external_id": "54088"
+    },
+    {
+      "n": 12,
+      "title": "Everyone in the Clouds",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/54089/original.jpg",
+      "synopsis": "The end of the world draws near, as legendary memory eating plant approaches. What's more is that Kaiba/Warp wants everything to be erased, so Neiro is the only one able to stop him with the memory Kaiba had once forgotten.",
+      "airdate": "2008-07-25",
+      "markers": [],
+      "external_id": "54089"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Never",
+      "artist": "Seira Kagami",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Carry Me Away",
+      "artist": "Seira Kagami",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

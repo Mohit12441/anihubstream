@@ -1,0 +1,210 @@
+{
+  "id": "lazarus",
+  "title": "LAZARUS",
+  "native": "ラザロ",
+  "year": 2025,
+  "rating": 7,
+  "season": "Spring 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx167336-KpGIIBie71OX.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx167336-KpGIIBie71OX.png",
+  "accent": "#e4ae5d",
+  "synopsis": "The year is 2052 — an era of unprecedented peace and prosperity prevails across the globe. The reason for this: mankind has been freed from sickness and pain. Nobel Prize winning neuroscientist Dr. Skinner has developed a miracle cure-all drug with no apparent drawbacks called Hapuna. Hapuna soon becomes ubiquitous… and essential. However, soon after Hapuna is officially introduced, Dr. Skinner vanishes.\n\nThree years later, the world has moved on. But Dr. Skinner has returned — this time, as a harbinger of doom. Skinner announces that Hapuna has a short half-life. Everyone who has taken it will die approximately three years later. Death is coming for this sinful world — and coming soon.\n\nAs a response to this threat, a special task force of 5 agents is gathered from across the world to save humanity from Skinner’s plan. This group is called “Lazarus.” Can they find Skinner and develop a vaccine before time runs out?\n\n(Source: Adult Swim)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "lazarus-b73ijw",
+    "mal": 56038,
+    "anilist": 167336,
+    "kitsu": 47778
+  },
+  "skip_key_id": 56038,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "lazarus ラサ ロ tv finished",
+  "genres": [
+    "action",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Goodbye Cruel World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354537/thumbnail/330464cdb71872a684792440bf203f3d.jpg",
+      "synopsis": "The miracle drug, Hapna, now threatens to wipe out humanity. A chronic jail-breaker named Axel is asked to find the only man with a cure: Dr. Skinner.\n\n(Source: Hulu)",
+      "airdate": "2025-04-05",
+      "markers": [],
+      "external_id": "354537"
+    },
+    {
+      "n": 2,
+      "title": "Life on the Fast Lane",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354538/thumbnail/d75ed1dba706c7356d3f87bb47610e1f.jpg",
+      "synopsis": "Genius hacker Eleina finds a potential lead to Skinner. The Lazarus team splits into two groups to investigate it, but both end up getting shot at.\n\n(Source: Hulu)",
+      "airdate": "2025-04-12",
+      "markers": [],
+      "external_id": "354538"
+    },
+    {
+      "n": 3,
+      "title": "Long Way From Home",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354539/thumbnail/44912f285f7681d3b3b95f7327561c87.jpg",
+      "synopsis": "Searching Skinner's house and interviewing his old colleague reveals a new lead. Axel and Leland go to Istanbul but have trouble with local thugs.\n\n(Source: Hulu)",
+      "airdate": "2025-04-19",
+      "markers": [],
+      "external_id": "354539"
+    },
+    {
+      "n": 4,
+      "title": "Don't Stop the Dance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354540/thumbnail/8041713d6bdb72e906efe664a14830ff.jpg",
+      "synopsis": "The team investigates a club owned by a stockbroker who got rich off Hapna. One of his associates is the hacker Dr. 909, who may be helping Skinner.\n\n(Source: Hulu)",
+      "airdate": "2025-04-26",
+      "markers": [],
+      "external_id": "354540"
+    },
+    {
+      "n": 5,
+      "title": "Pretty Vacant",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354541/thumbnail/6d9b8b7338df770cc2fee6d42c44c173.jpg",
+      "synopsis": "The team tries to lure Skinner out of hiding with a fake cure staged by the president of Delta Medicinal, but a hacker named Popcorn Wizard butts in.\n\n(Source: Hulu)",
+      "airdate": "2025-05-03",
+      "markers": [],
+      "external_id": "354541"
+    },
+    {
+      "n": 6,
+      "title": "Heaven Is a Place on Earth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354542/thumbnail/dc9383bbbfb50ba50d7f2f8b53917882.jpg",
+      "synopsis": "A secluded commune where Eleina once lived is identified as a potential hiding spot for Skinner. She and Leland infiltrate it to find out for sure.\n\n(Source: Hulu)",
+      "airdate": "2025-05-10",
+      "markers": [],
+      "external_id": "354542"
+    },
+    {
+      "n": 7,
+      "title": "Almost Blue",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354543/thumbnail/799e8663598a3c0a1c7a89fc5386cc3c.jpg",
+      "synopsis": "Coordinates from an AI lead to islands that Skinner bought just before they sank under rising sea levels. The team visits them, hoping to learn more.\n\n(Source: Hulu)",
+      "airdate": "2025-05-17",
+      "markers": [],
+      "external_id": "354543"
+    },
+    {
+      "n": 8,
+      "title": "Unforgettable Fire",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354544/thumbnail/f770959e80a9c372a5f59f17d973aec5.jpg",
+      "synopsis": "Chris is held captive on an arctic oil rig by Russian operatives. The team unites to save her, despite learning Chris was once a Russian spy herself.\n\n(Source: Hulu)",
+      "airdate": "2025-05-24",
+      "markers": [],
+      "external_id": "354544"
+    },
+    {
+      "n": 9,
+      "title": "Death on Two Legs",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354545/thumbnail/f288dca2e67a4743fd689e9fe1925a1b.jpg",
+      "synopsis": "An inquiry is held at the Pentagon to determine the future of Lazarus, where information emerges that prompts Schneider of INSCOM to hire an assassin.\n\n(Source: Hulu)",
+      "airdate": "2025-05-31",
+      "markers": [],
+      "external_id": "354545"
+    },
+    {
+      "n": 10,
+      "title": "I Can't Tell You Why",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354546/thumbnail/8e6e3c72bcc8b19eec3fd0db105f92ab.jpg",
+      "synopsis": "Skinner's medical history provides a lead but requires entry to a private clinic. Leland takes Axel and Doug to his home to secure them an invite.\n\n(Source: Hulu)",
+      "airdate": "2025-06-07",
+      "markers": [],
+      "external_id": "354546"
+    },
+    {
+      "n": 11,
+      "title": "Runnin' With the Devil",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354547/thumbnail/36bd9a4606e70f81037f03170a3fb0c5.jpg",
+      "synopsis": "Doug and Eleina go to Islamabad seeking the elusive hacker but are pursued by INSCOM. Meanwhile, Axel gets into a chaotic fight with the assassin.\n\n(Source: Hulu)",
+      "airdate": "2025-06-14",
+      "markers": [],
+      "external_id": "354547"
+    },
+    {
+      "n": 12,
+      "title": "Close to the Edge",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354548/thumbnail/a42a437cb8110ff42299819a6c2f8756.jpg",
+      "synopsis": "Eleina gets a lead on Skinner from Popcorn Wizard, but with Hersch, Axel, and Doug out of commission, it's up to Chris and Leland to crack the case.\n\n(Source: Hulu)",
+      "airdate": "2025-06-21",
+      "markers": [],
+      "external_id": "354548"
+    },
+    {
+      "n": 13,
+      "title": "The World is Yours",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/354549/thumbnail/b9706d405a3736a29dfdcda0f6d856a9.jpg",
+      "synopsis": "Abel conducts a raid to free Hersch, while Axel sneaks off to face his nemesis. The rest of the team pursues Skinner in a final bid to save humanity.\n\n(Source: Hulu)",
+      "airdate": "2025-06-28",
+      "markers": [],
+      "external_id": "354549"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Vortex",
+      "artist": "Kamasi Washington",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dark Will Fall",
+      "artist": "Bonobo featuring Jacob Lusk",
+      "episodes": "13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lazarus",
+      "artist": "The Boo Radleys",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

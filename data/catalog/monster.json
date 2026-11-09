@@ -1,0 +1,2059 @@
+{
+  "id": "monster",
+  "title": "Monster",
+  "native": "MONSTER",
+  "year": 2004,
+  "rating": 8.8,
+  "season": "Spring 2004",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx19-gtMC64182sm4.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19-gtMC64182sm4.jpg",
+  "accent": "#2ee6a8",
+  "synopsis": "Dr. Kenzo Tenma is a renowned Japanese brain surgeon working at a leading hospital in Germany. One night, Dr. Tenma risks his reputation and career to save the life of a critically wounded young boy over that of the town mayor who had been planning to support the hospital financially. A string of mysterious murders begin to occur soon after the operation, and Dr. Tenma emerges as the primary suspect despite no incriminating evidence. \n\nA doctor is taught to believe that all life is equal; however, when another series of murders occur in the surgeon's vicinity, Dr. Tenma's beliefs are shaken as his actions that night are shown to have much broader consequences than he could have imagined. Leaving behind his life as a surgeon he embarks on a journey across the country to unravel the mystery of the boy he saved.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 10,
+    "anilist": 19,
+    "mal": 19,
+    "hianime": "monster-slgf5v"
+  },
+  "skip_key_id": 19,
+  "skip_key_space": "anilist",
+  "episode_total": 74,
+  "added_at": "2026-10-14 02:36:47",
+  "search_text": "monster monster tv finished",
+  "genres": [
+    "drama",
+    "horror",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Herr Dr. Tenma",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/377/original.jpg",
+      "synopsis": "Doctor Tenma is a brilliant Japanese neurosurgeon who works at Eisler Memorial Hospital in Germany. He is doing well professionally and is even engaged to the director's daughter, Eva. One day, a boy with a gunshot wound to the head is brought to him.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 121,
+          "end": 211,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "377"
+    },
+    {
+      "n": 2,
+      "title": "Downfall",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/378/original.jpg",
+      "synopsis": "The price for disobeying Dr. Heinemann's orders to instead operate on the boy proves costly for Dr. Tenma and his career.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 53,
+          "end": 141,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1352,
+          "end": 1435,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "378"
+    },
+    {
+      "n": 3,
+      "title": "A Murder",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/379/original.jpg",
+      "synopsis": "After three doctors are found dead, Tenma is reinstated as the chief surgeon. His career takes off, and even Eva tries to win him back. Unfortunately, all that success has attracted the attention of Detective Lunge.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 59,
+          "end": 140,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1348,
+          "end": 1435,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "379"
+    },
+    {
+      "n": 4,
+      "title": "Night of the Execution",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/380/original.jpg",
+      "synopsis": "Adolf Junkers has information about the serial murders that is vital to the police, but he is afraid to reveal them. Dr. Tenma's care for Adolf Junkers however wins him over. However, his close relationship with Junkers leads him to a night of shocking horror.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 56,
+          "end": 141,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "380"
+    },
+    {
+      "n": 5,
+      "title": "The Girl of Heidelberg",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/381/original.jpg",
+      "synopsis": "Nina Fortner, a talented young student in Heidelberg has been having nightmares. She also cannot remember anything about her life before she was 10 years old. She soon suffers from fainting spells at her university and starts receiving anonymous emails.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 114,
+          "end": 204,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1352,
+          "end": 1442,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "381"
+    },
+    {
+      "n": 6,
+      "title": "The Missing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/382/original.jpg",
+      "synopsis": "Nina finally receives an email informing her to meet the anonymous sender at a specified time and place. Meanwhile, Dr. Tenma asks Mauler, an editor for a local publisher, for assistance in his search for the Liebert girl.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 232,
+          "end": 317,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "382"
+    },
+    {
+      "n": 7,
+      "title": "House of Tragedy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/383/original.jpg",
+      "synopsis": "Tenma and Nina return to the Fortners’ residence to find Mauler and Nina’s parents dead. Two detectives arrive to take them to the station for questioning, but certain things don't look right.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 41,
+          "end": 131,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "383"
+    },
+    {
+      "n": 8,
+      "title": "Pursued",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/384/original.jpg",
+      "synopsis": "Eva tries to threaten Dr. Tenma — unless he gets back together with her, she will reveal to the police that the tie that was found at the scene of the crime is his!",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 74,
+          "end": 164,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "384"
+    },
+    {
+      "n": 9,
+      "title": "The Girl and the Seasoned Soldier",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/385/original.jpg",
+      "synopsis": "An old mercenary soldier named Hugo is interrogated by Lunge about a student of his — a doctor named Tenma.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 47,
+          "end": 137,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 919,
+          "end": 975,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "385"
+    },
+    {
+      "n": 10,
+      "title": "A Past Erased",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/386/original.jpg",
+      "synopsis": "Tenma encounters a burglar named Heckel who claims to have seen the killer. It soon results in Heckel leading Tenma to a couple of murderers.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 37,
+          "end": 127,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "386"
+    },
+    {
+      "n": 11,
+      "title": "511 Kinderheim",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/387/original.jpg",
+      "synopsis": "Tenma learns that Johan used to be in an orphanage known as Kinderheim 511, where he meets an injured boy named Dieter and a former East German official named Hartmann who used to work there.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 221,
+          "end": 308,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "387"
+    },
+    {
+      "n": 12,
+      "title": "A Little Experiment",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/388/original.jpg",
+      "synopsis": "Dieter is picked up by Hartmann before Tenma could return, and Tenma learns more about the experiments in Kinderheim 511.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 124,
+          "end": 214,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "388"
+    },
+    {
+      "n": 13,
+      "title": "Petra and Schumann",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/389/original.jpg",
+      "synopsis": "In a small village, Dr. Schumann worries over the health of his sick but stubborn old friend, Petra.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 133,
+          "end": 223,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "389"
+    },
+    {
+      "n": 14,
+      "title": "Left Behind",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/390/original.jpg",
+      "synopsis": "Inspector Lunge investigates the murder of a prostitute and suspects a senator named Dr. Boltzmann of involvement. His dedication to his work however takes a toll on his family life. Meanwhile, the vindictive Eva continues to press Lunge to catch Tenma. She also has a new lover, her gardener.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 41,
+          "end": 131,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "390"
+    },
+    {
+      "n": 15,
+      "title": "Be My Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/391/original.jpg",
+      "synopsis": "Dr. Tenma and Nina Fortner's investigations lead them to a powerful man known as 'The Baby', who belongs in an extremist organisation. They soon learn that the organisation has special plans for the Turkish district tomorrow.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 64,
+          "end": 154,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "391"
+    },
+    {
+      "n": 16,
+      "title": "Wolf's Confession",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/392/original.jpg",
+      "synopsis": "Nina escapes the mansion. And Tenma meets with the unrecognizable General Wolf at the mansion later.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 39,
+          "end": 129,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1348,
+          "end": 1453,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "392"
+    },
+    {
+      "n": 17,
+      "title": "Reunion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/393/original.jpg",
+      "synopsis": "The extremists plans are put into action, and Tenma decides to postpone his search for Johan and instead heads to the Turkish district to warn the people there. Dieter and Heckel are captured by the skinheads and are left to burn in the fire. And Nina tries to get information about the 'main dish' from 'The Baby'.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 64,
+          "end": 150,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1347,
+          "end": 1453,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "393"
+    },
+    {
+      "n": 18,
+      "title": "Five Sugars",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/394/original.jpg",
+      "synopsis": "Nina meets with an old friend and boss, Mister Rosso. The delightful old boss however, has a very dark past.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 51,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1347,
+          "end": 1417,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "394"
+    },
+    {
+      "n": 19,
+      "title": "Monster's Abyss",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/395/original.jpg",
+      "synopsis": "Tenma visits Rudy, a criminal psychologist, who is working on cases involving a murderer named Jurgens.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 90,
+          "end": 176,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1347,
+          "end": 1453,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "395"
+    },
+    {
+      "n": 20,
+      "title": "Journey to Freiham",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/396/original.jpg",
+      "synopsis": "Tenma and Dieter hitch a ride with an elderly couple on the way to Freiham. Tenma wonders if the couple plan to turn him in.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 187,
+          "end": 273,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1347,
+          "end": 1454,
+          "label": "Ending"
+        },
+        {
+          "kind": "recap",
+          "start": 0,
+          "end": 58,
+          "label": "Recap"
+        }
+      ],
+      "external_id": "396"
+    },
+    {
+      "n": 21,
+      "title": "Happy Holidays",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/397/original.jpg",
+      "synopsis": "Nina confronts Muller, one of the two detectives responsible for the death of her foster parents, the Fortners. Muller discovers that his protege, Roberto, is actually working for Johan and is now tasked with killing Nina.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 127,
+          "end": 214,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "397"
+    },
+    {
+      "n": 22,
+      "title": "Lunge's Trap",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/398/original.jpg",
+      "synopsis": "Lunge determines that the murder of a wealthy, middle-aged, childless couple does not fit the usual modus operandi of the serial murders and decides to use this opportunity to lure Tenma to a trap. However, before he can arrest him, Lunge is critically wounded by the real criminal. Tenma is able to treat Lunge's injuries.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 118,
+          "end": 204,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1347,
+          "end": 1453,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "398"
+    },
+    {
+      "n": 23,
+      "title": "Eva's Confession",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/399/original.jpg",
+      "synopsis": "Eva Heinemann is arrested for public drunkenness and hooks up with Roberto, with whom she was with the night before her arrest. Roberto then reveals his link to Johan and Eva confesses that she was actually a witness the night Junkers was killed by Johan.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 29,
+          "end": 113,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1347,
+          "end": 1453,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "399"
+    },
+    {
+      "n": 24,
+      "title": "Of Men and Dining",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/400/original.jpg",
+      "synopsis": "In exchange for her life, Roberto tells Eva to confront Tenma, who is currently treating a mob boss at a country house. Eva is promptly wounded by Roberto when she is unable to complete her task but is saved by Tenma.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 45,
+          "end": 131,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        },
+        {
+          "kind": "recap",
+          "start": 0,
+          "end": 44,
+          "label": "Recap"
+        }
+      ],
+      "external_id": "400"
+    },
+    {
+      "n": 25,
+      "title": "Thursday’s Boy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/401/original.jpg",
+      "synopsis": "Karl Neumann and Lotte Frank are both students who read latin to Hans Georg Schubert. Lotte attempts to assist Karl in finding out his past while trying to figure out the identity of a boy who reads to Schubert on Thursdays. When they both discover who he is, they find the boy, Edmund Farren, in his dormitory, dead.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 67,
+          "end": 153,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "401"
+    },
+    {
+      "n": 26,
+      "title": "The Secret Woods",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/402/original.jpg",
+      "synopsis": "A man who claims to be the son of a millionaire has committed suicide, and a detective is determined to solve the case.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 155,
+          "end": 240,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "402"
+    },
+    {
+      "n": 27,
+      "title": "Proof",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/403/original.jpg",
+      "synopsis": "Richard's past and present situation is revealed. Johan continues to bond with the Schuwald family and his intention is revealed.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 130,
+          "end": 216,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "403"
+    },
+    {
+      "n": 28,
+      "title": "Just One Case",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/404/original.jpg",
+      "synopsis": "Richard re-investigates his old homicide cases and makes a frightening discovery.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 117,
+          "end": 201,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "404"
+    },
+    {
+      "n": 29,
+      "title": "Execution",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/405/original.jpg",
+      "synopsis": "Robert delves into Johan's past and makes a shocking discovery. Dr. Gillen speaks to Peter Jurgens, a serial murderer about Johan's possible involvement and gets a tragic reply. Johan confronts Robert about Stephen Joos. And Dr. Reichwen receives tragic news from the police.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 107,
+          "end": 192,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "405"
+    },
+    {
+      "n": 30,
+      "title": "Decision",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/406/original.jpg",
+      "synopsis": "Suspecting foul play in Robert's 'accidental' death fall, Dr. Reichwen makes some discoveries in his investigations. But as he later realizes, his investigations may have put him in harms way.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 122,
+          "end": 207,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "406"
+    },
+    {
+      "n": 31,
+      "title": "In Broad Daylight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/407/original.jpg",
+      "synopsis": "Dr. Tenma and Dr. Reichwen finally meet. Dr. Reichwen intends to proof Dr. Tenma's innocence in the homicides, but Dr. Tenma has other ideas.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 231,
+          "end": 316,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "407"
+    },
+    {
+      "n": 32,
+      "title": "Sanctuary",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/408/original.jpg",
+      "synopsis": "Lotte, Frank and Karl are drifting apart. Lotte meets Nina Fortner and they become friends. Dr. Tenma searches for a perfect spot to shoot Johan.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 56,
+          "end": 144,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1347,
+          "end": 1435,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "408"
+    },
+    {
+      "n": 33,
+      "title": "A Child's View",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/409/original.jpg",
+      "synopsis": "Dieter learns of a life threatening game that children are playing. Mr. Schuwald decides to donate his whole book collection to the Munich University Library under the suggestion of Karl and Johan.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "start": 1350,
+          "end": 1430,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "409"
+    },
+    {
+      "n": 34,
+      "title": "At the Edge of Darkness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/410/original.jpg",
+      "synopsis": "The 'Margot Langer' impostor tries to blackmail Johan. Dr. Tenma helps a young 'doctor' at an illegal clinic",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 58,
+          "end": 137,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "410"
+    },
+    {
+      "n": 35,
+      "title": "My Nameless Hero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/411/original.jpg",
+      "synopsis": "Lunge tries to get into Dr. Tenma's mind by pretending to be him. Dr. Gillen learns something about Johan during an interview with a psychotic killer. Dr. Reichwen tries to warn the Lieberts of Johan's true nature. Dr. Tenma scouts for a perfect sniping location.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 176,
+          "end": 260,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "411"
+    },
+    {
+      "n": 36,
+      "title": "The Monster of Chaos",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/412/original.jpg",
+      "synopsis": "Dr. Reichwein reveals the true nature of Johan to Mr. Schuwald. Dr. Tenma gets ready to assassinate Johan. Lunge concludes that Dr. Tenma will kill Schuwald next. Lotte confronts Nina about Johan.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 234,
+          "end": 322,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "412"
+    },
+    {
+      "n": 37,
+      "title": "A Nameless Monster",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/413/original.jpg",
+      "synopsis": "The episode begins with a fairy tale about a Monster without a name. Nina reads the story from the picture book and has a sense of deja vu. Johan's evil plans for the book donation ceremony is carried out. Dr. Tenma meets a big obstacle in his attempt to kill Johan.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 144,
+          "end": 232,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "413"
+    },
+    {
+      "n": 38,
+      "title": "The Demon in My Eyes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/414/original.jpg",
+      "synopsis": "Dr. Tenma has a gun pointed at Roberto, but Roberto has the rifle pointed at him. Nina, Dr.Reichwen and Dieter arrive to find the whole library in flames. People are trapped inside and the doors are all locked. Karl reads the report on his mother's life and death. Dr. Tenma tries to rescue those trapped in the building. Johan reveals the monster inside of him to Schuwald.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 127,
+          "end": 215,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "414"
+    },
+    {
+      "n": 39,
+      "title": "The Hell in His Eyes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/415/original.jpg",
+      "synopsis": "Lunge, from the BKA, learns that Johan may indeed exist. Nina goes into regressive hypnosis to learn more about the picture book and her past. Mr. Schuwald has a message for Dr. Tenma and sends Karl to Dresden to pass it to him.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 58,
+          "end": 146,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "415"
+    },
+    {
+      "n": 40,
+      "title": "Grimmer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/416/original.jpg",
+      "synopsis": "The episode introduces Grimmer. Grimmer is a freelance journalist doing an in-depth research into the abuses in the orphanages in East Germany. Grimmer meets with Dr. Tenma during their trip to Prague, and they become more acquainted when Tenma is faced with an immigration problem.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 43,
+          "end": 131,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "416"
+    },
+    {
+      "n": 41,
+      "title": "The Ghost of 511",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/417/original.jpg",
+      "synopsis": "Grimmer stubbornly stalks Petrov for his experimental research papers chronicaling the abuses at Kinderheim 511, but he gets a surprise instead.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 40,
+          "end": 136,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "417"
+    },
+    {
+      "n": 42,
+      "title": "The Adventures of the Magnificent Steiner",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/418/original.jpg",
+      "synopsis": "Grimmer has the key that Petrov gave him, and a former Czechoslovakian secret police organization wants it. Caught and tortured, Grimmer tells his abductors about 'the Magnificent Steiner'.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 33,
+          "end": 121,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1415,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "418"
+    },
+    {
+      "n": 43,
+      "title": "Detective Suk",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/419/original.jpg",
+      "synopsis": "A new inspector, detective Suk is on the case of Zeman's homicide. During his investigation, he discovers that there is more to Zeman's murder than first assumed. Suk also meets a lady whom he falls head over hills for",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 102,
+          "end": 190,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "419"
+    },
+    {
+      "n": 44,
+      "title": "Double Darkness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/420/original.jpg",
+      "synopsis": "After the death of his seniors, Suk is left to re-investigate case from the very beginning. He gets information from the orphans about a meeting with Grimmer. His intention to arrest Grimmer takes a different turn however when he gets deeper into the investigation. The episode also reveals that there is more to the nameless lady at the bar than she lets on.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 78,
+          "end": 168,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "420"
+    },
+    {
+      "n": 45,
+      "title": "The Monster's Afterimage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/421/original.jpg",
+      "synopsis": "Suk is put under surveillance by the new commissioner. Together with Grimmer, Suk retrieves the tape and research papers from the deposit box. But their movements is watched by various sides.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 144,
+          "end": 232,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "421"
+    },
+    {
+      "n": 46,
+      "title": "Contact",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/422/original.jpg",
+      "synopsis": "Dr. Tenma learns about Suk's fugitive status from a journalist. And sets out to find him. Meanwhile, Suk and Grimmer goes into hiding, but is quickly found, surrounded and attacked by the STB. The STB's assault comes to a bloody end.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 186,
+          "end": 274,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "422"
+    },
+    {
+      "n": 47,
+      "title": "The Door to Nightmares",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/423/original.jpg",
+      "synopsis": "Nina's experience in Prague is a nightmare for her. Tenma and Grimmer meets with a top man in the Czechoslovakian STB. They are offered a deal which Grimmer refuses to accept.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 98,
+          "end": 186,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "423"
+    },
+    {
+      "n": 48,
+      "title": "The Scariest Thing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/424/original.jpg",
+      "synopsis": "Johan visits Suk's mother. Tenma and Grimmer learns of his visit. They, including Col. Ranke, listen to Johan's tape. Lunge arrives in Prague for a 'holiday'. His investigation leads him to the sketches of Franz Bonaparta.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 102,
+          "end": 190,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "424"
+    },
+    {
+      "n": 49,
+      "title": "The Cruelest Thing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/425/original.jpg",
+      "synopsis": "Grimmer and Tenma tries to stop Johan from subjecting Milo, one of the orphans, to one of the most cruel fate.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 64,
+          "end": 152,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "425"
+    },
+    {
+      "n": 50,
+      "title": "The Rose Mansion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/426/original.jpg",
+      "synopsis": "Lunge investigates the secret behind the Red Rose Mansion. Tenma and Grimmer separate, but Tenma finds himself in trouble.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 41,
+          "end": 129,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "426"
+    },
+    {
+      "n": 51,
+      "title": "The Monster's Love Letter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/427/original.jpg",
+      "synopsis": "Schubert, with the help of Reichwein, re-explores his past with Karl Neumann's real mother and realizes his link to Johan. As news of Tenma's arrest spreads, various people react with shock and horror, with the exception of Eva Heinemann, who is insistent that Tenma pay dearly for rejecting her. Suk tries to leave the hospital he is in to try to help Tenma, but is stopped by the Prague Police who inform him that Grimmer has sent a note to them exonerating Suk from any involvement of the deaths of the police officers. Runge also gets news of the arrest as well, but he is more interested in the Mansion of Red Roses, where he obtains a letter possibly addressed to the twins' mother. Tenma is deported back to Dusseldorf.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 88,
+          "end": 176,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "427"
+    },
+    {
+      "n": 52,
+      "title": "The Lawyer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/428/original.jpg",
+      "synopsis": "Former patients of Eisler Memorial Hospital enlist the aid of Alfred Baul, a lawyer, to represent Tenma. Baul in turn asks for the assistance of Fritz Vardemann. Vardemann visits Tenma in prison, and agrees to take on the defense, but is then called to the hospital when his wife goes into labor with their first child. When Baul visits Tenma in prison, Tenma is shocked to see that Baul is Roberto. Roberto then says that Eva Heinemann will be his next target.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 114,
+          "end": 202,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1415,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "428"
+    },
+    {
+      "n": 53,
+      "title": "Determination",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/429/original.jpg",
+      "synopsis": "After hearing Roberto's threat against Eva, Tenma decides to confess to all charges against him so he can be placed in the same van transporting a prisoner to a Federal Penetentary as the prisoner is arranging for a jailbreak.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 113,
+          "end": 201,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "429"
+    },
+    {
+      "n": 54,
+      "title": "The Escape",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/430/original.jpg",
+      "synopsis": "Tenma and Milch are on the run with the injured Gustav and Helene. Eva finds her life in danger when she discovers that the attorney she's supposed to meet, Mr.Baul, is none other than Roberto.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 135,
+          "end": 223,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "430"
+    },
+    {
+      "n": 55,
+      "title": "Room 402",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/431/original.jpg",
+      "synopsis": "Dr. Tenma takes Verderman hostage in a desperate search for Eva. And Verderman's dark past is revealed.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 68,
+          "end": 156,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1415,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "431"
+    },
+    {
+      "n": 56,
+      "title": "The Never-Ending Journey",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/432/original.jpg",
+      "synopsis": "Nina and Dieter enters the Red Rose Mansion, but Nina faints from her disturbing experience. And they end up in the care of a puppeteer name Lipsky.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 126,
+          "end": 214,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "432"
+    },
+    {
+      "n": 57,
+      "title": "That Night",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/433/original.jpg",
+      "synopsis": "A flashback to Johan’s and Nina’s past, to the time before the Liebert’s homicides reveals the reason behind Johan’s killing. Police makes a startling discovery at the burnt down mansion. Tenma finally learns where Eva is. And Lunge reveals Lipsky’s true identity.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 184,
+          "end": 272,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "433"
+    },
+    {
+      "n": 58,
+      "title": "I Hate This Job",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/434/original.jpg",
+      "synopsis": "Martin, a hired hand, is hired by General Wolf's ex-associates to ‘take care’ of Eva. But his emotions get in the way of his orders.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 97,
+          "end": 185,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1415,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "434"
+    },
+    {
+      "n": 59,
+      "title": "The Man Who Saw the Devil",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/435/original.jpg",
+      "synopsis": "Tenma manages to find Martin. A drunken Eva spots Johan at a party. Martin receives his final orders from his boss but his feelings gets in the way. And Martin gets way over his head when he tries to investigate Johan and his disciple, and the truth about his past is revealed.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 141,
+          "end": 229,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1360,
+          "end": 1432,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "435"
+    },
+    {
+      "n": 60,
+      "title": "The Man Who Knew Too Much",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/436/original.jpg",
+      "synopsis": "Martin’s attempt to save Eva costs him his life, his last minutes with Tenma reveals a terrible secrets about Martin’s boss, Peter Chapek and the about the experiments.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 141,
+          "end": 229,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1360,
+          "end": 1432,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "436"
+    },
+    {
+      "n": 61,
+      "title": "The Door to Memories",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/437/original.jpg",
+      "synopsis": "Nina returns to the apartment that she lived in with her mother and Johan and encounters another memory. She then returns to Munich and Dr. Reichwein where she volunteers for hypnosis to find the truth behind these memories. After she nearly kills Dr. Gillen in a hypnotic rage, she leaves Dr. Reichwein's house to try to stop Tenma from killing her brother. Meanwhile, Suk and Vardemann team up to interview former residents of the Mansion of Red Roses to gather information on Franz Bonaparta's reading sessions with his picture books, and for Vardemann to find out more about his father's true involvement.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 79,
+          "end": 167,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1415,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "437"
+    },
+    {
+      "n": 62,
+      "title": "A Pleasant Dinner Table",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/438/original.jpg",
+      "synopsis": "While trying to escape from police in Frankfurt, Tenma is hit by a van. He awakes in the Turkish Quarter of the city, the same one that he saved from The Baby's plot. The man who saved him plans to kill Petr Capek at a convention, but he fails at this task and is shot dead. Nina, in Frankfurt, sees the picture of Petr Capek and it triggers yet another memory.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 112,
+          "end": 200,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "438"
+    },
+    {
+      "n": 63,
+      "title": "Unrelated Murders",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/439/original.jpg",
+      "synopsis": "Egon Weisbach was one of the first investigators in the murder of the Liebert parents. On his last day on the job before retirement, he is escorting a convicted serial murderer but wants to know why he killed someone who did not fit his modus operandi. At the same time, Dr. Gillen is interviewing several murderers wondering why they killed someone who also did not fit their usual targets. Both realize that all these criminals committed murders outside their usual scope at the request of a young man, presumably Johan.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 71,
+          "end": 159,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1415,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "439"
+    },
+    {
+      "n": 64,
+      "title": "The Baby's Depression",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/440/original.jpg",
+      "synopsis": "The Baby is killed by a prostitute, and his death sends shockwaves in Petr Capek's organization. Capek becomes paranoid as to who is loyal or not and accidentally kills one of his guards. He makes it to his cottage where Johan is waiting for him.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 59,
+          "end": 147,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1415,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "440"
+    },
+    {
+      "n": 65,
+      "title": "Johan's Footprints",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/441/original.jpg",
+      "synopsis": "Capek tries to berate Johan for his actions and tells him that everything should be done according to Capek's plans but Johan simply disagrees and disappears. Capek realizes his hold on his organization is crumbling and has his men pick up Nina in Frankfurt. Eva accosts the young man who was introduced to Johan, Christof Sievernich, demanding answers.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 176,
+          "end": 288,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "441"
+    },
+    {
+      "n": 66,
+      "title": "Welcome Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/442/original.jpg",
+      "synopsis": "Capek reveals to Nina that her and her twin brother Johan are the products of a eugenics experiment designed to breed \"the perfect children\". Tenma has wounded Christof and is driving him and Eva to the hospital while demanding answers on Petr Capek. While Eva makes a phone call at a payphone, Tenma sneaks away.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 10,
+          "end": 98,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "442"
+    },
+    {
+      "n": 67,
+      "title": "I'm Back",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/443/original.jpg",
+      "synopsis": "Nina confronts Johan who presents her with a story on what happened when many people were poisoned at the Mansion of Red Roses. Nina realizes that she was the one who witnessed these deaths, the shock of this revelation nearly drives her to suicide, but she is saved by Tenma. Capek is gunned down by members of his organization when they find out about the guard that Capek killed.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 123,
+          "end": 211,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1415,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "443"
+    },
+    {
+      "n": 68,
+      "title": "Ruhenheim",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/444/original.jpg",
+      "synopsis": "With a postcard obtained by Lipsky, Lunge arrives in Ruhenheim. There he meets up with Grimmer, whose research has led him to this town as well. A working-class couple in this town realize they win the lottery and fearing that everyone else wants to kill them, the husband buys an arsenal of weapons.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 24,
+          "end": 112,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1360,
+          "end": 1432,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "444"
+    },
+    {
+      "n": 69,
+      "title": "The Peaceful House",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/445/original.jpg",
+      "synopsis": "Lunge and Grimmer conclude something terrible is happening in Ruhenheim when random gunshots ring out, people are either murdered or disappearing, and any links out of town is flooded by torrential rain. As Nina recovers in a nearby hospital, Tenma, using a lead from Capek, travels to Prague and meets with Lipsky and determines that Johan is in Ruhenheim.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 88,
+          "end": 176,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "445"
+    },
+    {
+      "n": 70,
+      "title": "The Town Massacre",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/446/original.jpg",
+      "synopsis": "As time passes, more people in Ruhenheim are being shot dead by mysterious people and each other. Both Grimmer and Lunge determine that the owner of a local hotel is Klaus Poppe, also known as Franz Bonaparta. After subduing a man who was giving weapons to everyone in the town, they obtain information that one of the ringleaders is in a second hotel.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 32,
+          "end": 120,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1415,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "446"
+    },
+    {
+      "n": 71,
+      "title": "The Wrath of the Magnificent Steiner",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/447/original.jpg",
+      "synopsis": "Tenma runs into Lunge, the latter apologizing for his previous accusations against Tenma. Nina and Dr. Gillen rush to Ruhenheim. After the winning lottery couple is wounded in an attack on Bonaparta's hotel, Grimmer rushes out to the streets to reason with the unknown assailants.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 92,
+          "end": 180,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1359,
+          "end": 1431,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "447"
+    },
+    {
+      "n": 72,
+      "title": "A Nameless Man",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/448/original.jpg",
+      "synopsis": "Lunge confronts Roberto, one of the ringleaders, in a hotel room. Both are subsequently wounded in the fight. Nina and Gillen arrive in Ruhenheim where they find a house containing drawings of the two twins by Bonaparta. This triggers a final memory and the secret to Johan's madness and motives, his quest for true solitude, as well as forgiveness for his actions. Bonaparta accompanies Tenma on his quest to find and kill Johan.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 121,
+          "end": 209,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1415,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "448"
+    },
+    {
+      "n": 73,
+      "title": "Scenery for a Doomsday",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/449/original.jpg",
+      "synopsis": "Bonaparta attempts to shoot Johan dead, but is gunned down by Roberto, who dies of his own injuries soon afterwards. With the massacre now over, authorities rush into the town and attempt to determine what happened. Just as an officer is about to arrest Dr. Tenma, an ambulance worker arrives asking for Tenma's assistance.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 208,
+          "end": 296,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1415,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "449"
+    },
+    {
+      "n": 74,
+      "title": "The Real Monster",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/450/original.jpg",
+      "synopsis": "It has been some time since the tragic blood battle, and everyone is working hard to put their lives back to normal. Tenma finally locates a woman he has been searching for, and she reveals some startling information.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 46,
+          "end": 134,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1351,
+          "end": 1415,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "450"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Monster",
+      "artist": "Da-iCE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Like a Comet",
+      "artist": "issei",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Campanella Hibiku Sora de (In the Sky Where the Bells Ring)",
+      "artist": "ARCANA PROJECT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yasahisa no Namae (The Name of Kindness)",
+      "artist": "Aina Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Zenryoku Idol Sengen♡",
+      "artist": "Kaede Hondo, Kaori Ishihara, Azumi Waki, Minami Shinoda",
+      "episodes": "2-5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Strike",
+      "artist": "WHITE ASH",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aurora",
+      "artist": "WHITE ASH",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hero",
+      "artist": "Masayoshi Ooishi",
+      "episodes": "46, 49"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Monster Strike Main Theme Animation Ver.",
+      "artist": "Riichiro Kuwabara",
+      "episodes": "1-8, 10-12, 18-24"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Saikōsoku Fall in Love (最高速 Fall in Love; Full Speed Fall in Love)",
+      "artist": "Ari Ozawa, Natsuki Aikawa, Mayuka Nomura, Haruka Yamazaki & Sora Amamiya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hey! Smith!! (Hey!スミス!!)",
+      "artist": "Smith with M.O.N",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Light",
+      "artist": "Yuki Tsujimura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yume no Arika (Where the Dream Is)",
+      "artist": "Naoto Inti Raymi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Panorama",
+      "artist": "Kanjani∞",
+      "episodes": "1-48"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bokura Kyō mo Ikiteiru (僕ら今日も生きている)",
+      "artist": "Johnny's West",
+      "episodes": "75"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "We Will Rock You",
+      "artist": "GLORIA",
+      "episodes": "1-12, 14"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Saikōsoku Fall in Love (最高速 Fall in Love; Highest Speed Fall in Love)",
+      "artist": "Ari Ozawa, Natsuki Aikawa, Sora Amamiya, Haruka Yamazaki, & Mayuka Nomura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hey! Smith!!",
+      "artist": "Smith with MON",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Monster High (モンスター・ハイ)",
+      "artist": "amorecarina feat.Chu-Z KAEDE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "WHAT YOU WANT",
+      "artist": "Nana Mizuki",
+      "episodes": "13-17"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Bokura Kyō mo Ikiteiru (僕ら今日も生きている)",
+      "artist": "Johnny's West",
+      "episodes": "49-74"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Bokura Kyō mo Ikiteiru",
+      "artist": "Johnny's WEST",
+      "episodes": "49-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Anata to Juushin Sai",
+      "artist": "MON & STER",
+      "episodes": "13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Solomon Main Theme",
+      "artist": "Moe Hyuga",
+      "episodes": "25-37"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Strike",
+      "artist": "WHITE ASH",
+      "episodes": "15, 33"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Born Free",
+      "artist": "Nana Mizuki",
+      "episodes": "38-43"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Knock On Doors In You",
+      "artist": "WHITE ASH",
+      "episodes": "16-24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Hero",
+      "artist": "Masayoshi Ooishi",
+      "episodes": "45, 47-48"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Mad T. Party (1865-2016)",
+      "artist": "WHITE ASH",
+      "episodes": "25-31"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Departure",
+      "artist": "Masayoshi Ooishi",
+      "episodes": "50"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Drop",
+      "artist": "WHITE ASH",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "BRAVE OUT",
+      "artist": "KNOCK OUT MONKEY",
+      "episodes": "52-56"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Kimi Sora",
+      "artist": "LELLE",
+      "episodes": "58-62"
+    }
+  ],
+  "relations": []
+}

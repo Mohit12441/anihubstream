@@ -1,0 +1,609 @@
+{
+  "id": "my-hero-academia-season-3",
+  "title": "My Hero Academia Season 3",
+  "native": "僕のヒーローアカデミア３",
+  "year": 2018,
+  "rating": 7.9,
+  "season": "Spring 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx100166-jUCZYbzn2XLw.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100166-jUCZYbzn2XLw.jpg",
+  "accent": "#e4935d",
+  "synopsis": "Summer is here, and the heroes of Class 1-A and 1-B are in for the toughest training camp of their lives! A group of seasoned pros pushes everyone's Quirks to new heights as the students face one overwhelming challenge after another. Braving the elements in this secret location becomes the least of their worries when routine training turns into a critical struggle for survival.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 100166,
+    "mal": 36456,
+    "hianime": "my-hero-academia-season-3-bjz88i",
+    "kitsu": 13881
+  },
+  "skip_key_id": 36456,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": "2026-10-18 01:38:08",
+  "search_text": "my hero academia season 3 僕のヒーローアカテ ミア3 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Game Start",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243500/original.jpg",
+      "synopsis": "Before the U.A. students head to their training camp, Class 1-A goes to the pool for extra training, and the League of Villains plots their next move.",
+      "airdate": "2018-04-07",
+      "markers": [],
+      "external_id": "243500"
+    },
+    {
+      "n": 2,
+      "title": "Wild, Wild Pussycats",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243501/original.jpg",
+      "synopsis": "Class 1-A faces the first challenge of their summer training camp when they have to fight their way through \"The Beast's Forest\" before lunch.",
+      "airdate": "2018-04-14",
+      "markers": [],
+      "external_id": "243501"
+    },
+    {
+      "n": 3,
+      "title": "Kota",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243502/original.jpg",
+      "synopsis": "Midoria tries to talk with Kota as the first-years start their training in earnest. Little do they know what awaits them in the forest.",
+      "airdate": "2018-04-21",
+      "markers": [],
+      "external_id": "243502"
+    },
+    {
+      "n": 4,
+      "title": "My Hero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243503/original.jpg",
+      "synopsis": "The villains launch their attack, and only Izuku knows where Kota is. Can he get to him in time?",
+      "airdate": "2018-04-28",
+      "markers": [],
+      "external_id": "243503"
+    },
+    {
+      "n": 5,
+      "title": "Drive it Home, Iron Fist!!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243504/original.jpg",
+      "synopsis": "Izuku finally makes it back to the training camp only to leave again with a message for Mandalay to broadcast.",
+      "airdate": "2018-05-05",
+      "markers": [],
+      "external_id": "243504"
+    },
+    {
+      "n": 6,
+      "title": "Roaring Upheaval",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243505/original.jpg",
+      "synopsis": "Students and teachers of UJS are still fighting in the woods, but the Vanguard avant-garde team has already accomplished its mission ...?!",
+      "airdate": "2018-05-12",
+      "markers": [],
+      "external_id": "243505"
+    },
+    {
+      "n": 7,
+      "title": "What a Twist!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243506/original.jpg",
+      "synopsis": "The battle at the training camp concludes, and now the students and teachers of U.A. have to deal with the aftermath.",
+      "airdate": "2018-05-19",
+      "markers": [],
+      "external_id": "243506"
+    },
+    {
+      "n": 8,
+      "title": "From Iida to Midoriya",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243507/original.jpg",
+      "synopsis": "Todoroki, Kirishima, and Midoriya want to go after Bakugo, but the class rep is standing in their way. Meanwhile, Shigaraki makes Bakugo an offer…",
+      "airdate": "2018-05-26",
+      "markers": [],
+      "external_id": "243507"
+    },
+    {
+      "n": 9,
+      "title": "All For One",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243508/original.jpg",
+      "synopsis": "The heroes and U.A. students close in on the League of Villains' hideouts, but the League still has an ace up its sleeve…",
+      "airdate": "2018-06-02",
+      "markers": [],
+      "external_id": "243508"
+    },
+    {
+      "n": 10,
+      "title": "Symbol of Peace",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243509/original.jpg",
+      "synopsis": "As the fight against the League of Villains escalates, can the U.A. students get Bakugo out in time for All Might to make a big comeback?",
+      "airdate": "2018-06-09",
+      "markers": [],
+      "external_id": "243509"
+    },
+    {
+      "n": 11,
+      "title": "One For All",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243510/original.jpg",
+      "synopsis": "All Might's time is running out as he faces his ultimate nemesis head on. Will he finally be able to defeat All For One once and for all?",
+      "airdate": "2018-06-16",
+      "markers": [],
+      "external_id": "243510"
+    },
+    {
+      "n": 12,
+      "title": "End of the Beginning, Beginning of the End",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243511/original.jpg",
+      "synopsis": "After All Might and All For One's fight, the students go back home while the U.A. teachers decide how to deal with the aftermath.",
+      "airdate": "2018-06-23",
+      "markers": [],
+      "external_id": "243511"
+    },
+    {
+      "n": 13,
+      "title": "Moving into Dorms",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243512/original.jpg",
+      "synopsis": "The students of Class 1-A move into the dorms and have a competition to determine who has the best room as they settle in.",
+      "airdate": "2018-06-30",
+      "markers": [],
+      "external_id": "243512"
+    },
+    {
+      "n": 14,
+      "title": "Create Those Ultimate Moves",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243513/original.jpg",
+      "synopsis": "Class 1-A works on developing their Quirks and creating ultimate moves in order to get ready for the provisional hero licensing exam.",
+      "airdate": "2018-07-14",
+      "markers": [],
+      "external_id": "243513"
+    },
+    {
+      "n": 15,
+      "title": "The Test",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243514/original.jpg",
+      "synopsis": "Izuku and his classmates make some final adjustments to their ultimate moves and then head off to the provisional licensing exam.",
+      "airdate": "2018-07-21",
+      "markers": [],
+      "external_id": "243514"
+    },
+    {
+      "n": 16,
+      "title": "Shiketsu High Lurking",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243515/original.jpg",
+      "synopsis": "The provisional licensing exam has begun, and everyone's after Class 1-A! Can they last long enough to pass this first test?",
+      "airdate": "2018-07-28",
+      "markers": [],
+      "external_id": "243515"
+    },
+    {
+      "n": 17,
+      "title": "Class 1-A",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243516/original.jpg",
+      "synopsis": "Todoroki's on his own against Seijin High, and Yaoyorozu's group is pitted against Seiai Academy as they and the rest of Class 1-A fight to pass the first test.",
+      "airdate": "2018-08-04",
+      "markers": [],
+      "external_id": "243516"
+    },
+    {
+      "n": 18,
+      "title": "RUSH!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243517/original.jpg",
+      "synopsis": "It's down to the final minutes of the first test of the provisional licensing exam and almost half of Class A is still left…",
+      "airdate": "2018-08-11",
+      "markers": [],
+      "external_id": "243517"
+    },
+    {
+      "n": 19,
+      "title": "Rescue Exercises",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243518/original.jpg",
+      "synopsis": "The second test of the provisional licensing exam has begun, and the hero candidates are suddenly thrust into a rescue operation.",
+      "airdate": "2018-08-18",
+      "markers": [],
+      "external_id": "243518"
+    },
+    {
+      "n": 20,
+      "title": "Special Episode: Save the World with Love!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243519/original.jpg",
+      "synopsis": "We take a break from the provisional licensing exam to visit a class held before the summer training camp!",
+      "airdate": "2018-08-25",
+      "markers": [],
+      "external_id": "243519"
+    },
+    {
+      "n": 21,
+      "title": "What's the Big Idea?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243520/original.jpg",
+      "synopsis": "The exam nears its end, but Izuku and the other hero candidates must fend off Gang Orca to finish the rescue mission.",
+      "airdate": "2018-09-01",
+      "markers": [],
+      "external_id": "243520"
+    },
+    {
+      "n": 22,
+      "title": "A Talk about Your Quirk",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243521/original.png",
+      "synopsis": "",
+      "airdate": "2018-09-08",
+      "markers": [],
+      "external_id": "243521"
+    },
+    {
+      "n": 23,
+      "title": "Deku vs. Kacchan, Pt. 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243522/original.png",
+      "synopsis": "",
+      "airdate": "2018-09-15",
+      "markers": [],
+      "external_id": "243522"
+    },
+    {
+      "n": 24,
+      "title": "A Season for Encounters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243523/original.png",
+      "synopsis": "",
+      "airdate": "2018-09-22",
+      "markers": [],
+      "external_id": "243523"
+    },
+    {
+      "n": 25,
+      "title": "Unrivaled",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243524/original.png",
+      "synopsis": "",
+      "airdate": "2018-09-29",
+      "markers": [],
+      "external_id": "243524"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE REVO",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I",
+      "artist": "BUMP OF CHICKEN",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Homunculus",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gift",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE DAY",
+      "artist": "Porno Graffitti",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tagatame (誰我為)",
+      "artist": "TK from Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubomi (蕾)",
+      "artist": "Omoinotake",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "SKETCH",
+      "artist": "Kiro Akiyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Empathy",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "No.1",
+      "artist": "DISH//",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ashiato (足跡)",
+      "artist": "the peggies",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Higher Ground",
+      "artist": "sumika",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Polaris",
+      "artist": "BLUE ENCOUNT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Koukai no Uta",
+      "artist": "Sayuri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Long Hope Philia (ロングホープ・フィリア)",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Odd Future",
+      "artist": "UVERworld",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Update",
+      "artist": "miwa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dakara, Hitori ja nai (だから、ひとりじゃない)",
+      "artist": "Little Glee Monster",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Day",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Curtain Call",
+      "artist": "Yūri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rokutousei (六等星)",
+      "artist": "Zarame",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Bokura no",
+      "artist": "Eve",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Uso ja nai (嘘じゃない)",
+      "artist": "Soushi Sakiyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Starmarker",
+      "artist": "KANA-BOON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Make my story",
+      "artist": "Lenny Code Fiction",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Sora ni Utaeba (空に歌えば)",
+      "artist": "Amazarashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Datte Atashi no Hero (だってアタシのヒーロー.)",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": "4"
+    }
+  ],
+  "relations": []
+}

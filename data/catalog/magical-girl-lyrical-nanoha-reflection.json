@@ -1,0 +1,183 @@
+{
+  "id": "magical-girl-lyrical-nanoha-reflection",
+  "title": "Magical Girl Lyrical Nanoha: Reflection",
+  "native": "魔法少女リリカルなのはReflection",
+  "year": 2017,
+  "rating": 7.3,
+  "season": "Summer 2017",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b17947-TACbDdG8uJcq.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b17947-TACbDdG8uJcq.jpg",
+  "accent": "#e45d93",
+  "synopsis": "A pair of researchers remain on their dying planet of Eltria with their two daughters, Amitie and Kirie, in hopes of finding a way to revive the planet, but it was no use. Against her older sister's wishes, Kirie sets off with her childhood friend Iris to seek help from a distant alternate world. They arrive in Japan on Earth to search for the key to their planet's regeneration.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "magical-girl-lyrical-nanoha:-reflection-ox7m44",
+    "mal": 17947,
+    "anilist": 17947,
+    "kitsu": 8274
+  },
+  "skip_key_id": 17947,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "magical girl lyrical nanoha reflection 魔法少女リリカルなのはreflection movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Magical Girl Lyrical Nanoha: Reflection (Movie)",
+      "runtime": "107:00",
+      "runtime_seconds": 6420,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ad5adba33988c0d81f274b7-landscape.jpg",
+      "synopsis": "A pair of researchers remain on their dying planet of Eltria with their two daughters, Amitie and Kirie, in hopes of finding a way to revive the planet, but it was no use. Against her older sister's wishes, Kirie sets off with her childhood friend Iris to seek help from a distant alternate world. They arrive in Japan on Earth to search for the key to their planet's regeneration.\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "113697"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "CRIMSON BULLET",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ephemeral",
+      "artist": "Hina Aoki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Never Surrender",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Angel Blossom",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Pleasure treasure",
+      "artist": "Yukari Tamura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Destiny's Prelude",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hohoemi no Purumāju (微笑みのプルマージュ)",
+      "artist": "Yukari Tamura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Phantom Minds",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "My wish My love",
+      "artist": "Yukari Tamura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Secret Ambition",
+      "artist": "Nana Mizuki",
+      "episodes": "1-17"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hoshizora no Spica",
+      "artist": "Yukari Tamura",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Eternal Blaze",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Spiritual Garden",
+      "artist": "Yukari Tamura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "innocent starter",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Little Wish ~lyrical step~",
+      "artist": "Yukari Tamura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Bright Stream",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Massive Wonders",
+      "artist": "Nana Mizuki",
+      "episodes": "18-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Beautiful Amulet",
+      "artist": "Yukari Tamura",
+      "episodes": "15-26"
+    }
+  ],
+  "relations": []
+}

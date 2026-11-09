@@ -1,0 +1,408 @@
+{
+  "id": "mob-psycho-100-ii",
+  "title": "Mob Psycho 100 II",
+  "native": "モブサイコ100 II",
+  "year": 2019,
+  "rating": 8.7,
+  "season": "Winter 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101338-rokVscjRYzdP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101338-rokVscjRYzdP.jpg",
+  "accent": "#50e4f1",
+  "synopsis": "Kageyama is an ordinary 8th grader who just wants to live a normal life. Although he can disappear in the crowd in a flash, he was actually the most powerful psychic. The lives of those around Mob and his numerous feelings that softly piles up for the eventual explosion. The mysterious group \"Claw\" stands before him once again. In the midst of his youthful days, where will his roaring heart take him!?\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Mob Psycho 100 (2016)",
+    "Mob Psycho 100 III (2022)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 41071,
+    "anilist": 101338,
+    "mal": 37510,
+    "hianime": "mob-psycho-100-ii-vnva0v"
+  },
+  "skip_key_id": 37510,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 02:14:09",
+  "search_text": "mob psycho 100 ii モフ サイコ100 ii tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Ripped Apart ~Someone Is Watching~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241323/original.jpg",
+      "synopsis": "Reigen recieved a phone call at his office, the Spirits and Such Consultation Office. The client asked him to find out what the black shadow that kept destroying his fields actually was. Meanwhile, back at Salt Middle School, Kamuro announces that he's going to resign from the position of student council president. Elections to decide a new studnet council president are going to be held and Mezato convinces Mob to run as a candidate, but...",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 406,
+          "end": 496,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "241323"
+    },
+    {
+      "n": 2,
+      "title": "Urban Legends ~Encountering Rumors~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241324/original.jpg",
+      "synopsis": "Because of the lack of clients visiting or calling his office, Reigen decides to take his business on the road. They go to Cuticle City where there seems to be various urban legend sightings. They immediately get a request to deal with something called the Dragger. With the help of a local psychic they happened to meet named Shinra Banshomaru they go to take care of the Dragger as well as the other urban legends that plague the city.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 19,
+          "end": 109,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1346,
+          "end": 1436,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "241324"
+    },
+    {
+      "n": 3,
+      "title": "One Danger After Another ~Degeneration~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241325/original.jpg",
+      "synopsis": "Reigen sets up an official homepage for his Spirits and Such Consultation Office and he immediately starts to get jobs left and right, including a middle-aged man asking Reigen to curse someone and a woman who's being haunted by a ghost. As he was listening to their problems, Mob realizes something. Why do people treat humans and spirits so differently? Meanwhile, Reigen gets another request from a group of college students that want to take a photo at a haunted location, but...",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 24,
+          "end": 114,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1345,
+          "end": 1435,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "241325"
+    },
+    {
+      "n": 4,
+      "title": "Inside ~Evil Spirit~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241326/original.jpg",
+      "synopsis": "Reigen and Mob receive a new job. This time, their client is a wealthy man named Asagiri Masashi. He's not just rich, but super rich, so Reigen and Mob head to his mansion only to find other self-proclaimed psychics there as well. One of the psychics there happens to include the president of the Rising Sun Spiritual Union, Jodo Kirin. The job is apparently to exorcise the evil spirit that is apparently possessing his daughter, Minori.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 27,
+          "end": 117,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1346,
+          "end": 1436,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "241326"
+    },
+    {
+      "n": 5,
+      "title": "Discord ~Choices~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241327/original.jpg",
+      "synopsis": "Mob gets trapped inside a parallel world created by Mogami Keiji. Minori ends up transferring to his class, and Mob becomes the target of bullying. He can't ask anyone for help, and his negative emotions start to build inside. The truth behind the tragedy that Mogami went through when he was alive comes to light. Meanwhile, Reigen and the others were waiting for Mob to regain consciousness back at the Asagiri mansion. Dimple attempts to save Mob by infiltrating Minori's body.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 11,
+          "end": 101,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1432,
+          "end": 1450,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "241327"
+    },
+    {
+      "n": 6,
+      "title": "Poor, Lonely, Whitey",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241328/original.jpg",
+      "synopsis": "After hanging out with the Body Improvement Club and Telepathy Club more, Mob starts to feel joy like he'd never felt before. One day while he's having fun with them, he gets a call from Reigen, spoiling his fun. Mob asks Reigen to stop summoning him so suddenly, and Reigen just handles the situation in his usual overbearing manner. And because of something very minor, a gap forms between them. Reigen is forced to go on jobs without Mob, forcing him to reexamine himself.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 59,
+          "end": 149,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1345,
+          "end": 1435,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "241328"
+    },
+    {
+      "n": 7,
+      "title": "Cornered ~True Identity~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241329/original.jpg",
+      "synopsis": "After splitting up with Mob, Reigen starts doing a lot of the jobs on his own. He then gets an offer to appear on a TV program. Reigen is ecstatic and accepts the offer, but this was all a trap set by Jodo Kirin, the president of the Rising Sun Spiritual Union. Jodo corners him during the live filming of the show and the fact that Reigen is a fraud comes to light. Reigen gets bashed from all sides and ends up having to hold a press conference...",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 21,
+          "end": 111,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "241329"
+    },
+    {
+      "n": 8,
+      "title": "Even Then ~Continue Forward~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241330/original.jpg",
+      "synopsis": "The day for the annual marathon and Salt Middle School was drawing nearer. Mob proclaims that if he places in the top 10 he'll tell Tsubomi how he feels about her. Everyone around him cheers Mob on and he starts training hard every day until the day of the event. Meanwhile, Tsubomi and her friend Miki go to Reigen's Spirits and Such Consultation Office with a request. Ritsu happened to be at the office, helping out in Mob's absence, but he hears Tsubomi say something rather surprising.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 43,
+          "end": 133,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1346,
+          "end": 1436,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "241330"
+    },
+    {
+      "n": 9,
+      "title": "Show Me What You've Got ~Band Together~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241331/original.jpg",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 83,
+          "end": 173,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1345,
+          "end": 1435,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "241331"
+    },
+    {
+      "n": 10,
+      "title": "Collision ~Power Type~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241332/original.jpg",
+      "synopsis": "The boss of the Claw, Suzuki Toichiro barricades himself into Seasoning City Culture Tower after declaring war on the world. After instantly getting rid of the police barriers, they make their next move. Meanwhile, back at the hideout, Reigen and the others were making their move, as well. The former members of the 7th Division and the Awakening Lab head to the tower under Reigen's instruction. Sho and Ritsu also make their move to stop Suzuki's plans.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 52,
+          "end": 142,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1346,
+          "end": 1436,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "241332"
+    },
+    {
+      "n": 11,
+      "title": "Guidance ~Psychic Sensor~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241333/original.jpg",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 64,
+          "end": 154,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1314,
+          "end": 1404,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "241333"
+    },
+    {
+      "n": 12,
+      "title": "The Battle for Social Rehabilitation ~Friendship~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241334/original.jpg",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1346,
+          "end": 1436,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "241334"
+    },
+    {
+      "n": 13,
+      "title": "Boss Fight ~The Final Light~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259957/original.jpg",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "259957"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "1",
+      "artist": "MOB CHOIR",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Cobalt",
+      "artist": "MOB CHOIR",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ikiru Hitobito (いきるひとびと; Living Our Lives)",
+      "artist": "sajou no hana",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "99.9",
+      "artist": "MOB CHOIR feat. Sajou no hana",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Grey (グレイ)",
+      "artist": "sajou no hana",
+      "episodes": "1,7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Exist",
+      "artist": "MOB CHOIR",
+      "episodes": "4, 6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "MemoSepia (メモセピア)",
+      "artist": "sajou no hana",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Mabuta no Ura (目蓋の裏; Behind My Eyes)",
+      "artist": "sajou no hana",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Ikiru Hitobito (いきるひとびと; Living Our Lives)",
+      "artist": "sajou no hana",
+      "episodes": "13"
+    }
+  ],
+  "relations": []
+}

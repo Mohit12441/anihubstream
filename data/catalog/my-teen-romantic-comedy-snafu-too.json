@@ -1,0 +1,218 @@
+{
+  "id": "my-teen-romantic-comedy-snafu-too",
+  "title": "My Teen Romantic Comedy SNAFU TOO!",
+  "native": "やはり俺の青春ラブコメはまちがっている。続",
+  "year": 2015,
+  "rating": 8.1,
+  "season": "Spring 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20698-YZIYor2zW3Ta.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20698-YZIYor2zW3Ta.png",
+  "accent": "#e4bb93",
+  "synopsis": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku picks up immediately after the events of the first season, continuing the adventures of the Volunteer Service Club—the dispassionate Hachiman Hikigaya, the cheerful Yui Yuigahama, and the competitive Yukino Yukinoshita—as it dedicates itself to helping any student with issues that they may face.\n\nWith the rift among his own group widening, Hachiman begins to realize that his knack for quickly getting to the root of other people's troubles is a double-edged sword: sometimes the best solution is not necessarily the most appropriate one.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "my-teen-romantic-comedy-snafu-too!-ld6qc8",
+    "mal": 23847,
+    "anilist": 20698,
+    "kitsu": 8478
+  },
+  "skip_key_id": 23847,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "my teen romantic comedy snafu too やはり俺の青春ラフ コメはまちか っている 続 tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Nobody Knows Why They Came to the Service Club.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175974/original.jpg",
+      "synopsis": "The cultural festival has ended, and it's now November. Hachiman and company are preparing for a field trip when Hayama and Tobe pay a visit to the Service Club to ask for help with matters of love. But behind the scenes, Hayama and the others in the guys' group have their own plans...",
+      "airdate": "2015-04-03",
+      "markers": [],
+      "external_id": "175974"
+    },
+    {
+      "n": 2,
+      "title": "His and Her Confessions Will Reach No One.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175975/original.jpg",
+      "synopsis": "Hachiman and the Service Club are working to solve their classmates' relationship issues during their field trip in Kyoto. As the classmates visit various tour spots in their respective groups, Hachiman makes a realization, and arrives at an unexpected solution...",
+      "airdate": "2015-04-10",
+      "markers": [],
+      "external_id": "175975"
+    },
+    {
+      "n": 3,
+      "title": "Quietly, Yukinoshita Yukino Makes a Decision.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175976/original.jpg",
+      "synopsis": "Yukino and Yui couldn't hide their shock after the action Hachiman took on their field trip. The mood in the Service Club is awkward when they're approached with a new request. Isshiki Iroha has been entered in the running for student council president as a prank, and she wants help getting out of the election without making herself look bad.",
+      "airdate": "2015-04-17",
+      "markers": [],
+      "external_id": "175976"
+    },
+    {
+      "n": 4,
+      "title": "And Then, Yuigahama Yui Makes a Declaration.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175977/original.jpg",
+      "synopsis": "Hachiman still hasn't found a solution to the student council president election issue before he ends up on a double date with Orimoto and her friend at Hayama's request (and Haruno's threatening).",
+      "airdate": "2015-04-24",
+      "markers": [],
+      "external_id": "175977"
+    },
+    {
+      "n": 5,
+      "title": "The Scent of Tea Doesn`t Fill That Room Anymore.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175978/original.png",
+      "synopsis": "Hachiman wasn't able to consult with anyone about the student council president election or the Service Club, but after a conversation with his sister Komachi, he's finally able to take action. Komachi wants both Yukino and Yui to remain in the Service Club, so Hachiman ponders what he can do himself.",
+      "airdate": "2015-05-01",
+      "markers": [],
+      "external_id": "175978"
+    },
+    {
+      "n": 6,
+      "title": "Without Incident, The Congress Dances, But Does Not Progress.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175979/original.jpg",
+      "synopsis": "After the student council election, Hachiman has his reservations as to whether he made the right choice. Iroha then brings the Service Club a request to help with a Christmas event being planned jointly with another school. With Yui eager to accept the request, Yukino has difficulty deciding what to do out of her own will, but Hachiman makes a decision of his own...",
+      "airdate": "2015-05-08",
+      "markers": [],
+      "external_id": "175979"
+    },
+    {
+      "n": 7,
+      "title": "Yet, That Room Continues to Play Out the Endless Days.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175980/original.jpg",
+      "synopsis": "All the people on the student council that Iroha's group is planning the Christmas event with are people who only want to make themselves look smart. They \"brainstorm\" and throw around \"flash ideas\" about a \"grand design\" to work toward a \"synergistic effect,\" only responding to one another with \"That'll work!\" and making no actual decisions.",
+      "airdate": "2015-05-15",
+      "markers": [],
+      "external_id": "175980"
+    },
+    {
+      "n": 8,
+      "title": "But Still, Hikigaya Hachiman Is...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175981/original.png",
+      "synopsis": "\"You don't have to force yourself to attend anymore...\" Yukino's words leave Hachiman in deep turmoil as he reflects on his way of doing things. Hiratsuka finds him leaving the Christmas event planning meeting and gives him some advice, guiding him toward an answer...",
+      "airdate": "2015-05-22",
+      "markers": [],
+      "external_id": "175981"
+    },
+    {
+      "n": 9,
+      "title": "And, Yukinoshita Yukino Is...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175982/original.jpg",
+      "synopsis": "Hachiman agonizes as he remembers his own words, but all three members of the Service Club are now helping with the Christmas event together. Hiratsuka-sensei hands them tickets to Destiny Land and tells them to go find out what Christmas really means. The trio is joined by Iroha, Hayama, Miura, Ebina, and Tobe, but Hachiman and Yukino end up separated from the others. Meanwhile, as fireworks light the sky, Iroha takes a surprising action...",
+      "airdate": "2015-05-29",
+      "markers": [],
+      "external_id": "175982"
+    },
+    {
+      "n": 10,
+      "title": "The Thing That the Light in Each of Their Hands Shines On.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175983/original.png",
+      "synopsis": "Tamanawa and his schoolmates still can't make any decisions, and Hachiman and Yukino directly point out the irresponsibility and emptiness of their words. By laying everything out clearly, Iroha and the Service Club manage to guide the Christmas event toward success. Things are finally peaceful again in the Service Club, and then, after New Year's, Hachiman and Yui set out to find a birthday gift for Yukino...",
+      "airdate": "2015-06-05",
+      "markers": [],
+      "external_id": "175983"
+    },
+    {
+      "n": 11,
+      "title": "Hayama Hayato Always Responds to Everyone's Expectations.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175984/original.jpg",
+      "synopsis": "As a rumor that Yukino and Hayama are a couple floats around the school, Miura approaches the Service Club to ask them to find out Hayama's plans for the future. When Hayama refuses to answer, Hachiman devises a plan utilizing the school marathon race...",
+      "airdate": "2015-06-12",
+      "markers": [],
+      "external_id": "175984"
+    },
+    {
+      "n": 12,
+      "title": "Still, the Thing He Seeks Is Out of Reach, and He Continues to Mistake What's Real",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175985/original.jpg",
+      "synopsis": "As Valentine's Day draws near, Miura and Iroha approach the Service Club for advice on giving chocolate to Hayama. Since Hayama doesn't accept gifts of chocolate, Hachiman suggests holding a cooking class so the girls can have Hayama taste-test the chocolates they make.",
+      "airdate": "2015-06-19",
+      "markers": [],
+      "external_id": "175985"
+    },
+    {
+      "n": 13,
+      "title": "Spring, Bound Beneath the Thick Snow, Begins to Sprout.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/175986/original.jpg",
+      "synopsis": "As Yukino is leaving school, Haruno shows up and says their mother suggested she live at Yukino's place with her for a while. With nowhere else to go, Yukino takes up Yui's invitation to spend the night at the Yuigahama home. When Yui asks Yukino what she wants to do, she's unable to answer. Then Yui comes to a decision that could change the relationship between the three Service Club members. How will Yukino and Hachiman answer?",
+      "airdate": "2015-06-26",
+      "markers": [],
+      "external_id": "175986"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Harumodoki (春擬き;Pseudo-Spring)",
+      "artist": "Nagi Yanagi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Everyday World -Ballade Arrange- Yui Solo Ver. (エブリデイワールド -Ballade Arrange- Yui Solo Ver.)",
+      "artist": "Nao Toyama",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Everyday World -Ballade Arrange- Yukino Solo Ver. (エブリデイワールド -Ballade Arrange- Yukino Solo Ver.)",
+      "artist": "Saori Hayami",
+      "episodes": "07"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Everyday World (エブリデイワールド)",
+      "artist": "Saori Hayami & Nao Tōyama",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

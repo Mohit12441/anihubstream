@@ -1,0 +1,353 @@
+{
+  "id": "kabaneri-of-the-iron-fortress",
+  "title": "Kabaneri of the Iron Fortress",
+  "native": "甲鉄城のカバネリ",
+  "year": 2016,
+  "rating": 7.1,
+  "season": "Spring 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21196-2PfPfIDrxKki.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21196-2PfPfIDrxKki.jpg",
+  "accent": "#e48650",
+  "synopsis": "As the world is in the middle of an industrial revolution, a monster appears that cannot be defeated unless its heart, which is protected by a layer of iron, is pierced. By infecting humans with its bite, the monster can create aggressive and undead creatures known as Kabane. On the island Hinomoto, located in the far east, people have built stations to shelter themselves from these creatures. People access the station, as well as transport wares between them, with the help of a locomotive running on steam, called Hayajiro. Ikoma, a boy who lives in the Aragane station and helps to build Hayajiro, creates his own weapon called Tsuranukizutsu in order to defeat the creatures. One day, as he waits for an opportunity to use his weapon, he meets a girl named Mumei, who is excused from the mandatory Kabane inspection. During the night, Ikoma meets Mumei again as he sees Hayajiro going out of control. The staff on the locomotive has turned into the creatures. The station, now under attack by Kabane, is the opportunity Ikoma has been looking for.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Kabaneri of the Iron Fortress: The Battle of Unato (2019)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 10036,
+    "anilist": 21196,
+    "mal": 28623
+  },
+  "skip_key_id": 28623,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 06:39:36",
+  "search_text": "kabaneri of the iron fortress 甲鉄城のカハ ネリ tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Frightened Corpse",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185456/original.jpg",
+      "synopsis": "Kabane, the immortal monsters, attacked Aragane Station. Ikoma, a steamsmith boy who lives in Aragane Station, ran against the waves of terrified civilians. He is going to fight against Kabane using the weapon he has been secretly developing - the Piercing gun. He fights for his own past and dignity.",
+      "airdate": "2016-04-08",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1286,
+          "end": 1320
+        }
+      ],
+      "external_id": "185456"
+    },
+    {
+      "n": 2,
+      "title": "Never-Ending Darkness",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185457/original.jpg",
+      "synopsis": "Ikoma somehow survives and heads towards the last Hayajiro left in Kenkin Station, the Kotetsujyo. Meanwhile, Ayame and her people were left behind to fend off the Kabane when a young girl named Mumei appears before them. The girl clears open a path to the Kotetsujyo with incredible combat prowess.",
+      "airdate": "2016-04-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 5,
+          "end": 95
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1320
+        }
+      ],
+      "external_id": "185457"
+    },
+    {
+      "n": 3,
+      "title": "Prayer Offer",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185458/original.jpg",
+      "synopsis": "Having escaped Kenkin Station, the Kotetsujyo heads for Kongokaku, the Shogunate's fortress. However, the people on the Kotetsujyo quickly turn against Ikoma and Mumei and attempt to drive them off the train. Having been thrown into her leadership position, Ayame lacks the power to subdue them...",
+      "airdate": "2016-04-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 108,
+          "end": 198
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1320
+        }
+      ],
+      "external_id": "185458"
+    },
+    {
+      "n": 4,
+      "title": "Flowing Blood",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185459/original.jpg",
+      "synopsis": "The other people lock Ikoma and Mumei into the rear car. But that means the Kotetsujyo has lost two of their best fighters. Just then, the Kabane attack. What's more, among them is a Wazatori, a Kabane that has the ability to learn and become stronger with each battle...",
+      "airdate": "2016-05-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 108,
+          "end": 198
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1320
+        }
+      ],
+      "external_id": "185459"
+    },
+    {
+      "n": 5,
+      "title": "Inescapable Darkness",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185460/original.jpg",
+      "synopsis": "The Kotetsujyo picks up survivors from Yatsushiro Station which has been destroyed by the Kabane. Among the survivors is Enoku, an old friend of Mumei's. He points out to Mumei how weak she'd become as he witnessed how close she's grown to the people of the Kotetsujyo. Rattled, Mumei chooses to throw herself into a reckless fight and finds herself in a dangerous situation.",
+      "airdate": "2016-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 179,
+          "end": 269
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1320
+        }
+      ],
+      "external_id": "185460"
+    },
+    {
+      "n": 6,
+      "title": "Gathering Light",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185461/original.jpg",
+      "synopsis": "The Kotetsujyo is standing before a giant cluster of Kabane, the Black Smoke, and all seems hopeless. Meanwhile, Ikoma and Mumei find themselves at the bottom of an abandoned station. Surrounded by Kabane, Mumei buried under rubble, and no backup in sight, the situation is dire, yet Ikoma still somehow stands forward to face it.",
+      "airdate": "2016-05-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 120,
+          "end": 210
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1320
+        }
+      ],
+      "external_id": "185461"
+    },
+    {
+      "n": 7,
+      "title": "Begging the Heavens",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185462/original.jpg",
+      "synopsis": "The Kotetsujyo arrives at Shitori Station, the first populated station it's encountered since leaving Kenkin Station. Ikoma and the others leave to shop for some supplies, and experience their first moment of peace in ages. Meanwhile, Ayame negotiates with Shitori Station to see if they could spare some food, but food is precious everywhere...",
+      "airdate": "2016-05-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 90,
+          "end": 180
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1320
+        }
+      ],
+      "external_id": "185462"
+    },
+    {
+      "n": 8,
+      "title": "The Silent Hunter",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185463/original.jpg",
+      "synopsis": "The older brother Mumei serves is Biba Tenshin, leader of the Hunters - a special division dedicated to hunting Kabane. However, while the people praise Biba as a hero, Ikoma does not trust him. That is because he is the one who turned Mumei into a Kabaneri.",
+      "airdate": "2016-06-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 110,
+          "end": 200
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1320
+        }
+      ],
+      "external_id": "185463"
+    },
+    {
+      "n": 9,
+      "title": "Fang of Ruin",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185464/original.jpg",
+      "synopsis": "The Shogunate closes off the path to Kongokaku because they are wary of Biba and the support he's managed to garner. Biba seeks an audience with the Lord of Iwado Station and kills him at the meeting once its granted. Biba and his Hunters' overthrow of the Shogunate has begun.",
+      "airdate": "2016-06-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 61,
+          "end": 151
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1320
+        }
+      ],
+      "external_id": "185464"
+    },
+    {
+      "n": 10,
+      "title": "The Attacking Weak",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185465/original.jpg",
+      "synopsis": "The Kotetsujyo had been linked to the Kokujyo, and Takumi and the others were under the rule of the Hunters who demanded their blood be collected. While people fell into despair, not everyone has given up hope as Ikoma devises a counteroffensive. He has to take back his freedom, his pride, and Mumei.",
+      "airdate": "2016-06-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 129
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1320
+        }
+      ],
+      "external_id": "185465"
+    },
+    {
+      "n": 11,
+      "title": "Burning Life",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185466/original.jpg",
+      "synopsis": "Biba reunites with his father Shogun Koukyo after 10 years. Behind the scenes, Mumei's Nue stands ready. Meanwhile, Ikoma has lost his confidence and willpower, a mere shell of his former self. Ikoma can only cower at the sight of the Kabane now, however...",
+      "airdate": "2016-06-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1320
+        }
+      ],
+      "external_id": "185466"
+    },
+    {
+      "n": 12,
+      "title": "Koutetsujou",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185467/original.jpg",
+      "synopsis": "Biba's plan, Mumei's Nue transformation, and the influx of Kabane were all too much for Kongokaku to withstand. That is when Ikoma arrives. Having modified his body once again, Ikoma enters Kongokaku in order to rescue Mumei, despite the danger he will have to face.",
+      "airdate": "2016-07-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 53,
+          "end": 143
+        }
+      ],
+      "external_id": "185467"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sakaseyasakase (咲かせや咲かせ)",
+      "artist": "EGOIST",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "KABENERI OF THE IRON FORTRESS",
+      "artist": "EGOIST",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Grenzlinie",
+      "artist": "Cyua",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ninelie",
+      "artist": "Aimer × chelly",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

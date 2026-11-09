@@ -1,0 +1,232 @@
+{
+  "id": "mf-ghost",
+  "title": "MF Ghost",
+  "native": "MF Ghost",
+  "year": 2023,
+  "rating": 7.6,
+  "season": "Year 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/68fb2853a7ef02e7e6131bdc-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/68fb2853a7ef02e7e6131bdc-landscape.webp",
+  "accent": "#8b5cf6",
+  "synopsis": "As electric vehicles dominate everyday life in the 2020s, interest in traditional combustion engine cars is maintained through a motorsports series known as the MFG. Hundreds of ambitious drivers, with a staggering 30 million viewers online, fiercely compete for a spot in the Godly Fifteen—the leading 15 racers—and a chance at the grand prize of 100 million yen. Among these individuals aiming for the top is 19-year-old Kanata Rivington.\n\nHaving attended a famous racing school in England, Kanata sets his sights on the upcoming MFG tournament and enrolls in the competition under the alias \"Kanata Katagiri.\" In comparison to his opponents' flashy vehicles, Kanata's Toyota 86 GT, passed down from a former MFG contestant, puts him at a considerable disadvantage. Kanata receives guidance from a Godly Fifteen member, but he still treats the MFG as only a stepping stone for his true goal: locating his estranged father. Meanwhile, Kanata's appearance sends shockwaves through the scene as his driving style eerily resembles that of a once legendary racer.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "mf-ghost-lerixj",
+    "mal": 50695,
+    "anilist": 143327,
+    "kitsu": 45713
+  },
+  "skip_key_id": 50695,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "mf ghost mf ghost",
+  "genres": [
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The White Reaper Descends",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/262c017cb79bbdd74e6fbe7003f2e6731728230343_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "352653"
+    },
+    {
+      "n": 2,
+      "title": "The 4x4 Attack",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/108675fb6dd4709a396439790c3b3a031728833170_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "352654"
+    },
+    {
+      "n": 3,
+      "title": "The Relay Straight Yin-Yang",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d442a12c3d2c538772fdba0aa7578ec81729432868_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "357572"
+    },
+    {
+      "n": 4,
+      "title": "Sawatari Koki, the Demon God",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/7538e0c001c22d7970772886601194481730027358_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "357573"
+    },
+    {
+      "n": 5,
+      "title": "A Cruel Reality",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/404388793b8a31f041d5b509ea3f16da1730646472_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "357574"
+    },
+    {
+      "n": 6,
+      "title": "The Devil of Ashinoko Skyline",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e93b267173d48ef42d1cc3c9be75cb6b1731235331_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "357575"
+    },
+    {
+      "n": 7,
+      "title": "Lonesome Cowboy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/f5e9a246e0c62d4e78a97af1bc371ed01731843806_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "357576"
+    },
+    {
+      "n": 8,
+      "title": "The Conclusion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5463c2f9010a6fcd0d7927fa7cc380981732458256_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "357577"
+    },
+    {
+      "n": 9,
+      "title": "The Rival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/397d52b578abde86b9a638a966678dc51733068808_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "357578"
+    },
+    {
+      "n": 10,
+      "title": "The Peninsula Opens",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/ac5404bbb04f78effef3db5867328f611733663701_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "357579"
+    },
+    {
+      "n": 11,
+      "title": "The Cost of Courage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/7d933bf0bec268311efcc34393cdeb051734265838_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "357580"
+    },
+    {
+      "n": 12,
+      "title": "A Bitter Decision",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/c271b2531341cc3e8c774ed07d1d82fe1734879739_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "357581"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "TIMELESS POWER feat. MOTSU",
+      "artist": "Yū Serizawa",
+      "episodes": "25-29, 33-36"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yokan no Tochū Prod. ☆Taku Takahashi (m-flo) (予感の途中)",
+      "artist": "Himika Akaneya",
+      "episodes": "25-29, 31-33, 35"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "ROCK ME KISS ME feat. MOTSU",
+      "artist": "Yū Serizawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Side U (Prod. AmPm)",
+      "artist": "Himika Akaneya",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "JUNGLE FIRE feat. MOTSU",
+      "artist": "Yū Serizawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Stereo Sunset (Prod. AmPm)",
+      "artist": "Himika Akaneya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Ready to Go",
+      "artist": "Mega NRG Man",
+      "episodes": "34"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "TIMELESS POWER feat. MOTSU",
+      "artist": "Yū Serizawa",
+      "episodes": "37"
+    }
+  ],
+  "relations": []
+}

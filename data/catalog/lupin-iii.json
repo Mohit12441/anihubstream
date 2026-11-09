@@ -1,0 +1,914 @@
+{
+  "id": "lupin-iii",
+  "title": "Lupin III",
+  "native": "Lupin III",
+  "year": 1971,
+  "rating": 7.6,
+  "season": "Year 1971",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/69201a844588af0abca8359c-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/69201a844588af0abca8359c-landscape.webp",
+  "accent": "#ff9420",
+  "synopsis": "Arsène Lupin III is the grandson of world-famous thief Arsène Lupin, and he's living up to his grandfather's memory as a high-profile thief himself. Due to his infamy, Lupin III attracts the attention of the persistent Inspector Zenigata of the ICPO, as well as rival criminals. Lupin III's criminal lifestyle even seeps into his love life. The main woman in Lupin III's world is femme fatale Fujiko Mine, who Lupin III can never tell is working with or against him. Follow Lupin and his gunman partner Daisuke Jigen on their quest to own the world－or at least the valuable bits!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "lupin-iii-dbxord",
+    "mal": 1412,
+    "anilist": 1412,
+    "kitsu": 1265
+  },
+  "skip_key_id": 1412,
+  "skip_key_space": "mal",
+  "episode_total": 23,
+  "added_at": null,
+  "search_text": "lupin iii lupin iii",
+  "genres": [
+    "adventure",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Is Lupin Burnin…?!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22924/original.jpg",
+      "synopsis": "The Hida Speedway has been completed and Lupin is looking to take top prize at the first race. Unfortunately for him, the race is an elaborate trap designed by the Scorpion Gang; they want to kill him and elminate all criminal competition.\n\nWith Zenigata watching his every move and Scorpion holding Fujiko hostage, can Lupin outmaneuver them all in his Formula-1 Ferrari?!",
+      "airdate": "1971-10-24",
+      "markers": [],
+      "external_id": "22924"
+    },
+    {
+      "n": 2,
+      "title": "The Man They Called a Magician",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22925/original.jpg",
+      "synopsis": "Fujiko has stolen something from a man named Pycal, and he wants it back. Normally, Lupin would have no problem dealing with him, but Pycal can shoot flame from his hands, can walk on air, and can have bullets bounce right off of him!\n\nCan Lupin and Jigen discover Pycal's secret before it is too late?!",
+      "airdate": "1971-10-31",
+      "markers": [],
+      "external_id": "22925"
+    },
+    {
+      "n": 3,
+      "title": "Farewell My Beloved Witch",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22926/original.jpg",
+      "synopsis": "A boat collision ruins Lupin and Fujiko's quiet boating expedition. They discover a woman named Linda in the other boat just as gunmen on a larger boat attack them. After avoiding the gunboat, they learn she is the assistant to a world-renowned expert in nuclear fission. She lived on an island with the doctor. Unfortunately, the island also housed the \"Kirein Killers\" (\"Killers of the Sea\").",
+      "airdate": "1971-11-07",
+      "markers": [],
+      "external_id": "22926"
+    },
+    {
+      "n": 4,
+      "title": "One Chance to Breakout",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22927/original.jpg",
+      "synopsis": "Lupin and Fujiko successfully pull off a heist; that is, until Zenigata manages to shoot Lupin with a tranquilizer dart. Zenigata hauls Lupin off to jail.\n\nDespite Fujiko's best efforts, she cannot break Lupin out of prison, and Jigen provides no help claiming that Lupin can leave whenever he wants. One year passes, and Lupin's execution day draws near. Is this the end of our favorite thief?!",
+      "airdate": "1971-11-14",
+      "markers": [],
+      "external_id": "22927"
+    },
+    {
+      "n": 5,
+      "title": "The Coming of Goemon the Thirteenth",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22928/original.jpg",
+      "synopsis": "Ishikawa Goemon is the thirteenth direct descendant of a famous samurai highwayman of the same name. Goemon's mentor has given him a mission; find Lupin and use his invincible sword Zantetsuken to carve Lupin into tiny pieces.\n\nLittle does Goemon or Lupin know that Goemon's mentor and Fujiko are working together for other purposes. Can Lupin discover their plot and avoid becoming thief sashimi?",
+      "airdate": "1971-11-21",
+      "markers": [],
+      "external_id": "22928"
+    },
+    {
+      "n": 6,
+      "title": "Rainy Afternoons Are Bad",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22929/original.jpg",
+      "synopsis": "One rainy afternoon, a man seeks Lupin's help on behalf of a young woman. The young woman turns out to be Fujiko who is naturally after a piece of jewelry.\n\nThis is no ordinary piece of jewelry though. The Star of Killamanjaro diamond was implanted into the chest of a mob boss. This boss had his memory wiped but died days before it was to be restored. Now, Lupin and the gang are after the ambulance carrying the corpse and the diamond in it.\n\nNaturally, Zenigata is in charge of the ambulance and its escort. Who will get to the diamond first?",
+      "airdate": "1971-11-28",
+      "markers": [],
+      "external_id": "22929"
+    },
+    {
+      "n": 7,
+      "title": "A Wolf Calls a Wolf",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22930/original.jpg",
+      "synopsis": "Three scrolls contain the secret of creating a blade like the Zantetsuken. Lupin wants to steal them as a matter of family pride. His grandfather stole them in the 19th century. Lupin's father stole from a swordsman a dagger forged using the same process. The swordsman challenged Lupin II to a duel and lost. But, he managed to steal the scrolls for himself.\n\nNow, Lupin means to steal them back but must face Goemon and Fujiko's own plans for acquiring the scrolls themselves. Who will get to the scrolls first? Can Lupin restore his family pride?",
+      "airdate": "1971-12-05",
+      "markers": [],
+      "external_id": "22930"
+    },
+    {
+      "n": 8,
+      "title": "The All-Together Playing-Card Operation",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22931/original.jpg",
+      "synopsis": "Napoleon once owned a deck of fortune-telling cards. These cards have come into the hands of the millionaire known as Mr. Gold. Lupin plans to steal them during Mr. Gold's birthday party, and Zenigata plans to stop him!\n\nLupin succeeds in stealing them, but the cards appear to have a mystic secret. Will Mr. Gold be successful in getting the cards back? And what secrets do the cards hold for Lupin and the gang?",
+      "airdate": "1971-12-12",
+      "markers": [],
+      "external_id": "22931"
+    },
+    {
+      "n": 9,
+      "title": "Killer Sings the Blues",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22932/original.jpg",
+      "synopsis": "Lupin and the gang aim to steal the plans for a new computer. In their way is a man skilled with the machine gun and his hit man partner named Poon.\n\nThe gang succeeds but not before Poon and Fujiko come face to face. Poon and Fujiko used to be a team in the past, but things went wrong. Poon's boss shots Fujiko before they can have a proper reunion. Lupin manages to get Fujiko back to their hideout, but she is near death.\n\nPoon and his boss follow Lupin back to their hideout and manage to oust Lupin from his hideout leaving a dying Fujiko inside. It is now a race against time as Lupin must try to save Fujiko's life. And what secret history do Fujiko and Poon share?",
+      "airdate": "1971-12-19",
+      "markers": [],
+      "external_id": "22932"
+    },
+    {
+      "n": 10,
+      "title": "Hunt Down the Counterfeiter!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22933/original.jpg",
+      "synopsis": "Lupin and Baron Ukraine are both after the world's most skilled counterfeiter. Normally, Lupin would have no problem beating the Baron, but the Baron has hired Fujiko and and a man called Flinch to kill him.\n\nWho can get to the counterfeiter first?!",
+      "airdate": "1971-12-26",
+      "markers": [],
+      "external_id": "22933"
+    },
+    {
+      "n": 11,
+      "title": "When the Seventh Bridge Falls",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22934/original.jpg",
+      "synopsis": "Someone is posing as Lupin and is blowing up bridges causing a lot of damage and injuries. Lupin and Jigen discover that the bomber is trying to force an armored car to travel along a route of his choosing.\n\nThey track down the bomber, but he forces Lupin and Jigen to attempt to rob the armored car. He threatens to kill a girl named Lisa that he kidnapped unless Lupin and Jigen perform the job.\n\nCan Lupin and Jigen pull off the job and save the girl?",
+      "airdate": "1972-01-02",
+      "markers": [],
+      "external_id": "22934"
+    },
+    {
+      "n": 12,
+      "title": "Who Had the Last Laugh?",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22935/original.jpg",
+      "synopsis": "Fujiko is racing against a criminal organization to acquire a pair of gold statues that are owned by a snowbound village in the mountains.\n\nLupin naturally throws his hat into the ring and attempts to acquire the statues. The village elder is caught between being a pawn of the criminal organization and his desire to sell the statues to help his village.\n\nAs the three combatants square off for the statues, who will end up having the last laugh?",
+      "airdate": "1972-01-09",
+      "markers": [],
+      "external_id": "22935"
+    },
+    {
+      "n": 13,
+      "title": "Beware the Time Machine!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22936/original.jpg",
+      "synopsis": "Mamo Kyosuke claims that Lupin will disappear from the world in four days. He claims that he is a time traveler from 2874 seeking revenge.\n\nApparently, Lupin XIII destroyed the Mamo clan on 31 March 2874; Kyosuke has traveled back in time to destroy Lupin III preventing his clan's future destruction.\n\nKyosuke backs his claims up by traveling into the past and killing the builder of a castle causing it to disappear in front of Lupin's eyes. As time runs out for Lupin, can he discover Kyosuke's secrets? Is he all he appears to be?",
+      "airdate": "1972-01-16",
+      "markers": [],
+      "external_id": "22936"
+    },
+    {
+      "n": 14,
+      "title": "The Emerald's Secret",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22937/original.jpg",
+      "synopsis": "Lupin and Fujiko are both after the legendary Eye of the Nile emerald. It is going to be a wedding gift presented on the yacht holding the wedding.\n\nLupin and Fujiko learn that Catherine Burgess, Queen of Hollywood, has lured them there to liven up her otherwise dull wedding party. Can Lupin and Fujiko find the emerald before being caught by Zenigata?",
+      "airdate": "1972-01-23",
+      "markers": [],
+      "external_id": "22937"
+    },
+    {
+      "n": 15,
+      "title": "Let's Catch Lupin and Go to Europe",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22938/original.jpg",
+      "synopsis": "Zenigata has been invited to an international police convention in Europe; his chief wants him to go, but Zenigata does not want to since Lupin has declared that he will steal a gold bust within the next three days. Zenigata vows to catch Lupin before going to the convention.\n\nLupin learns of this and begins to hatch a scheme that involves him being captured by Zenigata intentionally! What can Lupin be thinking?!",
+      "airdate": "1972-01-30",
+      "markers": [],
+      "external_id": "22938"
+    },
+    {
+      "n": 16,
+      "title": "Operation Jewel Snatch",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22939/original.jpg",
+      "synopsis": "Fujiko goads Lupin into stealing a large shipment of diamonds. Lupin takes the task despite Jigen's protest that Fujiko is playing them for fools.\n\nOf course, Jigen is right. Just who will end up with the diamonds?",
+      "airdate": "1972-02-06",
+      "markers": [],
+      "external_id": "22939"
+    },
+    {
+      "n": 17,
+      "title": "Lupin Caught in a Trap",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22940/original.jpg",
+      "synopsis": "Fujiko invites Lupin and the gang to a famous night club owned by the sexy Hoshikage Rinko. Only Goemon refuses. This was a wise move as Rinko places timebombs on Fujiko, Jigen, and Lupin. They must cough up 3,000,000,000¥ within twenty-four hours if they want the bombs removed.\n\nWith the clock ticking, can Lupin come up with a scheme to get that much money?",
+      "airdate": "1972-02-13",
+      "markers": [],
+      "external_id": "22940"
+    },
+    {
+      "n": 18,
+      "title": "Keep an Eye On the Beauty Contest",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22941/original.jpg",
+      "synopsis": "Smith is an art thief that is selling stolen paintings under the guise of a beauty contest. Can Lupin manage to outwit Smith and make off with the paintings?",
+      "airdate": "1972-02-20",
+      "markers": [],
+      "external_id": "22941"
+    },
+    {
+      "n": 19,
+      "title": "Which of the Third Generation Will Win!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22942/original.jpg",
+      "synopsis": "Inspector Ganimard III is the grandson of Lupin I's arch nemesis. He has come to Japan has the head of security for the 1972 France Fair but also intends to restore his family's honor by arresting Lupin III.\n\nGanimard publicly baits Lupin into trying to steal the Fair's exhibits by insulting Lupin's family pride. Ganimard is convinced that reason and science will capture Lupin. Lupin takes up the challenge, and the third generation duel is on!",
+      "airdate": "1972-02-27",
+      "markers": [],
+      "external_id": "22942"
+    },
+    {
+      "n": 20,
+      "title": "Catch the Phony Lupin!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22943/original.jpg",
+      "synopsis": "Someone is committing thefts under Lupin's name. Lupin follows the impostors back to their island hideout. He has apparently stumbled into a whole island of thieves. Can Lupin learn their secrets and escape with his life?",
+      "airdate": "1972-03-05",
+      "markers": [],
+      "external_id": "22943"
+    },
+    {
+      "n": 21,
+      "title": "Rescue the Tomboy!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22944/original.jpg",
+      "synopsis": "Rie is being held captive though she does not realize it. She believes the man holding her is a friend of her father, Ken Makita. Lupin shows up to rescue her. Rie does not want to be rescued by Lupin and does not understand why he is trying to.\n\nLupin's father was a friend of Rie's father. The \"friend\" is Jooji Takigawa; he is holding Rie hostage in an attempt to get her father out of retirement to do his bidding. Can Lupin uphold his family honor by saving Rie?",
+      "airdate": "1972-03-12",
+      "markers": [],
+      "external_id": "22944"
+    },
+    {
+      "n": 22,
+      "title": "The First Move Wins Computer Operation!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22945/original.jpg",
+      "synopsis": "Gordon, an FBI computer specialist, is in Japan to operate a computer capable of predicting crimes and determining how to stop them. The Metropolitan Police Dept. hopes that this will finally help them capture Lupin.\n\nZenigata is unimpressed and warns that the machine will not be able to stop Lupin. For once, Zenigata and Lupin see eye to eye. Lupin sets out to prove that the computer is no match for his intellect. Who will win? Man or machine?",
+      "airdate": "1972-03-19",
+      "markers": [],
+      "external_id": "22945"
+    },
+    {
+      "n": 23,
+      "title": "The Great Gold Showdown!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/22946/original.jpg",
+      "synopsis": "A disputed horde of recently discovered ancient gold coins draws the attention of Lupin and company. As the ownership of the coins is disputed, Lupin decides to settle the matter on his own by stealing them from the Dai Nippon Bank.\n\nAfter a dispute with his chief, Zenigata resigns and vows to stop Lupin on his own in one final showdown. As each man races after his prize, who will win this climatic series showdown?\n\nNote:\nThis episode features a rare extended sequence of Jigen without his hat, as well as a brief shot of animation director Ootsuka Yasuo driving by in his Army surplus jeep, and another of he and Miyazaki looking under the hood.",
+      "airdate": "1972-03-26",
+      "markers": [],
+      "external_id": "22946"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THEME FROM LUPIN vs CAT'S EYE",
+      "artist": "fox capture plan",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Theme From Lupin III 2019 ~ Playback '80",
+      "artist": "You & Explosion Band",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Lupin III no Theme 2019",
+      "artist": "Yuji Ohno & Lupintic Six with Friends feat. Shigeru Matsuzaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Super Hero 2019",
+      "artist": "Yuji Ohno & Lupintic Six with Friends feat. Shigeru Matsuzaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin III 2019",
+      "artist": "You & Explosion Band",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gift",
+      "artist": "You & Explosion Band featuring Lyn Inaizumi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme From Lupin III 2019～classical piano ver.",
+      "artist": "Yuji Ohno & Lupintic Six",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kalanchoe Forever ! (カランコエＦｏｒｅｖｅｒ！)",
+      "artist": "Miyuki Sawashiro",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kalanchoe Forever! (カランコエ Forever!)",
+      "artist": "Yuji Ohno & Lupintic Six with Friends featuring Miyuki Sawashiro",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THEME FROM LUPIN III 2015",
+      "artist": "You & Explosion Band",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Melancholy Baby (メランコリー・ベイビー)",
+      "artist": "Shiori Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Lupin, un ladro in vacanza",
+      "artist": "Moreno featuring Giorgio Vanni [Italian Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme of Lupin III 2015",
+      "artist": "You & Explosion Band [Japanese Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "U belong to me",
+      "artist": "Meg [International Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "U Belong to Me",
+      "artist": "Meg featuring Osaka Monaurail [International Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Chanto Iwanakya Ai Sanai (ちゃんと言わなきゃ愛さない; I Won't Love You If You Don't Say It Straight)",
+      "artist": "Sayuri Ishikawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Don’t leave me",
+      "artist": "Sweep [International Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Don’t Leave Me",
+      "artist": "SWEEP featuring Osaka Monaurail [International Version]",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lupin, un ladro in vacanza",
+      "artist": "Moreno featuring Giorgio Vanni [Italian Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Theme from Lupin the Third - 2013 with Conan Ending ver.",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "New Wuthering Heights",
+      "artist": "Naruyoshi Kikuchi y Pepe Tormento Azcarar feat. Ichiko Hashimoto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Duty Friend By NIKIIE",
+      "artist": "Unknown",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin the Third '89",
+      "artist": "You & Explosion Band",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Warau Taiyou (笑う太陽; Laughing Sun)",
+      "artist": "Yoshie Nakano from EGO-WRAPPIN'",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme From Lupin the Third '78 (2002 Version)",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Theme From Lupin the Third '89",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rupan Sansei no Theme '78 (2002 version)",
+      "artist": "Yūji Ōno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yasukyoku (夜想曲; Nocturne)",
+      "artist": "Tomoyo Harada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin the Third '78 (2002 Version)",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lupin Sansei Ai no Theme (ルパン三世 愛のテーマ)",
+      "artist": "Miki Imai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Lupin the Third theme '80 (2005 version) (ルパン三世のテーマ`80 -2005 version-)",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin the 3rd",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Michelle (ミシェル)",
+      "artist": "Miliyah Kato",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ミシェル",
+      "artist": "Miriya Kato",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Lupin the Third theme '80 (2005 version) (ルパン三世のテーマ`80 -2005 version-)",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yume no Kakera (夢のカケラ)",
+      "artist": "DOUBLE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin III '78 (2002 version)",
+      "artist": "Yuji Ohno\"",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "A Rose Tatoo",
+      "artist": "Salena Jones",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THEME FROM LUPIN III '89",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "THEME FROM LUPIN III '78 (2002 version)",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Lupin Sansei no Theme '78 (2002 Version)",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "le soleil d'or",
+      "artist": "Kahimi Karie",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rupan Sansei no Thema 1989",
+      "artist": ".",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin the Third '89",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Omoide ga Anata wo Hanasanai",
+      "artist": "Nami Hirai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin III '97",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hiromi wo Wasurenaide",
+      "artist": "Emi Shinohara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin III '97",
+      "artist": ".",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin the Third (97 Version)",
+      "artist": "Yuji Ohno.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Akogare [Longing]",
+      "artist": "Megumi Hayashibara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin the Third '89",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ai no Tsuzuki (Continuance of Love)",
+      "artist": "Iori Sokagami",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rupan Sansei no Thema 1989",
+      "artist": ".",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin the Third '89",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yume nara Iinoni",
+      "artist": "Iori Sakagami",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin the Third '89",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Da Capo of Love",
+      "artist": "Sonia Rosa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Lupin the 3rd Theme '97",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin the Third '97 -readymade 440 mix-",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Life's a Flame",
+      "artist": "Lileth",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Life's a Flame",
+      "artist": "You & Explosion Band featuring Lileth",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rupan Sansei no Thema 1989",
+      "artist": ".",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin the Third '89",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Destiny Love",
+      "artist": "Eri Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Lupin the Third",
+      "artist": "Yuji Ohno Trio featuring Akiko",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin III '97",
+      "artist": "Yuji Ohno Trio featuring Akiko",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "What's the Worry?",
+      "artist": "Yuji Ohno Trio featuring Akiko",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Damage no Amai wana [The Sweet Trap of Damage]",
+      "artist": "Media Youth",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sexy Adventure (セクシーアドベンチャー)",
+      "artist": "Yuusuke Nakamura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fairy night (フェアリーナイト)",
+      "artist": "Sonia Rosa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THEME FROM LUPIN III (Non-vocal)",
+      "artist": "Yuji Ohno",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "LOVE THEME (Non-vocal)",
+      "artist": "Yuji Ohno",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Manhattan Joke",
+      "artist": "Kawai Nahoko",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Manhattan Joke",
+      "artist": "Kawai Nahoko",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "C'est la Vie to Iwanaide (セラヴィと言わないで)",
+      "artist": "Miki Asakura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rupan Sansei no Thema 1996",
+      "artist": ".",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theme from Lupin the Third '96",
+      "artist": "Yuji Ohno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsuki to Taiyou no Meguri (Joining of Sun and Moon)",
+      "artist": "Aya Hisakawa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Honoo no Takaramono",
+      "artist": "Bobby",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Honoo no Takaramono",
+      "artist": "Bobby",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Cat's Eye 2023",
+      "artist": "Anri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Detective Conan Main Theme (Lupin the Third vs Detective Conan version)",
+      "artist": "Katsuo Ono",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "THEME FROM LUPIN III",
+      "artist": "Peatmac Junior",
+      "episodes": "27-51"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "LOVE THEME",
+      "artist": "Ichiro Mizuki",
+      "episodes": "27-51"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "LUPIN III '79 (Non-vocal)",
+      "artist": "Yuji Ohno",
+      "episodes": "52-103"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "LOVE SQUALL",
+      "artist": "Sandi A.Hohn",
+      "episodes": "52-103"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "LUPIN III '80 (Non-vocal)",
+      "artist": "Yuji Ohno",
+      "episodes": "104-155"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "LOVE IS EVERYTHING",
+      "artist": "Noboru Kimura",
+      "episodes": "104-155"
+    }
+  ],
+  "relations": []
+}

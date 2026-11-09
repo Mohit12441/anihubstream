@@ -1,0 +1,120 @@
+{
+  "id": "mob-psycho-100-ii-the-first-spirits-and-such-company-trip-a-journey-that-mends",
+  "title": "Mob Psycho 100 II: The First Spirits and Such Company Trip ~A Journey that Mends the Heart and Heals the Soul~",
+  "native": "モブサイコ100 第一回霊とか相談所慰安旅行~ココロ満たす癒やしの旅~",
+  "year": 2019,
+  "rating": 7.6,
+  "season": "Summer 2019",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx109819-71ZeBjJuU3da.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx109819-71ZeBjJuU3da.png",
+  "accent": "#c96b50",
+  "synopsis": "Mob, Reigen, Dimple, and Serizawa, the newest member of the Spirits and Such Consultation Office staff, take a trip up to a secluded hot spring in Zebra Prefecture. Reigen received a request to discover the truth behind strange rumors about the inn.\n\n(Source: Funimation) \n\nNote: The OVA was screened at an anime event that took place at Kasukabe Citizens Cultural Center in Saitama Prefecture on July 7th, 2019.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "mob-psycho-100-ii:-the-first-spirits-and-such-company-trip-~a-journey-that-mends-the-heart-and-heals-the-soul~-grac3k",
+    "mal": 39651,
+    "anilist": 109819,
+    "kitsu": 42416
+  },
+  "skip_key_id": 39651,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "mob psycho 100 ii the first spirits and such company trip a journey that mends the heart and heals the soul モフ サイコ100 第一回霊とか相談所慰安旅行 ココロ満たす癒やしの旅 ova finished",
+  "genres": [
+    "action",
+    "comedy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Self-Proclaimed Psychic: Reigen Arataka ~And Mob~",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/16e780e0fb74dd22e755daffb8eca1e01546470786_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "267484"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "1",
+      "artist": "MOB CHOIR",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Cobalt",
+      "artist": "MOB CHOIR",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ikiru Hitobito (いきるひとびと; Living Our Lives)",
+      "artist": "sajou no hana",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "99.9",
+      "artist": "MOB CHOIR feat. Sajou no hana",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Grey (グレイ)",
+      "artist": "sajou no hana",
+      "episodes": "1,7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Exist",
+      "artist": "MOB CHOIR",
+      "episodes": "4, 6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "MemoSepia (メモセピア)",
+      "artist": "sajou no hana",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Mabuta no Ura (目蓋の裏; Behind My Eyes)",
+      "artist": "sajou no hana",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Ikiru Hitobito (いきるひとびと; Living Our Lives)",
+      "artist": "sajou no hana",
+      "episodes": "13"
+    }
+  ],
+  "relations": []
+}

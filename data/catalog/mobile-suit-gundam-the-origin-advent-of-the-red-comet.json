@@ -1,0 +1,475 @@
+{
+  "id": "mobile-suit-gundam-the-origin-advent-of-the-red-comet",
+  "title": "Mobile Suit Gundam: The Origin - Advent of the Red Comet",
+  "native": "機動戦士ガンダム THE ORIGIN 前夜 赤い彗星",
+  "year": 2019,
+  "rating": 7.9,
+  "season": "Spring 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx108039-EjKfj3FepUic.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108039-EjKfj3FepUic.jpg",
+  "accent": "#e4bb43",
+  "synopsis": "What was the tragedy that decided the fates of Char Aznable, the man later nicknamed the \"Red Comet\" as an ace pilot of the Zeon forces, and his sister Sayla Mass?\n\nThe two siblings' journeys, brought on by the sudden death of their father Zeon Zum Deikun who was a leader of the Spacenoids, are depicted in the four episodes of \"Chronicle of Char and Sayla.\"\n\nThe Zabi family who seize control of Side 3 and lead the Principality of Zeon, the early days of many renowned Zeon ace pilots who later fight in the One Year War, the secrets of mobile suit development, conflicts with the Earth Federation Forces, and the road leading to the outbreak of war—all will be revealed.\n\n(Source: Official Website)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "mobile-suit-gundam:-the-origin-advent-of-the-red-comet-mtpwci",
+    "mal": 39592,
+    "anilist": 108039,
+    "kitsu": 42242
+  },
+  "skip_key_id": 39592,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "mobile suit gundam the origin advent of the red comet 機動戦士カ ンタ ム the origin 前夜 赤い彗星 tv finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Child of Zion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/cfaa479915d517b07b13ad4803b6568e1556465801_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261021"
+    },
+    {
+      "n": 2,
+      "title": "A Promise with Mother",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/5a2fc9f83634e948dca5d815a19ff5411557056164_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261022"
+    },
+    {
+      "n": 3,
+      "title": "Édouard and Sayla",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/bcb6eb5fd28cc22184a02c13048c2aac1557673016_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261023"
+    },
+    {
+      "n": 4,
+      "title": "Goodbye, Artesia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/076a41f5f4274e5b4afbf30c73c23bfa1558272401_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261024"
+    },
+    {
+      "n": 5,
+      "title": "Char and Garma",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/277bdb669c54bb8d74a9825f1fa02ce91558853493_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261025"
+    },
+    {
+      "n": 6,
+      "title": "Garma Rises",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3e0e3b40ef9fc4d3aa30c1f80a9f475b1559467959_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261026"
+    },
+    {
+      "n": 7,
+      "title": "Meeting Lalah",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c543ed0201b90199301e7219e15c49e11560093511_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261027"
+    },
+    {
+      "n": 8,
+      "title": "The Principality of Zeon Declares Its Independence",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c20839226c273cdbf2bd6c84b3d908ff1560669044_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261028"
+    },
+    {
+      "n": 9,
+      "title": "Dropping the Colony",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/699c7019c66d476942e4febea872270b1561305713_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261029"
+    },
+    {
+      "n": 10,
+      "title": "A Red Mobile Suit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/0b5ff14bd037ecd3b546cabfe2e99b111561903762_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261030"
+    },
+    {
+      "n": 11,
+      "title": "The Battle of Loum",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/053dab411eca35899c2d2cbe276aae581564297894_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261031"
+    },
+    {
+      "n": 12,
+      "title": "Char, the Red Comet",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/94ef5785cd2ec1d517f6447f46717a821564902746_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261032"
+    },
+    {
+      "n": 13,
+      "title": "The One-Year War",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/99be4a36a3a1346fcbb5ffde90d179391565532848_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "261033"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Snooze",
+      "artist": "SZA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sweet Child o’ Mine",
+      "artist": "Guns N’ Roses",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Plazma",
+      "artist": "Kenshi Yonezu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Plazma",
+      "artist": "Kenshi Yonezu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mōdōnatte mo Ii ya (もうどうなってもいいや; I Don't Care What Happens Anymore)",
+      "artist": "Hoshimachi Suisei",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "slash",
+      "artist": "yama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Red:birthmark",
+      "artist": "Aina The End",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ubugoe",
+      "artist": "Hiroko Moriguchi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shukufuku (祝福; The Blessing)",
+      "artist": "Yoasobi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kimi yo, Kedakaku Are (君よ 気高くあれ; Be Noble)",
+      "artist": "Shiyui",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "TO THE SKY",
+      "artist": "FANTASTICS from EXILE TRIBE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Möbius",
+      "artist": "mpi, Laco and Benjamin",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Senkou",
+      "artist": "[Alexandros]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Confession",
+      "artist": "Mayu Wakisaka",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sora no Uta ~Higher and Higher~ (宇宙の詩 〜Higher and Higher〜; Space Song ~Higher and Higher~)",
+      "artist": "LUNA SEA",
+      "episodes": "1-4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Meguriai (めぐりあい; Encounter)",
+      "artist": "SUGIZO feat. GLIM SPANKY",
+      "episodes": "1-4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "narrative",
+      "artist": "SawanoHiroyuki[nZk]:LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Star Bright",
+      "artist": "MIO",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "RAGE OF DUST",
+      "artist": "SPYAIR",
+      "episodes": "27-38"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "RAGE OF DUST",
+      "artist": "SPYAIR",
+      "episodes": "26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ronald Reagan Other Side",
+      "artist": "dCprG",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Into the Sky",
+      "artist": "Tielle",
+      "episodes": "1-17, 19-22"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Next 2U -eUC-",
+      "artist": "SawanoHiroyuki[nZk]:naNami",
+      "episodes": "1-8, 10-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "White Day in the Blue (白い部屋; Shiroi Heya)",
+      "artist": "Geila Zilkha",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Beyond the Time ~Möbius no Sora wo Koete~ (BEYOND THE TIME ~メビウスの宇宙を越えて~)",
+      "artist": "TM Network",
+      "episodes": "11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Shukufuku (祝福; The Blessing)",
+      "artist": "Yoasobi",
+      "episodes": "24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "SHOW YOU THE WAY",
+      "artist": "THE RAMPAGE from EXILE TRIBE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Hisōbi (悲壮美; Tragic Beauty)",
+      "artist": "LUNA SEA",
+      "episodes": "5-8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Mizu no Hoshi e Ai wo Komete (水の星へ愛をこめて; From the Aqueous Star with Love)",
+      "artist": "SUGIZO feat. Komai",
+      "episodes": "5-8"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Fighter",
+      "artist": "KANA-BOON",
+      "episodes": "39-50"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Shōnen no Hate (少年の果て; Childhood's End)",
+      "artist": "GRANRODEO",
+      "episodes": "27-38"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "RE:I AM",
+      "artist": "Aimer",
+      "episodes": "18"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Merry-go-round",
+      "artist": "CHEMISTRY",
+      "episodes": "9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "The Dreaming Girl in Me (女の子に戻るとき; Onnanoko ni Modoru Toki)",
+      "artist": "Yoshie Sakamoto",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "BEYOND THE TIME ~Möbius no Sora wo Koete~ (BEYOND THE TIME ～メビウスの宇宙を越えて～; Beyond the Time ~Beyond the Möbius Universe~)",
+      "artist": "LUNA SEA",
+      "episodes": "9-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "A Red Ray",
+      "artist": "SUGIZO feat. miwa",
+      "episodes": "9-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Freesia (フリージア)",
+      "artist": "Uru",
+      "episodes": "39-50"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "bL∞dy f8 -eUC-",
+      "artist": "SawanoHiroyuki[nZk]:Aimer",
+      "episodes": "13-21"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Anata no o Aite ~I'm Your Baby~ (あなたのお相手 ~I'm your baby~; Your Opponent ~I'm Your Baby~)",
+      "artist": "I.C.I. a.k.a. Ai Ichikawa",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "StarRingChild",
+      "artist": "Aimer",
+      "episodes": "22"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Thunderbolt Main Theme",
+      "artist": "Naruyoshi Kikuchi",
+      "episodes": "4"
+    }
+  ],
+  "relations": []
+}

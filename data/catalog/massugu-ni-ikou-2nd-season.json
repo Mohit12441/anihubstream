@@ -1,0 +1,100 @@
+{
+  "id": "massugu-ni-ikou-2nd-season",
+  "title": "Massugu ni Ikou (2004)",
+  "native": "まっすぐにいこう。 (2004)",
+  "year": 2004,
+  "rating": 6.1,
+  "season": "Spring 2004",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/3182-zjTbAj2THPD3.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/3182-zjTbAj2THPD3.jpg",
+  "accent": "#f19350",
+  "synopsis": "Mametarou is a Crossbreed and this is about his daily activities and the friends he makes with his girlfriend, Hanako.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "massugu-ni-ikou.-2nd-season-f2lje0",
+    "mal": 3182,
+    "anilist": 3182,
+    "kitsu": 2843
+  },
+  "skip_key_id": 3182,
+  "skip_key_space": "mal",
+  "episode_total": 5,
+  "added_at": null,
+  "search_text": "massugu ni ikou 2004 まっすく にいこう 2004 tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22325"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22326"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22327"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22328"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22329"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

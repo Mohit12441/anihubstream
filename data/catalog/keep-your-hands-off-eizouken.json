@@ -1,0 +1,192 @@
+{
+  "id": "keep-your-hands-off-eizouken",
+  "title": "Keep Your Hands Off Eizouken!",
+  "native": "映像研には手を出すな！",
+  "year": 2020,
+  "rating": 8,
+  "season": "Winter 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx109298-suwdIUbJEPJx.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx109298-suwdIUbJEPJx.png",
+  "accent": "#e4a135",
+  "synopsis": "First year high schooler Midori Asakusa loves anime so much, she insists that \"concept is everything\" in animation. Though she draws a variety of ideas in her sketchbook, she hasn't taken the first step to creating anime, insisting that she can't do it alone. The producer-type Sayaka Kanamori is the first to notice Asakusa's genius. Then, when it becomes clear that their classmate, charismatic fashion model Tsubame Mizusaki, really wants to be an animator, they create an animation club to realize the \"ultimate world\" that exists in their minds.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "keep-your-hands-off-eizouken!-9nny9j",
+    "mal": 39792,
+    "anilist": 109298,
+    "kitsu": 42343
+  },
+  "skip_key_id": 39792,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "keep your hands off eizouken 映像研には手を出すな tv finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Greatest World!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/fae0a5a1b0848d836ec56073301fba0c1578220267_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273257"
+    },
+    {
+      "n": 2,
+      "title": "The Eizouken Takes the Stage!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4285fd2b9d7bb70512bec0a341424bb01578837880_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273258"
+    },
+    {
+      "n": 3,
+      "title": "Let's Accomplish Something!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2c32e9f62ac301a55ffdacfb04ab963f1579451584_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273260"
+    },
+    {
+      "n": 4,
+      "title": "Hold That Machete Tight!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3358eaff40d538f2498a63e366d28bcb1580015303_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273304"
+    },
+    {
+      "n": 5,
+      "title": "An Iron Giant Appears!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/19d3175f9809164a89620d2de38003f01580655198_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273399"
+    },
+    {
+      "n": 6,
+      "title": "Let's Do Better Than Last Time!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a75bf1d64cf26ad4facd1852caee6e3c1581263049_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273648"
+    },
+    {
+      "n": 7,
+      "title": "I Have To Do It For Myself!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c7ddf0481cb833ccc6df3c8e355c85ad1581866352_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274183"
+    },
+    {
+      "n": 8,
+      "title": "The Grand Shibahama Festival!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/66a006dca5d4c12d38369fbbb1084d751582427060_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274261"
+    },
+    {
+      "n": 9,
+      "title": "Aim for Comet A!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/5eb2fff3df4e33c859b57e69163bb8af1583073941_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "276485"
+    },
+    {
+      "n": 10,
+      "title": "Against Our Independent World!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a2bda142f2aa008227f8eeea21c6b1021583649316_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "276572"
+    },
+    {
+      "n": 11,
+      "title": "Each Other's Existence!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/72d803b97661b8657262c7c5d33fc99c1584277927_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "277000"
+    },
+    {
+      "n": 12,
+      "title": "Shibahama UFO Wars!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/ce3e4c079712cf4d267317bf18d8ba6a1584870534_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "277001"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Easy Breezy",
+      "artist": "chelmico",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Namae no Nai Ao (A Nameless Blue)",
+      "artist": "Kami-sama, Boku wa Kizuite Shimatta",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

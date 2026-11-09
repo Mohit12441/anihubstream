@@ -1,0 +1,214 @@
+{
+  "id": "kaiju-no-8",
+  "title": "Kaiju No. 8",
+  "native": "怪獣８号",
+  "year": 2024,
+  "rating": 8.1,
+  "season": "Spring 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx153288-25FBfFJzEQ5O.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx153288-25FBfFJzEQ5O.jpg",
+  "accent": "#f1e4ae",
+  "synopsis": "With the highest kaiju-emergence rates in the world, Japan is no stranger to attack by deadly monsters. Enter the Japan Defense Force, a military organization tasked with the neutralization of kaiju. Kafka Hibino, a kaiju-corpse cleanup man, has always dreamed of joining the force. But when he gets another shot at achieving his childhood dream, he undergoes an unexpected transformation. How can he fight kaiju now that he’s become one himself?!\n\n(Source: VIZ Media)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Kaiju No. 8 Season 2 (2025)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46300,
+    "anilist": 153288,
+    "mal": 52588,
+    "hianime": "kaiju-no.-8-irfux4"
+  },
+  "skip_key_id": 52588,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 03:06:30",
+  "search_text": "kaiju no 8 怪獣8号 tv finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Man Who Became a Kaiju",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/342843/thumbnail/medium-e7a9b2f5ec1b4cedff6a060a60ab5d5f.jpeg",
+      "synopsis": "Kafka Hibino has almost abandoned his dream of joining the anti-Kaiju \"Defense Force.\" He now works in Kaiju clean-up, disposing of the bodies of slain Kaiju and thinking back with regret to the days he spent with his childhood friend Mina Ashiro, captain of Defense Force's Third Division. (Source: Crunchyroll)",
+      "airdate": "2024-04-13",
+      "markers": [],
+      "external_id": "342843"
+    },
+    {
+      "n": 2,
+      "title": "The Kaiju Who Defeats Kaiju",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/342844/thumbnail/medium-d59f09ba410ff54459d8be526fa47384.jpeg",
+      "synopsis": "After turning into a Kaiju, Kafka is forced to flee. His escape is interrupted, however, by the arrival of another Kaiju... (Source: Crunchyroll)",
+      "airdate": "2024-04-20",
+      "markers": [],
+      "external_id": "342844"
+    },
+    {
+      "n": 3,
+      "title": "Revenge Match",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/342845/thumbnail/medium-3ef2811c85ee847a956450f090da38d0.jpeg",
+      "synopsis": "Kafka arrives for one last shot at the Defense Force entry exam... but can he pass while keeping his Kaiju powers a secret? (Source: Crunchyroll)",
+      "airdate": "2024-04-27",
+      "markers": [],
+      "external_id": "342845"
+    },
+    {
+      "n": 4,
+      "title": "Fortitude 9.8",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/342846/thumbnail/medium-2d421606e5cb94d269aad925449425dc.jpeg",
+      "synopsis": "An unexpected incident during the exam forces Kafka to use his powers at the risk of revealing his secret. (Source: Crunchyroll)",
+      "airdate": "2024-05-04",
+      "markers": [],
+      "external_id": "342846"
+    },
+    {
+      "n": 5,
+      "title": "Joining Up!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/342847/thumbnail/medium-11647ee5cbc321d7071c3311b46b4195.jpeg",
+      "synopsis": "Kafka is now a member of the Defense Force if not a full-fledged one. But Hoshina tells him he has three months to prove himself before he's fired... (Source: Crunchyroll)",
+      "airdate": "2024-05-11",
+      "markers": [],
+      "external_id": "342847"
+    },
+    {
+      "n": 6,
+      "title": "Sagamihara Neutralization Operation At Daybreak",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/342848/thumbnail/medium-40d225f866a9397b5a3548cffc621879.jpeg",
+      "synopsis": "It's time for Kafka's first mission, and he witnesses the true power of the Defense Force when a Kaiju strikes a nearby city. (Source: Crunchyroll)",
+      "airdate": "2024-05-18",
+      "markers": [],
+      "external_id": "342848"
+    },
+    {
+      "n": 7,
+      "title": "Kaiju No. 9",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/342849/thumbnail/medium-b09cc59cdcf78e3abe75b8c6666d8b10.jpeg",
+      "synopsis": "Reno and Iharu encounter a powerful humanoid Kaiju that quickly overwhelms them. Can help arrive in time? (Source: Crunchyroll)",
+      "airdate": "2024-05-25",
+      "markers": [],
+      "external_id": "342849"
+    },
+    {
+      "n": 8,
+      "title": "Welcome to the Defense Force",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/342850/thumbnail/medium-f03a12858dc85e89a429df210c2c0db9.jpeg",
+      "synopsis": "After transforming into a Kaiju to rescue Reno and Iharu, Kafka is found by Hoshina, who immediately attacks him. (Source: Crunchyroll)",
+      "airdate": "2024-06-01",
+      "markers": [],
+      "external_id": "342850"
+    },
+    {
+      "n": 9,
+      "title": "Raid on Tachikawa Base",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/342851/thumbnail/medium-25dfd83a72b8d3054e31e8293351b963.jpeg",
+      "synopsis": "Tachikawa base comes under attack from the air, as a powerful Kaiju has its sights set on the Defense Force. (Source: Crunchyroll)",
+      "airdate": "2024-06-08",
+      "markers": [],
+      "external_id": "342851"
+    },
+    {
+      "n": 10,
+      "title": "Secret Revealed",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/342852/thumbnail/medium-2c59778370b79427d420b4784f4813e6.jpeg",
+      "synopsis": "When the Defense Force is in danger, Kafka is forced to choose between keeping his secret and saving his comrades. (Source: Crunchyroll)",
+      "airdate": "2024-06-15",
+      "markers": [],
+      "external_id": "342852"
+    },
+    {
+      "n": 11,
+      "title": "Kaiju No. 8 Captured",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/342853/thumbnail/medium-5d4955da3eef9fb8c7228aa5c597e8d0.jpeg",
+      "synopsis": "Kaiju No. 8 is captured, and Kafka is at the mercy of the Defense Force's most important leaders. (Source: Crunchyroll)",
+      "airdate": "2024-06-22",
+      "markers": [],
+      "external_id": "342853"
+    },
+    {
+      "n": 12,
+      "title": "Kafka Hibino",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/342854/thumbnail/medium-050d2334ed57c35a2d3d331d4f79cf5b.jpeg",
+      "synopsis": "Kafka's final fate is determined as the monster within him tries to take control. (Source: Crunchyroll)",
+      "airdate": "2024-06-29",
+      "markers": [],
+      "external_id": "342854"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Never Break Down",
+      "artist": "Yuta Bandoh feat. LEO Imai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "You Can't Run From Yourself",
+      "artist": "AURORA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Beautiful Colors",
+      "artist": "OneRepublic",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Abyss",
+      "artist": "YUNGBLUD",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nobody",
+      "artist": "OneRepublic",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

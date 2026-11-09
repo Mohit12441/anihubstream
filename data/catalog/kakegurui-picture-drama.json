@@ -1,0 +1,76 @@
+{
+  "id": "kakegurui-picture-drama",
+  "title": "Kakegurui Picture Drama",
+  "native": "賭ケグルイ",
+  "year": 2017,
+  "rating": 6.9,
+  "season": "Fall 2017",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b107622-61twEQ0X0YH5.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b107622-61twEQ0X0YH5.jpg",
+  "accent": "#6b1a1a",
+  "synopsis": "Picture drama episodes included on the DVD/Blu-ray Volumes of Kakegurui.\n\nIncludes:\n\n• Maid Kissa Hyakkaou (メイド喫茶百花王)\n\n• Nekomimi Gakuen Hyakkaou (ネコミミ学園百花王)\n\n• Seito-kai☆Kissaten Keikaku (生徒会☆喫茶店計画)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kakegurui-picture-drama-pyv3ia",
+    "mal": 38939,
+    "anilist": 107622,
+    "kitsu": 42112
+  },
+  "skip_key_id": 38939,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "kakegurui picture drama 賭ケク ルイ special finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259089"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259090"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259091"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,641 @@
+{
+  "id": "kimi-ni-todoke-from-me-to-you",
+  "title": "Kimi ni Todoke: From Me to You",
+  "native": "君に届け",
+  "year": 2009,
+  "rating": 7.9,
+  "season": "Fall 2009",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6045-JujXjoWtslUM.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6045-JujXjoWtslUM.jpg",
+  "accent": "#e45d6b",
+  "synopsis": "Kuronuma Sawako is completely misunderstood by her classmates. Her timid and sweet demeanor is often mistaken for malicious behavior. This is due to her resemblance to the ghost girl from \"The Ring\", which has led her peers to give her the nickname Sadako. Longing to make friends and live a normal life, she is naturally drawn to Kazehaya Shouta, the most popular guy in class, whose \"100% refreshing\" personality earns him great admiration from Sawako. So when Kazehaya starts talking to her, maybe there is hope for the friendships Sawako has always longed for. Maybe...there is even a little hope for some romance in her future.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Kimi ni Todoke: From Me to You Season 2 (2011)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 4397,
+    "anilist": 6045,
+    "mal": 6045,
+    "hianime": "kimi-ni-todoke:-from-me-to-you-bj5bpf"
+  },
+  "skip_key_id": 6045,
+  "skip_key_space": "anilist",
+  "episode_total": 25,
+  "added_at": "2026-10-14 05:05:32",
+  "search_text": "kimi ni todoke from me to you 君に届け tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Prologue",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72047/original.jpg",
+      "synopsis": "Being an outsider in her class, Sawako meets the popular Kazehaya, who she has admired since the first day of school. He encourages her to try open up and make new friends. Sawako then volunteers to play as the ghost during a class event, the test of courage. That night, Kazehaya comes to keep her company. Sawako is also becomses a little closer to two classmates, Yoshida Chizuru and Yano Ayane.",
+      "airdate": "2009-10-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 4,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1320
+        }
+      ],
+      "external_id": "72047"
+    },
+    {
+      "n": 2,
+      "title": "Seat Change",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72048/original.jpg",
+      "synopsis": "The class has a seat changing day, but everyone dreads drawing the seat next to Sawako. Until Kazahaya picks the seat himself and Chizuru and Yano take the seats in front of her. Kazahaya adopts a puppy that Sawako has encountered in the street.",
+      "airdate": "2009-10-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 57
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1320
+        }
+      ],
+      "external_id": "72048"
+    },
+    {
+      "n": 3,
+      "title": "After School",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72049/original.jpg",
+      "synopsis": "Sawako meets Kazehaya after school to see Maru-chan, the puppy he has adopted. The day after Kazehaya has her helping the class with their homework. Yano and Yoshida overhear some false rumours about themselves and are told that it is Sawako who's spreading them.",
+      "airdate": "2009-10-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 60
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1320
+        }
+      ],
+      "external_id": "72049"
+    },
+    {
+      "n": 4,
+      "title": "Rumors",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72050/original.jpg",
+      "synopsis": "Yano and Yoshida become the talk of the school as everyone starts spreading rumors about them. An interrupted conversation leads them to believe that Sawako doesn't think they are friends. Sawako believes she's ruining Kazahaya's reputation by hanging out with him.",
+      "airdate": "2009-10-27",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72050"
+    },
+    {
+      "n": 5,
+      "title": "Determination",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72051/original.jpg",
+      "synopsis": "After Sawako hears the rumors she avoids Kazehaya, Yano and Yoshida. Kazehaya is upset about this and confronts Sawako, while Yoshida and Yano make her realise that they are already friends. Sawako stands up against some girls badmouthing Yoshida and Yano.",
+      "airdate": "2009-11-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 60
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72051"
+    },
+    {
+      "n": 6,
+      "title": "Friends",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72052/original.jpg",
+      "synopsis": "Sawako is cornered in the girls bathroom by the some girls from class A until Yoshida and Yano intervene. Kazehaya makes a public statement on how he hates ridiculous rumors and realises he can't be alone with Sawako now she's close to Yano and Yoshida.",
+      "airdate": "2009-11-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 60
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72052"
+    },
+    {
+      "n": 7,
+      "title": "Saturday Evening",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72053/original.jpg",
+      "synopsis": "Sawako is invited to eat ramen with Yano and Yoshida at the ramen shop of Ryu's father. After they eat, they head up to Sanada's room. They later invite Kazehaya, but the mood is ruined when Pin shows up. Yano makes sure Sawako and Kazehaya walk home together under the stars.",
+      "airdate": "2009-11-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72053"
+    },
+    {
+      "n": 8,
+      "title": "Free Practice",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72054/original.jpg",
+      "synopsis": "Instead of being cursed, the class now believes that when Sawako smiles it brings good luck for everyone. Sawako is encouraged to call the girls by their first name, but she fails to address Kazehaya that way. Kazehaya is drafted by Pin to sit in the sports festival committee. Kurumi also takes a place in the committee. Sawako is taking up soccer practice as she is on the class team.",
+      "airdate": "2009-11-24",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72054"
+    },
+    {
+      "n": 9,
+      "title": "New Friend",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72055/original.jpg",
+      "synopsis": "Sawako learns to play soccer and enjoys seeing Kazehaya play sports. She meets Kurumi, who wants to her friend. As she sees how close Kazehaya and Kurumi appear to be, Sawako wants to be as cute as Kurumi.",
+      "airdate": "2009-12-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72055"
+    },
+    {
+      "n": 10,
+      "title": "Collaboration",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72056/original.jpg",
+      "synopsis": "Everyone prepares for the sports festival, especially Chizuru, who coaches Sawako enthusiastically. Sawako happily reflects upon her growing friendship with Kurumi and her increasing awkwardness around Kazehaya. Kurumi purposely tells Sawako how she isn't special because Kazehaya always treats everyone kindly, although Sawako misunderstands this as Kurumi telling her about Kazehaya's good points. Sawako aspires to be outgoing and friendly like Kurumi, but Chizuru tells the story of how she dislikes Kurumi because Kurumi made her help the girls confess to Kazehaya in middle school. Kazehaya and Sawako eventually get to talk alone, but Kurumi interrupts the conversation. Sawako finds out that \"Kurumi\" is short for \"Kurumizawa\", so Kazehaya wasn't calling her by her first name after all. Later, Kurumi makes Sawako walk with her confesses that she likes Kazehaya, asking for Sawako's help.",
+      "airdate": "2009-12-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72056"
+    },
+    {
+      "n": 11,
+      "title": "Special?",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72057/original.jpg",
+      "synopsis": "Sawako admits that she cannot help Kurumi confess to Kazehaya. Kurumi yells at Sawako, telling her she did nothing to get Kazehaya's attention while \"cute and popular girls\" like herself need to work a lot harder. Sawako begins considering whether she only likes Kazehaya because he is nice to her, and whether she would like any guy who did the same. The Sports Day competitions begin. The girls in Sawako's class win their first soccer match, and Sawako convinces Kurumi to watch Kazehaya play in the boys' match together. As they talk, Sawako mentions that she has always thought of Kazehaya as special. Kurumi tells her that this is just because she doesn't talk to many guys, so she ought to try talking to others. Just then, Ryuu (Sanada) saves Sawako from a rogue pitch. Kurumi suggests that Sawako should talk to Ryuu more.",
+      "airdate": "2009-12-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1320
+        }
+      ],
+      "external_id": "72057"
+    },
+    {
+      "n": 12,
+      "title": "Romantic Feelings",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72058/original.jpg",
+      "synopsis": "Kurumi tells Sawako to talk to Ryuu and maybe she'll realize something. Sawako doesn't really understand that Kurumi wants her to separate from Kazehaya, but she says she will still talk to Ryuu. During the softball game Sawako can't keep her eyes off Kazehaya, which makes Kurumi angry as she thinks she is the only one always watching Kazehaya, so she leaves. Kurumi then starts her plan by planting a note asking Ryuu to meet Sawako at the sports equipment room, where Kazehaya has to go later. Sawako, is told by Kurumi that Ryuu is there, and goes to thank him. When they meet, Sawako asks Ryuu about the feeling of love, which leads him to confess that he likes Chizuru. In the meantime, Kazehaya heads to the room carrying some equipment. Kurumi goes up to him and tells Kazehaya that Sawako has fallen in love with Ryuu, urging him to support their relationship. They see Sawako and Ryuu talking happily together.",
+      "airdate": "2009-12-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72058"
+    },
+    {
+      "n": 13,
+      "title": "Love",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72059/original.jpg",
+      "synopsis": "After seeing Sawako and Ryuu together, Kazehaya rushes up to Sawako and pulls her away, leaving Kurumi behind. Kazehaya then confirms with Sawako that she doesn't like Ryuu, while Sawako has just realized that she really likes Kazehaya. Kazehaya asks her what she thinks about people going out as girlfriend and boyfriend, which shocks her so much that she cannot answer properly. Later, Ayane finds out that Kurumi was the one who spread the rumours. Ryuu then shows them the note written by Kurumi, which confirms that she set Sawako up. Ayane and Chizuru go to find more evidence against Kurumi, who is in the meantime waiting for Kazehaya to return. Pin arrives at the equipment room and comes to the conclusion that Kurumi has a crush on him, and rejects her just as Kazehaya arrives. Ayane and Chizuru confront Kurumi, who will not admit to wrongdoing, but when Sawako arrives, Ayane tells her outright that Kurumi was the one who spread the rumors.",
+      "airdate": "2010-01-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72059"
+    },
+    {
+      "n": 14,
+      "title": "Kurumi",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72060/original.jpg",
+      "synopsis": "After Sawako finds out that Kurumi was the one who spread the rumors, Kurumi admits it. Ayane threatens to tell Kazehaya, although Kurumi claims that she doesn't care. Sawako asks Ayane and Chizuru not to tell, realizing that Kurumi is probably hurting a lot. Sawako realizes that Kurumi must have needed a lot of courage to tell Sawako how she felt about Kazehaya. She realizes that she must return the favor, so she returns and tells Kurumi that she, too, loves Kazehaya.",
+      "airdate": "2010-01-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1320
+        }
+      ],
+      "external_id": "72060"
+    },
+    {
+      "n": 15,
+      "title": "Rival",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72061/original.jpg",
+      "synopsis": "Kurumi reflects on how she met and fell in love with Kazehaya in middle school. In the meantime, rumors about how she was rejected by Pin spread around the school. She realizes that she hates being misunderstood by Kazehaya, so ends up confessing to him. He apologizes, saying he has someone else he loves. She plays it off as \"his loss\" and says that he has bad taste in women. Meanwhile, Sawako confesses her love for Kazehaya to Yano and Chizu. Later, Sawako and Kurumi meet and Sawako asks if they can be friends. Kurumi responds by saying she isn't Sawako's friend, but her rival. Later, during the after-festival party, Sawako wonders when she fell in love with Kazehaya and ends up falling asleep on his shoulder.",
+      "airdate": "2010-01-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72061"
+    },
+    {
+      "n": 16,
+      "title": "Night Story",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72062/original.jpg",
+      "synopsis": "his episode is a recap of episodes 1 through 15 narrated by the tiny men Pin sees.",
+      "airdate": "2010-01-26",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1278,
+          "end": 1320
+        }
+      ],
+      "external_id": "72062"
+    },
+    {
+      "n": 17,
+      "title": "Holiday",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72063/original.jpg",
+      "synopsis": "Ayane and Chizuru visit Sawako's house and, despite appearing disreputable at first, impress her parents by being \"such nice girls\". Meanwhile, Kazehaya and Ryuu are together when Kazehaya gets a call from Pin. Pin explains that he met Sawako the previous night, and now thinks he is possessed because he doesn't feel good. The truth is that Sawako noticed he was catching a cold, and gave him advice on how to prevent it, although he misunderstood. Pin insists that Kazehaya bring Sawako to him right away. Kazehaya, Ryuu, Sawako, Ayane and Chizuru all end up at Pin's filthy apartment and realize he only has a cold. They spend the rest of the day cleaning for him. They leave at night and Kazehaya ends up walking Sawako home. Thanks to a prank played by Pin, the two of them almost kissed under the stars.",
+      "airdate": "2010-02-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72063"
+    },
+    {
+      "n": 18,
+      "title": "Chizuru`s Love",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72064/original.jpg",
+      "synopsis": "Sawako is happy about her growing relationships with her friends and Kazehaya. Ayane, however, complains about her clingy boyfriend, while Chizuru is in a good mood because she anticipates something at New Year's, which is more than a month away. Chizuru and Sawako go out to pick a present for Ryuu's birthday, and Sawako is sure by the affection Chizuru shows for him that Chizuru loves Ryuu. However, she finds out that Chizuru actually loves Ryuu's older brother. The next time everyone is in school together, it is found out that Ayane dumped her boyfriend. Amid the talk about broken hearts, Ryuu leaves the room and is encouraged by Kazehaya. Later, at Chizuru's house, Ryuu comes into her room unexpectedly. He appears to be about to confess to Chizuru when she notices that she left his present lying out in plain sight. She therefore forces Ryuu to leave, and he ends up going home in the rain.",
+      "airdate": "2010-02-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1320
+        }
+      ],
+      "external_id": "72064"
+    },
+    {
+      "n": 19,
+      "title": "Dream",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72065/original.jpg",
+      "synopsis": "Ryuu tries to confront Chizuru again, but fails to do so, and only tells her not to come to his house this weekend. Chizuru throws a sleep over with the intention of cheer Ayane up from her breakup, but it ends up to be boring because Chizuru planned on getting video games from Ryuu. Ayane convinces Chizuru to go over to his house since it is only Friday, and not yet the weekend. At Ryuu's house they meet Kazehaya and other classmates. They are all having fun, until Ryuu leaves and Chizuru follows, Ryuu once again tries to confess his feelings to Chizuru but is interrupted by his older brother's arrival. His older brother then reveals that he is engaged, Ayane and Sawako look on as Chizuru hides her feelings and congratulate the couple. Soon everyone leaves, and the girls go back to Chizuru's house where Chizuru reflects on her past with Ryuu's brother.",
+      "airdate": "2010-02-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72065"
+    },
+    {
+      "n": 20,
+      "title": "Present",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72066/original.jpg",
+      "synopsis": "Ryuu's brother leaves, he tells Ryuu to tell Chizuru to show up next time. Later Chizuru heads over to give Ryuu her present, where Ryuu states that she was late and he hopes that Chizuru will finally get over his brother, she gets angry and throws his present at him. Sawako and Ayane are grief stricken with worry about Chizuru since they can't do anything about the situation. Kazehaya shows up and explains to them that its good that Chizuru has them, and that she has them to worry and care for her. In class Chizuru ignores Ryuu, they eventually run into each other where Chizuru asks what he meant last night when he said that she was late. Eventually he shows that he wanted Chizuru to get rejected in order for her to finally get over his brother, Chizuru is upset that he thought the only reason she came over the other night was just to see his brother and leaves. Ayane and Sawako find her, where she eventually breaks down and tells them about how angry she is at Ryuu, not knowing that he is listening and then leaves, Chizuru continues saying what pissed her off the most was how she treated Ryuu. The three girls then go out and enjoy the rest of the day.",
+      "airdate": "2010-02-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1320
+        }
+      ],
+      "external_id": "72066"
+    },
+    {
+      "n": 21,
+      "title": "First Snow",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72067/original.jpg",
+      "synopsis": "School continues and Chizuru looks refreshed but still ignores Ryuu. While walking home with Sawako and Ayane, they discuss what Chizuru would say to Tooru, Ryuu's older brother if he was to return. Then Tooru actually shows up and tells the girls that he's going to steal Chizuru. The two of them walk together, as Tooru talks about his memories with Chizuru when they were younger. At the end of their walk Chizuru confesses her feelings for Tooru, only have to Tooru says that he likes her too, but as a little sister. They part, and when Tooru returns home Ryuu greets him and gives him bread from the other day the Chizuru left. Ryuu then goes to find Chizuru at docks where she was the last time they played with Tooru before he moved out. There Chizuru realizes that it was Ryuu that called Tooru to come and visit her and asks Ryuu to comfort her, and they embrace.",
+      "airdate": "2010-03-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72067"
+    },
+    {
+      "n": 22,
+      "title": "Christmas",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72068/original.jpg",
+      "synopsis": "Chizuru and Ryuu are back on good terms and everyone is eagerly anticipating Christmas. Their class is going to hold a party and Kazehaya asks Sawako to come. She really wants to, but thinks of her parents. Traditionally, her family spends all day celebrating, so she would feel badly about leaving them. She decides not to go to the party, but makes gifts for Chizuru and Ayane. She also makes a hat for Kazehaya, though she knows she won't have the nerve to give it to him. On Christmas Eve, she spends the day with her parents. Her dad is especially enthusiastic and ends up taking the hat Sawako made, thinking it was for him. She doesn't have the heart to correct him. Later that night, she gets a call from her friends at the party asking her to come. She becomes very distraught, so her mom takes the call instead. Her dad calls her over and gives her his present for her- a cellphone. He lets her go to the party and realizes she is growing up. Sawako runs there, but everyone has left. Only Kazehaya has been waiting for her out in the snow.",
+      "airdate": "2010-03-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72068"
+    },
+    {
+      "n": 23,
+      "title": "The Two",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72069/original.jpg",
+      "synopsis": "It's the last day of class before winter break. Sawako worries that she won't see her friends until classes start again. She reluctantly says goodbye to Kazehaya then goes out to eat with Ayane and Chizuru. They find out her birthday is on New Year's Eve and tell her about their plans to go to the shrine that day with Ryuu, inviting her as well. She finds out she can go, so her friends convince her to call Kazehaya and invite him as well. He agrees to come. On New Year's Eve, Chizuru and Ayane come to Sawako's house. Their present to her is to make her look really cute for Kazehaya. They style her hair and put on a little makeup and head out for the shrine. Before they arrive, Chizuru and Ayane leave, telling Sawako Ryuu actually isn't coming either. She continues alone, meeting Kazehaya. He is astonished by her extra-cuteness and they continue to the shrine. She reflects on her happiness to spend her birthday with him.",
+      "airdate": "2010-03-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1320
+        }
+      ],
+      "external_id": "72069"
+    },
+    {
+      "n": 24,
+      "title": "Birthday",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72070/original.jpg",
+      "synopsis": "Sawako and Kazehaya walk to the shrine silently. They finally look at each other after Kazehaya saves her before she falls down the stairs at the shrine. They are about to continue their awkward silence until Chizuru, Ayane, and Ryuu (who are also stealthily at the shrine) call Kazehaya to apologize for not coming along. The two go to get hot drinks at a stand and Kazehaya admits he normally doesn't like the drink, but this time he does because Sawako does. She's excited over getting to see his first time at something, but he lists several of his first times that relate to her (like wearing the stomach band). They exchange phone emails and Kazehaya realizes Sawako's birthday is that day. She tells him about her childhood as they walk, up until the present, then realizes she had always been alone until she met him.",
+      "airdate": "2010-03-23",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1320
+        }
+      ],
+      "external_id": "72070"
+    },
+    {
+      "n": 25,
+      "title": "New Year",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/72071/original.jpg",
+      "synopsis": "Sawako and Kazehaya continue talking while they walk. She begins to say she'll try harder this year so people will like her, but he interrupts and says they already do. They visit the shrine and go to pick out fortunes. Sawako is distressed by getting a \"Bad Luck\" slip, so Kazehaya gives her his- \"Very Good Luck\". She reads the part pertaining to love and realizes it could be talking about Kazehaya. They continue home, taking the path she walks to school. Kazehaya stops at one corner, and reminisces that he met Sawako for the first time at that spot. She's surprised he remembers, but has also been thinking the same thing. They continue home, each internally realizing their love for each other, but neither acting on it. They part, leaving the impression they will be together this year.",
+      "airdate": "2010-03-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "72071"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sawakaze (爽風)",
+      "artist": "Tomofumi Tanizawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kimi ni Todoke...",
+      "artist": "MAY'S",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kimi ni Todoke (きみにとどけ)",
+      "artist": "Tomofumi Tanizawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kataomoi (片想い)",
+      "artist": "Chara",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

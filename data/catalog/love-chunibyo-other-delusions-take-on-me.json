@@ -1,0 +1,100 @@
+{
+  "id": "love-chunibyo-other-delusions-take-on-me",
+  "title": "Love, Chunibyo & Other Delusions: Take on Me",
+  "native": "映画 中二病でも恋がしたい！ -Take On Me-",
+  "year": 2018,
+  "rating": 8,
+  "season": "Winter 2018",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98762-ofC7Eqsm2KcD.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98762-ofC7Eqsm2KcD.jpg",
+  "accent": "#43aee4",
+  "synopsis": "Rikka is now a third-year student, but she still has \"chuunibyou\" syndrome. University entrance exams loom on the horizon, and it's spring break, and Yuuta and Rikka are together as usual. One day, Rikka's older sister Touka declares that she's going to take Rikka to Italy with her, as Touka is moving to Italy for work and she thinks they should move together as a family. Yuuta understands Touka's opinion, but thinks that at this rate he and Rikka will be separated. Shinka and the other members suggest that Yuuta and Rikka should \"elope,\" and thus sets the stage for Yuuta and Rikka's travels throughout Japan in their escape drama.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "love-chunibyo-and-other-delusions!:-take-on-me-k5k70i",
+    "mal": 35608,
+    "anilist": 98762,
+    "kitsu": 13524
+  },
+  "skip_key_id": 35608,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "love chunibyo other delusions take on me 映画 中二病て も恋か したい take on me movie finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Take On Me!",
+      "runtime": "93:00",
+      "runtime_seconds": 5580,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/209023/original.jpg",
+      "synopsis": "During their third year of high school, Yuta and Rikka might be forced to separate as Rikka's family is moving to Italy for her sister's job. The club suggests they runaway and elope, setting the stage for this exciting drama.",
+      "airdate": "2018-01-06",
+      "markers": [],
+      "external_id": "209023"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 0,
+      "title": "Kimi e",
+      "artist": "ZAQ",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 0,
+      "title": "Shikkoku ni Odoru Haou Bushi",
+      "artist": "ZAQ",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Voice",
+      "artist": "ZAQ",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Van!shment Th!s World",
+      "artist": "Black Raison d'être",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sparkling Daydream",
+      "artist": "ZAQ",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "INSIDE IDENTITY",
+      "artist": "Black Raison d'être",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,127 @@
+{
+  "id": "laid-back-camp-season-3",
+  "title": "Laid-Back Camp Season 3",
+  "native": "Yuru Camp△ Season 3",
+  "year": 2024,
+  "rating": 8,
+  "season": "Year 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/69118895f1ce0089c536427c-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/69118895f1ce0089c536427c-landscape.webp",
+  "accent": "#ff3d8b",
+  "synopsis": "Within the narrow walls of the Outdoor Activities Club room, the few but lively members carry on the camping spirit as they have fun with DIY club experiments. Exciting experiences such as these have brought Nadeshiko Kagamihara deep into the world of camping, making her want to once again go on a solo trip.\n\nHowever, other plans come first, as Ayano Toki and Rin Shima invite Nadeshiko to camp near Ooi River. Eager to go on their first journey together, the girls set off to forge precious memories that will stick with their hearts for years to come.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "laid-back-camp-season-3-iiy4kn",
+    "mal": 53410,
+    "anilist": 155908,
+    "kitsu": 49162
+  },
+  "skip_key_id": 53410,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "laid back camp season 3 yuru camp season 3",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Where Should We Go Next?",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/4c88526b6172d3ac52d745937356d55f1712241044_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "372212"
+    },
+    {
+      "n": 2,
+      "title": "Mini Camping and Yard Camping",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/f9b334333203c0dd37f30cd56d90f4bf1712841625_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "372213"
+    },
+    {
+      "n": 3,
+      "title": "We're Off! Land of Suspension Bridges",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/acebaba8890561fec9269c7283549a931713439252_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "372214"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Laid-Back Journey",
+      "artist": "Kiminone",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "So Precious",
+      "artist": "Asaka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mimosa (ミモザ)",
+      "artist": "Eri Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Seize The Day",
+      "artist": "Asaka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Haru no Tonari",
+      "artist": "Eri Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "SHINY DAYS",
+      "artist": "Asaka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fuyu Biyori",
+      "artist": "Eri Sasaki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

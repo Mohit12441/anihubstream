@@ -1,0 +1,175 @@
+{
+  "id": "link-click",
+  "title": "Link Click",
+  "native": "时光代理人",
+  "year": 2021,
+  "rating": 8.6,
+  "season": "2021",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx126403-BfVSRzWUtVFW.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx126403-BfVSRzWUtVFW.png",
+  "accent": "#3b82ff",
+  "synopsis": "In a corner of a bustling city, there is a small shop called \"Time Photo Studio\" operating as usual. Although the entrance looks abandoned, it's actually run by two men with special abilities: Cheng Xiaoshi and Lu Guang. In order to fulfil customers' requests, Lu Guang and Cheng Xiaoshi work together and use their special abilities to enter photos. However, things don't go as planned...\n\n(Source: bilibili, translated)\n\nNote: The final episode aired with a runtime of ~31 minutes.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Link Click Season 2"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44503,
+    "anilist": 126403,
+    "mal": 44074,
+    "hianime": "link-click-54r0n2"
+  },
+  "skip_key_id": 44074,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": "2026-10-14 08:15:04",
+  "search_text": "link click 时光代理人 ona finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "EMMA",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://myanimelist.net/images/anime/1135/114867l.jpg",
+      "synopsis": "Cheng Xiaoshi and Lu Guang dive into a corporate audit case using a photograph taken by a young CFO assistant named Emma, aiming to uncover financial fraud without altering her tragic personal fate.",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "Secret Recipe",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://myanimelist.net/images/anime/1135/114867l.jpg",
+      "synopsis": "A client hires Time Photo Studio to acquire a secret ramen noodle broth recipe from an estranged business partner, leading Cheng Xiaoshi to experience the deep passion and bonds of friendship.",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "To Lose, Not To Win",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://myanimelist.net/images/anime/1135/114867l.jpg",
+      "synopsis": "Cheng Xiaoshi travels back to a pivotal high school basketball championship game with strict instructions: play his heart out, but ensure the team loses.",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 4,
+      "title": "Confess",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://myanimelist.net/images/anime/1135/114867l.jpg",
+      "synopsis": "Continuing inside the 2008 basketball memories, Cheng Xiaoshi learns the heavy weight of unspoken feelings and childhood camaraderie before disaster strikes.",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 5,
+      "title": "Farewell",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://myanimelist.net/images/anime/1135/114867l.jpg",
+      "synopsis": "Cheng Xiaoshi experiences the emotional heartbreak of May 12, 2008, witnessing the final moments shared between loved ones before an inevitable catastrophe.",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 6,
+      "title": "Search of The Child",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://myanimelist.net/images/anime/1135/114867l.jpg",
+      "synopsis": "A desperate couple comes to the photo studio seeking any clue about their son, Doudou, who was abducted three years prior.",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 7,
+      "title": "Aunt May",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://myanimelist.net/images/anime/1135/114867l.jpg",
+      "synopsis": "Cheng Xiaoshi enters the memory of a street vendor, Aunt May, piecing together the harrowing kidnapping trail to save a child across time.",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 8,
+      "title": "Lost Signal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://myanimelist.net/images/anime/1135/114867l.jpg",
+      "synopsis": "Police Captain Xiao invites the duo to assist in identifying a serial killer operating in City Q, drawing the team into their most dangerous case.",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 145,
+          "end": 235,
+          "label": "Opening"
+        }
+      ],
+      "external_id": null
+    },
+    {
+      "n": 9,
+      "title": "Consequence of Goodwill",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://myanimelist.net/images/anime/1135/114867l.jpg",
+      "synopsis": "As the investigation into the serial murders tightens, Lu Guang notices alarming discrepancies in the timeline that trace back to Emma.",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 10,
+      "title": "Trap",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://myanimelist.net/images/anime/1135/114867l.jpg",
+      "synopsis": "The killer takes violent action against those closest to the studio, cornering Cheng Xiaoshi in a lethal game of photographic cat-and-mouse.",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 11,
+      "title": "Pinnacle of Light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://myanimelist.net/images/anime/1135/114867l.jpg",
+      "synopsis": "In a breathtaking season finale, shocking revelations about the killer’s supernatural control threaten everything Cheng Xiaoshi and Lu Guang fought to protect.",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

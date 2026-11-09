@@ -1,0 +1,231 @@
+{
+  "id": "megalobox",
+  "title": "Megalobox",
+  "native": "メガロボクス",
+  "year": 2018,
+  "rating": 7.7,
+  "season": "Spring 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b100298-A5VQUcw7ZC64.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b100298-A5VQUcw7ZC64.jpg",
+  "accent": "#e46b50",
+  "synopsis": "\"To be quiet and do as you're told, that's the cowardly choice.\" These are the words of Junk Dog, an underground fighter of Megalo Box, an evolution of boxing that utilizes mechanical limbs known as Gear to enhance the speed and power of its users. Despite the young man's brimming potential as a boxer, the illegal nature of his participation forces him to make a living off of throwing matches as dictated by his boss Gansaku Nanbu. However, this all changes when the Megalo Box champion Yuuri enters his shabby ring under the guise of just another challenger. Taken out in a single round, Junk Dog is left with a challenge: \"If you're serious about fighting me again, then fight your way up to me and my ring.\"\n\nFilled with overwhelming excitement and backed by the criminal syndicate responsible for his thrown matches, Junk Dog enters Megalonia: a world-spanning tournament that will decide the strongest Megalo Boxer of them all. Having no name of his own, he takes on the moniker of \"Joe\" as he begins his climb from the very bottom of the ranked list of fighters. With only three months left to qualify, Joe must face off against opponents the likes of which he has never fought in order to meet the challenge of his rival.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "megalobox-efuoyf",
+    "mal": 36563,
+    "anilist": 100298,
+    "kitsu": 13949
+  },
+  "skip_key_id": 36563,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "megalobox メカ ロホ クス tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Buy or Die?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242644/original.jpg",
+      "synopsis": "In the run-down slums of a futuristic city, the boxer only known as Junk Dog is making a living throwing fights for the mob in underground arenas. That all changes when he has a chance encounter with the champion, Yuri.",
+      "airdate": "2018-04-06",
+      "markers": [],
+      "external_id": "242644"
+    },
+    {
+      "n": 2,
+      "title": "The Man Only Dies Once",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242645/original.jpg",
+      "synopsis": "Yuri has sought Junk Dog out to test his mettle in the ring, and their encounter will leave the underground fighter a changed man.",
+      "airdate": "2018-04-13",
+      "markers": [],
+      "external_id": "242645"
+    },
+    {
+      "n": 3,
+      "title": "Gear Is Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242646/original.jpg",
+      "synopsis": "Nanbu and Joe are preparing for their first official match, but in order to do that, they'll need to find a decent set of Gear first. While searching, they run into a group of orphan boys, thieving their way through life.",
+      "airdate": "2018-04-20",
+      "markers": [],
+      "external_id": "242646"
+    },
+    {
+      "n": 4,
+      "title": "Let's Dance with Death",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242647/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-04-27",
+      "markers": [],
+      "external_id": "242647"
+    },
+    {
+      "n": 5,
+      "title": "The Man from Death",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242648/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-05-04",
+      "markers": [],
+      "external_id": "242648"
+    },
+    {
+      "n": 6,
+      "title": "Until the Last Dog Dies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242649/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-05-11",
+      "markers": [],
+      "external_id": "242649"
+    },
+    {
+      "n": 7,
+      "title": "The Road to Death",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242650/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-05-18",
+      "markers": [],
+      "external_id": "242650"
+    },
+    {
+      "n": 8,
+      "title": "Deadline of the Dream",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242651/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-05-25",
+      "markers": [],
+      "external_id": "242651"
+    },
+    {
+      "n": 9,
+      "title": "A Dead Flower Shall Never Bloom",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242652/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-06-01",
+      "markers": [],
+      "external_id": "242652"
+    },
+    {
+      "n": 10,
+      "title": "The Die Is Cast",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-06-08",
+      "markers": [],
+      "external_id": "242653"
+    },
+    {
+      "n": 11,
+      "title": "A Deadmarch",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-06-15",
+      "markers": [],
+      "external_id": "242654"
+    },
+    {
+      "n": 12,
+      "title": "Leap Over the Edge of Death",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-06-22",
+      "markers": [],
+      "external_id": "242655"
+    },
+    {
+      "n": 13,
+      "title": "Born to Die",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-06-29",
+      "markers": [],
+      "external_id": "242656"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The theme of the NOMAD",
+      "artist": "mabanua",
+      "episodes": "2-4, 6-10, 12-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "El Canto del Colibri",
+      "artist": "mabanua",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Bite",
+      "artist": "LEO Imai",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kakatte koi yo (かかってこいよ; Come to Me)",
+      "artist": "Emi Nakamura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rise Up / Diamond in the Sky",
+      "artist": "Lyn Inaizumi",
+      "episodes": "13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "The Ending",
+      "artist": "mabanua",
+      "episodes": "13"
+    }
+  ],
+  "relations": []
+}

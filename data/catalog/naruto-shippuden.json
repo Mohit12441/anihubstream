@@ -1,0 +1,5135 @@
+{
+  "id": "naruto-shippuden",
+  "title": "Naruto: Shippuden",
+  "native": "NARUTO -ナルト- 疾風伝",
+  "year": 2007,
+  "rating": 8.2,
+  "season": "Winter 2007",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1735-kGfVm0YqCPcu.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1735-kGfVm0YqCPcu.png",
+  "accent": "#e4865d",
+  "synopsis": "Naruto: Shippuuden is the continuation of the original animated TV series Naruto. The story revolves around an older and slightly more matured Uzumaki Naruto and his quest to save his friend Uchiha Sasuke from the grips of the snake-like Shinobi, Orochimaru. After 2 and a half years Naruto finally returns to his village of Konoha, and sets about putting his ambitions to work, though it will not be easy, as he has amassed a few (more dangerous) enemies, in the likes of the shinobi organization; Akatsuki. \n\n(Source: Anime News Network)",
+  "rank": 6,
+  "trend_rank": 16,
+  "alt_seasons": [
+    "Naruto (2002)",
+    "Boruto: Naruto the Movie - The Day Naruto Became Hokage (2016)",
+    "Boruto: Naruto Next Generations (2017)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 1555,
+    "anilist": 1735,
+    "mal": 1735,
+    "hianime": "naruto-shippuden-mrbcqe"
+  },
+  "skip_key_id": 1735,
+  "skip_key_space": "anilist",
+  "episode_total": 500,
+  "added_at": "2026-10-13 00:00:00",
+  "search_text": "naruto shippuden naruto ナルト 疾風伝 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "drama",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Homecoming",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105967/original.jpeg",
+      "synopsis": "A figure passes through the gates. It's an older Naruto, who has returned from a long training journey with Jiraiya. Naruto Uzumaki is back!",
+      "airdate": "2007-02-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 509,
+          "end": 599
+        }
+      ],
+      "external_id": "105967"
+    },
+    {
+      "n": 2,
+      "title": "The Akatsuki Makes Its Move",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105968/original.jpeg",
+      "synopsis": "Naruto and Sakura team up and challenge Kakashi to a survival challenge to show off their progress.",
+      "airdate": "2007-02-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 120,
+          "end": 210
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 40,
+          "end": 130
+        }
+      ],
+      "external_id": "105968"
+    },
+    {
+      "n": 3,
+      "title": "The Results of Training",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105969/original.jpeg",
+      "synopsis": "Naruto’s and Sakura’s combined skills force Kakashi to use his Sharingan right off the bat. Naruto masterfully unleashes his jutsu one after another.",
+      "airdate": "2007-02-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 132,
+          "end": 221
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1204,
+          "end": 1294
+        }
+      ],
+      "external_id": "105969"
+    },
+    {
+      "n": 4,
+      "title": "The Jinchuriki of the Sand",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105970/original.jpeg",
+      "synopsis": "Gaara is quick to detect Deidara’s presence, and an aerial battle ensues with Deidara on his giant bird and Gaara atop sand.",
+      "airdate": "2007-03-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 170,
+          "end": 260
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1208,
+          "end": 1298
+        }
+      ],
+      "external_id": "105970"
+    },
+    {
+      "n": 5,
+      "title": "The Kazekage Stands Tall",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105971/original.jpeg",
+      "synopsis": "Naruto and Sakura defeat Kakashi in the survival challenge. Tsunade assigns them to a three-man squad led by Kakashi, who tells them they are now his equals.",
+      "airdate": "2007-03-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 172
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1208,
+          "end": 1298
+        }
+      ],
+      "external_id": "105971"
+    },
+    {
+      "n": 6,
+      "title": "Mission Cleared",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105972/original.jpeg",
+      "synopsis": "In order to protect his village from Deidara’s explosive clay, Gaara uses his chakra to create a giant sand shield.",
+      "airdate": "2007-03-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 193,
+          "end": 282
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1295
+        }
+      ],
+      "external_id": "105972"
+    },
+    {
+      "n": 7,
+      "title": "Run, Kankuro",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105973/original.jpeg",
+      "synopsis": "Gaara, his strength completely exhausted, is whisked away by Deidara. Kankuro ignores Baki’s efforts to stop him and immediately sets out in pursuit with a platoon to rescue Gaara.",
+      "airdate": "2007-03-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1296
+        }
+      ],
+      "external_id": "105973"
+    },
+    {
+      "n": 8,
+      "title": "Team Kakashi, Deployed",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105974/original.jpeg",
+      "synopsis": "An urgent message from the Sand Village detailing the Akatsuki’s kidnapping of the Kazekage reaches the Hidden Leaf Village. Tsunade wastes no time in ordering Team Kakashi to the Sand Village.",
+      "airdate": "2007-04-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 122,
+          "end": 212
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1295
+        }
+      ],
+      "external_id": "105974"
+    },
+    {
+      "n": 9,
+      "title": "The Jinchuriki's Tears",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105975/original.jpeg",
+      "synopsis": "On her way to the Sand Village, Temari encounters Kakashi and his team. Kakashi admonishes Naruto when he tries to rush ahead…",
+      "airdate": "2007-04-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "105975"
+    },
+    {
+      "n": 10,
+      "title": "Sealing Jutsu: Nine Phantom Dragons",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105976/original.jpeg",
+      "synopsis": "The Sand ninja fight against time to treat Kankuro. Even the Sand’s poison expert, Granny Chiyo, is baffled. The only hope lies with the reinforcements sent by Tsunade.",
+      "airdate": "2007-04-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 140,
+          "end": 231
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1295
+        }
+      ],
+      "external_id": "105976"
+    },
+    {
+      "n": 11,
+      "title": "The Medical Ninja's Student",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105977/original.jpeg",
+      "synopsis": "Sakura treats a critically ill Kankuro. After extensive training she’s now a full-fledged Medic Ninja, and Sakura amazes everyone with her sure, steady hands.",
+      "airdate": "2007-04-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 146,
+          "end": 236
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1296
+        }
+      ],
+      "external_id": "105977"
+    },
+    {
+      "n": 12,
+      "title": "The Retired Granny's Determination",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105978/original.jpeg",
+      "synopsis": "Pakkun finds the hideout of the Akatsuki. Team Kakashi and Temari prepare to set out to get Gaara back, but Temari is ordered to stay behind and help guard the village.",
+      "airdate": "2007-05-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 104,
+          "end": 194
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1207,
+          "end": 1297
+        }
+      ],
+      "external_id": "105978"
+    },
+    {
+      "n": 13,
+      "title": "A Meeting With Destiny",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105979/original.jpeg",
+      "synopsis": "Team Kakashi encounter Itachi Uchiha, who had dealt them a bitter defeat in the past. Kakashi warns everyone not to look into Itachi’s Sharingan Eyes.",
+      "airdate": "2007-05-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1213,
+          "end": 1303
+        }
+      ],
+      "external_id": "105979"
+    },
+    {
+      "n": 14,
+      "title": "Naruto's Growth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105980/original.jpeg",
+      "synopsis": "Guy prepares to use a forbidden secret jutsu. Meanwhile, Naruto falls under Itachi’s genjutsu, and all the anti-genjutsu training he underwent with Jiraiya races through Naruto’s mind.",
+      "airdate": "2007-05-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 247,
+          "end": 337
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1209,
+          "end": 1299
+        }
+      ],
+      "external_id": "105980"
+    },
+    {
+      "n": 15,
+      "title": "The Secret Weapon is Called....",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105981/original.jpeg",
+      "synopsis": "Granny Chiyo and Sakura rescue Naruto from Itachi’s genjutsu. Without a moment’s delay, Kakashi begins a counterattack.",
+      "airdate": "2007-05-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 396,
+          "end": 486
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1211,
+          "end": 1301
+        }
+      ],
+      "external_id": "105981"
+    },
+    {
+      "n": 16,
+      "title": "The Secret of Jinchuriki",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105982/original.jpeg",
+      "synopsis": "Chiyo and Kakashi realize that the attack was just a diversion, and that the Akatsuki have already begun the process of extracting the Tailed Beast from Gaara.",
+      "airdate": "2007-05-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 177,
+          "end": 267
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1210,
+          "end": 1300
+        }
+      ],
+      "external_id": "105982"
+    },
+    {
+      "n": 17,
+      "title": "The Death of Gaara!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105983/original.jpeg",
+      "synopsis": "Teams Kakashi and Guy take a short rest. Granny Chiyo watches Naruto dozing off and is reminded of Sasori as a child. The pursuit resumes, and when Chiyo wonders why Naruto puts such effort into rescuing Gaara…",
+      "airdate": "2007-06-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 210,
+          "end": 300
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1296
+        }
+      ],
+      "external_id": "105983"
+    },
+    {
+      "n": 18,
+      "title": "Charge Tactic! Button Hook Entry!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105984/original.jpeg",
+      "synopsis": "Teams Kakashi and Guy reach the Akatsuki hideout. They hurry to infiltrate but are thwarted by a five-seal barrier. The only way to break the barrier is to remove all five seals at once.",
+      "airdate": "2007-06-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 62,
+          "end": 152
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1208,
+          "end": 1298
+        }
+      ],
+      "external_id": "105984"
+    },
+    {
+      "n": 19,
+      "title": "Traps Activate! Team Guy's Enemy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105985/original.jpeg",
+      "synopsis": "Breaking the five-seal barrier set off a trap, which now has Team Guy battling amazingly accurate copies of themselves. Back at the Akatsuki hideout, Deidara and Sasori struggle to take the Nine-Tail Jinchûriki.",
+      "airdate": "2007-07-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 174,
+          "end": 264
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1296
+        }
+      ],
+      "external_id": "105985"
+    },
+    {
+      "n": 20,
+      "title": "Hiruko vs. Two Kunoichi!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105986/original.jpeg",
+      "synopsis": "At last, the showdown between the old woman and her grandson begins. Sakura is confused by Sasori’s strange appearance, and Granny Chiyo explains that this is Hiruko…",
+      "airdate": "2007-07-19",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1294
+        }
+      ],
+      "external_id": "105986"
+    },
+    {
+      "n": 21,
+      "title": "Sasori's Real Face",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105987/original.jpeg",
+      "synopsis": "Granny Chiyo and Sakura manage to expose Sasori, who amazingly looks no older than he did twenty years earlier. Chiyo is even more shocked at the second puppet that Sasori produces.",
+      "airdate": "2007-07-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 277,
+          "end": 367
+        }
+      ],
+      "external_id": "105987"
+    },
+    {
+      "n": 22,
+      "title": "Chiyo's Secret Skills",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105988/original.jpeg",
+      "synopsis": "Sakura is caught by Sasori’s tactic and surrounded by a poison cloud. But she uses a Paper Bomb to blow herself free from the poisonous fumes.",
+      "airdate": "2007-08-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 226,
+          "end": 316
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1208,
+          "end": 1297
+        }
+      ],
+      "external_id": "105988"
+    },
+    {
+      "n": 23,
+      "title": "Father and Mother",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105989/original.jpeg",
+      "synopsis": "Chiyo and Sakura take cover, and Sasori wastes no time unleashing a ruthless attack. Chiyo fights back to protect Sakura, but in an instant the Father and Mother puppets are sealed by the Iron Sand.",
+      "airdate": "2007-08-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 387,
+          "end": 477
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1294
+        }
+      ],
+      "external_id": "105989"
+    },
+    {
+      "n": 24,
+      "title": "The Third Kazekage",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105990/original.jpeg",
+      "synopsis": "Sakura counters the Iron Sand attack of the Third Kazekage puppet with superhuman strength. She learned from Tsunade that the most important skill of a Medic Ninja is the ability to evade an attack.",
+      "airdate": "2007-08-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 189,
+          "end": 279
+        }
+      ],
+      "external_id": "105990"
+    },
+    {
+      "n": 25,
+      "title": "Three Minutes Between Life and Death",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105991/original.jpeg",
+      "synopsis": "Sakura destroys the Third Kazekage puppet thanks to a secret antidote she had taken. Sakuro explains to a surprised Granny Chiyo that this antidote converts the poison into harmless protein and is effective for about three minutes.",
+      "airdate": "2007-08-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 336,
+          "end": 426
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1211,
+          "end": 1301
+        }
+      ],
+      "external_id": "105991"
+    },
+    {
+      "n": 26,
+      "title": "Puppet Fight: 10 vs. 100!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105992/original.jpeg",
+      "synopsis": "Sakura and Granny Chiyo are engaged in a fierce battle with Sasori, who is able turn himself into a human puppet. They somehow bring Sasori down within the time limit, but he ends up reviving.",
+      "airdate": "2007-08-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 120,
+          "end": 210
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1209,
+          "end": 1299
+        }
+      ],
+      "external_id": "105992"
+    },
+    {
+      "n": 27,
+      "title": "Impossible Dream",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105993/original.jpeg",
+      "synopsis": "Although stung with poison herself, Granny Chiyo uses the last of the antidote on Sakura. Mocking the tender scene between Granny Chiyo and Sakura, Sasori attempts to end Granny Chiyo's life.",
+      "airdate": "2007-08-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 162,
+          "end": 252
+        }
+      ],
+      "external_id": "105993"
+    },
+    {
+      "n": 28,
+      "title": "Beasts: Alive Again!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105994/original.jpeg",
+      "synopsis": "Team Guy senses the result of the Sakura and Granny Chiyo’s desperate struggle while still in battle with his deadly copy. Although Guy’s team members are showing fatigue, their copies remain strong!",
+      "airdate": "2007-09-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 303,
+          "end": 393
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1207,
+          "end": 1297
+        }
+      ],
+      "external_id": "105994"
+    },
+    {
+      "n": 29,
+      "title": "Kakashi Enlightened!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105995/original.jpeg",
+      "synopsis": "Sakura hurries to get to Naruto with Granny Chiyo, who is suffering from the poison. The members of Team Guy rush to assist Team Kakashi. Meanwhile, with all preparations complete, Kakashi reveals his Mangekyo Sharingan.",
+      "airdate": "2007-09-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 303,
+          "end": 393
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1203,
+          "end": 1294
+        }
+      ],
+      "external_id": "105995"
+    },
+    {
+      "n": 30,
+      "title": "Aesthetics of an Instant",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105996/original.jpeg",
+      "synopsis": "Naruto loses all reason to anger and is gradually taken over by the Nine-Tailed Fox Spirit. Having been forewarned by Jiraiya, Kakashi narrowly manages to suppress the Nine-Tailed Fox.",
+      "airdate": "2007-09-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 209,
+          "end": 299
+        }
+      ],
+      "external_id": "105996"
+    },
+    {
+      "n": 31,
+      "title": "The Legacy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105997/original.jpeg",
+      "synopsis": "Relying on Naruto's power, Granny Chiyo performs the Transmigration Jutsu on Gaara. Sakura is saddened when she realizes the cost of this jutsu.",
+      "airdate": "2007-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 5,
+          "end": 95
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1211,
+          "end": 1301
+        }
+      ],
+      "external_id": "105997"
+    },
+    {
+      "n": 32,
+      "title": "Return of the Kazekage",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/105998/original.jpeg",
+      "synopsis": "Gaara and his rescuers make a triumphant return to the Hidden Sand Village. After paying their respects at Granny Chiyo's grave, Naruto and the Leaf ninja reluctantly take their leave.",
+      "airdate": "2007-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 207,
+          "end": 297
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1298
+        }
+      ],
+      "external_id": "105998"
+    },
+    {
+      "n": 33,
+      "title": "The New Target",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172558/original.jpeg",
+      "synopsis": "Everyone has returned to the Hidden Leaf Village. Kakashi is hospitalized for a week due to the strain caused by his Mangekyo Sharingan.",
+      "airdate": "2007-11-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 202,
+          "end": 292
+        }
+      ],
+      "external_id": "172558"
+    },
+    {
+      "n": 34,
+      "title": "Formation! New Team Kakashi!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172559/original.jpeg",
+      "synopsis": "After attacking Naruto, Sai predicts that they will meet again soon, then vanishes. Tsunade meets with the village elders, Homura and Koharu…",
+      "airdate": "2007-11-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 207,
+          "end": 297
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1294
+        }
+      ],
+      "external_id": "172559"
+    },
+    {
+      "n": 35,
+      "title": "An Unnecessary Addition",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172560/original.jpeg",
+      "synopsis": "Naruto is enraged when he discovers that Sai attacked him in order to test his strength. Sakura pulls them apart, but tensions are running high between the members of Team Kakashi.",
+      "airdate": "2007-11-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 248,
+          "end": 338
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1219,
+          "end": 1309
+        }
+      ],
+      "external_id": "172560"
+    },
+    {
+      "n": 36,
+      "title": "The Fake Smile",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172561/original.jpeg",
+      "synopsis": "The new Team Kakashi heads for Tenchikyo. To Naruto, Sai is just temporarily filling in for Sasuke. When Sai shows his contempt for Sasuke, the antagonism comes to a head.",
+      "airdate": "2007-11-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 231,
+          "end": 330
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1294
+        }
+      ],
+      "external_id": "172561"
+    },
+    {
+      "n": 37,
+      "title": "Untitled",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172562/original.jpeg",
+      "synopsis": "Sakura comes across Sai working on an abstract painting. He tells her that he's unable to give it a title. Bothered by his manner, Sakura finds an unusual picture book among Sai's things.",
+      "airdate": "2007-11-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 155,
+          "end": 245
+        }
+      ],
+      "external_id": "172562"
+    },
+    {
+      "n": 38,
+      "title": "Simulation",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172563/original.jpeg",
+      "synopsis": "In preparation for Tenchikyo, Yamato conducts a half-day simulation in order to get a grasp on the fighting skills and jutsu of Team Kakashi. Sai abandons Naruto to conclude the simulated mission successfully.",
+      "airdate": "2007-12-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 204,
+          "end": 294
+        }
+      ],
+      "external_id": "172563"
+    },
+    {
+      "n": 39,
+      "title": "The Tenchi Bridge",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172564/original.jpeg",
+      "synopsis": "The day for capturing the spy is finally here. Just as planned, Yamato takes on Sasori's likeness and waits until the Akatsuki spy appears. The spy turns out to be none other than Kabuto.",
+      "airdate": "2007-12-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 341,
+          "end": 431
+        }
+      ],
+      "external_id": "172564"
+    },
+    {
+      "n": 40,
+      "title": "The Nine-Tails Unleashed",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172565/original.jpeg",
+      "synopsis": "Faced with Orochimaru, his sworn enemy, Naruto suddenly releases the power of his Nine-Tailed Fox. When Yamato sees Naruto's fourth tail appear, he recalls Jiraiya's tale of how he nearly lost his life to the transformed Naruto.",
+      "airdate": "2007-12-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 163,
+          "end": 253
+        }
+      ],
+      "external_id": "172565"
+    },
+    {
+      "n": 41,
+      "title": "The Top-Secret Mission Begins",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172566/original.jpeg",
+      "synopsis": "When his third tail appears, all that Naruto can see is Orochimaru. He is blind even to his teammates.",
+      "airdate": "2007-12-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1210,
+          "end": 1380
+        }
+      ],
+      "external_id": "172566"
+    },
+    {
+      "n": 42,
+      "title": "Orochimaru vs. Jinchuriki",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172567/original.jpeg",
+      "synopsis": "With the release of his fourth tail, Naruto completely loses his awareness and is overtaken by destructive impulses.",
+      "airdate": "2008-01-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1226,
+          "end": 1380
+        }
+      ],
+      "external_id": "172567"
+    },
+    {
+      "n": 43,
+      "title": "Sakura's Tears",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172568/original.jpeg",
+      "synopsis": "Although he has changed almost completely into his animal form and has lost all awareness, Naruto refuses to give up the idea of bringing Sasuke home.",
+      "airdate": "2008-01-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 269,
+          "end": 359
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1203,
+          "end": 1342
+        }
+      ],
+      "external_id": "172568"
+    },
+    {
+      "n": 44,
+      "title": "The Secret of the Battle!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172569/original.jpeg",
+      "synopsis": "Taking advantage of the confusion, Sai makes contact with Orochimaru. After reviewing the contents of the documents given to him, Orochimaru decides to take Sai back to the hideout.",
+      "airdate": "2008-01-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 153,
+          "end": 243
+        }
+      ],
+      "external_id": "172569"
+    },
+    {
+      "n": 45,
+      "title": "The Consequences of Betrayal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172570/original.jpeg",
+      "synopsis": "Naruto and Sakura are shocked when they hear that Danzo's goal is to work with Orochimaru to once again attempt to defeat the Leaf Village.",
+      "airdate": "2008-01-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 213,
+          "end": 303
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 52,
+          "end": 142
+        }
+      ],
+      "external_id": "172570"
+    },
+    {
+      "n": 46,
+      "title": "The Unfinished Page",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172571/original.jpeg",
+      "synopsis": "Naruto is shocked to learn that he was the one responsible for the destruction around them and for Sakura's injuries.",
+      "airdate": "2008-02-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 277,
+          "end": 367
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1224,
+          "end": 1314
+        }
+      ],
+      "external_id": "172571"
+    },
+    {
+      "n": 47,
+      "title": "Infiltration: The Den of the Snake!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172572/original.jpeg",
+      "synopsis": "Sai shudders when he finally meets Sasuke face to face in Orochimaru's hideout. The list that Sai gave to Orochimaru lists the members of the Anbu Black Ops, the corps under the direct control of the Hokage.",
+      "airdate": "2008-02-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 131,
+          "end": 221
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1217,
+          "end": 1298
+        }
+      ],
+      "external_id": "172572"
+    },
+    {
+      "n": 48,
+      "title": "Bonds",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172573/original.jpeg",
+      "synopsis": "Team Kakashi is able to find Sai with Yamato guiding them. They immediately begin questioning Sai about Danzo's plans for destroying the Leaf Village, and surprisingly, Sai divulges everything.",
+      "airdate": "2008-02-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 62,
+          "end": 152
+        }
+      ],
+      "external_id": "172573"
+    },
+    {
+      "n": 49,
+      "title": "Something Important...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172574/original.jpeg",
+      "synopsis": "Kabuto carries out a surprise attack on Team Kakashi to take back Sai, but a change has come over Sai since Sakura pointed out his contradictions.",
+      "airdate": "2008-03-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 107,
+          "end": 197
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1295
+        }
+      ],
+      "external_id": "172574"
+    },
+    {
+      "n": 50,
+      "title": "The Picture Book's Story",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172575/original.jpeg",
+      "synopsis": "Naruto, while nursing his injuries caused by the release of the Nine-Tailed Fox, searches frantically for Sasuke. Seeing this, Sai recalls the feelings he once had for his older brother and finally manages to complete his unfinished picture.",
+      "airdate": "2008-03-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 326,
+          "end": 416
+        }
+      ],
+      "external_id": "172575"
+    },
+    {
+      "n": 51,
+      "title": "Reunion",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172576/original.jpeg",
+      "synopsis": "Team Kakashi are stunned to learn that Sai's true mission is to kill Sasuke. Naruto wants to believe that the smile Sai showed them was real, but there is a possibility that it was all an act.",
+      "airdate": "2008-03-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 119
+        }
+      ],
+      "external_id": "172576"
+    },
+    {
+      "n": 52,
+      "title": "The Power of Uchiha",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172577/original.jpeg",
+      "synopsis": "Team Kakashi finally have their wish to be reunited with Sasuke granted. Although it has been three long years, Sasuke's feelings have not changed. His ultimate goal is to get revenge against his older brother, Itachi.",
+      "airdate": "2008-03-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1221,
+          "end": 1311
+        }
+      ],
+      "external_id": "172577"
+    },
+    {
+      "n": 53,
+      "title": "Title",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172578/original.jpeg",
+      "synopsis": "Sasuke's desire for revenge remains firm, no matter how hard Naruto tries to talk him out of it. Yamato tries to take Sasuke by force, but interference by Orochimaru brings things to a quick close.",
+      "airdate": "2008-04-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 100,
+          "end": 190
+        }
+      ],
+      "external_id": "172578"
+    },
+    {
+      "n": 54,
+      "title": "Nightmare",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-04-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 129,
+          "end": 219
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1207,
+          "end": 1328
+        }
+      ],
+      "external_id": "196649"
+    },
+    {
+      "n": 55,
+      "title": "Wind",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-04-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 169
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1266,
+          "end": 1380
+        }
+      ],
+      "external_id": "196650"
+    },
+    {
+      "n": 56,
+      "title": "Writhe",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-04-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 104,
+          "end": 194
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1207,
+          "end": 1341
+        }
+      ],
+      "external_id": "196651"
+    },
+    {
+      "n": 57,
+      "title": "Robbed of Sleep",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-05-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        }
+      ],
+      "external_id": "196652"
+    },
+    {
+      "n": 58,
+      "title": "Loneliness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-05-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 159,
+          "end": 249
+        }
+      ],
+      "external_id": "196653"
+    },
+    {
+      "n": 59,
+      "title": "A New Enemy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-05-15",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1207,
+          "end": 1380
+        }
+      ],
+      "external_id": "196654"
+    },
+    {
+      "n": 60,
+      "title": "Impermanence",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-05-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 193,
+          "end": 283
+        }
+      ],
+      "external_id": "196655"
+    },
+    {
+      "n": 61,
+      "title": "Contact",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-05-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        }
+      ],
+      "external_id": "196656"
+    },
+    {
+      "n": 62,
+      "title": "Teammate",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-06-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 287,
+          "end": 377
+        }
+      ],
+      "external_id": "196657"
+    },
+    {
+      "n": 63,
+      "title": "The Two Kings",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-06-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 229,
+          "end": 319
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1207,
+          "end": 1340
+        }
+      ],
+      "external_id": "196658"
+    },
+    {
+      "n": 64,
+      "title": "The Jet-Black Signal Fire",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-07-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        }
+      ],
+      "external_id": "196659"
+    },
+    {
+      "n": 65,
+      "title": "Lockdown of Darkness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-07-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 407,
+          "end": 497
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1380
+        }
+      ],
+      "external_id": "196660"
+    },
+    {
+      "n": 66,
+      "title": "Revived Souls",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-07-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 203,
+          "end": 293
+        }
+      ],
+      "external_id": "196661"
+    },
+    {
+      "n": 67,
+      "title": "Everyone's Struggle to the Death",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-07-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 167,
+          "end": 257
+        }
+      ],
+      "external_id": "196662"
+    },
+    {
+      "n": 68,
+      "title": "Moment of Awakening",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-07-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 190,
+          "end": 280
+        }
+      ],
+      "external_id": "196663"
+    },
+    {
+      "n": 69,
+      "title": "Despair",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-07-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 171
+        }
+      ],
+      "external_id": "196664"
+    },
+    {
+      "n": 70,
+      "title": "Resonance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-08-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 129
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1294
+        }
+      ],
+      "external_id": "196665"
+    },
+    {
+      "n": 71,
+      "title": "My Friend",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-08-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        }
+      ],
+      "external_id": "196666"
+    },
+    {
+      "n": 72,
+      "title": "The Quietly Approaching Threat",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-08-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 236,
+          "end": 326
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1296
+        }
+      ],
+      "external_id": "196667"
+    },
+    {
+      "n": 73,
+      "title": "Akatsuki's Invasion",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-08-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 183,
+          "end": 273
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1296
+        }
+      ],
+      "external_id": "196668"
+    },
+    {
+      "n": 74,
+      "title": "Under the Starry Sky",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-09-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1200,
+          "end": 1320
+        }
+      ],
+      "external_id": "196669"
+    },
+    {
+      "n": 75,
+      "title": "The Old Monk's Prayer",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-09-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1218,
+          "end": 1308
+        }
+      ],
+      "external_id": "196670"
+    },
+    {
+      "n": 76,
+      "title": "The Next Step",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-09-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 323,
+          "end": 413
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1210,
+          "end": 1300
+        }
+      ],
+      "external_id": "196671"
+    },
+    {
+      "n": 77,
+      "title": "Climbing Silver",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-09-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 363,
+          "end": 453
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1118,
+          "end": 1208
+        }
+      ],
+      "external_id": "196672"
+    },
+    {
+      "n": 78,
+      "title": "The Judgment",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-10-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 87,
+          "end": 177
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1219,
+          "end": 1309
+        }
+      ],
+      "external_id": "196673"
+    },
+    {
+      "n": 79,
+      "title": "Unfulfilled Scream",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-10-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 197,
+          "end": 287
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1267,
+          "end": 1380
+        }
+      ],
+      "external_id": "196674"
+    },
+    {
+      "n": 80,
+      "title": "Last Words",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-10-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 116,
+          "end": 206
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "196675"
+    },
+    {
+      "n": 81,
+      "title": "Sad News",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-10-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1219,
+          "end": 1309
+        }
+      ],
+      "external_id": "196676"
+    },
+    {
+      "n": 82,
+      "title": "Team Ten",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-10-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1278,
+          "end": 1368
+        }
+      ],
+      "external_id": "196677"
+    },
+    {
+      "n": 83,
+      "title": "Target: Locked On",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-11-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 109,
+          "end": 199
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1218,
+          "end": 1308
+        }
+      ],
+      "external_id": "196678"
+    },
+    {
+      "n": 84,
+      "title": "Kakuzu's Abilities",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-11-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 124,
+          "end": 214
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1219,
+          "end": 1309
+        }
+      ],
+      "external_id": "196679"
+    },
+    {
+      "n": 85,
+      "title": "The Terrifying Secret",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-11-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 65,
+          "end": 155
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "196680"
+    },
+    {
+      "n": 86,
+      "title": "Shikamaru's Genius",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-12-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 208,
+          "end": 298
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1219,
+          "end": 1309
+        }
+      ],
+      "external_id": "196681"
+    },
+    {
+      "n": 87,
+      "title": "When You Curse Someone, You Dig Your Own Grave",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-12-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 128,
+          "end": 218
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1219,
+          "end": 1309
+        }
+      ],
+      "external_id": "196682"
+    },
+    {
+      "n": 88,
+      "title": "Wind Style: Rasen Shuriken!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-12-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 158,
+          "end": 248
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1217,
+          "end": 1307
+        }
+      ],
+      "external_id": "196683"
+    },
+    {
+      "n": 89,
+      "title": "The Price of Power",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-12-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 193,
+          "end": 283
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1217,
+          "end": 1307
+        }
+      ],
+      "external_id": "196684"
+    },
+    {
+      "n": 90,
+      "title": "A Shinobi's Determination",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2008-12-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 55,
+          "end": 145
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1217,
+          "end": 1307
+        }
+      ],
+      "external_id": "196685"
+    },
+    {
+      "n": 91,
+      "title": "Orochimaru's Hideout Discovered",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-01-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 184,
+          "end": 274
+        }
+      ],
+      "external_id": "196686"
+    },
+    {
+      "n": 92,
+      "title": "Encounter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-01-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 75,
+          "end": 165
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1268,
+          "end": 1380
+        }
+      ],
+      "external_id": "196687"
+    },
+    {
+      "n": 93,
+      "title": "Connecting Hearts",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-01-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "196688"
+    },
+    {
+      "n": 94,
+      "title": "A Night of Rain",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-01-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 222,
+          "end": 312
+        }
+      ],
+      "external_id": "196689"
+    },
+    {
+      "n": 95,
+      "title": "The Two Charms",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-02-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 114,
+          "end": 204
+        }
+      ],
+      "external_id": "196690"
+    },
+    {
+      "n": 96,
+      "title": "The Unseeing Enemy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-02-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 98,
+          "end": 188
+        }
+      ],
+      "external_id": "196691"
+    },
+    {
+      "n": 97,
+      "title": "The Labyrinth of Distorted Reflection",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-02-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 131,
+          "end": 221
+        }
+      ],
+      "external_id": "196692"
+    },
+    {
+      "n": 98,
+      "title": "The Target Appears",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-02-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 207,
+          "end": 297
+        }
+      ],
+      "external_id": "196693"
+    },
+    {
+      "n": 99,
+      "title": "The Rampaging Tailed Beast",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-03-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 135,
+          "end": 225
+        }
+      ],
+      "external_id": "196694"
+    },
+    {
+      "n": 100,
+      "title": "Inside the Mist",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-03-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 171
+        }
+      ],
+      "external_id": "196695"
+    },
+    {
+      "n": 101,
+      "title": "Everyone's Feelings",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-03-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 192,
+          "end": 282
+        }
+      ],
+      "external_id": "196696"
+    },
+    {
+      "n": 102,
+      "title": "Regroup!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-03-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 175,
+          "end": 265
+        }
+      ],
+      "external_id": "196697"
+    },
+    {
+      "n": 103,
+      "title": "The Four-Corner Sealing Barrier",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-04-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 225,
+          "end": 315
+        }
+      ],
+      "external_id": "196698"
+    },
+    {
+      "n": 104,
+      "title": "Breaking the Crystal Style",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-04-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 6,
+          "end": 96
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1380
+        }
+      ],
+      "external_id": "196699"
+    },
+    {
+      "n": 105,
+      "title": "The Battle Over the Barrier",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-04-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 200,
+          "end": 290
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1295
+        }
+      ],
+      "external_id": "196700"
+    },
+    {
+      "n": 106,
+      "title": "Red Camellia",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-04-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 141
+        }
+      ],
+      "external_id": "196701"
+    },
+    {
+      "n": 107,
+      "title": "Strange Bedfellows",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-04-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 302,
+          "end": 392
+        }
+      ],
+      "external_id": "196702"
+    },
+    {
+      "n": 108,
+      "title": "Guidepost of the Camellia",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-05-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 169,
+          "end": 259
+        }
+      ],
+      "external_id": "196703"
+    },
+    {
+      "n": 109,
+      "title": "Counterattack of the Curse Mark",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-05-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 143,
+          "end": 233
+        }
+      ],
+      "external_id": "196704"
+    },
+    {
+      "n": 110,
+      "title": "Memory of Guilt",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-05-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 246,
+          "end": 336
+        }
+      ],
+      "external_id": "196705"
+    },
+    {
+      "n": 111,
+      "title": "Shattered Promise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-05-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 136,
+          "end": 226
+        }
+      ],
+      "external_id": "196706"
+    },
+    {
+      "n": 112,
+      "title": "A Place to Return To",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-06-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1380
+        }
+      ],
+      "external_id": "196707"
+    },
+    {
+      "n": 113,
+      "title": "The Great Snake's Pupil",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-06-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 333,
+          "end": 423
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1279,
+          "end": 1369
+        }
+      ],
+      "external_id": "196708"
+    },
+    {
+      "n": 114,
+      "title": "Eye of the Hawk",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-06-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 119
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "196709"
+    },
+    {
+      "n": 115,
+      "title": "Zabuza's Blade",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-06-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 227,
+          "end": 317
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1281,
+          "end": 1371
+        }
+      ],
+      "external_id": "196710"
+    },
+    {
+      "n": 116,
+      "title": "Guardian of the Iron Wall",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-07-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 291,
+          "end": 381
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1217,
+          "end": 1307
+        }
+      ],
+      "external_id": "196711"
+    },
+    {
+      "n": 117,
+      "title": "Jugo of the North Hideout",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-07-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 304,
+          "end": 394
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1220,
+          "end": 1310
+        }
+      ],
+      "external_id": "196712"
+    },
+    {
+      "n": 118,
+      "title": "Formation!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-07-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 298,
+          "end": 388
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1217,
+          "end": 1307
+        }
+      ],
+      "external_id": "196713"
+    },
+    {
+      "n": 119,
+      "title": "Kakashi Chronicles - A Boy's Life on the Battlefield - Part 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-07-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1281,
+          "end": 1371
+        }
+      ],
+      "external_id": "196714"
+    },
+    {
+      "n": 120,
+      "title": "Kakashi Chronicles - A Boy's Life on the Battlefield - Part 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-07-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1278,
+          "end": 1368
+        }
+      ],
+      "external_id": "196715"
+    },
+    {
+      "n": 121,
+      "title": "Assemble",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-08-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 406,
+          "end": 496
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1204,
+          "end": 1294
+        }
+      ],
+      "external_id": "196716"
+    },
+    {
+      "n": 122,
+      "title": "The Hunt",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-08-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 209,
+          "end": 299
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1218,
+          "end": 1308
+        }
+      ],
+      "external_id": "196717"
+    },
+    {
+      "n": 123,
+      "title": "Clash!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-08-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 35,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1365
+        }
+      ],
+      "external_id": "196718"
+    },
+    {
+      "n": 124,
+      "title": "Art",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-08-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 151,
+          "end": 241
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1367
+        }
+      ],
+      "external_id": "196719"
+    },
+    {
+      "n": 125,
+      "title": "Disappearance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-09-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 202,
+          "end": 292
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1367
+        }
+      ],
+      "external_id": "196720"
+    },
+    {
+      "n": 126,
+      "title": "Twilight",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-09-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 65,
+          "end": 155
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1221,
+          "end": 1311
+        }
+      ],
+      "external_id": "196721"
+    },
+    {
+      "n": 127,
+      "title": "Tales of a Gutsy Ninja ~Jiraiya Ninja Scroll~ Part 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-09-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1278,
+          "end": 1368
+        }
+      ],
+      "external_id": "196722"
+    },
+    {
+      "n": 128,
+      "title": "Tales of a Gutsy Ninja ~Jiraiya Ninja Scroll~ Part 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-09-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1266,
+          "end": 1380
+        }
+      ],
+      "external_id": "196723"
+    },
+    {
+      "n": 129,
+      "title": "Infiltrate! The Village Hidden in the Rain",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-10-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 525,
+          "end": 615
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1217,
+          "end": 1307
+        }
+      ],
+      "external_id": "196724"
+    },
+    {
+      "n": 130,
+      "title": "The Man Who Became God",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-10-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 407,
+          "end": 497
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1217,
+          "end": 1307
+        }
+      ],
+      "external_id": "196725"
+    },
+    {
+      "n": 131,
+      "title": "Honored Sage Mode!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-10-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 463,
+          "end": 553
+        }
+      ],
+      "external_id": "196726"
+    },
+    {
+      "n": 132,
+      "title": "In Attendance, the Six Paths of Pain",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-10-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 387,
+          "end": 477
+        }
+      ],
+      "external_id": "196727"
+    },
+    {
+      "n": 133,
+      "title": "The Tale of Jiraiya the Gallant",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-10-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "196728"
+    },
+    {
+      "n": 134,
+      "title": "Banquet Invitation",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-11-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 428,
+          "end": 518
+        }
+      ],
+      "external_id": "196729"
+    },
+    {
+      "n": 135,
+      "title": "The Longest Moment",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-11-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 88,
+          "end": 178
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1380
+        }
+      ],
+      "external_id": "196730"
+    },
+    {
+      "n": 136,
+      "title": "The Light & Dark of the Mangekyo Sharingan",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-11-19",
+      "markers": [],
+      "external_id": "196731"
+    },
+    {
+      "n": 137,
+      "title": "Amaterasu!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-11-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 345,
+          "end": 435
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1296
+        }
+      ],
+      "external_id": "196732"
+    },
+    {
+      "n": 138,
+      "title": "The End",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-12-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 211,
+          "end": 301
+        }
+      ],
+      "external_id": "196733"
+    },
+    {
+      "n": 139,
+      "title": "The Mystery of Tobi",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-12-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 236,
+          "end": 326
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1380
+        }
+      ],
+      "external_id": "196734"
+    },
+    {
+      "n": 140,
+      "title": "Fate",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-12-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 418,
+          "end": 508
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1367
+        }
+      ],
+      "external_id": "196735"
+    },
+    {
+      "n": 141,
+      "title": "Truth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2009-12-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 350,
+          "end": 440
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1267,
+          "end": 1357
+        }
+      ],
+      "external_id": "196736"
+    },
+    {
+      "n": 142,
+      "title": "Battle of Unraikyo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-01-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 125,
+          "end": 215
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1295
+        }
+      ],
+      "external_id": "196737"
+    },
+    {
+      "n": 143,
+      "title": "The Eight-Tails vs. Sasuke",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-01-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 163,
+          "end": 253
+        }
+      ],
+      "external_id": "196738"
+    },
+    {
+      "n": 144,
+      "title": "Wanderer",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-01-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 329,
+          "end": 419
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1207,
+          "end": 1297
+        }
+      ],
+      "external_id": "196739"
+    },
+    {
+      "n": 145,
+      "title": "Successor of the Forbidden Jutsu",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-01-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 134,
+          "end": 224
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1266,
+          "end": 1356
+        }
+      ],
+      "external_id": "196740"
+    },
+    {
+      "n": 146,
+      "title": "The Successor's Wish",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-02-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 364,
+          "end": 454
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1295
+        }
+      ],
+      "external_id": "196741"
+    },
+    {
+      "n": 147,
+      "title": "Rogue Ninja's Past",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-02-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 387,
+          "end": 477
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1208,
+          "end": 1298
+        }
+      ],
+      "external_id": "196742"
+    },
+    {
+      "n": 148,
+      "title": "Heir to Darkness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-02-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 50,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1267,
+          "end": 1357
+        }
+      ],
+      "external_id": "196743"
+    },
+    {
+      "n": 149,
+      "title": "Separation",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-02-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1267,
+          "end": 1357
+        }
+      ],
+      "external_id": "196744"
+    },
+    {
+      "n": 150,
+      "title": "The Forbidden Jutsu Released",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-03-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "196745"
+    },
+    {
+      "n": 151,
+      "title": "Master and Student",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-03-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 360,
+          "end": 450
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1380
+        }
+      ],
+      "external_id": "196746"
+    },
+    {
+      "n": 152,
+      "title": "Somber News",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-03-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 559,
+          "end": 649
+        }
+      ],
+      "external_id": "196747"
+    },
+    {
+      "n": 153,
+      "title": "Following the Master's Shadow",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-03-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 52,
+          "end": 142
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1264,
+          "end": 1380
+        }
+      ],
+      "external_id": "196748"
+    },
+    {
+      "n": 154,
+      "title": "Decryption",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-04-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 9,
+          "end": 99
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1380
+        }
+      ],
+      "external_id": "196749"
+    },
+    {
+      "n": 155,
+      "title": "The First Challenge",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-04-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 382,
+          "end": 472
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1188,
+          "end": 1278
+        }
+      ],
+      "external_id": "196750"
+    },
+    {
+      "n": 156,
+      "title": "Surpassing the Master",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-04-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 311,
+          "end": 401
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1296
+        }
+      ],
+      "external_id": "196751"
+    },
+    {
+      "n": 157,
+      "title": "Assault on the Leaf Village!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-04-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 178,
+          "end": 268
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1355
+        }
+      ],
+      "external_id": "196752"
+    },
+    {
+      "n": 158,
+      "title": "Power to Believe",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-04-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 397,
+          "end": 487
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1267,
+          "end": 1357
+        }
+      ],
+      "external_id": "196753"
+    },
+    {
+      "n": 159,
+      "title": "Pain vs. Kakashi",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-05-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 92,
+          "end": 182
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1355
+        }
+      ],
+      "external_id": "196754"
+    },
+    {
+      "n": 160,
+      "title": "Mystery of Pain",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 86,
+          "end": 176
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1204,
+          "end": 1294
+        }
+      ],
+      "external_id": "196755"
+    },
+    {
+      "n": 161,
+      "title": "Surname Is Sarutobi. Given Name, Konohamaru!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-05-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 295,
+          "end": 385
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1295
+        }
+      ],
+      "external_id": "196756"
+    },
+    {
+      "n": 162,
+      "title": "Pain to the World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-05-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 178,
+          "end": 268
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1355
+        }
+      ],
+      "external_id": "196757"
+    },
+    {
+      "n": 163,
+      "title": "Explode! Sage Mode",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-06-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 205,
+          "end": 295
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1296
+        }
+      ],
+      "external_id": "196758"
+    },
+    {
+      "n": 164,
+      "title": "Danger! Sage Mode Limit Reached",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-06-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 241,
+          "end": 331
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1217,
+          "end": 1307
+        }
+      ],
+      "external_id": "196759"
+    },
+    {
+      "n": 165,
+      "title": "Nine-Tails, Captured!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-06-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 71,
+          "end": 161
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1207,
+          "end": 1297
+        }
+      ],
+      "external_id": "196760"
+    },
+    {
+      "n": 166,
+      "title": "Confessions",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-06-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 87,
+          "end": 177
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1205,
+          "end": 1295
+        }
+      ],
+      "external_id": "196761"
+    },
+    {
+      "n": 167,
+      "title": "Planetary Devastation",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-07-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 8,
+          "end": 98
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1264,
+          "end": 1380
+        }
+      ],
+      "external_id": "196762"
+    },
+    {
+      "n": 168,
+      "title": "The Fourth Hokage",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-07-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 524,
+          "end": 614
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1211,
+          "end": 1380
+        }
+      ],
+      "external_id": "196763"
+    },
+    {
+      "n": 169,
+      "title": "The Two Students",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-07-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 160,
+          "end": 250
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1214,
+          "end": 1380
+        }
+      ],
+      "external_id": "196764"
+    },
+    {
+      "n": 170,
+      "title": "Big Adventure! The Quest for the Fourth Hokage's Legacy - Part 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-07-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 9,
+          "end": 99
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1372
+        }
+      ],
+      "external_id": "196765"
+    },
+    {
+      "n": 171,
+      "title": "Big Adventure! The Quest for the Fourth Hokage's Legacy - Part 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-07-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 10,
+          "end": 100
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1380
+        }
+      ],
+      "external_id": "196766"
+    },
+    {
+      "n": 172,
+      "title": "Meeting",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-08-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 19,
+          "end": 109
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1269,
+          "end": 1359
+        }
+      ],
+      "external_id": "196767"
+    },
+    {
+      "n": 173,
+      "title": "Origin of Pain",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-08-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 131,
+          "end": 221
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1207,
+          "end": 1297
+        }
+      ],
+      "external_id": "196768"
+    },
+    {
+      "n": 174,
+      "title": "Tale of Naruto Uzumaki",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-08-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 118,
+          "end": 208
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1266,
+          "end": 1356
+        }
+      ],
+      "external_id": "196769"
+    },
+    {
+      "n": 175,
+      "title": "Hero of the Hidden Leaf",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-08-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 231,
+          "end": 321
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1266,
+          "end": 1380
+        }
+      ],
+      "external_id": "196770"
+    },
+    {
+      "n": 176,
+      "title": "Rookie Instructor Iruka",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-09-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 247,
+          "end": 337
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1380
+        }
+      ],
+      "external_id": "196771"
+    },
+    {
+      "n": 177,
+      "title": "Iruka's Ordeal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-09-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 368,
+          "end": 458
+        }
+      ],
+      "external_id": "196772"
+    },
+    {
+      "n": 178,
+      "title": "Iruka's Decision",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-09-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 315,
+          "end": 405
+        }
+      ],
+      "external_id": "196773"
+    },
+    {
+      "n": 179,
+      "title": "Kakashi Hatake, The Jonin in Charge",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-09-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 473,
+          "end": 563
+        }
+      ],
+      "external_id": "196774"
+    },
+    {
+      "n": 180,
+      "title": "Inari's Courage Put to the Test",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-10-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 138,
+          "end": 228
+        }
+      ],
+      "external_id": "196775"
+    },
+    {
+      "n": 181,
+      "title": "Naruto's School of Revenge",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-10-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "196776"
+    },
+    {
+      "n": 182,
+      "title": "Gaara's Bond",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-10-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 540,
+          "end": 630
+        }
+      ],
+      "external_id": "196777"
+    },
+    {
+      "n": 183,
+      "title": "Naruto: Outbreak",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-10-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 280,
+          "end": 370
+        }
+      ],
+      "external_id": "196778"
+    },
+    {
+      "n": 184,
+      "title": "Deploy! Team Tenten",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-11-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 158,
+          "end": 248
+        }
+      ],
+      "external_id": "196779"
+    },
+    {
+      "n": 185,
+      "title": "Animal District",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-11-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 243,
+          "end": 333
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1217,
+          "end": 1338
+        }
+      ],
+      "external_id": "196780"
+    },
+    {
+      "n": 186,
+      "title": "Ah, the Medicine of Youth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-11-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        }
+      ],
+      "external_id": "196781"
+    },
+    {
+      "n": 187,
+      "title": "Gutsy Master and Student: The Training",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-11-25",
+      "markers": [],
+      "external_id": "196782"
+    },
+    {
+      "n": 188,
+      "title": "Record of the Ninja Gutsy Master and Student",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-11-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1380
+        }
+      ],
+      "external_id": "196783"
+    },
+    {
+      "n": 189,
+      "title": "Sasuke's Paw Encyclopedia",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-12-02",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1380
+        }
+      ],
+      "external_id": "196784"
+    },
+    {
+      "n": 190,
+      "title": "Naruto and the Old Soldier",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-12-09",
+      "markers": [],
+      "external_id": "196785"
+    },
+    {
+      "n": 191,
+      "title": "Kakashi Love Song",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-12-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 122
+        }
+      ],
+      "external_id": "196786"
+    },
+    {
+      "n": 192,
+      "title": "Neji Chronicles",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-12-23",
+      "markers": [],
+      "external_id": "196787"
+    },
+    {
+      "n": 193,
+      "title": "The Man Who Died Twice",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-01-06",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1366
+        }
+      ],
+      "external_id": "196788"
+    },
+    {
+      "n": 194,
+      "title": "The Worst Three-Legged Race",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-01-13",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1380
+        }
+      ],
+      "external_id": "196789"
+    },
+    {
+      "n": 195,
+      "title": "Team 10's Teamwork",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-01-20",
+      "markers": [],
+      "external_id": "196790"
+    },
+    {
+      "n": 196,
+      "title": "Drive Towards Darkness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-01-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 188,
+          "end": 278
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1380
+        }
+      ],
+      "external_id": "196791"
+    },
+    {
+      "n": 197,
+      "title": "The Sixth Hokage Danzo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-02-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 113,
+          "end": 203
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1266,
+          "end": 1380
+        }
+      ],
+      "external_id": "196792"
+    },
+    {
+      "n": 198,
+      "title": "Five Kage Summit's Eve",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-02-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 228,
+          "end": 318
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1266,
+          "end": 1380
+        }
+      ],
+      "external_id": "196793"
+    },
+    {
+      "n": 199,
+      "title": "Enter the Five Kage!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-02-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 360,
+          "end": 450
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1267,
+          "end": 1357
+        }
+      ],
+      "external_id": "196794"
+    },
+    {
+      "n": 200,
+      "title": "Naruto's Plea",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-02-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 522,
+          "end": 612
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1266,
+          "end": 1356
+        }
+      ],
+      "external_id": "196795"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Future Eve",
+      "artist": "OKAMOTO'S",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Give Lee Give Lee Rock Lee",
+      "artist": "ANIMETAL USA and Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Twinkle Twinkle",
+      "artist": "Secret",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Michi ~ to you all",
+      "artist": "aluto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Otakebi",
+      "artist": "Yusuke",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "if",
+      "artist": "Kana Nishino",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dareka Ga",
+      "artist": "PUFFY",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "NO RAIN, NO RAINBOW",
+      "artist": "HOME MADE Kazoku",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lie-Lie-Lie",
+      "artist": "DJ OZMA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gyu-Ru-Ru",
+      "artist": "Junko Takeuchi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hero's Come Back!!",
+      "artist": "nobodyknows+",
+      "episodes": "1-30"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Zetsuzetsu (絶絶; Death)",
+      "artist": "Swimy",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nagare Boshi ~Shooting Star~",
+      "artist": "HOME MADE Kazoku",
+      "episodes": "1-18"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubomi",
+      "artist": "MARIA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ding! Dong! Dang!",
+      "artist": "TUBE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rise",
+      "artist": "Jeremy Sweet and Ian Nickus [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Naruto Main Theme",
+      "artist": "Toshiro Masuda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Naruto Main Theme",
+      "artist": "Toshiro Masuda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Home Sweet Home",
+      "artist": "YUKI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Never Give Up",
+      "artist": "Jeremy Sweet [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rise",
+      "artist": "Jeremy Sweet and Ian Nickus [English Version]",
+      "episodes": "1-52"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rocks",
+      "artist": "Hound Dog",
+      "episodes": "1-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Wind",
+      "artist": "Akeboshi",
+      "episodes": "1-25"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Love Song",
+      "artist": "OKAMOTO'S",
+      "episodes": "27-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Go! Go! Here We Go!",
+      "artist": "Shiritsu Ebisu Chugaku",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "distance",
+      "artist": "LONG SHOT PARTY",
+      "episodes": "31-53"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Michi ~ to you all",
+      "artist": "aluto",
+      "episodes": "19-30"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Haruka Kanata (遥か彼方)",
+      "artist": "Asian Kung-Fu Generation",
+      "episodes": "26-53"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Harmonia (ハルモニア)",
+      "artist": "Rythem",
+      "episodes": "26-51"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Daijoubu Bokura",
+      "artist": "RAM WIRE",
+      "episodes": "27-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "BLUE BIRD",
+      "artist": "Ikimono-Gakari",
+      "episodes": "54-77"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "KIMI MONOGATARI",
+      "artist": "little by little",
+      "episodes": "31-41"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Kanashimi wo Yasashisani (悲しみをやさしさに)",
+      "artist": "little by little",
+      "episodes": "54-77"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Viva Rock ~Japanese Side~ (ビバ★ロック ～japanese side～)",
+      "artist": "Orange Range",
+      "episodes": "52-64"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Icha Icha Chu Chu Kyappi Kyappi Love Love Suri Suri Doki Doki",
+      "artist": "HAPPY BIRTHDAY",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "CLOSER",
+      "artist": "Joe Inoue",
+      "episodes": "78-102"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Mezamero! Yasei",
+      "artist": "MATCHY with QUESTION?",
+      "episodes": "42-52"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "GO!!!",
+      "artist": "FLOW",
+      "episodes": "78-103"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "ALIVE",
+      "artist": "Raiko",
+      "episodes": "65-77"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Hotaru no Hikari",
+      "artist": "Ikimono-Gakari",
+      "episodes": "103-128"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Sunao na Niji",
+      "artist": "surface",
+      "episodes": "54-63"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Seishun Kyosokyoku (青春狂騒曲)",
+      "artist": "Sambomaster",
+      "episodes": "104-128"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Ima made Nando mo (今まで何度も)",
+      "artist": "the Mass Missile",
+      "episodes": "78-89"
+    },
+    {
+      "kind": "OP",
+      "sequence": 6,
+      "title": "Sign",
+      "artist": "FLOW",
+      "episodes": "129-153"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Broken Youth",
+      "artist": "NICO TOUCHES THE WALLS",
+      "episodes": "64-77"
+    },
+    {
+      "kind": "OP",
+      "sequence": 6,
+      "title": "No Boy, No Cry (ノーボーイ・ノークライ)",
+      "artist": "Stance Punks",
+      "episodes": "129-153"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Ryusei (流星)",
+      "artist": "Tia",
+      "episodes": "90-103"
+    },
+    {
+      "kind": "OP",
+      "sequence": 7,
+      "title": "Tōmei Datta Sekai (透明だった世界)",
+      "artist": "Motohiro Hata",
+      "episodes": "154-179"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Long Kiss Good Bye",
+      "artist": "HALCALI",
+      "episodes": "78-90"
+    },
+    {
+      "kind": "OP",
+      "sequence": 7,
+      "title": "Namikaze Satellite (波風サテライト)",
+      "artist": "Snowkel",
+      "episodes": "154-178"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Mountain A Go Go Too (マウンテン・ア・ゴーゴー・ツー)",
+      "artist": "Captain Stridum",
+      "episodes": "104-115"
+    },
+    {
+      "kind": "OP",
+      "sequence": 8,
+      "title": "Diver",
+      "artist": "NICO Touches the Walls",
+      "episodes": "180-205"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "BACCHIKOI!!!",
+      "artist": "DEV PARADE",
+      "episodes": "91-102"
+    },
+    {
+      "kind": "OP",
+      "sequence": 8,
+      "title": "Re:member",
+      "artist": "FLOW",
+      "episodes": "179-202"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Hajimete Kimi to Shabetta (はじめて君としゃべった)",
+      "artist": "GagagaSP",
+      "episodes": "116-128"
+    },
+    {
+      "kind": "OP",
+      "sequence": 9,
+      "title": "Lovers",
+      "artist": "7!!",
+      "episodes": "206-230"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Shinkokyū",
+      "artist": "SUPER BEAVER",
+      "episodes": "103-115"
+    },
+    {
+      "kind": "OP",
+      "sequence": 9,
+      "title": "YURA YURA",
+      "artist": "Hearts Grow",
+      "episodes": "203-220"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Nakushita Kotoba (失くした言葉)",
+      "artist": "No Regret Life",
+      "episodes": "129-141"
+    },
+    {
+      "kind": "OP",
+      "sequence": 10,
+      "title": "Newsong",
+      "artist": "tacica",
+      "episodes": "231-256"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "My Answer",
+      "artist": "Seamo",
+      "episodes": "116-128"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "スピード (Speed)",
+      "artist": "Analog Fish",
+      "episodes": "142-153"
+    },
+    {
+      "kind": "OP",
+      "sequence": 11,
+      "title": "Totsugeki Rock (突撃ロック, Assault Rock)",
+      "artist": "THE CRO-MAGNONS",
+      "episodes": "257-281"
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "It Was You",
+      "artist": "Kishidan",
+      "episodes": "129-141"
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "Soba ni Iru Kara (そばにいるから)",
+      "artist": "Amadori",
+      "episodes": "154-165"
+    },
+    {
+      "kind": "OP",
+      "sequence": 12,
+      "title": "Moshimo",
+      "artist": "Daisuke",
+      "episodes": "282-306"
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "For You",
+      "artist": "AZU",
+      "episodes": "142-153"
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "Parade (パレード)",
+      "artist": "CHABA",
+      "episodes": "166-178"
+    },
+    {
+      "kind": "OP",
+      "sequence": 13,
+      "title": "Niwaka Ame Nimo Makezu (ニワカ雨ニモ負ケズ)",
+      "artist": "NICO Touches the Walls",
+      "episodes": "307-332"
+    },
+    {
+      "kind": "ED",
+      "sequence": 13,
+      "title": "Jitensha (自転車; Bicycle)",
+      "artist": "OreSkaBand",
+      "episodes": "154-166"
+    },
+    {
+      "kind": "ED",
+      "sequence": 13,
+      "title": "Yellow Moon",
+      "artist": "Akeboshi",
+      "episodes": "179-191"
+    },
+    {
+      "kind": "OP",
+      "sequence": 14,
+      "title": "Tsuki no Ookisa (月の大きさ)",
+      "artist": "Nogizaka46",
+      "episodes": "333-356"
+    },
+    {
+      "kind": "ED",
+      "sequence": 14,
+      "title": "Utakata Hanabi",
+      "artist": "Supercell",
+      "episodes": "167-179"
+    },
+    {
+      "kind": "ED",
+      "sequence": 14,
+      "title": "Pinocchio",
+      "artist": "Ore Ska Band",
+      "episodes": "192-202"
+    },
+    {
+      "kind": "OP",
+      "sequence": 15,
+      "title": "Guren (紅蓮)",
+      "artist": "DOES",
+      "episodes": "357-379"
+    },
+    {
+      "kind": "ED",
+      "sequence": 15,
+      "title": "U Can Do It",
+      "artist": "Domino",
+      "episodes": "180-192"
+    },
+    {
+      "kind": "ED",
+      "sequence": 15,
+      "title": "Scenario",
+      "artist": "SABOTEN",
+      "episodes": "203-220"
+    },
+    {
+      "kind": "OP",
+      "sequence": 16,
+      "title": "Silhouette (シルエット)",
+      "artist": "KANA-BOON",
+      "episodes": "380-405"
+    },
+    {
+      "kind": "ED",
+      "sequence": 16,
+      "title": "Orchestra of Midnight",
+      "artist": "Aqua Timez",
+      "episodes": "193-205"
+    },
+    {
+      "kind": "OP",
+      "sequence": 17,
+      "title": "Kaze (風;Wind)",
+      "artist": "Yamazaru",
+      "episodes": "406-431"
+    },
+    {
+      "kind": "ED",
+      "sequence": 17,
+      "title": "FREEDOM",
+      "artist": "HOME MADE Kazoku",
+      "episodes": "206-218"
+    },
+    {
+      "kind": "OP",
+      "sequence": 18,
+      "title": "LINE",
+      "artist": "Sukima Switch",
+      "episodes": "432-458"
+    },
+    {
+      "kind": "ED",
+      "sequence": 18,
+      "title": "Yokubō o Sakebe!!! (Shout Out Your Desires!!!)",
+      "artist": "OKAMOTO'S",
+      "episodes": "219-230"
+    },
+    {
+      "kind": "OP",
+      "sequence": 19,
+      "title": "Blood Circulator",
+      "artist": "Asian Kung-Fu Generation",
+      "episodes": "459-479"
+    },
+    {
+      "kind": "ED",
+      "sequence": 19,
+      "title": "Place to Try",
+      "artist": "TOTALFAT",
+      "episodes": "231-242"
+    },
+    {
+      "kind": "OP",
+      "sequence": 20,
+      "title": "Kara no Kokoro",
+      "artist": "Anly",
+      "episodes": "480-500"
+    },
+    {
+      "kind": "ED",
+      "sequence": 20,
+      "title": "By My Side",
+      "artist": "Hemenway",
+      "episodes": "243-256"
+    },
+    {
+      "kind": "ED",
+      "sequence": 21,
+      "title": "カスケード (Cascade)",
+      "artist": "UNLIMITS",
+      "episodes": "257-268"
+    },
+    {
+      "kind": "ED",
+      "sequence": 22,
+      "title": "Kono Koe Karashite (この声枯らして)",
+      "artist": "AISHA feat. CHEHON)",
+      "episodes": "269-281"
+    },
+    {
+      "kind": "ED",
+      "sequence": 23,
+      "title": "MOTHER",
+      "artist": "MUCC",
+      "episodes": "282-295"
+    },
+    {
+      "kind": "ED",
+      "sequence": 24,
+      "title": "Sayonara Memory (さよならメモリー Sayonara Memori)",
+      "artist": "7!!",
+      "episodes": "296-306"
+    },
+    {
+      "kind": "ED",
+      "sequence": 25,
+      "title": "I Can Hear",
+      "artist": "DISH//",
+      "episodes": "307-319"
+    },
+    {
+      "kind": "ED",
+      "sequence": 26,
+      "title": "Yume o Daite ~Hajimari no Clisroad~",
+      "artist": "Rake",
+      "episodes": "320-332"
+    },
+    {
+      "kind": "ED",
+      "sequence": 27,
+      "title": "Black Night Town (ブラックナイトタウン)",
+      "artist": "Akihisa Kondou",
+      "episodes": "333-343"
+    },
+    {
+      "kind": "ED",
+      "sequence": 28,
+      "title": "Niji",
+      "artist": "Shinku-horou",
+      "episodes": "344-356"
+    },
+    {
+      "kind": "ED",
+      "sequence": 29,
+      "title": "FLAME",
+      "artist": "DISH//",
+      "episodes": "357-366"
+    },
+    {
+      "kind": "ED",
+      "sequence": 30,
+      "title": "Never Change ft. Lyu:Lyu",
+      "artist": "SHUN",
+      "episodes": "367-379"
+    },
+    {
+      "kind": "ED",
+      "sequence": 31,
+      "title": "Dame Dame da (だめだめだ;It's Absolutely No Good)",
+      "artist": "Shiori Tomita",
+      "episodes": "380-393"
+    },
+    {
+      "kind": "ED",
+      "sequence": 32,
+      "title": "Spinning World",
+      "artist": "Diana Garnet",
+      "episodes": "394-405"
+    },
+    {
+      "kind": "ED",
+      "sequence": 33,
+      "title": "Kotoba ni Naranai Yakusoku (言葉のいらない約束;A Promise That Doesn't Need Words)",
+      "artist": "sana",
+      "episodes": "406-418"
+    },
+    {
+      "kind": "ED",
+      "sequence": 34,
+      "title": "Niji no Sora (虹の空; Rainbow's Sky)",
+      "artist": "FLOW",
+      "episodes": "419-431"
+    },
+    {
+      "kind": "ED",
+      "sequence": 35,
+      "title": "Trouble Maker (トラブルメイカー)",
+      "artist": "KANIKAPILA",
+      "episodes": "432-443"
+    },
+    {
+      "kind": "ED",
+      "sequence": 36,
+      "title": "Sonna Kimi, Konna Boku",
+      "artist": "Thinking Dogs",
+      "episodes": "444-454"
+    },
+    {
+      "kind": "ED",
+      "sequence": 37,
+      "title": "Ao no Lullaby",
+      "artist": "Kuroneko Chelsea",
+      "episodes": "455-466"
+    },
+    {
+      "kind": "ED",
+      "sequence": 38,
+      "title": "Pino to Ameri (Pino and Amélie)",
+      "artist": "Huwie Ishizaki",
+      "episodes": "467-479"
+    },
+    {
+      "kind": "ED",
+      "sequence": 39,
+      "title": "Tabidachi no Uta",
+      "artist": "Ayumikurikamaki",
+      "episodes": "480-488"
+    },
+    {
+      "kind": "ED",
+      "sequence": 40,
+      "title": "Zetsu (絶絶)",
+      "artist": "Swimy",
+      "episodes": "489-500"
+    }
+  ],
+  "relations": []
+}

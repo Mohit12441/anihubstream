@@ -1,0 +1,352 @@
+{
+  "id": "my-bride-is-a-mermaid",
+  "title": "My Bride is a Mermaid",
+  "native": "瀬戸の花嫁",
+  "year": 2007,
+  "rating": 7.3,
+  "season": "Spring 2007",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2104-8nyExxxIKd3P.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2104-8nyExxxIKd3P.jpg",
+  "accent": "#1ae4e4",
+  "synopsis": "Michishio Nagasumi's life couldn't be any more normal. In an odd twist of events, during his summer vacation he ends up almost drowning in the sea. Luckily, the cute mermaid Seto San appears to save him. However, San is from a yakuza mermaid family and according to their law, if a human is to catch sight of a mermaid, either he or the mermaid must die. The only other way is for Nagasumi to be taken in as a family member, marrying San. In attempts to save both of their lives, Nagasumi asks for San's hand in marriage. Nagasumi's summer vacation reaped more then what he would expect, as he must now protect San from others finding her secret out.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "my-bride-is-a-mermaid-1zinnc",
+    "mal": 2104,
+    "anilist": 2104,
+    "kitsu": 1903
+  },
+  "skip_key_id": 2104,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "my bride is a mermaid 瀬戸の花嫁 tv finished",
+  "genres": [
+    "comedy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Yakuza Wife",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32337/original.jpg",
+      "synopsis": "Nagasumi, a teenage boy, is saved by the chivalrous mermaid Sun while drowning in the ocean off the coast of Seto Island. Mermaid society rules are strict — in order for both Nagasumi and Sun to stay alive, they have to get married. Little does Nagasumi know that Sun's mermaid clan is in fact a Yakuza organization.",
+      "airdate": "2007-04-01",
+      "markers": [],
+      "external_id": "32337"
+    },
+    {
+      "n": 2,
+      "title": "The Lord of the Ring",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32338/original.jpg",
+      "synopsis": "Nagasumi enjoys his first date with Sun at the Bon Festival. However, most stalls are operated by the Seto-Gumi. Later, Nagasumi soon finds out that Sun's legs revert into a tail when she is splashed with water and must protect her by drying her legs.",
+      "airdate": "2007-04-08",
+      "markers": [],
+      "external_id": "32338"
+    },
+    {
+      "n": 3,
+      "title": "The Island Closest to Heaven",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32339/original.jpg",
+      "synopsis": "Sun and Nagasumi get to spend a whole day alone on a deserted island. However, this is a trap meant to eliminate Nagasumi, as the group's notorious assassin and longtime friend of Sun's, the \"Spiral Shell\" Maki, is after his life.",
+      "airdate": "2007-04-15",
+      "markers": [],
+      "external_id": "32339"
+    },
+    {
+      "n": 4,
+      "title": "It's Tough Being a Man",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32340/original.jpg",
+      "synopsis": "As a dutiful wife, Sun follows Nagasumi back to his house in the city, where she is to live with him and his parents. However, the first day back turns out to be quite hectic and eventful.",
+      "airdate": "2007-04-22",
+      "markers": [],
+      "external_id": "32340"
+    },
+    {
+      "n": 5,
+      "title": "School in the Crosshairs",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32341/original.jpg",
+      "synopsis": "Sun and Nagasumi attend their first day of school. Sun's father and the gang have all become teachers at their junior-high school, and Nagasumi's friend Sarutobi falls in love with Sun. Nagasumi must survive constant attacks from his new \"teachers\".",
+      "airdate": "2007-04-29",
+      "markers": [],
+      "external_id": "32341"
+    },
+    {
+      "n": 6,
+      "title": "Faibles Femmes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32342/original.jpg",
+      "synopsis": "Mawari notices Sun's fishtail and comes to the conclusion that Sun is a fish. She keeps trying to splash Sun with water in order to verify her theory, but Nagasumi protects Sun, while at the same time trying to save Mawari's life from the mermaid code of law.",
+      "airdate": "2007-05-06",
+      "markers": [],
+      "external_id": "32342"
+    },
+    {
+      "n": 7,
+      "title": "V (The Visitors)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32343/original.jpg",
+      "synopsis": "Nagasumi runs into Lunar, a popstar idol; her mermaid form is accidentally revealed to him. In turn, Lunar plans on making Nagasumi her slave forever. He finds out she is a childhood friend and rival of Sun. Lunar soon makes a plan to settle the score with Sun once and for all.",
+      "airdate": "2007-05-13",
+      "markers": [],
+      "external_id": "32343"
+    },
+    {
+      "n": 8,
+      "title": "Duel",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32344/original.jpg",
+      "synopsis": "The situation at school keeps escalating, and even Maki is hurt in the process. In order to avoid total war, Nagasumi comes up with a plan to settle everything in a singing competition between Sun and Lunar, with Nagasumi himself as the collateral.",
+      "airdate": "2007-05-20",
+      "markers": [],
+      "external_id": "32344"
+    },
+    {
+      "n": 9,
+      "title": "The Running Man",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32345/original.jpg",
+      "synopsis": "Nagasumi's life only gets more hectic with the arrival of Kai Mikawa, a handsome, rich, but agoraphobic merman, who insists that Sun is his fiancé. Kai transfers to the school and challenges Nagasumi for Sun's hand in marriage during Sports Festival Day.",
+      "airdate": "2007-05-27",
+      "markers": [],
+      "external_id": "32345"
+    },
+    {
+      "n": 10,
+      "title": "Pumping Iron",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32346/original.jpg",
+      "synopsis": "A strange, huge, practically invincible man, stalks Nagasumi and nothing can get in his way. Nagasumi tries to tell his friends, but initially no one believes him. Eventually Nagasumi runs into Kai and they both start running for their lives. This episode is a slight parody of Terminator 2: Judgment Day.",
+      "airdate": "2007-06-03",
+      "markers": [],
+      "external_id": "32346"
+    },
+    {
+      "n": 11,
+      "title": "Armageddon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32347/original.jpg",
+      "synopsis": "After Sun and Lunar go on a diet, Sun's father buys her all sorts of presents to help her out, including some special \"mer-water\" that energizes and gives strength. But many problems arise when Nagasumi drinks it by accident, not only giving him the powers of a merman, but also growing him to gigantic proportions.",
+      "airdate": "2007-06-10",
+      "markers": [],
+      "external_id": "32347"
+    },
+    {
+      "n": 12,
+      "title": "A Slave of Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32348/original.jpg",
+      "synopsis": "Nagasumi's mom and Sun go shopping for groceries, leaving Lunar alone with Nagasumi. Lunar plans to make her \"slave\" help her study for school since she is getting zeros on all her tests. Eventually it gets to the point where Lunar starts to come on to Nagasumi while outwardly stating that she would never fall in love with a human. Through many badly timed, but well-meaning errors, Nagasumi ends up being engaged to Lunar.",
+      "airdate": "2007-06-17",
+      "markers": [],
+      "external_id": "32348"
+    },
+    {
+      "n": 13,
+      "title": "Love Story",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32349/original.jpg",
+      "synopsis": "Nagasumi is taken back to Lunar's house where a wedding ceremony is going to soon begin. Moments before Nagasumi is meant to become her husband, Nagasumi voices his disapproval of a false wedding, and promptly refuses to continue with the wedding. Suddenly, Sun appears and voices her disagreement with the wedding as she uses her sword to defeat Lunar's guards and announce her love for Nagasumi.",
+      "airdate": "2007-07-01",
+      "markers": [],
+      "external_id": "32349"
+    },
+    {
+      "n": 14,
+      "title": "Koneko Monogatari (The Adventures of Chatran)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32350/original.jpg",
+      "synopsis": "Nagasumi finds a kitten and brings it to school. Nagasumi soon discovers that Sun, Lunar, and Maki are all deathly afraid of cats, and gets the idea to test it on Kai and Gōzaburō too, but before that learns that most mermaid adults are not afraid of cats anymore as they eventually get over their fear; this however does not apply to Gōzaburō due to a tragic experience as a child. Nagasumi decides to make this into an advantage.",
+      "airdate": "2007-07-08",
+      "markers": [],
+      "external_id": "32350"
+    },
+    {
+      "n": 15,
+      "title": "What's Your Name?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32351/original.jpg",
+      "synopsis": "Nagasumi, Sun, Lunar, Mawari, Saru, and Mikawa go on what is supposed to be a double date. As Nagasumi goes to get a juice ordered by Lunar, he accidentally bumps into the class president in an intersection, whom he doesn't recognize. It is now known that the class president has a crush on Nagasumi. Nagasumi accidentally steps and breaks her glasses lying on the ground so she doesn't recognize him. After she gets new ones she recognizes Nagasumi and runs away. As soon as he catches up and asks her name she runs away again saying she'll tell him the next time they meet.",
+      "airdate": "2007-07-15",
+      "markers": [],
+      "external_id": "32351"
+    },
+    {
+      "n": 16,
+      "title": "Minority Report",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32352/original.jpg",
+      "synopsis": "Akeno Shiranui, a mermaid examiner has come to record and observe mermaids that doesn't fit well with humans and send them back to their origin. Now Sun must overcome her own fear and tries her best not to fail the examination with Akeno keeping an eye on Sun's every action.",
+      "airdate": "2007-07-22",
+      "markers": [],
+      "external_id": "32352"
+    },
+    {
+      "n": 17,
+      "title": "Cops vs. Thugs",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32353/original.jpg",
+      "synopsis": "Defeated by Akeno, a group of delinquent lords follow her around which mislead Mawari into believing Akeno was also a delinquent. In order to protect the society, Mawari decides to go all out against Akeno. Meanwhile, The teachers from Seto clan also plotting their own plan against Akeno. Though Sun finally convinces Mawari to rethink of the situation, the unstoppable clashes has already begun.",
+      "airdate": "2007-07-29",
+      "markers": [],
+      "external_id": "32353"
+    },
+    {
+      "n": 18,
+      "title": "Gate of Flesh",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32354/original.jpg",
+      "synopsis": "The whole class went for a sudden trip to Kyoto. After an incident where Maki attacked Akeno, Sun apologizes to her, but Akeno issues that she's interested in Sun's mermaid body and asks her permission to investigate them at bathroom. Unknown to them, Nagasumi and Mawari misheard this conversation and issue an investigation of their own.",
+      "airdate": "2007-08-05",
+      "markers": [],
+      "external_id": "32354"
+    },
+    {
+      "n": 19,
+      "title": "There's No Business Like Show Business",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32355/original.jpg",
+      "synopsis": "After the attempt to rid of Nagasumi from Sun fails. Akeno is now undertaking a mission, to foil Nagasumi by forcing him to gulp down a mermaid drink which will release mortals of their strongest desires, thus forcing Sun to break away from Nagasumi. The plan fails, however, when everyone except Nagasumi gets drunk.",
+      "airdate": "2007-08-12",
+      "markers": [],
+      "external_id": "32355"
+    },
+    {
+      "n": 20,
+      "title": "A Better Tomorrow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32356/original.jpg",
+      "synopsis": "Lunar's father searches for ways to express his love and cheer up his precious daughter when he accidentally spots a Galge from a search engine. Armed with his new \"knowledge\", an iron will and an iron body, Lunar's father once again attempts to comfort Lunar (to everyone's horror), while convincing Gōzaburō about \"a daughter's heart\" in the process.",
+      "airdate": "2007-08-19",
+      "markers": [],
+      "external_id": "32356"
+    },
+    {
+      "n": 21,
+      "title": "10 Things I Hate About You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32357/original.jpg",
+      "synopsis": "Nagasumi receives a love letter from the class president. Being the first love letter he has received in is life, he completely loses his mind. Maki takes the letter from Nagasumi's pocket and reads it outloud for everyone to hear. Mawari, Lunar, Sun, Gozaburo, and other relevant people hide behind a bush to see whether Nagasumi comes or not. Nagasumi comes and is beaten by Lunar's dad and Gozaburo.",
+      "airdate": "2007-08-26",
+      "markers": [],
+      "external_id": "32357"
+    },
+    {
+      "n": 22,
+      "title": "Privilege",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32358/original.jpg",
+      "synopsis": "Lunar tries hard to practice her part in a drama. She gets Sun to help her be her lover as a man. Unfortunately, Sun goes overboard and eventually gets stopped. Afterwards, Lunar gets to her next job in the Cultural Competition and has to practice Ventriloquism. So she uses Maki as her left hand. But things start to get even worse.",
+      "airdate": "2007-09-02",
+      "markers": [],
+      "external_id": "32358"
+    },
+    {
+      "n": 23,
+      "title": "The Man Without a Past",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32359/original.jpg",
+      "synopsis": "Believing Masa was an acquintance of her older brother, Akeno asks Masa about her brother's whereabouts, but Masa had lost his memories before joining the Seto clan. Gōzaburō then reveals to Nagasumi that Akeno's brother is actually Masa himself. While unaware of this fact, Akeno intend to punish her brother's for his irresponsibility, forcing Nagasumi to protect Masa using any methods available.",
+      "airdate": "2007-09-09",
+      "markers": [],
+      "external_id": "32359"
+    },
+    {
+      "n": 24,
+      "title": "Farewell Friend",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32360/original.jpg",
+      "synopsis": "Kai has an embarrassing problem about himself that he wants to keep a secret from others. It ends up that he just has a boil on his butt, however, Saru passes by the hospital where Kai had gone to pick up his medicine, and overhears the doctor and nurse talking about how Kai has an incurable disease. Saru then tells the others. Heartbroken, they all try to give Kai the best time of his life during his last moments.",
+      "airdate": "2007-09-16",
+      "markers": [],
+      "external_id": "32360"
+    },
+    {
+      "n": 25,
+      "title": "The Family Game",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32361/original.jpg",
+      "synopsis": "It is first time that Sun and Nagasumi has a quarrel, and both end up not talking to each other. At the same time, the members of Seto Group are invited to join a party held by a noble. However, the party is a trap.",
+      "airdate": "2007-09-23",
+      "markers": [],
+      "external_id": "32361"
+    },
+    {
+      "n": 26,
+      "title": "Antwone Fisher (The Place Where You Go Home To)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32362/original.jpg",
+      "synopsis": "Nagasumi, Kai, and Lunar go to save Sun. Once they get there, the Seto Group manages to break free and a huge battle commences. Nagasumi manages to save Sun and he tells her he loves her and he wants to stay with her forever.",
+      "airdate": "2007-09-30",
+      "markers": [],
+      "external_id": "32362"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Romantic summer",
+      "artist": "SUN&LUNAR",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ashita e no Hikari (明日への光)",
+      "artist": "Asuka Hinoi",
+      "episodes": "1-13,26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Dan Dan Dan",
+      "artist": "SUN&LUNAR",
+      "episodes": "14-"
+    }
+  ],
+  "relations": []
+}

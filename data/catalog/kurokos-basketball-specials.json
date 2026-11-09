@@ -1,0 +1,142 @@
+{
+  "id": "kurokos-basketball-specials",
+  "title": "Kuroko's Basketball Specials",
+  "native": "黒子のバスケNG集",
+  "year": 2012,
+  "rating": 7.3,
+  "season": "Summer 2012",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/15487.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/15487.jpg",
+  "accent": "#d66b1a",
+  "synopsis": "Animated bloopers, based on the extra section of the original manga series, included with the BD/DVD series for Kuroko no Basket (both limited and normal editions).",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kuroko's-basketball-specials-jm6py5",
+    "mal": 15487,
+    "anilist": 15487,
+    "kitsu": 7262
+  },
+  "skip_key_id": 15487,
+  "skip_key_space": "mal",
+  "episode_total": 9,
+  "added_at": null,
+  "search_text": "kuroko s basketball specials 黒子のハ スケng集 special finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "101711"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "101712"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "101713"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "101714"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "101715"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "101716"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "101717"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "101718"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "101719"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

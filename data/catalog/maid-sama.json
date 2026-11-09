@@ -1,0 +1,596 @@
+{
+  "id": "maid-sama",
+  "title": "Maid-Sama!",
+  "native": "会長はメイド様!",
+  "year": 2010,
+  "rating": 7.8,
+  "season": "Spring 2010",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx7054-GW4D7VAZG19W.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx7054-GW4D7VAZG19W.png",
+  "accent": "#780d28",
+  "synopsis": "Being the first female student council president isn't easy, especially when your school just transitioned from an all boys high school to a co-ed one. Aptly nicknamed \"Demon President\" by the boys for her strict disciplinary style, Misaki Ayuzawa is not afraid to use her mastery of Aikido techniques to cast judgment onto the hordes of misbehaving boys and defend the girls at Seika High School.\n\nYet even the perfect Ayuzawa has an embarrassing secret—she works part-time as a maid at a maid café to help her struggling family pay the bills. She has managed to keep her job hidden from her fellow students and maintained her flawless image as a stellar student until one day, Takumi Usui, the most popular boy in school, walks into the maid café. He could destroy her reputation with her secret... or he could twist the student council president around his little finger and use her secret as an opportunity to get closer to her.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 4852,
+    "anilist": 7054,
+    "mal": 7054,
+    "hianime": "maid-sama!-5vamxo"
+  },
+  "skip_key_id": 7054,
+  "skip_key_space": "anilist",
+  "episode_total": 26,
+  "added_at": "2026-10-14 03:06:30",
+  "search_text": "maid sama 会長はメイト 様 tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Misaki Is a Maid-sama!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/76993/original.jpg",
+      "synopsis": "Ayuzawa Misaki is Student Council President and top in her class. She is also incredibly poor. To help her single mother and younger sister make ends she secretly works at a maid café, a fact that she would prefer remain unknown to her classmates. Unfortunately Usui Takumi, the most popular boy in school, bumps into her one day while she is in uniform. Now he comes to the café everyday and stares at her. Is he planning on blackmailing her, mercilessly tease her or something else. What is a girl to do?",
+      "airdate": "2010-04-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "76993"
+    },
+    {
+      "n": 2,
+      "title": "Maid-sama at the School Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/76994/original.jpg",
+      "synopsis": "It's time for the annual school festival and Misaki wants to use the opportunity to improve the school's image and encourage more girls to enroll. However, problems arise with class 2-2 because the boys' activity proposals are attempts to sexually exploit the girls. The boys ask Usui to persuade her, though he puts very little effort into it. On the suggestion from the class's three girls, Misaki decides that class 2-2 will hold a café. Later, Usui warns Misaki that her hostility towards the boys will eventually backfire. On the day of the festival, things go well and there is a large turnout of girls. However, she finds out that the boys of class 2-2 are cosplaying in period military outfits, taking over the café and rounding up girls as prisoners. She scolds the boys, but they turn on her and leave the girls to run the café alone, which both Misaki and Usui help the girls. Seeing the action from the classroom windows, the boys return and serve the customers properly, making the café a success. During the festival bonfire, Usui finds Misaki resting under a tree. She thanks him for his assistance, but Usui teases her about being his personal maid.",
+      "airdate": "2010-04-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1420
+        }
+      ],
+      "external_id": "76994"
+    },
+    {
+      "n": 3,
+      "title": "What Color Is Misaki? Natural Color?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/76995/original.jpg",
+      "synopsis": "It's little sister day at the cafe and Misaki discovers to her horror that she has no idea how to act like a little sister. Not willing to accept that she doesn't know how to do something she sets out to discover how exactly to act like a little sister. At the same Takumi is his usual unhelpful self. When another girl at school confesses her love for him, his answer is a surprise.",
+      "airdate": "2010-04-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1440
+        }
+      ],
+      "external_id": "76995"
+    },
+    {
+      "n": 4,
+      "title": "Net Idol Aoi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/76996/original.jpg",
+      "synopsis": "Maid Latte is visited by Aoi, a famous net idol who also happens to be Satsuki's niece. Due to a fight with her father, Aoi will be staying with Satuski for a while, making Aoi excited to stay and try the café's uniform, much to Satsuki's chargin. Meanwhile, as the chef is unable to make it to the café, Usui decides to take over and impresses the ladies with his own slightly modified version of Omelet Rice. Aoi finds Usui attractive but he repeatedly ignores her advances. She is so persistent that Usui pushes her down on the locker room floor. Misaki arrives to push Usui away and slaps Aoi for repeatedly trying to get his attention. It is then revealed that Aoi is, in fact, a boy, something Satsuki knew all along and which both Usui and Misaki discovered earlier. Aoi reveals he ran away because his classmates made fun of his hobby of liking cute girlish things, and his father didn't like him cross-dressing as a girl. Misaki and Usui convince Aoi to go back home, but not before Aoi promising to make Usui his. Later, Aoi returns to Maid Latte where he criticizes Misaki for not wearing girlish clothes as she's a girl, but Misaki counters his argument by pointing out how a cross-dressing boy like him should be wearing manly clothes. They end up agreeing that they should not criticize each other on the basis of the clothes they wear. Regardless, Aoi sends Misaki a cute dress, much to her embarrassment.",
+      "airdate": "2010-04-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1440
+        }
+      ],
+      "external_id": "76996"
+    },
+    {
+      "n": 5,
+      "title": "First Time Minding the Shop",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/76997/original.jpg",
+      "synopsis": "Satsuki warns Misaki about a group of stalkers targeting cosplay cafés, but Misaki doesn't takes it seriously, not even when Usui pretends to stalk her and warn her not to take things lightly. One night, when Misaki is closing the café all by herself, she is caught by the stalkers themselves, who are none other than two of her regular customers. Usui hears the commotion at Maid Latte and heads there to rescue Misaki. The stalkers, having restrained Misaki with handcuffs, think that the \"real Misaki\" is a submissive woman, but they get a rude surprise when she breaks out of her handcuffs and reveals the \"real Misaki\": a very angry woman who proceeds to pound both of them using her Aikido. When Usui finally arrives, he can only do nothing but laugh at what he sees. Days after the stalkers' arrest, Aoi returns to Maid Latte to give everyone including Usui a cellphone photo of Misaki wearing the dress he made earlier, much to Misaki's horror.",
+      "airdate": "2010-04-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1440
+        }
+      ],
+      "external_id": "76997"
+    },
+    {
+      "n": 6,
+      "title": "Men & the Ayuzawa Cram School",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/76998/original.jpg",
+      "synopsis": "Misaki has acquired a group of fans at school, the Inuyama quintuplets. While they are good-natured, and she enjoys their company, they want to know everything about her, and this unfortunately could reveal her secret part-time job, which she dodges mostly with Usui's help. As the days pass, she is torn between telling them the truth and risking to ruin the good image she has on them. She and Usui have an argument on the school rooftop which Misaki accidentally makes Usui drop a photo of them with her wearing her maid uniform in the direction of the Inuyama brothers. As she freaks out, Usui assures her he will get it back, but not before stealing her first kiss. He jumps from the roof and grabs the photo while falling into the school pool. A relieved Misaki calls him an idiot for making her worried. The brothers hear the commotion at the pool, but thanks to Usui's acting, the brothers think Misaki is Usui's bodyguard. He then convinces them not to follow Misaki anymore, thus keeping her secret safe. At the hospital, Misaki visits Usui but leaves in disgust when he asks her to nurse him in her maid outfit.",
+      "airdate": "2010-05-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 111
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1440
+        }
+      ],
+      "external_id": "76998"
+    },
+    {
+      "n": 7,
+      "title": "Enter the Student Council President of Miyabigaoka",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/76999/original.jpeg",
+      "synopsis": "A phone call from Sakura and Shizuko prompts Misaki to stop a fight between two Seika High students and three students from the prestigious Miyabigaoka Academy.",
+      "airdate": "2010-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1436
+        }
+      ],
+      "external_id": "76999"
+    },
+    {
+      "n": 8,
+      "title": "Misaki Goes to Miyabigaoka",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77000/original.jpeg",
+      "synopsis": "Given three days to decide, Misaki is torn about accepting the Miyabigaoka scholarship. When she finally goes to Miyabigaoka to give her answer, Sakura and Shizuko are worried since Seika High wouldn’t be what it is today without Misaki.",
+      "airdate": "2010-05-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1420
+        }
+      ],
+      "external_id": "77000"
+    },
+    {
+      "n": 9,
+      "title": "Maid-sama Does Momotaro",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77001/original.jpeg",
+      "synopsis": "Takumi narrates a strange retelling of Momotar with Misaki as the titular character herself.",
+      "airdate": "2010-05-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1436
+        }
+      ],
+      "external_id": "77001"
+    },
+    {
+      "n": 10,
+      "title": "Sakura's Indie-Label Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77002/original.jpeg",
+      "synopsis": "Sakura, an avid fan of indie rock band U-memishi, falls in love with its vocalist Kuuga. She invites Misaki and Shizuko to a tea party with the entire band. To the girls’ dismay, Kuuga takes an interest in Misaki and ignores Sakura.",
+      "airdate": "2010-06-03",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1440
+        }
+      ],
+      "external_id": "77002"
+    },
+    {
+      "n": 11,
+      "title": "The Secret of Takumi Usui Approaches!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77003/original.jpeg",
+      "synopsis": "One day, Usui meets Misaki's mother and helps her carry her apples. As thanks, she invites him over to her house for tea. Misaki drags him to the park, warning him not to come to her home again. Sakura and Shizuko see them and think they're dating.",
+      "airdate": "2010-06-10",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1334,
+          "end": 1419
+        }
+      ],
+      "external_id": "77003"
+    },
+    {
+      "n": 12,
+      "title": "Maid-sama & the Sports Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77004/original.jpeg",
+      "synopsis": "It's the Seika High Sports Festival, and Misaki wins every event for the girls. At the obstacle race, where first prize is a kiss from a horrified Sakura, Misaki is leading until one of the boys pushes her into the pool to disqualify her.",
+      "airdate": "2010-06-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1339,
+          "end": 1440
+        }
+      ],
+      "external_id": "77004"
+    },
+    {
+      "n": 13,
+      "title": "Idiots, Juviniles & Heroes &...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77005/original.jpeg",
+      "synopsis": "Aratake, the strongest delinquent in school, and his gang can’t believe Naoya Shirakawa, a former gang leader himself, has gone soft; so the gang abducts a cross-dressing Yukimura, who they mistake for Naoya's girlfriend.",
+      "airdate": "2010-06-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 5,
+          "end": 95
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1422
+        }
+      ],
+      "external_id": "77005"
+    },
+    {
+      "n": 14,
+      "title": "Soutarou Kano of Class 1-7",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77006/original.jpeg",
+      "synopsis": "The Student Council plans to hold an open house at Seika High to attract more girls to enroll there. However, a girl-hating freshman named Soutarou Kanou is against it, and interferes with their work by hypnotizing them to derail their efforts.",
+      "airdate": "2010-07-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1417
+        }
+      ],
+      "external_id": "77006"
+    },
+    {
+      "n": 15,
+      "title": "Bespectacled Rabbit at the Open Campus",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77007/original.jpeg",
+      "synopsis": "Soutarou is shocked to find out that Misaki was able to stay awake until the 24-hour time limit. As punishment, Misaki forces Soutarou to help Sakura, Shizuko, and the girls at the upcoming Open House’s cafeteria.",
+      "airdate": "2010-07-08",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1436
+        }
+      ],
+      "external_id": "77007"
+    },
+    {
+      "n": 16,
+      "title": "Maid Latte at the Beach House",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77008/original.jpeg",
+      "synopsis": "It's summer vacation, and the Maid Latte crew have been invited by Satsuki's sister Nagisa to her beach resort, with Aoi tagging along; and Usui recruited as a bodyguard by Satsuki, chagrining Misaki.",
+      "airdate": "2010-07-15",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1419
+        }
+      ],
+      "external_id": "77008"
+    },
+    {
+      "n": 17,
+      "title": "Usui Becomes the Enemy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77009/original.jpeg",
+      "synopsis": "It's the second day of the Maid Latte crew's vacation at the beach house. Nagisa is allowing Aoi to cross-dress if he wins the beach volleyball tournament held near the beach house, with the winning team becoming Beach Prince and Princess as well.",
+      "airdate": "2010-07-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 11,
+          "end": 101
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1419
+        }
+      ],
+      "external_id": "77009"
+    },
+    {
+      "n": 18,
+      "title": "Maid-sama Is a Footman",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77010/original.jpeg",
+      "synopsis": "The Miyabigaoka Student Council aims to buy Maid Latte in a hostile takeover and replace it with a butler cafe. The only way for Misaki to stop this is to don a disguise and join the male-only footman auditions.",
+      "airdate": "2010-07-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1416
+        }
+      ],
+      "external_id": "77010"
+    },
+    {
+      "n": 19,
+      "title": "Footmen Through a Change of Pairs",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77011/original.jpeg",
+      "synopsis": "In the second round of the footman auditions, Usui and Misaki succeed in the required task of setting up a high class table for afternoon tea. But before the third round begins, Misaki falls off the stage.",
+      "airdate": "2010-08-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1419
+        }
+      ],
+      "external_id": "77011"
+    },
+    {
+      "n": 20,
+      "title": "The Vice President Is a Prince?! Aoi & Her Fun Companions",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77012/original.jpeg",
+      "synopsis": "Yukimura’s little sister Ruri loves playing make-believe princess but refuses to acknowledge her brother. When she meets \"prince-like\" Usui, Yukimura manages to get Usui to go on a date with his sister in order to gain her favor.",
+      "airdate": "2010-08-12",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1419
+        }
+      ],
+      "external_id": "77012"
+    },
+    {
+      "n": 21,
+      "title": "Usui's Rival?! Hinata Shintani",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77013/original.jpeg",
+      "synopsis": "Misaki orders the sports clubs to clean up their club rooms. Meanwhile, a transfer student named Hinata Shintani arrives and irks Misaki due to his childish behavior and gluttony.",
+      "airdate": "2010-08-19",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1438
+        }
+      ],
+      "external_id": "77013"
+    },
+    {
+      "n": 22,
+      "title": "Tag at the Forest School",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77014/original.jpeg",
+      "synopsis": "It is the Seika High Outdoor field trip, and the students have been tricked into enduring a hard life at a Buddhist temple for five days. As Misaki deals with the girls'gossiping, she also has to prevent him and Usui from fighting.",
+      "airdate": "2010-08-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 4,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1435
+        }
+      ],
+      "external_id": "77014"
+    },
+    {
+      "n": 23,
+      "title": "Maid Latte & a Whole Bunch of Sweets",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77015/original.jpeg",
+      "synopsis": "Erika asks Misaki for help when she promised a customer a date--which is against Maid Latte policy. However, Hinata joins the contest and wins, and gets to choose a maid of his choice to take a picture with him.",
+      "airdate": "2010-09-02",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1416
+        }
+      ],
+      "external_id": "77015"
+    },
+    {
+      "n": 24,
+      "title": "Lovey-Dovey Through Latte Magic",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77016/original.jpeg",
+      "synopsis": "The rivalry between Hinata and Usui gets more tense than ever. When the two flare up in the student council room, Misaki throws both of them out for fighting. The Maid Latte maids are cosplaying as characters from the anime “Maid Witches.\"",
+      "airdate": "2010-09-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1419
+        }
+      ],
+      "external_id": "77016"
+    },
+    {
+      "n": 25,
+      "title": "Hinata & Misaki & Usui",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77017/original.jpeg",
+      "synopsis": "Hinata reminiscences about his past.&nbsp; At Maid Latte, the café hosts a Fortune Telling Day with Erika as the fortune teller-- who gives Usui a depressing fortune regarding his future with Misaki.",
+      "airdate": "2010-09-16",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1421
+        }
+      ],
+      "external_id": "77017"
+    },
+    {
+      "n": 26,
+      "title": "Too Cruel Ayuzawa & Usui the Idiot!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/77018/original.jpeg",
+      "synopsis": "Misaki and Usui decide to enjoy the festival together, and end up joining a contest called 'Love Trial.' The prize is a premium ticket to the post-festival event, and the only rule is that you must never let go of your partner's hand.",
+      "airdate": "2010-09-23",
+      "markers": [],
+      "external_id": "77018"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

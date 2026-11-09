@@ -1,0 +1,251 @@
+{
+  "id": "maria-watches-over-us-printemps",
+  "title": "Maria Watches Over Us: Printemps",
+  "native": "マリア様がみてる～春～",
+  "year": 2004,
+  "rating": 7.4,
+  "season": "Summer 2004",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx444-wfacv45uwRN3.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx444-wfacv45uwRN3.jpg",
+  "accent": "#1aa1d6",
+  "synopsis": "The spring term is beginning for the students at Lillian Girls' Academy. Friends are reunited, but for the Yamayuri Council, it's a bittersweet time. Yoko, Eriko, and Sei are busy preparing to depart Lillian while Sachiko, Rei, and Shimako are doing their best to ensure that their dear sisters receive a memorable commencement.\n\nSei's departure will leave a sizable hole in the White Roses, and filling it won't be easy. But is there anyone who could appeal to Shimako enough to become the next Rosa Gigantea en bouton?\n\n(Source: RightStuf)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "maria-watches-over-us:-printemps-sar27n",
+    "mal": 444,
+    "anilist": 444,
+    "kitsu": 7816
+  },
+  "skip_key_id": 444,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "maria watches over us printemps マリア様か みてる 春 tv finished",
+  "genres": [
+    "drama",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Upon the Long Night",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159127/original.jpg",
+      "synopsis": "Sei takes Yumi to visit Sachiko's house on New Year's Day where the Yamayuri Council have a party. All the major characters are reintroduced, and with the start of the New Year, Yumi looks happily forward to spring.",
+      "airdate": "2004-07-04",
+      "markers": [],
+      "external_id": "159127"
+    },
+    {
+      "n": 2,
+      "title": "The Yellow Rose at Full Tilt",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159141/original.jpg",
+      "synopsis": "A series of photographs implicate Eriko in enjo kosai, or compensated dating, while Eriko's behavior becomes even more erratic and strange than usual. As it turns out, Eriko does have a secret, but its far from what she has been accused of.",
+      "airdate": "2004-07-11",
+      "markers": [],
+      "external_id": "159141"
+    },
+    {
+      "n": 3,
+      "title": "Most Dreadfully Busy Days",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159152/original.jpg",
+      "synopsis": "In their midst of their graduation preparations for the third-years, the en boutons forget to organize a farewell party for the Rosas. To make it worst, Yumi finds out at the last moment that the en bouton petite soeurs must also put on a performance, and collapses from the pressure of all her various duties.",
+      "airdate": "2004-07-18",
+      "markers": [],
+      "external_id": "159152"
+    },
+    {
+      "n": 4,
+      "title": "Will",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159174/original.jpg",
+      "synopsis": "In the days before graduation, Rosa Chinesis and Rosa Foetida leave their parting words to their petite soeurs and grande-soeurs. Yumi begins to worry why Rosa Gigantea hasn't done the same. She swears to Sei she'd look after Shimako and promises to do anything as her final request, and Sei's answer leads to a surprisingly sweet moment and a revelation about her future.",
+      "airdate": "2004-07-25",
+      "markers": [],
+      "external_id": "159174"
+    },
+    {
+      "n": 5,
+      "title": "The Years That Flew By",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159180/original.jpg",
+      "synopsis": "Graduation day arrives. As the rest of the Yamayuri Council struggle with conflicting emotions, the Rosas reflect on their lives and the memories which shaped them.",
+      "airdate": "2004-08-01",
+      "markers": [],
+      "external_id": "159180"
+    },
+    {
+      "n": 6,
+      "title": "Brought Together by Just One Hand",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159184/original.jpg",
+      "synopsis": "With graduation's onset, Sei and Shimako remember the events which led them to become soeurs in spite of their many complex obstacles and reservations. The two of them ultimately form a deep and healthy relationship without becoming codependent.",
+      "airdate": "2004-08-08",
+      "markers": [],
+      "external_id": "159184"
+    },
+    {
+      "n": 7,
+      "title": "Cherry Blossom",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159187/original.jpg",
+      "synopsis": "Shimako falls into a depression after Sei graduates and cannot bear the weight of her secret alone. But a chance meeting with the down-to-earth Nijo Noriko gives her a new friend.",
+      "airdate": "2004-08-15",
+      "markers": [],
+      "external_id": "159187"
+    },
+    {
+      "n": 8,
+      "title": "The Cherry Tree Among the Ginkgos",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159198/original.jpg",
+      "synopsis": "Shimako and Noriko become even closer, but a shocking revelation about Shimako's true religion is announced in front of the entire school, testing their relationship. Meanwhile, the Yamayuri Council is concerned over the state of Shimako's well-being and decide to take matters into their own hands.",
+      "airdate": "2004-08-22",
+      "markers": [],
+      "external_id": "159198"
+    },
+    {
+      "n": 9,
+      "title": "Tears of the Rosary",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159203/original.jpg",
+      "synopsis": "Shimako is pressured to take Noriko as her petite soeur, but is hesitant due to the differences between Noriko and the general culture of Lillian. Caught between her loyalty to the Yamayuri Council and her desire to protect Noriko, Shimako quietly suffers until an argument forces Noriko into action.",
+      "airdate": "2004-08-29",
+      "markers": [],
+      "external_id": "159203"
+    },
+    {
+      "n": 10,
+      "title": "Yellow Rose Weather Advisory",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159212/original.jpg",
+      "synopsis": "Yoshino takes advantage of her newfound health by joining Rei's kendo club, causing extreme worry on Rei's part and another roadblock in their relationship.",
+      "airdate": "2004-09-05",
+      "markers": [],
+      "external_id": "159212"
+    },
+    {
+      "n": 11,
+      "title": "Rainy Blue",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159213/original.jpg",
+      "synopsis": "Yumi and Sachiko have not been spending much time with each other, for Sachiko is always with Tōko. Every time Sachiko and Yumi are alone together, Tōko appears. Yumi begins to believe that Sachiko prefers Tōko over her.",
+      "airdate": "2004-09-12",
+      "markers": [],
+      "external_id": "159213"
+    },
+    {
+      "n": 12,
+      "title": "The Blue Umbrella",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159217/original.jpg",
+      "synopsis": "Yumi gets back onto her feet with different people helping her out. She learns that she must develop an identity outside of being Sachiko's petite soeur.",
+      "airdate": "2004-09-19",
+      "markers": [],
+      "external_id": "159217"
+    },
+    {
+      "n": 13,
+      "title": "Holding a Parasol",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159229/original.jpg",
+      "synopsis": "Yumi learns why Sachiko has been so distant lately. With newfound confidence, she promises never to question Sachiko's love for her again.",
+      "airdate": "2004-09-26",
+      "markers": [],
+      "external_id": "159229"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Chizu Sanpo (地図散歩)",
+      "artist": "kukui",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kumori Garasu no Mukou (くもりガラスの向こう)",
+      "artist": "Kaori Hikita",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "pastel pure",
+      "artist": "Mikiya Katakura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Chercher (Chercher～シャルシェ～)",
+      "artist": "KOTOKO",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pastel Pure",
+      "artist": "ALI PROJECT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sonata Blue",
+      "artist": "Mikiya Katakura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pastel Pure",
+      "artist": "Mikiya Katakura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sonata Blue",
+      "artist": "Mikiya Katakura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kirei na Senritsu (きれいな旋律; Beautiful Melody)",
+      "artist": "KOTOKO",
+      "episodes": "3-5"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,628 @@
+{
+  "id": "my-hero-academia",
+  "title": "My Hero Academia",
+  "native": "僕のヒーローアカデミア",
+  "year": 2016,
+  "rating": 7.6,
+  "season": "Spring 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21459-nYh85uj2Fuwr.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21459-nYh85uj2Fuwr.jpg",
+  "accent": "#f1d643",
+  "synopsis": "What would the world be like if 80 percent of the population manifested extraordinary superpowers called “Quirks” at age four? Heroes and villains would be battling it out everywhere! Becoming a hero would mean learning to use your power, but where would you go to study? U.A. High's Hero Program of course! But what would you do if you were one of the 20 percent who were born Quirkless?\n\nMiddle school student Izuku Midoriya wants to be a hero more than anything, but he hasn't got an ounce of power in him. With no chance of ever getting into the prestigious U.A. High School for budding heroes, his life is looking more and more like a dead end. Then an encounter with All Might, the greatest hero of them all gives him a chance to change his destiny…\n\n(Source: VIZ Media)",
+  "rank": 9,
+  "trend_rank": null,
+  "alt_seasons": [
+    "My Hero Academia Season 2 (2017)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11469,
+    "anilist": 21459,
+    "mal": 31964,
+    "hianime": "my-hero-academia-0ctkwn"
+  },
+  "skip_key_id": 31964,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-13 00:00:00",
+  "search_text": "my hero academia 僕のヒーローアカテ ミア tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Izuku Midoriya: Origin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184522/original.jpg",
+      "synopsis": "Izuku Midoriya desperately wants to be a hero, but he is one of the few in his generation born without a Quirk. Will meeting the number one hero, All Might, change his fate?",
+      "airdate": "2016-04-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 15,
+          "end": 150
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1409,
+          "end": 1440
+        }
+      ],
+      "external_id": "184522"
+    },
+    {
+      "n": 2,
+      "title": "What It Takes to Be a Hero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184523/original.jpg",
+      "synopsis": "Izuku accidentally learns of All Might's secret, but there's trouble in town again before Izuku has time to process it. Will All Might be able to save the day again?",
+      "airdate": "2016-04-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 162,
+          "end": 252
+        }
+      ],
+      "external_id": "184523"
+    },
+    {
+      "n": 3,
+      "title": "Roaring Muscles",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184524/original.jpg",
+      "synopsis": "All Might tells Izuku that he can become a hero, but does he really have what it takes to become one?",
+      "airdate": "2016-04-17",
+      "markers": [],
+      "external_id": "184524"
+    },
+    {
+      "n": 4,
+      "title": "Start Line",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184525/original.jpg",
+      "synopsis": "At the entrance exam, Izuku falls behind as the other students defeat faux villains left and right. Will he be able to get enough points to pass?",
+      "airdate": "2016-04-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 125,
+          "end": 215
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1419
+        }
+      ],
+      "external_id": "184525"
+    },
+    {
+      "n": 5,
+      "title": "What I Can Do For Now",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184526/original.jpg",
+      "synopsis": "It's Izuku's first day of high school, and he still can't control his new Quirk. Will he make it to the second day of school with his eccentric new teacher?",
+      "airdate": "2016-05-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "184526"
+    },
+    {
+      "n": 6,
+      "title": "Rage, You Damn Nerd",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184527/original.jpg",
+      "synopsis": "Izuku somehow gets through his first day of school and falls into a regular schedule of classes and training at U.A. In their first class with All Might...",
+      "airdate": "2016-05-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "184527"
+    },
+    {
+      "n": 7,
+      "title": "Deku vs. Kacchan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184528/original.jpg",
+      "synopsis": "In All Might's first class, Izuku will have to face off against Katsuki! As the hero team, can Izuku and Uraraka beat the villain team of Katsuki and Tenya?",
+      "airdate": "2016-05-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 5,
+          "end": 95
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1351,
+          "end": 1440
+        }
+      ],
+      "external_id": "184528"
+    },
+    {
+      "n": 8,
+      "title": "Bakugo's Start Line",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184529/original.jpg",
+      "synopsis": "After the combat training lesson, the students and All Might reflect on their matches as they think about their next steps.",
+      "airdate": "2016-05-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 115,
+          "end": 205
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1399
+        }
+      ],
+      "external_id": "184529"
+    },
+    {
+      "n": 9,
+      "title": "Yeah, Just Do Your Best, Iida!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184530/original.jpg",
+      "synopsis": "Class 1-A has to elect a class representative, and everyone wants the job! How will they choose? And what lies in wait for them at the next class?",
+      "airdate": "2016-05-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "184530"
+    },
+    {
+      "n": 10,
+      "title": "Encounter with the Unknown",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184531/original.jpg",
+      "synopsis": "Villains have attacked USJ, and it's up to Class 1-A to stop them. What are the villains after? Will All Might be able to save the day again?",
+      "airdate": "2016-06-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "184531"
+    },
+    {
+      "n": 11,
+      "title": "Game Over",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184532/original.jpg",
+      "synopsis": "The students fight for their lives against the Villains while Iida manages to escape with his friends' help. Once knowing that Iida will warn the other teachers who will come to stop them, the Villains' leader Tomura Shigaraki decides to kill Izuku and his friends just to hurt All Might's pride before they leave, when All Might himself appears.",
+      "airdate": "2016-06-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 141,
+          "end": 231
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1351,
+          "end": 1440
+        }
+      ],
+      "external_id": "184532"
+    },
+    {
+      "n": 12,
+      "title": "All Might",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184533/original.jpg",
+      "synopsis": "All Might has finally shown up, but will he be able to defeat Nomu and save the day?!",
+      "airdate": "2016-06-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 65,
+          "end": 155
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1351,
+          "end": 1440
+        }
+      ],
+      "external_id": "184533"
+    },
+    {
+      "n": 13,
+      "title": "In Each of Our Hearts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/184534/original.jpg",
+      "synopsis": "As the battle at USJ winds down, Izuku and All Might think about its repercussions. Meanwhile, the villains slink home to plan their next move.",
+      "airdate": "2016-06-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 77,
+          "end": 168
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1304,
+          "end": 1394
+        }
+      ],
+      "external_id": "184534"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE REVO",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I",
+      "artist": "BUMP OF CHICKEN",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Homunculus",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gift",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE DAY",
+      "artist": "Porno Graffitti",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tagatame (誰我為)",
+      "artist": "TK from Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubomi (蕾)",
+      "artist": "Omoinotake",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "SKETCH",
+      "artist": "Kiro Akiyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Empathy",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "No.1",
+      "artist": "DISH//",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ashiato (足跡)",
+      "artist": "the peggies",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Higher Ground",
+      "artist": "sumika",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Polaris",
+      "artist": "BLUE ENCOUNT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Koukai no Uta",
+      "artist": "Sayuri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Long Hope Philia (ロングホープ・フィリア)",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Odd Future",
+      "artist": "UVERworld",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Update",
+      "artist": "miwa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dakara, Hitori ja nai (だから、ひとりじゃない)",
+      "artist": "Little Glee Monster",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Day",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Curtain Call",
+      "artist": "Yūri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rokutousei (六等星)",
+      "artist": "Zarame",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Bokura no",
+      "artist": "Eve",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Uso ja nai (嘘じゃない)",
+      "artist": "Soushi Sakiyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Starmarker",
+      "artist": "KANA-BOON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Make my story",
+      "artist": "Lenny Code Fiction",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Sora ni Utaeba (空に歌えば)",
+      "artist": "Amazarashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Datte Atashi no Hero (だってアタシのヒーロー.)",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": "4"
+    }
+  ],
+  "relations": []
+}

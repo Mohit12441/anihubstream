@@ -1,0 +1,608 @@
+{
+  "id": "my-hero-academia-season-2",
+  "title": "My Hero Academia Season 2",
+  "native": "僕のヒーローアカデミア２",
+  "year": 2017,
+  "rating": 7.9,
+  "season": "Spring 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21856-gutauxhWAwn6.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21856-gutauxhWAwn6.png",
+  "accent": "#e48643",
+  "synopsis": "Taking off right after the last episode of the first season. The school is temporarily closed due to security. When U.A. restarts, it is announced that the highly anticipated School Sports Festival will soon be taking place. All classes: Hero, Support, General and Business will be participating. Tournaments all round will decide who is the top Hero in training.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 21856,
+    "mal": 33486,
+    "hianime": "my-hero-academia-season-2-alpcif",
+    "kitsu": 12268
+  },
+  "skip_key_id": 33486,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": "2026-10-18 00:39:23",
+  "search_text": "my hero academia season 2 僕のヒーローアカテ ミア2 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "That's the Idea, Ochako",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5394/original.png",
+      "synopsis": "As the students and teachers recover from the attack on U.S.J., Izuku learns why Ochako wants to become a hero.",
+      "airdate": "2017-04-01",
+      "markers": [],
+      "external_id": "5394"
+    },
+    {
+      "n": 2,
+      "title": "Roaring Sports Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5393/original.png",
+      "synopsis": "U.A. is still a school with a sports festival, but it's not your average sports festival!",
+      "airdate": "2017-04-08",
+      "markers": [],
+      "external_id": "5393"
+    },
+    {
+      "n": 3,
+      "title": "In Their Own Quirky Ways",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5406/original.png",
+      "synopsis": "The first years try to stand out as they struggle to finish the obstacle course race and qualify for a spot in the next round.",
+      "airdate": "2017-04-15",
+      "markers": [],
+      "external_id": "5406"
+    },
+    {
+      "n": 4,
+      "title": "Strategy, Strategy, Strategy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5407/original.png",
+      "synopsis": "Izuku's having trouble finding a team for the cavalry battle in the next round of the U.A. Sports Festival, but luckily, he has a plan",
+      "airdate": "2017-04-22",
+      "markers": [],
+      "external_id": "5407"
+    },
+    {
+      "n": 5,
+      "title": "Cavalry Battle Finale",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5470/original.png",
+      "synopsis": "The teams are fighting it out in the second half of the cavalry battle. Will Team Midoriya be able to keep their place in the top four?",
+      "airdate": "2017-04-29",
+      "markers": [],
+      "external_id": "5470"
+    },
+    {
+      "n": 6,
+      "title": "The Boy Born with Everything",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5471/original.jpg",
+      "synopsis": "Izuku learns more about Todoroki's past as the first years head into the final round of the sports festival.",
+      "airdate": "2017-05-06",
+      "markers": [],
+      "external_id": "5471"
+    },
+    {
+      "n": 7,
+      "title": "Victory or Defeat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/87725/original.jpg",
+      "synopsis": "Izuku is up against Shinsou in the first match of the finals, but how will he overcome Shinsou's Quirk to advance to the next round?",
+      "airdate": "2017-05-13",
+      "markers": [],
+      "external_id": "87725"
+    },
+    {
+      "n": 8,
+      "title": "Battle on, Challengers!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/87724/original.jpg",
+      "synopsis": "It's one match after another in the first round of the finals tournament. Who will advance to the second round?",
+      "airdate": "2017-05-20",
+      "markers": [],
+      "external_id": "87724"
+    },
+    {
+      "n": 9,
+      "title": "Bakugo VS Uraraka",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/87727/original.jpg",
+      "synopsis": "Bakugou looks like a villain when he's up against Uraraka, but Uraraka has a plan to keep it from being a one-sided match.",
+      "airdate": "2017-05-27",
+      "markers": [],
+      "external_id": "87727"
+    },
+    {
+      "n": 10,
+      "title": "Shouto Todoroki: Origin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/87732/original.png",
+      "synopsis": "Izuku forces Todoroki to face his past and himself as they square off in the first match of the second round of the finals.",
+      "airdate": "2017-06-03",
+      "markers": [],
+      "external_id": "87732"
+    },
+    {
+      "n": 11,
+      "title": "Fight on, Iida",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199273/original.png",
+      "synopsis": "It's time to see who will make it to the final showdown. Will Iida's Reciproburst be enough to beat Todoroki?",
+      "airdate": "2017-06-10",
+      "markers": [],
+      "external_id": "199273"
+    },
+    {
+      "n": 12,
+      "title": "Todoroki VS Bakugou",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199274/original.png",
+      "synopsis": "It's the final showdown to determine who will win the first-year sports festival! Will it be Todoroki, or Bakugo?!",
+      "airdate": "2017-06-17",
+      "markers": [],
+      "external_id": "199274"
+    },
+    {
+      "n": 13,
+      "title": "Time to Pick Some Names",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199275/original.jpg",
+      "synopsis": "The first years are getting ready for their internships by picking hero names in their first class after the sports festival.",
+      "airdate": "2017-06-24",
+      "markers": [],
+      "external_id": "199275"
+    },
+    {
+      "n": 14,
+      "title": "Bizarre! Grantorino Appears",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199276/original.jpg",
+      "synopsis": "As the U.A. first years start their internships, Midoriya finds himself training with Gran Torino, All Might's old homeroom teacher.",
+      "airdate": "2017-07-08",
+      "markers": [],
+      "external_id": "199276"
+    },
+    {
+      "n": 15,
+      "title": "Midoriya and Shigaraki",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199277/original.jpg",
+      "synopsis": "Midoriya starts learning how to use One For All better as the other U.A. students settle into their internships.",
+      "airdate": "2017-07-15",
+      "markers": [],
+      "external_id": "199277"
+    },
+    {
+      "n": 16,
+      "title": "Hero Killer: Stain vs U.A. Students",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199278/original.jpg",
+      "synopsis": "Stain strikes again, and this time the U.A. students are around when he does. Will they be able to hold him off until the pros come?",
+      "airdate": "2017-07-22",
+      "markers": [],
+      "external_id": "199278"
+    },
+    {
+      "n": 17,
+      "title": "Climax",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199279/original.jpg",
+      "synopsis": "Conclusion of the battle with Hero Killer Stain.",
+      "airdate": "2017-07-29",
+      "markers": [],
+      "external_id": "199279"
+    },
+    {
+      "n": 18,
+      "title": "The Aftermath of Hero Killer Stain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199280/original.png",
+      "synopsis": "After Stain is finally captured, the hero community takes stock and deals with the consequences of their actions.",
+      "airdate": "2017-08-05",
+      "markers": [],
+      "external_id": "199280"
+    },
+    {
+      "n": 19,
+      "title": "Everyone's Internships",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199281/original.jpg",
+      "synopsis": "As Izuku, Tenya, and Shouto recover from their fight with Stain, the other members of Class 1-A work hard at their own internships.",
+      "airdate": "2017-08-12",
+      "markers": [],
+      "external_id": "199281"
+    },
+    {
+      "n": 20,
+      "title": "Listen Up!! A Tale from the Past",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199282/original.png",
+      "synopsis": "As the students return to their daily lives after their internships, All Might tells Izuku about the history of One For All.",
+      "airdate": "2017-08-19",
+      "markers": [],
+      "external_id": "199282"
+    },
+    {
+      "n": 21,
+      "title": "Gear up for Final Exams",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199283/original.jpg",
+      "synopsis": "Before Izuku and the others can go on their summer training camp, they need to pass their final exams, but that may be difficult...",
+      "airdate": "2017-09-02",
+      "markers": [],
+      "external_id": "199283"
+    },
+    {
+      "n": 22,
+      "title": "Yaoyorozu: Rising",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199284/original.png",
+      "synopsis": "It's the first half of the practical exams! Will Class 1-A be able to hold their own against their teachers?",
+      "airdate": "2017-09-09",
+      "markers": [],
+      "external_id": "199284"
+    },
+    {
+      "n": 23,
+      "title": "Stripping the Varnish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199285/original.png",
+      "synopsis": "Izuku watches the rest of his classmates fight in their practical exams as they remember why they want to be heroes.",
+      "airdate": "2017-09-16",
+      "markers": [],
+      "external_id": "199285"
+    },
+    {
+      "n": 24,
+      "title": "Katsuki Bakugou: Origin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199286/original.jpg",
+      "synopsis": "It's finally time for Team Midoriya and Bakugo's practical exam. What will they be able to do against All Might?",
+      "airdate": "2017-09-23",
+      "markers": [],
+      "external_id": "199286"
+    },
+    {
+      "n": 25,
+      "title": "Encounter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199287/original.png",
+      "synopsis": "When Class 1-A goes to the mall to buy supplies for training camp, Izuku gets taken aside by Tomura Shigaraki...",
+      "airdate": "2017-09-30",
+      "markers": [],
+      "external_id": "199287"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE REVO",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I",
+      "artist": "BUMP OF CHICKEN",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Homunculus",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gift",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE DAY",
+      "artist": "Porno Graffitti",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tagatame (誰我為)",
+      "artist": "TK from Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubomi (蕾)",
+      "artist": "Omoinotake",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "SKETCH",
+      "artist": "Kiro Akiyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Empathy",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "No.1",
+      "artist": "DISH//",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ashiato (足跡)",
+      "artist": "the peggies",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Higher Ground",
+      "artist": "sumika",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Polaris",
+      "artist": "BLUE ENCOUNT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Koukai no Uta",
+      "artist": "Sayuri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Long Hope Philia (ロングホープ・フィリア)",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Odd Future",
+      "artist": "UVERworld",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Update",
+      "artist": "miwa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dakara, Hitori ja nai (だから、ひとりじゃない)",
+      "artist": "Little Glee Monster",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Day",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HEROES",
+      "artist": "Brian The Sun",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Peace Sign (ピースサイン)",
+      "artist": "Kenshi Yonezu",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Curtain Call",
+      "artist": "Yūri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rokutousei (六等星)",
+      "artist": "Zarame",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Bokura no",
+      "artist": "Eve",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Uso ja nai (嘘じゃない)",
+      "artist": "Soushi Sakiyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Starmarker",
+      "artist": "KANA-BOON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Make my story",
+      "artist": "Lenny Code Fiction",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Long Hope Philia <TV Limited.>",
+      "artist": "Masaki Suda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Sora ni Utaeba (空に歌えば)",
+      "artist": "Amazarashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Datte Atashi no Hero (だってアタシのヒーロー.)",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Merry-Go-Round",
+      "artist": "MAN WITH A MISSION",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Shout Baby",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Hitamuki",
+      "artist": "SUPER BEAVER",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Kitakaze",
+      "artist": "SIX LOUNGE",
+      "episodes": "4"
+    }
+  ],
+  "relations": []
+}

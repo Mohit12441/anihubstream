@@ -1,0 +1,205 @@
+{
+  "id": "kowloon-generic-romance",
+  "title": "KOWLOON GENERIC ROMANCE",
+  "native": "九龍ジェネリックロマンス",
+  "year": 2025,
+  "rating": 7.2,
+  "season": "Spring 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx182814-UTKRUUm7Jah5.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx182814-UTKRUUm7Jah5.jpg",
+  "accent": "#6baee4",
+  "synopsis": "Welcome to Kowloon Walled City: a dystopian townscape where the people are brimming with nostalgia, and where the past, present, and future converge. Amid the hidden emotions and extraordinary daily lives of the men and women working in its confines, a tale of romance begins to unfold for real estate agent Reiko Kujirai—one that feels as familiar as Kowloon itself… \n\n(Source: Yen Press)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kowloon-generic-romance-1vwgvn",
+    "mal": 60083,
+    "anilist": 182814,
+    "kitsu": 49277
+  },
+  "skip_key_id": 60083,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "kowloon generic romance 九龍シ ェネリックロマンス tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "romance",
+    "sci-fi",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378897"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378898"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378899"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378900"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378901"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378902"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378903"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378904"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378905"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378906"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378907"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378908"
+    },
+    {
+      "n": 13,
+      "title": "Episode 13",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378909"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Summer Time Ghost",
+      "artist": "Wednesday Campanella",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Koi no Retronym",
+      "artist": "Mekakushe",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

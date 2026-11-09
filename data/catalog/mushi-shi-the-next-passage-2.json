@@ -1,0 +1,220 @@
+{
+  "id": "mushi-shi-the-next-passage-2",
+  "title": "MUSHI-SHI The Next Passage 2",
+  "native": "蟲師 続章 2",
+  "year": 2014,
+  "rating": 8.6,
+  "season": "Fall 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20751-O3XJ9u30y7Qj.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20751-O3XJ9u30y7Qj.png",
+  "accent": "#24d3ee",
+  "synopsis": "Ghostly, primordial beings known as Mushi continue to cause mysterious changes in the lives of humans. The travelling Mushishi, Ginko, persists in trying to set right the strange and unsettling situations he encounters. Time loops, living shadows, and telepathy are among the overt effects of interference from Mushi, but more subtle symptoms that take years to be noticed also rouse Ginko's concern as he passes from village to village.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "MUSHI-SHI The Next Passage Special - Path of Thorns (2014)",
+    "MUSHI-SHI Special: Bell Droplets (2015)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8581,
+    "anilist": 20751,
+    "mal": 24701
+  },
+  "skip_key_id": 24701,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": "2026-10-21 07:58:33",
+  "search_text": "mushi shi the next passage 2 蟲師 続章 2 tv finished",
+  "genres": [
+    "adventure",
+    "fantasy",
+    "mystery",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Cushion of Grass",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "After his encounter with Nui and before becoming a mushishi, young Ginko moved from place to place, due to his condition of attracting mushi. At one point he found himself instructed and cared for by a mushishi named Suguro, in the lands of a dying Mountain Lord. Ginko wonders about his place in the world and the natural order, as Suguro worries that the new Mountain Lord hasn't yet appeared.",
+      "airdate": "2014-10-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 97
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1360,
+          "end": 1380
+        }
+      ],
+      "external_id": "172838"
+    },
+    {
+      "n": 2,
+      "title": "Fragrant Darkness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "A man feels something vaguely familiar, yet terrifying, as he smells the scent of flowers at night. As an old man, walking through the woods, he finds a tunnel, and is compelled to enter it. While going through it, he reminisces about important events in his life up to that point, but it seems there is something he can't quite recall. Perhaps long ago, the visit of a traveler looking for shelter on a rainy day, might help shed light on the unsettledness he feels.",
+      "airdate": "2014-10-26",
+      "markers": [],
+      "external_id": "172839"
+    },
+    {
+      "n": 3,
+      "title": "Lingering Crimson",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "At dusk, about to go home after playing with her friends, a young girl named Akane found a shadow without a caster. On that same day, she disappeared. Several years later, Ginko is told the story of Mikage, a girl who appeared with no memories at Akane's village shortly after the vanishment of the latter.",
+      "airdate": "2014-11-02",
+      "markers": [],
+      "external_id": "172840"
+    },
+    {
+      "n": 4,
+      "title": "Hidden Cove",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Yura and Sumi, the former's caretaker, were close friends. Eventually, as they were moved apart, Yura could still feel Sumi's presence. However, whenever that happened, she'd become like an empty shell, worrying her father. As Ginko comes to know of the case, he proceeds to offer them advice, as the condition is caused by a mushi that can connect people's minds.",
+      "airdate": "2014-11-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 97
+        }
+      ],
+      "external_id": "172841"
+    },
+    {
+      "n": 5,
+      "title": "Thread of Light",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "A young boy named Gen troubles his father by being too rough with other kids, who pick on him due to his absent mother. The child, too strong for his age, also claims to be able to see strange creatures that no one else sees. As Ginko arrives at Gen's place, the story behind Gen's strength is revealed as the mushishi recounts the day he met a woman who'd woven a mysterious seamless garment.",
+      "airdate": "2014-11-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 98
+        }
+      ],
+      "external_id": "172842"
+    },
+    {
+      "n": 6,
+      "title": "Sea of Otherworldly Stars",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Izumi is alone in a world that mirrors our own. Having forgotten how she came to be there, she remains trapped while her family searches in vain. Her father believes she has been kidnapped, while her mother and sister Mizuho believe that she is still inside the house, even though they cannot see her. Ginko crosses into the other world to try to save her.",
+      "airdate": "2014-11-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 96
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "172843"
+    },
+    {
+      "n": 7,
+      "title": "Azure Waters",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Ginko encounters Yuuta, a boy who is excellent at swimming and fishing but has webbed hands and cold skin. After discovering the boy's unnatural affinity for water, he sets out to treat the rain mushi causing his strange behavior.",
+      "airdate": "2014-11-30",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1354,
+          "end": 1380
+        }
+      ],
+      "external_id": "172844"
+    },
+    {
+      "n": 8,
+      "title": "Lightning's End",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Multiple lightning strikes have been observed hitting the same tree, and Ginko investigates. He meets a strange boy who attracts lightning to himself due to a mushi's influence. His mother believes he is doing it to spite her and struggles with the fact that she doesn't love her child.",
+      "airdate": "2014-12-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 96
+        }
+      ],
+      "external_id": "172845"
+    },
+    {
+      "n": 9,
+      "title": "Mud Grass",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Shigeru's daughter (Yuri) is found dead in the mountains. A painful skin infection breaks out in his village. Ginko can cure the disease of the villagers but Shigeru has a much more serious case. It turns out that he and the son of his deceased brother brought back the mushi causing the problem to the village when they broke a taboo.",
+      "airdate": "2014-12-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 126
+        }
+      ],
+      "external_id": "172846"
+    },
+    {
+      "n": 10,
+      "title": "Tree of Eternity",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "A restless man, Kanta, on his way home to his wife and young daughter (Futaba), sits down to rest in a forest. He is tired and thirsty so he eats a red fruit that was lying on the ground near him, and gives thanks to the plum. Some time after this, he starts having vivid memories both in his dreams and while awake of times going back before his birth. He goes looking for a huge tree but finding it does not make him happy.",
+      "airdate": "2014-12-21",
+      "markers": [],
+      "external_id": "172847"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

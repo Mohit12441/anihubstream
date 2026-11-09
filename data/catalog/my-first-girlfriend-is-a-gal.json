@@ -1,0 +1,260 @@
+{
+  "id": "my-first-girlfriend-is-a-gal",
+  "title": "My First Girlfriend is a Gal",
+  "native": "はじめてのギャル",
+  "year": 2017,
+  "rating": 5.9,
+  "season": "Summer 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97863-79AXrUZ7VQa5.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97863-79AXrUZ7VQa5.jpg",
+  "accent": "#43aef1",
+  "synopsis": "Junichi Hashiba is nearing the end of high school and going into panic mode. His time here has not gone as expected: he has no girlfriend and worse yet—he’s still a virgin! Desperate to experience the big ‘first,’ his friends pressure him to approach the gyaru—a fashionable and boy-crazy gal—Yukana Yame for a good time. But his first mistake was thinking this gal would be an easy one!\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 12761,
+    "anilist": 97863,
+    "mal": 34403,
+    "hianime": "my-first-girlfriend-is-a-gal-k4mly5"
+  },
+  "skip_key_id": 34403,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": "2026-10-14 09:43:34",
+  "search_text": "my first girlfriend is a gal はし めてのキ ャル tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "My First Time Begging for It",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 17,
+          "end": 107
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1380
+        }
+      ],
+      "external_id": "201126"
+    },
+    {
+      "n": 2,
+      "title": "My First Karaoke",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 118,
+          "end": 208
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1380
+        }
+      ],
+      "external_id": "201127"
+    },
+    {
+      "n": 3,
+      "title": "My First Spray-On Gal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 26,
+          "end": 116
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1380
+        }
+      ],
+      "external_id": "201128"
+    },
+    {
+      "n": 4,
+      "title": "My First Serious Gal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1379
+        }
+      ],
+      "external_id": "201129"
+    },
+    {
+      "n": 5,
+      "title": "My First Half-Assed Girl",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 160,
+          "end": 250
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1313,
+          "end": 1380
+        }
+      ],
+      "external_id": "201130"
+    },
+    {
+      "n": 6,
+      "title": "My First Time at Yame-san's House",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 172
+        }
+      ],
+      "external_id": "201131"
+    },
+    {
+      "n": 7,
+      "title": "My First Job",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 138
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "201132"
+    },
+    {
+      "n": 8,
+      "title": "My First Trip",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 101,
+          "end": 191
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "201133"
+    },
+    {
+      "n": 9,
+      "title": "My First Fight",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-09-06",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1380
+        }
+      ],
+      "external_id": "201134"
+    },
+    {
+      "n": 10,
+      "title": "My First Confession",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-09-13",
+      "markers": [],
+      "external_id": "201135"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

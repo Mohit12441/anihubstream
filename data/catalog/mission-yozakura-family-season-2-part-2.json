@@ -1,0 +1,163 @@
+{
+  "id": "mission-yozakura-family-season-2-part-2",
+  "title": "Mission: Yozakura Family Season 2 Part 2",
+  "native": "夜桜さんちの大作戦 第2期 第2クール",
+  "year": 2026,
+  "rating": 7.3,
+  "season": "Fall 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx213657-ORNXVEBCjXaz.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx213657-ORNXVEBCjXaz.jpg",
+  "accent": "#5dbbe4",
+  "synopsis": "The second cour of the second season of Yozakura-san Chi no Daisakusen.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": 7,
+  "sched_day_label": "SUN",
+  "sched_date": "Nov 8",
+  "sched_time": "08:00",
+  "sched_season": "Fall 2026",
+  "sched_episode": 5,
+  "sched_sub_at": null,
+  "sched_dub_at": 1783670400000,
+  "source_ids": {
+    "anilist": 213657,
+    "mal": 64503,
+    "hianime": "mission:-yozakura-family-season-2-part-2-9ta04t",
+    "kitsu": 50823
+  },
+  "skip_key_id": 64503,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-18 10:08:08",
+  "search_text": "mission yozakura family season 2 part 2 夜桜さんちの大作戦 第2期 第2クール tv ongoing",
+  "genres": [
+    "action",
+    "comedy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "Mission: Yozakura Family Season 2 Part 2 Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx213657-ORNXVEBCjXaz.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Mission: Yozakura Family Season 2 Part 2 Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx213657-ORNXVEBCjXaz.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Forever Song (フォーエバーソング)",
+      "artist": "Humbreaders",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I'm still breathing",
+      "artist": "KID PHENOMENON",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "What's 'KAZOKU'",
+      "artist": "Sakurazaka46",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shalala",
+      "artist": "Pilaf Seijin",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Unmei-chan (Fate)",
+      "artist": "Ikimono-gakari",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "fam!",
+      "artist": "CHiCO",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "E☆Secrets (E☆シークレッツ)",
+      "artist": "ZOOM FLICKER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Feel so Easy!",
+      "artist": "Momoi Haruko",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Secret Operation",
+      "artist": "fripSide feat. Yoshino Nanjo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kekkon Koushinkyoku",
+      "artist": "ASOBI Doumei",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Feel so Easy! ビリビリver.",
+      "artist": "Momoi, Haruko",
+      "episodes": "3,4,5,8,10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Kimi kara no Kiseki (きみからの奇跡)",
+      "artist": "Inamura, Yuna",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

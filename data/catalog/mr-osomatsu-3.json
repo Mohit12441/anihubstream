@@ -1,0 +1,55 @@
+{
+  "id": "mr-osomatsu-3",
+  "title": "Mr. Osomatsu 3rd season",
+  "native": "おそ松さん 第3期",
+  "year": 2020,
+  "rating": 7.3,
+  "season": "Fall 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx120851-94u8CMlI599g.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120851-94u8CMlI599g.jpg",
+  "accent": "#43aef1",
+  "synopsis": "The third season of Osomatsu-san.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "mr.-osomatsu-3-54jnlw",
+    "mal": 42391,
+    "anilist": 120851,
+    "kitsu": 43551
+  },
+  "skip_key_id": 42391,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": null,
+  "search_text": "mr osomatsu 3rd season おそ松さん 第3期 tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "It's Starting Again",
+      "runtime": "21:00",
+      "runtime_seconds": 1260,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/829ab809b0a9fc052eca474d501fc4711751992339_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "181268"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

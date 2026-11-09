@@ -1,0 +1,366 @@
+{
+  "id": "master-keaton",
+  "title": "MASTER Keaton",
+  "native": "MASTERキートン",
+  "year": 1998,
+  "rating": 7.4,
+  "season": "Fall 1998",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1483-LXbJYimBXUmF.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1483-LXbJYimBXUmF.png",
+  "accent": "#e48650",
+  "synopsis": "Taichi Keaton is a half-British half-Japanese archeologist and SAS veteran of the Falklands War. He solves mysteries and investigates insurance fraud for Lloyd's around the world.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "master-keaton-zzww5m",
+    "mal": 1483,
+    "anilist": 1483,
+    "kitsu": 1329
+  },
+  "skip_key_id": 1483,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "master keaton masterキートン tv finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22508"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22509"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22510"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22511"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22512"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22513"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22514"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22515"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22516"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22517"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22518"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22519"
+    },
+    {
+      "n": 13,
+      "title": "Episode 13",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22520"
+    },
+    {
+      "n": 14,
+      "title": "Episode 14",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22521"
+    },
+    {
+      "n": 15,
+      "title": "Episode 15",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22522"
+    },
+    {
+      "n": 16,
+      "title": "Episode 16",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22523"
+    },
+    {
+      "n": 17,
+      "title": "Episode 17",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22524"
+    },
+    {
+      "n": 18,
+      "title": "Episode 18",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22525"
+    },
+    {
+      "n": 19,
+      "title": "Episode 19",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22526"
+    },
+    {
+      "n": 20,
+      "title": "Episode 20",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22527"
+    },
+    {
+      "n": 21,
+      "title": "Episode 21",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22528"
+    },
+    {
+      "n": 22,
+      "title": "Episode 22",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22529"
+    },
+    {
+      "n": 23,
+      "title": "Episode 23",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22530"
+    },
+    {
+      "n": 24,
+      "title": "Episode 24",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "22531"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Opening Theme",
+      "artist": "Kuniaki Haishima",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Railtown",
+      "artist": "Kuniaki Haishima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "A Sigh",
+      "artist": "KneuKid Romance",
+      "episodes": "25-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Opening Theme",
+      "artist": "Kuniaki Haishima",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Railtown",
+      "artist": "Kuniaki Haishima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "eternal wind",
+      "artist": "BLÜE",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "From Beginning",
+      "artist": "Kuniaki Haishima",
+      "episodes": "27-39"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "A Sigh",
+      "artist": "KneuKid Romance",
+      "episodes": "14-24"
+    }
+  ],
+  "relations": []
+}

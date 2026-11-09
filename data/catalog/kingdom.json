@@ -1,0 +1,617 @@
+{
+  "id": "kingdom",
+  "title": "Kingdom",
+  "native": "キングダム",
+  "year": 2012,
+  "rating": 7.4,
+  "season": "Summer 2012",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx12031-1nVQa5nXPt48.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12031-1nVQa5nXPt48.png",
+  "accent": "#936b28",
+  "synopsis": "When low-born servant boys Piao and Xin set out to become the world’s greatest war generals, they quickly find themselves caught up in a violent struggle between two noblemen plotting to overthrow the King. After Piao is killed protecting the rightful ruler of the kingdom of Qin, Xin sets out on a campaign for revenge that leads him straight into the fire of war.\n\nNow, with a target on his back and an army of enemies standing in his way, it will be up to a boy with no name and a young king without a throne to return order to their war-torn country in this historical action-drama based on the Tezuka Award-winning manga, Kingdom.\n\n(Source: Funimation)\n\nNote: The first episode aired with a runtime of 50 minutes as opposed to the standard 25 minute runtime.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kingdom-oxe81m",
+    "mal": 12031,
+    "anilist": 12031,
+    "kitsu": 6648
+  },
+  "skip_key_id": 12031,
+  "skip_key_space": "mal",
+  "episode_total": 38,
+  "added_at": null,
+  "search_text": "kingdom キンク タ ム tv finished",
+  "genres": [
+    "action",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Nameless Boy",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97920/original.jpg",
+      "synopsis": "Orphan and small-town servant Piao is unexpectedly invited to work at the Royal Court. Some months later, he returns to his village mortally wounded and, before he dies, sends his friend Xin off to a dangerous village, where Xin has a shocking encounter.",
+      "airdate": "2012-06-04",
+      "markers": [],
+      "external_id": "97920"
+    },
+    {
+      "n": 2,
+      "title": "An Encounter With Destiny",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97921/original.jpg",
+      "synopsis": "Xin discovers Ying Zheng, the young King of Qin, who's fleeing his half-brother's uprising. But when Piao's killer arrives to murder Ying Zheng, Xin, who's learned that Piao died serving as Zheng's stand-in, must decide which to help and which to kill.",
+      "airdate": "2012-06-11",
+      "markers": [],
+      "external_id": "97921"
+    },
+    {
+      "n": 3,
+      "title": "For a Friend",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97922/original.jpg",
+      "synopsis": "Xin and Zheng, the King, entrust their escape to young Diao, who knows a secret way out of Heibei Village. Xin still blames Zheng for Piao's death, and even as this simmering conflict boils over, a new and deadly pursuer takes up the chase.",
+      "airdate": "2012-06-18",
+      "markers": [],
+      "external_id": "97922"
+    },
+    {
+      "n": 4,
+      "title": "The King and the Sword",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97923/original.jpg",
+      "synopsis": "Fleeing pursuit, Zheng and Xin struggle with exhaustion, and with each other. When they reach the appointed meeting site, there's no sign of Zheng's sole supporter, Lord Changwen and the murderous tracker Mu Ta is hot on their trail.",
+      "airdate": "2012-06-25",
+      "markers": [],
+      "external_id": "97923"
+    },
+    {
+      "n": 5,
+      "title": "Unbroken Heart",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97924/original.jpg",
+      "synopsis": "Xin, who's vowed in the name of his own ambitions to help the King, must single-handedly face the treacherous assassin Mu Ta. Meanwhile, General Wang Yi brings a piece of tribute to the Court that seems to spell the end for all  young King Zheng's hopes.",
+      "airdate": "2012-07-02",
+      "markers": [],
+      "external_id": "97924"
+    },
+    {
+      "n": 6,
+      "title": "The Path to Becoming a General",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97925/original.jpg",
+      "synopsis": "Xin hears a tale of Piao's heroism during Wang Yi's ambush, but he also learns that King Zheng has even fewer allies than he'd been told. With little time left to forestall a civil war, Zheng decides on a dangerous path, to seek out unlikely allies.",
+      "airdate": "2012-07-09",
+      "markers": [],
+      "external_id": "97925"
+    },
+    {
+      "n": 7,
+      "title": "The Fearsome Folk of the Mountains",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97926/original.jpg",
+      "synopsis": "Xin sets out into the western mountains with Zheng and his handful of soldiers, seeking the aid of the mountain king. The mountain folk, though, have little liking for flatlanders, and when he meets them, King Zheng is forced to make a perilous choice.",
+      "airdate": "2012-07-16",
+      "markers": [],
+      "external_id": "97926"
+    },
+    {
+      "n": 8,
+      "title": "Each One's Dream",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97927/original.jpg",
+      "synopsis": "In the stronghold of the mountain folk, Zheng treats with their king, who seems determined to kill the young King of Qin in retribution for longstanding grudges. And the arrival of Xin and his companions pushes this confrontation to its crisis.",
+      "airdate": "2012-07-23",
+      "markers": [],
+      "external_id": "97927"
+    },
+    {
+      "n": 9,
+      "title": "On to Xianyang",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97928/original.jpg",
+      "synopsis": "Zheng and Xin return to where Lord Changwen waits. They make ready to ride to the capital, but they'll need remarkable strategy to overcome the terrible odds. Meanwhile, in the capital, Jie Shi has raised a vast army to face the formidable Lu Buwei.",
+      "airdate": "2012-07-30",
+      "markers": [],
+      "external_id": "97928"
+    },
+    {
+      "n": 10,
+      "title": "Storming the Capital",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97929/original.jpg",
+      "synopsis": "Zheng, Xin, and their companions arrive at the gates of Xianyang, capital of the Qin Kingdom, with a force far too small to assault such a great fortress. A stratagem may get them inside the walls, but they won't reach the Royal Court without a fight.",
+      "airdate": "2012-08-06",
+      "markers": [],
+      "external_id": "97929"
+    },
+    {
+      "n": 11,
+      "title": "A Fierce Battle Begins",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97930/original.jpg",
+      "synopsis": "Blocked by Wei Xing's elite crossbowmen, the forces of Zheng and the mountain folk split up.  Xin accompanies a smaller force to seek out the usurper Cheng Jiao in the palace... but their way, too, is blocked, by the deadly assassin Zuo Ci and his men.",
+      "airdate": "2012-08-13",
+      "markers": [],
+      "external_id": "97930"
+    },
+    {
+      "n": 12,
+      "title": "The Ultimate Sword-Blow",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97931/original.jpg",
+      "synopsis": "Xin, Bi, and the breakaway force, fighting to reach the throne room, face the seemingly invincible Zuo Ci in the \"Right Dragon\" corridor, while outside, the King and Lord Changwen hold out against Si Shi and Wei Xing.",
+      "airdate": "2012-08-20",
+      "markers": [],
+      "external_id": "97931"
+    },
+    {
+      "n": 13,
+      "title": "Lan Kai Roars",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97932/original.jpg",
+      "synopsis": "The breakaway force reaches the Throne Room, only to find the traitor Cheng Jiao guarded by his monstrous \"pet,\" who's seemingly impervious to weapons. Ba Jio reveals a previously unseen savagery, but can he contend with the brute strength of Lan Kai?",
+      "airdate": "2012-08-27",
+      "markers": [],
+      "external_id": "97932"
+    },
+    {
+      "n": 14,
+      "title": "The Strength of the Sword",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97933/original.jpg",
+      "synopsis": "His companions battered, Xin must rise to face the monstrous Lan Kai; in doing so he learns something of the true nature of the sword. Outside, Zheng's desperate fight is interrupted by the unwelcome arrival of the mysterious and powerful General Wang Yi.",
+      "airdate": "2012-09-03",
+      "markers": [],
+      "external_id": "97933"
+    },
+    {
+      "n": 15,
+      "title": "The Qualities of a King",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97934/original.jpg",
+      "synopsis": "A faceoff with Cheng Jiao awaits, but before that can come, Ying Zheng, facing death at General Wang Yi's hand, must convince the \"Strange Bird of Xin\" that his vision of the future makes him a worthy successor to his great-grandfather, King Zhao.",
+      "airdate": "2012-09-10",
+      "markers": [],
+      "external_id": "97934"
+    },
+    {
+      "n": 16,
+      "title": "Lü Buwei",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97935/original.jpg",
+      "synopsis": "The recalcitrant and powerful Lu Buwei finally makes his appearance, accompanied by his more-than-formidable \"Four Pillars.\" But condescension and a scarcely veiled threat of violence show right through his half-hearted show of respect to King Ying Zheng.",
+      "airdate": "2012-09-17",
+      "markers": [],
+      "external_id": "97935"
+    },
+    {
+      "n": 17,
+      "title": "First Campaign",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97936/original.jpg",
+      "synopsis": "Xin's first true campaign as a soldier comes at last, but when Wei makes a surprise move, the battle doesn't go as he expected.",
+      "airdate": "2012-09-24",
+      "markers": [],
+      "external_id": "97936"
+    },
+    {
+      "n": 18,
+      "title": "The Chariot Squadron's Menace",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97937/original.jpg",
+      "synopsis": "The battle heats up as Wei's forces bring out their trump card. This isn't going to be a fair fight--but luckily, Xin isn't looking for one.",
+      "airdate": "2012-10-01",
+      "markers": [],
+      "external_id": "97937"
+    },
+    {
+      "n": 19,
+      "title": "Raging Battle",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97938/original.jpg",
+      "synopsis": "The Fourth Army's victory against the chariots gives Lord Biao an idea. How far can he push behind enemy lines if the infantry's survival is no object?",
+      "airdate": "2012-10-08",
+      "markers": [],
+      "external_id": "97938"
+    },
+    {
+      "n": 20,
+      "title": "Wang Yi Intrudes",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97939/original.jpg",
+      "synopsis": "Just when it seems the battle on the She Gan Plain is finally going their way, Qin's forces are suddenly surprised by the advent of three generals: their own, the enemy's... and one who's not even supposed to be there!",
+      "airdate": "2012-10-15",
+      "markers": [],
+      "external_id": "97939"
+    },
+    {
+      "n": 21,
+      "title": "The Meaning of a General",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97940/original.jpg",
+      "synopsis": "Xin has his very first conversation with a true general, and Wu Qing of Wei and Lord Biao of Qin are finally batting each other in earnest.",
+      "airdate": "2012-10-22",
+      "markers": [],
+      "external_id": "97940"
+    },
+    {
+      "n": 22,
+      "title": "The Clever General vs. The Daring General",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97941/original.jpg",
+      "synopsis": "Lord Biao and Wu Qing are both fighting all-out, and whoever wins this one-on-one battle also wins the war.",
+      "airdate": "2012-10-29",
+      "markers": [],
+      "external_id": "97941"
+    },
+    {
+      "n": 23,
+      "title": "An Evening Story",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97942/original.jpg",
+      "synopsis": "Xin learns some things about Qiang Lei's past, and Diao has to make an important decision about the future.",
+      "airdate": "2012-11-05",
+      "markers": [],
+      "external_id": "97942"
+    },
+    {
+      "n": 24,
+      "title": "A New Trial",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97943/original.jpg",
+      "synopsis": "When Xin approaches Wang Yi looking for a mentor to make him stronger, he discovers that the great general doesn't make things easy.",
+      "airdate": "2012-11-12",
+      "markers": [],
+      "external_id": "97943"
+    },
+    {
+      "n": 25,
+      "title": "Comission",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97944/original.jpg",
+      "synopsis": "Just as Qin is successfully waging war with one of its neighboring kingdoms, Han, another neighbor makes its own attack against Qin.",
+      "airdate": "2012-11-19",
+      "markers": [],
+      "external_id": "97944"
+    },
+    {
+      "n": 26,
+      "title": "Pang Nuan, God of War",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97945/original.jpg",
+      "synopsis": "Xin and his comrades march into battle together again, this time under the command of the great general Wang Yi. Meanwhile, the Royal Court begins to suspect that Wang Yi has his own ulterior motive for taking on this particular battle.",
+      "airdate": "2012-11-26",
+      "markers": [],
+      "external_id": "97945"
+    },
+    {
+      "n": 27,
+      "title": "The Fei Xin Force is Born",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97946/original.jpg",
+      "synopsis": "The battle against Zhao is underway, and both sides have tricks up their sleeves. In recognition of Xin's growth as a commander, Wang Yi gives his squadron a special mission that could determine the outcome of the war.",
+      "airdate": "2012-12-03",
+      "markers": [],
+      "external_id": "97946"
+    },
+    {
+      "n": 28,
+      "title": "Wang Yi's Flying Arrow",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97947/original.jpg",
+      "synopsis": "The Fei Xin Force is up against a brilliant tactician in their very first mission. Xin and his men may be good, but is Feng Ji better?",
+      "airdate": "2012-12-10",
+      "markers": [],
+      "external_id": "97947"
+    },
+    {
+      "n": 29,
+      "title": "The Tides of War Suddenly Turn",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97948/original.jpg",
+      "synopsis": "Xin has his first taste of fame, and Meng Wu is back to leading the Qin offensive. Will it go the same way as the last one, or does Meng Wu have a trick up his sleeve?",
+      "airdate": "2012-12-17",
+      "markers": [],
+      "external_id": "97948"
+    },
+    {
+      "n": 30,
+      "title": "An Act of God",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97949/original.jpg",
+      "synopsis": "Wang Yi smells something fishy about Zhao's sudden retreat, but his endgame remains the same: find and kill Pang Nuan. Xin and Qiang Lei give him a little inadvertent help.",
+      "airdate": "2012-12-24",
+      "markers": [],
+      "external_id": "97949"
+    },
+    {
+      "n": 31,
+      "title": "The Power of Unity",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97950/original.jpg",
+      "synopsis": "Pang Nuan is still unleashing the wrath of the gods on all around him, and at this point he seems almost untouchable. But this is the Fei Xin Force's camp, and they're not giving up without a fight.",
+      "airdate": "2013-01-07",
+      "markers": [],
+      "external_id": "97950"
+    },
+    {
+      "n": 32,
+      "title": "The Fei Xin Force on the Run",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97951/original.jpg",
+      "synopsis": "The Fei Xin Force scatters, running deep into the mountains with Wan Ji in hot pursuit. This time they're on a self-assigned mission: protect their leader at all costs.",
+      "airdate": "2013-01-14",
+      "markers": [],
+      "external_id": "97951"
+    },
+    {
+      "n": 33,
+      "title": "Wang Yi Takes the Field",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97952/original.jpg",
+      "synopsis": "The original 100-man Fei Xin Force is down to 36 men, and Zhao's generals are closing in. However, morning has dawned, and Wang Yi is on the move.",
+      "airdate": "2013-01-21",
+      "markers": [],
+      "external_id": "97952"
+    },
+    {
+      "n": 34,
+      "title": "The Main Attraction",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97953/original.jpg",
+      "synopsis": "King Ying Zheng receives some disturbing news about Zhao's forces, Diao and Meng Yi learn the true identities of their fellow spectators, and the war begins to take a new turn.",
+      "airdate": "2013-01-28",
+      "markers": [],
+      "external_id": "97953"
+    },
+    {
+      "n": 35,
+      "title": "Commanding Generals Face to Face",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97954/original.jpg",
+      "synopsis": "Wang Yi and Pang Nuan begin their showdown at last. Meanwhile, Lord Changwen tells Zheng the truth about Liao.",
+      "airdate": "2013-02-04",
+      "markers": [],
+      "external_id": "97954"
+    },
+    {
+      "n": 36,
+      "title": "Wang Yi and Liao",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97955/original.jpg",
+      "synopsis": "Nine years ago, Wang Yi, Lord Changwen, and Liao shared a secret with the King that altered the course of one woman's life and death.",
+      "airdate": "2013-02-11",
+      "markers": [],
+      "external_id": "97955"
+    },
+    {
+      "n": 37,
+      "title": "I Stand on the Verge of Death",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97956/original.jpg",
+      "synopsis": "The plot to slay Wang Yi takes a turn no one was expecting.",
+      "airdate": "2013-02-18",
+      "markers": [],
+      "external_id": "97956"
+    },
+    {
+      "n": 38,
+      "title": "Succession",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/97957/original.jpg",
+      "synopsis": "As the war between Qin and Zhao comes to an end, the Middle Kingdom witnesses the dawn of a new era.",
+      "airdate": "2013-02-25",
+      "markers": [],
+      "external_id": "97957"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ikite, Sansan (生きて、燦々)",
+      "artist": "Ikimono-gakari",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hōkō (Roar)",
+      "artist": "Sora Tomonari",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kieru Made (Until it Disappears)",
+      "artist": "Hana Hope",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Prayer",
+      "artist": "Who-ya Extended",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rei -ray-",
+      "artist": "Suiren",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Genyō (Dazzling)",
+      "artist": "Haku",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "TOMORROW",
+      "artist": "BiSH",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Deep inside",
+      "artist": "waterweed",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "GLORY DAYS",
+      "artist": "D☆DATE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "21",
+      "artist": "The Sketchbook",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pride",
+      "artist": "Nothing's Carved in Stone",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Voice of Soul",
+      "artist": "Takumi Ishida",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kakudo",
+      "artist": "Sae",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hechitashiho",
+      "artist": "Sae",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "geki",
+      "artist": "zonji",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Believe",
+      "artist": "Misaki",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "STACKiNG",
+      "artist": "BiSH",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "kIng",
+      "artist": "Emiko Suzuki",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "EXIT",
+      "artist": "The Sketchbook",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Destiny Sky",
+      "artist": "Yūki Wakai",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Soko ni Kimi ga Aru",
+      "artist": "The Sketchbook",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Never Ending",
+      "artist": "Dasoku",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

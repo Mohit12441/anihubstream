@@ -1,0 +1,717 @@
+{
+  "id": "nana",
+  "title": "NANA",
+  "native": "NANA-ナナ-",
+  "year": 2006,
+  "rating": 8.5,
+  "season": "Spring 2006",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx877-6BUYEWp8By8j.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx877-6BUYEWp8By8j.png",
+  "accent": "#f14386",
+  "synopsis": "Two twenty-somethings seemingly share nothing in common apart from their first name, but a chance meeting on a train bound for Tokyo sets Nana Komatsu and Nana Oosaki on a collision course with destiny. Nana Komatsu, a love-at-first-sight dreamer, aims to find enduring happiness in the big city. Nana Oosaki, neo punk rock vocalist, pursues her burning ambitions of musical stardom and worldwide fame. As their fates increasingly intertwine, they each chase their dreams — until the harsh realities of life in big city Tokyo threaten to tear everything apart.\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "nana-981j1o",
+    "mal": 877,
+    "anilist": 877,
+    "kitsu": 777
+  },
+  "skip_key_id": 877,
+  "skip_key_space": "mal",
+  "episode_total": 47,
+  "added_at": null,
+  "search_text": "nana nana ナナ tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Prologue: Nana and Nana",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16288/original.jpg",
+      "synopsis": "Nana recalls the first time she meet the other Nana on the train while traveling to Tokyo.",
+      "airdate": "2006-04-05",
+      "markers": [],
+      "external_id": "16288"
+    },
+    {
+      "n": 2,
+      "title": "Love? Friendship? Nana and Shouji",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16289/original.jpg",
+      "synopsis": "Komatsu Nana's past is revealed, from graduating high school to the time when her and Shoji met in Community College.",
+      "airdate": "2006-04-12",
+      "markers": [],
+      "external_id": "16289"
+    },
+    {
+      "n": 3,
+      "title": "Nana and Shouji, Love's Whereabouts",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16290/original.jpg",
+      "synopsis": "Nana likes Shoji, but has decided to remain friends so as not to ruin the relationship they have. Junko and Kyousuke reveal their plans to go to Tokyo and get into an art College there. Nana wants to go with them, but Shoji confronts her and says she should stay in their hometown.",
+      "airdate": "2006-04-19",
+      "markers": [],
+      "external_id": "16290"
+    },
+    {
+      "n": 4,
+      "title": "Nana's Love, NANA's Dream",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16291/original.jpg",
+      "synopsis": "Komatsu Nana's past is brought to a conclusion and we now reveal the past of the \"other\" Nana. Oosaki Nana is the vocalist in a local band, the \"Black Stones\", but problems soon arise when one of the members announce their intention to leave for Tokyo to join another band.",
+      "airdate": "2006-04-26",
+      "markers": [],
+      "external_id": "16291"
+    },
+    {
+      "n": 5,
+      "title": "Ren's Dreams, NANA's Thoughts",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16292/original.jpg",
+      "synopsis": "Ren has revealed that he will be moving to Tokyo to join the band \"Trapnest\". This leaves the rest of the band trying to decide what to do next, with Nana having to face the toughest decision of them all. Will she follow Ren to Tokyo, or remain behind to pursue her own dreams?",
+      "airdate": "2006-05-03",
+      "markers": [],
+      "external_id": "16292"
+    },
+    {
+      "n": 6,
+      "title": "Snowing in Tokyo! Nana and NANA",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16293/original.jpg",
+      "synopsis": "Back in the present, Nana and Nana meet on the train to Tokyo. More detail is revealed around their meeting and events immediately after.",
+      "airdate": "2006-05-10",
+      "markers": [],
+      "external_id": "16293"
+    },
+    {
+      "n": 7,
+      "title": "Yasu Appears! Room No. 707",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16294/original.jpg",
+      "synopsis": "The two Nana's agree to share the apartment. Shoji and the others worry about Nana living alone with a total stranger.",
+      "airdate": "2006-05-17",
+      "markers": [],
+      "external_id": "16294"
+    },
+    {
+      "n": 8,
+      "title": "Strawberry Grass and Lotus Flower",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16295/original.jpg",
+      "synopsis": "The two Nana's have now moved in together and decide to go shopping for furniture for the apartment. While talking, Oosaki Nana decides to nickname Komatsu Nana \"Hachi\" (eight) to make things less confusing.",
+      "airdate": "2006-05-24",
+      "markers": [],
+      "external_id": "16295"
+    },
+    {
+      "n": 9,
+      "title": "Nobu Arrives in Tokyo! NANA's Song",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16296/original.jpg",
+      "synopsis": "Nana and Hachi get settled into their new apartment. Hachi begins her new job. That night, they receive a visitor from Nana's old band back home.",
+      "airdate": "2006-05-31",
+      "markers": [],
+      "external_id": "16296"
+    },
+    {
+      "n": 10,
+      "title": "The Handsome Youth Shin Appears!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16297/original.jpg",
+      "synopsis": "Nana and Nobu, along with Hachi, start their search for two more band members. Meanwhile, Shoji is asked to train a young girl named Sachiko. Hachi previously joked about Shoji having an affair with a woman named Sachiko, but this is just a coincidence, right?",
+      "airdate": "2006-06-07",
+      "markers": [],
+      "external_id": "16297"
+    },
+    {
+      "n": 11,
+      "title": "Sachiko, Is This on Purpose?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16298/original.jpg",
+      "synopsis": "Hachi's boss reveals some bad news to her. Meanwhile, Shoji is becoming closer with Sachiko, perhaps dangerously so. Nana's former band member, Yasu, makes an important decision.",
+      "airdate": "2006-06-14",
+      "markers": [],
+      "external_id": "16298"
+    },
+    {
+      "n": 12,
+      "title": "Urgent Approach! Shoji and Sachiko",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16299/original.jpg",
+      "synopsis": "Hachi is trying to get her life back on track after suddenly losing her job. Meanwhile, Shoji is forced to work out his feelings for Sachiko and Hachi.",
+      "airdate": "2006-06-28",
+      "markers": [],
+      "external_id": "16299"
+    },
+    {
+      "n": 13,
+      "title": "Sachiko's Tears, Shoji's Determination",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16300/original.jpg",
+      "synopsis": "Hachi finds a new job but is not enjoying it at all. Nana's band finally get an opening to play. To celebrate, they go to the family restaurant where Shoji and Sachiko work. This spells trouble for everyone involved.",
+      "airdate": "2006-07-05",
+      "markers": [],
+      "external_id": "16300"
+    },
+    {
+      "n": 14,
+      "title": "Family Restaurant of Shambles",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16301/original.jpg",
+      "synopsis": "Nana and Hachi confront Shoji and Sachiko over their relationship. Later, Hachi receives tickets to see \"Trapnest\" that she ordered in the past.",
+      "airdate": "2006-07-05",
+      "markers": [],
+      "external_id": "16301"
+    },
+    {
+      "n": 15,
+      "title": "Blast, First Live",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16302/original.jpg",
+      "synopsis": "Nana's band, \"Blast\", are preparing for their first live concert. Hachi goes to see them and meets a strange girl connected with Nana's past.",
+      "airdate": "2006-07-19",
+      "markers": [],
+      "external_id": "16302"
+    },
+    {
+      "n": 16,
+      "title": "NANA's Love Whereabouts",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16303/original.jpg",
+      "synopsis": "Whilst apologising to Misato for her outburst the night before, it is hinted to Hachi that Ren used to be in Nana's band. Hachi asks Nobu to find out more about Nana and Ren's past.",
+      "airdate": "2006-07-26",
+      "markers": [],
+      "external_id": "16303"
+    },
+    {
+      "n": 17,
+      "title": "Trapnest, Live",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16304/original.jpg",
+      "synopsis": "Nana and Hachi travel back to her hometown to see Trapnest perform. While there, Hachi learns a few things about Nana she didn't know before, including her feelings for Ren now.",
+      "airdate": "2006-08-02",
+      "markers": [],
+      "external_id": "16304"
+    },
+    {
+      "n": 18,
+      "title": "Hachi's Prayer, NANA's Thoughts",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16305/original.jpg",
+      "synopsis": "After the concert, Ren calls Yasu, having noticed Nana in the crowd. With Yasu's help Nana contacts Ren and arranges to meet in their hotel...",
+      "airdate": "2006-08-09",
+      "markers": [],
+      "external_id": "16305"
+    },
+    {
+      "n": 19,
+      "title": "NANA's Prize",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16306/original.jpg",
+      "synopsis": "Nana and Ren discuss their future. Hachi starts thinking about finding another boyfriend. Ren and Nana's band decide to meet at the Nana's apartment to play Mahjong and another surprise guest turns up as well...",
+      "airdate": "2006-08-16",
+      "markers": [],
+      "external_id": "16306"
+    },
+    {
+      "n": 20,
+      "title": "Sudden Development! Hachi's Fate",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16307/original.jpg",
+      "synopsis": "During the Mahjong game, the group discover that Yasu and Reira used to be an item in the past. Hachi gets to know Nobu a little better and sees qualities in him that she sees in herself. Hachi wakes later to find she's late for work, and it looks like this was the last straw...",
+      "airdate": "2006-08-23",
+      "markers": [],
+      "external_id": "16307"
+    },
+    {
+      "n": 21,
+      "title": "Dream of Suite Room",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16308/original.jpg",
+      "synopsis": "Hachi happens to meet Takumi after losing her job. It isn't long before they're headed for his hotel... Will Hachi go through with this? And can she bring herself to tell Nana?",
+      "airdate": "2006-08-30",
+      "markers": [],
+      "external_id": "16308"
+    },
+    {
+      "n": 22,
+      "title": "Wish of July 7th, Hachi's Love",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16309/original.jpg",
+      "synopsis": "The last day of Trapnest's tour is here. Hachi wonders if Takumi will come to see her now that the tour is over. Nobu and Shin join Trapnest at the after party, where a confrontation emerges.",
+      "airdate": "2006-09-13",
+      "markers": [],
+      "external_id": "16309"
+    },
+    {
+      "n": 23,
+      "title": "I Do Not Want to Pass Over to Anybody",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16310/original.jpg",
+      "synopsis": "Nobu comes to terms with his feelings for Hachiko whilst Nana confides in Yasu that she will be by Hachi's side no matter what she decides - even though she disapproves of Takumi. Ren asks Nana to move in with him. Reira gives Shin money to spend the night with her.",
+      "airdate": "2006-09-20",
+      "markers": [],
+      "external_id": "16310"
+    },
+    {
+      "n": 24,
+      "title": "Hachi's Confused Heart",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16311/original.jpg",
+      "synopsis": "BLAST are noticed by a record company thanks to Yasu. Nana tells Hachiko what Takumi said to Shin and Nobu but also tells her that Nobu is in love with her. Later that day, Nobu confesses his true feelings to Hachi. Shin leaves his lighter at Reira's and gets it back but spends no time with her much to Reira's chargrin. Hachi is torn between Takumi and Nobu.",
+      "airdate": "2006-09-27",
+      "markers": [],
+      "external_id": "16311"
+    },
+    {
+      "n": 25,
+      "title": "A Capricious and Selfish Man",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16312/original.jpg",
+      "synopsis": "Nana goes to live with Ren for the two weeks that Trapnest have off. Reira and Takumi visit America and bump into each other there. Nobu walks Hachi home but Takumi turns up and walks her the rest of the way. Hachi avoids going to watch BLAST practice because she can't face Nobu and Misato comes to visit for summer vacation.",
+      "airdate": "2006-10-01",
+      "markers": [],
+      "external_id": "16312"
+    },
+    {
+      "n": 26,
+      "title": "The Passing Hachi and NANA",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16313/original.jpg",
+      "synopsis": "BLAST's first live is sold out. Hachiko feels lonely after Nana turns her down to celebrating at hers so she goes to see Takumi.",
+      "airdate": "2006-10-10",
+      "markers": [],
+      "external_id": "16313"
+    },
+    {
+      "n": 27,
+      "title": "Hachi's Desired Future",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16314/original.jpg",
+      "synopsis": "BLAST visit Hachi to celebrate their latest success and discuss record contracts. Shin convinces Hachi and Nobu to go to the convenience store to buy more wine. On the way, Hachi and Nobu are forced to face their feelings for each other.",
+      "airdate": "2006-10-18",
+      "markers": [],
+      "external_id": "16314"
+    },
+    {
+      "n": 28,
+      "title": "Hachi and Nobu, Urgent Approach",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16315/original.jpg",
+      "synopsis": "Hachi decides she will break up with Takumi to be with Nobu.",
+      "airdate": "2006-10-25",
+      "markers": [],
+      "external_id": "16315"
+    },
+    {
+      "n": 29,
+      "title": "The Problem of Expressing Love",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16316/original.jpg",
+      "synopsis": "Hachiko admits to Nana that she loves Nobu after spending the night at his place. Junko, her boyfriend and Shoji try to analyse why Hachi is with Nobu. Yasu and the record company manager meets with Shin's father to sign the contract.",
+      "airdate": "2006-11-01",
+      "markers": [],
+      "external_id": "16316"
+    },
+    {
+      "n": 30,
+      "title": "Breakdown, NANA's Heart",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16317/original.jpg",
+      "synopsis": "Hachi feels ill during work and her boss tells her to see a doctor. Nobu gets Nana a job at the moving company he part-time works for so she can make some money. Hachi makes a shocking discovery.",
+      "airdate": "2006-11-08",
+      "markers": [],
+      "external_id": "16317"
+    },
+    {
+      "n": 31,
+      "title": "Hachi's Child, Pregnancy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16318/original.jpg",
+      "synopsis": "Hachi is pregnant but doesn't know if it's Takumi's or Nobu's. She tries to hide it from those around her, especially Nana.",
+      "airdate": "2006-11-15",
+      "markers": [],
+      "external_id": "16318"
+    },
+    {
+      "n": 32,
+      "title": "Don't Separate the Joined Hands",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16319/original.jpg",
+      "synopsis": "Nana and Nobu argue over what to do about the baby and whether or not Nobu should become the baby's father. Nobu goes to see Hachi. Reira explains the 'red thread' belief to Shin.",
+      "airdate": "2006-11-20",
+      "markers": [],
+      "external_id": "16319"
+    },
+    {
+      "n": 33,
+      "title": "Hachi's Choice",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16320/original.jpg",
+      "synopsis": "Hachi makes her final decision about her pregnancy. Takumi surprises her with his own.",
+      "airdate": "2006-11-29",
+      "markers": [],
+      "external_id": "16320"
+    },
+    {
+      "n": 34,
+      "title": "The Broken Strawberry Glass",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16321/original.jpg",
+      "synopsis": "Takumi and Hachi tell of their decision to marry. The other Trapnest and Nana are shocked by this. Nana is so upset she drops the Strawberry Glass they bought together back when they first moved in.",
+      "airdate": "2006-12-06",
+      "markers": [],
+      "external_id": "16321"
+    },
+    {
+      "n": 35,
+      "title": "Reira's Loneliness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16322/original.jpg",
+      "synopsis": "Reira is upset about Takumi and Hachi's engagement.",
+      "airdate": "2006-12-13",
+      "markers": [],
+      "external_id": "16322"
+    },
+    {
+      "n": 36,
+      "title": "Blast's New Song!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16323/original.jpg",
+      "synopsis": "The Black Stones perform their new song for their management. Later, Shin and Nana have a big argument. Nana heads home to apartment 707 for the first time in nine days only to find that Hachi has moved out.",
+      "airdate": "2006-12-20",
+      "markers": [],
+      "external_id": "16323"
+    },
+    {
+      "n": 37,
+      "title": "Hachi, High-Class Housewife",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16324/original.jpg",
+      "synopsis": "Shouji, Junko and Kyosuke discuss the possibility that Hachi's fiance is Takumi from Trapnest. Meanwhile Hachi meets Naoki for the first time and shows off her new apartment to him and Takumi. Takumi tells Hachi that she doesn't have to keep their relationship a secret from their friends and family and expresses his desire to go and meet with Hachi's parents and sisters.",
+      "airdate": "2007-01-17",
+      "markers": [],
+      "external_id": "16324"
+    },
+    {
+      "n": 38,
+      "title": "The Trigger of Fate",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16325/original.jpg",
+      "synopsis": "Ren encourages Nana to go and see Hachi, unfortunately Nana and Hachi just miss each other. Hachi meets with Shin and tells him about her pregnancy and decision to marry Takumi.",
+      "airdate": "2007-01-24",
+      "markers": [],
+      "external_id": "16325"
+    },
+    {
+      "n": 39,
+      "title": "Look, Hachiko",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16326/original.jpg",
+      "synopsis": "The love life of Ren and Nana has leaked to the press. Blast suspects Gaia to be involved. Nana faces the consequences, and leaves a message for Hachiko through a TV broadcast. Hachi on her side is having problems with Takumi and confesses to Junko and Kyosuke that she is in love with him, even though she wishes that she could love Nobu.",
+      "airdate": "2007-01-31",
+      "markers": [],
+      "external_id": "16326"
+    },
+    {
+      "n": 40,
+      "title": "Blast, Debut!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16327/original.jpg",
+      "synopsis": "With Blast holed up in a secret hotel room, Misato has come to visit again while Yasu and Gaia finally make a decision about the debut. Nana tells Nobu that she has a plan to get Hachi back. Trapnest's members leave for London and Hachiko heads back to her hometown, while Reira discovers that Blast's debut single will be released on the same day as Trapnest's new single.",
+      "airdate": "2007-02-07",
+      "markers": [],
+      "external_id": "16327"
+    },
+    {
+      "n": 41,
+      "title": "Blast Lodging Together",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16328/original.jpg",
+      "synopsis": "Hachi's sister Nao asks Hachi about Nana, later Takumi arrives home from London and gives Hachi her engagement ring. With the rest of Trapnest still in London, Ren and Reira begin to realise the depth of Yasu's feelings for Nana when Mari points out that he has placed Blast ahead of his law apprenticeship commitments. Meanwhile with the members of Blast sent to a wilderness camp by Gaia, Shin takes the oppurtunity to email Reira, while Yasu admits to Nana that he is in love with her.",
+      "airdate": "2007-02-14",
+      "markers": [],
+      "external_id": "16328"
+    },
+    {
+      "n": 42,
+      "title": "NANA, Sudden Fit",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16329/original.jpg",
+      "synopsis": "After Blast returns from their training camp, the band members move into Gaia's boarding house. Reira replies to Shin's email and she and Mari later find Ren asleep in the bath. Takumi meets Nana's family for the first time. Nana starts hyperventilating after Nobu reveals that he has given up on Hachi.",
+      "airdate": "2007-02-21",
+      "markers": [],
+      "external_id": "16329"
+    },
+    {
+      "n": 43,
+      "title": "Blast, Guerilla Live",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16330/original.jpg",
+      "synopsis": "A mysterious actress named Miyu gives Nobu directions on how to help Nana with her panic attack. Takumi notices that Reira has Shin's lighter, although Reira claims she received it from a fan. Blast has an unannounced live in Shinjuku, which Hachiko unknowingly stumbles upon.",
+      "airdate": "2007-02-28",
+      "markers": [],
+      "external_id": "16330"
+    },
+    {
+      "n": 44,
+      "title": "Blast vs. Trapnest",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16331/original.jpg",
+      "synopsis": "As both bands rehearse for a TV appearance, Yasu confronts Ren about his drug use and treatment of Nana. Ren later proposes to Nana, followed up by a session of rough sex which excites and terrifies Nana at the same time. Reira and Shin manage to sneak out for some alone time, while Nobu is discouraged when he learns that Miyu is seven years older than him.",
+      "airdate": "2007-03-07",
+      "markers": [],
+      "external_id": "16331"
+    },
+    {
+      "n": 45,
+      "title": "Blast's First TV Performance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16332/original.jpg",
+      "synopsis": "Trapnest and Blast make their TV appearances. Hachi admits to Junko that she feels the desire to explain things to Nobu because Shōji never explained his affair with Sachiko to her. The members of Blast play Mah-Jong with their neighbours, Yuri and Miyu. Hachi arranges to meet up with Blast for the fireworks.",
+      "airdate": "2007-03-14",
+      "markers": [],
+      "external_id": "16332"
+    },
+    {
+      "n": 46,
+      "title": "Reunion! Hachi and Shoji",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16333/original.jpg",
+      "synopsis": "As Blast's members excitedly prepare for the fireworks festival by cancelling their other appointments and finding disguises, Hachi heads to Jackson Hole where she encounters Shoji for the first time since their breakup. Meanwhile Takumi and Reira discuss Ren's desire to marry Nana.",
+      "airdate": "2007-03-21",
+      "markers": [],
+      "external_id": "16333"
+    },
+    {
+      "n": 47,
+      "title": "Fireworks Display, Hachi and NANA",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16334/original.jpg",
+      "synopsis": "Several years in the future, the members of Blast plus Hachi and her daughter Satsuke meet each other again at Room 707 for the fireworks display, but strangely Nana is not present. Back in 2001, Hachi has cold feet about seeing Nobu again so Nana lies and tells her that he won't be present for the fireworks.",
+      "airdate": "2007-03-28",
+      "markers": [],
+      "external_id": "16334"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Season",
+      "artist": "Alisa Takigawa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Butterfly Effect",
+      "artist": "Shiritsu Ebisu Chuugaku",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kasukana Hisokana Tashikana MIRAI (微かな密かな確かなミライ;A Hazy, Secret, Certain Future)",
+      "artist": "Sphere",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Owaranai Yoru ni (終わらない夜に)",
+      "artist": "Yui Sakakibara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shining stars bless☆",
+      "artist": "Kaori Utatsuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "mo.o!",
+      "artist": "LOVERIN TAMBURIN",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "rose",
+      "artist": "ANNA inspi' NANA ~Black Stones~",
+      "episodes": "1-22"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "a little pain",
+      "artist": "OLIVIA inspi' REIRA ~Trapnest~",
+      "episodes": "01-08,10-18,41"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ordinary",
+      "artist": "CANDEE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sunao na Mama (素直なまま)",
+      "artist": "Funta",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Taisetsu na Negai (大切な願い)",
+      "artist": "CooRie",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Orange no Dancing",
+      "artist": "Miyuki Takahashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hoshizora Nokutaan",
+      "artist": "Miyuki Takahashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Koi suru Flow Light",
+      "artist": "Akira",
+      "episodes": "12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Wish",
+      "artist": "OLIVIA inspi' REIRA ~Trapnest~",
+      "episodes": "23-36"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "rose",
+      "artist": "ANNA inspi' NANA ~Black Stones~",
+      "episodes": "9"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Lucy",
+      "artist": "ANNA TSUCHIYA inspi' NANA ~Black Stones~",
+      "episodes": "37-47"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Starless Night",
+      "artist": "OLIVIA inspi' REIRA ~Trapnest~",
+      "episodes": "19-29,42"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Kuroi Namida",
+      "artist": "ANNA inspi' NANA ~Black Stones~",
+      "episodes": "30-40,47"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Winter Sleep",
+      "artist": "OLIVIA inspi' REIRA ~Trapnest~",
+      "episodes": "43-44"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Stand By Me",
+      "artist": "ANNA TSUCHIYA inspi' NANA ~Black Stones~",
+      "episodes": "45-46"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Kuroi Namida",
+      "artist": "ANNA TSUCHIYA inspi' Nana ~Black Stones~",
+      "episodes": "47"
+    }
+  ],
+  "relations": []
+}

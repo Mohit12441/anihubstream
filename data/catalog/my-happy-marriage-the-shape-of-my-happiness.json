@@ -1,0 +1,99 @@
+{
+  "id": "my-happy-marriage-the-shape-of-my-happiness",
+  "title": "My Happy Marriage: The Shape of My Happiness",
+  "native": "わたしの幸せなかたち",
+  "year": 2024,
+  "rating": 7.6,
+  "season": "Winter 2024",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx167486-EVz4sqKjf7W4.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx167486-EVz4sqKjf7W4.jpg",
+  "accent": "#24d3ee",
+  "synopsis": "An unaired episode bundled with the special edition of the 8th Watashi no Shiawase na Kekkon light novel volume.\n\nMiyo's chance to demonstrate what she has learned comes at her first social gathering with her fiancé. Kiyoka introduces her to a distinguished gentleman. \n\n(Source: Netflix)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "my-happy-marriage:-the-shape-of-my-happiness-6wuo36",
+    "mal": 55889,
+    "anilist": 167486,
+    "kitsu": 47800
+  },
+  "skip_key_id": 55889,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "my happy marriage the shape of my happiness わたしの幸せなかたち ova finished",
+  "genres": [
+    "drama",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "My Happy Marriage: The Shape of My Happiness",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a9306f3cf53bfc7bd5345e6-poster.jpg",
+      "synopsis": "An unaired episode bundled with the special edition of the 8th Watashi no Shiawase na Kekkon light novel volume.\n\n\n\nMiyo's chance to demonstrate what she has learned comes at her first social gathering with her fiancé. Kiyoka introduces her to a distinguished gentleman. \n\n\n\n(Source: Netflix)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "354755"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shiawase de Namida ga Deru no wa. (幸せで涙が出るのは。)",
+      "artist": "Riria.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Prelude no Temae ni: ~for me&you~ (プレリュードの手前に 〜for me&you〜)",
+      "artist": "Kashitarō Itō",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shiawase no Yakusoku (幸せな約束。)",
+      "artist": "Riria.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsukikage Okuri (月影おくり)",
+      "artist": "Kashitarō Itō",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Anata no Soba ni. (貴方の側に。)",
+      "artist": "Riria.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Vita Philosophica (ヰタ・フィロソフィカ)",
+      "artist": "Kashitarō Itō",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

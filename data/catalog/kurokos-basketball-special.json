@@ -1,0 +1,54 @@
+{
+  "id": "kurokos-basketball-special",
+  "title": "Kuroko no Basket: Oshaberi Shiyokka",
+  "native": "黒子のバスケ お喋りしよっか",
+  "year": 2012,
+  "rating": 6.9,
+  "season": "Fall 2012",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/17259.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/17259.jpg",
+  "accent": "#50a1e4",
+  "synopsis": "A special episode from the official DVD fandisc.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kuroko's-basketball-special-qhi4xi",
+    "mal": 17259,
+    "anilist": 17259,
+    "kitsu": 7620
+  },
+  "skip_key_id": 17259,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "kuroko no basket oshaberi shiyokka 黒子のハ スケ お喋りしよっか special finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Kuroko's Basketball Special",
+      "runtime": "9:00",
+      "runtime_seconds": 540,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a92f14aee3cae02178a8dcb-poster.jpg",
+      "synopsis": "A special episode from the official DVD fandisc.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "103154"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

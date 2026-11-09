@@ -1,0 +1,191 @@
+{
+  "id": "just-because",
+  "title": "Just Because!",
+  "native": "Just Because!",
+  "year": 2017,
+  "rating": 7,
+  "season": "Fall 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98820-EVHeNEUOWkh3.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98820-EVHeNEUOWkh3.jpg",
+  "accent": "#a19335",
+  "synopsis": "The original anime Just Because! focuses on subtly portraying the feelings of a group of high school students nearing graduation. Near the end of second semester at third year, when students have very little time in high school left, and are just waiting for graduation, the appearance of a new transfer student begins to change what remains of their high school lives just as they were about to graduate.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13530,
+    "anilist": 98820,
+    "mal": 35639
+  },
+  "skip_key_id": 35639,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 14:06:40",
+  "search_text": "just because just because tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "On Your Marks!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-05",
+      "markers": [],
+      "external_id": "230640"
+    },
+    {
+      "n": 2,
+      "title": "Question",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-12",
+      "markers": [],
+      "external_id": "230641"
+    },
+    {
+      "n": 3,
+      "title": "Andante",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-19",
+      "markers": [],
+      "external_id": "230642"
+    },
+    {
+      "n": 4,
+      "title": "Full Swing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-26",
+      "markers": [],
+      "external_id": "230643"
+    },
+    {
+      "n": 5,
+      "title": "Rolling Stones",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-02",
+      "markers": [],
+      "external_id": "230644"
+    },
+    {
+      "n": 6,
+      "title": "Restart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-09",
+      "markers": [],
+      "external_id": "230645"
+    },
+    {
+      "n": 7,
+      "title": "Snow Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-23",
+      "markers": [],
+      "external_id": "230646"
+    },
+    {
+      "n": 8,
+      "title": "High Dynamic Range",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-30",
+      "markers": [],
+      "external_id": "230647"
+    },
+    {
+      "n": 9,
+      "title": "Answer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-07",
+      "markers": [],
+      "external_id": "230648"
+    },
+    {
+      "n": 10,
+      "title": "Childhood's End",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-14",
+      "markers": [],
+      "external_id": "230649"
+    },
+    {
+      "n": 11,
+      "title": "Roundabout",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-21",
+      "markers": [],
+      "external_id": "230650"
+    },
+    {
+      "n": 12,
+      "title": "Get Set, Go!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-28",
+      "markers": [],
+      "external_id": "230651"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "over and over",
+      "artist": "Nagi Yanagi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "behind",
+      "artist": "Nagi Yanagi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

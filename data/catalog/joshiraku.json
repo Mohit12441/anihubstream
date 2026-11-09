@@ -1,0 +1,203 @@
+{
+  "id": "joshiraku",
+  "title": "Joshiraku",
+  "native": "じょしらく",
+  "year": 2012,
+  "rating": 7.3,
+  "season": "Summer 2012",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx12679-b7caRVFG2qkk.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12679-b7caRVFG2qkk.png",
+  "accent": "#ff7800",
+  "synopsis": "Marii, Kigurumi, Tetora, Gankyou, and Kukuru deserve a round of applause for keeping the art of Rakugo alive! What’s their secret? Witty, absurd banter of course! These five friends always have something to talk about, no matter how silly the topic.\n\n(Source: VRV)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Joshiraku OVA (2013)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 6789,
+    "anilist": 12679,
+    "mal": 12679
+  },
+  "skip_key_id": 12679,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-15 18:06:07",
+  "search_text": "joshiraku し ょしらく tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Normal Dialogue / Different Clothes / Shouting Instructions",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99109/original.jpg",
+      "synopsis": "As five young rakugo comedians, Marii, Kigurumi, Tetora, Gankyō and Kukuru, receive an invitation to a casual dress party, they ponder over what it exactly means to dress casually. Later, the discussion turns to whether everyone prefers dogs or cats.",
+      "airdate": "2012-07-05",
+      "markers": [],
+      "external_id": "99109"
+    },
+    {
+      "n": 2,
+      "title": "Backstage Riches / Three Towers and a Vow / Cold Girl",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99110/original.jpg",
+      "synopsis": "The girls talk about what they would do if they won the lottery, leading them to suspect one of them may be a winner. Later, they visit the Tokyo Tower where more strange conversations are to be had. Afterwards, a discussion about vaccination turns into a bout of imaginary pregnancy.",
+      "airdate": "2012-07-12",
+      "markers": [],
+      "external_id": "99110"
+    },
+    {
+      "n": 3,
+      "title": "Heartless Bath / Going to Asakusa / Sanada's Little Zoo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99111/original.jpg",
+      "synopsis": "Marii ends up having to prove that she's not a crossdressing boy. Later, the girls visit Asakusa where they try their hand at some fortunes. This leads the girls to discuss why Tetora has such great luck and always seems to avoid danger.",
+      "airdate": "2012-07-19",
+      "markers": [],
+      "external_id": "99111"
+    },
+    {
+      "n": 4,
+      "title": "The Young Girl With Glasses / A Good, Good Fort / Eyes of the Rabbit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99112/original.jpg",
+      "synopsis": "As Gankyō exhibits some violent behavior, the girls discuss the stereotypes that come when a girl wears glasses. Later, as Kukuru gets trainsick, the girls try to come up with various ailments for her. Afterwards, on the night of a full moon, the girls sit and discuss moon-related topics before being attacked by a large rabbit.",
+      "airdate": "2012-07-26",
+      "markers": [],
+      "external_id": "99112"
+    },
+    {
+      "n": 5,
+      "title": "Praise the Girl / Small Holey Town / Farewell to Glasses",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99113/original.jpg",
+      "synopsis": "The girls attempt to cheer Kukuru up by holding an out-of-season Christmas party. Later, the girls visit Harajuku, where Marii gets anxious over a crépe. Afterwards, the gang discuss how they all have different types of skin, making Gankyō feeling left out.",
+      "airdate": "2012-08-02",
+      "markers": [],
+      "external_id": "99113"
+    },
+    {
+      "n": 6,
+      "title": "Four Wows / Musashi Scenery / The Servant's Vengeance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99114/original.jpg",
+      "synopsis": "Having forced Gankyō out of the group during the previous episode, the rest talk about the benefits of having a group of four. Gankyō soon gets revenge by locking everyone in the dressing room. After eventually being let back into the group, Gankyo is reluctantly placed at the bottom of the heirachy but soon has aspirations of winning an election.",
+      "airdate": "2012-08-09",
+      "markers": [],
+      "external_id": "99114"
+    },
+    {
+      "n": 7,
+      "title": "Delinquents are Scary / Fish Story / Dressing Room Files",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99115/original.jpg",
+      "synopsis": "The sudden appearance of Hina dolls in the dressing room somehow leads to the girls deciding to act like delinquents so they will marry early. Later, the girls get up early to go to a fish market. Afterwards, the girls search for things that might be using up electricity, becoming oblivious to the non-electric horrors hidden throughout the room.",
+      "airdate": "2012-08-16",
+      "markers": [],
+      "external_id": "99115"
+    },
+    {
+      "n": 8,
+      "title": "Bag of Gold / Totter / Is It Over Yet?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99116/original.jpg",
+      "synopsis": "Marii laments how she's always the last to go in various things, particularly when it comes to picking out envelopes of New Year's money. Later, the girls head to the Sugamo district and check out the various spots. Afterwards, the gang needlessly worry that Kukuru might contract the May Blues, randomly choosing to take on \"Blues\" from other months.",
+      "airdate": "2012-08-23",
+      "markers": [],
+      "external_id": "99116"
+    },
+    {
+      "n": 9,
+      "title": "Butt-tofu / The Bear of Ueno / Sleep talking",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99117/original.jpg",
+      "synopsis": "As school holidays roll in, the girls try and come up with ways to make rakugo more appealing to younger audiences. Later, the gang visit the zoo and discuss the curiosities of all the animals. Afterwards, the gang gets taste for lucky events which keep occurring whenever Marii falls asleep, constantly trying to make her sleep to reap the benefits.",
+      "airdate": "2012-08-30",
+      "markers": [],
+      "external_id": "99117"
+    },
+    {
+      "n": 10,
+      "title": "Pumpkin Band / Battle of Shinjuku / Cavity Shore",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99118/original.jpg",
+      "synopsis": "On Halloween, the girls try to tailor the holiday to be more Japanese-esque. Later, the girls visit the Kabukichou entertainment district and observe how it's changed over the years. Afterwards, Marii is plagued with tooth cavities.",
+      "airdate": "2012-09-06",
+      "markers": [],
+      "external_id": "99118"
+    },
+    {
+      "n": 11,
+      "title": "Family Play / Sakai Five / Tree Tragedy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99119/original.jpg",
+      "synopsis": "As the girls have a fake summer beach trip in the dressing room, they discuss the different designs of school swimsuits. Then, the girls go sightseeing in Musashi-Sakai and pay their respects to the company responsible for animating them. Lastly, the girls have a Christmas party, but the tree that Tetora ordered online completely fills the dressing room, causing them to try and reunite (but end up fighting each other) in the Amazon-like jungle.",
+      "airdate": "2012-09-13",
+      "markers": [],
+      "external_id": "99119"
+    },
+    {
+      "n": 12,
+      "title": "The Dreamer Strikes Back / Gotta / Blacks",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99120/original.jpg",
+      "synopsis": "When Tetora asks everyone about their first dream of the new year, Kukuru grows upset as she has yet to have one. So, the girls attempt to act out a \"first dream\" to cheer her up. Later, the gang visits Roppongi, where they look at structural artwork and Marii travels through time to see the city during its economic bubble. Finally, the girls try to cool off during the summer by mentioning scary things to give themselves chills and eventually by painting everything blue.",
+      "airdate": "2012-09-20",
+      "markers": [],
+      "external_id": "99120"
+    },
+    {
+      "n": 13,
+      "title": "Character Guts / Mighty Akiba / Sprinkle Lectures",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99121/original.jpg",
+      "synopsis": "As the girls come to terms that the show has reached its last episode, a new character appears: an exasperating girl named Uzannu Uzattei. While discussing whether or not \"once\" is truly enough, Uzannu's personality irritates everyone and threatens the character balance of the show. After the girls drive her away, they visit Akihabara. Later, the girls debate about how some things should be left as they are. Finally, the show ends with one last rakugo performance by Marii.",
+      "airdate": "2012-09-28",
+      "markers": [],
+      "external_id": "99121"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Oato ga Yoroshikutte... Yo! (お後がよろしくって…よ!; The Next Person is Ready... So!)",
+      "artist": "Ayane Sakura, Kotori Koiwai, Nozomi Yamamoto, Saori Goto, Yoshino Nanjou",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nippon Egao Hyakkei (ニッポン笑顔百景; 100 Famous Views on Japan's Smiles)",
+      "artist": "Momoiro Clover Z",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

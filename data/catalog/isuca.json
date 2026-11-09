@@ -1,0 +1,157 @@
+{
+  "id": "isuca",
+  "title": "Isuca",
+  "native": "イスカ",
+  "year": 2015,
+  "rating": 5.5,
+  "season": "Winter 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20746-a6DKOfo2K49Z.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20746-a6DKOfo2K49Z.jpg",
+  "accent": "#50aee4",
+  "synopsis": "Shinichirou decides to look for a job in order to pay his rent, and his teacher suggests that he work for someone at their house,doing housekeeping. However, the person who hired him was Sakuya, a girl who is the 37th head of the Shimazu family, and her job is to exorcise and eliminate unwanted creatures. Shinichirou accidentally releases one of the creatures that Sakuya captures and they cooperate to catch it. A story of comedic creature hunting begins!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "ISUCA: Gokuraku (2015)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8645,
+    "anilist": 20746,
+    "mal": 25429
+  },
+  "skip_key_id": 25429,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": "2026-10-22 12:26:28",
+  "search_text": "isuca イスカ tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Chance Meeting",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Strange things start happening to Asano Shinichirou, a second year student. A woman turns into a centipede, and he sees a girl is attacked by a monster. During all the chaos, he runs into Shimadzu Sakuya, who uses a bow as a weapon. She is the 37th head of the Shimadzu family, tasked with ridding the world of monsters. Shinichirou and Sakuya end up fighting one of the monsters together, when...",
+      "airdate": "2015-01-24",
+      "markers": [],
+      "external_id": "172879"
+    },
+    {
+      "n": 2,
+      "title": "True Name",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Shinichirou becomes friends with Tamako, the cat-monster, and ends up helping Sakuya clean, as she lives alone. Sakuya is bossy and doesn't give Shinichirou a break. Another monsters appears at the school, which takes girls underground and eats their flesh.",
+      "airdate": "2015-01-31",
+      "markers": [],
+      "external_id": "172880"
+    },
+    {
+      "n": 3,
+      "title": "Confrontation",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sakuya's younger sister, Suseri, shows up. She also works to rid the world of monsters, and is a rival to the head of the Shimadzu family. She wants to bring Shinichirou over to her side, so she attempts to seduce him, and eventually kidnap him, but they run into a bit of trouble with monsters on the way...",
+      "airdate": "2015-02-07",
+      "markers": [],
+      "external_id": "172881"
+    },
+    {
+      "n": 4,
+      "title": "Shadow Play",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "There's been a ghost samurai going around killing a bunch of people near the school, but why is all of this happening around the school? Everyone thinks it has to do with Western magic, but what does that have to do with Sakuya?",
+      "airdate": "2015-02-14",
+      "markers": [],
+      "external_id": "172882"
+    },
+    {
+      "n": 5,
+      "title": "Eye of Truth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Shinichirou has the Eye of Truth and it allows him to figure out people's true names, but Sakuya doesn't want anyone to know her true name, so she's keeping Shinichirou away from her.",
+      "airdate": "2015-02-21",
+      "markers": [],
+      "external_id": "172883"
+    },
+    {
+      "n": 6,
+      "title": "Promise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Shinichirou tries to cheer Sakuya up after he finds out that she might lose her right to become next head of the family. The secret behind Sakuya's birth, and why she's so hung up on taking over the family becomes evident. But then a monster shows up which will test her allegiances to the past, to the present, and to herself.",
+      "airdate": "2015-02-28",
+      "markers": [],
+      "external_id": "172884"
+    },
+    {
+      "n": 7,
+      "title": "Light and Dark",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "After surviving a number of battles together, Sakuya and Shinichirou have grown very close. Then, Shinichirou gets the a katana, and wants to train to help Sakuya. Just when everything seems to be going well, a smoke monsters appears in the subways and Sakuya and the gang head to get rid of it.",
+      "airdate": "2015-03-07",
+      "markers": [],
+      "external_id": "172885"
+    },
+    {
+      "n": 8,
+      "title": "Trials",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sakuya is in a coma now that she's lost her spiritual energy, and Shinichirou would like nothing more to save her. Suseri decides to undergo the exorcism ritual after seeing Sakuya in her state. She must subdue a lightning beast on her own in order to make it into a shikigami, and during the fighting we learn about Suseri's hidden past and her feelings towards Sakuya.",
+      "airdate": "2015-03-14",
+      "markers": [],
+      "external_id": "172886"
+    },
+    {
+      "n": 9,
+      "title": "Attack",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "I will defeat you with my own hands, Sakuya Shimazu!",
+      "airdate": "2015-03-21",
+      "markers": [],
+      "external_id": "172887"
+    },
+    {
+      "n": 10,
+      "title": "Resolution",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The power I get from Shinichirou is so rich and energizing.",
+      "airdate": "2015-03-28",
+      "markers": [],
+      "external_id": "172888"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

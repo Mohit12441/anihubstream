@@ -1,0 +1,192 @@
+{
+  "id": "kokkoku",
+  "title": "KOKKOKU",
+  "native": "刻刻",
+  "year": 2018,
+  "rating": 6.6,
+  "season": "Winter 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx100332-5saXfqfB8nvF.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100332-5saXfqfB8nvF.jpg",
+  "accent": "#e45d5d",
+  "synopsis": "Juri Yukawa lives with her NEET father and brother, her retired grandfather, her sister and her young nephew. One day, her nephew and brother are kidnapped for ransom. Having only 30 minutes to meet the demands of the kidnappers, Juri, who realizes there is not enough time to prepare the money, decides to head for their rescue by herself with knife in hand when her grandfather uses a mysterious stone passed on in the Yukawa family to stop time. In a world where everyone and everything are inert, Juri and her father and grandfather run to rescue the two. But at the kidnappers' hideout, they soon realize they are not the only ones who can move about in this still world...",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13958,
+    "anilist": 100332,
+    "mal": 36548
+  },
+  "skip_key_id": 36548,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 09:27:14",
+  "search_text": "kokkoku 刻刻 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238689/original.jpg",
+      "synopsis": "Juri returns home from yet another failed job interview and vents her stress on her good for nothing father and shut in brother. When it's time to go pick up her nephew Makoto, she forces his uncle to go. However, it is at this moment that the ordinary life of the Yukawa family will change dramatically, as Juri receives a phone call demanding ransom!",
+      "airdate": "2018-01-08",
+      "markers": [],
+      "external_id": "238689"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238690/original.jpg",
+      "synopsis": "Juri and her grandfather are unable to rescue Makoto and Tsubasa because of the appearance of a group of mysterious men.",
+      "airdate": "2018-01-15",
+      "markers": [],
+      "external_id": "238690"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238691/original.jpg",
+      "synopsis": "Juri heads to her house in search of the stone, but is attacked by a member of the Genuine Love Society.",
+      "airdate": "2018-01-22",
+      "markers": [],
+      "external_id": "238691"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238692/original.jpg",
+      "synopsis": "Juri and her grandfather are pursued by more men from the Genuine Love Society, but when running away is no longer an option she decides to fight back.",
+      "airdate": "2018-01-29",
+      "markers": [],
+      "external_id": "238692"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238693/original.jpg",
+      "synopsis": "Majima tells the story of how she first entered the world of Stasis, when Juri and her grandfather suddenly return home.",
+      "airdate": "2018-02-05",
+      "markers": [],
+      "external_id": "238693"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238694/original.jpg",
+      "synopsis": "Takafumi, angered by his ignorance of the Stasis, lashes out at his father and daughter who came to rescue him. Majima moves to act out her plan independently from the Genuine Love Society.",
+      "airdate": "2018-02-12",
+      "markers": [],
+      "external_id": "238694"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238695/original.jpg",
+      "synopsis": "The Heralds disperse, and in the middle of the scene stands an emaciated boy. Meanwhile, Sagawa reveals the results of his research on the Great Circle Scriptures.",
+      "airdate": "2018-02-19",
+      "markers": [],
+      "external_id": "238695"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238696/original.jpg",
+      "synopsis": "Sagawa puts his theories to the test by using his remaining henchmen. Juri plans to save her brother from his grasp.",
+      "airdate": "2018-02-26",
+      "markers": [],
+      "external_id": "238696"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238697/original.jpg",
+      "synopsis": "Discussion on the nature of the Stasis and Sagawa's goal force Juri and her grandfather into a race against time itself.",
+      "airdate": "2018-03-05",
+      "markers": [],
+      "external_id": "238697"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238698/original.jpg",
+      "synopsis": "The Yukawa family confronts Sagawa directly by using the various Stasis powers they possess.",
+      "airdate": "2018-03-12",
+      "markers": [],
+      "external_id": "238698"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238699/original.jpg",
+      "synopsis": "Sagawa is cornered and explains how he came to be the leader of the Genuine Love Society.",
+      "airdate": "2018-03-18",
+      "markers": [],
+      "external_id": "238699"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238700/original.jpg",
+      "synopsis": "Juri sends everyone but her grandfather back to the normal world, as he is opposed to leaving her alone in Stasis.",
+      "airdate": "2018-03-25",
+      "markers": [],
+      "external_id": "238700"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Flashback",
+      "artist": "MIYAVI vs KenKen",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Asayake to Nettaigyo (朝焼けと熱帯魚)",
+      "artist": "Boku no Lyric no Boyomi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

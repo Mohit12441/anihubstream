@@ -1,0 +1,137 @@
+{
+  "id": "memories",
+  "title": "Memories",
+  "native": "MEMORIES",
+  "year": 1995,
+  "rating": 7.6,
+  "season": "Fall 1995",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1462-wHe4bW5b6XRE.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1462-wHe4bW5b6XRE.png",
+  "accent": "#2878a1",
+  "synopsis": "Memories is a compilation of three standalone short films encompassing different genres.\n\nMagnetic Rose — a science fiction tale that tells a chilling story of love, loss, and the unwillingness to forget.\n\nStink Bomb — a tongue-in-cheek story of a chemical researcher who is just looking for a way to get rid of his cold... so why is everybody around him dying?\n\nCannon Fodder — an introspective tale about modern wars and simply following orders.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 1311,
+    "anilist": 1462,
+    "mal": 1462
+  },
+  "skip_key_id": 1462,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": "2026-10-21 10:56:47",
+  "search_text": "memories memories movie finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "drama",
+    "horror",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Magnetic Rose",
+      "runtime": "37:00",
+      "runtime_seconds": 2220,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "1995-12-23",
+      "markers": [],
+      "external_id": "23558"
+    },
+    {
+      "n": 2,
+      "title": "Stink Bomb",
+      "runtime": "37:00",
+      "runtime_seconds": 2220,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "1995-12-23",
+      "markers": [],
+      "external_id": "23559"
+    },
+    {
+      "n": 3,
+      "title": "Cannon Fodder",
+      "runtime": "37:00",
+      "runtime_seconds": 2220,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "1995-12-23",
+      "markers": [],
+      "external_id": "23560"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Film Makers",
+      "artist": "Ayane",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Romancing Story",
+      "artist": "Ayane",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dry Words Dry Maker",
+      "artist": "Masumi Asano",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shining star",
+      "artist": "Ayumi Murata",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Nocturne",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Usual Place",
+      "artist": "Tiaraway",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yūki no Tsubasa (勇気の翼; Wings of Courage)",
+      "artist": "Maria Yamamoto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yasashii Seiza (やさしい星座; Friendly Constellation)",
+      "artist": "KAORI",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

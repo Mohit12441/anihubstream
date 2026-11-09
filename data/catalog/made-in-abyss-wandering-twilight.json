@@ -1,0 +1,116 @@
+{
+  "id": "made-in-abyss-wandering-twilight",
+  "title": "Made in Abyss: Wandering Twilight",
+  "native": "メイドインアビス 放浪する黄昏",
+  "year": 2019,
+  "rating": 8.3,
+  "season": "Winter 2019",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101344-NbEG3Ryria9S.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101344-NbEG3Ryria9S.jpg",
+  "accent": "#e4d6ae",
+  "synopsis": "A compilation film recapping the second half of the anime series.\n\nThe mystery surrounding her mother’s death deepens as Riko learns more about the truth of her origins. More determined than ever to travel to the bottom of the Abyss, Riko and Reg leave Ozen’s Seeker Camp and delve into the treacherous Third Layer — and beyond.\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "made-in-abyss:-wandering-twilight-5e9cq1",
+    "mal": 37515,
+    "anilist": 101344,
+    "kitsu": 41081
+  },
+  "skip_key_id": 37515,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "made in abyss wandering twilight メイト インアヒ ス 放浪する黄昏 movie finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "fantasy",
+    "horror",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Made in Abyss: Wandering Twilight (Movie)",
+      "runtime": "120:00",
+      "runtime_seconds": 7200,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101344-NnrAu0hmD2T5.jpg",
+      "synopsis": "A compilation film recapping the second half of the anime series.\n\n\n\nThe mystery surrounding her mother’s death deepens as Riko learns more about the truth of her origins. More determined than ever to travel to the bottom of the Abyss, Riko and Reg leave Ozen’s Seeker Camp and delve into the treacherous Third Layer — and beyond.\n\n\n\n(Source: Sentai Filmworks)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "239775"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Katachi (かたち)",
+      "artist": "Riko Azuna",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Endless Embrace",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Forever Lost",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Forever Lost",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Underground River (opening version ft. Raj Ramayya)",
+      "artist": "Kevin Penkin",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Deep in Abyss",
+      "artist": "Miyu Tomita & Mariya Ise",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tabi no Hidarite, Saihate no Migite",
+      "artist": "Miyu Tomita, Mariya Ise, & Shiori Izawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "reBirth",
+      "artist": "Takeshi Saitou & Kevin Penkin",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

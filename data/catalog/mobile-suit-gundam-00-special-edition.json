@@ -1,0 +1,100 @@
+{
+  "id": "mobile-suit-gundam-00-special-edition",
+  "title": "Mobile Suit Gundam 00 Special Edition",
+  "native": "機動戦士ガンダム00 スペシャルエディション",
+  "year": 2009,
+  "rating": 7.2,
+  "season": "Fall 2009",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx7270-NqKuoqcVCzHo.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx7270-NqKuoqcVCzHo.jpg",
+  "accent": "#e4ae50",
+  "synopsis": "Condensed version of both the first and second seasons of Gundam 00 featuring some new animated sequences and some partially re-recorded dialogue.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "mobile-suit-gundam-00-special-edition-xlpqzr",
+    "mal": 7270,
+    "anilist": 7270,
+    "kitsu": 4924
+  },
+  "skip_key_id": 7270,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "mobile suit gundam 00 special edition 機動戦士カ ンタ ム00 スヘ シャルエテ ィション ova finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "90:00",
+      "runtime_seconds": 5400,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "77713"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "90:00",
+      "runtime_seconds": 5400,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "77714"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "90:00",
+      "runtime_seconds": 5400,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "77715"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I (ai)",
+      "artist": "Mille Face",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Core",
+      "artist": "Mille Face",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Refrain",
+      "artist": "Mille Face",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

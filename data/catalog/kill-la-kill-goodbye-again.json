@@ -1,0 +1,109 @@
+{
+  "id": "kill-la-kill-goodbye-again",
+  "title": "Kill la Kill: GOODBYE AGAIN",
+  "native": "キルラキル 特別編",
+  "year": 2014,
+  "rating": 7.5,
+  "season": "Summer 2014",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20572-5FwydswMqrzP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20572-5FwydswMqrzP.jpg",
+  "accent": "#d61a1a",
+  "synopsis": "Unaired episode included with the 9th Blu-ray and DVD volumes.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kill-la-kill:-goodbye-again-ercfxc",
+    "mal": 21659,
+    "anilist": 20572,
+    "kitsu": 8130
+  },
+  "skip_key_id": 21659,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "kill la kill goodbye again キルラキル 特別編 ova finished",
+  "genres": [
+    "action",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Kill la Kill: GOODBYE AGAIN",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20572-5FwydswMqrzP.jpg",
+      "synopsis": "Unaired episode included with the 9th Blu-ray and DVD volumes.",
+      "airdate": "2014-09-03",
+      "markers": [],
+      "external_id": "113135"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "360342"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "ambiguous",
+      "artist": "GARNiDELiA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sirius",
+      "artist": "Eir Aoi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sirius",
+      "artist": "Eir Aoi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gomen ne, Ii ko ja Irarenai.",
+      "artist": "Miku Sawai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "ambiguous",
+      "artist": "GARNiDELiA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Shinsekai Kōkyōgaku (新世界交響楽; New World Symphony)",
+      "artist": "Sayonara Ponytail",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

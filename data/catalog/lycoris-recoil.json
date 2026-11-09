@@ -1,0 +1,202 @@
+{
+  "id": "lycoris-recoil",
+  "title": "Lycoris Recoil",
+  "native": "リコリス・リコイル",
+  "year": 2022,
+  "rating": 8.1,
+  "season": "Summer 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx143270-rfkyiYXhek5w.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx143270-rfkyiYXhek5w.jpg",
+  "accent": "#e45078",
+  "synopsis": "“LycoReco” is a café with a traditional Japanese twist located in downtown Tokyo. But the delicious coffee and sugary sweets are not the only orders this café takes! From delivering packages short distances, to pick-ups and drop-offs on the lonely streets at night, to zombies and giant monster extermination…?! Whatever your problem, we're here to help! We will solve any kind of \"trouble\" you may have!\n\nWaiting for you are the ever-smiling poster-girl and the cool, serious newcomer. A petite girl who never wants to work and a young woman approaching thirty who wants to get married. And the manager is a nice guy who’s obsessed with Japan!\n\nWhatever your order is, leave it all up to us♪\n\n(Source: Official Site)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "lycoris-recoil-3vjf93",
+    "mal": 50709,
+    "anilist": 143270,
+    "kitsu": 45705
+  },
+  "skip_key_id": 50709,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "lycoris recoil リコリス リコイル tv finished",
+  "genres": [
+    "action",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Take it easy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b9f3e08145a45aaa7ebe3f303a7413ee1744804109_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331224"
+    },
+    {
+      "n": 2,
+      "title": "Miles away",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/be1736ce2d66de9b9a45a87c9a53d3101745385971_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331225"
+    },
+    {
+      "n": 3,
+      "title": "Scintillation of genius",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a5cfd5b9436af266707b5dcd8f3832621746005062_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331227"
+    },
+    {
+      "n": 4,
+      "title": "Watch out!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6058f343b95f7e91beae6874701072ff1746616596_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331228"
+    },
+    {
+      "n": 5,
+      "title": "Bittersweet First Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/8997b92892c59776031d7ce900892bbc1747222115_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331229"
+    },
+    {
+      "n": 6,
+      "title": "Brief respite",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/332281bd6e8c18bab1ef705b698683de1747805156_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331230"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331231"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331232"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331233"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331234"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331235"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331236"
+    },
+    {
+      "n": 13,
+      "title": "Episode 13",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331237"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "ALIVE",
+      "artist": "ClariS",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hana no Tou",
+      "artist": "Sayuri",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

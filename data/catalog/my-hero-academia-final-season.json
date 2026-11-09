@@ -1,0 +1,320 @@
+{
+  "id": "my-hero-academia-final-season",
+  "title": "My Hero Academia FINAL SEASON",
+  "native": "僕のヒーローアカデミア FINAL SEASON",
+  "year": 2025,
+  "rating": 8.7,
+  "season": "Fall 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx182896-mvxTVHGdDB4q.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx182896-mvxTVHGdDB4q.jpg",
+  "accent": "#c9d6f1",
+  "synopsis": "Deku and the heroes are plunged into a final battle against villains across Japan. Deku, by fully unleashing One For All Quirks, faces off against Shigaraki. A young and refreshed All For One faces Armored All Might, Quirkless in his powered armor suit. Will Deku be able to bring the story of how they all became the greatest heroes to its finale? Or will everything be destroyed?!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "My Hero Academia Season 7 (2024)",
+    "My Hero Academia More (2026)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 49279,
+    "anilist": 182896,
+    "mal": 60098,
+    "hianime": "my-hero-academia-final-season-b0cgwd"
+  },
+  "skip_key_id": 60098,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": "2026-10-14 10:10:21",
+  "search_text": "my hero academia final season 僕のヒーローアカテ ミア final season tv finished",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Toshinori Yagi: Rising/Origin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373928/thumbnail/medium-99bac5f6ce98d2e6643b90724a610c78.jpeg",
+      "synopsis": "The fierce battle continues between Armored All Might and All For One. Can All Might possibly win? (Source: Crunchyroll)",
+      "airdate": "2025-10-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 85,
+          "end": 175
+        }
+      ],
+      "external_id": "373928"
+    },
+    {
+      "n": 2,
+      "title": "The End of an Era, and the Beginning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373929/thumbnail/medium-127cb2585d44073fe007da3705dbe8c5.jpeg",
+      "synopsis": "All Might receives help from an unexpected source when Stain joins him in the battle against All For One. (Source: Crunchyroll)",
+      "airdate": "2025-10-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 78,
+          "end": 163
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1312,
+          "end": 1400
+        }
+      ],
+      "external_id": "373929"
+    },
+    {
+      "n": 3,
+      "title": "The Final Boss!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373930/thumbnail/medium-009e824f1f09501a98a81c4ca9857527.jpeg",
+      "synopsis": "Bakugo is back on his feet! Can he rescue All Might from All For One, and defeat the villain in battle? (Source: Crunchyroll)",
+      "airdate": "2025-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 68,
+          "end": 154
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1400
+        }
+      ],
+      "external_id": "373930"
+    },
+    {
+      "n": 4,
+      "title": "Quirk: Explosion!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373931/thumbnail/medium-284ae18fc34d7b2e7a517d0a9bbf2361.jpeg",
+      "synopsis": "The fierce battle with Bakugo reminds All For One of his and his brother Yoichi's origins. (Source: Crunchyroll)",
+      "airdate": "2025-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 146
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1400
+        }
+      ],
+      "external_id": "373931"
+    },
+    {
+      "n": 5,
+      "title": "History's Greatest Villain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373932/thumbnail/medium-c58cee2b8bf30aa3c9946e2d989bff14.jpeg",
+      "synopsis": "The balance of power shifts between Izuku and Shigaraki when the latter steals a Quirk from One For All. (Source: Crunchyroll)",
+      "airdate": "2025-11-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 83,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1402
+        }
+      ],
+      "external_id": "373932"
+    },
+    {
+      "n": 6,
+      "title": "Wrench It Open, Izuku Midoriya!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373933/thumbnail/medium-8501a17afe6a05a15bac7457a96c1cce.jpeg",
+      "synopsis": "Izuku attempts to forcefully transfer One For All to Shigaraki, as this might prove to be the key to victory. (Source: Crunchyroll)",
+      "airdate": "2025-11-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1400
+        }
+      ],
+      "external_id": "373933"
+    },
+    {
+      "n": 7,
+      "title": "From Aizawa",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373934/thumbnail/medium-eeae3fcc3749af81d670b2daca3f8601.jpeg",
+      "synopsis": "Izuku dives deep into Shigaraki's mind, in search of the villain's origin: the tragic Tenko Shimura. (Source: Crunchyroll)",
+      "airdate": "2025-11-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 106,
+          "end": 195
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1399
+        }
+      ],
+      "external_id": "373934"
+    },
+    {
+      "n": 8,
+      "title": "Izuku Midoriya: Rising",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373935/thumbnail/medium-8fb09d6e488e4c74a03596cc3cde2f27.jpeg",
+      "synopsis": "After All For One takes over Shigaraki's body, the heroes must fight as one big team to defeat him. (Source: Crunchyroll)",
+      "airdate": "2025-11-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 52,
+          "end": 139
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1400
+        }
+      ],
+      "external_id": "373935"
+    },
+    {
+      "n": 9,
+      "title": "Epilogue/The Hellish Todoroki Family: Final",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373936/thumbnail/medium-b7139b4beaf832b96d00570db492058f.jpeg",
+      "synopsis": "With the long conflict over at last, the time has come to rebuild. Both on a societal and personal level. (Source: Crunchyroll)",
+      "airdate": "2025-11-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 34,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1400
+        }
+      ],
+      "external_id": "373936"
+    },
+    {
+      "n": 10,
+      "title": "The Girl Who Loves Smiles",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373937/thumbnail/medium-af998d75ab7a139e73339b09fcc05929.jpeg",
+      "synopsis": "The struggle against the villains may be over, but Izuku and Ochaco both still have internal demons to face. (Source: Crunchyroll)",
+      "airdate": "2025-12-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 53,
+          "end": 143
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1298,
+          "end": 1379
+        }
+      ],
+      "external_id": "373937"
+    },
+    {
+      "n": 11,
+      "title": "My Hero Academia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373938/thumbnail/medium-c61f10765d74a024d5af086c28228bde.jpeg",
+      "synopsis": "How has the world changed in the eight years since Izuku and the heroes defeated All For One and Shigaraki? (Source: Crunchyroll)",
+      "airdate": "2025-12-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 195,
+          "end": 283
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1252,
+          "end": 1400
+        }
+      ],
+      "external_id": "373938"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE REVO",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I",
+      "artist": "BUMP OF CHICKEN",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

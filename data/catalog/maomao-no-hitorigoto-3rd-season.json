@@ -1,0 +1,86 @@
+{
+  "id": "maomao-no-hitorigoto-3rd-season",
+  "title": "Maomao no Hitorigoto 3rd Season",
+  "native": "猫猫のひとりごと 第3期",
+  "year": 2026,
+  "rating": 0,
+  "season": "Fall 2026",
+  "kind": "ONA",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx218532-I1GCprJrJ5sm.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx218532-I1GCprJrJ5sm.png",
+  "accent": "#e4c9ae",
+  "synopsis": "Chibi shorts to Kusuriya no Hitorigoto 3rd Season released on the TOHO animation YouTube channel.\n\nNote: Episode count begins at 49.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": 1,
+  "sched_day_label": "MON",
+  "sched_date": "Nov 9",
+  "sched_time": "03:00",
+  "sched_season": "Fall 2026",
+  "sched_episode": 6,
+  "sched_sub_at": null,
+  "sched_dub_at": 1793980800000,
+  "source_ids": {
+    "anilist": 218532,
+    "mal": 65119,
+    "kitsu": 50021
+  },
+  "skip_key_id": 65119,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-18 15:08:44",
+  "search_text": "maomao no hitorigoto 3rd season 猫猫のひとりこ と 第3期 ona ongoing",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx218532-I1GCprJrJ5sm.png",
+      "synopsis": "",
+      "airdate": "2026-04-11",
+      "markers": [],
+      "external_id": "anikoto:8713:1"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx218532-I1GCprJrJ5sm.png",
+      "synopsis": "",
+      "airdate": "2026-04-18",
+      "markers": [],
+      "external_id": "anikoto:8713:2"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

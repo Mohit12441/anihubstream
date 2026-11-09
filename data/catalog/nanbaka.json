@@ -1,0 +1,375 @@
+{
+  "id": "nanbaka",
+  "title": "NANBAKA",
+  "native": "ナンバカ",
+  "year": 2016,
+  "rating": 7.1,
+  "season": "Fall 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21051-V4IlRBFhlaOs.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21051-V4IlRBFhlaOs.jpg",
+  "accent": "#35d6ff",
+  "synopsis": "Four men are assigned to the prison: Juugo, a man who attempted to break out of prison and ended up extending his jail time; Uno, a man who likes to gamble with women; Rokku, a man who likes to get into fights; and Nico, a man who likes anime.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "NANBAKA - Part Two (2017)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 10467,
+    "anilist": 21051,
+    "mal": 30016
+  },
+  "skip_key_id": 30016,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 14:06:40",
+  "search_text": "nanbaka ナンハ カ tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Idiots with Numbers!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189387/original.jpg",
+      "synopsis": "This is “Nanba Prison,” the large impregnable prison somewhere in the territorial waters of Japan. On this night, 4 inmates recklessly attempt to escape from the world’s best prison guards and security. Jyugo, who wears mysterious shackles. Uno, a self-proclaimed ladies’ man. Niko, an otaku who’s prone to illness. Rock, a foodie gang member. Can the inmates of Building 13, Cell 13 pass security and reach outside of prison in one piece?",
+      "airdate": "2016-10-05",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1313,
+          "end": 1380
+        }
+      ],
+      "external_id": "189387"
+    },
+    {
+      "n": 2,
+      "title": "The Inmates Are Stupid! The Guards Are Kind of Stupid, Too!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189388/original.jpg",
+      "synopsis": "The inmates in Cell 13; Jyugo, Uno, Niko, and Rock are spending their days escaping, creating mischief, gossiping, and sometimes, working. These troublemakers are giving a headache to supervisor of Bldg. 13, Hajime Sugoroku. Warden Hyakushiki has ordered Hajime to submit files regarding the 4 inmates. Hajime is then ordered to give a report about the 4 who are known as repeat offenders of jail-breaking. Afraid of losing his job due to the cover-up, Hajime does his best to create the new files...",
+      "airdate": "2016-10-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 166,
+          "end": 256
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1313,
+          "end": 1380
+        }
+      ],
+      "external_id": "189388"
+    },
+    {
+      "n": 3,
+      "title": "Another Idiot Has Come!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189389/original.jpg",
+      "synopsis": "Jyugo and the gang are killing time teasing the new guard, Seitarou. One day, a new inmate is sent to Cell 13. Inmate Number 99, Tsukumo. He looks and acts like a ninja! Uno, Niko, and Rock are excited to see the real thing. But as a Japanese, Jyugo does not believe him. To convince Jyugo that he’s a true ninja, Tsukumo challenges Jyugo to see who can escape from prison.",
+      "airdate": "2016-10-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 85,
+          "end": 175
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1380
+        }
+      ],
+      "external_id": "189389"
+    },
+    {
+      "n": 4,
+      "title": "Happy New Year! The New Year's Tournament Is Where We Get Serious!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189390/original.jpg",
+      "synopsis": "Nanba's New Year Joint Cooperation Tournament, aka New Year’s Tournament, begins by gathering the entire inmates. Jyugo and the others are enthused once they hear the winner gets to choose whatever he wants. However, all the matches are odd events relating to New Year’s. Can Building 13 win against the other inmates led by peculiar guards?",
+      "airdate": "2016-10-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 53,
+          "end": 143
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1313,
+          "end": 1380
+        }
+      ],
+      "external_id": "189390"
+    },
+    {
+      "n": 5,
+      "title": "A Fraud and a Hero",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189391/original.jpg",
+      "synopsis": "Jyugo and the gang are advancing through the New Year’s Tournament without a hitch. In the Hyakunin Isshu event, Uno wins against the Building 3 inmates, Trois and Honey. The 4th event is a physical match revolved around a spinning top, but Niko unintentionally enters the match. The opponent is Upa, a kung-fu expert from Building 5. Does Niko, the otaku, have any chance of winning?!",
+      "airdate": "2016-11-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1313,
+          "end": 1380
+        }
+      ],
+      "external_id": "189391"
+    },
+    {
+      "n": 6,
+      "title": "The Booster Episode",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189392/original.jpg",
+      "synopsis": "Cell 13 has advanced their way to the final event of the New Year’s Tournament. Jyugo and Hajime are battling against the Building 4 supervisor, Kenshirou Yozakura, and an inmate named Musashi. Jyugo is surprised to see Musashi again. Musashi, in search for the “man with the scar on his neck,” attacks Jyugo mercilessly. Soon as Jyugo hears about the man with the scar on his neck, something odd starts happening to his body.",
+      "airdate": "2016-11-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1312,
+          "end": 1380
+        }
+      ],
+      "external_id": "189392"
+    },
+    {
+      "n": 7,
+      "title": "It's a Surprisingly Sad Story",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189393/original.jpg",
+      "synopsis": "Tsukumo heads to the visiting room during the break from the New Year’s Tournament. His manager, Hattori, has come to visit. People think the famous action star is missing and has no idea he’s in prison. Hattori persuades the talented Tsukumo to come back into stardom. However, already uninterested in being a star, Tsukumo talks about his upbringing.",
+      "airdate": "2016-11-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 62,
+          "end": 156
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1313,
+          "end": 1380
+        }
+      ],
+      "external_id": "189393"
+    },
+    {
+      "n": 8,
+      "title": "A Monster and a Gorilla",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189394/original.jpg",
+      "synopsis": "The shackles have been triggered and Jyugo’s hands transformed into blades. He attacks Musashi and splits the arena in half. The arena becomes chaotic and Momoko orders Hajime, Kenshirou, Samon, and Kiji to apprehend Musashi and Jyugo. Musashi retaliates against the guards while Hajime stands in Jyugo’s way.",
+      "airdate": "2016-11-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 96
+        }
+      ],
+      "external_id": "189394"
+    },
+    {
+      "n": 9,
+      "title": "You're Empty!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189395/original.jpg",
+      "synopsis": "After causing a catastrophe in the New Year’s Tournament, Jyugo and Musashi are sent to the underground cell. To solve the mysteries of their powers, Kenshirou suggests allowing the two to speak to one another. Unable to move freely, Musashi gives Jyugo information on the man with the scar.Listening to their exchange, Hajime tells Jyugo he’s empty. Hajime’s words confuses Jyugo.",
+      "airdate": "2016-11-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 20,
+          "end": 107
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1314,
+          "end": 1380
+        }
+      ],
+      "external_id": "189395"
+    },
+    {
+      "n": 10,
+      "title": "A Melancholy Day for the Dog, Monkey, and Pheasant",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189396/original.jpg",
+      "synopsis": "Hajime has been given a three-day suspension due to beating Jyugo at the New Year’s Tournament. Momoko orders Kenshirou, Kiji, and Samon to take turns covering for Hajime. But Uno, Nico, and Rock do whatever they want as usual. The three supervisors constantly struggle to maintain order with the three troublemakers. Finally, after three days, Jyugo is back...",
+      "airdate": "2016-12-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 20,
+          "end": 107
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1313,
+          "end": 1380
+        }
+      ],
+      "external_id": "189396"
+    },
+    {
+      "n": 11,
+      "title": "We Got Our Rewards",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189397/original.jpg",
+      "synopsis": "Building 13 Cell 13 has won the New Year’s Tournament. Rock receives a stone oven and Nico receives the latest video game everyone can play with. Rock and Nico invites inmates from other cells to show their prizes. The two are very satisfied and they both thank Jyugo for that.",
+      "airdate": "2016-12-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 110,
+          "end": 204
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1313,
+          "end": 1380
+        }
+      ],
+      "external_id": "189397"
+    },
+    {
+      "n": 12,
+      "title": "The Room, the Billiards, the Darts, and Me",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189398/original.jpg",
+      "synopsis": "",
+      "airdate": "2016-12-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 19,
+          "end": 109
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1313,
+          "end": 1380
+        }
+      ],
+      "external_id": "189398"
+    },
+    {
+      "n": 13,
+      "title": "Real Idiot",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/189399/original.jpg",
+      "synopsis": "",
+      "airdate": "2016-12-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 46,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1260,
+          "end": 1380
+        }
+      ],
+      "external_id": "189399"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rin! Rin! Hi! Hi! (ハシグチカナデリヤ)",
+      "artist": "Hashiguchikanaderiya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nanbaka Datsugoku Riron! (ナンバカ脱獄理論♪!)",
+      "artist": "Yuuto Uemura, Tetsuya Kakihara, Airu Shiozaki, Daiki Kobayashi, and Tomokazu Seki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rin! Rin! Hi! Hi!",
+      "artist": "Hashiguchikanaderiya hugs The Super Ball",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nanbaka Datsugoku Riron♪! (Nanbaka Jailbreak Theory)",
+      "artist": "Yuuto Uemura, Tetsuya Kakihara, Airu Shiozaki, Daiki Kobayashi, and Tomokazu Seki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

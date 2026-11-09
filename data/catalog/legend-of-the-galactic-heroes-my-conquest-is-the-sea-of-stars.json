@@ -1,0 +1,63 @@
+{
+  "id": "legend-of-the-galactic-heroes-my-conquest-is-the-sea-of-stars",
+  "title": "Legend of the Galactic Heroes: My Conquest Is the Sea of Stars",
+  "native": "銀河英雄伝説: わが征くは星の大海",
+  "year": 1988,
+  "rating": 7.6,
+  "season": "Winter 1988",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx3014-HcjYHAbi1bnd.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx3014-HcjYHAbi1bnd.jpg",
+  "accent": "#e4a150",
+  "synopsis": "This movie, based on an anecdote of \"Ginga Eiyuu Densetsu\" written by novelist Tanaka Yoshiki, preludes the 110-episodes TV series by describing the first encounter between the ambitious young man Reinhard von Museal under the imperial flag and the passive Yang Wenli who serves a corrupting democracy. Set in an imaginative future, the story describes the first encounter between Yang and Reinhard and discusses how heroes are born.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "legend-of-the-galactic-heroes:-my-conquest-is-the-sea-of-stars-9qyjg0",
+    "mal": 3014,
+    "anilist": 3014,
+    "kitsu": 2724
+  },
+  "skip_key_id": 3014,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "legend of the galactic heroes my conquest is the sea of stars 銀河英雄伝説 わか 征くは星の大海 movie finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Legend of the Galactic Heroes: My Conquest is the Sea of Stars (Movie)",
+      "runtime": "59:00",
+      "runtime_seconds": 3540,
+      "thumb": "https://animehot.cc/storage/media/2026/09/69556f88794ba63d7b38e30d-landscape.webp",
+      "synopsis": "Four months before Count von Lohengramm of the Galactic Empire faced Yang Wen-li of the Free Planets Alliance at the Battle of Astarte, he was still just Reinhard von Müsel. The youngest admiral in the Empire's history, Reinhard was disdained and dismissed by his peers as the brother of the Kaiser's concubine. \n\nUpon arriving at Iserlohn Fortress with his expeditionary fleet, Reinhard immediately receives an order from the ambitious and cunning Fleet Admiral Gregor von Mückenberger: to intercept an Alliance fleet in a neighboring starzone. Despite recognizing this as a veiled attempt to get him killed in combat, Reinhard nevertheless orders his tired and weary men to engage the enemy in the atmosphere of the gas giant Legnica. But unbeknownst to him, this will mark the first of his many historic encounters with the Hero of El Facil.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "46398"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Bolero",
+      "artist": "Ravel [final battle theme-song]",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

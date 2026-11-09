@@ -1,0 +1,361 @@
+{
+  "id": "magical-girl-lyrical-nanoha-strikers",
+  "title": "Magical Girl Lyrical Nanoha StrikerS",
+  "native": "魔法少女リリカルなのはStrikerS",
+  "year": 2007,
+  "rating": 7.3,
+  "season": "Spring 2007",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1915-IKthftm6s36b.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1915-IKthftm6s36b.png",
+  "accent": "#5D88E4",
+  "synopsis": "Set 10 years after Mahou Shoujo Lyrical Nanoha A's, Nanoha, Fate, Hayate and the rest of the crew are now working full time in the Time-Space Administration Bureau. Nanoha is a combat instructor, Fate is a special investigator, and Hayate is a commanding officer. They must unite once again to save the dimensions. Introducing new characters as well: Subaru, Teana, Caro and Erio. Stand by. Ready. Set up!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "magical-girl-lyrical-nanoha-strikers-el02xh",
+    "mal": 1915,
+    "anilist": 1915,
+    "kitsu": 1725
+  },
+  "skip_key_id": 1915,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "magical girl lyrical nanoha strikers 魔法少女リリカルなのはstrikers tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Wing to the Sky",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28042/original.jpg",
+      "synopsis": "Subaru Nakajima and Teana Lanster are taking a test to increase their rank from C to B. During the test, Nanoha, Fate, Hayate, and Rein observe their progress. Near the end of the test, Teana injures her ankle, but Subaru has a plan to complete the test in time.",
+      "airdate": "2007-04-02",
+      "markers": [],
+      "external_id": "28042"
+    },
+    {
+      "n": 2,
+      "title": "Riot Force 6",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28043/original.jpg",
+      "synopsis": "Subaru and Teana are informed that they have failed their promotion exam, but are given another chance by Nanoha and Reinforce to take the exam again in a week. In the meantime, they are told about the Sixth Mobile Division, which is a special division about to be formed and led by Nanoha, Fate, and Hayate. Erio and Caro make an appearance and meet for the first time.",
+      "airdate": "2007-04-09",
+      "markers": [],
+      "external_id": "28043"
+    },
+    {
+      "n": 3,
+      "title": "Gathering of Troops",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28044/original.jpg",
+      "synopsis": "Hayate's dream of this new unit has finally been realized and the training begins for the new recruits. New characters are introduced which gives insight to the new villan's plot of the Lost Logia named Relic.",
+      "airdate": "2007-04-16",
+      "markers": [],
+      "external_id": "28044"
+    },
+    {
+      "n": 4,
+      "title": "First Alert",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28045/original.jpg",
+      "synopsis": "Subaru, Teana, Caro, and Erio are still enduring hard training with Nanoha, but soon their training will be complete. They are given new upgrades to their devices and the power-limiting feature is explained to them. Afterwards, the Sixth Mobile Division must act on their first mission.",
+      "airdate": "2007-04-23",
+      "markers": [],
+      "external_id": "28045"
+    },
+    {
+      "n": 5,
+      "title": "Stars and Lightning",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28046/original.jpg",
+      "synopsis": "This episode marks the first mission of the new teams, as they battle several droids to recover a Lost Logia. Subaru and the others get to test out their new and improved devices. Part of Caro's past is revealed, as well as her true ability. Someone is monitoring them from a lab, gathering data mostly on Fate and Erio, who have a connection with \"Project F\".",
+      "airdate": "2007-04-30",
+      "markers": [],
+      "external_id": "28046"
+    },
+    {
+      "n": 6,
+      "title": "Progress",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28047/original.jpg",
+      "synopsis": "Stars and Lightning undergo further training, intended to enchance their strengths and skills. Meanwhile, Hayate requests the aid of Major Genya Nakajima's 108th Ground Forces Battalion to assist Mobile Division 6 in investigating smuggling routes. Fate and Shari discover that a Doctor Jail Scaglietti is implanting Jewel Seeds into the Type-3 gadgets.",
+      "airdate": "2007-05-07",
+      "markers": [],
+      "external_id": "28047"
+    },
+    {
+      "n": 7,
+      "title": "Hotel Agusta",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28048/original.jpg",
+      "synopsis": "The Sixth Mobile Division monitors, and provides security for, the Hotel Augusta, where works of art, including lost logia, are up for auction. Teams Stars and Lightning face gadget drones, and another summoner who has ties to Dr. Scaglietti.",
+      "airdate": "2007-05-14",
+      "markers": [],
+      "external_id": "28048"
+    },
+    {
+      "n": 8,
+      "title": "Two People's Wishes",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28049/original.jpg",
+      "synopsis": "Following an averted friendly-fire incident at the Hotel Augusta, Teana throws herself into intensive training. Subaru joins her, and they devise a dangerous strategy for their next combat exercise with Nanoha. Has Nanoha taught them well enough to avoid hurting themselves at all costs?",
+      "airdate": "2007-05-21",
+      "markers": [],
+      "external_id": "28049"
+    },
+    {
+      "n": 9,
+      "title": "The Important Thing",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28050/original.jpg",
+      "synopsis": "Teana wakes up in the infirmary many hours after being on the receiving end of Nanoha's attack. She and the other young recruits learn about Nanoha's past and how she almost died several years ago on a mission due to having overextended herself, causing Teana to understand Nanoha's training methods.",
+      "airdate": "2007-05-28",
+      "markers": [],
+      "external_id": "28050"
+    },
+    {
+      "n": 10,
+      "title": "Riot Force 6's Day Off (First Part)",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28051/original.jpg",
+      "synopsis": "Subaru, Teana, Caro, and Erio are on their vacation. Suddenly, Erio sensed a magical presence, and follows it. To Erio and Caro's surprise, they see a girl coming out of the sewers. What was attached to that girl's foot was a relic case!",
+      "airdate": "2007-06-04",
+      "markers": [],
+      "external_id": "28051"
+    },
+    {
+      "n": 11,
+      "title": "Riot Force 6's Day Off (Second Part)",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28052/original.jpg",
+      "synopsis": "Nanoha, Fate, Shamal, Teana, and Subaru come to aid Caro and Eriol. Eriol, Caro, Teana, and Subaru go down the sewer to investigate. They meet up with Subaru's sister, Ginga, but things take a turn or the worse.",
+      "airdate": "2007-06-11",
+      "markers": [],
+      "external_id": "28052"
+    },
+    {
+      "n": 12,
+      "title": "Numbers",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28053/original.jpg",
+      "synopsis": "Everyone is under attack, and Hayate comes to help. Lutecia and her companions come to get the relic. When they retrieve the relic case, they open it only to find something unexpected inside.",
+      "airdate": "2007-06-18",
+      "markers": [],
+      "external_id": "28053"
+    },
+    {
+      "n": 13,
+      "title": "Reason of Life",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28054/original.jpg",
+      "synopsis": "Explained how Agito joined Lutecia and the reason why Hayate created Mobile Section Six.",
+      "airdate": "2007-06-25",
+      "markers": [],
+      "external_id": "28054"
+    },
+    {
+      "n": 14,
+      "title": "Mothers & Children",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28055/original.jpg",
+      "synopsis": "The main point is that Nanoha and Fate have adopted Vivio, the girl with the Relic as their child.",
+      "airdate": "2007-07-02",
+      "markers": [],
+      "external_id": "28055"
+    },
+    {
+      "n": 15,
+      "title": "Sisters & Daughters",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28056/original.jpg",
+      "synopsis": "The episode explores the lives of the characters as they go about a normal day, training, etc. The episode also gives some insight into the Numbers.",
+      "airdate": "2007-07-09",
+      "markers": [],
+      "external_id": "28056"
+    },
+    {
+      "n": 16,
+      "title": "That Day, Riot Force 6 (First Part)",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28057/original.jpg",
+      "synopsis": "Sixth Mobile Division is on a mission to protect the TSA Public Press Conference. The commanders, including Nanoha, Fate, Hayate, and Signum are inside without their devices, which they entrust to the forwards. Meanwhile, Jail Scaglietti and his Numbers, also Lutecia and Zest, are working on their plan.",
+      "airdate": "2007-07-16",
+      "markers": [],
+      "external_id": "28057"
+    },
+    {
+      "n": 17,
+      "title": "That Day, Riot Force 6 (Second Part)",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28058/original.jpg",
+      "synopsis": "Sixth Mobile Division is engaged battle with Scaglietti's group of terrorists. Vita is dueling Zest. Nanoha and Fate have just gotten their devices back from the forwards, but at that moment, Subaru felt something wrong about Ginga.",
+      "airdate": "2007-07-23",
+      "markers": [],
+      "external_id": "28058"
+    },
+    {
+      "n": 18,
+      "title": "Wings, Again",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28059/original.jpg",
+      "synopsis": "After all the TSA Land Headquarters, including Sixth Mobile Division, is completely defeated by Jail Scaglietti. Many of officers are injured. Vivio and Ginga were captured. Sixth Mobile Division is now unable to be the HQ anymore. Hayate decides to move all the units on to Arthra. It is also revealed that Nakajima family had adopted Ginga and Subaru a long time ago since they still were an experimental Cyborg Type-0 (Initial model of Numbers). Although they still needed the maintenance treatment like the other cyborgs until now, they were still treated kindly as normal girls.",
+      "airdate": "2007-07-30",
+      "markers": [],
+      "external_id": "28059"
+    },
+    {
+      "n": 19,
+      "title": "Cradle",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28060/original.jpg",
+      "synopsis": "After Subaru recovered from her injuries, she moved onto the plan for Mach Caliber to be powered-up in order to endure her cyborg power. At that time, Scaglietti and his comrades are working on the next step of plan involving power of Vivio. It is also shown that Ginga has become No.13 somehow.",
+      "airdate": "2007-08-06",
+      "markers": [],
+      "external_id": "28060"
+    },
+    {
+      "n": 20,
+      "title": "The Infinite Desire",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28061/original.jpg",
+      "synopsis": "Jail Scaglietti has awakened Yurikago (aka. The Cradle), the Ancient Belka ultimate weapon which is classed as a Lost Logia. Yurikago is the huge sky ship controlled by the King of Belkan's blood-line, and Vivio, who is apparently the artificial mage that has the genes of Belka King, is needed to make it operational. TSA, with Sixth Mobile Division, are going to stop it. There is also the first movement of No.2, Due, as the spy inside the TSA.",
+      "airdate": "2007-08-13",
+      "markers": [],
+      "external_id": "28061"
+    },
+    {
+      "n": 21,
+      "title": "The Decisive Battle",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28062/original.jpg",
+      "synopsis": "From Yūno's research, Yurikago is expected to be unstoppable if it reaches orbit and absorbs the power of two moons. Nanoha and Vita are intruding into Yurikago. Hayate is trying to deal with enormous amounts of gadgets. Fate is on the way to Scaglietti's hideout. Signum and Rein are going to battle Knight Zest and Agito. The forwards are dealing with the ground-attacking enemies.",
+      "airdate": "2007-08-20",
+      "markers": [],
+      "external_id": "28062"
+    },
+    {
+      "n": 22,
+      "title": "Pain to Pain",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28063/original.jpg",
+      "synopsis": "Nanoha is on her way to the throne room where Vivio and Quattro are supposed to be. Vita is struggling on her way to the machine room, fighting with gadgets. Fate starts her battles in Scaglietti's HQ with Tre, Sette and Scaglietti himself. Meanwhile, Teana is trapped on her own against the three of the Numbers. Subaru is against Ginga, who was re-programmed, and Caro and Erio are fighting against Garyū and Lutecia.",
+      "airdate": "2007-08-27",
+      "markers": [],
+      "external_id": "28063"
+    },
+    {
+      "n": 23,
+      "title": "Stars Strike",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28064/original.jpg",
+      "synopsis": "Nanoha reaches Vivio, but Quattro taunts the two, and Vivio activates a rainbow shield, which Quattro calls the Saint's Armor, an extremely powerful shield. Meanwhile, the barrier around the building where Teana is fighting is broken, after Teana somehow managed to survive assaults from three Numbers, and she then planned to completely finish off the three Numbers. Subaru is losing her consciousness after a heavy attack from Ginga, but is recalled by Mach Caliber and some thoughts in her flashback. She then activates her full drive for the final duel.",
+      "airdate": "2007-09-03",
+      "markers": [],
+      "external_id": "28064"
+    },
+    {
+      "n": 24,
+      "title": "Lightning",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28065/original.jpg",
+      "synopsis": "This episode explains the past about Regius, Zest, with Ginga and Subaru's Mother, and Lutecia's Mother, who were the officers under the command of Zest. Due then appears to assassinate Regius in front of Zest, Zest then destroys her somehow. Erio and Caro manage to overcome Lutecia and Garyū. Fate has troubles fighting her battle, but finally wins because of Erio and Caro's words. The terrorists are finally all captured. The only ones left are Quattro and Yurikago.",
+      "airdate": "2007-09-10",
+      "markers": [],
+      "external_id": "28065"
+    },
+    {
+      "n": 25,
+      "title": "Final Limit",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28066/original.jpg",
+      "synopsis": "The Final Limiter of the dangerous Blaster Mode of Raising Heart is released. The final battle between Nanoha and Vivio, with Quattro behind, will be finally decided.",
+      "airdate": "2007-09-17",
+      "markers": [],
+      "external_id": "28066"
+    },
+    {
+      "n": 26,
+      "title": "To The Promised Sky",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28067/original.jpg",
+      "synopsis": "The last of the terrorists are secured, and Vivio is back to her normal self. Chrono's fleet prepares to destroy the Yurikago. Unfortunately for Nanoha and Hayate, Yurikago goes into self-destruct mode, while locking them in with anti-magic fields and heavy blast doors. Meanwhile, Fate finishes off her work in Scaglietti's lab, just as the whole place starts to cave in. It's a race against time for the Forwards to rescue their mentors. How will it all end?",
+      "airdate": "2007-09-24",
+      "markers": [],
+      "external_id": "28067"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Secret Ambition",
+      "artist": "Nana Mizuki",
+      "episodes": "1-17"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hoshizora no Spica",
+      "artist": "Yukari Tamura",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Massive Wonders",
+      "artist": "Nana Mizuki",
+      "episodes": "18-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Beautiful Amulet",
+      "artist": "Yukari Tamura",
+      "episodes": "15-26"
+    }
+  ],
+  "relations": []
+}

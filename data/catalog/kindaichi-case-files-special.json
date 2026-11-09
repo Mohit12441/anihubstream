@@ -1,0 +1,65 @@
+{
+  "id": "kindaichi-case-files-special",
+  "title": "Kindaichi Shounen no Jikenbo Specials",
+  "native": "金田一少年の事件簿SP",
+  "year": 2007,
+  "rating": 6.9,
+  "season": "Fall 2007",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/3245.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/3245.jpg",
+  "accent": "#e4a150",
+  "synopsis": "Kindaichi and the gang are on their way to a hot spring, but get lost and end up at a run down and sinister hotel. They are told that a vampire used to live in the hotel way back. Someone even died (was found with bite marks on the neck).\n\nSix years ago a girl was found in the cellar with bite marks on her neck, and the villagers killed her. When one of the guests is killed and Miyuki is attacked by a creature with fangs, it would seem like the vampire is still there...",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kindaichi-case-files-special-ibmb1k",
+    "mal": 3245,
+    "anilist": 3245,
+    "kitsu": 2880
+  },
+  "skip_key_id": 3245,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "kindaichi shounen no jikenbo specials 金田一少年の事件簿sp special finished",
+  "genres": [
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Third Opera House Murders",
+      "runtime": "48:00",
+      "runtime_seconds": 2880,
+      "thumb": "",
+      "synopsis": "Kindaichi, Miyuki and Kenmochi are invited back to the Opera House for one last time.",
+      "airdate": "2007-11-12",
+      "markers": [],
+      "external_id": "48675"
+    },
+    {
+      "n": 2,
+      "title": "Legendary Vampire Murders",
+      "runtime": "48:00",
+      "runtime_seconds": 2880,
+      "thumb": "",
+      "synopsis": "Kindaichi, Miyuki and Kenmochi stay at a hotel where an old legend says a vampire used to live.",
+      "airdate": "2007-11-19",
+      "markers": [],
+      "external_id": "48676"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

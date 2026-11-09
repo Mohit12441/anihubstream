@@ -1,0 +1,58 @@
+{
+  "id": "my-awkward-senpai",
+  "title": "My Awkward Senpai",
+  "native": "Bukiyou na Senpai.",
+  "year": 2025,
+  "rating": 7,
+  "season": "Year 2025",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://animehot.cc/storage/media/2026/09/68e7988f41a45d67b638ec92-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/68e7988f41a45d67b638ec92-landscape.webp",
+  "accent": "#24d3ee",
+  "synopsis": "Kannawa-senpai is considered many things, but smooth is definitely not one of them. Then she meets Kamegawa, her new Kouhai. He's cute, a little nerdy, and easy to talk to. How will this awkward Senpai be able to handle these new feelings?!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "my-awkward-senpai-fp28zl",
+    "mal": 60531,
+    "anilist": 185575,
+    "kitsu": 49418
+  },
+  "skip_key_id": 60531,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "my awkward senpai bukiyou na senpai",
+  "genres": [
+    "comedy",
+    "romance"
+  ],
+  "episodes": [],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Bukiyō na I love you (The Awkward I love you)",
+      "artist": "angela",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bukiyō ni Kimi no Tonari (Awkwardly Next to You)",
+      "artist": "Ami Maeshima",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

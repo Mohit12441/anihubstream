@@ -1,0 +1,63 @@
+{
+  "id": "naruto-shippuden-the-movie-6-road-to-ninja",
+  "title": "Road to Ninja: Naruto the Movie",
+  "native": "ROAD TO NINJA -NARUTO THE MOVIE-",
+  "year": 2012,
+  "rating": 7.4,
+  "season": "Summer 2012",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx13667-gAKuIXI2avRq.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13667-gAKuIXI2avRq.jpg",
+  "accent": "#e48650",
+  "synopsis": "Naruto and his friends are trapped in a Genjutsu created by the mysterious Masked Shinobi who is testing it for a greater plan. In this new world, or reality, everyone except Naruto and Sakura have their personalities changed to the opposite of their normal personality. Also, dead characters are now alive and roles are reversed. Naruto and Sakura must find a way to get out of this Genjutsu, and return things to normal.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "naruto-shippuden-the-movie-6:-road-to-ninja-73moex",
+    "mal": 13667,
+    "anilist": 13667,
+    "kitsu": 7008
+  },
+  "skip_key_id": 13667,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "road to ninja naruto the movie road to ninja naruto the movie movie finished",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Naruto Shippuden the Movie 6: Road to Ninja (Movie)",
+      "runtime": "109:00",
+      "runtime_seconds": 6540,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a915e4da3a1f1dcbe47757d-landscape.webp",
+      "synopsis": "Returning home to Konohagakure, the young ninja celebrate defeating a group of supposed Akatsuki members. Naruto Uzumaki and Sakura Haruno, however, feel differently. Naruto is jealous of his comrades' congratulatory families, wishing for the presence of his own parents. Sakura, on the other hand, is angry at her embarrassing parents, and wishes for no parents at all. The two clash over their opposing ideals, but are faced with a more pressing matter when the masked Madara Uchiha suddenly appears and transports them to an alternate world.\n\nIn this world, Sakura's parents are considered heroes—for they gave their lives to protect Konohagakure from the Nine-Tailed Fox attack 10 years ago. Consequently, Naruto's parents, Minato Namikaze and Kushina Uzumaki, are alive and well. Unable to return home or find the masked Madara, Naruto and Sakura stay in this new world and enjoy the changes they have always longed for. All seems well for the two ninja, until an unexpected threat emerges that pushes Naruto and Sakura to not only fight for the Konohagakure of the alternate world, but also to find a way back to their own.\n\n[Written by MAL Rewrite]",
+      "airdate": null,
+      "markers": [],
+      "external_id": "100780"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sore de wa, Mata Ashita (それでは、また明日; Well Then, See You Tomorrow)",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,77 @@
+{
+  "id": "kikou-kai-galient-ova",
+  "title": "Kikou Kai Galient OVA",
+  "native": "機甲界ガリアン OVA",
+  "year": 1986,
+  "rating": 6.2,
+  "season": "Winter 1986",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/10751.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/10751.jpg",
+  "accent": "#e4ae35",
+  "synopsis": "The first two episodes are summaries of the TV series, the third one (Crest of Iron) takes place in an alternate universe.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kikou-kai-galient-ova-8cj7fl",
+    "mal": 10751,
+    "anilist": 10751,
+    "kitsu": 6331
+  },
+  "skip_key_id": 10751,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "kikou kai galient ova 機甲界カ リアン ova ova finished",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "60:00",
+      "runtime_seconds": 3600,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "94564"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "60:00",
+      "runtime_seconds": 3600,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "94565"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "60:00",
+      "runtime_seconds": 3600,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "94566"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

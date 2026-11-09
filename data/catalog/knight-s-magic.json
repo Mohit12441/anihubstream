@@ -1,0 +1,320 @@
+{
+  "id": "knight-s-magic",
+  "title": "Knight's & Magic",
+  "native": "ナイツ&マジック",
+  "year": 2017,
+  "rating": 6.8,
+  "season": "Summer 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97663-4TMJDIpm3toz.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97663-4TMJDIpm3toz.png",
+  "accent": "#bbc943",
+  "synopsis": "A Japanese mecha otaku dies in a car accident and his soul is reincarnated into another world as Ernesti Echevarria. Eru inherits memories and interests from his previous life, and aims to be a pilot of a Silhouette Knight, a large humanoid weapon that really exists in his world.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13274,
+    "anilist": 97663,
+    "mal": 34104
+  },
+  "skip_key_id": 34104,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 16:35:36",
+  "search_text": "knight s magic ナイツ マシ ック tv finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Robots & Fantasy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 182,
+          "end": 263
+        }
+      ],
+      "external_id": "213738"
+    },
+    {
+      "n": 2,
+      "title": "Hero & Beast",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 151,
+          "end": 241
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1381,
+          "end": 1440
+        }
+      ],
+      "external_id": "213739"
+    },
+    {
+      "n": 3,
+      "title": "Scrap & Build",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 232,
+          "end": 322
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1375,
+          "end": 1440
+        }
+      ],
+      "external_id": "213740"
+    },
+    {
+      "n": 4,
+      "title": "Light & Shadow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 65,
+          "end": 155
+        }
+      ],
+      "external_id": "213741"
+    },
+    {
+      "n": 5,
+      "title": "Hide & Seek",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 104,
+          "end": 194
+        }
+      ],
+      "external_id": "213742"
+    },
+    {
+      "n": 6,
+      "title": "Trial & Error",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 161,
+          "end": 251
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1376,
+          "end": 1440
+        }
+      ],
+      "external_id": "213743"
+    },
+    {
+      "n": 7,
+      "title": "New & Old",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 119
+        }
+      ],
+      "external_id": "213744"
+    },
+    {
+      "n": 8,
+      "title": "Secret & Quest",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-20",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1376,
+          "end": 1440
+        }
+      ],
+      "external_id": "213745"
+    },
+    {
+      "n": 9,
+      "title": "Force & Justice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-08-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 160
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1374,
+          "end": 1440
+        }
+      ],
+      "external_id": "224672"
+    },
+    {
+      "n": 10,
+      "title": "War & Princess",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-09-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 60,
+          "end": 150
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1373,
+          "end": 1440
+        }
+      ],
+      "external_id": "224740"
+    },
+    {
+      "n": 11,
+      "title": "Hit & Away",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-09-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 111
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1374,
+          "end": 1440
+        }
+      ],
+      "external_id": "225447"
+    },
+    {
+      "n": 12,
+      "title": "Knight & Dragon",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-09-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 126
+        }
+      ],
+      "external_id": "225449"
+    },
+    {
+      "n": 13,
+      "title": "Heaven & Earth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-09-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 24,
+          "end": 114
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1372,
+          "end": 1440
+        }
+      ],
+      "external_id": "225450"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

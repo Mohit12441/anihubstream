@@ -1,0 +1,111 @@
+{
+  "id": "murder-princess",
+  "title": "Murder Princess",
+  "native": "マーダープリンセス",
+  "year": 2007,
+  "rating": 6.5,
+  "season": "Spring 2007",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1696-umqHi6MD4mcc.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1696-umqHi6MD4mcc.png",
+  "accent": "#e4a10d",
+  "synopsis": "A scientist known as Dr. Akamashi launches a coup d'état in the Forland Kingdom using his army of beasts and two android minions. With his dying breath, the king tells his daughter, Princess Alita, to escape at all cost and find Prince Kaito - her older brother who's currently on a diplomatic mission abroad - in order to guarantee her own safety and possibly take back the kingdom. \n\nAs Alita flees, however, she ends up in a predicament that results in her dying and swapping bodies with Falis, an infamous bounty hunter who happened to be out hunting in a nearby forest together with her monster sidekicks, Dominikov and Pete. With the two women retaining their respective skills and personalities but changing appearances, Alita, now in Falis's body, begs her to go back to her kingdom and make things right, offering her body and soul as collateral - to which Falis, now in Alita's body, agrees, leading to the birth of the so-called Murder Princess, who ends up not only having to take back and protect the kingdom, but also, unravel a much deeper intrigue that soon unfolds.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "murder-princess-nx0qqf",
+    "mal": 1696,
+    "anilist": 1696,
+    "kitsu": 1524
+  },
+  "skip_key_id": 1696,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": null,
+  "search_text": "murder princess マータ ーフ リンセス ova finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Birth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27778/original.jpeg",
+      "synopsis": "In order to preserve her noble bloodline, Princess Alita reluctantly flees her besieged kingdom. Her hasty escape takes a curious turn when a collision with the infamous bounty hunter Falis leads to an unwilling exchange of souls.",
+      "airdate": "2007-03-28",
+      "markers": [],
+      "external_id": "27778"
+    },
+    {
+      "n": 2,
+      "title": "Coronation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27779/original.jpeg",
+      "synopsis": "After the successful liberation of Forland Castle, Alita vows to serve Falis by posing as the newly-crowned queen’s handmaiden. All goes according to plan until the coronation festivities are interrupted by a genetically engineered monster.",
+      "airdate": "2007-04-25",
+      "markers": [],
+      "external_id": "27779"
+    },
+    {
+      "n": 3,
+      "title": "Return",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27780/original.jpeg",
+      "synopsis": "A shattered keepsake creates a rift between Alita and Falis. When the bounty hunter races off to slay goblins, Alita is captured by Dr. Akamashi. Falis returns for a daring rescue, but she’ll need help to even the odds.",
+      "airdate": "2007-05-30",
+      "markers": [],
+      "external_id": "27780"
+    },
+    {
+      "n": 4,
+      "title": "Exile",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27781/original.jpeg",
+      "synopsis": "Prince Kaito’s return has Falis and her crew planning their departure. Although crushed, Alita reluctantly accepts her friend’s desire for adventure. But before they part ways, a mysterious woman uses her powers to cast the heroes as outlaws.",
+      "airdate": "2007-06-27",
+      "markers": [],
+      "external_id": "27781"
+    },
+    {
+      "n": 5,
+      "title": "Fate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27782/original.jpeg",
+      "synopsis": "Falis is badly wounded during a daring escape. With Kaito and the royal army in hot pursuit, the unlikely band of allies strikes out for the border – until Dominikov’s fireside revelations reveal the powerful force drawing evil to Forland.",
+      "airdate": "2007-07-25",
+      "markers": [],
+      "external_id": "27782"
+    },
+    {
+      "n": 6,
+      "title": "Determination's End",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27783/original.jpeg",
+      "synopsis": "Alita, Falis, and their cyborg comrades return to Forland Castle to stop Kaito from abusing the awesome power of Te Oria.  In the midst of a bloody battle, the bounty hunter realizes that destroying such a power is not without sacrifice.",
+      "airdate": "2007-08-29",
+      "markers": [],
+      "external_id": "27783"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,146 @@
+{
+  "id": "kaguya-sama-love-is-war-the-first-kiss-that-never-ends",
+  "title": "Kaguya-sama: Love is War -The First Kiss That Never Ends-",
+  "native": "かぐや様は告らせたい -ファーストキッスは終わらない-",
+  "year": 2023,
+  "rating": 8.7,
+  "season": "Spring 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151384-gv0q8wOE6D58.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151384-gv0q8wOE6D58.jpg",
+  "accent": "#e45d78",
+  "synopsis": "Shuchiin Academy’s student council room: the place where Student Council Vice President Kaguya Shinomiya and President Miyuki Shirogane met. After a long battle in love, these two geniuses communicated their feelings and, at the Hoshin Festival, had their very first kiss. However, there was no clear confession of love. The relationship between these two, who assumed they would be a couple, remains ambiguous. Now, overly conscious of their feelings, they must face the biggest challenge yet: Christmas. It’s Shirogane who wants it to be perfect versus Kaguya who pursues the imperfect situation. This is the very “normal” love story of two geniuses and the first kiss that never ends.\n\n(Source: Aniplex of America)\n\nNote: The anime first premiered in theaters across Japan on December 17, 2022. It was later split into 2 parts on TV, and 4 episodes on streaming, and Blu-Ray/DVD.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kaguya-sama:-love-is-war-the-first-kiss-that-never-ends-zwo2sa",
+    "mal": 52198,
+    "anilist": 151384,
+    "kitsu": 46206
+  },
+  "skip_key_id": 52198,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": null,
+  "search_text": "kaguya sama love is war the first kiss that never ends かく や様は告らせたい ファーストキッスは終わらない tv finished",
+  "genres": [
+    "comedy",
+    "mystery",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Chika Fujiwara Wants to Surprise | Miyuki Shirogane Wants to Talk | Kaguya Shinomiya's Impossible Task",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/80c11b2bf9ca7ec8b5b8487b1b2aea2a1766604702_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "305011"
+    },
+    {
+      "n": 2,
+      "title": "The ABCs of Men and Women | Kaguya Wants to Talk | Kaguya Wants to See Them Off",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6ba4dd1080953aee1f43562101eeaf761766604874_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "305012"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Abunai Kioku (アブナイキオク; Dangerous Memory)",
+      "artist": "Masayuki Suzuki feat. Aoi Koga",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aka to Ao (赤と青)",
+      "artist": "Aoi Koga",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "GIRI GIRI",
+      "artist": "Masayuki Suzuki feat. Suu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Heart wa Oteage",
+      "artist": "Airi Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "My Nonfiction",
+      "artist": "Makoto Furukawa and Konomi Kohara",
+      "episodes": "5"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Daddy! Daddy! Do!",
+      "artist": "Masayuki Suzuki feat. Airi Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Daddy! Daddy! Do! feat. Airi Suzuki",
+      "artist": "Masayuki Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaze ni Fukarete",
+      "artist": "Haruka Fukuhara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Love Dramatic",
+      "artist": "Masayuki Suzuki ft. Rikka Ihara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sentimental Crisis",
+      "artist": "halca",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Chikatto Chika Chikaa♡ (チカっとチカ千花っ♡)",
+      "artist": "Konami Kohara",
+      "episodes": "3"
+    }
+  ],
+  "relations": []
+}

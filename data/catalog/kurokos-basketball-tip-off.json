@@ -1,0 +1,188 @@
+{
+  "id": "kurokos-basketball-tip-off",
+  "title": "Kuroko's Basketball: Tip Off",
+  "native": "黒子のバスケ 第22.5Q 「Tip off」",
+  "year": 2013,
+  "rating": 7.5,
+  "season": "Winter 2013",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/16916.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/16916.jpg",
+  "accent": "#e4c95d",
+  "synopsis": "Episode 22.5 bundled with BD/DVD volume 8.\n\nAs the championship matches are coming to an end, the contest between Aomine and Kise remains tight and the result is still uncertain.\n\n(Source: Netflix)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kuroko's-basketball:-tip-off-ttaho0",
+    "mal": 16916,
+    "anilist": 16916,
+    "kitsu": 7552
+  },
+  "skip_key_id": 16916,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "kuroko s basketball tip off 黒子のハ スケ 第22 5q tip off special finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Kuroko's Basketball: Tip Off",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a92e77dee3cae0217876a20-poster.jpg",
+      "synopsis": "Episode 22.5 bundled with BD/DVD volume 8.\n\n\nAs the championship matches are coming to an end, the contest between Aomine and Kise remains tight and the result is still uncertain.\n\n\n\n(Source: Netflix)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "102964"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Experience",
+      "artist": "OLDCODEX",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Scribble, and Beyond",
+      "artist": "OLDCODEX",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "The Experience",
+      "artist": "OLDCODEX",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Glorious Days",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Scribble, and Beyond",
+      "artist": "OLDCODEX",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Punky Funky Love",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "GLITTER DAYS",
+      "artist": "Fo'x Tails",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Other self",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "WALK",
+      "artist": "OLDCODEX",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Can Do",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "CATALRHYTHM",
+      "artist": "OLDCODEX",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Start it right away",
+      "artist": "Hyadain",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "ZERO",
+      "artist": "Kensho Ono",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Ambivalence",
+      "artist": "SCREEN mode",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Hengenjizai no Magical Star",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Fantastic Tune",
+      "artist": "Kensho Ono",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "RIMFIRE",
+      "artist": "GRANRODEO",
+      "episodes": "13-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Memories",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Lantana",
+      "artist": "OLDCODEX",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

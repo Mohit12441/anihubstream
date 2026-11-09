@@ -1,0 +1,90 @@
+{
+  "id": "kamichu-ova",
+  "title": "Kamichu! OVA",
+  "native": "かみちゅ! OVA",
+  "year": 2005,
+  "rating": 7.3,
+  "season": "Fall 2005",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx3449-HKeeakgjmtNN.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx3449-HKeeakgjmtNN.png",
+  "accent": "#50aee4",
+  "synopsis": "Four unaired OVA episodes released on the DVD volumes.\n\nNote: Known as episodes 8, 11, 13 and 16 on the home release.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "kamichu!-ova-5c649r",
+    "mal": 3449,
+    "anilist": 3449,
+    "kitsu": 450
+  },
+  "skip_key_id": 3449,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": null,
+  "search_text": "kamichu ova かみちゅ ova ova finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Wild Times",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "Unaired episode 8 bundled with the 4th DVD volume.",
+      "airdate": "2005-11-23",
+      "markers": [],
+      "external_id": "51284"
+    },
+    {
+      "n": 2,
+      "title": "Love Is Missing",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "No synopsis has been added for this episode yet.",
+      "airdate": "2006-01-25",
+      "markers": [],
+      "external_id": "51285"
+    },
+    {
+      "n": 3,
+      "title": "We Do as We Like",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "No synopsis has been added for this episode yet.",
+      "airdate": "2006-02-22",
+      "markers": [],
+      "external_id": "51286"
+    },
+    {
+      "n": 4,
+      "title": "Look, Don`t You Think Spring Has Come?",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "No synopsis has been added for this episode yet.",
+      "airdate": "2006-03-29",
+      "markers": [],
+      "external_id": "51287"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

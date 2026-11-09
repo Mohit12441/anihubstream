@@ -1,0 +1,338 @@
+{
+  "id": "lovely-complex",
+  "title": "Lovely Complex",
+  "native": "ラブ★コン",
+  "year": 2007,
+  "rating": 7.8,
+  "season": "Spring 2007",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2034-erjg6gzDetAp.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2034-erjg6gzDetAp.png",
+  "accent": "#e4d65d",
+  "synopsis": "Love is unusual for Koizumi Risa and Ootani Atsushi, who are both striving to find their ideal partner in high school—172 cm tall Koizumi is much taller than the average girl, and Ootani is much shorter than the average guy at 156 cm. To add to their plights, their crushes fall in love with each other, leaving Koizumi and Ootani comically flustered and heartbroken. To make matters worse, they're even labeled as a comedy duo by their homeroom teacher due to their personalities and the stark difference in their heights, and their classmates even think of their arguments as sketches.\n\nLovely★Complex follows Koizumi and Ootani as they encourage each other in finding love and become close friends. Apart from their ridiculous antics, they soon find out an unexpected similarity in their music and fashion tastes. Maybe they possess a chemistry yet unknown, but could love ever bloom between the mismatched pair?\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 1833,
+    "anilist": 2034,
+    "mal": 2034,
+    "hianime": "lovely-complex-855fj8"
+  },
+  "skip_key_id": 2034,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": "2026-10-14 10:10:21",
+  "search_text": "lovely complex ラフ コン tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Freshman Year Summer! I'll Definitely Find a Boyfriend!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31344/original.jpg",
+      "synopsis": "It’s the last day of school, before summer vacation and Risa Koizumi got in trouble for sleeping through the graduation assembly and now has to attend summer classes. Not only is that but the guy she’s always fighting with, Atsushi Ootani is also attending those classes. Yet there still may be light at the end of the tunnel, as she experiences love at first sight. Atsushi offers to help set her up with Ryouji Suzuki but in return, he would like her help to set him up with one of her friends.",
+      "airdate": "2007-04-07",
+      "markers": [],
+      "external_id": "31344"
+    },
+    {
+      "n": 2,
+      "title": "The Ex-Girlfriend Love Triangle!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31345/original.jpg",
+      "synopsis": "Atsushi and Risa have both challenged each other to contest on, who can find girlfriend/boyfriend first. However their friends keep on pestering them, telling them to try going out with each other and they are then given tickets to a concert on Christmas. It seems that neither of them will be getting someone, but that is until Atsushi meets his ex-girlfriend.",
+      "airdate": "2007-04-14",
+      "markers": [],
+      "external_id": "31345"
+    },
+    {
+      "n": 3,
+      "title": "A Guy You Like or a Guy from the Past?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31346/original.jpg",
+      "synopsis": "On Christmas day, Atsushi and Risa are on their home from the concert, when unexpectedly, Risa runs into her childhood friend Haruka. Then comes New Years’ and the gang go out to pray at the shrine, when unexpectedly, Atsushi meets his ex, who has something she wants to say. Then all of a sudden, Valentines Day is around the corner.",
+      "airdate": "2007-04-21",
+      "markers": [],
+      "external_id": "31346"
+    },
+    {
+      "n": 4,
+      "title": "Kiss! I've Fallen For You!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31347/original.jpg",
+      "synopsis": "It is spring and whilst walking through the park with Risa, Atsushi spots a damsel in distress and without much effort he helps her. It is then the start of a new school year and a lot of club related things are going on. It turns out that the same girl Atsushi saved, is now a 1st year at their school and she has fallen for him.",
+      "airdate": "2007-04-28",
+      "markers": [],
+      "external_id": "31347"
+    },
+    {
+      "n": 5,
+      "title": "Send Forbidden Love Flying!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31348/original.jpg",
+      "synopsis": "Following the confession of the previous day, between Atsushi and Seiko, Seiko’s confession has completely gone straight to his head. This has left Risa feeling uneasy and annoyed about the whole thing. Although things may not continue like this for long, as Astushi has yet to learn the shocking truth about Seiko.",
+      "airdate": "2007-05-05",
+      "markers": [],
+      "external_id": "31348"
+    },
+    {
+      "n": 6,
+      "title": "A Maiden's Determination! Love-Love Confession Plan!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31349/original.jpg",
+      "synopsis": "It is summer vacation and the gang have on to spend the day at the beach, giving Risa a chance to confess to Atsushi. With all her friends’ support, will Risa be able to confess to the hopelessly, dense Atsushi?",
+      "airdate": "2007-05-12",
+      "markers": [],
+      "external_id": "31349"
+    },
+    {
+      "n": 7,
+      "title": "Sunk! Worst Confession in History",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31350/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-05-19",
+      "markers": [],
+      "external_id": "31350"
+    },
+    {
+      "n": 8,
+      "title": "Comeback Impossible! Major Heartbreak!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31351/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-05-26",
+      "markers": [],
+      "external_id": "31351"
+    },
+    {
+      "n": 9,
+      "title": "Resuscitation!! Aim for Girlfriend Status!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31352/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-06-02",
+      "markers": [],
+      "external_id": "31352"
+    },
+    {
+      "n": 10,
+      "title": "A Confrontation with The Ex-Girlfriend?! The Epic Breast-Baring Battle!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31353/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-06-09",
+      "markers": [],
+      "external_id": "31353"
+    },
+    {
+      "n": 11,
+      "title": "Absolute Death! Revived Love with the Ex-Girlfriend?!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31354/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-06-16",
+      "markers": [],
+      "external_id": "31354"
+    },
+    {
+      "n": 12,
+      "title": "Recapture Love! Improve as a Girl with Honmei Chocolate!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31355/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-06-23",
+      "markers": [],
+      "external_id": "31355"
+    },
+    {
+      "n": 13,
+      "title": "Heating Up! A First Kiss in His Room?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31356/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-06-30",
+      "markers": [],
+      "external_id": "31356"
+    },
+    {
+      "n": 14,
+      "title": "A Killer Crush on Maity",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31357/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-07-07",
+      "markers": [],
+      "external_id": "31357"
+    },
+    {
+      "n": 15,
+      "title": "Dangerous Man, Mighty's Sweet Temptation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31358/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-07-14",
+      "markers": [],
+      "external_id": "31358"
+    },
+    {
+      "n": 16,
+      "title": "Maity's Magic! The Transforming Patterns of Love?!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31359/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-07-21",
+      "markers": [],
+      "external_id": "31359"
+    },
+    {
+      "n": 17,
+      "title": "The Iron Fist of Love! Catch, O Maiden Soul!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31360/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-07-28",
+      "markers": [],
+      "external_id": "31360"
+    },
+    {
+      "n": 18,
+      "title": "Best Birthday in History",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31361/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-08-04",
+      "markers": [],
+      "external_id": "31361"
+    },
+    {
+      "n": 19,
+      "title": "Sudden Downturn!! The First Date is the Beginning of Disaster",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31362/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-08-11",
+      "markers": [],
+      "external_id": "31362"
+    },
+    {
+      "n": 20,
+      "title": "Declaration of War!! The Dangerous Beauty Burns with Envy!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31363/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-08-18",
+      "markers": [],
+      "external_id": "31363"
+    },
+    {
+      "n": 21,
+      "title": "Premonition of Separation?! Risa and Otani Walk Seperate Paths",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31364/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-09-08",
+      "markers": [],
+      "external_id": "31364"
+    },
+    {
+      "n": 22,
+      "title": "A Catastrophic Declaration from Ootani!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31365/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-09-22",
+      "markers": [],
+      "external_id": "31365"
+    },
+    {
+      "n": 23,
+      "title": "Various Directions!! Everyone Embraces Their Own Circumstances",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31366/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-09-22",
+      "markers": [],
+      "external_id": "31366"
+    },
+    {
+      "n": 24,
+      "title": "Together Always",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31367/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-09-29",
+      "markers": [],
+      "external_id": "31367"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kimi + Boku = Love? (キミ+ボク=Love?)",
+      "artist": "Tegomass",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kiss ~ Kaerimichi no Love Song (キッス～帰り道のラブソング)",
+      "artist": "Tegomass",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Hey! Say!",
+      "artist": "Hey! Say! 7",
+      "episodes": "14-24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "BON BON",
+      "artist": "Hey! Say! 7",
+      "episodes": "14-24"
+    }
+  ],
+  "relations": []
+}

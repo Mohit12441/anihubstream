@@ -1,0 +1,670 @@
+{
+  "id": "kaiji-ultimate-survivor",
+  "title": "Kaiji - Ultimate Survivor",
+  "native": "逆境無頼カイジ Ultimate Survivor",
+  "year": 2007,
+  "rating": 8.2,
+  "season": "Fall 2007",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx3002-BExanPfxp888.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx3002-BExanPfxp888.jpg",
+  "accent": "#78430d",
+  "synopsis": "Itou Kaiji is a bum who steals car emblems and slashes tires on what seems to be a regular basis. This routine changes one day when he is paid a visit by a man in a trench-coat. Once the two get talking, it seems that the visitor (Calling himself Endou) is a debt collector. The reason for his visit is an unpaid loan which Kaiji had previously co-signed for a work-mate (Furuhata Takeshi). The original loan was 300,000 yen and once Takeshi had disappeared, the loan then fell on Kaiji.\n\nKaiji is then told of a way to clear the interest compounded debt (which stood at 3,850,000 yen), which involved getting on a boat with others in his position. Once on the boat the debtors would then have to gamble with loaned money, which would end with a few winning, and others getting into deeper debt and having to work to pay off their debts. After some coercion Kaiji accepts a position on the boat, in order to clear his debt and make a bit of money as well...",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Kaiji - Against All Rules (2011)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 2713,
+    "anilist": 3002,
+    "mal": 3002,
+    "hianime": "kaiji:-ultimate-survivor-arrvy3"
+  },
+  "skip_key_id": 3002,
+  "skip_key_space": "anilist",
+  "episode_total": 26,
+  "added_at": "2026-10-14 12:36:52",
+  "search_text": "kaiji ultimate survivor 逆境無頼カイシ ultimate survivor tv finished",
+  "genres": [
+    "drama",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Departure",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45700/original.jpg",
+      "synopsis": "Kaiji Itou is a bum who's been living in Tokyo for 3 years and gmabling his life away, then one day a shady man named Endou Yuuji comes to his home asking for Takeshi Furuhata. It turns out that his friend Furuhata disappeared and left Kaiji with the debt of ¥3,850,000, which will take him 11 years to pay off. But Endou has a proposition for him; he wants Kaiji to participate in the gambling event on the Harumi Wharf.",
+      "airdate": "2007-10-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1370
+        }
+      ],
+      "external_id": "45700"
+    },
+    {
+      "n": 2,
+      "title": "Open Fire",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45701/original.jpg",
+      "synopsis": "The event that will decide the fate of Kaiji and the rest of the debtors, onboard the Espoir, is a game called \"Restricted Rock Paper Scissors\". Following the explanation, Kaiji is then approached by Funai (the other person who borrowed 10 million) and it turns out that he's a repeater. He wants to team up with Kaiji and Kaiji accepts, not knowing what he just gotten himself into.",
+      "airdate": "2007-10-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 45
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1370
+        }
+      ],
+      "external_id": "45701"
+    },
+    {
+      "n": 3,
+      "title": "Game",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45702/original.jpg",
+      "synopsis": "Trapped in the depths of despair, Kaiji teams up with Furuhata and Andou but their group is already in a shambles, when Andou decides to backstab them. Kaiji doesn't let this affect him and he comes up with a plan to win, yet they first need some stars and someone to take the bait.",
+      "airdate": "2007-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1369
+        }
+      ],
+      "external_id": "45702"
+    },
+    {
+      "n": 4,
+      "title": "Break Down",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45703/original.jpg",
+      "synopsis": "Kaiji managed to win the match, 2 stars better of however the group still needs 4 more stars and only has 14 million in total and no cards. So Kaiji comes up with the plan to monopolize the bored by getting 30 Rock cards, however they are not the only ones who've thought of the strategy.",
+      "airdate": "2007-10-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1369
+        }
+      ],
+      "external_id": "45703"
+    },
+    {
+      "n": 5,
+      "title": "Desperation",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45704/original.jpg",
+      "synopsis": "Both having thought of the buyout strategy, Kaiji challenges Kitami to a Rock Paper Scissors death match but Kitami doesn't accept. So they have a different kind of battle. Kaiji and Kitami; their battle over 3 stars finally materializes!",
+      "airdate": "2007-10-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1353
+        }
+      ],
+      "external_id": "45704"
+    },
+    {
+      "n": 6,
+      "title": "Rise and Fall",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45705/original.jpg",
+      "synopsis": "With Kitami's group now falling apart, Kaiji proceeds with his plan of buying out all their 30 Paper cards. Funai later approaches Kaiji with their proposition to trade his star for some of Kaiji cards but Kaiji refuses. Now that no one can trust each other, Funai decides to proclaim that everyone should reshuffle their cards, which is an idea that will completely ruin Kaiji's plan.",
+      "airdate": "2007-11-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1354
+        }
+      ],
+      "external_id": "45705"
+    },
+    {
+      "n": 7,
+      "title": "Profess",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45706/original.jpg",
+      "synopsis": "The 4 hour game of \"Restricted Rock Paper Scissors\" is nearing its end and Kaiji's group is forced to join Funai's idea of reshuffling all the cards amongst the remaining participants. However soon afterwards they are stuck in their tracks with no one to play against. Kaiji was finally able to stop Funai from getting any more matches, after revealing his cheating plan and also comes up with a risky plan to survive.",
+      "airdate": "2007-11-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1369
+        }
+      ],
+      "external_id": "45706"
+    },
+    {
+      "n": 8,
+      "title": "Hammer of Justice",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45707/original.jpg",
+      "synopsis": "There are only 5 minutes left and only Funai is left, so Kaiji challenges him to a final match wagering 5 stars. Kaiji has the edge because he knows that either way he will be sent to the \"other room\" but Funai is reluctant to except this unfair wager. In the other room Kaiji pins all his hopes on being resurrected.",
+      "airdate": "2007-11-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1370
+        }
+      ],
+      "external_id": "45707"
+    },
+    {
+      "n": 9,
+      "title": "Revival",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45708/original.jpg",
+      "synopsis": "Kaiji is in the other room waiting to be resurrected by his comrades, however Andou is having second thoughts and decides to betray Kaiji by selling his stars. It doesn't take much for his last hope, Furuhata to betray him as well. Will Kaiji be able to crawl his way out of the pit of despair?",
+      "airdate": "2007-11-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 48
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1368
+        }
+      ],
+      "external_id": "45708"
+    },
+    {
+      "n": 10,
+      "title": "Messenger",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45709/original.jpg",
+      "synopsis": "Against all the odds, Kaiji was able to survive the night on the Espoir but he left with a new debt of ¥6,295,000. It's been 4 months since then and all Kaiji has been doing is living a mundane life, working in a convenience store. It all changes when Endou appears before him, yet again, offering Kaiji a ray of salvation.",
+      "airdate": "2007-12-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 48
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1353
+        }
+      ],
+      "external_id": "45709"
+    },
+    {
+      "n": 11,
+      "title": "Revelry",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45710/original.jpg",
+      "synopsis": "Kaiji accepts the invitation to the next party at the Starside Hotel and he recognizes a few familiar faces from the dreadful night on the Espoir. Kaiji is really determined this time not to fall for any tricks however the gambling event this time is \"Human Derby\" which the spectators are gambling on.",
+      "airdate": "2007-12-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1353
+        }
+      ],
+      "external_id": "45710"
+    },
+    {
+      "n": 12,
+      "title": "Tumbling Down",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45711/original.jpg",
+      "synopsis": "The event is Human Derby, a sick game which plays on ones mind and body and Kaiji must decide to push or be pushed. What will Kaiji choose to do? By the end of the Human Derby, only 21 people out of the total 60 contestants survived. Yet this is not the end of it, as there is a new deadly challenge that waits for them.",
+      "airdate": "2007-12-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1370
+        }
+      ],
+      "external_id": "45711"
+    },
+    {
+      "n": 13,
+      "title": "Monster",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45712/original.jpg",
+      "synopsis": "10 people including Kaiji have volunteered for the Human Derby on the final bridge, 22 stories high, which spells instant death if they fall. After deciding which order they will go in, the pathway to salvation opens but it may not take much for the monster they've all kept hidden away within themselves to awaken.",
+      "airdate": "2007-12-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1353
+        }
+      ],
+      "external_id": "45712"
+    },
+    {
+      "n": 14,
+      "title": "Dying Spirit",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45713/original.jpg",
+      "synopsis": "At the Starside Hotel 8 people now remain on the 74m bridge-crossing of death. Faced with imminent death, they all want to give up but Yukio Tonegawa ignores their pleas of mercy and in a mere 3 minutes only Kaiji, Sahara and Ishida remain.",
+      "airdate": "2008-01-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1369
+        }
+      ],
+      "external_id": "45713"
+    },
+    {
+      "n": 15,
+      "title": "Heavens",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45714/original.jpg",
+      "synopsis": "With only 2 people remaining, Sahara is the first to survive the bridge-crossing of death however there is something sinister behind the window, before him. With all options out of the question, Kaiji is at a loss of what to do but he eventually finds a loophole that is potentially a path to salvation.",
+      "airdate": "2008-01-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1352
+        }
+      ],
+      "external_id": "45714"
+    },
+    {
+      "n": 16,
+      "title": "Fury",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45715/original.jpg",
+      "synopsis": "Now that the ticket he had from the bridge-crossing is void, Kaiji cannot leave empty handed, so the mastermind of this offers him a chance to gain up to ¥100million. The game is \"E-Card\" and there are 3 types of cards (Citizen, Emperor &amp; Slave). The rules may be simple but there's a lot more to this psychological battle, especially since Kaiji will be facing Yukio Tonegawa.",
+      "airdate": "2008-01-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1351
+        }
+      ],
+      "external_id": "45715"
+    },
+    {
+      "n": 17,
+      "title": "Adversity",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45716/original.jpg",
+      "synopsis": "The game of E-Card has just begun and Kaiji is feeling pretty confident after winning his first 2 matches. However the true psychological battle has just begun, where Kaiji struggles to figure out his opponent's mindset.",
+      "airdate": "2008-01-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1351
+        }
+      ],
+      "external_id": "45716"
+    },
+    {
+      "n": 18,
+      "title": "Trifled",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45717/original.jpg",
+      "synopsis": "The game of E-Card that Kaiji put his hearing on the line continues into the 2nd Round and even though Kaiji has come up with a plan, it still doesn't stop him from losing the next match. Confident now that he has found a way to win, Kaiji bets 10mm for the next match but it may end up causing an upset for the rest of the game.",
+      "airdate": "2008-02-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1352
+        }
+      ],
+      "external_id": "45717"
+    },
+    {
+      "n": 19,
+      "title": "Limit",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45718/original.jpg",
+      "synopsis": "Onto the 9th match, this is the most crucial point for Kaiji who only has 4 more matches and 4mm till destruction. His mind is full of so many conflicting thoughts and even without the confidence in his choice he somehow managed to win to ensure his safety. Yet something feels off about the whole turn of events and through his deductive skills Kaiji realizes that they are cheating.",
+      "airdate": "2008-02-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1353
+        }
+      ],
+      "external_id": "45718"
+    },
+    {
+      "n": 20,
+      "title": "Fierce God",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45719/original.jpg",
+      "synopsis": "Kaiji has figured out Tonegawa's method of cheating and decides to use this to his advantage by recklessly wagering the maximum remaining length available (18mm). But this isn't completely reckless, since he's thought of an idea to win the 2 remaining Slave rounds.",
+      "airdate": "2008-02-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1351
+        }
+      ],
+      "external_id": "45719"
+    },
+    {
+      "n": 21,
+      "title": "Heart's Blood",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45720/original.jpg",
+      "synopsis": "Onto the final match of E-Card and Kaiji decides to go for another life or death gamble, as he has come up with a way to take advantage of this disadvantaged situation. Kaiji is determined not to leave without ¥20million but how far will that determination take him?",
+      "airdate": "2008-02-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1353
+        }
+      ],
+      "external_id": "45720"
+    },
+    {
+      "n": 22,
+      "title": "Enforcement",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45721/original.jpg",
+      "synopsis": "The final judgement has been met by Tonegawa, as he believes he has discerned Kaiji's plan of purposely splattering the cards with his blood but he was only being lead by Kaiji's true plan. Now all that's left is for certain formalities to be taken care of; for Kaiji to receive is money and for Tonegawa to sincerely apologize.",
+      "airdate": "2008-03-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1352
+        }
+      ],
+      "external_id": "45721"
+    },
+    {
+      "n": 23,
+      "title": "Heresy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45722/original.jpg",
+      "synopsis": "Even after his unbelievable feat of beating Tonegawa, Kaiji does feel satisfied unless he beats the chairman. In the restroom Kaiji thinks of some kind of rigged lottery, \"Tissue Box Raffle\" to beat the one in charge of all this. With all preparations met he heads out to challenge the chairman to one more gamble.",
+      "airdate": "2008-03-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1351
+        }
+      ],
+      "external_id": "45722"
+    },
+    {
+      "n": 24,
+      "title": "Conditions",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45723/original.jpg",
+      "synopsis": "Through Kaiji's persistence, the chairman finally accepts his challenge but Kaiji must find a way to get the chairman to accept the idea of a \"Tissue Box Raffle\". Kaiji's plan seems to be going smoothly but then the chairman decides to lay out three conditions that must be followed.",
+      "airdate": "2008-03-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1353
+        }
+      ],
+      "external_id": "45723"
+    },
+    {
+      "n": 25,
+      "title": "Investment",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45724/original.jpg",
+      "synopsis": "The night of lunacy continues; with Kaiji putting his ¥20million and 4 fingers on the line, for a ¥100million gamble. The game is Tissue Box Raffle and something unexpected occurs, which completely throws away Kaiji's sure-fire way to win.",
+      "airdate": "2008-03-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1354
+        }
+      ],
+      "external_id": "45724"
+    },
+    {
+      "n": 26,
+      "title": "Afterglow",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45725/original.jpg",
+      "synopsis": "The final scene of the night of lunacy begins. The name of the game is \"Tissue Box Raffle\" and Kaiji's plan, to win on the first draw seems to have run into a dead end. Will Kaiji's desperate prayers reach the heavens?",
+      "airdate": "2008-04-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1276,
+          "end": 1355
+        }
+      ],
+      "external_id": "45725"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}
