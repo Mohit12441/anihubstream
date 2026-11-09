@@ -90,9 +90,45 @@ export async function buildLocalDatabase(opts = {}) {
     } catch {}
   };
 
+  const insertFranchiseRelations = () => {
+    const relationsFile = path.join(referenceDir, 'franchise_relations.json');
+    if (!fs.existsSync(relationsFile)) return;
+    try {
+      const relations = JSON.parse(fs.readFileSync(relationsFile, 'utf8'));
+      const stmt = db.prepare(`
+        INSERT OR REPLACE INTO anime_franchise_relation (anime_id, related_anime_id, relation_type)
+        VALUES (?, ?, ?)
+      `);
+      db.exec('BEGIN TRANSACTION');
+      for (const r of relations) {
+        stmt.run(r.anime_id, r.related_anime_id, r.relation_type);
+      }
+      db.exec('COMMIT');
+    } catch {}
+  };
+
+  const insertRedirects = () => {
+    const redirectsFile = path.join(referenceDir, 'redirects.json');
+    if (!fs.existsSync(redirectsFile)) return;
+    try {
+      const redirects = JSON.parse(fs.readFileSync(redirectsFile, 'utf8'));
+      const stmt = db.prepare(`
+        INSERT OR REPLACE INTO anime_redirect (source_slug, target_slug, reason, created_at)
+        VALUES (?, ?, ?, ?)
+      `);
+      db.exec('BEGIN TRANSACTION');
+      for (const rd of redirects) {
+        stmt.run(rd.source_slug, rd.target_slug, rd.reason || null, rd.created_at || new Date().toISOString());
+      }
+      db.exec('COMMIT');
+    } catch {}
+  };
+
   insertGenres();
   insertRoutes();
   insertIdMap();
+  insertFranchiseRelations();
+  insertRedirects();
 
   // 2. Prepare Anime & Episode Statements
   const insertAnimeStmt = db.prepare(`
