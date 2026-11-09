@@ -46,6 +46,10 @@ jobs:
         with:
           node-version: 22
 
+      - name: Initialize Local Database Replica
+        run: |
+          npm run data:build
+
       - name: Run Schema & Data Validation Tests
         run: |
           node --test tools/data-*.test.mjs

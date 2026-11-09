@@ -7,17 +7,19 @@ import crypto from 'node:crypto';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DEFAULT_D1_DIR = path.join(ROOT, '.wrangler', 'state', 'v3', 'd1', 'miniflare-D1DatabaseObject');
 
+import { initLocalDatabase } from './init-local-db.mjs';
+
 /**
  * Finds the local Miniflare SQLite file.
  * @returns {string}
  */
 export function getLocalSqlitePath() {
   if (!fs.existsSync(DEFAULT_D1_DIR)) {
-    throw new Error(`Local D1 directory not found: ${DEFAULT_D1_DIR}`);
+    return initLocalDatabase().dbPath;
   }
   const files = fs.readdirSync(DEFAULT_D1_DIR).filter(f => f.endsWith('.sqlite') && f !== 'metadata.sqlite');
   if (files.length === 0) {
-    throw new Error('No .sqlite database found in local miniflare D1 directory');
+    return initLocalDatabase().dbPath;
   }
   return path.join(DEFAULT_D1_DIR, files[0]);
 }
