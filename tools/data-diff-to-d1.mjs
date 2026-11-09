@@ -116,17 +116,21 @@ export function generateDeltaSqlFromDocs(opts) {
 }
 
 /**
- * Gets changed data files between two Git revisions.
+ * Gets changed data files between two Git revisions or staged changes.
  * @param {string} [fromRef]
  * @param {string} [toRef]
+ * @param {boolean} [staged]
  * @returns {string[]}
  */
-export function getChangedDataFiles(fromRef = 'HEAD~1', toRef = 'HEAD') {
+export function getChangedDataFiles(fromRef = 'HEAD~1', toRef = 'HEAD', staged = false) {
   try {
-    const output = execSync(`git diff --name-only ${fromRef} ${toRef} -- data/`, { encoding: 'utf8', cwd: ROOT });
+    const cmd = staged
+      ? 'git diff --cached --name-only -- data/'
+      : `git diff --name-only ${fromRef} ${toRef} -- data/`;
+    const output = execSync(cmd, { encoding: 'utf8', cwd: ROOT });
     return output.split('\n').map(s => s.trim()).filter(Boolean);
   } catch (err) {
-    console.warn(`[getChangedDataFiles] Git diff failed against ${fromRef}..${toRef}:`, err.message);
+    console.warn(`[getChangedDataFiles] Git diff failed:`, err.message);
     return [];
   }
 }
@@ -135,14 +139,15 @@ export function getChangedDataFiles(fromRef = 'HEAD~1', toRef = 'HEAD') {
 if (process.argv[1] && import.meta.url.endsWith(path.basename(process.argv[1]))) {
   const dryRun = process.argv.includes('--dry-run');
   const force = process.argv.includes('--force');
+  const staged = process.argv.includes('--staged');
   const fromArg = process.argv.find(a => a.startsWith('--from='));
   const toArg = process.argv.find(a => a.startsWith('--to='));
 
   const fromRef = fromArg ? fromArg.split('=')[1] : 'HEAD~1';
   const toRef = toArg ? toArg.split('=')[1] : 'HEAD';
 
-  console.log(`[data-diff-to-d1] Checking Git diff from ${fromRef} to ${toRef}...`);
-  const changedFiles = getChangedDataFiles(fromRef, toRef);
+  console.log(`[data-diff-to-d1] Checking Git diff (${staged ? 'staged index' : `${fromRef}..${toRef}`})...`);
+  const changedFiles = getChangedDataFiles(fromRef, toRef, staged);
   console.log(`[data-diff-to-d1] Found ${changedFiles.length} changed data files.`);
 
   if (changedFiles.length === 0) {
