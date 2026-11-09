@@ -1,0 +1,55 @@
+{
+  "id": "embers",
+  "title": "EMBERS",
+  "native": "余烬行者",
+  "year": 2025,
+  "rating": 5.9,
+  "season": "2025",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx166451-zaUzvxynYdUk.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx166451-zaUzvxynYdUk.jpg",
+  "accent": "#e4865d",
+  "synopsis": "In a quiet village, a young boy named Duanmu Yeyu was once saved by the elite “Hell Hunters” of Ember City. Deeply inspired by these heroes, he vowed to one day become a Hell Hunter himself. As he boards a bus to Ember City to chase his dream, Yeyu is unknowingly swept into a storm of chaos. The main antagonist, Lucifer, sends a bioengineered operative named MIKO-Taiyi to infiltrate Ember City and steal classified data. During a fierce battle with the Hell Hunters, Taiyi is severely injured and falls unconscious. Yeyu stumbles upon Taiyi and, unaware of Taiyi's identity, brings Taiyi back to the Hell Hunters’ base for treatment. In the process, Yeyu unintentionally takes a critical mission device from Taiyi. As Yeyu begins his long-awaited trial to join the Hell Hunters, his innocent act sets off a chain reaction. Taiyi, desperate to avoid detection by Ember City forces, must covertly approach Yeyu and retrieve the device. Meanwhile, Lucifer dispatches tens of thousands of minions to locate the missing Taiyi. Thus begins a citywide conflict, sparked by a small act of kindness, that threatens to become a battle for Ember City’s very survival.\n\n(Source: iQIYI)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "embers-47z5cw",
+    "mal": 61622,
+    "anilist": 166451,
+    "kitsu": 48954
+  },
+  "skip_key_id": 61622,
+  "skip_key_space": "mal",
+  "episode_total": 15,
+  "added_at": null,
+  "search_text": "embers 余烬行者 ona finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "369323"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

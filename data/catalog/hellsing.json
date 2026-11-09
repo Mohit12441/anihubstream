@@ -1,0 +1,412 @@
+{
+  "id": "hellsing",
+  "title": "Hellsing",
+  "native": "HELLSING",
+  "year": 2001,
+  "rating": 7.2,
+  "season": "Fall 2001",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b270-S2ProngvO6BU.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b270-S2ProngvO6BU.jpg",
+  "accent": "#e4ae43",
+  "synopsis": "Hellsing follows the antiheroic vampire, Alucard, and a police girl-turned-vampire, Seras Victoria, two vampires employed by the vampire-extermination group of England, the Hellsing Organization. Slowly but surely, through their active duty, they find a new breed of vampires beginning to arise.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 245,
+    "anilist": 270,
+    "mal": 270,
+    "hianime": "hellsing-a46dzx"
+  },
+  "skip_key_id": 270,
+  "skip_key_space": "anilist",
+  "episode_total": 13,
+  "added_at": "2026-10-14 09:43:34",
+  "search_text": "hellsing hellsing tv finished",
+  "genres": [
+    "action",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Undead",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7272/original.jpg",
+      "synopsis": "Integra Hellsing takes command of a small Hellsing unit in Cheddar after reports of people in the village going missing by a seemingly normal priest reaches the authorities. After D11 teams were deployed to investigate with several deaths, Alucard is deployed. Seras Victoria, a female D11 operator, is fighting her ex-D11 colleagues that turned into zombies after getting into a previous fight with ghouls. Alucard eliminates the ghouls and the priest, who was the vampire, when Seras was wounded in the gunfight. Alucard turns her into a vampire after he bites her neck to save her life.",
+      "airdate": "2003-10-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1367
+        }
+      ],
+      "external_id": "7272"
+    },
+    {
+      "n": 2,
+      "title": "Club M",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7273/original.jpg",
+      "synopsis": "Seras' new life in the Hellsing organization is a bit tough. Having been counted as 'lost' at the Cheddar incident, she now serves for a group dedicated to the eradication of vampires. Though she seems to have trouble adjusting, many are tolerant of her, and her new life, though the tolerance only goes so far. And she'll soon have a chance to prove herself, when a new threat is discovered, in the form of Rafe and Jessica. The two lovers are having a lot of fun! Killing families, using their blood to write obscenities and blasphemy on the wall - it's all good fun. That is, until their actions catch the eye of Hellsing, and particularly Arucard, who has no tolerance for the 'low-class' vampires. Seras' chance to prove herself becomes apparent when she's ordered to shoot Jessica, though she hesitates - Jessica's only a young girl. Would killing her make her any better, or make her worse than the monsters Hellsing hunts?",
+      "airdate": "2003-10-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1367
+        }
+      ],
+      "external_id": "7273"
+    },
+    {
+      "n": 3,
+      "title": "Sword Dancer",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7274/original.jpg",
+      "synopsis": "Something odd is happening - vampires seem to be growing in number. And when an Italian college student is found to have a computer chip, which has apparently made him into an 'artificial' vampire, it raises more than a few eyebrows. Even though the chip is removed, the student revives, killing many on his search for his lover, who he was caught in the act of making one of his own. Hellsing moves to put a stop to this, but there seems to be more than one person interested in the boy. Hellsing's agents are killed, and Seras is severely wounded. Not by the student, but by a man called Alexander Anderson, a member of the Vatican's section 13 - the Iscariot organization. Though having the same mission as Hellsing, the two organizations are sworn enemies, and when Arucard shows up, a heated battle takes place. One would think a human would be no match for the likes of a vampire, Anderson proves to have more than one trick up his sleeve.",
+      "airdate": "2003-10-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 19,
+          "end": 100
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1357
+        }
+      ],
+      "external_id": "7274"
+    },
+    {
+      "n": 4,
+      "title": "Innocent as a Human",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7275/original.jpg",
+      "synopsis": "The Hellsing Organization sets out to investigate a series of \"\"snuff films\"\" floating about the Internet, after footage of one of their own being killed begins to make the rounds. Meanwhile, Seras deploys with her unit, now under the command of a former SAS officer who seem to have a particularly distasteful attitude towards her, to silence an apartment building crawling with ghouls. As the raid unfolds, the secrecy surrounding the very existence of the Hellsing Organization is thrown in jeopardy when a mole broadcasts footage of the assault on live television. Seeking answers, Seras sets out on her own to investigate the scene of the previous night's raid for clues about what transpired. During her investigation, she manages to uncover clues about the origin of the snuff films and goes to put a stop to it. Seras isn't the only one on the trail, as Arucard and the Hellsing Organization are also on the scene to attend to the vicious vampire behind the camera, and the TV investigative rep",
+      "airdate": "2003-10-11",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1276,
+          "end": 1356
+        }
+      ],
+      "external_id": "7275"
+    },
+    {
+      "n": 5,
+      "title": "Brotherhood",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7276/original.jpg",
+      "synopsis": "Seras is still having a hard time dealing with the fact that she's a vampire, but is slowly adapting. However, the real bad news is the violent and crazy Valentine Brothers who decide to take out the Hellsing crew once and for all by means of infiltrating their headquarters with their Ghoul Army.",
+      "airdate": "2003-10-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1278,
+          "end": 1368
+        }
+      ],
+      "external_id": "7276"
+    },
+    {
+      "n": 6,
+      "title": "Dead Zone",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7277/original.jpg",
+      "synopsis": "Picking up where Brotherhood left off. Luke and Jan, the Valentine Brothers, lay siege to the headquarters of the Hellsing organization, the Royal Order of Religious Knights. After numerous humans have been killed and eaten by an army of ghouls, Victoria, Walter, and Arucard finally get around to striking back. Victoria and Walter eliminate hundreds of ghouls with a combination of deadly threads and heavy artillery. The lead flies when Arucard and Luke face off, but Luke is devoured by a canine monster Arucard summons up. Jan sets himself afire rather than reveal the mastermind of their plot to Sir Integra Hellsing.",
+      "airdate": "2003-10-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1369
+        }
+      ],
+      "external_id": "7277"
+    },
+    {
+      "n": 7,
+      "title": "Duel",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7278/original.jpg",
+      "synopsis": "More than half of the members of the Royal Order of Religious Knights were massacred due to the last attack on them that was conducted by the Valentine Brothers. Sir Integra Hellsing, Arucard, and Seras must now hunt down the perpetrators. The suspects include the Vatican's Iscariot Organization. Arucard must do battle once again with the notorious Alexander Anderson.",
+      "airdate": "2003-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1276,
+          "end": 1355
+        }
+      ],
+      "external_id": "7278"
+    },
+    {
+      "n": 8,
+      "title": "Kill House",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7279/original.jpg",
+      "synopsis": "Victoria learns more about whoever is making the \"artificial vampirization catalyst semiconductor\" or \"freak chips\" that turn humans into second-class ghouls.",
+      "airdate": "2003-10-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1276,
+          "end": 1356
+        }
+      ],
+      "external_id": "7279"
+    },
+    {
+      "n": 9,
+      "title": "Red Rose Vertigo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7280/original.jpg",
+      "synopsis": "Alucard meets a new enemy. that could be more powerful than he. An original undead, Incognito. And things take a drastic turn for the worst when Sir Integra's life is in jeopardy.",
+      "airdate": "2003-10-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1276,
+          "end": 1352
+        }
+      ],
+      "external_id": "7280"
+    },
+    {
+      "n": 10,
+      "title": "Master of Monster",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7281/original.jpg",
+      "synopsis": "Almost commiting suicide, Integra is being operated on to save her life. While the operation is going on, we see the history of Integra's ascension to power. We learn that her uncle tried to take her father's place as head of the Hellsing organization, and in attempt to assume power, tried to kill off Integra while Walter was away (presumably on duty). Integra recalls her father's words of her going to a prison cell on the bottom floor if she ever found herself in a moment of insurmountable peril. There she finds Arucard, while at the same time found and attacked by her uncle and associates. After being shot in the shoulder, her blood awakens Arucard, who quickly takes care of her uncle's goons, and recognizes her as her father's successor. As her first encounter with Arucard concludes, she awakens from her state to find that the operation was a success... Walter has already set up her afternoon tea for her.",
+      "airdate": "2003-10-25",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1276,
+          "end": 1355
+        }
+      ],
+      "external_id": "7281"
+    },
+    {
+      "n": 11,
+      "title": "Transcend Force",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7282/original.jpg",
+      "synopsis": "With the freak problems getting much worse, the Royal Knights arrange a meeting at Westminster with Integra to discuss the matter. In addition, the Queen will be meeting with them so they can conduct a ceremony with Integra. Because of the danger that the freaks may pose, the media is told that the meeting will take place at the Tower of London while in truth Integra's ritual is at the Hellsing castle. What is at the tower are Fargason and his men waiting for the freaks. However, it is they who are being waited on as Incognito and his freaks attack the tower. While waiting for the Queen, Alucard butts in and says that her queen isn't coming and heads off to fight.",
+      "airdate": "2003-10-25",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1354
+        }
+      ],
+      "external_id": "7282"
+    },
+    {
+      "n": 12,
+      "title": "Total Destruction",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7283/original.jpg",
+      "synopsis": "All out war breaks out at the Tower of London and Integra's meeting with her majesty is cancelled. The remaining Hellsing members are at the decoy spot of the meeting, battling ghouls of the S.A.S. from Red House Vertigo. Due to the vast coverage of the \"terrorist attacks\" and the required secrecy of the undead, Hellsing organization is pinned by an unknwon source in the media as the terrorist organization itself. The British military is called in to stop these \"terrorists.\" Fargason purposely gets himself killed so he looked like a terrorist, preventing the media from investigating the London Tower destruction any further, thus keeping both the vampires and Hellsing out of the public eye (for now). Seras Victoria is finally makes it to the tower only to see Fargason get shot. After paying her final respects, she grabs her Halkonnen and rushes into the tower area. While that is happening, Alucard was making his way through the tower to meet with Incognito for one big battle.",
+      "airdate": "2003-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 76
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1353
+        }
+      ],
+      "external_id": "7283"
+    },
+    {
+      "n": 13,
+      "title": "Hellfire",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/7284/original.jpg",
+      "synopsis": "This episode opens with the fierce battle between Incognito and Lord Alucard. Eventually, as the battle ensues, Incognito manages to \"destroy\" Alucard with his own \"bullets that store the power of the human God\". Near the beginning of this battle Ceras Victoria became injured and realizes she must drink blood to heal herself, she discovers her first taste of true blood from her fallen master. Disgusted at her display of ignorance, Incognito leaves the scene to summon a demon from Hell. Incognito manages to summon Set, a snake-like creature who is the Egyptian God of Evil and of Chaos, the Desert, and Foreign Lands, from which he plans to merge his body with and develop insurmountable levels of power. As Integra Hellsing flees, her servant and closest friend, Walter, sacrifices himself so that Integra might live. Unfortunately for Walter, his sacrafice seems to be in vein as Integra is captured by Incognito and used to assist in the summoning of Set. As her blood is drained by the No",
+      "airdate": "2003-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 78
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1352
+        }
+      ],
+      "external_id": "7284"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gradus Vita",
+      "artist": "Hayato Matsuo, performed by the Warsaw Philharmonic Orchestra",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Logos Naki World (A World Without Logos)",
+      "artist": "Yasushi Ishii",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shine",
+      "artist": "Mr. Big",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Merche Funebre",
+      "artist": "by Hayato Matsuo, performed by the Warsaw Philharmonic Orchestra",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Letze Bataillon",
+      "artist": "Hayato Matsuo",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Das Engellandlied",
+      "artist": "Hermann Lons.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "A Patriot with No Name",
+      "artist": "???",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Magnolia",
+      "artist": "Suilen",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Shintou Shite",
+      "artist": "Suilen",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "P.S. Lord Amitabha Have Mercy on Me/When You Start the War, Fight With Arrows, Spears and Swords! (「P.S.南無阿弥陀仏 」, 「戦争するなら弓、槍、剣で戦え!」)",
+      "artist": "Yasushi Ishii",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "SCARS",
+      "artist": "Maon Kurosaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "Gradus vita",
+      "artist": "Hayato Matsuo",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

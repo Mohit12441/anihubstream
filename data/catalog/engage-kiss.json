@@ -1,0 +1,327 @@
+{
+  "id": "engage-kiss",
+  "title": "Engage Kiss",
+  "native": "Engage Kiss",
+  "year": 2022,
+  "rating": 6.6,
+  "season": "Summer 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx146625-DmXjpJ2y8fDn.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx146625-DmXjpJ2y8fDn.jpg",
+  "accent": "#e4bb43",
+  "synopsis": "The anime is set in Bayron City, an artificial island city established, outside of any country's jurisdiction, in the Pacific Ocean to exploit local natural resources. In particular, the mining of the new energy resource orgonium has resulted in an outbreak of \"D disasters\" by demons in the city. Private military companies (PMCs) are tasked with dealing with these incidents.\n\nThe protagonist Shuu runs a small PMC, though his spending habits have left him constantly penniless. A demon girl named Kisara does contract work at Shuu's office and is constantly worried for him. Kisara attends a high school in Bayron City, and does everything from clerical work to household chores with confidence. Meanwhile, Ayano is Shuu's ex-girlfriend, an elite agent, and a former work colleague in a major PMC that Shuu used to work for.\n\n(Source: Anime News Network, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46013,
+    "anilist": 146625,
+    "mal": 51417
+  },
+  "skip_key_id": 51417,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 13:05:21",
+  "search_text": "engage kiss engage kiss tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A Loser and a Demon and a Man and a Woman",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/484b356c857aeb97d1a29599e7238ea31656773530_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 22,
+          "end": 112
+        }
+      ],
+      "external_id": "328171"
+    },
+    {
+      "n": 2,
+      "title": "The Island of Desire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/57562d162ace90bf9c68bf156047b0e11657381776_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1440
+        }
+      ],
+      "external_id": "328172"
+    },
+    {
+      "n": 3,
+      "title": "The Slightest Terrible Cost",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6da9f71cf22a21ed781ab714378fbad81657976320_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1401
+        }
+      ],
+      "external_id": "328173"
+    },
+    {
+      "n": 4,
+      "title": "Unobtainable Lingering",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/aa89e49087cb40ac7647bee73fa237c51658588787_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 95,
+          "end": 198
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1435
+        }
+      ],
+      "external_id": "328174"
+    },
+    {
+      "n": 5,
+      "title": "Fleeting Scars",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/e182588f436c9381527f3467e8b2cd9c1659193422_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "328175"
+    },
+    {
+      "n": 6,
+      "title": "Third-Party Demon Killer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b9119ed7720e633e5e0f97b05f7955781659779963_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 119
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1344,
+          "end": 1434
+        }
+      ],
+      "external_id": "328176"
+    },
+    {
+      "n": 7,
+      "title": "But It's Okay, That's Enough",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/aaade26951e7df28338da0ce140ade431660405511_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 171
+        }
+      ],
+      "external_id": "328177"
+    },
+    {
+      "n": 8,
+      "title": "The Unwanted Truth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/94007c7dce8fcb2b3368a832641c8e631660986521_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 47,
+          "end": 137
+        }
+      ],
+      "external_id": "328178"
+    },
+    {
+      "n": 9,
+      "title": "Without Understanding the Tears Shed",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/573e02405f7fc4ada8ab74e15de6f1c51661616270_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 22,
+          "end": 112
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1440
+        }
+      ],
+      "external_id": "328179"
+    },
+    {
+      "n": 10,
+      "title": "High Hopes for the Worst Case",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/6fadb1e707d9956ed5b3690a7e9948581662208398_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 22,
+          "end": 112
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1344,
+          "end": 1434
+        }
+      ],
+      "external_id": "328180"
+    },
+    {
+      "n": 11,
+      "title": "Gentle Foolish Lies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c5a45bc30c57c25fb4e1d4e9604944861662823890_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1435
+        }
+      ],
+      "external_id": "328181"
+    },
+    {
+      "n": 12,
+      "title": "Believe in Him",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/4c533af9b1db2a79345bab9f78a9d8cf1663433117_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 30,
+          "end": 120
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1440
+        }
+      ],
+      "external_id": "328182"
+    },
+    {
+      "n": 13,
+      "title": "Unresolved Grand Finale",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/3689a65c0d9c261fb61771e95418eda61664034509_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        }
+      ],
+      "external_id": "328183"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

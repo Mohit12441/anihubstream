@@ -1,0 +1,331 @@
+{
+  "id": "gosick",
+  "title": "Gosick",
+  "native": "GOSICK",
+  "year": 2011,
+  "rating": 7.7,
+  "season": "Winter 2011",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx8425-Bn14ayPjnq9o.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx8425-Bn14ayPjnq9o.jpg",
+  "accent": "#2ee6a8",
+  "synopsis": "Kazuya Kujou is a foreign student at Saint Marguerite Academy, a luxurious boarding school in the Southern European country of Sauville. Originally from Japan, his jet-black hair and dark brown eyes cause his peers to shun him and give him the nickname \"Black Reaper,\" based on a popular urban legend about the traveler who brings death in the spring.\n\nOn a day like any other, Kujou visits the school's extravagant library in search of ghost stories. However, his focus soon changes as he becomes curious about a golden strand of hair on the stairs. The steps lead him to a large garden and a beautiful doll-like girl known as Victorique de Blois, whose complex and imaginative foresight allows her to predict their futures, now intertwined.\n\nWith more mysteries quickly developing—including the appearance of a ghost ship and an alchemist with the power of transmutation—Victorique and Kujou, bound by fate and their unique skills, have no choice but to rely on each other.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "gosick-j9lvf8",
+    "mal": 8425,
+    "anilist": 8425,
+    "kitsu": 5330
+  },
+  "skip_key_id": 8425,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "gosick gosick tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Dark Reaper Finds the Golden Fairy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83618/original.jpg",
+      "synopsis": "Kazuya Kujo is an exchange student from Japan.  While exploring the library he encounters Victorique de Blois.  While talking her extravagant brother Grevil arrives and questions Victorique through Kujo about a locked room murder.  Victorique sets her mind to the task and comes up with an improbable but entirely logical answer.",
+      "airdate": "2011-01-07",
+      "markers": [],
+      "external_id": "83618"
+    },
+    {
+      "n": 2,
+      "title": "The Souls of the Dead Raise a Shipwreck",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83619/original.jpg",
+      "synopsis": "Posing as the murdered Soothsayer, Roxane and her servant, Victorique and Kujo have boarded the Queen Merry.  Once on board they discover they have fallen into another mystery, this one with deadly intent towards everyone.",
+      "airdate": "2011-01-15",
+      "markers": [],
+      "external_id": "83619"
+    },
+    {
+      "n": 3,
+      "title": "The Hares Break a Promise Under the Morning Sun",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83620/original.jpg",
+      "synopsis": "The trap closes and the architect behind it is revealed or is he?  Victorique picks up on a larger scheme that set much larger things in motion.  The question is are the still in motion to this day?",
+      "airdate": "2011-01-21",
+      "markers": [],
+      "external_id": "83620"
+    },
+    {
+      "n": 4,
+      "title": "The Golden Thread Cuts Through a Passing Moment",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83621/original.jpg",
+      "synopsis": "Kazuya witnesses the bizarre beheading of a man riding a motorcycle.  While a suspect matching the description Victorique surmised is arrested a new girl joins Kazuya’s school who also matches the description.",
+      "airdate": "2011-01-28",
+      "markers": [],
+      "external_id": "83621"
+    },
+    {
+      "n": 5,
+      "title": "There's a Mysterious Ghost in the Abandoned Storehouse",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83622/original.jpg",
+      "synopsis": "The case of the beheaded man is brought to a close after Victorique reveals the true identity of the new student at the school.",
+      "airdate": "2011-02-04",
+      "markers": [],
+      "external_id": "83622"
+    },
+    {
+      "n": 6,
+      "title": "The Gray Wolves Summon Their Brethren",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83623/original.jpg",
+      "synopsis": "Kazuya is stumped by the disappearance of a valuable plate from a local bazaar.  At the same time he sees an advertisement in the paper call for all “Descendants of the Gray Wolves” to return to their ancestral home.  After telling Victorique about it she insists on going to the town immediately.",
+      "airdate": "2011-02-11",
+      "markers": [],
+      "external_id": "83623"
+    },
+    {
+      "n": 7,
+      "title": "A Divine Revelation is Given at the Summer Solstice Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83624/original.jpg",
+      "synopsis": "Victorica and Kujo explore the \"Village of the Gray Wolves\" where her mother lived in search for clues to prove her innocence, but Victorica gets disappointed when she uncovers the truth and figures that she lacks the means to clear her name. To complicate matters, two of the tourists who were visiting the village with them are killed among strange circumstances.",
+      "airdate": "2011-02-18",
+      "markers": [],
+      "external_id": "83624"
+    },
+    {
+      "n": 8,
+      "title": "Howling Echoes from the Kingdom of the Past",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83625/original.jpg",
+      "synopsis": "Victorica manages to find the culprit behind the recent deaths at the village and to clear her mother's name by exposing the woman who framed her. However, when the woman attempts to escape, she starts torching the entire village, and Kujo must confront her while protecting Victorica with his life.",
+      "airdate": "2011-02-25",
+      "markers": [],
+      "external_id": "83625"
+    },
+    {
+      "n": 9,
+      "title": "Blue Roses Bloom in the Cannibal Department Store",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83626/original.jpg",
+      "synopsis": "Victorica gets a fever as Kujo sets out alone for some errands in Sauville. While searching for a souvenir for his sister, he meets a girl among a pile of mannequins. The girl asks for help, but when he gets back to the department store with the Inspector, she is nowhere to be found. Kujo calls Victorica by phone to ask her help, but the call is cut short as he is taken away.",
+      "airdate": "2011-03-04",
+      "markers": [],
+      "external_id": "83626"
+    },
+    {
+      "n": 10,
+      "title": "Girl with a Cold Dreams of Her Stubborn Friend",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83627/original.jpg",
+      "synopsis": "Kujo encounters the same girl he met at the department store, and with the help of hers and a bright homeless boy, he manages to put the police back on the case. Kujo and Grevil then ask Victorique's opinion about the store, just to find that she already had made some research about it, and she comes with a plan to expose the culprits.",
+      "airdate": "2011-03-18",
+      "markers": [],
+      "external_id": "83627"
+    },
+    {
+      "n": 11,
+      "title": "That Drill Eloquently Speaks of Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83628/original.jpg",
+      "synopsis": "Jaqueline, an old friend of Grevil's, pays a visit to the Academy to make a donation and has a sudden encounter with Victorique at the Library Tower. There, she tells the story of a mysterious incident from the past where she was falsely accused of murder, unaware about its connection with both Victorique and the reason why Grevil has started bearing his unusual hairstyle.",
+      "airdate": "2011-04-02",
+      "markers": [],
+      "external_id": "83628"
+    },
+    {
+      "n": 12,
+      "title": "The Cicadas are Heard on Summer Afternoons",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83629/original.jpg",
+      "synopsis": "Everybody in school are preparing for there summer vacation. Kujo has turned down his vacation trip with Avril to stay with Victorique. Kujo has flash back of his past of why he left japan, while relaxing on a tree. When Kujo went into the academy, Victorique wanted to climb the tree Kujo was on and gets stuck in the tree forcing Kujo to save her. Kujo then chills at Victorique's house while it rains, but she spills tea all over her kimono and forcing Kujo to clean it up. The scene ends with Kujo remembering to to buy sweet for Victorique.",
+      "airdate": "2011-04-09",
+      "markers": [],
+      "external_id": "83629"
+    },
+    {
+      "n": 13,
+      "title": "A Fool Designates His Own Spokesperson",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83630/original.jpg",
+      "synopsis": "Kujo and Avril explore one of the school's towers and Avril figures that it is related to the legend of Leviathan, an alchemist who lived there decades before. Victorique stumbles on a pop-up book containing a cryptic message aledgely from Leviathan himself and when a death occurs at the top of the tower, she decides to investigate by herself.",
+      "airdate": "2011-04-16",
+      "markers": [],
+      "external_id": "83630"
+    },
+    {
+      "n": 14,
+      "title": "A Malicious Frill Denounces a Farting Newt",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83631/original.jpg",
+      "synopsis": "Victorique is dragged by her teacher to her classroom and is introduced to the rest of her classmates. Avril tries to bring her attention but she gets angry on her instead. Kujo demands Victorique to apologize to her, and when she refuses, he sets with Avril to keep investigating the Leviathan case without her help. Meanwhile Victorique has an encounter with Brian Roscoe, a friend of the victim's, on the top of the clock tower.",
+      "airdate": "2011-04-22",
+      "markers": [],
+      "external_id": "83631"
+    },
+    {
+      "n": 15,
+      "title": "Two Monsters Know Each Others' Hearts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83632/original.jpg",
+      "synopsis": "Kujo inquires Brian Roscoe regarding his connection to Victorique and her mother, but he only warns him to beware of her father instead. Meanwhile, Victorique succeeds to unlock the secrets behind Leviathan, the clock tower and the truth about her own origin.",
+      "airdate": "2011-04-30",
+      "markers": [],
+      "external_id": "83632"
+    },
+    {
+      "n": 16,
+      "title": "The Felling Maria Has the Head of a Fly",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83633/original.jpg",
+      "synopsis": "Victorique's father has her taken from the academy to a convent known as \"Beelzebub's Skull\" in Lithuania. Kujo learns about her whereabouts from Grevil and takes a train going there to look for her. Guided by a woman who resembles a lot like her, Kujo manages to find where Victorique is held and learns from her that the woman is most likely her mother, Cordelia.",
+      "airdate": "2011-05-07",
+      "markers": [],
+      "external_id": "83633"
+    },
+    {
+      "n": 17,
+      "title": "The Box Lies in the Spiral Labyrinth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83634/original.jpg",
+      "synopsis": "Victorique reveals to Kujo that her father brought her to the convent in order to bait out Cordelia and Brian. As the two escape, they become separated by an illusion. Victorique encounters Brian, who reveals that he is planning to stop her father and the Academy. Meanwhile, Kujo runs into Cordelia, who entrusts him with a ring and some words of encouragement for her daughter, then Marquis Albert de Blois himself. Albert attempts to force Kujo to surrender Victorique to him, but Kujo refuses and leaves. The floodgates shielding the convent are opened by a time-release trap set by Albert, flooding the entire area, and Kujo barely escapes with Victorique.",
+      "airdate": "2011-05-13",
+      "markers": [],
+      "external_id": "83634"
+    },
+    {
+      "n": 18,
+      "title": "The Jet-Black Train Carries Several Lies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83635/original.jpg",
+      "synopsis": "Having escaped from the flood, Victorique, Kujo and the rest of the passengers of the Masquerade Express find themselves involved into a bloody contest for an elusive item that can shake the balance of power between the Academy and the Ministry of Occult.",
+      "airdate": "2011-05-20",
+      "markers": [],
+      "external_id": "83635"
+    },
+    {
+      "n": 19,
+      "title": "The Rosy Life is Buried Under a New Snow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83636/original.jpg",
+      "synopsis": "Kujo leaves to the capital to find a present to Victorique's birthday which coincidentaly is on christmas day. Meanwhile, Victorique receives a message from her mother and starts looking for Kujo without success until she is summoned by her father and taken by Grevil to the capital to solve the greatest mystery of the country, which involves its previous queen, Coco Rose, whose life is being reenacted in a play at the Phantom Theater.",
+      "airdate": "2011-05-27",
+      "markers": [],
+      "external_id": "83636"
+    },
+    {
+      "n": 20,
+      "title": "Guided by the Phantom of the Phantom",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83637/original.jpg",
+      "synopsis": "Finding out that Victorique has been summoned yet again by her father, Kujo races to catch up with her, only for her to disappear again. The Inspector reveals to Kujo that Victorique might not be able to leave, unless she solves the case of Coco Rose, which revolves around a queen who was found beheaded within her quarters. Kujo decides to gather the Fragments of Chaos that Victorique can not assemble, only to discover that Cordelia was once a showgirl, who mysteriously went missing as did a woman who was a look-alike of Coco Rose. During his investigation, Kujo comes across Brian Roscoe - who lures him into an alleyway to an open window - guides him back into the theatre where Victorique is being held by her father and the guards, and is reunited with her once more. And as Victorique's father grants her the permission to leave and assemble the Fragments of Chaos, she declares that she will start the investigation - prompted by Kujo's findings - by going to the grave of the woman who resembled Coco Rose: Nicole Le Roux.",
+      "airdate": "2011-06-03",
+      "markers": [],
+      "external_id": "83637"
+    },
+    {
+      "n": 21,
+      "title": "The Holy Night Bell Drives the Hour Onward",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83638/original.jpg",
+      "synopsis": "Upon investigating the grave of a woman with a striking resemblance to Queen Coco Rose, Victorique manages to put together the truth behind her mysterious demise. The truth of the Coco Rose case and the disappearance of Nicole Lulu is made clear, and Albert frees Victorique when she is unable to conclusively identify the murderer. On the way home to the Academy, Victorique and Kujo encounter a seemingly ordinary couple who are actually the still-living Coco Rose and her son fathered by Leviathan. Cordelia watches over them as they arrive home, and is soon joined by Brian and then a man who seems to be Brian's twin.",
+      "airdate": "2011-06-10",
+      "markers": [],
+      "external_id": "83638"
+    },
+    {
+      "n": 22,
+      "title": "A Christmas Carol Hangs Happiness by the Window",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83639/original.jpg",
+      "synopsis": "Kujo is enjoying Christmas together with Victorique when he is taken by force from the Academy as King Rupert declared that all foreign citizens should be sent back to their home countries in spite if the imminent conflict in Saubure. However, Kujo manages to escape and returns to the Academy eager to meet Victorique again, unaware that he became a hostage in Albert's hands as a mean to ensure her cooperation with his plan.",
+      "airdate": "2011-06-17",
+      "markers": [],
+      "external_id": "83639"
+    },
+    {
+      "n": 23,
+      "title": "Checkmate is Called on a Gray Chess Board",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83640/original.jpg",
+      "synopsis": "By the Spring of 1925, all the pieces of Albert's plan have fallen into place. Kujo has been deported and Victorique has long since been imprisoned in the Sauville royal palace. Using her wisdom, Albert exposes Jupiter Roget's identity as a Gray Wolf to the other nobility and runs him out, then persuades King Rupert to make an alliance with the rising power of Germany. In the Winter of 1925, while Kujo has been enlisted into the Japanese military, Albert is named the new Prime Minister of Sauville and has Grevil bring Victorique out during the ceremony to show off his power. However, sometime before the ceremony Cordelia switched places with Victorique, and confronts Albert, revealing his crimes to the entire country. When one of the Brian Roscoe twins stages a terrorist attack on the ceremony, Cordelia engages Albert in a swordfight using a pair of knives as weapons and successfully kills him, but is slain herself by one of Albert's minions. Meanwhile, the other Brian, who has taken Victorique away in a stagecoach, attempts to kill her to erase Cordelia's \"pain.\"",
+      "airdate": "2011-06-24",
+      "markers": [],
+      "external_id": "83640"
+    },
+    {
+      "n": 24,
+      "title": "Eternity is Seen Over the Reaper's Shoulder",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/83641/original.jpg",
+      "synopsis": "After trying to kill Victorique, the Brian Roscoe who was with her fell from a cliff and was seriously injured, while his brother died holding Cordelia's hand. He was saved by her and taken to the port where they are found by Grevil who had orders to capture them, but let they escape instead. In a boat leaving the country, Brian states to Victorique that Cordelia was the kind of mother he and his brother always wanted, and was envious of Cordelia's love for her. Begging her to keep living for her mother's sake, he passes on. Victorique's hair turns silver due to everything that has happened this however proves to be in her benefit when two officers stationed on the boat she is travelling on remove the habit she is wearing, because the order to arrest her stated she had long blond hair they let her go thinking they had made a mistake. She is then approached by Jupiter Roget bringing Kujo's letters to her. After the war ends, the academy is reopened, Grevil,who had now payed his debt to Victorique sports his old hairstyle again. Jupiter Roget then appears before Sauville's king and tells him of how the queen's maid had saved her by taking her place and dying for her. After this, the king begs Jupiter to work with him again. Avril is seen on a beach presumably near her home, she sends a letter in a bottle on the waters, hoping for a miracle that it reaches Kujo and Victorique. To her annoyance, the bottle is washed back ashore. Ambrose is also seen reading a book about the Monstre Charmant. after reaching the end all the mythical characters in the book wave good bye before being sucked into a strange door. Which then fads into the background of the picture in the book, the picture looks much like Saubrème after the fire caused by Brian and Cordelia symbolising that the old ways of the kingdom of Sauville went away in the fire and a new dawn has come. In Spring of 1929, Kujo, who has grown his original hairstyle back, returns safely to a war-torn Japan to reunite with his family and with Victorique, who had been living with them after finding clues as to where to find them and using the letters from kujo (as well as the information he had already told them about her) to prove her identity. Kujo and Victorique are then reunited and both state that no matter how the world changes, they will always be together and they seemingly lived happily ever after.",
+      "airdate": "2011-07-02",
+      "markers": [],
+      "external_id": "83641"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Destin Histoire",
+      "artist": "yoshiki*lisa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Resuscitated Hope",
+      "artist": "Lisa Komine",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "unity",
+      "artist": "Lisa Komine",
+      "episodes": "13-"
+    }
+  ],
+  "relations": []
+}

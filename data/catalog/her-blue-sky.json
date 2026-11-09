@@ -1,0 +1,72 @@
+{
+  "id": "her-blue-sky",
+  "title": "Her Blue Sky",
+  "native": "空の青さを知る人よ",
+  "year": 2019,
+  "rating": 7.3,
+  "season": "Year 2019",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/10/6ad483f14e1a627ba022ebc7-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/10/6ad483f14e1a627ba022ebc7-landscape.jpg",
+  "accent": "#ff9420",
+  "synopsis": "The story is set in a town nestled in the mountains and centers on high school second-year student and aspiring musician Aoi Aioi, her older sister Akane Aioi, Akane's ex-boyfriend and struggling guitarist Shinnosuke Kanomura, and Shinno — who is actually Shinnosuke from 13 years ago after traveling from the past to the present.\n\nAoi and Akane's parents passed away in an accident 13 years ago, and Akane gave up her ambition of going to Tokyo with Shinnosuke and decided to take care of Aoi. Since then, Aoi has felt indebted to her older sister. One day, she is invited to perform at a music festival as a session musician by a famous enka singer named Dankichi. At the same time, Shinnosuke returns to Aoi and Akane's town after a long time away. Then, Shinno mysteriously appears, and Aoi falls in love for the first time.\n\n\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "her-blue-sky-irdh0j",
+    "mal": 39569,
+    "anilist": 108577,
+    "kitsu": 42207
+  },
+  "skip_key_id": 39569,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "her blue sky 空の青さを知る人よ",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Her Blue Sky (Movie)",
+      "runtime": "115:00",
+      "runtime_seconds": 6900,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ad483f14e1a627ba022ebc7-landscape.jpg",
+      "synopsis": "The story is set in a town nestled in the mountains and centers on high school second-year student and aspiring musician Aoi Aioi, her older sister Akane Aioi, Akane's ex-boyfriend and struggling guitarist Shinnosuke Kanomura, and Shinno — who is actually Shinnosuke from 13 years ago after traveling from the past to the present.\n\nAoi and Akane's parents passed away in an accident 13 years ago, and Akane gave up her ambition of going to Tokyo with Shinnosuke and decided to take care of Aoi. Since then, Aoi has felt indebted to her older sister. One day, she is invited to perform at a music festival as a session musician by a famous enka singer named Dankichi. At the same time, Shinnosuke returns to Aoi and Akane's town after a long time away. Then, Shinno mysteriously appears, and Aoi falls in love for the first time.\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "260420"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sora no Aosa o Shiru Hito yo",
+      "artist": "Aimyon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aoi",
+      "artist": "Aimyon",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

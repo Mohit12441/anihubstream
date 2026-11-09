@@ -1,0 +1,56 @@
+{
+  "id": "interstella-5555-the-5tory-of-the-5ecret-5tar-5ystem",
+  "title": "Interstella 5555: The 5tory of the 5ecret 5tar 5ystem",
+  "native": "インターステラ5555：THE 5TORY OF THE 5ECRET 5TAR 5YSTEM",
+  "year": 2003,
+  "rating": 7.7,
+  "season": "Spring 2003",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx731-aoWO30cMR4yO.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx731-aoWO30cMR4yO.jpg",
+  "accent": "#50bbe4",
+  "synopsis": "This film is a visual companion piece to \"Discovery\", an album by Daft Punk. It tells the story of a band of four extraterrestrial musicians who are kidnapped and brought back to Earth by an evil manager. Their only hopes lie with a space pilot from their home planet who, after receiving a distress call broadcasted during the abduction, seeks out to rescue them.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "interstella-5555:-the-5tory-of-the-5ecret-5tar-5ystem-1vhmid",
+    "mal": 731,
+    "anilist": 731,
+    "kitsu": 658
+  },
+  "skip_key_id": 731,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "interstella 5555 the 5tory of the 5ecret 5tar 5ystem インターステラ5555 the 5tory of the 5ecret 5tar 5ystem movie finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Interstella 5555: The 5tory of the 5ecret 5tar 5ystem (Movie)",
+      "runtime": "67:00",
+      "runtime_seconds": 4020,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/731-HQOXhlc4oG9r.jpg",
+      "synopsis": "This film is a visual companion piece to \"Discovery\", an album by Daft Punk. It tells the story of a band of four extraterrestrial musicians who are kidnapped and brought back to Earth by an evil manager. Their only hopes lie with a space pilot from their home planet who, after receiving a distress call broadcasted during the abduction, seeks out to rescue them.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "14567"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

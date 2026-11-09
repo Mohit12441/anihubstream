@@ -1,0 +1,77 @@
+{
+  "id": "haikyuu-quest-picture-drama",
+  "title": "Haikyuu!! Quest Picture Drama",
+  "native": "ハイキュークエスト",
+  "year": 2014,
+  "rating": 6.3,
+  "season": "2014",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx107263-oF8OnpCOHFXd.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx107263-oF8OnpCOHFXd.jpg",
+  "accent": "#e46b0d",
+  "synopsis": "Picture Drama episodes from the special contents DVD bundled with the Haikyuu!! 3DS game.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "haikyuu!!-quest-picture-drama-4symt1",
+    "mal": 31675,
+    "anilist": 107263,
+    "kitsu": 11395
+  },
+  "skip_key_id": 31675,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "haikyuu quest picture drama ハイキュークエスト ova finished",
+  "genres": [
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "179580"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "179581"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "179582"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

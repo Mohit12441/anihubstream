@@ -1,0 +1,308 @@
+{
+  "id": "durarara-x2-the-third-arc",
+  "title": "Durarara!! X2 The Third Arc",
+  "native": "デュラララ!!×２ 結",
+  "year": 2016,
+  "rating": 7.9,
+  "season": "Winter 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20880-WsvmgSdL8lhP.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20880-WsvmgSdL8lhP.png",
+  "accent": "#e4c943",
+  "synopsis": "As Mikado Ryuugamine continues to purge the Dollars from within in accordance with his warped sense of justice, Masaomi Kida hopes to bring his friend back to his senses by bringing the Yellow Scarves together once more. Little do they know that a far more dominant force is about to enter their struggle for power, one that their friend Anri Sonohara is all too familiar with.\n\nMeanwhile, the group that has gathered at Shinra Kishitani's apartment realizes that they are on the brink of something life-changing, an event that will throw Ikebukuro into a spiral of confusion. Their anxiety is realized when reports of Celty's head being found in public start to appear all over the news as Kasane Kujiragi begins to make her move.\n\nGone are the brief periods of tranquility as the current turmoil sets the stage for one final performance in this thrilling conclusion to the story of Ikebukuro's finest.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 9725,
+    "anilist": 20880,
+    "mal": 27833,
+    "hianime": "durarara!!-x2-the-third-arc-h5l6yn"
+  },
+  "skip_key_id": 27833,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 15:35:17",
+  "search_text": "durarara x2 the third arc テ ュラララ 2 結 tv finished",
+  "genres": [
+    "action",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Even a Chance Acquaintance is Decreed by Destiny",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "In the city of Ikebukuro, something else is beginning to move. Everyone that has gathered in Celty’s apartment discuss how to deal with the problems they’re each facing.",
+      "airdate": "2016-01-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 109
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1424
+        }
+      ],
+      "external_id": "176550"
+    },
+    {
+      "n": 2,
+      "title": "Bell the Cat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Anri seeks out Erika at the hospital, but they have a few unexpected encounters before they can talk. Meanwhile, other women throughout the city begin to take action.",
+      "airdate": "2016-01-16",
+      "markers": [],
+      "external_id": "176551"
+    },
+    {
+      "n": 3,
+      "title": "All in the Same Boat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "By one girl’s hand, the existence of the head is made known to the public. In response to the news, Mikado makes a phone call. Meanwhile, Haruna makes a proposal to Anri…",
+      "airdate": "2016-01-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 109
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1425
+        }
+      ],
+      "external_id": "176552"
+    },
+    {
+      "n": 4,
+      "title": "Blood is Thicker Than Water",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Chikage approaches the Yellow Scarves with a choice, “Have your gang taken over, or have it destroyed.” While Masaomi decides how to respond to this, Anri learns more about Saika and must make a decision of her own.",
+      "airdate": "2016-01-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 109
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1424
+        }
+      ],
+      "external_id": "176553"
+    },
+    {
+      "n": 5,
+      "title": "Lost in the Dark",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kasane’s unexpected visit to Shinra and Celty sparks a chase across the city. Meanwhile, Masaomi and Chikage’s fight has been interrupted by Izumii, who’s looking to settle matters with Masomi.",
+      "airdate": "2016-02-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 109
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1425
+        }
+      ],
+      "external_id": "176554"
+    },
+    {
+      "n": 6,
+      "title": "In For a Penny, In For a Pound",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Izaya is overjoyed at Mikado’s behavior, which has greatly exceeded his expectations, and grows more excited at the future uproar he is ushering in. Masaomi and Chikage talk through things, while Saki and Anri break the ice.",
+      "airdate": "2016-02-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 109
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1424
+        }
+      ],
+      "external_id": "176555"
+    },
+    {
+      "n": 7,
+      "title": "No Love Lost",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Namie has flooded the chat room with messages calling out Mikado and demanding he take responsibility for the situation she claims he’s created. Meanwhile, Shooter and Shizuo race to Celty and a confrontation with Kasane and Seitaro.",
+      "airdate": "2016-02-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1424
+        }
+      ],
+      "external_id": "176556"
+    },
+    {
+      "n": 8,
+      "title": "A Tiger Dies and Leaves His Skin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Izaya and Shizuo prepare to face off as the city fills with a mob possessed by Saika.",
+      "airdate": "2016-02-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 109
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1424
+        }
+      ],
+      "external_id": "176557"
+    },
+    {
+      "n": 9,
+      "title": "Walking on Thin Ice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The number of Saika possessed people continues to increase as they fill the area around Russia Sushi. Anri heads to visit Celty and the Blue Square prepare to confront Chikage, all while Izaya and Shizuo fight to the death.",
+      "airdate": "2016-03-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1425
+        }
+      ],
+      "external_id": "176558"
+    },
+    {
+      "n": 10,
+      "title": "Telepathy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Anri opens up to Kadota and the others about Saika; meanwhile, Erika discovers that the Saika zombies are after Mikado and Kasane.",
+      "airdate": "2016-03-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 109
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1424
+        }
+      ],
+      "external_id": "176559"
+    },
+    {
+      "n": 11,
+      "title": "Life is an Unknown Course",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Above the confusion of the city below, Mikado and Masaomi finally reunite. Masaomi frantically attempts to persuade his friend, but… Meanwhile, Shinra continues after Celty and encounters Kasane, who tells him the reason he was abducted.",
+      "airdate": "2016-03-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 109
+        }
+      ],
+      "external_id": "176560"
+    },
+    {
+      "n": 12,
+      "title": "Those Who Meet Must Part",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A boy who yearned for the extraordinary, and the twisted love story that swallowed up too many people, finally draws to the end of their performance!",
+      "airdate": "2016-03-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 109
+        }
+      ],
+      "external_id": "176561"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

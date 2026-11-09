@@ -1,0 +1,84 @@
+{
+  "id": "hyouka-what-should-be-had",
+  "title": "Hyouka: What Should Be Had",
+  "native": "氷菓 持つべきものは",
+  "year": 2012,
+  "rating": 7.2,
+  "season": "Summer 2012",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx13469-bbRQoSUgmf4T.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13469-bbRQoSUgmf4T.png",
+  "accent": "#e4e493",
+  "synopsis": "Was bundled with the third volume of the manga.\n\nIt's another regular day, with Houtarou Oreki sitting at home as usual; that is until his sister Tomoe ropes him into working as a lifeguard at the local swimming pool. Upon reaching the pool, Oreki coincidentally meets the other members of the Classics Club. Eru Chitanda notices that a white object that was on a woman's ear a while ago suddenly disappeared, which leaves her curious about the mystery behind it.\n\nHyouka: Motsubeki Mono wa features Oreki and the rest of the Classics Club as they have fun at the pool and solve the mystery that has piqued Chitanda's curiosity.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "hyouka:-what-should-be-had-8f3yto",
+    "mal": 13469,
+    "anilist": 13469,
+    "kitsu": 6974
+  },
+  "skip_key_id": 13469,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "hyouka what should be had 氷菓 持つへ きものは ova finished",
+  "genres": [
+    "mystery",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hyouka: What Should Be Had",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13469-bbRQoSUgmf4T.png",
+      "synopsis": "Was bundled with the third volume of the manga.\n\n\n\nIt's another regular day, with Houtarou Oreki sitting at home as usual; that is until his sister Tomoe ropes him into working as a lifeguard at the local swimming pool. Upon reaching the pool, Oreki coincidentally meets the other members of the Classics Club. Eru Chitanda notices that a white object that was on a woman's ear a while ago suddenly disappeared, which leaves her curious about the mystery behind it.\n\n\n\nHyouka: Motsubeki Mono wa features Oreki and the rest of the Classics Club as they have fun at the pool and solve the mystery that has piqued Chitanda's curiosity.\n\n\n\n(Source: MAL Rewrite)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "100554"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yasashisa no Riyū (優しさの理由)",
+      "artist": "ChouCho",
+      "episodes": "1-2, 4, 6-8, 10-11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Madoromi no Yakusoku (まどろみの約束)",
+      "artist": "Satomi Satou & Ai Kayano",
+      "episodes": "2-4, 6-11"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Mikansei Stride (未完成ストライド; Unfinished Stride)",
+      "artist": "Saori Kodama",
+      "episodes": "13-16, 18-20, 22"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kimi ni Matsuwaru Mystery (君にまつわるミステリー; Mystery Surrounding You)",
+      "artist": "Satomi Satou and Ai Kayano",
+      "episodes": "12-14, 16, 18, 20-22"
+    }
+  ],
+  "relations": []
+}

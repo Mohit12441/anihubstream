@@ -1,0 +1,382 @@
+{
+  "id": "hell-s-paradise",
+  "title": "Hell’s Paradise",
+  "native": "地獄楽",
+  "year": 2023,
+  "rating": 8,
+  "season": "Spring 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx128893-Gc2t8b8M0mVu.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx128893-Gc2t8b8M0mVu.jpg",
+  "accent": "#e4bb35",
+  "synopsis": "The Edo period is nearing its end. Gabimaru, a shinobi formerly known as the strongest in Iwagakure who is now a death row convict, is told that he will be acquitted and set free if he can bring back the Elixir of Life from an island that is rumored to be the Buddhist pure land Sukhavati. In hopes of reuniting with his beloved wife, Gabimaru heads to the island along with the executioner Yamada Asaemon Sagiri. Upon arriving there, they encounter other death row convicts in search of the Elixir of Life... as well as a host of unknown creatures, eerie manmade statues, and the hermits who rule the island. Can Gabimaru find the Elixir of Life on this mysterious island and make it back home alive?\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Hell’s Paradise Season 2 (2026)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44012,
+    "anilist": 128893,
+    "mal": 46569
+  },
+  "skip_key_id": 46569,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 02:36:47",
+  "search_text": "hell s paradise 地獄楽 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Death Row Convict and the Executioner",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/303594/thumbnail/medium-a332ba958f216374c4e56bfb9551882f.jpeg",
+      "synopsis": "Gabimaru the Hollow has been sentenced to death. Carrying out that sentence, however, may require the services of an extraordinary professional. (Source: Crunchyroll)",
+      "airdate": "2023-04-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1375,
+          "end": 1440
+        }
+      ],
+      "external_id": "303594"
+    },
+    {
+      "n": 2,
+      "title": "Screening and Choosing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/303595/thumbnail/medium-762347fe50a7ec8ac48a7faebc28c658.jpeg",
+      "synopsis": "The condemned criminals are gathered on the beach to prepare for the expedition to Shinsenkyo, but first, they must reduce their numbers. (Source: Crunchyroll)",
+      "airdate": "2023-04-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 196,
+          "end": 286
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1375,
+          "end": 1440
+        }
+      ],
+      "external_id": "303595"
+    },
+    {
+      "n": 3,
+      "title": "Weakness and Strength",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/303596/thumbnail/medium-c25902c2453a7b8367e227ad05df7aa7.jpeg",
+      "synopsis": "The condemned criminals are gathered on the beach to prepare for the expedition to Shinsenkyo, but first, they must reduce their numbers. (Source: Crunchyroll)",
+      "airdate": "2023-04-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 93,
+          "end": 183
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1375,
+          "end": 1440
+        }
+      ],
+      "external_id": "303596"
+    },
+    {
+      "n": 4,
+      "title": "Hell and Paradise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/303597/thumbnail/medium-13cbfe6ea25fb4d496534e2fc282d178.jpeg",
+      "synopsis": "Yuzuriha approaches Gabimaru and Sagiri with an offer. (Source: Crunchyroll)",
+      "airdate": "2023-04-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 104
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1374,
+          "end": 1440
+        }
+      ],
+      "external_id": "303597"
+    },
+    {
+      "n": 5,
+      "title": "The Samurai and the Woman",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/303598/thumbnail/medium-cba790e6df9acf5c08329408e2ac9aeb.jpeg",
+      "synopsis": "Gabimaru and Sagiri's group cross paths with another Yamada Asaemon, Genji, who takes a dim view of Sagiri's involvement in the present matter. Meanwhile, Yamada Asaemon Tenza tries to find a way off the island along with his charge, Nurugai. (Source: Crunchyroll)",
+      "airdate": "2023-04-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1361,
+          "end": 1440
+        }
+      ],
+      "external_id": "303598"
+    },
+    {
+      "n": 6,
+      "title": "Heart and Reason",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/303599/thumbnail/medium-b562c1c39a63f33229ce0a75a3486e04.jpeg",
+      "synopsis": "Rokurota, the Giant of Bizen, attacks Gabimaru and Sagiri's party. Meanwhile, Chobe and Toma's paths cross with another party's while they look for sustenance in the mountains. (Source: Crunchyroll)",
+      "airdate": "2023-05-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 16,
+          "end": 105
+        }
+      ],
+      "external_id": "303599"
+    },
+    {
+      "n": 7,
+      "title": "Flowers and Offerings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/303600/thumbnail/medium-4959da92e345b69024f2458aa9914753.jpeg",
+      "synopsis": "Chobe and Toma encounter people unlike any they've ever encountered before. Gabimaru and Sagiri's party finally meet people who live on the island. (Source: Crunchyroll)",
+      "airdate": "2023-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 96,
+          "end": 186
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1360,
+          "end": 1440
+        }
+      ],
+      "external_id": "303600"
+    },
+    {
+      "n": 8,
+      "title": "Student and Master",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/303601/thumbnail/medium-17c1a9d6a4a0d5b7f53c229c35e52def.jpeg",
+      "synopsis": "Tenza and Nurugai also encounter one of the island's strange denizens with unfathomable power. All seems lost before they encounter another Yamada Asaemon... (Source: Crunchyroll)",
+      "airdate": "2023-05-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 15
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1404,
+          "end": 1440
+        }
+      ],
+      "external_id": "303601"
+    },
+    {
+      "n": 9,
+      "title": "Gods and People",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/327532/thumbnail/medium-7f0b0bbb970fdc34cebcf1d0dfb7f063.jpeg",
+      "synopsis": "Sagiri's group sets off in search of Horai. Gabimaru goes ahead and encounters the same powerful being that confronted Tenza... (Source: Crunchyroll)",
+      "airdate": "2023-06-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 89,
+          "end": 178
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1376,
+          "end": 1440
+        }
+      ],
+      "external_id": "327532"
+    },
+    {
+      "n": 10,
+      "title": "Yin and Yang",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/327674/thumbnail/medium-3018e7678eba2bba432b616d78fe3c0f.jpeg",
+      "synopsis": "Mei attempts to explain something very important to Sagiri's party in the forest. Shion tries to explain how he interacts with the world to Nurugai. A mysterious servant of the Tensen tries to explain why Aza Chobe and Toma shouldn't escape. (Source: Crunchyroll)",
+      "airdate": "2023-06-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 22,
+          "end": 112
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1376,
+          "end": 1440
+        }
+      ],
+      "external_id": "327674"
+    },
+    {
+      "n": 11,
+      "title": "Weak and Strong",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346542/thumbnail/medium-dcf1216e90ba48ac6c5b78802aa33671.jpeg",
+      "synopsis": "Chobe brings new abilities to bear as he faces Tensen's servants. A secret of Mei's is revealed to Gabimaru, hardening his resolve to fight and opening him up to a new perception of the world. (Source: Crunchyroll)",
+      "airdate": "2023-06-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 12,
+          "end": 102
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1375,
+          "end": 1440
+        }
+      ],
+      "external_id": "346542"
+    },
+    {
+      "n": 12,
+      "title": "Umbrella and Ink",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346543/thumbnail/medium-9f071cfc8d3100e4fd8e682fb66fc051.jpeg",
+      "synopsis": "Mu Dan confronts Sagiri's party and reveals shocking truths about the island's true nature. (Source: Crunchyroll)",
+      "airdate": "2023-06-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 172
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1376,
+          "end": 1440
+        }
+      ],
+      "external_id": "346543"
+    },
+    {
+      "n": 13,
+      "title": "Dreams and Reality",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346544/thumbnail/medium-b398ca1446f2670168ca7050a640a40e.jpeg",
+      "synopsis": "Sagiri's party faces Mu Dan's seemingly unstoppable true form. Shion does his best to rise to the challenge with his mastery of waves. (Source: Crunchyroll)",
+      "airdate": "2023-07-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 97,
+          "end": 185
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1353,
+          "end": 1428
+        }
+      ],
+      "external_id": "346544"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kasuka na Hana (かすかなはな)",
+      "artist": "Tatsuya Kitani feat. BABYMETAL",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "PERSONAL",
+      "artist": "QUEEN BEE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "WORK",
+      "artist": "millenium parade ✕ Ringo Sheena",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kamihitoe (紙一重)",
+      "artist": "Uru",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

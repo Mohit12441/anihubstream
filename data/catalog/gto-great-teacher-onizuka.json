@@ -1,0 +1,562 @@
+{
+  "id": "gto-great-teacher-onizuka",
+  "title": "GTO: Great Teacher Onizuka",
+  "native": "GTO",
+  "year": 1999,
+  "rating": 8.4,
+  "season": "Summer 1999",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx245-NcQAyTipUMeO.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx245-NcQAyTipUMeO.jpg",
+  "accent": "#e4930d",
+  "synopsis": "Onizuka is a reformed biker gang leader who has his sights set on an honorable new ambition: to become the world's greatest teacher... for the purpose of meeting sexy high school girls. Okay, so he's mostly reformed.\n\nHowever, strict administrators and a class of ruthless delinquents stand between Onizuka and his goal and they will use any means, however illegal or low, to drive the new teacher away. Perfect, because Onizuka's methods won't be found in any teaching manual; he cares about the difference between legal and illegal activities about as much as he cares for the age difference between himself and a high school girl.\n\nSo get ready for math that doesn't add up, language you'd be slapped for using, and biology that would make a grown man blush... unless of course, you're the Great Teacher Onizuka.\n\n Note: Episode 1 has an airtime of 48 minutes.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Shounan Junai Gumi! (1994)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 220,
+    "anilist": 245,
+    "mal": 245
+  },
+  "skip_key_id": 245,
+  "skip_key_space": "mal",
+  "episode_total": 43,
+  "added_at": "2026-10-14 08:15:04",
+  "search_text": "gto great teacher onizuka gto tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "GTO-The Legend Begins",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6066/original.jpg",
+      "synopsis": "Eikichi Onizuka begins his career as a teacher-in-training expecting that he will get a class of attractive, nubile high school girls. When he is assigned the problem \"O class\", a group of delinquents and blackmailers, only his tough love is able to win them over.",
+      "airdate": "1999-06-30",
+      "markers": [],
+      "external_id": "6066"
+    },
+    {
+      "n": 2,
+      "title": "Enter Uchiyamada!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6067/original.jpg",
+      "synopsis": "Eikichi applies at Holy Forest Academy, and conflicts with the school's vice principal, Hiroshi Uchiyamada. Disgusted by his condescending attitude, he leaves knowing that they never would have hired him anyway. However, the school's chairwoman Ryoko Sakurai, impressed by his character, decides to offer him a job.",
+      "airdate": "1999-07-07",
+      "markers": [],
+      "external_id": "6067"
+    },
+    {
+      "n": 3,
+      "title": "Late Night Roof Diving",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6068/original.jpg",
+      "synopsis": "The new school year gets off to a rocky start for Eikichi. He has to teach middle school instead of high school students, live in a storage area at school, and rescue a student, Noboru Yoshikawa, from suicide.",
+      "airdate": "1999-07-21",
+      "markers": [],
+      "external_id": "6068"
+    },
+    {
+      "n": 4,
+      "title": "The Secret Life of Onizuka",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6069/original.jpg",
+      "synopsis": "Eikichi learns first-hand what tricks his homeroom students are capable of. Yoshito Kikuchi, a computer expert, releases fake images of Eikichi engaged in BDSM and homosexual acts. Instead of getting mad, Eikichi asks Yoshito if he can create nude celebrity pictures for him",
+      "airdate": "1999-08-11",
+      "markers": [],
+      "external_id": "6069"
+    },
+    {
+      "n": 5,
+      "title": "An Eye for an Eye, a Butt for a Butt",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6070/original.jpg",
+      "synopsis": "Anko Uehara and her gang bullies Noboru for hanging out with Eikichi. After rescuing Noboru from suicide (again), Eikichi decides that revenge is the only way to teach Anko a lesson.",
+      "airdate": "1999-08-18",
+      "markers": [],
+      "external_id": "6070"
+    },
+    {
+      "n": 6,
+      "title": "Conspiracies All Around",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6071/original.jpg",
+      "synopsis": "Following Anko's \"lesson\", Eikichi must face the PTA for his actions. When it appears that Eikichi is fighting a losing battle, Yoshito and Noboru reveal Anko's true nature to the PTA.",
+      "airdate": "1999-08-25",
+      "markers": [],
+      "external_id": "6071"
+    },
+    {
+      "n": 7,
+      "title": "The Mother of all Crushes",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6072/original.jpg",
+      "synopsis": "While preparing for parent-teacher meetings, Eikichi learns that one of his students, Kunio Murai, has a very young mother. He decides that \"dates\" are an excellent way to get to know the parents, much to Kunio's dismay.",
+      "airdate": "1999-09-01",
+      "markers": [],
+      "external_id": "6072"
+    },
+    {
+      "n": 8,
+      "title": "Bungee Jumping Made Easy",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6073/original.jpg",
+      "synopsis": "When Kunio and his friends are confronted by local punks, they believe they are saved when Eikichi arrives. However, he refuses to help, believing their predicament will teach them about taking responsibility. Faced with a bungee jump, Kunio proves how far he will go to prevent his mother from dating Eikichi.",
+      "airdate": "1999-09-08",
+      "markers": [],
+      "external_id": "6073"
+    },
+    {
+      "n": 9,
+      "title": "Onizuka and the Art of War",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6074/original.jpg",
+      "synopsis": "Eikichi goes head-to-head with the P.E. teacher Hajime Fukuroda. Meanwhile, Miyabi Aizawa enlists her friend Tomoko Nomura to frame Eikichi as an underwear thief. When she accidentally incriminates Mr. Fukuroda instead, Miyabi berates Tomoko for her stupidity.",
+      "airdate": "1999-09-22",
+      "markers": [],
+      "external_id": "6074"
+    },
+    {
+      "n": 10,
+      "title": "Outside Looking In",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6075/original.jpg",
+      "synopsis": "Tomoko is depressed that Miyabi no longer wants her as a friend. Eikichi tries to cheer Tomoko up and enters her into a beauty contest to help her out with her self-esteem.",
+      "airdate": "1999-09-22",
+      "markers": [],
+      "external_id": "6075"
+    },
+    {
+      "n": 11,
+      "title": "To Be Idolized by a Nation",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6076/original.jpg",
+      "synopsis": "At the talent beauty contest, Tomoko's clumsiness makes her a long shot to win, but discovers that being herself is her special talent. Despite losing, she gains newfound respect from her classmates.",
+      "airdate": "1999-10-17",
+      "markers": [],
+      "external_id": "6076"
+    },
+    {
+      "n": 12,
+      "title": "The Formula for Treachery",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6077/original.jpg",
+      "synopsis": "Suguru Teshigawara, the math teacher, has his heart set only on Azusa Fuyutsuki; however, Eikichi inadvertently incurs Suguru's wrath when he ruins Suguru's plans to win Azusa over.",
+      "airdate": "1999-10-31",
+      "markers": [],
+      "external_id": "6077"
+    },
+    {
+      "n": 13,
+      "title": "Only the Best Will Do",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6078/original.jpg",
+      "synopsis": "Suguru enlists a parent lobby group to get Eikichi fired. To prove his worth, Eikichi must score the highest mark in a national scholastic achievement test. However, he soon learns that it is no easy task.",
+      "airdate": "1999-11-21",
+      "markers": [],
+      "external_id": "6078"
+    },
+    {
+      "n": 14,
+      "title": "Between a Rock and a Hard Place",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6079/original.jpg",
+      "synopsis": "Determined to prevent his dismissal, Azusa invites Eikichi to her place for one-on-one all-night study sessions. Meanwhile, believing that studying alone isn't enough to get the highest mark, Eikichi's students attempt to steal the test answers from the school.",
+      "airdate": "1999-12-05",
+      "markers": [],
+      "external_id": "6079"
+    },
+    {
+      "n": 15,
+      "title": "The Great Sacrifice",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6080/original.jpg",
+      "synopsis": "On the day of the test, Eikichi witnesses the abduction of a Diet member's daughter and pursues the kidnappers to an abandoned warehouse. During the ensuing brawl, Eikichi rescues the daughter, but is shot in the process. He manages to return to the school, but has to write the day-long test in one hour.",
+      "airdate": "1999-12-12",
+      "markers": [],
+      "external_id": "6080"
+    },
+    {
+      "n": 16,
+      "title": "Beauty + Brains = A Dangerous Mix",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6081/original.jpg",
+      "synopsis": "Eikichi relishes his newfound hero status until he meets Urumi Kanzaki, a mischievous girl who gets him arrested as a pervert. He is less than amused when he finds out that she is actually one of his students.",
+      "airdate": "1999-12-19",
+      "markers": [],
+      "external_id": "6081"
+    },
+    {
+      "n": 17,
+      "title": "Falling for The Great Onizuka",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6082/original.jpg",
+      "synopsis": "Eikichi learns that Urumi went through a traumatic childhood experience and tries to help her cope with it using his own brand of teaching. His efforts unfortunately backfire when he accidentally pushes her off a building.",
+      "airdate": "2000-01-16",
+      "markers": [],
+      "external_id": "6082"
+    },
+    {
+      "n": 18,
+      "title": "How to Dine and Dash",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6083/original.jpg",
+      "synopsis": "Blackmailed by Urumi for pushing her off a building, Eikichi subjects himself to her whims. After meeting her former elementary teacher, Urumi goes on a classroom terrorism spree.",
+      "airdate": "2000-01-23",
+      "markers": [],
+      "external_id": "6083"
+    },
+    {
+      "n": 19,
+      "title": "Private Investigations",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6084/original.jpg",
+      "synopsis": "Urumi's teacher admits that she was the cause of Urumi's mistrust towards teachers. When Urumi was younger, she accidentally revealed the secret about Urumi's father. Eikichi decides that only a special lesson across an incomplete freeway will teach Urumi about life.",
+      "airdate": "2000-01-30",
+      "markers": [],
+      "external_id": "6084"
+    },
+    {
+      "n": 20,
+      "title": "Love Letters",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6085/original.jpg",
+      "synopsis": "Kunio finds a love letter addressed to him, initially believing it is from Akane Fujita, a girl he likes. However, when Akane dumps him, Kunio realizes his true feelings for his platonic friend, Fuyumi Kujirakawa.",
+      "airdate": "2000-02-06",
+      "markers": [],
+      "external_id": "6085"
+    },
+    {
+      "n": 21,
+      "title": "Revolution Everywhere",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6086/original.jpg",
+      "synopsis": "Unable to cope with the pressures of teaching, Azusa runs away to her former school in Hakuba. Eikichi, Tomoko, Yoshito, and Kunio follow in order to convince her to return.",
+      "airdate": "2000-02-13",
+      "markers": [],
+      "external_id": "6086"
+    },
+    {
+      "n": 22,
+      "title": "The Art of Demolition",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6087/original.jpg",
+      "synopsis": "Azusa learns that her former school will be demolished. During the countdown, a former student of the school runs into the building to retrieve a precious heirloom. Eikichi pursues in order to rescue her before the school is destroyed.",
+      "airdate": "2000-02-20",
+      "markers": [],
+      "external_id": "6087"
+    },
+    {
+      "n": 23,
+      "title": "Superstition",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6088/original.jpg",
+      "synopsis": "Eikichi receives a cursed chain letter, but he dismisses it as superstition. After a series of misfortunes, he begins to believe in the letter and does whatever he can to dispel the curse.",
+      "airdate": "2000-02-27",
+      "markers": [],
+      "external_id": "6088"
+    },
+    {
+      "n": 24,
+      "title": "Compromising Positions",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6089/original.jpg",
+      "synopsis": "Mr. Uchiyamada experiences a mid-life crisis, wondering if there is any meaning left to his life. His family has grown apart and now fears for the worst when his daughter Yoshiko takes a liking to Eikichi.",
+      "airdate": "2000-03-05",
+      "markers": [],
+      "external_id": "6089"
+    },
+    {
+      "n": 25,
+      "title": "Playing Doctor - GTO Style",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6090/original.jpg",
+      "synopsis": "An attractive school nurse, Nao Kadena, arrives at the school, much to the delight of Eikichi. However, she soon starts using her looks and the school to fund her money-making schemes.",
+      "airdate": "2000-03-12",
+      "markers": [],
+      "external_id": "6090"
+    },
+    {
+      "n": 26,
+      "title": "Onizuka Meets His Match",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6091/original.jpg",
+      "synopsis": "Eikichi learns that Nao, a former street racer, was using the school to help pay her brother's medical costs for an accident that she blames herself for. Eikichi challenges her to a game of no signals to teach her about self-worth.",
+      "airdate": "2000-03-19",
+      "markers": [],
+      "external_id": "6091"
+    },
+    {
+      "n": 27,
+      "title": "GTO - Agent to the Stars",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6092/original.jpg",
+      "synopsis": "Eikichi becomes Tomoko's manager and arranges a series of innocuous commercial shoots to increase her national profile. Her commercials attract the attention of a popular magazine who wants her entered into their beauty contest.",
+      "airdate": "2000-04-02",
+      "markers": [],
+      "external_id": "6092"
+    },
+    {
+      "n": 28,
+      "title": "Whatever Can Go Wrong, Will Go Wrong",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6093/original.jpg",
+      "synopsis": "From getting bōsōzoku gangs to vote for Tomoko to questionable marketing ploys, Eikichi does whatever he can to make sure that Tomoko will win the contest. However, a contemptuous rival competitor undermines his efforts.",
+      "airdate": "2000-04-16",
+      "markers": [],
+      "external_id": "6093"
+    },
+    {
+      "n": 29,
+      "title": "Studies in High Finance",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6094/original.jpg",
+      "synopsis": "Before the annual class field trip, Miyabi and her friends steal the school's trip money and blackmails the English teacher, Mr. Sakurada, into luring Eikichi to a fake \"underground girls club\" with the stolen money planted on him. At the club, a drunken Eikichi unwittingly spends the school's money.",
+      "airdate": "2000-04-23",
+      "markers": [],
+      "external_id": "6094"
+    },
+    {
+      "n": 30,
+      "title": "Money Talks, GTO Walks",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6095/original.jpg",
+      "synopsis": "Led to believe that he spent the school's money, Eikichi attempts to raise the money himself while his students investigate who set him up. The school's faculty decides to hold a student assembly so Eikichi can take responsibility for his actions.",
+      "airdate": "2000-04-30",
+      "markers": [],
+      "external_id": "6095"
+    },
+    {
+      "n": 31,
+      "title": "Destination: Okinawa",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6096/original.jpg",
+      "synopsis": "Framed as an embezzler, Eikichi promises to make it up to all of the 3rd year students with a trip to Okinawa. He claims that he can pay for it with a winning lottery ticket, but when he finds out that the ticket was a fraud, he has to find another way to pay for the ¥8 million trip.",
+      "airdate": "2000-05-07",
+      "markers": [],
+      "external_id": "6096"
+    },
+    {
+      "n": 32,
+      "title": "The Law of Probability",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6097/original.jpg",
+      "synopsis": "Eikichi wins a Mercedes-Benz E-class sedan in a local contest, worth enough to pay for the trip. Unfazed, Miyabi arranges for a suicidal salaryman to jump in front of Eikichi's car and ruin his chances of selling it.",
+      "airdate": "2000-05-14",
+      "markers": [],
+      "external_id": "6097"
+    },
+    {
+      "n": 33,
+      "title": "Search and Rescue",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6098/original.jpg",
+      "synopsis": "To teach Miyabi and her friends a lesson, Urumi orchestrates their kidnapping to hold them for ransom. Eikichi literally flies in to save the day and foils Urumi's plans.",
+      "airdate": "2000-05-28",
+      "markers": [],
+      "external_id": "6098"
+    },
+    {
+      "n": 34,
+      "title": "Good Cop/Bad Cop",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6099/original.jpg",
+      "synopsis": "When Tomoko, Eikichi, and his friend Toshiyuki Saejima find a suitcase filled with gold, they find themselves on the run from the yakuza. However, they later discover that they were unlikely victims of a celebrity prank played on Tomoko.",
+      "airdate": "2000-06-04",
+      "markers": [],
+      "external_id": "6099"
+    },
+    {
+      "n": 35,
+      "title": "Wedding Bell Blues",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6100/original.jpg",
+      "synopsis": "When Kunio finds a wedding dress catalog at home, he suspects his mother will marry someone behind his back. Overprotective of his mother, Kunio will stop at nothing to stop her wedding.",
+      "airdate": "2000-06-11",
+      "markers": [],
+      "external_id": "6100"
+    },
+    {
+      "n": 36,
+      "title": "Self-Improvement",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6101/original.jpg",
+      "synopsis": "Nao helps Azusa choose a bathing suit for the trip to Okinawa. Asuza tries to get a makeover in order to impress Eikichi, but ends up getting carried away in the process.",
+      "airdate": "2000-06-18",
+      "markers": [],
+      "external_id": "6101"
+    },
+    {
+      "n": 37,
+      "title": "Living Together",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6102/original.jpg",
+      "synopsis": "To make it a trip to remember, Eikichi assigns his students to co-ed rooms. Noboru is perplexed with Eikichi's decision to assign him with Anko and her friends. Eikichi helps Noboru make the most of a bad situation with a good old-fashioned prank on the girls.",
+      "airdate": "2000-07-16",
+      "markers": [],
+      "external_id": "6102"
+    },
+    {
+      "n": 38,
+      "title": "Great Treasure Okinawa",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6103/original.jpg",
+      "synopsis": "Eikichi learns of a hidden treasure somewhere on one of Okinawa's islands and decides that a special class trip is in order. During the expedition, Anko and her friends tie up Noboru to leave him in the jungle, but end up getting lost in the process.",
+      "airdate": "2000-07-30",
+      "markers": [],
+      "external_id": "6103"
+    },
+    {
+      "n": 39,
+      "title": "Alone in the Dark",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6104/original.jpg",
+      "synopsis": "Separated, Anko and Noboru are forced to find their way to safety together. Eikichi, however, believes their disappearance was a ruse to conceal their discovery of the treasure, and searches for them in hot pursuit.",
+      "airdate": "2000-08-13",
+      "markers": [],
+      "external_id": "6104"
+    },
+    {
+      "n": 40,
+      "title": "Matters of the Heart",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6105/original.jpg",
+      "synopsis": "Following her ordeal, Anko is conflicted over the new emotions that she feels for Noboru. To teach Anko to be true to her heart, Eikichi plans a special nighttime lesson for the class.",
+      "airdate": "2000-08-20",
+      "markers": [],
+      "external_id": "6105"
+    },
+    {
+      "n": 41,
+      "title": "Confessions",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6106/original.jpg",
+      "synopsis": "Eikichi orders his class to walk through a derelict hotel as a test of nerves. Anko and Noboru make it past Eikichi's test, but when confronted by four local hooligans, Anko stands up for Noboru against the bullies and confesses her feelings towards him.",
+      "airdate": "2000-08-27",
+      "markers": [],
+      "external_id": "6106"
+    },
+    {
+      "n": 42,
+      "title": "Old Wounds Revisited",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6107/original.jpg",
+      "synopsis": "Miyabi confronts Noboru Saitou, the class's former teacher, about the incident that drove them to hate teachers. When Mr. Saitou is later found stabbed, suspicion immediately falls on Miyabi.",
+      "airdate": "2000-09-10",
+      "markers": [],
+      "external_id": "6107"
+    },
+    {
+      "n": 43,
+      "title": "Onizuka's Final Battle",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6108/original.jpg",
+      "synopsis": "Miyabi's friends and teachers work to protect her from the corrupt teacher's union whose pressure on Mr. Saitou over his unprofessional relationship drove his student lover to suicide. Eikichi decides to take the blame for the stabbing to clear Miyabi of any wrongdoing.",
+      "airdate": "2000-09-17",
+      "markers": [],
+      "external_id": "6108"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Driver's High",
+      "artist": "L'Arc~en~Ciel",
+      "episodes": "01-16"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Last Piece",
+      "artist": "Kirari",
+      "episodes": "01-16"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Hitori No Yoru",
+      "artist": "Porno Graffiti",
+      "episodes": "17-43"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Shizuku",
+      "artist": "Miwaku Okuda",
+      "episodes": "17-33"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Cherished Memories",
+      "artist": "Hong Kong Knife",
+      "episodes": "34-43"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Driver's High",
+      "artist": "L'Arc~en~Ciel",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

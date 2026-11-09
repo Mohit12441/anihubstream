@@ -1,0 +1,324 @@
+{
+  "id": "gate-2",
+  "title": "Gate 2",
+  "native": "GATE 自衛隊 彼の地にて、斯く戦えり 第2クール",
+  "year": 2016,
+  "rating": 7.5,
+  "season": "Winter 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21364-6ikYd5J46dt0.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21364-6ikYd5J46dt0.jpg",
+  "accent": "#e48643",
+  "synopsis": "Several months have passed since the infamous Ginza Incident, with tensions between the Empire and JSDF escalating in the vast and mysterious \"Special Region\" over peace negotiations. The greed and curiosity of the global powers have also begun to grow, as reports about the technological limitations of the magical realm's archaic civilizations come to light.\n\nMeanwhile, Lieutenant Youji Itami and his merry band of female admirers struggle to navigate the complex political intrigue that plagues the Empire's court. Despite her best efforts, Princess Piña Co Lada faces difficulties attempting to convince her father that the JSDF has no intention of conquering their kingdom. Pressured from both sides of the Gate, Itami must consider even more drastic measures to fulfill his mission.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Gate (2015)",
+    "GATE 2: Jieitai Kano Umi nite, Kaku Tatakaeri"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11376,
+    "anilist": 21364,
+    "mal": 31637
+  },
+  "skip_key_id": 31637,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 10:34:33",
+  "search_text": "gate 2 gate 自衛隊 彼の地にて 斯く戦えり 第2クール tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Banquet Begins",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The SDF hold a banquet in the imperial capital to try and bribe the senators to their side. Yao plans to do something nice for Itami.",
+      "airdate": "2016-01-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 34,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "179551"
+    },
+    {
+      "n": 2,
+      "title": "The Imperial Capital Quake",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "An earthquake strikes the empire, and the SDF visit the Imperial Palace to give advice on relief. There, they find that the Empire has been keeping Japanese slaves. An enraged Kuribayashi beats the Imperial Prince to a pulp. How will the SDF respond?",
+      "airdate": "2016-01-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 13,
+          "end": 103
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "179552"
+    },
+    {
+      "n": 3,
+      "title": "Tuka Luna Marceau",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Chuka has gone insane and refuses to face the fact that her father is dead. She thinks that Itami is her father. The only way to snap her back to sanity is to kill the Fire Dragon, but engaging it would mean getting most of Itami's squad killed.",
+      "airdate": "2016-01-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 100,
+          "end": 190
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "179553"
+    },
+    {
+      "n": 4,
+      "title": "The Fire Dragon, Once More",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Itami has left in search of the powerful fire dragon. The SDF prepares a force to support him. Meanwhile, Chule baits Delilah into an assassination attempt on Noriko.",
+      "airdate": "2016-01-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 75,
+          "end": 165
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1328,
+          "end": 1380
+        }
+      ],
+      "external_id": "179554"
+    },
+    {
+      "n": 5,
+      "title": "Decisive Battle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "It's the final showdown with the Fire Dragon as Itami, Rory, Chuka, and Lelei join forces with a squad of rocket-launcher-equipped elves. Can swords, magic, artillery, and fighter jets defeat a dragon?",
+      "airdate": "2016-02-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 27,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1380
+        }
+      ],
+      "external_id": "179555"
+    },
+    {
+      "n": 6,
+      "title": "The Magic City of Rondel",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "With the Fire Dragon slain, Itami's next stop is the magic city of Londol, where Lelei is about to present at a prestigious academy. Meanwhile, peace talks between the Empire and Japan are about to begin...",
+      "airdate": "2016-02-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 123,
+          "end": 213
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "179556"
+    },
+    {
+      "n": 7,
+      "title": "Dangerous Sisters",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Lelei's sister is jealous of her success in money, academics, and wealth. She challenges Lelei to a duel, which threatens to burn down the entire city!",
+      "airdate": "2016-02-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 112,
+          "end": 202
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "179557"
+    },
+    {
+      "n": 8,
+      "title": "Lover",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "With the Emperor out of the picture, the crown prince is free to run things as he sees fit. He establishes a reign of terror over the empire, and his thugs imprison anyone who speaks out against him. Sherry's parents are killed and she's forced to flee to safety, but Japan refuses to take her in.",
+      "airdate": "2016-02-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 71,
+          "end": 161
+        }
+      ],
+      "external_id": "179558"
+    },
+    {
+      "n": 9,
+      "title": "Deadline",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Zolzal uses the Japanese government's acceptance of the refugees as a pretext to attack. The foreign media is in the Special Region right now, and the government has given orders not to evacuate the embassy. Meanwhile, Itami's crew comes under attack by assassins.",
+      "airdate": "2016-03-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 58,
+          "end": 148
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "179559"
+    },
+    {
+      "n": 10,
+      "title": "The Empress in Slave's Clothing",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The Pied Piper strikes as Lelei delivers her speech for her masters. Princess Pinya is impressed by Zolzal's new government, and Chule is now the de-facto ruler of the empire.",
+      "airdate": "2016-03-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 119
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "179560"
+    },
+    {
+      "n": 11,
+      "title": "Paradrop",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The SDF has gotten the go-ahead to assault the capital and protect the diplomats and pro-peace senators. A huge combined arms operation begins, as dragons are shot down by jets and spear men are slain by snipers. But will they be able to reach the Jade Palace before the exhausted Rose Knights are finally defeated?",
+      "airdate": "2016-03-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 65,
+          "end": 155
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "179561"
+    },
+    {
+      "n": 12,
+      "title": "Thus They Fought",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Itami and the rest of Recon 3 launch one final assault on the palace to recover the captured princess. A new dawn begins for the Empire, and some surprising relationships are revealed.",
+      "airdate": "2016-03-26",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1380
+        }
+      ],
+      "external_id": "179562"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

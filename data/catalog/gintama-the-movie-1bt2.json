@@ -1,0 +1,55 @@
+{
+  "id": "gintama-the-movie-1bt2",
+  "title": "Gintama - The Movie",
+  "native": "銀魂 新訳紅桜篇",
+  "year": 2010,
+  "rating": 8.3,
+  "season": "Spring 2010",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx7472-RveDgQsIZUNG.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx7472-RveDgQsIZUNG.jpg",
+  "accent": "#e4ae50",
+  "synopsis": "Odd Jobs Gin has taken on a lot of odd work in the past, and when you're a Jack of All Trades agency based in a feudal Japan that's been conquered and colonized by aliens, the term \"Odd Jobs\" means REALLY ODD jobs. But when some more than slightly suspicious secrets from the shadows of Gintoki Sakata's somewhat shady former samurai past and a new pair of odd jobs collide, the action is bound to get so wild and demented that only a feature film will do it justice! \n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 4989,
+    "anilist": 7472,
+    "mal": 7472
+  },
+  "skip_key_id": 7472,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-22 06:28:10",
+  "search_text": "gintama the movie 銀魂 新訳紅桜篇 movie finished",
+  "genres": [
+    "action",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Gintama - The Movie",
+      "runtime": "98:00",
+      "runtime_seconds": 5880,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx7472-RveDgQsIZUNG.jpg",
+      "synopsis": "Odd Jobs Gin has taken on a lot of odd work in the past, and when you're a Jack of All Trades agency based in a feudal Japan that's been conquered and colonized by aliens, the term \"Odd Jobs\" means REALLY ODD jobs. But when some more than slightly suspicious secrets from the shadows of Gintoki Sakata's somewhat shady former samurai past and a new pair of odd jobs collide, the action is bound to get so wild and demented that only a feature film will do it justice! \n\n(Source: Sentai Filmworks)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "78233"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

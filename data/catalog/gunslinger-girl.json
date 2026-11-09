@@ -1,0 +1,390 @@
+{
+  "id": "gunslinger-girl",
+  "title": "Gunslinger Girl",
+  "native": "GUNSLINGER GIRL",
+  "year": 2003,
+  "rating": 7.1,
+  "season": "Fall 2003",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx134-f3dmmMOijYdn.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx134-f3dmmMOijYdn.png",
+  "accent": "#f1e4ae",
+  "synopsis": "Officially, the Social Welfare Agency is a government sponsored corporation that's in the business of saving lives. In reality, it's an agency on the fringe of technology. They give terminal patients another shot at life using cybernetic implants. This conditioning process then shapes the patient into an efficient machine for handling all of the government's dirty work.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Gunslinger Girl -Il Teatrino- (2008)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 113,
+    "anilist": 134,
+    "mal": 134
+  },
+  "skip_key_id": 134,
+  "skip_key_space": "anilist",
+  "episode_total": 13,
+  "added_at": "2026-10-22 04:56:47",
+  "search_text": "gunslinger girl gunslinger girl tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Fratello (Siblings)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3392/original.jpg",
+      "synopsis": "Henrietta and her \"handler,\" Giuseppe, members of Section 2 of the Social Welfare Agency, which handles covert government actions, are ordered to a site to acquire a witness. In a flashback, Giuseppe recalls how he found Henrietta in a hospital after her family had been killed. He had her nursed back to health, fitted with cybernetics, and trained to be an assassin. In the present, he approaches the armed group surrounding the witness, but one of the men's threats against him causes Henrietta to start viciously attacking, and she dispatches the men inside the room. Giuseppe reprimands her for this, as their mission is a failure, although the witness is later found outside the building. Back at base, Henrietta is comforted by two of her counterparts, Triela and Claes.",
+      "airdate": "2003-10-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1386
+        }
+      ],
+      "external_id": "3392"
+    },
+    {
+      "n": 2,
+      "title": "Orione (Orion)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3393/original.jpg",
+      "synopsis": "Henrietta is treated for her injury, although the doctor warns that repeated surgeries would weaken her body. Giuseppe then recalls how he needed to teach her manners, and during her training, attempted to treat her as a young girl rather than simply a killing machine. After Henrietta finishes tea with Triela and Claes, who are supportive of her despite her mission's failure, Giuseppe gives her a coat and asks her to join him on top of the main building. Once there, he shows Henrietta the stars through a telescope for the first time, noting that he wanted her to look upon the sky with something other than a rifle scope.",
+      "airdate": "2003-10-15",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1380
+        }
+      ],
+      "external_id": "3393"
+    },
+    {
+      "n": 3,
+      "title": "Ragazzo (Boy)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3394/original.jpg",
+      "synopsis": "Rico, another of the young assassin girls, recalls her finding by her handler, Jean, and how she was able to move thanks to the cybernetics she received. In the present, she is assigned on a mission to assassinate a politician, and in a preliminary run through the building, meets a boy named Emilio. She is unsure of how to react to him, but afterwards, she asks Henrietta to teach her how to play the violin since Emilio asked her to. During the mission, Rico succeeds in killing the politician, but encounters Emilio, and is forced to kill him to preserve the mission's secrecy.",
+      "airdate": "2003-10-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1380
+        }
+      ],
+      "external_id": "3394"
+    },
+    {
+      "n": 4,
+      "title": "Bambola (Doll)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3395/original.jpg",
+      "synopsis": "With Christmas coming, Henrietta asks Giuseppe to stay with her as her Christmas present. While on a mission, Triela shoots a suspect against the orders of her handler, Hilshire. At base, she mulls over the fact that Hilshire always gives her the same Christmas presents. They are then sent on a mission to apprehend Mario Bosh, a retired Mafia leader. They succeed in finding him, but he manages to escape. As he is about to be killed by the Mafia, Triela saves him, and allows him to leave to be with his daughter. Overhearing this, Hilshire asks her what she wants for Christmas, and she asks for another bear. On Christmas day, however, she receives a present from Mario as well.",
+      "airdate": "2003-11-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 109
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1382
+        }
+      ],
+      "external_id": "3395"
+    },
+    {
+      "n": 5,
+      "title": "Promessa (Promise)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3396/original.jpg",
+      "synopsis": "In a replaying of past events, Jean recruits Raballo, a retired member of the Carabinieri, to be Claes' handler. Initially, Claes finds it difficult to cope with Raballo's relentless training and strict businesslike relationship. However, after the two begin fishing together, they acquire a closer relationship. One day, Raballo gives Claes her old glasses and a key to his room so she can read all the books she wants, as well as extracting a promise that she would always be gentle while wearing her glasses. Afterwards, Jean reveals that Raballo was killed in a hit-and-run incident. As a result, Claes could not go on missions and instead participated in scientific tests concerning her mechanical components. However, she enjoyed passing the time by reading, and other tasks, such as growing a vegetable patch.",
+      "airdate": "2003-11-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1379
+        }
+      ],
+      "external_id": "3396"
+    },
+    {
+      "n": 6,
+      "title": "Gelato (Frozen)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3397/original.jpg",
+      "synopsis": "After barely defusing a bomb in a subway, the police begin to search for Enrico Beldini, a noted bomber. Henrietta and Giuseppe overhear a conversation in which Beldini deals with the Padania Republic Faction for a bomb to use. The PRF, namely members Franco and Franca, agrees, but Enrico is tailed by Carabinieri agents throughout the city. Subsequently, Henrietta, Rico, and Triela raid Enrico's hideout, and they are able to dispatch his guards and capture him alive. Afterwards, Giuseppe gives Henrietta gelato from the Piazza di Spagna as her reward. Franco and Franca accidentally meet Henrietta, and remark after assuming that she is a daughter of wealth that she is one of the ones they are fighting for.",
+      "airdate": "2003-11-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 115
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1385
+        }
+      ],
+      "external_id": "3397"
+    },
+    {
+      "n": 7,
+      "title": "Protezione (Protection)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3398/original.jpg",
+      "synopsis": "Rico and Jean encounter a man named Filippo Adani, and after conversing with him, tour the city of Florence, enjoying the artwork and architecture. In the museum, Filippo muses on how he threw away a possible career as an artist to become an accountant. Meanwhile, Jean apprehends an assassin from the PRF sent to kill Filippo, who is revealed to be an accountant for Pirazzi, a member of the PRF. Under the command of Cristiano, PRF members attempt to apprehend him, but he manages to escape with the aid of Rico and Henrietta. As he sits safely in the getaway car, he claims that he has nothing to live for, but Rico convinces him to go back to his artistic passions, which he accepts.",
+      "airdate": "2003-12-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1398
+        }
+      ],
+      "external_id": "3398"
+    },
+    {
+      "n": 8,
+      "title": "Il Principe del regno della pasta (The Prince of the Kingdom of Pasta)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3399/original.jpg",
+      "synopsis": "Henrietta undergoes emotional testing with Dr. Bianchi, and afterwards, Angelica also comes, who is revealed to have suffered memory loss. Marco, her handler, is confronted by Bianchi over his lack of care, and Marco reveals his frustration with teaching things to someone that merely forgets them. He recalls how, to sooth Angelica, he would read a story called \"Il Principe del Regno Della Pasta.\" However, three months after their training started, she was unable to remember any part of the story, to his dissatisfaction. Combined with Marco's girlfriend deserting him due to his job, Marco treats Angelica coldly, regarding her solely as an assassin.",
+      "airdate": "2003-12-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1381
+        }
+      ],
+      "external_id": "3399"
+    },
+    {
+      "n": 9,
+      "title": "Lycorsi Radiata Herb (Be Struck Off Herb)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3400/original.jpg",
+      "synopsis": "Elsa, another mechanized assassin girl, completes a mission to terminate a group of corrupt police officers on the orders of her handler, Lauro. Lauro recruits Giuseppe for his next mission, and the two remark over their different views on treating the girls, Lauro's indifference contrasting against Giuseppe's empathy. Henrietta attempts to converse with Elsa before the mission, but is rebuffed by the girl's single-minded devotion to Lauro. Meanwhile, Elsa grows increasingly jealous over Giuseppe and Henrietta's close relationship, and Lauro removes her from the mission when he notices this. After Giuseppe and Henrietta succeed, Lauro comments on Elsa's uselessness, leaving her devastated.",
+      "airdate": "2004-01-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 111
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1380
+        }
+      ],
+      "external_id": "3400"
+    },
+    {
+      "n": 10,
+      "title": "Amare (To Love)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3401/original.jpg",
+      "synopsis": "Giuseppe and Henrietta are on leave on a cruise to Sicily, and he comments that Elsa and Lauro were found dead in a park. Section 1 chief Draghi decides to investigate, and sends Pietro Fermi and Elenora Gabrielli, with the motive being to undercut the credibility of using mechanized bodies. Pietro and Elenora tour Section 2's facility and converse with Triela. Meanwhile, Jean discovers a serious fact concerning the case and lies to Section 1, stating that Elsa died protecting Lauro, although Pietro is ultimately not satisfied with that answer and decides to further investigate.",
+      "airdate": "2004-01-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 109
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1381
+        }
+      ],
+      "external_id": "3401"
+    },
+    {
+      "n": 11,
+      "title": "Febbre Alta (High Fever)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3402/original.jpg",
+      "synopsis": "Pietro and Elenora leave for Sicily to meet with Giuseppe and Henrietta, who are staying at one of Giuseppe's family's summer homes. Pietro questions Giuseppe on details about Elsa while Elenora helps Henrietta with the cooking. As they prepare to go shopping, a thief steals Henrietta's camera, and she retrieves it, with Elenora preventing her from seriously injuring the thief. With Elenora's aid, the dinner is a success, and Henrietta later confides in Elinora that she feels a compunction to be more than an ordinary girl for Giuseppe's sake. She then determines that Elsa committed a murder suicide with Lauro after realizing that her love for him was not reciprocated.",
+      "airdate": "2004-02-04",
+      "markers": [],
+      "external_id": "3402"
+    },
+    {
+      "n": 12,
+      "title": "Simbiosi (Symbiosis)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3403/original.jpg",
+      "synopsis": "Angelica is injured in a training session, leading the head of the Social Welfare Agency to question the value of Section 2. As a result, an elaborate scheme is hatched, with Claes posing as the daughter of a member of parliament in order to create a false hostage situation to eliminate PRF terrorists. Despite her injury, Angelica asks to participate. The group manages to dispatch the terrorists, although Angelica is injured shortly before Claes knocks her attacker unconscious. Marco expresses his disapproval of Angelica afterwards. In the hospital, Angelica exclaims that she would rather be dead than suffer Marco's anger and indifference. To Claes angrily slaps her, claiming to have regretted saving her.",
+      "airdate": "2004-02-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1381
+        }
+      ],
+      "external_id": "3403"
+    },
+    {
+      "n": 13,
+      "title": "Stellacadente (Falling Star)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3404/original.jpg",
+      "synopsis": "The girls plan to see a meteor shower, but Henrietta is distressed when Giuseppe reveals that he is too busy and cannot attend. As a result, Triela tries to find a new chaperone, and Hilshire agrees after Triela helps him with his work. Meanwhile, Henrietta visits Angelica in the hospital, where Angelica hears a dog barking, causing her to remember her old dog. Henrietta relays this information to Marco, who is apathetic, but Henrietta implores him to visit his charge. He initially refuses and asks Henrietta whether she is dissatisfied with her mechanical condition, to which she responds that she has accepted who she is. Marco later goes to visit Angelica as the other girls go to see the meteor shower. The girls begin to sing Beethoven's Symphony No. 9 as Angelica listens to it in her hospital bedroom. She then asks Marco to read \"Il Principe del Regno Della Pasta.\" It is strongly indicated that she dies as the story is read to her.",
+      "airdate": "2004-02-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 111
+        }
+      ],
+      "external_id": "3404"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "doll",
+      "artist": "Lia",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tatta Hitotsu no Omoi",
+      "artist": "KOKIA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "doll",
+      "artist": "Tada Aoi",
+      "episodes": "1-5, 10, 12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Light Before We Land",
+      "artist": "The Delgados",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dopo Il Sogno ～夢のあとに～ (After the dream)",
+      "artist": "op.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "doll",
+      "artist": "Lia",
+      "episodes": "6-7, 9, 11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Scarborough Fair",
+      "artist": "Aoi Tada",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "human",
+      "artist": "Lia",
+      "episodes": "13"
+    }
+  ],
+  "relations": []
+}

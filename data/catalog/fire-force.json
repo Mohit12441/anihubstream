@@ -1,0 +1,681 @@
+{
+  "id": "fire-force",
+  "title": "Fire Force",
+  "native": "炎炎ノ消防隊",
+  "year": 2019,
+  "rating": 7.6,
+  "season": "Summer 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx105310-2PKUvoaA6fTn.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105310-2PKUvoaA6fTn.jpg",
+  "accent": "#f1bb28",
+  "synopsis": "Year 198 of the Solar Era in Tokyo, special fire brigades are fighting against a phenomenon called spontaneous human combustion where human beings are turned into living infernos called \"Infernals.” While the Infernals are first-generation cases of spontaneous human combustion, later generations possess the ability to manipulate flames while retaining human form. Shinra Kusakabe, a youth who gained the nickname Devil’s Footprints for his ability to ignite his feet at will, joins the Special Fire Force Company 8 which composes of other flames users as they work to extinguish any Infernals they encounter. As a faction that is creating Infernals appears, Shinra begins to uncover the truth behind a mysterious fire that caused the death of his family twelve years ago.\n\n (Source: Official Website)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Fire Force Season 2 (2020)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42068,
+    "anilist": 105310,
+    "mal": 38671,
+    "hianime": "fire-force-j42doz"
+  },
+  "skip_key_id": 38671,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": "2026-10-14 02:14:09",
+  "search_text": "fire force 炎炎ノ消防隊 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Shinra Kusakabe Enlists",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259661/original.jpg",
+      "synopsis": "On his first day with Special Fire Force Company 8, Shinra Kusakabe, a third-generation pyrokinetic who is able to produce flames from his feet, meets his fellow company members and begins to fulfill his wish of becoming a hero. (Source: Crunchyroll)",
+      "airdate": "2019-07-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 386,
+          "end": 476
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1360,
+          "end": 1437
+        }
+      ],
+      "external_id": "259661"
+    },
+    {
+      "n": 2,
+      "title": "The Heart of a Fire Soldier",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259662/original.jpg",
+      "synopsis": "Arthur Boyle, the self-professed \"Knight King,\" arrives at Company 8, and immediately, there are tensions between him and Shinra. With the Rookie Games coming up, Hinawa wants to see what the two new recruits are really capable of. (Source: Crunchyroll)",
+      "airdate": "2019-07-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 120,
+          "end": 210
+        }
+      ],
+      "external_id": "259662"
+    },
+    {
+      "n": 3,
+      "title": "The Rookie Fire Soldier Games",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259693/original.jpg",
+      "synopsis": "Shinra and Arthur compete in the Rookie Fire Soldier Games, a contest to test the abilities of each year's newest recruits. However, they are interrupted at the goal by the mysterious man who created explosions at their last fire scene. (Source: Crunchyroll)",
+      "airdate": "2019-07-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 107,
+          "end": 197
+        }
+      ],
+      "external_id": "259693"
+    },
+    {
+      "n": 4,
+      "title": "The Hero and the Princess",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259694/original.jpg",
+      "synopsis": "A call mistakenly comes in to Company 8 to rescue a dog out of a tree, to which Shinra and Arthur respond. However, when an Infernal suddenly appears at the district courthouse, the two must play catch-up to join the rest of the company. (Source: Crunchyroll)",
+      "airdate": "2019-08-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 123,
+          "end": 213
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1374,
+          "end": 1437
+        }
+      ],
+      "external_id": "259694"
+    },
+    {
+      "n": 5,
+      "title": "The Battle Begins",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259695/original.jpg",
+      "synopsis": "While jogging, Shinra inadvertently disturbs Iris's purification rite, and sees that she is troubled. When Iris later turns up missing, the other members of Company 8 rally to Company 5's compound, to which Iris had secretly slipped away. (Source: Crunchyroll)",
+      "airdate": "2019-08-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 159,
+          "end": 249
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1343,
+          "end": 1438
+        }
+      ],
+      "external_id": "259695"
+    },
+    {
+      "n": 6,
+      "title": "The Spark of Promise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259696/original.jpg",
+      "synopsis": "Shinra confronts Hibana in an attempt to rescue Iris, and must once again deal with her ability to make his body shut down. The story of Hibana and Iris's youth as orphans, as well as Hibana's rise to prominence, is revealed. (Source: Crunchyroll)",
+      "airdate": "2019-08-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 68,
+          "end": 158
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1219,
+          "end": 1309
+        }
+      ],
+      "external_id": "259696"
+    },
+    {
+      "n": 7,
+      "title": "The Investigation of the 1st Commences",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267730/original.jpg",
+      "synopsis": "The members of Company 5 and 8 get together for a cookout, ostensibly to celebrate a successful nighttime training exercise. Using the bylaws of the Special Fire Force, Obi gets Shinra and Arthur temporarily assigned to the 1st to investigate it. (Source: Crunchyroll)",
+      "airdate": "2019-08-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 75,
+          "end": 165
+        }
+      ],
+      "external_id": "267730"
+    },
+    {
+      "n": 8,
+      "title": "Infernal Insects",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267731/original.jpg",
+      "synopsis": "Obi goes over Hibana's research, and learns that the artificially-created Infernals she dissected all had traces of insect DNA in them. Shinra and Arthur's investigation at the 1st continues, and they finally get their first lead on a culprit. (Source: Crunchyroll)",
+      "airdate": "2019-08-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 103,
+          "end": 193
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1433
+        }
+      ],
+      "external_id": "267731"
+    },
+    {
+      "n": 9,
+      "title": "The Spreading Malice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267732/original.jpg",
+      "synopsis": "Tamaki watches on as Shinra confronts Rekka over his actions, and reminisces about how she once looked up to the lieutenant. Rekka reveals his objective in seeking out compatible children, one which could spell disaster for the entire world. (Source: Crunchyroll)",
+      "airdate": "2019-09-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 190,
+          "end": 280
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1206,
+          "end": 1296
+        }
+      ],
+      "external_id": "267732"
+    },
+    {
+      "n": 10,
+      "title": "The Promise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267733/original.jpg",
+      "synopsis": "A captains' conference is convened to allow the Special Fire Force to discuss the situation with the Evangelist and the White-Clad. Shinra once again has an encounter with Joker, in which startling information about Shinra's brother is revealed. (Source: Crunchyroll)",
+      "airdate": "2019-09-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 150,
+          "end": 240
+        }
+      ],
+      "external_id": "267733"
+    },
+    {
+      "n": 11,
+      "title": "Formation of Special Fire Force Company 8 / The Mightiest Hikeshi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267734/original.jpg",
+      "synopsis": "While Company 8 searches for clues about the Evangelist, Hinawa recounts the tale of how the company originally came into existence. A lead prompts the crew to pay a visit to Company 7's jurisdiction in Asakusa, and its captain, Benimaru. (Source: Crunchyroll)",
+      "airdate": "2019-09-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 66,
+          "end": 156
+        }
+      ],
+      "external_id": "267734"
+    },
+    {
+      "n": 12,
+      "title": "Eve of Hostilities in Asakusa",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267735/original.jpg",
+      "synopsis": "Company 8 pitches in to help rebuild Asakusa after the latest Infernal incident, helping to gain the trust of its people. However, a White-Clad plot threatens to undo all of their goodwill, prompting Obi to take matters into his own hands. (Source: Crunchyroll)",
+      "airdate": "2019-10-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 209,
+          "end": 299
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1357,
+          "end": 1440
+        }
+      ],
+      "external_id": "267735"
+    },
+    {
+      "n": 13,
+      "title": "The Trap Is Set",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267736/original.jpg",
+      "synopsis": "With Konro's help, the members of the 8th begin investigating events in the 7th's jurisdiction. Chaos breaks out one dozens of cases of mistaken identity crop up, and the town's people turn on each other. The 8th comes under White-Clad attack. (Source: Crunchyroll)",
+      "airdate": "2019-10-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 371,
+          "end": 461
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1343,
+          "end": 1433
+        }
+      ],
+      "external_id": "267736"
+    },
+    {
+      "n": 14,
+      "title": "For Whom the Flames Burn",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267737/original.jpg",
+      "synopsis": "As Asakusa burns around them, Konro encourages Benimaru to step into his role as a community leader. Benimaru devises a way for the townspeople to foil the designs of the impostors among the crowd. Konro reaches out to Shinra for help. (Source: Crunchyroll)",
+      "airdate": "2019-10-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 200,
+          "end": 287
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1157,
+          "end": 1247
+        }
+      ],
+      "external_id": "267737"
+    },
+    {
+      "n": 15,
+      "title": "The Blacksmith's Dream",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267738/original.jpg",
+      "synopsis": "Viktor Licht is assigned to Company 8 as its forensic scientist, but he is viewed with suspicion since the assignment came from Haijima. Obi sends Shinra, Arthur, and Iris to speak to a man named Vulcan about joining the 8th as its engineer. (Source: Crunchyroll)",
+      "airdate": "2019-11-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 158,
+          "end": 248
+        }
+      ],
+      "external_id": "267738"
+    },
+    {
+      "n": 16,
+      "title": "We Are Family",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267739/original.jpg",
+      "synopsis": "Vulcan teaches Yu a lesson in the importance of forging things that cannot be broken, and his hope to create similarly unbreakable family ties. Sensing a threat to Vulcan, the members of Company 8 take up positions to keep him safe. (Source: Crunchyroll)",
+      "airdate": "2019-11-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 186,
+          "end": 276
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1354,
+          "end": 1440
+        }
+      ],
+      "external_id": "267739"
+    },
+    {
+      "n": 17,
+      "title": "Black and White and Gray",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267740/original.jpg",
+      "synopsis": "While Dr. Giovanni continues to search Vulcan's workshop, Hibana comes to Shinra's aid, allowing him to rush back to help Vulcan. Meanwhile, Arthur has his hands full trying to deal with Mirage's illusions, and Iris resists in her own way. (Source: Crunchyroll)",
+      "airdate": "2019-11-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 165,
+          "end": 255
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1372
+        }
+      ],
+      "external_id": "267740"
+    },
+    {
+      "n": 18,
+      "title": "The Secrets of Pyrokinesis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267741/original.jpg",
+      "synopsis": "Vulcan gets settled in at the 8th, while Captain Obi meets with Hibana, Konro, and Karim to exchange data on the White-Clad matter. Konro proposes that Shinra and Arthur be given combat training in Asakusa to improve their fighting skills. (Source: Crunchyroll)",
+      "airdate": "2019-11-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 141,
+          "end": 231
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1343,
+          "end": 1434
+        }
+      ],
+      "external_id": "267741"
+    },
+    {
+      "n": 19,
+      "title": "Into the Nether",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267742/original.jpg",
+      "synopsis": "Licht's analysis of the attack on Vulcan's workshop reveals that the Evangelist's men have been in the \"Nether,\" the area beneath Tokyo. Company 8 proceeds underground in search of the White-Clad and the secrets behind human combustion. (Source: Crunchyroll)",
+      "airdate": "2019-11-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 301,
+          "end": 396
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1360,
+          "end": 1440
+        }
+      ],
+      "external_id": "267742"
+    },
+    {
+      "n": 20,
+      "title": "Wearing His Pride",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Hinawa comes upon an abandoned subway station, where he gets into a shootout with Arrow. Arthur and Mirage find themselves in a rematch, as Arthur gets the chance to put the training he received from Benimaru and Konro to the test. (Source: Crunchyroll)",
+      "airdate": "2019-12-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 123,
+          "end": 213
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1328,
+          "end": 1420
+        }
+      ],
+      "external_id": "267743"
+    },
+    {
+      "n": 21,
+      "title": "Those Connected",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Obi and Vulcan face off against Dr. Giovanni and Lisa, during which Giovanni tells Obi more about the nature of Adolla Bursts. Shinra has an unusual experience that leads him to find Sho, but their reunion proves more volatile than hoped for. (Source: Crunchyroll)",
+      "airdate": "2019-12-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 257,
+          "end": 347
+        }
+      ],
+      "external_id": "267744"
+    },
+    {
+      "n": 22,
+      "title": "A Brother's Determination",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As Shinra and Sho continue to share their Adolla Link, Shinra learns a startling truth about the origin of his Adolla Burst flame. Shinra comes to understand the Link's nature further, developing his skills even more in his effort to reach Sho",
+      "airdate": "2019-12-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 156,
+          "end": 246
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1420
+        }
+      ],
+      "external_id": "267745"
+    },
+    {
+      "n": 23,
+      "title": "Smile",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Shinra revisits his childhood to share his memories with Sho, to try to forge a deeper connection. When one of their own is critically injured, the members of the 8th rally to the rescue, and turn to Captain Huang of the 6th for assistance.",
+      "airdate": "2019-12-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 435,
+          "end": 525
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1419
+        }
+      ],
+      "external_id": "267746"
+    },
+    {
+      "n": 24,
+      "title": "The Burning Past",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Before being discharged from the hospital, Shinra is visited by Captain Burns, who offers to tell him all about the fire that happened 12 years ago, but only if Shinra can demonstrate that he is strong enough to hear the whole truth. (Source: Crunchyroll)",
+      "airdate": "2019-12-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 215,
+          "end": 305
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1203,
+          "end": 1293
+        }
+      ],
+      "external_id": "267747"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ignis",
+      "artist": "Takanori Nishikawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Speak of the Devil",
+      "artist": "Survive Said the Prophet",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "High Flame",
+      "artist": "Queen Bee",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Urusiren",
+      "artist": "Umeda Cypher",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "SPARK-AGAIN",
+      "artist": "Aimer",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ID",
+      "artist": "Cidergirl",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Inferno",
+      "artist": "Mrs. Green Apple",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "veil",
+      "artist": "Keina Suda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Speak of the Devil feat. Masato from coldrain",
+      "artist": "Survive Said the Prophet",
+      "episodes": "7-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Torch of Liberty",
+      "artist": "KANA-BOON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Desire",
+      "artist": "PELICAN FANCLUB",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "MAYDAY",
+      "artist": "coldrain feat. Ryo from CRYSTAL LAKE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Nonai",
+      "artist": "Lenny code fiction",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Bakusō Yume Uta (爆走夢歌)",
+      "artist": "Diggy-MO'",
+      "episodes": "13"
+    }
+  ],
+  "relations": []
+}

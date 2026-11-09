@@ -1,0 +1,84 @@
+{
+  "id": "high-school-dxd-new-oppai-tsutsumimasu",
+  "title": "High School DxD New: Oppai, Tsutsumimasu!",
+  "native": "ハイスクールD×D NEW OVA おっぱい、包みます！",
+  "year": 2015,
+  "rating": 7.3,
+  "season": "Year 2015",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/6aa02fb10dd03e03a92d045b-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/6aa02fb10dd03e03a92d045b-landscape.webp",
+  "accent": "#2f7bff",
+  "synopsis": "Unaired anime episode bundled with the limited edition of High School DxD DX.1.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "high-school-dxd-new:-oppai-tsutsumimasu!-9j8ra2",
+    "mal": 30300,
+    "anilist": 21103,
+    "kitsu": 10744
+  },
+  "skip_key_id": 30300,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "high school dxd new oppai tsutsumimasu ハイスクールd d new ova おっは い 包みます high school dxd new ova",
+  "genres": [
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "High School DxD New: Oppai, Tsutsumimasu!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6aa02fb10dd03e03a92d045b-poster.jpg",
+      "synopsis": "Unaired anime episode bundled with the limited edition of High School DxD DX.1.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "173895"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sympathy",
+      "artist": "Larval Stage Planning",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Houteishiki wa Kotaenai (方程式は答えない)",
+      "artist": "Occult Kenkyuubu Girls",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Gekijouron (激情論)",
+      "artist": "ZAQ",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Lovely ♥ Devil (らぶりぃ♥でびる)",
+      "artist": "Occult Kenkyuubu Girls",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,191 @@
+{
+  "id": "house-of-five-leaves",
+  "title": "House of Five Leaves",
+  "native": "さらい屋 五葉",
+  "year": 2010,
+  "rating": 7.5,
+  "season": "Spring 2010",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx7588-iXCwrmgHGJbd.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx7588-iXCwrmgHGJbd.jpg",
+  "accent": "#ff3500",
+  "synopsis": "Masterless samurai Akitsu Masanosuke is a skilled and loyal swordsman, but his naïve, diffident nature has more than once caused him to be let go by the lords who employ him. Hungry and desperate, he agrees to become a bodyguard for Yaichi, the charismatic leader of a group calling itself “Five Leaves.” Although disturbed by the gang’s sinister activities, Masa begins to suspect that Yaichi’s motivations are not what they seem. And despite his misgivings, the deeper he’s drawn into the world of the Five Leaves, the more he finds himself fascinated by these devious, mysterious outlaws.\n\n(Source: VIZ Media)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "house-of-five-leaves-071tf2",
+    "mal": 7588,
+    "anilist": 7588,
+    "kitsu": 5041
+  },
+  "skip_key_id": 7588,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "house of five leaves さらい屋 五葉 tv finished",
+  "genres": [
+    "drama",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "In Name Only",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/78513/original.jpg",
+      "synopsis": "Masterless samurai Masanosuke Akitsu' life is changed after a chance encounter with Yaichi, who offers the timid swordsman a bodyguard job and invites him into the mysterious world of the Five Leaves.",
+      "airdate": "2010-04-16",
+      "markers": [],
+      "external_id": "78513"
+    },
+    {
+      "n": 2,
+      "title": "Make Love To Me",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/78514/original.jpg",
+      "synopsis": "Masanosuke begins to grow more comfortable within the world of the Five Leaves, but despite his efforts to learn more about Yaichi, the gang leader remains a riddle.",
+      "airdate": "2010-04-23",
+      "markers": [],
+      "external_id": "78514"
+    },
+    {
+      "n": 3,
+      "title": "Gradually Get Him Involved",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/78515/original.jpg",
+      "synopsis": "Thanks to Yaichi, Masanosuke's found a job as a bodyguard at a rice wholesaler. The work is steady and the samurai hopes to keep the position for a long time - but the situation might be too good to be true.",
+      "airdate": "2010-04-30",
+      "markers": [],
+      "external_id": "78515"
+    },
+    {
+      "n": 4,
+      "title": "Sure Does Get Carried Away",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/78516/original.jpg",
+      "synopsis": "Masanosuke gets hired as a bodyguard at the brothel where Yaichi lives. If he can keep from getting fired, he'll be able to send his family some money - and maybe learn more about the elusive leader of the Five Leaves.",
+      "airdate": "2010-05-07",
+      "markers": [],
+      "external_id": "78516"
+    },
+    {
+      "n": 5,
+      "title": "It'll Be Fine",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/78517/original.jpg",
+      "synopsis": "Masanosuke recuperates from an illness at the Elder's house, where he is encouraged to leave the world of the Five Leaves behind. The samurai also learns the reasons behind Umezo's involvement with the gang.",
+      "airdate": "2010-05-14",
+      "markers": [],
+      "external_id": "78517"
+    },
+    {
+      "n": 6,
+      "title": "Consider Yourself Fortunate",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/78518/original.jpg",
+      "synopsis": "Masanosuke's still healing at the Elder's house, and while Umezo occasionally visits to check up on him, Yaichi remains reluctant to make an appearance. Meanwhile, Denshichi investigates the source of Senkichi's funds.",
+      "airdate": "2010-05-21",
+      "markers": [],
+      "external_id": "78518"
+    },
+    {
+      "n": 7,
+      "title": "Thoughtless of Me",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/78519/original.jpg",
+      "synopsis": "Masanosuke's back in Edo after recovering from his recent illness, but the samurai finds he still has problems when a tough adversary from the past challenges him to a new face-off.",
+      "airdate": "2010-05-28",
+      "markers": [],
+      "external_id": "78519"
+    },
+    {
+      "n": 8,
+      "title": "Deeply Indebted to Two People",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/78520/original.jpg",
+      "synopsis": "When Matsukichi hears that Kiku-ya's owner is having problems, his decision to try and help out results in even bigger troubles. Masanosuke and Umezo's growing concerns lead them to investigate.",
+      "airdate": "2010-06-04",
+      "markers": [],
+      "external_id": "78520"
+    },
+    {
+      "n": 9,
+      "title": "Come to Rescue You",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/78521/original.jpg",
+      "synopsis": "Masanosuke sets out to rescue Matsukichi and settle the matter of the stolen wooden tags. Meanwhile, Sachi, Masanosuke's little sister, is on a mission of her own after running away from home.",
+      "airdate": "2010-06-11",
+      "markers": [],
+      "external_id": "78521"
+    },
+    {
+      "n": 10,
+      "title": "Dirty Stray Cat",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/78522/original.jpeg",
+      "synopsis": "Yaichi's strange behavior is becoming a concern for people at Katsura-ya. Meanwhile, Masanosuke learns more about Yagi's past following a graveside visit.",
+      "airdate": "2010-06-18",
+      "markers": [],
+      "external_id": "78522"
+    },
+    {
+      "n": 11,
+      "title": "Pardon Me",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/78523/original.jpeg",
+      "synopsis": "Masanosuke begins to understand what motivates Yaichi to keep kidnapping, even when the rest of the gang sees no need. Hoping to learn more of Yaichi's past, Masanosuke visits Elder.",
+      "airdate": "2010-06-25",
+      "markers": [],
+      "external_id": "78523"
+    },
+    {
+      "n": 12,
+      "title": "Already Wasted",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/78524/original.jpeg",
+      "synopsis": "Yaichi joins Yagi for a drink, where they reminisce about the past and old friends. Later, tensions escalate after a confrontation between Jin and Yaichi leads to a confession about the kidnapping.",
+      "airdate": "2010-07-02",
+      "markers": [],
+      "external_id": "78524"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sign of Love",
+      "artist": "immi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "all I need is...",
+      "artist": "Rake",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

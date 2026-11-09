@@ -1,0 +1,350 @@
+{
+  "id": "fairy-tail-100-years-quest",
+  "title": "Fairy Tail: 100 Years Quest",
+  "native": "Fairy Tail: 100-nen Quest",
+  "year": 2024,
+  "rating": 7.6,
+  "season": "Year 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/68f9e84e045f82a235be8cdf-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/68f9e84e045f82a235be8cdf-landscape.webp",
+  "accent": "#ff3d8b",
+  "synopsis": "For over one hundred years, a special quest has been waiting for a wizard skilled enough to complete it. On the northern continent of Guiltina, there are five immensely powerful Dragon Gods who possess great destructive force that can only be quelled by sealing them away. Natsu Dragneel and his friends from the Fairy Tail guild—Lucy Heartfilia, Gray Fullbuster, Erza Scarlet, Wendy Marvell, and the exceeds Happy and Charlés—consider this the perfect challenge to take on.\n\nThe Fairy Tail mages are not the only ones searching for the Dragon Gods. Diabolos, a guild exclusive for \"Dragon Eaters,\" seeks to enhance their Dragon Slayer magic by devouring the dragons. Meanwhile, Fairy Tail's newest addition, Touka, appears to be hiding something sinister from her new companions—and her secrets may bring disaster to the guild while its strongest wizards are away.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fairy-tail:-100-years-quest-os8ffh",
+    "mal": 49785,
+    "anilist": 139095,
+    "kitsu": 45159
+  },
+  "skip_key_id": 49785,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": null,
+  "search_text": "fairy tail 100 years quest fairy tail 100 nen quest",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The \"First\" Guild and the \"Strongest\" Guild",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/7731de10ae9f73720d1b5001e1b2f1fb1720340795_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "311488"
+    },
+    {
+      "n": 2,
+      "title": "The Sea of Dragons",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/95b3bd93ac46b52b80ece149d53c22441720939820_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "311489"
+    },
+    {
+      "n": 3,
+      "title": "Blade, Armor, Ash",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e6c68f3f7b12298fa1089d85279a4bcd1721550028_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "311490"
+    },
+    {
+      "n": 4,
+      "title": "Dyed White",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/db57393dad4e5bdd6db9b5b69a5b9f751722156448_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "311491"
+    },
+    {
+      "n": 5,
+      "title": "A Bitter Choice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d574419afd7a970923ca75792645d2cf1722758139_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "311492"
+    },
+    {
+      "n": 6,
+      "title": "Lineage of Fire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/dee47c9813be16b744afab9551cbb39a1723365719_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "311493"
+    },
+    {
+      "n": 7,
+      "title": "All's Well That Ends Well",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/8c2174d6aff7ddbab2e0c446362d42dc1723965679_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "311494"
+    },
+    {
+      "n": 8,
+      "title": "Aldoron, the Wood Dragon God",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/b6766edd221a646ffadc5fb334c8af951724545506_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "322277"
+    },
+    {
+      "n": 9,
+      "title": "Whiteout",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d249f9b7a506b10913fd4ed1ba69adf81725154763_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "340473"
+    },
+    {
+      "n": 10,
+      "title": "New Foes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c592e725156fe2593e819a965cab263e1725758928_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "357024"
+    },
+    {
+      "n": 11,
+      "title": "Wraith, the Spirit Dragon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/60d73e8441295cda2325fad98be00ec91726364264_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364762"
+    },
+    {
+      "n": 12,
+      "title": "A Card in the Hand",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/98028369d379669474b636fd1433110d1726995460_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364763"
+    },
+    {
+      "n": 13,
+      "title": "Scarlet Showdown",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/1967495185617fd0f5bacbf1be9903e01727599001_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364764"
+    },
+    {
+      "n": 14,
+      "title": "Clinging Dragon Berserk",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ed3b55b0b5bb77fafc3abbf1ab03d77f1728806590_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364765"
+    },
+    {
+      "n": 15,
+      "title": "The Howling Earth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0e57c144f30d834b384d0a242c2181321729388707_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364766"
+    },
+    {
+      "n": 16,
+      "title": "God Seeds",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b5df3309336cea4ee2e1bb995ce77eb81729989559_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364767"
+    },
+    {
+      "n": 17,
+      "title": "Strength to Live",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/abc881e230231a50a5088b2348fb69491730611333_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364768"
+    },
+    {
+      "n": 18,
+      "title": "Burning Will",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/4e343d3a97e692bafe1dfdaff42bf5ec1731229314_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364769"
+    },
+    {
+      "n": 19,
+      "title": "Aqua Aera",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a7b81a3d18daa70fefe282b50786f5391731823676_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364770"
+    },
+    {
+      "n": 20,
+      "title": "Selene, the Moon Dragon God",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/7eaf1da396da61252f8cdba9b694d9bd1732425223_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364771"
+    },
+    {
+      "n": 21,
+      "title": "The Moonlight Divinities",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/89ca917d979d65b4bedf3e15b49d2ca51733032215_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364772"
+    },
+    {
+      "n": 22,
+      "title": "The Demons' Parade",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d2f5f179a31368a94bc686c25a2b2b601733644756_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364773"
+    },
+    {
+      "n": 23,
+      "title": "Sword Saint",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/1496d3837a0a8eb69f78065526d006a61734226800_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364774"
+    },
+    {
+      "n": 24,
+      "title": "This Hideous World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/0cd319c37531550c9958e2ee5fbd23411734848606_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364775"
+    },
+    {
+      "n": 25,
+      "title": "Homecoming",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d3e8f56d9f36ee0a1ed872f43b900a531736055923_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364776"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Story",
+      "artist": "Da-iCE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tomo yo Koko de Sayonara da",
+      "artist": "Boku ga Mitakatta Aozora",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Endless Happy-Ending",
+      "artist": "THE RAMPAGE from EXILE TRIBE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "ties",
+      "artist": "Emi Noda",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

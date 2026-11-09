@@ -1,0 +1,192 @@
+{
+  "id": "erased",
+  "title": "ERASED",
+  "native": "僕だけがいない街",
+  "year": 2016,
+  "rating": 8.1,
+  "season": "Winter 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21234-XmqW39aQ9o7O.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21234-XmqW39aQ9o7O.jpg",
+  "accent": "#f1a150",
+  "synopsis": "Satoru Fujinuma is a 29 year old manga artist struggling to make a name for himself following his debut. But, that was not the only thing in his life that Satoru was feeling frustrated about… He has a unique supernatural ability of being forced to prevent deaths and catastrophes by being sent back in time before the incident occurred, repeating time until the accident is prevented. One day, he gets involved in an accident that has him framed as a murderer. Desperate to save the victim, he sends himself back in time only to find himself as a grade-schooler one month before fellow classmate Kayo Hinazuki went missing. Satoru now embarks on a new quest: to save Kayo and solve the mystery behind her disappearance.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 21234,
+    "mal": 31043,
+    "hianime": "erased-dwkce3",
+    "kitsu": 11110
+  },
+  "skip_key_id": 31043,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-18 01:38:08",
+  "search_text": "erased 僕た けか いない街 tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Flashing Before My Eyes",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181619/original.jpg",
+      "synopsis": "Satoru Fujinuma is a struggling manga artist who works at a pizza parlor. Ever since he was a kid, he has been holding himself responsible for a kidnapping incident. Finally, the time has come for the truth from his past to be revealed…",
+      "airdate": "2016-01-08",
+      "markers": [],
+      "external_id": "181619"
+    },
+    {
+      "n": 2,
+      "title": "Palm of the Hand",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181620/original.jpg",
+      "synopsis": "The year is 1988… Satoru is back in elementary school. Now, he has a chance to change the future!",
+      "airdate": "2016-01-15",
+      "markers": [],
+      "external_id": "181620"
+    },
+    {
+      "n": 3,
+      "title": "Birthmark",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181621/original.jpg",
+      "synopsis": "Satoru is determined to prevent Kayo from getting kidnapped before her birthday. He goes to her place to see her, but… is he too late?",
+      "airdate": "2016-01-22",
+      "markers": [],
+      "external_id": "181621"
+    },
+    {
+      "n": 4,
+      "title": "Accomplishment",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181622/original.jpg",
+      "synopsis": "Satoru invites Hinazuki to the Science Center so she won’t be alone. He suspects that he’s riding the same pre-Revival rail of time, and before he knows it, X-day has arrived...",
+      "airdate": "2016-01-29",
+      "markers": [],
+      "external_id": "181622"
+    },
+    {
+      "n": 5,
+      "title": "Getaway",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181623/original.jpg",
+      "synopsis": "It turns out that Kayo, absent from school, has disappeared after all. Satoru is tormenting himself with the thought that he should have been able to do something more. On top of that, Aya Nakanishi from the nearby elementary school has vanished too!",
+      "airdate": "2016-02-05",
+      "markers": [],
+      "external_id": "181623"
+    },
+    {
+      "n": 6,
+      "title": "Grim Reaper",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181624/original.jpg",
+      "synopsis": "After confirming that the fire at Airi’s home is related to his mother’s death, Satoru relies on a note she left behind to make contact with Sawada, a former reporter for TV Ishikari.",
+      "airdate": "2016-02-12",
+      "markers": [],
+      "external_id": "181624"
+    },
+    {
+      "n": 7,
+      "title": "Out of Control",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181625/original.jpg",
+      "synopsis": "After getting caught by the police, Satoru has only one wish… to have one final Revival to make things right!",
+      "airdate": "2016-02-19",
+      "markers": [],
+      "external_id": "181625"
+    },
+    {
+      "n": 8,
+      "title": "Spiral",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181626/original.jpg",
+      "synopsis": "Instead of going home, Kayo has spent the last few days in a disused school bus while being supported by Satoru and the others. Only Sachiko and Yashiro begin to realize that something is going on when they observe changes in Satoru’s behavior.",
+      "airdate": "2016-02-26",
+      "markers": [],
+      "external_id": "181626"
+    },
+    {
+      "n": 9,
+      "title": "Closure",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181627/original.jpg",
+      "synopsis": "After being \"missing\" for three days, Kayo returns home. Her mother, Akemi, sees Satoru and Sachiko standing a few paces behind... Will Kayo be safe at last?",
+      "airdate": "2016-03-04",
+      "markers": [],
+      "external_id": "181627"
+    },
+    {
+      "n": 10,
+      "title": "Joy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181628/original.jpg",
+      "synopsis": "Three people, including Hiromi, were murdered the first time around, but this time, the targets were moved out of the killer’s sights. However, Satoru is worried about whom the killer will go after next in place of his intended victims.",
+      "airdate": "2016-03-11",
+      "markers": [],
+      "external_id": "181628"
+    },
+    {
+      "n": 11,
+      "title": "Future",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181629/original.jpg",
+      "synopsis": "After revealing who he really is, the kidnapper leaves Satoru to drown… Is it all over for Satoru?",
+      "airdate": "2016-03-18",
+      "markers": [],
+      "external_id": "181629"
+    },
+    {
+      "n": 12,
+      "title": "Treasure",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181630/original.jpg",
+      "synopsis": "Finally Satoru regains his memories and faces off against the culprit!",
+      "airdate": "2016-03-25",
+      "markers": [],
+      "external_id": "181630"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Re:Re:",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sore wa Chiisa na Hikari no yō na (それは小さな光のような; That was like a small light)",
+      "artist": "Sayuri",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

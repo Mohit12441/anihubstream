@@ -1,0 +1,205 @@
+{
+  "id": "id-invaded",
+  "title": "ID: INVADED",
+  "native": "イド：インヴェイデッド",
+  "year": 2020,
+  "rating": 7.7,
+  "season": "Winter 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx110350-uchN78wglmhN.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110350-uchN78wglmhN.png",
+  "accent": "#8b5cf6",
+  "synopsis": "Welcome to Kura, an organization that investigates crime using the Mizuhanome system which senses the drive to kill. Sakaido is a brilliant detective and pilot of the Mizuhanome. To solve a case, he enters the world of the killer's unconscious mind: the id well. In the shadows of brutal and puzzling cases lurks John Walker, the Serial Killer Creator. Where will Sakaido's pursuit lead?\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "ID:Invaded #Brake-Broken"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42436,
+    "anilist": 110350,
+    "mal": 40046,
+    "hianime": "id:invaded-vqste5"
+  },
+  "skip_key_id": 40046,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 10:34:33",
+  "search_text": "id invaded イト インウ ェイテ ット tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Jigsawed",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8ee22724a5e266c640e5ce2b27dbde211654630449_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269166"
+    },
+    {
+      "n": 2,
+      "title": "Jigsawed II",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/08956b98ef846167b11a3aabbcb9e93a1654630807_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269167"
+    },
+    {
+      "n": 3,
+      "title": "Sniped",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c739bc372dc65606cc6b85ef40c053071654630874_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "272616"
+    },
+    {
+      "n": 4,
+      "title": "Extended",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/c54b96cc6392628293eca85b7d9ad15e1654630994_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273220"
+    },
+    {
+      "n": 5,
+      "title": "Fallen",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d4a99d2a6e5a25f8d385f50d95e248001654631451_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273221"
+    },
+    {
+      "n": 6,
+      "title": "Circled",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/70d3f05a4887f2891b036394312d095f1654631441_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273222"
+    },
+    {
+      "n": 7,
+      "title": "Thunderbolted",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6616bb0170250f7d34724065349af2e41654631459_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273223"
+    },
+    {
+      "n": 8,
+      "title": "Desertified",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/1bc140fd33ca33fab439444bb0f069921654631429_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273224"
+    },
+    {
+      "n": 9,
+      "title": "Inside-outed",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/742cb980c6dcc0730bbab547a52e8c4e1654631546_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274037"
+    },
+    {
+      "n": 10,
+      "title": "Inside-outed II",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/ef4e57156c8a298879736435fcf64f671654631603_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274038"
+    },
+    {
+      "n": 11,
+      "title": "Stormed",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/1ea0fe53f9bb1d39051edf65bda877121654631723_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274039"
+    },
+    {
+      "n": 12,
+      "title": "Channeled",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/fca2561f579b3426f4444eaa23b4e0ee1654631885_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274040"
+    },
+    {
+      "n": 13,
+      "title": "Channeled II",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6cd10e64a6b6bd709d05a6ecdb5ee9431654632007_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274041"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mister Fixer",
+      "artist": "Sou",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Other Side",
+      "artist": "MIYAVI",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

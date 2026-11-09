@@ -1,0 +1,168 @@
+{
+  "id": "haikyu-vs-failing-marks",
+  "title": "HAIKYU!!: VS Failing Marks",
+  "native": "ハイキュー!! VS赤点",
+  "year": 2015,
+  "rating": 7.7,
+  "season": "Fall 2015",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21348-VIKyHcNUWIlb.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21348-VIKyHcNUWIlb.jpg",
+  "accent": "#e48643",
+  "synopsis": "In this episode, which takes place after the first season, Hinata and Kageyama fail a test and find that the make-up exam conflicts with their training camp.\n\nNote: The OVA was screened at Jump Festa 2015 on November 3, 2015. It was later bundled with the 21st volume of the manga.\n\n(Source: Hummingbird)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "haikyu!!:-vs-\"failing-marks\"-vvv6jb",
+    "mal": 35806,
+    "anilist": 21348,
+    "kitsu": 11374
+  },
+  "skip_key_id": 35806,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "haikyu vs failing marks ハイキュー vs赤点 special finished",
+  "genres": [
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Haikyu!!: VS \"Failing Marks\"",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a91a41e706aa2046d39c595-poster.jpg",
+      "synopsis": "In this episode, which takes place after the first season, Hinata and Kageyama fail a test and find that the make-up exam conflicts with their training camp.\n\n\n\nNote: The OVA was screened at Jump Festa 2015 on November 3, 2015. It was later bundled with the 21st volume of the manga.\n\n\n\n(Source: Hummingbird)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "179335"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Toppakō (Breach)",
+      "artist": "SUPER BEAVER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "One Day",
+      "artist": "SPYAIR",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "PHOENIX",
+      "artist": "Burnout Syndromes",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kessen Spirit (決戦スピリット)",
+      "artist": "CHiCO with HoneyWorks",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I'm A Believer",
+      "artist": "SPYAIR",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hikariare (ヒカリアレ)",
+      "artist": "Burnout Syndromes",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mashi Mashi (マシ・マシ)",
+      "artist": "NICO TOUCHES THE WALLS",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "I'm a Believer",
+      "artist": "SPYAIR",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Climber",
+      "artist": "Galileo Galilei",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hoshi o Tsukamaete (星をつかまえて;To Catch a Star)",
+      "artist": "Huwie Ishizaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Imagination",
+      "artist": "SPYAIR",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tenchi Gaeshi",
+      "artist": "NICO Touches the Walls",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Fly High!!",
+      "artist": "Burnout Syndromes",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hatsunetsu (発熱; Fever)",
+      "artist": "tacica",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Ah Yeah!",
+      "artist": "Sukima Switch",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Leo",
+      "artist": "tacica",
+      "episodes": "15-25"
+    }
+  ],
+  "relations": []
+}

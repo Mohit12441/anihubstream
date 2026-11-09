@@ -1,0 +1,253 @@
+{
+  "id": "doraemon-nobita-to-sora-no-utopia",
+  "title": "Doraemon: Nobita to Sora no Utopia",
+  "native": "映画ドラえもん のび太と空の理想郷",
+  "year": 2023,
+  "rating": 7.5,
+  "season": "Winter 2023",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151896-F9HNSlTPpN9h.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151896-F9HNSlTPpN9h.jpg",
+  "accent": "#0daee4",
+  "synopsis": "Doraemon, Nobita and his friends go to find Utopia, a perfect land in the sky where everyone lives with happiness, using an airship having a time warp function.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "doraemon:-nobita-to-sora-no-utopia-duom40",
+    "mal": 52318,
+    "anilist": 151896,
+    "kitsu": 3927
+  },
+  "skip_key_id": 52318,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "doraemon nobita to sora no utopia 映画ト ラえもん のひ 太と空の理想郷 movie finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Doraemon: Nobita to Sora no Utopia (Movie)",
+      "runtime": "112:00",
+      "runtime_seconds": 6720,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ad0b59533988c0d819f4597-landscape.jpg",
+      "synopsis": "Doraemon, Nobita and his friends go to find Utopia, a perfect land in the sky where everyone lives with happiness, using an airship having a time warp function.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "65981"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Universe",
+      "artist": "Official HiGE DANdism",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "THE GIFT",
+      "artist": "Dai Hirai",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Doraemon (ドラえもん)",
+      "artist": "Gen Hoshino",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yume wo Kanaete Doraemon (夢をかなえてドラえもん)",
+      "artist": "mao",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Boku no Kokoro wo Tsukutteyo (Make My Heart)",
+      "artist": "Ken Hirai",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sora e (空へ)",
+      "artist": "Masayoshi Yamazaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yume wo Kanaete Doraemon (夢をかなえてドラえもん;Make Dreams Come True, Doraemon)",
+      "artist": "mao",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "360°",
+      "artist": "miwa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hikari no Signal (光のシグナル;Signal of Light)",
+      "artist": "Kis-My-Ft2",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai no Museum (未来のミュージアム;Museum of the Future)",
+      "artist": "Perfume",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Doraemon no Uta (Non-Vocal)",
+      "artist": "Twelve Girls Band",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Odore Dore Dora Doraemon Ondo",
+      "artist": "Wasabi Mizuta",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tomodachi no Uta (友達の唄)",
+      "artist": "Bump of Chicken",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yume o Kanaete Doraemon (夢をかなえてドラえもん)",
+      "artist": "mao",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Taisetsu ni Suru yo (大切にするよ)",
+      "artist": "Kou Shibasaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yume o Kanaete Doraemon (夢をかなえてドラえもん)",
+      "artist": "mao",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Te o Tsunagou/Ai o Utaou (手をつなごう/愛を歌おう)",
+      "artist": "Ayaka",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hagushichao",
+      "artist": "Natsukawa Rimi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kakegae no Nai Uta",
+      "artist": "Mihimaru GT",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hug Shichao?",
+      "artist": "Rimi Natsukawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Boku Note",
+      "artist": "Sukima Switch",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Doraemon no Uta (ドラえもんのうた)",
+      "artist": "Satoko Yamano",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yume Biyori (YUME日和)",
+      "artist": "Hitomi Shimatani",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shiawase no Door (幸せのドア)",
+      "artist": "Yasushi Nakanishi and Chikako Sawada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Issho ni Arukou ~Walking into Sunshine~ (いっしょに歩こう 〜Walking Into Sunshine〜)",
+      "artist": "KONISHIKI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kisetsu ga iku toki",
+      "artist": "Speed",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Hug Shichao",
+      "artist": "Rimi Natsukawa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Yume wo Kanaete Doraemon",
+      "artist": "mao",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

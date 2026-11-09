@@ -1,0 +1,99 @@
+{
+  "id": "dragon-ball-z-the-history-of-trunks",
+  "title": "Dragon Ball Z: The History of Trunks",
+  "native": "ドラゴンボールＺ・絶望への反抗！！残された超戦士・悟飯とトランクス",
+  "year": 1993,
+  "rating": 7.7,
+  "season": "Winter 1993",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx985-5AKFy3HpX0uo.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx985-5AKFy3HpX0uo.jpg",
+  "accent": "#43bbf1",
+  "synopsis": "It has been thirteen years since the Androids began their killing rampage and Son Gohan is the only person fighting back. He takes Bulma's son Trunks as a student and even gives his own life to save Trunks's. Now Trunks must figure out a way to change this apocalyptic future. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "dragon-ball-z:-the-history-of-trunks-fwng0m",
+    "mal": 985,
+    "anilist": 985,
+    "kitsu": 875
+  },
+  "skip_key_id": 985,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "dragon ball z the history of trunks ト ラコ ンホ ールz 絶望への反抗 残された超戦士 悟飯とトランクス special finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Dragon Ball Z: The History of Trunks",
+      "runtime": "48:00",
+      "runtime_seconds": 2880,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a97e9f83bc87c124f83a2d7-poster.jpg",
+      "synopsis": "It has been thirteen years since the Androids began their killing rampage and Son Gohan is the only person fighting back. He takes Bulma's son Trunks as a student and even gives his own life to save Trunks's. Now Trunks must figure out a way to change this apocalyptic future. \n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "18159"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head-Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Ball Z Theme",
+      "artist": "Andy Baylor [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aoi Kaze no HOPE",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Closing Theme",
+      "artist": "Mark Menza [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Goku Is Falling",
+      "artist": "Bruce Faulconer [US Version - broadcast edit]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Through Her Eyes",
+      "artist": "Dream Theater [US Version]",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

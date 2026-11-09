@@ -1,0 +1,366 @@
+{
+  "id": "idolish7",
+  "title": "IDOLiSH7",
+  "native": "アイドリッシュセブン",
+  "year": 2018,
+  "rating": 7.5,
+  "season": "Winter 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx87495-DH0xWBYac5sw.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx87495-DH0xWBYac5sw.jpg",
+  "accent": "#ffa11a",
+  "synopsis": "A group of aspiring idols gather at Takanashi Productions and are entrusted with the company's future. The seven men who have just met represent a variety of totally different personalities. However, they each have their own charm and possess unknown potential as idols. Forming a group, they take their first step together as \"IDOLiSH7.\" Their brilliantly shining dancing forms onstage eventually begin captivating the hearts of the people.\n\n(Source: Anime News Network)\n\nEpisodes 1-2 were pre-streamed on November 3, 2017.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "idolish7-96onw4",
+    "mal": 33899,
+    "anilist": 87495,
+    "kitsu": 12558
+  },
+  "skip_key_id": 33899,
+  "skip_key_space": "mal",
+  "episode_total": 17,
+  "added_at": null,
+  "search_text": "idolish7 アイト リッシュセフ ン tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "shaking your heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/899d39b74431d8ca8e47f37d8145f8861515279901_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "First Stage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/9a1284f44e68bcc87b7721d74dd1f05f1515361615_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Their Feelings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/168808678dde7b43e1491ed1a1a124a01515335865_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 4,
+      "title": "A Pro's Resolve",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a75249e62c5397ef4959010342ad1bfe1515909623_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 5,
+      "title": "Secret",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/ca9d4f85eac2cab9bded40c1bbdc38831516216878_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 6,
+      "title": "Triumphant Return In The Rain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/c8a395212220caaa71d63e6a8746514c1517131106_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 7,
+      "title": "Ray of Light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/80d8775180f88342e74517fbcf1245da1517705963_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 8,
+      "title": "Please, Music",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/dfdeb52f87d5546f0a061ffe507e98ed1518327490_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 9,
+      "title": "Precious Time",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f3ffadab637eb524a9edbac4f012155a1518830393_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 10,
+      "title": "Expanding World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/30dcbfb9a3b062045a4c19d7f8c6d6811519553993_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 11,
+      "title": "The Direction of Summer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2983dd1e321687cca2753c96aa73a7861520170622_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 12,
+      "title": "Five and Two",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/ab62bd2a7a6b1a8f6c98e1253ee08ccc1520798111_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 13,
+      "title": "What Was Lost",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/738e13dce1e85b6e79a8a6e18b0953531521374563_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 14,
+      "title": "That Song Once Again",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c00d3843c221fd0b32c62a012a9a97ab1522001921_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 15,
+      "title": "Closing Doors",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/64c32ef716b0a96179bc30b16cb2bab31522582383_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 16,
+      "title": "Resolve At Zero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0b7c0a7b49d37741ac9471629e277bfe1526724766_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 17,
+      "title": "making the dream",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/51e79116960ef7d5d06b30cdae3456e21526896865_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "THE POLiCY",
+      "artist": "IDOLiSH7",
+      "episodes": "4-8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "PLACES",
+      "artist": "Trigger",
+      "episodes": "1-2, 4-7, 9"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "DiSCOVER the FUTURE",
+      "artist": "IDOLiSH7",
+      "episodes": "2-10, 12, 13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Silver Sky",
+      "artist": "Re:vale",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "DESTINY",
+      "artist": "TRIGGER",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "WiSH VOYAGE",
+      "artist": "IDOLiSH7",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Make a DREAM",
+      "artist": "Tatsuya Kato",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Mikansei na Bokura (未完成な僕ら)",
+      "artist": "Re:vale",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Mirai Notes wo Kanadete (ミライノーツを奏でて)",
+      "artist": "Re:vale",
+      "episodes": "2-4, 6-9, 11-14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Party Time Together",
+      "artist": "Idolish7",
+      "episodes": "3-6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "WiSH VOYAGE",
+      "artist": "IDOLiSH7",
+      "episodes": "3, 17"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "DESTINY",
+      "artist": "TRIGGER",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Let's do Summer (ＮＡＴＳＵ☆しようせ！)",
+      "artist": "Idolish7 & Trigger",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Heavenly Visitor",
+      "artist": "TRIGGER",
+      "episodes": "4-7,9-11,13-15"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "It's ALL-for you-",
+      "artist": "Yuki",
+      "episodes": "10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Ame (雨)",
+      "artist": "MEZZO",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Last Dimension",
+      "artist": "TRIGGER",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "TODAY IS",
+      "artist": "IDOLiSH7",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "DiSCOVER THE FUTURE",
+      "artist": "IDOLiSH7",
+      "episodes": "15"
+    }
+  ],
+  "relations": []
+}

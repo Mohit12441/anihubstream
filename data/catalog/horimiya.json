@@ -1,0 +1,224 @@
+{
+  "id": "horimiya",
+  "title": "Horimiya",
+  "native": "ホリミヤ",
+  "year": 2021,
+  "rating": 8.1,
+  "season": "Winter 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx124080-3i22mRVPBS0T.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx124080-3i22mRVPBS0T.jpg",
+  "accent": "#5dc9f1",
+  "synopsis": "A secret life is the one thing they have in common. At school, Hori is a prim and perfect social butterfly, but the truth is she's a brash homebody. Meanwhile, under a gloomy facade, Miyamura hides a gentle heart, along with piercings and tattoos. In a chance meeting, they both reveal a side they've never shown. Could this blossom into something new?\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 124080,
+    "mal": 42897,
+    "hianime": "horimiya-b50ns2",
+    "kitsu": 43545
+  },
+  "skip_key_id": 42897,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-18 02:08:39",
+  "search_text": "horimiya ホリミヤ tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A Tiny Happenstance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/74a6ef6c1bbc1549800ffba752edc4031642766887_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "290654"
+    },
+    {
+      "n": 2,
+      "title": "You Wear More Than One Face",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d657b5222bcd028016e06418b63534e81642766902_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "290655"
+    },
+    {
+      "n": 3,
+      "title": "That's Why It's Okay",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/bbb09313fd7c1f0d174f9c8cefc3e4141642767676_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "290656"
+    },
+    {
+      "n": 4,
+      "title": "Everybody Loves Somebody",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1cdee486d10eb5d8e8079219320549ec1642767790_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "290657"
+    },
+    {
+      "n": 5,
+      "title": "I Can't Say It Out Loud",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/bdd1f5a6ae52791edde85b091485f1481642768327_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "290658"
+    },
+    {
+      "n": 6,
+      "title": "This Summer's Going to Be a Hot One",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1d8b50ba6ed94d7e10e0b86e2382207f1642768091_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "290659"
+    },
+    {
+      "n": 7,
+      "title": "You're Here, I'm Here",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0b81b57d383bbfd9da6e67a1ef9ab6801642767969_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "290660"
+    },
+    {
+      "n": 8,
+      "title": "The Truth Deception Reveals",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/61ebdf57c1e5140a34ee1edc0d9912571642768225_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "290661"
+    },
+    {
+      "n": 9,
+      "title": "It's Hard, but Not Impossible",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/107350c470766c825f4bf0a217b53aee1642768110_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "290662"
+    },
+    {
+      "n": 10,
+      "title": "Until the Snow Melts",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/847ee85252c4969e5001027cda0770d71642769049_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "290663"
+    },
+    {
+      "n": 11,
+      "title": "It May Seem Like Hate",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/494ee5ec7e21a492368b15a2073a5f871642768877_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "290664"
+    },
+    {
+      "n": 12,
+      "title": "Hitherto, and Forevermore",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1530a85792bae7078ae462ebc6af79d01642768625_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "290665"
+    },
+    {
+      "n": 13,
+      "title": "I Would Gift You the Sky",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/538f2385b85984527a8de999ad4ebdf01642768164_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "294971"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shiawase",
+      "artist": "Omoinotake",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "URL",
+      "artist": "Ami Sakaguchi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Iro Kousui",
+      "artist": "Yoh Kamiyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yakusoku",
+      "artist": "Friends",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Dokuro Ninja Konoha (ドクロニンジャコノハ)",
+      "artist": "Reina Kondo and Jun Fukuyma",
+      "episodes": "7"
+    }
+  ],
+  "relations": []
+}

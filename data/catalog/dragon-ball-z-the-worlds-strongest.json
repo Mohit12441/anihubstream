@@ -1,0 +1,56 @@
+{
+  "id": "dragon-ball-z-the-worlds-strongest",
+  "title": "Dragon Ball Z: The World's Strongest",
+  "native": "ドラゴンボールＺ この世で一番強いヤツ",
+  "year": 1990,
+  "rating": 6.1,
+  "season": "Spring 1990",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/895-GuuZOIRCBHhI.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/895-GuuZOIRCBHhI.jpg",
+  "accent": "#e4bb50",
+  "synopsis": "The evil Dr. Wheelo has resurrected his brain into a robot and now desires to inhabit the body of the world's strongest warrior. This means he must face Son Goku and company in a fight for Goku's life.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "dragon-ball-z:-the-world's-strongest-teitqa",
+    "mal": 895,
+    "anilist": 895,
+    "kitsu": 795
+  },
+  "skip_key_id": 895,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "dragon ball z the world s strongest ト ラコ ンホ ールz この世て 一番強いヤツ movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Dragon Ball Z: The World's Strongest (Movie)",
+      "runtime": "60:00",
+      "runtime_seconds": 3600,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a97ed6808226308ddf63e56-landscape.jpg",
+      "synopsis": "The evil Dr. Wheelo has resurrected his brain into a robot and now desires to inhabit the body of the world's strongest warrior. This means he must face Son Goku and company in a fight for Goku's life.\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "16483"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

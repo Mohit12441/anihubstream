@@ -1,0 +1,214 @@
+{
+  "id": "drifters",
+  "title": "DRIFTERS",
+  "native": "DRIFTERS",
+  "year": 2016,
+  "rating": 7.5,
+  "season": "Fall 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21123-bCuqm8wLDqOw.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21123-bCuqm8wLDqOw.png",
+  "accent": "#24d3ee",
+  "synopsis": "The story centers around Shimazu Toyohisa, the real-life samurai who fought in the pivotal Battle of Sekigahara. In his dying moments, Shimazu is transported to a world of magic with other famous warriors throughout history. These warriors are forced to fight each other in an endless battle.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "drifters-qm4kyu",
+    "mal": 31339,
+    "anilist": 21123,
+    "kitsu": 11028
+  },
+  "skip_key_id": 31339,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "drifters drifters tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Fight Song",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "In the aftermath of the Battle of Sekigahara, warrior Shimazu Toyohisa is suddenly thrust into a mysterious world where he is shocked to encounter the supposedly Oda Nobunaga and the historical figure Nasu Suketaka Yoichi.",
+      "airdate": "2016-10-07",
+      "markers": [],
+      "external_id": "187227"
+    },
+    {
+      "n": 2,
+      "title": "Footsteps",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "As Orte sets the Elven village ablaze in the distance, Nobunaga and Yoichi are dragged into action by Toyohisa's fearless forward charge. Meanwhile on the other side of the world, the march of the Black King is about to Commence.",
+      "airdate": "2016-10-14",
+      "markers": [],
+      "external_id": "187228"
+    },
+    {
+      "n": 3,
+      "title": "Army of Ours Sortie at Dawn",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The Black King’s army is marching on the Northern Wall of Carneades while the Octobrists attempt to convince Carneades' defenders to hand over control of the defensive force to Hannibal and Scipio. This will be the \"Ends” debut on the battlefield.",
+      "airdate": "2016-10-21",
+      "markers": [],
+      "external_id": "187229"
+    },
+    {
+      "n": 4,
+      "title": "Active Heart",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The Black King is dealing with the aftermath of the conquest of Carneades. Simultaneously, on the other side of the empire, the Drifters are preparing for backlash and starting to grow their own ambitions.",
+      "airdate": "2016-10-28",
+      "markers": [],
+      "external_id": "187230"
+    },
+    {
+      "n": 5,
+      "title": "Bring Back Love",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Prior to the ambush planned by the Drifters, Nobunaga uses corpses and various human wastes to create a saltpeter pit after Toyohisa buries the heads of the deceased as a sign of respect. Meanwhile, Yoichi begins to train the elves in archery, and is surprised to learn that they have an innate aptitude for it. As night sinks in, the Orte troops notice that the village's water well was dumped with excrement. At nightfall, Toyohisa and the elves launch their attack on the Orte soldiers as Nobunaga forms an enclosure to trapped the Orte troops and continuously bombarded them with waste-laden arrows. Toyohisa beheads the commander of the troops, prompting the remaining soldiers to flee. In the forest, Yoichi kills the fleeing soldiers, who fall victim to excrement-infested traps. After their successful battle, Toyohisa urges the elves to rescue the female elves. Disguised as Orte troops, the Drifters and elves make their way to the local magistrate's fort and locate the women. Much to his horror and disgust, Toyohisa discovers that the women have been used as sex slaves by the Orte soldiers and vows to slaughter them all in retribution.",
+      "airdate": "2016-09-04",
+      "markers": [],
+      "external_id": "187231"
+    },
+    {
+      "n": 6,
+      "title": "Men of Destiny",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "As the Elves tear apart the magistrate’s castle, a new player with unknown allegiances looms. Meanwhile, Oda starts work on creating the final nail in Orte’s coffin and bringing about a change that will shatter the foundations of this world.",
+      "airdate": "2016-11-11",
+      "markers": [],
+      "external_id": "187232"
+    },
+    {
+      "n": 7,
+      "title": "Chaos Diver",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "As Toyohisa and Joan clash in the moonlight, the strings of fate that tie the Drifters together start to converge, and the strength of their alliance is revealed. As the dust settles, the identity of the leader of the Octobrists is unveiled.",
+      "airdate": "2016-11-18",
+      "markers": [],
+      "external_id": "187233"
+    },
+    {
+      "n": 8,
+      "title": "Mystery Call Me",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "With the dust settling throughout the battlefield, Toyohisa declares that he acts based on his own rules. Far from the battlefield, the axis powers of World War II reunite, and proceed to fall apart. Elves liberated, next up...the Dwarves.",
+      "airdate": "2016-11-25",
+      "markers": [],
+      "external_id": "187234"
+    },
+    {
+      "n": 9,
+      "title": "Serious Bomber",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Gadolka begins with the culmination of the effort spent on black powder and ends with a paradigm shift in the warfare of the new world. The full extent of the Dwarves suffering reveals itself, and a new cog is added to the war machine.",
+      "airdate": "2016-12-02",
+      "markers": [],
+      "external_id": "187235"
+    },
+    {
+      "n": 10,
+      "title": "Baba Yetu",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "After freeing the Dwarves, the Drifters’ plans continue getting derailed as unexpected guests show up. Meanwhile, far to the north, the Black King’s plan continues to unfurl as the Ends regroup and recover in preparation to strike back.",
+      "airdate": "2016-12-09",
+      "markers": [],
+      "external_id": "187236"
+    },
+    {
+      "n": 11,
+      "title": "Pistol Daimyou no Bouken: Hinawamaru Kazoeuta",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The coup begins yet right from the start there is an unexpected wrench thrown into the plans. The roar of muskets now rips across the new world, and the Drifters find their places leading armies.",
+      "airdate": "2016-12-16",
+      "markers": [],
+      "external_id": "187237"
+    },
+    {
+      "n": 12,
+      "title": "Mitsumete☆Shinsengumi: Nekketsu Kyuushuu Danji no Uta",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "As the Drifters and their army decimate the Ends' troops, Hijikata give orders for his soldiers to break into smaller units and disperse into the streets to head to Orte's capitol building while setting the city ablaze. While Hijikata and Toyohisa fight one another in a deadly duel, Nobunaga and Hannibal are able to come up with a strategy to gather the enemies into a single location and kill them with Yoichi's squad and Olminu's assistance. With their army destroyed, the Black King orders Hijikata to withdraw from the Orte Empire during his fight against Toyohisa, who is left heavily injured. Back in Carneades, Rasputin apologizes to the Black King for their failure for seizing Orte, though the Black King is pleased that they were able to cripple Orte's capital city and gauge the Drifters' strength. Hearing Nobunaga's voice during Rasputin's earlier encounter with him, Akechi Mitsuhide agrees to join the Ends in hopes of killing Nobunaga in the next battle.",
+      "airdate": "2016-12-23",
+      "markers": [],
+      "external_id": "187238"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Gospel of the Throttle (Kyouhon REMIX ver.)",
+      "artist": "Minutes Til Midnight",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "VERMILLION",
+      "artist": "Maon Kurosaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Gospel of the Throttle (Kyouhon REMIX ver.)",
+      "artist": "Minutes Til Midnight",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Vermillion",
+      "artist": "Maon Kurosaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rurou no Zakuro (流浪の柘榴; Pomegranate for a Wanderer)",
+      "artist": "Yasushi Ishii",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,55 @@
+{
+  "id": "haikyu-the-movie-talent-and-sense",
+  "title": "Haikyu!! The Movie: Talent and Sense",
+  "native": "ハイキュー!! 才能とセンス",
+  "year": 2017,
+  "rating": 8,
+  "season": "Summer 2017",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98884-PCa1CawsXpjB.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98884-PCa1CawsXpjB.png",
+  "accent": "#ff9343",
+  "synopsis": "A compilation film depicting the match against Aoba Johsai High School in the second season of the anime series. It will also include new scenes portraying what happened after the match.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "haikyu!!-the-movie:-talent-and-sense-7iwy7q",
+    "mal": 35110,
+    "anilist": 98884,
+    "kitsu": 13655
+  },
+  "skip_key_id": 35110,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "haikyu the movie talent and sense ハイキュー 才能とセンス movie finished",
+  "genres": [
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Haikyu!! The Movie: Talent and Sense (Movie)",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a91a3aa706aa2046d399f55-landscape.png",
+      "synopsis": "A compilation film depicting the match against Aoba Johsai High School in the second season of the anime series. It will also include new scenes portraying what happened after the match.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "209225"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

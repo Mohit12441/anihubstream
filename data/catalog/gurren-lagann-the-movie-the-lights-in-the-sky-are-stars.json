@@ -1,0 +1,72 @@
+{
+  "id": "gurren-lagann-the-movie-the-lights-in-the-sky-are-stars",
+  "title": "Gurren Lagann The Movie: The Lights in the Sky are Stars",
+  "native": "天元突破グレンラガン 螺巌篇",
+  "year": 2009,
+  "rating": 8.5,
+  "season": "Spring 2009",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx4565-FbFYEBTJSPyr.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4565-FbFYEBTJSPyr.png",
+  "accent": "#5de4bb",
+  "synopsis": "Seven years have passed after the battle of Teppelin... Humans have since reclaimed the surface of the earth and enjoy an unprecedented period of peace and prosperity. However, humanity's increasing population growth triggers the sudden emergence of an unknown, powerful enemy.\n\nThe fearsome, manipulative power of the mysterious Anti-Spiral proves too overwhelming for humans to even fight back. When everyone becomes desperate and loses hope, Team Dai-Gurren members reunite to stand up once again!\n\n(Source: Official US Website)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "gurren-lagann-the-movie:-the-lights-in-the-sky-are-stars-l905k2",
+    "mal": 4565,
+    "anilist": 4565,
+    "kitsu": 3689
+  },
+  "skip_key_id": 4565,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "gurren lagann the movie the lights in the sky are stars 天元突破ク レンラカ ン 螺巌篇 movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Gurren Lagann The Movie: The Lights in the Sky are Stars (Movie)",
+      "runtime": "125:00",
+      "runtime_seconds": 7500,
+      "thumb": "https://animehot.cc/storage/media/2026/09/690a36a3543081759bdb75e0-landscape.webp",
+      "synopsis": "Humans have enjoyed their lavish, peaceful, and prosperous lives for seven years since the day the almighty Spiral King was defeated—the day they reclaimed their homeland, Earth. However, the boon of this lifestyle leaves them unprepared when an unknown, hostile threat arises due to the ever-growing human population. This calamity is the Anti-Spiral—a fearsome enemy with unparalleled power. \n \nAs the Spiral King's prognosis postulating the destruction of \"The Spiral's World\" begins to come true, the pieces are in place, and Team Dai-Gurren is ready. With his late brother's hope to see a better future for mankind, Simon—along with Nia Teppelin and the rest of the team—is determined to overthrow the mighty Anti-Spiral in order to revive humanity's lost hope.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "60846"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Namida no Tane, Egao no Hana (涙の種、笑顔の花)",
+      "artist": "Shoko Nakagawa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tsuzuku Sekai",
+      "artist": "Shoko Nakagawa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

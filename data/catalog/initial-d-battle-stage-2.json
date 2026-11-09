@@ -1,0 +1,54 @@
+{
+  "id": "initial-d-battle-stage-2",
+  "title": "Initial D BATTLE STAGE 2",
+  "native": "頭文字[イニシャル]D BATTLE STAGE 2",
+  "year": 2007,
+  "rating": 7.4,
+  "season": "Spring 2007",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/3931.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/3931.jpg",
+  "accent": "#6b501a",
+  "synopsis": "This is simply the OAV summing up the major events and battles of \"Initial D 4th Stage\" much like the \"Initial D Battle Stage\" original summed up the first 3 seasons. Additionally, has 2 extra battles from the manga that were not incorporated into the original 4th Stage.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "initial-d-battle-stage-2-snun52",
+    "mal": 3931,
+    "anilist": 3931,
+    "kitsu": 3358
+  },
+  "skip_key_id": 3931,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "initial d battle stage 2 頭文字 イニシャル d battle stage 2 ova finished",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Initial D Battle Stage 2",
+      "runtime": "80:00",
+      "runtime_seconds": 4800,
+      "thumb": "https://animehot.cc/storage/media/2026/09/69119a9b1a8ff5f7cb1fcb09-poster.jpg",
+      "synopsis": "This is simply the OVA summing up the major events and battles of \"Initial D 4th Stage\" much like the \"Initial D Battle Stage\" original summed up the first 3 seasons. Additionally, has 2 extra battles from the manga that were not incorporated into the original 4th Stage.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "56647"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

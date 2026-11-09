@@ -1,0 +1,1942 @@
+{
+  "id": "dragon-ball-z",
+  "title": "Dragon Ball Z",
+  "native": "ドラゴンボールZ",
+  "year": 1989,
+  "rating": 8.1,
+  "season": "Spring 1989",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx813-ZhnFNOeCU5dQ.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx813-ZhnFNOeCU5dQ.png",
+  "accent": "#e49343",
+  "synopsis": "Goku is back with his new son, Gohan, but just when things are getting settled down, the adventures continue. Whether he is facing enemies such as Freeza, Cell, or Boo, Goku is proven to be an elite of his own and discovers his race, Saiyan. He meets many new people, gaining allies as well as enemies, as he still finds time to raise a family and be the happy-go-lucky Saiyan he is.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "dragon-ball-z-txude3",
+    "mal": 813,
+    "anilist": 813,
+    "kitsu": 720
+  },
+  "skip_key_id": 813,
+  "skip_key_space": "mal",
+  "episode_total": 291,
+  "added_at": null,
+  "search_text": "dragon ball z ト ラコ ンホ ールz tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Mini-Goku is an Overprotected Boy! I Am Gohan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15400/original.jpg",
+      "synopsis": "With no new battles to fight, Goku has been living a quiet life in the countryside with his wife Chi-Chi...and their son Gohan! While Goku makes plans to spend a happy day with friends on Master Roshi's island, a powerful new threat is on its way to Earth. And the arrival of this sinister alien could spell disaster for Goku and his friends!",
+      "airdate": "1989-04-26",
+      "markers": [],
+      "external_id": "15400"
+    },
+    {
+      "n": 2,
+      "title": "The Mightiest Warrior in All of History is Goku's Older Brother!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15401/original.jpg",
+      "synopsis": "Goku and Gohan attend a reunion on Master Roshi's island, where Goku introduces his son to all of his old friends. The smiles quickly fade, however, as an unexpected visitor lands on the island, and for Goku the day becomes a reunion of a different kind. A powerful alien has arrived. It's Raditz: Goku's evil older brother!",
+      "airdate": "1989-05-03",
+      "markers": [],
+      "external_id": "15401"
+    },
+    {
+      "n": 3,
+      "title": "All Right! This is the Strongest Combo in the World!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15402/original.jpg",
+      "synopsis": "Raditz has kidnapped Gohan! And unless Goku agrees to forsake his friends and the people of Earth by joining the sinister Saiyan, he may never see his son again! All hope is not lost, however, as a second uninvited guest arrives on the island - and Goku forges an unlikely alliance!",
+      "airdate": "1989-05-10",
+      "markers": [],
+      "external_id": "15402"
+    },
+    {
+      "n": 4,
+      "title": "Piccolo's Trump Card! Gohan, the Crybaby-kun",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15403/original.jpg",
+      "synopsis": "The situation looks bleak for Goku and Piccolo, as Raditz easily deflects every attack they send his way. But Piccolo may have a way to stop the sinister Saiyan. He's perfected a powerful new attack, the Special Beam Cannon!There's only one problem: Piccolo needs time to gather the energy for the blast, which means Goku will have to last for five minutes against Raditz alone!",
+      "airdate": "1989-05-17",
+      "markers": [],
+      "external_id": "15403"
+    },
+    {
+      "n": 5,
+      "title": "Goku Dies! There's Only One Last Chance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15404/original.jpg",
+      "synopsis": "As Goku takes blow after punishing blow from the evil Raditz, Gohan is able to watch no longer! The young boy's rage unlocks an awesome power sleeping within him, and he unleashes a mighty attack that not even Radtiz can resist! But as quickly as Gohan's power appears, it vanishes. And when Raditz prepares to strike back, Goku must make the ultimate sacrifice to save his son! This all only leads to the revelation that two more Saiyans are on their way to Earth.",
+      "airdate": "1989-05-24",
+      "markers": [],
+      "external_id": "15404"
+    },
+    {
+      "n": 6,
+      "title": "Even Yama-sama is Surprised, The Fight Continues in the Next World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15405/original.jpg",
+      "synopsis": "With Raditz defeated and Goku gone from this world, the surviving Z Warriors must begin preparing for the arrival of two more Saiyans who will reach Earth in one year's time. Piccolo takes Gohan into the wild for a severe training program, in the hope that his hidden power will be revealed. Meanwhile, Goku embarks on a new adventure in the next world, as he must travel the endless miles of Snake Way to receive training from the legendary King Kai!",
+      "airdate": "1989-06-07",
+      "markers": [],
+      "external_id": "15405"
+    },
+    {
+      "n": 7,
+      "title": "Survival with Dinosaurs! Gohan's Harsh Training",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15406/original.jpg",
+      "synopsis": "Gohan begins his first day of Piccolo's training. Alone in the wilderness, he must quickly learn to take care of himself. But that isn't easy when he's tired, hungry - and being chased by hungry dinosaurs! If Gohan's first day is this dangerous, how will he ever survive for the second? Piccolo secretly watches these events.",
+      "airdate": "1989-06-14",
+      "markers": [],
+      "external_id": "15406"
+    },
+    {
+      "n": 8,
+      "title": "A Great Transformation on a Moonlit Night! The Secret of Gohan's Power",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15407/original.jpg",
+      "synopsis": "Krillin receives a startling message, sent by Yajirobe. Korin wants him to gather Yamcha, Tien, and Chiaotzu and report for special training! And if that weren't enough, he and Roshi still have to find a way to tell Chi-Chi what's happened to Goku and her son. Meanwhile, Gohan's training causes him to undergo a shocking transformation!",
+      "airdate": "1989-06-21",
+      "markers": [],
+      "external_id": "15407"
+    },
+    {
+      "n": 9,
+      "title": "Sorry, Robot-san, The Desert of Vanishing Tears",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15408/original.jpg",
+      "synopsis": "Gohan awakes in the wilderness to find his tail gone and a new set of clothes on his back. But the puzzled boy has little time to figure out what happened before a group of wild animals try to have him for breakfast! The chase leads Gohan into the depths of an ancient cave, where he meets an old Capsule Corp robot. The robot has lived alone in the cave for over 30 years, and he's not happy to have visitors!",
+      "airdate": "1989-06-28",
+      "markers": [],
+      "external_id": "15408"
+    },
+    {
+      "n": 10,
+      "title": "Don't Cry, Gohan! His First Fight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15409/original.jpg",
+      "synopsis": "Krillin pulls Yamcha away from a rowdy baseball game to begin training at Korin Tower. Meanwhile, Gohan's adventures in the wilderness continue, as he makes a new dinosaur friend! Gohan is happy to finally have some company. That is, until he gets a harsh reminder - not all dinosaurs are friendly!",
+      "airdate": "1989-07-05",
+      "markers": [],
+      "external_id": "15409"
+    },
+    {
+      "n": 11,
+      "title": "The Saiyans, Mightiest Warriors in the Universe, Awaken!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15410/original.jpg",
+      "synopsis": "While Goku runs down Snake Way for a meeting with King Kai, Gohan gets a very important survival lesson from a T-Rex. Meanwhile Vegeta and Nappa head towards Earth but make a quick stop on planet Arlia and become prisoners of the tyrant king who rules the planet. After a brief scuffle with the monster Yeddy, the Arlians realize that the two Saiyans are more for then they can handle as Vegeta and Nappa leave their terrible mark on the planet.",
+      "airdate": "1989-07-12",
+      "markers": [],
+      "external_id": "15410"
+    },
+    {
+      "n": 12,
+      "title": "Catnap on the Serpentine Road Goku Takes a Tumble",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15411/original.jpg",
+      "synopsis": "Gohan is busy with his survival training and spends his day tormenting a clumsy but delicious T-Rex. Tien and Chiaotzu are training across the planet, but their workout is interrupted by a very demanding Launch. Goku tries to find King Kai on Snake Way while Piccolo's power gets out of control with disastrous results.",
+      "airdate": "1989-07-19",
+      "markers": [],
+      "external_id": "15411"
+    },
+    {
+      "n": 13,
+      "title": "Hands Off! Yama-sama's Secret Fruit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15412/original.jpg",
+      "synopsis": "After waking up dazed and disoriented, Goku sees a fruit tree. Not one to deny his appetite, Goku helps himself. But watching him are two giant ogres who want nothing more than to use the hero as a play toy! If Goku can defeat their challenges, the ogres vow to show him the way back to Snake Way. But can these two beasts be trusted?",
+      "airdate": "1989-07-26",
+      "markers": [],
+      "external_id": "15412"
+    },
+    {
+      "n": 14,
+      "title": "Such Sweet Temptation! The Snake Princess-sama's Hospitality",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15413/original.jpg",
+      "synopsis": "Finally back on Snake Way, Goku comes across a house. Thinking it belongs to the legendary King Kai, Goku believes his amazing journey has ended. But he soon finds himself begin deceived by Princess Snake, who will do anything to keep Goku her prisoner forever!",
+      "airdate": "1989-08-02",
+      "markers": [],
+      "external_id": "15413"
+    },
+    {
+      "n": 15,
+      "title": "Escape from Piccolo! Gohan Summons a Storm",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15414/original.jpg",
+      "synopsis": "Still in shock that Raditz was able to dodge his strongest attack, Piccolo flies off the handle causing him to split in two! Gohan takes a break from training and begins to dream of his mother and father. The next day he decides to visit his mother by traversing the sea on a makeshift raft. He soon gets caught in a storm and remembers he can't swim! Could this be the end of poor Gohan?",
+      "airdate": "1989-08-09",
+      "markers": [],
+      "external_id": "15414"
+    },
+    {
+      "n": 16,
+      "title": "Run, Gohan! Longing for Mount Paozu, Where Chichi is Waiting",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15415/original.jpg",
+      "synopsis": "After surviving a rough night on a stormy sea, Gohan washes up onshore and is nursed back to health by two orphans named Rom and Chiko. It turns out that they are part of a larger gang of orphans who live on their own and are constantly on the run from meddling adults. Pigero, the orphans' leader, hatches a plan to take the orphaned children to a safer hiding place but when the police show up everything goes wrong!",
+      "airdate": "1989-08-16",
+      "markers": [],
+      "external_id": "15415"
+    },
+    {
+      "n": 17,
+      "title": "City of No Tomorrow! The Long Road to Victory",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15416/original.jpg",
+      "synopsis": "Mr. Popo leads Earth's top warriors to Kami's Pendulum Room where the past, present and future exist at the same time. After an eventful trip back in time they all realize they have to train a lot harder if they are going to stand a chance against the two Saiyans who are speeding ever closer to Earth.",
+      "airdate": "1989-08-30",
+      "markers": [],
+      "external_id": "15416"
+    },
+    {
+      "n": 18,
+      "title": "Last Stop on the Serpentine Road! Are You Kaio-sama?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15417/original.jpg",
+      "synopsis": "Gohan continues his martial arts training under the watchful eye of Piccolo, but a strange transformation takes him over. A full moon causes the young Saiyan to rampage out of control! Meanwhile Goku finally makes it to the end of Snake Way and mistakes a friendly ape named Bubbles for the mythical King Kai. With two of our heroes going bananas it looks like the two sinister Saiyans will have an easy time invading Earth!",
+      "airdate": "1989-09-06",
+      "markers": [],
+      "external_id": "15417"
+    },
+    {
+      "n": 19,
+      "title": "The Battle with Gravity! Catch Bubbles-kun",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15418/original.jpg",
+      "synopsis": "Gohan's training with Piccolo continues to intensify, but it's Goku who faces the biggest challenge. Goku begins his training, but it is unlike anything he's ever experienced before. The intense gravity of King Kai's planet makes training difficult, but when he learns that the Saiyans are used to extreme fighting conditions, Goku is inspired to give it his all. But will it be enough?",
+      "airdate": "1989-09-13",
+      "markers": [],
+      "external_id": "15418"
+    },
+    {
+      "n": 20,
+      "title": "The Saiyan Legend Reborn! Goku's Roots",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15419/original.jpg",
+      "synopsis": "After Goku completes the first phase of his special martial arts training King Kai instructs him to bash Gregory with a hammer. Easier said than done. After an exhaustive chase, King Kai tells the story of the Saiyan race. Inspired, Goku resumes his training and eventually manages to put the hammer to Gregory. Impressed, King Kai agrees to train Goku personally. But will it be enough to stop the incoming Saiyan invasion of Earth?",
+      "airdate": "1989-09-20",
+      "markers": [],
+      "external_id": "15419"
+    },
+    {
+      "n": 21,
+      "title": "Come Forth, Shen Long! The Saiyans Finally Arrive on Earth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15420/original.jpg",
+      "synopsis": "Goku's training with King Kai complete, Master Roshi and the gang summon the Eternal Dragon to wish him back to life! And they're not a moment too soon. There's only one day left before the Saiyans arrive! The problem is - it's going to take Goku two days to return on Snake Way!",
+      "airdate": "1989-09-27",
+      "markers": [],
+      "external_id": "15420"
+    },
+    {
+      "n": 22,
+      "title": "Unbelievable! Saibaimen, Born of the Soil",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15421/original.jpg",
+      "synopsis": "The Saiyans Vegeta and Nappa defiantly announce their arrival on Earth with the complete destruction of East City. Sensing their power, Goku, Gohan and Krillin prepare for the worst and meet the Saiyans face to face where Piccolo learns of his origins on the planet Namek. Yajirobe also learns of the Saiyans arrival but uses it merely as an occasion for profit. Our heroes are left facing on onslaught of sprouted Saibamen under the grinning command of Vegetta and Nappa",
+      "airdate": "1989-10-11",
+      "markers": [],
+      "external_id": "15421"
+    },
+    {
+      "n": 23,
+      "title": "Yamucha Dies! The Terror of the Saibaimen",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15422/original.jpg",
+      "synopsis": "Having completed their year-long journey to Earth, the two snister Saiyans made their presence known with explosive style! Now Krillin, Piccolo, and Gohan stand face to face with these saiyan monsters, and the diabolical henchmen they've brought with them. Can they hold out until Goku arrives?",
+      "airdate": "1989-10-18",
+      "markers": [],
+      "external_id": "15422"
+    },
+    {
+      "n": 24,
+      "title": "Farewell Ten-san! Chaozu's Suicide Strategy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15423/original.jpg",
+      "synopsis": "Enraged over the loss of his friend, Yamcha, Krillin unleashes a powerful attack that destroys the maniacal Saibamen once and for all. But the victory is only temporary. Now the Earth's defenders must battle the Saiyans themselves - and the terrifying Nappa is ready for a fight!",
+      "airdate": "1989-10-25",
+      "markers": [],
+      "external_id": "15423"
+    },
+    {
+      "n": 25,
+      "title": "Tenshinhan Cries Out!! This is My Final Kikoho",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15424/original.jpg",
+      "synopsis": "In a desperate attempt to save his friends, Chiaotzu sacrifices himself to stop the evil Nappa. But when the smoke clears, Nappa is left standing. Now Tien and the others must carry on without their friend as Nappa launches another devastating attack. And though his body is broken, Tien has one trick left that could put the diabolical Saiayn down, once and for all!",
+      "airdate": "1989-11-01",
+      "markers": [],
+      "external_id": "15424"
+    },
+    {
+      "n": 26,
+      "title": "An Intense Three-Hour Delay! The Kinto Un Bullet-Express",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15425/original.jpg",
+      "synopsis": "Vegeta has called a halt to the fighting, and Nappa uses the time to go on a rampage! Meanwhile, Goku reaches the end of Snake Way and races to rejoin his friends, But is he already too late to save them from the deadly Saiyans?",
+      "airdate": "1989-11-08",
+      "markers": [],
+      "external_id": "15425"
+    },
+    {
+      "n": 27,
+      "title": "Leave it to Me! Gohan's Great Burst of Anger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15426/original.jpg",
+      "synopsis": "Piccolo, Gohan, and Krillin do their best to stop the Saiyan invaders, Vegeta and Nappa, from finding the Dragon Balls and taking over the planet. Meanwhile, Goku is flying back to Earth on the Flying Nimbus with more power than he has ever had before. Will it be enough? And will he arrive in time?",
+      "airdate": "1989-11-22",
+      "markers": [],
+      "external_id": "15426"
+    },
+    {
+      "n": 28,
+      "title": "Ferocity of the Saiyans! Kami-sama and Piccolo Both Die",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15427/original.jpg",
+      "synopsis": "Piccolo makes the ultimate sacrifice in an effort to save Gohan from the Saiyan's ruthless rampage. Just when all seems hopeless, Goku finally returns to Earth with an incredible new level of power and confronts the Saiyans. But, will this new power be enough to defeat Nappa and Vegeta?",
+      "airdate": "1989-11-29",
+      "markers": [],
+      "external_id": "15427"
+    },
+    {
+      "n": 29,
+      "title": "Father is Awesome! Kaio-ken, the Ultimate Finishing Technique",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15428/original.jpg",
+      "synopsis": "Locked in the final battle with Earth's Saiyan attackers, Goku begins to demonstrate the skills and training he received from King Kai beginning with a devastating attack on Nappa. But when Nappa concedes defeat under the command of Vegeta, he turns on Gohan and Krillin only to be stopped by Goku's Kaio-Ken attack. Broken and defeated, Nappa is finally vanquished by Vegeta leaving Goku to face him alone.",
+      "airdate": "1989-12-06",
+      "markers": [],
+      "external_id": "15428"
+    },
+    {
+      "n": 30,
+      "title": "A Hot, Unbounded Battle! Goku vs. Vegeta",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15429/original.jpg",
+      "synopsis": "After sending Gohan and Krillin away, Goku decides to take on the mighty Vegeta all by himself. As his family and friends wait and wonder, Goku and the powerful Saiyan face off in a destructive battle. Both warriors seem evenly matched, but both are hiding their true strength. Will Goku's hidden abilities be enough to put an end to this once and for all?",
+      "airdate": "1989-12-13",
+      "markers": [],
+      "external_id": "15429"
+    },
+    {
+      "n": 31,
+      "title": "Now, Goku! A Final Technique with Everything on the Line",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15430/original.jpg",
+      "synopsis": "Vegeta and Goku continue their one-one one battle of strength, will, and determination. Blow by blow, the two warriors seem evenly matched, until Vegeta reveals the secret power of the Saiyans...the ability to transform into a giant ape, whose rage is capable of destroying entire civilizations and planets! Can Goku find a way to stop this monstrous assault?",
+      "airdate": "1989-12-20",
+      "markers": [],
+      "external_id": "15430"
+    },
+    {
+      "n": 32,
+      "title": "Battle Power Times Ten!! Vegeta's Great Metamorphosis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15431/original.jpg",
+      "synopsis": "The battle continues between Goku and Vegeta, who is now a completely transformed Saiyan Warrior. When Gohan senses the danger his dad is facing, he convinces Krillin that they must return and fight. Goku is left with no choice except to use the Spirit Bomb. But when that fails, he is left in the clutches of Vegeta with no help in sight!",
+      "airdate": "1990-01-17",
+      "markers": [],
+      "external_id": "15431"
+    },
+    {
+      "n": 33,
+      "title": "Don't Die, Father!! This is the Depth of Gohan's Power",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15432/original.jpg",
+      "synopsis": "With Goku caught in the clutches of the giant ape Vegeta, Krillin and Gohan launch a desperate attempt to save him! All is for naught, however, as Krillin's Destructo Disk fails to sever the Saiyan's tail. But a single hope remains for reversing Vegeta's monstrous transformation, when an unlikely hero steps out of the shadows - Yajirobe!",
+      "airdate": "1990-01-24",
+      "markers": [],
+      "external_id": "15432"
+    },
+    {
+      "n": 34,
+      "title": "Shoot, Kuririn! The Genki Dama, Packed with Hope",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15433/original.jpg",
+      "synopsis": "While Gohan fights for his life against Vegeta, Goku passes the power of the Spirit Bomb to Krillin. With King Kai's guidance, Krillin launches the bomb at Vegeta in an attack that sends the evil Saiyan sky-high. Now that he's been sent hurtling toward the outer-reaches of the Earth's atmosphere, this is surely the last our heroes have seen of Vegeta - or is it?",
+      "airdate": "1990-01-31",
+      "markers": [],
+      "external_id": "15433"
+    },
+    {
+      "n": 35,
+      "title": "Cause a Miracle! Son Gohan, the Super Saiyan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15434/original.jpg",
+      "synopsis": "Gohan transforms into the giant ape, much to the dismay of the angry Vegeta. After a grueling battle, Vegeta managed to cut off Gohan's tail, taking away his ability to transform. But, the giant ape fell and crushed Vegeta, leaving him beaten and defeated. Krillin decides to finish the Saiyan, once and for all, but Goku has other plans...",
+      "airdate": "1990-02-07",
+      "markers": [],
+      "external_id": "15434"
+    },
+    {
+      "n": 36,
+      "title": "We're Off Into Space! The Star of Hope is Piccolo's Homeland",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15435/original.jpg",
+      "synopsis": "The battle with the Saiyans finally won, Goku, Krillin, and the others mourn the loss of Yamcha, Tien, Chiatzu, and Piccolo. With Kami also gone, the Earth's Dragon Balls have disappeared. There is no hope for wishing any of the fallen heroes back to life... Or is there?",
+      "airdate": "1990-02-14",
+      "markers": [],
+      "external_id": "15435"
+    },
+    {
+      "n": 37,
+      "title": "Mysterious Yunzabit! The Search for Kami-sama's Spaceship",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15436/original.jpg",
+      "synopsis": "As the weak and weary warriors of Planet Earth are bandaged and cared for, Bulma accidentally destroys the Siayan spaceship, leaving no way to get to Planet Namek! But, Mr. Popo reveals that there might be another spacecraft they can use. Can they get to it in time, and will the old and forgotten ship even work if they do?",
+      "airdate": "1990-02-21",
+      "markers": [],
+      "external_id": "15436"
+    },
+    {
+      "n": 38,
+      "title": "Blast-off for Planet Namek! The Terror Awaiting Gohan & Co.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15437/original.jpg",
+      "synopsis": "Goku, Krillin, and Gohan nurse their wounds and prepare for the return of the Siayan attackers while Bulma follows Mr. Popo to find a spaceship to take her to Planet Namek. There, she plans to find the Dragon Balls in attempt to bring back Piccolo. Can Goku recover before it's too late? Can Bulma get to Planet Namek, and once there, what obstacles await her?",
+      "airdate": "1990-02-28",
+      "markers": [],
+      "external_id": "15437"
+    },
+    {
+      "n": 39,
+      "title": "Friends or Foes? Children of the Mysterious Giant Spaceship",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15438/original.jpg",
+      "synopsis": "Gohan joins Bulma and Krillin as they head to Planet Namek in search of the Dragon Balls. What begins as a mundane trip becomes chaotic when they encounter a bizarre situation in the emptiness of space. Finding themselves on some type of space station, they set out on foot to find their escape.",
+      "airdate": "1990-03-07",
+      "markers": [],
+      "external_id": "15438"
+    },
+    {
+      "n": 40,
+      "title": "Honest to Goodness? There Lies Namek, Planet of Hope",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169086/original.jpg",
+      "synopsis": "Bulma, Gohan, and Krillin have been taken captive by an army of children! These young soliders believe that Gohan and his friends are allies of Frieza, the evil warlord who destroyed their hoe planet. Now, with time running out, the Z-gang must find a way to convince the kids of their innocence.",
+      "airdate": "1997-09-20",
+      "markers": [],
+      "external_id": "169086"
+    },
+    {
+      "n": 41,
+      "title": "Kind-hearted Aliens, There's the Wu Xing Qiu Already",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169091/original.jpg",
+      "synopsis": "Bulma, Gohan, and Krillin make a rough landing on what they believe to be Planet Namek, but when their ship falls off a liff, it seems their journey will come to an untimely end Luckily for or heroes, two kind Namekians appear in the nick of time and pull them to safety. Offering to help them in their quest, the Namekian named Raiti leads their gang on a search for the Dragon Balls.",
+      "airdate": "1997-09-20",
+      "markers": [],
+      "external_id": "169091"
+    },
+    {
+      "n": 42,
+      "title": "Planet Freeza No. 79, Vegeta Recovers!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169098/original.jpg",
+      "synopsis": "On Planet Namek, Gohan, Krillin, and Bulma continue their search for the Dragon Balls with the help of their new friend Zaacro. Standing between them and their goal, however, is one mean giant! Meanwhile, back on Earth, Goku has escaped from the hospital to begin training for his upcoming re-match with Vegeta.",
+      "airdate": "1997-09-20",
+      "markers": [],
+      "external_id": "169098"
+    },
+    {
+      "n": 43,
+      "title": "The Dragon Balls are All Found! Piccolo-san Will Also Come Back to Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169104/original.jpg",
+      "synopsis": "As Bulma, Krillin, and Gohan close in on the last of the Dragon Balls, they uncover a shocking secret about their Namekian friends. And while Goku works to build up his strength back on Earth, far across the galaxy, Vegeta has begun making plans of his own. The Saiyan prince's sights are set on one thing - revenge.",
+      "airdate": "1997-09-27",
+      "markers": [],
+      "external_id": "169104"
+    },
+    {
+      "n": 44,
+      "title": "A Tough New Enemy! Freeza, Emperor of the Universe",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169110/original.jpg",
+      "synopsis": "After fleeing from the wicked aliens, Bulma, Krillin and Gohan arrive on the planet Namek. But they are not alone. Vegeta is right behind in his own space pod. To make matters worse, the dreaded Frieza is already on the planet, and he has three of the Dragon Balls!",
+      "airdate": "1997-09-27",
+      "markers": [],
+      "external_id": "169110"
+    },
+    {
+      "n": 45,
+      "title": "Vegeta's Ambition! I am the Greatest Warrior in the Universe!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169117/original.jpg",
+      "synopsis": "While Bulma, Krillin and Gohan discuss what to do next, Frieza sends two soldiers to inflitrate their ship. But Krillin and Gohan's combined might is too much for them to handle, and they are easily defeated. Meanwhile, on another part of the planet, Vegeta defeats his longtime enemy, Cui.",
+      "airdate": "1997-10-04",
+      "markers": [],
+      "external_id": "169117"
+    },
+    {
+      "n": 46,
+      "title": "Goku's Power Unleashed!! Six Days to the Far End of the Galaxy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169125/original.jpg",
+      "synopsis": "Back on Earth, Gokus is sufferning from an illness, but a magic Senzu bean offers a full recover. When Goku hears about the trouble on Namek, he jumps into his old spaceship, rebuilt by Bulma's father Dr. Briefs. On Namek, Krillin and Gohan witness Frieza's power and learn that he has collected four Dragon Balls!",
+      "airdate": "1997-10-04",
+      "markers": [],
+      "external_id": "169125"
+    },
+    {
+      "n": 47,
+      "title": "Surprise Attack!! The Elder's Target was the Scouters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169131/original.jpg",
+      "synopsis": "Namekian warriors fall under attack from Frieza's forces as the evil villain continues his earch for the fifth Dragon Ball. Dodoria, Frieza's red-faced henchman, leads the assault. Meanwhile, Goku continues his voyage to Namek in his space pod, where he finds plento of time to train for the coming battle.",
+      "airdate": "1997-10-11",
+      "markers": [],
+      "external_id": "169131"
+    },
+    {
+      "n": 48,
+      "title": "Gohan in Peril! A Pursuing Dodoria Summons Death",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169137/original.jpg",
+      "synopsis": "Unable to stand by and watch the torture any longer, Gohan leaps out of hiding to rescue a Namekian boy from the clutches of Frieza's evil henchmen. Now Gohan and Krillin have an even bigger problem on their hands - Dodoria is chasing them, and he won't stop until he has his revenge!",
+      "airdate": "1997-10-11",
+      "markers": [],
+      "external_id": "169137"
+    },
+    {
+      "n": 49,
+      "title": "Dodoria Dies by Explosion! Vegeta's Fearsome Shockwave",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169145/original.jpg",
+      "synopsis": "Vegeta catches Dodoria in his search for Gohan and Krillin, and attacks. In an attempt to save his life, Dodoria reveals that Frieza was responsible for the destructino of the Saiyan home planet (also called Vegeta). Vegeta destroys Dodoria in return, and begins his own quest for the Dragon Balls. Meanwhile, Gohan and Krillin reunite with Bulma and learn that Goku will soon arrive on Namek.",
+      "airdate": "1997-10-18",
+      "markers": [],
+      "external_id": "169145"
+    },
+    {
+      "n": 50,
+      "title": "Escape From a Burning Planet!! A Life-or-Death Kamehame-Ha",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169149/original.jpg",
+      "synopsis": "Goku runs into trouble when his space pod begins to drift towards a star. Goku has to think fast in order to avoid getting bumped up. Back on Namek, Vegeta beats Frieza to the sixth Dragon Ball and hides it in a lake.",
+      "airdate": "1997-10-18",
+      "markers": [],
+      "external_id": "169149"
+    },
+    {
+      "n": 51,
+      "title": "Courage Times One Hundred! The Warriors Gathered Under Kaio",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169158/original.jpg",
+      "synopsis": "After saving Dende, Gohan and Krillin feel a large Ki and recognize it as belonging to Vegeta, who is attacking a village to obtain the Dragon Ball there. Dende learns why the others have come all the way from Earth, and begs them to help save his people. Elsewhere, Goku continues his training on his spaceship. King Kai speaks to Goku's mind, saying that Piccolo and the other late warriors have arrived on Kai's World asking for the same training Kai gave Goku.",
+      "airdate": "1997-10-25",
+      "markers": [],
+      "external_id": "169158"
+    },
+    {
+      "n": 52,
+      "title": "Listen to Me, Goku! Hands Off Freeza",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169174/original.jpg",
+      "synopsis": "On Kai's World, Tien, Chiatzu, Yamcha and Piccolo arrive and begin their training after Piccolo inadvertently tells a joke. Meanwhile, on Planet Namek, Zarbon and Vegeta find each other and begin their battle.",
+      "airdate": "1997-10-25",
+      "markers": [],
+      "external_id": "169174"
+    },
+    {
+      "n": 53,
+      "title": "Nothing but Goosebumps! The Handsome Warrior Zarbon's Devilish Transformation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169189/original.jpg",
+      "synopsis": "Vegeta challenges Frieza's green-haired assistant Zarbon to a fight. Vegeta appears to gain the upper hand, but Zarbon transforms into a powerful monster and defeats the Saiyan. Meanwhile, goku continues his space pod training and Krillin and Dende remain on their quest for Guru.",
+      "airdate": "1997-10-25",
+      "markers": [],
+      "external_id": "169189"
+    },
+    {
+      "n": 54,
+      "title": "Defend the Star of Hope!! Kuririn's Astonishing Power-Up",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169198/original.jpg",
+      "synopsis": "Krillin and Dende finally reach Guru's home, where the eldest Namek explains the history of the Dragon Balls as well as Piccolo's unusual origin. Sensing Krillin's innate goodness, Guru awakens Krillin's latent powers and gives him the last Dragon Ball.",
+      "airdate": "1997-11-01",
+      "markers": [],
+      "external_id": "169198"
+    },
+    {
+      "n": 55,
+      "title": "Back from the Brink of Death — The Miracle Man, Vegeta",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169207/original.jpg",
+      "synopsis": "Yamcha, Tien and Chiaotzu continue their training on Kai's world and sturggle with their assignements against Bubbles and Gregory. However, Piccolo finds Kai's methods foolish and refuses to participate, but finally joins in sparring against the other three. Meanwhile, Zarbon finds an unconscious Vegeta and brings him back to Frieza.",
+      "airdate": "1997-11-01",
+      "markers": [],
+      "external_id": "169207"
+    },
+    {
+      "n": 56,
+      "title": "An Enormous Battle Power!! Freeza's Scheme is Shattered",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169217/original.jpg",
+      "synopsis": "On Namek, Vegeta finally recovers from his battle with Zarbon, and escapse from Frieza's base with all five Dragon Balls. He discovers that Krillin has the seventh Dragon Ball and goes after it, with Zarbon in hot pursuit. Meanwhile, Goku's spaceship begins passing through a violent magnetic storm.",
+      "airdate": "1997-11-08",
+      "markers": [],
+      "external_id": "169217"
+    },
+    {
+      "n": 57,
+      "title": "I'm Back to My Old Self Again!! Goku Under 100-Times Super-Gravity",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169224/original.jpg",
+      "synopsis": "Goku's space pod encounters a magnetic storb, casuing the gravity machine to go haywire. Goku barely survives the most intense gravity he has every experinenced: 100G. On Namek, Krillin reunintes with Bulma and is almost immediately confronted by Vegeta and Zarbon, who begin to fight over Krilin's Dragon Ball.",
+      "airdate": "1997-11-08",
+      "markers": [],
+      "external_id": "169224"
+    },
+    {
+      "n": 58,
+      "title": "Freeza's Secret Weapon! The Devilish Ginyu Special Corps",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169236/original.jpg",
+      "synopsis": "Vegeta defeats Zarbon and gains what he thinks to be the last Dragon Ball. But on his way to summon the Eternal Dragon, he runs into Gohan, who (unbeknowst to Vegeta) is reutrning with the seventh Dragon Ball. Meanwhile, a furious Frieza sends for the Ginyu Force to help him recover the Dragon Balls.",
+      "airdate": "1997-11-15",
+      "markers": [],
+      "external_id": "169236"
+    },
+    {
+      "n": 59,
+      "title": "Watch Out, Bulma!! The Si Xing Qiu Falls into Freeza's Clutches",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169251/original.jpg",
+      "synopsis": "Bulma has a dream about Vegeta killing her and stealing the Dragon Ball, but she falls out of her chair and wakes up. Elsewhere, Vegeta strategizes about how to get the seventh Dragon Ball, when several violent, quake-causing energy waves flash by. Bulma tries to hold on to the canyon wall, but the Dragon Ball rolls away and into the lake. She doesn't want to get wet, so she tries to fish it back in with a stick, but ends up pushing it farther into the water. She says that she'll wait for Krillin to get it when he comes back, but the ball rolls further down into the cavernous lake. Bulma pops open a submarine capsule and goes to retrieve it. She runs into a giant water dinosaur. She sees that the Dragon Ball is stuck in the scales on its back, so she fires torpedoes at it. It turns around swims off, dropping the Dragon Ball. In Space, Goku continues to wear himself out training at 100 G-Force.",
+      "airdate": "1998-01-31",
+      "markers": [],
+      "external_id": "169251"
+    },
+    {
+      "n": 60,
+      "title": "Charge!! The Kaio-ken and Kamehame-Ha of an Indomitable Spirit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169260/original.jpg",
+      "synopsis": "Bulma screams to be let down, and reminisces on her troublesome life. She bites the soldier holding her, and she drops him. They catch her and land in a clearing. Bulma tries to escape but her efforts are fruitless. She eavesdrops on their conversation and finds out that they don't know about the Dragon Balls, so she explains to them how the wish could make them stronger than even Frieza. They like the idea of boundless strength and insist that she show them where the other balls are. In Space, Goku uses to Kaio-ken to form a energy ball and throws it into the gravitational pull of the gravity machine, causing it to cycle around the room. Goku then gathers energy for a Kamehameha and fires it at the other energy ball. Instead of them connecting, they overlap and hit Goku, one on the back and one on the chest. He endures the hit as if it were nothing.",
+      "airdate": "1998-02-07",
+      "markers": [],
+      "external_id": "169260"
+    },
+    {
+      "n": 61,
+      "title": "The Great Battle Approaches! The Ginyu Special Corps Now Takes the Stage!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169267/original.jpg",
+      "synopsis": "Gohan and Krillin continue to fly towards Guru's. Krillin says that when Gohan's latent power is released, he may not even be able to challenge Vegeta, but he should be able to buy Goku more time to arrive. In Space, Goku finishes his training and returns the gravity to normal. Even he is impressed with how far he'd come. He takes a bath, drinks a sports drink, and rests the final leg of his voyage to Planet Namek. As Goku lay resting in his bed, even he does not know that he has crossed the threshold of power than any Saiyans could attain. On Namek, Gohan and Krillin finally near Guru's home, but before they get there, they sense Vegeta's energy at a very short distance away from them. Krillin stays behind and tells Gohan to go on to Guru's.",
+      "airdate": "1998-02-07",
+      "markers": [],
+      "external_id": "169267"
+    },
+    {
+      "n": 62,
+      "title": "Goku on Final Approach! Smash Through Freeza's Dragnet",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169279/original.jpg",
+      "synopsis": "Frieza addresses the Ginyu force with their mission: find the Dragon Balls and capture Vegeta. The Ginyu Force check their scouters and track Vegeta, along with two other sources of high energy Frieza tells them that it is just two weaklings from Earth. Guldo has a flashback to when Vegeta insulted him on one of Frieza's planets. He almost attacked Vegeta, but Frieza blasted him from behind and stopped him from doing it. Guldo begins to taste revenge, as the Ginyu force perform a routine warm-up and take off to fulfill their mission.",
+      "airdate": "1998-02-14",
+      "markers": [],
+      "external_id": "169279"
+    },
+    {
+      "n": 63,
+      "title": "Super-Magic or Just a Trick!? Mr. Ghurd is Angry!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169288/original.jpg",
+      "synopsis": "Gohan and Krillin battle Guldo, the smallest member of the Ginyu Force. The four-eyed Guldo may be small, but he uses his powerful time-freezing attacks to wear down our heroes. Fortunately, Vegeta is now on the side of the good guys, and he steps in to protect Gohan and Krillin.",
+      "airdate": "1998-02-14",
+      "markers": [],
+      "external_id": "169288"
+    },
+    {
+      "n": 64,
+      "title": "The Savage Recoom!! He's Bad, He's Strong, He's Outrageous",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169298/original.jpg",
+      "synopsis": "Recoome is the next Ginyu fighter to attack, and he has his sights set on Vegeta. Vegeta gives it all he's got, but he is no match for Recoome. Now it is time for Krillin and Gohan to return the favor, stepping in to help Vegeta. But where is Goku?",
+      "airdate": "1998-05-16",
+      "markers": [],
+      "external_id": "169298"
+    },
+    {
+      "n": 65,
+      "title": "Don't Die, Gohan! Goku Finally Touches Down on the Battlefield",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169306/original.jpg",
+      "synopsis": "Captain Ginyu hands the seven Dragon Balls to Frieza, but he is unable to summon the Eternal Dragon. He leaves to find Guru in order to discover the problem. Meanwhile, Recoome is defeating our heroes, but Goku's arrival on Namek turns the tide.",
+      "airdate": "1998-05-23",
+      "markers": [],
+      "external_id": "169306"
+    },
+    {
+      "n": 66,
+      "title": "Uncommon Strength!! Son Goku, the Legendary Super Saiyan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169316/original.jpg",
+      "synopsis": "Goku finally emerges out of the Space pod and tries to detect the life force of both Krillin and Gohan. Goku finds it very difficult because their powers are deceased. After Goku finds them he takes to the sky and is there in an instant.",
+      "airdate": "1998-05-23",
+      "markers": [],
+      "external_id": "169316"
+    },
+    {
+      "n": 67,
+      "title": "Lightning Balls of Red and Blue! Jheese and Butta Attack Goku",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169325/original.jpg",
+      "synopsis": "After finishing off Recoome, Goku is now up to the last members of the ginyus Burter and Jeice. After telling them to return home Jeice and Burter take to the skies and launch an attack on Goku called the Crusher ball; which Goku launches it away.",
+      "airdate": "1998-05-23",
+      "markers": [],
+      "external_id": "169325"
+    },
+    {
+      "n": 68,
+      "title": "At Last, a Direct Confrontation!! Captain Ginyu Takes the Field",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169334/original.jpg",
+      "synopsis": "Burter and Jeice are now stuck with Goku to fight, as Recoome is down. After there Crusher ball move does not work they have to find a way to get Goku but nothing works and are in trouble for neither of them cant land a punch. How will they be able to stop the saiyan warrior!",
+      "airdate": "1999-09-13",
+      "markers": [],
+      "external_id": "169334"
+    },
+    {
+      "n": 69,
+      "title": "Incredible Force!! Did You See Goku's Full Power?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169344/original.jpg",
+      "synopsis": "Vegeta leaves Goku behind to get the Dragon Balls for himself, leaving Goku to face Captain Ginyu alone, while Krillin and Gohan get the radar to get the Dragon Balls. However, time is of the essence as Frieza gets closer to Guru; and Goku has a few surprises up his sleeve for Captain Ginyu.",
+      "airdate": "1999-09-13",
+      "markers": [],
+      "external_id": "169344"
+    },
+    {
+      "n": 70,
+      "title": "What of the Battle's Outcome!? Freeza's Evil Hand Closes Around the Grand Elder",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169356/original.jpg",
+      "synopsis": "It seems that Goku is more powerful than Ginyu, but the captain won't give up so easily. Meanwhile, Guru sends Dende off to tell Krillin and the others the password with his potential unlocked as Frieza arrives to get the password. Can Nail hold Frieza off until the dragon is summoned?",
+      "airdate": "1999-09-14",
+      "markers": [],
+      "external_id": "169356"
+    },
+    {
+      "n": 71,
+      "title": "Surprise!! Goku is Ginyu and Ginyu is Goku",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169366/original.jpg",
+      "synopsis": "Nail gives it everything he's got against Frieza as Dende flies to the others, but Nail can't hold out much longer. Meanwhile, Gohan and Krillin get the dragon radar and head towards Frieza's spaceship, while Captain Ginyu has a surprise of his own for Goku.",
+      "airdate": "1999-09-15",
+      "markers": [],
+      "external_id": "169366"
+    },
+    {
+      "n": 72,
+      "title": "Come Forth, Super Shen Long!! Grant Me My Wish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169381/original.jpg",
+      "synopsis": "Krillin and Gohan arrive at Frieza's spaceship and found the Dragon Balls, unaware that Vegeta is not far away. As the two heroes figure out what the password is, Jeice and Captain Ginyu, in Goku's body, arrive as well. The cleverly disguised Ginyu tries to trick Krillin into believing that he is who he appears to be, but Gohan can see past his lies and knows the truth as Goku arrives in Ginyu's broken body. Can our heroes beat Ginyu with Goku's power?",
+      "airdate": "1999-09-16",
+      "markers": [],
+      "external_id": "169381"
+    },
+    {
+      "n": 73,
+      "title": "That Ain't Me! Gohan, Don't Lose Your Nerve, Hit Your Father!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169389/original.jpg",
+      "synopsis": "Ginyu tries to power up with Goku's body, but he keeps getting weaker by not using mind and body. As Krillin and Gohan fight Ginyu, Vegeta fights Jeice and it seems the Saiyan Prince has gotten stronger too. Has he become a Super Saiyan as well?",
+      "airdate": "1999-09-17",
+      "markers": [],
+      "external_id": "169389"
+    },
+    {
+      "n": 74,
+      "title": "Whoops!! Ginyu Has Turned Into a Frog",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169402/original.jpg",
+      "synopsis": "Realizing that he's no match for Vegeta, Ginyu tries to use his body switch move on the Saiyan Prince, but Goku is able block the attack and got his body back. Back in his broken body, Captain Ginyu tries his trick again to survive in Vegeta's body. Luckily, Goku is able to throw a frog to intercept the transfer. With the Ginyu Force defeated, Goku recovers in the isolation chamber in Frieza's spaceship while everyone else prepares for a battle with Frieza.",
+      "airdate": "1999-09-20",
+      "markers": [],
+      "external_id": "169402"
+    },
+    {
+      "n": 75,
+      "title": "Thou Who Hast Gathered the Seven Balls... Now Speak Forth the Password!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169416/original.jpg",
+      "synopsis": "With new battle armor, Krillin heads to Guru to get the password as Gohan looks after the Dragon Balls and Vegeta takes a nap. However, Frieza has figured out Nail's stalling strategy and flies back to the ship. Who will be able to make their wish?",
+      "airdate": "1999-09-21",
+      "markers": [],
+      "external_id": "169416"
+    },
+    {
+      "n": 76,
+      "title": "Kami-sama Also Returns to Life! Piccolo is Resurrected by Super Shen Long",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169430/original.jpg",
+      "synopsis": "Thanks to Dende, the Eternal Dragon, Porunga, has been summoned with the power to grant three wishes. The first two wishes are used to bring Piccolo back to life and to bring him to Namek by Piccolo's own request, thanks to the mediation by King Kai. Unfortunately, Vegeta is awake and rushes toward the others with rage to make his wish. Will he succeed and are any of them prepared for Frieza?",
+      "airdate": "1999-09-22",
+      "markers": [],
+      "external_id": "169430"
+    },
+    {
+      "n": 77,
+      "title": "Birth of the Mightiest Warrior!? Nail and Piccolo Merge",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169440/original.jpg",
+      "synopsis": "Because of a broken heart caused by Frieza's cruelty towards his people, Guru is gone, as well as Porunga and Vegeta's wish. Frieza arrives, furious being denied his wish. As the fight for the Universe has just begun, Piccolo finds Nail, and the wounded warrior makes an unexpected proposal.",
+      "airdate": "1999-09-23",
+      "markers": [],
+      "external_id": "169440"
+    },
+    {
+      "n": 78,
+      "title": "A Nightmare Super-Transformation!! Freeze's Battle Power of One Million",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169448/original.jpg",
+      "synopsis": "While Vegeta and Frieza verbally battle each other, Frieza reveals a terrible secret: he was the one who destroyed Planet Vegeta, killed Vegeta's father, and wiped out the majority of the Saiyan race. Without allowing Vegeta and the others to recover from this terrible revelation, Frieza reveals another stunning development: his power to transform! Will Vegeta, Gohan and Krillin's combined strength be able to topple Frieza's new stronger form?",
+      "airdate": "1999-09-24",
+      "markers": [],
+      "external_id": "169448"
+    },
+    {
+      "n": 79,
+      "title": "Is This the End!? A Brutally Transcendent Power Attacks Gohan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169454/original.jpg",
+      "synopsis": "By transforming into a giant, Frieza has gained more power and shows it off by attacking Krillin. With the brave hero out of commission, Gohan lashes out in rage as he fires a reckless volley of attacks, but can he really beat Frieza?",
+      "airdate": "1999-09-26",
+      "markers": [],
+      "external_id": "169454"
+    },
+    {
+      "n": 80,
+      "title": "The Tide Suddenly Turned!! Piccolo, the Warrior Who Came Late",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169457/original.jpg",
+      "synopsis": "Krillin is healed, thanks to Dende's special powers, and then he distracts Frieza long enough for little Namekian to heal Gohan as Vegeta just stands there in awe. The three warriors fire at Frieza with everything they got, but it seems that they can't win, but an old friend is just moments away.",
+      "airdate": "1999-09-27",
+      "markers": [],
+      "external_id": "169457"
+    },
+    {
+      "n": 81,
+      "title": "Piccolo's Self-Confidence! I Will Be the One to Defeat Freeza",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169466/original.jpg",
+      "synopsis": "Piccolo arrives to the battlefield preparing to fight Frieza alone. Everyone thinks he's making his death wish, but Piccolo seems to hold his own and anticipates Frieza's moves, thanks to his fusion with Nail. But will it be enough?",
+      "airdate": "1999-09-28",
+      "markers": [],
+      "external_id": "169466"
+    },
+    {
+      "n": 82,
+      "title": "Attack, Goku!! An Enraged Freeza's Second Transformation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169470/original.jpg",
+      "synopsis": "Everyone stands in awe as Piccolo turns the tide of the battle against Frieza, but the tyrant isn't going to give up. He is about to transform again into a far more powerful creature. Will Piccolo be able to handle Frieza's power increase?",
+      "airdate": "1999-09-29",
+      "markers": [],
+      "external_id": "169470"
+    },
+    {
+      "n": 83,
+      "title": "Fear Me!! Freeza Does Battle with a Third Transformation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169476/original.jpg",
+      "synopsis": "Gohan steps in to battle to save Piccolo by firing an energy blast at Frieza with even more power than before. However, the tyrant manages to barely bounce it back. Instead of finishing them off in his current state, Frieza is about to transform into his final form. Luckily, Vegeta has a plan that might make him into a Super Saiyan. Will his plan work, and will it be enough?",
+      "airdate": "1999-09-30",
+      "markers": [],
+      "external_id": "169476"
+    },
+    {
+      "n": 84,
+      "title": "The Death of Dende... Come Forth! Intense, Wide-Open Power",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169484/original.jpg",
+      "synopsis": "In his final form, Frieza takes out Dende right away, so no one could be healed by him. Gohan and the others try their best against the cruel monster, but none of their attacks work. Vegeta steps in, vowing that he has become a Super Saiyan and will beat Frieza, but the powerful tyrant isn't worried.",
+      "airdate": "1999-10-01",
+      "markers": [],
+      "external_id": "169484"
+    },
+    {
+      "n": 85,
+      "title": "How I've Waited for this Moment!!! Son Goku Revived",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169489/original.jpg",
+      "synopsis": "It seems that Vegeta isn't a Super Saiyan, for even the Saiyan Prince can't read Frieza's movements as the heartless fiend tortures Vegeta. As everyone stands there in fear, Goku has finally been recovered, but will he come to his friends in time to stop Frieza?",
+      "airdate": "1999-10-04",
+      "markers": [],
+      "external_id": "169489"
+    },
+    {
+      "n": 86,
+      "title": "Such Regret...!! Vegeta, Pride of the Saiyans, Dies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169496/original.jpg",
+      "synopsis": "Goku has entered the battlefield stronger than ever and prepares to fight Frieza alone. It seems that Goku might become a Super Saiyan, as he easily deflects Frieza's energy attacks. As Vegeta taunts Frieza, the tyrant easily finishes him off with a cruel bout of laughter. With his last breath, Vegeta tells Goku of what Frieza has done to him and his people. Can Goku be able to defeat Frieza, the one person no one else has beaten?",
+      "airdate": "1999-10-05",
+      "markers": [],
+      "external_id": "169496"
+    },
+    {
+      "n": 87,
+      "title": "The Curtain Rises over the Ultimate Battle!! I Am Going to Defeat You!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169499/original.jpg",
+      "synopsis": "With new understanding of the Saiyans, Goku vows to beat Frieza for his people. Both of these warriors match each other's moves with great speed and strength. Then, Frieza fires at Namek, causing a volcanic eruption. Can Goku survive this?",
+      "airdate": "1999-10-06",
+      "markers": [],
+      "external_id": "169499"
+    },
+    {
+      "n": 88,
+      "title": "The Two Superpowers Collide! A Fistfight Where Both Turn Serious!!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169504/original.jpg",
+      "synopsis": "As the fight continues, Goku attacks from underwater upon realizing that Frieza can't sense power levels. As Goku seems to be in control, Frieza uses his mind to use rocks to attack Goku so he can trap him in an energy ball that will explode if it touches anything but Frieza, and it doesn't look good for our hero.",
+      "airdate": "1999-10-07",
+      "markers": [],
+      "external_id": "169504"
+    },
+    {
+      "n": 89,
+      "title": "Freeza's Terrible Declaration! I Will Defeat You Without Using My Hands",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169511/original.jpg",
+      "synopsis": "To prove that he's the strongest of all, Frieza uses his feet and not his hands to beat Goku. It may seem Frieza has the advantage, but Goku proves that the tyrant will have to use his hands. Meanwhile, Bulma finds a frog, unaware that it's Captain Ginyu as he prepares to switch bodies with her.",
+      "airdate": "1999-10-08",
+      "markers": [],
+      "external_id": "169511"
+    },
+    {
+      "n": 90,
+      "title": "That Was No Idle Boast!! Son Goku, an Audacious, Wonderful Guy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169513/original.jpg",
+      "synopsis": "To ensure Goku is defeated, Frieza powers up to 50% of his maximum and it seems that not even Goku can handle it. Captain Ginyu finds the other heroes in Bulma's body and prepares to have his revenge. Can the others see through Ginyu's trickery?",
+      "airdate": "1999-10-11",
+      "markers": [],
+      "external_id": "169513"
+    },
+    {
+      "n": 91,
+      "title": "Showdown!! The Embodiment of Flame in a 20-Times Kaio-ken Kamehame-Ha",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169515/original.jpg",
+      "synopsis": "Captain Ginyu prepares his revenge by switching with Piccolo, but Gohan is able to throw Bulma (as a frog) in the way to get her body back. Meanwhile, Goku is being beaten up by Frieza with his power increase and even the Kaio-Ken attack doesn't work. But as he is held by the monster's power, he has a vision showing what Frieza could do to Earth. Rocked and inspired by the vision, Goku powers up, but will it be enough?",
+      "airdate": "1999-10-12",
+      "markers": [],
+      "external_id": "169515"
+    },
+    {
+      "n": 92,
+      "title": "A Super-Huge Genki Dama, I'm Playing My Last Card!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169517/original.jpg",
+      "synopsis": "Goku's 20x Kaio-Ken attack with a Kamehameha doesn't work against Frieza, as the tyrant tries to destroy him once and for all. Suddenly, Vegeta telepathically speaks to Goku from the otherworld to not give up yet, giving Goku more power, but it's not enough. Luckily, Goku has one more trick up his sleeve: the Spirit Bomb.",
+      "airdate": "1999-10-13",
+      "markers": [],
+      "external_id": "169517"
+    },
+    {
+      "n": 93,
+      "title": "Keep the Chance Alive!! Piccolo's Suicide Support Strike",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169518/original.jpg",
+      "synopsis": "As King Kai and the others watch the battle on Namek, the Ginyu Force arrives to take over the planet, but Yamcha, Tien and Chiaotzu are ready for a fight. Back on Namek, Frieza discovers Goku's Spirit Bomb and plans to stop it. Suddenly, Piccolo steps in to give Goku more time, but how long can he hold on against Frieza?",
+      "airdate": "1999-10-14",
+      "markers": [],
+      "external_id": "169518"
+    },
+    {
+      "n": 94,
+      "title": "The Incredible Destructive Force of the Genki Dama!! Who Will Survive?!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169520/original.jpg",
+      "synopsis": "The battle on King Kai's planet begins with the Z-Fighters against the Ginyu Force and it seems that our heroes' training is paying off. Piccolo does his best for Goku to comeplete the Spirit Bomb, but it seems that Frieza might win this battle.",
+      "airdate": "1999-10-15",
+      "markers": [],
+      "external_id": "169520"
+    },
+    {
+      "n": 95,
+      "title": "Transformed At Last!! Son Goku, the Legendary Super Saiyan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169522/original.jpg",
+      "synopsis": "It looks like the battle is over, as Frieza seems to be defeated and the Ginyu Force has fallen down to Hell. As everyone celebrates, Frieza reappears and spares no time knocking Piccolo out and killing Krillin. Fueled by rage, Goku's power increases exponentially. Has Goku finally fulfilled the Super Saiyan legend?",
+      "airdate": "1999-10-18",
+      "markers": [],
+      "external_id": "169522"
+    },
+    {
+      "n": 96,
+      "title": "An Explosion of Anger!! Goku, Avenge Everyone's Deaths",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169523/original.jpg",
+      "synopsis": "Goku's hair has turned blonde and his eyes blue, as he is surrounded by a gold aura; the fuel of this power being his anger towards Frieza. As Gohan takes Piccolo to Goku's ship, our hero starts to pound on Frieza as the tyrant fires back, but none of his attacks are working against Goku now that he is a Super Saiyan. It looks like Frieza will finally be defeated.",
+      "airdate": "1999-10-19",
+      "markers": [],
+      "external_id": "169523"
+    },
+    {
+      "n": 97,
+      "title": "The Destruction of Planet Namek!? A Demonic Flash Pierces the Ground",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169525/original.jpg",
+      "synopsis": "Not willing to be beaten, Frieza fires an attack to destroy Namek so Goku will be killed, as the Super Saiyan can't do anything to stop the attack. Will this be the end of everyone on Namek?",
+      "airdate": "1999-10-20",
+      "markers": [],
+      "external_id": "169525"
+    },
+    {
+      "n": 98,
+      "title": "I Will Be the One Who Wins... Risking Survival, a Final Attack",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169527/original.jpg",
+      "synopsis": "Namek is about to explode in 5 minutes, as Gohan finds Bulma and gets back to the ship. Meanwhile, Frieza powers up to 100% of his maximum to finish the fight. Instead of stopping him, Goku has let Frieza go full power, but is this power increase too much for even a Super Saiyan to handle?",
+      "airdate": "1999-10-21",
+      "markers": [],
+      "external_id": "169527"
+    },
+    {
+      "n": 99,
+      "title": "Shen Long, Run Yourself Through Space!! The Time of Namek's Destruction Draws Near",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169529/original.jpg",
+      "synopsis": "As the battle on Namek continues, Kami and Mr. Popo have found all of the restored Dragon Balls, giving King Kai an idea that might save everyone on Namek. But will it work in time?",
+      "airdate": "1999-10-22",
+      "markers": [],
+      "external_id": "169529"
+    },
+    {
+      "n": 100,
+      "title": "I Am Son Goku's Son!! Gohan Returns to the Battlefield",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169530/original.jpg",
+      "synopsis": "Everyone that has been killed by Frieza and his henchmen on Namek are resurrected, but so far, Guru isn't back yet and it looks like Goku has been beaten by Frieza's attack. To avenge his father, Gohan returns to the battle to make sure the cold tyrant blows up with the planet, but how long can he last?",
+      "airdate": "1999-10-25",
+      "markers": [],
+      "external_id": "169530"
+    },
+    {
+      "n": 101,
+      "title": "I'm Staying on This Planet!! A Final Wish Towards Victory",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169531/original.jpg",
+      "synopsis": "With Guru back to life, the Namekian Dragon Balls have been restored as well, with Porunga ready to grant the third wish. As Dende prepares to complete the final phase of King Kai's plan, Frieza flies towards Porunga to have his wish granted as well.",
+      "airdate": "1999-10-26",
+      "markers": [],
+      "external_id": "169531"
+    },
+    {
+      "n": 102,
+      "title": "Let's Get It On!! Two Remain on a Vanishing Planet",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169533/original.jpg",
+      "synopsis": "It seems that everyone on Namek has been transported to Earth, but Goku is still on Namek, insisting that he finish the fight. Everyone is upset with Goku's decision, as it seems that there is no escape from the explosion. Can Goku finish Frieza in one minute and escape in time?",
+      "airdate": "1999-10-27",
+      "markers": [],
+      "external_id": "169533"
+    },
+    {
+      "n": 103,
+      "title": "Pathos of Freeza! Once He Starts Shaking, He's Unstoppable!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169534/original.jpg",
+      "synopsis": "As Namek gets closer to explosion it looks like Goku can beat Frieza with ease as his power keeps increasing. Finally, Goku decides to leave, knowing that he's more than a match for Frieza, but the tyrant won't give up that easily.",
+      "airdate": "1999-10-28",
+      "markers": [],
+      "external_id": "169534"
+    },
+    {
+      "n": 104,
+      "title": "Goku's Declaration of Victory!! As Freeza Destroys Himself...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169536/original.jpg",
+      "synopsis": "Frieza fires two copies of Krillin's Destructo Disk that will follow Goku until it hits him or anything else. Even so, Goku has the situation under control as the battle draws to a close and the mighty villain is going to lose.",
+      "airdate": "1999-10-29",
+      "markers": [],
+      "external_id": "169536"
+    },
+    {
+      "n": 105,
+      "title": "Freeza Defeated!! A Single Blast Packed with a Totality of Rage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169537/original.jpg",
+      "synopsis": "As Guru enjoys seeing his people alive on Earth, the time has come for him to go, but gave his powers to Moori, as the next Eldest Namek. Back on Namek, Frieza has been cut in half by his own energy disk from behind, but Goku, being the kind person he is, gives Frieza some of his power to escape. However, Frieza will not accept defeat, as he uses the given power to finish Goku off, but Goku finishes off Freiza with a mighty attack.",
+      "airdate": "1999-11-01",
+      "markers": [],
+      "external_id": "169537"
+    },
+    {
+      "n": 106,
+      "title": "Planet Namek's Great Explosion!! Goku Disappears into Space",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169539/original.jpg",
+      "synopsis": "With Frieza gone, Goku flies to Frieza's spaceship to escape from Namek, but it looks like the ship doesn't work. Even though it looks like Goku is gone, Bulma and the others have an idea that could work; using the Namekian Dragon Balls, once restored, to bring everyone else back.",
+      "airdate": "1999-11-02",
+      "markers": [],
+      "external_id": "169539"
+    },
+    {
+      "n": 107,
+      "title": "Son Goku Survived , The Z Warriors All Resurrected!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169541/original.jpg",
+      "synopsis": "As it looks like Goku and Krillin can't come back, Vegeta has an idea: wish them back to the Check-in Station, then wish them back to life. After 130 days, Krillin and Yamcha are back to life, but Porunga says Goku is alive, but where is he?",
+      "airdate": "1999-11-03",
+      "markers": [],
+      "external_id": "169541"
+    },
+    {
+      "n": 108,
+      "title": "Terrible Happenings in Heaven!! Garlic Jr. to Become Kami!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169543/original.jpg",
+      "synopsis": "Even with Goku not back yet, the Earth has been very peaceful as Gohan fishes and Krillin dates a young girl named Maron. However, the peace will be disturbed because an old enemy has escaped from his dark prison- Garlic Jr!",
+      "airdate": "2000-04-08",
+      "markers": [],
+      "external_id": "169543"
+    },
+    {
+      "n": 109,
+      "title": "Black Mist of Terror...!! Everyone Turns Demonic",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169545/original.jpg",
+      "synopsis": "Garlic Jr. and his henchmen, the Spice Boys, have infiltrated Kami's Lookout and have captured Kami and Mr. Popo. With Garlic Jr. in control, he releases his father's Black Water Mist- a vapor that unlocks any evil within a person, becoming a demon. Can anyone withstand the mist's power?",
+      "airdate": "2000-04-15",
+      "markers": [],
+      "external_id": "169545"
+    },
+    {
+      "n": 110,
+      "title": "The Heavenly Realm is the Battlefield!! Piccolo Becomes Devilish Again...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169547/original.jpg",
+      "synopsis": "With their friends infected by the Black Water Mist and the knowledge of Garlic Jr.'s return, Gohan and Krillin head towards the Lookout to get the Sacred Water, but it's going to be tricky with Garlic Jr. beating them to the punch. Meanwhile, Piccolo handles the Spice Boys and the others, but will he too be infected by the mist?",
+      "airdate": "2000-04-22",
+      "markers": [],
+      "external_id": "169547"
+    },
+    {
+      "n": 111,
+      "title": "Direct Confrontation with Piccolo!! An Angry Masenko in the Heavenly Realm",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169548/original.jpg",
+      "synopsis": "The brave Namekian has been tainted by the mist too, as he now follows Garlic Jr. As the immortal demon relaxes, Mustard and Salt have their fun with Earth's last heroes. Will Krillin and Gohan beat them and how will they able to handle Piccolo?",
+      "airdate": "2000-04-29",
+      "markers": [],
+      "external_id": "169548"
+    },
+    {
+      "n": 112,
+      "title": "Retrieve Everyone's Minds!! The Ultra Holy Water Resting in the Temple",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169550/original.jpg",
+      "synopsis": "Gohan easily beats Mustard and Salt, but is powerless against the infected Piccolo. Krillin tries to save Kami and Mr. Popo, but eventually gets bitten by Piccolo. Gohan seems to be the only hero left and it seems that the battle is over...or is it?",
+      "airdate": "2000-05-06",
+      "markers": [],
+      "external_id": "169550"
+    },
+    {
+      "n": 113,
+      "title": "Can't Wait Until Morning!! Kami-sama Determines a Suicidal Course of Action",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169551/original.jpg",
+      "synopsis": "Piccolo and Krillin fooled Garlic Jr., for they were not infected by the Black Water Mist, and they freed Kami and Mr. Popo. Kami heads towards the seven air currents to spread the Sacred Water, but he could lose his life. Will he make it time, and will the others handle Garlic Jr.'s power increase with the Makyo Star?",
+      "airdate": "2000-05-13",
+      "markers": [],
+      "external_id": "169551"
+    },
+    {
+      "n": 114,
+      "title": "A Battle of Extreme Measures!! Kami-sama Breaks the Covenant",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169553/original.jpg",
+      "synopsis": "Gohan, Krillin and Piccolo do their best against Garlic Jr. and the remaining Spice Boys, with the Makyo Star powering them up, but is it enough? Meanwhile, Kami and Mr. Popo try to get to pour the Sacred Water, but the former guardians won't allow it, and they drain Kami's lifeforce... as well as Piccolo's.",
+      "airdate": "2000-05-20",
+      "markers": [],
+      "external_id": "169553"
+    },
+    {
+      "n": 115,
+      "title": "The Ultra Holy Water Worked!! The World Awakens from Its Nightmare",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169555/original.jpg",
+      "synopsis": "With Piccolo down, Gohan fights the powered up Garlic Jr., but can he really defeat an immortal demon? Kami distracts the former guardians by using himself as bait so Mr. Popo can spread the Sacred Water, but will it work in time?",
+      "airdate": "2000-05-27",
+      "markers": [],
+      "external_id": "169555"
+    },
+    {
+      "n": 116,
+      "title": "Gohan's Brief Chance for Victory!! Blast the Makyo World...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169557/original.jpg",
+      "synopsis": "With his plan in ruins, Garlic Jr. opens up the Dead Zone to finish off the others once and for all. With Kami and Mr. Popo spared, Piccolo is back with a plan: destroy the Makyo Star. But can Gohan do it with his friends still safe?",
+      "airdate": "2000-05-27",
+      "markers": [],
+      "external_id": "169557"
+    },
+    {
+      "n": 117,
+      "title": "You're My Guy... Kuririn, a 101st Proposal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169559/original.jpg",
+      "synopsis": "With the Earth at peace once again, Krillin and Maron do a little shopping, but then Maron looks at a wedding dress and a house. Krillin thinks they might get married, but is he right?",
+      "airdate": "2000-09-01",
+      "markers": [],
+      "external_id": "169559"
+    },
+    {
+      "n": 118,
+      "title": "That There is Earth, Papa... The Counter-Attack of Freeza, Father and Son",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169560/original.jpg",
+      "synopsis": "With Mr. Shu as his tutor, Gohan's studies become more intense as he still waits for Goku to come back. However, it looks he won't be the only one coming to Earth, for somehow, Frieza is coming to Earth as well.",
+      "airdate": "2000-09-04",
+      "markers": [],
+      "external_id": "169560"
+    },
+    {
+      "n": 119,
+      "title": "I Will Defeat Freeza... The Mysterious Youth Awaiting Goku",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169562/original.jpg",
+      "synopsis": "Thanks to his father, King Cold, Frieza has survived Namek's explosion and has been repaired. These two tyrants are headed to Earth to exact revenge against Goku. It looks like all hope seems lost as no one can stop these two powerful warriors... or is there?",
+      "airdate": "2000-09-05",
+      "markers": [],
+      "external_id": "169562"
+    },
+    {
+      "n": 120,
+      "title": "Freeza Halved by a Single Stroke!! Another Super Saiyan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/169564/original.jpg",
+      "synopsis": "As Frieza and King Cold prepare to strike, a mysterious young man armed with a sword comes out of nowhere and challenges them to fight. It looks like this boy has made a grave mistake, or maybe ...it's the other way around.",
+      "airdate": "2000-09-06",
+      "markers": [],
+      "external_id": "169564"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "'Z' no Chikai (『Z』の誓い;The Oath of 'Z')",
+      "artist": "Momoiro Clover Z",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Fight it out! (International Version)",
+      "artist": "Masatoshi Ono",
+      "episodes": "99-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ku-Zen-Zetsu-Go",
+      "artist": "Tanimoto Takayoshi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Haikei, Zarathustra (拝啓、ツラツストラ; Dear Zarathustra)",
+      "artist": "Good Morning America",
+      "episodes": "99-111"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Never give up!!! (International Version)",
+      "artist": "Junear",
+      "episodes": "99-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head-Cha-La",
+      "artist": "Flow",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Cha-La Head-Cha-La",
+      "artist": "Flow",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Soul",
+      "artist": "Takayoshi Tanimoto",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Soul",
+      "artist": "Vic Mignogna [English version; Nicktoons & CW4Kids/Vortexx broadcast]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Soul (English Version 2)",
+      "artist": "Justin Cook",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Soul (English Version Nicktoons Broadcast)",
+      "artist": "Vic Mignogna",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Soul (English Version)",
+      "artist": "Sean Schemmel",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Soul",
+      "artist": "Tanimoto Takayoshi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Soul",
+      "artist": "Sean Schemmel [English version]",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yeah! Break! Care! Break! (English Version)",
+      "artist": "Jerry Jewell",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yeah! Break! Care! Break!",
+      "artist": "Tanimoto Takayoshi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head-Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "HERO (Kimi ga Hero)",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rock the Dragon",
+      "artist": "??? [Ocean Dub TV Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Marugoto",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ore ga Yaranakya Dare ga Yaru",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "We Gotta Power",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Saikyou no Fusion",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "We Gotta Power",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dragon Power Mugendai",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "We Gotta Power",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kiseki no Big Fight",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head-Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ginga o Koete Rising High",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head-Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Eternal Sacrifice (instrumental)",
+      "artist": "Tendril [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Burning Fight -Nessen Ressen Chōgekisen- (バーニング・ファイト-熱戦・烈戦・超激戦-)",
+      "artist": "Hironobu Kageyama & Yuka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Stained-Glass Windshield",
+      "artist": "El Gato [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head-Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "GIRIGIRI -Sekai Kyokugen-",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Ball Z Theme",
+      "artist": "Bruce Faulconer [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Phoenix",
+      "artist": "Breaking Point [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tobikkiri no Saikyou Tai Saikyou",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Ball Z Theme",
+      "artist": "Bruce Faulconer [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "'Ya' na koto ni wa Genkidama!!",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Coming of Age",
+      "artist": "Breaking Point [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Ball Z Theme",
+      "artist": "Bruce Faulconer [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragonball Z",
+      "artist": "Tom Keenlyside, John Mitchell & David Iris [English Version - Ocean/Westwood dub]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Opening Theme",
+      "artist": "Dave Moran [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Opening Theme",
+      "artist": "Mark Menza [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rock the Dragon",
+      "artist": "??? [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head-Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": "1-199"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Closing Theme",
+      "artist": "Mark Menza [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Detekoi Tobikiri Zenkai Power! (でてこいとびきりZENKAIパワー！)",
+      "artist": "MANNA",
+      "episodes": "1-199"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I-ku-sa",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dete Koi Tobikiri ZENKAI Power",
+      "artist": "MANNA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head-Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Ball Z Theme",
+      "artist": "Andy Baylor [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aoi Kaze no HOPE",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Closing Theme",
+      "artist": "Mark Menza [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Goku Is Falling",
+      "artist": "Bruce Faulconer [US Version - broadcast edit]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Through Her Eyes",
+      "artist": "Dream Theater [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cha-La Head-Cha-La",
+      "artist": "Hironobu Kageyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dragon Ball Z Theme",
+      "artist": "Andy Baylor [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hikari no Tabi (光の旅)",
+      "artist": "Hironobu Kageyama and Kuko",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Trunks Story",
+      "artist": "Bruce Faulconer [US Version - broadcast edit]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Makes No Difference",
+      "artist": "Sum 41 [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Junjō (純情, Innocence)",
+      "artist": "Leo Ieiri",
+      "episodes": "112-123"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Dragon Soul",
+      "artist": "Justin Cook [English version]",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kokoro no Hane (Wings of the Heart)",
+      "artist": "AKB48",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "We Gotta Power",
+      "artist": "Hironobu Kageyama",
+      "episodes": "200-291"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Boku-tachi wa Tenshi datta (僕達は天使だった)",
+      "artist": "Hironobu Kageyama",
+      "episodes": "200-291"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "A Bigger Mood",
+      "artist": "American Hi-Fi [US Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Oh Yeah!!!!!!!",
+      "artist": "Czecho No Republic",
+      "episodes": "124-136"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Dragon Soul",
+      "artist": "Vic Mignogna [English version]",
+      "episodes": "27-39"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "GALAXY",
+      "artist": "Kyūso Nekokami",
+      "episodes": "137-146"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Dragon Soul",
+      "artist": "Greg Ayres [English version]",
+      "episodes": "40-52"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Don't Let Me Down",
+      "artist": "Gacharic Spin",
+      "episodes": "147-159"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Dragon Soul",
+      "artist": "Sonny Strait [English version]",
+      "episodes": "53-65"
+    },
+    {
+      "kind": "OP",
+      "sequence": 6,
+      "title": "Dragon Soul",
+      "artist": "Brina Palencia [English version]",
+      "episodes": "66-77"
+    },
+    {
+      "kind": "OP",
+      "sequence": 7,
+      "title": "Dragon Soul",
+      "artist": "Sean Schemmel, Justin Cook & Greg Ayres [English version]",
+      "episodes": "78-88"
+    },
+    {
+      "kind": "OP",
+      "sequence": 8,
+      "title": "Dragon Soul",
+      "artist": "Vic Mignogna, Sonny Strait & Brina Palencia [English version]",
+      "episodes": "89-98"
+    }
+  ],
+  "relations": []
+}

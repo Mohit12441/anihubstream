@@ -1,0 +1,132 @@
+{
+  "id": "hikaru-no-go-hokuto-hai-e-no-michi",
+  "title": "Hikaru no Go: Hokuto Hai e no Michi",
+  "native": "ヒカルの碁 北斗杯への道",
+  "year": 2004,
+  "rating": 7.6,
+  "season": "Winter 2004",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx645-pyWfd1NkNDdB.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx645-pyWfd1NkNDdB.png",
+  "accent": "#e4a135",
+  "synopsis": "Hikaru is given a phone call asking him to appear in the Japan/China/Korea Junior's Tournament but he finds out he will have to take place in a preliminary tournament to choose Japan's three contestants. Upon discussing this with Akira, he discovers that Akira has already been chosen for the tournament and will not be taking place in the preliminaries. Hikaru then decides not to visit Akira's Go Salon until he takes his place on the team with Akira. That may be tougher than originally planned, as not only does Hikaru have to battle with old friends for one of two coveted spots, but he may have a new challenger, in a promising player from the Kansai Go Institute. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "hikaru-no-go:-hokuto-hai-e-no-michi-bkp2pq",
+    "mal": 645,
+    "anilist": 645,
+    "kitsu": 593
+  },
+  "skip_key_id": 645,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "hikaru no go hokuto hai e no michi ヒカルの碁 北斗杯への道 special finished",
+  "genres": [
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hikaru no Go: Hokuto Hai e no Michi",
+      "runtime": "77:00",
+      "runtime_seconds": 4620,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx645-pyWfd1NkNDdB.png",
+      "synopsis": "Hikaru is given a phone call asking him to appear in the Japan/China/Korea Junior's Tournament but he finds out he will have to take place in a preliminary tournament to choose Japan's three contestants. Upon discussing this with Akira, he discovers that Akira has already been chosen for the tournament and will not be taking place in the preliminaries. Hikaru then decides not to visit Akira's Go Salon until he takes his place on the team with Akira. That may be tougher than originally planned, as not only does Hikaru have to battle with old friends for one of two coveted spots, but he may have a new challenger, in a promising player from the Kansai Go Institute. \n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "13460"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Get Over",
+      "artist": "dream",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Everlasting Snow",
+      "artist": "Dream",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Get Over",
+      "artist": "dream",
+      "episodes": "1-30"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bokura no Bouken",
+      "artist": "Kids Alive",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "I'll Be the One",
+      "artist": "HAL",
+      "episodes": "31-60"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hitomi no Chikara",
+      "artist": "Mizuki Arisa",
+      "episodes": "13-30"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Fantasy",
+      "artist": "Nana Katase",
+      "episodes": "61-75"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Sincerely ~ever dream~",
+      "artist": "dream",
+      "episodes": "31-46"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Days",
+      "artist": "shela",
+      "episodes": "47-63"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Music is My Thing",
+      "artist": "Dream",
+      "episodes": "64-74"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Get Over ~Special Mix~",
+      "artist": "dream",
+      "episodes": "75"
+    }
+  ],
+  "relations": []
+}

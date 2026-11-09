@@ -1,0 +1,213 @@
+{
+  "id": "goblin-slayer",
+  "title": "GOBLIN SLAYER",
+  "native": "ゴブリンスレイヤー",
+  "year": 2018,
+  "rating": 7.1,
+  "season": "Fall 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101165-v5NwPXWPFDuD.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101165-v5NwPXWPFDuD.jpg",
+  "accent": "#5d93e4",
+  "synopsis": "A young priestess has formed her first adventuring party, but almost immediately they find themselves in distress. It's the Goblin Slayer who comes to their rescue--a man who's dedicated his life to the extermination of all goblins, by any means necessary. And when rumors of his feats begin to circulate, there's no telling who might come calling next...\n\n(Source: Yen Press)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "goblin-slayer-ihh1k9",
+    "mal": 37349,
+    "anilist": 101165,
+    "kitsu": 40597
+  },
+  "skip_key_id": 37349,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "goblin slayer コ フ リンスレイヤー tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Fate of Particular Adventurers",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246733/original.jpg",
+      "synopsis": "On the first day that the Priestess became an adventurer, she joins three other rookie adventurers on a quest to save some girls who were kidnapped by some goblins. Despite being one of the weakest monsters around, the rookie adventurers fall for some traps that were set for them in the goblin cave, which leads to dire results. A goblin was about to attack the Priestess when a mysterious armored figure appears before her. The armored figure then mercilessly starts slaughtering the goblins and tells the Priestess that his name is Goblin Slayer...",
+      "airdate": "2018-10-07",
+      "markers": [],
+      "external_id": "246733"
+    },
+    {
+      "n": 2,
+      "title": "Goblin Slayer",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246734/original.jpg",
+      "synopsis": "The Goblin Slayer is a silver-ranked adventurer covered in armor from head to toe. The Goblin Slayer never accepted any quests from the Adventurers' Guild other than quests to slay goblins so he was perceived as strange by the other guild members. Ever since she was saved by the Goblin Slayer the Priestess had been joining him on quests and slowly began to understand how he functions.",
+      "airdate": "2018-10-14",
+      "markers": [],
+      "external_id": "246734"
+    },
+    {
+      "n": 3,
+      "title": "Unexpected Visitors",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246735/original.jpg",
+      "synopsis": "The High Elf Archer, Dwarf Shaman, and Lizardman Priest come to see Goblin Slayer. They tell him of a demon lord that's revived with the intent to destroy the world, and they ask for Goblin Slayer's help. However, he tells them they have no interest until they mention goblins...",
+      "airdate": "2018-10-21",
+      "markers": [],
+      "external_id": "246735"
+    },
+    {
+      "n": 4,
+      "title": "The Strong",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246736/original.jpg",
+      "synopsis": "Goblin Slayer and his companions enter some ancient ruins that had been taken over by the demon lords' minions. Goblin Slayer works together with the High Elf Archer and the others to slay the army of goblins, but suddenly, an ogre appears. The tables turn on the battle as the ogre beats Goblin Slayer down...",
+      "airdate": "2018-10-28",
+      "markers": [],
+      "external_id": "246736"
+    },
+    {
+      "n": 5,
+      "title": "Adventures and Daily Life",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246737/original.jpg",
+      "synopsis": "Goblin Slayer and the others return successful from their quest in the ruins. Goblin Slayer spends a few days sleeping at Cow Girl's home to recover and then heads to the guild. There, he gives advice to a couple of adventurers on how to deal with some giant rats and also accepts a request from Guild Girl.",
+      "airdate": "2018-11-04",
+      "markers": [],
+      "external_id": "246737"
+    },
+    {
+      "n": 6,
+      "title": "Goblin Slayer in the Water Town",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246738/original.jpg",
+      "synopsis": "Goblin Slayer and his party recieve a request to slay some goblins. The one who sent the request was the Sword Maiden, one of the heroes that defeated the Demon Lord. Goblin Slayer, Priestess, High Elf Archer, Dwarf Shaman, and Lizardman Priest head to Water Town. It's a peaceful, beautiful city, but apparently, there are some scary incidents happening. The party believes that there might be some goblins hiding in the sewers so they head down there as soon as possible.",
+      "airdate": "2018-11-11",
+      "markers": [],
+      "external_id": "246738"
+    },
+    {
+      "n": 7,
+      "title": "Onward Unto Death",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246739/original.jpg",
+      "synopsis": "Goblin Slayer and his party go into the sewers of Water Town to investigate some brutal incidents they think were caused by goblins. When they go down to the sewers, they are immediately attacked by a horde of goblins. Because of the sheer number of goblins, the party has a hard time dealing with them all and then a goblin champion also appears before them...",
+      "airdate": "2018-11-18",
+      "markers": [],
+      "external_id": "246739"
+    },
+    {
+      "n": 8,
+      "title": "Whispers and Prayers and Chants",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246740/original.jpg",
+      "synopsis": "Goblin Slayer was gravely injured after the battle with the goblin champion. The Priestess and Sword Maiden work together to heal Goblin Slayer with a special ritual. Meanwhile, High Elf Archer and the others investigate the sewers a bit further and encounter a mysterious creature. Due to the creature's abilities, the party heads back up to the surface to regroup with Goblin Slayer and Priestess before they go any further.",
+      "airdate": "2018-11-25",
+      "markers": [],
+      "external_id": "246740"
+    },
+    {
+      "n": 9,
+      "title": "There and Back Again",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246741/original.jpg",
+      "synopsis": "The party encounters a giant mirror in the sewers. The mirror, the mysterious creature they encountered, the horde of goblins, and the goblin champion that appeared... Goblin Slayer and the others try to get to the bottom of what's going on. They once again encounter the horde of goblins as well as the goblin champion, which gravely injured Goblin Slayer previously. But Goblin Slayer had a plan to take care of them once and for all...",
+      "airdate": "2018-12-02",
+      "markers": [],
+      "external_id": "246741"
+    },
+    {
+      "n": 10,
+      "title": "Dozing",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246742/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-12-09",
+      "markers": [],
+      "external_id": "246742"
+    },
+    {
+      "n": 11,
+      "title": "A Gathering of Adventurers",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246743/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-12-23",
+      "markers": [],
+      "external_id": "246743"
+    },
+    {
+      "n": 12,
+      "title": "The Fate of an Adventurer",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246744/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-12-30",
+      "markers": [],
+      "external_id": "246744"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Entertainment",
+      "artist": "Mili",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kasumi no Mukō e (To the Other Side of the Mist)",
+      "artist": "Yuki Nakashima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Static",
+      "artist": "Mili",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rightfully",
+      "artist": "Mili",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gin no Kisei (銀の祈誓)",
+      "artist": "Soraru",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

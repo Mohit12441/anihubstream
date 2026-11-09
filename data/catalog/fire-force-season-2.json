@@ -1,0 +1,409 @@
+{
+  "id": "fire-force-season-2",
+  "title": "Fire Force Season 2",
+  "native": "炎炎ノ消防隊 弐ノ章",
+  "year": 2020,
+  "rating": 7.8,
+  "season": "Summer 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx114236-wfQOWF0Ii3h2.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114236-wfQOWF0Ii3h2.png",
+  "accent": "#f1c935",
+  "synopsis": "Shinra and Company 8 have figured out the Evangelist’s goal: to gather Adolla Bursts from Shinra and Shou. After learning more about his past from Captain Burns, Shinra becomes more motivated to discover the truth about his mother and save Shou again.\n\nBut a mysterious girl known as the “First Pillar” reveals the Evangelist’s master plan to start another Great Cataclysm!\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fire-force-season-2-4bcw96",
+    "mal": 40956,
+    "anilist": 114236,
+    "kitsu": 42909
+  },
+  "skip_key_id": 40956,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "fire force season 2 炎炎ノ消防隊 弐ノ章 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Indomitable Resolve",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/51f4f0e6b0122b8497ddd1044a27c6c41743764516_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273261"
+    },
+    {
+      "n": 2,
+      "title": "Prisoner",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/744765bb5939a0d1126c07fa2972fb0b1744392511_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273262"
+    },
+    {
+      "n": 3,
+      "title": "Incarnation of Flame",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/93f4717ee813578dac6d1e01fe8aa6441744989745_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273829"
+    },
+    {
+      "n": 4,
+      "title": "Golden Secret",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/4545ba983d75b87dd94aa52f4e86e1c31745593514_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273830"
+    },
+    {
+      "n": 5,
+      "title": "Chance Meeting with an Arch-Enemy",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/992e0e109160cee9ba8b4a9593a445171746206553_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273831"
+    },
+    {
+      "n": 6,
+      "title": "Beyond Prayer's End",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/c47f980727128259e9478ba8a39f71a81746813665_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273832"
+    },
+    {
+      "n": 7,
+      "title": "Sleeping Truth",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/2d684987766a369903532e14171311d91747416441_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273833"
+    },
+    {
+      "n": 8,
+      "title": "Holy Mother of Darkness / The Knight King's Great Adventure",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0d97b6344297daef743fda6ef8a07a891748018373_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273834"
+    },
+    {
+      "n": 9,
+      "title": "Holy Sword, Resurrected",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/4d93c831548b4694244745497658d7ff1748625948_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273835"
+    },
+    {
+      "n": 10,
+      "title": "Advent",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c1d4038335b1917d9b454819ff9d58201749226106_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273836"
+    },
+    {
+      "n": 11,
+      "title": "The Great Kaiju Battlefront",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5d4b0e8efc2bd6a4634ea3ef659c776e1749837462_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273837"
+    },
+    {
+      "n": 12,
+      "title": "The Madness of the Distant Past",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1e471b8ed579ee8a99daf9cec6e3df651750442231_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273838"
+    },
+    {
+      "n": 13,
+      "title": "Episode 13",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273839"
+    },
+    {
+      "n": 14,
+      "title": "Episode 14",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273840"
+    },
+    {
+      "n": 15,
+      "title": "Episode 15",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273841"
+    },
+    {
+      "n": 16,
+      "title": "Episode 16",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "276721"
+    },
+    {
+      "n": 17,
+      "title": "Episode 17",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "276722"
+    },
+    {
+      "n": 18,
+      "title": "Episode 18",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "276723"
+    },
+    {
+      "n": 19,
+      "title": "Episode 19",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "276724"
+    },
+    {
+      "n": 20,
+      "title": "Episode 20",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "276725"
+    },
+    {
+      "n": 21,
+      "title": "Episode 21",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "276726"
+    },
+    {
+      "n": 22,
+      "title": "Episode 22",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "276727"
+    },
+    {
+      "n": 23,
+      "title": "Episode 23",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "276728"
+    },
+    {
+      "n": 24,
+      "title": "Episode 24",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "276729"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ignis",
+      "artist": "Takanori Nishikawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Speak of the Devil",
+      "artist": "Survive Said the Prophet",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "High Flame",
+      "artist": "Queen Bee",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Urusiren",
+      "artist": "Umeda Cypher",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "SPARK-AGAIN",
+      "artist": "Aimer",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ID",
+      "artist": "Cidergirl",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Inferno",
+      "artist": "Mrs. Green Apple",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "veil",
+      "artist": "Keina Suda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Speak of the Devil feat. Masato from coldrain",
+      "artist": "Survive Said the Prophet",
+      "episodes": "7-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Torch of Liberty",
+      "artist": "KANA-BOON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Desire",
+      "artist": "PELICAN FANCLUB",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "MAYDAY",
+      "artist": "coldrain feat. Ryo from CRYSTAL LAKE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Nonai",
+      "artist": "Lenny code fiction",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Bakusō Yume Uta (爆走夢歌)",
+      "artist": "Diggy-MO'",
+      "episodes": "13"
+    }
+  ],
+  "relations": []
+}

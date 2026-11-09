@@ -1,0 +1,545 @@
+{
+  "id": "gachiakuta",
+  "title": "Gachiakuta",
+  "native": "ガチアクタ",
+  "year": 2025,
+  "rating": 8.2,
+  "season": "Summer 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx178025-cWJKEsZynkil.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178025-cWJKEsZynkil.jpg",
+  "accent": "#e4a150",
+  "synopsis": "A boy lives in a floating town, where the poor scrape by and the rich live a sumptuous life, simply casting their garbage off the side, into the abyss. When he’s falsely accused of murder, though, his wrongful conviction leads to an unimaginable punishment—exile off the edge, with the rest of the trash. Down on the surface, the cast-off waste of humanity has bred vicious monsters, and to travel the path to vengeance against those who cast him into Hell, a boy will have to become a warrior…\n\n(Source: Kodansha USA)",
+  "rank": null,
+  "trend_rank": 50,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "gachiakuta-tgvlf7",
+    "mal": 59062,
+    "anilist": 178025,
+    "kitsu": 48946
+  },
+  "skip_key_id": 59062,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "gachiakuta カ チアクタ tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Sphere",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369113/thumbnail/71a308cf439a1a51f73ff5523baaa595.jpg",
+      "synopsis": "Bullied outcast Rudo finds respite in repurposing trash, until a terrible tragedy changes his life forever.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 1338,
+          "end": 1419,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1334,
+          "end": 1411,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "369113"
+    },
+    {
+      "n": 2,
+      "title": "The Inhabited",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369114/thumbnail/1cff515f9631badf30e868e0c0e5b138.jpg",
+      "synopsis": "Cast into the Pit, Rudo is saved by the mysterious Enjin, who may not have his best interests at heart.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 42,
+          "end": 129,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "369114"
+    },
+    {
+      "n": 3,
+      "title": "The Ground",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369115/thumbnail/274389c89e8fecb99a4afa3ad0ade919.jpg",
+      "synopsis": "Enjin teaches Rudo about life on the Ground, but an encounter with a churlish stranger may cut his time short.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 130,
+          "end": 220,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "369115"
+    },
+    {
+      "n": 4,
+      "title": "Cleaner HQ",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369116/thumbnail/aadba8769f4553afc4208b3b49cf0802.jpg",
+      "synopsis": "After being introduced to Cleaner HQ, Rudo follows Riyo on a job to learn the business.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 181,
+          "end": 271,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "369116"
+    },
+    {
+      "n": 5,
+      "title": "Raiders",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369117/thumbnail/b91cc04c712cf58d61742a5830329c55.jpg",
+      "synopsis": "Grandma, leader of Wendelstein, sends Kunagi and crew to a mall to search for a team that's gone missing.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 465,
+          "end": 553,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "369117"
+    },
+    {
+      "n": 6,
+      "title": "One Good Strike!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369118/thumbnail/50fbe652370ea93718c2057648b7400f.jpg",
+      "synopsis": "With the job having gone terribly wrong, Rudo finds himself face-to-face with a merciless Raider named Jabber.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 303,
+          "end": 396,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "369118"
+    },
+    {
+      "n": 7,
+      "title": "A Score to Settle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369119/thumbnail/d61eb0e7c683d3463615bb48dbec3567.jpg",
+      "synopsis": "Jabber employs a new strategy to get through Rudo's defenses, and another ally joins the fray.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 232,
+          "end": 320,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369119"
+    },
+    {
+      "n": 8,
+      "title": "Moving Forward",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369120/thumbnail/e2309aa779cb8d725de70402a4d4eba0.jpg",
+      "synopsis": "Rudo deals with the emotional aftermath of the Jabber fight and gets a new lead about returning to the Sphere.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 425,
+          "end": 515,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "369120"
+    },
+    {
+      "n": 9,
+      "title": "The City of Graffiti",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369121/thumbnail/3890a2988f4083481956c074b65a2a04.jpg",
+      "synopsis": "To get a \"spell\" for their next mission, the Cleaners head to Canvas Town, where they make a tragic discovery.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 116,
+          "end": 207,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 117,
+          "end": 207,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "369121"
+    },
+    {
+      "n": 10,
+      "title": "Penta: The Desert No Man's Land",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369122/thumbnail/a70cbfecd05ef355a06ad168892b5ccd.jpg",
+      "synopsis": "With their gear-up complete, the crew heads into the No Man's Land, Penta, to get clues about the Sphere.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 425,
+          "end": 513,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "369122"
+    },
+    {
+      "n": 11,
+      "title": "Amo's Hospitality",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369123/thumbnail/166384299ad1770b9ff60a0ecfedbf0f.jpg",
+      "synopsis": "A mysterious woman living in the No Man's Land challenges the crew from an unexpected angle.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 416,
+          "end": 504,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369123"
+    },
+    {
+      "n": 12,
+      "title": "Something Like a Curse",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369124/thumbnail/8d3ecb4195c10d95816b799c4c29a771.jpg",
+      "synopsis": "Tamsy and Zanka fight to save their captive allies. In the aftermath, Rudo has an unexpected reaction.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 233,
+          "end": 321,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369124"
+    },
+    {
+      "n": 13,
+      "title": "An Empty Gaze",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369125/thumbnail/bbfc8412ecfe983f3f18548e7cbf99f8.jpg",
+      "synopsis": "Amo tells the story of how she came to the tower and of the \"angels\" who came to visit her.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-10-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 1309,
+          "end": 1399,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369125"
+    },
+    {
+      "n": 14,
+      "title": "Storm Before the Storm",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369126/thumbnail/51e4016c8e65657786362287b9d2a6ce.jpg",
+      "synopsis": "After returning from the Penta No Man's Land, Rudo and the Cleaners face a series of new threats.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-10-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 96,
+          "end": 181,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369126"
+    },
+    {
+      "n": 15,
+      "title": "Clash!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369127/thumbnail/ddfd1b403b0822f6c07cf9720d4476e1.jpg",
+      "synopsis": "Taken by the Raiders to an unknown setting, the Cleaners fight for their lives, and Zodyl makes Rudo an offer.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-11-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 320,
+          "end": 408,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369127"
+    },
+    {
+      "n": 16,
+      "title": "Gifted and Not",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369128/thumbnail/0d499db3c4ea30871f61e8b6408dd0cc.jpg",
+      "synopsis": "Bundus interrogates the Santas while Zanka struggles to keep pace with a powered-up Jabber.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-11-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 259,
+          "end": 347,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369128"
+    },
+    {
+      "n": 17,
+      "title": "Memories of a Mediocrity",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369129/thumbnail/52a424c3f799b14d913af19564b5c8d6.jpg",
+      "synopsis": "Zanka reflects on the turning point in his past that brought him to where he is today.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-11-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 280,
+          "end": 368,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369129"
+    },
+    {
+      "n": 18,
+      "title": "Oh Zap, Totes Legit",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369130/thumbnail/505fe5205260cfeb7ee07cd227029845.jpg",
+      "synopsis": "While the Raiders-Cleaners conflicts continue, the battle between Riyo and Noerde heats up.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-11-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 100,
+          "end": 188,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369130"
+    },
+    {
+      "n": 19,
+      "title": "Watchmen Series",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369131/thumbnail/e3b18ed554d55b6ca0adfe15e4db8410.jpg",
+      "synopsis": "Zodyl reveals his plan to reach the Sphere, and the other Cleaners react to their current circumstances.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-12-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 216,
+          "end": 304,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369131"
+    },
+    {
+      "n": 20,
+      "title": "Ensign",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369132/thumbnail/42c3ca1f056f39ae6dab1f6a4a502ded.jpg",
+      "synopsis": "As the battle climaxes, Enjin makes a play to unite his team, and Zodyl makes his final entreaty to Rudo.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-12-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 216,
+          "end": 304,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369132"
+    },
+    {
+      "n": 21,
+      "title": "Time Attack",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369133/thumbnail/9358085381a93b95e8fe9b4e55a369f1.jpg",
+      "synopsis": "The Cleaners attempt to stop their \"runaway train,\" but Bundus stands in the way.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-12-15",
+      "markers": [],
+      "external_id": "369133"
+    },
+    {
+      "n": 22,
+      "title": "The Power of Protection",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369134/thumbnail/90d24017167086975cd10a198581f12a.jpg",
+      "synopsis": "An unexpected member of the Raiders returns in a last-ditch effort to keep the Cleaners locked down.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-12-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 84,
+          "end": 174,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369134"
+    },
+    {
+      "n": 23,
+      "title": "The Man Who Will Be Stronger",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369135/thumbnail/15fa0af28c9a4a4efc8d4bfd6f62550a.jpg",
+      "synopsis": "As the Cleaners take stock after the battle, a convalescing Zanka receives some surprising news.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-01-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 92,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1334,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "369135"
+    },
+    {
+      "n": 24,
+      "title": "Field Trip",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369136/thumbnail/60ea28400c9966db91356bed2c40bb48.jpg",
+      "synopsis": "Rudo and the other child Cleaners take a trip to Canvas Town while Corvus entertains some unwanted guests.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-01-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 236,
+          "end": 324,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "369136"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "HUGs",
+      "artist": "Paledusk",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tomoshibi",
+      "artist": "DUSTCELL",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

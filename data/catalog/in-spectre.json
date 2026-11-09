@@ -1,0 +1,324 @@
+{
+  "id": "in-spectre",
+  "title": "In/Spectre",
+  "native": "虚構推理",
+  "year": 2020,
+  "rating": 6.8,
+  "season": "Winter 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx107201-zQYOPotwmSXO.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx107201-zQYOPotwmSXO.png",
+  "accent": "#e435ae",
+  "synopsis": "At the young age of 11, Kotoko Iwanaga was abducted by youkai for two weeks and asked to become their \"God of Wisdom,\" a mediator between the spirit and human worlds, to which the girl quickly agreed but at the cost of her right eye and left leg. Now, six years later, whenever youkai wish for their problems to be solved, they make their way to Kotoko for consultation.\n\nMeanwhile, Kurou Sakuragawa, a 22-year-old university student, has just broken up with his girlfriend after he fled alone when the two encountered a kappa. Seeing this as her chance to become closer with him, Kotoko immediately makes her move, hoping to get married to Kurou one day. However, she quickly realizes there is something more to Kurou. With this knowledge, she asks for his help in solving the various issues presented by the supernatural, all the while wishing her newfound partner will eventually reciprocate her feelings.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "In/Spectre 2 (2023)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42117,
+    "anilist": 107201,
+    "mal": 39017,
+    "hianime": "inspectre-ugpcwh"
+  },
+  "skip_key_id": 39017,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 08:43:21",
+  "search_text": "in spectre 虚構推理 tv finished",
+  "genres": [
+    "comedy",
+    "mystery",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "One Eye, One Leg",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/cad5f05b09e4710768da40052c3a1c8c1578762409_full.jpg",
+      "synopsis": "",
+      "airdate": "2020-01-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 129
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1427
+        }
+      ],
+      "external_id": "267751"
+    },
+    {
+      "n": 2,
+      "title": "What the Guardian Serpent Heard",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/d55d6203c10f342d282b9ad3a3a10b321579354009_full.jpg",
+      "synopsis": "",
+      "airdate": "2020-01-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "267752"
+    },
+    {
+      "n": 3,
+      "title": "The Rumors of the Steel Lady",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/fb7a3776bda582d91fa42b5ad3ecffe91579940851_full.jpg",
+      "synopsis": "",
+      "airdate": "2020-01-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 63,
+          "end": 153
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "272885"
+    },
+    {
+      "n": 4,
+      "title": "Idol Dies by Steel Beam",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/2e9d74e1a3353ac1f74c677495bda5051580571995_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 161,
+          "end": 251
+        }
+      ],
+      "external_id": "273428"
+    },
+    {
+      "n": 5,
+      "title": "A Monster of the Imagination",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6616e38eeca0757548686b2e3973eeb91581179817_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 172
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "273656"
+    },
+    {
+      "n": 6,
+      "title": "Logical Fiction",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/4baf4a2895a3a8c45fe20f203ccb2e061581780746_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 123
+        }
+      ],
+      "external_id": "274062"
+    },
+    {
+      "n": 7,
+      "title": "Preparing to Conquer the Steel Lady",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/4f39703a71a87a8317841b54ea12ab541582379727_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 129
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1427
+        }
+      ],
+      "external_id": "274063"
+    },
+    {
+      "n": 8,
+      "title": "She Who Spins Fiction",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b9940ddd9f08c7216db719556a39cd131582989378_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 132,
+          "end": 222
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "274064"
+    },
+    {
+      "n": 9,
+      "title": "The Committee to Conquer Steel Lady Nanase",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/3d0803b01eeab76a816a511dbcd790151583591723_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 23,
+          "end": 113
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "274065"
+    },
+    {
+      "n": 10,
+      "title": "Dueling Fictions",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/20cea8720070fdc668bf1f5693b3afe11584174270_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 129
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1427
+        }
+      ],
+      "external_id": "274066"
+    },
+    {
+      "n": 11,
+      "title": "The Ultimate Fiction",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/05625052c0d284900fc18023827ab2791584801479_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 170,
+          "end": 260
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "274067"
+    },
+    {
+      "n": 12,
+      "title": "She Who Defends Order",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/851c965549db221c637dd19d967ed30a1585381572_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 139
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1425
+        }
+      ],
+      "external_id": "274068"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

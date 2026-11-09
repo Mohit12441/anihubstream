@@ -1,0 +1,478 @@
+{
+  "id": "ergo-proxy",
+  "title": "Ergo Proxy",
+  "native": "Ergo Proxy",
+  "year": 2006,
+  "rating": 7.6,
+  "season": "Winter 2006",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx790-YTUCvBKX8ZWK.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx790-YTUCvBKX8ZWK.jpg",
+  "accent": "#a24bff",
+  "synopsis": "Something is wrong in the perfect domed city of Romdo. Between the sudden rash of murders and a virus affecting all AutoReivs-cyborg companions and workers who assist the people of Romdo - all is not right in their dome home. Detective Re-l Meyer begins to investigate, seeking answers to the weird occurrences that are happening more and more around her. But when she begins to uncover the truth, her world is turned upside down.\n\nFirst, the strange immigrant Vincent Law goes missing and then a monster appears before her, shaking her to her core. But this monster is something more, something dangerous and sinister. With each question and mystery, she is led back to the creature. But what is it really? What purpose does it serve? A sign of the end or a sign of a new beginning? Whatever it is, it repeatedly brings her back to Vincent and soon, alongside his journey back to another dome world called, Mosk. As they make their way across scarred and deserted Earth, Re-l and Vincent will learn more about the monster and the \"awakening\"-which could be more of an ending than a beginning.\n\n(Source: Funimation)\n\nNote: Episode 1 received an advanced broadcast on channel WOWOW on February 5, 2006. The start date reflects the start of the regular series broadcasting.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 705,
+    "anilist": 790,
+    "mal": 790,
+    "hianime": "ergo-proxy-6yw4yb"
+  },
+  "skip_key_id": 790,
+  "skip_key_space": "anilist",
+  "episode_total": 23,
+  "added_at": "2026-10-14 08:43:21",
+  "search_text": "ergo proxy ergo proxy tv finished",
+  "genres": [
+    "adventure",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Awakening",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15220/original.jpg",
+      "synopsis": "When a series of mysterious attacks involving Cogito infected AutoReivs occur, Re-l is assigned to investigate, and encounters a humanoid monster. Later, she is attacked by two of these monsters at her home.",
+      "airdate": "2006-02-25",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1440,
+          "end": 1500
+        }
+      ],
+      "external_id": "15220"
+    },
+    {
+      "n": 2,
+      "title": "Confession",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15221/original.jpg",
+      "synopsis": "Re-l struggles to convince her peers of her encounters with the monsters, which she learns are called Proxy. She is removed from the investigation and finds that Iggy has had his memories of recent events erased. Meanwhile, Vincent finds himself on the run from a proxy and then the city's authorities.",
+      "airdate": "2006-03-04",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1440,
+          "end": 1500
+        }
+      ],
+      "external_id": "15221"
+    },
+    {
+      "n": 3,
+      "title": "Mazecity",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15222/original.jpg",
+      "synopsis": "Romdo is no longer a safe haven for Vincent. He is trying to avoid capture by the authorities. As he flees he comes across the infected AutoReiv Pino. Pino then shows him the way to escape from Romdo to the outside world. Re-l struggles to contact Vincent and uncover the true nature of his involvement with the Proxy.",
+      "airdate": "2006-03-11",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1435,
+          "end": 1500
+        }
+      ],
+      "external_id": "15222"
+    },
+    {
+      "n": 4,
+      "title": "Futu-Risk",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15223/original.jpg",
+      "synopsis": "Vincent and Pino are taken in by a small commune, the inhabitants of which make a living off the refuse dumped from the Dome. Meanwhile, Raul plans his move to locate and capture Vincent.",
+      "airdate": "2006-03-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1439,
+          "end": 1500
+        }
+      ],
+      "external_id": "15223"
+    },
+    {
+      "n": 5,
+      "title": "Twilight",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15224/original.jpg",
+      "synopsis": "Re-l braves the outside world in order to bring Vincent back to Romdo. While there, Raul commences his plan to capture Vincent by attacking the Commune with patrol drones. Re-l's environmental suit is damaged and Vincent is injured in the attack. Re-l suspicions are confirmed that there is a link between Vincent and the Proxies.",
+      "airdate": "2006-04-01",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1441,
+          "end": 1500
+        }
+      ],
+      "external_id": "15224"
+    },
+    {
+      "n": 6,
+      "title": "Homecoming",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15225/original.jpg",
+      "synopsis": "Re-l's life becomes endangered when she falls ill after exposure to the harsh environment. Hoody hatches a cunning plan to trick Raul and return to Romdo. Quinn leads a group on an escape from the Commune using the Rabbit.",
+      "airdate": "2006-04-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 91,
+          "end": 181
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1441,
+          "end": 1500
+        }
+      ],
+      "external_id": "15225"
+    },
+    {
+      "n": 7,
+      "title": "RE-L124C41+",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15226/original.jpg",
+      "synopsis": "Re-l recovers from her illness. Daedalus shows her the disturbing mechanisms responsible for the Dome's continued survival. Vincent makes his way home, slowly losing his companions along the way, ending up alone with Pino. A group of infected AutoReivs is unleashed on Re-l, Iggy, and Daedalus. The episode ends with Daedalus filling out Re-l's death certificate.",
+      "airdate": "2006-04-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 98,
+          "end": 191
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1438,
+          "end": 1500
+        }
+      ],
+      "external_id": "15226"
+    },
+    {
+      "n": 8,
+      "title": "Shining Sign",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15227/original.jpg",
+      "synopsis": "Vincent and Pino stumbles onto war-torn Halos, where they are caught in a war between the dome's human inhabitants and its autonomous AutoReivs.",
+      "airdate": "2006-04-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 114,
+          "end": 218
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1439,
+          "end": 1500
+        }
+      ],
+      "external_id": "15227"
+    },
+    {
+      "n": 9,
+      "title": "Angel's Share",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15228/original.jpg",
+      "synopsis": "Vincent is introduced to a man named Hauer, and learns some truths about Halos and Proxies, discovering a horrific revelation.",
+      "airdate": "2006-04-29",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1441,
+          "end": 1500
+        }
+      ],
+      "external_id": "15228"
+    },
+    {
+      "n": 10,
+      "title": "Cytotropism",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15229/original.jpg",
+      "synopsis": "Disturbed by recent events, Raul questions the future of Romdo. Meanwhile, Re-l and Iggy explore a strange antiquated dome inhabited only by primitive AutoReivs.",
+      "airdate": "2006-05-13",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1439,
+          "end": 1500
+        }
+      ],
+      "external_id": "15229"
+    },
+    {
+      "n": 11,
+      "title": "Anamnesis",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15230/original.jpg",
+      "synopsis": "Vincent finds a strange book store and an even stranger old man, where he discovers more about his true nature. Re-l and Iggy catch up on the Centzon (the Rabbit, the flying ship that Vincent travels by).",
+      "airdate": "2006-05-20",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1439,
+          "end": 1500
+        }
+      ],
+      "external_id": "15230"
+    },
+    {
+      "n": 12,
+      "title": "Hideout",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15231/original.jpg",
+      "synopsis": "The group is confronted by a vagrant Proxy and its companion AutoReiv, and Re-l puts her new weapon to use.",
+      "airdate": "2006-05-27",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1440,
+          "end": 1500
+        }
+      ],
+      "external_id": "15231"
+    },
+    {
+      "n": 13,
+      "title": "Wrong Way Home",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15232/original.jpg",
+      "synopsis": "An infected Iggy becomes enraged and kidnaps Re-l, setting out to kill Vincent. Re-l is again confronted by the homeless AutoReiv.",
+      "airdate": "2006-06-03",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1440,
+          "end": 1500
+        }
+      ],
+      "external_id": "15232"
+    },
+    {
+      "n": 14,
+      "title": "Ophelia",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15233/original.jpg",
+      "synopsis": "While resting in a long-abandoned dome, strange occurrences take place and the trio's lives are endangered.",
+      "airdate": "2006-06-10",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1440,
+          "end": 1500
+        }
+      ],
+      "external_id": "15233"
+    },
+    {
+      "n": 15,
+      "title": "Who Wants to be in Jeopardy!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15234/original.jpg",
+      "synopsis": "Finding himself in a bizarre live game show, Vincent's trivia knowledge is put to the test as he battles for his life.",
+      "airdate": "2006-06-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1480,
+          "end": 1500
+        }
+      ],
+      "external_id": "15234"
+    },
+    {
+      "n": 16,
+      "title": "Busy Doing Nothing",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15235/original.jpg",
+      "synopsis": "When winds die out, the trio are stranded aboard the Centzon and Re-l finds herself struggling to hold on to her sanity.",
+      "airdate": "2006-06-24",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1440,
+          "end": 1500
+        }
+      ],
+      "external_id": "15235"
+    },
+    {
+      "n": 17,
+      "title": "Terra Incognita",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15236/original.jpg",
+      "synopsis": "Romdo is on high alert as they search for the fugitive Raul, who plans to activate a deadly weapon. Meanwhile, the trio discover strange humanoids living inside a toxic cave system.",
+      "airdate": "2006-07-01",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1440,
+          "end": 1500
+        }
+      ],
+      "external_id": "15236"
+    },
+    {
+      "n": 18,
+      "title": "Life After God",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15237/original.jpg",
+      "synopsis": "The trio reach the devastated Mosko, Vincent's home city, and find that the truths lead back to Romdo.",
+      "airdate": "2006-07-08",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1440,
+          "end": 1500
+        }
+      ],
+      "external_id": "15237"
+    },
+    {
+      "n": 19,
+      "title": "Eternal Smile",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15238/original.jpg",
+      "synopsis": "Pino explores the mysterious Smile Land with the NaKaMa, and confronts the Creator of the city.",
+      "airdate": "2006-07-15",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1440,
+          "end": 1500
+        }
+      ],
+      "external_id": "15238"
+    },
+    {
+      "n": 20,
+      "title": "Goodbye, Vincent",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15239/original.jpg",
+      "synopsis": "Vincent finds himself trapped within Re-l's consciousness, and observes powerlessly as events unfold.",
+      "airdate": "2006-07-22",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1440,
+          "end": 1500
+        }
+      ],
+      "external_id": "15239"
+    },
+    {
+      "n": 21,
+      "title": "Shampoo Planet",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15240/original.jpg",
+      "synopsis": "A Cogito outbreak spreads through Romdo and the city falls into chaos. Vincent incites the people to revolt, pushing them to hunt down and kill all AutoReivs.",
+      "airdate": "2006-07-29",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1440,
+          "end": 1500
+        }
+      ],
+      "external_id": "15240"
+    },
+    {
+      "n": 22,
+      "title": "Bilbul",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15241/original.jpg",
+      "synopsis": "As the city continues to crumble, Vincent and Re-l encounter Proxy One. Raul is overcome with regret and despair, and sets out to find Pino.",
+      "airdate": "2006-08-05",
+      "markers": [],
+      "external_id": "15241"
+    },
+    {
+      "n": 23,
+      "title": "Deus ex Machina",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15242/original.jpg",
+      "synopsis": "Pieces are played and revelations uncovered as the final fight commences. Monad makes her return and tries to convince Vincent to join her.",
+      "airdate": "2006-08-12",
+      "markers": [],
+      "external_id": "15242"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "kiri",
+      "artist": "MONORAL",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "PARANOID ANDROID",
+      "artist": "RADIOHEAD",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

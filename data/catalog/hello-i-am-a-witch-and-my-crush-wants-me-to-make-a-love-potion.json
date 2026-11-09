@@ -1,0 +1,103 @@
+{
+  "id": "hello-i-am-a-witch-and-my-crush-wants-me-to-make-a-love-potion",
+  "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
+  "native": "どうも、好きな人に惚れ薬を依頼された魔女です。",
+  "year": 2026,
+  "rating": 7.2,
+  "season": "Fall 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx207191-VgkIzfH92WoZ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx207191-VgkIzfH92WoZ.jpg",
+  "accent": "#aed6e4",
+  "synopsis": "“Make me a love potion.”\n\nAnd with that single sentence, the Good Witch of the Lake’s secret crush on the dashing Sir Harij ends in heartbreak. Still, when he promises to help her gather the ingredients, Rose is thrilled at the chance to gaze upon a man she’d normally never get to interact with. She learns to brace her pounding heart for their usual stilted conversations…but what is she to do when he inexplicably shows up at her doorstep with bread and a jar of apple butter?\n\n(Source: Yen Press)",
+  "rank": null,
+  "trend_rank": 37,
+  "alt_seasons": [],
+  "sched_day": 1,
+  "sched_day_label": "MON",
+  "sched_date": "Nov 9",
+  "sched_time": "12:30",
+  "sched_season": "Fall 2026",
+  "sched_episode": 6,
+  "sched_sub_at": null,
+  "sched_dub_at": 1789389000000,
+  "source_ids": {
+    "anilist": 207191,
+    "mal": 63409,
+    "hianime": "hello-i-am-a-witch-and-my-crush-wants-me-to-make-a-love-potion!-texu1c",
+    "kitsu": 50520
+  },
+  "skip_key_id": 63409,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-16 15:13:04",
+  "search_text": "hello i am a witch and my crush wants me to make a love potion と うも 好きな人に惚れ薬を依頼された魔女て す tv ongoing",
+  "genres": [
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ac39cbe67d4fb09b747af1e-landscape.jpg",
+      "synopsis": "",
+      "airdate": "2026-10-05",
+      "markers": [],
+      "external_id": "anikoto:9048:1"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ac39cbe67d4fb09b747af1e-landscape.jpg",
+      "synopsis": "",
+      "airdate": "2026-10-12",
+      "markers": [],
+      "external_id": "anikoto:9048:2"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ac39cbe67d4fb09b747af1e-landscape.jpg",
+      "synopsis": "",
+      "airdate": "2026-10-19",
+      "markers": [],
+      "external_id": "anikoto:9048:3"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kanawanai, (かなわない、)",
+      "artist": "centimillimental",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mada Uso ni Naranai (まだ嘘にならない)",
+      "artist": "Reini",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

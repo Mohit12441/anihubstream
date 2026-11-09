@@ -1,0 +1,55 @@
+{
+  "id": "haikyu-the-movie-battle-of-concepts",
+  "title": "Haikyu!! The Movie: Battle of Concepts",
+  "native": "ハイキュー!! コンセプトの戦い",
+  "year": 2017,
+  "rating": 8.1,
+  "season": "Summer 2017",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98885-xzHYFUr0keBT.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98885-xzHYFUr0keBT.jpg",
+  "accent": "#e4a15d",
+  "synopsis": "A compilation film depicting the match against Shiratorizawa Academy in the third season of the anime series.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "haikyu!!-the-movie:-battle-of-concepts-jr8azx",
+    "mal": 35111,
+    "anilist": 98885,
+    "kitsu": 13656
+  },
+  "skip_key_id": 35111,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "haikyu the movie battle of concepts ハイキュー コンセフ トの戦い movie finished",
+  "genres": [
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Haikyu!! The Movie: Battle of Concepts (Movie)",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a91a3e23880af9536350ea8-landscape.jpg",
+      "synopsis": "A compilation film depicting the match against Shiratorizawa Academy in the third season of the anime series.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "209226"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

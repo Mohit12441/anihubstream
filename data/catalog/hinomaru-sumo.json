@@ -1,0 +1,335 @@
+{
+  "id": "hinomaru-sumo",
+  "title": "Hinomaru Sumo",
+  "native": "火ノ丸相撲",
+  "year": 2018,
+  "rating": 7.6,
+  "season": "Fall 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/41148/medium.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/100990-9ccyloqa2AHb.jpg",
+  "accent": "#2f7bff",
+  "synopsis": "The intense fight for the dream of yokozuna has begun. A new student has joined Odachi High School's weak sumo club, the small boy Ushio Hinomaru! Although his physique seems ill-suited to a fighting sport where size and weight rule, Hinomaru has an incredible dream. He and the weak sumo club will fight their way to the top! The intense battle of high school sumo has begun! (Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 41148,
+    "anilist": 100990,
+    "mal": 37007
+  },
+  "skip_key_id": 37007,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": "2026-11-07 00:52:24",
+  "search_text": "hinomaru sumo 火ノ丸相撲 tv finished",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "National Treasure Onimaru Kunitsuna",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/4d6d91410a7b6cc674ab6b12ba23af261538741669_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255110"
+    },
+    {
+      "n": 2,
+      "title": "Wrestling vs Sumo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/8b65b5a294e3c0fa02cc4364c9601c131539350357_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255111"
+    },
+    {
+      "n": 3,
+      "title": "The Kusanagi Sword",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/b04bdb127387f0e5e4107ab567a027391539954960_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255112"
+    },
+    {
+      "n": 4,
+      "title": "Dachi High's Fifth Member",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c202672e0284ccc6022e52b4446948331540544498_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255113"
+    },
+    {
+      "n": 5,
+      "title": "The Refreshing Sumo Wrestler, Sada Mizuki",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e9bf61b98b2e5bc8c89c1e249971678d1541164509_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255114"
+    },
+    {
+      "n": 6,
+      "title": "Charge!! Shibakiyama Stable",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/54411e02fee2998a40475e660a07157a1541751199_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255115"
+    },
+    {
+      "n": 7,
+      "title": "The Honest Clown",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/8f9887b93cb2fa19090742094764219d1542278680_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255116"
+    },
+    {
+      "n": 8,
+      "title": "What's Done Is Done",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/46edb59348bf7f39a19ee881b9e635601542985387_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255117"
+    },
+    {
+      "n": 9,
+      "title": "Demon and Moon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/592de49168816ab12cabccbc4ff6af2f1543588342_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255118"
+    },
+    {
+      "n": 10,
+      "title": "Unyielding Feelings",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/f5db8b6738365a7cf0af43a1b198d29d1544105311_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255119"
+    },
+    {
+      "n": 11,
+      "title": "Barbecue",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/75067f2e0f2b3145db862e344fd0365e1544798253_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255120"
+    },
+    {
+      "n": 12,
+      "title": "Attack!! Nagoya Castle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a282b9c332a09644d70baef4afd2600f1545404935_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255121"
+    },
+    {
+      "n": 13,
+      "title": "100-yen-coin Training",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/478f92590f53339a3af42e1df0333c551547207948_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256231"
+    },
+    {
+      "n": 14,
+      "title": "The Inter High Begins",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/7711e5af083b71cac528f720a988729b1547823998_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256232"
+    },
+    {
+      "n": 15,
+      "title": "Onimaru Kunitsuna and Dojikiri Yasutsuna",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/8032530979d5b5e88753c67f3408feb81548406597_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256233"
+    },
+    {
+      "n": 16,
+      "title": "National Treasure Is Delicious",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/884f3586492f777c27043cc73e4ce5891549027593_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256234"
+    },
+    {
+      "n": 17,
+      "title": "The One Loved by the Sumo Gods",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/9fcbddb53d101f9ee82c2967db9f776e1549637462_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256235"
+    },
+    {
+      "n": 18,
+      "title": "How I Win",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/10fee0064d8b8458fde2a146c29790791550236885_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256236"
+    },
+    {
+      "n": 19,
+      "title": "Weak Spirit, Strong Will",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/987c5a63b9a2c26d1cc742bac5848e8b1550829754_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256237"
+    },
+    {
+      "n": 20,
+      "title": "Onimaru Kunitsuna and Dojikiri Yasutsuna Go Again",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/70bbf2222604d5a5033cb8f4d9d814c41551433096_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256238"
+    },
+    {
+      "n": 21,
+      "title": "Idiot and Idiot",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/8b745b950b2005b1e105e1fec36189c01552057469_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256239"
+    },
+    {
+      "n": 22,
+      "title": "The Forgotten National Treasure, Onikiri Yasutsuna",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/98bf9510faba6026b97119656ccb68281552657550_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256240"
+    },
+    {
+      "n": 23,
+      "title": "Spirit",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/95ef1f9cdf18114d9015c77c44a724411553248300_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256241"
+    },
+    {
+      "n": 24,
+      "title": "The Dream Continues",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/7b15292fe85376c322e5d5163c74b12d1553853716_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256242"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "FIRE GROUND",
+      "artist": "Official HIGE DANdism",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hiizuru Basho",
+      "artist": "Omedetai Atama de Naniyori",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Be The NAKED",
+      "artist": "Lead",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Sakura Sake",
+      "artist": "Yoshida Yamada",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

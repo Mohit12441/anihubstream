@@ -1,0 +1,418 @@
+{
+  "id": "gundam-build-fighters",
+  "title": "Gundam Build Fighters",
+  "native": "ガンダムビルドファイターズ",
+  "year": 2013,
+  "rating": 7.6,
+  "season": "Fall 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx19319-0YuU672PSgix.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19319-0YuU672PSgix.jpg",
+  "accent": "#5da1e4",
+  "synopsis": "The story is set in the near future when GunPla Battles, competitions that pit Gundam plastic models against each other, have become popular worldwide in the \"Second GunPla Boom.\" Sei Iori, a first-year middle-school student and the only son of a model shop owner, is talented at building GunPla, but inexperienced in the GunPla Battles. He encounters a mysterious boy named Reiji, who happens to be an accomplished Gundam Fighter. Together, they strive for the GunPla Battle world championships.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "gundam-build-fighters-llsm4u",
+    "mal": 19319,
+    "anilist": 19319,
+    "kitsu": 7852
+  },
+  "skip_key_id": 19319,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": null,
+  "search_text": "gundam build fighters カ ンタ ムヒ ルト ファイタース tv finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sei and Reiji",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112563/original.jpg",
+      "synopsis": "Sei Iori aims to participate in the Gunpla Battle Championship World Tournament, but despite his skill at building models, he can't control them in battle. Then Sazaki challenges him to a Gunpla battle in order to get his hands on Sei's high-performance Gunpla. Sei accepts the battle, thinking that if he can't even beat Sazaki, then he'd be defeated instantly if he made it to the championship. But Sei is backed into a corner by Sazaki's overbearing fighting style until the appearance of Reiji, a mysterious boy who he met earlier that day. Even though Reiji has never used Gunpla before, he overwhelms Sazaki's Gunpla with his superb control technique. Sei builds, and Reiji battles. Thus the Gundam Build Fighters are born!",
+      "airdate": "2013-10-07",
+      "markers": [],
+      "external_id": "112563"
+    },
+    {
+      "n": 2,
+      "title": "The Crimson Comet",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112564/original.jpg",
+      "synopsis": "Having met Sei by chance, the mysterious boy Reiji insists on staying at his home and somehow even ends up coming to his school. And when Gonda, a student council executive, tries to kick out this intruder, Reiji turns the tables on him as well. Tatsuya Yuuki, the student council president and head of the model-building club, attempts to resolve the situation by saying that he invited Reiji to join the club. But Gonda, having lost face in front of the other students, challenges Reiji to a Gunpla battle purely for revenge. Using Sei's Build Strike Gundam, Reiji wins a total victory in his battle with Gonda. Then a crimson Gunpla appears before them both—the Zaku Amazing!",
+      "airdate": "2013-10-14",
+      "markers": [],
+      "external_id": "112564"
+    },
+    {
+      "n": 3,
+      "title": "Full Package",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112565/original.jpg",
+      "synopsis": "Sei and Reiji have now witnessed the overwhelmingly superior power of Tatsuya Yuuki's Zaku Amazing. To prepare for the day when he'll face Yuuki again in the championship, Sei secludes himself in his workshop to complete the Full Package equipment for his Build Strike. Meanwhile, Reiji goes out into the city at night and heads for a certain place—a store where men with years of Gunpla experience meet night after night to fight battles. Reiji challenges the men just for the sake of combat practice, and easily defeats his opponents. But then Ricardo Fellini, an Italian Gunpla battle fighter, appears before him! And on the day of the championship, Sei has somehow completed the Build Strike, but Reiji is nowhere to be found...",
+      "airdate": "2013-10-21",
+      "markers": [],
+      "external_id": "112565"
+    },
+    {
+      "n": 4,
+      "title": "Gunpla Idol Kirara",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112566/original.jpg",
+      "synopsis": "Sei falls in love with a mysterious girl who is into Gunpla, unaware of her true intentions in Gunpla Battle.",
+      "airdate": "2013-10-28",
+      "markers": [],
+      "external_id": "112566"
+    },
+    {
+      "n": 5,
+      "title": "The Strongest Builder",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112567/original.jpg",
+      "synopsis": "Sei and China meet Mao Yasaka, a young Gunpla Fighter from Kansai Prefecture.",
+      "airdate": "2013-11-04",
+      "markers": [],
+      "external_id": "112567"
+    },
+    {
+      "n": 6,
+      "title": "A Reason to Battle",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112568/original.jpg",
+      "synopsis": "When Yuuki suddenly bows out of competition and takes an indefinite leave from school, Reiji begins to doubt his purpose in Gunpla Battle.",
+      "airdate": "2013-11-11",
+      "markers": [],
+      "external_id": "112568"
+    },
+    {
+      "n": 7,
+      "title": "World-Level Ability",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112569/original.jpg",
+      "synopsis": "As a reward for winning the Gunpla Battle Japan 3rd Block Championship, Sei and Reiji, along with China, Rinko, and Ral-san, take a vacation at a beachfront inn. But their vacation is cut short by a former Gunpla Builder who threatens the innkeeper to give him their property.",
+      "airdate": "2013-11-18",
+      "markers": [],
+      "external_id": "112569"
+    },
+    {
+      "n": 8,
+      "title": "Encounters of Fighters",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112570/original.jpg",
+      "synopsis": "Nils Nielsen, a 13-year-old genius, joins the American Qualifying Round of the World Championship to learn more about the secrets of Plavsky particles. Meanwhile, in Finland, Team Nemesis receives a new fighter named Aila Jyrkiainen from the Flana Institute. Nils swiftly defeated Greco Logan in the American Qualifying Round of the World Championship.",
+      "airdate": "2013-11-25",
+      "markers": [],
+      "external_id": "112570"
+    },
+    {
+      "n": 9,
+      "title": "Wings of Imagination",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112571/original.jpg",
+      "synopsis": "China completes her Gunpla Beargguy III (San), and when a painting of it wins the grand prize at the local art exhibit, her rival Caroline Yajima issues her a Gunpla challenge.",
+      "airdate": "2013-12-02",
+      "markers": [],
+      "external_id": "112571"
+    },
+    {
+      "n": 10,
+      "title": "The World Tournament Begins",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112572/original.jpg",
+      "synopsis": "As the 7th Gunpla Battle World Championships begins in Shizuoka, the Gunpla community is in shock when news spreads of reigning champion Carlos Kaiser's defeat at the hands of Aila. Meanwhile, Sei meets the other Gunpla Fighters at the opening party while Reiji encounters Aila at the nearby mall.",
+      "airdate": "2013-12-09",
+      "markers": [],
+      "external_id": "112572"
+    },
+    {
+      "n": 11,
+      "title": "Battle Royal",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112573/original.jpg",
+      "synopsis": "Yuuki makes his World Championship debut as PPSE's Meijin Kawaguchi. Meanwhile, on the second day of the tournament, all of the participants must face each other in a battle royal until only one-third of the lineup remains.",
+      "airdate": "2013-12-16",
+      "markers": [],
+      "external_id": "112573"
+    },
+    {
+      "n": 12,
+      "title": "Discharge",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112574/original.jpg",
+      "synopsis": "With an unmanned Mega Size Model Zaku sent in to eliminate the Star Build Strike Gundam in the middle of the battle royal, unlikely alliances are formed while Sei and Reiji must unleash Star Build Strike Gundam's trump card to survive.",
+      "airdate": "2013-12-23",
+      "markers": [],
+      "external_id": "112574"
+    },
+    {
+      "n": 13,
+      "title": "Battle Weapon",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114066/original.jpg",
+      "synopsis": "For day three of the tournament, containers with random weapons are placed in the battlefield for the Gunpla Fighters to use in their battle; each contestant is assigned a container number to use. Sei and Reiji are assigned to battle Luang Dallara, who already gave them trouble at the battle royal. Worsening the situation is Reiji's wrist injury from a street fight outside the arena grounds.",
+      "airdate": "2014-01-06",
+      "markers": [],
+      "external_id": "114066"
+    },
+    {
+      "n": 14,
+      "title": "Codename: C",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114067/original.jpg",
+      "synopsis": "Sei and Reiji remain undefeated by the sixth period of the tournament with two more to go, despite Reiji's wrist injury. However, another obstacle appears in front of them in the form of the Gunpla Fighter named \"C\".",
+      "airdate": "2014-01-13",
+      "markers": [],
+      "external_id": "114067"
+    },
+    {
+      "n": 15,
+      "title": "Fighter's Radiance",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114068/original.jpg",
+      "synopsis": "With their loss in the Gunpla race dropping them to 17th place, Sei and Reiji must leave no room for error in the eighth period of the tournament in order to make it to the finals. However, they have to go through Fellini in the process.",
+      "airdate": "2014-01-20",
+      "markers": [],
+      "external_id": "114068"
+    },
+    {
+      "n": 16,
+      "title": "Dad, We Meet Again?",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114069/original.jpg",
+      "synopsis": "As Rinko leaves home to join her son, Sei and Reiji's battle with Fellini ends in a draw, but they earn two points, which is enough to land them in the top 16 in the finals. Meanwhile, following a heated argument with Sei over rebuilding the Star Build Strike Gundam, Reiji goes out to buy his own Gunpla, only for him and Aila to receive a crash course in Gunpla building by a mysterious bearded man.",
+      "airdate": "2014-01-27",
+      "markers": [],
+      "external_id": "114069"
+    },
+    {
+      "n": 17,
+      "title": "Model of the Heart",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114070/original.jpg",
+      "synopsis": "On the first day of the tournament finals, Mao is scheduled to battle Sei and Reiji. But when he cannot think of a strategy to defeat the Star Build Strike Gundam, he returns to his mentor, Master Chinan, and asks him to teach him the master's ultimate technique.",
+      "airdate": "2014-02-03",
+      "markers": [],
+      "external_id": "114070"
+    },
+    {
+      "n": 18,
+      "title": "Bloodhounds",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114071/original.jpg",
+      "synopsis": "After shocking the Gunpla world by defeating Luang on the first round, the Renato Brothers and their GM Sniper K9 set their sights on Meijin Kawaguchi.",
+      "airdate": "2014-02-10",
+      "markers": [],
+      "external_id": "114071"
+    },
+    {
+      "n": 19,
+      "title": "Astray's Blade",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114072/original.jpg",
+      "synopsis": "Sei and Reiji must go through Nils in order to continue their quest for the championship. Desperate to prevent the duo from advancing, Baker offers to have PPSE sponsor Nils, but knowing very well not to trust her, he arranges for a secret meeting with Sei and Reiji to extract the secrets of Plavsky particles from them.",
+      "airdate": "2014-02-17",
+      "markers": [],
+      "external_id": "114072"
+    },
+    {
+      "n": 20,
+      "title": "Aila's Betrayal",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114073/original.jpg",
+      "synopsis": "Fellini faces Aila in the quarterfinals, much to Sei and Reiji's shock as they finally discover her real identity. Aila is pressured to win the championship due to the arrival of the Team Nemesis Chairman, who has promised the trophy to his grandson for his birthday.",
+      "airdate": "2014-02-24",
+      "markers": [],
+      "external_id": "114073"
+    },
+    {
+      "n": 21,
+      "title": "Amid the Glittering Particles",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114074/original.jpg",
+      "synopsis": "Following Aila's revelation as a Gunpla Fighter, an angry Reiji vows to defeat her in the tournament.",
+      "airdate": "2014-03-03",
+      "markers": [],
+      "external_id": "114074"
+    },
+    {
+      "n": 22,
+      "title": "Meijin vs. Meijin",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114075/original.jpg",
+      "synopsis": "Yuuki must prove himself worthy of the name \"Meijin Kawaguchi the 3rd\" when he battles Julian Ayers Mackenzie, a British Gunpla Fighter who was to have taken that title three years prior.",
+      "airdate": "2014-03-10",
+      "markers": [],
+      "external_id": "114075"
+    },
+    {
+      "n": 23,
+      "title": "Gunpla Eve",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114076/original.jpg",
+      "synopsis": "A festival is held in Shizuoka one week before the final round of the tournament, where guests can participate in Free Battle rounds against the championship's competitors. Meanwhile, Nils and Caroline follow a truck that leads them to the source of Plavsky particles.",
+      "airdate": "2014-03-17",
+      "markers": [],
+      "external_id": "114076"
+    },
+    {
+      "n": 24,
+      "title": "Dark Matter",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114077/original.jpg",
+      "synopsis": "In the final round of the tournament, Meijin Kawaguchi the 3rd unveils the true form of his Gundam Amazing Exia. However, he brings fourth a disturbing aura in the arena reminiscent of his predecessor.",
+      "airdate": "2014-03-24",
+      "markers": [],
+      "external_id": "114077"
+    },
+    {
+      "n": 25,
+      "title": "Promise",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114078/original.jpg",
+      "synopsis": "Sei and Reiji's victory in the tournament causes Chairman Mashita to panic, with his Arista resonating all Plavsky particles in the arena to form a 1/144 scale replica of the Zeon space fortress A Baoa Qu over the facility. The Gunpla Fighters must band together to break into the fortress destroy the Arista before it produces disastrous results.",
+      "airdate": "2014-03-31",
+      "markers": [],
+      "external_id": "114078"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Carry on",
+      "artist": "BACK-ON",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Chase Me",
+      "artist": "FAKY",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Chase Me",
+      "artist": "FAKY",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Roots of Happiness",
+      "artist": "Elizabeth Elias",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cerulean (セルリアン)",
+      "artist": "BACK-ON",
+      "episodes": "2-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Cerulean (セルリアン)",
+      "artist": "BACK-ON",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Nibun no Ichi (ニブンノイチ; One Half)",
+      "artist": "BACK-ON",
+      "episodes": "2-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nibun no Ichi (ニブンノイチ; One Half)",
+      "artist": "BACK-ON",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Just Fly Away",
+      "artist": "EDGE of LIFE",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Amazing the World (アメイジング ザ ワールド)",
+      "artist": "SCREEN Mode",
+      "episodes": "2-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "wimp",
+      "artist": "BACK-ON feat. Lil' Fang",
+      "episodes": "14-24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Imagination > Reality",
+      "artist": "AiRI",
+      "episodes": "2-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Mayomayo Compass wa Iranai (迷々コンパスはいらない, Stray People Do Not Need a Compass)",
+      "artist": "StylipS",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Han Pan Spirit (半パン魂（スピリット）; Short-Pants Spirit)",
+      "artist": "Hyadain",
+      "episodes": "14-25"
+    }
+  ],
+  "relations": []
+}

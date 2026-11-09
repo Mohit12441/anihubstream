@@ -1,0 +1,63 @@
+{
+  "id": "fruits-basket-prelude",
+  "title": "Fruits Basket -prelude-",
+  "native": "フルーツバスケット -prelude-",
+  "year": 2022,
+  "rating": 8.2,
+  "season": "Winter 2022",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx136192-hxeNRzBHizBZ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx136192-hxeNRzBHizBZ.jpg",
+  "accent": "#e45d6b",
+  "synopsis": "Before there was Tooru and Kyou – there was Katsuya and Kyouko. Discover the turbulent beginning of Tooru’s mom’s dark past, and the man who breathed new hope into her. Watch the evolution of their love story and the birth of the Honda family, as this chapter completes the full adaptation of the heartwarming Fruits Basket story. \n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fruits-basket:-prelude-vadezy",
+    "mal": 49310,
+    "anilist": 136192,
+    "kitsu": 44829
+  },
+  "skip_key_id": 49310,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "fruits basket prelude フルーツハ スケット prelude movie finished",
+  "genres": [
+    "drama",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Fruits Basket: Prelude (Movie)",
+      "runtime": "88:00",
+      "runtime_seconds": 5280,
+      "thumb": "https://animehot.cc/storage/media/2026/09/69184e4998644fab5d6cb957-landscape.webp",
+      "synopsis": "Despite Kyouko Honda's tragic death, her vivid memory lives on, providing guidance through times of hardship to her close ones. However, Kyouko was not always the wise and radiant person that she is fondly remembered as in the present day.\n\nFeeling deserted by her own family and rejected by society, a young Kyouko abandons stability for a life of delinquency, jeopardizing her education and future. Fortunately, her descent into despair is interrupted by a fateful encounter with her husband-to-be Katsuya, who has recently started his teaching internship at her school. \n\nWith a composure surprisingly unaffected by Kyouko's tantrums, Katsuya quickly wins her over through his gentleness and attention toward her—sincere gestures that she has never received before. As the two grow closer together, Kyouko opens her tormented heart to him and, along with it, a door to new horizons.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "308895"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Niji to Kite",
+      "artist": "ohashiTrio",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

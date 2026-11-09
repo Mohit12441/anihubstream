@@ -1,0 +1,101 @@
+{
+  "id": "fairy-tail-ova",
+  "title": "FAIRY TAIL OVA",
+  "native": "FAIRY TAIL OVA",
+  "year": 2011,
+  "rating": 7,
+  "season": "Year 2011",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/6a95823a80ce44fd7c346c94-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/6a95823a80ce44fd7c346c94-landscape.jpg",
+  "accent": "#ffc247",
+  "synopsis": "OVAs bundled with special editions volumes of the manga.\n\n\n\n1. Youkoso Fairy Hills!\n\nLucy comes across a mysterious written request. The client is looking for an object that is in Fairy Tail's female dormitory, Fairy Hills. To verify the request, Lucy visits Fairy Hills, and discovers that the client is Hilda, the dormitory head who is looking for a \"shining treasure.\" Meanwhile, Natsu and the other guild members are cleaning their pool.\n\n\n\n2. Yousei Gakuen: Yankee-kun to Yankee-chan\n\nThe anime adaptation of the manga side story \"Yousei Gakuen Yankee-kun to Yankee-chan,\" which puts the characters of Fairy Tail in a school setting. The title is a parody of Miki Yoshikawa's \"Yankee-kun to Megane-chan.\"\n\n\n\n3. Memory Days\n\nAn all-new original story storyboarded by Hiro Mashima, the author of Fairy Tail, released on February 17, 2012. \"Natsu's Secret\" is going to be revealed in the \"Past World\"?! Guided by a \"magic book\" that's lying in the Guild's storage room, Natsu, Lucy, Happy, Gray, and Erza have traveled back into the past!!\n\n\n\n4. Yousei-tachi no Gasshuku\n\nNatsu, Lucy, and the others go to a training camp for the Grand Magic Games. While there, the Fairy Tail Guild take a much needed break at the beach and hot spring.\n\n\n\n5. Dokidoki Ryuuzetsu Land\n\nAdapting the chapter 298. The story is set during the Grand Magic Games when various guilds gather at the pool for some fun (and the chaos that ensues).",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fairy-tail-ova-a9ayc2",
+    "mal": 9982,
+    "anilist": 9982,
+    "kitsu": 5979
+  },
+  "skip_key_id": 9982,
+  "skip_key_space": "mal",
+  "episode_total": 9,
+  "added_at": null,
+  "search_text": "fairy tail ova fairy tail ova",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Welcome to Fairy Hills!!",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "Lucy heads to Fairy Hills to search for the person who posted a strange job request. Upon finding her, she reluctantly helps an old woman find something. Searching the dormitory all through the day, Lucy eventually finds what she was looking for after which she learns a surprising truth.",
+      "airdate": "2011-04-15",
+      "markers": [],
+      "external_id": "90683"
+    },
+    {
+      "n": 2,
+      "title": "Fairy Academy: Yankee-kun and Yankee-chan!",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "Lucy Heartfilia transfers to Fairy Academy, a school full of weirdos. Despite the strange events, people and the school they rival with, she grows to love this new academy over her former strict young ladies' academy.",
+      "airdate": "2011-06-17",
+      "markers": [],
+      "external_id": "90684"
+    },
+    {
+      "n": 3,
+      "title": "Memory Days",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "Natsu, Lucy, Gray, Erza and Happy are sent to the past by the mysterious Magic book, Memory Days. During their adventure, the group tries to avoid coming into contact with the people, afraid that they may affect the future. However, the group finds that their actions subsequently led to Natsu's scar and Lucy joining Fairy Tail.",
+      "airdate": "2012-02-17",
+      "markers": [],
+      "external_id": "90685"
+    },
+    {
+      "n": 4,
+      "title": "Fairies' Training Camp",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "Mavis is bored staying alone on Tenrou Island, so she decides to pay the guild a visit, unaware that the Fairy Tail members are going to the beach for a training camp, for which she decides to tag along as well. The group faces a lot of trouble that is caused by Natsu and Gray. That night, the guys get more than they bargained for when the girls get drunk. In response, they come up with a devious plan soon after.",
+      "airdate": "2012-11-16",
+      "markers": [],
+      "external_id": "90686"
+    },
+    {
+      "n": 5,
+      "title": "The Exciting Ryuzetsu Land",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "During the Grand Magic Games, the Mages of Fairy Tail head to the popular resort known as Ryuzetsu Land, seeking to relax. While interacting with their friends and even members of other guilds, the crazy antics of Fairy Tail soon lead to trouble for everyone.",
+      "airdate": "2013-06-17",
+      "markers": [],
+      "external_id": "109227"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

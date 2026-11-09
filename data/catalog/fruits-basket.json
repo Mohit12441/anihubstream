@@ -1,0 +1,751 @@
+{
+  "id": "fruits-basket",
+  "title": "Fruits Basket",
+  "native": "フルーツバスケット",
+  "year": 2001,
+  "rating": 7.5,
+  "season": "Summer 2001",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx120-Z5i1sw1xboQP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120-Z5i1sw1xboQP.jpg",
+  "accent": "#e4861a",
+  "synopsis": "Tohru Honda is 16 year old orphaned girl who gets invited to live in the house of her classmate, the handsome boy Sohma Yuki, and his cousins, 16 year old Kyo and 27 year old Shigure. However, these young men and parts of the rest of their family (both close and distant) hold a curse; if they are hugged by the opposite gender, they transform into animals of the Chinese Zodiac. Everyday is an adventure for sweet Tohru, as she gets to know everyone in the large family better (especially Yuki and Kyo), in both common and bizarre situations. But, the Sohma Family curse is certainly no laughing matter... it also holds horrible cruelty and heartbreak.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 99,
+    "anilist": 120,
+    "mal": 120,
+    "hianime": "fruits-basket-xqozwd"
+  },
+  "skip_key_id": 120,
+  "skip_key_space": "anilist",
+  "episode_total": 26,
+  "added_at": "2026-10-14 12:36:52",
+  "search_text": "fruits basket フルーツハ スケット tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Strangest Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/2989/original.jpg",
+      "synopsis": "Losing Tohru Honda's mother was hard enough, but living in a tent, now that's just crazy! One day, leaving for school, Tohru happens to stumble to the prince of her high school 'Yuki Sohma' at his house. As Yuki and his cousin Shigure finds out that Tohru been living in a tent, Yuki and Shigure lets Tohru live with them as their housekeeper. Trouble starts as soon as Kyo, another member of the Sohma family, messes up Tohru's new room causing her to lose her balance. Grabbing onto the Sohma family for support, they all turn into animals of the Chinese Zodiac.",
+      "airdate": "2001-07-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 80
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1423
+        }
+      ],
+      "external_id": "2989"
+    },
+    {
+      "n": 2,
+      "title": "The Souma Curse",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/2990/original.jpg",
+      "synopsis": "Tohru is quite surprised to see Yuki, Shigure, and Kyo turn into animals. While still in their animal forms, they tell her about the Sohma Family Curse. Whenever a member of the Sohma family is hugged by a member of the opposite sex, they turn into animals from the Chinese Zodiac. Later on at school, Yuki confronts Tohru and tells her that her memory may have to be erased because she found out the family secret. When they return home, Shigure informs them of Akito's decision: Tohru can stay at the house and won't have her memories erased as long as she doesn't tell anybody about the family secret.",
+      "airdate": "2001-07-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 78
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1423
+        }
+      ],
+      "external_id": "2990"
+    },
+    {
+      "n": 3,
+      "title": "All Shapes and Sizes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/2991/original.jpg",
+      "synopsis": "At school, Tohru walks in on Kyo and Yuki fighting. When she tries to stop them she runs into Kyo and he transforms. Kyo gets angry and calls her a stupid girl which makes Tohru think he hates her. Feeling guilty, he decides to pick Tohru up from her job and apologizes in his own way. The next day, on her way home from work, Tohru meets up with Yuki, and they walk home together. After accidentally transforming, Yuki tells Tohru about how he wants to live a normal life.",
+      "airdate": "2001-07-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 79
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1395
+        }
+      ],
+      "external_id": "2991"
+    },
+    {
+      "n": 4,
+      "title": "Here Comes Kagura!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/2992/original.jpg",
+      "synopsis": "Someone visits Shigure's house. It's Kagura who has brought a lot of commotion into the Sohma residence. Can Tohru and Kagura become friends or will they be bitter rivals?",
+      "airdate": "2001-07-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 80
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1334,
+          "end": 1424
+        }
+      ],
+      "external_id": "2992"
+    },
+    {
+      "n": 5,
+      "title": "A Rice Ball in a Fruits Basket",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/2993/original.jpg",
+      "synopsis": "Things are going great at Shigure's house. Just when Tohru feels the days will always be like this, she gets a call from her grandpa. His house is finished, so Tohru can move back with him.",
+      "airdate": "2001-08-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 79
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1428
+        }
+      ],
+      "external_id": "2993"
+    },
+    {
+      "n": 6,
+      "title": "Invincible Friendship",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/2994/original.jpg",
+      "synopsis": "Tohru is back living with the Sohmas. Tohru's friends just get wind of it and decide to see if the Sohmas are taking good care of Tohru. Will they be able to keep the Sohma family curse under wraps while Uo and Hana stay over?",
+      "airdate": "2001-08-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 78
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1395
+        }
+      ],
+      "external_id": "2994"
+    },
+    {
+      "n": 7,
+      "title": "A Plum on the Back",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/2995/original.jpg",
+      "synopsis": "It's the cultural festival, and Tohru's class is doing a hit or miss rice ball stand. Yuki is given a special outfit to wear during the festival, which brings in lots of customers. We get to meet Momiji and Hatori, two more Sohma family members! Could they be members of the zodiac as well?",
+      "airdate": "2001-08-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 78
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1395
+        }
+      ],
+      "external_id": "2995"
+    },
+    {
+      "n": 8,
+      "title": "Don't Cry, for the Snow will Surely Melt",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/2996/original.jpg",
+      "synopsis": "Tohru visits the main Sohma residence for the first time. After the warning Yuki gave her at the festival, she's a bit nervous to talk to Hatori, one of the senior family members. Why is Hatori so insistent that Tohru leave the Sohma family alone?",
+      "airdate": "2001-08-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 80
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1394
+        }
+      ],
+      "external_id": "2996"
+    },
+    {
+      "n": 9,
+      "title": "A Solitary New Year",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/2997/original.jpg",
+      "synopsis": "Tohru and the Sohmas are cleaning house with the help with Uo and Hana. Shigure's assistant Mi is pressing Shigure to finish his 500-page novel. Later on, the Sohmas are supposed to visit the Sohma House for their annual celebrations. But that means Tohru will be alone for New Year's?",
+      "airdate": "2001-08-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 30,
+          "end": 111
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1339,
+          "end": 1429
+        }
+      ],
+      "external_id": "2997"
+    },
+    {
+      "n": 10,
+      "title": "Make It Clear If It's Black or White",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/2998/original.jpg",
+      "synopsis": "Tohru's class goes on an endurance run. In the middle of the run, a white-haired boy, not much younger than Yuki, interrupts and challenges Kyo to a fight. The boy is also a member of the Sohma clan. As they fight, Yuki feels faint. What will Tohru do now? And which zodiac member is this boy?",
+      "airdate": "2001-09-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 79
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1339,
+          "end": 1429
+        }
+      ],
+      "external_id": "2998"
+    },
+    {
+      "n": 11,
+      "title": "Everybody Loves Chocolate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/2999/original.jpg",
+      "synopsis": "It's Valentine's Day, and Tohru has given all the Sohma's chocolates. But it seems that after finals, she's also working harder than ever earning money. Could something be the matter?",
+      "airdate": "2001-09-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 137,
+          "end": 214
+        }
+      ],
+      "external_id": "2999"
+    },
+    {
+      "n": 12,
+      "title": "White Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3000/original.jpg",
+      "synopsis": "Momiji invites Tohru, Kyo, and Yuki to a relaxing weekend at the Sohma Hot Springs. Tohru even brings her mom along. Yuki has a chance to give Tohru a gift for White Day. But Momiji has an even bigger surprise!",
+      "airdate": "2001-09-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 114,
+          "end": 198
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1343,
+          "end": 1430
+        }
+      ],
+      "external_id": "3000"
+    },
+    {
+      "n": 13,
+      "title": "A New School Term Starts!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3001/original.jpg",
+      "synopsis": "Tohru's second year at high school begins, and Yuki is helping out with orientation. It turns out some of the younger Sohmas are entering the same high school. Hatsuharu gets in a conflict with the class president, but a deeper situation occurs when one of the Sohmas unexpectedly shows up and confronts Tohru!",
+      "airdate": "2001-09-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 83,
+          "end": 168
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1427
+        }
+      ],
+      "external_id": "3001"
+    },
+    {
+      "n": 14,
+      "title": "The Adult's Episode: Yuki's a Messed up Snake!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3002/original.jpg",
+      "synopsis": "Tohru and Yuki are tending the vegetable garden, when Tohru finds a set of clothes lying on the ground. Could this be a new Sohma? According to the title, it is! Not only is the new Sohma awfully friendly, it has a few surprising secrets to reveal about its relationship to Yuki and the others.",
+      "airdate": "2001-10-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 124,
+          "end": 154
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1349,
+          "end": 1430
+        }
+      ],
+      "external_id": "3002"
+    },
+    {
+      "n": 15,
+      "title": "There are No Memories It's OK to Forget",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3003/original.jpg",
+      "synopsis": "It's been a year since Tohru's mom passed away, and the gang visits her grave. Uo and Hana speculate on whom Tohru will fall in love with. Then Tohru discovers Momiji in the building she works in. What is he doing there? And where are Momiji's parents?",
+      "airdate": "2001-10-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 77
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1339,
+          "end": 1429
+        }
+      ],
+      "external_id": "3003"
+    },
+    {
+      "n": 16,
+      "title": "If We've Three, Then We Don't Need to Fear Jason",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3004/original.jpg",
+      "synopsis": "Shigure invites Tohru and the Sohmas out to a lake in the woods, where not only will they have to contend with Jason, but some other surprises. Also, Tohru worries that Kyo and Yuki don't seem to be their usual selves.",
+      "airdate": "2001-10-18",
+      "markers": [],
+      "external_id": "3004"
+    },
+    {
+      "n": 17,
+      "title": "It's Because I've Been Loved That I've Become Stronger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3005/original.jpg",
+      "synopsis": "Hatsuharu introduces a new Sohma to Tohru. It's a tiger cub named Kisa! But when Tohru reaches out to her, Kisa bites her! Can Tohru befriend this wild yet timid girl?",
+      "airdate": "2001-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 166
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1395
+        }
+      ],
+      "external_id": "3005"
+    },
+    {
+      "n": 18,
+      "title": "The Strongest Tag: The Cursed Electric Wave Brother and Sister",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3006/original.jpg",
+      "synopsis": "The Prince Yuki Fan Club takes center stage in this episode, where they plot to break up the friendship between Tohru and Yuki. They use a school newspaper interview visit to Saki Hanajima's house to search for Hana's weaknesses. But even with their trusty camcorder, the fan club is in for some freaky and some normal surprises as they tour Hana's home.",
+      "airdate": "2001-11-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 80
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1395
+        }
+      ],
+      "external_id": "3006"
+    },
+    {
+      "n": 19,
+      "title": "The Source of Cheer Can Be Affected by Colds Too",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3007/original.jpg",
+      "synopsis": "Tohru fails one of her midterms and now has just one chance to retake it, and with just a few days before the make-up exam, she is coming down with a cold. What will the gang do now?",
+      "airdate": "2001-11-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 80
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1305,
+          "end": 1436
+        }
+      ],
+      "external_id": "3007"
+    },
+    {
+      "n": 20,
+      "title": "Ayame's Secret Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3008/original.jpg",
+      "synopsis": "Yuki and Tohru visit Ayame's dress shop. Ayame's assistant Mine Kurame, has grander ideas. Could there be some cosplaying involved? And what is \"The Thing\"?",
+      "airdate": "2001-11-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 79
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1395
+        }
+      ],
+      "external_id": "3008"
+    },
+    {
+      "n": 21,
+      "title": "Sophist Boy Has Captured the Prince",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3009/original.jpg",
+      "synopsis": "Someone steals Tohru's purse, and it looks like another zodiac member. He's Hiro Sohma and he's very jealous of Tohru and Kisa.",
+      "airdate": "2001-11-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 79
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1395
+        }
+      ],
+      "external_id": "3009"
+    },
+    {
+      "n": 22,
+      "title": "Prince Yuki Fan Club",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3010/original.jpg",
+      "synopsis": "Yuki starts the semester as the Student Council President, and the Prince Yuki Fan Club is right there with him, except that there's this other girl. Could this be competition? What will Yuki's fan club president do?",
+      "airdate": "2001-11-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 80
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "3010"
+    },
+    {
+      "n": 23,
+      "title": "Is the Rumored Ri That Mother's Daughter?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3011/original.jpg",
+      "synopsis": "Shigure's house receives yet another visitor - Ritsu Sohma, the daughter of the Hostess at the hot springs. Whenever Ri's around, it seems to be one mishap after another. But Ritsu's biggest bombshell is yet to come. Tohru is in for the surprise of her life!",
+      "airdate": "2001-12-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 80
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1395
+        }
+      ],
+      "external_id": "3011"
+    },
+    {
+      "n": 24,
+      "title": "The Curse of the Cat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3012/original.jpg",
+      "synopsis": "It's a rainy day. Tohru and Yuki don't mind much, but Kyo is in down spirits. Things just keep getting worse for Kyo. Kagura makes a surprise visit. We learn why Kagura loves Kyo so much. Kyo's teacher, Kazuma Sohma, also makes a visit. Kazuma seems to have a reason for his visit, but could it break the wonderful world that Tohru lives in?",
+      "airdate": "2001-12-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 96
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1395
+        }
+      ],
+      "external_id": "3012"
+    },
+    {
+      "n": 25,
+      "title": "True Form",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3013/original.jpg",
+      "synopsis": "Kyo's shocking transformation into his true form is finally complete! Unfortunately for Tohru, she witnesses the entire spectacle leaving her disoriented and confused. Kagura comes up with the family's last hope to save him…whether Tohru likes it or not!",
+      "airdate": "2001-12-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 79
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1395
+        }
+      ],
+      "external_id": "3013"
+    },
+    {
+      "n": 26,
+      "title": "Let's Go Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3014/original.jpg",
+      "synopsis": "Tohru pushes her relationships with the Sohmas to the limit as she tries to reach out to Kyo in love, which proves to be troublesome since Kyo is in his wild monster cat form. And if that wasn’t enough, she confronts Akito to tell him how she feels about all the abuse. Akito isn’t pleased with any of her interactions, and feels like it’s time for Tohru’s memories to be erased once and for all. Friendships will be tested in the exciting finale to the TV series.",
+      "airdate": "2001-12-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 80
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1395
+        }
+      ],
+      "external_id": "3014"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Niji to Kite",
+      "artist": "ohashiTrio",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pleasure",
+      "artist": "WARPs UP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Haru Urara",
+      "artist": "GENIC",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Prism",
+      "artist": "AmPm ft Miyuna",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ad meliora",
+      "artist": "THE CHARM PARK",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Again",
+      "artist": "Beverly",
+      "episodes": "2-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lucky Ending",
+      "artist": "Vickeblanka",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "For フルーツバスケット (<i>For Fruits Basket</i>)",
+      "artist": "Ritsuko Okazaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "小さな祈り (<i>Chiisana Inori; Small Prayer</i>)",
+      "artist": "Ritsuko Okazaki",
+      "episodes": "1-24,26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "HOME",
+      "artist": "Asako Toki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Eden",
+      "artist": "MONKEY MAJIK",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Chime",
+      "artist": "Ai Ohtsuka",
+      "episodes": "14-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "One Step Closer",
+      "artist": "INTERSECTION",
+      "episodes": "14-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "セレナーデ [Pf Solo Ver.] (<i>Serenade</i>)",
+      "artist": "Ritsuko Okazaki",
+      "episodes": "25"
+    }
+  ],
+  "relations": []
+}

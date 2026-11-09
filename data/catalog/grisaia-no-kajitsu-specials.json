@@ -1,0 +1,109 @@
+{
+  "id": "grisaia-no-kajitsu-specials",
+  "title": "The Fruit of Grisaia: Grisaia no Tokuten",
+  "native": "グリザイアの果実 グリザイアの特典",
+  "year": 2014,
+  "rating": 6.6,
+  "season": "Winter 2015",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21010-ucD9rP4eFfjt.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21010-ucD9rP4eFfjt.jpg",
+  "accent": "#24d3ee",
+  "synopsis": "Short specials added to DVDs and BDs.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "grisaia-no-kajitsu-specials-73b97l",
+    "mal": 29101,
+    "anilist": 21010,
+    "kitsu": 10150
+  },
+  "skip_key_id": 29101,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": null,
+  "search_text": "the fruit of grisaia grisaia no tokuten ク リサ イアの果実 ク リサ イアの特典 special finished",
+  "genres": [
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Gohoushi Shichau Pyon",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "Included in the BD/DVD Vol.1\n\nSakaki playing a rabbit for Yuuji.",
+      "airdate": "2014-12-25",
+      "markers": [],
+      "external_id": "176212"
+    },
+    {
+      "n": 2,
+      "title": "Tsundere Ryuu Umi no Tanoshimikata",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "Included in the BD/DVD Vol.2",
+      "airdate": "2015-01-28",
+      "markers": [],
+      "external_id": "176213"
+    },
+    {
+      "n": 3,
+      "title": "Osenaka, Onagashi Shimasu",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "Included in the BD/DVD Vol.3",
+      "airdate": "2015-02-25",
+      "markers": [],
+      "external_id": "176214"
+    },
+    {
+      "n": 4,
+      "title": "Makina's Boot Camp",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "Included in the BD/DVD Vol.4",
+      "airdate": "2015-03-25",
+      "markers": [],
+      "external_id": "176215"
+    },
+    {
+      "n": 5,
+      "title": "Natsu no Yuuwaku",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "Included in the BD/DVD Vol.5",
+      "airdate": "2015-04-22",
+      "markers": [],
+      "external_id": "176216"
+    },
+    {
+      "n": 6,
+      "title": "Oisha-san Gokko Shimashou ka?",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "Included in the BD/DVD Vol.6.\n\nYuuji and his sister play doctor.",
+      "airdate": "2015-05-27",
+      "markers": [],
+      "external_id": "176217"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

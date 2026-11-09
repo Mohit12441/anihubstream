@@ -1,0 +1,408 @@
+{
+  "id": "fighting-spirit-new-challenger",
+  "title": "Hajime no Ippo: The Fighting! New Challenger",
+  "native": "はじめの一歩 New Challenger",
+  "year": 2009,
+  "rating": 8.6,
+  "season": "Winter 2009",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx5258-Qn6GBiSY57iT.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5258-Qn6GBiSY57iT.jpg",
+  "accent": "#e41a35",
+  "synopsis": "Ippo Makunouchi continues his boxing career and his goal on knowing the meaning of being strong, and the desire on fighting his idol Ichiro Miyata once again. Along him are pro boxers Takamura, Aoki and Kimura that each one of them aspire to their own dreams.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fighting-spirit:-new-challenger-48byd6",
+    "mal": 5258,
+    "anilist": 5258,
+    "kitsu": 4016
+  },
+  "skip_key_id": 5258,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "hajime no ippo the fighting new challenger はし めの一歩 new challenger tv finished",
+  "genres": [
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The New Step",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67577/original.jpg",
+      "synopsis": "The first episode of the second season starts with mostly the match of Miyata against Arnie. Shows Kimura sparring with Miyata and then the Weigh-in. Then the match is about to start, Miyata and Arnie are ready for battle!",
+      "airdate": "2009-01-07",
+      "markers": [],
+      "external_id": "67577"
+    },
+    {
+      "n": 2,
+      "title": "Bloody Cross",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67578/original.jpg",
+      "synopsis": "The second episode of the second season starts off on Miyata's OPBF Title Match. With it Arnie showing his special weapon called Bloody Cross and Miyata throwing strong counters to escape from this techniques strange name 'Bloody Cross '.",
+      "airdate": "2009-01-14",
+      "markers": [],
+      "external_id": "67578"
+    },
+    {
+      "n": 3,
+      "title": "To a Promise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67579/original.jpg",
+      "synopsis": "The third episode of the second season continues on the OPBF Match with Miyata against Arnie. With almost everytime Miyata is about to fall down from hits of the champ, but then he tooks big step and takes the OPBF Champion Arnie Gregory to the ground. The count starts, and the episode ends.",
+      "airdate": "2009-01-21",
+      "markers": [],
+      "external_id": "67579"
+    },
+    {
+      "n": 4,
+      "title": "Towards The World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67580/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-01-28",
+      "markers": [],
+      "external_id": "67580"
+    },
+    {
+      "n": 5,
+      "title": "The Strength of the World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67581/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-02-03",
+      "markers": [],
+      "external_id": "67581"
+    },
+    {
+      "n": 6,
+      "title": "A Figure to Chase After",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67582/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-02-11",
+      "markers": [],
+      "external_id": "67582"
+    },
+    {
+      "n": 7,
+      "title": "The Advent of the Devil",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67583/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-02-17",
+      "markers": [],
+      "external_id": "67583"
+    },
+    {
+      "n": 8,
+      "title": "Spirit For One Last Attack",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67584/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-02-25",
+      "markers": [],
+      "external_id": "67584"
+    },
+    {
+      "n": 9,
+      "title": "Inheritance Qualifications",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67585/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-03-04",
+      "markers": [],
+      "external_id": "67585"
+    },
+    {
+      "n": 10,
+      "title": "Biting Dog",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67586/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-03-11",
+      "markers": [],
+      "external_id": "67586"
+    },
+    {
+      "n": 11,
+      "title": "Ippo vs. Hammer Nao",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67587/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-03-18",
+      "markers": [],
+      "external_id": "67587"
+    },
+    {
+      "n": 12,
+      "title": "Requirements For A Pro",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67588/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-03-25",
+      "markers": [],
+      "external_id": "67588"
+    },
+    {
+      "n": 13,
+      "title": "Ippo At The Beach 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67589/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-04-01",
+      "markers": [],
+      "external_id": "67589"
+    },
+    {
+      "n": 14,
+      "title": "Two Spars",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67590/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-04-08",
+      "markers": [],
+      "external_id": "67590"
+    },
+    {
+      "n": 15,
+      "title": "Itagaki`s Debut Fight!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67591/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-04-15",
+      "markers": [],
+      "external_id": "67591"
+    },
+    {
+      "n": 16,
+      "title": "The Two Hawks",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67592/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-04-22",
+      "markers": [],
+      "external_id": "67592"
+    },
+    {
+      "n": 17,
+      "title": "Wild Kid",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67593/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-04-29",
+      "markers": [],
+      "external_id": "67593"
+    },
+    {
+      "n": 18,
+      "title": "Extreme Weight Control",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67594/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-05-06",
+      "markers": [],
+      "external_id": "67594"
+    },
+    {
+      "n": 19,
+      "title": "Critical Situation",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67595/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-05-13",
+      "markers": [],
+      "external_id": "67595"
+    },
+    {
+      "n": 20,
+      "title": "Junior Middleweight World Title Match",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67596/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-05-20",
+      "markers": [],
+      "external_id": "67596"
+    },
+    {
+      "n": 21,
+      "title": "Battle of Hawk",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67597/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-05-27",
+      "markers": [],
+      "external_id": "67597"
+    },
+    {
+      "n": 22,
+      "title": "Brawl",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67598/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-06-03",
+      "markers": [],
+      "external_id": "67598"
+    },
+    {
+      "n": 23,
+      "title": "Supporting Hand",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67599/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-06-10",
+      "markers": [],
+      "external_id": "67599"
+    },
+    {
+      "n": 24,
+      "title": "The King",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67600/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-06-17",
+      "markers": [],
+      "external_id": "67600"
+    },
+    {
+      "n": 25,
+      "title": "Please Accept This Bronze Statue",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67601/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-06-24",
+      "markers": [],
+      "external_id": "67601"
+    },
+    {
+      "n": 26,
+      "title": "New Challenger",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/67602/original.jpg",
+      "synopsis": "",
+      "airdate": "2009-07-01",
+      "markers": [],
+      "external_id": "67602"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yakan Hikou (夜間飛行)",
+      "artist": "Wasureranneyo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Buchikome!! (ブチコメ!!)",
+      "artist": "Shikuramen",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hekireki",
+      "artist": "Last Alliance",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "8 AM",
+      "artist": "coldrain",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "360°",
+      "artist": "Mori Naoya",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Under Star",
+      "artist": "Shocking Lemon",
+      "episodes": "1-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yūzora no Kamihikōki",
+      "artist": "Naoya Mori",
+      "episodes": "1-25"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Inner Light",
+      "artist": "Shocking Lemon",
+      "episodes": "26-52"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "360°",
+      "artist": "Mori Naoya",
+      "episodes": "26-52,75"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Tumbling Dice",
+      "artist": "Tsuneo Imahori",
+      "episodes": "53-76"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Eternal Loop",
+      "artist": "Saber Tiger",
+      "episodes": "53-74,76"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,65 @@
+{
+  "id": "fate-zero-cafe",
+  "title": "Fate/Zero Cafe",
+  "native": "Fate/ゼロカフェ",
+  "year": 2013,
+  "rating": 5.7,
+  "season": "2013",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/19165.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/19165.jpg",
+  "accent": "#e45078",
+  "synopsis": "Similar to Carnival Phantasm, Fate/Zero Cafe is an adaptation of the manga Fate/Zero Cafe.\n\nThe first episode was previewed in cinemas before 3D re-screenings of Kara no Kyoukai: Fukan Fuukei as a special mini movie. The second episode premiered in ufotableCINEMA.\n\nNote: No physical releases of this anime exists, and is only available for viewing at ufotableCINEMA for select screenings.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fatezero-cafe-pi9f6v",
+    "mal": 19165,
+    "anilist": 19165,
+    "kitsu": 7873
+  },
+  "skip_key_id": 19165,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "fate zero cafe fate セ ロカフェ movie finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Fate/Zero Cafe (Movie)",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/19165.jpg",
+      "synopsis": "Similar to Carnival Phantasm, Fate/Zero Cafe is an adaptation of the manga Fate/Zero Cafe.\n\n\n\nThe first episode was previewed in cinemas before 3D re-screenings of Kara no Kyoukai: Fukan Fuukei as a special mini movie. The second episode premiered in ufotableCINEMA.\n\n\n\nNote: No physical releases of this anime exists, and is only available for viewing at ufotableCINEMA for select screenings.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "109872"
+    },
+    {
+      "n": 2,
+      "title": "Fate/Zero Cafe (Movie)",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/19165.jpg",
+      "synopsis": "Similar to Carnival Phantasm, Fate/Zero Cafe is an adaptation of the manga Fate/Zero Cafe.\n\n\n\nThe first episode was previewed in cinemas before 3D re-screenings of Kara no Kyoukai: Fukan Fuukei as a special mini movie. The second episode premiered in ufotableCINEMA.\n\n\n\nNote: No physical releases of this anime exists, and is only available for viewing at ufotableCINEMA for select screenings.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "341400"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

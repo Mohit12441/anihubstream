@@ -1,0 +1,343 @@
+{
+  "id": "irina-the-vampire-cosmonaut",
+  "title": "Irina: The Vampire Cosmonaut",
+  "native": "月とライカと吸血姫",
+  "year": 2021,
+  "rating": 7.2,
+  "season": "Fall 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx131019-xaTtBN2G6BrO.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx131019-xaTtBN2G6BrO.jpg",
+  "accent": "#284393",
+  "synopsis": "Set in a fictional world, 10 years after a long war divided the world into two superpowers: the Union of Zirnitra Republics in the east, and the United Kingdom of Arnak in the west. Both of these superpowers now test their ambitions against each other in a space race. In 1960, the Union's Premier Gergiev announces the Mechtat Program, a prestigious plan to launch manned missions into the final frontier. To this end, the Republic establishes the isolated city of Laika 44, where cosmonaut candidates compete for planned manned missions to space, and scientists develop the technology to make it happen, all in an environment of secrecy.\n\nThe story centers on Lev Leps, a backup astronaut candidate, and his new companion, the vampire Irina Ruminescu. As part of a daring new Operation Nosferatu, the Mechtat Program will use Irina as a test subject for various conditions expected in space, and ultimately as part of a manned mission, with Lev overseeing Irina's training as a cosmonaut. For reasons of their own, both dream of going into space.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44192,
+    "anilist": 131019,
+    "mal": 48471
+  },
+  "skip_key_id": 48471,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 07:58:33",
+  "search_text": "irina the vampire cosmonaut 月とライカと吸血姫 tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "sci-fi",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Nosferatu Project",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a5b081f7af20cd9049c3ff24cf3241471661052913_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 116,
+          "end": 206
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1318,
+          "end": 1380
+        }
+      ],
+      "external_id": "311004"
+    },
+    {
+      "n": 2,
+      "title": "The Path to Becoming a Cosmonaut",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4e319c8d1cb85efbcf7be27c21d1e3df1661053328_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 67,
+          "end": 157
+        }
+      ],
+      "external_id": "311005"
+    },
+    {
+      "n": 3,
+      "title": "Night Flight",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/66122bf8989c4a05958953800285bd951661053351_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 172
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1314,
+          "end": 1380
+        }
+      ],
+      "external_id": "311864"
+    },
+    {
+      "n": 4,
+      "title": "A Promise by the Lake",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/4056494291fc89cd83e07726ea2064741661053339_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 77,
+          "end": 167
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1380
+        }
+      ],
+      "external_id": "311865"
+    },
+    {
+      "n": 5,
+      "title": "Training Separately",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/b6cd0a1707f692839c72c2282408e0451661053385_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 112,
+          "end": 202
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "311866"
+    },
+    {
+      "n": 6,
+      "title": "Nosferatu",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/5153141f1067bd4354f343d0375022271661053421_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 100,
+          "end": 190
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1314,
+          "end": 1380
+        }
+      ],
+      "external_id": "311867"
+    },
+    {
+      "n": 7,
+      "title": "Lycoris Cooking Show",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/adf33e73d3df9c21d3e001d57693b3691661053512_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 173,
+          "end": 263
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1380
+        }
+      ],
+      "external_id": "311868"
+    },
+    {
+      "n": 8,
+      "title": "A Maiden's Prayer",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d28983c28e802f2bfaf179a9e5a9bba21661053587_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 47,
+          "end": 137
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1380
+        }
+      ],
+      "external_id": "311869"
+    },
+    {
+      "n": 9,
+      "title": "The White Rose of Sangrad",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/88a3c3e6348f7a6bd36ff3182a54c7221661053641_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 103,
+          "end": 193
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "311870"
+    },
+    {
+      "n": 10,
+      "title": "A Cold Spring",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/9ede08d8582f02937824fd3800063db91661053759_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 130
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1380
+        }
+      ],
+      "external_id": "311871"
+    },
+    {
+      "n": 11,
+      "title": "Lies and Truths",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/ca68615ed16ecd426f553d1405f0d7cd1661053872_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 55,
+          "end": 145
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "311872"
+    },
+    {
+      "n": 12,
+      "title": "To the New World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/317ea908a748e5eeda9b83219a5735911661054049_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 126
+        }
+      ],
+      "external_id": "311873"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hi no Tsuki (Scarlet Moon)",
+      "artist": "Ali Project",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Arifureta Itsuka (A Wonderful Someday)",
+      "artist": "Chima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "My Beloved",
+      "artist": "Sarah Àlainn",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

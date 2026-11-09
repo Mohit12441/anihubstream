@@ -1,0 +1,790 @@
+{
+  "id": "fullmetal-alchemist",
+  "title": "Fullmetal Alchemist",
+  "native": "鋼の錬金術師",
+  "year": 2003,
+  "rating": 7.9,
+  "season": "Fall 2003",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx121-zjmixZ428Mwv.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx121-zjmixZ428Mwv.png",
+  "accent": "#e4bb43",
+  "synopsis": "The rules of alchemy state that to gain something, one must lose something of equal value. Alchemy is the process of taking apart and reconstructing an object into a different entity, with the rules of alchemy to govern this procedure. However, there exists an object that can bring any alchemist above these rules, the object known as the Philosopher's Stone. The young Edward Elric is a particularly talented alchemist who through an accident years back lost his younger brother Alphonse and one of his legs. Sacrificing one of his arms as well, he used alchemy to bind his brother's soul to a suit of armor. This lead to the beginning of their journey to restore their bodies, in search for the legendary Philosopher's Stone.\n\nNote: Episodes 11, 12 and 37 were adapted from the light novel \"Fullmetal Alchemist: The Land of Sand.\"",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fullmetal-alchemist-hir9e7",
+    "mal": 121,
+    "anilist": 121,
+    "kitsu": 100
+  },
+  "skip_key_id": 121,
+  "skip_key_space": "mal",
+  "episode_total": 51,
+  "added_at": null,
+  "search_text": "fullmetal alchemist 鋼の錬金術師 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "To Challenge the Sun",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3015/original.jpg",
+      "synopsis": "On their hunt for the Philosopher's Stone, Ed and Al come upon a strangely prosperous city in the middle of the desert. They find that the leader is a priest who preforms miracles and resurrections, much to the delight of the citizens. Are these Acts of God, as Father Cornello claims, or is he using the power of the Philosopher's Stone to boost his Alchemy? Ed and Al investigate to find the truth.",
+      "airdate": "2003-10-04",
+      "markers": [],
+      "external_id": "3015"
+    },
+    {
+      "n": 2,
+      "title": "Body of the Sanctioned",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3016/original.jpg",
+      "synopsis": "Ed and Al discover the truth behind Father Cornello's miracles. However, if they reveal this truth, they will destroy the hopes and dreams of Rose and the other citizens of the city. Would it be more compassionate to withhold the truth and allow them to continue to live comfortably in the deception? First, though, they must survive Father Cornello's Alchemy before they can make that decision.",
+      "airdate": "2003-10-11",
+      "markers": [],
+      "external_id": "3016"
+    },
+    {
+      "n": 3,
+      "title": "Mother...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3017/original.jpg",
+      "synopsis": "Ed and Al grew up at a time when their country was at war. While news from the front devastated friends and neighbors, their mother was a pillar of strength. She made them feel safe in an uncertain time, and encouraged their gifts of Alchemy. When she died, Ed and Al were determined to bring her back. They believed they had nothing left to loose, but they didn't know how wrong they were.",
+      "airdate": "2003-10-18",
+      "markers": [],
+      "external_id": "3017"
+    },
+    {
+      "n": 4,
+      "title": "A Forger's Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3018/original.jpg",
+      "synopsis": "While traveling to Central City to become State Alchemist, Ed and Al learn of a man named Majihal living in a nearby town. They remember that this Alchemist had written to their father about ways to create human life. Eager to learn more, Ed and Al travel to the town to meet Majihal. When they get there, however, they learn that the town is being hunted by a ghostly woman who is taking the souls of young girls. Majihal banishes the ghost, but is he hiding something more sinister?",
+      "airdate": "2003-10-25",
+      "markers": [],
+      "external_id": "3018"
+    },
+    {
+      "n": 5,
+      "title": "The Man with the Mechanical Arm",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3019/original.jpg",
+      "synopsis": "When the train the brothers are taking to Central is hijacked by terrorists, Ed and Al learn that General Haruko and his family are also on board. Bald, the leader of the terrorists, threatens to kill the hostages unless their demands are met. Ed meets the challenge to free everyone, but he soon discovers that he and Bald have something in common; an Automail arm.",
+      "airdate": "2003-11-01",
+      "markers": [],
+      "external_id": "3019"
+    },
+    {
+      "n": 6,
+      "title": "The Alchemy Exam",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3020/original.jpg",
+      "synopsis": "Ed and Al finally arrive in Central City. Needing a place to stay, Mustang places the boys under the supervision of 'Sewing-Life Alchemist' Shou Tucker. Awed by Tucker's mansion and vast library of Alchemy books, the brothers spend some happy days of study and good fun. All their work leads up to one event -- the Alchemy Exam.",
+      "airdate": "2003-11-08",
+      "markers": [],
+      "external_id": "3020"
+    },
+    {
+      "n": 7,
+      "title": "Night of the Chimera's Cry",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3021/original.jpg",
+      "synopsis": "Now that Edward is an official State Alchemist, the brothers can begin their quest to restore their bodies. However, something about Tucker's chimera experiments begin to trouble Ed. As he investigates, Ed begins to see a sinister side to alchemy. Now he and Al must stop a friend from committing the unthinkable.",
+      "airdate": "2003-11-15",
+      "markers": [],
+      "external_id": "3021"
+    },
+    {
+      "n": 8,
+      "title": "The Philosopher's Stone",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3022/original.jpg",
+      "synopsis": "Angered over the events at the Tuckers, Edward resigns his position as a State Alchemist. Meanwhile, Winry arrives in the city for a visit and to congratulate Ed on his commission. With a serial killer still on the loose, and Hughes still at a lost for viable leads, will Winry become his next victim?",
+      "airdate": "2003-11-22",
+      "markers": [],
+      "external_id": "3022"
+    },
+    {
+      "n": 9,
+      "title": "Be Thou for the People (\"The Dog of the Military's Silver Watch\")",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3023/original.jpg",
+      "synopsis": "Mustang sends Ed on assignment to inspect a small mining colony out in the East provinces. Once there, he and Al are mistaken as tourists and are greeted by the local hotel owner. However, once they learn Ed is a State Alchemist, he is attacked and tossed out of the hotel. Ed quickly learns why; the town is being taxed beyond its limits by a crooked lieutenant and his Alchemist. Will Ed do what is right and save the colony from this tyrant?",
+      "airdate": "2003-11-29",
+      "markers": [],
+      "external_id": "3023"
+    },
+    {
+      "n": 10,
+      "title": "The Phantom Thief",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3024/original.jpg",
+      "synopsis": "Not wanting to face Mustang with the news that they still have no new information about the Philosopher's Stone, Ed and Al decide to vist a small tourist town on the pretext of learning more about the Stone. While there, they become involved in the manhunt for a \"\"Robin Hood\"\"-like theif. While Ed has his doubts about her true agenda, does she have any real knowledge about the Stone's whereabouts?",
+      "airdate": "2003-12-06",
+      "markers": [],
+      "external_id": "3024"
+    },
+    {
+      "n": 11,
+      "title": "The Other Brothers Elric: Part 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3025/original.jpg",
+      "synopsis": "Following a rumor, Ed and Al travel to Xenotime where they hope to find the two alchemists who are creating the Philosopher's Stone. When they reach the village, however, they discover two boys masquerading as the Elric Brothers. Who are these boys, and what is this â€˜red water' they are creating?",
+      "airdate": "2003-12-13",
+      "markers": [],
+      "external_id": "3025"
+    },
+    {
+      "n": 12,
+      "title": "The Other Brothers Elric: Part 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3026/original.jpg",
+      "synopsis": "When Ed and Al discover the source of the strange disease that has stricken Xenotime, they also find out the history behind the Tringham Brother's father and his involvement with the red water. This news does not please Mugear, who had commissioned the Tringham Brothers to make the Philosopher's Stone. He is determined to stop the real Elric Brothers from interfering with his work, and with the red water he may be able to do it.",
+      "airdate": "2003-12-20",
+      "markers": [],
+      "external_id": "3026"
+    },
+    {
+      "n": 13,
+      "title": "Fullmetal vs Flame",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3027/original.jpg",
+      "synopsis": "The annual Alchemy Assessment is fast approaching, and Ed still has not have much success with his search for the Philosopher's Stone. Tired of Mustang's constant rebuke, and with nothing substantial to show for his Assessment, Ed comes up with a solution to settle both problems: Challenge the Colonel to a duel -- The Flame Alchemist against the Fullmetal Alchemist.",
+      "airdate": "2003-12-27",
+      "markers": [],
+      "external_id": "3027"
+    },
+    {
+      "n": 14,
+      "title": "Destruction's Right Hand",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3028/original.jpg",
+      "synopsis": "Following Mustang's tip, Ed and Al travel to Marcoh's village to ask him about the Philosopher's Stone. However, before they are able to learn more about the Stone from the Doctor, they are interrupted by the arrival of Brigadier Basque Gran, who arrests the doctor for desertion during the Eastern War. Ed chases after the General's car, determined not to let the General get away with another cover up. They are all surprised, however,  when the car is stopped by the sudden appearance of the Scarred Man.",
+      "airdate": "2004-01-10",
+      "markers": [],
+      "external_id": "3028"
+    },
+    {
+      "n": 15,
+      "title": "The Ishbal Massacre",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3029/original.jpg",
+      "synopsis": "As the Strong Arm Alchemist holds off Scar, he realizes that the killer is from Ishbal. Meanwhile, as Ed, Al and Doctor Marcoh make their way through the village, the Doctor recounts the Ishbal â€˜Rebellion' and how he and the other State Alchemist were ordered to level the entire city using the Red Stones. The events still haunt Marcoh, Mustang and Armstrong to this day.",
+      "airdate": "2004-01-17",
+      "markers": [],
+      "external_id": "3029"
+    },
+    {
+      "n": 16,
+      "title": "That Which Is Lost",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3030/original.jpg",
+      "synopsis": "Injured from their latest battle, the brothers decide to return to Risembool for repairs. They make plans to meet up with Winry, but along the way a mixup occurs and Al vanishes from one of the train stations. Now Al must make a detour to find him, and in the process question his deepest held belief.",
+      "airdate": "2004-01-24",
+      "markers": [],
+      "external_id": "3030"
+    },
+    {
+      "n": 17,
+      "title": "House of the Waiting Family",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3031/original.jpg",
+      "synopsis": "The Elrics finally reach their childhood hometown of Risembool. As the brothers bide their time while Winry and her grandmother make their repairs, they sort through the ashes of their old home. But as Ed makes a visit to their mother's grave, Al comes to a disturbing realization about himself.",
+      "airdate": "2004-01-31",
+      "markers": [],
+      "external_id": "3031"
+    },
+    {
+      "n": 18,
+      "title": "Marcoh's Notes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3032/original.jpg",
+      "synopsis": "Ed is overjoyed to be back in Central, and can't wait to begin his search for Marcoh's notes in the Central Library's First Branch. Unfortunately, they learn that the First Branch was completely destroyed the night before. To add to their troubles, witnesses had seen Scar in the vicinity before the fire. Now, coupled with a new pair of guards (one of whom is insistent that they go somewhere safer) the brothers must find another way to discover the secret of the Philosopher's Stone.",
+      "airdate": "2004-02-07",
+      "markers": [],
+      "external_id": "3032"
+    },
+    {
+      "n": 19,
+      "title": "The Truth Behind Truths",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3033/original.jpg",
+      "synopsis": "Ed and Al have spent years searching for the Philosopher's Stone. After studying Marco's notes, however, Al learns of the grusome secret behind its power. With this knowledge, can the Elric Brothers continue with their quest to be whole again?",
+      "airdate": "2004-02-14",
+      "markers": [],
+      "external_id": "3033"
+    },
+    {
+      "n": 20,
+      "title": "Soul of the Guardian",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3034/original.jpg",
+      "synopsis": "The battle in the Fifth Laboratory continues. Separated, each now face a formidable foe: Ed faces off with Number 48 while Al deals with the insane Number 66. After an exchange with Number 66, though, Al soon comes to question his very existence.",
+      "airdate": "2004-02-21",
+      "markers": [],
+      "external_id": "3034"
+    },
+    {
+      "n": 21,
+      "title": "The Red Glow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3035/original.jpg",
+      "synopsis": "The battle between Al and Number 66 is interrupted by the appearance of Scar. As the three square off, Number 66 triggers an explosion that causes yet more trouble for everyone involved. Meanwhile, Ed and Number 48 have reached the deepest parts of the Fifth Laboratory. Now, Ed faces a bigger threat as his morality is challenged by someone from his past; will he give in to the temptation of the power he has been seeking, or will he hold true to his beliefs?",
+      "airdate": "2004-02-28",
+      "markers": [],
+      "external_id": "3035"
+    },
+    {
+      "n": 22,
+      "title": "Created Human",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3036/original.jpg",
+      "synopsis": "Ed reaches the heart of the Fifth Laboratory and learns that it was used as a biological research facility for the military. There, he is nearly fooled into doing an unspeakable act. He manages to escape, but then discovers that Envy has taken Al hostage. Meanwhile, Hughes has ordered Armstrong and the others to find out what is going on in the Laboratory.",
+      "airdate": "2004-03-06",
+      "markers": [],
+      "external_id": "3036"
+    },
+    {
+      "n": 23,
+      "title": "Heart of Steel",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3037/original.jpg",
+      "synopsis": "Ed and Al once again find themselves in a hospital. Winry has traveled to Central to make repairs, but is angered when the brothers don't want to share their experiences with her. As they recuperate, Al ponders his existence and hammers Ed with questions. Who is he? Is his memories of being human real, or is it all a lie?",
+      "airdate": "2004-03-13",
+      "markers": [],
+      "external_id": "3037"
+    },
+    {
+      "n": 24,
+      "title": "Bonding Memories",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3038/original.jpg",
+      "synopsis": "Still troubled by the uncertainty of his own existence, Alphonse runs away from Ed and Winry. Searching for the truth, he meets two boys who lead him to the hidden Ishbalen Encampment, where survivors of the Ishbal Massacre have been living. There, he finds a recovering Scar. Unfortunately, mercenaries arrive and slaughter many of the Ishbalens. Al finds himself helping Scar as they defend the Encampment and the rest of the survivors.",
+      "airdate": "2004-03-20",
+      "markers": [],
+      "external_id": "3038"
+    },
+    {
+      "n": 25,
+      "title": "Words of Farewell",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3039/original.jpg",
+      "synopsis": "Ed announces that he and Al have decided to stop searching for the Philosopher's Stone. Boarding a train headed South, they leave Central to visit their old teacher. Meanwhile, Hughes has discovered the truth behind the Fifth Laboratory -- a truth that could topple the Government.",
+      "airdate": "2004-03-27",
+      "markers": [],
+      "external_id": "3039"
+    },
+    {
+      "n": 26,
+      "title": "Her Reason",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3040/original.jpg",
+      "synopsis": "Rush Valley: the Automail capital of the world. Here the sight of metal limbs is commonplace. While browsing through the village, Ed, Al and Winry meet a tough girl named Paninya. With her right arm and legs made of a special automail, she can hold her own in a fight. Watching her, Winry asks herself a tough question: Why stick with Ed if he doesn't seem to care about her?",
+      "airdate": "2004-04-03",
+      "markers": [],
+      "external_id": "3040"
+    },
+    {
+      "n": 27,
+      "title": "Teacher",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3041/original.jpg",
+      "synopsis": "Izumi: a skillful alchemist with an iron will and the Elric Brother's childhood teacher. She is the one person Ed and Al have both tried to avoid. Now, their past has caught up with them when she finds them at Rush Valley. Enraged to find out what they have become, she takes them back to her hometown for an interrogation they won't soon forget.",
+      "airdate": "2004-04-10",
+      "markers": [],
+      "external_id": "3041"
+    },
+    {
+      "n": 28,
+      "title": "All is One, One is All",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3042/original.jpg",
+      "synopsis": "Izumi sends the brothers to the savage Island of Yock. Ed and Al remember when, as children, when they were dumped on the very same island. With no food or shelter, they are left with only the cryptic words of Izumi: \"\"One is All, All is One.\"\" Now, they must relearn the lessons of the past to survive their latest test.",
+      "airdate": "2004-04-17",
+      "markers": [],
+      "external_id": "3042"
+    },
+    {
+      "n": 29,
+      "title": "The Untainted Child",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3043/original.jpg",
+      "synopsis": "As Ed and Al get ready to leave Yock Island, a strange boy wanders out of the forest. Suffering from amnesia, he can't remember how he got there. Amazingly, he is a gifted alchemist; not only can he perform alchemy, but, like Ed, he doesn't need a transmutation circle. He also has other amazing abilities, compelling Izumi to take the child in. Ed, however,  is suspicious of the boy's sudden appearance, and doesn't believe he is as innocent as he appears to be.",
+      "airdate": "2004-04-24",
+      "markers": [],
+      "external_id": "3043"
+    },
+    {
+      "n": 30,
+      "title": "Assault on South Headquarters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3044/original.jpg",
+      "synopsis": "Under suspicion of being a Homunculus conspirator, the strange wild boy from Yock is taken into custody by Lt. Col. Archer. Enraged by the arrest, Izumi takes on the military with the full force of her alchemic powers. Meanwhile, Scar has been spotted in the Southern Slums by a retired military officer.",
+      "airdate": "2004-05-01",
+      "markers": [],
+      "external_id": "3044"
+    },
+    {
+      "n": 31,
+      "title": "Sin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3045/original.jpg",
+      "synopsis": "Izumi has successfully escaped with the boy, but to no avail--Envy had already told the child the truth about himself, and his personality is changing. With all her secrets exposed, Izumi makes plans to atone for her sins. Ed and Al rush to intervene before it's too late.",
+      "airdate": "2004-05-08",
+      "markers": [],
+      "external_id": "3045"
+    },
+    {
+      "n": 32,
+      "title": "Dante of the Deep Forest",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3046/original.jpg",
+      "synopsis": "After battling Wrath, Izumi decides it's time Ed and Al meets with her old Master, Dante: the alchemist who taught her everything she knows, and who also knew Ed and Al's father, Hohenheim Elric. However, they are delayed yet again as Greed decides to take on the Elric Brothers.",
+      "airdate": "2004-05-15",
+      "markers": [],
+      "external_id": "3046"
+    },
+    {
+      "n": 33,
+      "title": "Al, Captured",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3047/original.jpg",
+      "synopsis": "Al is kidnapped by Greed and his gang, leaving Ed frantically searching for him. Izumi and Sigu join him in the search, and in the process Izumi discovers how much her young proteges have learned on their own.",
+      "airdate": "2004-05-29",
+      "markers": [],
+      "external_id": "3047"
+    },
+    {
+      "n": 34,
+      "title": "Theory of Avarice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3048/original.jpg",
+      "synopsis": "The battle to rescue Al is in full force, as Major Armstrong takes to the sewers to fight off Greed's men while Ed remains on the surface in a showdown with Greed and the Military. As Ed and Greed face off, Ed must make the ultimate decision: is he willing to take someone's life to save his brother?",
+      "airdate": "2004-06-05",
+      "markers": [],
+      "external_id": "3048"
+    },
+    {
+      "n": 35,
+      "title": "Reunion of the Fallen",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3049/original.jpg",
+      "synopsis": "In the aftermath of the battle between Ed and Greed, Lust finds herself pondering the meaning of life: Where did she come from? And where will she go when she dies? As she questions herself, she is surprised to see a familiar face; a man whom she met two years earlier. She had helped him use alchemy to save a town that was plagued by a strange illness.  Meanwhile, Ed and company search for an Ishbalan outpost in hopes of finding the more information about the Philosopher's Stone.",
+      "airdate": "2004-06-12",
+      "markers": [],
+      "external_id": "3049"
+    },
+    {
+      "n": 36,
+      "title": "The Sinner Within",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3050/original.jpg",
+      "synopsis": "Ed, Al, and Winry continue on their travel to Ishbal in hopes of finding out how they made the fabled philosopherâ€™s stone without alchemy.  Along the way the trio uncovers more and more about the truth of the Ishbal war.  But are Ed and Al ready to hear it?   Meanwhile Winry receives a startling revelation about the death of her parents.",
+      "airdate": "2004-06-19",
+      "markers": [],
+      "external_id": "3050"
+    },
+    {
+      "n": 37,
+      "title": "The Flame Alchemist, The Bachelor Lieutenant & The Mystery of Warehouse 13",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3051/original.jpg",
+      "synopsis": "Under orders from Internal Affairs to investigate Colonel Mustang, Second Lieutenant Havoc compiles a journal on the Colonel's activities. As he, Breda, Falman and Fuery follow Mustang and discover more about him then they expected. Meanwhile, Sciezka finds an opportunity to further her own investigation into Hughes death.",
+      "airdate": "2004-06-26",
+      "markers": [],
+      "external_id": "3051"
+    },
+    {
+      "n": 38,
+      "title": "With the River's Flow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3052/original.jpg",
+      "synopsis": "After crashing the vehicle Winry left them, Ed and Al are forced to continue their journey to Ishbal on foot. The brother's tempers flare and they end up separated in a small town. Meanwhile, back at Central, Winry and Sciezka join forces to find the cause behind Hughes death.",
+      "airdate": "2004-07-03",
+      "markers": [],
+      "external_id": "3052"
+    },
+    {
+      "n": 39,
+      "title": "Secret of Ishbal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3053/original.jpg",
+      "synopsis": "As Ed, Al and Marta continue their journey to Ishbal, they discuss the history and events that led up to the Isbalan Civil War. Through Marta, the brothers learn the truth behind the conflict. Meanwhile, Archer arrives at Lior to quell the new civil war.",
+      "airdate": "2004-07-10",
+      "markers": [],
+      "external_id": "3053"
+    },
+    {
+      "n": 40,
+      "title": "The Scar",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3054/original.jpg",
+      "synopsis": "Ed confronts Scar in Lior and learns his objective for being in the city. When arguing against the plan doesn't work, Ed finds himself battling Scar yet again. In the midst of the battle, though, they are interrupted by Lust and Gluttony. After stopping them, they are again interrupted by two more people from Ed's past who persuade Ed to listen to Scar's story.\n\nMeanwhile, Marta and Al are captured by Kimbley and taken back to Regional Headquarters.",
+      "airdate": "2004-07-17",
+      "markers": [],
+      "external_id": "3054"
+    },
+    {
+      "n": 41,
+      "title": "Holy Mother",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3055/original.jpg",
+      "synopsis": "At the brink of another civil war, Scar justifies his intentions for Lior to Ed. However, after learning from Lyra what Scar intends to do to the Military, he sends an urgent message to Mustang to stay out of the city. Meanwhile, back at Regional Headquarters, Al ponders Martel's warning as the Military gets ready for battle.",
+      "airdate": "2004-07-24",
+      "markers": [],
+      "external_id": "3055"
+    },
+    {
+      "n": 42,
+      "title": "His Name is Unknown",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3056/original.jpg",
+      "synopsis": "Al’s body has been transmuted into a bomb by Kimblee just before his death, and Scar, in a fit of compassion, prepares Al to be saved by turning him into the Philosopher’s Stone. Scar sacrifices his right arm, melding it with Al, and making Al a container waiting for the army’s invasion of the city. Ed manages to fight off the two homunculi and with Ryla and Rose, they escape, but Ed knows he has to go back, and returns to the city. Mustang, using information gathered by Armstrong in his mock service of Archer, goes down to Tucker’s research room to put a stop to the madness. They are beset by chimeras and though they have little trouble fighting them off, Archer gets away. Before anyone can stop him, he sends the army into Lior. There Scar sacrifices himself to transmute the army into Al’s body, making him the Philosopher’s Stone.",
+      "airdate": "2004-07-24",
+      "markers": [],
+      "external_id": "3056"
+    },
+    {
+      "n": 43,
+      "title": "The Stray Dog",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3057/original.jpg",
+      "synopsis": "Now that Al has actually become the Philosopher's Stone, the brothers are forced to flee, knowing well that the Homunculus would soon be after them. The Fuhrer, in turn, places orders for the brothers to be captured. Mustang takes this responsibility, knowing that if they are captured by anyone else, they would surely not get the opportunity to explain themselves. Winry and Seska have gone to Rizenbul to lay low for a while after their scare at the military base. To their surprise, the mysterious stranger on the train turned out to be none other than Hoenheim, the Elric's father. They receive word of the hunt of Ed and Al, and the two go to try to help. Ed and Al, for unclear reasons, are hurrying back to their hometown, knowing that the military would surely be there, but they are not dissuaded, and trouble brews as Mustang's soldiers get closer and closer.",
+      "airdate": "2004-07-31",
+      "markers": [],
+      "external_id": "3057"
+    },
+    {
+      "n": 44,
+      "title": "Hohenheim of Light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3058/original.jpg",
+      "synopsis": "Mustang has finally caught up to Ed and Al, but he explains that he is not there to apprehend them, but to find out what was really happening. They explain the Fuhrer''s identity, to the shock of everyone present. This prompts them to develop a plan for testing the truth of the claim. They arrive in Rizenbul to find Hohenheim and Al, despite his brother''s protests, spends as much time as he can with his long lost father. The homunculus are hiding out in the church that Ryla has taken Rose to, and it becomes apparent in a fabulous plot twist, that ''him'' that the homunculus are always talking about, is in fact Ryla, who is in fact Dante. The plot thickens as Hohenheim storms their sanctuary, having heard Dante''s name from the brothers. His skill in alchemy is incredible, even enough so to scare Gluttony. Ryla faces off with him using her own alchemy, and action ensues.",
+      "airdate": "2004-08-07",
+      "markers": [],
+      "external_id": "3058"
+    },
+    {
+      "n": 45,
+      "title": "A Rotted Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3059/original.jpg",
+      "synopsis": "Everything begins to come together in this episode. Hohenheim has confronted Dante and the Homunculus, but he was taken by surprise when the Homunculus of his former wife appears, and he is captured by Dante and sent to the other side of the mysterious gate. Mustang confronts the military court, not about the Fuhrer yet, but about his secretary Juliet Douglass. His words revealed him to the Fuhrer, who orders him to the front lines on the north, to make it easy to dispose of him when the time comes. Ed and Al are on the run, disguising themselves. They don't make it very far before being discovered, but they were far enough for Ed to find Sensei, who knows of his plans when he asks for a piece of her child's corpse. Al, trusted to stay in hiding, of course runs off and meets with Tucker. He reveals Nina's motionless body to Al, who is taken by it, and offers to use himself to help her.",
+      "airdate": "2004-08-21",
+      "markers": [],
+      "external_id": "3059"
+    },
+    {
+      "n": 46,
+      "title": "Human Transmutation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3060/original.jpg",
+      "synopsis": "Al has gone to meet Tucker, and having seen Nina's lifeless body, agreed to help him so that Tucker will teach Al to use the Philosopher's Stone. Tucker is too eager to try to resurrect Nina, though, and Al is used as a component in the transmutation. Ed learns more of Dante's past as he and Sensei mill about her old mansion and talk about their experiences with her. Sensei discovered a love letter from Hohenheim to Dante which was dated nearly 400 years ago. Ed goes back to his room to find Al gone, and Lust and Wrath waiting for him there. An unlikely alliance occurs though, as Lust's mistrust of Dante leads her to cooperate with Ed in hopes that he will make her human again. They rush off to find Al at Tucker's old research lab. They are still on their way when Sloth arrives though, and tensions are high as the episode ends showing Al''s body corroded by Tucker's transmutation.",
+      "airdate": "2004-08-28",
+      "markers": [],
+      "external_id": "3060"
+    },
+    {
+      "n": 47,
+      "title": "Sealing the Homunculus",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3061/original.jpg",
+      "synopsis": "Ed discovers Sloth and Al at Tucker's research lab. He tries to convince Al that the Homunculus is not their mother, and not to be trusted, but Al is pretty sure that it'll be fine. So Ed has to do things his way. He reveals the pieces of his mother's corpse that he dug up in Rizenbul, stunning Sloth, and giving him a chance to seal her forever. Lust had drawn a sealing transmutation circle with her claws, so it could not be destroyed, and Ed lured Sloth into it. The deal was almost done, when Al in his infinite wisdom decided that he was going to save the homunculus, so he threw the box containing a piece of his mother out the window, thus freeing Sloth. Lust held her at bay while Ed went to get the box, but Wrath was waiting outside, and decided to absorb the box into himself so Ed couldn't get it back. More and more it became clear that the brothers would not win this battle so easily, especially with Al helping out the Homunculus. Sloth freed herself from the circle, and while Ed chased Sloth, who was now controlling Al's body from the inside, Wrath and Lust squared off. Lust is easily destroyed though, as Wrath found her locket and used it to stop her on the transmutation circle. Wrath killed Lust and headed off to find Sloth. Fortunately for the brothers, who were not in great shape at this point, Wrath was a bit inexperienced, and foolishly merged himself with Sloth. Having the box inside of him, this stopped them both and gave Ed his chance to destroy his creation, Sloth, once and for all.",
+      "airdate": "2004-09-04",
+      "markers": [],
+      "external_id": "3061"
+    },
+    {
+      "n": 48,
+      "title": "Goodbye",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3062/original.jpg",
+      "synopsis": "The army’s camp in the north, led by Armstrong and headed by Havoc posing as Mustang, starts a military coup. This distracts the attention of the Fuhrer and his minions, while the real Mustang plots his attack on the Fuhrer in Central. Al has been abducted by Envy. Sensei and Ed are forced to pursue the only lead they have on the Homunculi, the Fuhrer himself. They assault the headquarters to find the Fuhrer has gone home early, but they are fortunate in their timing, and are able to help the Tringham brothers (imposter Elrics) escape from prison there. Ed goes off to fight the Fuhrer while sensei battles with the new and improved Frank Archer.",
+      "airdate": "2004-09-11",
+      "markers": [],
+      "external_id": "3062"
+    },
+    {
+      "n": 49,
+      "title": "The Other Side of the Gate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3063/original.jpg",
+      "synopsis": "Alphsone has been captured and Roy is about to begin the last part of his plan. Edward, meanwhile is traveling deeper and deeper under Central City to find the one who controls the homunculi and ultimatly, his brother.",
+      "airdate": "2004-09-18",
+      "markers": [],
+      "external_id": "3063"
+    },
+    {
+      "n": 50,
+      "title": "Death",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3064/original.jpg",
+      "synopsis": "Ed now joins his father on the other side of the gate which seems to be a lot like our world but what will Ed do there and how will he get back to the world he knows?",
+      "airdate": "2004-09-25",
+      "markers": [],
+      "external_id": "3064"
+    },
+    {
+      "n": 51,
+      "title": "Laws and Promises",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3065/original.jpg",
+      "synopsis": "It is the very end, what will become of Ed and Al? Will the dark plot of the villians finally be realized? It all comes down to the wire in the final instalment of the FMA anime.",
+      "airdate": "2004-10-02",
+      "markers": [],
+      "external_id": "3065"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Chasing hearts",
+      "artist": "miwa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "GOOD LUCK MY WAY",
+      "artist": "L'Arc-en-Ciel",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "again",
+      "artist": "YUI",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "嘘 - Uso (Lie)",
+      "artist": "SID",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hagane no Kokoro",
+      "artist": "Romi Paku, Rie Kugimaya and Megumi Toyoguchi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Link",
+      "artist": "L'Arc~en~Ciel",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lost Heaven",
+      "artist": "L'Arc~en~Ciel",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Melissa",
+      "artist": "Porno Graffitti",
+      "episodes": "2-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Melissa",
+      "artist": "Porno Graffiti",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Hologram",
+      "artist": "NICO Touches the Walls",
+      "episodes": "15-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Let it out",
+      "artist": "Miho Fukuhara",
+      "episodes": "15-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Ready Steady Go",
+      "artist": "L'Arc-en-Ciel",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kesenai Tsumi (Indelible Sin)",
+      "artist": "Nana Kitade",
+      "episodes": "2-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Golden Time Lover",
+      "artist": "Sukima Switch",
+      "episodes": "27-38"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Tsunai Da Te (つないだ手; Tied Hands)",
+      "artist": "Lil'B",
+      "episodes": "27-38"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Undo",
+      "artist": "Cool Joke",
+      "episodes": "26-41"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Tobira no Mukō e (To the Other Side of the Door)",
+      "artist": "YeLLOW Generation",
+      "episodes": "14-24"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Period",
+      "artist": "Chemistry",
+      "episodes": "39-50"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Shunkan Sentimental",
+      "artist": "SCANDAL",
+      "episodes": "39-50"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Rewrite",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "episodes": "42-51"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Motherland",
+      "artist": "Crystal Kay",
+      "episodes": "26-41"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Rain",
+      "artist": "SID",
+      "episodes": "51-63"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "RAY OF LIGHT",
+      "artist": "Shoko Nakagawa",
+      "episodes": "51-62"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "I Will",
+      "artist": "Sowelu",
+      "episodes": "42-50"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Rain",
+      "artist": "SID",
+      "episodes": "63"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Hologram",
+      "artist": "NICO Touches the Walls",
+      "episodes": "64"
+    }
+  ],
+  "relations": []
+}

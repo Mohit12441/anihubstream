@@ -1,0 +1,132 @@
+{
+  "id": "golden-boy",
+  "title": "GOLDEN BOY",
+  "native": "GOLDEN BOY さすらいのお勉強野郎",
+  "year": 1995,
+  "rating": 7.8,
+  "season": "Fall 1995",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx268-0T6bdW9CzVvz.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx268-0T6bdW9CzVvz.png",
+  "accent": "#a24bff",
+  "synopsis": "Kintarou Oe doesn't look like it, but he is a genius who completed all his university courses and then quit before graduating. He becomes a wandering student, going from place to place on his bicycle, seeking to learn what he can about life, the world, and women. He is willing and able to do any job he has to prove himself. His travels take him to a variety of locations and a variety of women, each who learns to love the hardworking guy, but not before he can run off.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "golden-boy-0tt2fz",
+    "mal": 268,
+    "anilist": 268,
+    "kitsu": 243
+  },
+  "skip_key_id": 268,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": null,
+  "search_text": "golden boy golden boy さすらいのお勉強野郎 ova finished",
+  "genres": [
+    "adventure",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Computer Studies",
+      "runtime": "29:00",
+      "runtime_seconds": 1740,
+      "thumb": "",
+      "synopsis": "Kintaro obtains a janitorial job at an all-woman software firm led by the Ferrari-driving, skimpily clad Madame President. An electrical accident jeopardizes the firm's future, allowing Kintaro to put his newly acquired programming skills to the test.",
+      "airdate": "1995-10-27",
+      "markers": [],
+      "external_id": "6891"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "29:00",
+      "runtime_seconds": 1740,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "6892"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "29:00",
+      "runtime_seconds": 1740,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "6893"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "29:00",
+      "runtime_seconds": 1740,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "6894"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "29:00",
+      "runtime_seconds": 1740,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "6895"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "29:00",
+      "runtime_seconds": 1740,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "6896"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Golden Boy",
+      "artist": "Joyo Katayanagi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "My Golden Boy",
+      "artist": "Computerjockeys [German broadcast]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Study A Go! Go!",
+      "artist": "Golden Girls",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

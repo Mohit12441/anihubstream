@@ -1,0 +1,190 @@
+{
+  "id": "honey-lemon-soda",
+  "title": "Honey Lemon Soda",
+  "native": "ハニーレモンソーダ",
+  "year": 2025,
+  "rating": 7,
+  "season": "Winter 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx175443-QpmlCJt47Rp9.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx175443-QpmlCJt47Rp9.jpg",
+  "accent": "#e4d643",
+  "synopsis": "In middle school, Uka Ishimori was nicknamed “Stone.”\n\nIn order to change herself, she enrolled in Hachimitsu High School, known for its culture of student liberty. Seated in at the desk next to her in the same class is Kai Miura, a coolly freewheeling boy with lemon-colored hair. In truth, Uka met Kai once in middle school, and decided to attend Hachimitsu based on a single word he said to her.To Uka, the popular Kai is a distant presence.\n\nYet somehow, Kai starts to look after Uka. With Kai encouraging her, Uka gradually begins to fit in with her classmates…\n\nBut...Uka’s world is gradually changing with Kai’s presence. —\n\nNow, I am in the center of the endlessly spreading light.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "honey-lemon-soda-f4o5zw",
+    "mal": 58271,
+    "anilist": 175443,
+    "kitsu": 48587
+  },
+  "skip_key_id": 58271,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "honey lemon soda ハニーレモンソータ tv finished",
+  "genres": [
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Because I Met You",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/364551/thumbnail/155fd032501713bb6d0247f4bfa1fbfc.jpg",
+      "synopsis": "After a bad experience in junior high, where her social anxiety was worsened by bullying, Uka Ishimori decides to change herself and the way she lives her life. Her first step is applying to Hachimitsu High School. Its attractions? A more relaxed school atmosphere, and the gruff but handsome Kai Miura.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-08",
+      "markers": [],
+      "external_id": "364551"
+    },
+    {
+      "n": 2,
+      "title": "Turning into a Treasure",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/364552/thumbnail/6ca15ee63a26a033a0d8ee7ce02a7326.jpg",
+      "synopsis": "Uka displays some hidden talents that even she didn't know about. Meanwhile, Kai is being strangely mean to her for some reason... Is it a misguided attempt to keep her safe?\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-15",
+      "markers": [],
+      "external_id": "364552"
+    },
+    {
+      "n": 3,
+      "title": "Our Little Secret",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/364553/thumbnail/a934e770955972d1a80df9820b0b1721.jpg",
+      "synopsis": "Uka's happier than she ever dreamed. It's all new friends and new miracles until an incident on a school trip.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-22",
+      "markers": [],
+      "external_id": "364553"
+    },
+    {
+      "n": 4,
+      "title": "However Distant We May Be",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/364554/thumbnail/d1c74427b9777c22e359fbcd92c33590.jpg",
+      "synopsis": "Uka struggles to open up to her class about her past. A friend of Kai's undermines her confidence further.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-29",
+      "markers": [],
+      "external_id": "364554"
+    },
+    {
+      "n": 5,
+      "title": "A Great Person",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/364555/thumbnail/66df0eb2cacb7036bafcbfa01a631b4d.jpg",
+      "synopsis": "Uka has a revelation about her own psychology thanks to Serina, Kai's ex-girlfriend.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-05",
+      "markers": [],
+      "external_id": "364555"
+    },
+    {
+      "n": 6,
+      "title": "In the Future, Too...",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/364556/thumbnail/a48c5f24167ee6716cb09ee8b64911a6.jpg",
+      "synopsis": "Uka and her friends are working hard on the culture festival. She's determined to make their café a success!\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-12",
+      "markers": [],
+      "external_id": "364556"
+    },
+    {
+      "n": 7,
+      "title": "I'm Sorry I Love Him",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/364557/thumbnail/9818d345ab6db845d58475d72b818d80.jpg",
+      "synopsis": "Uka and Serina struggle to open up about their feelings. Can they figure it out over summer break?\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-19",
+      "markers": [],
+      "external_id": "364557"
+    },
+    {
+      "n": 8,
+      "title": "Summon the Courage",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/364558/thumbnail/8005599cb189ddf63860e1bcec86fdcf.jpg",
+      "synopsis": "It's summer break! Uka, Serina, and Kai all summon their courage and communicate.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-26",
+      "markers": [],
+      "external_id": "364558"
+    },
+    {
+      "n": 9,
+      "title": "Goodbye, Bumbling Self",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/364559/thumbnail/200a585385a1bc1a1282994c4c26cafc.jpg",
+      "synopsis": "Uka's father is concerned about Hachimitsu High again. Can he be convinced that it's the right place for her?\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-05",
+      "markers": [],
+      "external_id": "364559"
+    },
+    {
+      "n": 10,
+      "title": "The Side of You No One Knows",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/364560/thumbnail/de4869936daf2b72373a505ce9097839.jpg",
+      "synopsis": "Uka ponders the nature of her relationship with Kai. What are they to each other?\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-12",
+      "markers": [],
+      "external_id": "364560"
+    },
+    {
+      "n": 11,
+      "title": "Feelings Burst Free",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/364561/thumbnail/78473e7efa29121771f2e67ad63affeb.jpg",
+      "synopsis": "Everyone in Uka's class is discussing love. Is it better to hide your feelings, or let them fly free?\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-19",
+      "markers": [],
+      "external_id": "364561"
+    },
+    {
+      "n": 12,
+      "title": "Honey Lemon Soda",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/364562/thumbnail/873a2df1ccbf769fa32917f28edfca6e.jpg",
+      "synopsis": "Uka and Kai try to figure out the new development in their relationship... as the whole school watches.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-26",
+      "markers": [],
+      "external_id": "364562"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Magic Hour",
+      "artist": "&TEAM",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Wonderful World",
+      "artist": "&TEAM",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

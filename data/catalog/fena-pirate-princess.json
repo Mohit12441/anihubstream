@@ -1,0 +1,341 @@
+{
+  "id": "fena-pirate-princess",
+  "title": "Fena: Pirate Princess",
+  "native": "海賊王女",
+  "year": 2021,
+  "rating": 6.9,
+  "season": "Summer 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx122052-nb8cfAe7pniT.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx122052-nb8cfAe7pniT.jpg",
+  "accent": "#5078e4",
+  "synopsis": "Fena Houtman is a young orphan girl that has been raised on an Island where there is no hope of becoming anything more than chattel, to be used and discarded by soldiers of the British Empire. But Fena is more than just another powerless orphan. When her mysterious past comes knocking, Fena will break the chains of her oppressors. Her goal: forge a new identity, free of bondage, and search for a place where she can truly belong and find out the true mysteries behind a keyword \"Eden.\" It is the story of a lifetime adventure she and her crew of misfits and unlikely allies will have, in pursuit of her goals!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 43456,
+    "anilist": 122052,
+    "mal": 42544
+  },
+  "skip_key_id": 42544,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 16:35:36",
+  "search_text": "fena pirate princess 海賊王女 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Memories",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/116313dca3daa4f6ab17f4d4744564fd1628986275_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 87,
+          "end": 178
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1344,
+          "end": 1440
+        }
+      ],
+      "external_id": "284561"
+    },
+    {
+      "n": 2,
+      "title": "An Inherited Journey",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2421f48cd74a6085ad78b5a5326455ef1628986360_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1440
+        }
+      ],
+      "external_id": "284562"
+    },
+    {
+      "n": 3,
+      "title": "Bar-Baral",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/c9977751e260dba487f5657e18252eb51629514550_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 53,
+          "end": 143
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1440
+        }
+      ],
+      "external_id": "284563"
+    },
+    {
+      "n": 4,
+      "title": "The Mystery of the Stone",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/4a6005eab7d513b6cad02c776850bca61630192350_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1318,
+          "end": 1418
+        }
+      ],
+      "external_id": "284564"
+    },
+    {
+      "n": 5,
+      "title": "Coordinates",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/df853b1fecf0cecf5dbf33ad91871fb81630791293_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1440
+        }
+      ],
+      "external_id": "284565"
+    },
+    {
+      "n": 6,
+      "title": "Mutiny on the Blue Giant",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/93d0a918f835d693a118c6281565d4ed1631392443_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 171,
+          "end": 262
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1440
+        }
+      ],
+      "external_id": "284566"
+    },
+    {
+      "n": 7,
+      "title": "The Burning Sea",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/5105ee58ea1520eaed9bd360856fea321632010826_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1440
+        }
+      ],
+      "external_id": "284567"
+    },
+    {
+      "n": 8,
+      "title": "A Knight's Vow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/4a3aaa1483c9884bba5fc5faabf67bf51632613172_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1440
+        }
+      ],
+      "external_id": "284568"
+    },
+    {
+      "n": 9,
+      "title": "Vice Versa",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c0d2b6229b88d7ffb59f894827ef04f91633217428_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1440
+        }
+      ],
+      "external_id": "284569"
+    },
+    {
+      "n": 10,
+      "title": "The Curtain Rises on the Climax",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/ddae44c482556a9c80a83a42120e54c61633823219_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 45,
+          "end": 136
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1440
+        }
+      ],
+      "external_id": "284570"
+    },
+    {
+      "n": 11,
+      "title": "At Mission's End",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/1e05c70cbcc14a4615eb893a6e8db64f1634427616_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 166
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1419
+        }
+      ],
+      "external_id": "284571"
+    },
+    {
+      "n": 12,
+      "title": "The Chosen Maiden",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/ad721ef9b69d5967839cdd6eb04be3051635029704_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 4,
+          "end": 89
+        }
+      ],
+      "external_id": "284572"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Umi to Shinju (The Sea and Pearl)",
+      "artist": "JUNNA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Saihate (The Farthest Shore)",
+      "artist": "Minori Suzuki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

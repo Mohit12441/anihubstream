@@ -1,0 +1,134 @@
+{
+  "id": "hunter-x-hunter-the-last-mission",
+  "title": "Hunter x Hunter: The Last Mission",
+  "native": "劇場版 HUNTER×HUNTER THE LAST MISSION",
+  "year": 2013,
+  "rating": 7,
+  "season": "Fall 2013",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx19951-kouyrYvcEyGP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx19951-kouyrYvcEyGP.jpg",
+  "accent": "#ffae35",
+  "synopsis": "The strongest Hunters that once existed in the Hunters Association were split into “light” and “dark”, and each walked down their respective paths. The “dark” side begins moving in order to massacre all Hunters! What actions will Gon take when the many crimes of Netero and the Hunters Association are unveiled...!?\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "hunter-x-hunter:-the-last-mission-6lvmll",
+    "mal": 19951,
+    "anilist": 19951,
+    "kitsu": 7908
+  },
+  "skip_key_id": 19951,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "hunter x hunter the last mission 劇場版 hunter hunter the last mission movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hunter x Hunter: The Last Mission (Movie)",
+      "runtime": "98:00",
+      "runtime_seconds": 5880,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a99377b08226308dd41a096-landscape.jpg",
+      "synopsis": "The strongest Hunters that once existed in the Hunters Association were split into “light” and “dark”, and each walked down their respective paths. The “dark” side begins moving in order to massacre all Hunters! What actions will Gon take when the many crimes of Netero and the Hunters Association are unveiled...!?\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "110509"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Believe in Tomorrow",
+      "artist": "Sunflower's Garden",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Moshimo Kono Sekai de Kimi to Boku ga Deaenakatta Nara",
+      "artist": "Sunflower's Garden",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pray",
+      "artist": "Wish",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Popcorn",
+      "artist": "Mikuni Shimokawa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pale Ale",
+      "artist": "Kurosawa Ken'ichi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Carry on",
+      "artist": "Kurosawa Ken'ichi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ohayō",
+      "artist": "Keno",
+      "episodes": "1-48"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaze no Uta (風のうた; Song of the Wind)",
+      "artist": "Minako Honda",
+      "episodes": "1-31"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Taiyō wa Yoru mo Kagayaku",
+      "artist": "Wino",
+      "episodes": "49-62"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "E-Jan - Do You Feel Like I Feel",
+      "artist": "Masato Nagai",
+      "episodes": "32-50"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Hotaru",
+      "artist": "Masato Nagai",
+      "episodes": "51-62"
+    }
+  ],
+  "relations": []
+}

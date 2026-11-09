@@ -1,0 +1,78 @@
+{
+  "id": "hellsing-the-dawn",
+  "title": "HELLSING: THE DAWN",
+  "native": "HELLSING：THE DAWN",
+  "year": 2011,
+  "rating": 6.8,
+  "season": "Summer 2011",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/11077.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/11077.jpg",
+  "accent": "#e4ae5d",
+  "synopsis": "It is September 1944 and World War II is raging in Europe. To get an advantage on the field, Nazis are experimenting with artificial vampire technologies, they are still far away from achieving their initial goal, but even the intermediate stages of such researches are possesing a great threat to The anti-German coalition. In an attempt to stop the Nazi project and to protect England and The Allies current head of the Hellsing House, Sir Arthur Hellsing, is sending his best agents—Walter C. Dornes and Alucard—into German-occupied Poland where monstrous experiments are being conducted.\n\nHellsing: The Dawn Specials can be found on the bonus discs, bundled with Hellsing Ultimate Limited Edition volumes starting from volume 8.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "hellsing:-the-dawn-wodqck",
+    "mal": 11077,
+    "anilist": 11077,
+    "kitsu": 6453
+  },
+  "skip_key_id": 11077,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "hellsing the dawn hellsing the dawn special finished",
+  "genres": [
+    "action",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Dawn: A Supplementary of Hellsing",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "",
+      "synopsis": "Young Walter and Alucard in his coffin are flown to Nazi-occupied Poland in 1944 to stop the Nazis' attempt to create a vampire army. Meanwhile, the Major arrives at the Nazi facility to see how the Doctor's work is progressing.",
+      "airdate": "2011-07-27",
+      "markers": [],
+      "external_id": "95518"
+    },
+    {
+      "n": 2,
+      "title": "The Dawn: A Supplementary of Hellsing",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "",
+      "synopsis": "Young Walter on top of Alucard's coffin breaks into the Nazi facility and interrupts Major's dinner.",
+      "airdate": "2012-02-15",
+      "markers": [],
+      "external_id": "95519"
+    },
+    {
+      "n": 3,
+      "title": "The Dawn: A Supplementary of Hellsing",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "",
+      "synopsis": "As Walter's fight with Major's supernatural driver, the Captain, escalates unfavorably, Alucard finally shows up, although in the shape of a small girl, and assists Walter. Also, Arthur Hellsing's loose behavior angers Hugh Islands.",
+      "airdate": "2012-12-26",
+      "markers": [],
+      "external_id": "95520"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

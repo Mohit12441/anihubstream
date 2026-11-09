@@ -1,0 +1,358 @@
+{
+  "id": "hare-guu",
+  "title": "Haré+Guu",
+  "native": "ジャングルはいつもハレのちグゥ",
+  "year": 2001,
+  "rating": 7.4,
+  "season": "Spring 2001",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/253.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/253.jpg",
+  "accent": "#f1c928",
+  "synopsis": "Har was a happy boy living out his days in the jungle with his mother, but then one day Guu showed up and became a member of their household. Throughout the series he faces many hardships as he tries to keep Guu out of trouble in the jungle.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "hare+guu-6nx5ul",
+    "mal": 253,
+    "anilist": 253,
+    "kitsu": 228
+  },
+  "skip_key_id": 253,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "hare guu シ ャンク ルはいつもハレのちク ゥ tv finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Start! Start!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-04-03",
+      "markers": [],
+      "external_id": "163014"
+    },
+    {
+      "n": 2,
+      "title": "Siesta Guu Guu",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-04-10",
+      "markers": [],
+      "external_id": "163017"
+    },
+    {
+      "n": 3,
+      "title": "Go with Chest hair!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-04-17",
+      "markers": [],
+      "external_id": "163022"
+    },
+    {
+      "n": 4,
+      "title": "Morning Smooch",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-04-24",
+      "markers": [],
+      "external_id": "163025"
+    },
+    {
+      "n": 5,
+      "title": "The Doctor",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-05-01",
+      "markers": [],
+      "external_id": "163027"
+    },
+    {
+      "n": 6,
+      "title": "Viva Non Non",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-05-08",
+      "markers": [],
+      "external_id": "163030"
+    },
+    {
+      "n": 7,
+      "title": "Confusion Jungle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-05-15",
+      "markers": [],
+      "external_id": "163033"
+    },
+    {
+      "n": 8,
+      "title": "Angry Yamada",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-05-22",
+      "markers": [],
+      "external_id": "163036"
+    },
+    {
+      "n": 9,
+      "title": "A Black, Big, Hard, Shining, Stinking, Freaky Voiced Monster",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-05-29",
+      "markers": [],
+      "external_id": "163038"
+    },
+    {
+      "n": 10,
+      "title": "Love Love Ojii-san",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-06-05",
+      "markers": [],
+      "external_id": "163041"
+    },
+    {
+      "n": 11,
+      "title": "Beachpic",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-06-12",
+      "markers": [],
+      "external_id": "163042"
+    },
+    {
+      "n": 12,
+      "title": "Festival Don Don",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-06-19",
+      "markers": [],
+      "external_id": "163044"
+    },
+    {
+      "n": 13,
+      "title": "Big Box",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-06-26",
+      "markers": [],
+      "external_id": "163045"
+    },
+    {
+      "n": 14,
+      "title": "Boo!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-07-03",
+      "markers": [],
+      "external_id": "163052"
+    },
+    {
+      "n": 15,
+      "title": "The Pokute Legend",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-07-10",
+      "markers": [],
+      "external_id": "163053"
+    },
+    {
+      "n": 16,
+      "title": "Sleeping Together",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-07-17",
+      "markers": [],
+      "external_id": "163054"
+    },
+    {
+      "n": 17,
+      "title": "Wendy, 17 Years Old",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-07-24",
+      "markers": [],
+      "external_id": "163055"
+    },
+    {
+      "n": 18,
+      "title": "Love Love Ojii-san Deluxe",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-08-01",
+      "markers": [],
+      "external_id": "163059"
+    },
+    {
+      "n": 19,
+      "title": "Shalanla!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-08-08",
+      "markers": [],
+      "external_id": "163061"
+    },
+    {
+      "n": 20,
+      "title": "Macchiro",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-08-15",
+      "markers": [],
+      "external_id": "163063"
+    },
+    {
+      "n": 21,
+      "title": "Japanese Food and European Food",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-08-22",
+      "markers": [],
+      "external_id": "163065"
+    },
+    {
+      "n": 22,
+      "title": "Roba-san",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-08-29",
+      "markers": [],
+      "external_id": "163067"
+    },
+    {
+      "n": 23,
+      "title": "Pachimon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-09-05",
+      "markers": [],
+      "external_id": "163071"
+    },
+    {
+      "n": 24,
+      "title": "A Holiday",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-09-12",
+      "markers": [],
+      "external_id": "163074"
+    },
+    {
+      "n": 25,
+      "title": "Fear! Humanitarian Onigokko!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-09-19",
+      "markers": [],
+      "external_id": "163076"
+    },
+    {
+      "n": 26,
+      "title": "Ending! Ending!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2001-09-25",
+      "markers": [],
+      "external_id": "163077"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Love Tropicana Deluxe",
+      "artist": "Sister Mayo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fun Fun and Shout",
+      "artist": "Sister Mayo",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Love Tropicana",
+      "artist": "Sister Mayo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ohashi",
+      "artist": "0930 [Okusama]",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

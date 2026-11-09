@@ -1,0 +1,210 @@
+{
+  "id": "given",
+  "title": "given",
+  "native": "ギヴン",
+  "year": 2019,
+  "rating": 8.3,
+  "season": "Summer 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx108430-UdruJPro4vDK.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108430-UdruJPro4vDK.jpg",
+  "accent": "#e4a15d",
+  "synopsis": "Tightly clutching his Gibson guitar, Mafuyu Satou steps out of his dark apartment to begin another day of his high school life. While taking a nap in a quiet spot on the gymnasium staircase, he has a chance encounter with fellow student Ritsuka Uenoyama, who berates him for letting his guitar's strings rust and break. Noticing Uenoyama's knowledge of the instrument, Satou pleads for him to fix it and to teach him how to play. Uenoyama eventually agrees and invites him to sit in on a jam session with his two band mates: bassist Haruki Nakayama and drummer Akihiko Kaji.\n\nSatou's voice is strikingly beautiful, filling Uenoyama with the determination to make Satou the lead singer of the band. Though reticent at first, Satou takes the offer after an emotional meeting with an old friend. With the support of his new friends, Satou must not only learn how to play guitar, but also come to terms with the mysterious circumstances that led him to be its owner.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "given-bn7tk6",
+    "mal": 39533,
+    "anilist": 108430,
+    "kitsu": 42379
+  },
+  "skip_key_id": 39533,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": null,
+  "search_text": "given キ ウ ン tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Boys in the Band",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/26fb5ebc40e102807c7b68638cdbf0b61562868110_full.jpg",
+      "synopsis": "Hodgins retrieves Violet from the hospital, as Major Gilbert asked him to look out for her. After they meet Gilbert's relatives, he offers her a job.",
+      "airdate": "2018-01-11",
+      "markers": [],
+      "external_id": "235467"
+    },
+    {
+      "n": 2,
+      "title": "Like Someone In Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/aed3cf26c28a6f00838c513280d242c61563469957_full.jpg",
+      "synopsis": "Violet tries to adjust to her new job: she needs to learn typing, and her coworkers question whether she has the right demeanor for letter writing.",
+      "airdate": "2018-01-18",
+      "markers": [],
+      "external_id": "235468"
+    },
+    {
+      "n": 3,
+      "title": "Somebody Else",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/9cf6c6885788ebc6625a4d4a000a76d41564081967_full.jpg",
+      "synopsis": "Violet enrolls in a Doll training course. Her classmate Luculia befriends her, though she has her own problems with her war veteran brother.",
+      "airdate": "2018-01-25",
+      "markers": [],
+      "external_id": "235469"
+    },
+    {
+      "n": 4,
+      "title": "Fluorescent Adolescent",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/17247e842deb09db0b2df9c742139ff21564659917_full.jpg",
+      "synopsis": "When Iris goes to her home village on an assignment, Violet accompanies her. Iris's birthday party sparks a disagreement with her family.",
+      "airdate": "2018-02-01",
+      "markers": [],
+      "external_id": "235470"
+    },
+    {
+      "n": 5,
+      "title": "The Reason",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/236382fbe451e6746f1726561738e8051565250247_full.jpg",
+      "synopsis": "Princess Charlotte is to have a public correspondence with her betrothed, and Violet is entrusted with writing the letters on her highness’s behalf.",
+      "airdate": "2018-02-08",
+      "markers": [],
+      "external_id": "235472"
+    },
+    {
+      "n": 6,
+      "title": "Creep",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/22655216dcf1c505848d69f0edf1f5691565846864_full.jpg",
+      "synopsis": "Violet travels to the country of Astrea to work with transcribers copying damaged manuscripts. Her partner Leon has a past not unlike hers.",
+      "airdate": "2018-02-15",
+      "markers": [],
+      "external_id": "235473"
+    },
+    {
+      "n": 7,
+      "title": "Tumbling Dice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/b8c70b6382ca0fcf2522decfccd94b591566477691_full.jpg",
+      "synopsis": "A playwright with writer's block and a tragic past summons Violet to the country of Genetrix to help him finish a script. They both learn about grief.",
+      "airdate": "2018-02-22",
+      "markers": [],
+      "external_id": "241401"
+    },
+    {
+      "n": 8,
+      "title": "Time Is Running Out",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/97883317bafc95516ebb21b0abdc01471567053646_full.jpg",
+      "synopsis": "Violet learns that Major Gilbert is listed as missing in action, but his family members think he is dead. Unable to cope, she remembers the war.",
+      "airdate": "2018-03-01",
+      "markers": [],
+      "external_id": "235475"
+    },
+    {
+      "n": 9,
+      "title": "A Winter Story",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/172619d8b223732798ae096ac63e59cc1567681398_full.jpg",
+      "synopsis": "Heartbroken, Violet withdraws from her job and questions whether she even has the right to be an Auto Memory Doll. Then, she receives a letter.",
+      "airdate": "2018-03-08",
+      "markers": [],
+      "external_id": "235476"
+    },
+    {
+      "n": 10,
+      "title": "Wonderwall",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/583b657c7194b13f62e98bee5c054af71568277351_full.jpg",
+      "synopsis": "Violet travels to a countryside mansion to write a letter for a gravely ill war widow, but her young daughter Ann resents Violet's presence.",
+      "airdate": "2018-03-15",
+      "markers": [],
+      "external_id": "235477"
+    },
+    {
+      "n": 11,
+      "title": "Song2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/3e11effb38ffeb40df903e95a9f4c9ad1568898448_full.jpg",
+      "synopsis": "Against Hodgins' wishes, Violet takes a job from a soldier at a military base in Ctrigall, a former enemy nation now engulfed in civil war.",
+      "airdate": "2018-03-22",
+      "markers": [],
+      "external_id": "235478"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/235479/original.jpg",
+      "synopsis": "The Major's older brother is ordered to defend the signing ceremony from former Gardarik forces opposed to peace. Violet intercepts his train.",
+      "airdate": "2018-03-29",
+      "markers": [],
+      "external_id": "235479"
+    },
+    {
+      "n": 13,
+      "title": "Auto Memoir Doll and \"I Love You\"",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/241337/original.jpg",
+      "synopsis": "The signing ceremony concludes, officially bringing an end to the war. While writing letters for an air show, Violet composes a letter to the Major.",
+      "airdate": "2018-04-05",
+      "markers": [],
+      "external_id": "241337"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bokura dake no Shudaika (僕らだけの主題歌)",
+      "artist": "centimillimental",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kizuato",
+      "artist": "centimillimental",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Marutsuke",
+      "artist": "Given",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

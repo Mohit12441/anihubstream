@@ -1,0 +1,328 @@
+{
+  "id": "food-wars-the-fourth-plate",
+  "title": "Food Wars! The Fourth Plate",
+  "native": "食戟のソーマ 神ノ皿",
+  "year": 2019,
+  "rating": 7.6,
+  "season": "Fall 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx109963-t8E9axH0Dvrn.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx109963-t8E9axH0Dvrn.jpg",
+  "accent": "#e45d6b",
+  "synopsis": "The ultimate Regimental Food War continues as the culinary rebels led by Souma and the members of Kyokusei square off against epicurean elitist Azami and the Toutsuki Ten. At stake – the future of dining across Japan. Because if the rebels fail, Azami intends to impose his own tastes and techniques on the entire restaurant industry!\n\nBut the fine dining control freak has made a serious mistake in threatening the futures of Souma’s friends and family, as while the rebels may seem less experienced overall, this is ultimately a clash of skill, dedication, and, most of all, taste. That may be a recipe for disaster for the seasoned veterans!\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Food Wars! The Third Plate: Totsuki Train Arc (2018)",
+    "Food Wars! The Fifth Plate (2020)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42390,
+    "anilist": 109963,
+    "mal": 39940,
+    "hianime": "food-wars!-the-fourth-plate-cw71fc"
+  },
+  "skip_key_id": 39940,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 08:15:04",
+  "search_text": "food wars the fourth plate 食戟のソーマ 神ノ皿 tv finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "What We Want to Protect",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267499/original.jpg",
+      "synopsis": "Régiment du Cuisine with the Central Gourmet organization lead by Azami Nakiri continues. The 1st BOUT was won by the Soma and the rebels! To keep the momentum going and secure more wins, the rebels place Kuga, Mimasaka and Megishima as their next cards. Central on the other hand, sends in First seat; Tsukasa, Second seat; Rindo and Fourth seat; Saito. With the best members of both team, 2nd BOUT is bound to throw off some sparks!",
+      "airdate": "2019-10-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 115,
+          "end": 205
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "267499"
+    },
+    {
+      "n": 2,
+      "title": "Camera Flash",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267500/original.jpg",
+      "synopsis": "2nd BOUT of the Régiment du Cuisine is between Megishima &amp; Rindo, Mimasaka &amp; Saito and Kuga &amp; Tsukasa! The theme of each team is \"Chilli\", \"Tuna\" and \"Green Tea\". Mimasaka shows off his new skill which he devised from working together in a team. The rebel team unite as one to defeat the new found Totsuki Elite Ten! Their dishes are both ready and judgement begins...!",
+      "airdate": "2019-10-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 4,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "267500"
+    },
+    {
+      "n": 3,
+      "title": "Hope in Solidarity",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267501/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-10-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 135,
+          "end": 225
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1314,
+          "end": 1380
+        }
+      ],
+      "external_id": "267501"
+    },
+    {
+      "n": 4,
+      "title": "Aim for Victory!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267502/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-11-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 145,
+          "end": 235
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "267502"
+    },
+    {
+      "n": 5,
+      "title": "You're Through",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267503/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-11-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 108,
+          "end": 198
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1380
+        }
+      ],
+      "external_id": "267503"
+    },
+    {
+      "n": 6,
+      "title": "A Single Blade",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267504/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-11-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 145
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1380
+        }
+      ],
+      "external_id": "267504"
+    },
+    {
+      "n": 7,
+      "title": "The Two Queens",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267505/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-11-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 68,
+          "end": 158
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "267505"
+    },
+    {
+      "n": 8,
+      "title": "Watching from Beside You",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267506/original.png",
+      "synopsis": "",
+      "airdate": "2019-11-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 98,
+          "end": 188
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "267506"
+    },
+    {
+      "n": 9,
+      "title": "The First and Second Seats",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2019-12-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 75,
+          "end": 165
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "267896"
+    },
+    {
+      "n": 10,
+      "title": "How to Build a Specialty",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 109,
+          "end": 199
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "267897"
+    },
+    {
+      "n": 11,
+      "title": "Song of Hope",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "268117"
+    },
+    {
+      "n": 12,
+      "title": "The New \"Totsuki Elite Ten",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 94,
+          "end": 184
+        }
+      ],
+      "external_id": "268118"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

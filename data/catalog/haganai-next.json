@@ -1,0 +1,331 @@
+{
+  "id": "haganai-next",
+  "title": "Haganai NEXT",
+  "native": "僕は友達が少ない NEXT",
+  "year": 2013,
+  "rating": 6.9,
+  "season": "Winter 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx14967-ZGsclJ1xjPwr.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx14967-ZGsclJ1xjPwr.jpg",
+  "accent": "#e46b43",
+  "synopsis": "The Neighbor's Club—a club founded for the purpose of making friends, where misfortunate boys and girls with few friends live out their regrettable lives.\n\nAlthough Yozora Mikazuki faced a certain incident at the end of summer, the daily life of the Neighbor's Club goes on as usual. A strange nun, members of the student council and other new faces make an appearance, causing Kodaka Hasegawa's life to grow even busier.\n\nWhile they all enjoy going to the amusement park, playing games, celebrating birthdays, and challenging the \"school festival\"—a symbol of the school life normal people live—the relations amongst the members slowly begins to change...\n\nLet the next stage begin, on this unfortunate coming-of-age love comedy!!\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Haganai: Add-on Disc (2012)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7190,
+    "anilist": 14967,
+    "mal": 14967
+  },
+  "skip_key_id": 14967,
+  "skip_key_space": "anilist",
+  "episode_total": 12,
+  "added_at": "2026-10-14 12:05:19",
+  "search_text": "haganai next 僕は友達か 少ない next tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Yeah, My Youth Is Seriously Wrong",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101451/original.jpg",
+      "synopsis": "Yozora and Rika manage to trick Sena into letting them style her hair into a heap, filling it with all sorts of oddities. The next day, Kodaka goes over to Sena's house to study for his exams, where he discovers her room is decorated with pictures of Yozora that she uses for 'grudge purposes'. Kodaka is asked by Pegasus to spend the night, where he expresses his worries that Sena might be getting bullied, to which Kodaka replies that he will protect her.",
+      "airdate": "2013-01-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 165,
+          "end": 255
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1420
+        }
+      ],
+      "external_id": "101451"
+    },
+    {
+      "n": 2,
+      "title": "Homo Game Club",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101452/original.jpg",
+      "synopsis": "Rika, who comes to the clubroom without her glasses, decides she wants to watch an anime based on a homoerotic game, which is immediately met with raised eyebrows by the other clubmembers. Somehow, they are convinced to give it a try and find themselves getting engrossed in the plot though are suddenly surprised by the gay kiss at the end. Despite this, Yozora gives it her approval whilst Sena, annoyed that her gal games are looked down on in comparison, is forced to read another line from it. Later, Kodaka meets Maria's older sister, Kate, who tells him how Maria has changed since joining the Neighbor's Club. Afterwards, Yozora asks Kodaka to 'practise' comparing exam answers.",
+      "airdate": "2013-01-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 172
+        }
+      ],
+      "external_id": "101452"
+    },
+    {
+      "n": 3,
+      "title": "My Little Sisters Are This Cute",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101453/original.jpg",
+      "synopsis": "Maria shows up at Kodaka's house having run away from home, with Kate asking Kodaka to put up with her for the night, much to the chagrin of Kobato. Later, the club decides to have a post-exam party, where Rika suggests they play the 'King's Game' using randomly selected orders. At the end of the game, Sena draws a lot ordering Kodaka to kiss her, but Yozora objects to it, so Kodaka resorts to restricting it to an indirect kiss instead. Later that night, Kodaka receives a call from his father claiming that he is to be married to Sena.",
+      "airdate": "2013-01-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1420
+        }
+      ],
+      "external_id": "101453"
+    },
+    {
+      "n": 4,
+      "title": "A Man Is Among Them!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101454/original.jpg",
+      "synopsis": "As Kodaka assumes the topic of the other day was just Pegasus' drunken ramble, the gang decide to go to a theme park together after Sena receives a group ticket. After starting off with a terrifying rollercoaster ride, Kodaka, Sena and Kobato go to watch a stage show of Kobato's favourite show, leaving Sena a little bashful when the staff imply she was Kodaka's husband. After Yozora and Sena end up throwing up after going on the rollercoaster several times in a row, the group go to the baths where it is discovered that Yukimura is, in fact, a girl, much to her disappointment.",
+      "airdate": "2013-02-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 138
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1419
+        }
+      ],
+      "external_id": "101454"
+    },
+    {
+      "n": 5,
+      "title": "That Kind of Play Is Not Allowed! ~My Worldview Is Disturbed When You Are Around~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101455/original.jpg",
+      "synopsis": "After dressing Yukimura up as a butler, Yozora agrees to play a dating sim for girls that Rika brought in. Whilst initially finding the game to be stupid, she takes interest in a delinquent character, though ends up downhearted when she winds up with a bad ending. Later, Rika invents a time machine, which sends Kodaka's conscience back to day he last saw Yozora before he moved years ago. He decides to tell Yozora about the move, only for things to get really weird. As Rika later reveals the time machine is in fact a hypnotic sleep device that allows him to see any dream he wants, the fact he knew Yozora ten years ago is brought to the attention of the club.",
+      "airdate": "2013-02-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 45,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1420
+        }
+      ],
+      "external_id": "101455"
+    },
+    {
+      "n": 6,
+      "title": "Unbreakable Strange-Girl",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101456/original.jpg",
+      "synopsis": "Yozora reveals that she and Kodaka were childhood friends, although she plays it off like it doesn't mean very much. Later, the Neighbors Club decides to participate in the school festival, with each member seeing if they have what it takes to become a maid. After dismissing a maid café idea, Yozora considers a fortune telling booth, fooling Sena into believing one of her lies. Sena gets upset when she realises Yozora tricked her, but cheers up when Kobato returns to the clubroom, deciding they should hold a birthday party for her.",
+      "airdate": "2013-02-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 76,
+          "end": 166
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "101456"
+    },
+    {
+      "n": 7,
+      "title": "He's My Brother, But As Long As There's Love, It Doesn't Matter If He Gets More Sisters, Right?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101457/original.jpg",
+      "synopsis": "Yozora, Sena, Rika and Yukimura go with Kodaka to Nagaya in order to pick out a present for Kobato's birthday, despite wanting to go alone with him. As Kodaka helps Sena out with her shopping first, they talk about whether Kodaka would consider getting a girlfriend and what Sena thought of him and Yozora being past friends. After Kobato's party ends rather well, Maria and Kate show up to join Kodaka and Kobato for sukiyaki, with Maria also bringing Kobato a present.",
+      "airdate": "2013-02-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 152,
+          "end": 242
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1420
+        }
+      ],
+      "external_id": "101457"
+    },
+    {
+      "n": 8,
+      "title": "My Childhood Friend is Too Much of a Battleground",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101458/original.jpg",
+      "synopsis": "As the discussion returns to what to do for the cultural festival, Kobato brings up that her class is doing a movie that she's not keen on playing the lead role in. This gives the Neighbor Club the idea to do a movie themselves. In order to do research for it, Yozora invites Kodaka to go to a movie with her, only to end up watching a particularly steamy film. As they then decide to visit a cat-themed café, Yozora recalls how they once looked after an abandoned kitten who suddenly disappeared one day, leading Yozora to become wary of making bonds with those who may suddenly disappear from your life. To everyone's surprise, Yozora turns in a script worth using, although her plan to cast her and Kodaka as the leads is thwarted when the club decides to put it to a vote, leading to some curious casting. The gang soon take a disliking to Yozora's subsequent alterations to the script, which put some bias towards her and Kodaka's roles. When Sena tells Yozora that her childhood friendship with Kodaka is irrelevant, Yozora reacts harshly and bursts out the clubroom in tears. Kodaka later assures Yozora that both their relationship now and ten years ago are equally important, and she soon reworks the script into something reasonable.",
+      "airdate": "2013-03-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 69,
+          "end": 159
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "101458"
+    },
+    {
+      "n": 9,
+      "title": "Stray Cats Overheat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101459/original.jpg",
+      "synopsis": "As the Neighbors Club get their film underway, Kodaka comes across Sena's classmate, Aoi Yusa, who considers Sena her biggest rival and believes Kodaka to be her boyfriend. Later that day, Kodaka comes across Pegasus, who had assumed he and Sena were dating and is shocked to learn that it isn't the case. The next day, Sena explains the confusion came about do to a comment she made about 'making Kobato her little sister', which he assumed pertained to marriage. She then reveals that both their parents had arranged at a young age for her and Kodaka to be engaged, as they had met once when they were really young. Kodaka decides they should just forget about it and keep it a secret from Yozora. However, Maria ends up blabbing about in front of everyone having learnt about it from Kate, which leaves Yozora completely depressed. After being recommended a movie by Kate upon hearing about the movie's plot, Kodaka discovers Yozora had completely plagiarized the script from the movie.",
+      "airdate": "2013-03-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 77,
+          "end": 167
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "101459"
+    },
+    {
+      "n": 10,
+      "title": "The Sad-Case King and the Stone-Cold Story",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101460/original.jpg",
+      "synopsis": "After Yozora's plagiarism is brought to light, the club instead decide to go with a script Sena has written. After shooting some footage, Rika brings Kodaka to her prep room, where he sees just how much effort Rika puts into her projects. The next day, the gang head over to Kobato's school festival to watch her film, finding it to be quite impressive. Speaking with Kobato's classmates after the screening, Kodaka learns that Kobato is quite popular, but has trouble getting along with others. He does find relief that, in the clubroom at least, Kobato gets along with Maria. Come the sports festival, Yozora shows a disliking to the student council president, Hinata Hidaka, due to her popularity. Meanwhile, Rika confronts Kodaka about the feelings he should notice but refuses to acknowledge.",
+      "airdate": "2013-03-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 123,
+          "end": 213
+        }
+      ],
+      "external_id": "101460"
+    },
+    {
+      "n": 11,
+      "title": "Dismay of I, the Chicken",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101461/original.jpg",
+      "synopsis": "On the day of the screening, Kodaka finds Rika had passed out with a fever before she could finish the movie. Feeling it isn't right if everyone isn't present to see the movie, Yozora and the others unanimously agree to cancel the screening. After briefly running into Aoi whilst taking down the flyers for the screening, Kodaka goes to the infirmary to visit Rika, who gets him to read a BL book to help her get to sleep. After recovering from her fever, Rika finishes the movie and screens it for the Neighbors Club, with everyone feeling proud of what they've made. Later, Aoi swings by the clubroom to question the club's activities, to which Yozora responds with a thorough explanation, shooting down any query that Aoi brings up. However, she soon retorts that Maria doesn't qualify as a club advisor since, as it turns out, she is not a real sister. Luckily, Sena has Pegasus arrange for Maria to become an official teacher, allowing the club to continue legitimate operation. After Aoi is chased out, Sena casually mentions that she loves Kodaka and wants to marry him, but Kodaka once again pretends he didn't hear anything and walks out.",
+      "airdate": "2013-03-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 62,
+          "end": 152
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "101461"
+    },
+    {
+      "n": 12,
+      "title": "I _____ Many Friends",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101462/original.jpg",
+      "synopsis": "Kodaka helps out Aoi, who is behind on her work due to her studying of the Neighbors Club, and is eventually joined by Hinata. Impressed by his work, Hinata offers Kodaka a position on the student council. Kodaka turns down the offer but keeps helping them out with some grunt work whilst continuing to avoid the clubroom. Later on in the week, Kodaka runs into Yukimura, who explains only she and Sena have been regularly visiting the clubroom and also states why she still continues to serve Kodaka. Afterwards, Kodaka is called up to the rooftop by Rika, who starts attacking him with remote controlled steel balls as punishment for fleeing from the club. As Kodaka takes the brunt of Rika's attacks, he admits his weaknesses whilst also getting her to admit what she truly wants; friends. After the fighting calms down, Kodaka asks Rika to become his official friend, to which Rika responds that she and the others have always been friends. As Kodaka returns to the clubroom to speak with Sena, they all receive a text from Yozora saying she is going on a journey. After the credits, Yozora is seen turning back around with tears, implying everyone went after her.",
+      "airdate": "2013-03-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "101462"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Be My Friend",
+      "artist": "Marina Inoue, Kanae Ito, Nozomi Yamamoto, Misato Fukuen, Kana Hanazawa and Yuka Iguchi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bokura no Tsubasa (僕らの翼)",
+      "artist": "Marina Inoue, Kanae Ito, Nozomi Yamamoto, Misato Fukuen, Kana Hanazawa and Yuka Iguchi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

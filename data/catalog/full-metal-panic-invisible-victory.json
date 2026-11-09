@@ -1,0 +1,219 @@
+{
+  "id": "full-metal-panic-invisible-victory",
+  "title": "Full Metal Panic! Invisible Victory",
+  "native": "フルメタル・パニック！Invisible Victory",
+  "year": 2018,
+  "rating": 7.3,
+  "season": "Spring 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21451-zsRlkUF9sW02.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21451-zsRlkUF9sW02.jpg",
+  "accent": "#f1e4c9",
+  "synopsis": "Nine months have passed since teen soldier Sousuke Sagara first became Kaname Chidori's covert protector. In that time, Mithril has been remarkably successful at thwarting Amalgam's efforts, but this has only made Amalgam more determined. Leonard Testarossa's visits with Tessa and Kaname are just preludes to all-out attacks that begin with global communications disruptions. Kaname's status as a Whispered makes her one of Amalgam's main targets, which means that any semblance of a peaceful life at Jindai Municipal High School is now over for her.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "full-metal-panic!-invisible-victory-zubmpu",
+    "mal": 31931,
+    "anilist": 21451,
+    "kitsu": 11460
+  },
+  "skip_key_id": 31931,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "full metal panic invisible victory フルメタル ハ ニック invisible victory tv finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Zero Hour",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/d83fd65a9e8b8bf06795990978c8f1351523605450_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "237791"
+    },
+    {
+      "n": 2,
+      "title": "Damage Control",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/57d0f2cb22daf406092d2342d65bf1e61524202730_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "237792"
+    },
+    {
+      "n": 3,
+      "title": "Big One Percent",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/5ff665faa31e3cf8136421cd366421371524826143_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "238291"
+    },
+    {
+      "n": 4,
+      "title": "On My Own",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/522e681555a15d2bf4af2c12c46a91a61525409540_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "238668"
+    },
+    {
+      "n": 5,
+      "title": "Welcome to the Jungle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/85e4cf9db237ccbc898703779b5961a21526626503_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "238669"
+    },
+    {
+      "n": 6,
+      "title": "Rotten Repose",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/10b092aef439da7e672cea70465b91551527250541_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "238670"
+    },
+    {
+      "n": 7,
+      "title": "Giant Killing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/01ff6f225322b0ef00cd341408dfac151527834776_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "238671"
+    },
+    {
+      "n": 8,
+      "title": "One-Man Force",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0b2ab78ef2a60c5bb91e6e3884a3828f1528479630_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "238672"
+    },
+    {
+      "n": 9,
+      "title": "The Fallen Witch",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/612d416068bca2e86c3c1adc9210b8ac1529694134_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "238673"
+    },
+    {
+      "n": 10,
+      "title": "Onward, Onward",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1ad8e7fe830cb62166f566c3021a10381530298577_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "238674"
+    },
+    {
+      "n": 11,
+      "title": "Stormy Night",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/b629632aeb9b19d0ade6097e718a80291532043429_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "238675"
+    },
+    {
+      "n": 12,
+      "title": "Make My Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/0e7a0ed31c2810a8efc07e45e47124ca1532043378_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "238676"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Even...if",
+      "artist": "Tamaru Yamada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "yes",
+      "artist": "Tamaru Yamada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Even...if (English Version)",
+      "artist": "Tamaru Yamada",
+      "episodes": "05,07,09,12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "yes (English Version)",
+      "artist": "Tamaru Yamada",
+      "episodes": "06-07, 09, 12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Remained dream",
+      "artist": "Minori Chihara",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Tomorrow",
+      "artist": "Mikuni Shimokawa",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,190 @@
+{
+  "id": "hanayamata",
+  "title": "HaNaYaMaTa",
+  "native": "ハナヤマタ",
+  "year": 2014,
+  "rating": 7,
+  "season": "Summer 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20575-SKNc01MWDyCi.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20575-SKNc01MWDyCi.jpg",
+  "accent": "#e4ae43",
+  "synopsis": "Normal appearance, normal intelligence, normal in arts and sports... just normal. This is the entirely normal 14-year-old, Naru Sekiya. While she admires \"Heroines\" she continues to live a normal life until one moonlit night she meets a fairy. This foreign girl then guides her into the extraordinary world of the yosakoi dance.\n\n(Source: Manga Time Kirara)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8138,
+    "anilist": 20575,
+    "mal": 21681
+  },
+  "skip_key_id": 21681,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-22 12:26:28",
+  "search_text": "hanayamata ハナヤマタ tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Shall We Dance?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115780/original.jpg",
+      "synopsis": "On the night of a full moon, typical second-year middle school student Naru Sekiya has an encounter with Hana, a blonde girl dressed in a kimono. That was Naru's first exposure to the extraordinary world of yosakoi dance. Hesitant, but wanting to be spectacular, Naru takes her first steps towards something new.",
+      "airdate": "2014-07-08",
+      "markers": [],
+      "external_id": "115780"
+    },
+    {
+      "n": 2,
+      "title": "Jealousy Rose",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115781/original.jpg",
+      "synopsis": "Naru and Hana discuss how they can get their school interested in yosakoi. Their classmate Yaya isn't too happy about Naru and Hana becoming so close. A little mistake becomes the beginning of a fight between Naru and Yaya, but…",
+      "airdate": "2014-07-15",
+      "markers": [],
+      "external_id": "115781"
+    },
+    {
+      "n": 3,
+      "title": "Girls' Style",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115782/original.jpg",
+      "synopsis": "Naru and Hana visit yosakoi shop Masaru, where they learn of the summer Hanairo Yosakoi Festival. Hana is eager to participate through their Yosakoi Club, but to form a club, they need at least four members. As Hana performs all around the school to recruit members, Yaya asks her how she could be so happy.",
+      "airdate": "2014-07-22",
+      "markers": [],
+      "external_id": "115782"
+    },
+    {
+      "n": 4,
+      "title": "Princess/Princess",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115783/original.jpg",
+      "synopsis": "Naru and the gang are forbidden by student council president Machi to use the rooftop. But student council vice president and Naru's childhood friend, Tami, promises to buy them time until they can find a new place for their club activities. Hana tries to get traditional Japanese beauty Tami to join the club, but she has to weigh what she wants to do against her position as a Nishimikado daughter.",
+      "airdate": "2014-07-29",
+      "markers": [],
+      "external_id": "115783"
+    },
+    {
+      "n": 5,
+      "title": "First Step",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115784/original.jpg",
+      "synopsis": "With Tami and Yaya having joined, the club finally has four members, and they begin working towards their goal of performing in the Hanairo Yosakoi Festival in the summer. But Naru and the others have never seen real yosakoi, so by Tami's suggestion, they go to the Shounan Yosakoi Festival.",
+      "airdate": "2014-08-05",
+      "markers": [],
+      "external_id": "115784"
+    },
+    {
+      "n": 6,
+      "title": "Try, Try, Try!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115785/original.jpg",
+      "synopsis": "The club prepares for the Hanairo Yosakoi festival: logos, costumes, choreography, music. Meanwhile, Hana discovers a gig at the department store. They plan for the club to perform, but Sally-sensei makes two demands in exchange for permission for the out-of-school activity…",
+      "airdate": "2014-08-12",
+      "markers": [],
+      "external_id": "115785"
+    },
+    {
+      "n": 7,
+      "title": "Girl Identity",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115786/original.jpg",
+      "synopsis": "With the department store event coming up, Yaya seems somehow depressed. It seems to have something to do with her band's audition. Yaya is reluctant to talk about it, and when Naru and the gang try to help her out, she accidentally explodes at them.",
+      "airdate": "2014-08-19",
+      "markers": [],
+      "external_id": "115786"
+    },
+    {
+      "n": 8,
+      "title": "Mission Event",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115787/original.jpg",
+      "synopsis": "Naru and Tami start exercising to try and lose weight in time for the event, though they soon learn the extra weight is because of stronger muscles. Meanwhile, Yaya uses her musical know-how to arrange Tami's composition, helping the girls focus on their choreography. On the day of the event, the group discover Sally had accidentally put the CD they need in her personal bag, so she sends her sister, who turns out to be Machi, to bring it to them in time for their performance. As the girls step up on stage to perform, with Machi invited to spectate, Naru starts to panic when the group starts falling off tempo and ends up messing up when she is reminded of a traumatic elementary school event.",
+      "airdate": "2014-08-26",
+      "markers": [],
+      "external_id": "115787"
+    },
+    {
+      "n": 9,
+      "title": "Sister Complex",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115788/original.jpg",
+      "synopsis": "Yaya and the others manage to encourage Naru to finish the performance, but shortly afterwards, Hana collapses. After Hana makes a full recovery after a few days, Naru still feels guilty for letting her fear of an audience ruin the performance, but is encouraged by her friends to keep trying. Later, the group learn from Machi that their club is in danger of being shut down at the end of the term since, as a substitute teacher, Sally can't be an official advisor. As the girls try to think of a way to keep Sally as their advisor, Machi feels hostility towards Sally, who left home when she got tired of trying to live up to her parents' expectations. The next day, as the girls hear rumor that Sally may be quitting as a teacher, Machi assumes she is abandoning them just like she allegedly did with her and badmouthes her. After some stubbornness, Machi eventually learns from Tami that Sally was actually applying to become a full-time teacher, stating that it was Machi who inspired her to become a teacher. Upon hearing this, Machi apologises to Sally, who manages to pass her exam, and contemplates joining the yosakoi club herself.",
+      "airdate": "2014-09-02",
+      "markers": [],
+      "external_id": "115788"
+    },
+    {
+      "n": 10,
+      "title": "Hot Spring Camp",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115789/original.jpg",
+      "synopsis": "Machi decides to join the yosakoi club, determined to help the group get into shape before the Hanairo Festival. Tami proposes they go on a training camp at her family's hot spring inn, so the group discuss their plans at Hana's house, where they learn she lives with her father after her parents got divorced. After everyone works to update their choreography and routines to include Machi, the girls head to the inn and get straight to practising. Later that night, the girls suddenly learn they've missed the registration date for the festival. Nonetheless, Machi is still determined to spend every waking minute practising so she can catch up with the others, encouraging the others to practise alongside her. Their practise soon attracts the attention of the other inn guests, who give the girls their support. The next day, Sally informs the girls that Masaru has managed to get them into the festival thanks to a team dropping out. Back at school, as Naru manages to come up with a theme for their outfits, Hana gets a call from her mother.",
+      "airdate": "2014-09-09",
+      "markers": [],
+      "external_id": "115789"
+    },
+    {
+      "n": 11,
+      "title": "Smile is Flower",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115790/original.jpg",
+      "synopsis": "After the girls practise by the poolside, Hana reveals her mother has come to Japan, though seems to be hiding the real reason she is so down about it. Later, Yaya comes up with some lyrics for everyone to sing during their performance, encouraging everyone to work hard, while Hana remains unable to tell them what's bothering her. That night, Hana goes over to Naru's house and tells her she will be unable to participate in the festival because she has to return to America with her parents, who are getting back together. With Hana conflicted over choosing between her friends and her family, Naru tells her to seek out her own happiness. Hana leaves the next morning, leaving Naru a letter which she shares with the others. Determined not to let things end like this, Naru and the others rush to the airport in order to see Hana off. After Hana leaves on her flight, leaving Naru her spare naruko, Naru and the others become determined to practise hard for the festival in Hana's place.",
+      "airdate": "2014-09-16",
+      "markers": [],
+      "external_id": "115790"
+    },
+    {
+      "n": 12,
+      "title": "Hanayamata",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115791/original.jpg",
+      "synopsis": "As the girls practise for the festival, they give a copy of their music composition to Hana's father, inviting him to come to their performance. The next day, as the festival gets underway, the girls try to spend as much time practising before their turn to perform, noticing Naru has begun to sparkle more ever since meeting Hana. Later that day, Yaya's former bandmates pay her a little visit to encourage her. Just before their performance, Naru receives a call from Hana who, having been told about the CD from her father, managed to convince her mother to let her return to Japan to perform with her friends. With her car stuck in traffic with just half an hour until the performance, Hana rushes on foot through the town and, with help from Sally, Masaru, and a policeman, manages to make it just in time to perform alongside everyone. After a successful performance, Hana decides to try and convince her parents to let her stay in Japan, with the group making plans for their next big performance.",
+      "airdate": "2014-09-23",
+      "markers": [],
+      "external_id": "115791"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hanaha Odori Reya Iroha ni Ho",
+      "artist": "Team Hanayamata",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hanayuki",
+      "artist": "smileY inc.",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

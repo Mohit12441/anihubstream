@@ -1,0 +1,213 @@
+{
+  "id": "emma-a-victorian-romance",
+  "title": "Emma: A Victorian Romance",
+  "native": "英國戀物語エマ",
+  "year": 2005,
+  "rating": 7.4,
+  "season": "Spring 2005",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx345-ItqN2dbXa99S.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx345-ItqN2dbXa99S.jpg",
+  "accent": "#f1d6c9",
+  "synopsis": "In 19th-century London, class lines are sharply drawn, and the social standing to which people are born dictates the path their lives will follow. Emma, an honest and hardworking young maid, never felt her place in life to be a burden. But then she met William, a member of the gentry and the eldest son of a wealthy family. His warm smile and earnest affection threaten to capture her heart... but can love truly conquer all?\n\n(Source: RightStuf)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "emma:-a-victorian-romance-t4hrzo",
+    "mal": 345,
+    "anilist": 345,
+    "kitsu": 312
+  },
+  "skip_key_id": 345,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "emma a victorian romance 英國戀物語エマ tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Gift",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8647/original.jpg",
+      "synopsis": "William Jones meets the maid Emma at his old governess', Kelly Stownar's house. William falls in love with Emma and looks for opportunities to meet her again, wanting to give her a present.",
+      "airdate": "2005-04-03",
+      "markers": [],
+      "external_id": "8647"
+    },
+    {
+      "n": 2,
+      "title": "Two Worlds",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8648/original.jpg",
+      "synopsis": "William meets Eleanor as she debuts in society at a ball he is forced to attend by his father. When he buys a parasol for Emma later on when together with Eleanor, Grace, Vivi and Eleanor misunderstand, thinking the parasol is for Eleanor.",
+      "airdate": "2005-04-10",
+      "markers": [],
+      "external_id": "8648"
+    },
+    {
+      "n": 3,
+      "title": "The Confession",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8649/original.jpg",
+      "synopsis": "Prince Hakim comes to visit William in London. On an elephant ride through town, William becomes motion sick and ends up recuperating at Kelly Stownar's house. Hakim also falls in love with Emma, and confesses to her.",
+      "airdate": "2005-04-17",
+      "markers": [],
+      "external_id": "8649"
+    },
+    {
+      "n": 4,
+      "title": "Mudie's",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8650/original.jpg",
+      "synopsis": "Hakim and William meet Emma while browsing the erotic literature section at Mudie's. William coaches Eleanor in tennis.",
+      "airdate": "2005-04-24",
+      "markers": [],
+      "external_id": "8650"
+    },
+    {
+      "n": 5,
+      "title": "The Dinner Party",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8651/original.jpg",
+      "synopsis": "Kelly is fixing up her apartment in preparation for visitors, but ends up having dinner with Emma and Al as the Knoxes had to cancel their appointment.",
+      "airdate": "2005-05-01",
+      "markers": [],
+      "external_id": "8651"
+    },
+    {
+      "n": 6,
+      "title": "The Visit",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8652/original.jpg",
+      "synopsis": "As William continues to court Emma, his father decided to pay Mrs. Stownar an appreciation visit together with William.",
+      "airdate": "2005-05-08",
+      "markers": [],
+      "external_id": "8652"
+    },
+    {
+      "n": 7,
+      "title": "Crystal Palace",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8653/original.jpg",
+      "synopsis": "Emma takes time off from work and goes to visit the Crystal Palace together with William. They end up missing the closing time and have to stay at the pavilion overnight.",
+      "airdate": "2005-05-15",
+      "markers": [],
+      "external_id": "8653"
+    },
+    {
+      "n": 8,
+      "title": "The Pocket Watch",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8654/original.jpg",
+      "synopsis": "Emma takes Kelly's pocket watch for repair. However, when she returns, Kelly has already passed away. William tells his father about Emma and meets with strong opposition.",
+      "airdate": "2005-05-22",
+      "markers": [],
+      "external_id": "8654"
+    },
+    {
+      "n": 9,
+      "title": "Alone",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8655/original.jpg",
+      "synopsis": "Kelly Stownar's funeral is being held, and Emma reminiscences about their life together while cleaning up the apartment. Meanwhile, William attends a dinner party with Eleanor.",
+      "airdate": "2005-05-29",
+      "markers": [],
+      "external_id": "8655"
+    },
+    {
+      "n": 10,
+      "title": "Missing One Another",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8656/original.jpg",
+      "synopsis": "Emma comes to visit William at his estate, but he is out searching for her. Just as she is about to leave, William returns, and the situation turns into a scandal with his father.",
+      "airdate": "2005-06-05",
+      "markers": [],
+      "external_id": "8656"
+    },
+    {
+      "n": 11,
+      "title": "The Past",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8657/original.jpg",
+      "synopsis": "William's father is scheming with Mrs. Campbell to set up William and Eleanor. Meanwhile, William goes to look for Emma and ends up hearing her childhood story from Al.",
+      "airdate": "2005-06-12",
+      "markers": [],
+      "external_id": "8657"
+    },
+    {
+      "n": 12,
+      "title": "Lilies of the Valley",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8658/original.jpg",
+      "synopsis": "William leaves a surprised Eleanor behind to go to the train station and stop Emma from leaving. However, he arrives too late.",
+      "airdate": "2005-06-19",
+      "markers": [],
+      "external_id": "8658"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Silhouette of a Breeze - Celtic version",
+      "artist": "Kunihiko Ryo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Silhouette of a Breeze - Celtic version",
+      "artist": "Kunihiko Ryo",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Silhouette of a Breeze",
+      "artist": "Kunihiko Ryo",
+      "episodes": "1-11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Menuet for EMMA",
+      "artist": "Tokyo Recorder Orchestra",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rondo of Lily bell",
+      "artist": "Kunihiko Ryo",
+      "episodes": "2-12"
+    }
+  ],
+  "relations": []
+}

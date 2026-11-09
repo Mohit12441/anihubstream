@@ -1,0 +1,245 @@
+{
+  "id": "flcl",
+  "title": "FLCL",
+  "native": "フリクリ",
+  "year": 2000,
+  "rating": 7.9,
+  "season": "Spring 2000",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx227-qOB9ZhVvNnqO.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx227-qOB9ZhVvNnqO.jpg",
+  "accent": "#e4865d",
+  "synopsis": "Naota is a detached sixth grader afflicted by the pangs of puberty. He's fooling around with his brother's ex-girlfriend when a crazed girl on a motor scooter runs him over, brains him with a bass guitar, and moves into his house. This pink-haired girl, Haruko - who claims she's an alien - hurls Naota into the middle of a mega-corporation's secret agenda. Oh, and now giant battling robots shoot from his skull. Mix in mind-bending animation and tunes that echo through your cerebellum to top off the trip that will have you falling hard for FLCL.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "flcl-1pqdnk",
+    "mal": 227,
+    "anilist": 227,
+    "kitsu": 202
+  },
+  "skip_key_id": 227,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": null,
+  "search_text": "flcl フリクリ ova finished",
+  "genres": [
+    "action",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Fooly Cooly",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5565/original.jpeg",
+      "synopsis": "Naota is a detached sixth-grader afflicted by the pangs of puberty. When a crazed girl on a motor scooter runs him over and brains him with a bass guitar his life gets weird - giant-fighting-robots-shooting-from-his-skull weird.",
+      "airdate": "2000-04-26",
+      "markers": [],
+      "external_id": "5565"
+    },
+    {
+      "n": 2,
+      "title": "Fire Starter",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5566/original.jpeg",
+      "synopsis": "Naota's attacker, Haruko, is now his dad's live-in housemaid and she says she's an alien. Mamimi names the robot from Naota's head Canti, the God of Flame. Does Canti have anything to do with the mysterious fires burning all over town?",
+      "airdate": "2000-06-21",
+      "markers": [],
+      "external_id": "5566"
+    },
+    {
+      "n": 3,
+      "title": "Marquis de Carabas",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5567/original.jpeg",
+      "synopsis": "The president of Naota's class, Ninamori, is no stranger to the dirty deeds of politics. She rigs the vote to cast him as the lead role of their class play. But she gets in over her head after a crashing introduction to Haruko.",
+      "airdate": "2000-08-23",
+      "markers": [],
+      "external_id": "5567"
+    },
+    {
+      "n": 4,
+      "title": "Full Swing",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5568/original.jpeg",
+      "synopsis": "There's a guy claiming to know Haruko and why she's using Naota's head as a portal for oversized battling robots. It's too late, though, as a malfunctioning satellite is heading straight for them and it's up to Naota to stop it!",
+      "airdate": "2000-10-25",
+      "markers": [],
+      "external_id": "5568"
+    },
+    {
+      "n": 5,
+      "title": "Brittle Bullet",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5569/original.jpeg",
+      "synopsis": "Jealousy spurs an epic pellet gun battle between Naota and his dad over Haruko. The object of her desire will be revealed, and she'll do whatever it takes to get him!",
+      "airdate": "2000-11-21",
+      "markers": [],
+      "external_id": "5569"
+    },
+    {
+      "n": 6,
+      "title": "FLCLimax",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5570/original.jpeg",
+      "synopsis": "A hand statue looms over the Medical Mechanica building, threatening to iron out the city. As Mamimi's new pet turns out to be a crucial element to Haruko's plans, Naota finally proves that he's no pushover.",
+      "airdate": "2001-03-16",
+      "markers": [],
+      "external_id": "5570"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "About A Rock'n' Roll Band",
+      "artist": "the pillows",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Vivid Venus",
+      "artist": "the pillows",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shiroi Natsu to Midori no Jitensha, Akai Kami to Kuroi Gitaa (Fool on cool ver.)",
+      "artist": "the pillows",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Star Overhead",
+      "artist": "the pillows",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "spiky seeds",
+      "artist": "The Pillows",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Thank You, My Twilight (Fool on cool version)",
+      "artist": "the pillows",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "spiky seeds",
+      "artist": "the pillows",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "One Life",
+      "artist": "The Pillows",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ride on Shooting Star",
+      "artist": "The Pillows",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Tenshi Mitai ni, Kimi wa Tatteta (Fool on cool ver.)",
+      "artist": "the pillows",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Little Busters (Fool on cool ver.)",
+      "artist": "the pillows",
+      "episodes": "6"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Noboranai Taiyou (Fool on cool version)",
+      "artist": "the pillows",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Instant Music",
+      "artist": "The Pillows",
+      "episodes": "2-3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "I Think I Can (Fool on cool ver.)",
+      "artist": "the pillows",
+      "episodes": "6"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "My Foot (Fool on cool version)",
+      "artist": "the pillows",
+      "episodes": "4"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Happy Bivouac",
+      "artist": "The Pillows",
+      "episodes": "4"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Fool on the Planet (Fool on cool version)",
+      "artist": "the pillows",
+      "episodes": "5"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Runners High",
+      "artist": "The Pillows",
+      "episodes": "5"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Carnival",
+      "artist": "The Pillows",
+      "episodes": "6"
+    }
+  ],
+  "relations": []
+}

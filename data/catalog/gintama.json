@@ -1,0 +1,2769 @@
+{
+  "id": "gintama",
+  "title": "Gintama",
+  "native": "銀魂",
+  "year": 2006,
+  "rating": 8.5,
+  "season": "Spring 2006",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx918-iOaeBVUn4uK7.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx918-iOaeBVUn4uK7.jpg",
+  "accent": "#f1865d",
+  "synopsis": "Life isn't easy in feudal Japan... especially since the aliens landed and conquered everything! Oh sure, the new health care is great, but the public ban on the use of swords has left a lot of defeated samurai with a difficult decision to make concerning their future career paths! This is especially true if, as in the case of Gintoki Sakata, they're not particularly inclined towards holding a day job, which is why Gintoki's opted for the freelance route, taking any job that's offered to him as long as the financial remuneration sounds right. Unfortunately, in a brave new world filled with stray bug-eyed monsters, upwardly mobile Yakuza and overly ambitious E.T. entrepreneurs, those jobs usually don't pay as well as they should for the pain, suffering and indignities endured!\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "gintama-ln4bq4",
+    "mal": 918,
+    "anilist": 918,
+    "kitsu": 818
+  },
+  "skip_key_id": 918,
+  "skip_key_space": "mal",
+  "episode_total": 201,
+  "added_at": null,
+  "search_text": "gintama 銀魂 tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "You Guys!! Do You Even Have a Gintama? (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/76257e029e2e01911e289b117e164ec31230030171_full.jpg",
+      "synopsis": "Long ago, this nation was known as the land of the samurai. The dream-filled Edo skies, upon which the samurai once gazed, are now filled with the ships of the Amanto, beings that suddenly invaded and rose to power. And now these arrogant aliens walk the streets of the city. The samurai have lost their swords, status, and even their honor… In this city former samurai Gintoki Sakata runs the Odd Jobs business. One day he receives a visit from a client named Katoken. To regain something he has lost, Katoken needs 30 million ryo—a lot of money. After listening to Katoken’s endless tale of misfortune, the Odd Jobs trio feels obliged to help out. Meanwhile, the Amanto Kariya and his men gather to plot the takeover of Edo city.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 218,
+          "end": 308,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "16768"
+    },
+    {
+      "n": 2,
+      "title": "You Guys!! Do You Even Have a Gintama? (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/f72f497a51757117af359c86c1fd86431230032181_full.jpg",
+      "synopsis": "Gintoki manage to escape Shishimura’s sudden attack. Regrouping with Kagura and the others, he finds that their client Katoken was unable to stick with the training and has left. Gintoki finds Katoken drowning in his sorrows alone and joins him for a drink to share his wisdom: “No matter how much you try, you cannot escape from what you truly wish to forget.” Hearing those words, Katoken explains the reason behind his wanting to become stronger. Gintoki decides to lend a hand to help Katoken regain his most important treasure. Together with Kagura and Shinpachi, they march into the Drift Star Embassy… only to find themselves welcomed by a mountain full of food.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16769"
+    },
+    {
+      "n": 3,
+      "title": "Nobody with Naturally Wavy Hair Can Be That Bad",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/bee3fd0fc9cbaaeeb77ebe276afef11d1230035153_full.jpg",
+      "synopsis": "The arrival of the Amanto has forced the samurai to throw away their swords. But Shinpachi’s father lived by the way of the sword, never losing his samurai honor. With his dying breath, the father entrusts his two children with the samurai spirit. To protect the dojo left behind by his father, Shinpachi works hard at jobs he’s not used to doing. But to a boy who knows only swordsmanship, the world is not a kind place. When Shinpachi is ridiculed by his manager and laughed at by the Amanto, one man stands up to confront them. Shinpachi sees an honest samurai within the man as he pounds down the manager and wipes out the Amanto for ruining his chocolate parfait. Yes, this man is in fact Gintoki Sakata, also known as “Odd Jobs Gin.” The Last Samurai with naturally wavy hair for a trademark?!",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16770"
+    },
+    {
+      "n": 4,
+      "title": "Watch Out! Weekly Shonen Jump Sometimes Comes Out on Saturdays!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/31507f291feca0f25adfd4637af1ba371230037351_full.jpg",
+      "synopsis": "Half a month has passed since Shinpachi began working for Odd Jobs Gin. Unable to see in Gintoki the glowing samurai spirit he felt, Shinpachi is already regretting his decision. One day as Gintoki and Shinpachi ride double on their scooter, a girl suddenly jumps in front of them. Unable to stop, Gintoki runs over the girl. Gintoki rushes the injured and unconscious girl toward the hospital, when suddenly a black car blocks the way and opens fire. While Gintoki and Shinpachi panic, the girl regains consciousness and blocks the bullets and wipes out the attackers with her built-in gun umbrella. There’s a reason the yakuza are after her, and Shinpachi decides to help the girl escape. However…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16771"
+    },
+    {
+      "n": 5,
+      "title": "Make Friends You Can Call by Their Nicknames, Even When You're an Old Fart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/4df7258360bda52ae01941cfc55064721230038204_full.jpg",
+      "synopsis": "The staff of Odd Jobs Gin is going about their usual daily bickering when a delivery scooter crashes into the Otose Snack House downstairs. Barely conscious, the postman begs the Odd Jobs Trio to deliver an important package in his place. Gintoki and the others reluctantly head to the address on the package, Embassy of Inui, the Dog Star system. But the package explodes, and the trio are mistaken as terrorists. The three attempt a hasty escape, but when Shinpachi is caught, he decides to take Gintoki and Kagura down with him, and the gatekeepers quickly corner the three. Just when everybody thinks they are done for, they are saved by Gintoki’s old acquaintance Kotaro Katsura, aka Zura. Secretly observing the whole incident, the government’s police force, the Shinsengumi, decides to make their move…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16772"
+    },
+    {
+      "n": 6,
+      "title": "Keep Your Promise Even If It Kills You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e4c92ce04e7cd56d266aabbbf2cc4daf1230037818_full.jpg",
+      "synopsis": "Although their actions result in saving everyone from Katsura’s bomb, Gintoki and the group are nonetheless held for police questioning. Convinced Odd Jobs Gin are behind the bombing, the police continue their interrogation, when Shinpachi, who was staring at the clock the whole time, finally snaps. Baffled by his raging fit, the police finally let the trio go. Ignoring Gintoki and Kagura who vent their resentment in front of the police station, Shinpachi leaves the scene in a hurry. Left behind, Gintoki and Kagura come across an escaped convict being chased by the police. The man takes Kagura hostage and orders Gintoki to take the wheel in the police car. When asked by Gintoki why he ran away the man answers, “Because today is a special day…”",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16773"
+    },
+    {
+      "n": 7,
+      "title": "Responsible Owners Should Clean Up After Their Pets",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/054609762035e488622ceba02950fc351230038226_full.jpg",
+      "synopsis": "Midland Star Prince Hata’s pet Pes disappears, and the Immigration Bureau, though resentful of the Amanto’s orders, ask Odd Jobs Gin to look for the missing pet. Hearing that the client is an Amanto, the Odd Jobs at first turn down the offer but quickly change their minds when they are presented with a stack of cash. So begins Gintoki and group’s hunt for the pet. Looking for any kind of lead, the group makes the rounds of the octopus fisherman at the piers, takoyaki stores, and bars, but Pes is nowhere to be found. With few options left, Gintoki brings out his ultimate weapon.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16774"
+    },
+    {
+      "n": 8,
+      "title": "There Is Butt a Fine Line Between Persistence and Stubbornness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/7f642e1bbfab57913b2d83d817591dc11230038449_full.jpg",
+      "synopsis": "While the Shinsengumi strive to maintain peace in the city of Edo, their commander Kondou is busy sulking in front of Otae, who now works at a snack bar. Depressed, Kondou calls himself a good-for-nothing. Otae gently smiles and tells him that she would love a man for his whole self, including his weaknesses. With those words, Kondou falls in love with Otae and asks her to marry him, but receives a knock-out punch instead. Undaunted, Kondou uses all sorts of means to show his affection for the immovable Otae. Finally having enough of it, Otae drags Gintoki into the situation, but things take an unexpected turn…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16775"
+    },
+    {
+      "n": 9,
+      "title": "Fighting Should Be Done with Fists",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/16ba1073e34eed5574c795fcc66284da1230038721_full.jpg",
+      "synopsis": "From Hijikata to Okita, and Okita to the Shinsengumi, news quickly spreads of the commander losing in battle for a woman, stirring up commotion within the squad. To make matters worse, Kondou’s miserable loss is aired on TV, forcing Hijikata to figure out some way to gain back the Shinsengumi’s dignity. To do so, they must eliminate the silver-haired samurai who defeated Kondou. Hijikata joins the other members to search for Gintoki in town. Meanwhile, oblivious of single-handedly earning the Shinsengumi’s malice, Gintoki is yanked away to help with his client’s carpeting job. While the whining Gintoki helps out the client, the Shinsengumi closes in….",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16776"
+    },
+    {
+      "n": 10,
+      "title": "Eat Something Sour When You’re Tired",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/5943c491334e4696f205fa6c819517f71230025739_full.jpg",
+      "synopsis": "Prince Hata makes yet another visit to Edo. Heartbroken over the loss of Pes, the prince goes through every Edo city zoo determined to find the next cutest pet. Meanwhile, savoring her pickled seaweed, Kagura comes across a box left in front of the Odd Jobs Gin building. Her face lights up with a big smile when she finds an adorable animal in the box. The animal is a slightly…no, VERY big dog-like creature. Despite Gintoki’s protests, Kagura insists on keeping it. Kagura names the dog Sadaharu and plays rough with it, while Gintoki and Shinpachi grow exhausted from Sadaharu’s constant biting. What will Gintoki and Shinpachi do?",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16777"
+    },
+    {
+      "n": 11,
+      "title": "Look, Overly Sticky Sweet Dumplings Are Not Real Dumplings, You Idiot!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/38af0de505030d13126f6d93f87ac3c21230028473_full.jpg",
+      "synopsis": "Gintoki and Kagura visit Shinpachi in the hospital after a car accident. Even in the hospital the Odd Jobs Trio is noisy as usual. An old man in the next room overhears their conversation and asks for their help. He requests that they look for a woman from the old man’s bittersweet memories. The only lead they have is a kanzashi, and that the kanzashi’s owner worked at a Dango shop. The Odd Jobs Trio begin their search but find that nobody seems to remember the Dango shop, and they quickly reach a dead-end. Kagura tries having Sadaharu trace the scent from the kanzashi, and the place Sadaharu leads them to is not at all what they expected…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16778"
+    },
+    {
+      "n": 12,
+      "title": "People Who Make Good First Impressions Usually Suck",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b6abecc325e99df18476236b008b7ca11230028013_full.jpg",
+      "synopsis": "One night Otose, the landlord of Gintoki’s Odd Jobs, comes across a starving cat-eared Amanto named Catherine in the back alley and hires her to work at the Otose Snack House. Otose comes to take a liking to the hard-working and considerate Catherine. The Odd Jobs Trio on the other hand find themselves under a tighter budget and constant hunger thanks to Kagura’s hearty appetite. Meanwhile, a string of robberies occur in the downtown district. One day, the police make a visit to the Otose Snack House to gather any information regarding the recent robberies.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16779"
+    },
+    {
+      "n": 13,
+      "title": "If You’re Going to Cosplay, Go All Out",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/dc0597d685e2ea0d1e23cf1ee469ac881230029790_full.jpg",
+      "synopsis": "Odd Jobs Gin receives a job to look for a missing person, the daughter of a distinguished government official who hasn’t returned home in days. Reluctantly accepting the client’s wish to settle the case quietly, the Odd Jobs Trio goes to gather information at a club where the girl was often sighted. Unable to get any useful leads and tired of looking, Kagura tries to nab a man who looks similar to the girl, when the man’s condition suddenly changes. According to a waiter, a weird drug is floating around this district. Meanwhile Gintoki is alone in the men’s room recovering from a massive hangover when somebody calls to him over the door.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16780"
+    },
+    {
+      "n": 14,
+      "title": "You Only Gotta Wash Under Your Armpits - Just the Armpits",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/6236479c6a54081bd0f2fcdc302b1cae1230027531_full.jpg",
+      "synopsis": "Thanks to Gintoki and Katsura, the space pirates ship is brought down. Several antiforeigner factions use this opportunity to take down high government officials who profited from their illegal drug collusion with pirates and Amantos. The Shinsengumi is ordered to provide protection for the officials. Kondou unquestioningly carries out his duty, claiming that if it weren’t for the government the Shinsengumi wouldn’t be where it is today. But the members cannot hide their frustration toward the corrupt Amanto and government officials. Amidst all of this, Kondou is shot down by the antiforeigner faction, taking the hit intended for a frog Amanto they were assigned to protect. Just when the Shinsengumi’s frustration is about to explode, they hear Hijikata shouting…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16781"
+    },
+    {
+      "n": 15,
+      "title": "Pets Resemble Their Owners",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/4103ecfe99ba34cb3b81c87b000b4eaa1230028097_full.jpg",
+      "synopsis": "Gintoki finds himself forced into looking after Sadaharu and is soon exhausted. That’s when Katsura shows up with a peculiar creature. Seems this thing is a gift from the space merchant Sakamoto and is called Elizabeth. Gintoki is surprised at the fact that Katsura, who supposedly hates space creatures, would keep such a pet. Then Gintoki and the gang learn that a TV show is looking for weird animals to appear on their show. Blinded by the grand prize given to the winner, Gintoki and the gang decide to participate.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16782"
+    },
+    {
+      "n": 16,
+      "title": "If You Stop and Think About It, Your Life’s a Lot Longer as an Old Guy Than a Kid! Whoa, Scary!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/3841b3cc36e66dc888c2a919e15bceb21230029390_full.jpg",
+      "synopsis": "Kagura sees Hasegawa wasting his time at the park in broad daylight and asks what he’s doing. Since he was fired from the Immigration Bureau after punching Prince Hata on a passing whim, Hasegawa now walks down the path of a Dumb Old Retarded Kook, DORK for short. Ordered by his superior to commit seppuku, Hasegawa returns home to pack up and skip town only to find his wife has already left, saying she can’t deal being with a DORKH (Dumb Old Retarded Kook Husband). Having lost everything, the only friend Hasegawa has now is Gintoki, whom he met at the pachinko parlor.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16783"
+    },
+    {
+      "n": 17,
+      "title": "Sons Only Take After Their Father’s Negative Attributes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/be56741155491afe6f722771a395f8021230029705_full.jpg",
+      "synopsis": "The Kabukicho Neighborhood Association, led by Otose, marches toward the doorstep of Edo’s No. 1 inventor, Gengai Hiraga. The association has had it with Gengai’s noisy building of useless junk. Recruited by Otose, the Odd Jobs Trio fights sound with sound by blasting music from their karaoke machine but are stopped by the sudden appearance of the robot Saburo. The Odd Jobs Trio then proceed to relocate Gengai’s workshop to the nearby riverbank, only to end up breaking Saburo and the other robots created by Gengai, who were to perform for the shogun at the upcoming festival. Meanwhile a dangerous man has set foot into Edo.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16784"
+    },
+    {
+      "n": 18,
+      "title": "Oh, Yeah! Our Crib Is Number One!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/dc9ded83c656481f095583fc56a0bd0e1230029537_full.jpg",
+      "synopsis": "Shinpachi returns home with a gift for his sister—a doll that oddly resembles Elizabeth, with the name “Space Monster Stefan” printed on its chest. But what awaits Shinpachi is a deadly naginata swing by the raged Otae. While Shinpachi narrowly dodges the attack, Stefan falls prey to the naginata. As she tears Stefan apart, Otae explains the reason behind her fit. It appears the panty thief who’s recently been stirring things up in Edo city stole her panties. To soothe her sister’s anger, Shinpachi decides to ask for help from Gintoki.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16785"
+    },
+    {
+      "n": 19,
+      "title": "Why’s the Sea So Salty? Because You City Folk Pee Whenever You Go Swimming!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a13d79d4dffc0c3eb29898cdfe68b67b1230029022_full.jpg",
+      "synopsis": "There are men who try to earn an easy buck by settling their hopes on pachinko, only to fail miserably. Regretting their decision, Gintoki and Hasegawa are sucking on their ice candies bought with the dropped change they collected, when they overhear something about a moneymaking opportunity. A reward has been placed on a space creature that’s been haunting the beach. Gintoki and Hasegawa propose to fish out the alien and grab the reward, and the Odd Jobs gang head out to the beach. But what awaits them there is a deserted beach and an old man making yakisoba noodles at the beach house. And the reward in fact turns out to be…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16786"
+    },
+    {
+      "n": 20,
+      "title": "Watch Out for Conveyer Belts!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/953c5920bb29decf65d0a722c7601a311230029540_full.jpg",
+      "synopsis": "One hot summer night, as mosquitoes fill the air, the Shinsengumi immerse themselves in sharing scary tales. Inayama tells the tale of a female ghost dressed in a red kimono haunting the schoolhouse at midnight, only to find that the same ghost has appeared in the Shinsengumi station as well! More than half of the team falls victim to the ghost, each muttering about a woman dressed in red. Frightened by the unseen danger, Kondou decides to hire an exorcist to handle the situation. But these exorcists seem awfully shady-looking.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16787"
+    },
+    {
+      "n": 21,
+      "title": "If You Go to Sleep With the Fan On, You’ll Get a Stomachache, So Be Careful",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/50b36e168908dc5213c75932ebd648f41230030597_full.jpg",
+      "synopsis": "Amidst a summer heat wave with no air conditioning, the Odd Jobs office quickly turns into a steam house. When Gintoki and Kagura fight over and break the Senpuki (fan), their only means of dealing with the heat, Gintoki reluctantly heads out to buy a new one – only to run into extreme difficulties. Every store tells him they no longer sell an obsolete product like the fan and recommends buying an AC instead, which is beyond Gintoki’s budget. Finally, Gintoki comes across a recycled goods shop called the “Earth Defense Army Base.” Upon entering the store, he finds himself embroiled with the female store owner’s battle to protect the “Senpuki (???)\"…?!",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16788"
+    },
+    {
+      "n": 22,
+      "title": "Marriage Is Prolonging an Illusion for Your Whole Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/507923eb7a7d762d707c20f9c1a18eed1230031049_full.jpg",
+      "synopsis": "One morning Shinpachi makes his usual commute to the Odd Jobs to wake up Gintoki when he comes across an unbelievable sight. Right inside Gintoki’s room, sleeping next to him is a woman dressed in a kunoichi outfit! As she mixes some natto, the woman named Sachan tells Gintoki that that the two made a vow the night before to become husband and wife, even though the hung-over Gintoki has no recollection of what happened. Thus, the Odd Jobs are forced to let Sachan stay at their place as an unwelcome wife. Just when everyone thinks Ginotki’s unhappy days have begun, a single call for Sachan drastically changes matters….",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16789"
+    },
+    {
+      "n": 23,
+      "title": "When You’re in a Fix, Keep on Laughing, Laughing…",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/bc57d31b694bec28f882b9ff05ac625b1230030807_full.jpg",
+      "synopsis": "Returning with the groceries, Kagura puts on a sudden arrogant attitude that is understandably justified - She won a trip to space at the local big-sale raffle! Without a moment of hesitation the Odd Jobs trio head off to the Space Port. Unfortunately Sadaharu cannot join as they are told no pets are allowed on board. Insisting on bringing Sadaharu with her, Kagura starts arguing with the staff while Sadaharu goes off to harass a man with shades sleeping at the departure lobby. Curiously, the man disappears into the crowd without noticing the giant animal biting at his head. Carrying the Odd Jobs trio, the space ship sets off, but a group calling themselves the “Moe Fighting Sprits” shows up to hijack the ship…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16790"
+    },
+    {
+      "n": 24,
+      "title": "Cute Faces Are Always Hiding Something",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/f979d234e00e07712247a0993c5dc4e61230030729_full.jpg",
+      "synopsis": "Mademoiselle Saigo: one of the Four Royals of Kabukicho and a girly man known as the “demon.” After calling this person a freak, Gintoki ends up being forced to cross-dress and work at the “Girly Boy Club” run by him (her?). At the club Gintoki comes across Katsura, who is also dressed as a woman. Katsura protests that he is merely waiting for the right moment to escape, but no matter how Gintoki looks at it, Katsura seems to have completely blended in with a life surrounded by girly men. One day the two encounter Saigo’s son Teruhiko, who is being bullied. Seeing that the boy is troubled, Katsura tries to console him, but…?",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16791"
+    },
+    {
+      "n": 25,
+      "title": "A Shared Soup Pot Is a Microcosm of Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/792bb598f258896ef57e3d4db54058211230032941_full.jpg",
+      "synopsis": "Gintama is celebrating its half-year run on the air! And so the Odd Jobs trio attempts to kill some time by airing some re-caps. But their true intentions are to draw away the others’ attention and eat as much meat as possible from the sukiyaki meal before them. Trying to read each other’s next moves, Gintoki and Shinpachi successfully trick Kagura and chow down, only to spill the pot all over the place. Realizing she’s been tricked, Kagura begins arguing with Gintoki. Amidst this gloomy atmosphere Shinpachi believes that in order to avoid another messy tragedy, it is imperative to secure the meat’s safety first. And at that moment another pot challenger arrives… with the battle for meat taking yet another turn for the chaotic.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16792"
+    },
+    {
+      "n": 26,
+      "title": "Don’t Be Shy – Just Raise Your Hand and Say It",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1f5a1b25524bac23713b5af3c96a10901230031706_full.jpg",
+      "synopsis": "On Hasegawa’s request the Odd Jobs trio take his place to work at the Oedo Mart Convenience store for the day, but Kagura and Gintoki’s half-baked attitudes cause nothing but trouble for the customers. The only one who’s working seriously, Shinpachi cannot help but sigh at his friends’ incompetence when he notice a punk trying to shoplift some goods. When Shinpachi catches the thief, he realizes it is Takachin, his childhood friend back from temple school. Ever since the day Shinpachi betrayed his trust, Takachin became a target for bullying. But now Takachin claims to be feared since joining a team called the “Bulldogs.” To save his friend from walking down the wrong path, Shinpachi breaks into the “Maltese” gathering.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16793"
+    },
+    {
+      "n": 27,
+      "title": "Some Things Can’t Be Cut with a Sword",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/602789ff0906c748b77f0d6f5cc0dd911230031930_full.jpg",
+      "synopsis": "At the Women’s Wrestling Arena Shinpachi roots for Otsu the fighting idol, Kagura gets all excited and storms into the ring, and Gintoki watches his friends in shame. Okita also happens to be there, and leads the trio down to the slums where they discover an underground coliseum called the “Rengokukan.” Investigating the high authorities’ support for these death matches, Okita points out Kidomaru, Rengokukan’s deadliest fighter in a demon mask, suggesting the Odd Jobs may find out something from following him. The gang scouts Kidomaru’s house, but...",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16794"
+    },
+    {
+      "n": 28,
+      "title": "Good Things Never Come in Twos (but bad things do)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/522f11c4163412c131da8d01709e57861230032086_full.jpg",
+      "synopsis": "On the morning astrology program Ms. Ketsuno declares with a smile that “Virgos with goatees who are brushing their teeth right now will die today...” Kondou, who was watching the show while brushing his teeth, can’t help but let out a wry sigh when Matsudaira thunders in, blasting away with his gun – the Shinsengumi’s involvement with the Rengokukan has come to light, and both are summoned to the castle. Baffled by Hijikata and Okita’s impulsive actions, Kondou enters a state of panic after learning he may be assassinated before arriving at the castle. Matsudaira, who now sees everything as possible assassins, summons Sachan as a counter measure to assassins. Hence the dangerous drive to the castle begins...",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16795"
+    },
+    {
+      "n": 29,
+      "title": "Part 1: Don’t Panic – There’s a Return Policy!  /  Part 2: I Told You to Pay Attention to the News!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/4030629460c9412d1154da7ad37aa3df1230031531_full.jpg",
+      "synopsis": "Part 1: “Star Destroyer,” the enchanted sword that can even cut through stars – searching for this legendary weapon, one man goes on a sword hunt night after night. The man’s name is Gankeimaru, an Amanto training to become the strongest warrior, and he has come to Earth in search of the ultimate weapon worthy of his strength. Meanwhile Gintoki and Shinpachi learn that Kagura has been buying massive amounts of products from the shopping channel, and tells her to return them all. Upset from having all her items confiscated, Kagura comes up with an idea after spotting Gintoki’s wooden sword. It’s just the start of another messy situation...\n\nPart 2: Kagura’s scream stirs up the Odd Jobs office. The cause? A cockroach! Thinking it’s an average cockroach, Gintoki and Shinpachi head out to kill it, only to retreat back on all fours. Why? Because it turns out to be a giant-sized cockroach! Around the same time, the TV reports multiple infestations of giant cockroaches throughout Edo city, and Prince Hata advises NOT to kill these Space Cockroaches, as it will attract more of them. Oblivious to such warnings, the Odd Jobs gang are about to exterminate the giant creature when it starts to scream...",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16796"
+    },
+    {
+      "n": 30,
+      "title": "Even Teen Idols Act Like You Guys",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/8e29e2522e0d6fda478ae88f2ee84ff21230033406_full.jpg",
+      "synopsis": "Newcomer Idol Tsu Terakado and Boy Band “Hansamu” leader Goemon’s passionate affair revealed! – The news plunges Shinpachi and the fan club members into the depths of depression. Gintoki is also stunned after learning that his favorite weather reporter Ms. Ketsuno is married. But while Kagura smirks at the two losers, Otsu shows up at the Odd jobs office. Since the discovery of the relationship, Otsu has received numerous threatening letters and has come for Gintoki’s help, but she has no clue as to who the culprit is. Shinpachi is determined to protect Otsu with all his might by staying close to her...",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16797"
+    },
+    {
+      "n": 31,
+      "title": "You Always Remember the Things that Matter the Least",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/19b0d52a602f16dda4c55f51368312521230033425_full.jpg",
+      "synopsis": "Gintoki finds himself lying on the ground, witnessing the blue sky gradually changing into red. Losing consciousness at the spot, Gintoki is rushed to the hospital. Turns out while on his way to buy Jump magazine on his bike, Gintoki was hit by a car driver who was talking on his cell phone. Shipnachi and the others rush to the hospital to see the now-conscious Gintoki, but learn he has no recollection of his own self… In order to somehow return the now honest and likable Gintoki back to his “dullish” personality, Shinpachi and Kagura take him back to the Odd Jobs office. But despite their efforts there are no signs of his memory returning. To find other possible events that may trigger his memory, the Odd Jobs wander through the streets of Edo but…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16798"
+    },
+    {
+      "n": 32,
+      "title": "Life Moves on Like a Conveyor Belt",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/255d95d5569e1a1f7896dd1ec644be061230034056_full.jpg",
+      "synopsis": "Two weeks have passed since Gintoki declared the disbanding of the Odd Jobs business and disappeared into the streets of Edo. Kagura sit and eats her pickled seaweed alone inside the ruined Odd Jobs office, which was destroyed by a spaceship. When Shinpachi comes to pick her up, Kagura tells him that she will not give up until Gintoki returns with his memories. Meanwhile Shinsengumi intelligence agent Yamazaki has infiltrated the Mamushi Factory where he finds some unexpected faces – The amnesic Gintoki and Kondou! Working diligently with a lively look on his face, Gintoki is now the building specialist for the “Jastaway.” But after the Jastaway explodes, Gintoki gets mixed up in another mess…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16799"
+    },
+    {
+      "n": 33,
+      "title": "Mistaking Someone’s Name is Rude!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/31cd3ebd7a8649f1cde3bf8c4d9093f51230035734_full.jpg",
+      "synopsis": "Having recovered from his amnesia, Gintoki attempts to renegotiate his overdue rent with Otose in celebration of his life starting anew. Instead, Otose cold-heartedly declares that unless the destroyed Odd Jobs office is repaired within a week, she will kick him out. Having no other choice, the trio try their hands on doing some unaccustomed carpenter work, but the task proves to be too difficult for the three amateurs. Irritated, Kagura and Gintoki lose control and create further destruction, when they receive a package sent by Sakamoto. Inside they find a letter, along with two little men. The two claims to be portable carpenters and begin rebuilding the Odd Jobs office…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16800"
+    },
+    {
+      "n": 34,
+      "title": "Love Doesn’t Require a Manual",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0e7414bfca0a4185a6b5af2a5f68dc171230033855_full.jpg",
+      "synopsis": "Members of the Otsu fan club are having a heated debate on the train about Otsu’s popularity being jeopardized by the appearance of TAMA, the cat-eared idol. After learning that fan club members are “cheating” with TAMA, Shinpachi delivers an iron-fisted punishment, which accidentally saves a girl who was being harassed by a drunken Matsudaira – and the girl turns out to be cat-eared! Shinpachi instantly falls for her cute looks, but panics after being asked out on a date by the girl, who is named Eromes. Shinpachi tries to deal with the situation by asking for help on a web message board, but this only leads to further problems as the day arrives for his fateful date…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16801"
+    },
+    {
+      "n": 35,
+      "title": "Love Doesn’t Require a Manual (Continued) /  You Can't Judge a Person by His Appearance, Either",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a24739815dd452ea961ef2e847d92f1a1230034050_full.jpg",
+      "synopsis": "Matsudaira summons Kondou, Hijikata, and Okita to the Ikedaya and informs the three of them that “You-know-who” is finally making his move. As tension runs high in the room, Matsudaira further declares it’s time for a “showdown.” Kondou and the others pledge their assistance to Matsudaira without really knowing whom this “You-know-who” is. When they find themselves at the amusement park and see a flirtatious man named Shichibei meet Kuriko, Matsudaira’s daughter, they realize Matsudaira is plotting to assassinate the man toying with his beloved daughter. Appalled by all of this, Hijikata decides to leave, but Kondou and Okita join in on the gig. And so begins the dramatic yet sad battle of men on a stake-out, ready to break up a couple’s date.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16802"
+    },
+    {
+      "n": 36,
+      "title": "People with Dark Pasts Can't Shut Up",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a6503f39c333f073ce822147975186921230034718_full.jpg",
+      "synopsis": "Finishing up their night job, Otae and Oryo walk home under the morning sunlight. While casually badmouthing their customers the two witness Hanako, the new kid at their bar, attempting to throw herself off a bridge. Otae quickly stops her and brings her home, where she learns the deeply troubled Hanako left her hometown of Osaka in order to become a dancer. Hanako then explains how she spent all her savings after joining the Dream Faith – a weird religious cult that promises to grant the power to make dreams come true. The Odd Jobs go undercover with Hanako’s help, but…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16803"
+    },
+    {
+      "n": 37,
+      "title": "People Who Say that Santa Doesn’t Really Exist Actually Want to Believe in Him / Prayer Won't Make Your Worldly Desires Go Away! Control Yourself",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/5b8e964004386a4334ea3f9a2f7ac8101230034748_full.jpg",
+      "synopsis": "On his way back from buying Nikuman one snowy night, Gintoki comes across an old man dressed in red and a reindeer arguing. Gintoki offers his help after hearing Santa complain of being unable to finish his job after his sled was destroyed. When Gintoki brings a two-wheeled cart instead, Santa whines over how it needs to be a sled to preserve his reputation. But after being talked down by Gintoki, Santa ends up making his deliveries dressed in all black. And so begin the burglar-like Santa and Reindeer, AND Gintoki’s night of delivering dreams to the kids.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16804"
+    },
+    {
+      "n": 38,
+      "title": "Only Children Play in the Snow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/760982917fd0f3fc7d0cff95bb7b14ea1230034507_full.jpg",
+      "synopsis": "Heavy snow falls upon the city of Edo. Otose’s voice rings through the winter wonderland, signaling the start of the Kabukicho Snow Festival! The highlight of the festivities is a snow figure-building contest with grand prize money. Entering the contest for the money, the Odd Jobs trio builds a snow figure claiming to be the “Neo Armstrong Cyclone Jet Armstrong Cannon.” Despite Shinpachi’s protests, everyone who visits the sculpture compliments its perfection. But Gintoki and Kagura, concerned over the other contestants’ works, begin sabotaging other snow figures.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16805"
+    },
+    {
+      "n": 39,
+      "title": "Ramen Shops with Long Menus Never Do Well",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/72b58d797eb3a62a75a0fb1e5d5b45761230035021_full.jpg",
+      "synopsis": "While trying to force his way out of a Shinsengumi inspection, Katsura is hit by Okita's bazooka and injures his leg. He tries to escape by running across roofs, but he is mistaken for an underwear thief and is defeated by Ikumatsu, the owner of the ramen shop, Daigo Ramen. The next morning, Ikumatsu serves him ramen to apologize for the misunderstanding. While Katsura eats, Ikumatsu's brother-in-law noisily enters the shop with his henchmen. The atmosphere turns volatile, and sensing Ikumatsu's uneasiness, Katsura chases out the unwanted guests. Katsura learns from Ikumatsu and her brother-in-law's conversation that Ikumatsu is a widow and that the Joi Faction is responsible for her husband's death. Thus an emotionally scarred man and woman begin a strange life together…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16806"
+    },
+    {
+      "n": 40,
+      "title": "Give a Thought to Planned Pregnancy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/143c2a7e92235661e0885c0fb1db8c221230035423_full.jpg",
+      "synopsis": "While Edo is abuzz with talk of the movie Alien vs. Yakuza, a real alien has snuck into Edo from outer space. Kondou gets a tip from renowned alien buster Umibouzu and has the Shinsengumi set up a cordon. Meanwhile, Kagura has fallen for an “it's me” scam, which is causing a sensation in Edo. Kagura obediently follows instructions given by a man claiming to be Gintoki and rushes off to the bank. Unfortunately, the alien also happens to be at the same bank. Worried about Kagura, Gintoki and Shinpachi also arrive at the bank. But Kagura, who is being swallowed by the alien, catches the two and tries to bring them down together. At that very moment, Umibouzu appears before the bunch. Kagura is stunned to see him…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16807"
+    },
+    {
+      "n": 41,
+      "title": "You Can't Judge a Movie by Its Title",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a08a7f5dad1d8fb3f67463e0a7f1805f1230035735_full.jpg",
+      "synopsis": "Fired by Gintoki, a depressed Kagura sits in the boarding area at the terminal with her father Umibouzu. When he hears that Gintoki fired Kagura, Shinpachi lashes out and tells Gintoki to think of how much the Odd Jobs and Gintoki meant to Kagura. With that, Shinpachi announce to quit the Odd Jobs as well. Meanwhile, Kagura’s spaceship is about to take off. In the cargo hold, Prince Hata’s servant, Jii, has ordered that the prince’s cargo be organized, but the maintenance crew is terrified of the creepy cargo. Jii ends up breaking a vial, which is the beginning of an incident that will toss Edo into chaos…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16808"
+    },
+    {
+      "n": 42,
+      "title": "You Know What Happens if You Pee on a Worm",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e584cefced22f04d6fafc8ff8557d2181230036009_full.jpg",
+      "synopsis": "The alien continues to wreak havoc at the terminal when Gintoki appears on the scene with Sadaharu, only to be engulfed by the alien's tentacles. Meanwhile, Umibouzu finds Kagura fallen and injured after her attempt to save Prince Hata and Jii. Enraged, Umibouzu seizes the two when Kagura stops and tells how proud she was of using her powers to save someone. The alien attempts to capture Kagura with its tentacles. Just as the alien is about to swallow her, Gintoki and Sadaharu come charging out of the alien's mouth. Gintoki and Umibouzu insult each other as they join forces to fight the alien. Meanwhile, in the sky, a Shogunate Battleship led by Matsudaira has appeared!",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16809"
+    },
+    {
+      "n": 43,
+      "title": "Make Characters So Anybody Can Tell Who They Are by Just Their Silhouettes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/de93327d8b83650ad37adea89ecfd0a51230036175_full.jpg",
+      "synopsis": "Umibouzu leaves but Kagura decides to stay in Edo. Seeing her friends sitting pensively in the Otose Snack House, Kagura, feeling mischievous, spies on the bar from the outside. But soon her friends forget about their loneliness and move on to different topics: Gintoki's crotch, beautiful women doctors, and the personalities of the female characters on the show… Soon talk centers on who will be the new heroine to fill in the Odd Jobs roster. Sachan, Otae, and Catherine begin a fierce battle over the slot. Who will the men choose to be the next heroine…?!",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16810"
+    },
+    {
+      "n": 44,
+      "title": "Mom’s Busy, Too, So Quit Complaining About What’s for Dinner",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/70edeaa43504c44b0d10d7d724524afa1230036528_full.jpg",
+      "synopsis": "An evil magistrate named Chintaro Toyama captures Elizabeth. When Katsura bribes the Odd Jobs with food to save her, our heroes naturally accept. Recruiting the help of Sachan (after getting her fired from her job at a kunoichi café), the rescue team, a.k.a. Go-Ninja Spy Force, sneaks into the magistrate's office. But the Shinobi Five, led by Zenzo Hattori, stands in their way. Zenzo is still bitter about his scuffle with Gintoki over a Jump comic on New Year's Eve, while Sachan faces Kaoru, her rival from ninja school. Shinpachi, Kagura, and Katsura defeat their opponents with curry laced with a laxative, but things get dangerous when Kagura carelessly takes a bite of the curry… And then things get even crazier as Gintoki and Zenzo get into a heated debate about the “Pegasus Meteor Slash” pose, and Kaoru's poison rose perfume attack goes off…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16811"
+    },
+    {
+      "n": 45,
+      "title": "Walk Your Dog at an Appropriate Speed",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6998c4cee8b44f69d13db1886ff4d97f1230036633_full.jpg",
+      "synopsis": "One night, Gintoki comes back home after a long night of carousing, and sees that Sadaharu has become enormous. Gintoki and his crew are at a loss as to what caused this sudden growth, and the dog translation device that Gintoki got at the bar isn't of any use. To make things worse for the bewildered threesome, Sadaharu gets even bigger, and when Sadaharu is shown on TV, Edo is thrown into an uproar. Curious bystanders barge into the Odd Jobs office, throwing rocks and injuring Kagura. Upon seeing this, Sadaharu…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16812"
+    },
+    {
+      "n": 46,
+      "title": "Adults Only. We Wouldn’t Want Anyone Immature in Here",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/6e0c96c9d215c48c279d321addabb9481230038025_full.jpg",
+      "synopsis": "In order to pay off the damages for Sadaharu's rampage, Ane not only has to let go of her savings but her shrine as well, and goes to work at Cabaret Smile. She is able to have her way with men and becomes the shop's drawing card. But she doesn't get along with Smile's other featured employee, Otae. The two clashes with each other, and when Otae beats up Ane's main customer, the owner of Kikuya, Smile's manager lays down a resolution. He's going to fire the person who has the least total sales the following day. A ruthless battle between women is about to begin! But that night, Otae tells Ane that she's not going to compete. However, this might be Otae's first attack--!",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16813"
+    },
+    {
+      "n": 47,
+      "title": "Do Cherries Come from Cherry Trees?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6bc5a290d16b8da7db8ea50d99b8f7bb1230036977_full.jpg",
+      "synopsis": "Gintoki and the gang are suffering from the mother of all hay fevers. One theory suggests the cause is a plant from a far-off planet, but no facts are available, and when Otose is forced to close her shop due to hay fever, it becomes apparent this is a serious situation. One day a new resident named Hedoro moves in to Kabukicho, and the Odd Jobs crew learn that the menacing-looking Amanto runs a flower shop right next to their office. When it turns out that all the pollens are originating from the shop, the Odd Jobs suspect Hedoro is trying to weaken the population with hay fever and take over the world. And then the trio find themselves having to deliver a circular to Hedoro…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16814"
+    },
+    {
+      "n": 48,
+      "title": "The More You're Alike, the More You Fight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/3bf0fb749324478cc1c86080cd02e4661230037352_full.jpg",
+      "synopsis": "The Shinsengumi capture one of the three Parco Brothers’ allies and the brothers go after Hijikata in retaliation. The youngest brother waits for Hijikata's day off and sits next to Hijikata in a restaurant, preparing to strike, but the sight of the Hijikata Special, a bowl of rice topped with mayonnaise, and the Uji Gintoki-Don, a bowl of rice topped with a large helping of azuki beans, leads to an argument between Hijikata and Gintoki, and an unexpected knockout of the youngest Parco brother. The three Parco Brothers withdraw, but they haven't given up on Hijikata yet. Little do they know that they will be drawn into Gintoki and Hijikata's fierce battle of pride…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16815"
+    },
+    {
+      "n": 49,
+      "title": "A Life Without Gambling is like Sushi Without Wasabi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/90b2bb6db92eede0ed20d496d80ebe2f1230037086_full.jpg",
+      "synopsis": "Gintoki and Hasegawa visit a casino in an attempt earn some easy cash but before long they’ve lost everything and are stripped down to their loincloths. The two complain that they can't win because evil spirits possesses them. But when a renowned gambler named Kanbe, the Luck Reader, arrives on the scene and helps them get their clothes back, Gintoki and Hasegawa take a hint from his suaveness, and try their hands at blackjack, only to wind up getting their clothes taken away again. Kanbe helps the two yet again, and after hearing his story Gintoki and Hasegawa learn the source of his luck…",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "16816"
+    },
+    {
+      "n": 50,
+      "title": "Pending Means Pending, It's Not Final",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Anime Gintama enters its second year on air! Well, more like manages to slide by for a second year. Either way it’s the second season, as the Odd Jobs crew reflect on “securing a one-year slot on air” and reminisce about the many events that occurred in the past year. As expectations of high ratings have given way to many hardships, Gintoki suggests that something needs to be done as the series continues on...",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16817"
+    },
+    {
+      "n": 51,
+      "title": "Milk Should Be Served At Body Temperature",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "A baby is left on the doorstep of the Odd Jobs office with a message that says, “It's your baby.” The baby has naturally curly silver hair and dead-fish eyes… in other words, the baby looks exactly like Gintoki, and everyone besides him believes without a doubt that the baby is his love child. Shinpachi, Kagura, and Otose all become smitten by the baby named Kanshichirou. Panicked over the idea of Kanshichirou really being his child, Gintoki flees the Odd Jobs office with the baby. But with no one willing to listen to his side of the story, Gintoki is at a loss. Meanwhile, Kahei Hashida, the owner of a large financial combine, visits the Odd Jobs. Kahei wants the Odd jobs to find Ofusa, the woman who kidnapped his grandson Kanshichirou. But Otose senses something fishy…",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16818"
+    },
+    {
+      "n": 52,
+      "title": "If You Want To See Someone, Make An Appo First",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Kahei is questioning the captured Ofusa about the whereabouts of baby Kanshichirou. When Shinpachi and Kagura, who are being chased by Nizou, come rushing in. Despite the commotion Kahei continues with his interrogation. Kagura makes a smoke screen while Shinpachi tries to save Ofusa, but Nizou is blind and smoke screens don't work against him. The group ends up getting cornered. Meanwhile, Gintoki visits the Hashida residence with Kanshichirou, but he is unable to talk to the Kihei, the company president, because he doesn't have an appointment. While Nizou corners Shinpachi and the others, Gintoki and Kanshichirou manage to get past the receptionists and onto an elevator…",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16819"
+    },
+    {
+      "n": 53,
+      "title": "Stress Makes You Bald, But It's Stressful To Avoid Stress, So You End Up Stressed Out Anyway, So In The End There's Nothing You Can Do",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Kabuki-cho has been plagued with a series of arsons. To prevent anyone from setting fire to garbage, rules about separating garbage have become stricter, so when Gintoki tries to sneak out magazines with the combustible garbage Otose sees him and gives him a lecture. But she unwittingly starts a small fire with a tossed-off cigarette, and when a panicky Gintoki tries to put the fire out, a young female fire fighter named Tatsumi sees him and mistakes him for the arsonist. Fortunately he’s cleared of any charges, but the leader of the fire fighters, who acts as Tatsumi's father, shuns her, claiming that a woman cannot be a fire fighter. Even so, Tatsumi wants to become the best fire fighter in Edo and catch the arsonist, which interests Gintoki…",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16820"
+    },
+    {
+      "n": 54,
+      "title": "Mothers Everywhere Are All The Same",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "A mother suddenly barges into the Odd Jobs office, wanting them to find her son Hachiro, who disappeared after coming to Edo. Though perplexed by the mother’s excessive concern, Gintoki and the gang begin their search for Hachiro. Using a photograph as a clue, they discover that Hachiro has undergone many plastic surgeries. They draw hair and a mustache on the photo for fun and a man named Hachiro who looks exactly like the man in the photo passes them by. Gintoki and the others are sure that this man is the Hachiro they're looking for, and bring Hachiro and his mother together, but…",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16821"
+    },
+    {
+      "n": 55,
+      "title": "Don't Make Munching Noises When You Eat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Katsuo knocks Hachiro out and makes unreasonable demands of Kyoshiro, which Gintoki and the others oppose by acting as hosts. Kyoshiro stubbornly refuses Katsuo's demands, and in response, Katsuo points a dagger at him as a warning, but Gintoki intervenes. Katsuo and his men leave because Katsuo's favorite dog gave birth. Hachiro's mother hears about the birth and follows them.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16822"
+    },
+    {
+      "n": 56,
+      "title": "Keep An Eye On The Chief For The Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Edo is in an uproar about the serial kidnappings of women. The Shinsengumi goes overboard in cracking down and sees a sudden drop in their public image. Kondou invites pop idol Tsu Terakado to be chief for the day in order to call on Edo residents to prevent crimes, as well as to boost the Shinsengumi's image. Otsu is eager to do her duty and begins reforming the Shinsengumi, beginning with the bureau's regulations. The Odd Jobs Trio are asked by Otsu to accompany her dressed up as the uninspiring mascot character Makoto-chan. The Shinsengumi realizes who they are and a fight breaks out. While they fight, someone kidnaps Otsu.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16823"
+    },
+    {
+      "n": 57,
+      "title": "When Looking For Things You've Lost, Remember What You Were Doing On The Day You Lost It",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Mutsu's Pleasure Support Club tries to deliver batteries so powerful that one can power a space battleship to Aoki and Co. But a group of men dressed in black shows up and steals the batteries and the money. Mutsu asks the Odd Jobs to recover the batteries and the money and capture the Pleasure Support Club’s missing leader, Sakamoto. Gintoki and the others easily capture Sakamoto and go to Aoki and Co., but find no clues. Gintoki and the others are forced to go along with Sakamoto's plan to go out gallivanting and drinking. As they totter down the night road, heading home, a group sneaks up behind them. Gintoki and Sakamoto realize the danger they're in and reminisce about the past as they confront their attackers. Sakamoto fires a gun and bluffs the enemy into retreating so no one gets hurt.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16824"
+    },
+    {
+      "n": 58,
+      "title": "Croquette Sandwiches Are Always The Most Popular Food Sold At The Stalls",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Elizabeth comes to Yorozuya, but Katsura, who is always with her, isn't there. Gintoki and the others are unsure how to treat Elizabeth. She doesn't talk and is difficult to figure out. Shinpachi decides to serve her tea, but Elizabeth doesn't react. He tries to serve her coffee next, but her attitude doesn't change at all. Kagura decides to serve her a certain drink as a last resort. Upon being served that drink, Elizabeth quietly begins to shed tears!",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16825"
+    },
+    {
+      "n": 59,
+      "title": "Be Careful Not To Leave Your Umbrella Somewhere",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Kagura has snuck onto a suspicious ship where she fights Takasugi under the bright moonlight. Kagura senses an odd presence and is attacked from behind. She escapes Matako Kijima’s double pistols, but Henpeita Takechi is waiting for her with the ronin he leads. Kagura wreaks havoc, but in the confusion of battle, Matako hits her with a gunshot. Even though her shoulder and leg have been injured, Kagura fights on. Finally, she gets within the ship.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16826"
+    },
+    {
+      "n": 60,
+      "title": "The Sun Will Rise Again",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "The Katsura’s Faction launches a midair battle against Takasugi to avenge Katsura, who was attacked by Nizou the Butcher. Nizou fights back with Benizakura, a sword-shaped weapon that has become fused with his arm. Meanwhile, Henpeita Takechi and Matako Kijima have captured Kagura. Shinpachi sneaks on board Takasugi's ship and uses the confusion of a cannon shot to successfully save Kagura. Meanwhile, Gintoki is headed to Takasugi’s ship along with Tetsuko, the younger sister of Tetsuya, the creator of the Benizakura.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16827"
+    },
+    {
+      "n": 61,
+      "title": "On A Moonless Night, Insects Are Drawn To The Light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Gintoki and Nizou battle to the death on the deck of Takasugi's ship. The anti-battleship weapon Benizakura has infiltrated Nizou's mind, driving Nizou out of control. Gintoki fights back with a sword forged by Tetsuko. Nizou attacks with overwhelming strength, but slowly, the battle begins to turn in Gintoki's favor. Meanwhile, within the ship, Takasugi plans to use the Benizakura to overthrow the shogunate, but he is confronted by Tetsuya, the man who forged the Benizakura, Tetsuya's younger sister Tetsuko, and Katsura.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16828"
+    },
+    {
+      "n": 62,
+      "title": "Even Mummy Hunters Sometimes Turn into Mummys",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Hijikata receives a report from Shinsengumi inspector Yamazaki about the struggle between the Katsura Faction and Takasugi Faction. Included is information on sightings of people who appear to be the Jacks-of-all-trades in the riot. Hijikata suspects that Gintoki has connections with the Antiforeigner Faction, so he orders Yamazaki to investigate Gintoki's affairs. Yamazaki questions Gintoki's friends, but he isn't able to get anything out of them. At his wit's end, Yamazaki ends up visiting the Jacks-of-all-trades. The Jacks-of-all-trades are out, but he gets information that Gintoki is receiving medical treatment at Shinpachi's house.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16829"
+    },
+    {
+      "n": 63,
+      "title": "The Preview Section in JUMP is Always Unreliable",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Ninja Zenzo Hattori runs through the city at night. His job requires him to be on time and fulfill his clients' requests perfectly. The job: pizza delivery. One night, as Zenzo is about to land, Gintoki crashes his scooter into Zenzo's backside. Ignoring the pain of his hemorrhoids, Zenzo grabs the pizza box to make his delivery. But instead of the pizza box, Zenzo accidentally grabs Gintoki's Jump. Zenzo's client, Okuni, takes the Jump and tells Zenzo that misfortune will befall his rear and that he should be careful.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16830"
+    },
+    {
+      "n": 64,
+      "title": "Eating Nmaibo Can Make You Full in No Time!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Katsura, who is secretly a member of the Joi Faction, is visited by a reporter from the talk show The Edo. Katsura tells reporter Hanano that he wants the citizens to know about the work that the Joi Faction has done and think about what they can do for the country. Led by Okita, the Shinsengumi barges in, and Katsura is forced to run. He takes out a corn potage-flavored Nmaibo from his kimono and shows it to the Shinsengumi, explaining that he carries it around as emergency rations. The Shinsengumi continue to pursue him, and Katsura throws the Nmaibo onto the roof. The Nmaibo acts as a smoke screen, and Katsura and his group manage to escape.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16831"
+    },
+    {
+      "n": 65,
+      "title": "Rhinoceros Beetles Teach Boys that Life is Precious",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Stag beetle wrestling has become popular in Edo. Kagura enters Sadaharu 28, a dung beetle that she is fond of, into a competition. But Okita of the Shinsengumi barges in and defeats Kagura with his jumbo stag beetle. Meanwhile, Gintoki learns that stag beetles can be sold at high prices and plans to go to the forest to catch some. Kagura says that she wants to catch a stag beetle to avenge Sadaharu 28. The group heads to the forest, but they find the Shinsengumi already there, desperately looking for stag beetles…",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16832"
+    },
+    {
+      "n": 66,
+      "title": "Dango Over Flowers",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Gintoki is stuffing himself with dango at Konpeito, a quiet dango shop. The shop's customers have been lured away by the sweets shop Andromeda, which is across the street. The owner persists in promoting his shop with his enthusiasm for dango. Gintoki learns that Sweets, the owner of Andromeda, is trying to drive Konpeito out of business because he wants the land. Konpeito's owner won’t agree to Sweets’ proposition, so Sweets challenges him to a competition. Konpeito and Andromeda will invite people to eat dango, and the shop whose dango is most popular wins. The loser has to close up shop. Konpeito's owner is hesitant, but Gintoki has a plan. The match begins!",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16833"
+    },
+    {
+      "n": 67,
+      "title": "For the Wind Is the Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Gintoki gets robot puppeteer Gengai Hiraga to fix his bike. But when Gintoki tries to leave Gengai's shop without paying the repair bill, Gengai activates the modification he had secretly made. Gintoki loses control of his scooter and crashes it into another scooter belonging to Amanto express messenger Noriko Mach. Now Noriko is injured and unable to ride her bike. But it turns out she has a special physical condition.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16834"
+    },
+    {
+      "n": 68,
+      "title": "Like a Haunted House, Life is Filled with Horrors",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "It is the day of a festival, but Gintoki and the others head to the temple grounds. Kagura complains that she wants to enjoy the festivities, but Gintoki tells her that they have to take over someone's shift. Ochi, a man dressed up as a fallen samurai with an arrow in his head, appears before them. He manages the haunted house at the festival. Gintoki and the others have come to help him. Ochi tells them about how he was unappreciated by those around him, how he was downsized, how his wife left him, and how his only reason for living is running a haunted house splendidly. Gintoki and the others become concerned for him and try to help, but…",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16835"
+    },
+    {
+      "n": 69,
+      "title": "Please Help by Separating Your Trash",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Gintoki tosses out his magazines on the day for combustible garbage pickup. Scared off by a terrifying commercial, Gintoki goes back to retrieve his magazines, but passes out after seeing a woman's severed head at the dumping ground. The next day, Gintoki wakes up in his room and is relieved when he thinks it was just a dream, only to find the severed head in Kagura's hands. Shinpachi informs the panicked Gintoki that it’s the head of an Etsuko, a popular mechanical maid. Gintoki and the others are unable to get a body for the bodiless Etsuko when they hear breaking news. Professor Hayashi, Etsuko's creator, has been killed, and there is a warrant out for Fuyou, his prototype mechanical maid . Fuyou's characteristics match that of the head that Gintoki and the group have…",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16836"
+    },
+    {
+      "n": 70,
+      "title": "Too Many Cuties Can Make You Sick",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Gintoki and the gang are suddenly attacked by maids and split up into two groups. Gintoki and Kagura act as decoys to draw away the enemy maids, while Shinpachi takes Tama to Gengai. Tama tells Shinpachi that he has a 5 percent chance of surviving and suggests that he should leave her and run away. But Shinpachi tells her that a samurai protects the person they have sworn to protect no matter what. His words stir a mysterious sensation within Tama that she was not programmed to feel.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16837"
+    },
+    {
+      "n": 71,
+      "title": "Some Data Cannot Be Erased",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Gintoki and the others rush to Number 502, who plans to take control of Edo with machines. They head to the terminal in Gengai's tank. Gengai and the tank are lost in an attack by a giant maid. Gintoki parts ways with Kagura and Sadaharu, and heads further in with Fuyou. Gintoki and Fuyou finally confront 502. 502 tries to welcome Fuyou as a reincarnation of his daughter, but Fuyou refuses. Obeying the words of late Professor Hayashi to give his daughter a smile, she tries to destroy 502, who has gone out of control!",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16838"
+    },
+    {
+      "n": 72,
+      "title": "A Dog's Paws Smell Fragrant Drive With A Might Attitude",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Katsura is reporting the shogunate's recent activities at a salon where Joi faction members gather. But the faction members are only interested in talking about the latest popular drama and don't listen to what he says. Katsura becomes angry and leaves the salon. He proceeds to a video rental store. When he tries to rent a video, the store employee asks him to show his driver's license as identification, but as a fugitive, he doesn't have a license. Meanwhile, Gintoki has gone to a driving school to take lessons after having his license suspended. When he gets into a passenger seat as part of a joint exercise with the other students, he finds Katsura in the driver's seat!",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16839"
+    },
+    {
+      "n": 73,
+      "title": "Think For A Minute Now, Do Matsutake Mushrooms Really Taste All That Good?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "The Odd Jobs gang has gone to the mountains to go hunting for matsutake mushrooms. Gintoki is in high spirits, but a hunter named Marinosuke appears before him and warns him to leave the mountain quickly because it's dangerous. But Gintoki and the others don't listen and are intent on finding matsutake mushrooms. Masamune, a giant bear that's being controlled by a space mushroom, appears before the group! Gintoki and the others escape thanks to Marinosuke. They try to fight Masamune to collect a reward. But a mushroom just like the one controlling Masamune is growing out of Gintoki's head!!",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16840"
+    },
+    {
+      "n": 74,
+      "title": "The Manga Writer Becomes A Pro, After Doing A Stock Of Manuscripts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "One day, Kagura and the others notice that Catherine's eyebrows are on the verge of connecting. While the group is watching a report about an accident nearby where a truck fell over on its side, Catherine comes back and her eyebrows have connected. Catherine becomes violent for some reason and attacks Otose. When things settle down, Otose's eyebrows are also connected! Gintoki and the others run away from the strange incident. Then they notice that people with connected eyebrows are attacking people all over the place. Edo is placed under emergency alert, and people are forbidden from touching people with connected eyebrows. A great tragedy is descending upon Edo…",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16841"
+    },
+    {
+      "n": 75,
+      "title": "Don't Complain About Your Job At Home, Do It Somewhere Else",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "Despite the danger of being canceled, Gintama has reached its second year. Gintoki claims that they were able to overcome it through manipulation, but Shinpachi reveals that they were almost canceled because of that. The Odd Jobs keep talking on and on and discover something terrible. They used up half a year's worth of their production money on the episodes up to now! They decide to look back on the past 75 episodes, but for some reason, the theme song is Otsu's “Your Mother is a XX.” Thinking it a bad idea to change the theme song, they put out a Prince Hata version of the opening sequence.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16842"
+    },
+    {
+      "n": 76,
+      "title": "In Those Situations, Keep Quiet And Cook Red Rice With Beans",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16843"
+    },
+    {
+      "n": 77,
+      "title": "Yesterday's Enemy, After All Is Said And Done, Is Still The Enemy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16844"
+    },
+    {
+      "n": 78,
+      "title": "People Who Are Picky About Food Are Also Picky About People, Too",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16845"
+    },
+    {
+      "n": 79,
+      "title": "Four Heads Are Better Than One",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16846"
+    },
+    {
+      "n": 80,
+      "title": "When Someone Who Wears Glasses Takes Them Off, It Looks Like Something's Missing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16847"
+    },
+    {
+      "n": 81,
+      "title": "A Woman's Best Make Up Is Her Smile",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16848"
+    },
+    {
+      "n": 82,
+      "title": "You Don't Stand In Line For The Ramen, You Stand In Line For The Self Satisfaction You Say Kawaii So Often, You Must Really Think You're Cute Stuff",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "No synopsis has been added for this episode yet.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16849"
+    },
+    {
+      "n": 83,
+      "title": "Rank Has Nothing To Do With Luck",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16850"
+    },
+    {
+      "n": 84,
+      "title": "Hard-Boiled Egg On A Man's Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16851"
+    },
+    {
+      "n": 85,
+      "title": "Hard-Boiled Eggs Don't Crack",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16852"
+    },
+    {
+      "n": 86,
+      "title": "It's Often Difficult To Sleep When You're Engrossed With Counting Sheep",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16853"
+    },
+    {
+      "n": 87,
+      "title": "Perform A German Suplex On A Woman Who Asks If She Or The Job Is More Important",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16854"
+    },
+    {
+      "n": 88,
+      "title": "The Most Exciting Part Of A Group Date Is Before It Starts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16855"
+    },
+    {
+      "n": 89,
+      "title": "What Happens Twice, Happens Thrice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16856"
+    },
+    {
+      "n": 90,
+      "title": "The More Delicious The Food, The Nastier It Is When It Goes Bad",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16857"
+    },
+    {
+      "n": 91,
+      "title": "If You Want To Lose Weight, Then Stop Eating And Start Moving",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16858"
+    },
+    {
+      "n": 92,
+      "title": "Be A Person Who Can See People's Strong Points And Not Their Weak Points",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16859"
+    },
+    {
+      "n": 93,
+      "title": "Even A Hero Has Issues",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16860"
+    },
+    {
+      "n": 94,
+      "title": "When Riding A Train, Make Sure You Grab The Straps With Both Hands",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16861"
+    },
+    {
+      "n": 95,
+      "title": "Men, Be A Madao",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16862"
+    },
+    {
+      "n": 96,
+      "title": "If You're A Man, Don't Give Up",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16863"
+    },
+    {
+      "n": 97,
+      "title": "Exaggerate The Tales Of Your Exploits By A Third, So Everyone Has A Good Time\n Men Have A Weakness For Girls Who Sell Flowers And Work In Pastry Shops",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16864"
+    },
+    {
+      "n": 98,
+      "title": "Play Video Games For Only An Hour A Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16865"
+    },
+    {
+      "n": 99,
+      "title": "Life And Video Games Are Full Of Bugs",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16866"
+    },
+    {
+      "n": 100,
+      "title": "The More Something Is Disliked, The More Lovely It Is",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16867"
+    },
+    {
+      "n": 101,
+      "title": "Rules Are Made To Be Broken",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16868"
+    },
+    {
+      "n": 102,
+      "title": "Otaku Are Talkative",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16869"
+    },
+    {
+      "n": 103,
+      "title": "There's A Thin Line Between Strengths And Weaknesses",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16870"
+    },
+    {
+      "n": 104,
+      "title": "Important Things Are Hard To See",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16871"
+    },
+    {
+      "n": 105,
+      "title": "It's All About The Beat And Timing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16872"
+    },
+    {
+      "n": 106,
+      "title": "Love Is Often Played Out In Sudden Death",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "No synopsis has been added for this episode yet.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16873"
+    },
+    {
+      "n": 107,
+      "title": "Kids Don't Understand How Their Parents Feel",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16874"
+    },
+    {
+      "n": 108,
+      "title": "Some Things Are Better Left Unsaid",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16875"
+    },
+    {
+      "n": 109,
+      "title": "Life Is A Test",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16876"
+    },
+    {
+      "n": 110,
+      "title": "People Are All Escapees Of Their Own Inner Prisons",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16877"
+    },
+    {
+      "n": 111,
+      "title": "Definitely Do Not Let Your Girlfriend See The Things You Use For Cross-Dressing There's Almost A 100% Chance You'll Forget Your Umbrella And Hate Yourself For It",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "No synopsis has been added for this episode yet.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16878"
+    },
+    {
+      "n": 112,
+      "title": "Lucky Is A Man Who Gets Up And Goes To Work",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16879"
+    },
+    {
+      "n": 113,
+      "title": "The Act of Polishing a Urinal Is Like the Act of Polishing One`s Heart / Subtitle Undecided",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16880"
+    },
+    {
+      "n": 114,
+      "title": "When Sweet and Spicy Things Are Switched... / They Say That Adding Soy Sauce to Pudding Gives the Taste of Sea Urchin, but Really, Adding Soy Sauce to Pudding Only Gives the Taste of Soy Sauce and Pudding",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "No synopsis has been added for this episode yet.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16881"
+    },
+    {
+      "n": 115,
+      "title": "Summer Vacation Is The Most Fun Right Before It Begins",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16882"
+    },
+    {
+      "n": 116,
+      "title": "The Older, The Wiser",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16883"
+    },
+    {
+      "n": 117,
+      "title": "Beauty Is Like A Summer Fruit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16884"
+    },
+    {
+      "n": 118,
+      "title": "Even If Your Back Is Bent, Go Straight Forward",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16885"
+    },
+    {
+      "n": 119,
+      "title": "Within Each Box Of Cigarettes, Are One Or Two Cigarettes That Smell Like Horse Dung",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16886"
+    },
+    {
+      "n": 120,
+      "title": "Japanese Restaurants Abroad Taste Pretty Much Like School Cafeteria Lunches Once You've Taken A Dish, You Can't Put It Back",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "No synopsis has been added for this episode yet.",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "16887"
+    },
+    {
+      "n": 121,
+      "title": "Episode 121",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:121"
+    },
+    {
+      "n": 122,
+      "title": "Episode 122",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:122"
+    },
+    {
+      "n": 123,
+      "title": "Episode 123",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:123"
+    },
+    {
+      "n": 124,
+      "title": "Episode 124",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:124"
+    },
+    {
+      "n": 125,
+      "title": "Episode 125",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:125"
+    },
+    {
+      "n": 126,
+      "title": "Episode 126",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:126"
+    },
+    {
+      "n": 127,
+      "title": "Episode 127",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:127"
+    },
+    {
+      "n": 128,
+      "title": "Episode 128",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:128"
+    },
+    {
+      "n": 129,
+      "title": "Episode 129",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:129"
+    },
+    {
+      "n": 130,
+      "title": "Episode 130",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:130"
+    },
+    {
+      "n": 131,
+      "title": "Episode 131",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:131"
+    },
+    {
+      "n": 132,
+      "title": "Episode 132",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:132"
+    },
+    {
+      "n": 133,
+      "title": "Episode 133",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:133"
+    },
+    {
+      "n": 134,
+      "title": "Episode 134",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:134"
+    },
+    {
+      "n": 135,
+      "title": "Episode 135",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:135"
+    },
+    {
+      "n": 136,
+      "title": "Episode 136",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:136"
+    },
+    {
+      "n": 137,
+      "title": "Episode 137",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:137"
+    },
+    {
+      "n": 138,
+      "title": "Episode 138",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:138"
+    },
+    {
+      "n": 139,
+      "title": "Episode 139",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:139"
+    },
+    {
+      "n": 140,
+      "title": "Episode 140",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:140"
+    },
+    {
+      "n": 141,
+      "title": "Episode 141",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:141"
+    },
+    {
+      "n": 142,
+      "title": "Episode 142",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:142"
+    },
+    {
+      "n": 143,
+      "title": "Episode 143",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:143"
+    },
+    {
+      "n": 144,
+      "title": "Episode 144",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:144"
+    },
+    {
+      "n": 145,
+      "title": "Episode 145",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:145"
+    },
+    {
+      "n": 146,
+      "title": "Episode 146",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:146"
+    },
+    {
+      "n": 147,
+      "title": "Episode 147",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:147"
+    },
+    {
+      "n": 148,
+      "title": "Episode 148",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:148"
+    },
+    {
+      "n": 149,
+      "title": "Episode 149",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:149"
+    },
+    {
+      "n": 150,
+      "title": "Episode 150",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2025-10-07",
+      "markers": [],
+      "external_id": "anikoto:58:150"
+    },
+    {
+      "n": 151,
+      "title": "Episode 151",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:151"
+    },
+    {
+      "n": 152,
+      "title": "Episode 152",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:152"
+    },
+    {
+      "n": 153,
+      "title": "Episode 153",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:153"
+    },
+    {
+      "n": 154,
+      "title": "Episode 154",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:154"
+    },
+    {
+      "n": 155,
+      "title": "Episode 155",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:155"
+    },
+    {
+      "n": 156,
+      "title": "Episode 156",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:156"
+    },
+    {
+      "n": 157,
+      "title": "Episode 157",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:157"
+    },
+    {
+      "n": 158,
+      "title": "Episode 158",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:158"
+    },
+    {
+      "n": 159,
+      "title": "Episode 159",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:159"
+    },
+    {
+      "n": 160,
+      "title": "Episode 160",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:160"
+    },
+    {
+      "n": 161,
+      "title": "Episode 161",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:161"
+    },
+    {
+      "n": 162,
+      "title": "Episode 162",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:162"
+    },
+    {
+      "n": 163,
+      "title": "Episode 163",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:163"
+    },
+    {
+      "n": 164,
+      "title": "Episode 164",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:164"
+    },
+    {
+      "n": 165,
+      "title": "Episode 165",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:165"
+    },
+    {
+      "n": 166,
+      "title": "Episode 166",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:166"
+    },
+    {
+      "n": 167,
+      "title": "Episode 167",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:167"
+    },
+    {
+      "n": 168,
+      "title": "Episode 168",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:168"
+    },
+    {
+      "n": 169,
+      "title": "Episode 169",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:169"
+    },
+    {
+      "n": 170,
+      "title": "Episode 170",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:170"
+    },
+    {
+      "n": 171,
+      "title": "Episode 171",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:171"
+    },
+    {
+      "n": 172,
+      "title": "Episode 172",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:172"
+    },
+    {
+      "n": 173,
+      "title": "Episode 173",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:173"
+    },
+    {
+      "n": 174,
+      "title": "Episode 174",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:174"
+    },
+    {
+      "n": 175,
+      "title": "Episode 175",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:175"
+    },
+    {
+      "n": 176,
+      "title": "Episode 176",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:176"
+    },
+    {
+      "n": 177,
+      "title": "Episode 177",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:177"
+    },
+    {
+      "n": 178,
+      "title": "Episode 178",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:178"
+    },
+    {
+      "n": 179,
+      "title": "Episode 179",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:179"
+    },
+    {
+      "n": 180,
+      "title": "Episode 180",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:180"
+    },
+    {
+      "n": 181,
+      "title": "Episode 181",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:181"
+    },
+    {
+      "n": 182,
+      "title": "Episode 182",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:182"
+    },
+    {
+      "n": 183,
+      "title": "Episode 183",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:183"
+    },
+    {
+      "n": 184,
+      "title": "Episode 184",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:184"
+    },
+    {
+      "n": 185,
+      "title": "Episode 185",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:185"
+    },
+    {
+      "n": 186,
+      "title": "Episode 186",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:186"
+    },
+    {
+      "n": 187,
+      "title": "Episode 187",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:187"
+    },
+    {
+      "n": 188,
+      "title": "Episode 188",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:188"
+    },
+    {
+      "n": 189,
+      "title": "Episode 189",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:189"
+    },
+    {
+      "n": 190,
+      "title": "Episode 190",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:190"
+    },
+    {
+      "n": 191,
+      "title": "Episode 191",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:191"
+    },
+    {
+      "n": 192,
+      "title": "Episode 192",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:192"
+    },
+    {
+      "n": 193,
+      "title": "Episode 193",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:193"
+    },
+    {
+      "n": 194,
+      "title": "Episode 194",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:194"
+    },
+    {
+      "n": 195,
+      "title": "Episode 195",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:195"
+    },
+    {
+      "n": 196,
+      "title": "Episode 196",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:196"
+    },
+    {
+      "n": 197,
+      "title": "Episode 197",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:197"
+    },
+    {
+      "n": 198,
+      "title": "Episode 198",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:198"
+    },
+    {
+      "n": 199,
+      "title": "Episode 199",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:199"
+    },
+    {
+      "n": 200,
+      "title": "Episode 200",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:200"
+    },
+    {
+      "n": 201,
+      "title": "Episode 201",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901a16288f9f11c5df31411-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "anikoto:58:201"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Wadachi",
+      "artist": "SPYAIR",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ring a Ding Dong",
+      "artist": "Saeko Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "We Are! (ウィーアー!)",
+      "artist": "Hiroshi Kitadani",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "I Wanna Be...",
+      "artist": "SPYAIR",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hikari Shoumeiron",
+      "artist": "CHiCO with HoneyWorks",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "VS.",
+      "artist": "Blue Encount",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hankō Seimei (Opposition Proclamation)",
+      "artist": "Ayumikurikamaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kagerō",
+      "artist": "ЯeaL",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Silver",
+      "artist": "RIZE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "DAYxDAY",
+      "artist": "BLUE ENCOUNT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "DESTINY",
+      "artist": "Negoto",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "LET'S GO OUT",
+      "artist": "AMOYAMO",
+      "episodes": "1-4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Moonwalk (ムーンウォーク)",
+      "artist": "MONOBRIGHT",
+      "episodes": "1-4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Genjō Distraction (現状ディストラクション;Current Situation Distraction)",
+      "artist": "SPYAIR",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tougenkyo Alien",
+      "artist": "serial TV drama",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Samurai Heart (Some Like It Hot!!)",
+      "artist": "SPYAIR",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Boku-tachi no Kisetsu (僕たちの季節)",
+      "artist": "DOES",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pray",
+      "artist": "Tommy Heavenly6",
+      "episodes": "1-24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fuusen Gamu",
+      "artist": "Captain Stridum",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Planet X",
+      "artist": "Audio Highs",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Omae no Kaa-chan XX da!",
+      "artist": "kazmy with Necromancers",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Dondake! Konishi Man (どんだけー!小西マン)",
+      "artist": "Ko-saku",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Katte ni My Soul",
+      "artist": "DISH//",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hana Ichi Monme",
+      "artist": "Burnout Syndromes",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Kyou mo Sakura Mau Akatsuki ni (今日もサクラ舞う暁に)",
+      "artist": "CHiCO with HoneyWorks",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "We Gotta Fight!",
+      "artist": "XY",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Pride Kakumei (プライド革命; Pride Revolution)",
+      "artist": "CHiCO with HoneyWorks",
+      "episodes": "278-291"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Saigo Made II",
+      "artist": "Aqua Timez",
+      "episodes": "278-291"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Sakuramitsu Tsuki (サクラミツツキ)",
+      "artist": "SPYAIR",
+      "episodes": "5-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Expect",
+      "artist": "PAGE",
+      "episodes": "5-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Pray",
+      "artist": "Tommy heavenly6",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Dilemma (ジレンマ)",
+      "artist": "ecosystem",
+      "episodes": "27-39"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Balance Doll",
+      "artist": "Prague",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Tooi Nioi",
+      "artist": "YO-KING",
+      "episodes": "25-49"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "MR.RAINDROP",
+      "artist": "amplified",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Saigo Made II",
+      "artist": "Aqua Timez",
+      "episodes": "281"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Pride Kakumei",
+      "artist": "CHiCO with Honeyworks",
+      "episodes": "281"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Wonderland",
+      "artist": "FLiP",
+      "episodes": "40-51"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Anagura (アナグラ)",
+      "artist": "Kuroneko Chelsea",
+      "episodes": "27-39"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Gin-iro no Sora (銀色の空; Silver Sky)",
+      "artist": "redballoon",
+      "episodes": "50-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Yuki no Tsubasa",
+      "artist": "redballoon",
+      "episodes": "25-37"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Beautiful Days",
+      "artist": "OKAMAOTO'S",
+      "episodes": "292-303"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Glorious Days (グロリアスデイズ)",
+      "artist": "Three Lights Down Kings",
+      "episodes": "292-303"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Nakama (仲間)",
+      "artist": "Good Coming",
+      "episodes": "40-51"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Kasanaru Kage",
+      "artist": "Hearts Glow",
+      "episodes": "76-99"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Candy Line",
+      "artist": "Hitomi Takahashi",
+      "episodes": "38-49"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Know Know Know",
+      "artist": "DOES",
+      "episodes": "304-316"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Acchi Muite",
+      "artist": "Swimy",
+      "episodes": "304-316"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Donten",
+      "artist": "DOES",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Shura (修羅)",
+      "artist": "DOES",
+      "episodes": "50-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 6,
+      "title": "Anata Magic",
+      "artist": "Monobright",
+      "episodes": "126-150"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Kiseki",
+      "artist": "Snowkel",
+      "episodes": "63-75"
+    },
+    {
+      "kind": "OP",
+      "sequence": 7,
+      "title": "Stairway Generation",
+      "artist": "Base Ball Bear",
+      "episodes": "151-176"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "SIGNAL",
+      "artist": "KELUN",
+      "episodes": "76-87"
+    },
+    {
+      "kind": "OP",
+      "sequence": 8,
+      "title": "Light Infection",
+      "artist": "Prague",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Speed of Flow",
+      "artist": "The Rodeo Carburettor",
+      "episodes": "88-99"
+    },
+    {
+      "kind": "OP",
+      "sequence": 9,
+      "title": "Bakuchi Dancer (バクチ・ダンサー)",
+      "artist": "DOES",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Sanagi",
+      "artist": "POSSIBILITY",
+      "episodes": "100-112"
+    },
+    {
+      "kind": "OP",
+      "sequence": 10,
+      "title": "Kaze no Gotoku (風のごとく)",
+      "artist": "Inoue Joe",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "This world is yours",
+      "artist": "Plingmin",
+      "episodes": "113-125"
+    },
+    {
+      "kind": "OP",
+      "sequence": 11,
+      "title": "Kanousei Girl (可能性ガール)",
+      "artist": "Chiaki Kuriyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "Ai, Ai, Ai (I, Love, Meet)",
+      "artist": "GHOSTNOTE",
+      "episodes": "126-138"
+    },
+    {
+      "kind": "OP",
+      "sequence": 12,
+      "title": "Katoniago (カートニアゴ )",
+      "artist": "FLiP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "Kagayaita",
+      "artist": "SHIGI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 13,
+      "title": "Asa Answer",
+      "artist": "PENGIN",
+      "episodes": "151-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 14,
+      "title": "Wo Ai Ni",
+      "artist": "Hitomi Takahashi and BEAT CRUSADERS",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 15,
+      "title": "Wonderful Days",
+      "artist": "ONE DRAFT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 16,
+      "title": "Sayonara no Sora",
+      "artist": "Qwai",
+      "episodes": "190-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 17,
+      "title": "Bokutachi no Kisetsu",
+      "artist": "DOES",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 18,
+      "title": "Wave",
+      "artist": "Vijandeux",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 19,
+      "title": "In My Life",
+      "artist": "AZU",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 20,
+      "title": "Sakurane",
+      "artist": "Piko",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

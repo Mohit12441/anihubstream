@@ -1,0 +1,87 @@
+{
+  "id": "hybrid-child",
+  "title": "Hybrid Child",
+  "native": "ハイブリッド チャイルド",
+  "year": 2014,
+  "rating": 6.9,
+  "season": "Fall 2014",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/11135-YIFUbwzeQniM.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/11135-YIFUbwzeQniM.jpg",
+  "accent": "#28a1fe",
+  "synopsis": "The Hybrid Child is an amazing android that can grow if it is lavished with enough love and care from its owner. Neither fully machine nor fully human, the various Hybrid Child models develop strong emotional bonds with their owners. This volume contains several short stories of love, sacrifice, and drama: Young Kotaro learns the importance of responsibility when his Hybrid Child's lifespan runs out. The tragic swordsman Seya learns to love again with the help of his Hybrid child, Yuzu. The final tale tells the story of Kuroda, the creator of the Hybrid Child designs, and how his lost love inspired their creation.\n\n\r\n(Source: DMP)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "hybrid-child-gdq58d",
+    "mal": 11135,
+    "anilist": 11135,
+    "kitsu": 6465
+  },
+  "skip_key_id": 11135,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": null,
+  "search_text": "hybrid child ハイフ リット チャイルト ova finished",
+  "genres": [
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "148750"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "148751"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "148752"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "148753"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

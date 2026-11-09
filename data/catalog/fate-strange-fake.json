@@ -1,0 +1,68 @@
+{
+  "id": "fate-strange-fake",
+  "title": "Fate/strange Fake",
+  "native": "Fate/strange Fake",
+  "year": 2026,
+  "rating": 8.2,
+  "season": "Winter 2026",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx166617-34fpC9y47tTx.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx166617-34fpC9y47tTx.png",
+  "accent": "#1a0df1",
+  "synopsis": "In a Holy Grail War, Mages (Masters) and their Heroic Spirits (Servants) fight for the control of the Holy Grail—an omnipotent wish-granting device said to fulfill any desire. Years have passed since the end of the Fifth Holy Grail War in Japan. Now, signs portend the emergence of a new Holy Grail in the western American city of Snowfield. Sure enough, Masters and Servants begin to gather... \n\nA missing Servant class...\n\nImpossible Servant summonings...\n\nA nation shrouded in secrecy...\n\nAnd a city created as a battleground.\n\nIn the face of such irregularities, the Holy Grail War is twisted and driven into the depth of madness. Let the curtain rise on a masquerade of humans and heroes, made to dance upon the stage of a false Holy Grail. This is a Holy Grail War covered in lies.\n\n(Source: Official Site, Aniplex USA, edited)\n\nNotes:\n\n• Special premiere of Episode 1 in its English Dub occurred in Los Angeles at the Fate 20th Anniversary Showcase event and as well through Crunchyroll’s YouTube Channel on November 23, 2024 before the Japanese television premiere.\n\n• The Japanese advanced premiere occurred during the \"Fate New Year's Eve TV Special 2024\" on December 31, 2024.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fatestrange-fake-se1d4m",
+    "mal": 55830,
+    "anilist": 166617,
+    "kitsu": 47682
+  },
+  "skip_key_id": 55830,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "fate strange fake fate strange fake tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Provant",
+      "artist": "SawanoHiroyuki[nZk]:Jean-Ken Johnny & TAKUMA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Senzaiteki na Ai (Potential Love)",
+      "artist": "13.3g",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "FAKEit",
+      "artist": "SawanoHiroyuki[nZk]:Laco",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

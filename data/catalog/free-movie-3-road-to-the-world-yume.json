@@ -1,0 +1,56 @@
+{
+  "id": "free-movie-3-road-to-the-world-yume",
+  "title": "Free! -Road to the World- the Dream",
+  "native": "Free!-Road to the World-夢",
+  "year": 2019,
+  "rating": 7.7,
+  "season": "Summer 2019",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx107202-jjp0XqcywCfa.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx107202-jjp0XqcywCfa.jpg",
+  "accent": "#43a1ff",
+  "synopsis": "The film will be a \"reconstruction\" of the Free! Dive to the Future television anime series, but with an added \"new episode.\"\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "free!-movie-3:-road-to-the-world-yume-g6wi1v",
+    "mal": 39014,
+    "anilist": 107202,
+    "kitsu": 42380
+  },
+  "skip_key_id": 39014,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "free road to the world the dream free road to the world 夢 movie finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Free! Movie 3: Road to the World - Yume (Movie)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx107202-jjp0XqcywCfa.jpg",
+      "synopsis": "The film will be a \"reconstruction\" of the Free! Dive to the Future television anime series, but with an added \"new episode.\"\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "265445"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

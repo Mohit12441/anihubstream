@@ -1,0 +1,237 @@
+{
+  "id": "gundam-build-divers-re-rise-2nd-season",
+  "title": "Gundam Build Divers Re:RISE 2nd Season",
+  "native": "ガンダムビルドダイバーズRe:RISE 2nd Season",
+  "year": 2020,
+  "rating": 7.3,
+  "season": "Spring 2020",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx114233-FUlAGLqFOVrT.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114233-FUlAGLqFOVrT.jpg",
+  "accent": "#e443e4",
+  "synopsis": "The second season of Gundam Build Divers Re:RISE.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "gundam-build-divers-re:rise-2nd-season-9c9bmf",
+    "mal": 40942,
+    "anilist": 114233,
+    "kitsu": 43144
+  },
+  "skip_key_id": 40942,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "gundam build divers re rise 2nd season カ ンタ ムヒ ルト タ イハ ース re rise 2nd season ona finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Welcome to GBD",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/3d2cb6bfc069129399c92c9dd496e3ce1522749333_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278924"
+    },
+    {
+      "n": 2,
+      "title": "Chaotic Ogre",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3278a0e1589df9acb6c9c69bdd0e907f1523341399_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278925"
+    },
+    {
+      "n": 3,
+      "title": "The Protector",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/fabc6dfaba507456b3ff4d86cbdc275f1523923892_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278926"
+    },
+    {
+      "n": 4,
+      "title": "Tigerwolf of the Sacred Mountain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/cbd6f64f368138b3cd6e8dc0cd51e2cd1524543496_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278927"
+    },
+    {
+      "n": 5,
+      "title": "Holy Land of Perisia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/33b2855f00cd6daeca63000d38577ab31524697609_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278928"
+    },
+    {
+      "n": 6,
+      "title": "Past and Future",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/3496a08d730cdb7ac39e963e0b68a7621525736279_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278929"
+    },
+    {
+      "n": 7,
+      "title": "Force Battle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e6017cf7248cd0b252bda2c6e206dd2d1526358295_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278930"
+    },
+    {
+      "n": 8,
+      "title": "Festival!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/e1a2c402d5494d839991b4f3408a93071526972678_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278931"
+    },
+    {
+      "n": 9,
+      "title": "Return of the Ogre",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/9015eda09527a1dc104cf71b3fc886cf1527577480_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278932"
+    },
+    {
+      "n": 10,
+      "title": "Coalition of Volunteers",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/83594755784d5826fdd40eb5b97c37941528179060_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278933"
+    },
+    {
+      "n": 11,
+      "title": "Ayame's Tears",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/0ef61412bd0d5d2e6df6dc7084d4e3c41528784826_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278934"
+    },
+    {
+      "n": 12,
+      "title": "Shining Wings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/34803e75a75c7fe94ba00ccdd89bff521529392591_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278935"
+    },
+    {
+      "n": 13,
+      "title": "Duel",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0cae032a910d7c5a8aac2ec0ca1e253b1529996232_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278936"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hatena",
+      "artist": "Penguin Research",
+      "episodes": "14-21, 23-24, 26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Twinkle",
+      "artist": "Spira Spica",
+      "episodes": "14-19, 22-25"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Re:RISE (リライズ)",
+      "artist": "Spira Spica",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "MAGIC TIME",
+      "artist": "SudannaYuzuYully",
+      "episodes": "1-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Heartful (ハートフル)",
+      "artist": "Spira Spica",
+      "episodes": "20-21"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Re:RISE (リライズ)",
+      "artist": "Spira Spica",
+      "episodes": "13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Re:RISE (リライズ)",
+      "artist": "Spira Spica",
+      "episodes": "26"
+    }
+  ],
+  "relations": []
+}

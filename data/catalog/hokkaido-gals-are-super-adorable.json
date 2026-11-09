@@ -1,0 +1,292 @@
+{
+  "id": "hokkaido-gals-are-super-adorable",
+  "title": "Hokkaido Gals Are Super Adorable!",
+  "native": "道産子ギャルはなまらめんこい",
+  "year": 2024,
+  "rating": 7,
+  "season": "Winter 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx155963-kOnLUDAEamUe.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx155963-kOnLUDAEamUe.jpg",
+  "accent": "#d6ae6b",
+  "synopsis": "Snowflakes aren’t the only things dropping in Hokkaido—so are jaws, thanks to the super adorable gals who are turning the icy north into a hotbed of fashion and fun. Brace yourself for a winter storm of laughs, love, and killer outfits as these gals prove that being cute is an all-season affair. Here, frostbite meets fashionista!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46663,
+    "anilist": 155963,
+    "mal": 53421
+  },
+  "skip_key_id": 53421,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 13:05:21",
+  "search_text": "hokkaido gals are super adorable 道産子キ ャルはなまらめんこい tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hokkaido Gals Are Super Adorable!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336670/thumbnail/medium-3b7688ea590f1f2de87a358923fc254b.jpeg",
+      "synopsis": "Shiki Tsubasa has just moved from Tokyo to the city of Kitami in Hokkaido. When he gets lost, a flirty gal named Fuyuki Minami points him in the right direction. After the two meet again at school, Minami invites Tsubasa to hang out with her at home. (Source: Crunchyroll)",
+      "airdate": "2024-01-08",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1300,
+          "end": 1390
+        }
+      ],
+      "external_id": "336670"
+    },
+    {
+      "n": 2,
+      "title": "It's Super Warm Inside the Snow Fort",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336671/thumbnail/medium-9c4edcada5d49d626935bd4fab144a02.jpeg",
+      "synopsis": "Tsubasa decides to attend the Kitami Winter Festival with Minami. Tsubasa is nervous and wonders if it classifies as a date. Some days later, during lunch, Minami asks if she can go to Tsubasa's house. On their way there the two come upon a snow mound. (Source: Crunchyroll)",
+      "airdate": "2024-01-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 146
+        }
+      ],
+      "external_id": "336671"
+    },
+    {
+      "n": 3,
+      "title": "Akino-san Is Super Unfriendly",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336672/thumbnail/medium-accb6b1134895e1b831cb43a7530ea8d.jpeg",
+      "synopsis": "Tsubasa starts learning to ski on a class trip to the slopes. He's told to partner with Akino Sayuri, a pretty loner that Minami is fascinated with. When he runs to the bus to grab his chopsticks for lunch, he finds Akino half-naked and covered in sweat. (Source: Crunchyroll)",
+      "airdate": "2024-01-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 146,
+          "end": 236
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "336672"
+    },
+    {
+      "n": 4,
+      "title": "Nighttime Calls Are Super Ticklish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336673/thumbnail/medium-85b7be136a8e7091c29550494b5e265f.jpeg",
+      "synopsis": "Tsubasa tries walking to school in a blizzard, but Minami and her flirty mother pick him up. After class, Tsubasa, Minami, and Sayuri hang out at a big shopping center. Later that night, Minami shocks Tsubasa with a steaming hot video call from the bath. (Source: Crunchyroll)",
+      "airdate": "2024-01-29",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1434
+        }
+      ],
+      "external_id": "336673"
+    },
+    {
+      "n": 5,
+      "title": "Super Bitter, Super Sweet",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336674/thumbnail/medium-000df36da945282658949d4251b41955.jpeg",
+      "synopsis": "Tsubasa's classmates at karaoke are excited for Valentine's Day. Sayuri says she isn't interested but later bumps into Minami while gazing at the Valentine's display from afar. She then decides to ask Minami a question. (Source: Crunchyroll)",
+      "airdate": "2024-02-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 129
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1439
+        }
+      ],
+      "external_id": "336674"
+    },
+    {
+      "n": 6,
+      "title": "Natsukawa-Senpai Is Super Good-Looking",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336675/thumbnail/medium-eac0c5f39d285606dbbe3de163d082d2.jpeg",
+      "synopsis": "Tsubasa, Sayuri, and Minami have a study party. Tsubasa loses track of time and is scolded when he gets home late. The next day, Tsubasa bumps into the breathtaking Rena-senpai on his way to school and is soon shocked to realize that she is his neighbor. (Source: Crunchyroll)",
+      "airdate": "2024-02-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 160
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "336675"
+    },
+    {
+      "n": 7,
+      "title": "Final Exams Are Super Hard",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336676/thumbnail/medium-6c5189f20b4ef80f5c9d065a24bee73b.jpeg",
+      "synopsis": "Tsubasa is ordered to score high on exams, so when the lovely Rena offers to tutor him, he accepts. He soon realizes that Rena expects a reward for her help. Minami spots them together and is thrilled at first, but then starts to feel very uncomfortable. (Source: Crunchyroll)",
+      "airdate": "2024-02-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 23,
+          "end": 111
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "336676"
+    },
+    {
+      "n": 8,
+      "title": "Yakiniku with Friends Is Super Delish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336677/thumbnail/medium-57085a4af892c7e16508c246dbcaf5ce.jpeg",
+      "synopsis": "Minami and Sayuri race to the scene of Tsubasa and Reina's date. After being moved to tears over the movie heroine's story, Reina tells Tsubasa about her own circumstances. Tsubasa, having been reminded of his own situation, then tells her his story. (Source: Crunchyroll)",
+      "airdate": "2024-02-26",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1439
+        }
+      ],
+      "external_id": "336677"
+    },
+    {
+      "n": 9,
+      "title": "Lake Abashiri Is Super Relaxing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336678/thumbnail/medium-f6e35544f7ac26c643fee63e5cba343d.jpeg",
+      "synopsis": "Matsuo, a class friend who made amends with Minami, takes Tsubasa smelt fishing as a thank you for his consultation. Minami, who happened to be at the fishing spot, joins them, and they discuss makeup. Later, Minami visits Tsubasa who's caught a cold. (Source: Crunchyroll)",
+      "airdate": "2024-03-04",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "336678"
+    },
+    {
+      "n": 10,
+      "title": "Time Flies Super Fast",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336679/thumbnail/medium-cf1f50b9970feab32e40288d0990b780.jpeg",
+      "synopsis": "The new term begins. Minami catches Tsubasa on the way to class and starts teasing him ruthlessly. The two are thrilled to learn they are in the same class again, but Minami still seems gloomy. After school, Minami says she has something to tell Tsubasa. (Source: Crunchyroll)",
+      "airdate": "2024-03-11",
+      "markers": [],
+      "external_id": "336679"
+    },
+    {
+      "n": 11,
+      "title": "Youth Hits Super Hard in the Feels",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336680/thumbnail/medium-c9a9968efffee1cc389d971a538a9b00.jpeg",
+      "synopsis": "A sleep-deprived Tsubasa meets up with Minami and they head to her secret location. Later, Minami suggests they should return there years from now and Tsubasa wonders what she means by that. She then reveals what it is she wanted to convey. (Source: Crunchyroll)",
+      "airdate": "2024-03-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "336680"
+    },
+    {
+      "n": 12,
+      "title": "Life Without You Feels Super Off",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336681/thumbnail/medium-40ae4fc5eb9ef33976a6ddf35a36173a.jpeg",
+      "synopsis": "Tsubasa and Minami miss the last bus home from the park and end up getting a hotel room, making the overnight date that Minami had joked about a reality. However, Minami sneaks out early, leaving Tsubasa confused and afraid to face her before she leaves. (Source: Crunchyroll)",
+      "airdate": "2024-03-25",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1195,
+          "end": 1284
+        }
+      ],
+      "external_id": "336681"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Namaramenkoi Gal",
+      "artist": "Masayoshi Ooishi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Wayawayawaa!",
+      "artist": "Asaka",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,302 @@
+{
+  "id": "ghost-hound",
+  "title": "Ghost Hound",
+  "native": "神霊狩 Ghost Hound",
+  "year": 2007,
+  "rating": 7,
+  "season": "Fall 2007",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2596-7VmcTkkQmOST.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2596-7VmcTkkQmOST.jpg",
+  "accent": "#c9f1d6",
+  "synopsis": "In an isolated region of Kyushu lies the town of Suiten. Though seeming small and modest, Suiten is not a picturesque place for a vacation, unless it is from the Unseen World. Taro, Makoto and Masayuki, three boys with traumatic pasts, learn to let their souls cross between the two parallel worlds. However, the Unseen World is no mere copy of the real Apparent World. The Unseen World is the home of ghosts, but changes are now allowing the souls of the dead to pass over into the Apparent World, with unpredictable effects. Follow the journey of Taro, Makoto and Masayuki, as they cross between the two worlds, trying to unravel a great mystery. \n\n(Source: Sentai Filmworks)\n\nNote: Anime was made as the 20th anniversary project for Production I.G.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 2360,
+    "anilist": 2596,
+    "mal": 2596
+  },
+  "skip_key_id": 2596,
+  "skip_key_space": "mal",
+  "episode_total": 22,
+  "added_at": "2026-10-22 09:26:56",
+  "search_text": "ghost hound 神霊狩 ghost hound tv finished",
+  "genres": [
+    "horror",
+    "mystery",
+    "sci-fi",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Lucid Dream",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40353/original.jpg",
+      "synopsis": "Tarou is having his usual dream of him flying around and then ends up in a room where he sees his sister, who doesn’t wake up, however his dream ended when a girl spots him. It’s the start of a new school term and there are more transfer students, with one very peculiar one, Masayuki Nakajima. Tarou ends up falling asleep in class and this time he begins to remember more of his traumatic experience, 11 years ago.",
+      "airdate": "2007-10-18",
+      "markers": [],
+      "external_id": "40353"
+    },
+    {
+      "n": 2,
+      "title": "E.M.D.R. Eye Movement Desensitization and Reprocessing",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40354/original.jpg",
+      "synopsis": "At school, Tarou is again approached by the new transfer student, Masayuki, when blunt asks him about his traumatic past. Masayuki then begins to dig into the events that occurred 11 years ago, when Tarou and his younger sister was kidnapped, meanwhile Tarou goes to check the shrine he saw in his dream but there something odd about it.",
+      "airdate": "2007-10-25",
+      "markers": [],
+      "external_id": "40354"
+    },
+    {
+      "n": 3,
+      "title": "Phobia Exposure",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40355/original.jpg",
+      "synopsis": "Tarou is hanging out at Masayuki’s house, when Masayuki reveals to him that he has acrophobia (a fear of heights). Masayuki suggest to Tarou that he should go to the source of his fears, to expose himself to his phobia. Even after being told it is a bad idea, by his counsellor, Tarou still decides to go but Masayuki seems to have invited someone else.",
+      "airdate": "2007-11-01",
+      "markers": [],
+      "external_id": "40355"
+    },
+    {
+      "n": 4,
+      "title": "Altered States of Consciousness",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40356/original.jpg",
+      "synopsis": "Tarou, Masayuki and Makoto are all at the Kameiwa Village abandoned hospital, to check out the place, for various reasons. The gang explore the place, in search of the cursed chamber and the place where Tarou was held and it isn’t long before strange things start occurring.",
+      "airdate": "2007-11-08",
+      "markers": [],
+      "external_id": "40356"
+    },
+    {
+      "n": 5,
+      "title": "O.B.E. Out of Body Experience",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40357/original.jpg",
+      "synopsis": "Following their out-of-body experience at the abandoned hospital, the three have been continuing on with their daily lives, as normal. Tarou’s counselor decides to visit his home, to meet his parents where he notices something weird about his mother. Later the guys have another out-of-body experience, into the unseen world.",
+      "airdate": "2007-11-15",
+      "markers": [],
+      "external_id": "40357"
+    },
+    {
+      "n": 6,
+      "title": "Brain Homunculus",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40358/original.jpg",
+      "synopsis": "During their journey into the unseen world, Tarou and Masayuki stumble across a strange man who’s able to see them. The next day Makoto goes through his late father’s belongings and Masayuki tries to expose himself to his greatest fear. While Tarou goes through the mountain in search of the same man he met the previous night.",
+      "airdate": "2007-11-22",
+      "markers": [],
+      "external_id": "40358"
+    },
+    {
+      "n": 7,
+      "title": "L.T.P. Long Term Potentiation",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40359/original.jpg",
+      "synopsis": "After returning to his body, Tarou has an accident and is rushed to the hospital and Tarou has another experience but it is different to his usual OBE. Masayuki later visit Tarou in hospital and they are joined by both Dr. Atsushi and Dr. Reika and they discuss various topics.",
+      "airdate": "2007-11-29",
+      "markers": [],
+      "external_id": "40359"
+    },
+    {
+      "n": 8,
+      "title": "Revolution of Limbic System",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40360/original.jpg",
+      "synopsis": "Hirata goes over all he has found out about his patient Tourou. Then Tourou has another OBE where he see's strange creatures, he later on tells Hirata. But Hirata's conclusion is that they are things he is recalling from a book. But then as he is waiting for a taxi, something wierd happens to him. What could be? And could this change his opinion and conclusion about Tarou?",
+      "airdate": "2007-12-06",
+      "markers": [],
+      "external_id": "40360"
+    },
+    {
+      "n": 9,
+      "title": "Existential Ghosts",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40361/original.jpg",
+      "synopsis": "At the place where Tourou was kidnapped some kids were cursed, they believe it was the man who kidnapped Tourou, they go and try to stop him but he put's up a fight, and Tourou changes into a wierd creature. Will they win against this ghost? What will happen to Tourou?",
+      "airdate": "2007-12-13",
+      "markers": [],
+      "external_id": "40361"
+    },
+    {
+      "n": 10,
+      "title": "Affordance / T.F.T ~ Thought Field Therapy",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40362/original.jpg",
+      "synopsis": "In 2003, the phsycologists of Hertfordshire University, including Richard Wiseman assembled people in the concert hall in London. They had them listen to contemporary music, and meanwhile, they also played an etremely low-frequency noise using a seven-meter-long pipe. As a result, twenty-two percent of the audience reported that they experienced a strange feeling. Wiseman suggested that ghosts are hallucinations caused by such low-frequency noises. Can this theory be true?",
+      "airdate": "2007-12-20",
+      "markers": [],
+      "external_id": "40362"
+    },
+    {
+      "n": 11,
+      "title": "Syntax Error",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40363/original.jpg",
+      "synopsis": "If, for example, a region contained a river and lands rich in nutrients, the region would afford good conditions for people to live. The concept of affordance says that an individual, by using his intuition, can find something that he wishes to acquire, but what kind of affordance is offered by the current world?",
+      "airdate": "2008-01-10",
+      "markers": [],
+      "external_id": "40363"
+    },
+    {
+      "n": 12,
+      "title": "Homeostasis Synchronization",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40364/original.jpg",
+      "synopsis": "Miyako's dad is called to Miyako's school. Later, he meets and starts consulting with Hirata about Miyako. Hirata is starting to suspect that the area has something to do with the supernatural occurrences. Meanwhile Tarō sees Miyako being possessed first hand.",
+      "airdate": "2008-01-24",
+      "markers": [],
+      "external_id": "40364"
+    },
+    {
+      "n": 13,
+      "title": "For the Snark Was a Boojum, You See",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40365/original.jpg",
+      "synopsis": "Tarō had a long OBE sequence where he sees Miyako in bed with fever and meets Snark in the Unseen World. He goes with Masayuki, Makoto and Michio to her house. When he mentions what Miyako said in her possessed state, her dad becomes afraid and tells them to leave. At the bottom of the shrine steps is Makoto's grandmother's handmaiden.",
+      "airdate": "2008-01-31",
+      "markers": [],
+      "external_id": "40365"
+    },
+    {
+      "n": 14,
+      "title": "Emergence Matrix",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40366/original.jpg",
+      "synopsis": "Miyako's dad takes her to Hirata for therapy and Miyako goes into her possessed state. On the way back to the shrine, the 4 boys, Miyako and her dad meet the Makoto's grandmother's handmaiden. She grabs Miyako and says that Miyako is the next miko. Miyako goes into a trance again and Makoto getting angry curses his grandmother. He runs back to his house and finds the grandmother dead.",
+      "airdate": "2008-02-07",
+      "markers": [],
+      "external_id": "40366"
+    },
+    {
+      "n": 15,
+      "title": "Toward an Abandoned City",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40367/original.jpg",
+      "synopsis": "Makoto and Tarō go to Kurata city for various reasons. They visit Kei's house and Tarō apologizes to Kei for messing up the yeast brewery process. Masayuki and Michio catch Suzuki the reporter whose been snooping around. He was sent to investigate the bio research facility for industry leaks. While listening to Tarō's recorded dreams, Hirata goes through Tarō's experience in the hospital.",
+      "airdate": "2008-02-14",
+      "markers": [],
+      "external_id": "40367"
+    },
+    {
+      "n": 16,
+      "title": "Hopeful Monster",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40368/original.jpg",
+      "synopsis": "At Kurata, Makoto and Tarō meet Makoto's mother and he failed at killing her. Tarō recognizes Makoto's mother's lover, Masato, as Snark. Meanwhile, Masayuki discovers spirits in the biotech research facility in an OBE. He sees his dad speaking with Reika about his research but then he's attacked by some spirit monsters called \"hopeful monsters\" by Reika's lab tech.",
+      "airdate": "2008-02-21",
+      "markers": [],
+      "external_id": "40368"
+    },
+    {
+      "n": 17,
+      "title": "Implicate Order",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40369/original.jpg",
+      "synopsis": "The mountain wanderer, Saruta, notices that the spirits are afraid of something. He warns the shrine priest that there people out for Miyako's powers. Taro tells Miyako that he thinks that she is the reincarnation of his sister which really upsets her. Makoto still hasn't come back yet. Suzuki notices there is a suspicious group of men around the Ogami household.",
+      "airdate": "2008-02-28",
+      "markers": [],
+      "external_id": "40369"
+    },
+    {
+      "n": 18,
+      "title": "Holographic Paradigm",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40370/original.jpg",
+      "synopsis": "Suzuki talks with his superior about the links with the Ogami religious group, child kidnappings, illegal organ donations with the biotech facility. Miyako meets the handmaiden and her dad was found bleeding on the shrine steps. The truth about Makoto's father's death and Tarō's kidnapping comes to light.",
+      "airdate": "2008-03-06",
+      "markers": [],
+      "external_id": "40370"
+    },
+    {
+      "n": 19,
+      "title": "Negentropy",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40371/original.jpg",
+      "synopsis": "Makoto rescued his mom from the fire but her lover, Masato, died. She had just woken up from a coma but her memory has regressed. Miyako's father is in the ICU but she didn't recognize Masayuki and Tarō. Kei reminisces about Masato and how she loved him from afar. Makoto reconciled with his mother.",
+      "airdate": "2008-03-13",
+      "markers": [],
+      "external_id": "40371"
+    },
+    {
+      "n": 20,
+      "title": "Shaman's District",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40372/original.jpg",
+      "synopsis": "The Ogami religious group is allowed to have care of Miyako. Biotech research has been published ahead in other countries ahead of Masayuki's dad's research. Makoto talk with Suzuki and find links with the Ogami group with an underground group. Tarō goes to the Unseen World to find Miyako's dad. Reika's tech made mutants using Masayuki's dad's research and released them in the dam. People are coming down from the mountain to the Ogami house.",
+      "airdate": "2008-03-20",
+      "markers": [],
+      "external_id": "40372"
+    },
+    {
+      "n": 21,
+      "title": "Stochastic Resonance",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40373/original.jpg",
+      "synopsis": "Makoto is staying at Tarō's house and his dad gave Makoto the guitar that was originally Makoto's dad's. Miyako's dad wakes up but he was threatened. Hirata and Reika Senseis meet up with the 4 kids, investigator Suzuki and Saruta at the shrine. Tarō vows to save Miyako.",
+      "airdate": "2008-03-27",
+      "markers": [],
+      "external_id": "40373"
+    },
+    {
+      "n": 22,
+      "title": "Passage",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40374/original.jpg",
+      "synopsis": "Makoto and Masayuki help devise a plan to allow Taro to enter the shrine where Miyako is being held as the leader of the Ogami religious group. Only women and girls are allowed to enter, so the boys plan on dressing Taro up as a young female so that he may enter and rescue Miyako. Hirata and Reika also assist in carrying out the plan.",
+      "airdate": "2008-04-03",
+      "markers": [],
+      "external_id": "40374"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Poltergeist (ポルターガイスト)",
+      "artist": "Mayumi Kojima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Call My Name ~Kazenari no Oka~ (Call My Name ～風鳴りの丘～)",
+      "artist": "Yucca",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

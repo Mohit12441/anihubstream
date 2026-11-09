@@ -1,0 +1,73 @@
+{
+  "id": "gurren-lagann-the-movie-childhoods-end",
+  "title": "Gurren Lagann The Movie: Childhood's End",
+  "native": "天元突破グレンラガン 紅蓮篇",
+  "year": 2008,
+  "rating": 7.9,
+  "season": "Fall 2008",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx4107-WaS60WNsKZuu.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4107-WaS60WNsKZuu.jpg",
+  "accent": "#d6351a",
+  "synopsis": "This is the story of a man who has yet to realize what destiny holds in store for him….\n\nIn the distant future, mankind has lived quietly and restlessly underground for hundreds of years, subject to earthquakes and cave-ins. Living in one such village are 2 young men: one named Simon who is shy and naïve, and the other named Kamina who believes in the existence of a “surface” world above their heads. The destiny of these two starts moving drastically when the ceiling of their village falls in, and a gigantic “Gunmen” and a beautiful girl named Yoko, wielding a superconductive rifle, come from the surface. Together, Kamina, Simon and Yoko ride the mecha “Lagann” that Simon digs out of the ground, and fly up to the surface!\n\nHowever, the surface is not the dreamland that Kamina envisioned. This world is ruled by the Spiral King and his army of beastmen. Kamina and Simon, along with their comrades, challenge the Spiral King in an attempt to change a desperate world to one full of hope for the future with Gurren Lagann!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "gurren-lagann-the-movie:-childhood's-end-arxpvn",
+    "mal": 4107,
+    "anilist": 4107,
+    "kitsu": 3471
+  },
+  "skip_key_id": 4107,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "gurren lagann the movie childhood s end 天元突破ク レンラカ ン 紅蓮篇 movie finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Gurren Lagann The Movie: Childhood's End (Movie)",
+      "runtime": "112:00",
+      "runtime_seconds": 6720,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6aa0301e6a350dd2ab900061-landscape.png",
+      "synopsis": "This is the story of a man who has yet to realize what destiny holds in store for him….\n\nIn the distant future, mankind has lived quietly and restlessly underground for hundreds of years, subject to earthquakes and cave-ins.  Living in one such village are 2 young men: one named Simon who is shy and naïve, and the other named Kamina who believes in the existence of a “surface” world above their heads. The destiny of these two starts moving drastically when the ceiling of their village falls in, and a gigantic “Gunmen” and a beautiful girl named Yoko, wielding a superconductive rifle, come from the surface. Together, Kamina, Simon and Yoko ride the mecha “Lagann” that Simon digs out of the ground, and fly up to the surface!\n\nHowever, the surface is not the dreamland that Kamina envisioned. This world is ruled by the Spiral King and his army of beastmen. Kamina and Simon, along with their comrades, challenge the Spiral King in an attempt to change a desperate world to one full of hope for the future with Gurren Lagann!",
+      "airdate": null,
+      "markers": [],
+      "external_id": "58557"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Namida no Tane, Egao no Hana (涙の種、笑顔の花)",
+      "artist": "Shoko Nakagawa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tsuzuku Sekai",
+      "artist": "Shoko Nakagawa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

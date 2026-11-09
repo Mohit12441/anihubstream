@@ -1,0 +1,56 @@
+{
+  "id": "eclipse-of-illusion",
+  "title": "Eclipse of Illusion",
+  "native": "云深不知梦",
+  "year": 2025,
+  "rating": 7,
+  "season": "2025",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx198697-UHaozIRuLiEA.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx198697-UHaozIRuLiEA.png",
+  "accent": "#35bbf1",
+  "synopsis": "Yun Wangshu's wedding was meant to be the happiest day of her life, but a brutal conspiracy turned it into a nightmare, slaughtering her entire clan. After a narrow escape, she made a desperate deal with the Silent Court. Now, sixty years later, reborn as the merciless Xihe, she's ready to make her enemies bleed for everything they took from her.\n\n(Source: Youku International Website)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "eclipse-of-illusion-ndqx8s",
+    "mal": 61621,
+    "anilist": 198697,
+    "kitsu": 2660
+  },
+  "skip_key_id": 61621,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "eclipse of illusion 云深不知梦 ona finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sailor Guardians Featurette",
+      "runtime": "17:00",
+      "runtime_seconds": 1020,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45340/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-12-05",
+      "markers": [],
+      "external_id": "45340"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

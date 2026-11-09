@@ -1,0 +1,64 @@
+{
+  "id": "howl-s-moving-castle",
+  "title": "Howl‘s Moving Castle",
+  "native": "ハウルの動く城",
+  "year": 2004,
+  "rating": 8.5,
+  "season": "Fall 2004",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx431-o8Lj3XkjHm2k.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx431-o8Lj3XkjHm2k.jpg",
+  "accent": "#0daee4",
+  "synopsis": "Sophie, a quiet girl working in a hat shop, finds her life thrown into turmoil when she is literally swept off her feet by a handsome but mysterious wizard named Howl. The vain and vengeful Witch of the Waste, jealous of their friendship, puts a spell on Sophie. In a life-changing adventure, Sophie climbs aboard Howl's magnificent flying castle and enters a magical world on a quest to break the spell. \n\n\r\n(Source: Disney)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 395,
+    "anilist": 431,
+    "mal": 431
+  },
+  "skip_key_id": 431,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 02:36:47",
+  "search_text": "howl s moving castle ハウルの動く城 movie finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Howl‘s Moving Castle (Movie)",
+      "runtime": "117:00",
+      "runtime_seconds": 7020,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx431-o8Lj3XkjHm2k.jpg",
+      "synopsis": "Sophie, a quiet girl working in a hat shop, finds her life thrown into turmoil when she is literally swept off her feet by a handsome but mysterious wizard named Howl. The vain and vengeful Witch of the Waste, jealous of their friendship, puts a spell on Sophie. In a life-changing adventure, Sophie climbs aboard Howl's magnificent flying castle and enters a magical world on a quest to break the spell. \n\n\r\n(Source: Disney)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "9716"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sekai no Yakusoku (世界の約束; The Promise of the World)",
+      "artist": "Chieko Baisho",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

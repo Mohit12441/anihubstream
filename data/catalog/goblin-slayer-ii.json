@@ -1,0 +1,194 @@
+{
+  "id": "goblin-slayer-ii",
+  "title": "GOBLIN SLAYER II",
+  "native": "ゴブリンスレイヤーⅡ",
+  "year": 2023,
+  "rating": 7.1,
+  "season": "Fall 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx129188-zWPBGutZXgjZ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129188-zWPBGutZXgjZ.jpg",
+  "accent": "#e44335",
+  "synopsis": "As spring arrives, goblin activity increases, which is great news for Goblin Slayer, who will do anything to exterminate these vile creatures. While taking on as many goblin slaying quests as possible, he attracts the attention of an ill-tempered novice wizard who asks for his guidance. Although reluctant at first, Goblin Slayer and his fellow adventurers are soon tasked with instructing the boy and several other rookies. With goblins continuing to cause harm nearby, Goblin Slayer will show no mercy to these monsters and ensure that everyone else is prepared.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "GOBLIN SLAYER -GOBLIN’S CROWN- (2020)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44010,
+    "anilist": 129188,
+    "mal": 47160,
+    "hianime": "goblin-slayer-ii-pncg2f"
+  },
+  "skip_key_id": 47160,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 11:05:15",
+  "search_text": "goblin slayer ii コ フ リンスレイヤーii tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "An Ordinary Spring Day",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/298063/thumbnail/medium-090b02aa75e589970f1b02e3ea9ae448.jpeg",
+      "synopsis": "Priestess is worried about the possibility of ranking up and Goblin Slayer encounters a strange bespectacled boy. (Source: Crunchyroll)",
+      "airdate": "2023-10-06",
+      "markers": [],
+      "external_id": "298063"
+    },
+    {
+      "n": 2,
+      "title": "The Red-Haired Wizard Boy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/298064/thumbnail/medium-93619a35c12be70acc8e77e3d315fc9d.jpeg",
+      "synopsis": "Priestess leads her first quest with the usual party but they also bring Wizard Boy along. They go to a mausoleum in search of a party of adventurers that went there prior but never came back. (Source: Crunchyroll)",
+      "airdate": "2023-10-13",
+      "markers": [],
+      "external_id": "298064"
+    },
+    {
+      "n": 3,
+      "title": "The Training Grounds on the Outskirts of Town",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/304072/thumbnail/medium-157ec50fdd868ccd088fd11e7a441dd8.jpeg",
+      "synopsis": "Many of the guild adventurers are spending time training outside of town. While there Goblin Slayer is invited for a guys' night out to which he acquiesces. (Source: Crunchyroll)",
+      "airdate": "2023-10-20",
+      "markers": [],
+      "external_id": "304072"
+    },
+    {
+      "n": 4,
+      "title": "Onward to Adventure",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/304073/thumbnail/medium-03e9f04367594f79e919fa82957b7ce0.jpeg",
+      "synopsis": "Goblins ambush some rookie adventurers on their way back home from training and it's up to Goblin Slayer and the other higher-ranking adventurers to save them. (Source: Crunchyroll)",
+      "airdate": "2023-10-27",
+      "markers": [],
+      "external_id": "304073"
+    },
+    {
+      "n": 5,
+      "title": "Beard-cutter, to the Southern River",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/304074/thumbnail/medium-5c3ff5213c3888fc735d3ead594269f6.jpeg",
+      "synopsis": "After boarding the cruise ship, Yor began her duty as bodyguard to Olka and her son. Meanwhile, Yor's superior, Matthew, finds an assassin who is after Olka and her son. (Source: Crunchyroll)",
+      "airdate": "2023-11-03",
+      "markers": [],
+      "external_id": "304074"
+    },
+    {
+      "n": 6,
+      "title": "The Elven King's Forest",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/304075/thumbnail/medium-6f59255f9eee1ab0ff0c0575e7e6ccfe.jpeg",
+      "synopsis": "Having successfully navigated the goblin-infested cliffs along the river, Goblin Slayer and the others make camp and are come upon by a helmeted elf who turns out to be the High Elf Archer's cousin. (Source: Crunchyroll)",
+      "airdate": "2023-11-10",
+      "markers": [],
+      "external_id": "304075"
+    },
+    {
+      "n": 7,
+      "title": "Jungle Cruise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/304076/thumbnail/medium-725f4722afabf26a236ba622f78e70fd.jpeg",
+      "synopsis": "Goblin Slayer and the crew have encountered the Mokele Mubenbe and, much to their surprise, it's being ridden by a goblin. After capturing Mokele Mubenbe Goblin Slayer decides to head upstream in search of the goblins' nest. (Source: Crunchyroll)",
+      "airdate": "2023-11-16",
+      "markers": [],
+      "external_id": "304076"
+    },
+    {
+      "n": 8,
+      "title": "Heart of Darkness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/304077/thumbnail/medium-cd70301f1b3610e779b4d5e6a1968ec1.jpeg",
+      "synopsis": "While searching the abandoned building, Goblin Slayer and the others come upon a goblin horde led by a shaman presumed to be the one who was controlling Mokele Mubenbe. The adventurers press the attack but are overwhelmed by the shaman's magic. (Source: Crunchyroll)",
+      "airdate": "2023-11-24",
+      "markers": [],
+      "external_id": "304077"
+    },
+    {
+      "n": 9,
+      "title": "Once There Was Youth, Now There Is Nothing but Ash",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/304078/thumbnail/medium-2a0a597e6681efe638f87c4ce1bb9e44.jpeg",
+      "synopsis": "After returning from a mission in which there were no goblins, Goblin Slayer and the others are tasked with being the archbishop Sword Maiden's bodyguards to protect her from goblins on her trip to the capital. (Source: Crunchyroll)",
+      "airdate": "2023-12-01",
+      "markers": [],
+      "external_id": "304078"
+    },
+    {
+      "n": 10,
+      "title": "City Adventure",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/304079/thumbnail/medium-36b04c665fd056ad7cc8827358787f23.jpeg",
+      "synopsis": "The party arrives at the capital and splits ways. The girls go to a public bath and as they're about to leave, they find that Priestess's belongings have been stolen. (Source: Crunchyroll)",
+      "airdate": "2023-12-08",
+      "markers": [],
+      "external_id": "304079"
+    },
+    {
+      "n": 11,
+      "title": "The Princess's Ordeal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/304080/thumbnail/medium-6906454d2adcb2e4e2e46d8d32c58fc2.jpeg",
+      "synopsis": "Goblin Slayer and party head into the Dungeon of the Dead to go save the Princess. (Source: Crunchyroll)",
+      "airdate": "2023-12-15",
+      "markers": [],
+      "external_id": "304080"
+    },
+    {
+      "n": 12,
+      "title": "O Prayers, Have You Reached Heaven?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/304081/thumbnail/medium-d22f314e1617d933a68005810e2f5f3c.jpeg",
+      "synopsis": "Goblin Slayer and party manage to save the Princess but end up having to face a rather unexpected, terrifying foe. (Source: Crunchyroll)",
+      "airdate": "2023-12-22",
+      "markers": [],
+      "external_id": "304081"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Entertainment",
+      "artist": "Mili",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kasumi no Mukō e (To the Other Side of the Mist)",
+      "artist": "Yuki Nakashima",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

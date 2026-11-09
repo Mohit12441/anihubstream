@@ -1,0 +1,367 @@
+{
+  "id": "dororo",
+  "title": "Dororo",
+  "native": "どろろ",
+  "year": 2019,
+  "rating": 8.1,
+  "season": "Winter 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101347-TGaDwEYqLfm1.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101347-TGaDwEYqLfm1.jpg",
+  "accent": "#d6bb6b",
+  "synopsis": "Dororo, a young orphan thief, meets Hyakkimaru, a powerful ronin. Hyakkimaru's father, a greedy feudal lord, had made a pact with 12 demons, offering his yet-unborn son's body parts in exchange for great power. Thus, Hyakkimaru - who was born without arms, legs, eyes, ears, a nose or a mouth - was abandoned in a river as a baby. Rescued and raised by Dr. Honma, who equips him with artificial limbs and teaches him sword-fighting techniques, Hyakkimaru discovers that each time he slays a demon, a piece of his body is restored. Now, he roams the war-torn countryside in search of demons.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "dororo-58i9zd",
+    "mal": 37520,
+    "anilist": 101347,
+    "kitsu": 41083
+  },
+  "skip_key_id": 37520,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "dororo と ろろ tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Story of Daigo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257210/original.jpg",
+      "synopsis": "In Japan's Warring States period, Lord Daigo Kagemitsu makes a pact with 12 demons, offering them his unborn son in exchange for the prosperity of his lands. Years later, young thief Dororo is attacked by a ghoul but rescued by a mysterious boy, whose body parts turn out to be almost entirely prosthetic.",
+      "airdate": "2019-01-07",
+      "markers": [],
+      "external_id": "257210"
+    },
+    {
+      "n": 2,
+      "title": "The Story of Bandai",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257211/original.png",
+      "synopsis": "Dororo and Hyakkimaru happen upon a village and are brought before its chief, Lady Bandai. However, Hyakkimaru inexplicably draws his sword in her presence, resulting in both him and Dororo being locked in a storehouse by the villagers. It turns out they are not the only ones confined there...",
+      "airdate": "2019-01-14",
+      "markers": [],
+      "external_id": "257211"
+    },
+    {
+      "n": 3,
+      "title": "The Story of Jukai",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257212/original.jpg",
+      "synopsis": "Jukai is a doctor who travels the land fitting prosthetic arms and legs to those who have lost their limbs in war. One day, on the riverbank he finds a baby missing most of its body parts. He decides to raise the child, who he names \"Hyakkimaru\". Jukai provides the child with prostheses, but the time comes when Hyakkimaru sets out on a journey to recover his own body parts.",
+      "airdate": "2019-01-21",
+      "markers": [],
+      "external_id": "257212"
+    },
+    {
+      "n": 4,
+      "title": "The Story of the Cursed Sword",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257213/original.jpg",
+      "synopsis": "Dororo and Hyakkimaru come face to face with Tanosuke the Slaughterer, who wields a cursed sword in which a demon dwells. Hyakkimaru narrowly manages to repel Tanosuke, but the demon blade falls into Dororo's hands and begins to take control of him.",
+      "airdate": "2019-01-28",
+      "markers": [],
+      "external_id": "257213"
+    },
+    {
+      "n": 5,
+      "title": "The Story of the Moriko Song, Part 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257214/original.png",
+      "synopsis": "Struggling to adapt to an unfamiliar world of \"sound\", Hyakkimaru is injured in a fight with a ghoul. He is taken in and nursed by a girl named Mio, who looks after children orphaned by war. However, after becoming aware of a demon nearby, Hyakkimaru heads out to fight it before he is fully recovered.",
+      "airdate": "2019-02-04",
+      "markers": [],
+      "external_id": "257214"
+    },
+    {
+      "n": 6,
+      "title": "The Story of the Moriko Song, Part 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257215/original.jpg",
+      "synopsis": "Hyakkimaru regained his voice in a fight with a demon, but lost his leg in the process. After returning to the run-down temple to allow his wounds to heal, he once again sets out to confront the demon. Meanwhile, Mio and the children wait at the temple but...",
+      "airdate": "2019-02-11",
+      "markers": [],
+      "external_id": "257215"
+    },
+    {
+      "n": 7,
+      "title": "The Story of the Jorogumo Silk Spider",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257216/original.jpg",
+      "synopsis": "The spider-like ghoul Jorogumo is wounded by Hyakkimaru. To heal itself, it transforms into a woman and takes advantage of the hospitality of a young man named Yajiro. Having let Jorogumo slip through their fingers, Dororo and Hyakkimaru stop at a village where they hear rumors of a kidnapper at large.",
+      "airdate": "2019-02-18",
+      "markers": [],
+      "external_id": "257216"
+    },
+    {
+      "n": 8,
+      "title": "The Story of Saru",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257217/original.jpg",
+      "synopsis": "At a certain village, young girls are offered up as ritual sacrifices to appease a giant centipede demon that appears shrouded in black clouds. Hyakkimaru and Dororo team up with Saru, a boy whose older sister has been offered as a sacrifice, and together they confront the demon.",
+      "airdate": "2019-02-25",
+      "markers": [],
+      "external_id": "257217"
+    },
+    {
+      "n": 9,
+      "title": "The Story of the Mercilessness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257218/original.jpg",
+      "synopsis": "Dororo comes down with a high fever. While woozy from its effects, the youngster catches a glimpse of some red spider lilies, which stirs up memories of past days spent with parents Hibukuro and Ojiya.",
+      "airdate": "2019-03-04",
+      "markers": [],
+      "external_id": "257218"
+    },
+    {
+      "n": 10,
+      "title": "The Story of Tahomaru",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257219/original.jpg",
+      "synopsis": "A village within Daigo's domain is being terrorized by a ghoul that dwells in a nearby lake. Tahomaru, accompanied by his aides Hyogo and Mutsu, volunteers to exterminate the ghoul.",
+      "airdate": "2019-03-11",
+      "markers": [],
+      "external_id": "257219"
+    },
+    {
+      "n": 11,
+      "title": "The Story of Banmon, Part 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257220/original.jpg",
+      "synopsis": "After entering Lord Daigo's domain, Dororo and Hyakkimaru hear tales of Banmon, the huge wall that is the last remnant of a fort that once stood on the border. Hyakkimaru squares off against the fox demon that haunts the wall.",
+      "airdate": "2019-03-18",
+      "markers": [],
+      "external_id": "257220"
+    },
+    {
+      "n": 12,
+      "title": "The Story of Banmon, Part 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257221/original.jpg",
+      "synopsis": "Kagemitsu, who offered up his own son to the demons. Hyakkimaru, who is trying to get back the body parts that were taken from him. As if drawn together by fate, they face each other.",
+      "airdate": "2019-03-25",
+      "markers": [],
+      "external_id": "257221"
+    },
+    {
+      "n": 13,
+      "title": "The Story of the Blank-faced Buddha",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258853/original.jpg",
+      "synopsis": "Having left Daigo's domain, Dororo finds a statue of Fudo, one of the wisdom gods. But the statue is actually a demon that is harvesting humans' faces in an attempt to find one for itself.",
+      "airdate": "2019-04-08",
+      "markers": [],
+      "external_id": "258853"
+    },
+    {
+      "n": 14,
+      "title": "Episode 14",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2019-04-15",
+      "markers": [],
+      "external_id": "258854"
+    },
+    {
+      "n": 15,
+      "title": "Episode 15",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "258855"
+    },
+    {
+      "n": 16,
+      "title": "Episode 16",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "258856"
+    },
+    {
+      "n": 17,
+      "title": "Episode 17",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "258857"
+    },
+    {
+      "n": 18,
+      "title": "Episode 18",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "258858"
+    },
+    {
+      "n": 19,
+      "title": "Episode 19",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "258859"
+    },
+    {
+      "n": 20,
+      "title": "Episode 20",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "258860"
+    },
+    {
+      "n": 21,
+      "title": "Episode 21",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "258861"
+    },
+    {
+      "n": 22,
+      "title": "Episode 22",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "258862"
+    },
+    {
+      "n": 23,
+      "title": "Episode 23",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "258863"
+    },
+    {
+      "n": 24,
+      "title": "Episode 24",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "258864"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kaen (Fire)",
+      "artist": "Ziyoou-vachi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sayonaragokko",
+      "artist": "amazarashi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Creamsoda Melonsoda",
+      "artist": "GO-BANG'S",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dororon Enma-kun (ドロロンえん魔くん)",
+      "artist": "Chinatsu Nakayama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yōkai ni Go-Yōjin (妖怪にご用心)",
+      "artist": "Chinatsu Nakayama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dororo no Uta",
+      "artist": "Toshiko Fujita",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Dororo",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Yamiyo",
+      "artist": "Eve",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

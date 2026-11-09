@@ -1,0 +1,69 @@
+{
+  "id": "grave-of-the-fireflies",
+  "title": "Grave of the Fireflies",
+  "native": "火垂るの墓",
+  "year": 1988,
+  "rating": 8.3,
+  "season": "Spring 1988",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx578-vU6XcOlb1XFU.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx578-vU6XcOlb1XFU.jpg",
+  "accent": "#e4bb5d",
+  "synopsis": "In the aftermath of a World War II bombing, two orphaned children struggle to survive in the Japanese countryside. To Seita and his four-year-old sister, the helplessness and indifference of their countrymen is even more painful than the enemy raids. Through desperation, hunger and grief, these children's lives are as heartbreakingly fragile as their spirit and love is inspiring.\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "grave-of-the-fireflies-wi2u66",
+    "mal": 578,
+    "anilist": 578,
+    "kitsu": 534
+  },
+  "skip_key_id": 578,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "grave of the fireflies 火垂るの墓 movie finished",
+  "genres": [
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Grave of the Fireflies (Movie)",
+      "runtime": "88:00",
+      "runtime_seconds": 5280,
+      "thumb": "https://animehot.cc/storage/media/2026/09/690a33d6543081759bdae129-landscape.webp",
+      "synopsis": "As World War II reaches its conclusion in 1945, Japan faces widespread destruction in the form of American bombings, devastating city after city. Hotaru no Haka, also known as Grave of the Fireflies, is the story of Seita and his sister Setsuko, two Japanese children whose lives are ravaged by the brutal war. They have lost their mother, their father, their home, and the prospect of a bright future—all tragic consequences of the war.\n\nNow orphaned and homeless, Seita and Setsuko have no choice but to drift across the countryside, beset by starvation and disease. Met with the apathy of adults along the way, they find that desperate circumstances can turn even the kindest of people cruel yet their youthful hope shines brightly in the face of unrelenting hardship, preventing the siblings from swiftly succumbing to an inevitable fate.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "12700"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Setsuko and Seita",
+      "artist": "Michio Mamiya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Futari",
+      "artist": "Michio Mamiya",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

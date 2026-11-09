@@ -1,0 +1,77 @@
+{
+  "id": "in-this-corner-of-the-world",
+  "title": "In This Corner of the World",
+  "native": "この世界の片隅に",
+  "year": 2016,
+  "rating": 8.1,
+  "season": "Fall 2016",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx15227-1tG3lhprG0A9.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx15227-1tG3lhprG0A9.jpg",
+  "accent": "#e4e428",
+  "synopsis": "The story follows a young lady named Suzu Urano, who in 1944 moves to the small town of Kure in Hiroshima to live with her husband's family. Suzu's life is thrown into chaos when her town is bombed during World War II. Her perseverance and courage underpin this heart-warming and inspirational tale of the everyday challenges faced by the Japanese in the midst of a violent, war-torn country. This beautiful yet poignant tale shows that even in the face of adversity and loss, people can come together and rebuild their lives.\n\n(Source: Shout! Factory)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "in-this-corner-of-the-world-660c8v",
+    "mal": 15227,
+    "anilist": 15227,
+    "kitsu": 7234
+  },
+  "skip_key_id": 15227,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "in this corner of the world この世界の片隅に movie finished",
+  "genres": [
+    "drama",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "In This Corner of the World (Movie)",
+      "runtime": "126:00",
+      "runtime_seconds": 7560,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/15227-yQXL90tfOpRO.jpg",
+      "synopsis": "The story follows a young lady named Suzu Urano, who in 1944 moves to the small town of Kure in Hiroshima to live with her husband's family. Suzu's life is thrown into chaos when her town is bombed during World War II. Her perseverance and courage underpin this heart-warming and inspirational tale of the everyday challenges faced by the Japanese in the midst of a violent, war-torn country. This beautiful yet poignant tale shows that even in the face of adversity and loss, people can come together and rebuild their lives.\n\n\n\n(Source: Shout! Factory)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "101626"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kanashikute Yarikirenai (悲しくてやりきれない)",
+      "artist": "kotringo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tanpopo (たんぽぽ)",
+      "artist": "kotringo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Suzu-san",
+      "artist": "kotringo",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

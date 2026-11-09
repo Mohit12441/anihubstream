@@ -1,0 +1,346 @@
+{
+  "id": "gangsta",
+  "title": "GANGSTA.",
+  "native": "GANGSTA.",
+  "year": 2015,
+  "rating": 7.2,
+  "season": "Summer 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20773-yfJQMyHqZyJr.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20773-yfJQMyHqZyJr.jpg",
+  "accent": "#785d1a",
+  "synopsis": "In the city of Ergastulum, a shady ville filled with made men and petty thieves, whores on the make and cops on the take, there are some deeds too dirty for even its jaded inhabitants to touch. Enter the \"Handymen,\" Nic and Worick, who take care of the jobs no one else will handle. Until the day when a cop they know on the force requests their help in taking down a new gang muscling in on the territory of a top Mafia family. It seems like business (and mayhem) as usual, but the Handymen are about to find that this job is a lot more than they bargained for.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8576,
+    "anilist": 20773,
+    "mal": 25183
+  },
+  "skip_key_id": 25183,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 10:10:21",
+  "search_text": "gangsta gangsta tv finished",
+  "genres": [
+    "action",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Naughty Boys",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178052/original.jpg",
+      "synopsis": "In the city of Ergastulum, which is run by four crime families, a pair of \"Handymen\" provide a service doing dirty jobs for anyone who calls and hires them. A fifth power tries to gain a foothold within the city.",
+      "airdate": "2015-07-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "178052"
+    },
+    {
+      "n": 2,
+      "title": "Hundemarken",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178053/original.jpg",
+      "synopsis": "Nina, Dr. Theo's young nurse, shows up to deliver some medicine to Nicolas, and to ask for the Handymen's help in dealing with a Tag who is threatening their clinic. Alex learns more about the dogtags that Nicolas wears.",
+      "airdate": "2015-07-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1410
+        }
+      ],
+      "external_id": "178053"
+    },
+    {
+      "n": 3,
+      "title": "Ergastulum",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178054/original.jpg",
+      "synopsis": "When Worick has to make himself available for his primary occupation, Alex accompanies Nicolas as he makes deliveries around Ergastulum. Joel offers Alex some advice about staying with the Handymen.",
+      "airdate": "2015-07-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 5,
+          "end": 95
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "178054"
+    },
+    {
+      "n": 4,
+      "title": "Nonconformist",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178055/original.jpg",
+      "synopsis": "After a massive body dump is discovered, Chad must take Worick and Nicolas in for questioning. Daniel Monroe enlists the aid of the Handymen during a gun battle. Worick recalls the first time he and Nicolas met.",
+      "airdate": "2015-07-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1427
+        }
+      ],
+      "external_id": "178055"
+    },
+    {
+      "n": 5,
+      "title": "Sanctions",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178056/original.jpg",
+      "synopsis": "The Paulklee Guild learns that Doug, one of their Twilights, has taken a job without their knowledge that would violate the Three Laws. Worick and Nicolas have their hands full trying to protect Monroe.",
+      "airdate": "2015-08-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1425
+        }
+      ],
+      "external_id": "178056"
+    },
+    {
+      "n": 6,
+      "title": "Thorn",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178057/original.jpg",
+      "synopsis": "Monroe makes arrangements to bury the men lost in the previous day's shootout. Corsica works to tie up any loose ends that can lead back to him. Nina tends to Nicolas' injuries as Worick pieces together the threat to the city's balance of power.",
+      "airdate": "2015-08-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1425
+        }
+      ],
+      "external_id": "178057"
+    },
+    {
+      "n": 7,
+      "title": "Birth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178058/original.jpg",
+      "synopsis": "Worick has a nightmare, flashing back to when he found out that Nicolas was a Twilight. Doug returns to the Guild, disappointed that Nicolas wasn't who he thought he was. The Four Fathers meet to discuss the slain Twilights.",
+      "airdate": "2015-08-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "178058"
+    },
+    {
+      "n": 8,
+      "title": "Evening Dress",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178059/original.jpg",
+      "synopsis": "When three more Twilight bodies are found, all signs point to an anti-Twilight campaign being carried out. The Handymen are hired to repair Constance's gun shop, and Alex discovers that she has some important memories missing.",
+      "airdate": "2015-08-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "178059"
+    },
+    {
+      "n": 9,
+      "title": "Siblings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178060/original.jpg",
+      "synopsis": "A few of the Twilights inside the night club suddenly pull knives and start attacking those around them, forcing Marco and Galahad to take action. Mikhail joins the fray, collecting dogtags, as Worick begins connecting the dots.",
+      "airdate": "2015-08-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "178060"
+    },
+    {
+      "n": 10,
+      "title": "Land of Confusion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178061/original.jpg",
+      "synopsis": "While Nicolas is again treated for his injuries, Alex discovers how important Dr. Theo is to the city's Twilights. Cody learns why the Handymen are independent. A lone woman is seen entering the Abandoned District, leading to the Paulklee Colony.",
+      "airdate": "2015-09-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 4,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1417
+        }
+      ],
+      "external_id": "178061"
+    },
+    {
+      "n": 11,
+      "title": "Absence",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178062/original.jpg",
+      "synopsis": "Delico and Yang go out looking for Erica. Sig, Colt, and Emilio attack the Paulklee Guild, setting off bombs whose smoke robs the Twilights of their sensory advantages. Loretta leaves her hiding place at the Handymen's office.",
+      "airdate": "2015-09-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "178062"
+    },
+    {
+      "n": 12,
+      "title": "Odds and Ends",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178063/original.jpg",
+      "synopsis": "With Galahad at the Paulklee Colony, the Cristiano Family looks to Nicolas to protect Loretta. Joel confronts Marco about Constance's disappearance. Worick has suspicions about Ivan.",
+      "airdate": "2015-09-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1412
+        }
+      ],
+      "external_id": "178063"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Renegade",
+      "artist": "STEREO DIVE FOUNDATION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yoru no Kuni (夜の国; Country of the Night)",
+      "artist": "Annabel",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

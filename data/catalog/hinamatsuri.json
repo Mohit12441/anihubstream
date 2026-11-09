@@ -1,0 +1,193 @@
+{
+  "id": "hinamatsuri",
+  "title": "HINAMATSURI",
+  "native": "ヒナまつり",
+  "year": 2018,
+  "rating": 8,
+  "season": "Spring 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx100077-FgGYIt8gGyrn.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100077-FgGYIt8gGyrn.jpg",
+  "accent": "#e47850",
+  "synopsis": "The comedy manga centers around a super-powered girl named Hina and Nitta, a young member of the yakuza. Hina suddenly appears in Nitta's room and threatens him with her extraordinary powers. However, they end up living together.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "hinamatsuri-ljg6lf",
+    "mal": 36296,
+    "anilist": 100077,
+    "kitsu": 14018
+  },
+  "skip_key_id": 36296,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "hinamatsuri ヒナまつり tv finished",
+  "genres": [
+    "comedy",
+    "sci-fi",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Arrival of the Psychokinetic Girl!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242555/original.jpg",
+      "synopsis": "Telekinetic girl Hina drops into the home of vase-collecting yakuza Nitta, who she then coerces into letting her stick around by threatening to destroy his entire collection.",
+      "airdate": "2018-04-06",
+      "markers": [],
+      "external_id": "242555"
+    },
+    {
+      "n": 2,
+      "title": "This Is how You Have a Superpower Battle!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242556/original.jpg",
+      "synopsis": "Telekinetic Anzu is deployed on the streets. She will have to fend for herself as she searches for Hina, whom she is tasked with destroying.",
+      "airdate": "2018-04-13",
+      "markers": [],
+      "external_id": "242556"
+    },
+    {
+      "n": 3,
+      "title": "Hobo Life 101",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242557/original.jpg",
+      "synopsis": "Anzu is welcomed into the local homeless community, where she learns the ins and outs of society at the bottom. Hina, meanwhile, is concerned that Nitta might abandon her.",
+      "airdate": "2018-04-20",
+      "markers": [],
+      "external_id": "242557"
+    },
+    {
+      "n": 4,
+      "title": "Disownment / Rock n' Roll Fever",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242558/original.jpg",
+      "synopsis": "Furious about the destruction in his home, Nitta kicks Hina out of his home, and she’s left to fend for herself on the streets.",
+      "airdate": "2018-04-27",
+      "markers": [],
+      "external_id": "242558"
+    },
+    {
+      "n": 5,
+      "title": "Three Heads Are Better Than One",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242559/original.jpg",
+      "synopsis": "Hina and Anzu go scrap hunting together, but Hina doesn’t seem to miss the whole point.",
+      "airdate": "2018-05-04",
+      "markers": [],
+      "external_id": "242559"
+    },
+    {
+      "n": 6,
+      "title": "Nitta-san Has a Dandy Dad",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242560/original.jpg",
+      "synopsis": "Nitta introduces Hina to his family, but being that he can’t tell them that she literally came out of nowhere and is telekinetic, he is forced to come up with an elaborate white lie.",
+      "airdate": "2018-05-11",
+      "markers": [],
+      "external_id": "242560"
+    },
+    {
+      "n": 7,
+      "title": "Anzu Is a Greeter Now",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242561/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-05-18",
+      "markers": [],
+      "external_id": "242561"
+    },
+    {
+      "n": 8,
+      "title": "And It's the Same Old Hina",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242562/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-05-25",
+      "markers": [],
+      "external_id": "242562"
+    },
+    {
+      "n": 9,
+      "title": "Life Is About Survival",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242563/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-06-01",
+      "markers": [],
+      "external_id": "242563"
+    },
+    {
+      "n": 10,
+      "title": "Like a River Stream",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-06-08",
+      "markers": [],
+      "external_id": "242564"
+    },
+    {
+      "n": 11,
+      "title": "A Man Thirsty for Blood, Violence, and Money",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "242565"
+    },
+    {
+      "n": 12,
+      "title": "Yukimatsuri",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "242566"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Distance",
+      "artist": "Rie Murakawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sake to Ikura to 893 to Musume",
+      "artist": "Yoshiki Nakajima",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

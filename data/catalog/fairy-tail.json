@@ -1,0 +1,1850 @@
+{
+  "id": "fairy-tail",
+  "title": "Fairy Tail",
+  "native": "FAIRY TAIL",
+  "year": 2009,
+  "rating": 7.2,
+  "season": "Fall 2009",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b6702-KI4qgSMyI8Pm.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b6702-KI4qgSMyI8Pm.png",
+  "accent": "#e45d50",
+  "synopsis": "Across the Fiore kingdom, wizards join guilds and make their pay by filling magical needs—but one guild has a reputation as the roughest, rowdiest, most dangerous of all: Fairy Tail!\n\nWhen four young Fairy Tail members unite, their bond is forged by a power found in neither muscle nor magic and grows stronger with every mission. Whatever you do, don't mess with these friends or you'll get a taste of Natsu's flaming fist or Gray's ice hammer, suffer a painful blow from one of Lucy's celestial spirits or catch the edge of Erza's mighty blade! Whether they're stopping demons from devastating the world or wrestling in the mess hall, this mystical team manages to inflict as much damage to their rivals as they do to the surrounding area!\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fairy-tail-efrf3t",
+    "mal": 6702,
+    "anilist": 6702,
+    "kitsu": 4676
+  },
+  "skip_key_id": 6702,
+  "skip_key_space": "mal",
+  "episode_total": 175,
+  "added_at": null,
+  "search_text": "fairy tail fairy tail tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Fairy Tail",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/103282/original.jpeg",
+      "synopsis": "Lucy wants nothing more than to join Fairy Tail, the most rambunctious wizard's guild in Fiore. When a phony lures her onto his ship with the promise of getting into the guild of her dreams, her newest friends arrive to bail her out!",
+      "airdate": "2009-10-12",
+      "markers": [],
+      "external_id": "103282"
+    },
+    {
+      "n": 2,
+      "title": "Fire Dragon, Monkey, and Bull",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/103283/original.jpeg",
+      "synopsis": "Lucy's dream comes true when Natsu and Happy take her to their headquarters in Magnolia to meet the rowdy members of Fairy Tail. For her first job, Lucy braves Mt. Hakobe with her new friends to find a missing wizard.",
+      "airdate": "2009-10-19",
+      "markers": [],
+      "external_id": "103283"
+    },
+    {
+      "n": 3,
+      "title": "Infiltrate the Everlue Mansion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/103284/original.jpeg",
+      "synopsis": "Natsu picks up a job that could pay big money, but he needs a certain type of girl to complete his plan - and Lucy fits the description perfectly!",
+      "airdate": "2009-10-26",
+      "markers": [],
+      "external_id": "103284"
+    },
+    {
+      "n": 4,
+      "title": "DEAR KABY",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/103285/original.jpeg",
+      "synopsis": "Natsu, Lucy and Happy will have to do more than just read between the lines to defeat the twisted Duke Everlue and his monstrous maid, Virgo.",
+      "airdate": "2009-11-02",
+      "markers": [],
+      "external_id": "103285"
+    },
+    {
+      "n": 5,
+      "title": "The Wizard in Armor",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/103286/original.jpeg",
+      "synopsis": "Erza asks Gray and Natsu to form a team with her to stop a corrupt guild from using a dark magic that has the power to sap the lives of everyone in Fiore!",
+      "airdate": "2009-11-09",
+      "markers": [],
+      "external_id": "103286"
+    },
+    {
+      "n": 6,
+      "title": "Fairies in the Wind",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/103287/original.jpeg",
+      "synopsis": "Erza's team chases Erigor and his villainous guild to Oshibana station. Can Fairy Tail's strongest team snuff the death flute before the Lullaby spell hits the airwaves, or will they find themselves in a whirlwind of trouble?",
+      "airdate": "2009-11-16",
+      "markers": [],
+      "external_id": "103287"
+    },
+    {
+      "n": 7,
+      "title": "Flame and Wind",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/103288/original.jpeg",
+      "synopsis": "The wizards are sitting ducks behind Erigor's impenetrable wind wall until Happy hatches a plan with a little service from the stars!",
+      "airdate": "2009-11-23",
+      "markers": [],
+      "external_id": "103288"
+    },
+    {
+      "n": 8,
+      "title": "The Strongest Team",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/103289/original.jpeg",
+      "synopsis": "Natsu finally knocks the wind out of Erigor's sails in a scorcher of a battle - but Fairy Tail's strongest team still has a war to fight when the death flute's dark magic plays an evil scale of epic proportions.",
+      "airdate": "2009-11-30",
+      "markers": [],
+      "external_id": "103289"
+    },
+    {
+      "n": 9,
+      "title": "Natsu, Devours a Village",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/103290/original.jpeg",
+      "synopsis": "While traveling home with grumbling bellies, the team stumbles upon a deserted village with lots of yummy grub lying around, but Erza's gut tells her something's up. While she investigates, the boys chow on a forest full of odd fungus.",
+      "airdate": "2009-12-07",
+      "markers": [],
+      "external_id": "103290"
+    },
+    {
+      "n": 10,
+      "title": "Natsu vs. Erza",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/103291/original.jpeg",
+      "synopsis": "Now that they've made it back to Fairy Tail headquarters, it's time for Erza to answer Natsu's challenge! Before things really get heated, the Guild Council stops by to arrest Erza, but Natsu's not about to let her get away that easily!",
+      "airdate": "2009-12-14",
+      "markers": [],
+      "external_id": "103291"
+    },
+    {
+      "n": 11,
+      "title": "The Cursed Island",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/103292/original.jpeg",
+      "synopsis": "Natsu, Happy and Lucy tread some seriously troubled waters when they break guild rules to take an S-class job request and end up shipwrecked on the cursed Galuna Island!",
+      "airdate": "2009-12-21",
+      "markers": [],
+      "external_id": "103292"
+    },
+    {
+      "n": 12,
+      "title": "Moon Drip",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/103293/original.jpeg",
+      "synopsis": "When the team stumbles upon the infamous demon Deliora frozen in magic ice, cold memories - and a familiar face - are resurrected from Gray's dark past.",
+      "airdate": "2010-01-04",
+      "markers": [],
+      "external_id": "103293"
+    },
+    {
+      "n": 13,
+      "title": "Natsu vs. Yuka the Wave User",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Natsu Dragneel and Lucy Heartfilia engage in battles against Lyon Vastia's subordinates in order to put a stop to the Moon Drip ritual and restore the villagers' original forms.",
+      "airdate": "2010-01-11",
+      "markers": [],
+      "external_id": "103294"
+    },
+    {
+      "n": 14,
+      "title": "Just Do Whatever!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-01-18",
+      "markers": [],
+      "external_id": "103295"
+    },
+    {
+      "n": 15,
+      "title": "Eternal Magic",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-01-25",
+      "markers": [],
+      "external_id": "103296"
+    },
+    {
+      "n": 16,
+      "title": "The Final Showdown on Galuna Island",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-02-01",
+      "markers": [],
+      "external_id": "103297"
+    },
+    {
+      "n": 17,
+      "title": "Burst",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-02-08",
+      "markers": [],
+      "external_id": "103298"
+    },
+    {
+      "n": 18,
+      "title": "Reach the Sky Above",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-02-15",
+      "markers": [],
+      "external_id": "103299"
+    },
+    {
+      "n": 19,
+      "title": "Changeling",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-02-22",
+      "markers": [],
+      "external_id": "103300"
+    },
+    {
+      "n": 20,
+      "title": "Natsu and the Dragon Egg",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-03-01",
+      "markers": [],
+      "external_id": "103301"
+    },
+    {
+      "n": 21,
+      "title": "The Phantom Lord",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-03-08",
+      "markers": [],
+      "external_id": "103302"
+    },
+    {
+      "n": 22,
+      "title": "Lucy Heartfilia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-03-15",
+      "markers": [],
+      "external_id": "103303"
+    },
+    {
+      "n": 23,
+      "title": "15 Minutes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-03-22",
+      "markers": [],
+      "external_id": "103304"
+    },
+    {
+      "n": 24,
+      "title": "To Keep From Seeing Those Tears",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-03-29",
+      "markers": [],
+      "external_id": "103305"
+    },
+    {
+      "n": 25,
+      "title": "A Flower Blooms in the Rain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-04-12",
+      "markers": [],
+      "external_id": "103306"
+    },
+    {
+      "n": 26,
+      "title": "Wings of Flame",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-04-19",
+      "markers": [],
+      "external_id": "103307"
+    },
+    {
+      "n": 27,
+      "title": "The Two Dragon Slayers",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-04-26",
+      "markers": [],
+      "external_id": "103308"
+    },
+    {
+      "n": 28,
+      "title": "Fairy Law",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-05-03",
+      "markers": [],
+      "external_id": "103309"
+    },
+    {
+      "n": 29,
+      "title": "My Resolve",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-05-10",
+      "markers": [],
+      "external_id": "103310"
+    },
+    {
+      "n": 30,
+      "title": "Next Generation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-05-17",
+      "markers": [],
+      "external_id": "103311"
+    },
+    {
+      "n": 31,
+      "title": "A Star Removed from the Sky",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-05-24",
+      "markers": [],
+      "external_id": "103312"
+    },
+    {
+      "n": 32,
+      "title": "Celestial Spirit King",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-05-31",
+      "markers": [],
+      "external_id": "103313"
+    },
+    {
+      "n": 33,
+      "title": "The Tower of Heaven",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-06-07",
+      "markers": [],
+      "external_id": "103314"
+    },
+    {
+      "n": 34,
+      "title": "Jellal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-06-21",
+      "markers": [],
+      "external_id": "103315"
+    },
+    {
+      "n": 35,
+      "title": "Voice of Darkness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-06-28",
+      "markers": [],
+      "external_id": "103316"
+    },
+    {
+      "n": 36,
+      "title": "Heaven's Game",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-07-05",
+      "markers": [],
+      "external_id": "103317"
+    },
+    {
+      "n": 37,
+      "title": "Armor of the Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-07-12",
+      "markers": [],
+      "external_id": "103318"
+    },
+    {
+      "n": 38,
+      "title": "Destiny",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-07-19",
+      "markers": [],
+      "external_id": "103319"
+    },
+    {
+      "n": 39,
+      "title": "Give Our Prayers to the Sacred Light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-07-26",
+      "markers": [],
+      "external_id": "103320"
+    },
+    {
+      "n": 40,
+      "title": "Titania Falls",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-08-02",
+      "markers": [],
+      "external_id": "103321"
+    },
+    {
+      "n": 41,
+      "title": "Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-08-09",
+      "markers": [],
+      "external_id": "103322"
+    },
+    {
+      "n": 42,
+      "title": "Battle of Fairy Tail",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-08-16",
+      "markers": [],
+      "external_id": "103323"
+    },
+    {
+      "n": 43,
+      "title": "Defeat Your Friends to Save Your Friends",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-08-23",
+      "markers": [],
+      "external_id": "103324"
+    },
+    {
+      "n": 44,
+      "title": "Thunder Palace",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-08-30",
+      "markers": [],
+      "external_id": "103325"
+    },
+    {
+      "n": 45,
+      "title": "Advent of Satan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-09-06",
+      "markers": [],
+      "external_id": "103326"
+    },
+    {
+      "n": 46,
+      "title": "Clash at Kardia Cathedral!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-09-13",
+      "markers": [],
+      "external_id": "103327"
+    },
+    {
+      "n": 47,
+      "title": "Triple Dragons",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-09-20",
+      "markers": [],
+      "external_id": "103328"
+    },
+    {
+      "n": 48,
+      "title": "Fantasia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-09-27",
+      "markers": [],
+      "external_id": "103329"
+    },
+    {
+      "n": 49,
+      "title": "The Day of the Fateful Encounter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-10-11",
+      "markers": [],
+      "external_id": "103330"
+    },
+    {
+      "n": 50,
+      "title": "Special Request: Watch Out for the Guy You Like!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-10-18",
+      "markers": [],
+      "external_id": "103331"
+    },
+    {
+      "n": 51,
+      "title": "Love & Lucky",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-10-25",
+      "markers": [],
+      "external_id": "103332"
+    },
+    {
+      "n": 52,
+      "title": "Allied Forces, Assemble!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-11-01",
+      "markers": [],
+      "external_id": "103333"
+    },
+    {
+      "n": 53,
+      "title": "Enter the Oración Seis!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-11-08",
+      "markers": [],
+      "external_id": "103334"
+    },
+    {
+      "n": 54,
+      "title": "Maiden of the Sky",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-11-15",
+      "markers": [],
+      "external_id": "103335"
+    },
+    {
+      "n": 55,
+      "title": "The Girl and the Ghost",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-11-22",
+      "markers": [],
+      "external_id": "103336"
+    },
+    {
+      "n": 56,
+      "title": "Dead Grand Prix",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-11-29",
+      "markers": [],
+      "external_id": "103337"
+    },
+    {
+      "n": 57,
+      "title": "Darkness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-12-06",
+      "markers": [],
+      "external_id": "103338"
+    },
+    {
+      "n": 58,
+      "title": "Celestial Skirmish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-12-13",
+      "markers": [],
+      "external_id": "103339"
+    },
+    {
+      "n": 59,
+      "title": "Jellal of Days Gone By",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-12-20",
+      "markers": [],
+      "external_id": "103340"
+    },
+    {
+      "n": 60,
+      "title": "March of Destruction",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2010-12-27",
+      "markers": [],
+      "external_id": "103341"
+    },
+    {
+      "n": 61,
+      "title": "Super Aerial Battle: Natsu vs. Cobra!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-01-10",
+      "markers": [],
+      "external_id": "103342"
+    },
+    {
+      "n": 62,
+      "title": "Wizard Saint Jura",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-01-17",
+      "markers": [],
+      "external_id": "103343"
+    },
+    {
+      "n": 63,
+      "title": "Your Words",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-01-24",
+      "markers": [],
+      "external_id": "103344"
+    },
+    {
+      "n": 64,
+      "title": "Zero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-01-31",
+      "markers": [],
+      "external_id": "103345"
+    },
+    {
+      "n": 65,
+      "title": "From Pegasus to Fairies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-02-07",
+      "markers": [],
+      "external_id": "103346"
+    },
+    {
+      "n": 66,
+      "title": "The Power of Feelings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-02-14",
+      "markers": [],
+      "external_id": "103347"
+    },
+    {
+      "n": 67,
+      "title": "I'm With You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-02-21",
+      "markers": [],
+      "external_id": "103348"
+    },
+    {
+      "n": 68,
+      "title": "A Guild for One",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-02-28",
+      "markers": [],
+      "external_id": "103349"
+    },
+    {
+      "n": 69,
+      "title": "Call of the Dragon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-03-07",
+      "markers": [],
+      "external_id": "103350"
+    },
+    {
+      "n": 70,
+      "title": "Natsu vs. Gray!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-03-14",
+      "markers": [],
+      "external_id": "103351"
+    },
+    {
+      "n": 71,
+      "title": "Friendship Overcomes the Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-03-21",
+      "markers": [],
+      "external_id": "103352"
+    },
+    {
+      "n": 72,
+      "title": "A Fairy Tail Wizard",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-03-28",
+      "markers": [],
+      "external_id": "103353"
+    },
+    {
+      "n": 73,
+      "title": "Rainbow Cherry Blossoms",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-04-04",
+      "markers": [],
+      "external_id": "103354"
+    },
+    {
+      "n": 74,
+      "title": "Wendy's First Big Job!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-04-11",
+      "markers": [],
+      "external_id": "103355"
+    },
+    {
+      "n": 75,
+      "title": "24-Hour Endurance Road Race",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-04-16",
+      "markers": [],
+      "external_id": "103356"
+    },
+    {
+      "n": 76,
+      "title": "Gildarts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-04-23",
+      "markers": [],
+      "external_id": "103357"
+    },
+    {
+      "n": 77,
+      "title": "Earth Land",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-04-30",
+      "markers": [],
+      "external_id": "103358"
+    },
+    {
+      "n": 78,
+      "title": "Edolas",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-05-07",
+      "markers": [],
+      "external_id": "103359"
+    },
+    {
+      "n": 79,
+      "title": "Fairy Hunter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-05-14",
+      "markers": [],
+      "external_id": "103360"
+    },
+    {
+      "n": 80,
+      "title": "Key of Hope",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-05-21",
+      "markers": [],
+      "external_id": "103361"
+    },
+    {
+      "n": 81,
+      "title": "Fireball",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-05-28",
+      "markers": [],
+      "external_id": "103362"
+    },
+    {
+      "n": 82,
+      "title": "Welcome Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-06-04",
+      "markers": [],
+      "external_id": "103363"
+    },
+    {
+      "n": 83,
+      "title": "Extalia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-06-11",
+      "markers": [],
+      "external_id": "103364"
+    },
+    {
+      "n": 84,
+      "title": "Fly, to Our Friends!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-06-18",
+      "markers": [],
+      "external_id": "103365"
+    },
+    {
+      "n": 85,
+      "title": "Code ETD",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-06-25",
+      "markers": [],
+      "external_id": "103366"
+    },
+    {
+      "n": 86,
+      "title": "Erza vs. Erza",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-07-02",
+      "markers": [],
+      "external_id": "103367"
+    },
+    {
+      "n": 87,
+      "title": "We're Talking About Lives Here!!!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-07-09",
+      "markers": [],
+      "external_id": "103368"
+    },
+    {
+      "n": 88,
+      "title": "For Pride's Sake, the River of Stars",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-07-16",
+      "markers": [],
+      "external_id": "103369"
+    },
+    {
+      "n": 89,
+      "title": "The Apocalyptic Dragon Chain Cannon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-07-23",
+      "markers": [],
+      "external_id": "103370"
+    },
+    {
+      "n": 90,
+      "title": "The Boy Back Then",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-07-30",
+      "markers": [],
+      "external_id": "103371"
+    },
+    {
+      "n": 91,
+      "title": "Dragon Sense",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-08-06",
+      "markers": [],
+      "external_id": "103372"
+    },
+    {
+      "n": 92,
+      "title": "O Living Ones",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-08-13",
+      "markers": [],
+      "external_id": "103373"
+    },
+    {
+      "n": 93,
+      "title": "I'm Standing Right Here",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-08-20",
+      "markers": [],
+      "external_id": "103374"
+    },
+    {
+      "n": 94,
+      "title": "Bye-Bye Edolas",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-08-27",
+      "markers": [],
+      "external_id": "103375"
+    },
+    {
+      "n": 95,
+      "title": "Lisanna",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-09-03",
+      "markers": [],
+      "external_id": "103376"
+    },
+    {
+      "n": 96,
+      "title": "He Who Extinguishes Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-09-10",
+      "markers": [],
+      "external_id": "103377"
+    },
+    {
+      "n": 97,
+      "title": "Best Partners",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-09-17",
+      "markers": [],
+      "external_id": "103378"
+    },
+    {
+      "n": 98,
+      "title": "Who's the Lucky One?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-09-24",
+      "markers": [],
+      "external_id": "103379"
+    },
+    {
+      "n": 99,
+      "title": "Natsu vs. Gildarts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-10-01",
+      "markers": [],
+      "external_id": "103380"
+    },
+    {
+      "n": 100,
+      "title": "Mest",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-10-08",
+      "markers": [],
+      "external_id": "103381"
+    },
+    {
+      "n": 101,
+      "title": "Black Wizard",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-10-15",
+      "markers": [],
+      "external_id": "103382"
+    },
+    {
+      "n": 102,
+      "title": "Iron Soul",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-10-22",
+      "markers": [],
+      "external_id": "103383"
+    },
+    {
+      "n": 103,
+      "title": "Makarov Charges",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-10-29",
+      "markers": [],
+      "external_id": "103384"
+    },
+    {
+      "n": 104,
+      "title": "Lost Magic",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-11-05",
+      "markers": [],
+      "external_id": "103385"
+    },
+    {
+      "n": 105,
+      "title": "Fire Dragon vs. Flame God",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-11-12",
+      "markers": [],
+      "external_id": "103386"
+    },
+    {
+      "n": 106,
+      "title": "Grand Magic World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-11-19",
+      "markers": [],
+      "external_id": "103387"
+    },
+    {
+      "n": 107,
+      "title": "Arc of Embodiment",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-11-26",
+      "markers": [],
+      "external_id": "103388"
+    },
+    {
+      "n": 108,
+      "title": "Human Gate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-12-03",
+      "markers": [],
+      "external_id": "103389"
+    },
+    {
+      "n": 109,
+      "title": "Lucy Fire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-12-10",
+      "markers": [],
+      "external_id": "103390"
+    },
+    {
+      "n": 110,
+      "title": "Dead-End of Despair",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-12-17",
+      "markers": [],
+      "external_id": "103391"
+    },
+    {
+      "n": 111,
+      "title": "Tears of Love and Vitality",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2011-12-24",
+      "markers": [],
+      "external_id": "103392"
+    },
+    {
+      "n": 112,
+      "title": "The One Thing I Couldn't Say",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-01-07",
+      "markers": [],
+      "external_id": "103393"
+    },
+    {
+      "n": 113,
+      "title": "Tenrou Tree",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-01-14",
+      "markers": [],
+      "external_id": "103394"
+    },
+    {
+      "n": 114,
+      "title": "Erza vs. Azuma",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-01-21",
+      "markers": [],
+      "external_id": "103395"
+    },
+    {
+      "n": 115,
+      "title": "Freezing Fighting Spirit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-01-28",
+      "markers": [],
+      "external_id": "103396"
+    },
+    {
+      "n": 116,
+      "title": "Power of Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-02-04",
+      "markers": [],
+      "external_id": "103397"
+    },
+    {
+      "n": 117,
+      "title": "Rolling Thunder",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-02-11",
+      "markers": [],
+      "external_id": "103398"
+    },
+    {
+      "n": 118,
+      "title": "The Man Without an Emblem",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-02-18",
+      "markers": [],
+      "external_id": "103399"
+    },
+    {
+      "n": 119,
+      "title": "Realm of the Abyss",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-02-25",
+      "markers": [],
+      "external_id": "103400"
+    },
+    {
+      "n": 120,
+      "title": "Daybreak on Tenrou Island",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-03-02",
+      "markers": [],
+      "external_id": "103401"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Story",
+      "artist": "Da-iCE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tomo yo Koko de Sayonara da",
+      "artist": "Boku ga Mitakatta Aozora",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Give me five!",
+      "artist": "Chihiro Yonekura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "5-moji no Koi no Yukue",
+      "artist": "Chihiro Yonekura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "power of the dream",
+      "artist": "lol",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Endless Harmony",
+      "artist": "Beverly",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "What You Are",
+      "artist": "Polka Dots",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ashita o Narase (明日を嗚らせ)",
+      "artist": "Kavka Shishido",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Landscape",
+      "artist": "SOLIDEMO",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "MASAYUME CHASING",
+      "artist": "BoA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kimi to Kare to Boku to Kanojo to (君と彼と僕と彼女と; You, He, Me, and She)",
+      "artist": "BREATHE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Blow Away",
+      "artist": "Tetsuya Kakihara & Yūichi Nakamura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Happy Tale",
+      "artist": "Aya Hirano, Sayaka Ohara, & Satomi Satou",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "200 miles",
+      "artist": "Jang Keun-Suk",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Zutto Kitto (ずっと きっと; Assuredly Forever) By Aya Hirano",
+      "artist": "Unknown",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Eternal Fellows",
+      "artist": "Tetsuya Kakihara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Daily Hymn ~This Place~",
+      "artist": "Aya Hirano",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Snow Fairy",
+      "artist": "FUNKIST",
+      "episodes": "1-11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kanpeki gu~no ne (完璧ぐ～のね)",
+      "artist": "Watarirouka Hashiri Tai",
+      "episodes": "1-11"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Endless Happy-Ending",
+      "artist": "THE RAMPAGE from EXILE TRIBE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "ties",
+      "artist": "Emi Noda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "DOWN BY LAW",
+      "artist": "THE RAMPAGE from EXILE TRIBE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Pierce",
+      "artist": "EMPiRE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "STRIKE BACK",
+      "artist": "BACK-ON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kokoro no Kagi (Heart's Key)",
+      "artist": "May J.",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Blow Away",
+      "artist": "Tetsuya Kakihara & Yūichi Nakamura",
+      "episodes": "4-5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Happy Tale",
+      "artist": "Aya Hirano, Sayaka Ohara, & Satomi Satou",
+      "episodes": "4-5"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "S.O.W. Sense of Wonder (S.O.W.センスオブワンダー)",
+      "artist": "Idoling!!!",
+      "episodes": "12-24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Tsuioku Merry-Go-Round (追憶メリーゴーランド)",
+      "artist": "onelifecrew",
+      "episodes": "12-24"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "NO-LIMIT",
+      "artist": "Osaka☆Syunkasyuto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Boku to Kimi no Lullaby",
+      "artist": "Miyuna",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Mysterious Magic",
+      "artist": "Do As Infinity",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Kimi no Mirai (キミノミライ)",
+      "artist": "ROOT FIVE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "ft.",
+      "artist": "FUNKIST",
+      "episodes": "25-35"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Gomen ne, Watashi. (ごめんね, 私。)",
+      "artist": "Shiho Nanba",
+      "episodes": "25-35"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "MORE THAN LIKE",
+      "artist": "BiSH",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Exceed",
+      "artist": "Miyuu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "BREAK OUT",
+      "artist": "V6",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Don't let me down",
+      "artist": "Mariya Nishiuchi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "R.P.G. ~Rockin' Playing Game",
+      "artist": "SuG",
+      "episodes": "36-48"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Kimi ga Iru Kara (君がいるから)",
+      "artist": "Mikuni Shimokawa",
+      "episodes": "36-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Yumeiro Graffiti (ユメイログラフィティ)",
+      "artist": "Tackey & Tsubasa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Never Ever",
+      "artist": "TOKYO GIRLS' STYLE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Egao no Mahō (エガオノマホウ)",
+      "artist": "MAGIC PARTY",
+      "episodes": "49-60"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "HOLY SHINE",
+      "artist": "Daisy X Daisy",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 6,
+      "title": "NEVER-END TAIL",
+      "artist": "Tatsuyuki Kobayashi & Konomi Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "FOREVER HERE",
+      "artist": "Yoko Ishida",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 6,
+      "title": "Fiesta",
+      "artist": "+Plus",
+      "episodes": "61-72"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Be as One",
+      "artist": "w-inds",
+      "episodes": "61-72"
+    },
+    {
+      "kind": "OP",
+      "sequence": 7,
+      "title": "Believe In Myself",
+      "artist": "Edge of Life",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Azayaka na Tabiji (鮮やかな旅路; A Clear Journey)",
+      "artist": "Megumi Mori",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 7,
+      "title": "Evidence",
+      "artist": "Daisy x Daisy",
+      "episodes": "73-85"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Hitori Samishiku (ひとりさみしく)",
+      "artist": "ShaNa",
+      "episodes": "73-85"
+    },
+    {
+      "kind": "OP",
+      "sequence": 8,
+      "title": "Ashita o Narase (明日を鳴らせ)",
+      "artist": "Kavka Shishido",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Landscape",
+      "artist": "SOLIDEMO",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 8,
+      "title": "The Rock City Boy",
+      "artist": "JAMIL",
+      "episodes": "86-98"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Don't think.Feel !!!",
+      "artist": "Idoling!!!",
+      "episodes": "86-98"
+    },
+    {
+      "kind": "OP",
+      "sequence": 9,
+      "title": "Towa no Kizuna (永久のキズナ)",
+      "artist": "Daisy x Daisy",
+      "episodes": "99-111"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Kono Te Nobashite (この手を伸ばして; Reach Out This Hand)",
+      "artist": "Hi-Fi Camp",
+      "episodes": "99-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 10,
+      "title": "I Wish",
+      "artist": "Milky Bunny",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "Boys Be Ambitious!! (ボーイズ・ビー・アンビシャス)",
+      "artist": "Hi-Fi Camp",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 11,
+      "title": "Hajimari no Sora (はじまりの空; Sky of Beginning)",
+      "artist": "+Plus",
+      "episodes": "125-137"
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "Glitter (Starving Trancer Remix)",
+      "artist": "Another Infinity feat. Mayumi Morinaga",
+      "episodes": "125-137"
+    },
+    {
+      "kind": "OP",
+      "sequence": 12,
+      "title": "Tenohira (テノヒラ; Palm of the Hand)",
+      "artist": "HERO",
+      "episodes": "138-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "Yell ~Kagayaku Tame no Mono~ (YELL～輝くためのもの～; The Thing For Shining)",
+      "artist": "Sata Andagi",
+      "episodes": "138-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 13,
+      "title": "breakthrough",
+      "artist": "GOING UNDER GROUND",
+      "episodes": "151-166"
+    },
+    {
+      "kind": "ED",
+      "sequence": 13,
+      "title": "Kimi ga Kureta Mono (キミがくれたもの; What you gave me)",
+      "artist": "Shizuka Kudo",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 14,
+      "title": "Fairy Tail ~Yakusoku no Hi~ (フェアリーテイル~約束の日~; Fairy Tail ~The Promised Day~)",
+      "artist": "Chihiro Yonekura",
+      "episodes": "167-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 14,
+      "title": "We're the Stars",
+      "artist": "Aimi",
+      "episodes": "167-"
+    }
+  ],
+  "relations": []
+}

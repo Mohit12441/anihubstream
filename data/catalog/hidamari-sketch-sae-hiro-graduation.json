@@ -1,0 +1,66 @@
+{
+  "id": "hidamari-sketch-sae-hiro-graduation",
+  "title": "Hidamari Sketch Sae & Hiro Graduation",
+  "native": "ひだまりスケッチ 沙英ヒロ 卒業編",
+  "year": 2013,
+  "rating": 8.1,
+  "season": "Fall 2013",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx17739-RWF701d4svmX.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx17739-RWF701d4svmX.jpg",
+  "accent": "#e4bb50",
+  "synopsis": "Sae and Hiro take their final exams while the rest of the Hidamari Apartment's residents cheer them on and prepare for their eventual graduation.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "hidamari-sketch-sae-and-hiro-graduation-k9186s",
+    "mal": 17739,
+    "anilist": 17739,
+    "kitsu": 8021
+  },
+  "skip_key_id": 17739,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "hidamari sketch sae hiro graduation ひた まりスケッチ 沙英ヒロ 卒業編 ova finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "112012"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "112013"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,66 @@
+{
+  "id": "fate-strange-fake-whispers-of-dawn",
+  "title": "Fate/strange Fake -Whispers of Dawn-",
+  "native": "Fate/strange Fake -Whispers of Dawn-",
+  "year": 2023,
+  "rating": 8.1,
+  "season": "Summer 2023",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154966-eQRCmSrCh96j.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154966-eQRCmSrCh96j.png",
+  "accent": "#50c9f1",
+  "synopsis": "Years after the Fifth Holy Grail War in Japan, strange reports surface of one appearing in America. Attracting new Mages and Servants, the question is raised about the relic’s authenticity. As the city of Snowfield is turned into a bloody battleground, specific details seem wrong. Is it possible someone is manipulating this twisted little play, and if so, does this mean the true Holy Grail exists?\n\n(Source: Crunchyroll)\n\nNote: Special premiere occurred in Los Angeles at Anime Expo before the Japanese television premiere on July 2, 2023.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fatestrange-fake-whispers-of-dawn-2ii1dq",
+    "mal": 53127,
+    "anilist": 154966,
+    "kitsu": 46527
+  },
+  "skip_key_id": 53127,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "fate strange fake whispers of dawn fate strange fake whispers of dawn special finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Fate/strange Fake -Whispers of Dawn-",
+      "runtime": "87:00",
+      "runtime_seconds": 5220,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154966-eQRCmSrCh96j.png",
+      "synopsis": "Years after the Fifth Holy Grail War in Japan, strange reports surface of one appearing in America. Attracting new Mages and Servants, the question is raised about the relic’s authenticity. As the city of Snowfield is turned into a bloody battleground, specific details seem wrong. Is it possible someone is manipulating this twisted little play, and if so, does this mean the true Holy Grail exists?\n\n\n\n\n(Source: Crunchyroll)\n\n\n\nNote: Special premiere occurred in Los Angeles at Anime Expo before the Japanese television premiere on July 2, 2023.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "116842"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "FAKEit",
+      "artist": "SawanoHiroyuki[nZk]:Laco",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

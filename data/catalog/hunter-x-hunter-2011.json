@@ -1,0 +1,3330 @@
+{
+  "id": "hunter-x-hunter-2011",
+  "title": "Hunter x Hunter (2011)",
+  "native": "HUNTER×HUNTER (2011)",
+  "year": 2011,
+  "rating": 8.9,
+  "season": "Fall 2011",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11061-y5gsT1hoHuHw.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11061-y5gsT1hoHuHw.png",
+  "accent": "#f1d65d",
+  "synopsis": "A Hunter is one who travels the world doing all sorts of dangerous tasks. From capturing criminals to searching deep within uncharted lands for any lost treasures. Gon is a young boy whose father disappeared long ago, being a Hunter. He believes if he could also follow his father's path, he could one day reunite with him.\n\nAfter becoming 12, Gon leaves his home and takes on the task of entering the Hunter exam, notorious for its low success rate and high probability of death to become an official Hunter. He befriends the revenge-driven Kurapika, the doctor-to-be Leorio and the rebellious ex-assassin Killua in the exam, with their friendship prevailing throughout the many trials and threats they come upon taking on the dangerous career of a Hunter.",
+  "rank": null,
+  "trend_rank": 25,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 6448,
+    "anilist": 11061,
+    "mal": 11061
+  },
+  "skip_key_id": 11061,
+  "skip_key_space": "anilist",
+  "episode_total": 148,
+  "added_at": "2026-10-14 02:06:29",
+  "search_text": "hunter x hunter 2011 hunter hunter 2011 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Departure x And x Friends",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/337eb80fe71c9e580908d08278e4e89d1317068418_full.jpg",
+      "synopsis": "The story begins with a young boy named Gon, who aspires to be a hunter just like his father Ging. Ging leaves his son in the care of Mito, Gon's aunt, and has not been seen since. Gon catches the local monster fish, \"Lord of the Lake\", in order to prove his ability to take the exam. Although Mito is reluctant to let Gon leave his home, she relents after he is determined to understand the reason his father left him and his interest of being a hunter.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 103,
+          "end": 192,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "104999"
+    },
+    {
+      "n": 2,
+      "title": "Test x Of x Tests",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f89ea9d5b9d5a1d4c263f1cb57e9c6011317346148_full.jpg",
+      "synopsis": "Gon, Kurapika and Leorio reach Dolle Harbor and are given instructions by the captain to head for the cedar tree on the hilltop behind the city. Moving through a small town, the three are stopped by a group of people, where an old woman gives a question requring them to choose from two choices. Answering wrongly, refusing to answer or attempting to head back will result in failure of the exam.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 25,
+          "end": 115,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "105000"
+    },
+    {
+      "n": 3,
+      "title": "Rivals x In x Survival",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/e4ccb5a62ebb8ccda1e2c113b785919a1317929321_full.jpg",
+      "synopsis": "With the navigators' help, Gon, Kurapika and Leorio arrive at Zaban City, the venue of the exam. The navigator leads them to a small restaurant, which is revealed to be the front for the venue. Gon's group is led to an elevator disguised as a back room, which leads a hundred floors underground. Below, they meet the rest of the participants and given their numbers. There they meet Tonpa, a regular participant who claims to have tried and failed 35 times in the exam.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 35,
+          "end": 115
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1380
+        }
+      ],
+      "external_id": "105001"
+    },
+    {
+      "n": 4,
+      "title": "Hope x And x Ambition",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d2ecd700adab356914e0b1115a79b21a1318970940_full.jpg",
+      "synopsis": "During the first test, a number of participants fall out from fatigue after running for at least forty kilometers. Leorio almost gives up until he is encouraged by Gon, who waits for him. Killua, a participant, is introduced and he is curious of Gon's personality when he discovers that the boy is the same age as him. Kurapika and Leorio talk about the reason for being a hunter, with Kurapika wanting to take down the Phantom Troupe as his clan was massacred by them for their precious scarlet eyes, which manifest when the Kurta uses their heightened sense. Leorio aims to be a hunter for money, for purely altruistic reasons, as his childhood friend died of an illness without the funds to save him. He wishes to be a doctor so he can give his patients free treatment. Finally, the participants reach the end of the tunnel they are in and up to the surface to the Numere Wetlands, also known as Swindlers' Swamp. Satotz warns them about the creatures using devious tactics to lure and eat their prey in the wetlands, and falling for their tricks equals death. A man claiming to be their original examiner says Satotz is a man-faced ape masquerading as their examiner to fool them. Hisoka, in the belief that a well-trained Hunter would be able to avoid attacks, throws his playing cards on Satotz and the man. The man is killed while Satotz stops the attack, revealing himself to be the real examiner. Hisoka is warned not to attack Satotz again otherwise he will be disqualified. Satotz tells the participants to follow him into the swamp, and if any of them loses sight of him, they will never reach the second venue.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 35,
+          "end": 115
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1401
+        }
+      ],
+      "external_id": "105002"
+    },
+    {
+      "n": 5,
+      "title": "Hisoka x Is So x Sneaky",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/987b531aaed516b8d043b127580cbd711319132525_full.jpg",
+      "synopsis": "While following Satotz, a fog moves into the swamp and most of the participants are either rendered unconscious or killed by traps and verocious beasts. A group of candidates target Hisoka as they feel he's a threat. Gon and Killua are separated from Leorio and Kurapika and both sides are eventually attacked by monsters. Leorio and Kurapika encounter Hisoka about to be attacked by candidates but are shocked to watch the magician easily take the candidates down. Hisoka then targets Leorio and Kurapika, but realizing that they are no match for him, they decide to head in different directions to stop him from following. However, Leorio returns, unable to run away from a fight. As expected, Leorio is beaten badly by Hisoka. Before the melee can get any worse, Gon, who is separated from Killua, arrives to stop Hisoka. Although he is also no match for Hisoka, he manages to hit his face once before being strangled by Hisoka. Having strangely considered they have passed his test, Hisoka lets them go and has Gon leave by himself while he carries an unconscious Leorio off. He is also shown to be collaborating with an unknown candidate. Gon finds Kurapika who returns to the scene and they both head for the Phase Two site. Kurapika analyzes Hisoka's behavior and believes that the magician has his own standards of judging whether the person he meets is worthy. Gon confesses to Kurapika that he actually feels afraid of his encounter with Hisoka.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 26,
+          "end": 116,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 13,
+          "end": 103,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "105003"
+    },
+    {
+      "n": 6,
+      "title": "A x Surprising x Challenge!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/ee70e7ee65c4030224f476bc0e61a5731319736733_full.jpg",
+      "synopsis": "Gon and Kurapika reunite with Leorio and Killua at the Phase Two site. Satotz leads what remains of the candidates to meet the second phase examiners, named Menchi and Buhara. The examiners declare the next phase is to test their cooking skills, much to the candidates' disbelief. The test requires pork, so the candidates are sent to find pigs in the forest. However, the pigs living inside the forest are carnivorous and tear through the candidates. Thanks to Gon, they discover the pigs' weakness and they manage to each get one for their cooking. Upon tasting the candidates' cooking, Buhara gives a pass but Menchi fails all of them. Knowing the candidates will riot, Satotz informs Chairman Netoros of the Hunter Selection Committee to make an appearance. Netoros arrives to correct Menchi's habit of getting biased whenever it's related to cooking. Netoros allows Menchi to stay on as examiner, and she gives the candidates a retest: boil eggs laid by spider eagles on Mt. Split-in-Half. The candidates ride on Netoros' airship to the mountain where they learn they have to jump down a potentially fatal height to get the eggs. Having seen and learnt how Menchi gets her egg, Gon leads some of the other candidates into successfully getting their own. Some candidates are killed while rashly trying to get their eggs while others refuse to take the leap. Out of the 50 candidates who survive to reach Phase Two, 42 candidates now remain.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 17,
+          "end": 107
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "105004"
+    },
+    {
+      "n": 7,
+      "title": "Showdown x On The x Airship",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/00bff5d305de5d66a070df8b9d6daeb81320691973_full.jpg",
+      "synopsis": "All the candidates are told by Beans, Neteros' secretary to get their dinner and rest and prepare for the third phase the next morning. Tonpa tries to commit sabotage again by trying to keep Kurapika and Leorio awake for the whole night, but is exasperated to find that none of them fall for his tricks. Gon and Killua explore the airship, and Killua tells Gon that he is actually from a family of assassins. He wished to strike out on his own, which his family has not taken lightly. Neteros arrives and tests both boys' instinct and asks how they felt about the difficulty of the exam. Neteros invites both of them to a game, whoever can grab the ball he is holding before dawn will immediately pass the exam. Gon and Killua find it too hard to pass up, but discovers that with Neteros' skills, they are unable to grab the ball. Eventually Killua realizes that with their skills, they will never be able to take the ball from Neteros for a year, if he keeps it up. Killua retires, but then takes it out on two candidates who harass him, by maiming and killing them. Gon continues trying to grab the ball, and uses a headbutt on Neteros. The old man realizes that Gon will crack his skull if he continues with his headbutt, so he uses his right hand to push Gon away from him. Gon then tells Neteros then he has managed to get him to use his right hand once, which he had not used from the start of the challenge. After his speech, Gon falls asleep from exhaustion.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1328,
+          "end": 1417
+        }
+      ],
+      "external_id": "105005"
+    },
+    {
+      "n": 8,
+      "title": "Decision X By X Majority?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1eab69ea577ead7c015f7590b44e48951320951864_full.jpg",
+      "synopsis": "The airship reaches Trick Tower, the Phase Three site, which is a tall featureless pillar built on an equally high platform. The candidates are told that to pass Phase 3, they have to climb down from the top to the base of the tower. An experienced rock climber candidate tries to climb down but is eaten by some flying monsters. Later, Kurapika finds that more than half of the candidates have discovered hidden doors to go inside the tower, which Gon finds one as well. However, the catch is that there are many hidden doors, each one can be only used once and only one person can fit through a door, which means they have to split up. When they try out different doors, they realize that they end up in the same room. In the room, Gon's group are given instructions and special wristwatches for five of them to follow the majority, but they cannot proceed without a fifth member. Lippo, one of the Phase 3 examiners tells them this while explaining they have chosen the path of majority rule. They will need to cooperate in order to pass this phase. Tonpa eventually joins in as the fifth member, and the exam proceeds. By following majority rule, the group eventually reaches an arena, where they have to face prisoners hired by Lippo to become combatants. Lippo explains that to pass, all they have to do is to win three rounds. But the prisoners are given reduced sentences by one year for every hour they manage to keep the candidates here. Tonpa volunteers to go first, pitting himself against a combatant named Bendot. Tonpa immediatey gives up, leading to Leorio accusing him of sabotaging candidates, which he admits to do every year. Kurapika stops Leorio, saying that this is part of their plan to make them fight each other and waste time. Gon goes next against Sedokan, a jailed serial bomber.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "start": 1346,
+          "end": 1436,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "105006"
+    },
+    {
+      "n": 9,
+      "title": "Beware X Of X Prisoners",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e613a67fc199fa00bd43e4ad17c474211321560627_full.jpg",
+      "synopsis": "Tonpa promptly gives up even before Bendot land a punch on him. Leorio is furious at what he has done but Tonpa tells them that his real plan is to sabotage rookies like them. Gon then faces Sedokan, who proposes a match to see whose candle burns the longest. Gon chooses the longer candle, unaware that it is oil-soaked, and his candle starts to burn faster midway. Seeing that his candle is not susceptible to strong winds, he puts it down and sprints towards Sedokan to blow his candle. The next match is between Kurapika and Majitani, who proposes a death match without weapons and and with the condition that one must die or surrender to finish the match. Majitani, who relies on scaring and intimidating his enemies to make them surrender, is easily defeated by Kurapika when he sees something in Majitani and makes him see red.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 41,
+          "end": 127,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1342,
+          "end": 1432,
+          "label": "Ending"
+        },
+        {
+          "kind": "recap",
+          "start": 127,
+          "end": 193,
+          "label": "Recap"
+        }
+      ],
+      "external_id": "105007"
+    },
+    {
+      "n": 10,
+      "title": "Trick X To The X Trick",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b3ad13c092e97fed6456500f177ddd191322506260_full.jpg",
+      "synopsis": "A female prisoner claim that Majitani is only unconscious, thus Kurapika's match has not been settled. Leorio, and even Killua cannot persuade Kurapika to finish the fight for the latter refuses to fight a person who has lost the will to fight. Frustrated, Leorio decides to use the majority rule as a way out of the difficulty but no one supports him. Elsewhere Hisoka is met by Togari, a former examiner whom Hisoka attacked and is now wanting revenge. Togari attacks with four crescent blades, only to be finished with one sweeping attack. Hisoka then becomes the first applicant to pass this phase. Meanwhile, the team suspects Majitani's real condition. The female prisoner challenges Leorio to have a betting game instead. Leorio agrees and bets ten hours that Majitani is alive, which he wins. Next, he bets twenty hours on Majitani feigning unconsciousness. To confirm, he brings Majitani to the edge of the platform and threatens to drop him. Seeing that, the prisoner changes her bet to forty hours on Majitani being conscious. When he is about to be dropped by Leorio, Majitani moves and admits defeat, putting the score at 2 - 1 in favor of Leorio's team. However, they only have 20 hours left to wager",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 5,
+          "end": 95,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1340,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "105008"
+    },
+    {
+      "n": 11,
+      "title": "Trouble X With The X Gamble!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e5fb20b31257aa406de829c1b5831cfd1322774241_full.jpg",
+      "synopsis": "After winning the bet about Majitani, Leroute, as what the prisoner is named, bets with Leorio about her gender. Despite looking conspicuously female, Leorio, much to Killua and Kurapika's annoyance, bets that she is male. Leorio thinks that team wins if he is correct; and if he is wrong, he will be able to touch Leroute to confirm. Leorio is wrong and goes on to check Leroute. Leorio then challenges Leroute in rock, paper, scissors, and loses. Killua then faces the feared mass murderer Johness the Dissector. Killua rips Johness' heart in an instant and even have it covered in a piece of Johness' cloth. The latter pleads for his heart, and Killua returned it after he is dead. The team thus gathers three points and pass the trial, but they are forced to wait the 50 hours that Leorio has lost with his bets in a small room. Meanwhile, applicants Gittarackur and Hanzo become the second and third one to finish the third phase.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 6,
+          "end": 96,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "105009"
+    },
+    {
+      "n": 12,
+      "title": "Last X Test Of X Resolve",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a09cefd55c3c3ed76ca8623bd2ed15581323370719_full.jpg",
+      "synopsis": "The team stays inside a small room for fifty hours and keep themselves from getting bored. Then they spend the remaining time going to a series of traps and tricks. At the last room, they encountered two doors and are forced to either choose the long and hard path (45 hours) in which all of them may use or the shortcut (about 3 minutes) wherein two of them must be left behind. As disputes break out among them, Gon comes up with an ingenious idea of opening the long way and breaking through the wall to go to the shortcut so all five of them pass this phase.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 3,
+          "end": 126,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "105010"
+    },
+    {
+      "n": 13,
+      "title": "Letter X From X Gon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a3c5a42b1e3e62145f6dd1f7583f6de91324316143_full.jpg",
+      "synopsis": "Gon decides to send a letter to his aunt Mito in order to inform her about the events that had happened during his journey. He started to narrate the story on the events starting from the preliminary Hunter exam to the point when he met Leorio, Kurapika, Killua and the other examinees.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 17,
+          "end": 107
+        }
+      ],
+      "external_id": "105011"
+    },
+    {
+      "n": 14,
+      "title": "Hit x The x Target",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/98be738d3a62f01164c934bf3262343e1324676074_full.jpg",
+      "synopsis": "Gon learns to master his accuracy with his pole to try and steal Hisoka's number plate.Finally mastering it,He decides to steal it when Hisoka is busy catching his Prey.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 11,
+          "end": 101
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1400
+        }
+      ],
+      "external_id": "105012"
+    },
+    {
+      "n": 15,
+      "title": "Explosion X Of x Deception",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/5368d2cc68995cb424bd040b7165f56e1325194391_full.jpg",
+      "synopsis": "Gon is relying on Bloodcrazy Butterflies to find his target, Hisoka, before waiting for the perfect time to use his skill with the fishing rod to snatch Hisoka's tag. Meanwhile, Leorio is tricked by Tonpa and loses his own tag, but Kurapika helps him recover it. Now that Kurapika and Leorio know that neither is the other's target, they decided to form an alliance.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 12,
+          "end": 102
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1411
+        }
+      ],
+      "external_id": "105013"
+    },
+    {
+      "n": 16,
+      "title": "Defeat X And X Disgrace",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/9fb4483ab5d58f97ad076e431e0974291326497842_full.jpg",
+      "synopsis": "Kurapika and Leorio are being stalked by Hisoka, but they managed to negotiate their way out of a fight. However, the encounter leaves Hisoka aroused, so he leaves in search of a new target. Gon is able to use his fishing rod to snatch Hisoka's tag right when Hisoka attacks his target. However, as Gon tries to escape, he is attacked by another applicant and loses his tag...",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 26,
+          "end": 116
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1415
+        }
+      ],
+      "external_id": "105014"
+    },
+    {
+      "n": 17,
+      "title": "Trap X In The X Hole",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/75033626e900879a1754af5b87fee52d1327014195_full.jpg",
+      "synopsis": "Killua grows tired of having Imori shadowing him so he challenges Imori to a fight and quickly dispatches him. Meanwhile, Gon has joined up with Leorio and Kurapika. The three of them devise a plan for taking Ponzu's tag and track her down to a suspicious-looking cave. That is when Leorio insists on heading in alone.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 27,
+          "end": 127,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "105015"
+    },
+    {
+      "n": 18,
+      "title": "Big X Time X Interview",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c7b038dbe9728fc8c7b875cc6b1270541327695936_full.jpg",
+      "synopsis": "Gon and his friends have been trapped inside a cave by poisonous snakes. Bourbon, the person responsible for the trap, is already dead, and nobody knows how to disarm the trap. Meanwhile, Leorio, who was bitten by the snakes, is growing weak. Gon manages to get them out of the sticky situation and through to the final phase of the exam. But first, Netero wants an interview with each of the remaining applicants...",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 114
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1328,
+          "end": 1417
+        }
+      ],
+      "external_id": "105016"
+    },
+    {
+      "n": 19,
+      "title": "Can't Win X And X Can't Lose",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1904a45d2fe5a667f3353187d36ea6841328209651_full.jpg",
+      "synopsis": "Gon and his friends have advanced to the final phase of the Hunter Exam. The final phase is a tournament where the winners are out and the losers advance. The rule is that if you kill your opponent, you'll be disqualified. The first mach is Gon versus Hanzo. Gon can't do anything against Hanzo, but he refuses to give up. Hanzo is losing his patience and threatens to break Gon's arm.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 4,
+          "end": 94,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "105017"
+    },
+    {
+      "n": 20,
+      "title": "Baffling X Turn Of X Events",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/6aa9d2da025fd4f184715d8d85eb11331328815323_full.jpg",
+      "synopsis": "Gon wakes up, and finds himself being congratulated by Satotz for being the first person to pass the Hunter Exam. Gon asks Satotz if the Exam was still going on, and Satotz tells him that it's over. Satotz reveals what happens after he lost consciousness, and Gon finds out some shocking turn of events.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1417
+        }
+      ],
+      "external_id": "105018"
+    },
+    {
+      "n": 21,
+      "title": "Some X Brother X Trouble",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/40cacc67cc7815c6e097a96c661079f21330637028_full.jpg",
+      "synopsis": "Gon is upset that Killua was forced to kill. Gon is mad at Illumi and proclaims that he will go to Kukuroo Mountain to rescue Killua. As Gon and his friends depart, Satotz mentions that the Hunter Exam isn't over yet...",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 112
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1352,
+          "end": 1417
+        }
+      ],
+      "external_id": "105019"
+    },
+    {
+      "n": 22,
+      "title": "A X Dangerous X Watchdog",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/e2b944cee228dce4c2518e6e0c099dd81330031613_full.jpg",
+      "synopsis": "Gon, Kurapica, and Leorio arrive at Kukuroo Mountain only to find out that they cannot get close to the Zoldyck family estate. The Zoldyck family owns the mountain and all of the surrounding forest and the entire region is gated shut. There is a guard outpost immediately outside of the gate, but instead of serving as a guard, the man working in there actually cleans up the mess created by the watchdog whenever there are intruders into the grounds. Gon, unwilling to give up on \"rescuing\" Killua, learns from the gatekeeper that the actual door is the massive stone gate and anyone who enters via that path will not be attacked by the watchdog. Leorio tries to pull and push on the gate, to no avail. The gatekeeper informs them that the gate opens up different amounts of stone slabs based only on the strength of the person; however, the least amount of strength anyone needs to open the smallest portion of the door requires two tons of strength on each side. In addition, the protagonists are shocked to hear that Killua opened up three doors, making the gate 16 tons, when he arrived home not long ago. Gon's naturally candid character that allows so many people to like him and to help him out will also play a role in how this episode plays out.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 18,
+          "end": 98
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1416
+        }
+      ],
+      "external_id": "105020"
+    },
+    {
+      "n": 23,
+      "title": "The X Guard's X Duty",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/cf8bb30eefd7286635d6e6cc35dc57531330644588_full.jpg",
+      "synopsis": "Gon and his friends have decided to pass through the Trial Gate to see Killua. First, they must train in the servants' residence until they can open the gate. Meanwhile, Killua has learned that Gon and the others are here to see him. Gon, Leorio, and Kurapika are able to open the gate after completing their training, but the apprentice butler Canary stands in their way.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 38,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1417
+        }
+      ],
+      "external_id": "105021"
+    },
+    {
+      "n": 24,
+      "title": "The X Zoldyck X Family",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/83d2ca4ff47b276ecbb1b8ca54c5b6111331235436_full.jpg",
+      "synopsis": "With help from Canary, who is concerned about Killua, Gon and his friends are getting closer to the mansion. However, Kikyo tells them that Killua cannot see them as he is in solitary confinement. Meanwhile, Killua has been summoned by Silva and asked if he wants to see his friend? Killua answers truthfully, and he is allowed to go see his friends...",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "start": 8,
+          "end": 98,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "105022"
+    },
+    {
+      "n": 25,
+      "title": "Can't See X If X You're Blind",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c4c7a1cdf43c6f63a8a462cdea9f0b961332785056_full.jpg",
+      "synopsis": "Gon, Kurapika and Leorio arrive at the Butler's Quarters, where the Head Butler entertains them while waiting for Killua. But just what game does he have in mind, and what are the stakes?",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1413
+        }
+      ],
+      "external_id": "105023"
+    },
+    {
+      "n": 26,
+      "title": "Then X And X After",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/8524391f85b06850d890207d4a764ce31332884240_full.jpg",
+      "synopsis": "A letter from Gon arrives at Whale Island for Mito... (A recap of everything that has happened.)",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 115,
+          "end": 205
+        }
+      ],
+      "external_id": "105024"
+    },
+    {
+      "n": 27,
+      "title": "Arrival X At The X Arena",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c1a4f64a46087c2c1e7425cffe5548bf1334181115_full.jpg",
+      "synopsis": "Gon and Killua arrive at the Heavens Arena and begin to work their way up, making a new friend, Zushi, who is trained in the martial arts.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "start": 1326,
+          "end": 1433,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "105025"
+    },
+    {
+      "n": 28,
+      "title": "Nen X \"Nen\"",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/79cf72b53d6d093fd246760db7dbc7e01334256737_full.jpg",
+      "synopsis": "While working to understand Nen and Ren, Gon and Killua run into a familiar acquaintance.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "start": 1337,
+          "end": 1427,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "105026"
+    },
+    {
+      "n": 29,
+      "title": "Awakening X And X Potential",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/adc699ac103c838d5f0368f36716dd4e1335202597_full.jpg",
+      "synopsis": "After reaching the 200th floor, Gon and Killua run into Hisoka's barrier of Nen. They ask Wing to use the violent method for activating their Nen potential. As the deadline for registration draws near, they begin training in one of the four major principles of Nen, Ten.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 45,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1314,
+          "end": 1404
+        }
+      ],
+      "external_id": "105027"
+    },
+    {
+      "n": 30,
+      "title": "Fierce X And X Ferocious",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6a1ca673bdd1886ed226125da45edf241335203393_full.jpg",
+      "synopsis": "Gon faces the Nen user Gido in his first 200s Heavens Arena match. Gon uses Ten to protect himself, but he soon finds himself on the defense against Gido's Dancing Tops. As Gon desperately tries to find a way to fight back, he makes a bold decision...",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1379
+        }
+      ],
+      "external_id": "105028"
+    },
+    {
+      "n": 31,
+      "title": "Destiny X And X Tenacity",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e599da99af56ab137cef2a7e5c1a16cc1335892838_full.jpg",
+      "synopsis": "A month has passed since Gon was seriously injured, and Hisoka and Kastro are about to fight in Heavens Arena. Kastro was able to knock Hisoka down in the past and sounds very confident in his interview. Hisoka appears unperturbed by the upcoming fight.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 124
+        }
+      ],
+      "external_id": "105029"
+    },
+    {
+      "n": 32,
+      "title": "A X Surprising X Win",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c32c05b7c4481722b2b74eb2dcbadcf91336682614_full.jpg",
+      "synopsis": "Kastro has used his ability to create a clone of himself with Nen to sever Hisoka's arm and take an advantage in the fight. However, despite losing both arms, Hisoka appears to be perfectly calm. Kastro loses his cool and attacks Hisoka.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1402
+        }
+      ],
+      "external_id": "105030"
+    },
+    {
+      "n": 33,
+      "title": "An X Empty X Threat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/bea923ea3dfeb1b18ef9d320f5beebf01337276172_full.jpg",
+      "synopsis": "After two months, Gon and Killua are finally allowed to practice Nen again. That's when Gido, Sadaso, and Riehlvelt appear before them and tell them to fight them in the arena. Gon and Killua refuse, but Killua finds Sadaso's behavior to be very suspicious.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1346,
+          "end": 1417
+        }
+      ],
+      "external_id": "105031"
+    },
+    {
+      "n": 34,
+      "title": "Power X To X Avenge",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/9b6387d900daafcc973aded68319231a1337883863_full.jpg",
+      "synopsis": "Gon has fights against Gido and Riehlvelt coming up. He's still mad about what they did to Zushi. Gon is able to withstand Gido's attacks and overwhelm him in battle. This causes Hisoka to smile.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 45,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1318,
+          "end": 1408
+        }
+      ],
+      "external_id": "105032"
+    },
+    {
+      "n": 35,
+      "title": "The X True X Pass",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/35a378b93ca674f87434ab017091dd821338931493_full.jpg",
+      "synopsis": "Gon and Killua begin training in Hatsu, the culmination of everything they've learned about Nen. And finally, Gon challenges Hisoka to return the favor from the Hunter Exam. \"I'm going to give the tag back to Hisoka while punching him in the face!\"",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1406
+        }
+      ],
+      "external_id": "105033"
+    },
+    {
+      "n": 36,
+      "title": "A Big Debt X And X A Small Kick",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/735ad030d35dd48d0ec88ccf78a65f611339106864_full.jpg",
+      "synopsis": "After landing a punch on Hisoka, Gon returns the tag from the Hunter Exam. Hisoka is ecstatic to see Gon's development and uses his own Nen to attack. Gon is scared, but he recklessly continues to attack! Will he emerge victorious.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1379
+        }
+      ],
+      "external_id": "105034"
+    },
+    {
+      "n": 37,
+      "title": "Ging X And X Gon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/642588253049f946f98d3bb47b08e6c91340048018_full.jpg",
+      "synopsis": "After learning Nen and becoming a true Hunter, Gon returns to Whale Island with Killua. When he arrives, Mito has a box for him. She was told by Ging to give this box to Gon once he became a Hunter. However, it appears that the box cannot be opened.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 17,
+          "end": 97
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1405
+        }
+      ],
+      "external_id": "105035"
+    },
+    {
+      "n": 38,
+      "title": "Reply X From X Dad",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/9bba0036b5ae8b122a9199e6e096c2441340390359_full.jpg",
+      "synopsis": "Gon and Killua have begun to listen to the cassette tape left behind by Ging in anticipation of Gon becoming a Hunter. What remains in this foretelling message from Gon's long-absent father?",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 116
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1379
+        }
+      ],
+      "external_id": "105036"
+    },
+    {
+      "n": 39,
+      "title": "Wish X And X Promise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/aec11157898defa3859c358591d23c541341346467_full.jpg",
+      "synopsis": "Having learned his Nen ability, Kurapika pursues a Hunter's work that will get him close to the New York auction.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1380
+        }
+      ],
+      "external_id": "105037"
+    },
+    {
+      "n": 40,
+      "title": "Nen X Users X Unite",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b4578ba80ef17b464e2844a30ef3675f1341621702_full.jpg",
+      "synopsis": "Kurapika and the other job candidates have to battle their way out of the employers mansion... if they ever hope of obtaining any of the items they even need for the job.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "105038"
+    },
+    {
+      "n": 41,
+      "title": "Gathering X Of X Heroes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/62482d816c180ad97eda77bbf52dde141342475085_full.jpg",
+      "synopsis": "The biggest auction in the world is about to take place in York New City. The Phantom Troupe leader, Chrollo, has instructed the members to gather in the city. For what purpose? The band of murdering thieves is about to make its move.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 4,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1298,
+          "end": 1388
+        }
+      ],
+      "external_id": "105039"
+    },
+    {
+      "n": 42,
+      "title": "Defend X And X Attack",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a1dc61132ffc05b5d6ba95c06af826861342819722_full.jpg",
+      "synopsis": "The auction is finally about to begin. Gon, Killua, and Leorio are working hard to amass enough money to buy Greed Island. Kurapika has been assigned to monitor the auction house. Meanwhile, the Phantom Troupe draws close. All paths will soon cross in York New City.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1415
+        }
+      ],
+      "external_id": "105040"
+    },
+    {
+      "n": 43,
+      "title": "A X Shocking X Tragedy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/1d1c8155a41b33f8cbf56762232abacf1343763780_full.jpg",
+      "synopsis": "The Phantom Troupe attacks the underground auction held by the Mafia. Afterwards, there is no sign of the merchandise or guests. The Mafia place a reward on their heads and begin pursuit. Kurapika and the other bodyguards on patrol join the pursuit. Kurapika is drawing closer to the Phantom Troupe.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 95
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1394,
+          "end": 1417
+        }
+      ],
+      "external_id": "105041"
+    },
+    {
+      "n": 44,
+      "title": "Build-up X To A X Fierce Battle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a650ee23bc8e887042af2b77c805a7ea1344545425_full.jpg",
+      "synopsis": "After Uvogin slaughters the Mafia's pursuit, the Mafia dispatches their secret weapon, the Shadow Beasts. However, Uvogin is able to defeat them by himself. During the battle, the spider tattoo on Uvogin's back is revealed, and Kurapika springs to action.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 10,
+          "end": 100
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1380
+        }
+      ],
+      "external_id": "105042"
+    },
+    {
+      "n": 45,
+      "title": "Restraint x And x Vow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/54e9805071ae4ecb08a3b78325a430a31344621541_full.jpg",
+      "synopsis": "Kurapika was able to capture Uvogin, a member of the Phantom Troupe. Kurapika struggles to control his rage as Uvogin makes demands as though he isn't a captive. That is when Kurapika receives an e-mail from Hisoka...",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1409
+        }
+      ],
+      "external_id": "105043"
+    },
+    {
+      "n": 46,
+      "title": "Chasing X And X Waiting",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/9bc2b5693a5c75575b5d26a2074162961345761902_full.jpg",
+      "synopsis": "Uvogin was able to escape with some help from his fellow bandits. However, after the blow to his pride, he is determined to track down and Kurapika and defeat him. Kurapika realizes that the Phantom Troupe has identified their location and moves the boss to a safe place while awaiting the Phantom Troupe's arrival by himself.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 31,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1364,
+          "end": 1417
+        }
+      ],
+      "external_id": "105044"
+    },
+    {
+      "n": 47,
+      "title": "Condition X And X Condition",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/68c955f8e3ef4250a7c932a9af4e649d1346361052_full.jpg",
+      "synopsis": "The anticipated battle between Kurapika and Uvogin begins! Can Kurapika really withstand Uvogin's abilities, and just what are the full extent of the powers in Kurapika's chains?",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1351,
+          "end": 1417
+        }
+      ],
+      "external_id": "105045"
+    },
+    {
+      "n": 48,
+      "title": "Very X Sharp X Eye",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/8b8e75bd25022682bd8421e1d4b11f351346951540_full.jpg",
+      "synopsis": "Gon, Killua, and Leorio are trying to get their hands on enough money to buy Greed Island. As they pass through the market, Gon stumbles across a way to identify valuable items. The plan is to buy cheap and sell low, but someone else is bidding on all their items.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 6,
+          "end": 96
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1306,
+          "end": 1396
+        }
+      ],
+      "external_id": "105046"
+    },
+    {
+      "n": 49,
+      "title": "Pursuit X And X Analysis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e699e0dcb218ca293ecc5b07f779953c1347672109_full.jpg",
+      "synopsis": "Gon and his friends are hoping to win the reward that's been placed on the Phantom Troupe. At the same time, Machi and Nobunaga have been dispatched to search for the \"chain user\" because Uvogin hasn't returned. Gon and Killua receive a tip and begin shadowing the two Troupe members.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 24,
+          "end": 97
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1407
+        }
+      ],
+      "external_id": "105047"
+    },
+    {
+      "n": 50,
+      "title": "Ally X And X Sword",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/2540e3a655332ce30926bb94f540f9b41348271184_full.jpg",
+      "synopsis": "Gon and Killua have been captured by the Phantom Troupe. They are questioned about the chain user that the Troupe is searching for, but the two of them don't know that the chain user is Kurapika. As they're about to be released, Nobunaga decides to keep them around as potential recruits for the Troupe. Will Gon and Killua be able to escape?",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1390
+        }
+      ],
+      "external_id": "105048"
+    },
+    {
+      "n": 51,
+      "title": "A X Brutal X Battlefield",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/daac02ebd6ccdb4d58667735b46d4cd11349397670_full.jpg",
+      "synopsis": "The auction has been rescheduled, and the Mafia expects the Phantom Troupe to attack again. The Ten Dons have hired multiple assassins to deal with the Phantom Troupe. Light Nostrade sends Kurapika to join the assassins in dispatching of the Troupe.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1384
+        }
+      ],
+      "external_id": "105049"
+    },
+    {
+      "n": 52,
+      "title": "Assault X And X Impact",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f51d6c3de1b70a66361b9014676b6d531349979354_full.jpg",
+      "synopsis": "The Troupe is attacking the auction with all their power. The Ten Dons hired assassins are no match, except for Zeno and Silva.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1387
+        }
+      ],
+      "external_id": "105050"
+    },
+    {
+      "n": 53,
+      "title": "Fake X And X Psyche",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/3ed088db77f75feb4fc11c618d8745251351388590_full.jpg",
+      "synopsis": "The leader of the Phantom Troupe is dead... Kurapika is shocked by the news. Unconvinced, he tries to get a glimpse of the body. Meanwhile, the dead bodies of the other Troupe members have been discovered.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 24,
+          "end": 104
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1312,
+          "end": 1382
+        }
+      ],
+      "external_id": "105051"
+    },
+    {
+      "n": 54,
+      "title": "Fortunes X Aren't X Right?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c18bac846eeb0e33a8fa3c6c803cb28e1352154763_full.jpg",
+      "synopsis": "Gon, Killua, Kurapika, and Leorio are finally reunited. Kurapika reveals his Nen powers to the others. However, Killua is afraid that Kurapika is now in danger because one of the Troupe members can read minds. Meanwhile, Chrollo is using the fortune telling power he stole from Neon to tell the fortunes of the Troupe members.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 129
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1379
+        }
+      ],
+      "external_id": "105052"
+    },
+    {
+      "n": 55,
+      "title": "Allies X And X Lies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/713ad1784609434c1e3ac1add9d870a51351211997_full.jpg",
+      "synopsis": "After Chrollo tells fortunes for all of the Troupe members, they suspect that Hisoka has betrayed them. Hisoka's desire to fight Chrollo drives him to take a big risk by altering his own fortune. Meanwhile, after learning that the Troupe is still alive, Kurapika teams up with Gon and friends and work on a plan to capture Pakunoda.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1415
+        }
+      ],
+      "external_id": "105053"
+    },
+    {
+      "n": 56,
+      "title": "Beloved X and X Beleaguered",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/501571edc00605035de0bf1baefbf75b1352755777_full.jpg",
+      "synopsis": "Chrollo uses the information he has on Neon to identify the location of the chain user, Kurapika. Meanwhile, Killua is keeping an eye on the Phantom Troupe base when he is joined by Melody, who helps determine that the Troupe is headed towards Kurapika's hotel. The Troupe is finally closing in on Kurapika.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 84,
+          "end": 169
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1401
+        }
+      ],
+      "external_id": "105054"
+    },
+    {
+      "n": 57,
+      "title": "Initiative X and X Law",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/b17458e361381db65f8afe2cc88dc4751353096910_full.jpg",
+      "synopsis": "The Phantom Troupe has learned that Kurapika was the one who killed Uvogin. It's only a matter of time before they realize that the captured Gon and Killua are working with Kurapika? Chrollo takes Gon and killua to the hotel lobby, where Paknoda and the other Troupe members are waiting. Suddenly, the lights go out. Gon and Killua try to escape in the darkness. But Chrollo is the one who has vanished...",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 66,
+          "end": 156
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1344,
+          "end": 1417
+        }
+      ],
+      "external_id": "105055"
+    },
+    {
+      "n": 58,
+      "title": "Signal X To X Retreat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/8b28b8dc0ea0ccd4277f01541af85f2b1353961156_full.jpg",
+      "synopsis": "Kurapika has captured Chrollo. He offers to release Chrollo if Pakunoda brings Gon and Killua to him. However, Kurapika is unable to control his emotions in the presence of the Troupe leader. Will Kurapika finally have his revenge?",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1409
+        }
+      ],
+      "external_id": "105056"
+    },
+    {
+      "n": 59,
+      "title": "Bid X And X Haste",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b117d0ea1121bb5ade9372327577bb061355180097_full.jpg",
+      "synopsis": "The game Greed Island, which holds a clue to finding Ging, is finally on auction. Gon and Killua ask the winning buyer to hire them as players, but they're told that their Nen is too weak. They begin to work on special abilities so they can be selected as players.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 134
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1407
+        }
+      ],
+      "external_id": "106278"
+    },
+    {
+      "n": 60,
+      "title": "End x And X Beginning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/9944022bfcfd7e6ea9cfb69d1992605a1356045590_full.jpg",
+      "synopsis": "Gon and Killua are trying to get themselves chosen as Greed Island players. Tsezgerra, the judge, says that he will make his decision after they show him his Nen. Only 32 of the 200 applicants will pass. Can Gon and Killua make it through?",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 155
+        }
+      ],
+      "external_id": "106279"
+    },
+    {
+      "n": 61,
+      "title": "Invitation X and X Friend",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/55a71ccd2b4d4e3fb030e6100fa584bd1355771078_full.jpg",
+      "synopsis": "Gon and Killua have finally made it inside the world of Greed Island, their clue to finding Ging. However, all they found was a message from Ging telling Gon to enjoy the game. Their first step is to find a city and gather information. There, they receive an invitation to join a group that's trying to clear the game.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 114
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1404
+        }
+      ],
+      "external_id": "106280"
+    },
+    {
+      "n": 62,
+      "title": "Reality X And X Raw",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/49dcdf59c09fab43ff3c102d14a0c5a91356113344_full.jpg",
+      "synopsis": "Gon and Killua set off for Masadora in search of spell cards. On the way, they run into many different monsters. However, they struggle against some of the stronger monsters. A girl named Biscuit watches as they fight their way through. What is her goal?",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 128
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1411
+        }
+      ],
+      "external_id": "106281"
+    },
+    {
+      "n": 63,
+      "title": "A X Hard X Master",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/273ba1a543c2c40b32802d5b0fd78d651358276031_full.jpg",
+      "synopsis": "Gon and Killua have finally realized Biscuit's true strength and asked her to teach them Nen. With that said, they begin their hard training.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 113
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1401
+        }
+      ],
+      "external_id": "106282"
+    },
+    {
+      "n": 64,
+      "title": "Strengthen X And X Threaten",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/87ee961e339e2348bc1d5b04315160d61358276136_full.jpg",
+      "synopsis": "Gon and Killua are gradually improving their Nen under Bisky's tutelage. They are now able to easily capture the monsters that they previously struggled against. While their training draws to an end, the Bomber is paying a visit to the players who have teamed up.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1417
+        }
+      ],
+      "external_id": "106283"
+    },
+    {
+      "n": 65,
+      "title": "Evil Fist X And Rock, Paper, Scissors!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/25899067fbb61cfeaf959e47b29c3ddd1359143197_full.jpg",
+      "synopsis": "After hearing Bisky's lecture on rock-paper-scissors, Gon decides to work on a special technique modeled off of rock-paper-scissors by using Enhancer, Emitter, and Conjurer abilities. Meanwhile, Killua leaves the game temporarily to take the HUnter Exam. While he's gone, Gon and Bisky find learn about the Bomber's most recent attack.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 110,
+          "end": 200
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1380
+        }
+      ],
+      "external_id": "106284"
+    },
+    {
+      "n": 66,
+      "title": "Strategy X And X Scheme",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/04483474835afb266072a4a656ceb2a91360001079_full.jpg",
+      "synopsis": "Killua returns after easily passing his second try at the Hunter Exam. Now that Gon, Killua, and Bisky are together again, they begin working on beating this game by collecting cards. Meanwhile, the other players are scheming to gather the cards they need to complete the game.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 138
+        }
+      ],
+      "external_id": "106285"
+    },
+    {
+      "n": 67,
+      "title": "15 X 15",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/8be0223832af73a83bbc0dc9f7f8857b1360283225_full.jpg",
+      "synopsis": "Team Genthru now has 96 different types of restricted slot cards after tricking Team Tsegzerra. Gon and Killua receive an invitation from other players to team up to prevent Genthru from beating the game. They head to Soufrabi to monopolize Patch of Shore, one of the cards Genthru is missing.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 24,
+          "end": 104
+        }
+      ],
+      "external_id": "106286"
+    },
+    {
+      "n": 68,
+      "title": "Pirates X And X Guesses",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/211b95d82c9f359459b9e5e27009096d1361297087_full.jpg",
+      "synopsis": "The condition for obtaining Patch of Shore is to chase a band of fifteen pirates out of town. Gon and crew are immediately taken to the boss, Razor, but they are quickly defeated. The plan is to recruit stronger party members and try again, so they start with the player named Chrollo.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1380
+        }
+      ],
+      "external_id": "106287"
+    },
+    {
+      "n": 69,
+      "title": "A X Heated X Showdown",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/10ac231be76b8874945c2a92e97cdabf1361819620_full.jpg",
+      "synopsis": "Gon and his friends have teamed up with Hisoka and Goreinu to challenge Razor again. To round out the party, they recruit Team Tsezgerra. Their preparations allow them to breeze through the first few matches, but then Razor challenges them to a game of dodgeball.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 63,
+          "end": 153,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "106288"
+    },
+    {
+      "n": 70,
+      "title": "Guts x And x Courage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/276ddcab560e2efda7af956fbeb374561362076914_full.jpg",
+      "synopsis": "Gon is unable to hold onto Razor's throw and is sent to the outfield. He uses Back to return, but Hisoka is also injured and the situation looks grim. However, Gon has an idea for defeating Razor, but he needs Killua's help to pull it off.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 6,
+          "end": 96
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1307,
+          "end": 1416
+        }
+      ],
+      "external_id": "106289"
+    },
+    {
+      "n": 71,
+      "title": "Bargain X And X Deal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/dc84373a6b75f5c2837b89388690fa461362786208_full.jpg",
+      "synopsis": "Gon, Killua, and Hisoka team up to catch Razor's strongest throw. They're taking Razor head on. Once the ball has been secured, Gon uses all of his strength to launch it at Razor. The game of dodgeball is drawing to a close.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 109,
+          "end": 199,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "106290"
+    },
+    {
+      "n": 72,
+      "title": "Chase X And X Chance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/db14fef911e54b7e692cbf716cea541f1363391641_full.jpg",
+      "synopsis": "In order to beat the game, the other players must face off against Genthru. Tsezgerra offers to distract Genthru for three weeks. While Gon trains hard, Team Tsezgerra leaves the game temporarily to delay Genthru, but Mr. Battera has an unpleasant surprise for them.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 127
+        }
+      ],
+      "external_id": "106291"
+    },
+    {
+      "n": 73,
+      "title": "Insanity and Sanity",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/4bd341a7eb14a71d8012f2f24801bb2a1363976485_full.jpg",
+      "synopsis": "Tsezgerra's tea has not returned to the game. Genthru finally turns his attention to Gon's group. Gon faces off against Genthru, Killua is against Sub, and Bisky takes Bara. Will Bisky reveal her true form? Will Killua's plan work? Will Gon be able to defeat Genthru?",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1405
+        }
+      ],
+      "external_id": "106292"
+    },
+    {
+      "n": 74,
+      "title": "Victor and Loser",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/17dd671c31466ca49aba7a87d59f1d731364850440_full.jpg",
+      "synopsis": "Genthru has shown that he is much stronger than Gon. However, after Gon refuses to back down, he finally uses Little Flower to severely injure Gon. Does Gon still have a chance to win?",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 6,
+          "end": 96
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1397
+        }
+      ],
+      "external_id": "106293"
+    },
+    {
+      "n": 75,
+      "title": "Ging's Friends X and True Friends",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/aed57f9bdda4caa61d9d2f243b5fd4611365122850_full.jpg",
+      "synopsis": "After defeating Genthru and collecting 99 restricted cards, Gon and his friends participate in the final event, a quiz tournament open to all players. After winning, Gon receives Ruler's Invitation. Who is the person that sent the invitation?",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 85,
+          "end": 175
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1416
+        }
+      ],
+      "external_id": "106294"
+    },
+    {
+      "n": 76,
+      "title": "Reunion X And X Understanding",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6888c89ea23f4106fd756abe45641acb1366306019_full.jpg",
+      "synopsis": "Gon and Killua use the cards they brought back from the game to warp to Nigg, who they believe is Ging. However, they are sent to a completely different man who immediately knocks them to the ground. However, Gon finds him familiar for some reason.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1400
+        }
+      ],
+      "external_id": "106295"
+    },
+    {
+      "n": 77,
+      "title": "Unease X And Sighting",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/eeaaf19bed48ae1016a105fc0d8699411366431543_full.jpg",
+      "synopsis": "Gon and Killua join Kite's team as they investigate the Chimera Ants. The Chimera Ants are dangerous insects that can pass traits from the prey they consume to their offspring. As Kite begins to fear the worst, the Chimera Ants begin to feed on humans.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 8,
+          "end": 98
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1408
+        }
+      ],
+      "external_id": "106296"
+    },
+    {
+      "n": 78,
+      "title": "Very X Rapid X  Reproduction",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/14b97a5626072293e713e5fec510b9af1366934145_full.jpg",
+      "synopsis": "Kite uses the location where the Chimera Ant arm was discovered and ocean patterns to determine where the actual Chimera Ant is. It turns out to be an isolated country that bans all forms of technology. Meanwhile, the Chimera Ants continue to evolve.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 22,
+          "end": 112,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "106297"
+    },
+    {
+      "n": 79,
+      "title": "No X Good X NGL",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/56bad2d19fccd1ffe49fbf962ce0faec1367514902_full.jpg",
+      "synopsis": "After passing a strict border checkpoint, Gon and his new friends enter NGL where they suspect the Chimera Ant is. However, ten other teams of Hunters have already arrived before them. Meanwhile, the Chimera Ants, with their new names and individual personalities, are attacking humans.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 119
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1408
+        }
+      ],
+      "external_id": "170251"
+    },
+    {
+      "n": 80,
+      "title": "Evil X and X Terrible",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/f7981fe709a8d635ce8d5493e322f8131368210008_full.jpg",
+      "synopsis": "Pokkle and Ponzu use Ponzu's bees to deliver messages asking the Hunter Association to help eliminate the Chimera Ants. Meanwhile, the Chimera Ants have attacked Gyro, the shadowy ruler of NGL, and taken his guns. As the situation gets worse, Ponzu's message reaches Gon's group.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 16,
+          "end": 96
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1414
+        }
+      ],
+      "external_id": "170252"
+    },
+    {
+      "n": 81,
+      "title": "The X Fight X Begins",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/54b03b7d0b87f1e19b70e9baadbe05921368751190_full.jpg",
+      "synopsis": "Gon, Killua, and Kite discover the remains of a destroyed village. There, they encounter their first Chimera Ant. Gon and Killua are shaken by the speed and power displayed by the Chimera Ant. However, Kite tells them that they must defeat the Chimera Ant or leave.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 27,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1414
+        }
+      ],
+      "external_id": "170253"
+    },
+    {
+      "n": 82,
+      "title": "Kite X And X Slots",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/e75ecf6f25e4e45e3327c9a7a9c909f01369469536_full.jpg",
+      "synopsis": "Some of the more aggressive Chimera Ants have eaten the villains who ran the NGL underground and grown increasingly evil. When Gon looks away from their gruesome act, Kite admonishes him. Now, they must battle for their lives. Meanwhile, a Chimera Ant is on the verge of discovering Nen.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 67,
+          "end": 157,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "170254"
+    },
+    {
+      "n": 83,
+      "title": "Inspiration X To X Evolve",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6d00cc92c629fe1ac8424b042f7e212d1369961521_full.jpg",
+      "synopsis": "The Hunter Association has dispatched an expeditionary force to exterminate the Chimera Ants. Meanwhile, Gon and his friends are being targeted by Chimera Ants who seek to eat rare humans. They are forced into one-on-one battles with Chimera Ant captains. They easily dispatch their opponents, but Kite continues to feel uneasy. less.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 4,
+          "end": 94
+        }
+      ],
+      "external_id": "170255"
+    },
+    {
+      "n": 84,
+      "title": "A X Fated X Awakening",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/b5bd5eb6ee4ec7f2c295d757e113f6361370552269_full.jpg",
+      "synopsis": "As Gon, Killua and Kite approach the nest, one of the Chimera Ant Royal Guards, Neferpitou, awakens. Upon extracting information from a surviving Hunter, Neferpitou learns the secrets of Nen, including the means to awaken and control it.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 11,
+          "end": 101
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1408
+        }
+      ],
+      "external_id": "170256"
+    },
+    {
+      "n": 85,
+      "title": "Light X And X Dark",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/95620ffa302fb58270ca91a1eeebc5e21371229241_full.jpg",
+      "synopsis": "As the Chimera Ants are reunited to unlock the power of Nen into their bodies, Neferpitou feels the presence of Kite approaching and leaves to confront him. Realizing that the enemy is too powerful for them, Kite warns Gon and Killua to flee, but Gon is taken by rage upon seeing Kite's arm being severed by Neferpitou and Killua is forced to knock him down and escape carrying him. After escaping the NGL, with Gon still uncounscious, Killua is approached by Chairman Netero who is sent there to wipe out the Chimera Ants assisted by two other Pro Hunters, Morel and Knov.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 14,
+          "end": 104
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1408
+        }
+      ],
+      "external_id": "170257"
+    },
+    {
+      "n": 86,
+      "title": "Promise X and X Reunion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/4111ca069849e500432bc88daa64bb151372561471_full.jpg",
+      "synopsis": "Gon and Killua meet Knov's student Palm and learn that to earn a place in the Extermination Squad and return to the NGL, they must win against Morel's students Knuckle and Shoot in one month. To increase their chances of winning, Palm asks for Biscuit's help and they start a harsh training routine with her. Meanwhile at the Chimera Ants nest, Shaiapouf, the second Royal Guard awakens.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 5,
+          "end": 95
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1334,
+          "end": 1415
+        }
+      ],
+      "external_id": "170258"
+    },
+    {
+      "n": 87,
+      "title": "Duel X And X Escape",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/bea789c33c3699f2a339c871387c76071372382183_full.jpg",
+      "synopsis": "After completing their training, Biscuit sends the exausted Gon and Killua to face Knuckle. Looking at the condition fo their opponents, Knuckle boasts that they could never move him an inch and bets his token on it. However His assumptions are proven wrong when Gon manages to land a powerful hit that knocks him out cold, and after awakening, Knuckle agrees that he will help them with their training until the deadline for returning the token comes. Meanwhile at the nest, Neferpitou focuses herself into reviving Kite for a second chance to fight him and Netero's team starts taking down small groups of Chimera Ants that bring the attention of the captains, while the king grows strong inside the queen's womb. As Gon and Killua spend their days training with Biscuit and sparring with Knuckle, Shoot, the second of Morel's disciples make plans about how to deal with them.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 4,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1400
+        }
+      ],
+      "external_id": "170259"
+    },
+    {
+      "n": 88,
+      "title": "Rock, Paper, Scissors X and X Weakness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/06fe0f770f256fe4d242452b650335ba1373409283_full.jpg",
+      "synopsis": "As the deadline established by Netero approaches, the chairman and his companions continue to wipe out the Chimera Ant squads one by one. While the remaining squad captains discuss how to deal with the problem, the final member of the royal guard, Menthuthuyoupi, is born. Meanwhile, Gon and Killua complete their training and challenge Knuckle for real.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 7,
+          "end": 97
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1406
+        }
+      ],
+      "external_id": "170260"
+    },
+    {
+      "n": 89,
+      "title": "Compassion and Strength",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ab3d882d9e27a44cf420891d2350c6091374375145_full.jpg",
+      "synopsis": "As the battle with Knuckle begins, Gon is told that his Janken technique is fatally flawed - but Gon exploits this weakness, countering as his opponent tries to take advantage. Just as Gon is about to deal a finishing blow, he collapses from exhaustion. With the deadline the next day, the final showdown is looming. As Gon sleeps, Biscuit spars with Killua, after which she explains the nature of his own weakness. She issues an ultimatum - should he lose the next day's battle, he must leave Gon's side.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 16,
+          "end": 106
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1408
+        }
+      ],
+      "external_id": "170261"
+    },
+    {
+      "n": 90,
+      "title": "Interest x And x Curse",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a4707b63aacac912b0b65d21760606251374189467_full.jpg",
+      "synopsis": "Gon and Killua are finally facing off against Knuckle and Shoot. Killua takes Shoot while Gon's opponent is Knuckle. Gon succeeds in sensing Knuckle through his aura, but then LoanBoy pops up on his left arm. Meanwhile, Killua is struggling against Shoot.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 120
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1416
+        }
+      ],
+      "external_id": "170262"
+    },
+    {
+      "n": 91,
+      "title": "The Strong X and X The Weak",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8d804cf2553af72ad53a37894ac598d61375120731_full.jpg",
+      "synopsis": "At long last, the Queen gives birth to the King. The Chimera Ants are cowed by the menancing aura emitted by the King. Pitou, Pouf, and Youpi kneel before the King to greet him, but with that gesture, they have abandoned the Queen.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 27,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1416
+        }
+      ],
+      "external_id": "170263"
+    },
+    {
+      "n": 92,
+      "title": "One Wish X and X Two Promises",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1f32995e2c0304a594fdb30a4a22f4ad1375742051_full.jpg",
+      "synopsis": "Despite all efforts to save the queen, she does not resist her wounds and dies, but not before revealing to Colt the name she had chosen for the king, \"Meruem\". A final live offspring is found inside her body and Morel offers himself to protect both after he promises that they will never eat humans anymore. As the other squad leaders leave to build their own colonies, the king and the royal guard arrive at the neighboring country of East Gorteau.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 130
+        }
+      ],
+      "external_id": "170264"
+    },
+    {
+      "n": 93,
+      "title": "Date X With X Palm",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/24767357d8b58cd26bfcd3aed29937e11376794706_full.jpg",
+      "synopsis": "As the king kills the ruler of East Gorteau and takes over the country, Gon and Killua return to meet Palm, prepared to face her fury upon failing to fulfill their promise, but she decides to forgive them when Gon accepts her request to have a date with her. After learning from Morel that they found Kite, Gon takes Palm for her date, while Killua keeps trailing them in case of an enemy attack, and his fears are confirmed when Rammot appears before him.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 45,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1416
+        }
+      ],
+      "external_id": "170265"
+    },
+    {
+      "n": 94,
+      "title": "Friend X And X Journey",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/e337a23b49d831ba6899cbf4c872771b1376955673_full.jpg",
+      "synopsis": "Divided between his drive to flee and his will to protect Gon, Killua find himself in a dire situation until he realizes that he is under the effect of one Illumi's needles, easily killing Rammot after he breaks free fom it. Meanwhile, Gon's date with Palm turns to the worse when he claims that he can't stay by her side. As shoot returns to check on them, morel and Knuckle confront Cheetu, one of the Chimera Ants on the run.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1408
+        }
+      ],
+      "external_id": "170266"
+    },
+    {
+      "n": 95,
+      "title": "Grudge X And X Dread",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/cfc2c0d7bf95ed4eec030c9497d3d6f41378608555_full.jpg",
+      "synopsis": "After a brief fight with Cheetu, Morel and Knuckle return to check on Gon and Killua as they finally reunite with Kite, but upon seeing that he was turned into a mindless rogue by Neferpitou, Gon swears to avenge him. The Hunters then travel to East Gorteau, where the government summons all the population to meet at the capital for an undisclosed event in ten days. Knowing that it is all a plan of the Chimera Ants, Netero contacts the others and they start making plans to confront the king and the royal guard in the night preceding said event.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 101,
+          "end": 191
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1408
+        }
+      ],
+      "external_id": "170267"
+    },
+    {
+      "n": 96,
+      "title": "A X Lawless X Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/5ad4e46c4ca7498efde3e0824957616d1378184746_full.jpg",
+      "synopsis": "As news about the rogue Chimera Ants spread arround the world, six members of the Phantom Troupe appear at Meteor City to wipe out some of them which had established a colony there.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 106,
+          "end": 196
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1414
+        }
+      ],
+      "external_id": "170268"
+    },
+    {
+      "n": 97,
+      "title": "Carnage X And X Devastation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ccc3781d58dc20d2f9266c783ee4f2881379816520_full.jpg",
+      "synopsis": "The Phantom Troupe reaches Zazan, the leader of the Ants, eliminating all oposition on the way. Fighting Zazan by himself, Feitan is forced to unleash his true power against her, which is feared even by his companions.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1415
+        }
+      ],
+      "external_id": "170269"
+    },
+    {
+      "n": 98,
+      "title": "Infiltration X And X Selection",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/91fdb2bb426612bf460daf7feec2f2411379525591_full.jpg",
+      "synopsis": "Once inside East Gorteau, Gon and Killua take separate ways in preparation for the attack on the palace, but once alone, it does not take long for Gon to be attacked by Ants sent by Meleoron whose presence is concealed thanks to his Chameleon-like powers.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 122,
+          "end": 212
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1407
+        }
+      ],
+      "external_id": "170270"
+    },
+    {
+      "n": 99,
+      "title": "Combination X And X Evolution",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/670156a3571398b084d588d170ee42d21381253814_full.jpg",
+      "synopsis": "As Gon deals with his enemies, Killua tries his best to save the citizens of nearby villages from falling prey to the Chimera Ants' scheme until the Government, under the Royal Guards' control, declares martial law to hinder his plans. Meanwhile, Shoot and Knuckle detect Cheetu's presence and attempt to intercept him",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1416
+        }
+      ],
+      "external_id": "170271"
+    },
+    {
+      "n": 100,
+      "title": "Tracking X And X Pursuit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/48e898096f0796c3476cd959123278b61381120099_full.jpg",
+      "synopsis": "Leol's party is sent by the Royal Guard to stop Killua's interference and Meleoron is found out by Gon, but instead of fighting, the Chimera Ant attempts to reason with him while hiding his true intentions.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 24,
+          "end": 114,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "170272"
+    },
+    {
+      "n": 101,
+      "title": "Ikalgo X And X Lightning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/5bb9176139f74abeb6536b0009886cd31382048776_full.jpg",
+      "synopsis": "Killua confronts Ikalgo but later, saves him from getting eaten by his own subordinates. The Ortho Siblings confront Killua in their game, a 1-501 dart game where he gets continuously attacked. After feigning death, Killua beheads his opponents in a flash, but he collapses due to extreme blood loss and Ikalgo decides to repay the favor by taking him to be treated.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 20,
+          "end": 110
+        }
+      ],
+      "external_id": "170273"
+    },
+    {
+      "n": 102,
+      "title": "Power X And X Games",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/2c96a30da372644f9f3464656340bb091382233270_full.jpg",
+      "synopsis": "Gon becomes friends with Meleoron, who in return reveals the true extent of his powers and the reason why he wants the king dead. As the Hunters make adjustments in their preparations to storm the palace, the king entertains himself with board games until an unusual player appears before him.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 35,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1416
+        }
+      ],
+      "external_id": "170274"
+    },
+    {
+      "n": 103,
+      "title": "Check X And X Mate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/f6304c68c4e6c83d3c5ccd2696dfe04d1607117496_full.jpg",
+      "synopsis": "Despite having mastered the rules of the board game \"Gungi\", the king is upset for still being unable to defeat the champion before him. Meanwhile, Morel is approached by Cheetu who uses his new abilities to trap him inside a closed space, claiming that he can't leave unless he manages to catch him in 8 hours.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1408
+        }
+      ],
+      "external_id": "170275"
+    },
+    {
+      "n": 104,
+      "title": "Doubt X And X Hesitation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/8782a5747408ca69026700774db39ce81384279058_full.jpg",
+      "synopsis": "As the king is yet to defeat his opponent, Cheetu tries to provoke Morel into running after him with no success, unaware that he is setting a trap for him. Meanwhile, Knov realizes the enemy's trick to detect him and comes with countermeasures against it.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 146
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1408
+        }
+      ],
+      "external_id": "170276"
+    },
+    {
+      "n": 105,
+      "title": "Resolve X And Awakening",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/51df00bb8423d641ed35b665a23f44cb1383935158_full.jpg",
+      "synopsis": "The king attempts to intimidate the Gungi champion but moved by her determination, he rips off his own arm as a form of apology. With Neferpitou using her powers to treat the king, the palace's defenses are lowered and Knov rushes to sneak inside it in preparations for the hunters' attack. Meanwhile, Palm prepares to infiltrate the palace as well.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 60,
+          "end": 139
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1407
+        }
+      ],
+      "external_id": "170277"
+    },
+    {
+      "n": 106,
+      "title": "Knov and Morel",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6551ad219f932749effd4a321265f9511384306699_full.jpg",
+      "synopsis": "Knov succeeds in his mission to breach the palace's security, but just feeling the proximity of Royal Guards' overwhelming aura is enough to drive him into despair. Palm takes advantage of the lecherous secretary Bizelf to infiltrate the palace as well and Morel is confronted by the Chimera Ant Leol, who fights using the powers of those who owe him a favor.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 55,
+          "end": 145,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "170278"
+    },
+    {
+      "n": 107,
+      "title": "Return X And X Retire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/f4bb08dfb295c937f39f9d68f5d2c0f51385506223_full.jpg",
+      "synopsis": "Even with his borrowed powers, Leol has been defeated by Morel while Killua recovers from his wounds and invites Ikalgo to join his side. Meanwhile, Palm starts her investigation when a massive and ominous aura surrounds her.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 46,
+          "end": 136
+        }
+      ],
+      "external_id": "170279"
+    },
+    {
+      "n": 108,
+      "title": "Gungi X Of X Komugi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/fb44be00d436df12e311f43fd96ec6391386036219_full.jpg",
+      "synopsis": "Gon and his friends make the final preparations for their assault on the palace. Meanwhile, the king is yet to defeat Komugi, the Gungi champion and when he decides to kill her, he ends up protecting her instead, for reasons that even he can't explain.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 129
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1407
+        }
+      ],
+      "external_id": "170280"
+    },
+    {
+      "n": 109,
+      "title": "Taking Stock X And X Taking Action",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/684edf6b0bbd658b7137ddc1b3a7ad3d1386616152_full.jpg",
+      "synopsis": "The time has come for Gon and his friends to infiltrate the palace and confront the Royal Guard, who are making preparations for the upcoming selection. As his concerns about Komugi increase, the king starts questioning his own existence and purpose.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 8,
+          "end": 98,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "170281"
+    },
+    {
+      "n": 110,
+      "title": "Confusion X And X Expectation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/76ed95515fd2363c3246e52752f547db1386716029_full.jpg",
+      "synopsis": "The selection is at hand, but the king starts isolating himself from his servants, including the Royal Guard. Meanwhile, Gon's party is about to break into the palace.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 111
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1400
+        }
+      ],
+      "external_id": "170282"
+    },
+    {
+      "n": 111,
+      "title": "Charge x And x Invade",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/70890653eefd15479d485f00041aa5b01387403184_full.jpg",
+      "synopsis": "The Hunters assault on the royal palace begins. Gon and his friends break inside and come across Menthuthuyoupi, while Netero and Zeno strike from the sky and Neferpitou jumps up to confront them, just to be driven away when the chairman makes a small demonstration of his powers.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 16,
+          "end": 106
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1407
+        }
+      ],
+      "external_id": "170283"
+    },
+    {
+      "n": 112,
+      "title": "Monster x And x Monster",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/394f924724b28808608005f8e47ee0d11389046669_full.jpg",
+      "synopsis": "Gon's party confronts Youpi while Pouf and Pitou rush to the palace to assist the king, who is distraught with Komugi's condition as she gets herself badly injured during the attack.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 50,
+          "end": 140,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "170284"
+    },
+    {
+      "n": 113,
+      "title": "An x Indebted x Insect.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/385610111bf34baf17a48da8c47561961389407405_full.jpg",
+      "synopsis": "Shoot and Knuckle stay behind to fight Youpi while Morel rushes forward to face Pouf. While looking for Pitou, Killua turns back briefly to assist Ikalgo unaware that he accidentally put his friend's cover at risk.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 119
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1415
+        }
+      ],
+      "external_id": "170285"
+    },
+    {
+      "n": 114,
+      "title": "Divide x And x Conquer.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/98262be1ef0d07e0ac51470fdbdb45671390328943_full.jpg",
+      "synopsis": "Separated from the Royal Guard, the king departs from the palace with Netero to have their fight elsewhere and Gon, learning of Pitou's location, steels himself to confront it. Meanwhile, Pouf enters in a cocoon in preparation to confront Morel, and Shoot fights Youpi to the limit of his forces until Knuckle steps in to protect him.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 51,
+          "end": 141,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "170286"
+    },
+    {
+      "n": 115,
+      "title": "Duty X And X Question",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/09d0f72343c539873bcfd1d0958af1741390869146_full.jpg",
+      "synopsis": "The disguised Ikalgo reaches the lower levels of the palace to look for Palm, unaware that he is being followed. Meanwhile, Meleoron leaves Knuckle's side and proceeds further into the palace, but another Chimera Ant, Welfin, tracks his smell. Elsewhere, Gon and Killua find Pitou, who is too busy to fight them while tending to Komugi's wounds.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 51,
+          "end": 141,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "170287"
+    },
+    {
+      "n": 116,
+      "title": "Revenge X And Recovery",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/eaacee3e87ffdf2873410d24e1b135ca1391462668_full.jpg",
+      "synopsis": "Face to face with Pitou, Gon can't hold back his rage and urges the chimera to fight him. Realizing that Pitou is willing to sacrifice itself to protect Komugi, Killua attempts to calm down his friend down with no success, but in the end, Gon gives one hour for Pitou to treat Komugi in exchange of accompanying him to meet Kite and help him recover his senses.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 209,
+          "end": 299,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "170288"
+    },
+    {
+      "n": 117,
+      "title": "Insult X And X Payback",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/1a1169bf2836ae01c4f6548bf12b16691392141476_full.jpg",
+      "synopsis": "Cheetu attempts to provoke Zeno into fighting him, but Silva appears to pick up his father, killing the ant instanly in the occasion. Separated from the others, Youpi realizes that he failed to prevent the intruders from approaching the king and attempts to vent out his anger on Knuckle and Shoot, creating an overwhelming explosion, a feat that surprised even himself. Knuckle believes this could prove itself as an opportunity to make a comeback, while Youpi plans to use it to defeat them for good.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 58,
+          "end": 148,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "105057"
+    },
+    {
+      "n": 118,
+      "title": "A X False X Rage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/597c0f85939e80e613d68d875dfdd1281393330133_full.jpg",
+      "synopsis": "Ikalgo infiltrates the palace's lower levels to look for Palm with no success. While returning to the surface, his cover is blown and he finds himself trapped in the undergound with an enemy. Meanwhile, Youpi pretends to be angered in order to have Knuckle falsely believe there is an opening for him to attack. Youpi's plan works, but just before he could kill his opponent, Killua paralyzes the ant with a lighting bolt and steps in to fight him.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1400
+        }
+      ],
+      "external_id": "105058"
+    },
+    {
+      "n": 119,
+      "title": "Strong X Or X Weak",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/560fdf471faab8283a6726808718ebdc1393268163_full.jpg",
+      "synopsis": "Taking advantage of Youpi's distraction, Killua vents out his anger by beating him up, but is forced to flee after his lighting power runs out. Meanwhile, Ikalgo makes use of the underground security system to outsmart his pursuer and find a way to escape back to surface. Morel, on the other hand, is in doubt about whether he should make the first move against Pouf or not.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 41,
+          "end": 131,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "105059"
+    },
+    {
+      "n": 120,
+      "title": "Fake X And X Real",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/4e33ef55fb16af64fbf61f91dc0406671393894174_full.jpg",
+      "synopsis": "Morel decides to make the first move and unwillingly frees Pouf from his restrain. Upon realizing that Shoot is missing, unaware that he was taken by Knov to be treated, Knuckle confronts Youpi, assisted by Morel, whose options are drastically reduced upon having his pipe stolen by Pouf, who after realizing that the king is nowhere to be found, decides to rejoin Pitou, who is still working to stabilize Komugi under Gon's vigilant eyes.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 27,
+          "end": 117,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "105060"
+    },
+    {
+      "n": 121,
+      "title": "Defeat X and X Dignity.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8e68f96ec2d0e4c49e2b75b81c6a98ed1394473722_full.jpg",
+      "synopsis": "Knuckle and Morel confront Youpi with their lives on the line, but just a few moments left of neutralizing his nen with his ability, he is forced to abandon his master or give up on defeating his oponent.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 18,
+          "end": 100
+        }
+      ],
+      "external_id": "105061"
+    },
+    {
+      "n": 122,
+      "title": "Pose X and X Name",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/962fa74a7815f8b270e7183f93a3223e1395696400_full.jpg",
+      "synopsis": "Far away from the palace, Netero prepares himself to confront the king, who much to his surprise, recognizes his value as a fighter and is not willing to kill him. Meanwhile, Pouf learns the situation from Pitou and sneaks past Gon's vigilance to rejoin Youpi as they leave the palace to search for the king.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1390
+        }
+      ],
+      "external_id": "105062"
+    },
+    {
+      "n": 123,
+      "title": "Centipede X And X Memory",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/7b38fae8a41f67a98710ef45de8bc4091396378170_full.jpg",
+      "synopsis": "Ikalgo is attacked by Welfin but the enemy's attempt to restrain him backfires and they find themselves in a stand off. In the occasion, Welfin regains some of his lost memories from when he was still human and gives him a hint regarding Palm's location.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 15,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1399
+        }
+      ],
+      "external_id": "105063"
+    },
+    {
+      "n": 124,
+      "title": "Breakdown x And x Awakening",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/554979965e7c083d951b81dc1cc7d6401396575218_full.jpg",
+      "synopsis": "Killua meets Palm and learns that she was transformed into a Chimera. Refusing to let her see Gon in fear of what effects this could have on his already unstable mind, Killua is attacked by her, unaware that she is under Pouf's control.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 136
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1399
+        }
+      ],
+      "external_id": "105064"
+    },
+    {
+      "n": 125,
+      "title": "Great Power x And x Ultimate Power",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/af58c7479a68a7f106bcb9b1b0af69051397149296_full.jpg",
+      "synopsis": "Netero convinces the king to fight him by revealing that he will tell him his true name once defeated. The chairman then unleashes his most powerful technique that despite striking the king countless times, olny manages to scratch him.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1400
+        }
+      ],
+      "external_id": "105065"
+    },
+    {
+      "n": 126,
+      "title": "Zero x And x Rose.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/80e4736a836e8c67d972d28854a387f31398192181_full.jpg",
+      "synopsis": "The king bypasses Netero's defenses and tears up an arm and a leg from his body. Refusing to give up, the chairman focuses all his Nen into a final attack that also fails to defeat him. Having won the match, the king finally learns from Netero his true name - Meruem, just before Netero commits suicide to trigger a weapon of mass destruction stored inside his body in a last attempt to destroy him.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 130
+        }
+      ],
+      "external_id": "105066"
+    },
+    {
+      "n": 127,
+      "title": "Hostility x And x Determination",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1631b2358cb2f32ed5fc1772c95a9d8b1398449117_full.jpg",
+      "synopsis": "Pitou completes Komugi's treatment and Gon forces her to accompany him to Peijing in order to restore Kaito's mind, while Komugi stays behind with Killua and the others. Meanwhile, Pouf and Youpi reach the site of Netero's battle with Meruem and can't hide their feelings of sadness upon finding their king's maimed body.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1400
+        }
+      ],
+      "external_id": "105067"
+    },
+    {
+      "n": 128,
+      "title": "Unparalleled Joy x And x Unconditional Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/79e54ccf298a65daca44189bce8bc3761399399607_full.jpg",
+      "synopsis": "Pouf and Youpi sacrifice most of their own bodies to heal Meruem, who rises stronger than before, but with most of his memories missing. Pouf then decides to take this opportunity to dispose of Komugi in hopes that Meruem never remembers about her at all, but is attacked by the other hunters, who realize, much to their horror, that the king is still alive and is about to return to the palace.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 25,
+          "end": 105
+        }
+      ],
+      "external_id": "105068"
+    },
+    {
+      "n": 129,
+      "title": "Formidable Enemy x And x Clear Objective",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/583d019bbb325e56b5d12cf77b2319bb1399489792_full.jpg",
+      "synopsis": "Shaiapouf's plan to kill Komugi is thwarted when Killua faces him in a battle of words and speed. When the King arrives in the palace, Shaiapouf is resolved to get rid of the Gungi board before the King can remember anything else. Finally, Neferpitou and Gon arrive at the place of their long-awaited battle.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 47,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1394
+        }
+      ],
+      "external_id": "170289"
+    },
+    {
+      "n": 130,
+      "title": "Magic X to X Destroy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5e47356493e31d34ca1ab6962e02e8c61400534725_full.jpg",
+      "synopsis": "Shaiapouf continues his plan to remove anything that could trigger Meruem's memory of Komugi as the King arrives at the palace. Killua continues to hold onto Komugi, and meets with Palm. Gon and Neferpitou arrive where Kite is, however, Gon must now face the truth.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 24,
+          "end": 104
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1401
+        }
+      ],
+      "external_id": "170290"
+    },
+    {
+      "n": 131,
+      "title": "Anger X And X Light",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/da1c818f8ee3bb3116c04ff5adfa9cc91400811137_full.jpg",
+      "synopsis": "Neferpitou challenges Gon Freecss to the final battle. In his rage of Kite's death, Gon undergoes into a powerful transformation that leaves Neferpitou at the disadvantage. When Killua arrives at the scene, there is nothing left but a transformed Gon, and Neferpitou's corpse moving due to his devotion to the King.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 119,
+          "end": 199
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1380
+        }
+      ],
+      "external_id": "170291"
+    },
+    {
+      "n": 132,
+      "title": "Flash x And x Start",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/1953758aa29a1708d8048cb4ab91d04d1401746001_full.jpg",
+      "synopsis": "The King still struggles to retrieve his memories as he and his two remaining Royal Guards return to the palace. He eventually knocks out Meleoron and Knuckle Bine with his En, and later engages Shaiapouf and Menthuthuyoupi in a race against time. Meanwhile, only two remain, Palm and Ikalgo, and hide an unconscious Komugi underground.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 152
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1400
+        }
+      ],
+      "external_id": "170292"
+    },
+    {
+      "n": 133,
+      "title": "Deadline x To x Live",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a6866b49a54f4e6a6d38f5cd97d63b791401931771_full.jpg",
+      "synopsis": "A message of hostage exchange sends Welfin on the field. One moment he encounters Menthuthuyoupi, and the next, Shaiapouf finds Youpi lifeless. When he returns to the King, Meruem demands Shaiapouf's secrets. On their way, Shaiapouf unsuspectingly coughs out blood, just like how blood trickled from the King and Menthuthuyoupi.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 116,
+          "end": 206
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1400
+        }
+      ],
+      "external_id": "170293"
+    },
+    {
+      "n": 134,
+      "title": "The Word x Is x You.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/72ef5e2b5e71104a66933425581c47d71402452866_full.jpg",
+      "synopsis": "Meruem uses his final permissible En and enlightens his surrounding with that and approaches to Welfin who was not detected by his En earlier. Caught between the desire to live and avoidable death, Welfin finally utters the name of Komugi and the secret Shaiapouf was trying so hard to protect now is finally revealed with Meruem regaining all of his memories about Komugi.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 159,
+          "end": 249
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1401
+        }
+      ],
+      "external_id": "170294"
+    },
+    {
+      "n": 135,
+      "title": "This Person x And x This Moment",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8271c770b0747b37d91dbcd57d9c81c21403044990_full.jpg",
+      "synopsis": "Now knowing his fate, Meruem admits defeat and reveals that all he wants now is to spend his final moments playing with Komugi, convincing Palm to tell him where she is hidden. East Gorteau and the NGL gets in turmoil after the fall of the Chimera Ants and the Hunter Association start making preparations to decide who will succeed Netero as its president. Despite knowing that she will also be poisoned to death by staying close to Meruem, Komugi stays by his side until his last breath and passes away in sequence.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "170295"
+    },
+    {
+      "n": 136,
+      "title": "Homecoming x And x True Name",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/2b7eac975d601411557e9bc39a8019211404164486_full.jpg",
+      "synopsis": "After the fall of the king, the remaining Chimera Ants move on with their lives, each following their own path. However, Gon is still in critical condition after his battle with Neferpitou and Killua departs in search for a way to heal his body. Meanwhile, the top members of the Hunter Association, the Zodiacs, assemble to organize the election to choose the next president, following the will of Netero's last message.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 81
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1415
+        }
+      ],
+      "external_id": "170296"
+    },
+    {
+      "n": 137,
+      "title": "Debate x Among x Zodiacs",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/74e911471c5c2b9f91ef0aa0e09c33fc1404815071_full.jpg",
+      "synopsis": "To ensure that Netero's last wish will be followed, Ging convinces the other members of the Zodiacs to procede with the election according to some rules defined by him. However, after the first round of voting, a winner is not decided and a second round begins. Meanwhile, Illumi informs Hisoka about Gon's condition and asks for his help to ensure Killua's safety as well, in a plan that somehow involves a fifth, yet unrevealed member of the Zoldyck siblings.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "170297"
+    },
+    {
+      "n": 138,
+      "title": "Request x And x Wish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/17d3b99efd14c010dc1720ffddd112fe1404873187_full.jpg",
+      "synopsis": "With the elections in a stalemate, Pariston, the current vice-president proposes a new set of rules to his fellow Zodiacs in order to solve the impasse, but the others know that he actually plans to make use of this to secure a victory for himself. Meanwhile, Killua returns home and asks his father to let him see his younger sister Alluka, intending to use her mysterious and frightening power to grant wishes in order to save Gon's life.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 111
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "170298"
+    },
+    {
+      "n": 139,
+      "title": "Alluka x And x Something",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/0803a33c6a86f762a9a0ff40d9f688ed1405463452_full.jpg",
+      "synopsis": "Killua reunites with his sister Alluka and uses her as a leverage for them to be allowed to leave the Zoldick state, as her powers can only be used to heal Gon if she is close to him. Meanwhile, Illumi asks for Hisoka's help to stop Killua's plans, and with elections yet to reach a conclusion, the Zodiacs keep arguing about a possible way to bring it to end.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1415
+        }
+      ],
+      "external_id": "170299"
+    },
+    {
+      "n": 140,
+      "title": "Join Battle x And x Open Battle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/0ca748f4705ea7dae7763e01a8fb251f1406656701_full.jpg",
+      "synopsis": "Killua is allowed by his family to leave the Zoldick estate with his sister, but only under supervision of several butlers with orders to bring them home if he ever leaves Alluka's side or allows any of their secrets to be leaked. Meanwhile, Leorio appears and confronts Ging, asking him why he had not ever paid a visit to Gon at the hospital yet.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 27,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1391
+        }
+      ],
+      "external_id": "170300"
+    },
+    {
+      "n": 141,
+      "title": "Magician X And X Butler",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/dc0ebeca6331e006ad9130f46f012b181406756893_full.jpg",
+      "synopsis": "Leorio's confrontation with Ging earns him the respect of his fellow Hunters and make him one of the frontrunners for the election. Meanwhile, Illumi begins an attack on Killua as part of his plan to kill Alluka, assisted by Hisoka, who has other plans for her.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "170301"
+    },
+    {
+      "n": 142,
+      "title": "Needles x And x Debt",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/94213869691f230a881bf36842c04b261407777494_full.jpg",
+      "synopsis": "Gotoh is killed by Hisoka, while the other butlers keep following Killua until he manages to shake them off. Meanwhile, Illumi uses his needles to take control of several people to assist on his plans and when news of it come to the Association, a team of Hunters is assembled to bring him to justice, while some of them decide to take advantage of it in order to win the election.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 54,
+          "end": 144
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1397
+        }
+      ],
+      "external_id": "170302"
+    },
+    {
+      "n": 143,
+      "title": "Sin x And x Claw",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/52940cb4952303b4a4ddf3fb5c0be5c81407894925_full.jpg",
+      "synopsis": "The election proceeds without a winner determined yet, and Killua is cornered by Illumi, who demands him to reveal which secrets he is hiding regarding Alluka's powers. Meanwhile, Hisoka keeps murdering other hunters just to amuse himself.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1400
+        }
+      ],
+      "external_id": "170303"
+    },
+    {
+      "n": 144,
+      "title": "Approval x And x Coalition.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/9138396bb8e38701a05d8abaf4a897661409076854_full.jpg",
+      "synopsis": "The election proceeds without a winner determined yet, and Killua is cornered by Illumi, who demands him to reveal which secrets he is hiding regarding Alluka’s powers. Meanwhile, Hisoka keeps murdering other hunters just to amuse himself",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 47,
+          "end": 137
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1407
+        }
+      ],
+      "external_id": "170304"
+    },
+    {
+      "n": 145,
+      "title": "Defeat x And x Reunion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2376cb7979a0a56332cc49c09be2fa671409683517_full.jpg",
+      "synopsis": "Leorio is about to win the election, but loses all motivation to continue after a fully healed Gon appears before him, thanks to the power of Alluka, opening the way to Pariston's victory. Surrounded by his friends and the other hunters who celebrate his recovery, Gon meets his father at last.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1399
+        }
+      ],
+      "external_id": "170305"
+    },
+    {
+      "n": 146,
+      "title": "Chairman x And x Release",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c29de03fc754a5f719184a4a25ab0b8a1409872123_full.jpg",
+      "synopsis": "Gon apologizes to Ging for failing to save Kite and his father instructs him to apologize to Kite himself instead, affirming that he will wait for him to return. Meanwhile, Pariston wins the election, but renounces in favor of fellow Zodiac Cheadle and Killua seals Alluka's powers away to ensure that he can live a normal life beside him.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 27,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1333
+        }
+      ],
+      "external_id": "170306"
+    },
+    {
+      "n": 147,
+      "title": "Salvation x And x Future",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f4556d96ed64ab26da71bf906519ef391410733198_full.jpg",
+      "synopsis": "Gon apologizes to Kite for not being strong enough to save him. Kite tells him they'll always be friends and that he should go get to know his dad. Gon returns to the Election Hall only to find a note that Ging has gone to the World Tree. Gon, Killua, and Alluka journey to the World Tree where Killua reveals Alluka's powers to Gon. Killua vows to protect his sister and says farewell to Gon, promising they'll meet again. Gon in turn promises to introduce Killua to Ging when they meet again.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 57,
+          "end": 139
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1400
+        }
+      ],
+      "external_id": "170307"
+    },
+    {
+      "n": 148,
+      "title": "Past x And x Future",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0e129f0f0985f8d6c6d7b0e7d90f650e1411364238_full.jpg",
+      "synopsis": "Gon climbs to the top of the World Tree where Ging is expecting him, and the two finally have a heart to heart. In this occasion, Ging reveals his intentions to explore the world beyond the current boundaries known to mankind and Gon tells him of all his adventures, while his friends keep following their separate ways, each one of them with their own dreams and goals to pursue.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "170308"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

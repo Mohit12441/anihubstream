@@ -1,0 +1,71 @@
+{
+  "id": "fullmetal-alchemist-the-movie-conqueror-of-shamballa",
+  "title": "Fullmetal Alchemist: The Movie - Conqueror of Shamballa",
+  "native": "鋼の錬金術師 シャンバラを征く者",
+  "year": 2005,
+  "rating": 7.1,
+  "season": "Summer 2005",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx430-Fx7lVxpcwArH.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx430-Fx7lVxpcwArH.jpg",
+  "accent": "#e4bb5d",
+  "synopsis": "Munich, Germany, 1923. Two years have passed since Edward Elric was dragged from his own world to ours, leaving behind his country, his friends and his younger brother, Alphonse. Stripped of his alchemical powers, he has been all this time researching rocketry together with Alphonse Heiderich, a young man who resembles his own brother, hoping to one day find a way back home. His efforts so far had proven fruitless, but after lending a hand to a troubled gypsy girl, Edward is thrown in a series of events that can wreak havoc in both worlds. Meanwhile, at his own world, Alphonse Elric ventures deeper into the mysteries of alchemy in search for a way to reunite with his older brother.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fullmetal-alchemist:-the-movie-conqueror-of-shamballa-hrhmme",
+    "mal": 430,
+    "anilist": 430,
+    "kitsu": 394
+  },
+  "skip_key_id": 430,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "fullmetal alchemist the movie conqueror of shamballa 鋼の錬金術師 シャンハ ラを征く者 movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Fullmetal Alchemist: The Movie - Conqueror of Shamballa (Movie)",
+      "runtime": "105:00",
+      "runtime_seconds": 6300,
+      "thumb": "https://animehot.cc/storage/media/2026/09/691d754c5ff8e7be7a911a23-landscape.webp",
+      "synopsis": "In desperation, Edward Elric sacrificed his body and soul to rescue his brother Alphonse, and is now displaced in the heart of Munich, Germany. He struggles to adapt to a world completely foreign to him in the wake of the economic crisis that followed the end of World War I. Isolated and unable to return home with his alchemy skills, Edward continues to research other methods of escaping the prison alongside colleagues who bear striking resemblances to many of the people he left behind. As dissent brews among the German citizenry, its neighbors also feel the unrest of the humiliated nation.\n\nMeanwhile, Alphonse continues to investigate Edward's disappearance, delving into the science of alchemy in the hopes of finally reuniting with his older brother.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "9715"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Link",
+      "artist": "L'Arc~en~Ciel",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lost Heaven",
+      "artist": "L'Arc~en~Ciel",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

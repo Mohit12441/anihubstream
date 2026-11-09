@@ -1,0 +1,191 @@
+{
+  "id": "havent-you-heard-im-sakamoto",
+  "title": "Haven't You Heard? I'm Sakamoto",
+  "native": "坂本ですが?",
+  "year": 2016,
+  "rating": 7.3,
+  "season": "Spring 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21595-vQ658r2Roe1g.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21595-vQ658r2Roe1g.jpg",
+  "accent": "#f1e4c9",
+  "synopsis": "First year high school student Sakamoto isn't just cool, he's the coolest! Almost immediately after starting school, he began attracting everyone's attention. The girls love him, and most of the boys resent him. There's even a boy in the class who works as a model, but who is constantly upstaged by Sakamoto! No matter what tricks the other boys try to play on him, Sakamoto always manages to foil them with ease and grace. Though Sakamoto may seem cool and aloof, he helps others when asked, such as in the case of the boy in his class who was being constantly bullied. No matter what difficulties Sakamoto encounters, he moves through his high school life with confidence and class!\n\n(Source: MangaHelpers)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "haven't-you-heard-i'm-sakamoto-aub5d8",
+    "mal": 32542,
+    "anilist": 21595,
+    "kitsu": 11751
+  },
+  "skip_key_id": 32542,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "haven t you heard i m sakamoto 坂本て すか tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Class 1-2, Sakamoto-kun | Bee Quiet",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185269/original.jpg",
+      "synopsis": "",
+      "airdate": "2016-04-08",
+      "markers": [],
+      "external_id": "185269"
+    },
+    {
+      "n": 2,
+      "title": "I'd Rather Protect Than Be Protected | Psychological Techniques for Romance That You Can Use Today",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185246/original.jpg",
+      "synopsis": "",
+      "airdate": "2016-04-22",
+      "markers": [],
+      "external_id": "185246"
+    },
+    {
+      "n": 3,
+      "title": "Errand Boy Sakamoto | Love Hide-And-Seek",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185247/original.jpg",
+      "synopsis": "",
+      "airdate": "2016-04-29",
+      "markers": [],
+      "external_id": "185247"
+    },
+    {
+      "n": 4,
+      "title": "Is Sakamoto a Pervert? | The \"Sights of the Classroom\" Collection | The Summer Sakamoto Disappeared",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185248/original.jpg",
+      "synopsis": "",
+      "airdate": "2016-05-06",
+      "markers": [],
+      "external_id": "185248"
+    },
+    {
+      "n": 5,
+      "title": "Softball Throw | The Charismatic Delinquent, Hayabusa-senpai | Personal Healthcare",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185249/original.png",
+      "synopsis": "",
+      "airdate": "2016-05-13",
+      "markers": [],
+      "external_id": "185249"
+    },
+    {
+      "n": 6,
+      "title": "Rules for Leaving School | Love Through the Camera Lens | Cafeteria Marketing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185250/original.jpg",
+      "synopsis": "",
+      "airdate": "2016-05-20",
+      "markers": [],
+      "external_id": "185250"
+    },
+    {
+      "n": 7,
+      "title": "Really, Is Sakamoto a Pervert? | Sera's French Revolution",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185251/original.jpg",
+      "synopsis": "",
+      "airdate": "2016-05-27",
+      "markers": [],
+      "external_id": "185251"
+    },
+    {
+      "n": 8,
+      "title": "A Gloomy Cultural Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185252/original.jpg",
+      "synopsis": "",
+      "airdate": "2016-06-03",
+      "markers": [],
+      "external_id": "185252"
+    },
+    {
+      "n": 9,
+      "title": "How Sakamoto-kun and I Met | The One Closest to Me, Yet Most Distant",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185253/original.png",
+      "synopsis": "",
+      "airdate": "2016-06-10",
+      "markers": [],
+      "external_id": "185253"
+    },
+    {
+      "n": 10,
+      "title": "The Devil | What's Lacking",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185254/original.jpg",
+      "synopsis": "",
+      "airdate": "2016-06-17",
+      "markers": [],
+      "external_id": "185254"
+    },
+    {
+      "n": 11,
+      "title": "I Don't Need Warmth | Class 1-2 Memories",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185255/original.jpg",
+      "synopsis": "",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "185255"
+    },
+    {
+      "n": 12,
+      "title": "Goodbye, Sakamoto-kun",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/185256/original.jpg",
+      "synopsis": "",
+      "airdate": "2016-07-01",
+      "markers": [],
+      "external_id": "185256"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Coolest",
+      "artist": "CustomiZ",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nakushita Hibi ni Sayonara (Goodbye to Lost Days)",
+      "artist": "SuneoHair",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

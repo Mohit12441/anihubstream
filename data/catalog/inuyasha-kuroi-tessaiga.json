@@ -1,0 +1,293 @@
+{
+  "id": "inuyasha-kuroi-tessaiga",
+  "title": "Inuyasha: Kuroi Tessaiga",
+  "native": "犬夜叉 黒い鉄砕牙",
+  "year": 2008,
+  "rating": 7.2,
+  "season": "Summer 2008",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx4886-xzcW3fD6rmoK.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4886-xzcW3fD6rmoK.jpg",
+  "accent": "#78281a",
+  "synopsis": "A 30-minute Inuyasha feature titled Kuroi Tessaiga screened on Takahashi Rumiko's picture exhibitions across Japan.\n\nIn January 2010, this special ended up, slightly edited, as episode 15 of Inuyasha Kanketsu-hen.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "inuyasha:-kuroi-tessaiga-w7cxog",
+    "mal": 4886,
+    "anilist": 4886,
+    "kitsu": 3837
+  },
+  "skip_key_id": 4886,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "inuyasha kuroi tessaiga 犬夜叉 黒い鉄砕牙 special finished",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "InuYasha: Kuroi Tessaiga",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6919a52998644fab5d159de9-poster.jpg",
+      "synopsis": "Sesshoumaru has never approved of his half-demon younger brother Inuyasha inheriting their father's prized sword, Tessaiga, while he was left with the restorative Tenseiga blade. Upon learning that even Tenseiga's one destructive technique—which he himself perfected—was designed to be transferred to Tessaiga, Sesshoumaru grows even more bitter as he feels disowned in favor of an unworthy mongrel. \n\nMeanwhile, Inuyasha's archenemy Naraku unscrupulously takes advantage of Sesshoumaru's grievance to tempt him with a means of stealing Tessaiga's powers. Pitted against each other, the siblings cross blades in a fight that will decide whether Inuyasha will thwart Naraku's dirty scheme and earn Sesshoumaru's acknowledgment or die at the hands of his own flesh and blood.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "63869"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kimi ga Inai Mirai",
+      "artist": "Do as Infinity",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "With You",
+      "artist": "AAA",
+      "episodes": "1-9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rakuen(Paradise)",
+      "artist": "Do as Infinity",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "One Day, One Dream",
+      "artist": "Tacky and Tsubasa",
+      "episodes": "147-148"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "My Will",
+      "artist": "???",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "My Will",
+      "artist": "Dream",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Change the World",
+      "artist": "V6",
+      "episodes": "147-148"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Four Seasons",
+      "artist": "Namie Amuro",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ai no Uta (Song of Love)",
+      "artist": "Every Little Thing",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yura Yura",
+      "artist": "Every Little Thing",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "No More Words",
+      "artist": "Ayumi Hamasaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Change the World",
+      "artist": "V6",
+      "episodes": "01-34"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "My Will",
+      "artist": "Dream",
+      "episodes": "01-20,166-167"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Diamond",
+      "artist": "alan",
+      "episodes": "10-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Fukai Mori",
+      "artist": "Do As Infinity",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "I Am",
+      "artist": "Hitomi",
+      "episodes": "35-64"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Fukai Mori",
+      "artist": "Do As Infinity",
+      "episodes": "21-41"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Tooi Michi no Saki de (遠い道の先で)",
+      "artist": "Ai Takekawa",
+      "episodes": "18-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Dearest",
+      "artist": "Hamasaki Ayumi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Owarinai Yume",
+      "artist": "Nanase Aikawa",
+      "episodes": "65-95"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Dearest",
+      "artist": "Ayumi Hamasaki",
+      "episodes": "42-60"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Kimi ga Inai Mirai",
+      "artist": "Do As Infinity",
+      "episodes": "26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Every Heart",
+      "artist": "BOA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Grip!",
+      "artist": "Every Little Thing",
+      "episodes": "96-127"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Every Heart - Minna no Kimochi",
+      "artist": "Boa",
+      "episodes": "61-85"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Shinjitsu no Uta",
+      "artist": "Do As Infinity",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "One Day, One Dream",
+      "artist": "Tackey & Tsubasa",
+      "episodes": "128-153"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Shinjitsu no Uta",
+      "artist": "Do As Infinity",
+      "episodes": "86-108"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Itazurana Kiss",
+      "artist": "???",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 6,
+      "title": "Angelus",
+      "artist": "Hitomi Shimatani",
+      "episodes": "154-167"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Itazurana Kiss",
+      "artist": "day after tomorrow",
+      "episodes": "109-127"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Come",
+      "artist": "Amuro Namie",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Come",
+      "artist": "Namie Amuro",
+      "episodes": "128-148"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Brand-New World",
+      "artist": "V6",
+      "episodes": "149-165"
+    }
+  ],
+  "relations": []
+}

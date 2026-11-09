@@ -1,0 +1,332 @@
+{
+  "id": "in-the-land-of-leadale",
+  "title": "In the Land of Leadale",
+  "native": "リアデイルの大地にて",
+  "year": 2022,
+  "rating": 6.8,
+  "season": "Winter 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx130166-YVHrYg4wNA68.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx130166-YVHrYg4wNA68.jpg",
+  "accent": "#f19328",
+  "synopsis": "After being put on life support after a tragic accident, Keina Kagami's only freedom comes from the VRMMO RPG Leadale. One day her life support system shuts off and Keina passes away. When she wakes up, she finds herself in Leadale two hundred years in the future. As the high elf Cayna, with lost skills but incredible stats, she must forge relationships with the residents of this new world... which, shockingly, include the \"\"children\"\" characters she designed herself! A leisurely adventure tale is about to begin, featuring a girl transported to a game world and the smiles and tears she shares with her quirky companions!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44186,
+    "anilist": 130166,
+    "mal": 48239
+  },
+  "skip_key_id": 48239,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-15 18:06:07",
+  "search_text": "in the land of leadale リアテ イルの大地にて tv finished",
+  "genres": [
+    "adventure",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "An Inn, a Tower, a Bear, and a Banquet",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/240131f53bc4b6c09b3436cbe8cdc3ac1641384423_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 17,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "323290"
+    },
+    {
+      "n": 2,
+      "title": "An Injured Man, the Royal Capital, and a Game of Tag with Sons",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/cd0b111cbac26755f90779617bfdc6911641986355_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "323291"
+    },
+    {
+      "n": 3,
+      "title": "A Daughter, a Colosseum, Losing Control, and an Uppercut",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/810e8233a5db3523a9471ee7878834231642585905_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 110,
+          "end": 200
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "324263"
+    },
+    {
+      "n": 4,
+      "title": "A Son, a Fight, a Journey, and Bandits",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/865c2d98269d2bb5a438e436f29890f11643192871_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 125,
+          "end": 215
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1421
+        }
+      ],
+      "external_id": "324389"
+    },
+    {
+      "n": 5,
+      "title": "A Grandson, a Granddaughter, a Great-Grandson, and a Fortress",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/7f007b6a45c9d39151e8b4fe4ecab65c1643800122_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 159,
+          "end": 249
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "324390"
+    },
+    {
+      "n": 6,
+      "title": "Rock Golems, a Chief, Skeletons, and Fairies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/9be75cda305551a9ff8ad92c13219ef51644409418_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 46,
+          "end": 134
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "324391"
+    },
+    {
+      "n": 7,
+      "title": "Bear Hunting, a Queen, a Bath, and Monsters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/4d4d551d821aef32157088ee64c6d3161645022701_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 94,
+          "end": 177
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "324392"
+    },
+    {
+      "n": 8,
+      "title": "A Battle, a Victory, a Conversation, and Information",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/cb30efa0fca1dbef39161963116b7d731645591467_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 83,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "324393"
+    },
+    {
+      "n": 9,
+      "title": "Another Visit, a Mermaid, a Misunderstanding, and Zombies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/55bf08fd352028a664e066410a72d2c01646211945_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "324394"
+    },
+    {
+      "n": 10,
+      "title": "A Butler, a Ghost Ship, a Ward, and the Palace of the Dragon King",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/5c839ce975fcdd14fc264f071f56b2551646834821_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1421
+        }
+      ],
+      "external_id": "324395"
+    },
+    {
+      "n": 11,
+      "title": "An Introduction, a Carriage, a Maid, and Moving",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a5d45122c0a64bf5cf97ff5fa8c4e84c1647419010_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 47,
+          "end": 137
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "324396"
+    },
+    {
+      "n": 12,
+      "title": "Relocating, Building, Flying, and the Earth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/434ec58d8fb6d1bfec47344907f350dc1648015193_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1418
+        }
+      ],
+      "external_id": "324397"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

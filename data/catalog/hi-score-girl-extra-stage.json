@@ -1,0 +1,207 @@
+{
+  "id": "hi-score-girl-extra-stage",
+  "title": "Hi Score Girl: Extra Stage",
+  "native": "ハイスコアガールEXTRA STAGE",
+  "year": 2019,
+  "rating": 7.8,
+  "season": "Winter 2019",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx104307-gbPLgyF1veUJ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx104307-gbPLgyF1veUJ.jpg",
+  "accent": "#5dbbe4",
+  "synopsis": "Episodes 13-15 of Hi Score Girl.\n\nFour years after they first met, Haruo Yaguchi , Akira Oono, and Koharu Hidaka remain the best of friends. Tensions start to build up as Akira's teacher, Gouda Moemi, becomes stricter than ever before, and Hidaka develops feelings for Haruo. Though he may not be the most composed and thoughtful person around, he has within him the one thing that started it all: his unconditional love for video games.\n\n(Source: MAL Rewrite)\n\nNote: Episodes 13-15 had its televised debut starting October 4th, 2019.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "hi-score-girl:-extra-stage-1rfimr",
+    "mal": 38422,
+    "anilist": 104307,
+    "kitsu": 42200
+  },
+  "skip_key_id": 38422,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "hi score girl extra stage ハイスコアカ ールextra stage ova finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Round 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-07-14",
+      "markers": [],
+      "external_id": "215921"
+    },
+    {
+      "n": 2,
+      "title": "Round 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-07-21",
+      "markers": [],
+      "external_id": "215922"
+    },
+    {
+      "n": 3,
+      "title": "Round 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-07-28",
+      "markers": [],
+      "external_id": "244915"
+    },
+    {
+      "n": 4,
+      "title": "Round 4",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-08-04",
+      "markers": [],
+      "external_id": "249980"
+    },
+    {
+      "n": 5,
+      "title": "Round 5",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-08-11",
+      "markers": [],
+      "external_id": "250745"
+    },
+    {
+      "n": 6,
+      "title": "Round 6",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-08-18",
+      "markers": [],
+      "external_id": "250759"
+    },
+    {
+      "n": 7,
+      "title": "Round 7",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-08-25",
+      "markers": [],
+      "external_id": "250760"
+    },
+    {
+      "n": 8,
+      "title": "Round 8",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-09-01",
+      "markers": [],
+      "external_id": "250761"
+    },
+    {
+      "n": 9,
+      "title": "Round 9",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-09-08",
+      "markers": [],
+      "external_id": "250762"
+    },
+    {
+      "n": 10,
+      "title": "Round 10",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-09-15",
+      "markers": [],
+      "external_id": "250763"
+    },
+    {
+      "n": 11,
+      "title": "Round 11",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-09-22",
+      "markers": [],
+      "external_id": "250764"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-09-29",
+      "markers": [],
+      "external_id": "250765"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "flash",
+      "artist": "sora tob sakana",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Unknown World Map",
+      "artist": "Etsuko Yakushimaru",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "New Stranger",
+      "artist": "sora tob sakana",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hōkago Distraction (Afterschool Distraction)",
+      "artist": "Etsuko Yakushimaru",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,286 @@
+{
+  "id": "dragon-ball-daima",
+  "title": "Dragon Ball DAIMA",
+  "native": "ドラゴンボールDAIMA",
+  "year": 2024,
+  "rating": 7.5,
+  "season": "Fall 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx170083-GTwRrhTApcLR.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx170083-GTwRrhTApcLR.png",
+  "accent": "#e45d43",
+  "synopsis": "Goku and company were living peaceful lives when they suddenly turned small due to a conspiracy! When they discover that the reason for this may lie in a world known as the \"Demon Realm\", a mysterious young Majin named Glorio appears before them.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "dragon-ball-daima-x8wqxs",
+    "mal": 56894,
+    "anilist": 170083,
+    "kitsu": 48108
+  },
+  "skip_key_id": 56894,
+  "skip_key_space": "mal",
+  "episode_total": 20,
+  "added_at": null,
+  "search_text": "dragon ball daima ト ラコ ンホ ールdaima tv finished",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Conspiracy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/360568/thumbnail/bc8c42834dd8c80504a6bdabdacc789f.jpg",
+      "synopsis": "A giant castle in a mysterious world. Two shady Majin, Gomah and Degesu, watch a monitor. The monitor shows Goku and the others having a fierce battle against Majin Buu. Gomah and Degesu head to Earth to execute a certain conspiracy.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-11",
+      "markers": [],
+      "external_id": "360568"
+    },
+    {
+      "n": 2,
+      "title": "Glorio",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/360569/thumbnail/9fc004d49e47c47d57680770089bacd0.jpg",
+      "synopsis": "Goku and his friends have been turned small due to Gomah's scheme. They begin preparing to go to the demon world. Goku collects his Nyoibo and looks forward to a new adventure. Then the mysterious young Majin Glorio appears!\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "360569"
+    },
+    {
+      "n": 3,
+      "title": "Daima",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/368974/thumbnail/5439d9984cf0e9770577966073a0a7eb.jpg",
+      "synopsis": "Goku, Supreme Kai, and Glorio head out to the \"Demon Realm\" first. Their plane travels through space and a mysterious dimension. They arrive at the entrance to the Demon Realm, the \"Third Demon World\"!\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-25",
+      "markers": [],
+      "external_id": "368974"
+    },
+    {
+      "n": 4,
+      "title": "Chatty",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/368975/thumbnail/6ccd00947ae40668ac0324a2c4b3f19c.jpg",
+      "synopsis": "Forced to make their way through the Third Demon World on foot, Goku and his companions stop by a lone drive-in on the way. There they encounter some strange souvenirs and a rather chatty and quirky Majin woman and her husband!\n\n(Source: Crunchyroll)",
+      "airdate": "2024-11-01",
+      "markers": [],
+      "external_id": "368975"
+    },
+    {
+      "n": 5,
+      "title": "Panzy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370630/thumbnail/d4855a92aca73d409dd9f0bb21599499.jpg",
+      "synopsis": "The masked Majin who appeared before Goku and his companions is a young girl named Panzy! While Glorio gives her the cold shoulder, Panzy insists on acting as their guide. The group reaches a suspicious castle!\n\n(Source: Crunchyroll)",
+      "airdate": "2024-11-08",
+      "markers": [],
+      "external_id": "370630"
+    },
+    {
+      "n": 6,
+      "title": "Lightning",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370631/thumbnail/3ec647f26b60a5d5de0425abc8b1efe4.jpg",
+      "synopsis": "After encountering the Gendarmerie, the wardens of the Demon Realm, the four are forced to camp in a cave where they encounter further trouble! The enigmatic Glorio unleashes lightning magic against Goku to resolve the situation!\n\n(Source: Crunchyroll)",
+      "airdate": "2024-11-15",
+      "markers": [],
+      "external_id": "370631"
+    },
+    {
+      "n": 7,
+      "title": "Collar",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370632/thumbnail/af2f24adaea831659ce3354106c19fac.jpg",
+      "synopsis": "Goku and his companions continue their journey. But the Gendarmerie appeared and barged their way again, perhaps because they knew the location of the Magic Collar around Panzy's neck. Can the bond with her friends save Panzy from peril?!\n\n(Source: Crunchyroll, edited)",
+      "airdate": "2024-11-22",
+      "markers": [],
+      "external_id": "370632"
+    },
+    {
+      "n": 8,
+      "title": "Tamagami",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370633/thumbnail/05e195cccb0bbba0bb68e24a03f09602.jpg",
+      "synopsis": "The fight with a Tamagami begins! The Tamagamis are the undefeated guardians of the Dragon Balls. Seeing Goku fight toe-to-toe with one, Panzy and the others are unable to hide their surprise. As the battle heats up, what will happen?!\n\n(Source: Crunchyroll)",
+      "airdate": "2024-11-29",
+      "markers": [],
+      "external_id": "370633"
+    },
+    {
+      "n": 9,
+      "title": "Thieves",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370634/thumbnail/1dcaa0521b195eccfa02128bb3541b10.jpg",
+      "synopsis": "Rumors of what Goku did in the Third Demon World spread across the Demon Realm. To avoid trouble, Goku wears a disguise at the hotel, but they can't let their guard down in the Third Demon World. Thieves see through his disguise!\n\n(Source: Crunchyroll)",
+      "airdate": "2024-12-06",
+      "markers": [],
+      "external_id": "370634"
+    },
+    {
+      "n": 10,
+      "title": "Ocean",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370635/thumbnail/d2f7079d21587589217bf059fa4497fb.jpg",
+      "synopsis": "Goku and his companions arrive at the mystic Second Demon World where a giant ocean spreads as far as the eye can see! The party is amazed at the new world but is immediately attacked by Gendarmerie that have been sent by Gomah!\n\n(Source: Crunchyroll)",
+      "airdate": "2024-12-13",
+      "markers": [],
+      "external_id": "370635"
+    },
+    {
+      "n": 11,
+      "title": "Legend",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370636/thumbnail/70fded22acaadbb0b57203745b456326.jpg",
+      "synopsis": "Having regrouped with Vegeta and the others, Goku and his companions arrive at a planet that seems familiar. As they move to head out, a suspicious shadow approaches! It's the Legendary Namek who remained alone in the Demon Realm!\n\n(Source: Crunchyroll)",
+      "airdate": "2024-12-20",
+      "markers": [],
+      "external_id": "370636"
+    },
+    {
+      "n": 12,
+      "title": "True Strength",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370637/thumbnail/68259e1d1efff7e58bc8e28407090ed1.jpg",
+      "synopsis": "Vegeta’s battle with the Tamagami is evenly matched, but forced underwater where he's not used to fighting, he finds himself struggling! Vegeta is cornered and sinks to the ocean floor. But then he finally unleashes his true strength!\n\n(Source: Crunchyroll)",
+      "airdate": "2024-12-27",
+      "markers": [],
+      "external_id": "370637"
+    },
+    {
+      "n": 13,
+      "title": "Surprise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370638/thumbnail/08732d7b425518a1c5a6604392ccf42a.jpg",
+      "synopsis": "As Goku and his companions head to where Gomah is, engine trouble causes them to land on a certain planet. The place they land happens to be a surprise-filled planet where even Supreme Demon Kings are afraid to tread!\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-10",
+      "markers": [],
+      "external_id": "370638"
+    },
+    {
+      "n": 14,
+      "title": "Taboo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370639/thumbnail/2aed60fbd8468dac83bea1163539081b.jpg",
+      "synopsis": "To stop Goku's advancement, Gomah commits an unbelievable taboo! Goku and his companions can no longer proceed. Just when it seems their adventure is over, a certain someone reveals their true power!\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-17",
+      "markers": [],
+      "external_id": "370639"
+    },
+    {
+      "n": 15,
+      "title": "Third Eye",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370640/thumbnail/517f1ea16b0139fdb583502bc7f8d4e2.jpg",
+      "synopsis": "The Evil Third Eye offers absolute power in the Demon Realm. King Gomah confirms its location and moves to obtain it! Will the Third Eye open on Gomah's forehead?!\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-24",
+      "markers": [],
+      "external_id": "370640"
+    },
+    {
+      "n": 16,
+      "title": "Degesu",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370641/thumbnail/71b163f745beeb72a07a0780e10d4169.jpg",
+      "synopsis": "Goku and his companions finally reach Gomah's palace. But Kadem and the mighty\nGendarmerie Force bar their way!\nMeanwhile, in the palace, Degesu takes action for his own ambitions!\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-31",
+      "markers": [],
+      "external_id": "370641"
+    },
+    {
+      "n": 17,
+      "title": "Gomah",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370642/thumbnail/13b73a728983ab854b4ff4093264684f.jpg",
+      "synopsis": "Goku and his companions face off with Arinsu. With everything on the line, their battle begins. But all of a sudden, a transformed King Gomah stands before both parties!\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-07",
+      "markers": [],
+      "external_id": "370642"
+    },
+    {
+      "n": 18,
+      "title": "Awakening",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370643/thumbnail/172a1b25d5b0c1b6d7425ff0114a2a5b.jpg",
+      "synopsis": "King Gomah enters the battlefield and an all-out battle ensues! Goku and his companions struggle against the power of the Third Eye. Just when all seems lost, an amazing new power is awakened within Goku! \n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-14",
+      "markers": [],
+      "external_id": "370643"
+    },
+    {
+      "n": 19,
+      "title": "Betrayal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370644/thumbnail/229940ba34738363c5bf3cdc1bc5fdbe.jpg",
+      "synopsis": "The battle continues to go poorly for Goku and his companions. After much hesitation, Glorio puts Arinsu's secret plan into action! As his friends watch in awe, what will Glorio's betrayal set in motion?!\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-21",
+      "markers": [],
+      "external_id": "370644"
+    },
+    {
+      "n": 20,
+      "title": "Maximum",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/370645/thumbnail/53e8a397e8e7d44cb576bbc116e0e448.jpg",
+      "synopsis": "Having been restored, Goku finally surpasses his limits! To defeat the mighty Giant Gomah, who keeps regenerating through the power of the Third Eye, everyone puts in their maximum effort in an all-out battle!\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-28",
+      "markers": [],
+      "external_id": "370645"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Jaka Jaan (ジャカ☆ジャ～ン)",
+      "artist": "Zedd ft. C&K",
+      "episodes": "2-19"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Jaka Jaan (ジャカ☆ジャ～ン)",
+      "artist": "Zedd feat. C&K.",
+      "episodes": "1, 20"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "NAKAMA",
+      "artist": "Zedd ft. AI",
+      "episodes": "2-19"
+    }
+  ],
+  "relations": []
+}

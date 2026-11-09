@@ -1,0 +1,437 @@
+{
+  "id": "ghost-in-the-shell-stand-alone-complex",
+  "title": "Ghost in the Shell: Stand Alone Complex",
+  "native": "攻殻機動隊 STAND ALONE COMPLEX",
+  "year": 2002,
+  "rating": 8.2,
+  "season": "Fall 2002",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx467-mBTtIoR13qs2.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx467-mBTtIoR13qs2.jpg",
+  "accent": "#5da1e4",
+  "synopsis": "In the not so distant future, mankind has advanced to a state where complete body transplants from flesh to machine is possible. This allows for great increases in both physical and cybernetic prowess and blurring the lines between the two worlds. However, criminals can also make full use of such technology, leading to new and sometimes, very dangerous crimes. In response to such innovative new methods, the Japanese Government has established Section 9, an independently operating police unit which deals with such highly sensitive crimes.\n\nLed by Daisuke Aramaki and Motoko Kusanagi, Section 9 deals with such crimes over the entire social spectrum, usually with success. However, when faced with a new A level hacker nicknamed “The Laughing Man”, the team is thrown into a dangerous cat and mouse game, following the hacker’s trail as it leaves its mark on Japan.\n\n(Source: MyAnimeList)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "ghost-in-the-shell:-stand-alone-complex-elfzwa",
+    "mal": 467,
+    "anilist": 467,
+    "kitsu": 429
+  },
+  "skip_key_id": 467,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "ghost in the shell stand alone complex 攻殻機動隊 stand alone complex tv finished",
+  "genres": [
+    "action",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Section 9",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9971/original.jpg",
+      "synopsis": "At a geisha house, the female androids have gone out of control. They have taken hostage two members of a foreign body, the Minister of Foreign Affairs, the Minister's secretary, and the head of the Minister's Support Association.\n\nThe situation is complicated by a feud over authority between the police and the military.  Section 9 Chief Aramaki lends a helping hand and brings in his unit to resolve the crisis.",
+      "airdate": "2002-10-01",
+      "markers": [],
+      "external_id": "9971"
+    },
+    {
+      "n": 2,
+      "title": "Testation",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9972/original.jpg",
+      "synopsis": "A prototype multiped tank has destroyed two other prototypes and broken out of a testing facility.  Section 9, employing its own smaller multipeds, the Tachikomas, is brought in to stop it.\n\nThe hijacker is using the ID of the tank's designer who had recently died.  Whoever is operating the tank, their motives are unknown.  Section 9 has little time to figure out these two mysteries before the tank enters the urban area.",
+      "airdate": "2002-10-08",
+      "markers": [],
+      "external_id": "9972"
+    },
+    {
+      "n": 3,
+      "title": "Android and I",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9973/original.jpg",
+      "synopsis": "A certain type of android, the GA07_JL, nicknamed Jeri by its users, has been affected by a virus.  Recently, all Jeri model androids have been committing \"suicide\".  \n\nSection 9 is called in as it may be related to a virus detected in an android at the National Assembly Building.",
+      "airdate": "2002-10-15",
+      "markers": [],
+      "external_id": "9973"
+    },
+    {
+      "n": 4,
+      "title": "Intercepter",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9974/original.jpg",
+      "synopsis": "A former colleague of Togusa's named Yamaguchi calls and asks him to look at some sensitive data related to the Laughing Man case.  Before Yamaguchi can arrive with the material, however, the car he is driving swerves off of the road and explodes.  \n\nAramaki allows Togusa to investigate Yamaguchi's death and Togusa is able to retrieve the information that his colleague wanted him to look at. The information could implicate high-ranking officials within Police HQ.",
+      "airdate": "2002-10-22",
+      "markers": [],
+      "external_id": "9974"
+    },
+    {
+      "n": 5,
+      "title": "Decoy",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9975/original.jpg",
+      "synopsis": "During a press conference in the previous episode, Superintedent-General Daidō had been publicly threatened by the person known as the Laughing Man. Through an intermediary, the Laughing Man had demanded that Daidō reveal \"the truth\" or else he would be, \"removed from the stage.\"\n\nFor six years the Special Investigations Unit, which is part of the Metropolitan Police that Daidō oversees, has been working on this case. It now seems that they have found a possible suspect in Nanao=A, a man with dubious connections. Still acting from behind the scenes, Section 9 continues their own investigation into the Laughing Man incident.",
+      "airdate": "2002-10-29",
+      "markers": [],
+      "external_id": "9975"
+    },
+    {
+      "n": 6,
+      "title": "Meme",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9976/original.jpg",
+      "synopsis": "At a press conference, the Superintendent-General makes himself a prime target for the Laughing Man's threat. Section 9 has gathered enough evidence to arrest Nanao=A, but before they can, he is able to release a modular, delayed-action virus. The virus seems to only affect those on the security detail that is guarding Superintendent-General Daidō. However, Section 9 will not know who on the security team has been taken over by the virus until the symptoms begin to manifest. By that time, it may be too late.",
+      "airdate": "2002-11-05",
+      "markers": [],
+      "external_id": "9976"
+    },
+    {
+      "n": 7,
+      "title": "Idolater",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9977/original.jpg",
+      "synopsis": "It has come to the attention of the Minister of Home Affairs that Jenoma revolutionary leader Marcelo Jarti has been visiting Japan regularly every five months. Jarti is one of the world’s foremost wanted men, and has been targeted for assassination by commandos of the United States Delta Force and United Kingdom Special Air Service (SAS) a total of six times. Miraculously, he has survived each of these attempts. When Jarti returns to Japan following the most recently failed assassination attempt, Section 9 is called in to trail him and determine why Jarti has been visiting their country, with unexpected results.",
+      "airdate": "2002-11-12",
+      "markers": [],
+      "external_id": "9977"
+    },
+    {
+      "n": 8,
+      "title": "Missing Hearts",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9978/original.jpg",
+      "synopsis": "Motoko is asked by her friend Kurutan to investigate a strange scenario.  A six-year old girl's life was saved by an immediate heart transplant. When her parents tried to send their gratitude to the donor, the donor's parents filed a police report since they never gave permission for the donation.\n\nWhat's more, the investigating officer has now been hospitalized after an accident.  There is more to this case then meets the eye and Motoko and her colleagues must find out who's behind these apparent illegal organ donations.",
+      "airdate": "2002-11-19",
+      "markers": [],
+      "external_id": "9978"
+    },
+    {
+      "n": 9,
+      "title": "Chat! Chat! Chat!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9979/original.jpg",
+      "synopsis": "A gathering is initiated in cyberspace to discuss the Laughing Man. After a six year absence, the super-hacker reemerged from the shadows of the net and publicly threatened to assassinate Superintendent-General Daido of the Niihama Metropolitan Police (\"INTERCEPTER\"). With an audience watching across the net, several people take their places at a table in order to pass around their theories as to why the Laughing Man returned and to discuss what happened during the assassination attempt at the press conference (\"DECOY\" and \"MEME\").",
+      "airdate": "2002-11-26",
+      "markers": [],
+      "external_id": "9979"
+    },
+    {
+      "n": 10,
+      "title": "Jungle Cruise",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9980/original.jpg",
+      "synopsis": "Marco Amoretti, a former Navy Petty Officer from the American Empire, has come to Japan and is committing heinous acts of brutality against women.\n\nSection 9 is assisted in this matter by the American Empire's CIA.  While this doesn't sit well with Public Security's members, Batou finds the whole case particularly hard on his psyche as the nightmares from his past rear their ugly head.",
+      "airdate": "2002-12-03",
+      "markers": [],
+      "external_id": "9980"
+    },
+    {
+      "n": 11,
+      "title": "Portraitz",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9981/original.jpg",
+      "synopsis": "A high-level hacking has occured at the Ministry of Health, Labour and Welfare.  Section 9 has traced the source of the hack job back to a vocational aid center located high in the mountains.\n\nThe hack was done by someone very skilled since it only took two hours to crack the MHLW's ultra-secure barriers.  The odd thing is that the MHLW has not filed a formal complaint about the incident.  Togusa is sent undercover to discover what is going on at the aid center.",
+      "airdate": "2002-12-10",
+      "markers": [],
+      "external_id": "9981"
+    },
+    {
+      "n": 12,
+      "title": "Escape From",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9982/original.jpg",
+      "synopsis": "\"Tachikoma Runaway\": The Tachikoma that Batou has been feeding natural oil to awakens before the other Tachikomas do and leaves the hanger to have an adventure. On the town, it meets up with a girl named Miki who is searching for her dog.\n\n\"The Movie Director's Dream\": While out on its adventure, Batou's Tachikoma found a cyberbrain that has something very interesting within it. One of Section 9's lab techs has become \"lost\" inside the device, and it's up to the Major to bring him back.",
+      "airdate": "2002-12-17",
+      "markers": [],
+      "external_id": "9982"
+    },
+    {
+      "n": 13,
+      "title": "Not Equal",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9983/original.jpg",
+      "synopsis": "While tracking the New World Brigade, an anti-cyberization group, to an unused radiation scrubber facility off Okinawa, the Japanese Maritime Safety Agency took pictures that show Eka Tokura, the kidnapped daughter of a cyber-technology company CEO.  However, the girl had been abducted over 16 years ago when she had been 10 years old.  In the recent photos, she looks just as she did on the day she was taken. \n\nFor reasons unknown, contact with the Maritime Safety Agency's reconnaissance team has been lost.  Section 9 heads to the facility to locate the unit and find out why Eka Tokura was there.",
+      "airdate": "2002-12-24",
+      "markers": [],
+      "external_id": "9983"
+    },
+    {
+      "n": 14,
+      "title": "YES",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9984/original.jpg",
+      "synopsis": "Acting on a tip, Section 9 breaks up a cabal of thieves hell-bent on wrecking a Japanese financial institution. Shortly after the raid a Chinese intelligence official contacts Section 9 and informs them of suspicious activity that he believes may indicate an assassination attempt by Chinese Socialists on a prominent, yet reclusive, Japanese multi-millionaire.",
+      "airdate": "2002-12-31",
+      "markers": [],
+      "external_id": "9984"
+    },
+    {
+      "n": 15,
+      "title": "Machine Desirantes",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9985/original.jpg",
+      "synopsis": "A new sniper device is tested out, but is found to have flaws.  While Section 9 attends a debriefing session on the fate of the sniping device, the Tachikomas themselves begin to worry that tomorrow they could be the ones that are scrapped. The Tachikomas of Section 9 unite and discuss the various issues dealing with them that have occurred within previous episodes.  They worry that the Major does not appreciate them.  At the same time, the Major is looking into the idea of proceeding without the Tachikomas at Section 9's side. \n\n\"Machine désirante (Desiring-Machine)\" is one of the key concepts of Anti-Œdipus, written by contemporary French philosopher Gilles Deleuze.",
+      "airdate": "2003-01-07",
+      "markers": [],
+      "external_id": "9985"
+    },
+    {
+      "n": 16,
+      "title": "Ag20",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9986/original.jpg",
+      "synopsis": "After the events of  \"MACHINES DÉSIRANTES\", the Tachikomas are sent back to the lab for further testing.  Batou has little time to ponder the loss of his pet, however.\n\nA foreign spy is suspected to be working within a Japanese Self-Defense Force training camp based in New Port City.  With the Major and the Chief away at a security conference in England, Batou alone is assigned to go undercover to confirm the suspect.",
+      "airdate": "2003-01-14",
+      "markers": [],
+      "external_id": "9986"
+    },
+    {
+      "n": 17,
+      "title": "Angel's Share",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9987/original.jpg",
+      "synopsis": "Aramaki and Kusanagi attend an international security conference in London.  While there, Aramaki visits an old acquaintance of his, who is the operator of a wine fund, a place where people store their wines in order to let the wine age and become more expensive.\n\nTheir meeting is not purely a social one, but before Aramaki and his friend can sit down and talk about the old days, the bank is broken into by two mafia men.",
+      "airdate": "2003-01-21",
+      "markers": [],
+      "external_id": "9987"
+    },
+    {
+      "n": 18,
+      "title": "Lost Heritage",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9988/original.jpg",
+      "synopsis": "Chinese Vice Minister Jin has arrived in Japan to visit the Kagoshima War Memorial where hundreds of Japanese and Chinese soldiers and civilians from a previous war have been interred.\n\nMany protesters are demonstrating against the Vice Minister's visit to the memorial.  Security is of the utmost concern in this matter.  That's where Section 9 comes into the picture...",
+      "airdate": "2003-01-28",
+      "markers": [],
+      "external_id": "9988"
+    },
+    {
+      "n": 19,
+      "title": "Captivated",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9989/original.jpg",
+      "synopsis": "Recently, there have been numerous kidnappings which resemble the modus operandi of the Northern Territories Mafia.  Aramaki and his team have been called in by the Prime Minister.\n\nIronically, the request to investigate the matter has come from the former Prime Minister of Japan, whose own daughter has been kidnapped by the Mafia.  During his time as Head of Government, he had denied that the group ever existed.  Delving further into the matter, Public Security discovers rumors that the abductors are harvesting organs and cyberbrains from the kidnapped children and selling them on the black market.",
+      "airdate": "2003-02-04",
+      "markers": [],
+      "external_id": "9989"
+    },
+    {
+      "n": 20,
+      "title": "Re-View",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9990/original.jpg",
+      "synopsis": "Back on the Laughing Man case, Section 9 tries to find evidence of tampering in the Nanao=A case and delves more into the recent hack job at the Ministry of Health, Labour and Welfare (\"PORTRAITZ\"). Using J.D. Salinger's The Catcher in the Rye as a guide, Togusa checks out the MHLW and finds that something is missing: a ledger containing a list of vaccine recipients.",
+      "airdate": "2003-02-11",
+      "markers": [],
+      "external_id": "9990"
+    },
+    {
+      "n": 21,
+      "title": "Eraser",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9991/original.jpg",
+      "synopsis": "Following the events of the \"RE-VIEW\", Togusa has been rushed to the hospital.  Just before he goes into surgery, he passes what he has learned to the rest of his team.\n\nAs he fights for his life, his colleagues at Section 9 take over the case to find the vaccine recipient ledger and the person responsible for taking it.  However, others in the government are not happy about this investigation.  The Drug and Narcotic Suppression Squad, the same unit that had shot Togusa in the previous episode, is again dispatched by the Ministry of Health, Labour, and Welfare in order to find the thief and the ledger before Section 9 does.",
+      "airdate": "2003-02-18",
+      "markers": [],
+      "external_id": "9991"
+    },
+    {
+      "n": 22,
+      "title": "Scandal",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9992/original.jpg",
+      "synopsis": "Events begin to shift into overdrive after the events of \"ERASER\".  While things seem to be going Section 9's way, people in the shadows are starting to appear.\n\nAs Motoko, accompanied by her friend Kurutan, arrives at the hospital to switch to a new prosthetic body, Togusa begins the recovery process after being wounded by the DEA's NARC Squad.  However, the people still active within the NARC Squad have a few more surprises in store.",
+      "airdate": "2003-02-25",
+      "markers": [],
+      "external_id": "9992"
+    },
+    {
+      "n": 23,
+      "title": "Equinox",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9993/original.jpg",
+      "synopsis": "The Laughing Man returns and, just as he did six years ago, kidnaps the President of Serano Genomics without being detected.  Section 9 arrives too late and sets out to find him.\n\nMeanwhile, the Laughing Man and Mr. Serano discuss what happened six years ago.  The stakes are much higher this time, and for the Laughing Man failure is not an option.",
+      "airdate": "2003-03-04",
+      "markers": [],
+      "external_id": "9993"
+    },
+    {
+      "n": 24,
+      "title": "Annihilation",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9994/original.jpg",
+      "synopsis": "Togusa, at the request of Chief Aramaki, returns to work.  Both head out to the Prime Minister's residence with a detailed report citing Secretary-General Yakushima as the real power behind the Laughing Man Incident.\n\nHowever, before they can even leave their own building, they are told by the Minister of Home Affairs that Public Security has already been accused of being the masterminds behind the Laughing Man.  The situation has gone from bad to worse and it will take a concerted effort by all of its members for Section 9 to clear itself of the charges.",
+      "airdate": "2003-03-11",
+      "markers": [],
+      "external_id": "9994"
+    },
+    {
+      "n": 25,
+      "title": "Barrage",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9995/original.jpg",
+      "synopsis": "As the JMSDF's Special Forces Unit rounds up the remaining members of Section 9, Daisuke Aramaki meets with the Minister of Justice to make one last appeal to the government to salvage his team.\n\nSection 9 may be down, but certainly not out.  They have help in the form of their \"think-tanks\", otherwise known as the Tachikomas.  Public Security will make one final push to save itself from extinction.",
+      "airdate": "2003-03-18",
+      "markers": [],
+      "external_id": "9995"
+    },
+    {
+      "n": 26,
+      "title": "Stand Alone Complex",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/9996/original.jpg",
+      "synopsis": "Togusa has been released from jail, but his badge and gun are confiscated and he is given papers showing the dissolution of Section 9.  Out of work and depressed, he tries to find information on the others, but turns up nothing.\n\nTrying to turn his life around, he begins to look for a new job, only to be sidetracked by the ongoing case against Secretary-General Yakushima involving the illegal use of micromachines.  With the news plastered everywhere, Togusa cannot help but wonder where he stands now.",
+      "airdate": "2003-03-25",
+      "markers": [],
+      "external_id": "9996"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Christmas in the Silent Forest",
+      "artist": "Ilaria Graziano [HDTV broadcast]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "sniper",
+      "artist": "Ilaria Graziano [HDTV broadcast]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "player",
+      "artist": "Origa with Heartsdales",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "date of rebirth",
+      "artist": "Origa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "CHRisTmas in the SiLenT ForeSt",
+      "artist": "Ilaria Graziano",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Inner Universe",
+      "artist": "Origa",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lithium Flower",
+      "artist": "Scott Matthew",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Rise",
+      "artist": "Origa",
+      "episodes": "27-52"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Living Inside the Shell",
+      "artist": "Steve Conte",
+      "episodes": "27-52"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Rise",
+      "artist": "Origa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Christmas in the Silent Forest",
+      "artist": "Ilaria Graziano",
+      "episodes": "26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Get9 (rerun OP)",
+      "artist": "Jillmax",
+      "episodes": "01-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "I Do (rerun ED)",
+      "artist": "Ilaria Graziano",
+      "episodes": "01-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Christmas in the Silent Forest",
+      "artist": "Ilaria Graziano",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "I Can't Be Cool",
+      "artist": "Ilaria Graziano",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

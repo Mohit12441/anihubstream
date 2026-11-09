@@ -1,0 +1,65 @@
+{
+  "id": "evangelion-1-0-you-are-not-alone",
+  "title": "Evangelion: 1.0 You Are (Not) Alone",
+  "native": "ヱヴァンゲリヲン新劇場版:序",
+  "year": 2007,
+  "rating": 7.8,
+  "season": "Summer 2007",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2759-S0ATamQtDwlW.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2759-S0ATamQtDwlW.jpg",
+  "accent": "#e4c9a1",
+  "synopsis": "After the second impact, all that remains of Japan is Tokyo-3, a city that's being attacked by giant creatures that seek to eradicate the human kind, called Angels. After not seeing his father for more than eight years, Shinji Ikari receives a phone call in which he is told to urgently come to the NERV Headquarters, an organization that deals with the destruction of the Angels through the use of giant mechs called Evas. Shinji's objective is to pilot the Eva Unit 01 while teaming up with the Eva Unit 00 pilot, Ayanami Rei.\n\nNote: Exists in several versions, as denoted by the version number:\n\n• 1.0: Sep 1, 2007 - Original theatrical release\n\n• 1.01: Apr 25, 2008 - DVD release containing minor adjustments and fine tunings in picture, editing, and sound quality.\n\n • Explanation of Evangelion 1.01 - Included with the special edition DVD release of 1.01, overlays large captions to provide the \"official designations\" of people, locations, weapons, technology, and so forth.\n\n• 1.11: May 27, 2009 - Blu-ray/DVD re-release with 3 minutes of new animation added to the first 15 minutes and fixing video issues present in the previous release.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Evangelion: 2.0 You Can (Not) Advance (2009)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 2519,
+    "anilist": 2759,
+    "mal": 2759
+  },
+  "skip_key_id": 2759,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 09:43:34",
+  "search_text": "evangelion 1 0 you are not alone ヱウ ァンケ リヲン新劇場版 序 movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Evangelion: 1.0 You Are (Not) Alone (Movie)",
+      "runtime": "100:00",
+      "runtime_seconds": 6000,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2759-S0ATamQtDwlW.jpg",
+      "synopsis": "After the second impact, all that remains of Japan is Tokyo-3, a city that's being attacked by giant creatures that seek to eradicate the human kind, called Angels. After not seeing his father for more than eight years, Shinji Ikari receives a phone call in which he is told to urgently come to the NERV Headquarters, an organization that deals with the destruction of the Angels through the use of giant mechs called Evas. Shinji's objective is to pilot the Eva Unit 01 while teaming up with the Eva Unit 00 pilot, Ayanami Rei.\n\nNote: Exists in several versions, as denoted by the version number:\n\n• 1.0: Sep 1, 2007 - Original theatrical release\n\n• 1.01: Apr 25, 2008 - DVD release containing minor adjustments and fine tunings in picture, editing, and sound quality.\n\n • Explanation of Evangelion 1.01 - Included with the special edition DVD release of 1.01, overlays large captions to provide the \"official designations\" of people, locations, weapons, technology, and so forth.\n\n• 1.11: May 27, 2009 - Blu-ray/DVD re-release with 3 minutes of new animation added to the first 15 minutes and fixing video issues present in the previous release.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "42648"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Beautiful World",
+      "artist": "Hikaru Utada",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

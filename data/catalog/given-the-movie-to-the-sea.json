@@ -1,0 +1,55 @@
+{
+  "id": "given-the-movie-to-the-sea",
+  "title": "given The Movie: To the Sea",
+  "native": "ギヴン 海へ",
+  "year": 2024,
+  "rating": 8.4,
+  "season": "Summer 2024",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx175199-WxlBkrVGK8Fg.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx175199-WxlBkrVGK8Fg.jpg",
+  "accent": "#6baed6",
+  "synopsis": "After a chance encounter with the singer Mafuyu Sato, Ritsuka Uenoyama’s passion for music was reignited. Their band, Given, is on the path to greatness just as Mafuyu begins to question if he should be the group’s singer. After declining Ritsuka’s invitation to a concert in Shibuya, Mafuyu runs into an old friend. Could this be the sign Mafuyu needs to step up to the microphone once more?\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "given-the-movie:-to-the-sea-ukjz7i",
+    "mal": 58222,
+    "anilist": 175199,
+    "kitsu": 48571
+  },
+  "skip_key_id": 58222,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "given the movie to the sea キ ウ ン 海へ movie finished",
+  "genres": [
+    "drama",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "given The Movie: To the Sea",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a3d40cc2eab1e5100ded202-poster.jpg",
+      "synopsis": "Sequel to <i>Given: Hiiragi mix</i>.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364483"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

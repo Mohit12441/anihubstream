@@ -1,0 +1,132 @@
+{
+  "id": "god-eater-reso-somehow-theatre",
+  "title": "GOD EATER Reso Nantoka Gekijou",
+  "native": "GOD EATER レゾなんとか劇場",
+  "year": 2018,
+  "rating": 5.1,
+  "season": "Spring 2018",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b110344-tXgTHr406pM9.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b110344-tXgTHr406pM9.jpg",
+  "accent": "#e4ae5d",
+  "synopsis": "Short anime inspired by the iOS and Android mobile game God Eater Resonant Ops.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "god-eater-reso-somehow-theatre-frh9j9",
+    "mal": 37265,
+    "anilist": 110344,
+    "kitsu": 42853
+  },
+  "skip_key_id": 37265,
+  "skip_key_space": "mal",
+  "episode_total": 8,
+  "added_at": null,
+  "search_text": "god eater reso nantoka gekijou god eater レソ なんとか劇場 ona finished",
+  "genres": [
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "272504"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "272505"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "272506"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "272507"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "272508"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "272509"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "272510"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "272511"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

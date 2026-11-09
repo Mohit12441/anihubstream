@@ -1,0 +1,66 @@
+{
+  "id": "food-wars-the-second-plate-ova",
+  "title": "Food Wars! The Second Plate OVA",
+  "native": "食戟のソーマ 弍ノ皿 OVA",
+  "year": 2017,
+  "rating": 7.3,
+  "season": "Year 2017",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98702-Ao74l33hWMDL.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/98702-NpPMWhr7yqkx.jpg",
+  "accent": "#ff1f4a",
+  "synopsis": "OVAs bundled with the 24th and 25th manga volumes of the Shokugeki no Souma manga.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "food-wars!-the-second-plate-ova-5m63yi",
+    "mal": 34480,
+    "anilist": 98702,
+    "kitsu": 13508
+  },
+  "skip_key_id": 34480,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "food wars the second plate ova 食戟のソーマ 弍ノ皿 ova",
+  "genres": [
+    "action",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Shuugetsu no Meguriai",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-01",
+      "markers": [],
+      "external_id": "200607"
+    },
+    {
+      "n": 2,
+      "title": "Tootsuki Jyuuketsu",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-07-04",
+      "markers": [],
+      "external_id": "200608"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,195 @@
+{
+  "id": "fate-kaleid-liner-prisma-illya-3rei",
+  "title": "Fate/kaleid liner Prisma☆Illya 3rei!!",
+  "native": "Fate/kaleid liner プリズマ☆イリヤ ドライ!!",
+  "year": 2016,
+  "rating": 7.5,
+  "season": "Summer 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/11438/medium.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21379-a3qpVhkekzks.jpg",
+  "accent": "#ff1f4a",
+  "synopsis": "Illya and the gang have finished their battle against the heroic spirit residing in the eighth class card. They're back in vacation mode again, looking to make the most of what they have left of summer break. But their hopes get crushed in the blink of an eye. An all-too-unrealistic silhouette appears before them when they go to investigate the strange event at Mount Enzou. After a short skirmish, the entire space ends up being warped. Illya wakes up in a wintry Fuyuki City... in a parallel world. This is the world where Miyu was born and raised. (Source: ANN)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Fate/kaleid liner Prisma☆Illya 2wei! Herz! (2015)",
+    "Fate/kaleid liner Prisma☆Illya: Vow in the Snow (2017)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11438,
+    "anilist": 21379,
+    "mal": 31706
+  },
+  "skip_key_id": 31706,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-11-06 15:06:52",
+  "search_text": "fate kaleid liner prisma illya 3rei fate kaleid liner フ リス マ イリヤ ト ライ tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "City Fading to Silver",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Illya's fun summer break comes to a sudden end. The aftermath of their battle against the Heroic Spirit of the 8th Class Card disappeared overnight from Mt. Enzou. Their suspicions aroused, Illya and the others race to the scene, where they encounter two mysterious women who say they've come to retrieve Miyu... After a fierce battle, they're all bathed in a mysterious light. Afterwards, Illya wakes up to a midwinter Fuyuki City?!",
+      "airdate": "2016-07-06",
+      "markers": [],
+      "external_id": "187310"
+    },
+    {
+      "n": 2,
+      "title": "Encounters and Reunions",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "One of Ainswoth's dolls, Beatrice, attacks Illya and the mysterious girl, Tanaka. Both are driven into a corner by her overwhelming strength. Just as they run out of options, someone calls Beatrice back, freeing them from their peril. Afterwards, they both fall victim to hunger and a suspicious ramen shop owner gets them into an even worse crisis—they don't have money to pay him! But the one who saves them from those straits is who you'd least expect.",
+      "airdate": "2016-07-13",
+      "markers": [],
+      "external_id": "187311"
+    },
+    {
+      "n": 3,
+      "title": "Your True Enemy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Led by Gil, Illya and Tanaka successfully infiltrate the Ainsworth mansion. Their goal is the room where Miyu's held captive, but standing in their way is Beatrice and Angelica. When she's driven into a corner, Illya manages to reunite with Magical Ruby, regaining her power as a magical girl, and taking a stand to save Miyu!",
+      "airdate": "2016-07-20",
+      "markers": [],
+      "external_id": "187312"
+    },
+    {
+      "n": 4,
+      "title": "For My Weak Little Sister",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Thanks to sniping from Kuro, Illya's group managed to slip away from Beatrice and retreat from the Ainsworth mansion for the time being. Then they try to regroup at the school building Bazett and Kuro and have been using as their base. However, Illya couldn't figure out a way to counter their Cards: Archer (Gilgamesh), and Berserker (God of Thunder, Thor), leaving her dejected. Seeing her like that, Kuro suddenly turns her twin swords at Illya and attacks?!",
+      "airdate": "2016-07-27",
+      "markers": [],
+      "external_id": "187313"
+    },
+    {
+      "n": 5,
+      "title": "The Little Lady Attacks",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Bazett's barrier was supposed to prevent surprise attacks from the dolls, however Illya finds a little girl, Erica, sneaking into their school. For some reason Erica calls Illya \"Oneechan,\" and the two of them quickly hit it off. Meanwhile, a man claiming to be Erica's father appears. He seems kind at first glance, and while he came to pick up Erica, he's also...?!",
+      "airdate": "2016-08-03",
+      "markers": [],
+      "external_id": "187314"
+    },
+    {
+      "n": 6,
+      "title": "Chilling Hostility",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The man who came to pick up Erica proclaims himself as Darius, head of the Ainsworths and Miyu's kidnapper. Using his great power Darius activates an ice-barrier Noble Phantasm. Even with Kuro's Caladbolg, their attempts to break the barrier barely scratch it while Darius delivers a shocking statement to Illya!",
+      "airdate": "2016-08-10",
+      "markers": [],
+      "external_id": "187315"
+    },
+    {
+      "n": 7,
+      "title": "Dolls and Stuffed Animals",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Illya has been kidnapped and taken to the dungeon of the Ainsworths' mansion. Erica wants to grant Miyu's wish to be with Illya, so she swaps Illya's mind into a stuffed bear. Thanks to her willpower and imagination Illya manages to gain the freedom to move, but when she starts searching the mansion for her body, Beatrice discovers her...",
+      "airdate": "2016-08-17",
+      "markers": [],
+      "external_id": "187316"
+    },
+    {
+      "n": 8,
+      "title": "People and Tools",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "With Sapphire in hand, Illya transforms into a magical girl while still a stuffed bear. Her fierce battle with Rin and Luvia, whose minds have been replaced, leads them all to the bedroom occupied by Erica and Angelica. After regaining her original body, Illya continues to fight Angelica and learns the hidden truth about Miyu.",
+      "airdate": "2016-08-24",
+      "markers": [],
+      "external_id": "187317"
+    },
+    {
+      "n": 9,
+      "title": "Illya's Choice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Sacrifice Miyu and save the world... The Ainsworths' true objective is to use Miyu, the Holy Grail, to save all mankind. The new turn of events sends Illya into confusion. Kuro rushes to her aid, immediately saying she values Miyu more than some parallel world. Meanwhile, with the fate of a world and Miyu hanging in the balance, Illya struggles to find her answer...",
+      "airdate": "2016-08-31",
+      "markers": [],
+      "external_id": "187318"
+    },
+    {
+      "n": 10,
+      "title": "To the Princess's Side",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "\"I'll save both Miyu and the world!!\" But for Illya to realize that wish of hers, she'll have to first rescue Miyu from the Ainsworths' clutches. While Illya is forced to face a fierce battle, Gil and Bazett appear out of hiding to overturn their disadvantages. At long last, Illya's reunion with Miyu draws close!",
+      "airdate": "2016-09-07",
+      "markers": [],
+      "external_id": "187319"
+    },
+    {
+      "n": 11,
+      "title": "You Are Not Alone",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The battle heats up as Julian's magic comes undone and he threatens Miyu's friends with a horde of Heroic Spirits pouring out of a mysterious, black cube! Emiya Shirou, Miyu's older brother, rises to the occasion after his rescue, fighting alongside Kuro to break past Angelica and face Julian! But his charge is stopped by... someone new? And what does Gil realize during their battle?",
+      "airdate": "2016-09-14",
+      "markers": [],
+      "external_id": "187320"
+    },
+    {
+      "n": 12,
+      "title": "Woven Miracles",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "2016-09-21",
+      "markers": [],
+      "external_id": "187321"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Asterism",
+      "artist": "ChouCho",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "WHIMSICAL WAYWARD WISH",
+      "artist": "TECHNOBOYS PULCRAFT GREEN-FUND feat. Yumeha Kōda",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

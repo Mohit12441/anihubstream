@@ -1,0 +1,63 @@
+{
+  "id": "initial-d-legend-1-awakening",
+  "title": "Initial D Legend 1: Awakening",
+  "native": "新劇場版 頭文字[イニシャル]D Legend1-覚醒-",
+  "year": 2014,
+  "rating": 7.5,
+  "season": "Summer 2014",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20842.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20842.jpg",
+  "accent": "#c9bb50",
+  "synopsis": "Koichiro of the Akina Speedstars witnesses a mysterious driver outmaneuver rival Keisuke of the Akagi RedSuns. The race, he later discovers, was won by none other than his own co-worker, Takumi. What happens next is the stuff of street racing legend!\n\n(Source: HIDIVE)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "initial-d-legend-1-awakening-hptqca",
+    "mal": 19613,
+    "anilist": 20842,
+    "kitsu": 7906
+  },
+  "skip_key_id": 19613,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "initial d legend 1 awakening 新劇場版 頭文字 イニシャル d legend1 覚醒 movie finished",
+  "genres": [
+    "action",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Initial D Legend 1 Awakening (Movie)",
+      "runtime": "62:00",
+      "runtime_seconds": 3720,
+      "thumb": "https://animehot.cc/storage/media/2026/09/691199791a8ff5f7cb1f9165-landscape.webp",
+      "synopsis": "One foggy morning, a black and white Toyota AE86 flies past Keisuke Takahashi's Mazda RX7 on Mount Akina, making him believe he has seen the ghost of a racer who died on the mountain. Resolving to defeat this phantom, Keisuke mobilizes the Akagi Red Suns to take on the local Akina Speed Stars racing team in an exchange race. He anticipates that the competition will lure the elusive \"Ghost of Akina\" out into the open and give him the opportunity to exact revenge for his previous defeat. \n\nWhile his friend Itsuki Takeuchi is obsessed with cars and racing, Takumi Fujiwara is not. He fails to understand the \"rush\" that racers experience and any talk of cars reminds him of the tofu deliveries he makes for his father in an old AE86. His early morning routine takes him up and down Mount Akina, where he has memorized every hairpin, brake point, and turn better than anyone else. \n\nWhen the Akagi team appears one night to challenge the Speed Stars to an exchange race, they accept the challenge only to find out that they are completely outclassed. The only way the Speed Stars can stand a chance against them is if they can get the panda-colored AE86 to join their team. With a bit of coercion, Takumi takes the wheel of the AE86 and heads off to Mount Akina to defend the pride of all racers in Akina.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "110508"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "never fear",
+      "artist": "Ryūichi Kawamura",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

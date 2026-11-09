@@ -1,0 +1,345 @@
+{
+  "id": "dorohedoro",
+  "title": "Dorohedoro",
+  "native": "ドロヘドロ",
+  "year": 2020,
+  "rating": 7.9,
+  "season": "Winter 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx105228-I4xr84QS9Pvk.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105228-I4xr84QS9Pvk.jpg",
+  "accent": "#6b431a",
+  "synopsis": "The story revolves around Kaiman, who does not remember who he was before he was transfigured by a Magic user. This transformation left him with a reptile's head, and a desire to find out the truth about who he really is. Accompanied by Nikaido, his female companion, he tracks down Magic Users in \"The Hole\" and unceremoniously chomps down on their head, hoping to find out who it was that put him in this state. One by one, they witness this \"second man\" inside the head of Kaiman, and after pulling them back out of his mouth he asks them all a question... \"What did the guy inside my head say?\"",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Dorohedoro Season 2 (2026)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42040,
+    "anilist": 105228,
+    "mal": 38668,
+    "hianime": "dorohedoro-nk0oe7"
+  },
+  "skip_key_id": 38668,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 06:39:36",
+  "search_text": "dorohedoro ト ロヘト ロ tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy",
+    "horror",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "CAIMAN",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/272335/thumbnail/medium-78b5726b632f9826fa5ebcfce54ee7a4.jpeg",
+      "synopsis": "Apparently, an amnesiac guy whose head was turned into a lizard's by magic, and his friend Nikaido, are trying to catch the culprit. (Source: Crunchyroll)",
+      "airdate": "2020-01-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 144,
+          "end": 234
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1318,
+          "end": 1405
+        }
+      ],
+      "external_id": "272335"
+    },
+    {
+      "n": 2,
+      "title": "INSIDE THE GARBAGE BAG / A QUIET DINNER / MY NEIGHBOR THE SORCERER",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/272336/thumbnail/medium-63fe2b5a9d89c5453ac21071d60e3543.jpeg",
+      "synopsis": "The Sorcerer's World is led by a powerful sorcerer called En. Among them, the cleaners called Shin and Noi are big, strong, and scary. (Source: Crunchyroll)",
+      "airdate": "2020-01-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 69,
+          "end": 159
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1421
+        }
+      ],
+      "external_id": "272336"
+    },
+    {
+      "n": 3,
+      "title": "BATTLE OF DEATH AT DEPARTMENT STORE PLAZA",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/273647/thumbnail/medium-e49fba5ca72116367afe924929004c80.jpeg",
+      "synopsis": "In the Hole that Humans live, there's a super exciting event once a year that brings the dead back to life. (Source: Crunchyroll)",
+      "airdate": "2020-01-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 60,
+          "end": 148
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1412
+        }
+      ],
+      "external_id": "273647"
+    },
+    {
+      "n": 4,
+      "title": "ROAST DUCK WITH ASSORTED SORCERER / PLEASE ATTEND THE PARTY IN FORMAL ATTIRE / NEW YEAR'S EVE IN THE HOLE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/274022/thumbnail/medium-f06a6b78cc7b3123dd86ee081bd1cadb.jpeg",
+      "synopsis": "They used magic to make a doll of the other man mentioned by Lizard Guy to retrace the tracks. (Source: Crunchyroll)",
+      "airdate": "2020-02-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 50,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1412
+        }
+      ],
+      "external_id": "274022"
+    },
+    {
+      "n": 5,
+      "title": "CAIMAN IN WONDERLAND",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/274023/thumbnail/medium-5c83b704c12668920249d86f74004618.jpeg",
+      "synopsis": "To search for Risu, the other guy that Lizard Guy said, they've come to the sorcerer's world. En is interrogating Risu after he resurrected him. (Source: Crunchyroll)",
+      "airdate": "2020-02-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 63,
+          "end": 153
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1312,
+          "end": 1412
+        }
+      ],
+      "external_id": "274023"
+    },
+    {
+      "n": 6,
+      "title": "A MOUNTAIN OF IN SEASON MUSHROOMS / THE FIRST SMOKE / MANHOLE ELEGY",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/274024/thumbnail/medium-ee4e0b5d7ce792413b2b8a79eb94022b.jpeg",
+      "synopsis": "En snapped and got covered with mushrooms. Also, huge bugs come out in the sewage system. (Source: Crunchyroll)",
+      "airdate": "2020-02-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 74,
+          "end": 164
+        }
+      ],
+      "external_id": "274024"
+    },
+    {
+      "n": 7,
+      "title": "ALL-STAR DREAM PLAYOFFS",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/274025/thumbnail/medium-3421ef97512adc6676442d29dd323a6f.jpeg",
+      "synopsis": "Fujita and Ebisu went to the Hole, and they played baseball lightheartedly. (Source: Crunchyroll)",
+      "airdate": "2020-02-23",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1318,
+          "end": 1412
+        }
+      ],
+      "external_id": "274025"
+    },
+    {
+      "n": 8,
+      "title": "ALL-STAR DREAM PLAYOFFS / A FINE DAY FOR A FAREWELL / LA LA LA MONSTER BOY / A FINE DAY FOR A FAREWELL 2 / GLAM AND BAM / BLUE NIGHT LAND",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/274026/thumbnail/medium-2b38e8d550331dd016350680d0fdf1cc.jpeg",
+      "synopsis": "The Blue Night Festival for sorcerers to look for partners has begun. The penniless Lizard Guy seems to be job hunting as well. (Source: Crunchyroll)",
+      "airdate": "2020-03-01",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1409
+        }
+      ],
+      "external_id": "274026"
+    },
+    {
+      "n": 9,
+      "title": "OH, HANAKEMURI / WONDERFUL MEAT PIES / A RARE MUSHROOM APPEARS!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/274027/thumbnail/medium-c511d4786194370956015f6986d23517.jpeg",
+      "synopsis": "En seems to have noticed that Nikaido is a powerful sorcerer. (Source: Crunchyroll)",
+      "airdate": "2020-03-08",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1412
+        }
+      ],
+      "external_id": "274027"
+    },
+    {
+      "n": 10,
+      "title": "LONELY CAIMAN / NIGHTMARE BEFORE / SCARY SWEET BUNS",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/274028/thumbnail/medium-201d3de21025381d4c2a39e8d7fe72bb.jpeg",
+      "synopsis": "On the last day of the Blue Night Festival, En and Nikaido became partners. (Source: Crunchyroll)",
+      "airdate": "2020-03-15",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1412
+        }
+      ],
+      "external_id": "274028"
+    },
+    {
+      "n": 11,
+      "title": "THE BOSS / LET'S MEET AT THE FOOD STAND",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/274029/thumbnail/medium-c5c3bc24acf374db6006d01bd15d5215.jpeg",
+      "synopsis": "To take back Nikaido, Lizard Guy became \"Pieman\" to come into contact with En's Family. (Source: Crunchyroll)",
+      "airdate": "2020-03-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 46,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1318,
+          "end": 1413
+        }
+      ],
+      "external_id": "274029"
+    },
+    {
+      "n": 12,
+      "title": "MEMORIES OF SCHOOL DAYS / BOY MEETS GIRL = BATTLE! / A PROMISE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/274030/thumbnail/medium-8fc67a7ab2f43be46044d162b12a8301.jpeg",
+      "synopsis": "Lizard Guy and Nikaido are fighting fiercely, even though they were very close before. (Source: Crunchyroll)",
+      "airdate": "2020-03-29",
+      "markers": [],
+      "external_id": "274030"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Welcome to Chaos (Welcome トゥ 混沌)",
+      "artist": "[K]NoW_NAME:Ayaka Tachibana",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Who am I?",
+      "artist": "[K]NoW_NAME:Ayaka Tachibana & NIKIIE",
+      "episodes": "1-2,7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Night SURFING",
+      "artist": "[K]NoW_NAME:Ayaka Tachibana",
+      "episodes": "3-4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "D.D.D.D.",
+      "artist": "[K]NoW_NAME:NIKIIE",
+      "episodes": "5-6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Strange Meat Pie",
+      "artist": "[K]NoW_NAME:Ayaka Tachibana & NIKIIE",
+      "episodes": "8-9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "SECONDs FLY",
+      "artist": "[K]NoW_NAME:NIKIIE",
+      "episodes": "10-11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "404",
+      "artist": "[K]NoW_NAME:NIKIIE & AIJ",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,261 @@
+{
+  "id": "genshiken",
+  "title": "Genshiken",
+  "native": "げんしけん",
+  "year": 2004,
+  "rating": 7.4,
+  "season": "Fall 2004",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx240-YaEXxztQRFix.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx240-YaEXxztQRFix.jpg",
+  "accent": "#e4ae50",
+  "synopsis": "Sasahara Kanji is a college freshman who decides to join a student society to share his hidden thoughts on manga, anime and gaming.\n\nWhen he first visited Genshiken, short for \"Gendai Shikaku Bunka Kenkyuu Kai\" (Society for the Study of Modern Visual Culture), his groundless pride was destroyed by the plotting of Madarame, a sophomore student in Genshiken, but he still couldn't admit that he is an otaku.\n\nHowever, as he participates in society activities such as visiting dojin (private publishing) shops and anime festivals, and hangs out with other society members Kosaka (a hardcore otaku despite his extreme eccentricities and good looks), Kosaka's girlfriend Kasuga Saki (who isn't really an otaku), Ohno (a cosplayer) and the others, he opens his mind and resolves that he will make his way into the otaku world. With their help, Sasahara slowly adjusts to otaku life in Genshiken.\n\n(Source: AnimeNfo)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "genshiken-kad76g",
+    "mal": 240,
+    "anilist": 240,
+    "kitsu": 215
+  },
+  "skip_key_id": 240,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "genshiken け んしけん tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Study of the Modern Visually Oriented Culture",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5978/original.jpg",
+      "synopsis": "An introduction episode explaining how Kohsaka, Kasukabe and Sasahara got involved with Genshiken; after some uncertainty, Sasahara decides to fully participate in the club.",
+      "airdate": "2004-10-10",
+      "markers": [],
+      "external_id": "5978"
+    },
+    {
+      "n": 2,
+      "title": "Comparative Classification of the Modern Youth through Consumption and Entertainment",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5979/original.jpg",
+      "synopsis": "Genshiken takes Sasahara to Akihabara for dōjinshi shopping while Kohsaka and Kasukabe go to Harajuku for clothes; Kasukabe discovers Kohsaka's hentai collection and gets an introduction on the subject from the others.",
+      "airdate": "2004-10-17",
+      "markers": [],
+      "external_id": "5979"
+    },
+    {
+      "n": 3,
+      "title": "Problems and Merits of Local Culture Promotion",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5980/original.jpg",
+      "synopsis": "Genshiken goes on a club trip to Comifes, a large comic convention; Madarame seriously injures his hand, but pretends to be fine in the name of fandom until the pain becomes too great to bear.",
+      "airdate": "2004-10-24",
+      "markers": [],
+      "external_id": "5980"
+    },
+    {
+      "n": 4,
+      "title": "The Sublimating Effects of the Dissimulation Brought on Through Makeup and Costume on Mental Obstacles",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5981/original.jpg",
+      "synopsis": "Ohno is introduced as she joins Genshiken, while Genshiken takes part in a university club fair and Kasukabe's ex-boyfriend pays her a visit.",
+      "airdate": "2004-10-31",
+      "markers": [],
+      "external_id": "5981"
+    },
+    {
+      "n": 5,
+      "title": "Limits of Rejection and Reception as Observed in Autonomous Behaviour",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5982/original.jpg",
+      "synopsis": "Due to Genshiken's lack of \"activities\" as defined by the school, the club is threatened with closure; salvation comes from an unlikely source as Kasukabe intervenes personally.",
+      "airdate": "2004-11-07",
+      "markers": [],
+      "external_id": "5982"
+    },
+    {
+      "n": 6,
+      "title": "Theory of the Individual Outside the Boundaries of the Subculture",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5983/original.jpg",
+      "synopsis": "Kasukabe tries to make herself more appealing to Kohsaka by taking an interest in his hobbies by trying to learn how to play Puyo Pop Fever. Sasahara's sister Keiko also makes an appearance and calls on her brother for help.",
+      "airdate": "2004-11-14",
+      "markers": [],
+      "external_id": "5983"
+    },
+    {
+      "n": 7,
+      "title": "Aspects of Behavioral Selection in Interpersonal Relationships",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5984/original.jpg",
+      "synopsis": "Two freshmen take an interest in Genshiken and join them for a night out on the town. Kasukabe, however, has no intention of making them feel welcome.",
+      "airdate": "2004-11-21",
+      "markers": [],
+      "external_id": "5984"
+    },
+    {
+      "n": 8,
+      "title": "Comparative Research in Production Models and Processes",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5985/original.jpg",
+      "synopsis": "Ohno and Sasahara start a plamo project and get the whole club involved, while Kasukabe learns an important lesson.",
+      "airdate": "2004-11-28",
+      "markers": [],
+      "external_id": "5985"
+    },
+    {
+      "n": 9,
+      "title": "Concerning the Existence and Non-Existence of Explanatory Duties Under Specially Confined Circumstances",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5986/original.jpg",
+      "synopsis": "Madarame is stuck in the club room with Kasukabe and tries to strike up a conversation, running through different scenarios in his head which parody the visual novel format.",
+      "airdate": "2004-12-05",
+      "markers": [],
+      "external_id": "5986"
+    },
+    {
+      "n": 10,
+      "title": "Leisure Time Expenditures on Fetishism Considered as an Economic Result",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5987/original.jpg",
+      "synopsis": "The club, along with Keiko, pays a visit to the beach, much to the dismay of some of the members; Keiko decides to compete for Kohsaka's feelings and tries to become an otaku.",
+      "airdate": "2004-12-12",
+      "markers": [],
+      "external_id": "5987"
+    },
+    {
+      "n": 11,
+      "title": "The Theory of the Existence of Malice Within Urban Crimes",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5988/original.jpg",
+      "synopsis": "Kasukabe decides the club room needs a cleanup, but an accident causes Genshiken to be banned from the university fair. As an apology, Kasukabe takes Ohno's place in the fair's cosplay contest.",
+      "airdate": "2004-12-19",
+      "markers": [],
+      "external_id": "5988"
+    },
+    {
+      "n": 12,
+      "title": "Countermeasures for Issues that Arise during the Reorganization of a Group",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5989/original.jpg",
+      "synopsis": "The club is depressed due to their punishment of community service. Sasahara becomes the new President and proposes that the society attend Comifes as a circle.",
+      "airdate": "2004-12-26",
+      "markers": [],
+      "external_id": "5989"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Genshi, Joshi wa, Taiyo Datta",
+      "artist": "Sumire Uesaka",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aoku Yureteiru (アオくユレている)",
+      "artist": "Nozomi Yamamoto, Sumire Uesaka, Yumi Uchiyama & Ai Kakuma",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "disarm dreamer",
+      "artist": "Aki Misato",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Clubhouse Sandwich (クラブハウスサンド)",
+      "artist": "Yuumao",
+      "episodes": "1,2,4-6,8,10-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Seishun to shite",
+      "artist": "manzo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Biidama",
+      "artist": "Saori Atsumi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kujibiki Unbalance (くじびきアンバランス)",
+      "artist": "UNDER17",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Biidama (びいだま)",
+      "artist": "Saori Atsumi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Ai (あい)",
+      "artist": "Saori Atsumi",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "My Pace Daioh (マイペース大王)",
+      "artist": "manzo",
+      "episodes": "2-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Biidama (びいだま)",
+      "artist": "Saori Atsumi",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Clubhouse Sandwich (クラブハウスサンド) Instrumental Version",
+      "artist": "Yuumao",
+      "episodes": "9"
+    }
+  ],
+  "relations": []
+}

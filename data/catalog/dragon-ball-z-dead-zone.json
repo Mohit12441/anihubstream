@@ -1,0 +1,55 @@
+{
+  "id": "dragon-ball-z-dead-zone",
+  "title": "Dragon Ball Z: Dead Zone",
+  "native": "ドラゴンボールZ オラの悟飯をかえせッ!!",
+  "year": 1989,
+  "rating": 6.5,
+  "season": "Summer 1989",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/794/medium.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/894-E53wr4IIwNuJ.jpg",
+  "accent": "#2ee6a8",
+  "synopsis": "Kami-sama's old nemesis's son has come to exact revenge on Kami-sama for winning the title of Earth's Guardian. After kidnapping Son Gohan and using the dragon balls to gain immortality, he has a final showdown with Goku. (Source: ANN)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 794,
+    "anilist": 894,
+    "mal": 894
+  },
+  "skip_key_id": 894,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-11-06 17:21:51",
+  "search_text": "dragon ball z dead zone ト ラコ ンホ ールz オラの悟飯をかえせッ movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Dragon Ball Z: Dead Zone (Movie)",
+      "runtime": "41:00",
+      "runtime_seconds": 2460,
+      "thumb": "https://media.kitsu.app/anime/poster_images/794/medium.jpg",
+      "synopsis": "Kami-sama's old nemesis's son has come to exact revenge on Kami-sama for winning the title of Earth's Guardian. After kidnapping Son Gohan and using the dragon balls to gain immortality, he has a final showdown with Goku. (Source: ANN)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "16482"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

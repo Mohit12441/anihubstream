@@ -1,0 +1,55 @@
+{
+  "id": "future-boy-conan-movie",
+  "title": "Future Boy Conan Movie",
+  "native": "未来少年コナン (1979)",
+  "year": 1979,
+  "rating": 6.6,
+  "season": "Fall 1979",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx7308-71r9lfdAwke2.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx7308-71r9lfdAwke2.jpg",
+  "accent": "#d6351a",
+  "synopsis": "In the aftermath of a war fought by magnetic weapons which caused massive earthquakes, a young and spunky boy naned Conan gets involved in a grand adventure. Conan lives in a world that is mostly oceans; the major land masses having been destroyed by the weapons of the great war. He meets a young girl named Lana, and they eventually foil the plans of the city-state of Industria which wants to regain the lethal weapons.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "future-boy-conan-movie-bgwtoi",
+    "mal": 7308,
+    "anilist": 7308,
+    "kitsu": 4937
+  },
+  "skip_key_id": 7308,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "future boy conan movie 未来少年コナン 1979 movie finished",
+  "genres": [
+    "adventure",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Future Boy Conan Movie (Movie)",
+      "runtime": "122:00",
+      "runtime_seconds": 7320,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx7308-71r9lfdAwke2.jpg",
+      "synopsis": "In the aftermath of a war fought by magnetic weapons which caused massive earthquakes, a young and spunky boy naned Conan gets involved in a grand adventure. Conan lives in a world that is mostly oceans; the major land masses having been destroyed by the weapons of the great war. He meets a young girl named Lana, and they eventually foil the plans of the city-state of  Industria which wants to regain the lethal weapons.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "77837"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,153 @@
+{
+  "id": "haikyuu-ova",
+  "title": "Haikyuu!! Ningyou Anime",
+  "native": "ハイキュー!! 人形アニメ",
+  "year": 2020,
+  "rating": 6.6,
+  "season": "Winter 2020",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx115217-5Q8RImxnZc9a.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx115217-5Q8RImxnZc9a.png",
+  "accent": "#e4a15d",
+  "synopsis": "A stop-motion anime that will bundle with the 42nd compiled book volume of Haruichi Furudate's Haikyu!! manga. Anime will have 10 short episodes featuring the Karasuno team as puppets.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "haikyuu!!-(ova)-3hhfox",
+    "mal": 40372,
+    "anilist": 115217,
+    "kitsu": 42574
+  },
+  "skip_key_id": 40372,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": null,
+  "search_text": "haikyuu ningyou anime ハイキュー 人形アニメ ova finished",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269449"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269450"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269451"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269452"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269453"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269454"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269455"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269456"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269457"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "269458"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

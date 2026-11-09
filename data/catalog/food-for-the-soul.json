@@ -1,0 +1,191 @@
+{
+  "id": "food-for-the-soul",
+  "title": "Food for the Soul",
+  "native": "日々は過ぎれど飯うまし",
+  "year": 2025,
+  "rating": 7.7,
+  "season": "Spring 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx185939-hqt1He153el8.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx185939-hqt1He153el8.jpg",
+  "accent": "#f1ae1a",
+  "synopsis": "An original animation about the daily life of five girls who have just become university students.\n\nThey love delicious food, want to have lots of fun with everyone, and try their best to study, so they're enjoying university life to the fullest!\n\n(Source: Official Site, Translated)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "food-for-the-soul-tjlpmw",
+    "mal": 60658,
+    "anilist": 185939,
+    "kitsu": 49757
+  },
+  "skip_key_id": 60658,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "food for the soul 日々は過き れと 飯うまし tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Welcome to the Food Culture Research Club",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/fab275cdf298f372e7c8408a6817f44f1744475640_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381683"
+    },
+    {
+      "n": 2,
+      "title": "I Might Want to Cook",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/5c94f483c7b099968982100e3d8fba491745077437_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381684"
+    },
+    {
+      "n": 3,
+      "title": "My Money's Gone!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0e39ce3633b4adec9b13d6da1b0b74711745683114_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381685"
+    },
+    {
+      "n": 4,
+      "title": "This Is Nana Hoshi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/30197fcc74a7c60419baf4f35664b2441746288715_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381686"
+    },
+    {
+      "n": 5,
+      "title": "Want to Go for a Drive?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/098d8a92ced2ac6f961f3ff2407ec7cc1746889509_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381687"
+    },
+    {
+      "n": 6,
+      "title": "Could It Be I’ve Gained Some Weight?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a58c622035627477186516214e179f2f1747495395_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381688"
+    },
+    {
+      "n": 7,
+      "title": "I Don't Think I'll Ever Forget",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/dddb595b013332737c066b046f4f915f1748103494_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381689"
+    },
+    {
+      "n": 8,
+      "title": "The Air Conditioner Is... Broken?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c29273b4207556abccf1c288e93ec01f1748710039_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381690"
+    },
+    {
+      "n": 9,
+      "title": "Let's Try Running a Stall!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/5325f33185e738a703b8634b0c51c5e41749312566_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381691"
+    },
+    {
+      "n": 10,
+      "title": "I'm Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/71f49b0fc0996366fdaf7b3687c9f0151749917919_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381692"
+    },
+    {
+      "n": 11,
+      "title": "Are You Free for Christmas?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/76503871c3bc3265a517be363b8d3bfe1750522991_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381693"
+    },
+    {
+      "n": 12,
+      "title": "Thanks for the Feast!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/2d025e4d7993b2c6d68d4edec138d4261751126255_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "381694"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sonna Mon ne (そんなもんね)",
+      "artist": "asmi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Miso Soup to Butter (味噌汁とバター)",
+      "artist": "Reira Ushio",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

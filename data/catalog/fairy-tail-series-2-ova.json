@@ -1,0 +1,79 @@
+{
+  "id": "fairy-tail-series-2-ova",
+  "title": "FAIRY TAIL (2014) OVA",
+  "native": "FAIRY TAIL (2014) OVA",
+  "year": 2016,
+  "rating": 6.8,
+  "season": "Spring 2016",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx150078-jfy300H1VZDl.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx150078-jfy300H1VZDl.jpg",
+  "accent": "#e46b5d",
+  "synopsis": "OVAs bundled with special editions volumes of the manga.\n\n1. Yousei-tachi no Batsu Game\n\nDue to the bet they made during the Grand Magic Games, the time has finally come for Team Fairy Tail A and B to decide who will have the privilege to make the other team do whatever they desire, leading to a day's worth of antics from the two parties.\n\n2. Natsu vs. Mavis\n\nNatsu and Erza attempt to cheer up Marvis, who has been feeling down lately.\n\n3. Yousei-tachi no Christmas\n\nLucy holds a Christmas party for her friends.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fairy-tail-series-2-ova-p2jg0i",
+    "mal": 32930,
+    "anilist": 150078,
+    "kitsu": 12225
+  },
+  "skip_key_id": 32930,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "fairy tail 2014 ova fairy tail 2014 ova ova finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Fairies' Penalty Game",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "Returning to Magnolia Town and recovering their Guild's building, Team Fairy Tail A and B bicker over which team will have the privilege to make the other team do whatever they desire for an entire day, as per the bet they made on the first day of the Grand Magic Games.",
+      "airdate": "2016-05-17",
+      "markers": [],
+      "external_id": "186354"
+    },
+    {
+      "n": 2,
+      "title": "Natsu vs. Mavis",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "Some of the Fairy Tail members visit the hot springs for relaxation. Mavis joins the girls in their bath but reveals that she can only enjoy the atmosphere, not the qualities of the water. Erza calls over Natsu from the men's bath, causing the other girls to exit the bath in embarrassment, and tells him their problem. The Dragon Slayer immediately uses his Magic to drastically raise the temperature of the water, so much so that Mavis is finally able to experience the warmth to her great joy and excitement.",
+      "airdate": "2016-11-17",
+      "markers": [],
+      "external_id": "186355"
+    },
+    {
+      "n": 3,
+      "title": "Fairies' Christmas",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "Lucy's apartment becomes the venue for a Christmas party for some of her friends. But the celebration soon devolves into chaos as Erza forces the rest of the guild into playing the Guild Master's Game with her. Erza proves merciless as she orders her friends to perform embarrassing acts. Gray finally manages to avenge everybody and orders Erza to walk home naked at the end of the game. As she leaves the party, she runs into Jellal, who kindly covers her up and accompanies her home.",
+      "airdate": "2016-12-16",
+      "markers": [],
+      "external_id": "186356"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

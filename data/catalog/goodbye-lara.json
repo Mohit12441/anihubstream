@@ -1,0 +1,191 @@
+{
+  "id": "goodbye-lara",
+  "title": "Goodbye, Lara",
+  "native": "さよならララ",
+  "year": 2026,
+  "rating": 7.6,
+  "season": "Summer 2026",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/48880/poster_image/medium-cc9a3ce66feb4349020adc0846d524ce.jpeg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/177637-2Ok4Pq0SpvHp.jpg",
+  "accent": "#ff9420",
+  "synopsis": "Long, long ago, there lived a mermaid princess named Lara. She was raised with love by her father, the king of the sea, and her sisters. One day, Lara fell in love with a human prince who lived on land. It was a forbidden love—one that was not allowed in the world of mermaids. Still, Lara journeyed to the surface. With a potion given to her by the witch Grace, she became human. But the potion came at a cost—fail to find true love, and she would turn into foam and vanish into the ocean. Though she was a princess of the sea, Lara chose love. Yet, her wish went unfulfilled, and she vanished into the sea. Two hundred years later, Lara awakens once more, in Lake Biwa to finally search for her true love. All because of \"love\". (Source: Crunchyroll News, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 48880,
+    "anilist": 177637,
+    "mal": 58878
+  },
+  "skip_key_id": null,
+  "skip_key_space": null,
+  "episode_total": 12,
+  "added_at": "2026-11-06 17:42:01",
+  "search_text": "goodbye lara さよならララ tv finished",
+  "genres": [
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Mermaid Princess Lara",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/367932/thumbnail/medium-b42e010d82ec76e22aee3c2aed8f5fa8.jpeg",
+      "synopsis": "Grace, the banished witch, gives Lara, a mermaid princess, a potion that turns her into a human. (Source: Crunchyroll)",
+      "airdate": "2026-07-05",
+      "markers": [],
+      "external_id": "367932"
+    },
+    {
+      "n": 2,
+      "title": "Running Through Shiga",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/367933/thumbnail/medium-7b0800d0c7d96e5e8fbd4fbaa88306c4.jpeg",
+      "synopsis": "Lara wakes up in the human world in Shiga and encounters Grace in pet fish form, kept by Mari. (Source: Crunchyroll)",
+      "airdate": "2026-07-12",
+      "markers": [],
+      "external_id": "367933"
+    },
+    {
+      "n": 3,
+      "title": "Look Away and You Lose",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/367934/thumbnail/medium-b2726667502ab5b65d598239d0b585f0.jpeg",
+      "synopsis": "Lara is curious about \"school,\" and Mari fights her senior to participate in the next boxing tournament. (Source: Crunchyroll)",
+      "airdate": "2026-07-19",
+      "markers": [],
+      "external_id": "367934"
+    },
+    {
+      "n": 4,
+      "title": "The Princess and the Prince",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/367935/thumbnail/medium-1f8d6163ad18203ade9b5c59f7989c04.jpeg",
+      "synopsis": "Lara convinces Mari to take her to school and meets Himeka and asks her about her \"prince.\" (Source: Crunchyroll)",
+      "airdate": "2026-07-26",
+      "markers": [],
+      "external_id": "367935"
+    },
+    {
+      "n": 5,
+      "title": "I'm Willing to Die for Cake!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/367936/thumbnail/medium-4bed7e0210fb46e7a7a4ccbdb7190ca0.jpeg",
+      "synopsis": "Lara and Mari get hired at a bakery. Lara struggles with the pressures of the job and finding her prince. (Source: Crunchyroll)",
+      "airdate": "2026-08-02",
+      "markers": [],
+      "external_id": "367936"
+    },
+    {
+      "n": 6,
+      "title": "The Light That Shines on Me",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/367937/thumbnail/medium-71fd9fcbcc2f7ae41f976d47c51007ac.jpeg",
+      "synopsis": "Lisa's and Kota's past and how they became humans are revealed. (Source: Crunchyroll)",
+      "airdate": "2026-08-09",
+      "markers": [],
+      "external_id": "367937"
+    },
+    {
+      "n": 7,
+      "title": "Meet Me at Biwako Terrace Saturday at 10",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/367938/thumbnail/medium-050e275a92570b2e6bed9014a9887c90.jpeg",
+      "synopsis": "Lara encounters Luca, a boy who looks exactly like the prince she once loved. (Source: Crunchyroll)",
+      "airdate": "2026-08-16",
+      "markers": [],
+      "external_id": "367938"
+    },
+    {
+      "n": 8,
+      "title": "The Night of the Final Match",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/367939/thumbnail/medium-a4a5f20f7ddebdef3192a53ad5101522.jpeg",
+      "synopsis": "After 200 years, mermaid princess Lara awakens for one final chance at true love. (Souce: Crunchyroll)",
+      "airdate": "2026-08-23",
+      "markers": [],
+      "external_id": "367939"
+    },
+    {
+      "n": 9,
+      "title": "True Love",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/367940/thumbnail/medium-46686085573090f4c8707c98b7bb7d41.jpeg",
+      "synopsis": "Lara feels the pressure to find true love as the witch's magic is running out. Is Luca the one? (Source: Crunchyroll)",
+      "airdate": "2026-08-30",
+      "markers": [],
+      "external_id": "367940"
+    },
+    {
+      "n": 10,
+      "title": "The Princess with a Blade",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/367941/thumbnail/medium-d29d398eaaa7aa29981e4a17a8844b6c.jpeg",
+      "synopsis": "Lara's family starts to awaken as the witch's magic is lifted. They are desperate for Lara's light. (Source: Crunchyroll)",
+      "airdate": "2026-09-06",
+      "markers": [],
+      "external_id": "367941"
+    },
+    {
+      "n": 11,
+      "title": "Grace the Witch",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/367942/thumbnail/medium-d8703f3ffbc3ce148f936134cfe8f648.jpeg",
+      "synopsis": "Grace and twin sister Rigmor once shared a dream. But that dream leads Rowan to create a strict law. (Source: Crunchyroll)",
+      "airdate": "2026-09-13",
+      "markers": [],
+      "external_id": "367942"
+    },
+    {
+      "n": 12,
+      "title": "Goodbye, Lara",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/367943/thumbnail/medium-04405b5dff6046e5af7b5de44415d75f.jpeg",
+      "synopsis": "Lara must pierce the one she loves. The only one who comes to mind is Mari. (Source: Crunchyroll)",
+      "airdate": "2026-09-20",
+      "markers": [],
+      "external_id": "367943"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sayonara Lara (さよならララ)",
+      "artist": "Ikimono-gakari",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hearts Glow",
+      "artist": "Hana Hope",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

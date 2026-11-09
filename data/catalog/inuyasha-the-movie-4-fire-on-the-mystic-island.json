@@ -1,0 +1,66 @@
+{
+  "id": "inuyasha-the-movie-4-fire-on-the-mystic-island",
+  "title": "InuYasha the Movie 4: Fire on the Mystic Island",
+  "native": "犬夜叉 紅蓮の蓬莱島",
+  "year": 2004,
+  "rating": 7.3,
+  "season": "Fall 2004",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx449-B9HGKZFh0wUC.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx449-B9HGKZFh0wUC.jpg",
+  "accent": "#e45d35",
+  "synopsis": "The mysterious island of Houraijima has reappeared after 50 years, and with its reappearance has brought the attack of four gods, the Shitoushin, who have their eyes set on the powers that protect and sustain the island. Now it's up to Inuyasha and his friends, along with Sesshoumaru, to find a way to defeat the powerful Shitoushin.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "inuyasha-the-movie-4:-fire-on-the-mystic-island-rky4cu",
+    "mal": 449,
+    "anilist": 449,
+    "kitsu": 412
+  },
+  "skip_key_id": 449,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "inuyasha the movie 4 fire on the mystic island 犬夜叉 紅蓮の蓬莱島 movie finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "InuYasha the Movie 4: Fire on the Mystic Island (Movie)",
+      "runtime": "88:00",
+      "runtime_seconds": 5280,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx449-B9HGKZFh0wUC.jpg",
+      "synopsis": "The mysterious island of Houraijima has reappeared after 50 years, and with its reappearance has brought the attack of four gods, the Shitoushin, who have their eyes set on the powers that protect and sustain the island. Now it's up to Inuyasha and his friends, along with Sesshoumaru, to find a way to defeat the powerful Shitoushin.\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "9851"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rakuen(Paradise)",
+      "artist": "Do as Infinity",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

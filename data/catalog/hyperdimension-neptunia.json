@@ -1,0 +1,179 @@
+{
+  "id": "hyperdimension-neptunia",
+  "title": "Hyperdimension Neptunia",
+  "native": "超次元ゲイム ネプテューヌ THE ANIMATION",
+  "year": 2013,
+  "rating": 6.8,
+  "season": "Summer 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/7379/medium.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n16157-d2N5AX8LEpRe.jpg",
+  "accent": "#24d3ee",
+  "synopsis": "After years of fruitless war between the four realms of Gamindustri (Planeptune, Lastation, Lowee and Leanbox) over Share energy, the source of their strength based on how much their people have faith in their goddesses, the four CPUs that rule over them have finally signed a friendship treaty. The treaty bans any attempt at claiming Share energy through military force, in hopes of bringing peace and prosperity to their worlds. Yet, a month after the treaty, Neptune, the CPU Goddess of Planeptune, spends her time goofing off and playing games rather than doing her job, leaving her land's Shares plummeting. Choujigen Game Neptune The Animation follows Neptune and her friends' attempts at raising Shares, while dealing with an external threat that could spell the end of both the Goddesses and Gamindustri itself...",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Hyperdimension Neptunia: The Eternity (True Ending) Promised (2014)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7379,
+    "anilist": 16157,
+    "mal": 16157
+  },
+  "skip_key_id": 16157,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-11-06 10:33:36",
+  "search_text": "hyperdimension neptunia 超次元ケ イム ネフ テューヌ the animation tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "sci-fi",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Goddess (Neptune) of Planeptune",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109050/original.jpg",
+      "synopsis": "After long years of war, peace has finally come to Gamindustri. As usual, though, the goddess of Planeptune is a little TOO peaceful--gaming is so much more fun than running a country! With the Console Wars over, will the next war be Neptune vs. inertia?!",
+      "airdate": "2013-07-12",
+      "markers": [],
+      "external_id": "109050"
+    },
+    {
+      "n": 2,
+      "title": "The Terrorist (Lickorrist) of Lowee",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109051/original.jpg",
+      "synopsis": "A day at the amusement park takes a sinister turn when two (mostly) innocent girls are kidnapped by a monster. And then a stranger with a camera crew barges into the Basilicom, and things kinda start to get weird.",
+      "airdate": "2013-07-19",
+      "markers": [],
+      "external_id": "109051"
+    },
+    {
+      "n": 3,
+      "title": "A Weekend (Girls' Night) in Leanbox",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109052/original.jpg",
+      "synopsis": "Vert offers to throw all the goddesses a party in Leanbox, but when they arrive, she's busy with another kind of party. Then, just as the celebration finally begins, the Basilicom staff reports a monster invasion that has all the CPUs leaping to action.",
+      "airdate": "2013-07-26",
+      "markers": [],
+      "external_id": "109052"
+    },
+    {
+      "n": 4,
+      "title": "The Resolve (Turn) of the Younger Sisters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109053/original.jpg",
+      "synopsis": "Nepgear, Uni, Rom, and Ram are instructed to go back home after their sisters' capture, but they can't bear to leave their families behind in danger. To get back their sisters, they'll have to learn how to transform into goddesses themselves.",
+      "airdate": "2013-08-02",
+      "markers": [],
+      "external_id": "109053"
+    },
+    {
+      "n": 5,
+      "title": "The Resonance (Limit Break) of the Goddesses",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109054/original.jpg",
+      "synopsis": "It's the little sisters to the rescue as Nepgear leads the charge against Arfoire's monsters. But with their older sisters sinking further into darkness every second, can they do anything in time to help?",
+      "airdate": "2013-08-09",
+      "markers": [],
+      "external_id": "109054"
+    },
+    {
+      "n": 6,
+      "title": "The Secret (Your-Eyes-Only) of Lastation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109055/original.jpg",
+      "synopsis": "Noire's up to something at night behind closed doors, and Uni's dying to know what it is. Luckily, she's got tech expert Nepgear to help her out. But as it turns out, Uni's not the only one interested in what Noire's doing...",
+      "airdate": "2013-08-16",
+      "markers": [],
+      "external_id": "109055"
+    },
+    {
+      "n": 7,
+      "title": "The Fruits (Deep Purple) of Revenge",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109056/original.jpg",
+      "synopsis": "The gang learns more about Plutia, and Neptune's very worst, most hated enemy appears.",
+      "airdate": "2013-08-23",
+      "markers": [],
+      "external_id": "109056"
+    },
+    {
+      "n": 8,
+      "title": "The Paradise (Island) Forbidden ...on Which People Will Do Things to Other People and Forget Wardrobe Malfunction Because There Might Even Be Some Tonguing and It`ll Be Like \"Oh No, Neptune Is So Embarrassed~~\"!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109057/original.jpg",
+      "synopsis": "The CPUs visit an adults-only island full of forbidden pleasures--for work reasons, of course.",
+      "airdate": "2013-08-30",
+      "markers": [],
+      "external_id": "109057"
+    },
+    {
+      "n": 9,
+      "title": "The Challenge (Rebellion) of Eden",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109058/original.jpg",
+      "synopsis": "Neptune's maybe having a tiny bit of trouble bouncing back, and Plutia's maybe getting a tiny bit irritated about it. Soon, though, Gamindustri finds itself facing a problem even bigger than Plutia's rage...",
+      "airdate": "2013-09-06",
+      "markers": [],
+      "external_id": "109058"
+    },
+    {
+      "n": 10,
+      "title": "The Battlefront (Conflict) of Oblivion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109059/original.jpg",
+      "synopsis": "Eden acts on its bold proclamation and invades Planeptune, but Neptune is too upset to fight, leaving Nepgear on her own. The other CPUs aren't able to run much interference, though, because they've got Eden problems of their own too.",
+      "airdate": "2013-09-13",
+      "markers": [],
+      "external_id": "109059"
+    },
+    {
+      "n": 11,
+      "title": "The Emissary (Aggressor) of Old",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109060/original.jpg",
+      "synopsis": "Planetune's share had skyrocketed due to stopping Eden's invasion. Neptune plan to hold a festival to celebrate the occasion. Planetune's rise has cause the other three nation's shares to drop, which made Noire, Vert and Blanc to decline invitation to the festival. Neptune was call to a forest by Blanc, where Blanc suddenly attack Neptune, accusing Planetune to have stolen her new shares. The attack was stopped by Rom and Ram, but Blanc threaten war. Neptune return to Planetune, only to find Rei Ryghts transformed into a Goddess and destroyed part of Planetune to recreate the ancient nation of Tari. Rei destroy Planetune's Basilicom in a show of power, also crippling Planetune's communication in the process, preventing any call for help.",
+      "airdate": "2013-09-20",
+      "markers": [],
+      "external_id": "109060"
+    },
+    {
+      "n": 12,
+      "title": "The Ties (Bitfrosts) to Tomorrow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109061/original.jpg",
+      "synopsis": "Neptune is overwhelm by Rei's power until reinforcement from the other 3 nations arrive. Rei reveal her goal was not to rule the world but to simply destroy it. The eight Goddesses worked together to destroy Tari and her super weapon. Rei is unfaze by the destruction and plan to self-destruct as another mean to destroy the world. The eight Goddesses surround Rei and join all their share energy together, ready to sacrifice themselves to stop the destruction. A tremendous blast occur, but the Goddesses were able to contain it. The eight Goddesses survived, but were all revert back to their human forms. Rei Ryghts also survived, and plan to use her remaining energy to kill at least the eight Goddesses. Just as Rei was ready to kill the Goddesses, Arfoire arrive and use the Anticrystals on Tari's share crystal, sealing Rei's power and saving the Goddesses. Several months later, at a ceremony to celebrate the completion of the new Planeptune Basilicom, Neptune announce the dissolve of the friendship treaty, stating they no longer need it because the Goddesses were now true comrades.",
+      "airdate": "2013-09-27",
+      "markers": [],
+      "external_id": "109061"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

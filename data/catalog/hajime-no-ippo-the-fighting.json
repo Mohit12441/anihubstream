@@ -1,0 +1,1645 @@
+{
+  "id": "hajime-no-ippo-the-fighting",
+  "title": "Hajime no Ippo: The Fighting!",
+  "native": "はじめの一歩 THE FIGHTING!",
+  "year": 2000,
+  "rating": 8.7,
+  "season": "Fall 2000",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx263-ivVyn9xAgwSZ.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx263-ivVyn9xAgwSZ.png",
+  "accent": "#f1935d",
+  "synopsis": "Makunouchi Ippo has been bullied his entire life. Constantly running errands and being beaten up by his classmates, Ippo has always dreamed of changing himself, but never has the passion to act upon it. One day, in the midst of yet another bullying, Ippo is saved by Takamura Mamoru, who happens to be a boxer. Ippo faints from his injuries and is brought to the Kamogawa boxing gym to recover. As he regains consciousness, he is awed and amazed at his new surroundings in the gym, though lacks confidence to attempt anything. Takamura places a photo of Ippo's classmate on a punching bag and forces him to punch it. It is only then that Ippo feels something stir inside him and eventually asks Takamura to train him in boxing. Thinking that Ippo does not have what it takes, Takamura gives him a task deemed impossible and gives him a one week time limit. With a sudden desire to get stronger, for himself and his hard working mother, Ippo trains relentlessly to accomplish the task within the time limit. Thus Ippo's journey to the top of the boxing world begins.",
+  "rank": null,
+  "trend_rank": 45,
+  "alt_seasons": [
+    "Hajime no Ippo: The Fighting! - Champion Road (2003)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 238,
+    "anilist": 263,
+    "mal": 263
+  },
+  "skip_key_id": 263,
+  "skip_key_space": "anilist",
+  "episode_total": 75,
+  "added_at": "2026-10-14 09:43:34",
+  "search_text": "hajime no ippo the fighting はし めの一歩 the fighting tv finished",
+  "genres": [
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The First Step",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6726/original.jpg",
+      "synopsis": "Ippo is a high school student who works full time at his mother's fishing though. Because of this, he gets bullied on by the kids at his school. That's when his life turns around, when a professional boxer happens to be jogging along the way, and introduces Ippo to the world of boxing.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "6726"
+    },
+    {
+      "n": 2,
+      "title": "Fruits of Labor",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6727/original.jpg",
+      "synopsis": "Ippo succeeds in catching 10 falling leaves, and is granted his first sparring session.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 5,
+          "end": 95,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "6727"
+    },
+    {
+      "n": 3,
+      "title": "Tears of Joy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6728/original.jpg",
+      "synopsis": "Ippo loses his first sparring session, but shows enough potential to be accepted into the gym.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 2,
+          "end": 92,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "6728"
+    },
+    {
+      "n": 4,
+      "title": "Shadow Boxing",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6729/original.jpg",
+      "synopsis": "Ippo practices shadow boxing.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "6729"
+    },
+    {
+      "n": 5,
+      "title": "Three Months to Counter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6730/original.jpg",
+      "synopsis": "Ippo trains for a rematch.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "6730"
+    },
+    {
+      "n": 6,
+      "title": "The Opening Bell of the Rematch",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6731/original.jpg",
+      "synopsis": "Ippo and Miyata face off in a rematch.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "6731"
+    },
+    {
+      "n": 7,
+      "title": "The Destructive Power of one Centimeter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6732/original.jpg",
+      "synopsis": "Ippo and Miyata are in the last round and Ippo does a short upercut to Miyata's chin, Miyara was knocked down and was unable to get up, Ippo wins the rematch.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "6732"
+    },
+    {
+      "n": 8,
+      "title": "Promise to Meet Again",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6733/original.jpg",
+      "synopsis": "Ippo trains with Takamura and discovers the hardship of pro boxing.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "6733"
+    },
+    {
+      "n": 9,
+      "title": "C Class License",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6734/original.jpg",
+      "synopsis": "Ippo takes the License Test and meets Mashiba.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "6734"
+    },
+    {
+      "n": 10,
+      "title": "Debut Match!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6735/original.jpg",
+      "synopsis": "Ippo and his opponent Yusuke train for Ippo's debut match.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "start": 1343,
+          "end": 1412,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "6735"
+    },
+    {
+      "n": 11,
+      "title": "Obsession for Victory",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6736/original.jpg",
+      "synopsis": "Ippo defeats Yusuke via K.O.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "6736"
+    },
+    {
+      "n": 12,
+      "title": "Becoming a Bully's Buddy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6737/original.jpg",
+      "synopsis": "Ippo fights and wins his second match via K.O.,After the fight he was befriended by Umezawa, his former bully.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "6737"
+    },
+    {
+      "n": 13,
+      "title": "The Eastern Japan Rookie Championship Tournament Begins",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6738/original.jpg",
+      "synopsis": "Ippo and his opponent Jason prepare for the first match of the Rookie King Tournament.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1349,
+          "end": 1380
+        }
+      ],
+      "external_id": "6738"
+    },
+    {
+      "n": 14,
+      "title": "Powerful Arms! Hook vs. Uppercut!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6739/original.jpg",
+      "synopsis": "Start of Ippo vs Jason match, both men exchange powerful punches but neither goes down.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 3,
+          "end": 93,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1355,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "6739"
+    },
+    {
+      "n": 15,
+      "title": "Test of Endurance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6740/original.jpg",
+      "synopsis": "Ippo defeats Jason via K.O. after a tough match.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 2,
+          "end": 92,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1366,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "6740"
+    },
+    {
+      "n": 16,
+      "title": "Anticipating a Fierce Fight",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6741/original.jpg",
+      "synopsis": "Ippo watches the fight videos of Kobashi and Hayami, his future opponents.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 4,
+          "end": 94,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1347,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "6741"
+    },
+    {
+      "n": 17,
+      "title": "Ippo on the Beach",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6742/original.jpg",
+      "synopsis": "Ippo joins Takamura, Kimura, and Aoki in a training camp near the beach.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 1,
+          "end": 91,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1347,
+          "end": 1421,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "6742"
+    },
+    {
+      "n": 18,
+      "title": "Clinch",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6743/original.jpg",
+      "synopsis": "Start of Ippo vs Kobashi match, Ippo is loosing by points because of Kobashi's strategy.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 1,
+          "end": 91,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1355,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "6743"
+    },
+    {
+      "n": 19,
+      "title": "K.O. Dream",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6744/original.jpg",
+      "synopsis": "Kobashi abandoned his strategy and looses the match to Ippo via K.O.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1352,
+          "end": 1380
+        }
+      ],
+      "external_id": "6744"
+    },
+    {
+      "n": 20,
+      "title": "The Threat of Shotgun",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6745/original.jpg",
+      "synopsis": "Takamura wins the Japanese Middleweight Championship belt, Ippo trains with Aoki to counter Hayami's Shotgun punch.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 1,
+          "end": 91,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "6745"
+    },
+    {
+      "n": 21,
+      "title": "The Way to Capture a Prodigy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6746/original.jpg",
+      "synopsis": "Start of Ippo vs Hayami fight, Hayami takes the advantage during the early rounds.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 1,
+          "end": 91,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1352,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "6746"
+    },
+    {
+      "n": 22,
+      "title": "Forward! Forward!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6747/original.jpg",
+      "synopsis": "Ippo defeats Hayami via K.O. Ippo's training with Aoki and Kimura's help Ippo win the match.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 1,
+          "end": 91,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1354,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "6747"
+    },
+    {
+      "n": 23,
+      "title": "The Other Semi-Final",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6748/original.jpg",
+      "synopsis": "Ippos day off. Miyata and Mashiba face off.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 5,
+          "end": 95,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1361,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "6748"
+    },
+    {
+      "n": 24,
+      "title": "To the Promised Place...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6749/original.jpg",
+      "synopsis": "Miyata and Mashiba continues to fight. Ippo is angred by the outcome.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 1,
+          "end": 91,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1345,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "6749"
+    },
+    {
+      "n": 25,
+      "title": "Grudges, Sorrows & Dreams",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6750/original.jpg",
+      "synopsis": "Ippo trains for Mashiba flicker jabs",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 8,
+          "end": 98
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1346,
+          "end": 1380
+        }
+      ],
+      "external_id": "6750"
+    },
+    {
+      "n": 26,
+      "title": "The Battle for Distance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6751/original.jpg",
+      "synopsis": "Ippo VS Mashiba Round 1",
+      "airdate": "2001-04-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 6,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1380
+        }
+      ],
+      "external_id": "6751"
+    },
+    {
+      "n": 27,
+      "title": "Death Match",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6752/original.jpg",
+      "synopsis": "Ippo VS Mashiba continues",
+      "airdate": "2001-04-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "6752"
+    },
+    {
+      "n": 28,
+      "title": "Victory or Defeat",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6753/original.jpg",
+      "synopsis": "Ippo defeats Mashiba for Rookie King of Eastren Japan.",
+      "airdate": "2001-04-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        }
+      ],
+      "external_id": "6753"
+    },
+    {
+      "n": 29,
+      "title": "Rocky of Naniwa",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6754/original.jpg",
+      "synopsis": "Sendo goes to Japan to meet Ippo and make him go to All Japan and gets a chance to spar with Takamura.",
+      "airdate": "2001-04-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1341,
+          "end": 1380
+        }
+      ],
+      "external_id": "6754"
+    },
+    {
+      "n": 30,
+      "title": "To Enemy Ground",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6755/original.jpg",
+      "synopsis": "Ippo learns how to heal his right fist and gets ready for the All Japan but something happens his powerful right punches!",
+      "airdate": "2001-05-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1347,
+          "end": 1380
+        }
+      ],
+      "external_id": "6755"
+    },
+    {
+      "n": 31,
+      "title": "Traces of Intense Battles",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6756/original.jpg",
+      "synopsis": "Episode 31 is a retrospective on the hope that managed Ippo championship. It is made in the form of a newspaper article commented and written Fuuji, journalist of the monthly \"boxing fan.\"",
+      "airdate": "2001-05-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        }
+      ],
+      "external_id": "6756"
+    },
+    {
+      "n": 32,
+      "title": "Throw Your Right!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6757/original.jpg",
+      "synopsis": "After two straight missed Ippo, the sparring match is abandoned. Meanwhile, Sendo, the great favorites of the match, continues to train. Just before the game, the pain in the fist Makunouchi have not disappeared, his orthopedic injects an anesthetic. The pain, however, can return at any time of the match, but Ippo is determined to face Sendo costs!",
+      "airdate": "2001-05-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1343,
+          "end": 1380
+        }
+      ],
+      "external_id": "6757"
+    },
+    {
+      "n": 33,
+      "title": "Smash Force",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6758/original.jpg",
+      "synopsis": "Makunouchi takes the smash improved Sendo, and crashed into the ropes, but do not fall! Alas, his legs tremble, Sendo and the opportunity to boost its smash. Ippo then chooses the combat body to body pure to prevent Sendo launched its smash, blow midway. Both boxers are equal forces in this area, and no stroke reaches its target.",
+      "airdate": "2001-05-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1343,
+          "end": 1380
+        }
+      ],
+      "external_id": "6758"
+    },
+    {
+      "n": 34,
+      "title": "The Rookie King",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6759/original.jpg",
+      "synopsis": "Sendo Makunouchi and continues to cast powerful blows to turn, but neither weakens, they are very determined !! But after a few moments, Sendo eventually take the lead, and pushes Ippo the ropes. Our hero then decides to fight back, he took advantage of a moment's respite to launch its right on Sendo, but he dodges and launches Smash Makunouchi that takes the brunt, then connects with an uppercut and a violent series Ippo preventing strokes to attack ...",
+      "airdate": "2001-05-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1360,
+          "end": 1380
+        }
+      ],
+      "external_id": "6759"
+    },
+    {
+      "n": 35,
+      "title": "The Continuing Journey",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6760/original.jpg",
+      "synopsis": "It is the day of graduation, Ippo has also obtained his. At his high school, he became The Star, Idol of all students. This awareness leads logically significant upsurge in new boxers Club Kamogawa, known mainly through Takamura, Aoki and Kimura. But most do not have the mind needed to make boxing, and quickly brought back to reality by Takamura which they all did make a fool of jogging. Only a poor fan Ippo Yamada, managed to keep up, somehow.",
+      "airdate": "2001-06-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        }
+      ],
+      "external_id": "6760"
+    },
+    {
+      "n": 36,
+      "title": "The Champ and I",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6761/original.jpg",
+      "synopsis": "Ippo finally meets the champion in its class, Eiji Date. The latter is there to comment on the evening's matches as a guest. It turns out that date and Takamura are old friends. It is then time fighting. Aoki and Kimura wins them narrowly, and ranks both 5 of their category. Takamura broke his opponent as usual. Ippo meanwhile, is ranked 10 ° in its class. A few days later, the right fist Ippo is healed and he immediately asked by Newest Eiji in person for a sparring.",
+      "airdate": "2001-06-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1347,
+          "end": 1380
+        }
+      ],
+      "external_id": "6761"
+    },
+    {
+      "n": 37,
+      "title": "A Thing to Strive For",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6762/original.jpg",
+      "synopsis": "Ippo gets to get up, the game resumes. Date returned, and hardly the match resumed, Ippo is again stuck in the ropes. Date then returns its corkscrew, trying to anticipate where Ippo Date will strike, and protects his body. But the blow-out date is very accurate and comes crashing right in the heart of Ippo. The latter is then locked again, and again takes the left of Date. Our young boxer collapses into the ring for the 2nd time. Date who just wanted to test this one, decided to no longer use and Sparring resumes ...",
+      "airdate": "2001-06-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1343,
+          "end": 1380
+        }
+      ],
+      "external_id": "6762"
+    },
+    {
+      "n": 38,
+      "title": "Two Rookies of the Year",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6763/original.jpg",
+      "synopsis": "Okita also control the blow that had allowed Date set down Ippo 2 times !! Ippo, panicked, took distance, and Okita feints put the uncomfortable, it can not predict its moves. Ippo then test to get closer, but is kept at bay by jabs Okita !! The latter took the lead thanks to its experience and managed to place all his shots !! He finally ends up stuck Ippo in the corner, what he expected from the beginning of the round, in order to launch its Corkscrew, once dreaded by Makunouchi !!!",
+      "airdate": "2001-06-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "6763"
+    },
+    {
+      "n": 39,
+      "title": "Challenge in a Foreign Land",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6764/original.jpg",
+      "synopsis": "In Thailand, Miyata a draw against a second-class boxer. Decision of the arbitrator although debatable, the Japanese are not welcome there, and Miyata seems to be the target of combatants wishing to earn points easily. But our young prodigy does not intend to scroll and accept a new challenge, against the wishes of his father, who would rather see it go up in the lightweight category. For Miyata, that change is impossible, it MUST NOT prevent Ippo, about dignity, he refused to flee the face of obstacles.",
+      "airdate": "2001-07-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1339,
+          "end": 1380
+        }
+      ],
+      "external_id": "6764"
+    },
+    {
+      "n": 40,
+      "title": "A Counter to Surpass All Counters",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6765/original.jpg",
+      "synopsis": "The boxing stadium tremble with excitement, the crowd goes wild and wants to see only one thing, the victory of Jimmy Sisfer, and the defeat of Ichiro Miyata ... While the gong is about sound, Payao and baby Chana brother are on their way to see one of the most beautiful game of the life Miyata. Back at the stadium Runpini, Miyata can only see the reputation of Jimmy Sisfer, while his father described the situation of the failed against Ichiro. Payao Chana and finally arrives at the stadium before the match is over.",
+      "airdate": "2001-07-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1342,
+          "end": 1380
+        }
+      ],
+      "external_id": "6765"
+    },
+    {
+      "n": 41,
+      "title": "Barf-michi's Big Fight",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6766/original.jpg",
+      "synopsis": "At sunset, While Ippo's mother prepares the material for fishing, it can hardly his training, sorry for being late to help his mother. The next day at Kamogawa club, while everybody is training, the coach delivers some news: Aoki and Kimura are registered in Class A tournament - a competition of the highest level. Ippo learns with astonishment that it is also registered for this tournament. But always with astonishment, Geromichi learns that he was included in Pro test.",
+      "airdate": "2001-07-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "6766"
+    },
+    {
+      "n": 42,
+      "title": "Sharing a Dream",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6767/original.jpg",
+      "synopsis": "Ippo thinks of quitting boxing",
+      "airdate": "2001-07-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "6767"
+    },
+    {
+      "n": 43,
+      "title": "The Speed Star",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6768/original.jpg",
+      "synopsis": "Ippo gets ready for his match against Saeki the Speed Star.",
+      "airdate": "2001-08-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "6768"
+    },
+    {
+      "n": 44,
+      "title": "Blind Spot in the Ring",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6769/original.jpg",
+      "synopsis": "Ippo fights Saeki.",
+      "airdate": "2001-08-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "6769"
+    },
+    {
+      "n": 45,
+      "title": "The White Fangs of the Wolf",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6770/original.jpg",
+      "synopsis": "Gero-michi leaves and has to move away.",
+      "airdate": "2001-08-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "6770"
+    },
+    {
+      "n": 46,
+      "title": "Be the Gazelle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6771/original.jpg",
+      "synopsis": "Aoki, Kimura &amp; Ippo train hard for their next match of the tournament class A. They linked together jogging, sparring and Shadow Boxing to be at their best. It is time for the semifinals of Aoki. The match was balanced, but the 4th round, Aoki is counter to \"the shot of the Frog\" and collapses in the ring. But he gets up, feint and then delivers a powerful one to two who puts his opponent down. The latter in turn reports to, and through a nice web ...",
+      "airdate": "2001-08-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        }
+      ],
+      "external_id": "6771"
+    },
+    {
+      "n": 47,
+      "title": "The Fighting Spirit Within",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6772/original.jpg",
+      "synopsis": "The tactics of the coach against Vorg is based on a succession of sudden melee after which the least enduring two boxers will drop his guard for breath. The victory Ippo so upon his endurance. He will have to work hard breathing and cardiovascular system. In order to have a chance, the coach must impose an extremely strong pace to Ippo. Because of that, a few days before the game, Ippo begins to think that it will not recover in time from his training.",
+      "airdate": "2001-08-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "6772"
+    },
+    {
+      "n": 48,
+      "title": "The Red Wolf",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6773/original.jpg",
+      "synopsis": "The match between Volg and Ippo begins.",
+      "airdate": "2001-09-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "6773"
+    },
+    {
+      "n": 49,
+      "title": "The Courage to Believe",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6774/original.jpg",
+      "synopsis": "Volg and Ippo continue to duke it out in a hard-fought and long battle.",
+      "airdate": "2001-09-19",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "6774"
+    },
+    {
+      "n": 50,
+      "title": "Something to Convey",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6775/original.jpg",
+      "synopsis": "The end of the Volg match.",
+      "airdate": "2001-09-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1380
+        }
+      ],
+      "external_id": "6775"
+    },
+    {
+      "n": 51,
+      "title": "The Group Date",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6776/original.jpg",
+      "synopsis": "Group date, literally. Ippo walks Mashiba's Kumi home.",
+      "airdate": "2001-10-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1349,
+          "end": 1380
+        }
+      ],
+      "external_id": "6776"
+    },
+    {
+      "n": 52,
+      "title": "The Challenger",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6777/original.jpg",
+      "synopsis": "Recap episode.",
+      "airdate": "2001-10-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        }
+      ],
+      "external_id": "6777"
+    },
+    {
+      "n": 53,
+      "title": "So That I Can Be Myself",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6778/original.jpg",
+      "synopsis": "Background episode for Date Eiji.",
+      "airdate": "2001-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1339,
+          "end": 1380
+        }
+      ],
+      "external_id": "6778"
+    },
+    {
+      "n": 54,
+      "title": "Fists of the Champ",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6779/original.jpg",
+      "synopsis": "\"The champions have special powers! \"That is what was said to Takamura Ippo before his defense of the title match. But after weight problems and a passage in a sauna that has significantly weakened, Takamura finds himself in trouble with his challenger Tamaki but still holds out and the gong sounds the end of the 1st round. The 2nd round barely begun, but Takamura load Tamaki is pushing his fitness is at its lowest, it is out of breath and roll with the punches of his opponent.",
+      "airdate": "2001-10-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "6779"
+    },
+    {
+      "n": 55,
+      "title": "The Japan Featherweight Title Match",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6780/original.jpg",
+      "synopsis": "The episode begins the day before the match for the title of Ippo, during training with mittens. But the latter is shortened, the coach looks ill. While Aoki asks Ippo to reach him, Kimura Takamura and Tomiko to make something interesting ... When the young boxer arrives, he learns that Tomiko will predict his future, but then refuses Takamura and Kimura are there to prevent him from leaving the coach then makes appearance and berates everyone !!!",
+      "airdate": "2001-10-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1339,
+          "end": 1380
+        }
+      ],
+      "external_id": "6780"
+    },
+    {
+      "n": 56,
+      "title": "The Power that Stands in the Way",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6781/original.jpg",
+      "synopsis": "During the break, Ippo is concerned, he has not had the sensation he usually hit when Date but his coach made him regain confidence in him. The beginning of the 3rd round is the perfect copy of the 2nd, shots exchanges and this time it's the date that takes advantage. But Ippo not allowed to do, Liver Blow launches and connects to a violent attack! Ippo but still has that feeling to touch and see in fact nothing Date Eiji swinging his head depending on the direction of the shot, a technique made to dissipate the power of the blows ...",
+      "airdate": "2001-11-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1380
+        }
+      ],
+      "external_id": "6781"
+    },
+    {
+      "n": 57,
+      "title": "Conclusion",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6782/original.jpg",
+      "synopsis": "\"What should I do?\". This is the question that arises while Ippo Date street shots, then he remembers that he told Takamura just give the maximum for this fight. It resumes and cons Date of overkill shot! Champion legs no longer obey him and Ippo launches a huge live date but with its iron will narrowly dodge and 4th round ends. No one in the audience knows what will happen, not even the defending champion of average weight Takamura Mamoru.",
+      "airdate": "2001-11-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1344,
+          "end": 1380
+        }
+      ],
+      "external_id": "6782"
+    },
+    {
+      "n": 58,
+      "title": "Heartbroken",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6783/original.jpg",
+      "synopsis": "While the coach Okita Date and congratulated the champion, Ippo wishes to thank for this game then goes on a stretcher to applause from the audience ... We then see Takeshi Sendo raging against Ippo! He thought that he would win and would give him a match demand, but he realizes that there are now two people above him. Vorg then appeared, both boxers are actually in the same situation, they want to take their revenge on Makunouchi!",
+      "airdate": "2001-11-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1380
+        }
+      ],
+      "external_id": "6783"
+    },
+    {
+      "n": 59,
+      "title": "Look of Determination",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6784/original.jpg",
+      "synopsis": "The match between Sendou Takeshi and Volg Zangief starts.",
+      "airdate": "2001-11-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1334,
+          "end": 1380
+        }
+      ],
+      "external_id": "6784"
+    },
+    {
+      "n": 60,
+      "title": "Rival",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6785/original.jpg",
+      "synopsis": "Sendou wins the match versus Volg.",
+      "airdate": "2001-12-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 4,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "6785"
+    },
+    {
+      "n": 61,
+      "title": "Comeback Anxiety",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6786/original.jpg",
+      "synopsis": "Miyata Ichirou defeats Li Chou Bil.",
+      "airdate": "2001-12-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "6786"
+    },
+    {
+      "n": 62,
+      "title": "Revival",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6787/original.jpg",
+      "synopsis": "Coach returns from the hospital, and Makunochi \"hits without being hit\".",
+      "airdate": "2001-12-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 111
+        }
+      ],
+      "external_id": "6787"
+    },
+    {
+      "n": 63,
+      "title": "Youth of Fire",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6788/original.jpg",
+      "synopsis": "The past of Aoki and Kimura is shown.",
+      "airdate": "2001-12-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1343,
+          "end": 1380
+        }
+      ],
+      "external_id": "6788"
+    },
+    {
+      "n": 64,
+      "title": "Hot Rod Era",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6789/original.jpg",
+      "synopsis": "Second part of Aoki's and Kimura's past.",
+      "airdate": "2002-01-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "6789"
+    },
+    {
+      "n": 65,
+      "title": "The Summer of the Kamogawa Corps",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6790/original.jpg",
+      "synopsis": "The group go to training camp in the mountains.",
+      "airdate": "2002-01-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "6790"
+    },
+    {
+      "n": 66,
+      "title": "Mr. Takamura's Tears",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6791/original.jpg",
+      "synopsis": "Takamura fights a bear.",
+      "airdate": "2002-01-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "6791"
+    },
+    {
+      "n": 67,
+      "title": "The Kamogawa Gym Swings Into Action",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6792/original.jpg",
+      "synopsis": "After this strong hectic camp, we find our boxers at the gym. While the coach told them all to go to rest, two men have one a shin-coach nihon club and the other being Shigeta Akira, a young boxer ranked 4th featherweight and will therefore fight for the title against Sendo. The coach asks the coach if his boxer could eventually do a sparring ippo face. The coach agrees. We then see ippo completely lost against an opponent whose main feature is ...",
+      "airdate": "2002-01-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "6792"
+    },
+    {
+      "n": 68,
+      "title": "The Chief's Peril",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6793/original.jpg",
+      "synopsis": "Finally the day of the games of our boxers happens, Kimura very fit explodes his opponent, when Aoki to beat his opponent but as usual with a little more difficulty. But hey go to the main match of the evening, obviously this is the game Takamura who calls himself \"the bear killer\" now. While everyone is impatient in the room. Takamura offers us a memorable entrance, nay exceptional !!! He wears the skin of the bear Nekota-san brought him mountains.",
+      "airdate": "2002-02-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "6793"
+    },
+    {
+      "n": 69,
+      "title": "The Trap of the Southpaw",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6794/original.jpg",
+      "synopsis": "Ippo and coach arriving in the city where the featherweight champion, Takeshi Sendo must defend his title against Shigeta Akira, 4th category. At the beginning of the match, we see very manhandled by the champion challenger. Indeed, as Ippo, Sendo is struggling to impose its style of boxing against a southpaw boxer, that is to say a southpaw boxer. Sendo tries to put his best shots Shigeta, but it dodges every time and even manages to outsmart his famous fatal blow, the Smash.",
+      "airdate": "2002-02-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "6794"
+    },
+    {
+      "n": 70,
+      "title": "The Young Punk",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6795/original.jpg",
+      "synopsis": "We find our hero in him, in his room, he can not help thinking about the game he has just seen in Osaka, acceleration Sendo, his blows so powerful and his expression bloodthirsty killer scared. The Ippo thoughts suddenly stopped by his mother. Kumi, the friend of ippo wants to talk on the phone joy Ho, Ho love, Ippo is quick to take the handset. After some discussion between timid, our lovebirds decide when even an appointment.",
+      "airdate": "2002-02-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        }
+      ],
+      "external_id": "6795"
+    },
+    {
+      "n": 71,
+      "title": "Time for the Showdown",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6796/original.jpg",
+      "synopsis": "While the title match approach Ippo trains again and again. As it enters its footing, a crowd gathered in front of the room, there are people coming to buy their tickets for this match promises to be memorable. Yagi advertisement for Ippo that all match tickets were sold in one day, amazing. The next day is the day of the weigh-in. Ippo enters the room, always a little anxious, he sees Sendo, the defending champion has not changed, still relaxed too.",
+      "airdate": "2002-02-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "6796"
+    },
+    {
+      "n": 72,
+      "title": "Lollapalooza",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6797/original.jpg",
+      "synopsis": "What wonder what Dempsey Roll early in the 1st round, Ippo sends his best and most powerful blow while Sendo had not yet had time to get into position. The champion is found on land that is a panic down. But we suspected that Sendo was not going to stop there, he gets up with difficulty ... In revenge and especially to repel the new qu'Ippo Dempsey Roll is about to launch, the champion sent a straight right in the custody of our hero, not to worry, in theory ...",
+      "airdate": "2002-03-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "6797"
+    },
+    {
+      "n": 73,
+      "title": "Surpass That Moment",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6798/original.jpg",
+      "synopsis": "Ippo happens somehow to join his corner. This end of the second round was very rude for the challenger, the 3rd round starts in exactly the same way as has finished the second. Ippo gets scared, he knows a single shot Sendo could send it to the mat. Distraught, our hero does not know what to do, he took refuge behind his guard and cash titanic blows champion. After an uppercut and a smash Sendo took the full brunt, it makes up for in accuracy and sends a desperate shot ...",
+      "airdate": "2002-03-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        }
+      ],
+      "external_id": "6798"
+    },
+    {
+      "n": 74,
+      "title": "Mixup",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6799/original.jpg",
+      "synopsis": "Takamura has noticed, Ippo has had enough it is burnt and courage in this game is like a time bomb because if Sendo quite put down Ippo, it will never recover. 5th round begins with a superb one to two of Ippo, but Sendo replica and sends ippo the ropes and starts sending high-powered shots in the custody of the challenger. Seeing his boxer so ready for victory, the coach still Sendo revisit it when it was just a thug brawler.",
+      "airdate": "2002-03-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "6799"
+    },
+    {
+      "n": 75,
+      "title": "One Step Further",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/6800/original.jpg",
+      "synopsis": "Ippo defeats Sendo and becomes the Japanese Featherweight Champion.",
+      "airdate": "2002-03-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "6800"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Under Star",
+      "artist": "Shocking Lemon",
+      "episodes": "1-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yūzora no Kamihikōki",
+      "artist": "Naoya Mori",
+      "episodes": "1-25"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Inner Light",
+      "artist": "Shocking Lemon",
+      "episodes": "26-52"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "360°",
+      "artist": "Mori Naoya",
+      "episodes": "26-52,75"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Tumbling Dice",
+      "artist": "Tsuneo Imahori",
+      "episodes": "53-76"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Eternal Loop",
+      "artist": "Saber Tiger",
+      "episodes": "53-74,76"
+    }
+  ],
+  "relations": []
+}

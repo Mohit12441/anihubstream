@@ -1,0 +1,302 @@
+{
+  "id": "in-spectre-2",
+  "title": "In/Spectre 2",
+  "native": "虚構推理 Season2",
+  "year": 2023,
+  "rating": 7.5,
+  "season": "Winter 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/43755/poster_image/large-2a7cc790411283f6a33b12938440d7d4.jpeg",
+  "key_art": "https://media.kitsu.app/anime/43755/cover_image/large-da6f9fea02029ca0513cf676f5076762.jpeg",
+  "accent": "#ffc247",
+  "synopsis": "Second season of Kyokou Suiri. Kotoko and Kuro team up to solve a mystery between a human and a yuki-onna! (Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 43755,
+    "anilist": 126529,
+    "mal": 44204
+  },
+  "skip_key_id": 44204,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 07:58:33",
+  "search_text": "in spectre 2 虚構推理 season2 tv finished",
+  "genres": [
+    "comedy",
+    "mystery",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 65
+        }
+      ],
+      "external_id": "294055"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 66,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1430,
+          "end": 1500
+        }
+      ],
+      "external_id": "294056"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 63,
+          "end": 128
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1430,
+          "end": 1500
+        }
+      ],
+      "external_id": "294057"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 15,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1390,
+          "end": 1480
+        }
+      ],
+      "external_id": "294058"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1430,
+          "end": 1500
+        }
+      ],
+      "external_id": "294059"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 67,
+          "end": 157
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1410,
+          "end": 1500
+        }
+      ],
+      "external_id": "294060"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 109,
+          "end": 174
+        }
+      ],
+      "external_id": "294061"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 150,
+          "end": 215
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1430,
+          "end": 1499
+        }
+      ],
+      "external_id": "294062"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1430,
+          "end": 1500
+        }
+      ],
+      "external_id": "294063"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 14,
+          "end": 79
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1410,
+          "end": 1500
+        }
+      ],
+      "external_id": "294064"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "294065"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1408,
+          "end": 1499
+        }
+      ],
+      "external_id": "294066"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

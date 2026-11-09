@@ -1,0 +1,56 @@
+{
+  "id": "into-the-forest-of-fireflies-light",
+  "title": "Into the Forest of Fireflies' Light",
+  "native": "蛍火の杜へ",
+  "year": 2011,
+  "rating": 7.9,
+  "season": "Summer 2011",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx10408-PlKJ6DAyvMk2.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10408-PlKJ6DAyvMk2.png",
+  "accent": "#93d678",
+  "synopsis": "The story of Hotarubi no Mori e centers around Hotaru, a little girl who gets lost in an enchanted forest where apparitions reside. A young boy, Gin, appears before Hotaru, but she cannot touch him for fear of making him disappear.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 6169,
+    "anilist": 10408,
+    "mal": 10408
+  },
+  "skip_key_id": 10408,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 06:39:36",
+  "search_text": "into the forest of fireflies light 蛍火の杜へ movie finished",
+  "genres": [
+    "drama",
+    "fantasy",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Into the Forest of Fireflies' Light (Movie)",
+      "runtime": "45:00",
+      "runtime_seconds": 2700,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10408-PlKJ6DAyvMk2.png",
+      "synopsis": "The story of Hotarubi no Mori e centers around Hotaru, a little girl who gets lost in an enchanted forest where apparitions reside. A young boy, Gin, appears before Hotaru, but she cannot touch him for fear of making him disappear.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "93715"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,77 @@
+{
+  "id": "genshiken-ova",
+  "title": "Genshiken OVA",
+  "native": "げんしけん OVA",
+  "year": 2006,
+  "rating": 7.4,
+  "season": "Winter 2006",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1813.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1813.jpg",
+  "accent": "#e493bb",
+  "synopsis": "It's the start of a new year for the Genshiken crew, and that means recruiting new members. Always a dreaded task, The Society for the Study of Modern Visual Culture manages to get Chika Ogiue pushed onto them from the Manga Club. With her introduction of \"I'm Ogiue and I hate otaku\", this year certainly will be anything but boring.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "genshiken-ova-sbp4nv",
+    "mal": 1813,
+    "anilist": 1813,
+    "kitsu": 1631
+  },
+  "skip_key_id": 1813,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "genshiken ova け んしけん ova ova finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "29009"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "29010"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "29011"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

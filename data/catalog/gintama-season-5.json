@@ -1,0 +1,214 @@
+{
+  "id": "gintama-season-5",
+  "title": "Gintama Season 4",
+  "native": "銀魂。",
+  "year": 2017,
+  "rating": 8.9,
+  "season": "Winter 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97889-ytqHdmus9wQi.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97889-ytqHdmus9wQi.jpg",
+  "accent": "#e4d650",
+  "synopsis": "After joining the resistance against the bakufu, Gintoki and the gang are in hiding, along with Katsura and his Joui rebels. The Yorozuya is soon approached by Nobume Imai and two members of the Kiheitai, who explain that the Harusame pirates have turned against 7th Division Captain Kamui and their former ally Takasugi. The Kiheitai present Gintoki with a job: find Takasugi, who has been missing since his ship was ambushed in a Harusame raid. Nobume also makes a stunning revelation regarding the Tendoushuu, a secret organization pulling the strings of numerous factions, and their leader Utsuro, the shadowy figure with an uncanny resemblance to Gintoki's former teacher.\n\nHitching a ride on Sakamoto's space ship, the Yorozuya and Katsura set out for Rakuyou, Kagura's home planet, where the various factions have gathered and tensions are brewing. Long-held grudges, political infighting, and the Tendoushuu's sinister overarching plan finally culminate into a massive, decisive battle on Rakuyou.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "gintama-season-5-kaf8xz",
+    "mal": 34096,
+    "anilist": 97889,
+    "kitsu": 12553
+  },
+  "skip_key_id": 34096,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "gintama season 4 銀魂 tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Monster and the Monster's Child",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901c845c0cc44bfc261b81f-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 217,
+          "end": 328,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "200435"
+    },
+    {
+      "n": 2,
+      "title": "Leave Letter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901c845c0cc44bfc261b81f-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200436"
+    },
+    {
+      "n": 3,
+      "title": "The Song of Samurai",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901c845c0cc44bfc261b81f-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200437"
+    },
+    {
+      "n": 4,
+      "title": "Zura",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901c845c0cc44bfc261b81f-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200438"
+    },
+    {
+      "n": 5,
+      "title": "The Two Fools",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901c845c0cc44bfc261b81f-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200439"
+    },
+    {
+      "n": 6,
+      "title": "Ten Years",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901c845c0cc44bfc261b81f-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200440"
+    },
+    {
+      "n": 7,
+      "title": "Paths",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901c845c0cc44bfc261b81f-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200441"
+    },
+    {
+      "n": 8,
+      "title": "Master of Kouan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901c845c0cc44bfc261b81f-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200442"
+    },
+    {
+      "n": 9,
+      "title": "The Lost Rabbit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901c845c0cc44bfc261b81f-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200443"
+    },
+    {
+      "n": 10,
+      "title": "Siblings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901c845c0cc44bfc261b81f-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200444"
+    },
+    {
+      "n": 11,
+      "title": "First Student",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901c845c0cc44bfc261b81f-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200445"
+    },
+    {
+      "n": 12,
+      "title": "Hope",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6901c845c0cc44bfc261b81f-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200446"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "VS.",
+      "artist": "Blue Encount",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hankō Seimei (Opposition Proclamation)",
+      "artist": "Ayumikurikamaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Katte ni My Soul",
+      "artist": "DISH//",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hana Ichi Monme",
+      "artist": "Burnout Syndromes",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

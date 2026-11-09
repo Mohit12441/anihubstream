@@ -1,0 +1,141 @@
+{
+  "id": "gintama-jump-festa-2014-special",
+  "title": "Gintama': Futon ni Haitte kara Buki Nokoshi ni Kizuite Neru ni Nerenai Toki mo Aru",
+  "native": "銀魂 〜布団に入ってから拭き残しに気付いて寝るに寝れない時もある〜",
+  "year": 2014,
+  "rating": 7.7,
+  "season": "Fall 2014",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20882-uSAlqEptx2ls.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20882-uSAlqEptx2ls.png",
+  "accent": "#e4bb93",
+  "synopsis": "A special episode that was previewed at a screening at Jump Special Anime Festa 2014. \nThe tagline for the anime reads, \"It's time for all the Yorozuya members ...to wake up just one more time.\"\n\nNote: On April 3, 2015, it was bundled with a limited edition of the manga's 58th volume.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "gintama:-jump-festa-2014-special-lin1ou",
+    "mal": 25313,
+    "anilist": 20882,
+    "kitsu": 8627
+  },
+  "skip_key_id": 25313,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "gintama futon ni haitte kara buki nokoshi ni kizuite neru ni nerenai toki mo aru 銀魂 布団に入ってから拭き残しに気付いて寝るに寝れない時もある special finished",
+  "genres": [
+    "action",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Gintama: Jump Festa 2014 Special",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://cdn.myanimelist.net/images/anime/1327/110925l.jpg",
+      "synopsis": "Bundled with limited edition of the 58th Gintama manga volume.\n\nThe tagline for the bundled anime reads, \"It's time for all the Yorozuya members ...to wake up just one more time.\"\n\n(Source: MAL News, edited)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "116562"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ring a Ding Dong",
+      "artist": "Saeko Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "LET'S GO OUT",
+      "artist": "AMOYAMO",
+      "episodes": "1-4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Moonwalk (ムーンウォーク)",
+      "artist": "MONOBRIGHT",
+      "episodes": "1-4"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tougenkyo Alien",
+      "artist": "serial TV drama",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Samurai Heart (Some Like It Hot!!)",
+      "artist": "SPYAIR",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Sakuramitsu Tsuki (サクラミツツキ)",
+      "artist": "SPYAIR",
+      "episodes": "5-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Expect",
+      "artist": "PAGE",
+      "episodes": "5-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Dilemma (ジレンマ)",
+      "artist": "ecosystem",
+      "episodes": "27-39"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Balance Doll",
+      "artist": "Prague",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Wonderland",
+      "artist": "FLiP",
+      "episodes": "40-51"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Anagura (アナグラ)",
+      "artist": "Kuroneko Chelsea",
+      "episodes": "27-39"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Nakama (仲間)",
+      "artist": "Good Coming",
+      "episodes": "40-51"
+    }
+  ],
+  "relations": []
+}

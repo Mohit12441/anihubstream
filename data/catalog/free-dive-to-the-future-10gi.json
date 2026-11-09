@@ -1,0 +1,338 @@
+{
+  "id": "free-dive-to-the-future-10gi",
+  "title": "Free! -Dive to the Future-",
+  "native": "Free!-Dive to the Future-",
+  "year": 2018,
+  "rating": 7.5,
+  "season": "Summer 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101117-kajkIgT8fepr.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101117-kajkIgT8fepr.jpg",
+  "accent": "#50d6e4",
+  "synopsis": "Haruka Nanase, now attending college in Tokyo, has an unexpected encounter with Shiina Asahi, an old friend and teammate from his middle school years. This encounter leads old and painful memories to resurface, while new challenges await on the road to competing on an international level.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Free! the Final Stroke: The First Volume (2021)",
+    "Free! -Dive to the Future-: Build-Up of Early Spring! (2018)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 14010,
+    "anilist": 101117,
+    "mal": 36704
+  },
+  "skip_key_id": 36704,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 08:26:21",
+  "search_text": "free dive to the future free dive to the future tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sprouting Dive Start!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 156,
+          "end": 246
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "238991"
+    },
+    {
+      "n": 2,
+      "title": "A Promise on a Shooting Star!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 130
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "238992"
+    },
+    {
+      "n": 3,
+      "title": "First Swim in Another Country!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "243339"
+    },
+    {
+      "n": 4,
+      "title": "Interference of Loss!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 35,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "243341"
+    },
+    {
+      "n": 5,
+      "title": "An Ominous Workout!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 68,
+          "end": 158
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "243922"
+    },
+    {
+      "n": 6,
+      "title": "The Mermaid of the Abyss!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 121,
+          "end": 211
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "243923"
+    },
+    {
+      "n": 7,
+      "title": "A Solitary Medley!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 67,
+          "end": 157
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1380
+        }
+      ],
+      "external_id": "243924"
+    },
+    {
+      "n": 8,
+      "title": "Metamorphosis of the Soul!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 106,
+          "end": 196
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1380
+        }
+      ],
+      "external_id": "243925"
+    },
+    {
+      "n": 9,
+      "title": "Interval in the Evening Calm!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 113,
+          "end": 203
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "244458"
+    },
+    {
+      "n": 10,
+      "title": "The Grab Start of Hope!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 74,
+          "end": 164
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "244682"
+    },
+    {
+      "n": 11,
+      "title": "Streamline of Unity!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 62,
+          "end": 152
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1380
+        }
+      ],
+      "external_id": "246485"
+    },
+    {
+      "n": 12,
+      "title": "Dive to the Future!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1352,
+          "end": 1380
+        }
+      ],
+      "external_id": "246486"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Heading to Over",
+      "artist": "OLDCODEX",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "GOLD EVOLUTION",
+      "artist": "STYLE FIVE - Nobunaga Shimazaki, Tatsuhisa Suzuki, Mamoru Miyano, Tsubasa Yonaga, Daisuke Hirakawa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,64 @@
+{
+  "id": "gridman-universe",
+  "title": "Gridman Universe",
+  "native": "グリッドマン ユニバース",
+  "year": 2023,
+  "rating": 8.1,
+  "season": "Winter 2023",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx142684-Ce7iZaaqO35y.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx142684-Ce7iZaaqO35y.png",
+  "accent": "#3578e4",
+  "synopsis": "A year has passed since the events of SSSS.GRIDMAN. The world is at peace and no one except for Rikka and Utsumi remembers the kaiju, Gridman, or Akane Shinjou. This includes Yuuta, who despite serving as Gridman's host, has no memory of the most important moments of his life. So when a new Kaiju appears, he leaps at the chance to prove to himself that he too can be the hero by merging with Gridman once more.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "gridman-universe-jqbc6d",
+    "mal": 50587,
+    "anilist": 142684,
+    "kitsu": 45583
+  },
+  "skip_key_id": 50587,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "gridman universe ク リット マン ユニハ ース movie finished",
+  "genres": [
+    "action",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Gridman Universe (Movie)",
+      "runtime": "118:00",
+      "runtime_seconds": 7080,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/142684-bP6AQuVuEDxy.jpg",
+      "synopsis": "A year has passed since the events of SSSS.GRIDMAN. The world is at peace and no one except for Rikka and Utsumi remembers the kaiju, Gridman, or Akane Shinjou. This includes Yuuta, who despite serving as Gridman's host, has no memory of the most important moments of his life. So when a new Kaiju appears, he leaps at the chance to prove to himself that he too can be the hero by merging with Gridman once more.\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "322894"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "uni-verse",
+      "artist": "Masayoshi Oishi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

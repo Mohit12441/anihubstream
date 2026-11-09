@@ -1,0 +1,182 @@
+{
+  "id": "fate-stay-night-unlimited-blade-works-season-2-sunny-day",
+  "title": "Fate/stay night: Unlimited Blade Works 2nd Season - sunny day",
+  "native": "Fate/stay night [Unlimited Blade Works] 2ndシーズン - sunny day",
+  "year": 2015,
+  "rating": 7.3,
+  "season": "Fall 2015",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21318-l441SwTgnl5h.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21318-l441SwTgnl5h.jpg",
+  "accent": "#e4865d",
+  "synopsis": "As the Fifth Holy Grail War reaches its conclusion, Saber repeats her final duty from the previous war in order to end the vicious cycle once and for all. With the decisive blow draining her remaining mana reserves, Saber's body begins to dissipate. She utters a tearful farewell—but Rin Tohsaka reaches out to her at the last moment.\n\nThe future has been changed, and a new beginning awaits.\n\n(Source: MAL Rewrite, edited)\n\nNote: Based on the Good Ending scenario from the second route of TYPE-MOON's visual novel, Fate/stay night.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "fatestay-night-unlimited-blade-works-season-2:-sunny-day-s3t8xm",
+    "mal": 31389,
+    "anilist": 21318,
+    "kitsu": 11321
+  },
+  "skip_key_id": 31389,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "fate stay night unlimited blade works 2nd season sunny day fate stay night unlimited blade works 2ndシース ン sunny day special finished",
+  "genres": [
+    "action",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Fate/stay night [Unlimited Blade Works] Season 2: Sunny Day",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6912f94010ad23086eca115b-poster.jpg",
+      "synopsis": "As the Fifth Holy Grail War reaches its conclusion, Saber repeats her final duty from the previous war in order to end the vicious cycle once and for all. With the decisive blow draining her remaining mana reserves, Saber's body begins to dissipate. She utters a tearful farewell—but Rin Toosaka reaches out to her at the last moment. \n\nThe future has been changed, and a new beginning awaits.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "179002"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Haru wa Yuku",
+      "artist": "Aimer",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Brave Shine",
+      "artist": "Aimer",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ring your bell",
+      "artist": "Kalafina",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hana no Uta (花の唄)",
+      "artist": "Aimer",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "ideal white",
+      "artist": "Mashiro Ayano",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ideal white",
+      "artist": "Mashiro Ayano",
+      "episodes": "0"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Unlimited Blade Works",
+      "artist": "Hideyuki Fukasawa",
+      "episodes": "0"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Imitation",
+      "artist": "Sachi Tainaka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Voice ~Tadoritsuku Basho~",
+      "artist": "Sachi Tainaka",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "disillusion",
+      "artist": "Sachi Tainaka",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Anata ga Ita Mori (あなたがいた森)",
+      "artist": "Jyukai",
+      "episodes": "01-13, 15-23"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "ring your bell (in the silence)",
+      "artist": "Kalafina",
+      "episodes": "15"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Believe",
+      "artist": "Kalafina",
+      "episodes": "1-11"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Kirameku Namida wa Hoshi ni",
+      "artist": "Sachi Tainaka",
+      "episodes": "15-23"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hikari (ヒカリ)",
+      "artist": "Jyukai",
+      "episodes": "14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Fukaki Nemuri (深き眠り) UBW Extended",
+      "artist": "Hideyuki Fukasawa",
+      "episodes": "25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "THIS ILLUSION",
+      "artist": "LiSA",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Kimi to no Ashita (君との明日)",
+      "artist": "Sachi Tainaka",
+      "episodes": "24"
+    }
+  ],
+  "relations": []
+}

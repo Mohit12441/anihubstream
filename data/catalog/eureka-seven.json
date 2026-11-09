@@ -1,0 +1,927 @@
+{
+  "id": "eureka-seven",
+  "title": "Eureka Seven",
+  "native": "交響詩篇エウレカセブン",
+  "year": 2005,
+  "rating": 7.8,
+  "season": "Spring 2005",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx237-P1YEQQFqZ1An.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx237-P1YEQQFqZ1An.jpg",
+  "accent": "#ffc247",
+  "synopsis": "Renton is a teenager trapped working as a mechanic in a backwater town. He dreams of joining up with a daredevil group of pilots known as Gekkostate and following in his father's heroic footsteps.\n\nWhen a mysterious beauty named Eureka shows up asking for a tune-up, Renton soon finds himself drawn into a high-flying mecha dogfight that makes him a target of the military. When the dust settles on the spectacular battle, Renton is invited to join Gekkostate, but he soon discovers that even a dream come true has a dark side.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Eureka Seven AO (2012)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 212,
+    "anilist": 237,
+    "mal": 237,
+    "hianime": "eureka-seven-l0rpf8"
+  },
+  "skip_key_id": 237,
+  "skip_key_space": "anilist",
+  "episode_total": 50,
+  "added_at": "2026-10-14 14:06:40",
+  "search_text": "eureka seven 交響詩篇エウレカセフ ン tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Blue Monday",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5862/original.jpg",
+      "synopsis": "Renton Thurston is a 14-year-old boy, who leads a normal, yet boring and uninteresting life with his grandfather mechanic at a backwash town. One day, a mysterious mecha LFO referred to as the Nirvash typeZERO comes by their garage, and the pilot within is the most beautiful girl Renton has ever seen. But the next day, her arrival has attracted much of the United Federation Forces, and she is forced to stop them at any cost. Renton however makes the most life-changing decision in his life. Will he make it, and will he get the Amita Drive to the pilot of the Nirvash?",
+      "airdate": "2005-04-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 116
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1341,
+          "end": 1426
+        }
+      ],
+      "external_id": "5862"
+    },
+    {
+      "n": 2,
+      "title": "Blue Sky Fish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5863/original.jpg",
+      "synopsis": "As the girl leaves to deal with the United Federation Forces, Holland, the leader of the Gekkostate, decides to get involved as well. Renton As the girl leaves to deal with the United Federation Forces, Holland, the leader of the Gekkostate, decides to get involved as well. Renton notices that the girl is in trouble, and his grandfather orders him to deliver the attachment known as the Amita Drive. He decides to use his REF-board to get to her, but will his foolish choice lead to something that he has never imagined before?notices that the girl is in trouble, and his grandfather orders him to deliver the attachment known as the Amita Drive. He decides to use his REF-board to get to her, but will his foolish choice lead to something that he has never imagined before?",
+      "airdate": "2005-04-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 5,
+          "end": 100
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5863"
+    },
+    {
+      "n": 3,
+      "title": "Motion Blue",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5864/original.jpg",
+      "synopsis": "With the pressure from the United Federation Forces, the Bellforest Airport is forced to immediately shut down. To make the situation worse, it leaves the Gekko, the Gekkostate's ship, completely trapped within the airport. As they find a way to get out of there, Holland, the Gekkostate's leader, decides to come and help them out. Meanwhile, Renton is faced with a life-changing decision as he is asked by Eureka to join her to become part of the Gekkostate.",
+      "airdate": "2005-05-01",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1425
+        }
+      ],
+      "external_id": "5864"
+    },
+    {
+      "n": 4,
+      "title": "Watermelon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5865/original.jpg",
+      "synopsis": "Renton comes face-to-face with reality as his dream of being part of the Gekkostate finally comes true. However, the Gekkostate is having a serious issue with a shortage of monetary funds, which results in the whole group being broke. This leads to Renton becoming a part of a smuggling job and on his way to a drop-off point in the Nirvash with Eureka. But getting there won't be easy when they have to pass over a large military training base to reach their destination.",
+      "airdate": "2005-05-08",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1426
+        }
+      ],
+      "external_id": "5865"
+    },
+    {
+      "n": 5,
+      "title": "Vivid Bit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5866/original.jpg",
+      "synopsis": "Renton tries his best to fit in with the group aboard the Gekko, but nothing he does seems to be going his way. Talho, meanwhile, takes him shopping in town and manages to find out a little bit about the things that trouble her.",
+      "airdate": "2005-05-15",
+      "markers": [],
+      "external_id": "5866"
+    },
+    {
+      "n": 6,
+      "title": "Childhood",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5867/original.jpg",
+      "synopsis": "Three kids aboard the Gekko, who call Eureka their mother, decide that Renton is their enemy and play several evil tricks on him. And when one of those tricks puts the whole ship in danger, Renton takes all three of them aboard the Nirvash to help, but they're all suddenly surrounded by a United Federation Forces KLF unit.",
+      "airdate": "2005-05-15",
+      "markers": [],
+      "external_id": "5867"
+    },
+    {
+      "n": 7,
+      "title": "Absolute Defeat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5868/original.jpg",
+      "synopsis": "An entire squad of United Federation Forces KLF units are attacked by a mysterious enemy, so a report of the attack is sent to the Sage Council who summon someone from their past. Meanwhile, Renton leaves the Gekko as part of an important mission where he is supposed to secretly meet with someone and deliver a very dangerous package. What he doesn't know, though, is that he's being watched the whole time.",
+      "airdate": "2005-05-29",
+      "markers": [],
+      "external_id": "5868"
+    },
+    {
+      "n": 8,
+      "title": "Glorious Brilliance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5869/original.jpg",
+      "synopsis": "Eureka, Renton, and the kids meet an old woman named Tiptory while on a shopping trip. When they join her for a cup of tea, they're interrupted by Holland, who forces his way into Tiptory's apartment. Tiptory happens to be the key to an anti-government organization, which leads to the Gekkostate capturing her.",
+      "airdate": "2005-06-05",
+      "markers": [],
+      "external_id": "5869"
+    },
+    {
+      "n": 9,
+      "title": "Paper Moon Shine",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5870/original.jpg",
+      "synopsis": "The Gekko arrives at Ciudades Del Cielo at the holy land of the Vodarac. The city itself is in ruins, but it's still called the \"Beautiful City of the Sky.\" While they're there, Renton decides to have some fun lifting, but is interrupted when Holland punches him. This makes Renton fly away into the city crying. Afterwards, though, the beginning of a military bombing is signaled by sirens.",
+      "airdate": "2005-06-12",
+      "markers": [],
+      "external_id": "5870"
+    },
+    {
+      "n": 10,
+      "title": "Higher than the Sun",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5871/original.jpg",
+      "synopsis": "A massive amount of Trapar has erupted due to a tectonic shift that occured on the other side of the world. So, the Gekkostate group decide to go there to enjoy some lifting, but then end up at Monarchy, a Federation military base. Holland and Talho remember that life-changing place, which they'll never be able to forget - a past that Holland still can't put behind him.",
+      "airdate": "2005-06-19",
+      "markers": [],
+      "external_id": "5871"
+    },
+    {
+      "n": 11,
+      "title": "Into the Nature",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5872/original.jpg",
+      "synopsis": "Eureka's health continues to decline after realizing the connection between her and the Nirvash. At the same time, the Gekko encounters a strange phenomenon called a \"Corallian.\" Despite her health, Eureka goes out in the Nirvash and is attacked by a new enemy - the Nirvash type \"The End\" - while inside the zone within the Corallian.",
+      "airdate": "2005-06-26",
+      "markers": [],
+      "external_id": "5872"
+    },
+    {
+      "n": 12,
+      "title": "Acperience 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5873/original.jpg",
+      "synopsis": "The type \"The End\" has attacked the Nirvash, and Renton has become unconscious and meets Eureka and Anemone in his nightmare. Meanwhile, outside the Corallian, the warship Izumo is involved in an intense battle with the Gekko.",
+      "airdate": "2005-07-03",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5873"
+    },
+    {
+      "n": 13,
+      "title": "The Beginning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5874/original.jpg",
+      "synopsis": "Renton comes face-to-face with Anemone, the girl he met in his dreams, after returning from the Corallian Zone. Both Anemone and Eureka appear to be having intense headaches, making it seem as if the same thing is affecting them. So, Dominic and Renton go into the city to find medicine for them.",
+      "airdate": "2005-07-10",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5874"
+    },
+    {
+      "n": 14,
+      "title": "Memory Band",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5875/original.jpg",
+      "synopsis": "The Gekko has sustained heavy damage after a battle with the military. So they're forced to fly at a low altitude. The mystery surrounding Eureka continues to get stranger than ever as she gradually recovers after returning from the Corallian Zone, and Stoner provides his own explanation for it. Meanwhile, Dominic thinks about all the unanswered questions about Eureka and the Nirvash.",
+      "airdate": "2005-07-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5875"
+    },
+    {
+      "n": 15,
+      "title": "Human Behavior",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5876/original.jpg",
+      "synopsis": "Renton goes to visit a town called Controrado, where he spent of his childhood, and takes Eureka to the house where he used to live. As he visits with people who knew his family, he hides the fact that he's part of the Gekkostate. The happy visit is soon interrupted when the United Federation Forces arrive.",
+      "airdate": "2005-07-24",
+      "markers": [],
+      "external_id": "5876"
+    },
+    {
+      "n": 16,
+      "title": "Opposite View",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5877/original.jpg",
+      "synopsis": "The Gekkostate group hide inside a mine in order to repair the Gekko. Renton's frustration about Eureka's health forces him to say things he never meant to say. And as he enters a strange building in one of the tunnels of the mine, he once again experiences the nightmares from the Corallian.",
+      "airdate": "2005-07-31",
+      "markers": [],
+      "external_id": "5877"
+    },
+    {
+      "n": 17,
+      "title": "Sky Rock Gate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5878/original.jpg",
+      "synopsis": "Renton doesn't know what to do to make things normal again between him and Eureka, and the Gekko still is in need of repair. The Gekkostate does this by ordering some reflection film from a film craftsman. But once they get there, they find themselves forced to help catch the skyfish needed to make the film.",
+      "airdate": "2005-08-07",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5878"
+    },
+    {
+      "n": 18,
+      "title": "Ill Communication",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5879/original.jpg",
+      "synopsis": "The group meets an old man named Breetani, who happens to be a digger, while they're in a mine. He reveals to them that he's been working in the mine for a long time. And Renton shows him the Nirvash, Breetani has an unexpected reaction.",
+      "airdate": "2005-08-21",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5879"
+    },
+    {
+      "n": 19,
+      "title": "Acperience 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5880/original.jpg",
+      "synopsis": "As Eureka's mysterious illness persists, a United Federation Fleet is approaching the Gekko. The cause of her illness is suspected to be due to being close to the mines. For some unknown reason, though, Eureka decides to take the Amita Drive from the Nirvash, causing it to go into the depths of the mines with Eureka inside. This leads to Renton going after her, without ever realizing the tragedy that awaits.",
+      "airdate": "2005-08-28",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5880"
+    },
+    {
+      "n": 20,
+      "title": "Substance Abuse",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5881/original.jpg",
+      "synopsis": "Renton is worried about Eureka, who has now been partially absorbed by a scub. During this time, the Gekkostate get a distress call to rescue a Vodarac priest who's being held captive by the military. Holland accepts the job, but Renton accuses him of thinking that money is more important than Eureka is.",
+      "airdate": "2005-09-04",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5881"
+    },
+    {
+      "n": 21,
+      "title": "Runaway",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5882/original.jpg",
+      "synopsis": "Eureka is being treated by the rescued Vodarac priest, and Holland uses what he says to drive Renton and Eureka further apart. Meanwhile, Renton's guilt is too much when he realizes all the people he's killed while fighting in the Nirvash, being apart from Eureka, and being mistreated by the Gekko crew. Instead of talking to them and discuss about their behavior, he decides to leave the Gekko, realizing the mistake he has chosen.",
+      "airdate": "2005-09-11",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5882"
+    },
+    {
+      "n": 22,
+      "title": "Crackpot",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5883/original.jpg",
+      "synopsis": "The crew has now been informed that Renton has left the ship, but nobody wants to be the one to tell Eureka. Meanwhile, Renton meets a couple named Charles and Ray Beams and invite him to live on their ship. They're revealed to be freelancers who do odd jobs for money. Renton sees Charles as a mentor and a friend who has the same interests. This makes it the first time Renton is actually happy in a long time.",
+      "airdate": "2005-09-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5883"
+    },
+    {
+      "n": 23,
+      "title": "Differencia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5884/original.jpg",
+      "synopsis": "Renton Thurston enjoys his life with Charles and Ray Beams, and they have been given a job; to travel to a city to pick up a Vodarac girl and transport her to the Vodarac Sanctuary, where she can rest in peace. Renton's intentions are different to that of the girl's parents, so he decides to go off on his own with the girl to find another city hospital. But humankind and its monstrous nature of hatred and prejudice, have become obstacles in Renton's way.",
+      "airdate": "2005-09-25",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5884"
+    },
+    {
+      "n": 24,
+      "title": "Paradise Lost",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5885/original.jpg",
+      "synopsis": "Due to having to make a bad landing on the Gekko, Holland has to have some minor injuries treated. As he and the doctor talk about Eureka, they realize how she still misses Renton and has taken over his job of running the store since he's been gone. Meanwhile, Renton finally learns about Charles and Ray's real mission, to which Renton can't believe.",
+      "airdate": "2005-10-02",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5885"
+    },
+    {
+      "n": 25,
+      "title": "World's End Garden",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5886/original.jpg",
+      "synopsis": "As Renton walks to find a way back to Eureka after leaving Charles and Ray, he collapses at a nearby cottage, owned by a man named William. There, Renton was treated with hospitality, and soon finds out that he has a wife, Martha, who is diagnosed with \"desperation disease.\" During his time with Will, he learns how the nature of the world around him is much more beautiful to settle in.",
+      "airdate": "2005-10-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5886"
+    },
+    {
+      "n": 26,
+      "title": "Morning Glory",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5887/original.jpg",
+      "synopsis": "Eureka still misses Renton and asks the other crew members where he may have gone, but believes Holland's promise that he'll bring him back. Holland's search for Renton is interrupted by a military fleet, forcing the Gekko to change its course. However, once Renton manages to make it back aboard the ship, he learns that Eureka has left to search for him, but she finds the military fleet and a vengeful Ray instead.",
+      "airdate": "2005-10-16",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5887"
+    },
+    {
+      "n": 27,
+      "title": "Helter Skelter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5888/original.jpg",
+      "synopsis": "While Holland has locked Renton, Eureka, and the kids in the brig for leaving the Gekko without permission, they're attacked by Charles and Ray, who manage to infiltrate and disable the Gekko's systems.",
+      "airdate": "2005-10-23",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5888"
+    },
+    {
+      "n": 28,
+      "title": "Memento Mori",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5889/original.jpg",
+      "synopsis": "Determined to destroy them all, Ray returns to attack the Gekko. However, before the attack happens, Renton has a conversation with Holland which helps him better understand his and Eureka's past.",
+      "airdate": "2005-10-30",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5889"
+    },
+    {
+      "n": 29,
+      "title": "Keep on Movin'",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5890/original.jpg",
+      "synopsis": "Lt. Dominic shows up in Bellforest and breaks his motorcycle once again. He takes it to have it repaired only to find what he has been looking for. The Nirvash is also in need of repairs, so the Gekko decides to take it to Tresor, a military base, where it was first built.",
+      "airdate": "2005-11-06",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1434
+        }
+      ],
+      "external_id": "5890"
+    },
+    {
+      "n": 30,
+      "title": "Change of Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5891/original.jpg",
+      "synopsis": "As the group heads for Tresor, Renton confronts Talho about Diane. The engineers cooperate and start the repairs on the Nirvash for free. Meanwhile, Renton sees a video about the start of it all, and Talho gets a new look, along with Eureka.",
+      "airdate": "2005-11-13",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1425
+        }
+      ],
+      "external_id": "5891"
+    },
+    {
+      "n": 31,
+      "title": "Animal Attack",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5892/original.jpg",
+      "synopsis": "The Nirvash continues to be repaired, and a visit from Dr. Greg \"Bear\" Eagan, the top archetype researcher, helps explain why the Nirvash has been acting up lately. Meanwhile, Colonel Dewey and the Ageha Squad meet with Lady Coda to inform her of his plans for the planet... and the Coralians.",
+      "airdate": "2005-11-20",
+      "markers": [],
+      "external_id": "5892"
+    },
+    {
+      "n": 32,
+      "title": "Start It Up",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5893/original.jpg",
+      "synopsis": "Dewey's children decide to start the \"awakening\" by firing giant bombs into the heart of the \"scab coral,\" releasing millions of Corallians. The Corallians then attack a nearby city. The city is left in ruins. Axel's factory is found out and he decides to leave it for good. Also, while moving supplies from a ship full of survivors of the attacked city, a little boy, whose parents were killed, see Eureka and wets his pants. Axel tries to use a cable to let the board lift off to the Ray line where it will meet with the Gekko, sort of like a kite. But the cable does not break off, so they run off a cliff and let the cable break, with Renton's grandpa now being possibly dead! TheEnd is then prepared for launch to observe the Corallians. TheEnd then makes contact with the Nirvash spec2. The Gekko decided to launch the Nirvash without a board, hoping it would come. Indeed it does and TheEnd gets owned. Eureka then starts having a headache and asks Renton to hold her hand. The Gekko then heads out to where the zone last appeared to find survivors.",
+      "airdate": "2005-11-27",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1432
+        }
+      ],
+      "external_id": "5893"
+    },
+    {
+      "n": 33,
+      "title": "Pacific State",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5894/original.jpg",
+      "synopsis": "The Gekkostate finds no survivors in the destroyed city. Renton then tries to make memories between Eureka and him. Talho lies about a malfunction in the ship so they could Lift at a good spot. Holland decides from this point forward that the Gekkostate will be dismissed. He gives his last order, and they flies away to retreive Norbu.",
+      "airdate": "2005-12-04",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1427
+        }
+      ],
+      "external_id": "5894"
+    },
+    {
+      "n": 34,
+      "title": "Inner Flight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5895/original.jpg",
+      "synopsis": "The Gekko continues its path towards the Capital to rescue Norb, while Holland tells Renton and Eureka the truth about who Norb is and the day he met Eureka. Meanwhile, Dewey, having captured Norb, tries to convince him to help him in his quest to create a second Summer of Love.",
+      "airdate": "2005-12-11",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1431
+        }
+      ],
+      "external_id": "5895"
+    },
+    {
+      "n": 35,
+      "title": "Astral Apache",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5896/original.jpg",
+      "synopsis": "The Gekkostate arrive at the capital, and ready to rescue Norb from Dewey. Every one of them realize what they must do according to plan. Dewey may think that he's higher ranked than his younger brother, but little did he know that Holland has already succeeded in a feat that he never thought Holland would accomplish.",
+      "airdate": "2005-12-17",
+      "markers": [],
+      "external_id": "5896"
+    },
+    {
+      "n": 36,
+      "title": "Fantasia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5897/original.jpg",
+      "synopsis": "Norb is onboard with the Gekkostate, and their plan to save the planet is in progress. However, to succeed, Holland must ensure that Renton and Eureka have the potential to cooperate.",
+      "airdate": "2005-12-24",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1334,
+          "end": 1440
+        }
+      ],
+      "external_id": "5897"
+    },
+    {
+      "n": 37,
+      "title": "Raise Your Hand",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5898/original.jpg",
+      "synopsis": "As the discussion starts between the two groups (science and religion), they soon dicover that the scientfic theories are the same as the religious beliefs. Also to be discovered is the Life Limit has been passed, but the planet is just sleeping. They also discover that Dewey is trying to awaken the planet by killing the Corallians and Scub Coral, this would end everything. In the meantime, Dewey improves his support by introducing the new Coralian attack force, Ageha Squad, supposdely created by Adrock Thurston, which is a lie. This gains him much support, though.",
+      "airdate": "2006-01-08",
+      "markers": [],
+      "external_id": "5898"
+    },
+    {
+      "n": 38,
+      "title": "Date of Birth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5899/original.jpg",
+      "synopsis": "Renton learns more about his father, Adrock Thurston, from Eureka. Meanwhile, Dewey moves forward with his plan and confronts the Sage Council, and Stoner attempts to counter Dewey's lies to the media through Gekkostate's magazine, Ray=Out.",
+      "airdate": "2006-01-15",
+      "markers": [],
+      "external_id": "5899"
+    },
+    {
+      "n": 39,
+      "title": "Join the Future",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5900/original.jpg",
+      "synopsis": "Due to Norb's puzzling suggestion, the Gekkostate must play a simple game of soccer against the RC All-Stars, a professional soccer team. Norb tells them that this game will allow them to pass through the Great Wall. While they play, Dewey holds a press conference, announcing his plans to destroy the Coralians.",
+      "airdate": "2006-01-22",
+      "markers": [],
+      "external_id": "5900"
+    },
+    {
+      "n": 40,
+      "title": "Cosmic Trigger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5901/original.jpg",
+      "synopsis": "In order to continue on with their mission, Holland plans for Renton and Eureka to meet with Sakuya inside the Vodara Shrine, the Voderac's headquarters. Meanwhile, Dewey prepares to send Anemone and the attack squad to the Vodara Shrine.",
+      "airdate": "2006-01-29",
+      "markers": [],
+      "external_id": "5901"
+    },
+    {
+      "n": 41,
+      "title": "Acperience 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5902/original.jpg",
+      "synopsis": "Holland and the others are holding off the enemy forces from interrupting Renton and Eureka from meeting Lady Sakuya. Eureka enters Lady Sakuya's flower bud and discovers Lady Sakuya's past.",
+      "airdate": "2006-02-05",
+      "markers": [],
+      "external_id": "5902"
+    },
+    {
+      "n": 42,
+      "title": "Star Dancer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5903/original.jpg",
+      "synopsis": "Norb prepares to send Renton and Eureka into the zone. Meanwhile, Holland and the crew defend the Vodara Shrine against Dewey's attack, Anemone, and the anti-body Coralians.",
+      "airdate": "2006-02-12",
+      "markers": [],
+      "external_id": "5903"
+    },
+    {
+      "n": 43,
+      "title": "The Sunshine Underground",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5904/original.jpg",
+      "synopsis": "Renton, Eureka, and the kids finally arrive at the promised land that is Earth. Meanwhile, as Dominic searches for a way to save Anemone from Dewey, Holland and Dewey's past is explored.",
+      "airdate": "2006-02-19",
+      "markers": [],
+      "external_id": "5904"
+    },
+    {
+      "n": 44,
+      "title": "It's All in the Mind",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5905/original.jpg",
+      "synopsis": "Dominic continues on his mission to find a replacement pilot for \"The End\" , and meets with Deckard, a representative from the Novak Foundation, to learn the truth about Anemone. Meanwhile, much to their surprise, Renton and the kids discover something odd about Eureka.",
+      "airdate": "2006-02-26",
+      "markers": [],
+      "external_id": "5905"
+    },
+    {
+      "n": 45,
+      "title": "Don't You Want Me?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5906/original.jpg",
+      "synopsis": "Captain Jurgens and Lieutenant Dominic arrive aboard the Gekko in order to find out if what Dr. Bear said about the Scub Corals is true. After finding out the truth, they decide to fight alongside the Gekkostate against Dewey - whether any of their fellow military crew supports them or not. Meanwhile, Maurice begins to feel that Renton is trying to change Eureka, so he insists on having things back the way they used to be.",
+      "airdate": "2006-03-05",
+      "markers": [],
+      "external_id": "5906"
+    },
+    {
+      "n": 46,
+      "title": "Planet Rock",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5907/original.jpg",
+      "synopsis": "Captain Jurgens and the fleet prepare to fight with a 3-minute error margin. Eureka, Renton, and the kids find something unique. Could it possibly be what they've been looking for?",
+      "airdate": "2006-03-12",
+      "markers": [],
+      "external_id": "5907"
+    },
+    {
+      "n": 47,
+      "title": "Acperience 4",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5908/original.jpg",
+      "synopsis": "Renton, Eureka, and the kids enter The Command Cluster. While talking with his sister, Renton learns how the Coralian came into being. With the threat of the oncoming attack, The Command Cluster is willing to wait for Renton and the others to stop it.",
+      "airdate": "2006-03-19",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1440
+        }
+      ],
+      "external_id": "5908"
+    },
+    {
+      "n": 48,
+      "title": "Ballet Méchanique",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5909/original.jpg",
+      "synopsis": "Oratorio 8 has been completed and is ready to fire. What is Dewey planning to do with this weapon? Meanwhile, Renton and Eureka have reached the Command Cluster, but an unexpected foe arrives. Who is this foe and what is he/she planning?",
+      "airdate": "2006-03-26",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1430
+        }
+      ],
+      "external_id": "5909"
+    },
+    {
+      "n": 49,
+      "title": "Shout to the Top!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5910/original.jpg",
+      "synopsis": "Using Oratorio 8, Colonel Dewey fired on the Scub Coral Control Cluster and destroyed it. Now that it's gone, what is Dewey's next move? Meanwhile, Renton and Eureka are in the damaged Nirvash when the Compac Drive turns blue. Nirvash suddenly moves disobeying Renton and Eureka's orders. What is Nirvash trying to accomplish by doing this?",
+      "airdate": "2006-04-02",
+      "markers": [],
+      "external_id": "5910"
+    },
+    {
+      "n": 50,
+      "title": "Wish upon a Star",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5911/original.jpg",
+      "synopsis": "It's the finale episode and Eureka completes her transformation in order to save the planet. Holland and the others discover that the Limit of Life phenomenon hasn't happened. Realizing that Eureka is still alive, can Renton save her in time?",
+      "airdate": "2006-04-02",
+      "markers": [],
+      "external_id": "5911"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Glory Days",
+      "artist": "Hiroya Ozaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Escape",
+      "artist": "Hemenway",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Stand By Me",
+      "artist": "Stereopony",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Escape",
+      "artist": "Hemenway",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Stand by me",
+      "artist": "Stereopony",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Space Rock",
+      "artist": "iLL",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Days",
+      "artist": "FLOW",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Himitsu Kichi (Secret Base)",
+      "artist": "Kozue Takada",
+      "episodes": "1-13,26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "There's No Ending",
+      "artist": "RUANN",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Bravelue",
+      "artist": "FLOW",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Iolite",
+      "artist": "Joy",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Shounen Heart (Young Boy's Heart)",
+      "artist": "Home Made Kazoku",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Fly Away",
+      "artist": "Izawa Asami",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Eureka",
+      "artist": "Hentai Shinshi Club feat. kojikoji",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Taiyo no Mannaka he (太陽の真ん中へ; To the Center of the Sun)",
+      "artist": "Bivattchee",
+      "episodes": "27-39"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Tip Taps Tip",
+      "artist": "HALCALI",
+      "episodes": "27-39"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Sakura",
+      "artist": "NIRGILIS",
+      "episodes": "40-50"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Canvas",
+      "artist": "COOLON",
+      "episodes": "40-50"
+    }
+  ],
+  "relations": []
+}

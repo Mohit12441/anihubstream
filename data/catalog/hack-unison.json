@@ -1,0 +1,57 @@
+{
+  "id": "hack-unison",
+  "title": ".hack//Unison",
+  "native": ".hack//Unison",
+  "year": 2003,
+  "rating": 6.3,
+  "season": "Fall 2003",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1487.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1487.jpg",
+  "accent": "#e4ae5d",
+  "synopsis": "Somewhere in the MMORPG called ‘The World’, a group is gathered at a pub, awaiting the start of an event. There, old friends and acquaintances are reunited, including those who rarely log on. Some are even forging new relationships for the first time. Together, invited by the hacker Helba, the group leaves for the event in the Net Slums where a celebration awaits them all.\n\n[Written by MAL Rewrite]",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": ".hackunison-atj8pi",
+    "mal": 1487,
+    "anilist": 1487,
+    "kitsu": 1333
+  },
+  "skip_key_id": 1487,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "hack unison hack unison special finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": ".hack//Unison",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a951faeee3cae021716ecbb-poster.jpg",
+      "synopsis": "Somewhere in the MMORPG called &lsquo;The World&rsquo;, a group is gathered at a pub, awaiting the start of an event. There, old friends and acquaintances are reunited, including those who rarely log on. Some are even forging new relationships for the first time. Together, invited by the hacker Helba, the group leaves for the event in the Net Slums where a celebration awaits them all.\n\n\n[Written by MAL Rewrite]",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23836"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

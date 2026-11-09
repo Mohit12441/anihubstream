@@ -1,0 +1,64 @@
+{
+  "id": "gintama-the-movie",
+  "title": "Gintama: The Movie",
+  "native": "Gintama Movie 1: Shinyaku Benizakura-hen",
+  "year": 2010,
+  "rating": 8.5,
+  "season": "Year 2010",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/690a359d543081759bdb4498-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/690a359d543081759bdb4498-landscape.webp",
+  "accent": "#a24bff",
+  "synopsis": "Gintoki and his Yorozuya friends (or rather, employees suffering under labor violations), Shinpachi and Kagura, continue to scrape by in the futuristic, alien-infested city of Edo. They take on whatever work they can find while trying not to get involved in anything too dangerous. But when Katsura, the leader of the Joui rebels and Gintoki's long-time acquaintance, disappears after being brutally attacked by an unknown assassin, Shinpachi and Kagura begin an investigation into his whereabouts and the identity of the assailant. Meanwhile, Gintoki takes on a seemingly unrelated job: the blacksmith Tetsuya requests that Gin recover a strange and powerful sword called the Benizakura which was recently stolen.\n\nAs the two investigations gradually intersect, the Yorozuya crew find themselves in the midst of a major conspiracy that hinges on the sinister nature of the Benizakura sword. Gintoki resolves to take the fight directly to the enemy headquarters, and together with a few unexpected allies, sets out on one of his most perilous jobs yet.\n\n[Written by MAL Rewrite]",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "gintama:-the-movie-py0ym9",
+    "mal": 7472,
+    "anilist": 7472,
+    "kitsu": 4989
+  },
+  "skip_key_id": 7472,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "gintama the movie gintama movie 1 shinyaku benizakura hen",
+  "genres": [
+    "action",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Gintama: The Movie (Movie)",
+      "runtime": "98:00",
+      "runtime_seconds": 5880,
+      "thumb": "https://animehot.cc/storage/media/2026/09/690a359d543081759bdb4498-landscape.webp",
+      "synopsis": "Gintoki and his Yorozuya friends (or rather, employees suffering under labor violations), Shinpachi and Kagura, continue to scrape by in the futuristic, alien-infested city of Edo. They take on whatever work they can find while trying not to get involved in anything too dangerous. But when Katsura, the leader of the Joui rebels and Gintoki's long-time acquaintance, disappears after being brutally attacked by an unknown assassin, Shinpachi and Kagura begin an investigation into his whereabouts and the identity of the assailant. Meanwhile, Gintoki takes on a seemingly unrelated job: the blacksmith Tetsuya requests that Gin recover a strange and powerful sword called the Benizakura which was recently stolen.\n\nAs the two investigations gradually intersect, the Yorozuya crew find themselves in the midst of a major conspiracy that hinges on the sinister nature of the Benizakura sword. Gintoki resolves to take the fight directly to the enemy headquarters, and together with a few unexpected allies, sets out on one of his most perilous jobs yet.\n\n[Written by MAL Rewrite]",
+      "airdate": null,
+      "markers": [],
+      "external_id": "78233"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Boku-tachi no Kisetsu (僕たちの季節)",
+      "artist": "DOES",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

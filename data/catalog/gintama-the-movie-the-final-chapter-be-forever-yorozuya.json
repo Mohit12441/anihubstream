@@ -1,0 +1,561 @@
+{
+  "id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+  "title": "Gintama: The Final Chapter - Be Forever Yorozuya",
+  "native": "劇場版 銀魂 完結篇 万事屋よ永遠なれ",
+  "year": 2013,
+  "rating": 8.7,
+  "season": "Summer 2013",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx15335-QjijwChGTBs0.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx15335-QjijwChGTBs0.png",
+  "accent": "#bbd6f1",
+  "synopsis": "When Gintoki apprehends a movie pirate at a premiere, he checks the camera's footage and finds himself transported to a bleak, post-apocalyptic version of Edo, where a mysterious epidemic called the \"White Plague\" has ravished the world's population. It turns out that the movie pirate wasn't a pirate after all—it was an android time machine, and Gintoki has been hurtled five years into the future! Shinpachi and Kagura, his Yorozuya cohorts, have had a falling out and are now battle-hardened solo vigilantes and he himself has been missing for years, disappearing without a trace after scribbling a strange message in his journal.\n\nSetting out in the disguise given to him by the android time machine, Gintoki haphazardly reunites the Yorozuya team to investigate the White Plague, and soon discovers that the key to saving the future lies in the darkness of his own past. Determined to confront a powerful foe, he makes an important discovery—with a ragtag band of friends and allies at his side, he doesn't have to fight alone.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "gintama:-the-movie:-the-final-chapter:-be-forever-yorozuya-43sr71",
+    "mal": 15335,
+    "anilist": 15335,
+    "kitsu": 7241
+  },
+  "skip_key_id": 15335,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "gintama the final chapter be forever yorozuya 劇場版 銀魂 完結篇 万事屋よ永遠なれ movie finished",
+  "genres": [
+    "action",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Full",
+      "runtime": "110:00",
+      "runtime_seconds": 6600,
+      "thumb": "https://animehot.cc/storage/media/2026/09/690a4714543081759bdfb113-landscape.webp",
+      "synopsis": "When Gintoki apprehends a movie pirate at a premiere, he checks the camera's footage and finds himself transported to a bleak, post-apocalyptic version of Edo, where a mysterious epidemic called the \"White Plague\" has ravished the world's population. It turns out that the movie pirate wasn't a pirate after all—it was an android time machine, and Gintoki has been hurtled five years into the future! Shinpachi and Kagura, his Yorozuya cohorts, have had a falling out and are now battle-hardened solo vigilantes and he himself has been missing for years, disappearing without a trace after scribbling a strange message in his journal.\n\nSetting out in the disguise given to him by the android time machine, Gintoki haphazardly reunites the Yorozuya team to investigate the White Plague, and soon discovers that the key to saving the future lies in the darkness of his own past. Determined to confront a powerful foe, he makes an important discovery—with a ragtag band of friends and allies at his side, he doesn't have to fight alone.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "101655"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Wadachi",
+      "artist": "SPYAIR",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ring a Ding Dong",
+      "artist": "Saeko Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "We Are! (ウィーアー!)",
+      "artist": "Hiroshi Kitadani",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "I Wanna Be...",
+      "artist": "SPYAIR",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hikari Shoumeiron",
+      "artist": "CHiCO with HoneyWorks",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "VS.",
+      "artist": "Blue Encount",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hankō Seimei (Opposition Proclamation)",
+      "artist": "Ayumikurikamaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kagerō",
+      "artist": "ЯeaL",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Silver",
+      "artist": "RIZE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "DAYxDAY",
+      "artist": "BLUE ENCOUNT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "DESTINY",
+      "artist": "Negoto",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "LET'S GO OUT",
+      "artist": "AMOYAMO",
+      "episodes": "1-4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Moonwalk (ムーンウォーク)",
+      "artist": "MONOBRIGHT",
+      "episodes": "1-4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Genjō Distraction (現状ディストラクション;Current Situation Distraction)",
+      "artist": "SPYAIR",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tougenkyo Alien",
+      "artist": "serial TV drama",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Samurai Heart (Some Like It Hot!!)",
+      "artist": "SPYAIR",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Boku-tachi no Kisetsu (僕たちの季節)",
+      "artist": "DOES",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pray",
+      "artist": "Tommy Heavenly6",
+      "episodes": "1-24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fuusen Gamu",
+      "artist": "Captain Stridum",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Planet X",
+      "artist": "Audio Highs",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Omae no Kaa-chan XX da!",
+      "artist": "kazmy with Necromancers",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Dondake! Konishi Man (どんだけー!小西マン)",
+      "artist": "Ko-saku",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Katte ni My Soul",
+      "artist": "DISH//",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hana Ichi Monme",
+      "artist": "Burnout Syndromes",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Kyou mo Sakura Mau Akatsuki ni (今日もサクラ舞う暁に)",
+      "artist": "CHiCO with HoneyWorks",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "We Gotta Fight!",
+      "artist": "XY",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Pride Kakumei (プライド革命; Pride Revolution)",
+      "artist": "CHiCO with HoneyWorks",
+      "episodes": "278-291"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Saigo Made II",
+      "artist": "Aqua Timez",
+      "episodes": "278-291"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Sakuramitsu Tsuki (サクラミツツキ)",
+      "artist": "SPYAIR",
+      "episodes": "5-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Expect",
+      "artist": "PAGE",
+      "episodes": "5-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Pray",
+      "artist": "Tommy heavenly6",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Dilemma (ジレンマ)",
+      "artist": "ecosystem",
+      "episodes": "27-39"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Balance Doll",
+      "artist": "Prague",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Tooi Nioi",
+      "artist": "YO-KING",
+      "episodes": "25-49"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "MR.RAINDROP",
+      "artist": "amplified",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Saigo Made II",
+      "artist": "Aqua Timez",
+      "episodes": "281"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Pride Kakumei",
+      "artist": "CHiCO with Honeyworks",
+      "episodes": "281"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Wonderland",
+      "artist": "FLiP",
+      "episodes": "40-51"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Anagura (アナグラ)",
+      "artist": "Kuroneko Chelsea",
+      "episodes": "27-39"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Gin-iro no Sora (銀色の空; Silver Sky)",
+      "artist": "redballoon",
+      "episodes": "50-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Yuki no Tsubasa",
+      "artist": "redballoon",
+      "episodes": "25-37"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Beautiful Days",
+      "artist": "OKAMAOTO'S",
+      "episodes": "292-303"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Glorious Days (グロリアスデイズ)",
+      "artist": "Three Lights Down Kings",
+      "episodes": "292-303"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Nakama (仲間)",
+      "artist": "Good Coming",
+      "episodes": "40-51"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Kasanaru Kage",
+      "artist": "Hearts Glow",
+      "episodes": "76-99"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Candy Line",
+      "artist": "Hitomi Takahashi",
+      "episodes": "38-49"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Know Know Know",
+      "artist": "DOES",
+      "episodes": "304-316"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Acchi Muite",
+      "artist": "Swimy",
+      "episodes": "304-316"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Donten",
+      "artist": "DOES",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Shura (修羅)",
+      "artist": "DOES",
+      "episodes": "50-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 6,
+      "title": "Anata Magic",
+      "artist": "Monobright",
+      "episodes": "126-150"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Kiseki",
+      "artist": "Snowkel",
+      "episodes": "63-75"
+    },
+    {
+      "kind": "OP",
+      "sequence": 7,
+      "title": "Stairway Generation",
+      "artist": "Base Ball Bear",
+      "episodes": "151-176"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "SIGNAL",
+      "artist": "KELUN",
+      "episodes": "76-87"
+    },
+    {
+      "kind": "OP",
+      "sequence": 8,
+      "title": "Light Infection",
+      "artist": "Prague",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Speed of Flow",
+      "artist": "The Rodeo Carburettor",
+      "episodes": "88-99"
+    },
+    {
+      "kind": "OP",
+      "sequence": 9,
+      "title": "Bakuchi Dancer (バクチ・ダンサー)",
+      "artist": "DOES",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Sanagi",
+      "artist": "POSSIBILITY",
+      "episodes": "100-112"
+    },
+    {
+      "kind": "OP",
+      "sequence": 10,
+      "title": "Kaze no Gotoku (風のごとく)",
+      "artist": "Inoue Joe",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "This world is yours",
+      "artist": "Plingmin",
+      "episodes": "113-125"
+    },
+    {
+      "kind": "OP",
+      "sequence": 11,
+      "title": "Kanousei Girl (可能性ガール)",
+      "artist": "Chiaki Kuriyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "Ai, Ai, Ai (I, Love, Meet)",
+      "artist": "GHOSTNOTE",
+      "episodes": "126-138"
+    },
+    {
+      "kind": "OP",
+      "sequence": 12,
+      "title": "Katoniago (カートニアゴ )",
+      "artist": "FLiP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "Kagayaita",
+      "artist": "SHIGI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 13,
+      "title": "Asa Answer",
+      "artist": "PENGIN",
+      "episodes": "151-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 14,
+      "title": "Wo Ai Ni",
+      "artist": "Hitomi Takahashi and BEAT CRUSADERS",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 15,
+      "title": "Wonderful Days",
+      "artist": "ONE DRAFT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 16,
+      "title": "Sayonara no Sora",
+      "artist": "Qwai",
+      "episodes": "190-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 17,
+      "title": "Bokutachi no Kisetsu",
+      "artist": "DOES",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 18,
+      "title": "Wave",
+      "artist": "Vijandeux",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 19,
+      "title": "In My Life",
+      "artist": "AZU",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 20,
+      "title": "Sakurane",
+      "artist": "Piko",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

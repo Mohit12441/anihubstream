@@ -1,0 +1,204 @@
+{
+  "id": "food-wars-the-third-plate",
+  "title": "Food Wars! The Third Plate",
+  "native": "食戟のソーマ 餐ノ皿",
+  "year": 2017,
+  "rating": 7.8,
+  "season": "Fall 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx99255-heGTtj5b4owl.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx99255-heGTtj5b4owl.jpg",
+  "accent": "#f17800",
+  "synopsis": "At the Moon Festival, Totsuki Academy’s annual gourmet jubilee, students wage fierce culinary war as they try to out-earn their peers by selling the most of their chosen cuisine. Souma Yukihira, however, has his sights set on a grander prize: challenging the Elite Ten, who rule over the academy with iron fists. But Souma might have to put his grand ambitions on hold for the time being, because an insidious scheme to upset the balance of Totsuki Academy has begun to emerge from the shadows…\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "food-wars!-the-third-plate-kt4vyu",
+    "mal": 35788,
+    "anilist": 99255,
+    "kitsu": 13581
+  },
+  "skip_key_id": 35788,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "food wars the third plate 食戟のソーマ 餐ノ皿 tv finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Challenging the Elite Ten",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-04",
+      "markers": [],
+      "external_id": "230345"
+    },
+    {
+      "n": 2,
+      "title": "\"Ma\" and \"La\"",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-11",
+      "markers": [],
+      "external_id": "230346"
+    },
+    {
+      "n": 3,
+      "title": "Moon Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-18",
+      "markers": [],
+      "external_id": "230347"
+    },
+    {
+      "n": 4,
+      "title": "Pride of Young Lions",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-25",
+      "markers": [],
+      "external_id": "230348"
+    },
+    {
+      "n": 5,
+      "title": "The Darkening Dinner Table",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-01",
+      "markers": [],
+      "external_id": "230349"
+    },
+    {
+      "n": 6,
+      "title": "The Imprisoned Queen",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-08",
+      "markers": [],
+      "external_id": "230350"
+    },
+    {
+      "n": 7,
+      "title": "It Begins",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-15",
+      "markers": [],
+      "external_id": "230351"
+    },
+    {
+      "n": 8,
+      "title": "The Alchemist",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-22",
+      "markers": [],
+      "external_id": "230352"
+    },
+    {
+      "n": 9,
+      "title": "Hunting the Survivors",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-29",
+      "markers": [],
+      "external_id": "230353"
+    },
+    {
+      "n": 10,
+      "title": "The Salmon Will Dance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-06",
+      "markers": [],
+      "external_id": "230354"
+    },
+    {
+      "n": 11,
+      "title": "Der Weiße Ritter der Tafel",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-13",
+      "markers": [],
+      "external_id": "230355"
+    },
+    {
+      "n": 12,
+      "title": "The One Who Aims for the Summit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-20",
+      "markers": [],
+      "external_id": "230356"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Symbol",
+      "artist": "Luck Life",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Atoria",
+      "artist": "Fo'xTails",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Braver",
+      "artist": "ZAQ",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kyokyojitsujitsu (虚虚実実; Fictitious Fact)",
+      "artist": "nano.RIPE",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

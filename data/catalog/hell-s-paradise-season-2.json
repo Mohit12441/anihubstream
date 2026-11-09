@@ -1,0 +1,362 @@
+{
+  "id": "hell-s-paradise-season-2",
+  "title": "Hell’s Paradise Season 2",
+  "native": "地獄楽 第二期",
+  "year": 2026,
+  "rating": 8.2,
+  "season": "Winter 2026",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx166613-uHB8q3D4qbon.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx166613-uHB8q3D4qbon.jpg",
+  "accent": "#e49328",
+  "synopsis": "Seeking the key to the elixir of immortality, the group arrives at the fortress of the island's monstrous ruler, the \"Tensen.\" To survive and escape the island, cooperation becomes essential—regardless of whether one is a condemned criminal or an executioner.\n\nMeanwhile, the shogunate orders additional landings on the island of the Immortal Realm, led by Shugen Yamada Asayemon. Among them are the Ishigakure clan, who share a past with Gabimaru.\n\nDesperate to find the elixir and escape the island, Gabimaru and his companions face the Tensen in a battle that escalates into an all-out confrontation between humans and immortals!\n\n(Source: Twin Engine, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 47679,
+    "anilist": 166613,
+    "mal": 55825
+  },
+  "skip_key_id": 55825,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 08:15:04",
+  "search_text": "hell s paradise season 2 地獄楽 第二期 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Dawn and Confusion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353304/thumbnail/medium-821ee6646b88d0e5eef40836664c4d22.jpeg",
+      "synopsis": "Shugen and Jikka are sent to Shinsenkyo, while Gabimaru and his companions battle Aza Chobe and Toma. (Source: Crunchyroll)",
+      "airdate": "2026-01-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 180,
+          "end": 270
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1375,
+          "end": 1440
+        }
+      ],
+      "external_id": "353304"
+    },
+    {
+      "n": 2,
+      "title": "Reality and Fantasy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353305/thumbnail/medium-7af7774279ff3395fc2d0aa7c9868639.jpeg",
+      "synopsis": "Aza Chobe and Gabimaru lose themselves in battle, but Mei stops their fight. (Source: Crunchyroll)",
+      "airdate": "2026-01-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 60,
+          "end": 150
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1376,
+          "end": 1440
+        }
+      ],
+      "external_id": "353305"
+    },
+    {
+      "n": 3,
+      "title": "Immutability and Change",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353306/thumbnail/medium-854cdd0bb5659e3b1a9e9a0cb0cc5253.jpeg",
+      "synopsis": "While Aza Chobe battles Rien, Gabimaru regains his memories and begins training in the use of tao. (Source: Crunchyroll)",
+      "airdate": "2026-01-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 130
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "353306"
+    },
+    {
+      "n": 4,
+      "title": "The Samurai Code and Carnage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353307/thumbnail/medium-5fdef29c85a848e1e8da15179e98f54a.jpeg",
+      "synopsis": "Sagiri believes Shugen will be an ally and eagerly anticipates the expedition's arrival, but Shion is skeptical. (Source: Crunchyroll)",
+      "airdate": "2026-02-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 103
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1387,
+          "end": 1440
+        }
+      ],
+      "external_id": "353307"
+    },
+    {
+      "n": 5,
+      "title": "Humans and Sages",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353308/thumbnail/medium-069c41d54f3afa5afe6b77d3b73c0ff4.jpeg",
+      "synopsis": "As the expeditioners prepare, Gabimaru asks Mei if she's sure she wants to leave the island with them. (Source: Crunchyroll)",
+      "airdate": "2026-02-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1388,
+          "end": 1440
+        }
+      ],
+      "external_id": "353308"
+    },
+    {
+      "n": 6,
+      "title": "Conflict and Growing Together",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353309/thumbnail/medium-76f1d55644ffbd180895ecf80066e463.jpeg",
+      "synopsis": "Gabimaru's group finally enters the sacred mountain, but the Tensen can see everything they're up to. (Source: Crunchyroll)",
+      "airdate": "2026-02-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 158
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1376,
+          "end": 1440
+        }
+      ],
+      "external_id": "353309"
+    },
+    {
+      "n": 7,
+      "title": "Two People and One Person",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353310/thumbnail/medium-7e9f0cd522a2052dc5bf0eae94b46148.jpeg",
+      "synopsis": "Gantetsusai and Fuchi struggle against Tao Fa, but they seem to be enjoying themselves. (Source: Crunchyroll)",
+      "airdate": "2026-02-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 116,
+          "end": 204
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1377,
+          "end": 1440
+        }
+      ],
+      "external_id": "353310"
+    },
+    {
+      "n": 8,
+      "title": "Chrysanthemum and Peach",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353311/thumbnail/medium-210a443143e3f46632bba1dbdecb6ec6.jpeg",
+      "synopsis": "When Tao Fa asks Ju Fa for help, Ju Fa recalls the time they spent together. (Source: Crunchyroll)",
+      "airdate": "2026-03-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 77,
+          "end": 106
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1240,
+          "end": 1330
+        }
+      ],
+      "external_id": "353311"
+    },
+    {
+      "n": 9,
+      "title": "Love and Karma",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353312/thumbnail/medium-ea4f79bb8454f1028eb459f514cab870.jpeg",
+      "synopsis": "The expeditioners work together to take on Tao Fa and Ju Fa, who have undergone Kishikai transformations. (Source: Crunchyroll)",
+      "airdate": "2026-03-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 108
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1360,
+          "end": 1440
+        }
+      ],
+      "external_id": "353312"
+    },
+    {
+      "n": 10,
+      "title": "Master and Student",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353313/thumbnail/medium-b3b0289d301334661bbf22ea2ac8363d.jpeg",
+      "synopsis": "Shion and Nurugai take on Zhu Jin, but both sides lack the ability to finish the other off. (Source: Crunchyroll)",
+      "airdate": "2026-03-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 97,
+          "end": 185
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1360,
+          "end": 1440
+        }
+      ],
+      "external_id": "353313"
+    },
+    {
+      "n": 11,
+      "title": "Ephemeralness and Fire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353314/thumbnail/medium-626936f096f468877fbbfcac957caf9d.jpeg",
+      "synopsis": "Gabimaru recalls the days he spent with Yui. How will his battle against Rien end? (Source: Crunchyroll)",
+      "airdate": "2026-03-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1360,
+          "end": 1440
+        }
+      ],
+      "external_id": "353314"
+    },
+    {
+      "n": 12,
+      "title": "Endings and Beginnings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353315/thumbnail/medium-559a7645c6447a2f3be9259402d9c437.jpeg",
+      "synopsis": "As Gabimaru and his companions finish their respective battles, the additional expedition arrives. (Source: Crunchyroll)",
+      "airdate": "2026-03-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 107,
+          "end": 197
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1376,
+          "end": 1440
+        }
+      ],
+      "external_id": "353315"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kasuka na Hana (かすかなはな)",
+      "artist": "Tatsuya Kitani feat. BABYMETAL",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "PERSONAL",
+      "artist": "QUEEN BEE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "WORK",
+      "artist": "millenium parade ✕ Ringo Sheena",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kamihitoe (紙一重)",
+      "artist": "Uru",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

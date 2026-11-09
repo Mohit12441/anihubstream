@@ -1,0 +1,63 @@
+{
+  "id": "initial-d-legend-3-dream",
+  "title": "Initial D Legend 3: Dream",
+  "native": "新劇場版 頭文字[イニシャル]D Legend3 -夢現-",
+  "year": 2016,
+  "rating": 7.6,
+  "season": "Winter 2016",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21289-I7nSDuCtf8gE.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21289-I7nSDuCtf8gE.jpg",
+  "accent": "#e4ae5d",
+  "synopsis": "Takumi Fujiawara has garnered the attention of the street racer Ryousuke Takahashi, leader of the RedSuns. As he prepares for the biggest race in his life, Takumi finds himself trying to juggle his passion for racing with his personal life.\n\n(Source: HIDIVE, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "initial-d-legend-3:-dream-ucosi3",
+    "mal": 30952,
+    "anilist": 21289,
+    "kitsu": 11053
+  },
+  "skip_key_id": 30952,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "initial d legend 3 dream 新劇場版 頭文字 イニシャル d legend3 夢現 movie finished",
+  "genres": [
+    "action",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Initial D Legend 3: Dream (Movie)",
+      "runtime": "60:00",
+      "runtime_seconds": 3600,
+      "thumb": "https://animehot.cc/storage/media/2026/09/691199fe1a8ff5f7cb1fb66b-landscape.webp",
+      "synopsis": "After spending his summer racing against some of the best racers in Gunma, Takumi Fujiwara receives a formal challenge from the leader of the Akagi Red Suns, Ryousuke Takahashi. Despite his initial reluctance to get into the hobby, Takumi cannot help but feel excited to go up against the former \"White Comet of Akagi.\" In preparation for the battle, Ryousuke downgrades his car, putting his pride and racing career at stake. \n\nWith the title of the fastest racer in all of Gunma on the line, will Takumi and his panda-colored Toyota AE86 be able to defeat Ryousuke's Mazda RX-7 FC?",
+      "airdate": null,
+      "markers": [],
+      "external_id": "176968"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Chase for Dream (Trance Version)",
+      "artist": "Tatsuyuki Kobayashi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

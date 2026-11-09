@@ -1,0 +1,67 @@
+{
+  "id": "dragon-ball-z-plan-to-eradicate-the-saiyans",
+  "title": "Dragon Ball Z: Plan to Eradicate the Saiyans",
+  "native": "ドラゴンボールＺ サイヤ人絶滅計画",
+  "year": 1993,
+  "rating": 6.1,
+  "season": "Summer 1993",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx984-TshBxryrxr5u.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx984-TshBxryrxr5u.jpg",
+  "accent": "#e43550",
+  "synopsis": "Dr. Raichii is the only Tsufurujin (the race eradicated by the Saiyans many years ago) thought to have survived. He now is going to take revenge on the only surviving Saiyans still alive, Goku and Vegeta. He uses machines that emit destron, a gas that will destroy all life on Earth. Now the the Z warriors only have 72 hours to find and destroy Dr. Raichii.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "dragon-ball-z:-plan-to-eradicate-the-saiyans-7ubiw3",
+    "mal": 984,
+    "anilist": 984,
+    "kitsu": 874
+  },
+  "skip_key_id": 984,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "dragon ball z plan to eradicate the saiyans ト ラコ ンホ ールz サイヤ人絶滅計画 ova finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "18157"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "18158"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

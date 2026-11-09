@@ -1,0 +1,226 @@
+{
+  "id": "hellsing-ultimate",
+  "title": "Hellsing Ultimate",
+  "native": "HELLSING OVA",
+  "year": 2006,
+  "rating": 8.1,
+  "season": "Winter 2006",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx777-F6547pSAR2Zd.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx777-F6547pSAR2Zd.jpg",
+  "accent": "#e4431a",
+  "synopsis": "Hellsing, a secret organization of the British government, has long been battling supernatural threats to keep the people safe from creatures of the night. The current leader, Integra Wingates Hellsing controls her own personal army to eliminate the undead beings, but even her highly trained soldiers pale in comparison to her most trusted vampire exterminator, a man by the name of Alucard, who is actually a powerful vampire himself. Along with Integra's mysterious butler and Alucard's new vampire minion, Seras Victoria, The Hellsing Organization must face not only regular ghouls and vampires, but a rivaling secret organization from the Vatican, and Millennium, an enigmatic group of madmen spawned by a certain war over 50 years ago...\n\nA bloody battle between monsters is about to begin, the dead are dancing, and all hell is singing...",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "hellsing-ultimate-jihdvs",
+    "mal": 777,
+    "anilist": 777,
+    "kitsu": 695
+  },
+  "skip_key_id": 777,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": null,
+  "search_text": "hellsing ultimate hellsing ova ova finished",
+  "genres": [
+    "action",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hellsing I",
+      "runtime": "51:00",
+      "runtime_seconds": 3060,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15145/original.jpg",
+      "synopsis": "During a mission to eradicate a vampire priest and his minions, Alucard is forced into a difficult decision upon encountering an injured police woman. Later, Father Alexander Anderson and Alucard clash for the first time.",
+      "airdate": "2006-02-10",
+      "markers": [],
+      "external_id": "15145"
+    },
+    {
+      "n": 2,
+      "title": "Hellsing II",
+      "runtime": "43:00",
+      "runtime_seconds": 2580,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15146/original.jpe",
+      "synopsis": "Two daring vampire brothers lead a violent raid on the Hellsing compound. The carnage is great, but Alucard and company manage to gain a key piece of information while turning the battle's tide.",
+      "airdate": "2006-08-25",
+      "markers": [],
+      "external_id": "15146"
+    },
+    {
+      "n": 3,
+      "title": "Hellsing III",
+      "runtime": "47:00",
+      "runtime_seconds": 2820,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15147/original.jpe",
+      "synopsis": "The Hellsing organization resorts to the recruitment of mercenaries in the wake of a devastating attack on headquarters, and Integra's suspicions concerning the origins of their enemy are confirmed.",
+      "airdate": "2007-04-04",
+      "markers": [],
+      "external_id": "15147"
+    },
+    {
+      "n": 4,
+      "title": "Hellsing IV",
+      "runtime": "56:00",
+      "runtime_seconds": 3360,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15148/original.jpg",
+      "synopsis": "An important meeting between Hellsing and the Queen is interrupted by tidings of impending war. Meanwhile, Alucard is sent to deal with the deviants responsible for the hijacking of an aircraft carrier.",
+      "airdate": "2008-02-22",
+      "markers": [],
+      "external_id": "15148"
+    },
+    {
+      "n": 5,
+      "title": "Hellsing V",
+      "runtime": "44:00",
+      "runtime_seconds": 2640,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15149/original.png",
+      "synopsis": "While Alucard is trapped aboard an aircraft carrier, London is plagued by a gruesome vampire onslaught. Elsewhere, Integra narrowly escapes a hoard of Nazi vampires.",
+      "airdate": "2008-11-21",
+      "markers": [],
+      "external_id": "15149"
+    },
+    {
+      "n": 6,
+      "title": "Hellsing VI",
+      "runtime": "42:00",
+      "runtime_seconds": 2520,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15150/original.png",
+      "synopsis": "The Vatican's formidable combat unit is mobilized in preparation for battle. Back in the heart of London, the Hellsing Mansion is attacked, and the Wild Geese represent the last line of defense against the undead.",
+      "airdate": "2009-07-24",
+      "markers": [],
+      "external_id": "15150"
+    },
+    {
+      "n": 7,
+      "title": "Hellsing VII",
+      "runtime": "45:00",
+      "runtime_seconds": 2700,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15151/original.jpe",
+      "synopsis": "When her memories are violated, Seras becomes trapped in an illusion which forces her to relive the most horrifying moments of her life. Upon waking from the nightmare, the real pain begins as the battle nears its end.",
+      "airdate": "2009-12-23",
+      "markers": [],
+      "external_id": "15151"
+    },
+    {
+      "n": 8,
+      "title": "Hellsing VIII",
+      "runtime": "49:00",
+      "runtime_seconds": 2940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15152/original.jpe",
+      "synopsis": "The harrowing conclusion to Hellsing Ultimate features the epic return of Alucard - and Integra's willingness to unleash his true power on their enemies!",
+      "airdate": "2011-07-27",
+      "markers": [],
+      "external_id": "15152"
+    },
+    {
+      "n": 9,
+      "title": "Hellsing IX",
+      "runtime": "48:00",
+      "runtime_seconds": 2880,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15153/original.jpe",
+      "synopsis": "",
+      "airdate": "2012-02-15",
+      "markers": [],
+      "external_id": "15153"
+    },
+    {
+      "n": 10,
+      "title": "Hellsing X",
+      "runtime": "68:00",
+      "runtime_seconds": 4080,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/15154/original.jpg",
+      "synopsis": "",
+      "airdate": "2012-12-26",
+      "markers": [],
+      "external_id": "15154"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gradus Vita",
+      "artist": "Hayato Matsuo, performed by the Warsaw Philharmonic Orchestra",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Merche Funebre",
+      "artist": "by Hayato Matsuo, performed by the Warsaw Philharmonic Orchestra",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Letze Bataillon",
+      "artist": "Hayato Matsuo",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Das Engellandlied",
+      "artist": "Hermann Lons.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "A Patriot with No Name",
+      "artist": "???",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Magnolia",
+      "artist": "Suilen",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Shintou Shite",
+      "artist": "Suilen",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "P.S. Lord Amitabha Have Mercy on Me/When You Start the War, Fight With Arrows, Spears and Swords! (「P.S.南無阿弥陀仏 」, 「戦争するなら弓、槍、剣で戦え!」)",
+      "artist": "Yasushi Ishii",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "SCARS",
+      "artist": "Maon Kurosaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "Gradus vita",
+      "artist": "Hayato Matsuo",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

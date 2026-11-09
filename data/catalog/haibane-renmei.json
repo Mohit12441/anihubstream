@@ -1,0 +1,204 @@
+{
+  "id": "haibane-renmei",
+  "title": "Haibane Renmei",
+  "native": "灰羽連盟",
+  "year": 2002,
+  "rating": 8,
+  "season": "Fall 2002",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx387-dS4aJivu0zPB.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx387-dS4aJivu0zPB.png",
+  "accent": "#e4bb86",
+  "synopsis": "A dream of falling from the sky... and then birth. Rakka is born from a large cocoon into the Old Home, greeted by a group of girls with small wings on their backs and shining halos above their heads. Soon Rakka’s own wings grow, a halo is placed on her head and she is told that she must work in the nearby town of Grie. She soon realizes that the town and the entire world they live in are confined behind the Wall, a tall, impenetrable wall that none except the mysterious Toga are allowed to exit. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "haibane-renmei-i17wq1",
+    "mal": 387,
+    "anilist": 387,
+    "kitsu": 354
+  },
+  "skip_key_id": 387,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "haibane renmei 灰羽連盟 tv finished",
+  "genres": [
+    "drama",
+    "fantasy",
+    "mystery",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Cocoon — Dream of Falling from the Sky — Old Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163226/original.jpg",
+      "synopsis": "A girl dreams she is falling, and semi-angelic beings discover a large cocoon in their home. The girl wakes up inside this cocoon and breaks out of it. The winged people introduce themselves as Haibane, name her \"Rakka,\" and give her a forged halo. One of them, Reki, stays with her as ash-grey, feathered wings grow from her back in a painful way.",
+      "airdate": "2002-10-09",
+      "markers": [],
+      "external_id": "163226"
+    },
+    {
+      "n": 2,
+      "title": "Town and Wall — Toga — Haibane Renmei",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163245/original.jpg",
+      "synopsis": "Rakka's new companions take her into the town of Glie. She learns that most of the people here are not Haibane, that Haibane can only own things humans have stopped using, and that they are required to work. The wall around the city and countryside keeps everyone in; only the Toga can come and go freely, and only the Communicator can speak to them.",
+      "airdate": "2002-10-23",
+      "markers": [],
+      "external_id": "163245"
+    },
+    {
+      "n": 3,
+      "title": "Temple — The Communicator — Pancakes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163253/original.jpg",
+      "synopsis": "Hikari takes Rakka to the temple of the Haibane Renmei, where the Communicator approves her as a Haibane and gives her the notebook with which she can make purchases. Later, she helps Reki with the children at Old Home, and spends time with Kuu, the youngest of the older Haibane. They walk around town and visit the bakery where Hikari works.",
+      "airdate": "2002-11-06",
+      "markers": [],
+      "external_id": "163253"
+    },
+    {
+      "n": 4,
+      "title": "Trash Day — Clock Tower — Birds Flying Over the Walls",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163264/original.jpg",
+      "synopsis": "Kana tells Rakka not to feed the crows, because they are the only creatures who can leave the city, and if they get too comfortable, they might stop doing so. To explore her own job options, Rakka accompanies Kana to work in a clock tower in the center of town. This, she learns, is the highest point in the city, but the walls around it are higher still.",
+      "airdate": "2002-11-13",
+      "markers": [],
+      "external_id": "163264"
+    },
+    {
+      "n": 5,
+      "title": "Library — Abandoned Factory — Beginning of the World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163275/original.jpg",
+      "synopsis": "Rakka goes to work with Nemu at the library. There she meets Sumika, a kindly pregnant woman who is interested in Rakka's perspective as a newborn. Nemu tells Rakka about an old, unreadable book called The Beginning of the World. Rakka learns about another group of Haibane, both male and female, living in Abandoned Factory on the other side of town.",
+      "airdate": "2002-11-20",
+      "markers": [],
+      "external_id": "163275"
+    },
+    {
+      "n": 6,
+      "title": "End of Summer — Rain — Loss",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163281/original.jpg",
+      "synopsis": "With winter approaching, Kuu gives Rakka a coat and helps her choose a room to live in. Kuu thanks her for the influence she has been, and Rakka notices that Kuu's halo is flickering. The other Haibane tell Rakka about Kuu's history of trying to imitate her older companions. As night falls, it starts to rain, and Kuu is nowhere to be found.",
+      "airdate": "2002-11-27",
+      "markers": [],
+      "external_id": "163281"
+    },
+    {
+      "n": 7,
+      "title": "Scar — Illness — Arrival of Winter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163286/original.jpg",
+      "synopsis": "Rakka refuses to believe Kuu will never return from her Day of Flight, and sickly black spots begin to appear on her own wings. Depressed, she goes to town alone and is approached by Hyouko, a Haibane from Abandoned Factory who asks about Reki. Reki gives Rakka medicine for her wings and tells her about the Sin-Bound Haibane and about her own past.",
+      "airdate": "2002-11-27",
+      "markers": [],
+      "external_id": "163286"
+    },
+    {
+      "n": 8,
+      "title": "The Bird",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163296/original.jpg",
+      "synopsis": "Rakka continues to hide her wings from the others. Reki helps her move Kuu's bed into her room and they talk about the wall around the town. They take the children to buy winter clothes and a human girl tries to touch Rakka's wings. She flees into the Western Woods, led by the crows, who take her to an old well where she learns about her cocoon dream.",
+      "airdate": "2002-12-04",
+      "markers": [],
+      "external_id": "163296"
+    },
+    {
+      "n": 9,
+      "title": "Well — Rebirth — Riddle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163306/original.jpg",
+      "synopsis": "Rakka realizes that the crow that died in the well represents someone who cared about her in her old life. The Toga find and rescue her from the well. Hearing a noise, she touches the wall. The Communicator leads her home and they talk about the bird, her wings, and a riddle he calls the Circle of Sin. Arriving home, Rakka becomes ill from having touched the wall.",
+      "airdate": "2002-12-04",
+      "markers": [],
+      "external_id": "163306"
+    },
+    {
+      "n": 10,
+      "title": "Kuramori — Haibane of Abandoned Factory — Rakka's Job",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163313/original.jpg",
+      "synopsis": "A flashback shows the kindly Kuramori, who promised to stay with Reki forever. In the present, Reki goes to the Haibane Renmei to ask for help for the ailing Rakka, and is told that Rakka is no longer Sin-Bound. Rakka is given her own job within the wall around the city, and the Haibane from Abandoned Factory offer a tentatively friendly gesture.",
+      "airdate": "2002-12-11",
+      "markers": [],
+      "external_id": "163313"
+    },
+    {
+      "n": 11,
+      "title": "Parting — Darkness in the Heart — Irreplaceable Thing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163317/original.jpg",
+      "synopsis": "Midori, from Abandoned Factory, gives more hints about Reki's past. The Communicator tells Rakka that while she had the birds to offer her forgiveness, Reki will not accept anyone's help, and has little time left. Rakka vows to try and help her. Visiting the library, she talks to Sumika about an old book. Resigned, Reki works on a secret painting.",
+      "airdate": "2002-12-11",
+      "markers": [],
+      "external_id": "163317"
+    },
+    {
+      "n": 12,
+      "title": "Bell Nuts — Passing of the Year Festival — Reconciliation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163325/original.jpg",
+      "synopsis": "The Haibane go into town to buy Bell Nuts, gifts of reconciliation for the Passing of the Year festival. Reki gives one to Hyouko, and he and Midori finally tell Rakka what happened. Rakka learns about the Renmei's sign language, and the Communicator gives her her true name. After the festival, the Haibane of Abandoned Factory send Reki a message.",
+      "airdate": "2002-12-18",
+      "markers": [],
+      "external_id": "163325"
+    },
+    {
+      "n": 13,
+      "title": "Reki's World — Prayer — Epilogue",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163330/original.jpg",
+      "synopsis": "Rakka discovers that Reki's entire studio is painted like her cocoon dream. She gives Reki a box from the Communicator, containing her true name, which fills Reki with despair. She throws Rakka out of the room, confronts a manifestation of herself, and relives her dream. Rakka realizes the truth about Reki's struggle and goes back to save her.",
+      "airdate": "2002-12-18",
+      "markers": [],
+      "external_id": "163330"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Free Bird",
+      "artist": "Kou Otani",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Blue Flow",
+      "artist": "Heart of Air",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

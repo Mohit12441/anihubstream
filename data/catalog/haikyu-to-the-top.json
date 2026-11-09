@@ -1,0 +1,219 @@
+{
+  "id": "haikyu-to-the-top",
+  "title": "HAIKYU!! TO THE TOP",
+  "native": "ハイキュー!! TO THE TOP",
+  "year": 2020,
+  "rating": 8.3,
+  "season": "Winter 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx106625-UR22wB2NuNVi.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx106625-UR22wB2NuNVi.png",
+  "accent": "#f1a150",
+  "synopsis": "The Karasuno High School Volleyball Club finally won their way into the nationals after an intense battle for the Miyagi Prefecture Spring Tournament qualifiers. As they were preparing for the nationals, Kageyama is invited to go to All-Japan Youth Training Camp. At the same time, Tsukishima is invited to go to a special rookie select training camp for first-years in Miyagi Prefecture. Hinata feels panic that he’s being left behind as one of the first-years and then decides to show up at the Miyagi Prefecture rookie select training camp anyway... \n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "HAIKYU!! LAND VS. AIR (2020)",
+    "HAIKYU!! TO THE TOP Part 2 (2020)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42059,
+    "anilist": 106625,
+    "mal": 38883,
+    "hianime": "haikyu!!-to-the-top-epaebw"
+  },
+  "skip_key_id": 38883,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 03:06:30",
+  "search_text": "haikyu to the top ハイキュー to the top tv finished",
+  "genres": [
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Let's Go to Tokyo!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259458"
+    },
+    {
+      "n": 2,
+      "title": "Direct Sunlight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259459"
+    },
+    {
+      "n": 3,
+      "title": "Townsperson B",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259960"
+    },
+    {
+      "n": 4,
+      "title": "Center Ace",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259961"
+    },
+    {
+      "n": 5,
+      "title": "Greed",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259962"
+    },
+    {
+      "n": 6,
+      "title": "Tempo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259963"
+    },
+    {
+      "n": 7,
+      "title": "Moonrise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259964"
+    },
+    {
+      "n": 8,
+      "title": "Illusionary Hero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259965"
+    },
+    {
+      "n": 9,
+      "title": "VS. \"Umbrella\"",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259966"
+    },
+    {
+      "n": 10,
+      "title": "Cogs",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259967"
+    },
+    {
+      "n": 11,
+      "title": "Above",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259968"
+    },
+    {
+      "n": 12,
+      "title": "Let the Games Begin!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "259969"
+    },
+    {
+      "n": 13,
+      "title": "A Simple and Pure Strength",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274181"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Toppakō (Breach)",
+      "artist": "SUPER BEAVER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "One Day",
+      "artist": "SPYAIR",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "PHOENIX",
+      "artist": "Burnout Syndromes",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kessen Spirit (決戦スピリット)",
+      "artist": "CHiCO with HoneyWorks",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}
