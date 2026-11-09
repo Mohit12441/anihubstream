@@ -1,0 +1,215 @@
+{
+  "id": "the-fragrant-flower-blooms-with-dignity",
+  "title": "The Fragrant Flower Blooms With Dignity",
+  "native": "薫る花は凛と咲く",
+  "year": 2025,
+  "rating": 8.4,
+  "season": "Summer 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx181444-Ut9DDUZdfHwg.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx181444-Ut9DDUZdfHwg.jpg",
+  "accent": "#6baed6",
+  "synopsis": "Chidori High is a boys’ school that takes in the dregs of society with the lowest grades. Next door stands Kikyo Girls’ High, where the wealthy, high-class families send their precious daughters. Chidori second-year Rintarou, who has a fierce face but a gentle heart, is helping at his family’s patisserie when he meets a girl named Kaoruko. The two hit it off right away…but this blissful peace is quickly disturbed when Rintarou discovers that Kaoruko is actually a student at Kikyo. Worse, she doesn’t seem to realize what a huge problem this really is! Will these two be able to forge a path for themselves, and sidestep the traps (metaphorical and literal) laid by their classmates?\n\n(Source: Kodansha USA)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 49205,
+    "anilist": 181444,
+    "mal": 59845,
+    "hianime": "the-fragrant-flower-blooms-with-dignity-u9rd4z"
+  },
+  "skip_key_id": 59845,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 06:14:32",
+  "search_text": "the fragrant flower blooms with dignity 薫る花は凛と咲く tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Rintaro and Kaoruko",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373010/thumbnail/medium-84f1b1a22459292e36b8d2a25ce368f7.jpeg",
+      "synopsis": "While helping at his family's patisserie, Rintaro meets Kaoruko. He fears his appearance has scared her off - but she returns the next day to see him. (Source: Netflix)",
+      "airdate": "2025-09-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 55,
+          "end": 63,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "373010"
+    },
+    {
+      "n": 2,
+      "title": "Chidori and Kikyo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373011/thumbnail/medium-6adee915be5558e70f21dccf8386aacf.jpeg",
+      "synopsis": "Tensions between the two schools escalate during a commotion at Chidori's gates. Later, Rintaro finds a surprise visitor waiting at the patisserie. (Source: Netflix)",
+      "airdate": "2025-09-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 38,
+          "end": 127,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1350,
+          "end": 1442,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "373011"
+    },
+    {
+      "n": 3,
+      "title": "A Kind Soul",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373012/thumbnail/medium-36ac0b8d606e4cb75cd438c1040af57f.jpeg",
+      "synopsis": "Desperate to improve their grades, Rintaro and Shohei cram in the library. There, Rintaro runs into Kaoruko, but their tender moment gets interrupted. (Source: Netflix)",
+      "airdate": "2025-09-14",
+      "markers": [],
+      "external_id": "373012"
+    },
+    {
+      "n": 4,
+      "title": "Warmth of the Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373013/thumbnail/medium-0b4ab96c0a661b06ba6a8dacb1e0ac05.jpeg",
+      "synopsis": "Though Rintaro becomes more comfortable with Kaoruko during their study session, he faces unexpectedly strong opposition to their growing bond. (Source: Netflix)",
+      "airdate": "2025-09-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 50,
+          "end": 135,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "373013"
+    },
+    {
+      "n": 5,
+      "title": "A Premonition of the Beginning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373014/thumbnail/medium-3ea5f5df8d49bd72b57ad1ebc1f720d2.jpeg",
+      "synopsis": "While celebrating passing the mid-term exams, Shohei, Ayato, and Saku nearly discover Rintaro's secret. Will he finally tell them the truth? (Source: Netflix)",
+      "airdate": "2025-09-28",
+      "markers": [],
+      "external_id": "373014"
+    },
+    {
+      "n": 6,
+      "title": "Self-Loathing/I love you!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373015/thumbnail/medium-289877e4be34a36c205b66f7a46679de.jpeg",
+      "synopsis": "It's an important night of confessions, apologies, and cherished memories when Subaru and Kaoruko catch up at the park where they used to play as kids. (Source: Netflix)",
+      "airdate": "2025-10-05",
+      "markers": [],
+      "external_id": "373015"
+    },
+    {
+      "n": 7,
+      "title": "Coolest Guy Ever",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373016/thumbnail/medium-51117df14cd5a5310caf2d294afce98d.jpeg",
+      "synopsis": "Noticing Rintaro's strange behavior, Shohei, Saku, and Ayato follow him after school and try to eavesdrop on his meeting with Kaoruko and Subaru. (Source: Netflix)",
+      "airdate": "2025-10-12",
+      "markers": [],
+      "external_id": "373016"
+    },
+    {
+      "n": 8,
+      "title": "The Meaning of These Feelings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373017/thumbnail/medium-34316d2a0ca35e48b7bdf9aec4ecb356.jpeg",
+      "synopsis": "Despite the awkwardness, Rintaro manages to introduce his friends to the girls. Later, Kaoruko makes a bold suggestion on how Rintaro could repay her. (Source: Netflix)",
+      "airdate": "2025-10-19",
+      "markers": [],
+      "external_id": "373017"
+    },
+    {
+      "n": 9,
+      "title": "Blonde Hair and Pierced Ears",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373018/thumbnail/medium-6897cb221b202bf30ef86d350a9c77a3.jpeg",
+      "synopsis": "Though Rintaro becomes more comfortable with Kaoruko during their study session, he faces unexpectedly strong opposition to their growing bond. (Source: Netflix)",
+      "airdate": "2025-10-26",
+      "markers": [],
+      "external_id": "373018"
+    },
+    {
+      "n": 10,
+      "title": "Summer Storm",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373019/thumbnail/medium-293b3b58173707ba87f99a7a944bf46d.jpeg",
+      "synopsis": "To prepare for their finals, the six Chidori and Kikyo students hold a joint study session. Later, Shohei makes a sharp observation about Rintaro. (Source: Netflix)",
+      "airdate": "2025-11-02",
+      "markers": [],
+      "external_id": "373019"
+    },
+    {
+      "n": 11,
+      "title": "A Morsel of Warmth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373020/thumbnail/medium-03ad3e76f257d62c44dafa769278b3e2.jpeg",
+      "synopsis": "As Waguri's birthday approaches, Rintaro finds himself in a dilemma of what to give her as a birthday present. (Source: Netflix)",
+      "airdate": "2025-11-09",
+      "markers": [],
+      "external_id": "373020"
+    },
+    {
+      "n": 12,
+      "title": "Bewilderment at the Beachside",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373021/thumbnail/medium-193ff6d0fe2ce04ebc755a863897a58e.jpeg",
+      "synopsis": "While everyone else is having fun at the beach, Subaru seems down. When prodded, she reveals her worries and makes a request to the four Chidori boys. (Source: Netflix)",
+      "airdate": "2025-11-16",
+      "markers": [],
+      "external_id": "373021"
+    },
+    {
+      "n": 13,
+      "title": "Kaoruko and Rintaro",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/373022/thumbnail/medium-58a3d6341db438590ff9340ce39a80f4.jpeg",
+      "synopsis": "With things still left unspoken between them, Rintaro arranges to meet Kaoruko and express his true feelings. Kaoruko has her own thoughts to share. (Source: Netflix)",
+      "airdate": "2025-11-23",
+      "markers": [],
+      "external_id": "373022"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

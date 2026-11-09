@@ -1,0 +1,200 @@
+{
+  "id": "tamako-market",
+  "title": "Tamako Market",
+  "native": "たまこまーけっと",
+  "year": 2013,
+  "rating": 7.3,
+  "season": "Winter 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx16417-r8Njy5UnwvDE.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx16417-r8Njy5UnwvDE.png",
+  "accent": "#e4865d",
+  "synopsis": "Tamako knows just about everything there is to know about mochi, the traditional Japanese dessert treats. When she's not attending her first year of high school, she even invents new flavors and varieties for Tama-ya, her family's mochi shop. School and growing up, on the other hand, are some things that she's still trying to find the right recipe for. But with the help of her best friends Kanna and Midori, two girls whose parents run businesses in the same shopping district, Tamako's determined to make the best of things. It's complicated though, especially when it comes to emotions and her relationship with her best boy friend Mochizou, whose family runs a rival mochi shop. And lately, Midori's been feeling a little odd about her feelings towards Tamako as well. And what's with up with that strange bird fluttering around, the one that speaks fluent Japanese? It's all very mysterious and overwhelming, but at least Tamako always has one thing she can count on: No matter if your day's been good or bad, there's certain to be something sugary and delicious waiting at the end of every adventure whenever you take a walk through Tamako Market!\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Tamako -love story- (2014)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7425,
+    "anilist": 16417,
+    "mal": 16417,
+    "hianime": "tamako-market-xaq30u"
+  },
+  "skip_key_id": 16417,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 10:34:33",
+  "search_text": "tamako market たまこまーけっと tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "That Girl's the Daughter of a Mochi Shop Owner",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/102489/original.jpg",
+      "synopsis": "Tamako is a bubbly, popular high-school student working for the family business. But things suddenly take a turn for the strange when she meets a talking bird named Dera.",
+      "airdate": "2013-01-10",
+      "markers": [],
+      "external_id": "102489"
+    },
+    {
+      "n": 2,
+      "title": "The Love-in-Bloom Valentine's",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/102490/original.jpg",
+      "synopsis": "Tamako tries to get everyone in the local shopping arcade where her store is located into the Valentine's Day spirit, but her father is less than amused.",
+      "airdate": "2013-01-17",
+      "markers": [],
+      "external_id": "102490"
+    },
+    {
+      "n": 3,
+      "title": "Hot Hot Hot Over That Cool Girl",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/102491/original.jpg",
+      "synopsis": "Dera falls head over heels for Shiori Asagiri, Tamako's new classmate - but his confessions of love may not go as planned.",
+      "airdate": "2013-01-24",
+      "markers": [],
+      "external_id": "102491"
+    },
+    {
+      "n": 4,
+      "title": "A Small Love Has Bloomed",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/102492/original.jpg",
+      "synopsis": "It's May and festival time is drawing near, but Tamako's younger sister Anko doesn't seem to be in much of a festive mood...",
+      "airdate": "2013-01-31",
+      "markers": [],
+      "external_id": "102492"
+    },
+    {
+      "n": 5,
+      "title": "We Spent a Night Together",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/102493/original.jpg",
+      "synopsis": "The school field trip is coming up, and Tamako decides it's time to learn how to swim. Meanwhile, her childhood friend Mochizo struggles to say how he truly feels about her.",
+      "airdate": "2013-02-07",
+      "markers": [],
+      "external_id": "102493"
+    },
+    {
+      "n": 6,
+      "title": "It's Chilled Even My Spine",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/102494/original.jpg",
+      "synopsis": "With a heat wave in full swing and the shopping district's attendance suffering as a result, Tamako plans a spine-chilling haunted house to drum up some business.",
+      "airdate": "2013-02-14",
+      "markers": [],
+      "external_id": "102494"
+    },
+    {
+      "n": 7,
+      "title": "That Girl's Become a Bride",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/102495/original.jpg",
+      "synopsis": "Dera's old acquaintance Choi arrives in town, and the real reason for Dera's presence in Usagiyama comes to light.",
+      "airdate": "2013-02-21",
+      "markers": [],
+      "external_id": "102495"
+    },
+    {
+      "n": 8,
+      "title": "I Won't Let You Call Me a Chicken",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/102496/original.jpg",
+      "synopsis": "Dera has become rather chubby from the rice cakes that Tamako's family business sells, and an intervention is held to get him back in shape.",
+      "airdate": "2013-02-28",
+      "markers": [],
+      "external_id": "102496"
+    },
+    {
+      "n": 9,
+      "title": "I Will Sing Love's Song",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/102497/original.jpg",
+      "synopsis": "Everyone is getting excited for the annual rice cake-pounding event, but Tamako's sister Anko is in low spirits - the boy she has a crush on is transferring to another school.",
+      "airdate": "2013-03-07",
+      "markers": [],
+      "external_id": "102497"
+    },
+    {
+      "n": 10,
+      "title": "Flowers Bloom on That Girl's Baton",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/102498/original.jpg",
+      "synopsis": "Tamako's childhod friend Midori suddenly falls ill. The reason: the Culture Festival is coming up, but Baton Club president Midori can't think of an idea for their routine!",
+      "airdate": "2013-03-14",
+      "markers": [],
+      "external_id": "102498"
+    },
+    {
+      "n": 11,
+      "title": "I Never Thought That Girl Would Be a Princess",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/102499/original.jpg",
+      "synopsis": "Choi spies a birthmark on Tamako's neck that puts Dera's mission to rest: the bride destined to marry the prince of their island nation has been found!",
+      "airdate": "2013-03-21",
+      "markers": [],
+      "external_id": "102499"
+    },
+    {
+      "n": 12,
+      "title": "This Year, Too, Has Come to a Close",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/102500/original.jpg",
+      "synopsis": "The shopping arcade is abuzz when Prince Mecha arrives, but Tamako continues to struggle with the idea of giving up her life in Usagiyama.",
+      "airdate": "2013-03-28",
+      "markers": [],
+      "external_id": "102500"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dramatic Market Ride (ドラマチックマーケットライド)",
+      "artist": "Aya Suzaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Neguse (ねぐせ)",
+      "artist": "Aya Suzaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Koi no Uta (恋の歌)",
+      "artist": "Dynamite Beans",
+      "episodes": "9"
+    }
+  ],
+  "relations": []
+}

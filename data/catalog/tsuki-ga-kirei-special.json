@@ -1,0 +1,56 @@
+{
+  "id": "tsuki-ga-kirei-special",
+  "title": "Tsuki ga Kirei Special",
+  "native": "月がきれい",
+  "year": 2017,
+  "rating": 7.1,
+  "season": "Summer 2017",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx100305-CRu6RZ5eINHP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx100305-CRu6RZ5eINHP.jpg",
+  "accent": "#f1e4c9",
+  "synopsis": "A series of unaired comedic shorts released with Blu-ray and DVD boxes of Tsuki ga Kirei.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tsuki-ga-kirei-special-5cc5mj",
+    "mal": 36539,
+    "anilist": 100305,
+    "kitsu": 13948
+  },
+  "skip_key_id": 36539,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "tsuki ga kirei special 月か きれい special finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Tsuki ga Kirei Special",
+      "runtime": "15:00",
+      "runtime_seconds": 900,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ac7837abaf7e258bdc7b0b2-poster.jpg",
+      "synopsis": "A series of unaired comedic shorts released with Blu-ray and DVD boxes of Tsuki ga Kirei.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "226829"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

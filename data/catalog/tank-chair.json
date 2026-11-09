@@ -1,0 +1,88 @@
+{
+  "id": "tank-chair",
+  "title": "TANK CHAIR",
+  "native": "TANK CHAIR-戦車椅子-",
+  "year": 2026,
+  "rating": 6.2,
+  "season": "Fall 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx209499-S0sWFrCpft85.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx209499-S0sWFrCpft85.jpg",
+  "accent": "#e4c95d",
+  "synopsis": "Shizuka takes on the most dangerous of assassin jobs, but she's not the one doing the killing. Rather, it's her brother, Nagi, a strong assassin who took a bullet to protect his sister, leaving him in a comatose state and having to use a wheelchair. However, Shizuka has figured out the key to waking her brother up: he must be faced with killing intent! Thus begins a violent journey of recovery, battling the most dangerous foes!\n\n(Source: Kodansha USA)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": 7,
+  "sched_day_label": "SUN",
+  "sched_date": "Nov 8",
+  "sched_time": "14:00",
+  "sched_season": "Fall 2026",
+  "sched_episode": 6,
+  "sched_sub_at": null,
+  "sched_dub_at": 1794148200000,
+  "source_ids": {
+    "anilist": 209499,
+    "mal": 63751,
+    "hianime": "tank-chair-3wae4h",
+    "kitsu": 50640
+  },
+  "skip_key_id": 63751,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-18 15:08:44",
+  "search_text": "tank chair tank chair 戦車椅子 tv ongoing",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Tank Chair Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx209499-S0sWFrCpft85.jpg",
+      "synopsis": "",
+      "airdate": "2026-10-04",
+      "markers": [],
+      "external_id": "anikoto:9076:1"
+    },
+    {
+      "n": 2,
+      "title": "Tank Chair Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx209499-S0sWFrCpft85.jpg",
+      "synopsis": "",
+      "airdate": "2026-10-11",
+      "markers": [],
+      "external_id": "anikoto:9076:2"
+    },
+    {
+      "n": 3,
+      "title": "Tank Chair Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx209499-S0sWFrCpft85.jpg",
+      "synopsis": "",
+      "airdate": "2026-10-18",
+      "markers": [],
+      "external_id": "anikoto:9076:3"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

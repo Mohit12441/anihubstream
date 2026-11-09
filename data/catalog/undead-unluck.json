@@ -1,0 +1,339 @@
+{
+  "id": "undead-unluck",
+  "title": "Undead Unluck",
+  "native": "アンデッドアンラック",
+  "year": 2023,
+  "rating": 7.6,
+  "season": "Fall 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154116-3ydDI9hhvPgw.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154116-3ydDI9hhvPgw.png",
+  "accent": "#e44343",
+  "synopsis": "All Fuuko wants is a passionate romance like the one in her favorite shoujo manga. Unfortunately, her Unluck ability makes that impossible. But just as Fuuko hits rock bottom, Andy sweeps her off her feet—literally! Now she's become Andy's unwilling test subject as he works to find a way to trigger a stroke of Unluck big enough to kill him for good. However, when the pair discovers a secret organization is hunting them, it puts Andy's burial plans on hold.\n\n(Source: VIZ Media)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "undead-unluck-h53b5b",
+    "mal": 52741,
+    "anilist": 154116,
+    "kitsu": 46415
+  },
+  "skip_key_id": 52741,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "undead unluck アンテ ット アンラック tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "sci-fi",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Undead and Unluck",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356366/thumbnail/64ee2791fe6c869570eac5b6115a54b9.jpg",
+      "synopsis": "An \"Undead\" man who is said to have an immortal body suddenly appears in front of Fuko Izumo, who has the power of \"Unluck.\" Saying that he finally found someone with the power to grant him a true death, he sweeps Fuko away…\n\n(Source: Hulu)",
+      "airdate": "2023-10-06",
+      "markers": [],
+      "external_id": "356366"
+    },
+    {
+      "n": 2,
+      "title": "Union",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356367/thumbnail/81e3136361c05445ab7006422a888671.jpg",
+      "synopsis": "Andy makes a move on Fuko, thinking an even greater unluck will happen. To prevent physical assault, Fuko explains that the higher her likability for the other person is, the larger the unluck becomes.\n\n(Source: Hulu)",
+      "airdate": "2023-10-13",
+      "markers": [],
+      "external_id": "356367"
+    },
+    {
+      "n": 3,
+      "title": "How To Use My Unluck",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356368/thumbnail/531708bb3ddecbc19ca7ba8fbea62fbf.jpg",
+      "synopsis": "A Union member will be on the move for a UMA investigation to Russia. Learning that if they can enter the Union if they kill that member, Andy and Fuko head out towards Lake Baikal!\n\n(Source: Hulu)",
+      "airdate": "2023-10-20",
+      "markers": [],
+      "external_id": "356368"
+    },
+    {
+      "n": 4,
+      "title": "Do You Love the Change in Me?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356369/thumbnail/748b325ae2358568e15a5d8ee36d44bd.jpg",
+      "synopsis": "The girl painting together with Fuko at Lake Baikal was Gena, the Negator that captured Andy in the past! Gena thinks Fuko has stolen her long crush Andy from her, and shows emotions of rivalry out of jealousy against Fuko…\n\n(Source: Hulu)",
+      "airdate": "2023-10-27",
+      "markers": [],
+      "external_id": "356369"
+    },
+    {
+      "n": 5,
+      "title": "United We Negate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356370/thumbnail/74c9b01c04e8f75149b78cad6fe57bea.jpg",
+      "synopsis": "Andy and Fuko are taken to the Roundtable where Union members await. There, Apocalypse delivers the new round of quests.\n\n(Source: Hulu)",
+      "airdate": "2023-11-03",
+      "markers": [],
+      "external_id": "356370"
+    },
+    {
+      "n": 6,
+      "title": "Spoil",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356371/thumbnail/e09c491cb9e4dc631d4adc111da0254b.jpg",
+      "synopsis": "According to Union agent reports, the town of Longing definitely had the UMA Spoil and zombies that they've created. Andy makes a flashy show immediately after arriving in town!\n\n(Source: Hulu)",
+      "airdate": "2023-11-10",
+      "markers": [],
+      "external_id": "356371"
+    },
+    {
+      "n": 7,
+      "title": "Dream",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356372/thumbnail/2fa8461dc108f38258d1bb08303e6e72.jpg",
+      "synopsis": "Fuko learns from children hiding in an underground shelter about what happened in the town and how they aren’t zombies yet. Andy and the gang fight together with the zombies, the total town warfare against Spoil begins!\n\n(Source: Hulu)",
+      "airdate": "2023-11-17",
+      "markers": [],
+      "external_id": "356372"
+    },
+    {
+      "n": 8,
+      "title": "Victhor",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356373/thumbnail/917677833aaec3f94e7e44dfb6e1fe21.jpg",
+      "synopsis": "Spoil transitions to Phase 2. For this type of UMAs, capture is complete when the core within its body is extracted. However, Spoil decomposes anything that gets near and fires a decomposition laser if you get away, and defeating him is proving to be extremely difficult.\n\n(Source: Hulu)",
+      "airdate": "2023-11-24",
+      "markers": [],
+      "external_id": "356373"
+    },
+    {
+      "n": 9,
+      "title": "Return",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356374/thumbnail/8b123fb09370f8830a066566f430e374.jpg",
+      "synopsis": "Victor is Andy’s other face that shows up when the Card on his forehead is removed. The Union members all challenge him to return the aggressive Victor back into the current form of Andy...\n\n(Source: Hulu)",
+      "airdate": "2023-12-01",
+      "markers": [],
+      "external_id": "356374"
+    },
+    {
+      "n": 10,
+      "title": "Result",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356375/thumbnail/7607251bdf5c0b7f1173a8539b837f24.jpg",
+      "synopsis": "Apocalypse reads out the results of the quests before the Union members. With the failure of the sixth quest, Apocalypse adds the UMA Galaxy as a penalty...\n\n(Source: Hulu)",
+      "airdate": "2023-12-08",
+      "markers": [],
+      "external_id": "356375"
+    },
+    {
+      "n": 11,
+      "title": "Rio de Janeiro",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356376/thumbnail/46f399d2bef619c477aea39b48a8c456.jpg",
+      "synopsis": "The Negator Unrepair is confirmed located near a black market auction. Negators, UMAs, and Artifacts that the Union hasn’t been able to manage all circulate this market so Andy and Fuko infiltrate the venue...\n\n(Source: Hulu)",
+      "airdate": "2023-12-15",
+      "markers": [],
+      "external_id": "356376"
+    },
+    {
+      "n": 12,
+      "title": "Activate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356377/thumbnail/4c7b2881c30a32c321853d8b3d5b1f1e.jpg",
+      "synopsis": "The Union and the Negator Hunters have infiltrated the black market auction venue for a new Negator. Andy and Fuko hurry towards the auction item storage, to stop the Negator Hunters who seek revenge against the world.\n\n(Source: Hulu)",
+      "airdate": "2023-12-22",
+      "markers": [],
+      "external_id": "356377"
+    },
+    {
+      "n": 13,
+      "title": "Tatiana",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356378/thumbnail/22b29f911e21a3264bfba3aceaa11831.jpg",
+      "synopsis": "While Tatiana fights members of the Negator Hunters, she receives a report that Fuko was wounded by Unrepair. Tatiana unleashes her powers in order to save Fuko!\n\n(Source: Hulu)",
+      "airdate": "2024-01-05",
+      "markers": [],
+      "external_id": "356378"
+    },
+    {
+      "n": 14,
+      "title": "Crimson Bullet",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356379/thumbnail/bde6ae4244a8e4700a70b45bd8df1d55.jpg",
+      "synopsis": "A huge explosion occurs from within the luxury liner sends Andy and company up into the air. They find Rip and company among the rubble. If they let Rip get away, Fuko will die. A roller-coaster ride of a battle ensues.\n\n(Source: Hulu)",
+      "airdate": "2024-01-12",
+      "markers": [],
+      "external_id": "356379"
+    },
+    {
+      "n": 15,
+      "title": "Under",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356380/thumbnail/6f15506d1a8b08277d90796cc55c2f49.jpg",
+      "synopsis": "Fuko and Andy head over to right outside Chikara’s school in order to hear his reply about joining the Union. Rip, who was supposedly dead, suddenly shows up as a young boy. Chikara over hears their conversation....\n\n(Source: Hulu)",
+      "airdate": "2024-01-19",
+      "markers": [],
+      "external_id": "356380"
+    },
+    {
+      "n": 16,
+      "title": "Revolution",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356381/thumbnail/e96eec217b200b59564f528e88fa8f5a.jpg",
+      "synopsis": "Apocalypse reads out the quests that have the 100th penalty on the line. However, Billy suddenly declares that it’s impossible for the Union to kill God, and tries to take off with the Roundtable...\n\n(Source: Hulu)",
+      "airdate": "2024-01-26",
+      "markers": [],
+      "external_id": "356381"
+    },
+    {
+      "n": 17,
+      "title": "Outsmart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356382/thumbnail/685e259252b8242f71ec5dd60bd566bd.png",
+      "synopsis": "To regain the Roundtable, the Union commences an operation with Andy and Fuko as central members. Andy chops his head off while being kissed by Fuko. His head turns into a Parts Bullet and goes into Burn's stomach.\n\n(Source: Hulu)",
+      "airdate": "2024-02-02",
+      "markers": [],
+      "external_id": "356382"
+    },
+    {
+      "n": 18,
+      "title": "Cry for the Moon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356383/thumbnail/2bdcf471bb0b8838f317669ce429fc2a.jpg",
+      "synopsis": "The Union regains control of Apocalypse, but the Roundtable has been seized. Juiz starts telling the members how this world is in a Loop of destruction and reconstruction by the hands of God, and that the Union is an organization she created to thwart such actions.\n\n(Source: Hulu)",
+      "airdate": "2024-02-09",
+      "markers": [],
+      "external_id": "356383"
+    },
+    {
+      "n": 19,
+      "title": "Undead + Unluck",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356384/thumbnail/69b1e52be484fe466c46f0c4829cc21a.jpg",
+      "synopsis": "The possibility has risen that Fuko’s bible in life “To You, From Me” was a manga drawn with an Artifact. Andy and Fuko are tasked with checking the status of the raw manuscripts and gaining intel about Anno Un.\n\n(Source: Hulu)",
+      "airdate": "2024-02-16",
+      "markers": [],
+      "external_id": "356384"
+    },
+    {
+      "n": 20,
+      "title": "Anno Un",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356385/thumbnail/00bfffb9e76206fa2aab48f1035aea75.jpg",
+      "synopsis": "Andy and Fuko await for Anno Un on a bench in Stanley Park. Before they know it, Anno is reading Fuko’s manga and declares that they know what the pair is looking for...\n\n(Source: Hulu)",
+      "airdate": "2024-02-23",
+      "markers": [],
+      "external_id": "356385"
+    },
+    {
+      "n": 21,
+      "title": "Memento Mori",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356386/thumbnail/980f7951ef30f0b41f5c140ca0ab685e.jpg",
+      "synopsis": "Andy becomes a book thanks to Autumn's claw that Anno Un materialized. Using the Artifact Soul Caliber, Anno Un plucks out Fuko soul to send her inside Andy's book. The journey to learn about Andy begins.\n\n(Source: Hulu)",
+      "airdate": "2024-03-01",
+      "markers": [],
+      "external_id": "356386"
+    },
+    {
+      "n": 22,
+      "title": "Profile",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356387/thumbnail/3bfd0b1046050d2088f7e3bb64dee2a7.jpg",
+      "synopsis": "Fuko arrives at Victor's memories but is killed by him shortly. Time flies by and Fuko moves on to the final chapter. While Fuko searches Shinjuku for Andy, Victor's blades are unleashed!\n\n(Source: Hulu)",
+      "airdate": "2024-03-08",
+      "markers": [],
+      "external_id": "356387"
+    },
+    {
+      "n": 23,
+      "title": "A Story I Won't See Coming",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356388/thumbnail/045907e7756c90d8df9aab90e8bd17fb.jpg",
+      "synopsis": "Anno Un's true self is Akira Kuno. Young Akira's came across the Artifact, \"G-Liner.\" This Artifact allows the first person to touch it to see the past and future events of the current loop in its entirety. This incident greatly changes his future destiny.\n\n(Source: Hulu)",
+      "airdate": "2024-03-15",
+      "markers": [],
+      "external_id": "356388"
+    },
+    {
+      "n": 24,
+      "title": "To You, From Me",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356389/thumbnail/5bb836f55fa802e8d31f607fd5f9842c.jpg",
+      "synopsis": "Now that Autumn is stronger, individual attacks are of no use. Anno Un asks Andy and the gang to buy some time to draw the most powerful Artifact necessary in capturing Autumn...\n\n(Source: Hulu)",
+      "airdate": "2024-03-22",
+      "markers": [],
+      "external_id": "356389"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "01",
+      "artist": "Ziyoou-vachi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "know me...",
+      "artist": "Kairi Yagi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Love Call",
+      "artist": "Shiyui",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kono Ai ni Kanau Mon wa Nai",
+      "artist": "OKAMOTO'S",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

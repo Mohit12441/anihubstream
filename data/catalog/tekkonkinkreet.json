@@ -1,0 +1,62 @@
+{
+  "id": "tekkonkinkreet",
+  "title": "Tekkonkinkreet",
+  "native": "鉄コン筋クリート",
+  "year": 2006,
+  "rating": 7.7,
+  "season": "Fall 2006",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx2154-R7xZo22O9FjK.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx2154-R7xZo22O9FjK.png",
+  "accent": "#e49328",
+  "synopsis": "Black, a boy who seeks to bend the city to his will through strength, and White, his innocent counterpart, are two orphaned street kids living in the slums of Treasure Town. When real estate developers threaten to transform Treasure Town into a massive theme park, its very existence is put at risk. Determined to protect both White and their city, Black takes on the yakuza and assassins, gradually losing his innocence as he confronts a dark manifestation within himself.\n\n(Source: GKIDS)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 1950,
+    "anilist": 2154,
+    "mal": 2154
+  },
+  "skip_key_id": 2154,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-22 09:26:56",
+  "search_text": "tekkonkinkreet 鉄コン筋クリート movie finished",
+  "genres": [
+    "action",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Tekkonkinkreet (Movie)",
+      "runtime": "111:00",
+      "runtime_seconds": 6660,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx2154-R7xZo22O9FjK.png",
+      "synopsis": "Black, a boy who seeks to bend the city to his will through strength, and White, his innocent counterpart, are two orphaned street kids living in the slums of Treasure Town. When real estate developers threaten to transform Treasure Town into a massive theme park, its very existence is put at risk. Determined to protect both White and their city, Black takes on the yakuza and assassins, gradually losing his innocence as he confronts a dark manifestation within himself.\n\n(Source: GKIDS)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "33236"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aru Machi no Gunjō (或る街の群青)",
+      "artist": "Asian Kung-Fu Generation",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

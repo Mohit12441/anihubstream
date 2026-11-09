@@ -1,0 +1,192 @@
+{
+  "id": "wave-listen-to-me",
+  "title": "Wave, Listen to Me!",
+  "native": "波よ聞いてくれ",
+  "year": 2020,
+  "rating": 7.1,
+  "season": "Spring 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx112353-hAtUOoapou7V.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx112353-hAtUOoapou7V.png",
+  "accent": "#d6d61a",
+  "synopsis": "On a drunken night out to complain about an ex, Minare Koda absentmindedly shares too much information with a stranger from the radio station. The next morning, she’s shocked to hear her voice on the radio. Bursting into the station with intentions to justify her previous night’s rant quickly turns into an interview on-air and the offer to share her chaotic life with an unsuspecting audience!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42614,
+    "anilist": 112353,
+    "mal": 40513
+  },
+  "skip_key_id": 40513,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-22 14:26:02",
+  "search_text": "wave listen to me 波よ聞いてくれ tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I'll Never Forgive You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ea7dd016cd28218657fc3cdecd8a15cc1672770068_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278055"
+    },
+    {
+      "n": 2,
+      "title": "I Despise Them",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/dc29205c6d2d40a24683b77ce2458c031672770191_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278056"
+    },
+    {
+      "n": 3,
+      "title": "You All Are Soft",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ac42d5acb02346b3aa296098380abc071672770611_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278124"
+    },
+    {
+      "n": 4,
+      "title": "You Don't Smile",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b1ad79fa5a27b015681f9a4e074f02231672770758_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278125"
+    },
+    {
+      "n": 5,
+      "title": "You're Not Getting Out Alive",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a836e95472f05f5f6d6df73df3f602251672770742_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278126"
+    },
+    {
+      "n": 6,
+      "title": "There's No Such Thing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b0304f1baa963bc51134c0eaeeaffc701672770774_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278493"
+    },
+    {
+      "n": 7,
+      "title": "I Want to Cry",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c3c2ae92c8b9fadafeb5ae1be9de71d91672770727_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278693"
+    },
+    {
+      "n": 8,
+      "title": "I Can't Tell You Over the Phone",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/59714db4c986202cf4dd78f701c5648a1672770911_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279326"
+    },
+    {
+      "n": 9,
+      "title": "I Won't Believe You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5c829111257b58cb1895f0c2597ebbc51672770919_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279327"
+    },
+    {
+      "n": 10,
+      "title": "I Have to Do This",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/57c48a864c7e25f444c73ae182dd72691672771028_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279328"
+    },
+    {
+      "n": 11,
+      "title": "I Don't Fear Anaerobic Creatures",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2334722098f1cfb8c8484bb80642f9f81672771213_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279329"
+    },
+    {
+      "n": 12,
+      "title": "I Want to Convey It to You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f6c0da09e47019cafba5ad6e3a17149f1672771330_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279330"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "aranami",
+      "artist": "tacica",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "pride",
+      "artist": "Harumi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

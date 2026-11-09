@@ -1,0 +1,78 @@
+{
+  "id": "the-vermilion-mask",
+  "title": "The Vermilion Mask",
+  "native": "朱色の仮面",
+  "year": 2026,
+  "rating": 6.8,
+  "season": "Fall 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx195571-fvj7u5GI7BRT.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx195571-fvj7u5GI7BRT.jpg",
+  "accent": "#e4bb5d",
+  "synopsis": "\"The Mask” gives power to anyone who wears it.\n\nAt times, that means endless possibility, or unimaginable tragedy…\n\nPeru, pupil of the legendary mask maker Gaston Roux, becomes controlled by the “Mask of the Warrior God,” and unintentionally kills his friends, and even his own master.\n\nIn order to prevent this type of tragedy from reoccurring, Peru swears to destroy all of Gaston’s masks that are spread around the world. Confronting the sins that he has committed, he embarks on his voyage. Meeting new friends, then confronting powerful foes. The boy continues on. Until the day he can atone for his sins against his master.\n\n(Source: The Vermillion Mask English Site)",
+  "rank": null,
+  "trend_rank": 29,
+  "alt_seasons": [],
+  "sched_day": 6,
+  "sched_day_label": "SAT",
+  "sched_date": "Nov 14",
+  "sched_time": "08:30",
+  "sched_season": "Fall 2026",
+  "sched_episode": 6,
+  "sched_sub_at": null,
+  "sched_dub_at": 1774686600000,
+  "source_ids": {
+    "anilist": 195571,
+    "mal": 61999,
+    "hianime": "the-vermilion-mask-skcsms",
+    "kitsu": 50336
+  },
+  "skip_key_id": 61999,
+  "skip_key_space": "mal",
+  "episode_total": 22,
+  "added_at": "2026-10-17 05:33:22",
+  "search_text": "the vermilion mask 朱色の仮面 tv ongoing",
+  "genres": [
+    "action",
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

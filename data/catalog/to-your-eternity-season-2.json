@@ -1,0 +1,296 @@
+{
+  "id": "to-your-eternity-season-2",
+  "title": "To Your Eternity Season 2",
+  "native": "不滅のあなたへ Season 2",
+  "year": 2022,
+  "rating": 8,
+  "season": "Fall 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx138565-JzvDqH84ILzi.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx138565-JzvDqH84ILzi.png",
+  "accent": "#e4c950",
+  "synopsis": "After seeing enough death and tragedy, the immortal Fushi secludes himself on an island, defending himself from enemy Nokkers. However, instead of attacking Fushi in isolation, Nokkers begin targeting the settlements outside of his reach in hopes of luring him out. Soon, a group known as the Guardians—led by Hisame, the descendant of the deceased warrior Hayase—finds Fushi.\n\nInspired by how Fushi protected Janada Island from the Nokkers years ago, the Guardians have grown a considerable following and are recognized throughout the world. Initially reluctant, Fushi allows the Guardians to accompany him to the site of the Nokkers' recent attack. In their village, Fushi meets a few valuable allies, both new and old. But as the conflict with the Nokkers only leads to more loss, Fushi must find the inner strength to face his inevitable sorrow.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "to-your-eternity-season-2-ngpjmt",
+    "mal": 49709,
+    "anilist": 138565,
+    "kitsu": 45045
+  },
+  "skip_key_id": 49709,
+  "skip_key_space": "mal",
+  "episode_total": 20,
+  "added_at": null,
+  "search_text": "to your eternity season 2 不滅のあなたへ season 2 tv finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "fantasy",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Infatuation Reborn",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/321387/thumbnail/38b9753532aee605b1e990fd43da4b7e.png",
+      "synopsis": "Fushi, having spent several decades alone on an island, learns that a village was attacked by the Nokkers.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-10-23",
+      "markers": [],
+      "external_id": "321387"
+    },
+    {
+      "n": 2,
+      "title": "Beating Will",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/321388/thumbnail/2242a9045f5e79044baa8473883c13bd.png",
+      "synopsis": "Things do not go well when Tonari tries to remove the Nokker from Hisame's arm.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-10-30",
+      "markers": [],
+      "external_id": "321388"
+    },
+    {
+      "n": 3,
+      "title": "The Awaited",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/322743/thumbnail/9bdddc284215c141d8d0b9ed61663c03.png",
+      "synopsis": "",
+      "airdate": "2022-11-06",
+      "markers": [],
+      "external_id": "322743"
+    },
+    {
+      "n": 4,
+      "title": "The Young Man Who Can See",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/324121/thumbnail/69ca500418dea050427a5a0ca6874aad.png",
+      "synopsis": "Fushi must stay on the move in order to keep the Nokkers from attacking, so Prince Bon accompanies him out of the castle town.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-11-13",
+      "markers": [],
+      "external_id": "324121"
+    },
+    {
+      "n": 5,
+      "title": "The Holy Man's Voyage",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/324145/thumbnail/f1028d477c5e94f140d08662125de906.png",
+      "synopsis": "Fushi, along with Kahaku, Bon and Bon's army, travel through several towns, spreading word of the Nokkers along the way.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-11-20",
+      "markers": [],
+      "external_id": "324145"
+    },
+    {
+      "n": 6,
+      "title": "Heretics Betrayed",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328361/thumbnail/bd23a872c4b8a5b2ded4d3c72f0113c6.png",
+      "synopsis": "Kahaku asks Fushi to marry him. He seems confident that they can overcome the complications of Fushi being a shape-shifting immortal, but Fushi isn’t. Cylira returns.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-11-27",
+      "markers": [],
+      "external_id": "328361"
+    },
+    {
+      "n": 7,
+      "title": "Crime and Forgiveness",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328362/thumbnail/13065ee3666899eef056d88a6b7fa783.png",
+      "synopsis": "Fushi attempts to escape from his iron cell, while Bon and Todo await their trial in their own cells.\n\n(Source: Crunchyroll)",
+      "airdate": "2022-12-04",
+      "markers": [],
+      "external_id": "328362"
+    },
+    {
+      "n": 8,
+      "title": "Beyond Dreams",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328363/thumbnail/f954510bb25785b73230034a99a5a859.png",
+      "synopsis": "",
+      "airdate": "2022-12-11",
+      "markers": [],
+      "external_id": "328363"
+    },
+    {
+      "n": 9,
+      "title": "Expanding Consciousness",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328364/thumbnail/f3ebba20cd1ef0e2ef3f7330c4a863eb.png",
+      "synopsis": "",
+      "airdate": "2022-12-18",
+      "markers": [],
+      "external_id": "328364"
+    },
+    {
+      "n": 10,
+      "title": "Resonance",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328365/thumbnail/cae555f9be1b04e1588155deb16e1dba.png",
+      "synopsis": "",
+      "airdate": "2022-12-25",
+      "markers": [],
+      "external_id": "328365"
+    },
+    {
+      "n": 11,
+      "title": "The Value of Flesh",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328366/thumbnail/8dbc97d7ccaeac2a74aa0a9db4ce4d77.png",
+      "synopsis": "Having finished training on the derelict ship, Fushi travels to Renril, where the Nokkers are threatening to attack.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-01-08",
+      "markers": [],
+      "external_id": "328366"
+    },
+    {
+      "n": 12,
+      "title": "Secret Behind the Veil",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328367/thumbnail/69bce9bbedb94a6acc8b9c82ac2815bb.jpg",
+      "synopsis": "Fushi and his allies work to win over the trust of the people of Renril in preparation for the Nokkers’ attack.",
+      "airdate": "2023-01-15",
+      "markers": [],
+      "external_id": "328367"
+    },
+    {
+      "n": 13,
+      "title": "The Wise Man's Identity",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328368/thumbnail/f9b8a710357521da77ffd6e45e44ac4b.png",
+      "synopsis": "The team works to prevent the Nokkers from making use of the waterways and sewers. Fushi works non-stop rebuilding all the homes, and the exhaustion begins to show.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-01-22",
+      "markers": [],
+      "external_id": "328368"
+    },
+    {
+      "n": 14,
+      "title": "Morning of Rebirth",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328369/thumbnail/410f7ccb27c80266bd42cae7343cf991.png",
+      "synopsis": "",
+      "airdate": "2023-01-29",
+      "markers": [],
+      "external_id": "328369"
+    },
+    {
+      "n": 15,
+      "title": "The Self, Worn Down",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328370/thumbnail/bac73e8c39459fdb3ea5121d50bc7375.png",
+      "synopsis": "Fushi fends off the Nokkers miles away from Renril, but the Nokkers had already devised a more cunning plan.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-02-05",
+      "markers": [],
+      "external_id": "328370"
+    },
+    {
+      "n": 16,
+      "title": "Three Eternal Warriors",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328371/thumbnail/b69f86506d5de8566b12f5246d0ceeca.png",
+      "synopsis": "The death of his three friends turns Fushi mad, and he begins defeating the Nokkers at a furious pace. But as it turns out, he may not be the only immortal.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-02-12",
+      "markers": [],
+      "external_id": "328371"
+    },
+    {
+      "n": 17,
+      "title": "What You Want to Protect",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328372/thumbnail/4e7254b8685937c899b946e2922d5c02.png",
+      "synopsis": "Amidst the brutal battle against the Nokkers, Bon, and Kahaku both share a desire to protect Fushi’s humanity. How they go about it, however, puts them at odds.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-02-19",
+      "markers": [],
+      "external_id": "328372"
+    },
+    {
+      "n": 18,
+      "title": "Death of a Deathless",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328373/thumbnail/8c3408cf964f7c97e4a6b5cfb52f6c69.jpg",
+      "synopsis": "",
+      "airdate": "2023-02-26",
+      "markers": [],
+      "external_id": "328373"
+    },
+    {
+      "n": 19,
+      "title": "And Then, Dawn",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328374/thumbnail/3aa5604933b9f955353e21b91fec643c.jpg",
+      "synopsis": "In the beginning, it was an orb. And Fushi was an orb once again. But though there was no certainty, there was hope.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-03-05",
+      "markers": [],
+      "external_id": "328374"
+    },
+    {
+      "n": 20,
+      "title": "End of an Era",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/328375/thumbnail/c2a6633b83861a928700651e0685aa64.jpg",
+      "synopsis": "",
+      "airdate": "2023-03-12",
+      "markers": [],
+      "external_id": "328375"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "PINK BLOOD",
+      "artist": "Hikaru Utada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Roots",
+      "artist": "-",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "PINK BLOOD",
+      "artist": "Hikaru Utada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mediator",
+      "artist": "Masashi Hamauzu",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

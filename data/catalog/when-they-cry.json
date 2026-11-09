@@ -1,0 +1,585 @@
+{
+  "id": "when-they-cry",
+  "title": "When They Cry",
+  "native": "ひぐらしのなく頃に",
+  "year": 2006,
+  "rating": 7.6,
+  "season": "Spring 2006",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx934-wjMlVEl4CWwg.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx934-wjMlVEl4CWwg.jpg",
+  "accent": "#e4a11a",
+  "synopsis": "After moving into the quiet town of Hinamizawa, Maebara Keiichi spends his days blissfully in school often playing games with his local friends. However, appearances can be deceiving. One fateful day, Keiichi stumbles upon news of a murder that had occurred in Hinamizawa. From this point on, horrific events unfold in front of Keiichi, as he soon learns his close friends may not be all that they seem. Based on the amateur mystery game by 07th Expansion, the story is told in a series of different scenarios.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "When They Cry Kai (2007)",
+    "Higurashi no Naku Koro ni Oni"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 831,
+    "anilist": 934,
+    "mal": 934
+  },
+  "skip_key_id": 934,
+  "skip_key_space": "anilist",
+  "episode_total": 26,
+  "added_at": "2026-10-14 08:15:04",
+  "search_text": "when they cry ひく らしのなく頃に tv finished",
+  "genres": [
+    "horror",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Beginning (Chapter: Spirited Away by the Demon, Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17291/original.jpg",
+      "synopsis": "Keiichi Maebara, a student who recently moved into the village of Hinamizawa, is invited by his new friends at school to join their club. But while searching for treasure at a garbage dump, he discovers the village is not as peaceful as it seems.",
+      "airdate": "2006-04-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 6,
+          "end": 96
+        }
+      ],
+      "external_id": "17291"
+    },
+    {
+      "n": 2,
+      "title": "The Secret (Chapter: Spirited Away by the Demon, Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17292/original.jpg",
+      "synopsis": "The Cotton Drifting Festival is coming up and everyone goes to have a day of fun. During the festival, Keiichi gets separated from everyone and he meets Tomitake the photographer again, who later tells him more about the shocking past of Hinamizawa.",
+      "airdate": "2006-04-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 69,
+          "end": 159
+        }
+      ],
+      "external_id": "17292"
+    },
+    {
+      "n": 3,
+      "title": "Suspicion (Chapter: Spirited Away by the Demon, Part 3)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17293/original.jpg",
+      "synopsis": "Delving further into the mysteries surrounding the village, Keiichi's paranoia grows after he starts to suspect that someone might be after his life.",
+      "airdate": "2006-04-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1306,
+          "end": 1392
+        }
+      ],
+      "external_id": "17293"
+    },
+    {
+      "n": 4,
+      "title": "Disturbance (Chapter: Spirited Away by the Demon, Part 4)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17294/original.jpg",
+      "synopsis": "Unnerved by Rena and Mion's menacing behavior, Keiichi begins to distance himself from his former friends — but it might already be too late.",
+      "airdate": "2006-04-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 24,
+          "end": 114
+        }
+      ],
+      "external_id": "17294"
+    },
+    {
+      "n": 5,
+      "title": "Jealousy (Chapter: Cotton Drifting, Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17295/original.jpg",
+      "synopsis": "Keiichi meets his friends in town to win prizes at a card game. Afterwards, at a restaurant, he is surprised to see Mion as a waitress, and even more surprised to find out it's not actually Mion.",
+      "airdate": "2006-05-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 23,
+          "end": 113
+        }
+      ],
+      "external_id": "17295"
+    },
+    {
+      "n": 6,
+      "title": "Takano (Chapter: Cotton Drifting, Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17296/original.jpg",
+      "synopsis": "The day for the Cotton Drifting Festival has arrived, and during Rika's ritual performance, Keiichi is taken to see the sacred festival storehouse.",
+      "airdate": "2006-05-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 11,
+          "end": 101
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1304,
+          "end": 1407
+        }
+      ],
+      "external_id": "17296"
+    },
+    {
+      "n": 7,
+      "title": "Lies (Chapter: Cotton Drifting, Part 3)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17297/original.jpg",
+      "synopsis": "Keiichi indirectly confesses to Rika about sneaking into the forbidden shrine, and he fears his admission may have put Rika and Satako's lives in danger.",
+      "airdate": "2006-05-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 68,
+          "end": 158
+        }
+      ],
+      "external_id": "17297"
+    },
+    {
+      "n": 8,
+      "title": "Wish (Chapter: Cotton Drifting, Part 4)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17298/original.jpg",
+      "synopsis": "The truth behind the recent incidents and the dark origins of Hinamizawa finally start to unravel as Keiichi and Rena decide to confront their suspect.",
+      "airdate": "2006-05-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 109,
+          "end": 199
+        }
+      ],
+      "external_id": "17298"
+    },
+    {
+      "n": 9,
+      "title": "Older Brother (Chapter: Curse Killing, Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17299/original.jpg",
+      "synopsis": "When Keiichi's parents leave for Tokyo for a few days, Satoko and Rika offer to help him around the house and he learns about the mysterious disappearance of Satoko's older brother, Satoshi.",
+      "airdate": "2006-05-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1306,
+          "end": 1395
+        }
+      ],
+      "external_id": "17299"
+    },
+    {
+      "n": 10,
+      "title": "Bond (Chapter: Curse Killing, Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17300/original.jpg",
+      "synopsis": "Satoko has been absent from school, and Keiichi starts to worry about her family situation after discovering the cause of her absence.",
+      "airdate": "2006-06-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1305,
+          "end": 1394
+        }
+      ],
+      "external_id": "17300"
+    },
+    {
+      "n": 11,
+      "title": "Borderline (Chapter: Curse Killing, Part 3)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17301/original.jpg",
+      "synopsis": "Following Satoko’s disturbing panic attack in the classroom, Keiichi’s concern for her well-being grows to the point where he plans to take matters into his own hands.",
+      "airdate": "2006-06-14",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1307,
+          "end": 1394
+        }
+      ],
+      "external_id": "17301"
+    },
+    {
+      "n": 12,
+      "title": "Lost Item (Chapter: Curse Killing, Part 4)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17302/original.jpg",
+      "synopsis": "After strange encounters with Takano, Dr. Irie, and Inspector Oishi, Keiichi starts to question whether the previous night's incident actually occurred.",
+      "airdate": "2006-06-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 130
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1304,
+          "end": 1394
+        }
+      ],
+      "external_id": "17302"
+    },
+    {
+      "n": 13,
+      "title": "Apology (Chapter: Curse Killing, Part 5)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17303/original.jpg",
+      "synopsis": "When Keiichi heads to Satoko's house and finds her in need of medical attention, he becomes convinced that Oyashiro-sama's curse may be the cause of all these recent misfortunes.",
+      "airdate": "2006-06-28",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1305,
+          "end": 1395
+        }
+      ],
+      "external_id": "17303"
+    },
+    {
+      "n": 14,
+      "title": "Hinamizawa (Chapter: Time Wasting, Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17304/original.jpg",
+      "synopsis": "Four years ago, during the Hinamizawa dam incident, young police investigator Mamoru Akasaka comes to the village to investigate a child kidnapping, where he meets young Rika.",
+      "airdate": "2006-07-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1305,
+          "end": 1394
+        }
+      ],
+      "external_id": "17304"
+    },
+    {
+      "n": 15,
+      "title": "Sign (Chapter: Time Wasting, Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17305/original.jpg",
+      "synopsis": "Mamoru and Oishi discover some important clues, and head to the district of Takatsudo to continue the search for the Cabinet Minister's son. Little do they know, there are much more sinister forces at work.",
+      "airdate": "2006-07-12",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1305,
+          "end": 1398
+        }
+      ],
+      "external_id": "17305"
+    },
+    {
+      "n": 16,
+      "title": "First Love (Chapter: Eye Opening, Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17306/original.jpg",
+      "synopsis": "The events from The Cotton Drifting Chapter are retold from another point of view. After two years away from the village, Shion comes back to Hinamizawa.",
+      "airdate": "2006-07-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 108
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1306,
+          "end": 1393
+        }
+      ],
+      "external_id": "17306"
+    },
+    {
+      "n": 17,
+      "title": "Responsibility (Chapter: Eye Opening, Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17307/original.jpg",
+      "synopsis": "The recent incident at school has left Shion feeling very uneasy. She is able to muster the courage to call Satoshi, only to receive an apology from him. Something doesn't seem right.",
+      "airdate": "2006-07-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 137
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1306,
+          "end": 1393
+        }
+      ],
+      "external_id": "17307"
+    },
+    {
+      "n": 18,
+      "title": "Oni's Blood Line (Chapter: Eye Opening, Part 3)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17308/original.jpg",
+      "synopsis": "When Shion decides to investigate Satoshi's disappearance, she meets Takano at the library, who tells her more about the dark history of Hinamizawa. The very next year, the past begins to repeat itself.",
+      "airdate": "2006-08-02",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1306,
+          "end": 1440
+        }
+      ],
+      "external_id": "17308"
+    },
+    {
+      "n": 19,
+      "title": "Revenge (Chapter: Eye Opening, Part 4)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17309/original.jpg",
+      "synopsis": "Shion overhears a conversation between Mion and her grandmother and begins to suspect her family may be involved in the recent events.",
+      "airdate": "2006-08-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1312,
+          "end": 1393
+        }
+      ],
+      "external_id": "17309"
+    },
+    {
+      "n": 20,
+      "title": "Cold Hands (Chapter: Eye Opening, Part 5)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17310/original.jpg",
+      "synopsis": "After questioning Headmaster Kimiyoshi for information about the previous murders and Satoshi's disappearance, Shion sets her sights on another one of the Three Great Families.",
+      "airdate": "2006-08-16",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1306,
+          "end": 1391
+        }
+      ],
+      "external_id": "17310"
+    },
+    {
+      "n": 21,
+      "title": "Condemnation (Chapter: Eye Opening, Part 6)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17311/original.jpg",
+      "synopsis": "Shion tricks Keiichi into thinking that he may have put his friends in danger. However, when he figures out the truth, Shion is confronted by Keiichi and Rena.",
+      "airdate": "2006-08-23",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1307,
+          "end": 1390
+        }
+      ],
+      "external_id": "17311"
+    },
+    {
+      "n": 22,
+      "title": "Happiness (Chapter: Atonement, Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17312/original.jpg",
+      "synopsis": "After a day of summer fun, Rena goes to the garbage dump, where she begins to remember things from her troubling family background.",
+      "airdate": "2006-08-30",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1305,
+          "end": 1395
+        }
+      ],
+      "external_id": "17312"
+    },
+    {
+      "n": 23,
+      "title": "Place to Return (Chapter: Atonement, Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17313/original.jpg",
+      "synopsis": "Rena learns of Rina's plot, and a confrontation at the deserted garbage dump triggers another disastrous chain of events.",
+      "airdate": "2006-09-06",
+      "markers": [],
+      "external_id": "17313"
+    },
+    {
+      "n": 24,
+      "title": "Document 34 (Chapter: Atonement, Part 3)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17314/original.jpg",
+      "synopsis": "While studying Takano's scrapbooks, Rena starts to uncover the the truth behind Oyashiro-sama's curse and Hinamizawa's dark past.",
+      "airdate": "2006-09-13",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1405
+        }
+      ],
+      "external_id": "17314"
+    },
+    {
+      "n": 25,
+      "title": "Earth Invasion (Chapter: Atonement, Part 4)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17315/original.jpg",
+      "synopsis": "By discovering the truth behind Oyashiro-sama's curse, Rena has become a target of one of the Three Great Families, and she decides to go into hiding.",
+      "airdate": "2006-09-20",
+      "markers": [],
+      "external_id": "17315"
+    },
+    {
+      "n": 26,
+      "title": "Retake (Chapter: Atonement, Part 5)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/17316/original.jpg",
+      "synopsis": "Rena has returned, but not for the right reasons, as she causes a serious crisis at the school, and demands the police investigate the Three Great Families' connection to Oyashiro-sama's curse. What will become of Keiichi and his friends?",
+      "airdate": "2006-09-27",
+      "markers": [],
+      "external_id": "17316"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Super scription of data",
+      "artist": "Eiko Shimamiya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Manazashi",
+      "artist": "anNina",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Naraku no Hana (奈落の花)",
+      "artist": "Eiko Shimamiya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Taishō a (対象 a)",
+      "artist": "anNina",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Higurashi no Naku Koro ni (ひぐらしのなく頃に)",
+      "artist": "Eiko Shimamiya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "why, or why not",
+      "artist": "Hiroyuki Oshima feat. Rekka Katakiri",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

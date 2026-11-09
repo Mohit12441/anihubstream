@@ -1,0 +1,310 @@
+{
+  "id": "tonikawa-over-the-moon-for-you-season-2",
+  "title": "TONIKAWA: Over The Moon For You Season 2",
+  "native": "トニカクカワイイ（シーズン2）",
+  "year": 2023,
+  "rating": 7.7,
+  "season": "Spring 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx141208-On0qHKxo6P5t.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx141208-On0qHKxo6P5t.png",
+  "accent": "#00aea1",
+  "synopsis": "The sweet story of Nasa and Tsukasa continues! After surviving some awkward first nights together, dealing with doubters, and recovering from their apartment fire, it's clear the fate of these lovers was written in the stars. Now, they're ready to settle back into domestic bliss and finally plan their wedding ceremony! But with plenty of new friends on the way, what will their big day look like?!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "TONIKAWA: Over The Moon For You ~Uniform~ (2022)",
+    "TONIKAWA: Over The Moon For You ~High School Days~ (2023)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 45415,
+    "anilist": 141208,
+    "mal": 50307,
+    "hianime": "tonikawa:-over-the-moon-for-you-season-2-8cr4dq"
+  },
+  "skip_key_id": 50307,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 13:05:21",
+  "search_text": "tonikawa over the moon for you season 2 トニカクカワイイ シース ン2 tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Marriage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1b6e79848d8985d3d1211e7c38e0b9401601644925_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 123,
+          "end": 213
+        }
+      ],
+      "external_id": "321757"
+    },
+    {
+      "n": 2,
+      "title": "The First Night",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/fa735f4985c8d534183ae2c6a03dfc6b1602225910_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 122
+        }
+      ],
+      "external_id": "321758"
+    },
+    {
+      "n": 3,
+      "title": "Sisters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/25a6ddf24415173aaac2c4c3ae5d09531602816763_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 168
+        }
+      ],
+      "external_id": "321968"
+    },
+    {
+      "n": 4,
+      "title": "Promise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5ae6007cf53d3a2a4f548072472689311603426509_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1406
+        }
+      ],
+      "external_id": "325535"
+    },
+    {
+      "n": 5,
+      "title": "Rings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a600a70a4747fb21aa49f15bfb2f56831604023737_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 144,
+          "end": 234
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1406
+        }
+      ],
+      "external_id": "325536"
+    },
+    {
+      "n": 6,
+      "title": "News",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/82f7a7fe83857ee249834f331ddb585e1604634815_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "326215"
+    },
+    {
+      "n": 7,
+      "title": "Trip",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/55c003df5ec844453c6f0890e41a42571605253957_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "326224"
+    },
+    {
+      "n": 8,
+      "title": "Parents",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a840206d6d7226ed43d9c69cc81371391605853622_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 126,
+          "end": 216
+        }
+      ],
+      "external_id": "326225"
+    },
+    {
+      "n": 9,
+      "title": "Daily Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/24834d998b946eb8850f0531d42ec15e1606435623_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1406
+        }
+      ],
+      "external_id": "326226"
+    },
+    {
+      "n": 10,
+      "title": "The Way Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8adde97b3d5fac4a7bf601f891e663101607073623_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 133
+        }
+      ],
+      "external_id": "326227"
+    },
+    {
+      "n": 11,
+      "title": "Friends",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/5fd8baf2a1ed6a804cd1967e849606361607671380_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "326228"
+    },
+    {
+      "n": 12,
+      "title": "Husband and Wife",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/7a71122fbf3b48e3ffbf034f4f7afd8d1608265496_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 35,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1416
+        }
+      ],
+      "external_id": "326229"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Setsuna no Chikai (feat. Yuzaki Tsukasa) (刹那の誓い（feat. 由崎司）)",
+      "artist": "Neko Hacker",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yoru no Katasumi (夜のかたすみ)",
+      "artist": "Tsukasa Yuzaki [Akari Kitō]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Koi no Uta (feat. Tsukasa Tsukuyomi)",
+      "artist": "Akari Kitō",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsuki to Hoshizora",
+      "artist": "KanoeRana",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

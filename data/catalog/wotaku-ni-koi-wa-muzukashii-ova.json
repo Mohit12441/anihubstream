@@ -1,0 +1,77 @@
+{
+  "id": "wotaku-ni-koi-wa-muzukashii-ova",
+  "title": "Wotaku ni Koi wa Muzukashii OVA",
+  "native": "ヲタクに恋は難しい OVA",
+  "year": 2019,
+  "rating": 7.9,
+  "season": "Spring 2019",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx104217-PoZOCoWD5ei8.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx104217-PoZOCoWD5ei8.jpg",
+  "accent": "#e47850",
+  "synopsis": "The first OVA titled Sore wa, ikinari otozureta=koi was released on March 29, 2019.\n\nThe second OVA titled Tomodachi no Kyori was released on February 26, 2021.\n\nThe third OVA titled Shain Ryokou to Negaigoto was released on October 14, 2021.\n\nNote: Unaired episodes bundled with the special edition of the 7th, 10th and 11th manga volumes.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42051,
+    "anilist": 104217,
+    "mal": 38349
+  },
+  "skip_key_id": 38349,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": "2026-10-14 16:35:36",
+  "search_text": "wotaku ni koi wa muzukashii ova ヲタクに恋は難しい ova ova finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "20:00",
+      "runtime_seconds": 1200,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "258234"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "20:00",
+      "runtime_seconds": 1200,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "287904"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "20:00",
+      "runtime_seconds": 1200,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306104"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

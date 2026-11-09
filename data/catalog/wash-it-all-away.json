@@ -1,0 +1,133 @@
+{
+  "id": "wash-it-all-away",
+  "title": "Wash It All Away",
+  "native": "綺麗にしてもらえますか。",
+  "year": 2026,
+  "rating": 6.7,
+  "season": "Winter 2026",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx194028-ASKnzjS1ily7.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx194028-ASKnzjS1ily7.jpg",
+  "accent": "#e45d43",
+  "synopsis": "For the past two years, cheerful and hardworking Kinme Wakana has run a small laundry shop in the seaside hot springs town of Atami. As she goes about her quiet days, Wakana finds herself drawn into the bittersweet, heartwarming stories of the people around her.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "wash-it-all-away-secgbd",
+    "mal": 61782,
+    "anilist": 194028,
+    "kitsu": 49966
+  },
+  "skip_key_id": 61782,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "wash it all away 綺麗にしてもらえますか tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "You Can Count on Kinme",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/383479/thumbnail/874a5cf708e55c7aab1835ae7d89a2ef.jpg",
+      "synopsis": "Kinme Wakana runs a dry cleaning business in the city of Atami, where she leads a peaceful life.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-01-05",
+      "markers": [],
+      "external_id": "383479"
+    },
+    {
+      "n": 2,
+      "title": "We're Proud of Our Natural Hot Spring",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/383480/thumbnail/3cd7425e59105b1ad5af454ea0f650bc.jpg",
+      "synopsis": "Kinme tries out the Ishimochis' bath and then meets a bubbly young girl who wants to learn all about cleaning.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-01-12",
+      "markers": [],
+      "external_id": "383480"
+    },
+    {
+      "n": 3,
+      "title": "Closed All Day Today",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/383481/thumbnail/d1f0b1a1f006c15f772c96d50ff21bee.jpg",
+      "synopsis": "Customers start worrying about Kinme when she accidentally sleeps in after a night on the town.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-01-19",
+      "markers": [],
+      "external_id": "383481"
+    },
+    {
+      "n": 4,
+      "title": "A Personal Request from Kinme",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/383482/thumbnail/d2238fcb5e1c514a890cba41870bef2a.jpg",
+      "synopsis": "Kinme teaches a high schooler about garment care and watches Nairo practice drumming for the Kogashi Festival.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-01-26",
+      "markers": [],
+      "external_id": "383482"
+    },
+    {
+      "n": 5,
+      "title": "I Have a Feeling...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/383483/thumbnail/32577e028d47dd42187b4e74cbb5f499.jpg",
+      "synopsis": "After staying up to clean the stained jackets for the festival, Kinme ventures out to join in the celebration.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-02-02",
+      "markers": [],
+      "external_id": "383483"
+    },
+    {
+      "n": 6,
+      "title": "Pop, Pop, Boom",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/383484/thumbnail/684dce069a73e0d4965cab4f9ed2e76f.jpg",
+      "synopsis": "The hostess at a lavish hotel asks Kinme to clean an old doll and rewards her with time in the hotel's baths.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-02-09",
+      "markers": [],
+      "external_id": "383484"
+    },
+    {
+      "n": 7,
+      "title": "You Should Leverage Your Assets!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/383485/thumbnail/8b504763aed36096b6184b4ceda9129d.jpg",
+      "synopsis": "A pushy salesman talks Kinme into setting up a social media account with the help of Nairo and her classmates.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-02-16",
+      "markers": [],
+      "external_id": "383485"
+    },
+    {
+      "n": 8,
+      "title": "That Was Too Impressive",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Kinme meets a shy location coordinator who talks her into modeling for a fun photoshoot on nearby Hatsushima.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-02-23",
+      "markers": [],
+      "external_id": "383486"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

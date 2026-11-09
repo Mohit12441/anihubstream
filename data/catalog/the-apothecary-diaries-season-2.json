@@ -1,0 +1,467 @@
+{
+  "id": "the-apothecary-diaries-season-2",
+  "title": "The Apothecary Diaries Season 2",
+  "native": "薬屋のひとりごと 第2期",
+  "year": 2025,
+  "rating": 8.8,
+  "season": "Winter 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx176301-TIGmldLffQGX.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176301-TIGmldLffQGX.jpg",
+  "accent": "#e4bb50",
+  "synopsis": "Using her wit and vast knowledge of medicines and poisons alike, Maomao played a pivotal role in solving a series of mysteries and conspiracies that plagued the imperial court. Having recently come to terms with the secrets of her parents, she returns to fulfill her normal duties on behalf of the emperor's highest-ranking consorts. Maomao also works alongside the eunuch Jinshi to better the consorts' many ladies-in-waiting, including helping them learn to read.\n\nHowever, with the arrival of a merchant caravan comes a new wave of intrigue. A pattern of strange coincidences involving the visitors and their wares unsettles Maomao, driving her to investigate the puzzling circumstances behind the convoy. As dangers from both outside and within threaten the balance between the imperial concubines, Maomao continues to utilize her cunning and medical expertise to keep the women safe from harm.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": 36,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "the-apothecary-diaries-season-2-bghl4y",
+    "mal": 58514,
+    "anilist": 176301,
+    "kitsu": 48649
+  },
+  "skip_key_id": 58514,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "the apothecary diaries season 2 薬屋のひとりこ と 第2期 tv finished",
+  "genres": [
+    "drama",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Maomao and Maomao",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365573/thumbnail/5b45ab6d155ac6338c6be30bc8e0a4cc.jpg",
+      "synopsis": "The spring garden party concludes without incident. Maomao returns to her regular life as Concubine Gyokuyou’s taster. Meanwhile, novels become popular in the rear palace. Maomao wonders how this came to be, as novels were typically considered low-class. But behind the scenes lies Jinshi and his goals as manager of the rear palace.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1432,
+          "end": 1440,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "365573"
+    },
+    {
+      "n": 2,
+      "title": "Caravan",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365574/thumbnail/2062992bc2a3d067bc66286af3a184a5.jpg",
+      "synopsis": "The caravan stirs up excitement in the inner palace. The merchants bring all kinds of goods. However, something gives Maomao a bad feeling.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-04",
+      "markers": [],
+      "external_id": "365574"
+    },
+    {
+      "n": 3,
+      "title": "Corpse Fungus",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365575/thumbnail/178f0da6ea75587ce1db30e676f86701.jpg",
+      "synopsis": "A concubine passes away, and a woman goes missing. Jinshi sends Maomao to investigate - not these incidents, but mushrooms growing in the rear palace.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1336,
+          "end": 1426,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "365575"
+    },
+    {
+      "n": 4,
+      "title": "Mirror",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365576/thumbnail/cc6f308cb4c15e29c4a41c51fd39dd82.jpg",
+      "synopsis": "The special envoy from a foreign land gifts mirrors - a rarity in this country - to the high concubines. However, they bring mysteries as well.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365576"
+    },
+    {
+      "n": 5,
+      "title": "The Moon Fairy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365577/thumbnail/5b7e5a169cb9e63a8f64dba1bf5435a4.jpg",
+      "synopsis": "In order to realize the seemingly impossible request from the foreign envoy, Maomao speaks to the “Moon Fairy” herself.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365577"
+    },
+    {
+      "n": 6,
+      "title": "The Crystal Pavilion, For the Third Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365578/thumbnail/6c894773f8785ba906e51f01e67c104a.jpg",
+      "synopsis": "The woman from the clinic finds out that Maomao knows a thing or two about medicine, and asks for her help.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-01",
+      "markers": [],
+      "external_id": "365578"
+    },
+    {
+      "n": 7,
+      "title": "The Shrine of Choosing",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365579/thumbnail/1d0a50e5903440eb011cdfefe4aac3f8.jpg",
+      "synopsis": "Maomao directs her curiosity toward an old, oddly shaped building.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365579"
+    },
+    {
+      "n": 8,
+      "title": "The Empress Dowager",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365580/thumbnail/0af4d41a6be68a5518a83ef04c2c8338.jpg",
+      "synopsis": "Maomao's reputation for resolving conflicts reaches the empress dowager, who will ask for her help to unravel a mystery that won't leave her mind.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 93,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365580"
+    },
+    {
+      "n": 9,
+      "title": "The Late Emperor",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365581/thumbnail/6039710f495c8aba100099b80f431d45.jpg",
+      "synopsis": "Maomao's investigation of the \"curse\" reveals more about the late emperor than anticipated.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365581"
+    },
+    {
+      "n": 10,
+      "title": "A Ghost Story",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365582/thumbnail/59c40a2b030f386d47230887632916fe.jpg",
+      "synopsis": "Maomao joins some women exchanging scary stories on a hot summer night to provide chills.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365582"
+    },
+    {
+      "n": 11,
+      "title": "The Hunt",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365583/thumbnail/f8d095e5f8f0f228602795be6aeb2e4f.jpg",
+      "synopsis": "Jinshi goes on a hunting trip and brings Maomao along. He seems ready to share his secret with her.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-04-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365583"
+    },
+    {
+      "n": 12,
+      "title": "Ka Zuigetsu",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365584/thumbnail/646fc9f4042b6e5d636d60c47dcb06bb.jpg",
+      "synopsis": "Maomao discovers Jinshi's secret. She wants nothing to do with whatever the politcs behind it is.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-04-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365584"
+    },
+    {
+      "n": 13,
+      "title": "The Baths",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365585/thumbnail/eae1f4670e6460b42c8d89e421890908.jpg",
+      "synopsis": "Xiaolan's term of service is almost up, so she must find a new job. Maomao and Shisui decide to help.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-04-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365585"
+    },
+    {
+      "n": 14,
+      "title": "The Dancing Ghost",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365586/thumbnail/fb3b42798baf11c594a8a33014c51e33.jpg",
+      "synopsis": "Concubine Lishu reports sightings of a ghost in the baths in her pavilion. Maomao goes to investigate.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-04-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365586"
+    },
+    {
+      "n": 15,
+      "title": "Ice",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365587/thumbnail/cf3e213f914b8abda15bdfc44c762dff.jpg",
+      "synopsis": "Xiaolan accidentally ruins an expensive block of ice. Maomao comes up with a delicious backup plan.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-05-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365587"
+    },
+    {
+      "n": 16,
+      "title": "Festering Resentment",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365588/thumbnail/dff05ef1ef548e7642b0377d80d54807.jpg",
+      "synopsis": "Luomen returns to the rear palace. His observations trigger Maomao's curiosity.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-05-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365588"
+    },
+    {
+      "n": 17,
+      "title": "Fox Village",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365589/thumbnail/1144c4f9fc522b4113ec25a0cee8f7f1.jpg",
+      "synopsis": "Suirei smuggles Maomao and Shisui out of the rear palace. Jinshi begins to search for Maomao.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-05-17",
+      "markers": [],
+      "external_id": "365589"
+    },
+    {
+      "n": 18,
+      "title": "Lantern Plant",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365590/thumbnail/18d582e399b7215d8fad0bcac81d560a.jpg",
+      "synopsis": "Maomao has been missing for ten days now. Jinshi's investigations lead him to a forgetten graveyard.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-05-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365590"
+    },
+    {
+      "n": 19,
+      "title": "Festival",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365591/thumbnail/e56c3c85f243dd7a16328a869bd93eb4.jpg",
+      "synopsis": "The village holds a festival. Maomao attends, and Shisui introduces some of the village's history to her.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-06-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365591"
+    },
+    {
+      "n": 20,
+      "title": "The Stronghold",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365592/thumbnail/16ca4ee076082919f65fad99802f6315.jpg",
+      "synopsis": "Maomao is taken to a mountain stronghold, where many of the secrets of the Shi clan are revealed to her.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-06-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 91,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365592"
+    },
+    {
+      "n": 21,
+      "title": "Taibon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365593/thumbnail/c6c6fc7b175e79d13124be6af70c098a.jpg",
+      "synopsis": "Maomao is accused of attempting to escape and is tossed into an ancient method of torture and execution.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-06-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365593"
+    },
+    {
+      "n": 22,
+      "title": "Royal Guard",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365594/thumbnail/78afbfe67180625fdc08a813c1fd392e.jpg",
+      "synopsis": "The royal guard, led by Jinshi, arrives, sealing the Shi clan's fate. Maomao wants to save her friend, Shisui.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 92,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365594"
+    },
+    {
+      "n": 23,
+      "title": "The Shi Clan",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365595/thumbnail/f24b2d40b49c846dfa476b12c35238ef.jpg",
+      "synopsis": "Jinshi and his forces infiltrate the stronghold, cornering the remaining Shi clan members.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365595"
+    },
+    {
+      "n": 24,
+      "title": "The Beginning",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365596/thumbnail/4e68a4de365965391917679244ed494a.jpg",
+      "synopsis": "After the war, Jinshi's work piles up, and Maomao returns to the pleasure district.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365596"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

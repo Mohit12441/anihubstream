@@ -1,0 +1,361 @@
+{
+  "id": "trillion-game",
+  "title": "TRILLION GAME",
+  "native": "トリリオンゲーム",
+  "year": 2024,
+  "rating": 7.2,
+  "season": "Fall 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx169315-NtbOlSyDtSCZ.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx169315-NtbOlSyDtSCZ.png",
+  "accent": "#e45d86",
+  "synopsis": "Old schoolmates Haru and Gaku will do anything to achieve success. And success to them means earning a trillion dollars! But to do so, they’ll need to take full advantage of their own unique skills. Haru is a persuasive and confident speaker who can connect with anyone, while Gaku, although awkward, is an expert programmer. Will their combined talents be enough to make their dream a reality?\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "trillion-game-6cl6x9",
+    "mal": 56662,
+    "anilist": 169315,
+    "kitsu": 47944
+  },
+  "skip_key_id": 56662,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "trillion game トリリオンケ ーム tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The World's Most Selfish Man",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/21219d80523f31da0a1dcf27b48a7da01727973396_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "359461"
+    },
+    {
+      "n": 2,
+      "title": "START UP",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/45803550b69d61dd9081ad9e346d31001727973428_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "359462"
+    },
+    {
+      "n": 3,
+      "title": "You’ll Win, Won’t You?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/35c796704814db23891d61270834db661728567214_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364242"
+    },
+    {
+      "n": 4,
+      "title": "A Bad Guy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a71d59bef39b148bfb81b0512d72224f1729183769_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364243"
+    },
+    {
+      "n": 5,
+      "title": "The Maiden's Gaze",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/f8619b6aa793b261b7b533b8aa3caaac1729784784_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364244"
+    },
+    {
+      "n": 6,
+      "title": "I Want You To the Moon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/24f82ac41ba9ba1e0d2f8e000078f38e1730391506_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373108"
+    },
+    {
+      "n": 7,
+      "title": "Trillion Game, Inc.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c7fc67887b7a386af330142b52e1c2851730998493_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373109"
+    },
+    {
+      "n": 8,
+      "title": "Flowers and Splendor",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/84730ab20eb3d7b01a4cadda2137bd3a1731605563_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373110"
+    },
+    {
+      "n": 9,
+      "title": "The Flower Way of Kabuki",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/4f34264b8f74fbbc978c1e780b84f91f1732209029_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373111"
+    },
+    {
+      "n": 10,
+      "title": "GOLDEN EGG",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/24137d590570cdf4bec5922dfd1a2b271732799248_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373112"
+    },
+    {
+      "n": 11,
+      "title": "The Illusory Man",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ec2c264cdf931cab194cfe85ad3ca0301733420369_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373113"
+    },
+    {
+      "n": 12,
+      "title": "Two Bad Guys",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/081321b9eb0a04e1a3a2f09d29ef68f81734026640_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373114"
+    },
+    {
+      "n": 13,
+      "title": "The Decisive Battle!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5bf988eeaac6bca6feee9167ffb5e0b71734631454_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373115"
+    },
+    {
+      "n": 14,
+      "title": "Haru vs. Gaku",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/0e49cecce109b92427f900c1f723271d1736435166_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373116"
+    },
+    {
+      "n": 15,
+      "title": "WITH YOU",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/4882d5ce77106acf6de79156fc6c89ad1737047417_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373117"
+    },
+    {
+      "n": 16,
+      "title": "I LOVE MONEY",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/299e60dc41fca92b2a88b66b909d2a6b1737656175_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373118"
+    },
+    {
+      "n": 17,
+      "title": "Haru Unparalleled",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8b4489510ef08f95d21dbb958f05749d1738259430_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373119"
+    },
+    {
+      "n": 18,
+      "title": "The IT Cup",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c1fb6ad171da8dc7107062f7fce9c6451738858818_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373120"
+    },
+    {
+      "n": 19,
+      "title": "Look At the Sky Instead of the Peak",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/bb54c44dd9ffad944c41aa9f01a17a051739467904_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373121"
+    },
+    {
+      "n": 20,
+      "title": "The Price of Glory",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/693699b77cfd1a3f22faad2cd2d80af31740075065_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373122"
+    },
+    {
+      "n": 21,
+      "title": "The Dragon King's Palm",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6fa7901d3a70e7dd72f6ef6d1074511f1740676569_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373123"
+    },
+    {
+      "n": 22,
+      "title": "ALL IN",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d0e69eddbd5a5906ad733a94a296715e1741285073_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373124"
+    },
+    {
+      "n": 23,
+      "title": "MEDIA WARS",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/7eaf39fb09bf59a6b68a44dafa075f2f1741885391_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373125"
+    },
+    {
+      "n": 24,
+      "title": "I LOVE NEWS",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/08a2657a844da2da97e3fcf285e2f8811742491332_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373126"
+    },
+    {
+      "n": 25,
+      "title": "The Collar of Money",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/2f24cb3539da9f6116d0863bc9f5a4121743090793_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373127"
+    },
+    {
+      "n": 26,
+      "title": "GAME CHANGER",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/856141980e646ca076c251fec09052041743091283_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373128"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Beat the odds",
+      "artist": "&TEAM",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Unbelievable (アンビリーバブル)",
+      "artist": "Klang Ruler",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "over the top",
+      "artist": "Hiroji Miyamoto",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "EGOIST",
+      "artist": "imase",
+      "episodes": "14-26"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,119 @@
+{
+  "id": "tokyo-ghoul-pinto-1fmv",
+  "title": "Tokyo Ghoul: [PINTO]",
+  "native": "東京喰種トーキョーグール【PINTO】",
+  "year": 2015,
+  "rating": 6.9,
+  "season": "Fall 2015",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21326-Vmunxqzj1umc.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21326-Vmunxqzj1umc.jpg",
+  "accent": "#f1e4c9",
+  "synopsis": "Shuu Tsukiyama is a \"ghoul\": a creature who eats human flesh, and he likes to enjoy his meals to the fullest. One night, while relishing in the premeditated murder of his dinner, Shuu's much anticipated first bite is disturbed by a sudden flash of light.\n\nThe flash turns out to be from the camera of high schooler Chie Hori, who presents Shuu with the perfect picture capturing his true nature; the extremely clear shot of a bloody corpse and an overly excited Shuu threatens to expose his ghoul identity, thus Shuu needs to sort out this situation quickly.\n\nAfter Shuu discovers that Chie attends the same high school as him and is even in the same class, the reason behind his feelings of obsession changes from self-preservation to morbid curiosity. As he grows closer to the absent-minded and extremely odd photographer, he challenges them both to learn more about each other's conflicting worlds; Shuu promises that Chie will come out of this experience with a photograph superior to the one she already has.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11294,
+    "anilist": 21326,
+    "mal": 31297
+  },
+  "skip_key_id": 31297,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-21 08:26:21",
+  "search_text": "tokyo ghoul pinto 東京喰種トーキョーク ール pinto ova finished",
+  "genres": [
+    "drama",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Tokyo Ghoul: [PINTO]",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21326-Vmunxqzj1umc.jpg",
+      "synopsis": "Shuu Tsukiyama is a \"ghoul\": a creature who eats human flesh, and he likes to enjoy his meals to the fullest. One night, while relishing in the premeditated murder of his dinner, Shuu's much anticipated first bite is disturbed by a sudden flash of light.\n\nThe flash turns out to be from the camera of high schooler Chie Hori, who presents Shuu with the perfect picture capturing his true nature; the extremely clear shot of a bloody corpse and an overly excited Shuu threatens to expose his ghoul identity, thus Shuu needs to sort out this situation quickly.\n\nAfter Shuu discovers that Chie attends the same high school as him and is even in the same class, the reason behind his feelings of obsession changes from self-preservation to morbid curiosity. As he grows closer to the absent-minded and extremely odd photographer, he challenges them both to learn more about each other's conflicting worlds; Shuu promises that Chie will come out of this experience with a photograph superior to the one she already has.\n\n(Source: MAL Rewrite)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "178696"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "katharsis",
+      "artist": "TK from Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rakuen no Kimi (楽園の君)",
+      "artist": "österreich",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "asphyxia",
+      "artist": "Cöshu Nie",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Half",
+      "artist": "Ziyoou-vachi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Munō (無能; Incompetence)",
+      "artist": "österreich",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Munō (無能; Incompetence)",
+      "artist": "österreich",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kisetsu wa Tsugitsugi Shindeiku (季節は次々死んでいく; Seasons Dying One After Another)",
+      "artist": "Amazarashi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Unravel",
+      "artist": "tk of Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Seijatachi (Saints)",
+      "artist": "People in the Box",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

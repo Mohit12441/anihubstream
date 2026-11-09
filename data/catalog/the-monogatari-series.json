@@ -1,0 +1,196 @@
+{
+  "id": "the-monogatari-series",
+  "title": "Nisemonogatari",
+  "native": "偽物語",
+  "year": 2012,
+  "rating": 7.9,
+  "season": "Winter 2012",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11597-dcEqcn2ku4RN.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11597-dcEqcn2ku4RN.jpg",
+  "accent": "#e4ae5d",
+  "synopsis": "First season of the Monogatari Series, part 5/6. Contains the arcs Karen Bee and Tsukihi Phoenix from the Nisemonogatari light novels.\n\nIn Bakemonogatari, the story centered on Koyomi Araragi, a third year high school student who has recently survived a vampire attack and finds himself mixed up with all kinds of apparitions: gods, ghosts, myths, and spirits. However, in Nisemonogatari, we pick up right where we left off and follow Koyomi as the psychological twists delve deeper and deeper...\n\n(Source: Aniplex)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "the-monogatari-series-okql9w",
+    "mal": 11597,
+    "anilist": 11597,
+    "kitsu": 6546
+  },
+  "skip_key_id": 11597,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": null,
+  "search_text": "nisemonogatari 偽物語 tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Karen Bee, Part One",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172011/original.jpeg",
+      "synopsis": "The five girls' problems with supernatural beings have been solved, and it's now summer break, with the culture fair over. Koyomi Araragi has two little sisters, self-proclaimed \"heroes\" nicknamed the Fire Sisters, Karen and Tsukihi.",
+      "airdate": "2012-01-08",
+      "markers": [],
+      "external_id": "172011"
+    },
+    {
+      "n": 2,
+      "title": "Karen Bee, Part Two",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172012/original.jpeg",
+      "synopsis": "Temptation haunts Koyomi, while visiting Sengoku he is presented with several tempting offers. After surviving each one, his visit to Kanbaru continues to put him in compromising situations.",
+      "airdate": "2012-01-15",
+      "markers": [],
+      "external_id": "172012"
+    },
+    {
+      "n": 3,
+      "title": "Karen Bee, Part Three",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172013/original.jpeg",
+      "synopsis": "Araragi leaves Kanbaru's house and meets a dangerous man named Kaiki. While following him, he runs into Senjougahara, who berates him for skipping his studies.",
+      "airdate": "2012-01-21",
+      "markers": [],
+      "external_id": "172013"
+    },
+    {
+      "n": 4,
+      "title": "Karen Bee, Part Four",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172014/original.jpeg",
+      "synopsis": "Karen is badly ill, having been poisoned by an evil, supernatural bee. Will Koyomi BEE able to cure her in time?",
+      "airdate": "2012-01-28",
+      "markers": [],
+      "external_id": "172014"
+    },
+    {
+      "n": 5,
+      "title": "Karen Bee, Part Five",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172015/original.jpeg",
+      "synopsis": "Koyomi learns the whole story about what happened between Karen and Kaiki. After receiving a tempting offer from Hanekawa, he speaks with Shinobu on the way to save Karen.",
+      "airdate": "2012-02-05",
+      "markers": [],
+      "external_id": "172015"
+    },
+    {
+      "n": 6,
+      "title": "Karen Bee, Part Six",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172016/original.jpeg",
+      "synopsis": "Koyomi leaves Karen behind at home to talk with Senjougahara. Senjougahara seems to be planning on confronting and murdering Kaiki. When he comes back home, he learns Karen has wandered off, while still sick.",
+      "airdate": "2012-02-12",
+      "markers": [],
+      "external_id": "172016"
+    },
+    {
+      "n": 7,
+      "title": "Karen Bee, Part Seven",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172017/original.jpeg",
+      "synopsis": "Araragi goes to confront Kaiki and stop him from leaving the city. But Kaiki is wiley and smart, and not easily dissuaded when there's money on the line.",
+      "airdate": "2012-02-19",
+      "markers": [],
+      "external_id": "172017"
+    },
+    {
+      "n": 8,
+      "title": "Tsukihi Phoenix, Part One",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172018/original.jpeg",
+      "synopsis": "Karen is acting clingy and very cute, completely out of character. But its a trick to get Koyomi to introduce her to Kanbaru. In response, he devises a test Karen must pass; a test involving her toothbrush.",
+      "airdate": "2012-02-26",
+      "markers": [],
+      "external_id": "172018"
+    },
+    {
+      "n": 9,
+      "title": "Tsukihi Phoenix, Part Two",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172019/original.jpeg",
+      "synopsis": "While taking Karen to meet Kanbaru, Araragi is put into a compromising position. On the way, he runs into someone asking about familiar things.",
+      "airdate": "2012-03-04",
+      "markers": [],
+      "external_id": "172019"
+    },
+    {
+      "n": 10,
+      "title": "Tsukihi Phoenix, Part Three",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172020/original.jpeg",
+      "synopsis": "Araragi agrees to take Shinobu on a trip to buy doughnuts. At the restaurant, an old acquaintance is able to give information on the town's new visitors.",
+      "airdate": "2012-03-11",
+      "markers": [],
+      "external_id": "172020"
+    },
+    {
+      "n": 11,
+      "title": "Tsukihi Phoenix, Part Four",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172021/original.jpeg",
+      "synopsis": "As Shinobu explains how Tsukihi came to be in her currents situation. Araragi resolves to stop the out-of-towners from killing her. But unlike Oshino and Kaiki, Kagenui speaks with her fist and she talks a lot.",
+      "airdate": "2012-03-18",
+      "markers": [],
+      "external_id": "172021"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Futakotome",
+      "artist": "Chiwa Saitou",
+      "episodes": "1,3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Naisho no Hanashi",
+      "artist": "ClariS",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Marshmallow Justice",
+      "artist": "Eri Kitamura",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Platinum Disco",
+      "artist": "Yuka Iguchi",
+      "episodes": "8"
+    }
+  ],
+  "relations": []
+}

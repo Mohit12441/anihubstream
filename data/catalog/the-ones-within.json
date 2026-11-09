@@ -1,0 +1,271 @@
+{
+  "id": "the-ones-within",
+  "title": "The Ones Within",
+  "native": "ナカノヒトゲノム【実況中】",
+  "year": 2019,
+  "rating": 6.6,
+  "season": "Summer 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx102926-zVQk2FEDooyI.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx102926-zVQk2FEDooyI.png",
+  "accent": "#43f1f1",
+  "synopsis": "Iride Akatsuki is a popular game footage uploader. He wakes up one day to find that he's been kidnapped and taken to a strange place, along with a number of other uploaders who specialize in different genres of games.\n\nA mysterious alpaca-headed host gathers them after the initial stage, to explain how the game will proceed. Will the group of gamers clear the game and make it back to their real lives?\n\n(Source: Kirei Cake)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 41336,
+    "anilist": 102926,
+    "mal": 37926
+  },
+  "skip_key_id": 37926,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 12:26:01",
+  "search_text": "the ones within ナカノヒトケ ノム 実況中 tv finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "drama",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "ARE WE FRIENDS",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264081/original.jpg",
+      "synopsis": "A group of charismatic Let's Players are brought into a closed stage where they must reach 100,000,000 views, but the possibility of death is very real.",
+      "airdate": "2019-07-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        }
+      ],
+      "external_id": "264081"
+    },
+    {
+      "n": 2,
+      "title": "BORN THIS WAY",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264082/original.jpg",
+      "synopsis": "The Let's Players raise their ideal girl from an egg and help her get along with the school's idol. Problem is, everyone has their own opinion of what ideal is.",
+      "airdate": "2019-07-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 69,
+          "end": 159
+        }
+      ],
+      "external_id": "264082"
+    },
+    {
+      "n": 3,
+      "title": "CLUMSY PRETENDER",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264083/original.jpg",
+      "synopsis": "As punishment for going where they shouldn't, the players are forced to exterminate man-eating creatures that can take the shape of anybody.",
+      "airdate": "2019-07-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 118,
+          "end": 208
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1425
+        }
+      ],
+      "external_id": "264083"
+    },
+    {
+      "n": 4,
+      "title": "DAYDREAM AND NIGHTMARE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264084/original.jpg",
+      "synopsis": "The players are to rescue some abducted pure maidens but the demons who took them are cheat-level strong. Will their plan to trick them work out in the end?",
+      "airdate": "2019-07-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 76,
+          "end": 166
+        }
+      ],
+      "external_id": "264084"
+    },
+    {
+      "n": 5,
+      "title": "DUSK AND DAWN",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264085/original.jpg",
+      "synopsis": "Zakuro and Kaikoku go on a mission to save Akatsuki and Karen from demons. In the process, Zakuro may find a hint about his missing little sister's whereabouts.",
+      "airdate": "2019-08-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1358,
+          "end": 1422
+        }
+      ],
+      "external_id": "264085"
+    },
+    {
+      "n": 6,
+      "title": "ERASE MY REALITY",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264086/original.jpg",
+      "synopsis": "In order to obtain Chromosome 05, Anya and Himiko must venture deep into desert ruins where there's a heavy price to be paid for any lies spoken.",
+      "airdate": "2019-08-11",
+      "markers": [],
+      "external_id": "264086"
+    },
+    {
+      "n": 7,
+      "title": "FOOTSTEPS OUTSIDE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264087/original.jpg",
+      "synopsis": "Three sinister sisters prowl through the players' rooms in a frightening game of hide-and-seek where everyone's sight and eyeballs are on the line.",
+      "airdate": "2019-08-18",
+      "markers": [],
+      "external_id": "264087"
+    },
+    {
+      "n": 8,
+      "title": "GLIMPSE OF ADULTHOOD",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264088/original.jpg",
+      "synopsis": "Though given a chance to relax and enjoy the day, a part of the group risks their lives for a glimpse of adulthood in the outdoor bath.",
+      "airdate": "2019-08-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 139
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1425
+        }
+      ],
+      "external_id": "264088"
+    },
+    {
+      "n": 9,
+      "title": "HEAVEN WHITE AND HELL BLACK",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264089/original.jpg",
+      "synopsis": "Kaikoku makes a startling discovery during his confinement while the others struggle to assemble a baffling puzzle in hopes of rescuing him before time is up.",
+      "airdate": "2019-09-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 74,
+          "end": 164
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1423
+        }
+      ],
+      "external_id": "264089"
+    },
+    {
+      "n": 10,
+      "title": "HOLD ON AND LET GO",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264090/original.jpg",
+      "synopsis": "While Yuzu borrows Karin to tackle the White Puzzle, Kaikoku in the underground encounters a creature that attempts to swallow him whole.",
+      "airdate": "2019-09-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 127
+        }
+      ],
+      "external_id": "264090"
+    },
+    {
+      "n": 11,
+      "title": "ISOLATED SOUL",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264091/original.jpg",
+      "synopsis": "To beat the next stage, half of the group has to look after a few troublesome kids. One of them is in desperate need of some extra love and attention.",
+      "airdate": "2019-09-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1334,
+          "end": 1424
+        }
+      ],
+      "external_id": "264091"
+    },
+    {
+      "n": 12,
+      "title": "JOURNEY GOES ON",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267754/original.jpg",
+      "synopsis": "The stakes are high in a bonus stage where the players gamble to win Paka prizes. The ultimate reward is a ticket to make any single request come true.",
+      "airdate": "2019-09-22",
+      "markers": [],
+      "external_id": "267754"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

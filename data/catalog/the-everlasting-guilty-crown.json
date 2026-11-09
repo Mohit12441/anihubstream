@@ -1,0 +1,54 @@
+{
+  "id": "the-everlasting-guilty-crown",
+  "title": "The Everlasting Guilty Crown",
+  "native": "The Everlasting Guilty Crown",
+  "year": 2012,
+  "rating": 7.3,
+  "season": "2012",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx17949-Dzj31w5KFdBL.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx17949-Dzj31w5KFdBL.jpg",
+  "accent": "#f1d6c9",
+  "synopsis": "The Everlasting Guilty Crown is the second single by the music group EGOIST and is used as the second opening theme song of Guilty Crown. The limited edition release includes a DVD with a music video of the song's TV edit, animated in 3D CGI.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "the-everlasting-guilty-crown-cqij2n",
+    "mal": 17949,
+    "anilist": 17949,
+    "kitsu": 7965
+  },
+  "skip_key_id": 17949,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "the everlasting guilty crown the everlasting guilty crown special finished",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Everlasting Guilty Crown",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx17949-Dzj31w5KFdBL.jpg",
+      "synopsis": "The Everlasting Guilty Crown is the second single by the music group EGOIST and is used as the second opening theme song of Guilty Crown. The limited edition release includes a DVD with a music video of the song's TV edit, animated in 3D CGI.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "111736"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

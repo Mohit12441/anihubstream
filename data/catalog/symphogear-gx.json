@@ -1,0 +1,210 @@
+{
+  "id": "symphogear-gx",
+  "title": "Symphogear GX",
+  "native": "戦姫絶唱シンフォギアGX",
+  "year": 2015,
+  "rating": 7.4,
+  "season": "Summer 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20560-ghaHjE5lfnEt.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20560-ghaHjE5lfnEt.png",
+  "accent": "#f1d65d",
+  "synopsis": "Following the events of Senki Zesshou Symphogear G, Hibiki Tachibana, Tsubasa Kazanari, and Chris Yukine continue to operate under the command of Genjuurou Kazanari. Meanwhile, Maria Cadenzavna Eve, Kirika Akatsuki, and Shirabe Tsukuyomi are taken into protective custody. With peace restored, everyone returns to their daily lives; however, the appearance of the alchemist Carol Malus Dienheim and her subordinates—the \"Autoscorers\"—threatens to draw everyone back into a conflict.\n\nArmed with a strange and magical power, Carol wishes to initiate the apocalypse and bring destruction to the world... and she is willing to sacrifice everything to do so. Against this mysterious new foe, the six Symphogear wielders must rise to the challenge in order to protect what they hold dear. However, will Carol and her Autoscorers prove to be too much to handle in this fight to protect the fate of the world?\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "symphogear-gx-kwat38",
+    "mal": 21573,
+    "anilist": 20560,
+    "kitsu": 8136
+  },
+  "skip_key_id": 21573,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "symphogear gx 戦姫絶唱シンフォキ アgx tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Murderer of Miracles",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-07-04",
+      "markers": [],
+      "external_id": "198049"
+    },
+    {
+      "n": 2,
+      "title": "Before I Destroy the World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-07-11",
+      "markers": [],
+      "external_id": "198050"
+    },
+    {
+      "n": 3,
+      "title": "Twilight of the Wielders",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-07-18",
+      "markers": [],
+      "external_id": "198051"
+    },
+    {
+      "n": 4,
+      "title": "Gungnir, Once More",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-07-25",
+      "markers": [],
+      "external_id": "198052"
+    },
+    {
+      "n": 5,
+      "title": "Edge Works",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-08-01",
+      "markers": [],
+      "external_id": "198053"
+    },
+    {
+      "n": 6,
+      "title": "Drawn Blade",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-08-08",
+      "markers": [],
+      "external_id": "198054"
+    },
+    {
+      "n": 7,
+      "title": "Carry on the Shining Light, and Stay True to Yourself",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-08-16",
+      "markers": [],
+      "external_id": "198055"
+    },
+    {
+      "n": 8,
+      "title": "The Courage to Face It",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-08-22",
+      "markers": [],
+      "external_id": "198056"
+    },
+    {
+      "n": 9,
+      "title": "The Middle of a Dream",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-08-29",
+      "markers": [],
+      "external_id": "198057"
+    },
+    {
+      "n": 10,
+      "title": "It's So Cruel, But...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-09-05",
+      "markers": [],
+      "external_id": "198058"
+    },
+    {
+      "n": 11,
+      "title": "It's All Right. Everything is Just Fine.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-09-12",
+      "markers": [],
+      "external_id": "198059"
+    },
+    {
+      "n": 12,
+      "title": "GX",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-09-19",
+      "markers": [],
+      "external_id": "198060"
+    },
+    {
+      "n": 13,
+      "title": "Believe in Justice and Hold It Close",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Carol now has the power of 7 billion Climax Songs. Will the Symphogears be able to stop her with their new S2CA-Hexa Burst?",
+      "airdate": "2015-09-26",
+      "markers": [],
+      "external_id": "170838"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Exterminate",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Glorious Break",
+      "artist": "Nana Mizuki",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rebirth-day",
+      "artist": "Ayahi Takagaki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

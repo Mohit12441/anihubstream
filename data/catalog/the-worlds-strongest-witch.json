@@ -1,0 +1,78 @@
+{
+  "id": "the-worlds-strongest-witch",
+  "title": "The World's Strongest Witch",
+  "native": "世界最強の魔女、始めました",
+  "year": 2026,
+  "rating": 7,
+  "season": "Fall 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx211778-0MXK5HqVFBYH.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx211778-0MXK5HqVFBYH.jpg",
+  "accent": "#5dbbf1",
+  "synopsis": "After using her SSS-Rank skill, Internet, to crush her former family’s ambitions, Lorna is free to travel the world. Her next stop is the port town of Aquas, where she hopes to see the sights and chow down on some fresh seafood. But when she arrives, the place is on the brink of destruction thanks to a certain Weekly Quest… Good thing Lorna has the gods on her side!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": 19,
+  "alt_seasons": [],
+  "sched_day": 3,
+  "sched_day_label": "WED",
+  "sched_date": "Nov 11",
+  "sched_time": "13:00",
+  "sched_season": "Fall 2026",
+  "sched_episode": 6,
+  "sched_sub_at": null,
+  "sched_dub_at": 1793800800000,
+  "source_ids": {
+    "anilist": 211778,
+    "mal": 64084,
+    "hianime": "the-world's-strongest-witch-b48oow",
+    "kitsu": 50697
+  },
+  "skip_key_id": 64084,
+  "skip_key_space": "mal",
+  "episode_total": 33,
+  "added_at": "2026-10-16 15:13:04",
+  "search_text": "the world s strongest witch 世界最強の魔女 始めました tv ongoing",
+  "genres": [
+    "action",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The World's Strongest Witch Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ac64662aa43420d880669de-landscape.jpg",
+      "synopsis": "",
+      "airdate": "2026-10-07",
+      "markers": [],
+      "external_id": "anikoto:9065:1"
+    },
+    {
+      "n": 2,
+      "title": "The World's Strongest Witch Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ac64662aa43420d880669de-landscape.jpg",
+      "synopsis": "",
+      "airdate": "2026-10-14",
+      "markers": [],
+      "external_id": "anikoto:9065:2"
+    },
+    {
+      "n": 3,
+      "title": "The World's Strongest Witch Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ac64662aa43420d880669de-landscape.jpg",
+      "synopsis": "",
+      "airdate": "2026-10-21",
+      "markers": [],
+      "external_id": "anikoto:9065:3"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

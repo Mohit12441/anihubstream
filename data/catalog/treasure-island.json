@@ -1,0 +1,360 @@
+{
+  "id": "treasure-island",
+  "title": "Treasure Island",
+  "native": "宝島",
+  "year": 1978,
+  "rating": 7.7,
+  "season": "Fall 1978",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/2618-guJAqUkp0pyT.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/2618-guJAqUkp0pyT.png",
+  "accent": "#e4935d",
+  "synopsis": "“Mother, I want to go to sea!”\n\nJim Hawkins is an average 13-year-old boy living near the small town of Black Hill Cove, spending his days tending to the Admiral Benbow Inn with his mother, Karen. This quiet life is interrupted one stormy night as the brusque Billy Bones comes knocking for a room. His arrival will send Jim to sea on a wild and harrowing adventure in search of “Treasure Island” and the legendary piles of namesake riches it is rumored to hold.\n\n(Source: Discotek)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "treasure-island-2npc6a",
+    "mal": 2618,
+    "anilist": 2618,
+    "kitsu": 2382
+  },
+  "skip_key_id": 2618,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "treasure island 宝島 tv finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Billy The Terrible Has Arrived!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40705/original.jpg",
+      "synopsis": "-",
+      "airdate": "1978-10-08",
+      "markers": [],
+      "external_id": "40705"
+    },
+    {
+      "n": 2,
+      "title": "Who's the Black Dog!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40706/original.jpg",
+      "synopsis": "-",
+      "airdate": "1978-10-15",
+      "markers": [],
+      "external_id": "40706"
+    },
+    {
+      "n": 3,
+      "title": "The Thrown Down Crutches",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40707/original.jpg",
+      "synopsis": "-",
+      "airdate": "1978-10-22",
+      "markers": [],
+      "external_id": "40707"
+    },
+    {
+      "n": 4,
+      "title": "I've Got the Map to Treasure Island!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40708/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1978-10-29",
+      "markers": [],
+      "external_id": "40708"
+    },
+    {
+      "n": 5,
+      "title": "See You later, Mum!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40709/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1978-11-05",
+      "markers": [],
+      "external_id": "40709"
+    },
+    {
+      "n": 6,
+      "title": "Friend or Foe? John Silver",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40710/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1978-11-12",
+      "markers": [],
+      "external_id": "40710"
+    },
+    {
+      "n": 7,
+      "title": "I Hate the Old Meat Roaster",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40711/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1978-11-19",
+      "markers": [],
+      "external_id": "40711"
+    },
+    {
+      "n": 8,
+      "title": "The Ghost Ship is Calling Me!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40712/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1978-11-26",
+      "markers": [],
+      "external_id": "40712"
+    },
+    {
+      "n": 9,
+      "title": "Kidnapping in the Slave Port",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40713/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1978-12-03",
+      "markers": [],
+      "external_id": "40713"
+    },
+    {
+      "n": 10,
+      "title": "Heard from the Inside of an Apple Barrel!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40714/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1978-12-10",
+      "markers": [],
+      "external_id": "40714"
+    },
+    {
+      "n": 11,
+      "title": "Is Something Going Down on Treasure Island!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40715/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1978-12-17",
+      "markers": [],
+      "external_id": "40715"
+    },
+    {
+      "n": 12,
+      "title": "It's There! Monster of the Forest",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40716/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1978-12-24",
+      "markers": [],
+      "external_id": "40716"
+    },
+    {
+      "n": 13,
+      "title": "Grampa's Tiny Bell",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40717/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1978-12-31",
+      "markers": [],
+      "external_id": "40717"
+    },
+    {
+      "n": 14,
+      "title": "That's life! Friend, Foe",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40718/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-01-07",
+      "markers": [],
+      "external_id": "40718"
+    },
+    {
+      "n": 15,
+      "title": "Surrender, Silver-style",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40719/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-01-14",
+      "markers": [],
+      "external_id": "40719"
+    },
+    {
+      "n": 16,
+      "title": "I'm a Castaway...!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40720/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-01-21",
+      "markers": [],
+      "external_id": "40720"
+    },
+    {
+      "n": 17,
+      "title": "Don't Underestimate Me, I'm Not a Kid",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40721/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-01-28",
+      "markers": [],
+      "external_id": "40721"
+    },
+    {
+      "n": 18,
+      "title": "Hands is Supposed to be Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40722/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-02-04",
+      "markers": [],
+      "external_id": "40722"
+    },
+    {
+      "n": 19,
+      "title": "Is This His End? The Immortal Silver",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40723/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-02-11",
+      "markers": [],
+      "external_id": "40723"
+    },
+    {
+      "n": 20,
+      "title": "This Time Crucifixion! Long John",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40724/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-02-18",
+      "markers": [],
+      "external_id": "40724"
+    },
+    {
+      "n": 21,
+      "title": "A Treasure is Good Only if You're Alive!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40725/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-02-25",
+      "markers": [],
+      "external_id": "40725"
+    },
+    {
+      "n": 22,
+      "title": "When a Pirates Dies, he Leaves Only a Skeleton",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40726/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-03-04",
+      "markers": [],
+      "external_id": "40726"
+    },
+    {
+      "n": 23,
+      "title": "The Flying Man! Bobby the Seagull",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40727/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-03-11",
+      "markers": [],
+      "external_id": "40727"
+    },
+    {
+      "n": 24,
+      "title": "Will the Dead Man's Chest Shine on a Full Moon!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40728/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-03-18",
+      "markers": [],
+      "external_id": "40728"
+    },
+    {
+      "n": 25,
+      "title": "Until We Meet Again, Sea Breeze",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40729/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-03-25",
+      "markers": [],
+      "external_id": "40729"
+    },
+    {
+      "n": 26,
+      "title": "Flint Can't Fly Anymore",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40730/original.jpg",
+      "synopsis": "N/A",
+      "airdate": "1979-04-01",
+      "markers": [],
+      "external_id": "40730"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Takarajima (宝島; Treasure Island)",
+      "artist": "Yoshito Machida",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Chiisana Funanori (小さな船乗り; A Little Seaman)",
+      "artist": "Yoshito Machida",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Takarajima (宝島; Treasure Island)",
+      "artist": "Yoshito Machida",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Chiisana Funanori (小さな船乗り; A Little Seaman)",
+      "artist": "Yoshito Machida",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

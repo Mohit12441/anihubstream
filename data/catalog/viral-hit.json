@@ -1,0 +1,191 @@
+{
+  "id": "viral-hit",
+  "title": "Viral Hit",
+  "native": "喧嘩独学",
+  "year": 2024,
+  "rating": 7.1,
+  "season": "Spring 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx174653-OsnK4BuENjUT.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx174653-OsnK4BuENjUT.jpg",
+  "accent": "#d61a1a",
+  "synopsis": "Scrawny high school student Hobin Yu is probably the last guy you’d expect to star in a NewTube channel that revolves around fighting. But after following some advice from a mysterious NewTube channel, Hobin is soon knocking out guys stronger than him and raking in more money than he could have ever dreamed of. Can Hobin keep this up, or will he eventually meet his match?\n\n(Source: WEBTOON)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "viral-hit-ndguzu",
+    "mal": 58080,
+    "anilist": 174653,
+    "kitsu": 48533
+  },
+  "skip_key_id": 58080,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "viral hit 喧嘩独学 tv finished",
+  "genres": [
+    "action",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "First Upload",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b8bf242593f0f0fa1abee4f1d1aed7f81712763536_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364107"
+    },
+    {
+      "n": 2,
+      "title": "I Have to Become Stronger",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/00ed0487b23ad76461754b33afcbce341713366793_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364108"
+    },
+    {
+      "n": 3,
+      "title": "The Date",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/0303663930ae44bb70301b64f87f8b3a1713971398_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364109"
+    },
+    {
+      "n": 4,
+      "title": "Humiliation",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/f7d35064dc83114678bde2c1edaa7bef1714581377_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364110"
+    },
+    {
+      "n": 5,
+      "title": "Friends",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/da07ec22c74bb9d1becdd86c7fa48d0e1715181079_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364111"
+    },
+    {
+      "n": 6,
+      "title": "The Devil",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/6d05bdc1f0a8b02677a4fac672414dce1715790762_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364112"
+    },
+    {
+      "n": 7,
+      "title": "Special Training",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/4f4df1eb1b71fe6934bccb937bfd3a351716389487_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364113"
+    },
+    {
+      "n": 8,
+      "title": "A Real Fight",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/d9cf60cd35a72f64281433f5d4c747ce1716999350_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364114"
+    },
+    {
+      "n": 9,
+      "title": "Friends",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/fe74c9cb217311cfc33a1249348c41801717602719_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364115"
+    },
+    {
+      "n": 10,
+      "title": "A New Opponent",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/2646d866fab32e83e1253908f6d160491718205295_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364116"
+    },
+    {
+      "n": 11,
+      "title": "A Tight Feeling in the Chest",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/8dda744390d13ed956d03e3b6fa5337e1718813279_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364117"
+    },
+    {
+      "n": 12,
+      "title": "Joy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/698eb57a0b398c2101ad54c82be1afb41719416425_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364118"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Wild Boy",
+      "artist": "MA55IVE THE RAMPAGE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Viral Hack",
+      "artist": "Crab Kani Club",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

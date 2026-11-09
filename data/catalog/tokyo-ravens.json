@@ -1,0 +1,338 @@
+{
+  "id": "tokyo-ravens",
+  "title": "Tokyo Ravens",
+  "native": "東京レイヴンズ",
+  "year": 2013,
+  "rating": 7.1,
+  "season": "Fall 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16011-orxVpks3jG9U.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16011-orxVpks3jG9U.jpg",
+  "accent": "#e4bb50",
+  "synopsis": "Harutora was born into a family of onmyouji known for their mastery of the occult. Unfortunately, he didn’t inherit their magical abilities, so he was doomed to live a normal life. At least, that is, until a girl from his past changes his future!\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tokyo-ravens-c2f322",
+    "mal": 16011,
+    "anilist": 16011,
+    "kitsu": 7359
+  },
+  "skip_key_id": 16011,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "tokyo ravens 東京レイウ ンス tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Shaman Clan: Promise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160032/original.jpg",
+      "synopsis": "All Harutora Tsuchimikado wants, is to spend his days idly with his friends, but as a descendant of the famous onmyo mage, Abe no Seimei, he has no choice but to follow his family's traditions.",
+      "airdate": "2013-10-09",
+      "markers": [],
+      "external_id": "160032"
+    },
+    {
+      "n": 2,
+      "title": "SHAMAN CLAN -Confession-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160034/original.jpg",
+      "synopsis": "After the festival, Hokuto is mad at Harutora, and Harutora and Natsume meet to sort out family issues. An interruption leads to a confrontation with Suzuka near the Tsuchimikado main house.",
+      "airdate": "2013-10-16",
+      "markers": [],
+      "external_id": "160034"
+    },
+    {
+      "n": 3,
+      "title": "SHAMAN CLAN -Calling the Dead-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160041/original.jpg",
+      "synopsis": "Harutora and Natsume interrupt Suzuka as she tries to bring her older brother back from the dead.",
+      "airdate": "2013-10-23",
+      "markers": [],
+      "external_id": "160041"
+    },
+    {
+      "n": 4,
+      "title": "RAVEN'S NEST -School-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160043/original.jpg",
+      "synopsis": "Harutora and Touji arrive at the elite Onmyo Prep School, which Natsume also attends, but their presence causes conflict with some of their new classmates.",
+      "airdate": "2013-10-30",
+      "markers": [],
+      "external_id": "160043"
+    },
+    {
+      "n": 5,
+      "title": "RAVEN'S NEST -Bonds-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160045/original.jpg",
+      "synopsis": "Harutora makes friends with his classmates after the battle of the familiars, which upsets Natsume. However, when Natsume is in danger, Harutora and his new friends fight to save her.",
+      "airdate": "2013-11-06",
+      "markers": [],
+      "external_id": "160045"
+    },
+    {
+      "n": 6,
+      "title": "days in nest -Holiday-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160048/original.jpg",
+      "synopsis": "Weird rumors are going around about Harutora and Natsume, and they are made worse when Harutora and Natsume go shopping together on their day off.",
+      "airdate": "2013-11-13",
+      "markers": [],
+      "external_id": "160048"
+    },
+    {
+      "n": 7,
+      "title": "cHImAirA DanCE -Ogre Eater-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160054/original.jpg",
+      "synopsis": "Six months have passed since Harutora and Touji transferred to Onmyo Prep, and it's time for their end-of-year exams.",
+      "airdate": "2013-11-20",
+      "markers": [],
+      "external_id": "160054"
+    },
+    {
+      "n": 8,
+      "title": "cHImAirA DanCE -Half-Ogre-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160059/original.jpg",
+      "synopsis": "Touji's past is revealed as he struggles with turning into a half-ogre, and Harutora has to choose between helping his friend or protecting Natsume.",
+      "airdate": "2013-11-27",
+      "markers": [],
+      "external_id": "160059"
+    },
+    {
+      "n": 9,
+      "title": "cHImAirA DanCE -Purification-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160061/original.jpg",
+      "synopsis": "Harutora runs to join Natsume and Kogure in their fight against the nue as the other exorcists fight the other spirit disaster.",
+      "airdate": "2013-12-04",
+      "markers": [],
+      "external_id": "160061"
+    },
+    {
+      "n": 10,
+      "title": "GIRL RETURN -Prodigy-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160063/original.jpg",
+      "synopsis": "When the new school year starts, Suzuka also enrolls at Onmyo Prep, and Harutora and Natsume must keep her from finding out that Natsume Tsuchimikado is really a girl.",
+      "airdate": "2013-12-11",
+      "markers": [],
+      "external_id": "160063"
+    },
+    {
+      "n": 11,
+      "title": "GIRL RETURN -Tiger-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160069/original.jpg",
+      "synopsis": "In order to keep Suzuka from telling everyone that Natsume is a girl, Harutora and Natsume are forced to do everything Suzuka wants, and Kon ends up in a predicament.",
+      "airdate": "2013-12-18",
+      "markers": [],
+      "external_id": "160069"
+    },
+    {
+      "n": 12,
+      "title": "GIRL RETURN -Love-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160071/original.jpg",
+      "synopsis": "Harutora's class is going to a special training camp, and Harutora and Natsume are excited to get a break from Suzuka. But when they get to the camp, a certain someone is already waiting for them.",
+      "airdate": "2013-12-25",
+      "markers": [],
+      "external_id": "160071"
+    },
+    {
+      "n": 13,
+      "title": "Black Shaman ASSAULT -Priest-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160073/original.jpg",
+      "synopsis": "Harutora and Natsume struggle with telling each other their feelings while Doman mounts an attack.",
+      "airdate": "2014-01-08",
+      "markers": [],
+      "external_id": "160073"
+    },
+    {
+      "n": 14,
+      "title": "Black Shaman ASSAULT -Face-Off-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160082/original.jpg",
+      "synopsis": "Harutora and the others face off against Ashiya. Doman invades Onmyo Prep with his army of Tsuchigumos as he searches for the Raven Coat.",
+      "airdate": "2014-01-15",
+      "markers": [],
+      "external_id": "160082"
+    },
+    {
+      "n": 15,
+      "title": "_DARKNESS_EMERGE_ -Encounter-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160091/original.jpg",
+      "synopsis": "In the aftermath of Doman's attack, Harutora and Natsume have a strange encounter and learn new information.",
+      "airdate": "2014-01-22",
+      "markers": [],
+      "external_id": "160091"
+    },
+    {
+      "n": 16,
+      "title": "_DARKNESS_EMERGE_ -Divine Fan-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160104/original.jpg",
+      "synopsis": "The members of the Twin Horn Syndicate start panicking as the plan to eradicate them from the Onmyo Agency begins.",
+      "airdate": "2014-01-29",
+      "markers": [],
+      "external_id": "160104"
+    },
+    {
+      "n": 17,
+      "title": "_DARKNESS_EMERGE_ -Razor-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160109/original.jpg",
+      "synopsis": "Shaver suddenly attacks when Etou approaches Harutora and the others, and Harutora must find a way to stop him from causing any more damage.",
+      "airdate": "2014-02-05",
+      "markers": [],
+      "external_id": "160109"
+    },
+    {
+      "n": 18,
+      "title": "over-cry -Assault-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160111/original.jpg",
+      "synopsis": "Harutora and the others return to school for the first time after the incident that revealed Natsume's true gender.",
+      "airdate": "2014-02-12",
+      "markers": [],
+      "external_id": "160111"
+    },
+    {
+      "n": 19,
+      "title": "over-cry -Princess-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160124/original.jpg",
+      "synopsis": "Takiko visits Harutora and Natsume at Onmyo Prep while they are still in the middle of their fight with Kyoko.",
+      "airdate": "2014-02-19",
+      "markers": [],
+      "external_id": "160124"
+    },
+    {
+      "n": 20,
+      "title": "over-cry -Fireworks-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160127/original.jpg",
+      "synopsis": "Natsume reflects on her relationship with Harutora as they go with the others to the fireworks festival.",
+      "airdate": "2014-02-26",
+      "markers": [],
+      "external_id": "160127"
+    },
+    {
+      "n": 21,
+      "title": "to The DarkSky -Dark Night-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160129/original.jpg",
+      "synopsis": "As Harutora tries to come to terms with what happened, Yashamaru approaches him with a proposition.",
+      "airdate": "2014-03-05",
+      "markers": [],
+      "external_id": "160129"
+    },
+    {
+      "n": 22,
+      "title": "to The DarkSky -Protector-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160134/original.jpg",
+      "synopsis": "Harutora is brought to Chief Kurahashi's office while Touji and Mr. Ohtomo lead separate attacks on the Onmyo Agency.",
+      "airdate": "2014-03-12",
+      "markers": [],
+      "external_id": "160134"
+    },
+    {
+      "n": 23,
+      "title": "to The DarkSky -Onmyo-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160145/original.jpg",
+      "synopsis": "Things come to a head at the Onmyo Agency as Tenma finds his way into the building and joins the others.",
+      "airdate": "2014-03-19",
+      "markers": [],
+      "external_id": "160145"
+    },
+    {
+      "n": 24,
+      "title": "to The DarkSky -Calling the Dead-",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160161/original.jpg",
+      "synopsis": "Memories from the past mix with the present as Harutora tries to bring a beloved friend back from the dead.",
+      "airdate": "2014-03-26",
+      "markers": [],
+      "external_id": "160161"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "X-encounter",
+      "artist": "Maon Kurosaki",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kimi ga Emu Yuugure",
+      "artist": "Yoshino Nanjou",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "～Outgrow～",
+      "artist": "Gero",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Break a spell",
+      "artist": "Mami Kawada",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

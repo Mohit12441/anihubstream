@@ -1,0 +1,76 @@
+{
+  "id": "tokyo-ravens-kon-ga-oshiete-moshi-agemasu-maru-wakari-tokyo-ravens",
+  "title": "Kon ga Oshiete Moshi Agemasu! Maru Wakari TOKYO RAVENS",
+  "native": "コンが教えて差し上げます！まるわかり東京レイヴンズ",
+  "year": 2013,
+  "rating": 6.2,
+  "season": "Fall 2013",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20896.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20896.jpg",
+  "accent": "#e43535",
+  "synopsis": "Short web specials where Kon explains a bit more about the series and the Onmyouji world.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tokyo-ravens:-kon-ga-oshiete-moshi-agemasu!-maru-wakari-tokyo-ravens-gip37a",
+    "mal": 23405,
+    "anilist": 20896,
+    "kitsu": 8811
+  },
+  "skip_key_id": 23405,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "kon ga oshiete moshi agemasu maru wakari tokyo ravens コンか 教えて差し上け ます まるわかり東京レイウ ンス special finished",
+  "genres": [
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "117188"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "117189"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "117190"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

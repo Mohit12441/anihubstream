@@ -1,0 +1,602 @@
+{
+  "id": "the-apothecary-diaries",
+  "title": "The Apothecary Diaries",
+  "native": "薬屋のひとりごと",
+  "year": 2023,
+  "rating": 8.8,
+  "season": "Fall 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx161645-QLbzHXiYRgV2.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx161645-QLbzHXiYRgV2.jpg",
+  "accent": "#f1865d",
+  "synopsis": "Maomao lived a peaceful life with her apothecary father. Until one day, she’s sold as a lowly servant to the emperor’s palace. But she wasn’t meant for a compliant life among royalty. So when imperial heirs fall ill, she decides to step in and find a cure! This catches the eye of Jinshi, a handsome palace official who promotes her. Now, she’s making a name for herself solving medical mysteries!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": 31,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "the-apothecary-diaries-44z5uk",
+    "mal": 54492,
+    "anilist": 161645,
+    "kitsu": 47083
+  },
+  "skip_key_id": 54492,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "the apothecary diaries 薬屋のひとりこ と tv finished",
+  "genres": [
+    "drama",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Maomao",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/342389/thumbnail/2af8266536b00dc8291f34867c6dc049.jpg",
+      "synopsis": "After being kidnapped and forced to work as a servant in the rear palace, former apothecary Maomao inadvertently draws the attention of the higher ranks when she investigates what's causing the emperor's infant heirs to fall mysteriously ill.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 95,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1345,
+          "end": 1435,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "342389"
+    },
+    {
+      "n": 2,
+      "title": "Chilly Apothecary",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/342390/thumbnail/bedf643939fe8246d4dc9a966bcdb217.jpg",
+      "synopsis": "Maomao tries to settle into her promotion to lady-in-waiting and food taster but struggles to fend off both boredom and the overly familiar Jinshi. That is, until she gets an assignment of her dreams: to concoct an aphrodisiac.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "342390"
+    },
+    {
+      "n": 3,
+      "title": "The Unsettling Matter of the Spirit",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355555/thumbnail/ea7c59434d7ccc21f1c1704a3921b968.jpg",
+      "synopsis": "Tasked with investigating a ghostly woman dancing nightly on the palace walls, Maomao finds a sleepwalking Concubine Fuyou. But with no medicinal cure for sleepwalking, she's forced to dig deeper to find the real reason behind Fuyou's affliction.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355555"
+    },
+    {
+      "n": 4,
+      "title": "The Threat",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355556/thumbnail/c0b0f449032c649cbb39877aa4216de8.jpg",
+      "synopsis": "Under direct orders from the emperor himself, Maomao tries to care for an ailing Concubine Lihua but finds her work impeded by Lihua's own ladies-in-waiting.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355556"
+    },
+    {
+      "n": 5,
+      "title": "Covert Operations",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355594/thumbnail/5fe85c7910d5fc37fd0d3efb63d7194f.jpg",
+      "synopsis": "A eunuch stricken by a curse comes begging for aid. Meanwhile, the rear palace buzzes with excitement as everyone prepares for the upcoming garden party, and Gyokuyou's ladies-in-waiting aren't about to let Maomao get away without dressing her up.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355594"
+    },
+    {
+      "n": 6,
+      "title": "The Garden Party",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355595/thumbnail/a35bba6bc7d9c27141c4fcb4bcc3a51e.jpg",
+      "synopsis": "Maomao does her best to navigate the complex social situations at the garden party, including meeting the other Upper First rank concubines. But once she settles down to do her work as a food-taster, she discovers a surprise in a bowl of soup.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355595"
+    },
+    {
+      "n": 7,
+      "title": "Homecoming",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355596/thumbnail/5326c454215bfe967893d50a3f4a2ba9.jpg",
+      "synopsis": "Gaoshun goes to Maomao to get her help in resolving the events of the garden party. Later, Xiaolan explains the purpose of the hairpins Maomao was gifted, and Maomao makes a deal with Lihaku in order to finally visit home.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355596"
+    },
+    {
+      "n": 8,
+      "title": "Wheat Stalks",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355597/thumbnail/aeb4fa306e7be92fe40baa900503f0f5.jpg",
+      "synopsis": "Maomao's peaceful morning at home is interrupted when she's called in to investigate an apparent double suicide at one of the local brothels.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355597"
+    },
+    {
+      "n": 9,
+      "title": "Suicide or Murder?",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355598/thumbnail/eb9be1db2c80b8ca59cb9a5a4ac4db50.jpg",
+      "synopsis": "An older acquaintance of Jinshi's dies while drinking at a party. A servant's body turns up in a moat. Both deaths are written off as self-inflicted, but Maomao's keen observations tell her that there's more to both stories.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355598"
+    },
+    {
+      "n": 10,
+      "title": "Honey",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355599/thumbnail/f30c8619910d317d087b8c7b4e2a0c16.jpg",
+      "synopsis": "A tea party hosted by Lady Gyokuyou puts the politics of the rear palace at the forefront, and Maomao learns something new about Lady Lishu. His true intentions unclear, Jinshi sends Maomao to work for Lady Ah-Duo.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355599"
+    },
+    {
+      "n": 11,
+      "title": "Reducing Two to One",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355600/thumbnail/01c39c3b211fb5fea573c54cc22e7b7b.jpg",
+      "synopsis": "Maomao confronts Fengming about the dark secret she's been hiding from her noble Lady Ah-Duo.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355600"
+    },
+    {
+      "n": 12,
+      "title": "The Eunuch and the Courtesan",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355601/thumbnail/1ef0ac6cd4de8dc63e6dabb644768b93.jpg",
+      "synopsis": "Discovering that Maomao's kidnappers were connected to Fengming's family, Jinshi is faced with a choice between keeping Maomao in the rear palace where he can be near her or releasing her from her service.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355601"
+    },
+    {
+      "n": 13,
+      "title": "Serving in the Outer Court",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355602/thumbnail/4ac07431dd7370fd77ab190c5f88816c.jpg",
+      "synopsis": "To Maomao's surprise, Jinshi brings her directly to his house instead of taking her back to the rear palace and tells her she's to work in the outer court. Not only is there much to learn, it seems there are many eyes on her as the new hire.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "355602"
+    },
+    {
+      "n": 14,
+      "title": "The New Pure Consort",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355603/thumbnail/375bfa42b2a43f9efb69ed1a856a5a7b.jpg",
+      "synopsis": "Ah-Duo's replacement has arrived in the rear palace, and Maomao is assigned to give a certain lecture to all four high concubines. Later, Maomao helps Lihaku investigate a warehouse explosion.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355603"
+    },
+    {
+      "n": 15,
+      "title": "Raw Fish",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355604/thumbnail/e9aa8bc503f6379d3cdfffb5ec20c93e.jpg",
+      "synopsis": "Gaoshun requests Maomao's help in solving an apparent poisoning case. Meanwhile, Jinshi deals with an unwelcome visitor who's taken to lingering in his office.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355604"
+    },
+    {
+      "n": 16,
+      "title": "Lead",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355605/thumbnail/89258df5acbe7e79d6d0a6c856f0a9f0.jpg",
+      "synopsis": "A shack, a chest of drawers, and a fishbowl are all that a talented metalworker leaves to his three sons upon his death. Maomao is assigned to investigate how these strange inheritances all fit together.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355605"
+    },
+    {
+      "n": 17,
+      "title": "A Jaunt Around Town",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355606/thumbnail/adfcbb40e2cb0e316cfdad39436e431f.jpg",
+      "synopsis": "Covering up Jinshi's otherworldly beauty is no easy task, but after Maomao takes the challenge head-on, she's surprised when she's also asked to don the disguise of a noblewoman and escort \"Jinka\" outside the palace.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355606"
+    },
+    {
+      "n": 18,
+      "title": "Lakan",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355607/thumbnail/52159c17d92396047977f0e881ba088c.jpg",
+      "synopsis": "Back at home, Maomao visits an annex building at the Verdigris House that hides one of the brothel's secrets. Lakan continues to antagonize Jinshi as his connection to Maomao becomes clear.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355607"
+    },
+    {
+      "n": 19,
+      "title": "Chance or Something More",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355608/thumbnail/dbd72858e8434073b7fe234e416c2eaa.jpg",
+      "synopsis": "",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355608"
+    },
+    {
+      "n": 20,
+      "title": "Thornapple",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355609/thumbnail/b77bca962c6450afa5052c835d6eb1b0.jpg",
+      "synopsis": "Maomao was able to stop the assassination attempt but was heavily injured in the process. However, the injuries aren't enough to stop her curiosity, driving her to confront the culprit behind the incident.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355609"
+    },
+    {
+      "n": 21,
+      "title": "How to Buy Out A Contract",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355610/thumbnail/fb737b04f71577d9bf0543d866f0f307.jpg",
+      "synopsis": "Back to work at the rear palace, Maomao listens to Guen talk about his family's business. Meanwhile, Lihaku hears a rumor that that whips him into action.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355610"
+    },
+    {
+      "n": 22,
+      "title": "Blue Roses",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355611/thumbnail/31b0e2a69b6c7001c5ac61c6229548ab.jpg",
+      "synopsis": "Lakan challenges Jinshi to produce blue roses to present at the upcoming garden party, forcing Jinshi to turn once again to Maomao for her help.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "355611"
+    },
+    {
+      "n": 23,
+      "title": "Balsam and Woodsorrel",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355612/thumbnail/400f24558836f51c93a9021aef1cc244.jpg",
+      "synopsis": "No longer willing to keep running away from Lakan, Maomao decides to face off against him. She challenges him on his own turf, in a chess match.\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "355612"
+    },
+    {
+      "n": 24,
+      "title": "Jinshi and Maomao",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/355613/thumbnail/34c98340665cd3ecaf0b2e5385e561f0.jpg",
+      "synopsis": "Lakan must now choose a courtesan to buy out. As a high-ranking military official, he can afford to freely choose, even from one of the Three Princesses. Who will he choose? Who does Maomao really want him to choose?\n\n(Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "355613"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,78 @@
+{
+  "id": "wanmei-shijie-movie-huo-zhi-huijin",
+  "title": "Wanmei Shijie Movie: Huo Zhi Huijin",
+  "native": "完美世界剧场版 火之灰烬",
+  "year": 2024,
+  "rating": 6.7,
+  "season": "2024",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx182563-p2dSeX3ai5fQ.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx182563-p2dSeX3ai5fQ.png",
+  "accent": "#f19335",
+  "synopsis": "Stream Wanmei Shijie Movie: Huo Zhi Huijin online with English sub and dub in high definition on AniHubStream.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "wanmei-shijie-movie:-huo-zhi-huijin-6yr877",
+    "mal": 58797,
+    "anilist": 182563,
+    "kitsu": 49222
+  },
+  "skip_key_id": 58797,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "wanmei shijie movie huo zhi huijin 完美世界剧场版 火之灰烬 ona finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "36:00",
+      "runtime_seconds": 2160,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373241"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "36:00",
+      "runtime_seconds": 2160,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373242"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "36:00",
+      "runtime_seconds": 2160,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373243"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

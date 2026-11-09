@@ -1,0 +1,294 @@
+{
+  "id": "worldend-what-are-you-doing-at-the-end-of-the-world-are-you",
+  "title": "WorldEnd: What are you doing at the end of the world? Are you busy? Will you save us?",
+  "native": "終末なにしてますか? 忙しいですか? 救ってもらっていいですか?",
+  "year": 2017,
+  "rating": 7.5,
+  "season": "Spring 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21860-lSIbYJtEbAXu.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21860-lSIbYJtEbAXu.jpg",
+  "accent": "#f1ae5d",
+  "synopsis": "Five hundred years have passed since the humans went extinct at the hands of the fearsome and mysterious ‘Beasts’. The surviving races now make their homes up on floating islands in the sky, out of reach of all but the most mobile of Beasts.\n\nOnly a small group of young girls, the Leprechauns, can wield the ancient weapons needed to fend off invasions from these creatures. Into the girls’ unstable and fleeting lives, where a call to certain death could come at any moment, enters an unlikely character: a young man who lost everything in his final battle five hundred years ago, the last living human awakened from a long, icy slumber.\n\nUnable to fight any longer, Willem becomes the father that the girls never had, caring for and nurturing them even as he struggles to come to terms with his new life, in which he feels the pain of helplessly waiting for his loved ones to return home from battle that his ‘Daughter’ once felt for him so long ago. Together, Willem and the girls gradually come to understand what family means and what is truly worth protecting.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 12769,
+    "anilist": 21860,
+    "mal": 33502
+  },
+  "skip_key_id": 33502,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 11:05:15",
+  "search_text": "worldend what are you doing at the end of the world are you busy will you save us 終末なにしてますか 忙しいて すか 救ってもらっていいて すか tv finished",
+  "genres": [
+    "drama",
+    "fantasy",
+    "mystery",
+    "romance",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "In This World With Tilted Sun - Broken Chronograph",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199627/original.jpg",
+      "synopsis": "Willem Kmetsch lives life as an outcast, like a dead man walking, until he happens to land a job as the caretaker of some rather \"special\" weapons. (Source: Crunchyroll)",
+      "airdate": "2017-04-11",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1239,
+          "end": 1330
+        }
+      ],
+      "external_id": "199627"
+    },
+    {
+      "n": 2,
+      "title": "Inside a Forest in the Sky - Late Autumn Night's Dream",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Chtholly's bombshell leaves Willem shaken, as he struggles to come to terms with the nature of the \"special weapons.\" (Source: Crunchyroll)",
+      "airdate": "2017-04-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 59,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1357,
+          "end": 1440
+        }
+      ],
+      "external_id": "199628"
+    },
+    {
+      "n": 3,
+      "title": "When This Battle Have Ended - Starry Road to Tomorrow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199629/original.jpg",
+      "synopsis": "Having learned about Chtholly's impending fate, Willem tries to come up with an alternate plan, much to her chagrin. (Source: Crunchyroll)",
+      "airdate": "2017-04-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 17,
+          "end": 108
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1357,
+          "end": 1440
+        }
+      ],
+      "external_id": "199629"
+    },
+    {
+      "n": 4,
+      "title": "Person Who Have Not Come Back and Persons Who Have Waited - Dice in Pot",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199630/original.jpg",
+      "synopsis": "Having sent his charges into battle, Willem finds the distraction he so badly needs in the form of a visit to cultural hotpot Corna di Luce. (Source: Crunchyroll)",
+      "airdate": "2017-05-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 94,
+          "end": 187
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "199630"
+    },
+    {
+      "n": 5,
+      "title": "Everyone, in the Name of Justice - From Dawn Till Dusk",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Phyracorlybia details her request to Limeskin, who refuses and asks Willem for a favor of his own. (Source: Crunchyroll)",
+      "airdate": "2017-05-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1357,
+          "end": 1440
+        }
+      ],
+      "external_id": "199631"
+    },
+    {
+      "n": 6,
+      "title": "Unerasable Past, Disappearing Future - No News Was Good News",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199632/original.jpg",
+      "synopsis": "Willem learns a lot from Souwong and makes a stand. Meanwhile, Chtholly continues to hear the voices in her head... (Source: Crunchyroll)",
+      "airdate": "2017-05-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 19,
+          "end": 109
+        }
+      ],
+      "external_id": "199632"
+    },
+    {
+      "n": 7,
+      "title": "I'm Home - Home, Sweet Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199633/original.jpg",
+      "synopsis": "The warehouse has to deal with the ramifications of Chtholly's condition. At the same time, things begin to unravel on the surface. (Source: Crunchyroll)",
+      "airdate": "2017-05-23",
+      "markers": [],
+      "external_id": "199633"
+    },
+    {
+      "n": 8,
+      "title": "Even If Eventually That Sun Will Fall - Slight Light, Slight Hope",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199634/original.jpg",
+      "synopsis": "As the situation on the surface continues to simmer, Chtholly struggles to come to terms with her new life. (Source: Crunchyroll)",
+      "airdate": "2017-05-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 34,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1358,
+          "end": 1440
+        }
+      ],
+      "external_id": "199634"
+    },
+    {
+      "n": 9,
+      "title": "No Matter If Future Is Nowhere to Be Seen - Moonlit Sorcery",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199635/original.jpg",
+      "synopsis": "Things continue to get worse for Chtholly, who bravely decides to live in the moment. Meanwhile, the rescue operation to the surface finally begins. (Source: Crunchyroll)",
+      "airdate": "2017-06-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1300,
+          "end": 1391
+        }
+      ],
+      "external_id": "199635"
+    },
+    {
+      "n": 10,
+      "title": "Brightness at This Moment - My Happiness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199636/original.jpg",
+      "synopsis": "Chtholly helps out around the base as his secretary and gains the adulation of everyone there. Willem, on the other hand, starts having doubts about some unanswered questions after meeting Nopht and Rhantolk. (Source: Crunchyroll)",
+      "airdate": "2017-06-13",
+      "markers": [],
+      "external_id": "199636"
+    },
+    {
+      "n": 11,
+      "title": "Please, Do Not Forget - Evidence of Existance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199637/original.jpg",
+      "synopsis": "The situation on the surface heats up as a massive cave is found beneath Gomag City, and lying there is something very unexpected. (Source: Crunchyroll)",
+      "airdate": "2017-06-20",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1356,
+          "end": 1440
+        }
+      ],
+      "external_id": "199637"
+    },
+    {
+      "n": 12,
+      "title": "The Happiest Girl in the World - Chtholly",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199638/original.jpg",
+      "synopsis": "A desperate battle unfolds upon the Saxifraga as it tries to escape the attack of timere. Chtholly, clinging to the last pieces of emotions she still possesses, decides to fight. (Source: Crunchyroll)",
+      "airdate": "2017-06-27",
+      "markers": [],
+      "external_id": "199638"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "DEAREST DROP",
+      "artist": "Azusa Tadokoro",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "From (フロム)",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "CINEMA (キネマ)",
+      "artist": "TRUE",
+      "episodes": "6"
+    }
+  ],
+  "relations": []
+}

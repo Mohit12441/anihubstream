@@ -1,0 +1,91 @@
+{
+  "id": "the-seven-deadly-sins-signs-of-holy-war",
+  "title": "The Seven Deadly Sins: Signs of A Holy War",
+  "native": "七つの大罪 聖戦の予兆",
+  "year": 2016,
+  "rating": 6.7,
+  "season": "Summer 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21385-0rOBu6r4C4b9.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21385-0rOBu6r4C4b9.jpg",
+  "accent": "#e4c950",
+  "synopsis": "Four-part original story by mangaka Nakaba Suzuki. Having taken the kingdom of Leones back from Holy Knights, the Seven Deadly Sins, along with Elizabeth and Hawk, can finally enjoy peaceful lives they earned. However, with premonitions of a new threat looming, their happy, ordinary days are about to end.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "the-seven-deadly-sins:-signs-of-holy-war-crdtnc",
+    "mal": 31722,
+    "anilist": 21385,
+    "kitsu": 11414
+  },
+  "skip_key_id": 31722,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": null,
+  "search_text": "the seven deadly sins signs of a holy war 七つの大罪 聖戦の予兆 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Dark Dream Begins",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "With the capital retaken and the Liones Kingdom slowly getting back on its feet, Meliodas, Elizabeth and Hawk turn their attention to the Boar Hat.",
+      "airdate": "2016-08-28",
+      "markers": [],
+      "external_id": "185002"
+    },
+    {
+      "n": 2,
+      "title": "Our Fighting Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Ban and Meliodas meet to continue the duel they left unfinished before, only to find that Hawk has told everyone about their solemn battle.",
+      "airdate": "2016-09-04",
+      "markers": [],
+      "external_id": "185003"
+    },
+    {
+      "n": 3,
+      "title": "In Pursuit of First Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "King is overjoyed to spend the day of the festival with Diane, but he's struggling to figure out how to take the next step.",
+      "airdate": "2016-09-11",
+      "markers": [],
+      "external_id": "185004"
+    },
+    {
+      "n": 4,
+      "title": "The Shape of Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Business at the Boar Hat is dropping, so Meliodas asks Merlin to join the staff as a waitress alongside Elizabeth and Diane to attract customers.",
+      "airdate": "2016-09-18",
+      "markers": [],
+      "external_id": "185005"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

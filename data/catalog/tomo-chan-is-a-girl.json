@@ -1,0 +1,354 @@
+{
+  "id": "tomo-chan-is-a-girl",
+  "title": "Tomo-chan Is a Girl!",
+  "native": "トモちゃんは女の子！",
+  "year": 2023,
+  "rating": 7.6,
+  "season": "Winter 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151806-IAMi2ctI5xJI.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151806-IAMi2ctI5xJI.jpg",
+  "accent": "#f1c95d",
+  "synopsis": "Tomboy Tomo couldn’t have picked a more awkward high school crush ’cause it’s on her childhood friend, Junichiro, but he only sees her as one of the guys. Despite her pretty looks and signals, nothing gets through to this meathead! Will Junichiro ever realize Tomo’s into him and see her for the cutesy girl she actually is?!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46232,
+    "anilist": 151806,
+    "mal": 52305
+  },
+  "skip_key_id": 52305,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 08:15:04",
+  "search_text": "tomo chan is a girl トモちゃんは女の子 tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I Want to Be Seen as a Girl!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337833/thumbnail/medium-8b276887ec3d271711e7dbc3b4867a9c.jpeg",
+      "synopsis": "",
+      "airdate": "2023-01-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 59,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "337833"
+    },
+    {
+      "n": 2,
+      "title": "Tomo's Skirt / The School Idol",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337834/thumbnail/medium-4df738ee4a33effae03790a2d010cb7b.jpeg",
+      "synopsis": "",
+      "airdate": "2023-01-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "337834"
+    },
+    {
+      "n": 3,
+      "title": "Best Bud's Secret / Let's Go on a Date!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337835/thumbnail/medium-ba8ca35c229e4734cc8c922b2c3c398e.jpeg",
+      "synopsis": "",
+      "airdate": "2023-01-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 112
+        }
+      ],
+      "external_id": "337835"
+    },
+    {
+      "n": 4,
+      "title": "The Reason for Her Smile / I Want to Be Playful Like a Girl / Heroes Fall a Lot",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337836/thumbnail/medium-1660efa7788fc02a5345d9ec85509ae3.jpeg",
+      "synopsis": "",
+      "airdate": "2023-01-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "337836"
+    },
+    {
+      "n": 5,
+      "title": "The Girls of the Olston Family / A Feeling I Won't Give Up / Heart-Pounding! A Gaming Overnighter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337837/thumbnail/medium-7faee1b85a1888ee5b0868bf72e1632b.jpeg",
+      "synopsis": "",
+      "airdate": "2023-02-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 18,
+          "end": 108
+        }
+      ],
+      "external_id": "337837"
+    },
+    {
+      "n": 6,
+      "title": "Birthday Present / Burn Up! The Ball Sports Tournament",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337838/thumbnail/medium-418f22913c35bcfabdc065388e394ccd.jpeg",
+      "synopsis": "",
+      "airdate": "2023-02-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1419
+        }
+      ],
+      "external_id": "337838"
+    },
+    {
+      "n": 7,
+      "title": "Junichiro's Promise / When Tomo Puts On a Swimsuit...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337839/thumbnail/medium-e2a3013b6422c1f90b0e4f02ef42a58b.jpeg",
+      "synopsis": "",
+      "airdate": "2023-02-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1420
+        }
+      ],
+      "external_id": "337839"
+    },
+    {
+      "n": 8,
+      "title": "The Night of the Summer Festival / The Distance Between Them",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337840/thumbnail/medium-a0aaf22255b799278ef127bef0dce891.jpeg",
+      "synopsis": "",
+      "airdate": "2023-02-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 46,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1420
+        }
+      ],
+      "external_id": "337840"
+    },
+    {
+      "n": 9,
+      "title": "The Angel's True Face",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337841/thumbnail/medium-5ec5cc251435a0ff1698ffb4919e3744.jpeg",
+      "synopsis": "",
+      "airdate": "2023-03-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 60,
+          "end": 153
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "337841"
+    },
+    {
+      "n": 10,
+      "title": "How the Contest Ends / To Stay Best Friends...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337842/thumbnail/medium-f5e1e09e2ecf31be7e1a7c32bfb221e5.jpeg",
+      "synopsis": "",
+      "airdate": "2023-03-08",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "337842"
+    },
+    {
+      "n": 11,
+      "title": "My First Part-Time Job / The Abandoned Cinderella",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337843/thumbnail/medium-403804171abc8bee496878bf5e5558af.jpeg",
+      "synopsis": "",
+      "airdate": "2023-03-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 62,
+          "end": 156
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1420
+        }
+      ],
+      "external_id": "337843"
+    },
+    {
+      "n": 12,
+      "title": "Goodbye, Best Friend",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337844/thumbnail/medium-13e630f80f08983766993da7886973d8.jpeg",
+      "synopsis": "",
+      "airdate": "2023-03-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "337844"
+    },
+    {
+      "n": 13,
+      "title": "To Stay by Your Side...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/337845/thumbnail/medium-f196d396ce62b0227d41b0c41abbe51c.jpeg",
+      "synopsis": "",
+      "airdate": "2023-03-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 168
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1390
+        }
+      ],
+      "external_id": "337845"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kurae! Telepathy",
+      "artist": "Maharajan",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "yurukuru＊love",
+      "artist": "Rie Takahashi, Rina Hidaka, and Sally Amaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Jiribaki_love",
+      "artist": "Jun'ichirō Kubota [Kaito Ishikawa], Kōsuke Misaki [Kōhei Amasaki], Tatsumi Tanabe [Yoshitsugu Matsuoka]",
+      "episodes": "10"
+    }
+  ],
+  "relations": []
+}

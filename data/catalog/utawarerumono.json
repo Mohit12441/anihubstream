@@ -1,0 +1,410 @@
+{
+  "id": "utawarerumono",
+  "title": "Utawarerumono",
+  "native": "Utawarerumono",
+  "year": 2006,
+  "rating": 7.6,
+  "season": "Year 2006",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/69596f9a7c08f1fe102cf6af-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/69596f9a7c08f1fe102cf6af-landscape.webp",
+  "accent": "#3b82ff",
+  "synopsis": "An injured man is found in the woods by a girl named Eruruu, and everything about him is mysterious. Without knowledge of his past nor even his own name, he is welcomed to Eruruu's home and is given the name Hakuoro by her grandmother, and younger sister, Aruruu. While the inhabitants of the village have large ears and tails, Hakuoro's defining physical trait is quite different as he has neither ears nor tail, but only a mask that he cannot remove.\n\nSoon after he becomes a part of the villagers' lives, a revolution against the tyrannical emperor of the land begins, and the conflict finds its way to his new home. Hakuoro must do whatever he can to save the people and the village that he has come to love, all while uncovering the mysteries that shroud his past.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "utawarerumono-9mabfw",
+    "mal": 856,
+    "anilist": 856,
+    "kitsu": 758
+  },
+  "skip_key_id": 856,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "utawarerumono utawarerumono",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Uninvited",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13634/original.jpg",
+      "synopsis": "A strange man is found by a girl and her family and nursed back to health. He appears to have lost all of his memories, and can't seem to remove a mask of bone affixed to his forehead.",
+      "airdate": "2006-04-03",
+      "markers": [],
+      "external_id": "13634"
+    },
+    {
+      "n": 2,
+      "title": "Ruler of the Wild Forest",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13635/original.jpg",
+      "synopsis": "The Queen of the forest, Mutikapa, is angered and begins killing some of the townspeople. Hakuoro works with the others to figure out a way to defeat it.",
+      "airdate": "2006-04-10",
+      "markers": [],
+      "external_id": "13635"
+    },
+    {
+      "n": 3,
+      "title": "Violet & Amber",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13636/original.jpg",
+      "synopsis": "Tusukuru is thought to be missing from the village though is later found offering aid to a young girl with a strange affliction.",
+      "airdate": "2006-04-17",
+      "markers": [],
+      "external_id": "13636"
+    },
+    {
+      "n": 4,
+      "title": "One-Way Path",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13637/original.jpg",
+      "synopsis": "Tusukuru is inadvertently killed and members from the village go on a mission to kill the feudal lord responsible.",
+      "airdate": "2006-04-24",
+      "markers": [],
+      "external_id": "13637"
+    },
+    {
+      "n": 5,
+      "title": "Daughter of the Forest",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13638/original.jpg",
+      "synopsis": "Hakuoro takes over command of the station which he captures, beginning to strategically lead a large-scale rebellion. When rallying troops to rise up against the oppressive government, however, he runs into Benawi, the empire's Samurai leader.",
+      "airdate": "2006-05-01",
+      "markers": [],
+      "external_id": "13638"
+    },
+    {
+      "n": 6,
+      "title": "Gathering Force",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13639/original.jpg",
+      "synopsis": "Hakuoro gains more men at his command and once again has a battle involving Benawi and the men he commands.",
+      "airdate": "2006-05-08",
+      "markers": [],
+      "external_id": "13639"
+    },
+    {
+      "n": 7,
+      "title": "Invasion of the Imperial City",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13640/original.jpg",
+      "synopsis": "Finally, Hakuoro's small army reaches the castle of Emperor Inkara, to find, when they arrive, that he had already died by Benawi's blade. After this, Benawi and Kurou join Hakuoro.",
+      "airdate": "2006-05-15",
+      "markers": [],
+      "external_id": "13640"
+    },
+    {
+      "n": 8,
+      "title": "The Mediator",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13641/original.jpg",
+      "synopsis": "Several Onkami come to Hakuoro's castle as arbitators and to gather more information on his new country Tusukuru.",
+      "airdate": "2006-05-22",
+      "markers": [],
+      "external_id": "13641"
+    },
+    {
+      "n": 9,
+      "title": "Taboo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13642/original.jpg",
+      "synopsis": "As the large country of Shikeripetim threatens invasion, Hakouro devises a cunning plan to hold off Shikeripetim's emperor, Niwe, and his far superior military force.",
+      "airdate": "2006-05-29",
+      "markers": [],
+      "external_id": "13642"
+    },
+    {
+      "n": 10,
+      "title": "The Mercenary",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13643/original.jpg",
+      "synopsis": "A powerful mercenary is brought to the castle and held captive until she is able to show her worth as a fighter and joins Hakuoro's army.",
+      "airdate": "2006-06-05",
+      "markers": [],
+      "external_id": "13643"
+    },
+    {
+      "n": 11,
+      "title": "Everlasting Promise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13644/original.jpg",
+      "synopsis": "Kuccha Keccha attacks Erurū's former village and massacres the inhabitants. In response to continued attacks, Tusukuru is forced to declare war with them.",
+      "airdate": "2006-06-12",
+      "markers": [],
+      "external_id": "13644"
+    },
+    {
+      "n": 12,
+      "title": "Unrest",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13645/original.jpg",
+      "synopsis": "Kuccha Keecha turns out to be a more formidable opponent than originally anticipated, more so now that they have the support of the Evinkuruga Touka. Hakuoro tries to find another way to attain victory.",
+      "airdate": "2006-06-19",
+      "markers": [],
+      "external_id": "13645"
+    },
+    {
+      "n": 13,
+      "title": "A Bloody Battle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13646/original.jpg",
+      "synopsis": "Hakuoro's plan to defeat the Kuccha Keccha succeeds and he confronts Emperor Orikakan; the result of their encounter however, is quite unexpected.",
+      "airdate": "2006-06-26",
+      "markers": [],
+      "external_id": "13646"
+    },
+    {
+      "n": 14,
+      "title": "The Ravages of War",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13647/original.jpg",
+      "synopsis": "More helpless villages in Tusukuru are attacked by Niwe, the emperor of Shikeripetim, as he advances through the countryside. Hakuoro hatches a desperate plan in order to defend his nation.",
+      "airdate": "2006-07-02",
+      "markers": [],
+      "external_id": "13647"
+    },
+    {
+      "n": 15,
+      "title": "End of the Banquet",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13648/original.jpg",
+      "synopsis": "A final decisive battle between Hakuoro and Niwe begins in Shikeripetim's capital.",
+      "airdate": "2006-07-09",
+      "markers": [],
+      "external_id": "13648"
+    },
+    {
+      "n": 16,
+      "title": "At the End of the Battle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13649/original.jpg",
+      "synopsis": "Hakuoro is still haunted by what Niwe said to him and has nightmares about it. Later a duel between Benawi and Oboro takes places to see how strong each is. Near the end of the episode, Hakuoro is introduced to another emperor named Kuuya.",
+      "airdate": "2006-07-16",
+      "markers": [],
+      "external_id": "13649"
+    },
+    {
+      "n": 17,
+      "title": "The Young Sovereign",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13650/original.jpg",
+      "synopsis": "Kuuya and Hakuoro have a long talk alone about the world they live in and the state of affairs. Later, Oboro is suffering from a hangover and must take Erurū revolting medicine in order for it to pass quicker. Also, the trader from before comes back to sell them a Mikyūm which is a rare and extremely valuable animal. Finally, Hakuoro has yet another private discussion with Kuuya where he discovers that the masked emperor is in fact a young girl.",
+      "airdate": "2006-07-23",
+      "markers": [],
+      "external_id": "13650"
+    },
+    {
+      "n": 18,
+      "title": "The Rebel Army",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13651/original.jpg",
+      "synopsis": "Karura's younger brother Derihouri is leading a revolt in a neighboring country though his small army is no match for the force he is trying to oppose. It will take the aid of Hakuoro, Karura and the several others to overcome the emperor.",
+      "airdate": "2006-07-31",
+      "markers": [],
+      "external_id": "13651"
+    },
+    {
+      "n": 19,
+      "title": "Farewells",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13652/original.jpg",
+      "synopsis": "Derihouri, with the aide of Hakuoro and his party and a secret from Karura's past, infiltrate the capital of Nan-tunk, only to discover that the Kenam rebellion was formed with ulterior motives.",
+      "airdate": "2006-08-07",
+      "markers": [],
+      "external_id": "13652"
+    },
+    {
+      "n": 20,
+      "title": "First Battle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13653/original.jpg",
+      "synopsis": "Kuuya talks again with Hakuoro. Later she reveals her plans of war with the other countries. Thus Hakuoro is left with the decision to help her or not. Hakuoro tries to dissuade her, but to no avail.",
+      "airdate": "2006-08-14",
+      "markers": [],
+      "external_id": "13653"
+    },
+    {
+      "n": 21,
+      "title": "The Great Seal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13654/original.jpg",
+      "synopsis": "Kuuya, convinced by her bloodthirsty advisers, starts a war against every nation in order to unite the whole continent. Soon the war reaches Hakuoro's empire. The avu-kamuu of Kuuya seem unstoppable, and Hakuoro decides to evacuate the capital.",
+      "airdate": "2006-08-21",
+      "markers": [],
+      "external_id": "13654"
+    },
+    {
+      "n": 22,
+      "title": "Odious Pact",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13655/original.jpg",
+      "synopsis": "As the forces of Emperor Kuuya descend upon Tusukuru's capital, Hakuoro realizes that the evacuation is going to take longer than they have, and so decides to sacrifice himself to draw their attention away. However, Aruruu isn't prepared to let this happen, and shows up riding Mukkuru. The immortal Mutikapa is able to attack the Avu-Kamuu without being hurt, but Aruruu is hit with a single blow and died. However, the pool of blood growing behind Aruruu begins to bring back Hakuoro's memories, and new questions start arising in his mind: What is he? What unknown powers does he harbor?",
+      "airdate": "2006-08-28",
+      "markers": [],
+      "external_id": "13655"
+    },
+    {
+      "n": 23,
+      "title": "Where the Heart Lies",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13656/original.jpg",
+      "synopsis": "The first heavy defeat in battle with Kuuya in the previous episode slows down the war. In the next, relatively calm, days Hakuoro remembers some of his past. Who really is the Iceman? Why does this \"Mikoto\" in his memories resemble Erurū so much? Genjimaru leaves Kunnekamun since he knows they are on a path to annihilation. He joins Hakuoro offering his guide for the armies. Genjimaru seems to be betraying Kuuya, but he acts this way since he wants to save her from the war. Understanding that, Hakuoro accepts his help. The first step is unite all the rebels left by Kunnekamun's passage. In order to do that, Hakuoro arranges a mission to rescue the Oruyankuru. The old man is saved, but then he declares that Urutorii is the new Oruyankuru and retires.",
+      "airdate": "2006-09-04",
+      "markers": [],
+      "external_id": "13656"
+    },
+    {
+      "n": 24,
+      "title": "On the Path of Destruction",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13657/original.jpg",
+      "synopsis": "With the help of the rebels and Genjimaru's military command the Tusukuru empire stops Kunnekamun and soon turns the tables of the war. Inside the castle of Kuuya the final battle ensues, but there are more factions at work than just Tusukuru and Kunnekamun...",
+      "airdate": "2006-09-11",
+      "markers": [],
+      "external_id": "13657"
+    },
+    {
+      "n": 25,
+      "title": "Traces of an Ancient Dream",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13658/original.jpg",
+      "synopsis": "The episode begins with the fate of Kuuya being revealed. Hakuoro rushes to Onkami Yamukai to rescue Kamyu, but all is not as it seems. Hakouro's true identity is confirmed and he remembers more of the Iceman's heartbreaking story.",
+      "airdate": "2006-09-18",
+      "markers": [],
+      "external_id": "13658"
+    },
+    {
+      "n": 26,
+      "title": "Him Whose Song is Sung",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/13659/original.jpg",
+      "synopsis": "After a climatic battle and the final pieces of Hakouro's past being revealed, Hakouro makes a very difficult decision that will forever have an impact on the future.",
+      "airdate": "2006-09-25",
+      "markers": [],
+      "external_id": "13659"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "人なんだ",
+      "artist": "Suara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "百日草",
+      "artist": "Suara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Fuantei na Kamisama (不安定な神様; Insecure God)",
+      "artist": "Suara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yumekaotsutsuka (ユメウツツカ; Feeling as if in a Dream)",
+      "artist": "Suara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "adamant faith",
+      "artist": "Suara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yume no Tsuzuki (夢のつづき)",
+      "artist": "Rena Uehara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Musouka (夢想歌)",
+      "artist": "Suara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Madoromi no Rinne (まどろみの輪廻)",
+      "artist": "Eri Kawai",
+      "episodes": "1-25"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Ten Kakeru Hoshi (天かける星; Star Hanging in the Heavens)",
+      "artist": "Suara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hoshi Kudaru Sora Aogimite (星降る空仰ぎ見て; Looking Up at a Sky Full of Stars)",
+      "artist": "Suara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kimi ga Tame (キミガタメ)",
+      "artist": "Suara",
+      "episodes": "26"
+    }
+  ],
+  "relations": []
+}

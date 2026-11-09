@@ -1,0 +1,326 @@
+{
+  "id": "the-devil-is-a-part-timer-season-2-part-2",
+  "title": "The Devil is a Part-Timer! Season 2 Part 2",
+  "native": "はたらく魔王さま！！2nd Season",
+  "year": 2023,
+  "rating": 6.6,
+  "season": "Summer 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx155168-x7TUG4F0HnQy.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx155168-x7TUG4F0HnQy.jpg",
+  "accent": "#28aee4",
+  "synopsis": "Lucifer and company face new challenges, form new alliances and...now there's a baby! Your favorite otherwordly crew returns in this continuation.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "The Devil is a Part-Timer! Season 2 (2022)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46550,
+    "anilist": 155168,
+    "mal": 53200,
+    "hianime": "the-devil-is-a-part-timer!-season-2-part-2-bb50td"
+  },
+  "skip_key_id": 53200,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-15 18:06:07",
+  "search_text": "the devil is a part timer season 2 part 2 はたらく魔王さま 2nd season tv finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "fantasy",
+    "isekai",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Devil Arrives in Sasazuka",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/5125718be9fc2c76b4618236da8593ba1644480679_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1330,
+          "end": 1420
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "334831"
+    },
+    {
+      "n": 2,
+      "title": "The Hero Stays at the Devil's Castle for Work Reasons",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/124890101a0cc0ca3d122038cf0a37b41644480787_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 138
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1420
+        }
+      ],
+      "external_id": "334832"
+    },
+    {
+      "n": 3,
+      "title": "The Devil Goes on a Date with His Junior in Shinjuku",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6603248a29f33883ba527f7a636502d71644483491_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1397
+        }
+      ],
+      "external_id": "334833"
+    },
+    {
+      "n": 4,
+      "title": "The Hero Experiences Human Warmth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a34e9c1dbf6a0c2dd710d2340a6a8c881644481042_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 148,
+          "end": 235
+        }
+      ],
+      "external_id": "334834"
+    },
+    {
+      "n": 5,
+      "title": "The Devil and the Hero Save Sasazuka",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/56df41729cc16507723cd115c71425471644481170_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "334835"
+    },
+    {
+      "n": 6,
+      "title": "The Devil Climbs the Stairway to School",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/76642411ee91e44787cb421d124771171644481460_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 137
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1420
+        }
+      ],
+      "external_id": "334836"
+    },
+    {
+      "n": 7,
+      "title": "The Devil's Budget Is Saved by Neighborliness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8b09271daaf09167814401244ea8bd0c1644481445_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1271,
+          "end": 1360
+        }
+      ],
+      "external_id": "334837"
+    },
+    {
+      "n": 8,
+      "title": "The Hero Enters the Fray",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4d1af1beacdf4168f1a8ff5f279d309c1644481567_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 88
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1416
+        }
+      ],
+      "external_id": "334838"
+    },
+    {
+      "n": 9,
+      "title": "The Hero Experiences a Fray",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/9dfe8b491f9580dfbf6d0846758f93d71644481636_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1417
+        }
+      ],
+      "external_id": "334839"
+    },
+    {
+      "n": 10,
+      "title": "The Devil and the Hero Take a Break from the Daily Routine",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/363f0380aacd1241045dc677381925111644481810_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 141,
+          "end": 229
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1417
+        }
+      ],
+      "external_id": "334840"
+    },
+    {
+      "n": 11,
+      "title": "The Hero Stays True to Her Convictions",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c744317556914d740381b48b9c096ff11644481926_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 140,
+          "end": 228
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1417
+        }
+      ],
+      "external_id": "334841"
+    },
+    {
+      "n": 12,
+      "title": "The Devil Carries Out His Duties",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/72bbbece8e9fdf573e6117f751b27acd1644482065_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 107,
+          "end": 194
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1419
+        }
+      ],
+      "external_id": "334842"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

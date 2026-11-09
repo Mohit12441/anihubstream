@@ -1,0 +1,99 @@
+{
+  "id": "violet-evergarden-the-movie",
+  "title": "Violet Evergarden: the Movie",
+  "native": "劇場版 ヴァイオレット・エヴァーガーデン",
+  "year": 2020,
+  "rating": 8.7,
+  "season": "Summer 2020",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx103047-odblDHHEdehK.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx103047-odblDHHEdehK.jpg",
+  "accent": "#1a86d6",
+  "synopsis": "While writing other people’s emotions, she may have neglected her own. Violet Evergarden, the child soldier turned Auto Memory Doll, writes letters that evoke the words her clients can’t. But when a terminally ill boy requests her services for his family, her own feelings about love and loss resurface. Now she must confront her past and the death of the Major.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "violet-evergarden:-the-movie-rpgm5c",
+    "mal": 37987,
+    "anilist": 103047,
+    "kitsu": 41450
+  },
+  "skip_key_id": 37987,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "violet evergarden the movie 劇場版 ウ ァイオレット エウ ァーカ ーテ ン movie finished",
+  "genres": [
+    "drama",
+    "fantasy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Violet Evergarden: the Movie (Movie)",
+      "runtime": "140:00",
+      "runtime_seconds": 8400,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a9d1bac991bc5fbd32f524b-landscape.jpg",
+      "synopsis": "While writing other people’s emotions, she may have neglected her own. Violet Evergarden, the child soldier turned Auto Memory Doll, writes letters that evoke the words her clients can’t. But when a terminally ill boy requests her services for his family, her own feelings about love and loss resurface. Now she must confront her past and the death of the Major.\n\n\n\n(Source: Funimation)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "247575"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Amy",
+      "artist": "Minori Chihara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sincerely",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Michishirube",
+      "artist": "Minori Chihara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sincerely",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Michishirube (Guidepost)",
+      "artist": "Minori Chihara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Believe in...",
+      "artist": "Aira Yuki",
+      "episodes": "9"
+    }
+  ],
+  "relations": []
+}

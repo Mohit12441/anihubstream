@@ -1,0 +1,270 @@
+{
+  "id": "uq-holder",
+  "title": "UQ Holder!",
+  "native": "UQ Holder! ～魔法先生ネギま!2～",
+  "year": 2017,
+  "rating": 6.6,
+  "season": "Fall 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21855-4Dpxr8GQ4BKy.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21855-4Dpxr8GQ4BKy.jpg",
+  "accent": "#5078f1",
+  "synopsis": "In the decade since the world became aware of the existence of magic, the world has undergone massive upheaval. However, a boy named Touta lives in seclusion in a rural town far removed from these changes. His ordinary life is highlighted by his magic-using female teacher and his supportive friends. When his tranquil daily life is disrupted, he embarks on a unique adventure.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Negima!? Magister Negi Magi (2006)",
+    "Negima! (2005)",
+    "UQ Holder! OVA (2017)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 12273,
+    "anilist": 21855,
+    "mal": 33478
+  },
+  "skip_key_id": 33478,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-15 18:06:07",
+  "search_text": "uq holder uq holder 魔法先生ネキ ま 2 tv finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Beauty and the Boy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/243462/thumbnail/medium-8c993e281a40ac95cca182ed7ccdd063.jpeg",
+      "synopsis": "",
+      "airdate": "2017-10-03",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1419
+        }
+      ],
+      "external_id": "243462"
+    },
+    {
+      "n": 2,
+      "title": "You Can't Hate Someone You Meet Naked",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/243463/thumbnail/medium-7e6fe8c1398ea995fdc25ed16f150ba2.jpeg",
+      "synopsis": "",
+      "airdate": "2017-10-10",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1421
+        }
+      ],
+      "external_id": "243463"
+    },
+    {
+      "n": 3,
+      "title": "Palace of the Immortals",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/243464/thumbnail/medium-683353085f0f9965b474b615ee18f662.jpeg",
+      "synopsis": "",
+      "airdate": "2017-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "243464"
+    },
+    {
+      "n": 4,
+      "title": "Invasion of the Assassins",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/243465/thumbnail/medium-a12346732f488d95de422e29f33d19f3.jpeg",
+      "synopsis": "",
+      "airdate": "2017-10-24",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1422
+        }
+      ],
+      "external_id": "243465"
+    },
+    {
+      "n": 5,
+      "title": "Magia Erebea",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/243466/thumbnail/medium-d212ed4f90d175eb1484001a71453d67.jpeg",
+      "synopsis": "",
+      "airdate": "2017-10-31",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "243466"
+    },
+    {
+      "n": 6,
+      "title": "Kuromaru's Dark Days",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/243467/thumbnail/medium-afa9d0966f2043db5d5cd2b9feda2368.jpeg",
+      "synopsis": "",
+      "airdate": "2017-11-07",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1422
+        }
+      ],
+      "external_id": "243467"
+    },
+    {
+      "n": 7,
+      "title": "Reset and Restart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/243468/thumbnail/medium-f15f785570ca46cba8d64f89c55d070e.jpeg",
+      "synopsis": "",
+      "airdate": "2017-11-14",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1328,
+          "end": 1419
+        }
+      ],
+      "external_id": "243468"
+    },
+    {
+      "n": 8,
+      "title": "Operation: Capture Fate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/243469/thumbnail/medium-741d992405f55241dc07f2e2448eaf2c.jpeg",
+      "synopsis": "",
+      "airdate": "2017-11-21",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1424
+        }
+      ],
+      "external_id": "243469"
+    },
+    {
+      "n": 9,
+      "title": "Love, Baths, and Vigorous Exercise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/243470/thumbnail/medium-b344551d11323f9cb7a3ad2f1bf793cc.jpeg",
+      "synopsis": "",
+      "airdate": "2017-11-28",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1423
+        }
+      ],
+      "external_id": "243470"
+    },
+    {
+      "n": 10,
+      "title": "Welcome to Mahora Academy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/243471/thumbnail/medium-2904b97a3663861ef1f6f40f78da080f.jpeg",
+      "synopsis": "",
+      "airdate": "2017-12-05",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1419
+        }
+      ],
+      "external_id": "243471"
+    },
+    {
+      "n": 11,
+      "title": "Her Love Story",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/243472/thumbnail/medium-ca4829537e5caaeb5e6cd92c4bf80f69.jpeg",
+      "synopsis": "",
+      "airdate": "2017-12-12",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "243472"
+    },
+    {
+      "n": 12,
+      "title": "Adeat! Everlasting Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-19",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "243473"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

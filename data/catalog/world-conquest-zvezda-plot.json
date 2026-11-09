@@ -1,0 +1,178 @@
+{
+  "id": "world-conquest-zvezda-plot",
+  "title": "World Conquest Zvezda Plot",
+  "native": "世界征服～謀略のズヴィズダー～",
+  "year": 2014,
+  "rating": 6.8,
+  "season": "Winter 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20496-fTwlGOKd8OPb.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20496-fTwlGOKd8OPb.jpg",
+  "accent": "#3593ae",
+  "synopsis": "What does it take to conquer the world?! Every leader of the past has thought of it... but all they have done was to merely dream of its greatness. World domination... nobody has been able to achieve it. Until one little girl by the name of Kate Hoshimiya came along. Kate Hoshimiya will shock the world! How was she able to carry out such a magnificent stunt? So frightful! So glorious! Could this be... the Zvezda Plot?! Let the light of our great Zvezda shine upon this land far and wide!\n\n(Source: Aniplex USA)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Sekai Seifuku: Bouryaku no Zvezda - Shin Zvezda Daisakusen (2014)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8082,
+    "anilist": 20496,
+    "mal": 20973
+  },
+  "skip_key_id": 20973,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-22 08:56:14",
+  "search_text": "world conquest zvezda plot 世界征服 謀略のス ウ ィス タ ー tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Conquer All Humans",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163184/original.jpg",
+      "synopsis": "A young runaway named Asuta Jimon has a chance encounter with a young girl while wandering the streets at night. Little does he know this cute little girl, Hoshimiya Kate, is really the leader of Zvezda, an organization bent on world conquest. Taking her talk of world conquest as a simple flight of fancy Asuta walks with her and plays along to an extent. He soon realizes the import of her words when he is confronted with a swarm of dangers and strange happenings.",
+      "airdate": "2014-01-11",
+      "markers": [],
+      "external_id": "163184"
+    },
+    {
+      "n": 2,
+      "title": "From the Dining Table To the Grave",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163191/original.jpg",
+      "synopsis": "Asuta having wondered the streets all night sleeps through school. After the bell, he is greeted by Itsuka, a member of Zvezda, who was sent to bring him back to Zvezda's secret headquarters, coerced with the promise of food he follows her. Asuta is dismayed by the horrible quality of the food Itsuka herself prepared, as were the Zvezda members, most of which ran out on the meal. There is an introduction to another secret society in this episode, White Light. To make things worse, Zvezda's giant biological weapon is deployed prematurely, forcing the members of Zvezda to subdue it. That said and done with a fight breaks out about Itsuka's questionable cooking ability, after which it is resolved that Asuta should do the cooking and also teach Itsuka how to cook.",
+      "airdate": "2014-01-18",
+      "markers": [],
+      "external_id": "163191"
+    },
+    {
+      "n": 3,
+      "title": "Hiding Behind Smoke and Mirrors",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163201/original.jpg",
+      "synopsis": "After booting Yasu out of the hideout for smoking, the group go out for a meal, only to have their experience ruined by more smokers. Having had enough, Kate declares war on smokers, soon rallying the city's residents to drive them out of town. This ends up pushing the remaining smokers to their most desperate, resulting in a chaos that neither Zvezda nor White Light can vanquish.",
+      "airdate": "2014-01-25",
+      "markers": [],
+      "external_id": "163201"
+    },
+    {
+      "n": 4,
+      "title": "Udo's in the Cold Ground",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163209/original.jpg",
+      "synopsis": "When the Zvezda hideout's energy source, generated from the Udo that grows underneath the base, Kate, Asuta, Natasha, and Roboko go underground to investigate what is causing the Udo to die out.",
+      "airdate": "2014-02-01",
+      "markers": [],
+      "external_id": "163209"
+    },
+    {
+      "n": 5,
+      "title": "White Robin in Danger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163216/original.jpg",
+      "synopsis": "As Kate tasks the others with figuring out the secret identity of White Light's captain, White Robin, Asuta suspects that it may be his classmate, Renge Komadori.",
+      "airdate": "2014-02-08",
+      "markers": [],
+      "external_id": "163216"
+    },
+    {
+      "n": 6,
+      "title": "After School Treasure Club (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163229/original.jpg",
+      "synopsis": "Kate and Roboko enrol into Asuta's class and, together with Asuta and Renge, they investigate a mysterious After School Treasure Club and infiltrate it.",
+      "airdate": "2014-02-15",
+      "markers": [],
+      "external_id": "163229"
+    },
+    {
+      "n": 7,
+      "title": "After School Treasure Club (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163247/original.jpg",
+      "synopsis": "The Treasure Club turns out to be a trap laid out by White Light's White Egret, aka Miki Shirasagi, whilst Asuta and Kate come across a more incredible and dangerous treasure.",
+      "airdate": "2014-02-22",
+      "markers": [],
+      "external_id": "163247"
+    },
+    {
+      "n": 8,
+      "title": "The Falcon Has Landed",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163260/original.jpg",
+      "synopsis": "White Light's commander, White Falcon, aka Kaori Hayabusa, hatches a plan to trick Kate into bringing her into her hideout.",
+      "airdate": "2014-03-01",
+      "markers": [],
+      "external_id": "163260"
+    },
+    {
+      "n": 9,
+      "title": "Steamy Masquerade",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163279/original.jpg",
+      "synopsis": "Both Zvezda and White Light coincidentally have company vacations at a masked hot spring inn, where Asuta (as Dva) and Renge (as White Robin) get to know each other. Objecting to this, Miki launches her attack, during which Renge stands to protect Dva, learning of his identity as Asuta.",
+      "airdate": "2014-03-08",
+      "markers": [],
+      "external_id": "163279"
+    },
+    {
+      "n": 10,
+      "title": "Not All Quiet on the West Udogawa Front",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163287/original.jpg",
+      "synopsis": "West Udogawa is in a state of emergency as White Light declares war on Zvezda and destroys their base, having Kate and the others on the run.",
+      "airdate": "2014-03-15",
+      "markers": [],
+      "external_id": "163287"
+    },
+    {
+      "n": 11,
+      "title": "All That Remains of Conqueror's Dreams",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163300/original.jpg",
+      "synopsis": "With the city taken over by White Light and many of the Zvezda members captured, Asuta contemplates what he should do.",
+      "airdate": "2014-03-22",
+      "markers": [],
+      "external_id": "163300"
+    },
+    {
+      "n": 12,
+      "title": "May the Light of Zvezda Shine Throughout this World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163305/original.jpg",
+      "synopsis": "The members of Zvezda gather for the final battle against Asuta's father, the Governor of Tokyo, to make their very first step to world domination.",
+      "airdate": "2014-03-29",
+      "markers": [],
+      "external_id": "163305"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

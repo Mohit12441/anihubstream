@@ -1,0 +1,66 @@
+{
+  "id": "yama-no-susume-second-season-specials",
+  "title": "Yama no Susume: Second Season Specials",
+  "native": "ヤマノススメ セカンドシーズン",
+  "year": 2014,
+  "rating": 6.8,
+  "season": "Fall 2014",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21003-PzoNo7cztKPJ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21003-PzoNo7cztKPJ.jpg",
+  "accent": "#c9e4f1",
+  "synopsis": "Unaired episodes included in the BD/DVD releases of Volume 2 and Volume 7.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "yama-no-susume:-second-season-specials-brfyu1",
+    "mal": 27887,
+    "anilist": 21003,
+    "kitsu": 9783
+  },
+  "skip_key_id": 27887,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "yama no susume second season specials ヤマノススメ セカント シース ン special finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Encouragement of Bra?",
+      "runtime": "15:00",
+      "runtime_seconds": 900,
+      "thumb": "",
+      "synopsis": "Episode 6.5",
+      "airdate": "2014-10-24",
+      "markers": [],
+      "external_id": "156904"
+    },
+    {
+      "n": 2,
+      "title": "Encouragement of Climb Best Ten!",
+      "runtime": "15:00",
+      "runtime_seconds": 900,
+      "thumb": "",
+      "synopsis": "Episode 25",
+      "airdate": "2015-03-27",
+      "markers": [],
+      "external_id": "189027"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

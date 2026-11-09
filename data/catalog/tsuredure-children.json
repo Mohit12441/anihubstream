@@ -1,0 +1,193 @@
+{
+  "id": "tsuredure-children",
+  "title": "Tsuredure Children",
+  "native": "徒然チルドレン",
+  "year": 2017,
+  "rating": 7.4,
+  "season": "Summer 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98291-LY6txxZTX8We.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98291-LY6txxZTX8We.jpg",
+  "accent": "#ffc247",
+  "synopsis": "To those of you out there who never could say \"I love you\"— This story is about ordinary highschoolers and how love makes them fired up, shaken, laugh, cry, and hurt. Whether things go well or not, this story of adolescence and romance will show you how they spend their precious youth. Every character is the main character here, and you're sure to find one you can sympathize with.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13258,
+    "anilist": 98291,
+    "mal": 34902,
+    "hianime": "tsuredure-children-gpo3lf"
+  },
+  "skip_key_id": 34902,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 06:39:36",
+  "search_text": "tsuredure children 徒然チルト レン tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Confession",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/fd46670a5165a5b442860fafb5ea66de1499177814_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "324869"
+    },
+    {
+      "n": 2,
+      "title": "Spring",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/7906f0682fa59d574cbc40e46428a6ab1499751121_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "324870"
+    },
+    {
+      "n": 3,
+      "title": "Point-Blank Relationship",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/57fdef783dcce499489f0f2debd954751500352456_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "324871"
+    },
+    {
+      "n": 4,
+      "title": "Romantic Comedy",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/eeead8bd7f09c9c638502a7b268fbf0e1500938640_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "324872"
+    },
+    {
+      "n": 5,
+      "title": "Watching You From Afar",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/c1e37efb5ed875641f4b2e569f775d721501537296_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "324873"
+    },
+    {
+      "n": 6,
+      "title": "We Don't Need Girls",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1969dbed51c945f5fda7b80da7e7ddd51502141811_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "324874"
+    },
+    {
+      "n": 7,
+      "title": "It's All the Fever's Fault",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/ab2ede5343138ef9c6760fdbbb442e851502766152_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "324875"
+    },
+    {
+      "n": 8,
+      "title": "Bruised-Up Angel",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/354a335fc8893248fd18994ee630cc771503374225_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "324876"
+    },
+    {
+      "n": 9,
+      "title": "Square One",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2160eb7512cfd2b84ac0dbd3ef2a35e31504014801_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "324877"
+    },
+    {
+      "n": 10,
+      "title": "Lovers",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d045bc00ba3d07ca0b65fd51fd891d701504574343_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "324878"
+    },
+    {
+      "n": 11,
+      "title": "Tuning",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d07663ef1394569a0008b34df978d3ff1505186125_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "324879"
+    },
+    {
+      "n": 12,
+      "title": "Summer Begins",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/fcc87dfbf14b5250fe2c9e7a6f47da671505778048_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "324880"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Aimaimoko",
+      "artist": "Inori MInase",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dear",
+      "artist": "Yui Ogura",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

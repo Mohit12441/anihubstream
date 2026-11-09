@@ -1,0 +1,319 @@
+{
+  "id": "vermeil-in-gold",
+  "title": "Vermeil in Gold",
+  "native": "金装のヴェルメイユ～崖っぷち魔術師は最強の厄災と魔法世界を突き進む～",
+  "year": 2022,
+  "rating": 6.7,
+  "season": "Summer 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx146210-ZnIithxFLLHn.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx146210-ZnIithxFLLHn.jpg",
+  "accent": "#aebbf1",
+  "synopsis": "Meet Alto, a hapless student at Royal Ortigia Magic Academy whose academic performance leaves much to be desired. Rather than take a more sensible approach to salvaging his grades in time for graduation, Alto decides to summon a bit of otherworldly assistance. Only after does he learn he’s bound the legendary she-devil Vermeil into service as his familiar! But while Vermeil is a powerful ally sure to turn his grades around, her magic can only be replenished with a kiss, and that makes everything go to hell with Alto’s jealous childhood friend, Lilia.\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 45956,
+    "anilist": 146210,
+    "mal": 51213
+  },
+  "skip_key_id": 51213,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 11:35:25",
+  "search_text": "vermeil in gold 金装のウ ェルメイユ 崖っふ ち魔術師は最強の厄災と魔法世界を突き進む tv finished",
+  "genres": [
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Desperate Magician and the Imprisoned Disaster",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 130
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1440
+        }
+      ],
+      "external_id": "330551"
+    },
+    {
+      "n": 2,
+      "title": "The New Term and the Fairy Flower",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 139
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1440
+        }
+      ],
+      "external_id": "330552"
+    },
+    {
+      "n": 3,
+      "title": "A Dragonrider's Beating Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1440
+        }
+      ],
+      "external_id": "330716"
+    },
+    {
+      "n": 4,
+      "title": "A Creeping Madness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 84,
+          "end": 174
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1440
+        }
+      ],
+      "external_id": "331047"
+    },
+    {
+      "n": 5,
+      "title": "Rampage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1422
+        }
+      ],
+      "external_id": "331366"
+    },
+    {
+      "n": 6,
+      "title": "Wish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 92,
+          "end": 182
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1421
+        }
+      ],
+      "external_id": "331367"
+    },
+    {
+      "n": 7,
+      "title": "Confession",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 46,
+          "end": 136
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1425
+        }
+      ],
+      "external_id": "331368"
+    },
+    {
+      "n": 8,
+      "title": "Selection",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 85,
+          "end": 175
+        }
+      ],
+      "external_id": "331369"
+    },
+    {
+      "n": 9,
+      "title": "The Mage of Heaven's Will",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 146
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1421
+        }
+      ],
+      "external_id": "331370"
+    },
+    {
+      "n": 10,
+      "title": "Questions",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 106,
+          "end": 196
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1425
+        }
+      ],
+      "external_id": "331371"
+    },
+    {
+      "n": 11,
+      "title": "Past",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 86,
+          "end": 176
+        }
+      ],
+      "external_id": "331372"
+    },
+    {
+      "n": 12,
+      "title": "Together",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 143,
+          "end": 233
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1421
+        }
+      ],
+      "external_id": "331373"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

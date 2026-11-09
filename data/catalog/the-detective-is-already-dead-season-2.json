@@ -1,0 +1,80 @@
+{
+  "id": "the-detective-is-already-dead-season-2",
+  "title": "The Detective Is Already Dead Season 2",
+  "native": "探偵はもう、死んでいる。Season2",
+  "year": 2026,
+  "rating": 7.1,
+  "season": "Fall 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx152677-gtJbgjE94lCN.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx152677-gtJbgjE94lCN.png",
+  "accent": "#3b82ff",
+  "synopsis": "After thwarting a hijacking with beautiful, silver-haired detective Siesta, Kimihiko leads a life of globe-trotting and crime-solving—until Siesta dies. A year later, a new case will open old wounds as it threads murder, conspiracy, and his dead partner!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": 3,
+  "sched_day_label": "WED",
+  "sched_date": "Nov 11",
+  "sched_time": "12:30",
+  "sched_season": "Fall 2026",
+  "sched_episode": 6,
+  "sched_sub_at": null,
+  "sched_dub_at": 1793802600000,
+  "source_ids": {
+    "anilist": 152677,
+    "mal": 52480,
+    "hianime": "the-detective-is-already-dead-season-2-5zmmr2",
+    "kitsu": 46275
+  },
+  "skip_key_id": 52480,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-17 05:33:22",
+  "search_text": "the detective is already dead season 2 探偵はもう 死んて いる season2 tv ongoing",
+  "genres": [
+    "comedy",
+    "drama",
+    "mystery",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

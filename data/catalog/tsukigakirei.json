@@ -1,0 +1,329 @@
+{
+  "id": "tsukigakirei",
+  "title": "Tsukigakirei",
+  "native": "月がきれい",
+  "year": 2017,
+  "rating": 7.8,
+  "season": "Spring 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98202-H6RtsIMZPALF.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98202-H6RtsIMZPALF.png",
+  "accent": "#1a506b",
+  "synopsis": "It’s the third year of middle school. Kotaro, a bookish boy aspiring to become a novelist, and Akane, a track girl who loves to run, meet in the same class together for the first time. They’re put in charge of the equipment for the sports festival, and slowly grow closer via LINE. How does Kotaro deal with his growing feelings for her?\n\nMeanwhile, Takumi has been in love with Akane since first year, and Akane’s friend, Chinatsu, becomes interested in Kotaro.\n\nA refreshing story of young love set in Kawagoe.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13234,
+    "anilist": 98202,
+    "mal": 34822,
+    "hianime": "tsukigakirei-rd41kf"
+  },
+  "skip_key_id": 34822,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 08:43:21",
+  "search_text": "tsukigakirei 月か きれい tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Spring and Hard Times",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-04-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 111,
+          "end": 201
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1371,
+          "end": 1440
+        }
+      ],
+      "external_id": "199795"
+    },
+    {
+      "n": 2,
+      "title": "A Handful of Sand",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-04-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 110,
+          "end": 200
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "199796"
+    },
+    {
+      "n": 3,
+      "title": "Howling at the Moon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-04-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 118,
+          "end": 208
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1377,
+          "end": 1440
+        }
+      ],
+      "external_id": "199797"
+    },
+    {
+      "n": 4,
+      "title": "Passing Shower",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-04-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 100,
+          "end": 190
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1300,
+          "end": 1390
+        }
+      ],
+      "external_id": "199798"
+    },
+    {
+      "n": 5,
+      "title": "Kokoro",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 69,
+          "end": 159
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1375
+        }
+      ],
+      "external_id": "199799"
+    },
+    {
+      "n": 6,
+      "title": "Run, Melos!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1227,
+          "end": 1317
+        }
+      ],
+      "external_id": "199800"
+    },
+    {
+      "n": 7,
+      "title": "Hold Back Nothing When Taking Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 149,
+          "end": 239
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1159,
+          "end": 1249
+        }
+      ],
+      "external_id": "199801"
+    },
+    {
+      "n": 8,
+      "title": "Vita Sexualis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-06-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 104,
+          "end": 194
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1201,
+          "end": 1291
+        }
+      ],
+      "external_id": "199802"
+    },
+    {
+      "n": 9,
+      "title": "The Wind Rises",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-06-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "199803"
+    },
+    {
+      "n": 10,
+      "title": "The Setting Sun",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-06-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 169
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "199804"
+    },
+    {
+      "n": 11,
+      "title": "An Encouragement of Learning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-06-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 160
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1372,
+          "end": 1440
+        }
+      ],
+      "external_id": "199805"
+    },
+    {
+      "n": 12,
+      "title": "And Then",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-06-30",
+      "markers": [],
+      "external_id": "199806"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Imakoko (イマココ)",
+      "artist": "Nao Tōyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsuki ga Kirei (月がきれい)",
+      "artist": "Nao Tōyama",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,120 @@
+{
+  "id": "tokyo-ghoul-jack",
+  "title": "Tokyo Ghoul: [JACK]",
+  "native": "東京喰種トーキョーグール [JACK]",
+  "year": 2015,
+  "rating": 7,
+  "season": "Summer 2015",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21132-nY3Ifx1GYQ6f.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21132-nY3Ifx1GYQ6f.jpg",
+  "accent": "#1a93d6",
+  "synopsis": "Former baseball player turned delinquent Taishi Fura accidentally witnesses the man-eating \"ghoul\" known as Lantern injuring his old friend and murdering another. Before the situation gets any worse, Fura's classmate Kishou Arima arrives―as he is actually an undercover investigator for the Commission of Counter Ghoul (CCG)―and forces the ghoul to flee.\n\nSeeking revenge for his friends, Fura joins forces with Arima to hunt down ghouls in the 13th Ward—ultimately aiming to bring down Lantern.\n\nTokyo Ghoul: \"Jack\" unveils snippets of life in the past for the CCG's fearsome \"Reaper,\" Arima, giving insight into how he spent his high school days.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tokyo-ghoul:-jack-og2xl6",
+    "mal": 30458,
+    "anilist": 21132,
+    "kitsu": 10789
+  },
+  "skip_key_id": 30458,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "tokyo ghoul jack 東京喰種トーキョーク ール jack ova finished",
+  "genres": [
+    "drama",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Tragedy",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/04fce0b6f8885e85cb78a65d22ba0ea91644482778_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "180002"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "katharsis",
+      "artist": "TK from Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rakuen no Kimi (楽園の君)",
+      "artist": "österreich",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "asphyxia",
+      "artist": "Cöshu Nie",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Half",
+      "artist": "Ziyoou-vachi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Munō (無能; Incompetence)",
+      "artist": "österreich",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Munō (無能; Incompetence)",
+      "artist": "österreich",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kisetsu wa Tsugitsugi Shindeiku (季節は次々死んでいく; Seasons Dying One After Another)",
+      "artist": "Amazarashi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Unravel",
+      "artist": "tk of Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Seijatachi (Saints)",
+      "artist": "People in the Box",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

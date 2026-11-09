@@ -1,0 +1,297 @@
+{
+  "id": "undefeated-bahamut-chronicle",
+  "title": "Undefeated Bahamut Chronicle",
+  "native": "最弱無敗の神装機竜《バハムート》",
+  "year": 2016,
+  "rating": 6.2,
+  "season": "Winter 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21188-VFUo0sASxOfO.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21188-VFUo0sASxOfO.jpg",
+  "accent": "#f1d643",
+  "synopsis": "The Royal Knight Academy was established to train the heirs and scions of the lands how to fight using the ancient mechanical dragons known as Drag-Rides. Those noble intentions, however, go royally astray when Lux, deposed prince of the Arcadia Empire, accidentally stumbles upon the Kingdom of Atismata's new Princess Lisesharte in her royal bath and sees altogether more than he should have. Challenged to a Drag-Ride duel when the Princess bares her anger, Lux finds himself thrust into a series of events that could ultimately expose the darkest secrets of both their royal families!\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 10913,
+    "anilist": 21188,
+    "mal": 30749
+  },
+  "skip_key_id": 30749,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 12:36:52",
+  "search_text": "undefeated bahamut chronicle 最弱無敗の神装機竜 ハ ハムート tv finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Crimson War Princess",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181875/original.jpg",
+      "synopsis": "Lux Arcadia falls into the baths of the all-girls Royal Knight Academy, and right on top of the naked Princess Lisesharte Atismata, who challenges him to a duel as penance.",
+      "airdate": "2016-01-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 162
+        }
+      ],
+      "external_id": "181875"
+    },
+    {
+      "n": 2,
+      "title": "The Weakest Drag-Knight",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181876/original.jpg",
+      "synopsis": "Lux begins his life at the academy and meets an old childhood friend, much to Lisesharte's chagrin. Later, Lux and Lisesharte face old, dark memories of the recent past.",
+      "airdate": "2016-01-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 110,
+          "end": 200
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1380
+        }
+      ],
+      "external_id": "181876"
+    },
+    {
+      "n": 3,
+      "title": "The Lady of the North's Engagement Conditions",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181877/original.jpg",
+      "synopsis": "When Lisha throws Lux a party, a week of Lux's time is offered as a game prize! The outcome could be worse, but his new position lands him in an awkward and dangerous place.",
+      "airdate": "2016-01-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 162,
+          "end": 252
+        }
+      ],
+      "external_id": "181877"
+    },
+    {
+      "n": 4,
+      "title": "The Sixth Ruin: Miniature Garden",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181878/original.jpg",
+      "synopsis": "Lux mentally prepares for his duel with Lord Barzeride. Meanwhile, the nobles of the New Kingdom order an investigation of some ancient ruins which may hide a powerful Abyss.",
+      "airdate": "2016-02-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1380
+        }
+      ],
+      "external_id": "181878"
+    },
+    {
+      "n": 5,
+      "title": "The Girl's Wish",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181879/original.jpg",
+      "synopsis": "Krulcifer reveals her painful past to Lux. In an act of sympathy, she decides to release him from their agreement and begins to prepare for her duel against Barzeride.",
+      "airdate": "2016-02-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 46,
+          "end": 136
+        }
+      ],
+      "external_id": "181879"
+    },
+    {
+      "n": 6,
+      "title": "The Homecoming of the Strongest",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181880/original.jpg",
+      "synopsis": "When Lux meets a high ranking noble girl under false pretenses, he’s put in a tight spot. It gets worse; she has a reputation for misandry and wants him out of the school!",
+      "airdate": "2016-02-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1380
+        }
+      ],
+      "external_id": "181880"
+    },
+    {
+      "n": 7,
+      "title": "A Girl's Truth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181881/original.jpg",
+      "synopsis": "The students head to a training session on the beach. However, it's not all fun in the sun as the prowler from campus is revealed and mysteries abound as a new ruin appears.",
+      "airdate": "2016-02-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 104,
+          "end": 194
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1380
+        }
+      ],
+      "external_id": "181881"
+    },
+    {
+      "n": 8,
+      "title": "Awakening of the Phantom Divine Beast",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181882/original.jpg",
+      "synopsis": "Exploring the new ruin yields a fascinating find, but Philuffy begins to feel ill. As she and Lux are thrown into a site from their past, Lux recovers some ghastly memories.",
+      "airdate": "2016-02-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 108,
+          "end": 198
+        }
+      ],
+      "external_id": "181882"
+    },
+    {
+      "n": 9,
+      "title": "The Promise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181883/original.jpg",
+      "synopsis": "Lux faces off against Hayes in a fight to save Philuffy's life. With Hayes' nefarious plans already in motion, another dark figure emerges from the shadows of the old Empire.",
+      "airdate": "2016-03-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 54,
+          "end": 144
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1314,
+          "end": 1380
+        }
+      ],
+      "external_id": "181883"
+    },
+    {
+      "n": 10,
+      "title": "The Young Girls' Reward",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181884/original.jpg",
+      "synopsis": "Lux has to choose not one, but three, dates for the National Foundation Festival. While Lisha nurses hurt feelings, a supporter of the old Empire emerges from the shadows.",
+      "airdate": "2016-03-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 83,
+          "end": 173
+        }
+      ],
+      "external_id": "181884"
+    },
+    {
+      "n": 11,
+      "title": "The Imperial Assassin's Dagger",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181885/original.jpg",
+      "synopsis": "Lux discovers that a rebellion is being plotted by a group from the old Empire, and Airi is worried as he agrees to conditions he may be unable to meet.",
+      "airdate": "2016-03-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 126,
+          "end": 216
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1380
+        }
+      ],
+      "external_id": "181885"
+    },
+    {
+      "n": 12,
+      "title": "The Young Girl's Cherished Desire",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181886/original.jpg",
+      "synopsis": "With the fate of their country and its people hanging in the balance, Lux and Lisha fight against their toughest foe yet; an enemy born of their pasts.",
+      "airdate": "2016-03-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 10,
+          "end": 100
+        }
+      ],
+      "external_id": "181886"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

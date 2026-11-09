@@ -1,0 +1,176 @@
+{
+  "id": "tawawa-on-monday",
+  "title": "Tawawa on Monday",
+  "native": "月曜日のたわわ",
+  "year": 2016,
+  "rating": 6.1,
+  "season": "Fall 2016",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97716-KEnqtszrv2vw.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97716-KEnqtszrv2vw.jpg",
+  "accent": "#2886c9",
+  "synopsis": "The anime follows a salaryman who has a chance meeting with a girl named Ai on the train. They begin to meet every Monday on the train, with the man serving as her bodyguard on the crowded commute while they chat.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Tawawa on Monday Specials (2016)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 12640,
+    "anilist": 97716,
+    "mal": 34213
+  },
+  "skip_key_id": 34213,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 10:56:47",
+  "search_text": "tawawa on monday 月曜日のたわわ ona finished",
+  "genres": [
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190051"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190052"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190053"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190054"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190055"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190056"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190057"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190058"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190059"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190060"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190061"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "190062"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

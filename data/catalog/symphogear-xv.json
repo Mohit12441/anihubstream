@@ -1,0 +1,203 @@
+{
+  "id": "symphogear-xv",
+  "title": "Symphogear XV",
+  "native": "戦姫絶唱シンフォギアXV",
+  "year": 2019,
+  "rating": 8.2,
+  "season": "Summer 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21673-ZXlqf3DGJph9.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21673-ZXlqf3DGJph9.png",
+  "accent": "#43c9e4",
+  "synopsis": "Humanity is finally confronted with the threat of the Custodians—the ancient, sentient species held responsible for cursing humanity to speak different languages thousands of years ago. The Symphogear wielders—Hibiki Tachibana, Tsubasa Kazanari, Chris Yukine, Maria Cadenzavna Eve, Kirika Akatsuki, and Shirabe Tsukuyomi—are sent to the Antarctic in order to retrieve an ancient relic. After securing it and rescuing the scientific staff present there from a Coffin, the automated defense mechanism protecting it, the relic is given to American researchers due to international agreements.\n\nThe criminal organization Noble Red, a remnant of the previously fought Bavarian Illuminati, starts targeting the relic. Will the Symphogear wielders and their supporting organization S.O.N.G. be able to foil the plans of the organizations conspiring against them?\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "symphogear-xv-rpoku8",
+    "mal": 32843,
+    "anilist": 21673,
+    "kitsu": 11884
+  },
+  "skip_key_id": 32843,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "symphogear xv 戦姫絶唱シンフォキ アxv tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "From the Horizon of Mankind's History",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/215114/original.jpg",
+      "synopsis": "After destroying the Bavarian Illuminati, the Symphogear wielders head to the poles, to recover a powerful precursor artifact. But the artifact isn't as dead as it appears...",
+      "airdate": "2019-07-07",
+      "markers": [],
+      "external_id": "215114"
+    },
+    {
+      "n": 2,
+      "title": "The Day The Sky Falls",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256462/original.jpg",
+      "synopsis": "After the disasterous battle at the pole, the team regroups in Tokyo. Tsubasa prepares for her comeback concert, but the enemy has plans for it...",
+      "airdate": "2019-07-14",
+      "markers": [],
+      "external_id": "256462"
+    },
+    {
+      "n": 3,
+      "title": "Penny Dreadful",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267770/original.jpg",
+      "synopsis": "Tsubasa is devastated after the deaths at the concert. Noble Red's struggles to survive are revealed.",
+      "airdate": "2019-07-21",
+      "markers": [],
+      "external_id": "267770"
+    },
+    {
+      "n": 4,
+      "title": "The Name of the Flower Is Amalgam",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267846/original.jpg",
+      "synopsis": "The Symphogear Weilders track down and are on the verge of defeating Noble Red, when the Japanese government intervenes to stop them.",
+      "airdate": "2019-07-28",
+      "markers": [],
+      "external_id": "267846"
+    },
+    {
+      "n": 5,
+      "title": "The Hidden Thing in the Bag",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267973/original.jpg",
+      "synopsis": "The government has temporarily shut down SONG, and the Wielders are put on a short break. But the enemy uses this time to strike...",
+      "airdate": "2019-08-04",
+      "markers": [],
+      "external_id": "267973"
+    },
+    {
+      "n": 6,
+      "title": "Xenoglossia",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268078/original.jpg",
+      "synopsis": "Miku is gone, and so is Elfnein. The enemy has taken them, and it's up to the Symphogear Wielders to get them back.",
+      "airdate": "2019-08-11",
+      "markers": [],
+      "external_id": "268078"
+    },
+    {
+      "n": 7,
+      "title": "Cutting the Tangled Thread",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268309/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-08-18",
+      "markers": [],
+      "external_id": "268309"
+    },
+    {
+      "n": 8,
+      "title": "XV",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268372/original.jpg",
+      "synopsis": "The Wielders find the Fool's Stone, and can now use their powerful Ignite modules against their alchemist foes. Cagliostro is the first to challenge them and their new power...",
+      "airdate": "2019-08-25",
+      "markers": [],
+      "external_id": "268372"
+    },
+    {
+      "n": 9,
+      "title": "I am a father",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268412/original.jpg",
+      "synopsis": "The group trains so that everyone can pair with any other team member and use their powerful Unison attacks. But Shirabe is having trouble pairing up with anybody but Kirika, because of her inability to trust others.",
+      "airdate": "2019-09-01",
+      "markers": [],
+      "external_id": "268412"
+    },
+    {
+      "n": 10,
+      "title": "Not a Crude Color of Rust",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268413/original.jpg",
+      "synopsis": "With what they've learned from the shrine, the Symphogear Wielders now know the full extent of the Illumanti's plan: they're going to use an ancient gate to summon the power of a god. Only one person can stop them: Hibiki, the \"God-Killer\".",
+      "airdate": "2019-09-08",
+      "markers": [],
+      "external_id": "268413"
+    },
+    {
+      "n": 11,
+      "title": "In The Beginning Was The Word",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268778/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-09-15",
+      "markers": [],
+      "external_id": "268778"
+    },
+    {
+      "n": 12,
+      "title": "Senki Zessho",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268898/original.jpg",
+      "synopsis": "The divine power chooses Hibiki as its vessel. To stop the worldwide disaster she could cause, the U.N. initiates a wide-scale attack on Japan.",
+      "airdate": "2019-09-22",
+      "markers": [],
+      "external_id": "268898"
+    },
+    {
+      "n": 13,
+      "title": "Let's Make History With A Light That Even the Gods Don't Know",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/269128/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-09-29",
+      "markers": [],
+      "external_id": "269128"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "METANOIA",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lasting Song",
+      "artist": "Ayahi Takagaki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

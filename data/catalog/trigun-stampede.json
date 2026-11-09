@@ -1,0 +1,301 @@
+{
+  "id": "trigun-stampede",
+  "title": "TRIGUN STAMPEDE",
+  "native": "TRIGUN STAMPEDE",
+  "year": 2023,
+  "rating": 7.7,
+  "season": "Winter 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151040-9QXRpaprfNmL.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151040-9QXRpaprfNmL.png",
+  "accent": "#5da1e4",
+  "synopsis": "Vash the Stampede’s a joyful gunslinging pacifist, so why does he have a $6 million bounty on his head? That’s what’s puzzling rookie reporter Meryl Stryfe and her jaded veteran partner when looking into the vigilante only to find someone who hates blood. But their investigation turns out to uncover something heinous—his evil twin brother, Millions Knives.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "TRIGUN STARGAZE (2026)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46183,
+    "anilist": 151040,
+    "mal": 52093,
+    "hianime": "trigun-stampede-hftadk"
+  },
+  "skip_key_id": 52093,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 14:06:40",
+  "search_text": "trigun stampede trigun stampede tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "NOMAN'S LAND",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/339636/thumbnail/medium-f22dd41c2f2ce41f558348e9e7297b73.jpeg",
+      "synopsis": "Newbie reporter Meryl and veteran drunk Roberto chase after Vash the Stampede, the legendary \"Humanoid Typhoon\" with a huge bounty on his head. They don't have trouble finding him, but he appears much more low-key than they expected. (Source: Crunchyroll)",
+      "airdate": "2023-01-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 274,
+          "end": 364
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1380
+        }
+      ],
+      "external_id": "339636"
+    },
+    {
+      "n": 2,
+      "title": "The Running Man",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/339637/thumbnail/medium-71af077e708b348eee7dad31af35af7f.jpeg",
+      "synopsis": "Despite being saved by Vash twice already, the townsfolk of Jeneora Rock decide it's in their best interest to capture Vash for his bounty. Vash decides to escape, but it's not just the gun-toting townsfolk he needs to run away from. (Source: Crunchyroll)",
+      "airdate": "2023-01-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 88,
+          "end": 179
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1380
+        }
+      ],
+      "external_id": "339637"
+    },
+    {
+      "n": 3,
+      "title": "Bright Light, Shine through the Darkness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/339638/thumbnail/medium-556d8fd019460a2e98c48fda5e2c3f91.jpeg",
+      "synopsis": "Vash, the town of Jeneora Rock, and the Nebraskas reach a three-way truce, but their brief moment of peace is shattered by yet another assailant. He seems to be after the plant as well, but something more sinister seems to be at play. (Source: Crunchyroll)",
+      "airdate": "2023-01-21",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1380
+        }
+      ],
+      "external_id": "339638"
+    },
+    {
+      "n": 4,
+      "title": "HUNGRY!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/339639/thumbnail/medium-283dc838ba51ccf59e284e1cc9192004.jpeg",
+      "synopsis": "Vash meets Nicholas, a suspicious undertaker who carries a huge cross. Before they could get to know each other, though, they are attacked by a huge worm, swallowing them and the building they were in. (Source: Crunchyroll)",
+      "airdate": "2023-01-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1343,
+          "end": 1380
+        }
+      ],
+      "external_id": "339639"
+    },
+    {
+      "n": 5,
+      "title": "Child of Blessing",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/339640/thumbnail/medium-63b4d74fbf3cf5c400a01d4e9839ef30.jpeg",
+      "synopsis": "Vash is drawn towards a seemingly abandoned village with a giant windmill, for reasons that only he knows. There, the group is attacked by a tremendous gale of gunfire. (Source: Crunchyroll)",
+      "airdate": "2023-02-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1341,
+          "end": 1380
+        }
+      ],
+      "external_id": "339640"
+    },
+    {
+      "n": 6,
+      "title": "Once Upon a Time in Hopeland",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/339641/thumbnail/medium-220ee63a30e3f4ccb33b80dc66463145.jpeg",
+      "synopsis": "Vash and Wolfwood board the massive Sandsteamer vessel to travel to their final destination, JuLai. Yet again, they are ambushed by a hail of gunfire, but this time, it's someone Wolfwood knows. (Source: Crunchyroll)",
+      "airdate": "2023-02-11",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1380
+        }
+      ],
+      "external_id": "339641"
+    },
+    {
+      "n": 7,
+      "title": "WOLFWOOD",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/339642/thumbnail/medium-2a3732d5dbed711759346fe47b4b66f6.jpeg",
+      "synopsis": "Vash and Wolfwood work together to stop Livio, an assassin who has lost his sense of self. The chaos is further accelerated by an attack by the Bad Lads Gang. While this is happening, someone sabotages the Sandsteamer, sending it on a crash course with Hopeland, Wolfwood's home town. (Source: Crunchyroll)",
+      "airdate": "2023-02-18",
+      "markers": [],
+      "external_id": "339642"
+    },
+    {
+      "n": 8,
+      "title": "Our Home.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/339643/thumbnail/medium-1e8e5b861ddd3f82c7c6d50644b95527.jpeg",
+      "synopsis": "",
+      "airdate": "2023-02-25",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1380
+        }
+      ],
+      "external_id": "339643"
+    },
+    {
+      "n": 9,
+      "title": "Millions Knives",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/339644/thumbnail/medium-f2844ddeda62725b0fbcd865d146e26c.jpeg",
+      "synopsis": "After surviving the crash, Vash started a life with Luida and Brad, while Knives formed an alliance with Conrad, the leader of the research group called the Sinners. The twins finally meet again in front of an array of plants that have turned red from overwork. (Source: Crunchyroll)",
+      "airdate": "2023-03-04",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1380
+        }
+      ],
+      "external_id": "339644"
+    },
+    {
+      "n": 10,
+      "title": "Humanity",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/339645/thumbnail/medium-4353f615570d02073bb973bdad8c9f12.jpeg",
+      "synopsis": "Meryl and Roberto are taken to July, the Third City, by Zazie. There, they learn why and how the human race ended up on this planet, No Man's Land. They also see Conrad, the former leader of the Sinners research group, who explains his goals. Meanwhile, Vash and Wolfwood reach the top floor of the July Tower, where Knives awaits. (Source: Crunchyroll)",
+      "airdate": "2023-03-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 114
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1339,
+          "end": 1380
+        }
+      ],
+      "external_id": "339645"
+    },
+    {
+      "n": 11,
+      "title": "To a New World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/339646/thumbnail/medium-ef65c8596f7c66dccce241323e514eaa.jpeg",
+      "synopsis": "Caught in Knives' trap, Vash is dropped into a giant pool. There, Knives attacks the precious memories that helped Vash maintain his love towards humanity. While Vash and Knives clash in this metaphysical realm, Meryl witnesses the astonishing physical manifestations. (Source: Crunchyroll)",
+      "airdate": "2023-03-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1380
+        }
+      ],
+      "external_id": "339646"
+    },
+    {
+      "n": 12,
+      "title": "HIGH NOON AT JULY",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/339647/thumbnail/medium-0e95b4962c179160e6f9361ada498895.jpeg",
+      "synopsis": "Knives takes away Vash's precious memories, disabling Vash completely. He begins the final phase of the process that will change the planet forever. Meryl, however, isn't willing to sit idly while this happens. (Source: Crunchyroll)",
+      "airdate": "2023-03-25",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1289,
+          "end": 1380
+        }
+      ],
+      "external_id": "339647"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "TOMBI",
+      "artist": "Kvi Baba",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hoshi no Kuzu α",
+      "artist": "Salyu and haruka nakamura",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,202 @@
+{
+  "id": "wagnaria-2",
+  "title": "Wagnaria!!2",
+  "native": "Working'!!",
+  "year": 2011,
+  "rating": 7.8,
+  "season": "Year 2011",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/692ea0ac0f7f80b39236b5d6-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/692ea0ac0f7f80b39236b5d6-landscape.webp",
+  "accent": "#8b5cf6",
+  "synopsis": "The exciting antics of Wagnaria return as more ridiculous incidents occur, friendships are deepened, and new feelings are discovered. In addition to Souta Takanashi and his wacky co-workers, more eccentric personalities join the family restaurant: Haruna, Hyougo Otoo's missing wife, who has a habit of getting hopelessly lost through the sewer system; Kirio Yamada, Aoi's older brother, who is able to withstand Mahiru Inami's deadly punches; and twins Youhei and Mitsuki Mashiba, Kyouko Shirafuji's juniors who do not get along.\n\nAbsurdity, romance, and hilarity are all on the menu for the Wagnaria family restaurant!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "wagnaria!!2-iz1m8e",
+    "mal": 10521,
+    "anilist": 10521,
+    "kitsu": 6220
+  },
+  "skip_key_id": 10521,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "wagnaria 2 working",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A Poplar's Pride",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94048/original.jpg",
+      "synopsis": "Popura becomes upset with Sota constantly calling her small. Later, Sota becomes devastated when Kyoko kills a bug, inadvertently insulting Popura and Inami in the process.",
+      "airdate": "2011-09-03",
+      "markers": [],
+      "external_id": "94048"
+    },
+    {
+      "n": 2,
+      "title": "The Ideal Family Plan",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94049/original.jpg",
+      "synopsis": "Aoi becomes curious about Hiroomi's secret life and drags Popura into stalking him, despite the fact he is completely aware of it. Later, Popura tries to get Sota to treat Mahiru nicer. Tired of Jun's teasing, Popura tries to get revenge on him which does not go to plan. Meanwhile, Aoi acts very clingy around Otoo after he comes back from his recent trip.",
+      "airdate": "2011-10-08",
+      "markers": [],
+      "external_id": "94049"
+    },
+    {
+      "n": 3,
+      "title": "The Reason Behind the Slump",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94050/original.jpg",
+      "synopsis": "Sōta's novelist sister Izumi enters a slump when she assumes he is dating Popura and will stop paying attention to her. She decides to go on a journey where she ends up meeting Mahiru who helps cheer her up. As Sōta looks after Izumi, Nazuna helps out at Wagnaria, which annoys Aoi who believes she is outshining her. After hearing about it, Nazuna puts on an act to make Aoi feel better about herself.",
+      "airdate": "2011-10-15",
+      "markers": [],
+      "external_id": "94050"
+    },
+    {
+      "n": 4,
+      "title": "Manhole Spiral",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94051/original.jpg",
+      "synopsis": "Whilst out shopping for some more cream, Kyōko and Yachiyo end up meeting Otoo's long lost wife, Haruna. As Yachiyo debates whether to tell Kyōko about her, she disappears again. As Yachiyo feels guilty about it, Mahiru learns about Jun's one-sided crush on Yachiyo and starts feeling sorry for him, leading Sōta to believe she has a crush on Jun. With some support from Jun, Yachiyo apologises to Otoo after he returns and cheers up.",
+      "airdate": "2011-10-22",
+      "markers": [],
+      "external_id": "94051"
+    },
+    {
+      "n": 5,
+      "title": "Wagnaria's Big Stomach",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94052/original.jpg",
+      "synopsis": "Popura and the others try to think of ways to help Sōta get along better with Kyōko. Wanting to be spoiled in a similar manner to Kyōko, Aoi starts learning how to make parfaits, much to the dismay of Jun. In order to stop Kyōko from eating everything in the store, Hiyoomi tells a white lie which leaves her stunned. When Sōta finds a lost girl, Kyōko is told to look after her, and even avoids taking her food. After the girl is reunited with her mother, Jun gives Kyōko some food as thanks.",
+      "airdate": "2011-10-29",
+      "markers": [],
+      "external_id": "94052"
+    },
+    {
+      "n": 6,
+      "title": "Hired, Fired, Tired",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94053/original.jpg",
+      "synopsis": "Popura and Jun end up catching colds due to Aoi's clumsiness, so Kyōko calls in two of her juniors, Yohei and Mitsuki Mashiba, twin siblings who don't get along. When Kyōko offers to put someone else in charge of looking after Inami, Sōta becomes upset and falls out with Inami, but Inami soon manages to build up the courage to make up with him.",
+      "airdate": "2011-11-05",
+      "markers": [],
+      "external_id": "94053"
+    },
+    {
+      "n": 7,
+      "title": "Bad Tuning of Love",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94054/original.jpg",
+      "synopsis": "Mahiru meets a boy calling himself Kirio Yamada, who she believes might be Aoi's brother. As he is able to withstand her punches, Mahiru ends up conversing well with Kirio, who starts developing feelings for her, but Sōta becomes downhearted when he sees the two getting along. He begins acting strangely the next day and ends up bashing his head against the wall, leading him to think he might've become a masochist. Later, Kozue manages to get the waitresses to dress up in animal cosplay.",
+      "airdate": "2011-11-12",
+      "markers": [],
+      "external_id": "94054"
+    },
+    {
+      "n": 8,
+      "title": "Oh, My Sister",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94055/original.jpg",
+      "synopsis": "Sōta becomes depressed when he discovers Nazuna has grown as tall as him and has Popura act like his little sister for the day. Mahiru becomes jealous of this and works with Hiroomi to try and get Sōta to call her cute. The next day, Kirio comes to Wagnaria to look for his sister, but finds himself coming into conflict with the men, whilst Hiroomi attempts to keep him and Aoi from meeting each other.",
+      "airdate": "2011-11-19",
+      "markers": [],
+      "external_id": "94055"
+    },
+    {
+      "n": 9,
+      "title": "Love Is So Global",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94056/original.jpg",
+      "synopsis": "Jun takes Yachiyo to buy a cellphone, whilst Kozue takes a liking to Yohei. Meanwhile, Mitsuki becomes suspicious of Jun's familiarity with Yachiyo whilst Yamada runs away after Sōta scolds her.",
+      "airdate": "2011-11-26",
+      "markers": [],
+      "external_id": "94056"
+    },
+    {
+      "n": 10,
+      "title": "Cell Phone, No Problem",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94057/original.jpg",
+      "synopsis": "Mahiru finds herself a bit too close to Sōta for comfort when he tries to stop a tower of boxes from falling on her, which leads her to become a bit fearful of him the next day. This turns into a complete freakout after she discovers Sota touching her head whilst she was asleep and stops coming into work. Later, Poplar gets locked in the freezer and initially suspects Jun, but soon finds Aoi just did it accidentally. After Mahiru doesn't show up at work all week, Sōta goes to visit her in Kotori-guise to apologise and exchange phone numbers.",
+      "airdate": "2011-12-03",
+      "markers": [],
+      "external_id": "94057"
+    },
+    {
+      "n": 11,
+      "title": "It's Resolve, Is That a Problem?",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94058/original.jpg",
+      "synopsis": "Aoi searches for her teddy bear, Daisy, only to find that Jun had just put it in her room. Later, Yachiyo overhears a conversation between Jun and Mitsuki and assumes the two are going out with each other. As Jun notices her weird behaviour, he takes some advice from Popura to put some pressure on himself to sort things out with her.",
+      "airdate": "2011-12-10",
+      "markers": [],
+      "external_id": "94058"
+    },
+    {
+      "n": 12,
+      "title": "Daisy Dies",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94059/original.jpg",
+      "synopsis": "Popura and Aoi try to help Mahiru train to cure her androphobia by dressing her up as a guy, but with no such luck. Later, Sōta and Mahiru start exchanging text messages, which causes Izumi to worry. Sōta also runs into Kirio, who manages to deduce that Mahiru has feelings for him. Later one night, Aoi gets locked out of the restaurant, but Jun manages to sort things out for her. Later, Popura and Aoi try to help out Mahiru's progress by exposing her to the other men, only for her to nearly end up punching Hiroomi. Meanwhile, Popura becomes elated when she is finally able to reach the broken items report sheet that was normally out of her reach.",
+      "airdate": "2011-12-17",
+      "markers": [],
+      "external_id": "94059"
+    },
+    {
+      "n": 13,
+      "title": "Farewell, Popura",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/94060/original.jpg",
+      "synopsis": "Whilst Popuar is pleased to finally reach the report sheet, Sōta is horrified by the thought of her growing taller. Whilst talking about the future, Aoi ends up turning a statement from Popura that she might have to leave Wagnaria some time in the future to a rumour that she is actually quitting, which she spreads to the other staff members. As the staff have their concerns over this, much to the annoyance of Maya the bird, Popura is confused by their weird reactions to her. After Maya helps Popura with her worries, the truth about Aoi's rumour soon comes out.",
+      "airdate": "2011-12-24",
+      "markers": [],
+      "external_id": "94060"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "COOLISH WALK",
+      "artist": "Kana Asumi, Eri Kitamura and Saki Fujita",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Itsumo you ni LOVE & PEACE!! (いつものようにLOVE＆PEACE!!)",
+      "artist": "Jun Fukuyama, Daisuke Ono and Hiroshi Kamiya",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

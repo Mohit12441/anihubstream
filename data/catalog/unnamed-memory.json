@@ -1,0 +1,273 @@
+{
+  "id": "unnamed-memory",
+  "title": "Unnamed Memory",
+  "native": "Unnamed Memory",
+  "year": 2024,
+  "rating": 6.6,
+  "season": "Spring 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx158709-WFA0RHloDvPl.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx158709-WFA0RHloDvPl.jpg",
+  "accent": "#5dbbe4",
+  "synopsis": "\"My wish as champion is for you to descend the tower and be my wife.\"\n\nSeeking to end a curse thwarting his lineage, Prince Oscar sets out on a quest that leads him to a powerful and beautiful witch, Tinasha, and he demands a unique bargain: marriage. Though unenthused by the proposal, she agrees to stay in his castle for a year while researching the spell cast upon him. But beneath her beauty lies a lifetime of dark secrets that soon come to light.\n\n(Source: Yen Press, Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Unnamed Memory Season 2 (2025)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46921,
+    "anilist": 158709,
+    "mal": 53835,
+    "hianime": "unnamed-memory-h7jaxk"
+  },
+  "skip_key_id": 53835,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-15 18:06:07",
+  "search_text": "unnamed memory unnamed memory tv finished",
+  "genres": [
+    "adventure",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Cursed Words and the Azure Tower",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b0f3cb4aae962fc06e2368bbdd6324f61712670581_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 57,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1414
+        }
+      ],
+      "external_id": "365483"
+    },
+    {
+      "n": 2,
+      "title": "The Past Recalled Once Again",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/9dd07c937f557432f8f42433ccb645601713252817_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 77,
+          "end": 167
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1396
+        }
+      ],
+      "external_id": "365484"
+    },
+    {
+      "n": 3,
+      "title": "What the Forest Dreams Of",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5f262b2fba2dff2eadf4b250acafbdcf1713865162_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1414
+        }
+      ],
+      "external_id": "365485"
+    },
+    {
+      "n": 4,
+      "title": "A Breath of Life into Image",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b7872a1e2d006040e7c4f32fabf0093a1714483144_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 95,
+          "end": 185
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1412
+        }
+      ],
+      "external_id": "365486"
+    },
+    {
+      "n": 5,
+      "title": "Unnamed Emotion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c710c2ed36ff961970c628b6891794f81715071258_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "365487"
+    },
+    {
+      "n": 6,
+      "title": "As the Abyss is Born",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/9c2a9e088ac7d3664359ea2b4bcd5ab51715630076_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1413
+        }
+      ],
+      "external_id": "365488"
+    },
+    {
+      "n": 7,
+      "title": "The End of the Dream",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/94b19f622b6ede3b6ef6ab7b5a87cbbf1716297774_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1413
+        }
+      ],
+      "external_id": "365489"
+    },
+    {
+      "n": 8,
+      "title": "Green Vines",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/2f9cd1f900711a74ac94ad09a386c1531716907997_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1414
+        }
+      ],
+      "external_id": "365490"
+    },
+    {
+      "n": 9,
+      "title": "The Things Unknown",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b8fa08ac237a7d55ed84ac02d7e6945c1717508899_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1417
+        }
+      ],
+      "external_id": "365491"
+    },
+    {
+      "n": 10,
+      "title": "Blank Slate Children",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/29fbd9fc62f186e93cfb096ec65ebe1c1718112694_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365492"
+    },
+    {
+      "n": 11,
+      "title": "Castle of Sand",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/fa1886326b0ff75e1eea97111cd7eb6c1718702540_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1412
+        }
+      ],
+      "external_id": "365493"
+    },
+    {
+      "n": 12,
+      "title": "Two Joined Memories",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/682b0523943e86b6313184cae1848cef1719312713_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365494"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,328 @@
+{
+  "id": "the-hidden-dungeon-only-i-can-enter",
+  "title": "The Hidden Dungeon Only I Can Enter",
+  "native": "俺だけ入れる隠しダンジョン",
+  "year": 2021,
+  "rating": 6,
+  "season": "Winter 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx118375-95ClbAh2EQMD.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx118375-95ClbAh2EQMD.jpg",
+  "accent": "#a17835",
+  "synopsis": "The Hidden Dungeon is a place of legend where rare treasures and items are hidden. Noir, the third son of an impoverished noble family who's lost the one job offer he had, was lucky enough to hear about this dungeon. He then acquires a skill that allows him to create, bestow, and edit skills... and in order to use it, he needs to accumulate points by carrying out such tasks as eating delicious meals and doing sexual things with alluring members of the opposite sex.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 43301,
+    "anilist": 118375,
+    "mal": 41899
+  },
+  "skip_key_id": 41899,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 10:34:33",
+  "search_text": "the hidden dungeon only i can enter 俺た け入れる隠しタ ンシ ョン tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Powerful Skill Set",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1f81155490dbaa51fe30990a6fbfb8521610111326_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 189,
+          "end": 279
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1367,
+          "end": 1440
+        }
+      ],
+      "external_id": "286710"
+    },
+    {
+      "n": 2,
+      "title": "The Guild and the Receptionist",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/8aea1872e23ff72addc1bb4c69b62e011610698786_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 152,
+          "end": 242
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1382,
+          "end": 1440
+        }
+      ],
+      "external_id": "286711"
+    },
+    {
+      "n": 3,
+      "title": "The Troubled Classmate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b97153b5c5aa4421e52e07d7722902c01611297701_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 75,
+          "end": 165
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1301,
+          "end": 1391
+        }
+      ],
+      "external_id": "294124"
+    },
+    {
+      "n": 4,
+      "title": "The Untainted Cleric",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4ca62311d10e6b13f0e1a0decc3f1f181611908824_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 118,
+          "end": 208
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1312,
+          "end": 1402
+        }
+      ],
+      "external_id": "294125"
+    },
+    {
+      "n": 5,
+      "title": "The Future of This Harem",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/7354160c8f81e56dc094691b433a07f01612492301_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 130
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1341,
+          "end": 1431
+        }
+      ],
+      "external_id": "294126"
+    },
+    {
+      "n": 6,
+      "title": "The Tulip Lion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/384ab210b3bcf1e6d28ab39b1d2b8b741613114015_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 172
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1422
+        }
+      ],
+      "external_id": "294127"
+    },
+    {
+      "n": 7,
+      "title": "The Receptionist Ranking",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/740170dd5ed027cfcbb7bb44085b13a01613727636_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 38,
+          "end": 128
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1299,
+          "end": 1389
+        }
+      ],
+      "external_id": "294128"
+    },
+    {
+      "n": 8,
+      "title": "A Little Girl's Wish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8b3c147c77938a2ebfd479f95fe2e2311614317061_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 99,
+          "end": 189
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1296,
+          "end": 1386
+        }
+      ],
+      "external_id": "294129"
+    },
+    {
+      "n": 9,
+      "title": "To the Gala",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/e337e8ebc1aff8ba9115bc6c73869cd11614936433_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 111,
+          "end": 201
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1352,
+          "end": 1440
+        }
+      ],
+      "external_id": "295731"
+    },
+    {
+      "n": 10,
+      "title": "Let's Go to the Hot Springs",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/3b734eb02de3cfdf783809a6d4cabdee1615526764_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 98,
+          "end": 188
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1352,
+          "end": 1440
+        }
+      ],
+      "external_id": "296496"
+    },
+    {
+      "n": 11,
+      "title": "Noir's Decision",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/13faf95c5cd4cb36046180e2ffa6192d1616128424_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 143,
+          "end": 233
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1352,
+          "end": 1440
+        }
+      ],
+      "external_id": "296952"
+    },
+    {
+      "n": 12,
+      "title": "A Battle I Can't Lose",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/9874a3dcd6362217b06f33f8a5ac8d7b1616743192_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 69,
+          "end": 159
+        }
+      ],
+      "external_id": "297157"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

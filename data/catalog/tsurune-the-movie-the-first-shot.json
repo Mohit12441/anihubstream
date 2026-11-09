@@ -1,0 +1,55 @@
+{
+  "id": "tsurune-the-movie-the-first-shot",
+  "title": "Tsurune The Movie - The First Shot -",
+  "native": "劇場版ツルネ －はじまりの一射－",
+  "year": 2022,
+  "rating": 7.4,
+  "season": "Summer 2022",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx125261-Sh9fN2heZ1rm.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx125261-Sh9fN2heZ1rm.jpg",
+  "accent": "#e4bb5d",
+  "synopsis": "Movie adaptation of Tsurune: Kazemai Koukou Kyuudou-bu. \n\nMinato Narumiya reignites his passion for kyudo, the Japanese martial art of archery. \n\n (Source: HIDIVE)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tsurune-the-movie-the-first-shot-zslayj",
+    "mal": 43556,
+    "anilist": 125261,
+    "kitsu": 45942
+  },
+  "skip_key_id": 43556,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "tsurune the movie the first shot 劇場版ツルネ はし まりの一射 movie finished",
+  "genres": [
+    "drama",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Tsurune The Movie - The First Shot - (Movie)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ac7418daa43420d88136164-landscape.jpg",
+      "synopsis": "Movie adaptation of Tsurune: Kazemai Koukou Kyuudou-bu. \n\n\n\nMinato Narumiya reignites his passion for kyudo, the Japanese martial art of archery. \n\n\n\n (Source: HIDIVE)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "327361"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

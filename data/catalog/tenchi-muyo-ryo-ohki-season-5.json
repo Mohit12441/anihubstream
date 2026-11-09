@@ -1,0 +1,111 @@
+{
+  "id": "tenchi-muyo-ryo-ohki-season-5",
+  "title": "Tenchi Muyo! Ryo-Ohki Season 5",
+  "native": "天地無用! 魎皇鬼 第5期",
+  "year": 2020,
+  "rating": 6.1,
+  "season": "Winter 2020",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx114442-wEY2gcxKFhdg.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114442-wEY2gcxKFhdg.png",
+  "accent": "#e45d1a",
+  "synopsis": "Stream Tenchi Muyo! Ryo-Ohki Season 5 online with English sub and dub in high definition on AniHubStream.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tenchi-muyo!-ryo-ohki-season-5-z9n3yp",
+    "mal": 40097,
+    "anilist": 114442,
+    "kitsu": 42491
+  },
+  "skip_key_id": 40097,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": null,
+  "search_text": "tenchi muyo ryo ohki season 5 天地無用 魎皇鬼 第5期 ova finished",
+  "genres": [
+    "action",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Day Before the Party",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/7ee3961ec58fe6c69ca74e66e6f828ff1589995049_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "277188"
+    },
+    {
+      "n": 2,
+      "title": "The Masaki Destiny",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/5d214611f1b532f2bf82fef367e2ebd41589995219_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "277189"
+    },
+    {
+      "n": 3,
+      "title": "Oath and Wish",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1052c9388349b211bff4ff7ff30c56e71589995407_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278272"
+    },
+    {
+      "n": 4,
+      "title": "Good Days, Departure",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a9dd01c66396ae30131cfe86dcebdb621589995440_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279140"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "280813"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "283210"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

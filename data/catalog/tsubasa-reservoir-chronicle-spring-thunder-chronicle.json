@@ -1,0 +1,147 @@
+{
+  "id": "tsubasa-reservoir-chronicle-spring-thunder-chronicle",
+  "title": "Tsubasa: Spring Thunder Chronicles",
+  "native": "ツバサ 春雷記",
+  "year": 2009,
+  "rating": 7.7,
+  "season": "Spring 2009",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4938.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4938.jpg",
+  "accent": "#e45093",
+  "synopsis": "Tsubasa/xxxHOLiC Project\n\nA 4 part OVA released with the limited editions of the Tsubasa and xxxHOLiC volumes.\n\nThere are two OVAs for each series, with plots linked together.\n\nThey cover the Nihon Country Arc and scarcely some of the Celes Country Arc.\n\n(Source: Official Project Website)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tsubasa-reservoir-chronicle:-spring-thunder-chronicle-xdd1xb",
+    "mal": 4938,
+    "anilist": 4938,
+    "kitsu": 3859
+  },
+  "skip_key_id": 4938,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "tsubasa spring thunder chronicles ツハ サ 春雷記 ova finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "29:00",
+      "runtime_seconds": 1740,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/65080/original.jpeg",
+      "synopsis": "Following the battle with King Ashura, Fey's weakened powers lead Kurogane to make a stunning sacrifice. After the group arrives in the his homeland, Kurogane must face a foe with a very familiar face.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "65080"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "29:00",
+      "runtime_seconds": 1740,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/65081/original.jpeg",
+      "synopsis": "Syaoran once more faces Syaoran, and Sakura is wounded during the battle.  Yet, once more, things are not what they seem - Syaoran is not the only traveler who seems to have a clone!",
+      "airdate": null,
+      "markers": [],
+      "external_id": "65081"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubasa to Hotaru",
+      "artist": "Kanae Ito",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sonic Boom",
+      "artist": "Maaya Sakamoto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kioku no Mori",
+      "artist": "FictionJunction YUUKA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Synchronicity",
+      "artist": "Yui Makino",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "さいごの果実 (Saigo no Kajitsu)",
+      "artist": "Maaya Sakamoto",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "aerial",
+      "artist": "Kinya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Amurita",
+      "artist": "Yui Makino",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Blaze",
+      "artist": "Kinya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Loop",
+      "artist": "Maaya Sakamoto",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "IT'S",
+      "artist": "Kinya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kazemachi Jet",
+      "artist": "Maaya Sakamoto",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

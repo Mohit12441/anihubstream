@@ -1,0 +1,71 @@
+{
+  "id": "wagnaria-3-lord-of-the-takanashi",
+  "title": "Wagnaria!!3: Lord of the Takanashi",
+  "native": "WORKING!!! ロード・オブ・ザ・小鳥遊",
+  "year": 2015,
+  "rating": 8,
+  "season": "Fall 2015",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21384-YR0hAau5UHAB.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21384-YR0hAau5UHAB.png",
+  "accent": "#f1a10d",
+  "synopsis": "The 14th and final episode of the WORKING!!! anime.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "wagnaria!!3:-lord-of-the-takanashi-933wb8",
+    "mal": 31715,
+    "anilist": 21384,
+    "kitsu": 11420
+  },
+  "skip_key_id": 31715,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "wagnaria 3 lord of the takanashi working ロート オフ サ 小鳥遊 special finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Welcome to Wagnaria - Takanashi Goes to Work",
+      "runtime": "50:00",
+      "runtime_seconds": 3000,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3c8bdd47656be395ebd914f9e998bbb31317709201_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "179866"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "NOW!!!GAMBLE",
+      "artist": "Kana Asumi, Saki Fujita, & Eri Kitamura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Matsuge ni Lock (まつ毛にLOCK)",
+      "artist": "Jun Fukuyama, Daisuke Ono, & Hiroshi Kamiya",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,75 @@
+{
+  "id": "this-monster-wants-to-eat-me",
+  "title": "This Monster Wants to Eat Me",
+  "native": "私を喰べたい、ひとでなし",
+  "year": 2025,
+  "rating": 7.4,
+  "season": "Fall 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx183385-f1TgnttLckBT.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx183385-f1TgnttLckBT.jpg",
+  "accent": "#ff1f4a",
+  "synopsis": "Hinako lives alone by the sea, quietly drifting through life after losing her family years ago. One day, a mermaid named Shiori saves her from a monster and says she’s come to eat her—just not yet. Until then, Shiori will stay by her side and keep her safe. In that moment, a deep hope swells in Hinako: Maybe this girl can finally grant her the ending she’s been waiting for.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "this-monster-wants-to-eat-me-jk1bri",
+    "mal": 60168,
+    "anilist": 183385,
+    "kitsu": 49931
+  },
+  "skip_key_id": 60168,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "this monster wants to eat me 私を喰へ たい ひとて なし tv finished",
+  "genres": [
+    "drama",
+    "horror",
+    "mystery",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "nie (Sacrifice)",
+      "artist": "Yoshino",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "LiLy",
+      "artist": "Reina Ueda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Taiyō, natte age yokka?♡",
+      "artist": "Fairouz Ai",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "LiLy [Another ver.] (リリィ［Another ver.］)",
+      "artist": "Yui Ishikawa",
+      "episodes": "11"
+    }
+  ],
+  "relations": []
+}

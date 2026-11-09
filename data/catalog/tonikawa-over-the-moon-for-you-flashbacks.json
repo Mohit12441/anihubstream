@@ -1,0 +1,82 @@
+{
+  "id": "tonikawa-over-the-moon-for-you-flashbacks",
+  "title": "TONIKAWA: Over The Moon For You - Flashbacks",
+  "native": "Tonikaku Kawaii: Kaisou",
+  "year": 2020,
+  "rating": 7.5,
+  "season": "Year 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/694d4171b6e476df8b14884b-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/694d4171b6e476df8b14884b-landscape.webp",
+  "accent": "#a24bff",
+  "synopsis": "Recap of all 12 episodes of Tonikaku Kawaii.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tonikawa:-over-the-moon-for-you-flashbacks-02b3uw",
+    "mal": 45598,
+    "kitsu": 43833
+  },
+  "skip_key_id": 45598,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "tonikawa over the moon for you flashbacks tonikaku kawaii kaisou",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "TONIKAWA: Over The Moon For You - Flashbacks",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://animehot.cc/storage/media/2026/09/694d4171b6e476df8b14884b-poster.jpg",
+      "synopsis": "Recap of all 12 episodes of Tonikaku Kawaii.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "294242"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Setsuna no Chikai (feat. Yuzaki Tsukasa) (刹那の誓い（feat. 由崎司）)",
+      "artist": "Neko Hacker",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yoru no Katasumi (夜のかたすみ)",
+      "artist": "Tsukasa Yuzaki [Akari Kitō]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Koi no Uta (feat. Tsukasa Tsukuyomi)",
+      "artist": "Akari Kitō",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsuki to Hoshizora",
+      "artist": "KanoeRana",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

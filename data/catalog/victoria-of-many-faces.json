@@ -1,0 +1,60 @@
+{
+  "id": "victoria-of-many-faces",
+  "title": "Victoria of Many Faces",
+  "native": "手札が多めのビクトリア",
+  "year": 2026,
+  "rating": 7.4,
+  "season": "Summer 2026",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx198709-3PFLvU6eqPvf.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx198709-3PFLvU6eqPvf.jpg",
+  "accent": "#5da1e4",
+  "synopsis": "Betrayed by her own organization, Chloe flees her life as a spy and starts over under the new identity of Victoria in the Kingdom of Ashberry. Victoria wants a simple civilian life, but the locals have other plans, becoming enmeshed with an abandoned girl and a knight. As the trio bonds and Victoria’s past catches up to her, the skills she perfected as a spy prove useful in her new life.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "victoria-of-many-faces-pxo38n",
+    "mal": 62476,
+    "anilist": 198709,
+    "kitsu": 50805
+  },
+  "skip_key_id": 62476,
+  "skip_key_space": "mal",
+  "episode_total": 9,
+  "added_at": null,
+  "search_text": "victoria of many faces 手札か 多めのヒ クトリア tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Isshin (一進)",
+      "artist": "Haku.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "En no Tsuki (縁のつき)",
+      "artist": "KI_EN",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

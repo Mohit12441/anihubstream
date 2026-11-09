@@ -1,0 +1,1532 @@
+{
+  "id": "world-trigger",
+  "title": "World Trigger",
+  "native": "ワールドトリガー",
+  "year": 2014,
+  "rating": 7.3,
+  "season": "Fall 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20729-DnBXnUxFon1B.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20729-DnBXnUxFon1B.png",
+  "accent": "#feae0d",
+  "synopsis": "One day, a gate to another world suddenly opens in Mikado City. Aliens invincible to Earth’s weapons, called “Neighbors”, start coming over. Earth’s only line of defense is a mysterious group called the “Border” who are armed with weapons called “Triggers”.\n\n \n\nFour years later, the city has recovered from initial attacks and citizens of Mikado City have started to get used to the Neighbor’s attacks. Yuma Kuga, a transfer student, and his classmate Osamu Mikumo find themselves fighting a Neighbor that suddenly appears. Osamu, who is actually a Border agent, activates his Trigger but is unable to defeat it. This leaves Yuma to activate his own Trigger and defeat the alien. Yuma reveals that he is not part of Border and is actually a Neighbor who has transferred from the other side.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "World Trigger 2nd Season (2021)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8631,
+    "anilist": 20729,
+    "mal": 24405,
+    "hianime": "world-trigger-rtayzn"
+  },
+  "skip_key_id": 24405,
+  "skip_key_space": "mal",
+  "episode_total": 73,
+  "added_at": "2026-10-14 11:05:15",
+  "search_text": "world trigger ワールト トリカ ー tv finished",
+  "genres": [
+    "action",
+    "isekai",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Visitor from the Other World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171026/original.jpeg",
+      "synopsis": "A gate to another world opened in Mikado City. Invaders from another dimension, referred to as Neighbors, overran the area around the gate, leaving the city gripped by fear. However, a mysterious group suddenly appeared and repelled the Neighbors.",
+      "airdate": "2014-10-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 119
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1314,
+          "end": 1379
+        }
+      ],
+      "external_id": "171026"
+    },
+    {
+      "n": 2,
+      "title": "Neighbor and Trion Soldier",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171027/original.jpeg",
+      "synopsis": "The Miwa Squad rushes into battle only to find a defeated giant laying in the aftermath. Bewildered, Osamu falls into ranks with the boy-Neighbor Yuma, whose reckless ways attract new threats. As danger closes in, the two begin to trust each other.",
+      "airdate": "2014-10-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 99,
+          "end": 189
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1368
+        }
+      ],
+      "external_id": "171027"
+    },
+    {
+      "n": 3,
+      "title": "Osamu Mikumo's Ability",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171028/original.jpeg",
+      "synopsis": "Combat-use Trion Soldiers attack when a gate opens in Osamu’s school just outside of the Forbidden Zone. Worried he’s not strong enough, Yuma tries to stop Osamu from fighting back, but Osamu’s determination to save the other students is limitless.",
+      "airdate": "2014-10-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 59,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1307,
+          "end": 1368
+        }
+      ],
+      "external_id": "171028"
+    },
+    {
+      "n": 4,
+      "title": "Ai Kitora, A-Rank No.5 Agent",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171029/original.jpeg",
+      "synopsis": "Osamu gets more trouble than credit when he claims to have defeated Trion Soldier Marmod. Really, he’s covering for the Neighbor, Yuma. Kitora, an A-rank Border Agent, is furious with Osamu for stepping out of line… But does she suspect the truth?",
+      "airdate": "2014-11-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 112,
+          "end": 202
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1300,
+          "end": 1374
+        }
+      ],
+      "external_id": "171029"
+    },
+    {
+      "n": 5,
+      "title": "Power Elite, Yuichi Jin",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171030/original.jpeg",
+      "synopsis": "Kitora boldly jumps onto the back of Ilgar, a new type of Trion Soldier, while it’s mid-flight and bent on attacking the city below. Suddenly, Ilgar transforms, enters self-destruct mode and plummets toward its target. How will she escape now?!",
+      "airdate": "2014-11-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 91,
+          "end": 181
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1371
+        }
+      ],
+      "external_id": "171030"
+    },
+    {
+      "n": 6,
+      "title": "Chika Amatori's Side Effect",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171031/original.jpeg",
+      "synopsis": "Yuichi and Osamu's critical mission to investigate the abnormal gate puts a lot of pressure on Osamu. Meanwhile, Yuma follows Replica’s advice and conducts an investigation of his own. The next morning, Osamu and Yuichi have a fateful meeting with Yuma...",
+      "airdate": "2014-11-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        }
+      ],
+      "external_id": "171031"
+    },
+    {
+      "n": 7,
+      "title": "Miwa Squad's Assault",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2014-11-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 83,
+          "end": 173
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 815,
+          "end": 905
+        }
+      ],
+      "external_id": "198699"
+    },
+    {
+      "n": 8,
+      "title": "The Black Trigger",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2014-11-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 64,
+          "end": 154
+        }
+      ],
+      "external_id": "198700"
+    },
+    {
+      "n": 9,
+      "title": "The Organization Known as Border",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2014-12-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 54,
+          "end": 144
+        }
+      ],
+      "external_id": "198701"
+    },
+    {
+      "n": 10,
+      "title": "Tamakoma Branch",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2014-12-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 452,
+          "end": 542
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1378
+        }
+      ],
+      "external_id": "198702"
+    },
+    {
+      "n": 11,
+      "title": "Each One's Determination",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2014-12-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 172
+        }
+      ],
+      "external_id": "198703"
+    },
+    {
+      "n": 12,
+      "title": "A-Ranks Agents of Tamakoma",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2014-12-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 372,
+          "end": 462
+        }
+      ],
+      "external_id": "198704"
+    },
+    {
+      "n": 13,
+      "title": "Border's Top Teams",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-01-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 67,
+          "end": 157
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1380
+        }
+      ],
+      "external_id": "198705"
+    },
+    {
+      "n": 14,
+      "title": "No. 1 Attacker, Kei Tachikawa",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-01-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 160
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1307,
+          "end": 1318
+        }
+      ],
+      "external_id": "198706"
+    },
+    {
+      "n": 15,
+      "title": "Black Trigger, Fujin",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-01-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 140,
+          "end": 230
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1279,
+          "end": 1368
+        }
+      ],
+      "external_id": "198707"
+    },
+    {
+      "n": 16,
+      "title": "The Future Moves Forward",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-02-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 172,
+          "end": 262
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1263,
+          "end": 1345
+        }
+      ],
+      "external_id": "198708"
+    },
+    {
+      "n": 17,
+      "title": "Border Official Enlistment",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-02-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1270,
+          "end": 1358
+        }
+      ],
+      "external_id": "198709"
+    },
+    {
+      "n": 18,
+      "title": "Osamu Mikumo vs. Souya Kazama",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-02-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 88,
+          "end": 178
+        }
+      ],
+      "external_id": "198710"
+    },
+    {
+      "n": 19,
+      "title": "Rank War, Shun Midorikawa's Plot",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-03-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 105,
+          "end": 195
+        }
+      ],
+      "external_id": "198711"
+    },
+    {
+      "n": 20,
+      "title": "Duel! Yuuma vs. Midorikawa",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-03-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 91,
+          "end": 181
+        }
+      ],
+      "external_id": "198712"
+    },
+    {
+      "n": 21,
+      "title": "The Neighbors' World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-03-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 133,
+          "end": 223
+        }
+      ],
+      "external_id": "198713"
+    },
+    {
+      "n": 22,
+      "title": "The Large-Scale Invasion Begins",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-03-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 108,
+          "end": 198
+        }
+      ],
+      "external_id": "198714"
+    },
+    {
+      "n": 23,
+      "title": "The Holy Land, Aftokrator",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-03-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 111,
+          "end": 201
+        }
+      ],
+      "external_id": "198715"
+    },
+    {
+      "n": 24,
+      "title": "Meeden's Baby Birds",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-04-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 6,
+          "end": 96
+        }
+      ],
+      "external_id": "198716"
+    },
+    {
+      "n": 25,
+      "title": "The Most Powerful Squad in Border",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-04-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 123,
+          "end": 213
+        }
+      ],
+      "external_id": "198717"
+    },
+    {
+      "n": 26,
+      "title": "Fierce fight! Enedora vs. Kazama Squad",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-04-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 119,
+          "end": 209
+        }
+      ],
+      "external_id": "198718"
+    },
+    {
+      "n": 27,
+      "title": "Border on the Counterattack",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-04-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 129,
+          "end": 219
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 704,
+          "end": 794
+        }
+      ],
+      "external_id": "198719"
+    },
+    {
+      "n": 28,
+      "title": "Organon User",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-05-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 103,
+          "end": 193
+        }
+      ],
+      "external_id": "198720"
+    },
+    {
+      "n": 29,
+      "title": "A Crossroads of Fate",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-05-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 161,
+          "end": 251
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1293,
+          "end": 1380
+        }
+      ],
+      "external_id": "198721"
+    },
+    {
+      "n": 30,
+      "title": "The Enemy Captain, Hyrein",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-05-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 147,
+          "end": 237
+        }
+      ],
+      "external_id": "198722"
+    },
+    {
+      "n": 31,
+      "title": "Osamu Mikumo's Determination",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-05-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 159,
+          "end": 249
+        }
+      ],
+      "external_id": "198723"
+    },
+    {
+      "n": 32,
+      "title": "Implacable Enedora",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-05-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 213,
+          "end": 303
+        }
+      ],
+      "external_id": "198724"
+    },
+    {
+      "n": 33,
+      "title": "The Terror of Hyrein",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-06-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 152,
+          "end": 242
+        }
+      ],
+      "external_id": "198725"
+    },
+    {
+      "n": 34,
+      "title": "A Fierce Showdown! The Fight of the Best",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-06-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 172,
+          "end": 262
+        }
+      ],
+      "external_id": "198726"
+    },
+    {
+      "n": 35,
+      "title": "The End of the Battle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-06-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 234,
+          "end": 324
+        }
+      ],
+      "external_id": "198727"
+    },
+    {
+      "n": 36,
+      "title": "The Have-not",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-06-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 74,
+          "end": 164
+        }
+      ],
+      "external_id": "198728"
+    },
+    {
+      "n": 37,
+      "title": "A Hero and a Partner",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-07-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 172
+        }
+      ],
+      "external_id": "198729"
+    },
+    {
+      "n": 38,
+      "title": "B-Rank Wars Begin",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-07-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 756,
+          "end": 846
+        }
+      ],
+      "external_id": "198730"
+    },
+    {
+      "n": 39,
+      "title": "Suwa Squad and Arafune Squad",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-07-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 138
+        }
+      ],
+      "external_id": "198731"
+    },
+    {
+      "n": 40,
+      "title": "Setting off! Mikumo Squad",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-08-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 234,
+          "end": 324
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 739,
+          "end": 829
+        }
+      ],
+      "external_id": "198732"
+    },
+    {
+      "n": 41,
+      "title": "An Impertinent Rookie",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-08-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 252,
+          "end": 342
+        }
+      ],
+      "external_id": "198733"
+    },
+    {
+      "n": 42,
+      "title": "Ko Murakami of Suzunari-1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-08-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 31,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 746,
+          "end": 834
+        }
+      ],
+      "external_id": "198734"
+    },
+    {
+      "n": 43,
+      "title": "Nasu Squad's Choice",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-08-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        }
+      ],
+      "external_id": "198735"
+    },
+    {
+      "n": 44,
+      "title": "The Battle in the Foul Weather",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-08-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 112,
+          "end": 202
+        }
+      ],
+      "external_id": "198736"
+    },
+    {
+      "n": 45,
+      "title": "The Thing That Decides the Battle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-09-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 88,
+          "end": 178
+        }
+      ],
+      "external_id": "198737"
+    },
+    {
+      "n": 46,
+      "title": "The Ace's Willpower",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-09-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 183,
+          "end": 273
+        }
+      ],
+      "external_id": "198738"
+    },
+    {
+      "n": 47,
+      "title": "The Captain's Pride",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-09-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 112,
+          "end": 202
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1362,
+          "end": 1380
+        }
+      ],
+      "external_id": "198739"
+    },
+    {
+      "n": 48,
+      "title": "And Towards the Future",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-10-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 31,
+          "end": 121
+        }
+      ],
+      "external_id": "198740"
+    },
+    {
+      "n": 49,
+      "title": "Fugitives from Another World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-10-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 141
+        }
+      ],
+      "external_id": "198741"
+    },
+    {
+      "n": 50,
+      "title": "Invisible Assailants",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 76,
+          "end": 166
+        }
+      ],
+      "external_id": "198742"
+    },
+    {
+      "n": 51,
+      "title": "Xeno's Trion Soldiers",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 172
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1260,
+          "end": 1345
+        }
+      ],
+      "external_id": "198743"
+    },
+    {
+      "n": 52,
+      "title": "The Sunset of Meeden",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-11-01",
+      "markers": [],
+      "external_id": "198744"
+    },
+    {
+      "n": 53,
+      "title": "The One that Shall Be Saved",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-11-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 101,
+          "end": 191
+        }
+      ],
+      "external_id": "198745"
+    },
+    {
+      "n": 54,
+      "title": "Giev's Thrust",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-11-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 95,
+          "end": 185
+        }
+      ],
+      "external_id": "198746"
+    },
+    {
+      "n": 55,
+      "title": "Dead or Alive",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-11-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 116,
+          "end": 206
+        }
+      ],
+      "external_id": "198747"
+    },
+    {
+      "n": 56,
+      "title": "The Secret of Lilith",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-11-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 138
+        }
+      ],
+      "external_id": "198748"
+    },
+    {
+      "n": 57,
+      "title": "Xeno and Lilith",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-12-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 65,
+          "end": 155
+        }
+      ],
+      "external_id": "198749"
+    },
+    {
+      "n": 58,
+      "title": "The Captured Osamu",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-12-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 155,
+          "end": 245
+        }
+      ],
+      "external_id": "198750"
+    },
+    {
+      "n": 59,
+      "title": "The Two Black Triggers",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-12-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 104,
+          "end": 194
+        }
+      ],
+      "external_id": "198751"
+    },
+    {
+      "n": 60,
+      "title": "The Adventure of Yotaro",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-12-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 95,
+          "end": 185
+        }
+      ],
+      "external_id": "198752"
+    },
+    {
+      "n": 61,
+      "title": "Truth and Lies",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-01-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 107,
+          "end": 197
+        }
+      ],
+      "external_id": "198753"
+    },
+    {
+      "n": 62,
+      "title": "Giev and Charon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-01-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 69,
+          "end": 159
+        }
+      ],
+      "external_id": "198754"
+    },
+    {
+      "n": 63,
+      "title": "A Reversed Future",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-01-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        }
+      ],
+      "external_id": "198755"
+    },
+    {
+      "n": 64,
+      "title": "A Prisoner from Aftokrator",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-01-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 63,
+          "end": 153
+        }
+      ],
+      "external_id": "198756"
+    },
+    {
+      "n": 65,
+      "title": "No.1 Shooter, Masataka Ninomiya",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-02-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 119
+        }
+      ],
+      "external_id": "198757"
+    },
+    {
+      "n": 66,
+      "title": "Sharpened Fangs",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-02-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 139
+        }
+      ],
+      "external_id": "198758"
+    },
+    {
+      "n": 67,
+      "title": "The Battle of the B-Rank Top Teams",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-02-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 118
+        }
+      ],
+      "external_id": "198759"
+    },
+    {
+      "n": 68,
+      "title": "The Targeted Tamakoma",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-02-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 105,
+          "end": 195
+        }
+      ],
+      "external_id": "198760"
+    },
+    {
+      "n": 69,
+      "title": "A Battle Royal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-03-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 229,
+          "end": 319
+        }
+      ],
+      "external_id": "198761"
+    },
+    {
+      "n": 70,
+      "title": "A Captain's Duty",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-03-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 119
+        }
+      ],
+      "external_id": "198762"
+    },
+    {
+      "n": 71,
+      "title": "A New Threat",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-03-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 101,
+          "end": 191
+        }
+      ],
+      "external_id": "198763"
+    },
+    {
+      "n": 72,
+      "title": "An Evolving Mikumo Squad",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-03-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 76,
+          "end": 166
+        }
+      ],
+      "external_id": "198764"
+    },
+    {
+      "n": 73,
+      "title": "To the Future",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-04-03",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1186,
+          "end": 1261
+        }
+      ],
+      "external_id": "198765"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Time Factor",
+      "artist": "Kami wa Saikoro o Furanai",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ungai Dōkei (Yearning to Be Above the Clouds)",
+      "artist": "Fantastic Youth",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Force",
+      "artist": "TOMORROW X TOGETHER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai Eigou",
+      "artist": "KAMI WA SAIKORO WO FURANAI",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dream Trigger (ドリームトリガー)",
+      "artist": "Pile",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "GIRIGIRI",
+      "artist": "Sonar Pocket",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ashita no Hikari (アシタノヒカリ; Light of Tomorrow)",
+      "artist": "AAA",
+      "episodes": "24-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Ashita no Hikari (アシタノヒカリ; Light of Tomorrow)",
+      "artist": "AAA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Dream Trigger (ドリームトリガー)",
+      "artist": "Pile",
+      "episodes": "48"
+    }
+  ],
+  "relations": []
+}

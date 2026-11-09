@@ -1,0 +1,140 @@
+{
+  "id": "tenchi-muyo-ryo-ohki",
+  "title": "Tenchi Muyo! Ryo-Ohki",
+  "native": "天地無用! 魎皇鬼 第1期",
+  "year": 1992,
+  "rating": 7.3,
+  "season": "Fall 1992",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx539-rwTm0bUFunNX.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx539-rwTm0bUFunNX.jpg",
+  "accent": "#e46b50",
+  "synopsis": "Tenchi Masaki was a normal 17-year-old boy until the day he accidentally releases the space pirate, Ryoko from a cave she was sealed in 700 years ago as the people thought she was a demon. In a series of events, four other alien girls show up at the Masaki household as Tenchi learns much of his heritage he never knew about and deal with five alien girls who each have some sort of romantic interest in him. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tenchi-muyo!-ryo-ohki-ka5b6z",
+    "mal": 539,
+    "anilist": 539,
+    "kitsu": 498
+  },
+  "skip_key_id": 539,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": null,
+  "search_text": "tenchi muyo ryo ohki 天地無用 魎皇鬼 第1期 ova finished",
+  "genres": [
+    "action",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Ryoko Resurrected!",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "Tenchi Masaki was an ordinary schoolboy training at the Shrine of his family. Descended from a great Warrior who sealed a demon away long ago, Tenchi will one day continue the tradition of guarding the resting place. A pity that he ends up releasing the demon and now its out for revenge on him!\n\nBut it's...a Beautiful woman? Maybe the trouble to come is not so bad?",
+      "airdate": "1992-09-25",
+      "markers": [],
+      "external_id": "12248"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "12249"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "12250"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "12251"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "12252"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "12253"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "I'm a Pioneer (English)",
+      "artist": "Sharyn Scott",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "ぼくはもっとパイオニア (<i>Boku wa Motto PAIONIA</i>; I'm a Pioneer)",
+      "artist": "Chisa Yokoyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "The Lonely Moon (English)",
+      "artist": "Scottie Haskell",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "月のTRAGEDY (<i>Tsuki no Tragedy</i>; The Lonely Moon)",
+      "artist": "Ai Orikasa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

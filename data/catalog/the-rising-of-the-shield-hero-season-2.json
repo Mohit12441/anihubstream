@@ -1,0 +1,341 @@
+{
+  "id": "the-rising-of-the-shield-hero-season-2",
+  "title": "The Rising of the Shield Hero Season 2",
+  "native": "盾の勇者の成り上がり Season 2",
+  "year": 2022,
+  "rating": 6.5,
+  "season": "Spring 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx111321-dIr3dEKOIPer.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx111321-dIr3dEKOIPer.png",
+  "accent": "#e47835",
+  "synopsis": "With another Wave happening in a week, Naofumi Iwatani and his party have no time to waste. However, when bat familiars raid Lurolona Village and the Wave countdown comes to a halt, the Four Cardinal Heroes reconvene with the queen, Mirelia Q Melromarc, for a quick briefing. The queen presumes that the odd occurrences are linked to the Spirit Tortoise—a threatening creature that has awakened from its slumber, back to cause havoc once again. A plan to put the Spirit Tortoise to rest is devised—but out of the four men, only the cursed Shield Hero agrees to help.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "The Rising of the Shield Hero Season 3 (2023)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42530,
+    "anilist": 111321,
+    "mal": 40356,
+    "hianime": "the-rising-of-the-shield-hero-season-2-4qtluw"
+  },
+  "skip_key_id": 40356,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 05:05:32",
+  "search_text": "the rising of the shield hero season 2 盾の勇者の成り上か り season 2 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A New Roar",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/269168/thumbnail/medium-829ac15044211b759baf38524efbb696.jpeg",
+      "synopsis": "Mysterious monsters appear as Naofumi is preparing for the next Wave. At the same time they show up, the Wave countdown stops. The Queen summons the Four Cardinal Heroes, and tells them that the Spirit Tortoise has revived. (Source: Crunchyroll)",
+      "airdate": "2022-04-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 47,
+          "end": 137
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1414
+        }
+      ],
+      "external_id": "269168"
+    },
+    {
+      "n": 2,
+      "title": "Footprints of the Spirit Tortoise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/269169/thumbnail/medium-6276e1aca9011f7eeb6c936199f1f9f2.jpeg",
+      "synopsis": "The leaders of all the nations’ militaries gather in the Spirit Tortoise Kingdom. Naofumi is there as well, and promises to offer his help as one of the heroes. But just before they decide on a plan, a mysterious woman appears… (Source: Crunchyroll)",
+      "airdate": "2022-04-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 59,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "269169"
+    },
+    {
+      "n": 3,
+      "title": "Shaking Land",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/269170/thumbnail/medium-ba47c6b5479e7b9b9c80d99f0a08f034.jpeg",
+      "synopsis": "The Spirit Tortoise begins its march once more, appearing at the border of the kingdom bearing its name. Naofumi volunteers to lure away its familiars while the army tries to bring it to the mountains. The Spirit Tortoise’s familiar, Ost, fights alongside the humans… (Source: Crunchyroll)",
+      "airdate": "2022-04-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 285,
+          "end": 375
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "269170"
+    },
+    {
+      "n": 4,
+      "title": "Ruins in the Fog",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/269171/thumbnail/medium-65862301085a46c4f94ebc75b9972dcc.jpeg",
+      "synopsis": "The Spirit Tortoise’s head was cut off, but Ost, its familiar, is still alive. It could revive at any moment. The allied armies need to get back into fighting shape and fast. Naofumi makes the risky move of heading onto the Tortoise’s back with only a small group and tries to find its true weak spot. (Source: Crunchyroll)",
+      "airdate": "2022-04-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 145,
+          "end": 235
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "269171"
+    },
+    {
+      "n": 5,
+      "title": "Ost Hourai",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/269172/thumbnail/medium-fab7b50d8c4550c76017a9c84d30da63.jpeg",
+      "synopsis": "Naofumi is met by L’Arc, Glass, and Therese. They’re after the person who broke the Spirit Tortoise’s seal and is controlling it. L’Arc proposes teaming up again… (Source: Crunchyroll)",
+      "airdate": "2022-05-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 131,
+          "end": 221
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "269172"
+    },
+    {
+      "n": 6,
+      "title": "Racing to Catch Up",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/269189/thumbnail/medium-6a05200d52815d008f96f3a2dbce73d2.jpeg",
+      "synopsis": "Fitoria appears when the Spirit Tortoise revives, and with her help, Naofumi attempts to destroy its heart and cut off its head at the same time. L’Arc arrives as well, but all of them are helpless before Kyo’s overwhelming power. (Source: Crunchyroll)",
+      "airdate": "2022-05-11",
+      "markers": [],
+      "external_id": "269189"
+    },
+    {
+      "n": 7,
+      "title": "Infinite Labyrinth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/278292/thumbnail/medium-903a4f9fd4af9b0abeb5509c4a7d2454.jpeg",
+      "synopsis": "Naofumi wakes up in a strange prison to find him and his party at level 1, and Filo missing. They start to raise their levels in order to escape, but things quickly turn against them when a dangerous monster suddenly appears… (Source: Crunchyroll)",
+      "airdate": "2022-05-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 114,
+          "end": 204
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "278292"
+    },
+    {
+      "n": 8,
+      "title": "A Parting in the Snow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/278293/thumbnail/medium-03ba48dfbf41943d2abf6d5f375e4aef.jpeg",
+      "synopsis": "Naofumi’s party heads for the Dragon Hourglass of Mikakage, in order to get to Sikul, the country that summoned Kizuna. Along the way, he sells rare healing items to make a hefty profit. He hears a rumor about a genius mage… (Source: Crunchyroll)",
+      "airdate": "2022-05-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 156,
+          "end": 246
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1414
+        }
+      ],
+      "external_id": "278293"
+    },
+    {
+      "n": 9,
+      "title": "Humming Fairy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/278294/thumbnail/medium-9a74812d3c62ca8dc28638d9d2b2c376.jpeg",
+      "synopsis": "Naofumi’s party is teleported to Sikul, where Kizuna introduces the Vassal Weapon Hero, Ethnobalt. He says he can use a piece of Raphtalia’s hair and Naofumi’s blood as a catalyst that can create a shikigami to find her. He creates the shikigami, and they find… (Source: Crunchyroll)",
+      "airdate": "2022-06-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 105,
+          "end": 195
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1301,
+          "end": 1391
+        }
+      ],
+      "external_id": "278294"
+    },
+    {
+      "n": 10,
+      "title": "Katana Hero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/279287/thumbnail/medium-02247ac863c06c034dfd86223f45edb3.jpeg",
+      "synopsis": "Raphtalia is imprisoned in a Raybul Kingdom prison. She’s wary of L’Arc’s team, who is also imprisoned there, but asks them for help in escaping. Glass is weakened by the draining power of the prison. Raphtalia has a plan to escape, but… (Source: Crunchyroll)",
+      "airdate": "2022-06-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 92,
+          "end": 182
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "279287"
+    },
+    {
+      "n": 11,
+      "title": "Kizuna",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/279288/thumbnail/medium-da0ed122e31113c3486385564d9c1334.jpeg",
+      "synopsis": "Naofumi’s party is overjoyed to be reunited with Raphtalia. Kizuna criticizes Glass for invading another world. Glass and L’Arc swear they won’t fight Naofumi anymore, and instead find another way to solve their problem. Meanwhile, Kyo’s plot proceeds… (Source: Crunchyroll)",
+      "airdate": "2022-06-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 148,
+          "end": 238
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1414
+        }
+      ],
+      "external_id": "279288"
+    },
+    {
+      "n": 12,
+      "title": "Reason to Fight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/279289/thumbnail/medium-492f954510c0d7298806af4414c6795f.jpeg",
+      "synopsis": "The Wave appears before its scheduled time. Kizuna’s group is teleported to it while Naofumi and his party head for Kyo’s lab on Ethnobalt’s ship. There, they see the true depths of Kyo’s wickedness... (Source: Crunchyroll)",
+      "airdate": "2022-06-22",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1293,
+          "end": 1351
+        }
+      ],
+      "external_id": "279289"
+    },
+    {
+      "n": 13,
+      "title": "Flowers Offered in Recollection",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/279290/thumbnail/medium-e389bf759afc3873851434d6547e98d1.jpeg",
+      "synopsis": "Raphtalia recalls having to buy clothing for her smaller self. Kizuna remembers being alone for so long. Rishia remembers Ost trying to give advice. (Source: Crunchyroll)",
+      "airdate": "2022-06-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 87
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1270,
+          "end": 1440
+        }
+      ],
+      "external_id": "279290"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

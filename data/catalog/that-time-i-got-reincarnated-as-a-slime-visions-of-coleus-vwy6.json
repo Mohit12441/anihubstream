@@ -1,0 +1,213 @@
+{
+  "id": "that-time-i-got-reincarnated-as-a-slime-visions-of-coleus-vwy6",
+  "title": "That Time I Got Reincarnated as a Slime: Visions of Coleus",
+  "native": "転生したらスライムだった件 コリウスの夢",
+  "year": 2023,
+  "rating": 7.7,
+  "season": "Fall 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/47088/poster_image/medium-e9c81f7369a9279a598b5405737413eb.jpeg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx161802-Ra8acfv0cSov.jpg",
+  "accent": "#2f7bff",
+  "synopsis": "The story takes place between the first and second season, where Rimuru confronts the swirling conspiracies in the Coleus kingdom.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 47088,
+    "anilist": 161802,
+    "mal": 54565
+  },
+  "skip_key_id": 54565,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": "2026-11-06 04:37:56",
+  "search_text": "that time i got reincarnated as a slime visions of coleus 転生したらスライムた った件 コリウスの夢 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Demons and Strategies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/fc56833f14c0d6655ddf80feed0d7b831712325422_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "342041"
+    },
+    {
+      "n": 2,
+      "title": "The Saint's Intentions",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/895bfba8d6d976cd8b51cc7128bbcf561712904056_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "342042"
+    },
+    {
+      "n": 3,
+      "title": "Peaceful Days",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/01cd4f8beab16d6aae36547144cb43321713534463_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "342043"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Utopia",
+      "artist": "TRUE.",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Esoragoto (絵空事)",
+      "artist": "Eir Aoi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Katsubō (渇望)",
+      "artist": "CiON",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "PEACEKEEPER",
+      "artist": "STEREO DIVE FOUNDATION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Believer",
+      "artist": "Rin Kurusu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Like Flames",
+      "artist": "MindaRyn",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Reincarnate",
+      "artist": "Takuma Terashima",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Storyteller",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "STORYSEEKER",
+      "artist": "STEREO DIVE FOUNDATION",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Nameless Story",
+      "artist": "Takuma Terashima",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Nameless story",
+      "artist": "Takuma Terashima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Another colony",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "TACTIC",
+      "artist": "Daoko",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hymnal (ヒムナル)",
+      "artist": "Azusa Tadokoro",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Renacer Serenade",
+      "artist": "Momoiro Clover Z",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Miracle soup",
+      "artist": "MindaRyn",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Meguru Mono",
+      "artist": "Takuma Terashima",
+      "episodes": "3-5"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Megurumono (メグルモノ)",
+      "artist": "Takuma Terashima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Little Soldier (リトルソルジャー)",
+      "artist": "Azusa Tadokoro",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

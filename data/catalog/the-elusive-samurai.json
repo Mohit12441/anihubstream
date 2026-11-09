@@ -1,0 +1,179 @@
+{
+  "id": "the-elusive-samurai",
+  "title": "The Elusive Samurai",
+  "native": "逃げ上手の若君",
+  "year": 2024,
+  "rating": 7.7,
+  "season": "Summer 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx162896-hSMTVceb50GY.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx162896-hSMTVceb50GY.jpg",
+  "accent": "#f1860d",
+  "synopsis": "In the year 1333, the Kamakura shogunate government comes crumbling down. A trusted vassal, Ashikaga Takauji, betrays the shogunate and organizes a rebellion. Houjou Tokiyuki, the rightful heir, escapes the massacre with a Shinto priest named Suwa Yorishige to Kamakura. On the run and fighting to stay alive, Tokiyuki sets in motion his plan to reclaim his birthright.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "The Elusive Samurai Season 2 (2026)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 47197,
+    "anilist": 162896,
+    "mal": 54724,
+    "hianime": "the-elusive-samurai-405n5l"
+  },
+  "skip_key_id": 54724,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 13:05:21",
+  "search_text": "the elusive samurai 逃け 上手の若君 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "May 22nd",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346005/thumbnail/medium-6c3d47735080a62858371d00fa0ab250.jpeg",
+      "synopsis": "The year is 1333, Kamakura. Tokiyuki Hojo, the rightful heir to the regent who rules the Kamakura shogunate, is a kind boy with a heart of gold who dislikes conflict – even though he’s the son of a warrior. (Source: Crunchyroll)",
+      "airdate": "2024-07-06",
+      "markers": [],
+      "external_id": "346005"
+    },
+    {
+      "n": 2,
+      "title": "The Gentle Uncle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346006/thumbnail/medium-21e9f75477ab87c3634cc5b37f8b528f.jpeg",
+      "synopsis": "Takauji Ashikaga, once considered the guardian of the Kamakura shogunate, stages a rebellion that led to its quick destruction. Tokiyuki’s older brother, Kunitoki, successfully evades the eyes of the warriors loyal to Takauji, and he is placed under the care of their uncle, Muneshige Godaiin. (Source: Crunchyroll)",
+      "airdate": "2024-07-13",
+      "markers": [],
+      "external_id": "346006"
+    },
+    {
+      "n": 3,
+      "title": "A Forest Inhabited by a God",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346007/thumbnail/medium-e2794ce8e542cc4fc9c9cf0c986bc2c4.jpeg",
+      "synopsis": "Tokiyuki risks his life and wins a game of tag, defeating the enemy who betrayed his brother, their uncle, Muneshige. As soon as he arrives in Suwa, Yorishige urges him to begin his lessons and training to take back Kamakura. (Source: Crunchyroll)",
+      "airdate": "2024-07-20",
+      "markers": [],
+      "external_id": "346007"
+    },
+    {
+      "n": 4,
+      "title": "Sadamune Appears!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346008/thumbnail/medium-646acdacf233e6847e7a0150943e9d22.jpeg",
+      "synopsis": "Tokiyuki spends his days undergoing strenuous training to perfect his sword techniques – something he’s told to do to take back Kamakura for himself. However, everyone was surprised by how weak his swordsmanship was. It turns out that Tokiyuki was much better with another weapon: the bow. (Source: Crunchyroll)",
+      "airdate": "2024-07-27",
+      "markers": [],
+      "external_id": "346008"
+    },
+    {
+      "n": 5,
+      "title": "Settling the Score! A Dog-Shooting Competition and then…",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346009/thumbnail/medium-be8853d9e437882e83ecd2390eadf877.jpeg",
+      "synopsis": "\"Tokiyuki faces off against Sadamune in a dog-shooting competition, even though his opponent excels with the bow and possesses an almost prodigy-like eye for detail. With a large lead in points, Tokiyuki faces defeat as he gets hit.\" (Source: Crunchyroll)",
+      "airdate": "2024-08-03",
+      "markers": [],
+      "external_id": "346009"
+    },
+    {
+      "n": 6,
+      "title": "Steal the Imperial Command from Ogasawara's Residence at Night",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346010/thumbnail/medium-14a21175feb01f3b19483080b6f5878c.jpeg",
+      "synopsis": "Tokiyuki and Genba sneak into the Ogasawara's residence and successfully infiltrate the warehouse where the Emperor’s Imperial Command is kept. However, Sadamune’s subordinate, Sukefusa Ichikawa, catches on and hears what these two are doing… (Source: Crunchyroll)",
+      "airdate": "2024-08-10",
+      "markers": [],
+      "external_id": "346010"
+    },
+    {
+      "n": 7,
+      "title": "Children in Winter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346011/thumbnail/medium-c4203deb67a4064a73152918af63bb2b.jpeg",
+      "synopsis": "Tokiyuki reigns in the new year for the first time in Suwa. As the chaos from the downfall lulls throughout the country, skirmishes still break out here and there, and another crisis knocks on Suwa’s doors. (Source: Crunchyroll)",
+      "airdate": "2024-08-17",
+      "markers": [],
+      "external_id": "346011"
+    },
+    {
+      "n": 8,
+      "title": "A Perverted Kid and Disturbances of Holy Power",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346012/thumbnail/medium-38fae5871574fcb20f43f3acec09a39b.jpeg",
+      "synopsis": "Yorishige tells Tokiyuki there are times when he cannot see the future. As some people have come to rely on Yorishige’s reputation and power as a god, he cannot reveal this shortcoming to anyone. (Source: Crunchyroll)",
+      "airdate": "2024-08-24",
+      "markers": [],
+      "external_id": "346012"
+    },
+    {
+      "n": 9,
+      "title": "My Buddha",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346013/thumbnail/medium-25af26c24c98ece610491c41f7973780.jpeg",
+      "synopsis": "The Elusive Warriors engage in a fierce battle with the Seigi Party, a group spearheaded by Shokan himself. Stuck in a small chamber and faced with opponents wearing armor, Tokiyuki uses the “escape” technique he learned from Fubuki to face off against General Shokan. (Source: Crunchyroll)",
+      "airdate": "2024-08-31",
+      "markers": [],
+      "external_id": "346013"
+    },
+    {
+      "n": 10,
+      "title": "A Perverted Kid and Disturbances of Holy Power",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346014/thumbnail/medium-0f6f109d7b5b9867b1900b457bbd7113.jpeg",
+      "synopsis": "Yorishige tells Tokiyuki there are times when he cannot see the future. Since many rely on his reputation and power as a god, he must keep this shortcoming hidden. He asks Tokiyuki for help, and together, they try every idea, one by one, in hopes of restoring Yorishige's holy power. (Source: Crunchyroll)",
+      "airdate": "2024-09-14",
+      "markers": [],
+      "external_id": "346014"
+    },
+    {
+      "n": 11,
+      "title": "Samurais Who Are Eager to Die & an Elusive Samurai",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346015/thumbnail/medium-6d97de6241c1be45f4ad95dd10a0abb0.jpeg",
+      "synopsis": "The imperial court assigns a new provincial official for Shinano: Shinanonokami Kiyohara. Kiyohara did not hesitate to wield his power over people. He was considered a corrupt provincial official who made the people living in his territory suffer. (Source: Crunchyroll)",
+      "airdate": "2024-09-21",
+      "markers": [],
+      "external_id": "346015"
+    },
+    {
+      "n": 12,
+      "title": "Hang in there, Tokiyuki, Until the Day You Retake Kamakura",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346016/thumbnail/medium-83d4ecc21863b085406417640b97d909.jpeg",
+      "synopsis": "\"Hoshina and his army decide to retreat from Kawanakajima after hearing what Tokiyuki and Saemontaro Shinomiya, a Suwa Sect warrior, had to say. But Kiyohara is evil and crafty – he won’t let this slide without a fight.\" (Source: Crunchyroll)",
+      "airdate": "2024-09-28",
+      "markers": [],
+      "external_id": "346016"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

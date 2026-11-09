@@ -1,0 +1,189 @@
+{
+  "id": "those-snow-white-notes",
+  "title": "Those Snow White Notes",
+  "native": "ましろのおと",
+  "year": 2021,
+  "rating": 7.3,
+  "season": "Spring 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx122348-FawMIyUnMDW5.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx122348-FawMIyUnMDW5.jpg",
+  "accent": "#284378",
+  "synopsis": "Sawamura Matsugorou is a shamisen player of legendary talent. Upon his death, his grandson, Sawamura Setsu, lost his ability to play. Having lost his beloved sound, Setsu finds himself in Tokyo in search of a new sound to love. Tachiki Yuna, who works at a club, hooks him up with a gig to play there as a warm up act. Setsu imbues the sound of his shamisen with his many thoughts and feelings he has of others, still searching for his own sound and his own feelings.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44106,
+    "anilist": 122348,
+    "mal": 42590
+  },
+  "skip_key_id": 42590,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 11:26:33",
+  "search_text": "those snow white notes ましろのおと tv finished",
+  "genres": [
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Desolate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/58870ef518af5a431981a18a86511cae1617364023_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "298055"
+    },
+    {
+      "n": 2,
+      "title": "Apple Blossoms",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6e6a69dd2836aa0145a982d57eb9104b1617964765_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "298056"
+    },
+    {
+      "n": 3,
+      "title": "Sudden Downpour",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/6a28657e0e30824026ecbcc2a829779d1618549241_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "298057"
+    },
+    {
+      "n": 4,
+      "title": "Spring Dawn",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/cb27f2fb6ca719d988b386ccf2f1fb931619168059_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "300278"
+    },
+    {
+      "n": 5,
+      "title": "Playing Together",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/906e09decf644bc2ff6b578fe1c904d21619760677_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "301783"
+    },
+    {
+      "n": 6,
+      "title": "Homeland",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/e221b922d1852cc562cc820194191d221620382542_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "301784"
+    },
+    {
+      "n": 7,
+      "title": "Wind",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/82464fef96fe98f4e5ca67d27c0124ac1620970130_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302228"
+    },
+    {
+      "n": 8,
+      "title": "Tuning Fork",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/3683256ea0427fe57687d43926d09a541621583592_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302721"
+    },
+    {
+      "n": 9,
+      "title": "Snow Flurries",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/4c2543cdbbbd58044a03e1d6453fb3cf1622170973_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "303014"
+    },
+    {
+      "n": 10,
+      "title": "Wind From the Mountains",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4bf519cec172fe95a7c297a906e6817e1622774993_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "303015"
+    },
+    {
+      "n": 11,
+      "title": "Memories",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/dd0f086670f38180468b38bb7c57ca751623398704_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "303016"
+    },
+    {
+      "n": 12,
+      "title": "Those Snow White Notes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/9bff024244e41708c599eca5b1b9ae001624004249_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "303017"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Blizzard",
+      "artist": "Burnout Syndromes",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kono Yume ga Sameru Made (Until I Wake From Dreaming)",
+      "artist": "Miliyah Kato feat. Yoshida Brothers",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

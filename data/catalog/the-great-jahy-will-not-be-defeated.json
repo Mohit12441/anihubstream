@@ -1,0 +1,495 @@
+{
+  "id": "the-great-jahy-will-not-be-defeated",
+  "title": "The Great Jahy Will Not Be Defeated!",
+  "native": "ジャヒー様はくじけない！",
+  "year": 2021,
+  "rating": 6.8,
+  "season": "Summer 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx132456-wxTCgdXnZMMQ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx132456-wxTCgdXnZMMQ.jpg",
+  "accent": "#e4865d",
+  "synopsis": "The Great Jahy, the Dark Realm’s second-in-command, cuts a frightening figure, feared and revered by all. But when a run-in with a magical girl results in the destruction of the precious mana crystal, the Dark Realm falls, transporting the newly puny and powerless Jahy to the human world! Unfortunately, plotting the revival of the Dark Realm from a cramped, crumbling one-room apartment is no easy feat when you have rent to pay and a job to keep!\n\n(Source: Square Enix)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44392,
+    "anilist": 132456,
+    "mal": 48753
+  },
+  "skip_key_id": 48753,
+  "skip_key_space": "mal",
+  "episode_total": 20,
+  "added_at": "2026-10-14 14:34:57",
+  "search_text": "the great jahy will not be defeated シ ャヒー様はくし けない tv finished",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "isekai",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Great Jahy Can't Go Back!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/301841/original.jpg",
+      "synopsis": "The Great Jahy has begun living on Earth. The power and influence she had as the Dark Realms' second in command are nowhere to be found. Her life consist of living in a tiny apartment and scrounging up her living expenses working at a bar. While her boss is friendly, outright considerate even, the landlord of the apartment is anything but. Every time they meet, she demands that the already late rent be paid. Today too, a fierce battle between them is unleashed. (Source: Crunchyroll)",
+      "airdate": "2021-07-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1380
+        }
+      ],
+      "external_id": "301841"
+    },
+    {
+      "n": 2,
+      "title": "Druj Asks No Questions!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/301842/original.jpg",
+      "synopsis": "The great Jahy encounters Druj, the underling she always used to bully. For some reason though, it seems that Druj has managed to become more rich and glamorous. To make matters worse, she's already acquired a bunch of mana crystals. The great Jahy desperately puts on airs so that Druj doesn't realize how pathetic her state is. After detecting a mana crystal signature in the mountains, the great Jahy sets off, but gets into one accident after the other. The great Jahy is in grave peril! (Source: Crunchyroll)",
+      "airdate": "2021-08-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 84,
+          "end": 174
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "301842"
+    },
+    {
+      "n": 3,
+      "title": "The Great Jahy Can't Brag",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/301843/original.jpg",
+      "synopsis": "The great Jahy has finally acquired a new mana crystal. She nonchalantly brags to her boss, but she doesn't quite grasp how big an achievement that was. While Druj does laud Jahy, upon listening to her story, it turns out that Druj has achieved much, much more. On top of that, she even finds out that Jahy works at the pub, which in turn forces Jahy to produce one desperate lie after another to maintain her dignity.",
+      "airdate": "2021-08-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 54,
+          "end": 144
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1147,
+          "end": 1237
+        }
+      ],
+      "external_id": "301843"
+    },
+    {
+      "n": 4,
+      "title": "Saurva Never Slips Up?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/301844/thumbnail/medium-0c2d5df5f1ac6b2ab5523028b0e7359f.jpeg",
+      "synopsis": "Saurva has come to the human realm to bring down Jahy and then claim the Number 2 title. Lots of ambitions, but little bravery. She tries to challenge Jahy numerous times, but is not even noticed once. With her exceptional inventions she is able to perfectly transform into Jahy, and plots to ruin Jahy's reputation. However, the first person she runs into is the landlord and the boss. This can only mean trouble. (Source: Crunchyroll)",
+      "airdate": "2021-08-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 38,
+          "end": 128
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1192,
+          "end": 1282
+        }
+      ],
+      "external_id": "301844"
+    },
+    {
+      "n": 5,
+      "title": "The Great Jahy Isn't Suspicious?!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/301845/thumbnail/medium-ff57d37a71757a12bdf294806bfee56f.jpeg",
+      "synopsis": "The great Jahy is on her way home from work. Because of her revealing outfit, she draws suspicion and is questioned by the police. The police officer is apparently looking for a certain suspicious person. Upon hearing the details, it's immediately clear that that's the magical girl. In order to have her revenge, the great Jahy rushes to the park where she was sighted. There, she meets... (Source: Crunchyroll)",
+      "airdate": "2021-09-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 60,
+          "end": 150
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1113,
+          "end": 1203
+        }
+      ],
+      "external_id": "301845"
+    },
+    {
+      "n": 6,
+      "title": "The Great Jahy Doesn't Seem to Stand a Chance...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/301846/thumbnail/medium-b9e08beaa41e25ea4473b388e09e2668.jpeg",
+      "synopsis": "Restoration Plan #6 The great Jahy has encountered the Magical Girl again. This refreshes her terror and she spends her days jumping at shadows. But when she spots a high school girl holding a mana crystal, she tells the girl to hand it over. However, the girl turns out to be the Magical Girl in her regular form. What's more, she has the propensity to attract all manners of bad fortune. It turns out that she attacked the Dark Realm with good intentions. (Source: Crunchyroll)",
+      "airdate": "2021-09-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1147,
+          "end": 1237
+        }
+      ],
+      "external_id": "301846"
+    },
+    {
+      "n": 7,
+      "title": "The Great Jahy Doesn't Play!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/301847/thumbnail/medium-4c572ac462c3ea5465b0d3e6d8707031.jpeg",
+      "synopsis": "The great Jahy is inspired to train her body so she can go up against the Magical Girl. While she does various drills with the boss, the latter casually drops the training once she reaches her weight loss goal. Reaffirmed that finding the mana crystals is the best and fastest way forward, Jahy redoubles her efforts there again. That's when a grade schooler passes by and offers Jahy help. (Source: Crunchyroll)",
+      "airdate": "2021-09-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 130
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1366
+        }
+      ],
+      "external_id": "301847"
+    },
+    {
+      "n": 8,
+      "title": "The Great Jahy Can't Bathe!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/301848/thumbnail/medium-80364961d7225ba332ad7e5ef7155ac8.jpeg",
+      "synopsis": "To do Druj a favor, the great Jahy agrees to give a speech. This is a good opportunity to make the extent of her power known, but Druj ruins it by stealing the show again and again. After that, Jahy is invited to a party and overjoyed as she relives the lavish excesses from the Dark Realm. However, once it's over, she is taken over by loneliness and pain. Jahy renews her vows to restore the Dark Realm. (Source: Crunchyroll)",
+      "airdate": "2021-09-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1380
+        }
+      ],
+      "external_id": "301848"
+    },
+    {
+      "n": 9,
+      "title": "Saurva Can't Catch a Break...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/301849/thumbnail/medium-0c6338cff50d3867ac1f54bb640362e3.jpeg",
+      "synopsis": "Saurva goes to the public bath to recover. However, isn't that Jahy, just beyond the steam? Because a fight there would be bad, Saurva does her best to hide her presence, but for some reason Jahy sits down next to her. To make matters worse, Jahy uses a ton of Saurva's precious shampoo, truly adding insult to injury. On another day, the great Jahy is at a home improvement center to buy a weapon against the Magical Girl. (Source: Crunchyroll)",
+      "airdate": "2021-10-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 138
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1380
+        }
+      ],
+      "external_id": "301849"
+    },
+    {
+      "n": 10,
+      "title": "The Magical Girl Will Not Lose",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/301850/thumbnail/medium-839242bb7519ea7cecf01ede97e46730.jpeg",
+      "synopsis": "The great Jahy is on the trail of the Magical Girl, Shinguu Kyouko. Kyouko is befallen by misfortune after misfortune, but she's frighteningly tough. The Magical Girl turns out to be a nice girl who hopes that everybody else can be happy if she just takes on all the misfortune. Hearing that gives the great Jahy mixed feelings. The only one to comfort and cheer up Jahy from feeling useless is Kokoro. (Source: Crunchyroll)",
+      "airdate": "2021-10-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 46,
+          "end": 137
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1247,
+          "end": 1341
+        }
+      ],
+      "external_id": "301850"
+    },
+    {
+      "n": 11,
+      "title": "The Landlord Can't Come Home...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/301851/thumbnail/medium-11d980078e0bfcbfe5f4dd6417199132.jpeg",
+      "synopsis": "As always, Jahy-sama can only paint herself in a positive light to Druj, so she ends up telling her that she's found and defeated the Magical Girl. On top of that, the landlord has gotten into a fight with her sister and moves into Jahy-sama's room. Having her around is a major pain, but Jahy-sama can't seem to get her to leave. The landlord does offer to do some chores, but she's even more useless than Jahy imagined! (Source: Crunchyroll)",
+      "airdate": "2021-10-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 160
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "301851"
+    },
+    {
+      "n": 12,
+      "title": "Kokoro-chan Will Not Betray?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/301852/thumbnail/medium-093d848a7bd9fc6ab2ad3b65951dfcee.jpeg",
+      "synopsis": "Saurva was busy again experimenting, this time she invents a potion that turns you into a dog, body and soul. However, she accidentally drinks it herself and turns into a cute black Shiba dog. In this form, she runs into the Landlord. While Saurva thought that she's a scary punk, the Landlord is actually quite kind to animals and Saurva gets away safely. On the other hand, Jahy-sama discovers a humongous chunk of the mana crystal on the street. However, thinking that it could be one of the Magical Girl's traps, she agonizes. (Source: Crunchyroll)",
+      "airdate": "2021-10-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 16,
+          "end": 106
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1172,
+          "end": 1262
+        }
+      ],
+      "external_id": "301852"
+    },
+    {
+      "n": 13,
+      "title": "Druj is Not Happy!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/301853/thumbnail/medium-1611445a9ce6998ed2c5f53d0d7df867.jpeg",
+      "synopsis": "Jahy-sama has come to help the uncle of the Boss and the Landlord at his sea shack. The uncle's hip going out, the sudden rain, the business drought all point to mana crystals. While Jahy-sama wants to immediately jump into recovering them, the beach guests getting into accidents and work get in the way. On another day, Jahy-sama is talking to Druj, but it seems every word is making Druj unhappier. Did all of her lies and deceits get uncovered? (Source: Crunchyroll)",
+      "airdate": "2021-10-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 59,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1254,
+          "end": 1344
+        }
+      ],
+      "external_id": "301853"
+    },
+    {
+      "n": 14,
+      "title": "The Magical Girl Will Not Fight!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/307800/thumbnail/medium-701675c9f4cfb54cb347cb375b798295.jpeg",
+      "synopsis": "The final battle with the Magical Girl is approaching. No matter how strong the opponent may be, there is no way that Jahy-sama would ever back down as she swore to restore the Dark Realm. The same holds true for the Magical Girl... or does it? Once face to face, talking reveals an unexpected sentiment behind the Magical Girl aka Shinguu Kyouko. (Source: Crunchyroll)",
+      "airdate": "2021-11-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 122
+        }
+      ],
+      "external_id": "307800"
+    },
+    {
+      "n": 15,
+      "title": "The Boss Cannot Decide!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/307801/thumbnail/medium-ec6d0796fb7b9ee2e593d35bc2d0da9b.jpeg",
+      "synopsis": "For some reason, Kyouko has an intense affinity for Jahy-sama, and keeps getting closer and closer. Apparently the Boss has also taken a liking to her, and before Jahy-sama realizes, Kyouko is working at the pub as well. Even though she's quite fed up with this, Jahy-sama can't help but show the newbie the ropes. This leads to Kyouko's affection for Jahy-sama increasing even further, fueling this vicious cycle even further. (Source: Crunchyroll)",
+      "airdate": "2021-11-13",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1380
+        }
+      ],
+      "external_id": "307801"
+    },
+    {
+      "n": 16,
+      "title": "The Dark Lord Doesn't Hold Back!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/307802/thumbnail/medium-f5cae15cca8b3c1e8a5abb4f9d60cb77.jpeg",
+      "synopsis": "For some inexplicable reason, Jahy-sama ends up having to introduce Kyouko to Druj. While she is thrilled to hear about the revival of the Demon Lord, Druj cannot stand that Kyouko is sitting next to Jahy-sama. She is supposed to be underling Number 1! Kyouko on the other hand maintains that she is Jahy-sama's friend, which only fans Druj's flames. Things escalate. Meanwhile, the Demon Lord was repeating the cycle of eating and sleeping at Kyouko's house. (Source: Crunchyroll)",
+      "airdate": "2021-11-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 134
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1380
+        }
+      ],
+      "external_id": "307802"
+    },
+    {
+      "n": 17,
+      "title": "The Great Jahy Can't Sleep...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/307803/thumbnail/medium-46abf46cc948175bd3a1c792fafe0958.jpeg",
+      "synopsis": "Even though Druj has been tremendously successful in the human world, enough to be called a celebrity, she is still haunted by a feeling of emptiness. The only one who can fill that void is Jahy-sama. When she gets to the pub, Druj sees Jahy-sama scold Kyouko again and again. Meanwhile, Jahy-sama was actually feeling exhausted from everything that has been happening. That's why she decides to buy a new futon to improve her sleep quality. (Source: Crunchyroll)",
+      "airdate": "2021-11-27",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1070,
+          "end": 1160
+        }
+      ],
+      "external_id": "307803"
+    },
+    {
+      "n": 18,
+      "title": "Saurva Will Not Lose!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/307804/thumbnail/medium-dae959e82722f8908568de574056f6b5.jpeg",
+      "synopsis": "Saurva is granted powers by a mysterious white light. Now it is time to get Jahy back everything! However, the powers are a complete mystery and Saurva can't control them properly. Later, Jahy-sama was wondering why Kokoro was ignoring her when she calls out to her. The Landlord suggests that Kokoro dislikes her now, which puts Jahy-sama's heart into a downward spiral of doubt. What is Kokoro's real reason? (Source: Crunchyroll)",
+      "airdate": "2021-12-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 59,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1380
+        }
+      ],
+      "external_id": "307804"
+    },
+    {
+      "n": 19,
+      "title": "The Demon Lord is Relentless?!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/307805/thumbnail/medium-62e7114bd5881d0c41869fdad53f3256.jpeg",
+      "synopsis": "The ultimate enemy has appeared before Jahy-sama! In order to protect the shopping district that she loves, Jahy-sama decides to casts aside all pride and asks Druj to help face this enemy. Druj then explains why she adores Jahy-sama all this much. To great detail, at that... Of course, danger is looming all this time! (Source: Crunchyroll)",
+      "airdate": "2021-12-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 14,
+          "end": 104
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1380
+        }
+      ],
+      "external_id": "307805"
+    },
+    {
+      "n": 20,
+      "title": "The Great Jahy Will Not Be Defeated!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/307806/thumbnail/medium-7af7c9e25fca7007741120480ad5ca03.jpeg",
+      "synopsis": "Somehow, the danger is past. Having saved some money, Jahy-sama decides to quit the pub and start her own business. Having taken no harm, the shopping district proceeds to put on the summer festival. Jahy-sama doens't know what these festivals are about, but between shrine carrying, getting prizes, it seems to be an event worth participating in. Since Kokoro is also asking, Jahy-sama decides to be a member of the shrine-carrying team of kids. (Source: Crunchyroll)",
+      "airdate": "2021-12-18",
+      "markers": [],
+      "external_id": "307806"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

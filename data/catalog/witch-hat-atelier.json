@@ -1,0 +1,217 @@
+{
+  "id": "witch-hat-atelier",
+  "title": "Witch Hat Atelier",
+  "native": "とんがり帽子のアトリエ",
+  "year": 2026,
+  "rating": 8.5,
+  "season": "Spring 2026",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx147105-rwOX8qyUy8gV.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx147105-rwOX8qyUy8gV.jpg",
+  "accent": "#0d8693",
+  "synopsis": "In a world where everyone takes wonders like magic spells and dragons for granted, Coco is a girl with a simple dream: she wants to be a witch. But everybody knows magicians are born, not made, and Coco was not born with a gift for magic. Resigned to her un-magical life, Coco is about to give up on her dream to become a witch … until the day she meets Qifrey, a mysterious, traveling magician. After secretly seeing Qifrey perform magic in a way she’s never seen before, Coco soon learns what everybody “knows” might not be the truth, and discovers that her magical dream may not be as far away as it may seem... \n\n(Source: Kodansha USA) \n\nNote: Tongari Boushi no Atelier episode 2 was streamed a week in advance on Crunchyroll, ABEMA, and Netflix, alongside episode 1. Streaming is one week ahead of the TV broadcast.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "witch-hat-atelier-e8kzo0",
+    "mal": 51553,
+    "anilist": 147105,
+    "kitsu": 46043
+  },
+  "skip_key_id": 51553,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "witch hat atelier とんか り帽子のアトリエ ona finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Magic That Started Everything",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329875/thumbnail/0bbd17376e4fe4f6b4628d98d7d11f44.jpg",
+      "synopsis": "Coco, a girl fascinated by magic, meets Qifrey and discovers the secrets of witches.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-04-06",
+      "markers": [],
+      "external_id": "329875"
+    },
+    {
+      "n": 2,
+      "title": "The School of the Grassland",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329876/thumbnail/834e1e519367c5a4bb782c2826186b93.jpg",
+      "synopsis": "Coco meets her fellow students and starts to learn the fundamentals of magic.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-04-06",
+      "markers": [],
+      "external_id": "329876"
+    },
+    {
+      "n": 3,
+      "title": "The Dadah Range Test",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329877/thumbnail/1a57f2ef1686d29b346e02ad7d7af3a4.jpg",
+      "synopsis": "While Qifrey is away, Agott pushes Coco into taking a dangerous test.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-04-13",
+      "markers": [],
+      "external_id": "329877"
+    },
+    {
+      "n": 4,
+      "title": "Meetings in Kalhn",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329878/thumbnail/0db0ec3a74c84fedb23966fd8cdef39a.jpg",
+      "synopsis": "Qifrey takes Coco to the witches' town of Kalhn, where she has an unexpected encounter.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-04-20",
+      "markers": [],
+      "external_id": "329878"
+    },
+    {
+      "n": 5,
+      "title": "The Dragon's Labyrinth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329879/thumbnail/bf70bc4880554e467d772cd4a883d710.jpg",
+      "synopsis": "The four apprentice witches strive to find a solution to their calamitous situation.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-04-27",
+      "markers": [],
+      "external_id": "329879"
+    },
+    {
+      "n": 6,
+      "title": "A Light on a Rainy Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329880/thumbnail/7db35542b2313cfffcfe4b4e760bc76f.jpg",
+      "synopsis": "On a rainy day, the apprentices enjoy a picnic outside and meet their Watchful Eye.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-04",
+      "markers": [],
+      "external_id": "329880"
+    },
+    {
+      "n": 7,
+      "title": "Who Is Magic For?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329881/thumbnail/be30ed632a57fa4943aa9fbba7d627f6.jpg",
+      "synopsis": "The apprentices are allowed to come along on a dangerous rescue mission.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-11",
+      "markers": [],
+      "external_id": "329881"
+    },
+    {
+      "n": 8,
+      "title": "The Misgivings of the Knights Moralis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329882/thumbnail/4ad4ba6712b75683fc8624e21ad4c605.jpg",
+      "synopsis": "When the Knights Moralis arrive, Coco and Agott must deal with the aftermath of their actions.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-18",
+      "markers": [],
+      "external_id": "329882"
+    },
+    {
+      "n": 9,
+      "title": "A Nightmare Stained in Black",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329883/thumbnail/0340fc30af6d773b3fe7339275ff6ec6.jpg",
+      "synopsis": "Qifrey investigates a new clue to the Brimmed Caps while Coco continues to struggle with guilt.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-05-25",
+      "markers": [],
+      "external_id": "329883"
+    },
+    {
+      "n": 10,
+      "title": "A Promise in Silver",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329884/thumbnail/fd5e67645a6e8082055cd53c2e93c98f.jpg",
+      "synopsis": "Coco lies ill in the hospital, while Tartah gains new self-confidence through magic.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-06-01",
+      "markers": [],
+      "external_id": "329884"
+    },
+    {
+      "n": 11,
+      "title": "The Test in the Serpentback Cave",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329885/thumbnail/db202b8824db41f37d1ad6a603b777de.png",
+      "synopsis": "Richeh reveals her distaste for spells that are not her own, while Agott gets the date for her second test.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-06-08",
+      "markers": [],
+      "external_id": "329885"
+    },
+    {
+      "n": 12,
+      "title": "The Shadow of Romonon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329886/thumbnail/cd8fa78e0e7521c13e3834df8c320e9e.jpg",
+      "synopsis": "Qifrey tells Coco the history of the Romonon cave, while Agott and the examinees face its topsy-turvy magic.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-06-15",
+      "markers": [],
+      "external_id": "329886"
+    },
+    {
+      "n": 13,
+      "title": "Forbidden Magic",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/329887/thumbnail/78825cd832f3c1e9942a463656d29616.jpg",
+      "synopsis": "Trapped in the Serpentback Cave, Agott, Richeh, and Euini face a terrifying threat from a Brimmed Cap witch.\n\n(Source: Crunchyroll)",
+      "airdate": "2026-06-22",
+      "markers": [],
+      "external_id": "329887"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kaze no Anthem (Anthem of Wind)",
+      "artist": "Eve feat. suis",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tada Utsukushii no Noroi (Just a Beautiful Curse)",
+      "artist": "Nakamura Hak",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Yoru ni Ukabu (夜に浮かぶ)",
+      "artist": "Nakamura Hak",
+      "episodes": "3, 5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Hikari (光り; Light)",
+      "artist": "Nakamura Hak",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

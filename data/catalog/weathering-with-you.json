@@ -1,0 +1,65 @@
+{
+  "id": "weathering-with-you",
+  "title": "Weathering With You",
+  "native": "天気の子",
+  "year": 2019,
+  "rating": 8.1,
+  "season": "Summer 2019",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx106286-5COcpd0J9VbL.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx106286-5COcpd0J9VbL.png",
+  "accent": "#5dbbe4",
+  "synopsis": "High school student Hodaka leaves his home on an isolated island and moves to Tokyo, but he immediately becomes broke. He lives his days in isolation, but finally finds a job as a writer for a shady occult magazine. After he starts his job, the weather has been rainy day after day. In a corner of the crowded and busy city, Hodaka meets a young woman named Hina. Due to certain circumstances, Hina and her younger brother live together, but have a cheerful and sturdy life. Hina also has a certain power: the power to stop the rain and clear the sky.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42028,
+    "anilist": 106286,
+    "mal": 38826,
+    "hianime": "weathering-with-you-cjr7wx"
+  },
+  "skip_key_id": 38826,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 02:36:47",
+  "search_text": "weathering with you 天気の子 movie finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Weathering With You (Movie)",
+      "runtime": "102:00",
+      "runtime_seconds": 6120,
+      "thumb": "https://animehot.cc/storage/media/2026/09/690a3277543081759bda6733-landscape.webp",
+      "synopsis": "Tokyo is currently experiencing rain showers that seem to disrupt the usual pace of everyone living there to no end. Amidst this seemingly eternal downpour arrives the runaway high school student Hodaka Morishima, who struggles to financially support himself—ending up with a job at a small-time publisher. At the same time, the orphaned Hina Amano also strives to find work to sustain herself and her younger brother.\n\nBoth fates intertwine when Hodaka attempts to rescue Hina from shady men, deciding to run away together. Subsequently, Hodaka discovers that Hina has a strange yet astounding power: the ability to call out the sun whenever she prays for it. With Tokyo's unusual weather in mind, Hodaka sees the potential of this ability. He suggests that Hina should become a \"sunshine girl\"—someone who will clear the sky for people when they need it the most.\n\nThings begin looking up for them at first. However, it is common knowledge that power always comes with a hefty price...",
+      "airdate": null,
+      "markers": [],
+      "external_id": "257756"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ai ni Dekiru koto wa Mada Arukai (Is there still anything that love can do?)",
+      "artist": "RADWIMPS",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

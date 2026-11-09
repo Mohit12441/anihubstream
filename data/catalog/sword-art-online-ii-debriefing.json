@@ -1,0 +1,53 @@
+{
+  "id": "sword-art-online-ii-debriefing",
+  "title": "Sword Art Online II: Debriefing",
+  "native": "ソードアート・オンライン II",
+  "year": 2014,
+  "rating": 6.7,
+  "season": "Year 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/9784/large.jpg",
+  "key_art": "https://media.kitsu.app/anime/cover_images/9784/large.jpg",
+  "accent": "#ff9420",
+  "synopsis": "Recap episode of the Phantom Bullet arc, also known as Episode 14.5.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sword-art-online-ii:-debriefing-stnll5",
+    "mal": 27891,
+    "kitsu": 9784
+  },
+  "skip_key_id": 27891,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "sword art online ii debriefing ソート アート オンライン ii",
+  "genres": [
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sword Art Online II: Debriefing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://cdn.myanimelist.net/images/anime/10/67587l.jpg",
+      "synopsis": "Recap episode of the Phantom Bullet arc, also known as Episode 14.5.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "156905"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

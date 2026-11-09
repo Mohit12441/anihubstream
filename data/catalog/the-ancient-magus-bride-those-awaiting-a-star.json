@@ -1,0 +1,77 @@
+{
+  "id": "the-ancient-magus-bride-those-awaiting-a-star",
+  "title": "The Ancient Magus' Bride: Those Awaiting a Star",
+  "native": "魔法使いの嫁 星待つひと",
+  "year": 2016,
+  "rating": 7.9,
+  "season": "Summer 2016",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21688-DOc6RxTYfXEr.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21688-DOc6RxTYfXEr.jpg",
+  "accent": "#c9f1f1",
+  "synopsis": "The three-part OVA series will chronicle a story taking place before Chise meets the Magus.\n\nChise Hatori has lived a life full of neglect and abuse, devoid of anything resembling love. Far from the warmth of family, she has had her share of troubles and pitfalls. Just when all hope seems lost, a fateful encounter awaits her. When a man with the head of a beast, wielding strange powers, obtains her through a slave auction, Chise's life will never be the same again.\n\n(Source: Seven Seas Entertainment)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11913,
+    "anilist": 21688,
+    "mal": 32902,
+    "hianime": "the-ancient-magus'-bride:-those-awaiting-a-star-zmygc2"
+  },
+  "skip_key_id": 32902,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": "2026-10-14 16:35:36",
+  "search_text": "the ancient magus bride those awaiting a star 魔法使いの嫁 星待つひと ova finished",
+  "genres": [
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hoshi Matsu Hito: Zenpen",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Chise is the student and future bride of the Thorn Sorcerer, Elias. They receive a package from Angelica in London: mostly textbooks, save for one special book.",
+      "airdate": "2016-09-10",
+      "markers": [],
+      "external_id": "182974"
+    },
+    {
+      "n": 2,
+      "title": "Hoshi Matsu Hito: Chuuhen",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The magician of the forest invites Chise into his library. Chise is reluctant at first, but they develop a strong friendship that would have a lasting influence on her.",
+      "airdate": "2017-03-10",
+      "markers": [],
+      "external_id": "182975"
+    },
+    {
+      "n": 3,
+      "title": "Hoshi Matsu Hito: Kouhen",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "2017-09-09",
+      "markers": [],
+      "external_id": "182976"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

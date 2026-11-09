@@ -1,0 +1,552 @@
+{
+  "id": "yona-of-the-dawn",
+  "title": "Yona of the Dawn",
+  "native": "暁のヨナ",
+  "year": 2014,
+  "rating": 7.9,
+  "season": "Fall 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20770-brCDvhTXlums.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20770-brCDvhTXlums.png",
+  "accent": "#f1bb50",
+  "synopsis": "Since Yona is the only princess of a grand kingdom, she has been raised with great care by her doting father and protected by her childhood friend/guard Hak and others. However, her fate changes on her 16th birthday, when her beloved cousin Soo-won murders her father to claim the throne. She flees the castle to Hak's hometown and begins her new life.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Akatsuki no Yona (Zoku-hen)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8648,
+    "anilist": 20770,
+    "mal": 25013,
+    "hianime": "yona-of-the-dawn-gvyzxs"
+  },
+  "skip_key_id": 25013,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": "2026-10-14 06:14:32",
+  "search_text": "yona of the dawn 暁のヨナ tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Princess Yona",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/168045/original.jpg",
+      "synopsis": "Princess Yona of the Kingdom of Kouka, with her unusual red hair, has lived a comfortable life in Hiryuu Castle protected by her father King Il, who hates conflict, and her childhood friend and guard, the young general Hak. Yona is overjoyed when her cousin Soo-Won, whom she has loved since childhood, arrives for her sixteenth birthday banquet.",
+      "airdate": "2014-10-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 35,
+          "end": 120
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1405
+        }
+      ],
+      "external_id": "168045"
+    },
+    {
+      "n": 2,
+      "title": "Torn Bonds",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "“We'll go anywhere as long as it means you'll live.” As Yona is dazed by the sudden rebellion at the castle, Hak runs to her rescue. Also known as the “Thunder Beast of Kouka”, Hak protects Yona, and with a single lightning-quick strike from his blade, he dispatches the mercenaries attacking them one after another.",
+      "airdate": "2014-10-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 126
+        }
+      ],
+      "external_id": "198787"
+    },
+    {
+      "n": 3,
+      "title": "The Distant Sky",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "“I wish the three of us could have been sick and slept together forever...” Hak protects Princess Yona as they make their way through the mountains. Having lost her will, Yona is only able to follow behind Hak. Hak painfully watches Yona grow weaker.",
+      "airdate": "2014-10-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 50,
+          "end": 140
+        }
+      ],
+      "external_id": "198788"
+    },
+    {
+      "n": 4,
+      "title": "The Wind Clan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "“These are the final orders of Son-Hak, chief of the Wind Tribe.” At the end of their difficult escape, Yona and Hak arrive in Hak's hometown of Fuuga, the capital of the Wind Clan, where Yona receives a warm welcome.",
+      "airdate": "2014-10-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 139
+        }
+      ],
+      "external_id": "198789"
+    },
+    {
+      "n": 5,
+      "title": "Howl",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "“The red hair of what should have been the young and weak princess appeared to be a flame consuming her...” Hak is accused of murdering King Il. In order to protect Yona and the Wind Village, he gives up his title of chief and decides to wander alone.",
+      "airdate": "2014-11-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 52,
+          "end": 143
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1404
+        }
+      ],
+      "external_id": "198790"
+    },
+    {
+      "n": 6,
+      "title": "Red Hair",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "“I will restore Kouka Kingdom to the powerful kingdom of the previous kings. Should anyone stand in my way, even if he is a god, I will crush him underfoot!” Though Hak continues to fight off the soldiers pursuing him, a poison prevents him from fighting like his usual self.",
+      "airdate": "2014-11-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 31,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1406
+        }
+      ],
+      "external_id": "198791"
+    },
+    {
+      "n": 7,
+      "title": "God's Will",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "“If you want to live earnestly and cannot stop the hot blood from flowing through your veins, I will convey the voice of god to you.” Yona and Hak, covered in wounds from protecting the princess, are saved by the Priest Ik-Soo and his caretaker Yoon living on the valley floor.",
+      "airdate": "2014-11-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 50,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1405
+        }
+      ],
+      "external_id": "198792"
+    },
+    {
+      "n": 8,
+      "title": "The Chosen Door",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "“There are many books in this world I do not know. It makes me angry.” Ik-Soo suddenly announces he will travel with Yona and Hak to see the world. Yoon is upset and unable to contain his anger. Though Yona and Hak understand his feelings, they are unable to do anything but watch in silence.",
+      "airdate": "2014-11-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 22,
+          "end": 112
+        }
+      ],
+      "external_id": "198793"
+    },
+    {
+      "n": 9,
+      "title": "Shaking Resolve",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "“Drawing a bow means taking and losing lives. But Father, if I do not take a life... If I do not take a life, I cannot go on living.” The words of god conveyed to Yona through the priest Ik-Soo are to find the four Dragon Warriors of Kouka Kingdom's Legend of the Four Dragons.",
+      "airdate": "2014-12-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 71,
+          "end": 161
+        }
+      ],
+      "external_id": "198794"
+    },
+    {
+      "n": 10,
+      "title": "Anticipation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "“This person... This person is the master I have been hoping for...” Yona and her friends arrive in the village where the White Dragon lives. The proud villagers who have protected the power of the White Dragon and passed it down through generations of White Dragons believe Yona may be the descendant of the Hiryuu King who employed the first White Dragon when they see her red hair.",
+      "airdate": "2014-12-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 71,
+          "end": 161
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1420
+        }
+      ],
+      "external_id": "198795"
+    },
+    {
+      "n": 11,
+      "title": "The Dragon's Claw",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "“I want to support her. That delicate form on the verge of tears trying to be strong...” Joined by the White Dragon Ki-Ja, following his claim that Dragon Warriors can sense each other, Yona and her friends begin their search for the Blue Dragon. However, even with Ki-Ja's power, they are unable to determine his exact location.",
+      "airdate": "2014-12-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 169
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1420
+        }
+      ],
+      "external_id": "198796"
+    },
+    {
+      "n": 12,
+      "title": "Blindfolded Dragon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "“Listen, Blue Dragon! Your eyes are cursed. I will teach you how to control them, but you must never use them!” In their search for the Blue Dragon, Yona and her friends visit a hidden village carved from stone. Though Ki-Ja insists the Blue Dragon is there, the villagers claim there is no Blue Dragon.",
+      "airdate": "2014-12-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 137
+        }
+      ],
+      "external_id": "198797"
+    },
+    {
+      "n": 13,
+      "title": "Echoing Fear",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Though the Blue Dragon appears before the party, he immediately leaves. Yona tries to head deeper into the Blue Dragon's cave to speak with him again. Hak tries to stop her out of concern, but she is determined.",
+      "airdate": "2015-01-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 99,
+          "end": 189
+        }
+      ],
+      "external_id": "198798"
+    },
+    {
+      "n": 14,
+      "title": "Light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Yona and her companions are trapped when the cave collapses. The Blue Dragon appears to assist them, and together they begin digging through a cave wall that will lead them outside.",
+      "airdate": "2015-01-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 134
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1411
+        }
+      ],
+      "external_id": "198799"
+    },
+    {
+      "n": 15,
+      "title": "To a New Land",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "\"I need to become stronger so I don't lose Hak or anyone else. What can I do...?\" Yona names the Blue Dragon Sinha, or Moonlight, and he joins the group on its journey. While the group searches for the Green Dragon following Gija's guidance, they pass through a village abandoned by the king and generals. Yona is wounded by the miserable conditions and a villager's criticisms of her father King Il. Meanwhile, the new king Su-won travels with General Ju-do to the Earth Tribe capital of Chishin under General I Geun-tea's rule.",
+      "airdate": "2015-01-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 26,
+          "end": 116
+        }
+      ],
+      "external_id": "198800"
+    },
+    {
+      "n": 16,
+      "title": "War Games",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "\"Are those the eyes of a rabbit...?\" At Su-won's suggestion, a \"war game\" is held to provide entertainment at a festival. Su-won, Ju-do, and Geun-tea participate in the war game. Geun-tea, one of the best warriors in Kouka Kingdom, admires Su-won's father Yuhon, an exceptional warrior. Though he deems the laid back Su-won who is unlike his father a \"rabbit,\" during the war game, Geun-tea...",
+      "airdate": "2015-01-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 94,
+          "end": 184
+        }
+      ],
+      "external_id": "198801"
+    },
+    {
+      "n": 17,
+      "title": "The Pirates of Awa",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "\"I will run from my destiny... Even if King Hiryuu appears, I will kick him away.\" The Green Dragon's presence leads Yona and her companions to the Earth Tribe's port of Awa. However, the Green Dragon is constantly on the move, and the group is unable to track him down. When Hak heads into the town to purchase some items for Yun, he happens to rescue a young woman being harassed by officials with a young passer-by named Jeaha. Jeaha, one of the pirates who oppose the evil Lord Yan Kumji and his officials, takes a liking to Hak and follows him around.",
+      "airdate": "2015-02-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 30,
+          "end": 120
+        }
+      ],
+      "external_id": "198802"
+    },
+    {
+      "n": 18,
+      "title": "Ties",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "\"Captain Gigan is right... but... I have my own reasons for not backing down.\" Yona and her companions leave Sinha behind and head into town. They are unable to suppress their rage when they witness an official unjustly murder a child. Jeaha appears before the group. He tries to recruit Hak to replace the pirates injured in battle, but the moment he sees Yona, he feels the weight of his destiny as the Green Dragon. The freedom-loving Yona gives up on convincing Jeaha when he refuses to accompany her on her journey, but she asks to see Captain Gigan, the leader of the pirates who fight continuously against Awa's Lord Kumji and his officials.",
+      "airdate": "2015-02-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 24,
+          "end": 114
+        }
+      ],
+      "external_id": "198803"
+    },
+    {
+      "n": 19,
+      "title": "The Senjuso Test",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "\"Maybe it's because you don't really want her.\" Captain Gigan agrees to allow Yona to fight alongside her pirates if she is able to pick the \"senjuso,\" a rare medicinal herb growing in the middle of a sheer cliff, without anyone's assistance. Yona's companions try to talk her our of accepting such a dangerous task, but Hak, who understands Yona's emotions, desperately suppresses his desire to stop her. Jeaha leads Yona to the seaside cliff where the senjuso grows. She gathers her courage and begins walking down the narrow path. However, the gusting wind and waves relentlessly assault Yona...",
+      "airdate": "2015-02-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 14,
+          "end": 104
+        }
+      ],
+      "external_id": "198804"
+    },
+    {
+      "n": 20,
+      "title": "Chain of Courage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "\"Why are you always so reckless, Princess? Sometimes I wish I could tie you up...\" Sensing the impending battle against Kumji, the pirates steel their resolve. Meanwhile, Yona heads into the town for reconaissance with Jeaha and happens to spot Lord Kumji. Based on the stories of the townsfolk, Jeaha determines the day of Kumji's human trafficking deal with the Kai Empire, Kouka Kingdom's neighboring country. With Jeaha's report, the pirates immediately begin working on a strategy under Captain Gigan, when Yona suddenly says the unthinkable.",
+      "airdate": "2015-02-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 127,
+          "end": 217
+        }
+      ],
+      "external_id": "198805"
+    },
+    {
+      "n": 21,
+      "title": "Spark",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Yona and Yun, who willingly entered Kumji's store as bait to help rescue the captured women, successfully infiltrate the ship transporting the women, where Kumji appears before them.",
+      "airdate": "2015-03-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 46,
+          "end": 136
+        }
+      ],
+      "external_id": "198806"
+    },
+    {
+      "n": 22,
+      "title": "The Night History Is Made",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "\"Why? Why am I so afraid? She's just a little girl...\" While suffering injuries, Yona and Yun successfully complete their task, and Jeaha rushes to their aid to fight against hordes of attacking mercenaries. Watching Jeaha fights, Yun realizes how truly amazing those who possess the strength of the dragons are. Sinha joins the fray, and the mercenaries continue to fall. Meanwhile, Hak and Gija remain behind to fight with the pirates, overwhelming their enemies with extraordinary strength. Realizing he is at a disadvantage, Kumji tries to flee so he can recuperate...",
+      "airdate": "2015-03-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        }
+      ],
+      "external_id": "198807"
+    },
+    {
+      "n": 23,
+      "title": "Morning of Promise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "\"You're not the frail princess you used to be.\" Hope returns to Awa after defeating Yan Kumji, and the townsfolk and pirates throw an extravagant party to celebrate. Jeaha steels his resolve. Yona decides to leave Awa and conveys her desire to her companions.",
+      "airdate": "2015-03-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 146
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1420
+        }
+      ],
+      "external_id": "198808"
+    },
+    {
+      "n": 24,
+      "title": "From Now On",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "\"Miss, what do you want to do with the Four Dragons?\" Yona and her companions continue their journey to find the fourth and final \"Yellow Dragon\" when they encounter a traveler named Jeno. He is the \"Yellow Dragon\" they have been seraching for.",
+      "airdate": "2015-03-24",
+      "markers": [],
+      "external_id": "198809"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Akatsuki no Yona (暁のヨナ;Yona of the Dawn)",
+      "artist": "Kunihiko Ryo",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yoru (夜; Night)",
+      "artist": "vistlip",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Akatsuki no Hana (暁の華; Flower of the Dawn)",
+      "artist": "Cyntia",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Akatsuki (暁;Dawn)",
+      "artist": "Akiko Shikata",
+      "episodes": "15-24"
+    }
+  ],
+  "relations": []
+}

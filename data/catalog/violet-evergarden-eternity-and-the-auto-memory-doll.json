@@ -1,0 +1,102 @@
+{
+  "id": "violet-evergarden-eternity-and-the-auto-memory-doll",
+  "title": "Violet Evergarden: Eternity and the Auto Memory Doll",
+  "native": "ヴァイオレット・エヴァーガーデン 外伝~永遠と自動手記人形~",
+  "year": 2019,
+  "rating": 8.3,
+  "season": "Summer 2019",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx109190-e8mv1qdmpjLW.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx109190-e8mv1qdmpjLW.jpg",
+  "accent": "#e4e4a1",
+  "synopsis": "Violet Evergarden comes to a private women's academy to tutor Isabella in the ways of being a lady. Heir to the York family, Isabella feels trapped in this new and uncomfortable world. She still grieves for the only person to ever bring her happiness – now lost to her. Violet's lessons do give her a brief respite from the melancholy but with the absence of joy, how long does it take to truly heal?\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Violet Evergarden: the Movie (2020)",
+    "Violet Evergarden (2018)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42340,
+    "anilist": 109190,
+    "mal": 39741,
+    "hianime": "violet-evergarden:-eternity-and-the-auto-memory-doll-blntem"
+  },
+  "skip_key_id": 39741,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 09:43:34",
+  "search_text": "violet evergarden eternity and the auto memory doll ウ ァイオレット エウ ァーカ ーテ ン 外伝 永遠と自動手記人形 movie finished",
+  "genres": [
+    "drama",
+    "fantasy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Violet Evergarden: Eternity and the Auto Memory Doll (Movie)",
+      "runtime": "91:00",
+      "runtime_seconds": 5460,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a9d1c23991bc5fbd32f7dce-landscape.jpg",
+      "synopsis": "Violet Evergarden comes to a private women's academy to tutor Isabella in the ways of being a lady. Heir to the York family, Isabella feels trapped in this new and uncomfortable world. She still grieves for the only person to ever bring her happiness – now lost to her. Violet's lessons do give her a brief respite from the melancholy but with the absence of joy, how long does it take to truly heal?\n\n\n\n(Source: Funimation)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "264720"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Amy",
+      "artist": "Minori Chihara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sincerely",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Michishirube",
+      "artist": "Minori Chihara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sincerely",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Michishirube (Guidepost)",
+      "artist": "Minori Chihara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Believe in...",
+      "artist": "Aira Yuki",
+      "episodes": "9"
+    }
+  ],
+  "relations": []
+}

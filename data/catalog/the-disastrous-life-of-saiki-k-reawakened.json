@@ -1,0 +1,156 @@
+{
+  "id": "the-disastrous-life-of-saiki-k-reawakened",
+  "title": "The Disastrous Life of Saiki K.: Reawakened",
+  "native": "斉木楠雄のΨ難 Ψ始動編",
+  "year": 2019,
+  "rating": 8.1,
+  "season": "Fall 2019",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b112625-5Qi2PEQqITCa.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b112625-5Qi2PEQqITCa.jpg",
+  "accent": "#e45da1",
+  "synopsis": "Being an esper seems cool on TV, but in Saiki Kusuo's life as a normal teenager it's a real drag. The hit comedy manga returns in a new anime series!\n\n(Source: Netflix)\n\nNote: The first 5 episodes take place between Season 2 and the Final Arc. The last continues the story from the Final Arc.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "The Disastrous Life of Saiki K. Season 2 (2018)",
+    "The Disastrous Life of Saiki K. Season 3 (2018)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42623,
+    "anilist": 112625,
+    "mal": 40542,
+    "hianime": "the-disastrous-life-of-saiki-k.:-reawakened-orjcxj"
+  },
+  "skip_key_id": 40542,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": "2026-10-14 12:36:52",
+  "search_text": "the disastrous life of saiki k reawakened 斉木楠雄のψ難 ψ始動編 ona finished",
+  "genres": [
+    "comedy",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1242,
+          "end": 1357
+        }
+      ],
+      "external_id": "271395"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1241,
+          "end": 1357
+        }
+      ],
+      "external_id": "271396"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1241,
+          "end": 1357
+        }
+      ],
+      "external_id": "271397"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1241,
+          "end": 1357
+        }
+      ],
+      "external_id": "271398"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1241,
+          "end": 1357
+        }
+      ],
+      "external_id": "271399"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1241,
+          "end": 1357
+        }
+      ],
+      "external_id": "271400"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

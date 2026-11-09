@@ -1,0 +1,157 @@
+{
+  "id": "tsubasa-reservoir-chronicle-tokyo-revelations",
+  "title": "Tsubasa: Tokyo Revelations",
+  "native": "ツバサ TOKYO REVELATIONS",
+  "year": 2007,
+  "rating": 8,
+  "season": "Fall 2007",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2685-ZP46utTR0mv8.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2685-ZP46utTR0mv8.jpg",
+  "accent": "#e4ae86",
+  "synopsis": "Continuing their journey from Record Country (the place that held the book of memories), Syaoran and company land into Tokyo Country, a blood-filled country under war from opposing factions for natural resources and survival. While reluctantly involved in the race to live, the group faces their own problems as certain revelations are made, changing their journey forever.\n\nA shocking betrayal and a battle that risks all of their lives. After this revelation, they will never be the same again.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tsubasa-reservoir-chronicle:-tokyo-revelations-olhghp",
+    "mal": 2685,
+    "anilist": 2685,
+    "kitsu": 2447
+  },
+  "skip_key_id": 2685,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "tsubasa tokyo revelations ツハ サ tokyo revelations ova finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Magician's Message",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/41006/original.jpeg",
+      "synopsis": "The travelers arrive in a ravaged Tokyo and immediately find themselves in danger. Kamui grants them sanctuary after Syaoran is seriously injured. Yet, far away, another Syaoran stirs!",
+      "airdate": null,
+      "markers": [],
+      "external_id": "41006"
+    },
+    {
+      "n": 2,
+      "title": "The Young Man's Right Eye",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/41007/original.jpeg",
+      "synopsis": "All is not as it seems, as the travelers come face to face with Syaoran's dangerous duplicate! The encounter ends as quickly as it begins - but not before Fai feels the wrath of the clone's rage.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "41007"
+    },
+    {
+      "n": 3,
+      "title": "The Princess's Dream",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/41008/original.jpeg",
+      "synopsis": "Fai is near death, forcing Kurogane to take swift action. Later, after Yuko reveals the identity of the one responsible for scattering Sakura's memories, the travelers set out for a new world.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "41008"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubasa to Hotaru",
+      "artist": "Kanae Ito",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sonic Boom",
+      "artist": "Maaya Sakamoto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kioku no Mori",
+      "artist": "FictionJunction YUUKA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Synchronicity",
+      "artist": "Yui Makino",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "さいごの果実 (Saigo no Kajitsu)",
+      "artist": "Maaya Sakamoto",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "aerial",
+      "artist": "Kinya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Amurita",
+      "artist": "Yui Makino",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Blaze",
+      "artist": "Kinya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Loop",
+      "artist": "Maaya Sakamoto",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "IT'S",
+      "artist": "Kinya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kazemachi Jet",
+      "artist": "Maaya Sakamoto",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

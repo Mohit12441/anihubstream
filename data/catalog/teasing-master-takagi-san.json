@@ -1,0 +1,367 @@
+{
+  "id": "teasing-master-takagi-san",
+  "title": "Teasing Master Takagi-san",
+  "native": "からかい上手の高木さん",
+  "year": 2018,
+  "rating": 7.4,
+  "season": "Winter 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx99468-XayCplkIL3Gf.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99468-XayCplkIL3Gf.png",
+  "accent": "#50c9e4",
+  "synopsis": "Having a friend that knows you inside out should be a good thing, but in Nishikata's case, the opposite is true.\n\nHis classmate Takagi loves to tease him on a daily basis, and she uses her extensive knowledge of his behavior to predict exactly how he will react to her teasing, making it nearly impossible for Nishikata to ever make a successful comeback. Despite this, Nishikata vows to someday give Takagi a taste of her own medicine by making her blush out of embarrassment from his teasing.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "teasing-master-takagi-san-ev2lsg",
+    "mal": 35860,
+    "anilist": 99468,
+    "kitsu": 13635
+  },
+  "skip_key_id": 35860,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "teasing master takagi san からかい上手の高木さん tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Eraser / Day Duty / Funny Face / One Hundred Yen",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231987/original.jpg",
+      "synopsis": "Takagi-san is an expert when it comes to teasing Nishikata. Is there any way Nishikata can get back at her?",
+      "airdate": "2018-01-08",
+      "markers": [],
+      "external_id": "231987"
+    },
+    {
+      "n": 2,
+      "title": "Calligraphy / Seasonal Change of Clothing / English Translation / Pool",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231988/original.jpg",
+      "synopsis": "Nishikata doesn't know what to write for his calligraphy class, so Takagi-san suggests they should both write what they want from each other.\nNishikata wants Takagi-san to stop teasing him, of course, but what does Takagi-san want from Nishikata?",
+      "airdate": "2018-01-15",
+      "markers": [],
+      "external_id": "231988"
+    },
+    {
+      "n": 3,
+      "title": "Coffee / Empty Can / Soda / Muscle Training / Dubbing / Umbrella",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231989/original.jpg",
+      "synopsis": "Mina believes she’s mature enough to enjoy coffee, but Yukari and Sanae think otherwise. On a rainy day, Takagi-san has forgotten her umbrella. Nishikata to the rescue?",
+      "airdate": "2018-01-22",
+      "markers": [],
+      "external_id": "231989"
+    },
+    {
+      "n": 4,
+      "title": "Cleaning Duty / Kickover / Cold / Tailing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231990/original.jpg",
+      "synopsis": "Nishikata is put on cleaning duty as a punishment for interrupting class. As he goes to the cleaning supply storage, Takagi-san is there! Was she put on cleaning duty too?",
+      "airdate": "2018-01-29",
+      "markers": [],
+      "external_id": "231990"
+    },
+    {
+      "n": 5,
+      "title": "Studying for the Test / Test / Test Results / Bookstore / Shelter from the Rain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231991/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-02-05",
+      "markers": [],
+      "external_id": "231991"
+    },
+    {
+      "n": 6,
+      "title": "Tandem Riding / First Day of Summer Vacation / Test of Courage / Summer Science Project / Water Tap",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231993/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-02-12",
+      "markers": [],
+      "external_id": "231993"
+    },
+    {
+      "n": 7,
+      "title": "Shopping / Swimsuit / Ocean / Room",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231994/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-02-19",
+      "markers": [],
+      "external_id": "231994"
+    },
+    {
+      "n": 8,
+      "title": "Typhoon / Marathon / Ribs / Regret",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231995/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-02-26",
+      "markers": [],
+      "external_id": "231995"
+    },
+    {
+      "n": 9,
+      "title": "Cell Phone / Horror / Photo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231996/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-03-05",
+      "markers": [],
+      "external_id": "231996"
+    },
+    {
+      "n": 10,
+      "title": "Who's Taller? / I Hate the Cold / Invitation / Two-Choice Question",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231997/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-03-12",
+      "markers": [],
+      "external_id": "231997"
+    },
+    {
+      "n": 11,
+      "title": "Cat / Taste / Portrait / Fortune Telling / Critical",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231998/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-03-19",
+      "markers": [],
+      "external_id": "231998"
+    },
+    {
+      "n": 12,
+      "title": "Letter / First Day of School / Seating Arrangement",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232043/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-03-26",
+      "markers": [],
+      "external_id": "232043"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Massugu",
+      "artist": "Yuiko Ohara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yume De Aetara (夢で逢えたら)",
+      "artist": "Rie Takahashi",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Zero Centimeter (ゼロセンチメートル)",
+      "artist": "Yuiko Ohara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kanade (奏（かなで）)",
+      "artist": "Rie Takahashi",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Iwanai kedo ne",
+      "artist": "Yuiko Ōhara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kimagure Romantic (気まぐれロマンティック)",
+      "artist": "Rie Takahashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kimagure Romantic (気まぐれロマンティック)",
+      "artist": "Rie Takahashi",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Over Drive",
+      "artist": "Rie Takahashi",
+      "episodes": "2-3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Konayuki (粉雪)",
+      "artist": "Rie Takahashi",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "AM11:00",
+      "artist": "Rie Takahashi",
+      "episodes": "3-4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Himawari no Yakusoku (ひまわりの約束)",
+      "artist": "Rie Takahashi",
+      "episodes": "4-5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Kiseki (キセキ)",
+      "artist": "Rie Takahashi",
+      "episodes": "3-4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Jitensha (自転車)",
+      "artist": "Rie Takahashi",
+      "episodes": "5-6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Gakuen Tengoku (学園天国)",
+      "artist": "Rie Takahashi feat. Class 2-2",
+      "episodes": "6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Arigatou (ありがとう)",
+      "artist": "Rie Takahashi",
+      "episodes": "5-6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Kaze Fukeba Koi (風吹けば恋)",
+      "artist": "Rie Takahashi",
+      "episodes": "7-8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Joyful (じょいふる)",
+      "artist": "Rie Takahashi",
+      "episodes": "7-8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "STARS",
+      "artist": "Rie Takahashi",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Chiisana Koi no Uta (小さな恋のうた)",
+      "artist": "Rie Takahashi",
+      "episodes": "9-10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Santa Claus Is Comin' to Town (サンタが町にやってくる)",
+      "artist": "Rie Takahashi",
+      "episodes": "9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Anata ni (あなたに)",
+      "artist": "Rie Takahashi",
+      "episodes": "8-9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Ai Uta (愛唄)",
+      "artist": "Rie Takahashi",
+      "episodes": "11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Snow Magic Fantasy (スノーマジックファンタジー)",
+      "artist": "Rie Takahashi",
+      "episodes": "10-11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Iwanai kedo ne. (言わないけどね。)",
+      "artist": "Rie Takahashi",
+      "episodes": "10-11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Deatta Koro no You ni (出逢った頃のよう)",
+      "artist": "Rie Takahashi",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Hana (花)",
+      "artist": "Rie Takahashi",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Yasashii Kimochi (やさしい気持ち)",
+      "artist": "Rie Takahashi",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

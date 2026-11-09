@@ -1,0 +1,318 @@
+{
+  "id": "uzamaid",
+  "title": "UzaMaid!",
+  "native": "うちのメイドがウザすぎる！",
+  "year": 2018,
+  "rating": 6.5,
+  "season": "Fall 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx101506-uY2udopqvdYp.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx101506-uY2udopqvdYp.jpg",
+  "accent": "#5dbbe4",
+  "synopsis": "Misha is a little girl who lost her mother at an early age, and now lives with her father. Her father employs a maid named Tsubame, who was a former Self-Defense Force official, and is also a lolicon.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 41209,
+    "anilist": 101506,
+    "mal": 37722
+  },
+  "skip_key_id": 37722,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-22 08:26:11",
+  "search_text": "uzamaid うちのメイト か ウサ すき る tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Our Maid Is Too Annoying!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254473/original.jpg",
+      "synopsis": "Kamoi Tsubame is looking for a job, but she can’t find exactly what she’s looking for. Depressed, she goes to find the house of a cute young Russian-speaking girl she had seen before. The house’s backyard seems to be in disrepair, but she notices a sign on the wall saying they need a maid...",
+      "airdate": "2018-10-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 95,
+          "end": 185
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1380
+        }
+      ],
+      "external_id": "254473"
+    },
+    {
+      "n": 2,
+      "title": "My Maid Kidnapped Me",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254474/original.jpg",
+      "synopsis": "Tsubame is now the Takanashi’s maid. She sees Misha playing games all the time, even though it’s summer break. Tsubame wants to become friends with Misha no matter the cost, but she can’t figure out a way. Then, she decides to play the same game as Misha...",
+      "airdate": "2018-10-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1380
+        }
+      ],
+      "external_id": "254474"
+    },
+    {
+      "n": 3,
+      "title": "My Maid Is Sneaking Up On Me",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254981/original.jpg",
+      "synopsis": "Tsubame was having fun being a made for Misha, but after seeing children wearing their backpacks, she remembered that Misha should be going to school, as well. She asks Misha why she isn’t going to school, and Misha insists it’s because she’s Russian, but...",
+      "airdate": "2018-10-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1380
+        }
+      ],
+      "external_id": "254981"
+    },
+    {
+      "n": 4,
+      "title": "My Maid Reveres Young Girls",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254982/original.jpg",
+      "synopsis": "Yasuhiro doesn't seem to be coming home, and Tsubame doesn't come on weekends, so Misha is looking forward to have a lot of fun on her own... But Tsubame shows up anyway. Yasuhiro is going to be busy with work, so Tsubame will be spending the night. Misha also has an assignment she needs to finish...",
+      "airdate": "2018-10-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1380
+        }
+      ],
+      "external_id": "254982"
+    },
+    {
+      "n": 5,
+      "title": "My Maid Is Everywhere",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254983/original.jpg",
+      "synopsis": "Yui has been the cutest girl in the class this whole time—that is, until Misha comes back to school. Everyone calls Misha “a true beauty”, and that’s something Yui cannot just abide. Eventually Yui ends up getting into a fight with Misha when she tries to get scouted out on the streets...",
+      "airdate": "2018-11-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 63,
+          "end": 153
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1380
+        }
+      ],
+      "external_id": "254983"
+    },
+    {
+      "n": 6,
+      "title": "Our Maid's Girl From The Past?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254984/original.jpg",
+      "synopsis": "Misha is heading home when all of a sudden she runs into a tall woman wearing goth lolita-style clothing. Misha gets scared and calls over a police officer who ends up chasing the woman, but the mysterious woman turns out to be someone from Tsubame’s past...",
+      "airdate": "2018-11-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 26,
+          "end": 116
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1380
+        }
+      ],
+      "external_id": "254984"
+    },
+    {
+      "n": 7,
+      "title": "My Maid Doesn’t Come Anymore",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254985/original.jpg",
+      "synopsis": "Misha hires Midori to be her maid, and tells Tsubame that she’s going to be fired. Tsubame accepts this rather readily, and takes her leave. Misha starts to feel bad, and then she finally has a chance to taste Midori’s food. Everything did not go as expected.",
+      "airdate": "2018-11-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 22,
+          "end": 112
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1380
+        }
+      ],
+      "external_id": "254985"
+    },
+    {
+      "n": 8,
+      "title": "My Former Maid Is From A Good Family",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254986/original.jpg",
+      "synopsis": "Midori will be working at Misha’s house as a maid for a little while along side Tsubame. One day, as Midori tries to head home, a car comes to pick her up. Midori’s current living in a high-end hotel that’s owned by her parents. Misha gets wind of this and decides she wants to spend a night at Midori’s. They convince Yasuhiro and everyone goes to stay over, but...",
+      "airdate": "2018-11-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 169,
+          "end": 259
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1380
+        }
+      ],
+      "external_id": "254986"
+    },
+    {
+      "n": 9,
+      "title": "My Maid And The Day We Met",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254987/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-11-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 87,
+          "end": 177
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1380
+        }
+      ],
+      "external_id": "254987"
+    },
+    {
+      "n": 10,
+      "title": "My Maid And Yasuhiro",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254988/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-12-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 119,
+          "end": 209
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1380
+        }
+      ],
+      "external_id": "254988"
+    },
+    {
+      "n": 11,
+      "title": "My Maid And The Forbidden Room",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254989/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-12-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1380
+        }
+      ],
+      "external_id": "254989"
+    },
+    {
+      "n": 12,
+      "title": "My Maid Now And Forever",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254990/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-12-21",
+      "markers": [],
+      "external_id": "254990"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

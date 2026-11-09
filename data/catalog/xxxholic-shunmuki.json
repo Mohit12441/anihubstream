@@ -1,0 +1,68 @@
+{
+  "id": "xxxholic-shunmuki",
+  "title": "xxxHOLiC Shunmuki",
+  "native": "×××HOLiC 春夢記",
+  "year": 2009,
+  "rating": 7.7,
+  "season": "Winter 2009",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b4918-hRZQMbu5Mnmm.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b4918-hRZQMbu5Mnmm.jpg",
+  "accent": "#a150e4",
+  "synopsis": "Tsubasa/xxxHOLiC project.\n\nA 4 part OVA consisting of two OVAs for each series, with plots linked together. Direct sequel to the events on xxxHOLiC - Kei, with special guests.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "xxxholic-shunmuki-9g018t",
+    "mal": 4918,
+    "anilist": 4918,
+    "kitsu": 3848
+  },
+  "skip_key_id": 4918,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "xxxholic shunmuki holic 春夢記 ova finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Volume 1",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "Watanuki and Doumeki enjoy meal and drinks with the fortune teller, where Kohane is staying. There, it's explained that everyone changes with every meeting they experience with others, and that all four there, and even Yuuko, have changed from meeting Watanuki. Later on, Haruka and Watanuki meet in a dream, in which Haruka asks Watanuki to look for something in the temple's storeroom. However, as they look around, they seemed to have stepped into the realm within the book by accident.",
+      "airdate": "2009-02-17",
+      "markers": [],
+      "external_id": "63968"
+    },
+    {
+      "n": 2,
+      "title": "Volume 2",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "Watanuki and Doumeki continue to search for the four items that Haruka requested. There is a notable change in Watanuki, as he acts like he appreciates Doumeki for once. Watanuki manages to find and unlock the items as Haruka had requested, which leads to an encounter with someone close to him. Later, Watanuki finds Yuuko and vows to grant her wish.",
+      "airdate": "2009-06-23",
+      "markers": [],
+      "external_id": "63969"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

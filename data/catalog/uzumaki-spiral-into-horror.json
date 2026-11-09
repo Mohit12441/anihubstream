@@ -1,0 +1,90 @@
+{
+  "id": "uzumaki-spiral-into-horror",
+  "title": "Uzumaki",
+  "native": "うずまき",
+  "year": 2024,
+  "rating": 5.4,
+  "season": "Fall 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx111314-ui2D6cvpNumy.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx111314-ui2D6cvpNumy.jpg",
+  "accent": "#ff9420",
+  "synopsis": "Kurozu-cho, a small fogbound town on the coast of Japan, is cursed. According to Shuichi Saito, the withdrawn boyfriend of teenager Kirie Goshima, their town is haunted not by a person or being but by a pattern: uzumaki, the spiral, the hypnotic secret shape of the world. It manifests itself in small ways: seashells, ferns, whirlpools in water, whirlwinds in air. And in large ways: the spiral marks on people's bodies, the insane obsessions of Shuichi's father, the voice from the cochlea in your inner ear. As the madness spreads, the inhabitants of Kurouzu-cho are pulled ever deeper, as if into a whirlpool from which there is no return...\n\n(Source: VIZ Media)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "uzumaki:-spiral-into-horror-bjuciq",
+    "mal": 40333,
+    "anilist": 111314,
+    "kitsu": 42525
+  },
+  "skip_key_id": 40333,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": null,
+  "search_text": "uzumaki うす まき tv finished",
+  "genres": [
+    "drama",
+    "horror",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "\"Episode 1\"",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/276834/thumbnail/002a319b3f8f3fdbd0596902e4d6f1ec.jpg",
+      "synopsis": "As Shuichi urges Kirie to escape the town with him, the real \"spiral\" horror begins.\n\n(Source: Max)",
+      "airdate": "2024-09-29",
+      "markers": [],
+      "external_id": "276834"
+    },
+    {
+      "n": 2,
+      "title": "\"Episode 2\"",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/276835/thumbnail/c8ed272a06d1f097a4e138ff1ae6052c.jpg",
+      "synopsis": "Hair twisting, bodies intertwining, spirals are developing all over the town.\n\n(Source: Max)",
+      "airdate": "2024-10-06",
+      "markers": [],
+      "external_id": "276835"
+    },
+    {
+      "n": 3,
+      "title": "\"Episode 3\"",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/293427/thumbnail/501c0501ba0bc9526bffeae58b31493e.jpg",
+      "synopsis": "Kurouzu Hospital is in an uproar. Bloodthirsty pregnant women and creepy babies are surrounding Kirie, and her life is in danger.\n\n(Source: Max)",
+      "airdate": "2024-10-13",
+      "markers": [],
+      "external_id": "293427"
+    },
+    {
+      "n": 4,
+      "title": "\"Episode 4\"",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/293428/thumbnail/97a5a53273efd0dad9eb6d5d8f373419.jpg",
+      "synopsis": "The curse of the spirals is destroying the town and taking peoples' minds with it. The chaos reaches a fever pitch.\n\n(Source: Max)",
+      "airdate": "2024-10-20",
+      "markers": [],
+      "external_id": "293428"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,543 @@
+{
+  "id": "the-heroic-legend-of-arslan",
+  "title": "The Heroic Legend of Arslan",
+  "native": "アルスラーン戦記 (TV)",
+  "year": 2015,
+  "rating": 7.3,
+  "season": "Spring 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20935-jCAXBOuei2T8.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20935-jCAXBOuei2T8.jpg",
+  "accent": "#2f7bff",
+  "synopsis": "The manga’s story: In the prosperous kingdom of Pars lies the Royal Capital of Ecbatana, a city of splendor and wonder, ruled by the undefeated and fearsome King Andragoras. Arslan is the young and curious prince of Pars who, despite his best efforts, doesn't seem to have what it takes to be a proper king like his father.\n\nAt the age of 14, Arslan goes to his first battle and loses everything as the blood-soaked mist of war gives way to scorching flames, bringing him to face the demise of his once glorious kingdom. However, it is Arslan's destiny to be a ruler, and despite the trials that face him, he must now embark on a journey to reclaim his fallen kingdom.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "The Heroic Legend of Arslan: Dust Storm Dance (2016)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 9972,
+    "anilist": 20935,
+    "mal": 28249,
+    "hianime": "the-heroic-legend-of-arslan-yxa1v0"
+  },
+  "skip_key_id": 28249,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": "2026-10-14 16:05:22",
+  "search_text": "the heroic legend of arslan アルスラーン戦記 tv tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Glory of Ecbatana",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Prince Arslan from the Kingdom of Pars finds himself into a predicament when a young prisoner from the nation of Lusitania holds him hostage in an attempt to escape.",
+      "airdate": "2015-04-05",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1363,
+          "end": 1440
+        }
+      ],
+      "external_id": "176117"
+    },
+    {
+      "n": 2,
+      "title": "Age Fourteen, Maiden Battle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Now fourteen years old, Arslan takes part in his first battle against Lusitania, and all odds seem at the Parsian army's favor, until his father, the King Andragoras III, falls victim to treason by Kharlan, one of his generals.",
+      "airdate": "2015-04-12",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1364,
+          "end": 1440
+        }
+      ],
+      "external_id": "176118"
+    },
+    {
+      "n": 3,
+      "title": "The Knight in Black",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Arslan is rescued by his loyal servant Daryun and they must run away from the Lusitanian forces, led by the General Silvermask, who ambushes and captures his father personally.",
+      "airdate": "2015-04-19",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1364,
+          "end": 1440
+        }
+      ],
+      "external_id": "176119"
+    },
+    {
+      "n": 4,
+      "title": "The World-Weary Strategist",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Arslan and Daryun seek the help of the retired tactician Narsus, but convincing him to join their cause will not be an easy task.",
+      "airdate": "2015-04-26",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1363,
+          "end": 1440
+        }
+      ],
+      "external_id": "176120"
+    },
+    {
+      "n": 5,
+      "title": "The Royal Capital Burns (Part One)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "While Arslan and Daryun enlist Narsus' help, Lusitania begins their siege in the royal capital of Ecbatana. Shapur is tortured by Bodin as an example for the \"pagans\" of Pars, but requests to be killed by one of Pars' archers. Listening to his request, he is killed by a mysterious man, who is called by queen Tahamine to be rewarded for his feat. Meanwhile, Lusitania convinces the slaves of Pars to open the city gates for them, promising to make them free men.",
+      "airdate": "2015-05-03",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1366,
+          "end": 1440
+        }
+      ],
+      "external_id": "176121"
+    },
+    {
+      "n": 6,
+      "title": "The Royal Capital Burns (Part Two)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Gieve escapes Ecbatana after having a clash with Silvermask, who makes use of the underground tunnels to strike the palace from within, while the Lusitanian forces, assisted by the slaves, break into the capital and conquer it.",
+      "airdate": "2015-05-10",
+      "markers": [],
+      "external_id": "176122"
+    },
+    {
+      "n": 7,
+      "title": "The Beauties and the Beasts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As the Lusitanian army plunders the capital, Gieve meets the beautiful priestess Farangies, who is in search for Arslan. Upon knowing that Kharlan intends to raid the nearby villages in order to capture them, Arslan and his companions decide to take the fight to the enemy.",
+      "airdate": "2015-05-17",
+      "markers": [],
+      "external_id": "176123"
+    },
+    {
+      "n": 8,
+      "title": "The Treasonus Hero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kharlan continues his pursuit of Arslan, unaware that he fell for Narsus' scheme and his forces are ambushed in an unfavourable terrain, where Arslan's party meets Gieve and Farangis, who join their cause as well. Meanwhile at the capital, Silvermask confronts the captive King Andragoras, revealing his identity and motives.",
+      "airdate": "2015-05-24",
+      "markers": [],
+      "external_id": "176124"
+    },
+    {
+      "n": 9,
+      "title": "Beneath the Mask",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Daryun and Narsus infiltrate the capital in search for information, coming across Silvermask in the occasion, while Arslan has another encounter with the runaway prisoner he met years before.",
+      "airdate": "2015-05-31",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1362,
+          "end": 1440
+        }
+      ],
+      "external_id": "176125"
+    },
+    {
+      "n": 10,
+      "title": "The Lord and Master of Kashan Fortress",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Arslan and his subjects seek refuge in the Kashan Fortress, governed by Lord Hodir, but it does not take long for the party to realize Hodir's true intentions for sheltering them.",
+      "airdate": "2015-06-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 95,
+          "end": 185
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1349,
+          "end": 1439
+        }
+      ],
+      "external_id": "176126"
+    },
+    {
+      "n": 11,
+      "title": "The Road to Peshawar",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "On their way to the stronghold at Peshawar, Arslan's party is pursued by a force led by Xandes, Kharlan's son who seeks to avenge his father and they are forced to split up.",
+      "airdate": "2015-06-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 139,
+          "end": 229
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1364,
+          "end": 1440
+        }
+      ],
+      "external_id": "176127"
+    },
+    {
+      "n": 12,
+      "title": "A Knight's Loyalty",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Silvermask slaughters a band of thieves and when the leader's daughter is about to be killed as well, Narsus appears to rescue her. Meanwhile, the rest of Arslan's party regroups and fights Xandes' forces, including the mysterious sorcerer that aids him.",
+      "airdate": "2015-06-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 138
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1363,
+          "end": 1440
+        }
+      ],
+      "external_id": "176128"
+    },
+    {
+      "n": 13,
+      "title": "Two Princes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Arslan and his companions reach Peshawar in safety, but there is some discord among the generals regarding the prince's request for aid. Uncertain if he is up to the task of liberating the kingdom, Arslan is attacked by Silvermask.",
+      "airdate": "2015-06-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 122,
+          "end": 212
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1360,
+          "end": 1440
+        }
+      ],
+      "external_id": "176129"
+    },
+    {
+      "n": 14,
+      "title": "The Foreign Prince",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Taking advantage of the crisis in Pars, Prince Rajendra from the Kingdom of Shindra commands an army to take over Peshawar, just to be defeated and captured by Arslan's subjects thanks to another of Narsus' stratagems. Knowing that Rajendra is contending for the throne of his own country with his older brother, Arslan convinces him to form an alliance.",
+      "airdate": "2015-07-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 65,
+          "end": 155
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1295,
+          "end": 1384
+        }
+      ],
+      "external_id": "176130"
+    },
+    {
+      "n": 15,
+      "title": "The Black Leopard of Sindhura",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Arslan and his subjects assist Rajendra's campaign to overthrow his brother and Jaswant, a Shindran guide is introduced to them. However, Jaswant is not who he claims to be, but it does not take long for the party to realize that for their own advantage.",
+      "airdate": "2015-07-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 172,
+          "end": 262
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1261,
+          "end": 1350
+        }
+      ],
+      "external_id": "176131"
+    },
+    {
+      "n": 16,
+      "title": "Elegy for the Setting Sun",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Gadevi commands his army to bring down Arslan and Rajendra's alliance. Believing that he got the Parsian forces isolated, Gadevi sends his main force against Rajendra's, gaining the upper hand, until the Parsians, having outsmarted their enemies once again, join the battle as well to turn the tables on him.",
+      "airdate": "2015-07-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 97,
+          "end": 187
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1347,
+          "end": 1436
+        }
+      ],
+      "external_id": "176132"
+    },
+    {
+      "n": 17,
+      "title": "The Duel Before the Gods",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A duel is called by the king to settle the dispute between the two princes. Daryun, chosen as Rajendra's proxy, battles Bahadur, a massive and vicious warrior released by Gadevi from prison to be his representative, and wins. However, Gadevi, not pleased with the result, turns against his own father and Arslan's party must fight for their lives amidst the chaos ensued.",
+      "airdate": "2015-08-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 96,
+          "end": 186
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1347,
+          "end": 1430
+        }
+      ],
+      "external_id": "176133"
+    },
+    {
+      "n": 18,
+      "title": "Once Again Across the River",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Following his father's death and his brother's execution, Rajendra is crowned the king of Shindra. Arslan and his company then return home with their army, but Rajendra decides to repay all the help he received from them with one last act of treason.",
+      "airdate": "2015-08-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 31,
+          "end": 121
+        }
+      ],
+      "external_id": "176134"
+    },
+    {
+      "n": 19,
+      "title": "The End of Winter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Now with Jaswant in his party, Arslan returns to Peshawar, while back at Ecbatana, Silvermask gathers allies and manpower seeking to one day liberating Pars and taking the throne for himself.",
+      "airdate": "2015-08-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 24,
+          "end": 114
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1349,
+          "end": 1436
+        }
+      ],
+      "external_id": "176135"
+    },
+    {
+      "n": 20,
+      "title": "The True Face of a Knight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The forces loyal to Arslan gather in Peshawar in preparation for the battle to retake the capital. However, with the issues regarding Silvermask's past and his own birth in his mind, Arslan's resolve falters, until he meets a young girl unaware that she is actually Etoile, the same Lusitanian captive he met when he was a child.",
+      "airdate": "2015-08-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 54,
+          "end": 144
+        }
+      ],
+      "external_id": "176136"
+    },
+    {
+      "n": 21,
+      "title": "A Song of Farewell",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Arslan begins his march to retake Ecbatana but must separate himself from one of his allies and face his lords' sentiments.",
+      "airdate": "2015-08-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 170,
+          "end": 260
+        }
+      ],
+      "external_id": "176137"
+    },
+    {
+      "n": 22,
+      "title": "The Night Before the Attack",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As Hilmes is set to confront Arslan on the Battlefield, the latter steels his resolve and his soldiers for the impending battle.",
+      "airdate": "2015-09-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1349,
+          "end": 1436
+        }
+      ],
+      "external_id": "176138"
+    },
+    {
+      "n": 23,
+      "title": "The Battle for the Keep of Saint Emmanuel",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The battle for the Keep of Saint-Emmanuel begins and Xandes has his face-off against Daryun. Meanwhile, Etoile has another encounter with Arslan and learns his true identity.",
+      "airdate": "2015-09-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 121,
+          "end": 211
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1348,
+          "end": 1435
+        }
+      ],
+      "external_id": "176139"
+    },
+    {
+      "n": 24,
+      "title": "The Decisive Battle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Arslan is escorted by his subjects deep inside of the Keep of Saint-Emmanuel where he confronts Silvermask in an attempt to call his cousin to reason. However, Hilmes refuses to listen and challenges Daryun to a duel.",
+      "airdate": "2015-09-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 90,
+          "end": 180
+        }
+      ],
+      "external_id": "176140"
+    },
+    {
+      "n": 25,
+      "title": "The Highway of Blood and Sweat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The Keep of Saint-Emmanuel is captured by the Parsian army, and by Arslan's request, the Lusitanian survivors are taken with them as they keep marching towards Ecbatana, including Etoile, who starts to act more friendly with him. Meanwhile, Silvermask returns to the capital and forms a treacherous alliance with prince Guiscard from Lusitania.",
+      "airdate": "2015-09-27",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1375,
+          "end": 1440
+        }
+      ],
+      "external_id": "176141"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

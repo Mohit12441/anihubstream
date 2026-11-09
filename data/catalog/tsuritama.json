@@ -1,0 +1,192 @@
+{
+  "id": "tsuritama",
+  "title": "Tsuritama",
+  "native": "つり球",
+  "year": 2012,
+  "rating": 7.3,
+  "season": "Spring 2012",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx12883-AjuWBGy1xd4e.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12883-AjuWBGy1xd4e.jpg",
+  "accent": "#1ac9ff",
+  "synopsis": "You can't catch fish if you don't go fishing, and you can't make friends if you don't at least try.\n\nWhich is how relationship-challenged student Yuki finds himself on a fishing trip to a tiny island with three other boys he barely knows. Well, two other boys and Haru, who claims that he's an alien. Not that constantly stewing Natsuki or mysterious Akira are any more likely as prospects for good companionship. \n\nBut there's something about fishing that makes it unlike any other pastime, and maybe that quiet sense of companionship and hopeful expectation is just what Yuki needs to start charting the unfamiliar waters of personal connections. Or maybe it will turn out that Haru's right and they're going to have to save the entire planet. \n\nThere are lots of different kinds of fish stories, from the \"ones that got away\" to the \"best catches ever,\" but whichever way the currents of life take them, for four young men, this trip may turn out to be the biggest whopper ever! \n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tsuritama-3cb9hh",
+    "mal": 12883,
+    "anilist": 12883,
+    "kitsu": 6836
+  },
+  "skip_key_id": 12883,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "tsuritama つり球 tv finished",
+  "genres": [
+    "comedy",
+    "sci-fi",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Panicked Fishing",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99658/original.jpg",
+      "synopsis": "Yuki is the new kid, Haru is an alien, and Natsuki is the fishing prince. Three unlikely characters brought together for a unique experience, which might lead to saving the world.",
+      "airdate": "2012-04-13",
+      "markers": [],
+      "external_id": "99658"
+    },
+    {
+      "n": 2,
+      "title": "The Frustrating Uni Knot",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99659/original.jpg",
+      "synopsis": "The misunderstandings between Haru, Yuki, and Natsuki continue. But when Yuki decides to quit helping Haru, he awakens on top of a building staring down the barrel of a new water gun.",
+      "airdate": "2012-04-20",
+      "markers": [],
+      "external_id": "99659"
+    },
+    {
+      "n": 3,
+      "title": "Lonely Casting",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99660/original.jpg",
+      "synopsis": "Before they can fish in the ocean, Haru and Yuki must learn to “Enoshima Bowl.” That evening, Keito announces she is going to the hospital for a checkup. A worried Yuki locks himself in his room, and Keito explains more about life to Haru.",
+      "airdate": "2012-04-27",
+      "markers": [],
+      "external_id": "99660"
+    },
+    {
+      "n": 4,
+      "title": "Angry Landing",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99661/original.jpg",
+      "synopsis": "With Yuki’s Grandma still in the hospital, the boy’s everyday life is quite hectic. But by fishing every day, Haru, Yuki, and Natsuki are becoming more at ease with each other. Everything seems to be going well until Yuki uses his water gun after he promised not to.",
+      "airdate": "2012-05-04",
+      "markers": [],
+      "external_id": "99661"
+    },
+    {
+      "n": 5,
+      "title": "Discouraged Jerking",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99662/original.jpg",
+      "synopsis": "Summer vacation has started and the fishing lessons have been going well. Yuki has decided it is time to get his own fishing pole, but what he wants and what he can afford are vastly different. A question to Ayumi lands Haru, Yuki, and Natsuki jobs on a fishing boat.",
+      "airdate": "2012-05-11",
+      "markers": [],
+      "external_id": "99662"
+    },
+    {
+      "n": 6,
+      "title": "Horrified Splash",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99663/original.jpg",
+      "synopsis": "Keito is coming home from the hospital and Yuki wants to get her a gift. He takes on the challenge to catching a tuna, her favorite fish. This will lead the boys to an area of water off limits and closer to Haru’s goal.",
+      "airdate": "2012-05-18",
+      "markers": [],
+      "external_id": "99663"
+    },
+    {
+      "n": 7,
+      "title": "Painful Countdown",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99664/original.jpg",
+      "synopsis": "Now that Yuki has his own fishing equipment his enthusiasm for the past time has increased, but Haru no longer wants to do anything that involves the water. Natsuki’s birthday is coming up and his sister wants to have a family fishing trip but what happens on the water affects everybody.",
+      "airdate": "2012-05-25",
+      "markers": [],
+      "external_id": "99664"
+    },
+    {
+      "n": 8,
+      "title": "Joyous Fighting",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99665/original.jpg",
+      "synopsis": "During the search for Sakura, Akira confronts Koko and Haru and demands to know why they are here on earth. The duo explains their situation, but bigger plans are already in motion against them.",
+      "airdate": "2012-06-01",
+      "markers": [],
+      "external_id": "99665"
+    },
+    {
+      "n": 9,
+      "title": "Striking Underwater",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99666/original.jpg",
+      "synopsis": "Duck, has declared martial law on Enoshima and are hunting for Haru and JFX. After a fail attempt by Koko and Haru to stop JFX, Haru becomes the alien villain to save his friends.",
+      "airdate": "2012-06-08",
+      "markers": [],
+      "external_id": "99666"
+    },
+    {
+      "n": 10,
+      "title": "Our Tackle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99667/original.jpg",
+      "synopsis": "Haru is scared; Akira is trying to convince Natsuki about what is happening, and Yuki and on his way back to Enoshima. But when JFX takes over a military commander, the worst case scenario comes true.",
+      "airdate": "2012-06-15",
+      "markers": [],
+      "external_id": "99667"
+    },
+    {
+      "n": 11,
+      "title": "Legend of the Big Fish",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99668/original.jpg",
+      "synopsis": "Duck has lost its fleet, and their last resort is a missile bombardment. Yuki and his friends have to convince them not to while at the same time fish for their lives.",
+      "airdate": "2012-06-22",
+      "markers": [],
+      "external_id": "99668"
+    },
+    {
+      "n": 12,
+      "title": "Goodbye Fishing",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/99669/original.jpg",
+      "synopsis": "The legendary lure has been found, but will Yuki have enough time and strength to cast it before DUCK launches the missiles.",
+      "airdate": "2012-06-29",
+      "markers": [],
+      "external_id": "99669"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tsurezure Monochrome (徒然モノクローム)",
+      "artist": "FUJIFABRIC",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sora mo Toberu Hazu (空も飛べるはず)",
+      "artist": "sayonara ponytail",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

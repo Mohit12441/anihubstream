@@ -1,0 +1,177 @@
+{
+  "id": "the-royal-tutor",
+  "title": "The Royal Tutor",
+  "native": "王室教師ハイネ",
+  "year": 2017,
+  "rating": 7.2,
+  "season": "Spring 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx97932-mIhBEmGhR6uB.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx97932-mIhBEmGhR6uB.jpg",
+  "accent": "#f1aea1",
+  "synopsis": "Accepting the post of Royal Tutor at the court of the king of Grannzreich, Heine Wittgenstein is a little professor with a big job ahead! Each of the kingdom's four princes has a rather distinct personality. Does their diminutive new instructor have what it takes to lay down some learning? It's a comedy of educational proportions!\n\n(Source: Yen Press)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "The Royal Tutor Movie (2019)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 12667,
+    "anilist": 97932,
+    "mal": 34262
+  },
+  "skip_key_id": 34262,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-22 08:56:14",
+  "search_text": "the royal tutor 王室教師ハイネ tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Royal Tutor Arrives",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-04-05",
+      "markers": [],
+      "external_id": "199663"
+    },
+    {
+      "n": 2,
+      "title": "The Prince Interviews",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-04-12",
+      "markers": [],
+      "external_id": "199664"
+    },
+    {
+      "n": 3,
+      "title": "You Don't Need to Accept Me",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-04-19",
+      "markers": [],
+      "external_id": "199665"
+    },
+    {
+      "n": 4,
+      "title": "The Princes Go To Town",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-04-26",
+      "markers": [],
+      "external_id": "199666"
+    },
+    {
+      "n": 5,
+      "title": "Assailed by the Greatest of Trials",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-03",
+      "markers": [],
+      "external_id": "199667"
+    },
+    {
+      "n": 6,
+      "title": "At Café Mitter Meyer",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-10",
+      "markers": [],
+      "external_id": "199668"
+    },
+    {
+      "n": 7,
+      "title": "The Whereabouts of a Dream",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-17",
+      "markers": [],
+      "external_id": "199669"
+    },
+    {
+      "n": 8,
+      "title": "A Timid Heart",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-24",
+      "markers": [],
+      "external_id": "199670"
+    },
+    {
+      "n": 9,
+      "title": "The Price of the Past",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-05-31",
+      "markers": [],
+      "external_id": "199671"
+    },
+    {
+      "n": 10,
+      "title": "The Professor I Don't Know",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-06-07",
+      "markers": [],
+      "external_id": "199672"
+    },
+    {
+      "n": 11,
+      "title": "The Pair's Promise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-06-14",
+      "markers": [],
+      "external_id": "199673"
+    },
+    {
+      "n": 12,
+      "title": "The Last Lesson",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-06-21",
+      "markers": [],
+      "external_id": "199674"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

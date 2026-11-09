@@ -1,0 +1,310 @@
+{
+  "id": "the-millionaire-detective-balance-unlimited",
+  "title": "The Millionaire Detective - Balance: UNLIMITED",
+  "native": "富豪刑事 Balance:UNLIMITED",
+  "year": 2020,
+  "rating": 7.4,
+  "season": "Spring 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx114888-lgecUF3O1AWS.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114888-lgecUF3O1AWS.png",
+  "accent": "#1aae93",
+  "synopsis": "Based on Yasutaka Tsutsui's novel, Fugou Keiji.\n\nThe story centers around millionaire Daisuke Kambe, the heir to one of the wealthiest families in Japan, who is assigned as a detective to the Modern Crime Prevention Task Force (aka MCPTF), at the Tokyo Metropolitan Police Department. Taking full advantage of his vast family wealth, he spares no expense in solving complex crimes, and has the tendency to evaluate everything including individual human lives in terms of their monetary value. Haru Katou, a detective with a compassionate heart who believes that money isn’t everything, is chosen as Kambe’s partner but is repulsed by his materialistic attitude. Having diametrically opposing personalities, witness how the two join forces to tackle seemingly unsolvable crimes and mysteries!\n\n(Source: Fuji Creative Corporation)\n\nNote: Although Tsutsui's novel was published between 1975 and 1977, the anime plays out in the modern era.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 43056,
+    "anilist": 114888,
+    "mal": 41120,
+    "hianime": "the-millionaire-detective-balance:-unlimited-02sgjv"
+  },
+  "skip_key_id": 41120,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": "2026-10-14 08:43:21",
+  "search_text": "the millionaire detective balance unlimited 富豪刑事 balance unlimited tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I Came, I Saw, I Sponsored",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/1765ec1accf08da837564894b4aa8c921645299627_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1302,
+          "end": 1380
+        }
+      ],
+      "external_id": "277803"
+    },
+    {
+      "n": 2,
+      "title": "Love Does Much, Money Does Everything",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/e747ca0863f912c0d7ebc53dc6d82f001645299735_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 106,
+          "end": 196
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1386
+        }
+      ],
+      "external_id": "277804"
+    },
+    {
+      "n": 3,
+      "title": "The Sinews of War are Infinite Money",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e59b1f35560cdaa780966eb40ff6033e1645299788_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 175,
+          "end": 265
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1298,
+          "end": 1386
+        }
+      ],
+      "external_id": "278010"
+    },
+    {
+      "n": 4,
+      "title": "Nothing Makes A Man so Adventerous as an Empty Pocket",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/06f7cbcd71f4716af84384735483a71f1645299966_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1387
+        }
+      ],
+      "external_id": "278262"
+    },
+    {
+      "n": 5,
+      "title": "If Money be not thy Servant, it will be thy Master",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/31e3d9531c691631917b41ae4a67dc4f1645300028_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 115,
+          "end": 205
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1386
+        }
+      ],
+      "external_id": "278286"
+    },
+    {
+      "n": 6,
+      "title": "Ill Got, Ill Spent",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/df12feebd2045b148d98171bbaa353141645300152_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 74,
+          "end": 164
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1387
+        }
+      ],
+      "external_id": "278287"
+    },
+    {
+      "n": 7,
+      "title": "Money is the Root of All Evil",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/3a846ea9aa8baedd2ce33df1d69abe4e1645300389_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 90,
+          "end": 180
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1296,
+          "end": 1385
+        }
+      ],
+      "external_id": "278288"
+    },
+    {
+      "n": 8,
+      "title": "Money Burns a Hole in the Pocket",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/af226cf777dc1141586aec2ede558df41645300581_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 169
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1387
+        }
+      ],
+      "external_id": "278291"
+    },
+    {
+      "n": 9,
+      "title": "A Golden Key Can Open Any Door",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/b5c6b57003101fc3764ec534aecaaa111645300686_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 146
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1387
+        }
+      ],
+      "external_id": "278298"
+    },
+    {
+      "n": 10,
+      "title": "Life Shouldn't be Printed on Dollar Bills",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/db35d9a367ccffce0947f7fe95863e351645300809_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 143,
+          "end": 233
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1298,
+          "end": 1382
+        }
+      ],
+      "external_id": "278299"
+    },
+    {
+      "n": 11,
+      "title": "All That Glitters is Not Gold",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5ff80c81529cc410a150a6092fa65db01645300988_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 91,
+          "end": 181
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1032,
+          "end": 1121
+        }
+      ],
+      "external_id": "278300"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

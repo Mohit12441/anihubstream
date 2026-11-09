@@ -1,0 +1,193 @@
+{
+  "id": "tearmoon-empire",
+  "title": "Tearmoon Empire",
+  "native": "ティアムーン帝国物語～断頭台から始まる、姫の転生逆転ストーリー～",
+  "year": 2023,
+  "rating": 7.1,
+  "season": "Year 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154384-3tpmugzrVpE9.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/154384-G8o38tiGCqbR.jpg",
+  "accent": "#ff9420",
+  "synopsis": "Twenty-year-old Princess Mia of the Tearmoon Empire, often scorned as the \"selfish princess,\" was executed by guillotine in a rebellion. Next thing she knew, she awoke in her own twelve-year-old body, with her own blood-stained diary that she kept before she was beheaded sitting next to her pillow. Given a second chance at life, Mia decides to rebuild the empire. For the sake of Tearmoon's future? To save the people from starvation? For all the soldiers who lost their lives in the civil war? No! Everything she does in this life is for the sake of avoiding the guillotine! \"F-For me, this should be a piece of cake!\" Thus the useless, cowardly, self-serving princess brings about miracle after miracle in her great struggle to save herself in this altered-history fantasy.\n\n\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tearmoon-empire-hdpxxu",
+    "mal": 52962,
+    "anilist": 154384,
+    "kitsu": 46455
+  },
+  "skip_key_id": 52962,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "tearmoon empire ティアムーン帝国物語 断頭台から始まる 姫の転生逆転ストーリー",
+  "genres": [
+    "comedy",
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Princess Starting from the Chopping Block",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b2fe7eca003a493c2b2a3e49349d7c331696692609_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "347047"
+    },
+    {
+      "n": 2,
+      "title": "Princess Mia Displays Her Smug Face",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/4f0974fc0705339947fe1d13ede279c21697271563_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "347048"
+    },
+    {
+      "n": 3,
+      "title": "Princess Mia Sows Seeds",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/11ef60d55fdf439cd449a29adb79638a1697884972_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "347462"
+    },
+    {
+      "n": 4,
+      "title": "Shall We Dance?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/9cd2457d0609e9a2c87f7c69f1236fd31698508465_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "347463"
+    },
+    {
+      "n": 5,
+      "title": "Princess Mia Swoons",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/ccdcc69bb3f3c036c61171c22489ce381699109236_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "347464"
+    },
+    {
+      "n": 6,
+      "title": "The Sword Fighting Tournament: Prince Abel's Fight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/74234f9c1dfd58b35e21b98ef626f3741699715088_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "347465"
+    },
+    {
+      "n": 7,
+      "title": "Princess Mia Sees Clearly",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/fb0267dfeb4d9c348f1b06de027c448c1700299653_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "358384"
+    },
+    {
+      "n": 8,
+      "title": "Princess Mia Grins Slyly",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/df4267ec9d33c0de4fc851e3ca8fe3fa1700925940_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "358385"
+    },
+    {
+      "n": 9,
+      "title": "Princess Mia's (Love-Focused) Choice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6b3b6c0c42b5ebda1f661bf17530b4c51701529474_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "358386"
+    },
+    {
+      "n": 10,
+      "title": "Princess Mia Is Kidnapped!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/93298ecb88b0741ab34995a5f48fdf921702136831_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "358387"
+    },
+    {
+      "n": 11,
+      "title": "A Reunion, a Duel, and...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/7e9565996196218977348e6e6e06d82c1702739527_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "358388"
+    },
+    {
+      "n": 12,
+      "title": "To Keep What Was Preciously Grown from Withering",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/349f44dd539dd71acfe53bd00c5ae5441703331074_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "358389"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Happy End Princess",
+      "artist": "Sumire Uesaka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Queen of the Night",
+      "artist": "KanoeRana",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

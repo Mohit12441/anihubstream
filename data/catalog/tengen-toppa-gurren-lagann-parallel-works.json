@@ -1,0 +1,131 @@
+{
+  "id": "tengen-toppa-gurren-lagann-parallel-works",
+  "title": "Tengen Toppa Gurren Lagann: Parallel Works",
+  "native": "グレンラガン パラレルワークス",
+  "year": 2008,
+  "rating": 6.7,
+  "season": "2008",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4705.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4705.jpg",
+  "accent": "#e4bb0d",
+  "synopsis": "An anthology of animated shorts featuring characters from Gurren Lagann in alternative worlds. Every clip is animated by a particular animator of GAINAX.\n\nCreators are Akira Amemiya, Shin Itagaki, Hirokazu Kojima, SUEZEN, Ryouji Masuyama, Hiroyuki Yamaga, Yoh Yoshinari, and Keisuke Watanabe",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tengen-toppa-gurren-lagann:-parallel-works-qqxg4c",
+    "mal": 4705,
+    "anilist": 4705,
+    "kitsu": 3751
+  },
+  "skip_key_id": 4705,
+  "skip_key_space": "mal",
+  "episode_total": 8,
+  "added_at": null,
+  "search_text": "tengen toppa gurren lagann parallel works ク レンラカ ン ハ ラレルワークス special finished",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Tengen Toppa Gurren Lagann: Parallel Works",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4705.jpg",
+      "synopsis": "An anthology of animated shorts featuring characters from Gurren Lagann in alternative worlds. Every clip is animated by a particular animator of GAINAX.\n\nCreators are Akira Amemiya, Shin Itagaki, Hirokazu Kojima, SUEZEN, Ryouji Masuyama, Hiroyuki Yamaga, Yoh Yoshinari, and Keisuke Watanabe",
+      "airdate": "2008-06-15",
+      "markers": [],
+      "external_id": "63100"
+    },
+    {
+      "n": 2,
+      "title": "BafBaf! Do You Like Being That... Fired Up!!",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "Viral encounters a pachinko Gunmen, and then unleashes it on Kamina, Yoko and Simon.",
+      "airdate": "2008-06-22",
+      "markers": [],
+      "external_id": "63101"
+    },
+    {
+      "n": 3,
+      "title": "Boing vs Boing",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "A version of the series in an artistically-stylized medieval Japan setting.",
+      "airdate": "2008-06-29",
+      "markers": [],
+      "external_id": "63102"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "63103"
+    },
+    {
+      "n": 5,
+      "title": "Rap is a Man's Soul! Open Your Ears Wide and Listen to the Great Kamina's Theme, the Man Who Believes in Himself and Surges at Heaven!",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "A nude Gimmy steals articles of clothing from Simon, Kamina and Yoko using kancho.",
+      "airdate": "2008-07-13",
+      "markers": [],
+      "external_id": "63104"
+    },
+    {
+      "n": 6,
+      "title": "To Hell With Gattai!",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "In a modern-looking alternate setting, humans pilot Lagann and Gurren against Beastmen-like enemies in Gunmen and then team up with other humans against a Dai-Gunmen.",
+      "airdate": "2008-07-20",
+      "markers": [],
+      "external_id": "63105"
+    },
+    {
+      "n": 7,
+      "title": "Libera Me From Hell",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "An experimental real world look at the environment of the surface portrayed in the first half of the series, which includes the shadow of a man running and a skull motif, possibly in reference to Kamina's father.",
+      "airdate": "2008-09-07",
+      "markers": [],
+      "external_id": "63106"
+    },
+    {
+      "n": 8,
+      "title": "All You Bastards, Get Fired Up!",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "The story of Lordgenome's past, with the first war against the Anti-Spirals, Lordgenome's descent into madness and the rise of the Beastmen.",
+      "airdate": "2008-09-14",
+      "markers": [],
+      "external_id": "63107"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

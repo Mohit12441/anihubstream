@@ -1,0 +1,66 @@
+{
+  "id": "xxxholic-rou",
+  "title": "xxxHOLiC Rou",
+  "native": "×××HOLiC・籠",
+  "year": 2010,
+  "rating": 7.9,
+  "season": "Spring 2010",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6864-tbc8T8lbYY69.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6864-tbc8T8lbYY69.png",
+  "accent": "#1a43d6",
+  "synopsis": "10 years after the events of xxxHOLiC Shunmuki, a melancholic Kimihiro Watanuki has taken over the shop formerly run by the mysterious Yuuko due to a promise he made to her. His companions Maru, Moro, and Mokona live together with him in relative contentment, and some familiar faces arrive every now and then: former rival turned-steadfast friend Shizuka Doumeki, and the former psychic prodigy Kohane Tsuyuri. While Kohane studies folklore under Doumeki at university, they encounter a case that is perfect for the master of the shop.\n\nEventually, Watanuki receives a visit from Doumeki's grandfather, Haruka. He requests that Watanuki investigates his grandson's dreams. While inside the dream world, he discovers how their past adventures played out from Doumeki's perspective of view, leading Watanuki to discover truths from 10 years ago and secrets about the ties that bind their friendship.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "xxxholic-rou-lguupg",
+    "mal": 6864,
+    "anilist": 6864,
+    "kitsu": 4759
+  },
+  "skip_key_id": 6864,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "xxxholic rou holic 籠 ova finished",
+  "genres": [
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Volume 1",
+      "runtime": "35:00",
+      "runtime_seconds": 2100,
+      "thumb": "",
+      "synopsis": "Watanuki finds Yuuko being swallowed by shadows from the Dream World, as she states her death was halted a long time ago and thanks to two people's decision, she is able to pass on. Upon dying, Yuuko tells Watanuki her wish is for him to go on existing. Several years later, Watanuki has become the new proprietor of Yuuko's shop, taking care of Maru, Moro and Mokona. Domeki has taken a position at a university to study folklore while also assisting Watanuki and Kohane has become a student at the same university studying under Domeki. Due to Domeki's position, a series of events have occurred that requires Watanuki's services. As part of the request, Watanuki hears a recording from a girl that says \"I'm back Watanuki\" with Yuuko's voice. Watanuki proceeds to rewind and re-listen to it as the screen fades to black and he finally replies \"Welcome home, Yuuko\".",
+      "airdate": "2010-04-23",
+      "markers": [],
+      "external_id": "76032"
+    },
+    {
+      "n": 2,
+      "title": "Volume 2",
+      "runtime": "35:00",
+      "runtime_seconds": 2100,
+      "thumb": "",
+      "synopsis": "Haruka, Doumeki's grandfather, asks Watanuki to investigate Doumeki's dreams. Once in the dreams, Watanuki starts seeing their adventures from Doumeki's point of view. As he gets to the part where Yuuko gave Doumeki his magical egg, shadows within the dream start attacking Watanuki. He is able to destroy them, thus completing the task Haruka had set. When he meets back up with Haruka afterwards, Haruka comments how he always protected Doumeki and knew of the problems occurring within his grandson's dreams. Accepting Haruka's constant teachings as his payment, Watanuki leaves the dreamworld wondering about what Yuuko told Doumeki when giving him the egg. Later, Watanuki meets with Doumeki, and their conversation tells you more of what happened to the group after they came of age.",
+      "airdate": "2011-03-09",
+      "markers": [],
+      "external_id": "76033"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

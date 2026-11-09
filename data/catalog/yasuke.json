@@ -1,0 +1,110 @@
+{
+  "id": "yasuke",
+  "title": "Yasuke",
+  "native": "Yasuke -ヤスケ-",
+  "year": 2021,
+  "rating": 5.6,
+  "season": "Spring 2021",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx131930-Us7lsOPyNfAX.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx131930-Us7lsOPyNfAX.png",
+  "accent": "#ff9420",
+  "synopsis": "In a war-torn feudal Japan filled with mechs and magic, the greatest ronin never known, Yasuke, struggles to maintain a peaceful existence after a past life of violence. But when a local village becomes the center of social upheaval between warring daimyo, Yasuke must take up his sword and transport a mysterious child who is the target of dark forces and bloodthirsty warlords. The story of Yasuke, the first African samurai who actually served the legendary Oda Nobunaga, will be released to the world.\n\n(Source: Netflix)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42339,
+    "anilist": 131930,
+    "mal": 43697
+  },
+  "skip_key_id": 43697,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": "2026-10-22 14:26:02",
+  "search_text": "yasuke yasuke ヤスケ ona finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Ronin",
+      "runtime": "28:00",
+      "runtime_seconds": 1680,
+      "thumb": "",
+      "synopsis": "20 years after the fall of Oda Nobunaga, Yasuke travels with Ichika and her daughter Saki to take the girl to a special doctor. Yasuke recalls the time he was recruited by Nobunaga. On their journey they are attacked by a group of mercenaries sent by the daimyo to capture Saki for her special powers. (Source: Wikipedia)",
+      "airdate": "2021-04-29",
+      "markers": [],
+      "external_id": "297883"
+    },
+    {
+      "n": 2,
+      "title": "The Old Way",
+      "runtime": "28:00",
+      "runtime_seconds": 1680,
+      "thumb": "",
+      "synopsis": "With Ichika gone, Yasuke and Saki return to the village with the mercenaries in pursuit. Yasuke remembers his service to Nobunaga in his goal to unify Japan. Yasuke is soon overwhelmed by the mercenaries after he refuses to hand over Saki. (Source: Wikipedia)",
+      "airdate": "2021-04-29",
+      "markers": [],
+      "external_id": "297884"
+    },
+    {
+      "n": 3,
+      "title": "Mortal Sins",
+      "runtime": "28:00",
+      "runtime_seconds": 1680,
+      "thumb": "",
+      "synopsis": "Yasuke is falsely accused of murdering Ichika and being held and tortured by Abraham, while Saki is being tracked down by Nikita and Haruto. Saki's power grows and she manages to aid Yasuke and kill Abraham. (Source: Wikipedia)",
+      "airdate": "2021-04-29",
+      "markers": [],
+      "external_id": "297885"
+    },
+    {
+      "n": 4,
+      "title": "A Long Road",
+      "runtime": "28:00",
+      "runtime_seconds": 1680,
+      "thumb": "",
+      "synopsis": "On their journey to Dr. Morisuke, Saki and Yasuke encounter a band of warriors and their powerful leader lieutenant Kurosaka. A decisive battle ends with Kurosaka getting stabbed in the chest. After leaving Saki in Dr. Morisuke's care, Yasuke goes on his own way. (Source: Wikipedia)",
+      "airdate": "2021-04-29",
+      "markers": [],
+      "external_id": "297886"
+    },
+    {
+      "n": 5,
+      "title": "Pain & Blood",
+      "runtime": "28:00",
+      "runtime_seconds": 1680,
+      "thumb": "",
+      "synopsis": "Yasuke battles the dark general Mitsuhide, while Dr. Morisuke helps Saki to be free of the Daimyo's dark influence. As dark army steps up their attack, the mercenaries intervene. However a larger dark army advances, wiping out most of the mercenaries and forcing Dr. Morisuke's forces to retreat to the temple. (Source: Wikipedia)",
+      "airdate": "2021-04-29",
+      "markers": [],
+      "external_id": "297887"
+    },
+    {
+      "n": 6,
+      "title": "Balance",
+      "runtime": "28:00",
+      "runtime_seconds": 1680,
+      "thumb": "",
+      "synopsis": "As Dr. Morisuke holds back the dark army, Yasuke and Saki infiltrate the Dark Castle. Yasuke falls under the Daimyo's hallucinogenic magic until Saki snaps him out of it. Together the two friends destroy the Daimyo. (Source: Wikipedia)",
+      "airdate": "2021-04-29",
+      "markers": [],
+      "external_id": "297888"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,376 @@
+{
+  "id": "trigun",
+  "title": "Trigun",
+  "native": "TRIGUN",
+  "year": 1998,
+  "rating": 8,
+  "season": "Spring 1998",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6-wd4saT1JzStH.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6-wd4saT1JzStH.jpg",
+  "accent": "#5086c9",
+  "synopsis": "Vash the Stampede is a wanted man with a habit of turning entire towns into rubble. The price on his head is a fortune, and his path of destruction reaches across the arid wastelands of a desert planet. Unfortunately, most encounters with the spiky-haired gunslinger don't end well for the bounty hunters who catch up with him; someone almost always gets hurt - and it's never Vash.\n\nOddly enough, for such an infamous fugitive, there's no proof that he's ever taken a life. In fact, he's a pacifist with a doughnut obsession who's more doofus than desperado. There's a whole lot more to him than his reputation lets on - Vash the Stampede definitely ain't your typical outlaw.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "trigun-61tyw0",
+    "mal": 6,
+    "anilist": 6,
+    "kitsu": 3
+  },
+  "skip_key_id": 6,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "trigun trigun tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The $$60,000,000,000.00 Man",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/28/original.jpg",
+      "synopsis": "There are many rumors circulating about Vash the Stampede, but few people have actually seen him. Confusion follows as a couple of bounty hunters and two insurance girls separately try to find the real Vash, but only one of the bounty hunters guesses right. The other bounty hunter and the two girls think the first bounty hunter is Vash and even more confusion comes. In the end, the girls can't believe that the real Vash is who he actually is, because he's too nice and silly to match up with the rumors about \"Vash the Stampede.\"",
+      "airdate": "1998-04-01",
+      "markers": [],
+      "external_id": "28"
+    },
+    {
+      "n": 2,
+      "title": "Truth of Mistake",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/29/original.jpg",
+      "synopsis": "In a town suffering from drought, Vash is hired to be the bodyguard of the only man who has water in the arid desert.",
+      "airdate": "1998-04-08",
+      "markers": [],
+      "external_id": "29"
+    },
+    {
+      "n": 3,
+      "title": "Peace Maker",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/30/original.jpg",
+      "synopsis": "Vash is forced to befriend a drunk as a city comes under attack by bandits whose leader claims he is Vash the Stampede.",
+      "airdate": "1998-04-15",
+      "markers": [],
+      "external_id": "30"
+    },
+    {
+      "n": 4,
+      "title": "Love & Peace",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31/original.jpg",
+      "synopsis": "Vash is stuck between a rock and a hard place as he accidentally waltzes into a live robbery scene with his headphones on, unable to hear the police officers yelling at him to stay away. The plot thickens, though, as the robbery is revealed to be of the more personal sort...",
+      "airdate": "1998-04-22",
+      "markers": [],
+      "external_id": "31"
+    },
+    {
+      "n": 5,
+      "title": "Hard Puncher",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/32/original.jpg",
+      "synopsis": "An entire town has gone rampage searching for the $$60 billion head of Vash The Stampede in the hopes of hunting him for the reward. The humanoid typhoon will have to make a choice, will he reveal what he's really made of?",
+      "airdate": "1998-04-29",
+      "markers": [],
+      "external_id": "32"
+    },
+    {
+      "n": 6,
+      "title": "Lost July",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/33/original.jpg",
+      "synopsis": "After the town's folk gather enough money for a repair crew to be called for to repair their power plant, Vash is hired as a body guard for the head engineer - an attractive woman who seems to have a particular interest in the gunslinger. An interest which might be accidentally mistaken to be affection.",
+      "airdate": "1998-05-06",
+      "markers": [],
+      "external_id": "33"
+    },
+    {
+      "n": 7,
+      "title": "B.D.N.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/34/original.jpg",
+      "synopsis": "Vash is joined with a young boy whom he's forced to take under his wings when the steamer comes under attack.",
+      "airdate": "1998-05-13",
+      "markers": [],
+      "external_id": "34"
+    },
+    {
+      "n": 8,
+      "title": "And Between the Wasteland and Sky",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/35/original.jpg",
+      "synopsis": "The adventure on the speeding sand-steamer continues as Vash reveals another aspect in his personality and his young friend is faced with the dilemma of speaking up to a grown-up.",
+      "airdate": "1998-05-20",
+      "markers": [],
+      "external_id": "35"
+    },
+    {
+      "n": 9,
+      "title": "Murder Machine",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/36/original.jpg",
+      "synopsis": "A simple bus trip across the dunes goes wrong when mechanical spiders threaten the passengers. Vash meets a traveling priest who seems more than meets the eye.",
+      "airdate": "1998-05-27",
+      "markers": [],
+      "external_id": "36"
+    },
+    {
+      "n": 10,
+      "title": "Quick Draw",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/37/original.jpg",
+      "synopsis": "In a noble attempt, Vash and Wolfwood join a quick drawing competition to help a single mother and her daughter.",
+      "airdate": "1998-06-10",
+      "markers": [],
+      "external_id": "37"
+    },
+    {
+      "n": 11,
+      "title": "Escape From Pain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38/original.jpg",
+      "synopsis": "In this Wolfwood-Milly-centered episode, the two encounter a couple on the run while Vash is hired to hunt them down.",
+      "airdate": "1998-06-17",
+      "markers": [],
+      "external_id": "38"
+    },
+    {
+      "n": 12,
+      "title": "Diablo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/39/original.jpg",
+      "synopsis": "Vash's past catches up to him as Legato Bluesummers, new nemesis, frames him for murder and sends an assassin to destroy him - and as push comes to shove Vash exposes a new side in his personality.",
+      "airdate": "1998-06-24",
+      "markers": [],
+      "external_id": "39"
+    },
+    {
+      "n": 13,
+      "title": "Vash the Stampede",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/40/original.jpg",
+      "synopsis": "Meryl writes back to the insurance company a summary of the events preceding this episode in an attempt to decipher the character of Vash The Stampede.",
+      "airdate": "1998-07-01",
+      "markers": [],
+      "external_id": "40"
+    },
+    {
+      "n": 14,
+      "title": "Little Arcadia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/41/original.jpg",
+      "synopsis": "In this almost completely Vash free episode, the two insurance girls need to help an old farmer save his beautiful grove from a gang who wants to take it away from him, in which the farmer's son is a member.",
+      "airdate": "1998-07-08",
+      "markers": [],
+      "external_id": "41"
+    },
+    {
+      "n": 15,
+      "title": "Demon's Eye",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/42/original.jpg",
+      "synopsis": "Things get serious as Legato and his Gung-Ho Guns stir up trouble. Vash will have no choice but to roughen up to answer the challenge.",
+      "airdate": "1998-07-15",
+      "markers": [],
+      "external_id": "42"
+    },
+    {
+      "n": 16,
+      "title": "Fifth Moon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/43/original.jpg",
+      "synopsis": "Vash is challenged to a duel inside an inhabited city with two of the Gung-Ho Guns. The plot thickens as Legato butts in and unleashes Vash's horrible secret.",
+      "airdate": "1998-07-22",
+      "markers": [],
+      "external_id": "43"
+    },
+    {
+      "n": 17,
+      "title": "Rem Saverem",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44/original.jpg",
+      "synopsis": "In a very unorthodox episode, many explanations about the mystery surrounding Vash the Stampede are put forth. Where did he come from? Who is he? What is he fighting for?",
+      "airdate": "1998-07-29",
+      "markers": [],
+      "external_id": "44"
+    },
+    {
+      "n": 18,
+      "title": "Goodbye for Now",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45/original.jpg",
+      "synopsis": "Two years after Vash disappeared in the ruins of the city, two years after Milly and Meryl were forced to run away from the devastating arm, two years after Vash was declared the first human act of god by the insurance company because of how unstoppable he is - a quiet town is surrounded by bounty hunters, their leader claims to be Vash the Stampede, and Wolfwood is besieged inside! All seems to be lost until a young blond man who has been living in that town for two years now, known only as Erics to it's residents, pops out to the rescue...",
+      "airdate": "1998-08-05",
+      "markers": [],
+      "external_id": "45"
+    },
+    {
+      "n": 19,
+      "title": "Hang Fire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/46/original.jpg",
+      "synopsis": "News of Vash's reappearance reach the Bernardelli Insurance Company. Meryl and Milly go on the road to search for the Humanoid Typhoon while he steps into a bloody dispute between two families.",
+      "airdate": "1998-08-12",
+      "markers": [],
+      "external_id": "46"
+    },
+    {
+      "n": 20,
+      "title": "Flying Ship",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/47/original.jpg",
+      "synopsis": "Vash takes the nearest \"ride\" to a city in the clouds, a relic from the times of old, to meet up with his old friends. Wolfwood follows him and joins him in the friendly visit, but there's also another who followed them both...",
+      "airdate": "1998-08-19",
+      "markers": [],
+      "external_id": "47"
+    },
+    {
+      "n": 21,
+      "title": "Out of Time",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/48/original.jpg",
+      "synopsis": "Things worsen at the city in the clouds as two more Gung-Ho Guns appear, and what they're after might bring grim consequences.",
+      "airdate": "1998-08-26",
+      "markers": [],
+      "external_id": "48"
+    },
+    {
+      "n": 22,
+      "title": "Alternative",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/49/original.jpg",
+      "synopsis": "Many people have been disappearing, whole towns even, and people are getting paranoid. Vash, Wolfwood and the girls are stuck outside and can't come in because the guards are too afraid to let them. They find shelter in an orphanage of sorts, and when trouble starts, a surprising adversary helps Wolfwood see the error in his ways.",
+      "airdate": "1998-09-02",
+      "markers": [],
+      "external_id": "49"
+    },
+    {
+      "n": 23,
+      "title": "Paradise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/50/original.jpg",
+      "synopsis": "Wolfwood's past catches up with him as the priest acknowledges he has a few sins to confess himself.",
+      "airdate": "1998-09-09",
+      "markers": [],
+      "external_id": "50"
+    },
+    {
+      "n": 24,
+      "title": "Sin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/51/original.jpg",
+      "synopsis": "As Vash ventures on he finally confronts Legato, who proves that the winner in not necessarily the last man standing.",
+      "airdate": "1998-09-16",
+      "markers": [],
+      "external_id": "51"
+    },
+    {
+      "n": 25,
+      "title": "Live Through",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52/original.jpg",
+      "synopsis": "Vash has suffered enough for an eternity. As decision-making time approaches, the town's people decide to lynch him and he may not try to stop them.",
+      "airdate": "1998-09-23",
+      "markers": [],
+      "external_id": "52"
+    },
+    {
+      "n": 26,
+      "title": "Under the Sky so Blue",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/53/original.jpg",
+      "synopsis": "Vash confronts his brother Knives in a big climax, and all of the remaining questions about their pasts are answered.",
+      "airdate": "1998-09-30",
+      "markers": [],
+      "external_id": "53"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Picaresque Hero",
+      "artist": "ano",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Stardust",
+      "artist": "FOMARE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "TOMBI",
+      "artist": "Kvi Baba",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hoshi no Kuzu α",
+      "artist": "Salyu and haruka nakamura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "H.T.",
+      "artist": "Tsuneo Imahori",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaze wa Mirai ni Fuku (風は未来に吹く; The Wind Blows to the Future)",
+      "artist": "AKIMA & NEOS",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

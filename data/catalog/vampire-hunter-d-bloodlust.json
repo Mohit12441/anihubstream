@@ -1,0 +1,69 @@
+{
+  "id": "vampire-hunter-d-bloodlust",
+  "title": "Vampire Hunter D: Bloodlust",
+  "native": "バンパイアハンターD",
+  "year": 2000,
+  "rating": 7.9,
+  "season": "Summer 2000",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx543-MAeWIDl4TwuG.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx543-MAeWIDl4TwuG.png",
+  "accent": "#ff1f4a",
+  "synopsis": "The story revolves around D, the infamous \"dunpeal\" (born of a vampire father and a human mother) outcast and renowned vampire hunter. His prowess at hunting the creatures of the night allowing his acceptance among humans, he is called upon to locate Charlotte Elbourne, the lovely daughter of an affluent family who has been mysteriously kidnapped.\n\nWhen the sun sets, the hunt goes on! Charlotte`s father offers a rich bounty, be she dead or alive, a task D willingly accepts, even with notorious Markus brothers and their gang of bounty hunters seeking the prize as well. Amidst the chase and unknown to all lurks a sinister evil which has been secretly manipulating their every move and has set a chilling trap that none will expect and few will survive. With the tables turned and the secrets revealed, the hunters could quickly become the hunted!\n\n(Source: AniDB)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "VAMPIRE HUNTER D (1985)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 501,
+    "anilist": 543,
+    "mal": 543
+  },
+  "skip_key_id": 543,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-21 08:26:21",
+  "search_text": "vampire hunter d bloodlust ハ ンハ イアハンターd movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "horror",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Vampire Hunter D: Bloodlust (Movie)",
+      "runtime": "97:00",
+      "runtime_seconds": 5820,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx543-MAeWIDl4TwuG.png",
+      "synopsis": "The story revolves around D, the infamous \"dunpeal\" (born of a vampire father and a human mother) outcast and renowned vampire hunter. His prowess at hunting the creatures of the night allowing his acceptance among humans, he is called upon to locate Charlotte Elbourne, the lovely daughter of an affluent family who has been mysteriously kidnapped.\n\nWhen the sun sets, the hunt goes on! Charlotte`s father offers a rich bounty, be she dead or alive, a task D willingly accepts, even with notorious Markus brothers and their gang of bounty hunters seeking the prize as well. Amidst the chase and unknown to all lurks a sinister evil which has been secretly manipulating their every move and has set a chilling trap that none will expect and few will survive. With the tables turned and the secrets revealed, the hunters could quickly become the hunted!\n\n(Source: AniDB)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "12266"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tōku Made (遠くまで)",
+      "artist": "Do As Infinity [Japanese version]",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

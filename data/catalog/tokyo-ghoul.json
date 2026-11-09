@@ -1,0 +1,243 @@
+{
+  "id": "tokyo-ghoul",
+  "title": "Tokyo Ghoul",
+  "native": "東京喰種 トーキョーグール",
+  "year": 2014,
+  "rating": 7.6,
+  "season": "Summer 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b20605-k665mVkSug8D.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b20605-k665mVkSug8D.jpg",
+  "accent": "#ff6b35",
+  "synopsis": "The suspense horror/dark fantasy story is set in Tokyo, which is haunted by mysterious \"ghouls\" who are devouring humans. People are gripped by the fear of these ghouls whose identities are masked in mystery. An ordinary college student named Kaneki encounters Rize, a girl who is an avid reader like him, at the café he frequents. Little does he realize that his fate will change overnight.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 20605,
+    "mal": 22319,
+    "hianime": "tokyo-ghoul-mc5ev1",
+    "kitsu": 8271
+  },
+  "skip_key_id": 22319,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-17 06:08:07",
+  "search_text": "tokyo ghoul 東京喰種 トーキョーク ール tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "horror",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Tragedy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/116052/original.jpg",
+      "synopsis": "Amid news reports of \"Ghoul\" attacks nearby, Ken Kaneki points out Rize, a girl he is interested in, to his friend Hide at a local coffee shop. When Kaneki discovers the two share a favorite author, he asks her out. However, their date ends in tragedy!",
+      "airdate": "2014-07-04",
+      "markers": [],
+      "external_id": "116052"
+    },
+    {
+      "n": 2,
+      "title": "Incubation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/116053/original.jpg",
+      "synopsis": "Kaneki desperately fights the urge to eat human flesh, the only thing that can satisfy his hunger as a ghoul. He meets up with Hide again, joining him on an errand, and is glad for the companionship. But will his declining condition place Hide at risk?",
+      "airdate": "2014-07-11",
+      "markers": [],
+      "external_id": "116053"
+    },
+    {
+      "n": 3,
+      "title": "Dove",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/116054/original.jpg",
+      "synopsis": "Yoshimura teaches Kaneki more about how to blend in with mankind, and takes in a mother and daughter needing protection. Two ghoul investigators, Mado and Amon, are assigned to the 20th Ward. In response, Toka takes Kaneki out to have a mask made for him.",
+      "airdate": "2014-07-18",
+      "markers": [],
+      "external_id": "116054"
+    },
+    {
+      "n": 4,
+      "title": "Supper",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/116055/original.jpg",
+      "synopsis": "Kaneki starts receiving self-defense lessons from Yomo. He meets Itori, who runs her own bar, and is friends with Uta and Yomo. Kaneki is befriended by Tsukiyama, a ghoul who knew Rize, who also enjoys reading, and possesses other, more epicurean tastes.",
+      "airdate": "2014-07-25",
+      "markers": [],
+      "external_id": "116055"
+    },
+    {
+      "n": 5,
+      "title": "Scar",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/116056/original.jpg",
+      "synopsis": "When Touka falls ill, Kaneki pays her a visit that has unexpected consequences. Meanwhile, as Nishiki is still recovering from his run-in with Kaneki, he is nearly preyed upon by other ghouls. Tsukiyama remains consumed with the idea of having Kaneki.",
+      "airdate": "2014-08-01",
+      "markers": [],
+      "external_id": "116056"
+    },
+    {
+      "n": 6,
+      "title": "Cloudburst",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/116057/original.jpg",
+      "synopsis": "The fight against Tsukiyama is resolved, but Touka wants to kill Kimi, now that it's clear she knows that Nishiki and Kaneki are ghouls. Meanwhile, Hinami is eager to see her father again after being apart for so long, and acts out when she is unable.",
+      "airdate": "2014-08-08",
+      "markers": [],
+      "external_id": "116057"
+    },
+    {
+      "n": 7,
+      "title": "Captivity",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/116058/original.jpg",
+      "synopsis": "After Kaneki and Hinami witness Ryoko's fate, the personnel at Anteiku are grieved, and Touka decides to take matters with the investigators into her own hands. Kaneki is fed up with not being able to do anything, and makes up his mind to become involved.",
+      "airdate": "2014-08-15",
+      "markers": [],
+      "external_id": "116058"
+    },
+    {
+      "n": 8,
+      "title": "Circular",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/116059/original.jpg",
+      "synopsis": "Touka sets out to lure the ghoul investigators, but before she can strike, she finds that Hinami has run away. When Touka and Kaneki go out looking for her, they find themselves face to face with Amon and Mado, who has a few surprises of his own for them.",
+      "airdate": "2014-08-22",
+      "markers": [],
+      "external_id": "116059"
+    },
+    {
+      "n": 9,
+      "title": "Birdcage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/116060/original.jpg",
+      "synopsis": "After several weeks go by, everyone tries to return to their normal lives. Hinami moves in with Touka, and despite her aversion to birds, they nurse an injured cockatiel they name Hetare back to health. Kaneki visits Itori to try to learn more about Rize.",
+      "airdate": "2014-08-29",
+      "markers": [],
+      "external_id": "116060"
+    },
+    {
+      "n": 10,
+      "title": "Aogiri",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/116061/original.jpg",
+      "synopsis": "The 11th Ward offices of CCG are attacked by ghouls, wiping everyone out. Banjo and company stop in at Anteiku, looking for Rize to warn her to flee from Aogiri Tree, a new group of ghouls bent on taking over-- until Kaneki accidentally knocks him out!",
+      "airdate": "2014-09-05",
+      "markers": [],
+      "external_id": "116061"
+    },
+    {
+      "n": 11,
+      "title": "High Spirits",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/116062/original.jpg",
+      "synopsis": "Kaneki is held captive by Yamori, who practices his torturous craft on him. The police and CCG move in to deal with Aogiri Tree, who have made an 11th Ward shopping mall their headquarters. In all the commotion, the Anteiku team tries to rescue Kaneki.",
+      "airdate": "2014-09-12",
+      "markers": [],
+      "external_id": "116062"
+    },
+    {
+      "n": 12,
+      "title": "Ghoul",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/116063/original.jpg",
+      "synopsis": "As Yamori continues to brutally torture Kaneki, Rize once again appears to him, and the two of them explore Kaneki's childhood and relationship with his mother. Kaneki is forced to make a choice that has a profound impact on him.",
+      "airdate": "2014-09-19",
+      "markers": [],
+      "external_id": "116063"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "katharsis",
+      "artist": "TK from Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rakuen no Kimi (楽園の君)",
+      "artist": "österreich",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "asphyxia",
+      "artist": "Cöshu Nie",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Half",
+      "artist": "Ziyoou-vachi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Munō (無能; Incompetence)",
+      "artist": "österreich",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Munō (無能; Incompetence)",
+      "artist": "österreich",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kisetsu wa Tsugitsugi Shindeiku (季節は次々死んでいく; Seasons Dying One After Another)",
+      "artist": "Amazarashi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Unravel",
+      "artist": "tk of Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Seijatachi (Saints)",
+      "artist": "People in the Box",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

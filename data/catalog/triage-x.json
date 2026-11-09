@@ -1,0 +1,187 @@
+{
+  "id": "triage-x",
+  "title": "Triage X",
+  "native": "トリアージX",
+  "year": 2015,
+  "rating": 5.8,
+  "season": "Spring 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20839-6FUPqFJn7j0X.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20839-6FUPqFJn7j0X.jpg",
+  "accent": "#e45d43",
+  "synopsis": "Mochizuki General Hospital boasts some of the most well-trained (and well-endowed) nurses in town. But though these ladies spend much of their day battling disease, their after-hours are spent fighting a very different sort of sickness... Under the leadership of the hospital chairman, a handful of staff members and local teenagers form a group of mercenary assassins, targeting the \"cancers\" of society and excising those individuals before their wickedness spreads.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8952,
+    "anilist": 20839,
+    "mal": 26443
+  },
+  "skip_key_id": 26443,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": "2026-10-22 05:56:16",
+  "search_text": "triage x トリアーシ x tv finished",
+  "genres": [
+    "action",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "PRESCRIPTION of HELL",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The \" triage \" , if the victim has occurred in multiple simultaneous , is separated the severity and urgency in the five colors of the label color , to determine the priority of medical practice and that . It just is a life of choice [ triage ] . Meanwhile , label color \"black\" had been the closest color to the \"death\" . - And , illegal organization \" Black Label \" is , as its name suggests , in order to hit the mark of \"death\" to criminals who undermine the society as malignant tumor , it was behind the scenes day and night ... ! Japanese Translation!",
+      "airdate": "2015-04-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 204,
+          "end": 294
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1367
+        }
+      ],
+      "external_id": "174174"
+    },
+    {
+      "n": 2,
+      "title": "SURGICAL STRIKE",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Mikami Arashi, a high school student, has excised his first malignant tumor, and is now an official member of the illegal organization, Black Label. He took on the role of executioner because of what happened nine years ago during an act of terrorism against an international medical conference. And now Black Label moves to save a victim which has been kidnapped right after they saved them the last time.",
+      "airdate": "2015-04-16",
+      "markers": [],
+      "external_id": "174175"
+    },
+    {
+      "n": 3,
+      "title": "MIDNIGHT GUERRILLA",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Kiba Mikoto, a student at the same school as Arashi, fights evil along with him part of the organization, Black Label. Mikoto runs into a mysterious transfer student, Hizaki Chikage. Mikoto learns a lot about Chikage, and the two of them get very close. Meanwhile, a string of incidents happen where citizens are being burned to death...",
+      "airdate": "2015-04-23",
+      "markers": [],
+      "external_id": "174176"
+    },
+    {
+      "n": 4,
+      "title": "FIRE GAME",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Mikoto knows of the existence of a malignant tumor and rushes off alone to excise it, without waiting for the rest of Black Label. However, she runs across people taking a new narcotic, and someone else she didn't expect...",
+      "airdate": "2015-04-30",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1380
+        }
+      ],
+      "external_id": "174177"
+    },
+    {
+      "n": 5,
+      "title": "SACRIFICE IDOL",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "She can sing, dance, and act. A top idol, Nashida Oriha, is also a member of Black Label. She spends every day riding the world of evil. She's slated to help run a live broadcast celebrating a new TV studio, but things go wrong when the studio is targeted. How will Oriha get through this...",
+      "airdate": "2015-05-07",
+      "markers": [],
+      "external_id": "174178"
+    },
+    {
+      "n": 6,
+      "title": "GALACTIC ONSTAGE",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "It's time for the show. Bad guys have hijacked the TV studio and taken the idols hostage. They've asked for a large some of money, and if they don't get they, they're going to force their hostages out of the 18th floor down to the ground below. Meanwhile, Oriha manages to slip away,...",
+      "airdate": "2015-05-14",
+      "markers": [],
+      "external_id": "174179"
+    },
+    {
+      "n": 7,
+      "title": "CHAOS WORLD",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sagiri Yuko, Tsurugi Miki, and Sayo Hitsugi, Ampule Zero, and Arashi, Mikoto, and Oriha, Ampule One, go to investigate a cargo ship that had arrived at Tobioka Port. Twins show up calling Hitsugi \"senpai\", but what is the true reason they want to pick a fight with her...",
+      "airdate": "2015-05-21",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "174180"
+    },
+    {
+      "n": 8,
+      "title": "CLOSED HEART SHELTER",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "A Flashback on how Arashi was re-learning to walk and how Hitsugi helped him is shown. In the present Fiona directs Ampule 1 to capture Sayo, which confuses them, but Fiona explains that her illness has resurfaced and must be stopped. They runs across a berserk Sayo and proves to be too much to handle, but Miki and Yuko interfere in time. Yuko is willing to kill Hitsugi, since she promised herself that she would do it if it came to it once more. Arashi prevents her from killing Sayo and locks himself and Hitsugi in an underground part of the facility. When Mikoto tries to intervene, Masamune convinces her to let Arashi try, since they have survived the same illness. Yuko and Miki explain that 9 years ago they investigated a facility belonging to Itaru Togo, a member of the original team that researched the D99 virus, only to find everyone there including Togo dead, killed by a test subject. Miki found that the subject had developed a lot of strength and regeneration, but also deep psychological issues. Yuko was attacked by the subject, but right when she stabbed it, she realized it was Sayo. She saved her, but Sayo lost her memories. Arashi tries to make Hitsugi remember a promise they made each other years ago and finally succeeds when he takes off her mask. A grateful Sayo kisses Arashi in front of Mikoto, and then assures the rest of the team that she will no longer avoid her past. Meanwhile Kaname Makiishi, Syringe's leader, directs Kaoru and Kaori to kill a detective that's been researching them: Konomi Suzue.",
+      "airdate": "2015-05-28",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1380
+        }
+      ],
+      "external_id": "174181"
+    },
+    {
+      "n": 9,
+      "title": "LIMIT BREAK",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Mikoto starts to develop feelings towards Arashi, but is unsure on how to act on them. Kaoru and Kaori attack Suzue, only for Tobishiro's thugs to kidnap her, barely managing to escape with the captive detective. Detective Hijiri, Black Label's contact on the police informs the situation, while Goryu, Tobishiro's second-in-command prepares to torture Suzue by showing her all the addicted girls that she has broken both in mind and body. She also mentions that she's reserving the Platinum Lily for later and how torture works for her. Fiona informs Dr. Mochizuki that Syringe was looking for information in the Public Safety's server, but their motives remain unknown. Black Label goes to Tobishiro's hideout at an abandoned mine, while Goryu taunts Suzue that Kyoji intends to play with her first, so she leaves to receive him. Oriha and Mikoto attract the guard's attention while Arashi looks for Suzue. Kaoru and Kaori also arrive, but they're confronted by a recovered Sayo, who proceeds to trash them around. When Kaori asks how she can be so strong, Sayo tells them that her father Itaru Togo used the D99 virus to save her from an incurable disease, and that she killed him when she snapped. The twins only say that they received their powers from a princess and before Hitsugi can kill them, Mr. Astro arrives and takes them away. Meanwhile Arashi finds and rescues Suzue, but accidentally releases all the girls that were infected with the Platinum Lily.",
+      "airdate": "2015-06-04",
+      "markers": [],
+      "external_id": "174182"
+    },
+    {
+      "n": 10,
+      "title": "How's the Water?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The girls relax at the bath and discuss their previous mission. Suzue is now on intensive care under the guarding eye of Tatara. Fiona mentions that she will recover and that there's no D99 in her system. Yuko mentions that Syringe escaped from her, and blames Sayo for them getting away. Hitsugi apologizes for the trouble she's caused and a rivalry between Sayo and Mikoto for Arashi begins. Arashi finds himself resolved to keep fighting to protect those he cares. At school Arashi's classmates Yuu Momokino and Hinako Kominato talk about some mysterious kidnappings and how strange people also began to appearing, but Arashi knows the truth and warns them to be careful. Miki tries to get information from Inunaki, but Shinichiro only teases her and gives them a clue. Fiona and Masamune discuss the reappearance of the D99 virus and how it could endanger mankind. Mikoto and Arashi go after a drug dealer that's in a car chase with a woman hostage, and when they succeed in stopping him, they don't get new information on Syringe. While Mikoto takes the woman to the hospital, Arashi walks back home.",
+      "airdate": "2015-06-11",
+      "markers": [],
+      "external_id": "174183"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,671 @@
+{
+  "id": "tekkaman-blade",
+  "title": "Tekkaman Blade",
+  "native": "テッカマンブレード",
+  "year": 1992,
+  "rating": 7,
+  "season": "Winter 1992",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1459-LeqV4WNUfcNM.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1459-LeqV4WNUfcNM.png",
+  "accent": "#f1e4ae",
+  "synopsis": "Tekkaman Blade takes place in the year 2300 AD. On a certain moment, the Radam attack earth. A few months after the beginning of the invasion, a tekkaman appears, he calls himself Blade and with the help of the Space Knights, Blade starts to fight the radam. But there are a few things that Blade isn't telling about his past.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tekkaman-blade-lt5xzn",
+    "mal": 1459,
+    "anilist": 1459,
+    "kitsu": 1309
+  },
+  "skip_key_id": 1459,
+  "skip_key_space": "mal",
+  "episode_total": 49,
+  "added_at": null,
+  "search_text": "tekkaman blade テッカマンフ レート tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Super Man Racing Across The Heavens",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23509/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23509"
+    },
+    {
+      "n": 2,
+      "title": "The Lonely Warrior",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23510/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23510"
+    },
+    {
+      "n": 3,
+      "title": "The Allied Defense Force's Ambition",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23511/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23511"
+    },
+    {
+      "n": 4,
+      "title": "Deserter Without A Cause",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23512/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23512"
+    },
+    {
+      "n": 5,
+      "title": "Kill Me!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23513/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23513"
+    },
+    {
+      "n": 6,
+      "title": "Tek-Set Malfunctions!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23514/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23514"
+    },
+    {
+      "n": 7,
+      "title": "Launch Of The Mobile Unit Pegas",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23515/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23515"
+    },
+    {
+      "n": 8,
+      "title": "The Mysterious War Correspondent",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23516/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23516"
+    },
+    {
+      "n": 9,
+      "title": "Save the Jupiter Crew!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23517/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23517"
+    },
+    {
+      "n": 10,
+      "title": "Lullaby Echoing In The Battlefield",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23518/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23518"
+    },
+    {
+      "n": 11,
+      "title": "The D-Boy File",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23519/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23519"
+    },
+    {
+      "n": 12,
+      "title": "The Red Menace, Tekkaman Evil",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23520/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23520"
+    },
+    {
+      "n": 13,
+      "title": "Twin Brothers Destined To Fight",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23521/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23521"
+    },
+    {
+      "n": 14,
+      "title": "The Demon Is My Brother",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23522/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23522"
+    },
+    {
+      "n": 15,
+      "title": "The Evil Spirit Revives",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23523/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23523"
+    },
+    {
+      "n": 16,
+      "title": "Portrait Of Betrayal",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23524/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23524"
+    },
+    {
+      "n": 17,
+      "title": "Savior Of Steel",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23525/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23525"
+    },
+    {
+      "n": 18,
+      "title": "The Price For Glory",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23526/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23526"
+    },
+    {
+      "n": 19,
+      "title": "Warrior With A Closed Heart",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23527/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23527"
+    },
+    {
+      "n": 20,
+      "title": "Resurrected! Transformation Of Rage",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23528/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23528"
+    },
+    {
+      "n": 21,
+      "title": "Premonition Of Love And Death",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23529/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23529"
+    },
+    {
+      "n": 22,
+      "title": "Miyuki's Decision",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23530/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23530"
+    },
+    {
+      "n": 23,
+      "title": "Reunion Of Scarred Souls",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23531/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23531"
+    },
+    {
+      "n": 24,
+      "title": "Dark Past Revealed",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23532/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23532"
+    },
+    {
+      "n": 25,
+      "title": "A New Demon",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23533/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23533"
+    },
+    {
+      "n": 26,
+      "title": "Battle To The Death",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23534/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23534"
+    },
+    {
+      "n": 27,
+      "title": "Legacy For The Survivors",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23535/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23535"
+    },
+    {
+      "n": 28,
+      "title": "The White Spirit",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23536/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23536"
+    },
+    {
+      "n": 29,
+      "title": "A Boquet On The Battlefield",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23537/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23537"
+    },
+    {
+      "n": 30,
+      "title": "Traces Of My Father",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23538/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23538"
+    },
+    {
+      "n": 31,
+      "title": "City Of Vengeance",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23539/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23539"
+    },
+    {
+      "n": 32,
+      "title": "Waiting Girl",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23540/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23540"
+    },
+    {
+      "n": 33,
+      "title": "Reunion In The Wilderness",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23541/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23541"
+    },
+    {
+      "n": 34,
+      "title": "Brothers Of Dark And Light",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23542/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23542"
+    },
+    {
+      "n": 35,
+      "title": "Enemy In The Fog",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23543/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23543"
+    },
+    {
+      "n": 36,
+      "title": "A Decisive Battle!! Axe",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23544/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23544"
+    },
+    {
+      "n": 37,
+      "title": "The Decayed Body",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23545/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23545"
+    },
+    {
+      "n": 38,
+      "title": "Labyrinth Of Death",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23546/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23546"
+    },
+    {
+      "n": 39,
+      "title": "Super Warrior Blaster",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23547/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23547"
+    },
+    {
+      "n": 40,
+      "title": "The Love and Struggle Of Two People",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23548/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23548"
+    },
+    {
+      "n": 41,
+      "title": "Evil, The Resurrected Devil",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23549/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23549"
+    },
+    {
+      "n": 42,
+      "title": "Clash! The Old Red Enemy",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23550/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23550"
+    },
+    {
+      "n": 43,
+      "title": "Bullet Of Parting",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23551/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23551"
+    },
+    {
+      "n": 44,
+      "title": "The Approaching Darkness",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23552/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23552"
+    },
+    {
+      "n": 45,
+      "title": "The Truth Of The Invaders",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23553/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23553"
+    },
+    {
+      "n": 46,
+      "title": "The House Where Time Stood Still",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23554/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23554"
+    },
+    {
+      "n": 47,
+      "title": "The Fate Of Darkness And Death",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23555/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23555"
+    },
+    {
+      "n": 48,
+      "title": "Heroic! Evil Dies",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23556/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23556"
+    },
+    {
+      "n": 49,
+      "title": "Life Burns Out",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23557/original.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23557"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Reincarnation",
+      "artist": "Masami Okui",
+      "episodes": "1-6"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Reincarnation",
+      "artist": "Masami Okui",
+      "episodes": "4-6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Reincarnation",
+      "artist": "Masami Okui",
+      "episodes": "1-3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Reason",
+      "artist": "Yumiko Kosaka",
+      "episodes": "0-27"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Reason",
+      "artist": "Yumiko Kosaka",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Energy of Love",
+      "artist": "Yumiko Kosaka",
+      "episodes": "0-27"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Live Alone Sennentattemo (Live alone 千年たっても)",
+      "artist": "Masami Okui",
+      "episodes": "4-5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Live Alone Sennentattemo",
+      "artist": "Masami Okui",
+      "episodes": "4-6"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Eien no Kodoku (永遠の孤独; Eternal Loneliness)",
+      "artist": "Yumiko Kosaka",
+      "episodes": "28-49"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Eternally Lonely",
+      "artist": "Yumiko Kosaka",
+      "episodes": "27-49"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Lonely Heart",
+      "artist": "Yumiko Kosaka",
+      "episodes": "28-49"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "It's Destiny-Yattomeguriaeta (It's DESTINY-やっと巡り会えた)",
+      "artist": "Masami Okui",
+      "episodes": "6"
+    }
+  ],
+  "relations": []
+}

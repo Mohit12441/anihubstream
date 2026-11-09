@@ -1,0 +1,316 @@
+{
+  "id": "the-dangers-in-my-heart",
+  "title": "The Dangers in My Heart",
+  "native": "僕の心のヤバイやつ",
+  "year": 2023,
+  "rating": 8.1,
+  "season": "Spring 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx153152-Xnwmx7wuoIWV.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx153152-Xnwmx7wuoIWV.jpg",
+  "accent": "#d6a150",
+  "synopsis": "Fascinated by murder and all things macabre, Kyoutarou daydreams of acting out his twisted fantasies on his unsuspecting classmates — but an encounter with Anna Yamada, the gorgeous class idol, lights a spark in the darkness of his heart. It’s a classic tale of an antisocial boy falling for a popular girl, but neither are who they appear to be at first glance. Will Kyoutarou and Anna defy their expectations of each other — and of themselves?\n\n(Source: HIDIVE)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "The Dangers in My Heart Season 2 (2024)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46299,
+    "anilist": 153152,
+    "mal": 52578
+  },
+  "skip_key_id": 52578,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 08:43:21",
+  "search_text": "the dangers in my heart 僕の心のヤハ イやつ tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I Was Stolen Away",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1293,
+          "end": 1380
+        }
+      ],
+      "external_id": "346134"
+    },
+    {
+      "n": 2,
+      "title": "I am dead",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1294,
+          "end": 1380
+        }
+      ],
+      "external_id": "346135"
+    },
+    {
+      "n": 3,
+      "title": "I Want to Hug You",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1294,
+          "end": 1380
+        }
+      ],
+      "external_id": "346546"
+    },
+    {
+      "n": 4,
+      "title": "I have heart disease",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1380
+        }
+      ],
+      "external_id": "346684"
+    },
+    {
+      "n": 5,
+      "title": "We got separated",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1294,
+          "end": 1380
+        }
+      ],
+      "external_id": "346685"
+    },
+    {
+      "n": 6,
+      "title": "I Melted It",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 152,
+          "end": 242
+        }
+      ],
+      "external_id": "346945"
+    },
+    {
+      "n": 7,
+      "title": "We are swapping",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 162
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1294,
+          "end": 1380
+        }
+      ],
+      "external_id": "346946"
+    },
+    {
+      "n": 8,
+      "title": "I had a dream",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 96,
+          "end": 186
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1191,
+          "end": 1281
+        }
+      ],
+      "external_id": "348069"
+    },
+    {
+      "n": 9,
+      "title": "I hate yamada",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 99,
+          "end": 189
+        }
+      ],
+      "external_id": "348474"
+    },
+    {
+      "n": 10,
+      "title": "We walked slowly",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 90,
+          "end": 180
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1159,
+          "end": 1249
+        }
+      ],
+      "external_id": "348475"
+    },
+    {
+      "n": 11,
+      "title": "We are a bit similar",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 35,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1288,
+          "end": 1370
+        }
+      ],
+      "external_id": "348704"
+    },
+    {
+      "n": 12,
+      "title": "I want you to know me",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 118,
+          "end": 208
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1369
+        }
+      ],
+      "external_id": "349153"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

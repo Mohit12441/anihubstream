@@ -1,0 +1,118 @@
+{
+  "id": "tonikawa-over-the-moon-for-you-high-school-days",
+  "title": "TONIKAWA: Over The Moon For You ~High School Days~",
+  "native": "トニカクカワイイ 女子高編",
+  "year": 2023,
+  "rating": 7.8,
+  "season": "Summer 2023",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx166104-0oRQjclE7X3S.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx166104-0oRQjclE7X3S.jpg",
+  "accent": "#e4c95d",
+  "synopsis": "The new anime centers on the series' protagonist Nasa, who is asked by his junior high teacher to hold a class in an all-girls high school. The students end up seeking Nasa's advice about their love problems. On the other hand, Tsukasa pretends to be cool, but is actually nervous knowing that Nasa is surrounded by young high school girls.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tonikawa:-over-the-moon-for-you-high-school-days-g5ctfu",
+    "mal": 55651,
+    "anilist": 166104,
+    "kitsu": 47622
+  },
+  "skip_key_id": 55651,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": null,
+  "search_text": "tonikawa over the moon for you high school days トニカクカワイイ 女子高編 ona finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Marriage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1b6e79848d8985d3d1211e7c38e0b9401601644925_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "352627"
+    },
+    {
+      "n": 2,
+      "title": "The First Night",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/fa735f4985c8d534183ae2c6a03dfc6b1602225910_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "352628"
+    },
+    {
+      "n": 3,
+      "title": "Sisters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/25a6ddf24415173aaac2c4c3ae5d09531602816763_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "352629"
+    },
+    {
+      "n": 4,
+      "title": "Promise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5ae6007cf53d3a2a4f548072472689311603426509_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "352630"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Setsuna no Chikai (feat. Yuzaki Tsukasa) (刹那の誓い（feat. 由崎司）)",
+      "artist": "Neko Hacker",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yoru no Katasumi (夜のかたすみ)",
+      "artist": "Tsukasa Yuzaki [Akari Kitō]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Koi no Uta (feat. Tsukasa Tsukuyomi)",
+      "artist": "Akari Kitō",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsuki to Hoshizora",
+      "artist": "KanoeRana",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

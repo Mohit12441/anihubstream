@@ -1,0 +1,630 @@
+{
+  "id": "the-rising-of-the-shield-hero",
+  "title": "The Rising of the Shield Hero",
+  "native": "盾の勇者の成り上がり",
+  "year": 2019,
+  "rating": 7.6,
+  "season": "Winter 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx99263-LcazQwdlWzMy.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99263-LcazQwdlWzMy.jpg",
+  "accent": "#5dc9e4",
+  "synopsis": "Naofumi Iwatani, an uncharismatic Otaku who spends his days on games and manga, suddenly finds himself summoned to a parallel universe! He discovers he is one of four heroes equipped with legendary weapons and tasked with saving the world from its prophesied destruction. As the Shield Hero, the weakest of the heroes, all is not as it seems. Naofumi is soon alone, penniless, and betrayed. With no one to turn to, and nowhere to run, he is left with only his shield. Now, Naofumi must rise to become the legendary Shield Hero and save the world!\n\nNote:\n\n- The first episode was pre-aired on December 27th, 2018. Regular broadcast began on January 9th, 2019.\n\n- The first episode aired with a runtime of ~47 minutes as opposed to the standard 24 minute long episode.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "The Rising of the Shield Hero Season 2 (2022)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13593,
+    "anilist": 99263,
+    "mal": 35790,
+    "hianime": "the-rising-of-the-shield-hero-kjxwep"
+  },
+  "skip_key_id": 35790,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": "2026-10-14 02:14:09",
+  "search_text": "the rising of the shield hero 盾の勇者の成り上か り tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Shield Hero",
+      "runtime": "47:00",
+      "runtime_seconds": 2820,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/222232/original.jpg",
+      "synopsis": "College student Iwatani Naofumi is reading a book titled \"The Records of the Four Cardinal Weapons\" in the library when he is suddenly summoned to another world and told he has to save the world as the Shield Hero, one of the Four Cardinal Heroes. And one morning, he finds all his money and equipment gone.",
+      "airdate": "2019-01-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 4,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 2746,
+          "end": 2820
+        }
+      ],
+      "external_id": "222232"
+    },
+    {
+      "n": 2,
+      "title": "The Slave Girl",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/238687/original.jpg",
+      "synopsis": "Naofumi follows the slave merchant to his store, where he looks for a partner to act as his sword. But all he has the money to buy is a diseased demi-human girl named Raphtalia, whom he then forces into an incredibly harsh battle.",
+      "airdate": "2019-01-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 126,
+          "end": 216
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "238687"
+    },
+    {
+      "n": 3,
+      "title": "Wave of Catastrophe",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254646/original.jpg",
+      "synopsis": "Naofumi has obtained a whole load of abilities and skills, and his teamwork with Raphtalia is reaching perfection, too. To prepare for the incoming Wave, he upgrades their equipment and heads to the dragon hourglass to find out exactly when it will arrive. But there, he runs into Motoyasu and the other heroes once again.",
+      "airdate": "2019-01-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 52,
+          "end": 142
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "254646"
+    },
+    {
+      "n": 4,
+      "title": "Lullaby at Dawn",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254647/original.jpg",
+      "synopsis": "The Wave is gone, but Naofumi's relief is short-lived as Motoyasu challenges him to a duel in the middle of the celebratory banquet held in Melromarc Castle. Motoyasu insists that owning a slave is unbecoming for a hero and that Naofumi free Raphtalia at once.",
+      "airdate": "2019-01-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 135,
+          "end": 225
+        }
+      ],
+      "external_id": "254647"
+    },
+    {
+      "n": 5,
+      "title": "Filo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254648/original.jpg",
+      "synopsis": "After Aultcray reluctantly offers Naofumi a paltry reward, he heads to the slave merchant to redo the slave crest as per Raphtalia's wishes. He also buys a monster egg there, which hatches a few days later and gives him a new party member. Meanwhile, Myne shows up in Lute Village, where they're staying.",
+      "airdate": "2019-02-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 190,
+          "end": 280
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "254648"
+    },
+    {
+      "n": 6,
+      "title": "A New Comrade",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254649/original.jpg",
+      "synopsis": "The mysterious girl that showed up out of nowhere was actually Filo. She's a filolial queen with an advanced transformation ability, and she can even take human form thanks to it. However, her clothes get ripped every time she transforms, meaning Naofumi has to get her some magic clothes if he doesn't want to go broke. The party leaves on a new adventure to gather the materials required.",
+      "airdate": "2019-02-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "254649"
+    },
+    {
+      "n": 7,
+      "title": "The Savior of the Heavenly Fowl",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254650/original.jpg",
+      "synopsis": "After hearing of a village that's in immediate need of herbicide, Naofumi and his party head there to do business. The village has been overrun by plants that have turned into monsters, and its residents were forced to abandon it. These plants can even take root in humans, and apparently Motoyasu is the one who released them into the wild.",
+      "airdate": "2019-02-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1303,
+          "end": 1380
+        }
+      ],
+      "external_id": "254650"
+    },
+    {
+      "n": 8,
+      "title": "Curse Series",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254651/original.jpg",
+      "synopsis": "After hearing of a village in the East that's being ravaged by an epidemic, Naofumi and his party head there to deliver medicine. The epidemic was caused by the corpse of a dragon that had been killed a month before and left there to rot. Naofumi's party accepts a job request to clean the corpse and head to the mountains where it lies.",
+      "airdate": "2019-02-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 160
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "254651"
+    },
+    {
+      "n": 9,
+      "title": "Melty",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254652/original.jpg",
+      "synopsis": "In the Eastern village, Naofumi meets a girl named Melty. She instantly becomes friends with Filo and then requests to accompany the party on their journey. It seems she got separated from her guards. They travel together for a while, but when they reach the capital, they find...",
+      "airdate": "2019-03-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 105,
+          "end": 195
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "254652"
+    },
+    {
+      "n": 10,
+      "title": "In the Midst of Turmoil",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254653/original.jpg",
+      "synopsis": "After refusing to hear Melty out, Naofumi switches to planning for the next Wave. When a bunch of young soldiers ask to join his party, he agrees, but on a certain condition. At the same time, he also tries to upgrade Raphtalia's class after she hits the level cap, but all he receives is harassment.",
+      "airdate": "2019-03-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "254653"
+    },
+    {
+      "n": 11,
+      "title": "Catastrophe Returns",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254654/original.jpg",
+      "synopsis": "\"Naofumi faces another Wave, this time in a remote village. With the help of the soldiers who volunteered to join him, he's able to secure the safety of the villagers, but the Wave shows no signs of letting up. He heads to fight with the other heroes, only to find a giant ghost ship floating in the sky.\"",
+      "airdate": "2019-03-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 164,
+          "end": 254
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "254654"
+    },
+    {
+      "n": 12,
+      "title": "The Raven Invader",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254655/original.jpg",
+      "synopsis": "A mysterious woman showed up out of nowhere and destroyed the second Soul Eater in a single blow. She then proclaimed the start of the \"true battle of the wave\" and blew away the other three heroes when they attacked her. With Naofumi's party proving ineffective as well, he decided to use the Rage Shield one more time.",
+      "airdate": "2019-03-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 53,
+          "end": 143
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "254655"
+    },
+    {
+      "n": 13,
+      "title": "The Devil of the Shield",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254656/original.jpg",
+      "synopsis": "Naofumi foils the attempt to take Melty's life and fights off the royal knights, but he's then framed for abducting Melty and killing several knights, so the party is forced to go on the run. With security tightened and checkpoints everywhere, the party receives a further blow that only makes things even worse.",
+      "airdate": "2019-04-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 74,
+          "end": 164
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "254656"
+    },
+    {
+      "n": 14,
+      "title": "Everlasting Memory",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254657/original.jpg",
+      "synopsis": "Due to Myne recklessly starting a forest fire, Naofumi and his party are forced to flee to a village at the base of the mountain. However, it won't be easy to break through the knights' net. Melty suggests going to a noble she knows for help, and it just so happens that Raphtalia's past is linked to his domain.",
+      "airdate": "2019-04-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 137,
+          "end": 227
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "254657"
+    },
+    {
+      "n": 15,
+      "title": "Raphtalia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254658/original.jpg",
+      "synopsis": "Raphtalia corners Idol with vengeance in her eyes, her bloodthirsty blade reaching for his throat. Naofumi's words bring her back to her senses momentarily, but when Idol attacks her once again...",
+      "airdate": "2019-04-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 84,
+          "end": 174
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1416
+        }
+      ],
+      "external_id": "254658"
+    },
+    {
+      "n": 16,
+      "title": "Filolial Queen",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256036/original.jpg",
+      "synopsis": "As Naofumi and his party try to get the weakened kids to safety, Tyrant attacks them. Once Naofumi realizes that he's actually after Filo, he hatches a plan to lure him outside the city, but they can't even put a scratch on its massive body.",
+      "airdate": "2019-04-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 58,
+          "end": 148
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "256036"
+    },
+    {
+      "n": 17,
+      "title": "A Promise Made",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256037/original.jpg",
+      "synopsis": "Fitoria tells Naofumi that she'll kill all Four Cardinal Heroes if they don't get back on the same page. She even takes Melty hostage, but Naofumi continues to refuse. Understanding where he's coming from, Fitoria instead proposes a one-on-one duel with Filo.",
+      "airdate": "2019-05-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 160
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1364
+        }
+      ],
+      "external_id": "256037"
+    },
+    {
+      "n": 18,
+      "title": "A Conspiracy Linked",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256038/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-05-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "256038"
+    },
+    {
+      "n": 19,
+      "title": "The Four Cardinal Heroes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256039/original.jpg",
+      "synopsis": "The Pope holds in his hands the ultimate weapon, which possesses the properties of all four cardinal weapons. Faced with its attack skill, \"Judgment,\" and its powerful defensive force field, Naofumi and gang are rendered helpless. As the crisis worsens, Motoyasu, who is now in line to be punished as a \"fake\" hero, makes a surprising decision.",
+      "airdate": "2019-05-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 88,
+          "end": 178
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "256039"
+    },
+    {
+      "n": 20,
+      "title": "Battle of Good and Evil",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256040/original.jpg",
+      "synopsis": "Naofumi and gang stay on the attack despite being trapped in the Pope's Great Cathedral, but its sacred subspace nullifies his Curse Shield, leaving them one step short. Naofumi turns to another, newly unlocked Curse Shield, but the dragon's wrath threatens to swallow his mind whole.",
+      "airdate": "2019-05-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "256040"
+    },
+    {
+      "n": 21,
+      "title": "Naofumi's Triumphant Return",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258881/original.jpg",
+      "synopsis": "After Naofumi survives thanks to Mirelia's help, she comes to visit him and tells him the truth behind the summoning of the heroes and the discrimination against the Shield Hero. She also promises to clear his name, and holds a trial for Aultcray and Myne's crimes.",
+      "airdate": "2019-05-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 57,
+          "end": 147
+        }
+      ],
+      "external_id": "258881"
+    },
+    {
+      "n": 22,
+      "title": "Four Heroes Council",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258979/original.jpg",
+      "synopsis": "After being unable to for so long, Naofumi finally gets to upgrade his party's classes. He then takes part in a meeting of the Four Cardinal Heroes, held under the guise of a celebratory banquet. There, he learns of the existence of a bonus stage, with increased XP earnings. Meanwhile, Raphtalia gets into a fight at the party.",
+      "airdate": "2019-06-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 84,
+          "end": 174
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "258979"
+    },
+    {
+      "n": 23,
+      "title": "Cal Mira Archipelago",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258980/original.jpg",
+      "synopsis": "On the ship to Cal Mira, Naofumi once again runs into L'arc, who keeps throwing him off. However, the strange man's friendly nature shines through, and Naofumi quickly takes a liking to him. After having a fun time grinding levels and a lively meal, Naofumi feels happy and fulfilled for the first time in this world.",
+      "airdate": "2019-06-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 67,
+          "end": 157
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "258980"
+    },
+    {
+      "n": 24,
+      "title": "Guardians of Another World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258981/original.jpg",
+      "synopsis": "Melromarc brings a large fleet to fight the Wave out at sea. While the queen takes charge and leads the operation well, the other three heroes prove useless yet again, leaving Naofumi to do it all alone. Later, he gets help from L'arc and Therese to fend off the monsters, but then...",
+      "airdate": "2019-06-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1416
+        }
+      ],
+      "external_id": "258981"
+    },
+    {
+      "n": 25,
+      "title": "The Rising of the Shield Hero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/265584/original.jpg",
+      "synopsis": "It turns out that Glass, like L'arc, is also a hero from other world. Naofumi barely fights off their combo attacks and then corners Glass in a one-on-one battle, but is then faced with an all-important question: does he truly wish to protect this world?",
+      "airdate": "2019-06-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        }
+      ],
+      "external_id": "265584"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

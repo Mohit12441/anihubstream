@@ -1,0 +1,561 @@
+{
+  "id": "sword-art-online-ii",
+  "title": "Sword Art Online II",
+  "native": "ソードアート・オンライン II",
+  "year": 2014,
+  "rating": 6.5,
+  "season": "Summer 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx20594-FhRgZ1H9Istt.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20594-FhRgZ1H9Istt.jpg",
+  "accent": "#e42843",
+  "synopsis": "One year after the SAO incident, Kirito is approached by Seijiro Kikuoka from Japan's Ministry of Internal Affairs and Communications Department \"VR Division\" with a rather peculiar request.\r\n\r\nThat was an investigation on the \"Death Gun\" incident that occurred in the gun and steel filled VRMMO called Gun Gale Online (GGO). \"Players who are shot by a mysterious avatar with a jet black gun lose their lives even in the real world...\" Failing to turn down Kikuoka's bizarre request, Kirito logs in to GGO even though he is not completely convinced that the virtual world could physically affect the real world.\n\r\n\n\r\nKirito wanders in an unfamiliar world in order to gain any clues about the \"Death Gun.\" Then, a female sniper named Sinon who owns a gigantic \"Hecate II\" rifle extends Kirito a helping hand. With Sinon's help, Kirito decides to enter the \"Bullet of Bullets,\" a large tournament to choose the most powerful gunner within the realm of GGO, in hopes to become the target of the \"Death Gun\" and make direct contact with the mysterious avatar.\n\r\n\n\r\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Sword Art Online EXTRA EDITION (2013)",
+    "Sword Art Online the Movie: Ordinal Scale (2017)",
+    "Sword Art Online (2012)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8174,
+    "anilist": 20594,
+    "mal": 21881,
+    "hianime": "sword-art-online-ii-2c0gjj"
+  },
+  "skip_key_id": 21881,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": "2026-10-14 02:14:09",
+  "search_text": "sword art online ii ソート アート オンライン ii tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "isekai",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "World of Guns",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171172/original.jpeg",
+      "synopsis": "Almost one year has passed since SAO has been cleared. Kazuto meets with Seijiro Kikuoka of the Ministry of Internal Affairs and Communications and learns of a strange incident that has taken place in the VRMMO “Gun Gale Online (GGO).”",
+      "airdate": "2014-07-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 114,
+          "end": 204
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "171172"
+    },
+    {
+      "n": 2,
+      "title": "Cold-Hearted Sniper",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171173/original.jpeg",
+      "synopsis": "Sinon is known as the best sniper in GGO, armed with the Hécate II sniper rifle. She, along with her squadron, attacks another squadron, successfully sniping the first target.",
+      "airdate": "2014-07-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 114,
+          "end": 204
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "171173"
+    },
+    {
+      "n": 3,
+      "title": "Memories of Fresh Blood",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171174/original.jpeg",
+      "synopsis": "In real life, the player Sinon is a high school student named Shino Asada. Because of an incident from her childhood, Shino is traumatized by the sight of guns. What kind of incident was it...?",
+      "airdate": "2014-07-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 27,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "171174"
+    },
+    {
+      "n": 4,
+      "title": "GGO (Gun Gale Online)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171175/original.jpeg",
+      "synopsis": "Kikuoka has recruited irito to investigate GGO, and so he logs in. To lure Death Gun into targeting him, he hopes to enter Bullet of Bullets (BoB), a tournament to decide the most powerful gunman in GGO.",
+      "airdate": "2014-07-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 66,
+          "end": 156
+        }
+      ],
+      "external_id": "171175"
+    },
+    {
+      "n": 5,
+      "title": "Guns and Swords",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171176/original.jpeg",
+      "synopsis": "Barely managing to register for BoB in time, Kirito will be competing in Block F of the preliminary tournament. Sinon is also in Block F, and there's a chance that they'll clash in the final. They promise each other to go all-out if they do meet.",
+      "airdate": "2014-08-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 111
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "171176"
+    },
+    {
+      "n": 6,
+      "title": "Showdown in the Wilderness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171177/original.jpeg",
+      "synopsis": "After witnessing Kirito’s fight to win his first preliminary match, a man clad in a ragged cloak asks him, \"Are you the real deal?\" It is then that Kirito and Sinon, having both advanced in the preliminary round, face off in the Block F final.",
+      "airdate": "2014-08-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 132,
+          "end": 222
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "171177"
+    },
+    {
+      "n": 7,
+      "title": "Crimson Memories",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171178/original.jpeg",
+      "synopsis": "The man in the ragged cloak is an SAO survivor... This thought consumes Kirito to the point that it worries Suguha. Meanwhile, Shino can't shake off her irritation towards Kirito, and she launches into a tirade, swearing that she'll defeat him.",
+      "airdate": "2014-08-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 153
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "171178"
+    },
+    {
+      "n": 8,
+      "title": "Bullet of Bullets",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171179/original.jpeg",
+      "synopsis": "Kirito approaches Sinon about exchanging information and begins to investigate the other players. Meanwhile, the final round begins and a Battle Royale between 30 players is now underway on a massive field measuring 10 km in diameter.",
+      "airdate": "2014-08-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 85,
+          "end": 175
+        }
+      ],
+      "external_id": "171179"
+    },
+    {
+      "n": 9,
+      "title": "Death Gun",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171180/original.jpeg",
+      "synopsis": "The man in the ragged cloak reveals himself to be Death Gun, and announces that he’ll be bringing on real-life death. Meanwhile, Kirito and Sinon decide to join forces, hoping to take Death Gun down before there are any more casualties.",
+      "airdate": "2014-08-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 145,
+          "end": 235
+        }
+      ],
+      "external_id": "171180"
+    },
+    {
+      "n": 10,
+      "title": "Pursuer of Death",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171181/original.jpeg",
+      "synopsis": "Attacked from behind by Death Gun, Sinon has her back to the wall. Death Gun's weapon is, oddly enough, the same gun that Sinon used to kill the bank robber. Death Gun tries to kill Sinon, stunned by flashbacks, in order to motivate Kirito.",
+      "airdate": "2014-09-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "171181"
+    },
+    {
+      "n": 11,
+      "title": "The Meaning of Strength",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171182/original.jpeg",
+      "synopsis": "\"After escaping from Death Gun, Kirito and Sinon lay low in a desert cave. There, Kirito speculates on how Death Gun murdered other players. In doing so, he hits upon a certain terrifying possibility.",
+      "airdate": "2014-09-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 101,
+          "end": 191
+        }
+      ],
+      "external_id": "171182"
+    },
+    {
+      "n": 12,
+      "title": "Bullet of a Phantom",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171183/original.jpeg",
+      "synopsis": "BoB has reached its last stage, and the field of survivors has been narrowed down to Kirito, Sinon, Death Gun, and Yamikaze, the previous tournament's runner-up.",
+      "airdate": "2014-09-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 104,
+          "end": 194
+        }
+      ],
+      "external_id": "171183"
+    },
+    {
+      "n": 13,
+      "title": "Phantom Bullet",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171184/original.jpeg",
+      "synopsis": "Kirito is in dire straits. He is driven into a corner due to Death Gun’s prowess not only as a gunman, but as a swordsman, too, and he is beginning to lose all strength. Meanwhile, Sinon desperately tries to figure out what she can do.",
+      "airdate": "2014-09-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 103,
+          "end": 193
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "171184"
+    },
+    {
+      "n": 14,
+      "title": "A Small Step",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171185/original.jpeg",
+      "synopsis": "Kyoji attacks, intent on ending his own life after first killing Shino. But just in the nick of time, Kazuto bursts through the door, and tackles Kyoji. As they struggle furiously, Kyoji shoves the poison-filled syringe against Kazuto",
+      "airdate": "2014-10-04",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "171185"
+    },
+    {
+      "n": 15,
+      "title": "The Queen of the Lake",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171186/original.jpeg",
+      "synopsis": "It's reported that the Holy Sword Excalibur has been discovered inside ALO. Hearing the news, Kirito and Leafa decide to take possession of Excalibur before other players get to it first. Summoning Asuna, Klein, Sinon and the others, they set off.",
+      "airdate": "2014-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 287,
+          "end": 377
+        }
+      ],
+      "external_id": "171186"
+    },
+    {
+      "n": 16,
+      "title": "King of the Giants",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171187/original.jpeg",
+      "synopsis": "Kirito and the others are tasked with subjugating the Frost King Thrymr, and a quest to recover Excalibur. It's Yui's guess that this isn't a quest planned by the game admins, but something automatically generated by the system. And if that's the case…",
+      "airdate": "2014-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 230,
+          "end": 320
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "171187"
+    },
+    {
+      "n": 17,
+      "title": "Excalibur",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171188/original.jpeg",
+      "synopsis": "Kirito and the others are taking on Thrymr, the Boss lurking at the bottom level of the dungeon. But unable to make much of a dent in Thrymr's HP, they soon find themselves in grave danger. Just then, their new ally, Freyja, raises her voice…",
+      "airdate": "2014-11-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 78,
+          "end": 168
+        }
+      ],
+      "external_id": "171188"
+    },
+    {
+      "n": 18,
+      "title": "The Forest House",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171189/original.jpeg",
+      "synopsis": "In an upcoming update of ALO, Floors 21-30 of New Aincrad will be unlocked. Asuna, Kirito and Yui revisit their dream of once again living together in their log cabin on Floor 22. After the update, Asuna, Kirito and the rest face the boss of Floor 21...",
+      "airdate": "2014-11-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 93,
+          "end": 183
+        }
+      ],
+      "external_id": "171189"
+    },
+    {
+      "n": 19,
+      "title": "Absolute Sword",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171190/original.jpeg",
+      "synopsis": "Hearing rumors about a brilliant player known as Zekken, Asuna decides to mount a challenge. But when Asuna logs out, she is told by her mother to take an exam to transfer into an academically oriented high school.",
+      "airdate": "2014-11-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 169
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "171190"
+    },
+    {
+      "n": 20,
+      "title": "Sleeping Knights",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115610/original.jpg",
+      "synopsis": "Yuuki takes Asuna to an inn in Ronbaru and introduces her to the other members of the Sleeping Knights: Jun, Nori, Siune, Talken and Tecchi. Yuuki then reveals that the guild wanted Asuna's help in defeating the next Floor Boss with just one party. Siune explains that the group wanted to defeat the boss in order to etch their names on the Monument of Swordsmen, as they would not be able to adventure together after winter. After some thinking, Asuna agrees to help. Sometime later, while she is walking to the Teleport Gate plaza, Kyouko disconnects Asuna from the game and they have a disagreement. Asuna decides to go to a park in another residential area and considers calling Kazuto, but decides that she did not want to expose her weakness to him. The next day, she meets up with the Sleeping Knights and they easily manage to reach the boss room, but Asuna detects several other players hiding near there. Though the players claim they are waiting for their friends, Asuna realizes they were actually spying on their battle to study the boss without sacrificing their own men. After the Sleeping Knights and Asuna are defeated and re-spawn in Ronbaru, Asuna tells the others what she discovered and they decide to rush to the boss room again before the guild had enough time to gather a raid group. At the boss room, they find a large amount of players gathered at the door. As the guild rejects the request of the Sleeping Knights to let them try again, Yuuki declares that they would fight it out and attacks the raid group's leader. At that point, the rest of the raid party arrives, but Kirito appears, having followed them, and blocks their path.",
+      "airdate": "2014-11-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 61,
+          "end": 151
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "115610"
+    },
+    {
+      "n": 21,
+      "title": "Swordsman's Memorial",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115611/original.jpg",
+      "synopsis": "While Kirito battles the raid party's reinforcements, the Sleeping Knights engage the forces blocking the path to the boss room. However, seeing that their assault was useless due to the guild's healers, Asuna asks Siune to manage the healing herself and uses Flashing Penetrator to break through to the healers while killing the group's leader. After the healers are disposed of, followed by the rest of the players, Asuna and the others enter the boss room. During the boss battle, Asuna deduces the boss's weak point and orders Yuuki to use a Sword Skill. Following Asuna's suggestion to use Tecchi as a stepping stone, Yuuki defeats the boss with her signature Original Sword Skill. With the mission concluded, the group agrees to celebrate at Asuna's in-game home. While conversing about various things, Asuna asks whether she could join the Sleeping Knights and notices the unpleasant reactions of the others. The group then goes to the Monument of Swordsmen, where they take a picture. Afterwards, Yuuki accidentally addresses Asuna as her elder sister. Since Yuuki also did so back in the boss room, Asuna points this out to her and Yuuki unexpectedly starts crying and abruptly logs out.",
+      "airdate": "2014-11-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 61,
+          "end": 151
+        }
+      ],
+      "external_id": "115611"
+    },
+    {
+      "n": 22,
+      "title": "Journey's End",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115612/original.jpg",
+      "synopsis": "Three days later after the incident at the Monument of Swordsmen, Asuna tries asking Siune about Yuuki's behavior. She responds that Yuuki was trying to avoid Asuna for her own sake, then asks Asuna to forget about the Sleeping Knights before logging out. At school, Asuna meets up with Kazuto, who gives her the address to a hospital where a medical FullDive machine, the Medicuboid, was being tested. At the hospital, Asuna meets Doctor Kurahashi, Yuuki's supervisor, who explains the Medicuboid's usage for patients in terminal care. Kurahashi then reveals that Yuuki was suffering from AIDS due to an infection via blood transfusion during complicated labor. After Asuna asks why Yuuki started using the Medicuboid, Kurahashi explains that he had her put in a clean room at his own request so she would not risk further infection, and reveals that Yuuki had been living inside the machine for three years straight, not returning to the real world at all. Asuna then learns about Yuuki's elder twin sister, who passed away the year before, causing her to break down in tears. Seeing this, Yuuki communicates with Asuna via the Medicuboid, asking her to meet at the place where they first met in ALO. Asuna uses the AmuSphere in the next room to log into the game and rushes to Yuuki's location. There, the two talk, during which Yuuki expresses her wish of going to school again.",
+      "airdate": "2014-12-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 133,
+          "end": 223
+        }
+      ],
+      "external_id": "115612"
+    },
+    {
+      "n": 23,
+      "title": "Beginning of a Dream",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115613/original.jpg",
+      "synopsis": "On the day after Asuna's reunion with Yuuki, Asuna takes a Bidirectional Communication Probe to guide Yuuki around the school. Yuuki takes part in the lectures and becomes popular with her classmates. Afterwards, Asuna takes Yuuki to the old Konno residence, which Yuuki reveals is about to be torn down soon, so she wished to see it for one last time. She then admits that by seeing her house she realized how her mother had been surrounding her with her feelings. Asuna tells Yuuki about her relationship with her own mother and asks Yuuki how to be as strong as her. However, Yuuki says that she was not strong, but instead, she did not feel like she had time to waste, so she would always be honest with her feelings. She then recommends Asuna to talk with her mother and share what she felt. Using Yuuki's advice, Asuna asks Kyouko to log into ALO with her so she could show it to her. Kyouko reluctantly accepts and uses Asuna's sub account to log in. At the Forest House, Kyouko is reminded of her parents' home. Asuna then tells her mother about how happy her parents were of her and how they wished to protect their home so Kyouko would have a place to return to. Asuna then reveals that she realized how life was not about just doing things for oneself and how the happiness of others could make one happy as well, thus she desires to remain in her current school where she could support the ones she loved. The next morning, Kyouko tells Asuna that if she planned to support someone, she had to be strong herself, thus she would have to work hard on her grades to get into a university and whether Asuna would have to transfer would depend on her progress. Asuna accepts her mother's proposal before leaving.",
+      "airdate": "2014-12-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 67,
+          "end": 157
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1343,
+          "end": 1380
+        }
+      ],
+      "external_id": "115613"
+    },
+    {
+      "n": 24,
+      "title": "Mother's Rosario",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115614/original.jpg",
+      "synopsis": "Months after Asuna's discussion with her mother, she receives a message from Kurahashi that Yuuki is dying and learns that nothing more could be done. While holding Yuuki's hand, Asuna realizes that Yuuki wanted to return to the virtual world, and Kurahashi allows her to FullDive. At the island where Asuna and Yuuki first met, Yuuki creates a scroll for her Original Sword Skill and passes it to Asuna in hopes that it would protect her. The members of the Sleeping Knights, along with Kirito, Klein, Leafa, Lisbeth, Silica, Sinon, Yui, and numerous other fairies arrive to cheer Yuuki on in her final moments, all having been notified by Asuna so that Yuuki would not have a lonely farewell. Yuuki then tells Asuna how she had always asked herself what her reason was for living if she was destined to die anyway, then says that she had found the reason, as her last moments were truly fulfilling. Before Yuuki's death, Asuna vows to meet her in another world. A week later, at Yuuki's memorial service, Asuna meets with An Shiun, Siune's real-life counterpart, whose condition is improving. They learn from Kazuto and Kurahashi that they were talking about applying the Bidirectional Communication Probe for medical FullDive technology, Yuuki having provided more than enough data for the device. When Asuna is surprised that the Medicuboid designs came from an external helper, Kurahashi states that the helper was a professor named Rinko Koujiro, who previously took care of Akihiko Kayaba during the SAO Incident, thus the Medicuboid designs actually came from Akihiko.",
+      "airdate": "2014-12-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1186,
+          "end": 1276
+        }
+      ],
+      "external_id": "115614"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

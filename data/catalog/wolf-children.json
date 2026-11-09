@@ -1,0 +1,65 @@
+{
+  "id": "wolf-children",
+  "title": "Wolf Children",
+  "native": "おおかみこどもの雨と雪",
+  "year": 2012,
+  "rating": 8.3,
+  "season": "Spring 2012",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx12355-wNsvhEsXEgrH.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12355-wNsvhEsXEgrH.png",
+  "accent": "#e45d6b",
+  "synopsis": "The theme of the film is the love between parents and children. The story covers 13 years and begins with a 19-year-old college student named Hana who encounters and falls in \"fairy tale-like\" love with a \"wolf man.\" After marrying the wolf man, Hana gives birth and raises two wolf children—an older sister named Yuki who was born on a snowy day, and a younger brother named Ame who was born on a rainy day. The four quietly lived in a corner of a city to conceal the existence of the \"wolf children,\" but when the wolf man suddenly dies, Hana decides to move to a rural town far removed from the city.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 6711,
+    "anilist": 12355,
+    "mal": 12355,
+    "hianime": "wolf-children-qxmuir"
+  },
+  "skip_key_id": 12355,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 06:39:36",
+  "search_text": "wolf children おおかみこと もの雨と雪 movie finished",
+  "genres": [
+    "drama",
+    "fantasy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Wolf Children (Movie)",
+      "runtime": "117:00",
+      "runtime_seconds": 7020,
+      "thumb": "https://animehot.cc/storage/media/2026/09/690a38c9543081759bdbf905-landscape.webp",
+      "synopsis": "Hana, a hard-working college student, falls in love with a mysterious man who attends one of her classes though he is not an actual student. As it turns out, he is not truly human either. On a full moon night, he transforms, revealing that he is the last werewolf alive. Despite this, Hana's love remains strong, and the two ultimately decide to start a family.\n\nHana gives birth to two healthy children—Ame, born during rainfall, and Yuki, born during snowfall—both possessing the ability to turn into wolves, a trait inherited from their father. All too soon, however, the sudden death of her lover devastates Hana's life, leaving her to raise a peculiar family completely on her own. The stress of raising her wild-natured children in a densely populated city, all while keeping their identity a secret, culminates in a decision to move to the countryside, where she hopes Ame and Yuki can live a life free from the judgments of society. Wolf Children is the heartwarming story about the challenges of being a single mother in an unforgiving modern world.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "98558"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Okaa-san no Uta (おかあさんの唄)",
+      "artist": "Ann Sally",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

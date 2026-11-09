@@ -1,0 +1,216 @@
+{
+  "id": "tsurune-kazemai-high-school-kyudo-club",
+  "title": "Tsurune",
+  "native": "ツルネ ―風舞高校弓道部―",
+  "year": 2018,
+  "rating": 7.6,
+  "season": "Fall 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx100402-eDxanr9DiBuV.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100402-eDxanr9DiBuV.jpg",
+  "accent": "#a1c950",
+  "synopsis": "Minato played Japanese archery in middle school, but after a certain incident, he ran away from the sport. In high school, Minato meets new friends, and together as part of their school's archery club they aim to win the prefectural tournament.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tsurune:-kazemai-high-school-kyudo-club-0qhn66",
+    "mal": 36653,
+    "anilist": 100402,
+    "kitsu": 13990
+  },
+  "skip_key_id": 36653,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "tsurune ツルネ 風舞高校弓道部 tv finished",
+  "genres": [
+    "drama",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Young Man on the Shooting Range",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/1aeaacdb09a0a8b35bd9a96cbe34b95f1540112324_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "248060"
+    },
+    {
+      "n": 2,
+      "title": "At Wit's End",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/416903a7fdf29935db06f3939d5a33c71540745157_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "248061"
+    },
+    {
+      "n": 3,
+      "title": "Just as They Met",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/e591ef153bd17cb9304b077e238c5ae81541350434_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "248062"
+    },
+    {
+      "n": 4,
+      "title": "A Poor Fit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c8c4428170f38fd1fdfb298205ae88931541956004_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255323"
+    },
+    {
+      "n": 5,
+      "title": "A Frequent Messenger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2d279f976e7f853b01614a50e68112531542528404_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255324"
+    },
+    {
+      "n": 6,
+      "title": "The Reason for Shooting",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/2f4c735e30e5d990164da3461d4814421543122849_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255325"
+    },
+    {
+      "n": 7,
+      "title": "Reunion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/515eb06e1e8dbd3bcb436234d47d9ae61543770563_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255326"
+    },
+    {
+      "n": 8,
+      "title": "Taking Aim",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f954a2ecb863d4b08b6a120a4fb68c251544367439_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255327"
+    },
+    {
+      "n": 9,
+      "title": "An Unshown Hand",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a552ad2e3950fc1af8a003ac3f3cb5f51544969322_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255328"
+    },
+    {
+      "n": 10,
+      "title": "Linked Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/7dd5e5916727c079da9cc32273ddcb841545554652_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255329"
+    },
+    {
+      "n": 11,
+      "title": "The Pain of Empty Release",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2610146a0bb4147ba179b5935ef9d3701546757132_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255330"
+    },
+    {
+      "n": 12,
+      "title": "Five Arrows",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c5750dc89dd880d77be9faa9130fe2651547394639_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255331"
+    },
+    {
+      "n": 13,
+      "title": "Irreplaceable",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5409e8e9b7f5a1feb286bf489133fd331548000143_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256414"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "℃/Shirushi [Tsurune-ban] (℃ / しるし【ツルネ盤】)",
+      "artist": "Luck Life",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hitominaka",
+      "artist": "Tei",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Naru",
+      "artist": "Luck Life",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Orange-iro (The Color Orange)",
+      "artist": "ChouCho",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

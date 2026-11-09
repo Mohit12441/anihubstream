@@ -1,0 +1,191 @@
+{
+  "id": "urara-meirocho",
+  "title": "Urara Meirocho",
+  "native": "うらら迷路帖",
+  "year": 2017,
+  "rating": 7,
+  "season": "Winter 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/11934/medium.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21696-j2vBJIcPIMhn.png",
+  "accent": "#ff3d8b",
+  "synopsis": "This is Meirochou (Labyrinth Town), the town of fortune-telling. In town, there is a fortune-telling shop called Urara, where girls aspiring to be fortune-tellers come from all over the country. Chiya, who was raised in the mountains, comes to the town with a purpose, but what is it exactly? There, she meets Kon who is always serious, Koume who loves all things western, and the shy Nono. Their fun days of living together as apprentice fortune-tellers are about to begin. (Source: MAL News)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11934,
+    "anilist": 21696,
+    "mal": 32924
+  },
+  "skip_key_id": 32924,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-11-06 13:01:36",
+  "search_text": "urara meirocho うらら迷路帖 tv finished",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Fortune-Teller Girl Sometimes Shows Her Stomach",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-06",
+      "markers": [],
+      "external_id": "199963"
+    },
+    {
+      "n": 2,
+      "title": "The Things We Search For and Our Dreams are Sometimes Sweet!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-13",
+      "markers": [],
+      "external_id": "199964"
+    },
+    {
+      "n": 3,
+      "title": "Our Friends and Colleagues are Sometimes Rivals",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-20",
+      "markers": [],
+      "external_id": "199965"
+    },
+    {
+      "n": 4,
+      "title": "Good and Bad Things are Sometimes Ticklish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-27",
+      "markers": [],
+      "external_id": "199966"
+    },
+    {
+      "n": 5,
+      "title": "Brides and Gods Sometimes Sneeze",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-03",
+      "markers": [],
+      "external_id": "199967"
+    },
+    {
+      "n": 6,
+      "title": "Love and Pursuit Sometimes Go 'Good Girl, Good Girl!'",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-10",
+      "markers": [],
+      "external_id": "199968"
+    },
+    {
+      "n": 7,
+      "title": "Invocations and Witches Sometimes Have to Be Ready",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-17",
+      "markers": [],
+      "external_id": "199969"
+    },
+    {
+      "n": 8,
+      "title": "Forbidden Things are Sometimes Totally Naked!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-24",
+      "markers": [],
+      "external_id": "199970"
+    },
+    {
+      "n": 9,
+      "title": "Mothers and Knowledge are Sometimes for You!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-03",
+      "markers": [],
+      "external_id": "199971"
+    },
+    {
+      "n": 10,
+      "title": "Four Girls and the Ranking Exam are Sometimes a Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-10",
+      "markers": [],
+      "external_id": "199972"
+    },
+    {
+      "n": 11,
+      "title": "Chiya and the Dark Sometimes Cry",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-17",
+      "markers": [],
+      "external_id": "199973"
+    },
+    {
+      "n": 12,
+      "title": "Baths and Celebrations Sometimes Have Smiles!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-24",
+      "markers": [],
+      "external_id": "199974"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yumeji Labyrinth (夢路らびりんす; Dreaming Labyrinth)",
+      "artist": "Sayaka Harada, Kaede Hondo, Yurika Kubo & Haruka Yoshimura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "go to Romance>>>>>",
+      "artist": "Luce Twinkle Wink☆",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

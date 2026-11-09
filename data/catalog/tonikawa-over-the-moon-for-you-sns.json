@@ -1,0 +1,85 @@
+{
+  "id": "tonikawa-over-the-moon-for-you-sns",
+  "title": "TONIKAWA: Over The Moon For You ~SNS~",
+  "native": "トニカクカワイイ ～SNS～",
+  "year": 2021,
+  "rating": 7.9,
+  "season": "Summer 2021",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx127371-sQvD9sILl7Lc.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx127371-sQvD9sILl7Lc.jpg",
+  "accent": "#e45da1",
+  "synopsis": "When Nasa is suddenly called in for some work, Tsukasa spends her first night alone since their marriage began. As the loneliness pulls at her, she takes the smartphone that Nasa got her as a gift in hand and continues to wait. Messaging allows the two of them to stay connected, even while separated. \n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tonikawa:-over-the-moon-for-you-sns-yqkfnr",
+    "mal": 44931,
+    "anilist": 127371,
+    "kitsu": 43832
+  },
+  "skip_key_id": 44931,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "tonikawa over the moon for you sns トニカクカワイイ sns ova finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Marriage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1b6e79848d8985d3d1211e7c38e0b9401601644925_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "294664"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Setsuna no Chikai (feat. Yuzaki Tsukasa) (刹那の誓い（feat. 由崎司）)",
+      "artist": "Neko Hacker",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yoru no Katasumi (夜のかたすみ)",
+      "artist": "Tsukasa Yuzaki [Akari Kitō]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Koi no Uta (feat. Tsukasa Tsukuyomi)",
+      "artist": "Akari Kitō",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsuki to Hoshizora",
+      "artist": "KanoeRana",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,55 @@
+{
+  "id": "un-go-movie",
+  "title": "UN-GO MOVIE",
+  "native": "UN-GO episode:0 因果論",
+  "year": 2011,
+  "rating": 7.2,
+  "season": "Fall 2011",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11531-hsCTtgEDRAMs.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11531-hsCTtgEDRAMs.png",
+  "accent": "#e44350",
+  "synopsis": "This prequel takes place at the same time as the first episode of the TV series. As the story begins to unfold, more mysteries that were unanswered in the first eleven episodes come to light, and we learn the full story of the duo’s story.\n\n(Source: HIDIVE)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "un-go-movie-rh0q34",
+    "mal": 11531,
+    "anilist": 11531,
+    "kitsu": 6529
+  },
+  "skip_key_id": 11531,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "un go movie un go episode 0 因果論 movie finished",
+  "genres": [
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "UN-GO MOVIE (Movie)",
+      "runtime": "48:00",
+      "runtime_seconds": 2880,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6acddf9433988c0d81768d3f-landscape.jpg",
+      "synopsis": "This prequel takes place at the same time as the first episode of the TV series. As the story begins to unfold, more mysteries that were unanswered in the first eleven episodes come to light, and we learn the full story of the duo’s story.\n\n(Source: HIDIVE)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "96532"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,64 @@
+{
+  "id": "tokyo-ghoul-pinto",
+  "title": "Tokyo Ghoul: Pinto",
+  "native": "Tokyo Ghoul: \"Pinto\"",
+  "year": 2015,
+  "rating": 7.2,
+  "season": "Year 2015",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/693e674ac3e21e172e8f6c89-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/693e674ac3e21e172e8f6c89-landscape.webp",
+  "accent": "#8b5cf6",
+  "synopsis": "Shuu Tsukiyama is a \"ghoul\": a creature who eats human flesh, and he likes to enjoy his meals to the fullest. One night, while relishing in the premeditated murder of his dinner, Shuu's much anticipated first bite is disturbed by a sudden flash of light.\n\nThe flash turns out to be from the camera of high schooler Chie Hori, who presents Shuu with the perfect picture capturing his true nature; the extremely clear shot of a bloody corpse and an overly excited Shuu threatens to expose his ghoul identity, thus Shuu needs to sort out this situation quickly.\n\nAfter Shuu discovers that Chie attends the same high school as him and is even in the same class, the reason behind his feelings of obsession changes from self-preservation to morbid curiosity. As he grows closer to the absent-minded and extremely odd photographer, he challenges them both to learn more about each other's conflicting worlds; Shuu promises that Chie will come out of this experience with a photograph superior to the one she already has.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tokyo-ghoul:-pinto-iwdbmf",
+    "mal": 31297,
+    "anilist": 21326,
+    "kitsu": 11294
+  },
+  "skip_key_id": 31297,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "tokyo ghoul pinto tokyo ghoul pinto",
+  "genres": [
+    "drama",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Tragedy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/04fce0b6f8885e85cb78a65d22ba0ea91644482778_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "178696"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Munō (無能; Incompetence)",
+      "artist": "österreich",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

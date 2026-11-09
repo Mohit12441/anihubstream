@@ -1,0 +1,100 @@
+{
+  "id": "vivy-fluorite-eyes-song",
+  "title": "Vivy -Fluorite Eye's Song-",
+  "native": "Vivy -Fluorite Eye’s Song-",
+  "year": 2021,
+  "rating": 8.2,
+  "season": "Spring 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx128546-UIwyhuhjxmL0.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx128546-UIwyhuhjxmL0.jpg",
+  "accent": "#35a1bb",
+  "synopsis": "An AI named Matsumoto appears before Vivy, the world’s first autonomous humanoid AI. Matsumoto’s mission is to rewrite history together with Vivy, in order to stop the war between AI and humans that will happen one century later.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "vivy-fluorite-eye's-song-suunjr",
+    "mal": 46095,
+    "anilist": 128546,
+    "kitsu": 43933
+  },
+  "skip_key_id": 46095,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "vivy fluorite eye s song vivy fluorite eye s song tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "My Code – To Make Everyone Happy With My Singing",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/baa3192161341e1f5560ab353ba3391f1641843132_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "117027"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "A Tender Moon Tempo",
+      "artist": "Kairi Yagi",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sing My Pleasure",
+      "artist": "Kairi Yagi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ending Theme",
+      "artist": "MONACO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ensemble for Polaris",
+      "artist": "Rikka",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Galaxy Anthem",
+      "artist": "Kairi Yagi",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Ensemble for Polaris",
+      "artist": "Rikka and Noa",
+      "episodes": "4"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,99 @@
+{
+  "id": "umayuru-full-gate",
+  "title": "Umayuru: Full Gate!",
+  "native": "うまゆるふるげ〜と!",
+  "year": 2026,
+  "rating": 6.9,
+  "season": "Fall 2026",
+  "kind": "ONA",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx215835-B0seSw93V5qM.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx215835-B0seSw93V5qM.png",
+  "accent": "#43aef1",
+  "synopsis": "\"Umayuru\" is a short anime series featuring pint-sized Uma Musume! This time, it’s a \"Full-Gate\" three-minute race where *all* the Uma Musume take to the track! A super-sized, laid-back gathering with everyone!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": 7,
+  "sched_day_label": "SUN",
+  "sched_date": "Nov 8",
+  "sched_time": "12:00",
+  "sched_season": "Fall 2026",
+  "sched_episode": 7,
+  "sched_sub_at": null,
+  "sched_dub_at": 1790515800000,
+  "source_ids": {
+    "anilist": 215835,
+    "mal": 64867,
+    "hianime": "umayuru:-full-gate!-l1stwf",
+    "kitsu": 51017
+  },
+  "skip_key_id": 64867,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": "2026-10-18 13:08:35",
+  "search_text": "umayuru full gate うまゆるふるけ と ona ongoing",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

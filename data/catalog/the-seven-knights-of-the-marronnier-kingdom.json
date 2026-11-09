@@ -1,0 +1,89 @@
+{
+  "id": "the-seven-knights-of-the-marronnier-kingdom",
+  "title": "The Seven Knights of the Marronnier Kingdom",
+  "native": "マロニエ王国の七人の騎士",
+  "year": 2026,
+  "rating": 6.8,
+  "season": "Fall 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx212799-n7WDdic7IL1z.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212799-n7WDdic7IL1z.png",
+  "accent": "#e46b5d",
+  "synopsis": "At the heart of a continent of eight kingdoms lies the Marronnier Kingdom. Its general, Baribara, has seven sons, each with a unique gift and serving as a knight commander. Bound by a single noble cause of heroically rescuing a princess someday, the brothers set out as goodwill ambassadors to the seven neighboring kingdoms. What encounters, trials, and destinies await them in these unknown lands?\n\n(Source: Amazon Prime Video)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": 6,
+  "sched_day_label": "SAT",
+  "sched_date": "Nov 14",
+  "sched_time": "09:25",
+  "sched_season": "Fall 2026",
+  "sched_episode": 7,
+  "sched_sub_at": null,
+  "sched_dub_at": 1794063600000,
+  "source_ids": {
+    "anilist": 212799,
+    "mal": 64326,
+    "hianime": "the-seven-knights-of-the-marronnier-kingdom-dpkquf",
+    "kitsu": 51015
+  },
+  "skip_key_id": 64326,
+  "skip_key_space": "mal",
+  "episode_total": 20,
+  "added_at": "2026-10-18 00:08:41",
+  "search_text": "the seven knights of the marronnier kingdom マロニエ王国の七人の騎士 tv ongoing",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,352 @@
+{
+  "id": "witch-watch",
+  "title": "WITCH WATCH",
+  "native": "ウィッチウォッチ",
+  "year": 2025,
+  "rating": 7.2,
+  "season": "Spring 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx180367-GlRuB2lG7Kaa.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx180367-GlRuB2lG7Kaa.jpg",
+  "accent": "#e4e4ae",
+  "synopsis": "Morihito Otogi, a high school student who comes from a lineage of ogres, enjoys a peaceful, ordinary life until his childhood friend, Nico, moves in with him. Nico is a witch-in-training, and chooses Morihito to be her familiar. While Nico is thrilled to reunite with her old friend and crush, Morihito is tasked with the perilous duty to protect her from a foretold calamity. Between the unpredictable chaos caused by Nico’s magic, and the awkwardness of sharing a home, their lives become a whirlwind of supernatural hijinks and threats.\n\n(Source: Crunchyroll) \n\nNotes: \n\n- Worldwide premiere of Episodes 1-3 titled as WITCH WATCH: WATCH PARTY before the Japanese premiere was pre-screened in advance in theaters on March 16, 2025 in North America by GKIDS Films and March 22 and 23 in Europe by Animation Digital Network. \n\n- Episodes 1-2 + a selection of stories (Cat Scout, Kanshi's Part Time Job Diaries ~ The Side Job ~, and Kan & Nico's Channel) was pre-screened in advance in theaters on March 30, 2025 in Japan. The regular TV broadcast began April 6, 2025.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "witch-watch-l3ty51",
+    "mal": 59597,
+    "anilist": 180367,
+    "kitsu": 49136
+  },
+  "skip_key_id": 59597,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": null,
+  "search_text": "witch watch ウィッチウォッチ tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "fantasy",
+    "romance",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Witch's Return",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376591/thumbnail/01186905c8f00f33ca385894b0be0dcf.jpg",
+      "synopsis": "Nico returns home after practicing hard to become a witch and reunites with Morihito.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-04-06",
+      "markers": [],
+      "external_id": "376591"
+    },
+    {
+      "n": 2,
+      "title": "A Giant Rookie / Let’s Go to a Diner / The Flying Classroom",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376592/thumbnail/d1c5ed2ec47b5fff6e7926c95d6ce731.jpg",
+      "synopsis": "Nico and Morihito enroll in Asunaro Private High School. Nico is pushed to hide the fact that she’s a witch.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-04-13",
+      "markers": [],
+      "external_id": "376592"
+    },
+    {
+      "n": 3,
+      "title": "Fresh Transparent Fashions for Spring / Witch’s Delivery Service / Lost Dogs and the Patter of Rain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376593/thumbnail/a3d8dab0e9d69de1776cbc73b7b66e81.jpg",
+      "synopsis": "When Nico and Morihito are relaxing at home, a package arrives from Nico’s mother, Ibuki.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-04-20",
+      "markers": [],
+      "external_id": "376593"
+    },
+    {
+      "n": 4,
+      "title": "Kanshi Kazamatsuri, The Tengu",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376594/thumbnail/602ee03f2f86ecf19c0ad147ca377758.jpg",
+      "synopsis": "In order to protect Nico, the crow familiar Kanshi Kazamatsuri appears before Nico and Morihito. Kanshi is a tengu who lived in the mountain where Nico was undergoing training. Like Morihito, Ibuki asks Kanshi to protect Nico, but Kanshi sees the ogre Morihito as an enemy. Despite that, it looks like Kanshi will be moving in with Nico and Morihito?\n\n(Source: Crunchyroll)",
+      "airdate": "2025-04-27",
+      "markers": [],
+      "external_id": "376594"
+    },
+    {
+      "n": 5,
+      "title": "My Student is my Favorite Artist / My Tummy is Tender Today / Cat Scout",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376595/thumbnail/f2d950c910d447114e9be144ddef345d.jpg",
+      "synopsis": "Nico and Morihito’s homeroom teacher, Ms. Makuwa, is a secret manga otaku. Her favorite series is “Uron Mirage,” also known as “U.M.” One day, she hears that one of her students, Kukumi Ureshino, a.k.a. Kuku, has been posting U.M. fanart on her Chitter. It seems like she has 10k followers and some of her art has gone viral. And as Ms. Makuwa predicted…\n\n(Source: Crunchyroll)",
+      "airdate": "2025-05-04",
+      "markers": [],
+      "external_id": "376595"
+    },
+    {
+      "n": 6,
+      "title": "Under the Lovers' Tree",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376596/thumbnail/73e06a1f41c9494f0ce498a8da9c96c2.jpg",
+      "synopsis": "Nico is in panic mode because Morihito has gotten quite popular at school. Even Kanshi is able to recognize Nico’s feelings for Morihito, but Morihito remains as clueless as ever. However, Nico hears about a famous Lovers’ Tree at Mt. Futatsu, where her class will be going on a field trip soon. According to the rumor, if two people eat lunch together under that tree, they’ll become a couple. Kanshi pressures Nico to tell Morihito about her feelings.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-05-11",
+      "markers": [],
+      "external_id": "376596"
+    },
+    {
+      "n": 7,
+      "title": "Kan and Nico’s Channel / The Tea Ceremony is a Piece of Tea Cake",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376597/thumbnail/9ff3154590faa66b6ff09fee1ba6c9ca.jpg",
+      "synopsis": "\"I heard you can easily make money.\" With that reason alone, Nico and Kanshi started the \"Kan and Nico Channel.\" Morihito gets irritated about how ignorant Nico and Kanshi are towards creating videos to post online, so he asks their hipster poser classmate, Keigo Magami, for help.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-05-18",
+      "markers": [],
+      "external_id": "376597"
+    },
+    {
+      "n": 8,
+      "title": "Kanshi’s Part-Time Job Diaries ~The Superhero Show~ / Kanshi’s Part-Time Job Diaries ~The Side Job~",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376598/thumbnail/e80718d72d11beb69da90d0690b38ee3.jpg",
+      "synopsis": "Kanshi cried as he clung to Morihito. And that's because Kanshi immediately blew away his allowance and can't pay the monthly living expenses to the Otogi household. And so, Morihito hands him a flyer for a hero show for hire being held at Akebono Park.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-05-25",
+      "markers": [],
+      "external_id": "376598"
+    },
+    {
+      "n": 9,
+      "title": "Dear Kara / New Friends / Date With the Knight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376599/thumbnail/42b8479e5253f8091135b4d770da51f4.jpg",
+      "synopsis": "Nico and Morihito are at their classmate Kara Minami's house. Kara invited them over so they could recover Kara's shredded up letter, which was a letter from her departed mother that her father had put in the shredder.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-06-01",
+      "markers": [],
+      "external_id": "376599"
+    },
+    {
+      "n": 10,
+      "title": "Trope-tacular Student Council / A Stray Cat’s Bubble of Bliss",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376600/thumbnail/4cdce89d2d9ae17a66c8daff8735ce9b.jpg",
+      "synopsis": "Morihito is targeted by the very tropey Student Council. The older sister Vice President, the Kansai accent Vice President, the hacker treasurer, and more! And then, the one who stands above them all, the President who won't take his hand off his hat.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-06-08",
+      "markers": [],
+      "external_id": "376600"
+    },
+    {
+      "n": 11,
+      "title": "Dogs and Raindrops, Part 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376601/thumbnail/34e4eab7eee64fcd82b2cbfcb2669108.jpg",
+      "synopsis": "Kanshi saves Keigo from getting his sneakers stolen. The person who attacked him used a candy called \"drop,\" which has a stimulant effect that amplifies one's strength and desires. Later, a witch named Nemu Miyao appears before Nico and Morihito.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-06-15",
+      "markers": [],
+      "external_id": "376601"
+    },
+    {
+      "n": 12,
+      "title": "Dogs and Raindrops, Part 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376602/thumbnail/9a9e1bf0d3c47d7ca7824850de7d4268.jpg",
+      "synopsis": "When he sees the shape of a crescent, he changes into a fierce werewolf with a ferocious amount of wild strength. Meanwhile, Kanshi and Nico are surrounded by Wolf's \"Dogs.\" They devise a simple plan.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-06-22",
+      "markers": [],
+      "external_id": "376602"
+    },
+    {
+      "n": 13,
+      "title": "Keigo Magami, The Werewolf / Kind Tiger, Proud Wolf / Easy Spices for Enthralling Cooking",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376603/thumbnail/319167526087d3047810b8f309c4140c.jpg",
+      "synopsis": "After things have calmed down, Keigo Magami has moved into the Otogi household. According to Keigo, he'll transform into a Wolf if he sees any \"crescent-shaped objects.\" So, Nico, Morihito, Kanshi, and Keigo remove all crescent-shaped objects in the house.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-06-29",
+      "markers": [],
+      "external_id": "376603"
+    },
+    {
+      "n": 14,
+      "title": "Uron Mirage Chapter 119: The Phasey Hunt, Part 4 / Diary of My Favorite Artist",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376604/thumbnail/c1130f899403df711e1dd89e268007a7.jpg",
+      "synopsis": "(This week's Part A will be an episode from Uron Mirage. Please enjoy!) Utsuro, Oboro, Sagiri, and Zack have arrived at a run-down research building. Utsuro and Oboro are tasked to stand by, but Oboro refuses. Then suddenly, behind Zack is…\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-06",
+      "markers": [],
+      "external_id": "376604"
+    },
+    {
+      "n": 15,
+      "title": "Summer Demon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376605/thumbnail/1d2a23656b5d5ca734860cab176a9990.jpg",
+      "synopsis": "\"Visit the ancient retainer that exorcises evil.\" Nico's mother, Ibuki, has delivered a new prophecy. Ibuki has an idea who this \"ancient retainer\" could be, and tells Nico and her familiars to visit them.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-13",
+      "markers": [],
+      "external_id": "376605"
+    },
+    {
+      "n": 16,
+      "title": "Miharu Kiryu, The Vampire / Missing Parasol / I'm So Glad You're Here",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376606/thumbnail/e757833c13a36ac1acbb7a3917286399.jpg",
+      "synopsis": "The vampire Miharu Kiryu has moved into the Otogi household. He may not do well in a communal living environment, so will this further power up the chaos in the Otogi house?\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-20",
+      "markers": [],
+      "external_id": "376606"
+    },
+    {
+      "n": 17,
+      "title": "We Got Trapped in a Death Game, But It Sucked / Long Long a Go Go",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376607/thumbnail/8b8cd4872293f5dc293f2030cf317279.jpg",
+      "synopsis": "Morihito, Kanshi, Keigo, and Miharu were transported to an unknown room while they were sleeping. A strange mask, a modulated deep voice, and orders from beyond the monitor. They were trapped in a death game, and Nico was a hostage.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-27",
+      "markers": [],
+      "external_id": "376607"
+    },
+    {
+      "n": 18,
+      "title": "Kara and Shiki / Mega Marble Mania Madness / Scramble Scrap Squad",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376608/thumbnail/258d8ab4a00b033850bf0dd3b40d6bc8.jpg",
+      "synopsis": "Nico and Kuku are helping Kara's father, the head priest at a shrine. Nico uses the spell \"Ani-snippy\" from shide paper and creates a moving paper cat. Kara wanted to create a flying bird, but the shape was so terrible that it ended up creating a life?\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-03",
+      "markers": [],
+      "external_id": "376608"
+    },
+    {
+      "n": 19,
+      "title": "Letter From a Friend",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376609/thumbnail/52add74212b1e49875b9bcdf286ceb5d.jpg",
+      "synopsis": "Morihito was cleaning his room, and found a letter that Nico wrote to him when they were children. Meanwhile, Nico, Kanshi, Keigo, Miharu, and Nemu who was visiting, were listening to a story of Nico and Morihito's childhood days.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-10",
+      "markers": [],
+      "external_id": "376609"
+    },
+    {
+      "n": 20,
+      "title": "The Lost Wolf and the Stray Cat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376610/thumbnail/84c0df93fb1cd89aa145b803557870e6.jpg",
+      "synopsis": "Keigo can't use his immense strength unless he looks at a crescent shape. Nico sees that Keigo is sad, so she asks him to become the user for a ring that has \"flying magic\" sealed inside. One day, in the middle of training, Nemu visits and talks to him.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-17",
+      "markers": [],
+      "external_id": "376610"
+    },
+    {
+      "n": 21,
+      "title": "Secret Urges / Keiko's Carefree Style / Jekyll Visits the Otogi House",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376611/thumbnail/95cf548bbc9253c9b581749a45ae8f95.jpg",
+      "synopsis": "Keigo was troubled because the viewers on his channel weren't increasing. He talks to his roommates Nico, Morihito, Kanshi, and Miharu about it, but he just gets a blunt, \"Because it's not interesting!\" That's when Nico comes up with a great idea.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-24",
+      "markers": [],
+      "external_id": "376611"
+    },
+    {
+      "n": 22,
+      "title": "The Incredible Shrinking Adventure / The Hamazaki Fall Bread Festival / Lucky Birthday",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376612/thumbnail/0d360ee836bc63fe6549e3a3034f8207.jpg",
+      "synopsis": "Nico, Kara, and Morihito are having a donut devouring party in Nico's room. Nico thinks that every girl should experience the ever-wonderful Candy Land world, so she casts a spell to shrink their sizes so they can roll around in donuts!\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-31",
+      "markers": [],
+      "external_id": "376612"
+    },
+    {
+      "n": 23,
+      "title": "Our First Offline Meetup / Fave Artist File: Creative Surge / Fave Artist File: Crazy Event Arc",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376613/thumbnail/d9755951fd643559f9108a2678f6e86c.jpg",
+      "synopsis": "Ms. Makuwa and Kuku are hard at work on their \"Uron Mirage\" dojinshi. Ms. Makuwa is in charge of writing and boarding out the story, but is struggling to complete it. Kuku reveals to Ms. Makuwa that she became friends with someone on Chitter.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-14",
+      "markers": [],
+      "external_id": "376613"
+    },
+    {
+      "n": 24,
+      "title": "Moi's Denim Devotion / Date with the Guide",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/376614/thumbnail/7b9b9da2e41047874bea07312c68b420.jpg",
+      "synopsis": "\"I will finally do the laundry tomorrow!\" Morihito declared. It's been one year since he's been lovingly wearing his jeans, and will now perform a second wash. Miharu has never seen Morihito so fired up, and dares to ask him about denim.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-21",
+      "markers": [],
+      "external_id": "376614"
+    },
+    {
+      "n": 25,
+      "title": "Freshman Witch and Her Familiars",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/379324/thumbnail/1a0faf4222538ac281ae183a0f5e59e0.jpg",
+      "synopsis": "It's almost Asunaro Festival. Nico's class will be utilizing her magic to run a \"haunted café\" so you can spend some whimsical time in a cafe full of ghosts. Meanwhile, Kanshi asks Morihito to do a comedy duo on the performance stage.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-10-05",
+      "markers": [],
+      "external_id": "379324"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Watch Me!",
+      "artist": "YOASOBI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mahō wa Supaisu (魔法はスパイス; Magic Spice; Find Your Magic)",
+      "artist": "Aooo",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Tokihanate!",
+      "artist": "Hashimero",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Tsuki to Watashi no Kakurenbo",
+      "artist": "yutori",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

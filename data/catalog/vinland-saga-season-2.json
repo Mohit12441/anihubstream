@@ -1,0 +1,373 @@
+{
+  "id": "vinland-saga-season-2",
+  "title": "Vinland Saga Season 2",
+  "native": "ヴィンランド・サガ SEASON2",
+  "year": 2023,
+  "rating": 8.8,
+  "season": "Winter 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx136430-gsBsJjA7hGh9.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx136430-gsBsJjA7hGh9.jpg",
+  "accent": "#e4a135",
+  "synopsis": "After his father's death and the destruction of his village at the hands of English raiders, Einar wishes for a peaceful life with his family on their newly rebuilt farms. However, fate has other plans: his village is invaded once again. Einar watches helplessly as the marauding Danes burn his lands and slaughter his family. The invaders capture Einar and take him back to Denmark as a slave.\n\nEinar clings to his mother's final words to survive. He is purchased by Ketil, a kind slave owner and landlord who promises that Einar can regain his freedom in return for working in the fields. Soon, Einar encounters his new partner in farm cultivation—Thorfinn, a dejected and melancholic slave. As Einar and Thorfinn work together toward their freedom, they are haunted by both sins of the past and the ploys of the present. Yet they carry on, grasping for a glimmer of hope, redemption, and peace in a world that is nothing but unjust and unforgiving.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "vinland-saga-season-2-75wqjf",
+    "mal": 49387,
+    "anilist": 136430,
+    "kitsu": 44875
+  },
+  "skip_key_id": 49387,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "vinland saga season 2 ウ ィンラント サカ season2 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Slave",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/308163/thumbnail/9b46b870d936bd2bff0492e40d537342.jpg",
+      "synopsis": "Einar lives peacefully in northern England with his mother and sister, but then one day, their village comes under attack.\n\n(Source: Netflix)",
+      "airdate": "2023-01-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 122,
+          "end": 212,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "308163"
+    },
+    {
+      "n": 2,
+      "title": "Ketil's farm",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/308164/thumbnail/30c0e973fd795362aed02cfdaf5af9c3.png",
+      "synopsis": "Einar and Thoriffin are told to convert a wild forest into a wheat field; and if they succeed, they will have a chance to buy their own freedom.\n\n(Source: Netflix)",
+      "airdate": "2023-01-16",
+      "markers": [],
+      "external_id": "308164"
+    },
+    {
+      "n": 3,
+      "title": "Snake",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/310856/thumbnail/cbb8fc3208681b9e9fdced524b4170bc.jpg",
+      "synopsis": "The farm guards convince Ketil's son that he needs to make his first killing to become a man.\n\n(Source: Netflix)",
+      "airdate": "2023-01-23",
+      "markers": [],
+      "external_id": "310856"
+    },
+    {
+      "n": 4,
+      "title": "Awakening",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/310857/thumbnail/4ec3f72ecd21c0e69a1eea663c047125.jpg",
+      "synopsis": "After everything that's happened, Einar asks Thorfinn if he's ever fought in a war - and if he's ever killed a man.\n\n(Source: Netflix)",
+      "airdate": "2023-01-30",
+      "markers": [],
+      "external_id": "310857"
+    },
+    {
+      "n": 5,
+      "title": "The Path of Blood",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/310858/thumbnail/42fe59e12df41c09ae85a99e71fff049.jpg",
+      "synopsis": "After the sudden turn of events, young Canute must rise up to claim the throne to a kingdom much reduced and under attack.\n\n(Source: Netflix)",
+      "airdate": "2023-02-06",
+      "markers": [],
+      "external_id": "310858"
+    },
+    {
+      "n": 6,
+      "title": "I Want a Horse",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/310859/thumbnail/88b14b52ec736d31fe32cae6d0bf4da3.jpg",
+      "synopsis": "Thorfinn and Einar are working themselves to the bone to clear the forest, but there's only so much they can do without the help of horses.\n\n(Source: Netflix)",
+      "airdate": "2023-02-13",
+      "markers": [],
+      "external_id": "310859"
+    },
+    {
+      "n": 7,
+      "title": "Iron Fist Ketil",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/310860/thumbnail/4f2200e63e3ec4bd3d72185d1c5035f0.jpg",
+      "synopsis": "Thieves have been stealing food from Ketil's farm. Meanwhile, Ketil's eldest son Thorgil returns home.\n\n(Source: Netflix)",
+      "airdate": "2023-02-20",
+      "markers": [],
+      "external_id": "310860"
+    },
+    {
+      "n": 8,
+      "title": "An Empty Man",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/310861/thumbnail/353cdc902020f34f805a95e89ec2258e.jpg",
+      "synopsis": "Thorfinn has nightmares almost every night, but he can never remember what he dreamed about - and that bothers him.\n\n(Source: Netflix)",
+      "airdate": "2023-02-27",
+      "markers": [],
+      "external_id": "310861"
+    },
+    {
+      "n": 9,
+      "title": "Oath",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/310862/thumbnail/9455187a7d610914cc7e0938d68e31d9.jpg",
+      "synopsis": "Thorfinn wakes up in a peaceful place and sees his father again. But then things quickly turn dark, and Thorfinn must face his painful past.\n\n(Source: Netflix)",
+      "airdate": "2023-03-06",
+      "markers": [],
+      "external_id": "310862"
+    },
+    {
+      "n": 10,
+      "title": "Cursed Head",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311228/thumbnail/1ef21bb0149f5f245c4d31bbc00d6077.jpg",
+      "synopsis": "Finally, after three long years, Einar and Thorfinn chop down the final tree in the forest. With hopes in their hearts, they talk about the future.\n\n(Source: Netflix)",
+      "airdate": "2023-03-13",
+      "markers": [],
+      "external_id": "311228"
+    },
+    {
+      "n": 11,
+      "title": "The King and the Sword",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311229/thumbnail/7181e9fb84b491fe70b359231001cb97.jpg",
+      "synopsis": "While in Jeilling, Ketil, Thorgil, and Olmar meet a man named Leif Erikson who is searching for Thorfinn, the son of his close friend.\n\n(Source: Netflix)",
+      "airdate": "2023-03-20",
+      "markers": [],
+      "external_id": "311229"
+    },
+    {
+      "n": 12,
+      "title": "For The Love That Was Lost",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311230/thumbnail/56fe6c1d262525f6cfe43b1e3c586bf3.jpg",
+      "synopsis": "Olmar feels insulted by Canute's messenger and, encouraged by his older brother Thorgil, takes matters into his own hands.\n\n(Source: Netflix)",
+      "airdate": "2023-03-27",
+      "markers": [],
+      "external_id": "311230"
+    },
+    {
+      "n": 13,
+      "title": "Dark Clouds",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311231/thumbnail/7a0b8009ae39edcd9affcd74af66528e.jpg",
+      "synopsis": "Einar says that even if he gains his freedom, he wants to stay near Arnheid. Snake hears news of a slave who killed his owners, and is now on the run.\n\n(Source: Netflix)",
+      "airdate": "2023-04-03",
+      "markers": [],
+      "external_id": "311231"
+    },
+    {
+      "n": 14,
+      "title": "Freedom",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311232/thumbnail/cc6c671eee398484f8a18cbc6b1e0294.jpg",
+      "synopsis": "A runaway slave appears on Ketil's farm, claiming to be Arnheid's husband. But before he can free her, he is confronted by Snake.\n\n(Source: Netflix)",
+      "airdate": "2023-04-10",
+      "markers": [],
+      "external_id": "311232"
+    },
+    {
+      "n": 15,
+      "title": "Storm",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311233/thumbnail/ed12fff4d3cf41b436557acfb8313dbb.jpg",
+      "synopsis": "Arnheid comes to the fortress where Gardar is imprisoned. She wants to see her husband and treat his injuries.\n\n(Source: Netflix)",
+      "airdate": "2023-04-17",
+      "markers": [],
+      "external_id": "311233"
+    },
+    {
+      "n": 16,
+      "title": "Cause",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311234/thumbnail/edbfc2a24edfc335d54ab159b9badcc8.jpg",
+      "synopsis": "As Snake intensifies his search, Arnheid tells Einar and Thorfinn everything she's done. Knowing the risks, Einar and Thorfinn offer to help her.\n\n(Source: Netflix)",
+      "airdate": "2023-04-24",
+      "markers": [],
+      "external_id": "311234"
+    },
+    {
+      "n": 17,
+      "title": "Way Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311235/thumbnail/c0dd5365c9989a065114e9812d498389.jpg",
+      "synopsis": "Snake strikes quickly, surprising Thorfinn with his speed and agility. As he lies wounded, Gardar thinks back on the life he shared with Arnheid.\n\n(Source: Netflix)",
+      "airdate": "2023-05-01",
+      "markers": [],
+      "external_id": "311235"
+    },
+    {
+      "n": 18,
+      "title": "The First Measure",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311236/thumbnail/0d1f7f65aac4b505256c6f2a16b2f57f.jpg",
+      "synopsis": "After returning to his farm, an exhausted Ketil starts searching for Arnheid, only to find out what happened in his absence.\n\n(Source: Netflix)",
+      "airdate": "2023-05-08",
+      "markers": [],
+      "external_id": "311236"
+    },
+    {
+      "n": 19,
+      "title": "War at Ketil's Farm",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311237/thumbnail/719b10b6d691ef6f4dd24733703ce8bd.jpg",
+      "synopsis": "Amidst the confusion of a peasant uprising, Thorfinn and the others try to escape, carrying a severely injured and pregnant Arnheid.\n\n(Source: Netflix)",
+      "airdate": "2023-05-15",
+      "markers": [],
+      "external_id": "311237"
+    },
+    {
+      "n": 20,
+      "title": "Pain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311238/thumbnail/6bf1bb60fdea4d5b5e8f3bfc52fbfa03.jpg",
+      "synopsis": "As Thorfinn and Einar head to their escape, Arnheid regains consciousness and asks where are they going - and if there are slaves and wars there too.\n\n(Source: Netflix)",
+      "airdate": "2023-05-22",
+      "markers": [],
+      "external_id": "311238"
+    },
+    {
+      "n": 21,
+      "title": "Courage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311239/thumbnail/32f0f98bbc8861d13033026b2ef7fc7f.jpg",
+      "synopsis": "The battle has left heartbreaking casualties in its wake. Though Thorgill and Ketil's wife want to continue the fight, Canute demands their surrender.\n\n(Source: Netflix)",
+      "airdate": "2023-05-29",
+      "markers": [],
+      "external_id": "311239"
+    },
+    {
+      "n": 22,
+      "title": "Emperor of Rebellion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311240/thumbnail/da02983c782aa1346c08cd7f424cc502.jpg",
+      "synopsis": "Snake tries to put a stop to it, but Thorfinn insists on receiving all 100 blows from Canute's brutish guard Drott, shocking the rowdy onlookers.\n\n(Source: Netflix)",
+      "airdate": "2023-06-05",
+      "markers": [],
+      "external_id": "311240"
+    },
+    {
+      "n": 23,
+      "title": "Two Paths",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311241/thumbnail/7e539a2234e6b001e8d5feeccd3a31d1.jpg",
+      "synopsis": "Thorfinn and Einar have said their peace, but Canute stubbornly refuses to give up Ketil's Farm. Then, Thorfinn breaks off the standoff with a decision.\n\n(Source: Netflix)",
+      "airdate": "2023-06-12",
+      "markers": [],
+      "external_id": "311241"
+    },
+    {
+      "n": 24,
+      "title": "Hometown",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/311242/thumbnail/38c736c95db50f9efe92b113be0f45dd.jpg",
+      "synopsis": "At long last, Thorfinn returns to Iceland and finds a moment of happiness, reunited with his loved ones. But soon, he opens up about his next journey.\n\n(Source: Netflix)",
+      "airdate": "2023-06-19",
+      "markers": [],
+      "external_id": "311242"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "River",
+      "artist": "Anonymouz",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Without Love",
+      "artist": "LMYK",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "MUKANJYO",
+      "artist": "Survive Said the Prophet",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Torches",
+      "artist": "Aimer",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Paradox",
+      "artist": "Survive Said the Prophet",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Ember",
+      "artist": "haju:harmonics",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Dark Crow",
+      "artist": "MAN WITH A MISSION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Drown",
+      "artist": "milet",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

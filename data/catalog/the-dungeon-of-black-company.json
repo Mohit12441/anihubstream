@@ -1,0 +1,308 @@
+{
+  "id": "the-dungeon-of-black-company",
+  "title": "The Dungeon of Black Company",
+  "native": "迷宮ブラックカンパニー",
+  "year": 2021,
+  "rating": 7,
+  "season": "Summer 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx120608-gjCnIszBGe9k.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120608-gjCnIszBGe9k.jpg",
+  "accent": "#e4c950",
+  "synopsis": "Work sucks and Kinji was avoiding it beautifully by investing every penny. Good plan ’til he found himself in a new world…with DEBT! Now under the rule of an evil mining company, avoiding work is gonna be a tough grind. Does he have what it takes to pull off the ultimate workaround on this gig?\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 43268,
+    "anilist": 120608,
+    "mal": 42340
+  },
+  "skip_key_id": 42340,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 16:05:22",
+  "search_text": "the dungeon of black company 迷宮フ ラックカンハ ニー tv finished",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Welcome to the World of Corporate Grunts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c88c5e7209b16409e1296750cd6397621643886798_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1341,
+          "end": 1430
+        }
+      ],
+      "external_id": "301809"
+    },
+    {
+      "n": 2,
+      "title": "An Un-ANT-icipated Encounter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/ea85eb7e09b66b6aaf6a4a00a360bfa21643886893_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 61,
+          "end": 151
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1427
+        }
+      ],
+      "external_id": "301810"
+    },
+    {
+      "n": 3,
+      "title": "Fun at the Corporate Training Trip",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/55fbf7bd43bf9f372bed8886d95105271643887148_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 118,
+          "end": 208
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1430
+        }
+      ],
+      "external_id": "301811"
+    },
+    {
+      "n": 4,
+      "title": "Crazy Death March",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/5fb8abe466292f3e1932d2071bd547fd1643887293_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 77,
+          "end": 167
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1430
+        }
+      ],
+      "external_id": "301812"
+    },
+    {
+      "n": 5,
+      "title": "Transfer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/92e7b6996b48ce2f300efe1f7fcb611d1643887397_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 166,
+          "end": 256
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1429
+        }
+      ],
+      "external_id": "301813"
+    },
+    {
+      "n": 6,
+      "title": "There is strong shadow where there is much light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d5428c81119618a35aeec6167c7395081643887584_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 251,
+          "end": 341
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1427
+        }
+      ],
+      "external_id": "301814"
+    },
+    {
+      "n": 7,
+      "title": "Return to Work",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c4c49160563c3ccf603159c91d00ade41643887817_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 52,
+          "end": 142
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1427
+        }
+      ],
+      "external_id": "301815"
+    },
+    {
+      "n": 8,
+      "title": "Weapon of Mass Hysteria",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/88cc4991a2c95898e00b10fd3e20353e1643887979_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 103,
+          "end": 193
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1427
+        }
+      ],
+      "external_id": "301816"
+    },
+    {
+      "n": 9,
+      "title": "Silent Fortress",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d913aadf282f1c9d9ac86da8b35ec9d81643888066_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1427
+        }
+      ],
+      "external_id": "301817"
+    },
+    {
+      "n": 10,
+      "title": "New Dungeon Paradise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5b00d44edcdcb733dc1f71b2a2e43a301643888133_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 112,
+          "end": 202
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1427
+        }
+      ],
+      "external_id": "301818"
+    },
+    {
+      "n": 11,
+      "title": "Crash EvolutiOn",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/968fd92bd0625545bf2880823b4c35d51643888178_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1373,
+          "end": 1427
+        }
+      ],
+      "external_id": "301819"
+    },
+    {
+      "n": 12,
+      "title": "GoOd Day, goodbye",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/89338e90a67f7c147bc84785ebfa05af1643888226_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1430
+        }
+      ],
+      "external_id": "301820"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

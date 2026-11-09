@@ -1,0 +1,396 @@
+{
+  "id": "xxxholic",
+  "title": "xxxHOLiC",
+  "native": "XXX ホリック",
+  "year": 2006,
+  "rating": 7.7,
+  "season": "Spring 2006",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx861-rbZNhIXwS4JE.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx861-rbZNhIXwS4JE.png",
+  "accent": "#864328",
+  "synopsis": "Watanuki Kimihiro can see spirits and other assorted supernatural creatures, which is quite a bothersome ability he strongly dislikes. On the way home one day, while plagued by some spirits, he is inexplicably compelled to enter a strange house. There, he encounters Yuuko, a mysterious woman who claims to be able to rid him of the ability to see and attract the troublesome creatures – for a price. She demands for him to work at her \"store\" that grants wishes to people, and thus begins Watanuki's adventures through weird and wonderful events.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "xxxholic-puhj7y",
+    "mal": 861,
+    "anilist": 861,
+    "kitsu": 763
+  },
+  "skip_key_id": 861,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "xxxholic xxx ホリック tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "horror",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Inevitable",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14976/original.jpg",
+      "synopsis": "Watanuki's life changes completely when he meets Yūko for the first time. Watanuki is given a job at Yūko's shop, paying off his debt. Mokona, Maru and Moro all make their first appearance in this episode.",
+      "airdate": "2006-04-06",
+      "markers": [],
+      "external_id": "14976"
+    },
+    {
+      "n": 2,
+      "title": "Falsehood",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14977/original.jpg",
+      "synopsis": "A client seeks Yūko's aid because she has problems with her right little finger; Yūko tells her that it is happening because of a bad habit of hers. Watanuki learns more about Yūko while becoming the shop's cook. Himawari-chan and Doumeki both make their first appearance in this episode.",
+      "airdate": "2006-04-13",
+      "markers": [],
+      "external_id": "14977"
+    },
+    {
+      "n": 3,
+      "title": "Angel",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14978/original.jpg",
+      "synopsis": "Himawari-chan asks for Yūko's help to solve a series of mysterious incidents occurring at the school, involving a game called angel. Yūko meets Himawari-chan, and Watanuki is forced to work with Doumeki. Doumeki begins to learn about his true nature.",
+      "airdate": "2006-04-20",
+      "markers": [],
+      "external_id": "14978"
+    },
+    {
+      "n": 4,
+      "title": "Fortune-Telling",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14979/original.jpg",
+      "synopsis": "Yūko decides to show Watanuki what a real Diviner can do. Watanuki learns more about Yūko's powers, while his past is explained. The important butterfly symbolism found throughout the series is also explained.",
+      "airdate": "2006-04-27",
+      "markers": [],
+      "external_id": "14979"
+    },
+    {
+      "n": 5,
+      "title": "Game of Letters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14980/original.jpg",
+      "synopsis": "Watanuki encounters an uncommon oden shop in the middle of the night, while engaging in a dangerous task with Mokona's aid. Watanuki meets the Fox family and later gives the Young Fox a Haja Arrow. The full moon brings new life to Yūko's shop.",
+      "airdate": "2006-05-04",
+      "markers": [],
+      "external_id": "14980"
+    },
+    {
+      "n": 6,
+      "title": "Indulgence",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14981/original.jpg",
+      "synopsis": "Watanuki and Yūko pay a visit to a client who desires to abandon her addiction to computers.",
+      "airdate": "2006-05-11",
+      "markers": [],
+      "external_id": "14981"
+    },
+    {
+      "n": 7,
+      "title": "Hydrangea",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14982/original.jpg",
+      "synopsis": "A rain sprite (Ame-warashi) seeks Yūko's help to save a friend of hers.",
+      "airdate": "2006-05-18",
+      "markers": [],
+      "external_id": "14982"
+    },
+    {
+      "n": 8,
+      "title": "Contract",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14983/original.jpg",
+      "synopsis": "A teacher in Watanuki's school gets her hands into a dangerous item from Yūko's shop, the monkey's paw. The teacher's discovery eventually leads to her downfall and of the monkey's paw choking her.",
+      "airdate": "2006-05-25",
+      "markers": [],
+      "external_id": "14983"
+    },
+    {
+      "n": 9,
+      "title": "Pinky Promise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14984/original.jpg",
+      "synopsis": "Yūko receives a Pipe Fox as payment from Ame-warashi, while another client with bad habit problems arrives at the shop.",
+      "airdate": "2006-06-01",
+      "markers": [],
+      "external_id": "14984"
+    },
+    {
+      "n": 10,
+      "title": "Lamplight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14985/original.jpg",
+      "synopsis": "Yūko decides to arrange a ghost stories meeting with Watanuki and his friends.",
+      "airdate": "2006-06-08",
+      "markers": [],
+      "external_id": "14985"
+    },
+    {
+      "n": 11,
+      "title": "Confession",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14986/original.jpg",
+      "synopsis": "When a Zashiki-warashi accidentally steals Doumeki's soul, Watanuki has to go after her to get it back, aloof to what are her true intentions.",
+      "airdate": "2006-06-15",
+      "markers": [],
+      "external_id": "14986"
+    },
+    {
+      "n": 12,
+      "title": "Summer Shade",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14987/original.jpg",
+      "synopsis": "It's summer and the gang decides to spend some days in a house by the beach. For some reason Doumeki keeps asking Watanuki to call for his help, but he can't figure out why. Unbeknownst to them, there's a ghost lurking inside. When Watanuki discovers this, will he investigate alone?",
+      "airdate": "2006-06-22",
+      "markers": [],
+      "external_id": "14987"
+    },
+    {
+      "n": 13,
+      "title": "Transfiguration",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14988/original.jpg",
+      "synopsis": "Watanuki investigates a classmate of his who started to behave strangely since a pair of wings started to grow from her back.",
+      "airdate": "2006-06-29",
+      "markers": [],
+      "external_id": "14988"
+    },
+    {
+      "n": 14,
+      "title": "Seal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14989/original.jpg",
+      "synopsis": "Watanuki and Doumeki meet a pair of twin sisters and even go to a date with them, but Watanuki can't shake the feeling there is something strange about the older one.",
+      "airdate": "2006-07-06",
+      "markers": [],
+      "external_id": "14989"
+    },
+    {
+      "n": 15,
+      "title": "Release",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14990/original.jpg",
+      "synopsis": "The situation involving the twin sisters start to get dangerous as one of them starts to bleed for apparently no reason.",
+      "airdate": "2006-07-13",
+      "markers": [],
+      "external_id": "14990"
+    },
+    {
+      "n": 16,
+      "title": "Reunion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14991/original.jpg",
+      "synopsis": "In order to make the Pipe Fox revert to its original form, Yūko sends Watanuki to purify it in a mystical mountain, where he meets the Zashiki-warashi again.",
+      "airdate": "2006-07-20",
+      "markers": [],
+      "external_id": "14991"
+    },
+    {
+      "n": 17,
+      "title": "Self-Mutilation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14992/original.jpg",
+      "synopsis": "Watanuki brings to the shop a woman with an urge to always take irrational decisions in her choices.",
+      "airdate": "2006-07-27",
+      "markers": [],
+      "external_id": "14992"
+    },
+    {
+      "n": 18,
+      "title": "Ground Cherry",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14993/original.jpg",
+      "synopsis": "Yūko receives a magic lantern, also called a \"ground cherry\", and asks Watanuki and Doumeki to take it to a very uncommon festival.",
+      "airdate": "2006-08-03",
+      "markers": [],
+      "external_id": "14993"
+    },
+    {
+      "n": 19,
+      "title": "Unreasonable",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14994/original.jpg",
+      "synopsis": "Watanuki and the gang, including the Zashiki-warashi and the Ame-warashi, have an interesting snowball fight.",
+      "airdate": "2006-08-10",
+      "markers": [],
+      "external_id": "14994"
+    },
+    {
+      "n": 20,
+      "title": "Atonement",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14995/original.jpg",
+      "synopsis": "A desperate customer seeks Yūko's help because she is being haunted by a strange photo that she can't get rid of.",
+      "airdate": "2006-08-31",
+      "markers": [],
+      "external_id": "14995"
+    },
+    {
+      "n": 21,
+      "title": "Nail Clipper",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14996/original.jpg",
+      "synopsis": "Watanuki ignores some old superstitions and put himself in trouble.",
+      "airdate": "2006-09-07",
+      "markers": [],
+      "external_id": "14996"
+    },
+    {
+      "n": 22,
+      "title": "Temptations",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14997/original.jpg",
+      "synopsis": "Watanuki meets a beautiful woman and starts to see her every day hoping to soothe her loneliness, but somehow he starts to get sick and can't figure out the reason.",
+      "airdate": "2006-09-14",
+      "markers": [],
+      "external_id": "14997"
+    },
+    {
+      "n": 23,
+      "title": "Choices",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14998/original.jpg",
+      "synopsis": "As Watanuki has more encounters with the mysterious woman, his condition worsens and Doumeki decides to intervene.",
+      "airdate": "2006-09-21",
+      "markers": [],
+      "external_id": "14998"
+    },
+    {
+      "n": 24,
+      "title": "Reminiscence",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/14999/original.jpg",
+      "synopsis": "Watanuki reminisces about his childhood, when he was saved by a boy who became a precious friend of his.",
+      "airdate": "2006-09-28",
+      "markers": [],
+      "external_id": "14999"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Adayume (あだゆめ)",
+      "artist": "Shikao Suga",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gomen ne (ごめんね。)",
+      "artist": "Tiara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Adayume",
+      "artist": "Suga Shikao",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kazanagi (風なぎ)",
+      "artist": "Shikao Suga",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sofa",
+      "artist": "Suga Shikao",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Cherish",
+      "artist": "Azu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Nobody Knows",
+      "artist": "Shikao Suga",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Honey Honey",
+      "artist": "SEAMO feat. AYUSE KOZUE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "19sai",
+      "artist": "Shikao Suga",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Reason",
+      "artist": "Fonogenico",
+      "episodes": "1-13,24"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sanagi ~theme from HOLiC the movie~",
+      "artist": "Suga Shikao",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kagerō",
+      "artist": "BUCK-TICK",
+      "episodes": "14-23"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,87 @@
+{
+  "id": "tiny-evil",
+  "title": "Tiny Evil",
+  "native": "Tiny Evil",
+  "year": 2018,
+  "rating": 6.7,
+  "season": "Summer 2018",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/103054-5qbvk206v4oM.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/103054-5qbvk206v4oM.jpg",
+  "accent": "#e4936b",
+  "synopsis": "Episode 1 & 2\n\nChapter 1: You Inma Miyu (幼淫魔・みゆ)\n\nA man who was very desperate and hopeless tries to call a Succubus. (Through internet media info, he tried to draw magic circles and rituals for calling Succubus.) One night, suddenly a little girl came to his house ringing the bell, amused to see a Succubus coming through the door of the house in the form of a little girl. He decides to let the succubus do her job so that he can feel better.\n\n(Source: Translated and Edited from Nekopoi)(revised)\n\nEpisode 3 & 4\n\nChapter 2: Shoujo Ningyou Nina (少女人形・ニナ)\n\nOne day a doll appeared in the room of our protagonist. The doll was in the form of a girl, cute but slightly off, in some way that he could not put his finger on. Eventually he attempted to get rid of it, but couldn't bring himself to. So he took care of the doll and suddenly he finds himself with extraordinary luck, everything is going his way! But then one night he thinks he hears the doll talking to him..what the hell is going on?!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "tiny-evil-nok9zh",
+    "mal": 38034,
+    "anilist": 103054,
+    "kitsu": 41983
+  },
+  "skip_key_id": 38034,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": null,
+  "search_text": "tiny evil tiny evil ova finished",
+  "genres": [
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256531"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256532"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "257158"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "257309"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}
