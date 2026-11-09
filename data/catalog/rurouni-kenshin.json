@@ -1,0 +1,1271 @@
+{
+  "id": "rurouni-kenshin",
+  "title": "Rurouni Kenshin",
+  "native": "るろうに剣心 -明治剣客浪漫譚-",
+  "year": 1996,
+  "rating": 7.9,
+  "season": "Winter 1996",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx45-DEFgZRCxiGmF.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx45-DEFgZRCxiGmF.png",
+  "accent": "#f16b50",
+  "synopsis": "Himura Kenshin is a vagabond with a dark past and sunny disposition. Not a ronin but a rurouni, he was never a samurai, but an assassin of utmost skill in the Meiji restoration, who in the turning point of the war simply walked away. His travels lead him to Tokyo in the 11th year of the Meiji era, where he befriends a female Kendo master, a former thief, a brawler and a doctor all with their own secrets. Together they fight off the enemies surfacing from the dark past that Kenshin cannot escape. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "rurouni-kenshin-s6cgx9",
+    "mal": 45,
+    "anilist": 45,
+    "kitsu": 27
+  },
+  "skip_key_id": 45,
+  "skip_key_space": "mal",
+  "episode_total": 94,
+  "added_at": null,
+  "search_text": "rurouni kenshin るろうに剣心 明治剣客浪漫譚 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "drama",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Handsome Swordsman of Legend: A Man who Fights for Love",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165763/original.jpg",
+      "synopsis": "Kaoru makes Kenshin stay in the separate room because he saw her naked when she was taking a bath. He was trying to ask if she was OK but thought she was quiet because she was trying to kill herself.(reason= her last students quit)    Also near the end of the episode when Kaoru invited Kenshin to stay with her, he said that he might see her naked again. She punched him and apologized because she thought he could dodge it seeing he is the Battousai.",
+      "airdate": "1996-01-10",
+      "markers": [],
+      "external_id": "165763"
+    },
+    {
+      "n": 2,
+      "title": "Kid Samurai: A Big Ordeal and a New Student",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165769/original.jpg",
+      "synopsis": "After nearly being pick-pocketed by the young street urchin Myojin Yahiko, Kenshin takes sympathy on the boy who declares himself to be from a samurai family. After his mother's death, Yahiko has been forced into working for the yakuza to pay off his deceased mother's debt. Kaoru goes to rescue the boy but finds herself in a perilous situation until Kenshin appears and defeats the yakuza single-handedly. Kaoru then takes Yahiko as her student at Kenshin's prompting despite the reluctance of both of them.",
+      "airdate": "1996-01-17",
+      "markers": [],
+      "external_id": "165769"
+    },
+    {
+      "n": 3,
+      "title": "Swordsman of Sorrow: The Man Who Slays His Past",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165779/original.jpg",
+      "synopsis": "Yahiko is discontent with the teachings of Kamiya-Kasshin-ryū, wanting to defeat his enemies over protecting the innocent. An old acquaintance of Kenshin invites him to join the military.",
+      "airdate": "1996-01-24",
+      "markers": [],
+      "external_id": "165779"
+    },
+    {
+      "n": 4,
+      "title": "Bad! Introducing Sanosuke, Fighter-for-hire",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165785/original.jpg",
+      "synopsis": "Hiruma Gohei, a man who Kenshin had previously defeated in episode 1 hires Sanosuke Sagara (aka Zanza after his signature weapon, a zanbato) to take Kenshin down. He accepts, but not for the money.",
+      "airdate": "1996-01-31",
+      "markers": [],
+      "external_id": "165785"
+    },
+    {
+      "n": 5,
+      "title": "The Reverse-blade Sword vs. the Zanbatou: Beyond the Battle",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165790/original.jpg",
+      "synopsis": "Zanza returns to fight Kenshin, and reveals his reason for fighting and his past with the Sekihoutai, where his captain and teammates were used as scapegoats by the government. Kenshin defeats him and breaks the zanbatou, and they become allies.",
+      "airdate": "1996-02-07",
+      "markers": [],
+      "external_id": "165790"
+    },
+    {
+      "n": 6,
+      "title": "The Appearance of Kurogasa: Visitor from the Shadows",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165798/original.jpg",
+      "synopsis": "Government officials are being murdered. Jinei, a former hitokiri known for his ruthless attitude, is doing it and the government asks Kenshin for help. When Jinei sees Kenshin, he realizes he has a worthy opponent and kidnaps Kaoru, telling Kenshin to meet him later.",
+      "airdate": "1996-02-14",
+      "markers": [],
+      "external_id": "165798"
+    },
+    {
+      "n": 7,
+      "title": "Deathmatch under the Moon! Protect the One You Love",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165804/original.jpg",
+      "synopsis": "Jinei has kidnapped Kaoru in order to force Kenshin back into his murderous ways. Kenshin almost kills Jinei, but Kaoru calls out, and he spares him. Jinei then takes his own life.",
+      "airdate": "1996-02-21",
+      "markers": [],
+      "external_id": "165804"
+    },
+    {
+      "n": 8,
+      "title": "A New Battle! The Mysterious Beauty From Nowhere",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165814/original.jpg",
+      "synopsis": "One of Sano's friends has died from opium when a mysterious woman (Takani Megumi) shows up and needs his and Kenshin's help. She is being pursued by the Oniwabanshuu onmitsu, an elite group of ninja that used to protect the Edo castle. They protect her, but Yahiko is poisoned.",
+      "airdate": "1996-02-28",
+      "markers": [],
+      "external_id": "165814"
+    },
+    {
+      "n": 9,
+      "title": "The Strongest Group of Ninjas: The Horrible Oniwaban Group",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165819/original.jpg",
+      "synopsis": "Takeda Kanryū forces Megumi to return by threatening the people at the dojo. Sano convinces her to return, but Megumi is captured by one of Kanryū's underlings.",
+      "airdate": "1996-03-06",
+      "markers": [],
+      "external_id": "165819"
+    },
+    {
+      "n": 10,
+      "title": "Aoshi: Someone so Beautiful it's Frightening",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165828/original.jpg",
+      "synopsis": "The group goes to retrieve Megumi, but the Oniwaban group stands in their way. Kenshin narrowly defeats Hannya and then he and Sano confront commander Shinomori Aoshi. Aoshi takes out Sano with one blow, and then he and Kenshin begin to battle.",
+      "airdate": "1996-03-13",
+      "markers": [],
+      "external_id": "165828"
+    },
+    {
+      "n": 11,
+      "title": "Farewell, the Strongest Men: The Clash of Light and Shadow",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165845/original.jpg",
+      "synopsis": "Kenshin narrowly defeats Aoshi. Aoshi asks Kenshin to finish him off, and when Kenshin refuses, Aoshi vows revenge. Kanryū shows up with a gatling gun and kills the four members of the Oniwaban group, who die defending Aoshi. Megumi tries to kill herself for her past misdeeds, but they save her just in time. Aoshi buries his comrades and swears that he will defeat Kenshin for their sake.",
+      "airdate": "1996-04-24",
+      "markers": [],
+      "external_id": "165845"
+    },
+    {
+      "n": 12,
+      "title": "Birth of a Boy Swordsman: The Battle of First Apprentice Yahiko",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165854/original.jpg",
+      "synopsis": "Yahiko meets a cute girl named Tsubame, who works at the Akabeko. She's being forced into making a copy of the key to the Akabeko by a group of thugs, and Yahiko decides to help her by himself. He defeats the thugs, although with a little help from the group.",
+      "airdate": "1996-05-01",
+      "markers": [],
+      "external_id": "165854"
+    },
+    {
+      "n": 13,
+      "title": "Strive for the Grand Championship: Toramaru's Sumo Battle Log!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165865/original.jpg",
+      "synopsis": "Kaoru takes in Toramaru, a sumo wrestler who has been kicked out of his sumo stable. The leading wrestler fears being overtaken, and uses his status to keep Toramaru down. Kaoru teaches Toramaru to be self confident, and he rejoins the sumo stable.",
+      "airdate": "1996-05-08",
+      "markers": [],
+      "external_id": "165865"
+    },
+    {
+      "n": 14,
+      "title": "To Save a Small Life: Lady Doctor Megumi to the Rescue",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165874/original.jpg",
+      "synopsis": "Megumi treats a girl with a life threatening heart condition, but a faith healer enters town and begins to seeminly perform miracles to cure the sick at exhorbitant sums, while spreading rumors that Megumi is a quack. When the young girl is put in a life threatening situation because of her parents' desperation, the Kenshin-gumi rush to save her before it's too late.",
+      "airdate": "1996-05-15",
+      "markers": [],
+      "external_id": "165874"
+    },
+    {
+      "n": 15,
+      "title": "Two Legendary Manslayers, Two Legendary Slashers!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165885/original.jpg",
+      "synopsis": "The Jinpuu squad is performing vigilante assassinations. They try and force Sasaki, a local schoolteacher, to pick up his sword again, but Sano and Kenshin fight them off. Toma, the Jinpuu leader, vows to kill Kenshin.",
+      "airdate": "1996-05-22",
+      "markers": [],
+      "external_id": "165885"
+    },
+    {
+      "n": 16,
+      "title": "A Promise From the Heart! The Secret Sword Technique of Shiden.",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165894/original.jpg",
+      "synopsis": "Toma was a former student under Sasaki. Ultimately, the Jinpuu squad is taken down and Toma repents to his former master.",
+      "airdate": "1996-06-05",
+      "markers": [],
+      "external_id": "165894"
+    },
+    {
+      "n": 17,
+      "title": "Fly to Your Dreams! Marimo, The Human Cannon.",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165903/original.jpg",
+      "synopsis": "The group goes to the circus and Yahiko takes a liking to the \"Human Cannonball\" girl Marimo. A circus boss tries to sabotage the show and make Marimo work for him, but the Kenshin-gumi entertain the crowd until Marimo can find the right mix of gunpowder and fly from the cannon.",
+      "airdate": "1996-06-12",
+      "markers": [],
+      "external_id": "165903"
+    },
+    {
+      "n": 18,
+      "title": "Run Yahiko: Get the Reverse-Edged Sword Back!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165912/original.jpg",
+      "synopsis": "Hiruma Gohei returns and hires the Onizaki brothers to kill Kenshin. Gohei tricks Yahiko into bringing him the reverse blade sword, and then he ties Yahiko up. Kenshin is outmatched by the Onizaki brothers, but Yahiko escapes and brings the sword, allowing Kenshin to win.",
+      "airdate": "1996-06-19",
+      "markers": [],
+      "external_id": "165912"
+    },
+    {
+      "n": 19,
+      "title": "Raijuta's Ambition: The Fantasy of the Forbidden Kingdom.",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165926/original.jpg",
+      "synopsis": "The Kenshin-gumi go on vacation in Izu. There, a wealthy boy Yutaro falls under the influence of Raijuta, who intends to create a kingdom with his warriors. Kenshin battles Raijuta's men for the sake of Yutaro, but they gain the upper hand.",
+      "airdate": "1996-06-26",
+      "markers": [],
+      "external_id": "165926"
+    },
+    {
+      "n": 20,
+      "title": "Revival of the Killer Sword: Shinko Style!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165949/original.jpg",
+      "synopsis": "Kenshin leaves Raijuta's warriors to save Yutaro from drowning. Kaoru teaches Yutaro the Kamiya Kasshin style of swordsmanship, although he doesn't understand its moral aspects. The military attacks Raijuto and his gang.",
+      "airdate": "1996-07-10",
+      "markers": [],
+      "external_id": "165949"
+    },
+    {
+      "n": 21,
+      "title": "Destruction of a Nightmare",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165959/original.jpg",
+      "synopsis": "Kenshin stops the battle by challenging Raijuta to a one on one battle. He figures out the trick to Raijuta's vacuum cut, and defeats him. Yutaro is injured in the battle, and decides to move to Germany for better medical care.",
+      "airdate": "1996-07-17",
+      "markers": [],
+      "external_id": "165959"
+    },
+    {
+      "n": 22,
+      "title": "Surprise Incident on a Runaway Locomotive",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165970/original.jpg",
+      "synopsis": "The Kenshin-gumi take a train trip to Yokohama for fun. A train robbery ensues, and they defeat the robbers. All the while, Sanosuke complains technology is the work of the devil.",
+      "airdate": "1996-07-31",
+      "markers": [],
+      "external_id": "165970"
+    },
+    {
+      "n": 23,
+      "title": "Sanosuke's Betrayal!? The Fateful Reunion",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165981/original.jpg",
+      "synopsis": "Sanosuke goes to a picture shop to buy a picture for Miss Tae at the Akabeko. While at the picture shop, he stumbles across a portrait of Captain Sagara, drawn by Tsunan Tsukioka, another surviving member of the Sekihoutai. Sano joins with Tsunan and defeats Tashiwachi Shindo, the man who framed Captain Sagara ten years earlier.",
+      "airdate": "1996-08-14",
+      "markers": [],
+      "external_id": "165981"
+    },
+    {
+      "n": 24,
+      "title": "Midnight Battle: Kenshin vs Sanosuke Revisited!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/165997/original.jpg",
+      "synopsis": "Sanosuke throws a party at the Kamiya Dojo for everyone. Little does everyone except Kenshin know, Sanosuke is really planning to leave the Kenshin group for good to revive the long lost Sekihoutai with his friend Katsuhiro. Kenshin goes to stop Sanosuke and Katsu from destroying the Internal Affairs Department with bombs. Kenshin stops Sano, and Sano rejoins Kenshin's group, and Katsu stops making bombs.",
+      "airdate": "1996-08-21",
+      "markers": [],
+      "external_id": "165997"
+    },
+    {
+      "n": 25,
+      "title": "The Red Pirate: Kenshin and Kaoru Separated",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166027/original.jpg",
+      "synopsis": "The Crimson Pirate: Kenshin and Kaoru, Seperated!\nIn this episode, Kaoru finally gets fed up with Kenshin, Yahiko, and Sanosuke hanging around the Kamiya Dojo, without working or paying any money to help her feed everybody. They feel bad, and go out looking for a job to help pay their way. They sign up for a team of warriors that have been hired to capture the Kairyu pirates, a group of freakish rouges that have been raiding silk ships on the high seas. On the cruise, they come across Kaoru, who has also signed up to raise money for the dojo. They're surprised to see each other, and Kenshin is worried about Kaoru's safety. The Kairyu pirates are known for their violence, and some even go as far as to call them demons. Their leader, Shuura, is a ruthless masked figher with nunchaku.\nDuring the night, Kenshin is out getting some air. Kaoru comes out, and they share a small moment. It's interrupted, however, when they see the Kairyu pirates approaching. Everyone inside is alterted, and th",
+      "airdate": "1996-08-28",
+      "markers": [],
+      "external_id": "166027"
+    },
+    {
+      "n": 26,
+      "title": "Lightning Incarnate: Shura, The Mysterious Female Pirate!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166036/original.jpg",
+      "synopsis": "Shura and the Kairyu land at Kairyu Island with Kenshin. Shura doesn't have the heart to kill Kenshin, and so Ginjo, one of the Kairyu who wants to be the new leader instead of Shura, makes up a plan to kill Shura and become leader in her place. Shura gets shot in the leg by Geki, another one of her followers who has now joined Ginjo.",
+      "airdate": "1996-09-04",
+      "markers": [],
+      "external_id": "166036"
+    },
+    {
+      "n": 27,
+      "title": "Burn, Island of Terror! The Red Pirate: Conclusion",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166045/original.jpg",
+      "synopsis": "Kenshin helps to nurse Shura back to health, then Shura finds out that Ginjo gave Old Iwa opium. Shura goes off to fight and defeat Ginjo. She is defeated by him, since he played a dirty trick on her. Kenshin then comes in and uses the Ryu Tsui Sen to end the fight. Geki then throws a bomb, destroying Kairyu Island and all its inhabitants, except for Kenshin and Shura.",
+      "airdate": "1996-10-16",
+      "markers": [],
+      "external_id": "166045"
+    },
+    {
+      "n": 28,
+      "title": "Prelude To a New Threat, The Shadow of the Wolf is drawing near",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166057/original.jpg",
+      "synopsis": "The Kenshin-gumi's brief period of peace is interrupted by the presence of former Shinsengumi captain Saito Hajime - now using the name of Fujita Goro and working for the Tokyo police - stirs up some of Kenshin's bloodiest memories of the Bakumatsu. Saito arrives at the Kamiya dojo disguised as a medicine seller and fights Sanosuke, injuring him severely in the process.",
+      "airdate": "1996-10-30",
+      "markers": [],
+      "external_id": "166057"
+    },
+    {
+      "n": 29,
+      "title": "The Ultimate Fatal Rival! The Waylay of the Desperate Fang",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1234/original.jpeg",
+      "synopsis": "Saito sets a trap for Samurai X by enlisting another assassin in his plan. And once Kenshin repels the accomplice, he's left to take on his old rival.",
+      "airdate": "1996-11-06",
+      "markers": [],
+      "external_id": "1234"
+    },
+    {
+      "n": 30,
+      "title": "Evil Monster of Revenge,... Shishio Makoto's Plot!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1235/original.jpeg",
+      "synopsis": "After stopping a fatal battle with Hajime Saito, a top government official asks Kenshin's help in killing a shadowy assassin who's threatening the future of the regime.",
+      "airdate": "1996-11-13",
+      "markers": [],
+      "external_id": "1235"
+    },
+    {
+      "n": 31,
+      "title": "Never Reaching Feelings... Kenshin's Departure",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1236/original.jpeg",
+      "synopsis": "While preparing to give his decision on helping to kill Shishio, Kenshin learns of the Home Minister's murder.",
+      "airdate": "1996-11-27",
+      "markers": [],
+      "external_id": "1236"
+    },
+    {
+      "n": 32,
+      "title": "Changing Tears to Courage! The Path Choosen by Kamiya Kaoru",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1237/original.jpeg",
+      "synopsis": "Following Kenshin's departure from the dojo, everyone, and especially Kaoru, are sad at being left behind. And while Saito tries to dissuade Sanosuke from following him, Megumi sends Kaoru to deliver some medicine that will aid in Kenshin's fight",
+      "airdate": "1996-12-04",
+      "markers": [],
+      "external_id": "1237"
+    },
+    {
+      "n": 33,
+      "title": "Time to Be the Strongest Warrior! Aoshi's New Battle",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1238/original.jpeg",
+      "synopsis": "In the wake of Samurai X's departure, everyone at the dojo is anxious to join the battle against Shishio. With Sanosuke, Kaoru and Yahiko in pursuit, Kenshin encounters Misao, a young girl who also happens to be a clever thief.",
+      "airdate": "1996-12-11",
+      "markers": [],
+      "external_id": "1238"
+    },
+    {
+      "n": 34,
+      "title": "The Little Thief,... Makimachi Misao's Deceptive Looks",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1239/original.jpeg",
+      "synopsis": "After befriending Misao, Kenshin insists that she return the money she's stolen before letting her accompany him on his quest to stop Shishio.",
+      "airdate": "1997-01-08",
+      "markers": [],
+      "external_id": "1239"
+    },
+    {
+      "n": 35,
+      "title": "Occupied Village! Shishio's Evil Shadow, Ever Closer!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1240/original.jpeg",
+      "synopsis": "When he and Misao come across a village terrorized by forces loyal to Shishio, Kenshin enlists Saito to help liberate it from the evil gang",
+      "airdate": "1997-01-15",
+      "markers": [],
+      "external_id": "1240"
+    },
+    {
+      "n": 36,
+      "title": "After The End of The Dynasty, First Meeting of Kenshin and Shishio",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1241/original.jpeg",
+      "synopsis": "Leaving Misao behind, Kenshin and Saito make their way inside Shishio's fortress. Following a confrontation with one of his most powerful henchmen, Kenshin is ready to take on Shishio himself.",
+      "airdate": "1997-01-22",
+      "markers": [],
+      "external_id": "1241"
+    },
+    {
+      "n": 37,
+      "title": "Shock! Sakabatou Broken,.. Soujiro \"The Heavenly Sword\" vs Kenshin",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1242/original.jpeg",
+      "synopsis": "Following Kenshin's defeat of the giant Senkaku, Shishio pits him against the young, emotionless assassin responsible for the Home Minister's murder.",
+      "airdate": "1997-01-29",
+      "markers": [],
+      "external_id": "1242"
+    },
+    {
+      "n": 38,
+      "title": "Sanosuke, The Secret of Patience,... Challenge the Hakai-Priest, Anji",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1243/original.jpeg",
+      "synopsis": "As Kaoru and Yahiko continue tracking Kenshin, Sanosuke encounters a fallen Buddhist monk who offers to teach him some powerful fighting techniques.",
+      "airdate": "1997-02-05",
+      "markers": [],
+      "external_id": "1243"
+    },
+    {
+      "n": 39,
+      "title": "The man who makes Sakaba,... Shat-ku Arai's masterpiece",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1244/original.jpeg",
+      "synopsis": "As the showdown with Shishio approaches, Misao finds someone who could produce the sword Kenshin needs, only to be is disappointed when Shakkuu Arai refuses",
+      "airdate": "1997-02-12",
+      "markers": [],
+      "external_id": "1244"
+    },
+    {
+      "n": 40,
+      "title": "Cold-blooded, Samurai battle with Ju-Pon Gatana, Cho",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166064/original.jpg",
+      "synopsis": "Sanosuke is beginning to recover from the wounds inflicted by Saito, but Kenshin's mind is greatly disturbed. Akamatsu, another assassin hired by the same man who is paying Saito fights Kenshin by drawing him out but loses to Kenshin while Saito arrives at the dojo using his status as a policeman to gain entrance. Kenshin and Saito begin to fight, despite Kaoru's attempt to stop them as she begs Kenshin not to revert to his Battousai persona.",
+      "airdate": "1996-11-06",
+      "markers": [],
+      "external_id": "166064"
+    },
+    {
+      "n": 41,
+      "title": "Hidden Technique of Hiten Mitsurugi Ryu! Reunion with Master Seijuro Hiko",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166077/original.jpg",
+      "synopsis": "The battle between Kenshin and Saito continues after Kenshin is stabbed by Saito's Gatotsu Sanshiki. Kaoru is frightened to see Kenshin's Battousai persona begin to emerge and begins to lose hope that she will ever see the gentle Rurouni again. However, one of Saito's superiors appears and stops the fight just as it is reaching a climax and Kenshin returns to normal after punching himself in the face. Okubo explains to Kenshin that Shishio Makoto, the man who took over Kenshin's position as the Shadow Hitokiri for the Ishinshishi survived being burned alive and has begun gathering an army to overthrow the government, and hopes that Kenshin can defeat him, with the threat of Megumi being turned in for opium manufacture unless he complies. Megumi states she would rather die that be used as a pawn against Kenshin, and he is given a deadline upon which to decide.",
+      "airdate": "1996-11-13",
+      "markers": [],
+      "external_id": "166077"
+    },
+    {
+      "n": 42,
+      "title": "The Formation of an Alliance",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166079/original.jpg",
+      "synopsis": "As the deadline for Kenshin's decision on whether to go to Kyoto nears Kaoru becomes anxious at the possibility of his leaving. After Okubo's assassination by Seta Sojiro, Kenshin decides to go to Kyoto and bids an emotional goodbye to Kaoru, implying that it is likely they will never meet again.",
+      "airdate": "1996-11-27",
+      "markers": [],
+      "external_id": "166079"
+    },
+    {
+      "n": 43,
+      "title": "Between Life and Death, Succession Technique Mastered.",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166086/original.jpg",
+      "synopsis": "Kaoru is deeply depressed and distressed since Kenshin left Tokyo. With the help of Tae, Yahiko, Tsubame, and especially Megumi, Kaoru regains her courage and decides to leave Tokyo to go to Kyoto and see Kenshin. Saito also gets into a fight with Sanosuke, telling him not to go to Kyoto. Sanosuke leaves on his own despite Saito's warning that he will be a liability to Kenshin.",
+      "airdate": "1996-12-04",
+      "markers": [],
+      "external_id": "166086"
+    },
+    {
+      "n": 44,
+      "title": "A Decisive Battle Like Violent Waters",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166091/original.jpg",
+      "synopsis": "Aoshi Shinomori has now chosen the path of chaos. He will do anything to defeat Kenshin, as he feels it will prove to the world that the Oniwaban Group were the strongest fighters of the Revolution. Aoshi defeats four monks working for Shishio, who were merely meant to test Aoshi's strength, but refuses to join Shishio after Sojiro tries to convince him.",
+      "airdate": "1996-12-11",
+      "markers": [],
+      "external_id": "166091"
+    },
+    {
+      "n": 45,
+      "title": "As if to Fly",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166098/original.jpg",
+      "synopsis": "Makimachi Misao, the girl bandit, whom Kenshin meets in the forest, is a member of the Oniwaban Group. She wants very badly to see Aoshi and the other four Oniwaban Group members, though she is unaware of the fate of the four Oniwaban ninjas, and she doesn't yet know the whereabouts of Aoshi. Misao refuses to stop chasing Kenshin, as she believes that he can lead her to them.",
+      "airdate": "1997-01-08",
+      "markers": [],
+      "external_id": "166098"
+    },
+    {
+      "n": 46,
+      "title": "Purgatory Bursts into Flames",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166105/original.jpg",
+      "synopsis": "Along the way to Kyoto, Kenshin and Misao come across a nearly dead man with his little brother in his arms, Eiji Mishima. The man dies, and Eiji wants to avenge his brother's death by killing Senkaku, the man who slayed his elder brother. Kenshin, Eiji, and Misao travel to Shingetsu Village, Eiji's hometown, and fight some of Shishio's soldiers off. Saito and Kenshin leave Misao and Eiji behind, as they go to Shishio's mansion nearby.",
+      "airdate": "1997-01-15",
+      "markers": [],
+      "external_id": "166105"
+    },
+    {
+      "n": 47,
+      "title": "Crash! The Lethal Punch, Futae no Kiwami",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166106/original.jpg",
+      "synopsis": "Kenshin and Senkaku fight, and Kenshin wins with ease. Misao and Eiji make their way up to the same mansion in an attempt to defeat Senkaku for themselves.",
+      "airdate": "1997-01-22",
+      "markers": [],
+      "external_id": "166106"
+    },
+    {
+      "n": 48,
+      "title": "Reborn to Salvation",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166114/original.jpg",
+      "synopsis": "Shishio is then challenged by Kenshin, but Shishio refuses to accept, saying that Kenshin is weak as a wanderer, and that even if there were 100 of him, Kenshin could not defeat Shishio as Kenshin is now. Shishio tells Sojiro, his right hand man, to fight Kenshin instead. Shishio and Yumi leave the mansion. Sojiro and Kenshin both use the battojutsu drawing technique. Kenshin's sword is broken in two, and Shishio's Nagasoni Kotetsu, which he gave to Sojiro to fight Kenshin with, is also severely damaged. Sojiro leaves the mansion, telling Kenshin to get a new sword before they meet again.",
+      "airdate": "1997-01-29",
+      "markers": [],
+      "external_id": "166114"
+    },
+    {
+      "n": 49,
+      "title": "The Wolf Destroys the Shingan",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166116/original.jpg",
+      "synopsis": "Sanosuke gets lost in a forest. He finds a monk there that goes by the name of Anji. Anji gives Sanosuke some food. Sanosuke ends up convincing Anji to teach him how to use the Futae no Kiwami, a very destructive punch (so destructive that it can completely pulverize huge boulders into dust with a single punch). Sanosuke has one week to learn it or Anji will kill him. Sanosuke finally learns it, and then leaves for Kyoto.",
+      "airdate": "1997-02-05",
+      "markers": [],
+      "external_id": "166116"
+    },
+    {
+      "n": 50,
+      "title": "The Promised Time has Come",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166123/original.jpg",
+      "synopsis": "Kenshin and Misao make it to Kyoto. There, they meet Okina and four other members of the Oniwaban Group. Okina knows Kenshin is the legendary Battousai the Manslayer the moment he lays eyes on him. Kenshin goes to see Sekku Arai, Shakku Arai's son (Shakku was the one who made Kenshin's Reverse Blade Sword that broke) to get a new Reverse Blade Sword. Sekku refuses, saying that this is a time of peace, and that the samurai have all thrown their swords away. Later, Chou the Swordhunter of the Jupongottana abducts Iori, Sekku's baby son. Kenshin demands that Chou release Iori.",
+      "airdate": "1997-02-12",
+      "markers": [],
+      "external_id": "166123"
+    },
+    {
+      "n": 51,
+      "title": "Wake up Now!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166124/original.jpg",
+      "synopsis": "Kenshin finds Sawagejo Cho has kidnapped the child of Shakku's son in order to obtain Shakku's final work for himself. Kenshin is forced to choose between keeping his vow not to kill and saving the baby, deciding to save the child and draw the sword he has been given. However, just when it seems he has broken his vow and killed Cho, it is revealed that the sword he is holding is Shakku's final work, Shinuchi, a sakabato, and Cho is merely stunned. Kenshin then leaves to find his master, Hiko Seijuro, in order to learn the final technique of Hiten Misturugi-Ryu.",
+      "airdate": "1997-02-19",
+      "markers": [],
+      "external_id": "166124"
+    },
+    {
+      "n": 52,
+      "title": "To make a Miracle",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166130/original.jpg",
+      "synopsis": "Kenshin finds his master Hiko Seijuro living as a potter near Kyoto, but Hiko is initially unwilling to take Kenshin back due to his walking out to join the Revolution. Yahiko and Kaoru meet Misao in Kyoto after learning that she saw Kenshin leaving, and later leads the grateful pair to him after they meet Okina at the Aoi-Ya. Kenshin seems initially upset at the sight of Kaoru, but later replies he is only \"half\" angry. They leave Kenshin to train, and on the way Misao's affiliation with the Oniwabanshu is revealed as well as the fact that she does not know of the fate of Aoshi's group in Edo.",
+      "airdate": "1997-02-26",
+      "markers": [],
+      "external_id": "166130"
+    },
+    {
+      "n": 53,
+      "title": "The Giant vs Superman",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166136/original.jpg",
+      "synopsis": "Misao is in denial after hearing of the deaths of Aoshi's men, and feels despair as she recalls her country-wide search for Aoshi, which ended without success. Meanwhile, Aoshi sends a letter to Okina and they meet in a Kyoto market, where Okina tells Aoshi that his desire to kill Kenshin has turned him into a demon, and that as the leader of the Oniwabanshu Okina cannot allow this to continue. Seta Sojiro and several other Juppongatana meet Aoshi and convince him to join them, as they share the goal of destroying Kenshin. After Okina mysteriously leaves with his shinobi uniform Misao realizes that the two will have a confrontation at the temple and runs to stop it, but proves to be too late as Okina falls to Aoshi's Kaiten Kenbu Rokuren, and is told by Aoshi that the next time they meet he will kill her.",
+      "airdate": "1997-03-05",
+      "markers": [],
+      "external_id": "166136"
+    },
+    {
+      "n": 54,
+      "title": "Hiten vs Shukuchi",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166142/original.jpg",
+      "synopsis": "The episode starts off with Seijuro Hiko remembering the past about when he first met Kenshin and while they were continuing the training Kenshin finally proves himself worthy of learning the final technique, so Hiko begins to start by teaching him the Kuzu-ryusen, a technique where it will hit 9 targets of martial arts at one time. Then Hiko instructs Kenshin to try the attack. Kenshin uses the attack flawlessly but Hiko performed one of his own and the end result is that Kenshin lost this skirmish due to his lacking in weight and size. Then after learning this Hiko proclaims \"you must defeat this technique with the ultimate attack\". After much worry about his friends Kenshin finally looks within himself for what he was missing in life and learns the ultimate technique, the Amakakeru Ryu No Hirameki, which is the will to live, said to be \"stronger than anything\". Though he has to pay a very high price.",
+      "airdate": "1997-03-12",
+      "markers": [],
+      "external_id": "166142"
+    },
+    {
+      "n": 55,
+      "title": "The Tragedy of a Stormy Night",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166151/original.jpg",
+      "synopsis": "The Juppongottana have gathered in the temple of Shishio in Kyoto, and are ready to commence the Kyoto Grand Fire and be on their path to victory.",
+      "airdate": "1997-03-19",
+      "markers": [],
+      "external_id": "166151"
+    },
+    {
+      "n": 56,
+      "title": "A Duel With an Extreme Moment",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166160/original.jpg",
+      "synopsis": "Sanosuke, Saito, and Kenshin go to Osaka to find Shishio and his men onboard a ship. They find Shishio, and Shishio launches the Purgatory, a steel-plated battleship he paid a fortune to get. Shishio plans to use the Purgatory to launch an assault on Tokyo.",
+      "airdate": "1997-04-16",
+      "markers": [],
+      "external_id": "166160"
+    },
+    {
+      "n": 57,
+      "title": "Two Men at the End of an Era",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166180/original.jpg",
+      "synopsis": "Sanosuke uses the Futae no Kiwami Anji taught him to stop Gatling gun bullets from hitting him. He then throws the bombs Katsu gave him before he left Tokyo right onto the Purgatory, damaging the engine and leaving a hole in the ship. The Purgatory eventually sinks, but not until Saito, Kenshin, and Sanosuke get off safely. Shishio issues a challenge; Kenshin can only meet him at his base and get to him by completing one-on-one fights. Kyoto is spared from the Kyoto Grand Fire as well, thanks to intervention by the Oniwaban, now headed by Misao.",
+      "airdate": "1997-04-23",
+      "markers": [],
+      "external_id": "166180"
+    },
+    {
+      "n": 58,
+      "title": "The Age Chooses Shishio?",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166189/original.jpg",
+      "synopsis": "Sanosuke, Saito, and Kenshin journey to Mount Hiei at the Shrine of the Six Arches to settle the score with Shishio. The first challenger of the Juppongottana in the shrine is Anji the Destroyer, the man who taught Sanosuke the basics of the Futae no Kiwami. Anji and Sanosuke duel, and Sanosuke uses a Futae no Kiwami attack at full power, called the Kiwami Hazuchi, and knocks Anji down. Sanosuke thinks he is dead, until he gets back up more angry than ever.",
+      "airdate": "1997-04-30",
+      "markers": [],
+      "external_id": "166189"
+    },
+    {
+      "n": 59,
+      "title": "Not Out of Luck!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166202/original.jpg",
+      "synopsis": "Anji and Sanosuke continue their duel, and Anji is reborn to salvation after talking about his past and being convinced by Sanosuke and the memories from the people of his past that he was doing the wrong thing all these years by being a destroyer. Kenshin and Saito continue on ahead to fight Usui, the second challenger of the Jupongottana.",
+      "airdate": "1997-05-14",
+      "markers": [],
+      "external_id": "166202"
+    },
+    {
+      "n": 60,
+      "title": "The Man who is Chosen for Victory",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166216/original.jpg",
+      "synopsis": "Uonuma Usui confronts Saito while the others continue on through Shishio's mansion. Usui's claim to \"True Vision\" is put to the test by Saito, who sees it for what it really is - simply super enhanced hearing adopted by Usui to make up for his lack of sight. Saito realizes that Usui is in fact weak since his desire for revenge against Shishio has driven him to become a mere pawn in Shishio's game. An enraged Usui wounds Saito using the timbe, a tortoise-shell shield and blocks his vision, however, Usui is no match for Saito's Zeroshiki, a move Saito had been saving for a fight against Kenshin.",
+      "airdate": "1997-05-28",
+      "markers": [],
+      "external_id": "166216"
+    },
+    {
+      "n": 61,
+      "title": "The Juppongatana who Remain",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166232/original.jpg",
+      "synopsis": "Kenshin senses something coming from Houji's room, and then senses that it is Aoshi Shinomori. He enters the room, and is determined to keep his promise to Aoshi Shinomori, and to Misao Makimachi by fighting, and bringing back Aoshi to Aoiya. Upon entering the room, Aoshi greets him, and he says that he has thrown everything away, including his four comrades, just for the moment of the duel with him and Kenshin. Aoshi is determined to win the fight and kill the Battousai, to claim the title of the strongest.",
+      "airdate": "1997-06-04",
+      "markers": [],
+      "external_id": "166232"
+    },
+    {
+      "n": 62,
+      "title": "Kyoto, the Engraved Memory",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166242/original.jpg",
+      "synopsis": "As the duel between Aoshi and Kenshin continues, Kenshin is being attacked by Aoshi while he tries to say words to Aoshi to try and wake him up; to make him become the man he used to be. Kenshin is determined to return Aoshi to what he used to be: a man of caring, and happiness, so that he can bring back the true Aoshi to Misao, and keep both promises he made to both of them. Aoshi realizes that what he has been doing was wrong all along, and they both used their final attacks on each other. Ultimately Kenshin emerged victorious and Kenshin, Sanosuke Sagara and Yumi Komagota move on to the next battle.",
+      "airdate": "1997-06-11",
+      "markers": [],
+      "external_id": "166242"
+    },
+    {
+      "n": 63,
+      "title": "The Legend of the Fireflies",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166252/original.jpg",
+      "synopsis": "The battle at the Aoiya continues, as Iwanbo, Henya, and Kamatari fight against the Oniwaban Group and Yahiko and Kaoru. Yahiko manages to defeat Henya, after being almost killed by his Hikku Happa attack. After that, Kamatari, Kaoru, and Misao fight. Misao gets crushed ribs in the fight against Kamatari, and is unable to continue until she wakes up from a dream of Hannya, and she and Kaoru defeat Kamatari through a combined effort. It seems like they have won, until two other Juppongatana members, Fuji and Saitsuchi, appear. Things are not looking good for the ones who remained at the Aoiya.",
+      "airdate": "1997-06-18",
+      "markers": [],
+      "external_id": "166252"
+    },
+    {
+      "n": 64,
+      "title": "The Birth of Prince Yahiko?",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166264/original.jpg",
+      "synopsis": "Just when all hope seems lost, Seijuro Hiko shows up and fights Fuji. He talks to Fuji and makes he realize that he was being used and ask for a fair fight. He defeats Fuji with the Kuzu Ryu Sen. The Aoiya is safe from harm, but Kenshin still has to fight Sojiro in order to fight Shishio himself.",
+      "airdate": "1997-06-25",
+      "markers": [],
+      "external_id": "166264"
+    },
+    {
+      "n": 65,
+      "title": "Find the Lost Treasure!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166272/original.jpg",
+      "synopsis": "Sojiro and Kenshin have their second duel, since the one in Shingetsu Village was never finished. Sojiro shows Kenshin the Shukuchi attack, an attack that brings him to his opponent in an instant, because he uses powerful legwork. Kenshin manages to get himself pretty wounded in the fight, and Sojiro hasn't even gotten hit once. He even dodges the Kuzu Ryu Sen, an attack Hiko said was unblockable.",
+      "airdate": "1997-07-02",
+      "markers": [],
+      "external_id": "166272"
+    },
+    {
+      "n": 66,
+      "title": "Kaoru Ecstatic!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166283/original.jpg",
+      "synopsis": "While Sojiro is occupied by constantly re-tieing his shoe, he thinks of the moments of his past, and all of the bad stuff that happened in it. Sojiro's past is shown throughout the entire episode. Sojiro's family never loved him, and only wanted him so they could use him. They made him carry hundreds of buckets of rice, and when Sojiro returns a bucket of rice to his house, one of Sojiro's family members breaks the bucket on purpose. Then, another person who likes to cause Sojiro trouble and use him, named Yanosuke, calls out his father who is inside, blaming Sojiro for breaking the bucket. He then meets Makoto Shishio, whom spared his life. Shishio gave him a Wakizashi sword. When his family has cornered him, he murders them with this sword. Then, Sojiro follows Shishio, as Shishio tells Sojiro that he will become strong.",
+      "airdate": "1997-07-09",
+      "markers": [],
+      "external_id": "166283"
+    },
+    {
+      "n": 67,
+      "title": "The Gleaming Blade of Legends",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166290/original.jpg",
+      "synopsis": "Continuing from the last episode, Sojiro thinks about his past a little bit more, and thinks of Shishio's \"survival of the fittest\", and Kenshin's way of not killing people. Sojiro gets very confused, not knowing which person to believe, and he suddenly breaks down during the fight. He goes crazy, and tells Kenshin that he is only getting in his way, and that the very fact that he's in the room makes him ticked off. Sojiro then fights Kenshin at his full strength, using an attack he named the Shu Ten Satsu its a combination of the shukchi speed and the Battojutsu of the tenken. Then they both do a Battojutsu stance. Kenshin emerges victorious by using his ultimate attack, the Amakakeru Ryu no Hirameki on him. Sojiro then tells Yumi to return his Wakizashi to Shishio, and also gives Yumi the details of Kenshin's ultimate attack, as a parting gift Sojiro leaves Shishio's side forever, and Kenshin and the others make their way to the final battle with Makoto Shishio.",
+      "airdate": "1997-07-16",
+      "markers": [],
+      "external_id": "166290"
+    },
+    {
+      "n": 68,
+      "title": "The Medallion of Destiny",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166298/original.jpg",
+      "synopsis": "As Kenshin, Sanosuke, and Yumi make their way to the top of the Inferno Arena, Kenshin thinks about his past, and what awaits him next, the entire way up to where Shishio himself is waiting. However, Kenshin is ready and prepared to the final battle with the manslayer known as Shishio. Upon reaching the door at the top, Yumi pulls the switch to open the door. Shishio is standing in the middle of the arena, and Houji is also there. After a few opening words with Kenshin and Shishio, Shishio promises Yumi that the battle will end quickly. He gives Yumi a kiss, walks off, and the fight between the two manslayers begins! Shishio shows off his first Secret Sword attack, the Homura Dama. He then bites a chunk off of Kenshin's shoulder.",
+      "airdate": "1997-08-06",
+      "markers": [],
+      "external_id": "166298"
+    },
+    {
+      "n": 69,
+      "title": "To the Battlefield of Shimabara",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166312/original.jpg",
+      "synopsis": "The fight between Kenshin and Shishio continues. Kenshin and Shishio then start talking about Shishio's greatest shura that he trained himself, Sojiro. Shishio doesn't believe that Kenshin understands the laws of nature, and then he tries to show it to Kenshin, by using the Homura Dama. However, after creating a circle of flames around Kenshin, he picks him up, and ignites the gunpowder tucked inside his gauntlet. This the second Secret Sword attack, known as the Guren Kaina. This knocks out Kenshin, nearly causing his death! However, not all hope is lost. Saito busts through the door, using his Gatotsu attack (the first style). Due to a metal protection on Shishio's forehead, this doesn't affect him. After trying all of the Gatotsu styles, Saito gets knocked out by Shishio. Sanosuke attempts to attack him, but fails. Suddenly, when all hope seems lost, Aoshi appears to engage in combat with Shishio.",
+      "airdate": "1997-08-13",
+      "markers": [],
+      "external_id": "166312"
+    },
+    {
+      "n": 70,
+      "title": "Shock of the Rairyu Sen",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166326/original.jpg",
+      "synopsis": "After a short conversation between Aoshi and Shishio, they both engage in combat with each other. However, even with Aoshi's Kaiten Kenbu Rokuren, he cannot defeat Shishio. Suddenly, after buying enough time for Kenshin, Kenshin himself appears to be standing! Due to his swordsman spirit, he was able to survive the wounds caused by the Guren Kaina. Now round two commences. Just when Shishio is about to finish Kenshin off with another Guren Kaina, he remembers the promise he made to Kaoru to go back to Tokyo together. He then uses a five-hit combo on Shishio, and does the Ku Zu Ryu Sen, of the Hiten Mitsurugi Style. Shishio gets back up because of his swordsman spirit, and the final round is about to commence.",
+      "airdate": "1997-08-20",
+      "markers": [],
+      "external_id": "166326"
+    },
+    {
+      "n": 71,
+      "title": "Kaiou's Conspiracy",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166345/original.jpg",
+      "synopsis": "Getting back on his feet after the Ku Zu Ryu Sen, Shishio gets ready to use the final and ultimate Secret Sword attack, the Kaguzuchi. Kenshin also prepares to use his ultimate move, the Amakakeru Ryu no Hirameki. The blades end up hitting each other and the attack does not connect properly. However, Kenshin's attack created a vacuum utilizing the Amakakeru Ryu no Hirameki and the Kaguzuchi's sheer power, and temporariliy immobilized Shishio. Not missing this chance, Kenshin strikes Shishio with an immensely strong consecutive hit. Shishio miraculously stands back up, but since he has fought far longer than fifteen minutes, his blood starts evaporating and he begins screaming in pain. In utter fear of Shishio's death, Yumi rushes over by Shishio, and begs Kenshin not to finish him off. However, Shishio stabs Kenshin through Yumi! He is determined to continue fighting, and Yumi dies happily, knowing she did something useful for once. As the battle continues, the battle is once again at a standstill. Then suddenly, the scorching heat in Shishio's body causes him to end up being burned alive once again, this time fatally. Houji, refusing to accept Shishio's defeat, maniacally attempts to destroy the Inferno Arena to take out Sanosuke, Kenshin, Saito, and Aoshi.",
+      "airdate": "1997-09-03",
+      "markers": [],
+      "external_id": "166345"
+    },
+    {
+      "n": 72,
+      "title": "Days of Remorse",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166358/original.jpg",
+      "synopsis": "Sano and Aoshi drag an unconscious Kenshin as they run from the burning Building. They eventually escape, but Saito was left behind because his legs were too injured to jump the bridge/walkway that had collapsed. So Saito is now presumed dead. Chou the Swordhunter also appears to tell the group what was happened to the rest of the Juponggottana. The episode ends with Makoto Shishio, Yumi, and Houji gathering in hell, scheming how to take over.",
+      "airdate": "1997-09-10",
+      "markers": [],
+      "external_id": "166358"
+    },
+    {
+      "n": 73,
+      "title": "The Sneering Demon!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166368/original.jpg",
+      "synopsis": "Yahiko visits Mount Hiei, and Sanosuke shows him where that battle with Shishio took place. Meanwhile, Kenshin visits an unknown woman's grave, and places flowers by it. Also at this time, Megumi explains to Kaoru the severity of Kenshin's wounds, and that it is important to keep him from doing anything that dangerous again. Finally, the gang gets on the train to Tokyo, with Misao waving to them and telling them to visit again. After the train departs Saito is seen saying that he and Kenshin will meet again one day and settle the score that they have. When the gang reaches the road to the dojo, Kaoru extends her hand and welcomes Kenshin home. Kenshin smiles and says, \"It's good to be home.\"",
+      "airdate": "1997-09-17",
+      "markers": [],
+      "external_id": "166368"
+    },
+    {
+      "n": 74,
+      "title": "Sanosuke's tears!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166380/original.jpg",
+      "synopsis": "Kenshin goes off fishing to bring some food on the table. At the river he meets an old man who tells him the legend of the fireflies. At the end it is revealed the old man was telling Kenshin the tragic story of his dead lover, who died waiting for him to return from his long quest to master the sword. He gives Kenshin the message that once in his life, every man meets a woman he will never forget. After hearing his story, Kenshin brings back an iris flower, which he does not give to Kaoru.",
+      "airdate": "1997-10-14",
+      "markers": [],
+      "external_id": "166380"
+    },
+    {
+      "n": 75,
+      "title": "The Last Crusade",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166387/original.jpg",
+      "synopsis": "A foreign prince is attacked by bandits. As Kenshin and Kaoru are returning from a play, they see this and Kenshin intervenes. During the attack the prince was injured, so Kenshin and Kaoru take them back to the dojo. As it turns out, Prince Shin looks exactly like Yahiko, and so Yahiko is put in his place to attend a banquet. At the banquet the bandits attack yet again, but our favorite samurai is there to protect Yahiko, along with Sanosuke.",
+      "airdate": "1997-10-28",
+      "markers": [],
+      "external_id": "166387"
+    },
+    {
+      "n": 76,
+      "title": "Bon Voyage",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166393/original.jpg",
+      "synopsis": "When he finds himself under attack by the Kenwadan, a gang of masked men, a politician, Mr Takamori, throws the key to his safe into an alleyway. Unexpectedly, the key is promptly picked up by a dog, who then escapes with it into a river, despite the gang's frantic pursuit. While praying at the shrine for better luck at dice, Sanosuke comes across the dog, now half-dead, and carries it back to the Kamiya dojo to be looked at by Megumi. Cue comic adventures as the dog, which Sanosuke names Notaro, promptly tears the Kenshin Group's lives apart, eating their food, stealing and burying their possessions, and generally making a nuisance of himself. But it doesn't take the Kenwadan Gang long to track Notaro down. Will Kenshin and the others be able to fend them off and find the key before the gang do?",
+      "airdate": "1997-11-04",
+      "markers": [],
+      "external_id": "166393"
+    },
+    {
+      "n": 77,
+      "title": "Himura Dojo in Shimonoseki?",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166400/original.jpg",
+      "synopsis": "It is Tanabata, July 7th. Tsubame-chan, Kaoru, and Tae-san are window shopping. Tae tells Kaoru what an engagement ring symbolizes. Kaoru starts daydreaming about Kenshin asking her to marry him, the wedding, the wedding night and we break to Kaoru passed out flat on her back in the middle of the street with Tae leaning over her. Tae decides that Kaoru is frustrated and needs her help to find happiness with Kenshin. Kenshin goes fishing and comes back with a catfish. Kaoru apparently hates catfish. Kenshin takes a bite of fish and bites into a ring. Tae talks him into giving the ring to Kaoru. Turns out the ring belonged to a guy who was going to propose to his girlfriend, wonder how much trouble the Kenshin-group goes through to pry the ring off of her finger. From jujutsu, to checking through her underwear, all the way to intoxicating her with beer. Can they get it off, in time to to stop the hopeless romantic from committing suicide?",
+      "airdate": "1997-11-11",
+      "markers": [],
+      "external_id": "166400"
+    },
+    {
+      "n": 78,
+      "title": "Crush!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166409/original.jpg",
+      "synopsis": "The Kenshin-gumi receives a letter from Misao. She reports on a murder mystery in Kyoto and a dead body with strange carvings on the flesh. Aoshi is approached by a man seeking protection from a written death threat. Aoshi refuses, but Misao sees the letter and takes it to Okina. Okina says the writing is either Portuguese or Dutch, and the symbol on the bottom of the letter was the same symbol carved into the body of the murdered man.",
+      "airdate": "1997-11-18",
+      "markers": [],
+      "external_id": "166409"
+    },
+    {
+      "n": 79,
+      "title": "Kaishu Katsu and Kenshin",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166415/original.jpg",
+      "synopsis": "Amakusa Shougo appears at the place Cho is protecting. He defeats Cho and then kills the man he came to kill. Cho tells Kenshin that Amakusa is better than Kenshin. Okina finds out that the three men Amakusa has killed were responsible for persecuting Christians during the Edo dynasty.",
+      "airdate": "1997-11-25",
+      "markers": [],
+      "external_id": "166415"
+    },
+    {
+      "n": 80,
+      "title": "The Unending Revolution",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166426/original.jpg",
+      "synopsis": "In Shimabara, Yahiko almost gets run down by a carriage carrying the Ambassador of Holland, Elsten-dono. Kenshin and Elsten recognize each other, since Kenshin saved Elsten's life 10 years ago at the end of the Edo dynasty. The Kenshin-gumi go to the ambassador's residence for tea and crumpets. Magdaria and Shougo are traveling by carriage, then boat to Shimabara.",
+      "airdate": "1997-12-02",
+      "markers": [],
+      "external_id": "166426"
+    },
+    {
+      "n": 81,
+      "title": "Conspiracy of the Beniaoi",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166430/original.jpg",
+      "synopsis": "The round man has Kenshin down and surrounded by the dogs, but then he loses the whistle with which he controls them. Kenshin ends up saving himself and the round man from the dogs. The round man is confused, since Kaioh-sama told him that Kenshin is a demon and has to be killed, but Kenshin saved the round man's life. The round man chains Kenshin to a tree and goes for Magdaria to see what he should do with Kenshin.",
+      "airdate": "1997-12-09",
+      "markers": [],
+      "external_id": "166430"
+    },
+    {
+      "n": 82,
+      "title": "Kaishu Katsu's Determination",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166436/original.jpg",
+      "synopsis": "Sano is unconscious and lying on the floor of a cave. When he wakes up, he finds himself looking into the face of Magdaria. She notices he is hurt and takes him back to her home in the hill. While she patches him up, they have an argument and she locks him in the room. Meanwhile, Kaioh, Santo, and Amakusa Shougo are plotting the demise of the Meiji government through the instigation of a civil war, but they are disagreeing over price and methodology. Carrying a gun, Magdaria returns to the room where she locked Sano, but he has disappeared.",
+      "airdate": "1997-12-16",
+      "markers": [],
+      "external_id": "166436"
+    },
+    {
+      "n": 83,
+      "title": "Yutaro Returns",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166444/original.jpg",
+      "synopsis": "Misao tells Kenshin what she knows, Shougo and Magdaria(Sayo) are hiding a secret, in the past Shougo was able to help cure people's illness because he had study under the field of medicine, but he can't cure his sister and she's dying. Soon after Kenshin, Kaoru, Yahiko and Kenshin leave and gets caught by someone. Later on, Magdaria is informed that Kaiou has her medallion so she went into his room and went looking for it. She found some more interesting things and found out that Kaiou is going to betray her and her brother. Sanosuke and Shouzo show up and were trying to stop Kaiou but got locked into the cage with Magdaria, to make matters worse an explosion occurred and rocks were falling down on them.",
+      "airdate": "1998-01-06",
+      "markers": [],
+      "external_id": "166444"
+    },
+    {
+      "n": 84,
+      "title": "The Sanada Ninja Squad and the Elixir",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166449/original.jpg",
+      "synopsis": "Kenshin is caught by someone and he takes him out quickily. Meanwhile the rocks had fallen and Shouzo was trapped, Sanosuke and Magdaria managed to get out fine. Sanosuke and Magdaria worked together and got him out. Shouzo got away and went to report this to Shougo. Meanwhile someone showed up to take Sanosuke out, it was no problem and he was defeated, but he would not give up, he attacked once more time but Misao and Yahiko helped. Together they got out of the cave but Magdaria was very sick and Sanosuke ran as fast as he could to bring her to Elsten. Later on, Shouzo had overheard Kaiou's plans and tried to fight him but was defeated, as a last resort he threw some pipe bombs that Sanosuke gave him and killed Kaiou.",
+      "airdate": "1998-01-13",
+      "markers": [],
+      "external_id": "166449"
+    },
+    {
+      "n": 85,
+      "title": "A Straying Journey",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166457/original.jpg",
+      "synopsis": "The army started to prepare themselves to fight Shougo and kill everyone else. Sanosuke continued to try and bring Magdaria to Elsten. After achieving many obstacles Sanosuke finds some luck and sees Elsten. Elsten was interfering too much so Santo tried to kill him but Magdaria jumped in and was shot. Sanosuke beat up Santo and returned Magdaria's medallion back to her, shortly after she died. Elsten left and tried to hurry and get to the holy hill to stop the fight. Meanwhile Kenshin finally arrived and tried to stop the fight, he had found Shougo and would fight him if he would force the children to sacrifice themselves.",
+      "airdate": "1998-01-20",
+      "markers": [],
+      "external_id": "166457"
+    },
+    {
+      "n": 86,
+      "title": "A Heat Wave From Beneath the Earth",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166463/original.jpg",
+      "synopsis": "Misao was caught by two men and was brought to the leader of the army, she kept on telling them that Kenshin is negotiating with Shougo. Finally Elsten arrived and tried to stop the attack, he was only able to stop it for an hour, after the hour they would attack. Misao went off to tell Kenshin he has an hour and if he was successful she would throw a signal out to let him know. Kenshin had already started to fight Shougo, finally both used the succession technique and Shougo was defeated. Kenshin had gained his sight again and Misao just arrived.",
+      "airdate": "1998-01-27",
+      "markers": [],
+      "external_id": "166463"
+    },
+    {
+      "n": 87,
+      "title": "Scheneider's Bet",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166468/original.jpg",
+      "synopsis": "The war was over and Shougo surrendered. Kenshin visited Elsten to find out what will happen to the believers and so on. Elsten is waiting for the government's decision and it should arrive shortly. An official arrives and tells them that the believers can no longer stay in Japan, Elsten is thankful for the decision and decides that the believers can come to his country, Holland. Meanwhile Sanosuke gives Kaoru a letter and she makes a visit to Shougo. Kaoru gives the letter to Shougo and leaves. Shougo makes a last visit to his sister's grave and left to go to Holland.",
+      "airdate": "1998-02-03",
+      "markers": [],
+      "external_id": "166468"
+    },
+    {
+      "n": 88,
+      "title": "The Two Guides",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166474/original.jpg",
+      "synopsis": "Kenshin and the rest are in the restaurant eating, suddenly a group called Tengu creates a disturbance, Yahiko and Misao take them outside and fight them. Then a man claiming to be the legendary Battousai arrives and scares them away. Kenshin and the rest are looking for a place to stay but they were all full, they make their way up to the fake Battousai's place and sees he's running a dojo. Kenshin and the others help out and have a place to stay. The Tengu group is getting restless and wants to kill the Battousai, a man named Anzai arrives and says he will kill the Battousai. He arrives at the dojo and wants to fight the Battousai, Kenshin came right on time and defeated him. Kenshin allowed him to keep the name and he and the rest set sail to go back home.",
+      "airdate": "1998-02-10",
+      "markers": [],
+      "external_id": "166474"
+    },
+    {
+      "n": 89,
+      "title": "To My Angel Misao",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166481/original.jpg",
+      "synopsis": "Kenshin and the rest are walking through the forest, they end up going to a restaurant to eat, and when the time came to pay for it, Kenshin had lost Kaoru's money. Kenshin and the rest offered to work off the money. Kaoru and Misao were making trips to send people their meal and accidentally went into the wrong room. Later that night Misao and Kaoru were in the hot springs and they spotted someone. They realized it was an artist seeking inspiration and Kaoru was it. The artist had fallen in love with Kaoru but Kaoru was in love with Kenshin, Misao had an idea and told Sanosuke, Sanosuke told the artist if he can hit Kenshin he will hook him up with Kaoru. No matter how hard the artist tried he couldn't hit Kenshin. Finally he got his inspiration and drew a portrait of Kaoru and gave it her. Kenshin and the rest left and saw Kaoru's picture, it was an abstract drawing and they laughed while running away.",
+      "airdate": "1998-02-17",
+      "markers": [],
+      "external_id": "166481"
+    },
+    {
+      "n": 90,
+      "title": "Feng Shui, Surprise Attack!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166486/original.jpg",
+      "synopsis": "A man is talking about people being able to go to the moon, but the others laugh at him, he left with his teacher and forgot his books. Yahiko went to return the books but the man (Daigoro) and his teacher was going to be attacked. Yahiko and everyone helped out and were able to protect them, then Tetsuma appeared and scared them away. Daigoro's teacher than kicked him out of his dojo since he wasn't very good with a sword. Kaoru decided to accept him as a student and tried to teach him to be strong. A girl named Itsuko came and tried to bring him back but Daigoro refused and Itsuko stayed behind. Kenshin left and went to tell Daigoro's teacher (Katsu) that his daughter was staying at the dojo, as Kenshin leaves the men earlier is trying to attack Kenshin.",
+      "airdate": "1998-02-24",
+      "markers": [],
+      "external_id": "166486"
+    },
+    {
+      "n": 91,
+      "title": "The Magic of Feng Shui",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166494/original.jpg",
+      "synopsis": "A bunch of men are ready to attack Kenshin but Kenshin has no idea who these people are, they tell Kenshin that they are the Beni Aoi, Kenshin still doesn't know who they are, the leader figures out Kenshin wasn't hired as a bodyguard and left. Daigoro continues to train and has a match with Yahiko. Daigoro attacks but pulls his back and is unable to move. Itsuko is cooking and Kaoru shows up, she teachers her to cook but forgot to buy something so she left. Outside the Beni Aoi was waiting for her and kidnapped her. Kaoru screamed and didn't know what to do, the kitchen was on fire, Kenshin sensed something was wrong and asked where Itsuko was, he went out side and found her hair pin on the ground.",
+      "airdate": "1998-03-03",
+      "markers": [],
+      "external_id": "166494"
+    },
+    {
+      "n": 92,
+      "title": "Tokyo's Under Martial Law!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166501/original.jpg",
+      "synopsis": "Itsuko was kidnapped and Katsu had received a letter about it, Kenshin paid a visit to him and found out that Katsu was hiding someone's money and the Beni Aoi wanted it. Katsu was suppose to arrive at 2:00am at a temple, and if he cooperates his daughter would not be harmed. Kenshin was told not to come but he still went as well as everyone else including Daigoro. They arrived at the temple first and Daigoro say Itsuko, she tried to run for it but tripped, Daigoro charged forward and was stabbed.",
+      "airdate": "1998-03-10",
+      "markers": [],
+      "external_id": "166501"
+    },
+    {
+      "n": 93,
+      "title": "The Enemy Awaits in Senjogahara",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166509/original.jpg",
+      "synopsis": "Daigoro was just stabbed and Kenshin stepped forward to fight the leader while the others took care of the rest. The leader was defeated and shortly the police arrived and arrested the Beni Aoi. Back at Katsu's home, Tetsuma was caught, Katsu knew it was him looking for the map to the hidden money. Tetsuma try to reason why Katsu but it wasn't enough then he tried to fight him but Kenshin stepped in. Kenshin defeated Tetsuma and he then knew what he did was wrong and turned himself in.",
+      "airdate": "1998-04-14",
+      "markers": [],
+      "external_id": "166509"
+    },
+    {
+      "n": 94,
+      "title": "The Elegy of Wind and Water",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166512/original.jpg",
+      "synopsis": "Yutaro returns back to the dojo with Professor Hans. Yahiko sees Yutaro and they have a friendly fight. Meanwhile the Black Knights are after professor Hans and want something from him. Since Yutaro is back Kenshin and everyone go to a restaurant and eat to celebrate Yutaro's return. The meal was finished and Professor Hans and Yutaro left, as Kenshin was leaving he noticed someone so he stayed behind. Professor Hans was attacked and a map was taken from him, he was badly injured and Yutaro couldn't do anything, Kenshin stepped in and fought one of the men but they retreated since they heard people calling Kenshin. Professor Hans was brought back to be treated and he told Yutaro that there's a map under the dojo and he must protect the divine medicine. Meanwhile the Black Knights had the map and were celebrating someone caused a ruckus and revealed them self.",
+      "airdate": "1998-04-21",
+      "markers": [],
+      "external_id": "166512"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Iranai mono",
+      "artist": "Tatsuya Kitani x natori",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "suikousetten",
+      "artist": "NOMELON NOLEMON",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hiten",
+      "artist": "Ayase x R-Shitei",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kissaki",
+      "artist": "Reol",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nanairo no Kaze (七色の風)",
+      "artist": "Rina Sumioka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Itoshisa no Kate (愛しさの糧)",
+      "artist": "Hiroko Kasahara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Niji (虹)",
+      "artist": "L'arc-en-Ciel",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Towa no Mirai (永遠の未来; Eternal Future)",
+      "artist": "Animetal",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Quiet Life",
+      "artist": "Taku Iwasaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Freckles",
+      "artist": "Sandy Fox [Media Blasters English version]",
+      "episodes": "1-17"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sobakasu (そばかす)",
+      "artist": "Judy & Mary",
+      "episodes": "1-38"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tactics",
+      "artist": "Lex Lang [Media Blasters English version]",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tactics",
+      "artist": "The Yellow Monkey",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "BURN",
+      "artist": "yama×WurtS",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Tada Hitotsu",
+      "artist": "ZARAME",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Rurou no Katashiro",
+      "artist": "Masaki Suda x Tokyo Ska Paradise Orchestra",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Sonzai Shoumei",
+      "artist": "KID PHENOMENON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "feel you",
+      "artist": "Rina Sumioka",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Nibun-no-ichi (½)",
+      "artist": "Makoto Kawamoto",
+      "episodes": "39-82"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "I Know Tears",
+      "artist": "Terry Wood [Media Blasters English version]",
+      "episodes": "13-17"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Namida wa Shitteiru (涙は知っている)",
+      "artist": "Mayo Suzukaze",
+      "episodes": "13-27"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Kimi ni Fureru Dake de (君に触れるだけで)",
+      "artist": "Curio",
+      "episodes": "83-95"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Heart of Sword - Yoake Mae (HEART OF SWORD~夜明け前~)",
+      "artist": "T.M. Revolution",
+      "episodes": "28-38,43-49"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Fourth Avenue Cafe",
+      "artist": "L'Arc~En~Ciel",
+      "episodes": "39-42"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "It's Gonna Rain",
+      "artist": "Bonnie Pink",
+      "episodes": "50-66"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Sanbun-no-ichi no Junjō na Kanjō (⅓の純情な感情)",
+      "artist": "Siam Shade",
+      "episodes": "67-82"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Dame! (ダメ！)",
+      "artist": "Yō Izumi",
+      "episodes": "83-95"
+    }
+  ],
+  "relations": []
+}

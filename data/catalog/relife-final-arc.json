@@ -1,0 +1,107 @@
+{
+  "id": "relife-final-arc",
+  "title": "ReLIFE: Final Arc",
+  "native": "ReLIFE 完結編",
+  "year": 2018,
+  "rating": 8.1,
+  "season": "Winter 2018",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98635-U7XClVuynqfY.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98635-U7XClVuynqfY.png",
+  "accent": "#93d6ff",
+  "synopsis": "After reliving the life of a high school student through the ReLIFE experiment, 27-year-old Arata Kaizaki cannot believe how quickly it has changed him. He has begun to see the world through a different perspective that he had completely forgotten as an adult. He has made friends and formed deep relationships with each one of them. However his support, Ryou Yoake, reminds him that the experiment is all an illusion; after his experiment ends, he will be forgotten by all of them.\n\nThe experiment of another ReLIFE subject is also coming to an end. After spending two years with ReLIFE, Chizuru Hishiro has developed into a more open, more thoughtful person than she could have ever imagined. She has met people who have changed her life, her perspective, and ultimately her. However, now that their ReLIFE is coming to an end, will they be able to let go of the memories they have made?\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "ReLIFE (2016)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13502,
+    "anilist": 98635,
+    "mal": 35466,
+    "hianime": "relife:-final-arc-9vneod"
+  },
+  "skip_key_id": 35466,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": "2026-10-14 11:35:25",
+  "search_text": "relife final arc relife 完結編 ova finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Kaizaki Arata (27), Unemployed",
+      "runtime": "20:00",
+      "runtime_seconds": 1200,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a3b6b1d99a0f528ac78feab63e7722d91467311690_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 80,
+          "end": 170,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "208935"
+    },
+    {
+      "n": 2,
+      "title": "Communication Skills: Zero",
+      "runtime": "20:00",
+      "runtime_seconds": 1200,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f4733dce1deedf5d927d9e35e450afc61467311788_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "208936"
+    },
+    {
+      "n": 3,
+      "title": "You're Old Now",
+      "runtime": "20:00",
+      "runtime_seconds": 1200,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/8260bb1022269b4d49edc570b48179c81467311799_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "208937"
+    },
+    {
+      "n": 4,
+      "title": "Fall",
+      "runtime": "20:00",
+      "runtime_seconds": 1200,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6778ee4b95dbf9c25bfd44803a79d1b61467311823_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "208938"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Button",
+      "artist": "PENGUIN RESEARCH",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

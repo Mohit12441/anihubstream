@@ -1,0 +1,277 @@
+{
+  "id": "sonny-boy",
+  "title": "Sonny Boy",
+  "native": "Sonny Boy",
+  "year": 2021,
+  "rating": 7.8,
+  "season": "Summer 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx132126-4ugVjXMQLAps.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx132126-4ugVjXMQLAps.png",
+  "accent": "#2f7bff",
+  "synopsis": "It’s an ordinary summer vacation...except for the fact that Nagara’s high school has mysteriously drifted into another dimension. As the students begin to develop strange new powers, will they work together to survive the alien environment and find a way home, or will their newly formed factions and rivalries turn on each other? \n\n(Source: Funimation)\n\nNote: The first episode received an advance release on YouTube on June 19, 2021. The regular TV broadcast started on July 16, 2021.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44501,
+    "anilist": 132126,
+    "mal": 48849,
+    "hianime": "sonny-boy-oul6ge"
+  },
+  "skip_key_id": 48849,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 10:10:21",
+  "search_text": "sonny boy sonny boy tv finished",
+  "genres": [
+    "drama",
+    "isekai",
+    "mystery",
+    "sci-fi",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Island at the Far End of Summer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a4c55c2868cd8dd9fb19aec42b3a0cfd1653382688_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1381,
+          "end": 1440
+        }
+      ],
+      "external_id": "305701"
+    },
+    {
+      "n": 2,
+      "title": "Aliens",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6d90e538be982a11bd226b65db49ceb01653382813_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 7
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1389,
+          "end": 1440
+        }
+      ],
+      "external_id": "305702"
+    },
+    {
+      "n": 3,
+      "title": "The Cat Who Wore Sandals",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1467d117caf5238465325e274cbfb01b1653383051_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1387,
+          "end": 1440
+        }
+      ],
+      "external_id": "305703"
+    },
+    {
+      "n": 4,
+      "title": "The Great Monkey Baseball",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/9e8328a4834fcd0f8d420e434fba3ef11653383480_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1387,
+          "end": 1440
+        }
+      ],
+      "external_id": "305704"
+    },
+    {
+      "n": 5,
+      "title": "Leaping Classrooms",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c60350d1bc71ca37012ca8af620ebd0b1653383562_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1387,
+          "end": 1440
+        }
+      ],
+      "external_id": "305705"
+    },
+    {
+      "n": 6,
+      "title": "The Long Goodbye",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/7ed3408f66201370706f8b28f57d15701653383545_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1407,
+          "end": 1440
+        }
+      ],
+      "external_id": "305706"
+    },
+    {
+      "n": 7,
+      "title": "Road Book",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/ed408a530202f9d935643b9f396aec911653383575_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1387,
+          "end": 1440
+        }
+      ],
+      "external_id": "305707"
+    },
+    {
+      "n": 8,
+      "title": "Laughing Dog",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/3af2844b9b5b198ad86b12ae771d15951653383649_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1417,
+          "end": 1440
+        }
+      ],
+      "external_id": "305708"
+    },
+    {
+      "n": 9,
+      "title": "This Salmon Chazuke Is Missing Its Salmon Nya",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/11bc0f5c8d34d948c07a293e0030dd4d1653383676_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1385,
+          "end": 1440
+        }
+      ],
+      "external_id": "305709"
+    },
+    {
+      "n": 10,
+      "title": "Summer and the Demon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/58cdad4df049084e72543cc71507fbb71653383767_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1387,
+          "end": 1440
+        }
+      ],
+      "external_id": "305710"
+    },
+    {
+      "n": 11,
+      "title": "The Young Man and the Sea",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/31c4703cfafaae49708e74ed7fa504a41653383845_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1425,
+          "end": 1440
+        }
+      ],
+      "external_id": "305711"
+    },
+    {
+      "n": 12,
+      "title": "Two Years' Vacation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a7fac4940db4503276c779f1103a499c1653383900_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1381,
+          "end": 1440
+        }
+      ],
+      "external_id": "305712"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Boy Meets Girl",
+      "artist": "Ging Nang Boyz",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

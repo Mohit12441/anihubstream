@@ -1,0 +1,172 @@
+{
+  "id": "recovery-of-an-mmo-junkie",
+  "title": "Recovery of an MMO Junkie",
+  "native": "ネト充のススメ",
+  "year": 2017,
+  "rating": 7.3,
+  "season": "Fall 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx99726-tta6v7TKGYKa.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99726-tta6v7TKGYKa.jpg",
+  "accent": "#e4ae5d",
+  "synopsis": "Moriko Morioka is a 30-year-old single NEET woman. After dropping out from reality, she has taken off in search for a fulfilling life and ended up in a net game or \"netoge.\" In the netoge world, she began her new life as a refreshing and handsome character named Hayashi. While starting out as a beginner, a pretty character named Lily reached out to help her. Meanwhile, in the real world, awaits a shocking encounter with a good-looking elite company employee, a mysterious blue-eyed blonde.\n\n(Source: MAL News)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Recovery of an MMO Junkie OVA (2017)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13703,
+    "anilist": 99726,
+    "mal": 36038
+  },
+  "skip_key_id": 36038,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": "2026-10-14 10:10:21",
+  "search_text": "recovery of an mmo junkie ネト充のススメ tv finished",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "♀ IRL, ♂ Online",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/209521/original.jpg",
+      "synopsis": "Morioka Moriko is a 30 year old who chose the NEET path for herself after quitting her job. She decides she'll find more happiness online than in the real world and so makes a hot male character in an MMO named Hayashi. In game, she meets an adorable and kindhearted experienced player named Lily, as well as other friends. Now begins Moriko's fulfilling online life as a self-styled \"elite NEET\"! (Source: Crunchyroll)",
+      "airdate": "2017-10-06",
+      "markers": [],
+      "external_id": "209521"
+    },
+    {
+      "n": 2,
+      "title": "We Don't Know a Thing",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-17",
+      "markers": [],
+      "external_id": "209522"
+    },
+    {
+      "n": 3,
+      "title": "You and I, the Cowards",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-24",
+      "markers": [],
+      "external_id": "209523"
+    },
+    {
+      "n": 4,
+      "title": "Like a Maiden in Love",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-31",
+      "markers": [],
+      "external_id": "209524"
+    },
+    {
+      "n": 5,
+      "title": "Secret Triangle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-07",
+      "markers": [],
+      "external_id": "209525"
+    },
+    {
+      "n": 6,
+      "title": "I'm So Embarrassed I Could Die!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-14",
+      "markers": [],
+      "external_id": "209526"
+    },
+    {
+      "n": 7,
+      "title": "You and I, and Me and You",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-21",
+      "markers": [],
+      "external_id": "209527"
+    },
+    {
+      "n": 8,
+      "title": "One Step Forward",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-28",
+      "markers": [],
+      "external_id": "209528"
+    },
+    {
+      "n": 9,
+      "title": "I Call That Feeling Marble",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-05",
+      "markers": [],
+      "external_id": "209529"
+    },
+    {
+      "n": 10,
+      "title": "On a Moonlit Evening",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-12",
+      "markers": [],
+      "external_id": "209530"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Saturday Night Question (サタデー・ナイト・クエスチョン)",
+      "artist": "Megumi Nakajima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hikari, Hikari (ひかり、ひかり)",
+      "artist": "Yūka Aisaka",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

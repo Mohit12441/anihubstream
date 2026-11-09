@@ -1,0 +1,191 @@
+{
+  "id": "smile-down-the-runway",
+  "title": "Smile Down the Runway",
+  "native": "ランウェイで笑って",
+  "year": 2020,
+  "rating": 7.3,
+  "season": "Winter 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx111501-qZgcR8eb86t3.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx111501-qZgcR8eb86t3.png",
+  "accent": "#4386e4",
+  "synopsis": "Chiyuki Fujito has a dream: to become a Paris Collection model. The problem is, she's too short to be a model, and everyone around her tells her so! But no matter what they say, she won't give up. Her classmate, a poor student named Ikuto Tsumura, also has a dream: to become a fashion designer. One day Chiyuki tells him that it's \"probably impossible\" for him, causing him to consider giving it up...?! This is the story of two individuals wholeheartedly chasing after their dreams in spite of all the negativity that comes after them!\n\n(Source: Kodansha USA)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "smile-down-the-runway-ksmrem",
+    "mal": 40392,
+    "anilist": 111501,
+    "kitsu": 42552
+  },
+  "skip_key_id": 40392,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "smile down the runway ランウェイて 笑って tv finished",
+  "genres": [
+    "drama",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "This Is Your Story",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/27ba1c9dd234deea1a05cafd02974f6f1662984133_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273396"
+    },
+    {
+      "n": 2,
+      "title": "A Professional's World",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/55f3d9d7102bb3946e5bb09d6f682d2e1662984137_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273397"
+    },
+    {
+      "n": 3,
+      "title": "Smile Down the Runway",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/4b035ed0d50b3822a7da54ce9502188c1662984386_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273402"
+    },
+    {
+      "n": 4,
+      "title": "Young Talents",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/da5b21bb31b80b2e63ccf0197369e2c81662984371_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273873"
+    },
+    {
+      "n": 5,
+      "title": "Individual Styles",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/6424e472a052404f2deb6ac68b62573b1662984495_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274091"
+    },
+    {
+      "n": 6,
+      "title": "Superiority and Inferiority",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/d20dcc8191a21772d3c798e754a92fed1662984527_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274092"
+    },
+    {
+      "n": 7,
+      "title": "Aura",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a2c98e55c15b2e60233d931210ff9f021662984684_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274093"
+    },
+    {
+      "n": 8,
+      "title": "The Designer's Capacity",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/30c25b4c208bb1b012c9e5a0d3779ea81662984674_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274094"
+    },
+    {
+      "n": 9,
+      "title": "Rivals",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b6f1c0727a222acb4ec94a5280f8be721662984913_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274095"
+    },
+    {
+      "n": 10,
+      "title": "Must Not Lose",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/cb0619d6289bbb8ea49beb1a1e3817e51662984972_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274096"
+    },
+    {
+      "n": 11,
+      "title": "The Promise",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/eb78ab5279c652c781dbf2b185a52a541662985092_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274097"
+    },
+    {
+      "n": 12,
+      "title": "This Is My Story",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/de318bd254cc4bb5b4ad6fb80a54f0a11662985270_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274098"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Lion",
+      "artist": "Ami Sakaguchi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ray of Light",
+      "artist": "J-JUN",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

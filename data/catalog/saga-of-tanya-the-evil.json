@@ -1,0 +1,229 @@
+{
+  "id": "saga-of-tanya-the-evil",
+  "title": "Saga of Tanya the Evil",
+  "native": "幼女戦記",
+  "year": 2017,
+  "rating": 7.8,
+  "season": "Winter 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21613-qT3NiwYP5dYc.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21613-qT3NiwYP5dYc.png",
+  "accent": "#3b82ff",
+  "synopsis": "The novel series centers on a young girl who fights on the frontlines in war. She has blonde hair, blue eyes, and nearly transparent white skin, and she flies through the air and mercilessly strikes down her opponents. Her name is Tanya Degurechaff, and she speaks with a young girl's lisp and commands the army. Tanya used to be one of Japan's elite office workers, but because of a wrathful god, was reborn as a little girl. Tanya prioritizes optimization and career advancement above all, and she will become the most dangerous entity among the Imperial Army's sorcerers.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Saga of Tanya the Evil - the Movie - (2019)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11794,
+    "anilist": 21613,
+    "mal": 32615,
+    "hianime": "saga-of-tanya-the-evil-o2dqyp"
+  },
+  "skip_key_id": 32615,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 03:06:30",
+  "search_text": "saga of tanya the evil 幼女戦記 tv finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Devil of the Rhine",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5458/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-01-06",
+      "markers": [],
+      "external_id": "5458"
+    },
+    {
+      "n": 2,
+      "title": "Prologue",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5457/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-01-13",
+      "markers": [],
+      "external_id": "5457"
+    },
+    {
+      "n": 3,
+      "title": "Deus Vult",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5456/original.jpeg",
+      "synopsis": "",
+      "airdate": "2017-01-20",
+      "markers": [],
+      "external_id": "5456"
+    },
+    {
+      "n": 4,
+      "title": "Campus Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5420/original.png",
+      "synopsis": "",
+      "airdate": "2017-01-27",
+      "markers": [],
+      "external_id": "5420"
+    },
+    {
+      "n": 5,
+      "title": "My First Battalion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5419/original.png",
+      "synopsis": "",
+      "airdate": "2017-02-03",
+      "markers": [],
+      "external_id": "5419"
+    },
+    {
+      "n": 6,
+      "title": "Beginning of Madness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5421/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-02-10",
+      "markers": [],
+      "external_id": "5421"
+    },
+    {
+      "n": 7,
+      "title": "The Battle of the Fjord",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5423/original.png",
+      "synopsis": "",
+      "airdate": "2017-02-24",
+      "markers": [],
+      "external_id": "5423"
+    },
+    {
+      "n": 8,
+      "title": "Trial by Fire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5424/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-03-03",
+      "markers": [],
+      "external_id": "5424"
+    },
+    {
+      "n": 9,
+      "title": "Preparations for Advance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5425/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-03-10",
+      "markers": [],
+      "external_id": "5425"
+    },
+    {
+      "n": 10,
+      "title": "The Path to Victory",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5467/original.png",
+      "synopsis": "",
+      "airdate": "2017-03-17",
+      "markers": [],
+      "external_id": "5467"
+    },
+    {
+      "n": 11,
+      "title": "Resistance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5409/original.png",
+      "synopsis": "",
+      "airdate": "2017-03-24",
+      "markers": [],
+      "external_id": "5409"
+    },
+    {
+      "n": 12,
+      "title": "How to Use a Victory",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5466/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-03-31",
+      "markers": [],
+      "external_id": "5466"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Why? RED induction",
+      "artist": "MYTH & ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Weiter! Weiter!",
+      "artist": "Aoi Yūki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Los! Los! Los!",
+      "artist": "Tanya Degurechaff [Aoi Yūki]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Remembrance",
+      "artist": "MYTH & ROID",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "JINGO JUNGLE",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Los! Los! Los!",
+      "artist": "Aoi Yūki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sensen no Realism (戦線のリアリズム; Realism of the Front)",
+      "artist": "Mako Niina",
+      "episodes": "8"
+    }
+  ],
+  "relations": []
+}

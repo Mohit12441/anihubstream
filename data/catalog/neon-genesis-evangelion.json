@@ -1,0 +1,798 @@
+{
+  "id": "neon-genesis-evangelion",
+  "title": "Neon Genesis Evangelion",
+  "native": "新世紀エヴァンゲリオン",
+  "year": 1995,
+  "rating": 8.3,
+  "season": "Fall 1995",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx30-AI1zr74Dh4ye.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx30-AI1zr74Dh4ye.jpg",
+  "accent": "#f17843",
+  "synopsis": "In the year 2015, the Angels, huge, tremendously powerful, alien war machines, appear in Tokyo for the second time. The only hope for Mankind's survival lies in the Evangelion, a humanoid fighting machine developed by NERV, a special United Nations agency. Capable of withstanding anything the Angels can dish out, the Evangelion's one drawback lies in the limited number of people able to pilot them. Only a handful of teenagers, all born fourteen years ago, nine months after the Angels first appeared, are able to interface with the Evangelion. One such teenager is Shinji Ikari, whose father heads the NERV team that developed and maintains the Evangelion. Thrust into a maelstrom of battle and events that he does not understand, Shinji is forced to plumb the depths of his own inner resources for the courage and strength to not only fight, but to survive, or risk losing everything. \n\n(Source: AniDB)\n\n Note: Later releases include edited versions of Episodes 21-24 called the \"Director's Cut\" with some visual editing and adding extra scenes that previously appeared in the theatrical recap 'Death'.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Neon Genesis Evangelion: The End of Evangelion (1997)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 21,
+    "anilist": 30,
+    "mal": 30,
+    "hianime": "neon-genesis-evangelion-vhhdkg"
+  },
+  "skip_key_id": 30,
+  "skip_key_space": "anilist",
+  "episode_total": 26,
+  "added_at": "2026-10-14 02:14:09",
+  "search_text": "neon genesis evangelion 新世紀エウ ァンケ リオン tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Angel Attack",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1095/original.jpg",
+      "synopsis": "Shinji Ikari is summoned to Tokyo-3 by his estranged father Gendo, commander of the special agency Nerv, to defend the city from a giant Angel by piloting the only weapon capable of battling the monster: Evangelion Unit-01.",
+      "airdate": "1995-10-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1394
+        }
+      ],
+      "external_id": "1095"
+    },
+    {
+      "n": 2,
+      "title": "The Beast",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1096/original.jpg",
+      "synopsis": "Shinji wakes up in the hospital, with no memory of defeating the Angel the night before. Rejected by his father, Misato decides to take Shinji with her to live in her apartment. Later that night, memories of the battle against the Angel come flooding back to Shinji.",
+      "airdate": "1995-10-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1385
+        }
+      ],
+      "external_id": "1096"
+    },
+    {
+      "n": 3,
+      "title": "A Transfer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1097/original.jpg",
+      "synopsis": "Shinji begins attending his new school in Tokyo-3, and has a difficult time dealing with the fame of being an Evangelion pilot. Toji Suzuhara, who's little sister was injured in Shinji's fight against the Angel, is angry at Shinji. A new Angel appears, and Shinji must once again pilot Eva-01 to defeat it.",
+      "airdate": "1995-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1385
+        }
+      ],
+      "external_id": "1097"
+    },
+    {
+      "n": 4,
+      "title": "Hedgehog's Dilemma",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1098/original.jpg",
+      "synopsis": "Misato is upset with Shinji for ignoring her orders in the last Angel battle, and he is so overcome by the stress of being an Eva pilot that he runs away. After wandering around Tokyo-3 for several days, Shinji is faced with the choice of quitting or staying in his new home.",
+      "airdate": "1995-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1385
+        }
+      ],
+      "external_id": "1098"
+    },
+    {
+      "n": 5,
+      "title": "Rei I",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1099/original.jpg",
+      "synopsis": "Eva-00 is finally repaired, and Shinji tries to get to know its enigmatic pilot, Rei Ayanami, better. However, he is confounded because she is extremely insular, has no friends at all, and the entire record of her past has been erased. In the midst of this, a very powerful Angel, the floating monolith Ramiel, attacks Tokyo-3.",
+      "airdate": "1995-11-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1382
+        }
+      ],
+      "external_id": "1099"
+    },
+    {
+      "n": 6,
+      "title": "Rei II",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1100/original.jpg",
+      "synopsis": "Continuing from the previous episode, the Angel Ramiel is drilling down into the GeoFront to attack Nerv HQ directly. After Shinji barely survived a direct confrontation with it, Misato devises a plan to have Eva-00 and Eva-01 defeat the Angel by sniping it from a distance using a positronic rifle which requires the total electric output of Japan to power up.",
+      "airdate": "1995-11-08",
+      "markers": [],
+      "external_id": "1100"
+    },
+    {
+      "n": 7,
+      "title": "A Human Work",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1101/original.jpg",
+      "synopsis": "Ritsuko briefs Shinji on the real nature of Second Impact, the Angels, and the Evangelions' mission to defeat them. Misato and Ritsuko attend the public demonstration of a new Angel-fighting robot, Jet Alone, built by a rival defense contractor to Nerv. However, the nuclear-powered robot quickly runs out of control, and Shinji must use Eva Unit 01 to load Misato onto Jet Alone so she can she can enter in its automatic shutdown code, before it melts down in a nuclear explosion.",
+      "airdate": "1995-11-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1392
+        }
+      ],
+      "external_id": "1101"
+    },
+    {
+      "n": 8,
+      "title": "Asuka Strikes!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1102/original.jpg",
+      "synopsis": "Misato brings Shinji, along with Toji and Kensuke, to a massive UN naval convoy transporting Evangelion Unit-02 and its fiery German pilot, Asuka Langley Soryu, to Japan. Escorting Asuka is Misato's old boyfriend, Ryoji Kaji. After some awkward introductions and reunions, the fleet is attacked by a massive aquatic Angel. Asuka powers up Eva-02, and decides that she will defeat the Angel by playing \"hopscotch\"...",
+      "airdate": "1995-11-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1385
+        }
+      ],
+      "external_id": "1102"
+    },
+    {
+      "n": 9,
+      "title": "Both of You, Dance Like You Want to Win!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1103/original.jpg",
+      "synopsis": "Asuka joins Shinji’s class at school, and moves in with Misato and him in their apartment. As Asuka adjusts to Japan (or rather, everyone else adapts to her...), a new Angel attacks which is capable of splitting itself into two identical copies. Eva-01 and Eva-02 are defeated, and Nerv is publicly humiliated. With the Angel in a week-long regeneration period after an N² Mine attack by the JSSDF, Asuka and Shinji must learn to \"synchronize\" with each others movements combat, in order to defeat it once and for all.",
+      "airdate": "1995-11-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1384
+        }
+      ],
+      "external_id": "1103"
+    },
+    {
+      "n": 10,
+      "title": "Magma Diver",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1104/original.jpg",
+      "synopsis": "The Eva pilots are disappointed to find out that they are not allowed to go on their class trip to Okinawa, because they have to stay at Tokyo-3 to stay on-call in case of an Angel attack. Meanwhile, a new Angel is discovered in a chrysalis-like developmental stage deep within the magma of the volcano Mount Asama. Nerv seizes the opportunity to capture a live Angel for research; it is decided to send Eva-02 into the magma while wearing a super-cooled diving suit along with capture equipment. However, the Angel quickly matures and breaks containment, and Asuka is forced to battle it deep within the magma of the volcano.",
+      "airdate": "1995-12-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1386
+        }
+      ],
+      "external_id": "1104"
+    },
+    {
+      "n": 11,
+      "title": "The Day Tokyo-3 Stood Still",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1105/original.jpg",
+      "synopsis": "Tokyo-3 comes to a standstill when sabotage knocks out all power, and the personnel must scramble to launch the Evas manually when an Angel appears in the middle of the blackout.",
+      "airdate": "1995-12-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1386
+        }
+      ],
+      "external_id": "1105"
+    },
+    {
+      "n": 12,
+      "title": "She said, 'Don't make others suffer for your personal hatred.'",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1106/original.jpg",
+      "synopsis": "Misato has been promoted to Major, but the celebration does not last long. A monstrous Angel appears in Earth orbit right when Gendo and Fuyutsuki are away, leaving her and the children to deal with a colossal kamikaze threatening to drop itself right on top of Tokyo-3.",
+      "airdate": "1995-12-20",
+      "markers": [],
+      "external_id": "1106"
+    },
+    {
+      "n": 13,
+      "title": "Lilliputian Hitcher",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1107/original.jpg",
+      "synopsis": "A routine test involving the Eva pilots turns into a struggle for survival when a wholly new type of Angel appears and spreads inside Nerv HQ. This new, computer-like angel threatens to set off the self-destruct for the entire facility, leaving Dr.Ritsuko Akagi in a race against time to save the GeoFront and destroy the Angel.",
+      "airdate": "1995-12-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1385
+        }
+      ],
+      "external_id": "1107"
+    },
+    {
+      "n": 14,
+      "title": "Weaving a Story",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1108/original.jpg",
+      "synopsis": "This episode is in two parts: The first part being a clip show presented to the Human Instrumentality Committee of Seele, reviewing the attacks of all Angels up to this point. The second part includes a poem in which Rei contemplates her own existence, and a cross-compatibility test between Rei's and Shinji's Evas.",
+      "airdate": "1996-01-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1402
+        }
+      ],
+      "external_id": "1108"
+    },
+    {
+      "n": 15,
+      "title": "Those women longed for the touch of others' lips, and thus invited their kisses.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1109/original.jpg",
+      "synopsis": "It seems like it's an important day for nearly everyone at Nerv. Misato and Ritsuko are going to a wedding; Shinji and Gendo are visiting Yui's grave; Asuka has a date. However, important things will spring from these seemingly mundane events.",
+      "airdate": "1996-01-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1386
+        }
+      ],
+      "external_id": "1109"
+    },
+    {
+      "n": 16,
+      "title": "Splitting of the Breast",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1110/original.jpg",
+      "synopsis": "Shinji beats Asuka in a synch test, much to her annoyance. Not too long after, the Evas are dispatched to deal with a mysterious apparition, and Eva-01 is sucked into a shadowlike blackness that materializes out of nothingness from under it. While an emergency operation to rescue the captured Eva is concocted, Shinji goes on a trip into the depths of his own consciousness...",
+      "airdate": "1996-01-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1385
+        }
+      ],
+      "external_id": "1110"
+    },
+    {
+      "n": 17,
+      "title": "Fourth Child",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1111/original.jpg",
+      "synopsis": "A Nerv branch in Nevada is obliterated in a catastrophic accident, and Nerv headquarters prepares to station a new Evangelion in Japan. The Fourth Children(Child) is selected, unbeknownst to Shinji.",
+      "airdate": "1996-01-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "1111"
+    },
+    {
+      "n": 18,
+      "title": "Ambivalence",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1112/original.jpg",
+      "synopsis": "Evangelion Unit-03 arrives from the United States. However, its activation experiment brings out Nerv's worst nightmare when it turns out to have been infected by the Thirteenth Angel. The other Evas are dispatched to battle the Angel-infected abomination...even at the risk of killing its helpless pilot.",
+      "airdate": "1996-01-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1385
+        }
+      ],
+      "external_id": "1112"
+    },
+    {
+      "n": 19,
+      "title": "Introjection",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1113/original.jpg",
+      "synopsis": "Enraged over Toji's near-death at the hands of his own Eva, Shinji refuses to pilot an Evangelion again and prepares to leave Tokyo-3 for good. He is forced to reconsider that decision when an immensely destructive new Angel attacks just as he is about to leave...",
+      "airdate": "1996-02-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1385
+        }
+      ],
+      "external_id": "1113"
+    },
+    {
+      "n": 20,
+      "title": "WEAVING A STORY 2: oral stage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1114/original.jpg",
+      "synopsis": "Shinji achieved an unprecedented 400% synchronization ratio with Eva-01 during the battle with Zeruel, to horrible effect. With the Eva having ascended to the status of a living God and Shinji absorbed inside it, Ritsuko unsuccessfully attempts to recover him. In the meantime, Shinji makes contact with the resident soul of the Eva- his mother, Yui Ikari.",
+      "airdate": "1996-02-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1381
+        }
+      ],
+      "external_id": "1114"
+    },
+    {
+      "n": 21,
+      "title": "He was aware that he was still a child.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1115/original.jpg",
+      "synopsis": "Kozo Fuyutsuki is kidnapped and interrogated by Seele, who are horrified over the results of the last encounter with an Angel. He recounts his past, providing flashbacks into the creation of Nerv. The pasts of Misato Katsuragi, Ritsuko Akagi, Rei Ayanami and Yui Ikari are also revealed. Ryoji Kaji, meanwhile, decides to find out the truth, no matter the cost.",
+      "airdate": "1996-02-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "1115"
+    },
+    {
+      "n": 22,
+      "title": "Don't Be.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1116/original.jpg",
+      "synopsis": "Asuka's synch rate is on a downward spiral after her defeat at the hands of the Fourteenth Angel, Zeruel, and her frustration with Rei, Shinji, Misato and (unknown to her, dead) Kaji is on the rise. Angrier and more disturbed than ever, she is forced to relive her dark, traumatic past during the encounter with the Fifteenth Angel, Arael.",
+      "airdate": "1996-02-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "1116"
+    },
+    {
+      "n": 23,
+      "title": "Rei III",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1117/original.jpg",
+      "synopsis": "Asuka sinks into deep depression after Arael's mental probing, and is unable to pilot when the new Angel Armisael arrives. Armisael begins physically fusing with Eva-00 and threatens to do the same to Eva-01, prompting Rei to sacrifice herself to save Shinji, only to appear alive soon afterwards. Under threat by Misato, Ritsuko opens the door to a room in Terminal Dogma to reveal the dark truth about Rei Ayanami.",
+      "airdate": "1996-03-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1408,
+          "end": 1440
+        }
+      ],
+      "external_id": "1117"
+    },
+    {
+      "n": 24,
+      "title": "The Beginning and the End, or 'Knockin' on Heaven's Door'",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1118/original.jpg",
+      "synopsis": "Too frightened to face Misato or Rei, Shinji runs away yet again, only to meet and strike a friendship with Kaworu Nagisa, the replacement pilot for Eva-02. Kaworu's openness and friendliness provide much-needed comfort for the disturbed Shinji. However, suspicions abound over Kaworu's incredible synchronization abilities, and when he reveals that he is the Seventeenth Angel, Shinji must battle his newfound friend or face the threat of world annihilation.",
+      "airdate": "1996-03-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "1118"
+    },
+    {
+      "n": 25,
+      "title": "Do you love me?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1119/original.jpg",
+      "synopsis": "Instrumentality has begun, and now its inner process, the joining of all souls into one, will be depicted. The episode is primarily driven by dialogue, the background usually complete darkness. White text often appears on a black screen, an omniscient voice questioning the characters.",
+      "airdate": "1996-03-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1386
+        }
+      ],
+      "external_id": "1119"
+    },
+    {
+      "n": 26,
+      "title": "Take care of yourself.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1120/original.jpg",
+      "synopsis": "Instrumentality continues. The focus is primarily on Shinji now, as he learns to accept the individual’s ability to shape their world, and how the self cannot exist without others to define it.",
+      "airdate": "1996-03-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1388
+        }
+      ],
+      "external_id": "1120"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Thanatos -If I Can't Be Yours-",
+      "artist": "Loren & Mash",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kanon D-dur (Death ending)",
+      "artist": "Johann Pachelbel; arranged by Shiro Sagisu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Zankoku na Tenshi no Thesis (残酷な天使のテーゼ; A Cruel Angel's Thesis)",
+      "artist": "Yoko Takahashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fly Me to the Moon",
+      "artist": "Claire",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Tamashii no Refrain (魂のルフラン; Soul's Refrain) (Rebirth ending)",
+      "artist": "Yoko Takahashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Fly Me to the Moon",
+      "artist": "Yoko Takahashi",
+      "episodes": "3-4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Fly Me to the Moon (Rei #5 Version)",
+      "artist": "Megumi Hayashibara",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Fly Me to the Moon (Rei #6 Version)",
+      "artist": "Megumi Hayashibara",
+      "episodes": "6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Fly Me to the Moon (4 Beat Version)",
+      "artist": "Yoko Takahashi",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Fly Me to the Moon (Aya Bossa Techno Version)",
+      "artist": "Aya",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Fly Me to the Moon (Asuka Bossa Techno Version)",
+      "artist": "Yuko Miyamura",
+      "episodes": "9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Fly Me to the Moon (Asuka Version)",
+      "artist": "Yuko Miyamura",
+      "episodes": "10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Fly Me to the Moon (Rei, Asuka, Misato Version)",
+      "artist": "Megumi Hayashibara, Yuko Miyamura and Kotono Mitsuishi",
+      "episodes": "11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "Fly Me to the Moon (Misato Version)",
+      "artist": "Kotono Mitsuishi",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "Fly Me to the Moon (Acid Bossa Version)",
+      "artist": "Yoko Takahashi",
+      "episodes": "13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "Fly Me to the Moon (Rei Version)",
+      "artist": "Megumi Hayashibara",
+      "episodes": "14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 13,
+      "title": "Fly Me to the Moon (Misato 4 Beat Version)",
+      "artist": "Kotono Mitsuishi",
+      "episodes": "15"
+    },
+    {
+      "kind": "ED",
+      "sequence": 14,
+      "title": "Fly Me to the Moon (Interlude Version)",
+      "artist": "Megumi Hayashibara, Yuko Miyamura and Kotono Mitsuishi",
+      "episodes": "16"
+    },
+    {
+      "kind": "ED",
+      "sequence": 15,
+      "title": "Fly Me to the Moon (Aki Jungle Version)",
+      "artist": "Aki",
+      "episodes": "17"
+    },
+    {
+      "kind": "ED",
+      "sequence": 16,
+      "title": "Fly Me to the Moon (B-4 Guitar & Piano Version)",
+      "artist": "Shiro Sagisu",
+      "episodes": "18"
+    },
+    {
+      "kind": "ED",
+      "sequence": 17,
+      "title": "Fly Me to the Moon (Rei, Asuka, Misato Alternating Version)",
+      "artist": "Megumi Hayashibara, Yuko Miyamura and Kotono Mitsuishi",
+      "episodes": "19"
+    },
+    {
+      "kind": "ED",
+      "sequence": 18,
+      "title": "Fly Me to the Moon (B-4 Piano Version)",
+      "artist": "Shiro Sagisu",
+      "episodes": "20"
+    },
+    {
+      "kind": "ED",
+      "sequence": 19,
+      "title": "Fly Me to the Moon (Rei #23 Version)",
+      "artist": "Megumi Hayashibara",
+      "episodes": "23"
+    },
+    {
+      "kind": "ED",
+      "sequence": 20,
+      "title": "Fly Me to the Moon (Rei #25 Version)",
+      "artist": "Megumi Hayashibara",
+      "episodes": "25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 21,
+      "title": "Fly Me to the Moon (Rei #26 Version)",
+      "artist": "Megumi Hayashibara",
+      "episodes": "26"
+    }
+  ],
+  "relations": []
+}

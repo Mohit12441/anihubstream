@@ -1,0 +1,181 @@
+{
+  "id": "psycho-pass-2",
+  "title": "PSYCHO-PASS 2",
+  "native": "PSYCHO-PASS サイコパス2",
+  "year": 2014,
+  "rating": 7.1,
+  "season": "Fall 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20513-pVQqYhMwBGoh.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20513-pVQqYhMwBGoh.jpg",
+  "accent": "#f1505d",
+  "synopsis": "Taking place one-and-a-half years after Psycho-Pass, having learned the true nature of the Sibyl System, Akane Tsunemori chose to obey the system, believing in both humanity and the legal order. She's part of a new police section and spends her everyday life facing down criminals. Unbeknownst to Akane, however, a monster who will shake the system to its core is about to appear before her.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "psycho-pass-2-dh1sht",
+    "mal": 23281,
+    "anilist": 20513,
+    "kitsu": 7863
+  },
+  "skip_key_id": 23281,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": null,
+  "search_text": "psycho pass 2 psycho pass サイコハ ス2 tv finished",
+  "genres": [
+    "action",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Scales of Justice <299/300>",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/148872/original.jpg",
+      "synopsis": "A series of bombings takes place in Tokyo. After some analysis, the detectives figure out who the culprit is and his whereabouts, and head to his location. Akane wants to be cautious, but the other Inspectors decide to rush in, and...",
+      "airdate": "2014-10-10",
+      "markers": [],
+      "external_id": "148872"
+    },
+    {
+      "n": 2,
+      "title": "The Creeping Unknown",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/148873/original.jpg",
+      "synopsis": "An Enforcer from Division 2 was executed by a Dominator and an Inspector from the same division has gone missing. The only clue they have is the mysterious message “WC?” left at the crime scene. But who could commit a crime without being detected?",
+      "airdate": "2014-10-17",
+      "markers": [],
+      "external_id": "148873"
+    },
+    {
+      "n": 3,
+      "title": "The Devil's Proof",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/148874/original.jpg",
+      "synopsis": "Right before Kitazawa was executed, he mentioned the name of someone who had supposedly been helping him. While others just think that he was crazy, Akane wants to get to the bottom of this case and tries to seek out help from someone.",
+      "airdate": "2014-10-24",
+      "markers": [],
+      "external_id": "148874"
+    },
+    {
+      "n": 4,
+      "title": "The Salvation of Job",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/148875/original.jpg",
+      "synopsis": "A man occupies a mental care facility and starts acting violent, but Inspector Aoyanagi’s Dominator does not consider him a threat. As the Area Stress Level rises, Division 3 takes over the case and brings in a new armament to deal with the situation.",
+      "airdate": "2014-10-31",
+      "markers": [],
+      "external_id": "148875"
+    },
+    {
+      "n": 5,
+      "title": "Unforbidden Games",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/148876/original.jpg",
+      "synopsis": "The MSPWB has identified a possible hiding place for Kamui, and Divisions 1 and 3 are sent to the scene in order to investigate. Meanwhile, Akane has Saiga help with Representative Masuda’s interrogation.",
+      "airdate": "2014-11-07",
+      "markers": [],
+      "external_id": "148876"
+    },
+    {
+      "n": 6,
+      "title": "Those Who Cast Stones",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/148877/original.jpg",
+      "synopsis": "The Military Drones hunt down the MWPSB detectives. While attempting to evacuate the detectives, Akane realizes what Kamui’s true objective is. Meanwhile, the Analysis Lab rushes to track down and deactivate the program that hacked the Drones.",
+      "airdate": "2014-11-14",
+      "markers": [],
+      "external_id": "148877"
+    },
+    {
+      "n": 7,
+      "title": "Untraceable Children",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Multiple Dominators were stolen by Kamui during the massacre caused by the Military Drones. Who does he intend to use those Dominators on? And why hasn’t the Sibyl System taken any action to deactivate them? Akane goes to see Kasei to get answers.",
+      "airdate": "2014-11-21",
+      "markers": [],
+      "external_id": "148878"
+    },
+    {
+      "n": 8,
+      "title": "Conception of the Sibyl <AA>",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Kamui has been hiding in plain sight using Holos that take the form of dead people aged up, which makes Akane realize that his actions have been planned in great detail. Meanwhile, Mika closes in on the truth about Kamui and submits a report to Kasei.",
+      "airdate": "2014-11-28",
+      "markers": [],
+      "external_id": "148879"
+    },
+    {
+      "n": 9,
+      "title": "Omnipotence Paradox",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "After figuring out who Sakuya Tougane really is, Inspector Shimotsuki also learns the truth about the Sibyl System. In the meantime, Kamui and his accomplices are moving forward with their plan using the Dominators he took from the MWPSB.",
+      "airdate": "2014-12-05",
+      "markers": [],
+      "external_id": "148880"
+    },
+    {
+      "n": 10,
+      "title": "Gauging the Soul",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "The ghost has revealed himself and taken action. Kamui and his group take over five hundred passengers in subway trains as hostages and start shooting them randomly with Dominators. What are they trying to accomplish? What is the MWPSB’s next move?",
+      "airdate": "2014-12-12",
+      "markers": [],
+      "external_id": "148881"
+    },
+    {
+      "n": 11,
+      "title": "What Color?",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "The time for judgment has come. Akane advances towards the core of the Sibyl System with Kamui. Which will be judged, Kamui or Sibyl? What is Sibyl’s answer to Kamui’s existence? What is Kamui’s intention? The rules of the world are about to change.",
+      "airdate": "2014-12-19",
+      "markers": [],
+      "external_id": "148882"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Enigmatic Feeling",
+      "artist": "Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fallen",
+      "artist": "EGOIST",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

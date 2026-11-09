@@ -1,0 +1,54 @@
+{
+  "id": "sailor-moon-r-make-up-sailor-guardians",
+  "title": "Sailor Moon R: Make Up! Sailor Guardians",
+  "native": "メイクアップ！ セーラー戦士",
+  "year": 1993,
+  "rating": 6.5,
+  "season": "Fall 1993",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2937-Kl5cvwwFDkPj.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2937-Kl5cvwwFDkPj.jpg",
+  "accent": "#e47850",
+  "synopsis": "Usagi and Chibiusa overhear two girls talking about the Sailor Senshi after they see a poster. Humorously, as the girls discuss which is the smartest, most elegant, strongest, and the leader of the Senshi, Usagi claims those titles for herself. Chibiusa shakes her head at Usagi's delusion. Clips are shown from the debut of each Sailor Senshi, and that girl's image song is played in the background. When even Tuxedo Mask is mentioned, and the girls go to leave without having mentioned Sailor Moon, Usagi butts in on their conversation and asks them directly about Sailor Moon. The girls give a series of glowing compliments about Sailor Moon, but unlike they did for the other Senshi, they also list her faults. After the girls leave, Usagi sarcastically apologises for being a clumsy cry-baby and then bursts into tears.\n\n(Source: Wikipedia)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sailor-moon-r:-make-up!-sailor-guardians-vdhwbm",
+    "mal": 2937,
+    "anilist": 2937,
+    "kitsu": 2660
+  },
+  "skip_key_id": 2937,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "sailor moon r make up sailor guardians メイクアッフ セーラー戦士 special finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sailor Guardians Featurette",
+      "runtime": "17:00",
+      "runtime_seconds": 1020,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45340/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-12-05",
+      "markers": [],
+      "external_id": "45340"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

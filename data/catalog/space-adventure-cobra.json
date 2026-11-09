@@ -1,0 +1,429 @@
+{
+  "id": "space-adventure-cobra",
+  "title": "Space Adventure Cobra",
+  "native": "スペースコブラ",
+  "year": 1982,
+  "rating": 7.4,
+  "season": "Fall 1982",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2451-nNs4TE6zKxjW.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2451-nNs4TE6zKxjW.jpg",
+  "accent": "#f15d1a",
+  "synopsis": "Seeking reprieve from a painfully ordinary 9-to-5 existence, mild-mannered office worker Johnson visits the TM corporation, a company that sells virtual dreams. In Johnson's dream adventure, he's the notorious space pirate Cobra! Accompanied by his android partner Lady Armaroid, Cobra fights the lowlife scum of the Pirate Guild by day and saves sultry sirens of space by night.\n\nAfter the journey is over, events unfold that bring reality into focus. His experience wasn't a dream at all - it was a reawakening of his buried past! With the most feared weapon in the universe, the Psycho Gun, Cobra sets out into the galaxy in pursuit of love, fortune and fame.\n\n(Source: Discotek)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "space-adventure-cobra-2n5inc",
+    "mal": 2451,
+    "anilist": 2451,
+    "kitsu": 2225
+  },
+  "skip_key_id": 2451,
+  "skip_key_space": "mal",
+  "episode_total": 31,
+  "added_at": null,
+  "search_text": "space adventure cobra スヘ ースコフ ラ tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Resurrection! The Psycho-Gun",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38545/original.jpg",
+      "synopsis": "Johnson’s mundane life as a salary-man comes to an end when he uncovers that he’s actually a notorious space pirate named Cobra.",
+      "airdate": "1982-10-07",
+      "markers": [],
+      "external_id": "38545"
+    },
+    {
+      "n": 2,
+      "title": "Monstrosity! Zigova",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38546/original.jpg",
+      "synopsis": "A brutal reptilian slave trader seeks to get a hold on the Psycho-Gun’s schematics and only Cobra is capable of taking him down.",
+      "airdate": "1982-10-14",
+      "markers": [],
+      "external_id": "38546"
+    },
+    {
+      "n": 3,
+      "title": "Archenemy! Crystal Bowie",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38547/original.jpg",
+      "synopsis": "Cobra meets a beautiful bounty-hunter by the name of Jane Royal. Jane is one of three sisters whose tattoos are said to be part of a treasure map.",
+      "airdate": "1982-10-21",
+      "markers": [],
+      "external_id": "38547"
+    },
+    {
+      "n": 4,
+      "title": "Escape!! Sid Prison",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38548/original.jpg",
+      "synopsis": "Cobra infiltrates a prison in order to rescue Jane's sister, Katherine. But while getting into prison is simple enough, getting out is where the fun begins.",
+      "airdate": "1982-10-28",
+      "markers": [],
+      "external_id": "38548"
+    },
+    {
+      "n": 5,
+      "title": "Mystery! Who Is the Fearso",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38549/original.jpg",
+      "synopsis": "As Cobra and Katherine are on their way back to the Turtle, they come under fire from a mysterious sniper and are forced to seek cover.",
+      "airdate": "1982-11-04",
+      "markers": [],
+      "external_id": "38549"
+    },
+    {
+      "n": 6,
+      "title": "The Magician's Identity!!",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38550/original.jpg",
+      "synopsis": "Cobra discovers the source of the mind control that had afflicted Jane, someone working for Crystal Bowie who goes by the name Tavege.",
+      "airdate": "1982-11-11",
+      "markers": [],
+      "external_id": "38550"
+    },
+    {
+      "n": 7,
+      "title": "Jane's Revenge!",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38551/original.jpg",
+      "synopsis": "Not wanting to provoke Crystal Bowie any further, Tavege takes the destruction of Cobra into his own hands.",
+      "airdate": "1982-11-18",
+      "markers": [],
+      "external_id": "38551"
+    },
+    {
+      "n": 8,
+      "title": "Fierce Battle!",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38552/original.jpg",
+      "synopsis": "Crystal Bowie has been throwing everything he has at Cobra, but in the end it'll come down to a one-on-one showdown.",
+      "airdate": "1982-11-25",
+      "markers": [],
+      "external_id": "38552"
+    },
+    {
+      "n": 9,
+      "title": "Behold!! The Snow Gorilla",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38553/original.jpg",
+      "synopsis": "Cobra sets off to Planet Lelouge in search of the last of Captain Nelson's daughters. The rumor is that she's a part of the all-female gang, the Snow Gorillas.",
+      "airdate": "1982-12-02",
+      "markers": [],
+      "external_id": "38553"
+    },
+    {
+      "n": 10,
+      "title": "The Tattoo's Secret",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38554/original.jpg",
+      "synopsis": "Cobra and Dominique escape from Planet Lelouge and attempt to uncover the location of Captain Nelson's treasure.",
+      "airdate": "1982-12-09",
+      "markers": [],
+      "external_id": "38554"
+    },
+    {
+      "n": 11,
+      "title": "Zados, the Sand Planet",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38555/original.jpg",
+      "synopsis": "On a harsh, desert planet, the Ultimate Weapon that's said to be Captain Nelson's lost treasure lies hidden. Cobra desperately tries to make it to the weapon before the Snow Gorilla Leader Sandra.",
+      "airdate": "1982-12-16",
+      "markers": [],
+      "external_id": "38555"
+    },
+    {
+      "n": 12,
+      "title": "The Dreadful Ultimate Weapon",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38556/original.jpg",
+      "synopsis": "Sandra has the Ultimate Weapon and doesn't hesitate to unleash its full power on Cobra. He'll need to use his wits if he's to have any hope of defeating her.",
+      "airdate": "1982-12-23",
+      "markers": [],
+      "external_id": "38556"
+    },
+    {
+      "n": 13,
+      "title": "The Roulette of Death",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38557/original.jpg",
+      "synopsis": "In pursuit of stolen gold, Cobra and Lady travel to Las Vegas Station and confront Hammerbolt Joe, a notorious Pirate Guild leader.",
+      "airdate": "1982-12-30",
+      "markers": [],
+      "external_id": "38557"
+    },
+    {
+      "n": 14,
+      "title": "The Great Magician, Galtan",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38558/original.jpg",
+      "synopsis": "Cobra comes face-to-face with the all-powerful Galtan, a giant with magical powers who treats humans like playthings.",
+      "airdate": "1983-01-06",
+      "markers": [],
+      "external_id": "38558"
+    },
+    {
+      "n": 15,
+      "title": "My Dragon Crystal Friend!",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38559/original.jpg",
+      "synopsis": "Cobra returns to Planet Wing to share a drink with his old friend Vega only to discover that his friend is in desperate need of help.",
+      "airdate": "1983-01-13",
+      "markers": [],
+      "external_id": "38559"
+    },
+    {
+      "n": 16,
+      "title": "To Hell! Rug Ball",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38560/original.jpg",
+      "synopsis": "As a favor to Dominique, Cobra agrees to pose as a Rug Ball player so that he can uncover the inner dealings of an illicit drug trafficking ring.",
+      "airdate": "1983-01-20",
+      "markers": [],
+      "external_id": "38560"
+    },
+    {
+      "n": 17,
+      "title": "The Good for Nothing Team",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38561/original.jpg",
+      "synopsis": "Mr. Rand proposes an exhibition game between Team 1 players and a team of Cobra's own picks. Cobra decides to enlist the misfits from the Z team",
+      "airdate": "1983-01-27",
+      "markers": [],
+      "external_id": "38561"
+    },
+    {
+      "n": 18,
+      "title": "Death Game! At 00:78 O'Clock",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38562/original.jpg",
+      "synopsis": "Cobra's team squares off against the players from Team 1. In the first half of the rug ball game, Team 1 plays dirtier than Cobra anticipated.",
+      "airdate": "1983-02-03",
+      "markers": [],
+      "external_id": "38562"
+    },
+    {
+      "n": 19,
+      "title": "Will It Happen? a Grand Slam from Behind",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38563/original.jpg",
+      "synopsis": "Cobra purposefully suffers an injury so that he can sneak into Mr. Rand's security room during the game, but this leaves his team to play on without him.",
+      "airdate": "1983-02-10",
+      "markers": [],
+      "external_id": "38563"
+    },
+    {
+      "n": 20,
+      "title": "Death Match! The Horror of the Sand Ocean",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38564/original.jpg",
+      "synopsis": "Cobra helps a group of refugees escape a seemingly invincible, mysterious, armored foe across a vast desert.",
+      "airdate": "1983-02-17",
+      "markers": [],
+      "external_id": "38564"
+    },
+    {
+      "n": 21,
+      "title": "The Two Sword Kings",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38565/original.jpg",
+      "synopsis": "Cobra and Lady are captured and held aboard the Swordians' desert crawler, The Sand Rook. Cobra soon finds that the Swordians' previous king still lives.",
+      "airdate": "1983-02-24",
+      "markers": [],
+      "external_id": "38565"
+    },
+    {
+      "n": 22,
+      "title": "The Underground Visitor",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38566/original.jpg",
+      "synopsis": "Cobra decides to visit Jingoro, the man who created The Turtle. Upon arriving at Jingoro's house, he finds it ransacked and Jingoro's daughter kidnapped.",
+      "airdate": "1983-03-03",
+      "markers": [],
+      "external_id": "38566"
+    },
+    {
+      "n": 23,
+      "title": "The Tomb at the Bottom of the Ocean",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38567/original.jpg",
+      "synopsis": "Cobra and Dominique are on vacation together when they see a massive cruise ship destroyed. Before they can investigate, they're attacked and Dominique is kidnapped.",
+      "airdate": "1983-03-10",
+      "markers": [],
+      "external_id": "38567"
+    },
+    {
+      "n": 24,
+      "title": "Care to Buy a Robot",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38568/original.jpg",
+      "synopsis": "Cobra and Lady notice a cute robot for sale as they pass through a bazaar. After purchasing the robot, they start to see a number of disasters befall the local populace.",
+      "airdate": "1983-03-17",
+      "markers": [],
+      "external_id": "38568"
+    },
+    {
+      "n": 25,
+      "title": "Cobra Is Dead?!",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38569/original.jpg",
+      "synopsis": "After Cobra steals a large quantity of diamonds from The Pirate Guild, they're out for revenge. They kidnap Lady and demand that Cobra exchange the diamonds for her.",
+      "airdate": "1983-03-24",
+      "markers": [],
+      "external_id": "38569"
+    },
+    {
+      "n": 26,
+      "title": "Beyond the Fires of War",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38570/original.jpg",
+      "synopsis": "Cobra steals a case full of rubies from a war-torn planet. Before he can manage to escape the planet, he finds himself caught up in the conflict.",
+      "airdate": "1983-03-31",
+      "markers": [],
+      "external_id": "38570"
+    },
+    {
+      "n": 27,
+      "title": "The Evil Overlord! Salamander",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38571/original.jpg",
+      "synopsis": "Dominique calls Cobra with concerns about The Pirate Guild watching her. Cobra investigates and finds that a man named Salamander is at the center of their organization.",
+      "airdate": "1983-04-07",
+      "markers": [],
+      "external_id": "38571"
+    },
+    {
+      "n": 28,
+      "title": "Cobra's Angry Revenge",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38572/original.jpg",
+      "synopsis": "In order to take down Salamander, Cobra decides to enlist some old friends to help. Unfortunately for Cobra, one of them will need to be sprung from prison.",
+      "airdate": "1983-04-21",
+      "markers": [],
+      "external_id": "38572"
+    },
+    {
+      "n": 29,
+      "title": "The Man from the Arctic and Their Fiery Blood",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38573/original.jpg",
+      "synopsis": "Cobra, Doug, and Pumpkin head to ice-covered planet to get the last member of their crew. Upon arriving, they find that The Pirate Guild was already lying in wait.",
+      "airdate": "1983-05-05",
+      "markers": [],
+      "external_id": "38573"
+    },
+    {
+      "n": 30,
+      "title": "How to Defeat Salamander",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38574/original.jpg",
+      "synopsis": "Cobra infiltrates a Pirate Guild gathering in an attempt to assassinate Salamander. This proves to be a difficult task as he finds a powerful energy barrier protecting Salamander.",
+      "airdate": "1983-05-12",
+      "markers": [],
+      "external_id": "38574"
+    },
+    {
+      "n": 31,
+      "title": "So Long! My Cobra",
+      "runtime": "99:00",
+      "runtime_seconds": 5940,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/38575/original.jpg",
+      "synopsis": "Salamander, thought to be dead, is alive and well! As he enacts his plan to take over the universe, only Cobra remains to stop him.",
+      "airdate": "1983-05-19",
+      "markers": [],
+      "external_id": "38575"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Daydream Romance",
+      "artist": "Shigeru Matsuzaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Drive / Driven",
+      "artist": "Yello [Manga UK English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Drive / Driven",
+      "artist": "Yello [Manga UK English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Stay",
+      "artist": "Eve",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cobra",
+      "artist": "Yoko Maeno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Secret Desire",
+      "artist": "Yoko Maeno",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

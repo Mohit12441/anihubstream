@@ -1,0 +1,67 @@
+{
+  "id": "plus-sized-elf-specials",
+  "title": "Plus-Sized Elf Specials",
+  "native": "エルフさんは痩せられない。 Specials",
+  "year": 2024,
+  "rating": 5.4,
+  "season": "Fall 2024",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx179126-FTUcfKaF1t7O.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx179126-FTUcfKaF1t7O.png",
+  "accent": "#bbf135",
+  "synopsis": "Unaired episodes released on some streaming services later included with the Blu-ray release.\n\nIncludes:\n\n• Episode 13: Muffin Top Island / Hami Niku no Shima (ハミ肉の島)\n\n• Episode 14: Calorie Lovers (カロリーラヴァーズ)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "plus-sized-elf-specials-1pvo6j",
+    "mal": 59820,
+    "anilist": 179126,
+    "kitsu": 49034
+  },
+  "skip_key_id": 59820,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "plus sized elf specials エルフさんは痩せられない specials ona finished",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Muffin Top Island",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://media.kitsu.app/episode/370358/thumbnail/839b6556cf9149ef89b2271a74472a73.jpg",
+      "synopsis": "The group changes into swimsuits for the beach.\n\n(Source: HIDIVE)",
+      "airdate": "2024-10-05",
+      "markers": [],
+      "external_id": "370358"
+    },
+    {
+      "n": 2,
+      "title": "Calorie Lovers",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://media.kitsu.app/episode/370359/thumbnail/394fc99d80d310bc791eb5e839f8af7e.jpg",
+      "synopsis": "Who will end up marrying Naoe under the legendary tree?\n\n(Source: HIDIVE)",
+      "airdate": "2024-10-19",
+      "markers": [],
+      "external_id": "370359"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

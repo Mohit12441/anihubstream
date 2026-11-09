@@ -1,0 +1,694 @@
+{
+  "id": "steins-gate",
+  "title": "Steins;Gate",
+  "native": "シュタインズ・ゲート",
+  "year": 2011,
+  "rating": 8.9,
+  "season": "Spring 2011",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9253-tIUXF2gfU8Sg.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9253-tIUXF2gfU8Sg.jpg",
+  "accent": "#ffd6ae",
+  "synopsis": "Self-proclaimed mad scientist Okabe Rintarou lives in a small room in Akihabara, where he invents \"future gadgets\" with fellow lab members Shiina Mayuri, his air-headed childhood friend, and Hashida Itaru, an otaku hacker. The three pass the time by tinkering with their latest creation, a \"Phone Microwave\" that can be controlled through text messages. \n\nThe lab members soon face a string of mysterious incidents that lead to a game-changing discovery: the Phone Microwave can send emails to the past and thus alter history. Adapted from the critically acclaimed visual novel by 5pb. and Nitroplus, Steins;Gate takes Okabe to the depths of scientific theory and human despair as he faces the dire consequences of changing the past.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 9253,
+    "mal": 9253,
+    "hianime": "steinsgate-vipaco",
+    "kitsu": 5646
+  },
+  "skip_key_id": 9253,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": "2026-10-18 01:38:08",
+  "search_text": "steins gate シュタインス ケ ート tv finished",
+  "genres": [
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Turning Point",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86680/original.jpg",
+      "synopsis": "Self-proclaimed mad scientist, Rintarō Okabe, goes to a seminar on time travel with his friend, Mayuri Shiina. Whilst there, he meets a girl named Kurisu Makise who explicitly states that he had met her 15 minutes ago, despite having never met her before. Later on, Rintarō hears a scream and discovers Kurisu had been stabbed. As he sends a text to another one of his research buddies, Hashida Itaru, Rintarō experiences a strange experience and finds the street he is on has suddenly become deserted and a strange sattelite had crashed into the building he was just in. Later on, whilst fiddling about with their strange remote-controlled microwave, which turns bananas into a gel-like substance, Hashida tells Rintarō that the seminar he supposedly attended was cancelled, much to his surprise. Rintarō later discovers that the text he sent to Hashida had been sent to a week ago, just before encountering Kurisu, who is alive and well.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "outro",
+          "start": 1332,
+          "end": 1422,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86680"
+    },
+    {
+      "n": 2,
+      "title": "Time Travel Paranoia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86681/original.jpg",
+      "synopsis": "Rintarō is surprised that Kurisu is alive, before being humiliated by her during a lecture concerning time travel. After getting some provisions from crossdresser Ruka Urushibara and meeting Suzuha Amane, who gets hired to work part time in the electronic's shop below his apartment, Rintarō investigates the supposedly altered events and learns of a man calling himself John Titor who claims to be a time traveller. Rintarō then discovers the books he had on John Titor had disappeared as if they never existed. The next day, Rintarō encounters a strange woman named Moeka Kiryū who asks for information on a retro PC, which Rintarō gathers from Hashida. Later, whilst testing a banana on their microwave which then disappears, Rintarō and Hashida find the banana reattached to the bunch it came from in its gelled state, before Kurisu appears before them once again.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 80,
+          "end": 170,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86681"
+    },
+    {
+      "n": 3,
+      "title": "Parallel World Paranoia",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86682/original.jpg",
+      "synopsis": "Rintarō agrees to let Kurisu look at the mobile microwave on the condition she become a lab member. They discover that Hashida was using the microwave at the time Rintarō sent his text about Kurisu's stabbing. Despite the microwave causing a large electrical discharge when Mayuri opens it in the middle of operating, Rintarō concludes that the mobile microwave is, in fact, a time machine. After hearing about the large hadron collider and micro-black-holes, Rintarō asks Hashida to hack into CERN's network. There, they discover they had already been performing micro-black-hole experiments, kept hidden from the public, which reveals that humans had died during them.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 98,
+          "end": 188,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1331,
+          "end": 1421,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86682"
+    },
+    {
+      "n": 4,
+      "title": "Interpreter Rendezvous",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86683/original.jpg",
+      "synopsis": "With further information encrypted in a code that Hashida can't decifer, Rintarō learns from John Titor that he needs the IBN 5100 computer Moeka was looking for to decode it. Whilst doing his laundry, Rintarō runs into Kurisu, who is still in denial about a time machine existing. After Mayuri hears from her co-worker, Feiris Nyannyan, that she knows about the IBN-5100, Rintarō plays a game before learning that the computer is at the shrine where Ruka works. After getting permission to borrow it from Ruka's father, Rintarō and Kurisu carry it back to the lab.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 94,
+          "end": 184,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1331,
+          "end": 1421,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86683"
+    },
+    {
+      "n": 5,
+      "title": "Starmine Rendezvous",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86684/original.jpg",
+      "synopsis": "As Rintarō and Kurisu arrive home with the IBN 5100, Suzuha seems to be shocked when she sees Kurisu. As Rintarō gathers some needed parts, he runs into Suzuha again, who warns her to be cautious of Kurisu and acts strangely when a helicopter passes by. After Hashida gets the IBN 5100 working, he, Rintarō and Kurisu begin deciphering SERN's reports. They discover that they had indeed been experimenting with time travel, with their attempts of sending humans back in time resulting in the same jellification Rintarō had performed on the bananas. With this knowledge, Rintarō becomes determined to perfect his Mobile Microwave.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 118,
+          "end": 208,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1332,
+          "end": 1422,
+          "label": "Ending"
+        },
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 8,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "86684"
+    },
+    {
+      "n": 6,
+      "title": "Butterfly Effect's Divergence",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86685/original.jpg",
+      "synopsis": "The lab members discuss how to perfect the Mobile Microwave, dubbing messages sent to the past as 'D-Mails'. Further experimenting reveals the various rules concerning D-Mails; being that it can only be sent during a certain time of the day, long messages are split into several smaller mails, and the timer on the microwave determines how far back the message is sent. The next day, Moeka comes round to see the IBN 5100 and, after hearing about the time experiments, is made a lab member.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 66,
+          "end": 156,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86685"
+    },
+    {
+      "n": 7,
+      "title": "Divergence Singularity",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86686/original.jpg",
+      "synopsis": "After some improvements are made to the Mobile Microwave, Rintarō decides to experiment changing the past by sending winning lottery numbers to the past. After sending the text, the past is changed to where Ruka has bought a lottery ticket, but Rintarō didn't perform the experiment, with only Rintarō retaining the memory of what had happened, realising time has been put onto a new timeline. Confused as to why only he can remember the previous timeline, Rintarō contacts John Titor, who tells him he may have the power to become a messiah and change the future.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 123,
+          "end": 218,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1445,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86686"
+    },
+    {
+      "n": 8,
+      "title": "Chaos Theory Homeostasis I",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86687/original.jpg",
+      "synopsis": "As Rintarō decides to resume his experiments, Moeka requests to send a D-Mail. As she sends the D-Mail, Rintarō is shifted onto a new timeline where Moeka never came to the lab. The next day, Ruka comes to the lab, asking to send a D-Mail to the past so that he would be born as a girl. They send a D-Mail to Ruka's mother's pager from before he was born, letting her know of an urban legend about how mothers-to-be can affect their baby's gender by eating certain foods. Rintarō moves to a new world line, though he doesn't notice anything particularly different at first.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 121,
+          "end": 211,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1335,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86687"
+    },
+    {
+      "n": 9,
+      "title": "Chaos Theory Homeostasis II",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86688/original.jpg",
+      "synopsis": "Maid café waitress Rumiho Akiha, a.k.a. Feyris Nyan Nyan, learns about the Mobile Microwave as Rintarō discusses it with Hashida, becoming very interested in it. Later, Rintarō discovers that the IBN-5100 has gone missing, as if they never found it in the first place, most likely as a result of Moeka's D-Mail. After learning that the IBN-5100 had been previously taken from Ruka's shrine, Rintarō finds Moeka in town, but she doesn't know where the IBN-5100 is either. Rintarō also finds out that Ruka's D-Mail has caused Mayuri to know Moeka in this timeline. Rintarō, Hashida and Mayuri go to see Rumiho, whose family owns Akihabara and originally donated the IBN-5100 to the shrine. She offers them a replacement in exchange for being allowed to send a D-Mail ten years into the past. As history is changed again, the IBN-5100 was never donated to the shrine and, more disturbingly, the face of Akihabara has completely changed, no longer being a mecca for anime.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 60,
+          "end": 150,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "86688"
+    },
+    {
+      "n": 10,
+      "title": "Chaos Theory Homeostasis III",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86689/original.jpg",
+      "synopsis": "Rintarō realises the D-Mail Rumiho sent prevented moe culture from being introduced into Akihabara. As Rintarō wonders why the relationships between his friends hasn't been affected, he comes to realise that Ruka's gender had in fact been changed. Afterwards, Rintarō talks with Suzuha, who revealed she came to Tokyo to try and find her estranged father, mentioning she will leave if she is unable to find him the next day. As Rintarō contemplates holding a party for her, offering the chance to send a D-Mail if she fails, he receives a text message letting him know that someone is watching him. Mayuri mentions how Rintarō fell sick when he was younger, which he believes to be the origins of his 'Reading Steiner', his ability to travel between world lines with his memories intact. That night, after some mishaps in preparing the party, Suzuha doesn't show and simply sends a farewell text to Rintarō. He decides to send a D-Mail to himself telling him to follow her, changing history so she ended up attending the party and staying in Tokyo. In this new timeline, the satellite that had crashed into a building in Akihabara has mysteriously disappeared.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 52,
+          "end": 143,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1329,
+          "end": 1419,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86689"
+    },
+    {
+      "n": 11,
+      "title": "Dogma in Event Horizon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86690/original.jpg",
+      "synopsis": "Rintarō discovers that a television in the electronics shop below the lab is the key to the time slot in which D-Mails can be sent. Kurisu then theorises that it might be possible to send memories back in time in the same manner as D-Mails, effectively allowing people to 'leap' to the past. As Rintarō goes into town with Mayuri to look for parts Kurisu needs, running into Moeka along the way, Suzuha tells Rintarō that Kurisu works for SERN, though Kurisu denies this when asked. Kurisu tells Rintarō about the troubles she has with her father, who grew to hate her when she surpassed him in scientific prowess, though cheers up when Rintarō offers to help them reunite. As Mayuri and Kurisu decide to have a sleepover at the lab, Rintarō receives another sinister text message warning him that he knows too much, later learning that the lab is connected to the SERN network without the lab members' knowing.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 88,
+          "end": 178,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1337,
+          "end": 1428,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86690"
+    },
+    {
+      "n": 12,
+      "title": "Dogma in Ergosphere",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86691/original.jpg",
+      "synopsis": "With the ability to utilise the LHC, Kurisu completes her 'time leap machine'. However, Rintarō, still tortured by the texts he has received, decides against performing an experiment, instead suggesting they announce it to the public. As the lab members decide to have a party, Kurisu comes into conflict with Suzuha, who claims she is destined to become a SERN spy, but Mayuri manages to calm things down. As a bomb threat is televised, Suzuha, after hearing about the lab's connection to SERN, suspects something is terribly wrong and leaves. Just then, the lab is attacked by a group of armed men, led by Moeka who reveals herself to be from SERN. Demanding Rintarō, Kurisu and Hashida hand over the time machine and come with her, she decides Mayuri isn't needed and kills her.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 114,
+          "end": 204,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1336,
+          "end": 1425,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86691"
+    },
+    {
+      "n": 13,
+      "title": "Metaphysics Necrosis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86692/original.jpg",
+      "synopsis": "Right after Moeka kills Mayuri, Suzuha rushes in the lab and creates a distraction, allowing Kurisu to use the time leap machine to send Rintarō back in time to 5 p.m. of the same day. Rintarō drives everyone away from the lab, but wastes most of his time searching for Mayuri. By the time they try to escape the area, the bomb threat has stopped the subway and Mayuri is killed when Moeka runs her over with a car. Rintarō manages to escape the clutches of SERN and leaps to the past again. Using his knowledge of Mayuri's movements from his previous leap, he manages to find her sooner and they visit a different subway station. However, Mayuri dies again when Mr Braun's daughter, Nae, accidentally pushes her in the way of an oncoming train. Devastated, Rintarō vows to keep leaping to the past until he manages to save Mayuri.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 177,
+          "end": 267,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1338,
+          "end": 1427,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86692"
+    },
+    {
+      "n": 14,
+      "title": "Physically Necrosis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86693/original.jpg",
+      "synopsis": "Rintarō makes several time leaps, but no matter what, Mayuri always ends up dying in some way. In one of those leaps, Rintarō calls out Moeka and holds her at gunpoint, making her reveal that SERN have targeted the lab due to the creation of the time machine and their plan to publicly announce it. As Rintarō falls further into despair, Kurisu gets him to reveal what he knows and offers to help him try to save Mayuri. She sends Rintarō to just before she completed the time leap machine, where he tells her past self what he knows. As they discuss what the cause of Mayuri's death could be, they are greeted by Suzuha, who tells them that in order to save Mayuri, they need to find a specific World Line. She takes them to the crashed satellite, which turns out to be her time machine, and reveals she is \"John Titor\" and has come from the year 2036.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 139,
+          "end": 229,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1336,
+          "end": 1426,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86693"
+    },
+    {
+      "n": 15,
+      "title": "Missing Link Necrosis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86694/original.jpg",
+      "synopsis": "Suzuha explains how SERN was able to build a time machine and use it to rule the world in 2036. She explains she plans to travel to 1975 to acquire an IBN-5100, but soon discovers her time machine has broken down as a result of the storm on the night Rintarō stopped her from leaving. Rintarō leaps two days before the completion of the time leap machine in order to get Hashida to help fix Suzuha's time machine, whilst Mayuri suggests they also help find Suzuha's father, using his badge as a clue. Suzuha gives Rintarō her Divergence Meter, which keeps track of the magnitude of differences between timelines, and tells him about how he founded the resistance against SERN in the future. After spending the day searching for Suzuha's father, Suzuha gives her thanks to Rintarō before he receives a lead on Suzuha's father from a badge maker.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 23,
+          "end": 112,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1337,
+          "end": 1427,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86694"
+    },
+    {
+      "n": 16,
+      "title": "Sacrificial Necrosis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86695/original.jpg",
+      "synopsis": "Unable to get much information about the badge maker's client, Rintarō decides to leap back in time to confront the client in question, only to find it was Hashida, who wanted to make a fake badge to cheer Suzuha up. Hashida then mentions that Suzuha's time machine is only able to travel backwards in time. As the repairs to the time machine are completed, Mayuri deduces from the time machine's naming convention that Suzuha's father is actually Hashida. After a short reunion, Suzuha travels back to 1975, though Rintarō notices the Divergence Meter's reading hasn't changed. Later, Mr. Braun delivers a letter from Suzuha from the year 2000, mentioning that she commited suicide a year later. In the letter, Suzuha laments that she failed her mission, as the damaged time machine caused her to lose her memories for 24 years. Rintarō blames himself for stopping her on the night of the party and, despite Mayuri's pleas, sends a D-Mail that stops him from following Suzuha, letting her use the time machine before it was damaged. Speaking with Mr. Braun again, Rintarō learns that Suzuha has died of illness instead, leaving behind her Divergence Meter. Noticing a small change in divergence, Rintarō returns home and finds Mayuri has not been killed by Moeka.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 91,
+          "end": 181,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1338,
+          "end": 1428,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86695"
+    },
+    {
+      "n": 17,
+      "title": "Made in Complex",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86696/original.jpg",
+      "synopsis": "Despite the change in divergence, Mayuri's death still takes place, albeit a day later than in previous timelines. Rintarō asks for Kurisu's help, who theorises that, since negating Rintarō's D-Mail about Suzuha delayed the attack, undoing the effects of the other D-Mails could bring them back to a World Line where they have an IBN-5100, letting them hack into SERN and delete the records that set them on Rintarō's trail. Rintarō starts by trying to figure out how to reverse Rumiho's D-Mail, while helping her evade a rival gaming gang. Rintarō takes Rumiho to the place where her maid cafe used to be and tells her about the way Akihabara was. Rumiho comes to remember the previous timeline and the D-Mail she sent: a fake ransom note, which prevented her father from boarding a plane fated to crash. The rival gang catches up to them but they are rescued by the arrival of Rumiho's father. Speaking to him, Rintarō learns that Suzuha gave him the IBN-5100, but he was forced to sell it in order to pay for the fake kidnapping's ransom. After accepting the reality of her father's death, Rumiho agrees to send a D-Mail cancelling out her previous one, turning Akihabara back into a moe hub. The IBN-5100, however, still remains out of reach.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 48,
+          "end": 137,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1337,
+          "end": 1427,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86696"
+    },
+    {
+      "n": 18,
+      "title": "Fractal Androgynous",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86697/original.jpg",
+      "synopsis": "Rintarō tells Ruka about how she used to be a man and urges her to reverse the D-Mail responsible in order to change Mayuri's fate. While she initially disbelieves him, ultimately she agrees, on the condition that Rintarō takes her on a date. Despite Kurisu and Hashida's advice on dating, Rukako and Rintarō spend the evening in awkward conversation. Like Rumiho, Ruka eventually recalls the previous timeline, which makes her even more depressed at the impending return to it, since she feels she will be unable to pursue her feelings about Rintarō as a guy. Before sending the D-Mail that will cancel out Ruka's first one, Rintarō realises that the reason she didn't enjoy their date was that he was trying to be someone he's not. He visits the shrine and tells her that, no matter what, she'll always be his \"student\". With their relationship repaired, the world line shifts, turning Ruka back into a guy and leaving only one more D-Mail to be reversed: Moeka's.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 33,
+          "end": 123,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "86697"
+    },
+    {
+      "n": 19,
+      "title": "Endless Apoptosis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86698/original.jpg",
+      "synopsis": "As Kurisu offers to look after Mayuri at a doujin convention, Rintarō heads to Moeka's address, only to learn that she had killed herself. After finding out the deadline of Mayuri's death in this world line, Rintarō time leaps to before Moeka killed herself, finding her in a nervous wreck having not been contacted by someone known as 'FB'. Rintarō steals Moeka's phone and sends a D-Mail from it, but the timeline doesn't shift, leading him to realise that another message was sent from her phone. Rintarō confronts Moeka about FB and tells her about her future suicide. Rintarō finds the offending mail, which involved the location of the IBN-5100, but sending a D-Mail from that phone doesn't affect the world line. As Rintarō decides he needs to send a D-Mail from FB's phone, Moeka tells him the location of the IBN-5100.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 32,
+          "end": 122,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1329,
+          "end": 1433,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86698"
+    },
+    {
+      "n": 20,
+      "title": "Finalize Apoptosis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86699/original.jpg",
+      "synopsis": "Despite Rintarō knowing the location of the IBN-5100, Kurisu is against him trying to steal it, as it most likely won't affect the world line. Instead, she suggests to Rintarō that he stake out the location in order to find FB, with Moeka deciding to join him. As they observe the IBN-5100 being taking out, they follow it as it is passed along to several people, including Mr. Braun, before it ends up on a plane towards France. Rintarō, Moeka and Kurisu go to confront Mr. Braun, who reveals himself to be FB, killing Moeka before taking his own life. Rintarō uses Braun's cell phone to cancel out Moeka's D-Mail, returning to a World Line where both Moeka and Braun are alive and he possesses the IBN-5100. As Rintarō gets Hashida to hack into the SERN network to erase the data they have on them, he comes to sudden realisation that he needs to undo an additional D-Mail: the one that prevented Kurisu from getting stabbed.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 51,
+          "end": 141,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1331,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86699"
+    },
+    {
+      "n": 21,
+      "title": "Paradox Meltdown",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86700/original.jpg",
+      "synopsis": "Not wanting to move to a World Line where Kurisu dies, Rintarō decides against the hacking. As he accompanies Mayuri to a Comic Market, he tries to think of a way he can save her without changing World Lines, too afraid to tell Kurisu the reason behind his change of plans. As a car appears during Mayuri's fated time to die, Rintarō attempts to change her destiny by letting the car hit him instead, but Mayuri ends up dying trying to save him. After he leaps back in time, Kurisu has Rintarō reveal to her that she dies in the Beta World Line. As Rintarō finds Mayuri visiting her grandmother's grave, he overhears that she's been having dreams of the times she has died, and about how she has noticed Rintarō's suffering.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 18,
+          "end": 108,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1419,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86700"
+    },
+    {
+      "n": 22,
+      "title": "Being Meltdown",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86701/original.jpg",
+      "synopsis": "As Rintarō and Kurisu hide out from the rain, she explains how she recalls her stabbing from dreams, as well as Rintarō's various attempts at saving Mayuri. When Kurisu tells Rintarō that he should save Mayuri over her, he can't accept it and runs off. As Rintarō attempts to time leap again, Kurisu stops him, worried that seeing Mayuri die over and over will destroy him. After giving in and choosing to go save Mayuri, Rintarō tells Kurisu he loves her, to which she responds by kissing him. The next day, Kurisu leaves for Japan, whilst Rintarō and the others delete their data from the SERN network. Just then, Kurisu returns to tell Rintarō she loves him, just before the data deletion takes him to the Beta World Line. After getting rid of the Mobile Microwave, Rintarō receives a call from Suzuha, telling him about World War III.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 13,
+          "end": 103,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1318,
+          "end": 1373,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86701"
+    },
+    {
+      "n": 23,
+      "title": "Open the Steins Gate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86702/original.jpg",
+      "synopsis": "Suzuha explains that her mission is to prevent Kurisu's death and enter a World Line known as 'Stein's Gate' so that World War III will never happen. With a small chance of saving Kurisu, Rintaro agrees to go with Suzuha to just before Kurisu's death. As Rintaro waits in the place where Kurisu's stabbing takes place, he sees Kurisu's father, the Professor Nakamachi he saw that day, attack Kurisu as he tries to steal her time travel theory. As Rintaro attempts to save Kurisu, he inadvertently stabs her himself, allowing Nakamachi to escape with her theory and bring it to Russia. Returning to the present, Rintaro falls into despair but Mayuri knocks some sense into him. Afterwards, Rintaro receives a video mail from his future self, telling him that the key to saving Kurisu without changing the events that led him to create a time machine is to fool his other self into believing Kurisu had died.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 107,
+          "end": 197,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1367,
+          "end": 1429,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "86702"
+    },
+    {
+      "n": 24,
+      "title": "Achievement Point",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/86703/original.jpg",
+      "synopsis": "Picking up a sabre toy in order to use its liquid as a substitute for Kurisu's blood, Rintaro and Suzuha return to the day of Kurisu's death. First, he makes sure to obtain a metal toy Mayuri previously found in order to prevent Nakabachi to successfully bring Kurisu's theory to Russia. As he prepares to fake Kurisu's death, Rintaro finds the liquid in the sabre had dried up. To this end, he allows himself to be stabbed by Nakabachi, before knocking out Kurisu with a taser and using his own blood to set the scene up for his past self. As Rintaro returns to the past, Suzuha gives her thanks before time is altered so that the time machine was never invented. In this new timeline, Rintaro goes around giving badges to his past lab members, eventually managing to meet Kurisu once again; she was looking for Rintaro to thank him for saving her life, suggesting that the event of their romance doesn't disappear, either.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "86703"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Fatima (ファティマ)",
+      "artist": "Kanako Itō",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Amadeus",
+      "artist": "Kanako Itō",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Anata no Eranda Kono Toki wo (あなたの選んだこの時を; This Time That You Have Chosen)",
+      "artist": "Kanako Itou",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Itsumo Kono Basho de (いつもこの場所で; Always at This Place)",
+      "artist": "Ayane",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hacking to the Gate",
+      "artist": "Kanako Ito",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tokitsukasadoru Jūni no Meiyaku (刻司ル十二ノ盟約)",
+      "artist": "Yui Sakakibara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "LAST GAME",
+      "artist": "Zwei",
+      "episodes": "2-7,9-11,13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Sukai Kuraddo no Kansokusha (スカイクラッドの観測者)",
+      "artist": "Kanako Ito",
+      "episodes": "23"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Lyra (ライア)",
+      "artist": "Zwei",
+      "episodes": "8, 18"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Another Heaven",
+      "artist": "Kanako Itou",
+      "episodes": "24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Hoshi no Kanaderu Uta (星の奏でる歌)",
+      "artist": "Kana Hanazawa, Megumi Han",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "World-Line",
+      "artist": "Asami Imai",
+      "episodes": "14-17,19-20"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Fatima (ファティマ)",
+      "artist": "Kanako Itō",
+      "episodes": "21"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "GATE OF STEINER",
+      "artist": "Eri Sasaki",
+      "episodes": "23"
+    }
+  ],
+  "relations": []
+}

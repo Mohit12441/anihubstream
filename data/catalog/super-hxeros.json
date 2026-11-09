@@ -1,0 +1,303 @@
+{
+  "id": "super-hxeros",
+  "title": "SUPER HXEROS",
+  "native": "ド級編隊エグゼロス",
+  "year": 2020,
+  "rating": 5.4,
+  "season": "Summer 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx112818-9sOdhLPYX3eL.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx112818-9sOdhLPYX3eL.jpg",
+  "accent": "#50c9e4",
+  "synopsis": "Earth faces an unprecedented threat from an invasion by the mysterious Kiseichuu. The Kiseichuu feed on human sexual energy, also known as “H-energy”, and weaken the human population.\n\nHigh school student Retto Enjou is a member of the hero group HXEROS, who fight together to save the earth from the Kiseichuu.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42657,
+    "anilist": 112818,
+    "mal": 40623
+  },
+  "skip_key_id": 40623,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 10:26:16",
+  "search_text": "super hxeros ト 級編隊エク セ ロス tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1380
+        }
+      ],
+      "external_id": "272296"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "272297"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 91,
+          "end": 179
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "282734"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 66,
+          "end": 151
+        }
+      ],
+      "external_id": "283878"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 106
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "283928"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 115,
+          "end": 200
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "284189"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 78,
+          "end": 163
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "284292"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "284683"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 64,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "284865"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 125
+        }
+      ],
+      "external_id": "285382"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 155
+        }
+      ],
+      "external_id": "285575"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1300,
+          "end": 1380
+        }
+      ],
+      "external_id": "285706"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

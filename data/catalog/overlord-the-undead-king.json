@@ -1,0 +1,64 @@
+{
+  "id": "overlord-the-undead-king",
+  "title": "Overlord: The Undead King",
+  "native": "劇場版総集編 オーバーロード 不死者の王",
+  "year": 2017,
+  "rating": 7.4,
+  "season": "Winter 2017",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98873-XAcxAF1rXuyM.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98873-XAcxAF1rXuyM.jpg",
+  "accent": "#5093e4",
+  "synopsis": "A compilation film recapping the first half of the Overlord anime's first season, with a few extended scenes.\n\nFollow veteran MMORPG player Momonga, who’s just been trapped in the world of his favorite game! Realizing the unprecedented power he commands, Momonga decides to bring glory to Nazarick and change the course of history.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "overlord:-the-undead-king-yih90y",
+    "mal": 34161,
+    "anilist": 98873,
+    "kitsu": 12584
+  },
+  "skip_key_id": 34161,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "overlord the undead king 劇場版総集編 オーハ ーロート 不死者の王 movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Overlord: The Undead King (Movie)",
+      "runtime": "100:00",
+      "runtime_seconds": 6000,
+      "thumb": "https://cdn.myanimelist.net/images/anime/12/87759l.webp",
+      "synopsis": "First Overlord recap film.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "189400"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Crazy Scary Holy Fantasy",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

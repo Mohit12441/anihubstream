@@ -1,0 +1,140 @@
+{
+  "id": "overgeared",
+  "title": "Overgeared",
+  "native": "テムパル～アイテムの力～",
+  "year": 2026,
+  "rating": 7.6,
+  "season": "Fall 2026",
+  "kind": "ONA",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx212888-NhyvqPt5aIuJ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg",
+  "accent": "#f19335",
+  "synopsis": "Sin Yeong-U (a.k.a. Grid), an unlucky man in life and a low-level player in the popular VR game “Satisfy,” finds a powerful item that earns him a rare legendary class title: “Pagma’s Successor.” He’s now a skilled blacksmith who can forge unique weapons and equip the game’s most powerful gear. Grid resolves to use his new abilities to achieve fame and fortune, but as his very existence begins to stir up trouble in Satisfy, he realizes that life as a legend may be more than he bargained for….\n\n(Source: Tapas, edited)\n\nNote: Tempal: Item no Chikara is streaming a week in advance of the TV broadcast on Prime Video and Crunchyroll beginning September 27th, 2026. Regular broadcasting began on October 2nd, 2026.",
+  "rank": null,
+  "trend_rank": 12,
+  "alt_seasons": [],
+  "sched_day": 7,
+  "sched_day_label": "SUN",
+  "sched_date": "Nov 8",
+  "sched_time": "14:30",
+  "sched_season": "Fall 2026",
+  "sched_episode": 7,
+  "sched_sub_at": null,
+  "sched_dub_at": 1794148260000,
+  "source_ids": {
+    "anilist": 212888,
+    "mal": 64340,
+    "hianime": "overgeared-5lbxud",
+    "kitsu": 50743
+  },
+  "skip_key_id": 64340,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-16 11:56:29",
+  "search_text": "overgeared テムハ ル アイテムの力 ona ongoing",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Overgeared Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "Overgeared Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Overgeared Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 4,
+      "title": "Overgeared Episode 4",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 5,
+      "title": "Overgeared Episode 5",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 6,
+      "title": "Overgeared Episode 6",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg",
+      "synopsis": "Sin Yeong-U (a.k.a. Grid), an unlucky man in life and a low-level player in the popular VR game “Satisfy,” finds a powerful item that earns him a rare legendary class title: “Pagma’s Successor.” He’s now a skilled blacksmith who can forge unique weapons and equip the game’s most powerful gear. Grid resolves to use his new abilities to achieve fame and fortune, but as his very existence begins to stir up trouble in Satisfy, he realizes that life as a legend may be more than he bargained for….\n\n(Source: Tapas, edited)\n\nNote: Tempal: Item no Chikara is streaming a week in advance of the TV broadcast on Prime Video and Crunchyroll beginning September 27th, 2026. Regular broadcasting began on October 2nd, 2026.",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 111,
+          "end": 199,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "cloud-sync"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "SATISFY",
+      "artist": "Re:name",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ray of Emotion",
+      "artist": "TAO",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

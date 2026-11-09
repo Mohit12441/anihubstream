@@ -1,0 +1,306 @@
+{
+  "id": "o-maidens-in-your-savage-season",
+  "title": "O Maidens in Your Savage Season",
+  "native": "荒ぶる季節の乙女どもよ。",
+  "year": 2019,
+  "rating": 7.1,
+  "season": "Summer 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx105932-OCI48MaTvGXT.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105932-OCI48MaTvGXT.png",
+  "accent": "#28aef1",
+  "synopsis": "The girls in a high school literature club do a little icebreaker to get to know each other: answering the question, \"What's one thing you want to do before you die?\" One of the girls blurts out, \"Sex.\" Little do they know, the whirlwind unleashed by that word pushes each of these girls, with different backgrounds and personalities, onto their own clumsy, funny, painful, and emotional paths toward adulthood.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42025,
+    "anilist": 105932,
+    "mal": 38753
+  },
+  "skip_key_id": 38753,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 11:35:25",
+  "search_text": "o maidens in your savage season 荒ふ る季節の乙女と もよ tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Taste of Her Pork Miso Soup",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257681/original.png",
+      "synopsis": "Literature or pornography? That's the question of the hour as a racy book sparks the spirit of discovery in the members of a high school literature club.",
+      "airdate": "2019-07-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 5,
+          "end": 95
+        }
+      ],
+      "external_id": "257681"
+    },
+    {
+      "n": 2,
+      "title": "Es-Ee-Ecks",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257682/original.jpg",
+      "synopsis": "Niina wants Kazusa to say WHAT?! Later, Sonezaki demands that each member of the club come up with ten alternative terms for “sex”… but acronyms get the better of her.",
+      "airdate": "2019-07-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 146
+        }
+      ],
+      "external_id": "257682"
+    },
+    {
+      "n": 3,
+      "title": "Willy's Real Rear Wheel",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257683/original.jpg",
+      "synopsis": "Hongo makes a shocking discovery at a local bookstore... but it pales in comparison to the discovery she later makes at Shibuya Station.",
+      "airdate": "2019-07-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        }
+      ],
+      "external_id": "257683"
+    },
+    {
+      "n": 4,
+      "title": "The Purpose of Books",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257684/original.jpg",
+      "synopsis": "Sonezaki’s new look causes quite a stir in class (and in the heart of a certain someone).",
+      "airdate": "2019-07-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 162
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1425
+        }
+      ],
+      "external_id": "257684"
+    },
+    {
+      "n": 5,
+      "title": "Things That Changed Before We Knew It",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257685/original.jpg",
+      "synopsis": "Niina encounters a figure from her past. Meanwhile, Momoko isn’t sure what to make of Sugimoto, and Kazusa is unsettled by the repetition of a certain word…",
+      "airdate": "2019-08-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "257685"
+    },
+    {
+      "n": 6,
+      "title": "Maidens in the Woods",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257686/original.jpg",
+      "synopsis": "As the school festival approaches, the Literature Club is tasked with writing a romantic urban legend. Perhaps a field trip will provide a little inspiration…",
+      "airdate": "2019-08-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 125,
+          "end": 215
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1406
+        }
+      ],
+      "external_id": "257686"
+    },
+    {
+      "n": 7,
+      "title": "Jiggling, Then, After",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257687/original.png",
+      "synopsis": "The Literature Club’s field trip spurs confrontation between friends — and an answer to their quest for a convincing urban legend.",
+      "airdate": "2019-08-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 128,
+          "end": 218
+        }
+      ],
+      "external_id": "257687"
+    },
+    {
+      "n": 8,
+      "title": "Legend of Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257688/original.jpg",
+      "synopsis": "Emotions burn bright as the Literature Club reads their urban legend aloud. Will the performance inspire a love confession, or will feelings flicker out?",
+      "airdate": "2019-08-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1231,
+          "end": 1321
+        }
+      ],
+      "external_id": "257688"
+    },
+    {
+      "n": 9,
+      "title": "The Orange Fox's Lilies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257689/original.jpg",
+      "synopsis": "Ah, being in love. The birds sing more sweetly and the world just seems brighter… but if being in love is so great, why is something as simple as holding hands so difficult?",
+      "airdate": "2019-08-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 114,
+          "end": 204
+        }
+      ],
+      "external_id": "257689"
+    },
+    {
+      "n": 10,
+      "title": "Holes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257690/original.jpg",
+      "synopsis": "Hongo might’ve bitten off more than she can chew with Milo-sensei. Meanwhile, Kazusa contemplates racy underwear, and Momoko’s feelings reach a boiling point.",
+      "airdate": "2019-09-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1220,
+          "end": 1309
+        }
+      ],
+      "external_id": "257690"
+    },
+    {
+      "n": 11,
+      "title": "Inappropriate Conduct Between the Sexes is Now Forbidden",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257691/original.png",
+      "synopsis": "Niina announces her intentions to Kazusa, but they are swiftly put aside when a misunderstanding threatens to tear the Literature Club apart from the inside out.",
+      "airdate": "2019-09-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1407
+        }
+      ],
+      "external_id": "257691"
+    },
+    {
+      "n": 12,
+      "title": "The Colors of the Hearts of Maidens",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257692/original.jpg",
+      "synopsis": "Their goal is simple. Their emotions are not. In the dark of night, feelings are brought to light — but will the morning sun shine on ruin or revelation?",
+      "airdate": "2019-09-21",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1345
+        }
+      ],
+      "external_id": "257692"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Otome Domo yo. (乙女どもよ。)",
+      "artist": "CHiCO with HoneyWorks",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yume Cinderella (ユメシンデレラ)",
+      "artist": "Momo Asakura",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

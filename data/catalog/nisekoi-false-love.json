@@ -1,0 +1,399 @@
+{
+  "id": "nisekoi-false-love",
+  "title": "Nisekoi",
+  "native": "ニセコイ",
+  "year": 2014,
+  "rating": 7.3,
+  "season": "Winter 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx18897-G2Fx2ZACsXBU.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx18897-G2Fx2ZACsXBU.jpg",
+  "accent": "#e4935d",
+  "synopsis": "As a child, Raku Ichijo made a secret promise with his childhood sweetheart, keeping a pendant as a memento while his love took the key. He dreams of one day meeting his past love, but years later, reality smashes his hopes when Chitoge Kirisaki accidentally knees him in the face...\n\nThough Raku's a normal high schooler, his family heads the notorious yakuza gang the Shuei-Gumi faction! And he's dragged into family affairs when he's forced into a relationship with Chitoge, the daughter of a rival gang's boss!\n\nDespite their constant spats, the two somehow fool everyone with their false relationship. Raku then discovers that Chitoge has a mysterious key from her past, which she can't remember... Plus, two other girls appear with keys as well—Kosaki Onodera and Marika Tachibana!\n\nCaught in the midst of this love maelstrom, even more complications arise for Raku when his class decides on Romeo and Juliet as the class's play for the school festival. Can the two false lovebirds pull off the impossible and make the play a success?\n\n(Source: VIZ Media)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "nisekoi:-false-love-qomwdp",
+    "mal": 18897,
+    "anilist": 18897,
+    "kitsu": 7821
+  },
+  "skip_key_id": 18897,
+  "skip_key_space": "mal",
+  "episode_total": 20,
+  "added_at": null,
+  "search_text": "nisekoi ニセコイ tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Promise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113960/original.jpg",
+      "synopsis": "Raku Ichijo is a normal high school student. But, he also happens to be the son and heir to a yakuza clan called the \"Shuei-gumi.\" Raku was never popular with the girls but 10 years ago, he met a girl and they promised each other that \"they will get married\" when they reunited. Raku still keeps the pendant that the girl gave him 10 years ago.\n\nOne morning, while Raku was walking to school, a girl suddenly came falling from atop a wall and kicked Raku. That girl turned out to be, Chitoge Kirisaki, the girl that transferred to Raku's class.",
+      "airdate": "2014-01-11",
+      "markers": [],
+      "external_id": "113960"
+    },
+    {
+      "n": 2,
+      "title": "Encounter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113961/original.jpg",
+      "synopsis": "Raku and Chitoge have their first fake date. Raku wishes it was Kosaki instead of Chitoge. Kosaki is convinced that they are a couple, but she doesn't seem to be bothered by it. Will Raku be able to confess his feelings to Kosaki?",
+      "airdate": "2014-01-18",
+      "markers": [],
+      "external_id": "113961"
+    },
+    {
+      "n": 3,
+      "title": "Two of a Kind",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113962/original.jpg",
+      "synopsis": "Raku wants to talk to Kosaki and explain to her that he’s not going out with Chitoge. All the other students are very curios about Raku and Chitoge's relationship, while Claude is still suspicious of what is going on. Raku finally decides to consult Shu.",
+      "airdate": "2014-01-25",
+      "markers": [],
+      "external_id": "113962"
+    },
+    {
+      "n": 4,
+      "title": "The Visit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113963/original.jpg",
+      "synopsis": "Chitoge's Friend Notebook is helping her make friends. Onodera seems happy that Raku and Chitoge are such a lovey-dovey couple, even though she has feelings for him. Raku can't wait for Onodera to come over to his place for the study group he's having.",
+      "airdate": "2014-02-01",
+      "markers": [],
+      "external_id": "113963"
+    },
+    {
+      "n": 5,
+      "title": "Swimming",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113964/original.jpg",
+      "synopsis": "Ruri talks to Onodera about her feelings for Raku and the promise she made ten years ago. Ruri asks Chitoge to join the girls' swim team and invites Raku, Chitoge and Onodera to the swimming practice, in hopes of investigating their true feelings.",
+      "airdate": "2014-02-08",
+      "markers": [],
+      "external_id": "113964"
+    },
+    {
+      "n": 6,
+      "title": "Borrowing and Lending",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113965/original.jpg",
+      "synopsis": "Chitoge faces surprising difficulties in her attempts to thank Raku for rescuing her. After discovering the true nature of Chitoge and Raku’s relationship, Onodera tries to muster up the courage to confess her true feelings for Raku.",
+      "airdate": "2014-02-15",
+      "markers": [],
+      "external_id": "113965"
+    },
+    {
+      "n": 7,
+      "title": "Rival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113966/original.jpg",
+      "synopsis": "A new transfer student arrives at the school. The girls fall in love with him, while the boys can't help having feelings of jealousy. It turns out that the new student is an old friend of Chitoge. Will Raku be able to handle having a rival?",
+      "airdate": "2014-02-22",
+      "markers": [],
+      "external_id": "113966"
+    },
+    {
+      "n": 8,
+      "title": "Happiness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113967/original.jpg",
+      "synopsis": "Claude is training Tsugumi for her mission of finding out the truth about the relationship between Raku and Chitoge. Tsugumi is going through some changes, and she seeks advice from people around her. Could it be possible that she is in love?",
+      "airdate": "2014-03-01",
+      "markers": [],
+      "external_id": "113967"
+    },
+    {
+      "n": 9,
+      "title": "Hot Springs",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113968/original.jpg",
+      "synopsis": "While on an open-air school trip, Raku mistakenly ends up in the women's hot spring. When his female classmates show up to bathe, he must try and find a way to escape before being caught and labelled as a peeping tom.",
+      "airdate": "2014-03-08",
+      "markers": [],
+      "external_id": "113968"
+    },
+    {
+      "n": 10,
+      "title": "Lottery",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113969/original.jpg",
+      "synopsis": "The students are holding their annual Test of Courage. There is a lottery, and the boys and girls are pairing up and holding hands. Raku wants to get paired up with Onodera more than anything, but Chitoge has gone missing in the woods in a ghost costume!",
+      "airdate": "2014-03-15",
+      "markers": [],
+      "external_id": "113969"
+    },
+    {
+      "n": 11,
+      "title": "Celebration",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113970/original.jpg",
+      "synopsis": "It's Chitoge's birthday. Seishirou is planning a surprise party for her, and she invites all her friends. Raku and Onodera go out together to get birthday presents for Chitoge. But are they on a date now?",
+      "airdate": "2014-03-22",
+      "markers": [],
+      "external_id": "113970"
+    },
+    {
+      "n": 12,
+      "title": "Confirmation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113971/original.jpg",
+      "synopsis": "Chitoge tells Raku about the boy she made a promise with ten years ago. Raku admits that he, too, made a promise with a girl ten years ago. They decide to try and see if Chitoge's key would open up Raku's locket. But…",
+      "airdate": "2014-03-29",
+      "markers": [],
+      "external_id": "113971"
+    },
+    {
+      "n": 13,
+      "title": "After School",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113972/original.jpg",
+      "synopsis": "Raku finds the photo that was taken ten years ago. It's the photo of Raku and the girl he made a promise with. The girl turns out to be…",
+      "airdate": "2014-04-05",
+      "markers": [],
+      "external_id": "113972"
+    },
+    {
+      "n": 14,
+      "title": "Ordeal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113973/original.jpg",
+      "synopsis": "Raku's dad gives Raku the news that he actually has a fiancée and that she is coming to see him . He wants Raku to entertain her. She is the girl from the photo taken ten years ago!",
+      "airdate": "2014-04-12",
+      "markers": [],
+      "external_id": "113973"
+    },
+    {
+      "n": 15,
+      "title": "Three Keys",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113974/original.jpg",
+      "synopsis": "Marika explains to Raku how they first met. He tries to remember the details, but it's hard for him. She takes him to her home to meet her father. Raku wants to call off the engagement, but he is so scared of Marika's father!",
+      "airdate": "2014-04-19",
+      "markers": [],
+      "external_id": "113974"
+    },
+    {
+      "n": 16,
+      "title": "Typhoon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113975/original.jpg",
+      "synopsis": "Onodera asks Raku if he could take on a part-time job at her family's Japanese Sweets shop. He agrees, not wanting to miss the chance of seeing her. A storm breaks out, and now Raku has no choice but to stay at Onodera's home with no one else around. And…",
+      "airdate": "2014-04-26",
+      "markers": [],
+      "external_id": "113975"
+    },
+    {
+      "n": 17,
+      "title": "Temple Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113976/original.jpg",
+      "synopsis": "Raku runs into Chitoge at the festival. Seeing that many things come free when she is with Raku, Chitoge decides to hang out with him. However, there is only one thing on Raku's mind… To purchase a romantic relationship charm!",
+      "airdate": "2014-05-03",
+      "markers": [],
+      "external_id": "113976"
+    },
+    {
+      "n": 18,
+      "title": "At the Beach",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113977/original.jpg",
+      "synopsis": "The gang goes down to the beach to enjoy the last days of summer. Chitoge starts acting very strange after seeing Raku with Marika and Onodera. Is she starting to realize she is actually in love with Raku?",
+      "airdate": "2014-05-10",
+      "markers": [],
+      "external_id": "113977"
+    },
+    {
+      "n": 19,
+      "title": "The Play",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113978/original.jpg",
+      "synopsis": "Due to Chitoge's refusal of accepting the role in their play, Kosaki steps in and takes the role as Juliet with Raku as Romeo. Whilst in the midst of rehearsals, Raku and Chitoge gets into a heated argument over their fake relationship. As Raku vehemently states how dysfunctional things are between them and is considering to end their ties, Chitoge slaps Raku out of indignation. On the day of their play, Kosaki gets injured after rescuing a fellow classmate from a fall. With no one else to take over Kosaki in her role as Juliet, Raku approaches Chitoge and convinces her to take the part. After Raku apologizes and admits he doesn't despise Chitoge as the latter had presumed, Chitoge leans unto Raku and accepts the role as his Juliet.",
+      "airdate": "2014-05-17",
+      "markers": [],
+      "external_id": "113978"
+    },
+    {
+      "n": 20,
+      "title": "Showtime",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113979/original.jpg",
+      "synopsis": "With Chitoge's inclusion into their cast, the play commences with Shu as the narrator taking their performance into a comedic turn, adding nonsensical subplots into the play's story for the enjoyment of the audience but for the chagrin to some of its casts. Nevertheless, the play finishes, gaining warm admiration from the audience while Chitoge recognizes her true love for Raku. With their usual relationship back in place, Chitoge apologizes to Raku for her harsh behavior and adds that she will still be herself in front of him. During a conversation with Kosaki, Raku takes notice of Kosaki's desire of playing the role of Juliet. To compensate for not having played her role, as a result Raku and Kosaki reprise their roles as Romeo and Juliet respectively and did a private play for themselves as Chitoge looks into the horizon and remarks the conclusion of their memorable cultural festival.",
+      "airdate": "2014-05-24",
+      "markers": [],
+      "external_id": "113979"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rally Go Round",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aimai Hurts (曖昧ヘルツ; Vague Hurts)",
+      "artist": "Nao Tōyama, Kana Hanazawa, Mikako Komatsu, & Kana Asumi",
+      "episodes": "1,3,6,9,12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "CLICK",
+      "artist": "ClariS",
+      "episodes": "2-14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "CLICK",
+      "artist": "ClariS",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Magical Styling (マジカル☆スタイリング)",
+      "artist": "Kana Hanazawa",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "TrIGgER",
+      "artist": "Mikako Komatsu",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "STEP",
+      "artist": "ClariS",
+      "episodes": "15-19"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Heart Pattern",
+      "artist": "Nao Tōyama",
+      "episodes": "2-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Sleep zzz...",
+      "artist": "Nao Tōyama",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Recover Decoration (リカバーデコレーション)",
+      "artist": "Kana Hanazawa",
+      "episodes": "10-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Matadō Love (またどーらぶ)",
+      "artist": "Kana Asumi",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Order×Order",
+      "artist": "Yumi Uchiyama",
+      "episodes": "9-11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "marchen ticktack",
+      "artist": "Ayane Sakura",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "STEP",
+      "artist": "ClariS",
+      "episodes": "14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Tōriame Drop (通り雨drop; Shower Drop)",
+      "artist": "Yumi Uchiyama",
+      "episodes": "10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "TRICK BOX",
+      "artist": "Mikako Komatsu",
+      "episodes": "15,17"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Crayon Cover (クレヨンカバー)",
+      "artist": "Kana Hanazawa",
+      "episodes": "11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Hanagonomi (はなごのみ;Preferences in Flowers)",
+      "artist": "Kana Asumi",
+      "episodes": "18-19"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Sōzō Diary (想像ダイアリー;Imagination Diary)",
+      "artist": "Nao Tōyama & Kana Hanazawa & Mikako Komatsu & Kana Asumi",
+      "episodes": "20"
+    }
+  ],
+  "relations": []
+}

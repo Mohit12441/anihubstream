@@ -1,0 +1,200 @@
+{
+  "id": "shakugan-no-shana-the-movie",
+  "title": "Shakugan no Shana: The Movie",
+  "native": "劇場版 灼眼のシャナ",
+  "year": 2007,
+  "rating": 7.1,
+  "season": "Spring 2007",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1815-M8GPrlO01336.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1815-M8GPrlO01336.png",
+  "accent": "#e47835",
+  "synopsis": "The movie is not a sequel to the anime, but is an adaptation of all the events in the first novel and contains events that were not in the anime series.\n\n(Source: Wikipedia)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "shakugan-no-shana:-the-movie-49sbp3",
+    "mal": 1815,
+    "anilist": 1815,
+    "kitsu": 1632
+  },
+  "skip_key_id": 1815,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "shakugan no shana the movie 劇場版 灼眼のシャナ movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Shakugan no Shana: The Movie (Movie)",
+      "runtime": "86:00",
+      "runtime_seconds": 5160,
+      "thumb": "https://animehot.cc/storage/media/2026/09/696b51e60496c18def565bb6-landscape.webp",
+      "synopsis": "Crimson Denizens and Rinne, beings from a parallel world, seek to devour humans' precious existences. To restore the delicate balance of the world, Flame Hazes hunt these entities down.\n\nYet such things are unknown to Yuuji Sakai, who starts his day like any other and heads to school. His day, however, takes a turn for the extraordinary when he witnesses everyone around him freeze in place and is left the only one able to move. Immediately, a Rinne begins devouring the souls of those around him, but as the creature sets its sights on Yuuji, a katana-wielding Flame Haze with blazing red hair saves him.\n\nAfter his protector fixes the damage done, she explains why Yuuji was able to move: he has become a Torch, a remnant of a dead human being that will eventually fade from memory. Furthermore, he is also a Mystes, a Torch that houses an unknown treasure. Before his flame burns out completely, a Crimson Denizen will try to seize the treasure he holds, so the fiery hunter decides to watch over him. As Yuuji comes to terms with being dead, he resolves to live his life the best he can with the time he has remaining.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "29012"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Light My Fire",
+      "artist": "KOTOKO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I'll believe",
+      "artist": "ALTIMA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Prophecy",
+      "artist": "Mami Kawada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "All in good time",
+      "artist": "Mami Kawada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "JOINT",
+      "artist": "Mami Kawada",
+      "episodes": "1-15"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "triangle",
+      "artist": "Mami Kawada",
+      "episodes": "1-15"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hishoku no Sora",
+      "artist": "Mami Kawada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yowake Umare Kuru Shoujo",
+      "artist": "Yoko Takahashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tenjou wo Kakeru Monotachi",
+      "artist": "Love Planet Five",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hishoku no Sora",
+      "artist": "Mami Kawada",
+      "episodes": "1-16"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yowake Umare Kuru Shoujo",
+      "artist": "Yoko Takahashi",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Serment",
+      "artist": "Mami Kawada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "One",
+      "artist": "ALTIMA",
+      "episodes": "14-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "BLAZE",
+      "artist": "KOTOKO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Sociometry",
+      "artist": "KOTOKO",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Being",
+      "artist": "KOTOKO",
+      "episodes": "17-24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Aka no Seijaku",
+      "artist": "Yoko Ishida",
+      "episodes": "15-23"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Koubou (光芒; Beam of Light)",
+      "artist": "Mami Kawada",
+      "episodes": "24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "sense",
+      "artist": "Mami Kawada",
+      "episodes": "24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Hishoku no Sora",
+      "artist": "Mami Kawada",
+      "episodes": "24"
+    }
+  ],
+  "relations": []
+}

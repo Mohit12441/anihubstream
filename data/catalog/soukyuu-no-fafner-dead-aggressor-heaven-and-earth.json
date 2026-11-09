@@ -1,0 +1,63 @@
+{
+  "id": "soukyuu-no-fafner-dead-aggressor-heaven-and-earth",
+  "title": "Fafner: Heaven and Earth",
+  "native": "蒼穹のファフナー Dead Aggressor ~Heaven and Earth~",
+  "year": 2010,
+  "rating": 7.2,
+  "season": "Fall 2010",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx8098-AVGxx4gEfNkI.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx8098-AVGxx4gEfNkI.png",
+  "accent": "#50a1e4",
+  "synopsis": "A hiveminded alien force reengages war with Tatsumiya Island years after Kazuki led a team of mech pilots to destroy them. In an explosive battle over the fate of humankind, the young warriors risk everything to save their only home from assimilation.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "soukyuu-no-fafner:-dead-aggressor-heaven-and-earth-tdap0a",
+    "mal": 8098,
+    "anilist": 8098,
+    "kitsu": 5194
+  },
+  "skip_key_id": 8098,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "fafner heaven and earth 蒼穹のファフナー dead aggressor heaven and earth movie finished",
+  "genres": [
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Soukyuu no Fafner: Dead Aggressor - Heaven and Earth (Movie)",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://animehot.cc/storage/media/2026/09/695cddfeae86bf597cebfa2a-landscape.webp",
+      "synopsis": "The year is 2148. Two years after the end of the original Fafner in the Azure TV series, Tatsumiya Island and its surviving residents have returned to some semblance of recovery. However, things have become desperate for our hero, Kazuki; nearly blind now, and partially crippled from his battles with the Festum two years earlier, he clings to the promise his fallen friend Soushi made to him to return to the island and set things right again. Kazuki's hopes flare when a lifeform is detected within an unmanned submarine that comes floating into Tatsumiya Bay one night, but the person aboard isn't Soushi; it is a mysterious \"boy\" named Misao Kurusu who may not be entirely human, and who claims to have been sent by Sōshi. With Misao's arrival, hostilities break out anew between the Human Army and the Festum, and the Fafner pilots are thrown into the most desperate battle of their lives - this time, with the fate of TWO races riding on their shoulders.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "80573"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Soukyuu (蒼穹)",
+      "artist": "angela",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

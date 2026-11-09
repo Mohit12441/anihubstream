@@ -1,0 +1,85 @@
+{
+  "id": "pokemon-the-movie-i-choose-you",
+  "title": "Pokémon the Movie: I Choose You!",
+  "native": "劇場版 ポケットモンスター キミにきめた!",
+  "year": 2017,
+  "rating": 7,
+  "season": "Summer 2017",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98298-Yqus4jNiTNgf.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98298-Yqus4jNiTNgf.png",
+  "accent": "#f19300",
+  "synopsis": "The film's plot tells the story of how Satoshi (Ash) and Pikachu came to know each other. On the day they set out from Masara Town (Pallet Town), both of them saw a Ho-oh flying and made a vow to someday meet it.\n\n(Source: Anime News Network, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "pokemon-the-movie:-i-choose-you!-z6ra0z",
+    "mal": 34540,
+    "anilist": 98298,
+    "kitsu": 12941
+  },
+  "skip_key_id": 34540,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "pokemon the movie i choose you 劇場版 ホ ケットモンスター キミにきめた movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Pokémon the Movie: I Choose You! (Movie)",
+      "runtime": "120:00",
+      "runtime_seconds": 7200,
+      "thumb": "https://myanimelist.net/images/anime/1402/122043l.webp",
+      "synopsis": "When Satoshi oversleeps on his 10th birthday, he ends up with a stubborn Pikachu instead of the first partner Pokémon he wanted! But after a rocky start, Satoshi and Pikachu become close friends and true partners—and when they catch a rare glimpse of the Legendary Pokémon Houou in flight, they make plans to seek it out together, guided by the Rainbow Wing it leaves behind.\n\nTrainers Makoto and Souji join Satoshi on his journey. Along the way, Satoshi catches an abandoned Hitokage, raises a Pokémon from Caterpie to Butterfree and then releases it to follow its heart, and meets the mysterious Mythical Pokémon Marshadow. When they near their goal, the arrogant Cross—Hitokage’s former Trainer—stands in their way! Can Satoshi and Pikachu defeat this powerful Trainer and reach Houou as they promised, or will their journey end here?",
+      "airdate": null,
+      "markers": [],
+      "external_id": "202904"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Aim to Be a Pokémon Master -20th Anniversary- (Mezase Pokémon Master -20th Anniversary- めざせポケモンマスター -20th Anniversary-)",
+      "artist": "Rica Matsumoto",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pokémon Theme (Gotta Catch 'Em All)",
+      "artist": "Ben Dixon [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I Choose You",
+      "artist": "Haven Paschall",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Oración no Theme ~Tomo ni Arukou~ (Oración Theme: Walk Together)",
+      "artist": "Asuca Hayashi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

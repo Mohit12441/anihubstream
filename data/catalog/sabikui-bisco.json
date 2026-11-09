@@ -1,0 +1,344 @@
+{
+  "id": "sabikui-bisco",
+  "title": "Sabikui Bisco",
+  "native": "錆喰いビスコ",
+  "year": 2022,
+  "rating": 7,
+  "season": "Winter 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx130591-9O1cf7u6SfYa.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx130591-9O1cf7u6SfYa.jpg",
+  "accent": "#fe3528",
+  "synopsis": "Japan’s post-apocalyptic wasteland replete with dust can only be saved by one thing—fungus. Bisco Akaboshi, a wanted criminal and skilled archer, searches for a legendary mushroom, known as Sabikui, said to devour any and all rust. Joining him on this epic saga to save the country is a giant crab and a young doctor. Can this unlikely trio find the fabled fungi and save the land?\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Sabikui Bisco 2nd Season"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44189,
+    "anilist": 130591,
+    "mal": 48414
+  },
+  "skip_key_id": 48414,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 14:34:57",
+  "search_text": "sabikui bisco 錆喰いヒ スコ tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Man Worth 800,000",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d8817980049ad685e2a16bb431b8551a1641820713_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1405
+        }
+      ],
+      "external_id": "307922"
+    },
+    {
+      "n": 2,
+      "title": "Soar on King Trumpets",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/ded547cc9c068ebd9870f4b8ac8dd29e1642419472_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1405
+        }
+      ],
+      "external_id": "307923"
+    },
+    {
+      "n": 3,
+      "title": "Tag Team",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/95ae49c0d036d224c4971d9b0d66fcc31643026593_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 66,
+          "end": 156
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1238,
+          "end": 1328
+        }
+      ],
+      "external_id": "323405"
+    },
+    {
+      "n": 4,
+      "title": "Ride the Crab",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c6c951c830c881ba6ea7797474cffc771643617672_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "323406"
+    },
+    {
+      "n": 5,
+      "title": "Children's Fortress",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/58b6873977599d3a9fc7e6260ee1d2cc1644229005_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1407
+        }
+      ],
+      "external_id": "323407"
+    },
+    {
+      "n": 6,
+      "title": "Companions and Prey",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/012cfa39ec9d72c75dab0a156737e2331644831693_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1406
+        }
+      ],
+      "external_id": "323408"
+    },
+    {
+      "n": 7,
+      "title": "The Stolen Rust Eater",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/48f1555ef3fa7123eaf88e604273d8651645447784_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1405
+        }
+      ],
+      "external_id": "323409"
+    },
+    {
+      "n": 8,
+      "title": "Fiendish Trap",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/997111056dbd980ca567db0adfad693b1646041549_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1406
+        }
+      ],
+      "external_id": "324140"
+    },
+    {
+      "n": 9,
+      "title": "I Love You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/8911460c7eba214d771e6e653278537e1646639273_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1410,
+          "end": 1419
+        }
+      ],
+      "external_id": "324141"
+    },
+    {
+      "n": 10,
+      "title": "Tetsujin Revived",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/fac3ef43aac755dac58284cc0e4d412f1647247692_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 164
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1405
+        }
+      ],
+      "external_id": "324142"
+    },
+    {
+      "n": 11,
+      "title": "I'm Bisco!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/0aeb23023b67bcde62b6991ed11617651647873484_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1405
+        }
+      ],
+      "external_id": "324143"
+    },
+    {
+      "n": 12,
+      "title": "Bow and Arrow Duo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/bbdec1a4aa070a0208be67455042a9c61648444117_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 10,
+          "end": 95
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1312,
+          "end": 1402
+        }
+      ],
+      "external_id": "324144"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kaze no Oto Sae Kikoenai",
+      "artist": "JUNNA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Houkou",
+      "artist": "Ryouta Suzuki & Natsuki Hanae",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Houkou",
+      "artist": "Natsuki Hanae",
+      "episodes": "10"
+    }
+  ],
+  "relations": []
+}

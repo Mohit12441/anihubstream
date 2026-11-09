@@ -1,0 +1,122 @@
+{
+  "id": "one-piece-film-strong-world",
+  "title": "One Piece Film: Strong World",
+  "native": "ONE PIECE FILM STRONG WORLD",
+  "year": 2009,
+  "rating": 7.8,
+  "season": "Fall 2009",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx4155-P5TDf6t6qFwX.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4155-P5TDf6t6qFwX.png",
+  "accent": "#e4ae50",
+  "synopsis": "20 years after his escape from Impel Down, the legendary pirate Shiki \"the Golden Lion\" reappears causing massive upheaval to the Marines. During his long seclusion, he was able to come up with a scheme to bring the World Government to its knees. On his way to execute the plan, Shiki crosses paths with the Straw Hat Pirates and becomes so impressed with Nami's knowledge of meteorology that he abducts her to forcedly enlist her into his crew. Luffy and the gang end up on a strange land populated with monstrous beasts as they desperately search for Shiki and Nami.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "one-piece-film:-strong-world-sa3b8s",
+    "mal": 4155,
+    "anilist": 4155,
+    "kitsu": 3492
+  },
+  "skip_key_id": 4155,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "one piece film strong world one piece film strong world movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "One Piece Film: Strong World (Movie)",
+      "runtime": "115:00",
+      "runtime_seconds": 6900,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/4155-2PkLjTHddz2s.jpg",
+      "synopsis": "20 years after his escape from Impel Down, the legendary pirate Shiki \"the Golden Lion\" reappears causing massive upheaval to the Marines. During his long seclusion, he was able to come up with a scheme to bring the World Government to its knees. On his way to execute the plan, Shiki crosses paths with the Straw Hat Pirates and becomes so impressed with Nami's knowledge of meteorology that he abducts her to forcedly enlist her into his crew. Luffy and the gang end up on a strange land populated with monstrous beasts as they desperately search for Shiki and Nami.\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "58949"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shinjidai (新時代; New Genesis)",
+      "artist": "Ado",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaze no Yukue (風のゆくえ; Where the Wind Goes)",
+      "artist": "Ado",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ikari wo Kureyo (怒りをくれよ; Give Me Anger)",
+      "artist": "GLIM SPANKY",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Zeal",
+      "artist": "Yasutaka Nakata",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bad Reputation",
+      "artist": "Avril Lavigne",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "How You Remind Me",
+      "artist": "Avril Lavigne",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Fanfare",
+      "artist": "Mr. Children",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Bad Reputation",
+      "artist": "Avril Lavigne",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "How You Remind Me",
+      "artist": "Avril Lavigne",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,654 @@
+{
+  "id": "sword-art-online-alicization",
+  "title": "Sword Art Online: Alicization",
+  "native": "ソードアート・オンライン アリシゼーション",
+  "year": 2018,
+  "rating": 7.5,
+  "season": "Fall 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx100182-KctPmCJ2smHQ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx100182-KctPmCJ2smHQ.jpg",
+  "accent": "#50fefe",
+  "synopsis": "Kirito awakens in a vast, fantastical forest filled with towering trees. In his search for clues to the truth of his surroundings, he encounters a young boy who seems to know him. He ought to be a simple NPC, but the depth of his emotions seem no different than a human. As they search for the boy's parents, Kirito finds a peculiar memory returning to him. A memory from his own childhood, of this boy and a girl, too, with golden hair, and a name he should have never forgotten - Alice.\n\n(Source: Yen Press)\n\nNote: The first episode aired with a runtime of ~48 minutes as opposed to the standard 24 minute long episode.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Sword Art Online the Movie: Ordinal Scale (2017)",
+    "Sword Art Online: Alicization - War of Underworld (2019)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13893,
+    "anilist": 100182,
+    "mal": 36474,
+    "hianime": "sword-art-online:-alicization-n1muyr"
+  },
+  "skip_key_id": 36474,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": "2026-10-14 03:06:30",
+  "search_text": "sword art online alicization ソート アート オンライン アリシセ ーション tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "isekai",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Underworld",
+      "runtime": "48:00",
+      "runtime_seconds": 2880,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/230384/original.jpg",
+      "synopsis": "Kirito, along with his childhood friend, Eugeo, has been tasked with cutting down a colossal tree called the Gigas Cedar. They’re swinging their ax when their friend Alice arrives with lunch. As they eat, the three friends decide to go to a fabled cave.",
+      "airdate": "2018-10-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2765,
+          "end": 2855
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 2765,
+          "end": 2859
+        }
+      ],
+      "external_id": "230384"
+    },
+    {
+      "n": 2,
+      "title": "The Demon Tree",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/230385/original.jpg",
+      "synopsis": "Kirito wakes up to find himself inside a mysterious world evoking a fantasy game. His memory fuzzy, he tries to log out, but is unable to return to the real world. After wandering aimlessly, he finds himself underneath a colossal tree.",
+      "airdate": "2018-10-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 139,
+          "end": 229
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "230385"
+    },
+    {
+      "n": 3,
+      "title": "The End Mountains",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234471/original.jpg",
+      "synopsis": "Kirito makes up his mind to journey to Centoria. Since he’ll need Eugeo’s help, he also decides to fell the Gigas Cedar. Meanwhile, Alice’s little sister, Selka is worried about Eugeo, and opens up to Kirito about her concerns.",
+      "airdate": "2018-10-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 139
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "234471"
+    },
+    {
+      "n": 4,
+      "title": "Departure",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234472/original.jpg",
+      "synopsis": "Kirito and Eugeo realize Selka has taken off to the End Mountains alone, and decide to chase after her. As they enter the cave, they encounter goblins, presumably from the Dark Territory, and must engage in a battle.",
+      "airdate": "2018-10-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "234472"
+    },
+    {
+      "n": 5,
+      "title": "Ocean Turtle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234473/original.jpg",
+      "synopsis": "In the real world, Kazuto Kirigaya lies unconscious. At Kikuoka’s request, Kazuto is moved to a well-equipped hospital, but when Asuna and Suguha try to visit, they’re turned away. Suspicious, Asuna and the others split up to find out more about Rath.",
+      "airdate": "2018-11-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 163,
+          "end": 253
+        }
+      ],
+      "external_id": "234473"
+    },
+    {
+      "n": 6,
+      "title": "Project Alicization",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234474/original.jpg",
+      "synopsis": "Asuna infiltrates Rath, the research lab in the Ocean Turtle, where she relentlessly grills Kikuoka about Kazuto’s whereabouts. Kikuoka reveals that behind the development of the Soul Translator is a mind-blowing objective of epic scale.",
+      "airdate": "2018-11-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 122,
+          "end": 212
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "234474"
+    },
+    {
+      "n": 7,
+      "title": "Swordcraft Academy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234475/original.jpg",
+      "synopsis": "Two years have gone by since Kirito and Eugeo left Rulid Village. In the capital city, Centoria, both boys have attained their goal of being admitted to the North Centoria Imperial Swordcraft Academy.",
+      "airdate": "2018-11-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 4,
+          "end": 94
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "234475"
+    },
+    {
+      "n": 8,
+      "title": "Swordsman's Pride",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234476/original.jpg",
+      "synopsis": "Kirito finds himself in a duel against the Elite Disciple Volo Levantein, using real swords. As the curious crowd looks on, Kirito is encouraged by Sortiliena, and the duel begins.",
+      "airdate": "2018-11-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 157,
+          "end": 247
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "234476"
+    },
+    {
+      "n": 9,
+      "title": "Nobleman's Responsibilities",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234477/original.jpg",
+      "synopsis": "Now an Elite Disciple along with Kirito, Eugeo struggles with the question of what he should infuse in his sword so he can become stronger. When he’s taunted by First-Seat Elite Disciple Raios and Second-Seat Humbert, Eugeo decides to accept Humbert’s request for a duel.",
+      "airdate": "2018-12-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 69,
+          "end": 159
+        }
+      ],
+      "external_id": "234477"
+    },
+    {
+      "n": 10,
+      "title": "Taboo Index",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234478/original.jpg",
+      "synopsis": "Ronie and Tiese are late getting to the dorm. Kirito rushes out in search of them, but no sooner has he gone than Frenica appears. She tells Eugeo about how she’s suffered at Humbert’s hands, and that Tiese and Ronie went to confront him about it.",
+      "airdate": "2018-12-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 155,
+          "end": 245
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1298,
+          "end": 1376
+        }
+      ],
+      "external_id": "234478"
+    },
+    {
+      "n": 11,
+      "title": "Central Cathedral",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234479/original.jpg",
+      "synopsis": "Kirito and Eugeo are now considered criminals for having violated the Taboo Index and are thrown into the underground prison in the Central Cathedral. Meanwhile, on the Ocean Turtle in the real world, Asuna is watching over Kazuto as he’s being treated.",
+      "airdate": "2018-12-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 162
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "234479"
+    },
+    {
+      "n": 12,
+      "title": "The Sage of the Library",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234480/original.jpg",
+      "synopsis": "Kirito and Eugeo escape from their cell, only to find their way blocked by Eldrie Synthesis Thirty-One, under orders from Alice to lie in wait for them. Kirito and Eugeo struggle against him until Eugeo realizes that he’s seen Eldrie somewhere before.",
+      "airdate": "2018-12-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 64,
+          "end": 154
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "234480"
+    },
+    {
+      "n": 13,
+      "title": "Ruler and Mediator",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234481/original.jpg",
+      "synopsis": "Kirito and Eugeo have been rescued by the young girl, Cardinal, who has secluded herself inside the Central Cathedral’s Great Library. Cardinal explains to Kirito how the Axiom Church and the Taboo Index came to be, starting with Administrator’s past.",
+      "airdate": "2019-01-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 157,
+          "end": 247
+        }
+      ],
+      "external_id": "234481"
+    },
+    {
+      "n": 14,
+      "title": "The Crimson Knight",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234482/original.jpg",
+      "synopsis": "After being entrusted with the fate of the world by Cardinal, Kirito and Eugeo head to the top floor of the Central Cathedral. They find their confiscated swords, only to be attacked by the bow-wielding Integrity Knight Deusolbert Synthesis Seven.",
+      "airdate": "2019-01-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 128,
+          "end": 218
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "234482"
+    },
+    {
+      "n": 15,
+      "title": "The Relentless Knight",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234483/original.jpg",
+      "synopsis": "Kirito and Eugeo are on their way up the stairs of the Central Cathedral when they encounter two girls named Linel and Fizel. As they stand, wondering what two children are doing there, they let their guard down and...",
+      "airdate": "2019-01-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 172,
+          "end": 262
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "234483"
+    },
+    {
+      "n": 16,
+      "title": "The Osmanthus Knight",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234484/original.jpg",
+      "synopsis": "Though riddled with wounds, Kirito manages to activate his Perfect Weapon Control art. Continuing on their way to the top floor of the Central Cathedral, Kirito and Eugeo find themselves standing before a strange-looking floating platform.",
+      "airdate": "2019-01-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 64,
+          "end": 154
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "234484"
+    },
+    {
+      "n": 17,
+      "title": "Truce",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234485/original.jpg",
+      "synopsis": "When Kirito and Alice both unleash the Perfect Weapon Control art in the Cloudtop Garden, the impact rips a hole into the seemingly impregnable Central Cathedral wall, which sends them both flying outside.",
+      "airdate": "2019-02-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 88,
+          "end": 178
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "234485"
+    },
+    {
+      "n": 18,
+      "title": "The Legendary Hero",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234486/original.jpg",
+      "synopsis": "Eugeo reaches the ninetieth floor of the Central Cathedral, which turns out to be a vast bathing area. The perplexed Eugeo encounters Bercouli Synthesis One soaking in the bath. Meanwhile, Kirito and Alice are still climbing the Central Cathedral wall.",
+      "airdate": "2019-02-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 6,
+          "end": 96
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "234486"
+    },
+    {
+      "n": 19,
+      "title": "The Seal of the Right Eye",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234487/original.jpg",
+      "synopsis": "Seeing Alice’s reaction when he mentioned the name Selka, Kirito decides to tell her the truth about the Integrity Knights. Meanwhile, after being knocked unconscious during his battle with Bercouli, Eugeo awakes on the top floor of the cathedral.",
+      "airdate": "2019-02-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 133,
+          "end": 223
+        }
+      ],
+      "external_id": "234487"
+    },
+    {
+      "n": 20,
+      "title": "Synthesis",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234488/original.jpg",
+      "synopsis": "Kirito and Alice reach the communal bath on the nintieth floor. There, they find the Integrity Knight Commander, Bercouli, who’s been turned to stone by Chudelkin. Alice breaks down in tears upon seeing her mentor’s tragic plight, but then...",
+      "airdate": "2019-03-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "234488"
+    },
+    {
+      "n": 21,
+      "title": "The 32nd Knight",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234489/original.jpg",
+      "synopsis": "Standing in Kirito and Alice’s way is Eugeo, who’s undergone the Synthesis Ritual and become an Integrity Knight. Kirito is rattled, until Alice admonishes him into resolving to fight Eugeo with everything he’s got.",
+      "airdate": "2019-03-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "234489"
+    },
+    {
+      "n": 22,
+      "title": "Titan of the Sword",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234490/original.jpg",
+      "synopsis": "On the top floor of the Central Cathedral, Kirito, Eugeo, and Alice finally face Administrator. But Chudelkin uses the sacred arts to transform himself into a giant clown and attacks.",
+      "airdate": "2019-03-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "234490"
+    },
+    {
+      "n": 23,
+      "title": "Administrator",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234491/original.jpg",
+      "synopsis": "Cardinal appears on the top floor of Central Cathedral for a showdown with her bitter foe of the last two hundred years. She moves to achieve her objective of deleting Administrator, only to see the fallen sword golem rise up again.",
+      "airdate": "2019-03-24",
+      "markers": [],
+      "external_id": "234491"
+    },
+    {
+      "n": 24,
+      "title": "My Hero",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/234492/original.jpg",
+      "synopsis": "Carrying the hopes of Cardinal, Eugeo, and Alice in his heart, Kirito stands yet again and visualizes the Black Swordsman, the top player who cleared SAO. For the sake of everyone he’s encountered in this world, Kirito, faces off with Administrator.",
+      "airdate": "2019-03-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 60,
+          "end": 150
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1380
+        }
+      ],
+      "external_id": "234492"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Meaning the start",
+      "artist": "Ai Kayano",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "ANIMA",
+      "artist": "ReoNa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I will...",
+      "artist": "Eir Aoi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Blazing the future",
+      "artist": "Yoshitsugu Matsuoka, Nobunaga Shimazaki, Ai Kayano",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Resolution",
+      "artist": "Haruka Tomatsu",
+      "episodes": "1-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "unlasting",
+      "artist": "LiSA",
+      "episodes": "1-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Adamas",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Iris",
+      "artist": "Eir Aoi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "RESISTER",
+      "artist": "ASCA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "forget-me-not",
+      "artist": "ReoNa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

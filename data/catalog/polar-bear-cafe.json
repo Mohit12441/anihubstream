@@ -1,0 +1,700 @@
+{
+  "id": "polar-bear-cafe",
+  "title": "Polar Bear's Café",
+  "native": "しろくまカフェ",
+  "year": 2012,
+  "rating": 7.3,
+  "season": "Spring 2012",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/12815.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/12815.jpg",
+  "accent": "#c9e4a1",
+  "synopsis": "Shirokuma Cafe revolves around a Canadian white bear that quits his boring job and starts a cafeteria near a zoo. He loves telling tall tales and always brags about himself. According to him, he was picked up by a human couple who owns a diner while he was drifting around on an iceberg. \n\nThough he has lost all contact with his Canadian family, he has discovered a new home in serving the diners' clientele, thanks to the kind couple. His caf is an embodiment of his personality. The place is always packed with many regulars, animals and humans, who are drawn by his charismatic magnetism. \n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "polar-bear-cafe-gehglr",
+    "mal": 12815,
+    "anilist": 12815,
+    "kitsu": 6821
+  },
+  "skip_key_id": 12815,
+  "skip_key_space": "mal",
+  "episode_total": 50,
+  "added_at": null,
+  "search_text": "polar bear s cafe しろくまカフェ tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Polar Bear's Café",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Panda, part of generation cupcake, is prodded by his mother to get a job, but he just wants to eat bamboo. While avoiding his mother's ire he happens upon a cafe run by Polar Bear, who just so happens to be looking for a part-time employee.",
+      "airdate": "2012-04-05",
+      "markers": [],
+      "external_id": "163488"
+    },
+    {
+      "n": 2,
+      "title": "Everyone's Café / Café's Cherry Blossom Viewing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The patrons of Polar Bear’s Café have their own idea on the dream café, which starts to take form. But when the cherry blossoms start to fall, thoughts turn to having a viewing party.",
+      "airdate": "2012-04-12",
+      "markers": [],
+      "external_id": "163491"
+    },
+    {
+      "n": 3,
+      "title": "Polar Bear Goes to the Zoo / Panda's Problems",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Panda has convinced Polar Bear and Penguin to visit him at the zoo. Being their first time, Polar Bear seems to want to go places he is strictly forbidden. Back at the Café, the zoo workers discuss the pains of stereotypes.",
+      "airdate": "2012-04-19",
+      "markers": [],
+      "external_id": "163498"
+    },
+    {
+      "n": 4,
+      "title": "Obsessed with Smartphones / Super Fun Driving Lesson",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Penguin is excited about his new smartphone. But the café patrons are not impressed until Panda shows them his new phone. Along with a new smartphone, Penguin is taking driving classes to get his license. Polar Bear has agreed to give him a few pointers.",
+      "airdate": "2012-04-26",
+      "markers": [],
+      "external_id": "163502"
+    },
+    {
+      "n": 5,
+      "title": "Panda gets Enthusiastic / Everyone's Parfait",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Full Time Panda is away for a week, so Panda has to work his shifts. He gets some encouragement from a fan name Rin Rin, who he searches for every day. Mr. Polar Bear wants to serve a special menu and when word gets around it will be Parfaits, everyone has a suggestion.",
+      "airdate": "2012-05-03",
+      "markers": [],
+      "external_id": "163509"
+    },
+    {
+      "n": 6,
+      "title": "Panda's Diet / Strive for it! Wild Panda",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "After breaking the slide at work, Panda has decided to lose some weight. His ideal body shape is far from his current look. To fit his new look, Panda wants to be wilder but he admits he was born meek. An invite from Polar Bear leads Panda to the bar, Grizzly’s",
+      "airdate": "2012-05-10",
+      "markers": [],
+      "external_id": "163511"
+    },
+    {
+      "n": 7,
+      "title": "Mr. Handa's Make-over Plan \\ Love Love Driving Tactics",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Panda new obsession is with popularity, he attempts to raise Mr. Hanada’s popularity with the help of Polar Bear. Penguin finally got his license but now has to get his dating license before he can take Miss Penko out for a drive.",
+      "airdate": "2012-05-17",
+      "markers": [],
+      "external_id": "163517"
+    },
+    {
+      "n": 8,
+      "title": "A Magazine Interview Comes By! \\ Salmon Hunter: Mr. Grizzly!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Furafura Walker Monthly. What should be a simple interview proves to be anything but thanks to Furafura unique editor in chief. The Cafe is closed for the day so Polar Bear can get fresh ingredients. A hungry and curious Panda joins Polar Bear and Grizzly Bear on their fishing trip.",
+      "airdate": "2012-05-24",
+      "markers": [],
+      "external_id": "163520"
+    },
+    {
+      "n": 9,
+      "title": "Rin Rin Deeply Moved! Panda's House! \\ Mr. Penguin's Proposal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Rin Rin the florist gets a truly random opportunity to visit the home of Panda, whom he adores. But just meeting Panda Mama and Panda Sister might be too much for him. Meanwhile, Mr. Penguin is getting pumped up to ask Miss Penko out on a date.",
+      "airdate": "2012-05-31",
+      "markers": [],
+      "external_id": "163522"
+    },
+    {
+      "n": 10,
+      "title": "Mr. Handa's Group Blind Date? \\ Mr. Handa's Group Blind Date!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "After eating Mr. Handa very plain lunch, Panda gets Mr. Handa invited on a group date in hopes his lunches improves. But when the 3rd male drops out, Panda goes to the café to find a replacement.",
+      "airdate": "2012-06-07",
+      "markers": [],
+      "external_id": "163524"
+    },
+    {
+      "n": 11,
+      "title": "Mr. Penguin's Broken Heart \\ Panda's Night Out",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "While in the park, Mr. Penguin sees Miss Penko on a date. Grizzly stops by and tells Polar Bear it’s a guy’s night out.",
+      "airdate": "2012-06-14",
+      "markers": [],
+      "external_id": "163526"
+    },
+    {
+      "n": 12,
+      "title": "Panda, Tired of Boredom \\ Panda's Advice Room for Troubles",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A rainy day at the zoo leads Panda and his fellow animals to think of creative ways to pass the time. Panda is still worried that Mr. Handa does not have a girlfriend.",
+      "airdate": "2012-06-21",
+      "markers": [],
+      "external_id": "163529"
+    },
+    {
+      "n": 13,
+      "title": "Tanabata Decorations \\ Panda's Wish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The patrons and staff of Polar Bear’s Café prep for Tanabata. This is Panda’s first Tanabata and he is concerned about what to wish for.",
+      "airdate": "2012-06-28",
+      "markers": [],
+      "external_id": "163531"
+    },
+    {
+      "n": 14,
+      "title": "Enthusiastic Polar Bear.\\ Let's go to the beach!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As Panda laments having nothing to due whilst Polar Bear wishes he had more free time, Polar Bear takes Panda's place at the zoo pretending to be a panda, proving to be a hit. Later, Polar Bear, Panda and Penguin take a trip to the beach.",
+      "airdate": "2012-07-05",
+      "markers": [],
+      "external_id": "163533"
+    },
+    {
+      "n": 15,
+      "title": "Weeding in the Summer \\ Mr. Penguin's Romance.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The backyard of the Polar Bear's Café needs weeding, but Penguin seems to be the only one taking things seriously. Later, Penguin finally works up the courage to confess to Penko, asking her out every day for a week. However, it turns out he inadvertently asked out seven identical girl penguins, leading to disaster when they all show up on the day.",
+      "airdate": "2012-07-12",
+      "markers": [],
+      "external_id": "163539"
+    },
+    {
+      "n": 16,
+      "title": "Mr. Grizzly Goes on an Adventure \\ A Strange Restaurant",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As the café starts serving a shaved ice dessert called \"Polar Bear\", Grizzly gets the wrong idea and believes Polar Bear had been eaten by otters. Later, a salaryman from another town arrives at the Polar Bear's Café for the first time and is astounded by the various customers.",
+      "airdate": "2012-07-19",
+      "markers": [],
+      "external_id": "163541"
+    },
+    {
+      "n": 17,
+      "title": "Let's Go Camping! \\ Rin Rin and the High School Girl",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Polar Bear, Panda, Penguin and Grizzly go on a camping trip together, where Penguin and Grizzly find they have a lot in common whilst trying to keep Polar Bear and Panda in check. Later, Rin Rin asks a high school girl to accompany him to the zoo; the girl accepts, believing it to be a date, only to find that he just wanted someone to talk to about how cute Panda is.",
+      "airdate": "2012-07-26",
+      "markers": [],
+      "external_id": "163544"
+    },
+    {
+      "n": 18,
+      "title": "The Café's Ghost Stories \\ Panda Runs Away from Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The café decides to hold a night of telling ghost stories, much to an easily-frighted Handa's dismay. Later, Panda decides to run away from home when his mother decides to lump his birthday celebration with his siblings.",
+      "airdate": "2012-08-02",
+      "markers": [],
+      "external_id": "163547"
+    },
+    {
+      "n": 19,
+      "title": "There Are Many Kinds of Penguins / What is Baisen!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Polar Bear, Panda, and Penguin go to a water park. Penguin takes along his nephew, but ends up being cowed by Mama King Penguin, while her son and Penguin's nephew become fast friends. The Penko sisters have also tailed Penguin there, while Panda is on the receiving end of King Penguin Mama's grousing about how emperor penguins (like Penguin) are considered superior — and a trio of Pygoscelis penguins out to sell penguin cards. Sasako, on the other hand, rode the train too far and arrives late at the water park. After becoming amazed by the taste of Polar Bear's Café's brand of black coffee, a man named Masaki decides to become the pupil of a tree kangaroo in order to learn how to roast coffee beans.",
+      "airdate": "2012-08-09",
+      "markers": [],
+      "external_id": "163550"
+    },
+    {
+      "n": 20,
+      "title": "The Ideal Single Living / Summer Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Panda imagines a dream life living on his own. After struggling to find a place that meets his expectations, Panda, along with Penguin, check out where the other animals live. Later, Polar Bear and Grizzly run a stand together at a summer festival, joined by a relative of Panda's, Lesser Panda. After selling everything, the gang enjoy the sights of the festival.",
+      "airdate": "2012-08-16",
+      "markers": [],
+      "external_id": "163552"
+    },
+    {
+      "n": 21,
+      "title": "Panda is no Longer a Panda. \\ Mei Mei's Prince!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Panda is reassigned to one part of the zoo after another — even serving as a zookeeper. Later, Panda's sister Mei Mei goes on about her crush on Mr Handa. However, after seeing Handa and Ms Badger at a realty office, Panda believes that the two are getting married.",
+      "airdate": "2012-08-23",
+      "markers": [],
+      "external_id": "163555"
+    },
+    {
+      "n": 22,
+      "title": "Sales Penguin / Mr. Penguin's Picnic",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The trio of Pygoscelis penguins from the water park try to figure out how to sell their excess of penguin cards, eventually settling on creating a concentration game with them, which becomes a hit. Meanwhile, Penguin ends up having to date all the Penko sisters equally, but still has trouble telling them apart. Sasako suggests he give the sisters differently colored ribbons to better identify them, but it backfires when they decide to trade them with each other.",
+      "airdate": "2012-08-30",
+      "markers": [],
+      "external_id": "163559"
+    },
+    {
+      "n": 23,
+      "title": "Mr. Handa's Discussion! / Panda Mama's Daily Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Mr Handa meets up with Polar Bear to ask his advice on how to ask Sasako out, but Polar Bear seems to be more interested in the food where the meeting takes place. Meanwhile, Sasako winds up serving several good-looking men who come into the café, which worries Panda and Penguin. Later, Panda Mama goes to buy walnuts and learns the trick of stuffing the bag full from Mama Red Squirrel, and then endures a lecture from King Penguin Mama on how to eat at an all-you-can-eat cake buffet. The group then decides to eat at Polar Bear's Café, where they end up taxing his sanity.",
+      "airdate": "2012-09-06",
+      "markers": [],
+      "external_id": "163564"
+    },
+    {
+      "n": 24,
+      "title": "Panda's Apprenticeship / A Sports Day Filled With Animals Panda",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Panda decides he wants to become someone's apprentice but is rather picky about who his master is. He eventually settles on becoming Sloth's apprentice, but quits due to not being able match his levels of laziness. Later, Polar Bear abruptly tasks Sasako with being the emcee of a sport competition for animals (in which Handa is the only human participant), while Panda Mama and Mama Red Squirrel quarrel over how to prepare rice balls.",
+      "airdate": "2012-09-13",
+      "markers": [],
+      "external_id": "163566"
+    },
+    {
+      "n": 25,
+      "title": "Mr. Penguin's Hobbies / Their Childhood Days",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Penguin puts on an art exhibition, although none of the paintings are original and go unappreciated by the customers. After Polar Bear and Panda see the exhibit, they and Penguin discuss what hobbies they and other café regulars have. Later, as Polar Bear gets Grizzly to help out with a few things, he tells about how they first met.",
+      "airdate": "2012-09-20",
+      "markers": [],
+      "external_id": "163568"
+    },
+    {
+      "n": 26,
+      "title": "The New Panda! / Reunion at the Grizzly Bar!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As Full Time Panda takes on a side job, he starts to worry when he learns a temp Panda will be coming to the zoo, feeling he might be replaced. As Temp Panda arrives and acts rather sternly towards the other pandas, a ballot is held as to who should be the central panda. Full Time Panda comes in last, though Temp Panda moves onto another site regardless. Meanwhile at the Grizzly Bar, a Tiger, Wolf and Lion have a little reunion. As they lament how they've lost their youth, Polar Bear, who used to be a rap artist (469MA), gives them a surprise performance as a present.",
+      "airdate": "2012-09-27",
+      "markers": [],
+      "external_id": "163572"
+    },
+    {
+      "n": 27,
+      "title": "Animal Field Baseball",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The zoo animals from the Polar Bear's Cafe and the wild animals from Grizzly's bar face off against each other in a baseball match. At the beginning, the zoo team starts to struggle due to some of the animals getting easily distracted. However, Polar Bear manages to win the match by having all the Red Squirrels bat, guaranteeing ball runs. During the interval, the Red Squirrels teach Masaki about how coffee changes taste depending on how much it has been roasted, and he learns from Tree Kangaroo the unpleasant secret behind his favorite coffee, the \"Jacu Coffee\".",
+      "airdate": "2012-10-04",
+      "markers": [],
+      "external_id": "163574"
+    },
+    {
+      "n": 28,
+      "title": "Panda's Apology! / Rin Rin Welcomed!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Polar Bear attempts to fill in for Panda but is questioned by the police. As expiation, Panda decides to give Polar Bear a day off by working at the café in his place, though it's not as easy as he thinks. Meanwhile, Rin Rin is invited out drinking by Full Time Panda, who is curious as to why he considers Panda to be cute but not him.",
+      "airdate": "2012-10-11",
+      "markers": [],
+      "external_id": "163579"
+    },
+    {
+      "n": 29,
+      "title": "Panda's New Part-time Job! / Mr. Penguin Goes Flying!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Panda goes through various part time jobs, including a car dealership, a stock marketer and a lecturer, where he somehow manages to make the respective companies successful and even become a CEO. Later, Penguin has aspirations of flight so the others try various attempts to get him airborne.",
+      "airdate": "2012-10-18",
+      "markers": [],
+      "external_id": "163583"
+    },
+    {
+      "n": 30,
+      "title": "Halloween! / Llama Day!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Polar Bear, Panda and Penguin go trick or treating on Halloween, getting some curious treats from the homes they visit. Tired of being passed over all the time, Llama suggests the zoo should hold a Llama Day. However, the animals struggle with coming up with ideas to make Llama more appealing.",
+      "airdate": "2012-10-25",
+      "markers": [],
+      "external_id": "163585"
+    },
+    {
+      "n": 31,
+      "title": "Mr. Penguin's Dilemma! / Idol: Yama Arashi!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As Penguin is put under the pressure to choose one of the Penko sisters, Llama helps him to differentiate between them, but this soon backfires. As the pressure builds, Panda questions the Penko sisters on why they like Penguin, leading them to realize they don't like Penguin after all. Later, Panda Mama goes with King Penguin Mama to a concert by porcupine pop group Yama Arashi (which is based on the Japanese pop star group Arashi).",
+      "airdate": "2012-11-01",
+      "markers": [],
+      "external_id": "163587"
+    },
+    {
+      "n": 32,
+      "title": "The Café Yard! / Sales Penguins' Sales!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Polar Bear takes the others to see the café's garden where all the ingredients are grown. Meanwhile, the sales penguins attempt to pitch their penguin trading card game to Handa so they can sell it in the zoo's shop, even suggesting they hold a penguin themed hero show to attract customers.",
+      "airdate": "2012-11-08",
+      "markers": [],
+      "external_id": "163589"
+    },
+    {
+      "n": 33,
+      "title": "Panda Corner Contest! / Coffee Roaster Masaki",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Panda becomes depressed as the penguin hero show appears to take customers away from the panda corner. Rin-Rin suggests to Panda that the zoo put on a photo contest to attract more customers. Meanwhile, Masaki has a go at roasting coffee, learning the meaning behind hand picking coffee beans. Despite some initial interest in the photo contest, the panda corner is still overshadowed by the penguin show, which Penguin also participates in. Thus Polar Bear suggests the Panda family put on their own performance, which proves to be a big hit.",
+      "airdate": "2012-11-15",
+      "markers": [],
+      "external_id": "163596"
+    },
+    {
+      "n": 34,
+      "title": "Wolf's Occupation Change / Mr. Penguin's New Love!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Wolf ends up quitting his job at a bakery, so Tiger recruits him for his sweets shops. After Wolf hears about a position at a famous bakery from Panda-Mama, Tiger encourages Wolf to go for it, and he manages to get the job. Later, the gang hear from Llama that Penguin has been visiting the neighboring town's Brown Bear Cafe. As Polar Bear decides to check it out, he learns Penguin has gained a crush on the waitress penguin there, deciding not to come to Polar Bear's Cafe until he works up the courage to ask her out. He eventually confesses but gets rejected, thus returning to Polar Bear's Cafe.",
+      "airdate": "2012-11-22",
+      "markers": [],
+      "external_id": "163598"
+    },
+    {
+      "n": 35,
+      "title": "Sloth Wants To Work! / Mr. Handa's Present",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Sloth starts working part-time at the cafe, though it doesn't prove easy with his speed. When asked why he wants to work, he says he wants to buy Sasako dinner to repay her for all of her help, though Sasako says she needn't do so as he was the one who helped get her job in the first place. Later, Handa asks for Polar Bear and Lesser Panda's help in figuring out what to get Sasako for Christmas. Despite their plans failing, Handa manages to think of something and ends up giving it to Sasako when he runs into her.",
+      "airdate": "2012-11-29",
+      "markers": [],
+      "external_id": "163603"
+    },
+    {
+      "n": 36,
+      "title": "Grizzly's Hibernation Preparations! / Grizzly's Hibernation!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The pandas look for ways to hibernate at the zoo, but Handa calls them out on it. Grizzly takes Polar Bear shopping for a pillow to sleep on during hibernation, but Polar Bear doesn't seem to be interested in that. When Grizzly does get to hibernate, he is rudely interrupted by Polar Bear, who takes him to the driving range. When Panda and Penguin turn up, Grizzly, cranky from lack of sleep, takes them all out to a hot pot bistro.",
+      "airdate": "2012-12-06",
+      "markers": [],
+      "external_id": "163604"
+    },
+    {
+      "n": 37,
+      "title": "Christmas Planning! / Christmas Trouble!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Panda wonders whether he'll get a present for Christmas — until Rin Rin shows up with a knitted pochette for Panda, which the latter accepts reluctantly. Penguin, eager to show off his storytelling, tries in vain to find a party to appear at before deciding on Bar the Grizzly. Panda and Mei Mei argue over whose picture should be sent to Handa as a Christmas present, and Llama and Alpaca use their wool to create scarves and other garments.",
+      "airdate": "2012-12-13",
+      "markers": [],
+      "external_id": "163605"
+    },
+    {
+      "n": 38,
+      "title": "Big Cleaning at the Café / For Whom Does the Bell Toll",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Polar Bear ropes in everyone to do some spring cleaning around the cafe before Panda-Mama brings a salmon for everyone to have hotpot. Later, Polar Bear, Panda, Penguin, Sasako and Llama spend New Year's Eve together, where they reminisce about the past year. They are soon joined by the other animals to see the New Year in.",
+      "airdate": "2012-12-20",
+      "markers": [],
+      "external_id": "163611"
+    },
+    {
+      "n": 39,
+      "title": "The Animals' Hidden Talent Competition! / New Year's Guest.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As the New Year rolls in, the Polar Bear's Cafe holds a hidden talent contest. Later, Penguin comes to visit Panda's home whilst the cafe is closed, which doesn't please Panda very much.",
+      "airdate": "2013-01-10",
+      "markers": [],
+      "external_id": "163613"
+    },
+    {
+      "n": 40,
+      "title": "The Hammock Sea / Panda Mama's Gardening",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Polar Bear sets up a hammock in his garden and invites Panda and Penguin to laze around with him. Later, after Panda upsets Panda-Mama by eating her tulips, he tries and find something to replace them.",
+      "airdate": "2013-01-17",
+      "markers": [],
+      "external_id": "163616"
+    },
+    {
+      "n": 41,
+      "title": "Scattering Beans With Everyone / The Café in the Afternoon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The café holds a Setsubun event, where everyone takes turns being the ogre. Later, Sasako and Llama reminisce about their elementary school days.",
+      "airdate": "2013-01-24",
+      "markers": [],
+      "external_id": "163619"
+    },
+    {
+      "n": 42,
+      "title": "Polar Bear's Insomnia / Mr. Grizzly's First Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The gang try and help Polar Bear as he has trouble sleeping due to insomnia. Later, Polar Bear and Grizzly think back to their high school days, where Grizzly had a crush on a girl Grizzly named Tsukiko. After learning Tsukiko's family was moving, Grizzly helped her find her missing school badge.",
+      "airdate": "2013-01-31",
+      "markers": [],
+      "external_id": "163621"
+    },
+    {
+      "n": 43,
+      "title": "Pun Café! / Mr. Full-Time Panda, Mr. Llama, and Rin Rin!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Fed up with Polar Bear's annoying puns, Grizzly and Penguin try to get everyone in town to beat Polar Bear at his own game. Later, Masaki is told how coffee can taste different depending on how it's prepared, and wonders if he can win over the Red Squirrels with advice from Polar Bear. Afterwards, after a long day at work, Mr. Full-time Panda and Mr. Llama decide to have a few drinks. They later invite Rin Rin, who takes the drunk Panda and Llama to Grizzly's bar, where everyone there gets drunk into the morning.",
+      "airdate": "2013-02-07",
+      "markers": [],
+      "external_id": "163622"
+    },
+    {
+      "n": 44,
+      "title": "The Everyday Zoo! / The Zoo in the Rain.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "After spending the previous day spending time together with him, Panda is shocked to learn that Full-Time Panda has been transferred to a zoo in Singapore, leaving behind a letter expressing his thanks for all the times they spent together. Whilst being incredibly saddened by Full-Time Panda's leave, he agrees to work full time until another panda is hired, causing some worry amongst his friends. When a Valentine's couple end up insulting Panda after two weeks of straight work, Penguin stands up against them. Panda soon cheers up after a new part-time panda is found and gives his thanks to Penguin.",
+      "airdate": "2013-02-14",
+      "markers": [],
+      "external_id": "163628"
+    },
+    {
+      "n": 45,
+      "title": "Rin Rin and Mei Mei's Super Exciting Plan / Smelt Fishing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Rin Rin and Mei Mei find they have some common interests and work together to think of a plan to get closer to Panda and Handa. However, Rin Rin ends up catching a fever, so Mei Mei decides to instead look after him. Later, Polar Bear and the others go to the frozen lakes to do some smelt fishing, though soon get distracted. After Grizzly helps to catch a whole bunch, Polar Bear sets up an igloo cafe to make use of their ingredients.",
+      "airdate": "2013-02-21",
+      "markers": [],
+      "external_id": "163632"
+    },
+    {
+      "n": 46,
+      "title": "Doll Festival / The Animal Doctor",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The younger penguins set up a display for Hina Matsuri, which goes a little awry when the cafe-goers make their own contributions. Grizzly is called in to help them set it up, only to realize that, besides Sasako, there are no girls around to celebrate it. Later, Polar Bear develops a fever and goes to the animal hospital for some medicine. Panda and Penguin decide to come over to look after him, only to end up catching fevers themselves.",
+      "airdate": "2013-02-28",
+      "markers": [],
+      "external_id": "163634"
+    },
+    {
+      "n": 47,
+      "title": "South Pole Squad Penguinger / Even More, What is Roasting!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The Pygoscelis Penguins are approached by a TV studio to do a televised version of South Pole Squad Penginger alongside Yama Arashi, with some of the other animals making cameos. The segment follows the Penguingers as they fight to rescue Yama Arashi from the evil Emperor Penguin. The broadcast is a hit and helps make the zoo more popular. Meanwhile, Polar Bear teaches Masaki how a coffee's richness differs based on how it is prepared. He later learns Tree Kangaroo will let him start roasting his own coffee beans.",
+      "airdate": "2013-03-07",
+      "markers": [],
+      "external_id": "163635"
+    },
+    {
+      "n": 48,
+      "title": "Sloth's Trip / I Became a Doll / White Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Panda and the others end up joining Sloth on a long walk to the hot springs, wanting to get their on his own two feet. Later, the group become paper dolls as they converse in the real world. Meanwhile, Handa tries to figure out what to get Sasako for White Day.",
+      "airdate": "2013-03-14",
+      "markers": [],
+      "external_id": "163637"
+    },
+    {
+      "n": 49,
+      "title": "Mr. Grizzly's Reunion / Mr. Llama's Time Capsule",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Grizzly is visited by his mother, who embarrasses him a little when she starts serving home cooking in his bar. After trying it for himself, however, it soon turns out to be a big hit. Later, Llama, Sasako and the others visit their hometown to find a time capsule Llama buried five years ago. Upon arriving, however, they discover the tree he buried it under is in the middle of a private property. Luckily, they manage to get Badger to dig under the property and retrieve the time capsule. Inside, they find an audio cassette featuring a song Llama's past self sang.",
+      "airdate": "2013-03-21",
+      "markers": [],
+      "external_id": "163642"
+    },
+    {
+      "n": 50,
+      "title": "Mr. Penguin's Secret / Cherry Blossom Viewing in Spring",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Panda becomes curious about what Penguin does when he's not at the cafe. Whilst his investigation doesn't really help him learn Penguin's secrets, he does learn new things about some of the other animals. Later, Polar Bear becomes downhearted when Penguin expresses interest in moving house, though feels relieved once he hears he just intends to renew his apartment lease. Afterwards, everyone gathers around to have a cherry blossom viewing party, looking back on the year they've spent together.",
+      "airdate": "2013-03-28",
+      "markers": [],
+      "external_id": "163646"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Boku ni Invitation (ボクにインビテーション; My Invitation)",
+      "artist": "JP",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bamboo☆Scramble.",
+      "artist": "Jun Fukuyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Rough & Laugh",
+      "artist": "Clammbon",
+      "episodes": "27-38"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Grizzly-san no G★ROCK",
+      "artist": "Yūichi Nakamura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "You & Me",
+      "artist": "Saki and Rie Fu",
+      "episodes": "39-50"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Mizuiro (みずいろ;Aquamarine-Colored)",
+      "artist": "Aya Endo",
+      "episodes": "10-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "ZOO tto, Ne♪ (ZOOっと、ね♪; Forever, Right♪)",
+      "artist": "Katsuyuki Konishi",
+      "episodes": "14-17,44"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Michinoku Shiiku Blues (みちのく飼育ブルース;Michinoku Zookeeper Blues)",
+      "artist": "Wataru Hatano",
+      "episodes": "18-22"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Zokkon! Penko-san (ぞっこん！ペン子さん; With All My Heart! Penko-san)",
+      "artist": "Hiroshi Kamiya",
+      "episodes": "23-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Kimama ni Panda Mama♥ (気ままに パンダママ♥; Selfish Panda Mama)",
+      "artist": "Toshiyuki Morikawa",
+      "episodes": "27-30"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Llama-san no Llama Mambo (ラマさんのラママンボ; Mr. Llama's Llama Mambo)",
+      "artist": "Daisuke Ono",
+      "episodes": "31-35"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Largo (ラルゴ; Rarugo)",
+      "artist": "Kisho Taniyama",
+      "episodes": "36-38"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "Bamboo Rendezvous (バンブー・ランデヴー♥)",
+      "artist": "Kana Hanazawa",
+      "episodes": "39-42"
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "PANDAHOLIC!!",
+      "artist": "Tokuyoshi Kawashima",
+      "episodes": "43, 45-46"
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "My Dear",
+      "artist": "Takahiro Sakurai",
+      "episodes": "47-50"
+    }
+  ],
+  "relations": []
+}

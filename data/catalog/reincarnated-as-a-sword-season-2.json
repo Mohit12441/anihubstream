@@ -1,0 +1,129 @@
+{
+  "id": "reincarnated-as-a-sword-season-2",
+  "title": "Reincarnated as a Sword Season 2",
+  "native": "転生したら剣でした 第2期",
+  "year": 2026,
+  "rating": 7.5,
+  "season": "Fall 2026",
+  "kind": "ONA",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx159042-GGFwlDskc5vR.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159042-GGFwlDskc5vR.png",
+  "accent": "#f19328",
+  "synopsis": "The second season of Tensei Shitara Ken Deshita.\n\nNote: Each episode was streamed one week in advance of the TV broadcast starting on October 1, 2026 on Abema. Regular broadcasting began on October 8, 2026.",
+  "rank": null,
+  "trend_rank": 26,
+  "alt_seasons": [],
+  "sched_day": 3,
+  "sched_day_label": "WED",
+  "sched_date": "Nov 11",
+  "sched_time": "15:30",
+  "sched_season": "Fall 2026",
+  "sched_episode": 7,
+  "sched_sub_at": null,
+  "sched_dub_at": 1793811600000,
+  "source_ids": {
+    "anilist": 159042,
+    "mal": 53913,
+    "hianime": "reincarnated-as-a-sword-season-2-agq2e5",
+    "kitsu": 46917
+  },
+  "skip_key_id": 53913,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-16 11:56:29",
+  "search_text": "reincarnated as a sword season 2 転生したら剣て した 第2期 ona ongoing",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Reincarnated as a Sword Season 2 Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159042-GGFwlDskc5vR.png",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "Reincarnated as a Sword Season 2 Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159042-GGFwlDskc5vR.png",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Reincarnated as a Sword Season 2 Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159042-GGFwlDskc5vR.png",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 4,
+      "title": "Reincarnated as a Sword Season 4 Episode 4",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159042-GGFwlDskc5vR.png",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 5,
+      "title": "Reincarnated as a Sword Season 2 Episode 5",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159042-GGFwlDskc5vR.png",
+      "synopsis": "The second season of Tensei Shitara Ken Deshita.\n\nNote: Each episode was streamed one week in advance of the TV broadcast starting on October 1, 2026 on Abema. Regular broadcasting began on October 8, 2026.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "cloud-sync"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "DREAM OF BUTTERFLY",
+      "artist": "FZMZ",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Baribari Buddy (バリバリBuddy)",
+      "artist": "Hanabie.",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Reincarnated as a Sword (転生したら剣でした; Tensei Shitara Ken Deshita)",
+      "artist": "Kishida Kyōdan & The Akeboshi Rockets",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "more＜STRONGLY",
+      "artist": "Maon Kurosaki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

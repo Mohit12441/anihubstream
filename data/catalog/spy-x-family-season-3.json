@@ -1,0 +1,324 @@
+{
+  "id": "spy-x-family-season-3",
+  "title": "SPY x FAMILY Season 3",
+  "native": "SPY×FAMILY Season 3",
+  "year": 2025,
+  "rating": 8.2,
+  "season": "Fall 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx177937-Tzgg6rAdhCoH.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx177937-Tzgg6rAdhCoH.jpg",
+  "accent": "#e4935d",
+  "synopsis": "World peace is at stake and secret agent Twilight must undergo his most difficult mission yet—pretend to be a family man. Posing as a loving husband and father, he’ll infiltrate an elite school to get close to a high-profile politician. He has the perfect cover, except his wife’s a deadly assassin and neither knows each other’s identity. But someone does, his adopted daughter who’s a telepath!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "SPY x FAMILY Season 2 (2023)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 48939,
+    "anilist": 177937,
+    "mal": 59027,
+    "hianime": "spy-x-family-season-3-x8qqbn"
+  },
+  "skip_key_id": 59027,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 10:10:21",
+  "search_text": "spy x family season 3 spy family season 3 tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "BERLINT PANIC | THE INFORMANT AND NIGHTFALL",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369005/thumbnail/medium-48d3082cc747ee1c43e5b19c45e51fdb.jpeg",
+      "synopsis": "The Forgers enjoy a day off while Nightfall hires Franky to help her on a mission. (Source: Crunchyroll)",
+      "airdate": "2025-10-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 7,
+          "end": 97
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1186,
+          "end": 1276
+        }
+      ],
+      "external_id": "369005"
+    },
+    {
+      "n": 2,
+      "title": "AVOID GETTING TONITRUS BOLTS | ■■■■'s MEMORIES I",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369006/thumbnail/medium-f9c0dc8251e99fd4dac6e1ba52e31600.jpeg",
+      "synopsis": "Anya's class must avoid getting Tonitrus Bolts, and we get a glimpse into someone's past. (Source: Crunchyroll)",
+      "airdate": "2025-10-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1380
+        }
+      ],
+      "external_id": "369006"
+    },
+    {
+      "n": 3,
+      "title": "■■■■'s MEMORIES II",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369007/thumbnail/medium-3bfdcddfbbd83c56d0209bf5989794cd.jpeg",
+      "synopsis": "Loid recalls what happened in the past that led him to where he is today. (Source: Crunchyroll)",
+      "airdate": "2025-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1380
+        }
+      ],
+      "external_id": "369007"
+    },
+    {
+      "n": 4,
+      "title": "BEHIND THE SCANDAL | THE PATH TO AN IMPERIAL SCHOLAR",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369008/thumbnail/medium-a791ce0d629b15741f9af6d398d5bb44.jpeg",
+      "synopsis": "WISE agents protect an opera singer, and Henderson gives Anya tips on becoming an Imperial Scholar. (Source: Crunchyroll)",
+      "airdate": "2025-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1380
+        }
+      ],
+      "external_id": "369008"
+    },
+    {
+      "n": 5,
+      "title": "THE MOMMY-FRIENDS SCHEME",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369009/thumbnail/medium-4935415efe522b83413ea85cda1e6dcd.jpeg",
+      "synopsis": "Yor goes out shopping and happens to save someone quite unexpected. (Source: Crunchyroll)",
+      "airdate": "2025-11-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "369009"
+    },
+    {
+      "n": 6,
+      "title": "WHITE JEALOUSY | THE EDEN COLLEGE BUSJACKING INCIDENT",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369010/thumbnail/medium-8ba7d92064f39f9b32330f5054efb83c.jpeg",
+      "synopsis": "A doctor's jealousy gets Loid into some trouble at the hospital, and Anya's class goes on a field trip. (Source: Crunchyroll)",
+      "airdate": "2025-11-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1380
+        }
+      ],
+      "external_id": "369010"
+    },
+    {
+      "n": 7,
+      "title": "THE RED CIRCUS",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369011/thumbnail/medium-fc0274028519ad87b7f37bb2d304babb.jpeg",
+      "synopsis": "A bus carrying Anya's class is busjacked by some terrorists. (Source: Crunchyroll)",
+      "airdate": "2025-11-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1380
+        }
+      ],
+      "external_id": "369011"
+    },
+    {
+      "n": 8,
+      "title": "TAKE DOWN THE BUSJACKER",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369012/thumbnail/medium-2f190a9c96b9eae7bf6245fa8155d61b.jpeg",
+      "synopsis": "Henderson gets on the bus to give the children food and water. Billy remembers his purpose in life. (Source: Crunchyroll)",
+      "airdate": "2025-11-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "369012"
+    },
+    {
+      "n": 9,
+      "title": "ANYA'S ERA HAS COME",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369013/thumbnail/medium-473033bf9e02b34bb6ed54f9c9f24ed9.jpeg",
+      "synopsis": "Anya, Becky, Damian, and Bill are given Stella Stars for their quick thinking during the busjacking. (Source: Crunchyroll)",
+      "airdate": "2025-11-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 61,
+          "end": 151
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "369013"
+    },
+    {
+      "n": 10,
+      "title": "AUSTIN'S TROUBLES | A NORMAL MIXER | MOON LANDING",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369014/thumbnail/medium-413ae4f1ab7ebcbb987421021c1b9a3a.jpeg",
+      "synopsis": "Mr. Austin is having nightmares after the busjacking incident and Yor goes out with her coworkers. (Source: Crunchyroll)",
+      "airdate": "2025-12-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "369014"
+    },
+    {
+      "n": 11,
+      "title": "EXTREME LEVEL 3 SITUATION",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369015/thumbnail/medium-6775d44e0cbff8f0e042b673b07a1ec4.jpeg",
+      "synopsis": "Twilight and Yuri get an emergency summons from their respective agencies. (Source: Crunchyroll)",
+      "airdate": "2025-12-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "369015"
+    },
+    {
+      "n": 12,
+      "title": "BATTLE TO THE DEATH IN THE SEWERS",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369016/thumbnail/medium-907465297291f4b29df91b61c5333ee6.jpeg",
+      "synopsis": "The WISE agents and the State Security Service agents clash in the sewers. (Source: Crunchyroll)",
+      "airdate": "2025-12-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 25,
+          "end": 115
+        }
+      ],
+      "external_id": "369016"
+    },
+    {
+      "n": 13,
+      "title": "A WORLD WHERE WE CANNOT SURVIVE",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/369017/thumbnail/medium-97ca02e647d3fab21ca8f71b63036ec3.jpeg",
+      "synopsis": "The battle in the sewers reaches its conclusion, and Loid tries to remedy his relationship with Yor. (Source: Crunchyroll)",
+      "airdate": "2025-12-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 17,
+          "end": 104
+        }
+      ],
+      "external_id": "369017"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

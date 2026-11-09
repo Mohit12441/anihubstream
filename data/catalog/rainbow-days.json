@@ -1,0 +1,627 @@
+{
+  "id": "rainbow-days",
+  "title": "Rainbow Days",
+  "native": "虹色デイズ",
+  "year": 2016,
+  "rating": 7,
+  "season": "Winter 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21292-qvGXSWLB5HAd.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21292-qvGXSWLB5HAd.jpg",
+  "accent": "#e4c993",
+  "synopsis": "Nijiiro Days follows the colorful lives and romantic relationships of four high school boys—Natsuki Hashiba, a dreamer with delusions of love; Tomoya Matsunaga, a narcissistic playboy who has multiple girlfriends; Keiichi Katakura, a kinky sadist who always carries a whip; and Tsuyoshi Naoe, an otaku who has a cosplaying girlfriend.\n\nWhen his girlfriend unceremoniously dumps him on Christmas Eve, Natsuki breaks down in tears in the middle of the street and is offered tissues by a girl in a Santa Claus suit. He instantly falls in love with this girl, Anna Kobayakawa, who fortunately attends the same school as him. Natsuki's pursuit of Anna should have been simple and uneventful; however, much to his dismay, his nosy friends constantly meddle in his relationship, as they strive to succeed in their own endeavors of love.\n\n[Written by MAL Rewrite]",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11323,
+    "anilist": 21292,
+    "mal": 31414
+  },
+  "skip_key_id": 31414,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": "2026-10-21 09:27:14",
+  "search_text": "rainbow days 虹色テ イス tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "Natsuki is a hopeless romantic who, just after being dumped by his girlfriend, falls in love with a girl handing out tissues while dressed in a Santa costume. Will Natsuki reconnect with his dream girl?",
+      "airdate": "2016-01-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 129
+        }
+      ],
+      "external_id": "181058"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "The boys decide to break tradition and meet up to make Valentine's chocolates for the girls they admire!",
+      "airdate": "2016-01-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 159,
+          "end": 249
+        }
+      ],
+      "external_id": "181059"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "Tsuyoshi invites the other guys over for a much needed study session, and Natsuki finally spends some quality time with Anna!",
+      "airdate": "2016-01-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 34,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 691,
+          "end": 777
+        }
+      ],
+      "external_id": "181060"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "Natsuki joins the same club as Anna in hopes of getting closer to her. Meanwhile, Keiichi begins to feel left out after his friends become too busy with girls.",
+      "airdate": "2016-01-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 11,
+          "end": 101
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 692,
+          "end": 780
+        }
+      ],
+      "external_id": "181061"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "The boys team up against some older bullies in a game of tennis.",
+      "airdate": "2016-02-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 23,
+          "end": 113
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 691,
+          "end": 780
+        }
+      ],
+      "external_id": "181062"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "Natsuki gets dragged into performing in the school festival's cross-dressing contest and has to cancel his plans with Anna",
+      "airdate": "2016-02-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 10,
+          "end": 100
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 692,
+          "end": 780
+        }
+      ],
+      "external_id": "181063"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "The guys bump into Yukiko and some of her friends while spending a relaxing day at the beach.",
+      "airdate": "2016-02-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 38,
+          "end": 128
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 692,
+          "end": 780
+        }
+      ],
+      "external_id": "181064"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-02-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 691,
+          "end": 780
+        }
+      ],
+      "external_id": "181065"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "Natsuki and the guys practice love confessions, and Tsuyoshi finds the courage to express his feelings to Yukiko.",
+      "airdate": "2016-03-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 103,
+          "end": 193
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 690,
+          "end": 778
+        }
+      ],
+      "external_id": "181066"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "Tsutsui is tired of competing with all of the guys for Anna's attention and is looking forward to spending some time alone with her friend. Unfortunately for her some unwelcome company arrives and spoils her plans.",
+      "airdate": "2016-03-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 107,
+          "end": 194
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 691,
+          "end": 775
+        }
+      ],
+      "external_id": "181067"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181068/original.jpg",
+      "synopsis": "Keiichi turns out to be the knight in shining armor who helped Tomoya's little sister, and she wants to properly thank him. Tomoya is not so keen on the idea.",
+      "airdate": "2016-03-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 13,
+          "end": 103
+        }
+      ],
+      "external_id": "181068"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181069/original.jpg",
+      "synopsis": "Everyone heads to the amusement park for a mini-vacation and concert.",
+      "airdate": "2016-03-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 162
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 693,
+          "end": 780
+        }
+      ],
+      "external_id": "181069"
+    },
+    {
+      "n": 13,
+      "title": "Episode 13",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181070/original.jpg",
+      "synopsis": "Natsuki helps Anna get out of an awkward situation and they end up on the Ferris Wheel. Will this be Natsuki's lucky day?",
+      "airdate": "2016-04-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 31,
+          "end": 121
+        }
+      ],
+      "external_id": "181070"
+    },
+    {
+      "n": 14,
+      "title": "Episode 14",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181071/original.jpg",
+      "synopsis": "A light afternoon of games leads Mari to a personal realization after confiding Tomoyo.",
+      "airdate": "2016-04-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 100,
+          "end": 190
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 691,
+          "end": 777
+        }
+      ],
+      "external_id": "181071"
+    },
+    {
+      "n": 15,
+      "title": "Episode 15",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181072/original.jpg",
+      "synopsis": "Keiichi ends up spending some time alone with Tomoya's little sister while waiting for the others to return with Mari.",
+      "airdate": "2016-04-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 111
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 690,
+          "end": 775
+        }
+      ],
+      "external_id": "181072"
+    },
+    {
+      "n": 16,
+      "title": "Episode 16",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-05-01",
+      "markers": [],
+      "external_id": "181073"
+    },
+    {
+      "n": 17,
+      "title": "Episode 17",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-05-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 15,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 691,
+          "end": 780
+        }
+      ],
+      "external_id": "181074"
+    },
+    {
+      "n": 18,
+      "title": "Episode 18",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-05-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 15,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 692,
+          "end": 777
+        }
+      ],
+      "external_id": "181075"
+    },
+    {
+      "n": 19,
+      "title": "Episode 19",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-05-22",
+      "markers": [],
+      "external_id": "181076"
+    },
+    {
+      "n": 20,
+      "title": "Episode 20",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-05-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 55,
+          "end": 145
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 698,
+          "end": 774
+        }
+      ],
+      "external_id": "181077"
+    },
+    {
+      "n": 21,
+      "title": "Episode 21",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-06-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 20,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 697,
+          "end": 780
+        }
+      ],
+      "external_id": "181078"
+    },
+    {
+      "n": 22,
+      "title": "Episode 22",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-06-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 112,
+          "end": 202
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 691,
+          "end": 780
+        }
+      ],
+      "external_id": "181079"
+    },
+    {
+      "n": 23,
+      "title": "Episode 23",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-06-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 146,
+          "end": 236
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 690,
+          "end": 780
+        }
+      ],
+      "external_id": "181080"
+    },
+    {
+      "n": 24,
+      "title": "Episode 24",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-06-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 162
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 691,
+          "end": 780
+        }
+      ],
+      "external_id": "181081"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Best Friend (ベストフレンド)",
+      "artist": "Sonar Pocket",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rainbow Days!",
+      "artist": "Kouki Uchiyama, Nobunaga Shimazaki, Takuya Eguchi, & Yoshitsugu Matsuoka",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "ONE-SIDED LOVE",
+      "artist": "Sonar Pocket",
+      "episodes": "13-24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Arch (アーチ)",
+      "artist": "Yoshitsugu Matsuoka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "I wanna be your knight",
+      "artist": "Takuya Eguchi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Catch me if you can!",
+      "artist": "Nobunaga Shimazaki",
+      "episodes": "13-16"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Soba ni Iru kara (そばにいるから)",
+      "artist": "Kouki Uchiyama",
+      "episodes": "17-20"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Hallelujah! Shinin' Days (ハレルヤ！Shinin‘Days)",
+      "artist": "Yoshitsugu Matsuoka, Takuya Eguchi, Nobunaga Shimazaki & Kouki Uchiyama",
+      "episodes": "21-26"
+    }
+  ],
+  "relations": []
+}

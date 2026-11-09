@@ -1,0 +1,564 @@
+{
+  "id": "star-blazers-the-quest-for-iscandar",
+  "title": "Star Blazers: The Quest for Iscandar",
+  "native": "宇宙戦艦ヤマト",
+  "year": 1974,
+  "rating": 7.2,
+  "season": "Fall 1974",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx1650-v2eMjvOfnLCc.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx1650-v2eMjvOfnLCc.jpg",
+  "accent": "#e42843",
+  "synopsis": "In the distant future, the war between the human race and the Gamilon has taken its toll on the planet Earth. Constant bombardment of radioactive asteroids has rendered the planet's atmosphere uninhabitable. As a means of relief aid, Queen Starsha of the planet Iscandar offers the Earth Forces a device that can completely neutalize the radiation off the planet. For this task, the space battleship Yamato is launched from the remains of its World War II ancestor on a 148,000 light-year journey. However, the crew of the Yamato has only one Earth year to travel to Iscandar and back, or the human race will come to an end.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "star-blazers:-the-quest-for-iscandar-rnpesm",
+    "mal": 1650,
+    "anilist": 1650,
+    "kitsu": 1483
+  },
+  "skip_key_id": 1650,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "star blazers the quest for iscandar 宇宙戦艦ヤマト tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "SOS Earth! Revive Space Battleship Yamato!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Earth is losing to a superior foe, as the very survival of the planet lies within a message from a distant galax",
+      "airdate": "1974-10-06",
+      "markers": [],
+      "external_id": "162402"
+    },
+    {
+      "n": 2,
+      "title": "The Opening Gun! Space Battleship Yamato Starts!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162414/original.jpg",
+      "synopsis": "Earth is losing to a superior foe, as the very survival of the planet lies within a message from a distant galax",
+      "airdate": "1974-10-06",
+      "markers": [],
+      "external_id": "162414"
+    },
+    {
+      "n": 3,
+      "title": "Yamato Launch! The Challenge of 296,000 Light Years!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162428/original.jpg",
+      "synopsis": "The hope of the Earth lies within an old battleship found at the bottom of what used to be the Great Eastern Sea.",
+      "airdate": "1974-10-13",
+      "markers": [],
+      "external_id": "162428"
+    },
+    {
+      "n": 4,
+      "title": "World of Wonder! Yamato Leaps Past Light!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162439/original.jpg",
+      "synopsis": "The Earth Defense force mission is clear - take the newly rebuilt Yamato 148,000 light years to the planet Iscandar, to retrieve a machine called the Cosmo-Cleaner D which will save Earth from its irradiated state. But will the Gamilas stop them?",
+      "airdate": "1974-10-20",
+      "markers": [],
+      "external_id": "162439"
+    },
+    {
+      "n": 5,
+      "title": "Escape the Floating Continent! Crisis Calls the Wave-Motion Gun!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162460/original.jpg",
+      "synopsis": "The Yamato tests out the Wave Motion Engine's warp capabilities, which will allow them to travel 148,000 light years to Iscandar and back in one year. But will the Gamilas stop them?",
+      "airdate": "1974-10-27",
+      "markers": [],
+      "external_id": "162460"
+    },
+    {
+      "n": 6,
+      "title": "Space Destroyer Yukikaze Sleeps in the Ice Field",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162470/original.jpg",
+      "synopsis": "The Yamato is trapped by Jupiter's gravity.",
+      "airdate": "1974-11-03",
+      "markers": [],
+      "external_id": "162470"
+    },
+    {
+      "n": 7,
+      "title": "Yamato Sinks! Fateful Battle to Destroy the Enemy Stronghold!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162475/original.jpg",
+      "synopsis": "The Yamato searches Saturn's moon, Titan, for a rare mineral.",
+      "airdate": "1974-11-10",
+      "markers": [],
+      "external_id": "162475"
+    },
+    {
+      "n": 8,
+      "title": "Yamato Braves Death! Destroy the Reflex Gun!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162484/original.jpg",
+      "synopsis": "The Yamato faces disaster on the planet Pluto.",
+      "airdate": "1974-11-17",
+      "markers": [],
+      "external_id": "162484"
+    },
+    {
+      "n": 9,
+      "title": "Revolving Defense! Asteroid Belt!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162494/original.jpg",
+      "synopsis": "The Yamato destroys the Reflective Satellite",
+      "airdate": "1974-11-24",
+      "markers": [],
+      "external_id": "162494"
+    },
+    {
+      "n": 10,
+      "title": "Farewell, Solar System! From the Galaxy, with Love!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162501/original.jpg",
+      "synopsis": "Limping along, the Yamato comes up with a new defensive strategy.",
+      "airdate": "1974-12-01",
+      "markers": [],
+      "external_id": "162501"
+    },
+    {
+      "n": 11,
+      "title": "Resolution! Break Through the Gamilons' Absolute Defense Line!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162513/original.jpg",
+      "synopsis": "The Yamato says goodbye to their families before leaving the solar system.",
+      "airdate": "1974-12-08",
+      "markers": [],
+      "external_id": "162513"
+    },
+    {
+      "n": 12,
+      "title": "Certain Death! The Wishing Star of Orion, Hell-Star!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162526/original.jpg",
+      "synopsis": "Gamilas Supreme Commander Desslar unveils a trap that will destroy the Yamato: space mines. But these mines have a sinister function..",
+      "airdate": "1974-12-15",
+      "markers": [],
+      "external_id": "162526"
+    },
+    {
+      "n": 13,
+      "title": "Hurry, Yamato! Earth is Suffering!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162535/original.jpg",
+      "synopsis": "Dessler prepares another trap for the Yamato: an energy net that captures them. The only way out is in the direction of a massive sun, as a huge secret is revealed that might affect the crew.",
+      "airdate": "1974-12-22",
+      "markers": [],
+      "external_id": "162535"
+    },
+    {
+      "n": 14,
+      "title": "The Galaxy's Ordeal! The Year 2200 Advances!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162544/original.jpg",
+      "synopsis": "A Gamilas pilot is captured and the Yamato interrogates him, as Kodai personal tragedy comes into play.",
+      "airdate": "1974-12-29",
+      "markers": [],
+      "external_id": "162544"
+    },
+    {
+      "n": 15,
+      "title": "Desperate Escape! The Galaxy's Different Dimension",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162552/original.jpg",
+      "synopsis": "Tensions mount on the Yamato as she is trapped in a space storm.",
+      "airdate": "1975-01-05",
+      "markers": [],
+      "external_id": "162552"
+    },
+    {
+      "n": 16,
+      "title": "Planet Beeland, Underground Prison of Condemned Criminals",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162561/original.jpg",
+      "synopsis": "Desslar commissions Gamilas General and war hero Domel to defeat the Yamato. The Yamato travels near a galactic whirlpool, but as assist from afar saves their mission.",
+      "airdate": "1975-01-12",
+      "markers": [],
+      "external_id": "162561"
+    },
+    {
+      "n": 17,
+      "title": "Charge! Balanosaurus Special Attack Group!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162569/original.jpg",
+      "synopsis": "Analyzer and Yuki fly down to a planet looking for food for the crew, but are captured by the inhabitants. Analyzer reveals a secret to Yuki that will change both of them.",
+      "airdate": "1975-01-19",
+      "markers": [],
+      "external_id": "162569"
+    },
+    {
+      "n": 18,
+      "title": "Floating Fortress Island! Two Men Brave Death!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162578/original.jpg",
+      "synopsis": "Gale, the general Domel replaced on Balan, devises a plan to destroy the Yamato. Captain Okita is critically ill, and Kodai steps into action.",
+      "airdate": "1975-01-26",
+      "markers": [],
+      "external_id": "162578"
+    },
+    {
+      "n": 19,
+      "title": "Homesickness of Space! My Mother's Tears Are My Tears!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162588/original.jpg",
+      "synopsis": "The Yamato comes across a Gamilas fortress that emits Magnetron waves, which set vibrations into metals and rips them apart. Kodai and Sanada board the fortress using a new seamless plane that Sanada created. They destroy the base, and the Yamato flies on.",
+      "airdate": "1975-02-02",
+      "markers": [],
+      "external_id": "162588"
+    },
+    {
+      "n": 20,
+      "title": "The Day Planet Balan's Sun Fell!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162596/original.jpg",
+      "synopsis": "Chief Communcations Officer Aihara is worried about conditions on Earth. But what does he know that the crew doesn't?",
+      "airdate": "1975-02-09",
+      "markers": [],
+      "external_id": "162596"
+    },
+    {
+      "n": 21,
+      "title": "Desperate Challenge from Lysis' Fleet!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162609/original.jpg",
+      "synopsis": "The Yamato reaches planet Balan, the halfway point in their mission to Iscandar. But Domel is waiting on his base there, and springs a trap that might destroy both the Yamato AND the base...",
+      "airdate": "1975-02-16",
+      "markers": [],
+      "external_id": "162609"
+    },
+    {
+      "n": 22,
+      "title": "Decisive Battle! Fight for Honor at the Rainbow Star Group!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162619/original.jpg",
+      "synopsis": "Gamilas General Domel, pardoned for his failure at Balan, challenges the Yamato to one final battle.",
+      "airdate": "1975-02-23",
+      "markers": [],
+      "external_id": "162619"
+    },
+    {
+      "n": 23,
+      "title": "Finally Arrived! Crest of the Magellanic Cloud's Wave!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162648/original.jpg",
+      "synopsis": "The Yamato battles Domel for the last time.",
+      "airdate": "1975-03-02",
+      "markers": [],
+      "external_id": "162648"
+    },
+    {
+      "n": 24,
+      "title": "Death Struggle! God, Weep for the Gamilons!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162680/original.jpg",
+      "synopsis": "The Yamto finally arrives at the Magellanic Cloud and \"Iscandar\"... but have they found their hope for survival, or their enemy's haven?",
+      "airdate": "1975-03-09",
+      "markers": [],
+      "external_id": "162680"
+    },
+    {
+      "n": 25,
+      "title": "Iscandar! A Dying Planet of Love!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162709/original.jpg",
+      "synopsis": "The Yamato fights on Gamilas, as the Yamato survival depends on wiping out an entire civilization.",
+      "airdate": "1975-03-16",
+      "markers": [],
+      "external_id": "162709"
+    },
+    {
+      "n": 26,
+      "title": "Earth! Yamato Returns!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162724/original.jpg",
+      "synopsis": "The Yamato finally arrives at Iscandar.",
+      "airdate": "1975-03-23",
+      "markers": [],
+      "external_id": "162724"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchū Senkan Yamato (宇宙戦艦ヤマト)",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ginga Densetsu (銀河伝説)",
+      "artist": "Hiromi Iwasaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchū Senkan Yamato (宇宙戦艦ヤマト)",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ai wa Ima mo Hikari (愛は今も光)",
+      "artist": "Ayaka Hirahara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchū Senkan Yamato 2202 (宇宙戦艦ヤマト2202)",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yamato yori Ai o Komete (ヤマトより愛をこめて)",
+      "artist": "Kenji Sawada",
+      "episodes": "1-2,26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchū Senkan Yamato (宇宙戦艦ヤマト)",
+      "artist": "Project Yamato 2199",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchuu Senkan Yamato 2199",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aikotoba (愛詞)",
+      "artist": "Mika Nakashima",
+      "episodes": "2-8"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchuu Senkan Yamato",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ginga Densetsu (銀河伝説)",
+      "artist": "Hiromi Iwasaki",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchuu Senkan Yamato",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Teresa yo towani (Teresa Forever)",
+      "artist": "Isao Sasaki and Feeling Free",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Star Blazers",
+      "artist": "Gli Argonauti [Italian version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Starblazers",
+      "artist": "Santo Verduci [Italian Contactoons version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchū Senkan Yamato (宇宙戦艦ヤマト )",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Makka na Scarf",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Reach for the Star",
+      "artist": "Daisuke Ono",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Tsuki no Kagami (月の鏡)",
+      "artist": "Sayaka Kanda",
+      "episodes": "3-6"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Fight For Liberty",
+      "artist": "UVERworld",
+      "episodes": "16-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Best of my Love",
+      "artist": "Rei Yasuda",
+      "episodes": "9-17"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Wakare (別離)",
+      "artist": "Mitsuko Horie",
+      "episodes": "3-6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Eureka",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Kimi, Hitohira (君、ヒトヒラ)",
+      "artist": "Shino Arima",
+      "episodes": "7-10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Distance",
+      "artist": "Juju",
+      "episodes": "19-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Yamato yo Towa ni (ヤマトよ永遠に)",
+      "artist": "Isao Sasaki",
+      "episodes": "7-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Hikari no Nami",
+      "artist": "Megumi Han",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Crimson Red",
+      "artist": "Yuya Hoshino",
+      "episodes": "11-14,23"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Persona",
+      "artist": "Megumi Ogata",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Yōranka (ようらんか)",
+      "artist": "Shino Arima with Maytree",
+      "episodes": "15-18,24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "itoi",
+      "artist": "Nowlu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Ōinaru Wa (大いなる和)",
+      "artist": "Kōichi Yamadera",
+      "episodes": "19-22,25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Haruka e, Eien e (遥かへ、永遠へ)",
+      "artist": "Junko Yagami",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

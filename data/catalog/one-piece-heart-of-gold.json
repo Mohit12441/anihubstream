@@ -1,0 +1,66 @@
+{
+  "id": "one-piece-heart-of-gold",
+  "title": "One Piece: Heart of Gold",
+  "native": "ONE PIECE 〜ハートオブゴールド〜",
+  "year": 2016,
+  "rating": 7.3,
+  "season": "Summer 2016",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21831-qj5IKYiPOupF.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21831-qj5IKYiPOupF.jpg",
+  "accent": "#f1a10d",
+  "synopsis": "The Straw Hat Pirates meet Olga, a girl who has escaped the island Alchemi. Alchemi was known for its metal production, and for the creation of the extremely valuable Pure Gold, but the island disappeared two hundred years ago. Olga is now being pursued by Marines, interested in Pure Gold. Gildo Tesoro, who controls the Navy HQ and black market, hears of Olga and hires treasure hunter Mad Treasure to track her down. The Straw Hats join forces with Olga in search of the Pure Gold, while she plots to takes advantage of them and use the treasure to become rich herself.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "one-piece:-heart-of-gold-a48za9",
+    "mal": 33338,
+    "anilist": 21831,
+    "kitsu": 12228
+  },
+  "skip_key_id": 33338,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "one piece heart of gold one piece ハートオフ コ ールト special finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "One Piece: Heart of Gold",
+      "runtime": "105:00",
+      "runtime_seconds": 6300,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ad47eb9a79c62b971c18036-poster.jpg",
+      "synopsis": "The Straw Hat Pirates meet Olga, a girl who has escaped the island Alchemi. Alchemi was known for its metal production, and for the creation of the extremely valuable Pure Gold, but the island disappeared two hundred years ago. Olga is now being pursued by Marines, interested in Pure Gold. Gildo Tesoro, who controls the Navy HQ and black market, hears of Olga and hires treasure hunter Mad Treasure to track her down. The Straw Hats join forces with Olga in search of the Pure Gold, while she plots to takes advantage of them and use the treasure to become rich herself.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "186357"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Destiny",
+      "artist": "Maki Ootsuki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

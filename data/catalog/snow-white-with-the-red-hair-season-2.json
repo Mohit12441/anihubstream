@@ -1,0 +1,359 @@
+{
+  "id": "snow-white-with-the-red-hair-season-2",
+  "title": "Snow White with the Red Hair Season 2",
+  "native": "赤髪の白雪姫 2ndシーズン",
+  "year": 2016,
+  "rating": 7.9,
+  "season": "Winter 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21258-6UnmYMTMH0f7.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21258-6UnmYMTMH0f7.jpg",
+  "accent": "#e45d5d",
+  "synopsis": "Shirayuki and Zen Wistalia have finally confirmed their romantic feelings for each other, and everyone has resumed their daily lives. Shirayuki remains an apprentice court herbalist at the royal palace of Clarines, and Zen continues his duties alongside his aides.\n\nHowever, their daily routines are disrupted when Crown Prince Izana, Zen’s older brother, receives an invitation from Raji Shenazard, the prince of Tanbarun. The herbalist finds herself ordered to go to Tanbarun for seven days, to build a new friendship with the formerly selfish and haughty ruler who once ordered Shirayuki to become his concubine. Along the way, Shirayuki is bound to run into trouble once again, as she is sought by a mysterious boy named Kazuki, someone she has never met.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Snow White with the Red Hair (2015)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11179,
+    "anilist": 21258,
+    "mal": 31173
+  },
+  "skip_key_id": 31173,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 14:06:40",
+  "search_text": "snow white with the red hair season 2 赤髪の白雪姫 2ndシース ン tv finished",
+  "genres": [
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Red that Spins Fate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "While helping to clean the medical wing, Shirayuki receives surprising news when Prince Izana reveals to her that Prince Raji has invited her to attend a ball back in Tanbarun.",
+      "airdate": "2016-01-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 133
+        }
+      ],
+      "external_id": "181787"
+    },
+    {
+      "n": 2,
+      "title": "Eyes that Protect and Look Forward",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As Shirayuki gets ready to leave for Tanbarun, Zen and the others search for the mysterious youth, Kazuki.",
+      "airdate": "2016-01-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 85,
+          "end": 175
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1346,
+          "end": 1436
+        }
+      ],
+      "external_id": "181788"
+    },
+    {
+      "n": 3,
+      "title": "Indecision Caused By Confusion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Shirayuki and Raj try to get over their awkwardness with each other in Tanbarun while Zen attends to his duties in Clarines.",
+      "airdate": "2016-01-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 169
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1440
+        }
+      ],
+      "external_id": "181789"
+    },
+    {
+      "n": 4,
+      "title": "The Name of that Step Is Change",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As Shirayuki and Raj continue to explore their relationship, new developments unfold in the hunt for Kazuki in Tanbarun.",
+      "airdate": "2016-02-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 65,
+          "end": 155
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1346,
+          "end": 1433
+        }
+      ],
+      "external_id": "181790"
+    },
+    {
+      "n": 5,
+      "title": "Prologue of the Quietly Twisting Night",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Shirayuki was kidnapped on the night of the ball in Tanbarun, and now Raj and Zen must join forces to save her.",
+      "airdate": "2016-02-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 143,
+          "end": 233
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1346,
+          "end": 1439
+        }
+      ],
+      "external_id": "181791"
+    },
+    {
+      "n": 6,
+      "title": "Many Different Resolves",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Shirayuki and Kazuki are having a tough time on the ship as the princes and their entourage come up with a plan for rescuing them.",
+      "airdate": "2016-02-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 130
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1430
+        }
+      ],
+      "external_id": "181792"
+    },
+    {
+      "n": 7,
+      "title": "Wave of Determination",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The two princes' daring plan to rescue Shirayuki and Kazuki is put into motion, requiring brains, brawn, and not a little derring-do.",
+      "airdate": "2016-02-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 86,
+          "end": 176
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1346,
+          "end": 1425
+        }
+      ],
+      "external_id": "181793"
+    },
+    {
+      "n": 8,
+      "title": "The Temperature of a Smile, a Cherished Place",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Shirayuki and the others visit the village of the Lions of the Mountain, where they have a party to celebrate their victory.",
+      "airdate": "2016-03-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 71,
+          "end": 161
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1433
+        }
+      ],
+      "external_id": "181794"
+    },
+    {
+      "n": 9,
+      "title": "When I'm with You…",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "On their way back to Tanbarun, Shirayuki and the others are caught in the rain and stop at an inn, where they meet a mysterious woman…",
+      "airdate": "2016-03-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 75,
+          "end": 165
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1347,
+          "end": 1436
+        }
+      ],
+      "external_id": "181795"
+    },
+    {
+      "n": 10,
+      "title": "The Spring of Intent Will Quench Your Thirst",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Shirayuki and Zen are back in Clarines, but Zen is forced to have a marriage interview.",
+      "airdate": "2016-03-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 86,
+          "end": 176
+        }
+      ],
+      "external_id": "181796"
+    },
+    {
+      "n": 11,
+      "title": "The Future Because of Who You Are",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Mitsuhide has an accident with a concoction in the medical wing which causes him to behave strangely.",
+      "airdate": "2016-03-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        }
+      ],
+      "external_id": "181797"
+    },
+    {
+      "n": 12,
+      "title": "My Story, My Path",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A message from Tanbarun causes Shirayuki to think again about her future with Zen.",
+      "airdate": "2016-03-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 58,
+          "end": 148
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1301,
+          "end": 1382
+        }
+      ],
+      "external_id": "181798"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sono Koe ga Chizu ni Naru (その声が地図になる;Your Voice Becomes a Map)",
+      "artist": "Saori Hayami",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Page~Kimi to Tsuzuru Monogatari (ページ～君と綴る物語～;Page~The Story I Weave with You)",
+      "artist": "eyelis",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yasashii Kibō (やさしい希望;Gentle Hope)",
+      "artist": "Saori Hayami",
+      "episodes": "12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yasashii Kibō (やさしい希望;Gentle Hope)",
+      "artist": "Saori Hayami",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yasashii Kibō (やさしい希望;Gentle Hope)",
+      "artist": "Saori Hayami",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kizuna ni Nosete (絆にのせて;Placing on Bonds)",
+      "artist": "eyelis",
+      "episodes": "2-"
+    }
+  ],
+  "relations": []
+}

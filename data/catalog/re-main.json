@@ -1,0 +1,326 @@
+{
+  "id": "re-main",
+  "title": "RE-MAIN",
+  "native": "RE-MAIN（リメイン）",
+  "year": 2021,
+  "rating": 6.9,
+  "season": "Summer 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx130549-rYQf51cw4oaw.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx130549-rYQf51cw4oaw.jpg",
+  "accent": "#5de4d6",
+  "synopsis": "Just after winning a national water polo title in his third year of junior high, a car accident left Minato Kiyomizu in a coma. Nearly a year passes before he awakes, but with no memory of his last school year. Now in high school with a fresh start, he leaves the sport behind, but a promise has him returning to it. However, his new team is weak, and that’s just a sign for more problems to come.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44122,
+    "anilist": 130549,
+    "mal": 48406
+  },
+  "skip_key_id": 48406,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 10:26:16",
+  "search_text": "re main re main リメイン tv finished",
+  "genres": [
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sorry, Who Are You?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/3c617fec337f39f112c22517fe12e1891651754169_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 104,
+          "end": 194
+        }
+      ],
+      "external_id": "301148"
+    },
+    {
+      "n": 2,
+      "title": "I'm No Prodigy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/427cdafaa8a8bea662a95b03e8908c5a1651754227_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 209,
+          "end": 299
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1370,
+          "end": 1380
+        }
+      ],
+      "external_id": "301149"
+    },
+    {
+      "n": 3,
+      "title": "But, Give Us a Hendy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/5519ed48b5594a9433b2c45c604ffa9f1651754410_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 182,
+          "end": 273
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1380
+        }
+      ],
+      "external_id": "301150"
+    },
+    {
+      "n": 4,
+      "title": "This Ain't Looking Good...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/9d95b77d8f420582ede0eaec94bb52b41651754589_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 346,
+          "end": 436
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1380
+        }
+      ],
+      "external_id": "301151"
+    },
+    {
+      "n": 5,
+      "title": "Dude, That's Scary!!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/92591b2cdc7d383ad34e4588b3988a751651754838_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 191,
+          "end": 281
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1380
+        }
+      ],
+      "external_id": "306716"
+    },
+    {
+      "n": 6,
+      "title": "Hey! Look this way!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/c899d0b4cfe1622568fed63bf994b8c61651754889_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 164,
+          "end": 254
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1380
+        }
+      ],
+      "external_id": "306717"
+    },
+    {
+      "n": 7,
+      "title": "Auspicious Day",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c970575f87277cd5abd1e7a6e5f2b1c31651755010_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 224,
+          "end": 315
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1380
+        }
+      ],
+      "external_id": "306718"
+    },
+    {
+      "n": 8,
+      "title": "Who Are These Guys?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/9e87a3e3a5f5e490bddf0915a77f11941651755066_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 332,
+          "end": 425
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1380
+        }
+      ],
+      "external_id": "306719"
+    },
+    {
+      "n": 9,
+      "title": "I've Always Been Me",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3aa24cb5e9e8068edd2e1c25704c2cfb1651755202_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 98,
+          "end": 190
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1354,
+          "end": 1380
+        }
+      ],
+      "external_id": "306720"
+    },
+    {
+      "n": 10,
+      "title": "It's the Only Way I Know To Win",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/ca623f15c619f6ac5fccc89117b64a2b1651755218_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 109,
+          "end": 202
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1351,
+          "end": 1380
+        }
+      ],
+      "external_id": "306721"
+    },
+    {
+      "n": 11,
+      "title": "Pass! Pass to Me!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/f12e268b8fe3159581368a06ec79fb931651755322_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 58,
+          "end": 148
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1346,
+          "end": 1380
+        }
+      ],
+      "external_id": "306722"
+    },
+    {
+      "n": 12,
+      "title": "C'mon, Let's Get Started",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/441ade55848f4c00382c7afa27c672eb1651755429_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306723"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Forget Me Not",
+      "artist": "Enhypen",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kowareta Sekai no Byōshin wa (The Second Hand of a Broken World)",
+      "artist": "Shugo Nakamura",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,324 @@
+{
+  "id": "re-creators",
+  "title": "Re:CREATORS",
+  "native": "Re:CREATORS",
+  "year": 2017,
+  "rating": 7.3,
+  "season": "Spring 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97980-9NQwPW0igSMk.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97980-9NQwPW0igSMk.jpg",
+  "accent": "#e4935d",
+  "synopsis": "People have created many stories. Joy, sadness, anger, deep emotion. Stories stir up emotion and captivate. However, those emotions are nothing more than the feelings of a spectator. What if the characters in the stories had their own \"will\"? In their eyes, are we, the creators of the stories, like gods? Revolution for our world. Punishment for the land of the gods. \n\nRe:CREATORS. Everyone becomes a Creator.\n\n(Source: Amazon)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13055,
+    "anilist": 97980,
+    "mal": 34561,
+    "hianime": "re:creators-2qm2tb"
+  },
+  "skip_key_id": 34561,
+  "skip_key_space": "mal",
+  "episode_total": 22,
+  "added_at": "2026-10-14 10:10:21",
+  "search_text": "re creators re creators tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Magnificent Voyage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199773/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-04-08",
+      "markers": [],
+      "external_id": "199773"
+    },
+    {
+      "n": 2,
+      "title": "Dynamite and Cool Guy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199774/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-04-15",
+      "markers": [],
+      "external_id": "199774"
+    },
+    {
+      "n": 3,
+      "title": "Ordinary Although Unique Everyday",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199775/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-04-22",
+      "markers": [],
+      "external_id": "199775"
+    },
+    {
+      "n": 4,
+      "title": "At That Time Say Hello to Him",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199776/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-04-29",
+      "markers": [],
+      "external_id": "199776"
+    },
+    {
+      "n": 5,
+      "title": "This Water is Coldest at the Bottom",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199777/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-05-06",
+      "markers": [],
+      "external_id": "199777"
+    },
+    {
+      "n": 6,
+      "title": "Young Girls, Life is Short so Fall in Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199778/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-05-13",
+      "markers": [],
+      "external_id": "199778"
+    },
+    {
+      "n": 7,
+      "title": "A Small End of the World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199779/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-05-20",
+      "markers": [],
+      "external_id": "199779"
+    },
+    {
+      "n": 8,
+      "title": "Everything I Can Do",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199780/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-05-27",
+      "markers": [],
+      "external_id": "199780"
+    },
+    {
+      "n": 9,
+      "title": "O Blooming Maiden, Dig a Hole",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199781/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-06-03",
+      "markers": [],
+      "external_id": "199781"
+    },
+    {
+      "n": 10,
+      "title": "Freeze, Die, Come to Life!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199782/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-06-10",
+      "markers": [],
+      "external_id": "199782"
+    },
+    {
+      "n": 11,
+      "title": "The Monster Under the Eaves",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199783/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-06-17",
+      "markers": [],
+      "external_id": "199783"
+    },
+    {
+      "n": 12,
+      "title": "Too Early to Roll the Ending Credits",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199784/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-06-24",
+      "markers": [],
+      "external_id": "199784"
+    },
+    {
+      "n": 13,
+      "title": "The Usual Detour, the Way Back",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199785/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-07-01",
+      "markers": [],
+      "external_id": "199785"
+    },
+    {
+      "n": 14,
+      "title": "Why We Travel",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199786/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-07-08",
+      "markers": [],
+      "external_id": "199786"
+    },
+    {
+      "n": 15,
+      "title": "Waves Approach at the End of Wandering",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199787/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-07-15",
+      "markers": [],
+      "external_id": "199787"
+    },
+    {
+      "n": 16,
+      "title": "Wonderful Days",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199788/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-07-29",
+      "markers": [],
+      "external_id": "199788"
+    },
+    {
+      "n": 17,
+      "title": "The Rain's Rhythm Shoots Down on the World's Roof",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199789/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-08-12",
+      "markers": [],
+      "external_id": "199789"
+    },
+    {
+      "n": 18,
+      "title": "Enteriely Imperfect We Are",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199790/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-08-19",
+      "markers": [],
+      "external_id": "199790"
+    },
+    {
+      "n": 19,
+      "title": "If Wrapped in Kindness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199791/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-08-26",
+      "markers": [],
+      "external_id": "199791"
+    },
+    {
+      "n": 20,
+      "title": "Before the Reverberation Disappears",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199792/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-09-02",
+      "markers": [],
+      "external_id": "199792"
+    },
+    {
+      "n": 21,
+      "title": "The World is for the Two of Us",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199793/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-09-09",
+      "markers": [],
+      "external_id": "199793"
+    },
+    {
+      "n": 22,
+      "title": "Re:Creators",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/199794/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-09-16",
+      "markers": [],
+      "external_id": "199794"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "gravityWall",
+      "artist": "SawanoHiroyuki[nZk]: Tielle & Gemie",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "NewLook",
+      "artist": "Mashiro Ayano",
+      "episodes": "1-11"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "shØut",
+      "artist": "SawanoHiroyuki[nZk]:Tielle & Gemie",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "world Étude",
+      "artist": "Aki Toyosaki",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Rubicon (ルビコン)",
+      "artist": "Sangatsu no Phantasia",
+      "episodes": "13-26"
+    }
+  ],
+  "relations": []
+}

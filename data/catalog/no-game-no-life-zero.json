@@ -1,0 +1,66 @@
+{
+  "id": "no-game-no-life-zero",
+  "title": "No Game, No Life Zero",
+  "native": "ノーゲーム・ノーライフ ゼロ",
+  "year": 2017,
+  "rating": 7.9,
+  "season": "Summer 2017",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21875-ybSgx75MgRMM.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21875-ybSgx75MgRMM.png",
+  "accent": "#50aee4",
+  "synopsis": "Six thousand years before Sora and Shiro were even a blink in the history of Disboard, war consumed the land, tearing apart the heavens, destroying stars, and even threatening to wipe out the human race. Amid the chaos and destruction, a young man named Riku leads humanity toward the tomorrow his heart believes in. One day, in the ruins of an Elf city, he meets Schwi, a female exiled \"Ex Machina\" android who asks him to teach her what it means to have a human heart.\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "no-game-no-life:-zero-vy5kpi",
+    "mal": 33674,
+    "anilist": 21875,
+    "kitsu": 12325
+  },
+  "skip_key_id": 33674,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "no game no life zero ノーケ ーム ノーライフ セ ロ movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "No Game, No Life Zero (Movie)",
+      "runtime": "106:00",
+      "runtime_seconds": 6360,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a93cbedcf53bfc7bd7f553b-landscape.webp",
+      "synopsis": "In ancient Disboard, Riku is an angry, young warrior intent on saving humanity from the warring Exceed, the 16 sentient species, fighting to establish the One True God among the Old Deus. In a lawless land, humanity's lack of magic and weak bodies have made them easy targets for the other Exceed, leaving the humans on the brink of extinction. \n\nOne day, however, hope returns to humanity when Riku finds a powerful female Ex-Machina, whom he names Schwi, in an abandoned elf city. Exiled from her Cluster because of her research into human emotions, Schwi is convinced that humanity has only survived due to the power of these feelings and is determined to understand the human heart. Forming an unlikely partnership in the midst of the overwhelming chaos, Riku and Schwi must now find the answers to their individual shortcomings in each other, and discover for themselves what it truly means to be human as they fight for their lives together against all odds. Each with a powerful new ally in tow, it is now up to them to prevent the extinction of the human race and establish peace throughout Disboard.\n\n[Written by MAL Rewrite]",
+      "airdate": null,
+      "markers": [],
+      "external_id": "187816"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "There Is a Reason",
+      "artist": "Konomi Suzuki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

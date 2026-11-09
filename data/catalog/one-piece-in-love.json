@@ -1,0 +1,55 @@
+{
+  "id": "one-piece-in-love",
+  "title": "Koisuru ONE PIECE",
+  "native": "恋するワンピース",
+  "year": 2025,
+  "rating": 6.6,
+  "season": "Spring 2025",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx188668-rOB7rkgOz89w.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx188668-rOB7rkgOz89w.jpg",
+  "accent": "#35bbf1",
+  "synopsis": "The premise of this spinoff is about three high school students: a young male student, his girlfriend and a third wheel who is a One Piece fanatic. Their names are similar to the Straw Hat Pirates and the group form a fan club dedicated to One Piece.\n\n(Source: One Piece Wiki)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "one-piece-in-love-zjjgld",
+    "mal": 61293,
+    "anilist": 188668,
+    "kitsu": 49712
+  },
+  "skip_key_id": 61293,
+  "skip_key_space": "mal",
+  "episode_total": 5,
+  "added_at": null,
+  "search_text": "koisuru one piece 恋するワンヒ ース ona finished",
+  "genres": [
+    "comedy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "5:00",
+      "runtime_seconds": 300,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "386377"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

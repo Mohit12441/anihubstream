@@ -1,0 +1,236 @@
+{
+  "id": "solo-leveling-season-2-arise-from-the-shadow",
+  "title": "Solo Leveling Season 2 -Arise from the Shadow-",
+  "native": "俺だけレベルアップな件 Season 2 -Arise from the Shadow-",
+  "year": 2025,
+  "rating": 8.4,
+  "season": "Winter 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx176496-9BDMjAZGEbq4.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176496-9BDMjAZGEbq4.png",
+  "accent": "#e45093",
+  "synopsis": "Mastering his new abilities in secret, Jin-U must battle humanity's toughest foes to save his mother.\n\n(Source: Crunchyroll News)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "solo-leveling-season-2:-arise-from-the-shadow-u8dd8k",
+    "mal": 58567,
+    "anilist": 176496,
+    "kitsu": 48671
+  },
+  "skip_key_id": 58567,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "solo leveling season 2 arise from the shadow 俺た けレヘ ルアッフ な件 season 2 arise from the shadow tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "You Aren't E-Rank, Are You?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365797/thumbnail/93677521b68968fb7e0c81b6112000f8.jpg",
+      "synopsis": "After a scheduled meeting with Jinah's teachers, Jinwoo is asked to talk to one of her classmates, Han Song-yi, who is working as a hunter. In an effort to show her the harsh reality of the job, Jinwoo takes her to a raid designated for new hunters of the White Tiger guild.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 103,
+          "end": 193,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1325,
+          "end": 1414,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "365797"
+    },
+    {
+      "n": 2,
+      "title": "I Suppose You aren't Aware",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365798/thumbnail/f8ce69c1d5ebde0c4fc5c26930fdb48d.jpg",
+      "synopsis": "After being trapped inside of a red gate, Jinwoo has to contend with a bloodthirsty pack of ice elves who question his humanity.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 26,
+          "end": 114,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "365798"
+    },
+    {
+      "n": 3,
+      "title": "Still a Long Way to Go",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365799/thumbnail/abe50992db09e4a09be2bfe1bf8593bd.jpg",
+      "synopsis": "Having completed his promise to Jinho to clear 19 dungeons, Jinwoo is stronger than he was when he fought the Cerberus. In order to gather the ingredients for the Elixir of Life and save his mother, he once again enters the S-Rank Demon's Castle dungeon.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 109,
+          "end": 199,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1322,
+          "end": 1417,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "365799"
+    },
+    {
+      "n": 4,
+      "title": "I Need to Stop Faking",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365800/thumbnail/5691573bcdda1b8cd27523a2dece3dde.jpg",
+      "synopsis": "Jinwoo realizes that he'll need to become even stronger in order to clear the Demon's Castle and decides to have his hunter rank reassessed.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-25",
+      "markers": [],
+      "external_id": "365800"
+    },
+    {
+      "n": 5,
+      "title": "This is What We're Trained To Do",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365801/thumbnail/09bfa17de465a8d6de9159e03b2b56ce.jpg",
+      "synopsis": "Before attempting to finish the Demon's Castle, Jinwoo decides to earn some money to help prepare.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-01",
+      "markers": [],
+      "external_id": "365801"
+    },
+    {
+      "n": 6,
+      "title": "Don't Look Down on My Guys",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365802/thumbnail/35d6298ea9bd2a1b943cb5f91c43029f.jpg",
+      "synopsis": "The Hunters Guild strike team is confronting the high orc shaman Kargalgan when Jinwoo crashes the fight.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-08",
+      "markers": [],
+      "external_id": "365802"
+    },
+    {
+      "n": 7,
+      "title": "The 10th S-Rank Hunter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365803/thumbnail/11b83e4ee24caa734285feb4ca08dc95.jpg",
+      "synopsis": "Jinwoo officially becomes an S-Rank hunter, allowing him to finalize his preparations for the Demon's Castle.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-15",
+      "markers": [],
+      "external_id": "365803"
+    },
+    {
+      "n": 8,
+      "title": "Looking Up Was Tiring Me Out",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365804/thumbnail/883caa7e156d34842636bd3f72f68a1c.jpg",
+      "synopsis": "Seeking the remaining ingredient for the Elixir of Life, Jinwoo continues his conquest of the Demon's Castle.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-22",
+      "markers": [],
+      "external_id": "365804"
+    },
+    {
+      "n": 9,
+      "title": "It was All Worth It",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365805/thumbnail/255fce09755a4e01656b131b13ddab14.jpg",
+      "synopsis": "Jinwoo tries to cure his mother with the Elixir of Life while preparations for the 4th Jeju Island Raid begin.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-01",
+      "markers": [],
+      "external_id": "365805"
+    },
+    {
+      "n": 10,
+      "title": "We Need A Hero",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365806/thumbnail/b0987c47cd83153709f90e10e3b12260.jpg",
+      "synopsis": "Sparks fly as the S-Rank hunters spar in preparation for the Jeju Island raid.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-08",
+      "markers": [],
+      "external_id": "365806"
+    },
+    {
+      "n": 11,
+      "title": "It's Going to Get Even More Intense",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365807/thumbnail/353981d9689d025e5a5b1da4f4bf0363.jpg",
+      "synopsis": "As the S-Rank hunters continue fighting, they're confronted by a new magic beast resembling a humanoid ant.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-15",
+      "markers": [],
+      "external_id": "365807"
+    },
+    {
+      "n": 12,
+      "title": "Are You the King of Humans",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/365808/thumbnail/4e092b6f638b730d2bd2a2e6f1b426f2.jpg",
+      "synopsis": "Jinwoo arrives at Jeju Island to save the S-Rank hunters, but to do that he'll have to face the Ant King.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-22",
+      "markers": [],
+      "external_id": "365808"
+    },
+    {
+      "n": 13,
+      "title": "On to the Next Target",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/377091/thumbnail/fb0d04015540af81b2d936e948a38239.jpg",
+      "synopsis": "After no shortage of hardship, the 4th Jeju Island raid comes to a close. But for Jinwoo, the hunt never ends.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-29",
+      "markers": [],
+      "external_id": "377091"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "ReawakeR",
+      "artist": "LiSA feat. Felix of Stray Kids",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "UN-APEX",
+      "artist": "TK from Ling Tosite Sigure",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,194 @@
+{
+  "id": "silver-spoon",
+  "title": "Silver Spoon",
+  "native": "銀の匙",
+  "year": 2013,
+  "rating": 7.9,
+  "season": "Summer 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16918-0biAxYFR29mw.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16918-0biAxYFR29mw.png",
+  "accent": "#50aee4",
+  "synopsis": "Yugo Hachiken dreams of life separated from his family, so he takes the initiative by enrolling in an agriculture school. He thinks, with his talent in studying, no problems will arise no matter what kind of school he attends. He is proven wrong very quickly. Raised as a city boy, he is forced to uncover the inconvenient truth about agricultural life. Enjoy the story of Hachiken, as he tries to keep up with his new friends, farmers' heirs, who are already accustomed to the harsh world of farming. With no clear goals or understanding of farming life, how will Hachiken survive this new, cruel reality? The story of a sweat, tear, and mud-stained youth begins!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "silver-spoon-z9kz1d",
+    "mal": 16918,
+    "anilist": 16918,
+    "kitsu": 7553
+  },
+  "skip_key_id": 16918,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": null,
+  "search_text": "silver spoon 銀の匙 tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Welcome to Ezonoo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109715/original.jpg",
+      "synopsis": "Running away from home, Yugo Hachiken leaves the urban life at Sapporo to enroll at the Ezono Agricultural High School and it does not take long for him to learn that adapting himself to his new environment will not be easy.",
+      "airdate": "2013-07-12",
+      "markers": [],
+      "external_id": "109715"
+    },
+    {
+      "n": 2,
+      "title": "Hachiken Rides a Horse",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109716/original.jpg",
+      "synopsis": "Getting used to his new environment, Hachiken must enroll at one of the school clubs according to the curriculum, and encouraged by his classmate Aki Mikage, he ends up joining her at the equestrian club. However, he spends the day doing menial tasks like cleaning the stables and just when he is starting to regret his decision, he is invited to experience the joy of riding a horse for the first time.",
+      "airdate": "2013-07-19",
+      "markers": [],
+      "external_id": "109716"
+    },
+    {
+      "n": 3,
+      "title": "Hachiken Meets Pork Bowl",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109717/original.jpg",
+      "synopsis": "With most of the students on leave at Golden Week, Hachiken, Aki and their classmate Ichiro Komaba watch a Ban'ei horse race together, and despite the horse bred at Aki's farm do not win, she gets some relief learning that he gets well placed enough to have a chance of not being killed for livestock. After returning to the school, he pities a piglet that is the weakest and smallest among its siblings and decides to take care of it, just to later know that it will be sent to the slaughterhouse in three months.",
+      "airdate": "2013-07-26",
+      "markers": [],
+      "external_id": "109717"
+    },
+    {
+      "n": 4,
+      "title": "Hachiken Bakes Pizza",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109718/original.jpg",
+      "synopsis": "While on cleaning duty, Hachiken stumbles on an abandoned oven and his classmates convince him to make pizza with it, as most of them never ate one before. As Hachiken and his friends gather the necessary supplies throughout the campus, a teacher from his old school and Sapporo drops at Ezo to check on him.",
+      "airdate": "2013-08-02",
+      "markers": [],
+      "external_id": "109718"
+    },
+    {
+      "n": 5,
+      "title": "Hachiken Runs Off",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109719/original.jpg",
+      "synopsis": "The boys take heed of a certain special event to be held at night and come with a plan to slip past curfew to get a glimpse of it. Having no idea about what is it or why his classmates are so pumped up with it, Hachiken ends up dragged along in their scheme.",
+      "airdate": "2013-08-09",
+      "markers": [],
+      "external_id": "109719"
+    },
+    {
+      "n": 6,
+      "title": "Hachiken Goes to Stay with the Mikages",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109720/original.jpg",
+      "synopsis": "Hachiken learns that the dorms will be closed for summer vacation but refusing to return home, he accepts Mikage's offer to work at her family's farm. However, once realizing that he has not warned his parents about it, he looks for a place with cellphone signal until he gets lost and is rescued by Komaba.",
+      "airdate": "2013-08-16",
+      "markers": [],
+      "external_id": "109720"
+    },
+    {
+      "n": 7,
+      "title": "Hachiken Goes to Giga Farm",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109721/original.jpg",
+      "synopsis": "Hachiken and Mikage take a break from work and pay a visit to Giga Farm, a huge industrial farm that belongs to their classmate Tamako Inada's family. In the occasion, Hachiken learns about the rather harsh reality of the animals living there and realizes Mikage's worries about her family's expectations for her future.",
+      "airdate": "2013-08-23",
+      "markers": [],
+      "external_id": "109721"
+    },
+    {
+      "n": 8,
+      "title": "Hachiken Makes a Huge Mistake",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109722/original.jpg",
+      "synopsis": "Hachiken's older brother Shingo pays a visit at the Mikage farm to check on him, much to his young brother's chagrin. Just as his part-time job is about to finish, Hachiken's carelesness lead to a huge prejudice to the farm and willing to take responsibility for it, refuses to be paid for his work, but he is convinced by the Mikages to accept as they consider that all the help he provided them during these three weeks were worth it despite what happened.",
+      "airdate": "2013-08-30",
+      "markers": [],
+      "external_id": "109722"
+    },
+    {
+      "n": 9,
+      "title": "Hachiken Hesitates over Pork Bowl",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109723/original.jpg",
+      "synopsis": "Back from summer break, Hachiken learns that Pork-Bowl has not grown as much as its peers and takes extra measures to ensure that it gains weight faster, even knowing that this will make things even more painful for him when the time comes to part with it.",
+      "airdate": "2013-09-06",
+      "markers": [],
+      "external_id": "109723"
+    },
+    {
+      "n": 10,
+      "title": "Hachiken Says Goodbye to Pork Bowl",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109724/original.jpg",
+      "synopsis": "The time has come for Pork-Bowl to be sent to the slaughterhouse and Hachiken decides to make use of the money he earned during summer vacation to buy all its meat. After the meat is delivered to him, Hachiken's friends come with several ideas about what to do with it.",
+      "airdate": "2013-09-13",
+      "markers": [],
+      "external_id": "109724"
+    },
+    {
+      "n": 11,
+      "title": "Take Off Running, Hachiken",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/109725/original.jpg",
+      "synopsis": "The bacon Hachiken prepared with Pork-Bowl's meat becomes a fad among the students and it does not take long for it to run out. As Komaba plays in the local Baseball team aiming for the nationals, his friends come to the stadium to cheer for him and Hachiken realizes that six months has passed since he enrolled in Ezono and unlike his friends, he still has not decided what path he should take in life.",
+      "airdate": "2013-09-20",
+      "markers": [],
+      "external_id": "109725"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Life",
+      "artist": "Fujifabric",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Oto no Naru Hō e",
+      "artist": "Goose house",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kiss you",
+      "artist": "miwa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hello Especially",
+      "artist": "Sukima Switch",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

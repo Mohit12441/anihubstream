@@ -1,0 +1,386 @@
+{
+  "id": "saiyuki-reload",
+  "title": "Saiyuki Reload",
+  "native": "最遊記RELOAD",
+  "year": 2003,
+  "rating": 7,
+  "season": "Fall 2003",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx130-f0o2z5QN9qeO.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx130-f0o2z5QN9qeO.png",
+  "accent": "#e4bb5d",
+  "synopsis": "Priest Genjo Sanzo and companions Cho Hakkai, Sha Gojyo, and Son Goku maintain their westward journey to stop the resurrection of the demon Gyoumao. As the reputation of the Sanzo Ikkou precedes them, they continue to fight demon assassins at every turn, but they must also deal with increasing tensions within their group in order to defeat a powerful enemy.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "saiyuki-reload-lbwt0g",
+    "mal": 130,
+    "anilist": 130,
+    "kitsu": 109
+  },
+  "skip_key_id": 130,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": null,
+  "search_text": "saiyuki reload 最遊記reload tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Bullets are Reloaded ++RUN++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Our friends come to a peaceful little town and wore disguises to avoid unnecessary attention. Their strange behavior roused the curiosity of Seikan, a little girl whose family runs the inn the boys are staying in. With the current rumors of young women being murdered by youkais, Seikan starts to panic when she overhears the ikkhou's strange conversation and begins to suspect that they are the youkais. Later that night, her elder sister, Seiwei did not return from running some errands. Now it is up to Sanzo and his companions to reveal themselves and save Seiwei before anything happens to her.",
+      "airdate": "2003-10-02",
+      "markers": [],
+      "external_id": "3280"
+    },
+    {
+      "n": 2,
+      "title": "Squirming Trap ++Wanted Dead or Alive++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "They are hungry and tired after a long journey. All they want to do is eat and drink to their hearts contents. The food was good, but trouble breaks out when Gojyo complains to the restaurant owner that his place is unhygienic due to the amount of flies hovering around and begins swatting them with Sanzo's harisen. It seems that the people in that town are being controlled by bugs placed by a youkai. To make matters worse, Lirin pays Sanzo-ikkhou a visit only to be infected by the youkai's bug.",
+      "airdate": "2003-10-09",
+      "markers": [],
+      "external_id": "3281"
+    },
+    {
+      "n": 3,
+      "title": "The Most Powerful Foes in History ++Lethal Weapon++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sanzo-ikkhou vs....Sanzo-ikkhou?? Yep, this episode features Sanzo and company fighting themselves. It is always said that your strongest opponent is yourself, so lets see how Sanzo and company cleans up this mess. How do you fight against yourself?\n\nNote: If you really want to compare the difference between the lead characters in Gensomaden and in RELOAD, this is one episode for you.",
+      "airdate": "2003-10-16",
+      "markers": [],
+      "external_id": "3282"
+    },
+    {
+      "n": 4,
+      "title": "A Final Promise ++Negative Energy++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Minus wave have caused youkais in Togenkyo to turn wild and attack humans. But there is still few of those who are not affected by the minus wave. Rempa, a very talented youkai artist is one of those who still have the ability to control themselves and retain their personality. He had a very good childhood human friend, Rinran. In fact in the show you can see that they are very close to each other. Rempa made a promise to Rinran: A portrait of Rinran for her birthday present. Rempa vowed to himself to finish the portrait before he loses himself, if that's the last thing he would do.",
+      "airdate": "2003-10-23",
+      "markers": [],
+      "external_id": "3283"
+    },
+    {
+      "n": 5,
+      "title": "Slumbering Memory ++Voice++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "While resting at a peaceful countryside, Sanzo-ikkhou meets a beautiful female youkai. As they pulled up their defenses, the villagers came to her aid and pleaded them not to attack her claiming that she is their Lullaby Lady. Sensing no evil intent from her, Sanzo and his companions take in her hospitality. Later, they learn that the Lullaby Lady sings every night so that everyone in the village will have a good night's sleep. She does this by taking away their most painful memories. But losing one's bitter memory can prove to be fatal.\n\nGoku finds his friends behaving strangely the next morning and he is later abandoned in the middle of the desert when the others suddenly refused to continue on their journey.",
+      "airdate": "2003-10-30",
+      "markers": [],
+      "external_id": "3284"
+    },
+    {
+      "n": 6,
+      "title": "Recapture ++Sad Memory++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The episode continues where episode 5 left off. Goku told Yaone, Lirin and Dokugakuji of what happened the day before. While the others are trying to get into the village which was protected by the youkai's vocal barrier (kekkai), Kougaiji appeared and decides to help Goku get back his friends and also their memories.",
+      "airdate": "2003-11-06",
+      "markers": [],
+      "external_id": "3285"
+    },
+    {
+      "n": 7,
+      "title": "Tiny Pal ++Little Will++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Think of words to describe Sanzo. Brutal, corrupt, self-centered, arrogant, haughty...\nHe sounds like some tough unbreakable, high-ranking priest. But who would suspect the great Sanzo-sama has a teeny little weakness?\n\nAfter fighting off a group of youkai, they meet a most unexpected company. A little kitten. As Goku, Hakkai and Gojyo started playing with it, the sight of this furball sent Sanzo into a sneezing fit. (View it here -> Sneezing Sanzo by :devblumarine:)\n\nDespite his protest, his companions decide to keep the kitten. Sanzo later discovers that there is more to this little kitten than just a allergy-causing furball.",
+      "airdate": "2003-11-13",
+      "markers": [],
+      "external_id": "3286"
+    },
+    {
+      "n": 8,
+      "title": "Delicious Cuisine ++Poison++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Have you ever tasted food that taste so bad, you'd fall after eating it? Kouren makes steamed buns for the town but her steam buns are not meant to be consumed. Instead, they are the town's defence against youkais. Her buns taste so bad anyone who eats it will definately fall. Goku was one of the victim of her buns, being one who eats watever edibles he sees. Not only her buns taste bad, but the other things she cooks taste just as bad. She's simply a bad cook. Seeing Kouren sad that she couldn't cook for her fiancee, Hakkai took to teaching her how to cook but to no avail. Youkais later attacked. Will her cooking save them from the youkais? What is the mystery behind this girls awful cooking? Will Hakkai finally be able to help her cook a good meal for her fiancée?",
+      "airdate": "2003-11-20",
+      "markers": [],
+      "external_id": "3287"
+    },
+    {
+      "n": 9,
+      "title": "The Unfallen Castle ++Self Defense++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Having Hakuryuu burnt out from the long tiring journey, Sanzo-ikkhou decided to stop by a city where there the people there live their everyday life according to the '780 Discipline'. The city is surrounded by a fortress which is said to be unbreakable. Upon arrival, Sanzo-ikkhou are greeted by flying arrows as they were thought to be intruders. The city lord, Souryu later met them and apologized for the sudden attack. They were welcomed into the city and later invited to a meal. Being used to living free and uncontrolled, Sanzo-ikkhou felt constrained and uncomfortable living in the rule-driven city. When youkais came to attack the city, they were well prepared and armed. When the city lord discovers that his son, Kensei is outside the city fortress, he decided to go by the rules and ordered his men not to open the gates of the fortress. What would become of Kensei How will the people of the city survive if they were confronted by a situation which is not in the rule-book?",
+      "airdate": "2003-11-27",
+      "markers": [],
+      "external_id": "3288"
+    },
+    {
+      "n": 10,
+      "title": "Youkai Genjo Sanzo ++Trick or Treat++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Fancy seeing the boys all sweaty and dressed in nothing but towels? In this episode, you'll see a lot of sexy legs and pale colored thighs. Our friends check into a five-star hotel. While enjoying the sauna, a question popped up between them. Will Sanzo turn youkai after killing a thousand youkais?\n\nThis made Goku overtly agitated about Sanzo's well being. Soon, he starts seeing a change in Sanzo from growing fingernails to pointy ears.\nIs Sanzo really turning into a youkai or is this merely Goku's imagination?",
+      "airdate": "2003-12-04",
+      "markers": [],
+      "external_id": "3289"
+    },
+    {
+      "n": 11,
+      "title": "Gentle Face ++Mother++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Shunto and Rikito are two orphaned child whose mother have passed recently. Being the younger child, Shunto is unable to cope with the absence of his mother and goes to a small temple to pray everyday so that his mother will come back to him, even though this was against his older brother's idea.\n\nOne day Ririn happen to pass by the small temple and saw two apples placed there as worshipping items. Being naïve and hungry, she would have taken those fruits if it was not for Shunto stopping her. After hearing Shunto's story, she asked Shunto if his mother was kind and wanted to meet Shunto's mother as her own mother wasn't very kind to her. She decided to help Shunto and Rikito to get their mother back.",
+      "airdate": "2003-12-11",
+      "markers": [],
+      "external_id": "3290"
+    },
+    {
+      "n": 12,
+      "title": "The Spirited-Away Mountain ++Tiny Dream++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "In the middle of a daily youkai fight, Goku was thrown off a cliff and landed in a misty forest. The mist was so thick, Goku couldn't find his way out, nor could his companions find him. A girl, Shion later found Goku and led him to her house.\n\nBeing the usual saru who will be friendly with anyone who gives him good food, he ate a sumptuous meal at Shion's house without a single suspicion even though Shion's parents acted a little strange. Shion later brought Goku to meet his companions but Goku could sense something amiss when he met them. But before he could do anything, a rock monster appeared and said that Goku was going to be his meal. He had used Shion to lure Goku into his trap.\n\nWhy would this sweet girl be working for the rock monster? How will Goku get out alive?",
+      "airdate": "2003-12-18",
+      "markers": [],
+      "external_id": "3291"
+    },
+    {
+      "n": 13,
+      "title": "Just a teeny-tiny Story ++Lovely Baby++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "As the title suggests, this episode is really a little story entirely about how important Harkuryuu (or in some places he's know as Jeep) is to Sanzo and his companions.\n\nThe story starts off with the men checking into an inn that prohibits them from bringing pets in. Therefore, Harkuryuu is to be left outside in jeep form. He soon catches a little cold and sneezes in the presence of three little children. At the same time, a bunch of robbers were looking for something 'big and expensive' to steal for their boss.\n\nWhen Hakkai comes out later to check on Harkuryuu, the jeep is no longer there. Worried, Hakkai goes to tell the rest of them about Harkuryuu's sudden dissapearance, leading them to wonder if the dragon had run away. Then another question arises. How are they going to continue their journey without the jeep?",
+      "airdate": "2003-12-27",
+      "markers": [],
+      "external_id": "3292"
+    },
+    {
+      "n": 14,
+      "title": "Murmurs of the Darkness ++Black Crow++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Kougaiji had to do his stepmother's bidding in order to save his hahawe* who was cursed in by Gyokumen Kyoshu to remain as a stone statue on the pillar. Gyokumen has questioned Kougaiji's capability of obtaining Sanzo's kyomon* which was vital in reviving Gyuumoao. Gyokumen threatens that if Kou is not capable of obtaining the kyomon, his hahawe will be stuck on the pillar forever.\n\nMeanwhile, Sanzo-ikkhou had to pass a desert in order to get to the next town. On their way there, they were attacked by a youkai who releases poisonous gas. He was easily defeated by the Maten Kyomon's demon purifying power, but not before he poisoned Sanzo. Before Sanzo's companions could make a move to rush him to a doctor, Kougaiji appeared before them and demanded a fight. This time however, he was alone. But what Sanzo-ikkhou did not expect was that the prince was having a device that will increase his power but not without certain side effects. As Sanzo-ikkhou refuse to comply to Kou's demant to hand over the kyomon, they resolve to fight. If Sanzo-ikkhou wins, they get Kou's hiryuu* which will enable them to fly to the next town to get Sanzo treated quickly but if Kou wins, he will get Sanzo's kyomon.",
+      "airdate": "2004-01-08",
+      "markers": [],
+      "external_id": "3293"
+    },
+    {
+      "n": 15,
+      "title": "Premonition ++ Secret Ambition++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Kougaiji had to do his stepmother's bidding in order to save his hahawe* who was cursed in by Gyokumen Kyoshu to remain as a stone statue on the pillar. Gyokumen has questioned Kougaiji's capability of obtaining Sanzo's kyomon* which was vital in reviving Gyuumoao. Gyokumen threatens that if Kou is not capable of obtaining the kyomon, his hahawe will be stuck on the pillar forever.\n\nMeanwhile, Sanzo-ikkhou had to pass a desert in order to get to the next town. On their way there, they were attacked by a youkai who releases poisonous gas. He was easily defeated by the Maten Kyomon's demon purifying power, but not before he poisoned Sanzo. Before Sanzo's companions could make a move to rush him to a doctor, Kougaiji appeared before them and demanded a fight. This time however, he was alone. But what Sanzo-ikkhou did not expect was that the prince was having a device that will increase his power but not without certain side effects. As Sanzo-ikkhou refuse to comply to Kou's demant to hand over the kyomon, they resolve to fight. If Sanzo-ikkhou wins, they get Kou's hiryuu* which will enable them to fly to the next town to get Sanzo treated quickly but if Kou wins, he will get Sanzo's kyomon.",
+      "airdate": "2004-01-15",
+      "markers": [],
+      "external_id": "3294"
+    },
+    {
+      "n": 16,
+      "title": "Footprint ++ Opposite ++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "This episode starts off with recaps from the previous episode. Then we see Kougaiji in an experimental liquid with tubes attached to him. Lirin has taken to another place. Dokugakuji and Yaone decided that they should go find Lirin and hope for the best of Kougaiji's recovery under Dr. Nii's 'care'.\n\nDoku and Yaone sneaking into a secured restricted area. They were later caught and given a show of something they were just too shocked to see.\n\nMeanwhile, weather is getting colder as it gets nearer to winter. Hakkai suggests that they have Sukiyaki* that night since Sanzo had already recover from the youkai's poison. Goku was all to excited about it as sukiyaki not only gives him eating pleasure, it also gave him sweet memories of the past...\n\nThe story goes back to the events of 3 years ago. Goku and Sanzo dropped by Hakkai and Gojyo's place while on an errand. Hakkai asked that they stayed for dinner but Sanzo declines stating that he'll only be staying a while. Hakkai promises to treat them to sukiyaku the next time they dropped by as it's going to snow soon it the weather is perfect for sukiyaki.\n\nSoon, it has started to snow. Sanzo noted to the other two that Goku hasn't come out of his room for a few days already. He said he was afraid of the snow. Gojyo and Hakkai later asks Sanzo and Goku to join them for sukiyaki. Will Goku's appetite for sukiyaki triumph over his fear of snow? What will become of Kougaiji and his companions?",
+      "airdate": "2004-01-22",
+      "markers": [],
+      "external_id": "3295"
+    },
+    {
+      "n": 17,
+      "title": "Unfulfillable Desire ++ Wish ++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Hakuryuu's having a high fever and Sanzo-ikkhou couldn't go any further without the jeep. Hakkai suggests that they stay in the inn for a few days and asks Gojyo to buy some groceries as he had to take care of Hakuryuu.\n\nWhile he was running his errands, Gojyo came upon a group of bullies going against a young child. Not able to withstand this scene, the kappa decided to help the child.\n\nFeeling grateful, the young lad, Ginkaku, decided to repay Gojyo's good deed: destroy Gojyo's enemies. Gojyo's 'enemies' were none other than Sanzo, Goku and Hakkai as Kinkaku had misunderstood Gojyo's rant about having to travel with those three. \"I have 'Kami-sama' on my side\" was what Kinkaku said.\n\nAs Gojyo reached the inn, he was in utter shock as he stepped into their room only to find his three companions lying unconcious on the floor. Will Gojyo be able to save his companions from death?",
+      "airdate": "2004-01-29",
+      "markers": [],
+      "external_id": "3296"
+    },
+    {
+      "n": 18,
+      "title": "Pitiful Ties ++ Critical Days ++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sanzo and Gojyo are forced to team up in order to help Goku and Hakkai, whose souls have been sucked out by Kinkaku using a magical gourd. They were told by the innkeeper that there's a monster behind the mountains and goes there to find it, believing it to be Kinkaku and his so-called brother, Ginkaku.\n\nMeanwhile, Hakkai and Goku wakes up to find themselves in a barren land with nothing but bones. 'Hell' as Hakkai calls it. However, both of them refuse to think that they're dead. At least not before Sanzo. They were soon greeted by 'guards of hell'. It was easy to kill these creatures but there were endless number of them that Hakkai had to revise a new strategy: run. They finally defeated them but then were later confronted with a bigger version of the previously fought creature.\n\nMeanwhile, Sanzo and Gojyo were ambushed by a gang of youkais. The youkais were easily beaten but as Sanzo was about to kill the last youkai, he lurged forward, catching Sanzo and leaped off the clift, draggins the monk with him.\n\nWill Goku and Hakkai be able to defeat that huge enemy of theirs? What will become of Sanzo?",
+      "airdate": "2004-02-05",
+      "markers": [],
+      "external_id": "3297"
+    },
+    {
+      "n": 19,
+      "title": "Kami-sama ++ Farewell ++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Kinkaku's brother, Ginkaku appeared before Goku and Hakkai after they defeated the huge creature. Like Goku and Hakkai, his soul was also trapped by Kami-sama's power. He pleaded to them to save his brother.\n\nSanzo is tied up by the magic gourd controlled by Kinkaku. Gojyo manage to get Sanzo's gun and shot the gourd, breaking it to pieces.\n\nThe monster Kinkaku treated as his brother suddenly attacked Gojyo and Sanzo but was stopped by Goku. The he and Hakkai's souls had excape when the gourd broke. Hakkai later explained to Kinkaku of his brother's fate. Suddenly, Kinkaku was hit with rosary beads, killing the child on the spot. It was the Kami-sama.",
+      "airdate": "2004-02-12",
+      "markers": [],
+      "external_id": "3298"
+    },
+    {
+      "n": 20,
+      "title": "Prelude ++ Chase ++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Gojyo had run away from the group, seeking revenge for the death of Kinkaku and Ginkaku. Sanzo insists that they carry on the journey without the kappa. Goku feels weird sitting alone behind Jeep. Hakkai and Sanzo gets on each other's nerves. They couldn't stand it any longer and decided to go back to the previous town to look for Gojyo, and kill him for the trouble he has caused.\n\nThey arrived at the entrance to the forest, which looks very much densed than it was a few days ago. A 'kekkai' had been set up at the entrance so that they were not able to enter it. In order to break the kekkai, Sanzo drew mantra and chants on Goku's body, enabling the saru to enter the forest and break the kekkai.\n\nGojyo is seen entering the forest and ascending a fleet of stairs leading to the castle of Kami-sama, where he is waiting for them.",
+      "airdate": "2004-02-19",
+      "markers": [],
+      "external_id": "3299"
+    },
+    {
+      "n": 21,
+      "title": "Battle ++ Don't cry ++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Goku found Gojyo's cigarette stub beside a river, clearly stating that the kappa had been there before. The three continue to find Gojyo, going thru an immensely dense jungle and up the endless fleet of stairs.\n\nMeanwhile, Gojyo is still climbing the stairs, getting tired and exhausted. As he was taking a rest, his dead kaasan suddenly appeared. \"Genjitsu?\" Using words, his 'kaasan' convinced him that there was no reason to live as he was still alone after all these years. At the thought of this, he immideately killed the her. He wasn't alone. He has Sanzo, Hakkai and Goku with him now. He then proceed to climb the stairs and finally reaching the top, he met Kami-sama.\n\nIn another scene we see Hakkai, Sanzo and Goku going up the stairs, led by the hyper-energetic saru. As they were on their way, they saw Gojyo walking down the stairs. Being angry at Gojyo's treatment to them, the three decide to give him a welcoming 'bash'. Thinking that they saw thru his trick, the fake Gojyo reacted to attacking Sanzo, Goku and Hakkai. Now that the three know about the truth, they didn't hesitate to finish off this Gojyo, yet another way to ward off their anger at the kappa.\n\nThe real Gojyo meanwhile was having a tough time with Kami-sama, who had wanted to keep Gojyo as his new toy.",
+      "airdate": "2004-02-26",
+      "markers": [],
+      "external_id": "3300"
+    },
+    {
+      "n": 22,
+      "title": "Broken Things ++ Pain ++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Kami sama wanted to keep Gojyo as his toy. This of course was out of the question for Sanzo-ikkhou. Kami-sama further irritates Sanzo by saying that he is not fit for the title Sanzo. This made the four furious and started attacking Kami-sama but the skilled man was fast in invading their attacks. He summoned his weapon which makes his rosary beads to act like bullets, hitting Sanzo-ikkhou like it was a machine-gun. That was more than enough to paralyze the four. As they lay heavily injured on the floor, Kami-sama walked to Sanzo and took his Maten Kyomon after critisizing the way they lived.\n\nAs Kami-sama was about to finish off Sanzo, Hakuryuu suddenly appeared. Gojyo who was the only one conscious enought to stand, ordered Hakuryuu to transform into a jeep. He proceeded to load his other 3 companions into the car and sped away from Kami-sama. For the first time, they were defeated.\n\nGojyo had taken them to the previous inn they stayed. They stayed there to treat their injuries. One night, Sanzo woke up after being unconscious for days and insisted on getting his Maten Kyomon back from Kami-sama right away. He was however, unable to even stand, end up being carried to bed by Gojyo after he collasp on the floor.",
+      "airdate": "2004-03-04",
+      "markers": [],
+      "external_id": "3301"
+    },
+    {
+      "n": 23,
+      "title": "The Way We Do It ++ Dawn ++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "As Sanzo lay unconscious in bed, Gojyo and Hakkai discusses their defeat and their plans for the future now that they've lost the kyomon. They cannot just ignore Kami-sama now that he's got the Maten Kyomon with him and decides to go after him. Sanzo woke up and insists that that was his problem alone and that the others should not interfere. As he and Gojyo were fighting, Goku barges in holding something in his hands. \"Mahjong.\"\n\nGoku asks the other to join him in a game of mahjong. At first they hesitated but after some persuation, all four guys were seated and the game started. Goku surprised everyone further when he won the game one round after another. They were all beaten by that saru but none of them fare worse than Sanzo. \"It's easy for someone to defeat a guy who's lost his confidence. I won't lose again. Ever.\" One by one they regained their game pace and were able to get back on track, winning a few rounds themselves. But not Sanzo. \"Admit defeat now, Sanzo.\" \"Don't underestimate me.\"\n\nThe next morning, the innkeeper opens the door to their room only to find those four guys asleep around the mahjong table. He observed the tiles laid before Sanzo. \"*Kokushimusou?\" Later on during their recovery period in the inn, they plan a strategy to attack Kami-sama and obtain the Maten Kyomon that he had taken from Sanzo. In response to a question by the innkeeper concerning their plan, they said that they were going to pick a fight with **God.",
+      "airdate": "2004-03-11",
+      "markers": [],
+      "external_id": "3302"
+    },
+    {
+      "n": 24,
+      "title": "The Battle Resumes ++ Go Ahead ++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Sanzo-ikkhou gets to Kami-sama's castle. As they entered the castle, they were greeted by a 2 headed bunny/bear toy who can speak. They were informed that guns, cigarettes, kids and pets were not allowed. This of course is not heeded by the four and as a 'penalty', 'bad things will happen'. Suddenly pillars began fallin on them and they fled to a nearby fleet of stairs to escaped being crushed by the pillars. They ran up the stairs to find Kami-sama. \"Smokes and idiots love high places.\" They ran up 13 floors, having to go thru challenges greeting them at each floor.\n\nWhen they finally reach 13th floor, they were again greeted by the same two headed bunny/bear toy. It seems that there was an elevator in the building. When asked where Kami-sama was, the toy said that his master is at the lowest level. The floor below them suddenly opened into a trapdoor and our four guys falls WAYYYYYY down. With the help of Goku's nyoibou and the piles of toys stacked up at the ground floor, they managed to survive the fall. Kami-sama was awaiting them there.\n\nA fight broke up between Sanzo-ikkhou and Kami-sama but this time Sanzo-ikkhou had a different approach: teamwork. During the battle, Sanzo suddenly remembered who Kami-sama was. He had met him before ten years ago. He also remembered of Kami-sama's master, Ukoku Sanzo Houshi. Kami-sama then claims that he is the rightful successor to the title Sanzo from his master. Sanzo disagrees with him. \"You may have succeeded the power, the robe and the city, but you NEVER succeeded the title of Sanzo.\" This made Kami-sama rather angry as he sent his armies of toys at Sanzo-ikkhou.",
+      "airdate": "2004-03-18",
+      "markers": [],
+      "external_id": "3303"
+    },
+    {
+      "n": 25,
+      "title": "Conclusion ++ Nothing to Give ++",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Kami-sama's toys cling onto Sanzo-ikkhou, attacking them. As they try to hit them away, more and more kept on coming. As Sanzo laid underneath piles of those toys, he begans to recite the Maten Kyomon, summoning the spell to cleanse away the 'demonic toys' when the Maten Kyomon is still on Kami-sama's shoulders. After cleansing away the spirits, the kyomon returns to Sanzo's hands.\n\nKami-sama demanded Sanzo to give him the kyomon but he was blocked and attacked by Gojyo then by Goku. Even though those guys were injured, they kept on going. Next was Hakkai. He was about to release one of his qi bolts when Kami-sama started shooting his rosary beads at him. Surprisingly enough, instead of opening a qi barrier, Hakkai just stopped his qi bolt attack and blocked the bullets with his own body. Stunned by Hakkai's action, Kami-sama failed to realise that he was shot with Sanzo's shoureiju. Hakkai was actually blocking the rosary beads from hitting Sanzo, not opening the qi barrier to allow Sanzo's bullets to pass.\n\nAs Kami-sama lay defeated on the ground, the castle begins to crumble. \"It's a game my *sensei played. The deal he and I had. The game goes on till I lose.\" Kami-sama pushed Gojyo away when Gojyo wanted to help him out of the falling castle, insisting that he'd like to wait there.\n\nAs Sanzo-ikkhou made a wild dash to get out of the castle, Kami-sama's sensei paid him a last visit. When Sanzo-ikkhou reached the outside the castle, they witness as the whole castle was reduced to mere dust. They rested a while then get down to continue their journey westward. Thus marks the end of Saiyuki RELOAD.",
+      "airdate": "2004-03-25",
+      "markers": [],
+      "external_id": "3304"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kamino Hotokemo",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ruten",
+      "artist": "Shugo Nakamura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Move on! Ibaramichi (move on! イバラミチ)",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Refrain (リフレイン)",
+      "artist": "Luck Life",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Late-Show",
+      "artist": "GARDEN",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "shiny moon",
+      "artist": "Toshihiko Seki, Souichiro Hoshi & Hiroaki Hirata",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Wild Rock",
+      "artist": "BUZZLIP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ID",
+      "artist": "flow-war",
+      "episodes": "01-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Fukisusabu Kaze no Naka de",
+      "artist": "WAG",
+      "episodes": "14-25"
+    }
+  ],
+  "relations": []
+}

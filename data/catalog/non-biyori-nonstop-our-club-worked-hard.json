@@ -1,0 +1,70 @@
+{
+  "id": "non-biyori-nonstop-our-club-worked-hard",
+  "title": "Non Non Biyori Nonstop: Our Club Worked Hard",
+  "native": "のんのんびより のんすとっぷ 部活をがんばった",
+  "year": 2022,
+  "rating": 8,
+  "season": "Winter 2022",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx137337-5iTk3YEYoZyS.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137337-5iTk3YEYoZyS.png",
+  "accent": "#28c9fe",
+  "synopsis": "An unaired thirteenth episode of Non Non Biyori: Nonstop that is bundled with the special edition of the Non Non Biyori Remember spin-off manga's compilation release.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "non-non-biyori-nonstop:-our-club-worked-hard-to4yct",
+    "mal": 49521,
+    "anilist": 137337,
+    "kitsu": 44958
+  },
+  "skip_key_id": 49521,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "non non biyori nonstop our club worked hard のんのんひ より のんすとっふ 部活をか んは った ova finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Non Non Biyori Nonstop: Our Club Worked Hard",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137337-5iTk3YEYoZyS.png",
+      "synopsis": "An unaired thirteenth episode of  Non Non Biyori: Nonstop that is bundled with the special edition of the Non Non Biyori Remember spin-off manga's compilation release.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "308005"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tsugihagi Moyō (Patchwork Pattern)",
+      "artist": "nano.RIPE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tadaima (I'm Home)",
+      "artist": "Kotori Koiwai, Rie Murakawa, Ayane Sakura, & Kana Asumi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

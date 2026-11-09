@@ -1,0 +1,241 @@
+{
+  "id": "owarimonogatari",
+  "title": "Owarimonogatari",
+  "native": "終物語",
+  "year": 2015,
+  "rating": 8.5,
+  "season": "Fall 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21262-jfbv9hvjymMW.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21262-jfbv9hvjymMW.jpg",
+  "accent": "#1aa16b",
+  "synopsis": "Third and “Final Season” of the Monogatari Series, part 3/5. Contains the arcs Ougi Formula, Sodachi Riddle, Sodachi Lost and Shinobu Mail from the Owarimonogatari light novels.\n\nDuring the month of October of his third year in high school, Koyomi Araragi is introduced to a transfer student named Ougi Oshino by his underclassman Suruga Kanbaru. Ougi tells Koyomi that she has something she wishes to consult with him. When she draws the map of Naoetsu High School, she finds something peculiar on there. This discovery reveals a tale that wasn’t meant to be told, and this makes Koyomi’s high school life totally different. This is the story that brings to light “what” makes Koyomi Araragi. This is the story that reveals the “beginning” of everything.\n\n(Source: Aniplex)\n\nNote: The first episode aired with a runtime of ~48 minutes as opposed to the standard 24 minute long episode.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "owarimonogatari-1kjdke",
+    "mal": 31181,
+    "anilist": 21262,
+    "kitsu": 11182
+  },
+  "skip_key_id": 31181,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "owarimonogatari 終物語 tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Ougi Formula",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179270/original.jpg",
+      "synopsis": "During the month of October of his third year in high school, Koyomi Araragi is introduced to a transfer student named Ougi Oshino, who tells him she has something to consult with him. This reveals a tale that brings to light “what” makes Koyomi Araragi.",
+      "airdate": "2015-10-04",
+      "markers": [],
+      "external_id": "179270"
+    },
+    {
+      "n": 2,
+      "title": "Sodachi Riddle, Part One",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179271/original.jpg",
+      "synopsis": "In the aftermath of the previous day, Araragi is about to enter his classroom when Hanekawa informs him that a student absent all year is finally attending. The story pushes further into the past, as more of “what” makes Koyomi Araragi is revealed.",
+      "airdate": "2015-10-11",
+      "markers": [],
+      "external_id": "179271"
+    },
+    {
+      "n": 3,
+      "title": "Sodachi Riddle, Part Two",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179272/original.jpg",
+      "synopsis": "Episode 3",
+      "airdate": "2015-10-18",
+      "markers": [],
+      "external_id": "179272"
+    },
+    {
+      "n": 4,
+      "title": "Sodachi Lost, Part One",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179273/original.jpg",
+      "synopsis": "Episode 4",
+      "airdate": "2015-10-25",
+      "markers": [],
+      "external_id": "179273"
+    },
+    {
+      "n": 5,
+      "title": "Sodachi Lost, Part Two",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179274/original.jpg",
+      "synopsis": "Episode 5",
+      "airdate": "2015-11-01",
+      "markers": [],
+      "external_id": "179274"
+    },
+    {
+      "n": 6,
+      "title": "Sodachi Lost, Part Three",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179275/original.jpg",
+      "synopsis": "Episode 6",
+      "airdate": "2015-11-08",
+      "markers": [],
+      "external_id": "179275"
+    },
+    {
+      "n": 7,
+      "title": "Shinobu Mail, Part One",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179276/original.jpg",
+      "synopsis": "Episode 7",
+      "airdate": "2015-11-15",
+      "markers": [],
+      "external_id": "179276"
+    },
+    {
+      "n": 8,
+      "title": "Shinobu Mail, Part Two",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179277/original.jpg",
+      "synopsis": "Episode 8",
+      "airdate": "2015-11-22",
+      "markers": [],
+      "external_id": "179277"
+    },
+    {
+      "n": 9,
+      "title": "Shinobu Mail, Part Three",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179278/original.jpg",
+      "synopsis": "Episode 9",
+      "airdate": "2015-11-29",
+      "markers": [],
+      "external_id": "179278"
+    },
+    {
+      "n": 10,
+      "title": "Shinobu Mail, Part Four",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179279/original.jpg",
+      "synopsis": "Episode 10",
+      "airdate": "2015-12-06",
+      "markers": [],
+      "external_id": "179279"
+    },
+    {
+      "n": 11,
+      "title": "Shinobu Mail, Part Five",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179280/original.jpg",
+      "synopsis": "Episode 11",
+      "airdate": "2015-12-13",
+      "markers": [],
+      "external_id": "179280"
+    },
+    {
+      "n": 12,
+      "title": "Shinobu Mail, Part Six",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/179281/original.jpg",
+      "synopsis": "Episode 12",
+      "airdate": "2015-12-20",
+      "markers": [],
+      "external_id": "179281"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "terminal terminal",
+      "artist": "Emiri Katou",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "SHIORI",
+      "artist": "ClariS",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "decent black",
+      "artist": "Kaori Mizuhashi",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sayonara no Yukue (さよならのゆくえ)",
+      "artist": "Alisa Takigawa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "dreamy date drive",
+      "artist": "Chiwa Saito",
+      "episodes": "3-4"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Mathemagics",
+      "artist": "Marina Inoue",
+      "episodes": "2-3, 5"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "dark cherry mystery",
+      "artist": "Kaori Mizuhashi",
+      "episodes": "5-7"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Yūdachi Hōteishiki",
+      "artist": "Marina Inoue",
+      "episodes": "4-6"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "mein schatz",
+      "artist": "Mito",
+      "episodes": "7-9, 11"
+    }
+  ],
+  "relations": []
+}

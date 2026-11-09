@@ -1,0 +1,66 @@
+{
+  "id": "summer-wars",
+  "title": "Summer Wars",
+  "native": "サマーウォーズ",
+  "year": 2009,
+  "rating": 7.7,
+  "season": "Summer 2009",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx5681-3DmxUVn3grD0.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5681-3DmxUVn3grD0.jpg",
+  "accent": "#1a86d6",
+  "synopsis": "When timid eleventh-grader and math genius Kenji Koiso is asked by older student and secret crush Natsuki to come with her to her family's Nagano home for a summer job, he agrees without hesitation. \n\nNatsuki's family, the Jinnouchi clan, dates back to the Muromachi era (1336 to 1573), and they've all come together to celebrate the 90th birthday of the spunky matriarch of the family, Sakae. That’s when Kenji discovers his \"summer job\" is to pretend to be Natsuki's fiance and dance with her at the birthday celebration. \n\nAs Kenji attempts to keep up with Natsuki's act around her family, he receives a strange math problem on his cell phone which, being a math genius, he can't resist solving. As it turns out, the solution to the mysterious equation causes Oz, the program that controls nearly every aspect of life to be hacked into, it's up to Kenji and his new \"family\" to stop the hacker before it's too late.\n\n(Source: twitchfilm.net)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "summer-wars-4ougfv",
+    "mal": 5681,
+    "anilist": 5681,
+    "kitsu": 4241
+  },
+  "skip_key_id": 5681,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "summer wars サマーウォース movie finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Summer Wars (Movie)",
+      "runtime": "114:00",
+      "runtime_seconds": 6840,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ad4c6bd33988c0d81e31067-landscape.jpg",
+      "synopsis": "When timid eleventh-grader and math genius Kenji Koiso is asked by older student and secret crush Natsuki to come with her to her family's Nagano home for a summer job, he agrees without hesitation. \n\n\nNatsuki's family, the Jinnouchi clan, dates back to the Muromachi era (1336 to 1573), and they've all come together to celebrate the 90th birthday of the spunky matriarch of the family, Sakae. That&rsquo;s when Kenji discovers his \"summer job\" is to pretend to be Natsuki's fiance and dance with her at the birthday celebration. \n\n\nAs Kenji attempts to keep up with Natsuki's act around her family, he receives a strange math problem on his cell phone which, being a math genius, he can't resist solving. As it turns out, the solution to the mysterious equation causes Oz, the program that controls nearly every aspect of life to be hacked into, it's up to Kenji and his new \"family\" to stop the hacker before it's too late.\n\n\n(Source: twitchfilm.net)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "69852"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bokura no Natsu no Yume (Our Summer Dream)",
+      "artist": "Tatsuro Yamashita",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

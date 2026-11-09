@@ -1,0 +1,77 @@
+{
+  "id": "quanzhi-gaoshou-specials",
+  "title": "Quanzhi Gaoshou Specials",
+  "native": "全职高手 特别篇",
+  "year": 2018,
+  "rating": 7.9,
+  "season": "2018",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101410-DS14ggjKRPoU.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101410-DS14ggjKRPoU.png",
+  "accent": "#5dbbe4",
+  "synopsis": "The All-Star Tournament is a three-day event that allows e-sports participants from various professional clubs to display their skills, while also giving casual Glory players the chance to interact with pros in the flesh.\n\nRetired top-tier Glory player Ye Xiu agrees to watch the tournament together with Tang Rou and Chen Guo after the latter manages to get ahold of three tickets. It is a strange sensation for Ye Xiu, as unlike previous occasions, this time he attends the tournament as a spectator, not a participant. However, despite his attempts to keep a low profile, events in the All-Star Tournament may force the former Glory legend back into the limelight.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "quanzhi-gaoshou-specials-7dyjz7",
+    "mal": 37078,
+    "anilist": 101410,
+    "kitsu": 41158
+  },
+  "skip_key_id": 37078,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "quanzhi gaoshou specials 全职高手 特别篇 ona finished",
+  "genres": [
+    "action",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "241303"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "241304"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "241305"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

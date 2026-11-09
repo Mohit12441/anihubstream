@@ -1,0 +1,643 @@
+{
+  "id": "ranking-of-kings",
+  "title": "Ranking of Kings",
+  "native": "王様ランキング",
+  "year": 2021,
+  "rating": 8.3,
+  "season": "Fall 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx113717-9sNnN8WRgK15.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113717-9sNnN8WRgK15.jpg",
+  "accent": "#e4935d",
+  "synopsis": "Unable to hear, speak, or wield a sword, Prince Bojji doesn’t seem like a typical heir to the throne—and his kingdom agrees. But his fateful encounter with Kage, a shadow on the ground, gives him his first true friend. The two set off on a grand adventure and, together, form a bond that can overcome any obstacle...even being king.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Ranking of Kings: The Treasure Chest of Courage (2023)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 43849,
+    "anilist": 113717,
+    "mal": 40834,
+    "hianime": "ranking-of-kings-sfld2z"
+  },
+  "skip_key_id": 40834,
+  "skip_key_space": "mal",
+  "episode_total": 23,
+  "added_at": "2026-10-14 06:14:32",
+  "search_text": "ranking of kings 王様ランキンク tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Prince's New Clothes",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/311552/thumbnail/medium-662ee2af1d7ed544a89f58052da1e0e4.jpeg",
+      "synopsis": "Bojji, a prince in a world where kings are ranked by their deeds and skills, is considered unfit to be the next king due to his disabilities. He runs into Kage, a shadow being with whom he can converse, but who also takes advantage of Bojji's kindness. (Source: Crunchyroll)",
+      "airdate": "2021-10-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 74,
+          "end": 164
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1369
+        }
+      ],
+      "external_id": "311552"
+    },
+    {
+      "n": 2,
+      "title": "The Prince and Kage",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/311553/thumbnail/medium-535528e041da7338060cfc9c10ac3b36.jpeg",
+      "synopsis": "Kage's tragic childhood following the purge of his people from the Kingdom of Bo is recounted. As the match between Bojji and Daida continues, Bojji's fighting style is denounced as cowardly, and he is instructed by Domas to adopt a more regal style. (Source: Crunchyroll)",
+      "airdate": "2021-10-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 54,
+          "end": 144
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1369
+        }
+      ],
+      "external_id": "311553"
+    },
+    {
+      "n": 3,
+      "title": "The New King",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320789/thumbnail/medium-0352e16ebf550d98c8d478e851212ea8.jpeg",
+      "synopsis": "King Bosse passes away, naming Bojji as the next king. However, the announcement of the new king does not go as Bojji expects. After being told that Kage has gone on a journey without him, Bojji resolves to go on a journey of his own, to Hiling's dismay. (Source: Crunchyroll)",
+      "airdate": "2021-10-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 90,
+          "end": 180
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1294,
+          "end": 1380
+        }
+      ],
+      "external_id": "320789"
+    },
+    {
+      "n": 4,
+      "title": "His First Journey",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320790/thumbnail/medium-bbdd532564fbffb4d1cf2b698cf04e30.jpeg",
+      "synopsis": "A panelist from the Ranking of Kings Committee visits the kingdom to give Daida his ranking. While traveling, Bojji encounters an unusual hunter who teaches him about the mystery of life. While eating around a campfire, an attempt is made on Bojji's life. (Source: Crunchyroll)",
+      "airdate": "2021-11-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 180,
+          "end": 270
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1369
+        }
+      ],
+      "external_id": "320790"
+    },
+    {
+      "n": 5,
+      "title": "Intertwining Plots",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320791/thumbnail/medium-fc19bdcfc9c9c920443d6507946d015a.jpeg",
+      "synopsis": "After the latest attempt on his life, Bojji is overjoyed to discover that he has a secret guardian. Domas is willing to do whatever it takes to gain Daida's trust. The Magic Mirror directs Daida to an elixir that will supposedly grant him Bosse's power. (Source: Crunchyroll)",
+      "airdate": "2021-11-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 115,
+          "end": 205
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1369
+        }
+      ],
+      "external_id": "320791"
+    },
+    {
+      "n": 6,
+      "title": "The King of the Underworld",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320792/thumbnail/medium-4e05198e555f1cdddf4aaf4b064e38e0.jpeg",
+      "synopsis": "Bojji and Kage meet Desha, the king of the underworld, who is said to be able to make ordinary men into powerful kings. However, after testing Bojji's skill level, Desha refuses to train him. Apeas finds Daida and the mirror, and must choose a side. (Source: Crunchyroll)",
+      "airdate": "2021-11-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 106,
+          "end": 196
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "320792"
+    },
+    {
+      "n": 7,
+      "title": "The Prince's Apprenticeship",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320793/thumbnail/medium-4ff355f5692d66c9793f61a7659556b0.jpeg",
+      "synopsis": "Kage pleads with Desha's brother Despa to make Bojji powerful enough to be king, and Despa takes Bojji on as an apprentice. After making his assessment, Despa is astounded by how little power Bojji actually has, but refuses to give up on training him. (Source: Crunchyroll)",
+      "airdate": "2021-11-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 59,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "320793"
+    },
+    {
+      "n": 8,
+      "title": "The Sacrifice of Dreams",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320794/thumbnail/medium-f1e04ce45880fbcfdf7d88966752bfea.jpeg",
+      "synopsis": "The story of Bosse's rise to power and Bojji's birth is revealed. Domas cautions Hokuro about returning to the castle, and the fate which likely awaits him there, before deciding to walk away himself. A plot to kill one of the royal court takes shape. (Source: Crunchyroll)",
+      "airdate": "2021-12-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 58,
+          "end": 148
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 71,
+          "end": 161
+        }
+      ],
+      "external_id": "320794"
+    },
+    {
+      "n": 9,
+      "title": "The Queen and the Shield",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320795/thumbnail/medium-d2948eca96c161c595cca25a815ab6f3.jpeg",
+      "synopsis": "Years ago, Bosse pulled Dorshe from his position and made him the bodyguard for a reluctant Hiling, who was trying to win over a wary Bojji. Now, Dorshe is all that stands between Hiling and monsters which have been sent to assassinate her. (Source: Crunchyroll)",
+      "airdate": "2021-12-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "320795"
+    },
+    {
+      "n": 10,
+      "title": "The Prince's Sword",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320796/thumbnail/medium-2c6c5fffd7a7d9e0a3057abc37bd732c.jpeg",
+      "synopsis": "Bojji, Kage, and Despa go out to dinner to celebrate the conclusion of Bojji's training. Kage has misgivings about Bojji's sword until a fight breaks out at dinner, and Bojji has to defend himself. Bojji and Kage must consider what their next step will be. (Source: Crunchyroll)",
+      "airdate": "2021-12-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 75,
+          "end": 165
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1293,
+          "end": 1380
+        }
+      ],
+      "external_id": "320796"
+    },
+    {
+      "n": 11,
+      "title": "Older and Younger Brothers",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320797/thumbnail/medium-f215fa8a635da49a63fefa1b2df883e4.jpeg",
+      "synopsis": "Daida reflects on a lesson once taught to him by Sorii and Bebin about the value of life and finds out that he is not alone in his dark exile. When six criminals are broken out of their cells in the underworld, Desha sends his knights to go after them. (Source: Crunchyroll)",
+      "airdate": "2021-12-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 169
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "320797"
+    },
+    {
+      "n": 12,
+      "title": "The Footsteps of War",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320798/thumbnail/medium-0fbb0a314a5aa299b499ae127bf4fe01.jpeg",
+      "synopsis": "Outside the castle, Hiling and her elite force prepare to make their move. Meanwhile, inside the castle, The Magic Mirror and Apeas lead the six criminals toward the throne room. Bojji and Kage take heart at the news that an ally will be joining them. (Source: Crunchyroll)",
+      "airdate": "2022-01-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 294,
+          "end": 384
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "320798"
+    },
+    {
+      "n": 13,
+      "title": "The Kingdom in Turmoil",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320799/thumbnail/medium-a52df77791f4012683a7fd3bef7aebb7.jpeg",
+      "synopsis": "Hiling and her band of knights face intense opposition from the forces under the command of the Magic Mirror. When the fighting takes a desperate turn, Apeas's loyalties are tested. In the castle town, Ouken launches his own independent attack. (Source: Crunchyroll)",
+      "airdate": "2022-01-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 99,
+          "end": 189
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1369
+        }
+      ],
+      "external_id": "320799"
+    },
+    {
+      "n": 14,
+      "title": "The Return of the Prince",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320800/thumbnail/medium-6616b8efc3fcfa2c889c8a5798050642.jpeg",
+      "synopsis": "Critically wounded, Dorshe makes a desperate effort to protect Hiling, and receives help from an unexpected ally. The situation remains dire, as Gigan, one of the six criminals, continues his powerful assault, until Bojji and Kage return to the castle. (Source: Crunchyroll)",
+      "airdate": "2022-01-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 89,
+          "end": 179
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1369
+        }
+      ],
+      "external_id": "320800"
+    },
+    {
+      "n": 15,
+      "title": "The Order of the Underworld",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320801/thumbnail/medium-f2053b16d8f6d250014367572c32e9f8.jpeg",
+      "synopsis": "Leaving Dorshe and Hiling behind to rest, Bojji and Kage lead a party to the underworld entrance to send the magic beasts home. Domas and Hokuro encounter the Order of the Underworld deep underground on their way to recapture the missing criminals. (Source: Crunchyroll)",
+      "airdate": "2022-01-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 166,
+          "end": 256
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "320801"
+    },
+    {
+      "n": 16,
+      "title": "Royal Majesty",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320802/thumbnail/medium-738c98f99e8a93de225740a3d42ab191.jpeg",
+      "synopsis": "The name \"Miranjo\" triggers a traumatic flashback for Bojji. Desha relates to Bojji the circumstances that turned Gigan into a criminal. After consulting with Despa, Desha makes a change of plans and decides to return with his knights to the underworld. (Source: Crunchyroll)",
+      "airdate": "2022-02-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 182,
+          "end": 272
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "320802"
+    },
+    {
+      "n": 17,
+      "title": "The Curse of Immortality",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320803/thumbnail/medium-d82e81e3dbd3bf5be76f8a5098a3f5ee.jpeg",
+      "synopsis": "Bojji and Kage run into Apeas, who tells them about Miranjo's dream. Domas and Hokuro finally reach the entrance to the underworld they were ordered to destroy. The Magic Mirror calls out to Ouken, who escapes Despa's custody to come to her aid. (Source: Crunchyroll)",
+      "airdate": "2022-02-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 148,
+          "end": 238
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1369
+        }
+      ],
+      "external_id": "320803"
+    },
+    {
+      "n": 18,
+      "title": "Battle with the Gods",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320804/thumbnail/medium-9c214ac3d3fcc9beabc0d1702449f042.jpeg",
+      "synopsis": "From his cell, Bosse relates to Bebin the story of how he first met Miranjo when she was a little girl. Domas and Hokuro make their apologies to Hiling, then head off to assist Bojji. Bojji has his hands full with Ouken, but receives help from Despa. (Source: Crunchyroll)",
+      "airdate": "2022-02-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 55,
+          "end": 145
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1369
+        }
+      ],
+      "external_id": "320804"
+    },
+    {
+      "n": 19,
+      "title": "The Last Bastion",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320805/thumbnail/medium-9579733f5a750a9fc572411c591027f7.jpeg",
+      "synopsis": "Bosse tells Bebin the story of when he found the disfigured Miranjo, until Bebin is called away. As Bojji and Despa look on, Kage is faced with a life-or-death decision and finds help from an unexpected source. The Big Four step forward to face Ouken. (Source: Crunchyroll)",
+      "airdate": "2022-02-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "320805"
+    },
+    {
+      "n": 20,
+      "title": "Immortal vs. Invincible",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320806/thumbnail/medium-34df74d70f0a2ffb031cdc3fb61adb12.jpeg",
+      "synopsis": "Miranjo finds herself answering to Shiina and her own mother for her actions. Bojji is faced with the prospect of passing judgment on Miranjo. The situation with Ouken grows even more dire until a new warrior arrives, but is this newcomer really an ally (Source: Crunchyroll)",
+      "airdate": "2022-03-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 78,
+          "end": 168
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "320806"
+    },
+    {
+      "n": 21,
+      "title": "The Swordsmanship of a King",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320807/thumbnail/medium-100257273dcc8ebf1ea5d951a96c50bd.jpeg",
+      "synopsis": "Realizing that Bosse did not wish to be brought back to life, Miranjo apologizes. Bosse issues an ultimatum to the others present to either side with him or be killed. Despa fears that Bojji may not measure up as his showdown with Bosse gets underway (Source: Crunchyroll)",
+      "airdate": "2022-03-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 157,
+          "end": 247
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1369
+        }
+      ],
+      "external_id": "320807"
+    },
+    {
+      "n": 22,
+      "title": "A Promise to the Demon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320808/thumbnail/medium-bcc2e89d4fad0d0a380acf112e1749d7.jpeg",
+      "synopsis": "Bosse shows Daida the happy memories of the time he spent with Miranjo, and how he received his strength from the demon. After catching the demon, Despa attempts to get his wish for Ouken granted, but Bojji and Daida have a different wish in mind. (Source: Crunchyroll)",
+      "airdate": "2022-03-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "320808"
+    },
+    {
+      "n": 23,
+      "title": "The King and the Sun",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/320809/thumbnail/medium-ba8632a7553978e35e68dab9d03da9e7.jpeg",
+      "synopsis": "Daida acknowledges and accepts Miranjo's crimes, then forgives her. As part of his atonement, Daida relinquishes the throne to Bojji. However, Kage feels out of place with his friend's new position of distinction and leaves Bojji to reign on his own. (Source: Crunchyroll)",
+      "airdate": "2022-03-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1279,
+          "end": 1369
+        }
+      ],
+      "external_id": "320809"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "GOLD",
+      "artist": "PEOPLE 1",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Atemonaku",
+      "artist": "Aimer",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "BOY",
+      "artist": "King Gnu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Oz.",
+      "artist": "yama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Hadaka no Yuusha",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Flare",
+      "artist": "milet",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

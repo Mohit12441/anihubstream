@@ -1,0 +1,202 @@
+{
+  "id": "ruri-rocks",
+  "title": "Ruri Rocks",
+  "native": "瑠璃の宝石",
+  "year": 2025,
+  "rating": 7.9,
+  "season": "Summer 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx180929-ytdzqbrOhots.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx180929-ytdzqbrOhots.jpg",
+  "accent": "#5dc9f1",
+  "synopsis": "High schooler Ruri Tanigawa loves shiny things. She loves them so much that she heads into the mountains to search for crystals herself—where she unexpectedly meets Nagi Arato, a graduate student studying mineralogy. As the pair start collecting minerals together, Ruri begins developing a genuine appreciation for science and the beauty of the natural world.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "ruri-rocks-8ndqd5",
+    "mal": 59791,
+    "anilist": 180929,
+    "kitsu": 49210
+  },
+  "skip_key_id": 59791,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "ruri rocks 瑠璃の宝石 tv finished",
+  "genres": [
+    "adventure",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "My First Mineral Hunt",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/373059/thumbnail/fc9de99b6b7fda9f15fd415cfaac7ba2.jpg",
+      "synopsis": "High school girl Ruri meets graduate student Nagi while collecting minerals in the mountains.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-06",
+      "markers": [],
+      "external_id": "373059"
+    },
+    {
+      "n": 2,
+      "title": "The Value of Golden Color",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/373060/thumbnail/a9ae852099bd3e9da0cbade37a9013f8.jpg",
+      "synopsis": "Ruri is determined to find gold, but Nagi explains that it might not be as likely as she hopes.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-13",
+      "markers": [],
+      "external_id": "373060"
+    },
+    {
+      "n": 3,
+      "title": "The Lost Planet",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/373061/thumbnail/9c7e9b5c3a4d33ba667dd407626ac6d0.jpg",
+      "synopsis": "Ruri meets Nagi's colleague Imari, and the three embark on a journey to find a lost mine.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-20",
+      "markers": [],
+      "external_id": "373061"
+    },
+    {
+      "n": 4,
+      "title": "Study of Sands",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/373062/thumbnail/ad120df1c3e10af6d1c54d23ee8eba30.jpg",
+      "synopsis": "In search of sapphire, Nagi teaches Ruri how to study sand, but Ruri prefers to hunt on a bigger scale.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-27",
+      "markers": [],
+      "external_id": "373062"
+    },
+    {
+      "n": 5,
+      "title": "Worlds Seen and Unseen",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/373063/thumbnail/05cb2b6288eb57ae1cf6fd42cdb5ab89.jpg",
+      "synopsis": "Ruri, Nagi, and Imari head to the beach in search of agate, and Ruri learns about the long lifecycle of rocks.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-03",
+      "markers": [],
+      "external_id": "373063"
+    },
+    {
+      "n": 6,
+      "title": "A Closer Look into the Blue",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/373064/thumbnail/4d7a84602c501ad4f2d2502fc6321a90.jpg",
+      "synopsis": "Just as the group begins searching for sapphire on foot, Ruri uncovers a grave mistake that halts their plans.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-10",
+      "markers": [],
+      "external_id": "373064"
+    },
+    {
+      "n": 7,
+      "title": "Seaside Recycling Studio",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/373065/thumbnail/cf57d05575f8df969360143b73c1c785.jpg",
+      "synopsis": "Ruri finds sea glass on the beach and runs into her classmate Shoko, who has a secret passion for minerals.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-17",
+      "markers": [],
+      "external_id": "373065"
+    },
+    {
+      "n": 8,
+      "title": "The Golden Elegy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/373066/thumbnail/49c3b51a6c650e8e211832f2ce901b0e.jpg",
+      "synopsis": "Ruri teams up with Shoko for a science project, which takes a turn when they discover a strange, orange rock.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-24",
+      "markers": [],
+      "external_id": "373066"
+    },
+    {
+      "n": 9,
+      "title": "Time Capsule of 1.9 Million Tons",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/373067/thumbnail/79b678cb8c7e11e4071c9d55788cb9f8.jpg",
+      "synopsis": "Ruri and Nagi head out to hunt for opals but discover that the area has already been fully excavated.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-31",
+      "markers": [],
+      "external_id": "373067"
+    },
+    {
+      "n": 10,
+      "title": "Sentence to an Abandoned Railroad",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/373068/thumbnail/958cf5d423a77a6e290cf5ad6c67250e.jpg",
+      "synopsis": "Imari leads a hunt for manganese ore when the group encounters a mystery along abandoned railroad tracks.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-07",
+      "markers": [],
+      "external_id": "373068"
+    },
+    {
+      "n": 11,
+      "title": "The Sapphire Cradle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/373069/thumbnail/30f80e43a4d9f7b22f6e33345294bcd9.jpg",
+      "synopsis": "When Ruri has trouble deciding on her future, she turns to her study of sapphire.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-14",
+      "markers": [],
+      "external_id": "373069"
+    },
+    {
+      "n": 12,
+      "title": "Memories Come with Rocks and Noise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/373070/thumbnail/6c681423f2b976ad89223745e0d751e7.jpg",
+      "synopsis": "When Ruri discovers her grandpa's old crystal radio, she's determined to restore it.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-21",
+      "markers": [],
+      "external_id": "373070"
+    },
+    {
+      "n": 13,
+      "title": "Look Up, Examine, Search! And Next!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/387174/thumbnail/469855ad27b8778a319831f9db7c7597.jpg",
+      "synopsis": "Ruri, Shoko, Nagi, and Imari take a trip together, where they search for a meteorite at a hot springs inn.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-09-28",
+      "markers": [],
+      "external_id": "387174"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hikari no Sumika (光のすみか)",
+      "artist": "Rei Yasuda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sapphire",
+      "artist": "Hana Hope",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,191 @@
+{
+  "id": "pocos-udon-world",
+  "title": "Poco's Udon World",
+  "native": "うどんの国の金色毛鞠",
+  "year": 2016,
+  "rating": 7.5,
+  "season": "Fall 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21631-k0SsKyeorkyl.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21631-k0SsKyeorkyl.jpg",
+  "accent": "#fee450",
+  "synopsis": "Souta Tawara is a web designer working in Tokyo. When he visits his family's Udon place in his hometown Kagawa Prefecture, he discovers a young boy. Upon confronting the boy, Souta soon learns his secret and decides to quit his job in order to take care of the boy, Poko. The daily adventures of the two slowly enfold as Poco energetically navigates his way through Kagawa, the \"Udon Kingdom,\" along with Souta.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "poco's-udon-world-09o1zw",
+    "mal": 32673,
+    "anilist": 21631,
+    "kitsu": 11823
+  },
+  "skip_key_id": 32673,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "poco s udon world うと んの国の金色毛鞠 tv finished",
+  "genres": [
+    "fantasy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Bukkake Udon",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-10-09",
+      "markers": [],
+      "external_id": "184816"
+    },
+    {
+      "n": 2,
+      "title": "Kotoden",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-10-16",
+      "markers": [],
+      "external_id": "184817"
+    },
+    {
+      "n": 3,
+      "title": "The Red Lighthouse",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-10-23",
+      "markers": [],
+      "external_id": "184818"
+    },
+    {
+      "n": 4,
+      "title": "Yashima",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-10-30",
+      "markers": [],
+      "external_id": "184819"
+    },
+    {
+      "n": 5,
+      "title": "Chicken on the Bone",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-11-06",
+      "markers": [],
+      "external_id": "184820"
+    },
+    {
+      "n": 6,
+      "title": "Tokyo Tower",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-11-13",
+      "markers": [],
+      "external_id": "184821"
+    },
+    {
+      "n": 7,
+      "title": "Ritsurin Garden",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-11-20",
+      "markers": [],
+      "external_id": "184822"
+    },
+    {
+      "n": 8,
+      "title": "Shodoshima",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-11-27",
+      "markers": [],
+      "external_id": "184823"
+    },
+    {
+      "n": 9,
+      "title": "Dried Sardines",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "2016-12-04",
+      "markers": [],
+      "external_id": "184824"
+    },
+    {
+      "n": 10,
+      "title": "Reservoir",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "2016-12-11",
+      "markers": [],
+      "external_id": "184825"
+    },
+    {
+      "n": 11,
+      "title": "Takamatsu Festival",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "2016-12-18",
+      "markers": [],
+      "external_id": "184826"
+    },
+    {
+      "n": 12,
+      "title": "Kake-udon",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "2016-12-25",
+      "markers": [],
+      "external_id": "184827"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "S.O.S.",
+      "artist": "Weaver",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sweet Darwin",
+      "artist": "GOODWARP",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

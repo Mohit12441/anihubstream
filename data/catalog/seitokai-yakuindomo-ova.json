@@ -1,0 +1,132 @@
+{
+  "id": "seitokai-yakuindomo-ova",
+  "title": "Seitokai Yakuindomo* OVA",
+  "native": "Seitokai Yakuindomo* OVA",
+  "year": 2014,
+  "rating": 7.7,
+  "season": "Year 2014",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/694a7410de91243f7a4561ea-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/694a7410de91243f7a4561ea-landscape.webp",
+  "accent": "#3b82ff",
+  "synopsis": "It is the start of Takatoshi Tsuda's second year as the put-upon vice president of the student council and his sister Kotomi is entering school as a first year. New friends and double entendres are made.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "seitokai-yakuindomo-ova-wedwfc",
+    "mal": 10119,
+    "anilist": 10119,
+    "kitsu": 6046
+  },
+  "skip_key_id": 10119,
+  "skip_key_space": "mal",
+  "episode_total": 8,
+  "added_at": null,
+  "search_text": "seitokai yakuindomo ova seitokai yakuindomo ova",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "91085"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "91086"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "91087"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "91088"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "91089"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "91090"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "91091"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "109804"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

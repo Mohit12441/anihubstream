@@ -1,0 +1,146 @@
+{
+  "id": "star-wars-visions",
+  "title": "Star Wars: Visions",
+  "native": "スター・ウォーズ：ビジョンズ",
+  "year": 2021,
+  "rating": 7,
+  "season": "Fall 2021",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx138060-8G02wer2Lsxo.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx138060-8G02wer2Lsxo.jpg",
+  "accent": "#5d86e4",
+  "synopsis": "An anthology of animated shorts celebrating Star Wars through the lens of the world's best anime creators and storytellers.\n\n1) The Duel (Mizuno Takanobu, Kamikaze Douga)\n\n2) Tatooine Rhapsody (Taku Kimura, Studio Colorido)\n\n3) The Twins (Hiroyuki Imaishi, Trigger)\n\n4) The Village Bride (Hitoshi Haga, Kinema Citrus)\n\n5) The Ninth Jedi (Kenji Kamiyama, Production I.G.)\n\n6) T0-B1 (Abel Gongora, Science SARU)\n\n7) The Elder (Masahiko Ootsuka, Trigger)\n\n8) Lop and Ochou (Yuuki Igarashi, Geno Studio)\n\n9) Akakiri (Eun-Yeong Choi, Science SARU)\n\nNote: A further batch of 9 episodes released on May 4, 2023 as Star Wars: Visions Volume 2 does not meet our eligibility requirements as only a single episode was animated by a studio meeting our Country of Origin criteria.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Star Wars: Visions Volume 3 (2025)",
+    "Star Wars: Visions Presents - The Ninth Jedi (2026)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 43804,
+    "anilist": 138060,
+    "mal": 49357
+  },
+  "skip_key_id": 49357,
+  "skip_key_space": "mal",
+  "episode_total": 9,
+  "added_at": "2026-10-22 05:56:16",
+  "search_text": "star wars visions スター ウォース ヒ シ ョンス ona finished",
+  "genres": [
+    "action",
+    "adventure",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Duel",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://media.kitsu.app/episode/293484/thumbnail/medium-4e7f7b4851b9415dfdb45a5189454424.jpeg",
+      "synopsis": "A wandering stranger with a mysterious past defends a village from powerful bandits. (Source: Disney+)",
+      "airdate": "2021-09-22",
+      "markers": [],
+      "external_id": "293484"
+    },
+    {
+      "n": 2,
+      "title": "Tattooine Rhapsody",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://media.kitsu.app/episode/293485/thumbnail/medium-5e2aabb1a3c73a8f190c7c159ab032b2.jpeg",
+      "synopsis": "A band with big drama must save one of their own from Jabba the Hutt and Boba Fett. (Source: Disney+)",
+      "airdate": "2021-09-22",
+      "markers": [],
+      "external_id": "293485"
+    },
+    {
+      "n": 3,
+      "title": "The Twins",
+      "runtime": "16:00",
+      "runtime_seconds": 960,
+      "thumb": "https://media.kitsu.app/episode/293486/thumbnail/medium-76a759e822412ec20cd575c6f4eabd5b.jpeg",
+      "synopsis": "Twins born into the dark side clash aboard a massive Star Destroyer. (Source: Disney+)",
+      "airdate": "2021-09-22",
+      "markers": [],
+      "external_id": "293486"
+    },
+    {
+      "n": 4,
+      "title": "The Village Bride",
+      "runtime": "17:00",
+      "runtime_seconds": 1020,
+      "thumb": "https://media.kitsu.app/episode/293487/thumbnail/medium-c50c002b3969376949954b7e1373b1de.jpeg",
+      "synopsis": "A Jedi on the run takes in the unique customs of a remote village under threat by a warlord. (Source: Disney+)",
+      "airdate": "2021-09-22",
+      "markers": [],
+      "external_id": "293487"
+    },
+    {
+      "n": 5,
+      "title": "The Ninth Jedi",
+      "runtime": "21:00",
+      "runtime_seconds": 1260,
+      "thumb": "https://media.kitsu.app/episode/293488/thumbnail/medium-2fa45b3380f9b826d1fcd3ade57585d7.jpeg",
+      "synopsis": "The daughter of a lightsaber-smith is pursued by dark forces while on a dangerous mission. (Source: Disney+)",
+      "airdate": "2021-09-22",
+      "markers": [],
+      "external_id": "293488"
+    },
+    {
+      "n": 6,
+      "title": "T0-B1",
+      "runtime": "13:00",
+      "runtime_seconds": 780,
+      "thumb": "https://media.kitsu.app/episode/293489/thumbnail/medium-5ddf13d506b9c63cc5d60ede217ae035.jpeg",
+      "synopsis": "A cybernetic boy, who dreams of being a Jedi, discovers a dangerous truth about his creator. (Source: Disney+)",
+      "airdate": "2021-09-22",
+      "markers": [],
+      "external_id": "293489"
+    },
+    {
+      "n": 7,
+      "title": "The Elder",
+      "runtime": "15:00",
+      "runtime_seconds": 900,
+      "thumb": "https://media.kitsu.app/episode/293490/thumbnail/medium-f62dd29c22eb52fac63232cb28adc133.jpeg",
+      "synopsis": "A Jedi and his Padawan pursue a dark and powerful presence. (Source: Disney+)",
+      "airdate": "2021-09-22",
+      "markers": [],
+      "external_id": "293490"
+    },
+    {
+      "n": 8,
+      "title": "Lop & Ochō",
+      "runtime": "19:00",
+      "runtime_seconds": 1140,
+      "thumb": "https://media.kitsu.app/episode/293491/thumbnail/medium-83341d13a42d8432c45c6146d70ba973.jpeg",
+      "synopsis": "A family is torn about what to do when the Empire encroaches on their planet. (Source: Disney+)",
+      "airdate": "2021-09-22",
+      "markers": [],
+      "external_id": "293491"
+    },
+    {
+      "n": 9,
+      "title": "Akakiri",
+      "runtime": "12:00",
+      "runtime_seconds": 720,
+      "thumb": "https://media.kitsu.app/episode/293492/thumbnail/medium-a433115ea7caeb6d7ece82ddfb0b8d36.jpeg",
+      "synopsis": "A Jedi returns to his forbidden love to help defend her kingdom from a Sith-like Shogun. (Source: Disney+)",
+      "airdate": "2021-09-22",
+      "markers": [],
+      "external_id": "293492"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

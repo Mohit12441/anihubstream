@@ -1,0 +1,177 @@
+{
+  "id": "oreimo",
+  "title": "Oreimo",
+  "native": "俺の妹がこんなに可愛いわけがない",
+  "year": 2010,
+  "rating": 6.5,
+  "season": "Fall 2010",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx8769-Lat76qlOwdBN.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx8769-Lat76qlOwdBN.jpg",
+  "accent": "#24d3ee",
+  "synopsis": "Kousaka Kyousuke, a normal 17-year-old high school student living in Chiba, has not gotten along with his younger sister Kirino in years. For longer than he can remember, Kirino has ignored his comings and goings and looked at him with spurning eyes. It seemed as if the relationship between Kyousuke and his sister, now fourteen, would continue this way forever. One day however, Kyousuke finds a DVD case of a magical girl anime which had fallen in his house's entrance way.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Ore no Imouto ga Konna ni Kawaii Wake ga Nai TRUE ROUTE (2011)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 5487,
+    "anilist": 8769,
+    "mal": 8769
+  },
+  "skip_key_id": 8769,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 09:43:34",
+  "search_text": "oreimo 俺の妹か こんなに可愛いわけか ない tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "There's No Way I Could Love My Sister",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/84762/original.jpg",
+      "synopsis": "After bumping into his little sister, Kirino, in the hall, Kyōsuke Kōsaka finds a magical girl anime DVD which contains a little-sister themed adult game inside. Kyōsuke soon learns the game belongs to Kirino and confronts her about it.",
+      "airdate": "2010-10-03",
+      "markers": [],
+      "external_id": "84762"
+    },
+    {
+      "n": 2,
+      "title": "There's No Way I'd Go to an IRL Meetup with My Sister",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/84763/original.jpg",
+      "synopsis": "Noticing Kirino has no one to share her hobbies with, Kyōsuke asks for advice from his friend, Manami Tamura, who suggests that she make some otaku friends.",
+      "airdate": "2010-10-10",
+      "markers": [],
+      "external_id": "84763"
+    },
+    {
+      "n": 3,
+      "title": "There's No Way My Little Sister Can Be This Cute",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/84764/original.jpg",
+      "synopsis": "Kirino hangs out with Saori and Kuroneko again and is surprised to find that they do not have to worry about hiding their hobbies.",
+      "airdate": "2010-10-17",
+      "markers": [],
+      "external_id": "84764"
+    },
+    {
+      "n": 4,
+      "title": "There's No Way My Little Sister Would Go To Summer Comiket",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/84765/original.jpg",
+      "synopsis": "When Kirino forces Kyōsuke to play a beat-em-up eroge, he asks Saori for some playing advice.",
+      "airdate": "2010-10-24",
+      "markers": [],
+      "external_id": "84765"
+    },
+    {
+      "n": 5,
+      "title": "There's No Way My Little Sister's Friend Can Be This XX",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/84766/original.jpg",
+      "synopsis": "Kirino's best friend Ayase, finds out that she likes eroge.",
+      "airdate": "2010-10-31",
+      "markers": [],
+      "external_id": "84766"
+    },
+    {
+      "n": 6,
+      "title": "There's No Way My Childhood Friend Can Be This Cute",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/84767/original.jpg",
+      "synopsis": "Manami invites Kyōsuke over to her house to try out some sweets made by her family's shop for a Halloween event.",
+      "airdate": "2010-11-07",
+      "markers": [],
+      "external_id": "84767"
+    },
+    {
+      "n": 7,
+      "title": "There's No Way My Little Sister Can Write a Novel",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/84768/original.jpg",
+      "synopsis": "Kirino drags Kyōsuke around the city on Christmas Eve.",
+      "airdate": "2010-11-14",
+      "markers": [],
+      "external_id": "84768"
+    },
+    {
+      "n": 8,
+      "title": "There's No Way My Little Sister Could Get an Anime",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/84769/original.jpg",
+      "synopsis": "While Kirino's novel becomes increasingly popular, her editor reveals that it may be adapted into an anime.",
+      "airdate": "2010-11-21",
+      "markers": [],
+      "external_id": "84769"
+    },
+    {
+      "n": 9,
+      "title": "There's No Way My Little Sister Can Play Eroge Like This",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/84770/original.jpg",
+      "synopsis": "Kirino gets a long awaited adult game in the post and spends the entire day playing it.",
+      "airdate": "2010-11-28",
+      "markers": [],
+      "external_id": "84770"
+    },
+    {
+      "n": 10,
+      "title": "There's No Way My Little Sister Can Cosplay Like This",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/84771/original.jpg",
+      "synopsis": "Ayase asks Kyōsuke to give her advice on a present she can give Kirion to make up with her.",
+      "airdate": "2010-12-05",
+      "markers": [],
+      "external_id": "84771"
+    },
+    {
+      "n": 11,
+      "title": "There's No Way My Little Sister Can Be a Maid",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/84772/original.jpg",
+      "synopsis": "After running into her at the supermarket, Kyōsuke invites Manami over to his house to help him make lunch.",
+      "airdate": "2010-12-12",
+      "markers": [],
+      "external_id": "84772"
+    },
+    {
+      "n": 12,
+      "title": "There's No Way My Little Sister's Life Advice Can End Like This (Good End)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/84773/original.jpg",
+      "synopsis": "Kirino uses her final life counseling session to ask Kyōsuke to buy her an adult game that is launching at midnight in Akihabara.",
+      "airdate": "2010-12-19",
+      "markers": [],
+      "external_id": "84773"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,132 @@
+{
+  "id": "squishy-black-clover",
+  "title": "Squishy! Black Clover",
+  "native": "むぎゅっと！ブラッククローバー",
+  "year": 2019,
+  "rating": 6.1,
+  "season": "Summer 2019",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx110318-woH5gOEK638l.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110318-woH5gOEK638l.jpg",
+  "accent": "#f1d6ae",
+  "synopsis": "In a world where magic is everything, Asta, who is the only person who can't use magic, and the magical genius Yuno go all out to become the Wizard King. This is a spin off of the anime series \"Black Clover\" with an unbelievable story and an amazing cast.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "squishy!-black-clover-ellbz3",
+    "mal": 40031,
+    "anilist": 110318,
+    "kitsu": 42426
+  },
+  "skip_key_id": 40031,
+  "skip_key_space": "mal",
+  "episode_total": 8,
+  "added_at": null,
+  "search_text": "squishy black clover むき ゅっと フ ラッククローハ ー ona finished",
+  "genres": [
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Tell us, Wizard King! How Can We Become the Wizard King?!",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/0a9f457e0cbec67f455261d4c735a0c21577757128_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "267808"
+    },
+    {
+      "n": 2,
+      "title": "The Star on the Shooting Star",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d1da1c2185ef5736c223d657373b5b901577757247_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "267809"
+    },
+    {
+      "n": 3,
+      "title": "We Need to Stack Up Merit Like a Mille-feuille, La... Falalalala, Lalalala!",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/32a4e0291aa4cc71a3cc435791d5723c1577757369_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "267810"
+    },
+    {
+      "n": 4,
+      "title": "The Flirty Magic Knight Sees a Nightmare While Next to the Fiercely Drunken Witch",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/64432aeddf41639b007f62e1c6171fe21577757487_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268111"
+    },
+    {
+      "n": 5,
+      "title": "Marie, My Love",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/0198e70a665853d52b50f89d399a62141577757612_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268112"
+    },
+    {
+      "n": 6,
+      "title": "Super-Excited Noelle, \"Because I'm Royalty\"",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/124706a37942b825afecf0c02c0b2ef31577757728_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268405"
+    },
+    {
+      "n": 7,
+      "title": "A Sudden Battle with the Demon (Lies)",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4f26bcbd4e24434f0012ea607fbbae061577757909_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268406"
+    },
+    {
+      "n": 8,
+      "title": "Asta, Forever...",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c628be250d6e6c3cd738dbc54713e72c1577758028_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268407"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

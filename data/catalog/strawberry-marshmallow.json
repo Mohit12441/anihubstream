@@ -1,0 +1,219 @@
+{
+  "id": "strawberry-marshmallow",
+  "title": "Strawberry Marshmallow",
+  "native": "苺ましまろ",
+  "year": 2005,
+  "rating": 7.5,
+  "season": "Summer 2005",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx488-FwxcBNNqG6TC.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx488-FwxcBNNqG6TC.png",
+  "accent": "#e45d86",
+  "synopsis": "\"Cute girls doing cute things in cute ways.\"\n\nEveryday things make up the fabric of life, whether it's making friends, going to school, trying to make money, or celebrating a holiday. Ichigo Mashimaro is a heartwarming series that follows the daily lives of Itou Chika, her sister Nobue, and her friends Miu, Matsuri, and Ana.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "strawberry-marshmallow-e0x2zc",
+    "mal": 488,
+    "anilist": 488,
+    "kitsu": 449
+  },
+  "skip_key_id": 488,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "strawberry marshmallow 苺ましまろ tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Birthday",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/10733/original.jpg",
+      "synopsis": "Chika, Miu and Matsuri notice that it's Nobue's birthday and plan to make her a gift by themselves.",
+      "airdate": "2005-07-15",
+      "markers": [],
+      "external_id": "10733"
+    },
+    {
+      "n": 2,
+      "title": "Ana",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/10734/original.jpg",
+      "synopsis": "After moving to Japan from England, Ana starts at the same class as Matsuri and pretends to know nothing about Japan or Japanese.",
+      "airdate": "2005-07-22",
+      "markers": [],
+      "external_id": "10734"
+    },
+    {
+      "n": 3,
+      "title": "House Call",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/10735/original.jpg",
+      "synopsis": "Ana invites Matsuri at her place to help her study English. But much to her grief, the entire gang decides to tag along.",
+      "airdate": "2005-07-29",
+      "markers": [],
+      "external_id": "10735"
+    },
+    {
+      "n": 4,
+      "title": "Part-time Job",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/10736/original.jpg",
+      "synopsis": "Nobue finds out she's ran out of money to buy cigarettes and tries to find a fitting part-time job. Ana, Matsuri, Chika and Miu do their best and worst to help her. Arbeit means part-time job in German.",
+      "airdate": "2005-08-19",
+      "markers": [],
+      "external_id": "10736"
+    },
+    {
+      "n": 5,
+      "title": "Sleepover",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/10737/original.jpg",
+      "synopsis": "Miu becomes jealous over the attention Ana and Matsuri gain from Nobue.",
+      "airdate": "2005-08-26",
+      "markers": [],
+      "external_id": "10737"
+    },
+    {
+      "n": 6,
+      "title": "Hot Summer Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/10738/original.jpg",
+      "synopsis": "Intense summer heat causes the girls' imagination to run wild again.",
+      "airdate": "2005-09-02",
+      "markers": [],
+      "external_id": "10738"
+    },
+    {
+      "n": 7,
+      "title": "Beach Trip",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/10739/original.jpg",
+      "synopsis": "Miu is shooting a video documentary for school, and chooses the Itō household as her subject. In the end, Nobue takes the gang out for a beach trip.",
+      "airdate": "2005-09-09",
+      "markers": [],
+      "external_id": "10739"
+    },
+    {
+      "n": 8,
+      "title": "Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/10740/original.jpg",
+      "synopsis": "A festival episode has the gang dress up in yukatas and head out to see fireworks.",
+      "airdate": "2005-09-16",
+      "markers": [],
+      "external_id": "10740"
+    },
+    {
+      "n": 9,
+      "title": "Growing Child",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/10741/original.jpg",
+      "synopsis": "Chika discovers she's gained a bit of weight, and, provoked by Miu, starts her own diet. It's only after a pointful remark by Nobue, that Chika's self-confidence gets restored.",
+      "airdate": "2005-09-23",
+      "markers": [],
+      "external_id": "10741"
+    },
+    {
+      "n": 10,
+      "title": "Flower",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/10742/original.jpg",
+      "synopsis": "Many sidequests disturb the girls' trip to a distant restaurant to have cake with Nobue.",
+      "airdate": "2005-09-30",
+      "markers": [],
+      "external_id": "10742"
+    },
+    {
+      "n": 11,
+      "title": "First Snow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/10743/original.jpg",
+      "synopsis": "After a freezing cold autumn day, the gang pays a visit to hot baths and witnesses the first snow fall.",
+      "airdate": "2005-10-07",
+      "markers": [],
+      "external_id": "10743"
+    },
+    {
+      "n": 12,
+      "title": "Present",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/10744/original.jpg",
+      "synopsis": "Matsuri's faith in Santa Claus makes the rest of the gang guarantee her a happy Christmas.",
+      "airdate": "2005-10-14",
+      "markers": [],
+      "external_id": "10744"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ichigo Splash (苺すぷらっしゅ)",
+      "artist": "Saeko Chiba, Fumiko Orikasa, Ayako Kawasumi, Mamiko Noto, and Hitomi Nabatame",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Zutto, Zutto (ずっと、ずっと)",
+      "artist": "Fumiko Orikasa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Akkan berry berry",
+      "artist": "Saeko Chiba, Fumiko Orikasa, Ayako Kawasumi, Mamiko Noto, and Hitomi Nabatame",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yuumachi no Kaze (夕待ちの風)",
+      "artist": "Fumiko Orikasa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ichigo Complete",
+      "artist": "Saeko Chiba, Fumiko Orikasa, Ayako Kawasumi and Mamiko Noto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Classmate",
+      "artist": "Fumiko Orikasa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

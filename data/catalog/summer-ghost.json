@@ -1,0 +1,55 @@
+{
+  "id": "summer-ghost",
+  "title": "Summer Ghost",
+  "native": "サマーゴースト",
+  "year": 2021,
+  "rating": 7.8,
+  "season": "Fall 2021",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx130050-rXTPVJ9UGN8Y.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx130050-rXTPVJ9UGN8Y.jpg",
+  "accent": "#5d93e4",
+  "synopsis": "Tomoya, Aoi, and Ryou are high school students who met online. An urban legend speaks of a \"summer ghost,\" a spirit girl who appears when fireworks are set off.\n\nTomoya cannot live the life he envisioned for himself. Aoi cannot find her place in the world. Ryou has his once shining future suddenly pulled away. Each has their own reason for needing to meet the summer ghost. On a summer night when life and death cross paths, where will each of their emotions take them?",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "summer-ghost-2rtdim",
+    "mal": 48171,
+    "anilist": 130050,
+    "kitsu": 44099
+  },
+  "skip_key_id": 48171,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "summer ghost サマーコ ースト movie finished",
+  "genres": [
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Summer Ghost (Movie)",
+      "runtime": "35:00",
+      "runtime_seconds": 2100,
+      "thumb": "https://animehot.cc/storage/media/2026/09/68e8da4c252337524249302c-landscape.webp",
+      "synopsis": "It is said that fireworks can calm the souls of the dead. For Tomoya Sugisaki, Aoi Harukawa, and Ryou Kobayashi, fireworks are what allowed them to meet the Summer Ghost. Believed to be the spirit of a young woman who committed suicide, the Summer Ghost only appears in a specific area and can only be seen by those who are within arm's reach of death. \n\nTomoya is a creative soul being crushed by his academic obligation to get into a good university. Aoi is a meek girl who is relentlessly bullied by her classmates. Ryou is a former basketball star who had to forfeit his passion following a grim diagnosis. The only thing these three have in common is their ability to see the Summer Ghost. The Summer Ghost is said to be able to answer any and all questions pertaining to death—something the three teenagers desperately want to know more about.\n\nDissatisfied with their initial meeting, Tomoya sets out to find the Summer Ghost once again. But the more time he spends with the ghost, the more the mystery surrounding her existence unravels.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "309896"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,396 @@
+{
+  "id": "silver-fang",
+  "title": "Ginga: Nagareboshi Gin",
+  "native": "銀牙 -流れ星 銀-",
+  "year": 1986,
+  "rating": 7.4,
+  "season": "Spring 1986",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b589-H6dhNw4ssJCK.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b589-H6dhNw4ssJCK.jpg",
+  "accent": "#e4ae5d",
+  "synopsis": "Born in the bitter cold of the Ouu Mountains as the son of Riki, the mightiest bear-hunting dog, is the magnificent tiger-striped puppy, Gin!\n\nTo defeat the murderous Akakabuto—who seeks to build a stronghold deep in the mountains of Ou after defeating his grandfather and father—Gin joins the Ouu Army, his youthful blood boiling with determination!! With only three months left until the final showdown with Akakabuto, his eyes are set on finding true “men” who will fight alongside his comrades to the bitter end against Akakabuto, as he races across the entire land of Japan!!\n\n(Source: Toei Animation, translated)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "silver-fang-u6vb0x",
+    "mal": 589,
+    "anilist": 589,
+    "kitsu": 544
+  },
+  "skip_key_id": 589,
+  "skip_key_space": "mal",
+  "episode_total": 21,
+  "added_at": null,
+  "search_text": "ginga nagareboshi gin 銀牙 流れ星 銀 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Little Hero... Gin Is Born!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-04-07",
+      "markers": [],
+      "external_id": "12833"
+    },
+    {
+      "n": 2,
+      "title": "Gin! Beyond the trials, tomorrow awaits!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-04-14",
+      "markers": [],
+      "external_id": "12834"
+    },
+    {
+      "n": 3,
+      "title": "The life-saving friendship of Gin!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-04-21",
+      "markers": [],
+      "external_id": "12835"
+    },
+    {
+      "n": 4,
+      "title": "The Challenge of giant Bear, Akakabuto!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-04-28",
+      "markers": [],
+      "external_id": "12836"
+    },
+    {
+      "n": 5,
+      "title": "Madness! A Blood-stained victory!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-05-05",
+      "markers": [],
+      "external_id": "12837"
+    },
+    {
+      "n": 6,
+      "title": "Howl! The Mountains are calling!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-05-19",
+      "markers": [],
+      "external_id": "12838"
+    },
+    {
+      "n": 7,
+      "title": "Engraved into your soul! The burning oath of the soldiers",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-05-26",
+      "markers": [],
+      "external_id": "12839"
+    },
+    {
+      "n": 8,
+      "title": "Now! The departure of the fighters!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-06-02",
+      "markers": [],
+      "external_id": "12840"
+    },
+    {
+      "n": 9,
+      "title": "Demon dogs! The three Kai brothers!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-06-09",
+      "markers": [],
+      "external_id": "12841"
+    },
+    {
+      "n": 10,
+      "title": "Monster! Moss' Army of Kasumi Take!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-06-16",
+      "markers": [],
+      "external_id": "12842"
+    },
+    {
+      "n": 11,
+      "title": "Ninja Dogs! Black Shadows in the Iga Village",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-06-23",
+      "markers": [],
+      "external_id": "12843"
+    },
+    {
+      "n": 12,
+      "title": "It's Dangerous Ben! The Confrontation Of The Ninja Grounds!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-06-30",
+      "markers": [],
+      "external_id": "12844"
+    },
+    {
+      "n": 13,
+      "title": "Justice! The Orders Of The Leader!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-07-07",
+      "markers": [],
+      "external_id": "12845"
+    },
+    {
+      "n": 14,
+      "title": "Advancing! The Small One Is the Young Leader!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-07-14",
+      "markers": [],
+      "external_id": "12846"
+    },
+    {
+      "n": 15,
+      "title": "Benizakura! The Strongest One Of All!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-07-21",
+      "markers": [],
+      "external_id": "12847"
+    },
+    {
+      "n": 16,
+      "title": "The Tears Arrive! A Close Companion Meets Their Death!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-07-28",
+      "markers": [],
+      "external_id": "12848"
+    },
+    {
+      "n": 17,
+      "title": "Now, We Realise! The Origin of the Leader!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-08-04",
+      "markers": [],
+      "external_id": "12849"
+    },
+    {
+      "n": 18,
+      "title": "Fight! The Strongest One Throws Away Their Life!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-08-25",
+      "markers": [],
+      "external_id": "12850"
+    },
+    {
+      "n": 19,
+      "title": "Tragedy! Benizakura's blood red last moment!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-09-01",
+      "markers": [],
+      "external_id": "12851"
+    },
+    {
+      "n": 20,
+      "title": "Angry Gin! Now show your courage!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-09-08",
+      "markers": [],
+      "external_id": "12852"
+    },
+    {
+      "n": 21,
+      "title": "Gin! Towards a new path!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1986-09-22",
+      "markers": [],
+      "external_id": "12853"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Across my world",
+      "artist": "knotlamp",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ame Tokidoki Hare Nochi Niji (Sometimes After the Rain Clears There's a Rainbow)",
+      "artist": "Fūdan-juku",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ginga no Joō (銀河の女王)",
+      "artist": "Tatsuya Matsuno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ashita no Ginga e (あしたの銀河へ)",
+      "artist": "Peekaboo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Colors of dream ~Niji no Michishirube~",
+      "artist": "Mitsuko Horie",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Carry The Light",
+      "artist": "JA・JA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ALL OF US",
+      "artist": "Maki Gotō",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ginga Densetsu WEED",
+      "artist": "Dohatsuten",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsuki Akari (Moonlight)",
+      "artist": "Dohatsuten",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsuki Akari",
+      "artist": "Dohatsuten",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Omega no Tobira - Hello, Vifam (メガの扉~HELLO,VIFAM~)",
+      "artist": "Katsumi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Don't Cry",
+      "artist": "Aki Maeda and Ai Maeda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "HELLO,VIFAM",
+      "artist": "TAO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Never Give Up",
+      "artist": "TAO",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Nagareboshi Gin",
+      "artist": "Takayuki Miyauchi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tomorrow",
+      "artist": "Takayuki Miyauchi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Jinsei Wahaha! (人生わははっ!)",
+      "artist": "Fudanjuku",
+      "episodes": "25-38"
+    }
+  ],
+  "relations": []
+}

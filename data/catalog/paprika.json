@@ -1,0 +1,71 @@
+{
+  "id": "paprika",
+  "title": "Paprika",
+  "native": "パプリカ",
+  "year": 2006,
+  "rating": 7.9,
+  "season": "Fall 2006",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1943-jMCEYL1Ixmgc.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1943-jMCEYL1Ixmgc.png",
+  "accent": "#e49328",
+  "synopsis": "Prepare to enter the realm of fantasy and imagination where reality and dreams collide in a kaleidoscopic mindscape of sheer visual genius. The magical tale centers on a revolutionary machine that allows scientists to enter and record a subject's dream. After being stolen, a fearless detective and brilliant therapist join forces to recover the device before it falls into the hands of a dream terrorist.\n\n(Source: Sony Pictures Home Entertainment)\n\nNote: The film received an early premiere at the 63rd Venice International Film Festival on September 2, 2006.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "paprika-d3efv2",
+    "mal": 1943,
+    "anilist": 1943,
+    "kitsu": 1752
+  },
+  "skip_key_id": 1943,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "paprika ハ フ リカ movie finished",
+  "genres": [
+    "fantasy",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Paprika (Movie)",
+      "runtime": "90:00",
+      "runtime_seconds": 5400,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1943.jpg",
+      "synopsis": "Prepare to enter the realm of fantasy and imagination where reality and dreams collide in a kaleidoscopic mindscape of sheer visual genius. The magical tale centers on a revolutionary machine that allows scientists to enter and record a subject's dream. After being stolen, a fearless detective and brilliant therapist join forces to recover the device before it falls into the hands of a dream terrorist.\n\n\n\n(Source: Sony Pictures Home Entertainment)\n\n\n\nNote: The film received an early premiere at the 63rd Venice International Film Festival on September 2, 2006.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "30520"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mediational Field",
+      "artist": "Susumu Hirasawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "The girl in Byakkoya - White Tiger Field (白虎野の娘)",
+      "artist": "Susumu Hirasawa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,217 @@
+{
+  "id": "overlord-ii",
+  "title": "Overlord II",
+  "native": "オーバーロードⅡ",
+  "year": 2018,
+  "rating": 7.6,
+  "season": "Winter 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98437-5q0GWqHhNAgJ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98437-5q0GWqHhNAgJ.jpg",
+  "accent": "#285d78",
+  "synopsis": "Continuing his quest to rule this new world, Ains begins to put the pieces in place for his conquest. But between a Lizard Man tribe uprising, and performing missions as adamantite adventurer Lord Momon, Ains has his work cut out for him! Thankfully he has his most loyal and willing subordinates to do his bidding. Nothing and no one can stop the supreme and mighty Overlord in his quest to rule all!\n\n(Source: Manga Entertainment)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "overlord-ii-t0nfc5",
+    "mal": 35073,
+    "anilist": 98437,
+    "kitsu": 13237
+  },
+  "skip_key_id": 35073,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "overlord ii オーハ ーロート ii tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The dawn of Despair",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232323/original.jpg",
+      "synopsis": "Officers of the Slane Theocracy gather to discuss recent losses. The noblemen of Estize plot to push back the Empire. Ains surveys a world map as his plans are set in motion. Shalltear recovers from her ordeal.",
+      "airdate": "2018-01-09",
+      "markers": [],
+      "external_id": "232323"
+    },
+    {
+      "n": 2,
+      "title": "Departure",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232324/original.jpg",
+      "synopsis": "The leaders of the Green Claw tribe gather to discuss their response to the threat that faces them. Zaryusu proposes an alliance with the other Lizardman tribes, and is sent to meet with the Red Eye tribe.",
+      "airdate": "2018-01-16",
+      "markers": [],
+      "external_id": "232324"
+    },
+    {
+      "n": 3,
+      "title": "Lizard men, gathering",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232325/original.jpg",
+      "synopsis": "Zenberu tests Zaryusu's strength in combat, while the latter defends Crusch's honor. The Lizardmen chiefs conduct a war council, and formulate a strategy to defend themselves against their common enemy.",
+      "airdate": "2018-01-23",
+      "markers": [],
+      "external_id": "232325"
+    },
+    {
+      "n": 4,
+      "title": "Army of Death",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232326/original.jpg",
+      "synopsis": "As the Lizard Men celebrate, Ains holds a conference to address the floor guardians. A proposal is presented to keep the Lizard Man tribes from being wiped out. Nazarick provides a show of force to the Lizard Men.",
+      "airdate": "2018-01-30",
+      "markers": [],
+      "external_id": "232326"
+    },
+    {
+      "n": 5,
+      "title": "The freezing god",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232327/original.jpg",
+      "synopsis": "At the outpost in the Tob Forest, Ains strategizes with his guardians, and imposes Shalltear's penance upon her. The Lizard Man chiefs assemble and receive Cocytus on the battlefield for their final showdown.",
+      "airdate": "2018-02-06",
+      "markers": [],
+      "external_id": "232327"
+    },
+    {
+      "n": 6,
+      "title": "Those who pick up, those who are picked up",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232328/original.jpg",
+      "synopsis": "Sebas happens upon a near-lifeless woman, and takes her under his protection. Brain, left defeated by his encounter with Shalltear, meets up with Gazef. Members of the Blue Rose take measures against a drug plantation.",
+      "airdate": "2018-02-13",
+      "markers": [],
+      "external_id": "232328"
+    },
+    {
+      "n": 7,
+      "title": "Blue roses",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232329/original.jpg",
+      "synopsis": "Gazef finds Climb practicing with his sword outside the castle, and asks to spar with him. Renner and Lakyus examine the coded document recovered by Evileye. Sebas finds himself beset upon from all sides over Tuare.",
+      "airdate": "2018-02-20",
+      "markers": [],
+      "external_id": "232329"
+    },
+    {
+      "n": 8,
+      "title": "A boy's feeling",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232330/original.jpg",
+      "synopsis": "Climb delivers Lakyus's message to Evileye and Gagaran, who offer guidance to the young man. Climb happens upon some men beating up a boy in the street, who is then rescued by Sebas, from whom he seeks training.",
+      "airdate": "2018-02-27",
+      "markers": [],
+      "external_id": "232330"
+    },
+    {
+      "n": 9,
+      "title": "Soaring sparks of fire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232331/original.jpg",
+      "synopsis": "Sebas begins his raid of the brothel from one side, while Climb and Brain enter from the other. While Climb covers the exit alone, he is confronted by Succulent and Cocco Doll trying to flee, and a desperate fight begins.",
+      "airdate": "2018-03-06",
+      "markers": [],
+      "external_id": "232331"
+    },
+    {
+      "n": 10,
+      "title": "Disturbance begins in the royal capital",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232332/original.jpg",
+      "synopsis": "Ains calls on Sebas to answer for his actions, and to discuss what is to become of Tuare. Renner meets with the Blue Rose, then Marquis Raeven, to consult with them about her planned attacks against Eight Fingers.",
+      "airdate": "2018-03-13",
+      "markers": [],
+      "external_id": "232332"
+    },
+    {
+      "n": 11,
+      "title": "Jaldabaoth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232333/original.jpg",
+      "synopsis": "Demiurge takes charge of Nazarick's forces, laying out the mission to strike at Eight Fingers. Meanwhile, Lakyus details a similar mission to her squad captains. Sebas, Climb, and Brain raid Six Arms' compound together.",
+      "airdate": "2018-03-20",
+      "markers": [],
+      "external_id": "232333"
+    },
+    {
+      "n": 12,
+      "title": "The final Battle of the disturbance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232334/original.jpg",
+      "synopsis": "Evileye petitions Momon to help her, and he begins fighting the disguised Demiurge. As Climb and the others try to get Tuare out of the compound, they face resistance. Renner convenes an emergency strategy meeting.",
+      "airdate": "2018-03-27",
+      "markers": [],
+      "external_id": "232334"
+    },
+    {
+      "n": 13,
+      "title": "The ultimate trump card",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/232335/original.jpg",
+      "synopsis": "The guardsmen and adventurers face a daunting array of demons until Momon arrives and takes charge. Brain once again comes face to face with Shalltear. While Evileye is occupied, Demiurge reveals his plan to Ains.",
+      "airdate": "2018-04-03",
+      "markers": [],
+      "external_id": "232335"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "VORACITY",
+      "artist": "MYTH & ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Silent Solitude",
+      "artist": "OxT",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Go Cry Go",
+      "artist": "OxT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hydra",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

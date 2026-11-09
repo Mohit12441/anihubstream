@@ -1,0 +1,204 @@
+{
+  "id": "now-and-then-here-and-there",
+  "title": "Now and Then, Here and There",
+  "native": "今、そこにいる僕",
+  "year": 1999,
+  "rating": 7.3,
+  "season": "Fall 1999",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx160-t5rKPAhZoznO.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx160-t5rKPAhZoznO.jpg",
+  "accent": "#f18635",
+  "synopsis": "Shu is a typical Japanese boy, but has an unbeatable, optimistic and determined attitude. However, when he sees a mysterious girl with strange eyes named Lala-Ru up on a smokestack, he is soon pulled into a strange desert world. Shu soon discovers the true terrors of war, which includes genocide, brutal torture, hunger, thirst, and child exploitation. Now Shu is trying to save Lala-Ru, as well as his hard earned, and often relunctant, new friends from the insane dictator, Hamdo. Whether Shu can possibly accomplish saving those he cares about while still holding up to his values remains to be seen. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "now-and-then-here-and-there-za0izb",
+    "mal": 160,
+    "anilist": 160,
+    "kitsu": 138
+  },
+  "skip_key_id": 160,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "now and then here and there 今 そこにいる僕 tv finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A Girl Admiring the Sunset",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4062/original.jpg",
+      "synopsis": "Happy-go-lucky boy Shu encounters a mysterious girl, and is drawn into time warp that thrusts him into a hellish future.",
+      "airdate": "1999-10-14",
+      "markers": [],
+      "external_id": "4062"
+    },
+    {
+      "n": 2,
+      "title": "A Boy and a Mad King",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4063/original.jpg",
+      "synopsis": "Lala-Ru is captured by Abelia’s men, but her magical pendant escapes with Shu at the last moment.",
+      "airdate": "1999-10-21",
+      "markers": [],
+      "external_id": "4063"
+    },
+    {
+      "n": 3,
+      "title": "A Feast in the Dark",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4064/original.jpg",
+      "synopsis": "While imprisoned, Shu meets a fragile blue-eyed girl named Sara who found her way to this hellish future under similar circumstances.",
+      "airdate": "1999-10-28",
+      "markers": [],
+      "external_id": "4064"
+    },
+    {
+      "n": 4,
+      "title": "Discord",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4065/original.jpg",
+      "synopsis": "The young soldiers have their marching orders: Search the entire ship from top to bottom for Lala-Ru’s missing pendant.",
+      "airdate": "1999-11-04",
+      "markers": [],
+      "external_id": "4065"
+    },
+    {
+      "n": 5,
+      "title": "Murder",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4066/original.jpg",
+      "synopsis": "King Hamdo’s frustration reaches a boiling point as the mission to recover the pendant continues to be fruitless.",
+      "airdate": "1999-11-11",
+      "markers": [],
+      "external_id": "4066"
+    },
+    {
+      "n": 6,
+      "title": "Disappearance in a Sandstorm",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4067/original.jpg",
+      "synopsis": "The young soldiers are now faced with a tour of duty as they leave Hellywood to seek more soldiers.",
+      "airdate": "1999-11-18",
+      "markers": [],
+      "external_id": "4067"
+    },
+    {
+      "n": 7,
+      "title": "Night of Flight",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4068/original.jpg",
+      "synopsis": "While in prison, Shu uncovers an unbelievable mystery and the fate of this hellish future suddenly falls squarely in his hands.",
+      "airdate": "1999-11-25",
+      "markers": [],
+      "external_id": "4068"
+    },
+    {
+      "n": 8,
+      "title": "Two Lone Souls",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4069/original.jpg",
+      "synopsis": "Now that Shu is on the run, he must face a whole new set of dangers in the wild desert.",
+      "airdate": "1999-12-02",
+      "markers": [],
+      "external_id": "4069"
+    },
+    {
+      "n": 9,
+      "title": "In the Chasm",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4070/original.jpg",
+      "synopsis": "Shu and Lala-ru don’t realize it, but the village they’ve encountered is actually the target of King Hamdo’s revenge.",
+      "airdate": "1999-12-09",
+      "markers": [],
+      "external_id": "4070"
+    },
+    {
+      "n": 10,
+      "title": "Prelude to Chaos",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4071/original.jpg",
+      "synopsis": "Shu and Lala-Ru are tentatively welcomed by the villagers of Zari Bars.",
+      "airdate": "1999-12-16",
+      "markers": [],
+      "external_id": "4071"
+    },
+    {
+      "n": 11,
+      "title": "Eve of Destruction",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4072/original.jpg",
+      "synopsis": "Sis, one of the citizens of Zari Bars, finds Sara in the desert, on the verge of death.",
+      "airdate": "2000-01-06",
+      "markers": [],
+      "external_id": "4072"
+    },
+    {
+      "n": 12,
+      "title": "This Bloody Earth",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4073/original.jpg",
+      "synopsis": "Sara warns the people of Zari Bars that an impending attack from Hellywood is eminent.",
+      "airdate": "2000-01-13",
+      "markers": [],
+      "external_id": "4073"
+    },
+    {
+      "n": 13,
+      "title": "Now and Then, Here and There",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/4074/original.jpg",
+      "synopsis": "Nabuca finds himself at a crossroad: Continue killing for the empty promise of going home after the war ends, or listen to his heart and put down his gun.",
+      "airdate": "2000-01-20",
+      "markers": [],
+      "external_id": "4074"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ima, Sokoni Iru Boku (今、そこにいる僕; Now and Then, Here and There)",
+      "artist": "Toshio Masuda",
+      "episodes": "01-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Komoriuta... (子守歌...; Lullaby...)",
+      "artist": "Reiko Yasuhara",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

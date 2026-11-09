@@ -1,0 +1,206 @@
+{
+  "id": "sugar-apple-fairy-tale",
+  "title": "Sugar Apple Fairy Tale",
+  "native": "シュガーアップル・フェアリーテイル",
+  "year": 2023,
+  "rating": 7.3,
+  "season": "Winter 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx139821-RC4PW7KPY1DU.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139821-RC4PW7KPY1DU.jpg",
+  "accent": "#f16b5d",
+  "synopsis": "In a world where fairies are bought and sold to the highest bidder, humans aren’t exactly on friendly terms with the fae folk. But friendship is exactly what Anne Halford seeks with Challe, her new fairy bodyguard, though he’s not so keen on the idea. As his new master, Anne tasks him with escorting her through a particularly dangerous area, but with a reluctant bodyguard eager to escape a life of servitude, she’ll have to deal with a lot more than she bargained for...\n\n \n\n (Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sugar-apple-fairy-tale-elnerr",
+    "mal": 49980,
+    "anilist": 139821,
+    "kitsu": 45270
+  },
+  "skip_key_id": 49980,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "sugar apple fairy tale シュカ ーアッフ ル フェアリーテイル tv finished",
+  "genres": [
+    "adventure",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "339291"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "339292"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "339293"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "339294"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "339295"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "339296"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "339297"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "339298"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "339299"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "339300"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "339301"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "339302"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Surprise (サプライズ)",
+      "artist": "Rei Nakashima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "door",
+      "artist": "Nao Tōyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Musical",
+      "artist": "Minori Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kanaeru (To Grant)",
+      "artist": "Sumire Morohoshi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,65 @@
+{
+  "id": "summer-days-with-coo",
+  "title": "Summer Days with Coo",
+  "native": "河童のクゥと夏休み",
+  "year": 2007,
+  "rating": 7.2,
+  "season": "Summer 2007",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2848-byY6os6NuxRU.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2848-byY6os6NuxRU.png",
+  "accent": "#35aee4",
+  "synopsis": "Kouichi Uehara is a fourth grade student living in the suburb of Tokyo. One day, he picks up a large stone which turns out to be a fossil of a baby \"Kappa\" sleeping underground for the past 300 years, and names it \"Coo\". Koichi and Coo become good friends and starts living with his family. However, Coo could not adjust to the life style in Tokyo and starts to miss his family. On a hot summer day, Koichi and Coo decide to go on an adventurous road trip to find his peers. \n\n(Source: AniDB)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "summer-days-with-coo-irn9fy",
+    "mal": 2848,
+    "anilist": 2848,
+    "kitsu": 2598
+  },
+  "skip_key_id": 2848,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "summer days with coo 河童のクゥと夏休み movie finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Summer Days with Coo (Movie)",
+      "runtime": "141:00",
+      "runtime_seconds": 8460,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6acd3080a79c62b97153f2d7-landscape.jpg",
+      "synopsis": "Kouichi Uehara is a fourth grade student living in the suburb of Tokyo. One day, he picks up a large stone which turns out to be a fossil of a baby \"Kappa\" sleeping underground for the past 300 years, and names it \"Coo\". Koichi and Coo become good friends and starts living with his family. However, Coo could not adjust to the life style in Tokyo and starts to miss his family. On a hot summer day, Koichi and Coo decide to go on an adventurous road trip to find his peers. \n\n\n(Source: AniDB)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "44213"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Natsu no Shizuku (夏のしずく)",
+      "artist": "Yurika Ooyama",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

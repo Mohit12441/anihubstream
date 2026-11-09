@@ -1,0 +1,819 @@
+{
+  "id": "sailor-moon",
+  "title": "Sailor Moon",
+  "native": "美少女戦士セーラームーン",
+  "year": 1992,
+  "rating": 7.6,
+  "season": "Winter 1992",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx530-O8q6KpJ244Qk.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx530-O8q6KpJ244Qk.jpg",
+  "accent": "#e48650",
+  "synopsis": "Usagi Tsukino is an average student and crybaby klutz who constantly scores low on her tests. Unexpectedly, her humdrum life is turned upside down when she saves a cat with a crescent moon on its head from danger. The cat, named Luna, later reveals that their meeting was not an accident: Usagi is destined to become Sailor Moon, a planetary guardian with the power to protect the Earth. Given a special brooch that allows her to transform, she must use her new powers to save the city from evil energy-stealing monsters sent by the malevolent Queen Beryl of the Dark Kingdom.\n\nBut getting accustomed to her powers and fighting villains are not the only things she has to worry about. She must find the lost princess of the Moon Kingdom, the other Sailor Guardians, and the Legendary Silver Crystal in order to save the planet from destruction.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sailor-moon-9oiwzx",
+    "mal": 530,
+    "anilist": 530,
+    "kitsu": 489
+  },
+  "skip_key_id": 530,
+  "skip_key_space": "mal",
+  "episode_total": 46,
+  "added_at": null,
+  "search_text": "sailor moon 美少女戦士セーラームーン tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Crybaby: Usagi's Beautiful Transformation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12070/original.jpg",
+      "synopsis": "The show opens with Usagi Tsukino waking up late for school. On her way, she saves a mysterious black cat with a \"crescent shaped bald spot\" on its forehead. During school, Usagi and her classmates talk about Sailor V, a mysterious warrior.  After school, Usagi goes to her best friend's mother's jewelry store, which is having a big sale. However, the sale is being used as a plan to steal energy for the evil Queen Beryl.",
+      "airdate": "1992-03-07",
+      "markers": [],
+      "external_id": "12070"
+    },
+    {
+      "n": 2,
+      "title": "Punishment Awaits: the House of Fortune is the Monster Mansion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12071/original.jpg",
+      "synopsis": "In the Juuban area, fortune tellers are the new craze.  Naru suggest that Umino seek out a fortune teller after his true feelings for Usagi are revealed to her. Unfortunately, Umino and other teenagers are possessed by an evil fortune teller sent from the Dark Kingdom.  Usagi, on the other hand, meets an old fortune teller, who reveals to her that someone she sees everyday has feelings for her.  She begins to suspect that it is Motoki, a worker at Crown Game Center, because she has feelings for him.  After an encounter with Motoki, Usagi bumps into an angered Mamoru Chiba, again.  The next day, Umino shows up to school and begins to act very crudely.  However, he is not the only one acting strangely...",
+      "airdate": "1992-03-14",
+      "markers": [],
+      "external_id": "12071"
+    },
+    {
+      "n": 3,
+      "title": "The Mysterious Sleeping Sickness: Protect the Girls in Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12072/original.jpg",
+      "synopsis": "Sending in a love letter to the new radio talk show, \"Midnight Zero\" and having it read on air allows you to receive a very special gift.  The gift is not all it seems though. First, Usagi's teacher, Miss Haruna, receives a flower and goes into a coma-like state.  Then, the same thing happens to Usagi's best friend, Naru.  It doesn't take long for Luna and Usagi's suspicions to rise.  The two go to the radio station to investigate, but the receptionist at FM No. 10 claims the show does not exist.",
+      "airdate": "1992-03-21",
+      "markers": [],
+      "external_id": "12072"
+    },
+    {
+      "n": 4,
+      "title": "Learn How to be Skinny from Usagi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12073/original.jpg",
+      "synopsis": "Usagi becomes obsessed with her weight when she gains a few pounds.  After seeing how much weight Miss Haruna has lots, Usagi and her friends sign up for a health club.  Unfortunately, the health club was started by Jadeite as a ploy to drain people's energy.  In the basement Usagi discovers Jadeite's plan.",
+      "airdate": "1992-03-28",
+      "markers": [],
+      "external_id": "12073"
+    },
+    {
+      "n": 5,
+      "title": "Scent of a Monster: Chanela Will Steal Your Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12074/original.jpg",
+      "synopsis": "Shingo is deathly afraid of cats, and when Usagi tries to get Luna accepted into the family, Shingo objects.  Shingo, instead, goes to a pet store and buys a chanela, along with many of his friends.  However, the chanelas are tools of another evil operation of the Dark Kingdom, and they are being used to drain energy from the owners.",
+      "airdate": "1992-04-11",
+      "markers": [],
+      "external_id": "12074"
+    },
+    {
+      "n": 6,
+      "title": "Protect the Melody of Love: Usagi Plays Cupid",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12075/original.jpg",
+      "synopsis": "On her way to the arcade, Usagi runs into a young musician. Yusuke, the musician, was being chased by one of Jadeite's monsters because of a tape he accidentally got a hold of.  The tape is Jadeite's newest plan to collect energy.  Usagi and Luna sense something is wrong with Yusuke, so Usagi uses the Luna Pen and becomes a cool grown-up musician to sneak into the club Yusuke is performing at.",
+      "airdate": "1992-04-18",
+      "markers": [],
+      "external_id": "12075"
+    },
+    {
+      "n": 7,
+      "title": "Usagi Learns Her Lesson: Becoming a Star is Hard Work",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12076/original.jpg",
+      "synopsis": "After seeing a poster of singer Mikan, Usagi and Naru think they can become superstars. But after a bad rehearsal together, the girls split up. Naru decides to dress Umino up as a girl and work with him and Usagi tries to work with Luna.  At this time, a monster from Jadeite freezes Mikan and takes her place.  The monster leads a crowd of Mikan's admirers onto  a stage, where it steals their energy.",
+      "airdate": "1992-04-25",
+      "markers": [],
+      "external_id": "12076"
+    },
+    {
+      "n": 8,
+      "title": "The Girl Genius Is a Monster: The Brainwashing Cram School of Horror",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12077/original.jpg",
+      "synopsis": "Luna becomes suspicious of the new girl in school, Ami Mizuno. Usagi also joins in on the suspicion when they find a brain-washing program on a disk that Ami leaves behind as she rushes to cram school. Usagi enters the school by disguising herself as a doctor with the Luna Pen. After transforming into Sailor Moon, Usagi realizes the cram school teacher is the monster, not Ami. The monster tries to steal Ami's energy, but a symbol appears on her forehead...",
+      "airdate": "1992-05-02",
+      "markers": [],
+      "external_id": "12077"
+    },
+    {
+      "n": 9,
+      "title": "Usagi’s Disaster: Beware of the Clock of Confusion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12078/original.jpg",
+      "synopsis": "Jadeite's new plan to collect energy is set up in a clock shop; the clocks sold make people rush around at a frantic pace. Luna becomes suspicious of the clocks and informs Ami, who uses her new mini-supercomputer to discover the new evil plot. Ami and Luna tell Usagi, who has been affected by the clocks, what is happening and they go back to the shop to fight the monster. Sailor Moon and Sailor Mercury follow the monster into another dimension. Using her new VR goggles, Sailor Mercury finds the hiding monster.  However, the two warriors become trapped by the monster.",
+      "airdate": "1992-05-09",
+      "markers": [],
+      "external_id": "12078"
+    },
+    {
+      "n": 10,
+      "title": "The Cursed Bus: Enter Mars, the Guardian of Fire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12079/original.jpg",
+      "synopsis": "Usagi and Ami visit a Shinto shrine after hearing rumors of a cursed 6 o'clock bus. The disappearances of young girls who take the bus are being aimed at the shrine. However, the priestess at the shrine believes that the new helper is the source of the evil. Disguising herself as a bus attendant, Usagi is forced by Luna to go on the bus to see if the rumors are true. Usagi and the bus are transported to another dimension, while Ami is left behind.  When Rei, the Shinto priestess, confronts the new helper, Jadeite in disguise, she is also thrown into the other dimension.",
+      "airdate": "1992-05-16",
+      "markers": [],
+      "external_id": "12079"
+    },
+    {
+      "n": 11,
+      "title": "Usagi vs. Rei: Nightmare in Dream Land",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12080/original.jpg",
+      "synopsis": "Having no information on the whereabouts of the princess, the sailor soldiers investigate a new amusement park, which has had a rash of disappearances. While investigating, Rei and Usagi bump into Mamoru. Rei and Mamoru have many things to agree upon because of their \"hatred\" for Usagi. Ami enters the candy house in Dreamland, the amusement park. The candy house is the reason for the numerous disappearances; it is being used to steal the energy from people.",
+      "airdate": "1992-05-23",
+      "markers": [],
+      "external_id": "12080"
+    },
+    {
+      "n": 12,
+      "title": "I Want a Boyfriend: The Luxury Cruise Ship Is a Trap",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12081/original.jpg",
+      "synopsis": "Jadeite is approached by Tetis with an effective way to collect energy, Operation Romantic Cruise. Using her psychic abilities, Rei wins two tickets to go on the cruise and invites Ami to find boyfriends for themselves. Usagi, very jealous and angry, sneaks onto the ship disguised as a beautiful camera woman.  Ami and Rei come to the realization that they are the only single girls on the ship, but can catch guys on the rebound.  Jadeite, disguised as the captain of the ship, discovers Usagi, but neither realize who the other is.",
+      "airdate": "1992-05-30",
+      "markers": [],
+      "external_id": "12081"
+    },
+    {
+      "n": 13,
+      "title": "Girls Unite: The End of Jadeite",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12082/original.jpg",
+      "synopsis": "Queen Beryl gives Jadeite one last chance to destroy the sailor soldiers. As Usagi gazes into the stars, Jadeite appears in the sky and threatens to burn Tokyo to the ground if the sailor soldiers don't show up at the airport to fight him.  The girls decide whether or not to go because they know the airport will be heavily guarded with police.  At the airport, Jadeite sees the girls transform and finally knows who they are. \n\nArriving just in time, Tuxedo Mask fights Jadeite and they both fall into the ocean. The girls fear the worst when only Jadeite emerges.",
+      "airdate": "1992-06-06",
+      "markers": [],
+      "external_id": "12082"
+    },
+    {
+      "n": 14,
+      "title": "A New Enemy Appears: Nephrite's Evil Crest",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12083/original.jpg",
+      "synopsis": "With Jadeite gone, Nephrite explains to Queen Beryl about how he plans to collect energy; he plans to collect energy from individuals at points in their life when their energy is at its peak. Rui is Nephrite's first target. Disguising himself as a tennis coach, Nephrite gives Rui a racket that fills her with negative energy and makes her become obsessed with tennis. Usagi is prompted to investigate after Naru comes to her with concerns about Rui. Just as Usagi approaches, the monster inside Rui's cursed racket is released by Nephrite to collect her energy. Usagi transforms into Sailor Moon to fight the monster.  However, she is turned into a giant tennis ball and is bounced around the court!",
+      "airdate": "1992-06-13",
+      "markers": [],
+      "external_id": "12083"
+    },
+    {
+      "n": 15,
+      "title": "Usagi's Panic: Rei's First Date",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12084/original.jpg",
+      "synopsis": "After discovering a local park is to be demolished, Rei becomes determined to bring a boyfriend there.Usagi becomes upset with Mamoru after he saves Luna's life.  Rei decides she is going to go on a date with Mamoru, while Nephrite targets Mr. Kunitachi, the caretaker of the park, as his next victim. Usagi witnesses Rei falling in front of Mamoru, who accidentally steps on her head, and invites him for tea as an apology.",
+      "airdate": "1992-06-20",
+      "markers": [],
+      "external_id": "12084"
+    },
+    {
+      "n": 16,
+      "title": "A Girl's Dream: Usagi Becomes a Bride",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12085/original.jpg",
+      "synopsis": "Usagi and Naru discover from Umino that their home economics teacher, Ms. Akiyama, is engaged. Unfortunately, this teacher is Nephrite's newest target to collect energy. Ms. Akiyama decides to enter a handmade wedding dress contest in order to win a grand wedding reception. Usagi and Rei also enter.  Rei decides that she can learn from Usagi's mother, a full-time housewife, how to sew, but Ikuko doesn't know how, either!  Meanwhile, Nephrite puts a curse on the silk material Ms. Akiyama is going to make her dress out of for the contest.",
+      "airdate": "1992-06-27",
+      "markers": [],
+      "external_id": "12085"
+    },
+    {
+      "n": 17,
+      "title": "Usagi's a Model: The Flash of the Monster Camera",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12086/original.jpg",
+      "synopsis": "Girls at Usagi's school are amazed by the pictures taken by a junior high school photographer. Once Kijin Shinokawa, the young photographer, has his camera cursed by Nephrite, he puts out a call for female models.  Usagi becomes determined to be one of these models, and talks to Ami, Shingo, Ikuko, and Mamoru about her modeling; she is discouraged by everyone!  Kijin lures the unsuspecting models into his studio and \"captures\" his victims on film. Ignoring Luna's warning, Usagi participates in the contest (even though her suit is full of holes) after she is accepted. Usagi transforms and the monster inside Kijin's camera is released.",
+      "airdate": "1992-07-04",
+      "markers": [],
+      "external_id": "12086"
+    },
+    {
+      "n": 18,
+      "title": "Shingo's Love: The Grieving Doll",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12087/original.jpg",
+      "synopsis": "Shingo's friend, Mika, is an award-winning doll maker, like her mother. Nephrite targets Mika after winning a French contest. After school, Usagi and Naru are approached by two girls from Shingo's school; they say that he is mean because he broke Mika's award-winning doll without apologizing! Mika has been visited by Nehprite and is under his control. Shingo is saddened by her cool attitude and begins to make a [Sailor Moon] doll of his own to give her as an apology. Later, Usagi, Shingo, Ami, and Rei with Mamoru, go to a huge doll show.",
+      "airdate": "1992-07-11",
+      "markers": [],
+      "external_id": "12087"
+    },
+    {
+      "n": 19,
+      "title": "Usagi's Joy: A Love Letter from Tuxedo Mask",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12088/original.jpg",
+      "synopsis": "Nephrite writes fake love letters to girls all over the Juuban area in Tuxedo Mask's name, hoping that Sailor Moon will respond. Usagi falls falls for the trick and finds out many other girls have too.  Naru decides to meet this mystery man who claims to like her leafing Nephrite to believe Naru is Sailor Moon; he realizes his mistak but proceeds in draining the energy of love Naru produces.",
+      "airdate": "1992-07-25",
+      "markers": [],
+      "external_id": "12088"
+    },
+    {
+      "n": 20,
+      "title": "The Summer, the Beach, Youth and Ghosts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12089/original.jpg",
+      "synopsis": "The girls make reservations at a private beach resort to continue their Sailor Warrior training.  All they really want to do, however, is have some fun... that is, until they realize that they're booked their stay at the \"Adam's Inn\". Even though attendants at the Inn look like they're straight out of classic horror movies, the girls make the best of it. Ami tries to befriend Sakiko, the little girl who lives there, but her father rebuffs her. He hypnotizes Sakiko to invoke the powerful spirit inside of her.  Unfortunately, the spirit goes out of control and starts attacking everyone.",
+      "airdate": "1992-08-01",
+      "markers": [],
+      "external_id": "12089"
+    },
+    {
+      "n": 21,
+      "title": "Protect the Children's Dreams: Friendship Through Anime",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12090/original.jpg",
+      "synopsis": "Nephrite decides to target one of the animators of the Sailor V movies, Hiromi, by cursing one of her pencils. Ami goes to the studio to return a notebook that Hiromi has accidentally dropped, and she sees Nephrite as he is leaving.  Suspecting the worst, she brings Usagi and Rei to the studio to investigate.  The monster appears and attacks the girls.  It is in the form of two twins that are connected ate the tail.  They use all of the same techniques as the Sailor Warriors and yet are only defeated when they start bickering about who will give the killing blow.",
+      "airdate": "1992-08-08",
+      "markers": [],
+      "external_id": "12090"
+    },
+    {
+      "n": 22,
+      "title": "Romance Under the Moon: Usagi's First Kiss",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12091/original.jpg",
+      "synopsis": "A visiting princess is holding a ball to show off her nation's treasure, a beautiful jewel.  Usagi disguises herself as a princess to invetigate whether this girl could be the missing moon princess.  Nephrite also goes because he thinks that the jewel could be the Silver Crystal that Queen Beryl has been seeking.  Usagi loves the ball and even gets to dance with Tuxedo Mask (who is also there looking for the crystal).  However, Usagi an Tuxedo Mask are left dangling over the side of the balcony when Nephrite possesses the princess.  Usagin and Tuxedo float safely to the ground using Usagi's parasol.  Later in the evening, Tuxedo Mask visits sailor Moon on the balcony and kisses her under the moonlight.  They both remember something like this from the past...",
+      "airdate": "1992-08-15",
+      "markers": [],
+      "external_id": "12091"
+    },
+    {
+      "n": 23,
+      "title": "Wish Upon a Star: Naru's First Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12092/original.jpg",
+      "synopsis": "Nephrite gives up trying to get power from humans and focuses on finding the Silver Crystal. He uses a black crystal to help him identify its location. He thinks that Naru (who is still in love with his human guise) may have the clue. However, when he asks for the Silver Crystal, she brings him a jewel from her mother's store. Sailor Moon busts in on the scene just as Nephrite realizes that maybe Naru's love for him is itself a powerful source of energy.  A monster sent from Zoisite, who mistakes Nephrites's locating crystal for the Silver Crystal, also appears.  Sailor Moon dispatches it and tries to finish Nephrite as well... but Naru throws herself over him, and Sailor Moon is forced to stop her attack.",
+      "airdate": "1992-08-22",
+      "markers": [],
+      "external_id": "12092"
+    },
+    {
+      "n": 24,
+      "title": "Naru's Tears: Nephrite Dies for Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12093/original.jpg",
+      "synopsis": "Nephrite decides that Naru is connected to Sailor Moon after all. When she can't tell him who Sailor Moon really is, he leaves. \nWhile he is away, Zoisite's monsters come and kidnap Naru because they think that Nephrite cares for her and will exchange her for the black crystal.  Nephrite tracks them down and drives off the monsters, saving Naru.  Unfortunately, the monsters return and stick Nephrite with a life-sucking thorn.  Naru risks her life to protect Nephrite, but they are both helpless unlit the Sailor Warriors appear.",
+      "airdate": "1992-08-29",
+      "markers": [],
+      "external_id": "12093"
+    },
+    {
+      "n": 25,
+      "title": "Jupiter, the Powerful Girl in Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12094/original.jpg",
+      "synopsis": "Queen Beryl wants the Silver Crystal to revive Queen Metalia, the supreme ruler of the Dark Kingdom. Metalia explains that the Silver Crystal is made up of 7 Rainbow Crystals that contain the spirits of 7 powerful monsters. These crystals are sealed away inside of humans.  Zoisite uses the black crystal to find the first human carrier.  Meanwhile, there is a new girl at school named Makoto.  Although she has a bad reputation for starting fights, Usagi makes friends with her because she is an excellent cook.  They go to the arcade and see a boy, Joe, win a bunch of prizes.",
+      "airdate": "1992-09-05",
+      "markers": [],
+      "external_id": "12094"
+    },
+    {
+      "n": 26,
+      "title": "Restore Naru's Smile: Usagi's Friendship",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12095/original.jpg",
+      "synopsis": "Usagi, Umino and Naru go on a walk to try and cheer up Naru (who is still upset over Nephrite's death).  Naru asks for help from a priest whom they run into at a cemetery.  Unfortunately, the priest is the 2nd crystal carrier.  Zoisite appears to retrieve the crystal and truns the priest into a monster.  Tuxedo Mask arrives and fights Zoisite for the crystal.  The other Warriors show up and together they fight the monster and restor his humanity.  Sailor Moon notices that Tuxedo Mask left behind a mysterious star shaped locket.",
+      "airdate": "1992-09-12",
+      "markers": [],
+      "external_id": "12095"
+    },
+    {
+      "n": 27,
+      "title": "Crushing on Ami: The Boy Who Can See The Future",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12096/original.jpg",
+      "synopsis": "Zoisite discovers that the 3rd crystal carrier is a boy named Ryo Urawa. Ryo is a genius that has just transferred into the Sailor Warriors' school.  Ami immediately likes him (a fellow genius!), and they become friends. Urawa reveals to her that he can see the future and that he also knows that Ami is Sailor Mercury and begs her to destroy him before he is turned into a monster.  Unfortunately, Zoisite arrives and does just that.  The Rainbow Crystal is dropped during the fight, but Sailor Mercury manages to retrieve it.",
+      "airdate": "1992-10-10",
+      "markers": [],
+      "external_id": "12096"
+    },
+    {
+      "n": 28,
+      "title": "The Painting of Love: Usagi and Mamoru Get Closer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12097/original.jpg",
+      "synopsis": "Usagi and Mamoru are recruited by the artist Yumemi to be models for her next illustration.  They both feel drawn to the artists' work because it reminds them of some distant past.  Mamoru rebuss her, but Usagi and Umemi become friends.  Unfortuanately, Zoisite identifies Umemi as the 4th crystal carrier and attacks her, stealin gthe crystal and turning her into a monster.  Tuxedo Mask arrives and protects Sailor Moon, but reveals that he is after the Rainbow Crystals too.  He even wants to take away the one that the Sailor Warrios have!  Sailor Moon is very confused but somehow manages to defeat the monster and return the artist to normal.",
+      "airdate": "1992-10-17",
+      "markers": [],
+      "external_id": "12097"
+    },
+    {
+      "n": 29,
+      "title": "Total Chaos: The Messy Love Rectangle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12098/original.jpg",
+      "synopsis": "Makoto has a crush on Motoki (the arcade attendant) but is saddened to hear that he already has a girlfriend.  Usagi and Makoto get into an argument when Usagi announces that she likes Motoki.  Meanwhile, Zoisite targets the girlfriend, Reika, as the 5th crystal carrier.  He attacks her and turns her into a monster and steals the crystal.  Tuxedo Mask arrives and fights with him for the crystal, but Zoisite tricks him and escapes with it.  Sailor Moon and Jupiter work together to fight the monster and restore Reika to normal.",
+      "airdate": "1992-10-24",
+      "markers": [],
+      "external_id": "12098"
+    },
+    {
+      "n": 30,
+      "title": "Grandpa Loses Control: Rei in Danger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12099/original.jpg",
+      "synopsis": "Rei's grandfather is targeted as the 6th crystal carrier.  Zoisite appears and tries to extract the crystal, but he is forced to retreat when assaulted by both Grandpa and Rei's two crows.  Zoisite's attack, however, awakens the crystal inside of Grandpa and he starts acting weird.  Meanwhile, Usagi tries to get Rei and Yuichiro (Grandpa's new apprentice) together as a couple but fails.  Zoisite returns to the temple and takes the crystal from Grandpa and turns him into a monster.  Yuichiro tries to protect Rei but gets knocked unconscious.  Sailor Moon arrives just in time and manages to change Grandpa back without harming him.",
+      "airdate": "1992-10-31",
+      "markers": [],
+      "external_id": "12099"
+    },
+    {
+      "n": 31,
+      "title": "Love and Chased: Luna's Worst Day Ever",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12100/original.jpg",
+      "synopsis": "Luna is in big trouble when a herd of cats surround and chase her through the city.  She is only saved at the last minute by a big blue cat named Red Battler who scares the other cats away.  Luna is a bit turned off by the big brute, eve though he obviously has a crush on her.  Zoisite realizes that Red Battler is the 7th crystal carrier and attacks.  The two cats flee into the sewer but eventually Zoisite catches up with them, captures the crystal and turns the cat into a monster.  Tuxedo Mask arrives and managers to wrestle the Rainbow Crystal away from Zoisite.  The cat mother still feels something for Luna and doesn't harm her.  Sailor Warriors arrive and return the cat to normal.",
+      "airdate": "1992-11-07",
+      "markers": [],
+      "external_id": "12100"
+    },
+    {
+      "n": 32,
+      "title": "Umino's Resolve: I'll Protect Naru",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12101/original.jpg",
+      "synopsis": "Umino tries to impress Naru by dressing up as Tuxedo Mask.  Zoisite wants to turn Naru into a monster to hopefully draw out Sailor Moon, but is frightened away when he sees Tuxedo Mask (Umino) at her house.  He returns the next day, but he misses and turns a nearby performer into a monsters instead.  The monster starts to suffocate all of the people (including Umino and Naru), and Zoisite uses this to blackmail Sailor Moon into giving up her Rainbow Crystal.  Tuxedo Mask arrives, and they fight for the crystal while Sailor Moon frees the people.  In the end, Zoisite grabs it and disappears.",
+      "airdate": "1992-11-14",
+      "markers": [],
+      "external_id": "12101"
+    },
+    {
+      "n": 33,
+      "title": "Enter Venus, the Last Sailor Guardian",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12102/original.jpg",
+      "synopsis": "Kunzite and Zoisite work together on a plan to trap Tuxedo Mask and take his crystals.  Zoisite disguises himself as Sailor Moon and pretends to be in danger.  Tuxedo Mask rescues the fake Sailor Moon and gets stabbed by Zoisite.  In the struggle, his mask is torn off and his true identity is revealed to Zoisite.  The Sailor Warriors also arrive but get trapped in an energy absorbing dome by Kunzite.  Kunzite makes the dome smaller and smaller to force Tuxedo to give up his crystals, but -just in time- Sailor Venus appears with Artemis and rescues the trapped Warriors.",
+      "airdate": "1992-11-21",
+      "markers": [],
+      "external_id": "12102"
+    },
+    {
+      "n": 34,
+      "title": "The Shining Silver Crystal: The Moon Princess Appears",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12103/original.jpg",
+      "synopsis": "Zoisite tracks down Mamoru and challenges him to a duel where winner takes all of the Rainbow Crystals.  Mamoru is heading to duel when he runs into Usagi.  She notices his bleeding shoulder and follows him.  When they arrive, Zoisite tricks Mamoru into laying down his crystals and Kunzite appears and takes them all.  Then Mamoru and Usagi get trapped in the elevator of a crumbling building, and they are both forced to transform (and reveal their identities to each other) in order to save themselves.  They find themselves transported to the Dark Kingdom.  Zoisite attacks Sailor Moon with a shard, but Tuxedo Mask takes the blow instead.  When she sees Tuxedo Mask wounded, Sailor Moon cries.  Her tears call all of the Rainbow crystals to her and they form the Silver Crystal.  The crystal takes its place on the Moon Stick and Sailor Moon is now transformed into Princess Serenity.",
+      "airdate": "1992-11-28",
+      "markers": [],
+      "external_id": "12103"
+    },
+    {
+      "n": 35,
+      "title": "Returning Memories: Usagi and Mamoru's Past",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12104/original.jpg",
+      "synopsis": "Using the power of the Silver Crystal, Princess Serenity sends Zoisite running.  Then, overwhelmed by the memories of her past self, she passes out.  With Serenity out, Kunzite appears and takes both Zoisite and the unconscious Tuxedo Mask.  When he arrives, Queen Beryl kills Zoisite for his incompetences and turns her attention toward reviving Tuxedo Mask.  Back in the cave, Sailor Moon wakes up and finally remembers the past.  She and Prince Endymion lived on the moon in a great kingdom called the Silver Millennium.  Then a great evil took over the Earth and tried to steal the Silver Crystal.  Sailor Moon gets scared and declares that she doesn't want to fight anymore.  Then Kunzite returns and blasts the Sailor Warriors.  When only Sailor Moon is left, she finally accepts her destiny and calls on the Silver Crystal's power to send Kunzite running.",
+      "airdate": "1992-12-05",
+      "markers": [],
+      "external_id": "12104"
+    },
+    {
+      "n": 36,
+      "title": "Usagi's Confusion: Is Tuxedo Mask Evil?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12105/original.jpg",
+      "synopsis": "Usagi is depressed that Mamoru is gone, just when they realized their fate together.  Minako tries to cheer her up by taking her to the salon that is offering free hair cuts and styling.  The salon is a front for the Darking Kingdom, which is looking for Sailor moons true identity.  Minako accidentally gets targeted as Sailor Moon because she has a strand of Usagi's hair on her and is attacked.  As Sailor Moon is fighting the monsters she is struck by a black rose thrown by Endymion.  Sailor Moon is confused; he appears to be commanding the monsters against her!  The other Sailor Warriors appear just in time to drive Tuxedo Mask back and rescue Sailor Moon.",
+      "airdate": "1992-12-12",
+      "markers": [],
+      "external_id": "12105"
+    },
+    {
+      "n": 37,
+      "title": "Let's Become a Princess: Usagi's Bizarre Training",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12106/original.jpg",
+      "synopsis": "Usagi decides that if she really is the moon princess then she should start acting like one.  She and the other girls enroll in a princess training seminar (which is really just a trap for Sailor Moon).  Usagi does horribly on all the exercises and fails along with Rei and Minako.  After the \"\"graduates\"\" are turned into wax statues, the head mistress turns into a monster and attacks the Sailor Warriors under Kunzite and Endymion's supervision.  The Sailor Warriors manage to defeat the monster when Kunzite and Endymion start to argue.  They escape before Sailor Moon can use the Silver Crystal to heal Endymion's brainwashing.",
+      "airdate": "1992-12-19",
+      "markers": [],
+      "external_id": "12106"
+    },
+    {
+      "n": 38,
+      "title": "The Snow, the Mountains, Friendship and Monsters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12107/original.jpg",
+      "synopsis": "The girls fall for an advertisement for a \"\"moon Princess Contest\"\" and pick up for the mountains.  The contest is really a trap for Sailor Moon.  The former \"\"Moon Princess\"\" Saeko is under the control of the Dark Kingdom and causes and avalanche that traps Rei, Usagi and Yuichiro in the snow.  The monster attacks and is stopped at the last minute b a red rose from Endymion (who has momentarily remembered himself).  Endymion doesn't stay good for long, however, and soon flees... promising to return and take the Silver Crystal from Sailor Moon.",
+      "airdate": "1992-12-26",
+      "markers": [],
+      "external_id": "12107"
+    },
+    {
+      "n": 39,
+      "title": "Paired with a Monster: Mako, the Ice Skating Queen",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12108/original.jpg",
+      "synopsis": "Kunzite posses two champion ice skaters in an attempt to trap Sailor Moon.  He lures the girls to the ice skating rink with free lessons, hoping that the two possesed skaters can identify the moon princess.  Makoto skates so well that they think she is Sailor Moon and attack.  Sailor Moon transforms and tries to help, but she is still a klutz on the ice.  She is saved again by Tuxedo Mask, who disagrees with Kunzite's techniques of manipulating innocents.  Sailor Moon and Endymion air up for a skating battle with the monsters.  Suddenly, Sailor Moon can skate!  Kunzite appears and tires to freeze everyone, but Endymion destroys the freezing machine.  Unfortunately, he flees before Sailor Moon can heal him.",
+      "airdate": "1993-01-09",
+      "markers": [],
+      "external_id": "12108"
+    },
+    {
+      "n": 40,
+      "title": "The Legendary Lake Yokai: The Bond of Usagi's Family",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12109/original.jpg",
+      "synopsis": "Usagi's family goes on vacation to a hot springs resort near the lake where Usagi's parents met.  Queen Beryl notices that there is an unusual energy surrounding the lake and sends Endymion to investigate.  He discovers that there is a monster buried underneath the lake and uses his powers to revive her.  The monster soon starts attacking Usagi's family.  Endymion accepts responsibility for unleashing the monster and protects the Tsukinos.  When the other Sailor Warriors arrive, he helps them defeat the monster and release the girl's sou.  Sadly, he flees again before Sailor Moon can talk to him.",
+      "airdate": "1993-01-16",
+      "markers": [],
+      "external_id": "12109"
+    },
+    {
+      "n": 41,
+      "title": "I Won't Run Away from Love Anymore: Ami vs. Mamoru",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12110/original.jpg",
+      "synopsis": "Endymion is sent to gather all of the former crystal carriers together so that they can be combined to form a super-monster.  Ryo, Ami's friend who can see the future, calls to alert her about what will happen.  The Sailor Warriors battle Endymion when he appears to take Ryo.  Together, they manage to overpower him, and Sailor Moon heals him with her wand.  Unfortunately, just as the girls think they have won, Queen Beryl steals Endymion's body back.",
+      "airdate": "1993-01-23",
+      "markers": [],
+      "external_id": "12110"
+    },
+    {
+      "n": 42,
+      "title": "Sailor Venus' Past: Minako's Tragic Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12111/original.jpg",
+      "synopsis": "Kunzite tries to discover the Sailor Warriors' identities through Katarina, an old friend of Minako's.  Katarina calls Minako and asks if they can meet.  They used to do missions together when Minako was Sailor V.  After Katarina thought that Minako had died during a mission, she and Allen (Minako's boyfriend) fell in love.  Minako is overwhelmed with sadness from these memories.  After they part ways, Kunzite turns Katarina into a monster.  Sailor Moon arrives just in time to fight.  Sailor Venus begs Sailor Moon to restore Katarina's humanity, even though Katarina stole her boyfriend.",
+      "airdate": "1993-01-30",
+      "markers": [],
+      "external_id": "12111"
+    },
+    {
+      "n": 43,
+      "title": "Usagi Abandoned: The Falling-Out of the Sailor Guardians",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12112/original.jpg",
+      "synopsis": "The Sailor Warriors try to trick Kunzite by pretending to fight with Sailor Moon.  They want him to think that Sailor Moon is leaving the group.  Sailor Moon tries to make a deal with him to trade the Silver Crystal for Mamoru's safe return, but Kunzite calls their bluff when he sees that other Warriors hiding nearby.  In the end, they are no closer to getting Mamoru back.",
+      "airdate": "1993-01-30",
+      "markers": [],
+      "external_id": "12112"
+    },
+    {
+      "n": 44,
+      "title": "Usagi's Awakening: A Message from the Distant Past",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12113/original.jpg",
+      "synopsis": "The Sailor Warriors discover the portal to the Dark Kingdom and are traveling down the tunnel when Kunzite confronts them.  During the fight, the girls are transported to a ruined Kingdom.  Queen Serenity appears before Sailor Moon and explains the sad history of the once-great Silver Millennium kingdom.  In order to save her daughter, Queen Serenity sent her spirit (along with the other Sailor Warriors and Endymion) to the future Earth with no memory of their former selves.  Meanwhile, the cats find the entrance to the Dark Kingdom and are attacked by Kunzite.  The Sailor Warriors come to their aid, and after a fierce fight, Sailor Moon manages to kill Kunzite.",
+      "airdate": "1993-02-13",
+      "markers": [],
+      "external_id": "12113"
+    },
+    {
+      "n": 45,
+      "title": "Death of the Sailor Guardians: The Tragic Final Battle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12114/original.jpg",
+      "synopsis": "The Sailor Warriors teleport to the North Pole for a final battle with Queen Beryls and the forces of her Dark Kingdom.  Beryls sends her 5 most powerful monsters after the girls and, one bye one, the Sailor Warriors die to protect Sailor Moon.  Distraught at the loss of her friends, Sailor Moon is about to give up the fight when the spirits of the Warriors appear before her and tell her that they will always be with her.  With new resolve, Sailor Moon sets off for the final battle.",
+      "airdate": "1993-01-20",
+      "markers": [],
+      "external_id": "12114"
+    },
+    {
+      "n": 46,
+      "title": "Usagi's Eternal Wish: A Brand New Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12115/original.jpg",
+      "synopsis": "Sailor Moon arrives in the throne room to challenge Queen Beryl.  Under Beryl's orders, Endymion attacks Sailor moon.  She refuses to fight and instead pleads with him to remember his true self and their former love.  Endymion recovers his memory just in time to block a spear thrown by Beryl and dies in the crumbling throne room as Sailor Moon cries.  Queen Beryls flees to Metalia, and they combine their powers to become the terrifying Super Queen Beryl.  Calling upon the power of the Silver Crystal, Sailor Moon becomes Princess Serenity, and the final showdown begins.  Just as the Super Queen seems to be winning, the spirits of the dead Sailor Warriors surround Serenity and lend her their power.  Beryl is defeated in an energy blast that engulfs the entire Dark Kingdom.  As Serenity dies, she wishes that everything could be the way it used to be... back when she was a normal teen with no super powers and no great destiny.  As the Earth returns to normal, the Sailor Warriors appear as",
+      "airdate": "1993-02-27",
+      "markers": [],
+      "external_id": "12115"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rashiku Ikimasho",
+      "artist": "Meu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Watashitachi Ni Naritakute",
+      "artist": "Miwako Fujitani",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [Pioneer English edited & uncut versions]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Morning Moon de Aimashou",
+      "artist": "Pretty Cast",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nothing At All",
+      "artist": "Sandy Howell [Pioneer English edited version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [Pioneer English edited & uncut versions]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Moonlight Destiny",
+      "artist": "Hiroko Asakawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nothing At All",
+      "artist": "Sandy Howell [Pioneer English edited version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "DALI",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [Pioneer English edited & uncut versions]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Moon Revenge",
+      "artist": "Peach Hips",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "The Power of Love",
+      "artist": "Jennifer Cihi [Pioneer English edited version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Star Song (セーラースターソング)",
+      "artist": "Kae Hanazawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaze mo Sora mo Kitto… (風も空もきっと…)",
+      "artist": "Arisa Mizuki",
+      "episodes": "1-33"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "DALI",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Bynne Price",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sana ay di na Magwakas",
+      "artist": "Angelika Dela Cruz",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sailor Moon Theme (Reprise)",
+      "artist": "Nicole Price and Brynne Price [DiC English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Heart Moving",
+      "artist": "Misae Takamatsu",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu (ムーンライト伝説)",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [Cloverway English edited & uncut versions]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sailor Moon Theme (Reprise - Instrumental version)",
+      "artist": "Nicole Price and Brynne Price [Cloverway English edited version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Watashi-tachi ni Naritakute (私たちになりたくて)",
+      "artist": "Miwako Fujitani",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "DALI",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [DiC English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Otome no Policy",
+      "artist": "Yoko Ishida",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sailor Moon Theme (Reprise)",
+      "artist": "Nicole Price and Brynne Price [DiC English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [Cloverway English edited & uncut versions]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sailor Moon Theme (Reprise - Instrumental version)",
+      "artist": "Nicole Price and Brynne Price [Cloverway English edited version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Otome no Policy",
+      "artist": "Yoko Ishida",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Moonlight Densetsu (ムーンライト伝説)",
+      "artist": "Moon Lips",
+      "episodes": "34"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Princess Moon",
+      "artist": "Ushio Hashimoto",
+      "episodes": "27-46"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "'Rashiku' Ikimasho (“らしく”いきましょ)",
+      "artist": "Meu",
+      "episodes": "14-39"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Tuxedo Mirage",
+      "artist": "Peach Hips",
+      "episodes": "3-38"
+    }
+  ],
+  "relations": []
+}

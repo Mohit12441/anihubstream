@@ -1,0 +1,247 @@
+{
+  "id": "no-6",
+  "title": "No.6",
+  "native": "NO.6",
+  "year": 2011,
+  "rating": 7.3,
+  "season": "Summer 2011",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx10161-iJAey1M4zFrX.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10161-iJAey1M4zFrX.jpg",
+  "accent": "#a1c9e4",
+  "synopsis": "In a near future world, after the last great war, most of mankind lives in a handful of city states. There, for the privileged elite, life should be perfect. But for young Shion, the only thing perfect has been the nightmare his life has become since letting a strange boy called Rat spend the night in his apartment.\n\nBanished to the outskirts of the city and stripped of all privileges for helping the mysterious stranger who has since disappeared, Shion now finds himself in even worse danger as his inquiry into a new series of mysterious deaths results in his being arrested on suspicion of murder! \n\nBut even as Shion is being sent to the city's Correctional Institute, the long-missing Rat reappears to rescue him! Now on the run, the two young men have only one chance at survival: uncover the mysterious secrets that lie at the sinister heart of No. 6!\n\n(Source: RightStuf)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 6059,
+    "anilist": 10161,
+    "mal": 10161,
+    "hianime": "no.-6-vrob10"
+  },
+  "skip_key_id": 10161,
+  "skip_key_space": "anilist",
+  "episode_total": 11,
+  "added_at": "2026-10-14 12:05:19",
+  "search_text": "no 6 no 6 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Drowned Rat",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91527/original.jpg",
+      "synopsis": "12 year-old Shion seemed to have a bright and bountiful future ahead of him as a chosen elite citizen of the apparently perfect community of city No. 6, until he decides to give shelter to Nezumi, a boy of his age during a typhoon, even after knowing he is a wanted fugitive.",
+      "airdate": "2011-07-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 157,
+          "end": 246
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1369
+        }
+      ],
+      "external_id": "91527"
+    },
+    {
+      "n": 2,
+      "title": "City Adorned in Light",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91528/original.jpg",
+      "synopsis": "By harboring a fugitive, Shion is stripped of his elite citizen privileges and forced to live in the suburbs with his mother. Four years later, while working at the waste disposal center, he learns of a mysterious parasite that makes people grow old and die in seconds. Having questioned the authority of the city once again, Shion is arrested, but is rescued by Nezumi while being transferred to prison. After the duo escape from the city's limits, Nezumi shows Shion what really lies beyond the walls of No. 6.",
+      "airdate": "2011-07-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 162
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1372
+        }
+      ],
+      "external_id": "91528"
+    },
+    {
+      "n": 3,
+      "title": "Life and Death",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91529/original.jpg",
+      "synopsis": "Soon after escaping from No. 6, Shion finds that he is also infected. The parasite is extracted by Nezumi from his body and he survives, but not without taking its toll on his body. Having recovered, Shion is taken by Nezumi to a hotel whose owner, Inukashi, rents her dogs to keep the guests warm while sleeping where he finds that Nezumi contacted his mother and she sent a message to him. By analyzing the parasite, Shion concludes that when spring comes, a large number of them will emerge and kill their hosts, causing turmoil in the city. By learning that such great tragedy will befall the place he loathes, Nezumi rejoices, but when Shion states that the inhabitants of No. 6 must be warned, he claims that if he insists in helping them, he will start treating him as his enemy.",
+      "airdate": "2011-07-22",
+      "markers": [],
+      "external_id": "91529"
+    },
+    {
+      "n": 4,
+      "title": "Good And Evil",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91530/original.jpg",
+      "synopsis": "Following Shion's mother's instruction, Shion and Nezumi pays a visit to Rikiga, an old friend of hers. Rikiga offers himself to take care of Shion, but Shion himself gets angry on him when he asks Nezumi to work for him as a male prostitute and leaves. While cleaning Inukashi's dogs, Shion is inquired by her about his relationship with Nezumi, and when an angry Nezumi appears before him, she realizes he became attached to Shion. Believing Nezumi became soft because of Shion, Inukashi attacks Nezumi with her dogs, but their fight is interrupted when Shion arrives. Shion confesses to Nezumi that despite caring for his mother, he decides to live in the west district with him and has one of Nezumi's rats send a farewell message to his mother.",
+      "airdate": "2011-07-29",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "91530"
+    },
+    {
+      "n": 5,
+      "title": "Angel of Death",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91531/original.jpg",
+      "synopsis": "Another person in No. 6 has suddenly aged and died. Sion hears about this from Rikiga and races to the theater where Rat is performing to inform him of the news. This is the first time he's seen Rat act. But during the play, Rat is visited by a strange wind and song and he faints on stage. Meanwhile, in an art museum in No. 5, Safu is looking at a work which displays three bees when she, like Rat, is visited by a strange wind and song, and she also faints.",
+      "airdate": "2011-08-05",
+      "markers": [],
+      "external_id": "91531"
+    },
+    {
+      "n": 6,
+      "title": "Hidden Danger",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91532/original.jpg",
+      "synopsis": "Safu has returned to No. 6 because of her grandmothers’ death. While back, she learns of what has happened to Sion. At the same time, Sion and Nezumi continue their discussion over the future of No. 6 and the parasite bees. Nezumi receives a notice from Sion's mother informing him that Safu was taken by city officials. Nezumi contemplates whether or not to tell Sion as he would die trying to save her.",
+      "airdate": "2011-08-12",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1367
+        }
+      ],
+      "external_id": "91532"
+    },
+    {
+      "n": 7,
+      "title": "True Lies - Empty Truth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91533/original.jpg",
+      "synopsis": "Nezumi learns from Karan's note that Safu was taken by the Bureau of Peace. However, he decides to hide this information from Sion and secretly request that Dogkeeper obtain information on the correctional facility. However, unbeknownst to Nezumi, Sion and Rikiga are visiting a used clothing store where Sion discovers Safu's coat that was smuggled from the correctional facility. Meanwhile, Safu is being treated as a \"sample\" by the researchers at the facility where she was taken.",
+      "airdate": "2011-08-19",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1368
+        }
+      ],
+      "external_id": "91533"
+    },
+    {
+      "n": 8,
+      "title": "The Reason...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91534/original.jpg",
+      "synopsis": "In order to save Safu, Shion and Rat head to the edges of the Western District. There, they meet a legless old man who leads a large group of men. The old man, the person who named Rat, is actually one of the researchers with the young Karan in Rikiga's picture. The man tells Shion that he was the real first survivor of the parasite bees. He also states that Rat is the last survivor of the forest folk who were wiped out by No. 6. After Nezumi has another vision with the winds and the singing like he had before while he was singing, he repeats the song to the legless man and the water around them begins to glow. The legless man tells them about Elyurias, the reason No. 6 destroyed the forest folk.",
+      "airdate": "2011-08-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 47,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "91534"
+    },
+    {
+      "n": 9,
+      "title": "Stage for Disaster",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91535/original.jpg",
+      "synopsis": "Rikiga leads a client of his to a young girl, whom he has solicited to the client. The girl is really Inukashi in disguise, as this was a part of a plan devised by Shion, Nezumi, Inukashi and Rikiga. Inukashi, unable to deal with the man's advances, disrupts the facade in outrage. Nezumi and Rikiga bind and gag the man in order to get information from him, while Shion consoles Inukashi. The information they receive entails a map of the correctional facility in No. 6, as well as word of a \"pre-Holy Day cleaning operation\". Back at their underground hideout, Shion discusses potential plans of their living conditions when the summer comes, idealizing that his mother and Safu live here together with him and Nezumi. Meanwhile, Karan walks through a festive No. 6, as the inhabitants are preparing for the Holy Day. Back in the outskirts of the city, Shion asks Nezumi if he sent a message to his mother because he had finally come up with a plan. Suddenly, the town is attacked by No.6 military tanks, which Shion discovers were part of the \"cleaning operation\" he had asked Nezumi about earlier. The two flee to seek shelter from the raid, and in an alley, Shion finds an infant whose mother was killed by the blasts. He sends their guard dog off with the baby to Inukashi. The army then rounds up all the town's survivors, telling them they will be taken to the correctional facility--which had been Nezumi's plan all along. Meanwhile, Karan frets about Shion's safety, but Yoming assures her that Shion is fighting back and not to worry. He also informs her that the Twilight House was established to kill off all unneeded people of the city's elderly population, and that he will be sending out a message to his comrades to fight back against No. 6. Karan then receives a message from one of Nezumi's rats, telling her that she will be reunited with Shion. In the transport trucks, Nezumi sings an old song to raise the hopes of the captured townsfolk, but tells Shion that a song will never save anyone. Meanwhile, Safu is mysteriously contacted by Elyurias right before she wakes up. Shion, Nezumi, and all the townsfolk are then loaded into the facility.",
+      "airdate": "2011-09-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1368
+        }
+      ],
+      "external_id": "91535"
+    },
+    {
+      "n": 10,
+      "title": "What Lies in the Abyss",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91536/original.jpg",
+      "synopsis": "Sion and Nezumi climb through the huge pile of bodies where they were dropped in and infiltrate the facility searching for Safu. Meanwhile, Rikiga and Inukashi leave the baby Sion saved to one of the dogs and gain entry into the facility by themselves to clear a path for Sion and Nezumi. Somehow, Sion knows exactly where to go and where all the cameras are, and this makes Nezumi a bit suspicious. He and Sion fight their way through the complex until Nezumi is wounded by a security guard. Sion kills him in retaliation much to Nezumi's grief. When the duo manage to get through Safu's location, they find that she broke herself free and the researchers around her are lying dead on the ground.",
+      "airdate": "2011-09-09",
+      "markers": [],
+      "external_id": "91536"
+    },
+    {
+      "n": 11,
+      "title": "Tell Me The Truth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91537/original.jpg",
+      "synopsis": "Inukashi and Rikiga are waiting for Nezumi and Sion to hurry up and meet back up with them, while at the same time, Sion and Nezumi are just now encountering Safu. The fireworks celebration is commencing at No. 6 to celebrate the Holy Day, but for some reason, Lili still feels like something dangerous is about to happen, and Karan can only wonder about what's coming next. Yoming is setting up his plans with his other friends, waiting for a perfect time to act. Suddenly, the parasites become active and people start dying very rapidly. The parasite bees are everywhere, millions of them. Back at the facility, one of the dead researchers on the floor gets a phone call, and it plays the frantic message of another researcher saying that their plans had gotten out of hand. Nezumi asks Safu if she was truly the one who led them there, and when she responds saying that she wanted to see them, Nezumi says that she has \"Mother's\" voice. Mother is the main computer behind Safu, which controls the entire correctional facility. Safu says that Mother was held in the Moon Drop until four years before when the authorities captured Nezumi and took him to the Moon Drop. She says that the researchers had planned to use Mother to analyze Nezumi so they could learn Elyurias' power and use it to revive the land they had destroyed. She tells them that the researchers had used the information they had received from the legless man to experiment Elyurias' power on the citizens of No. 6, thus the parasite bees. At this time, Yoming starts to broadcast to the city, though many people are already dead. Sion doesn't understand Safu, so Nezumi tells him that Safu is really Elyurias. Safu admits to it, and tells Sion that she loves him. As Sion starts to lose control of himself, Safu tells Nezumi to destroy Mother. After having to fight back against Sion, Nezumi puts an explosive on Mother and the two escape, leaving Safu behind to die. Sion is hysterical, but Nezumi tells him that she's not Safu anymore. Once Mother explodes, the other computers in the facility start to do the same and all the workers start to evacuate. At this point, Karan and Lili go inside and hide and all the parasite bees start to become small orbs of light that come together to form giant cyclones. While trying to leave the facility, Nezumi is shot and Sion has to bandage him up in an infirmary and has to carry him. They try to escape through an garbage shoot, but Sion is shot in the heart and dies. Inukashi and Rikiga find the two and start to question Nezumi. Inukashi says that they have to leave, because the entire building is collapsing. Nezumi won't leave Sion, so Inukashi and Rikiga abandon them. Nezumi starts to sing to Sion, while outside the cyclones are starting to destroy the wall around No. 6. Nezumi lays next to Sion, crying, waiting to die, when a glowing, ghost-like version of Safu appears and starts to sing to Sion. Safu then disappears and the true form of Elyurias appears. Elyurias disappears in a large explosion of light and then Nezumi notices that he's healed. Then, remarkably, Sion comes back from the dead, saying he heard Safu singing. Nezumi and Sion leave the facility and stop to look at the destruction. The wall that was once surrounding No. 6 is completely gone. At this point we see everyone is looking in awe at the destruction, except for Yoming, who is now dead. Everyone starts to walk to the wall but Karan, who runs, calling Sion's name. Nezumi starts to walk back to the outside of the wall, but Sion doesn't want him to go. Nezumi kisses Sion and tells him that he'll be fine, then he leaves. A dog comes to Sion carrying the baby he had rescued earlier. Sion destroys the chip that the legless man gave him and takes the baby, the dog and Hamlet, walking back towards the city, telling himself that he'll meet Nezumi again someday.",
+      "airdate": "2011-09-16",
+      "markers": [],
+      "external_id": "91537"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Minasoko ni Nemure (みなそこに眠れ)",
+      "artist": "The Thrill feat. Yukarie",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

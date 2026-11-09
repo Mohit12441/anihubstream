@@ -1,0 +1,77 @@
+{
+  "id": "squid-girl-ova",
+  "title": "Squid Girl OVA",
+  "native": "侵略!!イカ娘 OVA",
+  "year": 2012,
+  "rating": 7.3,
+  "season": "Summer 2012",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/13267.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/13267.jpg",
+  "accent": "#f1f15d",
+  "synopsis": "Original anime DVD bundled with the 12th, 14th, and 17th volumes of the manga.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "squid-girl-ova-8aea4o",
+    "mal": 13267,
+    "anilist": 13267,
+    "kitsu": 6929
+  },
+  "skip_key_id": 13267,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "squid girl ova 侵略 イカ娘 ova ova finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Who's up for a squid-vasion? / Hold on a squid, aren't you a compatriot? / Aren't I just the squiddiest?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/820e8cd0f168165ea0b2b4e8fdfe76ae1285729099_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "100341"
+    },
+    {
+      "n": 2,
+      "title": "Wait a squid, aren't you on my side? / Up for a squid-celebration? / Wanna play with this squid?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/4e983771964d543cc91942a3e3ce050d1286865349_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "100342"
+    },
+    {
+      "n": 3,
+      "title": "Aren't you a fraidy-squid? / You're the squid's sworn enemy, aren't you? / Squidzooks! Aren't you a new recruit?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/0015f02e86aebc8f6a8be9ddde343a411286913202_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "113993"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

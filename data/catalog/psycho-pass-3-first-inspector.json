@@ -1,0 +1,93 @@
+{
+  "id": "psycho-pass-3-first-inspector",
+  "title": "Psycho-Pass 3: First Inspector",
+  "native": "Psycho-Pass 3: First Inspector",
+  "year": 2020,
+  "rating": 7.8,
+  "season": "Year 2020",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/696e90f10496c18def9bc132-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/696e90f10496c18def9bc132-landscape.webp",
+  "accent": "#ff1f4a",
+  "synopsis": "Inspectors Arata Shindou and Mikhail Kei Ignatov have uncovered a dangerous conspiracy. The Sybil System, the ultimate judge of human character in Japan, is being undermined by a criminal syndicate that is amassing wealth and power in the shadows.\n\nNow, Bifrost agent Kouichi Azusawa launches a direct assault upon the Criminal Investigation Department (CID) by occupying its headquarters and taking Inspector Shindou and everyone with him hostage. CID Unit 01 supervisor, along with Chief Mika Shimotsuki and former unit members Shinya Kougami and Nobuchika Ginoza, face the task of reclaiming the building and saving everyone inside.\n\nAlongside the hostage situation and Azusawa's demands for Tokyo governor Karina Komiya's resignation, there is a sinister plot hatching in the background—a secret plan that will force Inspector Shindou to confront not only Azusawa but also his own past. These events slowly bring him closer to unshrouding the mystery that has eluded him and his best friend, Ignatov, for many years.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "psycho-pass-3:-first-inspector-e2i5fq",
+    "mal": 40858,
+    "anilist": 113917,
+    "kitsu": 42936
+  },
+  "skip_key_id": 40858,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "psycho pass 3 first inspector psycho pass 3 first inspector",
+  "genres": [
+    "action",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Crime Coefficient",
+      "runtime": "45:00",
+      "runtime_seconds": 2700,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/2500c7be823dc2b599d448e334b72c371473351779_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273312"
+    },
+    {
+      "n": 2,
+      "title": "Those Capable",
+      "runtime": "45:00",
+      "runtime_seconds": 2700,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/7ac7075ffad1871af9e6761a0f0e06e21473360519_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "353881"
+    },
+    {
+      "n": 3,
+      "title": "Rearing Conventions",
+      "runtime": "45:00",
+      "runtime_seconds": 2700,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/ba8cdbeda648daecda2092ad44917c2a1473354320_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "353882"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Synthetic Sympathy",
+      "artist": "Who-ya Extended",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "red strand",
+      "artist": "Cö shu Nie",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

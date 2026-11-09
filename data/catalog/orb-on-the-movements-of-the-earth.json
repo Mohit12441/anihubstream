@@ -1,0 +1,340 @@
+{
+  "id": "orb-on-the-movements-of-the-earth",
+  "title": "Orb: On the Movements of the Earth",
+  "native": "チ。-地球の運動について-",
+  "year": 2024,
+  "rating": 8.6,
+  "season": "Fall 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151514-Y0d82Ah2ZOHX.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151514-Y0d82Ah2ZOHX.jpg",
+  "accent": "#ffc247",
+  "synopsis": "The setting is 15th-century Europe. It was a time when heretical ideas lead those to who possessed such a mindset to being burned at the stake for their beliefs.\n\nThe protagonist, Rafał, a child prodigy, is expected to major in theology, the most important subject at the time, at the university where he plans to skip a grade. One day, however, he comes across a mysterious man, and is now studying a possible \"truth\" in the midst of heretical thought!\n\n(Source: Shogakukan, translated)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "orb:-on-the-movements-of-the-earth-i16oh8",
+    "mal": 52215,
+    "anilist": 151514,
+    "kitsu": 46214
+  },
+  "skip_key_id": 52215,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": null,
+  "search_text": "orb on the movements of the earth チ 地球の運動について tv finished",
+  "genres": [
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Heliocentrism. How about that?",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/368656/thumbnail/75c22d7fc31d0751e47c1e293b85f1b1.jpg",
+      "synopsis": "A gifted young student plans to study theology at university, but his true passion is astronomy. One day, he meets a mysterious scholar named Hubert.\n\n(Source: Netflix)",
+      "airdate": "2024-10-05",
+      "markers": [],
+      "external_id": "368656"
+    },
+    {
+      "n": 2,
+      "title": "And Now... I'm Going To Move The Earth",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/368657/thumbnail/2d517185a268f41558efe85a08de2e00.jpg",
+      "synopsis": "Rafal is intrigued by Hubert's heliocentric theory. Later, Hubert is arrested by an inquisitor but he gives Rafal a pendant before being whisked away.\n\n(Source: Netflix)",
+      "airdate": "2024-10-05",
+      "markers": [],
+      "external_id": "368657"
+    },
+    {
+      "n": 3,
+      "title": "I... Believe in Heliocentrism",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/368658/thumbnail/f999f86d5faaab5a842b74c3c721efc6.jpg",
+      "synopsis": "Nowack convinces Potocki to admit to Rafal's heresy. Once arrested, Rafal is given a choice; recant his belief in heliocentrism or submit to torture.\n\n(Source: Netflix)",
+      "airdate": "2024-10-12",
+      "markers": [],
+      "external_id": "368658"
+    },
+    {
+      "n": 4,
+      "title": "The Fact That This World Is Far More Beautiful Than Heaven",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373671/thumbnail/dea4b74c3fbc77f9b6fc4fa69175ad58.jpg",
+      "synopsis": "The duelist Oczy wishes for death so he can escape his hopeless world and go to heaven. His colleague finds meaning in life by observing the stars.\n\n(Source: Netflix)",
+      "airdate": "2024-10-19",
+      "markers": [],
+      "external_id": "373671"
+    },
+    {
+      "n": 5,
+      "title": "Even If I Die... This World Will Continue",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373672/thumbnail/8df4a1cd96742cd223d11d24ae78bf79.jpg",
+      "synopsis": "Gras aborts the mission, placing himself and Oczy in mortal danger from Nowak. They both flee from the mountains, where they find a stone chest.\n\n(Source: Netflix)",
+      "airdate": "2024-10-26",
+      "markers": [],
+      "external_id": "373672"
+    },
+    {
+      "n": 6,
+      "title": "Move... The World",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373673/thumbnail/865b895da682696396cea3923c91c8c8.jpg",
+      "synopsis": "Oczy seeks the help of Badeni, the demoted monk who incurred the Church's wrath by turning his curiosity to the riddles of the sky.\n\n(Source: Netflix)",
+      "airdate": "2024-11-02",
+      "markers": [],
+      "external_id": "373673"
+    },
+    {
+      "n": 7,
+      "title": "Matters Of The Truth",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373674/thumbnail/c6a525fa9145dd6028b0d94d3f617ff4.jpg",
+      "synopsis": "Gifted scholar Jolenta suffers discrimination as the only girl at an astronomy institute. Badeni seeks resources to prove the heliocentric theory.\n\n(Source: Netflix)",
+      "airdate": "2024-11-09",
+      "markers": [],
+      "external_id": "373674"
+    },
+    {
+      "n": 8,
+      "title": "We Must Become Icarus",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373675/thumbnail/17305cc302e48d3eb6a13b8f30a29d5f.jpg",
+      "synopsis": "Badeni offers Jolenta a chance to pursue the truth of the skies, but she is overcome with fear. Afterward, she overhears bold words from Count Piast.\n\n(Source: Netflix)",
+      "airdate": "2024-11-16",
+      "markers": [],
+      "external_id": "373675"
+    },
+    {
+      "n": 9,
+      "title": "This Is What It Means... To Learn Something, I Think",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373676/thumbnail/106293c3931a109741fceafe1ec1f58e.jpg",
+      "synopsis": "A middle-aged Piast vows to prove his professor's geocentric model. In the present, he agrees to let Badeni use his records — on one condition.\n\n(Source: Netflix)",
+      "airdate": "2024-11-23",
+      "markers": [],
+      "external_id": "373676"
+    },
+    {
+      "n": 10,
+      "title": "Truth",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373677/thumbnail/56a98f18914d08584121bb24269e367b.jpg",
+      "synopsis": "Oczy tells Badeni that he is learning to read and write. Later, Badeni's claim that knowledge should be held by a select few bothers a fellow monk.\n\n(Source: Netflix)",
+      "airdate": "2024-11-30",
+      "markers": [],
+      "external_id": "373677"
+    },
+    {
+      "n": 11,
+      "title": "Terror",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373678/thumbnail/353eb5e43f02caaff0a702c8c0abf1c3.jpg",
+      "synopsis": "Nowak gives two rookie inquisitors a terrifying first taste of their new roles. Badeni meets with Jolenta and tells her he has completed his theory.\n\n(Source: Netflix)",
+      "airdate": "2024-12-07",
+      "markers": [],
+      "external_id": "373678"
+    },
+    {
+      "n": 12,
+      "title": "Heliocentrism Is My Faith",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373679/thumbnail/d6c9f194d93b87f870b7a8c98234d461.jpg",
+      "synopsis": "Nowak asks Badeni to show him his research. He inspects Badeni's premises but doesn't find anything incriminating — until he spots a certain item.\n\n(Source: Netflix)",
+      "airdate": "2024-12-14",
+      "markers": [],
+      "external_id": "373679"
+    },
+    {
+      "n": 13,
+      "title": "Freedom",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373680/thumbnail/541c72e6e4992bf38cb6618fed3b2e34.jpg",
+      "synopsis": "In a medical area within the inquisition chamber, a wounded Oczy awakes to see Nowak, who has kept him alive in hopes of extracting information.\n\n(Source: Netflix)",
+      "airdate": "2024-12-21",
+      "markers": [],
+      "external_id": "373680"
+    },
+    {
+      "n": 14,
+      "title": "Tonight's Sky",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373681/thumbnail/3f191f799a43f865be4749bd52deb654.jpg",
+      "synopsis": "Badeni must choose between revealing the location of the heretical documents of the heliocentric theory or prolonging Oczy's torture at Nowak's hands.\n\n(Source: Netflix)",
+      "airdate": "2024-12-28",
+      "markers": [],
+      "external_id": "373681"
+    },
+    {
+      "n": 15,
+      "title": "Is It...My Turn?",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373682/thumbnail/39d7a52bac728194ad946dfa54cba97c.jpg",
+      "synopsis": "Nowak believes his beloved daughter has been executed as a heretic. Father Grabowski comes across a letter from Badeni containing an unusual request.\n\n(Source: Netflix)",
+      "airdate": "2025-01-04",
+      "markers": [],
+      "external_id": "373682"
+    },
+    {
+      "n": 16,
+      "title": "It's Time to Begin the Operation",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373683/thumbnail/8b7b4061f07aeb50cecbc3356c749c84.jpg",
+      "synopsis": "Twenty-five years later, Captain Schmidt of the extremist Heretic Liberation Front infiltrates a church and steals an important item.\n\n(Source: Netflix)",
+      "airdate": "2025-01-11",
+      "markers": [],
+      "external_id": "373683"
+    },
+    {
+      "n": 17,
+      "title": "I Could Make a Lot of Money With This Book...Maybe",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373684/thumbnail/ed9416d8f548d5bc2f7e5af6feabba24.jpg",
+      "synopsis": "A young nomad woman haunted by poverty devotes her life to obtaining wealth. One night, she discovers the book that Frei hid in the abandoned village.\n\n(Source: Netflix)",
+      "airdate": "2025-01-18",
+      "markers": [],
+      "external_id": "373684"
+    },
+    {
+      "n": 18,
+      "title": "To Liberate Information",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373685/thumbnail/c662117231df8072683a3f8b97d2ecd7.jpg",
+      "synopsis": "Bishop Antoni orders Draka to hand over the book, but Schmidt's men suddenly intervene. Determined to change her fate, she takes a bold action.\n\n(Source: Netflix)",
+      "airdate": "2025-01-25",
+      "markers": [],
+      "external_id": "373685"
+    },
+    {
+      "n": 19,
+      "title": "Morality Is Something You Find When You're Lost",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373686/thumbnail/6605a8b84a275c81427b96308510c46c.jpg",
+      "synopsis": "Hoping to track down the people who stole the book, an inquisitor seeks advice from Nowak, who now spends his days drowning his sorrows.\n\n(Source: Netflix)",
+      "airdate": "2025-02-01",
+      "markers": [],
+      "external_id": "373686"
+    },
+    {
+      "n": 20,
+      "title": "I Love Heliocentrism",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373687/thumbnail/30e15122a00cc8635e3976a8d28b787b.jpg",
+      "synopsis": "As the Heretic Liberation Front prepares to depart, Jolenta entrusts Draka with a letter. Soon after, Nowak and the inquisitors approach the barn.\n\n(Source: Netflix)",
+      "airdate": "2025-02-08",
+      "markers": [],
+      "external_id": "373687"
+    },
+    {
+      "n": 21,
+      "title": "The Times Are Changing",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373688/thumbnail/0a10f69ebc731191db898cbfd408e197.jpg",
+      "synopsis": "Schmidt and the other regroup with their Liberation Front comrades and begin printing the book. However, a traitor brings their operation to a halt.\n\n(Source: Netflix)",
+      "airdate": "2025-02-15",
+      "markers": [],
+      "external_id": "373688"
+    },
+    {
+      "n": 22,
+      "title": "Neither Of You Will Be Known to History",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373689/thumbnail/c2cb49713d71d5ecc136537421319d60.jpg",
+      "synopsis": "As Nowak's group attacks the Liberation Front, Draka and Schmidt begin their escape. Upon reaching the town, Draka makes a proposition to Bishop Antoni.\n\n(Source: Netlix)",
+      "airdate": "2025-02-22",
+      "markers": [],
+      "external_id": "373689"
+    },
+    {
+      "n": 23,
+      "title": "Comrades",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373690/thumbnail/f8a51215b2a9bdba93872c3cc654441f.jpg",
+      "synopsis": "A deluded Nowak turns against Antoni and attempts to burn down the church. Draka fights back and escapes but incurs a terrible wound.\n\n(Source: Netflix)",
+      "airdate": "2025-03-01",
+      "markers": [],
+      "external_id": "373690"
+    },
+    {
+      "n": 24,
+      "title": "Thaumazein",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373691/thumbnail/1e076ece49637f55f4361aa3edd2338e.jpg",
+      "synopsis": "Albert goes to deliver an order of bread to a church. While there, he encounters a mysterious priest who encourages him to confess his sins.\n\n(Source: Netflix)",
+      "airdate": "2025-03-08",
+      "markers": [],
+      "external_id": "373691"
+    },
+    {
+      "n": 25,
+      "title": "『?』",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/373692/thumbnail/dcd9c2a0cdbd92b39f1e8e96ac100ca1.jpg",
+      "synopsis": "Albert leaves the academic gathering and returns home to an awful sight. In the present, the priest gives Albert advice and makes his own confession.\n\n(Source: Netflix)",
+      "airdate": "2025-03-15",
+      "markers": [],
+      "external_id": "373692"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kaiju (怪獣)",
+      "artist": "Sakanaction",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aporia",
+      "artist": "yorushika",
+      "episodes": "2-15"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hebi",
+      "artist": "yorushika",
+      "episodes": "16-25"
+    }
+  ],
+  "relations": []
+}

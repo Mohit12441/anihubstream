@@ -1,0 +1,86 @@
+{
+  "id": "sailor-moon-r-the-movie-the-promise-of-the-rose",
+  "title": "Sailor Moon R: The Movie",
+  "native": "美少女戦士セーラームーンＲ THE MOVIE",
+  "year": 1993,
+  "rating": 7.5,
+  "season": "Fall 1993",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx531-FCc5IMkzRlrU.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx531-FCc5IMkzRlrU.jpg",
+  "accent": "#ffe443",
+  "synopsis": "When Mamoru was little he gave a rose to a little boy named Fiore. Fiore promised that one day he would bring Mamoru lots of flowers. Now Fiore has come back to earth but his intentions are not merely to fulfil a promise...\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sailor-moon-r:-the-movie-the-promise-of-the-rose-iy91nl",
+    "mal": 531,
+    "anilist": 531,
+    "kitsu": 490
+  },
+  "skip_key_id": 531,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "sailor moon r the movie 美少女戦士セーラームーンr the movie movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sailor Moon R: The Movie - The Promise of the Rose (Movie)",
+      "runtime": "61:00",
+      "runtime_seconds": 3660,
+      "thumb": "https://animehot.cc/storage/media/2026/09/69395e88be2456a654d2773d-landscape.webp",
+      "synopsis": "When Mamoru was little he gave a rose to a little boy named Fiore. Fiore promised that one day he would bring Mamoru lots of flowers. Now Fiore has come back to earth but his intentions are not merely to fulfil a promise...",
+      "airdate": null,
+      "markers": [],
+      "external_id": "12116"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "DALI",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [Pioneer English edited & uncut versions]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Moon Revenge",
+      "artist": "Peach Hips",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "The Power of Love",
+      "artist": "Jennifer Cihi [Pioneer English edited version]",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

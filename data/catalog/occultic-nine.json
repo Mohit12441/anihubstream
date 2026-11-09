@@ -1,0 +1,289 @@
+{
+  "id": "occultic-nine",
+  "title": "Occultic;Nine",
+  "native": "Occultic;Nine -オカルティック・ナイン-",
+  "year": 2016,
+  "rating": 6.5,
+  "season": "Fall 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21708-al2koHBxr8du.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21708-al2koHBxr8du.jpg",
+  "accent": "#d6d61a",
+  "synopsis": "The \"paranormal science\" story follows nine idiosyncratic individuals, linked by the \"Choujou Kagaku Kirikiri Basara\" occult summary blog run by 17-year-old second-year high school student Yuuta Gamon. Little incongruities that occur around these nine eventually lead to a larger, unimaginable event that may alter what is considered common sense in this world.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11949,
+    "anilist": 21708,
+    "mal": 32962
+  },
+  "skip_key_id": 32962,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 11:26:33",
+  "search_text": "occultic nine occultic nine オカルティック ナイン tv finished",
+  "genres": [
+    "mystery",
+    "sci-fi",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A Lot of People",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-10-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 38,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1440
+        }
+      ],
+      "external_id": "188696"
+    },
+    {
+      "n": 2,
+      "title": "I Don't Have a Power to Change the Destiny",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-10-16",
+      "markers": [],
+      "external_id": "188697"
+    },
+    {
+      "n": 3,
+      "title": "That Was All a Delusion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-10-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1433
+        }
+      ],
+      "external_id": "188698"
+    },
+    {
+      "n": 4,
+      "title": "Gamon Yuuta is the Curlprit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-10-30",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1440
+        }
+      ],
+      "external_id": "188699"
+    },
+    {
+      "n": 5,
+      "title": "Here Is a New World, Right?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-11-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1334,
+          "end": 1433
+        }
+      ],
+      "external_id": "188700"
+    },
+    {
+      "n": 6,
+      "title": "That Was You, Right?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-11-13",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1245,
+          "end": 1347
+        }
+      ],
+      "external_id": "188701"
+    },
+    {
+      "n": 7,
+      "title": "Projection Start",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-11-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 30,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1433
+        }
+      ],
+      "external_id": "188702"
+    },
+    {
+      "n": 8,
+      "title": "This Is the Ultimate Treatement We Have Reached",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-11-27",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1433
+        }
+      ],
+      "external_id": "188703"
+    },
+    {
+      "n": 9,
+      "title": "Suerly the World Will End",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-12-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1433
+        }
+      ],
+      "external_id": "188704"
+    },
+    {
+      "n": 10,
+      "title": "The Real Me",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "2016-12-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 38,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1378
+        }
+      ],
+      "external_id": "188705"
+    },
+    {
+      "n": 11,
+      "title": "For Our Great Objective!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "2016-12-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1433
+        }
+      ],
+      "external_id": "188706"
+    },
+    {
+      "n": 12,
+      "title": "Occultic Nine",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "2016-12-25",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1339,
+          "end": 1434
+        }
+      ],
+      "external_id": "188707"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

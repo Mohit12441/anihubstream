@@ -1,0 +1,424 @@
+{
+  "id": "sousou-no-frieren",
+  "title": "Frieren: Beyond Journey’s End",
+  "native": "葬送のフリーレン",
+  "year": 2023,
+  "rating": 9.1,
+  "season": "Fall 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-qQTzQnEJJ3oB.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154587-qQTzQnEJJ3oB.jpg",
+  "accent": "#bbf1a1",
+  "synopsis": "The adventure is over but life goes on for an elf mage just beginning to learn what living is all about. Elf mage Frieren and her courageous fellow adventurers have defeated the Demon King and brought peace to the land. But Frieren will long outlive the rest of her former party. How will she come to understand what life means to the people around her? Decades after their victory, the funeral of one her friends confronts Frieren with her own near immortality. Frieren sets out to fulfill the last wishes of her comrades and finds herself beginning a new adventure…\n\n(Source: Crunchyroll)",
+  "rank": 1,
+  "trend_rank": 40,
+  "alt_seasons": [
+    "Frieren: Beyond Journey’s End Season 2 (2026)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46474,
+    "anilist": 154587,
+    "mal": 52991
+  },
+  "skip_key_id": 52991,
+  "skip_key_space": "mal",
+  "episode_total": 28,
+  "added_at": "2026-10-13 00:00:00",
+  "search_text": "frieren beyond journey s end 葬送のフリーレン tv finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Journey's End",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353471/thumbnail/medium-4218a1887e2d33e701be955a9d0315bc.jpeg",
+      "synopsis": "The world celebrates the Demon King's defeat at the hands of the Hero and his companions. Now that their great adventure is over, what will Frieren the mage do next? (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 96,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1331,
+          "end": 1421,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "353471"
+    },
+    {
+      "n": 2,
+      "title": "It Didn't Have to Be Magic...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/353472/thumbnail/medium-d49e6c7021cda491175b27f1f20bf186.jpeg",
+      "synopsis": "Frieren instructs Fern in the use of magic while deciphering a grimoire for Heiter. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "353472"
+    },
+    {
+      "n": 3,
+      "title": "Killing Magic",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356650/thumbnail/medium-c4346a2783f355394e5ab9e62e93121a.jpeg",
+      "synopsis": "While retracing the path she took on her adventure with her former traveling companions, Frieren confronts an old enemy. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356650"
+    },
+    {
+      "n": 4,
+      "title": "The Land Where Souls Rest",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356901/thumbnail/medium-33c5b1ef93201cd13607db49593388dc.jpeg",
+      "synopsis": "Frieren and Fern pay a visit to Eisen, who requests their help in finding the notes of Flamme the Legendary Mage. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 2,
+          "end": 92,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "356901"
+    },
+    {
+      "n": 5,
+      "title": "Phantoms of the Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356902/thumbnail/medium-b4a3e42751c8e3e1818a8792feb88b0b.jpeg",
+      "synopsis": "Frieren and Fern investigate ghost sightings at a village where people have started going missing. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356902"
+    },
+    {
+      "n": 6,
+      "title": "The Hero of the Village",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356903/thumbnail/medium-bf301361cabeacc5ec76fe32467b0c84.jpeg",
+      "synopsis": "Frieren and Fern enlist Stark's help to fight the solar dragon - but is he up to the task? (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356903"
+    },
+    {
+      "n": 7,
+      "title": "Like a Fairy Tale",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356904/thumbnail/medium-1dbac2d54d176741756c20372a5f1aba.jpeg",
+      "synopsis": "After reflecting on the transient nature of the past as it exists in people's collective memories, Frieren unexpectedly runs into a sworn enemy. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356904"
+    },
+    {
+      "n": 8,
+      "title": "Frieren the Slayer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356905/thumbnail/medium-16408d30f48b2f45ab222d5d79d7831c.jpeg",
+      "synopsis": "As tensions in Graf Granat's domain reach a breaking point, Fern and Stark find their own resolve - and Frieren resumes an old duty. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356905"
+    },
+    {
+      "n": 9,
+      "title": "Aura the Guillotine",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356906/thumbnail/medium-1231ac4d9ec4bdb00b5e6ce98bc55e59.jpeg",
+      "synopsis": "While Fern and Stark make a temporary retreat with Graf Granat, Frieren's true foe awaits her outside the city. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356906"
+    },
+    {
+      "n": 10,
+      "title": "A Powerful Mage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356907/thumbnail/medium-e025d16e12ad9c03c19e67530523feb0.jpeg",
+      "synopsis": "Frieren's many years of training under her teacher Flamme are tested in her confrontation with Aura the Guillotine. Will Aura's scales find her wanting? (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356907"
+    },
+    {
+      "n": 11,
+      "title": "Winter in the Northern Lands",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356908/thumbnail/medium-460b3cd3bdbb95ee77d18948095d9abe.jpeg",
+      "synopsis": "Frieren and her companions continue their journey through the northern lands, but obstacles both natural and manmade still stand in their way. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356908"
+    },
+    {
+      "n": 12,
+      "title": "A Real Hero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356909/thumbnail/medium-82c930e7ae99372b32ff98c43bcdc889.jpeg",
+      "synopsis": "Deep in the mountains of the northern lands, Frieren and her party arrive at the Village of the Sword, where they have another job to do. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356909"
+    },
+    {
+      "n": 13,
+      "title": "Aversion to One's Own Kind",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356910/thumbnail/medium-a56c1ab0d400881c50515c806538d117.jpeg",
+      "synopsis": "While passing by a village in the woods of the northern lands, Frieren and party meet Sein, a gifted priest who is nonetheless corrupt enough to give even Heiter a run for his money. But what happened in his past? (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356910"
+    },
+    {
+      "n": 14,
+      "title": "Privilege of the Young",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356911/thumbnail/medium-ad2eb504253bc0b2dbcdc23c175812cd.jpeg",
+      "synopsis": "The party arrives in a large and lively town with a bustling shopping district that Frieren once visited with Himmel, but something seems to have come up between Fern and Stark. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356911"
+    },
+    {
+      "n": 15,
+      "title": "Smells Like Trouble",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356912/thumbnail/medium-b9df9a79e9e80b20ccb78de716f8556b.jpeg",
+      "synopsis": "When the party happens upon a town whose inhabitants are all mysteriously asleep, it's time for their newest traveling companion to prove his mettle. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356912"
+    },
+    {
+      "n": 16,
+      "title": "Long-Lived Friends",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356913/thumbnail/medium-ef638b8ca7717213b18cbd0747a9aac5.jpeg",
+      "synopsis": "Frieren pays a visit to Old Man Voll, a long-lived friend of hers, with traveling companions in tow. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 85,
+          "end": 175,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "356913"
+    },
+    {
+      "n": 17,
+      "title": "Take Care",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356914/thumbnail/medium-811b7df88fb217981570f0506fe119a5.jpeg",
+      "synopsis": "Now that Sein finally has a lead on the whereabouts of his long-lost friend, is it time for him and Frieren's party to part ways? (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356914"
+    },
+    {
+      "n": 18,
+      "title": "First-Class Mage Exam",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356915/thumbnail/medium-d99b4b39cd34677214f994f10645db82.jpeg",
+      "synopsis": "Frieren and party finally arrive in Äußerst, ready to undergo the first-class mage exam, and meet a number of colorful characters who are there to do the same. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356915"
+    },
+    {
+      "n": 19,
+      "title": "Well-Laid Plans",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356916/thumbnail/medium-f3ed26e490e20c93ed2c16b01c276376.jpeg",
+      "synopsis": "Frieren and her new teammates hatch a plan to capture a Stille - but are the other teams just going to stand by and let it happen? (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356916"
+    },
+    {
+      "n": 20,
+      "title": "Necessary Killing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356917/thumbnail/medium-d78ecac58dd266ca2f1d3861643dab62.jpeg",
+      "synopsis": "The first-class mage exam intensifies as fighting breaks out between the participants - and what's at stake might even be worth killing for. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356917"
+    },
+    {
+      "n": 21,
+      "title": "The World of Magic",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356918/thumbnail/medium-adc57770619b29981a732f730cf85e0f.jpeg",
+      "synopsis": "Frieren, Kanne, and Lawine struggle with the 13th party over possession of the Stille, but there'll be more surprises in store before their battle, and the first test, reach their conclusion. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356918"
+    },
+    {
+      "n": 22,
+      "title": "Future Enemies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356919/thumbnail/medium-93397bb3ad45a5a49d35556d5b46c0be.jpeg",
+      "synopsis": "After the conclusion of the first test, the exam participants have some time to kill in town. What do mages get up to on their days off? (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356919"
+    },
+    {
+      "n": 23,
+      "title": "Conquering the Labyrinth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356920/thumbnail/medium-59d0958c605e8994ea7b4a4486ed4671.jpeg",
+      "synopsis": "The aspiring first-class mages now face their second test: conquering the Ruins of the King's Tomb. A simple task, or so the proctor claims, but there's a reason this particular dungeon remains unexplored. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356920"
+    },
+    {
+      "n": 24,
+      "title": "Perfect Replicas",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356921/thumbnail/medium-1cb1ccc833a5932e55c411bce56a1ee7.jpeg",
+      "synopsis": "Due to the Spiegel, a legendary monster that can create perfect replicas of others, the test-takers who would conquer the Ruins of the King's Tomb must first face the ultimate enemy: themselves. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356921"
+    },
+    {
+      "n": 25,
+      "title": "A Fatal Vulnerability",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356922/thumbnail/medium-6c95ca214f67b37fe7a52b0baa41a40d.jpeg",
+      "synopsis": "A perfect imitation of Frieren stands between the test-takers and victory, but Fern believes she knows how to win. Is it time for the student to surpass the master? (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356922"
+    },
+    {
+      "n": 26,
+      "title": "The Height of Magic",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356923/thumbnail/medium-ae4303b0f8f8395d98a4134350ec48ce.jpeg",
+      "synopsis": "While the other Mages defend themselves against the remaining clones, Fern experiences the heights of Frieren's power as they battle the copycat Frieren. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356923"
+    },
+    {
+      "n": 27,
+      "title": "An Era of Humans",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356924/thumbnail/medium-cc212ab74b78d6272a58e80d8ef854d5.jpeg",
+      "synopsis": "With the second test behind them, only one remains - but first, Frieren and Fern need to settle an important matter in town. What awaits them in the third test? (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356924"
+    },
+    {
+      "n": 28,
+      "title": "It Would Be Embarrassing When We Met Again",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/356925/thumbnail/medium-4f37d6b61be1af9473a170387736a674.jpeg",
+      "synopsis": "As the first-class mage exam concludes and the test-takers go their separate ways, farewell leads to departure - but the next stage of Frieren's journey has only just begun. (Source: Crunchyroll)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "356925"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "lulu.",
+      "artist": "Mrs. GREEN APPLE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "The Story of Us",
+      "artist": "milet",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yūsha (Hero)",
+      "artist": "YOASOBI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Anytime Anywhere",
+      "artist": "milet",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "bliss (TV Special Ending)",
+      "artist": "milet",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Haru (Sunny)",
+      "artist": "yorushika",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

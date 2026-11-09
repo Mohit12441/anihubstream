@@ -1,0 +1,110 @@
+{
+  "id": "nia-liston-the-merciless-maiden",
+  "title": "Nia Liston: The Merciless Maiden",
+  "native": "凶乱令嬢ニア・リストン",
+  "year": 2026,
+  "rating": 7.5,
+  "season": "Fall 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx206949-4HYI3YuP0eLI.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx206949-4HYI3YuP0eLI.png",
+  "accent": "#f15dbb",
+  "synopsis": "A great hero lies undefeated on her deathbed, regretting that she never found a foe who could take her down. She never intended to meet her fate anywhere other than on the battlefield, and her peaceful demise has her wishing desperately that things could have been different... But when she suddenly comes to in the body of the young, frail Nia Liston, she’s got an all-new fight ahead of her. Nia is a sickly child, meaning she has a long way to go before she’s in fighting form. Now that she’s been given a second shot at life, however, she’s determined to get what she wants. She’s going to live—and die—for battle this time! Make way for the Merciless Maiden!\n\n(Source: J-Novel Club)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": 2,
+  "sched_day_label": "TUE",
+  "sched_date": "Nov 10",
+  "sched_time": "12:26",
+  "sched_season": "Fall 2026",
+  "sched_episode": 6,
+  "sched_sub_at": null,
+  "sched_dub_at": 1792602000000,
+  "source_ids": {
+    "kitsu": 50764,
+    "anilist": 206949,
+    "mal": 63382,
+    "hianime": "nia-liston:-the-merciless-maiden-x82owo"
+  },
+  "skip_key_id": 63382,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": "2026-10-13 00:00:00",
+  "search_text": "nia liston the merciless maiden 凶乱令嬢ニア リストン tv ongoing",
+  "genres": [
+    "action",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Nia Liston: The Merciless Maiden Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx206949-4HYI3YuP0eLI.png",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "Nia Liston: The Merciless Maiden Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx206949-4HYI3YuP0eLI.png",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Nia Liston: The Merciless Maiden Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx206949-4HYI3YuP0eLI.png",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 4,
+      "title": "Nia Liston: The Merciless Maiden Episode 4",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx206949-4HYI3YuP0eLI.png",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Respawn!! (リスポーン!!)",
+      "artist": "Watame Tsunomaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tokimeki Un・Deux・Trois♪ (ときめきアン・ドゥ・トロワ♪)",
+      "artist": "Magic Vision Girls Party",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Deux Livres",
+      "artist": "Nia Liston",
+      "episodes": "3"
+    }
+  ],
+  "relations": []
+}

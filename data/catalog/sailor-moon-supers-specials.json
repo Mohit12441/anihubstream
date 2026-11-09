@@ -1,0 +1,78 @@
+{
+  "id": "sailor-moon-supers-specials",
+  "title": "Bishoujo Senshi Sailor Moon SuperS Special",
+  "native": "美少女戦士セーラームーンSuperSスペシャル",
+  "year": 1995,
+  "rating": 6.9,
+  "season": "Spring 1995",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx3076-p9sWcCjTW1Wq.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx3076-p9sWcCjTW1Wq.png",
+  "accent": "#f1c950",
+  "synopsis": "The first episode is a summary of SM, SM R and SM S, the second episode is about Haruka and Michiru on a cruising. They fight one of the SuperS enemies and decide to leave this villains to the classical Sailor Team. (That's an explanation why the outer Sailor Team doesn't appear in this season.) In episode 3 Chibiusa uncovers one of her classmates as a monster and fights her with the Sailor Team in a vampire castle.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sailor-moon-supers-specials-1ovgel",
+    "mal": 3076,
+    "anilist": 3076,
+    "kitsu": 2774
+  },
+  "skip_key_id": 3076,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "bishoujo senshi sailor moon supers special 美少女戦士セーラームーンsupersスヘ シャル special finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "An Elegant Metamorphosis? Crybaby Usagi's Growth Diary",
+      "runtime": "16:00",
+      "runtime_seconds": 960,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/47087/original.jpg",
+      "synopsis": "In a short recap of the first three seasons,Usagi and Luna tell Chibiusa about Usagi's growth as Sailor Moon.\n(Source: Wikipedia)",
+      "airdate": "1995-04-08",
+      "markers": [],
+      "external_id": "47087"
+    },
+    {
+      "n": 2,
+      "title": "Haruka and Michiru, Again! The Ghostly Puppet Show",
+      "runtime": "16:00",
+      "runtime_seconds": 960,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/47088/original.jpg",
+      "synopsis": "Haruka and Michiru are at a hotel that is being taken over by a puppet and his master. Haruka is feeling sick and unable to battle, so Michiru transforms into Sailor Neptune to destroy the puppet's bottle in order to save Haruka, risking the lives of the hotel guests in the process. Haruka is healed and transforms into Sailor Uranus and defeats the puppet. She then quickly worries about a new enemy, but Michiru assures her that Sailor Moon and the rest will take care of it. \n\n(Source: Wikipedia)",
+      "airdate": "1995-04-08",
+      "markers": [],
+      "external_id": "47088"
+    },
+    {
+      "n": 3,
+      "title": "Chibiusa's Adventure! The Dreaded Vampire Castle",
+      "runtime": "16:00",
+      "runtime_seconds": 960,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/47089/original.jpg",
+      "synopsis": "A new student show up in Chibiusa's class named Ririca. Strange things begin to happen — children go missing, flowers die, and the new girl is doing weird things. The Sailor Senshi investigate, and Ririca is revealed to be a vampire. They use an attack on her, and she is released from the spell, only remembering everything as a bad dream. \n\n(Source: Wikipedia)",
+      "airdate": "1995-04-08",
+      "markers": [],
+      "external_id": "47089"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

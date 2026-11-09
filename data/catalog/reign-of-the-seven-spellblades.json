@@ -1,0 +1,360 @@
+{
+  "id": "reign-of-the-seven-spellblades",
+  "title": "Reign of the Seven Spellblades",
+  "native": "七つの魔剣が支配する",
+  "year": 2023,
+  "rating": 6.4,
+  "season": "Summer 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx142598-0jpRK2h0v1hd.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx142598-0jpRK2h0v1hd.jpg",
+  "accent": "#5d93e4",
+  "synopsis": "It’s springtime at Kimberly Magic Academy, and new students are beginning their first year. Among them are a skilled and studious boy, Oliver, and a headstrong samurai girl, Nanao. They soon form a unique bond in the halls of Kimberly, but this picturesque school isn’t what it seems. Dark secrets and endless danger lurk behind every corner. Can these wizards make it to graduation alive?!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 45579,
+    "anilist": 142598,
+    "mal": 50582
+  },
+  "skip_key_id": 50582,
+  "skip_key_space": "mal",
+  "episode_total": 15,
+  "added_at": "2026-10-14 16:35:36",
+  "search_text": "reign of the seven spellblades 七つの魔剣か 支配する tv finished",
+  "genres": [
+    "action",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Ceremony",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/d794970544ec5050593760c8d6f596851688740637_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1377,
+          "end": 1417
+        }
+      ],
+      "external_id": "352875"
+    },
+    {
+      "n": 2,
+      "title": "Sword Arts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/d08c5e43ce7d0312ade98f6a9d81d1dc1689345863_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 78,
+          "end": 168
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1420
+        }
+      ],
+      "external_id": "352876"
+    },
+    {
+      "n": 3,
+      "title": "Soldier",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/7b2e2cd4fe6fe089778842d29441df4a1689942072_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 101,
+          "end": 191
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1417
+        }
+      ],
+      "external_id": "352877"
+    },
+    {
+      "n": 4,
+      "title": "Colosseum",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/bd4f6cc9bf21e0bcaad934e071c36fe81690528886_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 83,
+          "end": 156
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1399
+        }
+      ],
+      "external_id": "352878"
+    },
+    {
+      "n": 5,
+      "title": "Glare",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/449913761f44e5d9b24a073e5641bf6e1691151646_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1418
+        }
+      ],
+      "external_id": "352879"
+    },
+    {
+      "n": 6,
+      "title": "Arise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b6cd77a343bb16e5ad187c083c67ab2a1691738727_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 13,
+          "end": 103
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1414
+        }
+      ],
+      "external_id": "352880"
+    },
+    {
+      "n": 7,
+      "title": "Reversi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/7641035e5940c966e2b8ea15b562e22d1692367726_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "352881"
+    },
+    {
+      "n": 8,
+      "title": "Rivals",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/81ed3d90d35e65ade4b8ac768c5ba7ee1692947860_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        }
+      ],
+      "external_id": "352882"
+    },
+    {
+      "n": 9,
+      "title": "Explore",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/40642a0f6d6d758a34740d0a47ad7cc81693579501_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 111
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1386
+        }
+      ],
+      "external_id": "352883"
+    },
+    {
+      "n": 10,
+      "title": "Master and Knight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/80bc0c864c70e4cd45ef793c995afcce1694184607_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 53,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1411
+        }
+      ],
+      "external_id": "352884"
+    },
+    {
+      "n": 11,
+      "title": "Duty",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/2903351103624e11a804a9cf6cf3aeb81694784968_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1175,
+          "end": 1264
+        }
+      ],
+      "external_id": "352885"
+    },
+    {
+      "n": 12,
+      "title": "Possibility",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/43e3e86ef77c2e2872f7f3790c117c0e1695398327_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 53,
+          "end": 143
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1398
+        }
+      ],
+      "external_id": "352886"
+    },
+    {
+      "n": 13,
+      "title": "Noisy Forest",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3777c3ad89fcddcab4942b9711a439ab1695997605_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 111,
+          "end": 201
+        }
+      ],
+      "external_id": "352887"
+    },
+    {
+      "n": 14,
+      "title": "Salvadori",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a201a22ac0b1e984a03ef070843320451696586947_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1417
+        }
+      ],
+      "external_id": "352888"
+    },
+    {
+      "n": 15,
+      "title": "Last Song",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/f32ccfb225c2e1c83f6c9a22b7b5cc441697209037_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 107,
+          "end": 197
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1419
+        }
+      ],
+      "external_id": "352889"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

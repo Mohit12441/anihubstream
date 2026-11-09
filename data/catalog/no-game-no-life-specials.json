@@ -1,0 +1,110 @@
+{
+  "id": "no-game-no-life-specials",
+  "title": "No Game No Life Specials",
+  "native": "ノーゲーム・ノーライフ ミニOVAs",
+  "year": 2014,
+  "rating": 6.5,
+  "season": "Summer 2014",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx20769-yn9crl5jlupz.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20769-yn9crl5jlupz.jpg",
+  "accent": "#a15df1",
+  "synopsis": "Specials included on the Blu-ray/DVD volumes.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "no-game-no-life-specials-o2py07",
+    "mal": 24991,
+    "anilist": 20769,
+    "kitsu": 8534
+  },
+  "skip_key_id": 24991,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": null,
+  "search_text": "no game no life specials ノーケ ーム ノーライフ ミニovas special finished",
+  "genres": [
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "116162"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "116163"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "116164"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "116165"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "116166"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "116167"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

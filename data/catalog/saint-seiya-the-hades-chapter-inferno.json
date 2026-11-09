@@ -1,0 +1,193 @@
+{
+  "id": "saint-seiya-the-hades-chapter-inferno",
+  "title": "Saint Seiya: The Hades Chapter - Inferno",
+  "native": "聖闘士星矢 冥王ハーデス冥界編",
+  "year": 2005,
+  "rating": 7.4,
+  "season": "Winter 2005",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1253-65jsGEfbPW5K.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1253-65jsGEfbPW5K.png",
+  "accent": "#6b5d1a",
+  "synopsis": "Seiya and the rest of the Bronze and Gold Saints who have survived the Sanctuary battle have entered the world of the Dead. They are fighting to get to Hades and defeat him.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "saint-seiya:-the-hades-chapter-inferno-wcl0gy",
+    "mal": 1253,
+    "anilist": 1253,
+    "kitsu": 1128
+  },
+  "skip_key_id": 1253,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "saint seiya the hades chapter inferno 聖闘士星矢 冥王ハーテ ス冥界編 ova finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Cross Over! Acheron River",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Shiryuu, Shun, and Hyouga meet Douko at the entrance to the pit where Seiya and Rhadamanthys fell. Saint of Libra tells them they must awaken their Eighth Sense in order to enter the world of the dead without getting killed.",
+      "airdate": "2005-12-17",
+      "markers": [],
+      "external_id": "21349"
+    },
+    {
+      "n": 2,
+      "title": "The Tribunal Of Silence",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Seiya and Shun come to the courthouse and accidentally upset a soldier.",
+      "airdate": "2005-12-17",
+      "markers": [],
+      "external_id": "21350"
+    },
+    {
+      "n": 3,
+      "title": "Legendary Saint Orphée",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21351"
+    },
+    {
+      "n": 4,
+      "title": "Orphée, The Sad Requiem",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21352"
+    },
+    {
+      "n": 5,
+      "title": "Hades! A Surprising Possession",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21353"
+    },
+    {
+      "n": 6,
+      "title": "Violent Battle! The Road to Giudecca",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21354"
+    },
+    {
+      "n": 7,
+      "title": "God's punishment! Greatest Eclipse",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21355"
+    },
+    {
+      "n": 8,
+      "title": "Ikki! Sorrowful Punch",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21356"
+    },
+    {
+      "n": 9,
+      "title": "Athena! Offer your Life",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21357"
+    },
+    {
+      "n": 10,
+      "title": "Desperation! The Wailing Wall",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21358"
+    },
+    {
+      "n": 11,
+      "title": "Reunion! The Gold Cloths",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21359"
+    },
+    {
+      "n": 12,
+      "title": "Farewell! Gold Saints!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21360"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Megami no Senshi...Pegasus Forever",
+      "artist": "Marina Del Ray",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Takusu-Mono-He My Dear",
+      "artist": "Yumi Matsuzawa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

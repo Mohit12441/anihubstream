@@ -1,0 +1,73 @@
+{
+  "id": "precure-all-stars-f",
+  "title": "Precure All Stars F",
+  "native": "プリキュアオールスターズＦ(エフ)",
+  "year": 2023,
+  "rating": 8.1,
+  "season": "Summer 2023",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx159429-qxuWHkvSyTHz.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159429-qxuWHkvSyTHz.jpg",
+  "accent": "#f1d650",
+  "synopsis": "A movie celebrating the 20th anniversary of the Precure franchise, featuring characters from all 20 series so far!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "precure-all-stars-f-9zjse8",
+    "mal": 54650,
+    "anilist": 159429,
+    "kitsu": 48375
+  },
+  "skip_key_id": 54650,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "precure all stars f フ リキュアオールスタース f エフ movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Precure All Stars F (Movie)",
+      "runtime": "72:00",
+      "runtime_seconds": 4320,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/159429-FHQdTtIatyZU.jpg",
+      "synopsis": "A movie celebrating the 20th anniversary of the Precure franchise, featuring characters from all 20 series so far!",
+      "airdate": null,
+      "markers": [],
+      "external_id": "362275"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "For “F”",
+      "artist": "Ami Ishii and Machico",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I'm Happy (うれしくて)",
+      "artist": "Ikimono-gakari",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

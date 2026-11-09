@@ -1,0 +1,154 @@
+{
+  "id": "shakugan-no-shana-s-ova-series",
+  "title": "Shakugan no Shana S",
+  "native": "灼眼のシャナ S",
+  "year": 2009,
+  "rating": 7.1,
+  "season": "Fall 2009",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6572-bk3feyozmCZf.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6572-bk3feyozmCZf.png",
+  "accent": "#e4bb5d",
+  "synopsis": "A 4 episode OVA series. Every episode will involve different side stories from the original source material.\n\nEpisode 1 - Reshuffle:\n\nDue to the effect of Friagne's treasure device, the bodies of Shana and Yuji are swapped. They try to overcome the situation secretly, but...\n\nEpisode 2 - Domicile:\n\nRecently, Shana has been acting strangely. Worried about her well-being, Yuji and Wilhelmina decide to follow her from the shadows after school one day. What secret could Shana be hiding?\n\nEpisode 3 - Overture (Part 1):\n\nWhile hunting for a certain tomogara, Shana steals the existence of a torch named Oogami Junko in order to make her investigation throughout the city easier while also dealing with the family problems left behind by Junko when she was devoured.\n\nEpisode 4 - Overture (Part 2):\n\nContinuation of episode 3.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "shakugan-no-shana-s:-ova-series-6onl6q",
+    "mal": 6572,
+    "anilist": 6572,
+    "kitsu": 4616
+  },
+  "skip_key_id": 6572,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": null,
+  "search_text": "shakugan no shana s 灼眼のシャナ s ova finished",
+  "genres": [
+    "action",
+    "comedy",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Reshuffle",
+      "runtime": "28:00",
+      "runtime_seconds": 1680,
+      "thumb": "",
+      "synopsis": "While Yuji and Shana rummage through Friagne's old pile of Treasure Tools during a hot summer's day, Yuji finds and uses a telescope-like object, causing him and Shana to switch bodies. Alastor tells the two that the object Yuji has just used is called the Reshuffle. While reversing its effect is just as easy as activating it, the Reshuffle gets lost in junk and the two have to gather the pile and find a better, isolated spot to search for the Reshuffle.",
+      "airdate": "2009-10-23",
+      "markers": [],
+      "external_id": "74773"
+    },
+    {
+      "n": 2,
+      "title": "Domicile",
+      "runtime": "28:00",
+      "runtime_seconds": 1680,
+      "thumb": "",
+      "synopsis": "Recently, Shana has been acting strangely. Worried over her well-being, Yuji and Wilhelmina decide to follow her from the shadows after school one day.",
+      "airdate": "2010-02-26",
+      "markers": [],
+      "external_id": "74774"
+    },
+    {
+      "n": 3,
+      "title": "Overture Part One",
+      "runtime": "28:00",
+      "runtime_seconds": 1680,
+      "thumb": "",
+      "synopsis": "In her early days as a Flame Haze, Shana takes over the identity of a Torch named Junko Ōgami and starts to hunt down the Denizen who killed her. She gets to know who Junko was through the latter's parents.",
+      "airdate": "2010-05-25",
+      "markers": [],
+      "external_id": "74775"
+    },
+    {
+      "n": 4,
+      "title": "Overture Part Two",
+      "runtime": "28:00",
+      "runtime_seconds": 1680,
+      "thumb": "",
+      "synopsis": "Episode four of the Shakugan no Shana S seres.",
+      "airdate": "2010-09-29",
+      "markers": [],
+      "external_id": "74776"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Prophecy",
+      "artist": "Mami Kawada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "All in good time",
+      "artist": "Mami Kawada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "JOINT",
+      "artist": "Mami Kawada",
+      "episodes": "1-15"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "triangle",
+      "artist": "Mami Kawada",
+      "episodes": "1-15"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hishoku no Sora",
+      "artist": "Mami Kawada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yowake Umare Kuru Shoujo",
+      "artist": "Yoko Takahashi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "BLAZE",
+      "artist": "KOTOKO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Sociometry",
+      "artist": "KOTOKO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "sense",
+      "artist": "Mami Kawada",
+      "episodes": "24"
+    }
+  ],
+  "relations": []
+}

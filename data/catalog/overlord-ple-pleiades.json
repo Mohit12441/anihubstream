@@ -1,0 +1,133 @@
+{
+  "id": "overlord-ple-pleiades",
+  "title": "Overlord: Ple Ple Pleiades",
+  "native": "オーバーロード ぷれぷれぷれあです",
+  "year": 2015,
+  "rating": 6.7,
+  "season": "Summer 2015",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21305-TaVD5SO86umP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21305-TaVD5SO86umP.jpg",
+  "accent": "#e4bb50",
+  "synopsis": "Specials featuring super-deformed characters, bundled with the Blu-ray and DVD volumes of Overlord.\n\nNote: Began airing after episode 5 of Overlord - each episode was available on the official site for a short period afterwards.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "overlord:-ple-ple-pleiades-3tyzdi",
+    "mal": 31138,
+    "anilist": 21305,
+    "kitsu": 11166
+  },
+  "skip_key_id": 31138,
+  "skip_key_space": "mal",
+  "episode_total": 8,
+  "added_at": null,
+  "search_text": "overlord ple ple pleiades オーハ ーロート ふ れふ れふ れあて す special finished",
+  "genres": [
+    "action",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Pure Pure Pleiades: Play 1 Overlord and Beginning",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "Ainz accidentally used Total Maniac on himself and panicked after regaining his emotions. Even looking at himself scares him. As he is panicking, Albedo breaks into his room, thinking he is in trouble as he did not reply her earlier, which he then gave an excuse that he was thinking about the situation in the upper floors. As he stared at her, he accidentally commented on how beautiful Albedo really is, causing Albedo to become momentarily stunned and become excitedly love struck the next moment.",
+      "airdate": "2015-08-04",
+      "markers": [],
+      "external_id": "178073"
+    },
+    {
+      "n": 2,
+      "title": "Pure Pure Pleiades: Play 2 - Battle Maids",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "Albedo explained to Ainz that the Pleiades are requesting an audience with him. Ainz initially approved of it but when he was just about to refuse by saying he doesn't feel well, Albedo immediately left the room and called the Battle Maids. When the Pleiades arrived he ordered them to converse to him normally so they won't notice that he is panicking, which the Pleiades agreed, although each of them have their own unique way of doing so.",
+      "airdate": "2015-08-11",
+      "markers": [],
+      "external_id": "178074"
+    },
+    {
+      "n": 3,
+      "title": "Pure Pure Pleiades: Play 3 - Cutting Through the Lies with Fists",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "As Narberal was training in the Amphitheater on the sixth floor, Ainz came and complimented her. Ainz successfully convinced her that he had a reason for ordering them to converse normally with him, making him dance happily. As Narberal asked what he is doing, he made an excuse that his dance is a new magical pose that only he knows of and that pose allows him to cast magic faster, reducing the casting time. Fascinated, Narberal asked him to teach her the magic pose, which Ainz had no choice but to agree. As the two of them danced, the other Pleiades arrived and joined the dance. After that, they thought that they had matured more thanks to Ainz teachings, which caused Ainz to feel even more guilt and ashamed for covering his lies with more lies.",
+      "airdate": "2015-08-18",
+      "markers": [],
+      "external_id": "178075"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "178076"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "178077"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "178078"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "179858"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "3:00",
+      "runtime_seconds": 180,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "179859"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,118 @@
+{
+  "id": "sengoku-basara-samurai-kings-the-movie",
+  "title": "Sengoku Basara - Samurai Kings: The Movie",
+  "native": "劇場版 戦国BASARA -The Last Party-",
+  "year": 2011,
+  "rating": 7.2,
+  "season": "Spring 2011",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9745-2IUfJems8Asg.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9745-2IUfJems8Asg.jpg",
+  "accent": "#5da1f1",
+  "synopsis": "The story of the film is set after the conflict instigated by Toyotomi Hideyoshi ended, but not before the Battle of Sekigahara determines who shall be the Shogun of Japan.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sengoku-basara-samurai-kings:-the-movie-fqgzbp",
+    "mal": 9745,
+    "anilist": 9745,
+    "kitsu": 5847
+  },
+  "skip_key_id": 9745,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "sengoku basara samurai kings the movie 劇場版 戦国basara the last party movie finished",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sengoku Basara - Samurai Kings: The Movie (Movie)",
+      "runtime": "93:00",
+      "runtime_seconds": 5580,
+      "thumb": "https://animehot.cc/storage/media/2026/09/69639c4121ab60809f36af71-landscape.webp",
+      "synopsis": "The story of the film is set after the conflict instigated by Toyotomi Hideyoshi ended, but not before the Battle of Sekigahara determines who shall be the Shogun of Japan.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "87775"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "dear sunshine",
+      "artist": "DAIGO☆STARDUST",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "FLAGS",
+      "artist": "T.M. Revolution",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "The party must go on",
+      "artist": "T.M. Revolution",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sword Summit",
+      "artist": "T.M. Revolution",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "El Dorado",
+      "artist": "Angelo",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "JAP",
+      "artist": "Abingdon Boys School",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Break & Peace",
+      "artist": "Dustz",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Fate",
+      "artist": "Angelo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "SWORD SUMMIT",
+      "artist": "T.M. Revolution",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,72 @@
+{
+  "id": "princess-mononoke",
+  "title": "Princess Mononoke",
+  "native": "もののけ姫",
+  "year": 1997,
+  "rating": 8.5,
+  "season": "Summer 1997",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx164-ySuGzCWVw2cL.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx164-ySuGzCWVw2cL.jpg",
+  "accent": "#2f7bff",
+  "synopsis": "A calm village residing in the mountains comes under attack from a demon-possessed boar one day.\n\nAshitaka, a young man and prince of the tribe, engages the creature in an attempt to save his village. During the battle, the boar bites him on the arm, leaving it blackened and cursed. Following his village's traditions, Ashitaka is exiled and becomes a wanderer, looking for a solution to the curse before it engulfs him.\n\nIron Town is a fortress under the leadership of Lady Eboshi. Through the clearing of the surrounding forests, Iron Town produces large amounts of Ironsand, used for gunpowder and other machinery. However, because of the forests destruction, nearby animal clans seek revenge led by a human girl of the Wolf clan called San.\n\nWhen Ashitaka comes to Iron Town, he discovers the area consumed in battle. Horrified, he attempts to create peace and befriend the Wolf Clan. However, after the forest's eradication and the ongoing war between Human and Beast, will the Spirit of the Forest be forgiving and accept Ashitaka's request to expel his curse?\n\n[Written by MAL Rewrite]",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "princess-mononoke-rx9fj7",
+    "mal": 164,
+    "anilist": 164,
+    "kitsu": 142
+  },
+  "skip_key_id": 164,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "princess mononoke もののけ姫 movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Princess Mononoke (Movie)",
+      "runtime": "130:00",
+      "runtime_seconds": 7800,
+      "thumb": "https://animehot.cc/storage/media/2026/09/690a3acf543081759bdc7efe-landscape.webp",
+      "synopsis": "When an Emishi village is attacked by a fierce demon boar, the young prince Ashitaka puts his life at stake to defend his tribe. With its dying breath, the beast curses the prince's arm, granting him demonic powers while gradually siphoning his life away. Instructed by the village elders to travel westward for a cure, Ashitaka arrives at Tatara, the Iron Town, where he finds himself embroiled in a fierce conflict: Lady Eboshi of Tatara, promoting constant deforestation, stands against Princess San and the sacred spirits of the forest, who are furious at the destruction brought by the humans. As the opposing forces of nature and mankind begin to clash in a desperate struggle for survival, Ashitaka attempts to seek harmony between the two, all the while battling the latent demon inside of him. Princess Mononoke is a tale depicting the connection of technology and nature, while showing the path to harmony that could be achieved by mutual acceptance.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "4151"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ashitaka Sekki (アシタカせっき; The Legend of Ashitaka)",
+      "artist": "Joe Hisaishi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mononoke Hime (もののけ姫)",
+      "artist": "Joe Hisaishi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

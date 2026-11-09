@@ -1,0 +1,63 @@
+{
+  "id": "perfect-blue",
+  "title": "Perfect Blue",
+  "native": "PERFECT BLUE",
+  "year": 1998,
+  "rating": 8.5,
+  "season": "Winter 1998",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx437-69NMlXKFeuse.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx437-69NMlXKFeuse.jpg",
+  "accent": "#1a356b",
+  "synopsis": "Rising pop star Mima has quit singing to pursue a career as an actress and model, but her fans aren’t ready to see her go... Encouraged by her managers, Mima takes on a recurring role on a popular TV show, when suddenly her handlers and collaborators begin turning up murdered. Harboring feelings of guilt and haunted by visions of her former self, Mima’s reality and fantasy meld into a frenzied paranoia. As her stalker closes in, in person and online, the threat he poses is more real than even Mima knows, in this iconic psychological thriller that has frequently been hailed as one of the most important animated films of all time.\n\n(Source: Shout! Factory)\n\nNote: The film received an early premiere at the Fantasia Film Festival on August 5, 1997.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 400,
+    "anilist": 437,
+    "mal": 437,
+    "hianime": "perfect-blue-2wkfjd"
+  },
+  "skip_key_id": 437,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 05:05:32",
+  "search_text": "perfect blue perfect blue movie finished",
+  "genres": [
+    "drama",
+    "horror"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Perfect Blue (Movie)",
+      "runtime": "80:00",
+      "runtime_seconds": 4800,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/437-3yMVTyN7gl2A.jpg",
+      "synopsis": "Rising pop star Mima has quit singing to pursue a career as an actress and model, but her fans aren’t ready to see her go... Encouraged by her managers, Mima takes on a recurring role on a popular TV show, when suddenly her handlers and collaborators begin turning up murdered. Harboring feelings of guilt and haunted by visions of her former self, Mima’s reality and fantasy meld into a frenzied paranoia. As her stalker closes in, in person and online, the threat he poses is more real than even Mima knows, in this iconic psychological thriller that has frequently been hailed as one of the most important animated films of all time.\n\n\n\n(Source: Shout! Factory)\n\n\n\nNote: The film received an early premiere at the Fantasia Film Festival on August 5, 1997.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "9759"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Season",
+      "artist": "M-Voice",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

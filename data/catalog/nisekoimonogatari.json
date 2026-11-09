@@ -1,0 +1,54 @@
+{
+  "id": "nisekoimonogatari",
+  "title": "Nisekoimonogatari",
+  "native": "ニセコイモノガタリ",
+  "year": 2015,
+  "rating": 6.4,
+  "season": "Spring 2015",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx106495-gEnPvRaS5HoU.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx106495-gEnPvRaS5HoU.jpg",
+  "accent": "#e49350",
+  "synopsis": "Trailer for a fake crossover anime created by Shaft as an April Fools' Day joke, celebrating their 40th anniversary.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "nisekoimonogatari-vjdk5f",
+    "mal": 30514,
+    "anilist": 106495,
+    "kitsu": 10802
+  },
+  "skip_key_id": 30514,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "nisekoimonogatari ニセコイモノカ タリ ona finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Nisekoimonogatari",
+      "runtime": "1:00",
+      "runtime_seconds": 60,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx106495-gEnPvRaS5HoU.jpg",
+      "synopsis": "Trailer for a fake crossover anime created by Shaft as an April Fools' Day joke, celebrating their 40th anniversary.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "174315"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

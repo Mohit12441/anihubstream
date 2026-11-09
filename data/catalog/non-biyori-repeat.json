@@ -1,0 +1,190 @@
+{
+  "id": "non-biyori-repeat",
+  "title": "Non Non Biyori Repeat",
+  "native": "のんのんびより りぴーと",
+  "year": 2015,
+  "rating": 8.1,
+  "season": "Summer 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20694-Brxd5Unqa5fP.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20694-Brxd5Unqa5fP.png",
+  "accent": "#50e493",
+  "synopsis": "Even though there are still only five students who attend the remote Asahigaoka Branch School, each one of the girls already has a lifetime of wonderful experiences in the carefree Japanese countryside. Some memories may belong to just one person, like Hotaru’s recollections of her first day in Asahigaoka before she’d had a chance to meet her new friends. Other memories bring an otherwise sleepy town to life for Komari, Natsumi, Renge, or even Suguru.\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "non-non-biyori-repeat-8ij62e",
+    "mal": 23623,
+    "anilist": 20694,
+    "kitsu": 8410
+  },
+  "skip_key_id": 23623,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "non non biyori repeat のんのんひ より りひ ーと tv finished",
+  "genres": [
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I Became a First Grader",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178956/original.jpg",
+      "synopsis": "",
+      "airdate": "2015-07-06",
+      "markers": [],
+      "external_id": "178956"
+    },
+    {
+      "n": 2,
+      "title": "We Went to Look at the Stars",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178953/original.png",
+      "synopsis": "",
+      "airdate": "2015-07-13",
+      "markers": [],
+      "external_id": "178953"
+    },
+    {
+      "n": 3,
+      "title": "We Got Motivated During the Holiday Break",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178955/original.png",
+      "synopsis": "",
+      "airdate": "2015-07-20",
+      "markers": [],
+      "external_id": "178955"
+    },
+    {
+      "n": 4,
+      "title": "I Made a Teru-teru Bouzu",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178957/original.jpg",
+      "synopsis": "",
+      "airdate": "2015-07-28",
+      "markers": [],
+      "external_id": "178957"
+    },
+    {
+      "n": 5,
+      "title": "We Ate Okonomiyaki",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178958/original.jpg",
+      "synopsis": "",
+      "airdate": "2015-08-04",
+      "markers": [],
+      "external_id": "178958"
+    },
+    {
+      "n": 6,
+      "title": "We Made Friends With Fireflies",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178954/original.jpg",
+      "synopsis": "",
+      "airdate": "2015-08-11",
+      "markers": [],
+      "external_id": "178954"
+    },
+    {
+      "n": 7,
+      "title": "We Bravely Dove In",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178963/original.jpg",
+      "synopsis": "",
+      "airdate": "2015-08-18",
+      "markers": [],
+      "external_id": "178963"
+    },
+    {
+      "n": 8,
+      "title": "I Took Lunch Duty",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178959/original.jpg",
+      "synopsis": "",
+      "airdate": "2015-08-25",
+      "markers": [],
+      "external_id": "178959"
+    },
+    {
+      "n": 9,
+      "title": "We Looked at the Moon Together",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178960/original.jpg",
+      "synopsis": "",
+      "airdate": "2015-09-01",
+      "markers": [],
+      "external_id": "178960"
+    },
+    {
+      "n": 10,
+      "title": "I Practiced Really Hard",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178961/original.jpg",
+      "synopsis": "",
+      "airdate": "2015-09-08",
+      "markers": [],
+      "external_id": "178961"
+    },
+    {
+      "n": 11,
+      "title": "I Became a Pampered Child",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178962/original.jpg",
+      "synopsis": "",
+      "airdate": "2015-09-15",
+      "markers": [],
+      "external_id": "178962"
+    },
+    {
+      "n": 12,
+      "title": "A Year Passed",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/178964/original.jpg",
+      "synopsis": "",
+      "airdate": "2015-09-22",
+      "markers": [],
+      "external_id": "178964"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kodama Kotodama (こだまことだま)",
+      "artist": "nano.RIPE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Okaeri (おかえり; Welcome Back)",
+      "artist": "Ayane Sakura, Kana Asumi, Kotori Koiwai, & Rie Murakawa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,325 @@
+{
+  "id": "one-punch-man-season-2",
+  "title": "One-Punch Man Season 2",
+  "native": "ワンパンマン 2",
+  "year": 2019,
+  "rating": 7.4,
+  "season": "Spring 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97668-nC8gQrXVxt7k.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97668-nC8gQrXVxt7k.png",
+  "accent": "#e4bb50",
+  "synopsis": "Saitama is a hero who only became a hero for fun. After three years of “special training,” he’s become so strong that he’s practically invincible. In fact, he’s too strong—even his mightiest opponents are taken out with a single punch. Now, the great seer Madame Shibabawa’s prediction about the Earth being doomed seems to be coming true as the frequency of monster incidents escalates. Alongside Genos, his faithful disciple, Saitama begins his official hero duties as a member of the Hero Association, while Garou, a man utterly fascinated by monsters, makes his appearance.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "One-Punch Man (2015)",
+    "One-Punch Man Season 3 (2025)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 12566,
+    "anilist": 97668,
+    "mal": 34134,
+    "hianime": "one-punch-man-season-2-pn7adr"
+  },
+  "skip_key_id": 34134,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 02:14:09",
+  "search_text": "one punch man season 2 ワンハ ンマン 2 tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "sci-fi",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hero no Kikan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1413
+        }
+      ],
+      "external_id": "222704"
+    },
+    {
+      "n": 2,
+      "title": "Ningen no Kaijin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 224,
+          "end": 314
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1226,
+          "end": 1316
+        }
+      ],
+      "external_id": "222705"
+    },
+    {
+      "n": 3,
+      "title": "Kari no Hajimari",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1365
+        }
+      ],
+      "external_id": "222706"
+    },
+    {
+      "n": 4,
+      "title": "Kinzoku no Bat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 111,
+          "end": 201
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1409
+        }
+      ],
+      "external_id": "222707"
+    },
+    {
+      "n": 5,
+      "title": "Bujutsu no Taikai",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 116,
+          "end": 206
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1372
+        }
+      ],
+      "external_id": "222708"
+    },
+    {
+      "n": 6,
+      "title": "Kaijin no Houki",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 104,
+          "end": 194
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1381
+        }
+      ],
+      "external_id": "222709"
+    },
+    {
+      "n": 7,
+      "title": "S Kyuu no Hero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 119
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1318,
+          "end": 1407
+        }
+      ],
+      "external_id": "222710"
+    },
+    {
+      "n": 8,
+      "title": "Tsuyoi Yatsu no Teikou",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 88,
+          "end": 178
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1281,
+          "end": 1320
+        }
+      ],
+      "external_id": "222711"
+    },
+    {
+      "n": 9,
+      "title": "Saikyou no Nayami",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 117
+        }
+      ],
+      "external_id": "222712"
+    },
+    {
+      "n": 10,
+      "title": "Seigi no Houi Ami",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 100,
+          "end": 185
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1425
+        }
+      ],
+      "external_id": "237540"
+    },
+    {
+      "n": 11,
+      "title": "Sorezore no Kyouji",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 163,
+          "end": 248
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "237541"
+    },
+    {
+      "n": 12,
+      "title": "Deshi no Shirinugui",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1319,
+          "end": 1409
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1411
+        }
+      ],
+      "external_id": "237542"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

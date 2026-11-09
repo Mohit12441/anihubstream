@@ -1,0 +1,121 @@
+{
+  "id": "sound-euphonium-specials",
+  "title": "Sound! Euphonium Shorts",
+  "native": "響け！ユーフォニアム 吹奏楽部の日常",
+  "year": 2015,
+  "rating": 6.8,
+  "season": "Summer 2015",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21255-DUmnkxSx65ie.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21255-DUmnkxSx65ie.png",
+  "accent": "#e4c95d",
+  "synopsis": "Short specials included in the Blu-ray/DVD releases.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sound!-euphonium-specials-2myuqj",
+    "mal": 31096,
+    "anilist": 21255,
+    "kitsu": 11137
+  },
+  "skip_key_id": 31096,
+  "skip_key_space": "mal",
+  "episode_total": 7,
+  "added_at": null,
+  "search_text": "sound euphonium shorts 響け ユーフォニアム 吹奏楽部の日常 special finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "177693"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "177694"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "177695"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "177696"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "177697"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "177698"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "177699"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

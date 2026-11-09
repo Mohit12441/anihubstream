@@ -1,0 +1,581 @@
+{
+  "id": "steins-gate-0",
+  "title": "Steins;Gate 0",
+  "native": "シュタインズ・ゲート ゼロ",
+  "year": 2018,
+  "rating": 8.4,
+  "season": "Spring 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21127-7ARWZkDXKiiD.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21127-7ARWZkDXKiiD.jpg",
+  "accent": "#f1d6bb",
+  "synopsis": "The eccentric, self-proclaimed mad scientist Rintarou Okabe has become a shell of his former self. Depressed and traumatized after failing to rescue his friend, he has decided to forsake his mad scientist alter ego and live as an ordinary college student. Surrounded by friends who know little of his time travel experiences, Okabe spends his days trying to forget the horrors of his adventures alone.\n\nWhile working as a receptionist at a college technology forum, Okabe meets the short, spunky Maho Hiyajo, who\nlater turns out to be the interpreter at the forum's presentation, conducted by Professor Alexis Leskinen. In front of a stunned crowd, Alexis and Maho unveil Amadeus—a revolutionary AI capable of storing a person's memories and creating a perfect simulation of that person complete with their personality and quirks. Meeting with Maho and Alexis after the presentation, Okabe learns that the two were Kurisu's colleagues in university, and that they have simulated her in Amadeus. Hired by Alexis to research the simulation's behavior, Okabe is given the chance to interact with the shadow of a long-lost dear friend. Dangerously tangled in the past, Okabe must face the harsh reality and carefully maneuver around the disastrous consequences that come with disturbing the natural flow of time.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Steins;Gate 0: 23β -Divide by Zero- (2015)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 10788,
+    "anilist": 21127,
+    "mal": 30484,
+    "hianime": "steinsgate-0-s4wery"
+  },
+  "skip_key_id": 30484,
+  "skip_key_space": "mal",
+  "episode_total": 23,
+  "added_at": "2026-10-14 06:14:32",
+  "search_text": "steins gate 0 シュタインス ケ ート セ ロ tv finished",
+  "genres": [
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Missing Link of the Annihilator: Absolute Zero",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242225/original.jpg",
+      "synopsis": "Though WWIII is on the horizon, Okabe attempts to live a normal college life. However, a newly developed AI is about to shake up his world.",
+      "airdate": "2018-04-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 130
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1380
+        }
+      ],
+      "external_id": "242225"
+    },
+    {
+      "n": 2,
+      "title": "Epigraph of the Closed Curve: Closed Epigraph",
+      "runtime": "—",
+      "runtime_seconds": 0,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242226/original.jpg",
+      "synopsis": "After a chance encounter with Maho where they discover knowing someone in common, Okabe has his first face-to-face with her special AI, Amadeus.",
+      "airdate": "2018-04-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 186,
+          "end": 276
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1427
+        }
+      ],
+      "external_id": "242226"
+    },
+    {
+      "n": 3,
+      "title": "Protocol of the Two-sided Gospel -X-day Protocol-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242227/original.jpg",
+      "synopsis": "Mayuri tries to bring everyone together for a Christmas party at the lab, but Okabe has a rude awakening.",
+      "airdate": "2018-04-26",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1428
+        }
+      ],
+      "external_id": "242227"
+    },
+    {
+      "n": 4,
+      "title": "Solitude of the Mournful Flow -A Stray Sheep-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242228/original.jpg",
+      "synopsis": "While OkaRintaro briefly has a vision of a world line where he is caught up in the middle of a war, which he eventually comes to realise was his Reading Steiner taking effect. Meanwhile, Suzuha explains to Daru that she is looking for Kagari Shiina, Mayuri's future adopted daughter who time-travelled with her from the year 2036 but became seperated from her in 1998. As Rintaro decides to help with the search, he gets a call from Ruka Urashibara about a pressing matter before finding Moeka before his doorstep. be is left with more questions than answers, Suzuha recruits help in her search for an unexpectedly close person.",
+      "airdate": "2018-05-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        }
+      ],
+      "external_id": "242228"
+    },
+    {
+      "n": 5,
+      "title": "Solitude of the Astigmatism -Entangled Sheep-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242229/original.jpg",
+      "synopsis": "Their search continues as New Years swiftly approaches, though Ruka's dilemma with a certain guest might make matters worse.",
+      "airdate": "2018-05-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "242229"
+    },
+    {
+      "n": 6,
+      "title": "Eclipse of Orbital Ordering -The Orbital Eclipse-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242230/original.jpg",
+      "synopsis": "Now that the girl's identity is known, Okabe and friends kick off the New Years with a shrine visit and party to never forget.",
+      "airdate": "2018-05-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 139,
+          "end": 229
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1427
+        }
+      ],
+      "external_id": "242230"
+    },
+    {
+      "n": 7,
+      "title": "Eclipse of Vibronic Transition -Vibronic Transition-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242231/original.jpg",
+      "synopsis": "As Okabe seeks answers regarding the attack, trouble with Amadeus brings a surprising turn of events.",
+      "airdate": "2018-05-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 60,
+          "end": 150
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1294,
+          "end": 1383
+        }
+      ],
+      "external_id": "242231"
+    },
+    {
+      "n": 8,
+      "title": "Dual of Antinomy -Antinomic Dual-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242232/original.jpg",
+      "synopsis": "Okabe is given a bittersweet reminder that in changing world lines, sacrifices must be made.",
+      "airdate": "2018-05-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 139
+        }
+      ],
+      "external_id": "242232"
+    },
+    {
+      "n": 9,
+      "title": "Pandora of Eternal Return -Pandora's Box-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242233/original.jpg",
+      "synopsis": "It will take time for Okabe to identify the attackers and their motivation, but the impending crisis of WWIII forces Suzuha to resort to desperate measures.",
+      "airdate": "2018-06-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 52,
+          "end": 142
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1427
+        }
+      ],
+      "external_id": "242233"
+    },
+    {
+      "n": 10,
+      "title": "Pandora of Provable Existence -Forbidden Cubicle-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242234/original.jpg",
+      "synopsis": "After reinforcements are called to clean Maho's disastrous room, her and Okabe's Akihabara date ends with a surprising confession from Maho.",
+      "airdate": "2018-06-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        }
+      ],
+      "external_id": "242234"
+    },
+    {
+      "n": 11,
+      "title": "Pandora of Forgotten Existence -Sealed Reliquary-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242235/original.jpg",
+      "synopsis": "Okabe must convince Maho to give up her prized possession, but an unexpected danger has them negotiating for their own lives.",
+      "airdate": "2018-06-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1436
+        }
+      ],
+      "external_id": "242235"
+    },
+    {
+      "n": 12,
+      "title": "Mother Goose of Mutual Recursion -Recursive Mother Goose-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242236/original.jpg",
+      "synopsis": "Kagari attempts to track down the origins of a song in hopes that she discovers her lost memories.",
+      "airdate": "2018-06-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 146,
+          "end": 236
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1289,
+          "end": 1374
+        }
+      ],
+      "external_id": "242236"
+    },
+    {
+      "n": 13,
+      "title": "Mother Goose of Diffractive Recitativo -Diffraction Mother Goose-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242237/original.jpg",
+      "synopsis": "After finally obtaining a hint into Kagari's lost past, Okabe ends up discovering much more than he bargained for.",
+      "airdate": "2018-07-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 171
+        }
+      ],
+      "external_id": "242237"
+    },
+    {
+      "n": 14,
+      "title": "Recognition of the Elastic Limit -Presage or Recognize-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242238/original.jpg",
+      "synopsis": "Shocked by a surprise attack, Suzuha and Daru look to America as their last hope to save the world.",
+      "airdate": "2018-07-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1427
+        }
+      ],
+      "external_id": "242238"
+    },
+    {
+      "n": 15,
+      "title": "Recognition of the Asymptotic Line -Recognize Asymptote-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242239/original.jpg",
+      "synopsis": "Fed up with her Dad's passiveness, Suzuha must make a man out of Daru before Yuki ends up with somebody else.",
+      "airdate": "2018-07-26",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1427
+        }
+      ],
+      "external_id": "242239"
+    },
+    {
+      "n": 16,
+      "title": "Altair of the Point at Infinity -Vega and Altair-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242240/original.jpg",
+      "synopsis": "Okabe's stubbornness causes fists to fly and tears to be shed as the deadline for using the time machine swiftly approaches.",
+      "airdate": "2018-08-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 61,
+          "end": 151
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1328,
+          "end": 1427
+        }
+      ],
+      "external_id": "242240"
+    },
+    {
+      "n": 17,
+      "title": "Altair of the Hyperbolic Plane -Beltrami Pseudosphere-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242241/original.jpg",
+      "synopsis": "As Suzuha sets off to finish her mission, Mayuri finds determination of her own. But then, disaster strikes.",
+      "airdate": "2018-08-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 115,
+          "end": 205
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1416
+        }
+      ],
+      "external_id": "242241"
+    },
+    {
+      "n": 18,
+      "title": "Altair of Translational Symmetry -Translational Symmetry-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242242/original.jpg",
+      "synopsis": "All hell breaks loose over the time machine when a villain from the future haunts the past and unveils their devious plan.",
+      "airdate": "2018-08-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1361,
+          "end": 1412
+        }
+      ],
+      "external_id": "242242"
+    },
+    {
+      "n": 19,
+      "title": "Altair of the Cyclic Coordinate -Time-leap Machine-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242243/original.jpg",
+      "synopsis": "War and disaster has come, and the only way Okabe can stop it is to rely on his friends, determination, and hope.",
+      "airdate": "2018-08-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 30,
+          "end": 120
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1408
+        }
+      ],
+      "external_id": "242243"
+    },
+    {
+      "n": 20,
+      "title": "Rinascimento of the Unwavering Promise -Promised Rinascimento-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242244/original.jpg",
+      "synopsis": "Okabe awakes in a cold, lifeless world where he finds his friends struggling to survive amidst all the chaos.",
+      "airdate": "2018-09-06",
+      "markers": [],
+      "external_id": "242244"
+    },
+    {
+      "n": 21,
+      "title": "Rinascimento of Image Formation -Return of Phoenix-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242245/original.jpg",
+      "synopsis": "Setting forth on a long and arduous journey, Okabe seeks to rekindle his hope and revive what all had thought gone.",
+      "airdate": "2018-09-13",
+      "markers": [],
+      "external_id": "242245"
+    },
+    {
+      "n": 22,
+      "title": "Rinascimento of Projection -Project Amadeus-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242246/original.jpg",
+      "synopsis": "In their struggle to save the time machine, the lab members brainstorm to circumvent convergence but realize it cannot be done without sacrifice.",
+      "airdate": "2018-09-20",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1358,
+          "end": 1425
+        }
+      ],
+      "external_id": "242246"
+    },
+    {
+      "n": 23,
+      "title": "Arclight of the Point at Infinity -Arc-light of the Sky-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/242247/original.jpg",
+      "synopsis": "Okabe and his friends must battle against fate in the past, present, and future to find Steins Gate and reunite the lab members once and for all.",
+      "airdate": "2018-09-27",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1270,
+          "end": 1356
+        }
+      ],
+      "external_id": "242247"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Fatima (ファティマ)",
+      "artist": "Kanako Itō",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Amadeus",
+      "artist": "Kanako Itō",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "LAST GAME",
+      "artist": "Zwei",
+      "episodes": "2-7,9-11,13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Lyra (ライア)",
+      "artist": "Zwei",
+      "episodes": "8, 18"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Hoshi no Kanaderu Uta (星の奏でる歌)",
+      "artist": "Kana Hanazawa, Megumi Han",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "World-Line",
+      "artist": "Asami Imai",
+      "episodes": "14-17,19-20"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Fatima (ファティマ)",
+      "artist": "Kanako Itō",
+      "episodes": "21"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "GATE OF STEINER",
+      "artist": "Eri Sasaki",
+      "episodes": "23"
+    }
+  ],
+  "relations": []
+}

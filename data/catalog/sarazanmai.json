@@ -1,0 +1,183 @@
+{
+  "id": "sarazanmai",
+  "title": "Sarazanmai",
+  "native": "さらざんまい",
+  "year": 2019,
+  "rating": 7.3,
+  "season": "Spring 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101261-lOLwQS45WJm5.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101261-lOLwQS45WJm5.jpg",
+  "accent": "#1aa1d6",
+  "synopsis": "The stage is Asakusa. One day, three 2nd-year middle school students — Kazuki Yasaka, Tooi Kuji, and Enta Jinnai — meet a mysterious kappa-like creature named Keppi, who forcibly takes their shirikodama (a mythical organ kappa steal through a person's anus) and transforms the boys into kappa.\n\nKeppi informs them, \"If you wish to return to your former selves, you must connect in 'that way' and bring me the shirikodama of zombies.\" Will the three boys be able to connect as they steal shirikodama from zombies?! Meanwhile, two policemen — Reo Niiboshi and Mabu Akutsu — are up to something at the police box where they are stationed.\n\n(Source: Official Website)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sarazanmai-d84csk",
+    "mal": 37426,
+    "anilist": 101261,
+    "kitsu": 41017
+  },
+  "skip_key_id": 37426,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": null,
+  "search_text": "sarazanmai さらさ んまい tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "fantasy",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I Want to be Connected but I Want to Lie",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/260618/original.jpg",
+      "synopsis": "Three middle schoolers, Yasaka Kazuki, Kuji Toi and Jinnai Enta encounter Keppi of the Kappa Kingdom. Butt stuff happens, and the three are enlisted to fight kappa zombies.",
+      "airdate": "2019-04-12",
+      "markers": [],
+      "external_id": "260618"
+    },
+    {
+      "n": 2,
+      "title": "I Want to Connect, but I Want to Take",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/260619/original.jpg",
+      "synopsis": "Kazuki goes to unthinkable lengths to make his kid brother, Haruka, happy, including deception and theft.",
+      "airdate": "2019-04-19",
+      "markers": [],
+      "external_id": "260619"
+    },
+    {
+      "n": 3,
+      "title": "I Want to Connect, but It's Not Meant to Be",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/260620/original.jpg",
+      "synopsis": "Having no way to express his feelings for Kazuki, all Enta can do is to try to get him back in the soccer club.",
+      "airdate": "2019-04-26",
+      "markers": [],
+      "external_id": "260620"
+    },
+    {
+      "n": 4,
+      "title": "I Want to Connect, but You're So Far Away",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/261255/original.jpg",
+      "synopsis": "Kazuki needs Toi’s help to take over Sara’s fan meet. Meanwhile, Toi has his own demons to fight.",
+      "airdate": "2019-05-03",
+      "markers": [],
+      "external_id": "261255"
+    },
+    {
+      "n": 5,
+      "title": "I Want to Connect, but I Can't Be Forgiven",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/261256/original.jpg",
+      "synopsis": "Kazuki’s plot to highjack Sara’s fan meet goes sideways when it turns out there’s more to her than meets the eye.",
+      "airdate": "2019-05-10",
+      "markers": [],
+      "external_id": "261256"
+    },
+    {
+      "n": 6,
+      "title": "I Want to Connect, so I'm Not Giving Up",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/261257/original.jpg",
+      "synopsis": "Having failed to defeat the previous kappa zombie, the three are stuck as kappa. Meanwhile, Reo and Mabu become more desperate for kappa zombies.",
+      "airdate": "2019-05-17",
+      "markers": [],
+      "external_id": "261257"
+    },
+    {
+      "n": 7,
+      "title": "I Want to Connect, but I Want to Betray",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/261258/original.jpg",
+      "synopsis": "With things returning to normal for the three, they begin playing soccer together, but someone seems not to be happy with that.",
+      "airdate": "2019-05-24",
+      "markers": [],
+      "external_id": "261258"
+    },
+    {
+      "n": 8,
+      "title": "I Want to Connect, but We'll Never Meet Again",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/261259/original.jpg",
+      "synopsis": "Chikai wants Toi to leave town with him. He bumps into Enta, and they go on a walk around as they share their predicaments.",
+      "airdate": "2019-05-31",
+      "markers": [],
+      "external_id": "261259"
+    },
+    {
+      "n": 9,
+      "title": "I Want to Connect, but I Can't Express It",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/261260/original.jpg",
+      "synopsis": "Enta and Keppi are both in critical condition. Meanwhile, Toi and Chikai flee from town, only to run into even more trouble.",
+      "airdate": "2019-06-07",
+      "markers": [],
+      "external_id": "261260"
+    },
+    {
+      "n": 10,
+      "title": "I Want to Connect, but I Can't",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/261261/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-06-14",
+      "markers": [],
+      "external_id": "261261"
+    },
+    {
+      "n": 11,
+      "title": "I Want to Connect, so Sarazanmai",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/261262/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-06-21",
+      "markers": [],
+      "external_id": "261262"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Massara",
+      "artist": "KANA-BOON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Stand By Me",
+      "artist": "The Peggies",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

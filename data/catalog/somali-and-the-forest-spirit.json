@@ -1,0 +1,281 @@
+{
+  "id": "somali-and-the-forest-spirit",
+  "title": "Somali and the Forest Spirit",
+  "native": "ソマリと森の神様",
+  "year": 2020,
+  "rating": 7.6,
+  "season": "Winter 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx108617-PgoYLgWzzm0c.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108617-PgoYLgWzzm0c.png",
+  "accent": "#28bbe4",
+  "synopsis": "The world is ruled by a diversity of inhuman beings, who persecuted humans and drove them to near-extinction. One day, the forest guardian Golem meets a human girl. This is a chronicle of a journey that would bind a member of the dying \"human\" clan to the forest guardian Golem, as father and daughter.\n\n(Source: Crunchyroll)\n\nThe first episode received an advance web distribution on January 3. The regular TV broadcast started on January 10.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42201,
+    "anilist": 108617,
+    "mal": 39575,
+    "hianime": "somali-and-the-forest-spirit-n8dhdl"
+  },
+  "skip_key_id": 39575,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 12:36:52",
+  "search_text": "somali and the forest spirit ソマリと森の神様 tv finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "fantasy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Journeying Parent and Child",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/cb15790a17b9a38e7dfeea1d61fa93821581617946_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1413
+        }
+      ],
+      "external_id": "268773"
+    },
+    {
+      "n": 2,
+      "title": "Edible Herbs and the Oni's Dwelling",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/bc176277da9516d55f9733a09b44dbb01582222525_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 50,
+          "end": 139
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1417
+        }
+      ],
+      "external_id": "268774"
+    },
+    {
+      "n": 3,
+      "title": "The Sea at the Bottom of the Cave",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/87cb2f4eb6fcd75de4de75b3a5ef272d1582828088_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "271213"
+    },
+    {
+      "n": 4,
+      "title": "The Wishing Flower and the Promise Request",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/9e70c7b115c9f6390df504213452a95b1583436068_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 138
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1415
+        }
+      ],
+      "external_id": "273162"
+    },
+    {
+      "n": 5,
+      "title": "The Wandering Birds",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/09d01337277fb7a91cd2c1b8ac66e4c21584035065_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1416
+        }
+      ],
+      "external_id": "273163"
+    },
+    {
+      "n": 6,
+      "title": "Dying Flowers Look Up at the Birds",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/8e62af627c76651dae83cfe8e67b24de1584639546_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 27,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1328,
+          "end": 1411
+        }
+      ],
+      "external_id": "273825"
+    },
+    {
+      "n": 7,
+      "title": "The Footsteps That Stalk the Witches",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c56a3b3b296be00118c824b17be69bff1585234330_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1416
+        }
+      ],
+      "external_id": "274099"
+    },
+    {
+      "n": 8,
+      "title": "Meetings and Bonds Prayed For",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/7431c89e64cf148d6396ada692c195021585845917_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274100"
+    },
+    {
+      "n": 9,
+      "title": "Memories of Minor Days",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/fb5115d70a465b86e6666c9b657194701588844528_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 124
+        }
+      ],
+      "external_id": "274101"
+    },
+    {
+      "n": 10,
+      "title": "The Infant Child and the Green Fortress",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a175d5732260c7cb9ee48be824fbc29a1588844669_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274102"
+    },
+    {
+      "n": 11,
+      "title": "Those Who Protect and Those Who Threaten",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/909c50dcfbe9232cff4ea4b173c2f79a1588844773_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1409
+        }
+      ],
+      "external_id": "274103"
+    },
+    {
+      "n": 12,
+      "title": "Bonded Father and Child",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/19c3ed02da6a4cfc7ab9e53011de17ea1588844646_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1420
+        }
+      ],
+      "external_id": "274104"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Arigatō wa Kocchi no Kotoba",
+      "artist": "Naotarō Moriyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kokoro Somali (ココロソマリ)",
+      "artist": "Inori Minase",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

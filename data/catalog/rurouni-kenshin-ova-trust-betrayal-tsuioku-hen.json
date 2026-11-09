@@ -1,0 +1,90 @@
+{
+  "id": "rurouni-kenshin-ova-trust-betrayal-tsuioku-hen",
+  "title": "Rurouni Kenshin OVA: Trust & Betrayal (Tsuioku-hen)",
+  "native": "るろうに剣心―明治剣客浪漫譚―追憶編",
+  "year": 1999,
+  "rating": 8.5,
+  "season": "Winter 1999",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx44-MG5I672UbWAy.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx44-MG5I672UbWAy.png",
+  "accent": "#ffd6bb",
+  "synopsis": "In the days before the Japanese Revolution, Hiko Seiijuro, a wandering master swordsman and hermit, encounters a bandit raid on a slave wagon. Hiko kills the raiding bandits in hopes of saving as many lives as possible, but only manages to spare one life from the massacre. Hiko leaves the child, advising him to go to the nearby village and have them take care of him. \n\nA few days later, as Hiko comes back to check upon the child he saved, he is shocked to see the child had created graves, both for the slaves he befriended and the bandits who killed them. Seeing potential in the young one, Hiko takes the child under his wing, names him Kenshin, meaning \"heart of sword,\" and teaches him about the art of swordsmanship under the Hiten Mitsuruugi Ryu.\n\nStruggling in a constant challenge with his ideal beliefs reflecting against the harshness of reality, Tsuiokuhen tells the melancholic and dark story of Himura Kenshin as one of the most feared assassins of the Japanese Revolution: the Hitokiri Battousai.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Rurouni Kenshin (1996)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 26,
+    "anilist": 44,
+    "mal": 44
+  },
+  "skip_key_id": 44,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": "2026-10-21 11:26:33",
+  "search_text": "rurouni kenshin ova trust betrayal tsuioku hen るろうに剣心 明治剣客浪漫譚 追憶編 ova finished",
+  "genres": [
+    "action",
+    "drama",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Man of the Slashing Sword",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "Episode of how Kenshin came under the wing of Soujiro Hiko the 13th, how he was trained and how he became a manslayer.",
+      "airdate": "1999-02-20",
+      "markers": [],
+      "external_id": "1201"
+    },
+    {
+      "n": 2,
+      "title": "The Lost Cat",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "The second episode details Kenshin's role in the revolution, how he met Tomoe, and how the rebellion was almost quelled.",
+      "airdate": "1999-04-21",
+      "markers": [],
+      "external_id": "1202"
+    },
+    {
+      "n": 3,
+      "title": "The Previous Night at the Mountain Home",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "The third episode details how Kenshin lived with Tomoe and married her as a cover until his side replenished its forces to continue the rebellion.",
+      "airdate": "1999-06-19",
+      "markers": [],
+      "external_id": "1203"
+    },
+    {
+      "n": 4,
+      "title": "The Cross-Shaped Wound",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "The fourth episode is about the betrayal against Kenshin, how he lived for the next few years as a manslayer, and the origin of his cross-shaped scar.",
+      "airdate": "1999-09-22",
+      "markers": [],
+      "external_id": "1204"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

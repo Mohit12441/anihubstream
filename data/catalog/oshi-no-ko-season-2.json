@@ -1,0 +1,391 @@
+{
+  "id": "oshi-no-ko-season-2",
+  "title": "OSHI NO KO Season 2",
+  "native": "【推しの子】第2期",
+  "year": 2024,
+  "rating": 8.5,
+  "season": "Summer 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx166531-dAL5MsqDHUkj.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx166531-dAL5MsqDHUkj.jpg",
+  "accent": "#e44343",
+  "synopsis": "Aqua’s desire for revenge takes center stage as he navigates the dark underbelly of the entertainment world alongside his twin sister, Ruby. While Ruby follows in their slain mother’s footsteps to become an idol, Aqua joins a famous theater troupe in hopes of uncovering clues to the identity of his father — the man who arranged their mother’s untimely death, and the man who once starred in the same troupe Aqua hopes to infiltrate.\n\n(Source: HIDIVE)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "OSHI NO KO (2023)",
+    "OSHI NO KO Season 3 (2026)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 47659,
+    "anilist": 166531,
+    "mal": 55791,
+    "hianime": "oshi-no-ko-season-2-cjbjzg"
+  },
+  "skip_key_id": 55791,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 08:15:04",
+  "search_text": "oshi no ko season 2 推しの子 第2期 tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Tokyo Blade",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/353157/thumbnail/medium-b5cb5cccb60eb536b104752806355049.jpeg",
+      "synopsis": "The stage is set. The actors are ready. And the curtain rises on the play, Tokyo Blade. However, there is another story aside from the play: that of the actors themselves. (Source: HIDIVE)",
+      "airdate": "2024-07-03",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1426,
+          "end": 1500
+        }
+      ],
+      "external_id": "353157"
+    },
+    {
+      "n": 2,
+      "title": "Game of Telephone",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/353158/thumbnail/medium-057531430b544844e8f101e2bc8e36c4.jpeg",
+      "synopsis": "The creator of Tokyo Blade isn’t happy with the unfaithful adaptation of her manga and demands a revision of the entire script. However, only twenty days remain until opening. (Source; HIDIVE)",
+      "airdate": "2024-07-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1423
+        }
+      ],
+      "external_id": "353158"
+    },
+    {
+      "n": 3,
+      "title": "Rewriting",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/353159/thumbnail/medium-f6d5091109e920a4d3aa9c3e5d62983e.jpeg",
+      "synopsis": "Time is dwindling, and a question looms: a faithful Tokyo Blade adaptation or one tailored for theater? Amidst the tension, only one person can convince Abiko to compromise. (Source: HIDIVE)",
+      "airdate": "2024-07-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "353159"
+    },
+    {
+      "n": 4,
+      "title": "Emotional Acting",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/353160/thumbnail/medium-ce6396ccec39c7373a83c8b2f6287d69.jpeg",
+      "synopsis": "Abiko and GOA collaborate on a new script and now the pressure is on the actors to bring the script to life. However, Aqua soon faces an unexpected challenge during rehearsal. (Source: HIDIVE)",
+      "airdate": "2024-07-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1421
+        }
+      ],
+      "external_id": "353160"
+    },
+    {
+      "n": 5,
+      "title": "The Curtain Rises",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/353161/thumbnail/medium-7e2ee1392d65f477648ef22d6e9a9488.jpeg",
+      "synopsis": "Aqua confides in Akane, revealing his true motives. She vows to remain by his side, but this deepening bond causes Akane’s rivalry with Kana to intensify. (Source: HIDIVE)",
+      "airdate": "2024-07-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 88
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1435,
+          "end": 1500
+        }
+      ],
+      "external_id": "353161"
+    },
+    {
+      "n": 6,
+      "title": "Growth",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/353162/thumbnail/medium-32cc2b4c14ddb73a74886adbf351c159.jpeg",
+      "synopsis": "Melt regrets his poor acting in Sweet Today and vows to improve in Tokyo Blade. However, how can a subpar actor stand out among exceptional ones? (Source: HIDIVE)",
+      "airdate": "2024-08-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1435,
+          "end": 1500
+        }
+      ],
+      "external_id": "353162"
+    },
+    {
+      "n": 7,
+      "title": "Sun",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/353163/thumbnail/medium-5bb3ddf6bc36c6bb3e810ea0065ffdef.jpeg",
+      "synopsis": "Akane became an actress because she idolized Kana and wanted to be like her. However, one should never meet their heroes. (Source: HIDIVE)",
+      "airdate": "2024-08-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1431
+        }
+      ],
+      "external_id": "353163"
+    },
+    {
+      "n": 8,
+      "title": "Trigger",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/353164/thumbnail/medium-48058a12e341fe2d97885d5dd19371c9.jpeg",
+      "synopsis": "Their pasts shaped their acting. Kana wanted to shine as an actress, but she compromised to be useful. Meanwhile, Aqua’s childhood trauma led to a unique acting method. (Source: HIDIVE)",
+      "airdate": "2024-08-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1419
+        }
+      ],
+      "external_id": "353164"
+    },
+    {
+      "n": 9,
+      "title": "Dream",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/353165/thumbnail/medium-ef051eb3f01a13f0a2b10aa49ba54e9e.jpeg",
+      "synopsis": "The actors shone brilliantly, and the curtain fell on a successful play, setting the stage for the next performance as Aqua and Taiki press the director for answers. (Source: HIDIVE)",
+      "airdate": "2024-08-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1405,
+          "end": 1498
+        }
+      ],
+      "external_id": "353165"
+    },
+    {
+      "n": 10,
+      "title": "Liberation",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/353166/thumbnail/medium-548bdb5e7e40a57d2a48d51c1c28ae5f.jpeg",
+      "synopsis": "Taiki discovers a surprising connection, but reveals something Aqua wasn't expecting. Meanwhile, Ruby hopes one person in particular notices B Komachi's growing fame. (Source: HIDIVE)",
+      "airdate": "2024-09-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1421
+        }
+      ],
+      "external_id": "353166"
+    },
+    {
+      "n": 11,
+      "title": "Freedom",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/353167/thumbnail/medium-865faa0586f32bdc6f2ad721a78d0c78.jpeg",
+      "synopsis": "Aqua doesn't have to live for revenge and can finally look towards a brighter future. But what does this mean for the relationships he's cultivated in pursuit of a killer? (Source: HIDIVE)",
+      "airdate": "2024-09-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1421
+        }
+      ],
+      "external_id": "353167"
+    },
+    {
+      "n": 12,
+      "title": "Reunion",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/353168/thumbnail/medium-6e64f6e7d216a9d4e44864ed9c01d27c.jpeg",
+      "synopsis": "The past never truly disappears. Aqua and Ruby return to the place they were born… and where, in another life, they also died. (Source: HIDIVE)",
+      "airdate": "2024-09-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1436,
+          "end": 1500
+        }
+      ],
+      "external_id": "353168"
+    },
+    {
+      "n": 13,
+      "title": "Wish",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/369601/thumbnail/medium-4183335f93f34820651c350d36ccd861.jpeg",
+      "synopsis": "A gruesome discovery finally gives Aqua the closure he needs to begin a new chapter in his life. But as he steps into a brighter tomorrow, Ruby’s descent into darkness begins. (Source: HIDIVE)",
+      "airdate": "2024-10-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1378
+        }
+      ],
+      "external_id": "369601"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "TEST ME",
+      "artist": "CHANMINA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Serenade (セレナーデ)",
+      "artist": "natori",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Fatale",
+      "artist": "GEMN",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Burning",
+      "artist": "hitsujibungaku",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Idol (アイドル)",
+      "artist": "YOASOBI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mephisto (メフィスト)",
+      "artist": "Queen Bee",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

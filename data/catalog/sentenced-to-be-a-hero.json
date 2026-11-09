@@ -1,0 +1,195 @@
+{
+  "id": "sentenced-to-be-a-hero",
+  "title": "Sentenced to Be a Hero",
+  "native": "勇者刑に処す 懲罰勇者9004隊刑務記録",
+  "year": 2026,
+  "rating": 8,
+  "season": "Winter 2026",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx167152-O1pm6DWwifBD.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx167152-O1pm6DWwifBD.jpg",
+  "accent": "#f1a15d",
+  "synopsis": "In a world where heroism is a punishment, Xylo Forbartz, a condemned goddess killer, battles endless hordes of monstrous abominations as part of Penal Hero Unit 9004. Death is no escape, only a cycle of resurrection and relentless combat. But when Xylo encounters a mysterious new goddess, their unlikely alliance sparks a rebellion that could shatter the chains of eternal punishment.\n\n(Source: Crunchyroll)\n\nNotes:\n\n- The first episode aired with a runtime of ~58 minutes as opposed to the standard 24 minute long episode.\n\n- Initially scheduled to air in October, 2025",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Sentenced to Be a Hero Season 2"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 47759,
+    "anilist": 167152,
+    "mal": 56009,
+    "hianime": "sentenced-to-be-a-hero-c85zxr"
+  },
+  "skip_key_id": 56009,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 08:43:21",
+  "search_text": "sentenced to be a hero 勇者刑に処す 懲罰勇者9004隊刑務記録 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sentence: Support Retreat From Couveunge Forest",
+      "runtime": "58:00",
+      "runtime_seconds": 3480,
+      "thumb": "https://media.kitsu.app/episode/354308/thumbnail/medium-5eaa4307fbc147890a1956bdc646f7e4.jpeg",
+      "synopsis": "Penal hero Xylo gets an unwelcome helper during an assignment to support the main army's retreat. (Source: Crunchyroll)",
+      "airdate": "2026-01-03",
+      "markers": [],
+      "external_id": "354308"
+    },
+    {
+      "n": 2,
+      "title": "Sentence: Spearhead the Recapture of the Zewan Gan Tunnels 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/354309/thumbnail/medium-e624805f60676f38f939f690ad8b0b51.jpeg",
+      "synopsis": "Xylo must support the recapture of Blight-infested tunnels with self-styled monarch Norgalle. (Source: Crunchyroll)",
+      "airdate": "2026-01-15",
+      "markers": [],
+      "external_id": "354309"
+    },
+    {
+      "n": 3,
+      "title": "Sentence: Spearhead the Recapture of the Zewan Gan Tunnels 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/354310/thumbnail/medium-75705b63c11783cc80b7e2401cda217b.jpeg",
+      "synopsis": "Xylo's party embarks on a suicide mission to save a group of miners trapped in the tunnels. (Source: Crunchyroll)",
+      "airdate": "2026-01-22",
+      "markers": [],
+      "external_id": "354310"
+    },
+    {
+      "n": 4,
+      "title": "Standby Order: Mureed Fortress",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/354311/thumbnail/medium-948913a5b4be151348e3d8e494f7c14e.jpeg",
+      "synopsis": "The heroes' time off at a city festival is actually a prelude to a coming terror. (Source: Crunchyroll)",
+      "airdate": "2026-01-29",
+      "markers": [],
+      "external_id": "354311"
+    },
+    {
+      "n": 5,
+      "title": "Sentence: Defense Against Corruption at Mureed Fortress 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/354312/thumbnail/medium-0fb0e04d65e9dd440466db2478be207c.jpeg",
+      "synopsis": "A motley crew assembles for the defense of Mureed Fortress. (Source: Crunchyroll)",
+      "airdate": "2026-02-05",
+      "markers": [],
+      "external_id": "354312"
+    },
+    {
+      "n": 6,
+      "title": "Sentence: Defense Against Corruption at Mureed Fortress 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/354313/thumbnail/medium-d6bc292a8a18e5ac5618828f113c3b91.jpeg",
+      "synopsis": "As hope seems to slip away, Teoritta and Xylo make a do-or-die gambit against Demon Lord Iblis. (Source: Crunchyroll)",
+      "airdate": "2026-02-12",
+      "markers": [],
+      "external_id": "354313"
+    },
+    {
+      "n": 7,
+      "title": "Sentence: Feigned Day Off at Port City Ioff",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/354314/thumbnail/medium-62ddb7f6ead5f21fa03ca29b813fada4.jpeg",
+      "synopsis": "What appears to be the heroes' first true day off turns into a job protecting Teoritta from assassins. (Source: Crunchyroll)",
+      "airdate": "2026-02-19",
+      "markers": [],
+      "external_id": "354314"
+    },
+    {
+      "n": 8,
+      "title": "Sentence: Undercover Investigation in District of Sodrick 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/354315/thumbnail/medium-81cb81e9ddbc1afda392bd16fed18e1a.jpeg",
+      "synopsis": "To investigate the would-be assassins, an unexpected duo goes undercover in the Adventurers Guild. (Source: Crunchyroll)",
+      "airdate": "2026-02-26",
+      "markers": [],
+      "external_id": "354315"
+    },
+    {
+      "n": 9,
+      "title": "Sentence: Undercover Investigation in District of Sodrick 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/354316/thumbnail/medium-c18f06bd8af14a6d0f3acd74ef0d8fe2.jpeg",
+      "synopsis": "The chaos in Sodrick's Shell continues to spiral as Lideo Sodrick's fate hangs in the balance. (Source: Crunchyroll)",
+      "airdate": "2026-03-05",
+      "markers": [],
+      "external_id": "354316"
+    },
+    {
+      "n": 10,
+      "title": "Sentence: Aid in Evacuation of Ioff Cheg Port 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/354317/thumbnail/medium-952005e376f6433f33dd42493ea61152.jpeg",
+      "synopsis": "A new comrade joins the heroes' forces as they take on a faerie invasion in the heart of the city. (Source: Crunchyroll)",
+      "airdate": "2026-03-12",
+      "markers": [],
+      "external_id": "354317"
+    },
+    {
+      "n": 11,
+      "title": "Sentence: Aid in Evacuation of Ioff Cheg Port 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/354318/thumbnail/medium-d95e492530e8edfaa351247a134083f1.jpeg",
+      "synopsis": "Xylo and Teoritta make a charge for Tua Jia tower while Kivia pursues a mystery of her own. (Source: Crunchyroll)",
+      "airdate": "2026-03-19",
+      "markers": [],
+      "external_id": "354318"
+    },
+    {
+      "n": 12,
+      "title": "Sentence: Aid in Evacuation of Ioff Cheg Port 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/354319/thumbnail/medium-dd9a5a1467789c3afef5713199f993e8.jpeg",
+      "synopsis": "In the aftermath of the battle, revelations are made, and Kivia faces a haunting decision. (Source: Crunchyroll)",
+      "airdate": "2026-03-26",
+      "markers": [],
+      "external_id": "354319"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kill the Noise",
+      "artist": "SPYAIR",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kill the Noise",
+      "artist": "SPYAIR",
+      "episodes": "2, 4, 7-8, 11"
+    }
+  ],
+  "relations": []
+}

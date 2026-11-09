@@ -1,0 +1,204 @@
+{
+  "id": "noragami-aragoto",
+  "title": "Noragami Aragoto",
+  "native": "ノラガミ ARAGOTO",
+  "year": 2015,
+  "rating": 8,
+  "season": "Fall 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21128-eQgH3TG4nngo.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21128-eQgH3TG4nngo.jpg",
+  "accent": "#781a0d",
+  "synopsis": "Life for minor god Yato isn't getting any easier. He's still broke, shrineless, and his partner-slash-sword-regalia has zero respect for him. Worse yet, Bishamon, one of the deadliest war gods, is after his life. Blaming him for the death of her past regalia, she won't stop until she kills him. But there's more to that story than she could ever realize. And as if that's not bad enough, there's someone working against her behind the scenes! Can Yato take on a god as powerful as Bishamon? Or will things take a more dangerous turn?\n\nBetween all of this godly drama and even more dangerous battles, Yato still needs to figure out how to help Hiyori. But all options lead to losing her, and he's not willing to make that choice – no matter what.\n\nFive yen doesn't even begin to cover his trouble!\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "noragami-aragoto-y4sbcp",
+    "mal": 30503,
+    "anilist": 21128,
+    "kitsu": 10800
+  },
+  "skip_key_id": 30503,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "noragami aragoto ノラカ ミ aragoto tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Bearing a Posthumous Name",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Yato continues his daily routine as a delivery god who also slays Phantoms when the need arises. Elsewhere, Bishamon is plagued by nightmares from times long past…",
+      "airdate": "2015-10-03",
+      "markers": [],
+      "external_id": "176566"
+    },
+    {
+      "n": 2,
+      "title": "One of Her Memories",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Yukine makes a new friend, but soon learns what it means to be a Regalia. Kazuma remains confused by Bishamon's declining health… until he makes a shocking discovery!",
+      "airdate": "2015-10-10",
+      "markers": [],
+      "external_id": "176567"
+    },
+    {
+      "n": 3,
+      "title": "False Bond",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kugaha finally sets his plot into motion and has Kazuma banished. The ensuing chaos causes more pain for Bishamon… and pulls Yukine and Yato into the turmoil too!",
+      "airdate": "2015-10-17",
+      "markers": [],
+      "external_id": "176568"
+    },
+    {
+      "n": 4,
+      "title": "Wish",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kazuma and Hiyori find themselve captured. They watch helplessly as Kugaha tricks Yato and Bishamon into battling each other to the death!",
+      "airdate": "2015-10-24",
+      "markers": [],
+      "external_id": "176569"
+    },
+    {
+      "n": 5,
+      "title": "Divine Acclamation, Imprecation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Yukine shatters in half while Yato and Bishamon battle each other! Elsewhere, Kugaha enacts the second part of his plan by slaughtering Bishamon's Regalias!",
+      "airdate": "2015-10-31",
+      "markers": [],
+      "external_id": "176570"
+    },
+    {
+      "n": 6,
+      "title": "What Must be Done",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Bishamon and Yato learn of Kugaha's betrayal, but most of the damage has already been done. Meanwhile, the giant, masked Phantom continues to hunt down the last remaining Regalias…",
+      "airdate": "2015-11-07",
+      "markers": [],
+      "external_id": "176571"
+    },
+    {
+      "n": 7,
+      "title": "How to Worship a God",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Bishamon is forced to confer with the other gods about her recent failings. Elsewhere, Ebisu offers to buy Yukine from Yato for a large sum of money - enough for Yato to build his own shrine.",
+      "airdate": "2015-11-14",
+      "markers": [],
+      "external_id": "176572"
+    },
+    {
+      "n": 8,
+      "title": "God of Calamity",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "After Kugaha's defeat, Ebisu decides to conduct certain, secret tests. Meanwhile, Yato reaches new highs and new lows after Hiyori gives him his own shrine…",
+      "airdate": "2015-11-21",
+      "markers": [],
+      "external_id": "176573"
+    },
+    {
+      "n": 9,
+      "title": "The Sound of a Thread Snapping",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Yato and Nora head into the underworld to complete one last job together: find and rescue a certain conjurer. But with each passing moment, Hiyori begins to forget Yato…",
+      "airdate": "2015-11-28",
+      "markers": [],
+      "external_id": "176574"
+    },
+    {
+      "n": 10,
+      "title": "A Certain Desire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The heavens are thrown into chaos when the gods learn that Ebisu has been experimenting with Phantoms. Meanwhile, Yato and Ebisu struggle to escape Izanami and leave the underworld behind.",
+      "airdate": "2015-12-05",
+      "markers": [],
+      "external_id": "176575"
+    },
+    {
+      "n": 11,
+      "title": "Revival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Bishamon and Hiyori manage to track down Yato, but they have no way of getting into the underworld. Meanwhile, Izanami continues to pursue Yato… And if he gets caught, he'll be stuck in the underworld forever!",
+      "airdate": "2015-12-12",
+      "markers": [],
+      "external_id": "176576"
+    },
+    {
+      "n": 12,
+      "title": "Your Voice Calls Out",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Bishamon faces Izanami in battle in order to save Yato. Yato's only hope for escape lies in his true name, but he's never revealed it to anyone. Meanwhile, the heavenly executioners have caught up with Ebisu and are prepared to kill him!",
+      "airdate": "2015-12-19",
+      "markers": [],
+      "external_id": "176577"
+    },
+    {
+      "n": 13,
+      "title": "The God of Fortune's Message",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The heavens deliver their divine punishment, and Ebisu is forced to start anew. Despite this, Yato is filled with a new sense of purpose and upholds his promise to Ebisu.",
+      "airdate": "2015-12-26",
+      "markers": [],
+      "external_id": "180157"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kyōran Hey Kids!!",
+      "artist": "THE ORAL CIGARETTES",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nirvana (ニルバナ)",
+      "artist": "Tia",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

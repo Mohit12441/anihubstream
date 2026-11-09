@@ -1,0 +1,191 @@
+{
+  "id": "rewrite",
+  "title": "Rewrite",
+  "native": "Rewrite",
+  "year": 2016,
+  "rating": 6.2,
+  "season": "Summer 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21382-bBJghvjTP8Dr.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21382-bBJghvjTP8Dr.jpg",
+  "accent": "#5daee4",
+  "synopsis": "Rewrite is set in the fictional city Kazamatsuri, where treeplanting and afforestation have caused the city to become overgrown with trees and flowers in much the same way that other cities are filled by buildings. However, while most of the city appears to be rural, there are many traditional city elements as well. While set in a modern setting, the city also gives off a strange sense of nostalgia.\n\nTennouji Kotarou lives here. He's a high school student who has the ability to rewrite his own body; he can become stronger and faster at any time he chooses. He investigates supernatural mysteries with five girls from his school.\n\n(Source: VNDB)\n\nNote: The first episode aired with a runtime of 48 minutes as opposed to the standard 24 minute long episode.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Rewrite: Moon and Terra (2017)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11410,
+    "anilist": 21382,
+    "mal": 31716
+  },
+  "skip_key_id": 31716,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-21 10:56:47",
+  "search_text": "rewrite rewrite tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "romance",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The World or Myself?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The city of afforestation, Kazamatsuri. In this city which promotes the coexistence of culture and greenery, Tennouji Kotarou is tormented by supernatural phenomena night after night...",
+      "airdate": "2016-07-02",
+      "markers": [],
+      "external_id": "186824"
+    },
+    {
+      "n": 2,
+      "title": "Where Youth Begins",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kotarou meets the academy witch, Senri Akane, and joins the occult research club. He starts taking part in occult club activities and gathering club members in order to prove that supernatural phenomena exist.",
+      "airdate": "2016-07-09",
+      "markers": [],
+      "external_id": "186825"
+    },
+    {
+      "n": 3,
+      "title": "Welcome, Supernatural Phenomena",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The occult research club finally begins regular activities. For their first investigation, they search for a tsuchinoko.",
+      "airdate": "2016-07-16",
+      "markers": [],
+      "external_id": "186826"
+    },
+    {
+      "n": 4,
+      "title": "Until We Return to Those Days",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kotarou searches for the elderly gentleman he met to ask him about unidentified mysterious animals.",
+      "airdate": "2016-07-23",
+      "markers": [],
+      "external_id": "186827"
+    },
+    {
+      "n": 5,
+      "title": "Asahi Haruka",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "One day, a letter regarding \"Asahi Haruka\" arrives at the Occult Research Club, and Kotarou immediately begins an investigation.",
+      "airdate": "2016-07-30",
+      "markers": [],
+      "external_id": "186828"
+    },
+    {
+      "n": 6,
+      "title": "Occult Club Activity Log",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "With Chihaya and Lucia's disagreement resolved, the occult club resumes activities.",
+      "airdate": "2016-08-06",
+      "markers": [],
+      "external_id": "186829"
+    },
+    {
+      "n": 7,
+      "title": "A Place Lost",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Five days after losing contact with Inoue, Akane suddenly announces that occult club activities have been suspended.",
+      "airdate": "2016-08-13",
+      "markers": [],
+      "external_id": "186830"
+    },
+    {
+      "n": 8,
+      "title": "My Name Is Kagari-chan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kotarou is unable to get in touch with Akane, Chihaya, Lucia, Shizuru, or Kotori after the incident in the forest. It is then that a girl appears before him.",
+      "airdate": "2016-08-20",
+      "markers": [],
+      "external_id": "186831"
+    },
+    {
+      "n": 9,
+      "title": "Fate Begins to Turn",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kotarou brings Kagari to the city to help her \"find herself\" after she gets amnesia.",
+      "airdate": "2016-08-27",
+      "markers": [],
+      "external_id": "186832"
+    },
+    {
+      "n": 10,
+      "title": "Simply, As Friends",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kotarou reunites with Kotori, and learns her and Kagari's secret. Meanwhile, someone breaks through the barrier and infiltrates Kotori's secret base.",
+      "airdate": "2016-09-03",
+      "markers": [],
+      "external_id": "186833"
+    },
+    {
+      "n": 11,
+      "title": "Countdown",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Chihaya heads to Sakuya's location on Akane's orders. While she is wandering through the forest looking for Kotori's secret base, she discovers a certain person who has collapsed.",
+      "airdate": "2016-09-10",
+      "markers": [],
+      "external_id": "186834"
+    },
+    {
+      "n": 12,
+      "title": "The Song of Destruction",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kagari begins to act strangely. Elsewhere, Midou shows up with his Earth Dragon and destroys the barrier around where Kotarou's group is staying.",
+      "airdate": "2016-09-17",
+      "markers": [],
+      "external_id": "186835"
+    },
+    {
+      "n": 13,
+      "title": "The Promise I Made With You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The Song of Destruction echoed throughout the world, the monsters appeared, humanity collapsed. Kotarou is overjoyed that Kagari is awake again, but then Esaka appears...",
+      "airdate": "2016-09-24",
+      "markers": [],
+      "external_id": "186836"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

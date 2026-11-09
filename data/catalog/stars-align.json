@@ -1,0 +1,311 @@
+{
+  "id": "stars-align",
+  "title": "Stars Align",
+  "native": "星合の空",
+  "year": 2019,
+  "rating": 7.5,
+  "season": "Fall 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx104052-vjxtx7LJiTgb.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx104052-vjxtx7LJiTgb.jpg",
+  "accent": "#ffc247",
+  "synopsis": "Due to the apparent incompetence of its members and lack of results, the boy's soft tennis team is on the verge of being shut down. Toma Shinjou, captain and seemingly only motivated member, seeks the help of newly transferred, and old friend, Maki Katsuragi to improve the club's track record but soon it becomes apparent that what is holding the boys back are problems that run far deeper than the simple sport.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42094,
+    "anilist": 104052,
+    "mal": 37972,
+    "hianime": "stars-align-885x2v"
+  },
+  "skip_key_id": 37972,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 15:35:17",
+  "search_text": "stars align 星合の空 tv finished",
+  "genres": [
+    "drama",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Untitled",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258627/original.jpg",
+      "synopsis": "When an old friend moves into town, team captain Toma has a plan to save the boys' soft tennis club that's in danger of being disbanded for how awful it is.",
+      "airdate": "2019-10-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 10
+        }
+      ],
+      "external_id": "258627"
+    },
+    {
+      "n": 2,
+      "title": "Untitled",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258628/original.jpg",
+      "synopsis": "Maki's first day of practice is not only brutal, but eye-opening for the entire team. Tensions rise when he calls out the others for their lack of effort.",
+      "airdate": "2019-10-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1375,
+          "end": 1440
+        }
+      ],
+      "external_id": "258628"
+    },
+    {
+      "n": 3,
+      "title": "Untitled",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258629/original.jpg",
+      "synopsis": "Toma's frustration with the team boils over after pairing up with Maki for a few practice games. Maki later learns about Itsuki's family situation after he lashes out at a bully.",
+      "airdate": "2019-10-25",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1387,
+          "end": 1435
+        }
+      ],
+      "external_id": "258629"
+    },
+    {
+      "n": 4,
+      "title": "Untitled",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258630/original.jpg",
+      "synopsis": "The new pairs see how they fare in a series of practice matches against Toma and Maki. Meanwhile, their advisor reveals a plan in store to help out.",
+      "airdate": "2019-11-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 128
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1271,
+          "end": 1345
+        }
+      ],
+      "external_id": "258630"
+    },
+    {
+      "n": 5,
+      "title": "Untitled",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258631/original.jpg",
+      "synopsis": "When pressed for the truth, Maki confides in Toma and they take a stand against Kenji. Later, Rintaro admits that he's been a burden in more ways than one.",
+      "airdate": "2019-11-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 50,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1312,
+          "end": 1382
+        }
+      ],
+      "external_id": "258631"
+    },
+    {
+      "n": 6,
+      "title": "Untitled",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258632/original.jpg",
+      "synopsis": "The soft tennis club takes on Misaki Academy in a series of practice matches, but they'll have to change things up if they want to stand a chance.",
+      "airdate": "2019-11-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 171,
+          "end": 261
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1365,
+          "end": 1407
+        }
+      ],
+      "external_id": "258632"
+    },
+    {
+      "n": 7,
+      "title": "Untitled",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258633/original.jpg",
+      "synopsis": "Maki and Toma face off in an intense match against Misaki's ace pair. The club is later surprised by their advisor who suggests they skip practice and take a little break.",
+      "airdate": "2019-11-22",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1343,
+          "end": 1424
+        }
+      ],
+      "external_id": "258633"
+    },
+    {
+      "n": 8,
+      "title": "Untitled",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258634/original.jpg",
+      "synopsis": "Once the club finds out their first opponent in the tournament bracket, they're forced to use unconventional tactics to scout out an elite player they'll be facing.",
+      "airdate": "2019-11-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 107,
+          "end": 197
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1411
+        }
+      ],
+      "external_id": "258634"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2019-12-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 93,
+          "end": 183
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1249,
+          "end": 1332
+        }
+      ],
+      "external_id": "258635"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 127,
+          "end": 217
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1411,
+          "end": 1427
+        }
+      ],
+      "external_id": "258636"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1412
+        }
+      ],
+      "external_id": "258637"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 62,
+          "end": 152
+        }
+      ],
+      "external_id": "258638"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Suisō (水槽; Aquarium)",
+      "artist": "Megumi Nakajima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kago no Naka no Bokura wa (We Inside a Cage)",
+      "artist": "AIKI from Bless4",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

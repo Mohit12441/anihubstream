@@ -1,0 +1,220 @@
+{
+  "id": "record-of-lodoss-war",
+  "title": "Record of Lodoss War",
+  "native": "ロードス島戦記",
+  "year": 1990,
+  "rating": 7,
+  "season": "Summer 1990",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx207-B2lxEFGigYgd.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx207-B2lxEFGigYgd.png",
+  "accent": "#e40d28",
+  "synopsis": "Created from the aftermath of the last great battle of the gods, Lodoss and its kingdoms have been plagued by war for thousands of years. As a quiet peace and unity finally become foreseeable over the land, an unknown evil begins to stir. An ancient witch has awakened, bent on preserving the island of Lodoss by creating political unbalance throughout the many kingdoms and keeping any one from maintaining central control. Only a mixed-race party of six young champions, led by the young warrior Parn, stand between this new threat and Lodoss' descent back into the darkness of war and destruction. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Record of Lodoss War: The Lady of Pharis",
+    "Record of Lodoss War: Chronicles of the Heroic Knight (1998)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 183,
+    "anilist": 207,
+    "mal": 207
+  },
+  "skip_key_id": 207,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-22 14:26:02",
+  "search_text": "record of lodoss war ロート ス島戦記 ova finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Prologue to the Legend",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "A group of adventurers, Parn the knight, Deedlit the elf, Ghim the dwarf, Woodchuck the thief, Slayn the wizard, and Etoh the cleric, enter the ruins of a great dwarven hall. After fending off an attack by gargoyles, they continue further into the hall, certain they are not alone. Deedlit is caught in a trap, and when Parn tries to rescue her, he is caught himself and they are separated from the others. In a flashback, we learn that Parn and his group have been tasked by King Fahn to find the sage, Wort, to see if he can provide them any information about Karla, the Grey Witch. Deedlit and Parn find a mural depicting an epic battle between the gods twenty years ago. As they continue through the catacombs, they awaken a green dragon. Unable to fight it, they attempt to run past it but are trapped when the rest of their group arrives. Together they are able to defeat the dragon, but his thrashing body causes the catacombs to collapse and force the group to flee the hall.",
+      "airdate": "1990-06-30",
+      "markers": [],
+      "external_id": "5063"
+    },
+    {
+      "n": 2,
+      "title": "Blazing Departure",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "5064"
+    },
+    {
+      "n": 3,
+      "title": "The Black Knight",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "5065"
+    },
+    {
+      "n": 4,
+      "title": "The Grey Witch",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "5066"
+    },
+    {
+      "n": 5,
+      "title": "The Desert King",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "5067"
+    },
+    {
+      "n": 6,
+      "title": "The Sword of the Dark Emperor",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "5068"
+    },
+    {
+      "n": 7,
+      "title": "The War of Heroes",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "5069"
+    },
+    {
+      "n": 8,
+      "title": "Requiem for Warriors",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "5070"
+    },
+    {
+      "n": 9,
+      "title": "The Scepter of Domination",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "5071"
+    },
+    {
+      "n": 10,
+      "title": "The Demon Dragon of Fire Dragon Mountain",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "5072"
+    },
+    {
+      "n": 11,
+      "title": "The Wizard's Ambition",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "5073"
+    },
+    {
+      "n": 12,
+      "title": "Final Battle! Marmo - The Dark Island",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "5074"
+    },
+    {
+      "n": 13,
+      "title": "Lodoss - The Burning Continent",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "5075"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kiseki no Umi (奇跡の海; Sea of Miracles)",
+      "artist": "Maaya Sakamoto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hikari no Suashi (光のすあし; Foot of Light)",
+      "artist": "Chie Ishibashi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Adèsso e Fortuna ~Honō to Eien~ (Adèsso e Fortuna~炎と永遠~; Fire and Eternity)",
+      "artist": "Sherry",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaze no Fantasia (風のファンタジア; Fantasia of the Wind)",
+      "artist": "Sherry",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

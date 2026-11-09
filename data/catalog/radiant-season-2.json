@@ -1,0 +1,306 @@
+{
+  "id": "radiant-season-2",
+  "title": "RADIANT Season 2",
+  "native": "ラディアン2",
+  "year": 2019,
+  "rating": 7.4,
+  "season": "Fall 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx108040-FYeFAH75GZ0c.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108040-FYeFAH75GZ0c.jpg",
+  "accent": "#e45050",
+  "synopsis": "Seth, Mélie, and Doc encounter new allies in Caislean Merlin—the stronghold of the Knights-sorcerers, a group that is also after the monster called Némésis. But Caislean Merlin is plagued by the Spectrum Némésis, mysterious beings that are rumored to be harbingers of catastrophe. Will Seth be able to discover the secret behind this new form of Némésis? His adventure accelerates with the addition of Ocoho, a girl who hopes to become a Knight-sorcerer, a farewell with Mélie and Doc, and a clash with the malicious Merchant-Barons! And all this with the Inquisition still at his heels!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "radiant-season-2-fy2yqq",
+    "mal": 39355,
+    "anilist": 108040,
+    "kitsu": 42521
+  },
+  "skip_key_id": 39355,
+  "skip_key_space": "mal",
+  "episode_total": 21,
+  "added_at": null,
+  "search_text": "radiant season 2 ラテ ィアン2 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Young Sorcerer -Seth-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e4abd8e9dbfc5c2a87ffe747cf284ab61538819891_full.jpg",
+      "synopsis": "Seth has set out on a new adventure to unravel the mysteries of Radiant. His destination is Caislean Merlin, the city of the Knights-sorcerers. He boards Alma's airship and, along with Alma and her new helpers, Bossman and Jiji, heads for the continent of Cyfandir. Meanwhile, Dragunov, the Inquisition captain, visits the Inquisition's holy land at General Torque's order. He's prepared to face capital punishment, but...",
+      "airdate": "2019-10-02",
+      "markers": [],
+      "external_id": "268744"
+    },
+    {
+      "n": 2,
+      "title": "True Courage -Bravery-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/38da3fa04eba49e3ab518dbc5f4f49881539421215_full.jpg",
+      "synopsis": "Seth parts ways with Alma and her helpers, and arrives at the continent of Cyfandir alone. There, he has an unexpected encounter with the Merchant Barons, who have come to this land to exploit its resources and see the sorcerer Seth as an enemy. Seth is backed into a corner by the Merchant Barons' fierce attacks, but finally escapes with Grimm's help. When Seth finally arrives in the city, he's surprised to see both sorcerers and ordinary humans living together... and admiring the Knights-sorcerers together.",
+      "airdate": "2019-10-09",
+      "markers": [],
+      "external_id": "268745"
+    },
+    {
+      "n": 3,
+      "title": "The Day of Departure -Alma-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/0a3bffac62b2380f8cf7eb8c66accb5e1540019482_full.jpg",
+      "synopsis": "Seth runs into Melie and Doc, but Melie is cold toward him and quickly leaves. So Seth heads to the castle to look for clues about Radiant, but he's turned away at the gate. Then he encounters a myserious old man named Myr who leads him to the Knights-sorcerers' stables. There he meets an aspiring Knight-sorcerer named Ocoho, who's preparing to set out on a mission to defeat a Nemesis. Seth is mistaken for a newbie and taken along...",
+      "airdate": "2019-10-16",
+      "markers": [],
+      "external_id": "268746"
+    },
+    {
+      "n": 4,
+      "title": "A Meeting in the Sky -Encounter-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/985099fd601ee94c8169b0ee9454549c1540598319_full.jpg",
+      "synopsis": "",
+      "airdate": "2019-10-23",
+      "markers": [],
+      "external_id": "268747"
+    },
+    {
+      "n": 5,
+      "title": "A Paradise of Wisdom and Hope -Artemis-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6840a352199fe7bf0c212c7f728681a71541196884_full.jpg",
+      "synopsis": "",
+      "airdate": "2019-10-30",
+      "markers": [],
+      "external_id": "268748"
+    },
+    {
+      "n": 6,
+      "title": "Drops of Friendship -Melie-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/612540eb433bb658755e83516d4da4141541844532_full.jpg",
+      "synopsis": "",
+      "airdate": "2019-11-06",
+      "markers": [],
+      "external_id": "268749"
+    },
+    {
+      "n": 7,
+      "title": "The Beast of the Underground Water System -Monster-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2e6acc41c42bb3dd8a62f1093952d2b31542437302_full.jpg",
+      "synopsis": "",
+      "airdate": "2019-11-13",
+      "markers": [],
+      "external_id": "268750"
+    },
+    {
+      "n": 8,
+      "title": "Proof of Strength -Progress-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/bc11865726badf6766aab1aa54b300261543056713_full.jpg",
+      "synopsis": "",
+      "airdate": "2019-11-20",
+      "markers": [],
+      "external_id": "268751"
+    },
+    {
+      "n": 9,
+      "title": "Those Who Hunt Heretics -Inquisition-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/41a7476f4a68b023d621eb8efafbe5121543643635_full.jpg",
+      "synopsis": "",
+      "airdate": "2019-11-27",
+      "markers": [],
+      "external_id": "268752"
+    },
+    {
+      "n": 10,
+      "title": "Broom of Memories -Memory-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/42750467e8c36967efccea7d3128764a1544263567_full.jpg",
+      "synopsis": "",
+      "airdate": "2019-12-04",
+      "markers": [],
+      "external_id": "268753"
+    },
+    {
+      "n": 11,
+      "title": "The City That Roars Like Thunder -Rumble Town-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4c0c0c705544fe3f9f130676aa502c3b1544852931_full.jpg",
+      "synopsis": "",
+      "airdate": "2019-12-11",
+      "markers": [],
+      "external_id": "268754"
+    },
+    {
+      "n": 12,
+      "title": "The Shadow Lurking in the City -Darkness-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a365768edff714822b6151edbc55f0f41545461022_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268755"
+    },
+    {
+      "n": 13,
+      "title": "Overture of Turbulence -Storm-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/54221e1b560e65309ecccc2169b887711546077561_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268756"
+    },
+    {
+      "n": 14,
+      "title": "The Bell Tolls the Sound of Destruction -Catastrophe-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/249dac292c414fb00bc2c0d45e4fc09c1546687627_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268757"
+    },
+    {
+      "n": 15,
+      "title": "With Fists Like Shooting Stars -Burst-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/bde14333232ab183f2759c97c2377cf41547291044_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268758"
+    },
+    {
+      "n": 16,
+      "title": "Fly High and Pierce Through the Storm -Rising-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/fdaabb2e802968b384c94bc94774df211547892426_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268759"
+    },
+    {
+      "n": 17,
+      "title": "To Stop the Sound of the Wind -Serenade-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/72f6cdfe33286e73215bd405f45702f01548488250_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268760"
+    },
+    {
+      "n": 18,
+      "title": "The Light That Follows the Darkness -Awakening-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/876b381b78ed05a0c2e45a9eeee475a71549095909_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268761"
+    },
+    {
+      "n": 19,
+      "title": "The World That You Changed -Relief-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b51b72a8d5f52cc9b0ccb26ead4247b11549697784_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268762"
+    },
+    {
+      "n": 20,
+      "title": "Omen -Sign-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4b40fb46217f4efd7dc8c7baadcc1c5f1550316877_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268763"
+    },
+    {
+      "n": 21,
+      "title": "In Search of the Future -Utopia-",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/0ae639e2b3cd69eca00159f6b2df9ccd1550912063_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "268764"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Naraku",
+      "artist": "Halo at Yojohan",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Chitto mo Shiranakatta (I Did Not Know at All)",
+      "artist": "Emi Nakamura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Utopia",
+      "artist": "04 Limited Sazabys",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Radiant",
+      "artist": "Polkadot Stingray",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

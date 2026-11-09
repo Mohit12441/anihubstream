@@ -1,0 +1,127 @@
+{
+  "id": "overlord-the-sacred-kingdom",
+  "title": "OVERLORD: The Sacred Kingdom",
+  "native": "オーバーロード 聖王国編",
+  "year": 2024,
+  "rating": 7.8,
+  "season": "Summer 2024",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx133845-InD67nSzCAUr.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx133845-InD67nSzCAUr.png",
+  "accent": "#e46b43",
+  "synopsis": "After twelve years of playing his favorite MMORPG game, Momonga logs in for the last time only to find himself transported into its world playing it indefinitely. Throughout his adventures, his avatar ascends to the title of Sorcerer King Ains Ooal Gown.\n\nOnce prosperous but now on the brink of ruin, The Sacred Kingdom enjoyed years of peace after construction of an enormous wall protecting them from neighboring invasions. But, one day this comes to an end when the Demon Emperor Jaldabaoth arrives with an army of villainous demi-humans. \n\nFearing invasion of their own lands, the neighboring territory of the Slane Theocracy is forced to beg their enemies at the Sorcerer Kingdom for help. Heeding the call, Momonga, now known as the Sorcerer King Ains Ooal Gown, rallies the Sorcerer Kingdom and its undead army to join the fight alongside the Sacred Kingdom and the Slane Theocracy in hopes to defeat the Demon Emperor.\n\n(Source: Crunchyroll, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "overlord:-the-sacred-kingdom-n5qkx2",
+    "mal": 48896,
+    "anilist": 133845,
+    "kitsu": 44530
+  },
+  "skip_key_id": 48896,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "overlord the sacred kingdom オーハ ーロート 聖王国編 movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Overlord: The Sacred Kingdom (Movie)",
+      "runtime": "135:00",
+      "runtime_seconds": 8100,
+      "thumb": "https://cdn.myanimelist.net/images/anime/1954/144101l.webp",
+      "synopsis": "The Sacred Kingdom has enjoyed a great many years without war thanks to a colossal wall constructed after a historic tragedy. They understand best how fragile peace can be. When the terrible demon Jaldabaoth takes to the field at the head of a united army of monstrous tribes, the Sacred Kingdom's leaders know their defenses are not enough. With the very existence of the country at stake, the pious have no choice but to seek help wherever they can get it, even if it means breaking taboo and parlaying with the undead king of the Nation of Darkness!\n\n(Source: Yen Press)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "311315"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "HOLLOW HUNGER",
+      "artist": "OxT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "No Man's Dawn",
+      "artist": "Mayu Maeshima",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "VORACITY",
+      "artist": "MYTH & ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Silent Solitude",
+      "artist": "OxT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Laughter Slaughter",
+      "artist": "OxT",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Go Cry Go",
+      "artist": "OxT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hydra",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Crazy Scary Holy Fantasy",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Clattanoia",
+      "artist": "OxT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "L.L.L.",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

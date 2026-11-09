@@ -1,0 +1,364 @@
+{
+  "id": "saekano-how-to-raise-a-boring-girlfriend",
+  "title": "Saekano: How to Raise a Boring Girlfriend",
+  "native": "冴えない彼女の育てかた",
+  "year": 2015,
+  "rating": 7.3,
+  "season": "Winter 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx20657-pMZBj6K6mLhi.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20657-pMZBj6K6mLhi.jpg",
+  "accent": "#6ba1d6",
+  "synopsis": "The life of Tomoyo Aki, a highschool otaku working part time to support his BD hoarding. With remarkable luck, he bumps head-first into Megumi Kato, the most beautiful girl he has ever seen. Naturally, the meeting twists his life into a complicated torrent of relationships. Eriri Spencer Sawamura, his half-foreigner childhood friend who’s always valued her relationship with MC. Kasumigaoka Utaha, a cold, composed renowned literary genius who shoves everyone aside from our protagonist. What is this? An eroge introduction?\n\nThe tale of a small not quite doujin circle, but not quite indie studio’s journey through the tough territory of comiket and beyond.\n\nNote: Includes episode 0.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Saekano: How to Raise a Boring Girlfriend ♭ (2017)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8406,
+    "anilist": 20657,
+    "mal": 23277,
+    "hianime": "saekano:-how-to-raise-a-boring-girlfriend-eltotu"
+  },
+  "skip_key_id": 23277,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 08:15:04",
+  "search_text": "saekano how to raise a boring girlfriend 冴えない彼女の育てかた tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "An Error-Ridden Prologue",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172655/original.jpg",
+      "synopsis": "A chance encounter with a beautiful girl during spring break inspires Tomoya to make a dating simulation video game. He tries recruiting Eriri and Utaha to assist him.",
+      "airdate": "2015-01-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 64,
+          "end": 152
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1270,
+          "end": 1320
+        }
+      ],
+      "external_id": "172655"
+    },
+    {
+      "n": 2,
+      "title": "A Girlfriend Without a Raised Flag",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172656/original.jpg",
+      "synopsis": "Tomoya asks Megumi out and gives her a lecture on how a perfect heroine should be like. He invites her to his home for an even more detailed lesson!",
+      "airdate": "2015-01-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 134
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1227,
+          "end": 1317
+        }
+      ],
+      "external_id": "172656"
+    },
+    {
+      "n": 3,
+      "title": "Retake the Climax",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172657/original.jpg",
+      "synopsis": "Tomoya continues to procrastinate despite a fast approaching deadline for his project proposal. Eriri and Utaha wonder if he's really serious about creating a dating sim.",
+      "airdate": "2015-01-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 78,
+          "end": 168
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1236,
+          "end": 1320
+        }
+      ],
+      "external_id": "172657"
+    },
+    {
+      "n": 4,
+      "title": "Budget, Deadline and New Development",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172658/original.jpg",
+      "synopsis": "Tomoya sets up a meeting with his recruits to discuss the game. After seeing Megumi with a boy, he can't help but feel jealous!",
+      "airdate": "2015-02-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 69,
+          "end": 158
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1220,
+          "end": 1310
+        }
+      ],
+      "external_id": "172658"
+    },
+    {
+      "n": 5,
+      "title": "The Date Event of Crossing Paths",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172659/original.jpg",
+      "synopsis": "Utaha manages to write out the plot of their game, but it might not be what Tomoya is looking for. Megumi and Tomoya go on a date.",
+      "airdate": "2015-02-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 64,
+          "end": 153
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1281,
+          "end": 1320
+        }
+      ],
+      "external_id": "172659"
+    },
+    {
+      "n": 6,
+      "title": "Deciding the Night for Two",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172660/original.jpg",
+      "synopsis": "Tomoya leaves Kato in the middle of their date to meet up with Utaha. She takes him to a hotel, and they spend the night together. Alone…",
+      "airdate": "2015-02-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 63,
+          "end": 153
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1214,
+          "end": 1303
+        }
+      ],
+      "external_id": "172660"
+    },
+    {
+      "n": 7,
+      "title": "Friend, Foe or a New Character",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172661/original.jpg",
+      "synopsis": "While Tomoya is preparing for the Summer Comiket, two familiar faces from his past show up. Will this affect his game and all the preparations?",
+      "airdate": "2015-02-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1320
+        }
+      ],
+      "external_id": "172661"
+    },
+    {
+      "n": 8,
+      "title": "A Wingman's Traumatic Recollection Mode",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172662/original.jpg",
+      "synopsis": "Megumi makes a concerted effort to understand dating sims. Later, Megumi and Tomoya assist Izumi during Summer Comiket.",
+      "airdate": "2015-03-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 68,
+          "end": 157
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1281,
+          "end": 1320
+        }
+      ],
+      "external_id": "172662"
+    },
+    {
+      "n": 9,
+      "title": "One-on-one Route After 8 Years",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172663/original.jpg",
+      "synopsis": "After Tomoya hurts Eriri's feelings by praising Izumi's book, Utaha and Megumi urge him to make up with her in order to keep their group together.",
+      "airdate": "2015-03-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 88,
+          "end": 178
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1236,
+          "end": 1320
+        }
+      ],
+      "external_id": "172663"
+    },
+    {
+      "n": 10,
+      "title": "A Melody of Reminiscing and Support",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172664/original.jpg",
+      "synopsis": "After an argument with her dad, Michiru runs away and decides to crash at Tomoya's place for a while. In the circle meeting, it is decided that background music is needed for the game. Will they find someone to help them out?",
+      "airdate": "2015-03-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1320
+        }
+      ],
+      "external_id": "172664"
+    },
+    {
+      "n": 11,
+      "title": "Ready to Start Resolving the Subplots",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/172665/original.jpg",
+      "synopsis": "Tomoya continues his attempts to recruit Michiru to his cause. Her critical words, however, cause Tomoya to question the dedication of his circle's members.",
+      "airdate": "2015-03-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 88,
+          "end": 177
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1191,
+          "end": 1281
+        }
+      ],
+      "external_id": "172665"
+    },
+    {
+      "n": 12,
+      "title": "The Ups and Downs at the End of Each Day",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/198631/original.jpg",
+      "synopsis": "The group goes to see Icy Tail's first-ever concert. Before performing, Michiru's bandmates reveal a startling secret.",
+      "airdate": "2015-03-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 87,
+          "end": 177
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1190,
+          "end": 1280
+        }
+      ],
+      "external_id": "198631"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Stella Breeze (ステラブリーズ)",
+      "artist": "Luna Haruna",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sakura-Iro Diary (桜色ダイアリー; Sakura-Colored Diary)",
+      "artist": "Moso Calibration",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kimiiro Signal (君色シグナル)",
+      "artist": "Luna Haruna",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Colorful. (カラフル。)",
+      "artist": "Miku Sawai",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

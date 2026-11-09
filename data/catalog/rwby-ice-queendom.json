@@ -1,0 +1,272 @@
+{
+  "id": "rwby-ice-queendom",
+  "title": "RWBY: Ice Queendom",
+  "native": "RWBY 氷雪帝国",
+  "year": 2022,
+  "rating": 6.1,
+  "season": "Summer 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx146668-JNIr7FRzEUaM.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx146668-JNIr7FRzEUaM.jpg",
+  "accent": "#5daee4",
+  "synopsis": "In the world of Remnant, a place where science and fairy tales coexist, human civilization is plagued by deadly monsters known as the Grimm. For a time, victory by the Grimm seemed all but certain, if not for the heroism of those sworn to protect humanity -- Huntsmen and Huntresses. These warriors are trained and assembled into teams at schools like Beacon Academy, where Ruby meets Weiss and Blake -- forming Team RWBY along with Ruby’s sister, Yang. While team RWBY studies to become the greatest Huntresses the world of Remnant has ever known, they are faced with a horrifying threat..\n\n(Source: Crunchyroll)\n\nNote: The first three episodes received an advance release on Crunchyroll on June 24, 2022. The regular TV broadcast started on July 3, 2022.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 45997,
+    "anilist": 146668,
+    "mal": 51381
+  },
+  "skip_key_id": 51381,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-22 04:56:47",
+  "search_text": "rwby ice queendom rwby 氷雪帝国 tv finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1430
+        }
+      ],
+      "external_id": "330840"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1429
+        }
+      ],
+      "external_id": "330841"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 23,
+          "end": 112
+        }
+      ],
+      "external_id": "330842"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 54,
+          "end": 144
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "330843"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1414
+        }
+      ],
+      "external_id": "330849"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 89,
+          "end": 177
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1422
+        }
+      ],
+      "external_id": "330850"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1414
+        }
+      ],
+      "external_id": "330851"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1414
+        }
+      ],
+      "external_id": "330852"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1414
+        }
+      ],
+      "external_id": "330853"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1414
+        }
+      ],
+      "external_id": "330854"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1279,
+          "end": 1368
+        }
+      ],
+      "external_id": "330855"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1414
+        }
+      ],
+      "external_id": "330856"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

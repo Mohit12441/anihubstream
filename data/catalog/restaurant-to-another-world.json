@@ -1,0 +1,364 @@
+{
+  "id": "restaurant-to-another-world",
+  "title": "Restaurant to Another World",
+  "native": "異世界食堂",
+  "year": 2017,
+  "rating": 7.2,
+  "season": "Summer 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx97617-TmRRraupfbT5.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx97617-TmRRraupfbT5.jpg",
+  "accent": "#f1bb5d",
+  "synopsis": "There is a certain restaurant in the first basement level of a multi-tenant building in one corner of a shopping street near the office district. The historical restaurant, marked by a sign with a picture of a cat, is called \"Western Cuisine Nekoya.\" This restaurant looks completely normal through the week, but on Saturdays, it opens in secret exclusively to some very unique guests. During these hours, doors in various areas of a parallel world open to allow customers of many different races and cultures into the restaurant.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Restaurant to Another World 2 (2021)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 12535,
+    "anilist": 97617,
+    "mal": 34012,
+    "hianime": "restaurant-to-another-world-5ibsx9"
+  },
+  "skip_key_id": 34012,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 15:35:17",
+  "search_text": "restaurant to another world 異世界食堂 tv finished",
+  "genres": [
+    "fantasy",
+    "isekai",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Beef Stew / Breakfast Special",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b52e1f5f0380e602557218e6bb50dccf1499099339_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 160
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "308142"
+    },
+    {
+      "n": 2,
+      "title": "Minced Meat Cutlet / Fried Shrimp",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/9d7ec2950cfc6d2954b35c9fa0552aaa1499671050_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "308143"
+    },
+    {
+      "n": 3,
+      "title": "Spaghetti with Meat Sauce / Chocolate Parfait",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/752b0c83c0b9d06e85e860a2bd124d111500257873_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1372
+        }
+      ],
+      "external_id": "308144"
+    },
+    {
+      "n": 4,
+      "title": "Omelette Rice / Tofu Steak",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/75bc5d0331ffea7ccbe387ebe0fa35101500862231_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "308145"
+    },
+    {
+      "n": 5,
+      "title": "Pork Cutlet Rice Bowl / Pudding a la Mode",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/00f7833845de1af417416544a3bd53131501474847_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "308146"
+    },
+    {
+      "n": 6,
+      "title": "Sandwiches / Steamed Potato With Butter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/16dd40d7dc5d97341fa7eed236cb26d91502087806_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 284,
+          "end": 374
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "308147"
+    },
+    {
+      "n": 7,
+      "title": "Curry Rice / Chicken Curry",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b2bdfbb59f2742a52871ed42f0f545711502697008_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "308148"
+    },
+    {
+      "n": 8,
+      "title": "Hamburg Steak / Assorted Cookies",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/dc2c600cf23406ccd2de5292edfd818d1503296445_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1292,
+          "end": 1380
+        }
+      ],
+      "external_id": "308149"
+    },
+    {
+      "n": 9,
+      "title": "Fried Seafood / Melon Soda Float",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f77eee674760244ddfb02e7b6b4b4afe1503886719_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "308150"
+    },
+    {
+      "n": 10,
+      "title": "Crêpes / Natto Spaghetti",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/484f726239cd8c3bd7e144e038966def1504505290_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "308151"
+    },
+    {
+      "n": 11,
+      "title": "Carpaccio / Curry Bun",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/45b7fb797eda52b93d93afeec947a73e1505121137_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 226,
+          "end": 316
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "308152"
+    },
+    {
+      "n": 12,
+      "title": "Pork Soup / Croquettes",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/cce60bbd50b43c327bed2533f29fa6271505736588_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 83,
+          "end": 173
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1302,
+          "end": 1380
+        }
+      ],
+      "external_id": "308153"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Onnaji Kimochi",
+      "artist": "Kiyono Yasuno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Samenai Mahō",
+      "artist": "Nao Tōyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "One In A Billion",
+      "artist": "Wake Up, May'n!",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Chiisana Hitotsubu (ちいさなひとつぶ; A Small Grain)",
+      "artist": "Kiyono Yasuno",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

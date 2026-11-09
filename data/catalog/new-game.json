@@ -1,0 +1,221 @@
+{
+  "id": "new-game",
+  "title": "NEW GAME!",
+  "native": "NEW GAME!",
+  "year": 2016,
+  "rating": 7.4,
+  "season": "Summer 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21455-hTd6T0s9fvYj.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21455-hTd6T0s9fvYj.jpg",
+  "accent": "#6bc9d6",
+  "synopsis": "Fresh out of high school, 18-year-old Aoba Suzukaze is bright-eyed, bushy-tailed, and ready for her first day of work at her dream job. She’s joining the character design team at Eagle Jump, the company that makes her favorite video games! But the real world of office culture can be a challenge for a total noob. From her awkward first day to her first game’s debut, she’s got a lot of skills to master. Luckily, her charming determination wins over even her quirkiest of coworkers, and before she knows it, Aoba has joined the party!\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "NEW GAME!: Watashi, Shainryokoutte Hajimete na no de... (2017)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11467,
+    "anilist": 21455,
+    "mal": 31953,
+    "hianime": "new-game!-jjin12"
+  },
+  "skip_key_id": 31953,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 11:05:15",
+  "search_text": "new game new game tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "It Actually Feels Like I Started My Job",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/187092/original.jpg",
+      "synopsis": "It's Suzukaze Aoba's first day at Eagle Jump. Will she fit in? Will she be able to make friends? Are her coworkers nice? There are a lot of worries for the young girl straight out of high school. However, she encounters her largest challenge as she leaves the office to use the restroom.",
+      "airdate": "2016-07-04",
+      "markers": [],
+      "external_id": "187092"
+    },
+    {
+      "n": 2,
+      "title": "So This is an Adult Drinking Party...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/187093/original.jpg",
+      "synopsis": "It's Suzukaze Aoba's second week on the job. She's learning the job quickly and gets assigned to her first project. At the end of the week, the character team throws her a welcome party. With alcohol coming and going, Aoba gets one step closer to adulthood.",
+      "airdate": "2016-07-11",
+      "markers": [],
+      "external_id": "187093"
+    },
+    {
+      "n": 3,
+      "title": "What Happens If I'm Late to Work?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/187094/original.jpg",
+      "synopsis": "Suzukaze Aoba sleeps in and may be late to work. Will she arrive late and get in trouble? Or will she prevail? However, that's not the only challenge in her way. She's also having difficulties with the 3D model. Can she get the approval from Ko?",
+      "airdate": "2016-07-18",
+      "markers": [],
+      "external_id": "187094"
+    },
+    {
+      "n": 4,
+      "title": "The First... Paycheck...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/187095/original.jpg",
+      "synopsis": "Suzukaze Aoba receives her first paycheck ever, and a discussion for how to spend it begins at the office. Her colleagues spent their first paychecks on a variety of things like clothes and vacations. How will Aoba spend hers?",
+      "airdate": "2016-07-25",
+      "markers": [],
+      "external_id": "187095"
+    },
+    {
+      "n": 5,
+      "title": "That's How Many Nights We Have To Stay Over?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/187096/original.jpg",
+      "synopsis": "It's summer! It's hot! It's the season of fewer clothes. However, some of the staff at Eagle Jump are a little worried about their weight. How will they get their daily exercise when their work involves sitting at a desk all day?",
+      "airdate": "2016-08-01",
+      "markers": [],
+      "external_id": "187096"
+    },
+    {
+      "n": 6,
+      "title": "Like... The Release is Canceled?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/187097/original.jpg",
+      "synopsis": "Aoba finishes her project of modeling villagers and gets a new one. Her next project is to design and model a character. Seeing Aoba struggling with the design, Ko gives her helpful advice. At the team leader meeting, Ko and Rin find out that they are a little bit behind schedule. It looks like the character team will have to stay some nights and come in on the weekends to catch up.",
+      "airdate": "2016-08-08",
+      "markers": [],
+      "external_id": "187097"
+    },
+    {
+      "n": 7,
+      "title": "Please Train the New Hires Properly",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/187098/original.jpg",
+      "synopsis": "Suzukaze Aoba thought she was done with the villager project. However, Ahagon Umiko comes to her with some problems. The models she designed are filled with errors, and no one at her department told her about it. Umiko shows frustration toward Aoba, but more so toward her supervisor, Yagami Ko.",
+      "airdate": "2016-08-15",
+      "markers": [],
+      "external_id": "187098"
+    },
+    {
+      "n": 8,
+      "title": "It's Summer Break!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/187099/original.jpg",
+      "synopsis": "It's summer break for Sakura Nene, aka Nenecchi, but Suzukaze Aoba isn't getting any break from work as the game's closing date draws near. In fact, Eagle Jump is looking for part-timers to help out with the debugging, and Nenecchi may have something to say about that.",
+      "airdate": "2016-08-22",
+      "markers": [],
+      "external_id": "187099"
+    },
+    {
+      "n": 9,
+      "title": "Do We Have To Come Into Work?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/187100/original.jpg",
+      "synopsis": "Nenecchi is still at Eagle Jump to help out with debugging. She discovers a way to see the characters' panty shots, so the director adds panty shots to the specs. Alas, this creates more work for Aoba's team that has to fix some models' underwear.",
+      "airdate": "2016-08-29",
+      "markers": [],
+      "external_id": "187100"
+    },
+    {
+      "n": 10,
+      "title": "Full-time Employment is a Loophole in the Law to Make Wages Lower",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/187101/original.jpg",
+      "synopsis": "The donut store near the Eagle Jump office is having a store-wide 50% off sale. So naturally, everyone shows up to office with boxes of donuts, and it's time for a donut party.",
+      "airdate": "2016-09-05",
+      "markers": [],
+      "external_id": "187101"
+    },
+    {
+      "n": 11,
+      "title": "There Were Leaked Pictures of the Game on the Internet Yesterday!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/187102/original.jpg",
+      "synopsis": "The deadline for the game is right around the corner, so everyone at the company is staying over night after night to meet the tight schedule. However, Yagami Ko recommends Aoba, Hajime, and Yun to go to the Tokyo Game Exhibit during work hours. What is she thinking?",
+      "airdate": "2016-09-12",
+      "markers": [],
+      "external_id": "187102"
+    },
+    {
+      "n": 12,
+      "title": "One of My Dreams Came True!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/187103/original.jpg",
+      "synopsis": "Fairies Story 3, the game everyone's been working on, goes out to the public. The sales are looking good, and Eagle Jump is hosting a celebration party for everyone who was involved.",
+      "airdate": "2016-09-19",
+      "markers": [],
+      "external_id": "187103"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sakura Skip",
+      "artist": "fourfolium",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Now Loading!!!!",
+      "artist": "fourfolium",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "STEP by STEP UP↑↑↑↑",
+      "artist": "Yūki Takada, Ayumi Takeo, Megumi Toda, & Megumi Yamaguchi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "JUMPin' JUMP UP!!!!",
+      "artist": "Yūki Takada, Ayumi Takeo, Megumi Toda, & Megumi Yamaguchi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sakura Skip (SAKURAスキップ)",
+      "artist": "fourfolium",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Now Loading!!!!",
+      "artist": "fourfolium",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

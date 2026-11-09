@@ -1,0 +1,132 @@
+{
+  "id": "pokemon-evolutions",
+  "title": "Pokémon Evolutions",
+  "native": "Pokémon Evolutions",
+  "year": 2021,
+  "rating": 7.3,
+  "season": "Fall 2021",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx138699-V0PBmiG6hnuf.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx138699-V0PBmiG6hnuf.jpg",
+  "accent": "#e4bb5d",
+  "synopsis": "An animated series created to celebrate 25 years of the global entertainment franchise. Each episode will take fans on a journey through all the known regions of the Pokémon world.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "pokemon-evolutions-0png7j",
+    "mal": 49730,
+    "anilist": 138699,
+    "kitsu": 45055
+  },
+  "skip_key_id": 49730,
+  "skip_key_space": "mal",
+  "episode_total": 8,
+  "added_at": null,
+  "search_text": "pokemon evolutions pokemon evolutions ona finished",
+  "genres": [
+    "action",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Champion",
+      "runtime": "8:00",
+      "runtime_seconds": 480,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/310410/original.jpg",
+      "synopsis": "What goes on within the heart of a Champion? Doubts? Regrets? Determination? Maybe all three?\n\n(Source: Youtube)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "310410"
+    },
+    {
+      "n": 2,
+      "title": "The Eclipse",
+      "runtime": "8:00",
+      "runtime_seconds": 480,
+      "thumb": "https://media.kitsu.app/episode/310411/thumbnail/51870496639118d49227cae66d2309bb.png",
+      "synopsis": "With a dash of determination and courage, Lillie vows to rescue her mother and bring back her friend Nebby! But be strong, Lillie—there seems to be a sinister presence on the horizon…\n\n(Source: Youtube)",
+      "airdate": "2021-09-24",
+      "markers": [],
+      "external_id": "310411"
+    },
+    {
+      "n": 3,
+      "title": "The Visionary",
+      "runtime": "8:00",
+      "runtime_seconds": 480,
+      "thumb": "https://media.kitsu.app/episode/310412/thumbnail/b1f56ce994f1d1814e4201a729c45af8.png",
+      "synopsis": "When chasing your dream, do you give up when everyone tells you it’s wrong? Should you listen? Or do you continue to follow your vision, even if it puts all of Kalos at risk?\n\n(Source: Youtube)",
+      "airdate": "2021-10-07",
+      "markers": [],
+      "external_id": "310412"
+    },
+    {
+      "n": 4,
+      "title": "The Plan",
+      "runtime": "8:00",
+      "runtime_seconds": 480,
+      "thumb": "https://media.kitsu.app/episode/310413/thumbnail/496213e89502e2ada462c4ba26d53185.png",
+      "synopsis": "A sinister plot that manipulates both people and Pokémon has been realized!\n\nAll of Ghetsis’s schemes are falling into place, but what does that mean for the fate of the Unova region?\n\n(Source: Youtube)",
+      "airdate": "2021-10-21",
+      "markers": [],
+      "external_id": "310413"
+    },
+    {
+      "n": 5,
+      "title": "The Rival",
+      "runtime": "8:00",
+      "runtime_seconds": 480,
+      "thumb": "https://media.kitsu.app/episode/310414/thumbnail/dca40ecb4fd1c26561d098ea4c47c08a.png",
+      "synopsis": "",
+      "airdate": "2021-12-02",
+      "markers": [],
+      "external_id": "310414"
+    },
+    {
+      "n": 6,
+      "title": "The Wish",
+      "runtime": "8:00",
+      "runtime_seconds": 480,
+      "thumb": "https://media.kitsu.app/episode/310415/thumbnail/2281ce5fa9738a694eb1f3c4c208437d.png",
+      "synopsis": "",
+      "airdate": "2021-12-09",
+      "markers": [],
+      "external_id": "310415"
+    },
+    {
+      "n": 7,
+      "title": "The Show",
+      "runtime": "8:00",
+      "runtime_seconds": 480,
+      "thumb": "https://media.kitsu.app/episode/310416/thumbnail/a7b6464b1df464976cadfca0cfd3209b.png",
+      "synopsis": "",
+      "airdate": "2021-12-16",
+      "markers": [],
+      "external_id": "310416"
+    },
+    {
+      "n": 8,
+      "title": "The Discovery",
+      "runtime": "8:00",
+      "runtime_seconds": 480,
+      "thumb": "https://media.kitsu.app/episode/310417/thumbnail/31cd5caec634f4a57a6ad752fd536ab9.png",
+      "synopsis": "",
+      "airdate": "2021-12-23",
+      "markers": [],
+      "external_id": "310417"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

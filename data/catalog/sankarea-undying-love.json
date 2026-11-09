@@ -1,0 +1,350 @@
+{
+  "id": "sankarea-undying-love",
+  "title": "Sankarea: Undying Love",
+  "native": "さんかれあ",
+  "year": 2012,
+  "rating": 7,
+  "season": "Spring 2012",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11499-SeYog5nP4Uks.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11499-SeYog5nP4Uks.png",
+  "accent": "#bbd6f1",
+  "synopsis": "Furuya's not interested in the living, he's got zombies on the brain! When Furuya's cat dies, he decides he's going to try and bring it back to life. In the process, he stumbles across a girl who is involved in an accident and turns into a real zombie! What's Furuya going to do now that the thing he loves the most is right in front of his eyes?\n\n(Source: FUNimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Sankarea: I, Too, Am... A Zombie... (2012)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 6521,
+    "anilist": 11499,
+    "mal": 11499
+  },
+  "skip_key_id": 11499,
+  "skip_key_space": "anilist",
+  "episode_total": 12,
+  "added_at": "2026-10-14 10:10:21",
+  "search_text": "sankarea undying love さんかれあ tv finished",
+  "genres": [
+    "comedy",
+    "horror",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Once I... Become a... Zombie",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161324/original.jpg",
+      "synopsis": "Furuya is a young boy who loves zombie movies. Not just the movies themselves but the actual zombies in them. When his cat, Babu, dies he decides to follow the instructions from a partially burned book he found about how to create zombies. To keep it a secret he preforms his attempts at an abandoned hotel. One night a beautiful girl, Rea, comes to the hotel and begins shouting and crying into the well in the courtyard. Her words shock Furuya who accidentally reveals that he was listening in. Talking afterwards Furuya explains what he has been doing and Rea asks to join him. She asks him if she becomes a zombie if he'll take responsibility.",
+      "airdate": "2012-04-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1421
+        }
+      ],
+      "external_id": "161324"
+    },
+    {
+      "n": 2,
+      "title": "It Was... Successful",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161330/original.jpg",
+      "synopsis": "Making more attempts at creating a zombie Babu Rea and Furuya are back at the hotel. Rea is watching some zombie movies Furuya brought. Instead of being freaked out like he expected she seems to be fascinated by them. Furuya mentions that he is concerned that to much time has passed and that maybe they should stop. Rea asks him to try one more time with another poisonous plant that she gets for him. Rea's childhood is shown as well as the deep sadness that caused her to shout and cry into the well where she met Furuya. Bringing the plant to Furuya he tries once more only to fail again. Deciding that enough is enough he tells Rea that he will bury Babu tomorrow. He gives her a ride home on his bike. Rea's father sees Furuya dropping off Rea and punishes her when she sneaks back into the house. Distraught Rea drinks a small vial of the poisonous zombie potion that Furuya had made earlier, believing that it will kill her. Back at his house Furuya is confronted by his cousin Ranko who wants to know what is in the box containing Babu's body. Upon opening it a resurrected Babu emerges.",
+      "airdate": "2012-04-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 31,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1421
+        }
+      ],
+      "external_id": "161330"
+    },
+    {
+      "n": 3,
+      "title": "Sanka... Rea",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161336/original.jpg",
+      "synopsis": "Rea's attempt at suicide fails when she wakes up the next morning. At breakfast she overhears her father planning to do something to Furuya to punish him for being with her alone. Meanwhile Furuya is overwhelmed with joy and is showing off the \"freshly\" zombified Babu to his sister and Ranko. Babu suddenly runs off, chasing after him Furuya finds himself back at the old hotel. Up above on the cliff he sees Rea who has been looking for him all day. Her father track her down and she finally stands up to him. During this Babu climbs the cliff and in an attempt to get rid of \"filthy\" thing Rea's father accidentally pushes her off the cliff. She dies on impact...or does she?",
+      "airdate": "2012-04-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 83,
+          "end": 173
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1421
+        }
+      ],
+      "external_id": "161336"
+    },
+    {
+      "n": 4,
+      "title": "A Normal... Girl",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161342/original.jpg",
+      "synopsis": "Chihiro takes Rea back to his room, trying to keep her a secret from the others. As Chihiro goes out to apologise to Ranko, Rea has a brief encounter with Chihiro's grandfather, Jogorō. When Chihiro returns later that day, he finds Rea has become dazed and is showing signs of rigor mortis, bringing him to the realisation that her corpse will rot if he doesn't do something soon.",
+      "airdate": "2012-04-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 94,
+          "end": 184
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "161342"
+    },
+    {
+      "n": 5,
+      "title": "If She's a Zombie... That Means...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161350/original.jpg",
+      "synopsis": "As Chihiro tries to think of a way to preserve Rea's body, he hides her in his closet whilst he cleans the temple, where he hears from Jogorō that he was the one who originally made the ressurection potion. As Ranko looks in Chihiro's room for some DVDs, she is suddenly pounced on by Rea who starts doing things to her. As Chihiro pulls Rea off of her, she grabs and kisses him.",
+      "airdate": "2012-05-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1421
+        }
+      ],
+      "external_id": "161350"
+    },
+    {
+      "n": 6,
+      "title": "It's Because I... Ran Into You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161359/original.jpg",
+      "synopsis": "As Chihiro tries to explain things to Ranko, Rea follows Bābu to a field of hydrangea leaves and eats some, which helps her regain her senses and cure her rigor mortis. Jogorō explains to Chihiro that Rea needs to continue eating hydrangea leaves to avoid becoming a corpse, though mentions it is not a permanent solution. As Chihiro manages to convince his father to let Rea stay at their home, he begins recording his observations of her. As Chihiro and Rea take a walk that night, Rea ends up injuring Chihiro slightly whilst saving him from a car and begins curiously licking his wounds.",
+      "airdate": "2012-05-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 84,
+          "end": 176
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1421
+        }
+      ],
+      "external_id": "161359"
+    },
+    {
+      "n": 7,
+      "title": "Childhood... Friends...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161368/original.jpg",
+      "synopsis": "As Ranko gets Chihiro to help out with her family's deliveries, she recalls how she first met him and came to understand his obsession with zombies. After being saved by Chihiro from a stray dog, Ranko eventually came to fall in love with him. Back in the present, she attempts to kiss Chihiro but backs off and runs away, resolving to not lose to Rea.",
+      "airdate": "2012-05-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 53,
+          "end": 144
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1421
+        }
+      ],
+      "external_id": "161368"
+    },
+    {
+      "n": 8,
+      "title": "Counterfeit... Freedom...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161375/original.jpg",
+      "synopsis": "As Chihiro continues his observations, Rea asks him to take her to the mall, unaware they are being tailed by some of Dan'ichiro's henchmen. As Chihiro goes to get some lunch, Rea is approached by Chihiro's classmate, Yasutaka, who tries to pull the moves on her. The henchmen move in to abduct Rea but she manages to fight them off with her zombie strength. However, the henchmen change their plans and abduct Chihiro instead, bringing him towards Dan'ichiro.",
+      "airdate": "2012-05-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 54,
+          "end": 144
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "161375"
+    },
+    {
+      "n": 9,
+      "title": "A Mother's... Hand...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161381/original.jpg",
+      "synopsis": "This episode focuses on Chihiro's little sister, Mero. She and her classmates, Ichie Shinoda and Miko Yasaka, become curious about the strange actions of their teacher, Mizuki Yamanouchi, suspecting she may be a zombie. They soon learn Yamanouchi had been secretly keeping a pet crocodile and feeding it at school. Later, as they discuss stories about zombies, Mero recalls about her late mother who she remembered having cold hands. As she makes an offering to her grave, she runs into Rea, who ends up reminding her of her mother.",
+      "airdate": "2012-05-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 75,
+          "end": 165
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1421
+        }
+      ],
+      "external_id": "161381"
+    },
+    {
+      "n": 10,
+      "title": "Strong... Feelings...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161389/original.jpg",
+      "synopsis": "As Chihiro is strapped to a chair waiting for Dan'ichiro to call for him, he meets Dan'ichiro's wife and Rea's stepmother, Aria. Aria explains how she had joined the Sanka family as a maid in the hope of winning Dan'ichiro's love. However, Dan'ichiro instead fell in love with a 15-year-old girl who inevitably died after giving birth to Rea. Although Aria was eventually able to marry Dan'ichiro, he was more focused on Rea than her. Aria later learned the truth that Dan'ichiro's feelings for Rea are not because of fatherly love, but because of her resemblance to her mother. As Rea rushes towards the mansion, Chihiro is brought before Dan'ichiro, who becomes determined to protect Rea.",
+      "airdate": "2012-06-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 18,
+          "end": 108
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "161389"
+    },
+    {
+      "n": 11,
+      "title": "Nothing... Really... Special",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161394/original.jpg",
+      "synopsis": "Dan'ichirō and Chihiro engage on a duel of fencing, and Rea arrives at her home looking for Chihiro. Dan'ichirō's maids capture her and started cosplaying her by maids. Using her zombie strength, Rea manages to escape and continues searching for Chihiro. At the fencing venue, Chihiro trash talks Dan'ichirō about being a nonsense father. Dan'ichirō, furious yet keeping his cool, pierces Chihiro and Rea suddenly arrives. Dan`ichirō was surprised of Chihiro's survival on the attack and Chihiro delivers a headbutt on Dan'ichirō. Dan'ichirō now intensely angry and attempts to slash Chihiro but Rea quickly parries Dan'ichirō's attack and reiterates her freedom. Chihiro lectures Dan'ichirō and reasons Rea's freedom. Impressed on Chihiro's words and promise, Dan'ichirō decides to let Rea stay on Chihiro and warns not to deflower her. After their conversation, Dan'ichirō left Japan and heads to America in search for the cure of Rea's ailment. Meanwhile at the Furuya residence, Chihiro wakes up and sees Rea wearing a nurse costume. Ranko arrives and introduces herself to Rea, posing as Chihiro's fiancee. Rea realizes based on the actions of Ranko towards Chihiro that she loves him.",
+      "airdate": "2012-06-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 103,
+          "end": 193
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "161394"
+    },
+    {
+      "n": 12,
+      "title": "At That Moment... I...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161400/original.jpg",
+      "synopsis": "As Chihiro is still trying to find a way to preserve Rea's body, Rea expresses interest in a fireworks festival. As Mero mentions to Chihiro about how Rea wants to go to school, rain cancels the fireworks festival, though Ranko suggests that they hold a smaller fireworks session at the shrine. As Ranko helps Rea change into a yutaka, she confesses she is in love with Chihiro and wants Rea to be her love rival. As Rea decides to start going to school again, she suddenly enters a trance and jumps on Chihiro, biting his lip in the process.",
+      "airdate": "2012-06-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 35,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1421
+        }
+      ],
+      "external_id": "161400"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Esoragoto (絵空事;Pipe Dream)",
+      "artist": "nano.RIPE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Above Your Hand",
+      "artist": "Annabel",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

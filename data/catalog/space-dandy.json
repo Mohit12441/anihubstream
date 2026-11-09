@@ -1,0 +1,258 @@
+{
+  "id": "space-dandy",
+  "title": "Space Dandy",
+  "native": "スペース☆ダンディ",
+  "year": 2014,
+  "rating": 7.7,
+  "season": "Winter 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20057-tG83EpH5Gu8K.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20057-tG83EpH5Gu8K.jpg",
+  "accent": "#e4ae50",
+  "synopsis": "The story of the anime revolves around Dandy, an alien-hunter. His job is to seek out new aliens never seen before, and receives a reward whenever he finds a new species. His mission is to find those new species faster than anyone else as he travels the galaxy. Together with the bucket-of-bolts robot QT and the dimwit alien Meow he picked up along the way, he comes into contact with new planets and their inhabitants..\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "space-dandy-q04yeq",
+    "mal": 20057,
+    "anilist": 20057,
+    "kitsu": 7910
+  },
+  "skip_key_id": 20057,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "space dandy スヘ ース タ ンテ ィ tv finished",
+  "genres": [
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Live with the Flow, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159016/original.jpg",
+      "synopsis": "While out searching the galaxies for his next paycheck, Dandy and QT make a trip to \"Boobies\", Dandy's favorite restaurant chain. While scoping out the other aliens, they meet Meow (whom they believe to be a \"new species\" of Betelgeusian). Shortly after a tussle at Boobies, Meow is taken aboard the ship and effectively \"joins\" the crew, sharing advice on where they can find rare alien life. However, without realizing it, the three are being followed by Dr. Gel. Luckily, they manage to escape pursuit when Meow foolishly engages their broken warp drive.",
+      "airdate": "2014-01-04",
+      "markers": [],
+      "external_id": "159016"
+    },
+    {
+      "n": 2,
+      "title": "The Search for the Phantom Space Ramen, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159021/original.jpg",
+      "synopsis": "Still out searching the galaxies, the crew visits the noodle galaxy as Meow takes pictures of their travels and uploads them onto the web. However, this stupidly gives away their location to Dr. Gel, who sends his henchmen after them everywhere they go.",
+      "airdate": "2014-01-11",
+      "markers": [],
+      "external_id": "159021"
+    },
+    {
+      "n": 3,
+      "title": "Occasionally Even the Deceiver Is Deceived, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159022/original.jpg",
+      "synopsis": "Dandy's ship crashes on an unknown planet, where he meets a beautiful young woman. But she is not what she appears.",
+      "airdate": "2014-01-18",
+      "markers": [],
+      "external_id": "159022"
+    },
+    {
+      "n": 4,
+      "title": "Sometimes You Can't Live with Dying, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159030/original.jpg",
+      "synopsis": "Meow is bitten by an alien and turns into a brain-eating zombie.",
+      "airdate": "2014-01-25",
+      "markers": [],
+      "external_id": "159030"
+    },
+    {
+      "n": 5,
+      "title": "A Merry Companion Is a Wagon in Space, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159033/original.jpg",
+      "synopsis": "Dandy embarks on a road trip with an alien girl who traps his consciousness in the body of a stuffed penguin.",
+      "airdate": "2014-02-01",
+      "markers": [],
+      "external_id": "159033"
+    },
+    {
+      "n": 6,
+      "title": "The War of the Undies and Vests, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159038/original.jpg",
+      "synopsis": "Dandy and Meow get stuck on a distant planet and trapped in an endless battle over wearing underwear.",
+      "airdate": "2014-02-08",
+      "markers": [],
+      "external_id": "159038"
+    },
+    {
+      "n": 7,
+      "title": "A Race in Space Is Dangerous, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159043/original.jpg",
+      "synopsis": "Hoping to impress the ladies at Boobies, the Aloha Oe crew enter a galactic grand prix against its glamorous reigning champion Prince, his state-of-the-art robot Z, and his rat-like alien lawyer Squeak.",
+      "airdate": "2014-02-15",
+      "markers": [],
+      "external_id": "159043"
+    },
+    {
+      "n": 8,
+      "title": "The Lonely Pooch Planet, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159047/original.jpg",
+      "synopsis": "Meow gets jealous when Dandy finds a dog on a deserted planet, but when the pooch turns out to be carrying tiny alien stowaways, the crew might never see Boobies again!",
+      "airdate": "2014-02-22",
+      "markers": [],
+      "external_id": "159047"
+    },
+    {
+      "n": 9,
+      "title": "Plants Are Living Things, Too, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159055/original.jpg",
+      "synopsis": "Dandy’s search for a mysterious alien rumored to be living on a distant planet brings him into contact with a race of giant, super intelligent, walking, talking plants!",
+      "airdate": "2014-03-01",
+      "markers": [],
+      "external_id": "159055"
+    },
+    {
+      "n": 10,
+      "title": "There's Always Tomorrow, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159059/original.jpg",
+      "synopsis": "After the Aloha Oe becomes damaged, the crew are forced to make a landing on Meow's home planet, which he dislikes for being boring and uneventful. They are greeted by Meow's family, who take them in while their ship is repaired. That night, the calendar in Meow's house is struck by a wayward blast of Pyonium energy sparked from a battle between the Gogol and Jaicro Empires, causing the events of that day to endlessly repeat themselves in a time loop.",
+      "airdate": "2014-03-08",
+      "markers": [],
+      "external_id": "159059"
+    },
+    {
+      "n": 11,
+      "title": "I'm Never Remembering You, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159065/original.jpg",
+      "synopsis": "The Aloha Oe crew bring a red box to the alien registration center, believing it to contain a rare alien. They have no memory of how they acquired the box, only knowing that they will not remember what is inside once it is opened. The box accidentally opens to reveal a book that was checked out by Admiral Perry from the library planet Lagado. The crew also finds a complimentary ticket for a free trip to Lagado inside the book. When they arrive at the planet, they are transported to the surface by its resident aliens, who greet the book and ticket as their librarian and deputy librarian, respectively. The book and ticket are revealed to be aliens that record information on their bodies and take control of others' minds, having used the crew to rescue themselves from the Gogol Empire, explaining their failure to recall the event. Before erasing their memories, the book gives the crew another red box as a gift for their help, warning them not to open it early. The crew bring the box to the registration center, where it opens to reveal a videotape that also manipulates others' memories, starting an intergalactic war involving other video and computer storage devices that goes unrecorded in history.",
+      "airdate": "2014-03-15",
+      "markers": [],
+      "external_id": "159065"
+    },
+    {
+      "n": 12,
+      "title": "Nobody Knows the Chameleon Alien, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159078/original.jpg",
+      "synopsis": "Dandy catches an alien that can mimic any creature's appearance. It starts copying Dandy, and then suffers an identity crisis.",
+      "airdate": "2014-03-22",
+      "markers": [],
+      "external_id": "159078"
+    },
+    {
+      "n": 13,
+      "title": "Even Vacuum Cleaners Fall in Love, Baby",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159083/original.jpg",
+      "synopsis": "The Aloha Oe crew patron a coffee shop where QT meets a female, robotic coffeemaker named Maker. Spurred by previously disregarded feelings of love, QT visits the shop each day and develops a friendship with Maker, also meeting her co-worker, a robotic cash register. One day, QT arrives to find that Maker and the register have been recalled to a seaborne landfill as they have begun exhibiting emotions, causing them to malfunction.",
+      "airdate": "2014-03-29",
+      "markers": [],
+      "external_id": "159083"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Viva Namida (ビバナミダ;Viva Teardrops)",
+      "artist": "Yasuyuki Okamura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "X Jigen e Yōkoso (X次元へようこそ;Welcome to the X Dimsension)",
+      "artist": "Etsuko Yakushimasu",
+      "episodes": "1-6,11"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Viva Namida (ビバナミダ;Viva Teardrops)",
+      "artist": "Yasuyuki Okamura",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Welcome to the X Dimension",
+      "artist": "Etsuko Yakushimaru",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kanchigai Lonely Night (かんちがいロンリーナイト; Misunderstood Lonely Night)",
+      "artist": "DROPKIX",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "WHITE HOUSE",
+      "artist": "OGRE YOU ASSHOLE",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Space ☆ Dandy",
+      "artist": "ZEN-LA ROCK feat. Yomeiri Land",
+      "episodes": "9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Seaside Driving",
+      "artist": "Seiichi Nagai",
+      "episodes": "10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "All 'the thing's i am... worried",
+      "artist": "Mito",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Space Fun Club",
+      "artist": "ZEN-LA-ROCK feat. Robochū",
+      "episodes": "13"
+    }
+  ],
+  "relations": []
+}

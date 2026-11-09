@@ -1,0 +1,754 @@
+{
+  "id": "shugo-chara",
+  "title": "Shugo Chara!",
+  "native": "しゅごキャラ！",
+  "year": 2007,
+  "rating": 7.1,
+  "season": "Fall 2007",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2923-4gO5g4PBcoxy.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2923-4gO5g4PBcoxy.jpg",
+  "accent": "#f1356b",
+  "synopsis": "Amu Hinamori is a 5th grade transfer student who is fashionably cool, tough and independent. Despite this, she is also a girl who seems unapproachable, both at home and at school. In reality, the \"Cool and Spicy\" role she plays is just a facade that she unconsciously plays. With her guardian characters, she fights the Easter Company who is extracting people's eggs to create X Eggs & X Characters in search of a special egg called the Embryo.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Shugo Chara!! Doki (2008)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 2648,
+    "anilist": 2923,
+    "mal": 2923
+  },
+  "skip_key_id": 2923,
+  "skip_key_space": "mal",
+  "episode_total": 51,
+  "added_at": "2026-10-22 06:28:10",
+  "search_text": "shugo chara しゅこ キャラ tv finished",
+  "genres": [
+    "comedy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A Guardian Character is Born!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44973/original.jpg",
+      "synopsis": "People view Amu Hinamori as a \"cool and spicy\" girl; she is actually timid and easily scared. When she wishes to have the courage to show her \"true\" self, she discovers three colorful eggs -red, blue, and green- in her bed. At school, the eggs draw the attention of Tadase Hotori, the most popular boy in school, who Amu has a crush on.",
+      "airdate": "2007-10-06",
+      "markers": [],
+      "external_id": "44973"
+    },
+    {
+      "n": 2,
+      "title": "The Heart's Egg!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44974/original.jpg",
+      "synopsis": "Nadeshiko Fujisaki, queen of the school, invites Amu to tea at the Royal Garden, where she'd meet the Student Council Guardians. However, during P.E. class, the blue egg begins to hatch, and its' Guardian Character runs away!",
+      "airdate": "2007-10-13",
+      "markers": [],
+      "external_id": "44974"
+    },
+    {
+      "n": 3,
+      "title": "Flaky and Fluffy! Leave it to Su!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44975/original.jpg",
+      "synopsis": "Nadeshiko tells Amu that the two should become friends, but Amu sees it as a trick to get her to join the Guardians. Ikuto Tsukiyomi, the mysterious stranger from last time, interrupts the two and attempts to steal the last of Amu's eggs.",
+      "airdate": "2007-10-20",
+      "markers": [],
+      "external_id": "44975"
+    },
+    {
+      "n": 4,
+      "title": "I'm the Trump Card!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44976/original.jpg",
+      "synopsis": "Amu joins the Guardians as \"The Joker\", much to her dismay, and they inform her about the mysterious X Eggs. Ikuto tries to make amends with Amu. A mysterious new teacher named Yuu Nikaidou joins Amu's class.",
+      "airdate": "2007-10-27",
+      "markers": [],
+      "external_id": "44976"
+    },
+    {
+      "n": 5,
+      "title": "Shoot! Get that X Character!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44977/original.jpg",
+      "synopsis": "Amu and Nadeshiko attend Kukai's soccer team practice. One of Kukai's friends, Yamada, is deeply upset when the coach announces he didn't make it to the team. Nikaidou takes advantage of Yamada's feelings and extracts Yamada's Heart's Egg, turning it into an X Egg.",
+      "airdate": "2007-11-03",
+      "markers": [],
+      "external_id": "44977"
+    },
+    {
+      "n": 6,
+      "title": "Character Transformation! Amulet Spade!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44978/original.jpg",
+      "synopsis": "Amu accompanies Yaya to the guardian's ballet class. During practice, the class's prima Maika Himekawa sprains her ankle and Yaya is chosen to be Maika's stand-in for the upcoming performance. Meanwhile, Nikaidou meets with Ikuto on the street and informs him that that Maika's egg may be the Embryo, but if it is not, Ikuto will need to clean up.",
+      "airdate": "2007-11-10",
+      "markers": [],
+      "external_id": "44978"
+    },
+    {
+      "n": 7,
+      "title": "The Small Egg!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44979/original.jpg",
+      "synopsis": "Amu takes her little sister, Ami, with her to a guardian meeting. While the Guardians hold their meeting, the Guardian Characters play with Ami and find a treasure map to a magical egg protected by a dragon.",
+      "airdate": "2007-11-07",
+      "markers": [],
+      "external_id": "44979"
+    },
+    {
+      "n": 8,
+      "title": "I've Fallen in Love with Your Eyes!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44980/original.jpg",
+      "synopsis": "Amu encounters Misaki Watarai, an energetic girl who is also in love with Tadase. After Saaya Yamabuki, head of Tadase's fan club, chides Misaki for Misaki's energetic personality and misunderstanding Tadase's conversation with Nadeshiko, Misaki becomes heartbroken and Nikaidou extracts Misaki's egg, but it hatches into an X Character.",
+      "airdate": "2007-11-24",
+      "markers": [],
+      "external_id": "44980"
+    },
+    {
+      "n": 9,
+      "title": "The Seven Mysteries of the Fujisaki Family!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44981/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-12-01",
+      "markers": [],
+      "external_id": "44981"
+    },
+    {
+      "n": 10,
+      "title": "Character Transformation! Amulet Clover!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44982/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-12-08",
+      "markers": [],
+      "external_id": "44982"
+    },
+    {
+      "n": 11,
+      "title": "The Snow Mountain Holiday!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44983/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-12-15",
+      "markers": [],
+      "external_id": "44983"
+    },
+    {
+      "n": 12,
+      "title": "A Sad Christmas Eve!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44984/original.jpg",
+      "synopsis": "",
+      "airdate": "2007-12-22",
+      "markers": [],
+      "external_id": "44984"
+    },
+    {
+      "n": 13,
+      "title": "Big Disturbance! New Year Live!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44985/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-01-05",
+      "markers": [],
+      "external_id": "44985"
+    },
+    {
+      "n": 14,
+      "title": "A Guardian Character at the Ski Slope!? Snoppe's Appearance!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44986/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-01-12",
+      "markers": [],
+      "external_id": "44986"
+    },
+    {
+      "n": 15,
+      "title": "The Battle at the Snowfield! Save Snoppe!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44987/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-01-19",
+      "markers": [],
+      "external_id": "44987"
+    },
+    {
+      "n": 16,
+      "title": "One Two Three☆Heart's Magic!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44988/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-01-26",
+      "markers": [],
+      "external_id": "44988"
+    },
+    {
+      "n": 17,
+      "title": "The Breathtaking Speech Contest!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44989/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-02-02",
+      "markers": [],
+      "external_id": "44989"
+    },
+    {
+      "n": 18,
+      "title": "Happy, Embarrassing First Date!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44990/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-02-09",
+      "markers": [],
+      "external_id": "44990"
+    },
+    {
+      "n": 19,
+      "title": "Papa and Mama's Memories!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44991/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-02-16",
+      "markers": [],
+      "external_id": "44991"
+    },
+    {
+      "n": 20,
+      "title": "A Present for You!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44992/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-02-23",
+      "markers": [],
+      "external_id": "44992"
+    },
+    {
+      "n": 21,
+      "title": "Kidnapping of Guardian Characters!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44993/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-03-01",
+      "markers": [],
+      "external_id": "44993"
+    },
+    {
+      "n": 22,
+      "title": "Guardian Characters Rescue Mission!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44994/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-03-08",
+      "markers": [],
+      "external_id": "44994"
+    },
+    {
+      "n": 23,
+      "title": "Remake Honey! My Would Be Self!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44995/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-03-15",
+      "markers": [],
+      "external_id": "44995"
+    },
+    {
+      "n": 24,
+      "title": "Sketch of Heart!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44996/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-03-22",
+      "markers": [],
+      "external_id": "44996"
+    },
+    {
+      "n": 25,
+      "title": "Nadeshiko! Goodbye Despite Spring!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44997/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-03-29",
+      "markers": [],
+      "external_id": "44997"
+    },
+    {
+      "n": 26,
+      "title": "The New Beginning!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44998/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-04-05",
+      "markers": [],
+      "external_id": "44998"
+    },
+    {
+      "n": 27,
+      "title": "The Fourth Guardian Egg!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/44999/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-04-12",
+      "markers": [],
+      "external_id": "44999"
+    },
+    {
+      "n": 28,
+      "title": "Joker Disqualification? New Guardians Appear!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45000/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-04-19",
+      "markers": [],
+      "external_id": "45000"
+    },
+    {
+      "n": 29,
+      "title": "Character Transformation!? Amulet Angel!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45001/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-04-26",
+      "markers": [],
+      "external_id": "45001"
+    },
+    {
+      "n": 30,
+      "title": "Star Class vs. Moon Class! Great Cheerleader Activity!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45002/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-05-03",
+      "markers": [],
+      "external_id": "45002"
+    },
+    {
+      "n": 31,
+      "title": "Pretty Baby☆Great Tumult!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45003/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-05-10",
+      "markers": [],
+      "external_id": "45003"
+    },
+    {
+      "n": 32,
+      "title": "The Lonely Queen!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45004/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-05-17",
+      "markers": [],
+      "external_id": "45004"
+    },
+    {
+      "n": 33,
+      "title": "I Can't Help But Fall in Love!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45005/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-05-24",
+      "markers": [],
+      "external_id": "45005"
+    },
+    {
+      "n": 34,
+      "title": "Really!? Big Adventure to the Haunted Mansion!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45006/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-05-31",
+      "markers": [],
+      "external_id": "45006"
+    },
+    {
+      "n": 35,
+      "title": "Wedding Cake of the First Love!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45007/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-06-07",
+      "markers": [],
+      "external_id": "45007"
+    },
+    {
+      "n": 36,
+      "title": "Golden Prince! Pt. I",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45008/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-06-14",
+      "markers": [],
+      "external_id": "45008"
+    },
+    {
+      "n": 37,
+      "title": "Golden Prince! Pt. II",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45009/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-06-21",
+      "markers": [],
+      "external_id": "45009"
+    },
+    {
+      "n": 38,
+      "title": "Key, Lock, He and I!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45010/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-06-28",
+      "markers": [],
+      "external_id": "45010"
+    },
+    {
+      "n": 39,
+      "title": "Character Transformation! Platinum Royale!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45011/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-07-05",
+      "markers": [],
+      "external_id": "45011"
+    },
+    {
+      "n": 40,
+      "title": "Rima! Unlock The Heart!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45012/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-07-12",
+      "markers": [],
+      "external_id": "45012"
+    },
+    {
+      "n": 41,
+      "title": "True Self!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45013/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-07-19",
+      "markers": [],
+      "external_id": "45013"
+    },
+    {
+      "n": 42,
+      "title": "Utau Hoshina! The Last Battle!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45014/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-07-26",
+      "markers": [],
+      "external_id": "45014"
+    },
+    {
+      "n": 43,
+      "title": "Character Transformation! Amulet Diamond!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45015/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-08-02",
+      "markers": [],
+      "external_id": "45015"
+    },
+    {
+      "n": 44,
+      "title": "Sparkle of the Heart!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45016/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-08-09",
+      "markers": [],
+      "external_id": "45016"
+    },
+    {
+      "n": 45,
+      "title": "Go for it! Seiichiro!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45017/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-08-16",
+      "markers": [],
+      "external_id": "45017"
+    },
+    {
+      "n": 46,
+      "title": "Rima's Advent!? The Goddess of Comedy!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45018/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-08-23",
+      "markers": [],
+      "external_id": "45018"
+    },
+    {
+      "n": 47,
+      "title": "I'm Utau's Manager!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45019/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-08-30",
+      "markers": [],
+      "external_id": "45019"
+    },
+    {
+      "n": 48,
+      "title": "Asking a Favor of Yaya!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45020/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-09-06",
+      "markers": [],
+      "external_id": "45020"
+    },
+    {
+      "n": 49,
+      "title": "The Secret of the Violin! Notes Dancing in the Wind!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45021/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-09-13",
+      "markers": [],
+      "external_id": "45021"
+    },
+    {
+      "n": 50,
+      "title": "Have We Really Found It?! The Embryo!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45022/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-09-20",
+      "markers": [],
+      "external_id": "45022"
+    },
+    {
+      "n": 51,
+      "title": "I'll Get the Embryo!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/45023/original.jpg",
+      "synopsis": "",
+      "airdate": "2008-09-27",
+      "markers": [],
+      "external_id": "45023"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Going On!",
+      "artist": "Guardians4",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Party Time!",
+      "artist": "Guardians4",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Watashi no Tamago (My Egg)",
+      "artist": "Shugo Chara! Egg",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bravo! Bravo!",
+      "artist": "Buono",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Minna no Tamago",
+      "artist": "Shugo Chara Egg!",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rottara Rottara",
+      "artist": "Buono!",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kokoro no Tamago (こころのたまご)",
+      "artist": "Buono!",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Honto no Jibun (ホントのじぶん)",
+      "artist": "Buono!",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Arigatou ~Ookuku Kansha~",
+      "artist": "Shugo Chara Egg!",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Our Songs",
+      "artist": "Buono",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Shugo! Shugo!",
+      "artist": "Shugo Chara Egg!",
+      "episodes": "65-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "co・no・mi・chi",
+      "artist": "Buono!",
+      "episodes": "69"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Minna Daisuki (みんなだいすき)",
+      "artist": "Buono!",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Renai ♥ Rider (恋愛♥ライダー)",
+      "artist": "Buono!",
+      "episodes": "13-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Omakase♪Guardians",
+      "artist": "Guardians4",
+      "episodes": "77-89"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "MY BOY",
+      "artist": "Buono!",
+      "episodes": "77-89"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Kiss Kiss Kiss",
+      "artist": "Buono!",
+      "episodes": "27-39"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "School Days",
+      "artist": "Guardians4",
+      "episodes": "90-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Take It Easy!",
+      "artist": "Buono!",
+      "episodes": "90-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Gachinko de Ikou! (ガチンコでいこう!)",
+      "artist": "Buono!",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Honto no Jibun (ホントのじぶん)",
+      "artist": "Buono",
+      "episodes": "102"
+    }
+  ],
+  "relations": []
+}

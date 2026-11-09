@@ -1,0 +1,77 @@
+{
+  "id": "oreimo-2-ona",
+  "title": "Oreimo 2 (ONA)",
+  "native": "俺の妹がこんなに可愛いわけがない。(ONA)",
+  "year": 2013,
+  "rating": 6.3,
+  "season": "Summer 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/7822/medium.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n18857-srJoMsixYyAL.jpg",
+  "accent": "#24d3ee",
+  "synopsis": "Episodes 14–16 of Oreimo 2 which finish adapting the Oreimo novels.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7822,
+    "anilist": 18857,
+    "mal": 18857
+  },
+  "skip_key_id": 18857,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": "2026-11-06 08:49:40",
+  "search_text": "oreimo 2 ona 俺の妹か こんなに可愛いわけか ない ona tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I Can't Confess to Her",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "After Ayase's confession, Kyousuke tries to confirm his feelings to Ruri. Afterwards, with the holidays approaching, the Kyousuke siblings once again embark on a Christmas date to buy limited edition Chrismas-themed eroge. However, Kyousuke had other plans in mind and makes his biggest confession in his life!",
+      "airdate": "2013-08-18",
+      "markers": [],
+      "external_id": "108797"
+    },
+    {
+      "n": 2,
+      "title": "My Little Sister Is This Cute",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "After Kyousuke's confession, Kirino tells Kyousuke that they can't actually get married because they are blood-related siblings. Kyousuke, then reminds her about how Kirino still said that she loves him. The next morning Kirino announces the relationship to Kuroneko and Saori at the Cure Maid Cafe and that's where Kyousuke get's a text from Kanako telling him to come to UOX by himself. This is of course a trap where Kanako conffesed to him on stage but Kyousuke replies that he already has someone he loves a lot. The day after Kyousuke and Kirino have a \"ceremony\" where they put their items in each over's room.",
+      "airdate": "2013-08-18",
+      "markers": [],
+      "external_id": "108798"
+    },
+    {
+      "n": 3,
+      "title": "My Little Sister Can't Be This Cute.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "On the day of Kyousuke's high school graduation, he has a final reunion with the gaming club. After the graduation ceremony, Kirino arrives to pick Kyousuke up following the end of her middle school graduation, and both head out to meet Manami. As the group sit in the park, Manami becomes visibly angered upon learning of the Kosaka siblings' relationship and following Kirino's provocation, they start physically fighting. After Kyosuke realizes that the person that has told Kirino that she could never be with her loved one was actually Manami, breaks them up, and cites that she was too harsh to actually force such a truth to a little girl.",
+      "airdate": "2013-08-18",
+      "markers": [],
+      "external_id": "108799"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

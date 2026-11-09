@@ -1,0 +1,118 @@
+{
+  "id": "see-you-tomorrow-at-the-food-court",
+  "title": "See You Tomorrow at the Food Court",
+  "native": "フードコートで、また明日。",
+  "year": 2025,
+  "rating": 7.3,
+  "season": "Summer 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx185519-cuRKYBlZ3uWw.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx185519-cuRKYBlZ3uWw.jpg",
+  "accent": "#e4c9a1",
+  "synopsis": "Meet Wada, who gives off an unapproachable vibe, and Yamamoto, who strikes fear into those around her because of her looks. Though the two girls attend separate high schools, they meet up at a shopping center’s food court almost every day. Take a little peek at the laid-back afternoons Wada and Yamamoto share as they reflect on the ups and downs of high school life together.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "see-you-tomorrow-at-the-food-court-fgjlt7",
+    "mal": 60508,
+    "anilist": 185519,
+    "kitsu": 49404
+  },
+  "skip_key_id": 60508,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": null,
+  "search_text": "see you tomorrow at the food court フート コートて また明日 tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "WADA1234 / Nazca Lines Aliens / Psibola / Change Before You Have To",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/382777/thumbnail/ecb6ddaf6a475b09e14f1d78259205a0.jpg",
+      "synopsis": "Wada and Yamamoto meet up and discuss social media, dreams, over-the-counter drugs, and handy English phrases.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-07",
+      "markers": [],
+      "external_id": "382777"
+    },
+    {
+      "n": 2,
+      "title": "Rigged Crane Game / Single-Ply Double Roll / Dream Theater / A Doggy Purpose",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/382778/thumbnail/b62b06daee286bc75108ea17cc4e85cf.jpg",
+      "synopsis": "Wada and Yamamoto tackle claw machines, toilet paper, reader-insert fanfiction, and a bowl of spicy udon.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-14",
+      "markers": [],
+      "external_id": "382778"
+    },
+    {
+      "n": 3,
+      "title": "Breastibility / Naokin / Sisters / October 21st",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/382779/thumbnail/017e87213d1bef2f9d1dc57750c23fb9.jpg",
+      "synopsis": "Wada and Yamamoto contemplate kanji readings, fandom culture, raising pets, and asking personal questions.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-21",
+      "markers": [],
+      "external_id": "382779"
+    },
+    {
+      "n": 4,
+      "title": "Caramel Ribbon / We Live in Opposite Directions / It Doesn't Stink / Generic Wada",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/382780/thumbnail/f0fd9aa3656ce4828e3231a2c3ef8be0.jpg",
+      "synopsis": "Wada and Yamamoto talk about going to the dentist, stranger danger, new hairstyles, and look-alikes.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-07-28",
+      "markers": [],
+      "external_id": "382780"
+    },
+    {
+      "n": 5,
+      "title": "SSR / So Annoying / Arahama Beach",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/382781/thumbnail/92adc45fc48e964473b091fd64cb5f2b.jpg",
+      "synopsis": "Wada and Yamamoto contemplate permanent markers, how relationships change people, and summer getaway plans.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-04",
+      "markers": [],
+      "external_id": "382781"
+    },
+    {
+      "n": 6,
+      "title": "Randy / Gorilla Tape / Toxic Fan / See You Tomorrow at the Food Court",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/382782/thumbnail/acc77b7e899906deefc5d386c63e8e07.jpg",
+      "synopsis": "Wada and Yamamoto ponder shifting loyalties, digital surveillance, content monetization, and fad diets.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-08-11",
+      "markers": [],
+      "external_id": "382782"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mikansei ni Matataite (Twinkling Incompletely)",
+      "artist": "Oisicle Melonpan",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

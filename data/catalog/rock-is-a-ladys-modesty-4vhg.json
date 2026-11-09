@@ -1,0 +1,200 @@
+{
+  "id": "rock-is-a-ladys-modesty-4vhg",
+  "title": "Rock is a Lady’s Modesty",
+  "native": "ロックは淑女の嗜みでして",
+  "year": 2025,
+  "rating": 7.7,
+  "season": "Spring 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx179694-7zhc0T6IImor.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx179694-7zhc0T6IImor.jpg",
+  "accent": "#e45d50",
+  "synopsis": "At an elite all-girls' academy where refined young ladies gather, Lilisa Suzunomiya, now the daughter of a real estate tycoon after her mother remarried, is forced to abandon her guitar and rock music to fit in. However, her passion is reignited by sounds from the old school building, where she meets a skilled drummer who shares her love for rock. Together, they embrace their inner rockstars, elegantly clashing and shouting their way through the academy in this captivating tale of grace and rebellion.\n\n(Source: HIDIVE)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 49054,
+    "anilist": 179694,
+    "mal": 59360
+  },
+  "skip_key_id": 59360,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-22 06:28:10",
+  "search_text": "rock is a lady s modesty ロックは淑女の嗜みて して tv finished",
+  "genres": [
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370786"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370787"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370788"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370789"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370790"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370791"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370792"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370793"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370794"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370795"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370796"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370797"
+    },
+    {
+      "n": 13,
+      "title": "Episode 13",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "370798"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ready to Rock",
+      "artist": "BAND-MAID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yume janai nara nanna no sa (If it's not a dream, then what is it?)",
+      "artist": "Little Glee Monster",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

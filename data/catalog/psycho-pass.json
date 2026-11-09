@@ -1,0 +1,670 @@
+{
+  "id": "psycho-pass",
+  "title": "PSYCHO-PASS",
+  "native": "PSYCHO-PASS サイコパス",
+  "year": 2012,
+  "rating": 8.1,
+  "season": "Fall 2012",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx13601-i42VFuHpqEOJ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13601-i42VFuHpqEOJ.jpg",
+  "accent": "#288686",
+  "synopsis": "Justice, and the enforcement of it, has changed. In the 22nd century, Japan enforces the Sibyl System, an objective means of determining the threat level of each citizen by examining their mental state for signs of criminal intent, known as their Psycho-Pass. Inspectors uphold the law by subjugating, often with lethal force, anyone harboring the slightest ill-will; alongside them are Enforcers, jaded Inspectors that have become latent criminals, granted relative freedom in exchange for carrying out the Inspectors' dirty work.\n\nInto this world steps Akane Tsunemori, a young woman with an honest desire to uphold justice. However, as she works alongside veteran Enforcer Shinya Kougami, she soon learns that the Sibyl System's judgments are not as perfect as her fellow Inspectors assume. With everything she has known turned on its head, Akane wrestles with the question of what justice truly is, and whether it can be upheld through the use of a system that may already be corrupt.\n\n \n(Source: MAL Rewrite)\n\nNote: In the Summer 2014 season, Psycho-Pass was rebroadcast and re-edited to fit into an hour time-slot, ending up in 11 one-hour episodes. This edit included added scenes at the beginning and middle of the episodes, as well as fixing and improving animation.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "PSYCHO-PASS 2 (2014)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7000,
+    "anilist": 13601,
+    "mal": 13601,
+    "hianime": "psycho-pass-wydarq"
+  },
+  "skip_key_id": 13601,
+  "skip_key_space": "anilist",
+  "episode_total": 22,
+  "added_at": "2026-10-14 02:36:47",
+  "search_text": "psycho pass psycho pass サイコハ ス tv finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Crime Coefficient",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100712/original.jpg",
+      "synopsis": "In a world where minds can be analysed for potential threats of crime and mental instability, Inspector Tsunemori Akane is sent to deal with her first case, along with fellow inspector Ginoza and a group of Enforcers, latent criminals hired by the police to work for them. Akane’s case deals with an insane man who has taken a woman hostage and raped her, holing himself up in a building inhabited by groups of the homeless.",
+      "airdate": "2012-10-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 195,
+          "end": 285
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1373
+        }
+      ],
+      "external_id": "100712"
+    },
+    {
+      "n": 2,
+      "title": "Those Capable",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100713/original.jpg",
+      "synopsis": "While Kogami is recuperating from Akane’s Paralyzer shot, she begins to worry about whether she is suited to be an Inspector after the fallout from her first case. On her second day on the job, she begins to learn more about the Enforcers she works with.",
+      "airdate": "2012-10-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 62,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1295,
+          "end": 1360
+        }
+      ],
+      "external_id": "100713"
+    },
+    {
+      "n": 3,
+      "title": "Rearing Conventions",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100714/original.jpg",
+      "synopsis": "Ginoza and Akane, along with the Enforcers, are brought in to investigate a death caused by a Drone at a Drone manufacturing plant. When the Psycho-Pass of the entire staff checks out, they question whether it was an accident or possibly murder.",
+      "airdate": "2012-10-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 59,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1302,
+          "end": 1372
+        }
+      ],
+      "external_id": "100714"
+    },
+    {
+      "n": 4,
+      "title": "Nobody Knows Your Mask",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100715/original.jpg",
+      "synopsis": "When the CID is brought in to investigate a disappearance of Kimihiko Hayama, they discover that not only has he been killed, but someone has taken over his net avatar, Talisman. The CID tries to track down the fake Talisman in order to find the killer.",
+      "airdate": "2012-11-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 133,
+          "end": 223
+        }
+      ],
+      "external_id": "100715"
+    },
+    {
+      "n": 5,
+      "title": "Nobody Knows Your Face",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100716/original.jpg",
+      "synopsis": "The CID’s hunt for Kimihiko Hayama’s killer leads them to another murder with the same modus operandi. Now it’s up to the CID to figure out how to track down the killer’s real identity and get justice for the victims.",
+      "airdate": "2012-11-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 64,
+          "end": 154
+        }
+      ],
+      "external_id": "100716"
+    },
+    {
+      "n": 6,
+      "title": "Return of the Psychotic Prince",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100717/original.jpg",
+      "synopsis": "After reading Kogami’s personnel file, Akane attempts to learn more about Kogami’s past and why he ended up as an Enforcer. Meanwhile, the CID detectives attempt to figure out who was helping Kanehara commit murders in the Hachioji Drone incident.",
+      "airdate": "2012-11-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 45,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1373
+        }
+      ],
+      "external_id": "100717"
+    },
+    {
+      "n": 7,
+      "title": "Symbolism of Bletilla Striata",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100718/original.jpg",
+      "synopsis": "After realizing that the recent murders and the Specimen Case are indeed connected, Ginoza takes Kogami off the case and requests Tsunemori to watch over him. Tsunemori discusses Sasayama's murder with Kogami, and he gives her his one piece of evidence: a blurry image of Makishima. Meanwhile, Makishima, in a study with another older man, reveals the circumstances of Rikako Oryo's father's death and discusses the nature of the shortening life expectancy in this \"perfect\" world. Later, Rikako continues her crimes with the help of Makishima's colleague, Choe Gu-Sung, and abducts another fellow student who is worried about her friend's disappearance.",
+      "airdate": "2012-11-23",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1286,
+          "end": 1376
+        }
+      ],
+      "external_id": "100718"
+    },
+    {
+      "n": 8,
+      "title": "And Then, Silence",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100719/original.jpg",
+      "synopsis": "With his profiling skills, Kogami determines that the girls' school killer isn't the same murderer from the unsolved case years ago; he explains that the recent murders lack \"originality\" and pointed social commentary of the previous killings. When he and Tsunemori realize the culprit is one of the students, they locate Rikako - who escapes when one of teachers stops Kogami from executing her. As the Enforcers try to locate her secret routes and hiding places, Rikako flees - but not before everyone discovers her latest creation. Makishima calls Rikako to tell her that she's a disappointment and has one of his colleagues dispose her. In the meantime, Kogami picks up a damaged audio file which was deliberately left by Makishima. Due to Rikako's failure, Makishima develops an interest in Kogami.",
+      "airdate": "2012-11-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1374
+        }
+      ],
+      "external_id": "100719"
+    },
+    {
+      "n": 9,
+      "title": "Fruit of Paradise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100720/original.jpg",
+      "synopsis": "Kogami, attempting to track down Makishima, takes Tsunemori to visit his former teacher, Jouji Saiga, who agrees to give her a crash course on criminal profiling; however, Ginoza reprimands her harshly which results into an argument. Afterwards, Masaoka explains to her Ginoza's attitude by revealing his past. In the meantime, Makishima discusses humanity and philosophy with Senguji, who in an earlier interview reveals himself to be nearly a full cyborg. He gives him his next target: Shinya Kougami.",
+      "airdate": "2012-12-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 162
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1287,
+          "end": 1377
+        }
+      ],
+      "external_id": "100720"
+    },
+    {
+      "n": 10,
+      "title": "Methuselah's Game",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100721/original.jpg",
+      "synopsis": "Makishima and Senguji set up a hunt by using Tsunemori's friend Yuki as bait to lure Kogami into an abandoned subway station. Upon entering the station, Kogami discovers Yuki and loses contact with Tsunemori; the two must evade Senguji and his canine drones as a curious Makishima observes from above. Ginoza scolds Tsunemori for letting Kogami go on his own but Masaoka chastises him over his treatment of her. Meanwhile, Makishima rigs the hunt to give Kogami a chance to create a working transponder and, as a result, Kogami makes contact with the group outside and they go in after him.",
+      "airdate": "2012-12-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 30,
+          "end": 120
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1286,
+          "end": 1376
+        }
+      ],
+      "external_id": "100721"
+    },
+    {
+      "n": 11,
+      "title": "Saint's Supper",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100722/original.jpg",
+      "synopsis": "With a drone delivering him a Dominator, Kogami manages to outwit Senguji and kill him, although he also takes some shots in the process. Just then, Yuki is captured by Makishima, with Kogami too weak to follow. As Masaoka tends to Kogami's injuries, Tsunemori goes alone to pursue Makishima. To her shock, she discovers her Dominator is useless against him as his Crime Coefficent levels are too low, with Makishima attributing his murderous intent to his own free will. He gives Tsunemori the opportunity to try killing him with Senguji's shotgun, but she finds herself unable to do it and is forced to helplessly watch Makishima kill Yuki right before her eyes.",
+      "airdate": "2012-12-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 58,
+          "end": 148
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1288,
+          "end": 1371
+        }
+      ],
+      "external_id": "100722"
+    },
+    {
+      "n": 12,
+      "title": "Devil's Crossroad",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100723/original.jpg",
+      "synopsis": "Taking place three years prior to the series, the episode focuses on Yayoi, who was a guitarist in a band before being imprisoned in a rehabilitation facility for being a latent criminal. As she anxiously waits for release so she can play the guitar again, she is approached by Kogami, who was still a detective, and Ginoza about a series of crimes occuring in the area she was once familiar with. She initially rejects their offer until Kogami gives her some guitar strings which reminded her of a guitarist she admired, Rina Takizaki. When the club they are investigating gets set on fire after Kogami's partner Mitsuru Sasayama jumps the gun in approaching culprits dealing with molotov cocktails, Yayoi decides to search for Rina, only to discover she is part of a resistance group selling the molotov cocktails in the hopes of overthrowing the Sybil system. Yayoi tries to stop Rina but finds she is unable to use the Dominator that Kogami gave her, as she wasn't actually an enforcer, and Rina escapes. Afterwards, Yayoi resolves to become an enforcer and leaves the rehabilitation center.",
+      "airdate": "2013-01-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 164,
+          "end": 254
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1377
+        }
+      ],
+      "external_id": "100723"
+    },
+    {
+      "n": 13,
+      "title": "Invitation from the Abyss",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100724/original.jpg",
+      "synopsis": "Ginoza meets up with the head of the Public Security Bureau about Makishima, who confidentially reveals to him about the real culprit of the Specimen Case, Touma Kouzoburou, three years ago who happens to be \"criminally asymptomatic\" just like Makishima. She urges him to keep any doubts away from the public eye and orders him to capture Makishima. Following Yuki's funeral, Akane agrees to undergo a 'Memory Scoop' to provide a photofit of Makishima based on her memories of the incident, despite warnings from others that it may damage her Psycho-Pass. Despite reliving the traumatizing memory, the Memory Scoop is successfully completed without her Psycho-Pass reaching into dangerous levels, providing a photofit image of Makishima to aid in the investigation. Later, Ginoza discusses with Masaoka, who is actually his father, about how Akane manages to keep her Psycho-Pass from becoming unclouded.",
+      "airdate": "2013-01-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 50,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1281,
+          "end": 1371
+        }
+      ],
+      "external_id": "100724"
+    },
+    {
+      "n": 14,
+      "title": "Sweet Poison",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100725/original.jpg",
+      "synopsis": "A man in a helmet breaks into a pharmacy, kills the staff, and departs with drugs. When the MWSPB arrives on the scene, they find his coefficient wasn't high enough to raise an alarm. The same man attacks a woman in public, brutally beating her to death with a hammer in front of a crowd and a Psycho-Pass scanner. Later, the team learn that more culprits, wearing the same helmets, rob an armored car. Kogami deduces that the second crime would have a motive, leading their investigation to a man named Jyunmei Itoh who had a grudge against the victim. As Itoh attempts to escape, Kogami deduces that helmets copy the clear Psycho-pass rate of innocent bystanders and thus help criminals avoid evasion. With Akane and Masaoka's help, he apprehends the murderer.",
+      "airdate": "2013-01-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1373
+        }
+      ],
+      "external_id": "100725"
+    },
+    {
+      "n": 15,
+      "title": "The Town Where Sulfur Falls",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100726/original.jpg",
+      "synopsis": "As footage of the helmet killings appear on the internet, the helmets are distributed to more criminals who begin committing more horrendous crimes out in the open, prompting bloodthirsty revenge from the public in the name of self-defense. As the MWSPB are sent in to suppress the riots, Kogami deduces that the riots are intended to draw the police away from the Health and Welfare Ministry's Nona Tower facility, where the Sibyl System is located. As Makishima and his gang break in, Kogami, Akane and Shuusei head to the scene.",
+      "airdate": "2013-02-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 157,
+          "end": 247
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1286,
+          "end": 1376
+        }
+      ],
+      "external_id": "100726"
+    },
+    {
+      "n": 16,
+      "title": "The Gate to Judgment",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100727/original.jpg",
+      "synopsis": "As Akane, Kogami, and Shuusei enter the Nona Tower, Makishima intends to act as a diversion at the top of the tower while Guseong reaches the core of the Sibyl System in the hidden basement. Kogami and Akane decide to chase after Makishima to the top of the tower as Shuusei descends to the basement. After descending to the hidden basement, Shuusei has lost connection with the network and discovers the truth behind the Sibyl System. Meanwhile, Kogami engages in a battle with Makishima. Makishima beats Kogami but is knocked out by Akane. Kogami instructs Akane to kill Makishima but Akane was able to control her emotions. Meanwhile, Shuusei defeats the guards and confronts Guseong at the heart of the Sibyl System, who is suddenly killed by Kasei, who is revealed to be a cyborg and proceeds to override her Dominator to fire at Shuusei.",
+      "airdate": "2013-02-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1286,
+          "end": 1376
+        }
+      ],
+      "external_id": "100727"
+    },
+    {
+      "n": 17,
+      "title": "Iron Heart",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100728/original.jpg",
+      "synopsis": "After Makishima is taken in and the riots are brought under control, Kogami remains curious about how Makishima will be judged, as well as the whereabouts of Shuusei. Later that day, Kasei tells Ginoza that Makishima's case has been taken out of the MWPSB's hands and orders him to investigate Shuusei's whereabouts, much to the ire of both Ginoza and Kogami. Later, Makishima is confronted by Kasei who reveals herself as Kouzoborou and shares a cybernetic body with Kasei. He explains to Makishima about the true nature of the Sybil System, which is revealed to be a supercomputer network comprised of human brains of criminally asymptomatic individuals like him. Kouzoborou offers Makishima to become a part of the System. But he refuses and instead kills Kouzaborou and escapes from the transit which is supposed to take him to the Ministry of Welfare before briefly contacting Kogami about his escape.",
+      "airdate": "2013-02-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1213,
+          "end": 1300
+        }
+      ],
+      "external_id": "100728"
+    },
+    {
+      "n": 18,
+      "title": "A Promise Written on Water",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100729/original.jpg",
+      "synopsis": "As Ginoza discovers that he is unauthorized to investigate the crash site of Makishima's carrier, Kasei reassigns him on recapturing Makishima and requests that Kogami should be taken off the case. Kogami suspects that something is amiss behind the whole order, believing there is something Kasei is hiding from them. Agreeing with him, Ginoza arranges for Kogami to be transferred to Division 2 who are in charge of investigating Shuusei's whereabouts. However, they are confronted by Kasei, who tries to get Ginoza to kill Kogami, but luckily Akane knocks him out with Paralyzer mode before anything can happen. Upon awakening, Kogami borrows one of the helmets from Shion and retrieves keys to a safehouse from Masaoka before leaving the MWPSB, explaining in a letter to Akane that the only way where he can stop Makishima is to step outside of the law.",
+      "airdate": "2013-02-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 47,
+          "end": 137
+        }
+      ],
+      "external_id": "100729"
+    },
+    {
+      "n": 19,
+      "title": "Transparent Shadow",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100730/original.jpg",
+      "synopsis": "Ginoza, whose Hue is now problematic, eschews intensive therapy in order to work on retrieving Kogami and Makishima. He argues with Masaoka over his \"softness,\" and declares his intention to see his \"obsession\" through to the end. Kogami, meanwhile, goes to visit Saiga in order to figure out Makishima's next move; the two surmise that Makishima might attempt to meddle with Japan's food supply in order to force open borders for the country. Shion does her best to comfort Akane and Kasei connects with Sibyl to determine their new \"pawn.\" Later, a Dominator-bearing drone comes to visit Akane in the office - and declares that it will tell her the truth about everything.",
+      "airdate": "2013-03-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 129
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1279,
+          "end": 1371
+        }
+      ],
+      "external_id": "100730"
+    },
+    {
+      "n": 20,
+      "title": "Where Justice Lies",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100731/original.jpg",
+      "synopsis": "The Sibyl System reveals itself to Akane and notes that she understands the necessity of the system, if not its justifiability. Makishima finds the professor who is responsible for the hyper-oats and murders him after finding the information he seeks, taking along the man's fingers and eyeballs as a measure against biometric security. Kogami arrives on the scene not long after and leaves a clue for the MWSPB in the man's airpipe. Meanwhile, Akane makes a deal with Sibyl: if the System withdraws the execution order for Kogami, she will capture Makishima alive. Thanks to her detective work, they quickly find Kogami's clue and understand what Makishima's up to.",
+      "airdate": "2013-03-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1372
+        }
+      ],
+      "external_id": "100731"
+    },
+    {
+      "n": 21,
+      "title": "Blood-Stained Reward",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100732/original.jpg",
+      "synopsis": "As Makishima works on reprogramming the virus, both Kogami and the MWPSB arrive at the factory, with Kogami instructing Akane that they need to shut down power to the facility to bypass the security. Prior to arriving, Akane manages to convince the Sibyl System to keep her Dominator on Paralyzer mode with the safety unlocked regardless of Crime Coefficient to use as a trump card against Makishima and Kogami. After the power is shut down, Kogami sneaks into the facility whilst Akane and Yayoi head to the control room in case Makishima attempts to activate the emergency power. Finding the control room empty, Akane comes to realise that Ginoza and Masaoka are in danger. As Ginoza becomes trapped under a container after tripping up a trap, Masaoka comes face to face with Makishima. Although Masaoka appears to get the upper hand, Makishima threatens to blow Ginoza up with a stick of dynamite, with Masaoka ultimately sacrificing himself to save his son. As Ginoza remains horrified by his father's death, Kogami pursues Makishima and prepares to engage in a knife fight with him.",
+      "airdate": "2013-03-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 90,
+          "end": 180
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1372
+        }
+      ],
+      "external_id": "100732"
+    },
+    {
+      "n": 22,
+      "title": "Perfect World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/100733/original.jpg",
+      "synopsis": "Kogami and Makishima fight against each other, with Kogami managing to land a hit, but their fight is broken up when Akane arrives on the scene. Instead of arresting Kogami, Akane gives her the modified Dominator so they can both pursue Makishima. Makishima attempts to escape via truck, but Akane manages to get onto it and burst its tire, causing it to crash. With Akane to injured to fight, Kogami takes a reloaded revolver and pursues Makishima as he tries to escape. Reaching the end of his road, Makishima simply waits as Kogami finally shoots him, with Akane unable to do anything about it. Afterwards, the Sybil System tells Akane of how they intend to make itself public at a time where the public will come to accept it, though Akane responds that there will come a day when humans stand up against them. Two months later, Ginoza becomes an Enforcer whilst Mika Shimotsuki, one of the girls from the statue incident, joins the MWPSB as a detective under Akane's wing, whilst Kogami is seen elsewhere.",
+      "airdate": "2013-03-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 169
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1360
+        }
+      ],
+      "external_id": "100733"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Alexithymia Spare (アレキシサイミアスペア)",
+      "artist": "Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tōjisha (当事者; The One Concerned)",
+      "artist": "EGOIST",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Synthetic Sympathy",
+      "artist": "Who-ya Extended",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "red strand",
+      "artist": "Cö shu Nie",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Q-vism",
+      "artist": "Who-ya Extended",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "bullet",
+      "artist": "Cö shu Nie",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fallen",
+      "artist": "Masayuki Nakano",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Who What Who What",
+      "artist": "Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Namae no Nai Kaibutsu (名前のない怪物;A Beast Without a Name)",
+      "artist": "EGOIST",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Enigmatic Feeling",
+      "artist": "Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fallen",
+      "artist": "EGOIST",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "abnormalize",
+      "artist": "Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Namae no Nai Kaibutsu (名前のない怪物; Monster with no name)",
+      "artist": "EGOIST",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "All Alone With You",
+      "artist": "Masayuki Nakano",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Out of Control",
+      "artist": "Nothing's Carved in Stone",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "All Alone With You",
+      "artist": "EGOIST",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Namae no nai Kaibutsu (Nameless Monster)",
+      "artist": "Masayuki Nakano",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

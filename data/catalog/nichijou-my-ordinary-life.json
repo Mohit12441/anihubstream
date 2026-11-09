@@ -1,0 +1,408 @@
+{
+  "id": "nichijou-my-ordinary-life",
+  "title": "Nichijou - My Ordinary Life",
+  "native": "日常",
+  "year": 2011,
+  "rating": 8.3,
+  "season": "Spring 2011",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx10165-tw8Cz7K9tfVJ.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10165-tw8Cz7K9tfVJ.png",
+  "accent": "#e4bb93",
+  "synopsis": "Nichijou primarily focuses on the daily antics of a trio of childhood friends—high school girls Mio Naganohara, Yuuko Aioi and Mai Minakami—whose stories soon intertwine with the young genius Hakase Shinonome, her robot caretaker Nano, and their talking cat Sakamoto. With every passing day, the lives of these six, as well as of the many people around them, experience both the calms of normal life and the insanity of the absurd. Walking to school, being bitten by a talking crow, spending time with friends, and watching the principal suplex a deer: they are all in a day's work in the extraordinary everyday lives of those in Nichijou. \n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "nichijou-my-ordinary-life-7e9hhz",
+    "mal": 10165,
+    "anilist": 10165,
+    "kitsu": 6062
+  },
+  "skip_key_id": 10165,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "nichijou my ordinary life 日常 tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Nichijou The First",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91560/original.jpg",
+      "synopsis": "Selamat pagi! Goats? What's wrong with goats? What does KY mean? I don't have any special features, but my toe comes off.",
+      "airdate": "2011-04-03",
+      "markers": [],
+      "external_id": "91560"
+    },
+    {
+      "n": 2,
+      "title": "Nichijou The Second",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91561/original.jpg",
+      "synopsis": "The incantation of resurrection. A shark. A warrior never goes back on her word! My life is over!",
+      "airdate": "2011-04-10",
+      "markers": [],
+      "external_id": "91561"
+    },
+    {
+      "n": 3,
+      "title": "Nichijou The Third",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91562/original.jpg",
+      "synopsis": "I'm sorry I didn't eat your black beans! I won't crumble under such threats! In human terms, I'm 20 years old. Earth Dangerous!",
+      "airdate": "2011-04-17",
+      "markers": [],
+      "external_id": "91562"
+    },
+    {
+      "n": 4,
+      "title": "Nichijou The Fourth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91563/original.jpg",
+      "synopsis": "It doesn't grow from the sides! It's a snowman. And who would give gum to a cat, you fool? Super ultra great delicious wonderful...",
+      "airdate": "2011-04-24",
+      "markers": [],
+      "external_id": "91563"
+    },
+    {
+      "n": 5,
+      "title": "Nichijou The Fifth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91564/original.jpg",
+      "synopsis": "Why do magnets attract each other? God is dead! The baby is coming! I'm going to draw an awesome man!",
+      "airdate": "2011-05-01",
+      "markers": [],
+      "external_id": "91564"
+    },
+    {
+      "n": 6,
+      "title": "Nichijou The Sixth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91565/original.jpg",
+      "synopsis": "I accept her challenge. What is the principal doing to that deer? Death or die! Mio-chan, stop! You'll kill yourself!",
+      "airdate": "2011-05-08",
+      "markers": [],
+      "external_id": "91565"
+    },
+    {
+      "n": 7,
+      "title": "Nichijou The Seventh",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91566/original.jpg",
+      "synopsis": "This is simply our just God's punishment, Albert. Are you dating anyone right now? If I don't pawn this scythe and buy some food, I'll die. If you get this question right, you'll receive an arm!",
+      "airdate": "2011-05-15",
+      "markers": [],
+      "external_id": "91566"
+    },
+    {
+      "n": 8,
+      "title": "Nichijou The Eighth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91567/original.jpg",
+      "synopsis": "I've got an explosive desire to visit an air-raid shelter! Everything you own is garbage! Just let me take it off when I'm ready. He made a snot bubble. A masterpiece.",
+      "airdate": "2011-05-22",
+      "markers": [],
+      "external_id": "91567"
+    },
+    {
+      "n": 9,
+      "title": "Nichijou The Ninth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91568/original.jpg",
+      "synopsis": "I'm dreaming. I must be dreaming... They may maintain their flavor, but they're not maintaining their spirit! No matter how many I kill, they never learn their lesson. My lower half is unprotected!",
+      "airdate": "2011-05-29",
+      "markers": [],
+      "external_id": "91568"
+    },
+    {
+      "n": 10,
+      "title": "Nichijou The Tenth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91569/original.jpg",
+      "synopsis": "Someone put in stained glass! Don't expect us to have infinite water! Did you know mature people don't eat snacks? When I grow up, I want to be a frill-necked lizard.",
+      "airdate": "2011-06-05",
+      "markers": [],
+      "external_id": "91569"
+    },
+    {
+      "n": 11,
+      "title": "Nichijou The Eleventh",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91570/original.jpg",
+      "synopsis": "Pretending to be asleep won't do any good! Super ultra great delicious wonderful bad. That must be the power of Daiku Industries. Surely happiness must taste like mud.",
+      "airdate": "2011-06-12",
+      "markers": [],
+      "external_id": "91570"
+    },
+    {
+      "n": 12,
+      "title": "Nichijou The Twelfth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91571/original.jpg",
+      "synopsis": "It's hot... It's so hot! I'm just hoping aliens invade... 5,000,000 yen per shot.The sleeping princess woke, without a kiss.",
+      "airdate": "2011-06-19",
+      "markers": [],
+      "external_id": "91571"
+    },
+    {
+      "n": 13,
+      "title": "Nichijou The Thirteenth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91572/original.jpg",
+      "synopsis": "The kid is up to something ridiculous again. Your trick is out in the open! Buy it! Buy it! Buy it! Buy it! Starting tomorrow, you can go to school.",
+      "airdate": "2011-06-26",
+      "markers": [],
+      "external_id": "91572"
+    },
+    {
+      "n": 14,
+      "title": "Nichijou The Fourteenth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91573/original.jpg",
+      "synopsis": "Nano goes to school, the Go-Soccer Club learns the rules, while Mio and Yukko yell compliments at each other.",
+      "airdate": "2011-07-04",
+      "markers": [],
+      "external_id": "91573"
+    },
+    {
+      "n": 15,
+      "title": "Nichijou The Fifteenth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91574/original.jpg",
+      "synopsis": "Everybody's out to prove that Nano's really a robot — especially the science teacher. The Professor gives Nano a machine gun arm and a new \"Reaction function.\" Meanwhile, Mr. Takasaki sets his sights on the student advisor, Ms. Sakurai.",
+      "airdate": "2011-07-11",
+      "markers": [],
+      "external_id": "91574"
+    },
+    {
+      "n": 16,
+      "title": "Nichijou The Sixteenth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91575/original.jpg",
+      "synopsis": "Yukko can't order a cup of coffee, Mio has to fight to keep her secret. And Nano gets a suprise visit at home.",
+      "airdate": "2011-07-18",
+      "markers": [],
+      "external_id": "91575"
+    },
+    {
+      "n": 17,
+      "title": "Nichijou The Seventeenth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91576/original.jpg",
+      "synopsis": "Sakamoto loses his scarf to a very polite crow, three people are buried alive, and Yukko is determined to no longer call out Mai's jokes.",
+      "airdate": "2011-07-25",
+      "markers": [],
+      "external_id": "91576"
+    },
+    {
+      "n": 18,
+      "title": "Nichijou The Eighteenth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91577/original.jpg",
+      "synopsis": "Yukko is on her way meet Mai in a neighboring town, where Mai supposedly has a way to get free candy, but on her trip she constantly makes a fool of herself and gains a stalker. The professor creates Biscuit #2, but he isn't that impressive. And the servants of Starla are playing a very deadly game.",
+      "airdate": "2011-07-31",
+      "markers": [],
+      "external_id": "91577"
+    },
+    {
+      "n": 19,
+      "title": "Nichijou The Nineteenth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91578/original.jpg",
+      "synopsis": "Yukko tries her best to teach Mio. Sakamoto and the Professor have a fight. And we witness a high level, no holds barred game of Go-Soccer.",
+      "airdate": "2011-08-07",
+      "markers": [],
+      "external_id": "91578"
+    },
+    {
+      "n": 20,
+      "title": "Nichijou The Twentieth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91579/original.jpg",
+      "synopsis": "Mio has enlisted her friends to help her finish her manga. The material proves to be to risqué for Nano, Yukko doesn’t want to screw up, and Mai is bored.",
+      "airdate": "2011-08-14",
+      "markers": [],
+      "external_id": "91579"
+    },
+    {
+      "n": 21,
+      "title": "Nichijou The Twenty First",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91580/original.jpg",
+      "synopsis": "Misato, Weboshi, and Fe-chan talk about their current love interest. Mr. Takashi runs into Ms. Sakurai; is this a date!? The soldiers can’t find the last wooden cube, but a new challenger appears.",
+      "airdate": "2011-08-21",
+      "markers": [],
+      "external_id": "91580"
+    },
+    {
+      "n": 22,
+      "title": "Nichijou The Twenty Second",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91581/original.jpg",
+      "synopsis": "Tsuyoshi attempts to disprove exorcisms. Fe-chan tries to look on the bright side of life, while Sakamoto and the Professor are surrounded by terrifying dogs.",
+      "airdate": "2011-08-28",
+      "markers": [],
+      "external_id": "91581"
+    },
+    {
+      "n": 23,
+      "title": "Nichijou The Twenty Third",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91582/original.jpg",
+      "synopsis": "Mio is poisoned, Makoto is caught, Yukko makes a tough decision, and Mai tries to make peace with the Professor.",
+      "airdate": "2011-09-04",
+      "markers": [],
+      "external_id": "91582"
+    },
+    {
+      "n": 24,
+      "title": "Nichijou The Twenty Fourth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91583/original.jpg",
+      "synopsis": "Yukko has big news! Mihoshi and Misato share a sister moment. And who does Nano love more?",
+      "airdate": "2011-09-11",
+      "markers": [],
+      "external_id": "91583"
+    },
+    {
+      "n": 25,
+      "title": "Nichijou The Twenty Fifth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91584/original.jpg",
+      "synopsis": "Misato and Sasahara get a little closer, Mio goes for a run, and Nakamura enters the lair of the beast.",
+      "airdate": "2011-09-18",
+      "markers": [],
+      "external_id": "91584"
+    },
+    {
+      "n": 26,
+      "title": "Nichijou The Twenty Sixth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91585/original.jpg",
+      "synopsis": "Let's have a birthday party for Nano! Professor, what do you mean, \"a little one?\" Got it! I'll take this ugly one away, too! Cake, cake, cake!",
+      "airdate": "2011-09-25",
+      "markers": [],
+      "external_id": "91585"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hyadain no Kakakata kataomoi-C (ヒャダインのカカカタ☆カタオモイ-C)",
+      "artist": "Hyadain",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Zzz",
+      "artist": "Sayaka Sasaki",
+      "episodes": "1-6"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Hyadain no Jōjō Yūjō (ヒャダインのじょーじょーゆーじょー)",
+      "artist": "Hyadain",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Zzz (A cappella)",
+      "artist": "Sayaka Sasaki",
+      "episodes": "7-9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Zzz (Bossa Nova)",
+      "artist": "Sayaka Sasaki",
+      "episodes": "10-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Tsubasa o Kudasai (翼をください)",
+      "artist": "Sayaka Sasaki",
+      "episodes": "14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Kikyū ni Notte Doko made mo (気球にのってどこまでも)",
+      "artist": "Nano Shinonome, Hakase, Sakamoto-san",
+      "episodes": "15"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "My Ballad (マイ バラード)",
+      "artist": "Sayaka Sasaki",
+      "episodes": "16"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Kaijyuu no Ballad (怪獣のバラード) By Yuuko, Mio, Mai (ep 17)",
+      "artist": "Unknown",
+      "episodes": "17"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Green Green",
+      "artist": "Sayaka Sasaki",
+      "episodes": "18"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "Ano Subarashī Ai o Mō Ichido (あの素晴らしい愛をもう一度)",
+      "artist": "Sayaka Sasaki",
+      "episodes": "20"
+    }
+  ],
+  "relations": []
+}

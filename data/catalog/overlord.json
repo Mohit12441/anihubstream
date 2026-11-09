@@ -1,0 +1,259 @@
+{
+  "id": "overlord",
+  "title": "Overlord",
+  "native": "オーバーロード",
+  "year": 2015,
+  "rating": 7.6,
+  "season": "Summer 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20832-vUNm5zrYWifc.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20832-vUNm5zrYWifc.jpg",
+  "accent": "#505de4",
+  "synopsis": "The story takes place in the year 2138 when virtual reality gaming is booming. Yggdrasil, a popular online game is quietly shut down one day. However, the protagonist Momonga decides to not log out. Momonga is then transformed into the image of a skeleton as \"the most powerful wizard.\" The world continues to change, with non-player characters (NPCs) beginning to feel emotion. Having no parents, friends, or place in society, this ordinary young man Momonga then strives to take over the new world the game has become.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "overlord-27mm8m",
+    "mal": 29803,
+    "anilist": 20832,
+    "kitsu": 9965
+  },
+  "skip_key_id": 29803,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "overlord オーハ ーロート tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "End and Beginning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177914/original.jpg",
+      "synopsis": "Momonga is a regular salaryman who leads a guild in an DMMO-RPG known as Yggdrasil. After twelve years of playing the game, the servers are finally shutting down. Momonga logs in for the last time, seeing the game to its end. However, after the clock strikes midnight, nothing changes.",
+      "airdate": "2015-07-07",
+      "markers": [],
+      "external_id": "177914"
+    },
+    {
+      "n": 2,
+      "title": "Floor Guardians",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177915/original.jpg",
+      "synopsis": "Grateful that they weren't cast aside, the floor guardians experience the rule of their true master for the first time. Momonga quickly assess the situation and works toward protecting the tomb from invaders while contemplating what he must do.",
+      "airdate": "2015-07-14",
+      "markers": [],
+      "external_id": "177915"
+    },
+    {
+      "n": 3,
+      "title": "Battle at Carne Village",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177916/original.jpg",
+      "synopsis": "Momonga continues his efforts to protect Nazarick from the unknown forces he may be up against in this world. As he manipulates the Mirror of Remote Viewing, he notices a village being attacked and decides to test his strength against humans.",
+      "airdate": "2015-07-21",
+      "markers": [],
+      "external_id": "177916"
+    },
+    {
+      "n": 4,
+      "title": "Ruler of Death",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177917/original.jpg",
+      "synopsis": "Momonga finds that the attackers of Carne Village were Slane Theocracy soldiers dressed as people from the Baharuth Empire. As the attack to lure and eliminate Gazef Stronoff continues, Momonga takes this chance to continue his tests...",
+      "airdate": "2015-07-28",
+      "markers": [],
+      "external_id": "177917"
+    },
+    {
+      "n": 5,
+      "title": "Two Adventurers",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177918/original.jpg",
+      "synopsis": "Momonga sets out with Narberal disguised as humans under the names of Momon and Nabe for the city of E-Rantel. There they register to become adventurers in order to gain more information about this unknown world. As they do, evil gathers around them.",
+      "airdate": "2015-08-04",
+      "markers": [],
+      "external_id": "177918"
+    },
+    {
+      "n": 6,
+      "title": "Journey",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177919/original.jpg",
+      "synopsis": "While Momonga has some doubts, he accepts Nphirea Balear's request under the condition that the members of the Swords of Darkness join them. Though her urge to kill keeps distracting her, Clementine continues to slowly find her way to Nphirea.",
+      "airdate": "2015-08-11",
+      "markers": [],
+      "external_id": "177919"
+    },
+    {
+      "n": 7,
+      "title": "Wise King of Forest",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177920/original.jpg",
+      "synopsis": "Momonga and his group continue to Carne Village. There they see that the villagers are working toward fortifying their defenses against possible future enemies. Nphirea meets up with Enri and asks her about this man named Ains Ooal Gown.",
+      "airdate": "2015-08-18",
+      "markers": [],
+      "external_id": "177920"
+    },
+    {
+      "n": 8,
+      "title": "Twin Swords of Slashing Death",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177921/original.jpg",
+      "synopsis": "After Momonga registers Hamusuke with the guild, he goes to Nphirea's home to find that his client has been kidnapped. The zombified remains of the Swords of Darkness litter the storage room. And there, Momonga finds the tortured body of Ninya.",
+      "airdate": "2015-08-25",
+      "markers": [],
+      "external_id": "177921"
+    },
+    {
+      "n": 9,
+      "title": "The Dark Warrior",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177922/original.jpg",
+      "synopsis": "Momonga and Narberal begin their respective battles against Clementine and Khajit. Momonga takes this chance to learn about the mechanics of fighting in this world, but in the end, he must show Clementine the consequences of offending him.",
+      "airdate": "2015-09-01",
+      "markers": [],
+      "external_id": "177922"
+    },
+    {
+      "n": 10,
+      "title": "True Vampire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177923/original.jpg",
+      "synopsis": "Momonga finds out that Shalltear has revolted against him, due to something that had happened while she was on her mission with Sebas and Solution. The story rewinds a bit and goes over that very event. What could possibly change her loyalty to him?",
+      "airdate": "2015-09-08",
+      "markers": [],
+      "external_id": "177923"
+    },
+    {
+      "n": 11,
+      "title": "Confusion and Understanding",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177924/original.jpg",
+      "synopsis": "Momonga does damage control at the guild while he assesses the reason for Shalltear's revolt. Coming to the conclusion that she is under an incurable status effect, Momonga goes to the treasury to retrieve some of the powerful weapons of Nazarick.",
+      "airdate": "2015-09-15",
+      "markers": [],
+      "external_id": "177924"
+    },
+    {
+      "n": 12,
+      "title": "The Bloody Valkyrie",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177925/original.jpg",
+      "synopsis": "Though Shalltear's skill set puts Momonga at a complete disadvantage, he steps forward into battle. He gave various world items to his guardians to ensure the safety of Nazarick in his absence. Now, all that is left is a battle of life and death!",
+      "airdate": "2015-09-22",
+      "markers": [],
+      "external_id": "177925"
+    },
+    {
+      "n": 13,
+      "title": "Player VS Non Player Character",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177926/original.jpg",
+      "synopsis": "Momonga reminds Shalltear that he is the master of Nazarick and that his name carries the weight of all the supreme beings of Ains Ooal Gown. After the battle comes to a close, Momonga quickly takes action to strengthen the defenses of Nazarick.",
+      "airdate": "2015-09-29",
+      "markers": [],
+      "external_id": "177926"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "HOLLOW HUNGER",
+      "artist": "OxT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "No Man's Dawn",
+      "artist": "Mayu Maeshima",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "VORACITY",
+      "artist": "MYTH & ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Silent Solitude",
+      "artist": "OxT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Laughter Slaughter",
+      "artist": "OxT",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Go Cry Go",
+      "artist": "OxT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hydra",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Crazy Scary Holy Fantasy",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Clattanoia",
+      "artist": "OxT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "L.L.L.",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

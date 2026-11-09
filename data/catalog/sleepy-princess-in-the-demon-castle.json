@@ -1,0 +1,341 @@
+{
+  "id": "sleepy-princess-in-the-demon-castle",
+  "title": "Sleepy Princess in the Demon Castle",
+  "native": "魔王城でおやすみ",
+  "year": 2020,
+  "rating": 7.8,
+  "season": "Fall 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx111428-JGrnjBDHLGQb.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx111428-JGrnjBDHLGQb.png",
+  "accent": "#e45d86",
+  "synopsis": "Sshhh! Princess Syalis is trying to get a good night's sleep. Some shut-eye. Forty winks. Catch some Z's. Long ago in olden times when people and demons lived together in—well, disharmony, really—a demon king kidnaps a human princess and imprisons her in his castle. Bereft, the princess's subjects beat their chests in anguish…until a hero arises to spearhead Project Rescue Our Princess! While waiting for her knight in shining armor, what's an imprisoned princess to do...? Teddy-bear guards with bat wings are all very well, but her dungeon cell is bo-o-o-ring! So, she decides to wile away the long hours by sleeping. Now if only she could get comfortable…and didn't suffer from insomnia...\n\n(Source: VIZ Media)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42551,
+    "anilist": 111428,
+    "mal": 40397
+  },
+  "skip_key_id": 40397,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 15:35:17",
+  "search_text": "sleepy princess in the demon castle 魔王城て おやすみ tv finished",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sleepless Princess of the Castle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1edca0f03f367d854bf30f03fe2c25541645526109_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 291,
+          "end": 381
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1411
+        }
+      ],
+      "external_id": "287587"
+    },
+    {
+      "n": 2,
+      "title": "The Princess and Furious Fluff",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/ffc94c7df9b056a5043c1cc3409203ab1645526291_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 137,
+          "end": 227
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1417
+        }
+      ],
+      "external_id": "287588"
+    },
+    {
+      "n": 3,
+      "title": "The Princess and Forbidden Knowledge",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/08d509ebe05d1fb9ffbfd223ac4082241645526413_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 71,
+          "end": 161
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1287,
+          "end": 1379
+        }
+      ],
+      "external_id": "288083"
+    },
+    {
+      "n": 4,
+      "title": "The Princess, Destruction, and a Short Journey",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/695faef079ef907ce7241db9b3ceb6761645526655_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 122,
+          "end": 212
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1415
+        }
+      ],
+      "external_id": "288185"
+    },
+    {
+      "n": 5,
+      "title": "The Princess and Female Warriors",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/1d6d46969e8e4e6ce4f3c6790a501e471645526761_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 90,
+          "end": 180
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1421
+        }
+      ],
+      "external_id": "288186"
+    },
+    {
+      "n": 6,
+      "title": "The Princess’ Unwavering Choice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8b94b4ebe13de6756914947260f03a171645526888_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 74,
+          "end": 164
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1360
+        }
+      ],
+      "external_id": "288187"
+    },
+    {
+      "n": 7,
+      "title": "Even More Sleepless Princess of the Castle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e851b8f3e7a7683a5a2bfd75804244971645527009_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 71,
+          "end": 163
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "288188"
+    },
+    {
+      "n": 8,
+      "title": "The Princess and the Frightful Demon Nightmare",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c6798203643188e9d84c2e2caec507fb1645527128_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 120,
+          "end": 210
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1416
+        }
+      ],
+      "external_id": "288189"
+    },
+    {
+      "n": 9,
+      "title": "The Princess and Hostage Training Week",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/88d7472ef28522554cb261969733c6ed1645527153_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 158,
+          "end": 249
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1416
+        }
+      ],
+      "external_id": "288190"
+    },
+    {
+      "n": 10,
+      "title": "The Princess in Endopolis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/7cd4735ed145d50f37995110209846f81645527262_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1302,
+          "end": 1392
+        }
+      ],
+      "external_id": "288191"
+    },
+    {
+      "n": 11,
+      "title": "The Princess and Troubling Dreams",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/87b80272be7a65f77304626e14fecdf41645527368_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 84,
+          "end": 174
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1416
+        }
+      ],
+      "external_id": "288192"
+    },
+    {
+      "n": 12,
+      "title": "Sleeping Princess of the Demon Castle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/6fb568f4049b0c744cc003d108f611571645527429_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 77,
+          "end": 168
+        }
+      ],
+      "external_id": "288193"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kaimin! Anmin! Syalist Seikatsu",
+      "artist": "Inori Minase",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gimmme!",
+      "artist": "ORESAMA",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

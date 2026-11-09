@@ -1,0 +1,66 @@
+{
+  "id": "spirited-away",
+  "title": "Spirited Away",
+  "native": "千と千尋の神隠し",
+  "year": 2001,
+  "rating": 8.6,
+  "season": "Summer 2001",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx199-sWefXJvXkDOb.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199-sWefXJvXkDOb.jpg",
+  "accent": "#e45d5d",
+  "synopsis": "On the way to their new home, 10-year-old Chihiro Ogino's family stumbles upon a deserted theme park. Intrigued, the family investigates the park, though unbeknownst to them, it is secretly inhabited by spirits who sleep by day and appear at night. When Chihiro's mother and father eat food from a restaurant in the street, angry spirits turn them into pigs. Furthermore, a wide sea has appeared between the spirit world and the human one, trapping Chihiro, the sole human, in a land of spirits. Luckily for her though, a mysterious boy named Haku appears, claiming to know her from the past. Under his instructions, Chihiro secures a job in the bathhouse where Haku works. With only her courage and some new found friends to aid her, Chihiro embarks on a journey to turn her parents back to their original forms and return home.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 176,
+    "anilist": 199,
+    "mal": 199,
+    "hianime": "spirited-away-j3zgkd"
+  },
+  "skip_key_id": 199,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 02:14:09",
+  "search_text": "spirited away 千と千尋の神隠し movie finished",
+  "genres": [
+    "adventure",
+    "drama",
+    "fantasy",
+    "isekai",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Spirited Away (Movie)",
+      "runtime": "125:00",
+      "runtime_seconds": 7500,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199-sWefXJvXkDOb.jpg",
+      "synopsis": "On the way to their new home, 10-year-old Chihiro Ogino's family stumbles upon a deserted theme park. Intrigued, the family investigates the park, though unbeknownst to them, it is secretly inhabited by spirits who sleep by day and appear at night. When Chihiro's mother and father eat food from a restaurant in the street, angry spirits turn them into pigs. Furthermore, a wide sea has appeared between the spirit world and the human one, trapping Chihiro, the sole human, in a land of spirits. Luckily for her though, a mysterious boy named Haku appears, claiming to know her from the past. Under his instructions, Chihiro secures a job in the bathhouse where Haku works. With only her courage and some new found friends to aid her, Chihiro embarks on a journey to turn her parents back to their original forms and return home.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "4891"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Itsumo Nando de mo (いつも何度でも; Always with Me)",
+      "artist": "Yumi Kimura",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

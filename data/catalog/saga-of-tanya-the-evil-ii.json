@@ -1,0 +1,93 @@
+{
+  "id": "saga-of-tanya-the-evil-ii",
+  "title": "Saga of Tanya the Evil Season 2",
+  "native": "幼女戦記Ⅱ",
+  "year": 2026,
+  "rating": 8,
+  "season": "Summer 2026",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx135865-T7XIPMAbqcxN.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx135865-T7XIPMAbqcxN.png",
+  "accent": "#e46b28",
+  "synopsis": "The second season of Youjo Senki.",
+  "rank": null,
+  "trend_rank": 46,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "saga-of-tanya-the-evil-ii-mbbjdb",
+    "mal": 49233,
+    "anilist": 135865,
+    "kitsu": 44778
+  },
+  "skip_key_id": 49233,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "saga of tanya the evil season 2 幼女戦記ii tv finished",
+  "genres": [
+    "action",
+    "fantasy"
+  ],
+  "episodes": [],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Why? RED induction",
+      "artist": "MYTH & ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Weiter! Weiter!",
+      "artist": "Aoi Yūki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Los! Los! Los!",
+      "artist": "Tanya Degurechaff [Aoi Yūki]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Remembrance",
+      "artist": "MYTH & ROID",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "JINGO JUNGLE",
+      "artist": "MYTH&ROID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Los! Los! Los!",
+      "artist": "Aoi Yūki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sensen no Realism (戦線のリアリズム; Realism of the Front)",
+      "artist": "Mako Niina",
+      "episodes": "8"
+    }
+  ],
+  "relations": []
+}

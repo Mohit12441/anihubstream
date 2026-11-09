@@ -1,0 +1,244 @@
+{
+  "id": "sound-euphonium",
+  "title": "Sound! Euphonium",
+  "native": "響け！ユーフォニアム",
+  "year": 2015,
+  "rating": 8,
+  "season": "Spring 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20912-SiiG4HPrjQlX.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20912-SiiG4HPrjQlX.jpg",
+  "accent": "#5dc9e4",
+  "synopsis": "Spring in the first year of high school. Kumiko, a member of the brass band in junior high school, visits the high school brass band club with classmates Hazuki and Sapphire. There, she comes across Reina, her former classmate from junior high. Hazuki and Sapphire decide to join the club, but Kumiko can’t make up her mind. She recollects her experience with Reina at a competition in junior high school.\n\n(Source: Pony Canyon USA)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sound!-euphonium-ecw1s4",
+    "mal": 27989,
+    "anilist": 20912,
+    "kitsu": 9980
+  },
+  "skip_key_id": 27989,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "sound euphonium 響け ユーフォニアム tv finished",
+  "genres": [
+    "drama",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Welcome to High School",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177061/original.jpg",
+      "synopsis": "Kumiko enters Kitauji High School having been unable to forget what Reina said at a middle school concert band competition. She goes to visit the concert band at school along with classmates Hazuki and Sapphire, where they meet Reina again.",
+      "airdate": "2015-04-08",
+      "markers": [],
+      "external_id": "177061"
+    },
+    {
+      "n": 2,
+      "title": "Nice to Meet You, Euphonium",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177062/original.jpg",
+      "synopsis": "Kumiko and the others join the concert band, and they choose their instruments. Their eccentric senior, Asuka, still likes to mess with them.",
+      "airdate": "2015-04-15",
+      "markers": [],
+      "external_id": "177062"
+    },
+    {
+      "n": 3,
+      "title": "The First Ensemble",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177063/original.jpg",
+      "synopsis": "Kitauji High School Concert Band is preparing their parts for the ensemble, but some students are fooling around when they should be practicing.",
+      "airdate": "2015-04-22",
+      "markers": [],
+      "external_id": "177063"
+    },
+    {
+      "n": 4,
+      "title": "Singing Solfège",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177064/original.jpg",
+      "synopsis": "Kumiko and the others prepare for Sunrise Festival. Kumiko and Shuichi talk about Taki-sensei on the way home from school, when they run into Reina.",
+      "airdate": "2015-04-29",
+      "markers": [],
+      "external_id": "177064"
+    },
+    {
+      "n": 5,
+      "title": "Festival Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177065/original.jpg",
+      "synopsis": "The concert band receives their marching band uniforms and begins marching practice in preperation for SunFes. Things are different now, with the members all more engaged in practice. And SunFes day arrives.",
+      "airdate": "2015-05-06",
+      "markers": [],
+      "external_id": "177065"
+    },
+    {
+      "n": 6,
+      "title": "Twinkle, Twinkle, Little Tuba",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177066/original.jpg",
+      "synopsis": "Starting this year, the band holds auditions for members participating in the competition. First-year Hazuki has a chance, too. The bass section does everything they can to encourage her.",
+      "airdate": "2015-05-13",
+      "markers": [],
+      "external_id": "177066"
+    },
+    {
+      "n": 7,
+      "title": "Crybaby Saxophone",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177067/original.jpg",
+      "synopsis": "The band is hard at work preparing for the audition and the competition. Aoi has trouble with her part, to which Taki says, \"when will you be better by?\"",
+      "airdate": "2015-05-20",
+      "markers": [],
+      "external_id": "177067"
+    },
+    {
+      "n": 8,
+      "title": "Festival Triangle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177068/original.jpg",
+      "synopsis": "The band is abuzz with talk about who they'll be going to the upcoming festival with. There's someone Hazuki wants to go with, but that someone is already going with someone else. Meanwhile Kumiko somehow ends up going with you-know-who.",
+      "airdate": "2015-05-27",
+      "markers": [],
+      "external_id": "177068"
+    },
+    {
+      "n": 9,
+      "title": "Please, Audition",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177069/original.jpg",
+      "synopsis": "The audition for the competition participants has come. Everyone must demonstrate their abilities, whether they're a third-year or a first-year. And then, the results are revealed.",
+      "airdate": "2015-06-03",
+      "markers": [],
+      "external_id": "177069"
+    },
+    {
+      "n": 10,
+      "title": "Straight Trumpet",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177070/original.jpg",
+      "synopsis": "The band suspects Taki played favorites in choosing Reina in the auditions. Noticing the band's rising distrust of Taki and Reina, he makes a proposal.",
+      "airdate": "2015-06-10",
+      "markers": [],
+      "external_id": "177070"
+    },
+    {
+      "n": 11,
+      "title": "Welcome back, Audition",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177071/original.jpg",
+      "synopsis": "Taki-sensei's proposal relieves the upset within the band, and everyone returns to practicing. Reina no longer isolates herself either, much to Kumiko's relief. But then she sees Yuko, who's been antagonizing Reina, speaking with her.",
+      "airdate": "2015-06-17",
+      "markers": [],
+      "external_id": "177071"
+    },
+    {
+      "n": 12,
+      "title": "My Euphonium",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177072/original.jpg",
+      "synopsis": "The competition's coming up. Kumiko is suddenly asked to play a difficult phrase from a different part. She begins practicing, but...",
+      "airdate": "2015-06-24",
+      "markers": [],
+      "external_id": "177072"
+    },
+    {
+      "n": 13,
+      "title": "Goodbye Competition",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/177073/original.jpg",
+      "synopsis": "The competition performance is \"only\" 12 minutes long. It's both a blink of an eye and an eternity. The Concert Band members bet their entire youths on this competition. And Kitauji High School Concert Band's performance begins.",
+      "airdate": "2015-07-01",
+      "markers": [],
+      "external_id": "177073"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "ReCoda",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Neiro no Kanata",
+      "artist": "Kitauji Quartet",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Blast!",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Soundscape (サウンドスケープ)",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Vivace!",
+      "artist": "Kitauji Quartet",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "DREAM SOLISTER",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tutti! (トゥッティ!)",
+      "artist": "Tomoyo Kurosawa, Ayaka Asai, Chika Anzai, & Moe Toyota",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Dream Solister (Wind Orchestra Ver.)",
+      "artist": "???",
+      "episodes": "13"
+    }
+  ],
+  "relations": []
+}

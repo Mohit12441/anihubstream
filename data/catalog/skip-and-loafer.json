@@ -1,0 +1,192 @@
+{
+  "id": "skip-and-loafer",
+  "title": "Skip and Loafer",
+  "native": "スキップとローファー",
+  "year": 2023,
+  "rating": 8.1,
+  "season": "Spring 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx141911-o6Jwav7hRPPM.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx141911-o6Jwav7hRPPM.jpg",
+  "accent": "#e4d6a1",
+  "synopsis": "This country girl is ready for the big city! Well, at least she thought she was. Mitsumi’s dream is to attend a prestigious school and make the world a better place. But when she finally gets to Tokyo, it turns out she isn’t exactly prepared for city life. Luckily, she runs into Shima, a sweet and handsome classmate who becomes her first friend! Can she make it in Tokyo with Shima by her side?\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "skip-and-loafer-n38cpd",
+    "mal": 50416,
+    "anilist": 141911,
+    "kitsu": 45520
+  },
+  "skip_key_id": 50416,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "skip and loafer スキッフ とローファー tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sparkling-Fresh",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/d881ee7c67d11c4e5d156143d8e2bffd1680622215_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "344986"
+    },
+    {
+      "n": 2,
+      "title": "Fidgeting and Wandering",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/7883c35481866e24d5825bd10e9ea87d1681216668_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "344987"
+    },
+    {
+      "n": 3,
+      "title": "Dreamy and Sparky",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/98cecb0be2aadbb6ae956eced75048161681820462_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "344988"
+    },
+    {
+      "n": 4,
+      "title": "Tingling and Scraping",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/73361cdc879d7e4a0d7a97ea6e6c65b41682426464_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "344989"
+    },
+    {
+      "n": 5,
+      "title": "Prickly and Giddy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4f40b76f1db7e60617fb12ec5bf9f0df1683037346_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "344990"
+    },
+    {
+      "n": 6,
+      "title": "Drizzling and Flickering",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/77da9c388ec6948b43d888394ef31a4f1683646318_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "344991"
+    },
+    {
+      "n": 7,
+      "title": "Hectic and Hot Stuff",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/56352dcfb9c97b935a4514a9a6e381f51684242938_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "344992"
+    },
+    {
+      "n": 8,
+      "title": "Heat and Complications",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b6c9c5b6ce6ae7089befee926c58cca61684852864_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "344993"
+    },
+    {
+      "n": 9,
+      "title": "Drowsy and Peppy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c6b20c9d33856933bad01f9c638dfd131685451917_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "344994"
+    },
+    {
+      "n": 10,
+      "title": "Scrambling and Dripping",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/fbe2c250c76227218e088cba7ab2bd1c1686028259_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "344995"
+    },
+    {
+      "n": 11,
+      "title": "Hype and Excitement",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/63ce488ff057cccbfc29e5cf7df7c84d1686669786_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "344996"
+    },
+    {
+      "n": 12,
+      "title": "Shining",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/fe5513ebec4c59d915479ed27be159d81687264760_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "344997"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mellow (メロウ)",
+      "artist": "Keina Suda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hanauta to Mawarimichi (ハナウタとまわり道)",
+      "artist": "Rikako Aida",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

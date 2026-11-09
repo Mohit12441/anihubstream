@@ -1,0 +1,634 @@
+{
+  "id": "sailor-moon-s",
+  "title": "Sailor Moon S",
+  "native": "美少女戦士セーラームーン S",
+  "year": 1994,
+  "rating": 7.8,
+  "season": "Spring 1994",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx532-D6yrPcsSxhSE.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx532-D6yrPcsSxhSE.jpg",
+  "accent": "#fed650",
+  "synopsis": "This season makes a turning point in the Sailor Moon story. The Sailor Senshi are confronted by a new enemy, the Death Busters. Rei had a premonition that this enemy would rule the world in an era called the Silence. To do this, the Death Busters need to find the three Talismans that would summon the Holy Grail. However, two mysterious Sailor Senshi, Sailor Uranus and Sailor Neptune, plan to find the Talismans before them... but without Sailor Moon's help.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sailor-moon-s-s4yakb",
+    "mal": 532,
+    "anilist": 532,
+    "kitsu": 491
+  },
+  "skip_key_id": 532,
+  "skip_key_space": "mal",
+  "episode_total": 38,
+  "added_at": null,
+  "search_text": "sailor moon s 美少女戦士セーラームーン s tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Premonition of World's End? The Appearance of Mysterious New Warriors!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12117/original.jpg",
+      "synopsis": "Rei has a startling premonition while studying with the studying with the\ns at the shrine.  The world is coming to and end! Meanwhile, Professor Tomoe, an evil genius, has presented the Sailor Soldiers with a new threat.  He's created monsters that can steal people's pure hearts!  He won't stop until he finds the three pure heart crystals, which contain the talismans that can bring forth the Holy Grail.  And on top of that, two mysterious warriors appear and are after the pure heart talismans as well!  The sailor soldiers fight bravely against this new threat, but what's this?  They almost lost!  This could mean trouble for the Sailor Soldiers.",
+      "airdate": "1994-03-19",
+      "markers": [],
+      "external_id": "12117"
+    },
+    {
+      "n": 2,
+      "title": "The Rod of Love is Born! Usagi's New Transformation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12118/original.jpg",
+      "synopsis": "Usagi has a nightmare about the light of the Silver Crystal fading and wakes up only to find that it's not a dream!  Mamo-chan tries to cheer her up by taking her to an abandoned church where all the stray cats of the neighborhood live.  Usagi makes friends with a young girl who has been taking care of the cats.  But the little girl's been targeted by a Daimohn named Nekonnell!  Usagi tries to help, but she can't transform.  When all hope seems lost, Usagi's useless broach suddenly transforms into an even more powerful transformation.  With her power restored, Usagi transforms, defeating Nekonnell with an all new attack!  Only seconds before, the two mysterious warriors appeared yet again, but left after they found that the little girls heart did not contain a talisman.  Unfortunately, this is only the beginning for the Sailor Soldiers.",
+      "airdate": "1994-03-26",
+      "markers": [],
+      "external_id": "12118"
+    },
+    {
+      "n": 3,
+      "title": "A Beautiful Boy? The Secret of Haruka Tenou",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12119/original.jpg",
+      "synopsis": "Usagi and Minako meet a young boy and a young lady, and fall for the boy...deciding to follow him around. They are caught by surprise when a daimon appears, and they must fight it...when the help of the mysterious warriors Neptune and Uranus. Later, Usagi and Minako meet the boy finally, and learn that it is a masculine woman.",
+      "airdate": "1994-04-16",
+      "markers": [],
+      "external_id": "12119"
+    },
+    {
+      "n": 4,
+      "title": "Usagi's Idol! The Graceful Genius Michiru",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12120/original.jpg",
+      "synopsis": "Usagi feels lousy and wants to be a better person, like Michiru. Michiru invites her, the girls and Mamoru to a violin concert, and they agree. At the concert, the violinists violin is changed to a daimon named Octave, so the warriors and the mysterious warriors work together to stop Octave, and save the heart.",
+      "airdate": "1994-04-23",
+      "markers": [],
+      "external_id": "12120"
+    },
+    {
+      "n": 5,
+      "title": "Protect the Pure-Heart! A Three-Way Battle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12121/original.jpg",
+      "synopsis": "Usagi's friend (Motoki's sister) Unazuki is the target for this week! When Unazaki's heart is snatched, Sailor Moon goes after the daimon, and so do Uranus and Neptune. Moon, Tuxedo Mask and the mysterious warriors meet up, and faceoff for the heart. They defeat the daimon, but fight each other for that heart.   Neptune and Uranus determine not to be a pure heart, and give it to Moon, who returns it to a dying Unazuki just in time.",
+      "airdate": "1994-04-30",
+      "markers": [],
+      "external_id": "12121"
+    },
+    {
+      "n": 6,
+      "title": "Leave it to the Moon for Love Aid",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12122/original.jpg",
+      "synopsis": "Naru and Umino decide to go for the love contest; along with Haruka and Michiru and other couples. Umino messes up terribly, and is the target. When his pure heart is taken, Moon helps restore it...so Naru and Umino walk off, happier as ever.",
+      "airdate": "1994-05-07",
+      "markers": [],
+      "external_id": "12122"
+    },
+    {
+      "n": 7,
+      "title": "Cold-Hearted Uranus? Makoto in Trouble",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12123/original.jpg",
+      "synopsis": "Makoto, to feel more mature, tries to be exactly like Haruka, and begins to hang around her all the time. Makoto is the target, and is suddenly attacked, so Uranus and Neptune attack her for the heart, when Moon and the others appear for the fight. They return the heart, and jump away. Suddenly, detransformed they pretend the daimon hurt them also, and explain to Makoto she doesn't need to be around Haruka to be mature...and everything is back to normal.",
+      "airdate": "1994-05-14",
+      "markers": [],
+      "external_id": "12123"
+    },
+    {
+      "n": 8,
+      "title": "The Labyrinth of Water! Ami the Targeted",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12124/original.jpg",
+      "synopsis": "Ami's desire to avoid competition leads her to offending Michiru in a swimming race. Meanwhile, a Daimon selects her as a target.",
+      "airdate": "1994-05-21",
+      "markers": [],
+      "external_id": "12124"
+    },
+    {
+      "n": 9,
+      "title": "Save Friends! Moon and Uranus Join Forces",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12125/original.jpg",
+      "synopsis": "Sailor Moon and Sailor Uranus work together to defeat a daimon.",
+      "airdate": "1994-05-28",
+      "markers": [],
+      "external_id": "12125"
+    },
+    {
+      "n": 10,
+      "title": "The Kindness of a Man! Yuichiro, Heartbroken by Rei?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12126/original.jpg",
+      "synopsis": "Worried by Rei's intensive meditation, Yuuichirou becomes concerned that she has fallen for another man. When he sees her with Haruka, he is convinced that she is Rei's new suitor.",
+      "airdate": "1994-06-18",
+      "markers": [],
+      "external_id": "12126"
+    },
+    {
+      "n": 11,
+      "title": "Retire from the Sailor Guardians!? Minako's Concerns",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12127/original.jpg",
+      "synopsis": "Minako is thinking about giving up her power of Sailor Venus. The senshi try to convince her to stay, and in the end she decides she will.",
+      "airdate": "1994-05-25",
+      "markers": [],
+      "external_id": "12127"
+    },
+    {
+      "n": 12,
+      "title": "Usagi in Tears! Glass Shoes for her Birthday",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12128/original.jpg",
+      "synopsis": "Usagi is mad at Mamoru for not knowing its her birthday, but feels guilty because she realizes she never told him when it was. For her birthday, Mamo gets her glass slippers, but the Heart Daimon egg is inside.",
+      "airdate": "1994-07-02",
+      "markers": [],
+      "external_id": "12128"
+    },
+    {
+      "n": 13,
+      "title": "The Pure Heart Stolen! Usagi's Biggest Crisis",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12129/original.jpg",
+      "synopsis": "Sailor Moon's heart crystal was almost stolen. Neptune and Uranus restore it, and the senshi know they are Michiru and Haruka. A battle with Kaori, causes her to fall down to her death and well, she dies.",
+      "airdate": "1994-07-16",
+      "markers": [],
+      "external_id": "12129"
+    },
+    {
+      "n": 14,
+      "title": "The Arrival of the Tiny Pretty Guardian",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12130/original.jpg",
+      "synopsis": "Chibiusa comes to town during a carnival, where all the senshi are working. A singer for the carnival in Eugeal's target, and she is attacked...and all the senshi, including Chibiusa as Chibi Moon, fight to save her heart.",
+      "airdate": "1994-08-06",
+      "markers": [],
+      "external_id": "12130"
+    },
+    {
+      "n": 15,
+      "title": "Seeking Friends! Chibi-Moon's Actions",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12131/original.jpg",
+      "synopsis": "Lonely Chibiusa looks for friends, and when she finds one...it's a target, so they must help to save his heart.",
+      "airdate": "1994-07-20",
+      "markers": [],
+      "external_id": "12131"
+    },
+    {
+      "n": 16,
+      "title": "Wanting More Power! Mako-Chan's Lost Path",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12132/original.jpg",
+      "synopsis": "Makoto loses a fight, and decides to go to a training place with one of the smartest and most courageous trainers of all time, and the girls follow. The master happens to be a target, and they must save his heart as soon as they can, but Jupiter is especially on the job.",
+      "airdate": "1994-08-27",
+      "markers": [],
+      "external_id": "12132"
+    },
+    {
+      "n": 17,
+      "title": "The Bond of Destiny! The Distant Days of Uranus",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12133/original.jpg",
+      "synopsis": "Haruka thinks about old times, while Usagi and the inners explore their soon-to-be high school, where they meet Haruka's old racing friend, Elsa Gray...who is a target. Uranus and Neptune, along with the inners, fight to save her heart against the daimon, and her heart is not pure, so it is restored.",
+      "airdate": "1994-09-03",
+      "markers": [],
+      "external_id": "12133"
+    },
+    {
+      "n": 18,
+      "title": "Art is an Explosion of Love! Chibi-Usa's First Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12134/original.jpg",
+      "synopsis": "In art class, Chibiusa falls in love with a boy in her class. But the boy does not like her back, in fact, he's in love with the teacher, Michiru Kaioh. This makes Chibiusa mad. Chibiusa will do anything to impress him, of course Usagi tries to help too, guess where that leaves Chibiusa. The daimon made from clay attacks the boy and everyone there. Eugeal drives away like a coward after being yelled at. Neptune and Uranus fight the clay things, and Uranus is knocked over the edge. Neptune throws it into the water and it dies. Uranus gets back up and throws away the other one. The boys heart is not pure, and he is saved.",
+      "airdate": "1994-09-10",
+      "markers": [],
+      "external_id": "12134"
+    },
+    {
+      "n": 19,
+      "title": "Usagi's Dance, In Time to a Waltz",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12135/original.jpg",
+      "synopsis": "Usagi and the girls are studying at Mamoru's house, when a man named Edwards comes at the door, speaking English, and invites them all to a party...however, Mamoru must now be able to teach them English. At the party, Usagi is behind on her English skills, winds up getting drunk and Haruka winds up being the hit of the party. When the daimons attack, they transform...and must now saved Edwards pure heart.",
+      "airdate": "1994-09-17",
+      "markers": [],
+      "external_id": "12135"
+    },
+    {
+      "n": 20,
+      "title": "A Time of Shock! True Identities Revealed to One Another",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12136/original.jpg",
+      "synopsis": "Minako becomes upset that a Daimon had not attacked her, and she feels that she does not have a pure heart. She is attacked, and her pure heart is taken from her. The Outer Senshi and Guardian Senshi learn each others identities.",
+      "airdate": "1994-09-24",
+      "markers": [],
+      "external_id": "12136"
+    },
+    {
+      "n": 21,
+      "title": "Death of Uranus and Neptune!? Talismans Appear",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12137/original.jpg",
+      "synopsis": "The time has come! Eugeal wants a fight with Neptune and Uranus, and they will sacrifice even each other to get the talismans. But then they learn that they, and Pluto, hold the talismans. Neptune's Mirror, Uranus' Sword and Pluto's Garnet Orb.",
+      "airdate": "1994-10-15",
+      "markers": [],
+      "external_id": "12137"
+    },
+    {
+      "n": 22,
+      "title": "The Grail's Divine Power! Moon's Double Transformation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12138/original.jpg",
+      "synopsis": "Sailor Pluto appears and reawakens Sailor Uranus and Sailor Neptune, and the three talismans resonate with each other (The third being Pluto's Garnet Orb). The Holy Grail appears, and Sailor Moon drives Eudial out. Mimete kills Eudial by sabotaging her car.",
+      "airdate": "1994-10-22",
+      "markers": [],
+      "external_id": "12138"
+    },
+    {
+      "n": 23,
+      "title": "Who is the True Messiah? Chaos of Light and Darkness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12139/original.jpg",
+      "synopsis": "Chibi-Usa meets up with Hotaru Tomoe, who has quite a darkside.",
+      "airdate": "1994-11-05",
+      "markers": [],
+      "external_id": "12139"
+    },
+    {
+      "n": 24,
+      "title": "A House Full of Evil Presence! The Secret of the Beautiful Girl, Hotaru",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12140/original.jpg",
+      "synopsis": "Usagi discovers that Kaori is alive and posing as Tomoe maid. Does Hotaru have anything to do with the messiah?",
+      "airdate": "1994-11-12",
+      "markers": [],
+      "external_id": "12140"
+    },
+    {
+      "n": 25,
+      "title": "Crazy for Celebrities! Mimete in Doubt",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12141/original.jpg",
+      "synopsis": "Mimet is a fan of idols. Will this affect her abilities as a Death Buster?",
+      "airdate": "1994-11-19",
+      "markers": [],
+      "external_id": "12141"
+    },
+    {
+      "n": 26,
+      "title": "Shadow of Silence!? The Pale Glimmer of a Firefly",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12142/original.jpg",
+      "synopsis": "Mimete attacks a soap opera actor. Hotaru’s past without friends is shown, and the reasons for it. A Daimon who was attacking runs near Hotaru, who glows and completely freezes the Daimon who is destroyed by Sailor Moon.",
+      "airdate": "1994-11-26",
+      "markers": [],
+      "external_id": "12142"
+    },
+    {
+      "n": 27,
+      "title": "Sunny Skies After a Storm! A Friendship Dedicated to Hotaru",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12143/original.jpg",
+      "synopsis": "A man who grows roses invites the Senshi in, and shows them their beauty. Mimete breaks a window, causing chaos, and attacks him. Later, he and Hotaru fix the window.",
+      "airdate": "1994-12-03",
+      "markers": [],
+      "external_id": "12143"
+    },
+    {
+      "n": 28,
+      "title": "Higher, Stronger! Cheers by Usagi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12144/original.jpg",
+      "synopsis": "Everyone begins to learn more about the outer soliders through Mamoru's story.",
+      "airdate": "1994-12-10",
+      "markers": [],
+      "external_id": "12144"
+    },
+    {
+      "n": 29,
+      "title": "The Battle in a Demonic Dimension! The Sailor Guardians' Bet",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12145/original.jpg",
+      "synopsis": "Mimete attempts to create a Daimon by herself, throwing the entire Tomoe house into another dimension. The senshi enter the dimension and are defeated by a game-master Daimon named U-Ikasaman. Hotaru manages to assist in her defeat by the use of a bluff.",
+      "airdate": "1994-12-17",
+      "markers": [],
+      "external_id": "12145"
+    },
+    {
+      "n": 30,
+      "title": "Awakening of the Messiah of Silence? Stars of Destiny",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12146/original.jpg",
+      "synopsis": "The Sailor Senshi visit a planetarium, where a man is attacked by a Daimon. The symbol of Saturn appears on Hotaru’s forehead, and she destroys the Daimon. Sailor Uranus, Neptune, and Pluto attack Hotaru, since she is Sailor Saturn, the messiah of silence, and Sailor Moon takes the blow.",
+      "airdate": "1994-12-24",
+      "markers": [],
+      "external_id": "12146"
+    },
+    {
+      "n": 31,
+      "title": "Invasion from an Alternate Dimension! The Mystery of Mugen Academy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12147/original.jpg",
+      "synopsis": "The girls run through the high school to find Mimet there with computer demons, and with all their power the Soliders defeat them and locks Mimet away.\nMimet faces her demise when she is trapped into her own computer trap for all eternity.",
+      "airdate": "1995-01-07",
+      "markers": [],
+      "external_id": "12147"
+    },
+    {
+      "n": 32,
+      "title": "A Mystic Flower that Steals Hearts! The Third Witch, Telulu",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12148/original.jpg",
+      "synopsis": "Teruru is fighting with a new technique, stealing several hearts at once with various plants, but she is killed.",
+      "airdate": "1995-01-14",
+      "markers": [],
+      "external_id": "12148"
+    },
+    {
+      "n": 33,
+      "title": "Believe in Love! Ami, a Kind-Hearted Guardian",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12149/original.jpg",
+      "synopsis": "Viluy goes around the halls of Mungen High to steal pure hearts! Ami catches her, and with the power of Mercury, tries to stop her. Uranus and Neptune come to the rescue, but even they cannot stop her and her daimon. Moon comes in for the kill on the daimon, but winds up eliminating Viluy along with it.",
+      "airdate": "1995-01-01",
+      "markers": [],
+      "external_id": "12149"
+    },
+    {
+      "n": 34,
+      "title": "Shadows of Destruction! The Awakening of the Messiah of Silence",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12150/original.jpg",
+      "synopsis": "Twin witches, Cyprine and Pitriol steal pure hearts from Mugen Academy students. Chibiusa is abducted, and her pure heart is stolen by Hotaru, turning her into Mistress Nine.",
+      "airdate": "1995-01-28",
+      "markers": [],
+      "external_id": "12150"
+    },
+    {
+      "n": 35,
+      "title": "The Horror of the Approaching Shadow! Eight Guardians in Tough Battle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12151/original.jpg",
+      "synopsis": "Mistress Nine uses all remaining Daimon eggs to create a barrier of minions around Mugen Academy. Sailor Moon is abducted. After witnessing Sailor Pluto sacrificing herself to save them, Uranus and Neptune destroy Germatoid, the Daimon possessing Professor Souichi Tomoe.",
+      "airdate": "1995-02-04",
+      "markers": [],
+      "external_id": "12151"
+    },
+    {
+      "n": 36,
+      "title": "A Bright Shooting Star! Saturn, and the Messiah",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12152/original.jpg",
+      "synopsis": "Sailor Moon is tricked to give Mistress Nine the Holy Grail, which she uses to summon Pharaoh Ninety to earth. Hotaru regains conscious with the assistance of Sailor Moon and her father, destroying Mistress Nine. Sailor Saturn appears to sacrifice herself and destroy Pharaoh Ninety, but Sailor Moon gains the help of the other six Sailor Senshi to become Super Sailor Moon and save both Hotaru and Sailor Saturn.",
+      "airdate": "1995-02-11",
+      "markers": [],
+      "external_id": "12152"
+    },
+    {
+      "n": 37,
+      "title": "A New Life! Time for Separation of the Destined Stars",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12153/original.jpg",
+      "synopsis": "Newborn Hotaru is given to a still-healing Professor Souichi Tomoe. Sailor Uranus and Sailor Neptune attack Sailor Moon, for she protected Hotaru’s body, and risked the world for one life. The Silver Crystal throws them back, and they kneel to her as their leader and leave the city.",
+      "airdate": "1995-02-18",
+      "markers": [],
+      "external_id": "12153"
+    },
+    {
+      "n": 38,
+      "title": "Self-Awareness as a Guardian! Strength Lies in the Pure Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12154/original.jpg",
+      "synopsis": "A final Daimon emerges from the rubble of Mugen Academy and begins to steal pure hearts. Chibiusa leaves for the future, and comes back just in time to help destroy the Daimon.",
+      "airdate": "1995-02-25",
+      "markers": [],
+      "external_id": "12154"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rashiku Ikimasho",
+      "artist": "Meu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Watashitachi Ni Naritakute",
+      "artist": "Miwako Fujitani",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [Pioneer English edited & uncut versions]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Morning Moon de Aimashou",
+      "artist": "Pretty Cast",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nothing At All",
+      "artist": "Sandy Howell [Pioneer English edited version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [Pioneer English edited & uncut versions]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Moonlight Destiny",
+      "artist": "Hiroko Asakawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nothing At All",
+      "artist": "Sandy Howell [Pioneer English edited version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Star Song (セーラースターソング)",
+      "artist": "Kae Hanazawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaze mo Sora mo Kitto… (風も空もきっと…)",
+      "artist": "Arisa Mizuki",
+      "episodes": "1-33"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu (ムーンライト伝説)",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [Cloverway English edited & uncut versions]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sailor Moon Theme (Reprise - Instrumental version)",
+      "artist": "Nicole Price and Brynne Price [Cloverway English edited version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Watashi-tachi ni Naritakute (私たちになりたくて)",
+      "artist": "Miwako Fujitani",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [Cloverway English edited & uncut versions]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sailor Moon Theme (Reprise - Instrumental version)",
+      "artist": "Nicole Price and Brynne Price [Cloverway English edited version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Otome no Policy",
+      "artist": "Yoko Ishida",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Moonlight Densetsu (ムーンライト伝説)",
+      "artist": "Moon Lips",
+      "episodes": "34"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "'Rashiku' Ikimasho (“らしく”いきましょ)",
+      "artist": "Meu",
+      "episodes": "14-39"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Tuxedo Mirage",
+      "artist": "Peach Hips",
+      "episodes": "3-38"
+    }
+  ],
+  "relations": []
+}

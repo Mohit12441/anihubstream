@@ -1,0 +1,66 @@
+{
+  "id": "neon-genesis-evangelion-the-end-of-evangelion",
+  "title": "Neon Genesis Evangelion: The End of Evangelion",
+  "native": "新世紀エヴァンゲリオン劇場版 Air/まごころを、君に",
+  "year": 1997,
+  "rating": 8.6,
+  "season": "Summer 1997",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx32-5JYsv0wc122I.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx32-5JYsv0wc122I.jpg",
+  "accent": "#e46b50",
+  "synopsis": "NERV faces a brutal attack from SEELE, but with Asuka in a coma, and Shinji in a nervous breakdown, things soon turn into the surreal. This movie provides a concurrent ending to the final two episodes of the show Neon Genesis Evangelion.\n\n(Source: IMDb)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Evangelion: 1.0 You Are (Not) Alone (2007)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 23,
+    "anilist": 32,
+    "mal": 32,
+    "hianime": "neon-genesis-evangelion:-the-end-of-evangelion-ff5tye"
+  },
+  "skip_key_id": 32,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 05:05:32",
+  "search_text": "neon genesis evangelion the end of evangelion 新世紀エウ ァンケ リオン劇場版 air まこ ころを 君に movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Neon Genesis Evangelion: The End of Evangelion (Movie)",
+      "runtime": "87:00",
+      "runtime_seconds": 5220,
+      "thumb": "https://animehot.cc/storage/media/2026/09/690a351c543081759bdb31ba-landscape.webp",
+      "synopsis": "Shinji Ikari is left emotionally comatose after the death of a dear friend. With his son mentally unable to pilot the humanoid robot Evangelion Unit-01, Gendou Ikari's NERV races against the shadow organization SEELE to see who can enact their ultimate plan first. SEELE desires to create a godlike being by fusing their own souls into an Evangelion unit, while Gendou wishes to revert all of humanity into one primordial being so that he can be reunited with Yui, his deceased wife.\n\nSEELE unleashes its military forces in a lethal invasion of NERV headquarters. As SEELE's forces cut down NERV's scientists and security personnel, Asuka Langley Souryuu pilots Evangelion Unit-02 in a desperate last stand against SEELE's heaviest weaponry.\n\nThe battle rages on, and a depressed Shinji hides deep within NERV's headquarters. With the fate of the world resting in Shinji's hands, Captain Misato Katsuragi hunts for the teenage boy as society crumbles around them",
+      "airdate": null,
+      "markers": [],
+      "external_id": "1122"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Thanatos -If I Can't Be Yours-",
+      "artist": "Loren & Mash",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

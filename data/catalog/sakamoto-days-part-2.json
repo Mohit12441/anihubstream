@@ -1,0 +1,250 @@
+{
+  "id": "sakamoto-days-part-2",
+  "title": "SAKAMOTO DAYS Part 2",
+  "native": "SAKAMOTO DAYS 第２クール",
+  "year": 2025,
+  "rating": 7.9,
+  "season": "Summer 2025",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx184237-OJAksU2fsIPx.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx184237-OJAksU2fsIPx.jpg",
+  "accent": "#e4c943",
+  "synopsis": "The legendary former hitman Tarou Sakamoto has thwarted numerous assassins after an enormous bounty on his head was issued. But he cannot seem to catch a break and simply take it easy with his beloved family. A mysterious and infamous figure known as Slur has brought a group of insane death row inmates to Japan, who hold back from nothing to eliminate their targets.\n\nSakamoto is not the only target—the criminals have been assigned to kill various other people, including the new hires at Sakamoto's convenience store, Shin Asakura and Lu Shaotang. The situation escalates even further when the Order, a group of the most skilled Japanese assassins, becomes involved. As the inmates begin wreaking havoc, Sakamoto and his allies must remain vigilant for the sake of everything they hold dear.\n\n(Source: MAL Rewrite)\n\nNote: The series is streaming a week in advance on Netflix Japan starting with episode 2 released alongside episode 1.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "SAKAMOTO DAYS Season 2 (2027)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 49332,
+    "anilist": 184237,
+    "mal": 60285,
+    "hianime": "sakamoto-days-part-2-0t9p1q"
+  },
+  "skip_key_id": 60285,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": "2026-10-14 12:05:19",
+  "search_text": "sakamoto days part 2 sakamoto days 第2クール ona finished",
+  "genres": [
+    "action",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Overload",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375896/thumbnail/medium-f2ab24726e625d393b7b1423cfced87b.jpeg",
+      "synopsis": "As Sakamoto gathers intel on the assassins targeting him, ORDER begins hunting the death row inmates. Later, Shin and Lu face a deadly assault. (Source: Netflix)",
+      "airdate": "2025-07-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 231,
+          "end": 321
+        }
+      ],
+      "external_id": "375896"
+    },
+    {
+      "n": 2,
+      "title": "Just Desserts",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375897/thumbnail/medium-ab83060d053c459b2fb79333d2b18628.jpeg",
+      "synopsis": "Saw attacks push Shin and Lu to awaken new abilities, turning the tables on the deadly killer. Meanwhile, Dump ambushes Osaragi at a temple. (Source: Netflix)",
+      "airdate": "2025-07-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 123,
+          "end": 212
+        }
+      ],
+      "external_id": "375897"
+    },
+    {
+      "n": 3,
+      "title": "Strong Assault",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375898/thumbnail/medium-ca3d0394fb38ed6675443986a2327ec3.jpeg",
+      "synopsis": "The battle rages on even as the crew gets treated by Granny Miya! Minimalist threatens Aoi at the store while Heisuke clashes with Apart at Tokyo Tower. (Source: Netflix)",
+      "airdate": "2025-07-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 140
+        }
+      ],
+      "external_id": "375898"
+    },
+    {
+      "n": 4,
+      "title": "Round and Round the Tower",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375899/thumbnail/medium-9804563bcb15b2505ad188c5dc8ab963.jpeg",
+      "synopsis": "Despite his inability to lose weight, Sakamoto faces off against Apart in a fierce showdown. Later, X reveals his dangerous plans for the assassin world. (Source: Netflix)",
+      "airdate": "2025-08-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 85,
+          "end": 174
+        }
+      ],
+      "external_id": "375899"
+    },
+    {
+      "n": 5,
+      "title": "Slice Slice Dance",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375900/thumbnail/medium-b8bd35c56789758f4f46fb4bf1a4cde1.jpeg",
+      "synopsis": "While X and Gaku invade the JAA, a lone ORDER assassin stands in their way. Amid the chaos, Sakamoto discovers the shocking truth about X's identity. (Source: Netflix)",
+      "airdate": "2025-08-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 10,
+          "end": 99
+        }
+      ],
+      "external_id": "375900"
+    },
+    {
+      "n": 6,
+      "title": "Have a nice fight",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375901/thumbnail/medium-bb14cf97618f3f331ad5ca1382806060.jpeg",
+      "synopsis": "Sakamoto decides to infiltrate his alma mater to get more intel on X. But first, he must conquer the sky-high requirements of the JCC entrance exam. (Source: Netflix)",
+      "airdate": "2025-08-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "375901"
+    },
+    {
+      "n": 7,
+      "title": "Kanaguri",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375902/thumbnail/medium-924a3aa59b70a34f2fce57d9255a6eeb.jpeg",
+      "synopsis": "It's every assassin for themselves as the exam takes to the skies. While Sakamoto impresses fellow candidate Akira, Shin takes on the germaphobe Mayufu. (Source: Netflix)",
+      "airdate": "2025-08-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 138
+        }
+      ],
+      "external_id": "375902"
+    },
+    {
+      "n": 8,
+      "title": "Exam, Stage Three",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375903/thumbnail/medium-09fee59bd7084d452a3fee3d4d55735a.jpeg",
+      "synopsis": "Stage Three of the JCC Exams begins as a trio of special applicants joins the fray. Toramaru, a devoted Sakamoto fan, immediately clashes with Shin. (Source: Netflix)",
+      "airdate": "2025-09-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 64,
+          "end": 153
+        }
+      ],
+      "external_id": "375903"
+    },
+    {
+      "n": 9,
+      "title": "Mutual Fans",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375904/thumbnail/medium-b1439310308e077700ca8dae3cd03c12.jpeg",
+      "synopsis": "Sakamoto discovers Akira's ties to an old friend. While Shin and Toramaru vie over their favorite assassin, X's secret plans throw the exam into chaos. (Source: Netflix)",
+      "airdate": "2025-09-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 71,
+          "end": 161
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1251,
+          "end": 1341
+        }
+      ],
+      "external_id": "375904"
+    },
+    {
+      "n": 10,
+      "title": "Hard Mode",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375905/thumbnail/medium-a16a7de967f732ae0726784e2480757c.jpeg",
+      "synopsis": "Shin teams up with Mayufu, Toromaru, and Kaji to take down a berserk Shinaya. Can these ragtag new allies work together to defeat their rampaging foe? (Source: Netflix)",
+      "airdate": "2025-09-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 75,
+          "end": 165
+        }
+      ],
+      "external_id": "375905"
+    },
+    {
+      "n": 11,
+      "title": "Each One's Mission",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375906/thumbnail/medium-f6843d5b0194fe6750142431f2bc6b7b.jpeg",
+      "synopsis": "With the entrance exam behind them, Sakamoto and Shin can now continue with their original objective: infiltrating the JCC and obtaining clues on X! (Source: Netflix)",
+      "airdate": "2025-09-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 88
+        }
+      ],
+      "external_id": "375906"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

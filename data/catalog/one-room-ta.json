@@ -1,0 +1,130 @@
+{
+  "id": "one-room-ta",
+  "title": "One-Room TA",
+  "native": "원룸 조교님",
+  "year": 2026,
+  "rating": 0,
+  "season": "Year 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://animehot.cc/storage/media/2026/09/6a93be2096ab6f120001e6ff-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/6a93be2096ab6f120001e6ff-landscape.jpg",
+  "accent": "#2ee6a8",
+  "synopsis": "When college student U-Yun meets the quiet and introverted TA Jin-Hyeong, he immediately asks him out, saying he wants to get to know him more. After just three days of dating, Jin-Hyeong moves in with him, and that’s when he starts showing a completely different wild side. All of his BL novel and comic consumption has perverted his perception of the perfect first time with his boyfriend. He’s thought of it all, from doing it in the subway to having U-Yun role-play as a K-pop idol. But as weird as Jin-Hyeong’s ideas are, U-Yun doesn’t entirely hate it...?\n\n(Source: Tappytoon)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "one-room-ta-696vx9",
+    "mal": 63225,
+    "kitsu": 7310
+  },
+  "skip_key_id": 205068,
+  "skip_key_space": "mal",
+  "episode_total": 8,
+  "added_at": null,
+  "search_text": "one room ta 원룸 조교님",
+  "genres": [
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Shochuu Omimai Moushiagemasu",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-10-11",
+      "markers": [],
+      "external_id": "101916"
+    },
+    {
+      "n": 2,
+      "title": "Southpaw",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-10-18",
+      "markers": [],
+      "external_id": "101917"
+    },
+    {
+      "n": 3,
+      "title": "Red Sweet Pea",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-10-25",
+      "markers": [],
+      "external_id": "101918"
+    },
+    {
+      "n": 4,
+      "title": "Ai ga Tomaranai",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-11-01",
+      "markers": [],
+      "external_id": "101919"
+    },
+    {
+      "n": 5,
+      "title": "Hanbun Fushigi",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-11-08",
+      "markers": [],
+      "external_id": "101920"
+    },
+    {
+      "n": 6,
+      "title": "The Girl Excited By Pasta",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-11-15",
+      "markers": [],
+      "external_id": "101921"
+    },
+    {
+      "n": 7,
+      "title": "Heavy Rotation",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-11-22",
+      "markers": [],
+      "external_id": "101922"
+    },
+    {
+      "n": 8,
+      "title": "PPCC",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2012-11-29",
+      "markers": [],
+      "external_id": "101923"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,199 @@
+{
+  "id": "revue-starlight",
+  "title": "Revue Starlight",
+  "native": "少女☆歌劇 レヴュー・スタァライト",
+  "year": 2018,
+  "rating": 7.7,
+  "season": "Summer 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98658-Xz8uliDO7dzZ.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98658-Xz8uliDO7dzZ.png",
+  "accent": "#50a1e4",
+  "synopsis": "The franchise centers on \"Starlight\" — the song and dance revue troupe loved throughout the world. Karen and Hikari make a promise with each other when they're young that one day they'll stand on that stage together. Time passes, and now the girls are 16 years old. Karen is very enthusiastic about the lessons she takes every day, holding her promise close to her heart. Hikari has transferred schools and is now away from Karen. But the cogs of fate turn, and the two are destined to meet again. The girls and other \"Stage Girls\" will compete in a mysterious audition process to gain acceptance into the revue.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "revue-starlight-zbzlfw",
+    "mal": 35503,
+    "anilist": 98658,
+    "kitsu": 14174
+  },
+  "skip_key_id": 35503,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "revue starlight 少女 歌劇 レウ ュー スタァライト tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Stage Girls",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/249887/original.jpg",
+      "synopsis": "The curtain rises on the performance of a lifetime as Karen and her classmates attend a prestigious music academy to become the next theatrical stars.",
+      "airdate": "2018-07-13",
+      "markers": [],
+      "external_id": "249887"
+    },
+    {
+      "n": 2,
+      "title": "The Stage of Fate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/249888/original.jpg",
+      "synopsis": "On the second day of the search for the next star, the girls accuse Karen of interfering with their auditions and not taking it as seriously as them.",
+      "airdate": "2018-07-20",
+      "markers": [],
+      "external_id": "249888"
+    },
+    {
+      "n": 3,
+      "title": "Top Star",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/249951/original.jpg",
+      "synopsis": "Nana takes a role behind the scenes while Futaba notices that Claudine is bothered by something. Hikari is acting cold towards Karen, but is there a reason for it?",
+      "airdate": "2018-07-27",
+      "markers": [],
+      "external_id": "249951"
+    },
+    {
+      "n": 4,
+      "title": "Promise Tower",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/249963/original.jpg",
+      "synopsis": "Hikari left campus, and Karen doesn’t understand why. Determined to find her friend, Karen searches for her throughout the city.",
+      "airdate": "2018-08-03",
+      "markers": [],
+      "external_id": "249963"
+    },
+    {
+      "n": 5,
+      "title": "Is \"Shine\" Even Possible?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250472/original.jpg",
+      "synopsis": "Mahiru becomes increasingly dejected and jealous as Karen’s bond with Hikari strenghtens. Karen is spurred on with new determination, but where will this leave Mahiru?",
+      "airdate": "2018-08-10",
+      "markers": [],
+      "external_id": "250472"
+    },
+    {
+      "n": 6,
+      "title": "Stage Left for Two",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250473/original.jpg",
+      "synopsis": "Kaoruko fails to make the cut during class auditions and lashes out in indignation. Having earned a spot on stage, Futaba’s patience with Kaoruko reaches a boiling point.",
+      "airdate": "2018-08-17",
+      "markers": [],
+      "external_id": "250473"
+    },
+    {
+      "n": 7,
+      "title": "Nana Daiba",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250521/original.jpg",
+      "synopsis": "Nana Daiba’s memories of the acadamy’s 99th performance was a shining beacon crystalized in time. Can she ever move forward or will she be forever blinded by the past?",
+      "airdate": "2018-08-24",
+      "markers": [],
+      "external_id": "250521"
+    },
+    {
+      "n": 8,
+      "title": "Toward the Light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250522/original.jpg",
+      "synopsis": "What’s past is prologue. The promise Hikari made with Karen is what fuels her determination, but life rarely occurs according to plan.",
+      "airdate": "2018-08-31",
+      "markers": [],
+      "external_id": "250522"
+    },
+    {
+      "n": 9,
+      "title": "On the Night of the Star Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250523/original.jpg",
+      "synopsis": "Preparations for the next performance of Starlight continue, and everyone is filled with hope as they move forward. Everyone that is, except for Nana, who sinks into despair.",
+      "airdate": "2018-09-07",
+      "markers": [],
+      "external_id": "250523"
+    },
+    {
+      "n": 10,
+      "title": "The Show Must Go On",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250524/original.jpg",
+      "synopsis": "The final day has arrived and Karen and Hikari renew their vow to perform Starlight. Can they overcome the unforgiving audition and become Top Stars together?",
+      "airdate": "2018-09-14",
+      "markers": [],
+      "external_id": "250524"
+    },
+    {
+      "n": 11,
+      "title": "We are",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250525/original.jpg",
+      "synopsis": "Fate is cruel and harshly deals with any deviation from the pre-established script. What happens to those who dare defy the system the day after the performance?",
+      "airdate": "2018-09-21",
+      "markers": [],
+      "external_id": "250525"
+    },
+    {
+      "n": 12,
+      "title": "Revue Starlight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250526/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-09-28",
+      "markers": [],
+      "external_id": "250526"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Watashi-tachi wa Mou Butai no Ue",
+      "artist": "Starlight Kukugumi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hoshi no Dialogue (Stellar Dialogue)",
+      "artist": "Starlight Kukugumi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fly Me to the Star",
+      "artist": "Starlight Kuku-gumi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,203 @@
+{
+  "id": "paranoia-agent",
+  "title": "Paranoia Agent",
+  "native": "妄想代理人",
+  "year": 2004,
+  "rating": 7.6,
+  "season": "Winter 2004",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx323-ZGkUcJOn4ngy.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx323-ZGkUcJOn4ngy.png",
+  "accent": "#f1bb28",
+  "synopsis": "An elementary school kid dubbed with the title \"shounen bat\" or \"lil slugger\" has been going around attacking people with his bent, golden bat. Now, two detectives are investigating so they can stop this kid from making any more attacks, but they will find out soon enough... that this case is much more than they expected. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "paranoia-agent-j95lcn",
+    "mal": 323,
+    "anilist": 323,
+    "kitsu": 290
+  },
+  "skip_key_id": 323,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "paranoia agent 妄想代理人 tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Enter Lil' Slugger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161773/original.jpg",
+      "synopsis": "Tsukiko Sagi is a shy character designer who created the extremely successful Maromi, a cute pink dog with eyes as big as Tsukiko's. However, her company wants another character very soon and Tsukiko is out of ideas. Stressed out from the pressure and the jealously held by her co-workers, Tsukiko becomes depressed and wishes for a miracle. Her wish comes true as she is suddenly attacked with a golden baseball bat! She describes the suspect as a 6th grade boy wearing golden roller blades and a red hat to the detectives, Ikari and Maniwa. However, Ikari doesn't buy Tsukiko's story while Akio Kawazu, a sleazy tabloid reporter, tails Tsukiko trying to get a story out of her.",
+      "airdate": "2004-02-02",
+      "markers": [],
+      "external_id": "161773"
+    },
+    {
+      "n": 2,
+      "title": "The Golden Shoes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161778/original.jpg",
+      "synopsis": "For Yuichi \"Ichi\" Taira, life is good.  He's is the most popular kid in his school and excels in academics and sports and plans to run for Student Council President.  However, being that he has golden roller blades and wears a red baseball cap, the students think that Yuichi is Lil' Slugger.  His life is turned upside down and he becomes paranoid.  He immediately suspects his opponent, Shogo \"Usshi\" Ushiyama, a transfer student from the country, spread those rumors.  Yuichi tries to expose Usshi's misdeeds but they end up backfiring and Usshi ends up being attacked by the real Lil' Slugger.",
+      "airdate": "2004-02-09",
+      "markers": [],
+      "external_id": "161778"
+    },
+    {
+      "n": 3,
+      "title": "Double Lips",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161786/original.jpg",
+      "synopsis": "After being attacked by Lil' Slugger, Yuichi's name is cleared and he can finally relax.  However, Harumi Chono, Yuichi's tutor and an assistant at a local university, has problems of her own.  She has another and hedonistic personality named Maria that spends the night as a prostitute.  Whenever Maria takes over, Harumi has no recollection or control of what happened.  However, they manage to live as they are until Harumi receives an offer of marriage from her co-worker at the university, Akihiko Ryu.  Harumi decides to end her life as Maria but Maria won't take it sitting down.",
+      "airdate": "2004-02-16",
+      "markers": [],
+      "external_id": "161786"
+    },
+    {
+      "n": 4,
+      "title": "A Man's Path",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161792/original.jpg",
+      "synopsis": "After these strings of attacks by Lil' Slugger, it turns out that each victim has some sort of relationship with previous victim.  Masami Hirukawa is a police officer in the same district where the Lil' Slugger attacks have been happening.  Despite calling himself a family man, he accepts bribes in the form of cash and prostitutes (apparently, Maria was one of his favorites) from the local yakuza group.  Using the money, he builds a house for his family.  However, Masami becomes too greedy and the yakuza sends Makabe to get the money back with interest.  Masami ends up stealing money from people but always ends up short of Makabe's demands who just adds more to the list.  In a drunken slur, Masami wants this all to end and ends up being clocked by Lil' Slugger and goes down, or so he thinks.",
+      "airdate": "2004-02-23",
+      "markers": [],
+      "external_id": "161792"
+    },
+    {
+      "n": 5,
+      "title": "The Holy Warrior",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161799/original.jpg",
+      "synopsis": "Ikari and Maniwa interrogate Lil' Slugger who turns out to be in the eight grade.  Still, he admits to the attacks.  However, he confuses his realities and believes that the world around him is a medieval-style RPG while his journey is to defeat the evil Gouma who posses other people to fight.  Ikari and Maniwa follows Lil' Slugger through his \"journey\" and see that it does coincide with all of the attacks -- all except for Tsukiko Sagi.  However, Lil' Slugger points the detectives to where the old lady is who may posses the truth.",
+      "airdate": "2004-03-08",
+      "markers": [],
+      "external_id": "161799"
+    },
+    {
+      "n": 6,
+      "title": "Fear of a Direct Hit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161809/original.jpg",
+      "synopsis": "Ikari and Maniwa find the old homeless woman while a typhoon is about to make landfall.  There they discover something from the old women that that turns the whole case around.  Meanwhile, Taeko is reminiscing over her life.  We learn that she was poor when growing up and was really attached to her father, Masami Hirukawa (the police officer from A Man's Path).  However, not that surprisingly but quite disturbing, Taeko discovers a dirty little secret while leaving her father a present.  This explains why she is wandering around the city despite the typhoon warnings.  At the police station, Ikari and Maniwa are questioning Tsukiko again and try to make her tell what realy happened that night.  As for poor Taeko, she is about to throw herself into a torrent of rushing water when she sees herself in the torrent.  She realizes that it was the old lady who gets swept down stream.  Taeko collapses and weeps as her father desperately calls her.  Suddenly, Lil' Slugger appears and hits Taeko while Tsukiko collapses and falls to the floor.",
+      "airdate": "2004-03-15",
+      "markers": [],
+      "external_id": "161809"
+    },
+    {
+      "n": 7,
+      "title": "MHz",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161820/original.jpg",
+      "synopsis": "Ikari and Maniwa are receive word of Taeko's attack from the previous episode.  Masami is devastated by Taeko's amnesia as Ikari looks from the sideline since it happened in a different district.  Ikari and Maniwa interrogate Kozuka again to make him confess that he is merely a copycat.  They manage to get out of him that he only attacked Usshi and Hirukawa but Ikari tries to get a full confession. However, Maniwa soon discovers another connection between the victims; they all were under some kind of stress and were relieved after the attack.  But, he soon figures out that Taeko was also emotionally stressed and finds out that Taeko was attacked about the same time that Tsukiko fainted, meaning that Lil' Slugger can be nowhere and everywhere and that he feeds on paranoia. He tells Ikari but gives him an application for leave and tells him to take a break. However, Maniwa still pushes and soon realizes that the next target is Kozuka.",
+      "airdate": "2004-03-22",
+      "markers": [],
+      "external_id": "161820"
+    },
+    {
+      "n": 8,
+      "title": "Happy Family Planning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161833/original.jpg",
+      "synopsis": "Fuyubachi (Winter Bee), an old man, Zebra, a young man, and Kamome (Seagull), a cute 11-year old girl, seek different ways of committing suicide.  After a big adventure going from Tokyo to the countryside, they encounter Lil' Slugger at a hot spring.",
+      "airdate": "2004-04-05",
+      "markers": [],
+      "external_id": "161833"
+    },
+    {
+      "n": 9,
+      "title": "ETC",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161848/original.jpg",
+      "synopsis": "After hearing of the incident in the previous episode, several women share rumors related to Lil' Slugger, most of which is farfetched. However, one of the women is having a hard time understanding the truth behind the rumors and impressing the other women. Returning to her apartment, she discovers that her husband has been attacked by Lil' Slugger.  She tries to get the story out of him as he begs her to call an ambulance and slowly dies.\n\nEach of the ten Lil' Slugger rumors is a mini-story. In chronological order, they are named IQ, LDK, EBM, OH, HR, TKO, UMA, SOS, HH. The framing episode (ETC) comprises the tenth and final mini-story.",
+      "airdate": "2004-04-12",
+      "markers": [],
+      "external_id": "161848"
+    },
+    {
+      "n": 10,
+      "title": "Mellow Maromi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161863/original.jpg",
+      "synopsis": "Maromi is getting her very own anime! However, the staff begins to fall behind as the deadline approaches. In the midst of this is bumbling Saruta Naoyki, the Production Manager. Things get even worse as, one by one, members of the production staff end up in the hospital (or the morgue), apparently courtesy of Lil' Slugger. Ultimately, it falls to Saruta to deliver the finished pilot episode to the TV station before airtime. There's just one problem: Lil' Slugger's after him, too!",
+      "airdate": "2004-04-19",
+      "markers": [],
+      "external_id": "161863"
+    },
+    {
+      "n": 11,
+      "title": "No Entry",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161870/original.jpg",
+      "synopsis": "Misae Ikari returns to her home to find Lil' Slugger waiting.  Before she allows him to attack, she talks about the troubles in her life. Apparently, she has a weak body and her doctor bills are getting expensive. Her body is so weak that she couldn't carry a child. Despite that, her husband Keiichi still loves her.  Elsewher, Keiichi is at his new job as a traffic guard at a construction site. He meets an old friend (more like an old perpetrator) and talks a little about his life and his wife. Back at the Ikari residence, Misae seems to fall into despair at the recent events but reveals that she had no intention of giving up. She points out that Lil' Slugger's existence is an illusion and exists to fool people, just like Maromi. In rage, Lil' Slugger vanishes. After talking with his friend over dinner about how their old fashion ways are dead, Keiichi enters a two-dimensional world that looks like days from yesteryear.",
+      "airdate": "2004-04-26",
+      "markers": [],
+      "external_id": "161870"
+    },
+    {
+      "n": 12,
+      "title": "Radar Man",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161885/original.jpg",
+      "synopsis": "Ever since he learned of how Lil' Slugger feeds on paranoia, Maniwa has engaged in the same crusade described in \"The Holy Warrior,\" only for Maniwa, Lil' Slugger is his adversary. His world blurs  between reality and delusion. After a failed attempt at defeating Lil' Slugger (who changed into an abnormal form), Maniwa turns to the old man for help. His dying words, and some insight from Misae, who he sees after hearing her over the radio, lead him on a strange journey to the origins of Maromi and Lil' Slugger. In the meantime, Maromi leads Tsukiko to Ikari's world. And then, just as Maromi fever reaches its peak, figures, images, and merchandise of Maromi suddenly disappear as some of the victims of Lil' Slugger fall back into their state of paranoia.",
+      "airdate": "2004-05-10",
+      "markers": [],
+      "external_id": "161885"
+    },
+    {
+      "n": 13,
+      "title": "The Final Episode",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/161894/original.jpg",
+      "synopsis": "A dark formless flow that Maniwa identifies as Lil' Slugger starts to overrun Tokyo as a result of Maromi's disappearance.  Meanwhile in Ikari's world, Ikari comfortable hangs about his world with Tsukiko tagging along.  With the help of the old man, Misae appears and says goodbye to Keiichi as she fades away. Ikari realizes that the world he is in isn't real and tears it apart as the building blocks of the world turn out to be Maromi dolls. Back in their dilapidated world, Lil' Slugger appears as Maniwa appears with his new weapon, hoping to destroy Lil' Slugger before this manifestation of paranoia swamps the entire country...",
+      "airdate": "2004-05-17",
+      "markers": [],
+      "external_id": "161894"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "夢の島思念公園 (<i>Yume no Shima Shinen Kouen</i>)",
+      "artist": "Susumu Hirasawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shiroi Oka - Maromi no Theme",
+      "artist": "Susumu Hirasawa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

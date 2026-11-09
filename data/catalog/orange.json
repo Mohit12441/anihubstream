@@ -1,0 +1,217 @@
+{
+  "id": "orange",
+  "title": "Orange",
+  "native": "orange",
+  "year": 2016,
+  "rating": 7.5,
+  "season": "Summer 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21647-zMUXNhcVyRyv.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21647-zMUXNhcVyRyv.png",
+  "accent": "#e4c9ae",
+  "synopsis": "Everyone has regrets in life. So who wouldn't take the chance to change the past if given the opportunity? When sixteen-year-old Takamiya Naho receives a mysterious letter, claiming to be from her twenty-seven-year-old self, her life is suddenly thrown into flux. The letter tells her that a new transfer student by the name of Naruse Kakeru will be joining her class, and to keep her eye on him. But why? Naho must decide what to make of the letter and its cryptic warning, and what it means not only for her future, but for Kakeru's as well.\n\n(Source: Anime News Network)\n\nNote: The last episode aired with a runtime of ~40 minutes as opposed to the standard 24 minute long episode.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "orange-km32am",
+    "mal": 32729,
+    "anilist": 21647,
+    "kitsu": 11844
+  },
+  "skip_key_id": 32729,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "orange orange tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Letter 01",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "It’s the spring of Naho’s second year in high school, and Naho receives a letter from herself, 10 years in the future. The letter accurately depicts what’s about to happen, including details on a transfer student from Tokyo, Kakeru Naruse, who ends up sitting beside her in class. On top of that, the letter also begs Naho not to invite Kakeru out with her group of friends on that day alone, but why?",
+      "airdate": "2016-07-04",
+      "markers": [],
+      "external_id": "187128"
+    },
+    {
+      "n": 2,
+      "title": "Letter 02",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kakeru enters the soccer club as a provisional member, just as the letter says. When the topic of lunches comes up after practice, Kakeru jokingly asks Naho to make lunch for him as well. Naho finds herself bewildered by his words, but feels pushed to act by the letter from herself 10 years in the future, which tells Naho that she wishes she had made lunch for Kakeru.",
+      "airdate": "2016-07-11",
+      "markers": [],
+      "external_id": "187129"
+    },
+    {
+      "n": 3,
+      "title": "Letter 03",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "In the letter, it says Kakeru won’t join the soccer club, but in reality, he does. This difference between the letter and reality fills Naho with hope, as she believes it may mean that the future is starting to change for the better. But just as she begins to think that, she has to deal with the letter detailing how Kakeru and Ueda-senpai begin to date...",
+      "airdate": "2016-07-18",
+      "markers": [],
+      "external_id": "187130"
+    },
+    {
+      "n": 4,
+      "title": "Letter 04",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Naho is so concerned about Kakeru’s date with Ueda-senpai over the holidays, she can’t help but seem preoccupied and unable to focus on her friends’ conversations. Ever since Kakeru started dating Ueda-senpai, Naho has found it difficult to have a proper conversation with him. Naho regrets not directly telling Kakeru how she really felt the day Ueda-senpai asked him out, but what will she do now?",
+      "airdate": "2016-07-25",
+      "markers": [],
+      "external_id": "187131"
+    },
+    {
+      "n": 5,
+      "title": "Letter 05",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kakeru gives Naho a hairpin. And on the weekend, Kakeru invites Naho to study with him for the upcoming exams. As the pair begin to grow closer together, Naho gets up the courage to invite Kakeru to see the fireworks together with her at the end of the school festival.",
+      "airdate": "2016-08-01",
+      "markers": [],
+      "external_id": "187132"
+    },
+    {
+      "n": 6,
+      "title": "Letter 06",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "It's the last day of the school festival. Naho and Kakeru have promised to watch the fireworks together. However, just before they start, Ueda-sama gets in Naho's way. Will Naho get to experience watching the fireworks with Kakeru like her future self did?",
+      "airdate": "2016-08-08",
+      "markers": [],
+      "external_id": "187133"
+    },
+    {
+      "n": 7,
+      "title": "Letter 07",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The letter from the future details the regret felt by everyone for being unable to celebrate Kakeru's birthday. As such, high school Naho and the gang pester Kakeru about what he wants until the big day. On the other hand, 26 year-old Naho and the gang gather at the late Kakeru's grandmother's house to celebrate his birthday, like they had promised in the past.",
+      "airdate": "2016-08-15",
+      "markers": [],
+      "external_id": "187134"
+    },
+    {
+      "n": 8,
+      "title": "Letter 08",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Up until now, Naho had been doing everything the letter from the future had told her to do, but is the letter always right? The letter from the future asks Naho to make sure Kakeru doesn't run the relay race at the athletic festival, but what does Naho decide to do?",
+      "airdate": "2016-08-22",
+      "markers": [],
+      "external_id": "187135"
+    },
+    {
+      "n": 9,
+      "title": "Letter 09",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Naho feels relieved now that she has the support of all her friends. On top of that, Kakeru and Naho begin to get even closer. Finally, the day of the athletic festival comes. What do Naho and the gang do to insure Kakeru can enjoy the festival from the bottom of his heart?",
+      "airdate": "2016-08-29",
+      "markers": [],
+      "external_id": "187136"
+    },
+    {
+      "n": 10,
+      "title": "Letter 10",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "It's the athletic festival. Kakeru hurt his ankle during the pole-toppling game, and hid that fact from everyone else. Kakeru tries to keep his suffering to himself, when Suwa and the gang call out to him. Met with everybody's kindness, Kakeru begins to tell them what he's been keeping pent up inside. And then, the class relay begins.",
+      "airdate": "2016-09-05",
+      "markers": [],
+      "external_id": "187137"
+    },
+    {
+      "n": 11,
+      "title": "Letter 11",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Naho got into a fight with Kakeru on New Year's Eve, and never managed to apologize to him before he passed away. At least, that's what the letter from the future says. However, Naho now believes that she's capable of dealing with whatever may come up, and faces New Year's Eve head-on.",
+      "airdate": "2016-09-12",
+      "markers": [],
+      "external_id": "187138"
+    },
+    {
+      "n": 12,
+      "title": "Letter 12",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kakeru moves to Matsumoto with his mother mother after she decides to move there for her own reasons. When she passes away on the first day of school after Kakeru transfers, Kakeru blames himself and thus refuses Suwa's invitation to join the Soccer club. Kakeru sees some old classmates from Tokyo, but none of them understand what Kakeru is going through. In the end, Kakeru becomes so distressed that he feels that he has no way out.",
+      "airdate": "2016-09-19",
+      "markers": [],
+      "external_id": "187139"
+    },
+    {
+      "n": 13,
+      "title": "Letter 13",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Naho can't give her Valentine's Day chocolate to Kakeru. Ever since what happened on New Year's Eve, Kakeru keeps putting distance between Naho and himself. But, through all the hardships, Naho refuses to give up and fully intends to tell Kakeru how she feels. And so, the time comes for everyone to face the fateful day outlined in the letters from the past, \"Kakeru's Final Day.\"",
+      "airdate": "2016-09-26",
+      "markers": [],
+      "external_id": "187140"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mirai (未来;Future)",
+      "artist": "Kobukuro",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hikari no Hahen (光の破片;Fragments of Light)",
+      "artist": "Yū Takahashi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hikari no Hahen (光の破片)",
+      "artist": "Yū Takahashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai (未来)",
+      "artist": "Kobukuro",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

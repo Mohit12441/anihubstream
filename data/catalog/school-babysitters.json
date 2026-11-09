@@ -1,0 +1,191 @@
+{
+  "id": "school-babysitters",
+  "title": "School Babysitters",
+  "native": "学園ベビーシッターズ",
+  "year": 2018,
+  "rating": 7.9,
+  "season": "Winter 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98503-oUCGDkv2osNK.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98503-oUCGDkv2osNK.jpg",
+  "accent": "#f1e4c9",
+  "synopsis": "The manga centers on the brothers Ryuuichi and Kotarou Kashima. Ryuuichi is in high school and Kotarou is still a toddler. After their parents are killed in a plane crash, the two brothers find themselves living with the chairwoman of the Morinomiya Academy, who herself lost her son and daughter-in-law in the same accident. The chairwoman, however, has one stipulation for the brothers in order to live with her: Ryuuichi has to work at the academy's daycare center as a babysitter.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "school-babysitters-w7ja4q",
+    "mal": 35222,
+    "anilist": 98503,
+    "kitsu": 13265
+  },
+  "skip_key_id": 35222,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "school babysitters 学園ヘ ヒ ーシッタース tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-01-07",
+      "markers": [],
+      "external_id": "235158"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-01-14",
+      "markers": [],
+      "external_id": "235159"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-01-21",
+      "markers": [],
+      "external_id": "235160"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-01-28",
+      "markers": [],
+      "external_id": "235161"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-02-04",
+      "markers": [],
+      "external_id": "235162"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-02-11",
+      "markers": [],
+      "external_id": "235163"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-02-18",
+      "markers": [],
+      "external_id": "235164"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-02-25",
+      "markers": [],
+      "external_id": "235165"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-04",
+      "markers": [],
+      "external_id": "235166"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-11",
+      "markers": [],
+      "external_id": "235167"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-18",
+      "markers": [],
+      "external_id": "235168"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-25",
+      "markers": [],
+      "external_id": "235169"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Endless happy world",
+      "artist": "Daisuke Ono",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Oshiete yo",
+      "artist": "Hyorotto Danshi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

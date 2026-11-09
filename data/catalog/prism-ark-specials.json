@@ -1,0 +1,112 @@
+{
+  "id": "prism-ark-specials",
+  "title": "Prism Ark Specials",
+  "native": "プリズム・アーク ぷりあーく",
+  "year": 2007,
+  "rating": 5.5,
+  "season": "Winter 2007",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4566.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4566.jpg",
+  "accent": "#f1e4bb",
+  "synopsis": "A series of shorts parodying the main series Prism Ark.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "prism-ark-specials-vjiddj",
+    "mal": 4566,
+    "anilist": 4566,
+    "kitsu": 3690
+  },
+  "skip_key_id": 4566,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": null,
+  "search_text": "prism ark specials フ リス ム アーク ふ りあーく special finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "60847"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "60848"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "60849"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "60850"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "60851"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "60852"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

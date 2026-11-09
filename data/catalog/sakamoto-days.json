@@ -1,0 +1,286 @@
+{
+  "id": "sakamoto-days",
+  "title": "SAKAMOTO DAYS",
+  "native": "SAKAMOTO DAYS",
+  "year": 2025,
+  "rating": 7.6,
+  "season": "Winter 2025",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx177709-e5Qx6RlsBgD5.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx177709-e5Qx6RlsBgD5.png",
+  "accent": "#c9f1f1",
+  "synopsis": "When Sakamoto meets Aoi, the convenience store clerk, it’s love at first sight — and just like that, he retires.\n\nSakamoto gets married, has a daughter, opens a mom-and-pop store in a quiet town, and completely transforms … into a plus-size man. To ensure a peaceful life with his beloved family, the legendary ex–hit man bands together with comrades to face off against the looming threat of assassins.\n\n(Source: Netflix TUDUM)\n\nNote: The series streamed a week in advance on Netflix Japan starting with episode 2 released alongside episode 1.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "SAKAMOTO DAYS Part 2 (2025)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 48915,
+    "anilist": 177709,
+    "mal": 58939,
+    "hianime": "sakamoto-days-mjukbj"
+  },
+  "skip_key_id": 58939,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": "2026-10-14 06:14:32",
+  "search_text": "sakamoto days sakamoto days ona finished",
+  "genres": [
+    "action",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Legendary Hit Man",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375488/thumbnail/medium-1bd126f7af826659996222e72f556ed9.jpeg",
+      "synopsis": "Sakamoto enjoys a quiet life in retirement with his family. But one day, an old colleague demands he return to the assassin world — or face consequences. (Source: Netflix)",
+      "airdate": "2025-01-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 160,
+          "end": 250
+        }
+      ],
+      "external_id": "375488"
+    },
+    {
+      "n": 2,
+      "title": "Vs. Son Hee and Bacho",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375489/thumbnail/medium-187b37749cf13dae7e4a2789ba9de77b.jpeg",
+      "synopsis": "While out on an errand, Sakamoto and Shin encounter Lu Shaotang, the daughter of a mafia boss, who's on the run and targeted by twin assassins. (Source: Netflix)",
+      "airdate": "2025-01-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 13,
+          "end": 103
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1237,
+          "end": 1326
+        }
+      ],
+      "external_id": "375489"
+    },
+    {
+      "n": 3,
+      "title": "Welcome to Sugar Park!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375490/thumbnail/medium-3410bc2c7b7a7ccbf6612a71026ccb65.jpeg",
+      "synopsis": "",
+      "airdate": "2025-01-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 121,
+          "end": 211
+        }
+      ],
+      "external_id": "375490"
+    },
+    {
+      "n": 4,
+      "title": "Hard-Boiled",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375491/thumbnail/medium-b2520910930d68f64d792fd8ddbd5827.jpeg",
+      "synopsis": "With the poison-wielding hitman taken out, the Sakamotos head to their next attraction, where they're ambushed by Dondenkai Ltd's ultimate assassin duo. (Source: Netflix)",
+      "airdate": "2025-02-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 66,
+          "end": 156
+        }
+      ],
+      "external_id": "375491"
+    },
+    {
+      "n": 5,
+      "title": "Source of Strength",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375492/thumbnail/medium-434e35531fa242161dc7e6eb704484dc.jpeg",
+      "synopsis": "Sakamoto goes all out in a fierce one-on-one duel with Boiled. Meanwhile, ORDER members are tasked with handling a serial case targeting assassins. (Source: Netflix)",
+      "airdate": "2025-02-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 173,
+          "end": 263
+        }
+      ],
+      "external_id": "375492"
+    },
+    {
+      "n": 6,
+      "title": "Heisuke Mashimo",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375493/thumbnail/medium-1999a5c8f46177b2020265e29b0316c5.jpeg",
+      "synopsis": "Hoping to win the million-yen prize, Team Sakamoto enters the shopping district's survival tournament and teams up with a completely clueless sniper. (Source: Netflix)",
+      "airdate": "2025-02-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 67,
+          "end": 157
+        }
+      ],
+      "external_id": "375493"
+    },
+    {
+      "n": 7,
+      "title": "Jurassic Bastard",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375494/thumbnail/medium-e87e0518164341be6ff2c18161a3be8b.jpeg",
+      "synopsis": "While manning the store alone, Lu gets kidnapped by a mysterious group. Sakamoto and Shin pursue her but are halted by an invisible assassin. (Source: Netflix)",
+      "airdate": "2025-02-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        }
+      ],
+      "external_id": "375494"
+    },
+    {
+      "n": 8,
+      "title": "Sakamoto's vs. the Lab",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375495/thumbnail/medium-5e695e22a17a0d30e6e0c88018b41e05.jpeg",
+      "synopsis": "To rescue Lu, Sakamoto and Shin infiltrate a top-secret lab seized by assassins. Meanwhile, in the prison cell, Lu meets someone from Shin's childhood. (Source: Netflix)",
+      "airdate": "2025-03-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 162
+        }
+      ],
+      "external_id": "375495"
+    },
+    {
+      "n": 9,
+      "title": "All Aboard",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375496/thumbnail/medium-d128903a2fa3631562684c0ffda3bad5.jpeg",
+      "synopsis": "In the depths of the Lab, Shin and Heisuke join forces to take down the invisible assailant, while Sakamoto engages in an intense battle against Kashima. (Source: Netflix)",
+      "airdate": "2025-03-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 111,
+          "end": 201
+        }
+      ],
+      "external_id": "375496"
+    },
+    {
+      "n": 10,
+      "title": "Bathhouse Roughhouse",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375497/thumbnail/medium-4ca45462ab9b86d6f005ac2015855c21.jpeg",
+      "synopsis": "Exhausted from their battle, the crew heads to a local bathhouse but finds it too dangerous to relax. Later, a mysterious man arrives in search of Lu. (Source: Netflix)",
+      "airdate": "2025-03-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 34,
+          "end": 124
+        }
+      ],
+      "external_id": "375497"
+    },
+    {
+      "n": 11,
+      "title": "Casino Battle",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/375498/thumbnail/medium-fa372cedae0a29eb8c3295bb98568c2d.jpeg",
+      "synopsis": "The crew faces Wutang in a high-stakes casino showdown to learn who issued Sakamoto's bounty. Meanwhile, X sends a group of vicious assassins their way. (Source: Netflix)",
+      "airdate": "2025-03-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 69,
+          "end": 159
+        }
+      ],
+      "external_id": "375498"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Method",
+      "artist": "Kroi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dandelion",
+      "artist": "go!go!vanillas",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hashire Sakamoto",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Futsuu",
+      "artist": "Conton Candy",
+      "episodes": "1-6, 8-11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Somebody help us",
+      "artist": "Vaundy",
+      "episodes": "7"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,66 @@
+{
+  "id": "school-rumble-extra-class",
+  "title": "School Rumble OVA",
+  "native": "スクールランブル一学期補習",
+  "year": 2005,
+  "rating": 7.3,
+  "season": "Winter 2005",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b517-wYuK22CQJT6m.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b517-wYuK22CQJT6m.jpg",
+  "accent": "#ff9420",
+  "synopsis": "This two-part OVA is a series of shorts in relation to the School Rumble series. This OVA fills in gaps with new content between episodes from beginning to nearly the end.\n\nEpisodes:\n\n1) New-Term Excitement! To Be Near You Scramble! The Naked Truth!\n\nYakumo befriends a foreigner - in between her clairvoyant activities and frequent cat naps. The Class 2-C seating arrangements put Tenma in a tizzy over sitting next to her heart throb, but a certain bad boy is stressing over sitting next to her! \n\n2) Smile, Please! Mammoth, Yum! May I Fall in Love?\n\nYoshidayama continues his climb to the top of the bad boy rankings, Imadori tries to touch a tomboy, and Harima tries his hand at prehistoric heroism! Back to the more recent past, a moment in the dark sheds light on an assistant’s clandestine crush.\n\n(Source: Anime News Network, Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "school-rumble:-extra-class-xu1j6k",
+    "mal": 517,
+    "anilist": 517,
+    "kitsu": 476
+  },
+  "skip_key_id": 517,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "school rumble ova スクールランフ ル一学期補習 ova finished",
+  "genres": [
+    "comedy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The New School Year! Be Still My Heart! Love Letter Mayhem! Warp Speed on a Bike!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c30f81cce18cf33124735d88091a541c1672789337_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "11574"
+    },
+    {
+      "n": 2,
+      "title": "Tough Test! Trapped in the Bathroom! The School Physical!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e7014c163c64e62887e7ba24367f2b861672789506_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "11575"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

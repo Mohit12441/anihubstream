@@ -1,0 +1,68 @@
+{
+  "id": "noragami-ova",
+  "title": "Noragami OVA",
+  "native": "ノラガミ OAD",
+  "year": 2014,
+  "rating": 7.5,
+  "season": "Winter 2014",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx20494-HllvnQ1mRIxe.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20494-HllvnQ1mRIxe.jpg",
+  "accent": "#ff1f4a",
+  "synopsis": "Hiyori Iki is excited to start high school alongside her two middle school friends, but \"Delivery God\" Yato seems to have other plans for the day. Will Hiyori be able to make a good impression on her first day? Or will Yato cost her a happy high school life?\n\nOn another day, Hiyori decides to take advantage of the beautiful weather and invites a number of people to gaze at the cherry blossoms, including the fearsome combat god, Bishamon. But how long will their blissful day last when Yato and his old rival Bishamon start to drink together?\n\n(Source: MAL Rewrite)\n\nNote: Bundled with the 10th and 11th limited-edition volumes of the manga.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8152,
+    "anilist": 20494,
+    "mal": 20767,
+    "hianime": "noragami-ova-qhsmna"
+  },
+  "skip_key_id": 20767,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": "2026-10-14 16:05:22",
+  "search_text": "noragami ova ノラカ ミ oad ova finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "God's Possession, God's Curse",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Hiyori's first day at high school becomes a nightmare for her when Yato possesses her body, after she unintentionally slips out of it upon falling asleep. He uses Hiyori's body to his advantage by doing all sorts of embarrassing and over-the-top things to spread word of his services to the other students, with Kofuku joining in on the fun. Yukine tries to get Tenjin and Mayu to help put a stop to Yato's antics, but they too end up getting distracted. As Hiyori struggles to make Yato return her body, she and Yukine spot a perverted student, who sneaked a camera into the girl's changing rooms, and discover he has been possessed by a phantom. When the student attempts to jump out of the window upon being discovered, Yato manages to rescue him and subdue the phantom, but ends up breaking his (Hiyori's) shoulder in the process. As such, Yato is caught and given an appropriate punishment whilst Hiyori begins her next day of school with a bizarre reputation.",
+      "airdate": "2014-02-17",
+      "markers": [],
+      "external_id": "113167"
+    },
+    {
+      "n": 2,
+      "title": "A Promise in Spring",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "During the spring, Hiyori invites all the Gods and Regalias together for a flower viewing party under the cherry blossoms. Whilst the various groups get to know each other, Yato and Bishimon continue to have trouble seeing eye to eye and wind up having a drinking contest against each other. In their drunken state, Bishamon, blaming herself for the death of her clans, gets a hand over mouth kiss from Yato, prompting a fierce punishment that ruins the party. The next day, Yukine receives a magazine for Regalias that Yato had been keeping from him, which includes a scathing interview from Mayu and a questionnaire for Yukine to fill in. As the various Gods look over the questionnaires submitted by their Regalias, Yato, who receives a subtle punishment for his misbehavior, feels relieved that Yukine has no intention of changing his job.",
+      "airdate": "2014-07-17",
+      "markers": [],
+      "external_id": "113168"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

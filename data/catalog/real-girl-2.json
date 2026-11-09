@@ -1,0 +1,323 @@
+{
+  "id": "real-girl-2",
+  "title": "Real Girl 2",
+  "native": "3D彼女 リアルガール 2",
+  "year": 2019,
+  "rating": 7.6,
+  "season": "Winter 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/41973/large.jpg",
+  "key_art": "https://media.kitsu.app/anime/cover_images/41973/large.jpg",
+  "accent": "#2ee6a8",
+  "synopsis": "Second season of 3D Kanojo: Real Girl.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Real Girl (2018)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 41973,
+    "anilist": 102882,
+    "mal": 37956
+  },
+  "skip_key_id": 37956,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 10:26:16",
+  "search_text": "real girl 2 3d彼女 リアルカ ール 2 tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Regarding the Time We Put One Foot in the Normie World.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256132/original.jpg",
+      "synopsis": "Nothing can save Tsutsui from the normie event of the season: The Culture Festival. Will the gang be able to pull it together to have an event to remember?",
+      "airdate": "2019-01-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 94,
+          "end": 184
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1366
+        }
+      ],
+      "external_id": "256132"
+    },
+    {
+      "n": 2,
+      "title": "Regarding the Time We Had Important Roles in the School Festival.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256133/original.jpg",
+      "synopsis": "The Culture Festival is in full swing, which means the gang must step up to the plate and make sure the whole school has a good time, no matter how awkward it may be.",
+      "airdate": "2019-01-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 146,
+          "end": 236
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1366
+        }
+      ],
+      "external_id": "256133"
+    },
+    {
+      "n": 3,
+      "title": "Regarding My Unforseen Family Crisis.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256134/original.jpg",
+      "synopsis": "Hikari welcomes the return of normalcy with sweet relief, but it doesn’t last after he finds his dad at a cafe with a woman who isn’t his mom.",
+      "airdate": "2019-01-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 53,
+          "end": 143
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1366
+        }
+      ],
+      "external_id": "256134"
+    },
+    {
+      "n": 4,
+      "title": "Regarding the Untold Story of My Parents' Courtship.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256135/original.jpg",
+      "synopsis": "Tsutsui's family is at a crossroads. Some families can survive betrayals, but others cannot. One thing remains clear though: Trust isn't so easily repaired once broken.",
+      "airdate": "2019-01-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 49,
+          "end": 139
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1366
+        }
+      ],
+      "external_id": "256135"
+    },
+    {
+      "n": 5,
+      "title": "Regarding Miss Ayado’s New Mental Anguish.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256136/original.jpg",
+      "synopsis": "When Ayado’s manga-inspired fantasies derail her date with Ito, she realizes dating in 3D is a lot more complicated than it looks.",
+      "airdate": "2019-02-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 59,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1366
+        }
+      ],
+      "external_id": "256136"
+    },
+    {
+      "n": 6,
+      "title": "Regarding the Courtship of My Female Friend Ishino.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256137/original.jpg",
+      "synopsis": "Ishino has finally scored a date with Takanashi! But they aren’t the only ones visiting the aquarium this afternoon…",
+      "airdate": "2019-02-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 129,
+          "end": 219
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1366
+        }
+      ],
+      "external_id": "256137"
+    },
+    {
+      "n": 7,
+      "title": "Regarding the Troubling Invitation from My Girlfriend.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256138/original.jpg",
+      "synopsis": "Why has Ito gone to Takanashi for advice? Shouldn’t he be asking Tsutsui for help, instead? They’re best friends, after all, and — wait, Ito asked Takanashi about WHAT?",
+      "airdate": "2019-02-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1242,
+          "end": 1332
+        }
+      ],
+      "external_id": "256138"
+    },
+    {
+      "n": 8,
+      "title": "Regarding When my Friend and my Maybe Friend Became Official.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256139/original.jpg",
+      "synopsis": "When Takanashi’s mother is hospitalized, Ishino steps in to help cook dinner. She means well, but will Takanashi just see this as more of Ishino’s meddling?",
+      "airdate": "2019-02-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 62,
+          "end": 152
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1365
+        }
+      ],
+      "external_id": "256139"
+    },
+    {
+      "n": 9,
+      "title": "Regarding My Choice to Have No Regrets in My High School Life.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256140/original.jpg",
+      "synopsis": "As college entrance exams loom large, Tsutsui’s grades begin to slip. Has he stopped caring about his future, or is something else distracting him?",
+      "airdate": "2019-03-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 106,
+          "end": 196
+        }
+      ],
+      "external_id": "256140"
+    },
+    {
+      "n": 10,
+      "title": "Regarding My Thoughts on the Sacred Mysteries of Life.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256141/original.jpg",
+      "synopsis": "Iroha’s time with Tsutsui will come to an end in just one month — so why is she avoiding him?",
+      "airdate": "2019-03-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 126,
+          "end": 216
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1276,
+          "end": 1366
+        }
+      ],
+      "external_id": "256141"
+    },
+    {
+      "n": 11,
+      "title": "Regarding My Last Promise to Her.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256142/original.jpg",
+      "synopsis": "Tsutsui has been in a rut ever since he said goodbye to Iroha. Can his friends snap him out of it before their college entrance exams?",
+      "airdate": "2019-03-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 150,
+          "end": 240
+        }
+      ],
+      "external_id": "256142"
+    },
+    {
+      "n": 12,
+      "title": "Regarding Her Future and Mine.",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256143/original.jpg",
+      "synopsis": "No matter what happens to your memory, they say the heart never forgets.",
+      "airdate": "2019-03-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 91,
+          "end": 181
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1365
+        }
+      ],
+      "external_id": "256143"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

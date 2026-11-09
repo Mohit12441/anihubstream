@@ -1,0 +1,121 @@
+{
+  "id": "patlabor-the-mobile-police",
+  "title": "Mobile Police Patlabor",
+  "native": "機動警察パトレイバー",
+  "year": 1988,
+  "rating": 7.2,
+  "season": "Spring 1988",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1288-5XFOZjW78BbM.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1288-5XFOZjW78BbM.png",
+  "accent": "#e48635",
+  "synopsis": "In the future, rapidly advancing technology gives birth to giant robots known as \"Labors,\" so named for their usefulness in heavy industry. However, this also gives rise to \"Labor crimes,\" resulting the need for a new branch of law enforcement equipped with and dedicated to the policing of Labors. When Izumi Noa, a female police officer, becomes the newest recruit of Special Vehicles Division 2, she and her top of the line \"Patrol Labor\" (or \"Patlabor\") Alphonse are swept into a series of adventures featuring crazed construction workers, eco-terrorists, and sea monsters. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "patlabor:-the-mobile-police-7pbqkp",
+    "mal": 1288,
+    "anilist": 1288,
+    "kitsu": 1162
+  },
+  "skip_key_id": 1288,
+  "skip_key_space": "mal",
+  "episode_total": 7,
+  "added_at": null,
+  "search_text": "mobile police patlabor 機動警察ハ トレイハ ー ova finished",
+  "genres": [
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Second Unit, Move Out!",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21705"
+    },
+    {
+      "n": 2,
+      "title": "Long Shot",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21706"
+    },
+    {
+      "n": 3,
+      "title": "The 450 Million-Year-Old Trap",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21707"
+    },
+    {
+      "n": 4,
+      "title": "The Tragedy of L",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21708"
+    },
+    {
+      "n": 5,
+      "title": "SV2’s Longest Day ~ Part 1",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21709"
+    },
+    {
+      "n": 6,
+      "title": "SV2's Longest Day ~ Part 2",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21710"
+    },
+    {
+      "n": 7,
+      "title": "SV Unit, Go North!",
+      "runtime": "30:00",
+      "runtime_seconds": 1800,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "21711"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

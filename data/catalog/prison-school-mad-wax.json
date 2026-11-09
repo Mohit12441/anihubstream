@@ -1,0 +1,70 @@
+{
+  "id": "prison-school-mad-wax",
+  "title": "Prison School: Mad Wax",
+  "native": "監獄学園[プリズンスクール] マッドワックス",
+  "year": 2016,
+  "rating": 7.1,
+  "season": "Winter 2016",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b21565-PsQEFVGXs1fX.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b21565-PsQEFVGXs1fX.jpg",
+  "accent": "#e4d65d",
+  "synopsis": "Unaired OVA bundled with the 20th volume of the Prison School manga, adapting the \"Mad Wax\" arc.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "prison-school:-mad-wax-pzre2s",
+    "mal": 32485,
+    "anilist": 21565,
+    "kitsu": 11619
+  },
+  "skip_key_id": 32485,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "prison school mad wax 監獄学園 フ リス ンスクール マット ワックス ova finished",
+  "genres": [
+    "comedy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Prison School: Mad Wax",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b21565-PsQEFVGXs1fX.jpg",
+      "synopsis": "Unaired OVA bundled with the 20th volume of the Prison School manga, adapting the \"Mad Wax\" arc.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "180852"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ai no Prison (愛のプリズン; Prison of Love)",
+      "artist": "Kangoku Danshi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsumibukaki Oretachi no Sanka (罪深き俺たちの賛歌; Our Sinful Hymn)",
+      "artist": "Kangoku Danshi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

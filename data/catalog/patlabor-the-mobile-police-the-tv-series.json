@@ -1,0 +1,709 @@
+{
+  "id": "patlabor-the-mobile-police-the-tv-series",
+  "title": "Patlabor the Mobile Police",
+  "native": "機動警察パトレイバー ON TELEVISION",
+  "year": 1989,
+  "rating": 7.7,
+  "season": "Fall 1989",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx324-fAAhdp1NQIts.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx324-fAAhdp1NQIts.jpg",
+  "accent": "#f1d6bb",
+  "synopsis": "In the future, advanced robotics has created heavy robots (\"labors\") for use in a variety of functions: construction, fire-fighting, military, and more. However, though the robots are only machines, their operators are also only human - and humans sometimes turn to crime. Since a heavy labor unit can be a dangerous weapon, the police of the future are set to fight fire with fire, using advanced patrol labor units, \"patlabors\". This is the story of the Second Special Vehicles Division, a motley crew of patlabor policemen and -women doing their best to fight crime and live a normal life. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "patlabor:-the-mobile-police-the-tv-series-yxy7ds",
+    "mal": 324,
+    "anilist": 324,
+    "kitsu": 291
+  },
+  "skip_key_id": 324,
+  "skip_key_space": "mal",
+  "episode_total": 47,
+  "added_at": null,
+  "search_text": "patlabor the mobile police 機動警察ハ トレイハ ー on television tv finished",
+  "genres": [
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Ingram Activated",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8039/original.jpg",
+      "synopsis": "SV2 is going to get new AV 98 ingrams soon. Asuma and Ota go to Shinohara Heavy Industries to get it. Noa also heads there to take her labor aptitude test. When someone steals the ingram, Noa goes to save it.",
+      "airdate": "1989-10-11",
+      "markers": [],
+      "external_id": "8039"
+    },
+    {
+      "n": 2,
+      "title": "Kanuka Has Come",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8040/original.jpg",
+      "synopsis": "Kanuka comes to Japan from America. She participates in a labor combat tournament. Noa and the gang also compete in it.",
+      "airdate": "1989-10-18",
+      "markers": [],
+      "external_id": "8040"
+    },
+    {
+      "n": 3,
+      "title": "This Is SV2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8041/original.jpg",
+      "synopsis": "Noa must adapt to living in SV2.",
+      "airdate": "1989-11-01",
+      "markers": [],
+      "external_id": "8041"
+    },
+    {
+      "n": 4,
+      "title": "Head to the Mountain of Mystery!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8042/original.jpg",
+      "synopsis": "A monster is seen somewhere in the forest. The police sends SV2 to go capture the monster.",
+      "airdate": "1989-11-08",
+      "markers": [],
+      "external_id": "8042"
+    },
+    {
+      "n": 5,
+      "title": "Runaway Labor X-10",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8043/original.jpg",
+      "synopsis": "Runaway Labor X-10 is loose in the forest. Division 2 is sent to go stop it.",
+      "airdate": "1989-11-15",
+      "markers": [],
+      "external_id": "8043"
+    },
+    {
+      "n": 6,
+      "title": "The Tower: SOS",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8044/original.jpg",
+      "synopsis": "Tower 1 of Tower City gets on fire. Division 1 and 2 go to stop it and save the people in the fire.",
+      "airdate": "1989-11-22",
+      "markers": [],
+      "external_id": "8044"
+    },
+    {
+      "n": 7,
+      "title": "Glorious Type 97 Modified",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8045/original.jpg",
+      "synopsis": "The new 97 model is visiting Division 2.",
+      "airdate": "1989-11-29",
+      "markers": [],
+      "external_id": "8045"
+    },
+    {
+      "n": 8,
+      "title": "Elusive Green",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8046/original.jpg",
+      "synopsis": "Noa, Asuma, and Hiromi are sent to investigate on a tree. People believe that there is curse on the tree.",
+      "airdate": "1989-12-06",
+      "markers": [],
+      "external_id": "8046"
+    },
+    {
+      "n": 9,
+      "title": "Red Labor Landing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8047/original.jpg",
+      "synopsis": "Noa and Asuma are sent to investigate on a terrorist who is gonna steal a red labor, a military labor.",
+      "airdate": "1989-12-13",
+      "markers": [],
+      "external_id": "8047"
+    },
+    {
+      "n": 10,
+      "title": "Eve's Trap",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8048/original.jpg",
+      "synopsis": "Kanuka's grandma from Hawaii visits Tokyo for Christmas. Then she suddenly disappears. The only clue to find her is \"The Christmas of 50 years ago\". When they try to find her, they are called off to duty.",
+      "airdate": "1989-12-20",
+      "markers": [],
+      "external_id": "8048"
+    },
+    {
+      "n": 11,
+      "title": "Eve's Terror",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/8049/original.jpg",
+      "synopsis": "Kanuka's grandma is still missing. Shinshi and some guy is sent to go find her. Kanuka uses Ota's labor to help Noa in the mission.",
+      "airdate": "1989-12-27",
+      "markers": [],
+      "external_id": "8049"
+    },
+    {
+      "n": 12,
+      "title": "Ohta's One Troubled Afternoon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Ota is having an arranged marriage. Noa and the gang helps Ota out on his dates.",
+      "airdate": "1990-01-10",
+      "markers": [],
+      "external_id": "8050"
+    },
+    {
+      "n": 13,
+      "title": "Gently, Your Highness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A prince from the desert joins Division 2 for a couple of days so he can establish a labor team at his homeland. A sniper is out to kill the prince, so Division 2 goes to stop him.",
+      "airdate": "1990-01-17",
+      "markers": [],
+      "external_id": "8051"
+    },
+    {
+      "n": 14,
+      "title": "You Win",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Goto takes Division 2 out to drink in order for them to get to know each other more.",
+      "airdate": "1990-01-24",
+      "markers": [],
+      "external_id": "8052"
+    },
+    {
+      "n": 15,
+      "title": "The Whale That Sang a Song",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "An endangered humpback whale enters the Tokyo Bay. The city and Division 2 try to get the whale to leave the bay and go back to the ocean.",
+      "airdate": "1990-01-31",
+      "markers": [],
+      "external_id": "8053"
+    },
+    {
+      "n": 16,
+      "title": "The Unit Crosses the Sea",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Noa's hometown is having a winter festival and Division 2 is helping out. They also try to help out a boy named Satoru who hates labors.",
+      "airdate": "1990-02-07",
+      "markers": [],
+      "external_id": "8054"
+    },
+    {
+      "n": 17,
+      "title": "Target, Chief Goto",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Goto starts to act very strangely lately. Also, there are a lot of random attacks coming at Goto. Could these attacks have anything to do why Goto is acting strangely?",
+      "airdate": "1990-02-14",
+      "markers": [],
+      "external_id": "8055"
+    },
+    {
+      "n": 18,
+      "title": "I Love Noa-Senpa",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A famous entertainer named Kana is joining Division 2 for one week. Everybody is trying to teach Kana how to pilot a labor. A crime gang tries to kidnap Kana so they can get one of Division 2's ingrams. However, they accidently steal Noa. Now, they have to save Noa without having to give the gang one of their ingrams.",
+      "airdate": "1990-02-21",
+      "markers": [],
+      "external_id": "8056"
+    },
+    {
+      "n": 19,
+      "title": "Shadow in Geo-Front",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A terrorist implants a bomb in Geo-City. Division 2 go to disarm the bomb. Kanuka goes on the mission with Noa instead of Ota.",
+      "airdate": "1990-02-28",
+      "markers": [],
+      "external_id": "8057"
+    },
+    {
+      "n": 20,
+      "title": "Movement in the Dark",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Noa and Asuma get into a fight concerning Asuma's personal life. When Division 2 get's assigned a special mission, Asuma is sent to Hajioji to pick up Unit 3.",
+      "airdate": "1990-03-07",
+      "markers": [],
+      "external_id": "8058"
+    },
+    {
+      "n": 21,
+      "title": "Phantom Again",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Asuma heads to Hajioji to get back Unit 3. He now heads to the battle. However, in the meantime, Noa and Ota are getting their butts kicked by the enemy.",
+      "airdate": "1990-03-14",
+      "markers": [],
+      "external_id": "8059"
+    },
+    {
+      "n": 22,
+      "title": "Labor and Flower",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Noa and Kanuka meet up with some old guy and shows them his labor collection. He also gets training on how to pilot a labor from them. The old guy's friend owns a very powerful labor, but that's it. And he doesn't know how to pilot it. Later, the old man and his friend fight with their labors. Who will win, the old man with some piloting skills with a weak labor or his friend with no piloting skills with a powerful labor?",
+      "airdate": "1990-03-21",
+      "markers": [],
+      "external_id": "8060"
+    },
+    {
+      "n": 23,
+      "title": "Kanuka’s Report",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kanuka is now leaving Division 2 and going back home to America. Asuma, Ota, and the others decide to throw her a farewell party. Noa is sent to spy on Kanuka. When the guys finish setting up the party, they come across Kanuka's reports on Division 2 and decide to read them.",
+      "airdate": "1990-04-04",
+      "markers": [],
+      "external_id": "8061"
+    },
+    {
+      "n": 24,
+      "title": "Farewell, Kanuka",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Kanuka is heading back to America. However, there is a hijacker trying to hijack the plane Kanuka is riding on. How is Kanuka going to stop this, and without her gun?",
+      "airdate": "1990-04-11",
+      "markers": [],
+      "external_id": "8062"
+    },
+    {
+      "n": 25,
+      "title": "Storm of Spring",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Shinshi takes control of Kanuka's position in Division 2. However, he is really bad at it. Then, he is offered a new job. Will Shinshi stay with Division 2 or will he take the new job? And how is his wife going to react?",
+      "airdate": "1990-04-18",
+      "markers": [],
+      "external_id": "8063"
+    },
+    {
+      "n": 26,
+      "title": "I’m Takeo Kumagami",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Takeo Kumagami now joins Division 2. Noa is worried that Goto will reassign positions and that Takeo will take her place as the pilot for Unit 1.",
+      "airdate": "1990-04-25",
+      "markers": [],
+      "external_id": "8064"
+    },
+    {
+      "n": 27,
+      "title": "A Calling Voice in the Darkness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "SV2 now owns this old mansion. While they work on the mansion, everyone starts to see ghosts.",
+      "airdate": "1990-05-02",
+      "markers": [],
+      "external_id": "8065"
+    },
+    {
+      "n": 28,
+      "title": "Suspicious Duo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Noa and Asuma meet Utsumi and Bud in an arcade. Utsumi is giving Bud a new special labor called the Griffon. Bud will use it to fight Noa in the future.",
+      "airdate": "1990-05-09",
+      "markers": [],
+      "external_id": "8066"
+    },
+    {
+      "n": 29,
+      "title": "SV2 Wiped Out!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "SV2 orders their lunch from Shanghai Restraunt, as usual. But they never get it. They intend to find out why and won't work until they get their food.",
+      "airdate": "1990-05-23",
+      "markers": [],
+      "external_id": "8067"
+    },
+    {
+      "n": 30,
+      "title": "Griffon Was Here!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Utsumi plans to unveil the Griffon to the public. Meanwhile, H.Q. wants to put in more divisions, so they will get rid of the ingrams and replace them with a bunch of economy models, but the decision isn't final yet.",
+      "airdate": "1990-05-30",
+      "markers": [],
+      "external_id": "8068"
+    },
+    {
+      "n": 31,
+      "title": "Tragedy in Rain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Division 2 is on duty at the International Labor Show. Asuma takes Noa's movement disk to test out the new economy model. But then, the Griffon is unleashed. He beats up Asuma and Ota. Noa enters the fight after getting her disk back, but the Griffon retreats since it was raining.",
+      "airdate": "1990-06-06",
+      "markers": [],
+      "external_id": "8069"
+    },
+    {
+      "n": 32,
+      "title": "Reunion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The Griffon has crashed and Noa is relieved. However, the Griffon is being fixed up. Kanuka comes back to Tokyo and temporarily takes control of command of Machine 1.",
+      "airdate": "1990-06-13",
+      "markers": [],
+      "external_id": "8070"
+    },
+    {
+      "n": 33,
+      "title": "Hounds of SCHAFT",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Noa and the gang that the Griffon didn't really crash, the crash was faked. SCHAFT must not let Utsumi get to Tokyo, but he gets there. Noa must prepare for the fight against the Griffon.",
+      "airdate": "1990-06-20",
+      "markers": [],
+      "external_id": "8071"
+    },
+    {
+      "n": 34,
+      "title": "The Battle of the Gate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Noa and Alphonse begin the fight with Bud and the Griffon. Noa is given a rifle to use but she can't use it because there are stupid people in the way. She tries using it like a sword but it didn't work out.",
+      "airdate": "1990-06-27",
+      "markers": [],
+      "external_id": "8072"
+    },
+    {
+      "n": 35,
+      "title": "Griffon Down",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Noa and Alphonse continue her fight with the Griffon. But the Griffon gets away in order for Utsumi to escape. Kanuka must go back to America.",
+      "airdate": "1990-07-04",
+      "markers": [],
+      "external_id": "8073"
+    },
+    {
+      "n": 36,
+      "title": "Noa’s Adventure",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Division 2 goes to stay by the mountains for a week for training. While out buying dinner, Noa finds 20,000 yen and goes to find where the money came from all by herself.",
+      "airdate": "1990-07-11",
+      "markers": [],
+      "external_id": "8074"
+    },
+    {
+      "n": 37,
+      "title": "I’m Selling Peace of Mind",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Division 2 must get the Patlabor Insurance to cover for the cars they destroyed.",
+      "airdate": "1990-07-18",
+      "markers": [],
+      "external_id": "8075"
+    },
+    {
+      "n": 38,
+      "title": "The Underground Mystery Tour",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Something is out stealing stuff from Division 2. It appears to come from an old tunnel. Ota and Shinshi go to check it out. When Division 2 loses contact with them, Noa, Asuma, Hiromi, and Takeo go to find them.",
+      "airdate": "1990-07-25",
+      "markers": [],
+      "external_id": "8076"
+    },
+    {
+      "n": 39,
+      "title": "Economy Model Plans",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Shinohara Industries has finished the new production model of a police labor. Noa, Ota, and Gomioka tests them. What will they think of them?",
+      "airdate": "1990-08-01",
+      "markers": [],
+      "external_id": "8077"
+    },
+    {
+      "n": 40,
+      "title": "Orders of the Coast Guard",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "People claim to have seen some kind of monster on the beach. Division 2 investigates this.",
+      "airdate": "1990-08-08",
+      "markers": [],
+      "external_id": "8078"
+    },
+    {
+      "n": 41,
+      "title": "Save the Terrorists",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Division 2 must save 2 very lousy terrorists that set off a bomb in the wrong place.",
+      "airdate": "1990-08-15",
+      "markers": [],
+      "external_id": "8079"
+    },
+    {
+      "n": 42,
+      "title": "The Men Who Returned",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Three old terrorists team up to steal some money.",
+      "airdate": "1990-08-22",
+      "markers": [],
+      "external_id": "8080"
+    },
+    {
+      "n": 43,
+      "title": "The Working Girl",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Momoko Sakurayama is interviewing Noa for \"The Working Girl\" show. Meanwhile, a sick man steals a labor in order to commit suicide.",
+      "airdate": "1990-08-29",
+      "markers": [],
+      "external_id": "8081"
+    },
+    {
+      "n": 44,
+      "title": "Long Live CLAT",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Shige is being sent to New York. However, he gets hurt before he goes and has a dream that he is in New York working with CLAT.",
+      "airdate": "1990-09-05",
+      "markers": [],
+      "external_id": "8082"
+    },
+    {
+      "n": 45,
+      "title": "Vocational Options",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Noa is offered to become a pilot for a Helldiver. While Noa tries to make her decision, she must stop a criminal without Alphonse.",
+      "airdate": "1990-09-12",
+      "markers": [],
+      "external_id": "8083"
+    },
+    {
+      "n": 46,
+      "title": "His Name is Zero",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "SV2 gets a new patlabor model called the Zero. It is superior to the ingram. After messing up during a mission, Noa is worried that she will lose Alphonse.",
+      "airdate": "1990-09-19",
+      "markers": [],
+      "external_id": "8084"
+    },
+    {
+      "n": 47,
+      "title": "Condition Green",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Noa goes back to her hometown and sees the grave of her dog Alphonse. Asuma goes to get her when a terrorist comes. Division 1 and 2 must find the terrorist without using weapons since it would cause a fire.",
+      "airdate": "1990-09-26",
+      "markers": [],
+      "external_id": "8085"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "コンディション・グリーン～緊急発進～ (Condition Green ~Kinkyou Hasshin~)",
+      "artist": "Hiroko Kasahara",
+      "episodes": "1,2,5,6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "パラダイスの確率 (Paradise no Kakuritsu)",
+      "artist": "JA JA",
+      "episodes": "1-4"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Miraiha lovers",
+      "artist": "Hiroko Kasahara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Then, Daybreak",
+      "artist": "Kenji Kawai",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Patlabor",
+      "artist": "Bernard Minet",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sono mama no Kimi de Ite (そのままの君でいて)",
+      "artist": "Yuuko Nitou",
+      "episodes": "1-34"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Midnight Blue (ミッドナイト ブルー)",
+      "artist": "KISSME QUICK",
+      "episodes": "1-34"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "守りたいの",
+      "artist": "冨永みーな",
+      "episodes": "3,4,7-9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "マイペース My Way My Pace",
+      "artist": "冨永みーな",
+      "episodes": "5-9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Megalocity Police",
+      "artist": "Kenji Kawai",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Condition Green—Kinkyū Hasshin (コンディション・グリーン～緊急発進～; Condition Green—Emergency Launch)",
+      "artist": "Hiroko Kasahara",
+      "episodes": "35-47"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Paradise no Kakuritsu (パラダイスの確率)",
+      "artist": "JA-JA",
+      "episodes": "35-47"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "YOU ARE THE ONE",
+      "artist": "DAIZO",
+      "episodes": "10-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "100カラットの未来",
+      "artist": "兵藤まこ",
+      "episodes": "10-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "The Limits of Illusion",
+      "artist": "Kenji Kawai",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "IDLING for you",
+      "artist": "谷本憲彦",
+      "episodes": "14-16"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "LONG SILENCE",
+      "artist": "ダイナマイト・シゲ",
+      "episodes": "14-15"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Tragedy of L",
+      "artist": "Kenji Kawai",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "The Longest Day of the SV2",
+      "artist": "Kenji Kawai",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Revolution",
+      "artist": "Kenji Kawai",
+      "episodes": "6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Captain Gotoh's Report",
+      "artist": "Kenji Kawai",
+      "episodes": "7"
+    }
+  ],
+  "relations": []
+}

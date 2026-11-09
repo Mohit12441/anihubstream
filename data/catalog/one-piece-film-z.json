@@ -1,0 +1,121 @@
+{
+  "id": "one-piece-film-z",
+  "title": "One Piece Film: Z",
+  "native": "ONE PIECE FILM Z",
+  "year": 2012,
+  "rating": 7.9,
+  "season": "Fall 2012",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx12859-uQFENDPzMWz6.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12859-uQFENDPzMWz6.jpg",
+  "accent": "#f1ae5d",
+  "synopsis": "Said to be comparable to the Ancient Weapons of old, the Marines’ trump card, the “Dyna Stones,” have suddenly been stolen by a group of renegade vigilantes. The terrifyingly powerful man responsible, former Marine Admiral “Z”, now stands in the path of Luffy and his Straw Hat Pirates. Can the Straw Hats defeat “Z” and his crew, or will the New World meet its end at the hands of this mad man? \n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "one-piece-film:-z-88ve1d",
+    "mal": 12859,
+    "anilist": 12859,
+    "kitsu": 6827
+  },
+  "skip_key_id": 12859,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "one piece film z one piece film z movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "One Piece Film: Z (Movie)",
+      "runtime": "107:00",
+      "runtime_seconds": 6420,
+      "thumb": "https://cdn.myanimelist.net/images/anime/6/44297l.webp",
+      "synopsis": "The Straw Hat Pirates enter the rough seas of the New World in search of the hidden treasures of the Pirate King, Gol D. Roger－One Piece. On their voyage, the pirates come across a terrifying, powerful man, former Marine Admiral Z.\n\nZ is accused of having stolen the \"Dyna Stones\", weapons believed to have the power to shake up the New World. The Marine Headquarters believes Z is about to use it to end the pirate era, and with it, the lives of many innocent people. In fear of such a phenomenal event, marines start to take action against the former admiral.\n\nEven if it means stumbling upon marines and the navy, the Straw Hat Pirates decided to chase after Z and stop him from causing havoc. As they continue to embark on their ventures, the pirates bump into new and familiar acquaintances.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "99605"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shinjidai (新時代; New Genesis)",
+      "artist": "Ado",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaze no Yukue (風のゆくえ; Where the Wind Goes)",
+      "artist": "Ado",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ikari wo Kureyo (怒りをくれよ; Give Me Anger)",
+      "artist": "GLIM SPANKY",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Zeal",
+      "artist": "Yasutaka Nakata",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bad Reputation",
+      "artist": "Avril Lavigne",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "How You Remind Me",
+      "artist": "Avril Lavigne",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Fanfare",
+      "artist": "Mr. Children",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Bad Reputation",
+      "artist": "Avril Lavigne",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "How You Remind Me",
+      "artist": "Avril Lavigne",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

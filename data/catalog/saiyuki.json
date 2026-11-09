@@ -1,0 +1,737 @@
+{
+  "id": "saiyuki",
+  "title": "Saiyuki",
+  "native": "幻想魔伝 最遊記",
+  "year": 2000,
+  "rating": 7,
+  "season": "Spring 2000",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx129-YjyAZNbmTGxE.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129-YjyAZNbmTGxE.png",
+  "accent": "#f1e4bb",
+  "synopsis": "Many years ago, humans and demons lived in harmony. But that unity ended when demons started attacking humans and plotted a mission to unleash Gyumao - an evil demon imprisoned for thousands of years. Now, Genjo Sanzo, a rogue priest, must team up with three demons - Sha Gojyo, Son Goku, and Cho Hakkai - and embark on a perilous journey to the west to stop these demons from resurrecting Gyumao and restore the balance between humans and demons on Earth.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "saiyuki-e1pnds",
+    "mal": 129,
+    "anilist": 129,
+    "kitsu": 108
+  },
+  "skip_key_id": 129,
+  "skip_key_space": "mal",
+  "episode_total": 50,
+  "added_at": null,
+  "search_text": "saiyuki 幻想魔伝 最遊記 tv finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Go to the West / To the Distant West",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3230/original.jpeg",
+      "synopsis": "With the amount of demon attacks increasing and humanity threatened more and more, Sanzo Genjo is sent on a journey to the west in hopes of ending the up rise.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3230"
+    },
+    {
+      "n": 2,
+      "title": "First Game / A Guide to the Netherworld",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3231/original.jpeg",
+      "synopsis": "The group stops at a small hamlet to have a warm meal a cozy bed, but discover the tension that the demons have caused among the human population.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3231"
+    },
+    {
+      "n": 3,
+      "title": "His God, My God / Where the Gods Are",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3232/original.jpeg",
+      "synopsis": "The rocky terrain has made driving impossible, and weary and tired, the group finds a Buddhist monastery hidden away in the mountains. After realizing just who Sanzo is, the monks offer the four a place to rest, but it comes with its price.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3232"
+    },
+    {
+      "n": 4,
+      "title": "Crimson / Crimson Tears",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3233/original.jpeg",
+      "synopsis": "While having a hot meal they discover that their host has long been awaiting the return of her lover who just happens to be a demon.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3233"
+    },
+    {
+      "n": 5,
+      "title": "Pure Assassin / A Beautiful Assassin",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3234/original.jpeg",
+      "synopsis": "Having met failure after failure, Kougaiji's subordinate Yaone decides to undertake the mission of destroying Sanzo and the others herself.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3234"
+    },
+    {
+      "n": 6,
+      "title": "Rancorous Exchange / Unnatural Talismanic Monk",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3235/original.jpeg",
+      "synopsis": "While taking time for some much needed rest, Sanzo has time for a bit of self-reflection about his past.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3235"
+    },
+    {
+      "n": 7,
+      "title": "Goodnight / A Twilight Farewell",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3236/original.jpeg",
+      "synopsis": "With Sanzo badly wounded by Rikudo's attack, Goku loses his cool, and his power limiter. Now that his powers are out of check, and control, he can't determine who his friends or foes are.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3236"
+    },
+    {
+      "n": 8,
+      "title": "Confront / The Man Who Foretells Death",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3237/original.jpeg",
+      "synopsis": "When the Sanzo party encounter a mysterious fortuneteller named Qin Yi Se, more dark secrets from Hakkai’s past could be revealed.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3237"
+    },
+    {
+      "n": 9,
+      "title": "Lethal Trap / Fight Party",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3238/original.jpeg",
+      "synopsis": "The battle heats up, but yet remains at a standstill as the two factions continue to battle. It will be a short lived duel however when the demon crab, thought to be defeated, arises again and enemies quickly become allies.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3238"
+    },
+    {
+      "n": 10,
+      "title": "Fake the Face / False Saviors",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3239/original.jpeg",
+      "synopsis": "Continuing west, Sanzo and his friends come across another town. Long in the past, another priest who has taken the name Sanzo saved the town, and now they feel indebted to him and immediately offer the four anything that they want.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3239"
+    },
+    {
+      "n": 11,
+      "title": "Tragic Revenge / The Laughing Grim Reaper",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3240/original.jpeg",
+      "synopsis": "Hakkai continues to reflect on their recent encounter with Chin Yisou as memories of his past come flooding back to him. In order to clear his head, he takes a late night walk.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3240"
+    },
+    {
+      "n": 12,
+      "title": "Wandering Destiny / Battle Against the Darkness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3241/original.jpeg",
+      "synopsis": "The battle with Chin Yisou continues. However, Yious has one last trick up his sleeve, and it may cost Sanzo his life.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3241"
+    },
+    {
+      "n": 13,
+      "title": "Crude Counterfeit / Fruit That Summons Death",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3242/original.jpeg",
+      "synopsis": "Goku is hungry yet again, and that goes double when Lirin shows up. The two smell something, but the fruit that they find on a grand tree rots before they can even pick it.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3242"
+    },
+    {
+      "n": 14,
+      "title": "Sweet Client / Their Promise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3243/original.jpeg",
+      "synopsis": "The group stops in a small town in order to take a break and restock on supplies. Gojyo however decides that it's time to \"cruise for chicks\" but a small fight that he gets into lures the wrong type of woman to him.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3243"
+    },
+    {
+      "n": 15,
+      "title": "Fated Guys / The Binding Spell of Crimson",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3244/original.jpeg",
+      "synopsis": "As the team sits out a rainstorm, Gojyo recalls a night three years prior where he met Hakkai on a deserted trail.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3244"
+    },
+    {
+      "n": 16,
+      "title": "Be There / An Ode to the Living",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3245/original.jpeg",
+      "synopsis": "In part two of the previous episode, the three tried to track down Hakkai after he ran away from them. His past catches up to him in the form of the brother of one of his victims, and more details were unearthed about the team.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3245"
+    },
+    {
+      "n": 17,
+      "title": "Eden / Eternal Paradise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3246/original.jpeg",
+      "synopsis": "As they continue westward, the team runs across a female demon that requests passage to a small town in a hidden valley. Upon arriving there, they find a dark mist has swallowed up the town and all but Sanzo are turned to stone.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3246"
+    },
+    {
+      "n": 18,
+      "title": "Vice or Justice / The Truth of Justice",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3247/original.jpeg",
+      "synopsis": "Yaone is captured by a band of bounty hunters and the only way to free her is for Hakkai to fight an old friend. Past loyalties compete with current circumstances and eventually, a larger demon comes into play.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3247"
+    },
+    {
+      "n": 19,
+      "title": "Don't Go Alone / Maidens of Sorrow",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3248/original.jpeg",
+      "synopsis": "As their journey continues Sanzo and his friends have a chance encounter with four beautiful sisters. Sanzo however is the only one that's not interested, and warns his friends not to get involved.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3248"
+    },
+    {
+      "n": 20,
+      "title": "Sandstorm / The Quicksand Trap",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3249/original.jpeg",
+      "synopsis": "The desert holds many perils, but that isn't going to stop Sanzo from making an unexpected stop.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3249"
+    },
+    {
+      "n": 21,
+      "title": "Selfish / Berserking Toward Destruction",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3250/original.jpeg",
+      "synopsis": "Sanzo has been poisoned and lies dying. It seems like it's impossible to find an antidote before the poison takes its effect, but when Kougaji arrives, he offers a solution. However, it means that Goku must defeat him in combat.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3250"
+    },
+    {
+      "n": 22,
+      "title": "Devastation / The End of the Battle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3251/original.jpeg",
+      "synopsis": "Goku's battle against Kougaji rages on, and even though he's won, without his demon limiter, he's completely out of control. Even his friends can't stop his bloodthirsty rage.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3251"
+    },
+    {
+      "n": 23,
+      "title": "Scapegoat / The Price of Submission",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3252/original.jpeg",
+      "synopsis": "The Sanzo party finds themselves in a village where the citizens make a sacrifice to the resident demon, or risk having their city destroyed. It seems that escape is impossible for them.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3252"
+    },
+    {
+      "n": 24,
+      "title": "Mother / Crimson Bond",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3253/original.jpeg",
+      "synopsis": "The group finds a town short on food and water, and if that weren't bad enough, a new mother is having problems getting the townsfolk to give her the needed supplies for everyday life.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3253"
+    },
+    {
+      "n": 25,
+      "title": "Tomfool! Tomboy! / Horrifying Assassins!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3254/original.jpeg",
+      "synopsis": "Once again Lilin, the young sister of Kogaiji, appears to challenge our heroes.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3254"
+    },
+    {
+      "n": 26,
+      "title": "Calling / The Cry That Does Not Reach",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3255/original.jpeg",
+      "synopsis": "One of Kogaiji’s troops called “Iron Demon Troop\" assaults Sanzo and his comrades. The troop is completely destroyed by our heroes’ overwhelming power.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3255"
+    },
+    {
+      "n": 27,
+      "title": "Advent / The War Prince Descends",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3256/original.jpeg",
+      "synopsis": "Our heroes encounter new enemies from the heavens. They are Prince Homura, Zenon and Shien. They are not human, nor are they monsters.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3256"
+    },
+    {
+      "n": 28,
+      "title": "Lonely War / The Launch of a Rebellion",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3257/original.jpeg",
+      "synopsis": "Abandoning the Celestial Heavens, Prince Homura, Zenon and Shien decide to build a new world. They choose the tower and castle made by Monster King Gailu and his warriors as their headquarters.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3257"
+    },
+    {
+      "n": 29,
+      "title": "Unexpected Defeat / The Fall of Houtou Castle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3258/original.jpeg",
+      "synopsis": "The Celestial army destroys the monster-warriors and soldiers in Castle Houto.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3258"
+    },
+    {
+      "n": 30,
+      "title": "Undertaker / An Invitation to Hell",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3259/original.jpeg",
+      "synopsis": "Our heroes walk into a desolate village. They wonder what had happened here. Suddenly 4 coffins of equal size to each of our heroes are pushed out and the illusion of the creature called \"The Undertaker\" appears.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3259"
+    },
+    {
+      "n": 31,
+      "title": "Ambition / The Arrogance of the Gods",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3260/original.jpeg",
+      "synopsis": "A platoon of five skilled warriors who scored high points at the military drill come to see Prince Homura. They want to join the army of the Celestial Heavens.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3260"
+    },
+    {
+      "n": 32,
+      "title": "Fake Star Strike Back / The Pride of Clowns",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3261/original.jpeg",
+      "synopsis": "Our heroes meet the party of the bogus Sanzo again. After the incident some time ago, bogus Sanzo never introduces himself as the priest Sanzo.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3261"
+    },
+    {
+      "n": 33,
+      "title": "Faraway Dream / Dried up Tears",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3262/original.jpeg",
+      "synopsis": "The gang finds themselves in the middle of a blizzard. Then learn that its all a trap by a boy named Shouryu who has come for Sanzo's sutra. Who is this kid and can they defeat him and get out of the snow?",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3262"
+    },
+    {
+      "n": 34,
+      "title": "Second Contact / The War Prince Once Again",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3263/original.jpeg",
+      "synopsis": "Five skilled warriors of the Celestial Heavens pop up in front of our heroes again. They want to take the Sutra of Dark Power from Sanzo and force Son Goku to come to their side.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3263"
+    },
+    {
+      "n": 35,
+      "title": "Solitude / Solitary Soul",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3264/original.jpeg",
+      "synopsis": "Kogaiji visits the tomb of the girl he loved profoundly.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3264"
+    },
+    {
+      "n": 36,
+      "title": "Brotherhood / Crimson Flower",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3265/original.jpeg",
+      "synopsis": "Lost into deep woods in the fog and rain, Sanzo and his comrades have to sleep in the open. Sha-Gojyo hates this idea and walks on for a way-out of the woods.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3265"
+    },
+    {
+      "n": 37,
+      "title": "Taciturnity / The Smile That Was Locked Away",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3266/original.jpeg",
+      "synopsis": "Sanzo and his party walk into a village where Cho-Hakkai grew up in the orphanage. Hakkai has mixed feeling of nostalgia and bitterness. In those days, he was a desperate child who never had smiled.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3266"
+    },
+    {
+      "n": 38,
+      "title": "Fleeting Vision / Unfulfilled Promise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3267/original.jpeg",
+      "synopsis": "Our heroes defeat the monsters in the wood and get a good drink. While drinking, Sanzo recalls the incident involving his master, Kohmyo-Sanzo and himself long time ago.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3267"
+    },
+    {
+      "n": 39,
+      "title": "Misty Rain / Rain",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3268/original.jpeg",
+      "synopsis": "Sanzo is gloomy and depressed in the never-ending rain. Goku worries about Sanzo and tries to cheer him up, but it is no use. Sanzo gets more irritated and says hurtful things to Goku.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3268"
+    },
+    {
+      "n": 40,
+      "title": "Twilight / The Irate Sun",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3269/original.jpeg",
+      "synopsis": "This episode focuses on Goku's past 500 years ago when he met Konzen Douji. It also deals with Homura's past.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3269"
+    },
+    {
+      "n": 41,
+      "title": "Collage / Quiet Expulsion",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3270/original.jpeg",
+      "synopsis": "One day, Goku wanted to see Nataku and sneaks into the Great Palace. He meets Kenren, the Commander General of the Army of Celestial Heavens.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3270"
+    },
+    {
+      "n": 42,
+      "title": "Festival / Unforgettable View",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3271/original.jpeg",
+      "synopsis": "Sanzo’s party drops in a town called Saika on the day of Festival of God. They notice that the God the folks worship there is Shien.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3271"
+    },
+    {
+      "n": 43,
+      "title": "Tears / False Town",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3272/original.jpeg",
+      "synopsis": "Zeon hears that one of the Sutras of World Commencement was found in a village. He visits the village to find if this news is true.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3272"
+    },
+    {
+      "n": 44,
+      "title": "Plunderers / Scripture Stolen",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3273/original.jpeg",
+      "synopsis": "God Homura and his two fellow-Gods are ready to begin the Creation of New World. However, they need Sanzo’s Sutra of Dark Power to accomplish their plan.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3273"
+    },
+    {
+      "n": 45,
+      "title": "Glorious Days / Before Dawn",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3274/original.jpeg",
+      "synopsis": "Goku catches some fish while Sanzo recovers from his wounds. Then we see more of what happened in the past.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3274"
+    },
+    {
+      "n": 46,
+      "title": "Chaos / The Trembling Earth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3275/original.jpeg",
+      "synopsis": "The Creation of New World for Homura, Shien and Zeon has begun.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3275"
+    },
+    {
+      "n": 47,
+      "title": "Guilty or Not Guilty / Kaizai",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3276/original.jpeg",
+      "synopsis": "Goku resists the attack of Homura’s Royal Guards single handedly so that his comrades can go into the Tower to find Homura.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3276"
+    },
+    {
+      "n": 48,
+      "title": "Absolutely Heaven / Door to Freedom",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3277/original.jpeg",
+      "synopsis": "Homura took off Goku's headband to start the progress to realize his perfect world. Kougaiji and his friends show up to take back their scripture!",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3277"
+    },
+    {
+      "n": 49,
+      "title": "Missing Desire / Shining Paradise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3278/original.jpeg",
+      "synopsis": "While Sanzo deals with Demon Goku, Homura dreams of his past and meeting Rin Rei. At the same time Gojyo and the other's have to deal with Zenon in his demon form. Is there hope for any of them?",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3278"
+    },
+    {
+      "n": 50,
+      "title": "Alone / Westward",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/3279/original.jpeg",
+      "synopsis": "Homura is now all alone. But a bolder that will create his new utopia is growing. It's up to Sanzo and Goku to stop him and stop the bolder from reaching critical and destroying the world! Can they do it alone or will the others show up to help?",
+      "airdate": null,
+      "markers": [],
+      "external_id": "3279"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kamino Hotokemo",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ruten",
+      "artist": "Shugo Nakamura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Move on! Ibaramichi (move on! イバラミチ)",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Refrain (リフレイン)",
+      "artist": "Luck Life",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sakura no Kinoshita",
+      "artist": "KOKIA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hikari no Kata e",
+      "artist": "KOKIA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Late-Show",
+      "artist": "GARDEN",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "shiny moon",
+      "artist": "Toshihiko Seki, Souichiro Hoshi & Hiroaki Hirata",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shangri-la",
+      "artist": "Kikuchi Takashi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Don't look back again",
+      "artist": "WAG",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mitsumeteitai",
+      "artist": "flow-war",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Wild Rock",
+      "artist": "BUZZLIP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ID",
+      "artist": "flow-war",
+      "episodes": "01-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tightrope",
+      "artist": "Tetsu 69",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "For Real",
+      "artist": "Hidenori Tokuyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tightrope",
+      "artist": "Charcoal Filter",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Shiro no Jumon",
+      "artist": "doa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Fukisusabu Kaze no Naka de",
+      "artist": "WAG",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Still Time",
+      "artist": "Hidenori Tokuyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Alone",
+      "artist": "Mikuni Shimokawa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,238 @@
+{
+  "id": "seton-academy-join-the-pack",
+  "title": "Seton Academy: Join the Pack!",
+  "native": "群れなせ！シートン学園",
+  "year": 2020,
+  "rating": 6.7,
+  "season": "Winter 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx112293-UXFSGOfRbBe8.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx112293-UXFSGOfRbBe8.png",
+  "accent": "#e4ae50",
+  "synopsis": "Seton Academy, a school where animals of all species gather to live and learn together. A sacred garden of learning, where students hone their primal instincts and the laws are of the jungle. Where species pit against species in a daily struggle for survival... Now enter the animal-hating human Jin Mazama, and the lonely wolf Ranka Okami. When man meets wolf in an encounter for the ages, this food chain is about to be shook. “Species shmecies! If we’ve shared face-licks, you’re a friend to me! Welcome to the pack!”\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42601,
+    "anilist": 112293,
+    "mal": 40483
+  },
+  "skip_key_id": 40483,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 07:58:33",
+  "search_text": "seton academy join the pack 群れなせ シートン学園 tv finished",
+  "genres": [
+    "comedy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 121,
+          "end": 211
+        }
+      ],
+      "external_id": "273305"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273306"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        }
+      ],
+      "external_id": "273308"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 68,
+          "end": 158
+        }
+      ],
+      "external_id": "273634"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 162
+        }
+      ],
+      "external_id": "273823"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 100,
+          "end": 190
+        }
+      ],
+      "external_id": "274077"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 92,
+          "end": 182
+        }
+      ],
+      "external_id": "274078"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274079"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 64,
+          "end": 154
+        }
+      ],
+      "external_id": "274080"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 133
+        }
+      ],
+      "external_id": "274081"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 58,
+          "end": 148
+        }
+      ],
+      "external_id": "274082"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274083"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

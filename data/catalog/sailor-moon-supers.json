@@ -1,0 +1,561 @@
+{
+  "id": "sailor-moon-supers",
+  "title": "Sailor Moon SuperS",
+  "native": "美少女戦士セーラームーン Super S",
+  "year": 1995,
+  "rating": 7.4,
+  "season": "Spring 1995",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1239-bYf4KsFfsUhf.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1239-bYf4KsFfsUhf.png",
+  "accent": "#e4a143",
+  "synopsis": "SuperS centers heavily on Chibi-usa and the Sailor Team. A new enemy, the Dead Moon Circus, has now appeared. Their motive is to find the Golden Dream Mirror that would be used to rule the world. To do this, the enemy attacks innocent victims for their Dream Mirrors and test their energy. Chibi-usa also has a new ally on her side, Pegasus. This season also sees the Sailor Senshi obtaining new powers.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sailor-moon-supers-w7l93v",
+    "mal": 1239,
+    "anilist": 1239,
+    "kitsu": 1115
+  },
+  "skip_key_id": 1239,
+  "skip_key_space": "mal",
+  "episode_total": 39,
+  "added_at": null,
+  "search_text": "sailor moon supers 美少女戦士セーラームーン super s tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Meeting of Fate! The Night where a Pegasus Flies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21161/original.jpg",
+      "synopsis": "Chibiusa is in a trance, and is lead to follow a young male voice...suddenly winding up in a crystal forest. Chibiusa meets a white unicorn named Pegasus, and they talk. Usagi wakes her up, and they go out on the town, to hang with Mamoru, Motoki, and Motoki's sister Unazuki. Usagi tries to spook Chibiusa about eclipses, when suddenly a tent appears in the area after the eclipse has taken place. In the tent, we see Madame Zirconia ruling over her Amazon Trio, Hawk Eye, FIsh Eye and Tiger Eye, and they discuss the dream mirrors. Naturally, the target is Unazuki. On a bus, Tigers Eye attacks Unazuki, and the\ns hear her shrills and run to her aid. Karakuriko is the lemure used, so Sailor Moon and Sailor Chibimoon fight her off, and save Unazuki's dreams.",
+      "airdate": "1995-03-04",
+      "markers": [],
+      "external_id": "21161"
+    },
+    {
+      "n": 2,
+      "title": "Super Transformations Again! Pegasus' Power",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21162/original.jpg",
+      "synopsis": "Thanks to the mysterious pegasus, Usagi gains the power of Super Sailor Moon.",
+      "airdate": "1995-03-11",
+      "markers": [],
+      "external_id": "21162"
+    },
+    {
+      "n": 3,
+      "title": "Protect a Mother's Dream! The New Attack for Double Moon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21163/original.jpg",
+      "synopsis": "Usagi has a fight with Chibiusa, Shingo and Ikuko over lemon pie (very Usagi like) and despite Ami and Rei's attempts to calm her, she stays angry. Hawkseye takes his turn, and goes after his new target, Ikuko! Ikuko is with Chibiusa when she is attacked, so Chibiusa fetches Usagi's help. They transform, and try to fight Hawkseye, and his lemure, off but no dice. Pegasus grants Sailor Moon a new attack \"\"Moon Gorgeous Meditation\"\", which works like a charm...and Ikuko's dream is saved.",
+      "airdate": "1995-03-18",
+      "markers": [],
+      "external_id": "21163"
+    },
+    {
+      "n": 4,
+      "title": "Capture the Pegasus! The Amazon's Trap",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21164/original.jpg",
+      "synopsis": "Usagi and the girls try to help Naru and Umino, when Naru becomes the target of Tigers Eye. She gets trapped into Tigers Eye's cage, but Pegasus helps save her, and her dream is saved. Sailor Moon and the soliders use their attacks, and are able to defeat the lemures.",
+      "airdate": "1995-03-25",
+      "markers": [],
+      "external_id": "21164"
+    },
+    {
+      "n": 5,
+      "title": "A Couple Made for Each Other! Usagi and Mamoru's Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21165/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-04-15",
+      "markers": [],
+      "external_id": "21165"
+    },
+    {
+      "n": 6,
+      "title": "Artemis' Affair!? A Mysterious Kitten Appears",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21166/original.jpg",
+      "synopsis": "When a cat from the future appears to the past, Luna thinks Artemis cheated on her and had a kitten.",
+      "airdate": "1995-04-29",
+      "markers": [],
+      "external_id": "21166"
+    },
+    {
+      "n": 7,
+      "title": "Makoto's Friendship! A Girl Who Adores a Pegasus",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21167/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-05-13",
+      "markers": [],
+      "external_id": "21167"
+    },
+    {
+      "n": 8,
+      "title": "Hearts that Communicate! Chibi-Usa and Pegasus",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21168/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-05-20",
+      "markers": [],
+      "external_id": "21168"
+    },
+    {
+      "n": 9,
+      "title": "Protect Mamoru! Jealousy of Usagi the Ninja",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21169/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-05-27",
+      "markers": [],
+      "external_id": "21169"
+    },
+    {
+      "n": 10,
+      "title": "Forest of Illusion! Invitation of a Beautiful Fairy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21170/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-06-03",
+      "markers": [],
+      "external_id": "21170"
+    },
+    {
+      "n": 11,
+      "title": "Drive to Heaven! Love Riding on the Car of Dreams",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21171/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-06-10",
+      "markers": [],
+      "external_id": "21171"
+    },
+    {
+      "n": 12,
+      "title": "Try for the Best of Japan! The Worries of a Beautiful Girl Swordsman",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21172/original.jpg",
+      "synopsis": "A young ignored warrior girl attempts to pursue her dream as the strongest warrior in Japan, that is until Tigers Eye attempts to destroy her dream mirror.",
+      "airdate": "1995-06-17",
+      "markers": [],
+      "external_id": "21172"
+    },
+    {
+      "n": 13,
+      "title": "Love Those Minis! The Fashionable Soldiers",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21173/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-07-01",
+      "markers": [],
+      "external_id": "21173"
+    },
+    {
+      "n": 14,
+      "title": "Storm of Love! Minako's Grand Two-Timing Plan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21174/original.jpg",
+      "synopsis": "Trouble stirs up when both Tigers Eye and Hawks Eye go after the same dream mirror, Minako's.",
+      "airdate": "1995-07-08",
+      "markers": [],
+      "external_id": "21174"
+    },
+    {
+      "n": 15,
+      "title": "Mansion of Secrets! The Menu of Love to You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21175/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-07-15",
+      "markers": [],
+      "external_id": "21175"
+    },
+    {
+      "n": 16,
+      "title": "Time to Believe in the Pegasus! The Super Transformations of the Four Soldiers",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21176/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-07-22",
+      "markers": [],
+      "external_id": "21176"
+    },
+    {
+      "n": 17,
+      "title": "Sparkling Summer Days! Ami, the Girl in the Ocean Breeze",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21177/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-08-12",
+      "markers": [],
+      "external_id": "21177"
+    },
+    {
+      "n": 18,
+      "title": "Aim for the Prima! Usagi's Ballet",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21178/original.jpg",
+      "synopsis": "It's a battle for best ballerina! Who can win? The stunning, beautiful but natural clumsy Usagi or the villionous Fish Eye?",
+      "airdate": "1995-08-19",
+      "markers": [],
+      "external_id": "21178"
+    },
+    {
+      "n": 19,
+      "title": "Holiday in Juban City! A Carefree Princess",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21179/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-08-26",
+      "markers": [],
+      "external_id": "21179"
+    },
+    {
+      "n": 20,
+      "title": "The Fated Partner? Makoto's Innocence",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21180/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-09-02",
+      "markers": [],
+      "external_id": "21180"
+    },
+    {
+      "n": 21,
+      "title": "Shadows of the Great Evil! The Trio is Cornered",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21181/original.jpg",
+      "synopsis": "Zirconia gives Fish Eye the photo of a man to attack, and Fish Eye goes after the target. The target is Mamoru.",
+      "airdate": "1995-09-23",
+      "markers": [],
+      "external_id": "21181"
+    },
+    {
+      "n": 22,
+      "title": "Mirror of Dreams! Amazon's Final Stage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21182/original.jpg",
+      "synopsis": "Fish Eye is devasted to learn that he will not get to be a human with beautiful dreams anymore after the next full moon. He poses as a female, and wants to be with Mamoru before he gets transported back to a fish. Mamoru is to loyal to Usagi to accept. Fish Eye still wins a kiss. Fish Eye is depressed about not getting his love, and winds up going to Usagi's house to seek shelter from the rain. He is shocked to find out, Usagi is Super Sailor Moon and best of all, Pegasus is in Chibiusa's care. Zirconia is ready to replace the Amazon Trio with the Amazon Quartet, and they send out a demon to berid of Tigers Eye, Hawks Eye and Fish Eye. The remaining 2/3's of the trio come down to Earth, and there they attack Usagi for her mirror. Fish Eye explains his wish of having dreams, and everyone agrees they want to be full human. The Quartet's demon attacks Fish Eye, but Hawks Eye saves him by stepping in the way, and is killed. With the power of Pegasus, the demon is killed but the full moon s",
+      "airdate": "1995-10-21",
+      "markers": [],
+      "external_id": "21182"
+    },
+    {
+      "n": 23,
+      "title": "Amazoness! The Nightmare From Behind the Mirror",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21183/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-10-28",
+      "markers": [],
+      "external_id": "21183"
+    },
+    {
+      "n": 24,
+      "title": "True Power Explodes! Ami's Song of the Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21184/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-11-04",
+      "markers": [],
+      "external_id": "21184"
+    },
+    {
+      "n": 25,
+      "title": "Burning Passion! Mars' Furious Deadly Attack",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21185/original.jpg",
+      "synopsis": "Usagi sees Rei on a cover of a popular magazine and sees that at the shrine she is overly popular. A little girl decides to dress up like Rei and help her. This girl idolizes Rei! Rei tells the other girls that she is annoyed by her, and she is sad and runs away. One of the Amazon Quartet girls takes her dream. Moon and team defeat the youma.",
+      "airdate": "1995-11-11",
+      "markers": [],
+      "external_id": "21185"
+    },
+    {
+      "n": 26,
+      "title": "A Dentist of Terror? PallaPalla's House",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21186/original.jpg",
+      "synopsis": "Para-para is sent on a job to open a dentist job in order to steal dreams. Usagi and Chibiusa, along with many people, have cavities and go to that dentist. Mamo notices that many people come into the dentist place, but no one comes out. Usagi and Chibiusa are attacked and Mamo as Tuxedo Kamen goes to save them. Para-para is sad to know it has all failed. Ikuko sends the two girls to the Juuban Dentist because theit cavities are real!",
+      "airdate": "1995-11-18",
+      "markers": [],
+      "external_id": "21186"
+    },
+    {
+      "n": 27,
+      "title": "Confrontation in Dreams! Minako and Makoto's Broken Friendship",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21187/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-11-25",
+      "markers": [],
+      "external_id": "21187"
+    },
+    {
+      "n": 28,
+      "title": "Over the Fear! Jump to Freedom",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21188/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-12-02",
+      "markers": [],
+      "external_id": "21188"
+    },
+    {
+      "n": 29,
+      "title": "Don't Lose Your Dreams! The Truth-Reflecting Mirror",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21189/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-12-09",
+      "markers": [],
+      "external_id": "21189"
+    },
+    {
+      "n": 30,
+      "title": "Pegasus is Gone?! Swinging Friendships",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21190/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-12-16",
+      "markers": [],
+      "external_id": "21190"
+    },
+    {
+      "n": 31,
+      "title": "The Secret of the Pegasus! The Handsome Guardian of the Dream World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21191/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-12-23",
+      "markers": [],
+      "external_id": "21191"
+    },
+    {
+      "n": 32,
+      "title": "Chibi-Usa's Little Rhapsody of Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21192/original.jpg",
+      "synopsis": "",
+      "airdate": "1996-01-13",
+      "markers": [],
+      "external_id": "21192"
+    },
+    {
+      "n": 33,
+      "title": "Dream to be an Adult! The Amazoness' Bewilderment",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21193/original.jpg",
+      "synopsis": "",
+      "airdate": "1996-01-20",
+      "markers": [],
+      "external_id": "21193"
+    },
+    {
+      "n": 34,
+      "title": "Coming Terror! The Dark Queen's Evil Approach",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21194/original.jpg",
+      "synopsis": "",
+      "airdate": "1996-01-27",
+      "markers": [],
+      "external_id": "21194"
+    },
+    {
+      "n": 35,
+      "title": "The Center of the Darkness: Dead Moon Circus",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21195/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-02-03",
+      "markers": [],
+      "external_id": "21195"
+    },
+    {
+      "n": 36,
+      "title": "Labyrinth of Mirrors! Chibi Moon Captured",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21196/original.jpg",
+      "synopsis": "",
+      "airdate": "1996-02-10",
+      "markers": [],
+      "external_id": "21196"
+    },
+    {
+      "n": 37,
+      "title": "The Golden Crystal Appears! Nehelenia's Spell",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21197/original.jpg",
+      "synopsis": "",
+      "airdate": "1995-02-17",
+      "markers": [],
+      "external_id": "21197"
+    },
+    {
+      "n": 38,
+      "title": "Time for the Crystal to Shine! Beautiful Power of Dreams",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21198/original.jpg",
+      "synopsis": "",
+      "airdate": "1996-02-24",
+      "markers": [],
+      "external_id": "21198"
+    },
+    {
+      "n": 39,
+      "title": "Dreams Forever! Light Throughout the Sky",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21199/original.jpg",
+      "synopsis": "",
+      "airdate": "1996-03-02",
+      "markers": [],
+      "external_id": "21199"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rashiku Ikimasho",
+      "artist": "Meu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Watashitachi Ni Naritakute",
+      "artist": "Miwako Fujitani",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [Pioneer English edited & uncut versions]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Morning Moon de Aimashou",
+      "artist": "Pretty Cast",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nothing At All",
+      "artist": "Sandy Howell [Pioneer English edited version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Moonlight Densetsu (ムーンライト伝説)",
+      "artist": "Moon Lips",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sailor Moon Theme",
+      "artist": "Nicole Price and Brynne Price [Cloverway English edited & uncut versions]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sailor Moon Theme (Reprise - Instrumental version)",
+      "artist": "Nicole Price and Brynne Price [Cloverway English edited version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Watashi-tachi ni Naritakute (私たちになりたくて)",
+      "artist": "Miwako Fujitani",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "'Rashiku' Ikimasho (“らしく”いきましょ)",
+      "artist": "Meu",
+      "episodes": "14-39"
+    }
+  ],
+  "relations": []
+}

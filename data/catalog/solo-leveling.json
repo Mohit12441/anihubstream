@@ -1,0 +1,364 @@
+{
+  "id": "solo-leveling",
+  "title": "Solo Leveling",
+  "native": "俺だけレベルアップな件",
+  "year": 2024,
+  "rating": 8,
+  "season": "Winter 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151807-it355ZgzquUd.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151807-it355ZgzquUd.png",
+  "accent": "#35bbf1",
+  "synopsis": "They say whatever doesn’t kill you makes you stronger, but that’s not the case for the world’s weakest hunter Seong Jin-U. After being brutally slaughtered by monsters in a high-ranking dungeon, Jin-U came back with the System, a program only he could see, that’s leveling him up in every way. Now, he’s inspired to discover the secrets behind his powers and the dungeon that spawned them.\n\n(Source: Crunchyroll)",
+  "rank": 8,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Solo Leveling Season 2 -Arise from the Shadow- (2025)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46231,
+    "anilist": 151807,
+    "mal": 52299,
+    "hianime": "solo-leveling-e5tfvj"
+  },
+  "skip_key_id": 52299,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-13 00:00:00",
+  "search_text": "solo leveling 俺た けレヘ ルアッフ な件 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I'm Used to It.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/331986/thumbnail/medium-34667b536c50d8f270f9e1de27eaece7.jpeg",
+      "synopsis": "Around ten years ago, gates that connected our world to another dimension began to appear, leading to the rise of hunters who would traverse these gates to fight the magic beasts within. Sung Jinwoo, E-Rank hunter, is the weakest of them all. (Source: Crunchyroll)",
+      "airdate": "2024-01-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 63,
+          "end": 152
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 211,
+          "end": 301
+        }
+      ],
+      "external_id": "331986"
+    },
+    {
+      "n": 2,
+      "title": "If I Had One More Chance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/331987/thumbnail/medium-7e10dc7e479cbbdad77d941a12fcb37b.jpeg",
+      "synopsis": "Jinwoo and his party appear to have cleared a low-level dungeon, when a hidden path to an unfamiliar temple is revealed. There they encounter a set of commandments and a group of monsters that cause them absolute despair. (Source: Crunchyroll)",
+      "airdate": "2024-01-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 131,
+          "end": 221
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1414
+        }
+      ],
+      "external_id": "331987"
+    },
+    {
+      "n": 3,
+      "title": "It's Like a Game",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/332099/thumbnail/medium-92404680fa6cdafe2e324132776b2c27.jpeg",
+      "synopsis": "Jinwoo remains behind in the temple dungeon to save his few surviving party members, and with a swing from the god statue's blade, his life comes to an end—or so it seems, before he wakes up in a hospital bed. (Source: Crunchyroll)",
+      "airdate": "2024-01-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 172
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1415
+        }
+      ],
+      "external_id": "332099"
+    },
+    {
+      "n": 4,
+      "title": "I've Gotta Get Stronger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/338763/thumbnail/medium-51d91cb3e6d28a2807e14f477792a139.jpeg",
+      "synopsis": "Having entered the instance dungeon located inside the subway, Jinwoo levels up time and time again by fighting waves of magic beasts. As he gradually makes his way forward, he finds a long stairway leading deeper underground. (Source: Crunchyroll)",
+      "airdate": "2024-01-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 64,
+          "end": 154
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "338763"
+    },
+    {
+      "n": 5,
+      "title": "A Pretty Good Deal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346884/thumbnail/medium-0394b50374026e644d660cd50ed0116a.jpeg",
+      "synopsis": "Jinwoo joins a party led by Hwang Dongsuk to meet the headcount necessary for a C-Rank dungeon. Joined by another temporary hire, Yoo Jinho, the party defeats beasts without much trouble, but Jinwoo has suspicions about the group's lack of a healer. (Source: Crunchyroll)",
+      "airdate": "2024-02-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 94,
+          "end": 179
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1415
+        }
+      ],
+      "external_id": "346884"
+    },
+    {
+      "n": 6,
+      "title": "The Real Hunt Begins",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346885/thumbnail/medium-bb5bc534b26f84b59ad5fe63e9062d49.jpeg",
+      "synopsis": "While the C-Rank dungeon raid by Jinwoo and the others seems to be progressing well, the moment they step into an area covered in mana stones with a sleeping dungeon boss, things take a wrong turn. (Source: Crunchyroll)",
+      "airdate": "2024-02-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 169,
+          "end": 259
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1420
+        }
+      ],
+      "external_id": "346885"
+    },
+    {
+      "n": 7,
+      "title": "Let's See How Far I Can Go",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346886/thumbnail/medium-15081df9cf4056a30f7b335446f21f16.jpeg",
+      "synopsis": "As Jinwoo continues his training, he completes a daily quest one day by doing more than the quest requires, and a key that leads to a certain item appears in front of him. (Source: Crunchyroll)",
+      "airdate": "2024-02-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1420
+        }
+      ],
+      "external_id": "346886"
+    },
+    {
+      "n": 8,
+      "title": "This Is Frustrating",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346887/thumbnail/medium-ea1b7b5100ed5d5f8e9cd6a6c6316378.jpeg",
+      "synopsis": "Jinwoo answers a Hunter's Association request to take part in the raid of a D-Rank dungeon, where he encounters a few familiar faces. (Source: Crunchyroll)",
+      "airdate": "2024-03-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 46,
+          "end": 136
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1414
+        }
+      ],
+      "external_id": "346887"
+    },
+    {
+      "n": 9,
+      "title": "You've Been Hiding Your Skills",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346888/thumbnail/medium-3f33db6be8a7c35bd37b54d88c3be401.jpeg",
+      "synopsis": "At the D-Rank raid, Jinwoo is reunited with four of the Cartenon Temple survivors. Together, they explore the dungeon with Kang Taeshik and his men. After splitting up, they hear a scream, and then... (Source: Crunchyroll)",
+      "airdate": "2024-03-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 62,
+          "end": 152
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1420
+        }
+      ],
+      "external_id": "346888"
+    },
+    {
+      "n": 10,
+      "title": "What Is This, a Picnic?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346889/thumbnail/medium-a602e4575c891165ee84136f2ddb55f9.jpeg",
+      "synopsis": "Jinwoo survives tragedy once again, but Woo Jinchul warns him that Hwang Dongsoo, an S-Rank hunter, may be after his life. Determined to grow stronger, Jinwoo teams up with Jinho to raid a succession of C-Rank dungeons, but they attract attention... (Source: Crunchyroll)",
+      "airdate": "2024-03-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 188,
+          "end": 278
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1415
+        }
+      ],
+      "external_id": "346889"
+    },
+    {
+      "n": 11,
+      "title": "A Knight Who Defends an Empty Throne",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346890/thumbnail/medium-d01c4855c28dce24ec2aa2fd09e53b98.jpeg",
+      "synopsis": "Out of the blue, a \"job-change quest\" pops up in Jinwoo's window. Feeling that it may help him get stronger, he enters the gate. Inside, he fights wave after wave of enemies, culminating in a knight who brings back memories of the Cartenon Temple. (Source: Crunchyroll)",
+      "airdate": "2024-03-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 94,
+          "end": 184
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1414
+        }
+      ],
+      "external_id": "346890"
+    },
+    {
+      "n": 12,
+      "title": "Arise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/346891/thumbnail/medium-1f51730c9634db337a641ed78c8e6961.jpeg",
+      "synopsis": "Drained from endless battle, Jinwoo sees a phantom of his past self. To overcome his own past as the Weakest Hunter of All Mankind, he struggles to find a way to clear the job-change quest. (Source: Crunchyroll)",
+      "airdate": "2024-03-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 120,
+          "end": 210
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1300,
+          "end": 1391
+        }
+      ],
+      "external_id": "346891"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "ReawakeR",
+      "artist": "LiSA feat. Felix of Stray Kids",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "UN-APEX",
+      "artist": "TK from Ling Tosite Sigure",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "LEveL",
+      "artist": "SawanoHiroyuki[nZk]:TOMORROW X TOGETHER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "request",
+      "artist": "krage",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

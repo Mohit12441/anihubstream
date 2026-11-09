@@ -1,0 +1,57 @@
+{
+  "id": "pokemon-the-movie-genesect-and-the-legend-awakened",
+  "title": "Pokémon the Movie: Genesect and the Legend Awakened",
+  "native": "劇場版 ポケットモンスター ベストウイッシュ 神速のゲノセクト ミュウツー覚醒",
+  "year": 2013,
+  "rating": 6.2,
+  "season": "Summer 2013",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/16680.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/16680.jpg",
+  "accent": "#50bbe4",
+  "synopsis": "The 16th Pokémon movie and the 3rd \"Best Wishes!\" movie.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "pokemon-the-movie:-genesect-and-the-legend-awakened-jm2hnh",
+    "mal": 16680,
+    "anilist": 16680,
+    "kitsu": 7489
+  },
+  "skip_key_id": 16680,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "pokemon the movie genesect and the legend awakened 劇場版 ホ ケットモンスター ヘ ストウイッシュ 神速のケ ノセクト ミュウツー覚醒 movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Pokémon the Movie: Genesect and the Legend Awakened (Movie)",
+      "runtime": "70:00",
+      "runtime_seconds": 4200,
+      "thumb": "https://myanimelist.net/images/anime/9/47615l.webp",
+      "synopsis": "The homeland of the Genesect exists no more. After three hundred million years, the snowy mountains where the Paleozoic Pokémon once lived are no longer habitable—but not all of the race are actually extinct. Several specimens are still alive and desperate to find a new place to call home. Led by a Shiny Genesect and accompanied by the Legendary Pokémon Mewtwo, the vagabond creatures arrive in New Tork City.\n\nPerceiving the city skyline as similar to their initial habitat, the Genesect take over the city center, driving out other Pokémon and threatening the existence of the local populace. On top of that, the Genesect leader confronts Mewtwo in a cunning, fast-paced duel that is bound to destroy the entire city—and it's up to Satoshi and his companions to save the city and reconcile the feuding Pokémon.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "102866"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

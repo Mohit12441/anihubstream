@@ -1,0 +1,700 @@
+{
+  "id": "soul-eater",
+  "title": "Soul Eater",
+  "native": "ソウルイーター",
+  "year": 2008,
+  "rating": 7.7,
+  "season": "Spring 2008",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx3588-fSMggQoFSbUI.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx3588-fSMggQoFSbUI.png",
+  "accent": "#e4bb5d",
+  "synopsis": "Set in the Shinigami technical school for weapon meisters, the series revolves around 3 groups of each a weapon meister and a human weapon. Trying to make the latter a \"Death Scythe\" which is the highest title for a weapon and thus fit for use by the Shinigami, they must collect the souls of 99 evil humans and 1 witch.\n\nMaka & Soul Eater, Black Star & Tsubaki, and Death the Kid with Patty and Liz Thompson are the characters Soul Eater revolves around. Besides taking the time to gather souls, these students of Shibusen defend Death City from some of the most powerful of creatures while still attending school and trying to become stronger.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "soul-eater-t05dim",
+    "mal": 3588,
+    "anilist": 3588,
+    "kitsu": 3128
+  },
+  "skip_key_id": 3588,
+  "skip_key_space": "mal",
+  "episode_total": 51,
+  "added_at": null,
+  "search_text": "soul eater ソウルイーター tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Resonance of the Soul: Will Soul Eater Become a Death Scythe?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52714/original.jpg",
+      "synopsis": "Maka Alba and Soul Eater, a Meister/Weapon pair, has defeated 99 bad souls, and they now need to defeat a witch in order to evolve Soul Eater into a Death Scythe. They seek out a witch named Blair, but there is something strange about her...",
+      "airdate": "2008-04-07",
+      "markers": [],
+      "external_id": "52714"
+    },
+    {
+      "n": 2,
+      "title": "I Am the Star!: The Big Man Is Showing Up Here?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52715/original.jpg",
+      "synopsis": "Meister Black Star and his weapon/partner Tsubaki attempt to go after Al Capone and his comrades to collect their own 99 souls but fail. Black Star and Tsubaki then learn that Al Capone plans to capture a witch named Angela and go after him once more, only to find Capone and his allies already defeated by Angela's powerful bodyguard. When Black Star decides to challenge the bodyguard, who will come out on top?",
+      "airdate": "2008-04-14",
+      "markers": [],
+      "external_id": "52715"
+    },
+    {
+      "n": 3,
+      "title": "The Perfect Boy: Death the Kid's Magnificent Mission?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52716/original.jpg",
+      "synopsis": "Meister Death the Kid, after failing to capture Lupin the thief due to his obsession with symmetry, speaks to his father, Shinigami-sama, and decides to go after the mummy-controlling witch residing at the pyramid of Anubis. Worried about the symmetry of a picture hanging in his room back home, Kid leaves his weapons, sisters Patty and Liz Thompson, to fend for themselves in the mummy infested pyramid. The sisters manage to defeat the mummies only to be captured by the Pharaoh! Will Kid come back in time to save them?",
+      "airdate": "2008-04-21",
+      "markers": [],
+      "external_id": "52716"
+    },
+    {
+      "n": 4,
+      "title": "Engage the Witch Hunter! A Remedial Lesson in the Graveyard?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52717/original.jpg",
+      "synopsis": "Maka and Soul Eater are discussing the rumors of their teacher, Sid Barett, who was stabbed in the head, becoming a zombie and preying upon the students when Maka's father comes in. As the temporary teacher replacement, he informs Maka and Soul that Shinigami wants to see them. Upon reporting to Shinigami's room, they meet up with Black Star and Tsubaki who were also called there. Shinigami tells them that because they failed to collect any souls, they would have to complete an \"extra lesson\". They are to find and stop Sid and the person who turned him into a zombie. They go to the cemetery, and Sid attacks them, wielding his own gravestone as a weapon. Maka and Soul attempt their Soul Resonance - \"Witch Hunt\" but are unable to control it properly and fail in dealing any damage. Black Star captures Sid with Tsubaki's chain, and it is revealed that Shinigami knows that the one who made Sid a zombie was Death Scythe's first partner before he worked with Maka's mother, Dr. Franken Stein.",
+      "airdate": "2008-04-28",
+      "markers": [],
+      "external_id": "52717"
+    },
+    {
+      "n": 5,
+      "title": "Shape of the Soul - Enter the Ultimate Meister Stein?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52718/original.jpg",
+      "synopsis": "Maka, Soul, Black Star, and Tsubaki with Sid in tow tied with Tsubaki's chain arrive at Franken Stein's laboratory and upon first appearance they think him to be just an idiot. He reveals that he can see the others' souls and he makes comments on them. After the fight starts, it is clear that Stein has the upper hand, and he shows this by nearly killing Black Star. Maka gains the power to see souls during the fight which is when she loses any confidence to continue, but Soul manages to get her back to fighting. They again attempt the technique Witch Hunt, and manage to execute it perfectly, but Stein easily dispels it, throwing them both back. Stein approaches and Soul protects Maka from him. When all seems lost, Stein reveals that the entire thing regarding Sid and himself was set up by Shinigami and therefore they were never in any danger of dying. The next day, Stein makes his appearance at Shibusen as the new teacher for Maka's class.",
+      "airdate": "2008-05-05",
+      "markers": [],
+      "external_id": "52718"
+    },
+    {
+      "n": 6,
+      "title": "The New Student: Kid's First Day at the Academy - Will it be an Entrance to Remember?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52719/original.jpg",
+      "synopsis": "Late by three hours due to his routine of ensuring that every aspect at his house is symmetrical, Kid sets out with Liz and Patty for their first day at Shibusen. Upon getting there, Black Star and Soul end up picking a fight with them, and Maka, Tsubaki and Stein end up leaving class to watch their fight. The battle ends up being one-sided as Kid's extraordinary abilities proved to be more than a match for Black Star and Soul, who were unable to synchronize their wavelengths. When the duo seems to be utterly defeated, Kid ends up collapsing after realizing that Soul's last attack ended up cutting away a bit of his hair, ruining its symmetry. While Shinigami appears to take his son home, Maka tries to use her soul-seeing ability on him, but gets flustered to not being able to see his soul, unable to perceive that it is in fact big enough to envelop the entirety of Death City.",
+      "airdate": "2008-05-12",
+      "markers": [],
+      "external_id": "52719"
+    },
+    {
+      "n": 7,
+      "title": "Black-blooded Terror - There's a Weapon Inside Crona?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52720/original.jpg",
+      "synopsis": "Soul and Maka arrive in Italy to dispose of another evil human. After the job is completed, Maka senses a strong energy coming from inside a church and the duo decide to investigate it. There, they meet Chrona, an evil weapon meister and Ragnarök, the mysterious sword which emanates from Chrona's body. During their fight, Maka figures that she cannot cut down Chrona as Chrona's blood has the property of turning solid, and to complicate matters, Chrona's attacks cannot be blocked as they can hurt Soul even in his scythe form. Soul urges Maka to continue fighting, but she is afraid of hurting her partner, and in the end, he receives a severe blow while trying to protect her.",
+      "airdate": "2008-05-19",
+      "markers": [],
+      "external_id": "52720"
+    },
+    {
+      "n": 8,
+      "title": "Medusa the Witch - The One Who Possesses a Great Evil Soul?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52721/original.jpg",
+      "synopsis": "Just when Maka and Soul are about to be killed by Chrona, Stein and Death Scythe appear to save them. By combining their strength, the duo have some trouble against Ragnarök's ability to transform every bit of its blood into a weapon, but in the end Chrona is defeated. The witch observing the fight reveals herself and rescues Chrona, while the others return to Shibusen in order to treat Soul's injury. Stein tells Maka that the treatment was successful, but he confesses to Death Scythe that Soul's body was infected with a demon weapon's blood, and his future is uncertain. In the end, Maka is comforted by Tsubaki and Medusa, a teacher in the school who is in fact the witch who attacked them.",
+      "airdate": "2008-05-26",
+      "markers": [],
+      "external_id": "52721"
+    },
+    {
+      "n": 9,
+      "title": "Legend of the Holy Sword - Kid and Black?Star's Great Adventure?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52722/original.jpg",
+      "synopsis": "After continuous failures to collect any soul at all, Sid orders Black Star to clean up the school's library as punishment. There, he meets Kid, and both learn about Excalibur, a weapon whose powers are said to be legendary. The duo decides to search for Excalibur himself, but when they find him, they cannot stand his unbearable personality. Meanwhile, Death Scythe tries to cheer Maka up, who is still worried about Soul, and explains to her the origin of the demon weapon Ragnarök. However, he still hides from her the truth about Soul's condition.",
+      "airdate": "2008-06-02",
+      "markers": [],
+      "external_id": "52722"
+    },
+    {
+      "n": 10,
+      "title": "The Enchanted Sword Masamune - Break the Soul Possession: A Heart Sings in the Rain?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52723/original.jpg",
+      "synopsis": "Tsubaki and Black Star are assigned the task of collecting the soul of Masamune, a demon blade who can possibly become a demon god. After arriving at the village where Masamune was last seen, Black Star is ostracized by its inhabitants, and later he explains to Tsubaki that it was because he is a survivor of the murderous Star Clan, which were destroyed by Shibusen after they started to collect human souls. The duo returns to the village after Masamune possesses the body of a young boy to confront him. Black Star manages to break the boy free from the sword's control and Tsubaki sends her spirit into the demon blade to confront the soul of Masamune, who is in fact her older brother.",
+      "airdate": "2008-06-09",
+      "markers": [],
+      "external_id": "52723"
+    },
+    {
+      "n": 11,
+      "title": "Tsubaki the Camellia Blossom - What Lies Beyond the Grief?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52724/original.jpg",
+      "synopsis": "While Tsubaki confronts Masamune inside the demon blade, Black Star gets himself beaten by the villagers, but he refuses to fight back or leave her side. Masamune states that Tsubaki is not fighting him seriously and that he always hated her passive behavior. He also claims that the fact of her inheriting their family's techniques and not him, was what led him to become a Demon God candidate. Just when Tsubaki was about to be absorbed her brother, Black Star's voice reaches her, and she gains the will to defeat him, absorbing her very first soul in the process. Back at Shibusen, Black Star shows to the rest of the gang Tsubaki's new form she obtained after defeating her brother, the form of a blade, but he ends up fainting as his powers are not strong enough to handle it yet.",
+      "airdate": "2008-06-16",
+      "markers": [],
+      "external_id": "52724"
+    },
+    {
+      "n": 12,
+      "title": "Courage That Beats Out Fear - Maka Albarn's Great Resolution?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52725/original.jpg",
+      "synopsis": "Soul reveals to Medusa that since his battle with Ragnarok, he has continuous nightmares featuring an imp-like creature and Maka. Medusa tells him not to worry, but deduces that it could be linked to Soul's body being infected by Ragnarok's blood. Meanwhile, Stein gives Black Star a cup with a mysterious liquid as part of his training to cope with Tsubaki's new abilities, but when Maka asks him to have a special training too, he states that there is still something she is missing, and must realize what it is first. Elsewhere in the city, Medusa gets cornered by Eruka Frog and Mizune, two other witches who suspect of her intentions, and decided that she is too dangerous to live. However, Medusa reveals to them that she previously had implanted magic snakes in their bodies and easily kills Mizune. Eruka manages to escape after Maka and her friends appear to investigate. After realizing that she must overcome her fears of having Soul hurt, Maka tells Stein that she finally discovered what she lacks, and Eruka is tracked down by Medusa, who orders her to infiltrate the witches' prison and release a dangerous convict from there, unless she wants to follow Mizune's fate.",
+      "airdate": "2008-06-23",
+      "markers": [],
+      "external_id": "52725"
+    },
+    {
+      "n": 13,
+      "title": "The Man with the Magic Eye - Soul and Maka's Diverging Soul Wavelength?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52726/original.jpg",
+      "synopsis": "Eruka frees Free and he quickly takes down a hoard of guards before escaping, revealing that he is immortal. Meanwhile, Maka and Soul attempt to grow stronger through Stein's training method, starting by insulting each other, which causes great tension between the two. Maka, Soul, Black Star, and Tsubaki travel to London only to run into and face Free, who further reveals himself to be capable of ice-based magic and is a werewolf. Black Star exhausts himself early on using the new Fey-Blade mode of Tsubaki, while Maka cannot initially use Soul due to their disagreeing wavelengths. She eventually fights past the pain of wielding Soul and, with Tsubaki's advice, the two reform their bond and are able to merge their soul wavelengths. While merging, Soul nearly consumes Maka but regains control of himself. The two manage to break through Free's defenses and Maka charges him into the river. With Soul and Black Star's help, she is saved from falling with him, while Free unwittingly freezes himself and sinks. The four begin to leave while Maka coughs up some blood into her hand, only to discover that the blood is black.",
+      "airdate": "2008-06-30",
+      "markers": [],
+      "external_id": "52726"
+    },
+    {
+      "n": 14,
+      "title": "The Super Written Exam - Heart-pounding, Reeling, and Restless. You're Kidding!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52727/original.jpg",
+      "synopsis": "At Shibusen, tomorrow is the day of exams. Throughout the night, Maka and Tsubaki are the only ones who study diligently, although Soul seems to also be taking it seriously. Black Star attempts to steal the answers from Stein, but is caught, beat, and forced to fail. Liz and Patty attempt to study, but succumb to laziness, while Kid, confident in his knowledge as a shinigami, focuses on drawing blueprints to remove one of Liz's eyebrow hairs. During the test, it is revealed that Soul spent the whole night wiring his clothes with cheat strips, but is caught and fails from lack of knowledge and help. Kid also fails, because he spends the entire time trying to write his name perfectly, only to pass out when accidentally tearing his paper. Liz and Patty also score rather low, but Tsubaki does well and Maka ends up being top of her class. Maka's father, who chanted for Maka to do well, gives Blair money to buy her any book she wants as a gift of love, but Blair spends it on herself and guiltily gives Maka underwear that she shrinks to fit. Maka, believing this to be from her father, says she hates him, while her father is out feeling happy and proud that he has given her a gift.",
+      "airdate": "2008-07-07",
+      "markers": [],
+      "external_id": "52727"
+    },
+    {
+      "n": 15,
+      "title": "The Soul Eating Black Dragon - Scaredy-cat Liz and Her Merry Friends?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52728/original.jpg",
+      "synopsis": "Death the Kid, Liz, and Patty have arrived at a recently attacked coastal town and find that half the place is completely gone, as if consumed. When they discover a large ship in the fog, Kid thinks that this is the Black Dragon and observes that the vessel is named the Nidhogg. Once they eventually get on, they find no one around. Kid manages to find the room containing all of the human souls that had been gathered, but before he can do anything, the captain attacks and orders the ship to swallow Liz up. Liz finds herself alone in the bowels of the ship and decides to find her way back to Kid and Patty, in the process trying to talk through her fears with memories of her past. She reaches them eventually, but before Kid can engage the ship's captain, Ragnarok, with Chrona there as well, summons all of the human souls above deck. Ragnarok consumes all of the souls at once, and this allows Ragnarok's humanoid form to emerge from Chrona, more powerful than ever. Seeing the wings that Ragnarok sprouts, Kid realizes that this is the true Black Dragon, and he decides to go into the Shinigami Taijutsu Stance of Sin to combat it.",
+      "airdate": "2008-07-14",
+      "markers": [],
+      "external_id": "52728"
+    },
+    {
+      "n": 16,
+      "title": "Fierce Battle Aboard the Ghost Ship - The Hell Inside My Head?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52729/original.jpg",
+      "synopsis": "Death the Kid wastes no time in starting his attack on Chrona. Liz observes that Chrona's attitude towards fear is like how the sisters were before they joined Kid. The fight gets interrupted when the captain of the Nidhogg fires the ship's cannons, Chrona cutting the ship in half in retaliation, and the ship starts to sink. Chrona and Ragnarok make their escape, and Kid tries to give chase, but they are able to get away. Back at Shibusen, Medusa reports to Maka that her blood test came back normal. She gives Maka some weird medicine that will speed up the effects of the black blood and reveals to Maka that Soul had come to her about his dreams. This makes Maka angry because he had not told her about it. The tension builds between Medusa and Stein when Medusa tries to find Maka's file so that she can figure out why the black blood is gone. That file is missing from her cabinet because Stein has it. Stein lets Sid and Sid's weapon Mira Nygus go investigate Medusa's warehouse. Sid finds the place filled with experimental materials and realizes that Medusa might try something tomorrow on the eve of the festival. Before he can leave to bring this news to Stein and Shinigami though, Sid gets caught in an explosion set by Eruka.",
+      "airdate": "2008-07-21",
+      "markers": [],
+      "external_id": "52729"
+    },
+    {
+      "n": 17,
+      "title": "Legend of the Holy Sword 2 - Wanna Go Drinking, Gambling, and Playing?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52730/original.jpg",
+      "synopsis": "Armed with the legend of Excalibur, Ox Ford visits the cave where the sword sits and easily pulls it out of the ground. Excalibur turns out not to be what Ox expects though, as the sword hardly lets Ox speak and is more concerned about telling his own story. Ox is eager to hear Excalibur’s heroic tale, but Excalibur goes off on many tangents pertaining to coffee in the morning, his family, dancing in an opera house, incorrectly solving a mystery with Sherlock Holmes and Watson, adventures with King Arthur, and the love of his life. Excalibur also sings about himself at length before finally formally choosing Ox, however, by this point, Ox has had enough and puts Excalibur back into the ground. Ox already has a partner and only came because he wanted to do a homework report on Excalibur, but he is too disgusted now. The following day in class, the students have prepared their reports, and Black Star ended up doing his on Excalibur. His report consists of only one word: Excalibur's often-used expression bakame (idiot).",
+      "airdate": "2008-07-28",
+      "markers": [],
+      "external_id": "52730"
+    },
+    {
+      "n": 18,
+      "title": "The Eve Party Nightmare - And So the Curtain Rises?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52731/original.jpg",
+      "synopsis": "Since no one knows of what Sid discovered, all the students and faculty are attending a party celebrating the founding of Shibusen. Meanwhile, Medusa is communicating telepathically with Eruka when a seemingly drunk Stein interrupts her thoughts. Stein wants to dance with her, but once they start, he becomes more serious and asks her if she knows what happened to Sid. Medusa realizes that she has been found out by his words and tries to tempt Stein with a kiss, however, they are stopped by the sudden appearance of Sid that, even injured, warns everyone to get out of there quickly. Stein is concerned about Sid long enough for Medusa to escape from the party. Free charges, but Sid is able to use his last bit of strength to use a special burial technique that causes the main characters to fall through the floor, escaping the trap. Free tells Medusa that he can only keep up the Independent Cube he casted for one hour, and Chrona and Ragnarok then bring the Mizune family to attack Death City. Stein quickly fills everyone in about Medusa's plan and tells them that their souls have to decide if they are ready to go with him and fight against fear. No one backs down.",
+      "airdate": "2008-08-04",
+      "markers": [],
+      "external_id": "52731"
+    },
+    {
+      "n": 19,
+      "title": "The Underground Battle Commences - Break Through Medusa's Vector Arrow?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52732/original.jpg",
+      "synopsis": "Sid and Shinigami discuss Medusa's evil plan. Shinigami explains the origin of the kishin Asura and how it developed into such a dangerous being. The group of Mizune are attacking Death City, without holding back, as Blair walks on the roofs. As she sees all the citizens injured, she is ready to engage the witches. The group underground suddenly stops, as they find Maka's father. He turns into Stein's weapon, and everyone is ready to fight. They find Medusa, and Stein creates a battle plan to find the kishin and go through all of Medusa's allies. Medusa deploys her Vector Arrow, and Kid is the first one to escape and go on. Black Star deploys the Demon Blade mode and escapes as well. Even Maka is able to go through Medusa, but the witch is not happy and goes after her. Stein will not let it be that way though, and stops her. The stage is set for Medusa against Stein and Death Scythe. As Stein backs Medusa into a corner, she counters with her Vector Arrow, and is able to surround him with her magical arrows. Black Star reaches Chrona, but Maka, who arrives next, convinces him to let her fight in his place.",
+      "airdate": "2008-08-11",
+      "markers": [],
+      "external_id": "52732"
+    },
+    {
+      "n": 20,
+      "title": "The Black Blood Resonance Battle! A Small Soul's Grand Struggle Against Fear?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52733/original.jpg",
+      "synopsis": "Since Maka wants to face Chrona, Black*Star rushes past and heads further down the hall. Maka immediately starts attacking Chrona, and although her punches have no lasting effect, she is happy to hear her opponents finally acknowledge her as more than just a meal. Chrona counterattacks by using her black blood as a weapon and then by performing a resonance with Ragnarok. Maka manages to withstand the onslaught and initiates a resonance of her own with Soul, and the two enemies face off with their respective powered-up weapons. Unfortunately for Maka, Chrona is able to stop Soul with just her arms and furiously strikes back. With Maka now down and getting ever more fatigued, Chrona closes in for the kill. As she does so, Chrona wonders about Maka’s fear and recalls the baby dragon Medusa had forced her to kill a long time ago. Chrona hadn’t been able to do it initially, so Medusa had locked her up and let Ragnarok beat her. After this happened countless times, Chrona finally snapped and killed the baby dragon. \n\nAs Chrona now prepares to kill Maka, the red demon inside Soul tempts him again with the prospect of strength if he entrusted himself to the demon. Soul continues to resist until Maka suddenly appears in the inner world of his. She is able to do so because they’re in the middle of a soul resonance, and to Soul’s surprise, she actually wants to use the black blood the same way Chrona is doing. Since she’s determined, Soul finally decides to go through with it, and in the next instant, Maka is able to stop Chrona’s killing blow with just her arm. With a crazed smile on her face, Maka uses her new strength to fling Chrona into the ceiling while Soul struggles to stay in control. Unbeknownst to Soul, the red demon comments on how it is he who’s leading this.",
+      "airdate": "2008-08-18",
+      "markers": [],
+      "external_id": "52733"
+    },
+    {
+      "n": 21,
+      "title": "May My Soul Reach You - A Dry Heart Inside Unbearable Isolation?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52734/original.jpg",
+      "synopsis": "Riding through the halls underneath Shibusen in an attempt to catch up to Eruka and Free, Kid is stopped briefly when he reaches a field of bombs floating in the air. He’s disgusted by the lack of uniformity in the arrangement of bombs, and he only manages to get past after Patty authoritatively tells him to. Back down the long passageway, Maka uses her new-found power and fighting style to go toe-to-toe with Chrona, but the madness is literally overwhelming Soul. Inside of herself, the calm Maka uses this chance to match her soul wavelength with Chrona’s, and this brings her to a desert world where she finds a young Chrona. At around this same time, out in Death City, Blair is having no problems handling the members of the Mizune family. The witches, however, combine and transform into a single larger woman, so Blair transforms into her human appearance as well. Stein meanwhile is questioning what Medusa plans to do with Chrona once she revives the Kishin. Medusa replies that Chrona is useless and a failure since Chrona was raised without any independence, and her plan to throw Chrona away infuriates Maka’s father. \n\nAt this moment, Maka is watching over a young Chrona who is in the desert world wondering what to do. Chrona draws a circle in the sand around herself to mark her own area, but she does nothing more than just sit down inside this circle until her shadow appears. The shadow starts asking Chrona about herself and tries to delve into how Chrona feels, but Chrona passes on answering any of the questions. The shadow eventually suggests that Chrona doesn’t know how to interact with others and can only repeat self-denials, and it decides that they’re at their limit, so it disappears. This leaves Chrona alone to think about how Maka had introduced herself before their battle, and that particular time, Chrona was able to answer with her own name. To Chrona’s surprise, young Maka suddenly appears. Chrona tries to prevent Maka from entering the circle in the sand and reveals that she feels secure when she’s in it since she can’t interact others, but Maka walks inside anyway and proceeds to erase the circle. This leads to Chrona to start screaming back in the real world, and her body goes crazy due to a rejection reaction. \n\nWith Soul’s help, Maka is able to regain control of her body in the real world, and she then approaches Chrona without her weapon. Despite all the spikes shooting out of Chrona, Maka calms Chrona and hugs her. She now understands Chrona’s wavelength, and she feels that it’s not that Chrona doesn’t know how to interact with others - it’s that there was no one was close to her. Because of this, she asks Chrona to be her friend, and Chrona breaks down in tears.",
+      "airdate": "2008-08-25",
+      "markers": [],
+      "external_id": "52734"
+    },
+    {
+      "n": 22,
+      "title": "The Seal Shrine - The Immortal Man's Tricks?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52735/original.jpg",
+      "synopsis": "With Chrona still bawling, Maka is reluctant to leave her alone until Ragnarok appears and starts bullying her. Chrona gets Ragnarok to stop by punching him, but this only causes Ragnarok to turn his bullying back on Chrona. Since Chrona is handling Ragnarok, Maka and Soul are content with going on ahead. Much further down the tunnel, Kid is close enough to the Kishin that he can now feel its soul wavelength, and it nearly overwhelms him at first. He’s okay though and explains to Liz and Patty how his father had sealed Ashura in a bag made of Ashura’s own skin. Shinigami-sama had extracted all of Ashura’s blood before doing that, so Ashura’s body is starved for blood. Shortly after this explanation, Patty suddenly senses a heat source coming at them, and Kid just barely manages to get out of the way of the blast. The person responsible is Free, and Kid is forced to face off against the werewolf. However, even his Death Cannon attack has no effect on Free, and to make matters worse, Kid finds himself unable to concentrate on the task at hand. \n\nFortunately, Black*Star catches up and literally knocks some sense into Kid. Black*Star quickly engages Free in close quarters combat, and while this is going on, Kid notices something strange: Free is trying to avoid Black*Star’s attacks whereas he didn’t make that effort moments ago. When Kid figures it out, he steps in between Black*Star and Free and proceeds to walk right through Free. Since the secret is out, Free reveals that this is a magic he’s using called Forwarding Vision which allows his image to be projected to a different place. The real Free is still with Eruka moving further down the tunnel towards the Kishin. Because of this, Black*Star and Kid continue their pursuit, but by this point, Eruka and Free have reached the shrine where the Kishin is being held. The inside of it creeps Eruka out, and she keeps thinking that there’s something moving behind her. It unnerves her, and when she turns around again, she finds Ashura in front of her. He rips off and consumes her face, and Free hears Eruka screaming behind him. When Free goes back to check on her, her face changes, and she drives her arm through Free’s chest before ripping the skin off Free’s neck and face. \n\nFree and Eruka regain control of themselves a moment later and realize that it was all an illusion, but at the same time, Eruka had almost driven a nail through her own neck,and Free was in the process of cutting off his own head. This is the Kishin’s madness at work, and they’re very close to the bag holding Ashura.",
+      "airdate": "2008-09-01",
+      "markers": [],
+      "external_id": "52735"
+    },
+    {
+      "n": 23,
+      "title": "Dead or Alive - In the Rift between Revival and Dazzlement?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52736/original.jpg",
+      "synopsis": "Knowing that he’s running out of time, Stein wants to defeat Medusa quickly, but she’s hard to catch off guard. Medusa is simply fighting to buy time, and in order to beat her, Stein has to refocus himself. She tries to tempt him again to join her, but Stein lets himself go wild and explains the madness and fear inside of himself - what he needs is the order granted by an ego-less god. Medusa eventually stabs Stein in the gut, and from that, he counterattacks with his signature Kon-i attack. Though greatly injured, Medusa thinks she has won because she’s in position to cut off Stein’s head with her Tail Snake. She is thus surprised when she suddenly freezes in place, unable to move at all. The reason is because Stein had used one of his suture techniques on her entire body. Unfortunately, Stein can’t do anything else until he releases those strings, and Medusa knows that once that happens, her Tail Snake would behead Stein faster than he can kill her. \n\nMeanwhile, Eruka prepares the black blood for the Kishin, and when she gets interrupted by Kid, Free protects her. Both Kid and Free come under the effect of the madness of Ashura, but both are able to get out of it, and Kid ends up keeping Free occupied while Black*Star arrives and goes after Eruka. After a brief struggle, Eruka manages to stick the syringe needle into Ashura’s bag, however Black*Star uses everything he’s got to break the syringe, spilling the black blood everywhere. Back in the tunnel, Stein knows that his chances of success are very low, and right as he decides to take a gamble, the entire place starts shaking. He and Maka’s father both can sense that the Kishin has been revived, and as it turns out, Black*Star hadn’t succeeded in breaking the syringe - he had merely hallucinated that he did. The success of Ashura’s revival causes Medusa to laugh and declare this as her victory, but Stein uses this very moment to release everything and strike. He succeeds in slicing her in half, and as the lower half of her body explodes into a rain of blood, Stein comments on how he got his chance when she felt a sense of achievement from the Kishin’s revival. He grimly notes the irony in how he won because of the Kishin, yet in the end, the Kishin’s revival is his defeat. Having said that though, he’s then laughs over how refreshing this is. Over at the shrine, nothing Kid does can stop the revival. Ashura soon begins to emerge and wears the bag as his skin, smiling in the process.",
+      "airdate": "2008-09-08",
+      "markers": [],
+      "external_id": "52736"
+    },
+    {
+      "n": 24,
+      "title": "The Battle of the Gods - Death City on the Verge of Collapse?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52737/original.jpg",
+      "synopsis": "As Maka continues to make her way towards the shrine, the newly revived Ashura gets himself adjusted into his skin. After opening his eyes and seeing Eruka in front of him, he terrorizes her with a scream before moving on. Black*Star wants Tsubaki to enter youtou (phantom blade) mode, and when she refuses because of his injuries, he decides to take on Ashura without her. He attempts to use his Big Wave attack, but Ashura isn’t fazed at all and knocks him out with a single flick of the hand. He knocks out Kid in a similar fashion by stretching out his skin like a rubber band and hitting Kid’s head with it. Ashura follows that up by using his skin as a wrapping and covering himself with it, effectively creating himself a set of clothes. He then jumps through the ceiling of the shrine and towards the surface. Maka arrives at this moment and manages to catch him by grabbing onto his skin, but when Ashura emerges above ground in the middle of Death City, she gets thrown off. Soul has to change back into his human form so that he can cushion her fall, and he can only watch everything that happens afterwards because Maka loses consciousness. \n\nAlthough Ashura has escaped, Shinigami-sama’s seal is still active and tries to restrain him, but he’s already too powerful. Fortunately, Shinigami-sama himself arrives on the scene because Free’s magic wore off. Ashura recognizes his old foe and comments on the changed mask, so Shinigami-sama explains that the old mask scared children. The battle between them begins after Shinigami-sama tells Ashura to die again, however neither a Shinigami Chop nor a blast wave attack have any lasting effect on Ashura. He counterattacks with two giant beams of energy, and although Shinigami-sama is able to defend himself, deflecting the beams causes much destruction to the city. Shinigami-sama then tries to meet Ashura head on, and after Ashura knocks him away, Shinigami-sama uses an ability that keeps Ashura pinned down. Ashura is able to call up enough power to dispel it though, and Shinigami-sama subsequently wonders if he can do this without Death Scythe. When Ashura counterattacks again with an attack called Vajra, he succeeds in piercing through Shinigami-sama’s defenses and destroys part of the mask. The end of the battle comes after Ashura takes advantage of the limitations of Shinigami-sama’s range in order to escape the area completely. \n\nIn the aftermath, Shinigami-sama has Sid prioritize the safety of everyone who went underground, but he also wants Side to send out word to all Death Scythes to gather at Death City. Free, Eruka, and Mizune all escape, and though they think Medusa is dead, she’s actually got enough left in her to grab onto Stein and bite down on his shoulder. He manages to get her off of him, and after hearing her say that she loves him, he stabs her to finish her off. Stein believes that the two of them are similar in that it’s not possible for them to understand love. The following day, the residents of the city start to rebuild, but unbeknownst to everyone, a snake slithers out of a drainage pipe.",
+      "airdate": "2008-09-15",
+      "markers": [],
+      "external_id": "52737"
+    },
+    {
+      "n": 25,
+      "title": "The Death Scythes Convene - Stop Dad's Staff Reassignment!?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52738/original.jpg",
+      "synopsis": "Despite all eight Death Scythes having been called, only three other than Spirit (aka. Maka’s father) have shown up at Shibusen: Justin, Marie, and Azusa. Marie in particular doesn’t want to be there and would rather get married and retire. The more practical of the two, Azusa convinces Marie not to marry a toilet. Stein meanwhile finds Spirit polishing a candle holder in order to try to score some points with Shinigami-sama because he thinks that he’s going to get demoted and transferred away after what happened with the Kishin’s revival. The four Death Scythes plus Stein eventually meet with Shinigami-sama to talk about Ashura, and Shinigami-sama explains that they don’t need to worry about Ashura’s movements so much as how to deal with his wavelength of madness. This wavelength stirs the madness that sleeps at the bottom of every person’s soul, and it’s contagious. The problem, however, lies not in an outbreak among normal people but rather in the awakening and strengthening of evil forces. Because of this, Shinigami-sama decides on some reassignments, and luckily for Spirit, he gets to stay at Shibusen as Shinigami-sama’s weapon. Marie is the one who gets reassigned as Stein’s new partner, and Azusa gets to both search for Ashura and take over Marie’s Oceania area responsibilities. Shinigami-sama, however, decides not to do anything with Justin for now. \n\nAt around the same time, Soul drags Maka outside for a game of basketball with Black*Star, Tsubaki, Kid, and Patty. Soul decides that a normal basketball game would be boring, so he proposes having the captain of the losing team be subjected to a punishment: if Kid’s team loses, then they’ll adjust all the picture frames in his house by two centimeters, and if Maka’s team loses, then she has to go on a date with her father. Marie and Stein are there to watch the kids as the game begins, and though Marie is depressed about not being able to find a husband, seeing the kids play brightens her mood about the task at hand. Spirit arrives at the basketball court a little later than everyone else because Shinigami-sama had spoken with him privately about how Stein is being controlled by madness. Shinigami-sama had assigned Marie to Stein because her soul wavelength will have a positive influence on Stein’s soul, and he asked Spirit to care for Stein as well. Spirit now observes out loud to Stein and Marie that the kids are trying to get back their normal lives after all the abnormal things that happened. Maka’s team ends up losing, so she’s forced to ask her father on date, much to her embarrassment and his delight. Meanwhile, Sid comes to see Shinigami-sama about what to do with Chrona, and Shinigami-sama decides to let Chrona experience Shibusen as a student.",
+      "airdate": "2008-09-22",
+      "markers": [],
+      "external_id": "52738"
+    },
+    {
+      "n": 26,
+      "title": "The Exciting and Embarrassing Trial Enrollment! The DWMA New Lifestyle Support Fair is Open?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52739/original.jpg",
+      "synopsis": "Since Sid has no luck talking to Chrona, Maka and Marie bring Chrona out of her room to show her around the school. Chrona, however, doesn’t think that she’d do well here, so Maka suggests composing some poetry. Unfortunately, Chrona’s poetry turns out to be so dark though that it depresses everyone who reads it. Chrona then joins Maka in on an extracurricular lesson to a golem making village where an old golem has suddenly gone berserk. When Shinigami-sama learns out about this, he finds it alarming because golems are programmed only to protect, and he suspects that it might have something to do with the wavelength of madness. He tells Sid to contact Stein about this because he’s curious about Stein’s opinion about the matter. At around this time, Stein is off thinking about Chrona when he gets visions of Medusa telling him that he’s been infected with madness. It starts completely overwhelming his thoughts until Marie finds him and asks him about the golem incident. Returning to normal, Stein explains that golems aren’t programmed to destroy things, and though recent technology allows other programming, the golem in question is the oldest one. \n\nHowever, Stein doesn’t think that this incident has to do with the wavelength of madness either because the order is all wrong: people should be the first affected, not a soulless golem. With all this in mind, he heads to the library to try to figure things out. Maka, Soul, and Chrona meanwhile have arrived at the village, but they discover that none of the people there want to tell them anything. They eventually meet a man named Giriko who offers to show them where the oldest golem is. That golem does indeed eventually appear, and Maka is shocked when she senses that it has a soul wavelength. What’s even more surprising is that Giriko is a weapon with a grudge against Shibusen, and he transforms into a chainsaw for the golem to use. Maka has a hard time going up against the golem on her own because of their difference in mass, but luckily, Chrona and Ragnarok are there as well, and after some negotiating with Ragnarok, the two are ready to fight.",
+      "airdate": "2008-09-29",
+      "markers": [],
+      "external_id": "52739"
+    },
+    {
+      "n": 27,
+      "title": "800 Years of Bloodlust - Advent of the Heretic Witch?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52740/original.jpg",
+      "synopsis": "Stein’s research leads him to the theory that a certain heretic’s soul is inside the old golem. In the process, he finds a report about an incident in the Czech Republic where half a million people saw mysterious illusions that looked like spiders, and this causes him to conclude that the heretic scattered her body 800 years ago and left her soul in the golem. This heretic was the witch Arachne, and realizing makes Stein want to go help Maka and the others, but Shinigami-sama urges patience. Arachne is the mother of magic weapons, but creating one required the sacrifice of a witch’s soul. 800 years ago, she had been pursued by Shinigami-sama and had escaped into the old golem’s chamber. Back in the present, Maka and Crona are having a hard time dealing with Giriko and the golem, and Maka finds herself unable to move her body after getting sprayed with a special silk. Spiders then appear all around them and combine to form Arachne’s body. \n\nCrona vows to protect Maka, however Crona is no match for either Arachne or Giriko. Crona is nearly finished off by Giriko, but fortunately Justin Law appears and saves the day. Justin is special in that he became a Death Scythe at a young age without a partner, and he’s able to fight Giriko on even ground. Right as Giriko is getting really pissed off, Arachne decides to retreat, and Justin is subsequently forced to deal with the golem instead of chasing after Arachne and Giriko. After watching Justin behead the golem, Soul is awed by how this man is a weapon just like him, yet so much more powerful. Since Maka is still unable to move, they bring her back to Shibusen in the coffin attached to the back of Justin’s car. Arachne and Giriko meanwhile meet up with a small old man named Mosquito, and he drives them to her old stronghold where her men are waiting.",
+      "airdate": "2008-10-06",
+      "markers": [],
+      "external_id": "52740"
+    },
+    {
+      "n": 28,
+      "title": "The Sword God Rises - Does it Have a Sweet or Salty Taste?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52741/original.jpg",
+      "synopsis": "While Maka is still recovering, Sid gets word from Azusa about a research facility belonging to Arachne’s Arachnophobia organization. Sid and Nygus go to investigate the magic tool that’s being built, but Black*Star overhears them discussing the situation before they leave, and he secretly decides to go as well to get revenge for what happened to Maka. Unbeknownst to Black*Star, Angela and Mifune are at the research facility along with Mosquito. Sid arrives there first though and sneaks in with the help of Azusa’s special ability to map out an area. The alarms go off while he’s inside, but it’s not because he’s been discovered; it’s because Black*Star has arrived and is creating a commotion by beating up guards. Mosquito, Mifune, and Angela all head out to see what’s going on, and the latter two immediately recognize Black*Star. With Mosquito holding Angela close, Mifune has no choice but to fight the opponents he still considers to be children. \n\nAfter tossing all his swords onto the battlefield, Mifune charges at Black*Star, and despite his love for kids, he refuses to lose to the same opponent a second time. Black*Star has Tsubaki transform into a kusarigama, but Mifune avoids all the sweeping attacks and uses his swords to pin down the chain. Acting quickly, Tsubaki changes into her smoke bomb form and saves Black*Star from Mifune’s subsequent attack. As Black*Star then has Tsubaki go into her youtou mode, Mosquito realizes that Tsubaki is descended from a weapon that Arachne made. Regardless, Black*Star brings the full force of his powers down on Mifune, however Mifune is able to block everything and counters with a technique that involves hitting his opponent with more and more swords. He uses twelve in total on Black*Star, multiplies the hits by two, and wins the fight in this manner. \n\nAfterward, he informs Tsubaki that Black*Star’s wounds are shallow and tells her to take him away, but Tsubaki first questions why a samurai like Mifune is working for a witch. She tries to appeal to Mifune’s gentle side and suggests that someone like him could become a teacher at Shibusen, and although Mifune is tempted, he knows that he can’t take Angela with him to Shibusen. The most important thing to him is to protect Angela, and he recalls how he had saved her from the mafia. When Mosquito orders him to finish off Black*Star, Mifune has no choice but to do it because he knows that Angela would get no rest in a human society, and so she needs Arachnophobia’s protection. Fortunately for Black*Star and Tsubaki, before Mifune can kill them, he’s interrupted by Mosquito getting sniped and part of the facility exploding. \n\nThe persons responsible are Sid and Nygus who had earlier taken pictures of the morality manipulating machine that was being built before laying down some dynamite. Sid is currently using Azusa in her weapon form to do the sniping, however Mifune blocks the next shot, and Mosquito survives by sucking the blood out of an underling. In light of all this, Mifune turns to leave with Angela and Mosquito, and when Black*Star tries to stop him so that they can settle things, Mifune advises Black*Star to be patient. He suggests that Black*Star move forward and understand the other existence inside of Tsubaki - if Black*Star does so, then Mifune thinks that the youtou will respond. Mifune also tosses Black*Star a piece of candy to give to the friend who suffers from the curse since Tsubaki had earlier told him about how they wanted revenge for Maka. In the aftermath, Black*Star returns to Shibusen and gives Maka the candy, but she finds that it tastes of konbu.",
+      "airdate": "2008-10-13",
+      "markers": [],
+      "external_id": "52741"
+    },
+    {
+      "n": 29,
+      "title": "Medusa's Revival! A Spider and Snake's Fateful Reunion?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52742/original.jpg",
+      "synopsis": "When a stray dog finds a snake amidst some garbage, the snake enters the dog. When a little girl named Rachel then finds the dog, the snake enters Rachel. Rachel’s mother notices her daughter acting strange all evening, and that night, she wakes up to find Rachel at her bedside staring at her with an evil eye. This causes Rachel’s mother to scream and wake up Rachel’s father, but Rachel is now crying on their bed, talking about some scary snake in a nightmare. The father lets Rachel sleep with them, and the next morning, she appears back to normal. When a spider suddenly appears in the kitchen though, Rachel crushes it with her hand and comments on how Arachne already noticed. Rachel then tells her mother that she’s going out to play with an important friend, and when her mother stops her and demands to know who she is, Medusa reverts back to her true voice for a moment to comment on how good of a girl Rachel is and how easy she is to handle. Medusa disappears shortly after leaving the house. \n\nOver at Shibusen, Stein has decided to teach his students some techniques to fight against Arachne and her organization. He gathers Ox, Harvar, Maka, Soul, and Black*Star without Tsubaki to show them on how to do a team version of the resonance of souls, but first he instructs them all attack him. This goes poorly for the students because each of their attacks gets in the way of someone else. Maka ends up nailing Black*Star in the face as she tries to swing Soul around and Ox fries both Maka and Black*Star. Black*Star even punches Ox in the face in what was supposed to be a lesson about teamplay. Elsewhere in the school, Sid and Nygus bring a part of the Eibon’s book they found at Arachne’s research facility to Shinigami-sama’s secret vault at his request. At around the same time, Arachne is watching Mosquito and Giriko argue and fight when one of her underlings brings news of her younger sister arriving. \n\nMedusa by now has more or less returned to her old look, and although she still has the Rachel’s figure, she feels that it’s good for deceiving people. She and her sister exchange pleasantries and talk about how Medusa survived before Arachne questions why Medusa came. Arachne still carries a grudge for how Medusa betrayed her 800 years ago during the battle with the Shinigami that led to Arachne’s miserable death. Medusa claims to want to get along, but Arachne has Giriko, Mifune, and Mosquito surround her, so Medusa leaves. The underling who escorts Medusa out is actually Eruka in disguise, and Medusa has her observing the place. Medusa’s own plan for now involves heading to Death City for something important that was left behind.",
+      "airdate": "2008-10-20",
+      "markers": [],
+      "external_id": "52742"
+    },
+    {
+      "n": 30,
+      "title": "The Red Hot Runaway Express - A Magic Tool Left Behind by the Great Wizard?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52743/original.jpg",
+      "synopsis": "Death the Kid, Liz, and Patti have arrived in the Sahara Desert to go after a special train that has run without stopping for 100 years. It does so through a demon tool that Arachnophobia is now after, and their job is to prevent this and recover it themselves. When they arrive at a train station in the middle of the desert, there is already someone there, but this person doesn’t say anything to Kid or the girls. The train soon arrives on time, however the way it arrives is by bursting out the sand. An agent of Arachnophobia named Fisher King immediately grabs onto it and gets on, and Kid is further surprised when the other person at the station - Mizune - suddenly cancels her Soul Protect and flies after the train. Realizing that he’s being beaten by Fisher King and by a witch, Kid races after the train with the girls in their gun form. As Kid catches up, Fisher King starts shooting at him, but luckily for Kid, Mizune then starts bombing the train. This gives Kid the chance to get closer to the train and have Patti shoot inside, but right before Patti can fire a well-aimed shot, Kid does a 360-degree kickflip and then a 3600-degree no-hander because he feels that it’d be rude to the desert not to do tricks out there. \n\nThe result of this is no shot by Patti against Fisher King, but Kid does manage to land on top of the train. After Mizune tries to bomb him, Kid enters the train, but by this point, Fisher King is already one car ahead and is separating the train. Mizune’s subsequent whisker attack forces Fisher King to dodge by jumping, but he jumps back onto the train car that’s being left behind. When Fisher King uses his hook weapon to grab onto and get back to the main train, Liz, Patti, and Kid grab onto him and go with him. All four go crashing into the train car that’s still connected to the locomotive, and a firefight then begins between them. Kid isn’t able to get a chance to attack until Mizune uses her whiskers to slice apart Fisher King’s weapon, and he ends up kicking Fisher King into the locomotive. This is where the demon tool is, and Kid uses this spot to finish Fisher King off. After Kid takes out the giant key - causing the train to stop - the defeated-but-not-dead Fisher King reveals that this tool was created by Eibon. Kid thinks that Eibon is just some evil guy, but Fisher King mysteriously claims that Eibon and Shinigami-sama are the same. \n\nThis anger Kid, so Fisher King directs him to open the box that the key was stuck in. Inside, Kid is shocked to find a plate signed by Eibon and by Death - his father. Before Fisher King can tell Kid any more though, a knife flies out of nowhere and kills him. The knife was the doing of Sid, and he and a whole force are here to take over the operation. Having overheard much of the conversation between Fisher King and Kid, Mizune subsequently escapes, and after handing over the tool to Sid, Kid returns to Shibusen. He’s very disturbed by what he learned though, so he immediately goes to the library to see what he can find about Eibon. When he inquires with the librarian about getting books on Eibon that require a high level of clearance, he’s forced to use his status as Shinigami-sama’s son, but even then, he’s unable to get what he’s looking for. The librarian informs him that there’s one book about Eibon, but it was borrowed two months ago and never returned. The person who borrowed it only left an “M” when he or she signed it out, and Kid quickly figures out that this M stands for Medusa.",
+      "airdate": "2008-10-27",
+      "markers": [],
+      "external_id": "52743"
+    },
+    {
+      "n": 31,
+      "title": "Drying Happiness! Whose Tears Sparkle in the Moonlight?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52744/original.jpg",
+      "synopsis": "Everyone has been nice to Crona since she came to Shibusen, and this is especially apparent during a party one night. Kid is supportive of Crona proceeding at her own pace, and Black*Star promises to beat up anyone who bullies her. Since Crona isn’t sure why everyone is being so kind, Maka explains that it’s natural since they’re all friends. These warm feelings stay with Crona until she leaves the party to go home, and that’s when Medusa appears. Despite Medusa’s small body and seemingly gentle nature, Crona is deathly afraid of the witch. Medusa claims that she came to see Crona and was very worried, but what she wants Crona to do now is to spy for her in Shibusen and to find a secret vault. Crona doesn’t want to betray her new friends and new home, but Medusa uses her status as Crona’s mother to coerce Crona to do it. \n\nCrona is very conflicted about this, but she still ends up going underground Shibusen to an off-limits area to try to find the secret vault. Before Crona can get very far, she’s caught by Marie, and Ragnarok makes up the excuse that they got lost. Marie believes them since she’s also lost, and it takes two hours for her to help Crona find her way back to her room. Nevertheless, Marie tells Crona to come to her if she’s ever bothered by anything again. Once back in her room, Crona is paid a visit by Eruka in her frog form who’s able to communicate with Medusa via the snakes in her body. Since Crona doesn’t think that she can find the vault, Medusa decides instead to take advantage of Marie’s kindness towards Crona and gives Crona a pen with a listening device inside to plant in Stein’s laboratory. \n\nCrona thus goes to Marie under the pretense that she wants to talk, and Marie brings her to Stein’s laboratory. While Ragnarok has Marie distracted, Crona puts the snake listening device inside Marie’s coffee, and she then watches as Marie drinks it. Afterward, when Crona goes to leave, Marie stops her because she almost left the pen behind. Eruka explains later that the snake will allow Medusa both to eavesdrop and to accelerate the madness in Stein. After hearing over the radio how fondly Marie talks about her to Stein, Crona quietly returns to her room and retreats to a dark corner with a pillow. As the darkness around her spreads, Crona starts crying.",
+      "airdate": "2008-11-03",
+      "markers": [],
+      "external_id": "52744"
+    },
+    {
+      "n": 32,
+      "title": "Legend of the Holy Sword 3 - The Academy Gang Leader's Tale?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52745/original.jpg",
+      "synopsis": "A Shibusen student named Hiro who is often taken advantage of by other students has discovered Excalibur’s book and envisions himself as a hero, so he goes and retrieves the legendary sword. When Black*Star arrives at school the next day, he finds Hiro beating up on other students, and with Hiro is Excalibur. Excalibur is still his long-winded and annoying self, but Hiro can actually tolerate him and his list of 1000 things. Black*Star, however, cannot, and soon feels the urge to kill Excalibur. Both Kid and another student named Kilik want to participate as well, but none of their attacks hit, and Hiro and Excalibur defeat all three with a single move. As a result of all this, Hiro finally feels respected, and he has no trouble following Excalibur’s list of 1000 things that he has to do, such as participating in a daily 5 hour recitation and always praising Excalibur. Everything is working out great until Excalibur starts sneezing one evening. The following day, Black*Star finds Hiro back to his old self, and Hiro reveals that he took the sword back because he couldn’t stand the fact that Excalibur didn’t stop sneezing.",
+      "airdate": "2008-11-10",
+      "markers": [],
+      "external_id": "52745"
+    },
+    {
+      "n": 33,
+      "title": "Resonance Link - Play the Melody of the Souls?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52746/original.jpg",
+      "synopsis": "Though Stein is having more flashes of madness, he tells Shinigami-sama not to worry about his health. Shinigami-sama has summoned him today to talk about how Arachnophobia has discovered the location of one of Eibon’s tools called BREW. Shinigami-sama foresees a big battle and urges Stein to get the students trained up to handle it. Stein thus takes the class out to practice, but before the lesson begins, Black*Star does some private training where he attempts to understand the other existence inside of Tsubaki. This leads him to an encounter with a giant beast who asks him about seeking power, and Black*Star answers that it’s so that he can surpass God. The beast, however, sees Black*Star more as an ogre. After waking back up from this vision, Black*Star joins Maka and Kid to practice their team soul resonance. Explaining the situation to them, a very serious Stein warns them that if they don’t pass, then they’ll be removed from his class. Maka feels the need to tell Black*Star in particular to do this properly, but he insists that he always does. Despite this, the trio fails multiple times, and Maka gets frustrated because it’s Black*Star each time that she and Kid can’t seem to link up with. She starts arguing with him, but Kid steps in between them, and Stein decides to give them a break to cool down. \n\nStein himself is going through another episode of madness when Maka comes to talk with him and brings him out of it. Maka wants him to remove Black*Star from the team, but Stein points out that she’s the one who’s quitting the team. When she tries to make the case against Black*Star, Stein questions if she wants to limit Black*Star’s power and makes the point that Black*Star is their team’s best attacker. He thinks that she has misunderstood the soul resonance link and urges her to feel the essence of it more. However, when Maka returns to the others, Black*Star accuses her of tattling to Stein and being selfish. This infuriates Maka, and she tries to punch him, but he just flips her on her back. She gets back up and tries to punch him again, and this time, he lets her hit him and questions afterward if she’s satisfied. He warns her that any further and it’d be a duel, and he’s ready to crush her. Unable to face him, Maka curses at the top of her lungs and runs off in tears. Tsubaki goes after her and finds her staring into the distance at the edge of the forest. Since Maka is still pissed off at Black*Star, Tsubaki relates how Black*Star studies before tests, yet still gets zeros. Opening up a bit, Maka feels that she can never match her soul wavelength to Black*Star’s, but Tsubaki points out that Maka and Black*Star have always gotten along and that friends can have times where they don’t understand each other. \n\nRemembering what Stein told her, Maka realizes what she had been missing and returns to the team. Along the way, she admits to Tsubaki that she had sometimes been jealous of Black*Star and has wanted to become strong like he is. She apologizes to him when she gets back, and he appears not to hold a grudge as the group resumes their training. The next time they try the team soul resonance, they succeed. Maka now knows that there’s no need to forcibly understand each other - they just need to recognize each other’s senses and believe in each other. Observing from nearby, Stein gives the group a passing grade and notes that their leader is Maka. Later that night as they’re heading home, Maka lets Black*Star hit her to make up for how she hit him earlier. He ends up smacking her hard, and though bruised, Maka laughs afterward. Meanwhile, over at Arachnophobia’s base, Mosquito and Giriko tell an army of men that BREW is Arachne’s, and they rallies everyone for war against Shibusen.",
+      "airdate": "2008-11-17",
+      "markers": [],
+      "external_id": "52746"
+    },
+    {
+      "n": 34,
+      "title": "The Battle for Brew - Clash: the DWMA vs. Arachnophobia?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52747/original.jpg",
+      "synopsis": "BREW exists on a lost island north of Alaska where there used to be a witch’s tool development facility before it got destroyed from an accident. That accident resulted in a special magic magnetic field in the center of the island - BREW is inside of there - and staying in that magnetic field for longer than 20 minutes will result in a person’s body getting destroyed. A small army of Shibusen students and staff are already headed towards the island, and the plan is to have Sid’s force take care of the Arachnophobia forces while Marie, Stein, and the students head for the magnetic field. Once there, Marie and Stein will head into the field while the students stand by outside until the two return. Things start out according to plan, however Sid’s force is soon ambushed, and Sid finds himself facing off against Mifune. Justin is also on the island, and he manages to crash an avalanche into Giriko’s force, but since Giriko himself isn’t affected, the two prepare to fight. Stein and the students meanwhile have made their way to the edge of the magnetic field, and Stein tells the students that if he and Marie aren’t back in 20 minutes, then they should signal a retreat. \n\nAs the students start to get antsy waiting, Maka is suddenly unable to feel Stein and Marie’s soul responses. She suspects that something is happening inside the magnetic field, but before the group can decide whether or not to go inside to find out what’s going on, they’re attacked by an Arachnophobia force. With this turn of events, Ox, Kilik, and Kim decide to stay behind to fight while Maka, Kid, and Black*Star enter the magnetic field. Once the latter three emerge on the other side, they find themselves no longer surrounded by snow. They are instead now in a jungle-like environment with a step pyramid towering in front of them. What’s even stranger is that they see Shinigami-sama flying towards the step pyramid, and he’s wearing his old mask from before Shibusen was founded. Because of this, the three of them head towards the pyramid, unaware that they’re being followed by a pack of mice. While this is going on, Sid’s battle with Mifune intensifies, and after Sid tries to dig away through the snow, Mifune fires off a barrage of swords at him. Although Sid manages to take some cover, one of the swords has wounded him in the side. \n\nBack inside the magnetic field, Maka, Kid, and Black*Star watch as blurry images of witches leave the pyramid because they saw Shinigami-sama. This leads to Kid theorizing that the magnetic field somehow caused the situation from before the accident to get imprinted onto this place. What he questions is if what happened was really an accident since they saw Shinigami-sama heading towards the pyramid and the witches leaving. Maka’s attention is then turned to one of the witches nearby: Arachne. Her men have Eibon’s blueprints, and Arachne comments on how they lured Shinigami-sama here and how they’re going to blow up the facility. The real Arachne is currently back in her own lair getting a report on the progress of the battle. She kept BREW from Shinigami-sama for 800 years by destroying the facility, but she knows that Eibon’s greatest masterpiece BREW wouldn’t have been destroyed by such an explosion, and she’s determined to get her hands on it.",
+      "airdate": "2008-11-24",
+      "markers": [],
+      "external_id": "52747"
+    },
+    {
+      "n": 35,
+      "title": "Mosquito's Storm! Ten Minutes to Fight in the World of the Past?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52748/original.jpg",
+      "synopsis": "Ox, Kilik, and Kim continue fighting the Arachnophobia forces, but since they’re approaching the 20-minute mark that Stein had set earlier, Kim sets out to give the signal for retreat. Ox and Kilik work together to cover her, and Kim successfully gets away from the battle. Mifune meanwhile has walked into a trap set by Nygus and Sid, and Sid tries to hold Mifune in place while a giant pillar comes swinging down towards him. Mifune forces Sid to let go by stabbing him in the shoulder, but it’s too late and Mifune gets smacked by the pillar. Although injured, Sid then charges Mifune and stabs him in the arm. Mifune counters by digging his hand into the wound he inflicted on Sid moments ago. Neither are able to bring the other down, and since Mifune doesn’t care to negotiate, the two get ready to start another round of fighting. They never do so however because Kim and Jackie draw the retreat signal in the sky, and so Sid leaves the fight. \n\nInside the magnetic field, Stein is losing to the madness, and Marie is powerless to help him. He gets a slightly better grip on himself when Maka, Black*Star, and Kid show up, and those three point out that Marie and Stein have already been inside for 20 minutes. Since the trio have 10 more minutes, they decides to stick around to search for the tool, and Marie can’t stop them. At the base of the pyramid, they run into Mosquito and realize that he’s got the tool. In order to fight, Mosquito returns his body to its state 100 years ago, bulking up his upper body considerably. The start of the battle though is briefly interrupted by the sudden appearance a moving image of Eibon. Despite this, Black*Star doesn’t want to waste time and attacks Mosquito. Kid is concerned about Eibon, however he ultimately chooses to help his friends in fighting instead of following the mysterious figure. The three then unleash some powerful attacks on Mosquito, but these have very little effect \n\nSoul knows that only Maka can sense their soul wavelengths in this magnetic field, and they need to perform a resonance link to win. He can feel everyone’s wavelength through Maka, and the demon inside of himself reminds him that he knows the technique to tell that to everyone else. Calling him by his family name Evans, the demon tempts Soul to come through the door for a concert. Meanwhile, at the landing beach outside of the magnetic field, Sid and the others realize that Maka and company aren’t back yet, so Sid gathers some people to go save them. Back at the spot right outside the field, Ox and Kilik have finished off the last of the Arachnophobia underlings, and they watch as Marie and Stein emerge. Marie wants the two to look after Stein while she goes back for Maka, Black*Star, and Kid, but those two insist on going in themselves instead since she’s still under the effect of the field. Although Marie tries to stop them by threatening failure and expulsion, the two ignore her and head in anyway. This leaves Marie crying because there was nothing she could do even though she’s the adult and the teacher. Stein tries to stop Marie’s crying by taking responsibility for the failure, however he then starts laughing maniacally.\n\nInside the field, Black*Star goes into his youtou mode, but even that isn’t able to hurt Mosquito. Knowing that they can’t win like this, Soul is once again tempted by his inner demon and questions if the black blood in Maka will spread to the others. The demon claims that the team soul resonance is an indirect connection, so they’ll be fine as long as they don’t resonate strongly with Maka. He wants Soul to change the connection between them to sound using the piano, and Soul decides to do it. Soul tells everyone that they’ll be conveying soul wavelengths via sound, and to his surprise, everyone laughs when he mentions playing the piano because they had all been trying to figure out how to get him to do so. Soul then passes through the doorway inside of himself - acquiring a black suit in the process - and approaches the piano which the demon assures him has been tuned.",
+      "airdate": "2008-12-01",
+      "markers": [],
+      "external_id": "52748"
+    },
+    {
+      "n": 36,
+      "title": "Unleash the Seven's Resonance Link! A Recital of Destruction and Creation?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52749/original.jpg",
+      "synopsis": "While everything else is going on, Justin and Giriko are having a private battle in the snow. After getting a little beat up, Giriko decides to run and distracts Justin with snow copies of himself. Meanwhile, the Mizune sisters report their success back to Eruka outside the magnetic field. Inside the field, the demon inside Soul is urging him to start playing the piano, and when Soul finally does, everyone can immediately feel the effects. The resonance link allows Maka, Black*Star, and Kid unprecedented coordination, and Mosquito barely has time to defend himself. Soul then directs each of the three to use their strongest attacks in succession, and Black*Star and Kid cause Mosquito to lose his arms. When it’s finally Maka’s turn, she transforms Soul into a form that surpasses the Majou Gari (lit. witch hunter): the Majin Gari (lit. demon hunter). This easily slices through Mosquito, but unfortunately, Mosquito detaches his head and escapes before the rest of his body explodes. \n\nKid wants to give chase, but Soul knows that they can’t because they’re out of time. He realizes that unlike them, Mosquito can keep transforming himself younger and buying himself more time in the magnetic field. This leaves the trio no choice but to withdraw without BREW, and they meet up with Kilik and Ox on the way out, right as the image of the pyramid explodes. When the group emerges from the magnetic field, Marie looks ready to slap them, but she ends up hugging them instead out of relief. They are then found by Sid and the others, and Maka reports back to Shinigami-sama as they all head back home to Shibusen. Mosquito meanwhile makes his way back to Arachne and nervously reveals to her that after 800 years in the magnetic field, BREW has stopped functioning. She doesn’t mind though and points out that Shibusen doesn’t know that it’s broken, so she can bluff and threaten them. \n\nWhat neither Arachne nor the Shibusen group realizes is that the real BREW was taken by the Mizune sisters and Eruka for Medusa. They had switched it out for the broken one, and Medusa is confident that her sister won’t figure out that she got a fake. As for the Shibusen side, Medusa had used the snake inside of Marie to bring out the madness in Stein. And now that she has her hands on BREW, Medusa wants everyone - including the Kishin - to watch what she’ll do.",
+      "airdate": "2008-12-08",
+      "markers": [],
+      "external_id": "52749"
+    },
+    {
+      "n": 37,
+      "title": "The Detective's First Case - Kid Exposes the DWMA's Secret?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52750/original.jpg",
+      "synopsis": "Arachne is convinced that \"Brew\" is defunct, when it is actually functional and in Medusa's hands. Meanwhile at Shibusen, everyone assigned on the \"Brew\" mission is depressed about their defeat against Arachnophobia, except Kid, who ponders about Eibon and Shinigami's association with him. He even confronts Stein and interrogates him about what \"Brew\" is and why Shinigami sought to possess it. Maka questions her ability of using 'Demon Hunter' while fighting Mosquito and talks to Shinigami about it. Determined to use 'Demon Hunter' again, Maka and Soul make an attempt, but they fail to do so. At the end of the day, a man named Joe Buttataki arrives at Death City at Shinigami's request.",
+      "airdate": "2008-12-15",
+      "markers": [],
+      "external_id": "52750"
+    },
+    {
+      "n": 38,
+      "title": "Asura's Temptation - The Big Man's Uncontrollable Irritation?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52751/original.jpg",
+      "synopsis": "Once he arrives at Shibusen, Joe Buttataki begins his project by using the demon tools that are in Shinigami's possession. Meanwhile, Black Star's confidence begins to waver due to his recent defeats. When Tsubaki tells that Nygus asked her to stop using the dark blade mode, Black Star decides to challenge Kid in a duel, and during which loses control. Kid finally wins the battle and shortly after Black Star starts training again. Arachne finds the hideout of Asura.",
+      "airdate": "2008-12-22",
+      "markers": [],
+      "external_id": "52751"
+    },
+    {
+      "n": 39,
+      "title": "Crona's Escape - Show Me Your Smile, Please?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52752/original.jpg",
+      "synopsis": "Crona is visited by Eruka again, telling Crona to return to Medusa. Meanwhile, Arachne visits Asura alone in the mountains to ask for an alliance against Shibusen. Death Scythe brings Soul and Maka to Crona's room, showing them that Crona is gone, which causes Maka to look everywhere for Crona. Crona is outside of Shibusen walking in the desert sand and falls into a hole and sits there. Back at Arachnophobia, Asura has allied with Arachne. Maka and Soul find Crona in the hole and Crona cries, confessing about putting Medusa's snake in Marie's tea. Shinigami discusses with Death Scythe and Maka about Crona's betrayal when Sid suddenly announces that Medusa has come to Shibusen to surrender.",
+      "airdate": "2009-01-05",
+      "markers": [],
+      "external_id": "52752"
+    },
+    {
+      "n": 40,
+      "title": "The Cards are Cut - Medusa Surrenders to the DWMA?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52753/original.jpg",
+      "synopsis": "To win Shibusen's trust, Medusa reveals the location of the real \"Brew\", and proposes to give information about Asura's whereabouts in exchange for her freedom and protection of her peers. When Arachne moves on with her plan to spread the kishin's madness throughout the world, Shinigami decides to accept the deal. Marie later discovers that Stein is nowhere to be found.",
+      "airdate": "2009-01-12",
+      "markers": [],
+      "external_id": "52753"
+    },
+    {
+      "n": 41,
+      "title": "Twirl 'Round and 'Round - A New World in Which the Doc Dances?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52754/original.jpg",
+      "synopsis": "Stein struggles with the decision whether or not of return to home. Meanwhile, Joe Buttataki discovers a secret page in the book of Eibon, which shows it takes one last demonic tool to operate \"Brew\". Crona and Marie decide to search for Medusa and bring back Stein. Maka and the others, even with doubt about Shibusen, remain firm in fighting and defeating the kishin. Finally, the path that Stein is walking leads him to Medusa.",
+      "airdate": "2009-01-19",
+      "markers": [],
+      "external_id": "52754"
+    },
+    {
+      "n": 42,
+      "title": "Charge Baba Yaga's Castle! Things are Kind of Gloomy?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52755/original.jpg",
+      "synopsis": "Maka is confused due to the decisions recently taken by Shibusen, which is preparing for a huge battle against Arachnophobia, to defeat it along with the kishin and destroying the six madness amplifiers. Marie and Crona are the only ones who can deal with Medusa without breaking the deal with Shinigami. Maka, along with Soul, Black Star, and Tsubaki, go to Baba Yaga's castle when Arachne gives the order of attack. Justin starts a fight against Giricco. Maka finally decides to abandon the battlefield to go to help Crona, leaving the fighting to Black Star. Meanwhile, Kid is on the way to retrieve the latest demonic tool.",
+      "airdate": "2009-01-26",
+      "markers": [],
+      "external_id": "52755"
+    },
+    {
+      "n": 43,
+      "title": "The Last Magic Tool - Mission Impossible for Unarmed Kid?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52756/original.jpg",
+      "synopsis": "The battle against Shibusen and Arachnophobia continues. Kid, Liz and Patti arrive at their destination, a town called Sekikan, whose inhabitants had disappeared mysteriously twenty years before. For the sake of his partners, Kid decides to enter the village alone. Once in, he easily finds the demonic tool, but is attacked by a strange clown. Maka realizes she must feel the soul of one of the people that she is looking for to find them. Kid is chased by the clown, who is soon joined by another one just like him. Due to the symmetrical attacks of the clowns, Kid is unable to respond until Patty and Liz arrive to help and successfully defeat them. Shortly after the battle, a mysterious person communicates with Kid, questioning Shibusen's right to use the demonic tools. Justin, Black Star, Kilik, Ox and Kim are still battling.",
+      "airdate": "2009-02-02",
+      "markers": [],
+      "external_id": "52756"
+    },
+    {
+      "n": 44,
+      "title": "Weakling Crona's Determination - For You, for Always Being by My Side?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52757/original.jpg",
+      "synopsis": "Maka and Soul try to seek out Crona and Marie via Maka's Soul Perception ability to find Medusa. Meanwhile, Crona and Marie manage to find Medusa's hide-out and battle with her and a maddened Stein. While Crona struggles in the battle with Medusa, and is about to be killed, Maka and Soul jump in and block the attack. Black Star continues to advance to Baba Yaga's Castle.",
+      "airdate": "2009-02-09",
+      "markers": [],
+      "external_id": "52757"
+    },
+    {
+      "n": 45,
+      "title": "Anti-Magic Wavelength - Fierce Attack, the Anger-Filled Genie Hunter?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52758/original.jpg",
+      "synopsis": "Maka, Soul, Marie, and Crona continue their battle with Medusa and Stein, but are being overwhelmed. Marie asks Maka and Crona to concentrate on Stein, which gives her the chance to use the Wavelength of Redemption. Medusa uses the lull in combat to target Maka with an attack. Crona pushes Maka out of way and takes the full force of Medusa's attack. Crona is greatly injured by Medusa's vector blade. Maka is consumed by the madness and attacks Medusa with full force, and disarms her; before Maka can land a fatal blow, Stein protects Medusa, and this finally provides the opening Marie needs. Using the redemption wavelength, Marie saves Stein. Maka uses her demon hunter wavelength to defeat Medusa and save Rachel. Black Star finally reaches Baba Yaga's castle to battle Mifune.",
+      "airdate": "2009-02-16",
+      "markers": [],
+      "external_id": "52758"
+    },
+    {
+      "n": 46,
+      "title": "Warrior or Slaughterer? Showdown: Mifune vs. Black_Star?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52759/original.jpg",
+      "synopsis": "As Mifune fights with Black Star, he counts how his father was strong, but chose the wrong path and he was forced to kill him, and he asks his opponent if he's going to choose the path of the warrior or the path of a demon. Meanwhile it is revealed that the key to operate Brew is the soul of Eibon itself, who happens to be one of eight warriors of Shinigami, and who his willing to cooperate to deal with Asura. Arachne decides to leave her organization behind by putting into operation several weapons that the Baba Yaga's castle had prepared. Returning to the battle, Black Star refuses even to listen to Mifune, who, seeing no possibility of change for his opponent decides to finish it in one fell swoop, killing Black Star. Eibon finally put Brew function to work: make real the most desperate desire of one's heart.",
+      "airdate": "2009-02-23",
+      "markers": [],
+      "external_id": "52759"
+    },
+    {
+      "n": 47,
+      "title": "The Miraculous Coffee Table Flip - Fly, Our Death City Robot?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52760/original.jpg",
+      "synopsis": "Black Star revives, declaring that he will take the path of neither the warrior nor the demon, but will instead take his own path. He defeats Mifune with one swipe; however, he does not kill him, but instead invites him to be a teacher at Shibusen. They then go off to find Angela. Meanwhile, Eibon uses a key created from his own soul to activate Brew, which has been revealed to grant the desires of whoever uses it. Shinigami uses the Demon Tool to transform Death City into a giant robot, and swiftly enters the battle. After attempting to squish Baba Yaga's Castle to little success, it manages to reach inside of it, grab Asura, pull him out into the open and \"eat\" him, apparently trapping him inside the city.",
+      "airdate": "2009-03-02",
+      "markers": [],
+      "external_id": "52760"
+    },
+    {
+      "n": 48,
+      "title": "Lord Death Wields a Death Scythe - Just One Step from Utter Darkness?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52761/original.jpg",
+      "synopsis": "Upon being devoured by the Death City mecha, Asura lands in the Death Room, where he is confronted by Shinigami and Death Scythe. Meanwhile Black Star, Tsubaki, and an injured Mifune find Angela in Baba Yaga's Castle. Shinigami and Asura begin to battle while Kid, Azusa, and Excalibur observe. As they fight, Asura begins to explain why he does what he does. He believes that all fear in the world is the result of people's imagination. Asura claims to no longer imagine, and plans to end all fear by spreading madness and preventing people from imagining again. Shinigami disagrees with him, and declares that he is this world's guardian. Shinigami appears to have the upper hand until Asura fires a large blast from Vajra at Kid and Azusa. Shinigami blocks the blast with his body and is gravely injured. Excalibur rebukes Asura who stands over Shinigami until he begins to have strange spasms and goes back to Arachne. As she embraces him, he kills her, saying he feared her, and devours her soul.",
+      "airdate": "2009-03-09",
+      "markers": [],
+      "external_id": "52761"
+    },
+    {
+      "n": 49,
+      "title": "Asura Wakes - To the End of the World?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52762/original.jpg",
+      "synopsis": "Asura, being injured from the battle with Shinigami, begins to put up a barrier around himself preparing for a deep sleep. Before the barrier closes, Maka, Black Star, Kid, and their weapons are the only ones able to get inside. Having devoured Arachne's soul, Asura grows tremendously in size and strength. When the fight against Asura begins, they do not appear to be injuring him, but Kid thinks they are as the barrier is weakening. They start a chain resonance with Soul playing the piano, but when Maka is about to perform Demon Hunter, Soul pushes himself too far and is devoured by the black blood. With Soul, the only one who can help them do a chain resonance, down for the count, Maka goes to bring Soul back, with Black Star and Kid protecting her.",
+      "airdate": "2009-03-16",
+      "markers": [],
+      "external_id": "52762"
+    },
+    {
+      "n": 50,
+      "title": "Sink or Swim?! The Men who Transcend the Gods?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52763/original.jpg",
+      "synopsis": "While everyone outside the barrier can only sit and wait anxiously, Kid and Black Star continue to battle Asura with almost no results. Determined to avenge his father and protect the world, Kid begins soul resonance with Patti and Liz, but he is stabbed by Asura and falls to the ground. Seemingly dead, Kid's eyes suddenly fill with a blue light and his soul becomes extremely powerful as he transforms Liz and Patty into a huge double cannon. Using his speed to his advantage, Black Star attacks Asura and Kid follows with a massive cannon explosion. With so much power however, Asura still stands, though he has changed form again. Meanwhile Maka is locked in a room with the demon disguised as Soul. However, Maka realizes he is a fake. Risking being devoured by the black blood, she decides to open a locked box to free the real Soul. She enters the box and is followed in by the demon, but she is able to reach Soul and save him from the darkness. Having lost control of the situation, the demon becomes small and Soul eats him in one gulp. The two of them return to the battle to find everyone else laying unconscious and Asura still undefeated.",
+      "airdate": "2009-03-23",
+      "markers": [],
+      "external_id": "52763"
+    },
+    {
+      "n": 51,
+      "title": "The Word is Bravery!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/52764/original.jpg",
+      "synopsis": "As the two realize that the kishin was still undefeatable, Asura confronts Maka and Soul. Maka's last hope of defeating Asura was her anti-demon wavelength and demon hunter. But still Asura can deflect all of her attacks. As Asura shoots at her, Soul blocked the shot himself to defend his partner and knocking him unconscious. Maka attacked him and was easily defeated, as Asura was going to finish the job, he noticed that Maka has developed the ability to transform into a weapon. Still Asura can deflect her attacks, but Maka was relieved since she's not afraid of anything now, giving her more courage that causes the Kishin to wonder what courage means. Asura felt fear as Maka was approaching him and giving her last blow. She punched the kishin's face, and the kishin was defeated. Everyone regained consciousness, and felt very thankful that the kishin was gone, except for Kid who was still worrying even if Maka defeated Asura, the future Kishin will be born. Maka was not worried at all since everyone has courage inside their hearts. The episode ended with Maka jumping at her friends.",
+      "airdate": "2009-03-30",
+      "markers": [],
+      "external_id": "52764"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "monochrome",
+      "artist": "Dancing Dolls",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yūgure Happy Go (夕暮れハッピーゴー;Evening Happy Go)",
+      "artist": "Haruka Chisuga, Aoi Yūki & Saori Hayami",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "PaperMoon",
+      "artist": "Tommy6Heavenly",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "resonance",
+      "artist": "T.M.Revolution",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I Wanna Be",
+      "artist": "STANCE PUNKS",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "PAPERMOON",
+      "artist": "Tommy heavenly6",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Style",
+      "artist": "Kana Nishino",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Counter Identity",
+      "artist": "Unison Square Garden",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Bakusou Yumeuta",
+      "artist": "Diggy-MO'",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Ai ga Hoshii Yo",
+      "artist": "Shion Tsuji",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "STRENGTH",
+      "artist": "Abingdon Boys School",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Ao no Kaori (碧の香り)",
+      "artist": "Yui Makino",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Northern Lights",
+      "artist": "HOW MERRY MARRY",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

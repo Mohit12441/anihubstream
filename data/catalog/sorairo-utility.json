@@ -1,0 +1,54 @@
+{
+  "id": "sorairo-utility",
+  "title": "Sorairo Utility (TV)",
+  "native": "空色ユーティリティ (TV)",
+  "year": 2025,
+  "rating": 7.1,
+  "season": "Winter 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx174596-GbgKrUtBBuIg.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx174596-GbgKrUtBBuIg.jpg",
+  "accent": "#f1e40d",
+  "synopsis": "\"At this rate, I'll just graduate as a plain background character A!\"\n\nMinami Aoba was troubled. She had no particular strengths or things she wanted to do. Is it okay for her high school life to end as such an ordinary supporting character!?\n\nLeaving school behind, Minami searches for her own \"special uniqueness.\" She stumbles upon the nearby golf practice range by chance. Approached by part-time worker Haruka Akane, Minami grasps the golf club—the \"utility.\"\n\nAnd thus, it was the encounter between Minami and golf.\n\nWinning is not the only thing in golf! Everything related to golf is enjoyable!\n\nTogether with the genius golfer Haruka and Ayaka Hoshimi, who aspires to be an influencer, they seek the moment when they can become the \"protagonist\"! As a super beginner, Minami swings her club once again today.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "sorairo-utility-fcap65",
+    "mal": 58066,
+    "anilist": 174596,
+    "kitsu": 48532
+  },
+  "skip_key_id": 58066,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "sorairo utility tv 空色ユーティリティ tv tv finished",
+  "genres": [
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "15:00",
+      "runtime_seconds": 900,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "321086"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

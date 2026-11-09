@@ -1,0 +1,59 @@
+{
+  "id": "saga-of-tanya-the-evil-the-movie",
+  "title": "Saga of Tanya the Evil - the Movie -",
+  "native": "劇場版 幼女戦記",
+  "year": 2019,
+  "rating": 8.1,
+  "season": "Winter 2019",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx100878-npKVJvggmK6a.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100878-npKVJvggmK6a.jpg",
+  "accent": "#f1e4c9",
+  "synopsis": "In 1926, Tanya and her battalion return home from defeating remnants of the Republic's army. However, when they arrive they receive word of a massive mobilization near the border with the Russy Federation, so the Empire's army must prepare. At the same time, a multinational army under the leadership of the Allied Kingdom moves into the Russy Federation. The enemy of an enemy is a friend, but among the Allied Kingdom army is Mary Sioux, a girl who has sworn to exact justice against the Empire for the death of her father.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Saga of Tanya the Evil Season 2 (2026)",
+    "Saga of Tanya the Evil: Operation Desert Pasta (2021)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 14173,
+    "anilist": 100878,
+    "mal": 37055,
+    "hianime": "saga-of-tanya-the-evil-the-movie-idvqww"
+  },
+  "skip_key_id": 37055,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 12:05:19",
+  "search_text": "saga of tanya the evil the movie 劇場版 幼女戦記 movie finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Saga of Tanya the Evil - the Movie - (Movie)",
+      "runtime": "98:00",
+      "runtime_seconds": 5880,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100878-npKVJvggmK6a.jpg",
+      "synopsis": "In 1926, Tanya and her battalion return home from defeating remnants of the Republic's army. However, when they arrive they receive word of a massive mobilization near the border with the Russy Federation, so the Empire's army must prepare. At the same time, a multinational army under the leadership of the Allied Kingdom moves into the Russy Federation. The enemy of an enemy is a friend, but among the Allied Kingdom army is Mary Sioux, a girl who has sworn to exact justice against the Empire for the death of her father.\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "231346"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

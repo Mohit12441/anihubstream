@@ -1,0 +1,88 @@
+{
+  "id": "she-and-her-cat-everything-flows",
+  "title": "She and Her Cat -Everything Flows-",
+  "native": "彼女と彼女の猫 -Everything Flows-",
+  "year": 2016,
+  "rating": 7.4,
+  "season": "Winter 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21577-yHXqitJ8v3Vq.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21577-yHXqitJ8v3Vq.jpg",
+  "accent": "#2886e4",
+  "synopsis": "For the longest time, it's just been the two of them. \"Kanojo\" and her cat Daru are inseparable, having grown up together. Now a junior in college, Tomoka—her roommate of a year and a half—moves out of their shared apartment, and in order to keep her living space, Kanojo must find a job. Day by day, Daru watches her continued efforts from a cat's-eye view, eagerly awaiting his owner's return. When she gets back, once again, it's just she and her cat.\n\nKanojo to Kanojo no Neko: Everything Flows is a charming short series about the bond between a pet and his owner.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "she-and-her-cat:-everything-flows-wsdp68",
+    "mal": 32491,
+    "anilist": 21577,
+    "kitsu": 11737
+  },
+  "skip_key_id": 32491,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": null,
+  "search_text": "she and her cat everything flows 彼女と彼女の猫 everything flows tv finished",
+  "genres": [
+    "drama",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "She and Her Apartment",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "",
+      "synopsis": "After her roommate moves out, It is just her and Daru.",
+      "airdate": "2016-03-04",
+      "markers": [],
+      "external_id": "181704"
+    },
+    {
+      "n": 2,
+      "title": "She and Her Sky",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "",
+      "synopsis": "A beautiful sunset reminds her and Daru of the time they first met.",
+      "airdate": "2016-03-11",
+      "markers": [],
+      "external_id": "181705"
+    },
+    {
+      "n": 3,
+      "title": "She and the Look in Her Eyes",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "",
+      "synopsis": "When she hits the lowest point in her despair, Daru wishes for nothing more than to be of help to her, but his aging body just won't obey his mind the way it used to...",
+      "airdate": "2016-03-18",
+      "markers": [],
+      "external_id": "181706"
+    },
+    {
+      "n": 4,
+      "title": "She and Her Story",
+      "runtime": "7:00",
+      "runtime_seconds": 420,
+      "thumb": "",
+      "synopsis": "She has kept herself locked in her apartment and ignored phonecalls for so long that her friends and family - and Daru - are growing worried. Then, mysteriously, her mother receives a phone call from her home number, but only hears silence on the other end...",
+      "airdate": "2016-03-25",
+      "markers": [],
+      "external_id": "181707"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

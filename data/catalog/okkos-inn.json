@@ -1,0 +1,64 @@
+{
+  "id": "okkos-inn",
+  "title": "Okko's Inn",
+  "native": "若おかみは小学生！(劇場版)",
+  "year": 2018,
+  "rating": 7.4,
+  "season": "Summer 2018",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101478-bo3xR8x2pc3i.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101478-bo3xR8x2pc3i.png",
+  "accent": "#35aeff",
+  "synopsis": "After reluctantly being dragged to a festival at her parents' rural hometown, Oriko \"Okko\" Seki must face her sudden harsh reality: the death of both of her parents in a car accident shortly after they arrive. Now, Okko must live at her grandmother's traditional hot springs inn, which she is surprised to find is occupied by the ghost of a barefoot child. He encourages Okko to follow in her grandmother's footsteps and prepare to inherit the inn.\n\nInitially, Okko struggles to keep up with the responsibilities of the inn and the accommodation of guests. However, her parents told her that an inn is welcoming for everyone, and she strives to honor their memory. After discovering a few other spirits around the village, Okko learns that even though her parents are gone, she does not have to be lonely.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "okko's-inn-m0ssy8",
+    "mal": 37682,
+    "anilist": 101478,
+    "kitsu": 41406
+  },
+  "skip_key_id": 37682,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "okko s inn 若おかみは小学生 劇場版 movie finished",
+  "genres": [
+    "drama",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Okko's Inn (Movie)",
+      "runtime": "95:00",
+      "runtime_seconds": 5700,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6acb22f6a79c62b97130933e-landscape.jpg",
+      "synopsis": "The film will tell a story not told in either the original book series or the television series — specifically, a story about \"Okko\" and her parents.\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "246948"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mata Ashita (また明日; Until Tomorrow)",
+      "artist": "Sakura Fujiwara",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

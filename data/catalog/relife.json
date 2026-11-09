@@ -1,0 +1,308 @@
+{
+  "id": "relife",
+  "title": "ReLIFE",
+  "native": "ReLIFE",
+  "year": 2016,
+  "rating": 7.8,
+  "season": "Summer 2016",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21049-4AHSLeiDE9eg.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21049-4AHSLeiDE9eg.png",
+  "accent": "#aee4ff",
+  "synopsis": "The story follows Kaizaki Arata, a 27-year-old jobless man, who fails at every job interview he had after quitting his last company. His life changes after he met Yoake Ryou of the ReLife Research Institute, who offered him a drug that can change his appearance to 17-years-old and to become a subject in an experiment for one year. Thus, he begins his life as a high school student once more.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "relife-ehzra8",
+    "mal": 30015,
+    "anilist": 21049,
+    "kitsu": 10464
+  },
+  "skip_key_id": 30015,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "relife relife ona finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Kaizaki Arata (27), Unemployed",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186695/original.jpg",
+      "synopsis": "Kaizaki Arata is twenty-seven years old and doesn't have a steady job. His parents even threaten to stop sending him money, but that's when he he meets Yoake Ryo, who has a tantalizing offer for him.",
+      "airdate": "2016-06-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 73,
+          "end": 163,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1295,
+          "end": 1422,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "186695"
+    },
+    {
+      "n": 2,
+      "title": "Communication Skills: Zero",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186696/original.jpg",
+      "synopsis": "Arata meets Hishiro Chiziru, a girl who has zero communication skills but is trying her best to change.",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "186696"
+    },
+    {
+      "n": 3,
+      "title": "You're Old Now",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186697/original.jpg",
+      "synopsis": "Arata receives a grim reminder of his physical age during athletic testing.",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "186697"
+    },
+    {
+      "n": 4,
+      "title": "Fall",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186698/original.jpg",
+      "synopsis": "Kariu Rena is thrown for a loop by what she thinks is Chizuru's spiteful behavior toward her.",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "186698"
+    },
+    {
+      "n": 5,
+      "title": "Overlap",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186699/original.jpg",
+      "synopsis": "Things come to a head between Rena and Chizuru, which reminds Arata about a traumatic experience in his past.",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "186699"
+    },
+    {
+      "n": 6,
+      "title": "This Isn't the First Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186700/original.jpg",
+      "synopsis": "Onoya An and Oga Kazuomi suddenly visit Arata for a study session, after which Onoya puts the moves on Arata?!",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "186700"
+    },
+    {
+      "n": 7,
+      "title": "Test Subject 001→002",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186701/original.jpg",
+      "synopsis": "Ryo reflects on the year before and his failure supporting test subject no. 001",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "186701"
+    },
+    {
+      "n": 8,
+      "title": "Rift",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186702/original.jpg",
+      "synopsis": "Honoka is distracted by her troubles and inadvertently causes an injury to Rena.",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "186702"
+    },
+    {
+      "n": 9,
+      "title": "Revenge",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186703/original.jpg",
+      "synopsis": "The rift between Rena and Honoka grows ever larger as the former decides to retire from high-school volleyball, but Chizuru and Arata decide to fix things.",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "186703"
+    },
+    {
+      "n": 10,
+      "title": "Everyone's Selfish Desires",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186704/original.jpg",
+      "synopsis": "Things come to a head as Chizuru and Arata decide to confront Rena over her behavior.",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "186704"
+    },
+    {
+      "n": 11,
+      "title": "A Trip to the Past",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186705/original.jpg",
+      "synopsis": "Arata decides to visit a grave and ends up taking a trip down memory lane.",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "186705"
+    },
+    {
+      "n": 12,
+      "title": "Double Panic",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186706/original.jpg",
+      "synopsis": "Arata, once and for all, tries to make the dense-as-can-be Kazuomi realize what he has in his hands.",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "186706"
+    },
+    {
+      "n": 13,
+      "title": "Confession",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/186707/original.jpg",
+      "synopsis": "At the fireworks display, everyone puts their plans into motion and tries to make things work between Kazuomi and Rena. Meanwhile, a different pairing begins to take shape...",
+      "airdate": "2016-06-24",
+      "markers": [],
+      "external_id": "186707"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Button",
+      "artist": "PENGUIN RESEARCH",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Button (ボタン)",
+      "artist": "PENGUIN RESEARCH",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Iijū Rider (イージュー★ライダー)",
+      "artist": "Tamio Okuda",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "HOT LIMIT",
+      "artist": "T.M. Revolution",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Timing (Timing ~タイミング~)",
+      "artist": "Black Biscuits",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "HONEY",
+      "artist": "L'Arc~en~Ciel",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Kore wa Watashi no Ikiru Michi (これが私の生きる道; This is the Way I Live)",
+      "artist": "PUFFY",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Sunny Day Sunday",
+      "artist": "Sentimental Bus",
+      "episodes": "6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Saudade (サウダージ)",
+      "artist": "Porno Graffitti",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Yuki no Hana (雪の華; Snow Flower)",
+      "artist": "Mika Nakashima",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "There will be love there -Ai no Aru Basho- (There will be love there -愛のある場所-; -The Place Where Love is-)",
+      "artist": "the brilliant green",
+      "episodes": "9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "Asu e no Tobira (明日への扉; The Door to Tomorrow)",
+      "artist": "I WiSH",
+      "episodes": "10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "PIECES OF A DREAM",
+      "artist": "CHEMISTRY",
+      "episodes": "11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "Natsu Matsuri (夏祭り; Summer Festival)",
+      "artist": "Whiteberry",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 13,
+      "title": "Button (ボタン)",
+      "artist": "PENGUIN RESEARCH",
+      "episodes": "13"
+    }
+  ],
+  "relations": []
+}

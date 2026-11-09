@@ -1,0 +1,324 @@
+{
+  "id": "spy-x-family",
+  "title": "SPY x FAMILY",
+  "native": "SPY×FAMILY",
+  "year": 2022,
+  "rating": 8.3,
+  "season": "Spring 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx140960-Kb6R5nYQfjmP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx140960-Kb6R5nYQfjmP.jpg",
+  "accent": "#c9f1f1",
+  "synopsis": "Everyone has a part of themselves they cannot show to anyone else.\n\nAt a time when all nations of the world were involved in a fierce war of information happening behind closed doors, Ostania and Westalis had been in a state of cold war against one another for decades. The Westalis Intelligence Services' Eastern-Focused Division (WISE) sends their most talented spy, \"Twilight,\" on a top-secret mission to investigate the movements of Donovan Desmond, the chairman of Ostania's National Unity Party, who is threatening peace efforts between the two nations.\n\nThis mission is known as \"Operation Strix.\" It consists of \"putting together a family in one week in order to infiltrate social gatherings organized by the elite school that Desmond's son attends.\" \n\n\"Twilight\" takes on the identity of psychiatrist Loid Forger and starts looking for family members. But Anya, the daughter he adopts, turns out to have the ability to read people's minds, while his wife, Yor, is an assassin! With it being in each of their own interests to keep these facts hidden, they start living together while concealing their true identities from one another. \n\nWorld peace is now in the hands of this brand-new family as they embark on an adventure full of surprises.\n\n(Source: Crunchyroll)",
+  "rank": 4,
+  "trend_rank": null,
+  "alt_seasons": [
+    "SPY x FAMILY Cour 2 (2022)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 45398,
+    "anilist": 140960,
+    "mal": 50265,
+    "hianime": "spy-x-family-yn1m5n"
+  },
+  "skip_key_id": 50265,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-13 00:00:00",
+  "search_text": "spy x family spy family tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "OPERATION STRIX",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/321350/thumbnail/medium-03f58278ed5fbf952097d134f4d47d93.jpeg",
+      "synopsis": "Twilight is an agent that works for WISE, Westalis's intelligence agency, and he is tasked with investigating Desmond, who is in Ostania and planning to start a war. Twilight disguises himself as the psychiatrist Loid Forger and adopts a girl named Anya so that he can enroll her into the prestigious Eden College to get closer to his target. Unbeknownst to him, Anya is actually a telepath who can read people's minds. One day, members of a mafia group that is after Twilight kidnaps Anya. Loid realizes that he needs to reconsider his priorities and... (Source: Crunchyroll)",
+      "airdate": "2022-04-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 96
+        }
+      ],
+      "external_id": "321350"
+    },
+    {
+      "n": 2,
+      "title": "SECURE A WIFE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/321351/thumbnail/medium-7fbab8953dc63090775f1f719b88bb0c.jpeg",
+      "synopsis": "Civil servant Yor Briar has a secret identity: an assassin named the Thorn Princess. Lately, single women had been suspected of being spies, which was making Yor nervous. Meanwhile, Loid was searching for someone to play Anya's mother so they could attend the interview at Eden College. He just happens to run into Yor at a boutique. Anya reads Yor's mind and finds out that she's an assassin and tries to get Loid to ask Yor to play her mother. (Source: Crunchyroll)",
+      "airdate": "2022-04-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "321351"
+    },
+    {
+      "n": 3,
+      "title": "PREPARE FOR THE INTERVIEW",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/322122/thumbnail/medium-2f1c10b7110138cdf6186aaf53061257.jpeg",
+      "synopsis": "",
+      "airdate": "2022-04-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 83,
+          "end": 173
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "322122"
+    },
+    {
+      "n": 4,
+      "title": "THE PRESTIGIOUS SCHOOL'S INTERVIEW",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/323111/thumbnail/medium-2207156dc0ea409bc19ad86be8e9eebe.jpeg",
+      "synopsis": "The day they had been preparing for has finally arrived! The Forgers are fully prepared and head to the interview. As soon as they enter the school grounds, Loid feels someone watching them. All of the applicants were being observed from the shadows by the instructors of the academy. The exam had already begun. Housemaster Henderson, who would be grading their performance, kept a keen eye on how the Forgers were acting and seeing if they were truly worthy of the prestigious Eden College.",
+      "airdate": "2022-04-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1351,
+          "end": 1440
+        }
+      ],
+      "external_id": "323111"
+    },
+    {
+      "n": 5,
+      "title": "WILL THEY PASS OR FAIL?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/323112/thumbnail/medium-40a002e69bb2c3e9b2d55c78e4fd6183.jpeg",
+      "synopsis": "The day that Eden College would announce the applicants that successfully got into the school had finally arrived, but Anya's number is not listed. The Forgers fall into the depths of despair but are greeted by Henderson. He praises them for their interview and tells them that Anya is at the top of the waiting list. Three days later, they find out that Anya got into the school! Franky comes over to celebrate with the Forgers and they all agree to reward Anya for working so hard. What Anya asks for... (Source: Crunchyroll)",
+      "airdate": "2022-05-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 78,
+          "end": 168
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "323112"
+    },
+    {
+      "n": 6,
+      "title": "THE FRIENDSHIP SCHEME",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/323113/thumbnail/medium-d9390ea0b6ba1983dd548dd4ccf737bd.jpeg",
+      "synopsis": "Anya's uniform is finished. Loid has to go to a WISE strategy meeting, so he has Yor pick up the uniform as he heads to the safehouse. At the meeting, he finds out that Anya will have to receive 8 Stellar Stars and become an Imperial Scholar at Eden College in order for him to successfully complete Operation Strix. Meanwhile, Anya is very excited about getting her new uniform. But there are always criminals on the lookout for wealthy students from Eden College and Anya gets targeted by a group of hoodlums. (Source: Crunchyroll)",
+      "airdate": "2022-05-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "323113"
+    },
+    {
+      "n": 7,
+      "title": "THE TARGET'S SECOND SON",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/323114/thumbnail/medium-b1a91777f2d38155c383a9d7cd747c1f.jpeg",
+      "synopsis": "Anya ends up with a Tonitrus Bolt after she hit Damian Desmond. Sadly, this causes her to stand out for the wrong reasons in class which depresses her, but she ends up friends with Becky, and school becomes a little more fun. She also tries to apologize to Damian for hitting him, but just can't seem to get the words out. For the sake of Operation Strix, Loid disguises himself as someone who works at the school and tries to help Anya reconcile from the shadows, but... (Source: Crunchyroll)",
+      "airdate": "2022-05-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 69,
+          "end": 160
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1400
+        }
+      ],
+      "external_id": "323114"
+    },
+    {
+      "n": 8,
+      "title": "COUNTER-STRATEGIC CAMOUFLAGE AGAINST SECRET POLICE SURVEILLANCE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/323115/thumbnail/medium-0245b206e2859884626d6c189eb7e69f.jpeg",
+      "synopsis": "Ostania's counterintelligence agency and national security bureau conducts spy hunts and keeps surveillance on its citizens to maintain peace within the country. They are also called the Secret Police and are feared. Yor's younger brother Yuri actually belongs to the Secret Police and is hunting down spies while keeping this a secret from Yor and others around him. One day, he suddenly shows up at the Forger residence. The Forgers, who are full of secrets, and Yuri, who has a secret identity, come face to face! (Source: Crunchyroll)",
+      "airdate": "2022-05-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "323115"
+    },
+    {
+      "n": 9,
+      "title": "SHOW OFF HOW IN LOVE YOU ARE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/323116/thumbnail/medium-102dba74ed66cfc95b6f2b873ac36836.jpeg",
+      "synopsis": "In order to prove to Yuri that they are actually a married couple, Loid and Yor are supposed to kiss. Loid is willing to get this done immediately for the sake of Operation Strix, but Yor can't do this sober, so she ends up downing a bunch of wine and gets drunk. Yuri sees his sister this way, also gets drunk, and is unable to make rational decisions anymore... (Source: Crunchyroll)",
+      "airdate": "2022-06-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 172
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "323116"
+    },
+    {
+      "n": 10,
+      "title": "THE GREAT DODGEBALL PLAN",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/323117/thumbnail/medium-6ee3f4cb309ffaf0e24747e074ba3bea.jpeg",
+      "synopsis": "A rumor spreads amongst the first graders at Eden College saying that if they do well in their next PE class, they will get rewarded with Stella Stars. Anya is determined to get a Stella Star, so she trains with Yor. Thus begins the dodgeball match between Cecile Hall and Wald Hall! Anya and her classmates are determined to win, but they are faced with the giant, Bill Watkins. (Source: Crunchyroll)",
+      "airdate": "2022-06-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 261,
+          "end": 351
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1351,
+          "end": 1440
+        }
+      ],
+      "external_id": "323117"
+    },
+    {
+      "n": 11,
+      "title": "STELLA",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/323118/thumbnail/medium-2564b758df0fc8a7b89a04f1df45616c.jpeg",
+      "synopsis": "In order for parents to attend one of the social gatherings at Eden College, their children need to be Imperial Scholars, but Anya hating to study makes this rather difficult. Loid then comes up with a plan to get Anya to get Stella Stars by doing community service rather than with her academics. But when she ends up volunteering at a hospital, she continuously messes up. Later, she hears a child drowning in a pool with her telepathy and... (Source: Crunchyroll)",
+      "airdate": "2022-06-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "323118"
+    },
+    {
+      "n": 12,
+      "title": "PENGUIN PARK",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/323119/thumbnail/medium-f995b415b18c7dfd0edafe83491d5548.jpeg",
+      "synopsis": "Loid is burdened with one mission after another from WISE and comes home exhausted. He then hears neighbors gossiping that he's neglecting his family. Because he can't let anyone doubt them as a family for the sake of Operation Strix, he decides to take his family to the aquarium the next day they have off to show everyone that they get along. However, he is assigned another mission from WISE while he's there, and... (Source: Crunchyroll)",
+      "airdate": "2022-06-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 76,
+          "end": 166
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1361,
+          "end": 1440
+        }
+      ],
+      "external_id": "323119"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

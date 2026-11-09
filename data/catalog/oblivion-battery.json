@@ -1,0 +1,190 @@
+{
+  "id": "oblivion-battery",
+  "title": "Oblivion Battery",
+  "native": "忘却バッテリー (TV)",
+  "year": 2024,
+  "rating": 7.4,
+  "season": "Spring 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx167927-eHWavr99BeTj.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx167927-eHWavr99BeTj.png",
+  "accent": "#3586e4",
+  "synopsis": "Iron-armed pitcher, Haruka Kiyomine, and the shrewd catcher, Kei Kaname, AKA the \"Skilled General,\" were considered to be an unrivaled, monstrous battery duo in the middle-school baseball world. They were both scouted by various powerhouse high schools across the nation, but somehow, they both ended up at Tokyo Municipal Kotesashi High School, which wasn't known for baseball at all. On top of that, other star players who had lost to that duo in the past and completely strayed from baseball coincidentally also enrolled at that school, and…\n\nTheir meeting sets everything into motion once again.\n\nTheir high school baseball story begins now!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "oblivion-battery-40ajk7",
+    "mal": 56165,
+    "anilist": 167927,
+    "kitsu": 48388
+  },
+  "skip_key_id": 56165,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "oblivion battery 忘却ハ ッテリー tv tv finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I'll Make You Remember",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a0fa61f4fbdc65866961cec514a462b51712670675_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "366356"
+    },
+    {
+      "n": 2,
+      "title": "Wanna Play Together?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/53f1101b3627dcfc98c37684549a52c61713252965_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "366357"
+    },
+    {
+      "n": 3,
+      "title": "So What?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/355c44bb17838dfb5540d00ea551857d1713865261_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "366496"
+    },
+    {
+      "n": 4,
+      "title": "I Won't Hold Back",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/60a6f79397941278717a03e8be1e09331714490747_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "366497"
+    },
+    {
+      "n": 5,
+      "title": "What Led Us To Quit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/5bcfbaa09f510fb725ebeeadb95026231715081212_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "366498"
+    },
+    {
+      "n": 6,
+      "title": "I Do!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a20866989e672dae41c2a3448640cacb1715698044_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "366499"
+    },
+    {
+      "n": 7,
+      "title": "Interesting Guys",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/207b56a6cb1237629366ce1bd24895ae1716303532_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "366500"
+    },
+    {
+      "n": 8,
+      "title": "Baseball in 3D Isn't Really My Thing...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/933229823ca04b9d55f6fe18a72b45bc1717515598_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "366501"
+    },
+    {
+      "n": 9,
+      "title": "Who Do You Think You're Talking To?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/d7ac32166729a67d62ca5e066d16d2cc1718121463_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "366502"
+    },
+    {
+      "n": 10,
+      "title": "Can't Run From Them",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/ea0aaa592d9debac960e6060f4b7adf31718702554_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "366503"
+    },
+    {
+      "n": 11,
+      "title": "I'm a Liar",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b98b587b83f598e1bb6803a563fb2a531719313105_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "366504"
+    },
+    {
+      "n": 12,
+      "title": "Did You Hate It?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/3362fd28b7130dd5e5f5ec164a96e0421719930600_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "366505"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Lilac",
+      "artist": "Mrs. Green Apple",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Wasurena Uta",
+      "artist": "Macaroni Enpitsu",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

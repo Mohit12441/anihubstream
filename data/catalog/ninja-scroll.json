@@ -1,0 +1,81 @@
+{
+  "id": "ninja-scroll",
+  "title": "Ninja Scroll",
+  "native": "獣兵衛忍風帖",
+  "year": 1993,
+  "rating": 7.3,
+  "season": "Spring 1993",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx617-yo9IcTEQRNuN.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx617-yo9IcTEQRNuN.jpg",
+  "accent": "#785d28",
+  "synopsis": "Jubei Kibagami has always been the master dealer of death, but in rescuing a ninja woman from a monster he sets loose a chain of events that puts death in his own veins and sends them on a nightmarish odyssey through a surreal and devil infested ancient Japan. How do demonic possessions, an annihilated village and a man Jubei thought safely buried in his past all connect? If Jubei can't piece the blood-soaked clues together, his only consolation will be that he won't live to regret it for very long! Prepare your mind and steel your gut for the insanely gore-packed orgy of violence that still stands alone and unchallenged as the ultimate anime action feature.\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Ninja Scroll: The Series (2003)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 572,
+    "anilist": 617,
+    "mal": 617
+  },
+  "skip_key_id": 617,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-22 08:26:11",
+  "search_text": "ninja scroll 獣兵衛忍風帖 movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "horror",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Ninja Scroll (Movie)",
+      "runtime": "92:00",
+      "runtime_seconds": 5520,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx617-yo9IcTEQRNuN.jpg",
+      "synopsis": "Jubei Kibagami has always been the master dealer of death, but in rescuing a ninja woman from a monster he sets loose a chain of events that puts death in his own veins and sends them on a nightmarish odyssey through a surreal and devil infested ancient Japan. How do demonic possessions, an annihilated village and a man Jubei thought safely buried in his past all connect? If Jubei can't piece the blood-soaked clues together, his only consolation will be that he won't live to regret it for very long! Prepare your mind and steel your gut for the insanely gore-packed orgy of violence that still stands alone and unchallenged as the ultimate anime action feature.\n\n(Source: Sentai Filmworks)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "13148"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Jubei's Theme",
+      "artist": "Kitaro and Peter McEvilley",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shigure's Theme",
+      "artist": "Kitaro and Peter McEvilley",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dare mo ga Tooku de Ballad o Kiite iru (誰もが遠くでバラードを聴いている)",
+      "artist": "Ryouhei Yamanashi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

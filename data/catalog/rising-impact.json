@@ -1,0 +1,184 @@
+{
+  "id": "rising-impact",
+  "title": "Rising Impact",
+  "native": "ライジングインパクト",
+  "year": 2024,
+  "rating": 7.6,
+  "season": "Spring 2024",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx171115-IApjErPwc7oV.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx171115-IApjErPwc7oV.jpg",
+  "accent": "#0d78f1",
+  "synopsis": "A young boy, Gawain, lives in a mountainous, rural area with an incredible love for baseball and making the ball really fly. One day he runs into a visitor to the small area and she introduces him to a sport that can really make a ball take to flight: golf! It just takes one shot and Gawain is hooked. With his grandpa's approval he sets off to Tokyo with this mysterious woman to learn all he can about golf, encountering many colorful characters and obstacles along the way.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "rising-impact-35l9th",
+    "mal": 57487,
+    "anilist": 171115,
+    "kitsu": 48631
+  },
+  "skip_key_id": 57487,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "rising impact ライシ ンク インハ クト ona finished",
+  "genres": [
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365361"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365362"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365363"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365364"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365365"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365366"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365367"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365368"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365369"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365370"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365371"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "365372"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "gifted",
+      "artist": "BLUE ENCOUNT",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

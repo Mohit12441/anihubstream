@@ -1,0 +1,162 @@
+{
+  "id": "nobunaga-concerto",
+  "title": "Nobunaga Concerto",
+  "native": "信長協奏曲〈コンツェルト〉",
+  "year": 2014,
+  "rating": 7.1,
+  "season": "Summer 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20717.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20717.jpg",
+  "accent": "#d61a1a",
+  "synopsis": "The story centers around Saburou, a high school boy who time-travels to Japan's Sengoku Era. He must become Nobunaga Oda, the famed warlord who helps unite Japan.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "nobunaga-concerto-mlagji",
+    "mal": 24135,
+    "anilist": 20717,
+    "kitsu": 8558
+  },
+  "skip_key_id": 24135,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": null,
+  "search_text": "nobunaga concerto 信長協奏曲 コンツェルト tv finished",
+  "genres": [
+    "comedy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Saburou Nobunaga",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162942/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-07-12",
+      "markers": [],
+      "external_id": "162942"
+    },
+    {
+      "n": 2,
+      "title": "Kanshi",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162952/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-07-19",
+      "markers": [],
+      "external_id": "162952"
+    },
+    {
+      "n": 3,
+      "title": "Viper of Mino",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162959/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-07-26",
+      "markers": [],
+      "external_id": "162959"
+    },
+    {
+      "n": 4,
+      "title": "Battle of Okehazama",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162963/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-08-02",
+      "markers": [],
+      "external_id": "162963"
+    },
+    {
+      "n": 5,
+      "title": "Love Letter",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162972/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-08-09",
+      "markers": [],
+      "external_id": "162972"
+    },
+    {
+      "n": 6,
+      "title": "Mitsuhide Akechi",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162979/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-08-16",
+      "markers": [],
+      "external_id": "162979"
+    },
+    {
+      "n": 7,
+      "title": "Kill Nobunaga",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162986/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-08-23",
+      "markers": [],
+      "external_id": "162986"
+    },
+    {
+      "n": 8,
+      "title": "An Unthinkable Betrayal",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162996/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-08-30",
+      "markers": [],
+      "external_id": "162996"
+    },
+    {
+      "n": 9,
+      "title": "A Thorny Road",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163005/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-09-13",
+      "markers": [],
+      "external_id": "163005"
+    },
+    {
+      "n": 10,
+      "title": "The Two Nobunagas",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/163012/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-09-20",
+      "markers": [],
+      "external_id": "163012"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fukagyaku Replace (不可逆リプレイス;Irreversible Replace)",
+      "artist": "MY FIRST STORY",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

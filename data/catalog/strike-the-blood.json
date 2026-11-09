@@ -1,0 +1,538 @@
+{
+  "id": "strike-the-blood",
+  "title": "Strike the Blood",
+  "native": "ストライク・ザ・ブラッド",
+  "year": 2013,
+  "rating": 6.6,
+  "season": "Fall 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx18277-Vwm314Nr6vsg.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx18277-Vwm314Nr6vsg.jpg",
+  "accent": "#50bbe4",
+  "synopsis": "The Fourth Primogenitor—That's the world's strongest vampire that should only exist in legends. Accompanied by twelve Kenjuu and spreading calamity, this phantom vampire appeared in Japan. For the observation and obliteration of this Fourth Primogenitor, the government and Lion King decided to dispatch an attack mage known as a Sword Shaman. However, for some reason, the one chosen for the observation was a apprentice Sword Shaman girl, Himegari Yukina. Wielding the strongest anti-primogenitor spirit spear, Yukina arrived at Demon District, Itogami City. What is the true identity of the Fourth Primogenitor, Akatsuki Kojou, she encountered over there!?\n\n\r\n(Source: Baka-Tsuki, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Strike the Blood Second (2016)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7715,
+    "anilist": 18277,
+    "mal": 18277
+  },
+  "skip_key_id": 18277,
+  "skip_key_space": "anilist",
+  "episode_total": 24,
+  "added_at": "2026-10-14 10:34:33",
+  "search_text": "strike the blood ストライク サ フ ラット tv finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Right Arm of the Saint I",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112356/original.jpg",
+      "synopsis": "Itogami Island is a manmade island in the middle of the Pacific Ocean where summer never ends. A high school student at Saikai Academy, Akatsuki Kojou, is on his way home from studying with his classmates, Aiba Asagi and Yaze Motoki, when he notices a girl in the Saikai Academy middle school uniform following him.",
+      "airdate": "2013-10-04",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1289,
+          "end": 1374
+        }
+      ],
+      "external_id": "112356"
+    },
+    {
+      "n": 2,
+      "title": "The Right Arm of the Saint II",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112357/original.jpg",
+      "synopsis": "Yukina moves into the room next to Kojou's. When Kojou sees that she only has a bare minimum of furniture and necessities, he takes her to a hardware store. Kojou's younger sister Nagisa also insists on hosting a welcome party for Yukina, adding up to a very lively day.",
+      "airdate": "2013-10-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 150,
+          "end": 240
+        }
+      ],
+      "external_id": "112357"
+    },
+    {
+      "n": 3,
+      "title": "The Right Arm of the Saint III",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112358/original.jpg",
+      "synopsis": "The morning after the battle against the Combat Deacon and his homunculus, the town is left in ruins. Yukina had been shocked to see how vastly Kojou's power exceeded that of the Familiar, but now she learns that Kojou can't even control his own Familiars. Kojou and Yukina pursue the escaped Eustach and Astarte to an abandoned laboratory, where another intense battle awaits them...",
+      "airdate": "2013-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 23,
+          "end": 113
+        }
+      ],
+      "external_id": "112358"
+    },
+    {
+      "n": 4,
+      "title": "The Right Arm of the Saint IV",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112359/original.jpg",
+      "synopsis": "Eustach and Astarte continue their assault, finally launching an attack on the central support of the manmade island. When Kojou learns that Asagi is trapped inside, he's eager to save her, but his inability to control his own Familiars holds him in place. Unable to see him go on like this, Yukina makes a suggestion he never expected...",
+      "airdate": "2013-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 66,
+          "end": 156
+        }
+      ],
+      "external_id": "112359"
+    },
+    {
+      "n": 5,
+      "title": "From the Warlord's Empire I",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112360/original.jpg",
+      "synopsis": "It's nearly time for the Saikai Academy ball sports tournament, and Yukina and Nagisa are all fired up to act as cheerleaders! And thanks to the workings of Motoki and Rin, Kojou and Asagi are paired up to participate in the badminton doubles match for their class. Meanwhile, Natsuki is occupied with the capture of some therianthropes that have appeared in the warehouse district, and someone is targeting the Fourth Progenitor again...",
+      "airdate": "2013-11-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 113,
+          "end": 203
+        }
+      ],
+      "external_id": "112360"
+    },
+    {
+      "n": 6,
+      "title": "From the Warlord's Empire II",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112361/original.jpg",
+      "synopsis": "Kojou and Yukina meet Dimitrie Vatler, a nobleman who shows an abnormal degree of affection toward the Fourth Progenitor, and Kirasaka Sayaka, Yukina's old friend also under the employ of the Lion King Organization. When Vatler proposes that Kojou capture some terrorists hiding out on Itogami Island and Yukina volunteers to take care of them instead, Vatler challenges Yukina to test her suitability for the task. And, though Sayaka has always been a friend of Yukina's since childhood, her behavior starts to change...",
+      "airdate": "2013-11-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 114,
+          "end": 204
+        }
+      ],
+      "external_id": "112361"
+    },
+    {
+      "n": 7,
+      "title": "From the Warlord's Empire III",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112362/original.jpg",
+      "synopsis": "In her excessive defense of Yukina, Sayaka launches an attack on Kojou, but he can't control his powers. Yukina's arrival prevents the situation from growing dire, but Yukina leaves them both on the school roof to think about what they've done.",
+      "airdate": "2013-11-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        }
+      ],
+      "external_id": "112362"
+    },
+    {
+      "n": 8,
+      "title": "From the Warlord's Empire IV",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112363/original.jpg",
+      "synopsis": "While Kojo and Sayaka have trouble with the Nalakuvera, Yukina engages Gardos in combat. Yukina manages to slice of Gardos's arm, but she loses Gardos who had Asagi and Nagisa captive. Meanwhile, Sayaka offers her blood to Kojo. After Kojo bites Sayaka's neck, he summons a new familiar, a unicorn. Yukina joins Kojo and Sayaka in battle. She notices Sayaka is wearing Kojo's jacket. Yukina informs the two that Asagi had started program that will deactivate the Nalakuvera's system. With the help of Asagi's program, Yukina and the others defeat the Nalakuvera. The third leader of the Lion King organization gives a letter to Vatler.",
+      "airdate": "2013-11-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 8,
+          "end": 98
+        }
+      ],
+      "external_id": "112363"
+    },
+    {
+      "n": 9,
+      "title": "The Amphisbaena I",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112364/original.jpg",
+      "synopsis": "Elsewhere, a blonde woman with a spear engages in battle with a mage. Then, mysterious being with angel-like wings appear. Next day, Kojo recalls his kiss with Asagi. In class, Asagi asks Kojo to let her paint a portrait of him. When Kojo won't dress up, Asagi undresses to make Kojo comfortable. While Asagi takes picture of Kojo, Kojo takes pictures of her. Afterwards, Asagi wonders what secrets Kojo is hiding. Meanwhile, Kojo finds his sister with a young man. He and Yukina follow Nagisa to the rooftop. Kojo thought the two were doing something indecent. It turns out that Nagisa and her friend were looking after a cat. Then, Kojo and the others meet a new girl, Kanase Kanon. Kanase leads Kojo and Yukina to a church overrun by cats. Meanwhile, Natsuki, Motoki, and Vatler talk about the injuries on a young girl.",
+      "airdate": "2013-11-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        }
+      ],
+      "external_id": "112364"
+    },
+    {
+      "n": 10,
+      "title": "The Amphisbaena II",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112365/original.jpg",
+      "synopsis": "Kojou and Yukina prepare to ambush The Possession Mask, the group responsible for the attacks around Itogami Island... but one of the Possession Mask members they see is Kanase Kanon.",
+      "airdate": "2013-12-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 87,
+          "end": 177
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1404
+        }
+      ],
+      "external_id": "112365"
+    },
+    {
+      "n": 11,
+      "title": "The Amphisbaena III",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112366/original.jpg",
+      "synopsis": "The deserted island turns out to be a research facility owned by Magus Craft where Kanon's father, Kensei, conducts research. Kojou and Yukina are attacked by a vanguard force, but the one to save them from danger is Princess La Folia of Aldeigia, a young woman with deep connections to both Kanon and Kojou.",
+      "airdate": "2013-12-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 60,
+          "end": 150
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1397
+        }
+      ],
+      "external_id": "112366"
+    },
+    {
+      "n": 12,
+      "title": "The Amphisbaena IV",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112367/original.jpg",
+      "synopsis": "When Kojou is disabled in the battle with Kanon, Yukina retreats with him behind La Folia's barrier. Both Yukina and La Folia share their blood with Kojou to aid in his recovery and the awakening of a new power. They have no choice but to rush to Kanon's rescue as her ego slips beyond control and she loses her grip on her humanity.",
+      "airdate": "2013-12-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 83,
+          "end": 173
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1146,
+          "end": 1235
+        }
+      ],
+      "external_id": "112367"
+    },
+    {
+      "n": 13,
+      "title": "Labyrinth of the Blue Witch I",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112973/original.jpg",
+      "synopsis": "Itogami Island's tourist industry flourishes as the season of the annual Halloween Fest draws near. Kojou reunites with his childhood friend Tokoyogi Yuuma for the first time in four years, but Yukina and Asagi are not pleased to see the intimate friendship she shares with him. Meanwhile, when the Meyer Sisters suddenly appear at the Keystone Gate, the \"witch of the void,\" Natsuki, finds herself in danger...",
+      "airdate": "2014-01-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        }
+      ],
+      "external_id": "112973"
+    },
+    {
+      "n": 14,
+      "title": "Labyrinth of the Blue Witch II",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112974/original.jpg",
+      "synopsis": "Still stuck in Yuuma's body after the mind switch, Kojou rushes to see Yukina and the other girls. At first they're unsure whether to believe him, but after an explanation, Kojou and Yukina try to locate Yuuma in Kojou's body as they draw closer to unraveling the mystery of the witch of the void.",
+      "airdate": "2014-01-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        }
+      ],
+      "external_id": "112974"
+    },
+    {
+      "n": 15,
+      "title": "Labyrinth of the Blue Witch III",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112975/original.jpg",
+      "synopsis": "Yuuma's goal was to use the Fourth Progenitor's magic power to free her mother from the prison barrier. In accordance with her plans, the prison barrier appears above the ocean's surface near Itogami Island.",
+      "airdate": "2014-01-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 52,
+          "end": 142
+        }
+      ],
+      "external_id": "112975"
+    },
+    {
+      "n": 16,
+      "title": "Fiesta for the Observers I",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112976/original.jpg",
+      "synopsis": "Kojou comes out of the battle with his own body back, but both Yuuma and Natsuki have fallen. The true prison barrier has been revealed along with Yuuma's mother, Tokoyogi Aya, and the other magic criminals who were incarcerated within.",
+      "airdate": "2014-01-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 138,
+          "end": 228
+        }
+      ],
+      "external_id": "112976"
+    },
+    {
+      "n": 17,
+      "title": "Fiesta for the Observers II",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112977/original.jpg",
+      "synopsis": "Kojou and company search for Natsuki, whose spiritual powers were stolen by Aya's grimoire and is now missing. Just ...",
+      "airdate": "2014-02-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 97,
+          "end": 187
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1409
+        }
+      ],
+      "external_id": "112977"
+    },
+    {
+      "n": 18,
+      "title": "Fiesta for the Observers III",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112978/original.jpg",
+      "synopsis": "Kojou and Asagi take Sana on board Vatler's boat, the Oceanus Grave II, to protect her from danger. But Kojou's relief is short-lived as he is soon accosted by Vatler's beautiful young maids, and his stimulation is pushed very close to the limit when he ends up sharing a bath with Asagi...",
+      "airdate": "2014-02-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 55,
+          "end": 145
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1407
+        }
+      ],
+      "external_id": "112978"
+    },
+    {
+      "n": 19,
+      "title": "Fiesta for the Observers IV",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112979/original.jpg",
+      "synopsis": "Through Sana, Yukina sees a memory of Natsuki and Aya ten years ago, and then dreams of a happier world she shares with Kojou, Sayaka, and their friends.",
+      "airdate": "2014-02-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1191,
+          "end": 1281
+        }
+      ],
+      "external_id": "112979"
+    },
+    {
+      "n": 20,
+      "title": "Return of the Alchemist I",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112980/original.jpg",
+      "synopsis": "Yukina and the other middle school girls are preparing to embark on Saikai Academy's traditional training camp. Yukina is worried about leaving Kojou as she has been released from her observer duties for the trip's duration, but Kojou tells her with a smile to go enjoy her time off.",
+      "airdate": "2014-02-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 58,
+          "end": 148
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1407
+        }
+      ],
+      "external_id": "112980"
+    },
+    {
+      "n": 21,
+      "title": "Return of the Alchemist II",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112981/original.jpg",
+      "synopsis": "Asagi has been caught up in Kou's attack. Kojou and Yukina rush to save her, deciding to take her to Mimori's lab for treatment... but when they stop at Kojou's place on the way, another personality takes over Asagi's body.",
+      "airdate": "2014-03-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 98,
+          "end": 188
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1407
+        }
+      ],
+      "external_id": "112981"
+    },
+    {
+      "n": 22,
+      "title": "Return of the Alchemist III",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112982/original.jpg",
+      "synopsis": "In his quest to resurrect Wiseman, Amatsuka has finally launched an attack on the ferry carrying Yukina and her classmates. Kanon, believing the others will be safe if she's gone, confronts Amatsuka and tells the sad story of what happened at the monastery five years ago.",
+      "airdate": "2014-03-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1239,
+          "end": 1329
+        }
+      ],
+      "external_id": "112982"
+    },
+    {
+      "n": 23,
+      "title": "Empire of the Dawn I",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112983/original.jpg",
+      "synopsis": "\"Goodbye, Himeragi...\" After hearing Kojou say this to her in a dream, Yukina begins to contemplate her future and the coming of the day when she may have to leave Kojou's side.",
+      "airdate": "2014-03-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 47,
+          "end": 137
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1317,
+          "end": 1407
+        }
+      ],
+      "external_id": "112983"
+    },
+    {
+      "n": 24,
+      "title": "Empire of the Dawn II",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112984/original.jpg",
+      "synopsis": "Shortly after Yukina lost the use of Schneesturm Wolfin and received an order to return to the Lion King Organization, Itogami Island begins to fall apart under attacks from a magical beast that consumes dragon veins",
+      "airdate": "2014-03-28",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1263,
+          "end": 1353
+        }
+      ],
+      "external_id": "112984"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

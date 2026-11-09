@@ -1,0 +1,64 @@
+{
+  "id": "stand-by-me-doraemon",
+  "title": "STAND BY ME Doraemon",
+  "native": "STAND BY ME ドラえもん",
+  "year": 2014,
+  "rating": 7.8,
+  "season": "Summer 2014",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20515.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20515.jpg",
+  "accent": "#1a93d6",
+  "synopsis": "The robotic cat was sent by a boy in the future to the present day to help the boy's hapless grandfather, Nobita. Doraemon, Nobita, and other children deal with everyday childhood issues, solve (and cause) problems with the gadgets in Doraemon's fourth-dimensional pocket, and embark on escapades through time and space.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "stand-by-me-doraemon-cbk92f",
+    "mal": 21469,
+    "anilist": 20515,
+    "kitsu": 8566
+  },
+  "skip_key_id": 21469,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "stand by me doraemon stand by me ト ラえもん movie finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "STAND BY ME Doraemon (Movie)",
+      "runtime": "95:00",
+      "runtime_seconds": 5700,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20515.jpg",
+      "synopsis": "The robotic cat was sent by a boy in the future to the present day to help the boy's hapless grandfather, Nobita. Doraemon, Nobita, and other children deal with everyday childhood issues, solve (and cause) problems with the gadgets in Doraemon's fourth-dimensional pocket, and embark on escapades through time and space.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "116375"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Himawari no Yakusoku",
+      "artist": "Motohiro Hata",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,93 @@
+{
+  "id": "revolutionary-girl-utena-the-adolescence-of-utena",
+  "title": "Revolutionary Girl Utena: The Adolescence of Utena",
+  "native": "少女革命ウテナ アドゥレセンス黙示録",
+  "year": 1999,
+  "rating": 7.9,
+  "season": "Summer 1999",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx441-JbPY7EiWIeaL.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx441-JbPY7EiWIeaL.jpg",
+  "accent": "#e45dae",
+  "synopsis": "In a loose retelling of the Revolutionary Girl Utena TV series, Utena Tenjou arrives at Ohtori Academy, only to be immediately swept up in a series of duels for the hand of her classmate Anthy Himemiya and the power she supposedly holds. At the same time, Utena reunites with Touga Kiryuu, a friend from her childhood who seems to know the secrets behind the duels. Utena must discover those secrets for herself, before the power that rules Ohtori claims her and her friends, new and old. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "revolutionary-girl-utena:-the-adolescence-of-utena-wo0eb0",
+    "mal": 441,
+    "anilist": 441,
+    "kitsu": 404
+  },
+  "skip_key_id": 441,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "revolutionary girl utena the adolescence of utena 少女革命ウテナ アト ゥレセンス黙示録 movie finished",
+  "genres": [
+    "drama",
+    "fantasy",
+    "mystery",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Revolutionary Girl Utena: The Adolescence of Utena (Movie)",
+      "runtime": "90:00",
+      "runtime_seconds": 5400,
+      "thumb": "https://animehot.cc/storage/media/2026/09/691ed3ac06abcc570fa8fdf4-landscape.webp",
+      "synopsis": "All eyes are on Utena Tenjou, a mysterious transfer student to Ohtori Academy. But Utena's eyes seem to be fixed on one familiar face that stands out among the rest—Touga Kiryuu, Utena's childhood friend. Touga knows of Utena's past and possesses knowledge of the Mark of the Rose, a set of unique rings worn by those who compete for the hand of the Rose Bride. The Rose Bride, Himemiya Anthy, belongs to whomever wins her in a duel, and the one that wins all the duels is said to be given the power to bring revolution to the world. Utena is drawn into the duels, but Touga and their complicated history together may end up unraveling everything. Nothing is as it seems in this retelling of the original anime series.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "9806"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rinbu - Revolution (−輪舞−revolution)",
+      "artist": "Masami Okui",
+      "episodes": "1-38"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "truth",
+      "artist": "Luca Yumi",
+      "episodes": "1-24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fiancé ni Naritai",
+      "artist": "Mitsuhiro Oikawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Virtual Star Hasseigaku (バーチャルスター発生学)",
+      "artist": "Maki Kamiya",
+      "episodes": "25-38"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Rose & release",
+      "artist": "Masami Okui",
+      "episodes": "39"
+    }
+  ],
+  "relations": []
+}

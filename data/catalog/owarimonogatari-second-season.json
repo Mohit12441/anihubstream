@@ -1,0 +1,136 @@
+{
+  "id": "owarimonogatari-second-season",
+  "title": "Owarimonogatari Second Season",
+  "native": "終物語（下）",
+  "year": 2017,
+  "rating": 8.9,
+  "season": "Summer 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21745-VrhhJjZNdBXV.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21745-VrhhJjZNdBXV.png",
+  "accent": "#5dbbe4",
+  "synopsis": "Third and “Final Season” of the Monogatari Series, part 4/5. Contains the arcs Mayoi Hell, Hitagi Rendezvous, and Ougi Dark from the Owarimonogatari light novels.\n\nKoyomi wakes up to see Mayoi Hachikuji before him, the girl who supposedly had gone to the afterlife. She tells Koyomi that they are currently in Avichi, the lowest levels of hell. Koyomi is dubious of how Mayoi knew about the exact timing of his death and which hell he would drop into, when Mayoi tells him that she was there to pick him up by the request of a certain individual.\n\n(Source: Aniplex)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "owarimonogatari-second-season-90q93f",
+    "mal": 35247,
+    "anilist": 21745,
+    "kitsu": 13268
+  },
+  "skip_key_id": 35247,
+  "skip_key_space": "mal",
+  "episode_total": 7,
+  "added_at": null,
+  "search_text": "owarimonogatari second season 終物語 下 tv finished",
+  "genres": [
+    "comedy",
+    "mystery",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Mayoi Hell, Part One",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6900cbc53464fe576c320ff8-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200696"
+    },
+    {
+      "n": 2,
+      "title": "Mayoi Hell, Part Two",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6900cbc53464fe576c320ff8-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200697"
+    },
+    {
+      "n": 3,
+      "title": "Hitagi Rendezvous, Part One",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6900cbc53464fe576c320ff8-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200761"
+    },
+    {
+      "n": 4,
+      "title": "Hitagi Rendezvous, Part Two",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6900cbc53464fe576c320ff8-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1148,
+          "end": 1238,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "200762"
+    },
+    {
+      "n": 5,
+      "title": "Ougi Dark, Part One",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6900cbc53464fe576c320ff8-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200763"
+    },
+    {
+      "n": 6,
+      "title": "Ougi Dark, Part Two",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6900cbc53464fe576c320ff8-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200764"
+    },
+    {
+      "n": 7,
+      "title": "Ougi Dark, Part Three",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6900cbc53464fe576c320ff8-landscape.webp",
+      "synopsis": "",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "200765"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

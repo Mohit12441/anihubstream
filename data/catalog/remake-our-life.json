@@ -1,0 +1,191 @@
+{
+  "id": "remake-our-life",
+  "title": "Remake Our Life!",
+  "native": "ぼくたちのリメイク",
+  "year": 2021,
+  "rating": 7.2,
+  "season": "Summer 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx114065-YPPyW7ZSxfYU.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114065-YPPyW7ZSxfYU.jpg",
+  "accent": "#50aee4",
+  "synopsis": "28-year old Hashiba Kyouya has hit a new low after losing his job at a shady game developer. He originally quit his steady office job to work in the creative industries that he admires, but it's proving to be a challenge even for a motivated go-getter like him. As he finds himself back at his parents house, between jobs, he can't help but wonder what would happen if he had a chance to redo his collegiate studies. Maybe things would turn out differently if he had gone to art school instead... and, shockingly enough, he might just get a chance to test that theory.\n\n(Source: Crunchyroll)\n\nNote: The first episode aired with a runtime of ~51 minutes as opposed to the standard 24 minute long episode.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42924,
+    "anilist": 114065,
+    "mal": 40904
+  },
+  "skip_key_id": 40904,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 11:35:25",
+  "search_text": "remake our life ほ くたちのリメイク tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "304403"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "304404"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306858"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306859"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306860"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306861"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306862"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306863"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306864"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306865"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306866"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "306867"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Koko kara Saki wa Uta ni Naranai (From Here On In It Remains Unsung)",
+      "artist": "Poppin' Party",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kanōsei (Possibility)",
+      "artist": "Argonavis",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,71 @@
+{
+  "id": "pokemon-the-movie-the-power-of-us",
+  "title": "Pokémon the Movie: The Power of Us",
+  "native": "劇場版ポケットモンスター みんなの物語",
+  "year": 2018,
+  "rating": 7.1,
+  "season": "Summer 2018",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx100744-Ys3JTKSHg3Gv.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100744-Ys3JTKSHg3Gv.png",
+  "accent": "#e4c943",
+  "synopsis": "The Wind Festival is held once a year in Fula City, where people live together with the wind. Since long ago, on the final day of the festival, the legendary Pokémon Lugia will appear and bestow the blessings of the wind upon the people. This film is about everyone's stories, from Lisa (Risa), a high school girl who is just starting out as a Pokémon trainer, to Callahan (Kagachi), a guy who can't stop lying to Toren (Torito), a researcher who lacks confidence in himself, to Harriet (Hisui), an old lady who hates touching Pokémon, and Margo (Largo), a mysterious young girl who watches over the forest by herself.\n\n(Source: Anime News Network, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "pokemon-the-movie:-the-power-of-us-xz0lbf",
+    "mal": 36927,
+    "anilist": 100744,
+    "kitsu": 41413
+  },
+  "skip_key_id": 36927,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "pokemon the movie the power of us 劇場版ホ ケットモンスター みんなの物語 movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Movie",
+      "runtime": "85:00",
+      "runtime_seconds": 5100,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246970/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-07-13",
+      "markers": [],
+      "external_id": "246970"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Breath",
+      "artist": "Porno Graffitti",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "The Power of Us",
+      "artist": "Haven Paschall, Charity Goodin and Ben Dixon [English Version]",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

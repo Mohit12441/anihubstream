@@ -1,0 +1,122 @@
+{
+  "id": "pokemon-the-first-movie",
+  "title": "Pokémon: The First Movie",
+  "native": "ポケットモンスター ミュウツーの逆襲",
+  "year": 1998,
+  "rating": 7.5,
+  "season": "Summer 1998",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx528-HIz7955MvEnN.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx528-HIz7955MvEnN.jpg",
+  "accent": "#e4ae0d",
+  "synopsis": "A team of scientists use the DNA of a rare Pokemon, Mew, to create the world's strongest Pokemon, Mewtwo. Not wanting to be used as an experiment, Mewtwo uses its psychic powers in a violent rage to destroy the scientists who created it. Mewtwo then tries to learn how to focus his powers with the aid of Giovanni, the man who funded the scientists' operations, but discovers that it is being used again. So Mewtwo decides to find its own purpose in life, and carry out its revenge on humans by destroying life on earth by using a deadly storm. Ash Ketchum and a group of other Pokemon Trainers are summoned by Mewtwo to have a battle with it, but they soon discover that they're only being invited so Mewtwo can clone their Pokemon for it's own purposes. Ash then tries to find a way to stop Mewtwo's plot before it can be carried out. \n\n(Source: Anime News Network)\n\nNote: Originally screened in theaters as 75 minutes, a \"complete version\" was broadcast on TV the following year shortly before the release of Pokémon the Movie 2000, adding a reconstructed storytelling of Ash and Pikachu's first meeting to its runtime making it 85 minutes.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "pokemon:-the-first-movie-rz4u9e",
+    "mal": 528,
+    "anilist": 528,
+    "kitsu": 487
+  },
+  "skip_key_id": 528,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "pokemon the first movie ホ ケットモンスター ミュウツーの逆襲 movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Pokémon: The First Movie",
+      "runtime": "85:00",
+      "runtime_seconds": 5100,
+      "thumb": "https://animehot.cc/storage/media/2026/09/69e0850253489c8bbcfb2aad-poster.jpg",
+      "synopsis": "A team of scientists use the DNA of a rare Pokemon, Mew, to create the world's strongest Pokemon, Mewtwo. Not wanting to be used as an experiment, Mewtwo uses its psychic powers in a violent rage to destroy the scientists who created it. Mewtwo then tries to learn how to focus his powers with the aid of Giovanni, the man who funded the scientists' operations, but discovers that it is being used again. So Mewtwo decides to find its own purpose in life, and carry out its revenge on humans by destroying life on earth by using a deadly storm. Ash Ketchum and a group of other Pokemon Trainers are summoned by Mewtwo to have a battle with it, but they soon discover that they're only being invited so Mewtwo can clone their Pokemon for it's own purposes. Ash then tries to find a way to stop Mewtwo's plot before it can be carried out. <br><br>\n(Source: Anime News Network)<br><br>\n\n<i>Note: Originally screened in theaters as 75 minutes, a \"complete version\" was broadcast on TV the following year shortly before the release of Pokémon the Movie 2000, adding a reconstructed storytelling of Ash and Pikachu's first meeting to its runtime making it 85 minutes.</i>",
+      "airdate": null,
+      "markers": [],
+      "external_id": "12029"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mezase Pokemon Master '98",
+      "artist": "Rica Matsumoto",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Natsu Yasumi Fan Club",
+      "artist": "Pokemon Kids",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pokemon Theme",
+      "artist": "Billy Crawford",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Vacation",
+      "artist": "Vitamin C",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "(Hey You) Free Up Your Mind",
+      "artist": "Emma Bunton",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Don't Say You Love Me",
+      "artist": "M2M",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "If Only Tears Could Bring You Back",
+      "artist": "Midnight Sons",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaze to Issho ni",
+      "artist": "Sachiko Kobayashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "We're A Miracle",
+      "artist": "Christina Aguilera",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,383 @@
+{
+  "id": "non-non-biyori",
+  "title": "Non Non Biyori",
+  "native": "のんのんびより",
+  "year": 2013,
+  "rating": 7.8,
+  "season": "Fall 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx17549-ROdV36u4nWkU.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx17549-ROdV36u4nWkU.png",
+  "accent": "#50e4bb",
+  "synopsis": "When Hotaru moves from Tokyo to a tiny town in the rural countryside, she’s in for some serious culture shock: the nearest place that sells comics is 20 minutes away, the nearest video store is ten train stations down the line, and there are only three other girls and one boy in her entire school! Even though everything’s so different, there’s something about the laid-back atmosphere that makes her feel strangely comfortable. While she’ll certainly miss parts of her old life, there’s a whole lifetime of experiences waiting to be enjoyed with her new friends Renge, Komari, Natsumi, and Suguru!\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Non Non Biyori Repeat (2015)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7711,
+    "anilist": 17549,
+    "mal": 17549
+  },
+  "skip_key_id": 17549,
+  "skip_key_space": "anilist",
+  "episode_total": 12,
+  "added_at": "2026-10-14 11:05:15",
+  "search_text": "non non biyori のんのんひ より tv finished",
+  "genres": [
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A New Transfer Student Came",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112611/original.jpg",
+      "synopsis": "Ichijou Hotaru has transferred from Tokyo to Asahigaoka Branch School due to her parents' work. But her new school only has five students, including herself! Ichijou Hotaru, the transfer from Tokyo; Koshigaya Natsumi, the moodmaker; Koshigaya Komari, the oldest of the girls; and Miyauchi Renge, the youngest with a unique sense of perception - the story of the lives these girls live in the quiet, sleepy countryside has begun!",
+      "airdate": "2013-10-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 178,
+          "end": 267
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1340,
+          "end": 1430
+        }
+      ],
+      "external_id": "112611"
+    },
+    {
+      "n": 2,
+      "title": "We Went to the Candy Store",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112612/original.jpg",
+      "synopsis": "Ichijou Hotaru is enjoying life with her classmates at her new school. In particular, she has come to think of the diminutive Koshigaya Komari, at less than 140cm, as her \"cute Senpai.\" This feeling soon grows into absolute adoration. Then, one day, Komari calls Hotaru and invites her to hang out together...",
+      "airdate": "2013-10-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 61,
+          "end": 149
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1417
+        }
+      ],
+      "external_id": "112612"
+    },
+    {
+      "n": 3,
+      "title": "I Ran Away from Home with My Sister",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112613/original.jpg",
+      "synopsis": "The class goes on a school trip to help out in a rice field, where Natsumi and Komari end up getting stuck in the mud. Later that night, Komari gets frightened after seeing a scary movie, which is not helped by Natsumi. After getting into a fight with her mother, Natsumi runs away from home with Komari in tow and goes to her secret hideout. They eventually spot a cat that had put Natsumi in trouble in the first place, but leave her alone when they see she is feeding her family and eventually head home.",
+      "airdate": "2013-10-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 86,
+          "end": 174
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1425
+        }
+      ],
+      "external_id": "112613"
+    },
+    {
+      "n": 4,
+      "title": "Summer Vacation Started",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112614/original.jpg",
+      "synopsis": "As summer vacation begins, Renge's older sister Hikage comes home from her school in Tokyo, hoping to impress the others with her know-how about city life only for Hotaru to outshine her. Later, Renge meets another girl her age named Honoka Ishikawa, who she quickly become friends with. After spending several days playing with Honoka, Renge is saddened when she learns Honoka had to suddenly leave due to her father's work. However, she cheers up a week later after receiving a letter from Honoka saying she'll come back next summer.",
+      "airdate": "2013-10-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 275,
+          "end": 364
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1427
+        }
+      ],
+      "external_id": "112614"
+    },
+    {
+      "n": 5,
+      "title": "I Pretended I Forgot My Swimsuit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112615/original.jpg",
+      "synopsis": "Hotaru and Renge are invited to the Koshigaya's house for breakfast. Afterwards, the girls, accompanied by Kazuha, go to the beach, where Komari's height leads her to be mistaken for a lost child. On their way home, the girls stop at a railside noodle restaurant, where a prank by Natsumi on Komari backfires due to Renge's innocence. They manage to catch the last train home on time, but accidentally leave Kazuha behind.",
+      "airdate": "2013-11-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 118,
+          "end": 205
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1425
+        }
+      ],
+      "external_id": "112615"
+    },
+    {
+      "n": 6,
+      "title": "I Became a Ghost and Tried Hard",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112616/original.jpg",
+      "synopsis": "Natsumi gets chewed out by her mother over her poor school grades whilst also trying to hide her poor test results from her. Afterwards, the girls visit Hotaru, who attempts to hide the vast number of handmade Komari plushies in her room. This ultimately fails, but she manages to pass them off as part of a school project. Later that night, the gang have a test of courage at the shrine, which proves a bit too much for Komari.",
+      "airdate": "2013-11-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "112616"
+    },
+    {
+      "n": 7,
+      "title": "My Rice Crackers Turned Into Curry",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112617/original.jpg",
+      "synopsis": "With Kazuha absent at the start of the new semester, the girls try and find ways to pass the time in class. Later, Hotaru and Renge try and catch a rabbit that had escaped from its pen, only for it to lock them inside the pen themselves, though they are eventually rescued by Kazuha. Afterwards, Renge visits the candy store run by Kaede Kagayama, who finds her to be a handful.",
+      "airdate": "2013-11-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 57,
+          "end": 145
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1428
+        }
+      ],
+      "external_id": "112617"
+    },
+    {
+      "n": 8,
+      "title": "We Cooked Rice at School",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112618/original.jpg",
+      "synopsis": "Hotaru gets along with the Koshigaya family's next door neighbour, Konomi Fujimiya, whilst Komari laments that the two seem more grown up than she is. Later, Komari joins Hotaru and Renge in doing some sketching, where she ends up becoming a model for them. Afterwards, Konomi helps Komari and Natsumi make dried persimmons.",
+      "airdate": "2013-11-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 166,
+          "end": 254
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "112618"
+    },
+    {
+      "n": 9,
+      "title": "We Tried Having a Cultural Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112619/original.jpg",
+      "synopsis": "Since the school doesn't hold cultural festivals, Natsumi suggests they hold their own and invite the alumni, including Kaede, Konomi and Hikage. At the festival, the girls run a café, hold an art exhibit and put on a play. However, they're play ends up being overwhelming and they end up slacking on food orders. They do eventually work together to prepare some food and have fun. Afterwards, Komari and Konomi help clean Natsumi's room, where they find a lot of old toys.",
+      "airdate": "2013-12-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 141,
+          "end": 229
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1425
+        }
+      ],
+      "external_id": "112619"
+    },
+    {
+      "n": 10,
+      "title": "We Watched the First Sunrise of the Year",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112620/original.jpg",
+      "synopsis": "After sleeping through the New Year, Renge joins Kazuha, Hikage and Kaede as they decide to go up a mountain to watch the first sunrise of the year. Along the way, Kaede recalls five years ago when she was first asked to look after the one-year-old Renge, initially finding her to be quite a handful but soon taking a liking to her. They eventually manage to reach the top of the mountain and watch the sun as it rises.",
+      "airdate": "2013-12-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 123,
+          "end": 212
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "112620"
+    },
+    {
+      "n": 11,
+      "title": "We Made a Snow House",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112621/original.jpg",
+      "synopsis": "Due to a snowy blizzard, the girls end up having to spend the night at school, with Hotaru and Natsumi competing against each other to see who gets to sleep in a futon, eventually decided to just kick Kazuho out of hers. Later that night, Hotaru decides to check out the snow and see the starry night sky, leading to some misunderstandings from Komari and Natsumi. Later, on another snowy day, the gang decide to try their hand at skiing before building a snow house and having some hot food.",
+      "airdate": "2013-12-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 144
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1426
+        }
+      ],
+      "external_id": "112621"
+    },
+    {
+      "n": 12,
+      "title": "Spring Came Again",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/112622/original.jpg",
+      "synopsis": "As Spring arrives again, Hotaru and Komari go on a picnic together, where Hotaru ends up eating Komari's botched up homemade lunch in order to not hurt her feelings. Later, the girls get together to search for some edible plants, eventually coming to a field of renge flowers where Natsumi makes a costume for Renge.",
+      "airdate": "2013-12-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 162
+        }
+      ],
+      "external_id": "112622"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tsugihagi Moyō (Patchwork Pattern)",
+      "artist": "nano.RIPE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tadaima (I'm Home)",
+      "artist": "Kotori Koiwai, Rie Murakawa, Ayane Sakura, & Kana Asumi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ao no Rakugaki",
+      "artist": "nano.RIPE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Omoide",
+      "artist": "Kotori Koiwai, Rie Murakawa, Ayane Sakura, Kana Asumi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kodama Kotodama (こだまことだま)",
+      "artist": "nano.RIPE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Okaeri (おかえり; Welcome Back)",
+      "artist": "Ayane Sakura, Kana Asumi, Kotori Koiwai, & Rie Murakawa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Nanairo Biyori",
+      "artist": "nano.RIPE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Non Non Biyori",
+      "artist": "Ayane Sakura, Kana Asumi, Kotori Koiwai, Rie Murakawa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

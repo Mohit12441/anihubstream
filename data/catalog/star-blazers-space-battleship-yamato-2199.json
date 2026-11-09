@@ -1,0 +1,563 @@
+{
+  "id": "star-blazers-space-battleship-yamato-2199",
+  "title": "Star Blazers: Space Battleship Yamato 2199",
+  "native": "宇宙戦艦ヤマト2199",
+  "year": 2012,
+  "rating": 8,
+  "season": "Spring 2012",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx12029-qIY5Bkh4sFKx.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12029-qIY5Bkh4sFKx.png",
+  "accent": "#e4c95d",
+  "synopsis": "The year is 2199. The human race has been crushed in their war with the Gamilos, driven into underground cities by the invader's assault. Scientists estimate they have only a year left. The young officers Susumu Kodai and Daisuke Shima receive a mysterious capsule from a ship that made an emergency landing on Mars and return with it to Earth. It contains humanity's last hope: the planet Iscandar on the other side of the Magellan Galaxy has the technology to defeat the Gamilos and restore the planet. The space battleship Yamato is entrusted with this task, but they have only one year before humanity ends.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "star-blazers:-space-battleship-yamato-2199-x12arz",
+    "mal": 12029,
+    "anilist": 12029,
+    "kitsu": 6646
+  },
+  "skip_key_id": 12029,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": null,
+  "search_text": "star blazers space battleship yamato 2199 宇宙戦艦ヤマト2199 ova finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Messenger from Iscandar",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "In the year 2199, Earth is ravaged by attacks from alien beings of the planet, Gamilus, which have devastated the surface of the Earth and forced what remains of mankind to take shelter underground. To save the Earth, the last of the Earth's space forces must distract the Gamilan forces while a non-Gamilan ship, code named \"Amaterasu\", races to Mars to deliver the Wave Motion Activation Core to the Earthlings. While Captain Mamoru Kodai contains the enemy attack to allow fellow captain Juzo Okita to escape with his forces, Mamoru's brother Susumu and his friend Daisuke Shima investigate the \"Amaterasu\" that crashed on Mars. Inside the wreckage there is a deceased alien female, the lone messenger sent to Earth to make a critical delivery to the Earthlings. Susumu and Daisuke return to Earth on the Kirishima, their only ship to return from the battle at Pluto. On the Kirishima, Susumu learns of his brother's death. When the Kirishima reaches Earth, Susumu Kodai looks for Captain Okita to confirm whether his brother was sacrficed in vain and meets Yuki Mori, who directs him to the hospital wing. Kodai confronts Okita, who claims responsibly that it was he who led Mamoru to his death.",
+      "airdate": "2012-04-07",
+      "markers": [],
+      "external_id": "97894"
+    },
+    {
+      "n": 2,
+      "title": "We're Off Into the Sea of Stars",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Susumu brings the Wave Motion Activation Core to Earth which allows mankind to complete its first interstellar spaceship, the \"BBY-01 Yamato\". With Okita as the captain, Shima as the navigator, and Susumu as its tactical officer, the Yamato is commissioned to travel to planet Iscandar, in the Great Magellanic Cloud, with orders to retrieve a device able to restore Earth's environment. Before the Yamato can start its journey, it must counter an inbound Gamilan interplanetary ballistic missile targeted at them.",
+      "airdate": "2012-04-14",
+      "markers": [],
+      "external_id": "97895"
+    },
+    {
+      "n": 3,
+      "title": "Escape the Jupiter Zone",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "On Gamillan occupied Pluto, Gantz suggests sending out a fleet after the Yamato. Schultz turns down the suggestion, preferring to see what the Yamato does before attempting anything. After making an interuppted space warp, the Yamato 's main engine malfunctions, so Captain Okita orders the Yamato to land on a floating continent orbiting Jupiter, to make repairs. On the floating continent, Captain Okita orders an away team to go out and collect samples from the continent. After analyzing some of the plant samples collected, XO Shiro Sanada discovers that the floating continent is artificially made by the Gamilans. Meanwhile Raleta, commander of the Gamilas resupply base on the floating continent, gets a message from Gantz, ordering her to dispatch a combat fleet of four ships to attack the Yamato. The Yamato destroys three of the four attacking ships, and then takes off from the continent. Okita orders Kodai to test fire the Wave Motion Cannon at the floating continent. Nobody is certain of what would result. Kodai fires the gun, destroying the entire continent. Nanbu is thrilled at the power of the weapon, but Okita forbears that the Yamato 's weaponry is for self-defense only, questioning whether they have done the right thing.",
+      "airdate": "2012-04-21",
+      "markers": [],
+      "external_id": "97896"
+    },
+    {
+      "n": 4,
+      "title": "Gravestone on a Frozen Field",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97897"
+    },
+    {
+      "n": 5,
+      "title": "The Trap on All Sides",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97898"
+    },
+    {
+      "n": 6,
+      "title": "The Sun Sets on Pluto",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97899"
+    },
+    {
+      "n": 7,
+      "title": "Farewell to the Solar System",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97900"
+    },
+    {
+      "n": 8,
+      "title": "Wish Upon a Star",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97901"
+    },
+    {
+      "n": 9,
+      "title": "Clockwork Prisoner",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97902"
+    },
+    {
+      "n": 10,
+      "title": "Graveyard of the Universe",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97903"
+    },
+    {
+      "n": 11,
+      "title": "A World I Once Saw",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97904"
+    },
+    {
+      "n": 12,
+      "title": "What Lies Beyond",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97905"
+    },
+    {
+      "n": 13,
+      "title": "The Wolf from Another Dimension",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97906"
+    },
+    {
+      "n": 14,
+      "title": "The Whisper of the Witch",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97907"
+    },
+    {
+      "n": 15,
+      "title": "Point of No Return",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97908"
+    },
+    {
+      "n": 16,
+      "title": "A Choice for the Future",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97909"
+    },
+    {
+      "n": 17,
+      "title": "Out of the Forest of Memory",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97910"
+    },
+    {
+      "n": 18,
+      "title": "Over the Black Light",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97911"
+    },
+    {
+      "n": 19,
+      "title": "They're Coming!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97912"
+    },
+    {
+      "n": 20,
+      "title": "Under a Rainbow Sun",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97913"
+    },
+    {
+      "n": 21,
+      "title": "Prison Planet 17",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97914"
+    },
+    {
+      "n": 22,
+      "title": "The Planet That We Head For",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97915"
+    },
+    {
+      "n": 23,
+      "title": "One Man's War",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97916"
+    },
+    {
+      "n": 24,
+      "title": "The Distant Promised Land",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97917"
+    },
+    {
+      "n": 25,
+      "title": "The Forever War",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97918"
+    },
+    {
+      "n": 26,
+      "title": "Memories of the Blue Planet",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97919"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchū Senkan Yamato (宇宙戦艦ヤマト)",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ginga Densetsu (銀河伝説)",
+      "artist": "Hiromi Iwasaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchū Senkan Yamato (宇宙戦艦ヤマト)",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ai wa Ima mo Hikari (愛は今も光)",
+      "artist": "Ayaka Hirahara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchū Senkan Yamato 2202 (宇宙戦艦ヤマト2202)",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yamato yori Ai o Komete (ヤマトより愛をこめて)",
+      "artist": "Kenji Sawada",
+      "episodes": "1-2,26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchū Senkan Yamato (宇宙戦艦ヤマト)",
+      "artist": "Project Yamato 2199",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchuu Senkan Yamato 2199",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aikotoba (愛詞)",
+      "artist": "Mika Nakashima",
+      "episodes": "2-8"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchuu Senkan Yamato",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ginga Densetsu (銀河伝説)",
+      "artist": "Hiromi Iwasaki",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchuu Senkan Yamato",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Teresa yo towani (Teresa Forever)",
+      "artist": "Isao Sasaki and Feeling Free",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Star Blazers",
+      "artist": "Gli Argonauti [Italian version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Starblazers",
+      "artist": "Santo Verduci [Italian Contactoons version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchū Senkan Yamato (宇宙戦艦ヤマト )",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Makka na Scarf",
+      "artist": "Isao Sasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Reach for the Star",
+      "artist": "Daisuke Ono",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Tsuki no Kagami (月の鏡)",
+      "artist": "Sayaka Kanda",
+      "episodes": "3-6"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Fight For Liberty",
+      "artist": "UVERworld",
+      "episodes": "16-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Best of my Love",
+      "artist": "Rei Yasuda",
+      "episodes": "9-17"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Wakare (別離)",
+      "artist": "Mitsuko Horie",
+      "episodes": "3-6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Eureka",
+      "artist": "TRUE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Kimi, Hitohira (君、ヒトヒラ)",
+      "artist": "Shino Arima",
+      "episodes": "7-10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Distance",
+      "artist": "Juju",
+      "episodes": "19-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Yamato yo Towa ni (ヤマトよ永遠に)",
+      "artist": "Isao Sasaki",
+      "episodes": "7-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Hikari no Nami",
+      "artist": "Megumi Han",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Crimson Red",
+      "artist": "Yuya Hoshino",
+      "episodes": "11-14,23"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Persona",
+      "artist": "Megumi Ogata",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Yōranka (ようらんか)",
+      "artist": "Shino Arima with Maytree",
+      "episodes": "15-18,24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "itoi",
+      "artist": "Nowlu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Ōinaru Wa (大いなる和)",
+      "artist": "Kōichi Yamadera",
+      "episodes": "19-22,25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Haruka e, Eien e (遥かへ、永遠へ)",
+      "artist": "Junko Yagami",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}
