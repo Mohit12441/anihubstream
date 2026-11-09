@@ -1,0 +1,283 @@
+{
+  "id": "yuruyuri",
+  "title": "YuruYuri",
+  "native": "ゆるゆり",
+  "year": 2011,
+  "rating": 7.3,
+  "season": "Summer 2011",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx10495-FbK4ybSp2DNG.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10495-FbK4ybSp2DNG.jpg",
+  "accent": "#e4d686",
+  "synopsis": "After a year in grade school without her childhood friends, first year student Akari Akaza is finally reunited with second years Yui Funami and Kyouko Toshinou at their all-girls' middle school. During the duo's first year, Yui and Kyouko formed the \"Amusement Club\" which occupies the now nonexistent Tea Club's room. Shortly after Akari joins, one of her fellow classmates, Chinatsu Yoshikawa, pays the trio a visit under the impression that they are the Tea Club; it is only once the three girls explain that the Tea Club has been disbanded that they can convince Chinatsu to join the Amusement Club—a group with no purpose other than to provide entertainment for its members.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "YuruYuri Season 2 (2012)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 6205,
+    "anilist": 10495,
+    "mal": 10495
+  },
+  "skip_key_id": 10495,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 14:06:40",
+  "search_text": "yuruyuri ゆるゆり tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Middle School Debut!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/93906/original.jpg",
+      "synopsis": "As Akari Akaza enters middle school, she decides to join the Amusement Club alongside her friends, Kyōko Toshinō and Yui Funami. They are later joined by Akari's classmate, Chinatsu Yoshikawa, who originally intended to join the now-defunct tea ceremony club, but is convinced to join the Amusement Club. Noticing Akari's lack of presence, the girls try and come up with ways of improving her personality.",
+      "airdate": "2011-07-04",
+      "markers": [],
+      "external_id": "93906"
+    },
+    {
+      "n": 2,
+      "title": "Me and You and the Student Council",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/93907/original.jpg",
+      "synopsis": "The student council president, Ayano Sugiura, shows her annoyance at always placing behind Kyōko in tests, while her assistant Chitose Ikeda fantasizes about the yuri potential between the two. Meanwhile, two classmates, Himawari Furutani and Sakurako Ōmuro, are at war with each other as they are both vying for vice-president position. Ayano later gets a cold so the others pay her a visit.",
+      "airdate": "2011-07-11",
+      "markers": [],
+      "external_id": "93907"
+    },
+    {
+      "n": 3,
+      "title": "You Wanna Come Visit!?...Yeah, Let's Go!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/93908/original.jpg",
+      "synopsis": "With Yui now living alone in her own apartment, she invites the others over for lunch. After Akari and Chitose leaves, Kyōko decides to spend the night only to remember she hasn't finished her homework.",
+      "airdate": "2011-07-18",
+      "markers": [],
+      "external_id": "93908"
+    },
+    {
+      "n": 4,
+      "title": "Summer Harvest",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/93909/original.jpg",
+      "synopsis": "The girls write Tanabata wishes, with Kyōko becoming annoyed at how Chinatsu's wish is responded to by Yui. Ayano studies fiercely to reach the top of the final exams, only to become disappointed to find Kyōko hadn't studied due to the exams conflicting with a doujin deadline. Later, everyone heads to the beach, where Ayano's attempts to be more friendly with Kyōko prove to be near fatal for Chitose's imagination.",
+      "airdate": "2011-07-25",
+      "markers": [],
+      "external_id": "93909"
+    },
+    {
+      "n": 5,
+      "title": "When Akari and the Cicadas Cry",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/93910/original.jpg",
+      "synopsis": "Ayano unwittingly gets dragged along by Kyōko, Yui and Chitose to a doujinshi convention in Tokyo to help Kyōko sell her dojin. Himawari and Sakurako work on their summer homework, where Sakurako talks about why she joined the student council. Meanwhile, Akari and Chinatsu have a confusing conversation about the latter's feelings towards Yui, which leads to Chinatsu practicing \"kissing\" on Akari against Akari's will just as Yui and Kyōko walk in.",
+      "airdate": "2011-08-02",
+      "markers": [],
+      "external_id": "93910"
+    },
+    {
+      "n": 6,
+      "title": "Art Arter Artist",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/93911/original.jpg",
+      "synopsis": "A visit by a first year student inspires Kyōko to draw a doujin about her and Yui, prompting Chinatsu to respond with her own story, presented in a fearsome art style. They then decide to make some clay art figures. Later, everyone meets Yui's relative's child, Mari, with Chinatsu reluctantly dressing up as her favorite anime character for her.",
+      "airdate": "2011-08-08",
+      "markers": [],
+      "external_id": "93911"
+    },
+    {
+      "n": 7,
+      "title": "Christmas",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/93912/original.jpg",
+      "synopsis": "With Christmas coming up, Kyōko holds a lottery to arrange the girls into pretend couples for mock dates. Kyōko and Chinatsu go to the movies and the arcade, Akari and Chitose visit some cafés, Himawari and Sakurako go to a restaurant while Ayano and Yui just sit around talking about their friends. Later, the girl's spend New Year's at home where they check their greetings cards from each other.",
+      "airdate": "2011-08-15",
+      "markers": [],
+      "external_id": "93912"
+    },
+    {
+      "n": 8,
+      "title": "April Fool's",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/93913/original.jpg",
+      "synopsis": "On April's Fools Day, Chitose decides to play a lying game with Ayano, who later discovers that all of her supposed lies were actually true. Later, Kyōko tries to get the attention of Chitose, only to discover it to be her twin sister, Chizuru, who doesn't particularly take too kindly to Kyōko.",
+      "airdate": "2011-08-23",
+      "markers": [],
+      "external_id": "93913"
+    },
+    {
+      "n": 9,
+      "title": "This Summer Isn't Scary",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/93914/original.jpg",
+      "synopsis": "The girls try to find way to distract themselves from the Summer heat. While visiting the student council room for some cooling comfort, they meet the silent student council president, Rise Matsumoto, who they mistake for a spirit. Meanwhile, the science teacher, Nana Nishigaki, decides to do her experiments in the student council room.",
+      "airdate": "2011-08-30",
+      "markers": [],
+      "external_id": "93914"
+    },
+    {
+      "n": 10,
+      "title": "It's called a school trip, but what are we here to study?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/93915/original.jpg",
+      "synopsis": "Kyoko and Yui, along with Ayano and Chitose, go on a school trip to Kyoto, where they explore the town, have a bath together and engage in a pillow fight.",
+      "airdate": "2011-09-06",
+      "markers": [],
+      "external_id": "93915"
+    },
+    {
+      "n": 11,
+      "title": "Our Amusement Club",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/93916/original.jpg",
+      "synopsis": "Akari, Kyoko and Yui reminisce their childhood days when they were being bullied by a certain pink-haired girl. Later, a bump on the head causes Kyoko to become uncharacteristically polite. The others soon begin to miss the old Kyoko, especially when Kyoko plans to disband the Amusement Club, so they decide to hit her on the head again to return her to normal.",
+      "airdate": "2011-09-13",
+      "markers": [],
+      "external_id": "93916"
+    },
+    {
+      "n": 12,
+      "title": "Everyone's Poka Poka at Training Camp",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/93917/original.jpg",
+      "synopsis": "Everyone decides to have a sleepover at the clubroom during the summer. Kyoko arranges a contest between the Amusement Club and the student council. After everyone has some barrel baths, Chitose goes on a kissing rampage as a result of eating chocolate.",
+      "airdate": "2011-09-20",
+      "markers": [],
+      "external_id": "93917"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yuyuyuri Tenya Wanya☆",
+      "artist": "Nanamori Chū Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ripitte Chime♪",
+      "artist": "Nanamori Chū Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yurishurashushushu (ゆりしゅらしゅしゅしゅ)",
+      "artist": "Nanamori Chū Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ohirune Universe (おひるねゆにばーす)",
+      "artist": "Nanamori Chū Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Chochocho! Yuruyuri Kapuriccho!!",
+      "artist": "Nanamori Chū☆Goraku-Bu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Acchu~ma Seishun!",
+      "artist": "Nanamori Chū☆Goraku-Bu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yuru Yurin Rinrin Rinrin (ゆるゆりんりんりんりんりん)",
+      "artist": "Nanamori Chū Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "After School Days (アフタースクールデイズ)",
+      "artist": "Nanamori Chū Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yes! Yuyuyu☆Yuruyuri♪♪",
+      "artist": "Nanamoriuchi☆Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "100% Chu～Gakusei",
+      "artist": "Nanamoriuchi☆Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yuriyurarararayuruyuri Daijiken (ゆりゆららららゆるゆり大事件)",
+      "artist": "Minami Tsuda, Rumi Ookubo, Shiori Mikami and Yuka Ootsubo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "My Pace de Ikimashō (マイペースでいきましょう)",
+      "artist": "Minami Tsuda, Rumi Ookubo, Shiori Mikami and Yuka Ootsubo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kimi ga Kureta Shiny Story (きみがくれたシャイニーストーリー)",
+      "artist": "Nanamori Chū☆Goraku-Bu",
+      "episodes": "12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Yonde Mirakurun!",
+      "artist": "Majokko Mirakurun",
+      "episodes": "6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Girls Power de",
+      "artist": "Yui Funami and Chinatsu Yoshikawa",
+      "episodes": "8"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,70 @@
+{
+  "id": "zombie-land-saga-yumeginga-paradise",
+  "title": "Zombie Land Saga: Yumeginga Paradise",
+  "native": "ゾンビランドサガ ゆめぎんがパラダイス",
+  "year": 2025,
+  "rating": 8.2,
+  "season": "Fall 2025",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx140337-8EtbiPurofcC.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx140337-8EtbiPurofcC.jpg",
+  "accent": "#e44335",
+  "synopsis": "Can zombie idols save Saga—and the world!?\n\nIn the year 2025, Earth is abuzz with excitement over the Saga Expo. Franchouchou is appointed as the event’s ambassador and begins preparing for the main event: a grand live performance at the SAGA Arena.\n\nBut suddenly, a massive spaceship appears in the skies above Saga and launches a full-scale attack across the prefecture. The members of Franchouchou are thrown into panic. Is there really nothing ordinary idols can do in the face of such a crisis…?\n\nJust then, the legendary Tae Yamada—the only one who hadn’t regained her self-awareness as a zombie—awakens. Declaring her departure from Franchouchou, she heads alone into enemy territory to put an end to the invasion.\n\nCan the now-splintered Franchouchou come together once more, restore their bond, and save Saga!?\n\n(Source: Official website, translated)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "zombie-land-saga:-yumeginga-paradise-45tglm",
+    "mal": 50159,
+    "anilist": 140337,
+    "kitsu": 45333
+  },
+  "skip_key_id": 50159,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "zombie land saga yumeginga paradise ソ ンヒ ラント サカ ゆめき んか ハ ラタ イス movie finished",
+  "genres": [
+    "comedy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Zombie Land Saga: Yumeginga Paradise",
+      "runtime": "120:00",
+      "runtime_seconds": 7200,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a3d3fb62eab1e5100c93d9d-poster.jpg",
+      "synopsis": "Can zombie idols save Saga—and the world!?<br><br>\n\nIn the year 2025, Earth is abuzz with excitement over the Saga Expo. Franchouchou is appointed as the event’s ambassador and begins preparing for the main event: a grand live performance at the SAGA Arena.<br><br>\n\nBut suddenly, a massive spaceship appears in the skies above Saga and launches a full-scale attack across the prefecture. The members of Franchouchou are thrown into panic. Is there really nothing ordinary idols can do in the face of such a crisis…?<br><br>\n\nJust then, the legendary Tae Yamada—the only one who hadn’t regained her self-awareness as a zombie—awakens. Declaring her departure from Franchouchou, she heads alone into enemy territory to put an end to the invasion.<br><br>\n\nCan the now-splintered Franchouchou come together once more, restore their bond, and save Saga!?<br><br>",
+      "airdate": null,
+      "markers": [],
+      "external_id": "320903"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Bouken Zundokodon!",
+      "artist": "FranChouChou",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ima wo Mirai wo Arigatou",
+      "artist": "FranChouChou",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

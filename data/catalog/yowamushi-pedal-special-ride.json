@@ -1,0 +1,63 @@
+{
+  "id": "yowamushi-pedal-special-ride",
+  "title": "Yowamushi Pedal: SPECIAL RIDE",
+  "native": "弱虫ペダル SPECIAL RIDE",
+  "year": 2013,
+  "rating": 7,
+  "season": "Summer 2013",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/18177.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/18177.jpg",
+  "accent": "#e4c943",
+  "synopsis": "Sakamichi Onoda is an otaku who just wants to find more people to join the recently disbanded anime club with him. However, when a couple cyclists spy his skill in riding the bulky mamachari bike he's had since youth, they attempt to convince him to join the bicycle racing club instead.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "yowamushi-pedal:-special-ride-ildx4g",
+    "mal": 18177,
+    "anilist": 18177,
+    "kitsu": 7693
+  },
+  "skip_key_id": 18177,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "yowamushi pedal special ride 弱虫ヘ タ ル special ride ova finished",
+  "genres": [
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Yowamushi Pedal: Special Ride",
+      "runtime": "20:00",
+      "runtime_seconds": 1200,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6923f8d1c404f551ccc66c66-poster.jpg",
+      "synopsis": "Sakamichi Onoda is an otaku who just wants to find more people to join the recently disbanded anime club with him. However, when a couple cyclists spy his skill in riding the bulky mamachari bike he's had since youth, they attempt to convince him to join the bicycle racing club instead. \n\nAn OVA bundled with the 29th volume of the manga.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "107364"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Top of Tops!",
+      "artist": "Ayaka Suwa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

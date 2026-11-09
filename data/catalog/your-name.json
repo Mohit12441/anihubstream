@@ -1,0 +1,71 @@
+{
+  "id": "your-name",
+  "title": "Your Name.",
+  "native": "君の名は。",
+  "year": 2016,
+  "rating": 8.5,
+  "season": "Summer 2016",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21519-SUo3ZQuCbYhJ.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21519-SUo3ZQuCbYhJ.png",
+  "accent": "#0da1e4",
+  "synopsis": "Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside. Meanwhile in the city, Taki Tachibana lives a busy life as a high school student while juggling his part-time job and hopes for a future in architecture.\n\nOne day, Mitsuha awakens in a room that is not her own and suddenly finds herself living the dream life in Tokyo—but in Taki's body! Elsewhere, Taki finds himself living Mitsuha's life in the humble countryside. In pursuit of an answer to this strange phenomenon, they begin to search for one another.\n\nKimi no Na wa. revolves around Mitsuha and Taki's actions, which begin to have a dramatic impact on each other's lives, weaving them into a fabric held together by fate and circumstance.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 21519,
+    "mal": 32281,
+    "hianime": "your-name.-wdzkfy",
+    "kitsu": 11614
+  },
+  "skip_key_id": 32281,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-18 00:39:23",
+  "search_text": "your name 君の名は movie finished",
+  "genres": [
+    "drama",
+    "romance",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Your Name. (Movie)",
+      "runtime": "106:00",
+      "runtime_seconds": 6360,
+      "thumb": "https://animehot.cc/storage/media/2026/09/690a47ec543081759bdfd8df-poster.jpg",
+      "synopsis": "Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside. Meanwhile in the city, Taki Tachibana lives a busy life as a high school student while juggling his part-time job and hopes for a future in architecture.\n\nOne day, Mitsuha awakens in a room that is not her own and suddenly finds herself living the dream life in Tokyo—but in Taki's body! Elsewhere, Taki finds himself living Mitsuha's life in the humble countryside. In pursuit of an answer to this strange phenomenon, they begin to search for one another.\n\nKimi no Na wa. revolves around Mitsuha and Taki's actions, which begin to have a dramatic impact on each other's lives, weaving them into a fabric held together by fate and circumstance.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "180838"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yume Tourou (夢灯籠)",
+      "artist": "RADWIMPS",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nandemonaiya (movie ver.) (なんでもないや movie ver.)",
+      "artist": "RADWIMPS",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

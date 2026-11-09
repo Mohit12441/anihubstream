@@ -1,0 +1,66 @@
+{
+  "id": "yuru-camp-season-2-ova",
+  "title": "Yuru Camp△ SEASON 2 OVA",
+  "native": "ゆるキャン△ SEASON 2 OVA",
+  "year": 2021,
+  "rating": 7.4,
+  "season": "Spring 2021",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b134413-HLw4hdGPty0O.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b134413-HLw4hdGPty0O.png",
+  "accent": "#f1e4c9",
+  "synopsis": "OVAs included with the second and third volumes of the Yuru Camp△ SEASON 2 Blu-ray/DVD.\n\nThis entry contains the following: \n\nBD/DVD Volume 2: ミステリーキャンプ (Mystery Camp), May 26, 2021.\n\nBD/DVD Volume 3: 旅するしまりん (Tabi-suru Shima Rin), Jul 28, 2021.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "yuru-camp-season-2-ova-hr91ka",
+    "mal": 49026,
+    "anilist": 134413,
+    "kitsu": 44601
+  },
+  "skip_key_id": 49026,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "yuru camp season 2 ova ゆるキャン season 2 ova ova finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "304229"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "304230"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

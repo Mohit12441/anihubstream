@@ -1,0 +1,316 @@
+{
+  "id": "your-lie-in-april",
+  "title": "Your lie in April",
+  "native": "四月は君の嘘",
+  "year": 2014,
+  "rating": 8.4,
+  "season": "Fall 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20665-TLgkL8T8IRFd.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20665-TLgkL8T8IRFd.png",
+  "accent": "#e4bb50",
+  "synopsis": "Piano prodigy Arima Kousei dominated the competition and all child musicians knew his name. But after his mother, who was also his instructor, passed away, he had a mental breakdown while performing at a recital. This resulted in him no longer being able to hear the sound of his piano playing. Two years later, Kousei hasn’t touched the piano and views the world without any flair or color. He was content at living out his life with his good friends Tsubaki and Watari until, one day, a girl changed everything. Miyazono Kaori is a pretty, free spirited violinist whose playing style reflects her personality. Kaori helps Kousei return to the music world and show that it should be free and mold breaking unlike the structured and rigid style Kousei was used to.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 20665,
+    "mal": 23273,
+    "hianime": "your-lie-in-april-vtxxa2",
+    "kitsu": 8403
+  },
+  "skip_key_id": 23273,
+  "skip_key_space": "mal",
+  "episode_total": 22,
+  "added_at": "2026-10-18 01:09:12",
+  "search_text": "your lie in april 四月は君の嘘 tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Monotone/Colorful",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159355/original.jpg",
+      "synopsis": "Kousei's life has been dull and gray. His friends Tsubaki and Watari try their best to cheer him up but there's not more color in his life; His eyes don't sparkle. However, there's this new girl who might just be able to change all that.",
+      "airdate": "2014-10-10",
+      "markers": [],
+      "external_id": "159355"
+    },
+    {
+      "n": 2,
+      "title": "Friend A",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159360/original.jpg",
+      "synopsis": "Kousei, Tsubaki &amp; Watari sit down to watch Kaori's performance which ends up being completely unlike anything else they've seen. Kaori just seems to have a way with music completely different to how Kousei was taught.",
+      "airdate": "2014-10-17",
+      "markers": [],
+      "external_id": "159360"
+    },
+    {
+      "n": 3,
+      "title": "Inside Spring",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159363/original.jpg",
+      "synopsis": "Kousei and Kaori spend some time together and get to talking about Kousei's past. Will he ever be able to play a piano again? What happens if he can never overcome his fear, will color ever return to his life?",
+      "airdate": "2014-10-24",
+      "markers": [],
+      "external_id": "159363"
+    },
+    {
+      "n": 4,
+      "title": "The Journey",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159365/original.jpg",
+      "synopsis": "Kousei and Kaori arrive just in time for the competition, however without a chance to practice the piece how will Kousei be able to perform? And how can he survive on stage with the memories of his mother still haunting him?",
+      "airdate": "2014-10-31",
+      "markers": [],
+      "external_id": "159365"
+    },
+    {
+      "n": 5,
+      "title": "Gray Skies",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159369/original.jpg",
+      "synopsis": "Kaori is recovering from her accident after the performance, and Kousei, Watari, and Tsubaki are starting to realize the new feelings that are brewing in their group.",
+      "airdate": "2014-11-07",
+      "markers": [],
+      "external_id": "159369"
+    },
+    {
+      "n": 6,
+      "title": "On the Way Home",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159370/original.jpg",
+      "synopsis": "Kaori is pushing Kousei to the limits in an attempt to bring back his musical skills. Tsubaki has to figure out where her feelings are pointing her.",
+      "airdate": "2014-11-14",
+      "markers": [],
+      "external_id": "159370"
+    },
+    {
+      "n": 7,
+      "title": "The Shadows Whisper",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159374/original.jpeg",
+      "synopsis": "The Maihou Music Competition has started and Kousei is starting to feel his fears ctaching up with him. At the same time some old rivals have appeared and are set on competing with Kousei.",
+      "airdate": "2014-11-21",
+      "markers": [],
+      "external_id": "159374"
+    },
+    {
+      "n": 8,
+      "title": "Let It Ring",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159379/original.jpg",
+      "synopsis": "Takeshi Aiza and Emi Igawa. These two have a strong rivalry with Kousei. But what drives them to play piano?",
+      "airdate": "2014-11-28",
+      "markers": [],
+      "external_id": "159379"
+    },
+    {
+      "n": 9,
+      "title": "Resonance",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/159385/original.jpg",
+      "synopsis": "In order to convey her feelings to Kousei, the pianist she once looked up to, Emi gives a passionate performance. She heads straight for Kousei right after leaving the stage, only to find herself bereft of words. After all, she had just poured all of her feelings into her playing. And at last, Kousei heads for the stage. As he sits before the piano, the ghost of his dead mother speaks to him. And so begins Kousei’s musical journey as he confronts his past.",
+      "airdate": "2014-12-05",
+      "markers": [],
+      "external_id": "159385"
+    },
+    {
+      "n": 10,
+      "title": "The Scenery I Shared with You",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Kousei’s performance begins. He starts off on a roll, but then midway through, his playing begins to fall apart. Hearing this uneven performance, the audience starts to buzz. Are the rumors that Kousei can no longer hear the sound of his own playing true? In their hearts, Kaori, Tsubaki, and Watari cheer Kousei on from the audience, while Emi and Takeshi, who’ve just finished performing, look on with concern. Onstage and alone, Kousei confronts his own trauma regarding his mother.",
+      "airdate": "2014-12-12",
+      "markers": [],
+      "external_id": "159386"
+    },
+    {
+      "n": 11,
+      "title": "Light of Life",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Kousei’s performance ends. When he returns to the waiting room at the competition venue, his late mother’s friend, Hiroko Seto is there. Hiroko, Japan’s leading pianist, has picked up on the emotion in Kousei’s playing. “The piano will drag everything out of its performer.” Kousei is perplexed by her words. Finally, the results of the competition are posted, but Takeshi and Emi, seeing the strangely cheerful look on Kousei’s face, are struck by how he’s changed and matured.",
+      "airdate": "2014-12-19",
+      "markers": [],
+      "external_id": "159389"
+    },
+    {
+      "n": 12,
+      "title": "Twinkle Little Star",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Kousei and Kaori get themselves ready for the Towa musical gala they were invited to. However, when it was their turn to go up and perform, Kaori still hasn't arrived at the musical gala, leaving Kousei to go up by himself.",
+      "airdate": "2015-01-08",
+      "markers": [],
+      "external_id": "159390"
+    },
+    {
+      "n": 13,
+      "title": "Love's Sorrow",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Kousei has taken the stage at the Gala Concert. Endeavoring to put on a performance without Kaori. This is his chance to prove his abilities as a pianist and try to come to terms with the memory of his mother.",
+      "airdate": "2015-01-15",
+      "markers": [],
+      "external_id": "159393"
+    },
+    {
+      "n": 14,
+      "title": "Footprints",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Kousei, Tsubaki and Watari visit Kaori in the hospital, but she insists everything is fine. Tsubaki reflects on her past with Kousei and considers if she has romantic feelings for him. Meanwhile, Kousei makes an important decision about his future.",
+      "airdate": "2015-01-22",
+      "markers": [],
+      "external_id": "159398"
+    },
+    {
+      "n": 15,
+      "title": "Liar",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Tsubaki is frustrated as she sees her friends moving forward, afraid that she might be left behind. Kousei finds it difficult to keep visiting Kaori in the hospital. Hiroko comes across a promising young talent.",
+      "airdate": "2015-01-29",
+      "markers": [],
+      "external_id": "159401"
+    },
+    {
+      "n": 16,
+      "title": "Two of a Kind",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Kaori surprises Kousei with a shopping spree outside of the hospital. Meanwhile, Hiroko assigns Nagi, the promising young talent, to Kousei as his first piano student. Hiroko keeps a close eye on these lessons, as she is aware of Nagi's ulterior motives: to destroy Kousei. Kaori can no longer hide her condition from Kousei, as her health continues to deteriorate.",
+      "airdate": "2015-02-06",
+      "markers": [],
+      "external_id": "159404"
+    },
+    {
+      "n": 17,
+      "title": "Twilight",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Kousei faces ghosts from his past when visiting Kaori in the hospital. Nagi continues learning piano from Hiroko and Kousei. As the school festival draws ever closer, Nagi and Kousei prepare a joint performance. Nagi experiences performance anxiety in the days leading up to the performance, but Hiroko soothes her with words of wisdom. Kousei and Nagi experience a short, bonding moment in the minutes leading up to their performance.",
+      "airdate": "2015-02-13",
+      "markers": [],
+      "external_id": "159413"
+    },
+    {
+      "n": 18,
+      "title": "Hearts Come Together",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Nagi and Kousei blow everyone away with their 4-hand piano duet at the school festival. Afterwards, Takeshi confronts Kousei demanding the chance to beat him in the upcoming Eastern Japan Piano Competition. Kousei visits Kaori at the hospital again to find her passion for music reawakened. He challenges her to perform with him one more time.",
+      "airdate": "2015-02-20",
+      "markers": [],
+      "external_id": "159414"
+    },
+    {
+      "n": 19,
+      "title": "Goodbye, Hero",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "After hearing Kousei and Nagi’s duet, Kaori opts for a risky surgery that will end her life if it fails, all so that she can perform with Kousei one more time. Even as she verbally exhorts Kousei, who’s begun practicing for his next competition, to work harder, she herself is undergoing rehabilitation so that she can once again take the stage.",
+      "airdate": "2015-02-27",
+      "markers": [],
+      "external_id": "159415"
+    },
+    {
+      "n": 20,
+      "title": "Hand in Hand",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "The date of the finals is coming close and Kaori is pushing Kousei to keep practicing, but whenever he visits with everyone else he says nothing. Tsubaki keeps doing well on her tests and pushes forward to be with Kousei. During a rainstorm the Tsubaki tells him that Watabi likes Kaori and his only choice is to fall in love with her, then kicks him in the shin and runs off. Later Kaori calls him about a late night flight and watching the stars in the sky. The next day Watabi and Kousei go to the hospital, where Kousei admits he likes Kaori. But when they get to her room, the two boys instead see nurses scrambling to move Kaori to the ICU as her condition got drastically worse.",
+      "airdate": "2015-03-06",
+      "markers": [],
+      "external_id": "159417"
+    },
+    {
+      "n": 21,
+      "title": "Snow",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Kousei stays home from school since the day he visited the hospital. Tsubaki, afraid that Kousei will regress to the psychologically unstable state from two years ago, asks Hiroko to help him. Hiroko goes to his house and yells at him that the contest is a few days away and he needs to practice, but when she tries to get him up he says he cannot play and claims that music has taken everyone he cares about away from him. As people close to him worry, Emi and Takeshi practice for the final showdown. Kousei returns to school, where there is a note left by Watari on familiar stationary with one sentence - I want canales. Going to the hospital, he sees Kaori in her room - who starts yelling at him to practice until she sees the canale bag and wants to go outside to eat them. He helps her up to the snowy rooftop, where he tells her that he is given up playing and tells her his fear. She stands up and pretends to hold her violin again, and tells him she is going to undergo a risky surgery to have that one last chance to play which also is the day of the contest. On the fateful day, Emi and Takeshi put out high level performances as the surgery begins. When it is his turn he begins to break down until he remembers what Kaori told him and begins to play his most emotional piece ever.",
+      "airdate": "2015-03-13",
+      "markers": [],
+      "external_id": "159424"
+    },
+    {
+      "n": 22,
+      "title": "Spring Wind",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Kousei performs Chopin`s Ballad No. 1 in G minor, Op. 23 at the competition while Kaori undergoes surgery. He reminisces about his past experiences and the lessons he learned from the numerous people who have been a part of his life. As he plays, he enters into a dream-like state, surrounded by color and light. He is surprised to see Kaori and her violin before him. Kousei understands instantly that this means that the surgery was unsuccessful, but returns a smile at her and continues his performance as the vision of Kaori plays along with him. He begs her to stay with him, but she disappears with one last tearful smile. In reality, Kousei completes his performance with tears running down his face, saying his final farewell to her. Later, at Kaori's funeral, her parents pass on her final letter to Kousei. As Spring approaches, Kousei reads the letter, which reveals that Kaori, like the other pianists, admired him as a child and was influenced to play the violin in order to someday have Kousei play the piano with her. She was overjoyed that they were in the same middle school, but was unable to speak to him because of his closeness to Tsubaki and Watari. She explains that in April, she told a lie - that she was in love with Watari - in a bid to get close to Kousei. Now knowing that Kaori loved him, Kousei reaffirms his vow to never forget her, continuing to play the piano. Watari continues his dating habits, but reminisces sadly about Kaori. Tsubaki, knowing that Kousei had lost another person he loved, declares a promise to never allow him to be alone. Kousei smiles, prepared for a spring without Kaori.",
+      "airdate": "2015-03-20",
+      "markers": [],
+      "external_id": "159427"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hikaru Nara (光るなら;If It Will Shine)",
+      "artist": "goose house",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kirameki (キラメキ;Sparkle)",
+      "artist": "wacci",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Nanairo Symphony (七色シンフォニー;Seven-Colored Symphony)",
+      "artist": "Coala Mode",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Orange (オレンジ)",
+      "artist": "7!!",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

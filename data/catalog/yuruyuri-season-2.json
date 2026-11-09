@@ -1,0 +1,283 @@
+{
+  "id": "yuruyuri-season-2",
+  "title": "YuruYuri Season 2",
+  "native": "ゆるゆり♪♪",
+  "year": 2012,
+  "rating": 7.7,
+  "season": "Summer 2012",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx12403-sAG2FsLFX8bH.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12403-sAG2FsLFX8bH.jpg",
+  "accent": "#00bbff",
+  "synopsis": "The girls of the Amusement Club return in Yuru Yuri♪♪, finding new ways to make passing time even more enjoyable. Their members consist of the always energetic Kyouko Toshinou; calm and sensible Yui Funami; polite but often overlooked Akari Akaza; and Chinatsu Yoshikawa, who stumbled upon the others while looking for the Tea Ceremony Club. Together they are the Amusement Club, which has the deceptively simple task of keeping its members entertained.\n\nAlong with the Student Council and the odd family member, they strive to enjoy their youth to the fullest. Whether it's a trip to a hot spring or finishing overdue homework, their lives are never dull, and they will always find an excuse to spend time together.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "YuruYuri Nachuyachumi! (2015)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 6724,
+    "anilist": 12403,
+    "mal": 12403
+  },
+  "skip_key_id": 12403,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 11:26:33",
+  "search_text": "yuruyuri season 2 ゆるゆり tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Protagonist Returns",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166173/original.jpg",
+      "synopsis": "As the girls travel to a hot spring inn, Akari dreams of being the popular and well admired main protagonist that she always desired to be. Once at the inn, the girls play some ping pong and relax in the baths before watching a Mirakurun movie.",
+      "airdate": "2012-07-02",
+      "markers": [],
+      "external_id": "166173"
+    },
+    {
+      "n": 2,
+      "title": "Yuru Yuri Everyday",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166200/original.jpg",
+      "synopsis": "Yui has a tough time getting Kyōko to concentrate on her homework. Later, the gang try and come up with nicknames for each other. Meanwhile, Sakurako attempts to catch a snake that is loose in the Student Council room. Later, the girls discuss how to prevent getting a cold, though Kyōko ends up getting a cold regardless.",
+      "airdate": "2012-07-09",
+      "markers": [],
+      "external_id": "166200"
+    },
+    {
+      "n": 3,
+      "title": "Chocolate and Tears and Girls and Girls and Isobe Fries",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166218/original.jpg",
+      "synopsis": "Akari, Chinatsu, Sakurako and Himawari try to think of ways to pass time in class. Later, Himawari agrees to help teach Chinatsu to knit a scarf, which leaves Sakurako feeling lonely without her. As Valentine's Day comes and the girls give each other chocolates, Himawari gives Sakurako some Valentine gifts.",
+      "airdate": "2012-07-16",
+      "markers": [],
+      "external_id": "166218"
+    },
+    {
+      "n": 4,
+      "title": "Achoo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166236/original.jpg",
+      "synopsis": "After Ayano becomes bothered by allergies during a high pollen season, the student council clean up their room, with Ayano having trouble keeping her special pudding away from Sakurako. Later, Nana ends up making various useless inventions when the student council just want their clock fixed. Meanwhile, the Amusement Club try to find ways to pass the time while waiting for the rain to pass.",
+      "airdate": "2012-07-23",
+      "markers": [],
+      "external_id": "166236"
+    },
+    {
+      "n": 5,
+      "title": "Lazy, Japanese Summer",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166258/original.jpg",
+      "synopsis": "As Kyōko realizes she needs to buy new batteries for her air conditioner, she gets distracted and ends up visiting everyone's homes, only to end up buying the wrong batteries after all. As she decides to have everyone go to the pool instead, Akari misses her train and tries to pass the time til the next one comes. Later, Kyōko visits Yui while she has a cold while Sakurako and Himawari follow Akari around.",
+      "airdate": "2012-07-30",
+      "markers": [],
+      "external_id": "166258"
+    },
+    {
+      "n": 6,
+      "title": "[Breaking News] Yuru Yuri Sold Out",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166276/original.jpg",
+      "synopsis": "The girls come to Comuket to help Kyōko run her doujin table, which is showing off a fan-made anime of Majokko Mirakurun in which Mirakurun fights against Team Giga Giga after they steal all the balls in the world. After selling out their stock, the girls go around in cosplay, where Chinatsu once again ruins the image of Mirakurun for young children. After Comiket, Kyōko brings up a box of conversation topics, including some weird ones.",
+      "airdate": "2012-08-06",
+      "markers": [],
+      "external_id": "166276"
+    },
+    {
+      "n": 7,
+      "title": "Sisterly Relations and Such",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166292/original.jpg",
+      "synopsis": "Sakurako gets pushed around a bit by her sisters Nadeshiko and Hanako whilst Himawari's little sister Kaede is a bit too inquisitive. Meanwhile, Chizuru decides to clean up Chitose's room whilst she is out, but has to take extreme measures to stop picturing her and Ayano together and drooling all over the place. Later, Himawari worries that she's gained weight and comes to Sakurako for some exercise advice. Elsewhere, Chinatsu talks with her older sister, Tomoko, who has a crush on Akari's older sister, Akane, who, at that moment, is doing perverted things with Akari's belongings whilst she is away.",
+      "airdate": "2012-08-13",
+      "markers": [],
+      "external_id": "166292"
+    },
+    {
+      "n": 8,
+      "title": "Chinatsu Unrivaled",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166309/original.jpg",
+      "synopsis": "As Kyoko asks the others to help finish her doujin for a deadline, they are reluctant to let Chinatsu assist in anything artistic. Later around Christmas time, everyone goes to a karaoke place, where Chinatsu fails to get a duet with Yui. As a consolation, Yui takes Chinatsu to the movies, where Chinatsu's plan to cling onto Yui during a scary movie backfires.",
+      "airdate": "2012-08-20",
+      "markers": [],
+      "external_id": "166309"
+    },
+    {
+      "n": 9,
+      "title": "A Day Something May or May Not Happen",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166340/original.jpg",
+      "synopsis": "As the first years try to study for their exams, Sakurako has a hard time keeping focused. Later, Chinatsu ends up inadvertently hiding from the others and can't find a good opportunity to reemerge. During a sleepover at Akari's house, Chinatsu has trouble sleeping after watching a scary movie. Later, each of the first years end up encountering one of their seniors, resulting in some curious conversations.",
+      "airdate": "2012-08-27",
+      "markers": [],
+      "external_id": "166340"
+    },
+    {
+      "n": 10,
+      "title": "School Trip R",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166365/original.jpg",
+      "synopsis": "As the second years are going on a school trip to Kyoto which brings up all sorts of déjà vu, Sakurako decides to go on her own 'trip' with Himawari, only to wind up getting lost. Meanwhile, Akari tries to cheer up Chinatsu as she becomes depressed over missing Yui and winds up in another dangerous situation. Later, as Himawari visits Sakurako's house, Nadeshiko recalls how the two used to be much closer in their childhood.",
+      "airdate": "2012-09-03",
+      "markers": [],
+      "external_id": "166365"
+    },
+    {
+      "n": 11,
+      "title": "The Akari Who Leapt Through Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166416/original.jpg",
+      "synopsis": "Whilst clearing out the closet, the Amusement Club finds a time machine which accidentally sends Akari back to the day before she started middle school. Stuck in the past until she can figure out how to fix the time machine, Akari decides to try and rectify the mistakes her past self made so she'll have a bigger presence. She ends up being spotted by Akane, who remains supportive of her. After failing her attempts to rectify her embarrassing middle school debut, Akari goes to Nana to ask for help in fixing the time machine. As Akari spends the next week hiding out in Akane's room, Akane warns her that changing her past might replace her old memories. As Nana manages to fix the time machine, Akari spots one more opportunity to save the presence by delaying Ayano from interrupting her, but stops when she thinks about losing her old memories. As Akari returns to the present, she finds everyone has been worried about her since she had disappeared for a week. After an explosive finale, the whole thing is revealed to be a story Kyouko came up with after being inspired by a certain movie.",
+      "airdate": "2012-09-10",
+      "markers": [],
+      "external_id": "166416"
+    },
+    {
+      "n": 12,
+      "title": "Good Bye Protagonist, Until We Meet Again",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/166428/original.jpg",
+      "synopsis": "Kyōko brings a bunch of old toys to the clubroom for everyone to play with. Later, the school holds a culture festival in which the Amusement Club and School Council put on a bizarre production of Snow White, with Kyōko in the lead role.",
+      "airdate": "2012-09-17",
+      "markers": [],
+      "external_id": "166428"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yuyuyuri Tenya Wanya☆",
+      "artist": "Nanamori Chū Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ripitte Chime♪",
+      "artist": "Nanamori Chū Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yurishurashushushu (ゆりしゅらしゅしゅしゅ)",
+      "artist": "Nanamori Chū Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ohirune Universe (おひるねゆにばーす)",
+      "artist": "Nanamori Chū Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Chochocho! Yuruyuri Kapuriccho!!",
+      "artist": "Nanamori Chū☆Goraku-Bu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Acchu~ma Seishun!",
+      "artist": "Nanamori Chū☆Goraku-Bu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yuru Yurin Rinrin Rinrin (ゆるゆりんりんりんりんりん)",
+      "artist": "Nanamori Chū Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "After School Days (アフタースクールデイズ)",
+      "artist": "Nanamori Chū Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yes! Yuyuyu☆Yuruyuri♪♪",
+      "artist": "Nanamoriuchi☆Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "100% Chu～Gakusei",
+      "artist": "Nanamoriuchi☆Gorakubu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yuriyurarararayuruyuri Daijiken (ゆりゆららららゆるゆり大事件)",
+      "artist": "Minami Tsuda, Rumi Ookubo, Shiori Mikami and Yuka Ootsubo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "My Pace de Ikimashō (マイペースでいきましょう)",
+      "artist": "Minami Tsuda, Rumi Ookubo, Shiori Mikami and Yuka Ootsubo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kimi ga Kureta Shiny Story (きみがくれたシャイニーストーリー)",
+      "artist": "Nanamori Chū☆Goraku-Bu",
+      "episodes": "12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Yonde Mirakurun!",
+      "artist": "Majokko Mirakurun",
+      "episodes": "6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Girls Power de",
+      "artist": "Yui Funami and Chinatsu Yoshikawa",
+      "episodes": "8"
+    }
+  ],
+  "relations": []
+}

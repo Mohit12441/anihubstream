@@ -1,0 +1,347 @@
+{
+  "id": "yowamushi-pedal-glory-line",
+  "title": "Yowamushi Pedal Glory Line",
+  "native": "弱虫ペダルGLORY LINE",
+  "year": 2018,
+  "rating": 7.4,
+  "season": "Winter 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx99476-iKxjBWYZmDYl.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99476-iKxjBWYZmDYl.jpg",
+  "accent": "#e4d628",
+  "synopsis": "The fourth season of Yowamushi Pedal.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "yowamushi-pedal:-glory-line-e8pw4c",
+    "mal": 35789,
+    "anilist": 99476,
+    "kitsu": 13594
+  },
+  "skip_key_id": 35789,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": null,
+  "search_text": "yowamushi pedal glory line 弱虫ヘ タ ルglory line tv finished",
+  "genres": [
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Final Phase",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244921"
+    },
+    {
+      "n": 2,
+      "title": "The Two Aces!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244922"
+    },
+    {
+      "n": 3,
+      "title": "The Appointed Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244923"
+    },
+    {
+      "n": 4,
+      "title": "Five Men's Resolve",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244924"
+    },
+    {
+      "n": 5,
+      "title": "3 Seconds Less",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244925"
+    },
+    {
+      "n": 6,
+      "title": "Sohoku Shaken",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244926"
+    },
+    {
+      "n": 7,
+      "title": "Footsteps of Hope",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244927"
+    },
+    {
+      "n": 8,
+      "title": "Second Day, Start!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244928"
+    },
+    {
+      "n": 9,
+      "title": "Sash of Wishes",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244929"
+    },
+    {
+      "n": 10,
+      "title": "#16, Shinkai Yuto",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244930"
+    },
+    {
+      "n": 11,
+      "title": "Mountain King",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244931"
+    },
+    {
+      "n": 12,
+      "title": "Fallen Hopes",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244932"
+    },
+    {
+      "n": 13,
+      "title": "He Who Carries Guilt",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244933"
+    },
+    {
+      "n": 14,
+      "title": "Heart's Wrapping, Heart's Case",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244934"
+    },
+    {
+      "n": 15,
+      "title": "The Sprint Line of Delight",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244935"
+    },
+    {
+      "n": 16,
+      "title": "Sohoku Falls Behind",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244936"
+    },
+    {
+      "n": 17,
+      "title": "Start of the Mountains",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244937"
+    },
+    {
+      "n": 18,
+      "title": "Naruko's Determination",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244938"
+    },
+    {
+      "n": 19,
+      "title": "The Approaching Peak",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244939"
+    },
+    {
+      "n": 20,
+      "title": "King of the Mountain",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244940"
+    },
+    {
+      "n": 21,
+      "title": "Limiter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244941"
+    },
+    {
+      "n": 22,
+      "title": "Three Powerhouses",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244942"
+    },
+    {
+      "n": 23,
+      "title": "Winner",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244943"
+    },
+    {
+      "n": 24,
+      "title": "The Small Pass",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244944"
+    },
+    {
+      "n": 25,
+      "title": "Their Respective Starting Lines",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244945"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Boku no Koe (My Voice)",
+      "artist": "Rhythmic Toy World",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Carry the Hope",
+      "artist": "High Candence Rock",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Dancing",
+      "artist": "Saeki YouthK",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Over the Limit",
+      "artist": "ROUTE85",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,194 @@
+{
+  "id": "zom-100-bucket-list-of-the-dead",
+  "title": "Zom 100: Bucket List of the Dead",
+  "native": "ゾン100～ゾンビになるまでにしたい100のこと～",
+  "year": 2023,
+  "rating": 7.6,
+  "season": "Summer 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx159831-cJUNqCqzuApc.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159831-cJUNqCqzuApc.png",
+  "accent": "#e4f135",
+  "synopsis": "Surviving a zombie apocalypse beats being a wage slave any day! After spending years slaving away for a soul-crushing company, Akira's life has lost its luster. He lives in a trash-filled apartment, his pay is abysmal, and he can't even muster up the nerve to confess his love to his beautiful co-worker. But when a zombie apocalypse ravages his town, it gives him the push he needs to live for himself. Now Akira's on a mission to complete all 100 items on his bucket list before he...well, kicks the bucket.\n\n(Source: VIZ Media)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "zom-100:-bucket-list-of-the-dead-9c829f",
+    "mal": 54112,
+    "anilist": 159831,
+    "kitsu": 46954
+  },
+  "skip_key_id": 54112,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "zom 100 bucket list of the dead ソ ン100 ソ ンヒ になるまて にしたい100のこと tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Akira of the Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/340078/thumbnail/4fec2b4c76a43dafc5ad5d2b2bae3f22.jpg",
+      "synopsis": "After spending three years working at an exploitative company, Akira's spirit is broken. Suddenly, there’s a zombie pandemic and Akira finds himself being chased by hordes of the undead. In a moment of desperation, life-changing words pop into his head.\n\n(Source: Crunchyroll)",
+      "airdate": "2023-07-09",
+      "markers": [],
+      "external_id": "340078"
+    },
+    {
+      "n": 2,
+      "title": "Bucket List of the Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/340079/thumbnail/9461dab3ab264cf543442c28e005f111.jpg",
+      "synopsis": "Down to his last beer, Akira evades zombies to reach the store and runs into a mysterious woman.\n\n(Source: Hulu)",
+      "airdate": "2023-07-16",
+      "markers": [],
+      "external_id": "340079"
+    },
+    {
+      "n": 3,
+      "title": "Best Friend of the Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/340080/thumbnail/ddc1599878f95080499f14d43b94d95c.jpg",
+      "synopsis": "Akira rushes to Shinjuku to save an old rugby buddy.\n\n(Source: Hulu)",
+      "airdate": "2023-07-23",
+      "markers": [],
+      "external_id": "340080"
+    },
+    {
+      "n": 4,
+      "title": "Flight Attendant of the Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/340081/thumbnail/e53b783a818806ace2cfceb16a22beae.jpg",
+      "synopsis": "Akira and Kencho take a trip to Ikebukuro to snag a big-screen TV.\n\n(Source: Hulu)",
+      "airdate": "2023-07-30",
+      "markers": [],
+      "external_id": "340081"
+    },
+    {
+      "n": 5,
+      "title": "Hero of the Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/340082/thumbnail/4fe550f0ece347998ea01b032f3e4c87.jpg",
+      "synopsis": "After remembering his childhood dream, Akira goes to the aquarium to grab an item he needs.\n\n(Source: Hulu)",
+      "airdate": "2023-08-13",
+      "markers": [],
+      "external_id": "340082"
+    },
+    {
+      "n": 6,
+      "title": "RV of the Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/340083/thumbnail/9ca250202b66e84f5f18c1a42e9f0191.jpg",
+      "synopsis": "Akira stops by a showroom in Saitama to get an RV. There he is reunited with Shizuka.\n\n(Source: Hulu)",
+      "airdate": "2023-08-27",
+      "markers": [],
+      "external_id": "340083"
+    },
+    {
+      "n": 7,
+      "title": "Truck Stop of the Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/340084/thumbnail/7a74449b1314ae7dc26bcd8cb4b19fa7.jpg",
+      "synopsis": "With Kosugi in complete control of his mind, Akira makes an astonishing decision.\n\n(Source: Hulu)",
+      "airdate": "2023-09-04",
+      "markers": [],
+      "external_id": "340084"
+    },
+    {
+      "n": 8,
+      "title": "Sushi & Hot Springs of the Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/340085/thumbnail/b33f919ed1fed26a8b1afe682fdf77f5.jpg",
+      "synopsis": "Akira and his friends meet a German college student who isn't going to let a zombie outbreak stop her from chasing her dreams.\n\n(Source: Hulu)",
+      "airdate": "2023-09-17",
+      "markers": [],
+      "external_id": "340085"
+    },
+    {
+      "n": 9,
+      "title": "Treehouse of the Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/340086/thumbnail/f2fabff78b4cdf52123ac267708114cb.jpg",
+      "synopsis": "Akira and his friends run into a man named Kumano, who is constructing a treehouse in the forest.\n\n(Source: Hulu)",
+      "airdate": "2023-09-24",
+      "markers": [],
+      "external_id": "340086"
+    },
+    {
+      "n": 10,
+      "title": "Hometown of the Dead I",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/340087/thumbnail/10fc0925e787b93cb3dbfe004f845120.jpg",
+      "synopsis": "Higurashi prepares to take his revenge on society, and sets his plan into action.\n\n(Source: Hulu)",
+      "airdate": "2023-12-25",
+      "markers": [],
+      "external_id": "340087"
+    },
+    {
+      "n": 11,
+      "title": "Hometown of the Dead II",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/340088/thumbnail/7101ebdafe63766b50d9d73549f46205.jpg",
+      "synopsis": "Akira and his friends split up to save the villagers from the massive swarm of zombies.\n\n(Source: Hulu)",
+      "airdate": "2023-12-25",
+      "markers": [],
+      "external_id": "340088"
+    },
+    {
+      "n": 12,
+      "title": "Hometown of the Dead III",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/340089/thumbnail/3642fb96c3ceccb938b3ce0925c65f51.jpg",
+      "synopsis": "In order to save his father, Akira has to become a zombie. What will he choose to do?\n\n(Source: Hulu)",
+      "airdate": "2023-12-25",
+      "markers": [],
+      "external_id": "340089"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Song of the Dead",
+      "artist": "KANA-BOON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Happiness of the Dead",
+      "artist": "Shiyui",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

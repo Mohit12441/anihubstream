@@ -1,0 +1,192 @@
+{
+  "id": "zenshu",
+  "title": "ZENSHU",
+  "native": "全修。",
+  "year": 2025,
+  "rating": 7.3,
+  "season": "Winter 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx176273-raxxcgkslf4Q.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176273-raxxcgkslf4Q.jpg",
+  "accent": "#f1e41a",
+  "synopsis": "After graduating from high school, Natsuko Hirose starts her career as an animator. Her talent quickly flourishes, and she makes her debut as a director in no time. Her first anime becomes a massive hit, sparking a social phenomenon and earning her recognition as an up-and-coming genius director. Her next project is set to be a romantic comedy movie themed around first love! However, having never been in love herself, Natsuko struggles to understand the concept of first love, and as a result, she’s unable to create the storyboard, causing the movie production to come to a standstill.\n\n(Source: MAPPA)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "zenshu-86sbg4",
+    "mal": 58502,
+    "anilist": 176273,
+    "kitsu": 48638
+  },
+  "skip_key_id": 58502,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "zenshu 全修 tv finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "FIRST STROKE",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/376385/thumbnail/527d3a427e9054324eb3392afdb74772.jpg",
+      "synopsis": "An up-and-coming anime director, Natsuko Hirose, is busy trying to storyboard a rom-com themed feature film, but because she's never experienced first love, she can't seem to progress with her storyboards.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-05",
+      "markers": [],
+      "external_id": "376385"
+    },
+    {
+      "n": 2,
+      "title": "DEFEND",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/376386/thumbnail/9391664f3e6db4ca007927942d0e49ff.jpg",
+      "synopsis": "The prophet of the Last Town, Elder Baobab, decides that Natsuko should join the Nine Soldiers, but her and Luke are at odds. Natsuko tries to figure out a way back home, but then remembers what happens next in \"A Tale of Perishing\" and realizes everyone's in danger again.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-12",
+      "markers": [],
+      "external_id": "376386"
+    },
+    {
+      "n": 3,
+      "title": "DESTINY",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/376387/thumbnail/aaa469ea61d3959b32f3baf28b6028e5.jpg",
+      "synopsis": "The Last Town has their Harvest Festival and the Nine Soldiers get some time off. That's where Luke meets Destiny. In \"A Tale of Perishing,\" the two fall in love, but Natsuko coming into the this world seems to be throwing off that destiny...\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-19",
+      "markers": [],
+      "external_id": "376387"
+    },
+    {
+      "n": 4,
+      "title": "ETERNITY",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/376388/thumbnail/8abce3f5b3dbb9d48be4e8ac5f20a1ab.jpg",
+      "synopsis": "Natsuko notices that Memmeln is acting strange. In the movie, there is a scene with Memmeln that's a mystery even to fans, so Natsuko tails her...\n\n(Source: Crunchyroll)",
+      "airdate": "2025-01-26",
+      "markers": [],
+      "external_id": "376388"
+    },
+    {
+      "n": 5,
+      "title": "JUSTICE",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/376389/thumbnail/21450738efc76150ed18f7ad0e18f39f.jpg",
+      "synopsis": "Destiny asks the Nine Soldiers to bring food to some orphans and they run into a former Nine Soldier, Justice.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-02",
+      "markers": [],
+      "external_id": "376389"
+    },
+    {
+      "n": 6,
+      "title": "CHANGE",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/376390/thumbnail/cf87880b31cbb491421acb8a0cac2f56.jpg",
+      "synopsis": "Natsuko loses to the Voids for the first time, but still tries to continue her selfish actions.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-09",
+      "markers": [],
+      "external_id": "376390"
+    },
+    {
+      "n": 7,
+      "title": "FIRST LOVE",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/376391/thumbnail/b03086a1816e4f7a3bf307aa6e1782ed.jpg",
+      "synopsis": "Natsuko tries to figure out exactly what first love feels like for her upcoming film.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-16",
+      "markers": [],
+      "external_id": "376391"
+    },
+    {
+      "n": 8,
+      "title": "CONFESSION",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/376392/thumbnail/609585676db066a5aac41e9608383f35.jpg",
+      "synopsis": "Luke finally tells Natsuko how he really feels about her.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-02-23",
+      "markers": [],
+      "external_id": "376392"
+    },
+    {
+      "n": 9,
+      "title": "HERO",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/376393/thumbnail/aa8b52ea9edfbbef808c4b1a9666d299.jpg",
+      "synopsis": "Luke thinks about his life as the legendary hero.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-02",
+      "markers": [],
+      "external_id": "376393"
+    },
+    {
+      "n": 10,
+      "title": "CHAOS",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/376394/thumbnail/bf8342b2307f646ee4f975ae01f519f3.jpg",
+      "synopsis": "Rumors start to spread about Natsuko which leads the people of the Last Town to turn on her.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-09",
+      "markers": [],
+      "external_id": "376394"
+    },
+    {
+      "n": 11,
+      "title": "DESPAIR",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/376395/thumbnail/4bba951e82bc90b321d65f469b1e2280.jpg",
+      "synopsis": "Luke suffers more loss and falls into despair while Memmeln comes up with a certain plan with Meg and Sally.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-16",
+      "markers": [],
+      "external_id": "376395"
+    },
+    {
+      "n": 12,
+      "title": "ZENSHU",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/376396/thumbnail/f16945652ec97db0205d8f0add685795.jpg",
+      "synopsis": "Natsuko has to draw one final thing to save the Last Town from its greatest threat.\n\n(Source: Crunchyroll)",
+      "airdate": "2025-03-23",
+      "markers": [],
+      "external_id": "376396"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Zen",
+      "artist": "BAND-MAID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tada, Kimi no Mama de",
+      "artist": "Sou",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

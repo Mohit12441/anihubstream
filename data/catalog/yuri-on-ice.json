@@ -1,0 +1,191 @@
+{
+  "id": "yuri-on-ice",
+  "title": "Yuri!!! on ICE",
+  "native": "ユーリ!!! on ICE",
+  "year": 2016,
+  "rating": 7.8,
+  "season": "Fall 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21709-aqPBDxJPruYR.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21709-aqPBDxJPruYR.png",
+  "accent": "#1a86e4",
+  "synopsis": "Yuri Katsuki makes his way to the Grand Prix ice skating competition as Japan’s top representative with his eyes on the prize. However, instead of celebrating, Yuri walks away defeated and ready to retire for good. But a run-in with champion Viktor Nikiforov and rising star Yuri Plisetsky ignites a new fire within him. With the two of them close by his side, Yuri will take to the ice once more.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "yuri!!!-on-ice-zuapx7",
+    "mal": 32995,
+    "anilist": 21709,
+    "kitsu": 11999
+  },
+  "skip_key_id": 32995,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "yuri on ice ユーリ on ice tv finished",
+  "genres": [
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Easy as Pirozhki!! The Grand Prix Final of Tears",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/190411/original.jpg",
+      "synopsis": "Katasuki Yuri is at a crossroads after suffering a miserable defeat at the Grand Prix Finals. Uncertain whether to retire or to continue, Yuri holes up in his family home. However, a chance circumstance causes him to catch the eye of five-time world champion Victor Nikiforov...",
+      "airdate": "2016-10-06",
+      "markers": [],
+      "external_id": "190411"
+    },
+    {
+      "n": 2,
+      "title": "Two Yuris?! Drama at Yu-topia",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/190412/original.jpg",
+      "synopsis": "Out of nowhere, five-time world champion Victor Nikiforov declares himself Yuri's coach. When world junior champion Yuri Plisetsky follows Victor to Hasetsu so that he can bring Victor back to Russia, the chaos only deepens...",
+      "airdate": "2016-10-13",
+      "markers": [],
+      "external_id": "190412"
+    },
+    {
+      "n": 3,
+      "title": "I Am Eros, and Eros Is Me?! Face-Off! Hot Springs on Ice",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/190413/original.jpg",
+      "synopsis": "The two Yuris are to face off in Hot Springs on Ice. where they will each debut a short program choreographed by Victor--one to Eros, and one to Agape. Victor claims he will do whatever the winner wants, but...",
+      "airdate": "2016-10-20",
+      "markers": [],
+      "external_id": "190413"
+    },
+    {
+      "n": 4,
+      "title": "Like Yourself... And Complete the Free Program!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/190414/original.jpg",
+      "synopsis": "The two Yuris begin to choreograph their free skate programs at their respective rinks. In Japan, Yuri feels hesitant to pursue what it means to be uniquely him, but he begins to untangle his past by talking to Victor.",
+      "airdate": "2016-10-27",
+      "markers": [],
+      "external_id": "190414"
+    },
+    {
+      "n": 5,
+      "title": "Face Beet-Red!! It's the First Competition! The Chugoku, Shikoku, and Kyushu Championship",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/190415/original.jpg",
+      "synopsis": "It is time for Yuri's first competition of the season, but Victor's the center of attention as his first competition as a coach. Already anxious, Yuri's nerves don't get a break when Minami Kenjiro, the skater who beat Yuri at last year's nationals, confronts him...",
+      "airdate": "2016-11-03",
+      "markers": [],
+      "external_id": "190415"
+    },
+    {
+      "n": 6,
+      "title": "China's On! The Grand Prix Series Opening Event!! The Cup of China Short Program",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/190416/original.jpg",
+      "synopsis": "The Cup of China, a Grand Prix Series event, is here! Realizing that he is the man who took Victor from the world, Yuri gets worked up before his performance. Victor is concerned to see Yuri this way for the first time...",
+      "airdate": "2016-11-10",
+      "markers": [],
+      "external_id": "190416"
+    },
+    {
+      "n": 7,
+      "title": "China's On! The Grand Prix Series Opening Event!! The Cup of China Free Skate",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/190417/original.jpg",
+      "synopsis": "Having finished the short program in first place--a first-time feat--Yuri falters under the massive pressure. Can his fragile heart withstand Victor's roughshod intervention?",
+      "airdate": "2016-11-17",
+      "markers": [],
+      "external_id": "190417"
+    },
+    {
+      "n": 8,
+      "title": "Yuuri vs. Yuri The Horror!! Rostelecom Cup, Short Program",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/190418/original.jpg",
+      "synopsis": "Yuri is determined to show his love to all of Russia in the Rostelecom Cup, the final event of the Grand Prix Series. In contrast, Yurio feels bogged down by his ties to Moscow, and tries to shrug them off. Before them, however, rises JJ, a rising star from North America...",
+      "airdate": "2016-11-24",
+      "markers": [],
+      "external_id": "190418"
+    },
+    {
+      "n": 9,
+      "title": "Yuuri vs. Yuri The Horror!! Rostelecom Cup, Free Skate",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/190419/original.jpg",
+      "synopsis": "Katsuki Yuri has already obtained \"love.\" With Victor's fading warmth in his heart, Yuri goes out to the rink for his free skate that will determine whether he'll qualify for the Grand Prix Final. Yurio firms his own resolve after eating special pirozhki, the epitome of love in Moscow.",
+      "airdate": "2016-12-01",
+      "markers": [],
+      "external_id": "190419"
+    },
+    {
+      "n": 10,
+      "title": "Gotta Supercharge It!! Pre-Grand Prix Final Special!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/190420/original.jpg",
+      "synopsis": "Barcelona is where the fated final battle will take place. Sightseeing during their free time, Victor is oblivious to Yuri's resolve. Then, a chance remark reveals a nightmarish event at the banquet last year for Yuri...",
+      "airdate": "2016-12-08",
+      "markers": [],
+      "external_id": "190420"
+    },
+    {
+      "n": 11,
+      "title": "Gotta Super-Supercharge It!! Grand Prix Final Short Program",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/190421/original.jpg",
+      "synopsis": "Now armed with the light of love on his finger along with Victor, Yuri goes for the gold in the Grand Prix Final as the chosen six competitors clash in the short program.",
+      "airdate": "2016-12-15",
+      "markers": [],
+      "external_id": "190421"
+    },
+    {
+      "n": 12,
+      "title": "Gotta Super-Super-Supercharge It!!! Grand Prix Final Free Skate",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/190422/original.jpg",
+      "synopsis": "\"Let's end this.\" Yuri's words trigger a debate that results in Yuri appearing at the free skate event in his worst condition ever. Can Yuri succeed in skating a program with the highest technical difficulty at their last event together to show the world the love he shares with Victor? What will each conclude once the program is over and it is time to decide their paths after the Grand Prix Final?",
+      "airdate": "2016-12-22",
+      "markers": [],
+      "external_id": "190422"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "History Maker",
+      "artist": "Dean Fujioka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "You Only Live Once",
+      "artist": "Wataru Hatano",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

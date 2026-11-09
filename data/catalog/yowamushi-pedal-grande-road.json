@@ -1,0 +1,463 @@
+{
+  "id": "yowamushi-pedal-grande-road",
+  "title": "Yowamushi Pedal: Grande Road",
+  "native": "弱虫ペダルGRANDE ROAD",
+  "year": 2014,
+  "rating": 7.8,
+  "season": "Fall 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20723-b079x2UcOZnZ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20723-b079x2UcOZnZ.jpg",
+  "accent": "#f1d650",
+  "synopsis": "The second season will focus on Inter High bicycle race continuing from the first season of the series! High school students pushing themselves to the limit as they bet everything on their bicycles!\n\r\n\n\r\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "yowamushi-pedal:-grande-road-dkxb1n",
+    "mal": 24277,
+    "anilist": 20723,
+    "kitsu": 8635
+  },
+  "skip_key_id": 24277,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "yowamushi pedal grande road 弱虫ヘ タ ルgrande road tv finished",
+  "genres": [
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Phase 49",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149259/original.jpg",
+      "synopsis": "Phase 49 is launched. Nobuyuki Mizuta blocks Arakita, forcing Fukutomi to work alone while Imaizumi and Kinjou are able to work as a duo. Meanwhile Midosuji has Ishigaki to work with. However Hakone has tricked them all. As soon as the climb is over Shinkai races to the front and is able to assist Fukutomi. Midosuji decides everyone around him must be zombies and hits Imaizumi's handlebars, making it looking like an accident and causing him to start to fall. Instead of falling, Imaizumi intentionally hits the rail to boost himself back up and keep riding. Imaizumi reveals he no longer cares about Midosuji and keeps riding, propelling Kinjou back into second place. Realizing that Imaizumi is no longer weak, Midosuji announces they'll cancel all phases and win solely based on their strength. No more tricks will be involved. The three teams remain neck-and-neck until Ishigaki begins to slip on the final turn. Surprisingly Midosuji catches him, and the momentum of the fall propels the two of them to the front with only 1200 meters left.",
+      "airdate": "2014-10-06",
+      "markers": [],
+      "external_id": "149259"
+    },
+    {
+      "n": 2,
+      "title": "The Aces",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149260/original.jpg",
+      "synopsis": "Ishigaki launches Midosuji ahead before the turn, and be almost crashing he increases his lead to four seconds. Shinkai and Imazumi launch their aces ahead at 1000 meters. The two remember the previous year and accelerate determine to give each other the best race possible. They overcome the four second gap before Midosuji accelerates with 700&nbsp;km to the finish line. The fans think the way Midosuji races is gross but realizes he will be difficult to overcome with that monstrous aura. Kinjou realizes Midosuji has destroyed almost all his skin so he can ride precariously. Kinjou proclaims this could be a problem, but Fukutomi declares he doesn't care, that he will beat them both. 300 meters remain to the finish line, and an all out sprint between the three aces is just beginning as the episode ends.",
+      "airdate": "2014-10-13",
+      "markers": [],
+      "external_id": "149260"
+    },
+    {
+      "n": 3,
+      "title": "Akira",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149261/original.jpg",
+      "synopsis": "With 250 meters left to go Midosuji raises his hands in victory, but he realizes that Kinjou and Fukutomi are slowly gaining on him. In a flashback, Midosuji's tragic childhood and how he became the road racer he currently is are seen. Midosuji doesn't realize he has overworked himself and vows to keep his legs moving at all costs. However with 100 meters left he realizes his legs are beginning to slow down. With 50 meters left Kinjou and Fukutomi manage to pass him, and Midosuji realizes his dream of dominating stage 2 is at an end. Almost as if in response to his emotional breakdown, one of Midosuji's perfect teeth take the moment to crack, and Midosuji declares himself just another loser.",
+      "airdate": "2014-10-20",
+      "markers": [],
+      "external_id": "149261"
+    },
+    {
+      "n": 4,
+      "title": "Resolution",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149262/original.jpg",
+      "synopsis": "Sohoku and Hakone's first years learn what true resolution is about and what happens if you finish more than an hour behind the leaders on the second day. Meanwhile Midosuji declares he will drop out and refuses to go to the daily awards ceremony.",
+      "airdate": "2014-10-27",
+      "markers": [],
+      "external_id": "149262"
+    },
+    {
+      "n": 5,
+      "title": "The Three Kilometers to the Pharmacy[42]",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149263/original.jpg",
+      "synopsis": "Midosuji decides to drop out of the Inter High and bike back home. However Onoda shows up on the mountainous route, causing Midosuji to end up racing him instead.",
+      "airdate": "2014-11-03",
+      "markers": [],
+      "external_id": "149263"
+    },
+    {
+      "n": 6,
+      "title": "Those Who Have",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149264/original.jpg",
+      "synopsis": "As Day 3 is about to begin the third years discuss how this has essentially become a two-team race due to the number of dropouts and eliminated racers. However Hiroshima Kureminami Technical High School reveals they also have all six members and vow they will surpass the champs and challengers.",
+      "airdate": "2014-11-10",
+      "markers": [],
+      "external_id": "149264"
+    },
+    {
+      "n": 7,
+      "title": "The Pack Approaches",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149265/original.jpg",
+      "synopsis": "Machimiya Eikichi convinces the pack to go as fast as they can so they can drag the leaders back into the pack. When the pack catches up Arakita decides to try and slow them down and Onoda gets pulled in. Machimiya Eikichi then signals for his teammates to pull to the front. Hiroshima Kureminami Technical High School pulls away from the pack and challenges Sohoku and Hakone for the right to become the champions.",
+      "airdate": "2014-11-17",
+      "markers": [],
+      "external_id": "149265"
+    },
+    {
+      "n": 8,
+      "title": "Arakita",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149266/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-11-24",
+      "markers": [],
+      "external_id": "149266"
+    },
+    {
+      "n": 9,
+      "title": "The Fighting Dog of Kure",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149267/original.jpg",
+      "synopsis": "",
+      "airdate": "2014-12-01",
+      "markers": [],
+      "external_id": "149267"
+    },
+    {
+      "n": 10,
+      "title": "The Domain That Lies Ahead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2014-12-08",
+      "markers": [],
+      "external_id": "149268"
+    },
+    {
+      "n": 11,
+      "title": "Survival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2014-12-15",
+      "markers": [],
+      "external_id": "149269"
+    },
+    {
+      "n": 12,
+      "title": "Izumida's Pride",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2014-12-22",
+      "markers": [],
+      "external_id": "149270"
+    },
+    {
+      "n": 13,
+      "title": "Flat-Out Run at Lake Yamanaka",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-01-06",
+      "markers": [],
+      "external_id": "149271"
+    },
+    {
+      "n": 14,
+      "title": "The Final Strategy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-01-13",
+      "markers": [],
+      "external_id": "149272"
+    },
+    {
+      "n": 15,
+      "title": "Naruko's True Worth!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-01-27",
+      "markers": [],
+      "external_id": "149273"
+    },
+    {
+      "n": 16,
+      "title": "Imaizumi the Ace!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-02-03",
+      "markers": [],
+      "external_id": "149274"
+    },
+    {
+      "n": 17,
+      "title": "Hakone Academy #6",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-02-10",
+      "markers": [],
+      "external_id": "149275"
+    },
+    {
+      "n": 18,
+      "title": "Step by Step",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-02-17",
+      "markers": [],
+      "external_id": "149276"
+    },
+    {
+      "n": 19,
+      "title": "Sakamichi's Job",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-02-24",
+      "markers": [],
+      "external_id": "149277"
+    },
+    {
+      "n": 20,
+      "title": "Imazumi vs. Midosuji",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-03-03",
+      "markers": [],
+      "external_id": "149278"
+    },
+    {
+      "n": 21,
+      "title": "#91",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-03-10",
+      "markers": [],
+      "external_id": "149279"
+    },
+    {
+      "n": 22,
+      "title": "Manami and Sakamichi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-03-17",
+      "markers": [],
+      "external_id": "149280"
+    },
+    {
+      "n": 23,
+      "title": "The Promised Road",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-03-24",
+      "markers": [],
+      "external_id": "149281"
+    },
+    {
+      "n": 24,
+      "title": "Winner",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2015-03-31",
+      "markers": [],
+      "external_id": "149282"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Top of Tops!",
+      "artist": "Ayaka Suwa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Boku no Koe (My Voice)",
+      "artist": "Rhythmic Toy World",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Carry the Hope",
+      "artist": "High Candence Rock",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsuyosa Yowasa (Strength and Weakness)",
+      "artist": "Saeki YouthK",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hajimari no Hibi (はじまりの日々)",
+      "artist": "Magic of Life",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cadence",
+      "artist": "Takaaki Natsushiro",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Now or Never (ナウオアネバー)",
+      "artist": "Yūsuke Saeki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Believer",
+      "artist": "LASTGASP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Days",
+      "artist": "LASTGASP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Link",
+      "artist": "Lastgasp",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Determination",
+      "artist": "LASTGASP",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Realize",
+      "artist": "ROOKiEZ is PUNK'D",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Reclimb",
+      "artist": "ROOKIEZ is PUNK'D",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaze wo Yobe",
+      "artist": "Under Graph",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Dancing",
+      "artist": "Saeki YouthK",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Over the Limit",
+      "artist": "ROUTE85",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Remind",
+      "artist": "ROOKiEZ is PUNK'D",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Eikō e no Ichibyō (栄光への一秒; One Second to Glory)",
+      "artist": "MAGIC OF LiFE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Yowamushi na Honoo",
+      "artist": "DIRTY OLD MEN",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "I'm Ready",
+      "artist": "AUTRIBE feat. DIRTY OLD MEN",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Be As One",
+      "artist": "Team Sohoku",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Glory Road",
+      "artist": "Team Hakone Gakuen",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,63 @@
+{
+  "id": "yuru-camp-movie",
+  "title": "Laid-Back Camp The Movie",
+  "native": "映画 ゆるキャン△",
+  "year": 2022,
+  "rating": 8.3,
+  "season": "Summer 2022",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx104460-EwUV9ZJMCtnR.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx104460-EwUV9ZJMCtnR.jpg",
+  "accent": "#e49350",
+  "synopsis": "Rin Shima has left her hometown in Yamanashi to live on her own in Nagoya while working for a small publishing company there. On one winter’s weekend in the not-too-distant future, as she’s planning a bike tour, she unexpectedly receives a message from an old high school friend, Chiaki Oogaki, saying she’s currently in Nagoya. Chiaki now works for an organization promoting tourism in Yamanashi, and she’s in charge of a project to reopen a facility that was closed a few years ago. When Rin casually suggests that such a large property would make a good campground, Chiaki is inspired. She gathers up all of their old camping buddies— Nadeshiko Kagamihara, who works at an outdoor goods store in Tokyo; Aoi Inuyama, who’s now an elementary school teacher in their hometown of Yamanashi; and Ena Saitou, who works at a dog grooming salon in Yokohama—and the campground-opening project is set in motion. So the story of five outdoorsy girls who became friends thanks to their shared love of camping begins once more, taking on a new challenge with the knowledge and experience they’ve gained.\n\n(Source: Crunchyroll, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "yuru-camp-movie-r62l5w",
+    "mal": 38475,
+    "anilist": 104460,
+    "kitsu": 41977
+  },
+  "skip_key_id": 38475,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "laid back camp the movie 映画 ゆるキャン movie finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Yuru Camp△ Movie (Movie)",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ad4ca9962278b422da07a50-landscape.jpg",
+      "synopsis": "Rin Shima has left her hometown in Yamanashi to live on her own in Nagoya while working for a small publishing company there. On one winter’s weekend in the not-too-distant future, as she’s planning a bike tour, she unexpectedly receives a message from an old high school friend, Chiaki Oogaki, saying she’s currently in Nagoya. Chiaki now works for an organization promoting tourism in Yamanashi, and she’s in charge of a project to reopen a facility that was closed a few years ago. When Rin casually suggests that such a large property would make a good campground, Chiaki is inspired. She gathers up all of their old camping buddies— Nadeshiko Kagamihara, who works at an outdoor goods store in Tokyo; Aoi Inuyama, who’s now an elementary school teacher in their hometown of Yamanashi; and Ena Saitou, who works at a dog grooming salon in Yokohama—and the campground-opening project is set in motion. So the story of five outdoorsy girls who became friends thanks to their shared love of camping begins once more, taking on a new challenge with the knowledge and experience they’ve gained.\n\n\n\n(Source: Crunchyroll, edited)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256332"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mimosa (ミモザ)",
+      "artist": "Eri Sasaki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,191 @@
+{
+  "id": "yotsuiro-biyori",
+  "title": "Yotsuiro Biyori",
+  "native": "鹿楓堂よついろ日和",
+  "year": 2018,
+  "rating": 7.3,
+  "season": "Spring 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b100727-GYoFpP6jtjT6.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b100727-GYoFpP6jtjT6.jpg",
+  "accent": "#e4785d",
+  "synopsis": "Four men—Gure, Sui, Tokitaka, and Tsubaki—each help run a Japanese tea shop together called Rokuhoudou. When one visits the shop, they are greeted warmly, is served tea, and are often helped with any problems they may have.\n\n(Source: Anime's Website)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "yotsuiro-biyori-l32o2o",
+    "mal": 36513,
+    "anilist": 100727,
+    "kitsu": 13932
+  },
+  "skip_key_id": 36513,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "yotsuiro biyori 鹿楓堂よついろ日和 tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Welcome to Rokuhoudou Café",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "242169"
+    },
+    {
+      "n": 2,
+      "title": "The Teahouse's Secrets",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "242170"
+    },
+    {
+      "n": 3,
+      "title": "Sweets Trap Collection",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "242675"
+    },
+    {
+      "n": 4,
+      "title": "Tempura Bowl Survivor | An Incident, Meow",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "243188"
+    },
+    {
+      "n": 5,
+      "title": "Love for Lost Sheep",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "243222"
+    },
+    {
+      "n": 6,
+      "title": "It Begins with Omurice",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "243223"
+    },
+    {
+      "n": 7,
+      "title": "I Love Ice Cream | Vegetable Power",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "243224"
+    },
+    {
+      "n": 8,
+      "title": "Espresso Espressivo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "243778"
+    },
+    {
+      "n": 9,
+      "title": "Clumsy Hero | Mont Blanc Boy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "243779"
+    },
+    {
+      "n": 10,
+      "title": "She Doesn't Know Rokuhoudou Yet | The Café's Napolitan",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "244771"
+    },
+    {
+      "n": 11,
+      "title": "Life is a Hamburg",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "246172"
+    },
+    {
+      "n": 12,
+      "title": "Rokuhoudou Yotsuiro Biyori",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "246177"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sakurairo Cliché",
+      "artist": "aki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Clover",
+      "artist": "Coffee Creamers",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,246 @@
+{
+  "id": "yuki-yuna-is-a-hero",
+  "title": "Yuki Yuna is a Hero",
+  "native": "結城友奈は勇者である",
+  "year": 2014,
+  "rating": 7.3,
+  "season": "Fall 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/8638/medium.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20800-KpoJB6tGnj2V.jpg",
+  "accent": "#a24bff",
+  "synopsis": "In her everyday life, Yuuna Yuuki is a hero. As proof, she is in her middle school's Hero Club, where she does her best to help others and bring a smile to everyone's face. But Yuuna, always up to any task, is about to become an even bigger hero. Mysterious destructive forces called Vertexes begin threatening the world she loves, and the Hero Club is called upon by a strange phone app to save it. Along with her best friend Mimori Tougou, as well as sisters Fuu and Itsuki Inubouzaki, they must transform into magical girls in order to battle the Vertexes. In between studying and putting on shows for kids, Yuuna and the Hero Club must fight for the very existence of their world and face the harsh truths behind their own powers, all the while discovering what it truly means to be a hero. [Written by MAL Rewrite]",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Yuuki Yuuna wa Yuusha de Aru: Washio Sumi no Shou 3 - Yakusoku (2017)",
+    "Washio Sumi wa Yuusha de Aru",
+    "Yuuki Yuuna wa Yuusha de Aru: Sonogo no Sonoko"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8638,
+    "anilist": 20800,
+    "mal": 25519
+  },
+  "skip_key_id": 25519,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-11-07 00:57:34",
+  "search_text": "yuki yuna is a hero 結城友奈は勇者て ある tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "isekai",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A Maiden's True Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149110/original.jpg",
+      "synopsis": "Yuna Yuki, a second year student at Sanshu Junior High School, is a 13 year old girl living a normal, ordinary life. The only difference is that she belongs to her school's Brave Hero Club.",
+      "airdate": "2014-10-17",
+      "markers": [],
+      "external_id": "149110"
+    },
+    {
+      "n": 2,
+      "title": "Noble Thoughts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149111/original.jpg",
+      "synopsis": "Yuna Yuki was living a normal, ordinary life until certain circumstances drove her to transform into a hero.",
+      "airdate": "2014-10-17",
+      "markers": [],
+      "external_id": "149111"
+    },
+    {
+      "n": 3,
+      "title": "Moral Poise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149112/original.jpg",
+      "synopsis": "After a month since Yuna and her friends were chosen as heroes, they are living very busy days.",
+      "airdate": "2014-10-24",
+      "markers": [],
+      "external_id": "149112"
+    },
+    {
+      "n": 4,
+      "title": "Shining Hearts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/149113/original.jpg",
+      "synopsis": "Hero Club member Inubozaki Itsuki's class has a singing test coming up.",
+      "airdate": "2014-10-31",
+      "markers": [],
+      "external_id": "149113"
+    },
+    {
+      "n": 5,
+      "title": "Overcoming Adversity",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The battles with the Vertexes becomes even more intense, but the Hero Club, with its ever-strengthening bond, holds them off.",
+      "airdate": "2014-11-07",
+      "markers": [],
+      "external_id": "149114"
+    },
+    {
+      "n": 6,
+      "title": "In Anticipation of Tomorrow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Yuna has renewed determination for tomorrow.",
+      "airdate": "2014-11-14",
+      "markers": [],
+      "external_id": "149115"
+    },
+    {
+      "n": 7,
+      "title": "Idyllic Happiness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "By order of the Taisha, Yuna and the rest of the Hero Club head to the beach.",
+      "airdate": "2014-11-21",
+      "markers": [],
+      "external_id": "149116"
+    },
+    {
+      "n": 8,
+      "title": "Blessings of the Gods",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Life in the Hero Club is as frantic as ever.",
+      "airdate": "2014-11-28",
+      "markers": [],
+      "external_id": "149117"
+    },
+    {
+      "n": 9,
+      "title": "Those Who Know Grief",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "One of the Heroes receives a message.",
+      "airdate": "2014-12-05",
+      "markers": [],
+      "external_id": "149118"
+    },
+    {
+      "n": 10,
+      "title": "Bonds of Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Something shocking happens to the Hero Club.",
+      "airdate": "2014-12-12",
+      "markers": [],
+      "external_id": "149119"
+    },
+    {
+      "n": 11,
+      "title": "Passion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The Hero Club members bare their souls.",
+      "airdate": "2014-12-19",
+      "markers": [],
+      "external_id": "149120"
+    },
+    {
+      "n": 12,
+      "title": "Smile At You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Yuki Yuna is a Hero.",
+      "airdate": "2014-12-26",
+      "markers": [],
+      "external_id": "149121"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ashita no Hana-tachi",
+      "artist": "Sanshuu Chuugaku Yuusha-bu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Chiheisen no Mukou e",
+      "artist": "Sanshuu Chuugaku Yuusha-bu",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hanakotoba (ハナコトバ)",
+      "artist": "Haruka Terui, Suzuko Mimori, Yumi Uchida, Tomoyo Kurosawa, Juri Nagatsuma & Kana Hanazawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yuusha-tachi no Lullaby",
+      "artist": "Haruka Terui, Suzuko Mimori, Yumi Uchiyama, Tomoyo Kurosawa, Juri Nagatsuma, and Kana Hanazawa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Egao no Kimi e (エガオノキミへ)",
+      "artist": "Suzuko Mimori",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tomodachi (ともだち; Friends)",
+      "artist": "Suzuko Mimori, Kana Hanazawa, Yumiri Hanamori",
+      "episodes": "1-3,5"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hoshi to Hana (ホシトハナ; Stars & Flowers)",
+      "artist": "Haruka Terui, Suzuko Mimori, Tomoyo Kurosawa, Yumi Uchiyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aurora Days",
+      "artist": "Haruka Terui, Suzuko Mimori, Tomoyo Kurosawa, Yumi Uchiyama",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Tamashii (たましい; Spirit)",
+      "artist": "Yumiri Hanamori",
+      "episodes": "4"
+    }
+  ],
+  "relations": []
+}
