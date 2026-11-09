@@ -1,0 +1,74 @@
+{
+  "id": "beyond-the-boundary-ill-be-here-future",
+  "title": "Beyond the Boundary -I'LL BE HERE-: Future",
+  "native": "劇場版 境界の彼方 I'LL BE HERE 未来篇",
+  "year": 2015,
+  "rating": 7.9,
+  "season": "Spring 2015",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx20963-xWZjgqAdFOfn.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20963-xWZjgqAdFOfn.png",
+  "accent": "#28bbf1",
+  "synopsis": "This is the second part of a two-part movie. The story takes place one year after the TV series.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "beyond-the-boundary-i'll-be-here-:-future-r84tqa",
+    "mal": 28675,
+    "anilist": 20963,
+    "kitsu": 10043
+  },
+  "skip_key_id": 28675,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "beyond the boundary i ll be here future 劇場版 境界の彼方 i ll be here 未来篇 movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "romance",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Beyond the Boundary -I'LL BE HERE-: Future (Movie)",
+      "runtime": "90:00",
+      "runtime_seconds": 5400,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n20963-n5v8YuHRpyqj.jpg",
+      "synopsis": "This is the second part of a two-part movie. The story takes place one year after the TV series.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "172730"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Daisy",
+      "artist": "STEREO DIVE FOUNDATION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aitakatta Sora (会いたかった空; I Wanted to Meet the Sky)",
+      "artist": "Minori Chihara",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

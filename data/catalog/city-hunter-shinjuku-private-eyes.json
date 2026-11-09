@@ -1,0 +1,85 @@
+{
+  "id": "city-hunter-shinjuku-private-eyes",
+  "title": "City Hunter: Shinjuku Private Eyes",
+  "native": "シティーハンター 新宿プライベートアイズ",
+  "year": 2019,
+  "rating": 7.3,
+  "season": "Winter 2019",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101345-lHRKxtalYUm4.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101345-lHRKxtalYUm4.jpg",
+  "accent": "#f1bb50",
+  "synopsis": "Ryo Saeba is a sniper and private eye (\"sweeper\") based in Tokyo's Shinjuku Ward, who possesses unrivaled marksmanship and an over-the-top obsession for the opposite sex. He and his partner Kaori Makimura serve as bodyguards and perform other duties for his clients. Their latest client is Ai Shindo, a model who's being attacked by mysterious people and unknowingly holds the key to a vast city-wide conspiracy.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "city-hunter:-shinjuku-private-eyes-80c0pw",
+    "mal": 37516,
+    "anilist": 101345,
+    "kitsu": 41082
+  },
+  "skip_key_id": 37516,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "city hunter shinjuku private eyes シティーハンター 新宿フ ライヘ ートアイス movie finished",
+  "genres": [
+    "action",
+    "comedy",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "City Hunter: Shinjuku Private Eyes (Movie)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ace5d7162278b422d3c66c9-landscape.jpg",
+      "synopsis": "Ryo Saeba is a sniper and private eye (\"sweeper\") based in Tokyo's Shinjuku Ward, who possesses unrivaled marksmanship and an over-the-top obsession for the opposite sex. He and his partner Kaori Makimura serve as bodyguards and perform other duties for his clients. Their latest client is Ai Shindo, a model who's being attacked by mysterious people and unknowingly holds the key to a vast city-wide conspiracy.\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "239776"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mr. Cool",
+      "artist": "Amazons & Lotus Juice",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Angel Night- Tenshi no Iru Basho (Angel Night ~天使のいる場所~)",
+      "artist": "Psy-S",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Get Wild",
+      "artist": "TM Network",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Still Love Her- Ushinawareta Fūkei (スティル・ラブ・ハー 失われた風景)",
+      "artist": "TM Network",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

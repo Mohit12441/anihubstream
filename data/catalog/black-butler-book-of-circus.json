@@ -1,0 +1,171 @@
+{
+  "id": "black-butler-book-of-circus",
+  "title": "Black Butler: Book of Circus",
+  "native": "黒執事 Book of Circus",
+  "year": 2014,
+  "rating": 7.8,
+  "season": "Summer 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx20606-58LzabjtVrwt.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20606-58LzabjtVrwt.jpg",
+  "accent": "#1a5086",
+  "synopsis": "In late-nineteenth-century England, the Noah's Ark Circus enlivens the city of London with their grandeur and spectacular stunts. However, children are mysteriously disappearing from the town in a manner correlating to the troupe's movement. The Queen, then, sends her notorious Watchdog, Ciel Phantomhive, on an investigative mission to retrieve the missing children. Ciel and his demon butler, Sebastian Michaelis, infiltrate the circus, disguised as team members, to study and possibly unearth its ulterior motive.\n\nThis arc immediately follows the Curry Contest Arc in the manga, which ended at episode 15 in the first season of the anime.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "black-butler:-book-of-circus-8yxc95",
+    "mal": 22145,
+    "anilist": 20606,
+    "kitsu": 8268
+  },
+  "skip_key_id": 22145,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": null,
+  "search_text": "black butler book of circus 黒執事 book of circus tv finished",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "His Butler, Presenting",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171090/original.jpeg",
+      "synopsis": "Our favorite butler and master are back with more tea and cakes, more cutlery-based warfare, and more evil to rout from the London underworld.",
+      "airdate": "2014-07-11",
+      "markers": [],
+      "external_id": "171090"
+    },
+    {
+      "n": 2,
+      "title": "His Butler, Taking the Stage",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171091/original.jpeg",
+      "synopsis": "After a letter from Queen Victoria, some breaking and entering, and a trip to Undertaker, Sebastian and Ciel go to the circus. The mission: find a large group of missing children. The obstacle: Sebastian loses it a little when he's around cats...",
+      "airdate": "2014-07-18",
+      "markers": [],
+      "external_id": "171091"
+    },
+    {
+      "n": 3,
+      "title": "His Butler, Hired",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171092/original.jpeg",
+      "synopsis": "The air is thick with trapezes, knives, and pointed jibes as Sebastian and Ciel audition for the circus. Then after the excitement dies down, they see an unexpected familiar face in the rehearsal tent...",
+      "airdate": "2014-07-25",
+      "markers": [],
+      "external_id": "171092"
+    },
+    {
+      "n": 4,
+      "title": "His Butler, Coworker",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171093/original.jpeg",
+      "synopsis": "Sebastian and Ciel have done undercover work before, but this particular job presents some unique challenges.",
+      "airdate": "2014-08-01",
+      "markers": [],
+      "external_id": "171093"
+    },
+    {
+      "n": 5,
+      "title": "His Butler, Takes Flight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171094/original.jpeg",
+      "synopsis": "Sebastian and Will may well be the most awkward duo in circus history, but Ciel currently has bigger problems.",
+      "airdate": "2014-08-08",
+      "markers": [],
+      "external_id": "171094"
+    },
+    {
+      "n": 6,
+      "title": "His Butler, Liaison",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171095/original.jpeg",
+      "synopsis": "Sometimes Sebastian's revisions to a plan can be dangerous.",
+      "airdate": "2014-08-15",
+      "markers": [],
+      "external_id": "171095"
+    },
+    {
+      "n": 7,
+      "title": "His Butler, Careful Tending",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171096/original.jpeg",
+      "synopsis": "Before they pay the baron a visit, Sebastian decides to take some advice from Soma.",
+      "airdate": "2014-08-22",
+      "markers": [],
+      "external_id": "171096"
+    },
+    {
+      "n": 8,
+      "title": "His Butler, Sneering",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171097/original.jpeg",
+      "synopsis": "Lord Kelvin invites Ciel to replay a certain night from his past, and Ciel's servants receive some unexpected visitors at the mansion.",
+      "airdate": "2014-08-29",
+      "markers": [],
+      "external_id": "171097"
+    },
+    {
+      "n": 9,
+      "title": "His Butler, Serene",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171098/original.jpeg",
+      "synopsis": "The world is never kind to anyone.",
+      "airdate": "2014-09-05",
+      "markers": [],
+      "external_id": "171098"
+    },
+    {
+      "n": 10,
+      "title": "His Butler, Fulfilling His Duty",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171099/original.jpeg",
+      "synopsis": "Sebastian carries out his remaining orders, and as usual, Will is left to clean up the mess.",
+      "airdate": "2014-09-12",
+      "markers": [],
+      "external_id": "171099"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "ENAMEL",
+      "artist": "SID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aoki Tsuki Michite",
+      "artist": "AKIRA",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

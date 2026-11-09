@@ -1,0 +1,171 @@
+{
+  "id": "cyberpunk-edgerunners",
+  "title": "Cyberpunk: Edgerunners",
+  "native": "サイバーパンク エッジランナーズ",
+  "year": 2022,
+  "rating": 8.5,
+  "season": "Summer 2022",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx120377-ayZPoxiWt4Li.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120377-ayZPoxiWt4Li.jpg",
+  "accent": "#78f150",
+  "synopsis": "Cyberpunk: Edgerunners tells a standalone, 10-episode story about a street kid trying to survive in a technology and body modification-obsessed city of the future. Having everything to lose, he chooses to stay alive by becoming an edgerunner—a mercenary outlaw also known as a cyberpunk.\n\n(Source: CD PROJEKT RED)\n\nNote: The first episode received a pre-screening at Anime Expo on July 2, 2022. The first 3 dubbed episodes were streamed on Twitch as part of a co-stream promotion on September 12, a day before the show’s premiere.",
+  "rank": null,
+  "trend_rank": 39,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "cyberpunk:-edgerunners-0chqfh",
+    "mal": 42310,
+    "anilist": 120377,
+    "kitsu": 43248
+  },
+  "skip_key_id": 42310,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": null,
+  "search_text": "cyberpunk edgerunners サイハ ーハ ンク エッシ ランナース ona finished",
+  "genres": [
+    "action",
+    "drama",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Let You Down",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/282315/thumbnail/747b45bcf1790ceb2bc0746f9ac11880.jpg",
+      "synopsis": "After a night of streaming illegal braindance, David wakes up to reality: a rundown apartment with a broken washing machine and an overworked mother.\n\n(Source: Netflix)",
+      "airdate": "2022-09-13",
+      "markers": [],
+      "external_id": "282315"
+    },
+    {
+      "n": 2,
+      "title": "Like A Boy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/282316/thumbnail/19529932a09d0fcafe34feace3298697.jpg",
+      "synopsis": "With his newly enhanced body, David heads to the Academy seeking revenge on his bully. Later, he meets a mysterious woman who wants to recruit him.\n\n(Source: Netflix)",
+      "airdate": "2022-09-13",
+      "markers": [],
+      "external_id": "282316"
+    },
+    {
+      "n": 3,
+      "title": "Smooth Criminal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/282317/thumbnail/d649a9ad84390043fd2d52303f3ad683.jpg",
+      "synopsis": "Surrounded by a group of rowdy edgerunners, David makes a plea to join their team. Meanwhile, sinister forces plot to lure him back to Arasaka Academy.\n\n(Source: Netflix)",
+      "airdate": "2022-09-13",
+      "markers": [],
+      "external_id": "282317"
+    },
+    {
+      "n": 4,
+      "title": "Lucky You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/282318/thumbnail/1472d559676963b09086e2a92d8f8c6b.jpg",
+      "synopsis": "Eager to learn the edgerunner ropes, David pesters Maine for another mission. Instead, Maine tasks Lucy with training him.\n\n(Source: Netflix)",
+      "airdate": "2022-09-13",
+      "markers": [],
+      "external_id": "282318"
+    },
+    {
+      "n": 5,
+      "title": "All Eyez On Me",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/282319/thumbnail/4bc920f797ceeb5a6c7a05b5d71241a9.jpg",
+      "synopsis": "David makes a clever suggestion when the team strategizes for their next mission. However, he soon learns that their target can't be underestimated.\n\n(Source: Netflix)",
+      "airdate": "2022-09-13",
+      "markers": [],
+      "external_id": "282319"
+    },
+    {
+      "n": 6,
+      "title": "Girl on Fire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/282320/thumbnail/3c7a5313026ad5bb4bb83bd68e834b13.jpg",
+      "synopsis": "Maine doesn't seem to be himself. But the team has bigger fish to fry: They must race against time to extract vital information from their prisoner.\n\n(Source: Netflix)",
+      "airdate": "2022-09-13",
+      "markers": [],
+      "external_id": "282320"
+    },
+    {
+      "n": 7,
+      "title": "Stronger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/282321/thumbnail/fe06277bc28f298f088e08fd5ccdea2a.jpg",
+      "synopsis": "Now an all-star edgerunner enhanced with more cybernetics, David leads his team into a new mission. An old contact reaches out to him for a big job.\n\n(Source: Netflix)",
+      "airdate": "2022-09-13",
+      "markers": [],
+      "external_id": "282321"
+    },
+    {
+      "n": 8,
+      "title": "Stay",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/282322/thumbnail/eb195d23d480851f6db8be6d88362ddc.jpg",
+      "synopsis": "Faraday finds himself stuck between Arasaka and Militech. Lucy and Rebecca confront David about his change in behavior, but he refuses to listen.\n\n(Source: Netflix)",
+      "airdate": "2022-09-13",
+      "markers": [],
+      "external_id": "282322"
+    },
+    {
+      "n": 9,
+      "title": "Humanity",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/282323/thumbnail/4adb104aec98262b2979ffd8c8f24982.jpg",
+      "synopsis": "Lucy's captors learn about her secret mission and dark past. David and his team head out to complete Faraday's job but realize that something is off.\n\n(Source: Netflix)",
+      "airdate": "2022-09-13",
+      "markers": [],
+      "external_id": "282323"
+    },
+    {
+      "n": 10,
+      "title": "My Moon My Man",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/282324/thumbnail/e95c330baa36d0128a4b845c97bfa56d.jpg",
+      "synopsis": "On the edge of cyberpsychosis but determined to save Lucy, David storms into Night City as Arasaka plots to deploy their ultimate lethal weapon.\n\n(Source: Netflix)",
+      "airdate": "2022-09-13",
+      "markers": [],
+      "external_id": "282324"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "This Fffire",
+      "artist": "Franz Ferdinand",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Let You Down",
+      "artist": "Dawid Podsiadło & Magdalena Laskowska",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

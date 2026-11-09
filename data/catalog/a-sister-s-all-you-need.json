@@ -1,0 +1,295 @@
+{
+  "id": "a-sister-s-all-you-need",
+  "title": "A Sister's All You Need.",
+  "native": "妹さえいればいい。",
+  "year": 2017,
+  "rating": 7,
+  "season": "Fall 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98596-E2aZouOyuQ8G.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98596-E2aZouOyuQ8G.jpg",
+  "accent": "#d6ae78",
+  "synopsis": "The story follows the everyday life of Itsuki, a novelist and \"modern day Pygmalion\" who works day in and day out to create the ultimate younger sister. He's surrounded by various other characters: a beautiful genius writer who loves him, his big-sisterly classmate from college, a fellow male writer, a sadistic tax accountant, and his editor. They're all looked after by Itsuki's perfect younger step-brother, Chihiro, who has a serious secret.\n\n(Source: Anime News Network)\n\nNote: The first episode received an early screening at a special event held at Shinjuku Piccadilly, Tokyo on 06.09.2017.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11207,
+    "anilist": 98596,
+    "mal": 35413
+  },
+  "skip_key_id": 35413,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 12:05:19",
+  "search_text": "a sister s all you need 妹さえいれは いい tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I Only Need a Little Brother Who Can Cook, a Beautiful Naked Girl, and Friends I Can Relate To.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231023/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-10-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 277,
+          "end": 367
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1375,
+          "end": 1429
+        }
+      ],
+      "external_id": "231023"
+    },
+    {
+      "n": 2,
+      "title": "If Only a Miracle Would Happen",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231024/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-10-15",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1306,
+          "end": 1367
+        }
+      ],
+      "external_id": "231024"
+    },
+    {
+      "n": 3,
+      "title": "As Long As It's Research",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231025/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-10-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 54,
+          "end": 144
+        }
+      ],
+      "external_id": "231025"
+    },
+    {
+      "n": 4,
+      "title": "As Long As You're Working.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231026/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-10-29",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1415
+        }
+      ],
+      "external_id": "231026"
+    },
+    {
+      "n": 5,
+      "title": "All You Need Is to Write Novels.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231027/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-11-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 990,
+          "end": 1079
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1420
+        }
+      ],
+      "external_id": "231027"
+    },
+    {
+      "n": 6,
+      "title": "Having Your Media Developments Go Well Is All You Need.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231028/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-11-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 130,
+          "end": 220
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1375,
+          "end": 1415
+        }
+      ],
+      "external_id": "231028"
+    },
+    {
+      "n": 7,
+      "title": "Adventure Is All You Need.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231029/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-11-19",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1408
+        }
+      ],
+      "external_id": "231029"
+    },
+    {
+      "n": 8,
+      "title": "All You Need Is Love and Friendship.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231030/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-11-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 146
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1306,
+          "end": 1394
+        }
+      ],
+      "external_id": "231030"
+    },
+    {
+      "n": 9,
+      "title": "Nudity and Underwear Are All You Need.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231031/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-12-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1377,
+          "end": 1430
+        }
+      ],
+      "external_id": "231031"
+    },
+    {
+      "n": 10,
+      "title": "A Lack of Problems Is All You Need.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231032/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-12-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 146
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1209,
+          "end": 1298
+        }
+      ],
+      "external_id": "231032"
+    },
+    {
+      "n": 11,
+      "title": "Becoming the Protagonist Is All You Need.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231033/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-12-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 31,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1269,
+          "end": 1358
+        }
+      ],
+      "external_id": "231033"
+    },
+    {
+      "n": 12,
+      "title": "A Sister's All You Need?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/231034/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-12-24",
+      "markers": [],
+      "external_id": "231034"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,58 @@
+{
+  "id": "date-a-live-movie-mayuri-judgment",
+  "title": "Date A Live Mayuri Judgement",
+  "native": "劇場版デート・ア・ライブ 万由里ジャッジメント",
+  "year": 2015,
+  "rating": 7,
+  "season": "Summer 2015",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20741-WdThAhseSo1y.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20741-WdThAhseSo1y.jpg",
+  "accent": "#f1f1c9",
+  "synopsis": "Set in the premise after the events of Date a Live II, a mysterious existence named Mayuri has started to appear in Tengu City. Shidou set on a date to figure and find out the identity of the spirit. In order to find out the reason of the interruption of the disturbance that occurred, he goes on a date with six of the spirits that wanted him all for themselves for the mysterious being to appear.\n\nNote: An original story supervised by the original light novel author Koushi Tachibana.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "date-a-live-movie:-mayuri-judgment-nsprt3",
+    "mal": 24655,
+    "anilist": 20741,
+    "kitsu": 8512
+  },
+  "skip_key_id": 24655,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "date a live mayuri judgement 劇場版テ ート ア ライフ 万由里シ ャッシ メント movie finished",
+  "genres": [
+    "action",
+    "comedy",
+    "fantasy",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Date A Live Movie: Mayuri Judgment (Movie)",
+      "runtime": "72:00",
+      "runtime_seconds": 4320,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n20741-HYmNMUQfT0JM.jpg",
+      "synopsis": "Set in the premise after the events of Date a Live II, a mysterious existence named Mayuri has started to appear in Tengu City. Shidou set on a date to figure and find out the identity of the spirit. In order to find out the reason of the interruption of the disturbance that occurred, he goes on a date with six of the spirits that wanted him all for themselves for the mysterious being to appear.\n\n\n\nNote: An original story supervised by the original light novel author Koushi Tachibana.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "115388"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

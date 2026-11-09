@@ -1,0 +1,289 @@
+{
+  "id": "a-certain-scientific-accelerator",
+  "title": "A Certain Scientific Accelerator",
+  "native": "とある科学の一方通行【アクセラレータ】",
+  "year": 2019,
+  "rating": 7,
+  "season": "Summer 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx104463-nlo4ndS9Mt0P.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx104463-nlo4ndS9Mt0P.jpg",
+  "accent": "#f1a143",
+  "synopsis": "The espers of Academy City are classified into six levels, where \"Level 0\" lacks power while \"Level 5\" possesses an overwhelming amount. Of the several million espers residing in Academy City, only seven of them have attained Level 5, and ranked highest among them is the one known as Accelerator.\n\nToaru Kagaku no Accelerator focuses on the strongest Level 5 after he protects the cheerful Last Order at the price of much of his power. Recovering at the hospital, Accelerator has led a relatively quiet life until he ends up saving the life of Estelle Rosenthal, a mysterious girl carrying a photo of Last Order. Unfortunately, Accelerator now finds himself dragged into a new conflict in the form of a sinister organization called Disciplinary Action which plots to use Last Order for a dangerous mission. Now that they have set their plan into motion and are in pursuit of the young girl, it's up to the world's most powerful esper and his newfound companion to protect Last Order and defend Academy City in the process.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 41980,
+    "anilist": 104463,
+    "mal": 38480,
+    "hianime": "a-certain-scientific-accelerator-y3xfql"
+  },
+  "skip_key_id": 38480,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 16:35:36",
+  "search_text": "a certain scientific accelerator とある科学の一方通行 アクセラレータ tv finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Accelerator (Academy City's Mightiest Esper)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256362/original.jpg",
+      "synopsis": "The day arrives for Accelerator's bandages to come off after he is shot in the head, and Last Order is eager to celebrate. A secret weapon is stolen from an atmospheric research facility, and the culprits seem to be targeting Accelerator with it.",
+      "airdate": "2019-07-12",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1286,
+          "end": 1372
+        }
+      ],
+      "external_id": "256362"
+    },
+    {
+      "n": 2,
+      "title": "Necromancer (Raiser of the Dead)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256363/original.jpg",
+      "synopsis": "A high-school-age girl attempts suicide, but finds herself at the mercy of a fanatical group calling themselves \"DA.\" When a young woman carrying a photo of Last Order is pursued through the hospital, Accelerator determines to find out why.",
+      "airdate": "2019-07-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 103,
+          "end": 186
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "256363"
+    },
+    {
+      "n": 3,
+      "title": "Numbers (Charms of the Four Perils)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256364/original.jpg",
+      "synopsis": "Esther leads Accelerator to the warehouse where she was once held, where they encounter a more advanced \"coffin\" controlled by Hishigata. Accelerator tries to learn more about DA. Esther reveals more about how her necromancy works.",
+      "airdate": "2019-07-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "256364"
+    },
+    {
+      "n": 4,
+      "title": "Third Number (The Pseudo-Soul, Huotou)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256365/original.jpg",
+      "synopsis": "Accelerator takes on the two DA members in the hospital morgue, and receives assistance from an unexpected source. When DA once again messes up a mission at the hospital, plans go into motion to have them removed from the operation.",
+      "airdate": "2019-08-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 98,
+          "end": 188
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "256365"
+    },
+    {
+      "n": 5,
+      "title": "DA (Security Officer Darkness)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256366/original.jpg",
+      "synopsis": "As Accelerator is sidelined while his Misaka Network electrode recharges, Antiskill leads a raid on a supplement factory being used as a front for DA. Meanwhile, the members of Scavenger carry on their mission to eliminate DA.",
+      "airdate": "2019-08-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 110,
+          "end": 200
+        }
+      ],
+      "external_id": "256366"
+    },
+    {
+      "n": 6,
+      "title": "Scavenger (Corpse-Eating Squad)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256367/original.jpg",
+      "synopsis": "Yomikawa attempts to defend Esther, Huotou, and the Sisters clone from Scavenger's attacks, and learns why they are so hostile to the city's teaching staff. Huotou fights back against Naru, with help from Esther, but will it be enough?",
+      "airdate": "2019-08-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 34,
+          "end": 124
+        }
+      ],
+      "external_id": "256367"
+    },
+    {
+      "n": 7,
+      "title": "Download (Time Limit)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256368/original.jpg",
+      "synopsis": "Having failed to obtain Last Order, Hishigata instead directs his efforts toward securing the kidnapped Sisters clone to gain the memories of their 10031 deaths to complete his formula. Esther begs Accelerator to take her under his wing.",
+      "airdate": "2019-08-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 106,
+          "end": 196
+        }
+      ],
+      "external_id": "256368"
+    },
+    {
+      "n": 8,
+      "title": "Friend (Hirumi)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256369/original.jpg",
+      "synopsis": "Unable to discover the secret to reaching Level 6, Hishigata tries a new approach by recruiting Esther Rosenthal, a necromancer. Esther and Hishigata's sister, Hirumi, become fast friends, but Hirumi's secret may jeopardize that friendship.",
+      "airdate": "2019-08-30",
+      "markers": [],
+      "external_id": "256369"
+    },
+    {
+      "n": 9,
+      "title": "Memory of Death (10031 Deaths)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256370/original.jpg",
+      "synopsis": "As Hishigata's coffins are en route to his lab with the Sisters clone, Accelerator manages to throw a monkey wrench into their operation. Hishigata completes his formula, providing a boost to the coffins' abilities, which are turned on Accelerator.",
+      "airdate": "2019-09-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "256370"
+    },
+    {
+      "n": 10,
+      "title": "Catastrophe (Awakening)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256371/original.jpg",
+      "synopsis": "While Hishigata continues to bleed out from his stab wound, Hirumi opens her eyes and seems to be her normal self. However, as her Level-6 transformation progresses, it becomes clear that not everything about Hirumi is as it appears.",
+      "airdate": "2019-09-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 152,
+          "end": 242
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "256371"
+    },
+    {
+      "n": 11,
+      "title": "Perfect Golem (Perfect Body)",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256372/original.jpg",
+      "synopsis": "Hirumi's body continues its horrific transformation, assimilating the facility and growing larger. Esther is confronted with the question of what she wants to do about her situation, and whether she can step up to become a hero.",
+      "airdate": "2019-09-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 161,
+          "end": 251
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1380
+        }
+      ],
+      "external_id": "256372"
+    },
+    {
+      "n": 12,
+      "title": "Something to Protect",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256373/original.jpg",
+      "synopsis": "Accelerator, Esther and the others finally arrive near Isaac's main body, and ready themselves for the final conflict. However, with the charge in Accelerator's electrode nearly spent, do they stand a chance of defeating Isaac and saving the city?",
+      "airdate": "2019-09-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 71,
+          "end": 161
+        }
+      ],
+      "external_id": "256373"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,194 @@
+{
+  "id": "boogiepop-phantom",
+  "title": "Boogiepop Phantom",
+  "native": "ブギーポップは笑わない Boogiepop Phantom",
+  "year": 2000,
+  "rating": 7.1,
+  "season": "Winter 2000",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/336/medium.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/369-qdcR0yzZC0AX.jpg",
+  "accent": "#a24bff",
+  "synopsis": "Five years ago, a string of grisly murders shook the city to its core and now the rumors have begun once more. Boogiepop... Everyone knows about Boogiepop: meet her one dark night and you are taken. People tell each other the stories and laugh: no one believes that she can possibly exist in this day and age. Still, strange things appear to be going on and the darkness is taking on many forms. Something is out there. Are you safe? (Source: RightStuf)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Boogiepop wa Warawanai VS Imaginator"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 336,
+    "anilist": 369,
+    "mal": 369
+  },
+  "skip_key_id": 369,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-11-06 06:20:49",
+  "search_text": "boogiepop phantom フ キ ーホ ッフ は笑わない boogiepop phantom tv finished",
+  "genres": [
+    "drama",
+    "horror",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Portraits from Memory",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/164195/original.jpg",
+      "synopsis": "This episode starts with the sudden apperance of a mysterious pillar of light. The city is thrown into a blackout, but quickly recovers. We are then taken to a bathroom, where we hear several girls talking about an angel of death, Boogipop. Moto Tonomura remembers about a time when she still hated herself. This entire episode is a flashback.",
+      "airdate": "2000-01-05",
+      "markers": [],
+      "external_id": "164195"
+    },
+    {
+      "n": 2,
+      "title": "Light in the Darkness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/164219/original.jpg",
+      "synopsis": "This episode is told from Hisashi Jonouchi. He is running from someone...rather, something. He sees a strange bug in the alley way and eats it. He flashesback to when he first started seeing the bugs. They were spiders, over people's hearts. Only he could see them. Once he removed the spider, that person forgot about what made them sorrowful. However, Jonouchi grew an addiction for the spiders and started to crave for more and more. The episode ends with Jonouchi having an encounter with Boogiepop Phantom, where he is 'taken'.",
+      "airdate": "2000-01-12",
+      "markers": [],
+      "external_id": "164219"
+    },
+    {
+      "n": 3,
+      "title": "Life Can Be So Nice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/164239/original.jpg",
+      "synopsis": "This episode revolves around Misuzu. She had a friend a while ago, named Panaru. Panaru had a great loving for the world, but was killed by a serial killer. Misuzu then decided to take up Panaru's love, only it was not a true love that Misuzu had. By accepting everything, she opened herself to another entity, who manipulated her into luring Naghi Kirima to a location. However, Boogiepop Phantom prevented the meeting. Misuzu found herself in an allyway, where she met her doom.",
+      "airdate": "2000-01-19",
+      "markers": [],
+      "external_id": "164239"
+    },
+    {
+      "n": 4,
+      "title": "My Fair Lady",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/164252/original.jpg",
+      "synopsis": "This episode is from Yoji Suganuma's point of view. He's mainly a loser a school, and only has his online buddies as friends. He is also a dating sim game addict, and has fallen in love with a girl named Rie (Ree-ae) who is actually just bits of data on his computer. He becomes addicted to 'Type-S' a so-called attraction device. A girl who applied to work at the resturant with him starts to look more and more like Rie, until the line of reality is forever blurred to Yoji.",
+      "airdate": "2000-01-26",
+      "markers": [],
+      "external_id": "164252"
+    },
+    {
+      "n": 5,
+      "title": "Interlude",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/164267/original.jpg",
+      "synopsis": "This episode is quite a confusing one. It jumps from POV to POV, and the time is frequently changing. It mainly takes place in a police station, and is all about a conversation between Morita and another cop. Every time we return to the conversation, a little bit more is revealed, until at the end, we start all over again.",
+      "airdate": "2000-02-02",
+      "markers": [],
+      "external_id": "164267"
+    },
+    {
+      "n": 6,
+      "title": "Mother's Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/164283/original.jpg",
+      "synopsis": "This episode revolves around Shizue, who died about 5 years ago. A girl named Rika shares the diaries of Shizue and herself with Shizue's mother. The diaries reveal much more about Shizue than her mother could have ever thought.",
+      "airdate": "2000-02-09",
+      "markers": [],
+      "external_id": "164283"
+    },
+    {
+      "n": 7,
+      "title": "Until Ure In My Arms Again",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/164295/original.jpg",
+      "synopsis": "This episode revolves around a brother and a sister, who usually stick together, yet the brother is slowly rejecting the sister. The brother recently (after the pillar of light) developed a want to unassemble everything and remove the useless parts. When he thinks that Paisely Park is useless, he attempts to take it apart, yet relizes that he doesn't have any powers. His sister has the power to grant his wishes.",
+      "airdate": "2000-02-16",
+      "markers": [],
+      "external_id": "164295"
+    },
+    {
+      "n": 8,
+      "title": "She's So Unusual",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/164303/original.jpg",
+      "synopsis": "This episode mainly revolves around Nagi Kirima, yet is told from the POV of Ichiro Kishida. He knew Nagi in the past, but he adopted a new alias and reentered her life as Ichiro Kishida. They go on a mission to stop the Manticore, a flesh eating shape shifter. They run into Boogiepop Phantom, who destroys the Manticore. However, the Manticore isn't gone forever...",
+      "airdate": "2000-02-23",
+      "markers": [],
+      "external_id": "164303"
+    },
+    {
+      "n": 9,
+      "title": "You'll Never Be Young Twice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/164314/original.jpg",
+      "synopsis": "This episode revolves around three people, the first of which is Saki, a pianist. She is determined to make it into a music university, but she just can't make it. Then, Poom Poom gives her a balloon. After she let go of it, she killed herself. Quite a few people are now getting strange phone calls urgeing them to 'Come play with us.' Yoshiki, the one making the calls, gets taken in by Boogiepop Phantom and dissapears.",
+      "airdate": "2000-03-01",
+      "markers": [],
+      "external_id": "164314"
+    },
+    {
+      "n": 10,
+      "title": "Poom Poom",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/164325/original.jpg",
+      "synopsis": "This episode revolves around Poom Poom, Manaka, and Paisely Park. More and more people are getting red balloons, making Nagi go to the park to see what's causing it. There are children versions there of everyone that had recieved a balloon. However, Boogiepop (not the phantom) arrives on the scene and causes Manaka to fall from the Ferris Wheel. All the lights in the park go out, and Manaka appears to have aged quite a bit. Apparantly, her powers made her age, and now that she used them like crazy, she aged greatly. All the phantom children dissapear, along with Poom Poom, leaving Manaka with Boogiepop.",
+      "airdate": "2000-03-08",
+      "markers": [],
+      "external_id": "164325"
+    },
+    {
+      "n": 11,
+      "title": "Under The Gravity's Rainbow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/164333/original.jpg",
+      "synopsis": "This episode revolves around Manaka. It explains about her past, her mother, her grandmother, and her ability. After the flashbacks are done, Manaka starts to run from Boogiepop when Boogiepop Phantom interveins and tries to kill her. Boogipop frees her, stating that she hasn't enough power to cause a threat to this world, and Manaka runs off to the house of mirrors. Boogiepop finally meets Boogiepop Phantom. Manaka tells herself that she will not die; rather, she will become light. And so she does. A great light composed of the golden butterfiles engulfs the land, causing time to skip. People start to see phantoms of themselves, events of the past long forgotten. Manaka makes one last visit, to her mother in the hospital. Since Manaka was born, her mother had lost her short term memory, and could not remember anything for a long time. She even forgot that she had a daughter. However, Manaka arrived as light, and restored her memory using the butterflies. For just a moment",
+      "airdate": "2000-03-15",
+      "markers": [],
+      "external_id": "164333"
+    },
+    {
+      "n": 12,
+      "title": "A Requiem",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/164342/original.jpg",
+      "synopsis": "One year after the 11th episode, these events occur. Toka is going to take an entrance exam when she detects trouble. Indeed, as the manticore is still alive; it possessed the writer when the manticore was originally destroyed by Boogiepop Phantom. Boogipop comes and destroys both the manticore and the writer, who had actually died a long time ago. Boogiepop then says, \"\"I feel sorry for Toka Miashta. She was supposed to be taking an entrance exam now.\"\" Thus the series comes to the end, with us only just knowing who Boogiepop really was.",
+      "airdate": "2000-03-22",
+      "markers": [],
+      "external_id": "164342"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yuudachi",
+      "artist": "Shikao Suga",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mirai Seiki Maruhi Club",
+      "artist": "Kyoko",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,336 @@
+{
+  "id": "akiba-maid-war",
+  "title": "Akiba Maid War",
+  "native": "アキバ冥途戦争",
+  "year": 2022,
+  "rating": 7.4,
+  "season": "Fall 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151379-JxxgTgSViXZL.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151379-JxxgTgSViXZL.png",
+  "accent": "#e4c943",
+  "synopsis": "Akihabara is the center of the universe for the coolest hobbies and quirkiest amusements. In the spring of 1999, bright-eyed Nagomi Wahira moves there with dreams of joining a maid café. She quickly dons an apron at café Ton Tokoton, AKA the Pig Hut. But adjusting to life in bustling Akihabara isn’t as easy as serving tea and delighting customers. Paired with the dour Ranko who never seems to smile, Nagomi must do her best to elevate the Pig Hut over all other maid cafés vying for top ranking. Along the way she’ll slice out a place for herself amid the frills and thrills of life at the Pig Hut. Just when Nagomi’s dreams are within her grasp, she discovers not everything is as it seems amid the maid cafés of Akihabara.\n\n(Source: HIDIVE)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46210,
+    "anilist": 151379,
+    "mal": 52193
+  },
+  "skip_key_id": 52193,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 16:35:36",
+  "search_text": "akiba maid war アキハ 冥途戦争 tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 103,
+          "end": 193
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1257,
+          "end": 1347
+        }
+      ],
+      "external_id": "335238"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 18,
+          "end": 108
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "335239"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 10,
+          "end": 100
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1429
+        }
+      ],
+      "external_id": "335255"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 10,
+          "end": 100
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1422
+        }
+      ],
+      "external_id": "335256"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 14,
+          "end": 104
+        }
+      ],
+      "external_id": "335257"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 76,
+          "end": 166
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1346,
+          "end": 1436
+        }
+      ],
+      "external_id": "335258"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        }
+      ],
+      "external_id": "335259"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 20,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1422
+        }
+      ],
+      "external_id": "335260"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1425
+        }
+      ],
+      "external_id": "335261"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1362
+        }
+      ],
+      "external_id": "335262"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "335263"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 26,
+          "end": 116
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "335264"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Maid Daikaiten (メイド大回転; Great Maid Revolution)",
+      "artist": "all staff at Tontokoton",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Meido no Komoriuta (冥途の子守唄; Lullaby of the Underworld)",
+      "artist": "Ranko Mannen CV Rina Satō",
+      "episodes": "1-4, 6-11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Isshou Onna no Ko Sengen (一生女の子宣言☆; I Declare I'm a Girl for Life)",
+      "artist": "Ranko Mannen CV Rina Satō",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Meido no Komoriuta (冥途の子守唄; Lullaby of the Underworld)",
+      "artist": "Nagomi Wahira CV Reina Kondō",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

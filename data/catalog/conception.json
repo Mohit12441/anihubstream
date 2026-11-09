@@ -1,0 +1,240 @@
+{
+  "id": "conception",
+  "title": "Conception",
+  "native": "コンセプション",
+  "year": 2018,
+  "rating": 3.9,
+  "season": "Fall 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx101609-CRv6x3ifnius.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx101609-CRv6x3ifnius.jpg",
+  "accent": "#f1d686",
+  "synopsis": "The story of the game revolves around Itsuki Yuuge, a high school student who finds out on the day of his graduation ceremony that his cousin and childhood friend Mahiru is pregnant. Immediately afterward, Itsuki and Mahiru are taken to a magical world called Granvania, which is currently being invaded by monsters. The only people who can fight and exorcise the monsters are the \"star children,\" and the star children can only be produced by the 12 \"shrine maidens of the constellations.\" In order to defeat the monsters and return to his own world, Itsuki must father the star children with the maidens.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 41269,
+    "anilist": 101609,
+    "mal": 37823
+  },
+  "skip_key_id": 37823,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-22 10:55:57",
+  "search_text": "conception コンセフ ション tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "isekai",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "My Child?!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/255289/original.jpg",
+      "synopsis": "High school student Yuge Itsuki was sent off to a strange parallel world with his childhood friend Konatsuki Mahiru. It was the magical world of \"Granvania\", which was facing a crisis from the threats of \"Impurities.\" Itsuki was summoned to this world as a \"Visitor\" to save this world, but to accomplish this mission, he had to perform a ritual known as the \"Love Rituals...\"",
+      "airdate": "2018-10-10",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1380
+        }
+      ],
+      "external_id": "255289"
+    },
+    {
+      "n": 2,
+      "title": "I Want You to Have My Child",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/255290/original.jpg",
+      "synopsis": "Itsuki and Mahiru performed their first Love Ritual. A \"Star Child\" that will be able to cleanse the Impurity was born, as they bonded through physical contact. Later, they were transferred to \"Hoshigami Academy,\" where the \"maidens of the 12 constellations,\" who will perform the Love Rituals with Itsuki, were gathered. Itsuki starts to bond with one of the maidens, Ruka, at the cherry blossom viewing welcome party.",
+      "airdate": "2018-10-16",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1380
+        }
+      ],
+      "external_id": "255290"
+    },
+    {
+      "n": 3,
+      "title": "Would You Try Having My Child?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/255291/original.jpg",
+      "synopsis": "In order to defeat Impurities that turned out to be far stronger than expected, Itsuki is pressured to perform a \"Double Love Ritual\" with two maidens at the same time. It is said to produce powerful Star Children, but it has never been performed before. Itsuki steps into uncharted territory, following the lead of onee-san maidens Reone and Falun.",
+      "airdate": "2018-10-23",
+      "markers": [],
+      "external_id": "255291"
+    },
+    {
+      "n": 4,
+      "title": "Secrets in the Early Afternoon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/255292/original.jpg",
+      "synopsis": "Itsuki bonds with Yuzuha, Maiden of Pisces. She works as a painter, but uses a coffin as bed for some reason, and drew what she saw in dreams while sleeping inside it. She seems to be in a slump, so Itsuki asks her out on a date as a change of pace. Then she shows up carrying the coffin with her...",
+      "airdate": "2018-10-30",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1380
+        }
+      ],
+      "external_id": "255292"
+    },
+    {
+      "n": 5,
+      "title": "I've Got So Many Kids",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/255293/original.jpg",
+      "synopsis": "A beach tour was organized to deepen Itsuki's bond with the maidens. However, that information was leaked to the biggest playboy in the academy, Seiya, who followed them in an attempt to seduce the maidens. While at the beach, Lillith, the fortune teller Maiden of Gemini, predicts that Itsuki will die soon.",
+      "airdate": "2018-11-06",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1270,
+          "end": 1361
+        }
+      ],
+      "external_id": "255293"
+    },
+    {
+      "n": 6,
+      "title": "Will You Have My Child BlehBleh!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/255294/original.jpg",
+      "synopsis": "Mana recommends Collette, Maiden of Aquarius, to Itsuki for the next \"Love Ritual.\" However, Itsuki becomes hesitant of laying hands on a girl who is so pure and innocent. Despite being plagued by guilt, Itsuki helps out at the bakery where Collette usually works alone, in order to deepen their bond, but...",
+      "airdate": "2018-11-13",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1380
+        }
+      ],
+      "external_id": "255294"
+    },
+    {
+      "n": 7,
+      "title": "Please Be My Chikuwa!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/255295/original.jpg",
+      "synopsis": "Collette was trying to recreate her grandfather's secret \"Happy Bread\" to gather customers, and revive the dying bakery. Itsuki helps out, and they make countless prototypes based on few clues left by her grandfather. And so, the two spent the night together, and finally enjoy a moment of happiness.",
+      "airdate": "2018-11-20",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1380
+        }
+      ],
+      "external_id": "255295"
+    },
+    {
+      "n": 8,
+      "title": "My Child, Welcome!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/255296/original.jpg",
+      "synopsis": "Mana, the protector fairy for Visitor Itsuki, plans the \"Ultimate Love Ritual\" to encourage maidens who have yet to perform \"Love Rituals.\" It is supposedly an ultimate heavenly experience, but only a single maiden who managed to catch Itsuki's heart can be his partner.",
+      "airdate": "2018-11-27",
+      "markers": [],
+      "external_id": "255296"
+    },
+    {
+      "n": 9,
+      "title": "Let's Try Giving Birth, Together",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/255297/original.jpg",
+      "synopsis": "Itsuki finds out that in addition to Stardust Labyrinths where the \"Impurity Lords\" dwell, there is also the 13th labyrinth, as well as the existence of the 13th maiden. He sets out to find the maiden. However, there is the possibility that the 13th is a male. Although not quite convinced, he seeks all the male candidates he could think of...",
+      "airdate": "2018-12-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 17,
+          "end": 103
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1380
+        }
+      ],
+      "external_id": "255297"
+    },
+    {
+      "n": 10,
+      "title": "My Children, Thirteen of Them!?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/255298/original.jpg",
+      "synopsis": "The 13th maiden was not male... A girl claiming to be the 13th maiden shows up before Itsuki. She sets out to confess her love while wearing an outlandish '80s outfit. However, Itsuki fails to notice, and continues his search.",
+      "airdate": "2018-12-11",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1380
+        }
+      ],
+      "external_id": "255298"
+    },
+    {
+      "n": 11,
+      "title": "Are You Going to Tell Me That You Want Me to Have Your Child?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/255299/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-12-18",
+      "markers": [],
+      "external_id": "255299"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "255300"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

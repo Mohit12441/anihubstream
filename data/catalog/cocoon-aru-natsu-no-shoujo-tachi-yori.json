@@ -1,0 +1,62 @@
+{
+  "id": "cocoon-aru-natsu-no-shoujo-tachi-yori",
+  "title": "cocoon – One Summer of Girlhood",
+  "native": "cocoon ～ある夏の少女たちより～",
+  "year": 2025,
+  "rating": 7.4,
+  "season": "Spring 2025",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx166527-7Co2vkxgVzT8.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx166527-7Co2vkxgVzT8.png",
+  "accent": "#5da1e4",
+  "synopsis": "San and Mayu are two schoolgirls living in Okinawa during the closing months of the Pacific War. Together with their classmates, the two friends are drafted into the war effort as nurses for wounded soldiers. When ordered to die for their country, the remaining members of the group escape only to face the harsh environment of a tropical paradise that has become a hellish battlefield.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "cocoon:-aru-natsu-no-shoujo-tachi-yori-n0k93p",
+    "mal": 55779,
+    "anilist": 166527,
+    "kitsu": 47658
+  },
+  "skip_key_id": 55779,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "cocoon one summer of girlhood cocoon ある夏の少女たちより special finished",
+  "genres": [
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Cocoon: Aru Natsu no Shoujo-tachi yori",
+      "runtime": "60:00",
+      "runtime_seconds": 3600,
+      "thumb": "https://animehot.cc/storage/media/2026/09/68f60bd9df3d0e8ed6ee39c8-poster.jpg",
+      "synopsis": "San and Mayu are two schoolgirls living in Okinawa during the closing months of the Pacific War. Together with their classmates, the two friends are drafted into the war effort as nurses for wounded soldiers. When ordered to die for their country, the remaining members of the group escape only to face the harsh environment of a tropical paradise that has become a hellish battlefield.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "353127"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Zutto Zutto Zutto ~cocoon Ver.~ (ずっと ずっと ずっと ～cocoon Ver.～)",
+      "artist": "Marika Ito",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

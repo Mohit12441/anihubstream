@@ -1,0 +1,189 @@
+{
+  "id": "date-a-live-ii",
+  "title": "Date A Live II",
+  "native": "デート・ア・ライブⅡ",
+  "year": 2014,
+  "rating": 6.9,
+  "season": "Spring 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx19163-eHXj3mNRaOXt.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx19163-eHXj3mNRaOXt.jpg",
+  "accent": "#e49343",
+  "synopsis": "Shido Itsuka, who used to be a normal high school student at Raizen High, meets the first Spirit, Tohka, and awakens his power to \"seal the Spirit's power\". Though they may be feared and hated beings due to their immense power, Spirits were always alone and knew only combat and death. Shido, the only one in the world with the power to seal the Spirits' might, hurls himself into life-threatening dates with the beautiful Spirits in order to save them.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Date A Live: Date to Date",
+    "Date A Live II: Kurumi Star Festival (2014)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7864,
+    "anilist": 19163,
+    "mal": 19163,
+    "hianime": "date-a-live-ii-ddqp10"
+  },
+  "skip_key_id": 19163,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": "2026-10-14 09:43:34",
+  "search_text": "date a live ii テ ート ア ライフ ii tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "fantasy",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Daily Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114609/original.jpg",
+      "synopsis": "Shido and the Spirits are back, but Tohka's powers are unstable as she and Origami continue to compete for Shido's attention.",
+      "airdate": "2014-04-12",
+      "markers": [],
+      "external_id": "114609"
+    },
+    {
+      "n": 2,
+      "title": "Hurricane Children",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114610/original.jpg",
+      "synopsis": "Shido's class goes on a trip to DEM-affiliated Arubi Island, where he and Tohka get separated from the class and encounter twin Spirits.",
+      "airdate": "2014-04-19",
+      "markers": [],
+      "external_id": "114610"
+    },
+    {
+      "n": 3,
+      "title": "Two Requests",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114611/original.jpg",
+      "synopsis": "The tables are turned as Kaguya and Yuzuru try to make Shido fall in love with them.",
+      "airdate": "2014-04-26",
+      "markers": [],
+      "external_id": "114611"
+    },
+    {
+      "n": 4,
+      "title": "Manifestation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114612/original.jpg",
+      "synopsis": "In the air, the Fraxinus is under attack while Kotori is away, and Shido and Tohka are being attacked on the ground while Kaguya and Yuzuru fight their last duel.",
+      "airdate": "2014-05-03",
+      "markers": [],
+      "external_id": "114612"
+    },
+    {
+      "n": 5,
+      "title": "Diva",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114613/original.jpg",
+      "synopsis": "Shido meets Miku Izayoi, an idol also known as the Spirit, Diva, while getting ready for the joint cultural festival with other schools in Tengu City.",
+      "airdate": "2014-05-10",
+      "markers": [],
+      "external_id": "114613"
+    },
+    {
+      "n": 6,
+      "title": "Girls' Music",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114614/original.jpg",
+      "synopsis": "The Tenou Festival begins, and Shido has to cross-dress to participate in the activities as Shiori to satisfy Miku.",
+      "airdate": "2014-05-17",
+      "markers": [],
+      "external_id": "114614"
+    },
+    {
+      "n": 7,
+      "title": "Gabriel",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114615/original.jpg",
+      "synopsis": "When the results of the first day of the Tenou Festival are announced, Miku decides she doesn't want to play by the rules anymore.",
+      "airdate": "2014-05-24",
+      "markers": [],
+      "external_id": "114615"
+    },
+    {
+      "n": 8,
+      "title": "The Promise to Keep",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114616/original.jpg",
+      "synopsis": "With Kurumi's help, Shido tries to convince Miku to join him in rescuing Tohka, and Miku has second thoughts about her stance on Shido.",
+      "airdate": "2014-05-31",
+      "markers": [],
+      "external_id": "114616"
+    },
+    {
+      "n": 9,
+      "title": "The Truth About Miku",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114617/original.jpg",
+      "synopsis": "Shido learns more about Miku's past, and they go to rescue Tohka together as Mana, Origami, and the others fight the Wizards.",
+      "airdate": "2014-06-07",
+      "markers": [],
+      "external_id": "114617"
+    },
+    {
+      "n": 10,
+      "title": "Inversion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/114618/original.jpg",
+      "synopsis": "Shido has to find a way to deal Tohka's inverted form as the battle outside continues. Will he be able to restore order to the city?",
+      "airdate": "2014-06-14",
+      "markers": [],
+      "external_id": "114618"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "I swear",
+      "artist": "sweet ARMS",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Last Promise",
+      "artist": "Yamazaki Erii",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Trust in you",
+      "artist": "sweet ARMS",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Day to Story",
+      "artist": "Kaori Sadohara",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

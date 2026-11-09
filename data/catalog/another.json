@@ -1,0 +1,192 @@
+{
+  "id": "another",
+  "title": "Another",
+  "native": "アナザー",
+  "year": 2012,
+  "rating": 7.1,
+  "season": "Winter 2012",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11111-gvvE5bBYsyFo.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11111-gvvE5bBYsyFo.png",
+  "accent": "#e47850",
+  "synopsis": "When Kouichi Sakakibara transfers to a new school, he senses a frightening atmosphere in his new class, a secret none of them will talk about. At the center is the beautiful Mei Misaki. Kouichi is immediately drawn to her mysterious aura, but he begins to realize that no one else in the class is aware of her presence. Soon after his arrival, what is known as the Calamity begins, and it claims the lives of many students.\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "another-jjr73e",
+    "mal": 11111,
+    "anilist": 11111,
+    "kitsu": 6462
+  },
+  "skip_key_id": 11111,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "another アナサ ー tv finished",
+  "genres": [
+    "horror",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Rough sketch",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/95534/original.jpg",
+      "synopsis": "Kouichi Sakakibara has just arrived in Yomiyama, and he's already hospitalized with a collapsed lung. After joining the local middle school almost a month late, he becomes friends with someone he met while in the hospital — a quiet girl with an eye patch.",
+      "airdate": "2012-01-10",
+      "markers": [],
+      "external_id": "95534"
+    },
+    {
+      "n": 2,
+      "title": "Blueprint",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/95535/original.jpg",
+      "synopsis": "Kouichi's friendship with Mei seems to be one sided. He takes every chance he can get to speak to her, but she never seems to understand what he says. Her replies seem more cryptic as the days go by, and their classmates become increasingly suspicious.",
+      "airdate": "2012-01-17",
+      "markers": [],
+      "external_id": "95535"
+    },
+    {
+      "n": 3,
+      "title": "Bone work",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/95536/original.jpg",
+      "synopsis": "A studio crowded with old dolls is the perfect place for Mei to tell Kouichi the tale of three students' mysterious deaths 26 years ago. Finding out more information from his classmates proves difficult, but his aunt Reiko is willing to tell him more.",
+      "airdate": "2012-01-24",
+      "markers": [],
+      "external_id": "95536"
+    },
+    {
+      "n": 4,
+      "title": "Put flesh",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/95537/original.jpg",
+      "synopsis": "The rumor of the \"Class 3 Curse\" gains notoriety with the sudden and accidental death of a student. Kouichi, desperate to know more, turns to Mei who refuses to tell him anything else. Izumi Akazawa, the head of countermeasures, begins the investigation on Class 3.",
+      "airdate": "2012-01-31",
+      "markers": [],
+      "external_id": "95537"
+    },
+    {
+      "n": 5,
+      "title": "Build limbs",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/95538/original.jpg",
+      "synopsis": "Following Mizuno's bizarre accident, the tension rises in Class 3, and Izumi is chosen as the new Class Officer without Kouichi knowing. Rumors are spreading, but no one is willing to say anything.",
+      "airdate": "2012-02-07",
+      "markers": [],
+      "external_id": "95538"
+    },
+    {
+      "n": 6,
+      "title": "Face to Face",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/95539/original.jpg",
+      "synopsis": "A charm has been evoked by Class 3 for the past 26 years to ward off any further calamitous incidents. Kouichi begins to accept what's going on around him. However, he deems it unreasonable and begins spending more time with Mei.",
+      "airdate": "2012-02-14",
+      "markers": [],
+      "external_id": "95539"
+    },
+    {
+      "n": 7,
+      "title": "Sphere joint",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/95540/original.jpg",
+      "synopsis": "Fresh blood is spilled, and Class 3 realizes that the curse hasn't stopped. The Charm rituals are called off. Everyone is on edge, wondering who among them is actually dead. Meanwhile, Kouichi learns of an incident 15 years in the past.",
+      "airdate": "2012-02-21",
+      "markers": [],
+      "external_id": "95540"
+    },
+    {
+      "n": 8,
+      "title": "Hair stand",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/95541/original.jpg",
+      "synopsis": "A resort hotel is the rendezvous destination for Kouichi, Reiko and Matsunaga. As they spend a day sunning at the beach, they run into Mei, who's staying nearby.",
+      "airdate": "2012-02-28",
+      "markers": [],
+      "external_id": "95541"
+    },
+    {
+      "n": 9,
+      "title": "Body paint",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/95542/original.jpg",
+      "synopsis": "An unexpected accident outside Yomiyama once again puts Class 3 on edge. After Matsunaga's vague whispers point to the classroom, Kouichi decides to investigate the old Class 3 homeroom in the former school building.",
+      "airdate": "2012-03-06",
+      "markers": [],
+      "external_id": "95542"
+    },
+    {
+      "n": 10,
+      "title": "Glass eye",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/95543/original.jpg",
+      "synopsis": "The casualty count continues to rise, and Kouichi's search for Matsunaga's tape is successful. During the class trip, the friends gather to listen, and to find out what Matsunaga did to stop the curse.",
+      "airdate": "2012-03-13",
+      "markers": [],
+      "external_id": "95543"
+    },
+    {
+      "n": 11,
+      "title": "Makeup",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/95544/original.jpg",
+      "synopsis": "Matsunaga's tape has at last revealed the secrets and measures necessary to stop the curse. Kouichi and his friends try to figure out how to avert more disasters when the tape suddenly disappears.",
+      "airdate": "2012-03-20",
+      "markers": [],
+      "external_id": "95544"
+    },
+    {
+      "n": 12,
+      "title": "Stand by oneself",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/95545/original.jpg",
+      "synopsis": "Chaos runs through the lodge hallways as students desperately seek the key to stopping the Class 3 Curse once and for all. Will Kouichi be able to find the answer before another victim is claimed?",
+      "airdate": "2012-03-27",
+      "markers": [],
+      "external_id": "95545"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kyōmu Densen (凶夢伝染; Nightmare Contagion)",
+      "artist": "ALI PROJECT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "anamnesis",
+      "artist": "Annabel",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

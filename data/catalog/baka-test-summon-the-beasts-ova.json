@@ -1,0 +1,117 @@
+{
+  "id": "baka-test-summon-the-beasts-ova",
+  "title": "Baka and Test - Summon the Beasts: Matsuri",
+  "native": "バカとテストと召喚獣 ～祭～",
+  "year": 2011,
+  "rating": 7.2,
+  "season": "Winter 2011",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b9471-9OD9AGXNbdmq.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b9471-9OD9AGXNbdmq.jpg",
+  "accent": "#e4ffbb",
+  "synopsis": "Continuing where season 1 left off, everyone in Class F is bemoaning the horrible equipment they have. There is a school festival going on though, and if they make enough money they'll be able to buy better school supplies, and as always Akihisa is ready to do anything that might help out Himeji. This is especially important though, because Himeji's father is worried about her placement in Class F and is thinking about transferring her to another school. \n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "baka-and-test-summon-the-beasts-ova-djmpa5",
+    "mal": 9471,
+    "anilist": 9471,
+    "kitsu": 5745
+  },
+  "skip_key_id": 9471,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "baka and test summon the beasts matsuri ハ カとテストと召喚獣 祭 ova finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Day 1 - Me, Maids, and a New Start",
+      "runtime": "29:00",
+      "runtime_seconds": 1740,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "86898"
+    },
+    {
+      "n": 2,
+      "title": "Day 2 - Idiots, Fireworks and the Summoner Tournament",
+      "runtime": "29:00",
+      "runtime_seconds": 1740,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "86899"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kimi + Nazo + Watashi de JUMP!! (君＋謎＋私でJUMP!!)",
+      "artist": "Larval Stage Plannning",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Eureka Baby (エウレカベイビー)",
+      "artist": "Natsuko Aso",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Perfect-area complete!",
+      "artist": "Natsuko Aso",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Baka Go Home (バカ・ゴー・ホーム)",
+      "artist": "milktub and Baka Test All Stars [chorus; Hiro Shimono, Hitomi Harada, Kaori Mizuhashi, Emiri Katō, Tatsuhisa Suzuki, Kōki Miyata, and Tomomi Isomura]",
+      "episodes": "1-6, 10-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Baka to Koshitsu to Kodoku Han (バカと個室と孤独飯;An Idiot & His Room & Dinner Alone)",
+      "artist": "milktub",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Hare Tokidoki Egao (晴れときどき笑顔)",
+      "artist": "Hitomi Harada, Kaori Mizuhashi, Emiri Katou and Tomomi Isomura",
+      "episodes": "7-9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Hi-Ho!!",
+      "artist": "milktub",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

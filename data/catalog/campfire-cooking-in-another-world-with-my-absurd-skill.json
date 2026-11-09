@@ -1,0 +1,353 @@
+{
+  "id": "campfire-cooking-in-another-world-with-my-absurd-skill",
+  "title": "Campfire Cooking in Another World with my Absurd Skill",
+  "native": "とんでもスキルで異世界放浪メシ",
+  "year": 2023,
+  "rating": 7.5,
+  "season": "Winter 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx156067-Jovklss4VWIx.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx156067-Jovklss4VWIx.jpg",
+  "accent": "#d66b1a",
+  "synopsis": "Mukouda Tsuyoshi, an ordinary salaryman, is suddenly transported to another world one day. The unique skill he gains upon arrival in this world is the seemingly useless \"Online Grocery.\" Mukouda is discouraged at first, but the modern foods he's able to bring to his new world using this skill prove to have some unbelievable effects!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Campfire Cooking in Another World with my Absurd Skill Season 2 (2025)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46676,
+    "anilist": 156067,
+    "mal": 53446,
+    "hianime": "campfire-cooking-in-another-world-with-my-absurd-skill-rqxh9q"
+  },
+  "skip_key_id": 53446,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 11:05:15",
+  "search_text": "campfire cooking in another world with my absurd skill とんて もスキルて 異世界放浪メシ tv finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "fantasy",
+    "isekai"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Family Circumstances of the Unreliable Witch",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336751/thumbnail/medium-acc24d62daa042a01682c7d49cb38d76.jpeg",
+      "synopsis": "",
+      "airdate": "2023-01-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 167,
+          "end": 257
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1428,
+          "end": 1434
+        }
+      ],
+      "external_id": "336751"
+    },
+    {
+      "n": 2,
+      "title": "The Salient Familiar Is a Living Legend",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336752/thumbnail/medium-886775d6cb82543bef8c5365a9d678b1.jpeg",
+      "synopsis": "",
+      "airdate": "2023-01-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 52,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1425,
+          "end": 1435
+        }
+      ],
+      "external_id": "336752"
+    },
+    {
+      "n": 3,
+      "title": "My Super Power Is All About Cooking",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336753/thumbnail/medium-5526a17096fdf9de919ae0e5252b70e1.jpeg",
+      "synopsis": "",
+      "airdate": "2023-01-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1294,
+          "end": 1384
+        }
+      ],
+      "external_id": "336753"
+    },
+    {
+      "n": 4,
+      "title": "Cannot Start the Journey Without a Map",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336754/thumbnail/medium-7e232a17213c779552a4ab30c2d384a7.jpeg",
+      "synopsis": "",
+      "airdate": "2023-01-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 156,
+          "end": 247
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1375
+        }
+      ],
+      "external_id": "336754"
+    },
+    {
+      "n": 5,
+      "title": "The Goddess of Wind Has a Sweet Tooth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336755/thumbnail/medium-772260e3780501663e475df934e4aea7.jpeg",
+      "synopsis": "",
+      "airdate": "2023-02-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 22,
+          "end": 112
+        }
+      ],
+      "external_id": "336755"
+    },
+    {
+      "n": 6,
+      "title": "Growth Happens Out of Nowhere",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336756/thumbnail/medium-58698e4f9fc75924e9adbe8aab571f1c.jpeg",
+      "synopsis": "",
+      "airdate": "2023-02-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 100,
+          "end": 191
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1216,
+          "end": 1306
+        }
+      ],
+      "external_id": "336756"
+    },
+    {
+      "n": 7,
+      "title": "The Wolf Dances With Monsters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336757/thumbnail/medium-3fa5f5d859932f9d2fda5a579896c43e.jpeg",
+      "synopsis": "",
+      "airdate": "2023-02-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 135,
+          "end": 225
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1351
+        }
+      ],
+      "external_id": "336757"
+    },
+    {
+      "n": 8,
+      "title": "All of the Boss Monsters Are Tasty",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336758/thumbnail/medium-54900240d8bec5b5d9ddb8901f9450f2.jpeg",
+      "synopsis": "",
+      "airdate": "2023-02-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 77,
+          "end": 168
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1400
+        }
+      ],
+      "external_id": "336758"
+    },
+    {
+      "n": 9,
+      "title": "Hunting Quests Are All About Meat and Money",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336759/thumbnail/medium-d97da9ad810bc836cad90174ab2f2fed.jpeg",
+      "synopsis": "",
+      "airdate": "2023-03-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1287,
+          "end": 1377
+        }
+      ],
+      "external_id": "336759"
+    },
+    {
+      "n": 10,
+      "title": "My Two Familiars Are Too Overpowered",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336760/thumbnail/medium-37a2bf34a6aa56fbcaa936cd6da89f61.jpeg",
+      "synopsis": "",
+      "airdate": "2023-03-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1383
+        }
+      ],
+      "external_id": "336760"
+    },
+    {
+      "n": 11,
+      "title": "Doing Business for the Missus",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336761/thumbnail/medium-239503d8c5fc796e8d58cea5e2a2b8d8.jpeg",
+      "synopsis": "",
+      "airdate": "2023-03-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 99,
+          "end": 191
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1366
+        }
+      ],
+      "external_id": "336761"
+    },
+    {
+      "n": 12,
+      "title": "Adventures Are as Countless as Varieties of Food",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/336762/thumbnail/medium-4d13827eb89497b3313d56651d8beb0b.jpeg",
+      "synopsis": "",
+      "airdate": "2023-03-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 86,
+          "end": 172
+        }
+      ],
+      "external_id": "336762"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "yummy goodday",
+      "artist": "Cent Chihiro Chittiii",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "SALT AND PEPPER",
+      "artist": "Chelmico",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Zeitaku na Saji",
+      "artist": "Van de Shop",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Happy-go-Journey",
+      "artist": "Yūma Uchida",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,4265 @@
+{
+  "id": "black-clover",
+  "title": "Black Clover",
+  "native": "ブラッククローバー",
+  "year": 2017,
+  "rating": 7.9,
+  "season": "Fall 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97940-fyh8o7gNbha0.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97940-fyh8o7gNbha0.png",
+  "accent": "#d6c96b",
+  "synopsis": "In a world where magic is everything, Asta and Yuno are both found abandoned at a church on the same day. While Yuno is gifted with exceptional magical powers, Asta is the only one in this world without any. At the age of fifteen, both receive grimoires, magic books that amplify their holder’s magic. Asta’s is a rare Grimoire of Anti-Magic that negates and repels his opponent’s spells. Being opposite but good rivals, Yuno and Asta are ready for the hardest of challenges to achieve their common dream: to be the Wizard King. Giving up is never an option!\n\n(Source: Crunchyroll)",
+  "rank": 13,
+  "trend_rank": 7,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13209,
+    "anilist": 97940,
+    "mal": 34572,
+    "hianime": "black-clover-39vkmh"
+  },
+  "skip_key_id": 34572,
+  "skip_key_space": "mal",
+  "episode_total": 170,
+  "added_at": "2026-10-13 00:00:00",
+  "search_text": "black clover フ ラッククローハ ー tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Asta and Yuno",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254738/original.jpg",
+      "synopsis": "Asta et Yuno were orphaned boys who grew up together, but one was more fortunate than the other when it came to magic. When the day comes to receive their magical books, a grimoire, Yuno receives an extremely rare one while Asta does not receive one at all...",
+      "airdate": "2017-10-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 174,
+          "end": 264
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1281,
+          "end": 1380
+        }
+      ],
+      "external_id": "254738"
+    },
+    {
+      "n": 2,
+      "title": "The Boys' Promise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254739/original.jpg",
+      "synopsis": "Yuno's book was stolen by Lebuty. Helpless without it, Asta jumps in to fight despite having no magic of his own to defend himself...or does he?",
+      "airdate": "2017-10-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 207,
+          "end": 297
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1335,
+          "end": 1380
+        }
+      ],
+      "external_id": "254739"
+    },
+    {
+      "n": 3,
+      "title": "To the Royal Capital of the Clover Kingdom!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254740/original.jpg",
+      "synopsis": "Asta and Yuno spend six months training for the upcoming Magic Knights Entrance Exam. Everyone seems to think Yuno is sure to pass, but worries that Asta is just wasting his time.",
+      "airdate": "2017-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 180,
+          "end": 269
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1299,
+          "end": 1380
+        }
+      ],
+      "external_id": "254740"
+    },
+    {
+      "n": 4,
+      "title": "The Magic Knights Entrance Exam",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254741/original.jpg",
+      "synopsis": "Asta and Yuno head toward the colosseum in the royal capital for the Magic Knights Entrance Exam, while looking around and admiring all the things they’ve never seen before.",
+      "airdate": "2017-10-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 135
+        }
+      ],
+      "external_id": "254741"
+    },
+    {
+      "n": 5,
+      "title": "The Path to the Wizard King",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254742/original.jpg",
+      "synopsis": "The entrance exam finally comes to a close. The time has arrives for the captains to decide which candidates they want to join their squads.",
+      "airdate": "2017-10-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 180
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1292,
+          "end": 1380
+        }
+      ],
+      "external_id": "254742"
+    },
+    {
+      "n": 6,
+      "title": "The Black Bulls",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254743/original.jpg",
+      "synopsis": "Asta has arrived at the home of the Black Bulls, which Yami himself called the absolute worst Magic Knights Squad. He is greeted by the squad's unique members.",
+      "airdate": "2017-11-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 120,
+          "end": 210
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1380
+        }
+      ],
+      "external_id": "254743"
+    },
+    {
+      "n": 7,
+      "title": "The Other New Recruit",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254744/original.jpg",
+      "synopsis": "As a new member of the Black Bulls, Asta is thrilled to receive his very first private room, even though it's tiny. Everything Asta sees as Magna shows him around the squad's base is new and exciting to him.",
+      "airdate": "2017-11-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 141,
+          "end": 230
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1380
+        }
+      ],
+      "external_id": "254744"
+    },
+    {
+      "n": 8,
+      "title": "Go! Go! First Mission",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254745/original.jpg",
+      "synopsis": "The Magic Knights: heroes that everyone in the kingdom looks up to and dreams of becoming one day. But the new recruit, Asta, has yet to do anything that seems like what a Magic Knight should be doing, as he’s stuck doing random chores.",
+      "airdate": "2017-11-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 101
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1307,
+          "end": 1380
+        }
+      ],
+      "external_id": "254745"
+    },
+    {
+      "n": 9,
+      "title": "Beasts",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254746/original.jpg",
+      "synopsis": "On Yami’s orders, Asta and Noelle go on their first mission with Magna to hunt wild boars. They successfully complete the mission and go to Saussy Village to meet with the mayor, Seyhe.",
+      "airdate": "2017-11-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 153,
+          "end": 246
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1300,
+          "end": 1380
+        }
+      ],
+      "external_id": "254746"
+    },
+    {
+      "n": 10,
+      "title": "Those Who Protect",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254747/original.jpg",
+      "synopsis": "Asta, Noelle, and Magna are doing their best to protect the villagers of Rayaka from the ice magic user Heath and his underlings, but Asta’s attacks don’t seem to be working, and Magna’s magical powers are running low.",
+      "airdate": "2017-12-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 140,
+          "end": 230
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1302,
+          "end": 1380
+        }
+      ],
+      "external_id": "254747"
+    },
+    {
+      "n": 11,
+      "title": "What Happened on a Certain Day in the Castle Town",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254748/original.jpg",
+      "synopsis": "After Asta, Magna, and Noelle saved the villagers of Saussy Village, the Wizard King gives the Black Bulls a star of honor. Asta and Noelle also receive their first pay as Magic Knights, and Asta is filled with happiness.",
+      "airdate": "2017-12-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 99,
+          "end": 189
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1304,
+          "end": 1380
+        }
+      ],
+      "external_id": "254748"
+    },
+    {
+      "n": 12,
+      "title": "The Wizard King Saw",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254749/original.jpg",
+      "synopsis": "As they were visiting the Black Market, Asta and the others see an old woman get robbed, and Asta goes after the thief.",
+      "airdate": "2017-12-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 123,
+          "end": 213
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1286,
+          "end": 1376
+        }
+      ],
+      "external_id": "254749"
+    },
+    {
+      "n": 13,
+      "title": "The Wizard King Saw, Continued",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254750/original.jpg",
+      "synopsis": "While on an escort mission, Yuno, Klaus and Mimosa are attacked by a mysterious group of men. Klaus senses that they’re in danger and wants to escort Salim as quickly as possible, but Salim insists on visiting Yuno’s hometown, Hage Village.",
+      "airdate": "2017-12-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 31,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "254750"
+    },
+    {
+      "n": 14,
+      "title": "Dungeon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254751/original.jpg",
+      "synopsis": "A dungeon appeared near the border of the Clover Kingdom and the Diamond Kingdom. The dungeon is like an ancient ruin. It may contain important treasures, but they're guarded by various magical traps.",
+      "airdate": "2018-01-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 180,
+          "end": 270
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1272,
+          "end": 1362
+        }
+      ],
+      "external_id": "254751"
+    },
+    {
+      "n": 15,
+      "title": "The Diamond Mage",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254752/original.jpg",
+      "synopsis": "Yuno, Klaus, and Mimosa from the Golden Dawn appear in front of Asta and Noelle, apparently sent on the same mission. Klaus mocks the Black Bulls for their awful reputation and gets in an argument with Asta.",
+      "airdate": "2018-01-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 169,
+          "end": 259
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1380
+        }
+      ],
+      "external_id": "254752"
+    },
+    {
+      "n": 16,
+      "title": "Friends",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254753/original.jpg",
+      "synopsis": "Yuno, Mimosa, and Klaus get close to the treasure chamber in the dungeon. However, a mage from the Diamond Kingdom named Mars gets in their way.",
+      "airdate": "2018-01-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 193,
+          "end": 283
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1286,
+          "end": 1378
+        }
+      ],
+      "external_id": "254753"
+    },
+    {
+      "n": 17,
+      "title": "Destroyer",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254754/original.jpg",
+      "synopsis": "In order to go to the treasure chamber together with his friends, Yuno confronts Mars alongside Klaus, so that the injured Mimosa can heal herself. But they have a hard time harming Mars at all.",
+      "airdate": "2018-01-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 188,
+          "end": 268
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1380
+        }
+      ],
+      "external_id": "254754"
+    },
+    {
+      "n": 18,
+      "title": "Memories of You",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254755/original.jpg",
+      "synopsis": "Asta, Yuno and the others finally get to the treasure chamber, and they’re in awe at the mountain of treasure in front t of them. Yuno finds a strange scroll with strange writing, and then his grimoire does something strange.",
+      "airdate": "2018-02-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 159,
+          "end": 249
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1289,
+          "end": 1379
+        }
+      ],
+      "external_id": "254755"
+    },
+    {
+      "n": 19,
+      "title": "Destruction and Salvation",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254756/original.jpg",
+      "synopsis": "Asta is gravely injured in the battle against Mars and collapses. Despite his own injuries, something drives Mars onward, and he tries to finish off Asta.",
+      "airdate": "2018-02-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 131,
+          "end": 221
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1271,
+          "end": 1361
+        }
+      ],
+      "external_id": "254756"
+    },
+    {
+      "n": 20,
+      "title": "Assembly at the Royal Capital",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254757/original.jpg",
+      "synopsis": "Asta and Noelle head to the Magic Knights Headquarters in the Noble Realm to report on their mission to capture the dungeon. On their way, they run into Yuno, Klaus, and Mimosa, and they all head to the headquarters together.",
+      "airdate": "2018-02-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1303,
+          "end": 1380
+        }
+      ],
+      "external_id": "254757"
+    },
+    {
+      "n": 21,
+      "title": "Capital Riot",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254758/original.jpg",
+      "synopsis": "Asta defends Noelle from her siblings at the decoration ceremony, and the other nobles try to put him in his place. Meanwhile, Leopold and Fuegoleon seem to have taken a liking to Asta, which causes an argument between Fuegoleon and Nozel.",
+      "airdate": "2018-02-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 98,
+          "end": 188
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1373
+        }
+      ],
+      "external_id": "254758"
+    },
+    {
+      "n": 22,
+      "title": "Wild Magic Dance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254759/original.jpg",
+      "synopsis": "After hearing about the attack on the capital, Asta rushed out, and the rest of the Magic Knights quickly followed. They found that corpses being controlled by Rades’s wraith magic were attacking the citizens.",
+      "airdate": "2018-03-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 172,
+          "end": 262
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1273,
+          "end": 1363
+        }
+      ],
+      "external_id": "254759"
+    },
+    {
+      "n": 23,
+      "title": "The Crimson Lion King",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254760/original.jpg",
+      "synopsis": "Thanks to Noelle’s help, Asta is now able to concentrate on the battle. However, because of the attack he took earlier, Asta continues to lose stamina and isn’t able to move as well as he’d like.",
+      "airdate": "2018-03-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1372
+        }
+      ],
+      "external_id": "254760"
+    },
+    {
+      "n": 24,
+      "title": "Blackout",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254761/original.jpg",
+      "synopsis": "While the masses were praising the Magic Knights for saving them, most of the Magic Knights present are swallowed up by a spatial magic spell known as Blackout.",
+      "airdate": "2018-03-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 114,
+          "end": 204
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1286,
+          "end": 1376
+        }
+      ],
+      "external_id": "254761"
+    },
+    {
+      "n": 25,
+      "title": "Adversity",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254762/original.jpg",
+      "synopsis": "Captain Fuegoleon is swallowed up by spatial magic right in front of Asta and the others. Noelle realizes that the spellcaster must be nearby, since the spell pinpointed Fuegoleon. Asta finds the spellcaster, but something unbelievable happens next.",
+      "airdate": "2018-03-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 135,
+          "end": 225
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1271,
+          "end": 1361
+        }
+      ],
+      "external_id": "254762"
+    },
+    {
+      "n": 26,
+      "title": "Wounded Beasts",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254763/original.jpg",
+      "synopsis": "More enemies appear before Asta and the others. Despite being badly wounded, Asta and Leopold haven’t lost their fighting spirit, and they charge at the new enemies. The enemies realize how dangerous they are and try to kill them immediately.",
+      "airdate": "2018-04-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 186,
+          "end": 276
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1380
+        }
+      ],
+      "external_id": "254763"
+    },
+    {
+      "n": 27,
+      "title": "Light",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254764/original.jpg",
+      "synopsis": "The one who saved Asta from the group calling themselves the Eye of the Midnight Sun was the Wizard King, Julius, who was waiting for them at their base. Asta and the members of the Eye of the Midnight Sun are in awe of Julius’s power.",
+      "airdate": "2018-04-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 165,
+          "end": 255
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1303,
+          "end": 1380
+        }
+      ],
+      "external_id": "254764"
+    },
+    {
+      "n": 28,
+      "title": "The One I've Set My Heart On",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254765/original.jpg",
+      "synopsis": "Finral invites Asta and Luck to go to a mixer with him. Noelle hears about this and ends up following them because she’s concerned about Asta. To deepen her cover, she even gets a job at the pub they go to.",
+      "airdate": "2018-04-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1299,
+          "end": 1380
+        }
+      ],
+      "external_id": "254765"
+    },
+    {
+      "n": 29,
+      "title": "Path",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254766/original.jpg",
+      "synopsis": "Months have passed since Asta and Yuno became Magic Knights and took their first steps toward becoming the Wizard King. Father and Sister Lily couldn’t be happier about all of their hard work.",
+      "airdate": "2018-04-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 176,
+          "end": 266
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1293,
+          "end": 1380
+        }
+      ],
+      "external_id": "254766"
+    },
+    {
+      "n": 30,
+      "title": "The Mirror Mage",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254767/original.jpg",
+      "synopsis": "The Black Bulls get a day off after getting paid, and Gauche goes to visit his beloved little sister Marie. To his surprise, he finds Asta already there and playing with her.",
+      "airdate": "2018-05-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 91,
+          "end": 181
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "254767"
+    },
+    {
+      "n": 31,
+      "title": "Pursuit Over the Snow",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254768/original.jpg",
+      "synopsis": "Asta, Gauche, and Theresa go to find the abducted children. Gauche is able to track the faint trace of mana from the magic mirror that Marie always carries with her. On their way there, Asta spots Marco in the snow and goes to him.",
+      "airdate": "2018-05-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 176
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1264,
+          "end": 1354
+        }
+      ],
+      "external_id": "254768"
+    },
+    {
+      "n": 32,
+      "title": "Three-Leaf Sprouts",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254769/original.jpg",
+      "synopsis": "Asta and the others arrive at the dungeon where the children were being held. Seeing that Marie was hurt by the enemy, Gauche loses his mind. Asta is enraged at the fact that the children had their magic stolen, and he and Gauche go after Baro and Neige.",
+      "airdate": "2018-05-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 156
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1367
+        }
+      ],
+      "external_id": "254769"
+    },
+    {
+      "n": 33,
+      "title": "To Help Somebody Someday",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254770/original.jpg",
+      "synopsis": "Sally’s gel magic is extremely incompatible with Gauche’s mirror magic. She uses her dark magic item and turns Baro into a giant mud monster, which makes Gauche take Marie and flee.",
+      "airdate": "2018-05-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1257,
+          "end": 1347
+        }
+      ],
+      "external_id": "254770"
+    },
+    {
+      "n": 34,
+      "title": "Light Magic vs Dark Magic",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254771/original.jpg",
+      "synopsis": "After defeating Sally and Baro, Asta and Gauche suddenly end up having to face Licht, the leader of the Eye of the Midnight Sun. Licht's attacks are too fast for Asta to see, and he gets injured.",
+      "airdate": "2018-05-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 259,
+          "end": 349
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1380
+        }
+      ],
+      "external_id": "254771"
+    },
+    {
+      "n": 35,
+      "title": "The Light of Judgment",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254772/original.jpg",
+      "synopsis": "Yami and Licht continue their battle and Asta faces off with Valtos. Meanwhile, Finral manages to get all of the kids and Theresa back to the town and Theresa gets treated for her injuries.",
+      "airdate": "2018-06-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1273,
+          "end": 1363
+        }
+      ],
+      "external_id": "254772"
+    },
+    {
+      "n": 36,
+      "title": "Three Eyes",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254773/original.jpg",
+      "synopsis": "With the help of Gauche, Yami and Asta are able to defeat Licht. However, their victory is short-lived, as the three who call themselves the Third Eye appear and come to Licht’s aid.",
+      "airdate": "2018-06-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 30
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1281,
+          "end": 1373
+        }
+      ],
+      "external_id": "254773"
+    },
+    {
+      "n": 37,
+      "title": "The One With No Magic",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254774/original.jpg",
+      "synopsis": "Three of the Magic Knight captains—Jack the Ripper, Charlotte, and Nozel—appear and come to Yami and Asta's aid in fighting the Third Eye. Asta is told that his grimoire and swords belong to Licht's master, and Licht wants them back.",
+      "airdate": "2018-06-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 180
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1262,
+          "end": 1352
+        }
+      ],
+      "external_id": "254774"
+    },
+    {
+      "n": 38,
+      "title": "The Magic Knights Captain Conference",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254775/original.jpg",
+      "synopsis": "The Wizard King summons Asta after his work dealing with the Eye of the Midnight Sun. Yami tells Asta he can come with him to the royal capital, since he has to go to a conference of all the Magic Knights Captains.",
+      "airdate": "2018-06-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 78,
+          "end": 166
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1365
+        }
+      ],
+      "external_id": "254775"
+    },
+    {
+      "n": 39,
+      "title": "Three-Leaf Salute",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254776/original.jpg",
+      "synopsis": "Thanks to Asta, Julius and Marx were able to undo the protection spell that was on the captives from the Eye of the Midnight Sun and ask them who the traitor among them was.",
+      "airdate": "2018-07-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 107,
+          "end": 197
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1279,
+          "end": 1369
+        }
+      ],
+      "external_id": "254776"
+    },
+    {
+      "n": 40,
+      "title": "A Black Beach Story",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254777/original.jpg",
+      "synopsis": "Entrusted with a mission by the Wizard King, Asta and the other Black Bulls head to Raquey, a place that’s surrounded by strong mana. With Captain Yami gone off somewhere, the other members decide to play around on the beach in their swimsuits.",
+      "airdate": "2018-07-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 61,
+          "end": 151
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1374
+        }
+      ],
+      "external_id": "254777"
+    },
+    {
+      "n": 41,
+      "title": "The Water Girl Grows Up",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254778/original.jpg",
+      "synopsis": "Asta and Noelle train for their upcoming mission and meet a girl named Kahono, whose dream is to become an idol who can sing, dance, and use magic.",
+      "airdate": "2018-07-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1298,
+          "end": 1380
+        }
+      ],
+      "external_id": "254778"
+    },
+    {
+      "n": 42,
+      "title": "The Underwater Temple",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254779/original.jpg",
+      "synopsis": "Because of Noelle’s hard work, the Black Bulls are able to get through the harsh mana currents and safely arrive at the Underwater Temple. Everyone is nervous, since they’ve never been here before, but the underwater people welcome them with open arms.",
+      "airdate": "2018-07-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 103,
+          "end": 193
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1249,
+          "end": 1339
+        }
+      ],
+      "external_id": "254779"
+    },
+    {
+      "n": 43,
+      "title": "Temple Battle Royale",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254780/original.jpg",
+      "synopsis": "Asta and the other Black Bulls are split up throughout the Underwater Temple due to Gifso’s magic. They are forced to go head-to-head with the temple mages in a battle royale.",
+      "airdate": "2018-07-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 94,
+          "end": 184
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1255,
+          "end": 1345
+        }
+      ],
+      "external_id": "254780"
+    },
+    {
+      "n": 44,
+      "title": "The Pointlessly Direct Fireball and the Wild Lightning",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254781/original.jpg",
+      "synopsis": "One of the members of the Third Eye, Vetto, appears at the Underwater Temple along with his underlings.",
+      "airdate": "2018-08-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 124,
+          "end": 213
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "254781"
+    },
+    {
+      "n": 45,
+      "title": "The Guy Who Doesn't Know When to Quit",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254782/original.jpg",
+      "synopsis": "Magna, Luck, and Gio, the most powerful Underwater Temple mage, risk their lives fighting Vetto. Asta and Kahono’s older brother, Kiato, also arrive at the scene.",
+      "airdate": "2018-08-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 178,
+          "end": 268
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1292,
+          "end": 1380
+        }
+      ],
+      "external_id": "254782"
+    },
+    {
+      "n": 46,
+      "title": "Awakening",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254783/original.jpg",
+      "synopsis": "Kahono and Noelle reach Asta and the others. Noelle is astonished at how powerful Vetto is, but Kahono remains confident. She is the granddaughter of Gifso and cherishes everyone at the Underwater Temple, which she is willing to do anything to protect.",
+      "airdate": "2018-08-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 123,
+          "end": 213
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1380
+        }
+      ],
+      "external_id": "254783"
+    },
+    {
+      "n": 47,
+      "title": "The Only Weapon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254784/original.jpg",
+      "synopsis": "Despite being greatly injured in the battle against Vetto, Asta stands up to face him again. Seeing this, Vanessa and Finral come to assist Asta, too.",
+      "airdate": "2018-08-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 338,
+          "end": 428
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1375
+        }
+      ],
+      "external_id": "254784"
+    },
+    {
+      "n": 48,
+      "title": "Despair vs. Hope",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254785/original.jpg",
+      "synopsis": "Asta continues his attacks against Vetto with support from Vanessa and Finral. They finally manage to land a blow on Vetto, but it’s not very effective. Vanessa and Finral remember when they were younger and much weaker.",
+      "airdate": "2018-09-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 105,
+          "end": 195
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1266,
+          "end": 1356
+        }
+      ],
+      "external_id": "254785"
+    },
+    {
+      "n": 49,
+      "title": "Beyond Limits",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254786/original.jpg",
+      "synopsis": "Asta's never-give-up attitude has a impact on his fellow Black Bulls. Vetto recalls his youth, while Yami comes to a realization and takes action.",
+      "airdate": "2018-09-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 180
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1239,
+          "end": 1329
+        }
+      ],
+      "external_id": "254786"
+    },
+    {
+      "n": 50,
+      "title": "End of the Battle, End of Despair",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254787/original.jpg",
+      "synopsis": "The Black Bulls recover after their fight against the Eye of the Midnight Sun took everything out of them--literally. Asta gets himself back on track.",
+      "airdate": "2018-09-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 144,
+          "end": 234
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1289,
+          "end": 1380
+        }
+      ],
+      "external_id": "254787"
+    },
+    {
+      "n": 51,
+      "title": "Proof of Rightness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254788/original.jpg",
+      "synopsis": "The Clover Kingdom can barely breathe a sigh of relief before the border village of Kiten is attacked by the Diamond Kingdom's most fearsome generals.",
+      "airdate": "2018-09-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1272,
+          "end": 1362
+        }
+      ],
+      "external_id": "254788"
+    },
+    {
+      "n": 52,
+      "title": "Whoever's Strongest Wins",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254789/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-10-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 5,
+          "end": 95
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1367
+        }
+      ],
+      "external_id": "254789"
+    },
+    {
+      "n": 53,
+      "title": "Behind the Mask",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254819/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-10-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 85,
+          "end": 175
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "254819"
+    },
+    {
+      "n": 54,
+      "title": "Never Again",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254820/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-10-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 118,
+          "end": 208
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1259,
+          "end": 1349
+        }
+      ],
+      "external_id": "254820"
+    },
+    {
+      "n": 55,
+      "title": "The Man Named Fanzell",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254821/original.jpg",
+      "synopsis": "",
+      "airdate": "2018-10-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 120
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1380
+        }
+      ],
+      "external_id": "254821"
+    },
+    {
+      "n": 56,
+      "title": "The Man Named Fanzell Continued",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/254822/original.jpg",
+      "synopsis": "A few months after being trained by Fanzell, Asta is able to join the Black Bulls. One day, Fanzell suddenly shows up at the Black Bulls' base. Fanzell recognized Noelle's staff and wanted to ask her about it. It was created by his fiancee, Domina, and he was thankful to find another clue as to her whereabouts. But then, more assassins who are after Fanzell also appear at the Black Bulls' base...",
+      "airdate": "2018-11-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 120
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1328,
+          "end": 1380
+        }
+      ],
+      "external_id": "254822"
+    },
+    {
+      "n": 57,
+      "title": "Infiltration",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256189/original.jpg",
+      "synopsis": "Noelle and Finral go to visit Asta's sword instructor, Fanzell, in hopes that he'd know a way to fix Asta's arms. Fanzell's fiancee, Domina, tells them that the Queen of Witches in the Witches' Forest should be able to dispel ancient curses, so they go to visit her. They eventually get Asta as well as Mariella to tag along and Domina leads them to the forest. However an incident occurs and their infiltration soon gets found out. They manage to bust into the Queen of Witches's mansion, but she already had a prior guest. It was Vanessa, who also came from the Witches' Forest just like Domina...",
+      "airdate": "2018-11-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 102,
+          "end": 192
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1272,
+          "end": 1362
+        }
+      ],
+      "external_id": "256189"
+    },
+    {
+      "n": 58,
+      "title": "Battlefield Decision",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256412/original.jpg",
+      "synopsis": "While Asta and the others were meeting with the Queen of Witches, the forces of the Diamond Kingdom and the Eye of the Midnight Sun were getting closer to the Witches' Forest. The party asks the Queen of Witches to cure Asta's arms so he can help protect the witches from the incoming forces. The Queen of Witches takes interest in Asta's anti-magic sword and cures Asta's arms. The party splits up into two different teams to go face off with both of the incoming forces.",
+      "airdate": "2018-11-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 94,
+          "end": 184
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1276,
+          "end": 1366
+        }
+      ],
+      "external_id": "256412"
+    },
+    {
+      "n": 59,
+      "title": "Flames of Hatred",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256604/original.jpg",
+      "synopsis": "Noelle uses her water magic to try to put out the fires that have sprouted up around the forest while Asta, Finral, and Vanessa confront another member of the Third Eye, Fana. Asta tries to reason with Fana by talking to her, but that quickly gets shut down when Fana attacks with her fire spirit, salamander. They soon find out that Fana not only has fire magic, but other magic using different attributes...",
+      "airdate": "2018-11-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 139,
+          "end": 229
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1365
+        }
+      ],
+      "external_id": "256604"
+    },
+    {
+      "n": 60,
+      "title": "Defectors' Atonement",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256735/original.jpg",
+      "synopsis": "While Asta and the other Black Bulls were fighting with Fana, Fanzell was facing off with the forces of the Diamond Kingdom, which he used to be a part of. The forces happen to be led by two of Fanzell's former students, Ladros and Mars. Fanzell left the Diamond Kingdom because he didn't agree with the kingdom's methods, but before, he would train children on how to use their powers for the Diamond Kingdom. Fanzell tries to reason with his former students, but Ladros attacks regardlessly, forcing Fanzell to fight with them.",
+      "airdate": "2018-11-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 84,
+          "end": 174
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1270,
+          "end": 1360
+        }
+      ],
+      "external_id": "256735"
+    },
+    {
+      "n": 61,
+      "title": "The Promised World",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256913/original.jpg",
+      "synopsis": "Fanzell ends up bring Mars and Ladros to where Asta was fighting. In order to defeat Ladros who absorbs the magic of his enemies, Fanzell thinks of a plan to have Asta's anti-magic counter that. Asta doesn't really understand what's going on but does what Fanzell asks him to do. He bats away Fana's spirit magic with his sword. Meanwhile, Mars sees Fana, and...",
+      "airdate": "2018-12-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 134,
+          "end": 224
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1261,
+          "end": 1351
+        }
+      ],
+      "external_id": "256913"
+    },
+    {
+      "n": 62,
+      "title": "Those Who Boost Each Other Up",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257433/original.jpg",
+      "synopsis": "Working alongside Mars, Asta is able to stop Fana from self-destructing. Fana regains her senses and they ask her what happened. However, Fana doesn't remember the events that happened after she had lost consciousness, other than she felt the strong need to take back the magic stones and that she was being controlled by someone's extreme hatred. Meanwhile, Ladros, who they thought they'd defeated, comes back even stronger and attacks them. The attack was so sudden that everyone didn't have time to react. Asta tries to face Ladros alone, and...",
+      "airdate": "2018-12-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 156,
+          "end": 246
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1278,
+          "end": 1368
+        }
+      ],
+      "external_id": "257433"
+    },
+    {
+      "n": 63,
+      "title": "Not in the Slightest",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257434/original.jpg",
+      "synopsis": "Asta loses consciousness after Ladros's attack and the Queen of Witches tries to use this opportunity to awaken Asta's true powers. Meanwhile, Asta ends up waking up in a strange space, and he realizes there's a giant being in front of him. The being offers to lend him strength in exchange for Asta's body, but Asta declines. Asta finally regains consciousness and seems to have powers that Noelle and the others had never seen before...",
+      "airdate": "2018-12-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 143
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1327,
+          "end": 1380
+        }
+      ],
+      "external_id": "257434"
+    },
+    {
+      "n": 64,
+      "title": "The Red Thread of Fate",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257435/original.jpg",
+      "synopsis": "As promised, Asta and the others get rid of the invaders who attacked the Witches' Forest. However, the Queen of Witches was after Asta and his swords to begin with. She uses a spell to make Asta her puppet and tries to get him to kill his own friends. Vanessa begs the queen to stop, but she refuses. But in her helplessness, Vanessa ends up awakening to a new spell...",
+      "airdate": "2018-12-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 163,
+          "end": 253
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1279,
+          "end": 1369
+        }
+      ],
+      "external_id": "257435"
+    },
+    {
+      "n": 65,
+      "title": "I'm Home",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257436/original.jpg",
+      "synopsis": "The Queen of Witches had been waiting patiently for Vanessa to awaken to her true powers, but ironically, it was those powers that helped them defeat the queen. The Queen of Witches realizes that she was wrong and heals Asta and the rest of the party, and tells Vanessa that she may do as she pleases now. They ask the queen if she knows why the Eye of the Midnight Sun is after the magic stones and she explains that both the swords Asta has as well as the magic stones all belonged to the legendary elf tribe that no longer exists...",
+      "airdate": "2019-01-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 116,
+          "end": 206
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1273,
+          "end": 1363
+        }
+      ],
+      "external_id": "257436"
+    },
+    {
+      "n": 66,
+      "title": "The Eye of the Midnight Sun's Secret",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257437/original.jpg",
+      "synopsis": "Asta and the others safely return to the Black Bulls' base after defeating the Eye of the Midnight Sun and the Diamond Kingdom in the Witches' Forest. Now that Asta's arms have healed, the Black Bulls as well as Yuno, Klaus, and Mimosa are relieved. However, there's no telling when the Eye of the Midnight Sun or the Diamond Kingdom will try to attack the Clover Kingdom again. Klaus then brings up a proposal to Yuno and Mimosa.",
+      "airdate": "2019-01-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1276,
+          "end": 1366
+        }
+      ],
+      "external_id": "257437"
+    },
+    {
+      "n": 67,
+      "title": "A Fun Festival Double Date",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/257663/original.jpg",
+      "synopsis": "The Star Festival, the biggest festival of the year in the Clover Kingdom was about to take place. Every year the festival, the number of stars each Magic Knight squad had acquired would be announced. Captain Yami and the other Black Bulls prepare to go all out for this festival. Noelle tries to use this chance to enjoy the festival with Asta, but Asta ends up inviting some guests to the festival. The guests happened to be Kahono and Kiato...",
+      "airdate": "2019-01-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 169
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1276,
+          "end": 1366
+        }
+      ],
+      "external_id": "257663"
+    },
+    {
+      "n": 68,
+      "title": "Battle to the Death?! Yami VS Jack",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258001/original.jpg",
+      "synopsis": "The Star Festival, the biggest festival of the year in the Clover Kingdom was about to take place. Every year the festival, the number of stars each Magic Knight squad had acquired would be announced. Captain Yami and the other Black Bulls prepare to go all out for this festival. Noelle tries to use this chance to enjoy the festival with Asta, but Asta ends up inviting some guests to the festival. The guests happened to be Kahono and Kiato...",
+      "airdate": "2019-01-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 30
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "258001"
+    },
+    {
+      "n": 69,
+      "title": "The Briar Maiden's Melancholy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258315/original.jpg",
+      "synopsis": "Asta ends up passing a group of guys at the Star Festival who all seem to be looking in the direction of a beautiful woman. This beautiful woman happened to be the captain of the Blue Rose Knights, Charlotte, who was forced to wear a dress by one of her squad members, Sol Marron. Charlotte isn't very fond of men, so she was getting frustrated by all the staring, but then she happens to see Yami. Yami teases Charlotte for wearing a dress and she tries to keep her cool. Vanessa then shows up and starts to feel a fierce rivalry against Charlotte...",
+      "airdate": "2019-02-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 30
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1281,
+          "end": 1371
+        }
+      ],
+      "external_id": "258315"
+    },
+    {
+      "n": 70,
+      "title": "Two New Stars",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258591/original.jpg",
+      "synopsis": "The Star Festival finally reaches its climax. The ranking of each Magic Knight squad is about to be announced. As the crowd watches in anticipation, the Golden Dawn is announced as taking first place, but then the Black Bulls get announced as taking second place?! On top of that, Asta and Yuno both get called up to the stage for the excellent work they had done. Both of them had worked hard to achieve everything they could for their respective squads and now, they'll get a chance to achieve something even more!",
+      "airdate": "2019-02-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 17,
+          "end": 107
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1288,
+          "end": 1380
+        }
+      ],
+      "external_id": "258591"
+    },
+    {
+      "n": 71,
+      "title": "The Uncrowned, Undefeated Lioness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/258842/original.jpg",
+      "synopsis": "Asta and Yuno end up seeing Mereoleona scolding the members of the Crimson Lion Kings after the Star Festival. Mereoleona is the older sister of their former captain, Fuegoleon, and was unhappy with their performance at the Star Festival. She calls her brother a fool and Leopold and the other squad members defend him. She then says they're going to a volcano for a training camp and also ends up taking Asta, Yuno, Yami, Charlotte and Noelle with them as well...",
+      "airdate": "2019-02-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 157
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1380
+        }
+      ],
+      "external_id": "258842"
+    },
+    {
+      "n": 72,
+      "title": "Saint Elmo's Fire",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259124/original.jpg",
+      "synopsis": "Asta and Yuno end up seeing Mereoleona scolding the members of the Crimson Lion Kings after the Star Festival. Mereoleona is the older sister of their former captain, Fuegoleon, and was unhappy with their performance at the Star Festival. She calls her brother a fool and Leopold and the other squad members defend him. She then says they're going to a volcano for a training camp and also ends up taking Asta, Yuno, Yami, Charlotte and Noelle with them as well...",
+      "airdate": "2019-02-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 165
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1375
+        }
+      ],
+      "external_id": "259124"
+    },
+    {
+      "n": 73,
+      "title": "The Royal Knights Selection Test",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259192/original.jpg",
+      "synopsis": "The exam to determine the Royal Knights that will fight against the Eye of the Midnight Sun. Asta and Yuno participate along with the Black Bulls, Noelle, Magna, Luck, and Finral, as well as Mimosa and Klaus from the Golden Dawn. Other Magic Knights include Leopold from the Crimson Lion Kings as well as many other notable Magic Knights. The Wizard King then announces the teams that will be participating in the Royal Knights Selection Exam.",
+      "airdate": "2019-03-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 66,
+          "end": 156
+        }
+      ],
+      "external_id": "259192"
+    },
+    {
+      "n": 74,
+      "title": "Flower of Resolution",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259580/original.jpg",
+      "synopsis": "The first round of the Royal Knights Selection Exam... Asta's team is first up to fight. Asta ends up on a team with Mimosa and a mage named Xerx Lügner. The way to win the battle is to destroy the other team's crystal. However, before the match even starts, Xerx upsets the enemy team by being rude to the Wizard King and they heavily damage Asta's team's crystal. Asta and Mimosa panic. Meanwhile, Xerx doesn't seem like he wants to do this at all and takes a break. Asta and Mimosa must now fight alone... What will they do?",
+      "airdate": "2019-03-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 95,
+          "end": 185
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1289,
+          "end": 1379
+        }
+      ],
+      "external_id": "259580"
+    },
+    {
+      "n": 75,
+      "title": "Fierce Battle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259638/original.jpg",
+      "synopsis": "Asta and the other Black Bulls continue to fight through stage one of the exam, trying to get to stage two. Magna ends up teaming up with the vice-captain of the Coral Peacocks, Kirsch, also happens to be Mimosa's older brother and Sol from the Blue Rose Knights. Kirsch seems to just go on about how beautiful he is and Magna and Sol don't know how to deal with the biggest narcissist they've ever met. Meanwhile, Finral ends up on a team with Leopold and Hamon and Finral was getting fired up, thinking about having to fight his brother Langris soon...",
+      "airdate": "2019-03-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1273,
+          "end": 1361
+        }
+      ],
+      "external_id": "259638"
+    },
+    {
+      "n": 76,
+      "title": "Mage X",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259699/original.jpg",
+      "synopsis": "The members of the Black Bulls show off strength that far surpasses their ranks of Junior Magic Knights. Finally, round 5 of stage 1 of the Royal Knights Selection Exam was about to begin. However, they can't seem to find the person called \"X\" on the I team, which is one of the teams that's about to fight. Finally, Mage X shows up, but they're actually...",
+      "airdate": "2019-03-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 89,
+          "end": 179
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1380
+        }
+      ],
+      "external_id": "259699"
+    },
+    {
+      "n": 77,
+      "title": "Bad Blood",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259830/original.jpg",
+      "synopsis": "Klaus, Puli, and Luck’s team battle has now begun. Between Klaus’s cautious nature, Luck’s tendency to go beserk, and Puli’s hyperactive personality, they’re able to pull a win. Then Yuno, Noelle, and En end up battling against Alecdora Sandler and Solid Silva in the last battle of the first stage.",
+      "airdate": "2019-04-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 105,
+          "end": 195
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1278,
+          "end": 1368
+        }
+      ],
+      "external_id": "259830"
+    },
+    {
+      "n": 78,
+      "title": "Peasant Trap",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/259958/original.jpg",
+      "synopsis": "The first stage of the Royal Knights Selection Exam comes to a close and the second stage begins. The first match is between Asta, Mimosa, Xerx and Magna, Kirsch, and Sol. Kirsch is as narcissistic and powerful as ever, giving Asta problems. But then he remembers his training back at the volcano and uses his Black Asta powers. Will he be able to defeat Kirsch?",
+      "airdate": "2019-04-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 115,
+          "end": 205
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1380
+        }
+      ],
+      "external_id": "259958"
+    },
+    {
+      "n": 79,
+      "title": "Mister Delinquent vs. Muscle Brains",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/260133/original.jpg",
+      "synopsis": "Asta is able to stop Kirsch from moving with the help of Xerx, but the Magna appears before them. Magna has always been an expert at controlling his powers and he now has a new spell. He uses the new spell to gradually damage Asta’s team’s crystal. Meanwhile, Mimosa realizes that the enemy team’s crystal is inside Sol’s golem and she comes up with a plan.",
+      "airdate": "2019-04-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1273,
+          "end": 1380
+        }
+      ],
+      "external_id": "260133"
+    },
+    {
+      "n": 80,
+      "title": "Special Little Brother vs. Failed Big Brother",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/260185/original.jpg",
+      "synopsis": "The Wizard King ends up changing the order of the matches. Now, Asta’s team and Langris’s team begin their match. Langris is as powerful as ever and continues to show his deep hatred, meanwhile, Asta faces off with him passionately, angered by the fact that he mocked and injured Finral. Seeing Asta fight, Xerx remembers a certain someone. Meanwhile, something had been bothering Julius for quite a while, so he quietly watches the match.",
+      "airdate": "2019-04-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1262,
+          "end": 1352
+        }
+      ],
+      "external_id": "260185"
+    },
+    {
+      "n": 81,
+      "title": "The Life of a Certain Man",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/260332/original.jpg",
+      "synopsis": "The Wizard King ends up changing the order of the matches. Now, Asta’s team and Langris’s team begin their match. Langris is as powerful as ever and continues to show his deep hatred, meanwhile, Asta faces off with him passionately, angered by the fact that he mocked and injured Finral. Seeing Asta fight, Xerx remembers a certain someone. Meanwhile, something had been bothering Julius for quite a while, so he quietly watches the match.",
+      "airdate": "2019-04-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 34,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "260332"
+    },
+    {
+      "n": 82,
+      "title": "Petit Clover! The Nightmarish Charmy SP!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/260604/original.jpg",
+      "synopsis": "The Black Bulls are doing much better than anyone expected during the Royal Knights Selection Exam. Meanwhile, Charmy decides that she wants to make something yummy for her Meal-saving Prince and goes to gather some ingredients. However, she ends up eating some poisonous mushrooms and starts to see strange dreams. In that strange dream world, everyone seems to be much smaller... A special episode with a bunch of Petit Clover episodes!",
+      "airdate": "2019-05-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 148,
+          "end": 238
+        }
+      ],
+      "external_id": "260604"
+    },
+    {
+      "n": 83,
+      "title": "Burn It Into You",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/260861/original.jpg",
+      "synopsis": "Xerx’s magic seems to have little effect against Langris, as well, so Asta decides to use his Black Asta powers. Will he be able to defeat Langris, despite Langris’s tremendous magical powers? Luck’s team then faces off with Rill’s team and then finally, Rill’s team goes up against Yuno’s team...",
+      "airdate": "2019-05-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 180,
+          "end": 270
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1271,
+          "end": 1361
+        }
+      ],
+      "external_id": "260861"
+    },
+    {
+      "n": 84,
+      "title": "The Victors",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/261231/original.jpg",
+      "synopsis": "The final match of the Royal Knights Selection Exam has finally come down to Yuno, Noelle, and En’s team versus Rill’s team. Yuno takes on the captain of the Aqua Deer as Noelle and En guard their crystal. Both Yuno and Rill have extreme amounts of magic and natural skill, and Asta watched their battle, trying to hold back his own disappointment...",
+      "airdate": "2019-05-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 218,
+          "end": 308
+        }
+      ],
+      "external_id": "261231"
+    },
+    {
+      "n": 85,
+      "title": "Together in the Bath",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/261465/original.jpg",
+      "synopsis": "For some reason, Captain Yami tells all the Black Bulls to take a bath with him. After not being able to fight with Yuno in the Royal Knights Selection Exam finals, Asta had been acting like his soul was gone. While in the bath, Yami starts to tell the Black Bulls about an incident that happened when he had just become a Magic Knight and had gone on a journey to train.",
+      "airdate": "2019-05-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 96,
+          "end": 186
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1373
+        }
+      ],
+      "external_id": "261465"
+    },
+    {
+      "n": 86,
+      "title": "Yami and Vangeance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264092/original.jpg",
+      "synopsis": "A few years after Vangeance had saved Yami from the group of bandits, they were still Magic Knight squad members and were assigned a special mission by Julius. It was a mission to track down the Magic Knights that were aiding a group of bandits who were terrorizing places throughout the Clover Kingdom. Yami and William decide to split up to cover more ground and Yami ends up running into the bandits!",
+      "airdate": "2019-06-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 346,
+          "end": 436
+        }
+      ],
+      "external_id": "264092"
+    },
+    {
+      "n": 87,
+      "title": "Formation of the Royal Knights",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264188/original.jpg",
+      "synopsis": "Asta, Noelle, and Luck are suddenly taken away by Captain Mereoleona, who suddenly dropped in at the Black Bulls’ base. It just so happened the three of them had passed the Royal Knights Selection Exam. The other Magic Knights who passed had also gathered, including the two Magic Knights who fought a fierce battle in the finals, Yuno and the captain of the Aqua Deer, Rill. They were then informed that there would be one more member of the Black Bulls joining them, and it happened to be... Finally, Captain Nozel from the Silver Eagles also joined them as the captain of the Royal Knights, Mereoleona prepped them for their battle against the Eye of the Midnight Sun.",
+      "airdate": "2019-06-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 65,
+          "end": 155
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1264,
+          "end": 1380
+        }
+      ],
+      "external_id": "264188"
+    },
+    {
+      "n": 88,
+      "title": "Storming the Eye of the Midnight Sun's Hideout!!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264718/original.jpg",
+      "synopsis": "The Royal Knights arrive at the floating dungeon at the Gravito Stones, which is where the Eye of the Midnight Sun’s hideout is. Mereoleona orders them to split into five different teams and they begin their assault. Asta heads in with Mereoleona and Zora Ideale. Meanwhile, Captain Nozel of the Silver Eagles also heads in, vowing to get revenge for a fallen rival.",
+      "airdate": "2019-06-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 75,
+          "end": 165
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1263,
+          "end": 1380
+        }
+      ],
+      "external_id": "264718"
+    },
+    {
+      "n": 89,
+      "title": "The Black Bulls' Hideout",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264964/original.jpg",
+      "synopsis": "While the Royal Knights began their assault on the Eye of the Midnight Sun’s hideout, Rades, Valtos and Sally from the Eye of the Midnight Sun attack the Black Bulls’ hideout. Gauche, Gordon, and Grey who remained back at the hideout end up having to fight. Gauche is worried about the fact that his mirror magic doesn’t work well against Sally’s gel magic, but he works together with Grey and Gordon to do everything they can to protect their hideout.",
+      "airdate": "2019-06-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 256,
+          "end": 346
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1380
+        }
+      ],
+      "external_id": "264964"
+    },
+    {
+      "n": 90,
+      "title": "Crazy Magic Battle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/265239/original.jpg",
+      "synopsis": "During the battle at the Black Bulls’ hideout, the hideout suddenly changes its shape, and Gauche and the others are surprised by the mysterious figure that emerges from it. This was the identity of the rumored ghost that lived in the hideout. His name was Henry Legolant, and he was the true master of the mansion. Henry is able to change the mansion into any form he chooses and had been watching over the rest of the Black Bulls ever since Yami had given him a cloak. He fights alongside his precious friends to protect their home.",
+      "airdate": "2019-07-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 89,
+          "end": 179
+        }
+      ],
+      "external_id": "265239"
+    },
+    {
+      "n": 91,
+      "title": "Mereoleona vs. Raia the Disloyal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/265333/original.jpg",
+      "synopsis": "Mereoleona and Nozel plow their way through the dungeon to get to Licht along with the other Royal Knights. It is then that the final member of the Third Eye, Raia the Disloyal, appears in front of Mereoleona. Asta and Zora are astounded at how powerful Mereoleona is, but then suddenly, there are two Astas. Mereoleona doesn’t even hesitate and decides to attack both of the Astas.",
+      "airdate": "2019-07-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 7,
+          "end": 97
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "265333"
+    },
+    {
+      "n": 92,
+      "title": "The Wizard King vs. The Leader of the Eye of the Midnight Sun",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/265452/original.jpg",
+      "synopsis": "While the Wizard King Julius was thinking about how the Royal Knights were fairing on their raid of the Eye of the Midnight Sun’s hideout, a person appeared before him. It was someone Julius was very familiar with and they start reminiscing about the past. Meanwhile, Yami had appeared at the Golden Dawn’s headquarters because he had received a message from Vangeance saying that he wanted to apologize for Langris injuring Finral. But no matter how long Yami waited, Vangeance didn’t show up, which was irritating Yami to no end.",
+      "airdate": "2019-07-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 299,
+          "end": 389
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1367
+        }
+      ],
+      "external_id": "265452"
+    },
+    {
+      "n": 93,
+      "title": "Julius Novachrono",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/265565/original.jpg",
+      "synopsis": "The battle between the Clover Kingdom’s most powerful wizard, the Wizard King Julius Novachrono, and the leader of the Eye of the Midnight Sun, Licht, had begun. Julius had been chosen by a very unique grimoire and he used time magic. As the Wizard King, he firmly believed in the path he had walked and the future he wanted for everyone, so a very fierce battle begins. Licht uses light magic which is super powerful and fast, but apparently, it’s no match for Julius’s time magic.",
+      "airdate": "2019-07-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 132,
+          "end": 222
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1268,
+          "end": 1358
+        }
+      ],
+      "external_id": "265565"
+    },
+    {
+      "n": 94,
+      "title": "New Future",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267038/original.jpg",
+      "synopsis": "After receiving an emergency message from Julius’s aide, Marx, Yami hurries to the scene of Julius and Licht’s battle. However, once he gets there, he sees an unbelievable sight. Meanwhile, the Royal Knights continued their battle at the Eye of the Midnight Sun’s hideout. Captain Mereoleona had the final member of the Third Eye, Raia, cornered. Seeing no way out, Raia was about to activate a self-destruct spell when Asta nullifies his spell and then gives him a piece of his mind.",
+      "airdate": "2019-07-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 140,
+          "end": 230
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1270,
+          "end": 1360
+        }
+      ],
+      "external_id": "267038"
+    },
+    {
+      "n": 95,
+      "title": "Reincarnation",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267265/original.jpg",
+      "synopsis": "Long ago, there were beings with very high magical powers living in the Clover Kingdom called elves. The elf Licht possessed a four-leaf grimoire and he lived peacefully with his brethren, who trusted him greatly. One day, a human named Tetia and her older brother happened to come by their village. Her older brother also had a four-leaf grimoire just like Licht and hoped to bring humans and elves together. The siblings and Licht shared similar ideals, so they became rather close, and eventually, Tetia became pregnant with Licht’s child. But then, a great tragedy fell upon the elves...",
+      "airdate": "2019-08-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 90,
+          "end": 176
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1287,
+          "end": 1377
+        }
+      ],
+      "external_id": "267265"
+    },
+    {
+      "n": 96,
+      "title": "The Black Bulls Captain vs the Crimson Wild Rose",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267619/original.jpg",
+      "synopsis": "While the Royal Knights were infiltrating the floating dungeon base of the Eye of the Midnight Sun, something strange was happening in the Clover Kingdom. The devil’s skull back in Asta’s home of Hage started to shine, and a number of people throughout the kingdom also started to shine. This was due to the power of the stolen magic stones and Licht activating a reincarnation spell. As Captain Yami was trying to find out more about this phenomenon, Marx and Owen appear in front of him. They then call themselves elves and attack Yami with an incredible amount of power that they’d never shown before. Meanwhile, Captain Charlotte also...",
+      "airdate": "2019-08-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 141,
+          "end": 231
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1304,
+          "end": 1380
+        }
+      ],
+      "external_id": "267619"
+    },
+    {
+      "n": 97,
+      "title": "Overwhelming Disadvantage",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267797/original.jpg",
+      "synopsis": "The effects of the reincarnation spell had affected some of the Royal Knights back at the floating dungeon as well. Luck was fighting alongside Noelle when suddenly, he attacks his friends with extremely powerful magic. Meanwhile, Raia’s magic is also enhanced from the spell and suddenly, the captain of the Aqua Deer, Rill, also appears before them. Just like Luck, his personality had changed and he attacks Asta and the others. After being forced to face off with the ones calling themselves elves, Captain Mereoleona...",
+      "airdate": "2019-08-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 92,
+          "end": 182
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "267797"
+    },
+    {
+      "n": 98,
+      "title": "The Sleeping Lion",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267876/original.jpg",
+      "synopsis": "The Clover Kingdom is thrown into chaos as people calling themselves “elves” attack. These effects were visible at the Crimson Lion Kings’ base, as well. Vice Captain Randall’s personality had completely changed and he attacked his comrades. Because of the sheer difference in power, the other members of the Crimson Lion Kings start to give up, but Leopold refuses to do so. As the younger brother of the captains Fuegoleon and Mereoleona, Leopold refuses to lose!",
+      "airdate": "2019-08-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 115,
+          "end": 205
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1278,
+          "end": 1368
+        }
+      ],
+      "external_id": "267876"
+    },
+    {
+      "n": 99,
+      "title": "The Desperate Path Toward Survival",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268037/original.jpg",
+      "synopsis": "After being surrounded by members of the Royal Knights who were affected by the reincarnation spell, Captain Mereoleona had managed to let Asta and Zora escape. She uses her sheer will and the help of the mana zone to fight the elves. Is it actually possible for her to defeat the elves that hate the humans so much? Meanwhile, after being flung away from the battle, Zora tries to find a way for them to escape, but Asta doesn’t like that idea.",
+      "airdate": "2019-09-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 130,
+          "end": 220
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "268037"
+    },
+    {
+      "n": 100,
+      "title": "We Won't Lose to You",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268264/original.jpg",
+      "synopsis": "Asta was taken deep back into the labyrinth by Raia, who had suddenly appeared. There, he found not only Mimosa, but Klaus, Hamon, and Yuno who had reincarnated as elves. Klaus and Hamon have completely different personalities and they attack Asta. However, Yuno doesn’t join the fight yet one way or another. Asta doesn’t want to fight his friends and says that he’s going to survive and become the Wizard King. That somehow brings out a change in Yuno. Meanwhile, there was someone else watching the battle quietly: Another Licht that looked just like “the leader of the Eye of the Midnight Sun Licht.” Apparently, he is the real Licht, the leader of the elves.",
+      "airdate": "2019-09-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "268264"
+    },
+    {
+      "n": 101,
+      "title": "The Lives of the Village in the Sticks",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268344/original.jpg",
+      "synopsis": "Despite being affected by the reincarnation spell, Yuno was able to regain his consciousness. Asta and Yuno then fight the leader of the elves, Licht. Licht then uses one of Asta’s swords and attacks them both. Asta and Yuno are pushed to the edge but they manage to fight back. Meanwhile, another reincarnated elf shows up in Asta and Yuno’s home village of Hage and attacks the villagers.",
+      "airdate": "2019-09-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 99,
+          "end": 189
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1300,
+          "end": 1380
+        }
+      ],
+      "external_id": "268344"
+    },
+    {
+      "n": 102,
+      "title": "Two Miracles",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268399/original.jpg",
+      "synopsis": "Asta and Yuno get back to their village after an elf had attacked it. They were heading to the royal capital along with Captain Nozel and Noelle, but they saw that their village was in trouble and were given permission to make a detour. In order to protect the villagers, Asta and Yuno face off with the elf. The father that had raised them was able to see how much Asta and Yuno had grown, but...",
+      "airdate": "2019-09-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 7,
+          "end": 97
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "268399"
+    },
+    {
+      "n": 103,
+      "title": "Release from Misfortune",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268558/original.jpg",
+      "synopsis": "The Father and the other villagers of Hage Village are attacked by a Magic Knight from the Purple Orcas who had reincarnated as an elf who uses poison plant magic. Asta and Yuno try to save the villagers but they can’t seem to find a way to break the spell. During their battle the sword that Licht had taken out of the ground of the floating dungeon suddenly appears out of Asta’s grimoire. Asta takes it in hand and realizes that it’s much more powerful than he can control easily. Though hesitant, Asta puts the sword up to Father and...",
+      "airdate": "2019-10-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 11,
+          "end": 101
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1295,
+          "end": 1380
+        }
+      ],
+      "external_id": "268558"
+    },
+    {
+      "n": 104,
+      "title": "Lightning of Rage vs. Friends",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268613/original.jpg",
+      "synopsis": "Magna had been training with Vanessa to become more powerful and during their travels they ended up in a town that was being destroyed by none other than Luck from the Black Bulls who had reincarnated as an elf. Magna and Vanessa do everything they can to try to stop Luck but Luck had turned into someone else and attacks them both. And because Vanessa’s magic protects all the members of the Black Bulls it kept protecting Luck even though he was someone else inside.",
+      "airdate": "2019-10-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 93,
+          "end": 183
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "268613"
+    },
+    {
+      "n": 105,
+      "title": "Smiles, Tears",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/268798/original.jpg",
+      "synopsis": "Asta had caught up with Magna and Vanessa with his new sword. Asta tries to work with Magna and Vanessa to save Luck, who had been reincarnated into an elf, but Luck’s body had a lot of pent up magical power that was now surging and they have a hard time getting to him. Despite that, Asta and the others try to bring the normal Luck back. Will their feelings get through to their precious friend?",
+      "airdate": "2019-10-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1295,
+          "end": 1380
+        }
+      ],
+      "external_id": "268798"
+    },
+    {
+      "n": 106,
+      "title": "Path of Revenge, Path of Atonement",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/269095/original.jpg",
+      "synopsis": "Asta had caught up with Magna and Vanessa with his new sword. Asta tries to work with Magna and Vanessa to save Luck, who had been reincarnated into an elf, but Luck’s body had a lot of pent up magical power that was now surging and they have a hard time getting to him. Despite that, Asta and the others try to bring the normal Luck back. Will their feelings get through to their precious friend?",
+      "airdate": "2019-10-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 127,
+          "end": 217
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1375
+        }
+      ],
+      "external_id": "269095"
+    },
+    {
+      "n": 107,
+      "title": "The Battle for Clover Castle",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/269200/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-10-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1279,
+          "end": 1369
+        }
+      ],
+      "external_id": "269200"
+    },
+    {
+      "n": 108,
+      "title": "Battlefield Dancer",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/269423/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-11-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 99,
+          "end": 189
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "269423"
+    },
+    {
+      "n": 109,
+      "title": "Spatial Mage Brothers",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/269684/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-11-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 91,
+          "end": 181
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1374
+        }
+      ],
+      "external_id": "269684"
+    },
+    {
+      "n": 110,
+      "title": "The Raging Bull Joins the Showdown!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/270751/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-11-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 148,
+          "end": 238
+        }
+      ],
+      "external_id": "270751"
+    },
+    {
+      "n": 111,
+      "title": "The Eyes in the Mirror",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/271090/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-11-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 141,
+          "end": 231
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1274,
+          "end": 1364
+        }
+      ],
+      "external_id": "271090"
+    },
+    {
+      "n": 112,
+      "title": "Humans Who Can Be Trusted",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/271212/original.jpg",
+      "synopsis": "",
+      "airdate": "2019-12-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 141,
+          "end": 231
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1375
+        }
+      ],
+      "external_id": "271212"
+    },
+    {
+      "n": 113,
+      "title": "Storming the Shadow Palace",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2019-12-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "271370"
+    },
+    {
+      "n": 114,
+      "title": "The Final Invaders",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1367
+        }
+      ],
+      "external_id": "271420"
+    },
+    {
+      "n": 115,
+      "title": "Mastermind",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "271757"
+    },
+    {
+      "n": 116,
+      "title": "The Ultimate Natural Enemy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 89,
+          "end": 179
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1380
+        }
+      ],
+      "external_id": "271862"
+    },
+    {
+      "n": 117,
+      "title": "Breaking the Seal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "272022"
+    },
+    {
+      "n": 118,
+      "title": "A Reunion Across Time and Space",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 86,
+          "end": 176
+        }
+      ],
+      "external_id": "272400"
+    },
+    {
+      "n": 119,
+      "title": "The Final Attack",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "272540"
+    },
+    {
+      "n": 120,
+      "title": "Dawn",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 103,
+          "end": 193
+        }
+      ],
+      "external_id": "272633"
+    },
+    {
+      "n": 121,
+      "title": "Three Problems",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 188,
+          "end": 278
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "272858"
+    },
+    {
+      "n": 122,
+      "title": "As Pitch Black as It Gets",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1302,
+          "end": 1380
+        }
+      ],
+      "external_id": "273093"
+    },
+    {
+      "n": 123,
+      "title": "Nero Reminisces... Part One",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "273307"
+    },
+    {
+      "n": 124,
+      "title": "Nero Reminisces... Part Two",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 184,
+          "end": 274
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "273651"
+    },
+    {
+      "n": 125,
+      "title": "Return",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 84,
+          "end": 174
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "274191"
+    },
+    {
+      "n": 126,
+      "title": "The Blue Rose's Confession",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1374
+        }
+      ],
+      "external_id": "274305"
+    },
+    {
+      "n": 127,
+      "title": "Clues",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 138
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1380
+        }
+      ],
+      "external_id": "276475"
+    },
+    {
+      "n": 128,
+      "title": "To the Heart Kingdom!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 138
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "276574"
+    },
+    {
+      "n": 129,
+      "title": "The Devil Megicula",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 89,
+          "end": 179
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "276829"
+    },
+    {
+      "n": 130,
+      "title": "The New Magic Knight Squad Captains' Meeting",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 138
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "277006"
+    },
+    {
+      "n": 131,
+      "title": "A New Resolve",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 137
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "277168"
+    },
+    {
+      "n": 132,
+      "title": "The Lion Awakens",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 10,
+          "end": 100
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1292,
+          "end": 1380
+        }
+      ],
+      "external_id": "277259"
+    },
+    {
+      "n": 133,
+      "title": "The Lion Awakens, Continued",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 106
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "279991"
+    },
+    {
+      "n": 134,
+      "title": "Those Who Have Been Gathered",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 120,
+          "end": 210
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "279992"
+    },
+    {
+      "n": 135,
+      "title": "The One Who Has My Heart, My Mind, and Soul",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 182,
+          "end": 272
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "279993"
+    },
+    {
+      "n": 136,
+      "title": "A Black Deep-Sea Story",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 98,
+          "end": 188
+        }
+      ],
+      "external_id": "280017"
+    },
+    {
+      "n": 137,
+      "title": "Charmy's Century of Hunger, Gordon's Millennium of Loneliness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 77
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1380
+        }
+      ],
+      "external_id": "280018"
+    },
+    {
+      "n": 138,
+      "title": "In Zara's Footsteps",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 87,
+          "end": 177
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1278,
+          "end": 1368
+        }
+      ],
+      "external_id": "280096"
+    },
+    {
+      "n": 139,
+      "title": "A Witch's Homecoming",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 136,
+          "end": 226
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "280104"
+    },
+    {
+      "n": 140,
+      "title": "A Favor for Julius",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 100,
+          "end": 190
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "280105"
+    },
+    {
+      "n": 141,
+      "title": "The Golden Family",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 169
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1380
+        }
+      ],
+      "external_id": "280134"
+    },
+    {
+      "n": 142,
+      "title": "Those Remaining",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 52,
+          "end": 142
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "280167"
+    },
+    {
+      "n": 143,
+      "title": "The Tilted Scale",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 210,
+          "end": 300
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1292,
+          "end": 1380
+        }
+      ],
+      "external_id": "280182"
+    },
+    {
+      "n": 144,
+      "title": "Those Who Wish to Destroy Devils",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "280801"
+    },
+    {
+      "n": 145,
+      "title": "Rescue",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 115,
+          "end": 205
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "281145"
+    },
+    {
+      "n": 146,
+      "title": "Those Who Worship Devils",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "281359"
+    },
+    {
+      "n": 147,
+      "title": "Death",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 125,
+          "end": 215
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "282181"
+    },
+    {
+      "n": 148,
+      "title": "Become the Light That Illuminates the Darkness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 203,
+          "end": 293
+        }
+      ],
+      "external_id": "282537"
+    },
+    {
+      "n": 149,
+      "title": "Two Things to Look for",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 187,
+          "end": 277
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "283128"
+    },
+    {
+      "n": 150,
+      "title": "The Challenge of the Maidens",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 100,
+          "end": 190
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1380
+        }
+      ],
+      "external_id": "284053"
+    },
+    {
+      "n": 151,
+      "title": "Clash! Battle of the Magic Knight Captains!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 123,
+          "end": 213
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1298,
+          "end": 1380
+        }
+      ],
+      "external_id": "284344"
+    },
+    {
+      "n": 152,
+      "title": "To Tomorrow!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 137
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1341,
+          "end": 1380
+        }
+      ],
+      "external_id": "284615"
+    },
+    {
+      "n": 153,
+      "title": "The Chosen Ones",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 77,
+          "end": 167
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "284894"
+    },
+    {
+      "n": 154,
+      "title": "Vice-Captain Langris Vaude",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 227,
+          "end": 317
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1302,
+          "end": 1380
+        }
+      ],
+      "external_id": "285436"
+    },
+    {
+      "n": 155,
+      "title": "The 5 Spirit Guardians",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 85,
+          "end": 175
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "285576"
+    },
+    {
+      "n": 156,
+      "title": "Awakening Power",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 88,
+          "end": 178
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "286059"
+    },
+    {
+      "n": 157,
+      "title": "The Five-Leaf Clover",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 149,
+          "end": 239
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1336,
+          "end": 1380
+        }
+      ],
+      "external_id": "286296"
+    },
+    {
+      "n": 158,
+      "title": "The Beginning of Hope and Despair",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 138
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1276,
+          "end": 1366
+        }
+      ],
+      "external_id": "286492"
+    },
+    {
+      "n": 159,
+      "title": "Quiet Lakes and Forest Shadows",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 80,
+          "end": 170
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1372
+        }
+      ],
+      "external_id": "286637"
+    },
+    {
+      "n": 160,
+      "title": "The Messenger from the Spade Kingdom",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 70,
+          "end": 160
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1281,
+          "end": 1371
+        }
+      ],
+      "external_id": "287083"
+    },
+    {
+      "n": 161,
+      "title": "Zeno's Power",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 144,
+          "end": 234
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "287509"
+    },
+    {
+      "n": 162,
+      "title": "The Great War Breaks Out",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 107,
+          "end": 197
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "288087"
+    },
+    {
+      "n": 163,
+      "title": "Dante vs. The Captain of the Black Bulls",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 165,
+          "end": 255
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "288598"
+    },
+    {
+      "n": 164,
+      "title": "Battlefield: Heart Kingdom",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 184,
+          "end": 274
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1273,
+          "end": 1363
+        }
+      ],
+      "external_id": "290774"
+    },
+    {
+      "n": 165,
+      "title": "Water Crusade",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 258,
+          "end": 348
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1283,
+          "end": 1373
+        }
+      ],
+      "external_id": "291400"
+    },
+    {
+      "n": 166,
+      "title": "Captain Yami Sukehiro",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 149,
+          "end": 239
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1265,
+          "end": 1355
+        }
+      ],
+      "external_id": "291723"
+    },
+    {
+      "n": 167,
+      "title": "Black Oath",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 239,
+          "end": 329
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "292047"
+    },
+    {
+      "n": 168,
+      "title": "Stirrings of the Strongest",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 136
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "292225"
+    },
+    {
+      "n": 169,
+      "title": "The Devil-Binding Ritual",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 154,
+          "end": 244
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1280,
+          "end": 1370
+        }
+      ],
+      "external_id": "292610"
+    },
+    {
+      "n": 170,
+      "title": "Faraway Future",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 8,
+          "end": 98
+        }
+      ],
+      "external_id": "292973"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kienai Riyū (消えない理由)",
+      "artist": "WANIMA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yellow Brick Road",
+      "artist": "ONE OR EIGHT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Here I Stand",
+      "artist": "TREASURE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Haruka Mirai (Distant Future)",
+      "artist": "Kankaku Piero",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aoi Honō (Blue Flame)",
+      "artist": "Itowokashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dream On",
+      "artist": "angela",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "PAiNT it BLACK",
+      "artist": "BiSH",
+      "episodes": "14-27"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Amazing Dreams",
+      "artist": "SWANKY DANK",
+      "episodes": "14-27"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Black Rover",
+      "artist": "Vickeblanka",
+      "episodes": "28-39"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Black to the dreamlight",
+      "artist": "EMPiRE",
+      "episodes": "28-39"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Guess Who Is Back",
+      "artist": "Kumi Koda",
+      "episodes": "40-51"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "four",
+      "artist": "FAKY",
+      "episodes": "40-51"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Gamushara",
+      "artist": "Miyuna",
+      "episodes": "52-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Tenjou Tenge",
+      "artist": "Miyuna",
+      "episodes": "52-"
+    },
+    {
+      "kind": "OP",
+      "sequence": 6,
+      "title": "Rakugaki Page (Scribble Page)",
+      "artist": "Kankaku Piero",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "My Song My Days",
+      "artist": "SOLIDEMO with Sakura-men",
+      "episodes": "65-76"
+    },
+    {
+      "kind": "OP",
+      "sequence": 7,
+      "title": "JUSTadICE",
+      "artist": "Seiko Oomori",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Hana ga Saku Michi",
+      "artist": "THE CHARM PARK",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 8,
+      "title": "sky & blue",
+      "artist": "GIRLFRIEND",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "against all gods",
+      "artist": "m-flo",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 9,
+      "title": "RIGHT NOW",
+      "artist": "EMPiRE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Jinsei wa Senjou da",
+      "artist": "Kalen Anzai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 10,
+      "title": "Black Catcher",
+      "artist": "Vickeblanka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "New Page",
+      "artist": "INTERSECTION",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 11,
+      "title": "Stories",
+      "artist": "Snow Man",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "Answer",
+      "artist": "Kaf",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 12,
+      "title": "Eien ni Hikare",
+      "artist": "TOMORROW X TOGETHER",
+      "episodes": "141-157"
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "A Walk",
+      "artist": "Gakuto Kajiwara",
+      "episodes": "141-157"
+    },
+    {
+      "kind": "OP",
+      "sequence": 13,
+      "title": "Grandeur",
+      "artist": "Snow Man",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 13,
+      "title": "BEAUTIFUL",
+      "artist": "TREASURE",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

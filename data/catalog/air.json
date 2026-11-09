@@ -1,0 +1,262 @@
+{
+  "id": "air",
+  "title": "Air",
+  "native": "AIR",
+  "year": 2005,
+  "rating": 6.8,
+  "season": "Winter 2005",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101-8ugQ3UjUQ8Ki.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101-8ugQ3UjUQ8Ki.png",
+  "accent": "#50aee4",
+  "synopsis": "Yukito Kunisaki is on a journey in search of the Winged Maiden who was bound to the sky centuries ago, after hearing an old childhood tale from his mother. As Yukito shows his puppet show to people in an attempt to make some money, he finds himself in a small town in which he did not expect to stay very long. However, when he meets an unusual girl named Misuzu, things take a drastic turn as he is invited to stay with her.\n\nBy staying in the quaint town, Yukito soon becomes friends with the locals. As he gets to know them better, he learns of their problems and decides to help, putting his search for the Winged Maiden on hold. With his search on hold, and his growing attachment to Misuzu and the small town, will Yukito ever find the Winged Maiden, or is she closer than he thought?\n\n(Source: MAL Rewrite)\n\nNote: Includes episode 13, Soushuuhen (Summary).",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7660,
+    "anilist": 101,
+    "mal": 101
+  },
+  "skip_key_id": 101,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-21 09:27:14",
+  "search_text": "air air tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Breeze",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/106407/original.jpg",
+      "synopsis": "Yukito Kunisaki arrives to the town in hopes of making money for food with his puppet show. He meets Misuzu Kamio, a strange girl living in the town. Misuzu manages to lure Yukito to her house with food at which after a discussion she offers him residence. Soon after Haruko Kamio, Misuzu's foster mother, arrives to the house. Haruko initially opposes Yukito's stay but later decides to allow him to stay in the shed.",
+      "airdate": "2005-01-06",
+      "markers": [],
+      "external_id": "106407"
+    },
+    {
+      "n": 2,
+      "title": "Town",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/106408/original.jpg",
+      "synopsis": "Yukito explains to Misuzu the quest of the cursed girl with wings that had been in his family for generations. The next day Yukito's puppet show only manages to attract a dog named Potato, while scaring others. Yukito is caught by Hijiri Kirishima while performing in front of her clinic and offers Yukito work doing odd jobs.",
+      "airdate": "2005-01-13",
+      "markers": [],
+      "external_id": "106408"
+    },
+    {
+      "n": 3,
+      "title": "Whisper",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/106409/original.jpg",
+      "synopsis": "Surroundings of Yukito and Misuzu briefly change from the shrine to a cropland as a result of Kano's experience. After a confrontation with Hijiri, Yukito and others briefly go to the clinic. Yukito and Misuzu leave the clinic for home. On their way Yukito realizes he wasn't paid for his part time job and sneaks back into the clinic only to overhear Kano's other personality.",
+      "airdate": "2005-01-20",
+      "markers": [],
+      "external_id": "106409"
+    },
+    {
+      "n": 4,
+      "title": "Plume",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/106410/original.jpg",
+      "synopsis": "Kano strangles Yukito in her zombie-like state near the shrine hard enough to leave a mark before falling unconscious. Back at the clinic, Hijiri apologizes for Kano's behavior and explains when and how Kano's unusual symptoms started, with a single bright feather at the shrine.",
+      "airdate": "2005-01-27",
+      "markers": [],
+      "external_id": "106410"
+    },
+    {
+      "n": 5,
+      "title": "Wing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/106411/original.jpg",
+      "synopsis": "Yukito ends up spending the day with Minagi and Michiru while Misuzu is at school. Yukito walks Minagi home after being invited to go stargazing on the school's rooftop when he first learns of her mother's mental illness. Later, Misuzu attempts to play cards with Yukito, but is overcome with extreme pain. When Yukito learns of Misuzu's condition he decides to move out of the house.",
+      "airdate": "2005-02-03",
+      "markers": [],
+      "external_id": "106411"
+    },
+    {
+      "n": 6,
+      "title": "Star",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/106412/original.jpg",
+      "synopsis": "After Minagi's mother's mental condition has caused her to forget she has a daughter, Minagi leaves home and joins Yukito. Yukito tells Minagi he's leaving town and wants her to come with him, but instead leads her back home to face her mother. Michiru is invited to eat at Minagi's house. Michiru leaves, having fulfilled her purpose.",
+      "airdate": "2005-02-10",
+      "markers": [],
+      "external_id": "106412"
+    },
+    {
+      "n": 7,
+      "title": "Dream",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/106413/original.jpg",
+      "synopsis": "There are a number of flashbacks that Yukito has of his mother telling him about the girl with wings, about how she will forget everything and die when she dreams her final dream, and about how the person close to her will also die. Misuzu's foster mother leaves, leaving Yukito and Misuzu alone. Misuzu tells Yukito about her last dream, and Yukito comes to the decision to stay by her side, knowing the consequences. Yukito suddenly disappears and after Misuzu wakes up feeling better, she wonders where Yukito has gone or if he will come back.",
+      "airdate": "2005-02-17",
+      "markers": [],
+      "external_id": "106413"
+    },
+    {
+      "n": 8,
+      "title": "Summer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/106414/original.jpg",
+      "synopsis": "This story takes place 1000 years before the Dream arc. Kanna is a girl with wings confined to a palace with a friend, Uraha, and body guard, Ryūya. When Kanna is to be sent to another temple, the 3 escape and go on a journey to find Kanna's mother. Meanwhile, the palace is attacked and the 3 are pursued. They finally find Kanna's mother but she tells them to leave.",
+      "airdate": "2005-02-24",
+      "markers": [],
+      "external_id": "106414"
+    },
+    {
+      "n": 9,
+      "title": "Moon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/106415/original.jpg",
+      "synopsis": "Kanna's mother claims to be \"tainted\". They all escape from the mountain but their pursuers manage to kill Kanna's mother. Before she dies, she passes the ancient prayer to Kanna. While the pursuers are closing in, the 3 talk about settling down near the ocean, but Kanna knows this is only a dream. She takes flight but the monks curse her and she gets killed by the soldiers. Ryūya and Uraha learn about the curse and Kanna's suffering and vow to end it by having a child who will break the curse.",
+      "airdate": "2005-03-03",
+      "markers": [],
+      "external_id": "106415"
+    },
+    {
+      "n": 10,
+      "title": "Light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/106416/original.jpg",
+      "synopsis": "The events of the Dream arc are retold from the point of view of a crow Misuzu found and named Sora.",
+      "airdate": "2005-03-10",
+      "markers": [],
+      "external_id": "106416"
+    },
+    {
+      "n": 11,
+      "title": "Sea",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/106417/original.jpg",
+      "synopsis": "Misuzu's curse is getting more serious. Soon, she has forgotten who Haruko is and begins to act strangely, playing cards by herself and not wanting to go outdoors. Haruko is depressed, but tries hard to restore the memories Misuzu lost. Soon, however, Misuzu's birth father shows up, and tries to claim Misuzu back from Haruko, deciding to let Misuzu decide who she wants to live with. Haruko, desperate because of Misuzu's memory loss, begs him to let her have Misuzu for 3 more days, to which he agrees.",
+      "airdate": "2005-03-17",
+      "markers": [],
+      "external_id": "106417"
+    },
+    {
+      "n": 12,
+      "title": "Air",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/106418/original.jpg",
+      "synopsis": "The summer festival has finally arrived, but unfortunately it rains that day and thus the festival is canceled. Wanting to do anything she can for Misuzu, Haruko brings her to the local shrine. As mother and daughter bond, can Haruko ultimately save Misuzu from returning to her other self in the vast blue sky?",
+      "airdate": "2005-03-24",
+      "markers": [],
+      "external_id": "106418"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Forest walker",
+      "artist": "a flood of circle",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Chain",
+      "artist": "Back-on",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sky-2-High",
+      "artist": "skankfunk",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tori no Uta (鳥の詩; Bird's Poem)",
+      "artist": "Lia",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Farewell Song",
+      "artist": "Lia",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tori no Uta (鳥の詩; Bird's Poem)",
+      "artist": "Lia",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Farewell Song",
+      "artist": "Lia",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tori no Uta (鳥の詩; Bird's Poem)",
+      "artist": "Lia",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Farewell Song",
+      "artist": "Lia",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Retsu no matataki",
+      "artist": "Japahari Net",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ROLLING 1000 tOON",
+      "artist": "Maximum The Hormone",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "If Dreams Came True",
+      "artist": "Eri Kawai",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

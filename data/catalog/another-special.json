@@ -1,0 +1,54 @@
+{
+  "id": "another-special",
+  "title": "Another Special",
+  "native": "しずかに Another 見崎　鳴",
+  "year": 2013,
+  "rating": 5.7,
+  "season": "2013",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20365-QmjZ71Mt9Gmj.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20365-QmjZ71Mt9Gmj.jpg",
+  "accent": "#5d861a",
+  "synopsis": "An extended music video with minimalistic flash animation, featuring a chibi version of Mei. Bundled with the Complete Collection Blu-ray Box.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "another-special-y36xo5",
+    "mal": 20365,
+    "anilist": 20365,
+    "kitsu": 8503
+  },
+  "skip_key_id": 20365,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "another special しす かに another 見崎 鳴 special finished",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Another Special",
+      "runtime": "4:00",
+      "runtime_seconds": 240,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a9d29d86a350dd2abc36554-poster.jpg",
+      "synopsis": "An extended music video with minimalistic flash animation, featuring a chibi version of Mei. Bundled with the Complete Collection Blu-ray Box.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "115368"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

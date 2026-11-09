@@ -1,0 +1,109 @@
+{
+  "id": "death-note-relight",
+  "title": "Death Note: Relight",
+  "native": "DEATH NOTE リライト",
+  "year": 2007,
+  "rating": 7.4,
+  "season": "Summer 2007",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b2994-mlofkz5GpkIu.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b2994-mlofkz5GpkIu.jpg",
+  "accent": "#f1e450",
+  "synopsis": "1. Genshisuru Kami (Visions of a God)\n\r\nA two hour episode of Death Note, mainly a compilation of the confrontations between Light and L, re-edited from Ryuk's perspective with new dialogue and soundtrack along with additional animation that could not be included in the original series. An Unnamed Shinigami comes to Ryuk to question him about his new story in the human world.\n\n\r\n2. Eru o Tsugu Mono (L's Successors)\n\r\nThis story continues where the previous left off, continuing the story of Light. As the previous special told Light and L's battles, this story does the same with the conflicts between Light, Mello, and Near. \n\n\r\n(Source: Wikipedia)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "death-note:-relight-udr6ii",
+    "mal": 2994,
+    "anilist": 2994,
+    "kitsu": 2707
+  },
+  "skip_key_id": 2994,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "death note relight death note リライト special finished",
+  "genres": [
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "112:00",
+      "runtime_seconds": 6720,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "45661"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "112:00",
+      "runtime_seconds": 6720,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "45662"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aluminia",
+      "artist": "Nightmare",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "the WORLD",
+      "artist": "Nightmare",
+      "episodes": "1-19"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Alumina",
+      "artist": "Nightmare",
+      "episodes": "1-19"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "What's Up People?!",
+      "artist": "Maximum the Hormone",
+      "episodes": "20-37"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Zetsubō Billy",
+      "artist": "Maximum the Hormone",
+      "episodes": "20-36"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Coda ~ Death Note",
+      "artist": "Yoshihisa Hirano",
+      "episodes": "37"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,192 @@
+{
+  "id": "apocalypse-hotel",
+  "title": "Apocalypse Hotel",
+  "native": "アポカリプスホテル",
+  "year": 2025,
+  "rating": 8,
+  "season": "Spring 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx180675-YEwsxiMsnyvL.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx180675-YEwsxiMsnyvL.png",
+  "accent": "#e4c95d",
+  "synopsis": "Following the collapse of civilization, one storied hotel stands among the ruins of Tokyo’s Ginza district. Overrun by nature, this lone hotel continues to defy humanity’s collapse. Current guests: zero. Check-ins scheduled today: zero. Yesterday’s website traffic: zero. Enter with caution in this story of survival and mystery in a world where the memory of humanity begins to fade.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "apocalypse-hotel-qesy1f",
+    "mal": 59675,
+    "anilist": 180675,
+    "kitsu": 49537
+  },
+  "skip_key_id": 59675,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "apocalypse hotel アホ カリフ スホテル tv finished",
+  "genres": [
+    "comedy",
+    "sci-fi",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A True Hotel Is Always Storied",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/95febed7aeeabe081e2123a777435cd31744135888_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378063"
+    },
+    {
+      "n": 2,
+      "title": "Tradition Evolves With Innovation and Experimentation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0c8663cd15981d3a620b9c391bd3e8c21744739347_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378064"
+    },
+    {
+      "n": 3,
+      "title": "A Smile Is the Ultimate Ambiance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a7d3770e6be35f326c43925a6f2f76a91745334363_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378065"
+    },
+    {
+      "n": 4,
+      "title": "Food and Etiquette Are Mainstays of Culture",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/d6d02957a7eb92f47347c98d76202e7c1745941338_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378066"
+    },
+    {
+      "n": 5,
+      "title": "Provide Unlimited Hospitality in Limited Time",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0618994297a523105389c0b9d1fbd7041746554023_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378067"
+    },
+    {
+      "n": 6,
+      "title": "Our Only Vice Is Service",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/bf9cbd8eb2a6bb80d92538e7fd8927e81747157064_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378068"
+    },
+    {
+      "n": 7,
+      "title": "Bow Down Deep but Always Aim High",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d2104a38b6ad405e9f56f4b22f6f670e1747764391_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378069"
+    },
+    {
+      "n": 8,
+      "title": "Discipline with a Fist! Reconcile with a High Five!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/5e29ea7e7d084808eedbb54f43e7b1091748371349_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378070"
+    },
+    {
+      "n": 9,
+      "title": "Bookmark Today's Page in Our Guests' Lives",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1915012557423dfb952b3cd8df4ca0951748967552_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378071"
+    },
+    {
+      "n": 10,
+      "title": "Clean Sheets Symbolize Pure Hearts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/feb072db9be289ccc7c792d4826767181749581808_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378072"
+    },
+    {
+      "n": 11,
+      "title": "Wag Your Tail, but Never Wag a Shift!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/43a3f775f8bd84814125422fe49869661750181731_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378073"
+    },
+    {
+      "n": 12,
+      "title": "Aim to Be the Number One Hotel in the Galaxy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a28cafbd95af4128accb5435912611b61750781443_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "378074"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "skirt",
+      "artist": "aiko",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kapuseru (カプセル; Capsule)",
+      "artist": "aiko",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

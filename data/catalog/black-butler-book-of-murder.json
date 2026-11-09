@@ -1,0 +1,167 @@
+{
+  "id": "black-butler-book-of-murder",
+  "title": "Black Butler: Book of Murder",
+  "native": "黒執事 Book of Murder",
+  "year": 2014,
+  "rating": 7.8,
+  "season": "Fall 2014",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20670-3B1bxzAp0AUr.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20670-3B1bxzAp0AUr.jpg",
+  "accent": "#f1c950",
+  "synopsis": "At the Queen's behest, young master Ciel Phantomhive hosts a lavish banquet to be attended by the crème-de-la-crème of London's elite. What begins as a fabulous affair quickly takes a dark turn when guests begin turning up dead! Should Sebastian and Ciel wish to once more see the light of day, they must join forces with their guests, including the legendary author Sir Arthur Conan Doyle, to unravel the mystery – and apprehend the murderer before it's too late!\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "black-butler:-book-of-murder-kr9lx9",
+    "mal": 23317,
+    "anilist": 20670,
+    "kitsu": 8338
+  },
+  "skip_key_id": 23317,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "black butler book of murder 黒執事 book of murder ova finished",
+  "genres": [
+    "comedy",
+    "fantasy",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Book of Murder Part 1",
+      "runtime": "58:00",
+      "runtime_seconds": 3480,
+      "thumb": "",
+      "synopsis": "The Queen decides to test Ciel's loyalty once more after he killed the children, who were kidnapped by Noah's Arc Circus. Her butlers - the Double Grey, come to the Phantomhive manor and suggest that a banquet is held at the mansion. The occasion is the arrival of a German banker, Lord Georg von Siemens. The banquet begins and later, Siemens is found murdered in his room at the manor. Everyone among the guests and the staff has an alibi, except for Ciel. He is then confined to one of his guests – Arthur Conan Doyle, a novice writer. Later that night, someone kills Sebastian. He then visits the other servants, giving over his duties to them, and finally, bids Ciel farewell. The guests find his corpse in the morning. Ciel comes to accept his death, after Sebastian refuses to revive. Soon, another guest is found dead and everyone reassesses their alibis. It is discovered that Sebastian had entrusted Mey-Rin with a letter to be sent by an owl in the morning. The mysterious reverend Jeremy Rathborne then suddenly appears.",
+      "airdate": "2015-01-28",
+      "markers": [],
+      "external_id": "114139"
+    },
+    {
+      "n": 2,
+      "title": "Book of Murder Part 2",
+      "runtime": "58:00",
+      "runtime_seconds": 3480,
+      "thumb": "",
+      "synopsis": "Sebastian had \"foreseen\" his murder and the letter he had sent was addressed to reverend Jeremy Rathborne, calling him to investigate. Soon, it is found out that one of the murders was mistakenly done by a snake that was trained to go after Ciel's scent, later revealed to be sent by Snake from Noah's Arc Circus in an attempt to avenge his friends. The reverend also deduces that Siemens had jokingly faked his own death, but was killed soon afterwards by another guest – Woodley, who wanted to frame Ciel to prevent him from destroying his diamond business. The case is considered closed, but soon, Arthur Conan Doyle notices the inconsistencies in the theory and reveals the truth. Jeremy Rathborne is Sebastian. Sebastian admits and reveals the culprit's identity was known all along – it was Earl Grey, the Queen's butler, whom she had sent to kill Siemens, in order to disrupt Germany's financial stability, and at the same time, jokingly frame Ciel for the murder as a compensation for the accident with Noah's Arc Circus. Ciel and Sebastian simply made use of this occasion, knowing Siemens would be killed either way, and framed Woodley, who deserved to go to prison. For that, Sebastian managed to orchestrate the entire ordeal - do the Queen's secret task, clear the Phantomhive name of any possible murder accusations, and send a guilty businessman to jail. This experience influences Arthur Conan Doyle and he sets off to his career. At the end, Ciel invites Snake to live in the Phantomhive manor as well. Sebastian is made the Phantomhive main butler yet again and he swears his loyalty to Ciel until the day this lie becomes truth.",
+      "airdate": "2015-02-25",
+      "markers": [],
+      "external_id": "116173"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "MAISIE Produced by HYDE",
+      "artist": "Cö shu Nie",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "WALTZ",
+      "artist": "RYUGUJO",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kyoshinsha no Parade -The Parade of Battlers-",
+      "artist": "-otoha-",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shokuzai (Atonement)",
+      "artist": "SID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Glass no Hitomi (硝子の瞳; Glass Eyes)",
+      "artist": "Sid",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "ENAMEL",
+      "artist": "SID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aoki Tsuki Michite",
+      "artist": "AKIRA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Monochrome no Kiss",
+      "artist": "SID",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "SHIVER",
+      "artist": "the GazettE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bird",
+      "artist": "Yuya Matsushita",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Monochrome no Kiss",
+      "artist": "SID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I'm ALIVE!",
+      "artist": "BECCA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kagayaku Sora no Sijima ni wa",
+      "artist": "Kalafina",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Lacrimosa",
+      "artist": "Kalafina",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

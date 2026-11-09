@@ -1,0 +1,294 @@
+{
+  "id": "btooom",
+  "title": "BTOOOM!",
+  "native": "BTOOOM！",
+  "year": 2012,
+  "rating": 6.8,
+  "season": "Fall 2012",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx14345-BeDPCuhQGtL5.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx14345-BeDPCuhQGtL5.jpg",
+  "accent": "#fe6b28",
+  "synopsis": "In the blink of the mind's eye, Ryouta Sakamoto suddenly finds himself transported from playing the hit Btoom! video game to being stranded on a mysterious island, equipped with a day's worth of provisions, a bag of bombs, a strange crystal embedded in his left hand and a huge gaping hole in his memory. But it doesn't take long to figure out what's going on, especially after the first person Ryouta meets tries to kill him. Someone is attempting to recreate the ultra-violent Btoom! game in real life, and the island has been filled with an army of other unwilling players, each armed with one of the multiple variants of explosive weapons called BIM. Fortunately, Ryouta's an ace Btoom! player, but this insane version of the game has no reset switch or second lives, and there's only one way off the island: kill seven other people before they can kill you! Can Ryouta repurpose his game based skills fast enough to survive? \n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7113,
+    "anilist": 14345,
+    "mal": 14345
+  },
+  "skip_key_id": 14345,
+  "skip_key_space": "anilist",
+  "episode_total": 12,
+  "added_at": "2026-10-14 08:43:21",
+  "search_text": "btooom btooom tv finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Start",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/98612/original.jpg",
+      "synopsis": "Ryōta Sakamoto is ranked #10 worldwide i Btooom!, an online game where players kill each other with bombs. After a game one day, he mysteriously awakes in a real life version of the game.",
+      "airdate": "2012-10-04",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1181,
+          "end": 1271
+        }
+      ],
+      "external_id": "98612"
+    },
+    {
+      "n": 2,
+      "title": "The Bloodstained High School Girl",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/98613/original.jpg",
+      "synopsis": "A typical high school girl, betrayed by her neighbors, a forced player in the game of Btooom!, betrayed by the group she teamed up with. All men are scum.",
+      "airdate": "2012-10-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 88,
+          "end": 178
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1356,
+          "end": 1440
+        }
+      ],
+      "external_id": "98613"
+    },
+    {
+      "n": 3,
+      "title": "Survival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/98614/original.jpg",
+      "synopsis": "While chasing after the mysterious girl, Ryota runs into Taira Kiyoshi who helps fill in the blanks in his memory.",
+      "airdate": "2012-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 31,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1275,
+          "end": 1365
+        }
+      ],
+      "external_id": "98614"
+    },
+    {
+      "n": 4,
+      "title": "Best in the World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/98615/original.jpg",
+      "synopsis": "Kira Kosuke is a disturbed child, but when on the island his true nature can finally come out, unchecked. That is until he faces the best Btooom! player in Japan.",
+      "airdate": "2012-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 73,
+          "end": 163
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1298,
+          "end": 1388
+        }
+      ],
+      "external_id": "98615"
+    },
+    {
+      "n": 5,
+      "title": "Attack",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/98616/original.jpg",
+      "synopsis": "A pantless corpse floats by Taira and Sakamoto while they are eating lunch. When Sakamoto leaves to investigate he finds a gruesome scene and a familiar figure.",
+      "airdate": "2012-11-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 83,
+          "end": 173
+        }
+      ],
+      "external_id": "98616"
+    },
+    {
+      "n": 6,
+      "title": "Night of Sacrifice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/98617/original.jpg",
+      "synopsis": "In the moment of danger, trust issues start to show between Taira and Sakamoto. Sakamoto wants to save everyone especially the girl who just tried to kill him.",
+      "airdate": "2012-11-08",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1314,
+          "end": 1404
+        }
+      ],
+      "external_id": "98617"
+    },
+    {
+      "n": 7,
+      "title": "Virtual Bride",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/98618/original.jpg",
+      "synopsis": "Miyamoto, the mercenary, has found Sakamoto and his team. This dangerous player will do anything it takes to win.",
+      "airdate": "2012-11-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 62,
+          "end": 152
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1351,
+          "end": 1440
+        }
+      ],
+      "external_id": "98618"
+    },
+    {
+      "n": 8,
+      "title": "White Ghost",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/98619/original.jpg",
+      "synopsis": "As Sakamoto and Himiko try to rest for the night, Himiko wrestles with the idea of telling Sakamoto her true identity, but before she can do anything she is visited by a “ghost”.",
+      "airdate": "2012-11-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 101,
+          "end": 191
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1295,
+          "end": 1386
+        }
+      ],
+      "external_id": "98619"
+    },
+    {
+      "n": 9,
+      "title": "The Strongest Player",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/98620/original.jpg",
+      "synopsis": "A new player has joined Sakamoto's team, but he carries a dark secret. Before the team could dive deeper into the new players past, a food drop overhead brings many players out of hiding.",
+      "airdate": "2012-11-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 94,
+          "end": 184
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1356,
+          "end": 1440
+        }
+      ],
+      "external_id": "98620"
+    },
+    {
+      "n": 10,
+      "title": "High Level",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/98621/original.jpg",
+      "synopsis": "It seems the players on the island are interconnected in more ways than one. While Sakamoto mulls over this new information, the good doctor begins his end game.",
+      "airdate": "2012-12-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 107,
+          "end": 197
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "98621"
+    },
+    {
+      "n": 11,
+      "title": "Revival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/98622/original.jpg",
+      "synopsis": "With Ryouta out of the way, Himiko will be an easy target for Date, but Shiki has other plans for the doctor.",
+      "airdate": "2012-12-13",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1228,
+          "end": 1318
+        }
+      ],
+      "external_id": "98622"
+    },
+    {
+      "n": 12,
+      "title": "Bonds",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/98623/original.jpg",
+      "synopsis": "Taira has lost it and is attacking his friends. Ryouta doesn't want to fight but this time he truly might not have a choice.",
+      "airdate": "2012-12-20",
+      "markers": [],
+      "external_id": "98623"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

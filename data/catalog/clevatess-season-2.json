@@ -1,0 +1,73 @@
+{
+  "id": "clevatess-season-2",
+  "title": "Clevatess Season 2",
+  "native": "Clevatess II: Majuu no Ou to Itsuwari no Yuusha Denshou",
+  "year": 2026,
+  "rating": 7.4,
+  "season": "Year 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://animehot.cc/storage/media/2026/09/6a4e7eee7327bf6ca806acc1-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/6a4e7eee7327bf6ca806acc1-landscape.webp",
+  "accent": "#24d3ee",
+  "synopsis": "Second season of Clevatess.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "clevatess-season-2-kwjhow",
+    "mal": 62513,
+    "anilist": 198946,
+    "kitsu": 50154
+  },
+  "skip_key_id": 62513,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "clevatess season 2 clevatess ii majuu no ou to itsuwari no yuusha denshou",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Foreshadow",
+      "artist": "Mayu Maeshima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Awake Anew",
+      "artist": "MYTH & ROID",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ruler",
+      "artist": "Mayu Maeshima",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Destiny",
+      "artist": "Ellie Goulding",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,266 @@
+{
+  "id": "baki-the-great-raitai-tournament-saga",
+  "title": "Baki: The Great Raitai Tournament Saga",
+  "native": "バキ 大擂台賽編",
+  "year": 2020,
+  "rating": 7.6,
+  "season": "Spring 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/42206/medium.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx108522-XQmYISWCnTGg.jpg",
+  "accent": "#ff1f4a",
+  "synopsis": "Granted special entry into the Great Raitai Tournament, a poisoned Baki now faces fighters in China, where the next true Sea Emperor will be chosen. (Source: Netflix)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "BAKI (2018)",
+    "Baki Hanma (2021)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42206,
+    "anilist": 108522,
+    "mal": 39555
+  },
+  "skip_key_id": 39555,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-11-06 16:15:20",
+  "search_text": "baki the great raitai tournament saga ハ キ 大擂台賽編 tv finished",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Begin! The Centennial Tournament",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Mohammad Alai Jr. tests a battle-eager Yujiro. Even though he's been poisoned, Sea King Retsu enters Baki into the Great Raitai Tournament in China. (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "264185"
+    },
+    {
+      "n": 2,
+      "title": "Turnaround",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Alai Jr.'s deadly speed makes quick work of his opponent. A severely emaciated Baki faces Sea King Li, the greatest Poison Hand user in all of China. (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "264186"
+    },
+    {
+      "n": 3,
+      "title": "Revived!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Sea Emperor Kaku is 121 years older than his opponent, but the legendary reigning champion doesn't hesitate to face Sea King Samwan in the arena. (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "264187"
+    },
+    {
+      "n": 4,
+      "title": "Team Formed!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Sea King Chin and Japan's sole Sea King, Jaku battle on the tournament floor. Meanwhile, Baki provokes Yujiro into fighting him offstage. (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "264439"
+    },
+    {
+      "n": 5,
+      "title": "Hand Pocket",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Biscuit Oliva's sheer power is unrivaled, but Shobun Ron and his unconventional fighting stance are unbothered. It's brute strength versus iai kenpo. (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "264440"
+    },
+    {
+      "n": 6,
+      "title": "Excellennnnt!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A genius of Chinese kenpo, Retsu is the superior fighter, but Jaku's dirty techniques and tactical prowess make him a formidable foe. (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "264441"
+    },
+    {
+      "n": 7,
+      "title": "Kaioh",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Sea Emperor Kaku is the embodiment of Chinese kenpo. Yujiro is known as the strongest creature on Earth. A battle unlike any other begins! (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "264944"
+    },
+    {
+      "n": 8,
+      "title": "The Title of the Strongest",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Yujiro pits his raw power against Kaku's martial arts skills, which he's honed for over a century. The match's shocking outcome stuns everyone. (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "264945"
+    },
+    {
+      "n": 9,
+      "title": "The Master vs the Boxer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Alai Jr. propose to Kozue, who's dumbfounded. To prove he's a better man than Baki, Alai Jr. challenges the elderly aikido master Goki Shibukawa. (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "264946"
+    },
+    {
+      "n": 10,
+      "title": "Stand and Fight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Alai Jr. continues testing his skill against notable fighters, but Baki's half-brother Jack Hanma is unlike any combatant he's faced before. (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "264947"
+    },
+    {
+      "n": 11,
+      "title": "Awakening",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Badly injured from his street fights, Alai Jr. returns to his hotel room. There his father, the greatest boxer of all time, challenges him to a match. (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "264948"
+    },
+    {
+      "n": 12,
+      "title": "Competition",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A battle between the sons of two legendary fighters begins deep below Tokyo Dome. It's Baki versus Alai Jr., and the winner is anyone's guess. (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "265099"
+    },
+    {
+      "n": 13,
+      "title": "Revenge Tokyo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "After Ryukoh Yanagi escapes from prison, Inspector Sonoda attempts to locate the other death row inmates who wreaked havoc on Tokyo. (Source: Netflix)",
+      "airdate": "2020-06-04",
+      "markers": [],
+      "external_id": "265100"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Fly High",
+      "artist": "Atarshii Gakkō no Leaders",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Don’t Stay",
+      "artist": "Lead",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Jounetsu wa Oboete Iru",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "DEAD STROKE",
+      "artist": "Ena Fujita",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Beastful",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Resolve",
+      "artist": "Azusa Tadokoro",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Child Prey",
+      "artist": "Dir En Grey",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "I Believe (哀believe)",
+      "artist": "Ryoko Aoyagi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Reborn",
+      "artist": "Ryoko Aoyagi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "The Gong of Knockout",
+      "artist": "Fear, and Loathing in Las Vegas",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Beautiful Beast",
+      "artist": "DEVIL NO ID",
+      "episodes": "14-"
+    }
+  ],
+  "relations": []
+}

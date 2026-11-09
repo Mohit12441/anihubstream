@@ -1,0 +1,86 @@
+{
+  "id": "5-centimeters-per-second",
+  "title": "5 Centimeters per Second",
+  "native": "秒速５センチメートル",
+  "year": 2007,
+  "rating": 7.1,
+  "season": "Winter 2007",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1689-rJKhjLEjQHSy.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1689-rJKhjLEjQHSy.jpg",
+  "accent": "#d6a178",
+  "synopsis": "Tohno Takaki and Shinohara Akari, two very close friends and classmates, are torn apart when Akari's family is transferred to another region of Japan due to her family's job. Despite separation, they continue to keep in touch through mail. When Takaki finds out that his family is also moving, he decides to meet with Akari one last time.\n\nAs years pass by, they continue down their own paths, their distance slowly growing wider and their contact with one another fades. Yet, they keep remembering one another and the times they have shared together, wondering if they will have the chance to meet once again.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 1517,
+    "anilist": 1689,
+    "mal": 1689,
+    "hianime": "5-centimeters-per-second-9nf651"
+  },
+  "skip_key_id": 1689,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": "2026-10-14 05:05:32",
+  "search_text": "5 centimeters per second 秒速5センチメートル movie finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Cherry Blossom",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Episode 1",
+      "airdate": "2007-02-16",
+      "markers": [],
+      "external_id": "27643"
+    },
+    {
+      "n": 2,
+      "title": "Cosmonaut",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Episode 2",
+      "airdate": "2007-03-03",
+      "markers": [],
+      "external_id": "27644"
+    },
+    {
+      "n": 3,
+      "title": "5 Centimeters Per Second",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "",
+      "synopsis": "Episode 3",
+      "airdate": "2007-03-03",
+      "markers": [],
+      "external_id": "27645"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "END THEME",
+      "artist": "Tenmon",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

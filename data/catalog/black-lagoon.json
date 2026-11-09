@@ -1,0 +1,399 @@
+{
+  "id": "black-lagoon",
+  "title": "Black Lagoon",
+  "native": "BLACK LAGOON",
+  "year": 2006,
+  "rating": 7.8,
+  "season": "Spring 2006",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx889-4S7N2ciq2cwA.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx889-4S7N2ciq2cwA.png",
+  "accent": "#f1bb93",
+  "synopsis": "Okajima Rokuro is a Japanese businessman in a town full of Japanese businessmen. His normal day consists of social drinking with clients and being kicked around by his bosses. He finally gets a break though, as he's sent by his company to the tropical seas of Eastern China to deliver a disc. But his boat gets hijacked by a band of mercenaries hired to retrieve the disc. Rock (as he is newly dubbed by his captors) catches the interest of the only female merc Revy as she thinks he's worth a ransom, taking him hostage. However, the disc that was stolen has a terrible secret that's unknown to Rock, which causes massive confusion and chaos for both him and his kidnappers.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Black Lagoon: The Second Barrage (2006)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 789,
+    "anilist": 889,
+    "mal": 889,
+    "hianime": "black-lagoon-nx6s7h"
+  },
+  "skip_key_id": 889,
+  "skip_key_space": "anilist",
+  "episode_total": 12,
+  "added_at": "2026-10-14 05:05:32",
+  "search_text": "black lagoon black lagoon tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Black Lagoon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16418/original.jpg",
+      "synopsis": "Rokuro Okajima ('Rock') is sent on a mission, carrying with him a disk. He is captured by Dutch and Revy who are members of the ship called Black Lagoon. Problems arise for the crew when a skilled mercenary named Captain pursues them for the disk.",
+      "airdate": "2006-04-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1398
+        }
+      ],
+      "external_id": "16418"
+    },
+    {
+      "n": 2,
+      "title": "Mangrove Heaven",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16419/original.jpg",
+      "synopsis": "The E.O. Captain is aboard an assault helicopter, and he has forced the Black Lagoon ship into a river. Rock comes up with a plan to get the Black Lagoon out. Meanwhile, Kageyama travels to the seas, seemingly to follow up on the E.O. Squadron, but ends up really having another agenda.",
+      "airdate": "2006-04-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1398
+        }
+      ],
+      "external_id": "16419"
+    },
+    {
+      "n": 3,
+      "title": "Ring-Ding Ship Chase",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16420/original.jpg",
+      "synopsis": "Mr. Chin is furious when he learns that Dutch is now working for Balalaika. He is in fact so furious that he sends Luak and the pirates after the Black Lagoon. What will Balalaika say when she learns about the attack?",
+      "airdate": "2006-04-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1398
+        }
+      ],
+      "external_id": "16420"
+    },
+    {
+      "n": 4,
+      "title": "Die Rückkehr des Adlers",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16421/original.jpg",
+      "synopsis": "A collector of Nazi art hires the Black Lagoon to retrieve a painting form a submarine sunken in World War II. While Revy and Rock are under water, the Black Lagoon gets attacked.",
+      "airdate": "2006-04-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1307,
+          "end": 1399
+        }
+      ],
+      "external_id": "16421"
+    },
+    {
+      "n": 5,
+      "title": "Eagle Hunting and Hunting Eagles",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16422/original.jpg",
+      "synopsis": "The Black Lagoon is forced to retreat and watch from a distance as the Neo-Nazis have arrived at the location of the sunken U-boat. Revy and Rock explore the sub and manage to find the painting, but after Revy goes to scavenge more loot, the Neo-Nazis bring a pod of their own to retrieve the painting.",
+      "airdate": "2006-05-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 88
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1398
+        }
+      ],
+      "external_id": "16422"
+    },
+    {
+      "n": 6,
+      "title": "Moonlit Hunting Grounds",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16423/original.jpg",
+      "synopsis": "With the Neo-Nazis in possession of the painting, the Lagoon company declares that it is time for revenge. As the moon dips out of sight, Dutch and Revy board the ship in an attempt to recover the painting and shoot up some scum on the way. After Revy goes on a major shooting spree, spilling much blood, Dutch learns the truth behind their assignment.",
+      "airdate": "2006-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1398
+        }
+      ],
+      "external_id": "16423"
+    },
+    {
+      "n": 7,
+      "title": "Calm Down, Two Men",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16424/original.jpg",
+      "synopsis": "Sensing that his two employees need to deal with their conflicts, Dutch assigns Rock to go into town and deal with some errands concerning different deliveries. But Rock is required to take Revy along with him, and it becomes questionable whether Rock and Revy will be able to deal with each other without someone dying on the way.",
+      "airdate": "2006-05-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1398
+        }
+      ],
+      "external_id": "16424"
+    },
+    {
+      "n": 8,
+      "title": "Rasta Blasta",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16425/original.jpg",
+      "synopsis": "The Black Lagoon has a new shipment, but this time it is in the form of a boy named Garcia, who they have to transport him from across two mafia groups. Rock learns from the boy that he is related to a South American family called the Lovelaces, who fell into some hard times with one of the mafia groups. Dutch asks Balalaika to find some more information about whether the boy is telling the truth, as it could get really busy. Meanwhile, a maid makes her way to Roanapur seeking to find the mafia who have abducted the boy.",
+      "airdate": "2006-05-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1398
+        }
+      ],
+      "external_id": "16425"
+    },
+    {
+      "n": 9,
+      "title": "Maid to Kill",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16426/original.jpg",
+      "synopsis": "The Lagoon Company arrives at the Yellow Flag, only to realize that Roberta, who seemed like an ordinary maid looking for Garcia, is a deadly combat warrior. As she mows down Abrego’s cartel guys, Dutch orders his group to retreat, but Garcia, who is shocked at his maid’s behavior, wants to go with them. But that means Roberta will go after the Lagoon Company.",
+      "airdate": "2006-06-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1398
+        }
+      ],
+      "external_id": "16426"
+    },
+    {
+      "n": 10,
+      "title": "The Unstoppable Chambermaid",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16427/original.jpg",
+      "synopsis": "Roberta continues the chase as she is on top of the Black Lagoon’s car trying to get back the kidnapped Garcia. After they crash into the wall of a cargo area, Revy awakens and decides to fight Roberta in a duel with each girl wielding two pistols. The shootout continues until it is interrupted by Balalaika and her army. She informs everyone some recent events which changes the situation of the fight, and reveals the true identity of Roberta!",
+      "airdate": "2006-06-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1398
+        }
+      ],
+      "external_id": "16427"
+    },
+    {
+      "n": 11,
+      "title": "Lock'n Load Revolution",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16428/original.jpg",
+      "synopsis": "The Black Lagoon has to transport some of Mr. Chan's papers he tries to hide from terrorists. It doesn't take the terrorists long to track down the Black Lagoon. Even worse, they manage to capture a crew member!",
+      "airdate": "2006-06-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 88
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1398
+        }
+      ],
+      "external_id": "16428"
+    },
+    {
+      "n": 12,
+      "title": "Guerrillas in the Jungle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/16429/original.jpg",
+      "synopsis": "Rock is being interrogated by Takenaka about the papers but he remains silent as Takenaka tries to use some Japanese diplomacy. Meanwhile Revy, Shenhua, and Legarch go on a rescue mission for Rock by sneaking into the base, that is, until Revy decides she would rather blast her way through. Revy and Shenhua must fight the troops and make their escape to a demilitarized zone, while Ibraha continues to question Takenaka’s loyalty to the mission.",
+      "airdate": "2006-06-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1308,
+          "end": 1398
+        }
+      ],
+      "external_id": "16429"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Red fraction IO drive mix",
+      "artist": "MELL",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "When Johnny Comes Marching Home",
+      "artist": "EDISON",
+      "episodes": "1-4"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Red Fraction",
+      "artist": "MELL",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Don't Look Behind",
+      "artist": "EDISON",
+      "episodes": "13-14,16-23"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Red Fraction",
+      "artist": "MELL",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Don't Look Behind",
+      "artist": "EDISON",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "This moment ~prayer in the light~",
+      "artist": "Minako “mooki” Obata",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "The World of Midnight",
+      "artist": "Minako Obata",
+      "episodes": "15"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Peach Headz Addiction",
+      "artist": "Breath Frequency",
+      "episodes": "24"
+    }
+  ],
+  "relations": []
+}

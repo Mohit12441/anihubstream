@@ -1,0 +1,67 @@
+{
+  "id": "blue-exorcist-kyoto-saga-ova",
+  "title": "Ao no Exorcist: Kyoto Fujouou-hen OVA",
+  "native": "青の祓魔師 京都不浄王篇 OVA",
+  "year": 2017,
+  "rating": 6.9,
+  "season": "Spring 2017",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97891-SsbeyuNwwmDA.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97891-SsbeyuNwwmDA.jpg",
+  "accent": "#e4860d",
+  "synopsis": "Bundled with the 19th and 20th volumes of the Ao no Exorcist manga.\n\nThe first episode is based on the second chapter of the second Ao no Exorcist novel Home Sweet Home.\n\nThe second episode is based on the title chapter from the Ao no Exorcist: Spy Game novel",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "blue-exorcist:-kyoto-saga-ova-zmz36h",
+    "mal": 34465,
+    "anilist": 97891,
+    "kitsu": 12774
+  },
+  "skip_key_id": 34465,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "ao no exorcist kyoto fujouou hen ova 青の祓魔師 京都不浄王篇 ova ova finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hebi to Doku",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-04-04",
+      "markers": [],
+      "external_id": "199330"
+    },
+    {
+      "n": 2,
+      "title": "Spy Game",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Mephisto gives Renzo Shima three missions in order to be a successful spy. As a reward, Shima is offered an uncensored version of a pervy magazine.",
+      "airdate": "2017-10-04",
+      "markers": [],
+      "external_id": "190876"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

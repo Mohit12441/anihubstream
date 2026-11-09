@@ -1,0 +1,57 @@
+{
+  "id": "blue-exorcist-runaway-kuro",
+  "title": "Blue Exorcist: Runaway Kuro",
+  "native": "青の祓魔師 クロの家出",
+  "year": 2011,
+  "rating": 6.9,
+  "season": "Fall 2011",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11266-fSF6j9lTkcxs.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11266-fSF6j9lTkcxs.png",
+  "accent": "#93d6e4",
+  "synopsis": "Feeling slighted by Rin, Kuro goes on the hunt for a new master, but can he find anyone who can truly replace Rin?",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "blue-exorcist:-runaway-kuro-mgigvd",
+    "mal": 11266,
+    "anilist": 11266,
+    "kitsu": 6484
+  },
+  "skip_key_id": 11266,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "blue exorcist runaway kuro 青の祓魔師 クロの家出 ova finished",
+  "genres": [
+    "action",
+    "comedy",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Blue Exorcist: Runaway Kuro",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/695a79debaff3580cb8a7dfd-poster.jpg",
+      "synopsis": "Feeling slighted by Rin, Kuro goes on the hunt for a new master, but can he find anyone who can truly replace Rin?",
+      "airdate": null,
+      "markers": [],
+      "external_id": "96132"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

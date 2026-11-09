@@ -1,0 +1,181 @@
+{
+  "id": "darwins-game",
+  "title": "Darwin's Game",
+  "native": "ダーウィンズゲーム",
+  "year": 2020,
+  "rating": 7,
+  "season": "Winter 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx105190-lSoQNlnMF6UP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105190-lSoQNlnMF6UP.jpg",
+  "accent": "#e45d78",
+  "synopsis": "Kaname Sudou, an ordinary high school student, receives an invitation email to try a mysterious app called \"Darwin's Game.\" Kaname, upon launching the app, is drawn into a game where players fight one another using superpowers called Sigils. Without knowing the reason for all this, can Kaname survive furious battles against the powerful players who attack him?\n\n(Source: Aniplex of America)\n\nNote: The first episode aired with a runtime of ~48 minutes as opposed to the standard 24 minute long episode.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "darwin's-game-wqtqpe",
+    "mal": 38656,
+    "anilist": 105190,
+    "kitsu": 42260
+  },
+  "skip_key_id": 38656,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": null,
+  "search_text": "darwin s game タ ーウィンス ケ ーム tv finished",
+  "genres": [
+    "action",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "First Game",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/1dfa7128f65a584ae846664d7347a6881580655170_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273197"
+    },
+    {
+      "n": 2,
+      "title": "Gemstone Mine",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/189d722c470688a7186faa1745630d051581233891_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273198"
+    },
+    {
+      "n": 3,
+      "title": "Ignition",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b744f53304750d36e982575811f8a26a1581866717_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273202"
+    },
+    {
+      "n": 4,
+      "title": "Fireworks",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/390439f1b2eaf234c294efa349260efc1582470240_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273744"
+    },
+    {
+      "n": 5,
+      "title": "Aquarium",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/143045d5ce67e4b1d430b616f3b4f79a1583679124_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273745"
+    },
+    {
+      "n": 6,
+      "title": "Hardness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/4683615a5b26fc248c5b4e4f1d2bdfb01584277511_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "273746"
+    },
+    {
+      "n": 7,
+      "title": "Eighth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/806771edc61a685a2511f7847363fc971584881686_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274017"
+    },
+    {
+      "n": 8,
+      "title": "Fragile",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/fc7ef904c7f8ffb90f0f1425977a11111585490996_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274018"
+    },
+    {
+      "n": 9,
+      "title": "Heads Up",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/90a39512a5aac080d1c7f9eb8e41e6b91586077720_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274019"
+    },
+    {
+      "n": 10,
+      "title": "Old One",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/48b93c44c6fa2bcd5bbc97308e679b8e1586675546_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274020"
+    },
+    {
+      "n": 11,
+      "title": "Sunset Ravens",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/5fe1bb5d6680f79958cf265b707537fe1587289933_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "274021"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "CHAIN",
+      "artist": "ASCA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Alive",
+      "artist": "Mashiro Ayano",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

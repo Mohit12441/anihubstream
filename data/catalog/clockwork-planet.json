@@ -1,0 +1,272 @@
+{
+  "id": "clockwork-planet",
+  "title": "Clockwork Planet",
+  "native": "クロックワーク・プラネット",
+  "year": 2017,
+  "rating": 5.9,
+  "season": "Spring 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21563-TNf6EshJCy5l.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21563-TNf6EshJCy5l.png",
+  "accent": "#e450a1",
+  "synopsis": "Naoto's a high school dropout and brilliant amateur tinkerer. He lives in a world that has been so over-exploited that the entire surface has become one vast machine. When a box crashes into his home containing a female automaton, it's a harbinger of change that will rock the entire globe, and give Naoto his chance to be a hero.\n\n(Source: Kodansha USA)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11662,
+    "anilist": 21563,
+    "mal": 32407
+  },
+  "skip_key_id": 32407,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-22 05:56:16",
+  "search_text": "clockwork planet クロックワーク フ ラネット tv finished",
+  "genres": [
+    "drama",
+    "fantasy",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Gear of Destiny",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/200333/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-04-07",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "200333"
+    },
+    {
+      "n": 2,
+      "title": "Purge",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/200334/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-04-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 55,
+          "end": 144
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1438
+        }
+      ],
+      "external_id": "200334"
+    },
+    {
+      "n": 3,
+      "title": "Conflict",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/200335/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-04-21",
+      "markers": [],
+      "external_id": "200335"
+    },
+    {
+      "n": 4,
+      "title": "Imaginary Gear",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/200336/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-04-28",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "200336"
+    },
+    {
+      "n": 5,
+      "title": "Trishula",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/200337/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-05-05",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "200337"
+    },
+    {
+      "n": 6,
+      "title": "Deep Underground",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/200338/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-05-12",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "200338"
+    },
+    {
+      "n": 7,
+      "title": "Attack the Multiple Grid",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/200339/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-05-19",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "200339"
+    },
+    {
+      "n": 8,
+      "title": "Yatsukahagi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/200340/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-05-26",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "200340"
+    },
+    {
+      "n": 9,
+      "title": "Criminal Act",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/200341/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-06-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 128
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "200341"
+    },
+    {
+      "n": 10,
+      "title": "Progressor",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/200342/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-06-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 55,
+          "end": 144
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "200342"
+    },
+    {
+      "n": 11,
+      "title": "Theory of Y",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/200343/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-06-16",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "200343"
+    },
+    {
+      "n": 12,
+      "title": "Steel Weight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/200344/original.jpg",
+      "synopsis": "",
+      "airdate": "2017-06-23",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1415
+        }
+      ],
+      "external_id": "200344"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,66 @@
+{
+  "id": "berserk-the-golden-age-arc-ii-the-battle-for-doldrey",
+  "title": "Berserk: The Golden Age Arc II - The Battle for Doldrey",
+  "native": "ベルセルク 黄金時代篇Ⅱ ドルドレイ攻略",
+  "year": 2012,
+  "rating": 7.8,
+  "season": "Summer 2012",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/6664/poster_image/medium-61f1494c314aceceeef59260a11b1c1f.jpeg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/12113-eHkNrFjDklRR.jpg",
+  "accent": "#24d3ee",
+  "synopsis": "This second Berserk film will cover the part of the series dealing with the taking of the important Band of the Hawk stronghold.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 6664,
+    "anilist": 12113,
+    "mal": 12113
+  },
+  "skip_key_id": 12113,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-11-06 05:44:42",
+  "search_text": "berserk the golden age arc ii the battle for doldrey ヘ ルセルク 黄金時代篇ii ト ルト レイ攻略 movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Berserk: The Golden Age Arc II - The Battle for Doldrey (Movie)",
+      "runtime": "92:00",
+      "runtime_seconds": 5520,
+      "thumb": "https://media.kitsu.app/anime/6664/poster_image/medium-61f1494c314aceceeef59260a11b1c1f.jpeg",
+      "synopsis": "This second Berserk film will cover the part of the series dealing with the taking of the important Band of the Hawk stronghold.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "98047"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Aria",
+      "artist": "Susumu Hirasawa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,638 @@
+{
+  "id": "aoashi",
+  "title": "Aoashi",
+  "native": "アオアシ",
+  "year": 2022,
+  "rating": 8.1,
+  "season": "Spring 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx134732-OXKSrOhF9pCM.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx134732-OXKSrOhF9pCM.jpg",
+  "accent": "#e4c95d",
+  "synopsis": "Ashito Aoi is a young, aspiring soccer player from a backwater town in Japan. His hopes of getting into a high school with a good soccer club are dashed when he causes an incident during a critical match for his team, which results in their loss and elimination from the tournament. Nevertheless, he catches the eye of someone important who happened to be visiting from Tokyo. How will things turn out for Ashito?\n\n(Source: Shogakukan Asia)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Aoashi Season 2 (2026)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44629,
+    "anilist": 134732,
+    "mal": 49052,
+    "hianime": "aoashi-yh0ci8"
+  },
+  "skip_key_id": 49052,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": "2026-10-14 13:05:21",
+  "search_text": "aoashi アオアシ tv finished",
+  "genres": [
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "First touch",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/298f3f9efed82f30cbd8dee136529fb81649498166_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1357,
+          "end": 1440
+        }
+      ],
+      "external_id": "324459"
+    },
+    {
+      "n": 2,
+      "title": "Tokyo City Esperion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3feb0a0cdb0d3501d7a8da9ef206c77f1650105663_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 6,
+          "end": 93
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "324460"
+    },
+    {
+      "n": 3,
+      "title": "The Final Test Begins",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/70f82b24c04c06ba2e47c19df7cec6fd1650713176_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 14,
+          "end": 104
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1364,
+          "end": 1440
+        }
+      ],
+      "external_id": "328710"
+    },
+    {
+      "n": 4,
+      "title": "Crow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/6dca4610f1f975877570d868d6e7fcb41651298556_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 68,
+          "end": 155
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "329001"
+    },
+    {
+      "n": 5,
+      "title": "Orange Scenery",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/9cd70540d33e29c0f53617cd91ba505c1651883252_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 69,
+          "end": 159
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "329266"
+    },
+    {
+      "n": 6,
+      "title": "First Fan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/9c4bc2e8de27f8ff8a41a480d71439361652493776_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 25,
+          "end": 115
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "329317"
+    },
+    {
+      "n": 7,
+      "title": "The First Youth Match",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/64afc5483995d497bba2c0754e6b1ddd1653108552_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 53,
+          "end": 143
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "329361"
+    },
+    {
+      "n": 8,
+      "title": "Night Training",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/1a3aafee4ae6a574593d4847c3994a081653728456_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 55,
+          "end": 145
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "329542"
+    },
+    {
+      "n": 9,
+      "title": "A Broader Soccer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/141312838034b042ca8ae897bc6a0f611654326147_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "329867"
+    },
+    {
+      "n": 10,
+      "title": "No Compromises",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/9917332056c2f5237f743481b22525421654921516_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "329991"
+    },
+    {
+      "n": 11,
+      "title": "Tokyo Metropolis League Match 1 - Seikyo High School",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c158b40a10993a415f888b5513a3a3bd1655534885_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 27,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "330154"
+    },
+    {
+      "n": 12,
+      "title": "EAGLE EYE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/63d6fd05918d28ec7afff9b597efe0a91656148104_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "330193"
+    },
+    {
+      "n": 13,
+      "title": "Turn",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/cc0f0de530671d2777dd1ee2d0f2da391656758967_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 111
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1356,
+          "end": 1440
+        }
+      ],
+      "external_id": "330232"
+    },
+    {
+      "n": 14,
+      "title": "It's Just Soccer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/9fd1882a7300e00de76f628d3db6d3311657354075_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 77,
+          "end": 167
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "330233"
+    },
+    {
+      "n": 15,
+      "title": "Where I Ought to Be",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/56df69d3445f166a31422d5da32b92701657946560_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 67,
+          "end": 157
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "330234"
+    },
+    {
+      "n": 16,
+      "title": "Just Like You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/801f4f8c411ef979083f5a37480e38161658563446_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "330235"
+    },
+    {
+      "n": 17,
+      "title": "Tokyo Metropolis League Match 7 — Tama Sports University High School",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/1b919aa8dad8033b3296b8d4025d04631659158290_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 84,
+          "end": 175
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "330236"
+    },
+    {
+      "n": 18,
+      "title": "Wind of Change",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/316bfe7a80a75aa5b2843f4b4561dab41659780369_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 98,
+          "end": 188
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "330237"
+    },
+    {
+      "n": 19,
+      "title": "What We Lack",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/82de7d252329d58bb84be5a36d63101c1660974965_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "330238"
+    },
+    {
+      "n": 20,
+      "title": "The Truly Weak One",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/675502febb66dfaaa6ca6fff76fabf781661588340_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 46,
+          "end": 136
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "330239"
+    },
+    {
+      "n": 21,
+      "title": "Tokyo Metropolis League Match 8 - Tokyo Musashino Football Club Youths",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/396a33339285b123198b1ad13d1d154b1662179117_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 120,
+          "end": 210
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "330240"
+    },
+    {
+      "n": 22,
+      "title": "Like A Demon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d6251103b030bc4b8a5ffd904f74f1e41662797938_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 112,
+          "end": 202
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "330241"
+    },
+    {
+      "n": 23,
+      "title": "Do Your Best. Don't Lose. Fight to Your Limits",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/76a0d2cb821f1e2b781e3e64dd15eee31663403938_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 126
+        }
+      ],
+      "external_id": "330242"
+    },
+    {
+      "n": 24,
+      "title": "From Now",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/15bfa2c0d3b596a459eb1d00682afd1f1664017384_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 96,
+          "end": 186
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1337,
+          "end": 1410
+        }
+      ],
+      "external_id": "330243"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mushin Hakusū (Innocent Beat Count)",
+      "artist": "Alexandros",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Blue Diary",
+      "artist": "Rinne",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Presence",
+      "artist": "Superfly",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Calla Lily no Koibumi",
+      "artist": "KAMI WA SAIKORO WO FURANAI",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

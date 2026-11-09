@@ -1,0 +1,74 @@
+{
+  "id": "digimon-beatbreak",
+  "title": "DIGIMON BEATBREAK",
+  "native": "DIGIMON BEATBREAK",
+  "year": 2025,
+  "rating": 7.1,
+  "season": "Fall 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx188388-aXx9fsnvezBf.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx188388-aXx9fsnvezBf.jpg",
+  "accent": "#fec928",
+  "synopsis": "GLITCH THE FUTURE.\n\nTomoro Tenma lives in a world where human thoughts and emotions—known as “e-Pulse”—power AI devices called Sapotama. But when Digimon begin materializing from Sapotama and feeding on e-Pulse, society begins to fracture. After Gekkomon appears from his device, Tomoro joins Glowing Dawn, a secret team investigating rogue Digimon and the dark truth of a system both fueled and corrupted by emotion. What new future will be forged by humans and Digimon? \n\n(Source: Crunchyroll, DIGIMON BEATBREAK Official Site, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "digimon-beatbreak-vhsgut",
+    "mal": 61269,
+    "anilist": 188388,
+    "kitsu": 49700
+  },
+  "skip_key_id": 61269,
+  "skip_key_space": "mal",
+  "episode_total": 49,
+  "added_at": null,
+  "search_text": "digimon beatbreak digimon beatbreak tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mad Pulse",
+      "artist": "MADKID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "beat up",
+      "artist": "Ai Tomioka",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "BRAVE GROOVE",
+      "artist": "iLiFE!",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Miramira (ミラミラ)",
+      "artist": "YENA",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

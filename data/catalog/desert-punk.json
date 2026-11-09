@@ -1,0 +1,338 @@
+{
+  "id": "desert-punk",
+  "title": "Desert Punk",
+  "native": "砂ぼうず",
+  "year": 2004,
+  "rating": 6.9,
+  "season": "Fall 2004",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx25-H1etX7IgfFtQ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx25-H1etX7IgfFtQ.jpg",
+  "accent": "#e4785d",
+  "synopsis": "The Great Kanto Desert is a miserable place. It’s also the home of hero-for-hire Desert Punk, the closest thing to a good guy the wasteland’s got. He’s known as the best man for any job, but his reputation is undone by his raging hormones when curvy Junko uses her double-D charms to double-cross him. With debt hanging over his head, Desert Punk sets out to salvage his name. \n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 16,
+    "anilist": 25,
+    "mal": 25
+  },
+  "skip_key_id": 25,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": "2026-10-22 14:55:50",
+  "search_text": "desert punk 砂ほ うす tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Demon and the Double D's",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162229/original.jpg",
+      "synopsis": "The introduction of Desert Punk (Sunabōzu), where he is manipulated to fight a gang by Junko. After Desert Punk won, Junko takes all the credit and is responsible for the first failure mission of Desert Punk.",
+      "airdate": "2004-10-04",
+      "markers": [],
+      "external_id": "162229"
+    },
+    {
+      "n": 2,
+      "title": "Rock, Paper, Scissors",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162234/original.jpg",
+      "synopsis": "Desert Punk and Rain Spider (Amagumo) are hired by the same company to collect debt of a family of an old man and his daughter. Rain Spider wanted to sell the daughter as the old man had no assets to which Desert Punk disagreed and they pit themselves in a duel for it.",
+      "airdate": "2004-10-11",
+      "markers": [],
+      "external_id": "162234"
+    },
+    {
+      "n": 3,
+      "title": "Fire Dragon Kong",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162243/original.jpg",
+      "synopsis": "Junko asks for help of Desert Punk and the Machine Gun Brothers to assist her in a machine. Little did Desert Punk know she upset a man with a tank and has to destroy it to survive the day.",
+      "airdate": "2004-10-18",
+      "markers": [],
+      "external_id": "162243"
+    },
+    {
+      "n": 4,
+      "title": "An Ace in the Sand",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162252/original.jpg",
+      "synopsis": "A sniper tries to hunt Desert Punk considering the reputation he would gather defeating the great desert demon. After the battle is won by Desert Punk, the assistant (Kosuna) of the sniper ditches her old master to join Desert Punk, but is declined.",
+      "airdate": "2004-10-25",
+      "markers": [],
+      "external_id": "162252"
+    },
+    {
+      "n": 5,
+      "title": "The Price of Water",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162262/original.jpg",
+      "synopsis": "A village that expects that is soon to have source of water hires Desert Punk to defend the village against expected raiders. In the meantime, Desert Punk lowers the villagers morale by overconsuming their food and water.",
+      "airdate": "2004-11-02",
+      "markers": [],
+      "external_id": "162262"
+    },
+    {
+      "n": 6,
+      "title": "Wandering Lust",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162272/original.jpg",
+      "synopsis": "Desert Punk defeats the raiders, but is taken outside of the village while sleeping and left on his own with little food and water. He then tries to return to the village for payment but finds himself on the verge of death, only to be saved by the Machine Gun Brothers.",
+      "airdate": "2004-11-09",
+      "markers": [],
+      "external_id": "162272"
+    },
+    {
+      "n": 7,
+      "title": "Age Before Beauty",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162281/original.jpg",
+      "synopsis": "After being saved by the Machine Gun Brothers, the Desert Punk returns to his hometown, where he finds himself a young new apprentice he can take advantage of.",
+      "airdate": "2004-11-16",
+      "markers": [],
+      "external_id": "162281"
+    },
+    {
+      "n": 8,
+      "title": "A Dog in Heat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162296/original.jpg",
+      "synopsis": "Desert Punk and Kosuna have a new job: to destroy a stone, believed to be cursed. The only problem is, the curse seems to be real, and everything that can go wrong, does go wrong.",
+      "airdate": "2004-11-23",
+      "markers": [],
+      "external_id": "162296"
+    },
+    {
+      "n": 9,
+      "title": "All That Glitters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162309/original.jpg",
+      "synopsis": "Junko promises the Desert Punk a ten million yen reward and Desert Punk can't resist. He leaves, followed by his apprentice, Junko and Kaizuka, the old treasure hunter, towards the ruins of a city. There, a menacing ancient sentinel awaits them.",
+      "airdate": "2004-11-30",
+      "markers": [],
+      "external_id": "162309"
+    },
+    {
+      "n": 10,
+      "title": "A Little Bit of Wisdom",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162328/original.jpg",
+      "synopsis": "Desert Punk helps a treasure hunter retrieve a fortune that he lost ten years before. But a seemingly unknown creature is guarding the treasure.",
+      "airdate": "2004-12-07",
+      "markers": [],
+      "external_id": "162328"
+    },
+    {
+      "n": 11,
+      "title": "Compromising Positions",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162339/original.jpg",
+      "synopsis": "After Junko double-crosses Desert Punk, he takes her prisoner and locks both of them inside a secret desert hide-out. Angry, Junko knocks Desert punk in the head, and now he can't remember the code to let them out.",
+      "airdate": "2004-12-14",
+      "markers": [],
+      "external_id": "162339"
+    },
+    {
+      "n": 12,
+      "title": "A Change of Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162357/original.jpg",
+      "synopsis": "Desert Punk has been hired to save a young girl from the legendary Night Mat Shimada. But the girl turns out to be more of a handful than the Desert Punk can handle.",
+      "airdate": "2004-12-21",
+      "markers": [],
+      "external_id": "162357"
+    },
+    {
+      "n": 13,
+      "title": "Opposites Collide",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162365/original.jpg",
+      "synopsis": "After Desert Punk and Kosuna save a fellow good guy named Stryker, Desert Punk tries to take advantage of him in order to make lots of money.",
+      "airdate": "2004-12-28",
+      "markers": [],
+      "external_id": "162365"
+    },
+    {
+      "n": 14,
+      "title": "Kosuna: Fully Automatic",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162373/original.jpg",
+      "synopsis": "After Kosuna has a near-death fight with an enemy mercenary, she decides to arm herself to the teeth. But she still has a lot of training to do and an old wise arms dealer will teach her everything.",
+      "airdate": "2005-01-17",
+      "markers": [],
+      "external_id": "162373"
+    },
+    {
+      "n": 15,
+      "title": "The Girl Next Door",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162381/original.jpg",
+      "synopsis": "An old childhood friend of Desert Punk, Natsuko, returns. Meanwhile, Desert Punk confronts the Machine Gun Brothers again.",
+      "airdate": "2005-01-24",
+      "markers": [],
+      "external_id": "162381"
+    },
+    {
+      "n": 16,
+      "title": "A Load of...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162389/original.jpg",
+      "synopsis": "Desert Punk must protect a secret weapon of mass destruction from Rain Spiders' men.",
+      "airdate": "2005-01-31",
+      "markers": [],
+      "external_id": "162389"
+    },
+    {
+      "n": 17,
+      "title": "Perv in Pursuit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162392/original.jpg",
+      "synopsis": "Junko runs into Desert Punk in the middle of the desert, being chased by a sniper. The sniper is wearing a state-of-the-art desert suit and seems to have a fixation on the lovely Junko.",
+      "airdate": "2005-02-07",
+      "markers": [],
+      "external_id": "162392"
+    },
+    {
+      "n": 18,
+      "title": "Too Close for Comfort",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162401/original.jpg",
+      "synopsis": "Tech manages to kidnap Junko, but Desert Punk is on his trail. That is until three other men appear and start shooting at all of them. Now Desert Punk must join forces with Junko's kidnapper, in order to survive.",
+      "airdate": "2005-02-14",
+      "markers": [],
+      "external_id": "162401"
+    },
+    {
+      "n": 19,
+      "title": "Scratching the Surface",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162407/original.jpg",
+      "synopsis": "After Junko is arrested by the government, Desert Punk teams up with the Machine Gun Brothers to find the missing Natsuki.",
+      "airdate": "2005-02-21",
+      "markers": [],
+      "external_id": "162407"
+    },
+    {
+      "n": 20,
+      "title": "A Raw Deal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162417/original.jpg",
+      "synopsis": "Desert Punk discovers that Stryker, Natsuko and many others are all part of the Underground Mercenaries, a group taht wants to overthrow the government.",
+      "airdate": "2005-02-28",
+      "markers": [],
+      "external_id": "162417"
+    },
+    {
+      "n": 21,
+      "title": "Successor of the Desert",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162423/original.jpg",
+      "synopsis": "With Desert Punk dead, it is up to Kosuna to take his place when the Kawazu Gang returns.",
+      "airdate": "2005-03-07",
+      "markers": [],
+      "external_id": "162423"
+    },
+    {
+      "n": 22,
+      "title": "Hidden Agendas",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162432/original.jpg",
+      "synopsis": "Kosuna is hired to guard a secret meeting of the Underground Mercenaries Union.",
+      "airdate": "2005-03-14",
+      "markers": [],
+      "external_id": "162432"
+    },
+    {
+      "n": 23,
+      "title": "Voices in the Wind",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162438/original.jpg",
+      "synopsis": "Kosuna accepts a new job from Natsuko, this time to guard a secret laboratory. On the way there, they see a mysterious cloud appearing on the horizon.",
+      "airdate": "2005-03-21",
+      "markers": [],
+      "external_id": "162438"
+    },
+    {
+      "n": 24,
+      "title": "The Demon Revealed",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/162450/original.jpg",
+      "synopsis": "With the thought of Kanta being dead quickly erased from her mind, Kosuna sets out to prove herself as a true mercenary one last time against her old master. Kanta reveals that Kaizuka may not be all that he seems to be, and the Underground Mercenaries are destroyed. Kosuna chooses to forget about her past and Desert Punk, knowing that is the only way she can truly become Kanto Desert's greatest power babe.",
+      "airdate": "2005-03-28",
+      "markers": [],
+      "external_id": "162450"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sand Mission",
+      "artist": "Hideaki Takatori and ZETKI",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sunabouzu Ekaki Uta (How to Draw Sunabouzu)",
+      "artist": "Hideaki Takatori",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "DESTINY OF THE DESERT",
+      "artist": "YUKA",
+      "episodes": "13-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Shinkirou (Mirage)",
+      "artist": "YUKA",
+      "episodes": "12-"
+    }
+  ],
+  "relations": []
+}

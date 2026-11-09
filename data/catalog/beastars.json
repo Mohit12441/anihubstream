@@ -1,0 +1,284 @@
+{
+  "id": "beastars",
+  "title": "BEASTARS",
+  "native": "BEASTARS",
+  "year": 2019,
+  "rating": 7.6,
+  "season": "Fall 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx107660-hgknnyaLchJW.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx107660-hgknnyaLchJW.png",
+  "accent": "#e4a15d",
+  "synopsis": "In a world populated by anthropomorphic animals, herbivores and carnivores coexist with each other. For the adolescents of Cherryton Academy, school life is filled with hope, romance, distrust, and uneasiness.\n\nThe main character is Legoshi the wolf, a member of the drama club. Despite his menacing appearance, he has a very gentle heart. Throughout most of his life, he has always been an object of fear and hatred by other animals, and he’s been quite accustomed to that lifestyle. But soon, he finds himself becoming more involved with his fellow classmates who have their own share of insecurities and finds his life in school changing slowly.\n\n(Source: moetron)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "beastars-e9spue",
+    "mal": 39195,
+    "anilist": 107660,
+    "kitsu": 42147
+  },
+  "skip_key_id": 39195,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "beastars beastars tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Moon and the Beast",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/268402/thumbnail/beb21d00bf61652fb65cefde5cf28220.jpg",
+      "synopsis": "An herbivore's murder unsettles Cherryton Academy, with some suspecting grey wolf Legoshi; dwarf rabbit Haru struggles with her classmates' bullying.\n\n(Source: Netflix, edited)",
+      "airdate": "2019-10-10",
+      "markers": [],
+      "external_id": "268402"
+    },
+    {
+      "n": 2,
+      "title": "The Academy's Top Dogs",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/268403/thumbnail/d9c8d676267e5733fb82dd2878659e50.jpg",
+      "synopsis": "Legoshi ponders his own ferocious impulses; a run-in at breakfast unsettles him further; the theater students prepare for their play.\n\n(Source: Netflix)",
+      "airdate": "2019-10-17",
+      "markers": [],
+      "external_id": "268403"
+    },
+    {
+      "n": 3,
+      "title": "A Wolf is Born",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/270725/thumbnail/00217319f2663260960edf40bda2f2b9.jpg",
+      "synopsis": "Haru and Legoshi's interaction ends extremely awkwardly; with two days to the performance, the school newspaper sniffs out what Louis is hiding.\n\n(Source: Netflix, edited)",
+      "airdate": "2019-10-24",
+      "markers": [],
+      "external_id": "270725"
+    },
+    {
+      "n": 4,
+      "title": "Give it Your All",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/270840/thumbnail/3140cbd8311823b5a8e3e70cdafb4600.jpg",
+      "synopsis": "The drama club switches up parts after the last performance; tapped to appear onstage, Legoshi confronts the lead actor about a dangerous issue.\n\n(Source: Netflix)",
+      "airdate": "2019-10-31",
+      "markers": [],
+      "external_id": "270840"
+    },
+    {
+      "n": 5,
+      "title": "Two Sides to the Story",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/271071/thumbnail/4709fa246e259e22b9f49923859cfdaa.jpg",
+      "synopsis": "Legoshi deals with misplaced notoriety after the play, with Jack's support; Haru and Louis have a clandestine encounter.\n\n(Source: Netflix, edited)",
+      "airdate": "2019-11-07",
+      "markers": [],
+      "external_id": "271071"
+    },
+    {
+      "n": 6,
+      "title": "Blurred Vision - Dream or Reality?",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/271181/thumbnail/1314f2263f0c082419e88c8ac521883f.jpg",
+      "synopsis": "After another murder, herbivores are confined to campus; in town, the theater club carnivores enter a shady district for adult meat eaters.\n\n(Source: Netflix)",
+      "airdate": "2019-11-14",
+      "markers": [],
+      "external_id": "271181"
+    },
+    {
+      "n": 7,
+      "title": "Below the Fur Coat",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/271314/thumbnail/1687ce6d11b362504ad70344e887ec5c.jpg",
+      "synopsis": "The mystery of Legoshi's favorite lunch is solved; Haru recalls her first encounter with a vulnerable Louis, who has a fiancée.\n\n(Source: Netflix, edited)",
+      "airdate": "2019-11-21",
+      "markers": [],
+      "external_id": "271314"
+    },
+    {
+      "n": 8,
+      "title": "Caught like Floss in a Canine's Teeth",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/271377/thumbnail/10da0db946a909a66b2d6f5e174bdddd.jpg",
+      "synopsis": "Legoshi offers to escort Haru home; on the way, she tries to become better friends with him, unaware of his guilt; Juno has a revelation.\n\n(Source: Netflix, edited)",
+      "airdate": "2019-11-28",
+      "markers": [],
+      "external_id": "271377"
+    },
+    {
+      "n": 9,
+      "title": "Into the Lion's Den",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/271771/thumbnail/91d53466dfbe2d84ff9931b68be79d83.jpg",
+      "synopsis": "Louis recalls his harrowing past; Legoshi makes a vow despite conflicting feelings; Haru is kidnapped for ransom by carnivores.\n\n(Source: Netflix, edited)",
+      "airdate": "2019-12-05",
+      "markers": [],
+      "external_id": "271771"
+    },
+    {
+      "n": 10,
+      "title": "A Wolf in Sheep's Clothing",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/271811/thumbnail/283ff00850090cb3fdbf78b06ff11fe3.jpg",
+      "synopsis": "Legoshi risks his life to find the Shishi-Gumi; a friend helps him channel and control his inner beast so that he can save Haru.\n\n(Source: Netflix, edited)",
+      "airdate": "2019-12-12",
+      "markers": [],
+      "external_id": "271811"
+    },
+    {
+      "n": 11,
+      "title": "To the Neon District",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/271922/thumbnail/1634810dfaaeed9621b9891b4a8a7198.jpg",
+      "synopsis": "A ferocious Legoshi wreaks havoc to save Haru, while an unknown ally assists in their escape; awkward timing causes some awkward situations.\n\n(Source: Netflix, edited)",
+      "airdate": "2019-12-19",
+      "markers": [],
+      "external_id": "271922"
+    },
+    {
+      "n": 12,
+      "title": "In the Storm's Wake",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/272397/thumbnail/9bea44467ddd026e2464e634ca393161.jpg",
+      "synopsis": "Haru and Legoshi return to school after their strange night; as the festival gets underway, Juno challenges Haru for Legoshi's affection.\n\n(Source: Netflix, edited)",
+      "airdate": "2019-12-26",
+      "markers": [],
+      "external_id": "272397"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tiny Light",
+      "artist": "SEVENTEEN",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Into the world",
+      "artist": "issei",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Feel Like This",
+      "artist": "YU-KA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kaibutsu (Monster)",
+      "artist": "YOASOBI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaibutsu (怪物)",
+      "artist": "YOASOBI",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Wild side",
+      "artist": "ALI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Le zoo",
+      "artist": "YURiKA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Wild Side",
+      "artist": "ALI",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rock 'n' Roll Dragon",
+      "artist": "Risa Uesaka",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Yasashii Suisei (優しい彗星)",
+      "artist": "YOASOBI",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Yasashii Suisei (優しい彗星)",
+      "artist": "YOASOBI",
+      "episodes": "2-11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Le zoo",
+      "artist": "YURiKA",
+      "episodes": "2, 5, 8, 9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Nemureru Honnou",
+      "artist": "YURiKA",
+      "episodes": "3, 7, 10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Marble",
+      "artist": "YURiKA",
+      "episodes": "4, 6, 11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Tsuki ni ukabu Monogatari",
+      "artist": "YURiKA",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

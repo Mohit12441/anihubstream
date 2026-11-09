@@ -1,0 +1,91 @@
+{
+  "id": "angel-beats-another-epilogue",
+  "title": "Angel Beats!: Another Epilogue",
+  "native": "エンジェルビーツ! アナザーエピローグ",
+  "year": 2010,
+  "rating": 7.1,
+  "season": "Fall 2010",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx10067-83dhqo4TcbTs.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx10067-83dhqo4TcbTs.jpg",
+  "accent": "#6b431a",
+  "synopsis": "Another ending epilogue included with the 7th volume of the DVD and Blu-ray.\n\nDisillusioned with the afterlife, a new student causes a scene during a classroom test and expresses his doubts about whether getting good grades can really lead to escaping the school and ascending to Heaven. Afterwards, he is confronted by the new student council president—a familiar face whose past experiences give him powerful insight into the true nature of the school and first-hand knowledge regarding the futility of rebellion.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "angel-beats!:-another-epilogue-x7a91k",
+    "mal": 10067,
+    "anilist": 10067,
+    "kitsu": 6019
+  },
+  "skip_key_id": 10067,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "angel beats another epilogue エンシ ェルヒ ーツ アナサ ーエヒ ローク special finished",
+  "genres": [
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Angel Beats!: Another Epilogue",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a991c007c1970b0573fcbbe-poster.jpg",
+      "synopsis": "Another ending epilogue included with the 7th volume of the DVD and Blu-ray.\n\n\n\nDisillusioned with the afterlife, a new student causes a scene during a classroom test and expresses his doubts about whether getting good grades can really lead to escaping the school and ascending to Heaven. Afterwards, he is confronted by the new student council president—a familiar face whose past experiences give him powerful insight into the true nature of the school and first-hand knowledge regarding the futility of rebellion.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "90961"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "My Soul, Your Beats!",
+      "artist": "Lia",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Brave Song",
+      "artist": "Aoi Tada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "My Soul, Your Beats! (Gldemo ver.)",
+      "artist": "Girls Dead Monster",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Ichiban no Takaramono ~Yui final ver.~ (一番の宝物～Yui final ver.～)",
+      "artist": "LiSA",
+      "episodes": "10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Ichiban no Takaramono (一番の宝物)",
+      "artist": "Karuta",
+      "episodes": "13"
+    }
+  ],
+  "relations": []
+}

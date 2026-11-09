@@ -1,0 +1,203 @@
+{
+  "id": "d-gray-man-hallow",
+  "title": "D.Gray-man HALLOW",
+  "native": "D.Gray-man Hallow",
+  "year": 2016,
+  "rating": 7.7,
+  "season": "Year 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://animehot.cc/storage/media/2026/09/6947fab105d538201eac94ec-poster.jpg",
+  "key_art": "https://animehot.cc/storage/media/2026/09/6947fab105d538201eac94ec-landscape.webp",
+  "accent": "#8b5cf6",
+  "synopsis": "Despite the recent Akuma attack, the members of the Black Order are in high spirits as they set about moving to a new base. Immediately upon his arrival, however, Allen Walker is suddenly called by the Central Agency and has his arm forcefully sealed by the Order. He is then led to a surprising meeting with his master, General Cross Marian, who reveals staggering secrets surrounding the enigmatic 14th Noah.\n\nA phantom thief incident, the arrival of a mysterious group of Exorcists, the death of an important comrade, and an all-out battle against the Noah Family—just what does this mean for Allen, Yuu Kanda, and the rest of the Order? This is but the beginning of a series of strange, seemingly unconnected events that lead to something far greater.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "d.gray-man-hallow-56dbms",
+    "mal": 32370,
+    "anilist": 21558,
+    "kitsu": 11654
+  },
+  "skip_key_id": 32370,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "d gray man hallow d gray man hallow",
+  "genres": [
+    "action",
+    "adventure",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Fourteenth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "After collecting Innocence, Allen and the other Exorcists are headed to the Black Order's new Headquarters, where Director Lvellie and Allen's Master, Cross Marian, await Allen's arrival.",
+      "airdate": "2016-07-05",
+      "markers": [],
+      "external_id": "186380"
+    },
+    {
+      "n": 2,
+      "title": "Lonely Boy",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Allen and the others are sent to Paris to investigate Phantom Thief G, who is believed to have something to do with Innocence. Once there, they find the thief, whom they discover is also being sought by another party.",
+      "airdate": "2016-07-12",
+      "markers": [],
+      "external_id": "186381"
+    },
+    {
+      "n": 3,
+      "title": "It’ll Be Fine If I Wash My Face",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "While Allen, Yuu, and Marie are fighting Akuma inside Hearst Orphanage, Timothy awakens as a new Innocence Accommodator. Meanwhile, Reever and the others try to enter the building, but they are hindered by an enveloping barrier.",
+      "airdate": "2016-07-19",
+      "markers": [],
+      "external_id": "186382"
+    },
+    {
+      "n": 4,
+      "title": "Blood Crusade",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "North American Branch Chief Renny Epstain pays a visit to Komui to let him know that, by order of the Pope, she is activating the Black Order's new fighting power, the Third Exorcists. Meanwhile, the last Noah member awakens.",
+      "airdate": "2016-07-26",
+      "markers": [],
+      "external_id": "186383"
+    },
+    {
+      "n": 5,
+      "title": "Alma Karma",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Some of the Black Order's staff are brought into the North American Branch to observe Alma Karma, the parent body of the Third apostles. However, during the meeting, the branch is attacked and comes under the Noah clan's control.",
+      "airdate": "2016-08-02",
+      "markers": [],
+      "external_id": "186384"
+    },
+    {
+      "n": 6,
+      "title": "Friend",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The Millennium Earl, along with some Noah members, pays a visit to the Black Order's North American Branch where Alma Karma has been sleeping. In order to awaken him, Wisely uses Yuu's brain, which ends up dragging Allen into his memories.",
+      "airdate": "2016-08-09",
+      "markers": [],
+      "external_id": "186385"
+    },
+    {
+      "n": 7,
+      "title": "The Truth about a Sterile Flower",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "While in Yuu's memories, Allen sees what the Black Order was doing to Yuu and Alma Karma in the name of the Second Exorcist Plan nine years ago, and how Yuu ended up killing Alma Karma.",
+      "airdate": "2016-08-16",
+      "markers": [],
+      "external_id": "186386"
+    },
+    {
+      "n": 8,
+      "title": "Awakening",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "As Alma Karma finally wakes, the Alma cells that were implanted in the Third Exorcists start to go out of control. When the situation becomes desperate, the Millennium Earl makes Allen an offer.",
+      "airdate": "2016-08-23",
+      "markers": [],
+      "external_id": "186387"
+    },
+    {
+      "n": 9,
+      "title": "Little Good-Bye",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "After the Hekiji barrier placed on the North American Branch is canceled, Allen sees the soul of Alma Karma, who became an Akuma, and learns why Alma has been trying to kill Kanda.",
+      "airdate": "2016-08-30",
+      "markers": [],
+      "external_id": "186388"
+    },
+    {
+      "n": 10,
+      "title": "Sinner in Despair",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Allen is confined for disobeying Director Lvellie's orders. Since he does not eat anything as he's afraid of the food possibly having truth serum in it, Link gets worried and brings some food for him. Then they receive a visitor in Allen's cell.",
+      "airdate": "2016-09-06",
+      "markers": [],
+      "external_id": "186389"
+    },
+    {
+      "n": 11,
+      "title": "Hidden One",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "When the Cardinal attacks Link, Allen, still in a daze and fearing for Link's life, instinctively uses his Innocence on the Cardinal.",
+      "airdate": "2016-09-13",
+      "markers": [],
+      "external_id": "186390"
+    },
+    {
+      "n": 12,
+      "title": "My Home",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Now that the Order considers Allen a Noah, Komui issues an order for Exorcists and CROWS to capture him. However, Lenalee believes that Allen won't betray them and goes after him on her own.",
+      "airdate": "2016-09-20",
+      "markers": [],
+      "external_id": "186391"
+    },
+    {
+      "n": 13,
+      "title": "Walker",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Three months after Allen's desertion from the Order, some still believe in him and others harbor doubts. When Lenalee expresses disappointment at being unable to help Allen, Marie reassures her that their bond with him remains intact.",
+      "airdate": "2016-09-27",
+      "markers": [],
+      "external_id": "186392"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "key -bring it on, my Destiny-",
+      "artist": "Lenny code fiction",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lotus Pain",
+      "artist": "Mashiro Ayano",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

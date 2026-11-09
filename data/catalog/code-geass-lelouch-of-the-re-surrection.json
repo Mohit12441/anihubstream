@@ -1,0 +1,71 @@
+{
+  "id": "code-geass-lelouch-of-the-re-surrection",
+  "title": "Code Geass: Lelouch of the Re;surrection",
+  "native": "コードギアス 復活のルルーシュ",
+  "year": 2019,
+  "rating": 7.7,
+  "season": "Winter 2019",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97880-sZWHViJfrvXm.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97880-sZWHViJfrvXm.jpg",
+  "accent": "#4386e4",
+  "synopsis": "The story takes place several years after Lelouch's \"Zero Requiem\" plan. \n\nHe gave up his life to save the world and protect the ones he loved. The day Lelouch vi Brittannia fell was the day this war-torn world found peace. Now, as his friends work to keep the peace, a terrorist attack could risk everything. Can the brilliant tactician outwit death and save them all? Or will Lelouch’s legacy fall here? \n\n(Source: Funimation Films)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "code-geass:-lelouch-of-the-resurrection-cgcm0s",
+    "mal": 34437,
+    "anilist": 97880,
+    "kitsu": 12767
+  },
+  "skip_key_id": 34437,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "code geass lelouch of the re surrection コート キ アス 復活のルルーシュ movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Code Geass: Lelouch of the Re;surrection (Movie)",
+      "runtime": "112:00",
+      "runtime_seconds": 6720,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a93d32580ce44fd7cc57a11-landscape.jpg",
+      "synopsis": "The story takes place several years after Lelouch's \"Zero Requiem\" plan. \n\n\nHe gave up his life to save the world and protect the ones he loved. The day Lelouch vi Brittannia fell was the day this war-torn world found peace. Now, as his friends work to keep the peace, a terrorist attack could risk everything. Can the brilliant tactician outwit death and save them all? Or will Lelouch’s legacy fall here? \n\n\n(Source: Funimation Films)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "218093"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kono Sekai de",
+      "artist": "Ieiri Leo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Revive",
+      "artist": "UNIONE",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

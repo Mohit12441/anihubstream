@@ -1,0 +1,1068 @@
+{
+  "id": "ahiru-no-sora",
+  "title": "Ahiru no Sora",
+  "native": "あひるの空",
+  "year": 2019,
+  "rating": 7,
+  "season": "Fall 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101239-iGhniUbzVgpn.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101239-iGhniUbzVgpn.jpg",
+  "accent": "#35c9f1",
+  "synopsis": "He may be short in stature, but Sora Kurumatani can soar and score on the basketball court! With a passion for the sport he inherited from his mother, Sora vows to her that he’ll take top prize at a high school basketball tournament… but there’s one problem. His new school’s basketball club has turned into a hangout for delinquents! Will Sora’s sheer tenacity and amazing three-point shooting change their minds and get the club up and running again?\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 41399,
+    "anilist": 101239,
+    "mal": 37403
+  },
+  "skip_key_id": 37403,
+  "skip_key_space": "mal",
+  "episode_total": 50,
+  "added_at": "2026-10-15 18:06:07",
+  "search_text": "ahiru no sora あひるの空 tv finished",
+  "genres": [
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Ugly Duckling",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/de534c57f17b84bde50c2d380350e4351569987448_full.jpg",
+      "synopsis": "Sora is determined to join the basketball club, but the club’s members are determined to goof off instead of practice. Sora’s solution? A five-on-one game, winner takes all!",
+      "airdate": "2019-10-02",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1425
+        }
+      ],
+      "external_id": "268325"
+    },
+    {
+      "n": 2,
+      "title": "Boys Without Talent",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/aabbd7de14d125734e0a44f202cc0b601570606159_full.jpg",
+      "synopsis": "Sora’s skill and enthusiasm remind Momoharu of what it means to be passionate about basketball — but will Momoharu keep his promise to get serious about the game again?",
+      "airdate": "2019-10-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1440
+        }
+      ],
+      "external_id": "268326"
+    },
+    {
+      "n": 3,
+      "title": "Momoharu's Wings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/52350b025c7cbb15e4fe1fb838ec5a0d1571202153_full.jpg",
+      "synopsis": "Punks from Maru High have challenged Sora’s team to a basketball match, but how good is their team, anyway? Sora goes undercover to investigate!",
+      "airdate": "2019-10-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1305,
+          "end": 1391
+        }
+      ],
+      "external_id": "269667"
+    },
+    {
+      "n": 4,
+      "title": "First Flight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/2ee291d3afe186ea7924684731635cdf1571823821_full.jpg",
+      "synopsis": "The day of the match against Maru High is here, and Sora can’t wait to hit the court! But do the punks of Kuzu High stand a chance against their more experienced opponents?",
+      "airdate": "2019-10-23",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1440
+        }
+      ],
+      "external_id": "269668"
+    },
+    {
+      "n": 5,
+      "title": "Broken Wings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/0cf29396be806de5c9b19be0318a9df41572391744_full.jpg",
+      "synopsis": "Tokitaka thinks he’s found a way to shut Sora out of the paint, but the pint-sized powerhouse still has a trick up his sleeve that could turn this game around!",
+      "airdate": "2019-10-30",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1282,
+          "end": 1365
+        }
+      ],
+      "external_id": "269669"
+    },
+    {
+      "n": 6,
+      "title": "Now's the Time",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/69e23e8bf667c58d9af6c6ba4bd316cf1573019485_full.jpg",
+      "synopsis": "Sora’s new strategy has put him in the crosshairs of the defense, and things are looking bleak. Luckily for him, Kuzu High’s secret weapon is ready to take the court!",
+      "airdate": "2019-11-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 128
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1387
+        }
+      ],
+      "external_id": "269670"
+    },
+    {
+      "n": 7,
+      "title": "The Troublesome Freshman",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d3227c7a3322579027ca566d797549471573628384_full.jpg",
+      "synopsis": "After taking an exhausted Sora home post-game, Madoka learns the truth about Sora’s basketball-star mother and the reasoning behind his grand ambitions.",
+      "airdate": "2019-11-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1440
+        }
+      ],
+      "external_id": "269671"
+    },
+    {
+      "n": 8,
+      "title": "The Duck and the Kite",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/1a6346c492bbbf79d70def92a6462a691574212626_full.jpg",
+      "synopsis": "Kite only cares about two things: the ball and the basket. Team bonding? He'll pass, thanks... but will he change his tune when he learns he shares a common dream with Sora?",
+      "airdate": "2019-11-20",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1434
+        }
+      ],
+      "external_id": "269672"
+    },
+    {
+      "n": 9,
+      "title": "Kite, His Ball, and the Team's Pain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/4738b40d82f9420e2e44170491470d241574827465_full.jpg",
+      "synopsis": "Kite’s fate was sealed the moment he laid hands on those upperclassmen. Luckily for him, Sora has never been one to give up without a fight.",
+      "airdate": "2019-11-27",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1415,
+          "end": 1440
+        }
+      ],
+      "external_id": "269673"
+    },
+    {
+      "n": 10,
+      "title": "Manager",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/0fa9584dd0e4486cc3c2aedf8eec42381575450814_full.jpg",
+      "synopsis": "All Sora wanted was to get his “wings” repaired. He didn’t count on getting a super cute, super clumsy team manager in the bargain!",
+      "airdate": "2019-12-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 7,
+          "end": 97
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1440
+        }
+      ],
+      "external_id": "269674"
+    },
+    {
+      "n": 11,
+      "title": "The Boys' Stubbornness and Girls' Pride",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e72b6033033e3f4a70edec343f45cb021576040042_full.jpg",
+      "synopsis": "",
+      "airdate": "2019-12-11",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1324,
+          "end": 1440
+        }
+      ],
+      "external_id": "269675"
+    },
+    {
+      "n": 12,
+      "title": "TEAM",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b0ae8ca50a19b51a98a21d02a43100561576640566_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "269676"
+    },
+    {
+      "n": 13,
+      "title": "Differing Enthusiasm",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/99c6d812b09a6e21c55f3be061c1a1aa1577237359_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1440
+        }
+      ],
+      "external_id": "269677"
+    },
+    {
+      "n": 14,
+      "title": "Towards Victory",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/e9b9dab5a339125dca869d033eafb3141578458163_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1440
+        }
+      ],
+      "external_id": "271423"
+    },
+    {
+      "n": 15,
+      "title": "The Boys' Spirit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/7864c186127dda43671621c5178976a31579063076_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1410
+        }
+      ],
+      "external_id": "271424"
+    },
+    {
+      "n": 16,
+      "title": "The Best Start and the Worst Start",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/4a13b8c863999709c05bdfd644a168c81579652369_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1410
+        }
+      ],
+      "external_id": "271425"
+    },
+    {
+      "n": 17,
+      "title": "Versus",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/89b9c2ca9947e092a96a097a8746ecd31580260597_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1145,
+          "end": 1235
+        }
+      ],
+      "external_id": "271426"
+    },
+    {
+      "n": 18,
+      "title": "Now...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/9c38815590e49fd42f91e9d0aaded98a1580869141_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1440
+        }
+      ],
+      "external_id": "271427"
+    },
+    {
+      "n": 19,
+      "title": "Higher Than Anyone",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/79c1be56133900d21025be70840c48191581475191_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 100,
+          "end": 190
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1410
+        }
+      ],
+      "external_id": "271428"
+    },
+    {
+      "n": 20,
+      "title": "Last Play",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/5afeef218f7dc24834fed2268a85ef991582082783_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 191,
+          "end": 281
+        }
+      ],
+      "external_id": "271429"
+    },
+    {
+      "n": 21,
+      "title": "Tears",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/2afe5eb13383e9ae5f7e3c521355d9661582675589_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271430"
+    },
+    {
+      "n": 22,
+      "title": "The Last Piece",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/03abf4b32b991591443c5d2e7b303daa1583290103_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1323,
+          "end": 1440
+        }
+      ],
+      "external_id": "271431"
+    },
+    {
+      "n": 23,
+      "title": "The Moon and the Hoop",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/2eac1fd7a39c7c47327188b161060c611583900899_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 133,
+          "end": 223
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1325,
+          "end": 1440
+        }
+      ],
+      "external_id": "271432"
+    },
+    {
+      "n": 24,
+      "title": "Light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/ac4e9dc099bafc8278382e7771a354d71584518282_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 92,
+          "end": 182
+        }
+      ],
+      "external_id": "271433"
+    },
+    {
+      "n": 25,
+      "title": "Undiscovered Talent",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/21de4a47e68acb994c1e0e8aab0d0e091585716633_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "271434"
+    },
+    {
+      "n": 26,
+      "title": "Rush and Rush",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a35491104707954416ed1ac24738fdfb1586327094_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1410
+        }
+      ],
+      "external_id": "271435"
+    },
+    {
+      "n": 27,
+      "title": "The Hard Play",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c5208829ff82b5c9f3b840d1cdf192d71586925936_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271436"
+    },
+    {
+      "n": 28,
+      "title": "VOW",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/d97f33af3b03dfe7a4144a4842026b131587539637_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 27,
+          "end": 111
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271437"
+    },
+    {
+      "n": 29,
+      "title": "BONDS",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/91215cea40a3c3d4cb7c3f1438b785f51588148404_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271438"
+    },
+    {
+      "n": 30,
+      "title": "REASON FOR LIVING",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/784880b609e758eac2c2fd6020d112cf1588744064_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271439"
+    },
+    {
+      "n": 31,
+      "title": "What Must Be Protected",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/cfc816a4f96beb1e33f9209afae71d971589353153_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 162
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271440"
+    },
+    {
+      "n": 32,
+      "title": "Time Limit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/00a03f47eed25f0ccfd3478b6f04c0121589933353_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 30,
+          "end": 119
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271441"
+    },
+    {
+      "n": 33,
+      "title": "Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/309f89eca3fa3b4bd12ec739be94f6d21590562639_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1410,
+          "end": 1440
+        }
+      ],
+      "external_id": "271442"
+    },
+    {
+      "n": 34,
+      "title": "Light Trails",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/f27ea376f06e2990688037a13ecc152d1591163035_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 13,
+          "end": 103
+        }
+      ],
+      "external_id": "271443"
+    },
+    {
+      "n": 35,
+      "title": "Stand",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/d2c88abfef488dbebe2661135de174fd1591770990_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271444"
+    },
+    {
+      "n": 36,
+      "title": "Kids are Allright",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/f753b7bebf9d4b49f9d6ef3eb36bb5851592380235_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271445"
+    },
+    {
+      "n": 37,
+      "title": "Tender",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/520760cc46b32899466b310e7b2d57f21593597553_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271446"
+    },
+    {
+      "n": 38,
+      "title": "Earring",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/3a5df770bf591515cf302760e86dcbcc1594193180_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271447"
+    },
+    {
+      "n": 39,
+      "title": "FIGHT FOR ROCK FOR LIFE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f38a149a2ec3e16a32d667e33c2066791594781548_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1410,
+          "end": 1440
+        }
+      ],
+      "external_id": "271448"
+    },
+    {
+      "n": 40,
+      "title": "Stop & Go",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/46218cf319d3530723f9272723a826091595401345_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271449"
+    },
+    {
+      "n": 41,
+      "title": "Challenger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ce593204d75d742e9ccf607b8618dafe1595992918_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "271450"
+    },
+    {
+      "n": 42,
+      "title": "War Declaration",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/569378ce8afebe3043a9002fd32d47331596617101_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "271451"
+    },
+    {
+      "n": 43,
+      "title": "The Best Lineup",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a58d2414ab460ff79e0c69dffe12e1731597215356_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1440
+        }
+      ],
+      "external_id": "271452"
+    },
+    {
+      "n": 44,
+      "title": "Fuse",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0ad9650ddd5d2a154c40854902a7dc811597817464_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "271453"
+    },
+    {
+      "n": 45,
+      "title": "Break",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ea23199bb072e01345183e8f047b4e401598425951_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 14,
+          "end": 104
+        }
+      ],
+      "external_id": "271454"
+    },
+    {
+      "n": 46,
+      "title": "Certain Proof",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/e2196853ee38432c8cdc99a0dd09aba81599021733_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1440
+        }
+      ],
+      "external_id": "271455"
+    },
+    {
+      "n": 47,
+      "title": "Sora the Duck",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/70782c5b04835e7534e45fba45c6bbb71599621078_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1440
+        }
+      ],
+      "external_id": "271456"
+    },
+    {
+      "n": 48,
+      "title": "The Straight Story",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/2aee0e1aa0d1126b7422ff64e445feb11600212943_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1440
+        }
+      ],
+      "external_id": "271457"
+    },
+    {
+      "n": 49,
+      "title": "The Last Period",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b107596b6ae3a6687de6b1eb02d80ed81600840572_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1440
+        }
+      ],
+      "external_id": "271458"
+    },
+    {
+      "n": 50,
+      "title": "Bridge",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/022c394c896dda9dca13d9b675782f4e1601442647_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "271459"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Happy Go Ducky!",
+      "artist": "the pillows",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsubasa",
+      "artist": "saji",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Never Mind",
+      "artist": "flumpool",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Over",
+      "artist": "Yuma Uchida",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Hummingbird",
+      "artist": "BLUE ENCOUNT",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Hikari Sasu Hou e (光射す方へ)",
+      "artist": "Mamoru Miyano",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "Rebirth",
+      "artist": "ACIDMAN",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Taiyou Runner",
+      "artist": "Shougo Sakamoto",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

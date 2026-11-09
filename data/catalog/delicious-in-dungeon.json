@@ -1,0 +1,338 @@
+{
+  "id": "delicious-in-dungeon",
+  "title": "Delicious in Dungeon",
+  "native": "ダンジョン飯",
+  "year": 2024,
+  "rating": 8.5,
+  "season": "Winter 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx153518-IVXPDY5ph3kO.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx153518-IVXPDY5ph3kO.jpg",
+  "accent": "#e48650",
+  "synopsis": "When young adventurer Laios and his company are attacked and soundly thrashed by a dragon deep in a dungeon, the party loses all its money and provisions...and a member! They're eager to go back and save her, but there is just one problem: If they set out with no food or coin to speak of, they're sure to starve on the way! But Laios comes up with a brilliant idea: \"Let's eat the monsters!\" Slimes, basilisks, and even dragons...none are safe from the appetites of these dungeon-crawling gourmands! \n\n(Source: Yen Press)\n\nNote: A world premiere screening of Episode 1 was shown in the Studio TRIGGER panel at Anime Expo on July 1, 2023.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "delicious-in-dungeon-rau2f5",
+    "mal": 52701,
+    "anilist": 153518,
+    "kitsu": 46320
+  },
+  "skip_key_id": 52701,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "delicious in dungeon タ ンシ ョン飯 tv finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hot Pot/Tart",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/332902/thumbnail/e9f5236da1479bab03104fcbc70d9a52.jpg",
+      "synopsis": "After a crushing loss, Laios, Marcille, and Chilchuck quickly re-enter the dungeon to save Falin, but this time, they have a foolproof survival plan.\n\n(Source: Netflix)",
+      "airdate": "2024-01-04",
+      "markers": [],
+      "external_id": "332902"
+    },
+    {
+      "n": 2,
+      "title": "Roast Basilisk/Omelet/Kakiage",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/332903/thumbnail/9bfaf95e39c965f305c3ecc203faa74e.jpg",
+      "synopsis": "After waking up to a tantalizing smell, Marcille receives a lecture from Senshi on a balanced diet. The crew helps an adventurer poisoned by a basilisk.\n\n(Source: Netflix)",
+      "airdate": "2024-01-11",
+      "markers": [],
+      "external_id": "332903"
+    },
+    {
+      "n": 3,
+      "title": "Living Armor",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358209/thumbnail/3be6ff96dd586e6b294ffa9539dd6566.jpg",
+      "synopsis": "Laios and crew access a hidden area guarded by mysterious Living Armor, who appear to be protecting something potentially delicious.\n\n(Source: Netflix)",
+      "airdate": "2024-01-18",
+      "markers": [],
+      "external_id": "358209"
+    },
+    {
+      "n": 4,
+      "title": "Stewed Cabbage/Orcs",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358210/thumbnail/3e288fd66b54119f3640b368a56fa9af.jpg",
+      "synopsis": "Reaching the third level of the dungeon, Senshi leads the crew to his secret vegetable garden. Later, they are accosted by a band of angry, desperate orcs.\n\n(Source: Netflix)",
+      "airdate": "2024-01-25",
+      "markers": [],
+      "external_id": "358210"
+    },
+    {
+      "n": 5,
+      "title": "Snacks/Sorbet",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358211/thumbnail/360fd805b697420f18639e5adb973e63.jpg",
+      "synopsis": "As another group of adventurers discovers a treasure box, a swarm of bone-chilling ghosts chases Laios and his crew. Senshi, however, has a sweet plan.\n\n(Source: Netflix)",
+      "airdate": "2024-02-01",
+      "markers": [],
+      "external_id": "358211"
+    },
+    {
+      "n": 6,
+      "title": "Court Cuisine/ Boiled in Salt Water",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358212/thumbnail/7439dd1d0a45cdf954360732d0572a9f.jpg",
+      "synopsis": "A starving Laios angers a mysterious elf while hunting for food in Living Paintings. Later Chilchuck finds himself trapped with a crabby Mimic.\n\n(Source: Netflix)",
+      "airdate": "2024-02-08",
+      "markers": [],
+      "external_id": "358212"
+    },
+    {
+      "n": 7,
+      "title": "Kelpie/Porridge/Broiled with Sauce",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358213/thumbnail/dce6b167a5d0536bfc71367e5e5219cf.jpg",
+      "synopsis": "Something's fishy on this new dungeon level! The crew crosses a treacherous lake, encountering vicous seafood and fallen adventurers along the way.\n\n(Source: Netflix)",
+      "airdate": "2024-02-15",
+      "markers": [],
+      "external_id": "358213"
+    },
+    {
+      "n": 8,
+      "title": "Raspberries/Grilled Meat",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358214/thumbnail/909892f8fb26c55339be75f555d877d7.jpg",
+      "synopsis": "Marcille recalls when she first met Falin as young students. After a quick wash-up, an inadvertent misstep lands her in deep water with an angry spirit.\n\n(Source: Netflix)",
+      "airdate": "2024-02-22",
+      "markers": [],
+      "external_id": "358214"
+    },
+    {
+      "n": 9,
+      "title": "Tentacles/Stew",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358215/thumbnail/a7b2325dea34aa4e0d263cae44ca7f49.jpg",
+      "synopsis": "The smell of meat lures in uninvited guests — among them, a familiar face emerges. To move forward, they must work together to defeat the Undine.\n\n(Source: Netflix)",
+      "airdate": "2024-02-29",
+      "markers": [],
+      "external_id": "358215"
+    },
+    {
+      "n": 10,
+      "title": "Giant Frogs/Aboveground",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358216/thumbnail/d3b459de9da964f35260844cb26b523b.jpg",
+      "synopsis": "The crew avoids a stinging descent to the castle town, where the Red Dragon lurks. But to defeat it, they need a tight plan — and a morale-boosting meal.\n\n(Source: Netflix)",
+      "airdate": "2024-03-07",
+      "markers": [],
+      "external_id": "358216"
+    },
+    {
+      "n": 11,
+      "title": "Red Dragon I",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358217/thumbnail/ef5771ab59f6a279a30a9f65de18d718.jpg",
+      "synopsis": "The crew finally faces the Red Dragon, but their grand strategy quickly unravels. With the beast's fury escalating, who will get the final bite?\n\n(Source: Netflix)",
+      "airdate": "2024-03-14",
+      "markers": [],
+      "external_id": "358217"
+    },
+    {
+      "n": 12,
+      "title": "Red Dragon II",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358218/thumbnail/a962f361356da24e53ee5388b4fe4da4.jpg",
+      "synopsis": "A desperate search inside the dragon's stomach leads to a gruesome discovery, revealing that resurrection magic alone won't be enough to restore Falin.\n\n(Source: Netflix)",
+      "airdate": "2024-03-21",
+      "markers": [],
+      "external_id": "358218"
+    },
+    {
+      "n": 13,
+      "title": "Red Dragon III/Good Medicine",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358219/thumbnail/de158879f4bdc634bf1e42f1254de56f.jpg",
+      "synopsis": "Falin starts acting strange in the middle of the night, leading Laios and crew to a menacing figure who wants them gone.\n\n(Source: Netflix)",
+      "airdate": "2024-03-28",
+      "markers": [],
+      "external_id": "358219"
+    },
+    {
+      "n": 14,
+      "title": "Sea Serpent",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358220/thumbnail/fdb6abc3476873dd61f7a017340a7a5f.jpg",
+      "synopsis": "Back in the upper dungeon level, Kabru and crew wake up to find their supplies missing and are ambushed on their way back to the surface.\n\n(Source: Netflix)",
+      "airdate": "2024-04-04",
+      "markers": [],
+      "external_id": "358220"
+    },
+    {
+      "n": 15,
+      "title": "Dryad/Cockatrice",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358221/thumbnail/5a91f6239b5bc2bcd7c44bf2010ac291.jpg",
+      "synopsis": "Trapped in the dungeon, a concerned Senshi cooks up a nourishing meal for the famished crew — giving Marcille enough energy to come up with a plan.\n\n(Source: Netflix)",
+      "airdate": "2024-04-11",
+      "markers": [],
+      "external_id": "358221"
+    },
+    {
+      "n": 16,
+      "title": "Cleaners/Dried with Sweet Sake",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358222/thumbnail/78c5dd6943dc1e17fbe412b77bb8d721.jpg",
+      "synopsis": "Chilchuck figures out a way to escape the dungeon, but their ascent is halted by an unexpected encounter with an old friend in dire need of sustenance.\n\n(Source: Netflix)",
+      "airdate": "2024-04-18",
+      "markers": [],
+      "external_id": "358222"
+    },
+    {
+      "n": 17,
+      "title": "Harpy/Chimera",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358223/thumbnail/0c7a4277bc8eae750d144311c0bab94b.jpg",
+      "synopsis": "The parties must band together to fend off an attack by vicious Harpies — but the unexpected appearance of a transformed Falin stuns everyone.\n\n(Source: Netflix)",
+      "airdate": "2024-04-25",
+      "markers": [],
+      "external_id": "358223"
+    },
+    {
+      "n": 18,
+      "title": "Shapeshifter",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358224/thumbnail/fe542f6025ab1a6fe79b3bdde03779e0.jpg",
+      "synopsis": "While in pursuit of Falin, Laios and crew seek shelter from a blizzard but are overrun by Shapeshifters copies of themselves. How will they spot the fakes?\n\n(Source: Netflix)",
+      "airdate": "2024-05-02",
+      "markers": [],
+      "external_id": "358224"
+    },
+    {
+      "n": 19,
+      "title": "Hag/Nightmare",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358225/thumbnail/2aa53cdde44ac348f8f7cda3cf2bccc5.jpg",
+      "synopsis": "The crew is cornered by an acquaintance who demands help with a beastly problem. Later, Laios enters Marcille's nightmare and discovers her greatest fear.\n\n(Source: Netflix)",
+      "airdate": "2024-05-09",
+      "markers": [],
+      "external_id": "358225"
+    },
+    {
+      "n": 20,
+      "title": "Ice Golem/Barometz",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358226/thumbnail/404edadf235849ee1e31bb84e8c27e50.jpg",
+      "synopsis": "Izutsumi proves to be a useful ally despite her lousy table manners — and aversion to eating monsters. But the crew's kindness slowly opens her up.\n\n(Source: Netflix)",
+      "airdate": "2024-05-16",
+      "markers": [],
+      "external_id": "358226"
+    },
+    {
+      "n": 21,
+      "title": "Egg/The Golden Country",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358227/thumbnail/fb5405006f92703418c55bca89893e74.jpg",
+      "synopsis": "With the dungeon's fate hanging in the balance, Kabru negotiates with the elves. Meanwhile, a ghost drags Laios and crew into the cursed Golden Country.\n\n(Source: Netflix)",
+      "airdate": "2024-05-23",
+      "markers": [],
+      "external_id": "358227"
+    },
+    {
+      "n": 22,
+      "title": "Griffin/Familiars",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358228/thumbnail/bd858bc5ae36ae17c05c54a95e6fdfaa.jpg",
+      "synopsis": "Leaving the safety of the Golden Country, Senshi ends up in the clutches of a ferocious griffin. The crew must summon help if they want to save him.\n\n(Source: Netflix)",
+      "airdate": "2024-05-30",
+      "markers": [],
+      "external_id": "358228"
+    },
+    {
+      "n": 23,
+      "title": "Griffin Soup/Dumplings -1-",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358229/thumbnail/e678ef64ba8d044cbcbe13d35e0f70df.jpg",
+      "synopsis": "Back at camp, Senshi finally reveals his painful history within the dungeon. The next day, the crew is rudely awakened by a perplexing transformation.\n\n(Source: Netflix)",
+      "airdate": "2024-06-06",
+      "markers": [],
+      "external_id": "358229"
+    },
+    {
+      "n": 24,
+      "title": "Dumplings -2-/Bacon and Eggs",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "https://media.kitsu.app/episode/358230/thumbnail/68d28839d1d658680a9b0c36a420351a.jpg",
+      "synopsis": "Still wrestling with their new forms, the crew must overcome the gargoyles. Later, they descend deeper into the dungeon. What monsters will they try next?\n\n(Source: Netflix)",
+      "airdate": "2024-06-13",
+      "markers": [],
+      "external_id": "358230"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sleep Walking Orchestra",
+      "artist": "BUMP OF CHICKEN",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Party!!",
+      "artist": "Ryoku Oushoku Shakai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Unmei (Destiny)",
+      "artist": "sumika",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kirakira no Hai (Glittering Ashes)",
+      "artist": "Regal Lily",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

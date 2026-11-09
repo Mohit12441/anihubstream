@@ -1,0 +1,324 @@
+{
+  "id": "cardcaptor-sakura-clear-card",
+  "title": "Cardcaptor Sakura: Clear Card",
+  "native": "カードキャプターさくら クリアカード編",
+  "year": 2018,
+  "rating": 7.5,
+  "season": "Winter 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97881-QGpBWNtdCxrZ.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97881-QGpBWNtdCxrZ.png",
+  "accent": "#3D7DE6",
+  "synopsis": "The power of the Clow is back! As Sakura settles into a normal routine, she prepares to face her newest challenge - junior high! While her classes are challenging, things start looking up when Xiaolang Li reappears and says he'll be staying for good. But when she has a strange dream about a mysterious figure and wakes to find her Clow Cards completely clear, she must return to her duty as Cardcaptor.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "cardcaptor-sakura:-clear-card-zavydp",
+    "mal": 33354,
+    "anilist": 97881,
+    "kitsu": 12237
+  },
+  "skip_key_id": 33354,
+  "skip_key_space": "mal",
+  "episode_total": 22,
+  "added_at": null,
+  "search_text": "cardcaptor sakura clear card カート キャフ ターさくら クリアカート 編 tv finished",
+  "genres": [
+    "adventure",
+    "comedy",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sakura and the Clear Cards",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232095"
+    },
+    {
+      "n": 2,
+      "title": "Sakura and the Room with No Exit",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232096"
+    },
+    {
+      "n": 3,
+      "title": "Sakura's Heavy Rain Alert",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232097"
+    },
+    {
+      "n": 4,
+      "title": "Sakura and the Lovely Transfer Student",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232098"
+    },
+    {
+      "n": 5,
+      "title": "Sakura Feels a Pull at the Flower Viewing",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232099"
+    },
+    {
+      "n": 6,
+      "title": "Sakura, the Rabbit, and the Song of the Moon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232100"
+    },
+    {
+      "n": 7,
+      "title": "Sakura and a Game of Tag in the Garden",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232101"
+    },
+    {
+      "n": 8,
+      "title": "Sakura, the Clock, and a Hide-and-Seek Game",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232102"
+    },
+    {
+      "n": 9,
+      "title": "Sakura's Thrilling Aquarium Visit",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232103"
+    },
+    {
+      "n": 10,
+      "title": "Sakura and the Sleep Labyrinth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232104"
+    },
+    {
+      "n": 11,
+      "title": "Sakura and the Upside-down Penguin",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232105"
+    },
+    {
+      "n": 12,
+      "title": "Sakura and the Icy Ball-Sports Tournament",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232106"
+    },
+    {
+      "n": 13,
+      "title": "Sakura and Welcome Back, Meiling",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232107"
+    },
+    {
+      "n": 14,
+      "title": "Sakura, the Shrine, and the Zoo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232108"
+    },
+    {
+      "n": 15,
+      "title": "Sakura's Nostalgic Viewing Party",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232109"
+    },
+    {
+      "n": 16,
+      "title": "Sakura and Meiling's Friend",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232110"
+    },
+    {
+      "n": 17,
+      "title": "Sakura and the Crazy Sweets",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232111"
+    },
+    {
+      "n": 18,
+      "title": "Sakura and the Fire and Water Birds",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232112"
+    },
+    {
+      "n": 19,
+      "title": "Sakura and Akiho's Lullaby",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232113"
+    },
+    {
+      "n": 20,
+      "title": "Sakura, Rainbows, and Grandpa",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232114"
+    },
+    {
+      "n": 21,
+      "title": "Sakura, the Mirror, and the Key of Memories",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232115"
+    },
+    {
+      "n": 22,
+      "title": "Sakura's Clear Cards",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "232116"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "CLEAR",
+      "artist": "Maaya Sakamoto",
+      "episodes": "1-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Jewelry",
+      "artist": "Saori Hayami",
+      "episodes": "1-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yakusoku no Sora (約束の空; The Promised Sky)",
+      "artist": "Junko Iwao",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Rocket Beat",
+      "artist": "Kiyono Yasuno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rewind",
+      "artist": "Minori Suzuki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

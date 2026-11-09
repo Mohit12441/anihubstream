@@ -1,0 +1,707 @@
+{
+  "id": "cowboy-bebop",
+  "title": "Cowboy Bebop",
+  "native": "カウボーイビバップ",
+  "year": 1998,
+  "rating": 8.6,
+  "season": "Spring 1998",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-GCsPm7waJ4kS.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png",
+  "accent": "#f16b50",
+  "synopsis": "Enter a world in the distant future, where Bounty Hunters roam the solar system. Spike and Jet, bounty hunting partners, set out on journeys in an ever struggling effort to win bounty rewards to survive.\n\nWhile traveling, they meet up with other very interesting people. Could Faye, the beautiful and ridiculously poor gambler, Edward, the computer genius, and Ein, the engineered dog be a good addition to the group?",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 1,
+    "anilist": 1,
+    "mal": 1,
+    "hianime": "cowboy-bebop-29o5ba"
+  },
+  "skip_key_id": 1,
+  "skip_key_space": "anilist",
+  "episode_total": 26,
+  "added_at": "2026-10-14 02:14:09",
+  "search_text": "cowboy bebop カウホ ーイヒ ハ ッフ tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Asteroid Blues",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/229115/original.jpeg",
+      "synopsis": "Spike and Jet head to Tijuana to track down an outlaw smuggling a dangerous drug known as blood-eye. Jet wants the bounty, but Spike has eyes for a far prettier prize.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 57,
+          "end": 146
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1358,
+          "end": 1480
+        }
+      ],
+      "external_id": "229115"
+    },
+    {
+      "n": 2,
+      "title": "Stray Dog Strut",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/229114/original.jpeg",
+      "synopsis": "Spike and Jet's next case takes them to Mars, where they'll to try apprehend a professional pet thief and a priceless data dog.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 89
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1210,
+          "end": 1303
+        }
+      ],
+      "external_id": "229114"
+    },
+    {
+      "n": 3,
+      "title": "Honky Tonk Women",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/229113/original.jpeg",
+      "synopsis": "A night at the casino lands Spike and Jet in hot water when they cross paths with Faye Valentine, a stunning con artist wanted by the law - and the bad guys.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 3,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1353,
+          "end": 1440
+        }
+      ],
+      "external_id": "229113"
+    },
+    {
+      "n": 4,
+      "title": "Gateway Shuffle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/229112/original.jpeg",
+      "synopsis": "Faye teams up with Spike and Jet to track down a gang of space activists that plans on turning the human population into monkeys!",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1360,
+          "end": 1440
+        }
+      ],
+      "external_id": "229112"
+    },
+    {
+      "n": 5,
+      "title": "Ballad of Fallen Angels",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228991/original.jpeg",
+      "synopsis": "Spike aims to collect the bounty on a member of the Red Dragon Syndicate, but his mission leads him into a deadly showdown with a face from his past!",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 5,
+          "end": 95,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1326,
+          "end": 1416,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "228991"
+    },
+    {
+      "n": 6,
+      "title": "Sympathy for the Devil",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228979/original.jpeg",
+      "synopsis": "The latest case for the crew of the Bebop finds Spike pitted against a young boy with a talent for the harmonica - and murder.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 5,
+          "end": 95
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1363,
+          "end": 1440
+        }
+      ],
+      "external_id": "228979"
+    },
+    {
+      "n": 7,
+      "title": "Heavy Metal Queen",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228994/original.jpeg",
+      "synopsis": "The Bebop crew pursues a renegade explosives expert, and Spike crosses paths with a nameless space trucker that hates bounty hunters.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 5,
+          "end": 95
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1358,
+          "end": 1440
+        }
+      ],
+      "external_id": "228994"
+    },
+    {
+      "n": 8,
+      "title": "Waltz for Venus",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228996/original.jpeg",
+      "synopsis": "Spike gets involved with a fugitive who is willing to risk his own life to restore his sister's sight. Can the Bebop crew save the day before tragedy strikes?",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "228996"
+    },
+    {
+      "n": 9,
+      "title": "Jamming with Edward",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228989/original.jpeg",
+      "synopsis": "The Bebop crew tries to crack the case of mysterious satellite drawings appearing on the Earth's surface, but they'll need help from a hacker know as Radical Edward to earn their bounty!",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 11,
+          "end": 101
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "228989"
+    },
+    {
+      "n": 10,
+      "title": "Ganymede Elegy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228981/original.jpeg",
+      "synopsis": "When a case takes the Bebop crew to Jet's old stomping ground, the big man crosses paths with an old lover - and her wanted boyfriend.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1358,
+          "end": 1440
+        }
+      ],
+      "external_id": "228981"
+    },
+    {
+      "n": 11,
+      "title": "Toys in the Attic",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/229000/original.jpeg",
+      "synopsis": "When an unusual, blob-like space creature infects Ein, Faye, and Jet, Spike and Radical Edward must figure out a way to save their friends.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 10,
+          "end": 100
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1358,
+          "end": 1453
+        }
+      ],
+      "external_id": "229000"
+    },
+    {
+      "n": 12,
+      "title": "Jupiter Jazz (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228983/original.jpeg",
+      "synopsis": "Faye robs and abandons the Bebop crew, Spike goes in search of a woman he once knew, and Vicious makes another deadly appearance.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1358,
+          "end": 1440
+        }
+      ],
+      "external_id": "228983"
+    },
+    {
+      "n": 13,
+      "title": "Jupiter Jazz (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228995/original.jpeg",
+      "synopsis": "Jet continues his mission to reunite his Bebop comrades, and Spike finds himself locked in a brutal dogfight with his old nemesis Vicious.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "228995"
+    },
+    {
+      "n": 14,
+      "title": "Bohemian Rhapsody",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228990/original.jpeg",
+      "synopsis": "The Bebop Crew embarks on a wild goose chase of a bounty hunt that leads them deep into space in search of an ancient chess master.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1357,
+          "end": 1440
+        }
+      ],
+      "external_id": "228990"
+    },
+    {
+      "n": 15,
+      "title": "My Funny Valentine",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228993/original.jpeg",
+      "synopsis": "When Jet brings in a fugitive from Faye's past, the rebellious beauty must decide whether to turn him in – or give an old flame one last chance.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1424
+        }
+      ],
+      "external_id": "228993"
+    },
+    {
+      "n": 16,
+      "title": "Black Dog Serenade",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228984/original.jpeg",
+      "synopsis": "Jet teams up with a former partner to settle the score with the man who took his arm, but he soon discovers that memories can be deceiving.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1358,
+          "end": 1453
+        }
+      ],
+      "external_id": "228984"
+    },
+    {
+      "n": 17,
+      "title": "Mushroom Samba",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228980/original.jpeg",
+      "synopsis": "After the Bebop crash lands, Ed and Ein's search for food turns up some very expensive mushrooms with psychedelic side effects!",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1333,
+          "end": 1456,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "228980"
+    },
+    {
+      "n": 18,
+      "title": "Speak Like a Child",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228998/original.jpeg",
+      "synopsis": "When a mysterious package arrives, Faye disappears on a gambling binge, and Spike and Jet embark on a frustrating search for ancient technology!",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1357,
+          "end": 1440
+        }
+      ],
+      "external_id": "228998"
+    },
+    {
+      "n": 19,
+      "title": "Wild Horses",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228987/original.jpeg",
+      "synopsis": "While Spike pays a visit to the man who built his ship, Faye and Jet go fishing for space pirates.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1346,
+          "end": 1440
+        }
+      ],
+      "external_id": "228987"
+    },
+    {
+      "n": 20,
+      "title": "Pierrot le Fou",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228986/original.jpeg",
+      "synopsis": "Spike takes a beating during a chance encounter with an indestructible assassin. While Jet searches for the secret to the madman's power, Spike goes looking for payback!",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "228986"
+    },
+    {
+      "n": 21,
+      "title": "Boogie Woogie Feng Shui",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228985/original.jpeg",
+      "synopsis": "Spurred by a cryptic email, Jet goes looking for an old friend, but finds his daughter – and a mysterious sun stone – instead.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1357,
+          "end": 1440
+        }
+      ],
+      "external_id": "228985"
+    },
+    {
+      "n": 22,
+      "title": "Cowboy Funk",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228997/original.jpeg",
+      "synopsis": "Spike's attempts to apprehend the infamous Teddy Bear Bomber are maddeningly derailed by a mysterious – and clueless – cowboy!",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1426
+        }
+      ],
+      "external_id": "228997"
+    },
+    {
+      "n": 23,
+      "title": "Brain Scratch",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228999/original.jpeg",
+      "synopsis": "Faye goes undercover to collect the bounty on a deranged cult leader, but when the mysterious organization brainwashes her into a very deep sleep – she'll need a little help from her friends.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 92
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "228999"
+    },
+    {
+      "n": 24,
+      "title": "Hard Luck Woman",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228988/original.jpeg",
+      "synopsis": "Faye and Ed discover clues to their respective pasts that could send the crew of the Bebop heading in very different directions.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1353,
+          "end": 1440
+        }
+      ],
+      "external_id": "228988"
+    },
+    {
+      "n": 25,
+      "title": "The Real Folk Blues (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/228982/original.jpeg",
+      "synopsis": "Spike and Jet are ambushed by members of the syndicate, and Faye has an unexpected encounter with a woman from Spike's past.",
+      "airdate": "2024-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1357,
+          "end": 1440
+        }
+      ],
+      "external_id": "228982"
+    },
+    {
+      "n": 26,
+      "title": "The Real Folk Blues (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/229001/original.jpeg",
+      "synopsis": "Spike finally finds the woman he's been searching for, and Faye makes a surprising return to the Bebop. With the syndicate in hot pursuit, Spike seeks to end the reign of Vicious.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "229001"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ask DNA",
+      "artist": "The Seatbelts featuring Raju Ramayya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gotta Knock a Little Harder",
+      "artist": "The Seatbelts featuring Mai Yamane",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tank!",
+      "artist": "Seatbelts",
+      "episodes": "1-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "The Real Folk Blues",
+      "artist": "Seatbelts featuring Mai Yamane",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Space Lion",
+      "artist": "Yoko Kanno/Keishi Urata/Sydney Thiam/Michel Reman/David Mirandon/Philippe Drai/Philippe Nalry",
+      "episodes": "13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Blue",
+      "artist": "Seatbelts featuring Mai Yamane",
+      "episodes": "26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Recover the Sky of Day",
+      "artist": "Shakkazombie [ep 27, ep XX recap]",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

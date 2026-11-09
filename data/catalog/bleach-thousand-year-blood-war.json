@@ -1,0 +1,273 @@
+{
+  "id": "bleach-thousand-year-blood-war",
+  "title": "BLEACH: Thousand-Year Blood War",
+  "native": "BLEACH 千年血戦篇",
+  "year": 2022,
+  "rating": 8.8,
+  "season": "Fall 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx116674-p3zK4PUX2Aag.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116674-p3zK4PUX2Aag.jpg",
+  "accent": "#e45043",
+  "synopsis": "Was it all just a coincidence, or was it inevitable?\n\nIchigo Kurosaki gained the powers of a Soul Reaper through a chance encounter. As a Substitute\nSoul Reaper, Ichigo became caught in the turmoil of the Soul Society, a place where deceased\nsouls gather. But with help from his friends, Ichigo overcame every challenge to become even\nstronger.\n\nWhen new Soul Reapers and a new enemy appear in his hometown of Karakura, Ichigo jumps\nback into the battlefield with his Zanpakuto to help those in need. Meanwhile, the Soul Society\nis observing a sudden surge in the number of Hollows being destroyed in the World of the Living.\nThey also receive separate reports of residents in the Rukon District having gone missing. Finally,\nthe Seireitei, home of the Soul Reapers, comes under attack by a group calling themselves the\nWandenreich.\n\nLed by Yhwach, the father of all Quincies, the Wandenreich declare war against the Soul Reapers\nwith the following message: \"Five days from now, the Soul Society will be annihilated by the\nWandenreich.\"\n\nThe history and truth kept hidden by the Soul Reapers for a thousand long years is finally brought\nto light.\n\nAll things must come to an end as Ichigo Kurosaki's final battle begins!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "bleach:-thousand-year-blood-war-x5iyji",
+    "mal": 41467,
+    "anilist": 116674,
+    "kitsu": 43078
+  },
+  "skip_key_id": 41467,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "bleach thousand year blood war bleach 千年血戦篇 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "THE BLOOD WARFARE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/278950/thumbnail/5541f70a9c46db4e5641bc878a2b451c.jpg",
+      "synopsis": "The Soul Society’s Department of Research and Development is observing a sudden surge in the number of Hollows being destroyed in the World of the Living, raising concerns among staff.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "278950"
+    },
+    {
+      "n": 2,
+      "title": "Foundation Stones",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/278951/thumbnail/c50928d9073505488dc3b99fea69ab5b.jpg",
+      "synopsis": "Arrancars Nel Tu and Pesche Guatiche have come to seek Ichigo’s help explaining that Hueco Mundo is under attack by an unknown enemy. Unable to ignore the situation, Ichigo and his friends decide to set out for Hueco Mundo.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 53,
+          "end": 143,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "278951"
+    },
+    {
+      "n": 3,
+      "title": "March of the StarCross",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/284867/thumbnail/90c5242a7b49d02e2657f43538a5b0ec.jpg",
+      "synopsis": "Ichigo and his friends arrive in Hueco Mundo to confront Quilge Opie and learn that their latest enemy are Quincies.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 133,
+          "end": 223,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "284867"
+    },
+    {
+      "n": 4,
+      "title": "Kill The Shadow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/285185/thumbnail/ebfd9d32eafe83367484d1b974062ef4.jpg",
+      "synopsis": "The Wandenreich mobilizes its elite force, the Stern Ritter, to annihilate the Soul Society. Creating massive flaming pillars of Reishi as a distraction, the Stern Ritter easily enter the Soul Society to bring carnage to the Soul Reapers.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "285185"
+    },
+    {
+      "n": 5,
+      "title": "Wrath as a Lightning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/285186/thumbnail/e70f770fe0a9c33547cfdf5a2555337d.jpg",
+      "synopsis": "Quilge Opie uses his power to imprison Ichigo inside the Garganta. As he tries to break free, Ichigo begins to hear, through his Soul Phone, the screams of the Soul Reapers falling to the enemy's onslaught.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "285186"
+    },
+    {
+      "n": 6,
+      "title": "The Fire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/287833/thumbnail/93962b82b3cd43e3b2b08bab69b5e001.jpg",
+      "synopsis": "Shigekuni Genryusai Yamamoto confronts Yhwach for the first time in a thousand years. As Yhwach finally draws his sword against Genryusai, the Soul Reapers notice an abnormal change taking place across the Seireitei.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "287833"
+    },
+    {
+      "n": 7,
+      "title": "BORN IN THE DARK",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/287834/thumbnail/6495e4b576b831bd22dcc9dd5a83bd81.jpg",
+      "synopsis": "Shigekuni Genryusai Yamamoto learns that the Yhwach he defeated was an impostor. The real Yhwach then reveals himself and easily kills Genryusai, sending a wave of shock and devastation across the Soul Reapers.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "287834"
+    },
+    {
+      "n": 8,
+      "title": "The Shooting Star Project (ZERO MIX)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/287835/thumbnail/509b6a4fc140ebc778eaed069ac4c0b3.jpg",
+      "synopsis": "Rescue efforts are being made across the Seireitei to find and help those who've survived the Stern Ritter attack. Meanwhile, Ichigo meets with Mayuri Kurotsuchi about fixing his broken Tensa Zangetsu.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "287835"
+    },
+    {
+      "n": 9,
+      "title": "THE DROP",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/287836/thumbnail/cc600f01b3325b7684650ed5455e05de.jpg",
+      "synopsis": "Squad Zero brings Ichigo back to the Royal Palace to prepare for the coming battle. Meanwhile, Kyoraku is appointed as the new Head Captain to lead the Thirteen Court Guard Squads.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "287836"
+    },
+    {
+      "n": 10,
+      "title": "The Battle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/287837/thumbnail/99d319e9378550a765e95263bfc9cba0.jpg",
+      "synopsis": "Kenpachi Zaraki removes his eye patch to fight Retsu Unohana, a.k.a. Yachiru Unohana, \"The First Kenpachi.\" Meanwhile, Ichigo and Renji head to Hoohden to meet Oh-Etsu Nimaiya, the man who is said to have created the Zanpakuto.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "287837"
+    },
+    {
+      "n": 11,
+      "title": "Everything But the Rain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/287838/thumbnail/5d7e92612b1b690c5f54ab0af234ea6f.jpg",
+      "synopsis": "Ichigo is kicked out of the Royal Palace by Oh-etsu Nimaiya for failing his test. When Ichigo next opens his eyes, he finds himself standing in front of his house in the World of the Living.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "287838"
+    },
+    {
+      "n": 12,
+      "title": "EVERYTHING BUT THE RAIN \"June Truth\"",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/287839/thumbnail/693b63bd745fe63ae000033a758d42a2.jpg",
+      "synopsis": "Squad 10 Captain Isshin Shiba of the Thirteen Court Guard Squads decides to not report his encounter with the Quincy named Masaki Kurosaki in the World of the Living to the Head Captain.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "287839"
+    },
+    {
+      "n": 13,
+      "title": "THE BLADE IS ME",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/287840/thumbnail/96f14ec76462ff56a9f3001b36c69edd.jpg",
+      "synopsis": "Ichigo decides to return to Hoohden with a renewed resolve to finish what he has started.\n\n(Source: Hulu)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "287840"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "I-BULL",
+      "artist": "jo0ji",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rasen",
+      "artist": "9Lana",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kotoba ni Sezu Tomo",
+      "artist": "SIX LOUNGE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "MONOCHROME",
+      "artist": "suisoh",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "STARS",
+      "artist": "w.o.d.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Endroll",
+      "artist": "Yoh Kamiyama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Scar",
+      "artist": "Tatsuya Kitani",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rapport",
+      "artist": "Tatsuya Kitani",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Saihate",
+      "artist": "SennaRin",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rasen -Acoustic Ver.-",
+      "artist": "9Lana",
+      "episodes": "45"
+    }
+  ],
+  "relations": []
+}

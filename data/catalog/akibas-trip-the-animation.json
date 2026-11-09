@@ -1,0 +1,274 @@
+{
+  "id": "akibas-trip-the-animation",
+  "title": "Akiba's Trip the Animation",
+  "native": "Akiba's Trip -The Animation-",
+  "year": 2017,
+  "rating": 6.1,
+  "season": "Winter 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97636-djUnzyfgszUa.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97636-djUnzyfgszUa.jpg",
+  "accent": "#50bbf1",
+  "synopsis": "Akihabara, a broad-minded neighborhood where everyone from beginners to masters are welcomed. Even when you're alone, if you go to Akiba, you'll find someone who understands you. It's a neighborhood where anything is possible, where anyone can do seemingly anything; a place where you can lay bare your body and soul. In this neighborhood of Akiba, which has everything including anime, games, maids, idols, secondhand parts, and cheap food, battles are fought against the \"Bagurimono,\" and a steadfast \"boy meets girl\" story begins!\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 12532,
+    "anilist": 97636,
+    "mal": 34051
+  },
+  "skip_key_id": 34051,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-22 08:26:11",
+  "search_text": "akiba s trip the animation akiba s trip the animation tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Akiba's First Trip",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 79,
+          "end": 169
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1380
+        }
+      ],
+      "external_id": "200014"
+    },
+    {
+      "n": 2,
+      "title": "Team Kessei, Ryakushite Denma",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-11",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1380
+        }
+      ],
+      "external_id": "200015"
+    },
+    {
+      "n": 3,
+      "title": "What Happens When You Mindlessly Follow Someone Who Offers You an Idol Debut",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 54,
+          "end": 139
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1380
+        }
+      ],
+      "external_id": "200016"
+    },
+    {
+      "n": 4,
+      "title": "Ham Radio Fighters",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-25",
+      "markers": [],
+      "external_id": "200017"
+    },
+    {
+      "n": 5,
+      "title": "Akihabara Grand Tournament",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 64,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1380
+        }
+      ],
+      "external_id": "200018"
+    },
+    {
+      "n": 6,
+      "title": "Your Memory Is Full",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 23,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1296,
+          "end": 1380
+        }
+      ],
+      "external_id": "200019"
+    },
+    {
+      "n": 7,
+      "title": "Only a Liar Says Something Is Too Hard",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 131
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1380
+        }
+      ],
+      "external_id": "200020"
+    },
+    {
+      "n": 8,
+      "title": "Akihabara Grand Tournament",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-22",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1380
+        }
+      ],
+      "external_id": "200021"
+    },
+    {
+      "n": 9,
+      "title": "Whoa, I Battled with Game Cards!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-01",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1380
+        }
+      ],
+      "external_id": "200022"
+    },
+    {
+      "n": 10,
+      "title": "Did You Open Your Pyloric Canal?!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-08",
+      "markers": [],
+      "external_id": "200023"
+    },
+    {
+      "n": 11,
+      "title": "Manatsu no AkibaFes Kaimaku!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-15",
+      "markers": [],
+      "external_id": "200024"
+    },
+    {
+      "n": 12,
+      "title": "Electric Mayo's Falling Apart!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-22",
+      "markers": [],
+      "external_id": "200025"
+    },
+    {
+      "n": 13,
+      "title": "Akiba's Last Trip",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-29",
+      "markers": [],
+      "external_id": "200026"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

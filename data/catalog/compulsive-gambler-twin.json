@@ -1,0 +1,124 @@
+{
+  "id": "compulsive-gambler-twin",
+  "title": "Kakegurui Twin",
+  "native": "賭ケグルイ双",
+  "year": 2022,
+  "rating": 7.4,
+  "season": "Summer 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/45471/poster_image/medium-8883358abf2fa429af6aa797c5afc1fa.jpeg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/141351-PyKKjZJJ5gVC.jpg",
+  "accent": "#8b5cf6",
+  "synopsis": "At an elite academy where social status is determined by gambling skills, students must put everything on the line to beat the odds - without mercy. (Source: Netflix)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 45471,
+    "anilist": 141351,
+    "mal": 50339
+  },
+  "skip_key_id": 50339,
+  "skip_key_space": "mal",
+  "episode_total": 6,
+  "added_at": "2026-11-06 17:14:17",
+  "search_text": "kakegurui twin 賭ケク ルイ双 tv finished",
+  "genres": [
+    "drama",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A Girl Named Mary Saotome",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "Lacking in gambling skills, Tsuzura Hanatemari finds herself at the bottom of the food chain - until one day, an old friend transfers into the academy. (Source: Netflix)",
+      "airdate": "2022-08-04",
+      "markers": [],
+      "external_id": "324945"
+    },
+    {
+      "n": 2,
+      "title": "A Targeted Girl",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "Student Council member Sakura Miharutaki faces off against a gamble-crazed, unruly student. Mary's scheme backfires when an unexpected guest shows up. (Source: Netflix)",
+      "airdate": "2022-08-04",
+      "markers": [],
+      "external_id": "324946"
+    },
+    {
+      "n": 3,
+      "title": "A Tratorious Girl",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "On the brink of becoming a house pet, Mary must find a way to earn money. Trust is on the line when she and her friends attend a \"coupling party\". (Source: Netflix)",
+      "airdate": "2022-08-04",
+      "markers": [],
+      "external_id": "326147"
+    },
+    {
+      "n": 4,
+      "title": "Confessing Girls",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "With a traitor in their midst, Mary struggles with trusting her friends. Meanwhile, the opposing boys' team argues over whether to rejoin the game. (Source: Netflix)",
+      "airdate": "2022-08-04",
+      "markers": [],
+      "external_id": "328189"
+    },
+    {
+      "n": 5,
+      "title": "An Honest Girl",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "Aoi attempts to lure Mary into his Full-Bloom Society. Joining forces with Mikura, Sakura plots to undermine Mary through a gambling match. (Source: Netflix)",
+      "airdate": "2022-08-04",
+      "markers": [],
+      "external_id": "328190"
+    },
+    {
+      "n": 6,
+      "title": "A Resisting Girl",
+      "runtime": "26:00",
+      "runtime_seconds": 1560,
+      "thumb": "",
+      "synopsis": "Sakura and Mary brace themselves for the final game. In desperation, Mary asks her friends for help, using whatever means necessary to win. (Source: Netflix)",
+      "airdate": "2022-08-04",
+      "markers": [],
+      "external_id": "330112"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sono Otome Musou (ソノ乙女ム双)",
+      "artist": "Tomohisa Ishikawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Queens Bluff",
+      "artist": "i☆Ris",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,336 @@
+{
+  "id": "death-parade",
+  "title": "Death Parade",
+  "native": "デス・パレード",
+  "year": 2015,
+  "rating": 8,
+  "season": "Winter 2015",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx20931-bktYqOcxPERi.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20931-bktYqOcxPERi.jpg",
+  "accent": "#35a1f1",
+  "synopsis": "When two people die at the same time, they’re sent to a place that’s neither heaven nor hell—a lavish bar between worlds where the stakes are high and the rules are simple: if you win you live again, if you die… you’re gone for good.\n\nDecim is the bartender charged with serving the souls who enter Quindecim. He may make a mean cocktail, but his true profession is to play the role of arbiter—a judge who determines whether or not a soul is worthy of reincarnation. To aid in his judgment, the bar’s patrons are forced to play simple games laced with sadistic twists designed to bring their true natures to light. To Decim, judgment has always been black and white—that is—until he meets a mysterious young woman whose fate seems impossible to decide. His indecision shakes the very foundation of the games and raises the biggest question of all: Who is fit to judge the dead?\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 9969,
+    "anilist": 20931,
+    "mal": 28223,
+    "hianime": "death-parade-et3k30"
+  },
+  "skip_key_id": 28223,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 02:14:09",
+  "search_text": "death parade テ ス ハ レート tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Death Seven Darts",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "A young couple, Takashi and Machiko, arrive in the bar Quindecim without any recollection of how they got there. The bartender tells them they cannot leave until they first finish playing a game, one in which their lives will be at stake.",
+      "airdate": "2015-01-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1264,
+          "end": 1332
+        }
+      ],
+      "external_id": "172800"
+    },
+    {
+      "n": 2,
+      "title": "Death Reverse",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "A black-haired woman awakens in an unfamiliar place, unable to remember even her own name. She is taken by a girl named Nona to Quindecim, where she is told that she will be an assistant, and is instructed as to the purpose of the bar's existence.",
+      "airdate": "2015-01-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1270,
+          "end": 1340
+        }
+      ],
+      "external_id": "172801"
+    },
+    {
+      "n": 3,
+      "title": "Rolling Ballade",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "College student Shigeru Miura wakes up in Quindecim, and falls in love at first sight with the woman at the bar. Unable to remember even her own name, the woman asks him to play a game with her, after being assured that it will jog her memory.",
+      "airdate": "2015-01-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 14,
+          "end": 104
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1248,
+          "end": 1338
+        }
+      ],
+      "external_id": "172802"
+    },
+    {
+      "n": 4,
+      "title": "Death Arcade",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "TV personality Misaki Tachibana is convinced that she is in Quindecim as part of a hidden-camera TV show, and enlists her counterpart, Yousuke Tateishi, to help her liven the show up. Decim takes measures to ensure extreme conditions for the contestants.",
+      "airdate": "2015-01-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 163,
+          "end": 253
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1292,
+          "end": 1380
+        }
+      ],
+      "external_id": "172803"
+    },
+    {
+      "n": 5,
+      "title": "Death March",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Two more people - a young boy and an older man - arrive at Quindecim, but this time, Decim senses something out of place. Before Decim can explain the game to the pair, the older man reveals that he remembers having seen Decim and the bar before!",
+      "airdate": "2015-02-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 104,
+          "end": 194
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1305,
+          "end": 1380
+        }
+      ],
+      "external_id": "172804"
+    },
+    {
+      "n": 6,
+      "title": "Cross Heart Attack",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "A high-school girl named Mayu arrives at a Japanese-style bar being tended by Ginti. He demands that she play a game against the man in the bar, who she instantly recognizes as Harada, of the boy idol band C.H.A, and she eagerly accepts.",
+      "airdate": "2015-02-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 134
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1257,
+          "end": 1347
+        }
+      ],
+      "external_id": "172805"
+    },
+    {
+      "n": 7,
+      "title": "Alcohol Poison",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "When the black-haired woman stumbles upon a picture book, she asks Decim about it, and he tells her that it might belong to Quin, Quindecim's previous bartender. Decim reveals the reasons why he spends so much time putting together mannequins.",
+      "airdate": "2015-02-21",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1256,
+          "end": 1346
+        }
+      ],
+      "external_id": "172806"
+    },
+    {
+      "n": 8,
+      "title": "Death Rally",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Prior to the arrival of a pair of guests--a police detective and young man raising his sister--Decim wonders if there has been a mistake, since the memories he has received are those of a killer. But despite his protestations, Nona prods him to continue.",
+      "airdate": "2015-02-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 114,
+          "end": 204
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1262,
+          "end": 1331
+        }
+      ],
+      "external_id": "172807"
+    },
+    {
+      "n": 9,
+      "title": "Death Counter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "As the two contestants continue their game, Shimada is surprised to learn that Detective Tatsumi is sympathetic to his desire for revenge against his sister's attacker. The black-haired woman is troubled by how far Decim is willing to go.",
+      "airdate": "2015-03-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 45,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1260,
+          "end": 1305
+        }
+      ],
+      "external_id": "172808"
+    },
+    {
+      "n": 10,
+      "title": "Story Teller",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Decim visits Nona and tells her that he believes that their way of passing judgment is flawed. Nona sends him another customer, whose case may unravel the mystery of the black-haired woman, and whom Decim chooses to judge without the aid of any memories.",
+      "airdate": "2015-03-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 128
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1299,
+          "end": 1380
+        }
+      ],
+      "external_id": "172809"
+    },
+    {
+      "n": 11,
+      "title": "Memento Mori",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Mayu is given a chance to spare Harada's soul from the void, for a price. With Chiyuki's judgment pending, she revisits her love of ice skating, with the hope that the memories she recovers will help her to come to terms with her passing.",
+      "airdate": "2015-03-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 71,
+          "end": 156
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1245,
+          "end": 1335
+        }
+      ],
+      "external_id": "172810"
+    },
+    {
+      "n": 12,
+      "title": "Suicide Tour",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Oculus confronts Nona concerning Decim, demanding to know what she has done to him. Chiyuki awakens in her house the living world again to find that Decim has brought her there to offer her the chance to reclaim her life.",
+      "airdate": "2015-03-28",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1300,
+          "end": 1370
+        }
+      ],
+      "external_id": "172811"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Flyers",
+      "artist": "BRADIO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Last Theater",
+      "artist": "NoisyCell",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

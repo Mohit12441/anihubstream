@@ -1,0 +1,353 @@
+{
+  "id": "basilisk",
+  "title": "Basilisk",
+  "native": "バジリスク 甲賀忍法帖",
+  "year": 2005,
+  "rating": 7.1,
+  "season": "Spring 2005",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx67-aBz3s2hBTtdH.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx67-aBz3s2hBTtdH.jpg",
+  "accent": "#936b28",
+  "synopsis": "The heirs to the Kouga and Iga ninja clans, Gennosuke and Oboro, hoped the unsteady truce between their tribes would last—but fate denies the lovers, thrusting their people into war after centuries of peace. The terms are set on two scrolls. One bears a list of Kouga warriors. The other holds a list of those who fight for Iga. The names found on these scrolls can only be crossed out in blood. \n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "basilisk-6r2o98",
+    "mal": 67,
+    "anilist": 67,
+    "kitsu": 48
+  },
+  "skip_key_id": 67,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "basilisk ハ シ リスク 甲賀忍法帖 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Destiny",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1570/original.jpg",
+      "synopsis": "With Lord Ieyasu calling Ogen and Danjo - leaders of the Iga and Kouga ninja clan, to demonstrate each elite ninja own abilities. Impressed, Ieyasu declares the battle against the clans to determine the next Shogun.",
+      "airdate": "2006-10-06",
+      "markers": [],
+      "external_id": "1570"
+    },
+    {
+      "n": 2,
+      "title": "Last Rendezvous",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1571/original.jpg",
+      "synopsis": "After the death of both Ogen and Danjo, not knowing they died, Gennosuke and Oboro are planning their wedding that could unite and bring peae to the clans. However, the Iga clan looks forward to the war against the Kouga clan after getting a scroll.",
+      "airdate": "2006-10-13",
+      "markers": [],
+      "external_id": "1571"
+    },
+    {
+      "n": 3,
+      "title": "The Onslaught of War",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1572/original.jpg",
+      "synopsis": "The Iga clan sets out to hunt down and kill Kazamachi, who has the second scroll. With Tenzen leading, some members of the Iga clan plan to make sure no news of the start of war spreads to the Kouga.",
+      "airdate": "2006-10-20",
+      "markers": [],
+      "external_id": "1572"
+    },
+    {
+      "n": 4,
+      "title": "The Horned Owl",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1573/original.jpg",
+      "synopsis": "Thinking peace will soon come, Gennosuke and Udono celebrate with Oboro and the Igas. However the Iga clan plans to assassinate Gennosuke and Udono during the feast.",
+      "airdate": "2006-10-27",
+      "markers": [],
+      "external_id": "1573"
+    },
+    {
+      "n": 5,
+      "title": "The Surprise Attack",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1574/original.jpg",
+      "synopsis": "The Kouga clan are concerned with Gennosuke stating at Tsubagakure, even they were informed about the peace treaty. They weren't informed about the war that has arise between the clans. Saemon decides to send his younger sister, Okoi to find Gennosuke.",
+      "airdate": "2007-02-02",
+      "markers": [],
+      "external_id": "1574"
+    },
+    {
+      "n": 6,
+      "title": "Longing in the Rain",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1575/original.jpg",
+      "synopsis": "The Kougas now knowing something drastic must of happen at Sunpu, decide to investigate knowing that the Igas wouldn't attack their village if there is peace coming. However, as the Igas return home they see Okoi, one of the listed Kouga Ten, and decide to hold her captive.",
+      "airdate": "2007-02-09",
+      "markers": [],
+      "external_id": "1575"
+    },
+    {
+      "n": 7,
+      "title": "Blood-Sucking Seductress",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1576/original.jpg",
+      "synopsis": "As Rousai pestifers Okoi to find out the fighting abilities of the remaining Kougas alive, Koshiro is sent to tell Oboro that she must meet up with Tenzen. However, when Saemon is able to get into Tsubagakure in the disguise of Yashamaru, what he sees will be the most horrible thing in his life.",
+      "airdate": "2007-02-16",
+      "markers": [],
+      "external_id": "1576"
+    },
+    {
+      "n": 8,
+      "title": "Cage of Blood",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1577/original.jpg",
+      "synopsis": "With Tousai dead and lord Teyasu's ninja scroll lost to the Iga, the plan to rip the Kouga apart unnoticed is slowly falling apart. With her dying words, Okoi tells Saemon the registry's true location. Determined to make it out alive, Saemon will hold up his ruse long enough to walk out with the scroll in his hands and take vengeance for his sister's death along the way.",
+      "airdate": "2007-02-23",
+      "markers": [],
+      "external_id": "1577"
+    },
+    {
+      "n": 9,
+      "title": "Farewell",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1578/original.jpg",
+      "synopsis": "With the scroll now in Gennosuke's possession, he makes the decision to either engage in war or not. However, with being attacked by Koshiro and the other deadly ninjas, Gennosuke may have a hard time getting out of the village.",
+      "airdate": "2007-03-02",
+      "markers": [],
+      "external_id": "1578"
+    },
+    {
+      "n": 10,
+      "title": "Divine Mandate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1579/original.jpg",
+      "synopsis": "Two woman who hate each other and a little boy could possibly be linked to why the Iga and Kouga hate each other this moment..",
+      "airdate": "2007-03-09",
+      "markers": [],
+      "external_id": "1579"
+    },
+    {
+      "n": 11,
+      "title": "On Their Own",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1580/original.jpg",
+      "synopsis": "Gennosuke returns the scroll to the Iga and issues a challenge that if they attack the Kouga village they will annihilated. The people left can travel to Sunpu and join them. Tenzen accepts the challenge",
+      "airdate": "2007-03-16",
+      "markers": [],
+      "external_id": "1580"
+    },
+    {
+      "n": 12,
+      "title": "Remembrance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1581/original.jpg",
+      "synopsis": "After blinding Gennosuke, Saemon chases after Hotarubi who misleads him by making him follow her butterflies. A battle disrupts between the two.",
+      "airdate": "2007-03-23",
+      "markers": [],
+      "external_id": "1581"
+    },
+    {
+      "n": 13,
+      "title": "A Swarm of Butterflies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1582/original.jpg",
+      "synopsis": "Saemon, now having the appearance of Nenki, begins to confront Hotarubi. As the Kouga ready themselves to continue on to Sunpu, Tenzen knowing they can not wait for Nenki and Harutobi, leads the Igas across the ocean in hopes of stopping Gennosuke before he reaches his destination.",
+      "airdate": "2007-03-30",
+      "markers": [],
+      "external_id": "1582"
+    },
+    {
+      "n": 14,
+      "title": "Fallen Flower",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1583/original.jpg",
+      "synopsis": "As the rest of the Igas cross the sea, Tenzen makes an advance towards Oboro, leaving Koshiro torn between his master and the clan leader. With all the confusion this makes for the perfect opportunity for an enemy to make his move.",
+      "airdate": "2007-04-06",
+      "markers": [],
+      "external_id": "1583"
+    },
+    {
+      "n": 15,
+      "title": "Reckoning",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1584/original.jpg",
+      "synopsis": "Still on the sea, Gyobu uses his art to move around freely to take care of the remaining Iga, but Tenzen proves to be a toilsome foe to kill.",
+      "airdate": "2007-04-13",
+      "markers": [],
+      "external_id": "1584"
+    },
+    {
+      "n": 16,
+      "title": "First Impressions",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1585/original.jpg",
+      "synopsis": "At a lighter time before the disintegration of the no-hostlities pact, talk of an arranged marriage stirred the clans, but could one marry a spouse that they have known to be their enemy?",
+      "airdate": "2007-04-20",
+      "markers": [],
+      "external_id": "1585"
+    },
+    {
+      "n": 17,
+      "title": "Wandering Hearts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1586/original.jpg",
+      "synopsis": "As the Kogas continue their journey to Sunpu, Oboro's hawk flies by carrying a scroll. While two ninjas pursue the hawk, Tenzen makes his move only to find something he did not expect.",
+      "airdate": "2007-04-27",
+      "markers": [],
+      "external_id": "1586"
+    },
+    {
+      "n": 18,
+      "title": "A Dawn Without Light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1587/original.jpg",
+      "synopsis": "As Hyoma and Koshiro battle, it is revealed that Hyoma was Gennosuke's mentor teaching him how to use his ability.",
+      "airdate": "2007-05-04",
+      "markers": [],
+      "external_id": "1587"
+    },
+    {
+      "n": 19,
+      "title": "Conspiracy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1588/original.jpg",
+      "synopsis": "Oboro and Akeginu discovers the lifeless bodies of Hyoma and Koshiro. Thinking that Koshiro was killed by Hyoma, Akeginu repeatedly stabs the already dead body of Hyoma.",
+      "airdate": "2007-05-11",
+      "markers": [],
+      "external_id": "1588"
+    },
+    {
+      "n": 20,
+      "title": "River of Mercy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1589/original.jpg",
+      "synopsis": "Akeginu vows revenge on Kagero after Tenzen reveals that Koshiro was killed by Kagero's breath.",
+      "airdate": "2007-05-18",
+      "markers": [],
+      "external_id": "1589"
+    },
+    {
+      "n": 21,
+      "title": "With All Her Heart",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1590/original.jpg",
+      "synopsis": "Kagero sets out to kill Oboro, after telling Gennosuke that she killed her wanting gratitude. She however gets caught in a trap caused by Tenzen.",
+      "airdate": "2007-05-25",
+      "markers": [],
+      "external_id": "1590"
+    },
+    {
+      "n": 22,
+      "title": "The Haunted",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1591/original.jpg",
+      "synopsis": "Oboro issues out a challenge to draw Gennosuke out from hiding. Meanwhile, with Kagero captive Tenzen tortures her with needles. Gennosuke finally arrives.",
+      "airdate": "2007-06-01",
+      "markers": [],
+      "external_id": "1591"
+    },
+    {
+      "n": 23,
+      "title": "Emancipation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1592/original.jpg",
+      "synopsis": "With Tenzen defeated, Gennosuke carries Kagero away. However wanting to be with him she tries to kill him with her poisonous breath. Oboro's eyes are finally open.",
+      "airdate": "2007-06-08",
+      "markers": [],
+      "external_id": "1592"
+    },
+    {
+      "n": 24,
+      "title": "Requiem",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/1593/original.jpg",
+      "synopsis": "The last battle between the Kouga and Iga, determining who will inherit the title of Shogun. Oboro and Gennosuke face each other for the last time.",
+      "airdate": "2007-06-15",
+      "markers": [],
+      "external_id": "1593"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ōka Ninpōchō",
+      "artist": "Onmyoza",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hot Blood",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kōga Ninpōchō",
+      "artist": "Onmyouza",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hime Murasaki",
+      "artist": "Nana Mizuki",
+      "episodes": "1,9,11-12,15-16,24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Suiren (粋恋)",
+      "artist": "Nana Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Wild Eyes",
+      "artist": "Nana Mizuki",
+      "episodes": "2-8,10,13-14,17-23"
+    }
+  ],
+  "relations": []
+}

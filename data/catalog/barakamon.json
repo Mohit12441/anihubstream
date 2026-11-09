@@ -1,0 +1,190 @@
+{
+  "id": "barakamon",
+  "title": "Barakamon",
+  "native": "ばらかもん",
+  "year": 2014,
+  "rating": 8.2,
+  "season": "Summer 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20722-2KAeq72E95dr.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20722-2KAeq72E95dr.png",
+  "accent": "#4386e4",
+  "synopsis": "Seishuu Handa is an up-and-coming calligrapher: young, handsome, talented, and unfortunately, a narcissist to boot. When a veteran labels his award-winning piece as \"unoriginal,\" Seishuu quickly loses his cool with severe repercussions. \n\nAs punishment, and also in order to aid him in self-reflection, Seishuu's father exiles him to the Goto Islands, far from the comfortable Tokyo lifestyle the temperamental artist is used to. Now thrown into a rural setting, Seishuu must attempt to find new inspiration and develop his own unique art style—that is, if boisterous children (headed by the frisky Naru Kotoishi), fujoshi middle schoolers, and energetic old men stop barging into his house! The newest addition to the intimate and quirky Goto community only wants to get some work done, but the islands are far from the peaceful countryside he signed up for. Thanks to his wacky neighbors who are entirely incapable of minding their own business, the arrogant calligrapher learns so much more than he ever hoped to. \n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "barakamon-gcx2jw",
+    "mal": 22789,
+    "anilist": 20722,
+    "kitsu": 8026
+  },
+  "skip_key_id": 22789,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "barakamon は らかもん tv finished",
+  "genres": [
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Cheerful Kid",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115634/original.jpg",
+      "synopsis": "A calligrapher is sent to an island after causing a commotion. There he meets a young girl who would inspire him to a world he has never seen before.",
+      "airdate": "2014-07-06",
+      "markers": [],
+      "external_id": "115634"
+    },
+    {
+      "n": 2,
+      "title": "Noisy",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115635/original.jpg",
+      "synopsis": "Handa, seeking to work on his calligraphy, is being \"bothered\" by the carefree residents of the island. This time, to the point he's hospitalized.",
+      "airdate": "2014-07-13",
+      "markers": [],
+      "external_id": "115635"
+    },
+    {
+      "n": 3,
+      "title": "Rice Cakes Thrown at Celebrations",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115636/original.jpg",
+      "synopsis": "Handa's sends in his calligraphy work, only to find he was awarded a \"disappointing\" second place... Handa's daily life continues.",
+      "airdate": "2014-07-20",
+      "markers": [],
+      "external_id": "115636"
+    },
+    {
+      "n": 4,
+      "title": "Men of the Island",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115637/original.jpg",
+      "synopsis": "Handa is caught by Miwa's father to work on writing the name of his ship, where he gains a new perspective on approach towards calligraphy.",
+      "airdate": "2014-07-27",
+      "markers": [],
+      "external_id": "115637"
+    },
+    {
+      "n": 5,
+      "title": "Going Swimming at the Beach",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115638/original.jpg",
+      "synopsis": "With the next exhibition closing in, Handa is asked to take the kids swimming, where he finds out that there's more to life than just calligraphy.",
+      "airdate": "2014-08-03",
+      "markers": [],
+      "external_id": "115638"
+    },
+    {
+      "n": 6,
+      "title": "The Guys from Tokyo",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115639/original.jpg",
+      "synopsis": "Guests have arrived, and one of them, Kanzaki, cast Handa into confusion. Handa responds back as one who has lived with the people on the island.",
+      "airdate": "2014-08-10",
+      "markers": [],
+      "external_id": "115639"
+    },
+    {
+      "n": 7,
+      "title": "An Expensive Fish",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115640/original.jpg",
+      "synopsis": "Handa's guests spend their last day on the island going fishing. Handa learns that he can inspire others just as he has been inspired.",
+      "airdate": "2014-08-17",
+      "markers": [],
+      "external_id": "115640"
+    },
+    {
+      "n": 8,
+      "title": "Buddhist Chanting and Dancing",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115641/original.jpg",
+      "synopsis": "Handa experiences summer on the island, and sees a different side of Naru when he joins her in paying a visit to her family grave.",
+      "airdate": "2014-08-24",
+      "markers": [],
+      "external_id": "115641"
+    },
+    {
+      "n": 9,
+      "title": "Was Almost Seriously Injured",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115642/original.jpg",
+      "synopsis": "With the Narukain exhibit closing in, Handa is starting to feel the pressure again. He gains the inspiration to write his work, but…",
+      "airdate": "2014-09-06",
+      "markers": [],
+      "external_id": "115642"
+    },
+    {
+      "n": 10,
+      "title": "Let's Go Together",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115643/original.jpg",
+      "synopsis": "After completing his submission, Handa turns his attention to the island and its residents; Naru gets a surprise when she goes to pay Handa a visit.",
+      "airdate": "2014-09-14",
+      "markers": [],
+      "external_id": "115643"
+    },
+    {
+      "n": 11,
+      "title": "I Am in Tokyo",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115644/original.jpg",
+      "synopsis": "Handa is back in Tokyo for an important meeting. When he really starts feeling the pressure, he finds comfort in an unexpected phone call.",
+      "airdate": "2014-09-21",
+      "markers": [],
+      "external_id": "115644"
+    },
+    {
+      "n": 12,
+      "title": "Happy Yer Home",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/115645/original.jpg",
+      "synopsis": "With a few more loose ends to tend to, Handa is ready to go back to the island. Smiling faces and open arms await Handa's return.",
+      "airdate": "2014-09-28",
+      "markers": [],
+      "external_id": "115645"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Rashisa",
+      "artist": "SUPER BEAVER",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Innocence",
+      "artist": "NoisyCell",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

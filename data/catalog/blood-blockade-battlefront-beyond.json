@@ -1,0 +1,192 @@
+{
+  "id": "blood-blockade-battlefront-beyond",
+  "title": "Blood Blockade Battlefront & Beyond",
+  "native": "血界戦線 & BEYOND",
+  "year": 2017,
+  "rating": 7.7,
+  "season": "Fall 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx97886-iArtYIxZzGcR.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx97886-iArtYIxZzGcR.jpg",
+  "accent": "#35a1ae",
+  "synopsis": "Three years ago, a gateway between Earth and the Beyond opened in New York City, trapping extradimensional creatures and humans alike in an impermeable bubble. After the city's restoration, monsters, magic, and madness are common findings in the area now known as Hellsalem's Lot. Leonardo Watch, a young photographer who unwillingly obtained the \"All-seeing Eyes of the Gods\" in exchange for his sister's eyesight, came to this paranormal city to find answers to the mysterious power that he possesses. He later finds his life drastically changed when he joins Libra, a secret organization of people with supernatural abilities dedicated to maintaining order in the everyday chaos of Hellsalem's Lot. \n\nHowever, this is only the beginning of Leonardo's unexpected journey ahead. Regardless of the constant threat of otherworldly enemies, he is determined to uncover the secrets of his power and find a way to restore his sister's eyesight. Kekkai Sensen & Beyond follows Leonardo as he sets off on more crazy adventures with his comrades, fighting to ensure peace and order.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "blood-blockade-battlefront-and-beyond-y612fv",
+    "mal": 34451,
+    "anilist": 97886,
+    "kitsu": 12770
+  },
+  "skip_key_id": 34451,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "blood blockade battlefront beyond 血界戦線 beyond tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Lights! Camera! Action!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-08",
+      "markers": [],
+      "external_id": "224812"
+    },
+    {
+      "n": 2,
+      "title": "A Phantom Hospital Ward Rises",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-15",
+      "markers": [],
+      "external_id": "224813"
+    },
+    {
+      "n": 3,
+      "title": "Day In Day Out",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-22",
+      "markers": [],
+      "external_id": "224814"
+    },
+    {
+      "n": 4,
+      "title": "Werewolf Mission: Chain-possible",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-10-29",
+      "markers": [],
+      "external_id": "224815"
+    },
+    {
+      "n": 5,
+      "title": "One Butler's Blitzkrieg",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-05",
+      "markers": [],
+      "external_id": "224816"
+    },
+    {
+      "n": 6,
+      "title": "Get the Lock Out!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-12",
+      "markers": [],
+      "external_id": "224817"
+    },
+    {
+      "n": 7,
+      "title": "Branchial Blues",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-19",
+      "markers": [],
+      "external_id": "224818"
+    },
+    {
+      "n": 8,
+      "title": "Desperate Fight in the Macro Zone, Part 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-11-26",
+      "markers": [],
+      "external_id": "224819"
+    },
+    {
+      "n": 9,
+      "title": "Desperate Fight in the Macro Zone, Part 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-03",
+      "markers": [],
+      "external_id": "224820"
+    },
+    {
+      "n": 10,
+      "title": "Bratatat Mom",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-10",
+      "markers": [],
+      "external_id": "224821"
+    },
+    {
+      "n": 11,
+      "title": "Spectral Eyes, Phantom Vision, Part 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-17",
+      "markers": [],
+      "external_id": "224822"
+    },
+    {
+      "n": 12,
+      "title": "Spectral Eyes, Phantom Vision, Part 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-12-24",
+      "markers": [],
+      "external_id": "224823"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "fake town baby",
+      "artist": "Unison Square Garden",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Step Up Love (ステップアップLOVE)",
+      "artist": "DAOKO x Yasuyuki Okamura",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

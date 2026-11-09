@@ -1,0 +1,509 @@
+{
+  "id": "ace-attorney",
+  "title": "Ace Attorney",
+  "native": "逆転裁判 その『真実』、異議あり！",
+  "year": 2016,
+  "rating": 6.2,
+  "season": "Spring 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21360-H6yRBVYEEodS.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21360-H6yRBVYEEodS.png",
+  "accent": "#0d5086",
+  "synopsis": "Adapted from the popular video game franchise, Ace Attorney follows rookie lawyer Naruhodo Ryuuichi (Phoenix Wright) and his assistant Mayoi (Maya) as he defends his clients in a court of law. With limited evidence and logic as his only weapon, can Naruhodo turn the case around when all the odds are stacked against him?\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Ace Attorney Season 2 (2018)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11375,
+    "anilist": 21360,
+    "mal": 31630
+  },
+  "skip_key_id": 31630,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": "2026-10-22 06:28:10",
+  "search_text": "ace attorney 逆転裁判 その 真実 異議あり tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The First Turnabout",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Naruhodo Ryuichi (Phoenix Wright), attorney at law, sets foot in a courtroom for his very first trial... in which he has to defend his best friend?!",
+      "airdate": "2016-04-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 115
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1437
+        }
+      ],
+      "external_id": "185723"
+    },
+    {
+      "n": 2,
+      "title": "Turnabout Sisters — 1st Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A shocking murder leaves Mayoi (Maya), little sister of Chihiro (Mia), in a situation Naruhodo (Phoenix) cannot ignore.",
+      "airdate": "2016-04-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1312,
+          "end": 1399
+        }
+      ],
+      "external_id": "185724"
+    },
+    {
+      "n": 3,
+      "title": "Turnabout Sisters — 2nd Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The trial for the chief's murder begins. Will Naruhodo (Phoenix) be able to get Mayoi (Maya) out of this?",
+      "airdate": "2016-04-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 15,
+          "end": 104
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1386,
+          "end": 1398
+        }
+      ],
+      "external_id": "185725"
+    },
+    {
+      "n": 4,
+      "title": "Turnabout Sisters — Last Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The case reaches its climax, as Naruhodo (Phoenix) and Konaka (White) look to get each other convicted.",
+      "airdate": "2016-04-23",
+      "markers": [],
+      "external_id": "185726"
+    },
+    {
+      "n": 5,
+      "title": "Turnabout Samurai — 1st Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Popular television hero Steel Samurai is arrested for murder, and it's down to Naruhodo (Phoenix) and Mayoi (Maya) to defend him.",
+      "airdate": "2016-04-30",
+      "markers": [],
+      "external_id": "185727"
+    },
+    {
+      "n": 6,
+      "title": "Turnabout Samurai — 2nd Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The investigation on the Steel Samurai case turns to a new direction, as the security lady's information gives our attorneys a valuable lead.",
+      "airdate": "2016-05-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 17,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1401
+        }
+      ],
+      "external_id": "185728"
+    },
+    {
+      "n": 7,
+      "title": "Turnabout Samurai — Last Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Will the true culprit of the Steel Samurai case be caught? And why did they do it?",
+      "airdate": "2016-05-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 17,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1312,
+          "end": 1401
+        }
+      ],
+      "external_id": "185729"
+    },
+    {
+      "n": 8,
+      "title": "Turnabout Goodbyes — 1st Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The body of a man shot dead is found in Gourd Lake, and the suspect is none other than...",
+      "airdate": "2016-05-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 25,
+          "end": 115
+        }
+      ],
+      "external_id": "185730"
+    },
+    {
+      "n": 9,
+      "title": "Turnabout Goodbyes — 2nd Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The trial begins, and the god of prosecutors immediately shows off his immense prowess.",
+      "airdate": "2016-05-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 16,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1399
+        }
+      ],
+      "external_id": "185731"
+    },
+    {
+      "n": 10,
+      "title": "Turnabout Goodbyes — 3rd Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Things are looking desperate, as a guilty verdict looms on the horizon. Will the secret behind this case be revealed?",
+      "airdate": "2016-06-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 25,
+          "end": 115
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1312,
+          "end": 1401
+        }
+      ],
+      "external_id": "185732"
+    },
+    {
+      "n": 11,
+      "title": "Turnabout Goodbyes — 4th Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Will the defense be able to prove the guilt of the real culprit? And how will they do it?",
+      "airdate": "2016-06-11",
+      "markers": [],
+      "external_id": "185733"
+    },
+    {
+      "n": 12,
+      "title": "Turnabout Goodbyes: Last Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Turnabout Goodbyes reaches to its shocking conclusion!",
+      "airdate": "2016-06-18",
+      "markers": [],
+      "external_id": "185734"
+    },
+    {
+      "n": 13,
+      "title": "Turnabout Promise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "With the DL-6 Incident and the lunch money case now solved, memories of fifteen years ago come flooding back.",
+      "airdate": "2016-06-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 35,
+          "end": 119
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1400
+        }
+      ],
+      "external_id": "185735"
+    },
+    {
+      "n": 14,
+      "title": "Reunion and Turnabout — 1st Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A while after the last case, a new client arrives with the request to attend a channeling ritual.",
+      "airdate": "2016-07-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 34,
+          "end": 123
+        }
+      ],
+      "external_id": "185736"
+    },
+    {
+      "n": 15,
+      "title": "Reunion and Turnabout  —  2nd Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The trial begins, and the prosecution is helmed by the daughter of a fallen foe, out for revenge.",
+      "airdate": "2016-07-16",
+      "markers": [],
+      "external_id": "185737"
+    },
+    {
+      "n": 16,
+      "title": "Reunion and Turnabout  —  3rd Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "After the first session of the trial, the investigation continues, and a few suspects start to crop up.",
+      "airdate": "2016-07-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 19,
+          "end": 108
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1400
+        }
+      ],
+      "external_id": "185738"
+    },
+    {
+      "n": 17,
+      "title": "Reunion and Turnabout  —  Last Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The trial reaches its climax, and the culprit is well and truly unmasked.",
+      "airdate": "2016-07-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 24,
+          "end": 114
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1400
+        }
+      ],
+      "external_id": "185739"
+    },
+    {
+      "n": 18,
+      "title": "Turnabout Big Top  —  1st Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A new murder, a new case. This time, the crime scene is a circus.",
+      "airdate": "2016-08-06",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1399
+        }
+      ],
+      "external_id": "185740"
+    },
+    {
+      "n": 19,
+      "title": "Turnabout Big Top  —  2nd Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The trial for the murder of the circus ringmaster begins, and a shocking fact is revealed to the court.",
+      "airdate": "2016-08-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 16,
+          "end": 104
+        }
+      ],
+      "external_id": "185741"
+    },
+    {
+      "n": 20,
+      "title": "Turnabout Big Top  —  Last Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The miraculous magic trick behind the circus murder is finally unveiled.",
+      "airdate": "2016-08-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 16,
+          "end": 105
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1400
+        }
+      ],
+      "external_id": "185742"
+    },
+    {
+      "n": 21,
+      "title": "Farewell, My Turnabout  —  1st Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A new case, a new murder, but a familiar suspect, as a Samurai once again gets accused of the crime. This is a case that must be taken, but for an altogether different reason...",
+      "airdate": "2016-09-03",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1312,
+          "end": 1400
+        }
+      ],
+      "external_id": "185743"
+    },
+    {
+      "n": 22,
+      "title": "Farewell, My Turnabout  —  2nd Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The trial comes and goes, and a hugely surprising fact comes to light.",
+      "airdate": "2016-09-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 13,
+          "end": 100
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1399
+        }
+      ],
+      "external_id": "185744"
+    },
+    {
+      "n": 23,
+      "title": "Farewell, My Turnabout  —  3rd Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The trial enters its second day, as the nature of a defense attorney comes under question.",
+      "airdate": "2016-09-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 24,
+          "end": 112
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1310,
+          "end": 1399
+        }
+      ],
+      "external_id": "185745"
+    },
+    {
+      "n": 24,
+      "title": "Farewell, My Turnabout  —  Last Trial",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "The trial reaches its thrilling climax, with a life-or-death decision to be made: Guilty or Not Guilty?",
+      "airdate": "2016-09-24",
+      "markers": [],
+      "external_id": "185746"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

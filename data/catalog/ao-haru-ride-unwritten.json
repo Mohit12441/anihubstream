@@ -1,0 +1,65 @@
+{
+  "id": "ao-haru-ride-unwritten",
+  "title": "Ao Haru Ride: unwritten",
+  "native": "アオハライド unwritten",
+  "year": 2014,
+  "rating": 7.2,
+  "season": "Summer 2014",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20837-yK7SvUj1Tg7l.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20837-yK7SvUj1Tg7l.jpg",
+  "accent": "#e4435d",
+  "synopsis": "Bundled with the 11th volume of the Ao Haru Ride manga. \r\n\r\nEpisode about Futaba and Kou in middle school. Based on the chapter called \"Unwritten.\" also known as chapter 0 or Prologue.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8488,
+    "anilist": 20900,
+    "mal": 24151
+  },
+  "skip_key_id": 24151,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-22 12:26:28",
+  "search_text": "ao haru ride unwritten アオハライト unwritten ova finished",
+  "genres": [
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Unwritten",
+      "runtime": "21:00",
+      "runtime_seconds": 1260,
+      "thumb": "",
+      "synopsis": "Episode about Futaba and Kou in middle school.",
+      "airdate": "2014-08-25",
+      "markers": [],
+      "external_id": "115277"
+    },
+    {
+      "n": 2,
+      "title": "PAGE.13",
+      "runtime": "21:00",
+      "runtime_seconds": 1260,
+      "thumb": "",
+      "synopsis": "Futaba, Kou, Shuuko, Yuuri and Aya go to the firework festival.",
+      "airdate": "2014-12-12",
+      "markers": [],
+      "external_id": "172639"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,57 @@
+{
+  "id": "attack-on-titan-chronicle",
+  "title": "Attack on Titan ~Chronicle~",
+  "native": "進撃の巨人 〜クロニクル〜",
+  "year": 2020,
+  "rating": 7.7,
+  "season": "Summer 2020",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx119113-IzVI5oZ0og8O.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx119113-IzVI5oZ0og8O.jpg",
+  "accent": "#f1785d",
+  "synopsis": "Movie compiling the first 3 seasons of Shingeki no Kyojin.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "attack-on-titan:-chronicle-e0jszw",
+    "mal": 42091,
+    "anilist": 119113,
+    "kitsu": 43212
+  },
+  "skip_key_id": 42091,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "attack on titan chronicle 進撃の巨人 クロニクル movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Attack on Titan: Chronicle (Movie)",
+      "runtime": "120:00",
+      "runtime_seconds": 7200,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a8ed6c96b1a2ef8b331d082-landscape.jpg",
+      "synopsis": "Movie compiling the first 3 seasons of Shingeki no Kyojin.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "280779"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,75 @@
+{
+  "id": "daemons-of-the-shadow-realm",
+  "title": "Daemons of the Shadow Realm",
+  "native": "黄泉のツガイ",
+  "year": 2026,
+  "rating": 7.8,
+  "season": "Spring 2026",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx195600-moI0UFArtOme.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx195600-moI0UFArtOme.jpg",
+  "accent": "#e49335",
+  "synopsis": "In a remote mountain village under the watchful eyes of two stone guardians, the young Yuru contentedly lives off the land while staying close to the only family he has left—Asa, his precious twin sister. Asa, meanwhile, carries out a mysterious “duty” on behalf of the village while locked in a cage. Why is Asa a prisoner? And what other secrets does Yuru’s otherwise idyllic home hide?\n\n(Source: Square Enix)",
+  "rank": null,
+  "trend_rank": 33,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "daemons-of-the-shadow-realm-xxs9zh",
+    "mal": 62001,
+    "anilist": 195600,
+    "kitsu": 50023
+  },
+  "skip_key_id": 62001,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "daemons of the shadow realm 黄泉のツカ イ tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tobu Toki (Time to Fly)",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tobō yo (Let's Fly)",
+      "artist": "yama",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "back shot",
+      "artist": "Masanori Otoda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kujaku (孔雀)",
+      "artist": "Kei Sugawara",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

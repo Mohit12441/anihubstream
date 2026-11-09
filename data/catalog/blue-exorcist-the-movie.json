@@ -1,0 +1,176 @@
+{
+  "id": "blue-exorcist-the-movie",
+  "title": "Blue Exorcist: The Movie",
+  "native": "青の祓魔師 -劇場版-",
+  "year": 2012,
+  "rating": 7.3,
+  "season": "Fall 2012",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11737-49ya7CBO5wEq.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11737-49ya7CBO5wEq.jpg",
+  "accent": "#e4935d",
+  "synopsis": "The atmosphere in True Cross Academy is lively and boisterous in the days leading up to the grand festival held once every 11 years. During this time, Okumura Rin is entrusted with the responsibility of suppressing the berserk Phantom Train. In the midst of his mission, he meets a devil whose appearance is that of a young boy.\n\n\r\n(Source: Official Site)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "blue-exorcist:-the-movie-hs6290",
+    "mal": 11737,
+    "anilist": 11737,
+    "kitsu": 6580
+  },
+  "skip_key_id": 11737,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "blue exorcist the movie 青の祓魔師 劇場版 movie finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Blue Exorcist: The Movie (Movie)",
+      "runtime": "88:00",
+      "runtime_seconds": 5280,
+      "thumb": "https://animehot.cc/storage/media/2026/09/695a7bafbaff3580cb8ea5a2-landscape.webp",
+      "synopsis": "As the grand festival of True Cross Academy draws near, exwires and exorcists alike combine their efforts to banish any demon that threatens the celebrations. Among them, Rin Okumura is tasked with exorcising the soul-devouring demon known as the Phantom Train alongside his brother Yukio and Shiemi Moriyama.\n\nDuring their mission, the Phantom Train escapes its tracks and begins ravaging True Cross Academy. In the ensuing chaos, Rin encounters a childlike demon he dubs Usamaro, and begins to develop an odd friendship with it. However, Usamaro's abilities might be far more sinister than Rin initially expected.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "97347"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tsuukaku",
+      "artist": "amazarashi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Overlap",
+      "artist": "Shiyui",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "RE RESCUE",
+      "artist": "Reol",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsurara",
+      "artist": "Yohabi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Eye's Sentry",
+      "artist": "UVERworld",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gakkyuu Nisshi",
+      "artist": "Mulasaki Ima",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Itteki no Eikyō (一滴の影響; Drop's Influence)",
+      "artist": "UVERworld",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kono Te de (コノ手デ; With This Hand)",
+      "artist": "Rin Akatsuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "REVERSI",
+      "artist": "UVERworld",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Core Pride",
+      "artist": "UVERworld",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Core Pride",
+      "artist": "UVERworld",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Take Off",
+      "artist": "2PM",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Take Off",
+      "artist": "2PM",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "In My World",
+      "artist": "ROOKiEZ is PUNK'D",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "In My World",
+      "artist": "ROOKiEZ is PUNK'D",
+      "episodes": "13-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Wired Life",
+      "artist": "Meisa Kuroki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Wired Life",
+      "artist": "Meisa Kuroki",
+      "episodes": "13-25"
+    }
+  ],
+  "relations": []
+}

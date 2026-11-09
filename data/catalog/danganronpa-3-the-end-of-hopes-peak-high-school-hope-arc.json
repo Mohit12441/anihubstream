@@ -1,0 +1,93 @@
+{
+  "id": "danganronpa-3-the-end-of-hopes-peak-high-school-hope-arc",
+  "title": "Danganronpa 3: The End of Hope's Peak High School - Hope Arc",
+  "native": "ダンガンロンパ３-The End of 希望ヶ峰学園-希望編",
+  "year": 2016,
+  "rating": 7,
+  "season": "Fall 2016",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97672-BRm6bIWQfI2v.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97672-BRm6bIWQfI2v.jpg",
+  "accent": "#e4c950",
+  "synopsis": "The Future Foundation is in shambles after the Final Killing Game and the revelation of the true culprit. As a desperate plot arises from one of the survivors to rid the world of despair once and for all, the remaining Future Foundation members must band together to stop it. Fortunately, they find themselves with help from a group of unlikely allies as they race against the clock to stop their world from being changed.\n\nAs a direct continuation of Mirai-hen, Kibou-hen serves as the finale to the Hope's Peak storyline of the Danganronpa series.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Danganronpa 3: The End of Hope’s Peak High School - Future Arc (2016)",
+    "Super Danganronpa 2.5 Komaeda Nagito to Sekai no Hakaisha (2017)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 12554,
+    "anilist": 97672,
+    "mal": 34103
+  },
+  "skip_key_id": 34103,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-21 08:26:21",
+  "search_text": "danganronpa 3 the end of hope s peak high school hope arc タ ンカ ンロンハ 3 the end of 希望ヶ峰学園 希望編 special finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Danganronpa 3: The End of Hope's Peak High School - Hope Arc",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97672-BRm6bIWQfI2v.jpg",
+      "synopsis": "The Future Foundation is in shambles after the Final Killing Game and the revelation of the true culprit. As a desperate plot arises from one of the survivors to rid the world of despair once and for all, the remaining Future Foundation members must band together to stop it. Fortunately, they find themselves with help from a group of unlikely allies as they race against the clock to stop their world from being changed.\n\nAs a direct continuation of Mirai-hen, Kibou-hen serves as the finale to the Hope's Peak storyline of the Danganronpa series.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "189268"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ever free",
+      "artist": "hide with Spread Beaver",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kami Iro Awase (カミイロアワセ)",
+      "artist": "binaria",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Zettai Kibō Birthday (絶対希望バースデー;The Birthday of Absolute Hope)",
+      "artist": "Megumi Ogata",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "DEAD OR LIE",
+      "artist": "Maon Kurosaki feat. TRUSTRICK",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Recall THE END",
+      "artist": "TRUSTRICK",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

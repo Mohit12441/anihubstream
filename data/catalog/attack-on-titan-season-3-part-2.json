@@ -1,0 +1,189 @@
+{
+  "id": "attack-on-titan-season-3-part-2",
+  "title": "Attack on Titan Season 3 Part 2",
+  "native": "進撃の巨人 Season３ Part.2",
+  "year": 2019,
+  "rating": 8.9,
+  "season": "Spring 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx104578-k61nx3LPjvgd.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx104578-k61nx3LPjvgd.jpg",
+  "accent": "#e49350",
+  "synopsis": "The battle to retake Wall Maria begins now! With Eren’s new hardening ability, the Scouts are confident they can seal the wall and take back Shiganshina District. If they succeed, Eren can finally unlock the secrets of the basement—and the world. But danger lies in wait as Reiner, Bertholdt, and the Beast Titan have plans of their own. Could this be humanity’s final battle for survival?\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 104578,
+    "mal": 38524,
+    "hianime": "attack-on-titan-season-3-part-2-l8kw4s",
+    "kitsu": 41982
+  },
+  "skip_key_id": 38524,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": "2026-10-18 01:09:12",
+  "search_text": "attack on titan season 3 part 2 進撃の巨人 season3 part 2 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Town Where Everything Began",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256494/original.jpg",
+      "synopsis": "The operation to retake Wall Maria commences in Shiganshina, the town where everything began. But when the Scouts arrive, something seems very wrong.",
+      "airdate": "2019-04-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 111,
+          "end": 205,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "256494"
+    },
+    {
+      "n": 2,
+      "title": "Thunder Spears",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256495/original.jpg",
+      "synopsis": "Against a rush of enemies, the Scouts scramble to defend their horses. But despite falling into a trap, they have their own surprise for the Armored Titan.",
+      "airdate": "2019-05-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 93,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "256495"
+    },
+    {
+      "n": 3,
+      "title": "Descent",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256496/original.jpg",
+      "synopsis": "Though their Thunder Spears prove effective, the Scouts' celebration is short-lived as disaster descends upon Shiganshina.",
+      "airdate": "2019-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "256496"
+    },
+    {
+      "n": 4,
+      "title": "Perfect Game",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256497/original.jpg",
+      "synopsis": "While one front in the battle is rained on by flames, the other is battered by boulders. With no way out, the Scouts are forced to fight or die trying.",
+      "airdate": "2019-05-20",
+      "markers": [],
+      "external_id": "256497"
+    },
+    {
+      "n": 5,
+      "title": "Hero",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256498/original.jpg",
+      "synopsis": "As Erwin's heroic charge buys Levi time to confront the Beast Titan, Armin comes up with a plan of his own that lays it all on the line.",
+      "airdate": "2019-05-27",
+      "markers": [],
+      "external_id": "256498"
+    },
+    {
+      "n": 6,
+      "title": "Midnight Sun",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256499/original.jpg",
+      "synopsis": "While picking up the pieces from the costly battle, tensions rise when deciding which of the wounded Scouts to use the single syringe on.",
+      "airdate": "2019-06-03",
+      "markers": [],
+      "external_id": "256499"
+    },
+    {
+      "n": 7,
+      "title": "The Basement",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256500/original.jpg",
+      "synopsis": "The secrets hidden in Grisha's basement await in the ruins of Shiganshina. There, the Scouts hope to find answers to the world worth more than the price they paid.",
+      "airdate": "2019-06-10",
+      "markers": [],
+      "external_id": "256500"
+    },
+    {
+      "n": 8,
+      "title": "That Day",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256501/original.jpg",
+      "synopsis": "A look into Grisha's memories shows Eren the many secrets his father was hiding, including one which led to his mother's demise.",
+      "airdate": "2019-06-17",
+      "markers": [],
+      "external_id": "256501"
+    },
+    {
+      "n": 9,
+      "title": "Attack Titan",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256502/original.png",
+      "synopsis": "Eren learns how all paths connect in the story that his father began. If Grisha is to pay for his sins, he must fight for freedom and take a stand.",
+      "airdate": "2019-06-24",
+      "markers": [],
+      "external_id": "256502"
+    },
+    {
+      "n": 10,
+      "title": "The Other Side of the Wall",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/256503/original.png",
+      "synopsis": "Though it's met with hope and despair, the truth is made public. The Scouts then venture beyond the walls to see if it's everything they dreamed of.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "256503"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

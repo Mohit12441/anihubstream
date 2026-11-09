@@ -1,0 +1,759 @@
+{
+  "id": "demon-slayer",
+  "title": "Demon Slayer: Kimetsu no Yaiba",
+  "native": "鬼滅の刃",
+  "year": 2019,
+  "rating": 8.2,
+  "season": "Spring 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101922-WBsBl0ClmgYL.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-WBsBl0ClmgYL.jpg",
+  "accent": "#f1c9ae",
+  "synopsis": "It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself. Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he can turn his sister back into a human, and kill the demon that massacred his family.\n\n(Source: Crunchyroll)",
+  "rank": 2,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train (2020)",
+    "Demon Slayer: Kimetsu no Yaiba Mugen Train Arc (2021)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 41370,
+    "anilist": 101922,
+    "mal": 38000
+  },
+  "skip_key_id": 38000,
+  "skip_key_space": "mal",
+  "episode_total": 26,
+  "added_at": "2026-10-13 00:00:00",
+  "search_text": "demon slayer kimetsu no yaiba 鬼滅の刃 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Cruelty",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246946/original.jpg",
+      "synopsis": "It is the Taisho Period. Tanjiro Kamado is living a modest but blissful life in the mountains with his family. One day, when he returns from selling charcoal in town, he finds his family slaughtered in pools of blood after a demon attack. Tanjiro rushes down the snowy mountain with the sole survivor, his sister Nezuko, on his back. But on the way, Nezuko suddenly snarls, turning on Tanjiro.",
+      "airdate": "2019-04-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 6,
+          "end": 96
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1295,
+          "end": 1380
+        }
+      ],
+      "external_id": "246946"
+    },
+    {
+      "n": 2,
+      "title": "Trainer Sakonji Urokodaki",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/246947/original.jpg",
+      "synopsis": "At Giyu Tomioka's urging, Tanjiro heads for Mt. Sagiri with his sister Nezuko who's been turned into a demon. During the night, Tanjiro catches the smell of blood from inside a temple. He enters, thinking that someone might be hurt, only to come upon a man-eating demon. When the demon attacks, Tanjiro manages to fight back with his hatchet, but the demon's strength is overwhelming. Just as the demon is about to finish him off, Tanjiro is saved by none other than...",
+      "airdate": "2019-04-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 57,
+          "end": 147
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "246947"
+    },
+    {
+      "n": 3,
+      "title": "Sabito and Makomo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/255448/original.jpg",
+      "synopsis": "The Demon Slayer Corps... An organization that's been hunting down demons since ancient times. Sakonji Urokodaki starts training Tanjiro for Final Selection, the test for joining the unit. Navigating a mountain riddled with booby traps, dry sword swings, waterfall immersion and breathing techniques... A year later, Urokodaki informs Tanjiro that he has nothing more to teach him, and gives him one last hurdle to overcome in front of a giant boulder.",
+      "airdate": "2019-04-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "255448"
+    },
+    {
+      "n": 4,
+      "title": "Final Selection",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/260075/original.jpg",
+      "synopsis": "To pass Final Selection, one must survive for seven days on Mt. Fujikasane where demons captured by the Demon Slayers have been imprisoned. So begins the battle for survival between the young swordsmen and the demons. Armed with the breathing techniques and stances he'd learned from Sakonji Urokodaki, Tanjiro slashes demon after demon. His two years of training have not gone to waste. But just then, a morphed demon appears out of nowhere.",
+      "airdate": "2019-04-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 60,
+          "end": 150
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "260075"
+    },
+    {
+      "n": 5,
+      "title": "My Own Steel",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/260823/original.jpg",
+      "synopsis": "When day breaks, there are only four swordsmen left standing after the seven-day battle. The guides who greet Tanjiro and the other survivors explain the Demon Slayer Corps system. All four are issued uniforms and Kasugai Crows as messengers, after which they must select the ore for their own Nichirin Swords. After gazing hard at each lump of ore and using his sense of smell, the one Tanjiro chooses is...",
+      "airdate": "2019-05-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 134
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "260823"
+    },
+    {
+      "n": 6,
+      "title": "Swordsman Accompanying a Demon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/260824/original.jpg",
+      "synopsis": "Tanjiro is now clad in the uniform of the Demon Slayer Corps. His Nichirin Sword on his hip, and Nezuko, now awake, in a special box made by Urokodaki on his back, he heads out for his first assignment. A town to the northwest where girls have been vanishing nightly. There, Tanjiro meets Kazumi, haggard with worry after his girlfriend's been abducted. Though he does catch the scent of a demon nearby, there's just no demon in sight. Tanjiro is sure that a demon is behind this sinister incident...",
+      "airdate": "2019-05-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 35,
+          "end": 125
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1289,
+          "end": 1380
+        }
+      ],
+      "external_id": "260824"
+    },
+    {
+      "n": 7,
+      "title": "Muzan Kibutsuji",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264018/original.jpg",
+      "synopsis": "Now split into three, the demons have driven Tanjiro into a corner. It is then that Nezuko attacks. Now that she’s become a demon herself, she’s no longer so weak that she needs protection. His mind made up, Tanjiro follows one of the demons into the swamp now spreading across the ground. Waiting for him there is...",
+      "airdate": "2019-05-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 47,
+          "end": 137
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "264018"
+    },
+    {
+      "n": 8,
+      "title": "The Smell of Enchanting Blood",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264019/original.jpg",
+      "synopsis": "The next mission is in Asakusa, Tokyo. Tanjiro is taken aback by the opulent Taisho Era cityscape, but soon picks up the demon’s scent there. His pursuit of the scent leads him to Muzan Kibutsuji. Tanjiro attempts to strike him down. But Kibutsuji transforms a passerby into demon, triggering a commotion. As Tanjiro desperately tries to get things under control, someone appears before him...",
+      "airdate": "2019-05-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 22,
+          "end": 112
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1288,
+          "end": 1379
+        }
+      ],
+      "external_id": "264019"
+    },
+    {
+      "n": 9,
+      "title": "Temari Demon and Arrow Demon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264020/original.jpg",
+      "synopsis": "It was two demons named Tamayo and Yushiro who came to Tanjiro’s rescue. Using the “Eyeblind” spell, Tamayo guides Tanjiro and Nezuko to her house. There, through his conversation with Tamayo, Tanjiro learns that there is a way to return demons to human form. Just then, two demons in pursuit of Tanjiro locate the house and unleash a furious assault...",
+      "airdate": "2019-06-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 55,
+          "end": 145
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1269,
+          "end": 1359
+        }
+      ],
+      "external_id": "264020"
+    },
+    {
+      "n": 10,
+      "title": "Together Forever",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264021/original.jpg",
+      "synopsis": "Tanjiro’s crisis continues. He uses multiple forms of the Water Breathing technique to hold out against Yahaba’s final Blood Demon Art, the \"Kouketsu Arrow.\" Meanwhile, Nezuko and Susamaru are still battling it out. Worried about the outcome, Tamayo unleashes her own Blood Demon Art.",
+      "airdate": "2019-06-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 134
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "264021"
+    },
+    {
+      "n": 11,
+      "title": "Tsuzumi Mansion",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264022/original.jpg",
+      "synopsis": "Tanjiro's next destination, according to his Kasugai Crow, is to the south-southeast. On the way, Tanjiro runs into his fellow Final Selection survivor, the swordsman Zenitsu Agatsuma. Tanjiro has a hard time dealing with Zenitsu's passive attitude as they head deep into the mountains. They encounter two children whose older brother was taken away right in front of their house. There, Zenitsu hears the sound of a tsuzumi ringing out from somewhere.",
+      "airdate": "2019-06-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 45,
+          "end": 136
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1270,
+          "end": 1360
+        }
+      ],
+      "external_id": "264022"
+    },
+    {
+      "n": 12,
+      "title": "The Boar Bares Its Fangs, Zenitsu Sleeps",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264023/original.jpg",
+      "synopsis": "Inside the house, where the rooms spin each time the tsuzumi is played, Tanjiro gets separated from Zenitsu Agatsuma. Without Tanjiro by his side, Zenitsu is overcome by fear and despair as he takes Shoichi through the house. Meanwhile, Tanjiro meets the master of the house, the tsuzumi-playing demon, and an odd-looking man wearing a boar’s head mask.",
+      "airdate": "2019-06-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "264023"
+    },
+    {
+      "n": 13,
+      "title": "Something More Important Than Life",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264024/original.jpg",
+      "synopsis": "Every time Kyogai, the master of house, plays his tsuzumi, the room spins and Tanjiro struggles. Debilitated by the fractured bones he sustained in his previous battle, Tanjiro tries to fire himself up as he desperately fights on, but he is overwhelmed by Kyogai's Blood Demon Art. Will he find a way to slice off Kyogai's head?",
+      "airdate": "2019-06-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "264024"
+    },
+    {
+      "n": 14,
+      "title": "The House with the Wisteria Family Crest",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264025/original.jpg",
+      "synopsis": "After a desperate fight to the death, Tanjiro prevails over Kyogai. He exits the house to find Zenitsu who had escaped earlier. But it is then that he sees the strange circumstances before him... The battered Zenitsu holding the box containing Nezuko in his arms while the man in the boar's head mask stands in the way with two Nichirin Swords drawn.",
+      "airdate": "2019-07-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 32,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "264025"
+    },
+    {
+      "n": 15,
+      "title": "Mount Natagumo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264026/original.jpg",
+      "synopsis": "Their next destination is to the north-northwest. Tanjiro and Nezuko head towards Mount Natagumo with Zenitsu and Inosuke. This mountain is covered with spider webs and is swarming with innumerable spiders. Leaving the cowering Zenitsu behind, Tanjiro and Inosuke head up the mountain where they run into fellow Demon Slayers entangled in spider webs.",
+      "airdate": "2019-07-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 119
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "264026"
+    },
+    {
+      "n": 16,
+      "title": "Letting Someone Else Go First",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264027/original.jpg",
+      "synopsis": "Tanjiro and Inosuke battle the Demon Slayers trapped by spider webs. After slashing the threads and destroying the webs, they head deeper into the mountain. The farther they advance through the forest, the thicker the threads become, and those under their control start moving in ways impossible for a human being. Stopping the Demon Slayers without hurting them isn't going to be easy, but then Tanjiro makes a certain move...",
+      "airdate": "2019-07-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 53,
+          "end": 143
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1271,
+          "end": 1361
+        }
+      ],
+      "external_id": "264027"
+    },
+    {
+      "n": 17,
+      "title": "You Must Master a Single Thing",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264028/original.jpg",
+      "synopsis": "One of the Twelve Kizuki, a direct subordinate of Muzan Kibutsuji, is here somewhere. When Tanjiro slays the Mother Spider Demon of Mt. Natagumo, he learns that a demon who might hold the key to turning Nezuko back into a human is somewhere in this very forest. With the battered Inosuke in tow, he heads deeper into the forest. Meanwhile, Zenitsu trudges forlornly through the woods only to encounter a spider with a human face.",
+      "airdate": "2019-07-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 130,
+          "end": 220
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "264028"
+    },
+    {
+      "n": 18,
+      "title": "A Forged Bond",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264029/original.jpg",
+      "synopsis": "Tanjiro and Inosuke face off against the Father Spider Demon of Mt. Natagumo. Tanjiro unleashes an attack, only to get hurled away by the demon's overwhelming power. Landing near a river, he comes upon the young demon Rui torturing the Sister Spider Demon. When Rui calls their bond of terror and hatred \"a family’s bond,\" Tanjiro is enraged. So begins the battle between Rui and Tanjiro.",
+      "airdate": "2019-08-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 88,
+          "end": 178
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "264029"
+    },
+    {
+      "n": 19,
+      "title": "Hinokami",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264030/original.jpg",
+      "synopsis": "Swordsmen in the Demon Slayer Corps known as Hashiras have arrived on Mt. Natagumo. Giyu Tomioka, the Water Hashira, slays the Father Spider Demon with a single strike. Inosuke, thrilled to see such a display of swordsmanship by someone in a totally different league from himself, challenges Giyu to a duel. Meanwhile, Zenitsu lies near death as the poison circulates throughout his body. Just then, the Insect Hashira, Shinobu Kocho appears before him.",
+      "airdate": "2019-08-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 27,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "264030"
+    },
+    {
+      "n": 20,
+      "title": "Pretend Family",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264031/original.jpg",
+      "synopsis": "When Rui assaults him with his Blood Demon Art, Tanjiro braces himself for certain death. As his life flashes before his eyes, he suddenly remembers his father's dance, the kagura, and unleashes a new, non-Water Breathing attack. Hinokami Kagura Dance. Knowing that he’ll be receiving a simultaneous blow from the demon, he uses his new move to slice off Rui’s head. As Tanjiro crawls towards Nezuko, who lies on the ground, riddled with wounds, someone appears before him.",
+      "airdate": "2019-08-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 25,
+          "end": 115
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "264031"
+    },
+    {
+      "n": 21,
+      "title": "Against Corps Rules",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264032/original.jpg",
+      "synopsis": "Seeing Tanjiro try to protect Nezuko even as he collapses triggers memories of Rui’s own past. Once a sickly boy, he became a demon after meeting Muzan Kibutsuji who gave him a share of his blood. But after he turns into a demon, his own parents try to kill him. Ever since then, he has been searching for a family. Seeking a bond that he can never hope to acquire...",
+      "airdate": "2019-08-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "264032"
+    },
+    {
+      "n": 22,
+      "title": "Master of the Mansion",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264033/original.jpg",
+      "synopsis": "After the battle is over, Tanjiro and Nezuko are taken to the Demon Slayer Corps headquarters. This is where the Hashira Meeting between the Corps leader, Ubuyashiki, and the Hashiras, the most powerful swordsmen in the Corps, is to be held. The Hashiras censure Tanjiro for violating the Demon Slayer Corps by protecting a demon. And then, the Wind Hashira, Sanemi Shinazugawa, raises his sword against Nezuko...",
+      "airdate": "2019-08-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 98,
+          "end": 188
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "264033"
+    },
+    {
+      "n": 23,
+      "title": "Hashira Meeting",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264034/original.jpg",
+      "synopsis": "Ubuyashiki, the leader of the Demon Slayer Corps, finally appears before Tanjiro. He tells him that he will allow Tanjiro and Nezuko to join the Corps. But the Hashiras are unable to accept this decision right away. The Wind Hashira, Sanemi Shinazugawa, slashes his own arm and taunts Nezuko with his blood, trying to get her to show her true colors as a demon.",
+      "airdate": "2019-09-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 25,
+          "end": 115
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "264034"
+    },
+    {
+      "n": 24,
+      "title": "Rehabilitation Training",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264035/original.jpg",
+      "synopsis": "The injured Tanjiro, Zenitsu and Inosuke are sent to the home of the Insect Hashira, Shinobu Kocho, for treatment. Two weeks later, Tanjiro and Inosuke start rehabilitation training. But the drills are brutal, and they find themselves broken in spirit. Unaware of the grueling regimen, Zenitsu joins them late and is visibly enthusiastic in front of girls, but...",
+      "airdate": "2019-09-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 58,
+          "end": 148
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "264035"
+    },
+    {
+      "n": 25,
+      "title": "Tsuguko, Kanao Tsuyuri",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/264036/original.jpg",
+      "synopsis": "Tanjiro, who’s undergoing rehabilitation training at the Butterfly Mansion, works hard to keep up his Total Concentration Breathing techniques all day long. Though at first, he’s helpless against Kanao, a swordswoman in his class who’s training him, he slowly but surely begins to make some headway. Seeing Tanjiro devote himself to training every single day, Zenitsu and Inosuke resume training as well, but...",
+      "airdate": "2019-09-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 132
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1380
+        }
+      ],
+      "external_id": "264036"
+    },
+    {
+      "n": 26,
+      "title": "New Mission",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/264037/thumbnail/medium-c6a2e40eaab5b097dea890fa4be7676a.jpeg",
+      "synopsis": "As Tanjiro and the others are devoted to their rehabilitation training, the absolute master of the demons, Muzan Kibutsuji, gathers the Lower Ranks of the Twelve Kizuki. The demons, too, are preparing to make their next move. As training draws to a close, Tanjiro has improved to the point where he can fight on equal terms with Kanao. Just then, he receives word of a new mission from his Kasugai Crow. (Source: Fan Wiki)",
+      "airdate": "2019-09-28",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1380
+        }
+      ],
+      "external_id": "264037"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Taiyō ga Noboranai Sekai (太陽が昇らない世界)",
+      "artist": "Aimer",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Zankoku na Yoru ni Kagayake (残酷な夜に輝け)",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mugen (無限)",
+      "artist": "MY FIRST STORY x HYDE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tokoshie (トコシエ)",
+      "artist": "MY FIRST STORY x HYDE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kizuna no Kiseki (絆ノ奇跡)",
+      "artist": "MAN WITH A MISSION x milet",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Koi Kogare (コイコガレ)",
+      "artist": "MAN WITH A MISSION x milet",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Akeboshi (明け星)",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shirogane (白銀)",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Zankyosanka (残響散歌)",
+      "artist": "Aimer",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Asa ga kuru (朝が来る)",
+      "artist": "Aimer",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Homura (炎; Flame)",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Gurenge (紅蓮華; Red Lotus)",
+      "artist": "LiSA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "from the edge",
+      "artist": "FictionJunction feat. LiSA",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

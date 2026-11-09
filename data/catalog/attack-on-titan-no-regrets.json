@@ -1,0 +1,82 @@
+{
+  "id": "attack-on-titan-no-regrets",
+  "title": "Attack on Titan: No Regrets",
+  "native": "進撃の巨人 外伝 悔いなき選択",
+  "year": 2014,
+  "rating": 8.3,
+  "season": "Winter 2015",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20811-IvXLdxZkYNcP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20811-IvXLdxZkYNcP.jpg",
+  "accent": "#ff3d8b",
+  "synopsis": "This prequel to megahit Attack on Titan answers the questions: How did Captain Levi of the Survey Corps go from street thug to humanity's strongest soldier? And how did Commander Erwin become a cold, calculating leader, ready to sacrifice anything to save the human race? The fires that forged this bond of loyalty and trust were intense indeed!\n\n(Source: Anime News Network, revised)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "attack-on-titan:-no-regrets-3jfjnr",
+    "mal": 25781,
+    "anilist": 20811,
+    "kitsu": 8674
+  },
+  "skip_key_id": 25781,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "attack on titan no regrets 進撃の巨人 外伝 悔いなき選択 ova finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A Choice with No Regrets (Part 1)",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "A Choice with No Regrets (Pt. 1) is the fourth OVA episode of the Attack on Titan anime. It was produced by Wit Studio and Production I.G, and is based on the spinoff manga Attack on Titan: No Regrets (Shingeki no Kyojin Gaiden: Kuinaki Sentaku) by artist Hikaru Suruga and writer Gan Sunaaku.\n\nThis prequel to Attack on Titan answers the questions: How did Captain Levi of the Survey Corps go from street tough to humanity's strongest soldier? And how did Commander Erwin become a cold, calculating leader, ready to sacrifice anything to save the human race? The fires that forged this bond of loyalty and trust were intense indeed!",
+      "airdate": "2014-12-09",
+      "markers": [],
+      "external_id": "116583"
+    },
+    {
+      "n": 2,
+      "title": "A Choice with No Regrets (Part 2)",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "A Choice with No Regrets (Pt. 2) is the fifth OVA episode of the Attack on Titan anime. It was produced by Wit Studio and Production I.G, and is based on the spinoff manga Attack on Titan: No Regrets (Shingeki no Kyojin Gaiden: Kuinaki Sentaku) by artist Hikaru Suruga and writer Gan Sunaaku.\n\nThis prequel to Attack on Titan answers the questions: How did Captain Levi of the Survey Corps go from street tough to humanity's strongest soldier? And how did Commander Erwin become a cold, calculating leader, ready to sacrifice anything to save the human race? The fires that forged this bond of loyalty and trust were intense indeed!",
+      "airdate": "2015-04-09",
+      "markers": [],
+      "external_id": "116584"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Jiyuu no Tsubasa (自由の翼)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "great escape",
+      "artist": "cinema staff",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,139 @@
+{
+  "id": "darker-than-black-gemini-of-the-meteor-ovas",
+  "title": "Darker than Black: Origins",
+  "native": "DARKER THAN BLACK -黒の契約者- 外伝",
+  "year": 2010,
+  "rating": 7.6,
+  "season": "Winter 2010",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx7338-c6Uq5DmlEPVs.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx7338-c6Uq5DmlEPVs.png",
+  "accent": "#5d7828",
+  "synopsis": "Tells the story of what happened to Yin and Hei between the first and second series.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "darker-than-black:-gemini-of-the-meteor-ovas-gxpzb1",
+    "mal": 7338,
+    "anilist": 7338,
+    "kitsu": 4947
+  },
+  "skip_key_id": 7338,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": null,
+  "search_text": "darker than black origins darker than black 黒の契約者 外伝 special finished",
+  "genres": [
+    "action",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Darker than Black: Kuro no Keiyakusha Gaiden 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "After defeating a group of Contractors, Hei and Yin pose as a recently married couple to hide in an inn. As they spend their time, Hei meets a woman who reminds him of Amber. She eventually turns out to be a Contractor who seeks Hei's death. During their fight, Yin intervenes forcing the woman to kill herself.",
+      "airdate": "2010-01-27",
+      "markers": [],
+      "external_id": "34662"
+    },
+    {
+      "n": 2,
+      "title": "Part Two",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "34663"
+    },
+    {
+      "n": 3,
+      "title": "Part Three",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "34664"
+    },
+    {
+      "n": 4,
+      "title": "Part Four",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "34665"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "DARKER THAN BLACK",
+      "artist": "Yasushi Ishii",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tsukiakari no Michishirube (ツキアカリのミチシルベ; Guidepost of the Moonlight)",
+      "artist": "Stereopony",
+      "episodes": "2-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "From Dusk Till Dawn",
+      "artist": "abingdon boys school",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "HOWLING",
+      "artist": "abingdon boys school",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsukiakari",
+      "artist": "Rie fu",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Kakusei Heroism ~The Hero Without A Name~",
+      "artist": "An Cafe",
+      "episodes": "15-23,25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Dreams",
+      "artist": "HIGH and MIGHTY COLOR",
+      "episodes": "15-24"
+    }
+  ],
+  "relations": []
+}

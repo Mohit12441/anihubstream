@@ -1,0 +1,310 @@
+{
+  "id": "ascendance-of-a-bookworm-part-2",
+  "title": "Ascendance of a Bookworm Part 2",
+  "native": "本好きの下剋上 司書になるためには手段を選んでいられません 第2期",
+  "year": 2020,
+  "rating": 7.9,
+  "season": "Spring 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx113693-3tHbslFxD47R.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113693-3tHbslFxD47R.jpg",
+  "accent": "#fed628",
+  "synopsis": "When Myne learns that the temple is in need of mana for their relics, she sees it as her chance to be cured of her life-threatening mana disorder. After seeing their bountiful library, she throws herself headfirst into the temple's grasp and begs to join their order. In exchange for her service and her unusually bountiful supply of mana, Myne is given the blue robes of a noble-born apprentice shrine maiden, despite being a commoner. To Myne, all this talk of mana and nobility is trivial, as she now has access to an unlimited supply of books! \n\nAs Myne transitions into the next phase of her life in this new world, she soon learns that achieving her dream has come at a heavy cost. Noble society is severe, unforgiving, and fueled by politics and neglect. She must now deal with the class conflict between the noble-born blue robes and the common-born grey robes, the High Bishop's attempts to oust her, and constant behavioral issues from her new retainers. With the help of her family, friends, and the enigmatic High Priest whose loyalties and motives remain unknown, Myne seeks to overcome these obstacles and continue on the path to becoming her ideal self—the ultimate librarian!\n\n(Source: MAL Rewrite, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Ascendance of a Bookworm Season 3 (2022)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42838,
+    "anilist": 113693,
+    "mal": 40815
+  },
+  "skip_key_id": 40815,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 16:05:22",
+  "search_text": "ascendance of a bookworm part 2 本好きの下剋上 司書になるためには手段を選んて いられません 第2期 tv finished",
+  "genres": [
+    "fantasy",
+    "isekai",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A World Without Books",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a58b5a8f61b720b95b5615e4886656301575479408_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 34,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1296,
+          "end": 1380
+        }
+      ],
+      "external_id": "273034"
+    },
+    {
+      "n": 2,
+      "title": "Life Improvements and Slates",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/ca4cb88a542edd425588064dbf089d851576087991_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1300,
+          "end": 1380
+        }
+      ],
+      "external_id": "273035"
+    },
+    {
+      "n": 3,
+      "title": "The Events of Winter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a638bbcf3352e73a9c61f9bce8feae651576691589_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1299,
+          "end": 1380
+        }
+      ],
+      "external_id": "273036"
+    },
+    {
+      "n": 4,
+      "title": "Forests and Clay Tablets",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/228e239d4e37354f015d6a1f6a6ad4111577290447_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 22,
+          "end": 112
+        }
+      ],
+      "external_id": "277785"
+    },
+    {
+      "n": 5,
+      "title": "Baptisms and Strange Fevers",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a3f6a935f2dd65308af6dce0469ec2151577990770_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 127,
+          "end": 217
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1299,
+          "end": 1380
+        }
+      ],
+      "external_id": "277786"
+    },
+    {
+      "n": 6,
+      "title": "Meeting",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/38ffa9e3542c5edc7540d4ea101faf741578509769_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1380
+        }
+      ],
+      "external_id": "277787"
+    },
+    {
+      "n": 7,
+      "title": "Seeds of Suspicion",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/7f764612072de0a2b9b94d76de4f13661579092968_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 48,
+          "end": 138
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1287,
+          "end": 1380
+        }
+      ],
+      "external_id": "277788"
+    },
+    {
+      "n": 8,
+      "title": "Lutz's Main",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/456feed32fc834934a428939b204ccda1579677379_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 123
+        }
+      ],
+      "external_id": "277789"
+    },
+    {
+      "n": 9,
+      "title": "The Guild Master's Granddaughter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2a5d9a4072ee76f4df9a1a4a4e5de32f1580319970_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 127
+        }
+      ],
+      "external_id": "277790"
+    },
+    {
+      "n": 10,
+      "title": "To the Second Winter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3c634c3368630f3ddfa1a8899a68b9401580926631_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1299,
+          "end": 1380
+        }
+      ],
+      "external_id": "277791"
+    },
+    {
+      "n": 11,
+      "title": "Life-or-Death Choices and Family Meetings",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/a868a2584420cfc027aec631a7039b3f1581529576_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 134
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1296,
+          "end": 1380
+        }
+      ],
+      "external_id": "277792"
+    },
+    {
+      "n": 12,
+      "title": "Baptisms and Divine Paradises",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/ed191ba9f64231171d557e56117ef42d1582106947_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 36,
+          "end": 126
+        }
+      ],
+      "external_id": "277793"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

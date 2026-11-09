@@ -1,0 +1,80 @@
+{
+  "id": "cosmic-princess-kaguya",
+  "title": "Cosmic Princess Kaguya!",
+  "native": "超かぐや姫！",
+  "year": 2026,
+  "rating": 8.4,
+  "season": "Winter 2026",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx201903-v43gxQKw8Tc8.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx201903-v43gxQKw8Tc8.jpg",
+  "accent": "#e46b35",
+  "synopsis": "A tale of otherworldly beauty and celestial secrets unfolds in this new take on Japan’s oldest folktale.\n\nInspired by The Tale of the Bamboo Cutter, the film reimagines Japan’s oldest folktale with a modern touch by integrating music, fantasy, and contemporary animation.\n\nSet in the virtual realm of Tsukuyomi, the story unfolds as a live performance marrying original music with Yamashita’s signature style of polished visuals, emotive pacing, and dynamic 3D camerawork to boldly transform this classic tale for a new generation.\n\n(Source: Netflix, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "cosmic-princess-kaguya!-ofdct8",
+    "mal": 62896,
+    "anilist": 201903,
+    "kitsu": 50322
+  },
+  "skip_key_id": 62896,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "cosmic princess kaguya 超かく や姫 ona finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Cosmic Princess Kaguya!",
+      "runtime": "143:00",
+      "runtime_seconds": 8580,
+      "thumb": "https://animehot.cc/storage/media/2026/09/69721494996a5cdd28927d82-poster.jpg",
+      "synopsis": "Tsukuyomi is a virtual realm where hopes and dreams come together. Iroha Sakayori, a 17-year-old high school student in Tokyo, leads an extremely busy life trying to balance part-time work and academics. She finds peace by watching a popular streamer named Yachiyo Runami, who is the administrator of an online virtual space called Tsukuyomi.\n\nIroha frequents Tsukuyomi, where people can live different lives and freely pursue their creativity, and she passes the time by supporting Yachiyo and playing battle games to earn a little extra money. On her way home one day, Iroha finds a telephone pole shining with iridescent hues. To her surprise, an adorable baby emerges from the pole. Unable to abandon it, Iroha takes the infant home and watches her rapidly grow into a girl her own age.\n\n\"Are you Princess Kaguya?\"\n\nThe grown-up Kaguya develops a self-indulgent personality. At Kaguya's fervent request, Iroha helps her start streaming in Tsukuyomi. With Iroha as producer and songwriter and Kaguya as streamer and singer, the two grow steadily closer. Little do they know that ominous forces lie in wait, eager to take Kaguya back to the moon.\n\nThis is the tale of Princess Kaguya as never seen before.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "390253"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ex-Otogibanashi",
+      "artist": "Saori Hayami",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ray Chō Kaguya-hime! Version (ray 超かぐや姫！Version)",
+      "artist": "Yūko Natsuyoshi and Saori Hayami",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Melt CPK! Remix (メルト CPK! Remix)",
+      "artist": "supercell feat. Yūko Natsuyoshi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

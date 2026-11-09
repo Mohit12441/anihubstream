@@ -1,0 +1,438 @@
+{
+  "id": "attack-on-titan-season-3",
+  "title": "Attack on Titan Season 3",
+  "native": "進撃の巨人 Season３",
+  "year": 2018,
+  "rating": 8.6,
+  "season": "Summer 2018",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx99147-AiPDD8cwlCfi.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99147-AiPDD8cwlCfi.jpg",
+  "accent": "#4386e4",
+  "synopsis": "Eren and his companions in the 104th are assigned to the newly-formed Levi Squad, whose assignment is to keep Eren and Historia safe given Eren's newly-discovered power and Historia's knowledge and pedigree. Levi and Erwin have good reason to be concerned, because the priest of the Church that Hanji had hidden away was found tortured to death, making it clear that the Military Police are involved with the cover-up. Things get more harrowing when the MPs make a move on Erwin and the Levi Squad narrowly avoids capture. Eren is also having problems with his Titan transformation, and a deadly killer has been hired to secure Eren and Historia, one Levi knows all too well from his youth.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 99147,
+    "mal": 35760,
+    "hianime": "attack-on-titan-season-3-lcz3f7",
+    "kitsu": 13569
+  },
+  "skip_key_id": 35760,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-18 00:39:23",
+  "search_text": "attack on titan season 3 進撃の巨人 season3 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Smoke Signal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250205/original.jpg",
+      "synopsis": "After barely surviving Eren's recovery, a rising threat from the shadows puts everyone's lives in danger again.",
+      "airdate": "2018-07-23",
+      "markers": [],
+      "external_id": "250205"
+    },
+    {
+      "n": 2,
+      "title": "Pain",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250206/original.jpg",
+      "synopsis": "The Scouts take a stand against a new enemy, but it's not just Titans they'll be fighting anymore.",
+      "airdate": "2018-07-30",
+      "markers": [],
+      "external_id": "250206"
+    },
+    {
+      "n": 3,
+      "title": "Old Story",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250207/original.jpg",
+      "synopsis": "Historia and Erwin look back on their past, revealing a shady government with a hidden agenda and inspiration for an uprising.",
+      "airdate": "2018-08-06",
+      "markers": [],
+      "external_id": "250207"
+    },
+    {
+      "n": 4,
+      "title": "Trust",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250208/original.jpg",
+      "synopsis": "On the run and running out of time, the Scouts must entrust their lives to others if they plan on surviving.",
+      "airdate": "2018-08-13",
+      "markers": [],
+      "external_id": "250208"
+    },
+    {
+      "n": 5,
+      "title": "Reply",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250209/original.jpg",
+      "synopsis": "Erwin pleads his case for the Scouts to be spared, but an unforeseen announcement puts the fate of humanity at risk.",
+      "airdate": "2018-08-20",
+      "markers": [],
+      "external_id": "250209"
+    },
+    {
+      "n": 6,
+      "title": "Sin",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250210/original.jpg",
+      "synopsis": "While sins of the past reveal new truths, both sides prepare for the upcoming showdown before they run out of time.",
+      "airdate": "2018-08-27",
+      "markers": [],
+      "external_id": "250210"
+    },
+    {
+      "n": 7,
+      "title": "Wish",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250211/original.jpg",
+      "synopsis": "As battle breaks out, Historia makes a shocking decision which leads to catastrophe.",
+      "airdate": "2018-09-03",
+      "markers": [],
+      "external_id": "250211"
+    },
+    {
+      "n": 8,
+      "title": "Outside the Walls of Orvud District",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250212/original.jpg",
+      "synopsis": "When everything falls apart, Eren must believe in himself to save his friends. But Eren alone may not be enough to stop the impending doom.",
+      "airdate": "2018-09-10",
+      "markers": [],
+      "external_id": "250212"
+    },
+    {
+      "n": 9,
+      "title": "Ruler of the Walls",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250213/original.png",
+      "synopsis": "Desperate to stop the approaching monstrosity, the Scouts resort to unconventional tactics before it destroys everything in its path.",
+      "airdate": "2018-09-17",
+      "markers": [],
+      "external_id": "250213"
+    },
+    {
+      "n": 10,
+      "title": "Friends",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250214/original.png",
+      "synopsis": "Kenny recalls the life which has brought him to death's door, but he gets to decide whether to live on or not.",
+      "airdate": "2018-09-24",
+      "markers": [],
+      "external_id": "250214"
+    },
+    {
+      "n": 11,
+      "title": "Bystander",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250215/original.png",
+      "synopsis": "Having seen a glimpse of his father's memories, Eren attempts to track down a man hoping they might shed some light on his father's secrets.",
+      "airdate": "2018-10-01",
+      "markers": [],
+      "external_id": "250215"
+    },
+    {
+      "n": 12,
+      "title": "Night of the Battle to Retake the Wall",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/250216/original.png",
+      "synopsis": "The Scouts gather for a feisty feast before leaving to retake Wall Maria to uncover what's hidden in the basement once and for all.",
+      "airdate": "2018-10-08",
+      "markers": [],
+      "external_id": "250216"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Guren no Yumiya (紅蓮の弓矢; Feuerroter Pfeil und Bogen)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Utsukushiki Zankoku na Sekai (美しき残酷な世界)",
+      "artist": "Yōko Hikasa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Guren no Yumiya (紅蓮の弓矢; Feuerroter Pfeil und Bogen)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Utsukushiki Zankoku na Sekai (美しき残酷な世界)",
+      "artist": "Yōko Hikasa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Saigo no Kyojin (最後の巨人; The Last Titan)",
+      "artist": "Linked Horizon [Online episode version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Itterasshai (いってらっしゃい; See You Later)",
+      "artist": "Ai Higuchi [Online episode version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "UNDER THE TREE",
+      "artist": "SiM [TV special version]",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Rumbling",
+      "artist": "SiM",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Akuma no Ko (悪魔の子)",
+      "artist": "Ai Higuchi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "AOT2013-2019",
+      "artist": "Eliana, Laco",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Boku no Sensou",
+      "artist": "Shinsei Kamattechan",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shougeki",
+      "artist": "Yuko Ando",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shoukei to Shikabane no Michi",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Name of Love",
+      "artist": "cinema staff",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Call your name <Gv>",
+      "artist": "Gemie",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Barricades <MOVIE ver.>",
+      "artist": "yosh",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Red Swan",
+      "artist": "YOSHIKI feat. HYDE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Akatsuki no Chinkonka (Daybreak Requiem)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Guren no Yumiya (紅蓮の弓矢; Feuerroter Pfeil und Bogen)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Utsukushiki Zankoku na Sekai (美しき残酷な世界)",
+      "artist": "Yōko Hikasa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Seishun wa Hanabi no Yō ni (青春は花火のように; Youth is Like Fireworks)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hangeki no Daichi (反撃の大地; Earth's Counterattack)",
+      "artist": "Yuuki Kaji, Kishô Taniyama, and Yui Ishikawa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shinzō o Sasage yo! (心臓を捧げよ!)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yūgure no Tori (夕暮れの鳥; Birds of Twilight)",
+      "artist": "Shinsei Kamattechan",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Jiyuu no Tsubasa (自由の翼)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "great escape",
+      "artist": "cinema staff",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "theDOGS",
+      "artist": "Hiroyuki Sawano",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "theDOGS",
+      "artist": "mpi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "YAMANAIAME (Rain That Doesn't Stop)",
+      "artist": "Hiroyuki Sawano",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Guren no Zahyou (紅蓮の座標)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Guren no Yumiya (紅蓮の弓矢)",
+      "artist": "Linked Horizon",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Utsukushiki Zankoku na Sekai (美しき残酷な世界)",
+      "artist": "Yōko Hikasa",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "To You in 2,000... or... 20,000 Years From Now (二千年… 若しくは… 二万年後の君へ・・・)",
+      "artist": "Linked Horizon [TV special version]",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Utsukushiki Zankoku na Sekai (美しき残酷な世界)",
+      "artist": "Yōko Hikasa",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "YAMANAIAME",
+      "artist": "Mica Caldito, mpi & Mika Kobayashi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Jiyuu no Tsubasa (自由の翼)",
+      "artist": "Linked Horizon",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "great escape",
+      "artist": "cinema staff",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

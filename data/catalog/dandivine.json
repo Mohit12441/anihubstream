@@ -1,0 +1,74 @@
+{
+  "id": "dandivine",
+  "title": "Dandivine",
+  "native": "獣王武神ダンデヴァイン",
+  "year": 2026,
+  "rating": 5.1,
+  "season": "Fall 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx213068-aFSedkY5bQ4m.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx213068-aFSedkY5bQ4m.png",
+  "accent": "#5daef1",
+  "synopsis": "The story takes place 20 years after the robot Dandivine defeated the mysterious Aposdoll. The world is now in peace. However, toy manufacturer Kasuga, who relied on its toys of merchandise of Dandivine, has fallen into decline. Thus, Kasuga's president Genjuro Shijima prayed for Dandivine's revival, and the Aposdoll suddenly returned. High school student Gekiha Shijima gets an invitation from his uncle Yusaku Kuroiwa, the former main pilot of Dandivine, to pilot the giant robot himself.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": 3,
+  "sched_day_label": "WED",
+  "sched_date": "Nov 11",
+  "sched_time": "15:30",
+  "sched_season": "Fall 2026",
+  "sched_episode": 6,
+  "sched_sub_at": null,
+  "sched_dub_at": 1787758200000,
+  "source_ids": {
+    "anilist": 213068,
+    "mal": 64344
+  },
+  "skip_key_id": null,
+  "skip_key_space": null,
+  "episode_total": null,
+  "added_at": "2026-10-22 15:10:18",
+  "search_text": "dandivine 獣王武神タ ンテ ウ ァイン tv ongoing",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

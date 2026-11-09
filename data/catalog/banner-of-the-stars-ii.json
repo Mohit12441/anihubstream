@@ -1,0 +1,170 @@
+{
+  "id": "banner-of-the-stars-ii",
+  "title": "Banner of the Stars II",
+  "native": "星界の戦旗 II",
+  "year": 2001,
+  "rating": 7.5,
+  "season": "Summer 2001",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx397-mngW4FJxfPTl.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx397-mngW4FJxfPTl.png",
+  "accent": "#f1ae50",
+  "synopsis": "Due to a lack of ambassadors for the recently-conquered worlds the rapidly advancing fleet of the Bebaus brothers leave behind, Lafiel is appointed Territorial Ambassador of the planet Lobnas II. Upon arriving to the planet Jinto and Lafiel discover that the planet was used by the United Mankind as a prison planet and now has a million prisoners on the only inhabited island. The prisoners are parted in three blocks. The western where women are housed, the eastern belongs to the men and the central is mixed under the restriction that all prisoners living there are sterilized. The women in the western sector want to emigrate from the planet of fear for the men and when they do the men in the east rebel, overthrowing the guards and capturing Jinto to try to stop the emigration of the women. At the same time an enemy fleet heads toward the system forcing Lafiel to abandon Jinto.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "banner-of-the-stars-ii-7r99k1",
+    "mal": 397,
+    "anilist": 397,
+    "kitsu": 364
+  },
+  "skip_key_id": 397,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": null,
+  "search_text": "banner of the stars ii 星界の戦旗 ii tv finished",
+  "genres": [
+    "action",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Operation Hunter",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Lafiel and Jinto are given their roles as Territorial Ambassador and Territorial Deputy Ambassador and aren't exactly happy about it.",
+      "airdate": "2001-07-11",
+      "markers": [],
+      "external_id": "9549"
+    },
+    {
+      "n": 2,
+      "title": "Planet of Exile",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "The Basroil is contacted by all four ambassadors of Lobnas II: Meideen, Dokufu, Lala Shangal, and Angus. Jinto is escorted down to Lobnas II after determining that Meideen should be the Territorial Representative. Lafiel reminisces about the last conversation she had with Jinto before his departure.",
+      "airdate": "2001-07-18",
+      "markers": [],
+      "external_id": "9550"
+    },
+    {
+      "n": 3,
+      "title": "Emigration Plan",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Plans for emigration are made. Some plans include whether or not the Territorial Ambassador should bring in more ships or if the Darksis (the ship transporting the inhabitants) should make more trips back and forth. The women's sector is rallying for emigration rights so they won't be used as 'cattle' so to speak from the male prisoners.",
+      "airdate": "2001-07-25",
+      "markers": [],
+      "external_id": "9551"
+    },
+    {
+      "n": 4,
+      "title": "The Hunters",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "All the ships in the surrounding area around Lobnas II have to retreat because of an enemy sighting while Jinto is having problems reassuring Meideen and the rest of the evacuees that they will return in order to continue emigrating those with permission off the planet.\nWhile enjoying a sunset and thinking of Lafiel, Jinto receives a message that a rebellion has broken out.",
+      "airdate": "2001-08-01",
+      "markers": [],
+      "external_id": "9552"
+    },
+    {
+      "n": 5,
+      "title": "Rebellion",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "As the rebellion continues, started by Angus and Dokufu, Dokufu's section is able to take control of the administration section. Meideen authorizes an immediate evacuation of the Western section (the women's section). Jinto decides to stay on the planet to ensure that all the Western section inhabitants are safely evacuated. While traveling to the Western section, Meideen and Jinto's vehicle is hi-jacked.",
+      "airdate": "2001-08-08",
+      "markers": [],
+      "external_id": "9553"
+    },
+    {
+      "n": 6,
+      "title": "Abh Hell",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Meideen is shot in the head and killed execution style because he refused to cancel the emigration order. Angus is threatened to be put in Abh Hell for his threatening a fellow Abh's life (Jinto). Against Lafiel's heart's wishes, being an Abriel, Lafiel is forced to abandon Jinto on Lobnas II for the time being.",
+      "airdate": "2001-08-15",
+      "markers": [],
+      "external_id": "9554"
+    },
+    {
+      "n": 7,
+      "title": "The Flag of Gasarus",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Angus refuses to release Jinto because of his pride since he never backs down from a challenge. Dokufu is killed because he didn't want to suffer Abh Hell for Angus' stupidity. Lafiel requests help from Spoor in order to carry out the emigration plan. Spoor rejects the offer at first but then agrees. Lafiel heads down to Lobnas II to assist in emigration.",
+      "airdate": "2001-08-29",
+      "markers": [],
+      "external_id": "9555"
+    },
+    {
+      "n": 8,
+      "title": "Things to Protect",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Spoor tries to buy more time before having to go into battle. The last of the women evacuees are boarding the transport ship. Spoor's fleet head into battle with the enemy squadron. Jinto awakens and heads outside seeing a ship preparing an emergency launch. He tries to flag it down but alas he isn't noticed. Angus drowns as a tidal wave crashes into him from the force of the emergency launch.",
+      "airdate": "2001-09-12",
+      "markers": [],
+      "external_id": "9556"
+    },
+    {
+      "n": 9,
+      "title": "To Lay Down the Bow",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Due to Spoor's assistance, the evacuation of Lobnas II was completed. Unfortunately, Spoor's fleet of thirty-three ships, twenty-six were destroyed.\nThe crew of the Basroil reminisce about experiences they shared with Jinto, assuming the worst about him. Fighting to stay in order to see Lafiel again, Jinto thinks back to all the adventures he had with Lafiel from the time when they first met to the theme park chase on Sufugnoff.",
+      "airdate": "2001-09-21",
+      "markers": [],
+      "external_id": "9557"
+    },
+    {
+      "n": 10,
+      "title": "An Abriel's Tears",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Lafiel is still searching for Jinto on Lobnas II. While she is patiently awaiting for Jinto to be found, Samson is preparing a meal for him. Jinto is found in a cave and Lafiel rushes to his side. She uses her endearing pet name for him, \"\"Fool\"\", and he calls her his \"\"Precious little Princess.\"\" Lafiel and Jinto are then shown on a hill by a tree presumably on Jinto's home planet, Martine.",
+      "airdate": "2001-09-26",
+      "markers": [],
+      "external_id": "9558"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tenohira no Yume",
+      "artist": "Emiko Shiratori",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Farewell to My Love",
+      "artist": "Ayako Kawasumi",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,202 @@
+{
+  "id": "city-the-animation",
+  "title": "CITY THE ANIMATION",
+  "native": "CITY THE ANIMATION",
+  "year": 2025,
+  "rating": 8,
+  "season": "Summer 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx181841-R6fB3bmU5eOE.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx181841-R6fB3bmU5eOE.jpg",
+  "accent": "#0d93e4",
+  "synopsis": "This town, is not just a normal town.\n\nThere's laughter, love and emotional moments.\n\nAn unpredictable ordinary life presented by the residents.\n\nExciting stuffs come one after another. Welcome to CITY. \n\n(Source: Kyoto Animation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "city-the-animation-udshq3",
+    "mal": 59898,
+    "anilist": 181841,
+    "kitsu": 49216
+  },
+  "skip_key_id": 59898,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "city the animation city the animation tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "384674"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "384675"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "384998"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "384999"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "385000"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "385001"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "385002"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "385003"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "385004"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "385005"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "385006"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "385007"
+    },
+    {
+      "n": 13,
+      "title": "Episode 13",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "385008"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hello",
+      "artist": "Riho Furui",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lucky",
+      "artist": "TOMOO",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

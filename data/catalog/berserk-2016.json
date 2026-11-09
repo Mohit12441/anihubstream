@@ -1,0 +1,303 @@
+{
+  "id": "berserk-2016",
+  "title": "Berserk (2016)",
+  "native": "ベルセルク",
+  "year": 2016,
+  "rating": 5.6,
+  "season": "Summer 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21560-6iifjdssfebJ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21560-6iifjdssfebJ.jpg",
+  "accent": "#e4a15d",
+  "synopsis": "Spurred by the flame raging in his heart, the Black Swordsman Guts continues his seemingly endless quest for revenge. Standing in his path are heinous outlaws, delusional evil spirits, and a devout child of god. Even as it chips away at his life, Guts continues to fight his enemies, who wield repulsive and inhumane power, with nary but his body and sword—his strength as a human. What lies at the end of his travels? The answer is shrouded in the \"night.\" Strain your eyes and stare into the dark! \n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Berserk 2 (2017)",
+    "Berserk: The Golden Age Arc III - The Advent (2013)",
+    "Berserk: The Golden Age Arc - Memorial Edition (2022)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11655,
+    "anilist": 21560,
+    "mal": 32379
+  },
+  "skip_key_id": 32379,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 16:05:22",
+  "search_text": "berserk 2016 ヘ ルセルク tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Branded Swordsman",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Into a tavern walks a man with a massive sword, where he encounters a caged elf being bullied by grown men. Thus begins the strange partnership between the elf, Puck, and the swordsman, Guts.",
+      "airdate": "2016-07-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 33,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1346,
+          "end": 1436
+        }
+      ],
+      "external_id": "184535"
+    },
+    {
+      "n": 2,
+      "title": "The Holy Iron Chain Knights",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Guts is still coming to terms with his fateful encounter with the monk and his daughter when he is confronted by the Holy Iron Chain Knights. Their commander berates him about his many sins is declares he is to be brought to the Holy See...",
+      "airdate": "2016-07-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 82,
+          "end": 167
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1343,
+          "end": 1440
+        }
+      ],
+      "external_id": "184536"
+    },
+    {
+      "n": 3,
+      "title": "Night of Miracles",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Guts and Puck are taken aback by Farnese's inability to see the elf. However, Farnese's refusal to accept anything beyond what she considers to be real in her world is about to be sorely tested.",
+      "airdate": "2016-07-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 26,
+          "end": 113
+        }
+      ],
+      "external_id": "184537"
+    },
+    {
+      "n": 4,
+      "title": "Epiphany",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Guts returns to a place he'd left two years ago to reconnect with old friends, but finds that someone he holds most dear has vanished. Guts tries to lay blame, but he is not entirely innocent.",
+      "airdate": "2016-07-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 175
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1436
+        }
+      ],
+      "external_id": "184538"
+    },
+    {
+      "n": 5,
+      "title": "Tower of Conviction",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Intent on finding Casca, Guts continues his journey toward the Tower of Conviction. Meanwhile, Farnese is already there, witnessing unspeakable horrors committed by those who serve the Holy See.",
+      "airdate": "2016-07-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 161,
+          "end": 249
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1347,
+          "end": 1437
+        }
+      ],
+      "external_id": "184539"
+    },
+    {
+      "n": 6,
+      "title": "A Nighttime Feast: Burning at the Stake",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As Mozgus and his men continue their witchhunt for heretics, Farnese can't help but feel a twinge of doubt. Meanwhile, Guts unexpectedly encounters a familiar face, who brings ill tidings.",
+      "airdate": "2016-08-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 130
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1155,
+          "end": 1244
+        }
+      ],
+      "external_id": "184540"
+    },
+    {
+      "n": 7,
+      "title": "The Black Witch",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Guts is finally close to finding Casca, but Casca has caught the heretics' eye, and the Holy Iron Chain Knights are also homing in on the heretics' location...",
+      "airdate": "2016-08-12",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1440
+        }
+      ],
+      "external_id": "184541"
+    },
+    {
+      "n": 8,
+      "title": "Reunion in the Den of Evil",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As Guts fights his way to Casca, his way is barred by the possessed leader of the heretics. Little does he know that a far more formidable human opponent lies in wait up ahead...",
+      "airdate": "2016-08-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 22,
+          "end": 122
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1356,
+          "end": 1440
+        }
+      ],
+      "external_id": "184542"
+    },
+    {
+      "n": 9,
+      "title": "Blood Flow of the Dead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As Luca leads Guts, Ishidro, and Puck into the tower, Casca is brought to the torture chamber. Just as Mozgus attempts to torture her, however, there is an unexpected turn of events...",
+      "airdate": "2016-08-26",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1350,
+          "end": 1440
+        }
+      ],
+      "external_id": "184543"
+    },
+    {
+      "n": 10,
+      "title": "Hell's Angels",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Mozgus and his disciples have been turned, and Guts must work fast to keep them from taking Casca. Meanwhile, Luca finds herself face to face with a strange entity who begins to tell her a story...",
+      "airdate": "2016-09-02",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1349,
+          "end": 1440
+        }
+      ],
+      "external_id": "184544"
+    },
+    {
+      "n": 11,
+      "title": "Shadows of Ideas",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Guts faces off with Mozgus, who has transformed into a giant monster, while trying to save Caska from being burned at the stake. Guts has trouble defeating Mozgus in his current form, due to his body being so hard that even his sword cannot break through. Meanwhile, the Egg has a fateful encounter...",
+      "airdate": "2016-09-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1348,
+          "end": 1436
+        }
+      ],
+      "external_id": "184545"
+    },
+    {
+      "n": 12,
+      "title": "Those Who Cling, Those Who Struggle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "As people struggle to survive the onslaught of demonic forces, the eclipse reaches its zenith. What will happen when the prophesied God materializes among mortal men?",
+      "airdate": "2016-09-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 29,
+          "end": 107
+        }
+      ],
+      "external_id": "184546"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,959 @@
+{
+  "id": "cardcaptor-sakura",
+  "title": "Cardcaptor Sakura",
+  "native": "カードキャプターさくら",
+  "year": 1998,
+  "rating": 8.1,
+  "season": "Spring 1998",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx232-ERyKCNNPJJeh.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx232-ERyKCNNPJJeh.png",
+  "accent": "#f1d65d",
+  "synopsis": "One day, Kinomoto Sakura, a 4th grader stumbles upon the mysterious book of Clow. Upon opening it and reading the name of The Windy aloud, Sakura scatters the cards to the winds. Sakura is elected and appointed by Keroberos, Guardian of the Cards to capture the remaining cards. With her friend Tomoyo and rival Syaoran, Sakura begins an adventure that will forever change her.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Cardcaptor Sakura the Movie 2: The Sealed Card (2000)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 207,
+    "anilist": 232,
+    "mal": 232,
+    "hianime": "cardcaptor-sakura-0ipfm5"
+  },
+  "skip_key_id": 232,
+  "skip_key_space": "mal",
+  "episode_total": 70,
+  "added_at": "2026-10-14 12:05:19",
+  "search_text": "cardcaptor sakura カート キャフ ターさくら tv finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Sakura and the Strange Magical Book",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5662/original.jpg",
+      "synopsis": "Sakura Kinomoto awakens from a dream of standing near the Tokyo Tower. She introduces herself, her family, and her friends. After coming home from a normal day at school, Sakura hears a sound coming from the basement. She finds a glowing book and opens it to find a deck of 52 cards. When she accidentally activates the Windy card, the other cards blow out of her house. Cerberus appears from the book and formally appoints Sakura as the \"Cardcaptor\" and gives her the Sealing Wand. Sakura captures the Fly Card, but she adamantly insists she does not want the job. All the same, she shows quick thinking, considerable magical power, and sheer joy on her first ride on the tamed Fly",
+      "airdate": "1998-04-07",
+      "markers": [],
+      "external_id": "5662"
+    },
+    {
+      "n": 2,
+      "title": "Sakura's Wonderful Friend",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5663/original.jpg",
+      "synopsis": "Tomoyo meets Cerberus after she discovers Sakura's secret and gets a full explanation of the lost Clow Cards and Sakura's designation as Cardcaptor. Cerberus gets given the nickname \"Kero-chan\" that will stick for the rest of the series. The next day, the students find the school's desks and equipment in large piles. Kero believes it was the work of the card and forces Sakura to go to school at night where she confronts The Shadow. Using the Windy card's binding ability, Sakura is able to capture the Shadow card. Sakura finally accepts her role as a Cardcaptor because of Tomoyo's support.",
+      "airdate": "1998-04-14",
+      "markers": [],
+      "external_id": "5663"
+    },
+    {
+      "n": 3,
+      "title": "Sakura's Breathtaking First Date",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5664/original.jpg",
+      "synopsis": "Sakura's class is on a field trip to the aquarium. During the penguin show, something catches the trainer's leg and a penguin and pulls them into the water, but they are saved by Sakura's brother, Toya, who is working part-time there. At school, Tomoyo gives Sakura and Cerberus mobile phones and on the way home, Sakura bumps into Yukito who invites her on a casual \"date\" which is at a cafe where Yukito knew Toya was working. While they are eating, The Watery breaks the glass of the aquarium causing a flood. For the first time Sakura has to formulate a plan to capture a card, rather than jumping into battle and attacking with Windy. Using her wits and an unintentional clue from Yukito, she lures Watery into a freezer to immobilizes and capture it.",
+      "airdate": "1998-04-21",
+      "markers": [],
+      "external_id": "5664"
+    },
+    {
+      "n": 4,
+      "title": "Sakura's Exhausting Sunday",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5665/original.jpg",
+      "synopsis": "While cleaning the house, Sakura finds two dormant Clow Cards, The Wood and The Rain. But while running an errand for her father, the two cards activate creating a jungle inside the house. Sakura uses The Watery to capture The Rain card and The Wood yields on her own. Sakura gets the hard-earned lesson that a card is not fully subdued until she signs her name on it.",
+      "airdate": "1998-04-28",
+      "markers": [],
+      "external_id": "5665"
+    },
+    {
+      "n": 5,
+      "title": "Sakura, a Panda, and a Darling Little Store",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5666/original.jpg",
+      "synopsis": "On the way to school, Sakura meets Maki Matsumoto who is opening a stuffed doll shop called Twin Bells. Sakura and her friends visit the shop after school to find most of the merchandise unpacked, so they offer to help. Chiharu Mihara, who has a fondness for stuffed animals, buys a stuffed panda, but it disappears shortly after taking it home. Sakura discovers the panda back in Twin Bells and Maki explain the reason for opening the shop and her business has been plagued by mysterious happenings that almost forced her to close down. While Tomoyo distracts Maki in the back, Sakura and Kero search the shop to find The Jump, which escapes with all the stuffed dolls in the shop. At Penguin Park, The Jump grows into a giant by absorbing the stuffed dolls, but it knocks itself out after it trips and falls allowing Sakura to capture it.",
+      "airdate": "1998-05-05",
+      "markers": [],
+      "external_id": "5666"
+    },
+    {
+      "n": 6,
+      "title": "Sakura and Memories of her Mother",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5667/original.jpg",
+      "synopsis": "Naoko tells everyone a scary story about a bright light she chased into the woods. After school, Sakura and her friends visit the woods to see the light Naoko saw. When they do see it, everyone runs in fear, claiming they saw something appearing from the light, but everyone saw something different. Sakura returns at night in case it was a card despite her fear of ghosts. After following it near a cliff, the light takes the form of Sakura's deceased mother, Nadeshiko. Sakura, who is delighted to see her mother, walks towards it and off the cliff, but she is saved by an unknown entity and safely lowered into Yukito arms who is passing by. Sakura returns to the cliff a few days later and once again walks off the cliff. She realizes that it couldn't be her mother and discovers it to be really The Illusion.",
+      "airdate": "1998-05-12",
+      "markers": [],
+      "external_id": "5667"
+    },
+    {
+      "n": 7,
+      "title": "Sakura's First Attempt as a Thief",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5668/original.jpg",
+      "synopsis": "At an art museum trip, Sakura witnesses a boy attempting to change a painting. During the commotion, she couldn't hear anything and Kero is sure that it was caused by a Clow Card, The Silent. Sakura sneaks out of the house at night and into the museum where they meet the boy from earlier also sneaking in. The boy, Yūki Tachibana, explains the painting is by his deceased father and his mission to restore the painting which a Clow Card has covered up. Every time Sakura attempts to capture the card, it transports the group outside. Using The Shadow, Sakura is able to silently capture Silent from a distance restoring the painting and discovering Yūki is actually a girl. A stranger, dressed in an odd costume, appears at the end of the episode and quietly mutters that he senses a Clow Card.",
+      "airdate": "1998-05-19",
+      "markers": [],
+      "external_id": "5668"
+    },
+    {
+      "n": 8,
+      "title": "Sakura's Rival Appears",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5669/original.jpg",
+      "synopsis": "Sakura has the same recurring dream she had in episode one, specifically focusing on the boy wielding a sword in Chinese clothing. She hears from both Cerberus and Yukito that it might be a \"foretelling dream\". A new transfer student arrives from Hong Kong named Syaoran Li and is seated behind Sakura. He terrifies Sakura with his glares all day and during recess, he demands Sakura to give him the Clow Cards. On the way home, there is a lighting storm, but no rain. Cerberus explains Syaoran is from the Li clan, a famous family of Chinese sorcerers from which Clow's mother came. The same lighting storm for earlier appears and Sakura deploys to battle the Thunder card. Syaoran demonstrates his command over elemental magic and calls on thunder god to return the Thunder card to its original form. He instruct Sakura to use the Shadow card to encage the Thunder card so it could be captured. Thanks to Syaoran's constant derogatory remarks, Sakura is left feeling upset after a card capture for the first time.",
+      "airdate": "1998-05-26",
+      "markers": [],
+      "external_id": "5669"
+    },
+    {
+      "n": 9,
+      "title": "Sakura and the Mysterious Brooch",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5670/original.jpg",
+      "synopsis": "Sakura, usually cheerful, is forlorn by Syaoran's confidence and obviously superior skill. Rika and Tomoyo take Sakura to a shop to try to cheer her up. The three each buy brooches and return to Sakura's house for tea and pudding. When Rika puts on her brooch, The Sword takes control of her and attacks Sakura with a sword. Syaoran saves Sakura who refuses to attack Rika and stops him from attacking her as well. Using Illision to distract Rika, Sakura is given the chance to capture Sword. The next day, Syaoran is dismayed when he sees Sakura offer a gift of chocolate to Yukito, and quickly gives sweets of his own. Tomoyo has to explain to Sakura that Syaoran is \"interested\" in Yukito just like Sakura is.",
+      "airdate": "1998-06-02",
+      "markers": [],
+      "external_id": "5670"
+    },
+    {
+      "n": 10,
+      "title": "Sakura and the Flowering Sports Day",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5671/original.jpg",
+      "synopsis": "It's Sports Day at Sakura's school so family members has come to cheer the students on. Sakura meets Tomoyo's mother, Sonomi Daidōji for the first time. When Sonomi and Sakura's father, Fujitaka, meet, both are shocked. From their conversation, it is revealed that Sonomi is a cousin to Sakura's mother and she blames Fujitaka for her death, though not in any direct way. While Sonomi and Fujitaka race in the parent's race, there is a shower of flower petals. Sakura suspects a Clow Card and finds The Flower on the roof of the school.",
+      "airdate": "1998-06-16",
+      "markers": [],
+      "external_id": "5671"
+    },
+    {
+      "n": 11,
+      "title": "Sakura, Tomoyo, and the Giant House",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5672/original.jpg",
+      "synopsis": "Sakura is invited to Tomoyo's home for the first time. She is shocked to find Tomoyo's house to be an elaborate mansion with maids. Sonomi rushes over when she hears of Sakura's visit and shares the memories of Nadeshiko with Sakura over tea. While Sonomi is taking care of business over the phone, Tomoyo presents a special box and explains the key to the box bounces out whenever she tries to open it and Kero senses it's the work of a Clow Card. Sakura uses the Sword card to slice away the protective barrier of the Shield card and captures it. Inside the box is a dried bouquet of cherry blossoms from Sakura's mother's wedding and the first present Sakura ever gave Tomoyo, an eraser shaped like a bunny.",
+      "airdate": "1998-06-23",
+      "markers": [],
+      "external_id": "5672"
+    },
+    {
+      "n": 12,
+      "title": "Sakura's Never-Ending Day",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5673/original.jpg",
+      "synopsis": "Sakura and Kero encounter some problems with time as Sakura, Kero and Syaroan find that they are the only ones who realize that Time is starting the same day over and over and over again. It's time for Sakura to take action and capture this time-meddling Clow Card!",
+      "airdate": "1998-06-30",
+      "markers": [],
+      "external_id": "5673"
+    },
+    {
+      "n": 13,
+      "title": "Sakura and a Mammoth Test of Strength",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5674/original.jpg",
+      "synopsis": "Sakura's class is visiting the zoo for a field trip and her group is assigned to observe the elephants. Near noon, something begins to break open the cages causing chaos among the visitors and Kero is positive it's a Clow Card. The Power card, although invisible, begins to torment the elephants and Sakura steps in to save them by challenging it to a game of tug-of-war. Sakura is no match for the Power card even with the help of the elephants. Just as Sakura is about to lose, Syaoran uses the Time card to stop time to help her win the battle, thus tricking Power into surrendering.",
+      "airdate": "1998-07-07",
+      "markers": [],
+      "external_id": "5674"
+    },
+    {
+      "n": 14,
+      "title": "Sakura, Toya, and Cinderella",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5675/original.jpg",
+      "synopsis": "Sakura is invited to the high school culture festival. She meets Tomoyo and Syaoran there and catches a play by Yukito and Toya's class. During the play, a mist forms outside the auditorium and enters through the vents where it destroys the stage and puts Toyo and a girl named Yoko in danger. Sakura and Syaoran head towards the lighting room where Sakura summons the Shadow card to capture the Mist card and Syaoran summons the wind to save the falling Toya and Yoko.",
+      "airdate": "1998-07-14",
+      "markers": [],
+      "external_id": "5675"
+    },
+    {
+      "n": 15,
+      "title": "Sakura and Kero's Big Fight",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5676/original.jpg",
+      "synopsis": "Syaoran captures his second Clow Card after defeating the Storm card. Tension develops between Kero and Sakura over the Syaoran issue which builds into a fight the next day after Kero makes a mess after building a room inside Sakura's desk drawer. While Sakura is at school, Kero eats liquor-filled chocolate and wanders out the window drunk. The next day, he finds himself with a young girl named Akane who lives alone with her mother. Unable to escape, Kero secretly contacts the worried Sakura by fax. Akane wishes she could fly to see her father in heaven and the Float card makes her dreams come true. Sakura comes to her rescue and brings Kero back home. As a way of making amends, Sakura redesigns her bottom desk drawer to become Cerberus's bedroom from now on.",
+      "airdate": "1998-07-21",
+      "markers": [],
+      "external_id": "5676"
+    },
+    {
+      "n": 16,
+      "title": "Sakura and a Rainbow of Memories",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5677/original.jpg",
+      "synopsis": "Sakura's family and Yukito takes a vacation to the country side. Sakura meets the old owner of a country mansion near their rented cottage. He invites her over for tea, tennis, and they become good friends. He shows her the room of his granddaughter, now deceased, and gives Sakura clothes that once belonged to her. The next day, Fujitaka gives Sakura cookies to give to the old man. When she brings them out to eat, the old man asks her about her father. On the last day of her vacation, Sakura asks the old man to stand in the balcony of his granddaughter's room. From a distance, Sakura uses the Rain card to give the old man a rainbow as a goodbye gift. Sonomi comes out of hiding to speak with the old man to reveal the old man is the grandfather of both Sonomi and Nadeshiko, and Sakura's great grandfather.",
+      "airdate": "1998-08-04",
+      "markers": [],
+      "external_id": "5677"
+    },
+    {
+      "n": 17,
+      "title": "Sakura's Terrifying Test of Courage",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5678/original.jpg",
+      "synopsis": "Sakura and her class is on a trip to the beach for a few days. On the first night, Naoko tells one of her scary story causing Sakura to flee to the teacher's lodging, but she is found by Syaoran who senses something in a cave nearby. Together at the beach, the two have their first civil conversation where Syaoran tells Sakura about Wei, a person he lives with. A test of courage is held the next night where the students must enter the cave and place a candle next to the shrine inside. But once inside, Sakura's friends begin to disappear. Syaoran, the only one left, forbids Sakura from panicking and walks her through the process of capturing the Erase card even while he's starting to fade away. Syaoran refuses the card after Sakura offers to give it to him.",
+      "airdate": "1998-08-11",
+      "markers": [],
+      "external_id": "5678"
+    },
+    {
+      "n": 18,
+      "title": "Sakura, Yukito, and the Summer Festival",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5679/original.jpg",
+      "synopsis": "Sakura visits a festival with Tomoyo, Yukito, and Toya. After meeting Chiharu and Takashi, Sakura and Yukito wander away from the group where they find glowing lights falling from a tree like snow at the back of the shine — just like a dream Sakura envisioned the night before. Just as Sakura is about tell Yukito something, she is interrupted by their friends. When everyone leaves for snow cones, Sakura captures The Glow.",
+      "airdate": "1998-08-18",
+      "markers": [],
+      "external_id": "5679"
+    },
+    {
+      "n": 19,
+      "title": "Sakura and Her Summer Vacation Homework",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5680/original.jpg",
+      "synopsis": "The summer holidays are coming to an end and Sakura still has a lot of summer vacation homework to do. Making a deal with her brother and Kero to help her, Sakura is left with only a book report and meets with Tomoyo at the library. There, they meet Syaoran who refuses to share a library cubicle with them because his fortune predicted bad luck with women. The book Sakura needs for her book report is missing so Sakura and Tomoyo search the library, but notice the book disappearing and reappearing in different places. The book eventually appears outside the library where they meet Syaoran who is also after the book. Kero reveals it’s the work of the Move card and for the first time, thanks to Move's unpredictable actions, Sakura is forced to rely solely upon her magical senses to catch a card. Sakura is rewarded with the book and a new card, but accidentally plunges into the river, taking Syaoran with her. Syaoran invites the girls over to his place so Sakura can change into dry clothes, but to everybody’s surprise, a Chinese girl enters the apartment and leaps on Syaoran with a hug.",
+      "airdate": "1998-09-01",
+      "markers": [],
+      "external_id": "5680"
+    },
+    {
+      "n": 20,
+      "title": "Transfer Student Versus Sakura",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5681/original.jpg",
+      "synopsis": "When Syaoran enters the room, he's markedly pale and haggard compared to his usual tough-and-healthy look. When Meiling enters the room, it's clear that her presence has exhausted him and he is desperate to escape it. Mr. Terada explains that she is from Hong Kong and cousin to Syaoran. Meiling is quick to add that she is actually his fiancee, and obviously believes Sakura wants to take Syaoran away from her. Syaoran asks Meiling why she came, and she answers that she was lonely for him. He explains that he's not going back until he gets the Clow Cards, but she doesn't particularly care about that. She reminds him that a fortune-teller in Hong Kong predicted someone else would get them, a reminder that clearly grates on his nerves. It's only after he makes it clear he won't return home without the Cards that Meiling decides she will get involved and 'help', so that he can collect them faster. Meiling is just as competitive as Syaoran, and indirectly challenges Sakura to a gymnastics competition. It begins a long trend of Meiling forever trying to one-up Sakura at a number of things, though she rarely succeeds. Sakura, however, isn't interested in competing at all. Meiling meets Sakura and the others at the park, revealing that she knows all about the Clow Cards and intends to participate in the captures. Meiling displays impressive martial artist technique against the Fight Card, demonstrating what skills have been taught to the children of the Li family. Syaoran shows up later, revealing that Meiling went after the Card without his knowledge. We learn Meiling has no magic of her own. Syaoran comes across as extremely protective of Meiling's safety, probably because she is without magic. He also comes across as condescending.",
+      "airdate": "1998-09-08",
+      "markers": [],
+      "external_id": "5681"
+    },
+    {
+      "n": 21,
+      "title": "Sakura's Extra Long Marathon",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5682/original.jpg",
+      "synopsis": "During a school race, Meiling is determined to win with Syaoran, in their usual \"One-Two Finish\" they were known for in their previous school. During the race, both Syaoran and Sakura take off at top speed after seeing that Yukito is watching. As the run, the Loop card causes traps Sakura and Syaoran, causing them to run in circles. After they realize what has happened, Sakura is able to use the Sword card to cut the loop. Syaoran carries Meiling, who hurt her ankle, the rest of the way to the finish line, joined by Sakura.",
+      "airdate": "1998-09-15",
+      "markers": [],
+      "external_id": "5682"
+    },
+    {
+      "n": 22,
+      "title": "Sakura and Her Caring Father",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5683/original.jpg",
+      "synopsis": "Sakura's father has an important presentation to complete so Sakura and her brother decide to help by taking on all the chores around the house. Sakura decides to do more and brings a snack for her father at the university. While she is there, the Sleep card shows up and starts to make all the students and professors fall asleep. Sakura manages to capture the card with the help of Windy, however her father's laptop is ruined in the process. Although her father forgives her, Sakura still feels guilty so her father deicides to make her his personal assistant and they eventually get the presentation finished.",
+      "airdate": "1998-09-22",
+      "markers": [],
+      "external_id": "5683"
+    },
+    {
+      "n": 23,
+      "title": "Sakura, Tomoyo, and a Wonderful Song",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5684/original.jpg",
+      "synopsis": "When a rumor starts that a voice is heard in the elementary school music classroom, everyone assumes that it is a ghost singing (much to Sakura's dismay). That evening, Toya comes home with Yukito for a sleepover, much to Sakura's liking. When they arrive home Sakura asks Yukito for tea, and Toya asks, too. When they sit down and talk about the ghost, much to Sakura's dismay yet again, Toya starts on about some of the students hearing the voice some time at ten o'clock in the night. Sakura gets frightened, but then Yukito adds that he heard that the voice was really wonderful, so Sakura decides that she will check it out in case of a Clow Card and to record it. When they get there Sakura is obviously frightened. Then she gets a surprise from Syaoran and Meilin. Suddenly, they hear a voice coming from the music room. They decide to check it out. When they arrive at the music room. Meilin suddenly leaps up and opens the door to the room making the Clow Card disappear. Although Sakura recognizes the song and remembers that it is the song Tomoyo sang to her and will be doing the song for the chorus. They hear it yet again and follow it to the stairs. During the chase, Syaoran and Kero tell the rest that the Clow Card is the Song card.",
+      "airdate": "1998-09-29",
+      "markers": [],
+      "external_id": "5684"
+    },
+    {
+      "n": 24,
+      "title": "Sakura's Little Adventure",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5685/original.jpg",
+      "synopsis": "When Tomoyo comes over to measure Sakura for a new outfit, Sakura comes in contact with the Little card, which shrinks her and her magic. While Tomoyo and Kero search for her, Sakura winds up in the backyard, being chased by a cat and a praying mantis. When Toya and Yukito come home, Tomoyo hides Kero while Sakura confronts the Little card, but it runs away from her. Eventually, Sakura chases the card into the kitchen, where it almost shrinks Toya, but it bounces away. The card bounces up the stairs, and Sakura gives up because it was not possible to continue. Luckily, she was then found by Kero, who explained the Little card to her. Meanwhile, Tomoyo is in Sakura's room when she hears the Little card. She is about to touch it when Sakura comes riding on Kero and runs into the Little card, thus returning to her normal size. She then seals the Little card. Later, Sakura, Tomoyo, Toya, and Yukito are enjoying Tomoyo's strawberry tart that she brought, when Sakura remembers that she promised Kero a piece. In the end, Sakura manages to get him a tiny slice. He whines and then uses the Little card to make himself tiny and eat the now huge slice of cake.",
+      "airdate": "1998-10-06",
+      "markers": [],
+      "external_id": "5685"
+    },
+    {
+      "n": 25,
+      "title": "Sakura and One More Sakura",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5686/original.jpg",
+      "synopsis": "On her way home Sakura bumps into a woman in the street. After arriving at school the next day, Sakura discovers that her math teacher will be on extended vacation and the replacement is the woman she bumped into the day before, Ms Mizuki. During the lunch break Syaoran reveils to Sakura and Tomoyo that the substitute has a strong magical presence and that they should be careful around her. When school finishes Sakura and Tomoyo go to a shrine to pick up a romance charm. Upon arriving Sakura feels a presence. While at the Shrine they also see Meilin and Syaoran. After a brief conversation they are all transported into a labyrinth, it is soon discovered that this is the work of the Maze card. A number of escape attempts using the Fly and Sword cards are foiled. The Maze then starts to change shape and Meilin is separated from the others. While searching for Meilin, they find her with Ms Mizuki and they soon escape the labyrinth with Ms Mizuki's help. The Clow Card is then captured, however it goes to Ms Mizuki who promptly goes on to give it to Sakura.",
+      "airdate": "1998-10-13",
+      "markers": [],
+      "external_id": "5686"
+    },
+    {
+      "n": 26,
+      "title": "Sakura and the Wonderful Teacher",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5687/original.jpg",
+      "synopsis": "On her way home Sakura bumps into a woman in the street. After arriving at school the next day, Sakura discovers that her math teacher will be on extended vacation and the replacement is the woman she bumped into the day before, Ms Mizuki. During the lunch break Syaoran reveils to Sakura and Tomoyo that the substitute has a strong magical presence and that they should be careful around her. When school finishes Sakura and Tomoyo go to a shrine to pick up a romance charm. Upon arriving Sakura feels a presence. While at the Shrine they also see Meilin and Syaoran. After a brief conversation they are all transported into a labyrinth, it is soon discovered that this is the work of the Maze card. A number of escape attempts using the Fly and Sword cards are foiled. The Maze then starts to change shape and Meilin is separated from the others. While searching for Meilin, they find her with Ms Mizuki and they soon escape the labyrinth with Ms Mizuki's help. The Clow Card is then captured, however it goes to Ms Mizuki who promptly goes on to give it to Sakura.",
+      "airdate": "1998-10-20",
+      "markers": [],
+      "external_id": "5687"
+    },
+    {
+      "n": 27,
+      "title": "Sakura and the Shrine of Memories",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5688/original.jpg",
+      "synopsis": "After waking up early, Sakura goes for a skate and remembers the dream she had the night before about a mysterious figure standing on the Tokyo tower. She soon ends up at the shrine were the Maze card was captured and meets Ms Mizuki. Sakura and Yukito go on to help Ms Mizuki clean the shrine. After school, Sakura and her father are together and it is revealed that Toya know Ms Mizuki when she was an assistant teacher while Toya was in Junior High. Kero is soon alerted to a strong presence coming from the shrine. While at the shrine they meet up with Syaoran who is also looking for the card. Kero soon slopes off to get drinks and Syaoran and Sakura are left to talk. Syaoran once again warns Sakura of how dangerous Ms Mizuki can be and they both admit their love for Yukito. Syaoran is so embarrassed that he runs off in distress and Sakura is swallowed by a dark shadow. It is soon revealed that it is the work of the Return card and that she has gone back in time. While in the past Sakura see a number of scenes involving her brother and Ms Mizuki and you find out that both appear to love each other, but she tells him to not linger in the past and look forward, since she has to go to England but, when she returns, Touya will have a new love in his life and both she and Toya will be best friends. Sakura is soon returned to the present with the help of Syaoran and the Time card and Sakura captures the Return card and it then goes to Syaoran.",
+      "airdate": "1998-10-27",
+      "markers": [],
+      "external_id": "5688"
+    },
+    {
+      "n": 28,
+      "title": "Sakura and the Charm Cards",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5689/original.jpg",
+      "synopsis": "One of Sakura's friends makes a jump and passes a P.E. test. But she and her other friends all think it was because she made a wish on the \"Jump\" card. Sakura becomes worried and asks to see she is relieved to see that it is not the real Jump card, and she still asks where they got them. They tell them at Twin Bells. Both her and Tomoyo go to check it out. They see Maelin there. After seeing that one card is missing they ask who bought it and what it was. when they discover that it is a real Clow card they go looking for whoever bought it. After running into Syaoran, he and Sakura find Meiling. She refuses at first to give the card back, but when she releases the Shot card's power accidentally and Syaoran is hurt, Sakura comes up with a plan to capture it and does so.",
+      "airdate": "1998-11-03",
+      "markers": [],
+      "external_id": "5689"
+    },
+    {
+      "n": 29,
+      "title": "Sakura's Sweet Cooking",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5690/original.jpg",
+      "synopsis": "Sakura practices in the kitchen with her father for an upcoming home-economics class, as Sakura is worried about how she will do. Sakura's classmates decide which cakes they will bake. The following day, everyone begins making their various cakes, but after leaving them to bake over lunch, they come back to find them to be far too sweet. The next day, everyone starts over and make sure they measure the ingredients correctly. Sakura and Syaoran sense a Clow Card, and afterwards everyone except them exits the classroom. They discover it to be the Sweet card, which flies around the room turning everything into sweets and confections. Sakura captures the card after throwing salt on it to temporarily immobilize it, which causes the room to revert back to normal. After everyone comes back, and the cakes have turned out great, except for Meilin's, who made hers too hard.",
+      "airdate": "1998-11-10",
+      "markers": [],
+      "external_id": "5690"
+    },
+    {
+      "n": 30,
+      "title": "Sakura and the Injured Card",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5691/original.jpg",
+      "synopsis": "When an attempt at capturing the Dash card doesn't go so well, Sakura's upperclassman Rei, a girl from the track club, finds it and takes it home. After the Dash enchants Rei to become faster as thanks for her kindness, Sakura has a hard time capturing because she feels bad, but Syaoran doesn't and one day he finds and lures it to the woods. After Kero and Syaoran tell her that it'd be worse if Rei won her races through \"cheating\", Sakura then captures it. But it goes to Syaoran, since he weakened it. During an upcoming tournament, Rei is sad upon the loss of her friend, but Syaoran casts an illusion of the Dash card at the race fields; encouraged, Rei wins without the power of magic.",
+      "airdate": "1998-11-17",
+      "markers": [],
+      "external_id": "5691"
+    },
+    {
+      "n": 31,
+      "title": "Sakura and the Nameless Book",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5692/original.jpg",
+      "synopsis": "Naoko, Sakura's classmate and friend, goes to a bookstore and buys a mysterious book which has no title and the things she writes in it comes to life. Sakura catches the card which appears to be the Create card by using the newly captured Big to enlarge her size and seal the dragon she encountered away.",
+      "airdate": "1998-11-24",
+      "markers": [],
+      "external_id": "5692"
+    },
+    {
+      "n": 32,
+      "title": "Sakura, Kero, and Xiaolang",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5693/original.jpg",
+      "synopsis": "During an attempted card capture, Kero and Syaoran were holding down a card (CHANGE) that took form of an animal. Sakura turned it back into a card, but because they were both touching the card at the same time, Kero and Syaoran swapped bodies. Kero tried to make it though a day as Syaoran without anyone noticing, but didn't do very well. At the end they finally change back when Sakura used the CHANGE card.",
+      "airdate": "1998-12-01",
+      "markers": [],
+      "external_id": "5693"
+    },
+    {
+      "n": 33,
+      "title": "Sakura's Frozen Ice Skating Trip",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5694/original.jpg",
+      "synopsis": "Sakura’s fourth grade class takes a trip to the town’s ice skating rink. At the ice skating rink, the students begin to feel low, freezing temperatures due to the Freeze card. Eventually, the Freeze card beings to freeze everyone by covering them with ice, except those with magical powers, which include Sakura, Syaoran, and Ms. McKenzie, who was hiding near the back of the rink during Freeze’s appearance. With the help of Syaoran’s distractions, Sakura is able to capture the Freeze card into a clow card and ultimately, Syaoran became the master of the Freeze card due to his idea of getting Freeze to appear out of the ice rink.",
+      "airdate": "1998-12-15",
+      "markers": [],
+      "external_id": "5694"
+    },
+    {
+      "n": 34,
+      "title": "Sakura, Yukito, and the Midday Moon",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5695/original.jpg",
+      "synopsis": "Sakura and Yukito participate as a two people team in the quiz tournament. As they get to the 10th question which is the last, Ms. Mizuki warns them about the full moon tonight. They go in the forest and then suddenly Sakura becomes dazed and begins to fall off the cliff. Yukito dashes to Sakura and covers her while his leg becomes injured.",
+      "airdate": "1998-12-22",
+      "markers": [],
+      "external_id": "5695"
+    },
+    {
+      "n": 35,
+      "title": "Sakura's Wonderful Christmas",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/5696/original.jpg",
+      "synopsis": "Christmas is coming, which is also Yukito's birthday, but Sakura is unsure what to get him. She asks Meilin for advise who tells her it can anything because if the person likes her they will like the gift. Sakura asks Yukito to go to the amusement park with her, using tickets given to her by Chiharu. Tomoyo and Kero follow them to film Sakura's \"date\". Sakura and Yukito run into Syaoran and Meilin. While they are at a cafe, the Firey card appears. Syaoran uses the Time card, giving Sakura time to use Sleep and put everyone at the park asleep. She then tries to capture Firey using Windy, but Firey is a strong attack card and Windy is unable to defeat it. Sakura has to use two elemental cards, Watery and Windy, together in order to capture Firey. With Firey captured, Kero regains a small amount of his power, enabling him to make small fires. Sakura gives Yukito his Christmas present: a doll of himself.",
+      "airdate": "1998-12-29",
+      "markers": [],
+      "external_id": "5696"
+    },
+    {
+      "n": 36,
+      "title": "Sakura and the Snowy New School Term",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167536/original.jpg",
+      "synopsis": "A new trimester starts and Sakura is now a fifth grader. She walks to school with Yukito, who gives Sakura a watch as a late birthday and start of fifth grade present. Sakura's new homeroom teacher turns out to be Ms. Mizuki. Sakura looks out the window and thinks she sees cherry blossoms, but realizes it is snow. Later, the snow is piling very quickly, even though it is April. It turns out to be the doings of a Clow Card. Sakura with Tomoyo look down at the snow-covered city to find the card with the Fly card. They stop at the big penguin at Penguin Park where Syaoran and Meilin appear. Syaoran tells the group that it is the doings of the Snow card. Suddenly, a blizzard surrounds them and it appears to be following people with magical powers. Sakura tries to use the Fly card to get herself, Kero, and Syaoran away from the blizzard. Syaoran uses a fire spell to try to stop the blizzard from following them, but it just becomes more furious. In the middle of the flight, Sakura realizes the watch she got from Yukito is gone. Sakura gets angry and releases the power of Firey to burn all the snow and captures the Snow card. Even though Sakura caught a card, she cries because she lost Yukito's present to her. Kero leaves Sakura and Syaoran to get Meilin and Tomoyo. Ms. Mizuki appears and gives Sakura the watch she lost and Sakura thanks her, while Syaoran glares at Ms. Mizuki.",
+      "airdate": "1999-04-06",
+      "markers": [],
+      "external_id": "167536"
+    },
+    {
+      "n": 37,
+      "title": "Sakura and Tomoyo's Lost Voice",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167537/original.jpg",
+      "synopsis": "Sakura and her friends are at a picnic with a portable karaoke device Tomoyo got from her mother's company. It is Tomoyo's turn to sing, and she begins singing. The next day at school, Sakura and Tomoyo talk about the song that Tomoyo will sing in choir. At cheerleading practice, Sakura, Chiharu, and Naoko talk about Tomoyo's singing, and decide to go listen after practice. However, Tomoyo's voice is stolen by a Clow Card. Later that night at Sakura's house, Kero tells Sakura that the Voice card caused this. Sakura and Syaoran go to Tomoyo's house to try to seal away the Clow Card. Then, Syaoran and Sakura begin thinking of ways to capture the Voice card. After a comment by Sakura about the Song card, Syaoran comes up with the idea as using the Song card to sing with Tomoyo's voice to draw out the Voice card. It works and the Voice card comes into Tomoyo's house. Syaoran seals the exits with seals, so that the Voice card cannot escape and Sakura seals the card. Tomoyo's voice is returned to her, and she is able to sing in the choir. Sakura and her friends go to the concert and listen to the choir's singing.",
+      "airdate": "1999-04-13",
+      "markers": [],
+      "external_id": "167537"
+    },
+    {
+      "n": 38,
+      "title": "Sakura's Strawberry Picking Adventure",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167538/original.jpg",
+      "synopsis": "Sakura's grade goes on a field trip to pick strawberries. Sakura and Tomoyo bump into Yukito and Toya who are working part-time at the strawberry field. On the way to the greenhouse, Syaoran senses something from the storehouse, but Meilin pushes him along. The class enters the greenhouse and begins picking strawberries. Sakura hears the door to the storehouse will not open, but when she and Tomoyo go to investigate, they find it open. Syaoran and Meilin come into the storehouse, and Syaoran says that he feels a strange presence. The door suddenly closes and locks them inside. Syaoran informs the group that it it the Lock card that has trapped them. After Rika, Naoko, and Chiharu come to the storehouse, they go look for Ms. Mizuki and tell Toya and Yukito. While looking for a key to unlock the door, Sakura sees Ms. Mizuki through the window, who gives her a hint, but Ms. Mizuki then disappears. Sakura realizes that Ms. Mizuki was trying to tell her to use her key. The Lock card shows its true form when Sakura tries to put her key into the lock. Syaoran seals the exits and Sakura quickly seals the Lock card before it can get into the keyhole. Toya, Yukito, Rika, and Naoko come into the messy storehouse, now that the Lock card has been captured. Sakura and the others clean up the storehouse together. Sakura's group learns how to make and bakes desserts with strawberries. After the desserts are made, Sakura brings a piece to Toya and Yukito.",
+      "airdate": "1999-04-20",
+      "markers": [],
+      "external_id": "167538"
+    },
+    {
+      "n": 39,
+      "title": "Sakura's Dizzy Fever Day",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167539/original.jpg",
+      "synopsis": "Sakura has a fever, but goes to school anyway because of a group project. Later, Sakura gets dizzy and is sent home with Toya by the nurse. Toya stays home to watch over her. When Toya is making food for her, Sakura senses a Clow Card, and it turns out to be the Cloud card. Sakura uses the Mirror card to make a clone of herself, so Toya will not notice that she is gone. Sakura, using the Fly card so she can capture the Cloud card. Toya comes in Sakura's room with food and offers it to Sakura's clone. Sakura travels toward the Cloud card, but when she is blown off her staff, Syaoran saves her with a wind spell. Sakura learns that Syaoran and Meilin are going after the Cloud card as well. Back in Sakura's room, Sakura's clone asks for the medicine and Toya replies that she should not take medicine when she is not sick, because she is not Sakura. Toya asks the Mirror card to hide the fact that he has a vague idea of what Sakura is doing and the Mirror card agrees. Back outside, Syaoran hits the Cloud card with various spells and gets it to its original form and Sakura seals it. The card is Syaoran's, but he gives it to Sakura. Sakura returns to her room and falls asleep in her bed. Nadeshiko appears and heals Sakura. She tells Toya that she was a bit worried and then tells Sakura to do her best, before disappearing. Sakura's father appears saying that he was worried about Sakura because she was acting strange this morning, and Toya tells him his hunch was right and that mother appeared. The next morning, Sakura is as cheerful as ever, and her father is home helping make breakfast. Sakura thanks her mother for staying by her side.",
+      "airdate": "1999-04-27",
+      "markers": [],
+      "external_id": "167539"
+    },
+    {
+      "n": 40,
+      "title": "Sakura and Her Dream Self",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167540/original.jpg",
+      "synopsis": "Sakura, Tomoyo, Meilin and Syaoran head into town for a day of fun. The four are not alone in their venture as the Dream, in the form of a butterfly, tags along. When the group enters Tokyo Tower to see an exhibit there, Sakura falls under the Dream's spell. At first, the vision that the Dream presents to Sakura is comical. Later, the Dream takes a more serious tone by expanding upon Sakura's reoccurring dreams concerning the Clow guardians' Final Judgment. Sakura becomes frightened of the images of this future, however, the Dream flashes clips from Sakura's past to remind Sakura of all the obstacles that she has overcome. Outside of Sakura's dream, Syaoran realizes that something is wrong and uses the Time card to freeze the Dream card. Snapped out of the Dream's spell, Sakura is able to successfully capture the Dream card. However, as it was Syaoran that stopped the card's effects, the Dream card belongs to Syaoran.",
+      "airdate": "1999-05-11",
+      "markers": [],
+      "external_id": "167540"
+    },
+    {
+      "n": 41,
+      "title": "Sakura, Xiaolang, and a Sea of Sand",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167541/original.jpg",
+      "synopsis": "Ms. Mizuki announces that the class will by doing a play for the school arts festival. Sakura realizes that the woman she sees in her reoccurring dream is Ms. Mizuki. Roles are assigned by amida drawing. Sakura has the role of the prince and Syaoran is the princess. The two have lunch with Yukito, who asks about the play. Sakura and Syaoran are too embarrassed to tell him what roles they are playing. They agree to practice their lines together in the morning at school. Toya makes Sakura breakfast and warns her about doing \"reckless\" things. Sakura meets Syaoran in a hallway and the Sand card rushes around behind them. They practice outside and almost get to the kissing scene, when the Sand card forms a vortex around them. They get away using Fly, but Syaoran gets caught in the vortex again. Sakura uses Watery and Syaoran uses Freeze to freeze the Sand. Sakura seals the card and it comes to both of them, but she lets Syaoran have it.",
+      "airdate": "1999-05-18",
+      "markers": [],
+      "external_id": "167541"
+    },
+    {
+      "n": 42,
+      "title": "Sakura and the Arts Festival Blackout",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167542/original.jpg",
+      "synopsis": "Sakura and Syaoran are working hard at memorizing the play. Finally the day of the play comes, and after a few denials about going out on stage from Syaoran, the play is on. The play goes well until right before Sakura and Syaoran kiss, when the Dark card appears. Sakura is almost lost in the Dark card until she realizes that she holds the Light card in her heart. The two card counteract each other and show themselves. Sakura seals both cards and before being sealed, they tell her that the final judgment is coming and that is will be up to Yue.",
+      "airdate": "1999-05-25",
+      "markers": [],
+      "external_id": "167542"
+    },
+    {
+      "n": 43,
+      "title": "Sakura and Meiling's Farewell",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167544/original.jpg",
+      "synopsis": "Meilin gets a call from her mother, who wants her to come home. Meilin tells Sakura the next day that she is going back to Hong Kong next week. Syaoran appears, and asks Meilin if she told the teacher she is going back to Hong Kong yet. Meilin asks Syaoran if he feels she is getting in his way, and Syaoran says that is not it. Meilin runs off, calling Syaoran an idiot. At the end of school, Sakura invites Meilin to her house and they have a chat with tea and sweets. Sakura tries to make Meilin feel that she is not a nuisance to Syaoran. Meilin tells Sakura about how she fell in love with Syaoran. In the middle of their conversation, Sakura senses a Clow Card. Meilin decides not to go, but Sakura drags her along and tells her there are things only she can do. Meanwhile, Syaoran is getting beaten by the Twin card. After a couple of failed attempts, Sakura thinks that Meilin and Syaoran can work together to keep the two bodies of the Twin card immobilized, so she can seal them away; they try it, and it works. Sakura seals the Twin card, and it goes to Syaoran because he and Meilin weakened it. Syaoran tells Meilin that he never thought that she was in his way. Sakura, Tomoyo, and Kero go to the airport with Syaoran to say goodbye to Wei and Meilin. Meilin asks Syaoran if he remembers the promise, which is until Syaoran finds a girl he likes more than her, she will be his bride. Meilin whispers a thank you to Sakura for saving them with her magic, before she leaves.",
+      "airdate": "1999-06-01",
+      "markers": [],
+      "external_id": "167544"
+    },
+    {
+      "n": 44,
+      "title": "Sakura, Kero, and the Mysterious Teacher",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167545/original.jpg",
+      "synopsis": "Sakura once again has the dream in which she is facing the Tokyo Tower. She clearly sees Ms. Mizuki, but this time, Mizuki is accompanied by another figure with long hair and wings. She wakes up early to see Yukito compete in an archery competition. Sakura explains what she knows of her dream to Kero before running down to make breakfast. She meets up with Syaoran and Tomoyo at the archery competition, and Kero tags along too. At the archery tournament, Sakura finds that Ms. Mizuki is one of the challengers and ends up in the finals alongside Yukito. During the fierce match, Kero pokes his head out of Sakura's bag upon sensing tremendous magical power, shooting a piercing glare at Ms. Mizuki. Sensing his gaze, Ms. Mizuki loses her focus and the tournament. Later during lunch, Sakura discovers that Kero is missing from her bag. Searching for him, she is astonished to find him in the middle of a private conversation with Ms. Mizuki. While walking home, they run into Toya once again, this time dressed in a bear costume giving out balloons. After he leaves, there is an earthquake, likely caused by the final Clow Card.",
+      "airdate": "1999-06-08",
+      "markers": [],
+      "external_id": "167545"
+    },
+    {
+      "n": 45,
+      "title": "Sakura and the Final Clow Card",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167546/original.jpg",
+      "synopsis": "The earthquake was caused by the Earthy card. Ms. Mizuki is nearby, but there is nothing going on around her. Sakura uses to Sleep card to put everyone except herself, Kero, Tomoyo, and Syaoran asleep; Ms. Mizuki is not affected by the card, however. Sakura uses the Fly card to see from above; while Syaoran makes sure everyone is safe. Sakura eventually uses the Woody card to seal it away. Now with the final card in her possession, Kero is able to transform into his true form. After a short celebration, Syaoran explains that Kerberos, representing the sun, is one of two guardians of the Clow Cards, the other being Yue the judge, representing the moon. Kero explains that the sole owner of the cards will be determined after Yue appears. Suddenly, Yukito magically floats with a light blue aura, and turns into Yue. Ms. Mizuki explains to Sakura that Yukito is Yue. Yue begins the Final Judgment of Syaoran, who tries to fight Yue with a seal, but Yue tells him that it is useless, and he can only use the Clow Cards he currently has. Syaoran tries to use the Time card, but since it is under Yue's jurisdiction, Yue can use it against him. Syaoran is defeated, and it is time for Sakura's Final Judgment.",
+      "airdate": "1999-06-15",
+      "markers": [],
+      "external_id": "167546"
+    },
+    {
+      "n": 46,
+      "title": "Sakura and the Final Judgment",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/167547/original.jpg",
+      "synopsis": "Sakura initially refuses to fight Yue, but after he repeatedly attacks her she tries to find card that can confine him without hurting him. She uses the Woody card, but it is a card under Yue's sign of the moon, and he turns it against her, and Yue declares she has failed. Sakura learns that if she fails the Final Judgment, everyone who has ever had anything to do with the cards will forget their feelings for the person they love the most. After seeing a vision of such a world, Ms. Mizuki uses the bell to enable her to break free from Woody's hold. She explains that her bell was created by Clow Reed to give Sakura another chance. Ready to try again, Sakura releases her wand and it transforms, the end changing to a Star. She call's Windy, which Yue denounces as being under him as well, but this time he is unable to turn it against her and is captured. Sakura expresses her understanding of his love for Clow, promises to try her best, asking if they can be friends rather than her being his master. Yue declares the trial successful and acknowledges her as his and Kero's new master. Sakura has a vision of Clow Reed who thanks her and explains that her power is of the Stars, rather than the Sun or Moon. Sakura celebrates with Tomoyo and Syaoran, while Kero and Yue chat briefly before they return to their false forms.",
+      "airdate": "1999-06-22",
+      "markers": [],
+      "external_id": "167547"
+    },
+    {
+      "n": 47,
+      "title": "Sakura and the Mysterious Transfer Student",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Sakura’s class receives a new transfer student, Eriol Hiiragizawa, a boy from England, and he starts charming Sakura, making Syaoran jealous. Later on, Sakura receives a vision from Clow Reed that he may bring trouble to her, and that night an unnatural storm hits town. Sakura decides to investigate, and discovers that the storm was created by magic. Sakura tries to end the storm, however trouble arises when Sakura attempts to use her Clow Cards.",
+      "airdate": "1999-09-07",
+      "markers": [],
+      "external_id": "167548"
+    },
+    {
+      "n": 48,
+      "title": "Sakura and the Awakened Star Key",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "The rain still falls on Tomoeda and Syaoran states that possibly someone with more power than either of them is making it rain. Sakura asks Yukito over to talk to Yue and Kero tells Yue that it was his presence. They go to Penguin park once again and soon everyone is caught in a spirals of water. Realizing that her wand doesn't use the power of the dark anymore, Sakura says the new spell and creates her own magic circle and freeing herself from the spirals. She now has to change the Firey card to free the rest. This requires much magical power, causing Sakura to fall asleep. Cards Transformed: The Firey",
+      "airdate": "1999-09-14",
+      "markers": [],
+      "external_id": "167549"
+    },
+    {
+      "n": 49,
+      "title": "Sakura and the Dangerous Piano",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "We see both Kero and Sakura fast asleep, Sakura's dad and toya is also there. Concered that she might have a fever, he feels her forehead. Sakura slightly wakes up and struggles to show her father and her brother that she is fine just tired. Finally they leave her room, but at the door, Toya stars at Kero for few minutes, then leaves. Outside the bedroom both men promise to come home early from school and job to check on Sakura. Kero sits up in bed and moans that Toya is catching on to what is happening. He tries to tell Sakura something but instead she brushes him off and goes back to sleep. He then tucks Sakura in and notices that the Sakura book(i think) is glowing. At Sakura's school econimcs class has started and everyone is busliy stirring and baking. A couple of Sakura's freinds are worried that Sakura didn't show up today. Tomoyo asks Li if he would like to accompany her to Sakura's house to see how she's doing. He blushes, then agrees, over at Eriol's table, Eriol is putting t",
+      "airdate": "1999-09-21",
+      "markers": [],
+      "external_id": "167550"
+    },
+    {
+      "n": 50,
+      "title": "Sakura, Xiaolang, and the Invisible Thread",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Sakura and Kero wake up at the same time, and they have a short conversation. Then she goes off to school, On her way she stops in front of toya''s scholl and watches the soccer teame play. After Toya's team makes a goal, who should come out of nowhere and leap onto Toya's back but Naruku. Toya yells at her to get off him. At school Tomoyo and Sakura are both talking about the newly arrived piano and how glad the music teacher is. They jion they're freinds who are having a little pinic. Rika pulls out a cute teddy bear and everyone exclaimes over it. Li is watching from a nearby branch up in a tree, suddenly Eriol appears and asks him if he has offened Li in anyway. Then He says Li's full name. Somewthing happens to him, his eyes suddenly go blank and he starts to fall off the branch, eriol catches him. A minute Later, Li wakes up, leaps out of Eriols arms then dashes off. After school Skakura is told that rika won't be anle to go with her to the Crafts Store becuase she has something",
+      "airdate": "1999-09-28",
+      "markers": [],
+      "external_id": "167551"
+    },
+    {
+      "n": 51,
+      "title": "Sakura and the Big Teddy Bear",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "The episode begins with Sakura putting the finishing touches on her bear, after that's done she lets out a yell of joy. She sits down again and reaches into her bag, she pulls out a notepad and a pencil and begins to write to Ms. Mizuki. As she thinks about wheather or not something going to happen later on she pulls out some Clow Cards. Suddenly Eriol shows up, startled Sakura hastily puts the clow cards back into her bag and invites Eriol to sit down with her. Eriol notices her bear and askes about it, embaressed she is reluctant to show him but finally she does after asking Eriol to promise not to laugh. Eriol tells her that the ears need to be sa bit more smaller and they need to go up a bit more higher, and says that he'll help her out. On the otherside of the school Chiharu is giving HER home made bear to Yamazaki, after recieving it he gives it a fuuny name, the japanese term for 'rice cake'. and he startes telling her another lie about how rice cakes were made so big it took a",
+      "airdate": "1999-10-05",
+      "markers": [],
+      "external_id": "167552"
+    },
+    {
+      "n": 52,
+      "title": "Sakura's Sheep Warning",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Sakura has been getting sleepy lately from all the magic she uses to transform the Clow Cards into Sakura Cards. The episode opens up with Sakura falling asleep during class while looking at a picture of a sheep in a textbook. Then during reccess Sakura and Syaoran both get new cell phones Tomoyo's mothers company have made. Sakura then tells Li she can call hi8m whenever something strange happens. While all this is going on, Yukito looks weary, so Touya comes up to tell him something important. Unfortunately, Nakuru shows up to interfere. Later in the episode, Yukito comes to Sakura's house to return a book to Touya but he's out of it. Yukito then changes into Yue and Yue chats with Kero about Yue disappearing because he can't get enough magical energy from Sakura. After Yukito goes back home, Syoran calls Sakura to tell there's something odd going on. Sakura calls Tomoyo, and gets a battle costume made by Tomoyo(yay), the theme of which is for a sheep. At the park, the penguin slide",
+      "airdate": "1999-10-12",
+      "markers": [],
+      "external_id": "167553"
+    },
+    {
+      "n": 53,
+      "title": "Sakura and the Panicky Bike",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Sakura begins feeling very tired whilst sweeping outside her house, she trys to wake up by sweeping faster, but it fails to accomplish anything. Eroile stops by the house, whilst coming back from shopping, and tells Sakura she's a really hard worker. He volunteers to help her, Sakura welcomes the help, unaware that Eriole has a secret agenda... Eriole asks if he could move Sakura's brother's bike out of the front yard, Sakura agrees, but Eriole empowers the bike with magic. Before Eriole leaves, Sakura introduces him to her father. As he departs, Eriole tells Sakura \"\"It's going to get tough tonight\"\" Sakura, unsure of what those words mean, goes in for dinner. Later, She later tells Kero of her constant exhaustion, Kero explians that her use of the Sakura Cards has slowly drained her, albiet temporarily. Sakura opened the Sakura book, and the cards inside seem to replenish her a little. Sakura then noticed that the cards looked.. strange.. They were no longer warm to the touch , nor w",
+      "airdate": "1999-10-19",
+      "markers": [],
+      "external_id": "167554"
+    },
+    {
+      "n": 54,
+      "title": "Sakura and the Calendar of Memories",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Sakura finds her father staring at an old calendar. She learns that the calendar once belonged to her mother, Nadeshiko. Her father then tells Sakura that she can have the calendar when she asks for it. Sakura discovers her family's birthdays have been written on it, she takes it with her to school. She shows the calendar to Touya, who flashes back to when he once played the Organ with his mother sitting next to him, listening happily as Toya played a song that she had written. The flooding memories compel Touya to play the same music he once performed for his mother on a nearby piano. When Touya stops playing, he finds that Yukito had been listening the whole time! Touya attempts to tell Yukito how he feels about him, but Nakura interrupts them. Sakura finds out her great grandfather's birthday [also etched on the calendar] is today, and tells her father. But Sakura finds out her great grandfather has never forgiven her father for \"\"taking\"\" Nadeshiko away, or for allowing death to take",
+      "airdate": "1999-10-26",
+      "markers": [],
+      "external_id": "167555"
+    },
+    {
+      "n": 55,
+      "title": "Sakura in Wonderland",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "The leaf book mark that Eriol gives to Sakura causes her to be pulled in to Alice in wonderland. While she roams around Wonderland Shaoran tryies to use his sword to break the spell This episode is very funny the following characters and their counterparts in order of apearance\"\": Cheshire cat= Eriol White Rabbit= Yukito/Yue Mad Hatter= Touya Tweedle Dee+Dum= Shaoran Humty-Dumty= Tomoyo Queen of Hearts= Kerochan/Keroberos After a quick chat with the cheshire cat Sakura runs into the white rabbit, who suddenly transforms in to Yue, still the white rabbit. He picks her up, but at a high altitude drops her. She lands at the Hatter's tea party. After drinking the tea he gives her she shrinks. She gets blown away and is saved by Tweedle Dee and Dum. THey quiz her in trying to guess which Shaoran is the real one. Sakura transforms Big, then Small. She lands on a chess board and meets Humty Dumty. She goes over to talk to the Queen of hearts, who she thinks is kerochan. Keroberos/ Qu",
+      "airdate": "1999-11-02",
+      "markers": [],
+      "external_id": "167556"
+    },
+    {
+      "n": 56,
+      "title": "Sakura, Kero, and the Sweet Meeting",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Sakura's school is hosting a bazaar, and Kero attends to eat sweets, hiding in the woods. Nakuru, meanwhile, brings Spinel Sun along and hides him in the same forest while she attends the bazaar. Kero meets Suppie (the pet name Nakuru gave him) but is completely oblivious to his true nature and befriends him, forcing him to eat some of the sweets. As a result, Suppie becomes intoxicated by the sugar and goes on an eating binge throughout the school. Kero, who is unable to explain the predicament to Sakura, asks her to use the Sleep card on all the customers, allowing him to get rid of Suppie.",
+      "airdate": "1999-11-09",
+      "markers": [],
+      "external_id": "167557"
+    },
+    {
+      "n": 57,
+      "title": "Sakura, Xiaolang, and the Elevator",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Sakura, Li, Eriol, and Tomoyo are off to the teddy bear convention, there they see the sights and the bears. they stop to have lunch and Sakura says something which makes Li blush then he takes off. Sakura follows thinking that she's said something wrong. She meets up with him at the elevator and they both go in. Using his magic Eriol makes the door close, and Sakura and Li find themselves stuck in there. After a while Sakura takes out a bear cookie and shares it with Li saying that Yuki made them has a thank you gift for all the times that he's been invited over. We see a flashback of Yuki putting an extermely large bag full of cookies on the table, then Sakura entering her room becuase she put some of the cookies in there and she finds Kero! He's on his back rubbing his large stomach! Ending the falshback, the lights gop out in the elevator, Li using a parchment like a candle lights a small flame. The elevator starts to shake and a part of it starts to dissapear! Sakura falls into th",
+      "airdate": "1999-11-16",
+      "markers": [],
+      "external_id": "167558"
+    },
+    {
+      "n": 58,
+      "title": "Sakura and the Double Trouble",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "The gang investigate the park, but it starts raining. THey all go home. Ruby Moon asks if Eriol's going to do something. At Sakuras house Keroberos starts to transform. Sakura asks Yue to get out of the rain, for he'll catch cold. Yue says he doesn't catch colds. Keroberos says he cant transform. Yue tries but cant either. Sakura goes and opens her window. Keroberos can't fit, till Yue tells him to fold up his wings. They try thinking. Keroberos gets real upset and stats yelling. Touya opens her door to see wats going on. Sakura tells him shes practicing a speech. Sakura offers her bed to Yue. He says hes fine near the window. Keroberos asks why she didn't offer him. The next morning Keroberos trys to transform again but is unsuccessful. Sakura says that there are chores to do, and tells Keroberos he has to help. He gets upset and says its like it was with Clow. Sakura starts to bake things and Keroberos trys to throw a bag of flour at her, but gets it all over himself.",
+      "airdate": "1999-11-30",
+      "markers": [],
+      "external_id": "167559"
+    },
+    {
+      "n": 59,
+      "title": "Sakura, Tomoyo, and the Ball Trap",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Sakura grows in power for every Clow Card she transforms, while Yukito/Yue's energy begins to falter. Syaoran, in the meantime, has fully realized his love for Sakura and consults with Tomoyo, who helps him deal with his jealousy towards Eriol and gives him the confidence (just barely, though) to speak his mind to the oblivious Sakura. Before he can do so, however, both he and Sakura sense Clow Reed's presence once again, this time in the form of a basketball that leads them through the school at night. Space has been warped in the building, causing every door to lead into a different room each time, which separates her from Tomoyo. She begins to lose hope of finding her, but Syaoran gives her the courage to proceed. Sakura then hears Tomoyo's singing voice and uses the transformed Shadow card to track her down. She later thanks Syaoran for all the help he has ever given her; Syaoran tries to confess his love to her, but is interrupted when Kero forces Sakura to pose with him for Tomoyo's camera.",
+      "airdate": "1999-12-14",
+      "markers": [],
+      "external_id": "167560"
+    },
+    {
+      "n": 60,
+      "title": "Sakura and the Precious Friend",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Remembering his promise to Meilin that he would be her \"fiancé\" until he found someone he loved more, Syaoran calls her to tell her that he is in love with Sakura, though he is taken by surprise when Meilin arrives in Tomoeda for the day. While Meilin spends the day with her old friends, the group is attacked by a set of enchanted penguin statues at the playground. Acting upon Meilin's advice, Sakura transforms the Freeze card and uses it to freeze the statues, allowing her and Syaoran to defeat the penguins. During the incident, however, Meilin realizes exactly why Syaoran called her. Seemingly accepting of the matter, Meilin breaks off their \"engagement;\" in reality, however, she is heartbroken and visits Tomoyo upon her suggestion to bawl over it. Feeling better, Meilin encourages Syaoran to confess his love to Sakura as soon as possible, since Sakura would never know about them otherwise, before leaving the next morning, and leaves a cryptic message for Sakura indirectly stating she should pay attention to Syaoran's feelings.",
+      "airdate": "1999-12-21",
+      "markers": [],
+      "external_id": "167561"
+    },
+    {
+      "n": 61,
+      "title": "Sakura, the Cards, and Her Gifts",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Kero is almost positive that Toya knows everything about Sakura's secret, though Sakura dismisses his claims, saying Toya would make fun of her if he did. Toya, meanwhile, is certain that Nakuru is deliberately interrupting him while he tries to tell Yukito the truth about why he is always feeling fatigued. The two make plans to buy a Christmas present for their father, though Sakura senses Clow Reed's presence again. Sakura uses the Mirror card to create her double and cover for her while she fights off a pair of enchanted fence bars with Syaoran, destroying them by using the Mist card to corrode and disintegrate them. However, Toya immediately recognizes the Mirror card, but goes shopping with her anyway. In gratitude to the Mirror card for looking after his little sister, Toya gives her a ribbon for her long hair in her true form. When Sakura returns home, she plays a recording of a hymn she and Eriol played on the piano together earlier to thank all the Clow and Sakura cards for their help. When the Mirror card returns to her card form, however, Sakura notices that she is wearing the ribbon Toya gave her.",
+      "airdate": "1999-12-21",
+      "markers": [],
+      "external_id": "167562"
+    },
+    {
+      "n": 62,
+      "title": "Sakura and the Strange Fortune",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Sakura goes to a New Year's festival and notices that Yukito isn't around. Toya goes to check on him, discovering that he has not only collapsed from fatigue, but he's also beginning to fade from existence since Sakura's power, despite how strong it has become, is not enough to sustain Yue. Later at the festival, she receives a fortune from Eriol which he secretly made and enchanted, saying that she will begin to learn the \"truth\" in her \"first dream of the year.\" That night, Sakura transforms the Dream card in her sleep and has a dream of the sky being blanketed by darkness emanating over Tsukimine Shrine, where she sees the silhouettes of Eriol, Spinel Sun, and Ruby Moon. When Sakura awakens to realize what she's done, she and Kero begin to suspect that they will meet the three silhouetted figures very soon.",
+      "airdate": "2000-01-04",
+      "markers": [],
+      "external_id": "167563"
+    },
+    {
+      "n": 63,
+      "title": "Sakura and the Water Park Wave",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Sakura and her friends go spend the day at a new indoor water park, where Eriol causes the water to rise to dangerous levels. When Rika, who has trouble swimming, nearly drowns, Sakura uses the transformed Watery card to save her, risking being seen using her magic by everyone. However, it appears Eriol would have returned things to normal if Sakura was too late, making his motives unclear.",
+      "airdate": "2000-01-11",
+      "markers": [],
+      "external_id": "167564"
+    },
+    {
+      "n": 64,
+      "title": "Sakura and the Snowy Ski Class",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "There is an avalanche that Sakura must stop. She transforms &amp; uses The Time(Which we all know uses alot of magic), The Fly to get to the spot of the avalanche, and attempts to use The Firey(One of the four element cards, also requires ALOT of magic) and faints. The Time's magic then ends and the avalanche almost falls on Sakura, but Eriol stops it. This marks the one and only time Eriol has to assist Sakura with a problem bestowed upon her by himself. Eriol also mentions how the one thing he does not want to do is cause Sakura pain, but it seems as if he can't not cause her pain.",
+      "airdate": "2000-01-18",
+      "markers": [],
+      "external_id": "167565"
+    },
+    {
+      "n": 65,
+      "title": "Sakura, Yukito, and His Fading Power",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Toya and Yukito are starring in an independent film directed by Nakuru for their school fair, and Nakuru gives Sakura a role. Sakura later begins to notice that Yukito is losing his power and is starting to fade away. Things come to a head when Yukito passes out and falls of a veranda while shooting the film, though he is saved by Toya and, secretly, Sakura. Toya finally manages to tell Yukito the truth about his power, telling off Nakuru when she attempts to interfere. In order to maintain Yue's power and existence, thus allowing Yukito to survive, Toya sacrifices his powers to save him, though losing the ability to sense when Sakura is in danger. As such, Toya has Yue promise to protect Sakura, as well as himself. Having overheard, Sakura realizes that Toya had indeed known about her secret all along. She confronts Kero about why he didn't tell her about Yue/Yukito; Kero explains that he did so to prevent her from blaming herself, since her power alone wasn’t enough to sustain him, and thus act irrationally because of it. Not wanting Yukito to disappear again, Sakura resolves to confess her true feelings to him.",
+      "airdate": "2000-01-15",
+      "markers": [],
+      "external_id": "167566"
+    },
+    {
+      "n": 66,
+      "title": "Sakura and Who She Likes the Most",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "After viewing Nakuru's film, Sakura tours the high school fair with her friends, while Toya comforts Yukito when he appears troubled by the fact that he is not human. Alone with Yukito in one of the attractions, Sakura tells Yukito how much she likes him. However, Yukito gently rebuffs her, saying that her love for him is merely platonic, and that he already has someone he loves; Sakura, in a rare moment of insight, realizes that person to be her brother, Toya. Yukito tells Sakura that the person she loves most is still out there when Sakura senses Clow Reed's presence once more. Using the Maze and Illusion cards, Sakura manages to trap the presence and discovers it to be coming from Eriol, though she loses consciousness. Eriol jumbles her memory of the discovery, acknowledging that she has indeed grown powerful to find him. Sakura tells Syaoran of her experience with Yukito and, despite her understanding and acceptance of the matter, begins to cry. Knowing that now is not the time to tell her that he loves her, Syaoran comforts her and assures her that she will find the person who she loves the most.",
+      "airdate": "2000-02-22",
+      "markers": [],
+      "external_id": "167567"
+    },
+    {
+      "n": 67,
+      "title": "Sakura, Xiaolang, and Tsukimine Shrine",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Sakura heads to school in the morning, but does not see Yukito. She notices that there is a festival and asks Syaoran whether he wants to go to the festival at Tsukimine Shrine. He agrees, much to Sakura's delight. As the lessons continue, Sakura feels sleepy again. Syaoran notices this and is worried. As Tomoyo and Sakura walk home, Sakura admits that she feels much better now and thanks Syaoran and Tomoyo for their help. As Syaoran and Sakura walks to the shrine, Sakura gives Syaoran her handmade scarf, which Syaoran shyly accepts. Toya, Yukito (and Eriol) turn up and the shrine (Sakura invited them);Sakura happily goes with Yukito. Sakura and the rest waits near the lake while Yukito and Toya went to get drinks. As Sakura walks near the lake, she felt Clow's presence and Eriol summons a strange-looking horse. Sakura transforms the Wood card in an attempt to immobilize the horse but fails. The horse cuts the power lines and Syaoran sends a blast of lightning but the damage was not enough. Syaoran then sends a blast of wind to push the horse into the water. Sakura transforms the Thunder card to electrocute the horse and succeeds. As the power lines are cut, there are no lights. Sakura then transforms the Glow card to illuminate the shrine, while Syaoran wonders whether he should confess his love to Sakura.",
+      "airdate": "2000-02-29",
+      "markers": [],
+      "external_id": "167568"
+    },
+    {
+      "n": 68,
+      "title": "Sakura, the Past, and Clow Reed",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Sakura uses the Return card with the help of the cherry blossom tree at the temple. In the past she first sees Keroberos and Yue talking. Kerobers says hes concerned about the cherry blossom tree because its already spring and it hasn't blossomed. Clow Reed sees Sakura then walks over to the 2. He uses the flower card to help the tree. The images fade and Sakura passes out. (Return is a time card and requires alot of energy to use. Sakura wakes up and finds herself leaning against a sleeping Keroberos. Clow Reed said he let her rest so her energy could return. He says he knows she's from the future. She tells him that strange things are happening in the future and they sences his magic. The scene changes and Sakura is runnig down a hall in Clow's house. She runs past a room but doubles back to see. This time she can only watch, for the Return cards power is running out. Yue and Keroberos seem upset. Clow Reed has told them that he is going to die. Both guardians are upset at this.",
+      "airdate": "2000-03-07",
+      "markers": [],
+      "external_id": "167569"
+    },
+    {
+      "n": 69,
+      "title": "Sakura and the Appearance of Clow Reed",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Eroile stands above Sakura, Synoran, Kero and Tomoyo, and reveals the truth at last: He is the reincarnation of Clow Reed himself! He then casts a spell that eclipses both the sun and the moon. This puts those not entuned with magical power to sleep. As Yue and Toya race to the shrine, Toya collapses, with no power to call his own any more, the spell is able to affect him also. Eroile then challenges Sakura to use her abilities to break his spell of Darkness or everyone will sleep forever! With Kero and Yue being kept busy by Spinal Sun and Ruby Moon, Sakura knows she is vulnerable, so she strikes quickly. She uses the shield card to protect Synoran and Tomoyo and uses the jump card to get closer to Elrole, but the sorcerer summons a fire spell to drive her back, Skaura falls backwards, Synoran uses wind magic to catch her, but in doing so, drains himself of all his remaining strength. After further battle, and more card changing, Sakura realises that only the power of light can shatte",
+      "airdate": "2000-03-14",
+      "markers": [],
+      "external_id": "167570"
+    },
+    {
+      "n": 70,
+      "title": "Sakura and Her True Feelings",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "The challenge is over at last. All the cards have been captured, all have been turned. The tests are over, or are they? There may be just one remaining, one that may have to be resolved with the heart. Life has been difficult for Sakura and Li since the day Synoran confessed to sakura that he was in love with her, Li finds it difficult to approach Sakura, whilst Sakura herself is torn, not knowing if she feels the same way for Synoran. The two barly exchange words when they return to school, where they are told by Tereda-Sensi that Eroil is transferring back to England. Sakura, Li, Tomoyo [Armed with her camera as always] and Kero head for Eroil mansion, seeking answers, they are startled when the mansion's front door opens by itself, as do all the other doors from within the building. When the final door opens, the four are shocked to discover that Eroile is holding a party for them!",
+      "airdate": "2000-03-21",
+      "markers": [],
+      "external_id": "167571"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "CLEAR",
+      "artist": "Maaya Sakamoto",
+      "episodes": "1-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Jewelry",
+      "artist": "Saori Hayami",
+      "episodes": "1-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yakusoku no Sora (約束の空; The Promised Sky)",
+      "artist": "Junko Iwao",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ashita e no Melody (Melody for Tomorrow)",
+      "artist": "CHAKA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "遠いこの街で (<i>Tooi kono Machi de</i>; In This Distant City)",
+      "artist": "Naomi Kaitani",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ba Bian Xiao Ying (百變小櫻; Variety Sakura)",
+      "artist": "Zeng Carrie [Cantonese version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cardcaptors Main Title",
+      "artist": "Dave Dore [U.S. version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Dan Lian Wuyu (單戀物語; Love Story)",
+      "artist": "Karena Lam [Taiwanese version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "No Nagging",
+      "artist": "Froggy Mix [Canadian French version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Catch You Catch Me",
+      "artist": "Gumi",
+      "episodes": "1-35"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Pesca la tua carta Sakura",
+      "artist": "Cristina D'Avena",
+      "episodes": "1-35"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Groovy!",
+      "artist": "Koumi Hirose",
+      "episodes": "1-35"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Rocket Beat",
+      "artist": "Kiyono Yasuno",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rewind",
+      "artist": "Minori Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Sakura, la partita non è finita",
+      "artist": "Cristina D'Avena",
+      "episodes": "36-70"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Tobira o Akete",
+      "artist": "ANZA",
+      "episodes": "36-46"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Honey",
+      "artist": "Chihiro",
+      "episodes": "36-46"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Platinum",
+      "artist": "Maaya Sakamoto",
+      "episodes": "47-70"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Fruits Candy",
+      "artist": "Megumi Kojima",
+      "episodes": "47-69"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Platinum",
+      "artist": "Maaya Sakamoto",
+      "episodes": "70"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,205 @@
+{
+  "id": "bleach-thousand-year-blood-war-the-separation",
+  "title": "BLEACH: Thousand-Year Blood War - The Separation",
+  "native": "BLEACH 千年血戦篇-訣別譚-",
+  "year": 2023,
+  "rating": 8.6,
+  "season": "Summer 2023",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx159322-Sp1GflRhE6Po.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159322-Sp1GflRhE6Po.jpg",
+  "accent": "#4386e4",
+  "synopsis": "After a brutal surprise attack by the forces of Quincy King Yhwach, the resident Reapers of the Soul Society lick their wounds and mourn their losses. Many of the surviving Soul Reaper captains train to battle without their Bankai, the ultimate technique wielded by the fiercest warriors.\n\nIn the previous assault, Ichigo Kurosaki narrowly managed to help fend off Yhwach's fearsome wrath. However, to ultimately defeat his godly adversary and save his allies, Ichigo must now undergo severe training that will push him beyond his physical, emotional, and mental limits.\n\nThough Yhwach already holds the upper hand in this ongoing blood feud, he also successfully recruits Uryuu Ishida, Ichigo's close friend and rival, to be his successor. Yhwach strikes out once again at the weakened Soul Society, intent on finally obliterating his long-standing enemies. As Ichigo struggles to attain new power, the Soul Reaper captains fight for survival and borrowed time.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "BLEACH: Thousand-Year Blood War (2022)",
+    "BLEACH: Thousand-Year Blood War - The Conflict (2024)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 46903,
+    "anilist": 159322,
+    "mal": 53998
+  },
+  "skip_key_id": 53998,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 09:43:34",
+  "search_text": "bleach thousand year blood war the separation bleach 千年血戦篇 訣別譚 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "THE LAST 9DAYS",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339617/thumbnail/medium-8b780bedb23cb5bea8e9a799094728ce.jpeg",
+      "synopsis": "Ichigo prepares to leave the Royal Palace to return to the Seireitei but is stopped by Hyosube, who claims Ichigo cannot defeat Yhwach as he is now. (Source: Hulu)",
+      "airdate": "2023-07-08",
+      "markers": [],
+      "external_id": "339617"
+    },
+    {
+      "n": 2,
+      "title": "Peace from Shadows",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339618/thumbnail/medium-bac8ce672406e2e58a5983e46927afd7.jpeg",
+      "synopsis": "Yhwach sets his plan to end the world in nine days in motion by pulling the Seireitei into the Schatten Bereich for the Stern Ritter to invade. (Source: Hulu)",
+      "airdate": "2023-07-15",
+      "markers": [],
+      "external_id": "339618"
+    },
+    {
+      "n": 3,
+      "title": "The Fundamental Virulence",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339619/thumbnail/medium-9bcefebb19576f8109e23527d61fa0e7.jpeg",
+      "synopsis": "Mayuri receives a call from Urahara, who had stayed behind in Hueco Mundo to search for a way to reclaim everyone’s stolen Bankai. Urahara claims that he was able to come up with a solution based on the data gained from his earlier battle with Quilge. (Source: Hulu)",
+      "airdate": "2023-07-22",
+      "markers": [],
+      "external_id": "339619"
+    },
+    {
+      "n": 4,
+      "title": "HEART of WOLF",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339620/thumbnail/medium-46e2d473c65bcf07480d52792b97344a.jpeg",
+      "synopsis": "The tides of battle seemed to have turned after the captains reclaimed their stolen Bankai. However, the Stern Ritters release their Quincy Voll Stern Dich to drive the Soul Reapers deeper into a corner. (Source: Hulu)",
+      "airdate": "2023-07-29",
+      "markers": [],
+      "external_id": "339620"
+    },
+    {
+      "n": 5,
+      "title": "Rages at Ringside",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339621/thumbnail/medium-e874cc58bd457684672dbd29c32a0129.jpeg",
+      "synopsis": "Kensei Muguruma joins the battle against Masculine, who has already defeated Shuhei Hisagi, Ikkaku Madarame, and Yumichika Ayasegawa. However, Kensei is taken aback by how weak his opponent is. (Source: Hulu)",
+      "airdate": "2023-08-05",
+      "markers": [],
+      "external_id": "339621"
+    },
+    {
+      "n": 6,
+      "title": "The White Haze",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339622/thumbnail/medium-723c8b51234526f0610c319c1f41d739.jpeg",
+      "synopsis": "A fearless Rukia swings her Sodenoshirayuki in battle as she takes on Äs Nödt. (Source: Hulu)",
+      "airdate": "2023-08-12",
+      "markers": [],
+      "external_id": "339622"
+    },
+    {
+      "n": 7,
+      "title": "I AM THE EDGE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339623/thumbnail/medium-422006c3fc71a5f4e18b6d33d9a0a6cc.jpeg",
+      "synopsis": "Isane and Yachiru are treating the wounded Kensei and Rojuro when they are attacked by Gwenael, a Quincy who not only possesses the ability to disappear physically but can also erase his existence from the memory of his opponents. (Source: Hulu)",
+      "airdate": "2023-08-19",
+      "markers": [],
+      "external_id": "339623"
+    },
+    {
+      "n": 8,
+      "title": "The Headless Star",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339624/thumbnail/medium-d6b87697d1aaad6e127f5c197997a51d.jpeg",
+      "synopsis": "Kenpachi defeats Gremmy, but his moment of victory is cut short when he is suddenly struck by Candice’s thunderbolt attack. Meninas, Giselle, and Liltotto also join Candice to take down Kenpachi, who is considered to be a Special Threat. (Source: Hulu)",
+      "airdate": "2023-08-26",
+      "markers": [],
+      "external_id": "339624"
+    },
+    {
+      "n": 9,
+      "title": "Marching Out the ZOMBIES",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339625/thumbnail/medium-c57b306e31dcadaf79194af762928916.jpeg",
+      "synopsis": "Ichigo and the Soul Reapers try to stop Yhwach upon learning that his real target lies within the Royal Palace. However, their efforts are thwarted by Uryu, who stands in Ichigo’s way in order to allow Yhwach safe passage to the Royal Palace. (Source: Hulu)",
+      "airdate": "2023-09-09",
+      "markers": [],
+      "external_id": "339625"
+    },
+    {
+      "n": 10,
+      "title": "Marching Out the ZOMBIES 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339626/thumbnail/medium-8e87d05bd1dfdb8a7013d373a4f47fec.jpeg",
+      "synopsis": "Ikkaku, Yumichika, and the Arrancars work together to fight off Giselle’s zombies. But the group is shocked when Giselle reveals her next pawn, who is none other than Captain Hitsugaya of Squad 10. (Source: Hulu)",
+      "airdate": "2023-09-16",
+      "markers": [],
+      "external_id": "339626"
+    },
+    {
+      "n": 11,
+      "title": "Too Early To Win, Too Late To Know",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339627/thumbnail/medium-b4fd3ded7fed7c438057babf832cf93b.jpeg",
+      "synopsis": "Yhwach finally steps through the main entrance of the Royal Palace. Accompanied by Haschwalth and Uryu, the Quincy King is preparing to advance toward the Greater Palace when they are stopped by Senjumaru Shutara of Squad Zero. (Source: Hulu)",
+      "airdate": "2023-09-23",
+      "markers": [],
+      "external_id": "339627"
+    },
+    {
+      "n": 12,
+      "title": "THE MASTER",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339628/thumbnail/medium-1c558f616b674e59441d12517d60700d.jpeg",
+      "synopsis": "Yhwach escapes from the cage surrounding Squad Zero's fake Royal Palace to confront Hyosube, who is protecting the real Royal Palace. (Source: Hulu)",
+      "airdate": "2023-09-30",
+      "markers": [],
+      "external_id": "339628"
+    },
+    {
+      "n": 13,
+      "title": "BLACK",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/339629/thumbnail/medium-2fbd65f52b51ccc365219b7544a9ee00.jpeg",
+      "synopsis": "Yhwach performs Auswählen to bestow power to his fallen Royal Guards and activate their Voll Stern Dich forms. What follows is a fierce battle between the Royal Guards and Squad Zero. (Source: Hulu)",
+      "airdate": "2023-09-30",
+      "markers": [],
+      "external_id": "339629"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "STARS",
+      "artist": "w.o.d.",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Endroll",
+      "artist": "Yoh Kamiyama",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

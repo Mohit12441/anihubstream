@@ -1,0 +1,171 @@
+{
+  "id": "arknights-rise-from-ember",
+  "title": "Arknights: RISE FROM EMBER",
+  "native": "アークナイツ 焔燼曙明",
+  "year": 2025,
+  "rating": 7.7,
+  "season": "Summer 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx177175-cr5tlJIj7dEi.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx177175-cr5tlJIj7dEi.jpg",
+  "accent": "#febb50",
+  "synopsis": "\"She\" was supposed to be a beacon of hope. But now her anger and hatred have turned into flames of war and are about to engulf the people.\n\nOnly Rhodes Island, a neutral organization, can stop Reunion's rampage and the conspiracy behind it. Amiya and the others head towards Chernobog's Core City, which is on a collision course with Lungmen. What fate awaits them there...\n\n(Source: Official Site, translated, edited)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "arknights:-rise-from-ember-er23r0",
+    "mal": 58749,
+    "anilist": 177175,
+    "kitsu": 48796
+  },
+  "skip_key_id": 58749,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": null,
+  "search_text": "arknights rise from ember アークナイツ 焔燼曙明 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Confession",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/57dbf29154d0e68abc7e43b5600fb6d51751630549_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "376949"
+    },
+    {
+      "n": 2,
+      "title": "Consumables",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/208b34fbe19d1e41f4bf048f69d786b21752214844_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "376950"
+    },
+    {
+      "n": 3,
+      "title": "Mission",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/9cb4faa8c8ad548f8c9654f14ab80b821752846727_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "384841"
+    },
+    {
+      "n": 4,
+      "title": "Patriot",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/1750d3572847c434ea137fc9924a0e141753425719_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "384842"
+    },
+    {
+      "n": 5,
+      "title": "Vengeance",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/f07f60e9518fe7342af651f25822b5a01754054213_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "384843"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "384844"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "384845"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "384846"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "384847"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "384848"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "End of Days",
+      "artist": "ReoNa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Truth",
+      "artist": "Hana Itoki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

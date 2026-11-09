@@ -1,0 +1,256 @@
+{
+  "id": "bungo-stray-dogs",
+  "title": "Bungo Stray Dogs",
+  "native": "文豪ストレイドッグス",
+  "year": 2016,
+  "rating": 7.7,
+  "season": "Spring 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21311-hAXyT8Yoh6G9.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21311-hAXyT8Yoh6G9.jpg",
+  "accent": "#e4bb50",
+  "synopsis": "Stalked by a beastly white tiger, Atsushi Nakajima has no idea that the menace lives inside him—a power that catches the attention of the Armed Detective Agency. Using inhuman abilities to combat crime, this team takes Atsushi under the wing of their most eccentric member, Dazai. Together, they tear through mafia-muddled mysteries while enemies keep an eye on the tiger’s lofty bounty.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "bungo-stray-dogs-qw3p5y",
+    "mal": 31478,
+    "anilist": 21311,
+    "kitsu": 11339
+  },
+  "skip_key_id": 31478,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "bungo stray dogs 文豪ストレイト ック ス tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Fortune Is Unpredictable and Mutable",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Driven out from his orphanage, Nakajima Atsushi wanders the streets of Yokohama on the bring of starvation. Determined to live, a chance encounter with a drowning stranger changes his fate...",
+      "airdate": "2016-04-07",
+      "markers": [],
+      "external_id": "182795"
+    },
+    {
+      "n": 2,
+      "title": "A Certain Bomb",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Despite joining the Armed Detective Agency, Nakajima lacks convection that he'd be of any use. Just as he's about to bid the agency farewell, a bomber takes over the agency with one of the agency employees as his hostage...!",
+      "airdate": "2016-04-14",
+      "markers": [],
+      "external_id": "182796"
+    },
+    {
+      "n": 3,
+      "title": "Yokohama Gangster Paradise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Now an official member of the Agency after passing their entrance exam, Atsushi is assigned to his first case right away with Tanizaki and Naomi. Though deceptively simple on the surface, there's more than meets the eye...",
+      "airdate": "2016-04-21",
+      "markers": [],
+      "external_id": "182797"
+    },
+    {
+      "n": 4,
+      "title": "The Tragedy of the Fatalist",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Though saved from the Port Mafia by Dazai's intervention, Atsushi feels responsible for bringing trouble to the Agency's door. Rather than risk another attack because of him, Atsushi decides to leave the Agency and makes a call to the Port Mafia...",
+      "airdate": "2016-04-28",
+      "markers": [],
+      "external_id": "182798"
+    },
+    {
+      "n": 5,
+      "title": "Murder on D Street",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "After repelling the Port Mafia's Black Lizards with deceptive ease, Atsushi is tasked with accompanying Rampo to a case. Skeptical of the self-dubbed great detective who seems to lack all common sense, Atsushi is about to witness Rampo's ability first-hand...",
+      "airdate": "2016-05-05",
+      "markers": [],
+      "external_id": "182799"
+    },
+    {
+      "n": 6,
+      "title": "The Azure Messenger",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The Agency investigates a series of disappearances in Yokohama. Kunikida enlists the help of a hacker named Taguchi Rokuzou, but all they find are photos of the victims and mention of a mysterious figure called the Azure Messenger. They follow the trail of clues to an abandoned hospital...",
+      "airdate": "2016-05-12",
+      "markers": [],
+      "external_id": "182800"
+    },
+    {
+      "n": 7,
+      "title": "Love for the Disease Called Ideals",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Following the Azure Messenger's bomb threat, the Armed Detective Agency must race to prevent the deaths of hundreds, which would taint the Agency forever. However, Dazai's seemingly distracted by Sasaki Nobuko, the lone survivor of their raid on the abandoned hospital...",
+      "airdate": "2016-05-19",
+      "markers": [],
+      "external_id": "182801"
+    },
+    {
+      "n": 8,
+      "title": "Teaching Them To Kill; Then To Die",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Dazai goes missing, but the Agency operatives feel it's just business as usual. Meanwhile, Atsushi accompanies Yosano Akiko on a shopping expedition, where they are suddenly plunged into the middle of a terrorist bomb threat by one of the Port Mafia...",
+      "airdate": "2016-05-26",
+      "markers": [],
+      "external_id": "182802"
+    },
+    {
+      "n": 9,
+      "title": "The Beauty Is Quiet Like a Stone Statue",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Kyouka was made into an assassin by those who abused her ability, and Atsushi can't help but feel sympathy toward her. Unable to turn her in to the military police, Atsushi ends up taking her out on a date. Meanwhile, Akutagawa is busy berating his former supervisor--Dazai.",
+      "airdate": "2016-06-02",
+      "markers": [],
+      "external_id": "182803"
+    },
+    {
+      "n": 10,
+      "title": "Rashomon and the Tiger",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Dazai has a face-off with his ex-partner, Chuuya, as Chuuya attempts to uncover Dazai's true intentions for letting himself get captured. Meanwhile, Atsuhi faces Akutagawa's intense and inexplicable hatred for him, as the ship continues on to the meeting place where he will be handed off in exchange for the bounty on his head...",
+      "airdate": "2016-06-09",
+      "markers": [],
+      "external_id": "182804"
+    },
+    {
+      "n": 11,
+      "title": "First, an Unsuitable Profession for Her. Second, an Ecstatic Detective Agency",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "In the aftermath of Atsushi and Dazai's abduction, the Agency must decide what to do with Kyouka, the loose end. Meanwhile, the Port Mafia also deliberates what to do with Akutagawa, now comatose, as his enemies seek vengeance...",
+      "airdate": "2016-06-16",
+      "markers": [],
+      "external_id": "182805"
+    },
+    {
+      "n": 12,
+      "title": "Borne Back Ceaselessly into the Past",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Francis, the leader of The Guild, a North American organization of gifted members, is the one responsible for the bounty on Atsushi's head. Fukuzawa refuses Francis's offer to buy out the Agency, but their agents begin to disappear...",
+      "airdate": "2016-06-23",
+      "markers": [],
+      "external_id": "182806"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "True Story",
+      "artist": "SCREEN mode",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shirushi/°C",
+      "artist": "Luck Life",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Namae wo Yobu yo",
+      "artist": "Yuuto Uemura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Setsuna no Ai",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Lily",
+      "artist": "Luck Life",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Deadly Drive",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bokura",
+      "artist": "Luck Life",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Reason Living",
+      "artist": "SCREEN Mode",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaze ga Fuku Machi (風が吹く街; The Town Where the Wind Blows)",
+      "artist": "Luck Life",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "TRASH CANDY",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Namae wo Yobu yo (名前を呼ぶよ; Call Out The Name)",
+      "artist": "Luck Life",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

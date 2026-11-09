@@ -1,0 +1,64 @@
+{
+  "id": "ao-no-orchestra-season-2",
+  "title": "Blue Orchestra Season 2",
+  "native": "青のオーケストラ Season2",
+  "year": 2025,
+  "rating": 7.4,
+  "season": "Fall 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx170018-1PqdLX68YayA.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx170018-1PqdLX68YayA.jpg",
+  "accent": "#35aef1",
+  "synopsis": "After the seniors' retirement, the Orchestra Club begins preparing for the national competition with a new line-up focusing on the 2nd-years, as they struggle to achieve their ideal sound.\n\n(Source: ANIPLUS Asia)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "ao-no-orchestra-season-2-wumn4k",
+    "mal": 56877,
+    "anilist": 170018,
+    "kitsu": 48070
+  },
+  "skip_key_id": 56877,
+  "skip_key_space": "mal",
+  "episode_total": 21,
+  "added_at": null,
+  "search_text": "blue orchestra season 2 青のオーケストラ season2 tv finished",
+  "genres": [
+    "drama"
+  ],
+  "episodes": [],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Amadeus",
+      "artist": "Galileo Galilei",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Cantabile",
+      "artist": "Novelbright",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yuusari no Canon feat. 'Yuika' (夕さりのカノン feat.『ユイカ』)",
+      "artist": "Soshina",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

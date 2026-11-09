@@ -1,0 +1,58 @@
+{
+  "id": "attack-on-titan-part-ii-wings-of-freedom",
+  "title": "Attack on Titan Part II: Wings of Freedom",
+  "native": "劇場版「進撃の巨人」後編～自由の翼～",
+  "year": 2015,
+  "rating": 7.7,
+  "season": "Spring 2015",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20692-fSDEpfDtDg9u.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20692-fSDEpfDtDg9u.png",
+  "accent": "#e4a15d",
+  "synopsis": "A recompilation of the anime series. The new films will feature new dubbing and a 5.1ch remaster with returning voice cast members. The second film will cover 14 through 25.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Attack on Titan Part I: Crimson Bow and Arrow (2014)",
+    "Attack on Titan: The Roar of Awakening (2018)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8673,
+    "anilist": 20692,
+    "mal": 23777
+  },
+  "skip_key_id": 23777,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-22 12:26:28",
+  "search_text": "attack on titan part ii wings of freedom 劇場版 進撃の巨人 後編 自由の翼 movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Attack on Titan Part II: Wings of Freedom (Movie)",
+      "runtime": "120:00",
+      "runtime_seconds": 7200,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20692-fSDEpfDtDg9u.png",
+      "synopsis": "A recompilation of the anime series. The new films will feature new dubbing and a 5.1ch remaster with returning voice cast members. The second film will cover 14 through 25.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "116582"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

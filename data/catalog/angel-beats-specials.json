@@ -1,0 +1,68 @@
+{
+  "id": "angel-beats-specials",
+  "title": "Angel Beats! Specials",
+  "native": "エンジェルビーツ 特別篇",
+  "year": 2010,
+  "rating": 7.2,
+  "season": "Fall 2010",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9062-x3XnEGxK4eqh.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9062-x3XnEGxK4eqh.jpg",
+  "accent": "#e45dbb",
+  "synopsis": "Special 1 - Angel Beats!: Stairway to Heaven\n\nOperation High Tension Syndrome. Another one of Yuri's plans, this time only so they can meet GOD.\n\nA special, unaired, episode of Angel Beats! which is included in the 7th volume of the BD/DVD.\n\nSpecial 2 - Angel Beats!: Hell's Kitchen\n\nA special, unaired, episode of Angel Beats! which is included in the Blu-ray Box.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 5591,
+    "anilist": 9062,
+    "mal": 9062,
+    "hianime": "angel-beats!-specials-8vtajl"
+  },
+  "skip_key_id": 9062,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": "2026-10-15 18:06:07",
+  "search_text": "angel beats specials エンシ ェルヒ ーツ 特別篇 special finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Stairway to Heaven",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "Set between episodes four and five, Yuri orders the SSS to pretend to enjoy the day hyperactively, as part of \"Operation High Tension Syndrome\". Yuri hopes that Angel would lead them straight to God, and failure of the operation results in a week-long fasting. Everyone disperses with their fake enthusiasm, and a \"tension meter\" rates their excitement levels for every activity and outburst. Eventually when gathered up, they have a sports festival, involving the NPCs too. Meanwhile, Yuri oversees the whole operation, until Angel wanders in to intervene after Shiina's interruption. Angel moves on to \"report\", and the SSS follow her to an underground greenhouse, where they assumed housed God. Instead, they find an ordinary garden, tended by Angel. Vexed, Yuri imposes the fasting and ends up starving the SSS.",
+      "airdate": "2010-12-22",
+      "markers": [],
+      "external_id": "86051"
+    },
+    {
+      "n": 2,
+      "title": "Hell's Kitchen",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "",
+      "synopsis": "Set between episodes two and three, during Golden Week, Yuri arranges for the SSS to go on a deadly picnic, which involves most of the members trying to kill each other with various traps and gadgets. As the boys largely fall victim to various traps, leaving just Otonashi alive, Girls Dead Monster members Miyuki and Shiori attempt to lead Iwasawa into various pitfalls, only for her to survive each one while remaining completely oblivious. They attempt to use their last trap, a dreadful concoction, but it instead lands on Hisako, who transforms into a blood-thirsty monster that not even Angel can stop.",
+      "airdate": "2015-06-24",
+      "markers": [],
+      "external_id": "173451"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

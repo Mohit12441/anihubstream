@@ -1,0 +1,585 @@
+{
+  "id": "assassination-classroom-second-season",
+  "title": "Assassination Classroom Second Season",
+  "native": "暗殺教室 第２期",
+  "year": 2016,
+  "rating": 8.3,
+  "season": "Winter 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21170-kbcfTTZGSaFt.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21170-kbcfTTZGSaFt.jpg",
+  "accent": "#d6c91a",
+  "synopsis": "The students return as school is back in session for the second semester. Following their exploits on the island during summer vacation, Class 3-E continues to sharpen their blades with their sights set on their teacher, the slippery Koro-sensei. They have more to worry about than just their teacher, however, as enemy assassins, both old and new, are out for the increased bounty on the octopus' head.\n\nMoreover, their rivals in Class A, as well as Kunugigaoka Junior High's fearsome principal, stand to block Class E from achieving academic excellence. With all of these obstacles opposing them, the group must continue to work together in order to overcome their foes and accomplish their goal of successfully assassinating their teacher.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Assassination Classroom (2015)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 10877,
+    "anilist": 21170,
+    "mal": 30654,
+    "hianime": "assassination-classroom-second-season-v17xei"
+  },
+  "skip_key_id": 30654,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": "2026-10-14 02:36:47",
+  "search_text": "assassination classroom second season 暗殺教室 第2期 tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Summer Festival Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-01-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 42,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1297,
+          "end": 1380
+        }
+      ],
+      "external_id": "180853"
+    },
+    {
+      "n": 2,
+      "title": "Kaede Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-01-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 72,
+          "end": 157
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1298,
+          "end": 1380
+        }
+      ],
+      "external_id": "180854"
+    },
+    {
+      "n": 3,
+      "title": "Itona Horibe Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-01-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 14,
+          "end": 104
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1292,
+          "end": 1380
+        }
+      ],
+      "external_id": "180855"
+    },
+    {
+      "n": 4,
+      "title": "Spinning Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-01-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 90,
+          "end": 175
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1377
+        }
+      ],
+      "external_id": "180856"
+    },
+    {
+      "n": 5,
+      "title": "Leader Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-02-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 183,
+          "end": 268
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1374
+        }
+      ],
+      "external_id": "180857"
+    },
+    {
+      "n": 6,
+      "title": "Before & After Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-02-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 38,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1373
+        }
+      ],
+      "external_id": "180858"
+    },
+    {
+      "n": 7,
+      "title": "Reaper Time, Part 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-02-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 128
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1374
+        }
+      ],
+      "external_id": "180859"
+    },
+    {
+      "n": 8,
+      "title": "Reaper Time, Part 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-02-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 55,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1311,
+          "end": 1375
+        }
+      ],
+      "external_id": "180860"
+    },
+    {
+      "n": 9,
+      "title": "Round Two Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-03-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 86,
+          "end": 171
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1320,
+          "end": 1374
+        }
+      ],
+      "external_id": "180861"
+    },
+    {
+      "n": 10,
+      "title": "School Festival Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-03-10",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1286,
+          "end": 1362
+        }
+      ],
+      "external_id": "180862"
+    },
+    {
+      "n": 11,
+      "title": "End-of-Term Time: 2nd Period",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-03-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 150,
+          "end": 235
+        }
+      ],
+      "external_id": "180863"
+    },
+    {
+      "n": 12,
+      "title": "Think Outside the Box Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-03-24",
+      "markers": [],
+      "external_id": "180864"
+    },
+    {
+      "n": 13,
+      "title": "Let Live Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-03-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 116,
+          "end": 201
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1263,
+          "end": 1352
+        }
+      ],
+      "external_id": "180865"
+    },
+    {
+      "n": 14,
+      "title": "Secret Identity Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-04-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1284,
+          "end": 1375
+        }
+      ],
+      "external_id": "180866"
+    },
+    {
+      "n": 15,
+      "title": "Confession Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-04-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 41,
+          "end": 126
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1319,
+          "end": 1374
+        }
+      ],
+      "external_id": "180867"
+    },
+    {
+      "n": 16,
+      "title": "Past Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-04-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1310,
+          "end": 1375
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1309,
+          "end": 1376
+        }
+      ],
+      "external_id": "180868"
+    },
+    {
+      "n": 17,
+      "title": "Discord Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-05-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 91,
+          "end": 176
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1285,
+          "end": 1374
+        }
+      ],
+      "external_id": "180869"
+    },
+    {
+      "n": 18,
+      "title": "Outcome Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-05-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 141
+        }
+      ],
+      "external_id": "180870"
+    },
+    {
+      "n": 19,
+      "title": "Outer Space Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-05-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 74,
+          "end": 159
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1125,
+          "end": 1165
+        }
+      ],
+      "external_id": "180871"
+    },
+    {
+      "n": 20,
+      "title": "Valentine's Day Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-05-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 81,
+          "end": 166
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1301,
+          "end": 1373
+        }
+      ],
+      "external_id": "180872"
+    },
+    {
+      "n": 21,
+      "title": "Trust Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-06-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 50,
+          "end": 135
+        }
+      ],
+      "external_id": "180873"
+    },
+    {
+      "n": 22,
+      "title": "Happy Birthday Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-06-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 38,
+          "end": 123
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1286,
+          "end": 1380
+        }
+      ],
+      "external_id": "180874"
+    },
+    {
+      "n": 23,
+      "title": "Final Boss Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-06-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 50,
+          "end": 135
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1299,
+          "end": 1371
+        }
+      ],
+      "external_id": "180875"
+    },
+    {
+      "n": 24,
+      "title": "Graduation Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-06-23",
+      "markers": [],
+      "external_id": "180876"
+    },
+    {
+      "n": 25,
+      "title": "Future Time",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2016-06-30",
+      "markers": [],
+      "external_id": "180877"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

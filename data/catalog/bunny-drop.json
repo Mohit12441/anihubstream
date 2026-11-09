@@ -1,0 +1,179 @@
+{
+  "id": "bunny-drop",
+  "title": "Bunny Drop",
+  "native": "うさぎドロップ",
+  "year": 2011,
+  "rating": 8.1,
+  "season": "Summer 2011",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx10162-w4SG5oQSQwMn.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10162-w4SG5oQSQwMn.jpg",
+  "accent": "#e4c950",
+  "synopsis": "Going home from his grandfather's funeral, thirty-year-old Daikichi is floored to discover that the old man had an illegitimate child with a younger lover. The rest of his family is equally shocked and embarrassed by this surprise development, and not one of them wants anything to do with the silent little girl, Rin Kaga. In a fit of anger, Daikichi decides to take her in himself. As Daikichi nurtures Rin, he started to understand the struggle while at the same time the joy of parenting.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "bunny-drop-sr33xl",
+    "mal": 10162,
+    "anilist": 10162,
+    "kitsu": 6060
+  },
+  "skip_key_id": 10162,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": null,
+  "search_text": "bunny drop うさき ト ロッフ tv finished",
+  "genres": [
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Bellflower Girl",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91538/original.jpg",
+      "synopsis": "After hearing that his grandfather, Souichi Kaga, has died, Daikichi Kawachi and his relatives gather at Souichi's home for the funeral. There, he meets a young girl named Rin, who is allegedly Souichi's illegitimate daughter. Following the funeral, the relatives refuse to take in the girl and opt to put her up for adoption. Daikichi, disgusted with their attitudes, decides to take Rin into his care.",
+      "airdate": "2011-07-08",
+      "markers": [],
+      "external_id": "91538"
+    },
+    {
+      "n": 2,
+      "title": "Pinky Promise",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91539/original.jpg",
+      "synopsis": "Whilst shopping for clothes, Daikichi realises he needs to register Rin for nursery school. With help from his cousin, Haruko Maeda, Daikichi finds a temporary nursery school to look after Rin whilst he goes to work. However, Daikichi ends up having to work overtime, causing him to be late in picking Rin up, though is forgiven. As the week carries on, Daikichi becomes concerned if the new schedule may start affecting his worklife, where he is keeping Rin a secret.",
+      "airdate": "2011-07-15",
+      "markers": [],
+      "external_id": "91539"
+    },
+    {
+      "n": 3,
+      "title": "Daikichi's Decision",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91540/original.jpg",
+      "synopsis": "As Daikichi wonders how to juggle his worklife around taking care of Rin, he takes her to his parents house. As Daikichi looks through Souichi's house for clues on Rin's mother, he finds an out-of-place modem. When he asks Rin about it, she talks about a maid named Masako, who was listed in Rin's health booklet. As Rin wets the bed again last night, Daikichi understands her fear of death and reassures her. The next day, Daikichi requests a transfer at his job to better fit his time around Rin.",
+      "airdate": "2011-07-22",
+      "markers": [],
+      "external_id": "91540"
+    },
+    {
+      "n": 4,
+      "title": "Letter",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91541/original.jpg",
+      "synopsis": "At nursery, Rin makes friends with a boy named Kouki Kitani, with Daikichi later meeting his single mother. Daikichi's workmates hold a farewell party for him, which he brings Rin along to. After enrolling Rin into elementary school, Daikichi looks through her health record and manages to find Souichi's will, containing Masako's contact details. After buying Rin a desk, Daikichi decides to call Masako.",
+      "airdate": "2011-07-29",
+      "markers": [],
+      "external_id": "91541"
+    },
+    {
+      "n": 5,
+      "title": "Daikichi Should Stay Daikichi",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91542/original.jpg",
+      "synopsis": "Daikichi arranges a meeting with Masako, who explains she gave up Rin due to her demanding work as a manga artist. She suggests that Rin should use Daikichi's family name to avoid subjigation by her classmates. Daikichi runs this past Rin, who states that she wants to keep her surname, which he obliges.",
+      "airdate": "2011-08-05",
+      "markers": [],
+      "external_id": "91542"
+    },
+    {
+      "n": 6,
+      "title": "My Tree",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91543/original.jpg",
+      "synopsis": "To commemorate her entrance into elementary school, Daikichi and Rin plant a loquat plant in their garden. Later, Rin wonders if there was a tree planted for her birth, so Daikichi goes to ask Masako about it, who reveals a tree was planted at Souichi's place. He finds the tree, a fragrant olive tree just like the one that was planted for his birth, and brings it back to his place.",
+      "airdate": "2011-08-12",
+      "markers": [],
+      "external_id": "91543"
+    },
+    {
+      "n": 7,
+      "title": "Secretly Leaving Home",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91544/original.jpg",
+      "synopsis": "Daikichi's cousin, Haruko Maeda, appears on his doorstep alongside her daughter, Reina, saying she has run away from home following troubles dealing with her husband's family. As Reina enjoys spending time with Rin, Haruko laments her bottled up feelings to Daikichi. After spending a few nights at Daikichi's place, Haruko's husband comes to pick them up, with Haruko saying she plans to keep at it.",
+      "airdate": "2011-08-19",
+      "markers": [],
+      "external_id": "91544"
+    },
+    {
+      "n": 8,
+      "title": "Grandpa's Precious Thing",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91545/original.jpg",
+      "synopsis": "On a hot summer day, Daikichi and Rin go to visit Souichi's grave. There, Daikichi notices that Masako has been to visit, so he goes to find Masako and tell her that Rin is there, offering a chance to look at her secretly. Afterwards, Daikichi and Rin go to see Souichi's house, now owned by his uncle, where they find the yard has been replaced with gravel. After returning home to celebrate Rin's birthday, they go to a summer festival.",
+      "airdate": "2011-08-26",
+      "markers": [],
+      "external_id": "91545"
+    },
+    {
+      "n": 9,
+      "title": "A Typhoon Came",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91546/original.jpg",
+      "synopsis": "As the town receives a typhoon alert, Daikichi contemplates investing in some insurance whilst Rin keeps control of Kouki during class. As the storm settles in, Yukari and Kouki stay over with Daikichi and Rin for dinner.",
+      "airdate": "2011-09-02",
+      "markers": [],
+      "external_id": "91546"
+    },
+    {
+      "n": 10,
+      "title": "Stomach Flu",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91547/original.jpg",
+      "synopsis": "After Daikichi goes to an exhibition at Rin's school where he meets some other fathers, he discovers that Rin has stomach flu. With Rin refusing to eat or drink and her fever rising, Daikichi becomes worried, but Yukari manages to help him out. After Rin eventually recovers from her fever, Daikichi learns Yukari has come down with a cold.",
+      "airdate": "2011-09-09",
+      "markers": [],
+      "external_id": "91547"
+    },
+    {
+      "n": 11,
+      "title": "The First Step",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/91548/original.jpg",
+      "synopsis": "Daikichi helps look after Kouki whilst Yukari recovers from her cold. Later, Rin practises for a skipping rope contest, with Daikichi joining in so he can lose some weight. After the contest, Daikichi takes Rin to see his parents, where one of Rin's wobbly teeth comes out. Daikichi also talks with his sister, reminding himself about the words of wisdom given to him by Yukari and his adult friends. On the way home, Daikichi reflects on the past year he has spent with Rin.",
+      "airdate": "2011-09-16",
+      "markers": [],
+      "external_id": "91548"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sweet Drops",
+      "artist": "PUFFY",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "High High High",
+      "artist": "kasarinchu",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

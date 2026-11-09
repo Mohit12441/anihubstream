@@ -1,0 +1,88 @@
+{
+  "id": "aoki-denshou-welsh-shedar",
+  "title": "Welsh & Shedar",
+  "native": "蒼き伝承 ウェルシュ&シェーダー",
+  "year": 2026,
+  "rating": 5.6,
+  "season": "Fall 2026",
+  "kind": "TV",
+  "status": "Ongoing",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx216895-Ofx4FSKFa4CQ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx216895-Ofx4FSKFa4CQ.jpg",
+  "accent": "#5d93f1",
+  "synopsis": "The story of Aoki Denshou Welsh & Shedar follows Welsh, a teenage boy from the country who loves to cook, and Shedar, a young prince who is destined to become king one day. When the two young men with very different lives are thrown together by a chance encounter, the wheels of fate begin to turn, and soon they must work together to bring about a peaceful future by stopping a cruel despot from conquering the world.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": 35,
+  "alt_seasons": [],
+  "sched_day": 5,
+  "sched_day_label": "FRI",
+  "sched_date": "Nov 13",
+  "sched_time": "12:26",
+  "sched_season": "Fall 2026",
+  "sched_episode": 7,
+  "sched_sub_at": null,
+  "sched_dub_at": 1793905200000,
+  "source_ids": {
+    "hianime": "aoki-denshou:-welsh-and-shedar-ze9xwa",
+    "mal": 65009,
+    "anilist": 216895,
+    "kitsu": 51064
+  },
+  "skip_key_id": 65009,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "welsh shedar 蒼き伝承 ウェルシュ シェータ ー tv ongoing",
+  "genres": [
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

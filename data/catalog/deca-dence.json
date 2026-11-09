@@ -1,0 +1,192 @@
+{
+  "id": "deca-dence",
+  "title": "DECA-DENCE",
+  "native": "デカダンス",
+  "year": 2020,
+  "rating": 7.1,
+  "season": "Summer 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx110353-XGYSsii7qJeK.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110353-XGYSsii7qJeK.png",
+  "accent": "#50aee4",
+  "synopsis": "Many years have passed since humanity was driven to the brink of extinction by the sudden emergence of the unknown life forms Gadoll. Those humans that survived now dwell in a 3000 meter-high mobile fortress Deca-dence built to protect themselves from the Gadoll threat.\n\nDenizens of Deca-dence fall into two categories: Gears, warriors who fight the Gadoll daily, and Tankers, those without the skills to fight. One day, Natsume, a Tanker girl who dreams of becoming a Gear meets surly Kaburagi, an armor repairman of Deca-dence.\n\nThis chance meeting between the seemingly two opposites, the girl with a positive attitude who never gives up on her dreams and the realist who has given up on his, will eventually shake the future course of this world.\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "deca-dence-7s7g4n",
+    "mal": 40056,
+    "anilist": 110353,
+    "kitsu": 42433
+  },
+  "skip_key_id": 40056,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "deca dence テ カタ ンス tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Ignition",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/f70cf94d7ac3fac0ac2343385659914b1653329347_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279341"
+    },
+    {
+      "n": 2,
+      "title": "Sprocket",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3bd99eec9fcd2985508c70ce340584cf1653329420_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279342"
+    },
+    {
+      "n": 3,
+      "title": "Steering",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/de37024f6d8c7ad6524051231ab9fdda1653329449_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279343"
+    },
+    {
+      "n": 4,
+      "title": "Transmission",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/23cace46c9a6a2a5bcfd8b05a9e5a7731653329601_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279344"
+    },
+    {
+      "n": 5,
+      "title": "Differential Gear",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/e971c0cbc8331dcef016c32fedd126851653329782_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279345"
+    },
+    {
+      "n": 6,
+      "title": "Radiator",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/fe670db0e8ef23957c22af20971cbc751653330133_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279346"
+    },
+    {
+      "n": 7,
+      "title": "Driveshaft",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f53b2a9d20ea97f3b94dfd1bc682cd7e1653330249_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279347"
+    },
+    {
+      "n": 8,
+      "title": "Turbine",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/d75e5fbf789ed8cf3f052bd7c45412d81653330372_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279348"
+    },
+    {
+      "n": 9,
+      "title": "Turbo Charger",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8273be235a1cef0b1dad44b7944c27a61653330528_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279349"
+    },
+    {
+      "n": 10,
+      "title": "Brake System",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/d3cf61bf56f4b4883a6bf197ddd67c391653330488_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279350"
+    },
+    {
+      "n": 11,
+      "title": "Engine",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/8780e1388dd73b00b0a5fa31568179841653330536_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279351"
+    },
+    {
+      "n": 12,
+      "title": "Decadence",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/2cd3060f1c8799cc60073f3727dae6751653330611_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "285030"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Theater of Life",
+      "artist": "Konomi Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kioku no Hakobune",
+      "artist": "Kashitaro Ito",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

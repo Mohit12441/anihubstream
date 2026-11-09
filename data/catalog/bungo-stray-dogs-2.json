@@ -1,0 +1,193 @@
+{
+  "id": "bungo-stray-dogs-2",
+  "title": "Bungo Stray Dogs 2",
+  "native": "文豪ストレイドッグス 第2シーズン",
+  "year": 2016,
+  "rating": 8.1,
+  "season": "Fall 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21679-9MKdz1A7YLV7.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21679-9MKdz1A7YLV7.jpg",
+  "accent": "#f1e4ae",
+  "synopsis": "Despite their differences in position, three men—the youngest senior executive of the Port Mafia, Osamu Dazai, the lowest ranking member, Sakunosuke Oda, and the intelligence agent, Angou Sakaguchi—gather at the Lupin Bar at the end of the day to relax and take delight in the company of friends.\n\nHowever, one night, Angou disappears. A photograph taken at the bar is all that is left of the three together.\n\nFast forward to the present, and Dazai is now a member of the Armed Detective Agency. The Guild, an American gifted organization, has entered the fray and is intent on taking the Agency's work permit. They must now divide their attention between the two groups, the Guild and the Port Mafia, who oppose their very existence.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "bungo-stray-dogs-2-hr61yu",
+    "mal": 32867,
+    "anilist": 21679,
+    "kitsu": 11882
+  },
+  "skip_key_id": 32867,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "bungo stray dogs 2 文豪ストレイト ック ス 第2シース ン tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Dark Age",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "On a misty night, Oda Sakunosuke, Dazai Osamu, and Sakaguchi Ango meet as always at their usual bar. For the trio of Port Mafia members, it a night spent in camaraderie like any other, but Ango vanishes that very night. Oda is given a direct order from the Port Mafia boss to find Ango, but...",
+      "airdate": "2016-10-06",
+      "markers": [],
+      "external_id": "182807"
+    },
+    {
+      "n": 2,
+      "title": "Nowhere to Return",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The Port Mafia's council of five top executives has decreed that Mimic must be annihilated. In the ensuing battle, Odasaku has a fateful encounter with Gide, the leader of Mimic, who makes a cryptic prophecy. Night falls, and the usual bar now awaits Dazai, Odasaku and Ango...",
+      "airdate": "2016-10-07",
+      "markers": [],
+      "external_id": "182808"
+    },
+    {
+      "n": 3,
+      "title": "A Room Where We Can Someday See The Ocean",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The Port Mafia's council of five top executives has decreed that Mimic must be annihilated. In the ensuing battle, Odasaku has a fateful encounter with Gide, the leader of Mimic, who makes a cryptic prophecy. Night falls, and the usual bar now awaits Dazai, Odasaku and Ango...",
+      "airdate": "2016-10-14",
+      "markers": [],
+      "external_id": "182809"
+    },
+    {
+      "n": 4,
+      "title": "Bungo Stray Dogs",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "While the leaders of the Port Mafia and the gifted special operations division meet via Ango, Dazai is close to discovering the true significance of the conflict between the three groups. However, in despair, Odasaku's deaf to Dazai's entreaties not to go alone to Mimic's headquarters where Gide awaits...",
+      "airdate": "2016-10-21",
+      "markers": [],
+      "external_id": "182810"
+    },
+    {
+      "n": 5,
+      "title": "Three Companies Conflict",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Trusting in a life that doesn't require her to kill, Kyouka works her first job at the Armed Detective Agency, but the job ends in a minor disaster. As Atsushi attempts to cheer her up, the unthinkable happens--Kyouka's inactive cell phone rings, and a voice orders Demon Snow to attack Atsushi.",
+      "airdate": "2016-10-28",
+      "markers": [],
+      "external_id": "182811"
+    },
+    {
+      "n": 6,
+      "title": "The Strategy of Conflict",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Mori, the leader of the Port Mafia, sends a letter to Margaret M. and Nathaniel H., threatening to destroy them and the ship they are protecting.",
+      "airdate": "2016-11-04",
+      "markers": [],
+      "external_id": "182812"
+    },
+    {
+      "n": 7,
+      "title": "Will of Tycoon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "John S. and Lovecraft hunt down Naomi and Haruno as they flee from town. While Atsushi and Dazai wait for them to arrive at the train station, Dazai notices a shady figure stalking him.",
+      "airdate": "2016-11-11",
+      "markers": [],
+      "external_id": "182813"
+    },
+    {
+      "n": 8,
+      "title": "Though the Mind May be Wrong",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Atsushi is abducted onto the Moby Dick. Meanwhile, Lovecraft succeeds in capturing Q. Francis F. and the Guild prepare to carry out what they call their \"emergency plan.\"",
+      "airdate": "2016-11-18",
+      "markers": [],
+      "external_id": "182814"
+    },
+    {
+      "n": 9,
+      "title": "Double Black",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "The leaders of the Agency and the Port Mafia negotiate an alliance. Meanwhile, Dazai and Chuuya face off against Lovecraft.",
+      "airdate": "2016-11-25",
+      "markers": [],
+      "external_id": "182815"
+    },
+    {
+      "n": 10,
+      "title": "Poe and Rampo",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Rampo receives an invitation to a detective game from none other than E. A. Poe. He's indifferent at first, until Poe reveals what the reward would be should he win.",
+      "airdate": "2016-12-02",
+      "markers": [],
+      "external_id": "182816"
+    },
+    {
+      "n": 11,
+      "title": "Rashoumon, The Tiger, and The Last Emperor",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Atsushi searches desperately for the control terminal, which he would need to stop the Moby Dick from crashing into Yokohama. He's greeted by Akutagawa and Francis, both of whom have other plans in mind.",
+      "airdate": "2016-12-09",
+      "markers": [],
+      "external_id": "182817"
+    },
+    {
+      "n": 12,
+      "title": "Moshi Kyou Kono Nimotsu wo Oroshite Ii no nara",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "2016-12-16",
+      "markers": [],
+      "external_id": "182818"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Reason Living",
+      "artist": "SCREEN Mode",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaze ga Fuku Machi (風が吹く街; The Town Where the Wind Blows)",
+      "artist": "Luck Life",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

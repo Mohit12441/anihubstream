@@ -1,0 +1,190 @@
+{
+  "id": "d-frag",
+  "title": "D-Frag!",
+  "native": "ディーふらぐ!",
+  "year": 2014,
+  "rating": 7.2,
+  "season": "Winter 2014",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20031-WOR6bly9HOr1.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20031-WOR6bly9HOr1.jpg",
+  "accent": "#24d3ee",
+  "synopsis": "Kazama Kenji likes to believe he is something of a delinquent. Moreover, others seem to like to agree that he is. Of course, Kenji's gang finds their way to a group of four not-so-normal girls—Chitose, Sakura, Minami and Roka—and all at once, whatever reputation he may have is nothing compared to the outrageous behavior of the girls. Shanghaied into joining their club, what will happen to his everyday life from that point on?",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 8001,
+    "anilist": 20031,
+    "mal": 20031,
+    "hianime": "d-frag!-p77erl"
+  },
+  "skip_key_id": 20031,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 14:06:40",
+  "search_text": "d frag テ ィーふらく tv finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Kazama's Party",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113621/original.jpg",
+      "synopsis": "Kenji Kazama arrives at school looking to leave an impression, but ends up forced into joining the Game Creation Club. Later, the Student Council Vice-President and fourth member of the Kazama Party, Ataru, reveals some backstory about the Student Council President Chitose.",
+      "airdate": "2014-01-07",
+      "markers": [],
+      "external_id": "113621"
+    },
+    {
+      "n": 2,
+      "title": "Curse You, Fake Game Creation Club!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113622/original.jpg",
+      "synopsis": "When Kenji skips school one day, he finds himself confronted by members of the \"real\" Game Creation Club, claiming the one he joined was a fake club. When he confronts his own club members about it, he discovers that the leaders of both Game Creation Clubs were actually friends in one club, but Roka didn't like how the other members talked about her, so with Chitose's help she started her own club.",
+      "airdate": "2014-01-14",
+      "markers": [],
+      "external_id": "113622"
+    },
+    {
+      "n": 3,
+      "title": "Fujou Academy Freedom Festival, AKA FuF Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113623/original.jpg",
+      "synopsis": "As the day of the school festival draws near, the presidents of both Game Creation Clubs prepare to make their own games to show the students at the festival. Takao and Roka agree that the loser's club will be absorbed by the winner, while Chitose threatens to do \"that\" (an undefined action) to Takao if her club wins. Later that day, Kenji discovers that Takao's club did a decent job of making their own video game, while Takao finds that the \"fake\" club made a mini-carnival with various analog games, as the rules never specified the type of game they had to make.",
+      "airdate": "2014-01-21",
+      "markers": [],
+      "external_id": "113623"
+    },
+    {
+      "n": 4,
+      "title": "They're the Band of 14 Devils!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113624/original.jpg",
+      "synopsis": "After some debate, Minami reveals that the club's official name is \"Game Creation Club (Provisional).\" While trying to avoid having to play the \"Quest for Porn Mags in Space\" board game that Roka created, the Kazama Party gets ambushed by the \"Band of 14 Devils\" (minus two for personal reasons). Despite his best efforts, Kazama and his friends are captured, though Ataru escapes to warn the Game Creation Club (Provisional) about what happened.",
+      "airdate": "2014-01-28",
+      "markers": [],
+      "external_id": "113624"
+    },
+    {
+      "n": 5,
+      "title": "What?! Your Little Sister Makes Your Lunches?!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113625/original.jpg",
+      "synopsis": "Kenji tries to get out of playing the newest edition of \"Quest for Porn Mags in Space\" again, promising Takao anything if she'll switch places with him. Unfortunately, Roka reveals that this edition can be played by five people. Later, Kenji reveals some backstory about his relationship with legendary Japanese classic literature teacher Shawn Konekone.",
+      "airdate": "2014-02-04",
+      "markers": [],
+      "external_id": "113625"
+    },
+    {
+      "n": 6,
+      "title": "So That Means We're in a Love Triangle!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113626/original.jpg",
+      "synopsis": "Pretty boy and newest Game Creation Club (Provisional) member Shio appears to proclaim his love for Roka, but Roka is only interested in Kenji, and Kenji wants nothing to do with either of them. Later, after Funabori reveals she washed and cleaned one of Roka's bags, Shio, Kenji and Roka decide to have a contest over who owns that bag, and Chitose expands the contest into a school-wide event that begins with a King of the Hill-style tournament.",
+      "airdate": "2014-02-10",
+      "markers": [],
+      "external_id": "113626"
+    },
+    {
+      "n": 7,
+      "title": "That's Dirty---!!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113627/original.jpg",
+      "synopsis": "Kenji wakes up after being hit by the zipper from Takao's old uniform to discover that he's locked in a thumb war with Shio as a semifinal match. Meanwhile, Takao and Roka are locked in a game of musical chairs, but seem to have forgotten the chair entirely and are instead tackling each other. The Grand Final round turns out to be a \"King's Game,\" but with only two people the winner is whoever picks the \"King\" stick.",
+      "airdate": "2014-02-17",
+      "markers": [],
+      "external_id": "113627"
+    },
+    {
+      "n": 8,
+      "title": "I Liked The Pixels...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113628/original.jpg",
+      "synopsis": "Kenji and Takao are informed by a panel of teachers that ever since the zipper incident from the tournament, various students have been injured trying to copy the event with each other. After Kenji stands up for Takao, she later asks him out on a date. Unfortunately, the release date of a popular new game she planned to get falls on the same day, so Kenji ends up waiting in line with her.",
+      "airdate": "2014-02-24",
+      "markers": [],
+      "external_id": "113628"
+    },
+    {
+      "n": 9,
+      "title": "That's Right. I'm His Little Sister.",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113629/original.jpg",
+      "synopsis": "After getting flustered by Kenji's demands to hide his bag from Shio and Ataru, Funabori ends up preempting the boys by sticking her own head in the bag. Kenji's little sister comes to visit her brother's club room, but ends up getting increasingly scared by the girls inside, then flees after Takao accidentally smacks her against a bookshelf. Takao tries to make nice with her to get closer to Kenji, but her attempts backfire.",
+      "airdate": "2014-03-03",
+      "markers": [],
+      "external_id": "113629"
+    },
+    {
+      "n": 10,
+      "title": "Tama-senpai, Long Time No See",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113630/original.jpg",
+      "synopsis": "Kazama gets kidnapped... again. It's up to the Game Creation Club (Provisional) to rescue “Princess Pinch” once more. But perilous (and stinky) hardships await them on the journey to where he's being kept!",
+      "airdate": "2014-03-10",
+      "markers": [],
+      "external_id": "113630"
+    },
+    {
+      "n": 11,
+      "title": "What's My Secret Move?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113631/original.jpg",
+      "synopsis": "The game that will determine the fate of the Game Creation Club (Provisional) is on! If Kazama thought his club members were monsters, he hasn't seen anything yet. The ex-Student Council is going to give them a run for their money.",
+      "airdate": "2014-03-17",
+      "markers": [],
+      "external_id": "113631"
+    },
+    {
+      "n": 12,
+      "title": "At this Rate, You'll have Zero Friends for All Eternity!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/113632/original.jpg",
+      "synopsis": "The showdown between Chitose and Tama rages on! Kazama tries to help as Shield No.2, but Tama's sumo slaps and kabuki hair are insanely powerful. Can Chitose defeat Tama for the very first time, or is the Game Creation Club (Provisional) doomed?",
+      "airdate": "2014-03-24",
+      "markers": [],
+      "external_id": "113632"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Stalemate! (すているめいと!)",
+      "artist": "IOSYS jk Girls",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Minna no Namae o Irete Kudasai (Please Enter Everyone's Names)",
+      "artist": "Kana Hanazawa, Shizuka Itou, and Aki Toyosaki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,73 @@
+{
+  "id": "demon-slayer-kimetsu-no-yaiba-the-movie-infinity-castle",
+  "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+  "native": "劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来",
+  "year": 2025,
+  "rating": 8.6,
+  "season": "Summer 2025",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx178788-zm3gtpB9TpRt.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178788-zm3gtpB9TpRt.jpg",
+  "accent": "#35bbe4",
+  "synopsis": "Tanjiro Kamado – a boy who joined an organization dedicated to hunting down demons called the Demon Slayer Corps after his younger sister Nezuko was turned into a demon.\n\nWhile growing stronger and deepening his friendships and bonds with fellow corps members, Tanjiro has battled many demons with his comrades – Zenitsu Agatsuma and Inosuke Hashibira. Along the way, his journey has led him to fight alongside the Demon Slayer Corps’ highest-ranking swordsmen, the Hashira, including Flame Hashira Kyojuro Rengoku aboard the Mugen Train, Sound Hashira Tengen Uzui within the Entertainment District, as well as Mist Hashira Muichiro Tokito and Love Hashira Mitsuri Kanroji at the Swordsmith Village.\n\nAs the Demon Slayer Corps members and Hashira engaged in a group strength training program, the Hashira Training, in preparation for the forthcoming battle against the demons, Muzan Kibutsuji appears at the Ubuyashiki Mansion. With the head of the Demon Corps in danger, Tanjiro and the Hashira rush to the headquarters but are plunged into a deep descent to a mysterious space by the hands of Muzan Kibutsuji.\n\nThe destination of where Tanjiro and Demon Slayer Corps have fallen is the demons’ stronghold – the Infinity Castle. And so, the battleground is set as the final battle between the Demon Slayer Corps and the demons ignites.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "demon-slayer:-kimetsu-no-yaiba-the-movie:-infinity-castle-5lvq3t",
+    "mal": 59192,
+    "anilist": 178788,
+    "kitsu": 49001
+  },
+  "skip_key_id": 59192,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "demon slayer kimetsu no yaiba infinity castle 劇場版 鬼滅の刃 無限城編 第一章 猗窩座再来 movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Demon Slayer: Kimetsu no Yaiba - The Movie: Infinity Castle (Movie)",
+      "runtime": "155:00",
+      "runtime_seconds": 9300,
+      "thumb": "https://animehot.cc/storage/media/2026/09/68e7ec4941a45d67b63a36f5-landscape.webp",
+      "synopsis": "First anime movie of the trilogy adaptation of the Infinity Castle Arc.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "369833"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Taiyō ga Noboranai Sekai (太陽が昇らない世界)",
+      "artist": "Aimer",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Zankoku na Yoru ni Kagayake (残酷な夜に輝け)",
+      "artist": "LiSA",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

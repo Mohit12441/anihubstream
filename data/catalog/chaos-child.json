@@ -1,0 +1,179 @@
+{
+  "id": "chaos-child",
+  "title": "Chaos;Child",
+  "native": "カオスチャイルド",
+  "year": 2017,
+  "rating": 5.9,
+  "season": "Winter 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21126-l7MgeoysYBdE.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21126-l7MgeoysYBdE.png",
+  "accent": "#50bbe4",
+  "synopsis": "After a magnitude-7.8 earthquake hits Tokyo's Shibuya ward on November 6, 2009, a black fire spreads and causes mass panic on the day of the earthquake. The sudden disaster that becomes known as the \"Shibuya Earthquake\" kills 3,851 people and injures 30,927 more.\n\nThe story set in a reconstructed Shibuya district in October 2015. A string of mysterious deaths occurs in Shibuya amidst the reconstruction. People begin to take notice as the strange events start on the same day that chaos broke out in Shibuya with a certain incident five years earlier. The events are called the \"Return of the New Generation Madness.\"\n\n(Source: Anime News Network) \n\nNote: Includes episode 0.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "CHAOS;CHILD: Silent Sky (2017)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 10786,
+    "anilist": 21126,
+    "mal": 30485
+  },
+  "skip_key_id": 30485,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-22 11:56:08",
+  "search_text": "chaos child カオスチャイルト tv finished",
+  "genres": [
+    "horror",
+    "mystery",
+    "sci-fi",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Digital Native",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-11",
+      "markers": [],
+      "external_id": "200041"
+    },
+    {
+      "n": 2,
+      "title": "Sumo Sticker",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-18",
+      "markers": [],
+      "external_id": "200042"
+    },
+    {
+      "n": 3,
+      "title": "School Festival",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-25",
+      "markers": [],
+      "external_id": "200043"
+    },
+    {
+      "n": 4,
+      "title": "Her Words",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-01",
+      "markers": [],
+      "external_id": "200044"
+    },
+    {
+      "n": 5,
+      "title": "Gigalomaniacs",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-08",
+      "markers": [],
+      "external_id": "200045"
+    },
+    {
+      "n": 6,
+      "title": "Their Resistance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-15",
+      "markers": [],
+      "external_id": "200046"
+    },
+    {
+      "n": 7,
+      "title": "Untitled",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-22",
+      "markers": [],
+      "external_id": "200047"
+    },
+    {
+      "n": 8,
+      "title": "Heads or Tails",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-01",
+      "markers": [],
+      "external_id": "200048"
+    },
+    {
+      "n": 9,
+      "title": "Duel",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-08",
+      "markers": [],
+      "external_id": "200049"
+    },
+    {
+      "n": 10,
+      "title": "Memories Stalk You From the Past",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-15",
+      "markers": [],
+      "external_id": "200050"
+    },
+    {
+      "n": 11,
+      "title": "Takuru Miyashiro",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-22",
+      "markers": [],
+      "external_id": "200051"
+    },
+    {
+      "n": 12,
+      "title": "Serika Onoe",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-29",
+      "markers": [],
+      "external_id": "200052"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

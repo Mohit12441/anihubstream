@@ -1,0 +1,203 @@
+{
+  "id": "bubble",
+  "title": "Bubble",
+  "native": "バブル",
+  "year": 2022,
+  "rating": 7.1,
+  "season": "Spring 2022",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx142455-5cBnV4rz5ISf.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx142455-5cBnV4rz5ISf.jpg",
+  "accent": "#e4a128",
+  "synopsis": "In a Tokyo where gravity has broken, a boy and a girl are drawn to each other...\n\nThe story is set in Tokyo, after bubbles that broke the laws of gravity rained down upon the world. Cut off from the outside world, Tokyo has become a playground for a group of young people who have lost their families, acting as a battlefield for parkour team battles as they leap from building to building. Hibiki, a young ace known for his dangerous play style, makes a reckless move one day and plummets into the gravity-bending sea. His life is saved by Uta, a girl with mysterious powers. The pair then hear a unique sound audible only to them. Why did Uta appear before Hibiki? Their encounter leads to a revelation that will change the world.\n\n(Source: Netflix)\n\nNote: The anime released on Netflix on April 28, 2022. It screened in theaters on May 13, 2022.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 45559,
+    "anilist": 142455,
+    "mal": 50549
+  },
+  "skip_key_id": 50549,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 13:05:21",
+  "search_text": "bubble ハ フ ル ona finished",
+  "genres": [
+    "romance",
+    "sci-fi",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Bubble",
+      "runtime": "100:00",
+      "runtime_seconds": 6000,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx142455-5cBnV4rz5ISf.jpg",
+      "synopsis": "In a Tokyo where gravity has broken, a boy and a girl are drawn to each other...\n\nThe story is set in Tokyo, after bubbles that broke the laws of gravity rained down upon the world. Cut off from the outside world, Tokyo has become a playground for a group of young people who have lost their families, acting as a battlefield for parkour team battles as they leap from building to building. Hibiki, a young ace known for his dangerous play style, makes a reckless move one day and plummets into the gravity-bending sea. His life is saved by Uta, a girl with mysterious powers. The pair then hear a unique sound audible only to them. Why did Uta appear before Hibiki? Their encounter leads to a revelation that will change the world.\n\n(Source: Netflix)\n\nNote: The anime released on Netflix on April 28, 2022. It screened in theaters on May 13, 2022.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "322714"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bubble",
+      "artist": "Eve feat. Riria.",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hateshinai Tabi - Hajimari no Toki (果てない旅 ~始まりの時)",
+      "artist": "Ryōko Tachikawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Cool Eyes",
+      "artist": "Ryōko Tachikawa",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Konya wa Hurricane (今夜はハリケーン; There's a Hurricane Tonight)",
+      "artist": "Kinuko Ōmori",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mr. Dandy",
+      "artist": "Bluew",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Y'know",
+      "artist": "Akira Sudou",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Waiting for You",
+      "artist": "Akira Sudou",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Saigo ni... (最後に…)",
+      "artist": "Ryōko Tachikawa",
+      "episodes": "2"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Mad Machine",
+      "artist": "Kinuko Ōmori",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kizudarake no Wild (傷だらけのWild; Wild and Scarred)",
+      "artist": "Kinuko Ōmori",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Over the Pressure - Toki o Koete (OVER THE PRESSURE~時を越えて)",
+      "artist": "Knight Sabers",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Wasurenai de (忘れないで; Don't Forget)",
+      "artist": "Kinuko Ōmori",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 4,
+      "title": "CRISIS ~ Ikari o Komete Hashire~ (クライシス 〜怒りをこめて走れ〜; Crisis ~Run with Anger~)",
+      "artist": "Yuiko Tsubokura",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Twilight",
+      "artist": "Yuiko Tsubokura",
+      "episodes": "4"
+    },
+    {
+      "kind": "OP",
+      "sequence": 5,
+      "title": "Mysterious Night",
+      "artist": "the Knight Sabers",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Omoide ni Dakarete (思い出に抱かれて; Embraced",
+      "artist": "Memories)",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Rock Me",
+      "artist": "Yuiko Tsubokura",
+      "episodes": "6"
+    },
+    {
+      "kind": "OP",
+      "sequence": 7,
+      "title": "Say Yes!",
+      "artist": "Maiko Hashimoto",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Never the End",
+      "artist": "Maiko Hashimoto",
+      "episodes": "7"
+    },
+    {
+      "kind": "OP",
+      "sequence": 8,
+      "title": "Bye Bye My Crisis",
+      "artist": "the Knight Sabers",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "Chase the Dream",
+      "artist": "Kinuko Ōmori",
+      "episodes": "8"
+    }
+  ],
+  "relations": []
+}

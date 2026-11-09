@@ -1,0 +1,295 @@
+{
+  "id": "a-i-c-o-incarnation",
+  "title": "A.I.C.O. -Incarnation-",
+  "native": "A.I.C.O. -Incarnation-",
+  "year": 2018,
+  "rating": 6.3,
+  "season": "Winter 2018",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx99725-7kukTkRRmgT1.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx99725-7kukTkRRmgT1.jpg",
+  "accent": "#ae5028",
+  "synopsis": "In Japan in the year 2035, an accident known as the \"Burst\" occurs during a research project, spawning an out-of-control artificial life form called \"Matter\" that has spread throughout the Kurobe Gorge. The research city that was once hailed as the hope for humanity is cordoned off by the government. Two years later, 15-year-old Aiko Tachibana, who lost her family in the Burst, learns something unbelievable from Yuya Kanzaki, a new student at her school. A secret is hidden within her body, and the answer to the puzzle lies at the \"Primary Point\" that was the center of the Burst. When boy meets girl with the fate of humanity in their hands, what new truth will come to light? \n\n(Source: Netflix)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13696,
+    "anilist": 99725,
+    "mal": 36039
+  },
+  "skip_key_id": 36039,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-22 10:55:57",
+  "search_text": "a i c o incarnation a i c o incarnation ona finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Contact",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1343,
+          "end": 1440
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1362,
+          "end": 1440
+        }
+      ],
+      "external_id": "239137"
+    },
+    {
+      "n": 2,
+      "title": "Target",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 100
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1356,
+          "end": 1440
+        }
+      ],
+      "external_id": "239138"
+    },
+    {
+      "n": 3,
+      "title": "Decision",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1356,
+          "end": 1440
+        }
+      ],
+      "external_id": "239139"
+    },
+    {
+      "n": 4,
+      "title": "Encounter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1356,
+          "end": 1440
+        }
+      ],
+      "external_id": "239140"
+    },
+    {
+      "n": 5,
+      "title": "Memory",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1355,
+          "end": 1440
+        }
+      ],
+      "external_id": "239141"
+    },
+    {
+      "n": 6,
+      "title": "Awakening",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1365,
+          "end": 1440
+        }
+      ],
+      "external_id": "239142"
+    },
+    {
+      "n": 7,
+      "title": "Breakthrough",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-09",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1361,
+          "end": 1440
+        }
+      ],
+      "external_id": "239143"
+    },
+    {
+      "n": 8,
+      "title": "Way",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 58,
+          "end": 147
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1361,
+          "end": 1440
+        }
+      ],
+      "external_id": "239144"
+    },
+    {
+      "n": 9,
+      "title": "Truth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 57,
+          "end": 147
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1361,
+          "end": 1440
+        }
+      ],
+      "external_id": "239145"
+    },
+    {
+      "n": 10,
+      "title": "Volition",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1361,
+          "end": 1440
+        }
+      ],
+      "external_id": "239146"
+    },
+    {
+      "n": 11,
+      "title": "Devotion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 38,
+          "end": 128
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1361,
+          "end": 1440
+        }
+      ],
+      "external_id": "239147"
+    },
+    {
+      "n": 12,
+      "title": "Reincarnation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2018-03-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 11,
+          "end": 100
+        }
+      ],
+      "external_id": "239148"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,127 @@
+{
+  "id": "assassination-classroom-meeting-time",
+  "title": "Assassination Classroom: Meeting Time",
+  "native": "暗殺教室 episode:0 出会いの時間",
+  "year": 2014,
+  "rating": 7.1,
+  "season": "Fall 2014",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b21303-CTioSWEf0cqn.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b21303-CTioSWEf0cqn.jpg",
+  "accent": "#fed650",
+  "synopsis": "Episode 0 of the Ansatsu Kyoushitsu TV series screened at the Jump Festa 2014 events. Later included as an extra in volume 1 of the Blu-ray and DVD release.\n\nKoro-sensei reminisces about his first meeting with Karasuma, where they first butted heads and fought against each other, ultimately coming to respect one another. However, Karasuma eventually points out their actual meeting wasn't nearly as eventful.\n\n(Source: IMDb)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "assassination-classroom:-meeting-time-aic5nv",
+    "mal": 28405,
+    "anilist": 21303,
+    "kitsu": 10020
+  },
+  "skip_key_id": 28405,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "assassination classroom meeting time 暗殺教室 episode 0 出会いの時間 special finished",
+  "genres": [
+    "action",
+    "comedy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Assassination Classroom: Meeting Time",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a97cd9108226308ddeee1b0-poster.jpg",
+      "synopsis": "Episode 0 of the Ansatsu Kyoushitsu TV series screened at the Jump Festa 2014 events. Later included as an extra in volume 1 of the Blu-ray and DVD release.\n\n\n\nKoro-sensei reminisces about his first meeting with Karasuma, where they first butted heads and fought against each other, ultimately coming to respect one another. However, Karasuma eventually points out their actual meeting wasn't nearly as eventful.\n\n\n\n(Source: IMDb)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "170988"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shigyou no Bell (始業のベル)",
+      "artist": "Shion Miyawaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "QUESTION",
+      "artist": "Mai Fuchigami, Aya Suzaki, Nobuhiko Okamoto, Ryota Ohsaka, & Shintarō Asanuma",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaketa Tsuki (欠けた月; Damaged Moon)",
+      "artist": "Shion Miyawaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kiiro Shingō (黄色信号)",
+      "artist": "Tomonari Sora [10th Anniversary rebroadcast version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Seishun Satsubatsuron (青春サツバツ論; Youth Savage Theory)",
+      "artist": "3-nen E-Gumi Utatan",
+      "episodes": "1-17"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hello, shooting-star",
+      "artist": "moumoon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsuki no Fune (ツキノフネ)",
+      "artist": "Atarayo [10th Anniversary rebroadcast version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Bye Bye Yesterday",
+      "artist": "Mai Fuchigami, Aya Suzaki, Nobuhiko Okamoto, Ryota Ohsaka, & Shintarō Asanuma",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Mata Kimi ni Aeru Hi (The Day When I Can Meet You Again)",
+      "artist": "Shion Miyawaki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Jiriki Hongan Revolution (自力本願レボリューション; Self-Reliance Revolution)",
+      "artist": "3-Nen E-gumi Utatan",
+      "episodes": "18-22"
+    }
+  ],
+  "relations": []
+}

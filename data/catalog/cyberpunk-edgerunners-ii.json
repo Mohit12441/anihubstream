@@ -1,0 +1,182 @@
+{
+  "id": "cyberpunk-edgerunners-ii",
+  "title": "Cyberpunk: Edgerunners 2",
+  "native": "サイバーパンク: エッジランナーズ2",
+  "year": 2026,
+  "rating": 8.3,
+  "season": "Fall 2026",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx195539-4LdfmKIHzuxr.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx195539-4LdfmKIHzuxr.png",
+  "accent": "#fe286b",
+  "synopsis": "Cyberpunk: Edgerunners 2 pulls you back into Night City, where lives become entangled to the extreme. Weak, a washed-up cyberpunk legend, is now forced to live without chrome as he searches for a sense of purpose in a world that’s passed him by. Meanwhile, the deadly nomad D sets out on a path to revenge that brings him close to corpo secrets never meant to be found. Across this ten-episode standalone series, uncover a story of family, obsession, legacy — and how your lens reflects the stories of the people around you..\n\nWhen the world is blinded by spectacle, what extremes do you have to go to make your story matter?\n\n(Source: Cyberpunk: Edgerunners 2 Official Site, Official Twitter)",
+  "rank": null,
+  "trend_rank": 10,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 50016,
+    "anilist": 195539,
+    "mal": 61990
+  },
+  "skip_key_id": 61990,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": "2026-10-13 00:00:00",
+  "search_text": "cyberpunk edgerunners 2 サイハ ーハ ンク エッシ ランナース 2 ona finished",
+  "genres": [
+    "action",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Last Chance for a Slow Dance",
+      "runtime": "28:00",
+      "runtime_seconds": 1680,
+      "thumb": "https://media.kitsu.app/episode/384880/thumbnail/a00047043623c958944fdd9ec95601fd.jpg",
+      "synopsis": "A former edgerunner slipping into cyberpsychosis and a lonely survivor with a fractured past start their stories at opposite ends of Night City.\n\n(Source: Netflix)",
+      "airdate": "2026-10-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 77,
+          "end": 169,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1514,
+          "end": 1604,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "384880"
+    },
+    {
+      "n": 2,
+      "title": "Give Me Another Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A desperate call drags Weak back into danger to save a rebellious teen. As D bonds with a young cinephile, painful flashbacks fuel his thirst for revenge.\n\n(Source: Netflix)",
+      "airdate": "2026-10-20",
+      "markers": [],
+      "external_id": "384881"
+    },
+    {
+      "n": 3,
+      "title": "0+2=1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Weak tries to rescue Talia from a dangerous surgery, but the confrontation ends in disaster. D and Roman discover a chaotic chip that sparks mayhem.\n\n(Source: Netflix)",
+      "airdate": "2026-10-20",
+      "markers": [],
+      "external_id": "384882"
+    },
+    {
+      "n": 4,
+      "title": "Someone That I Used to Know",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Armed with abilities he doesn't fully understand, D uses Capri's power to infiltrate an Arasaka research facility. Talia and Weak find common ground.\n\n(Source: Netflix)",
+      "airdate": "2026-10-20",
+      "markers": [],
+      "external_id": "384883"
+    },
+    {
+      "n": 5,
+      "title": "Fade (Pass the Distance)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "An impulsive act sends Talia into a terrifying spiral. D's obsession with revenge reaches an unsettling new level of violence.\n\n(Source: Netflix)",
+      "airdate": "2026-10-20",
+      "markers": [],
+      "external_id": "384884"
+    },
+    {
+      "n": 6,
+      "title": "Everything Hate",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "D becomes an anti-corporate vigilante and asks Roman to film his every move. Weak looks into rumors of tech that can transfer digitized consciousness.\n\n(Source: Netflix)",
+      "airdate": "2026-10-20",
+      "markers": [],
+      "external_id": "384885"
+    },
+    {
+      "n": 7,
+      "title": "To the Depths With You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Talia's condition takes a startling turn under Capri's watch. D reconnects with an old friend. Weak and Avida chase a miracle cure.\n\n(Source: Netflix)",
+      "airdate": "2026-10-20",
+      "markers": [],
+      "external_id": "384886"
+    },
+    {
+      "n": 8,
+      "title": "Serce",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A riot ignites on the streets as D digs deeper into Project Capricorn's dark past. With time running out, Avida and Weak fight for Talia's future.\n\n(Source: Netflix)",
+      "airdate": "2026-10-20",
+      "markers": [],
+      "external_id": "384887"
+    },
+    {
+      "n": 9,
+      "title": "Strictly Reserved For You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "Omi and D go off the grid, and Kiril takes Talia into custody. Kyoko pushes Project Capricorn forward with frightening results.\n\n(Source: Netflix)",
+      "airdate": "2026-10-20",
+      "markers": [],
+      "external_id": "384888"
+    },
+    {
+      "n": 10,
+      "title": "Then Everyone Went Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "A chilling transformation turns the city into a war zone, erupting into an explosive confrontation.\n\n(Source: Netflix)",
+      "airdate": "2026-10-20",
+      "markers": [],
+      "external_id": "384889"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "This Fffire",
+      "artist": "Franz Ferdinand",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Let You Down",
+      "artist": "Dawid Podsiadło & Magdalena Laskowska",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

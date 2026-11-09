@@ -1,0 +1,193 @@
+{
+  "id": "date-a-live-iv",
+  "title": "Date A Live IV",
+  "native": "デート・ア・ライブIV",
+  "year": 2022,
+  "rating": 7.6,
+  "season": "Spring 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx116605-uzDakXnaZ1OW.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116605-uzDakXnaZ1OW.jpg",
+  "accent": "#e45d43",
+  "synopsis": "Despite the numerous challenges he has overcome so far, Shidou Itsuka's mission with Ratatoskr is far from over. In a departure from his daily routine, Shidou encounters a starving woman lying on the street and ends up helping her. After the two arrive at her apartment, the woman introduces herself as Nia Honjou—a popular manga artist working under a pen name. However, cutting straight to the chase, Nia reveals that she is also a Spirit and is aware of Shidou's secret operation.\n\nInterested in seeing his charisma firsthand, Nia challenges Shidou to win her over on a date. As he strives for an opportunity to seal her powers, Shidou learns more about Nia and her history with Deus Ex Machina Industries, a name he is all too familiar with...\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "date-a-live-iv-aufh0k",
+    "mal": 41461,
+    "anilist": 116605,
+    "kitsu": 43065
+  },
+  "skip_key_id": 41461,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "date a live iv テ ート ア ライフ iv tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Beginnings of War",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a39f7649c49ffe6491c9a32a2e27760d1712750337_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279282"
+    },
+    {
+      "n": 2,
+      "title": "Final Respite",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/88ec7a3f4db43b3a59ea17d6d22831861713357330_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279283"
+    },
+    {
+      "n": 3,
+      "title": "The Spirit's Resurrection",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/76d2034457dd8e128667cace58f25aee1713965881_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279284"
+    },
+    {
+      "n": 4,
+      "title": "The Spirit of Origin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b4bc5dfed130950aeb4ff24d209a7b9a1714555850_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279285"
+    },
+    {
+      "n": 5,
+      "title": "Mother Mio",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d23fa432956ca9283f74265ddc8dbe5f1715174636_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "282996"
+    },
+    {
+      "n": 6,
+      "title": "The Three Magi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/39402ac0e251bb89cb9c0301bd18b50b1715782897_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "282997"
+    },
+    {
+      "n": 7,
+      "title": "The World Tree Sheds Leaves",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/c18cc89f642cdfdebefaff2a0769eda91716387247_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "282998"
+    },
+    {
+      "n": 8,
+      "title": "The One Who Pulled the Trigger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e59f9305df307d70ceb1c1f47d6ed17f1716985545_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "282999"
+    },
+    {
+      "n": 9,
+      "title": "A \"Second\" Date",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c244bfd23e5df1d9e94a859b7b5dc8321717594571_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "283000"
+    },
+    {
+      "n": 10,
+      "title": "A Battlefield That Shouldn't Be Possible",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c17623206ac88469f60c6532a34a493b1718201023_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "283001"
+    },
+    {
+      "n": 11,
+      "title": "A Fleeting Paradise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/0fe76f565d59a3b5c3a1487dff014bcf1718806865_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "283002"
+    },
+    {
+      "n": 12,
+      "title": "And The One She Chooses Is",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c201a8175db2351901de63617357bda71719407771_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "283003"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "OveR",
+      "artist": "Miyu Tomita",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "S.O.S.",
+      "artist": "sweet ARMS",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

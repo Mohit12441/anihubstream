@@ -1,0 +1,72 @@
+{
+  "id": "captain-harlock-arcadia-of-my-youth",
+  "title": "Captain Harlock: Arcadia of my Youth",
+  "native": "わが青春のアルカディア",
+  "year": 1982,
+  "rating": 7.3,
+  "season": "Summer 1982",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2202-mARxwjZ7oXO4.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2202-mARxwjZ7oXO4.jpg",
+  "accent": "#ae4328",
+  "synopsis": "Earth has been conquered by the evil Illumidus Empire, with parallels drawn to the U.S. post World War II occupation of Japan. Captain Harlock with a group that will become his life long friends begin their fight against this tyranny visited upon the planet Earth, with no regard to the costs the struggle will have on them, caring only for the ideal of restoring freedom to the people of Earth.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "captain-harlock:-arcadia-of-my-youth-9rrwd6",
+    "mal": 2202,
+    "anilist": 2202,
+    "kitsu": 1993
+  },
+  "skip_key_id": 2202,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "captain harlock arcadia of my youth わか 青春のアルカテ ィア movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Captain Harlock: Arcadia of my Youth (Movie)",
+      "runtime": "130:00",
+      "runtime_seconds": 7800,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6acd32024e1a627ba0b446ac-landscape.jpg",
+      "synopsis": "Earth has been conquered by the evil Illumidus Empire, with parallels drawn to the U.S. post World War II occupation of Japan. Captain Harlock with a group that will become his life long friends begin their fight against this tyranny visited upon the planet Earth, with no regard to the costs the struggle will have on them, caring only for the ideal of restoring freedom to the people of Earth.\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "33667"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uchū Kaizoku Captain Harlock (宇宙海賊キャプテンハーロック)",
+      "artist": "Ichiro Mizuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Warera no Tabidachi (われらの旅立ち; Our Journey)",
+      "artist": "Ichiro Mizuki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

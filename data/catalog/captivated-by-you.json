@@ -1,0 +1,98 @@
+{
+  "id": "captivated-by-you",
+  "title": "Captivated, By You",
+  "native": "夢中さ、きみに。",
+  "year": 2025,
+  "rating": 7.2,
+  "season": "Summer 2025",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx183128-nMFf0c6IOs9g.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx183128-nMFf0c6IOs9g.jpg",
+  "accent": "#e4a15d",
+  "synopsis": "Joji Ema goes to an all-boys school. After the school’s athletic festival, Ema’s eccentric classmate Miyoshi Hayashi starts acting bizarrely towards him. Yuichi Medaka goes to a coeducational high school. He ends up sitting behind Akira Nikaido, an unsettling student most of the school doesn’t like. Explore an omnibus of stories about what it’s like to be young.\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "captivated-by-you-tbk9tm",
+    "mal": 60130,
+    "anilist": 183128,
+    "kitsu": 49284
+  },
+  "skip_key_id": 60130,
+  "skip_key_space": "mal",
+  "episode_total": 5,
+  "added_at": null,
+  "search_text": "captivated by you 夢中さ きみに tv finished",
+  "genres": [
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "386605"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "386606"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "386819"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "386907"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "386996"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

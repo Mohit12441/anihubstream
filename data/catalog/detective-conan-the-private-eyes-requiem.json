@@ -1,0 +1,62 @@
+{
+  "id": "detective-conan-the-private-eyes-requiem",
+  "title": "Detective Conan: The Private Eyes' Requiem",
+  "native": "名探偵コナン　探偵たちの鎮魂歌[レクイエム]",
+  "year": 2006,
+  "rating": 7.8,
+  "season": "Spring 2006",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1506-EHhN6loLBaau.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1506-EHhN6loLBaau.jpg",
+  "accent": "#e4ae50",
+  "synopsis": "After receiving a strange invitation, Kogorou Mouri pays a visit to the Miracle Land theme park along with his daughter Ran, Conan Edogawa, and the Detective Boys. Once there, Kogorou and Conan are tasked with finishing an unsolved case by a mysterious stranger. Realizing that the invitations were actually an elaborate trap, the two have just 12 hours to solve the case or face grave danger.\n\nWith the help of familiar faces like Heiji Hattori, Kaitou Kid, and even Saguru Hakuba, the group of detectives must unravel the web of clues surrounding the case in order to find the culprit and bring them to justice before it's too late.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "detective-conan:-the-private-eyes'-requiem-q13vqi",
+    "mal": 1506,
+    "anilist": 1506,
+    "kitsu": 1352
+  },
+  "skip_key_id": 1506,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "detective conan the private eyes requiem 名探偵コナン 探偵たちの鎮魂歌 レクイエム movie finished",
+  "genres": [
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Detective Conan: The Private Eyes' Requiem (Movie)",
+      "runtime": "111:00",
+      "runtime_seconds": 6660,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1506-EHhN6loLBaau.jpg",
+      "synopsis": "After receiving a strange invitation, Kogorou Mouri pays a visit to the Miracle Land theme park along with his daughter Ran, Conan Edogawa, and the Detective Boys. Once there, Kogorou and Conan are tasked with finishing an unsolved case by a mysterious stranger. Realizing that the invitations were actually an elaborate trap, the two have just 12 hours to solve the case or face grave danger.\n\n\n\nWith the help of familiar faces like Heiji Hattori, Kaitou Kid, and even Saguru Hakuba, the group of detectives must unravel the web of clues surrounding the case in order to find the culprit and bring them to justice before it's too late.\n\n\n\n(Source: MAL Rewrite)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "24104"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yuruginai mono hitotsu",
+      "artist": "B'z",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

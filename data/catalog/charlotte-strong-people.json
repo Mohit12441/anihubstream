@@ -1,0 +1,92 @@
+{
+  "id": "charlotte-strong-people",
+  "title": "Charlotte: Strong People",
+  "native": "Charlotte 強い者たち",
+  "year": 2016,
+  "rating": 7.3,
+  "season": "Winter 2016",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21339-Og6xNXlz1pgd.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21339-Og6xNXlz1pgd.png",
+  "accent": "#5050e4",
+  "synopsis": "Takehito Kumagami's clairvoyance leads his group of friends to another child with supernatural powers: Iori Sekiguchi, a mind reader. However, as they try to approach her, they realize her power makes her nearly impossible to pin down. Having been chosen by the club to handle this case, Nao Tomori and Yuu Otosaka must find a way to get around the child's unique ability before it is too late.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "charlotte:-strong-people-keazux",
+    "mal": 31553,
+    "anilist": 21339,
+    "kitsu": 11365
+  },
+  "skip_key_id": 31553,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "charlotte strong people charlotte 強い者たち ova finished",
+  "genres": [
+    "comedy",
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Charlotte: Strong People",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6aa122136a350dd2abc0aefc-poster.png",
+      "synopsis": "Takehito Kumagami's clairvoyance leads his group of friends to another child with supernatural powers: Iori Sekiguchi, a mind reader. However, as they try to approach her, they realize her power makes her nearly impossible to pin down. Having been chosen by the club to handle this case, Nao Tomori and Yuu Otosaka must find a way to get around the child's unique ability before it is too late.\n\n\n\n(Source: MAL Rewrite)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "179307"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Bravely You",
+      "artist": "Lia",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yake Ochinai Tsubasa (灼け落ちない翼; The Wings that Won't Be Burned Down)",
+      "artist": "Aoi Tada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Wakakusa no Charlotte",
+      "artist": "Kumiko Kaori",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mayflower",
+      "artist": "Kumiko Kaori",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rakuen Made (楽園まで; To Paradise)",
+      "artist": "How-Low-Hello",
+      "episodes": "3-4"
+    }
+  ],
+  "relations": []
+}

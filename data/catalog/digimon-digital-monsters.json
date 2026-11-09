@@ -1,0 +1,1315 @@
+{
+  "id": "digimon-digital-monsters",
+  "title": "Digimon: Digital Monsters",
+  "native": "デジモンアドベンチャー",
+  "year": 1999,
+  "rating": 7.6,
+  "season": "Spring 1999",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx552-zad0ts5hylQJ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx552-zad0ts5hylQJ.jpg",
+  "accent": "#e4bb43",
+  "synopsis": "Seven kids are transported to the Digital World, a strange place where digital creatures called \"Digimon\" reside. A group of Digimon soon befriend them and keep the kids out of harm's way. The children then discover they are the Chosen Children, which protect the Digital World from evil Digimon like Devimon and Vamdemon.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "digimon:-digital-monsters-3bp5d9",
+    "mal": 552,
+    "anilist": 552,
+    "kitsu": 509
+  },
+  "skip_key_id": 552,
+  "skip_key_space": "mal",
+  "episode_total": 54,
+  "added_at": null,
+  "search_text": "digimon digital monsters テ シ モンアト ヘ ンチャー tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "comedy",
+    "drama",
+    "fantasy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "And So it Begins...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12348/original.jpeg",
+      "synopsis": "While at camp, Tai, Matt, Sora, Izzy, Mimi, Joe, and T.K. come across seven Digivices and are transported to a strange Digital World where they make friends with creatures called Digimon who claim to be their chosen partners.",
+      "airdate": "1999-03-07",
+      "markers": [],
+      "external_id": "12348"
+    },
+    {
+      "n": 2,
+      "title": "The Birth of Greymon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12349/original.jpeg",
+      "synopsis": "The kids come across a beach with numerous phone booths, but none of them seem to work. As they sit down for a break to eat, a wild Shellmon appears and attacks the kids. Agumon digivolves into Greymon and blasts him away into the ocean.",
+      "airdate": "1999-03-14",
+      "markers": [],
+      "external_id": "12349"
+    },
+    {
+      "n": 3,
+      "title": "Garurumon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12350/original.jpeg",
+      "synopsis": "The kids run away from a Monochromon battle. They come across a trolley car on a small island and decide to spend the night in it, until they are attacked by a Seadramon.",
+      "airdate": "1999-03-21",
+      "markers": [],
+      "external_id": "12350"
+    },
+    {
+      "n": 4,
+      "title": "Biyomon Gets Firepower",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12351/original.jpeg",
+      "synopsis": "The kids come to a Yokomon village to rest for the evening.  A Meramon attacks the village and Biyomon digivolves to Birdramon to defeat him, causing a Black Gear to be expelled from his body.",
+      "airdate": "1999-03-28",
+      "markers": [],
+      "external_id": "12351"
+    },
+    {
+      "n": 5,
+      "title": "Kabuterimon`s Electro Shocker",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12352/original.jpeg",
+      "synopsis": "The kids stumble upon a factory where they find an Andromon in trouble. After they help him he attacks them. Izzy discovers  coding, which he uses to digivolve Tentomon into Kabuterimon.",
+      "airdate": "1999-04-04",
+      "markers": [],
+      "external_id": "12352"
+    },
+    {
+      "n": 6,
+      "title": "Togemon in Toy Town",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12353/original.jpeg",
+      "synopsis": "While escaping the Numemon who attacked the group in the sewers on their way out of the factory, the kids are split up and Mimi ends up in Toy Town after being attacked by a Monzaemon.",
+      "airdate": "1999-04-11",
+      "markers": [],
+      "external_id": "12353"
+    },
+    {
+      "n": 7,
+      "title": "Ikkakumon`s Harpoon Torpedo",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12354/original.jpeg",
+      "synopsis": "Tai and Matt argue whether they should climb Infinity Mountain. Joe and Gomamon decide to climb the mountain by themselves. While on the mountain, they are attacked by a Unimon.",
+      "airdate": "1999-04-18",
+      "markers": [],
+      "external_id": "12354"
+    },
+    {
+      "n": 8,
+      "title": "Evil Shows His Face",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12355/original.jpeg",
+      "synopsis": "The kids meet the ruler of File Island, Devimon, the controller of the Black Gears. He, Ogremon and a possessed Leomon, attack the kids who manage to escape, but Devimon breaks File Island into multiple, smaller islands and separates the kids onto them.",
+      "airdate": "1999-04-25",
+      "markers": [],
+      "external_id": "12355"
+    },
+    {
+      "n": 9,
+      "title": "Subzero Ice Punch!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12356/original.jpeg",
+      "synopsis": "Tai and Agumon land on a snow-covered island and are forced to defeat a Frigimon. After destroying the Black Gear they cross over to the island where Matt and Gabumon landed and find that Matt got hypothermia.",
+      "airdate": "1999-05-02",
+      "markers": [],
+      "external_id": "12356"
+    },
+    {
+      "n": 10,
+      "title": "A Clue From the Digi-Past",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12357/original.jpeg",
+      "synopsis": "Mimi and Palmon escape Sukamon and Chuumon and cross over to the next island where Izzy and Tentomon landed, but end up getting lost in a labyrinth and attacked by Centarumon.",
+      "airdate": "1999-05-09",
+      "markers": [],
+      "external_id": "12357"
+    },
+    {
+      "n": 11,
+      "title": "The Dancing Digimon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12358/original.jpeg",
+      "synopsis": "After an attack from Ogremon at sea, Joe and Gomamon find themselves on an island with Sora and Biyomon. They are captured by a band of Bakemon intent on eating them.",
+      "airdate": "1999-05-16",
+      "markers": [],
+      "external_id": "12358"
+    },
+    {
+      "n": 12,
+      "title": "DigiBaby Boom",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12359/original.jpeg",
+      "synopsis": "T.K. and Patamon end up in Primary Village, the place where all Digimon are born. Mistaken for intruders, they are confronted by Elecmon, the guardian of the baby Digimon.",
+      "airdate": "1999-05-23",
+      "markers": [],
+      "external_id": "12359"
+    },
+    {
+      "n": 13,
+      "title": "The Legend of the Digidestined",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12360/original.jpeg",
+      "synopsis": "The group reunites and is attacked by Leomon. After Leomon is defeated, he explains the prophecies of the \"DigiDestined.\" The group returns to Infinity Mountain for a final showdown with Devimon.",
+      "airdate": "1999-05-30",
+      "markers": [],
+      "external_id": "12360"
+    },
+    {
+      "n": 14,
+      "title": "Departure For a New Continent",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12361/original.jpeg",
+      "synopsis": "Gennai urges the group to travel to Server to defeat another enemy.  Gennai also tells about Crests that will allow Digimon to digivolve further. The kids build a raft and leave File Island and are taken by Whamon to where the Crests are hidden.",
+      "airdate": "1999-06-06",
+      "markers": [],
+      "external_id": "12361"
+    },
+    {
+      "n": 15,
+      "title": "The Dark Network of Etemon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12362/original.jpeg",
+      "synopsis": "The kids arrive in a Koromon village where they are confronted by Etemon. He uses his Dark Network to prevent the Digimon from digivolving and then traps the group inside a cave where they discover their first Crest, Tai's Crest of Courage.",
+      "airdate": "1999-06-13",
+      "markers": [],
+      "external_id": "12362"
+    },
+    {
+      "n": 16,
+      "title": "The Arrival of Skullgreymon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12363/original.jpeg",
+      "synopsis": "While traveling in the desert the group is trapped by Etemon in a coliseum.",
+      "airdate": "1999-06-20",
+      "markers": [],
+      "external_id": "12363"
+    },
+    {
+      "n": 17,
+      "title": "The Crest of Sincerity",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12364/original.jpeg",
+      "synopsis": "After getting lost in the desert, the group is taken aboard a ship helmed by Kokatorimon who captures all the boys and their partners.",
+      "airdate": "1999-06-27",
+      "markers": [],
+      "external_id": "12364"
+    },
+    {
+      "n": 18,
+      "title": "The Piximon Cometh",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12365/original.jpeg",
+      "synopsis": "The group is attacked by a Kuwagamon and Tai fails to digivolve Agumon. Piximon intervenes, saves them, and offers training at his facility.",
+      "airdate": "1999-07-04",
+      "markers": [],
+      "external_id": "12365"
+    },
+    {
+      "n": 19,
+      "title": "The Prisoner of the Pyramid",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12366/original.jpeg",
+      "synopsis": "T.K. discovers his Crest of Hope and a cave with Digi-code. Izzy receives an e-mail from Datamon asking for help from within Etemon's headquarters.",
+      "airdate": "1999-07-11",
+      "markers": [],
+      "external_id": "12366"
+    },
+    {
+      "n": 20,
+      "title": "The Earthquake of Metalgreymon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12367/original.jpeg",
+      "synopsis": "Tai manages to rescue Sora. Datamon pulls himself and Etemon directly into the Dark Network. When Etemon reappears, Greymon digivolves into MetalGreymon to fight him.",
+      "airdate": "1999-07-25",
+      "markers": [],
+      "external_id": "12367"
+    },
+    {
+      "n": 21,
+      "title": "Home Away From Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12368/original.jpeg",
+      "synopsis": "Tai and Koromon meet with Kari in Tokyo. They discover that Digimon are appearing in the Real World and decide they must go back to the Digital World to help their friends.",
+      "airdate": "1999-08-01",
+      "markers": [],
+      "external_id": "12368"
+    },
+    {
+      "n": 22,
+      "title": "Forget About It!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12369/original.jpeg",
+      "synopsis": "Tai and Agumon return to the Digital World where Tokomon relays what happened - the group has separated and DemiDevimon has tricked T.K. into becoming his \"friend.\"",
+      "airdate": "1999-08-08",
+      "markers": [],
+      "external_id": "12369"
+    },
+    {
+      "n": 23,
+      "title": "Weregarurumon's Diner",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12370/original.jpeg",
+      "synopsis": "Matt, Gabumon, Joe, and Gomamon are forced to work at Digitamamon's diner to pay off a meal.",
+      "airdate": "1999-08-15",
+      "markers": [],
+      "external_id": "12370"
+    },
+    {
+      "n": 24,
+      "title": "No Questions, Please",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12371/original.jpeg",
+      "synopsis": "Izzy is trapped in Vademon's pocket dimension and robbed of his curiosity. DemiDevimon attempts to buy Izzy's Crest from Vademon and, in the confusion, Izzy recovers his Crest and his curiosity.",
+      "airdate": "1999-08-22",
+      "markers": [],
+      "external_id": "12371"
+    },
+    {
+      "n": 25,
+      "title": "Princess Karaoke",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12372/original.jpeg",
+      "synopsis": "Joe and Tai find Mimi being treated like a princess at a palace. Sora convinces her to sing and awaken ShogunGekomom, but ShogunGekomom attacks the kids.",
+      "airdate": "1999-08-29",
+      "markers": [],
+      "external_id": "12372"
+    },
+    {
+      "n": 26,
+      "title": "Sora`s Crest of Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12373/original.jpeg",
+      "synopsis": "Sora tells the group about the meanings of their Crests and how DemiDevimon said her Crest would never glow.",
+      "airdate": "1999-09-05",
+      "markers": [],
+      "external_id": "12373"
+    },
+    {
+      "n": 27,
+      "title": "The Gateway to Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12374/original.jpeg",
+      "synopsis": "Gennai appears and says there is an eighth DigiDestioned and that Myotismon is planning to go to the Real World with an army of evil Digimon to find him/her.",
+      "airdate": "1999-09-12",
+      "markers": [],
+      "external_id": "12374"
+    },
+    {
+      "n": 28,
+      "title": "It`s All in the Cards",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12375/original.jpeg",
+      "synopsis": "The group visits Gennai's home where he unravels some secrets about the Digital World. When the kids return to the castle to open the gate, they battle with Dokugumon.",
+      "airdate": "1999-09-19",
+      "markers": [],
+      "external_id": "12375"
+    },
+    {
+      "n": 29,
+      "title": "Return to Highton View Terrace",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12376/original.jpeg",
+      "synopsis": "The kids return to camp and to Highton View Terrace to find the eighth child. A battle between Garudamon and Mammothmon helps them recall a battle they witnessed four years earlier between a Greymon and a Parrotmon.",
+      "airdate": "1999-09-26",
+      "markers": [],
+      "external_id": "12376"
+    },
+    {
+      "n": 30,
+      "title": "Almost Home Free",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12377/original.jpeg",
+      "synopsis": "The DigiDestined have a series of misadventures trying to get back to their homes in Odaiba. Eventually, they end up getting a ride from Sora's cousin, Duane.",
+      "airdate": "1999-10-03",
+      "markers": [],
+      "external_id": "12377"
+    },
+    {
+      "n": 31,
+      "title": "The Eighth Digivice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12378/original.jpeg",
+      "synopsis": "At long last, the DigiDestined return to their homes. Kari's Digivice - which she has no knowledge of - gets carried off by her cat. The Digivice sets off a signal that brings in DemiDevimon, Raremon, and Izzy.",
+      "airdate": "1999-10-10",
+      "markers": [],
+      "external_id": "12378"
+    },
+    {
+      "n": 32,
+      "title": "Gatomon Comes Calling",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12379/original.jpeg",
+      "synopsis": "The DigiDestined continue their search for the eighth child. Gatomon crosses paths with Kari and wonders if she could be the eighth child.",
+      "airdate": "1999-10-17",
+      "markers": [],
+      "external_id": "12379"
+    },
+    {
+      "n": 33,
+      "title": "Out on the Town",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12380/original.jpeg",
+      "synopsis": "As the DigiDestined continue their search, Matt and T.K. run into Pumpkinmon and Gotsumon, two servants of Myotismon, who are far more interested in having fun than helping Myotismon.",
+      "airdate": "1999-10-24",
+      "markers": [],
+      "external_id": "12380"
+    },
+    {
+      "n": 34,
+      "title": "The Eighth Child Revealed",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12381/original.jpeg",
+      "synopsis": "Wizardmon finds Kari's Digivice and brings Gatomon and Kari together. It is revealed that Kari is the eighth DigiDestined child and that Gatomon is her partner.",
+      "airdate": "1999-10-31",
+      "markers": [],
+      "external_id": "12381"
+    },
+    {
+      "n": 35,
+      "title": "Flower Power",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12382/original.jpeg",
+      "synopsis": "Myotismon creates a barrier of fog around Odaiba and evil Digimon roam the streets. Bakemon and Phantomon begin taking people from their homes and holding them prisoner.",
+      "airdate": "1999-11-07",
+      "markers": [],
+      "external_id": "12382"
+    },
+    {
+      "n": 36,
+      "title": "City Under Siege",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12383/original.jpeg",
+      "synopsis": "Myotismon uses Gatomon to try and identify the eighth child. Kari is found by Phantomon and gives herself up so that Matt and Sora are not harmed.",
+      "airdate": "1999-11-14",
+      "markers": [],
+      "external_id": "12383"
+    },
+    {
+      "n": 37,
+      "title": "Wizardmon`s Gift",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12384/original.jpeg",
+      "synopsis": "The DigiDestined are reunited. Wizardmon saves Kari and Gatomon, but at the cost of his own life.",
+      "airdate": "1999-11-21",
+      "markers": [],
+      "external_id": "12384"
+    },
+    {
+      "n": 38,
+      "title": "Prophecy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12385/original.jpeg",
+      "synopsis": "An ancient DigiWorld prophecy comes true when Myotismon returns as VenomMyotismon.",
+      "airdate": "1999-11-28",
+      "markers": [],
+      "external_id": "12385"
+    },
+    {
+      "n": 39,
+      "title": "The Battle for Earth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12386/original.jpeg",
+      "synopsis": "With the help of the entire team and their Digivices, WarGreymon and MetalGarurumon are able to defeat VenomMyotismon. However, immediately following the battle they must leave for the Digital World, which is once again in danger.",
+      "airdate": "1999-12-05",
+      "markers": [],
+      "external_id": "12386"
+    },
+    {
+      "n": 40,
+      "title": "Enter the Dark Masters",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12387/original.jpeg",
+      "synopsis": "As the DigiDestined return to the Digital World, they learn of the four Dark Masters who have taken it over. MetalSeadramon, Puppetmon, Machinedramon, and Piedmon are all mega level Digimon, and are more than a match for the DigiDestined.",
+      "airdate": "1999-12-12",
+      "markers": [],
+      "external_id": "12387"
+    },
+    {
+      "n": 41,
+      "title": "Sea-Sick and Tired",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12388/original.jpeg",
+      "synopsis": "The kids manage to escape MetalSeadramon's minion, Scorpiomon. They try to escape by sea, but are immediately stopped by MetalSeadramon.",
+      "airdate": "1999-12-19",
+      "markers": [],
+      "external_id": "12388"
+    },
+    {
+      "n": 42,
+      "title": "Under Pressure",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12389/original.jpeg",
+      "synopsis": "Just as the kids are about to be destroyed by MetalSeadramon, Whamon comes to their rescue and they flee to the bottom of the ocean. However, when MetalSedramon catches up to them, a battle begins.",
+      "airdate": "1999-12-26",
+      "markers": [],
+      "external_id": "12389"
+    },
+    {
+      "n": 43,
+      "title": "Playing Games",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12390/original.jpeg",
+      "synopsis": "Whamon is killed trying to help WarGreymon, who finally manages to defeat MetalSeadramon. The kids then go into a forest were they are continually taunted by Puppetmon, who uses toys to move them around.",
+      "airdate": "2000-01-09",
+      "markers": [],
+      "external_id": "12390"
+    },
+    {
+      "n": 44,
+      "title": "Trash Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12391/original.jpeg",
+      "synopsis": "Matt is tricked by Cherrymon, a minion of Puppetmon, into believing that Tai is his enemy. Meanwhile, Puppetmon's platoon of Garbagemon are handled by Lillymon and MetalGreymon.",
+      "airdate": "2000-01-16",
+      "markers": [],
+      "external_id": "12391"
+    },
+    {
+      "n": 45,
+      "title": "The Ultimate Clash",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12392/original.jpeg",
+      "synopsis": "Tensions run high as a fight breaks out between Matt and Tai as well as their respective Digimon partners. Kari's body is taken over suddenly by a strange entity, to explain why the children were chosen to save the DigiWorld in the first place.",
+      "airdate": "2000-01-23",
+      "markers": [],
+      "external_id": "12392"
+    },
+    {
+      "n": 46,
+      "title": "Etemon`s Comeback Tour",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12393/original.jpeg",
+      "synopsis": "Etemon returns as MetalEtemon to take revenge on the DigiDestined. Joe and Mimi rescue Ogremon, who was injured when Woodmon attacked him.",
+      "airdate": "2000-01-30",
+      "markers": [],
+      "external_id": "12393"
+    },
+    {
+      "n": 47,
+      "title": "Ogremon`s Honor",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12394/original.jpeg",
+      "synopsis": "Leomon returns as SaberLeomon, and saves Joe and Mimi from MetalEtemon. He is later destroyed by MetalEtemon when he attemps to save Mimi a second time.",
+      "airdate": "2000-02-06",
+      "markers": [],
+      "external_id": "12394"
+    },
+    {
+      "n": 48,
+      "title": "My Sister`s Keeper",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12395/original.jpeg",
+      "synopsis": "Kari falls ill, and Tai becomes nearly hysterical in his attempts to help her. Machinedramon attacks them in a mechanical city under his control, and the group is separated.",
+      "airdate": "2000-02-13",
+      "markers": [],
+      "external_id": "12395"
+    },
+    {
+      "n": 49,
+      "title": "The Crest of Light",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12396/original.jpeg",
+      "synopsis": "Kari recovers, and, along with Sora and T.K., begins searching for the others. They run into WaruMonzaemon, and Kari frees the Numemon he has enslaved, who then begin calling her \"Queen\".",
+      "airdate": "2000-02-20",
+      "markers": [],
+      "external_id": "12396"
+    },
+    {
+      "n": 50,
+      "title": "Joe`s Battle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12397/original.jpeg",
+      "synopsis": "Joe goes off on his own to find Matt. Angewomon faces off against LadyDevimon, one of Piedmon's servants. After LadyDevimon's defeat, Piedmon tries to approach the group.",
+      "airdate": "2000-02-27",
+      "markers": [],
+      "external_id": "12397"
+    },
+    {
+      "n": 51,
+      "title": "The Crest of Friendship",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12398/original.jpeg",
+      "synopsis": "Piedmon and WarGreymon battle, although WarGreymon is no match for him. Matt confronts his inner darkness, as does Sora.",
+      "airdate": "2000-03-05",
+      "markers": [],
+      "external_id": "12398"
+    },
+    {
+      "n": 52,
+      "title": "Piedmon`s Last Jest",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12399/original.jpeg",
+      "synopsis": "Piedmon begins to turn the kids and Digimon into key chains. After nearly all allies are stopped, T.K. realizes the hope his brother Matt has for him, making Angemon digivolve into MagnaAngemon.",
+      "airdate": "2000-03-12",
+      "markers": [],
+      "external_id": "12399"
+    },
+    {
+      "n": 53,
+      "title": "Now Apocalymon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12400/original.jpeg",
+      "synopsis": "Although the Dark Masters are defeated, it is not enough to stop the complete destruction of the Digital World and the children and their Digimon are forced to face the true mastermind of all the chaos - Apocalymon.",
+      "airdate": "2000-03-19",
+      "markers": [],
+      "external_id": "12400"
+    },
+    {
+      "n": 54,
+      "title": "The Fate of Two Worlds",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/12401/original.jpeg",
+      "synopsis": "Apocalymon is defeated, and the DigiDestined prepare to spend the rest of their summer in the Digital World. However, Gennai informs them that they either have to leave quickly, or remain in the Digital World forever.",
+      "airdate": "2000-03-26",
+      "markers": [],
+      "external_id": "12401"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mad Pulse",
+      "artist": "MADKID",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "beat up",
+      "artist": "Ai Tomioka",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Target ~Akai Shougeki~ (ターゲット~赤い衝撃~; Target ~Red Shock~)",
+      "artist": "Kōji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Various Colors",
+      "artist": "AiM",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "FACTION",
+      "artist": "Wienners",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Pedal",
+      "artist": "Aiiro Apollo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Pedal",
+      "artist": "Aiiro Apollo",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mikakunin Hikousen",
+      "artist": "Takayoshi Tanimoto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kuyashi-sa wa Tane",
+      "artist": "Chiai Fujikawa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Butter-Fly",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hanareteite mo",
+      "artist": "AiM",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Butter-Fly ~tri.Version~",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Digimon Are Back (Again!)",
+      "artist": "John Majkut [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Butter-Fly ~tri.Version~",
+      "artist": "The DigiDestined, Digimon singers, Ayumi Miyazaki, AiM with Koji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Butter-fly ~tri.Version~",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Digimon Are Back (Again!)",
+      "artist": "John Majkut [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ai Kotoba (アイコトバ)",
+      "artist": "Ayumi Miyazaki & AiM",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Butter-fly ~tri.version~",
+      "artist": "Koji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Digimon Are Back (Again!)",
+      "artist": "John Majkut [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "keep on ~tri.version~",
+      "artist": "AiM",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "DiVE!!",
+      "artist": "Amatsuki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aoi Honō Syndrome (青い炎シンドローム; Blue Flame Syndrome)",
+      "artist": "Riho Iida",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Butter-fly ~tri.Version~",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Digimon Are Back (Again!)",
+      "artist": "John Majkut [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Boku ni totte (僕にとって; For me)",
+      "artist": "KNIFE OF DAY",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Butter-Fly ~tri. Version~",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Butterfly",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Digimon Are Back (Again!)",
+      "artist": "John Majkut [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Seven ~tri.Version~",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Butter-Fly ~tri. Version~",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Butter-Fly",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Digimon Are Back (Again!)",
+      "artist": "John Majkut",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I wish ~tri. Version~",
+      "artist": "Ai Maeda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I wish.",
+      "artist": "Ai Maeda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Stand Up!",
+      "artist": "Twill",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fusion United",
+      "artist": "Fusion United Team",
+      "episodes": "25"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Act as One (Digimon Fusion Theme)",
+      "artist": "Noam Kaniel and Frederic Jaffre",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Never Give Up! (ネバギバ！)",
+      "artist": "Sonar Pocket",
+      "episodes": "1-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fusion United",
+      "artist": "Fusion United Team",
+      "episodes": "01-30"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hirari",
+      "artist": "Wada Kouji",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Gou-ing! Going! My Soul!!",
+      "artist": "Dynamite SHU",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Never Surrender",
+      "artist": "Jason Joseph",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "One Star",
+      "artist": "Ito Yousuke",
+      "episodes": "01-24"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "A World For Us All",
+      "artist": "Chris Horvath [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Biggest Dreamer",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yuuhi No Yakusoku",
+      "artist": "AiM",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Target - Akai Shōgeki (ターゲット~赤い衝撃~)",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Stand By Me - Hito Natsu no Bōken (スタンド・バイ・ミー~ひと夏の冒険~)",
+      "artist": "AiM",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Butter-Fly",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sakuhin #2 Haru I Chouchou~Bokura no Wargame~",
+      "artist": "AiM",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Butter-Fly",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "A World For Us All",
+      "artist": "Chris Horvath [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Biggest Dreamer",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Moving On",
+      "artist": "Maeda Ai",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "A World For Us All",
+      "artist": "Chris Horvath [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "FIRE!!",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Innocent ~Mujaki na Mama de~",
+      "artist": "Kouji Wada",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Digimon Tamers Theme",
+      "artist": "Paul Gordon [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Biggest Dreamer",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "My Tomorrow",
+      "artist": "AiM",
+      "episodes": "1-23"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Digimon Theme",
+      "artist": "Paul Gordon",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Target ~Akai Shougeki~ (Target ~Red Shock~)",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ashita wa Atashi no Kaze ga Fuku",
+      "artist": "AiM",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "A World For Us All",
+      "artist": "Chris Horvath [English Version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Friend ~Itsu Mademo Wasurenai~",
+      "artist": "AiM",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "FIRE!",
+      "artist": "Wada Kouji",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Butter-fly",
+      "artist": "Kouji Wada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Digimon Theme",
+      "artist": "Paul Gordon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "I Wish",
+      "artist": "Ai Maeda",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "BRAVE GROOVE",
+      "artist": "iLiFE!",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Datte Kyo made Koiwazurai (だって今日まで恋煩い; Because I've Been Lovesick)",
+      "artist": "BMK",
+      "episodes": "13-21"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Q?",
+      "artist": "Reol",
+      "episodes": "14-26"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Gacchen! (ガッチェン!)",
+      "artist": "SymaG",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Ai",
+      "artist": "Ami Wajima",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "New World",
+      "artist": "TWILL",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "The 3 of Us",
+      "artist": "Fusion United Team",
+      "episodes": "31-53"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Hirari",
+      "artist": "Wada Kouji",
+      "episodes": "30-48"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Ryuusei",
+      "artist": "MiyuMiyu",
+      "episodes": "25-47"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "An Endless Tale",
+      "artist": "Kouji Wada & AiM",
+      "episodes": "27-50"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Days ~Aijou to Nichijou~",
+      "artist": "AiM",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Itsumo Itsudemo (Always, Whenever)",
+      "artist": "AiM",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "keep on",
+      "artist": "Ai Maeda",
+      "episodes": "27-54"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Miramira (ミラミラ)",
+      "artist": "YENA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Hikariau Monotachi (ひかりあうものたち)",
+      "artist": "Bye-Bye-Hand No Houteishiki",
+      "episodes": "22-31"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Mind game",
+      "artist": "Maica_n",
+      "episodes": "27-38"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Little Pi (リトルピ)",
+      "artist": "Ange☆Reve",
+      "episodes": "26-38"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Fusion Forever",
+      "artist": "Fusion United Team",
+      "episodes": "54"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Gou'ing! Going! My Soul!!",
+      "artist": "Dynamite SHU",
+      "episodes": "48"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Monster Disco",
+      "artist": "Shikao Suga × Hyadain",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Monster Disco",
+      "artist": "Shikao Suga × Hyadain",
+      "episodes": "32-44"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Overseas Highway",
+      "artist": "Wolpis Carter",
+      "episodes": "39-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Perfect World (パーフェクトワールド)",
+      "artist": "Traffic Light",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "STRAWBERRY",
+      "artist": "kobore",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "STRAWBERRY",
+      "artist": "kobore",
+      "episodes": "45-57"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Dreamers",
+      "artist": "ATEEZ",
+      "episodes": "55-67"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Take Me Maybe",
+      "artist": "Penthouse",
+      "episodes": "58-67"
+    }
+  ],
+  "relations": []
+}

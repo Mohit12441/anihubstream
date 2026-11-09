@@ -1,0 +1,193 @@
+{
+  "id": "date-a-live-v",
+  "title": "Date A Live V",
+  "native": "デート・ア・ライブV",
+  "year": 2024,
+  "rating": 7.6,
+  "season": "Spring 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151380-gvN5PjrybTw2.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151380-gvN5PjrybTw2.jpg",
+  "accent": "#e48650",
+  "synopsis": "Shidou Itsuka faces greater peril than ever due to his continued involvement with Ratatoskr. He has already sealed 10 Spirits, and Isaac Westcott, leader of Deus Ex Machina Industries, has finally decided to kill Shidou and plunder the Spirits' powers for himself.\n\nTo achieve his goal, Isaac declares an all-out war against Ratatoskr, forcing the organization to exhaust its resources to ensure Shidou's survival. Despite being severely outnumbered and outmatched, a glimmer of hope exists in the form of the Spirit of Time, Kurumi Tokisaki. Shidou must seal and acquire Kurumi's power to travel to the past and confront the Spirit of Origin—the catalyst that started it all.\n\n(Source: MAL Rewrite)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "date-a-live-v-byaqp2",
+    "mal": 52196,
+    "anilist": 151380,
+    "kitsu": 46207
+  },
+  "skip_key_id": 52196,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "date a live v テ ート ア ライフ v tv finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Beginnings of War",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/a39f7649c49ffe6491c9a32a2e27760d1712750337_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331444"
+    },
+    {
+      "n": 2,
+      "title": "Final Respite",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/88ec7a3f4db43b3a59ea17d6d22831861713357330_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331445"
+    },
+    {
+      "n": 3,
+      "title": "The Spirit's Resurrection",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/76d2034457dd8e128667cace58f25aee1713965881_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364033"
+    },
+    {
+      "n": 4,
+      "title": "The Spirit of Origin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/b4bc5dfed130950aeb4ff24d209a7b9a1714555850_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364034"
+    },
+    {
+      "n": 5,
+      "title": "Mother Mio",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d23fa432956ca9283f74265ddc8dbe5f1715174636_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364035"
+    },
+    {
+      "n": 6,
+      "title": "The Three Magi",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/39402ac0e251bb89cb9c0301bd18b50b1715782897_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364036"
+    },
+    {
+      "n": 7,
+      "title": "The World Tree Sheds Leaves",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/c18cc89f642cdfdebefaff2a0769eda91716387247_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364037"
+    },
+    {
+      "n": 8,
+      "title": "The One Who Pulled the Trigger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e59f9305df307d70ceb1c1f47d6ed17f1716985545_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364038"
+    },
+    {
+      "n": 9,
+      "title": "A \"Second\" Date",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/c244bfd23e5df1d9e94a859b7b5dc8321717594571_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364039"
+    },
+    {
+      "n": 10,
+      "title": "A Battlefield That Shouldn't Be Possible",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c17623206ac88469f60c6532a34a493b1718201023_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364040"
+    },
+    {
+      "n": 11,
+      "title": "A Fleeting Paradise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/0fe76f565d59a3b5c3a1487dff014bcf1718806865_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364041"
+    },
+    {
+      "n": 12,
+      "title": "And The One She Chooses Is",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/c201a8175db2351901de63617357bda71719407771_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "364042"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Paradoxes",
+      "artist": "Miyu Tomita",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hitohira",
+      "artist": "sweet ARMS",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

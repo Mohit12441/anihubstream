@@ -1,0 +1,725 @@
+{
+  "id": "armored-trooper-votoms",
+  "title": "Armored Trooper Votoms",
+  "native": "装甲騎兵ボトムズ",
+  "year": 1983,
+  "rating": 7.6,
+  "season": "Spring 1983",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2582-aB1Vh1jDobQ3.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2582-aB1Vh1jDobQ3.jpg",
+  "accent": "#e47850",
+  "synopsis": "A century of bloodshed between warring star systems has plunged nearly 200 worlds into the flames of war. Now, an uneasy truce has settled across the Astragius Galaxy...\n\nChirico Cuvie, a special forces powered-armor pilot is suddenly transferred into a unit engaged in a secret and highly illegal mission to steal military secrets - from their own military! Now he's on the run...from his own army!\n\nUnsure of his loyalties and to cover their own tracks, Chirico is left behind to die in space. Surviving by luck, the renegade is now hunted by both the conspirators and military intelligence.\n\nHe is driven by the haunting image of a mysterious and beautiful woman - the objective of their mission, and his sole clue to unraveling their treacherous scheme. But the conspirators will do anything to preserve their mysterious agenda... \n\n(Source: AnimeNfo)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "armored-trooper-votoms-onsewj",
+    "mal": 2582,
+    "anilist": 2582,
+    "kitsu": 2347
+  },
+  "skip_key_id": 2582,
+  "skip_key_space": "mal",
+  "episode_total": 52,
+  "added_at": null,
+  "search_text": "armored trooper votoms 装甲騎兵ホ トムス tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "mystery",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "War's End",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-04-01",
+      "markers": [],
+      "external_id": "40271"
+    },
+    {
+      "n": 2,
+      "title": "Uoodo",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-04-08",
+      "markers": [],
+      "external_id": "40272"
+    },
+    {
+      "n": 3,
+      "title": "Encounter",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-04-15",
+      "markers": [],
+      "external_id": "40273"
+    },
+    {
+      "n": 4,
+      "title": "Battling",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-04-22",
+      "markers": [],
+      "external_id": "40274"
+    },
+    {
+      "n": 5,
+      "title": "The Trap",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-04-29",
+      "markers": [],
+      "external_id": "40275"
+    },
+    {
+      "n": 6,
+      "title": "Prototype",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-05-06",
+      "markers": [],
+      "external_id": "40276"
+    },
+    {
+      "n": 7,
+      "title": "City Raid",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-05-13",
+      "markers": [],
+      "external_id": "40277"
+    },
+    {
+      "n": 8,
+      "title": "The Deal",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-05-20",
+      "markers": [],
+      "external_id": "40278"
+    },
+    {
+      "n": 9,
+      "title": "The Rescue",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-05-27",
+      "markers": [],
+      "external_id": "40279"
+    },
+    {
+      "n": 10,
+      "title": "Red Shoulder",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-06-03",
+      "markers": [],
+      "external_id": "40280"
+    },
+    {
+      "n": 11,
+      "title": "Counterattack",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-06-10",
+      "markers": [],
+      "external_id": "40281"
+    },
+    {
+      "n": 12,
+      "title": "Bonds",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-06-17",
+      "markers": [],
+      "external_id": "40282"
+    },
+    {
+      "n": 13,
+      "title": "Escape",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-06-24",
+      "markers": [],
+      "external_id": "40283"
+    },
+    {
+      "n": 14,
+      "title": "Assemble EX-10",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-07-01",
+      "markers": [],
+      "external_id": "40284"
+    },
+    {
+      "n": 15,
+      "title": "Doubts",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-07-08",
+      "markers": [],
+      "external_id": "40285"
+    },
+    {
+      "n": 16,
+      "title": "Clean Sweep",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-07-15",
+      "markers": [],
+      "external_id": "40286"
+    },
+    {
+      "n": 17,
+      "title": "Reunion",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-07-22",
+      "markers": [],
+      "external_id": "40287"
+    },
+    {
+      "n": 18,
+      "title": "Tournabout",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-07-29",
+      "markers": [],
+      "external_id": "40288"
+    },
+    {
+      "n": 19,
+      "title": "Intentions",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-08-05",
+      "markers": [],
+      "external_id": "40289"
+    },
+    {
+      "n": 20,
+      "title": "Fyana",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-08-12",
+      "markers": [],
+      "external_id": "40290"
+    },
+    {
+      "n": 21,
+      "title": "Upriver",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-08-19",
+      "markers": [],
+      "external_id": "40291"
+    },
+    {
+      "n": 22,
+      "title": "Contact Blast",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-08-26",
+      "markers": [],
+      "external_id": "40292"
+    },
+    {
+      "n": 23,
+      "title": "Complications",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-09-02",
+      "markers": [],
+      "external_id": "40293"
+    },
+    {
+      "n": 24,
+      "title": "Intersection",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-09-09",
+      "markers": [],
+      "external_id": "40294"
+    },
+    {
+      "n": 25,
+      "title": "Infiltration",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-09-16",
+      "markers": [],
+      "external_id": "40295"
+    },
+    {
+      "n": 26,
+      "title": "Closing In",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-09-23",
+      "markers": [],
+      "external_id": "40296"
+    },
+    {
+      "n": 27,
+      "title": "Dark Change",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-09-30",
+      "markers": [],
+      "external_id": "40297"
+    },
+    {
+      "n": 28,
+      "title": "Destiny",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-10-07",
+      "markers": [],
+      "external_id": "40298"
+    },
+    {
+      "n": 29,
+      "title": "Two People",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-10-14",
+      "markers": [],
+      "external_id": "40299"
+    },
+    {
+      "n": 30,
+      "title": "Phantasm",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-10-21",
+      "markers": [],
+      "external_id": "40300"
+    },
+    {
+      "n": 31,
+      "title": "Nonaggression Zone",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-10-28",
+      "markers": [],
+      "external_id": "40301"
+    },
+    {
+      "n": 32,
+      "title": "Ypsilon",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-11-04",
+      "markers": [],
+      "external_id": "40302"
+    },
+    {
+      "n": 33,
+      "title": "Showdown",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-11-11",
+      "markers": [],
+      "external_id": "40303"
+    },
+    {
+      "n": 34,
+      "title": "Planet Sunsa",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-11-18",
+      "markers": [],
+      "external_id": "40304"
+    },
+    {
+      "n": 35,
+      "title": "Deadline",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-11-25",
+      "markers": [],
+      "external_id": "40305"
+    },
+    {
+      "n": 36,
+      "title": "Love and Hate",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-12-02",
+      "markers": [],
+      "external_id": "40306"
+    },
+    {
+      "n": 37,
+      "title": "Captives",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-12-09",
+      "markers": [],
+      "external_id": "40307"
+    },
+    {
+      "n": 38,
+      "title": "Darkness",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-12-16",
+      "markers": [],
+      "external_id": "40308"
+    },
+    {
+      "n": 39,
+      "title": "Perfect Soldier",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-12-23",
+      "markers": [],
+      "external_id": "40309"
+    },
+    {
+      "n": 40,
+      "title": "Friends",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1983-12-30",
+      "markers": [],
+      "external_id": "40310"
+    },
+    {
+      "n": 41,
+      "title": "Quent",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1984-01-06",
+      "markers": [],
+      "external_id": "40311"
+    },
+    {
+      "n": 42,
+      "title": "The Desert",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1984-01-13",
+      "markers": [],
+      "external_id": "40312"
+    },
+    {
+      "n": 43,
+      "title": "Legacy",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1984-01-20",
+      "markers": [],
+      "external_id": "40313"
+    },
+    {
+      "n": 44,
+      "title": "The Forbidden",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1984-01-27",
+      "markers": [],
+      "external_id": "40314"
+    },
+    {
+      "n": 45,
+      "title": "Encounter",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1984-02-03",
+      "markers": [],
+      "external_id": "40315"
+    },
+    {
+      "n": 46,
+      "title": "Permonition",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1984-02-10",
+      "markers": [],
+      "external_id": "40316"
+    },
+    {
+      "n": 47,
+      "title": "Disaster",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1984-02-17",
+      "markers": [],
+      "external_id": "40317"
+    },
+    {
+      "n": 48,
+      "title": "Successor",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1984-02-24",
+      "markers": [],
+      "external_id": "40318"
+    },
+    {
+      "n": 49,
+      "title": "Overman",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1984-03-02",
+      "markers": [],
+      "external_id": "40319"
+    },
+    {
+      "n": 50,
+      "title": "Storm Clouds",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1984-03-09",
+      "markers": [],
+      "external_id": "40320"
+    },
+    {
+      "n": 51,
+      "title": "Carnage",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1984-03-16",
+      "markers": [],
+      "external_id": "40321"
+    },
+    {
+      "n": 52,
+      "title": "Shooting Star",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "1984-03-23",
+      "markers": [],
+      "external_id": "40322"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Itsumo Anata ga (いつもあなたが)",
+      "artist": "Tetsuro Oda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hoshi wo Motomete",
+      "artist": "Aira Yuuki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Honoo no Sadame",
+      "artist": "TETSU",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Itsumo Anata ga",
+      "artist": "TETSU",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tetsu no Lullaby (鉄のララバイ)",
+      "artist": "George Yanagi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Honō no Sadame (炎のさだめ)",
+      "artist": "Tetsuro Oda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tetsu no Lullaby",
+      "artist": "George Yanagi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bye-Bye Brother",
+      "artist": "George Yanagi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kaze ga Shitte iru (風が知っている; The Winds Knows)",
+      "artist": "Shinya Iguchi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yume no Kagi (夢の鍵; Key of Dream)",
+      "artist": "Shinya Iguchi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Honō no Sadame (炎のさだめ)",
+      "artist": "Tetsuro Oda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Honō no Sadame (炎のさだめ)",
+      "artist": "Tetsuro Oda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Itsumo Anata ga (いつもあなたが)",
+      "artist": "Tetsuro Oda",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Honoo no Sadame (炎のさだめ)",
+      "artist": "Tetsurō Oda",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Itsumo Anata ga (いつもあなたが)",
+      "artist": "Tetsurō Oda",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

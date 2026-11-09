@@ -1,0 +1,56 @@
+{
+  "id": "boku-no-kokoro-no-yabai-yatsu-movie",
+  "title": "The Dangers in My Heart: The Movie",
+  "native": "劇場版 僕の心のヤバイやつ",
+  "year": 2026,
+  "rating": 7.9,
+  "season": "Winter 2026",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx182317-zzpOnAECrM2o.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx182317-zzpOnAECrM2o.png",
+  "accent": "#ae5de4",
+  "synopsis": "A re-edit of both anime seasons featuring newly added footage and will depict the story of Ichikawa and Yamada after the events of the TV series.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "boku-no-kokoro-no-yabai-yatsu-movie-r073t5",
+    "mal": 59985,
+    "anilist": 182317,
+    "kitsu": 49249
+  },
+  "skip_key_id": 59985,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "the dangers in my heart the movie 劇場版 僕の心のヤハ イやつ movie finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Boku no Kokoro no Yabai Yatsu Movie (Movie)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a57b91d56e966ba50f97fe2-landscape.webp",
+      "synopsis": "A re-edit of both anime seasons featuring newly added footage and will depict the story of Ichikawa and Yamada after the events of the TV series.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "373531"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,74 @@
+{
+  "id": "akira",
+  "title": "Akira",
+  "native": "AKIRA",
+  "year": 1988,
+  "rating": 7.9,
+  "season": "Summer 1988",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx47-4CR68arv452h.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx47-4CR68arv452h.jpg",
+  "accent": "#e45d50",
+  "synopsis": "It's the year 2019, thirty-one years have passed since the start of World War III. A top-secret child with amazing powers of the mind breaks free from custody and accidentally gets a motorcycle gang involved in the project. This incident triggers psychic powers within one of the gang members, Tetsuo, and he is taken by the army to be experimented on. His mind has been altered and is now on the path of war, seeking revenge on the society that once called him weak. \n\n(Source: FUNimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "akira-tnx2z1",
+    "mal": 47,
+    "anilist": 47,
+    "kitsu": 29
+  },
+  "skip_key_id": 47,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "akira akira movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "horror",
+    "mystery",
+    "sci-fi",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Akira (Movie)",
+      "runtime": "124:00",
+      "runtime_seconds": 7440,
+      "thumb": "https://cdn.myanimelist.net/images/anime/1408/114012l.webp",
+      "synopsis": "Japan, 1988. An explosion caused by a young boy with psychic powers tears through the city of Tokyo and ignites the fuse that leads to World War III. In order to prevent any further destruction, he is captured and taken into custody, never to be heard from again. Now, in the year 2019, a restored version of the city known as Neo-Tokyo—an area rife with gang violence and terrorism against the current government—stands in its place. Here, Shoutarou Kaneda leads \"the Capsules,\" a group of misfits known for riding large, custom motorcycles and being in constant conflict with their rivals \"the Clowns.\"\n\nDuring one of these battles, Shoutarou's best friend Tetsuo Shima is caught up in an accident with an esper who finds himself in the streets of Tokyo after escaping confinement from a government institution. Through this encounter, Tetsuo begins to develop his own mysterious abilities, as the government seeks to quarantine this latest psychic in a desperate attempt to prevent him from unleashing the destructive power that could once again bring the city to its knees.\n\n[Written by MAL Rewrite]",
+      "airdate": null,
+      "markers": [],
+      "external_id": "1301"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaneda",
+      "artist": "Geinoh Yamashiro-gumi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Ya Ji La",
+      "artist": "Tai Chi [Cantonese dub]",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

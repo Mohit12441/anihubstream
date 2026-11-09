@@ -1,0 +1,244 @@
+{
+  "id": "akb0048-next-stage",
+  "title": "AKB0048: next stage",
+  "native": "AKB0048 next stage",
+  "year": 2013,
+  "rating": 7.4,
+  "season": "Winter 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx14941-1O4YajpBThuM.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx14941-1O4YajpBThuM.jpg",
+  "accent": "#f1e443",
+  "synopsis": "The road trip to war has already been brutal for the 77th generation of understudies to AKB0048, the combination singing group and combat squad seeking to bring peace and entertainment back to the universe. However, the competition between the individual candidates, as well as the remaining 75th and 76th generation understudies, is about to get even rougher. With the opportunity to become a successor to one of the original members of the legendary singing squad hanging in the balance, the fights on stage and on the battlefield will become even more cutthroat, and things are only going to get nastier when it turns out that someone has been feeding critical information to the opposing DES forces. Will the revelation of the source of the Kiraras prove to be a deadly misstep in the intricate choreography that’s allowed the team to keep dancing out of danger? Will public opinion prove to be more important than actual skill and valor as the squad undergoes a series of grueling trials by fan?\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "akb0048:-next-stage-hee0if",
+    "mal": 14941,
+    "anilist": 14941,
+    "kitsu": 7184
+  },
+  "skip_key_id": 14941,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "akb0048 next stage akb0048 next stage tv finished",
+  "genres": [
+    "drama",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Young Girls' Trial",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171768/original.jpeg",
+      "synopsis": "Tsubasa makes an unexpected announcement.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171768"
+    },
+    {
+      "n": 2,
+      "title": "Shocking New Development!?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171769/original.jpeg",
+      "synopsis": "Following the televised AKB trial, Chieri's popularity gets a boost. Despite her newly found popularity, she can't seem to find her confidence.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171769"
+    },
+    {
+      "n": 3,
+      "title": "Idols Before Dawn",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171770/original.jpeg",
+      "synopsis": "The understudies participate in a handshake event while Nagisa's concern for Chieri continues to grow.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171770"
+    },
+    {
+      "n": 4,
+      "title": "The General Elections",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171771/original.jpeg",
+      "synopsis": "As the winners are revealed, some of them disclose their true intentions.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171771"
+    },
+    {
+      "n": 5,
+      "title": "The Forbidden Star",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171772/original.jpeg",
+      "synopsis": "Depression and jealousy grow among the members who were unselected at General Elections.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171772"
+    },
+    {
+      "n": 6,
+      "title": "Inheritor of the Light",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171774/original.jpeg",
+      "synopsis": "All the girls vie for the Center Nova position!",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171774"
+    },
+    {
+      "n": 7,
+      "title": "Mimori's Revolution",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171773/original.jpeg",
+      "synopsis": "When a successor is named, the girls are apprehensive about whether or not the role will change her. The new trainee prepares for succession in the underground shrine.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171773"
+    },
+    {
+      "n": 8,
+      "title": "Final Battle on Akibastar",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171775/original.jpeg",
+      "synopsis": "When Yuko starts spending more time alone, her teammates become worried. Mikako tells Yuko that she must embrace her loneliness in order to be Center Nova.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171775"
+    },
+    {
+      "n": 9,
+      "title": "Blue Betrayal",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171776/original.jpeg",
+      "synopsis": "AKB0048 barely escapes the DES, and they end up in the middle of nowhere.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171776"
+    },
+    {
+      "n": 10,
+      "title": "Shouting Paradise",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171777/original.jpeg",
+      "synopsis": "Thanks to Michan's actions, they barely escape the DES. But with their systems damaged, the ship is unable to leave!",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171777"
+    },
+    {
+      "n": 11,
+      "title": "Beyond the Door",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171778/original.jpeg",
+      "synopsis": "Chieri tells of how she came to be in AKB0048. Later, a touching moment between father and daughter quickly becomes disastrous.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171778"
+    },
+    {
+      "n": 12,
+      "title": "The Road to the Stage",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171780/original.jpeg",
+      "synopsis": "Mamoru and the other WOTA members infiltrate Akibastar while Chieri remains in shock after her father's death.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171780"
+    },
+    {
+      "n": 13,
+      "title": "NO NAME...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171779/original.jpeg",
+      "synopsis": "Despite relentless fans and a DES attach, the show must go on!",
+      "airdate": null,
+      "markers": [],
+      "external_id": "171779"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Aruji Naki Sono Koe",
+      "artist": "NO NAME",
+      "episodes": "2-7,9-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kono Namida wo Kimi ni Sasagu",
+      "artist": "NO NAME",
+      "episodes": "1-2,5-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kibou ni Tsuite",
+      "artist": "No Name",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Niji no Ressha (虹の列車)",
+      "artist": "AKB48",
+      "episodes": "13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yume wa Nando Demo Umarekawaru",
+      "artist": "No Name",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kibou ni Tsuite",
+      "artist": "NO NAME",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Sasae (AKB0048 ver.)",
+      "artist": "BOUNCEBACK",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Aruji Naki Sono Koe",
+      "artist": "NO NAME",
+      "episodes": "13"
+    }
+  ],
+  "relations": []
+}

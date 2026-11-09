@@ -1,0 +1,191 @@
+{
+  "id": "arte",
+  "title": "Arte",
+  "native": "アルテ",
+  "year": 2020,
+  "rating": 7.2,
+  "season": "Spring 2020",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/poster_images/42479/medium.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/110547-uB6fv50H0hFU.jpg",
+  "accent": "#2ee6a8",
+  "synopsis": "Firenze, early 16th century. The birthplace of the renaissance era, where art is thriving. In one small corner of this vast city, one sheltered girl's journey begins. She dreams of becoming an artist, an impossible career for a girl born into a noble family. In those days, art was an exclusively male profession, with woman facing strong discrimination. In spite of these challenges, Arte perseveres with hard work and a positive attitude! (Source: Silent Manga Audition)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42479,
+    "anilist": 110547,
+    "mal": 40128
+  },
+  "skip_key_id": 40128,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-11-06 06:50:06",
+  "search_text": "arte アルテ tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I Want to Be an Apprentice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/f616cd64403d4b660e3e2d5c894073191658101386_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278078"
+    },
+    {
+      "n": 2,
+      "title": "A New Life",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/21ef5336a887edc7ce0228765f66180f1658101565_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278079"
+    },
+    {
+      "n": 3,
+      "title": "First Job",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c6d32a423270a7bee7fd27b8ff63f1101658101577_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278121"
+    },
+    {
+      "n": 4,
+      "title": "Courtesan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ee80ab57d38ac5293aff0f3f0b82612e1658101745_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278235"
+    },
+    {
+      "n": 5,
+      "title": "Inescapable Bond",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/5ef6dc6e86239942dae24a45c2a5a2e51658101764_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278236"
+    },
+    {
+      "n": 6,
+      "title": "Trade Guild",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/dab72695ea2e75b93169a7585e713cd81658101894_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278977"
+    },
+    {
+      "n": 7,
+      "title": "The Venetian Noble",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/e059c314309c28bb178a601049d584141658101914_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "278979"
+    },
+    {
+      "n": 8,
+      "title": "A New Chapter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b6533e4ced6dcabc6fedd972d92ed3fc1658102118_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279073"
+    },
+    {
+      "n": 9,
+      "title": "Naughty Child",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6ca97954474717cc128cc70a244b9b591658102105_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279281"
+    },
+    {
+      "n": 10,
+      "title": "Katarina's Dinner",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/1f315b9954b373091328702403a4ba2c1658102293_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279841"
+    },
+    {
+      "n": 11,
+      "title": "The Faliers' Portrait Painter",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/78d6a0efd81133c520690751713204a51658102321_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "279842"
+    },
+    {
+      "n": 12,
+      "title": "Apprentice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b07e832431a1267a4453683db63629041658102467_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "280622"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Clover",
+      "artist": "Maaya Sakamoto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hare Moyō (Sunny Design)",
+      "artist": "Kiyono Yasuno",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

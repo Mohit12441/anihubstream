@@ -1,0 +1,372 @@
+{
+  "id": "darker-than-black",
+  "title": "Darker than Black",
+  "native": "DARKER THAN BLACK -黒の契約者-",
+  "year": 2007,
+  "rating": 7.7,
+  "season": "Spring 2007",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b2025-ZKVteVzUyFLH.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b2025-ZKVteVzUyFLH.png",
+  "accent": "#a16b28",
+  "synopsis": "In Tokyo, an impenetrable field known as \"Hell's Gate\" appeared ten years ago. At the same time, psychics who wield paranormal powers at the cost of their conscience also emerged. Hei is one of the most powerful of these psychic agents, and along with his blind associate, Yin, works for one of the many rival agencies vying to unlock the mysteries of Hell's Gate.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Darker than Black: Beneath Cherry Blossoms in Full Bloom (2008)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 1824,
+    "anilist": 2025,
+    "mal": 2025,
+    "hianime": "darker-than-black-a0mp4k"
+  },
+  "skip_key_id": 2025,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": "2026-10-14 08:15:04",
+  "search_text": "darker than black darker than black 黒の契約者 tv finished",
+  "genres": [
+    "action",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Fallen Star of a Contract... (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31204/original.jpg",
+      "synopsis": "Li Shanshun is a Chinese student just moving to Japan. Upon moving in his new apartment he meets a woman named Haraguchi. He sees here again that night, after observing the stars, and even saves her from getting caught by the cops. It seems Haraguchi is in something she shouldn't be as Li saves her from being kidnapped after running into her again. But a second rescue is out of the question since the kidnapper is a Contractor. Li is knocked off a bridge and left for dead and Haraguchi is taken away. Is Li really dead? Or is there more than meets the eye when it comes to him?",
+      "airdate": "2007-04-05",
+      "markers": [],
+      "external_id": "31204"
+    },
+    {
+      "n": 2,
+      "title": "The Fallen Star of a Contract... (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31205/original.jpg",
+      "synopsis": "As Li and Haraguchi continue to avoid Alan and the other Contractors, Haraguchi reveals that her actual name is Chiaki Shinoda. She also says she will give him the information she received from Rui. Upon retrieving the information Lee leaves Chiaki behind and takes of with the information. But everything is not as it seems. After getting a little ways away Li is attacked by Alan and the other Contractors. Can he survive?",
+      "airdate": "2007-04-12",
+      "markers": [],
+      "external_id": "31205"
+    },
+    {
+      "n": 3,
+      "title": "A New Star Shines in the Dawn Sky... (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31206/original.jpg",
+      "synopsis": "Not long after the appearance of the gate, a group went in to investigate the gate. Among the group only one man survived. Tahara now spends his time in his office taking care of the flower he found in the gate. But things are about to change as a group targets him for his research on contractors and the gate. Can Hei and the others get the information first?",
+      "airdate": "2007-04-19",
+      "markers": [],
+      "external_id": "31206"
+    },
+    {
+      "n": 4,
+      "title": "A New Star Shines in the Dawn Sky... (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31207/original.jpg",
+      "synopsis": "Things have taken a turn for the worse, with Tahara's daughter being a contractor, but not being able to control her powers. Now Mai has been kidnapped and the group responsible wants Tahara's research or they keep Mai. Things may not go as they plan when Hei gets involved. Will he be able to get Mai back?",
+      "airdate": "2007-04-26",
+      "markers": [],
+      "external_id": "31207"
+    },
+    {
+      "n": 5,
+      "title": "Red Giant over Eastern Europe... (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31208/original.jpg",
+      "synopsis": "A group of Contractors, called MI-6, capture a once deadly Contractor called Havoc, who has lost her powers. Upon retreiving her they take her to Tokyo to be experimented on by the Pandora Institute. After watching a helicopter take Havoc away Misaki meets Jack Simon aka November 11. Later on as they are driving down the highway, Misaki finds out that Havoc really isn't on the helicopter. Where is the real Havoc and how does Hei know her?",
+      "airdate": "2007-05-03",
+      "markers": [],
+      "external_id": "31208"
+    },
+    {
+      "n": 6,
+      "title": "Red Giant over Eastern Europe... (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31209/original.jpg",
+      "synopsis": "Havoc is iterrogated by Hei on the whereabouts of Amber and Pai (Who is Hei's younger sister) Unfortunately, Havoc does not know anything useful. She offers to help Hei by approaching the Gate and recovering her memories and powers, but that only leads her to wanting her own death. With the MI6 agents in pursuit, her wish may be granted.",
+      "airdate": "2007-05-10",
+      "markers": [],
+      "external_id": "31209"
+    },
+    {
+      "n": 7,
+      "title": "The Scent of Gardenias Lingers in the Summer Rain... (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31210/original.jpg",
+      "synopsis": "Gai and Kiko get hired by a widow and are asked to find the widow's lost black cat. While trying to find the cat, they meet Hei, who is looking for the Contractor that is killing employers from that same company. As both Gai and Kiko continue to look, Gai comes across the skeleton of a woman who has been dead for a while.",
+      "airdate": "2007-05-17",
+      "markers": [],
+      "external_id": "31210"
+    },
+    {
+      "n": 8,
+      "title": "The Scent of Gardenias Lingers in the Summer Rain... (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31211/original.jpg",
+      "synopsis": "As Gai investigates the murder of Toshiko he is attacked by the mind switching contractor, who wants his jacket back. Mao makes an attempt to steal the jacket and take off with it by switching bodies with a crow. He fails and must revert back to the cat body. Things don't look good for Mao when the contractor realizes who he is. Now Mao's life hangs in the balance, can hei get there in time to save him and kill the contractor?",
+      "airdate": "2007-05-24",
+      "markers": [],
+      "external_id": "31211"
+    },
+    {
+      "n": 9,
+      "title": "The White Dress, Stained with the Girl's Dreams and Blood... (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31212/original.jpg",
+      "synopsis": "Misaki finds herself reunited with her old high school classmate, Alice, who is also the daughter of the boss of the Hong Kong mafia, Chen Long Tang, on the night of Alice's birthday party. At the party, Misaki finds that her working collaborate, Saitou, along with Hei, have snuck into the party as well. Unfortunately, Misaki finds out that Alice and her Contractor Bodyguard Wei Zhi Jung have been responsible for the deaths of many of the mafia members.",
+      "airdate": "2007-05-31",
+      "markers": [],
+      "external_id": "31212"
+    },
+    {
+      "n": 10,
+      "title": "The White Dress, Stained with the Girl's Dreams and Blood... (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31213/original.jpg",
+      "synopsis": "After Hei and Misaki barely escape from Alice, Hei goes his separate way after Misaki and Saitou find each other. After Hei steals the crystal hidden within the stone flower garden, he runs into Wei and loses the crystal in the process. Wei finally meets up with Misaki and Saitou, who have found Alice. After Wei kills his partner, Alice, he moves in on Misaki and Hei.",
+      "airdate": "2007-06-07",
+      "markers": [],
+      "external_id": "31213"
+    },
+    {
+      "n": 11,
+      "title": "When One Takes Back What Was Lost Within the Wall... (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31214/original.jpg",
+      "synopsis": "When an explosion is set up to steal a meteor fragment from PANDORA headquarters, Hei is sent it to steal it before anyone else does. On his first day he meets up Corinna Moku, who breaks down not long after arriving at the gate, and Meena Kandaswamy, who is from the same organization as Hei and will be helping him find the fragment. Now Hei must keep from being detected as a Contractor and find the meteor fragment. But will a death at the headquarters break his cover?",
+      "airdate": "2007-06-14",
+      "markers": [],
+      "external_id": "31214"
+    },
+    {
+      "n": 12,
+      "title": "When One Takes Back What Was Lost Within the Wall... (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31215/original.jpg",
+      "synopsis": "Nick and a few other researchers are sent into the restricted section of the Gate to retrieve what is to believed to be the meteor fragment. Everything goes wrong and the entire team ends up dead, except Nick. Now Hei realizes that Nick is a contractor too, who seems to have the same power, and he also has the meteor fragment. Upon confronting Nick, the two begin to fight. Can Hei defeat Nick or will something else end the battle?",
+      "airdate": "2007-06-21",
+      "markers": [],
+      "external_id": "31215"
+    },
+    {
+      "n": 13,
+      "title": "A Heart Unswaying on the Water's Surface... (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31216/original.jpg",
+      "synopsis": "Hei, Yin, and Mao are targeted by a group of contractors and now must fight to survive. Things become problematic when Yin goes missing. Now Hei and Moa must find her before the enemy does, but things change when Yin's old piano teacher gets Gai and Kiko to find Yin for him. The race is on to find Yin, but who will get to her first?",
+      "airdate": "2007-06-28",
+      "markers": [],
+      "external_id": "31216"
+    },
+    {
+      "n": 14,
+      "title": "A Heart Unswaying on the Water's Surface... (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31217/original.jpg",
+      "synopsis": "Kastenin, Gai, and Kiko take Yin back to her home town, meanwhile Hei is given the order to kill Yin and is given her location. Getting to Yin is not going to be that easy since th contractors from before are still after Yin and have their own method to finding her. The race is on once more, but this time Hei must make the choice on whether or not to kill Yin. Will he kill her or will the option be taken from him?",
+      "airdate": "2007-07-05",
+      "markers": [],
+      "external_id": "31217"
+    },
+    {
+      "n": 15,
+      "title": "Memories of Betrayal in an Amber Smile... (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31218/original.jpg",
+      "synopsis": "A sunspot called the Great Dark Spot, that makes the sun look like an eye, is about to appear and the last time it appeared the gate in South America dissappeared. To make everything even more hectic a boy is going around setting off explosions in the city. But things continue to fall apart when November 11 returns and it becomes apparent that Hei and November 11 are looking for the the same girl, who is known as Amber to Hei and February to November 11. Will Hei be able to find her before November 11 does, or will November 11 be taken out before his search can begin?",
+      "airdate": "2007-07-12",
+      "markers": [],
+      "external_id": "31218"
+    },
+    {
+      "n": 16,
+      "title": "Memories of Betrayal in an Amber Smile... (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31219/original.jpg",
+      "synopsis": "The Stargazer of the Astronomical Bureau finally speaks, giving vague information on the Evening Primrose. November 11 kills Maki in a final showdown as Hei finally reaches Amber, who has taken Yin. Misaki also arrives at their location, but, with the help of Amber's contract, everyone escapes.",
+      "airdate": "2007-07-19",
+      "markers": [],
+      "external_id": "31219"
+    },
+    {
+      "n": 17,
+      "title": "A Love Song Sung from a Trash Heap... (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31220/original.jpg",
+      "synopsis": "Hei meets Sakurai Kenji of the Nakazawa Group, a clumsy yet ambitious young man. New characters are introduced who live in Hei's apartment building. Later, Kenji is given the assignment of taking care of a doll by his boss. Hei, Mao, Yin, and Huang try to find the doll, who is conveniently in the hands of Kenji.",
+      "airdate": "2007-07-26",
+      "markers": [],
+      "external_id": "31220"
+    },
+    {
+      "n": 18,
+      "title": "A Love Song Sung from a Trash Heap... (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31221/original.jpg",
+      "synopsis": "Kenji falls for the doll, and they try to run away together with Hei's help. While out shopping, Hei is nearly identified by Kirihara Misaki as BK201, but Misaki doesn't see the relation between Li Shunsheng and BK201. Later, Kenji is caught and nearly killed by the boss, his brother, when Hei saves him. Kenji and the doll successfully run away.",
+      "airdate": "2007-08-02",
+      "markers": [],
+      "external_id": "31221"
+    },
+    {
+      "n": 19,
+      "title": "Dreaming Shallow, Uninebriated... (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31222/original.jpg",
+      "synopsis": "Hei is sent to infiltrate a religious organization and kill the Prophet, Alma. He is aided by an insider, another Contractor by the name of Shihoko whom Huang appears to know. Amagiri and Alma appear to be in cahoots with Alma providing him with dolls. A well-meant mistake on Huang's part leads to Shihoko's capture.",
+      "airdate": "2007-08-09",
+      "markers": [],
+      "external_id": "31222"
+    },
+    {
+      "n": 20,
+      "title": "Dreaming Shallow, Uninebriated... (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31223/original.jpg",
+      "synopsis": "The Organization orders Huang to kill Shihoko, and as a secondary directive secretly orders Mao and Hei to kill them and Alma if Huang fails. In Huang's past we see him falling for Shihoko, and then Shihoko killing his then police partner Isozaki. Isozaki's wife's memory is wiped by the ME, and Huang is drafted into the Syndicate. He is unable to kill Shihoko, and asks Hei to kill them both. Hei tries to help them run away while Mao refuses to have any involvement. When they arrive at the docks to wait for a boat, Shihoko sees someone from the Syndicate and realizes they cannot escape. For love of Huang she runs into the path of an oncoming truck and dies.",
+      "airdate": "2007-08-16",
+      "markers": [],
+      "external_id": "31223"
+    },
+    {
+      "n": 21,
+      "title": "City Under Crackdown, Moist with Tears... (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31224/original.jpg",
+      "synopsis": "A doctor is abducted by agents of the EPR, while the American embassy in Tokyo suffers attack from Hei and his team. A new contractor with the power to teleport herself and others appears as a double agent for the EPR. Wei Zhi Jung reappears, but is scarred from his last encounter with Hei. Misaki enters the embassy compound only to be detained by PANDORA, and Mao is discovered by Amber. November 11 leaves the M16 for the EPR.",
+      "airdate": "2007-08-30",
+      "markers": [],
+      "external_id": "31224"
+    },
+    {
+      "n": 22,
+      "title": "City Under Crackdown, Moist with Tears... (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31225/original.jpg",
+      "synopsis": "Mao is taken by Amber to the headquarters of the EPR. While there, Amber calls a meeting for all of the EPR's contractors, including Mao, and the Doctor. She reveals that there was a plan to destroy the South American gate, which would have led to the eventual disappearance of all world-wide contractors. The Doctor notes that the plan was interrupted by a mysterious blue light. November 11 meets the head of East Asian MI6 operations, who is revealed to be a member of the Syndicate, and they kill each other. Hei attacks the EPR to rescue Mao. Hei uses his powers on Amber while Amber activates her meteor shard, resulting in the illumination of the whole building in a blue light.",
+      "airdate": "2007-09-06",
+      "markers": [],
+      "external_id": "31225"
+    },
+    {
+      "n": 23,
+      "title": "God Is In His Heaven...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31226/original.jpg",
+      "synopsis": "Eric Nishijima is using a particle accelerator to wipe out the contractors. Amber gathers numerous contractors to destroy the accelerator, and dolls to be used for some other unknown reason. Nijishima is related to the Syndicate as he places a phone call to eliminate Hei and his team. Amber sends a message to Hei via Wei, telling him to meet her in the Gate. Hei agrees and thus Huang, Mao, and Yin, agree to assist Hei to infiltrate Hell's Gate with Wei's guidance.",
+      "airdate": "2007-09-13",
+      "markers": [],
+      "external_id": "31226"
+    },
+    {
+      "n": 24,
+      "title": "Meteor Shower",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31227/original.jpg",
+      "synopsis": "Hei's team, on the orders of Eric Nishijima, has been kicked out of the syndicate and contracts taken on all their lives. Misaki discovers that the \"syndicate\" is really a collaboration between intelligence agencies of multiple countries and that she herself has been an unknowing member. Hei, Yin, and Mao infilitrate Hell's Gate while Huang detonates a suicide bomb for distraction. Mao is disconnected from the Syndicate's network and his feral cat behavior takes over and runs away. The EPR's contractors attack the gate, leaving the focus open for Hei and Yin. The syndicate takes out the EPR's doll system, leaving Hei with only Yin for guidance as they head towards the conclusion of the story.",
+      "airdate": "2007-09-20",
+      "markers": [],
+      "external_id": "31227"
+    },
+    {
+      "n": 25,
+      "title": "Does the Reaper Dream of Darkness Darker than Black?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/31228/original.jpg",
+      "synopsis": "After meeting with Amber, Hei learns that against common knowledge Contractors can become more humane than was thought to be possible. Realising his own position between the world of contractors and humans, Hei has to make the decisive choice for both. With final farewells to his past comrades inside the Gate, and their support behind his back, Hei's decision brings new future for the world.",
+      "airdate": "2007-09-27",
+      "markers": [],
+      "external_id": "31228"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "DARKER THAN BLACK",
+      "artist": "Yasushi Ishii",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tsukiakari no Michishirube (ツキアカリのミチシルベ; Guidepost of the Moonlight)",
+      "artist": "Stereopony",
+      "episodes": "2-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "From Dusk Till Dawn",
+      "artist": "abingdon boys school",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "HOWLING",
+      "artist": "abingdon boys school",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsukiakari",
+      "artist": "Rie fu",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Kakusei Heroism ~The Hero Without A Name~",
+      "artist": "An Cafe",
+      "episodes": "15-23,25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Dreams",
+      "artist": "HIGH and MIGHTY COLOR",
+      "episodes": "15-24"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,258 @@
+{
+  "id": "dagashi-kashi",
+  "title": "Dagashi Kashi",
+  "native": "だがしかし",
+  "year": 2016,
+  "rating": 6.4,
+  "season": "Winter 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21365-FRalqWQn0lf9.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21365-FRalqWQn0lf9.jpg",
+  "accent": "#f1a15d",
+  "synopsis": "Shikada Kokonotsu's father owns a rural sweets shop, and his plan is for Kokonotsu to take it over one day.\nHowever, Kokonotsu wants to be a manga author instead!\nOne day in summer, the cute but weird girl Shidare Hotaru, from the famous sweets company, comes to pay a visit.\nApparently, Kokonotsu's father is famous and she wants him to join her family's company.\nHowever, he will only agree if she can convince Kokonotsu to take over the family business!\n\n(Source: MangaHelpers)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Dagashi Kashi 2 (2018)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 11381,
+    "anilist": 21365,
+    "mal": 31636
+  },
+  "skip_key_id": 31636,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 11:05:15",
+  "search_text": "dagashi kashi た か しかし tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Umai-bou, Fries, And... / Milk Coffee Candies, Young Donuts, And...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181732/original.jpg",
+      "synopsis": "Kokonotsu Shikada is the son of a dagashi snack shop owner. Although he wants to become a manga artist, his father, Yo, wants him to take over the family business. One day, a girl named Hotaru Shidare shows up at the shop and challenges Kokonotsu.",
+      "airdate": "2016-01-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "181732"
+    },
+    {
+      "n": 2,
+      "title": "Dagashi Kashi Kinako-bou, Namaiki Beer, and... / Fue Ramune, Menko, and...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181733/original.jpg",
+      "synopsis": "Hotaru tells Kokonotsu that Kinako-bou grabs her attention due to its plain packaging and lack of mascot characters, calling it a desert warrior. She also gives a lecture to Kokonotsu and Saya on the history of Fue Ramune.",
+      "airdate": "2016-01-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1334,
+          "end": 1424
+        }
+      ],
+      "external_id": "181733"
+    },
+    {
+      "n": 3,
+      "title": "Buta-men, Kuru Kuru Bou Jelly, and... / Bontan-ame, Seven Neon, and...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181734/original.jpg",
+      "synopsis": "Hotaru exacerbates the summer heat by turning off the shop's AC and boiling water to make Buta-men. Saya's suspicions are raised when Hotaru asks about her relationship with Kokonotsu.",
+      "airdate": "2016-01-22",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1435
+        }
+      ],
+      "external_id": "181734"
+    },
+    {
+      "n": 4,
+      "title": "Fugashi, Fugashi, and... / Glico, Glico, and...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181735/original.jpg",
+      "synopsis": "Hotaru challenges Kokonotsu to compete in a blind fugashi taste test. She also helps him to run back to Café Endo when she realizes that he forgot something very important to him at the café.",
+      "airdate": "2016-01-29",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1419
+        }
+      ],
+      "external_id": "181735"
+    },
+    {
+      "n": 5,
+      "title": "Bottle Ramune, Baby-Star Ramen, and... / Yatta Men, Watch Out for the Sour Grape, and...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181736/original.jpg",
+      "synopsis": "Hotaru visits Shikada Dagashi after business hours to conduct a covert exchange with Kokonotsu’s father Yo. Later, she lets Kokonotsu and To in on her secret moneymaking technique.",
+      "airdate": "2016-02-05",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1371,
+          "end": 1419
+        }
+      ],
+      "external_id": "181736"
+    },
+    {
+      "n": 6,
+      "title": "Super Himo Q, Ohajiki, and sometimes Maken Gumi... / Yoguret, Coconuts, and...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181737/original.jpg",
+      "synopsis": "Kokonotsu, To, and Saya visit the temple, where they find Hotaru behaving even more strangely than usual. On a separate occasion, Saya reminisces about playing with Kokonotsu when they were in the third grade.",
+      "airdate": "2016-02-19",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1440
+        }
+      ],
+      "external_id": "181737"
+    },
+    {
+      "n": 7,
+      "title": "Summer Festival, Hotaru, and... / Summer Festival, Saya, and...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181738/original.jpg",
+      "synopsis": "It’s summer festival time! Hotaru plans to convert her meager 200 yen of spending money into big winnings at the die-cutting stall. Later on, Saya is very happy when Yo suggests that Kokonotsu escort her around the festival.",
+      "airdate": "2016-02-26",
+      "markers": [],
+      "external_id": "181738"
+    },
+    {
+      "n": 8,
+      "title": "Super Scary Story Gum, Typhoon, and... / Kendama, Popping Fortune-Telling Chocolate, and...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181739/original.jpg",
+      "synopsis": "Kokonotsu and the gang are cooped up in Shikada Dagashi due to a typhoon. So To starts telling scary stories to liven things up. On a separate occasion, To tells Kokonotsu that he’s been researching how to become popular among girls.",
+      "airdate": "2016-03-04",
+      "markers": [],
+      "external_id": "181739"
+    },
+    {
+      "n": 9,
+      "title": "Wata-pachi, Lucky Choco-droppings, and... / Sakura Daikon, Egg Ice Cream, and...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181740/original.jpg",
+      "synopsis": "Despite suffering from a mouth ulcer, Hotaru ignores Saya's protestations and eats a dagashi that packs a punch. Later on, Hotaru lets Kokonotsu in on the secret of her origins.",
+      "airdate": "2016-03-11",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1330,
+          "end": 1420
+        }
+      ],
+      "external_id": "181740"
+    },
+    {
+      "n": 10,
+      "title": "That's Dagashi!",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181741/original.jpg",
+      "synopsis": "When Hotaru doesn't show up at Shikada Dagashi for two days, a concerned Kokonotsu and Saya visit her house to investigate. It appears Hotaru has come down with a cold so powerful that she doesn’t even want to eat dagashi.",
+      "airdate": "2016-03-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1421
+        }
+      ],
+      "external_id": "181741"
+    },
+    {
+      "n": 11,
+      "title": "Cola Gum, Yo, and... / Miyako Kombu, Ramune, and...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181742/original.jpg",
+      "synopsis": "When Kokonotsu asks why Shidare Company wants to recruit his dad, Hotaru tries to show him and Saya how amazing Yo is. On a separate occasion, Kokonotsu and Hotaru discuss dagashi while waiting for a train.",
+      "airdate": "2016-03-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 1,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1331,
+          "end": 1421
+        }
+      ],
+      "external_id": "181742"
+    },
+    {
+      "n": 12,
+      "title": "I’m Gonna Eat It-Hi, Poem of Cherries, and... / Morinaga Milk Caramel, Sakuma Drops, and...",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/181743/original.jpg",
+      "synopsis": "While Hotaru and Saya discuss matters of love, Kokonotsu and To seek once again to improve their fortunes through dagashi. Another day, Kokonotsu tries to use his knowledge of dagashi to impress an expectant Hotaru.",
+      "airdate": "2016-04-01",
+      "markers": [],
+      "external_id": "181743"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

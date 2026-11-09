@@ -1,0 +1,803 @@
+{
+  "id": "city-hunter",
+  "title": "City Hunter",
+  "native": "シティーハンター",
+  "year": 1987,
+  "rating": 7.6,
+  "season": "Spring 1987",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1470-V0Zr2VOc8eoK.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1470-V0Zr2VOc8eoK.jpg",
+  "accent": "#e45d93",
+  "synopsis": "Ryo Saeba works the streets of Tokyo as the City Hunter. He's a \"sweeper\" and with his sidekick Kaori Makimura, he keeps the city clean. People hire the City Hunter to solve their dangerous problems, which he does with a Colt Python. When Ryo's not working on a case, he's working on getting the ladies, and Kaori must keep him in check with her trusty 10 kg hammer.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "city-hunter-cghnnr",
+    "mal": 1470,
+    "anilist": 1470,
+    "kitsu": 1316
+  },
+  "skip_key_id": 1470,
+  "skip_key_space": "mal",
+  "episode_total": 51,
+  "added_at": null,
+  "search_text": "city hunter シティーハンター tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "One Cool Sweeper! XYZ is a Dangerous Cocktail",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23561/original.jpg",
+      "synopsis": "When there is a spate of random shootings in Shinjuku, a sister of one of the victims wants Ryo to catch the killer and bring him to justice.  But Ryo can tell that there is much more than justice that his client is interested in.",
+      "airdate": "1987-04-06",
+      "markers": [],
+      "external_id": "23561"
+    },
+    {
+      "n": 2,
+      "title": "Please Kill Me! Crosshairs Don't Become a Pretty Girl",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23562/original.jpg",
+      "synopsis": "Ryo's client is a daughter of a known scientist who developed a deadly microbe that could render humanity sterile.  His client wants him to protect her at all costs while she develops a vaccine, but should she be captured, she wants him to kill her before terrorists can extract the knowledge of the microbe from her.",
+      "airdate": "1987-04-13",
+      "markers": [],
+      "external_id": "23562"
+    },
+    {
+      "n": 3,
+      "title": "Love Don't Leave Me! A Ten-count to Tomorrow",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23563/original.jpg",
+      "synopsis": "A boxer is killed over a fight for a championship title, and Ryo must deal with the victim's rival obsessed with glory.  At the same time, he must deal with the boxer's girlfriend, whose pain is not only in her heart, but also in her body as well.",
+      "airdate": "1987-04-20",
+      "markers": [],
+      "external_id": "23563"
+    },
+    {
+      "n": 4,
+      "title": "Lady Vanish! Boutique of the Shadows",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23564/original.jpg",
+      "synopsis": "Ryo's partner Hideyuki is frantic over the disappearance of her sister Kaori as a spate of abductions of women have swept Shinjuku.  As he is trying to find his partner's sister, he comes across a man who is not who he seems to be.  Together, they must find the secret into the kidnappings.",
+      "airdate": "1987-04-27",
+      "markers": [],
+      "external_id": "23564"
+    },
+    {
+      "n": 5,
+      "title": "Goodbye Makimura. A Tearful Birthday on a Rainy Night",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23565/original.jpg",
+      "synopsis": "Hideyuki is killed on Kaori's birthday as he refuses to do a request for the head of a powerful crime syndicate.  Ryo must avenge his death.",
+      "airdate": "1987-05-04",
+      "markers": [],
+      "external_id": "23565"
+    },
+    {
+      "n": 6,
+      "title": "No Romance for This Actress! The Last Shot for Hope",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23566/original.jpg",
+      "synopsis": "As Kaori takes over as Ryo's new partner, Ryo is called upon to solve a string of incidents involving actress Yumiko Sato.  As he delves deep into the mystery, he comes across a powerful adversary, as well as a client who may have a deadly death wish.",
+      "airdate": "1987-05-11",
+      "markers": [],
+      "external_id": "23566"
+    },
+    {
+      "n": 7,
+      "title": "A Gunshot to Set the Heart A Flutter! Sad, Lonely Girl",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23567/original.jpg",
+      "synopsis": "Ryo's client is a man who wants to fake his own death to be free from a powerful politician so he could be reunited with his daughter.  The man admits to be spineless but he is more than meets the eye.  Ryo must masquerade as the hitman not only to save his client, but to ensure that the men working for the politician do not bother his client again.",
+      "airdate": "1987-05-18",
+      "markers": [],
+      "external_id": "23567"
+    },
+    {
+      "n": 8,
+      "title": "A One-Hole-Shot to a Lovely?! Hands Off My Lady Detective",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23568/original.jpg",
+      "synopsis": "A Police detective named Saeko Nogami hires Ryo to obtain a crown containing a microchip which has stolen top secret plans inside.  While Ryo agrees to do his job, he awaits his \"\"payment\"\" which leaves Kaori confused as to how this payment would be applied.",
+      "airdate": "1987-05-25",
+      "markers": [],
+      "external_id": "23568"
+    },
+    {
+      "n": 9,
+      "title": "The Gambling Queen. A Bet for Wonderful Love",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23569/original.jpg",
+      "synopsis": "Ryo must protect a lovely casino dealer as she prepares for a showdown with a rival syndicate in order to win her freedom.  Meanwhile, Ryo is pitted against a powerful gambler who exploits Ryo's weaknesses to their fullest extent.",
+      "airdate": "1987-06-01",
+      "markers": [],
+      "external_id": "23569"
+    },
+    {
+      "n": 10,
+      "title": "One Dangerous Tutor: Home-Cooking from the Heart for a Sukeban",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23570/original.jpg",
+      "synopsis": "Ryo is tricked into doing bodyguard work for the daughter of a Yakuza Boss being stalked by a biker team.  Ryo realizes that the daughter is the leader of a female gang at her school, and finds there is much more than what the Yakuza boss is requesting.",
+      "airdate": "1987-06-08",
+      "markers": [],
+      "external_id": "23570"
+    },
+    {
+      "n": 11,
+      "title": "That Pretty Girl in Tights Prefers the Tulips",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23571/original.jpg",
+      "synopsis": "Ryo is requested to assist a female thief in stealing a black tulip from a fraudulent psychic.  Kaori finds out that the psychic's butler has a crush on her and decides he may be helpful in obtaining the plant.",
+      "airdate": "1987-06-15",
+      "markers": [],
+      "external_id": "23571"
+    },
+    {
+      "n": 12,
+      "title": "Kids Get Special Treatment. A Beautiful Lady from a Dangerous Land",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23572/original.jpg",
+      "synopsis": "Ryo must protect a woman and a young boy from another country from being abducted by foreign agents.  Kaori soon discovers that the young boy's actions and demeanor are exactly as Ryo's.",
+      "airdate": "1987-06-22",
+      "markers": [],
+      "external_id": "23572"
+    },
+    {
+      "n": 13,
+      "title": "She's Getting Married at Age Sixteen. A Hot Kiss with a Pop Idol",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23573/original.jpg",
+      "synopsis": "Ryo is assigned to protect young pop idol Nagisa from an unknown fanatic, however he is more interested in her female manager.  However, it turns out that Nagisa is very attracted to Ryo and Ryo decides to use this to his advantage to ensure her safety.",
+      "airdate": "1987-06-29",
+      "markers": [],
+      "external_id": "23573"
+    },
+    {
+      "n": 14,
+      "title": "My Foe is a Beautiful Lady?",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23574/original.jpg",
+      "synopsis": "Saeko enlists the help of Ryo to solve the dissappearances of beautiful women in Shinjuku.  The stakes are even higher when Kaori, mistaken for a beautiful woman, is also kidnapped.  Ryo encounters the mastermind of the scheme, a supposedly beautiful woman who may not be who she seems to be.",
+      "airdate": "1987-07-06",
+      "markers": [],
+      "external_id": "23574"
+    },
+    {
+      "n": 15,
+      "title": "Ryo's an Instructor at a Women's School? To Protect a Sweet Young Lady",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23575/original.jpg",
+      "synopsis": "Ryo is requested to protect the daughter of a dead tycoon who claims that Ryo had saved her from kidnappers once before.  As Ryo tries to find out who is trying to kill her, her stepmother comes up as a very likely suspect, but is being controlled by someone else.",
+      "airdate": "1987-07-13",
+      "markers": [],
+      "external_id": "23575"
+    },
+    {
+      "n": 16,
+      "title": "One Frisky Stewardess - Ryo: Self-Defense Instructor",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23576/original.jpg",
+      "synopsis": "An old friend of Kaori's is being stalked by strange characters who are after strange looking watches that were slipped into her bag.  Despite Kaori's efforts to keep her away from Ryo, Kaori is kidnapped by the men and Ryo and her friend must rescue her.",
+      "airdate": "1987-07-20",
+      "markers": [],
+      "external_id": "23576"
+    },
+    {
+      "n": 17,
+      "title": "Summers Lovely Designer - Ryo has a Thing for the Super-High-Leg Type",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23577/original.jpg",
+      "synopsis": "Ryo is recruited by a famous fashion designer's assistant after her designs were stolen by her boss.",
+      "airdate": "1987-07-27",
+      "markers": [],
+      "external_id": "23577"
+    },
+    {
+      "n": 18,
+      "title": "A Divine Prophecy on a Summers Evening?! - A Shrine Maiden Gets Her First Lesson in Love",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23578/original.jpg",
+      "synopsis": "Corrupt businessman, an incompetent assassin, and a old lady complicates Ryo's job to protect a beautiful psychic.",
+      "airdate": "1987-08-03",
+      "markers": [],
+      "external_id": "23578"
+    },
+    {
+      "n": 19,
+      "title": "A Beach to Remember: An Audition full of Danger",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23579/original.jpg",
+      "synopsis": "Ryo is asked to investigate threats made to women attending an audition for a film featuring a handsome actor. One of these ladies attending this audition is hoping to reunite with her long-lost father, the director of the movie.",
+      "airdate": "1987-08-10",
+      "markers": [],
+      "external_id": "23579"
+    },
+    {
+      "n": 20,
+      "title": "Her Ladyship Leaves the Mountain - One Long Day for Ryo",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23580/original.jpg",
+      "synopsis": "Ryo is hired to defend a jungle princess from members of her own tribe intent in breaking their isolation from the modern world.",
+      "airdate": "1987-08-17",
+      "markers": [],
+      "external_id": "23580"
+    },
+    {
+      "n": 21,
+      "title": "Faceless Snipers - Ryo and Saeko's Dangerous Game",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23581/original.jpg",
+      "synopsis": "When Ryo finds himself in a hotel with Saeko, he is forced to accept a job to protect a former newspaper magnate from hitman that he hired himself.",
+      "airdate": "1987-08-24",
+      "markers": [],
+      "external_id": "23581"
+    },
+    {
+      "n": 22,
+      "title": "Ryo Plays Cupid: Here's to Diamonds!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23582/original.jpg",
+      "synopsis": "While snooping around a lingerie show, Ryo comes across a woman who stole a beautiful diamond necklace from a wealthy young man. The woman asks Ryo to be her lover, but Ryo is aware that there is more to her story than meets the eye.",
+      "airdate": "1987-08-31",
+      "markers": [],
+      "external_id": "23582"
+    },
+    {
+      "n": 23,
+      "title": "Buzz, Buzz Go the Killer Bees! - The Bride Who Fell Out of the Sky",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23583/original.jpg",
+      "synopsis": "A bride literally falls into Ryo's lap and along with it, some goons hired by the jilted groom. While trying to sneak up on her during the middle of the night, Ryo gets stung by an experimental, but deadly bee. The bride does have the antidote, but as Kaori finds out, it has \"terrible\" side effects, most notably showing the feminine side of City Hunter.",
+      "airdate": "1987-09-07",
+      "markers": [],
+      "external_id": "23583"
+    },
+    {
+      "n": 24,
+      "title": "A Rosy Hospital Stay? - An Angel in White in Danger",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23584/original.jpg",
+      "synopsis": "In order to find out who is targeting a nurse who is due to be the recipient of a large inheritance, Ryo breaks his foot and ends up in the same hospital the nurse is staying. While Ryo must not tell the nurse that she is being targeted, he also finds out she does not have enough experience being a nurse.",
+      "airdate": "1987-09-14",
+      "markers": [],
+      "external_id": "23584"
+    },
+    {
+      "n": 25,
+      "title": "An International Relationship of Love?! - My Counterpart is a Blonde Beauty",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23585/original.jpg",
+      "synopsis": "Ryo teams up with a beautiful American agent to find out who is smuggling tanks from Japan.",
+      "airdate": "1987-09-21",
+      "markers": [],
+      "external_id": "23585"
+    },
+    {
+      "n": 26,
+      "title": "What is Love? - Ryo's Course in Proper Romance",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23586/original.jpg",
+      "synopsis": "When a father requests the services of City Hunter to protect his daughter from someone stalking her at work, he finds out that the stalker IS City Hunter. The father then requests that City Hunter convince her daughter to quit her job as he feels that she may be in danger of other stalkers. Ryo realizes that the young woman has lived a sheltered life and decides to teach her a few lessons in love.",
+      "airdate": "1987-09-28",
+      "markers": [],
+      "external_id": "23586"
+    },
+    {
+      "n": 27,
+      "title": "Ryo & Umibozu's Sweet Daddy Longlegs Story: Part One",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23587/original.jpg",
+      "synopsis": "Umibozu returns to ask Ryo to help him protect Maki, the daughter of his old mentor. Ryo learns of the story of Daddy Longlegs and that Umibozu has been supporting her from a distance. Ryo pretends to take Umibozu's place and then tries many opportunities to sleep with Maki.",
+      "airdate": "1987-10-05",
+      "markers": [],
+      "external_id": "23587"
+    },
+    {
+      "n": 28,
+      "title": "Ryo & Umibozu's Sweet Daddy Longlegs Story: Part Two",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23588/original.jpg",
+      "synopsis": "Umibozu reveals that the man after Maki is Snake, a former comrade who betrayed Umibozu and her father. The final showdown between Umibozu and Snake takes place in a theater where Maki is performing in her concert. Ryo reveals to Maki who her \"Daddy Longlegs\" really is.",
+      "airdate": "1987-10-12",
+      "markers": [],
+      "external_id": "23588"
+    },
+    {
+      "n": 29,
+      "title": "A 500 Yen Job?! - A Cute Little Girl Wins Ryo's Heart",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23589/original.jpg",
+      "synopsis": "A young girl manages to convince Ryo to help her idol, a budding children's author, from corporate bullies representing a publishing firm. The price: 500 Yen.",
+      "airdate": "1987-10-19",
+      "markers": [],
+      "external_id": "23589"
+    },
+    {
+      "n": 30,
+      "title": "Ryo's Rival in Love?! - Give Me Kaori",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23590/original.jpg",
+      "synopsis": "A nephew of a missing wealthy explorer seeks Ryo's services to protect him from his aunt who seeks to obtain his uncle's fortune. However, the young nephew begins to have feelings of affection for Kaori. Kaori meanwhile, is using this opportunity to see how Ryo reacts to the presence of a \"rival\".",
+      "airdate": "1987-10-26",
+      "markers": [],
+      "external_id": "23590"
+    },
+    {
+      "n": 31,
+      "title": "Fast Paced Romance: A Girl's Love Closing in Fast",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23591/original.jpg",
+      "synopsis": "Ryo and Kaori come across two opposing jobs involving the same people. Kaori is hired by a member of a Biker Gang who wants her to pretend to be his girlfriend in order to deflect attention from the daughter of a tycoon. And Ryo is hired by the daughter to convince the biker to leave his gang and live a normal life.",
+      "airdate": "1987-11-02",
+      "markers": [],
+      "external_id": "23591"
+    },
+    {
+      "n": 32,
+      "title": "Don't Die Ryo: Hard Boiled Magnum",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23592/original.jpg",
+      "synopsis": "When Ryo is hired by Saeko to bait a well known assassin, the assassin takes notice and issues a formal challenge to Ryo.",
+      "airdate": "1987-11-09",
+      "markers": [],
+      "external_id": "23592"
+    },
+    {
+      "n": 33,
+      "title": "Go For It Umibozu: One, Hard-Boiled First Love Concerto",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23593/original.jpg",
+      "synopsis": "Umibozu is injured while protecting a female pianist with whom he has affection for. He enlists the help of Ryo to help protect the girl from a corrupt politician involved in a bribery scandal and who is trying to report the story in honour of her dead fiance.",
+      "airdate": "1987-11-16",
+      "markers": [],
+      "external_id": "23593"
+    },
+    {
+      "n": 34,
+      "title": "Shock! Ryo's a Papa: Don't Wake that Sleeping Child",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23594/original.jpg",
+      "synopsis": "A young girl comes up to Ryo claiming that he is her father. But this is all a ruse by a desperate mother to protect her from her late husband's father who intends to take her away from her mother. Ryo and Kaori both develop a bond with a little girl and Ryo realizes that the late husband's father is not as bad as portrayed.",
+      "airdate": "1987-11-23",
+      "markers": [],
+      "external_id": "23594"
+    },
+    {
+      "n": 35,
+      "title": "A Vision Newscaster: Ryo's Mokkori Report Scandal",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23595/original.jpg",
+      "synopsis": "Ryo is assigned to protect a famous reporter as she tries to cover a report involving a corrupt politician and Yakuza.",
+      "airdate": "1987-11-30",
+      "markers": [],
+      "external_id": "23595"
+    },
+    {
+      "n": 36,
+      "title": "A College Girl Plays Hardball For Love! Someone Is Trying To Kill Me",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23596/original.jpg",
+      "synopsis": "Ryo must try to ascertain whether or not the adopted daughter of a wealthy tycoon is trying to kill herself. The daughter, however, maintains that it is her adopted father who is trying to kill her. In fact, this is part of an extortion scheme from parties unknown.",
+      "airdate": "1987-12-07",
+      "markers": [],
+      "external_id": "23596"
+    },
+    {
+      "n": 37,
+      "title": "Shinjuku Honor All The Way! The Kimono Beauty Wants To Be My Student (Part One)",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23597/original.jpg",
+      "synopsis": "When Hoodlums try to harass the owner of Otora's cafe into selling her business, Ryo intervenes with the help of a young girl who claims to be a member of the Hanafubuki Gumi, a group representing honor and dignity. However, the hoodlums are members of the Hanafubuki Gumi themselves. When the daughter Kikunosuke asks Ryo to teach her about honor and the Japanese way, the Hanafubuki Gumi hoodlums return and kidnaps Otora. Ryo and Kikunosuke must rescue her and Ryo learns that Kikunosuke is the daughter of the leader of the Hanafubuki Gumi.",
+      "airdate": "1987-12-14",
+      "markers": [],
+      "external_id": "23597"
+    },
+    {
+      "n": 38,
+      "title": "Shinjuku Honor All The Way! The Kimono Beauty Wants To Be My Student (Part Two)",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23598/original.jpg",
+      "synopsis": "Cast away from the Hanafubuki Gumi, Kitoo and the other hoodlums plot to kill Kikunosuke's father and their former leader. Meanwhile, Kikunosuke, on orders from her father, boards with Ryo to learn more about dignity and honor. Kaori goes to Kikunosuke's father with a request to allow her daughter to live a normal life.",
+      "airdate": "1987-12-21",
+      "markers": [],
+      "external_id": "23598"
+    },
+    {
+      "n": 39,
+      "title": "Princess From The Moon! Amnesia Give Ryo Headaches",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23599/original.jpg",
+      "synopsis": "Ryo runs into a woman who claims she has amnesia and gets notoriously drunk after one sip. Ryo deduces that the girl is not actually suffering from memory loss and is attempting to run away from an overwhelming fact.",
+      "airdate": "1988-01-04",
+      "markers": [],
+      "external_id": "23599"
+    },
+    {
+      "n": 40,
+      "title": "One Sexy Partner! After Shower Compensation",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23600/original.jpg",
+      "synopsis": "Ryo is hired by a female \"sweeper\" who works for the insurance industry. Their goal is to recover a very expensive diamond stolen from a business tycoon. Once recovered, however, the owner of the diamond double-crosses them and kidnaps Aya. Ryo must rescue her with Kaori's help.",
+      "airdate": "1988-01-11",
+      "markers": [],
+      "external_id": "23600"
+    },
+    {
+      "n": 41,
+      "title": "Saeko's little sister is a private eye! A passionate lady's big secret (Part One)",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23601/original.jpg",
+      "synopsis": "A new private investigation agency opens next door and it is run by Reika Nogami, Saeko Nogami's younger sister. While Ryo makes constant advances towards her, he learns about Reika's blackmail tactics against Yakuza gangsters as well as the death of her former partner. He also learns that someone has ordered a hit on Reika herself.",
+      "airdate": "1988-01-18",
+      "markers": [],
+      "external_id": "23601"
+    },
+    {
+      "n": 42,
+      "title": "Saeko's little sister is a private eye! A passionate lady's big secret (Part Two)",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23602/original.jpg",
+      "synopsis": "Reika explains to Ryo about how a corrupt police officer is interfering with narcotics investigations, and how her former partner was killed by the Yakuza and her desire to clear his name. This leads to a showdown against an expert marksman and also lands Ryo, Kaori, and Reika in Jail after being set up by the corrupt police officer.",
+      "airdate": "1988-01-25",
+      "markers": [],
+      "external_id": "23602"
+    },
+    {
+      "n": 43,
+      "title": "Utako's cookie anniversary! Moles on her chest and a love poem",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23603/original.jpg",
+      "synopsis": "Ryo is requested to protect a famous poet from an increasing number of stalkers following her. When Ryo finds out that the men following her are not ordinary stalkers, he also finds out that his client is also not an ordinary girl.",
+      "airdate": "1988-02-01",
+      "markers": [],
+      "external_id": "23603"
+    },
+    {
+      "n": 44,
+      "title": "We asked one hundred kids, They said, \"Ryo's our hero\"",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23604/original.jpg",
+      "synopsis": "Two brothers have a handful as they deal with a pervert supposedly after their sister who works as a hairstylist. But when they discover a hidden stash of cash stolen in a robbery at a construction site, their sister is kidnapped by the robbers and they must turn to City Hunter for assistance. What they don't realize that the man after their sister is none other than Ryo himself.",
+      "airdate": "1988-02-08",
+      "markers": [],
+      "external_id": "23604"
+    },
+    {
+      "n": 45,
+      "title": "Three sisters are calling! Ryo's skiing heaven",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23605/original.jpg",
+      "synopsis": "Ryo is requested to take care of three sisters at a ski resort.",
+      "airdate": "1988-02-15",
+      "markers": [],
+      "external_id": "23605"
+    },
+    {
+      "n": 46,
+      "title": "Picking pockets is a thrill! Pick Pockets for tomorrow",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23606/original.jpg",
+      "synopsis": "Ryo and Kaori run into Mariko, an old friend of Kaori's and an aspiring pickpocket. Out of concern for her friend, Kaori asks Ryo to try to convince her to give up pickpocketing. Ryo then issues a challenge: if Mariko can steal Ryo's Wallet, then Mariko can continue as a pickpocket. Otherwise she must quit the profession. Little do the three of them know that Mariko has been targeted by Yakuza after stealing a piece of jewelry containing secret files from a daughter of a Yakuza boss.",
+      "airdate": "1988-02-21",
+      "markers": [],
+      "external_id": "23606"
+    },
+    {
+      "n": 47,
+      "title": "Mokkori is the Best Medicine?! A Pool Shot to a Pretty Hustler's Heart",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23607/original.jpg",
+      "synopsis": "Ryo is hired by Yuri, daughter of a famous pool player while she prepares for a match that may determine the fate of her father's pool club. Ryo discovers that Yuri is not a person who does well under pressure, and as such, tries to help her overcome this handicap during the match.",
+      "airdate": "1988-02-29",
+      "markers": [],
+      "external_id": "23607"
+    },
+    {
+      "n": 48,
+      "title": "O Spring Come Soon to Love's Widow - Take Off Those Clothes of Mourning",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23608/original.jpg",
+      "synopsis": "A Job referral from Saeko has Ryo protect the widow of a dead tycoon from an unknown extortionist. At the same time, the butler realizes that only Ryo can help the widow from letting go of her tragic loss.",
+      "airdate": "1988-03-07",
+      "markers": [],
+      "external_id": "23608"
+    },
+    {
+      "n": 49,
+      "title": "Sister in Doubt - Mokkori is her guide to love!?",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23609/original.jpg",
+      "synopsis": "Ryo runs into a young beautiful nun who has lost her cross after a night in the town.",
+      "airdate": "1988-03-14",
+      "markers": [],
+      "external_id": "23609"
+    },
+    {
+      "n": 50,
+      "title": "The Deadliest Enemy! Ryo's and Kaori's Final Match (Part One)",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23610/original.jpg",
+      "synopsis": "Kaori has a recurring nightmare regarding Ryo's impending death. Meanwhile, Umibozu narrowly escapes death at the hands of three siblings who are powerful assassins hired by the Lodos Mafia. Badly shaken and wounded, Umibozu tries to find Ryo. At the same time, Saeko and Reika hire Ryo to help them bust a smuggling ring headed by the Lodos Mafia at a large masquerade. The three assassin siblings notice and decide to use this to their advantage. Their target: to kill Ryo by using Kaori Makimura as a hostage.",
+      "airdate": "1988-03-21",
+      "markers": [],
+      "external_id": "23610"
+    },
+    {
+      "n": 51,
+      "title": "The Deadliest Enemy! Ryo's and Kaori's Final Match (Part Two)",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/23611/original.jpg",
+      "synopsis": "With Kaori Kidnapped by the three assassin siblings, the Lodos Mafia issues a formal challenge to Ryo. Ryo, with the help of Umibozu, infiltrates the Lodos Mafia boat in search of Kaori. Kaori realizes that her nightmares foretelling Ryo's death may be true.",
+      "airdate": "1988-03-28",
+      "markers": [],
+      "external_id": "23611"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Whatever Comes",
+      "artist": "TM Network",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Get Wild",
+      "artist": "TM Network",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mr. Cool",
+      "artist": "Amazons & Lotus Juice",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Angel Night- Tenshi no Iru Basho (Angel Night ~天使のいる場所~)",
+      "artist": "Psy-S",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Get Wild",
+      "artist": "TM Network",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Illusion City",
+      "artist": "sex MACHINGUNS",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "GET WILD",
+      "artist": "TM Network",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Otherwise",
+      "artist": "KONTA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Woman",
+      "artist": "Ann Lewis",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Woman",
+      "artist": "Ann Louis",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "More, More Shiwase (More, More Happiness)",
+      "artist": "Yoko Oginome",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rock My Love",
+      "artist": "Yoko Oginome",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Weekend Soldier (週末のソルジャー; Shūmatsu no Soldier)",
+      "artist": "Mika Kaneko",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "16th Night (十六夜; Jūrokuya)",
+      "artist": "Mariko Takahashi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Downtown Game",
+      "artist": "GWINKO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Smile & Smile",
+      "artist": "AURA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Running To Horizon",
+      "artist": "Tetsuya Komuro",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Atsuku Naretara (熱くなれたら; If I Could Become Passionate)",
+      "artist": "Kiyomi Suzuki",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Angel Night",
+      "artist": "PSYS",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Super Girl",
+      "artist": "Yasuyuki Okamura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "CITY HUNTER～愛よ消えないで～ (CITY HUNTER~Ai yo kienaide)",
+      "artist": "Kahoru Kohiruimaki",
+      "episodes": "1-26"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Get Wild",
+      "artist": "TM NETWORK",
+      "episodes": "1-51"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Ride on the Night",
+      "artist": "HUMMING BIRD",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "GET WILD - City Hunter Special '97",
+      "artist": "NAHO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Still Love Her- Ushinawareta Fūkei (スティル・ラブ・ハー 失われた風景)",
+      "artist": "TM Network",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Sara",
+      "artist": "Fence of Defense",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Still Love Her",
+      "artist": "TM Network",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Go Go Heaven",
+      "artist": "Toshiyuki Ohsawa",
+      "episodes": "27-51"
+    }
+  ],
+  "relations": []
+}

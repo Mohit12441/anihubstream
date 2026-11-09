@@ -1,0 +1,65 @@
+{
+  "id": "bleach-the-movie-memories-of-nobody",
+  "title": "Bleach the Movie: Memories of Nobody",
+  "native": "BLEACH MEMORIES OF NOBODY",
+  "year": 2006,
+  "rating": 7.1,
+  "season": "Fall 2006",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1686-oZQepxP4SRQ2.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1686-oZQepxP4SRQ2.jpg",
+  "accent": "#ffa143",
+  "synopsis": "In Karakura Town, there has been a sudden outbreak of unidentifiable spirits called \"blanks\" (vacant souls) while in the skies of Soul Society, the real world has been reflected. A mysterious female shinigami called Senna has appeared before Ichigo along with a man named Ganryu, leading a group called the \"Dark Ones.\"\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "bleach-the-movie:-memories-of-nobody-yzjg92",
+    "mal": 1686,
+    "anilist": 1686,
+    "kitsu": 1515
+  },
+  "skip_key_id": 1686,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "bleach the movie memories of nobody bleach memories of nobody movie finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Bleach the Movie: Memories of Nobody (Movie)",
+      "runtime": "92:00",
+      "runtime_seconds": 5520,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a9028be6b1a2ef8b378cfbd-landscape.jpg",
+      "synopsis": "In Karakura Town, there has been a sudden outbreak of unidentifiable spirits called \"blanks\" (vacant souls) while in the skies of Soul Society, the real world has been reflected. A mysterious female shinigami called Senna has appeared before Ichigo along with a man named Ganryu, leading a group called the \"Dark Ones.\"\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "27630"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Sen no Yoru wo Koete",
+      "artist": "Aqua Timez",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

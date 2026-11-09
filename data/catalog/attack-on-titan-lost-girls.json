@@ -1,0 +1,94 @@
+{
+  "id": "attack-on-titan-lost-girls",
+  "title": "Attack on Titan: Lost Girls",
+  "native": "進撃の巨人 LOST GIRLS",
+  "year": 2017,
+  "rating": 7.7,
+  "season": "Fall 2017",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx99634-9u4hdvWwmC2s.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx99634-9u4hdvWwmC2s.png",
+  "accent": "#aed6ff",
+  "synopsis": "A three-part OVA adapting the \"Shingeki no Kyojin: Lost Girls\" spinoff novel that will be bundled with the 24th, 25th and 26th limited edition volumes of the manga.\n\nWall Sina, Goodbye:\n\nAnnie Leonhart has a job to do—and a resulting absence that must stay off her record at all costs. With no one else to turn to, she asks her comrade Hitch Dreyse to cover for her. She agrees but puts forward a single condition: Annie must solve the fruitless missing person case Hitch was assigned. The case revolves around Carly Stratmann, a university graduate and the daughter of wealthy businessman Elliot Stratmann. With only a single day to solve the case and the underground of the Stohess District crawling with thugs, Annie must put her all into finding this girl. Yet, every answer she uncovers only leads to further questions—how has the illegal drug coderoin found its way to Stohess, what is Elliot hiding, and where has Carly disappeared to?\n\nLost in the Cruel World:\n\nWith worry for Eren Yeager gripping her heart, Mikasa Ackerman begins to remember. She remembers her conversations with Armin Arlert, her concern for her friends, and most painfully, the time she had almost lost everything. As fear takes control, she begins to experience an alternate version of her past—some things can be changed, but are there events so inescapable that she can't even prevent them in her dreams?",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "attack-on-titan:-lost-girls-ko21zf",
+    "mal": 36106,
+    "anilist": 99634,
+    "kitsu": 13718
+  },
+  "skip_key_id": 36106,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "attack on titan lost girls 進撃の巨人 lost girls ova finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Wall Sina, Goodbye: Part 1",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "When Annie needs a day off from patrol duty to take care of some personal business, her roommate agrees to cover for her. But only if she does her the favor of searching for a girl who's been reported missing\n\n(Source: Crunchyroll)",
+      "airdate": "2017-12-08",
+      "markers": [],
+      "external_id": "224619"
+    },
+    {
+      "n": 2,
+      "title": "Wall Sina, Goodbye: Part 2",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "After discovering the body of Carly's lover, Annie plans the next steps of her search. However, her snooping lands her in trouble and she'll need to think quickly if she hopes to survive.\n\n(Source: Crunchyroll)",
+      "airdate": "2018-04-09",
+      "markers": [],
+      "external_id": "224620"
+    },
+    {
+      "n": 3,
+      "title": "Lost in the Cruel World",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "",
+      "synopsis": "Mikasa reflects on when she was lost in a world of her own making. Inside this world, everything went her way except for the one thing she wanted to change most.\n\n(Source: Crunchyroll)",
+      "airdate": "2018-08-09",
+      "markers": [],
+      "external_id": "224621"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Call your name <Gv>",
+      "artist": "Gemie",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Utsukushiki Zankoku na Sekai (美しき残酷な世界)",
+      "artist": "Yōko Hikasa",
+      "episodes": "3"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,351 @@
+{
+  "id": "blue-lock",
+  "title": "BLUE LOCK",
+  "native": "ブルーロック",
+  "year": 2022,
+  "rating": 7.9,
+  "season": "Fall 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx137822-U8naszP96vzC.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137822-U8naszP96vzC.png",
+  "accent": "#286be4",
+  "synopsis": "Japan’s desire for World Cup glory leads the Japanese Football Association to launch a new rigorous training program to find the national team’s next striker. Three hundred high school players are pitted against each other for the position, but only one will come out on top. Who among them will be the striker to usher in a new era of Japanese soccer?\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "blue-lock-fru6pl",
+    "mal": 49596,
+    "anilist": 137822,
+    "kitsu": 44973
+  },
+  "skip_key_id": 49596,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "blue lock フ ルーロック tv finished",
+  "genres": [
+    "action",
+    "drama"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Yume",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "309736"
+    },
+    {
+      "n": 2,
+      "title": "Monster",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "309737"
+    },
+    {
+      "n": 3,
+      "title": "The \"Zero\" Soccer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "309738"
+    },
+    {
+      "n": 4,
+      "title": "Premonition & Intuition",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "309739"
+    },
+    {
+      "n": 5,
+      "title": "The One to Be Born",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "309740"
+    },
+    {
+      "n": 6,
+      "title": "I'm Sorry",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "309741"
+    },
+    {
+      "n": 7,
+      "title": "Rush",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "322690"
+    },
+    {
+      "n": 8,
+      "title": "The Formula of a Goal",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "322691"
+    },
+    {
+      "n": 9,
+      "title": "Awakening",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "322692"
+    },
+    {
+      "n": 10,
+      "title": "Just the Way It Is",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "322693"
+    },
+    {
+      "n": 11,
+      "title": "The Final Piece",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330350"
+    },
+    {
+      "n": 12,
+      "title": "The Second Selection",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330740"
+    },
+    {
+      "n": 13,
+      "title": "Top 3",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330946"
+    },
+    {
+      "n": 14,
+      "title": "The Geniuses and the Average Joes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331555"
+    },
+    {
+      "n": 15,
+      "title": "Devour",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "331556"
+    },
+    {
+      "n": 16,
+      "title": "Tri-Fusion",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "332048"
+    },
+    {
+      "n": 17,
+      "title": "Donkey",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "332049"
+    },
+    {
+      "n": 18,
+      "title": "The Stage for the Lead",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "332050"
+    },
+    {
+      "n": 19,
+      "title": "Dancing Boy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "332051"
+    },
+    {
+      "n": 20,
+      "title": "Super Link-Up Play",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "332052"
+    },
+    {
+      "n": 21,
+      "title": "I'm Not There",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "332053"
+    },
+    {
+      "n": 22,
+      "title": "Voice",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "332054"
+    },
+    {
+      "n": 23,
+      "title": "These Five Players Have Passed",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "332055"
+    },
+    {
+      "n": 24,
+      "title": "The Time Has Come",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "332056"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Boujaku no Charisma",
+      "artist": "UNISON SQUARE GARDEN",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "One",
+      "artist": "Snow Man",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Chaos ga Kiwamaru (カオスが極まる)",
+      "artist": "UNISON SQUARE GARDEN",
+      "episodes": "2-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "WINNER",
+      "artist": "Shugo Nakamura",
+      "episodes": "2-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Judgement",
+      "artist": "ASH DA HERO",
+      "episodes": "14-22,24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Numbness like a ginger",
+      "artist": "UNISON SQUARE GARDEN",
+      "episodes": "15-23"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,197 @@
+{
+  "id": "deaimon-recipe-for-happiness",
+  "title": "Deaimon: Recipe for Happiness",
+  "native": "であいもん",
+  "year": 2022,
+  "rating": 7.4,
+  "season": "Spring 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx132532-DwjK9wnlSaKl.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx132532-DwjK9wnlSaKl.png",
+  "accent": "#e4c9a1",
+  "synopsis": "Nagomu Irino returns to his Kyoto home for the first time in ten years when his father is hospitalized. Nagomu is eager to take over Ryokushou, the family's Japanese sweet shop, but he's instead asked to be a father figure to Itsuka Yukihira, the girl everyone calls the successor.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "deaimon:-recipe-for-happiness-xpddmg",
+    "mal": 48779,
+    "anilist": 132532,
+    "kitsu": 44428
+  },
+  "skip_key_id": 48779,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "deaimon recipe for happiness て あいもん tv finished",
+  "genres": [
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Nagomu and Itsuka",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/590ea71592c7b6826bc832d3d6ae45bc1649258045_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302051"
+    },
+    {
+      "n": 2,
+      "title": "Echoing Through the Hydrangea",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/f973d18532168141f526ce29780e5b451649853932_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302052"
+    },
+    {
+      "n": 3,
+      "title": "A Summer Night's Accompaniment",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/e64eb4e16bd07c0508914d6a808905f71650447489_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302053"
+    },
+    {
+      "n": 4,
+      "title": "A Blue Wind Rustling Fresh Leaves / Beating the Summer Heat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/bb67b640aff9b84db51c5084a5c2315c1651071501_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302054"
+    },
+    {
+      "n": 5,
+      "title": "Welcoming the Spirits",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/19452038d5697e80126eb3b2a5f762e31651673705_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302055"
+    },
+    {
+      "n": 6,
+      "title": "Autumn's Potato Moon",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/506826a5290e84c9dfaf37dd8a0306971652279037_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302056"
+    },
+    {
+      "n": 7,
+      "title": "Dancing in Autumn Colors",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/6e95ca18f6466df04574b07178c9b4811652879353_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302057"
+    },
+    {
+      "n": 8,
+      "title": "Chestnut Retrospective",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/dabeb69eb871599cd9a0c821b1810bfb1653464132_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302058"
+    },
+    {
+      "n": 9,
+      "title": "Long-Awaited Warmth of Spring",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a201db8c6a9d889bd305128ced27f2001654079127_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302059"
+    },
+    {
+      "n": 10,
+      "title": "Reminiscing About Waiting for Spring",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b49165c49ee020bfb52a65cd509cf8141654690452_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302060"
+    },
+    {
+      "n": 11,
+      "title": "Is It Good",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/75a070e840098b271eaa3dfa878ffddf1655270459_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302061"
+    },
+    {
+      "n": 12,
+      "title": "Red Sea Bream for a Spring Dawn",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/481cf819f53831e81f0f036da8d582471655873499_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "302062"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sumire (Pansy)",
+      "artist": "Maaya Sakamoto",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Koko ni Aru Yakusoku",
+      "artist": "Deaimon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Orlando (オーランドー)",
+      "artist": "Nagomu Irino CV Nobunaga Shimazaki",
+      "episodes": "9"
+    }
+  ],
+  "relations": []
+}

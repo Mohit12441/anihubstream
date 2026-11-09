@@ -1,0 +1,105 @@
+{
+  "id": "darker-than-black-beneath-cherry-blossoms-in-full-bloom",
+  "title": "Darker than Black: Beneath Cherry Blossoms in Full Bloom",
+  "native": "DARKER THAN BLACK -黒の契約者- 桜の花の満開の下",
+  "year": 2008,
+  "rating": 7.2,
+  "season": "Spring 2008",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx4182-Sj5g5kz2WPuT.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4182-Sj5g5kz2WPuT.jpg",
+  "accent": "#f1e435",
+  "synopsis": "A side story of Darker than BLACK, also known as Episode 26. A Contractor was killed and it was rumored that his corpse and possessions were buried under a Sakura tree. Hei and the others (including the Police) decide to investigate.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "darker-than-black:-beneath-cherry-blossoms-in-full-bloom-hzaodk",
+    "mal": 4182,
+    "anilist": 4182,
+    "kitsu": 3506
+  },
+  "skip_key_id": 4182,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "darker than black beneath cherry blossoms in full bloom darker than black 黒の契約者 桜の花の満開の下 special finished",
+  "genres": [
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Darker than Black: Beneath Cherry Blossoms in Full Bloom",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6acb29ca62278b422d093175-poster.jpg",
+      "synopsis": "A side story of Darker than BLACK, also known as Episode 26. A Contractor was killed and it was rumored that his corpse and possessions were buried under a Sakura tree. Hei and the others (including the Police) decide to investigate.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "59046"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "DARKER THAN BLACK",
+      "artist": "Yasushi Ishii",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Tsukiakari no Michishirube (ツキアカリのミチシルベ; Guidepost of the Moonlight)",
+      "artist": "Stereopony",
+      "episodes": "2-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "From Dusk Till Dawn",
+      "artist": "abingdon boys school",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "HOWLING",
+      "artist": "abingdon boys school",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tsukiakari",
+      "artist": "Rie fu",
+      "episodes": "1-14"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Kakusei Heroism ~The Hero Without A Name~",
+      "artist": "An Cafe",
+      "episodes": "15-23,25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Dreams",
+      "artist": "HIGH and MIGHTY COLOR",
+      "episodes": "15-24"
+    }
+  ],
+  "relations": []
+}

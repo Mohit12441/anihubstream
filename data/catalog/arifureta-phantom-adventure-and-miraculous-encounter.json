@@ -1,0 +1,114 @@
+{
+  "id": "arifureta-phantom-adventure-and-miraculous-encounter",
+  "title": "Arifureta - From Commonplace to World's Strongest: The Miraculous Meeting and the Phantasmagorical Adventure",
+  "native": "ありふれた職業で世界最強 幻の冒険と奇跡の邂逅",
+  "year": 2022,
+  "rating": 7.1,
+  "season": "Summer 2022",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx146921-HyTSsd1ardxq.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx146921-HyTSsd1ardxq.jpg",
+  "accent": "#f1f1c9",
+  "synopsis": "After returning from the Sunken Ruins of Melusine, Hajime decides to take Myu on one last adventure before they part ways. However, the trip ends up being much more dangerous than they expected.\n\nHajime and his party is transported to a mysterious ruined city, where they meet and join forces with the Liberators, who were also transported here from the past. They work together to return to their original worlds.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "arifureta:-phantom-adventure-and-miraculous-encounter-zuwqzv",
+    "mal": 51473,
+    "anilist": 146921,
+    "kitsu": 46048
+  },
+  "skip_key_id": 51473,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "arifureta from commonplace to world s strongest the miraculous meeting and the phantasmagorical adventure ありふれた職業て 世界最強 幻の冒険と奇跡の邂逅 ova finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Arifureta - From Commonplace to World's Strongest: The Miraculous Meeting and the Phantasmagorical Adventure",
+      "runtime": "40:00",
+      "runtime_seconds": 2400,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx146921-HyTSsd1ardxq.jpg",
+      "synopsis": "After returning from the Sunken Ruins of Melusine, Hajime decides to take Myu on one last adventure before they part ways. However, the trip ends up being much more dangerous than they expected.\n\nHajime and his party is transported to a mysterious ruined city, where they meet and join forces with the Liberators, who were also transported here from the past. They work together to return to their original worlds.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "328816"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Unending Wish",
+      "artist": "Void_Chords feat. MindaRyn",
+      "episodes": "1-9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "The other story",
+      "artist": "DOBERMAN INFINITY",
+      "episodes": "1-9"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Daylight",
+      "artist": "MindaRyn",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Gedou Sanka (Heretical Hymn)",
+      "artist": "FantasticYouth",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "FLARE",
+      "artist": "Void_Chords feat. LIO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hajime no Uta (First Song)",
+      "artist": "DracoVirgo",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Compass",
+      "artist": "Void_Chords feat. MindaRyn",
+      "episodes": "10-"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Metamorphosis",
+      "artist": "iScream",
+      "episodes": "10-"
+    }
+  ],
+  "relations": []
+}

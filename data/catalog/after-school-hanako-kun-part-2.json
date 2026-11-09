@@ -1,0 +1,97 @@
+{
+  "id": "after-school-hanako-kun-part-2",
+  "title": "After-school Hanako-kun Season 2",
+  "native": "放課後少年花子くん 2",
+  "year": 2024,
+  "rating": 7.1,
+  "season": "Fall 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx170893-zqmpX7iYUumi.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx170893-zqmpX7iYUumi.jpg",
+  "accent": "#e4a150",
+  "synopsis": "The spirit Hanako-kun and his human assistant, first-year student Nene Yashiro, keep the peace between supernatural forces and the students of Kamome Academy. When they’re not fighting to maintain balance between the living and spirit worlds, how do they spend their time? Join Hanako-kun and Nene on their adventures after school!\n\n(Source: Crunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "after-school-hanako-kun-part-2-kf8ycj",
+    "mal": 57102,
+    "anilist": 170893,
+    "kitsu": 48212
+  },
+  "skip_key_id": 57102,
+  "skip_key_space": "mal",
+  "episode_total": 4,
+  "added_at": null,
+  "search_text": "after school hanako kun season 2 放課後少年花子くん 2 tv finished",
+  "genres": [
+    "comedy",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hanako-kun After School \\ Mokke Be Ambitious",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a0c3319bfe20068da9da4e57977fe6cb1696957560_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "355584"
+    },
+    {
+      "n": 2,
+      "title": "Kokkuri-san / Mitsuba's Operation: Friends",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/33e4335010c584f1cd6cdcb661f2dd581697556141_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "355585"
+    },
+    {
+      "n": 3,
+      "title": "Apparition Fever \\ A Mokke Came Home with Me!",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b57fda233cc75f3d721064036a1efd851698159654_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "355586"
+    },
+    {
+      "n": 4,
+      "title": "Truth of the Mokke / Kamome Monster Nursery School",
+      "runtime": "10:00",
+      "runtime_seconds": 600,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2ea728964681987839ec47c7975f46d71698764487_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "355587"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Koi! Koi Koi (来い！濃い恋)",
+      "artist": "Nene Yashiro CV: Akari Kito, Mokke CV: Chitose Morinaga, Yuuri Yoshida, Mai Kanazawa",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

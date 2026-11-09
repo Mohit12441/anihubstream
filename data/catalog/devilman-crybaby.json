@@ -1,0 +1,171 @@
+{
+  "id": "devilman-crybaby",
+  "title": "Devilman Crybaby",
+  "native": "DEVILMAN crybaby",
+  "year": 2018,
+  "rating": 7.6,
+  "season": "Winter 2018",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98460-bLtH2c3jd6sV.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98460-bLtH2c3jd6sV.png",
+  "accent": "#f1e4c9",
+  "synopsis": "The protagonist Akira Fudou learns from his best friend, Ryou Asuka, that an ancient race of demons has returned to take back the world from humans. Ryou tells Akira that the only way to defeat the demons is to incorporate their supernatural powers, and suggests that he unite with a demon himself. Akira succeeds in transforming into Devilman, who possesses both the powers of a demon and the soul of a human. The battle of Devilman and Akira Fudou begins.\n\n(Source: Netflix)\n\nNote: New Devilman project marking Go Nagai's 50th anniversary as a creator.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13230,
+    "anilist": 98460,
+    "mal": 35120,
+    "hianime": "devilman:-crybaby-hd122y"
+  },
+  "skip_key_id": 35120,
+  "skip_key_space": "mal",
+  "episode_total": 10,
+  "added_at": "2026-10-14 02:36:47",
+  "search_text": "devilman crybaby devilman crybaby ona finished",
+  "genres": [
+    "action",
+    "drama",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I Need You",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/209510/original.jpg",
+      "synopsis": "Ryo, a young professor returning from research abroad, takes his pure-hearted, crybaby friend Akira to a decadent party, where things turn demonic.",
+      "airdate": "2018-01-05",
+      "markers": [],
+      "external_id": "209510"
+    },
+    {
+      "n": 2,
+      "title": "One Hand Is Enough",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/209511/original.jpg",
+      "synopsis": "Akira has become a completely different man -- he's stronger and hungrier than ever before. He seeks out Ryo for answers.",
+      "airdate": "2018-01-05",
+      "markers": [],
+      "external_id": "209511"
+    },
+    {
+      "n": 3,
+      "title": "Believe Me!",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/209512/original.jpg",
+      "synopsis": "After getting shut down by his editor, paparazzo Nagasaki gets desperate. Silene and Kaim learn what happened to their missing fellow demon, Amon.",
+      "airdate": "2018-01-05",
+      "markers": [],
+      "external_id": "209512"
+    },
+    {
+      "n": 4,
+      "title": "Come, Akira",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/209513/original.jpg",
+      "synopsis": "Akira's mother calls and says she'll be home soon. Everyone is looking forward to seeing her, but Ryo warns Akira not to trust any human.",
+      "airdate": "2018-01-05",
+      "markers": [],
+      "external_id": "209513"
+    },
+    {
+      "n": 5,
+      "title": "Beautiful Silene",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/209514/original.jpg",
+      "synopsis": "Silene tracks down Amon, hoping to reawaken his demonic side. But in the ensuing battle, the human soul of Akira remains powerful.",
+      "airdate": "2018-01-05",
+      "markers": [],
+      "external_id": "209514"
+    },
+    {
+      "n": 6,
+      "title": "Neither Demon Nor Human",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/209515/original.jpg",
+      "synopsis": "At a widely broadcast track meet, Ryo plans to expose high school athlete Koda as a demon, thereby spreading fear and distrust throughout society.",
+      "airdate": "2018-01-05",
+      "markers": [],
+      "external_id": "209515"
+    },
+    {
+      "n": 7,
+      "title": "Weak Humans, Wise Demons",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/209516/original.jpg",
+      "synopsis": "With the fear of demons gripping the world, humanity devolves into paranoia and violence. Akira tries to save other demon-human hybrids like himself.",
+      "airdate": "2018-01-05",
+      "markers": [],
+      "external_id": "209516"
+    },
+    {
+      "n": 8,
+      "title": "I Must Know Myself",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/209517/original.jpg",
+      "synopsis": "Ryo's actions and motives remain a mystery to himself, so he revisits his past for answers. Miki's father searches for his missing wife and son.",
+      "airdate": "2018-01-05",
+      "markers": [],
+      "external_id": "209517"
+    },
+    {
+      "n": 9,
+      "title": "Go to Hell, You Mortals",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/209518/original.jpg",
+      "synopsis": "Betrayed and exposed, Akira becomes a target. After Miki takes to social media to defend his human soul, she and Miko find themselves under attack.",
+      "airdate": "2018-01-05",
+      "markers": [],
+      "external_id": "209518"
+    },
+    {
+      "n": 10,
+      "title": "Crybaby",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/209519/original.jpg",
+      "synopsis": "Confronted by Akira, Ryo reveals the truth about demonkind and himself. Humans, demons and devilmen gather for an ultimate battle for the world.",
+      "airdate": "2018-01-05",
+      "markers": [],
+      "external_id": "209519"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "MAN HUMAN (DEVILMAN crybaby Ver.)",
+      "artist": "Denki Groove",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Konya Dake (Tonight Only)",
+      "artist": "Takkyū to Tabibito",
+      "episodes": "9"
+    }
+  ],
+  "relations": []
+}

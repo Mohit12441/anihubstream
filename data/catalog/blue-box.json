@@ -1,0 +1,362 @@
+{
+  "id": "blue-box",
+  "title": "Blue Box",
+  "native": "アオのハコ",
+  "year": 2024,
+  "rating": 8.1,
+  "season": "Fall 2024",
+  "kind": "ONA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx170942-KKcLfQzV57nG.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx170942-KKcLfQzV57nG.jpg",
+  "accent": "#5daee4",
+  "synopsis": "Do these sports-crossed lovers have a chance?\n\nTaiki Inomata loves badminton, but he has a long way to go before he can reach nationals. When Taiki sees upperclassman Chinatsu Kano practicing her heart out on the girls’ basketball team, he falls for her hard. After an unexpected turn of events brings the two closer together, sports might not be the first thing on their minds anymore!\n\n(Source: TMS Anime)\n\nNote: The series streamed a week in advance on Netflix Japan starting with episode 2 released alongside episode 1.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "blue-box-8ldtqs",
+    "mal": 57181,
+    "anilist": 170942,
+    "kitsu": 48239
+  },
+  "skip_key_id": 57181,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": null,
+  "search_text": "blue box アオのハコ ona finished",
+  "genres": [
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Chinatsu Senpai",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372457/thumbnail/3134705c87242184574d7e7802166e88.jpg",
+      "synopsis": "Despite a few heart-fluttering encounters, Taichi doubts his crush Chinatsu even knows his name. Later, shocking news forces him to make a bold move.\n\n(Source: Netflix)",
+      "airdate": "2024-10-03",
+      "markers": [],
+      "external_id": "372457"
+    },
+    {
+      "n": 2,
+      "title": "You Have to Go to Nationals",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372458/thumbnail/99b7885ea7a4d7dd8ed6ba7801a2fde7.jpg",
+      "synopsis": "Taiki's new housemate quickly makes herself at home. As they grow closer, his attempts to keep the situation a secret cause a misunderstanding.\n\n(Source: Netflix)",
+      "airdate": "2024-10-10",
+      "markers": [],
+      "external_id": "372458"
+    },
+    {
+      "n": 3,
+      "title": "Chii",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372459/thumbnail/b2827653fcaaf4239db0bf680a98a874.jpg",
+      "synopsis": "Taiki overhears Haryu calling Chinatsu by a special nickname and gets flustered. Will it affect his upcoming match against the upperclassman?\n\n(Source: Netflix)",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "372459"
+    },
+    {
+      "n": 4,
+      "title": "If He Wins",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372460/thumbnail/64bb6112114b907e6f1e674220d9c1e8.jpg",
+      "synopsis": "A gym uniform mix-up leads to a heart-pounding exchange. Later, Haryu raises the stakes for Taiki's match, while Kyo makes a secret request to Chinatsu.\n\n(Source: Netflix)",
+      "airdate": "2024-10-24",
+      "markers": [],
+      "external_id": "372460"
+    },
+    {
+      "n": 5,
+      "title": "Aquarium",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372461/thumbnail/97ea6ffdb4ee3c04d8decef738ee100f.jpg",
+      "synopsis": "WIth both players going neck and neck on the court, will Taiki win his match against Kishi — and will Chinatsu invite him to the aquarium?\n\n(Source: Netflix)",
+      "airdate": "2024-10-31",
+      "markers": [],
+      "external_id": "372461"
+    },
+    {
+      "n": 6,
+      "title": "Wish Me Luck",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372462/thumbnail/b674a1583434e087edccc11c8cea3185.jpg",
+      "synopsis": "On her way to return Chinatsu's mobile phone, Hina makes a shocking discovery. The gymnast faces mounting pressure while struggling with her new feelings.\n\n(Source: Netflix)",
+      "airdate": "2024-11-07",
+      "markers": [],
+      "external_id": "372462"
+    },
+    {
+      "n": 7,
+      "title": "Can I Have One?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372463/thumbnail/e8b4d8f0823f9c72b1aa23d39e33d897.jpg",
+      "synopsis": "Chinatsu overhears rival players speak poorly about her recent game. Later, Hina playfully steals a bite from Taiki — and Chinatsu notices from afar.\n\n(Source: Netflix)",
+      "airdate": "2024-11-14",
+      "markers": [],
+      "external_id": "372463"
+    },
+    {
+      "n": 8,
+      "title": "Score!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372464/thumbnail/e484c0d80307f1da7ca2395356e9e08b.jpg",
+      "synopsis": "As Taiki arrives to make it to the nationals, Chinatsu gives him a word of encouragement. Later, Haryu and Taiki face up top players in the doubles match.\n\n(Source: Netflix)",
+      "airdate": "2024-11-21",
+      "markers": [],
+      "external_id": "372464"
+    },
+    {
+      "n": 9,
+      "title": "I'll Be Rooting for You",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372465/thumbnail/9d2044b970dd8e7c47528f7016cfe872.jpg",
+      "synopsis": "Frustrated with his loss to Sajikawa High, Taiki overworks himself studying for midterms and falls ill, when Chinatsu suddenly appears in his room.\n\n(Source: Netflix)",
+      "airdate": "2024-11-28",
+      "markers": [],
+      "external_id": "372465"
+    },
+    {
+      "n": 10,
+      "title": "It's Not a Good Thing",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372466/thumbnail/d4361a533d699df49ca04cbb129ab89d.jpg",
+      "synopsis": "After a sleepless night, Taiki asks Haryu for relationship advice. Later, Chinatsu realizes her recent behavior might hinder her dream and trouble others.\n\n(Source: Netflix)",
+      "airdate": "2024-12-05",
+      "markers": [],
+      "external_id": "372466"
+    },
+    {
+      "n": 11,
+      "title": "Uncool!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372467/thumbnail/95b5b7fc7991839b234112171f742d50.jpg",
+      "synopsis": "With the annual fireworks festival approaching, Hina musters the courage to invite Taiki, who's been avoiding Chinatsu since their awkward conversation.\n\n(Source: Netflix)",
+      "airdate": "2024-12-12",
+      "markers": [],
+      "external_id": "372467"
+    },
+    {
+      "n": 12,
+      "title": "Girls...",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372468/thumbnail/c6df4b4b4ba1fed2b47224ac818e1f69.jpg",
+      "synopsis": "Taiki attends the fireworks festival with Hina and is surprised by her new look and shyness. Later, he unexpectedly bumps into Chinatsu with a lost child.\n\n(Source: Netflix)",
+      "airdate": "2024-12-19",
+      "markers": [],
+      "external_id": "372468"
+    },
+    {
+      "n": 13,
+      "title": "I Want a Back-and-Forth Rally",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372469/thumbnail/089962dde36018483e6ae92619432352.jpg",
+      "synopsis": "Taiki worries about a potential misunderstanding after Chinatsu departs. At the badminton nationals, he learns more about Karen and Haryu's relationship.\n\n(Source: Netflix)",
+      "airdate": "2025-01-02",
+      "markers": [],
+      "external_id": "372469"
+    },
+    {
+      "n": 14,
+      "title": "What's the Connection?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372470/thumbnail/57280521775bbcb194592e086a9356b4.jpg",
+      "synopsis": "While Chinatsu faces immense pressure at the nationals, Hina cheers up a worried Taiki with a game where the loser shares an embarrassing secret.\n\n(Source: Netflix)",
+      "airdate": "2025-01-09",
+      "markers": [],
+      "external_id": "372470"
+    },
+    {
+      "n": 15,
+      "title": "August 26",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372471/thumbnail/edb7e3d8a27471809727bb457b7ec2c8.jpg",
+      "synopsis": "Despite it being her birthday, Chinatsu still seems down. Taiki takes her somewhere special — but the weather might have other plans.\n\n(Source: Netflix)",
+      "airdate": "2025-01-16",
+      "markers": [],
+      "external_id": "372471"
+    },
+    {
+      "n": 16,
+      "title": "Unfair Woman",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372472/thumbnail/84d6724e40e5b942ea78181989167a09.jpg",
+      "synopsis": "As a new school term begins, the school buzzes with preparations for the upcoming festival. Chinatsu reflects on her restless feelings towards Taiki.\n\n(Source: Netflix)",
+      "airdate": "2025-01-23",
+      "markers": [],
+      "external_id": "372472"
+    },
+    {
+      "n": 17,
+      "title": "Of Course I Want to See it",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372473/thumbnail/8246157b8bbf6d0500e5c62da2e6bc00.jpg",
+      "synopsis": "Upon learning of an upcoming practice match with Sajikawa High, Taiki worries about facing Yusa again. Chinatsu and Hina promise their support.\n\n(Source: Netflix)",
+      "airdate": "2025-01-30",
+      "markers": [],
+      "external_id": "372473"
+    },
+    {
+      "n": 18,
+      "title": "I Know",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372474/thumbnail/bdecdbd79463e4be47154485dafe51d4.jpg",
+      "synopsis": "Sajikawa High arrives for the much-anticipated practice match. As Chinatsu watches from the sidelines, she thinks about how far Taiki has come.\n\n(Source: Netflix)",
+      "airdate": "2025-02-06",
+      "markers": [],
+      "external_id": "372474"
+    },
+    {
+      "n": 19,
+      "title": "I've Got Plans",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372475/thumbnail/d652ca23f214ca7355a52810814607d8.png",
+      "synopsis": "Just before the school festival starts, Taiki goes over his usual morning jog and finds Chinatsu practicing nearby. She extends a surprising invitation.\n\n(Source: Netflix)",
+      "airdate": "2025-02-13",
+      "markers": [],
+      "external_id": "372475"
+    },
+    {
+      "n": 20,
+      "title": "As One of Her Closest Friends",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372476/thumbnail/e00c1fa944b8c2254c6f0a4d4a598fd3.jpg",
+      "synopsis": "After a blissful time with Chinatsu, Nishida's ominous fortune comes true! His classmate, who plays the prince, can't perform, so Taiki must take on the role.\n\n(Source: Netflix)",
+      "airdate": "2025-02-20",
+      "markers": [],
+      "external_id": "372476"
+    },
+    {
+      "n": 21,
+      "title": "A Chance to Blossom",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372477/thumbnail/692302a7c8b6b626a9980a22d9d32448.jpg",
+      "synopsis": "While rumors swirl around Taiki and Hina, Chinatsu seems unfazed. However, while spending the night at Karen's, the basketballer shares her true thoughts.\n\n(Source: Netflix)",
+      "airdate": "2025-02-27",
+      "markers": [],
+      "external_id": "372477"
+    },
+    {
+      "n": 22,
+      "title": "Inota!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372478/thumbnail/88367f6f7640ea203499630436e9e2d4.jpg",
+      "synopsis": "After learning about Hina's unrequited feelings for Taiki, Ayame decides to help — and the perfect chance arises at the upcoming training camp!\n\n(Source: Netflix)",
+      "airdate": "2025-03-06",
+      "markers": [],
+      "external_id": "372478"
+    },
+    {
+      "n": 23,
+      "title": "Spinning",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372479/thumbnail/70b143b8ad0767662bcda16b9651bb79.jpg",
+      "synopsis": "An exciting card game with friends leaves Taiki's head spinning. He mulls over his feelings for Chinatsu and Hina as the training camp continues.\n\n(Source: Netflix)",
+      "airdate": "2025-03-13",
+      "markers": [],
+      "external_id": "372479"
+    },
+    {
+      "n": 24,
+      "title": "A Roller Coaster",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/372480/thumbnail/1b4c05391a7ae6fb852811aad06d9d09.jpg",
+      "synopsis": "Hina experiences a roller coaster of emotions over her affection for Taiki and, thanks to Ayame, gets a chance to be alone with him on the last night.\n\n(Source: Netflix)",
+      "airdate": "2025-03-20",
+      "markers": [],
+      "external_id": "372480"
+    },
+    {
+      "n": 25,
+      "title": "Even So",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Ayame faces the consequences of her meddling and tries various ways to console Hina. Meanwhile, Taiki strengthens his resolve and asks Chinatsu out.\n\n(Source: Netflix, edited)",
+      "airdate": "2025-03-27",
+      "markers": [],
+      "external_id": "372698"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Anata no Hana no Iro (あなたの花の色)",
+      "artist": "aiko",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "blue in",
+      "artist": "elsewhere kikou",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Same Blue",
+      "artist": "Official HIGE DANdism",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Teenage Blue",
+      "artist": "Eve",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Goodbye",
+      "artist": "Macaroni Enpitsu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Contrast",
+      "artist": "TOMOO",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

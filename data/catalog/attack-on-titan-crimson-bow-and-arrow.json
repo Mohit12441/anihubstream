@@ -1,0 +1,56 @@
+{
+  "id": "attack-on-titan-crimson-bow-and-arrow",
+  "title": "Attack on Titan Part I: Crimson Bow and Arrow",
+  "native": "劇場版「進撃の巨人」前編～紅蓮の弓矢～",
+  "year": 2014,
+  "rating": 7.6,
+  "season": "Fall 2014",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20691-dnv0rkpbgBDJ.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20691-dnv0rkpbgBDJ.png",
+  "accent": "#e47835",
+  "synopsis": "A recompilation of the anime series. The new films will feature new dubbing and a 5.1ch remaster with returning voice cast members. The first film will cover episodes 1 through 13.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "attack-on-titan:-crimson-bow-and-arrow-p67yon",
+    "mal": 23775,
+    "anilist": 20691,
+    "kitsu": 8672
+  },
+  "skip_key_id": 23775,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "attack on titan part i crimson bow and arrow 劇場版 進撃の巨人 前編 紅蓮の弓矢 movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Attack on Titan: Crimson Bow and Arrow (Movie)",
+      "runtime": "119:00",
+      "runtime_seconds": 7140,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a8ed5e96b1a2ef8b331ad63-landscape.jpg",
+      "synopsis": "A recompilation of the anime series. The new films will feature new dubbing and a 5.1ch remaster with returning voice cast members. The first film will cover episodes 1 through 13.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "116581"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

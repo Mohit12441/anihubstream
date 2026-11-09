@@ -1,0 +1,364 @@
+{
+  "id": "aharen-san-wa-hakarenai",
+  "title": "Aharen-san wa Hakarenai",
+  "native": "阿波連さんははかれない",
+  "year": 2022,
+  "rating": 7.1,
+  "season": "Spring 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx137281-i4UHcGkUi7j6.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137281-i4UHcGkUi7j6.jpg",
+  "accent": "#5d93e4",
+  "synopsis": "The story follows the \"indecipherable\" daily life of the short and quiet Reina Aharen and Raidou who sits next to her. Aharen is not so good at gauging the distance between people, and Raidou initially felt some distance between the two of them. One day, when Raidou picked up the eraser that Aharen had dropped, the distance between them suddenly became uncomfortably close.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Aharen-san wa Hakarenai Season 2 (2025)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 44944,
+    "anilist": 137281,
+    "mal": 49520
+  },
+  "skip_key_id": 49520,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 10:34:33",
+  "search_text": "aharen san wa hakarenai 阿波連さんははかれない tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Isn't This Too close?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/309885/thumbnail/medium-debfac7638f6fc98b6ca157441712dc4.jpeg",
+      "synopsis": "Raido spent middle-school isolated due to his unintentionally unfriendly appearance, and hopes that high school will be different. He decides the first step to being more social will be to get to know Aharen Reina, the girl who sits next to him. She seems distant at first, then a little too close, and before long Raido comes to understand that Aharen has more than a little trouble at gauging the distance between herself and others--in more ways than one. (Source: Crunchyroll)",
+      "airdate": "2022-04-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 39,
+          "end": 129
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1338,
+          "end": 1426
+        }
+      ],
+      "external_id": "309885"
+    },
+    {
+      "n": 2,
+      "title": "Are We Being Followed?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/309886/thumbnail/medium-c90c3421be93d955acd0959f4c5405ad.jpeg",
+      "synopsis": "Aharen finds herself having even more trouble with distance than usual thanks to her vision being impaired. When Raido tries to help her with eye drops, he incurs the wrath of Aharen's imposing childhood friend. (Source: Crunchyroll)",
+      "airdate": "2022-04-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1200,
+          "end": 1290
+        }
+      ],
+      "external_id": "309886"
+    },
+    {
+      "n": 3,
+      "title": "We're Changing Seats, Huh?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/322831/thumbnail/medium-33031c0b2f4546a45818437785f08982.jpeg",
+      "synopsis": "The periodic shift of the seating chart is approaching, threatening to put Aharen and Raido's friendship to the test. (Source: Crunchyroll)",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 30,
+          "end": 118
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1358,
+          "end": 1440
+        }
+      ],
+      "external_id": "322831"
+    },
+    {
+      "n": 4,
+      "title": "Isn't That Overdoing It?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/324027/thumbnail/medium-e18600e79afd03379a87c9ca8926c9b3.jpeg",
+      "synopsis": "A fixation on rap music leads to a new breakthrough in Raido and Aharen's friendship, but a fixation on fidget spinners threatens to ruin both their lives. (Source: Crunchyroll)",
+      "airdate": "2022-04-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 78,
+          "end": 166
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1333,
+          "end": 1423
+        }
+      ],
+      "external_id": "324027"
+    },
+    {
+      "n": 5,
+      "title": "Isn't That a Little Too Heavy?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/324802/thumbnail/medium-6e9263e430ad288d5285fd938d976722.jpeg",
+      "synopsis": "Exams are coming up, and Raido is hoping on Aharen's tutelage to improve his test scores. (Source: Crunchyroll)",
+      "airdate": "2022-04-29",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 65,
+          "end": 155
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1342,
+          "end": 1430
+        }
+      ],
+      "external_id": "324802"
+    },
+    {
+      "n": 6,
+      "title": "Are We Too Good?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/325177/thumbnail/medium-a043751a28d1f002126fe1146ef8d425.jpeg",
+      "synopsis": "A trip to the school pool during P.E. sets off a string of competitions between Aharen and Raido. Can the quiet giant finally score a victory against the tiny enigma? (Source: Crunchyroll)",
+      "airdate": "2022-05-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 34,
+          "end": 124
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1381
+        }
+      ],
+      "external_id": "325177"
+    },
+    {
+      "n": 7,
+      "title": "A Work of Art, Isn't It?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/325520/thumbnail/medium-9e0d06f669e607af7f0f9949c148c6b9.jpeg",
+      "synopsis": "An absent-minded Aharen finds herself missing her lunch, and is forced to contend with the howling masses at the school counter, in addition to Raido's competitive streak, and Futaba's one-sided romantic rivalry. (Source: Crunchyroll)",
+      "airdate": "2022-05-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 64,
+          "end": 154
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1412
+        }
+      ],
+      "external_id": "325520"
+    },
+    {
+      "n": 8,
+      "title": "Time for the Summer Festival, Huh?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/325521/thumbnail/medium-fbe3b70b0cdb33ec2f7adc288fb5b6c0.jpeg",
+      "synopsis": "As Aharen and Raido's friendship continues to fan the flames of Ms. Tobaru's imagination, the festival season arrives, with the taciturn duo and their friends heading out to enjoy the fireworks. (Source: Crunchyroll)",
+      "airdate": "2022-05-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 87,
+          "end": 177
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1354,
+          "end": 1428
+        }
+      ],
+      "external_id": "325521"
+    },
+    {
+      "n": 9,
+      "title": "I'm Sick, Huh?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/325522/thumbnail/medium-00f724ec83c7abffe59e7708029ffd1f.jpeg",
+      "synopsis": "Raido gets sick, with surprising results. After recovering he has a surprise encounter with the intimidating, sword-wielding... Aharen? (Source: Crunchyroll)",
+      "airdate": "2022-05-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 44,
+          "end": 134
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1322,
+          "end": 1412
+        }
+      ],
+      "external_id": "325522"
+    },
+    {
+      "n": 10,
+      "title": "We're Camping, Huh?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/325523/thumbnail/medium-309444a2eceadb057d81f1c39121a070.jpeg",
+      "synopsis": "Ishikawa invites Raido, Aharen, Oshiro, and Sato to go camping in the mountains. Spurred on by the beauty of their surroundings, Aharen decides to be honest about her feelings... (Source: Crunchyroll)",
+      "airdate": "2022-06-03",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 43,
+          "end": 133
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1230,
+          "end": 1320
+        }
+      ],
+      "external_id": "325523"
+    },
+    {
+      "n": 11,
+      "title": "It Snowed, Huh?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/325524/thumbnail/medium-654fe7b220de86ff07e9549d42361df6.jpeg",
+      "synopsis": "Ambiguity and snow are in the air, as Raido and Aharen enjoy an igloo cafe, while their friends speculate about whether or not the taciturn duo's relationship status has changed. (Source: Crunchyroll)",
+      "airdate": "2022-06-10",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 22,
+          "end": 112
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1321,
+          "end": 1411
+        }
+      ],
+      "external_id": "325524"
+    },
+    {
+      "n": 12,
+      "title": "This Is a Duel, Huh?",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/325525/thumbnail/medium-c2f688e7018559a532f8ecd7f65ced94.jpeg",
+      "synopsis": "(Source: Crunchyroll)",
+      "airdate": "2022-06-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 131,
+          "end": 221
+        }
+      ],
+      "external_id": "325525"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Binetsuma",
+      "artist": "ZUTOMAYO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Twilight",
+      "artist": "shallm",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hanarenai Kyori (Inseparable Distance)",
+      "artist": "TrySail",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "AHAREN HEART",
+      "artist": "Inori Minase",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kyori-Kan (A Sense of Distance)",
+      "artist": "HaKoniwalily",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

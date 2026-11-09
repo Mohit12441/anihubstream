@@ -1,0 +1,321 @@
+{
+  "id": "attack-on-titan-final-season-part-2",
+  "title": "Attack on Titan Final Season Part 2",
+  "native": "進撃の巨人 The Final Season Part 2",
+  "year": 2022,
+  "rating": 8.7,
+  "season": "Winter 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx131681-5ooUqvqNtee1.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx131681-5ooUqvqNtee1.jpg",
+  "accent": "#35a1e4",
+  "synopsis": "The war for Paradis zeroes in on Shiganshina just as Jaegerists have seized control. After taking a huge blow from a surprise attack led by Eren, Marley swiftly acts to return the favor. With Zeke’s true plan revealed and a military forced under new rule, this battle might be fought on two fronts. Does Eren intend on fulfilling his half-brother’s wishes or does he have a plan of his own?\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "attack-on-titan:-final-season-part-2-3z79l4",
+    "mal": 48583,
+    "anilist": 131681,
+    "kitsu": 44240
+  },
+  "skip_key_id": 48583,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "attack on titan final season part 2 進撃の巨人 the final season part 2 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Judgement",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299087/thumbnail/94768709a63ee1fa1c049ef51ce63cc4.jpg",
+      "synopsis": "Caught off guard by Marley's surprise attack, Eren fends off their Titans alone. As the battle rages on above, the Scouts consider Eren's motives from the underground dungeons.\n\n(Source: Funimation)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 243,
+          "end": 333,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "299087"
+    },
+    {
+      "n": 2,
+      "title": "Sneak Attack",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299088/thumbnail/234c89a8fefd175fb05af4884a03bff3.jpg",
+      "synopsis": "The Beast Titan joins the fray, but General Magath is determined to take him down. Meanwhile, with the city in flames, Colt and Gabi rush to rescue Falco who's held captive by the Jaegerists.\n\n(Source: Funimation)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 409,
+          "end": 499,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        },
+        {
+          "kind": "recap",
+          "start": 1,
+          "end": 110,
+          "label": "Recap"
+        }
+      ],
+      "external_id": "299088"
+    },
+    {
+      "n": 3,
+      "title": "Two Brothers",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299089/thumbnail/5dcf09c0fe9b5410afdcbf0162f3ec02.jpg",
+      "synopsis": "Colt pleads with Zeke to not use his scream and turn Falco into a Titan. All the while, soldiers and Titans clash in battle as Eren struggles to make contact with his brother.\n\n(Source: Funimation)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 0,
+          "end": 90,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "299089"
+    },
+    {
+      "n": 4,
+      "title": "Memories of the Future",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299090/thumbnail/7f0fcc4b6155067d35bc2d193dd19780.jpg",
+      "synopsis": "Zeke takes Eren through Grisha's memories to show him how he's been brainwashed. But in doing so, Zeke discovers something about Eren that he never knew.\n\n(Source: Funimation)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 333,
+          "end": 423,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "299090"
+    },
+    {
+      "n": 5,
+      "title": "From You, 2000 Years Ago",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299091/thumbnail/22a153b9cd9d64f753b630fb7d45b015.jpg",
+      "synopsis": "For 2,000 years, the Founder Ymir has been waiting--a slave to those with royal blood. However, Eren's yearning for freedom gives her a choice that could shake things up.\n\n(Source: Funimation)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 332,
+          "end": 422,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        },
+        {
+          "kind": "recap",
+          "start": 49,
+          "end": 160,
+          "label": "Recap"
+        }
+      ],
+      "external_id": "299091"
+    },
+    {
+      "n": 6,
+      "title": "Thaw",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299092/thumbnail/1945650708d2dc5c3ea0e43673d675f8.jpg",
+      "synopsis": "With no walls left on the island and Shiganshina full of Titans, the Scouts must battle their former comrades. In the midst of it all, Gabi is determined to find and rescue Falco at whatever cost.\n\n(Source: Funimation)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 87,
+          "end": 177,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "299092"
+    },
+    {
+      "n": 7,
+      "title": "Sunset",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299093/thumbnail/92fa159ec7fcc1de62372d6aa1022f85.jpg",
+      "synopsis": "The Rumbling is set in motion once all hardening is undone, but this also sets Annie free. As the Jaegerists take control of the island, Connie races towards Ragako to feed Falco to his Titan mother.\n\n(Source: Funimation)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 243,
+          "end": 333,
+          "label": "Opening"
+        }
+      ],
+      "external_id": "299093"
+    },
+    {
+      "n": 8,
+      "title": "Pride",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299094/thumbnail/7daeabc97d147a50ddfb8d174f3946a6.jpg",
+      "synopsis": "Upon reaching Ragako, Conny hatches a plan to trick Falco into being eaten by his mother. Elsewhere, hero of the Eldian Empire, Jean, is to execute Yelena and Onyankopon for their crimes against humanity.\n\n(Source: Funimation)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 253,
+          "end": 343,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "299094"
+    },
+    {
+      "n": 9,
+      "title": "Night of the End",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299095/thumbnail/735724cfaddd2a0331bd1f725cd19669.jpg",
+      "synopsis": "Deep in the forest, an unlikely rabble of Marley stragglers and island fugitives attempt to set their hatred aside and talk around a campfire without killing each other.\n\n(Source: Funimation)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1422,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "299095"
+    },
+    {
+      "n": 10,
+      "title": "Traitor",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299096/thumbnail/a8ed8bfd9dfa45ffb2ba0a796d00b988.jpg",
+      "synopsis": "The Azumabito's flying boat is guarded by a port full of Jaegerists, but the Scouts are reluctant to kill their former friends. If they wish to avoid bloodshed, they can't afford their plan to go wrong.\n\n(Source: Funimation)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 97,
+          "end": 187,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1330,
+          "end": 1420,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "299096"
+    },
+    {
+      "n": 11,
+      "title": "Retrospective",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299097/thumbnail/75ed20bde10ea46e5bba95d731eb44a4.jpg",
+      "synopsis": "For the flying boat to take off, the mechanics need half a day to service it. Knowing they'll never last that long with Jeagerist reinforcements on the way, the crew is forced to change their plans.\n\n(Source: Funimation)",
+      "airdate": "2024-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 303,
+          "end": 388,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1211,
+          "end": 1301,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "299097"
+    },
+    {
+      "n": 12,
+      "title": "The Dawn of Humanity",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299098/thumbnail/41a61d154dca1ae9d2abf5eeb2a97a76.jpg",
+      "synopsis": "Regardless of where it all began, Eren commits to his path of destruction during the Scouts' first visit to the Marleyan mainland, leaving Mikasa to wonder if things could've been different.\n\n(Source: Funimation)",
+      "airdate": "2024-10-18",
+      "markers": [],
+      "external_id": "299098"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

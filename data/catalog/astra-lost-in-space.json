@@ -1,0 +1,192 @@
+{
+  "id": "astra-lost-in-space",
+  "title": "ASTRA LOST IN SPACE",
+  "native": "彼方のアストラ",
+  "year": 2019,
+  "rating": 7.8,
+  "season": "Summer 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx107663-gfIpy1h36kUL.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx107663-gfIpy1h36kUL.jpg",
+  "accent": "#1a3578",
+  "synopsis": "Itʼs the first day of Planet Camp, and Aries Spring couldnʼt be more excited! She, along with eight other strangers, leave for Planet McPa for a weeklong excursion. Soon after they arrive, however, a mysterious orb appears and transports them into the depths of space, where they find an empty floating spaceship…\n\n(Source: VIZ Media)\n\nNote: The first and last episode aired with a runtime of ~48 minutes as opposed to the standard 24 minute long episode.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42148,
+    "anilist": 107663,
+    "mal": 39198,
+    "hianime": "astra-lost-in-space-dr76ya"
+  },
+  "skip_key_id": 39198,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 12:05:19",
+  "search_text": "astra lost in space 彼方のアストラ tv finished",
+  "genres": [
+    "adventure",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Planet Camp",
+      "runtime": "48:00",
+      "runtime_seconds": 2880,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/261460/original.jpg",
+      "synopsis": "Nine students embark on their first trip to outer space, to attend a five-day \"Planet Camp\" on an uninhabited planet. The moment they arrive, however, a mysterious sphere transports them to a different part of the galaxy.",
+      "airdate": "2019-07-03",
+      "markers": [],
+      "external_id": "261460"
+    },
+    {
+      "n": 2,
+      "title": "Wilderness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/261461/original.jpg",
+      "synopsis": "The team reach the first planet on their interstellar trip, Planet Vilavurs. Though the planet itself seems comfortably inhabitable, the novice explorers have much to learn about space survival, and about each other.",
+      "airdate": "2019-07-10",
+      "markers": [],
+      "external_id": "261461"
+    },
+    {
+      "n": 3,
+      "title": "Meteor",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267650/original.jpg",
+      "synopsis": "Spirits are raised and friendships are forged after the nine students successfully complete their first visit to a foreign planet. However, they are reminded that danger still lurks - in outer space, and from within the group.",
+      "airdate": "2019-07-17",
+      "markers": [],
+      "external_id": "267650"
+    },
+    {
+      "n": 4,
+      "title": "Star of Hope",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267651/original.jpg",
+      "synopsis": "Disaster narrowly averted, the group land on Planet Shummoor, the second planet of their trip. Finding resources proved to be a challenge, but every member of the group was optimistic that things will work out - except for one.",
+      "airdate": "2019-07-24",
+      "markers": [],
+      "external_id": "267651"
+    },
+    {
+      "n": 5,
+      "title": "Paradise",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267652/original.jpg",
+      "synopsis": "After surviving another dangerous setback, the team are able to resume their trip. Meanwhile, back home, the students' parents meet to discuss the fate of their children.",
+      "airdate": "2019-07-31",
+      "markers": [],
+      "external_id": "267652"
+    },
+    {
+      "n": 6,
+      "title": "Secret",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267653/original.jpg",
+      "synopsis": "Ulgar threatens to kill Luca, revealing the previously unknown connection between the two, as well as secrets about Luca himself. Kanata attempts to piece the information together, but another disaster strikes.",
+      "airdate": "2019-08-07",
+      "markers": [],
+      "external_id": "267653"
+    },
+    {
+      "n": 7,
+      "title": "Past",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267654/original.jpg",
+      "synopsis": "As the Astra and Team B5 approach their next planet, Aries notices that Charce's story doesn't add up. The team confront Charce about his past, which he has kept secret until now.",
+      "airdate": "2019-08-14",
+      "markers": [],
+      "external_id": "267654"
+    },
+    {
+      "n": 8,
+      "title": "Lost and Found",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267655/original.jpg",
+      "synopsis": "The team meet Polina, an astronaut hibernating inside a ship identical to the Astra. Together, they work on a way to get off of this planet.",
+      "airdate": "2019-08-21",
+      "markers": [],
+      "external_id": "267655"
+    },
+    {
+      "n": 9,
+      "title": "Revelation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267656/original.jpg",
+      "synopsis": "Some peculiar medical readings raise Zack's suspicions about the true relationship between Funicia and Quitterie. Studying this, the team discovers the common link between the team members - the reason someone wants them all dead.",
+      "airdate": "2019-08-28",
+      "markers": [],
+      "external_id": "267656"
+    },
+    {
+      "n": 10,
+      "title": "Culprit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267657/original.jpg",
+      "synopsis": "The team is on its way to the final planet. Polina is determined to find out how it is possible that the children are from a different planet, and Kanata closes in on the enemy within.",
+      "airdate": "2019-09-04",
+      "markers": [],
+      "external_id": "267657"
+    },
+    {
+      "n": 11,
+      "title": "Confession",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267658/original.jpg",
+      "synopsis": "The entrapment was successful, and the team finally corners the killer amongst them. What drove the killer to do what they did, despite developing such a close bond with the rest of the team?",
+      "airdate": "2019-09-11",
+      "markers": [],
+      "external_id": "267658"
+    },
+    {
+      "n": 12,
+      "title": "FRIEND-SHIP",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/267659/original.jpg",
+      "synopsis": "The truth is revealed about the killer, which leads to numerous discoveries about the history of the world. Can the team overcome the final obstacle and return home safely?",
+      "airdate": "2019-09-18",
+      "markers": [],
+      "external_id": "267659"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "star*frost",
+      "artist": "nonoc",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Glow at the Velocity of Light",
+      "artist": "Riko Azuna",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

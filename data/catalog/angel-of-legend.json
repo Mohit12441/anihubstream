@@ -1,0 +1,66 @@
+{
+  "id": "angel-of-legend",
+  "title": "Angel of Legend",
+  "native": "エンジェル伝説",
+  "year": 1996,
+  "rating": 7.2,
+  "season": "Winter 1996",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/5251.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/5251.jpg",
+  "accent": "#e4a150",
+  "synopsis": "Angel Densetsu is a story about Seiichirou Kitano, a kind and naive boy with the heart of an angel, but the sinister looks of a devil. This causes many misunderstandings, leading people to assume that he is a villain or heroin addict, and results in a career as the head thug, or \"school guardian\" at his new school.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "angel-of-legend-o9j69e",
+    "mal": 5251,
+    "anilist": 5251,
+    "kitsu": 4013
+  },
+  "skip_key_id": 5251,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "angel of legend エンシ ェル伝説 ova finished",
+  "genres": [
+    "action",
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "67470"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "67471"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

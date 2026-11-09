@@ -1,0 +1,457 @@
+{
+  "id": "chainsaw-man",
+  "title": "Chainsaw Man",
+  "native": "チェンソーマン",
+  "year": 2022,
+  "rating": 8.3,
+  "season": "Fall 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx127230-DdP4vAdssLoz.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx127230-DdP4vAdssLoz.png",
+  "accent": "#6b1a1a",
+  "synopsis": "Denji is a teenage boy living with a Chainsaw Devil named Pochita. Due to the debt his father left behind, he has been living a rock-bottom life while repaying his debt by harvesting devil corpses with Pochita.\n\nOne day, Denji is betrayed and killed. As his consciousness fades, he makes a contract with Pochita and gets revived as \"Chainsaw Man\" — a man with a devil's heart.\n\n(Source: Crunchyroll)",
+  "rank": 7,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Chainsaw Man – The Movie: Reze Arc (2025)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 43806,
+    "anilist": 127230,
+    "mal": 44511,
+    "hianime": "chainsaw-man-z1ulmf"
+  },
+  "skip_key_id": 44511,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-13 00:00:00",
+  "search_text": "chainsaw man チェンソーマン tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "horror",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "DOG & CHAINSAW",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episode/296896/thumbnail/medium-9b8ece4f63b2e38053e51aace9a350c7.jpeg",
+      "synopsis": "Denji is a teenager who lives his life as a Devil Hunter. Aiming to pay off the debt he inherited from his father, he starts hunting devils for the yakuza with his buddy Pochita, a \"Chainsaw Devil\", while living a tragically poor life. Just when things seem like they couldn't get any worse, Denji gets betrayed and killed by the yakuza. As Denji starts passing out, he hears someone calling from inside his head... (Source: Crunchyroll)",
+      "airdate": "2022-10-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 231,
+          "end": 321
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1434,
+          "end": 1500
+        }
+      ],
+      "external_id": "296896"
+    },
+    {
+      "n": 2,
+      "title": "ARRIVAL IN TOKYO",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/296897/thumbnail/medium-b1581ad0c948e8731cb724c4a69cb78c.jpeg",
+      "synopsis": "After being taken into custody by Makima, one of the Public Safety Devil Hunters, Denji finds himself head over heels in love with her thanks to her suggestive insinuations. Wishing to team up with Makima, Denji arrives at the Devil Hunters Headquarters in Tokyo and gets introduced to Aki Hayakawa, a senior hunter that he was supposed to partner with. But then Hayakawa beats Denji up, and demands that he “quit this job”... (Source: Crunchyroll)",
+      "airdate": "2022-10-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 111,
+          "end": 201
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1435
+        }
+      ],
+      "external_id": "296897"
+    },
+    {
+      "n": 3,
+      "title": "MEOWY'S WHEREABOUTS",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/298353/thumbnail/medium-902812573673e4ec5e303006bd97303c.jpeg",
+      "synopsis": "Denji decides that his new dream is \"to fondle some boobs.\" His partner, Power the Blood Fiend, offers to let him feel her boobs only if he rescues her old pet cat Meowy from a devil. With his dream in sight, Denji is all fired up and ready to go, until... (Source: Crunchyroll)",
+      "airdate": "2022-10-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 276,
+          "end": 366
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1344,
+          "end": 1434
+        }
+      ],
+      "external_id": "298353"
+    },
+    {
+      "n": 4,
+      "title": "RESCUE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299203/thumbnail/medium-cee9679073775da3c8a67bf918c1798a.jpeg",
+      "synopsis": "After a fierce battle, Denji defeats the “Bat Devil” and rescues Power even after she had trapped him. He says it is all for the sake of “touching Power’s boobs”. Power mocks his ridiculous motivation saying “that’s a pretty dumb reason”, but still agrees to let him fondle her boobs. As Denji gets thrilled with the idea, he faces a sudden attack from out of nowhere... (Source: Crunchyroll)",
+      "airdate": "2022-11-01",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 200,
+          "end": 290
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1435
+        }
+      ],
+      "external_id": "299203"
+    },
+    {
+      "n": 5,
+      "title": "GUN DEVIL",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299204/thumbnail/medium-3f74ad631e419bd3970c05e1c79aff0c.jpeg",
+      "synopsis": "Aki Hayakawa, Denji, and Power start living together. Denji finally fulfills his dream of touching Power’s boobs but is shocked when things do not turn out the way he expected. As Denji realizes that chasing his dream was more fun than achieving it, Makima approaches him and says, \"If you can kill the Gun Devil, I’ll grant you one wish.” (Source: Crunchyroll)",
+      "airdate": "2022-11-08",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 103,
+          "end": 193
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1434
+        }
+      ],
+      "external_id": "299204"
+    },
+    {
+      "n": 6,
+      "title": "KILL DENJI",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299205/thumbnail/medium-cd67376b766422398cb9acb1a1dcd78e.jpeg",
+      "synopsis": "Denji and Tokyo Special Division 4 members enter a hotel to collect a piece of the Gun Devil. However, they end up being trapped on the 8th floor due to the devil’s extraordinary power. With the members being cornered on the endless 8th floor with seemingly no way to escape, the devil makes them an offer: “If you let me eat Denji, I will let all of the other devil hunters leave in one piece.” (Source: Crunchyroll)",
+      "airdate": "2022-11-15",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 95,
+          "end": 185
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1434
+        }
+      ],
+      "external_id": "299205"
+    },
+    {
+      "n": 7,
+      "title": "TASTE OF A KISS",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299206/thumbnail/medium-57019f91c20b3d612ef8df2b7505e2ab.jpeg",
+      "synopsis": "Aki gets stabbed by Kobeni while protecting Denji. Seeing this, Denji jumps inside the “Eternity Devil” and starts attacking it. He fails to kill the “Eternity Devil” and his chainsaw power ends up fading after losing too much blood. But then, he manages to restore his power after eating the devil’s flesh and drinking its blood and begins to fight back. As Himeno watches Denji, she remembers the saying, “The Devil Hunters that devils fear are the ones with a few screws loose...” (Source: Crunchyroll)",
+      "airdate": "2022-11-22",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 117,
+          "end": 207
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1435
+        }
+      ],
+      "external_id": "299206"
+    },
+    {
+      "n": 8,
+      "title": "GUNFIRE",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299207/thumbnail/medium-66b9c418dd01224556d699e20b6b194a.jpeg",
+      "synopsis": "Denji experiences his first, yet devastating, kiss. An intoxicated Denji is taken to Himeno's house, where she starts seducing him. Feeling torn between Makima, whom he admires, and Himeno, who is standing in front of him, he decides to fall into temptation. However, Denji then finds something in his pocket: The Chupa Chups lollipop that Makima gave him. (Source: Crunchyroll)",
+      "airdate": "2022-11-29",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1435
+        }
+      ],
+      "external_id": "299207"
+    },
+    {
+      "n": 9,
+      "title": "FROM KYOTO",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299208/thumbnail/medium-39405fc0a7c32b441722b4f5aae4ab38.jpeg",
+      "synopsis": "A fierce battle unfolds between Denji and the menacing Samurai Sword. But even after Denji takes one of Samurai Sword's companions hostage, Samurai Sword slashes through them both until Denji is captured. Meanwhile, after seemingly being killed, Makima turns out to be alive. She sets out to rescue Denji with the help of Public Safety Devil Hunters from Kyoto, Kurose and Tendo. (Source: Crunchyroll)",
+      "airdate": "2022-12-06",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 174,
+          "end": 265
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1435
+        }
+      ],
+      "external_id": "299208"
+    },
+    {
+      "n": 10,
+      "title": "BRUISED & BATTERED",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299209/thumbnail/medium-3cc53e2b42e1d1f04c0576ead687e650.jpeg",
+      "synopsis": "Samurai Sword's vicious attack resulted in many lost personnel for Public Safety Devil Extermination Division 4. Aki Hayakawa wakes up in a hospital bed, unable to accept the reality of losing Himeno. Kurose and Tendo then appear in front of Hayakawa, letting him know that they are now in charge of coaching him. Meanwhile, Makima introduces Denji and Power to a member of Public Safety who will act as their mentor in order to strengthen Division 4. (Source: Crunchyroll)",
+      "airdate": "2022-12-13",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 237,
+          "end": 322
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1436,
+          "end": 1440
+        }
+      ],
+      "external_id": "299209"
+    },
+    {
+      "n": 11,
+      "title": "MISSION START",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299210/thumbnail/medium-e397001c5de77789a8a142751f3c7fe3.jpeg",
+      "synopsis": "Denji and Power complete their training with Kishibe, while Aki Hayakawa makes a new contract with the \"Future Devil\" through Kurose and Tendo. Meanwhile, Makima threatens the yakuza boss into revealing the names of all those who have made contracts with the \"Gun Devil,\" along with the location of Samurai Sword's hideout. The time has finally come for Public Safety to begin their counterattack against Samurai Sword and his companions. (Source: Crunchyroll)",
+      "airdate": "2022-12-20",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 71,
+          "end": 156
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1345,
+          "end": 1435
+        }
+      ],
+      "external_id": "299210"
+    },
+    {
+      "n": 12,
+      "title": "KATANA VS. CHAINSAW",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episode/299211/thumbnail/medium-46d5b9e9e40eb01b00dc549f55375e77.jpeg",
+      "synopsis": "Sawatari sends the \"Ghost Devil\" after Hayakawa, and he's nearly killed before the \"Ghost Devil\" stops and hands him a cigarette with a message from Himeno. The words inside give Hayakawa the strength to kill the “Ghost Devil” and capture Sawatari. Meanwhile, Denji heads into his rematch with Samurai Sword. With a pull of the starter on his chest, he transforms into Chainsaw Man. And now, the last battle between Chainsaw Man and Samurai Sword has finally begun... (Source: Crunchyroll)",
+      "airdate": "2022-12-27",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 207,
+          "end": 297
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1140,
+          "end": 1226
+        }
+      ],
+      "external_id": "299211"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kick Back",
+      "artist": "Kenshi Yonezu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Chainsaw Blood",
+      "artist": "Vaundy",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "IRIS OUT",
+      "artist": "Kenshi Yonezu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "JANE DOE",
+      "artist": "Kenshi Yonezu & Hikaru Utada",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "KICK BACK",
+      "artist": "Kenshi Yonezu",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "CHAINSAW BLOOD",
+      "artist": "Vaundy",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Fight Song (ファイトソング)",
+      "artist": "Eve",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Zanki (残機)",
+      "artist": "ZUTOMAYO",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "HAWATARI NIOKU CENTI (刃渡り2億センチ)",
+      "artist": "MAXIMUM THE HORMONE",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Jōzai (錠剤)",
+      "artist": "TOOBOE",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "In the Back Room (インザバックルーム)",
+      "artist": "syudou",
+      "episodes": "5"
+    },
+    {
+      "kind": "ED",
+      "sequence": 6,
+      "title": "Dainō-tekina Rendezvous (大脳的なランデブー)",
+      "artist": "Kanaria",
+      "episodes": "6"
+    },
+    {
+      "kind": "ED",
+      "sequence": 7,
+      "title": "Chu, Tayōsei. (ちゅ、多様性。)",
+      "artist": "ano",
+      "episodes": "7"
+    },
+    {
+      "kind": "ED",
+      "sequence": 8,
+      "title": "first death",
+      "artist": "TK from Ling tosite sigure",
+      "episodes": "8"
+    },
+    {
+      "kind": "ED",
+      "sequence": 9,
+      "title": "Deep down",
+      "artist": "Aimer",
+      "episodes": "9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 10,
+      "title": "DOGLAND",
+      "artist": "PEOPLE 1",
+      "episodes": "10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 11,
+      "title": "Violence (バイオレンス)",
+      "artist": "Queen Bee",
+      "episodes": "11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 12,
+      "title": "Fight Song (ファイトソング)",
+      "artist": "Eve",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

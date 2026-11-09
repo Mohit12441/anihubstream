@@ -1,0 +1,202 @@
+{
+  "id": "city-hunter-3",
+  "title": "City Hunter 3",
+  "native": "シティーハンター3",
+  "year": 1989,
+  "rating": 7.6,
+  "season": "Fall 1989",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx1472-xs6VFKpwztMe.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx1472-xs6VFKpwztMe.jpg",
+  "accent": "#f1bb50",
+  "synopsis": "Ryou Saeba and his long-suffering partner Kaori are out to make the streets of Shinjuku safe for the weak, the poor, the down- trodden, the... Well, actually, Ryou’s just hoping for a little mokkori from a grateful client. And Kaori’s just hoping her 100-ton hammer is big enough to get Ryou’s mind off the girls and on his job. With a bevy of beautiful women and a host of dastardly villains hanging around, City Hunter’s got to be ready for any kind of action!\n\n(Source: Discotek)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "city-hunter-3-8pwcn0",
+    "mal": 1472,
+    "anilist": 1472,
+    "kitsu": 1318
+  },
+  "skip_key_id": 1472,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": null,
+  "search_text": "city hunter 3 シティーハンター3 tv finished",
+  "genres": [
+    "comedy",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "De-Mokkori Declaration: XYZ Saves The World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160675/original.jpg",
+      "synopsis": "Ryo and Kaori protect a Rubirian Embassy worker striving not only to salvage the environment of her homeland, but also to expose a smuggling ring in which a Rubirian Embassy Environmental official is involved.",
+      "airdate": "1989-10-15",
+      "markers": [],
+      "external_id": "160675"
+    },
+    {
+      "n": 2,
+      "title": "The Greatest Flagrant Love Committed: How to Hit on a Beautiful Lawyer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160688/original.jpg",
+      "synopsis": "Ryo and Kaori attempt to protect a female lawyer marked for death by a corrupt developer, after an electronic databook is accidentally left in her possession.",
+      "airdate": "1989-10-22",
+      "markers": [],
+      "external_id": "160688"
+    },
+    {
+      "n": 3,
+      "title": "Even Kaori's Pissed: Ryo and a Young Lady, Pinch Hitter Marriage Story",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160703/original.jpg",
+      "synopsis": "While Ryo has his gun taken away from creditors for failing to pay his rent, he is hired by a beautiful woman who is the owner of her own large company to appear on TV with her. It turns out that this TV show talks about newlyweds as the woman waxes on about her and Ryo's supposed \"Love Life\". She makes this admission in order to detract potential suitors more interested in her money rather than herself. Later on, it is revealed that several of her potential suitors had been involved in unfortunate accidents and Ryo suspects a powerful executive attempting to gain control of her company through marriage.",
+      "airdate": "1989-10-29",
+      "markers": [],
+      "external_id": "160703"
+    },
+    {
+      "n": 4,
+      "title": "Dangerous Detective Game: A Python for the Lady (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160709/original.jpg",
+      "synopsis": "Ryo receives a strange request from Aiko, a female private investigator, to teach her how to fire a gun. At one point, Aiko gets horribly drunk after one cocktail, slugs Ryo and steals his gun, only to find it empty of bullets. The request gets even stranger when it is revealed that she needs a gun to protect herself from unknown thugs trying to prevent her from locating a strange dog for a six-year-old girl. Finally, Aiko's uncle appears in order to convince her to give up the private investigator business but when she refuses, he is hit by a car.",
+      "airdate": "1989-11-05",
+      "markers": [],
+      "external_id": "160709"
+    },
+    {
+      "n": 5,
+      "title": "Dangerous Detective Game: A Python for the Lady (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160717/original.jpg",
+      "synopsis": "Aiko's uncle is revealed to have staged his accident in order to convince his niece to quit her job as a private investigator, however it is revealed that he knows nothing about the present threats against Aiko as she searches for a particular dog. When Ryo locates the dog, he notifies Aiko who goes over to retrieve it, only to be kidnapped by robbers looking for evidence the dog may have.",
+      "airdate": "1989-11-12",
+      "markers": [],
+      "external_id": "160717"
+    },
+    {
+      "n": 6,
+      "title": "Stubborn Umibouzu: Tale of the jealous kitten",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160722/original.jpg",
+      "synopsis": "Miki and Umibozu get into an argument over Miki's desire to keep a stray kitten, knowing Umibozu's fear of cats. Miki walks out on Umibozu and is then kidnapped by a wealthy suitor looking for a potential mate. Umibozu and Ryo bicker on how to save Miki and set out to do so together.",
+      "airdate": "1989-11-19",
+      "markers": [],
+      "external_id": "160722"
+    },
+    {
+      "n": 7,
+      "title": "Love is Diving: When a Beauty puts on a Swimsuit",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160731/original.jpg",
+      "synopsis": "Ryo is hired to protect a female assistant of a famous French Explorer from thugs. Ryo learns that she has been unable to keep a relationship because of embarrassing situations she happens to get herself into. While this is happening, the older French Explorer takes an immediate shine to Kaori, much to the latter's excitement.",
+      "airdate": "1989-11-26",
+      "markers": [],
+      "external_id": "160731"
+    },
+    {
+      "n": 8,
+      "title": "Who is Heck is Ryo? Even the College Girl is Smitten with the Thrill",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160740/original.jpg",
+      "synopsis": "Ryo comes across a college girl who is a fan of detective movies, and tails Ryo for a chance to see some action, not knowing Ryo's lecherous tendencies. However, it turns out the college girl has been targeted for unwittingly witnessing a crime and Ryo must intervene after Kaori has been kidnapped by these same criminals.",
+      "airdate": "1989-12-03",
+      "markers": [],
+      "external_id": "160740"
+    },
+    {
+      "n": 9,
+      "title": "Love Forecast of Rain then Shine: The Beautiful Newscaster's Umbrella of Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160749/original.jpg",
+      "synopsis": "Ryo is hired by a female weather reporter to protect her against a deranged fan.",
+      "airdate": "1989-12-10",
+      "markers": [],
+      "external_id": "160749"
+    },
+    {
+      "n": 10,
+      "title": "A wedding dress for Christmas (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160763/original.jpg",
+      "synopsis": "Ryo and Kaori receive a strange request from the head of the Yamaoka family looking to retrieve his daughter, Tsubaki from the son of the rival Umino family, Kazuhiko. It appears that Tsubaki and Kazuhiko have eloped against their parent's wishes and both families want the couple broken up to preserve the rivalry. When Tsubaki manages to escape from Ryo, Kaori volunteers to go to the Umino mansion for a party where she witnesses Tsubaki crash the party with a horse to retrieve Kazuhiko. As they escape, Ryo notices a strange car following the couple.",
+      "airdate": "1989-12-17",
+      "markers": [],
+      "external_id": "160763"
+    },
+    {
+      "n": 11,
+      "title": "A wedding dress for Christmas (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160774/original.jpg",
+      "synopsis": "Tsubaki and Kazuhiko attempt to flee their country to evade the wrath of their parents but are attacked by a helicopter in the process. However, they are saved by Ryo who manages to take down the helicopter in one shot. Meanwhile, Ryo investigates the rivalry between the Yamaoka and Umino families and comes across some startling information. He also uncovers evidence that a third party is also trying to break up the couple by marking them for death.",
+      "airdate": "1989-12-24",
+      "markers": [],
+      "external_id": "160774"
+    },
+    {
+      "n": 12,
+      "title": "Goodbye City, a Farewell Gift (Part 1)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160786/original.jpg",
+      "synopsis": "On the anniversary of the death of his friend, Robert Harrison, Ryo gets royally drunk and notices a woman watching him. This woman turns out to be Sophie Silverman, who represents an international firm of sweepers. Sophie wishes to tag along with Ryo and Kaori for a few days to witness him in his line of work. On their way to a potential job, the three are attacked by unknown assailants. After warding them off in a warehouse, Ryo finds Sophie pointing Robert Harrison's gun at him.",
+      "airdate": "1990-01-14",
+      "markers": [],
+      "external_id": "160786"
+    },
+    {
+      "n": 13,
+      "title": "Goodbye City, a Farewell Gift (Part 2)",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/160801/original.jpg",
+      "synopsis": "Sophie Silverman is revealed to be the fiance of Robert Harrison and reveals her intentions of avenging his death. After seriously wounding Ryo, Sophie kidnaps Kaori as bait for a future showdown. While Ryo recovers from his injuries, he realizes that a syndicate known as the Guiness Corporation is after Sophie and had extorted Robert to take on a job that meant certain death at the hands of Ryo Saeba. When the Guiness Corporation ambushes Sophie and Ryo, the two put aside their rivalry to repel the attackers, only to find themselves in a deadly showdown.",
+      "airdate": "1990-01-21",
+      "markers": [],
+      "external_id": "160801"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Running To Horizon",
+      "artist": "Tetsuya Komuro",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Atsuku Naretara (熱くなれたら; If I Could Become Passionate)",
+      "artist": "Kiyomi Suzuki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,56 @@
+{
+  "id": "colorful-the-motion-picture",
+  "title": "Colorful ~ The Motion Picture",
+  "native": "カラフル",
+  "year": 2010,
+  "rating": 7.5,
+  "season": "Summer 2010",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx8142-C8NvVbzJz7hN.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx8142-C8NvVbzJz7hN.jpg",
+  "accent": "#50f1fe",
+  "synopsis": "\"I\" died and was kicked out of the cycle of reincarnation because of the sin \"I\" committed. An angel told me that \"I\" won a lottery and he gave me a chance to remember the sin. My spirit possessed the body of the 14-year-old boy Makoto, who committed suicide and \"I\" tried to recollect my memory. \"I\" felt distressed by the terrible circumstances of Makoto and the fact that \"I\" was borrowing his body. \"I\" have started to realize that people are hurting each other because the world is too colorful to distinguish the true color of themselves from others.\n\nBased on an award-winning first person narrative novel by Mori Eto. The movie won several awards in Japan.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "colorful-~-the-motion-picture-st4ege",
+    "mal": 8142,
+    "anilist": 8142,
+    "kitsu": 5212
+  },
+  "skip_key_id": 8142,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "colorful the motion picture カラフル movie finished",
+  "genres": [
+    "drama",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Colorful ~ The Motion Picture (Movie)",
+      "runtime": "126:00",
+      "runtime_seconds": 7560,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/8142-6OpPG0lnoN4P.jpg",
+      "synopsis": "\"I\" died and was kicked out of the cycle of reincarnation because of the sin \"I\" committed. An angel told me that \"I\" won a lottery and he gave me a chance to remember the sin. My spirit possessed the body of the 14-year-old boy Makoto, who committed suicide and \"I\" tried to recollect my memory. \"I\" felt distressed by the terrible circumstances of Makoto and the fact that \"I\" was borrowing his body. \"I\" have started to realize that people are hurting each other because the world is too colorful to distinguish the true color of themselves from others.\n\n\nBased on an award-winning first person narrative novel by Mori Eto. The movie won several awards in Japan.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "80851"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

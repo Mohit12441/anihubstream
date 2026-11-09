@@ -1,0 +1,383 @@
+{
+  "id": "clannad-after-story",
+  "title": "Clannad: After Story",
+  "native": "ＣＬＡＮＮＡＤ ~After Story~ クラナド アフターストーリー",
+  "year": 2008,
+  "rating": 8.8,
+  "season": "Fall 2008",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx4181-zUKE7BZC62OF.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4181-zUKE7BZC62OF.png",
+  "accent": "#f1e450",
+  "synopsis": "A few months have passed since Tomoya declared his love to Nagisa, and his life keeps moving forward as he continues to meet a variety of new people, expanding his world in the process. While Tomoya's world continues to expand, his and Nagisa's relationship is entering a new phase, and neither of them is quite sure where it will take them. Through his relationship with Nagisa, Tomoya begins to understand the meaning and importance of family.\n\nBut as Tomoya and Nagisa begin a family of their own, they are faced with many hardships along the way in Clannad: After Story\n\n(Source: Sentai Filmworks, edited)\n\nNote: Includes 2 un-numbered 'extra' and 'summary' episodes that aired at the end of the series.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Clannad (2007)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 3505,
+    "anilist": 4181,
+    "mal": 4181,
+    "hianime": "clannad:-after-story-coecsv"
+  },
+  "skip_key_id": 4181,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": "2026-10-14 06:14:32",
+  "search_text": "clannad after story clannad after story クラナト アフターストーリー tv finished",
+  "genres": [
+    "drama",
+    "romance",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Goodbye at the End of Summer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171552/original.jpeg",
+      "synopsis": "With summer drawing to a close as the new semester begins, Nagisa’s father, Akio, is putting together a neighborhood baseball team.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171552"
+    },
+    {
+      "n": 2,
+      "title": "Search for False Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171553/original.jpeg",
+      "synopsis": "Nagisa is worried about Mei's lack of focus. Mei comes to stay with Nagisa, and Tomoya thinks it's a good idea introduce Youhei to the ladies.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171553"
+    },
+    {
+      "n": 3,
+      "title": "Disagreeing Hearts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171554/original.jpeg",
+      "synopsis": "Youhei and Sanae double date with Tomoya and Nagisa but are also accompanied by Mei. Even though Sanae has convinced Mei that she is Youhei’s girlfriend, Mei is still worried and decides to stay.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171554"
+    },
+    {
+      "n": 4,
+      "title": "With the Same Smile as That Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171549/original.jpeg",
+      "synopsis": "Youhei's truant behavior worries his sister and his friends. In an effort to help him, they convince the soccer club to let Youhei back on the team.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171549"
+    },
+    {
+      "n": 5,
+      "title": "The Season You Were In",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171544/original.jpeg",
+      "synopsis": "Misae recalls when she comforted a boy named in the hospital. Years later, they reunite, and Katsuki wants to repay her kindness. Misae's feelings for Igarashi will soon become more complicated than she thought, as he has a girlfriend.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171544"
+    },
+    {
+      "n": 6,
+      "title": "Forever By Your Side",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171545/original.jpeg",
+      "synopsis": "Misae starts to get over Igarashi and begins to spend more time with Katsuki. She realizes she has feelings for him, but Katsuki's own revelation prevents them from being together.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171545"
+    },
+    {
+      "n": 7,
+      "title": "Her Whereabouts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171540/original.jpeg",
+      "synopsis": "When Yukine came to the aid of two rival gangs in the city, she has since earned their respect. The fact that her older brother, Kazuto, is also the leader of one of these gangs helps.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171540"
+    },
+    {
+      "n": 8,
+      "title": "Valiant Fight",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171546/original.jpeg",
+      "synopsis": "Tomoya and Yukine go to talk with the rival gang, to try to keep matters from escalating. The leader suggests a one-on-one fight between himself and Kazuto to settle all scores.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171546"
+    },
+    {
+      "n": 9,
+      "title": "En Route on the Sloped Road",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171541/original.jpeg",
+      "synopsis": "The school year is coming to a close and everyone is discussing what they plan to do after graduation. Nagisa becomes ill again and misses her exams. On graduation day, Tomoya takes Nagisa for a long walk.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171541"
+    },
+    {
+      "n": 10,
+      "title": "Season of Beginnings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171535/original.jpeg",
+      "synopsis": "Tomoya takes a job at a bakery, hoping to become more independent. Nagisa returns to school and tries to revive the theater club. Tomoya then takes an electrician job with Yusuke and moves into his own apartment.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171535"
+    },
+    {
+      "n": 11,
+      "title": "The Promised Founder's Festival",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171539/original.jpeg",
+      "synopsis": "Tomoya is eager to show his boss and coworkers that he is a valuable worker, even hiding the fact that he has injured his shoulder. His boss and coworkers hold Tomoya in high regard, but the work is taking a toll on his relationship with Nagisa.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171539"
+    },
+    {
+      "n": 12,
+      "title": "Sudden Events",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171536/original.jpeg",
+      "synopsis": "Yusuke tells Tomoya about his past struggles and losses. Tomoya is offered a job as a manager, but his father is arrested, causing the offer to fall away. Finally, Tomoya proposes to Nagisa.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171536"
+    },
+    {
+      "n": 13,
+      "title": "Graduation",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171537/original.jpeg",
+      "synopsis": "Tomoya is trying to get Akio to consent to his marrying Nagisa. Akio says that he will speak on the matter only after Tomoya gets a decent hit in a ball game.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171537"
+    },
+    {
+      "n": 14,
+      "title": "A New Family",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171557/original.jpeg",
+      "synopsis": "Nagisa and Tomoya are beginning their new lives together. Change upon change is happening all around them, but the biggest change to their lives is about to come.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171557"
+    },
+    {
+      "n": 15,
+      "title": "In the Remains of Summer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171558/original.jpeg",
+      "synopsis": "Morning sickness is keeping Nagisa in bed. Sanae introduces her to a midwife. Akio recalls the day Nagisa almost died and that, no matter what, he and Sanae will be there for them.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171558"
+    },
+    {
+      "n": 16,
+      "title": "White Darkness",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171559/original.jpeg",
+      "synopsis": "In the latter part of her pregnancy, Nagisa has become sick again and goes into premature labor. Due to the snow, she is unable to be taken to the hospital. She gives birth at home to a daughter, Ushio.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171559"
+    },
+    {
+      "n": 17,
+      "title": "Summertime",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171555/original.jpeg",
+      "synopsis": "One day, Sanae visits Tomoya and persuades him to go on a family trip with them. When the day of the trip arrives, Sanae and Akio go out and do not return, forcing Tomoya to spend time alone with his daughter.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171555"
+    },
+    {
+      "n": 18,
+      "title": "The Ends of the Earth",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171550/original.jpeg",
+      "synopsis": "On their trip, the Tomoya and Ushio walk through a flowery field and Ushio loses her new toy in the grass. Tomoya realizes that he has acted just like his own father and resolves to not follow the same path.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171550"
+    },
+    {
+      "n": 19,
+      "title": "The Road Home",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171556/original.jpeg",
+      "synopsis": "After returning from their trip, Tomoya brings Ushio home to live with him. Later, Tomoya takes Ushio to visit his father. The two reconcile and Tomoya urges him to move to the countryside and see his mother.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171556"
+    },
+    {
+      "n": 20,
+      "title": "The Tidal Breeze's Mischief",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171551/original.jpeg",
+      "synopsis": "Tomoya goes to Ushio’s school to meet her teacher and finds that it is Kyou. One day, when preparing to visit Nagisa’s parents, Ushio suddenly develops a fever.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171551"
+    },
+    {
+      "n": 21,
+      "title": "The End of the World",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171547/original.jpeg",
+      "synopsis": "Ushio does not appear to be getting any better and Tomoya remains home with her. Ushio tells her father that she wants to go on a trip again, just like the first one they ever took.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171547"
+    },
+    {
+      "n": 22,
+      "title": "Small Palms",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171548/original.jpeg",
+      "synopsis": "Sitting on the hill, Tomoya calls out to Nagisa, who appears and brings him back through time to see what their life could have been.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171548"
+    },
+    {
+      "n": 23,
+      "title": "The Event from One Year Before",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/171542/original.jpeg",
+      "synopsis": "Tomoya looks back on his past.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "171542"
+    },
+    {
+      "n": 24,
+      "title": "Under the Green Tree",
+      "runtime": "25:00",
+      "runtime_seconds": 1500,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/245935/original.jpeg",
+      "synopsis": "Tomoya tells his daughter the story of his life with Nagisa and how Ushio was born, but with a happier ending.",
+      "airdate": "2024-10-17",
+      "markers": [],
+      "external_id": "245935"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Toki o Kizamu Uta (時を刻む唄, A Song to Pass the Time)",
+      "artist": "Lia",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "TORCH",
+      "artist": "Lia",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Megumeru ~cuckool mix 2007~ (メグメル～cuckool mix 2007～)",
+      "artist": "eufonius",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dango Daikazoku (だんご大家族)",
+      "artist": "Chata",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Chiisana Tenohira (小さな手のひら)",
+      "artist": "eufonius",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Ana",
+      "artist": "Lia",
+      "episodes": "25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Ana",
+      "artist": "Lia",
+      "episodes": "24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Marumero ~fildychrom~",
+      "artist": "eufonius",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Megumeru (メグメル)",
+      "artist": "riya",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Dango Dango Dango (だんご だんご だんご)",
+      "artist": "Fukuchi Kousaka Senior High School Students - 付屈光坂高等学校 在校生",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

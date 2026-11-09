@@ -1,0 +1,86 @@
+{
+  "id": "beyond-the-boundary-daybreak",
+  "title": "Beyond the Boundary: Daybreak",
+  "native": "境界の彼方＃0 東雲",
+  "year": 2014,
+  "rating": 7.4,
+  "season": "Summer 2014",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20779-MshHufzf39bT.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20779-MshHufzf39bT.jpg",
+  "accent": "#1a93d6",
+  "synopsis": "Bundled with seventh Blu-ray/DVD volume of Kyoukai no Kanata.\n\nEpisode 0 happens three years prior to the TV series when the Nase siblings meet Akihito for the first time in a mission for Hiroomi. Mitsuki follows her brother on this mission and their goal is to subjugate Akihito.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "beyond-the-boundary:-daybreak-cvzigh",
+    "mal": 23385,
+    "anilist": 20779,
+    "kitsu": 8379
+  },
+  "skip_key_id": 23385,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "beyond the boundary daybreak 境界の彼方 0 東雲 ova finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Beyond the Boundary: Daybreak",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20779-MshHufzf39bT.jpg",
+      "synopsis": "Bundled with seventh Blu-ray/DVD volume of  Kyoukai no Kanata.\n\n\n\nEpisode 0 happens three years prior to the TV series when the Nase siblings meet Akihito for the first time in a mission for Hiroomi. Mitsuki follows her brother on this mission and their goal is to subjugate Akihito.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "114329"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Daisy",
+      "artist": "STEREO DIVE FOUNDATION",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aitakatta Sora (会いたかった空; I Wanted to Meet the Sky)",
+      "artist": "Minori Chihara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kyōkai no Kanata (境界の彼方; Beyond the Boundary)",
+      "artist": "Minori Chihara",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Daisy",
+      "artist": "STEREO DIVE FOUNDATION",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

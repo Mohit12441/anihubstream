@@ -1,0 +1,129 @@
+{
+  "id": "blue-eye-samurai",
+  "title": "BLUE EYE SAMURAI",
+  "native": "BLUE EYE SAMURAI;Samurai de Olhos Azuis, 蓝眼武士, Modrooký Samuraj,",
+  "year": 2026,
+  "rating": 0,
+  "season": "Year 2026",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://hianime.at/storage/media/2026/09/samurai-de-olhos-azuis.webp",
+  "key_art": "https://hianime.at/storage/media/2026/09/samurai-de-olhos-azuis.webp",
+  "accent": "#3b82ff",
+  "synopsis": "Driven by a dream of revenge against those who made her an outcast in Edo-period Japan, a young warrior cuts a bloody path toward her destiny.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "blue-eye-samurai-i1td9r",
+    "kitsu": 48196
+  },
+  "skip_key_id": null,
+  "skip_key_space": null,
+  "episode_total": 8,
+  "added_at": null,
+  "search_text": "blue eye samurai blue eye samurai samurai de olhos azuis 蓝眼武士 modrooky samuraj",
+  "genres": [
+    "action"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hammerscale",
+      "runtime": "62:00",
+      "runtime_seconds": 3720,
+      "thumb": "https://media.kitsu.app/episode/359681/thumbnail/d8772189a63a4477b8217a9528630c0f.jpg",
+      "synopsis": "Lone-wolf warrior Mizu gets stuck with an unexpected travel companion, while Princess Akemi grasps for a way to control her future.\n\n(Source: Netflix)",
+      "airdate": "2023-11-03",
+      "markers": [],
+      "external_id": "359681"
+    },
+    {
+      "n": 2,
+      "title": "An Unexpected Element",
+      "runtime": "48:00",
+      "runtime_seconds": 2880,
+      "thumb": "https://media.kitsu.app/episode/359682/thumbnail/f0f2a875a9e7922695f91a78efea510e.jpg",
+      "synopsis": "With a squad of deadly assassins on her trail, Mizu forges ahead - but hits a hiccup when she and Ringo arrive in town on a festival day.\n\n(Source: Netflix)",
+      "airdate": "2023-11-03",
+      "markers": [],
+      "external_id": "359682"
+    },
+    {
+      "n": 3,
+      "title": "A Fixed Number of Paths",
+      "runtime": "45:00",
+      "runtime_seconds": 2700,
+      "thumb": "https://media.kitsu.app/episode/359683/thumbnail/1119ccccb4fdec5c12b9dc299107312c.jpg",
+      "synopsis": "Taigen proposes a deal, and Mizu receives an invitation to tea. Life on the road turns out to be more challenging than Akemi imagined.\n\n(Source: Netflix)",
+      "airdate": "2023-11-03",
+      "markers": [],
+      "external_id": "359683"
+    },
+    {
+      "n": 4,
+      "title": "Peculiarities",
+      "runtime": "48:00",
+      "runtime_seconds": 2880,
+      "thumb": "https://media.kitsu.app/episode/359684/thumbnail/a44b70acff56ddbad60566d80442f3dc.jpg",
+      "synopsis": "Akemi embarks on a new career and Mizu searches for a way to reach Fowler, bringing them both to Madame Kaji's rather unusual establishment.\n\n(Source: Netflix)",
+      "airdate": "2023-11-03",
+      "markers": [],
+      "external_id": "359684"
+    },
+    {
+      "n": 5,
+      "title": "The Tale of the Ronin and the Bride",
+      "runtime": "48:00",
+      "runtime_seconds": 2880,
+      "thumb": "https://media.kitsu.app/episode/359685/thumbnail/9d9ef8815c86fb31654aae8f6d1d7754.jpg",
+      "synopsis": "During a desperate battle, Mizu remembers another life - and a lesson she learned the hard way.\n\n(Source: Netflix)",
+      "airdate": "2023-11-03",
+      "markers": [],
+      "external_id": "359685"
+    },
+    {
+      "n": 6,
+      "title": "All Evil Dreams and Angry Words",
+      "runtime": "35:00",
+      "runtime_seconds": 2100,
+      "thumb": "https://media.kitsu.app/episode/359686/thumbnail/33de3dd8f471b80f0feeeae6c1d0b345.jpg",
+      "synopsis": "Determined to see Fowler dead, Mizu scrapes up all the wits, grit and strength she has left to make her way through his castle's defenses.\n\n(Source: Netflix)",
+      "airdate": "2023-11-03",
+      "markers": [],
+      "external_id": "359686"
+    },
+    {
+      "n": 7,
+      "title": "Nothing Broken",
+      "runtime": "45:00",
+      "runtime_seconds": 2700,
+      "thumb": "https://media.kitsu.app/episode/359687/thumbnail/93137d78c9ed81443acd644feb4dc6d0.jpg",
+      "synopsis": "Fowler, bound for Edo, reveals the terrifying scope of his plans. Akemi braces herself for her upcoming wedding. Mizu and Taigen return home.\n\n(Source: Netflix)",
+      "airdate": "2023-11-03",
+      "markers": [],
+      "external_id": "359687"
+    },
+    {
+      "n": 8,
+      "title": "The Great Fire of 1657",
+      "runtime": "49:00",
+      "runtime_seconds": 2940,
+      "thumb": "https://media.kitsu.app/episode/359688/thumbnail/87b64d5a3e7a55f4508484f53a4ef13a.jpg",
+      "synopsis": "As an army approaches, Akemi must choose her path. While Taigen risks his life for the royal family, Mizu remains hell-bent on her mission.\n\n(Source: Netflix)",
+      "airdate": "2023-11-03",
+      "markers": [],
+      "external_id": "359688"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

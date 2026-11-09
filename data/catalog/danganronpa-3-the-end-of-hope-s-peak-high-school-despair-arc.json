@@ -1,0 +1,281 @@
+{
+  "id": "danganronpa-3-the-end-of-hope-s-peak-high-school-despair-arc",
+  "title": "Danganronpa 3: The End of Hope’s Peak High School - Despair Arc",
+  "native": "ダンガンロンパ3 -The End of 希望ヶ峰学園-　絶望編",
+  "year": 2016,
+  "rating": 7.1,
+  "season": "Summer 2016",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21825-OjVRUQwM8bTz.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21825-OjVRUQwM8bTz.png",
+  "accent": "#c9001a",
+  "synopsis": "Chisa Yukizome begins her job as homeroom teacher for Hope's Peak Academy's 77th Class of Ultmate students. Meanwhile, Hajime Hinata, a student of the school's Reserve Course for students without talent, prepares to undergo an experiment to make him the Ultimate Hope. What follows is a series of tragic events which lead to the birth of the Remnants of Despair and the realization of \"The Biggest, Most Awful, Most Tragic Event in Human History.\"\n\nAired alongside of Danganronpa 3: Mirai-hen, with Mirai-hen starting first.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Danganronpa: The Animation (2013)",
+    "Danganronpa Kirigiri"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 12105,
+    "anilist": 21825,
+    "mal": 33028
+  },
+  "skip_key_id": 33028,
+  "skip_key_space": "mal",
+  "episode_total": 11,
+  "added_at": "2026-10-14 14:06:40",
+  "search_text": "danganronpa 3 the end of hope s peak high school despair arc タ ンカ ンロンハ 3 the end of 希望ヶ峰学園 絶望編 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "horror",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Hello Again, Hope's Peak High School",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Welcome back to Hope's Peak High School! Attending class is optional, right?",
+      "airdate": "2016-07-14",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1316,
+          "end": 1380
+        }
+      ],
+      "external_id": "187736"
+    },
+    {
+      "n": 2,
+      "title": "My Impurest Heart for You",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Chisa Yukizome continues her mission to bring the students in her homeroom class closer together.",
+      "airdate": "2016-07-21",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1306,
+          "end": 1380
+        }
+      ],
+      "external_id": "187737"
+    },
+    {
+      "n": 3,
+      "title": "A Farewell to All Futures",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Hinata finds another Reserve Course student who dreams of joining the Main Course - and who is willing to take drastic measures to get there.",
+      "airdate": "2016-07-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 52,
+          "end": 141
+        }
+      ],
+      "external_id": "187738"
+    },
+    {
+      "n": 4,
+      "title": "The Melancholy, Surprise, and Disappearance of Nagito Komaeda",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "It's practical exam time for class 1-B!",
+      "airdate": "2016-08-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 62,
+          "end": 152
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1291,
+          "end": 1380
+        }
+      ],
+      "external_id": "187739"
+    },
+    {
+      "n": 5,
+      "title": "Beginning of the End",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Instructor Yukizome returns to her homeroom class after being transferred to the Reserve Course and learns that a lot can change in four months!",
+      "airdate": "2016-08-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 60,
+          "end": 150
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1380
+        }
+      ],
+      "external_id": "187740"
+    },
+    {
+      "n": 6,
+      "title": "A Despairfully Fateful Encounter",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Is there any hope for those without talent - or only despair?",
+      "airdate": "2016-08-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1349,
+          "end": 1380
+        }
+      ],
+      "external_id": "187741"
+    },
+    {
+      "n": 7,
+      "title": "The Biggest, Most Atrocious Incident in Hope's Peak High School's History",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "With Ryota Mitarai as your guide, witness the true power of anime!",
+      "airdate": "2016-08-25",
+      "markers": [],
+      "external_id": "187742"
+    },
+    {
+      "n": 8,
+      "title": "The Worst Reunion by Chance",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Hope's Peak is plunged into despair after the Student Council's massacre, and Komaeda tests his luck.",
+      "airdate": "2016-09-01",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1315,
+          "end": 1380
+        }
+      ],
+      "external_id": "187743"
+    },
+    {
+      "n": 9,
+      "title": "Chisa Yukizome Doesn’t Smile",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Nanami and Komaeda escape from despair, but can they protect their classmates, or save their teacher?",
+      "airdate": "2016-09-08",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1380
+        }
+      ],
+      "external_id": "187744"
+    },
+    {
+      "n": 10,
+      "title": "Smile at Despair in the Name of Hope",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Betrayal - the ultimate weapon in the game of Despair.",
+      "airdate": "2016-09-15",
+      "markers": [],
+      "external_id": "187745"
+    },
+    {
+      "n": 11,
+      "title": "Goodbye, Hope’s Peak High School",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "Hope's Peak will recite - its death haiku of Despair - for no hope remains.",
+      "airdate": "2016-09-22",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1254,
+          "end": 1344
+        }
+      ],
+      "external_id": "187746"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "ever free",
+      "artist": "hide with Spread Beaver",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kami Iro Awase (カミイロアワセ)",
+      "artist": "binaria",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Zettai Kibō Birthday (絶対希望バースデー;The Birthday of Absolute Hope)",
+      "artist": "Megumi Ogata",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "DEAD OR LIE",
+      "artist": "Maon Kurosaki feat. TRUSTRICK",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Recall THE END",
+      "artist": "TRUSTRICK",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

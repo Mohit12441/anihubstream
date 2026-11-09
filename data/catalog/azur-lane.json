@@ -1,0 +1,211 @@
+{
+  "id": "azur-lane",
+  "title": "AZUR LANE",
+  "native": "アズールレーン",
+  "year": 2019,
+  "rating": 5.8,
+  "season": "Fall 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx104159-xJoXzhEmtohE.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx104159-xJoXzhEmtohE.jpg",
+  "accent": "#50aef1",
+  "synopsis": "Azur Lane, a combination of all the different Camps in the world, was once successful in repelling the underwater menace, the Siren. Now splintered, they must face a new threat in Red Axis, former allies who crave to wield this otherworldly Siren technology for their own nefarious desires! Who will be victorious in the never-ending war between these battleship girls!?\n\n(Source: Funimation)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42420,
+    "anilist": 104159,
+    "mal": 38328
+  },
+  "skip_key_id": 38328,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 08:26:21",
+  "search_text": "azur lane アス ールレーン tv finished",
+  "genres": [
+    "action",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Mobilization: The Girls of the Sea",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/270454/original.jpg",
+      "synopsis": "Upon learning that former Azur Lane alliance members Sakura Empire and Iron Blood are ready to go to war, forces from the current Azur Lane, Eagle Union and Royal Navy, assemble at a forward base.",
+      "airdate": "2019-10-03",
+      "markers": [],
+      "external_id": "270454"
+    },
+    {
+      "n": 2,
+      "title": "MELEE - Pulsing Waves, Steel Wings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/270455/original.jpg",
+      "synopsis": "The Azur Lane base was hit hard when the Sakura Empire suddenly struck. As the Royal Navy and Eagle Union forces scramble to finish repairs, the Red Axis prepare another strike, this time against forces in the open seas.",
+      "airdate": "2019-10-10",
+      "markers": [],
+      "external_id": "270455"
+    },
+    {
+      "n": 3,
+      "title": "ELEGANCE - Perchance, Like A Human",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/270456/original.jpg",
+      "synopsis": "The Royal Navy battle-maid Belfast arrives, forcing the Red Axis to retreat. There is no longer any doubt that Enterprise is key to the success of the Azur Lane alliance, but it is also evident that her problems are more serious than simple hull damage.",
+      "airdate": "2019-10-17",
+      "markers": [],
+      "external_id": "270456"
+    },
+    {
+      "n": 4,
+      "title": "SAKURA - Cloak and Dagger",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/270457/original.jpg",
+      "synopsis": "After their successful strike against Azur Lane forces, the Red Axis fleet returns to Sakura Empire. Akagi checks in on the progress of her grand plans, and Ayanami regroups with her peers and reflects on the battles she just fought.",
+      "airdate": "2019-10-24",
+      "markers": [],
+      "external_id": "270457"
+    },
+    {
+      "n": 5,
+      "title": "REUNION - Reaching Out To You",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/270458/original.jpg",
+      "synopsis": "Sheffield and Edinburgh take shelter on a small island to evade the Red Axis fleet pursuing them while awaiting reinforcements. A major confrontation seems inevitable, but members of both sides of the fight have doubts and concerns.",
+      "airdate": "2019-10-31",
+      "markers": [],
+      "external_id": "270458"
+    },
+    {
+      "n": 6,
+      "title": "SHACKLES - Tying Bonds, Binding Hearts",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/270459/original.jpg",
+      "synopsis": "The rescue mission is a success, allowing Azur Lane to learn about Akagi's Black Cube. Both alliances regroup at their respective bases to plan their next moves, while getting some much deserved rest.",
+      "airdate": "2019-11-07",
+      "markers": [],
+      "external_id": "270459"
+    },
+    {
+      "n": 7,
+      "title": "DEADLINE - For Determination, For Love",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/270460/original.jpg",
+      "synopsis": "Azur Lane forces advance into the open seas to take on the Red Axis. Under Akagi's command, the full Sakura Empire navy assembles to meet them. As Observer watches from outside the battle, the two forces collide head-on.",
+      "airdate": "2019-11-21",
+      "markers": [],
+      "external_id": "270460"
+    },
+    {
+      "n": 8,
+      "title": "INTERSECTION - Hold You, Never Let Go",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/270461/original.jpg",
+      "synopsis": "With Kaga and Akagi defeated, Sakura Empire forces are sent into disarray. Enterprise, after activating a mysterious and overwhelming power, also goes missing. Both forces scramble to regroup, to put an end to this battle.",
+      "airdate": "2019-11-28",
+      "markers": [],
+      "external_id": "270461"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2019-12-05",
+      "markers": [],
+      "external_id": "270462"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "270463"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "270464"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "270465"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Bloomin'",
+      "artist": "Uesaka Sumire",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Longing for!",
+      "artist": "Emi Nitta",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Mahiruiro Siesta",
+      "artist": "Yui Sakakibara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "graphite/diamond",
+      "artist": "May'n",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hikari no Michishirube (Guiding Light)",
+      "artist": "Kano",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,55 @@
+{
+  "id": "azumanga-daioh-the-very-short-movie",
+  "title": "Azumanga Daioh: The Very Short Movie",
+  "native": "あずまんが大王（劇場短編）",
+  "year": 2001,
+  "rating": 6.8,
+  "season": "Fall 2001",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/659-6r4fP8geCepB.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/659-6r4fP8geCepB.png",
+  "accent": "#e45d6b",
+  "synopsis": "In this short movie featuring familiar characters from Azumanga Daiou, Osaka is yet again having a strange dream of Chiyo-Chan's pigtails being posessed. As Chiyo-Chan's pigtails bounce out of the window, who knows if young Chiyo will ever be happy again.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "azumanga-daioh:-the-very-short-movie-mrkn0u",
+    "mal": 659,
+    "anilist": 659,
+    "kitsu": 606
+  },
+  "skip_key_id": 659,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "azumanga daioh the very short movie あす まんか 大王 劇場短編 special finished",
+  "genres": [
+    "comedy",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Azumanga Daioh: The Very Short Movie",
+      "runtime": "6:00",
+      "runtime_seconds": 360,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a941d4cee3cae0217d6911e-poster.png",
+      "synopsis": "In this short movie featuring familiar characters from Azumanga Daiou, Osaka is yet again having a strange dream of Chiyo-Chan's pigtails being posessed. As Chiyo-Chan's pigtails bounce out of the window, who knows if young Chiyo will ever be happy again.\n\n\n\n(Source: Anime News Network)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "13599"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,123 @@
+{
+  "id": "black-lagoon-robertas-blood-trail",
+  "title": "Black Lagoon: Roberta's Blood Trail",
+  "native": "BLACK LAGOON Roberta's Blood Trail",
+  "year": 2010,
+  "rating": 7.9,
+  "season": "Summer 2010",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx4901-evMxxc1A8pCF.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4901-evMxxc1A8pCF.jpg",
+  "accent": "#e4bba1",
+  "synopsis": "Roberta, the terrorist-turned-maid that made her appearence in the first season of 'Black Lagoon', returns in this five-episode OVA series - and this time, all bets are off!\n\nRoberta's benefactor, the patriarch of the Lovelace clan, is murdered during a political rally. The assassin's trail soon leads back to Roanapur - so now she has returned on a mission of vengeance! However, close behind her is the new patriarch, Garcia, as well as Roberta's apprentice (and maid), Fabiola Iglesias. As the body count of Roberta's bloody rampage mounts, forces from within the corrupt island (which includes the Lagoon Company), as well as overseas converge on what threatens to escalate into all-out war!",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "black-lagoon:-roberta's-blood-trail-ca9bv9",
+    "mal": 4901,
+    "anilist": 4901,
+    "kitsu": 3841
+  },
+  "skip_key_id": 4901,
+  "skip_key_space": "mal",
+  "episode_total": 5,
+  "added_at": null,
+  "search_text": "black lagoon roberta s blood trail black lagoon roberta s blood trail ova finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Collateral Massacre",
+      "runtime": "33:00",
+      "runtime_seconds": 1980,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/63921/original.jpeg",
+      "synopsis": "When Diego Lovelace is killed, his maid - ex-terrorist Roberta - sets out for vengeance. Her pursuit of those responsible takes her to Roanapur, where the crew of the Black Lagoon gets involved in her murderous quest.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "63921"
+    },
+    {
+      "n": 2,
+      "title": "An Office Man's Tactics",
+      "runtime": "33:00",
+      "runtime_seconds": 1980,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/63922/original.jpeg",
+      "synopsis": "After accepting the task of tracking Roberta, Rock gathers information that might expose her whereabouts. Meanwhile, Mr. Chang consults with a CIA operative to learn more about recent NSA activity.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "63922"
+    },
+    {
+      "n": 3,
+      "title": "Angels in the Crosshairs",
+      "runtime": "33:00",
+      "runtime_seconds": 1980,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/63923/original.jpeg",
+      "synopsis": "Rock and Revy manage to track down Roberta, but it's too late to stop the war. Later, Garcia is severely traumatized by witnessing the brutality of his beloved maid in action.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "63923"
+    },
+    {
+      "n": 4,
+      "title": "Oversaturation Kill Box",
+      "runtime": "33:00",
+      "runtime_seconds": 1980,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/63924/original.jpeg",
+      "synopsis": "Garcia emerges from a state of shock to seek revenge against the Americans, Revy is injured during an attempted ambush, and Rock continues pulling the strings that lead to a bloody final showdown.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "63924"
+    },
+    {
+      "n": 5,
+      "title": "Codename Paradise, Status MIA",
+      "runtime": "33:00",
+      "runtime_seconds": 1980,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/63925/original.jpeg",
+      "synopsis": "The violence reaches a fever pitch as Roberta stalks the army through the pitch black jungle. Rock has a plan to forever silence the criminal underworld of Roanapur, but it may prove deadly.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "63925"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Red fraction IO drive mix",
+      "artist": "MELL",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "When Johnny Comes Marching Home",
+      "artist": "EDISON",
+      "episodes": "1-4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "This moment ~prayer in the light~",
+      "artist": "Minako “mooki” Obata",
+      "episodes": "5"
+    }
+  ],
+  "relations": []
+}

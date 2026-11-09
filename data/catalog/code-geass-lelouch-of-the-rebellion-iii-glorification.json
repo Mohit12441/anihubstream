@@ -1,0 +1,247 @@
+{
+  "id": "code-geass-lelouch-of-the-rebellion-iii-glorification",
+  "title": "Code Geass: Lelouch of the Rebellion III - Glorification",
+  "native": "コードギアス 反逆のルルーシュⅢ 皇道",
+  "year": 2018,
+  "rating": 7.8,
+  "season": "Spring 2018",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101813-ckCNyMkU2Kkc.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101813-ckCNyMkU2Kkc.png",
+  "accent": "#f1e435",
+  "synopsis": "Third and final part of the three part theatrical film remake of Code Geass: Lelouch of the Rebellion and Code Geass: Lelouch of the Rebellion R2.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "code-geass:-lelouch-of-the-rebellion-iii-glorification-eijhl4",
+    "mal": 34440,
+    "anilist": 101813,
+    "kitsu": 13852
+  },
+  "skip_key_id": 34440,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "code geass lelouch of the rebellion iii glorification コート キ アス 反逆のルルーシュiii 皇道 movie finished",
+  "genres": [
+    "action",
+    "drama",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Code Geass: Lelouch of the Rebellion III - Glorification (Movie)",
+      "runtime": "2:00",
+      "runtime_seconds": 120,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6a93db53cf53bfc7bd83b9ef-landscape.jpg",
+      "synopsis": "Third and final part of the three part theatrical film remake of Code Geass: Lelouch of the Rebellion and Code Geass: Lelouch of the Rebellion R2.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "226169"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Running In My Head",
+      "artist": "MIYAVI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Rozé (Prod.TeddyLoid)",
+      "artist": "Hikari Mitsushima",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kono Sekai de",
+      "artist": "Ieiri Leo",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Revive",
+      "artist": "UNIONE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Colors",
+      "artist": "FLOW",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Aka Dake ga Tarinai (赤だけが足りない)",
+      "artist": "Iris",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Continued Shift",
+      "artist": "Hitomi Kuroishi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "More Than Words",
+      "artist": "Maaya Sakamoto",
+      "episodes": "1-3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "More Than Words (モアザンワーズ)",
+      "artist": "Maaya Sakamoto",
+      "episodes": "1-3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "O2",
+      "artist": "ORANGE RANGE",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shiawase Neiro",
+      "artist": "ORANGE RANGE",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "COLORS",
+      "artist": "FLOW",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yūkyō Seishunka (勇侠青春謳)",
+      "artist": "Ali Project",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Yūkyō Seishunka (勇侠青春謳)",
+      "artist": "Ali Project",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "The Moon",
+      "artist": "Sakura Fujiwara",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Arco (アルコ)",
+      "artist": "Maaya Sakamoto",
+      "episodes": "4"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Arco (アルコ)",
+      "artist": "Maaya Sakamoto",
+      "episodes": "4-5"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "WORLD END",
+      "artist": "FLOW",
+      "episodes": "13-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Waga Routashi Aku no Hana",
+      "artist": "ALI PROJECT",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Kaidoku Funō (解読不能)",
+      "artist": "Jinn",
+      "episodes": "13-23"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Mosaic Kakera (モザイクカケラ)",
+      "artist": "SunSet Swish",
+      "episodes": "13-23"
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "WORLD END",
+      "artist": "FLOW",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "NE:ONE",
+      "artist": "Survive Said the Prophet",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 3,
+      "title": "Hitomi no Tsubasa",
+      "artist": "Access",
+      "episodes": "24-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "COLORS",
+      "artist": "FLOW",
+      "episodes": "24"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "COLORS",
+      "artist": "FLOW",
+      "episodes": "25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Innocent Days",
+      "artist": "Hitomi",
+      "episodes": "25"
+    }
+  ],
+  "relations": []
+}

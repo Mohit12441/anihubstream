@@ -1,0 +1,120 @@
+{
+  "id": "cells-at-work-special",
+  "title": "Cells at Work!: The Common Cold",
+  "native": "はたらく細胞「風邪症候群」",
+  "year": 2018,
+  "rating": 7.1,
+  "season": "Fall 2018",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx105662-hQ04rdwCot6p.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx105662-hQ04rdwCot6p.jpg",
+  "accent": "#e45d50",
+  "synopsis": "A mysterious cell wearing a stylish hat appears before the regular cells, who are bored with just the same (cell division) work over and over again, every day. This mysterious cell lures the regular cells into a mischievous scheme against White Blood Cell and Killer T Cell. The regular cells enjoy working out their everyday, pent-up frustration. But, just who exactly is this cell wearing a stylish hat?\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "cells-at-work-special-gu1a26",
+    "mal": 38733,
+    "anilist": 105662,
+    "kitsu": 42007
+  },
+  "skip_key_id": 38733,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "cells at work the common cold はたらく細胞 風邪症候群 special finished",
+  "genres": [
+    "action",
+    "comedy",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Cells at Work Special",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://animehot.cc/storage/media/2026/09/6956c3f2c7771750735602d5-poster.jpg",
+      "synopsis": "For the regular cells of the human body, life consists of countless repetitive tasks. They spend every day multiplying, leaving little time for other activities. But one day, this monotony is abruptly interrupted by a cell with an odd-looking hat. Tired of unending drudgery, another cell named Ippan Saibou decides to join this quirky stranger for a day of pranks, jokes, and mischief.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "257448"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hashire!",
+      "artist": "POLYSICS with Seiya Yamasaki",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hashire!",
+      "artist": "POLYSICS with Seiya Yamasaki",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Go! Go! Saibou Festa (Go! Go! Cell Festa)",
+      "artist": "Hanazawa Kana, Maeno Tomoaki, Ono Daisuke, Inoue Kikuko, Kobayashi Yūsuke, Yoshida Yuri",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Fight!!",
+      "artist": "ClariS",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mission! Ken - Kō - Dai - Ichi (Mission! Health First)",
+      "artist": "Kana Hanazawa, Tomoaki Maeno, Daisuke Ono, & Kikuko Inoue",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "CheerS",
+      "artist": "ClariS",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mission! Ken - Kō - Dai - Ichi (Mission! Health First)",
+      "artist": "Kana Hanazawa, Tomoaki Maeno, Daisuke Ono, & Kikuko Inoue",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "CheerS",
+      "artist": "ClariS",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Ue wo Muite Hakobou",
+      "artist": "POLYSICS with Red Blood Cell",
+      "episodes": "2-13"
+    }
+  ],
+  "relations": []
+}

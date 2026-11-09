@@ -1,0 +1,284 @@
+{
+  "id": "beastars-season-2",
+  "title": "BEASTARS Season 2",
+  "native": "BEASTARS 第2期",
+  "year": 2021,
+  "rating": 7.7,
+  "season": "Winter 2021",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx114194-uMuA92X6JHSj.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114194-uMuA92X6JHSj.jpg",
+  "accent": "#285d86",
+  "synopsis": "\"Beastar\"—a title awarded to beasts who prove their excellence through fighting inequality to unite carnivores and herbivores in an anthropomorphic animal society. Cherryton Academy has gone five years without one such leader. However, following the murder of an alpaca within the school boundaries, the growing tension between the different species poses a greater need for a Beastar to ensure peace and harmony.\n\nWhen Louis, the prime candidate for this prestigious role, rejects the offer and leaves the academy, the student council declares to honor any student who captures the culprit of the aforementioned murder as Beastar. Meanwhile, Legoshi's sense of duty as a strong wolf who must protect the weak pushes him to investigate the incident. To further complicate his life, he struggles to manage his complex feelings for the white rabbit, Haru.\n\n(Source: MAL Rewrite)\n\nNote: The first episode had an early delivery on Netflix Japan on January 5, 2021. The regular TV broadcast started on January 7, 2021.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "beastars-season-2-nayo8x",
+    "mal": 40935,
+    "anilist": 114194,
+    "kitsu": 42904
+  },
+  "skip_key_id": 40935,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "beastars season 2 beastars 第2期 tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "romance",
+    "slice-of-life"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "A Teen's Never-Ending Alarm",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/277126/thumbnail/798d0e43ee108c599c4f04fe7d8de5e4.jpg",
+      "synopsis": "Things are somewhat calm again, but with Tem's murder unsolved and Louis missing, the school is filled with rumors of hauntings and strange occurrences.\n\n(Source: Netflix)",
+      "airdate": "2021-01-07",
+      "markers": [],
+      "external_id": "277126"
+    },
+    {
+      "n": 2,
+      "title": "The Grey Police Hound Runs",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/277127/thumbnail/2a5f5b1e105ccffa5b98c4add6778c0c.jpg",
+      "synopsis": "Rokume, a giant rattlesnake security guard at the school, approaches Legoshi and asks him to track down the murderer.\n\n(Source: Netflix)",
+      "airdate": "2021-01-14",
+      "markers": [],
+      "external_id": "277127"
+    },
+    {
+      "n": 3,
+      "title": "Changes",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/277472/thumbnail/3f6c9d25dc1167e57151a813c55a206c.jpg",
+      "synopsis": "After taking a drastic step against the Shishi-Gumi, Louis faces an impossible choice; the drama club gets a new member.\n\n(Source: Netflix, edited)",
+      "airdate": "2021-01-21",
+      "markers": [],
+      "external_id": "277472"
+    },
+    {
+      "n": 4,
+      "title": "Entangled",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/277473/thumbnail/9c763895fd03efcc91155e0932f97353.jpg",
+      "synopsis": "Legoshi is attacked by a powerful carnivore; as Louis earns the trust of the Shishi-Gumi, he loses his health and peace of mind.\n\n(Source: Netflix, edited)",
+      "airdate": "2021-01-28",
+      "markers": [],
+      "external_id": "277473"
+    },
+    {
+      "n": 5,
+      "title": "Call It Like It Is",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/277474/thumbnail/43b49525dd13691be0660f4156514e13.jpg",
+      "synopsis": "While attending school during the day, Legoshi spends his nights in intense training sessions with Gohin.\n\n(Source: Netflix)",
+      "airdate": "2021-02-04",
+      "markers": [],
+      "external_id": "277474"
+    },
+    {
+      "n": 6,
+      "title": "Fly, O Corrupt One",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/277475/thumbnail/d476ada7840ca037a5dd84f8fb8b33a4.jpg",
+      "synopsis": "Louis wants to quit school to make a break from his past, but his father won't allow it; Haru and Legoshi talk things out.\n\n(Source: Netflix, edited)",
+      "airdate": "2021-02-11",
+      "markers": [],
+      "external_id": "277475"
+    },
+    {
+      "n": 7,
+      "title": "Unforgettable Sweetness",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/277506/thumbnail/064a297b5a5c05742909045a7e2460ba.jpg",
+      "synopsis": "Tao, a black panther, accidentally injures another student; the killer thinks back on the murder of Tem.\n\n(Source: Netflix)",
+      "airdate": "2021-02-18",
+      "markers": [],
+      "external_id": "277506"
+    },
+    {
+      "n": 8,
+      "title": "Laughing at the Shadows We Cast",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/278386/thumbnail/19fccf99b34c3091c61da9fd3bbd55c8.jpg",
+      "synopsis": "After clapping a muzzle on Legoshi, Gohin orders him to capture a beast in the throes of a flesh addiction; Juno ends up spending some time with Haru.\n\n(Source: Netflix, edited)",
+      "airdate": "2021-02-25",
+      "markers": [],
+      "external_id": "278386"
+    },
+    {
+      "n": 9,
+      "title": "A Busted Electric Fan",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/278387/thumbnail/749d57cd061427cadaf30c852a4d5579.jpg",
+      "synopsis": "Legoshi is shocked when he meets Rouis in the Black Market district; at school, he's disgusted to hear Riz say he'll visit Kibi in the hospital.\n\n(Source: Netflix)",
+      "airdate": "2021-03-04",
+      "markers": [],
+      "external_id": "278387"
+    },
+    {
+      "n": 10,
+      "title": "The Chef's Suspense",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/278388/thumbnail/b714bd17d42ced54eaac103a9c010565.jpg",
+      "synopsis": "After Pina makes it clear he won't be intimidated by Riz, Legoshi gets into a bare-knuckled fight with the bear.\n\n(Source: Netflix)",
+      "airdate": "2021-03-11",
+      "markers": [],
+      "external_id": "278388"
+    },
+    {
+      "n": 11,
+      "title": "Scatter Your Scales",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/285714/thumbnail/e16277128a740f5ea2db1c9c1ea042f2.jpg",
+      "synopsis": "To grow stronger for his New Year's Day confrontation with Riz, Legoshi tries ingesting a moth larva and has an intense hallucination.\n\n(Source: Netflix)",
+      "airdate": "2021-03-18",
+      "markers": [],
+      "external_id": "285714"
+    },
+    {
+      "n": 12,
+      "title": "The Taste of Rebellion",
+      "runtime": "22:00",
+      "runtime_seconds": 1320,
+      "thumb": "https://media.kitsu.app/episode/285715/thumbnail/e24d6292959f422ccd252a4551670ae6.jpg",
+      "synopsis": "While getting pummeled by Riz, Legoshi realizes that they're not so different because he could have succumbed to his carnivorous instincts, too.\n\n(Source: Netflix)",
+      "airdate": "2021-03-25",
+      "markers": [],
+      "external_id": "285715"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tiny Light",
+      "artist": "SEVENTEEN",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Into the world",
+      "artist": "issei",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Feel Like This",
+      "artist": "YU-KA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Kaibutsu (Monster)",
+      "artist": "YOASOBI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kaibutsu (怪物)",
+      "artist": "YOASOBI",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Wild side",
+      "artist": "ALI",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Le zoo",
+      "artist": "YURiKA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Wild Side",
+      "artist": "ALI",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Rock 'n' Roll Dragon",
+      "artist": "Risa Uesaka",
+      "episodes": "3"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Yasashii Suisei (優しい彗星)",
+      "artist": "YOASOBI",
+      "episodes": "12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Yasashii Suisei (優しい彗星)",
+      "artist": "YOASOBI",
+      "episodes": "2-11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Le zoo",
+      "artist": "YURiKA",
+      "episodes": "2, 5, 8, 9"
+    },
+    {
+      "kind": "ED",
+      "sequence": 3,
+      "title": "Nemureru Honnou",
+      "artist": "YURiKA",
+      "episodes": "3, 7, 10"
+    },
+    {
+      "kind": "ED",
+      "sequence": 4,
+      "title": "Marble",
+      "artist": "YURiKA",
+      "episodes": "4, 6, 11"
+    },
+    {
+      "kind": "ED",
+      "sequence": 5,
+      "title": "Tsuki ni ukabu Monogatari",
+      "artist": "YURiKA",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

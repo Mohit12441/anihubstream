@@ -1,0 +1,331 @@
+{
+  "id": "bokurano",
+  "title": "Bokurano",
+  "native": "ぼくらの",
+  "year": 2007,
+  "rating": 7.3,
+  "season": "Spring 2007",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1690-ubEOKbAzWO9C.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1690-ubEOKbAzWO9C.jpg",
+  "accent": "#24d3ee",
+  "synopsis": "During a summer camp, 15 children, 8 males and 7 females, find a grotto by the sea. Deep within they discover working computers and some electronic equipment, and later the owner, a man called Kokopelli. Kokopelli claimed to be a programmer working on a brand new game, in which a large robot has to defend the Earth against alien invasions. He persuades the children to test the game and sign a contract. All but one of them signs, barely a moment later they mysteriously awaken on the shore believing what happened was just a dream.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "bokurano-idccsn",
+    "mal": 1690,
+    "anilist": 1690,
+    "kitsu": 1518
+  },
+  "skip_key_id": 1690,
+  "skip_key_space": "mal",
+  "episode_total": 24,
+  "added_at": null,
+  "search_text": "bokurano ほ くらの tv finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Game",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27646/original.jpg",
+      "synopsis": "Fifteen children at a summer school program encounter the mysterious Kokopelli and agree to be testers for a game he claims to have completed recently. Soon, they are summoned into the cockpit of a giant mecha, with Kokopelli piloting. Thus the first round takes place.",
+      "airdate": "2007-04-08",
+      "markers": [],
+      "external_id": "27646"
+    },
+    {
+      "n": 2,
+      "title": "Zearth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27647/original.jpg",
+      "synopsis": "The children start having second thoughts about the game, but a floating being known as Dung Beetle appears and teleports them to the cockpit of the mecha, which the group later dubs Zearth. On the evening of the same day, a new enemy appears, and Takeshi Waku is chosen to fight it.",
+      "airdate": "2007-04-15",
+      "markers": [],
+      "external_id": "27647"
+    },
+    {
+      "n": 3,
+      "title": "Secret",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27648/original.jpg",
+      "synopsis": "Takami \"Komo\" Komoda reveals the truth to her father, and while Waku's funeral is being held, Masaru \"Kodama\" Kodaka is selected to be the third pilot.",
+      "airdate": "2007-04-22",
+      "markers": [],
+      "external_id": "27648"
+    },
+    {
+      "n": 4,
+      "title": "Strength",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27649/original.jpg",
+      "synopsis": "Kodama fights the third enemy without caring about his surroundings, causing many casualties in the process, until he discovers the meaning of losing someone important to him.",
+      "airdate": "2007-04-29",
+      "markers": [],
+      "external_id": "27649"
+    },
+    {
+      "n": 5,
+      "title": "Weakness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27650/original.jpg",
+      "synopsis": "After the children discover the fate that awaits them, they are assembled and interrogated by the military, except for Isao Kako, who coincidentally is the next chosen pilot.",
+      "airdate": "2007-05-06",
+      "markers": [],
+      "external_id": "27650"
+    },
+    {
+      "n": 6,
+      "title": "Lust",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27651/original.jpg",
+      "synopsis": "The children try to find Kako without success, until Chizuru \"Chizu\" Honda discovers where he is hiding and tries to cheer him up. However, Kako has other plans for her.",
+      "airdate": "2007-05-13",
+      "markers": [],
+      "external_id": "27651"
+    },
+    {
+      "n": 7,
+      "title": "Hurt",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27652/original.jpg",
+      "synopsis": "The story of Chizu's relationship with her teacher is revealed, before she is selected to replace the deceased Kako.",
+      "airdate": "2007-05-20",
+      "markers": [],
+      "external_id": "27652"
+    },
+    {
+      "n": 8,
+      "title": "Revenge",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27653/original.jpg",
+      "synopsis": "The fourth battle begins, but Chizu is more worried about taking revenge on her teacher than facing her enemy.",
+      "airdate": "2007-05-27",
+      "markers": [],
+      "external_id": "27653"
+    },
+    {
+      "n": 9,
+      "title": "Family",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27654/original.jpg",
+      "synopsis": "Selected to fight the fifth enemy, Daiichi \"Daichi\" Yamura's final wish is to spend his remaining time happily with his siblings, but his plans are ruined when the battle starts sooner than he expected.",
+      "airdate": "2007-06-03",
+      "markers": [],
+      "external_id": "27654"
+    },
+    {
+      "n": 10,
+      "title": "Comrades",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27655/original.jpg",
+      "synopsis": "Bullied by her classmates because of her mother's questionable occupation, Mako \"Nakama\" Nakarai, after being chosen to engage into the sixth round, resorts to extremes to arrange money enough to complete a personal project of hers in time.",
+      "airdate": "2007-06-17",
+      "markers": [],
+      "external_id": "27655"
+    },
+    {
+      "n": 11,
+      "title": "Life",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27656/original.jpg",
+      "synopsis": "Nagi, a childhood friend of Kunihiko Moji's needs a heart transplant, but so far the only compatible donor found is Moji himself. While dealing with Nagi's drama, he is selected to fight the seventh enemy.",
+      "airdate": "2007-07-01",
+      "markers": [],
+      "external_id": "27656"
+    },
+    {
+      "n": 12,
+      "title": "Blood Ties",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27657/original.jpg",
+      "synopsis": "Maki Ano is in awe as her foster mother is about to have a baby. She hopes to at least witness her little brother's birth, but when she is appointed the pilot for the eighth round, she is left with little hope to be able to do so.",
+      "airdate": "2007-07-08",
+      "markers": [],
+      "external_id": "27657"
+    },
+    {
+      "n": 13,
+      "title": "Earth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27658/original.jpg",
+      "synopsis": "During Maki's fight, the children discover the true nature of the enemies they are battling, and what really is at stake on every single bout.",
+      "airdate": "2007-07-15",
+      "markers": [],
+      "external_id": "27658"
+    },
+    {
+      "n": 14,
+      "title": "Doubt",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27659/original.jpg",
+      "synopsis": "Yosuke Kirie wonders if he will find the resolve to fight in the next battle. While Mitsumi starts to look for means to protect the remaining children, Masamitsu discovers her secret.",
+      "airdate": "2007-07-22",
+      "markers": [],
+      "external_id": "27659"
+    },
+    {
+      "n": 15,
+      "title": "Self-Destruction",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27660/original.jpg",
+      "synopsis": "The ninth round begins, but after witnessing his mother's miserable life, Kirie refuses to fight. Just when his companions are about to lose hope, something that nobody expected happens.",
+      "airdate": "2007-07-29",
+      "markers": [],
+      "external_id": "27660"
+    },
+    {
+      "n": 16,
+      "title": "True Identity",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27661/original.jpg",
+      "synopsis": "Given another chance, Kirie finally decides to face the enemy, but when he surprisingly unveils Machi's identity, a commotion is created among the rest of the group.",
+      "airdate": "2007-08-05",
+      "markers": [],
+      "external_id": "27661"
+    },
+    {
+      "n": 17,
+      "title": "Affection",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27662/original.jpg",
+      "synopsis": "Chosen to the tenth round, Aiko Tokosumi's life is turned upside down when a scandal involving her father brings up turmoil to her household. But she ends up finding in Kanji the strength to carry on with her duty.",
+      "airdate": "2007-08-12",
+      "markers": [],
+      "external_id": "27662"
+    },
+    {
+      "n": 18,
+      "title": "Reality",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27663/original.jpg",
+      "synopsis": "After Komoda was selected for the eleventh match, her father resigns from his position as a politician, but not before revealing the truth about Zearth and the children to the world.",
+      "airdate": "2007-08-19",
+      "markers": [],
+      "external_id": "27663"
+    },
+    {
+      "n": 19,
+      "title": "Mother",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27664/original.jpg",
+      "synopsis": "Tamotsu reveals to Jun Ushiro who his real parents were and tells him their story.",
+      "airdate": "2007-08-26",
+      "markers": [],
+      "external_id": "27664"
+    },
+    {
+      "n": 20,
+      "title": "Fate",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27665/original.jpg",
+      "synopsis": "Machi reveals to the remaining pilots all she knows about the battles, and how she and her brother got themselves involved on them.",
+      "airdate": "2007-09-02",
+      "markers": [],
+      "external_id": "27665"
+    },
+    {
+      "n": 21,
+      "title": "Truth",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27666/original.jpg",
+      "synopsis": "While Kanji fights the Twelfth enemy, the real objective of the masterminds is revealed. Later, Jun receives a proposal from Dung Beetle that may save his life if he accepts.",
+      "airdate": "2007-09-09",
+      "markers": [],
+      "external_id": "27666"
+    },
+    {
+      "n": 22,
+      "title": "Journey",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27667/original.jpg",
+      "synopsis": "Jun takes Kana to her father's house, having Machi traveling with them. On the way, he reminisces about his infancy days, and later, he asks Machi's help to protect Kana from Dung Beetle's intentions.",
+      "airdate": "2007-09-13",
+      "markers": [],
+      "external_id": "27667"
+    },
+    {
+      "n": 23,
+      "title": "Snowscape",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27668/original.jpg",
+      "synopsis": "The human armies decide to intervene during the thirteenth battle, while Machi betrays Dung Beetle and becomes the next pilot in Kana's place.",
+      "airdate": "2007-09-20",
+      "markers": [],
+      "external_id": "27668"
+    },
+    {
+      "n": 24,
+      "title": "Tale",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/27669/original.jpg",
+      "synopsis": "Jun declines Seki's offer and becomes the pilot for the final round. During the long battle, he reminisces about his fallen comrades while struggling to save the Earth once and for all.",
+      "airdate": "2007-09-27",
+      "markers": [],
+      "external_id": "27669"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Uninstall (アンインストール)",
+      "artist": "Chiaki Ishikawa",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Little Bird",
+      "artist": "Chiaki Ishikawa",
+      "episodes": "1-12"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Vermillion",
+      "artist": "Chiaki Ishikawa",
+      "episodes": "13-14"
+    }
+  ],
+  "relations": []
+}

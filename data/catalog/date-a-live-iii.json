@@ -1,0 +1,194 @@
+{
+  "id": "date-a-live-iii",
+  "title": "Date A Live III",
+  "native": "デート・ア・ライブⅢ",
+  "year": 2019,
+  "rating": 7,
+  "season": "Winter 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx100722-M5nXzDkuGOLC.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx100722-M5nXzDkuGOLC.png",
+  "accent": "#d6ae78",
+  "synopsis": "Itsuka Shidou's life has been a whirlwind as of late. Or more precisely, a spatial quake. Several of them, in fact. Powerful \"Spirits\" from other dimensions that take the form of girls are unintentionally causing these spatial quakes in his reality. And Shidou is the only one who can stop them with his unique ability: kissing them! By having the girls kiss and fall deeply in love with him, their devastating quake powers are sealed. The alternative to romancing them is to have a more militant and technological organization called the AST (Anti-Spirit Team) destroy the Spirits, something Shidou is vehemently against.\n\nSo far in the story, six Spirits have fallen for Shidou (as well as a few others). The girls compete with one another and vie for his affection, leaving him no end of headaches and misadventures. But a new challenger approaches.\n\n(Source: Tokyo Otaku Mode)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "date-a-live-iii-ozqyj6",
+    "mal": 36633,
+    "anilist": 100722,
+    "kitsu": 14040
+  },
+  "skip_key_id": 36633,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": null,
+  "search_text": "date a live iii テ ート ア ライフ iii tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "fantasy",
+    "romance",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "The Seventh Spirit",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/239128/original.jpg",
+      "synopsis": "Shido meets a pretty trickster that loves to get compliments. He also runs amok at the school doing one naughty thing after another. Or does he?",
+      "airdate": "2019-01-11",
+      "markers": [],
+      "external_id": "239128"
+    },
+    {
+      "n": 2,
+      "title": "Can You Find Me?",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/239129/original.jpg",
+      "synopsis": "While the witch impersonates one of his friends, Shido is forced into a game where he must identify Natsumi before it's too late and they all disappear.",
+      "airdate": "2019-01-18",
+      "markers": [],
+      "external_id": "239129"
+    },
+    {
+      "n": 3,
+      "title": "You're Natsumi",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/240964/original.jpg",
+      "synopsis": "Shido is losing his head and losing friends faster with each passing day of Natsumi's game. But when it's all over, he may have a little problem on his hands.",
+      "airdate": "2019-01-25",
+      "markers": [],
+      "external_id": "240964"
+    },
+    {
+      "n": 4,
+      "title": "Transformation",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243839/original.jpg",
+      "synopsis": "Natsumi uses her powers to turn the girls into children. But their plan to convince Natsumi that her true form is cute turns out to be no child's play at all.",
+      "airdate": "2019-02-01",
+      "markers": [],
+      "external_id": "243839"
+    },
+    {
+      "n": 5,
+      "title": "Despair Comes Crashing Down",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243840/original.jpg",
+      "synopsis": "The Humpty Dumpty satellite has a great fall towards Tengu City. Will Natsumi realize her own self-worth before the city is reduced to rubble?",
+      "airdate": "2019-02-08",
+      "markers": [],
+      "external_id": "243840"
+    },
+    {
+      "n": 6,
+      "title": "Crossroads",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243841/original.jpg",
+      "synopsis": "Origami makes an unexpected decision that shakes things up. While Shido runs off to investigate, a spatial quake alarm lands the others in a special kind of trouble.",
+      "airdate": "2019-02-15",
+      "markers": [],
+      "external_id": "243841"
+    },
+    {
+      "n": 7,
+      "title": "The Power Given",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243842/original.jpg",
+      "synopsis": "As Fraxinus defends against a fierce opponent, Origami stops at nothing to fulfill her wish and makes the ultimate sacrifice. Will she regret the cost to gain what she wanted?",
+      "airdate": "2019-02-22",
+      "markers": [],
+      "external_id": "243842"
+    },
+    {
+      "n": 8,
+      "title": "Demon King of Descending Darkness",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243843/original.jpg",
+      "synopsis": "Origami is on a mission to avenge her parents, but when she finally discovers the truth, it turns out to be much harsher than she bargained for.",
+      "airdate": "2019-03-01",
+      "markers": [],
+      "external_id": "243843"
+    },
+    {
+      "n": 9,
+      "title": "Tengu City, Five Years Ago",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243844/original.jpg",
+      "synopsis": "On a mission to avert disaster, Shido attempts to rewrite history. Can he stop Origami's crazed rampage or are her parents doomed to die?",
+      "airdate": "2019-03-08",
+      "markers": [],
+      "external_id": "243844"
+    },
+    {
+      "n": 10,
+      "title": "Another World, Another Girl",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243845/original.jpg",
+      "synopsis": "Shido wakes up and finds that the world around him is different. His attempt to thwart disaster may have succeeded, but for how long will it last?",
+      "airdate": "2019-03-15",
+      "markers": [],
+      "external_id": "243845"
+    },
+    {
+      "n": 11,
+      "title": "Angel of the Starry Night",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243846/original.jpg",
+      "synopsis": "Shido takes Origami on a date but she's not acting like herself. After all hell breaks loose, the fate of the world depends on whether he can reach out to her heart or not.",
+      "airdate": "2019-03-22",
+      "markers": [],
+      "external_id": "243846"
+    },
+    {
+      "n": 12,
+      "title": "Make Shido Itsuka Swoon",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/243847/original.jpg",
+      "synopsis": "All the sealed Spirit power is making Shido go wild, but the only cure is to kiss him again. Can all the girls entice Shido to fall for them before it's too late?",
+      "airdate": "2019-03-29",
+      "markers": [],
+      "external_id": "243847"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "I swear",
+      "artist": "sweet ARMS",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Last Promise",
+      "artist": "Yamazaki Erii",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

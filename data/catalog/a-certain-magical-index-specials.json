@@ -1,0 +1,65 @@
+{
+  "id": "a-certain-magical-index-specials",
+  "title": "A Certain Magical Index Specials",
+  "native": "とある魔術のいんでっくすたん",
+  "year": 2009,
+  "rating": 6.6,
+  "season": "Winter 2009",
+  "kind": "Special",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/5955.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/5955.jpg",
+  "accent": "#c9a143",
+  "synopsis": "A series of shorts featuring Index-tan.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "a-certain-magical-index:-specials-52fadl",
+    "mal": 5955,
+    "anilist": 5955,
+    "kitsu": 4360
+  },
+  "skip_key_id": 5955,
+  "skip_key_space": "mal",
+  "episode_total": 2,
+  "added_at": null,
+  "search_text": "a certain magical index specials とある魔術のいんて っくすたん special finished",
+  "genres": [
+    "comedy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "8:00",
+      "runtime_seconds": 480,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "71304"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "8:00",
+      "runtime_seconds": 480,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "71305"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

@@ -1,0 +1,304 @@
+{
+  "id": "assassins-pride",
+  "title": "ASSASSINS PRIDE",
+  "native": "アサシンズプライド",
+  "year": 2019,
+  "rating": 5.7,
+  "season": "Fall 2019",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx104722-XVscwgdGzfnO.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx104722-XVscwgdGzfnO.jpg",
+  "accent": "#e46b5d",
+  "synopsis": "Against the savage monsters that lurk outside the glass walls of Flandore, the last remnants of humanity have only one defense: the mana magic wielded only by members of the Noble class. When Melida, heiress to House of Angel, fails to manifest her magic upon reaching majority, the half-vampire Kufa is sent with orders from her own Grandfather to resolve the issue… and if Melida cannot manifest mana, Kufa is to execute her for the crime of impure blood. But when Melida fails the test, Kufa can’t bring himself to kill the spirited young woman whose only fault was to have an adulterous mother. And so, instead, he commits the crime of giving Melida some of his own mana.\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 42328,
+    "anilist": 104722,
+    "mal": 38572
+  },
+  "skip_key_id": 38572,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 11:35:25",
+  "search_text": "assassins pride アサシンス フ ライト tv finished",
+  "genres": [
+    "action",
+    "comedy",
+    "drama",
+    "fantasy",
+    "mystery",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Mercy of an Assassin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ed2cb84baa58d7774a627755e41a859b1570713884_full.jpg",
+      "synopsis": "Kufa is sent to assess the abilities of the House of Angel’s heir, whose lack of mana calls her lineage into question — but Merida is nothing like Kufa expected her to be.",
+      "airdate": "2019-10-10",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1327
+        }
+      ],
+      "external_id": "269426"
+    },
+    {
+      "n": 2,
+      "title": "When the Girl's World Changes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/510015a72899b7f3c684bbdb75c5e4051571302375_full.jpg",
+      "synopsis": "Kufa plays a dangerous game by casting his lot with Melida. As for his young pupil? The school tournament is coming up, and Melida knows something her opponents don’t.",
+      "airdate": "2019-10-17",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 91
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1299,
+          "end": 1389
+        }
+      ],
+      "external_id": "269427"
+    },
+    {
+      "n": 3,
+      "title": "Beyond the Critical Point",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/0cbd12cec268ffb94cc645b1ce2bfe6d1571907821_full.jpg",
+      "synopsis": "Melida and Elise look forward to the Circlet Night festival, but a kidnapping interrupts their celebration. Now Melida must undergo a trial by fire and prove herself.",
+      "airdate": "2019-10-24",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 90
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1368,
+          "end": 1430
+        }
+      ],
+      "external_id": "270802"
+    },
+    {
+      "n": 4,
+      "title": "Two Young Ladies Assemble at the Chained Castle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire2-tmb/1885d6a5870100d3bc010bab42f7d0451572505613_full.jpg",
+      "synopsis": "The Luna Lumiere Selection Tournament is poised to begin, but the students of St. Friedeswiede are in for a shock when this year’s unexpected Cadets are revealed.",
+      "airdate": "2019-10-31",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 102,
+          "end": 192
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1326,
+          "end": 1416
+        }
+      ],
+      "external_id": "270803"
+    },
+    {
+      "n": 5,
+      "title": "The Golden Princess and the Silver Princess",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/d215fb764a5feeca2c8954752b14f9b51573096534_full.jpg",
+      "synopsis": "The tournament will proceed despite the danger posed by Black Madia. As the Cadets prepare for their inevitable battle, Melida can’t help but dwell on Elise’s troubled words.",
+      "airdate": "2019-11-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 54,
+          "end": 144
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1301,
+          "end": 1391
+        }
+      ],
+      "external_id": "270804"
+    },
+    {
+      "n": 6,
+      "title": "The Gray Witch",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6b396f8b165eb689854f51b4d51b740e1573720803_full.jpg",
+      "synopsis": "When the students gather for a secret party, Melida and her friends spend their time making merry and telling ghost stories, unaware that some tales are very real.",
+      "airdate": "2019-11-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 31,
+          "end": 121
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1328,
+          "end": 1415
+        }
+      ],
+      "external_id": "270805"
+    },
+    {
+      "n": 7,
+      "title": "No Guidance Above nor Below",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire1-tmb/7d012bf5cc02662aad09c2031b0ed2e81574300731_full.jpg",
+      "synopsis": "Melida sees green when Rosetti seeks Kufa as her lover to ward off an arranged marriage. Rosetti’s father claims Kufa bears an uncanny resemblance to a boy in the past.",
+      "airdate": "2019-11-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 71,
+          "end": 161
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1277,
+          "end": 1365
+        }
+      ],
+      "external_id": "270806"
+    },
+    {
+      "n": 8,
+      "title": "The Last Testament of a Certain Skeleton",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/f131fb91507066c50f98e6b55da987a21574938626_full.jpg",
+      "synopsis": "Suspicion falls on Kufa as the attacks continue. To clear his name, Melida teams up with an unlikely ally, but their findings are far more gruesome than they dared imagine.",
+      "airdate": "2019-11-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 84,
+          "end": 174
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1328,
+          "end": 1414
+        }
+      ],
+      "external_id": "270807"
+    },
+    {
+      "n": 9,
+      "title": "An Eternal Pact",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e2f01ea82fbac21467d8ff9df0a0c2161575542481_full.jpg",
+      "synopsis": "",
+      "airdate": "2019-12-05",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 50,
+          "end": 140
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1379,
+          "end": 1415
+        }
+      ],
+      "external_id": "270808"
+    },
+    {
+      "n": 10,
+      "title": "Labyrinth Library",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire3-tmb/3fcd1bb6c92f869f71d12fe67c3926041576149561_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 63,
+          "end": 153
+        }
+      ],
+      "external_id": "270809"
+    },
+    {
+      "n": 11,
+      "title": "Messengers of Death",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f4a163d7089d9690d340501e2130b7a01576644240_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 21,
+          "end": 110
+        }
+      ],
+      "external_id": "270810"
+    },
+    {
+      "n": 12,
+      "title": "Pride of an Assassin-Instructor",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8dca5c65971193889dcd49f67b826bd41577339462_full.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "270811"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

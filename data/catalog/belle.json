@@ -1,0 +1,85 @@
+{
+  "id": "belle",
+  "title": "BELLE",
+  "native": "竜とそばかすの姫",
+  "year": 2021,
+  "rating": 7.3,
+  "season": "Summer 2021",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx127271-juJIu4WFTM8q.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx127271-juJIu4WFTM8q.png",
+  "accent": "#e45086",
+  "synopsis": "The protagonist of this story, Suzu, is a 17-year old high school girl living with her father in a rural town of Kochi — their town is a textbook definition of depopulation in the Japanese countryside. Wounded by the loss of her mother at a young age, Suzu one day discovers the massive online world, “U,” and dives into this alternate reality as her avatar, Belle. Before long, all of U’s eyes are fixed on Belle (Suzu), when one day the mysterious and infamous Dragon-like figure appears before her.\n\n(Source: Official Site)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "belle-i86qrd",
+    "mal": 44807,
+    "anilist": 127271,
+    "kitsu": 43808
+  },
+  "skip_key_id": 44807,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "belle 竜とそは かすの姫 movie finished",
+  "genres": [
+    "drama",
+    "mystery",
+    "sci-fi"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "BELLE (Movie)",
+      "runtime": "122:00",
+      "runtime_seconds": 7320,
+      "thumb": "https://animehot.cc/storage/media/2026/10/6ad331e8a79c62b971a9cbaf-landscape.jpg",
+      "synopsis": "The protagonist of this story, Suzu, is a 17-year old high school girl living with her father in a rural town of Kochi — their town is a textbook definition of depopulation in the Japanese countryside. Wounded by the loss of her mother at a young age, Suzu one day discovers the massive online world, “U,” and dives into this alternate reality as her avatar, Belle. Before long, all of U’s eyes are fixed on Belle (Suzu), when one day the mysterious and infamous Dragon-like figure appears before her.\n\n\n\n(Source: Official Site)",
+      "airdate": null,
+      "markers": [],
+      "external_id": "309744"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "U",
+      "artist": "Belle & millennium parade",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "A Million Miles Away",
+      "artist": "Kaho Nakamura",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Hashire! Jolie",
+      "artist": "Mitsuko Horie and The Tea Tea Neighbor Children's Chorus",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Futari de Hanbunko",
+      "artist": "Mitsuko Horie, The Mori no Ki Jidou Gasshou Dan and The Tea Tea Neighbor Children's Chours",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

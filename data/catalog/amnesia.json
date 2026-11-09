@@ -1,0 +1,202 @@
+{
+  "id": "amnesia",
+  "title": "AMNESIA",
+  "native": "AMNESIA",
+  "year": 2013,
+  "rating": 5.4,
+  "season": "Winter 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx15085-GA9iJnPgjY1H.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx15085-GA9iJnPgjY1H.jpg",
+  "accent": "#e4ae43",
+  "synopsis": "This story takes place in a fictional town, in a fictional country, in a fictional world. One morning, a young lady awakens to find that she has lost all her memories prior to that morning. Her life, her relationships, her very name—all gone. All that's left is a cell phone with numbers and names she doesn't recognize and Orion, a young boy that only she appears to be able to see. With Orion's guidance, she struggles to make sense of herself, a boyfriend she doesn't know and the thousand and one little things that make up a daily life. But with no memories left, the only alternative is to forge new ones, even if that means leaving old loves behind.\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "AMNESIA LATER",
+    "AMNESIA LATER NEW WORLD"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7209,
+    "anilist": 15085,
+    "mal": 15085
+  },
+  "skip_key_id": 15085,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-21 10:26:16",
+  "search_text": "amnesia amnesia tv finished",
+  "genres": [
+    "fantasy",
+    "isekai",
+    "mystery",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "I",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101573/original.jpeg",
+      "synopsis": "When our heroine awakes, she has no recollection of who she is or from whence she came. With the help of a spirit named Orion, she begins piecing together her life.",
+      "airdate": "2013-01-07",
+      "markers": [],
+      "external_id": "101573"
+    },
+    {
+      "n": 2,
+      "title": "II",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101574/original.jpeg",
+      "synopsis": "No one knows our heroine has lost her memories. Going about her daily routine, she suddenly remembers a conversation she had with Shin. The topic of conversation? Murder.",
+      "airdate": "2013-01-14",
+      "markers": [],
+      "external_id": "101574"
+    },
+    {
+      "n": 3,
+      "title": "III",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101575/original.jpeg",
+      "synopsis": "In order to refresh our heroine's memory, Shin reveals more about their relationship.",
+      "airdate": "2013-01-21",
+      "markers": [],
+      "external_id": "101575"
+    },
+    {
+      "n": 4,
+      "title": "IV",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101576/original.jpeg",
+      "synopsis": "We finally learn the truth about our heroine's accident.",
+      "airdate": "2013-01-28",
+      "markers": [],
+      "external_id": "101576"
+    },
+    {
+      "n": 5,
+      "title": "V",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101577/original.jpeg",
+      "synopsis": "Our Heroine tries to figure out why she was sent back in time.",
+      "airdate": "2013-02-04",
+      "markers": [],
+      "external_id": "101577"
+    },
+    {
+      "n": 6,
+      "title": "VI",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101578/original.jpeg",
+      "synopsis": "Our Heroine can't decipher which of Ikki's personality is the real one. Later, someone advises her to be looking over her shoulder.",
+      "airdate": "2013-02-11",
+      "markers": [],
+      "external_id": "101578"
+    },
+    {
+      "n": 7,
+      "title": "VII",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101579/original.jpeg",
+      "synopsis": "Heroine converses with Kent and tries to pretend that she is following, but she is fooling no one...least of all Kent.",
+      "airdate": "2013-02-18",
+      "markers": [],
+      "external_id": "101579"
+    },
+    {
+      "n": 8,
+      "title": "VIII",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101580/original.jpeg",
+      "synopsis": "Toma cares for our Heroine when she faints; the pair later go shopping, and it isn't long before our Heroine is approached by a trio of angry girls.",
+      "airdate": "2013-02-25",
+      "markers": [],
+      "external_id": "101580"
+    },
+    {
+      "n": 9,
+      "title": "IX",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101581/original.jpeg",
+      "synopsis": "Our heroine makes it home, and she is alarmed by what she reads in her diary.",
+      "airdate": "2013-03-04",
+      "markers": [],
+      "external_id": "101581"
+    },
+    {
+      "n": 10,
+      "title": "X",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101582/original.jpeg",
+      "synopsis": "Our heroine finally makes it home. She reads her diary and uncovers a new truth.",
+      "airdate": "2013-03-11",
+      "markers": [],
+      "external_id": "101582"
+    },
+    {
+      "n": 11,
+      "title": "XI",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101583/original.jpeg",
+      "synopsis": "Poor Heroine's days keep getting stranger and stranger... Ukyo's split personalities either want to help her or hurt her, and it could mean danger.",
+      "airdate": "2013-03-18",
+      "markers": [],
+      "external_id": "101583"
+    },
+    {
+      "n": 12,
+      "title": "XII",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/101584/original.jpeg",
+      "synopsis": "Ukyo's evil persona has his sights set on killing our Heroine. Ukyo finally catches up with our Heroine at a bell tower, where she has gone to escape him. Time has run out for one of them...",
+      "airdate": "2013-03-25",
+      "markers": [],
+      "external_id": "101584"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Zoetrope",
+      "artist": "Nagi Yanagi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Recall",
+      "artist": "Ray",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Shinshin no Wataridori",
+      "artist": "Nagi Yanagi",
+      "episodes": "12"
+    }
+  ],
+  "relations": []
+}

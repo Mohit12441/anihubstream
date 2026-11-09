@@ -1,0 +1,584 @@
+{
+  "id": "attack-on-titan",
+  "title": "Attack on Titan",
+  "native": "進撃の巨人",
+  "year": 2013,
+  "rating": 8.5,
+  "season": "Spring 2013",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-buvcRTBx4NSm.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-buvcRTBx4NSm.jpg",
+  "accent": "#f1a143",
+  "synopsis": "Several hundred years ago, humans were nearly exterminated by titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest of titans.\n\n\r\nFlash forward to the present and the city has not seen a titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a colossal titan that appears out of thin air. As the smaller titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single titan and take revenge for all of mankind.\n\n\r\n(Source: MangaHelpers)",
+  "rank": null,
+  "trend_rank": 34,
+  "alt_seasons": [
+    "Attack on Titan Season 2 (2017)",
+    "Attack on Titan: No Regrets (2015)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 7442,
+    "anilist": 16498,
+    "mal": 16498,
+    "hianime": "attack-on-titan-izofpb"
+  },
+  "skip_key_id": 16498,
+  "skip_key_space": "mal",
+  "episode_total": 25,
+  "added_at": "2026-10-14 02:06:29",
+  "search_text": "attack on titan 進撃の巨人 tv finished",
+  "genres": [
+    "action",
+    "drama",
+    "fantasy",
+    "mystery"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "To You Two Thousand Years Later",
+      "runtime": "24:00",
+      "runtime_seconds": 1650,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104938/original.jpg",
+      "synopsis": "The Fall of Shiganshina, Part 1. After one hundred years of peace, humanity is suddenly reminded of the terror of being at the Titans' mercy.",
+      "airdate": "2013-04-06",
+      "markers": [],
+      "external_id": "104938"
+    },
+    {
+      "n": 2,
+      "title": "That Day",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104939/original.jpg",
+      "synopsis": "The Fall of Shiganshina, Part 2. After the Titans break through the wall, the citizens of Shiganshina must run for their lives. However, those that do make it to safety find a harsh life waiting for them.",
+      "airdate": "2013-04-13",
+      "markers": [],
+      "external_id": "104939"
+    },
+    {
+      "n": 3,
+      "title": "Shining Dimly in the Midst of Despair",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104940/original.jpeg",
+      "synopsis": "Eren begins his training with the Cadet Corps, but questions about his painful past overwhelm him. When he struggles with a maneuvering exercise, Berholt and Reiner offer kindly advice.",
+      "airdate": "2013-04-20",
+      "markers": [],
+      "external_id": "104940"
+    },
+    {
+      "n": 4,
+      "title": "Night of the Disbanding",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104941/original.jpeg",
+      "synopsis": "Annie proves her skill in a sparring session, Jan dreams of serving alongside the King, and graduation day brings shocking revelations - along with a sudden outbreak of violence!",
+      "airdate": "2013-04-27",
+      "markers": [],
+      "external_id": "104941"
+    },
+    {
+      "n": 5,
+      "title": "First Battle",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104942/original.jpeg",
+      "synopsis": "Eren faces off against the Colossal Titan after it appears out of nowhere and knocks a strategic hole in the Rose Wall gate. As Titans swarm the city, the newly graduated Cadets are called in to fight in brutal battle that won't be without casualties.",
+      "airdate": "2013-05-04",
+      "markers": [],
+      "external_id": "104942"
+    },
+    {
+      "n": 6,
+      "title": "The World She Saw",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104943/original.jpeg",
+      "synopsis": "Armin tries to cope with the loss of his friends and allies after Titans massacre his squad. Elsewhere in the city, Mikasa manages to take out several of the monsters, which brings back tragic memories of her past and the first time she met Eren.",
+      "airdate": "2013-05-11",
+      "markers": [],
+      "external_id": "104943"
+    },
+    {
+      "n": 7,
+      "title": "The Small Blade",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104944/original.jpeg",
+      "synopsis": "After the retreat bell sounds, many cadets find themselves without enough fuel to scale the wall back to safety. Mikasa begins to lose hope once she hears of the deaths in Armin's squad, but the appearance of a new type of Titan stokes her will to fight.",
+      "airdate": "2013-05-18",
+      "markers": [],
+      "external_id": "104944"
+    },
+    {
+      "n": 8,
+      "title": "Hearing the Heartbeat",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104945/original.jpeg",
+      "synopsis": "Armin comes up with a risky plan that pits Titan against Titan as the abandoned Cadets attempt to take back their headquarters. Getting into the building might be possible, but getting out alive and refueled will mean facing more of the giants.",
+      "airdate": "2013-05-25",
+      "markers": [],
+      "external_id": "104945"
+    },
+    {
+      "n": 9,
+      "title": "The Left Arm's Trace",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104946/original.jpeg",
+      "synopsis": "A miraculous return is met with anger and fear. Cannons are fixed on Eren as he struggles to remember what happened to him inside the belly of a monster and how he ended up humankind's enemy. One question is all that matters: is Eren human or Titan?",
+      "airdate": "2013-06-01",
+      "markers": [],
+      "external_id": "104946"
+    },
+    {
+      "n": 10,
+      "title": "Answer",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104947/original.jpeg",
+      "synopsis": "Cadets respond to Eren's terrifying transformation with doubt and fear as he struggles to understand it himself. If Armin can't talk the commander into using Eren's newfound powers for the good of humankind, all hope of stopping the Titans might be lost.",
+      "airdate": "2013-06-08",
+      "markers": [],
+      "external_id": "104947"
+    },
+    {
+      "n": 11,
+      "title": "Idol",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104948/original.jpeg",
+      "synopsis": "Plans are created to use Eren's Titan powers to seal the hole in the wall in an attempt to reclaim Trost. But with the government's bloodstained history and vocal dissenters in the military ranks, the biggest threat to humankind may not be the Titans.",
+      "airdate": "2013-06-15",
+      "markers": [],
+      "external_id": "104948"
+    },
+    {
+      "n": 12,
+      "title": "Wound",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104949/original.jpeg",
+      "synopsis": "The plan to reclaim Trost falls apart when Eren's newfound powers turn him into a mindless giant. As Titans continue to swarm the city, it's up to Armin and Mikasa to make sure the cadets massacred during the mission haven't died in vain.",
+      "airdate": "2013-06-22",
+      "markers": [],
+      "external_id": "104949"
+    },
+    {
+      "n": 13,
+      "title": "Primordial Desire",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104950/original.jpeg",
+      "synopsis": "Jean takes desperate measures to replace his broken maneuvering device. Meanwhile, Eren is able to plug the hole in the wall thanks to the help of his fellow cadets, but the cost of humanity's first victory against the Titans will be gigantic.",
+      "airdate": "2013-06-29",
+      "markers": [],
+      "external_id": "104950"
+    },
+    {
+      "n": 14,
+      "title": "Can't Look Into His Eyes",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104951/original.jpeg",
+      "synopsis": "A special military tribunal will decide Eren's fate. The Military Police calls for his execution while the Scout Regiment argues that he is a powerful resource for humankind, and Mikasa is put on the spot when asked about the events of the Trost mission.",
+      "airdate": "2013-07-13",
+      "markers": [],
+      "external_id": "104951"
+    },
+    {
+      "n": 15,
+      "title": "Special Operations Squad",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104952/original.jpeg",
+      "synopsis": "The Scout Regiment moves Eren to an old abandoned castle where he will continue his training. Hanzi visits and reveals that she's been putting two captured Titans through a series of tests and trials - experiments that she wants Eren's help with.",
+      "airdate": "2013-07-20",
+      "markers": [],
+      "external_id": "104952"
+    },
+    {
+      "n": 16,
+      "title": "What To Do Now",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104953/original.jpeg",
+      "synopsis": "Everyone is a suspect in the investigation to find out who killed the two test-subject Titans. Meanwhile, the Cadets pick which corps they'll be joining, but after the harrowing events in the Trost attack, many are uncertain which branch to choose.",
+      "airdate": "2013-07-27",
+      "markers": [],
+      "external_id": "104953"
+    },
+    {
+      "n": 17,
+      "title": "The Female Titan",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104954/original.jpeg",
+      "synopsis": "As the Scout Regiment begins its push toward Shiganshina, they encounter an intelligent Female Titan unlike any they've seen before. When Armin hypothesizes that it's really a human that's been turned into a Titan, he, Jean, and Reiner attempt to stop it.",
+      "airdate": "2013-08-04",
+      "markers": [],
+      "external_id": "104954"
+    },
+    {
+      "n": 18,
+      "title": "The Forest of Giant Trees",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104955/original.jpeg",
+      "synopsis": "As the Female Titan continues to tear its way through the Scout Regiment, Levi makes a bold decision to split the ranks and send Eren and the supply wagons through a huge forest. Is his strategy genius, or does it spell certain death for the scouts?",
+      "airdate": "2013-08-11",
+      "markers": [],
+      "external_id": "104955"
+    },
+    {
+      "n": 19,
+      "title": "Bite",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104956/original.jpeg",
+      "synopsis": "A memory of Eren testing out his Titan powers sheds new light on how his abilities work. As the Female Titan continues to slaughter members of the Scout Regiment, Eren is faced with a difficult decisions: does he trust his teammates or act out on his own?",
+      "airdate": "2013-08-18",
+      "markers": [],
+      "external_id": "104956"
+    },
+    {
+      "n": 20,
+      "title": "Erwin Smith",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104957/original.jpeg",
+      "synopsis": "The Female Titan has been captured, and it's Erwin's goal to find out who the human is lurking inside it. Meanwhile, the Scouts realize that the reason Levi told no one about their true mission outside the wall is because there is a spy among them.",
+      "airdate": "2013-08-25",
+      "markers": [],
+      "external_id": "104957"
+    },
+    {
+      "n": 21,
+      "title": "Crushing Blow",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104958/original.jpeg",
+      "synopsis": "A traitor has infiltrated the Scout Regiment, destroying their ranks from within. When cornered, she once again takes the form of the Female Titan - but this time, Eren's not going to let her get away without one insanely brutal fight.",
+      "airdate": "2013-09-01",
+      "markers": [],
+      "external_id": "104958"
+    },
+    {
+      "n": 22,
+      "title": "The Defeated",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104959/original.jpeg",
+      "synopsis": "After watching Eren get swallowed by the Female Titan, Mikasa and Levi follow the brutal monster in the hopes that he's still alive inside her. As the Scout Regiment tries to recover from the devastating losses of the operation, emotions run high.",
+      "airdate": "2013-09-08",
+      "markers": [],
+      "external_id": "104959"
+    },
+    {
+      "n": 23,
+      "title": "Smile",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104960/original.jpeg",
+      "synopsis": "After the failed scouting expedition, Eren and his superiors are summoned to the capital. Annie witnesses just how deep corruption runs in the Military Police, and agrees to join Armin in a plot to defy the government - but nothing is really as it seems.",
+      "airdate": "2013-09-15",
+      "markers": [],
+      "external_id": "104960"
+    },
+    {
+      "n": 24,
+      "title": "Mercy",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104961/original.jpeg",
+      "synopsis": "When the identity of the Female Titan is finally revealed, she goes on a rampage within Wall Sina. Eren is hesitant to fight her, but Armin and Mikasa throw themselves into of the battle in a desperate attempt to stop the towering monster.",
+      "airdate": "2013-09-22",
+      "markers": [],
+      "external_id": "104961"
+    },
+    {
+      "n": 25,
+      "title": "Wall",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/104962/original.jpeg",
+      "synopsis": "Eren goes head-to-head with the Female Titan in a fight that demolishes the Stohess District inside Wall Sina. As the number of casualties skyrockets and Annie tries to escape over the wall, Erwin must deal with the consequences of his plan.",
+      "airdate": "2013-09-29",
+      "markers": [],
+      "external_id": "104962"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Guren no Yumiya (紅蓮の弓矢; Feuerroter Pfeil und Bogen)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Utsukushiki Zankoku na Sekai (美しき残酷な世界)",
+      "artist": "Yōko Hikasa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Guren no Yumiya (紅蓮の弓矢; Feuerroter Pfeil und Bogen)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Utsukushiki Zankoku na Sekai (美しき残酷な世界)",
+      "artist": "Yōko Hikasa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Saigo no Kyojin (最後の巨人; The Last Titan)",
+      "artist": "Linked Horizon [Online episode version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Itterasshai (いってらっしゃい; See You Later)",
+      "artist": "Ai Higuchi [Online episode version]",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "UNDER THE TREE",
+      "artist": "SiM [TV special version]",
+      "episodes": "1"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "The Rumbling",
+      "artist": "SiM",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Akuma no Ko (悪魔の子)",
+      "artist": "Ai Higuchi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "AOT2013-2019",
+      "artist": "Eliana, Laco",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Boku no Sensou",
+      "artist": "Shinsei Kamattechan",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Shougeki",
+      "artist": "Yuko Ando",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shoukei to Shikabane no Michi",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Name of Love",
+      "artist": "cinema staff",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Call your name <Gv>",
+      "artist": "Gemie",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Barricades <MOVIE ver.>",
+      "artist": "yosh",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Red Swan",
+      "artist": "YOSHIKI feat. HYDE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Akatsuki no Chinkonka (Daybreak Requiem)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Guren no Yumiya (紅蓮の弓矢; Feuerroter Pfeil und Bogen)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Utsukushiki Zankoku na Sekai (美しき残酷な世界)",
+      "artist": "Yōko Hikasa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Seishun wa Hanabi no Yō ni (青春は花火のように; Youth is Like Fireworks)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Hangeki no Daichi (反撃の大地; Earth's Counterattack)",
+      "artist": "Yuuki Kaji, Kishô Taniyama, and Yui Ishikawa",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Shinzō o Sasage yo! (心臓を捧げよ!)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yūgure no Tori (夕暮れの鳥; Birds of Twilight)",
+      "artist": "Shinsei Kamattechan",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Jiyuu no Tsubasa (自由の翼)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "great escape",
+      "artist": "cinema staff",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "theDOGS",
+      "artist": "Hiroyuki Sawano",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "theDOGS",
+      "artist": "mpi",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "YAMANAIAME (Rain That Doesn't Stop)",
+      "artist": "Hiroyuki Sawano",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Guren no Zahyou (紅蓮の座標)",
+      "artist": "Linked Horizon",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Guren no Yumiya (紅蓮の弓矢)",
+      "artist": "Linked Horizon",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Utsukushiki Zankoku na Sekai (美しき残酷な世界)",
+      "artist": "Yōko Hikasa",
+      "episodes": "1-13"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "To You in 2,000... or... 20,000 Years From Now (二千年… 若しくは… 二万年後の君へ・・・)",
+      "artist": "Linked Horizon [TV special version]",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Utsukushiki Zankoku na Sekai (美しき残酷な世界)",
+      "artist": "Yōko Hikasa",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "YAMANAIAME",
+      "artist": "Mica Caldito, mpi & Mika Kobayashi",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Jiyuu no Tsubasa (自由の翼)",
+      "artist": "Linked Horizon",
+      "episodes": "14-25"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "great escape",
+      "artist": "cinema staff",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

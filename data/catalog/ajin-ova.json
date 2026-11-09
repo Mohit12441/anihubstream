@@ -1,0 +1,68 @@
+{
+  "id": "ajin-ova",
+  "title": "Ajin OVA",
+  "native": "亜人OVA",
+  "year": 2016,
+  "rating": 6.8,
+  "season": "Spring 2016",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21487-Va4pPFXsysWF.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21487-Va4pPFXsysWF.jpg",
+  "accent": "#f1bb5d",
+  "synopsis": "Bundled with the limited edition of the manga's eighth, ninth and tenth volumes.\n\n1. The Nakamura Shinya Incident (中村慎也事件)\n\nThe Ajin Control Committee's most feared worst-case scenario: \"The Shinya Nakamura Incident.\"\n\nThe truth will finally be revealed!\n\nThe story of the country's first Ajin will get a forbidden anime adaptation!\n\n(Source: Anime News Network)\n\n2. Intermission\n\n3. Satou: Zero (佐藤 ZERO)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "ajin-ova-8ps4sc",
+    "mal": 32015,
+    "anilist": 21487,
+    "kitsu": 11615
+  },
+  "skip_key_id": 32015,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "ajin ova 亜人ova ova finished",
+  "genres": [
+    "action",
+    "horror",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Shinya Nakamura Incident",
+      "runtime": "21:00",
+      "runtime_seconds": 1260,
+      "thumb": "",
+      "synopsis": "Shinya Nakamura breaks his promise to his friend Yusuke to attend a party with a girl he likes. Running late, he is killed in a motorcycle accident but is soon revived. Discovering he is an Ajin after witnessing his right arm regenerate, Shinya hides evidence of him being an Ajin. When he keeps seeing a black apparition, Shinya is nearly run over trying to flee but is saved at the last second by Yusuke. Later just as Shinya is about to admit to Yusuke he is an Ajin, gunmen from the Ajin Management Committee show up to capture him. Yusuke however shields Shinya from a bullet and is fatally wounded. Shinya vows to kill them but they immediately kill him instead. While he is unconscious his Black Ghosts kill all the gunmen then fade as he comes alive. Following Yusuke's final words to run, Shinya leaves town, pondering the name print on the tissues which he also saw earlier, Grant Pharmeceuticals. Meanwhile Tosaki is ordered by the Defense Minister to quietly investigate the Shinya Nakamura incident. As a first step, he wants to find an Ajin to help him, and looks up the report on an unconfirmed young woman Ajin living in Hyogo - Tainaka Youko.",
+      "airdate": "2016-05-06",
+      "markers": [],
+      "external_id": "180837"
+    },
+    {
+      "n": 2,
+      "title": "Intermission",
+      "runtime": "21:00",
+      "runtime_seconds": 1260,
+      "thumb": "",
+      "synopsis": "No synopsis available.",
+      "airdate": "2016-10-07",
+      "markers": [],
+      "external_id": "185698"
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

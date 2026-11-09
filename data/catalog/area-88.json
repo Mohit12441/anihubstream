@@ -1,0 +1,129 @@
+{
+  "id": "area-88",
+  "title": "Area 88",
+  "native": "エリア88",
+  "year": 1985,
+  "rating": 7.3,
+  "season": "Winter 1985",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1488.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1488.jpg",
+  "accent": "#e4c943",
+  "synopsis": "In a cruel twist of fate, talented young pilot Shin Kazama is tricked into serving as a mercenary for Area 88. A hell on Earth where men survive by gunning down anyone who stands in their way. To return home, Shin must sell his soul to the battlefield and pave the road back to Japan with the corpses of his fallen opponents.\n\n(Source: Discotek)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "area-88-78xa9u",
+    "mal": 1488,
+    "anilist": 1488,
+    "kitsu": 1334
+  },
+  "skip_key_id": 1488,
+  "skip_key_space": "mal",
+  "episode_total": 3,
+  "added_at": null,
+  "search_text": "area 88 エリア88 ova finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23837"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23838"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "23839"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mission (Fuga)",
+      "artist": "angels",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Dance in the Battlefield",
+      "artist": "Keiko Terada",
+      "episodes": "1-8"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "How Far to Paradise",
+      "artist": "Derek Jackson",
+      "episodes": "1-2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kanashimi no Destiny (悲しみのＤＥＳＴＩＮＹ)",
+      "artist": "Mio",
+      "episodes": "2"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Dance in the Battlefield (English Version)",
+      "artist": "Keiko Terada",
+      "episodes": "9-12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 2,
+      "title": "Suna no Illusion (砂漠のイリュージョン)",
+      "artist": "Shima Kitahara",
+      "episodes": "3"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "So Long My Love",
+      "artist": "Shima Kitahara",
+      "episodes": "3"
+    }
+  ],
+  "relations": []
+}

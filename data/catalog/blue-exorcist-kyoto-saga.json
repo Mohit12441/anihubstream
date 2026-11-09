@@ -1,0 +1,326 @@
+{
+  "id": "blue-exorcist-kyoto-saga",
+  "title": "Blue Exorcist: Kyoto Saga",
+  "native": "青の祓魔師 京都不浄王篇",
+  "year": 2017,
+  "rating": 7.2,
+  "season": "Winter 2017",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21861-KDvJJQenJJlT.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21861-KDvJJQenJJlT.jpg",
+  "accent": "#f1a143",
+  "synopsis": "In the late Edo Period, a demon known as the Impure King killed thousands of people. After defeating the demon, the Knights of the True Cross kept its left eye safely sealed away on Academy grounds - but now someone has stolen it! Hearing the thief has taken a child hostage, Yukio and Rin go to help. The investigation and pursuit will lead Rin and his friends to Kyoto and involve them even deeper in a sinister plot! But will his friends' knowledge that Rin is the son of Satan drive a wedge between them?\n\n(Source: VIZ Media)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Blue Exorcist -Shimane Illuminati Saga- (2024)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 12275,
+    "anilist": 21861,
+    "mal": 33506,
+    "hianime": "blue-exorcist:-kyoto-saga-3l8tgc"
+  },
+  "skip_key_id": 33506,
+  "skip_key_space": "mal",
+  "episode_total": 12,
+  "added_at": "2026-10-14 08:15:04",
+  "search_text": "blue exorcist kyoto saga 青の祓魔師 京都不浄王篇 tv finished",
+  "genres": [
+    "action",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Small Beginnings",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-07",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 67,
+          "end": 157
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1332,
+          "end": 1439
+        }
+      ],
+      "external_id": "199807"
+    },
+    {
+      "n": 2,
+      "title": "Strange Bedfellows",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-14",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 37,
+          "end": 127
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 46,
+          "end": 130
+        }
+      ],
+      "external_id": "199808"
+    },
+    {
+      "n": 3,
+      "title": "Suspicion Will Raise Bogies",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-21",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 242,
+          "end": 332
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1347,
+          "end": 1437
+        }
+      ],
+      "external_id": "199809"
+    },
+    {
+      "n": 4,
+      "title": "Act of Treachery",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-01-28",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 163,
+          "end": 253
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1347,
+          "end": 1437
+        }
+      ],
+      "external_id": "199810"
+    },
+    {
+      "n": 5,
+      "title": "Mysterious Connections",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-04",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 75,
+          "end": 165
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1348,
+          "end": 1438
+        }
+      ],
+      "external_id": "199811"
+    },
+    {
+      "n": 6,
+      "title": "A Wolf in Sheep's Clothing",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-11",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 144,
+          "end": 234
+        }
+      ],
+      "external_id": "199812"
+    },
+    {
+      "n": 7,
+      "title": "Like a Fire Burning Bright",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-18",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 229,
+          "end": 319
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1348,
+          "end": 1437
+        }
+      ],
+      "external_id": "199813"
+    },
+    {
+      "n": 8,
+      "title": "From Father to Son",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-02-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 51,
+          "end": 141
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1348,
+          "end": 1437
+        }
+      ],
+      "external_id": "199814"
+    },
+    {
+      "n": 9,
+      "title": "Through Thick and Thin",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-04",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1348,
+          "end": 1437
+        }
+      ],
+      "external_id": "199815"
+    },
+    {
+      "n": 10,
+      "title": "Unbowed and Unbroken",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-11",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1348,
+          "end": 1437
+        }
+      ],
+      "external_id": "199816"
+    },
+    {
+      "n": 11,
+      "title": "Shine Bright as the Sun",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-18",
+      "markers": [
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1437,
+          "end": 1440
+        }
+      ],
+      "external_id": "199817"
+    },
+    {
+      "n": 12,
+      "title": "Candid and Open",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": "2017-03-25",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 20,
+          "end": 110
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1348,
+          "end": 1438
+        }
+      ],
+      "external_id": "199818"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Itteki no Eikyō (一滴の影響; Drop's Influence)",
+      "artist": "UVERworld",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Kono Te de (コノ手デ; With This Hand)",
+      "artist": "Rin Akatsuki",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

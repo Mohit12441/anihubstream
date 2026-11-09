@@ -1,0 +1,72 @@
+{
+  "id": "bungo-stray-dogs-dead-apple",
+  "title": "Bungo Stray Dogs: DEAD APPLE",
+  "native": "文豪ストレイドッグス DEAD APPLE",
+  "year": 2018,
+  "rating": 7.8,
+  "season": "Winter 2018",
+  "kind": "Movie",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98384-nXEnNzwiJ9BV.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98384-nXEnNzwiJ9BV.jpg",
+  "accent": "#28a1e4",
+  "synopsis": "The film's story involves a mystery case of power users around the world suddenly committing suicide one after another, in all cases after a strange fog appears at the scene. At a request from Ango Sakaguchi, the Armed Detective Agency head out to investigate Tatsuhiko Shibusawa, a power user who calls himself \"collector,\" and a man suspected of being tied to the incident.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 13570,
+    "anilist": 98384,
+    "mal": 34944,
+    "hianime": "bungo-stray-dogs:-dead-apple-imdts2"
+  },
+  "skip_key_id": 34944,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": "2026-10-14 14:06:40",
+  "search_text": "bungo stray dogs dead apple 文豪ストレイト ック ス dead apple movie finished",
+  "genres": [
+    "action",
+    "comedy",
+    "mystery",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Bungo Stray Dogs: DEAD APPLE (Movie)",
+      "runtime": "90:00",
+      "runtime_seconds": 5400,
+      "thumb": "https://animehot.cc/storage/media/2026/09/691ad88fc281af7b2216a28a-landscape.webp",
+      "synopsis": "A large-scale catastrophe is occurring across the planet. Ability users are discovered after the appearance of a mysterious fog, apparently having committed suicide, so the Armed Detective Agency sets out to investigate these mysterious deaths. The case seems to involve an unknown ability user referred to as \"Collector,\" a man who could be the mastermind behind the incident.\n\nTrust and courage are put to the test in order to save the city of Yokohama and ability users across the world from the grip of Collector where the Armed Detective Agency forms an unlikely partnership with the dangerous Port Mafia.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "209049"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Deadly Drive",
+      "artist": "GRANRODEO",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Bokura",
+      "artist": "Luck Life",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

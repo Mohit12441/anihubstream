@@ -1,0 +1,257 @@
+{
+  "id": "demon-slayer-kimetsu-no-yaiba-hashira-training-arc",
+  "title": "Demon Slayer: Kimetsu no Yaiba Hashira Training Arc",
+  "native": "鬼滅の刃 柱稽古編",
+  "year": 2024,
+  "rating": 7.9,
+  "season": "Spring 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx166240-PBV7zukIHW7V.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx166240-PBV7zukIHW7V.png",
+  "accent": "#e4d6ae",
+  "synopsis": "The Hashira, the Demon Slayer Corps' highest ranking swordsmen and members. The Hashira Training has begun in order to face the forthcoming battle against Muzan Kibutsuji. Each with their own thoughts and hopes held in their hearts, a new story for Tanjiro and the Hashira begins.\n\n(Source: Aniplex USA)\n\nNote: The first episode received an early premiere in cinemas as part of a special screening alongside the final episode of Kimetsu no Yaiba: Katanakaji no Sato-hen.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc (2023)",
+    "Demon Slayer: Kimetsu no Yaiba Infinity Castle (2025)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 47635,
+    "anilist": 166240,
+    "mal": 55701,
+    "hianime": "demon-slayer:-kimetsu-no-yaiba-hashira-training-arc-sqpnk5"
+  },
+  "skip_key_id": 55701,
+  "skip_key_space": "mal",
+  "episode_total": 8,
+  "added_at": "2026-10-14 03:06:30",
+  "search_text": "demon slayer kimetsu no yaiba hashira training arc 鬼滅の刃 柱稽古編 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "To Defeat Muzan Kibutsuji",
+      "runtime": "48:00",
+      "runtime_seconds": 2880,
+      "thumb": "https://media.kitsu.app/episode/352734/thumbnail/medium-4747d0ad58550bf295991a33ef86321e.jpeg",
+      "synopsis": "The Hashira, Sanemi, and Iguro, along with their comrades head to an abandoned castle on top of a mountain for a mission, while Tanjiro is being treated at the Butterfly Mansion for the wounds he suffered at the Swordsmith Village. Later on, the Hashira gather at the Ubuyashiki Mansion to hold a Hashira meeting, where Muichiro reveals how the marks manifested. In an effort to strengthen the entire Demon Slayer Corps from the bottom up, the Hashira Training begins... (Source: Crunchyroll(",
+      "airdate": "2024-05-12",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 2633,
+          "end": 2723
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1329,
+          "end": 1419
+        }
+      ],
+      "external_id": "352734"
+    },
+    {
+      "n": 2,
+      "title": "Water Hashira Giyu Tomioka's Pain",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/352735/thumbnail/medium-e69282d88e711d1d7d5551405d5c42cd.jpeg",
+      "synopsis": "Kagaya's Kasugai Crow suddenly appears in front of Tamayo and invites her to the Demon Slayer headquarters — even though she is a demon. Meanwhile, Tanjiro, who is recovering at the Butterfly Mansion, receives a letter from Kagaya... (Source: Crunchyroll)",
+      "airdate": "2024-05-19",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 188,
+          "end": 277
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1379
+        }
+      ],
+      "external_id": "352735"
+    },
+    {
+      "n": 3,
+      "title": "Fully Recovered Tanjiro Joins the Hashira Training!!",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/352736/thumbnail/medium-c983e138503cdf9fa420431023d8e8d2.jpeg",
+      "synopsis": "After talking with Tanjiro, Giyu is able to overcome his past self and decides to join the training. Meanwhile, Tanjiro's wounds have healed enough to join the training, and heads to his first training with the former Hashira, Uzui. (Source: Crunchyroll)",
+      "airdate": "2024-05-26",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 28,
+          "end": 117
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1379
+        }
+      ],
+      "external_id": "352736"
+    },
+    {
+      "n": 4,
+      "title": "To Bring a Smile to One's Face",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/352737/thumbnail/medium-e6c17cc9b23a19a48e48e8f0367638fd.jpeg",
+      "synopsis": "After completing training with Uzui, Tanjiro visits the Tokito residence next. The Demon Slayer swordsmen who have already started the training are dispirited by Muichiro's intense training and harsh words. Tanjiro hears the swordsmen discussing if there's anything they can do about it... (Source: Crunchyroll)",
+      "airdate": "2024-06-02",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 40,
+          "end": 130
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1240,
+          "end": 1339
+        }
+      ],
+      "external_id": "352737"
+    },
+    {
+      "n": 5,
+      "title": "I Even Ate Demons",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/352738/thumbnail/medium-861a80f79ac11a876725c63a42331675.jpeg",
+      "synopsis": "After completing Mitsuri's training, Tanjiro heads to train with Iguro. When he arrives at the training site, Iguro is waiting for him, visibly angry. Will he be able to complete this horrifying training where he'll have to fix his sword skills? (Source: Crunchyroll)",
+      "airdate": "2024-06-09",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 66,
+          "end": 155
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1290,
+          "end": 1379
+        }
+      ],
+      "external_id": "352738"
+    },
+    {
+      "n": 6,
+      "title": "The Strongest of the Demon Slayer Corps",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "https://media.kitsu.app/episode/352739/thumbnail/medium-b96e2a2eb245aa1359ad7bfb65762a0b.jpeg",
+      "synopsis": "Tanjiro and Zenitsu head to Himejima's training site deep in the mountains and reunite with Inosuke and Murata. (Source: Crunchyroll)",
+      "airdate": "2024-06-16",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 56,
+          "end": 146
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1299,
+          "end": 1380
+        }
+      ],
+      "external_id": "352739"
+    },
+    {
+      "n": 7,
+      "title": "Stone Hashira Gyomei Himejima",
+      "runtime": "31:00",
+      "runtime_seconds": 1860,
+      "thumb": "https://media.kitsu.app/episode/352740/thumbnail/medium-2b6120e93feaebfe120b8ef62cbdbc13.jpeg",
+      "synopsis": "After Tanjiro reaches a dead end with Himejima's tasks, he runs into Genya coincidentally and manages to move the boulder thanks to his advice. (Source: Crunchyroll)",
+      "airdate": "2024-06-23",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 113,
+          "end": 202
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 1591,
+          "end": 1679
+        }
+      ],
+      "external_id": "352740"
+    },
+    {
+      "n": 8,
+      "title": "The Hashira Unite",
+      "runtime": "40:00",
+      "runtime_seconds": 2400,
+      "thumb": "https://media.kitsu.app/episode/352741/thumbnail/medium-48374a31d868bd1a1beb72c2759b045e.jpeg",
+      "synopsis": "During a silent night when the moon shines, Kagaya finally meets Muzan Kibutsuji, who appears at the Ubuyashiki Mansion. Kagaya is staying alive day-by-day through his steadfast desire to defeat Muzan, while Muzan dreams of eternity. What will these two, bound by a continuous thousand-year fate, talk about? (Source: Crunchyroll)",
+      "airdate": "2024-06-30",
+      "markers": [
+        {
+          "kind": "intro",
+          "label": "Opening",
+          "start": 0,
+          "end": 178
+        },
+        {
+          "kind": "outro",
+          "label": "Ending",
+          "start": 2008,
+          "end": 2307
+        }
+      ],
+      "external_id": "352741"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mugen (無限)",
+      "artist": "MY FIRST STORY x HYDE",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Tokoshie (トコシエ)",
+      "artist": "MY FIRST STORY x HYDE",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

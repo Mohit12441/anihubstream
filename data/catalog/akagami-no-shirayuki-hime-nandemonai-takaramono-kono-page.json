@@ -1,0 +1,99 @@
+{
+  "id": "akagami-no-shirayuki-hime-nandemonai-takaramono-kono-page",
+  "title": "Snow White with the Red Hair: Nandemonai Takaramono, Kono Page",
+  "native": "赤髪の白雪姫 ～なんでもない宝物、この頁～",
+  "year": 2016,
+  "rating": 7.5,
+  "season": "Winter 2016",
+  "kind": "OVA",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21313-CRB0vR5CXLco.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21313-CRB0vR5CXLco.jpg",
+  "accent": "#3593f1",
+  "synopsis": "The OAD will adapt three chapters from the original manga. The OAD is adapting the 41st chapter of the manga where Shirayuki and Zen go on a date in the castle town. The anime is also adapting a special chapter from volume seven — which follows Prince Raji as a child — as well as a special chapter from volume 11 that chronicles how Zen, Mitsuhide, and Kiki first met.\n\n(Source: Anime News Network)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "hianime": "akagami-no-shirayuki-hime:-nandemonai-takaramono-kono-page-0dmffw",
+    "mal": 31483,
+    "anilist": 21313,
+    "kitsu": 11341
+  },
+  "skip_key_id": 31483,
+  "skip_key_space": "mal",
+  "episode_total": 1,
+  "added_at": null,
+  "search_text": "snow white with the red hair nandemonai takaramono kono page 赤髪の白雪姫 なんて もない宝物 この頁 ova finished",
+  "genres": [
+    "drama",
+    "fantasy",
+    "romance"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Akagami no Shirayuki-hime: Nandemonai Takaramono, Kono Page",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://cdn.myanimelist.net/images/anime/10/77943l.jpg",
+      "synopsis": "Bundled with the limited edition 15th volume of the manga.",
+      "airdate": null,
+      "markers": [],
+      "external_id": "179188"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Sono Koe ga Chizu ni Naru (その声が地図になる;Your Voice Becomes a Map)",
+      "artist": "Saori Hayami",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Page~Kimi to Tsuzuru Monogatari (ページ～君と綴る物語～;Page~The Story I Weave with You)",
+      "artist": "eyelis",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yasashii Kibō (やさしい希望;Gentle Hope)",
+      "artist": "Saori Hayami",
+      "episodes": "12"
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Yasashii Kibō (やさしい希望;Gentle Hope)",
+      "artist": "Saori Hayami",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yasashii Kibō (やさしい希望;Gentle Hope)",
+      "artist": "Saori Hayami",
+      "episodes": "1"
+    },
+    {
+      "kind": "ED",
+      "sequence": 2,
+      "title": "Kizuna ni Nosete (絆にのせて;Placing on Bonds)",
+      "artist": "eyelis",
+      "episodes": "2-"
+    }
+  ],
+  "relations": []
+}

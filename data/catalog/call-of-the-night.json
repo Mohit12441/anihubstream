@@ -1,0 +1,220 @@
+{
+  "id": "call-of-the-night",
+  "title": "Call of the Night",
+  "native": "よふかしのうた",
+  "year": 2022,
+  "rating": 7.9,
+  "season": "Summer 2022",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx141391-M3ZgUKTPENUk.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx141391-M3ZgUKTPENUk.jpg",
+  "accent": "#5d5de4",
+  "synopsis": "Wracked by insomnia and wanderlust, Kou Yamori is driven onto the moonlit streets every night in an aimless search for something he can’t seem to name. His nightly ritual is marked by purposeless introspection — until he meets Nazuna, who might just be a vampire! Kou’s new companion could offer him dark gifts and a vampire’s immortality. But there are conditions that must be met before Kou can sink his teeth into vampirism, and he’ll have to discover just how far he’s willing to go to satisfy his desires before he can heed the Call of the Night!\n\n(Source: Sentai Filmworks)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Call of the Night Season 2 (2025)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 45483,
+    "anilist": 141391,
+    "mal": 50346,
+    "hianime": "call-of-the-night-fd5kzf"
+  },
+  "skip_key_id": 50346,
+  "skip_key_space": "mal",
+  "episode_total": 13,
+  "added_at": "2026-10-14 03:06:30",
+  "search_text": "call of the night よふかしのうた tv finished",
+  "genres": [
+    "comedy",
+    "romance",
+    "slice-of-life",
+    "supernatural"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330553"
+    },
+    {
+      "n": 2,
+      "title": "Episode 2",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330554"
+    },
+    {
+      "n": 3,
+      "title": "Episode 3",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330555"
+    },
+    {
+      "n": 4,
+      "title": "Episode 4",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330556"
+    },
+    {
+      "n": 5,
+      "title": "Episode 5",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330983"
+    },
+    {
+      "n": 6,
+      "title": "Episode 6",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330984"
+    },
+    {
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330985"
+    },
+    {
+      "n": 8,
+      "title": "Episode 8",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330986"
+    },
+    {
+      "n": 9,
+      "title": "Episode 9",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330987"
+    },
+    {
+      "n": 10,
+      "title": "Episode 10",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330988"
+    },
+    {
+      "n": 11,
+      "title": "Episode 11",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330989"
+    },
+    {
+      "n": 12,
+      "title": "Episode 12",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330990"
+    },
+    {
+      "n": 13,
+      "title": "Episode 13",
+      "runtime": "23:00",
+      "runtime_seconds": 1380,
+      "thumb": "",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": "330991"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Mirage",
+      "artist": "Creepy Nuts",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Nemure",
+      "artist": "Creepy Nuts",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Datenshi (Fallen Angel)",
+      "artist": "Creepy Nuts",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Yofukashi no Uta (Call of the Night)",
+      "artist": "Creepy Nuts",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}

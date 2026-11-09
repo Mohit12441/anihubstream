@@ -1,0 +1,129 @@
+{
+  "id": "afro-samurai",
+  "title": "Afro Samurai",
+  "native": "アフロサムライ",
+  "year": 2007,
+  "rating": 7.1,
+  "season": "Winter 2007",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1292-FcyYgq7Ly34H.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1292-FcyYgq7Ly34H.png",
+  "accent": "#ffc247",
+  "synopsis": "After watching his father die in a duel against an unbeatable villian known only as 'Justice,' young Afro fixes his life on the study of swords and revenge. The tale of Afro Samurai is one of bloody hardship and pain. Along his solitary path of revenge for his murdered father, he sheds no tears & knows no love. Forever chased by powerful enemies in a lawless technology-speckled dystopia, he evades bullets and blade to reach his final prey: a man who will not die. But Afro will reach his quarry - even if it means painting a road of blood and brains from here to the bitter inevitable end.",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [
+    "Afro Samurai: Resurrection (2009)"
+  ],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "kitsu": 1165,
+    "anilist": 1292,
+    "mal": 1292
+  },
+  "skip_key_id": 1292,
+  "skip_key_space": "mal",
+  "episode_total": 5,
+  "added_at": "2026-10-14 14:06:40",
+  "search_text": "afro samurai アフロサムライ tv finished",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Revenge",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21731/original.jpg",
+      "synopsis": "After a young boy named Afro witnesses Justice kill his father and claim the number one headband, Afro begins his quest to avenge his father's death. As he travels toward Justice, he is challenged by many fighters wishing to claim the number two headband that he wears.",
+      "airdate": "2007-01-04",
+      "markers": [],
+      "external_id": "21731"
+    },
+    {
+      "n": 2,
+      "title": "The Dream Reader",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21732/original.jpg",
+      "synopsis": "Afro is found by the river and taken in by Okiku to let his wounds heal. In his weakened state, he has a series of dreams about beginning his samurai training and his friends from so long ago.",
+      "airdate": "2007-01-11",
+      "markers": [],
+      "external_id": "21732"
+    },
+    {
+      "n": 3,
+      "title": "The Empty Seven Clan",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21733/original.jpg",
+      "synopsis": "The Afro Samurai continues on his journey and finds more information on the Empty Seven Clan. The group of monks have decided to unleash a robot on the samurai, created from the data Okiku had taken from his memories.",
+      "airdate": "2007-01-18",
+      "markers": [],
+      "external_id": "21733"
+    },
+    {
+      "n": 4,
+      "title": "Duel",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21734/original.jpg",
+      "synopsis": "Afro takes on Kuma!",
+      "airdate": "2007-01-25",
+      "markers": [],
+      "external_id": "21734"
+    },
+    {
+      "n": 5,
+      "title": "Justice",
+      "runtime": "27:00",
+      "runtime_seconds": 1620,
+      "thumb": "https://media.kitsu.app/episodes/thumbnails/21735/original.jpg",
+      "synopsis": "Afro finishes up his battle with Kuma and continues up the mountain. Now, the final battle with Justice is at hand. The samurai is now ready to finally avenge his father's untimely death, by slaughtering the deranged gunman.",
+      "airdate": "2007-02-01",
+      "markers": [],
+      "external_id": "21735"
+    }
+  ],
+  "themes": [
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Combat",
+      "artist": "RZA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Number One Samurai",
+      "artist": "RZA",
+      "episodes": null
+    },
+    {
+      "kind": "OP",
+      "sequence": 1,
+      "title": "Afro Theme",
+      "artist": "RZA",
+      "episodes": null
+    },
+    {
+      "kind": "ED",
+      "sequence": 1,
+      "title": "Afro Outro",
+      "artist": "RZA",
+      "episodes": null
+    }
+  ],
+  "relations": []
+}
