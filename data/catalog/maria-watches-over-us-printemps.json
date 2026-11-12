@@ -3,7 +3,7 @@
   "title": "Maria Watches Over Us: Printemps",
   "native": "マリア様がみてる～春～",
   "year": 2004,
-  "rating": 7.4,
+  "rating": 7.3,
   "season": "Summer 2004",
   "kind": "TV",
   "status": "Finished",
@@ -182,70 +182,6 @@
       "external_id": "159229"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Chizu Sanpo (地図散歩)",
-      "artist": "kukui",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kumori Garasu no Mukou (くもりガラスの向こう)",
-      "artist": "Kaori Hikita",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "pastel pure",
-      "artist": "Mikiya Katakura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Chercher (Chercher～シャルシェ～)",
-      "artist": "KOTOKO",
-      "episodes": "1-2"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Pastel Pure",
-      "artist": "ALI PROJECT",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sonata Blue",
-      "artist": "Mikiya Katakura",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Pastel Pure",
-      "artist": "Mikiya Katakura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sonata Blue",
-      "artist": "Mikiya Katakura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kirei na Senritsu (きれいな旋律; Beautiful Melody)",
-      "artist": "KOTOKO",
-      "episodes": "3-5"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

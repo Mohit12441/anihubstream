@@ -557,35 +557,6 @@
       "external_id": "167252"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ashita he no Sakebi (明日への叫び)",
-      "artist": "Joe Yamanaka",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ashita He No Yobi",
-      "artist": "Joe Yamanaka",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Joe...Forever By Joe Yamanaka",
-      "artist": "Unknown",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Seishun no Owari Shou (青春の終章) ~JOE…FOREVER~",
-      "artist": "Joe Yamanaka",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

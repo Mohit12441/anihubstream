@@ -589,35 +589,6 @@
       "external_id": "74926"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sweet Romance",
-      "artist": "Mayumi Gojo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "HOME MADE HAPPY",
-      "artist": "Primavera",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yume ni Yell! Patissiere (夢にエール!パティシエール♪)",
-      "artist": "Mayumi Gojo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ichigo no Miracle (いちごのミラクルール)",
-      "artist": "Yukina Sugihara",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

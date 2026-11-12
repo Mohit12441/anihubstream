@@ -49,63 +49,6 @@
       "external_id": "180709"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Fatima (ファティマ)",
-      "artist": "Kanako Itō",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Amadeus",
-      "artist": "Kanako Itō",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "LAST GAME",
-      "artist": "Zwei",
-      "episodes": "2-7,9-11,13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Lyra (ライア)",
-      "artist": "Zwei",
-      "episodes": "8, 18"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Hoshi no Kanaderu Uta (星の奏でる歌)",
-      "artist": "Kana Hanazawa, Megumi Han",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "World-Line",
-      "artist": "Asami Imai",
-      "episodes": "14-17,19-20"
-    },
-    {
-      "kind": "ED",
-      "sequence": 6,
-      "title": "Fatima (ファティマ)",
-      "artist": "Kanako Itō",
-      "episodes": "21"
-    },
-    {
-      "kind": "ED",
-      "sequence": 7,
-      "title": "GATE OF STEINER",
-      "artist": "Eri Sasaki",
-      "episodes": "23"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

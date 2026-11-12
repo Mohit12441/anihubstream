@@ -1,16 +1,16 @@
 {
   "id": "natsumes-book-of-friends-season-4",
   "title": "Natsume's Book of Friends Season 4",
-  "native": "Natsume Yuujinchou Shi",
+  "native": "夏目友人帳 肆",
   "year": 2012,
-  "rating": 8.6,
-  "season": "Year 2012",
+  "rating": 8.5,
+  "season": "Winter 2012",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/68fb1f91518cbb8d14cf46f3-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/68fb1f91518cbb8d14cf46f3-landscape.webp",
-  "accent": "#ffc247",
-  "synopsis": "Takashi Natsume, the timid youkai expert and master of the Book of Friends, continues his journey towards self-understanding and acceptance with the help of friends both new and old. His most important ally is still his gluttonous and sake-loving bodyguard, the arrogant but fiercely protective wolf spirit Madara—or Nyanko-sensei, as Madara is called when in his usual disguise of an unassuming, pudgy cat.\n\nNatsume, while briefly separated from Nyanko-sensei, is ambushed and kidnapped by a strange group of masked, monkey-like youkai, who have spirited him away to their forest as they desperately search for the Book of Friends. Realizing that his \"servant\" has been taken out from right under his nose, Nyanko-sensei enlists the help of Natsume's youkai friends and mounts a rescue operation. However, the forest of the monkey spirits holds many dangerous enemies, including the Matoba Clan, Natsume's old nemesis.\n\nStretching from the formidable hideout of the Matoba to Natsume's own childhood home, Natsume Yuujinchou Shi is a sweeping but familiar return to a world of danger and friendship, where Natsume will finally confront the demons of his own past.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11665-nfbt94cwKySE.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11665-nfbt94cwKySE.png",
+  "accent": "#e4c986",
+  "synopsis": "Still in possession of his grandmother's Book of Friends, Natsume spends his days returning the names of yokai to their rightful owners. He has been learning how to deal with the yokai and humans that surround his life, but the time has come for him to deal with something even more difficult — his own past, and future.\n\n(Source: NIS America)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 13,
   "added_at": null,
-  "search_text": "natsume s book of friends season 4 natsume yuujinchou shi",
+  "search_text": "natsume s book of friends season 4 夏目友人帳 肆 tv finished",
   "genres": [
     "drama",
     "fantasy",
@@ -184,84 +184,6 @@
       "external_id": "162035"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Alca",
-      "artist": "Hinata Kashiwagi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Komari Warai",
-      "artist": "Toshiki Kondō",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ima, Kono Toki (今、このとき)",
-      "artist": "Hiiragi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Takaramono (たからもの)",
-      "artist": "Marina Kawano",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Treasure",
-      "artist": "Marina Kawano",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Boku ni Dekiru Koto",
-      "artist": "HOW MERRY MARRY",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi no Kakera feat. Miyamoto Emiri",
-      "artist": "Kōsuke Atari",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ano hi Time Machine",
-      "artist": "LONG SHOT PARTY",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aishiteru (愛してる)",
-      "artist": "Callin",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Issei no Sei (一斉の声)",
-      "artist": "Shūhei Kita",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Natsu Yūzora (夏夕空)",
-      "artist": "Kōsuke Atari",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

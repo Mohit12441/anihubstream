@@ -330,63 +330,6 @@
       "external_id": "1531"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Watashi no Bara wo Haminasai (私の薔薇を喰みなさい;Eat My Roses)",
-      "artist": "ALI PROJECT",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Alternative",
-      "artist": "Annabel",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Bara Goku Otome (薔薇獄乙女; Rose Jail Maiden)",
-      "artist": "ALI PROJECT",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Utsusemi no Kage (空蝉ﾉ影)",
-      "artist": "kukui",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sei Shōjo Ryōiki (聖少女領域; Holy Girl Territory)",
-      "artist": "ALI PROJECT",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hikari no Rasenritsu (光の螺旋律; Spiraling Melody of Light)",
-      "artist": "kukui",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kinjirareta Asobi (禁じられた遊び)",
-      "artist": "ALI PROJECT",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tomei Shelter (透明シェルター)",
-      "artist": "refio + Haruka Shimotsuki",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

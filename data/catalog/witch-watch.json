@@ -318,35 +318,6 @@
       "external_id": "379324"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Watch Me!",
-      "artist": "YOASOBI",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mahō wa Supaisu (魔法はスパイス; Magic Spice; Find Your Magic)",
-      "artist": "Aooo",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Tokihanate!",
-      "artist": "Hashimero",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Tsuki to Watashi no Kakurenbo",
-      "artist": "yutori",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -183,28 +183,6 @@
       "external_id": "295251"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hashire!",
-      "artist": "POLYSICS with Seiya Yamasaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hashire!",
-      "artist": "POLYSICS with Seiya Yamasaki",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Ue wo Muite Hakobou",
-      "artist": "POLYSICS with Red Blood Cell",
-      "episodes": "2-13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

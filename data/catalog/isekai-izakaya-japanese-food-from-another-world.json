@@ -304,21 +304,6 @@
       "external_id": "254338"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Prosit!",
-      "artist": "Clammbon",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Prosit!",
-      "artist": "Clammbon",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -185,42 +185,6 @@
       "external_id": "303036"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Shall We Dance?",
-      "artist": "ReoNA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Masquerade",
-      "artist": "ClariS",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "A Hallow Shadow",
-      "artist": "Kenichiro Suehiro",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Nai Nai",
-      "artist": "ReoNa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Watashi no Kanpeki na Sekai",
-      "artist": "Kenichiro Suehiro",
-      "episodes": "8"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

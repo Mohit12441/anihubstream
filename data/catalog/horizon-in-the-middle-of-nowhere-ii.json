@@ -182,42 +182,6 @@
       "external_id": "165712"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "ZONE / / ALONE",
-      "artist": "Minori Chihara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "-Side SunSet- Kanashimi wa Dare no Negai Demonai (-Side SunSet- 悲しみは誰の願いでもない)",
-      "artist": "Aira Yuki",
-      "episodes": "01, 04-05, 09, 12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kanashimi wa Dare no Negai Demonai",
-      "artist": "Aira Yuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "-Side SunRise- Sora no Uta (-Side SunRise- 空の詩)",
-      "artist": "Masami Okui",
-      "episodes": "02-03, 06-08, 10-11, 13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Sora no Uta",
-      "artist": "Masami Okui",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

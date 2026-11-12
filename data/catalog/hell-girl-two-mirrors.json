@@ -326,21 +326,6 @@
       "external_id": "26095"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "NightmaRe",
-      "artist": "SNoW",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aizome",
-      "artist": "Mamiko Noto",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

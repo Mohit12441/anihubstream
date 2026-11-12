@@ -40,35 +40,6 @@
     "fantasy"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "BELIEVERS",
-      "artist": "ASH DA HERO",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Reachlight (リーチライト)",
-      "artist": "Shiyui",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Fire and Fear",
-      "artist": "Penguin Research",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Frozen",
-      "artist": "TRUE",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -50,35 +50,6 @@
       "external_id": "102582"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Missing angel (acoustic ver.)",
-      "artist": "Maica_n",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Missing angel (rock ver.)",
-      "artist": "Maica_n",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Owaranai Uta",
-      "artist": "Yoko Hikasa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Haru no Fue (ハルのふえ)",
-      "artist": "Shoko Haida",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -589,28 +589,6 @@
       "external_id": "182007"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Miracle Go! Princess Precure (Miracle Gо！プリンセスプリキュア)",
-      "artist": "Karin Isobe",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Dreaming ☆ Princess Precure (ドリーミング☆プリンセスプリキュア)",
-      "artist": "Rie Kitagawa",
-      "episodes": "1-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Yume wa Mirai he no Michi (夢は未来への道; Dreams are the Path to the Future)",
-      "artist": "Rie Kitagawa",
-      "episodes": "26-50"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

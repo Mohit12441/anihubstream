@@ -316,21 +316,6 @@
       "external_id": "25616"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Main Theme",
-      "artist": "Toshio Masuda",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ending Theme",
-      "artist": "Toshio Masuda",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

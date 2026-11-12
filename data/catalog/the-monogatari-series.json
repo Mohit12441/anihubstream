@@ -162,35 +162,6 @@
       "external_id": "172021"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Futakotome",
-      "artist": "Chiwa Saitou",
-      "episodes": "1,3"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Naisho no Hanashi",
-      "artist": "ClariS",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Marshmallow Justice",
-      "artist": "Eri Kitamura",
-      "episodes": "2"
-    },
-    {
-      "kind": "OP",
-      "sequence": 3,
-      "title": "Platinum Disco",
-      "artist": "Yuka Iguchi",
-      "episodes": "8"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

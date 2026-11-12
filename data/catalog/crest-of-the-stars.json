@@ -183,21 +183,6 @@
       "external_id": "7643"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Opening Theme",
-      "artist": "Katsuhisa Hattori",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ushinawareta Aozora",
-      "artist": "TimeSlip-Rendzvous",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

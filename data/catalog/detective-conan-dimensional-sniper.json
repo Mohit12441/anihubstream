@@ -1,7 +1,7 @@
 {
   "id": "detective-conan-dimensional-sniper",
   "title": "Detective Conan: Dimensional Sniper",
-  "native": "名探偵コナン　異次元の狙撃手（スナイパー）",
+  "native": "名探偵コナン 異次元の狙撃手(スナイパー)",
   "year": 2014,
   "rating": 7.9,
   "season": "Spring 2014",
@@ -51,14 +51,6 @@
       "external_id": "113248"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Love Searchlight",
-      "artist": "Kou Shibasaki",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

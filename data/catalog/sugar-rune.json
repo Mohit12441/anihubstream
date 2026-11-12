@@ -604,28 +604,6 @@
       "external_id": "26743"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Chocolat ni Muchū (ショコラに夢中;Obsessed With Chocolat)",
-      "artist": "Karia Nomoto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tsuki no Mukou no Sekai",
-      "artist": "Karia Nomoto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "DATE★DATE",
-      "artist": "Marika Matsumoto and Juri Ihata",
-      "episodes": "30-50"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

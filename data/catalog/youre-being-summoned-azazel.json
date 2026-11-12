@@ -182,42 +182,6 @@
       "external_id": "91870"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Revival! (りばいばる!)",
-      "artist": "Team Nekokan [Neko] featuring Chihiro Yonekura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sticky Lucky Cupids",
-      "artist": "Team Nekokan [Neko] featuring Chihiro Yonekura",
-      "episodes": "13"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Pandemic!! (ぱんでみっく！！)",
-      "artist": "Chihiro Yonekura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Strawberry Magic ♥♥♥Nyorin♥♥♥",
-      "artist": "Hiro Nakajima",
-      "episodes": "10"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Like a Party",
-      "artist": "Team Nekokan feat. Chihiro Yonekura",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

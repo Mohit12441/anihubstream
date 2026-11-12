@@ -171,49 +171,6 @@
       "external_id": "10744"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ichigo Splash (苺すぷらっしゅ)",
-      "artist": "Saeko Chiba, Fumiko Orikasa, Ayako Kawasumi, Mamiko Noto, and Hitomi Nabatame",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Zutto, Zutto (ずっと、ずっと)",
-      "artist": "Fumiko Orikasa",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Akkan berry berry",
-      "artist": "Saeko Chiba, Fumiko Orikasa, Ayako Kawasumi, Mamiko Noto, and Hitomi Nabatame",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yuumachi no Kaze (夕待ちの風)",
-      "artist": "Fumiko Orikasa",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ichigo Complete",
-      "artist": "Saeko Chiba, Fumiko Orikasa, Ayako Kawasumi and Mamiko Noto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Classmate",
-      "artist": "Fumiko Orikasa",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

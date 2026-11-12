@@ -184,21 +184,6 @@
       "external_id": "1730"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Eternal Blaze",
-      "artist": "Nana Mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Spiritual Garden",
-      "artist": "Yukari Tamura",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

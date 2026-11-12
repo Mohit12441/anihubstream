@@ -1,16 +1,16 @@
 {
   "id": "chrono-crusade",
   "title": "Chrono Crusade",
-  "native": "Chrno Crusade",
+  "native": "クロノクルセイド",
   "year": 2003,
-  "rating": 7.6,
-  "season": "Year 2003",
+  "rating": 7.1,
+  "season": "Fall 2003",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/6958ae2c7c08f1fe10dd5d56-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/6958ae2c7c08f1fe10dd5d56-landscape.webp",
-  "accent": "#ffc247",
-  "synopsis": "The 1920s was a decade of great change and upheaval, with monstrous demons appearing across America. To combat this menace, the holy organization known as the Order of Magdalene was established. The organization's New York branch is home to the young and reckless Sister Rosette Christopher, as well as her partner Chrno. Tasked with the extermination of demonic threats, the renowned team is excellent at their job, despite causing extensive collateral damage on their missions.\n\nHowever, both Rosette and Chrno are driven by their dark pasts. Through exterminating demons, Rosette hopes to find her lost brother Joshua who was taken by the sinner and demon, Aion, with whom Chrno also shares a bloody history. The two of them must fight off the increasingly dangerous demonic menace and discover its source, while continuing to search for the truth behind Joshua's disappearance.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx60-nWs0N9upSorj.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx60-nWs0N9upSorj.png",
+  "accent": "#e4ae5d",
+  "synopsis": "The year is 1928 A.D. The place is New York, U.S.A. The economic prosperity brought forth after the Great War also heightened the presence of something far darker and much more sinister: the demonic Sinners. The Magdalene Order is an organization that tries to counter this force. Two of its exorcists are Rosette Christopher and her assistant, Chrono. Both appear out of place in an organization like this, and they are in a quest to find Rosette's missing brother, Joshua. Their relationships, secrets and fates can only be revealed in time...\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 24,
   "added_at": null,
-  "search_text": "chrono crusade chrno crusade",
+  "search_text": "chrono crusade クロノクルセイト tv finished",
   "genres": [
     "action",
     "romance",
@@ -304,21 +304,6 @@
       "external_id": "1455"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tsubasa wa Pleasure Line",
-      "artist": "Minami Kuribayashi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sayonara Solitaire",
-      "artist": "Saeko Chiba",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

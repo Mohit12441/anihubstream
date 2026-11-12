@@ -302,21 +302,6 @@
       "external_id": "12347"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "All Alone",
-      "artist": "Ryoko Aoyagi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Loved…",
-      "artist": "Ryoko Aoyagi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

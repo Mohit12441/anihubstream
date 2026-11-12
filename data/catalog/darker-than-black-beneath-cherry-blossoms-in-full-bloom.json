@@ -50,56 +50,6 @@
       "external_id": "59046"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "DARKER THAN BLACK",
-      "artist": "Yasushi Ishii",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tsukiakari no Michishirube (ツキアカリのミチシルベ; Guidepost of the Moonlight)",
-      "artist": "Stereopony",
-      "episodes": "2-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "From Dusk Till Dawn",
-      "artist": "abingdon boys school",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "HOWLING",
-      "artist": "abingdon boys school",
-      "episodes": "1-14"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tsukiakari",
-      "artist": "Rie fu",
-      "episodes": "1-14"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Kakusei Heroism ~The Hero Without A Name~",
-      "artist": "An Cafe",
-      "episodes": "15-23,25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Dreams",
-      "artist": "HIGH and MIGHTY COLOR",
-      "episodes": "15-24"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

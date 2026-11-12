@@ -240,35 +240,6 @@
       "external_id": "cloud-sync"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Aikotoba (アイコトバ)",
-      "artist": "DISH//",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Clover",
-      "artist": "Reira Ushio",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "LOVE & LIKE",
-      "artist": "Neguse.",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Mabataki (まばたき)",
-      "artist": "MEminor",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -182,21 +182,6 @@
       "external_id": "385008"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hello",
-      "artist": "Riho Furui",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Lucky",
-      "artist": "TOMOO",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

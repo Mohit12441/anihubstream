@@ -51,56 +51,6 @@
       "external_id": "27"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ask DNA",
-      "artist": "The Seatbelts featuring Raju Ramayya",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Gotta Knock a Little Harder",
-      "artist": "The Seatbelts featuring Mai Yamane",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tank!",
-      "artist": "Seatbelts",
-      "episodes": "1-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "The Real Folk Blues",
-      "artist": "Seatbelts featuring Mai Yamane",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Space Lion",
-      "artist": "Yoko Kanno/Keishi Urata/Sydney Thiam/Michel Reman/David Mirandon/Philippe Drai/Philippe Nalry",
-      "episodes": "13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Blue",
-      "artist": "Seatbelts featuring Mai Yamane",
-      "episodes": "26"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Recover the Sky of Day",
-      "artist": "Shakkazombie [ep 27, ep XX recap]",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

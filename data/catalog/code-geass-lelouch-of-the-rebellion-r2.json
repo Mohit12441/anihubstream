@@ -636,42 +636,6 @@
       "external_id": "44688"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Continued Shift",
-      "artist": "Hitomi Kuroishi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "O2",
-      "artist": "ORANGE RANGE",
-      "episodes": "1-12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Shiawase Neiro",
-      "artist": "ORANGE RANGE",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "WORLD END",
-      "artist": "FLOW",
-      "episodes": "13-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Waga Routashi Aku no Hana",
-      "artist": "ALI PROJECT",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

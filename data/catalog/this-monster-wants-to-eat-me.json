@@ -41,35 +41,6 @@
     "supernatural"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "nie (Sacrifice)",
-      "artist": "Yoshino",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "LiLy",
-      "artist": "Reina Ueda",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Taiyō, natte age yokka?♡",
-      "artist": "Fairouz Ai",
-      "episodes": "4"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "LiLy [Another ver.] (リリィ［Another ver.］)",
-      "artist": "Yui Ishikawa",
-      "episodes": "11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

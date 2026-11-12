@@ -173,35 +173,6 @@
       "external_id": "158914"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Insight",
-      "artist": "WHITE ASH",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "60 Oku no Tsubasa (60億の翼;6 Billion Wings)",
-      "artist": "ANGRY FROG REBIRTH",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Crowds",
-      "artist": "White Ash",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Innocent Note",
-      "artist": "Maaya Uchida",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

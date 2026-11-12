@@ -161,42 +161,6 @@
       "external_id": "242553"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Fiction",
-      "artist": "sumika",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi no Tonari",
-      "artist": "halca",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Fiction",
-      "artist": "sumika",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ashita mo Mata (明日もまた)",
-      "artist": "halca",
-      "episodes": "9"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi no Tonari (Next to You)",
-      "artist": "halca",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

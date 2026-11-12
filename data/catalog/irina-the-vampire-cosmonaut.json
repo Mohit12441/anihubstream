@@ -316,28 +316,6 @@
       "external_id": "311873"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hi no Tsuki (Scarlet Moon)",
-      "artist": "Ali Project",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Arifureta Itsuka (A Wonderful Someday)",
-      "artist": "Chima",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "My Beloved",
-      "artist": "Sarah Àlainn",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

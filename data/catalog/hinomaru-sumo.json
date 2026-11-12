@@ -3,14 +3,14 @@
   "title": "Hinomaru Sumo",
   "native": "火ノ丸相撲",
   "year": 2018,
-  "rating": 7.6,
+  "rating": 7.2,
   "season": "Fall 2018",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/41148/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/100990-9ccyloqa2AHb.jpg",
-  "accent": "#2f7bff",
-  "synopsis": "The intense fight for the dream of yokozuna has begun. A new student has joined Odachi High School's weak sumo club, the small boy Ushio Hinomaru! Although his physique seems ill-suited to a fighting sport where size and weight rule, Hinomaru has an incredible dream. He and the weak sumo club will fight their way to the top! The intense battle of high school sumo has begun! (Source: Crunchyroll)",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx100990-NJ5mqZkYlW6y.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx100990-NJ5mqZkYlW6y.jpg",
+  "accent": "#feae50",
+  "synopsis": "It is a divine ritual, a martial art, a combat sport—it's sumo!!\n\nA \"small\" new student, Ushio Hinomaru, appears before the weak little sumo club of Oodachi High School! The words \"big\" and \"heavy\" are the rules to this sport, which does not fit this newbie any inch, but this guy goes and does what...!? Ushio and the small sumo club climbs its way to the top!\n\nThe goal is Hinoshita Kaisan (A title for the highest rank in professional sumo, equivalent of Yokozuna)!\n\nA fired up high school sumo tale—no retakes allowed!!\n\n(Source: MangaHelpers)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -301,35 +301,6 @@
       "external_id": "256242"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "FIRE GROUND",
-      "artist": "Official HIGE DANdism",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hiizuru Basho",
-      "artist": "Omedetai Atama de Naniyori",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Be The NAKED",
-      "artist": "Lead",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Sakura Sake",
-      "artist": "Yoshida Yamada",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -458,21 +458,6 @@
       "external_id": "15242"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "kiri",
-      "artist": "MONORAL",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "PARANOID ANDROID",
-      "artist": "RADIOHEAD",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -183,35 +183,6 @@
       "external_id": "329887"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kaze no Anthem (Anthem of Wind)",
-      "artist": "Eve feat. suis",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tada Utsukushii no Noroi (Just a Beautiful Curse)",
-      "artist": "Nakamura Hak",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Yoru ni Ukabu (夜に浮かぶ)",
-      "artist": "Nakamura Hak",
-      "episodes": "3, 5"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Hikari (光り; Light)",
-      "artist": "Nakamura Hak",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

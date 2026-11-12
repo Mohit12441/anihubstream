@@ -305,28 +305,6 @@
       "external_id": "5977"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "We Were Lovers",
-      "artist": "Jean-Jacques Burnel",
-      "episodes": "1-22,24"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "You Won't see me coming",
-      "artist": "Jean-Jacques Burnel",
-      "episodes": "1-23"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "We Were Lovers",
-      "artist": "Jean-Jacques Burnel",
-      "episodes": "24"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

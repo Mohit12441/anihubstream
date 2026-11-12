@@ -329,21 +329,6 @@
       "external_id": "8557"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Duvet",
-      "artist": "Boa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tooi Sakebi",
-      "artist": "Nakaido \"Chabo\" Rei'ichi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -185,28 +185,6 @@
       "external_id": "362478"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "It's myself",
-      "artist": "shytaupe",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Zettai Reido (Absolute Zero)",
-      "artist": "natori",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Muteki (Unbeatable)",
-      "artist": "Young Kee",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

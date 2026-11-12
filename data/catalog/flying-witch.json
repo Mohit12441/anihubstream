@@ -171,28 +171,6 @@
       "external_id": "181872"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ashita mo Ashita",
-      "artist": "Minami Shinoda",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Shanranran feat.96 Neko (シャンランラン feat.96猫)",
-      "artist": "miwa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Nichijō no Mahō (日常の魔法; The Magic of Everyday Life)",
-      "artist": "Minami Shinoda & Eri Suzuki",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

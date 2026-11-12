@@ -5,12 +5,12 @@
   "year": 2018,
   "rating": 7.2,
   "season": "Winter 2019",
-  "kind": "Special",
+  "kind": "OVA",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/41443/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n104174-8H8lO2PdCuao.jpg",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx104174-aoNLSSN6bT4L.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx104174-aoNLSSN6bT4L.png",
   "accent": "#ff9420",
-  "synopsis": "Unaired episode included with the volume 6 BD/DVD release of Steins;Gate 0.",
+  "synopsis": "Unaired episode included with the volume 6 BD/DVD release of Steins;Gate 0. A special day approaches during a lull in the chaos. It's that time of year to give chocolate to the ones you love, but not everyone finds that an easy task.\n\nWith Valentine's Day just around the corner, the girls of the Future Gadget Lab discover that Kagari has never celebrated the occasion before! Determined to make this year's holiday the best one yet, they all set out to make delicious homemade chocolates together.\n\nHowever, with many of their quirks causing kitchen disasters, this may prove to be too hard a task. Will their feelings ever reach those of their heart's desire?",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -31,7 +31,7 @@
   "skip_key_space": "mal",
   "episode_total": 1,
   "added_at": "2026-11-06 09:38:50",
-  "search_text": "steins gate 0 valentine s of crystal polymorphism bittersweet intermedio シュタインス ケ ート セ ロ 結晶多形のハ レンタイン special finished",
+  "search_text": "steins gate 0 valentine s of crystal polymorphism bittersweet intermedio シュタインス ケ ート セ ロ 結晶多形のハ レンタイン ova finished",
   "genres": [
     "comedy",
     "sci-fi"
@@ -49,63 +49,6 @@
       "external_id": "247154"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Fatima (ファティマ)",
-      "artist": "Kanako Itō",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Amadeus",
-      "artist": "Kanako Itō",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "LAST GAME",
-      "artist": "Zwei",
-      "episodes": "2-7,9-11,13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Lyra (ライア)",
-      "artist": "Zwei",
-      "episodes": "8, 18"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Hoshi no Kanaderu Uta (星の奏でる歌)",
-      "artist": "Kana Hanazawa, Megumi Han",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "World-Line",
-      "artist": "Asami Imai",
-      "episodes": "14-17,19-20"
-    },
-    {
-      "kind": "ED",
-      "sequence": 6,
-      "title": "Fatima (ファティマ)",
-      "artist": "Kanako Itō",
-      "episodes": "21"
-    },
-    {
-      "kind": "ED",
-      "sequence": 7,
-      "title": "GATE OF STEINER",
-      "artist": "Eri Sasaki",
-      "episodes": "23"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

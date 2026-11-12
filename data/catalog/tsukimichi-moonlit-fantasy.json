@@ -1240,63 +1240,6 @@
       "external_id": "48029"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yūtopia (ユートピア; Utopia)",
-      "artist": "Keina Suda",
-      "episodes": "1-8, 11-12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aa Jinsei ni Namida Ari (ああ人生に涙あり; Ah, there are tears in my life)",
-      "artist": "Akari Kitō, Ayane Sakura",
-      "episodes": "20"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aa Jinsei ni Namida Ari (ああ人生に涙あり; Ah, there are tears in my life)",
-      "artist": "Natsuki Hanae, Kenjiro Tsuda",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "My Factor",
-      "artist": "Kent Itō",
-      "episodes": "2-12"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Gamble",
-      "artist": "syudou",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Beautiful Dreamer",
-      "artist": "Ezoshika Gourmet Club",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Rivāsaru (リヴァーサル; Reversal)",
-      "artist": "syudou",
-      "episodes": "13-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Jōshikihazure Hyūman (常識外れヒューマン; Unconventional Human)",
-      "artist": "Kaori Maeda",
-      "episodes": "13-19, 21-25"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

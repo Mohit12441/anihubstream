@@ -1,16 +1,16 @@
 {
   "id": "black-butler-public-school-arc",
   "title": "Black Butler: Public School Arc",
-  "native": "Kuroshitsuji: Kishuku Gakkou-hen",
+  "native": "黒執事 寄宿学校編",
   "year": 2024,
-  "rating": 7.9,
-  "season": "Year 2024",
+  "rating": 7.8,
+  "season": "Spring 2024",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/6925755ff641a81008346c49-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/6925755ff641a81008346c49-landscape.webp",
-  "accent": "#2ee6a8",
-  "synopsis": "At the request of Queen Victoria, Earl Ciel Phantomhive goes to Weston College—a prestigious public academy for boys, known for its traditions and outstanding curriculum—to search for a relative of hers who has not returned home in months. Thanks to his noble status, the 13-year-old Ciel is swiftly able to enroll as a student, while his devilish butler Sebastian Michaelis assumes a teaching position at the school. \n\nCiel does not anticipate being unable to locate the Queen's relative on campus. To make matters worse, he cannot request a meeting with the headmaster of the college, who may be the only person that knows anything pertaining to the disappearance. The only ones in frequent contact with the headmaster are the heads of the college dormitories, known as the Prefect 4 (P4): Edgar Redmond, Lawrence Bluewer, Herman Greenhill, and Gregory Violet.\n\nCiel must concoct a plan to get in the P4's good graces if he wants to use their connections to succeed in his mission. But the distinguished college and its students hide much that is unseen, making this task more improbable than he could imagine.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx166715-humnzscIw7SC.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx166715-humnzscIw7SC.jpg",
+  "accent": "#78bbd6",
+  "synopsis": "At the request of Queen Victoria, Earl Ciel Phantomhive goes to Weston College—a prestigious public academy for boys, known for its traditions and outstanding curriculum—to search for a relative of hers who has not returned home in months. Thanks to his noble status, the 13-year-old Ciel is swiftly able to enroll as a student, while his devilish butler Sebastian Michaelis assumes a teaching position at the school.\n\nCiel does not anticipate being unable to locate the Queen's relative on campus. To make matters worse, he cannot request a meeting with the headmaster of the college, who may be the only person that knows anything pertaining to the disappearance. The only ones in frequent contact with the headmaster are the heads of the college dormitories, known as the Prefect 4 (P4): Edgar Redmond, Lawrence Bluewer, Herman Greenhill, and Gregory Violet.\n\nCiel must concoct a plan to get in the P4's good graces if he wants to use their connections to succeed in his mission. But the distinguished college and its students hide much that is unseen, making this task more improbable than he could imagine.\n\n(Source: MAL Rewrite)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 11,
   "added_at": null,
-  "search_text": "black butler public school arc kuroshitsuji kishuku gakkou hen",
+  "search_text": "black butler public school arc 黒執事 寄宿学校編 tv finished",
   "genres": [
     "action",
     "comedy",
@@ -163,21 +163,6 @@
       "external_id": "353451"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kyoshinsha no Parade -The Parade of Battlers-",
-      "artist": "-otoha-",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Shokuzai (Atonement)",
-      "artist": "SID",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

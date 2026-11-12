@@ -51,35 +51,6 @@
       "external_id": "186406"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Atarashii Ashita (新しい朝)",
-      "artist": "Saori Hayami",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yume no Hate made",
-      "artist": "Saori Hayami",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Haikara-san ga tooru",
-      "artist": "Shosuke Sekita",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kokigen ikaga",
-      "artist": "Shosuke Sekita",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

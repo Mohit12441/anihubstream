@@ -172,35 +172,6 @@
       "external_id": "339302"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Surprise (サプライズ)",
-      "artist": "Rei Nakashima",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "door",
-      "artist": "Nao Tōyama",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Musical",
-      "artist": "Minori Suzuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kanaeru (To Grant)",
-      "artist": "Sumire Morohoshi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

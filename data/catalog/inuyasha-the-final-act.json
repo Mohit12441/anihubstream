@@ -1,16 +1,16 @@
 {
   "id": "inuyasha-the-final-act",
   "title": "InuYasha: The Final Act",
-  "native": "InuYasha: Kanketsu-hen",
+  "native": "犬夜叉 完結編",
   "year": 2009,
-  "rating": 8.2,
-  "season": "Year 2009",
+  "rating": 8,
+  "season": "Fall 2009",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/6919897798644fab5d05c181-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/6919897798644fab5d05c181-landscape.webp",
-  "accent": "#a24bff",
-  "synopsis": "Thwarted again by Naraku, Inuyasha, Kagome Higurashi, and their friends must continue their hunt for the few remaining Shikon Jewel shards, lest they fully form into a corrupted jewel at the hands of Naraku. But Naraku has plans of his own to acquire them, and will destroy anyone and anything standing in his way—even his own underlings.\n\nThe persistent, unyielding danger posed by Naraku forces Sango and Miroku to decide what is most important to them—each other or their duty in battle. Meanwhile, Inuyasha must decide whether his heart lies with Kikyou or Kagome, before fate decides for him. Amid the race to find the shards, Inuyasha and his brother Sesshoumaru must also resolve their feud and cooperate for their final confrontation with Naraku, as it is a battle they must win in order to put a stop to his evil and cruelty once and for all.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6811-DUsNLwQAOB7o.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6811-DUsNLwQAOB7o.png",
+  "accent": "#a1c9f1",
+  "synopsis": "Inuyasha, Kagome, Miroku, Sango, Shippou and their neko-mata friend Kirara, are now in the final leg of their quest to put an end to the elusive demon, Naraku and all of the chaos and evil he has caused, and to ultimately undo the unfortunate karma of the Jewel of Four Souls. Their journey, however, will not be easy as their remaining enemies put out all the stops to make sure that they do not accomplish their goal.\n\nThis TV Anime depicts Volumes 36-56 (end) of the Inuyasha manga. The story continues from the last moment seen in Inuyasha's original anime. Inuyasha, Kagome, Sango, Miroku and Shippou are now in the definitive quest to beat Naraku and the evil he has created and absorbed, they don't lose hope since their future depends on it, but the path isn't easy nor short so they will go through life threatening situations and must put their friendship and love on the line with wisdom to know who their friends and foes are to succeed.\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 26,
   "added_at": null,
-  "search_text": "inuyasha the final act inuyasha kanketsu hen",
+  "search_text": "inuyasha the final act 犬夜叉 完結編 tv finished",
   "genres": [
     "action",
     "adventure",
@@ -328,42 +328,6 @@
       "external_id": "172427"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kimi ga Inai Mirai",
-      "artist": "Do as Infinity",
-      "episodes": "1-26"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "With You",
-      "artist": "AAA",
-      "episodes": "1-9"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Diamond",
-      "artist": "alan",
-      "episodes": "10-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Tooi Michi no Saki de (遠い道の先で)",
-      "artist": "Ai Takekawa",
-      "episodes": "18-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Kimi ga Inai Mirai",
-      "artist": "Do As Infinity",
-      "episodes": "26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

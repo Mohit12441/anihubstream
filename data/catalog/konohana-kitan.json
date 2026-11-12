@@ -1,16 +1,16 @@
 {
   "id": "konohana-kitan",
-  "title": "Konohana Kitan",
-  "native": "Konohana Kitan",
+  "title": "KONOHANA KITAN",
+  "native": "このはな綺譚",
   "year": 2017,
-  "rating": 7.5,
-  "season": "Year 2017",
+  "rating": 7.2,
+  "season": "Fall 2017",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/6963a2a50e7875785ac7a091-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/6963a2a50e7875785ac7a091-landscape.webp",
-  "accent": "#24d3ee",
-  "synopsis": "In a bustling village of spirits, Yuzu, a cheerful fox girl, starts her first job as an attendant at the traditional hot springs inn Konohanatei. Though Yuzu has no experience working at such a high-class establishment, Kiri, the affable and reliable head attendant, immediately puts her to work learning the basics.\n\nWhile Yuzu's eagerness initially proves to be more of a hindrance than a blessing, her playful nature brings a unique charm to the inn, as both customers and her fellow workers quickly warm up to her clumsy yet well-meaning mistakes. Under the guidance of the other foxes—the rigid Satsuki, the carefree Natsume, the critical Ren, and the quiet Sakura—Yuzu steadily learns the trade of an inn attendant while learning to love the magical world surrounding her.\n\nKonohana Kitan presents the heartwarming tale of a simple fox girl forging bonds with others and finding a home amidst the mysterious, beautiful world of spirits.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx98506-BPHtNhP7Q1TD.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx98506-BPHtNhP7Q1TD.jpg",
+  "accent": "#f1d6bb",
+  "synopsis": "The manga's story is set in Kokohana-tei, a hot spring hotel located in an inn town between our world and the other world, where many people go to visit. The story portrays the lives of fox spirits, who take the form of girls and work at the hotel.\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 12,
   "added_at": null,
-  "search_text": "konohana kitan konohana kitan",
+  "search_text": "konohana kitan このはな綺譚 tv finished",
   "genres": [
     "slice-of-life",
     "supernatural"
@@ -171,42 +171,6 @@
       "external_id": "227420"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kokoro ni Tsubomi (ココロニツボミ)",
-      "artist": "eufonius",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Haru Urara, Kimi to Sakihokoru (春ウララ、君ト咲キ誇ル; Enjoying a Lovely Spring Day, Blooming By Your Side)",
-      "artist": "Konohanatei Nakai no Kai",
-      "episodes": "1-3"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Natsuzaki Koi Hanabi (夏咲き恋花火; Summer-Blooming Fireworks of Love)",
-      "artist": "Ayaka Suwa & Risa Kubota",
-      "episodes": "4-6"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Akanezora, Kimi Mau Kouyou no Sanpomichi (茜空、君舞フ紅葉ノ散歩道; A Red Sky and the Path of Autumn Leaves You Dance Upon)",
-      "artist": "Ai Kakuma & Manami Numakura",
-      "episodes": "7-9"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Yukibana Kirameku Ieji nite (雪花煌めく家路にて; The Road Home, Where Snowflakes Glitter)",
-      "artist": "Yuko Ono & Sawako Hata",
-      "episodes": "10-12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

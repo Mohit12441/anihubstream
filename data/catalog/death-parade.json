@@ -316,21 +316,6 @@
       "external_id": "172811"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Flyers",
-      "artist": "BRADIO",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Last Theater",
-      "artist": "NoisyCell",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

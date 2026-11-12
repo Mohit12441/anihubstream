@@ -1,16 +1,16 @@
 {
   "id": "megalobox-2-nomad",
-  "title": "Megalobox 2: Nomad",
-  "native": "Nomad: Megalo Box 2",
+  "title": "MEGALOBOX 2: NOMAD",
+  "native": "NOMAD メガロボクス2",
   "year": 2021,
-  "rating": 8.2,
-  "season": "Year 2021",
+  "rating": 8.1,
+  "season": "Spring 2021",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/6936bbbab0528e8734bb2430-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/6936bbbab0528e8734bb2430-landscape.webp",
-  "accent": "#ffc247",
-  "synopsis": "Megalo Box is an advanced form of boxing where competitors wear metal frames called Gear. When the first ever Megalonia tournament took place, \"Gearless\" Joe became its champion and known to all as a legendary fighter. However, soon after, he lost an exhibition match against the second champion and vanished from the public eye.\n\nSeven years later, Joe now goes by \"Nomad\" and keeps a low profile, occasionally fighting in a few underground matches to get by. He is haunted by hallucinations and relies on a set of painkillers to numb his mind.\n\nDuring a match, Joe wins against an opponent, Chief, who purposefully loses for some extra cash from gamblers. Subsequently, Joe discovers that Chief is from a community of immigrants called the Casa. Chief is gradually trying to make enough money to purchase the land where they live illegally. At first, Joe hesitates to get involved, but eventually decides to lend the Casa a helping hand.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx113359-FnjG2VppJF9f.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113359-FnjG2VppJF9f.png",
+  "accent": "#1a8650",
+  "synopsis": "In the end, “Gearless” Joe was the one that reigned as the champion of Megalonia, a first ever megalobox tournament. Fans everywhere were mesmerized by the meteoric rise of Joe who sprung out from the deepest underground ring to the top in mere three months and without the use of gear. Seven years later, “Gearless” Joe was once again fighting in underground matches. Adorned with scars and once again donning his gear, but now known only as Nomad.\n\n(Source: TMS Entertainment)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 13,
   "added_at": null,
-  "search_text": "megalobox 2 nomad nomad megalo box 2",
+  "search_text": "megalobox 2 nomad nomad メカ ロホ クス2 tv finished",
   "genres": [
     "action",
     "drama",
@@ -183,28 +183,6 @@
       "external_id": "287531"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "The theme of the NOMAD",
-      "artist": "mabanua",
-      "episodes": "2-4, 6-10, 12-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "El Canto del Colibri",
-      "artist": "mabanua",
-      "episodes": "1-12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Rise Up / Diamond in the Sky",
-      "artist": "Lyn Inaizumi",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

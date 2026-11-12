@@ -186,35 +186,6 @@
       "external_id": "330991"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Mirage",
-      "artist": "Creepy Nuts",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Nemure",
-      "artist": "Creepy Nuts",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Datenshi (Fallen Angel)",
-      "artist": "Creepy Nuts",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yofukashi no Uta (Call of the Night)",
-      "artist": "Creepy Nuts",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -303,49 +303,6 @@
       "external_id": "112209"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "ambiguous",
-      "artist": "GARNiDELiA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sirius",
-      "artist": "Eir Aoi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sirius",
-      "artist": "Eir Aoi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Gomen ne, Ii ko ja Irarenai.",
-      "artist": "Miku Sawai",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "ambiguous",
-      "artist": "GARNiDELiA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Shinsekai Kōkyōgaku (新世界交響楽; New World Symphony)",
-      "artist": "Sayonara Ponytail",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

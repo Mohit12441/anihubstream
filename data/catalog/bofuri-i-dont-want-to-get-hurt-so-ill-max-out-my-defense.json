@@ -174,42 +174,6 @@
       "external_id": "258117"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kono Tate ni Kakuremasu (I Will Hide Behind this Shield)",
-      "artist": "Junjō no Afilia",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kyuukyoku Unbalance! (究極アンバランス！; Ultimate Unbalance!)",
-      "artist": "Junjō no Afilia",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Step for Joy",
-      "artist": "FRAM",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kyūkyoku Unbalance! (究極アンバランス!)",
-      "artist": "Junjō no Afilia",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Play the world",
-      "artist": "Rico Sasaki",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

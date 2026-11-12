@@ -183,63 +183,6 @@
       "external_id": "109211"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Exterminate",
-      "artist": "Nana Mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Glorious Break",
-      "artist": "Nana Mizuki",
-      "episodes": "1"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Vitalization",
-      "artist": "Nana Mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ressou Yari - Gungnir (烈槍・ガングニール; Fierce Spear - Gungnir)",
-      "artist": "Yōko Hikasa",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Rebirth-day",
-      "artist": "Ayahi Takagaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Next Destination",
-      "artist": "Ayahi Takagaki",
-      "episodes": "2-11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Vitalization",
-      "artist": "Nana Mizuki",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Nijiiro no Flugel (虹色のフリューゲル;The Rainbow-Colored Flugel)",
-      "artist": "Aoi Yūki, Nana Mizuki, Ayahi Takagaki, Yōko Hikasa, Yoshino Nanjou, Ai Kayano, Minami Takayama",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

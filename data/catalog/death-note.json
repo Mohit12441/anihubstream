@@ -446,49 +446,6 @@
       "external_id": "24605"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aluminia",
-      "artist": "Nightmare",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "the WORLD",
-      "artist": "Nightmare",
-      "episodes": "1-19"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Alumina",
-      "artist": "Nightmare",
-      "episodes": "1-19"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "What's Up People?!",
-      "artist": "Maximum the Hormone",
-      "episodes": "20-37"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Zetsubō Billy",
-      "artist": "Maximum the Hormone",
-      "episodes": "20-36"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Coda ~ Death Note",
-      "artist": "Yoshihisa Hirano",
-      "episodes": "37"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

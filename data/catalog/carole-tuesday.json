@@ -303,56 +303,6 @@
       "external_id": "261419"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kiss Me",
-      "artist": "Nai Br.XX & Celeina Ann",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hold Me Now",
-      "artist": "Nai Br.XX & Celeina Ann",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Polly Jean",
-      "artist": "Nai Br.XX & Celeina Ann",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Not Afraid",
-      "artist": "Alisa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Endless",
-      "artist": "Alisa",
-      "episodes": "22"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "The Tower",
-      "artist": "Alisa",
-      "episodes": "23"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "Mother",
-      "artist": "Voices from Mars",
-      "episodes": "24"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

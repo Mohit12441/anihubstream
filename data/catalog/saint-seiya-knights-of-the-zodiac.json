@@ -3,7 +3,7 @@
   "title": "Saint Seiya: Knights of the Zodiac",
   "native": "聖闘士星矢",
   "year": 1986,
-  "rating": 7.3,
+  "rating": 7.4,
   "season": "Fall 1986",
   "kind": "TV",
   "status": "Finished",
@@ -1295,35 +1295,6 @@
       "external_id": "21474"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Pegasus Seiya",
-      "artist": "The Struts",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Somebody New",
-      "artist": "The Struts",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Pegasus Seiya",
-      "artist": "The Struts",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Somebody New",
-      "artist": "The Struts",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -40,35 +40,6 @@
     "sci-fi"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Mad Pulse",
-      "artist": "MADKID",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "beat up",
-      "artist": "Ai Tomioka",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "BRAVE GROOVE",
-      "artist": "iLiFE!",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Miramira (ミラミラ)",
-      "artist": "YENA",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

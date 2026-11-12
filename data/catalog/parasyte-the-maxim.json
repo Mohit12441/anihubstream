@@ -305,21 +305,6 @@
       "external_id": "160221"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Let Me Hear",
-      "artist": "Fear, and Loathing in Las Vegas",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "It's the Right Time",
-      "artist": "Daichi Miura",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

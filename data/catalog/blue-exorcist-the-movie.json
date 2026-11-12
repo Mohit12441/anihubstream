@@ -10,7 +10,7 @@
   "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11737-49ya7CBO5wEq.jpg",
   "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11737-49ya7CBO5wEq.jpg",
   "accent": "#e4935d",
-  "synopsis": "The atmosphere in True Cross Academy is lively and boisterous in the days leading up to the grand festival held once every 11 years. During this time, Okumura Rin is entrusted with the responsibility of suppressing the berserk Phantom Train. In the midst of his mission, he meets a devil whose appearance is that of a young boy.\n\n\r\n(Source: Official Site)",
+  "synopsis": "The atmosphere in True Cross Academy is lively and boisterous in the days leading up to the grand festival held once every 11 years. During this time, Okumura Rin is entrusted with the responsibility of suppressing the berserk Phantom Train. In the midst of his mission, he meets a devil whose appearance is that of a young boy.\n\n\n(Source: Official Site)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -51,126 +51,6 @@
       "external_id": "97347"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tsuukaku",
-      "artist": "amazarashi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Overlap",
-      "artist": "Shiyui",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "RE RESCUE",
-      "artist": "Reol",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tsurara",
-      "artist": "Yohabi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Eye's Sentry",
-      "artist": "UVERworld",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Gakkyuu Nisshi",
-      "artist": "Mulasaki Ima",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Itteki no Eikyō (一滴の影響; Drop's Influence)",
-      "artist": "UVERworld",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kono Te de (コノ手デ; With This Hand)",
-      "artist": "Rin Akatsuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "REVERSI",
-      "artist": "UVERworld",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Core Pride",
-      "artist": "UVERworld",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Core Pride",
-      "artist": "UVERworld",
-      "episodes": "1-12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Take Off",
-      "artist": "2PM",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Take Off",
-      "artist": "2PM",
-      "episodes": "1-12"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "In My World",
-      "artist": "ROOKiEZ is PUNK'D",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "In My World",
-      "artist": "ROOKiEZ is PUNK'D",
-      "episodes": "13-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Wired Life",
-      "artist": "Meisa Kuroki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Wired Life",
-      "artist": "Meisa Kuroki",
-      "episodes": "13-25"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -281,28 +281,6 @@
       "external_id": "58433"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Paraiso",
-      "artist": "SOIL & \"PIMP\" SESSIONS",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Best Friend",
-      "artist": "Karutetto",
-      "episodes": "1-21"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Nada pode me parar agora",
-      "artist": "Aurea Martins",
-      "episodes": "22"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

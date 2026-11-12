@@ -182,35 +182,6 @@
       "external_id": "330545"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Venus Line",
-      "artist": "Kohmi Hirose",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi ga Iru kara (君がいるから)",
-      "artist": "Sarasa Kadowaki",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Venus Line",
-      "artist": "Kohmi Hirose",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yodaka",
-      "artist": "Tsukuyomi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

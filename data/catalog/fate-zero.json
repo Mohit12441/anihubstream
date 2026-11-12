@@ -186,56 +186,6 @@
       "external_id": "168035"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "to the beginning",
-      "artist": "Kalafina",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sora wa Takaku Kaze wa Utau (空は高く風は歌う; Up on the Sky, the Wind Sings)",
-      "artist": "Luna Haruna",
-      "episodes": "13-17, 20-24"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "oath sign",
-      "artist": "LiSA",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "oath sign",
-      "artist": "LiSA",
-      "episodes": "2-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "MEMORIA (メモリア)",
-      "artist": "Aoi Eir",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Manten (満天; The Whole Sky)",
-      "artist": "Kalafina",
-      "episodes": "18-19"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "to the beginning",
-      "artist": "Kalafina",
-      "episodes": "25"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -197,35 +197,6 @@
       "external_id": "240574"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kagerō",
-      "artist": "ЯeaL",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Silver",
-      "artist": "RIZE",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Kyou mo Sakura Mau Akatsuki ni (今日もサクラ舞う暁に)",
-      "artist": "CHiCO with HoneyWorks",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "We Gotta Fight!",
-      "artist": "XY",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

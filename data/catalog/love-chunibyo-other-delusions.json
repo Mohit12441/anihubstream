@@ -331,49 +331,6 @@
       "external_id": "101354"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 0,
-      "title": "Kimi e",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 0,
-      "title": "Shikkoku ni Odoru Haou Bushi",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Voice",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Van!shment Th!s World",
-      "artist": "Black Raison d'être",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sparkling Daydream",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "INSIDE IDENTITY",
-      "artist": "Black Raison d'être",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

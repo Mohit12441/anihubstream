@@ -174,49 +174,6 @@
       "external_id": "273645"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kagome Kagome",
-      "artist": "Masayoshi Ōishi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "mo∞ent",
-      "artist": "Akari Kitō",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "L’oN",
-      "artist": "Masayoshi Oishi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "With a Wish",
-      "artist": "Akari Kitō",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "No.7",
-      "artist": "Chibaku Shōnen Band",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tiny Light",
-      "artist": "Akari Kitō",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

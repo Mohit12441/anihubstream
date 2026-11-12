@@ -75,35 +75,6 @@
       "external_id": "anikoto:9046:3"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Unbroken",
-      "artist": "MADKID",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sukipi no Okage! (すきぴのおかげ！)",
-      "artist": "Nonfic",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "FLY",
-      "artist": "MADKID",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aimai Girl",
-      "artist": "Aguri Oonishi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

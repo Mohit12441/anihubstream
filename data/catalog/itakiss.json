@@ -313,35 +313,6 @@
       "external_id": "54296"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kimi, Meguru, Boku (キミ、メグル、ボク)",
-      "artist": "Motohiro Hata",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kataomoi Fighter (片思いファイター)",
-      "artist": "GO!GO!7188",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Jikan yo Tomare feat. SEAMO (時間よ止まれ feat. SEAMO)",
-      "artist": "AZU",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Kimi, Meguru, Boku (キミ、メグル、ボク)",
-      "artist": "Motohiro Hata",
-      "episodes": "24"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

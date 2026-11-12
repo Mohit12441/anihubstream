@@ -306,49 +306,6 @@
       "external_id": "115693"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Skyreach",
-      "artist": "Sora Amamiya",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Skyreach",
-      "artist": "Sora Amamiya",
-      "episodes": "1-14"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Konna Sekai, Shiritakunakatta. (こんな世界、知りたくなかった。 I Didn't Want to Know About This Kind of World.)",
-      "artist": "Miku Sawai",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Konna Sekai, Shiritakunakatta. (こんな世界、知りたくなかった。 I Didn't Want to Know About This Kind of World.)",
-      "artist": "Miku Sawai",
-      "episodes": "1-14"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Liar Mask",
-      "artist": "Rika Mayama",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Tsuki Akari (月灯り;Moonlight)",
-      "artist": "Sora Amamiya",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

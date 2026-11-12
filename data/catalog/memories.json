@@ -75,63 +75,6 @@
       "external_id": "23560"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Film Makers",
-      "artist": "Ayane",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Romancing Story",
-      "artist": "Ayane",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Dry Words Dry Maker",
-      "artist": "Masumi Asano",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Shining star",
-      "artist": "Ayumi Murata",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Nocturne",
-      "artist": "Nana Mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Usual Place",
-      "artist": "Tiaraway",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yūki no Tsubasa (勇気の翼; Wings of Courage)",
-      "artist": "Maria Yamamoto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yasashii Seiza (やさしい星座; Friendly Constellation)",
-      "artist": "KAORI",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

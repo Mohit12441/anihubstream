@@ -1,16 +1,16 @@
 {
   "id": "gungrave",
   "title": "Gungrave",
-  "native": "Gungrave",
+  "native": "ガングレイヴ",
   "year": 2003,
-  "rating": 7.8,
-  "season": "Year 2003",
+  "rating": 7.5,
+  "season": "Fall 2003",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/693a8ed63865a8017b5a9512-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/693a8ed63865a8017b5a9512-landscape.webp",
-  "accent": "#ff1f4a",
-  "synopsis": "Brandon Heat and Harry MacDowel, two friends so close they could be called brothers, receive an abrupt and violent reminder one fateful day of how appallingly merciless the world around them can be. Their whole lives before then were simple and easygoing, consisting largely of local brawls, seducing women, and committing petty theft to make a living and pass the time. What they failed to realize is that in this cruel world, happiness is fleeting, and change is inevitable.\n\nEnter Millennion, the largest and most infamous mafia syndicate in the area, which accepts Brandon and Harry into their ranks and starts them at the bottom of the food chain. Harry has ambitions to ascend the ranks and one day replace Big Daddy as the supreme leader of Millennion, while Brandon only wishes to support his friend and appease Big Daddy who has taken custody of the woman Brandon loves.\n\nBased off the third-person shooter video game under the same name, Gungrave is an epic story of friendship, betrayal, and avarice that spans the course of several years, ultimately tying back to the gripping and foreboding first episode, all the while building up to the story's thrilling conclusion.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx267-vGNmfjvWb1Qq.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx267-vGNmfjvWb1Qq.png",
+  "accent": "#78281a",
+  "synopsis": "After a tragic scene with the murder of his friends, Brandon Heat follows his only friend Harry McDowel into Millennion, the largest mafia syndicate. While Harry McDowel is striving for power, Brandon is only staying in Millennion to see the girl he loves whose custody was gained by the leader of Millennion, Big Daddy. But as the years pass and Brandon proves loyal to Millennion, Brandon learns the true purpose and passion of Millennion, and that's when true conflict arises.\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 26,
   "added_at": null,
-  "search_text": "gungrave gungrave",
+  "search_text": "gungrave カ ンク レイウ tv finished",
   "genres": [
     "action",
     "drama",
@@ -326,21 +326,6 @@
       "external_id": "6866"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Family",
-      "artist": "Tsuneo Imahori",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Akaneiroga Moerutoki",
-      "artist": "Scoobie Do",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

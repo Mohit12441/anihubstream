@@ -50,63 +50,6 @@
       "external_id": "336750"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Katachi (かたち)",
-      "artist": "Riko Azuna",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Endless Embrace",
-      "artist": "MYTH&ROID",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Forever Lost",
-      "artist": "MYTH&ROID",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Forever Lost",
-      "artist": "MYTH&ROID",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Underground River (opening version ft. Raj Ramayya)",
-      "artist": "Kevin Penkin",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Deep in Abyss",
-      "artist": "Miyu Tomita & Mariya Ise",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tabi no Hidarite, Saihate no Migite",
-      "artist": "Miyu Tomita, Mariya Ise, & Shiori Izawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "reBirth",
-      "artist": "Takeshi Saitou & Kevin Penkin",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

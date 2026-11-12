@@ -105,28 +105,6 @@
       "external_id": "6896"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Golden Boy",
-      "artist": "Joyo Katayanagi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "My Golden Boy",
-      "artist": "Computerjockeys [German broadcast]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Study A Go! Go!",
-      "artist": "Golden Girls",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

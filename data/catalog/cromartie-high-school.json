@@ -324,28 +324,6 @@
       "external_id": "2920"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Jun",
-      "artist": "Takuro Yoshida",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Trust Me",
-      "artist": "Kunio Suma [Bikyoran]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Cromartie High School School Song",
-      "artist": "Sun Plaza Nakano",
-      "episodes": "19,23"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -314,49 +314,6 @@
       "external_id": "372698"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Anata no Hana no Iro (あなたの花の色)",
-      "artist": "aiko",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "blue in",
-      "artist": "elsewhere kikou",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Same Blue",
-      "artist": "Official HIGE DANdism",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Teenage Blue",
-      "artist": "Eve",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Goodbye",
-      "artist": "Macaroni Enpitsu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Contrast",
-      "artist": "TOMOO",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -304,35 +304,6 @@
       "external_id": "201866"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Trip Trip Trip",
-      "artist": "ORESAMA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Round&Round&Round",
-      "artist": "TECHNOBOYS PULCRAFT GREEN-FUND ft. Bonjour Suzuki",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Ryūsei Dance Floor",
-      "artist": "ORESAMA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Magical Circle",
-      "artist": "TECHNOBOYS PULCRAFT GREEN-FUND feat. Shoko Nakagawa",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

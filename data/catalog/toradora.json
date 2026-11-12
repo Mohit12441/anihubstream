@@ -316,42 +316,6 @@
       "external_id": "59411"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Pre-Parade (プレパレード)",
-      "artist": "Taiga Aisaka, Minori Kushieda, and Ami Kawashima",
-      "episodes": "2-16, 25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Vanilla Salt (バニラソルト)",
-      "artist": "Yui Horie",
-      "episodes": "1-16"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "silky heart",
-      "artist": "Yui Horie",
-      "episodes": "17-24"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Orange (オレンジ)",
-      "artist": "Taiga Aisaka, Minori Kushieda, and Ami Kawashima",
-      "episodes": "17-18, 20-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Holy Night (ホーリーナイト)",
-      "artist": "Taiga Aisaka & Ami Kawashima",
-      "episodes": "19"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

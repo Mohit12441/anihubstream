@@ -173,49 +173,6 @@
       "external_id": "159109"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kyōran Hey Kids!!",
-      "artist": "THE ORAL CIGARETTES",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Nirvana (ニルバナ)",
-      "artist": "Tia",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Goya no Machiawase (午夜の待ち合わせ, Overnight Appointment)",
-      "artist": "Hello Sleepwalkers",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Heart Realize (ハートリアライズ)",
-      "artist": "Tia",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Goya no Machiawase (午夜の待ち合わせ, Overnight Appointment)",
-      "artist": "Hello Sleepwalkers",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Heart Realize (ハートリアライズ)",
-      "artist": "Tia",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

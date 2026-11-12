@@ -328,63 +328,6 @@
       "external_id": "3404"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "doll",
-      "artist": "Lia",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tatta Hitotsu no Omoi",
-      "artist": "KOKIA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "doll",
-      "artist": "Tada Aoi",
-      "episodes": "1-5, 10, 12"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "The Light Before We Land",
-      "artist": "The Delgados",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Dopo Il Sogno ～夢のあとに～ (After the dream)",
-      "artist": "op.",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "doll",
-      "artist": "Lia",
-      "episodes": "6-7, 9, 11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Scarborough Fair",
-      "artist": "Aoi Tada",
-      "episodes": "8"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "human",
-      "artist": "Lia",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

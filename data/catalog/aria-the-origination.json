@@ -183,28 +183,6 @@
       "external_id": "49270"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Spirale (スピラーレ)",
-      "artist": "Yui Makino",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kin no Nami Sen no Nami (金の波 千の波)",
-      "artist": "Akino Arai",
-      "episodes": "01-12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Undine (ウンディーネ)",
-      "artist": "Yui Makino",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

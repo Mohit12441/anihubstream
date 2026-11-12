@@ -1,16 +1,16 @@
 {
   "id": "kamisama-kiss",
   "title": "Kamisama Kiss",
-  "native": "神様はじめました◎",
-  "year": 2015,
+  "native": "神様はじめました",
+  "year": 2012,
   "rating": 8.1,
-  "season": "Winter 2015",
+  "season": "Fall 2012",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/691ee8d006abcc570fb8f200-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/691ee8d006abcc570fb8f200-landscape.webp",
-  "accent": "#aef1f1",
-  "synopsis": "High schooler Nanami Momozono has quite a few problems of late, beginning with her absentee father being in such extreme debt that they lose everything. Downtrodden and homeless, she runs into a man being harassed by a dog. After helping him, she explains her situation, and to her surprise, he offers her his home in gratitude. But when she discovers that said home is a rundown shrine, she tries to leave; however, she is caught by two shrine spirits and a fox familiar named Tomoe. They mistake her for the man Nanami rescued—the land god of the shrine, Mikage. Realizing that Mikage must have sent her there as a replacement god, Tomoe leaves abruptly, refusing to serve a human.\n\nRather than going back to being homeless, Nanami immerses herself in her divine duties. But if she must keep things running smoothly, she will need the help of a certain hot-headed fox. In her fumbling attempt to seek out Tomoe, she lands in trouble and ends up sealing a contract with him. Now the two must traverse the path of godhood together as god and familiar; but it will not be easy, for new threats arise in the form of a youkai who wants to devour the girl, a snake that wants to marry her, and Nanami's own unexpected feelings for her new familiar.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx14713-RyZ7bA7CdvGw.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx14713-RyZ7bA7CdvGw.jpg",
+  "accent": "#e4d693",
+  "synopsis": "Nanami Momozono is alone and homeless after her dad skips town to evade his gambling debts and the debt collectors kick her out of her apartment. So when a man she's just saved from a dog offers her his home, she jumps at the opportunity. But it turns out that his place is a shrine, and Nanami has unwittingly taken over his job as a local deity! \n\nNanami has all kinda of new responsibilities she doesn't understand, dangers she's unaware of, and a cranky ex-familiar who's... actually pretty hot. What's a new-fledged godling to do? \n\n(Source: VIZ Media)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -282,42 +282,6 @@
       "external_id": "170875"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kamisama no Kamisama (神様の神様; God of God)",
-      "artist": "Hanae",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ototoi Oide (おとといおいで;Come Another Day)",
-      "artist": "Hanae",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kamisama Hajimemashita",
-      "artist": "Hanae",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kamisama Onegai",
-      "artist": "Hanae",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kamisama Onegai",
-      "artist": "Daisuke Kishio",
-      "episodes": "10"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

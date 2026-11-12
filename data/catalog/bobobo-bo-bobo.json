@@ -876,42 +876,6 @@
       "external_id": "18895"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Wild Challenger",
-      "artist": "Jindou",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Shiawase (Happiness)",
-      "artist": "Mani Laba",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Baka Survivor (Stupid Survivor)",
-      "artist": "Ulfuls",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kirai Tune (Hate Tune)",
-      "artist": "FREENOTE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "H.P.S.J.",
-      "artist": "MihimaruGT",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

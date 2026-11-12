@@ -16,10 +16,10 @@
   "alt_seasons": [],
   "sched_day": 6,
   "sched_day_label": "SAT",
-  "sched_date": "Nov 7",
+  "sched_date": "Nov 14",
   "sched_time": "15:00",
   "sched_season": "Fall 2026",
-  "sched_episode": 7,
+  "sched_episode": 8,
   "sched_sub_at": null,
   "sched_dub_at": 1794069000000,
   "source_ids": {
@@ -96,21 +96,6 @@
       "external_id": null
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Remedy",
-      "artist": "ASCA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Double Wings",
-      "artist": "ASCA",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

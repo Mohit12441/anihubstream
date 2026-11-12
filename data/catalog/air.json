@@ -3,7 +3,7 @@
   "title": "Air",
   "native": "AIR",
   "year": 2005,
-  "rating": 6.8,
+  "rating": 6.9,
   "season": "Winter 2005",
   "kind": "TV",
   "status": "Finished",
@@ -172,91 +172,6 @@
       "external_id": "106418"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Forest walker",
-      "artist": "a flood of circle",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Chain",
-      "artist": "Back-on",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sky-2-High",
-      "artist": "skankfunk",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tori no Uta (鳥の詩; Bird's Poem)",
-      "artist": "Lia",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Farewell Song",
-      "artist": "Lia",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tori no Uta (鳥の詩; Bird's Poem)",
-      "artist": "Lia",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Farewell Song",
-      "artist": "Lia",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tori no Uta (鳥の詩; Bird's Poem)",
-      "artist": "Lia",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Farewell Song",
-      "artist": "Lia",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Retsu no matataki",
-      "artist": "Japahari Net",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "ROLLING 1000 tOON",
-      "artist": "Maximum The Hormone",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "If Dreams Came True",
-      "artist": "Eri Kawai",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -326,35 +326,6 @@
       "external_id": "170446"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hit in the USA",
-      "artist": "Beat Crusaders",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "My World Down",
-      "artist": "Meister",
-      "episodes": "1-20"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Moon on the Water",
-      "artist": "Sowelu and Beat Crusaders",
-      "episodes": "21-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Slip Out",
-      "artist": "Beck/Mongolian Chop Squad",
-      "episodes": "26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

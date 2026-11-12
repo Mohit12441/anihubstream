@@ -321,63 +321,6 @@
       "external_id": "112622"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tsugihagi Moyō (Patchwork Pattern)",
-      "artist": "nano.RIPE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tadaima (I'm Home)",
-      "artist": "Kotori Koiwai, Rie Murakawa, Ayane Sakura, & Kana Asumi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ao no Rakugaki",
-      "artist": "nano.RIPE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Omoide",
-      "artist": "Kotori Koiwai, Rie Murakawa, Ayane Sakura, Kana Asumi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kodama Kotodama (こだまことだま)",
-      "artist": "nano.RIPE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Okaeri (おかえり; Welcome Back)",
-      "artist": "Ayane Sakura, Kana Asumi, Kotori Koiwai, & Rie Murakawa",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Nanairo Biyori",
-      "artist": "nano.RIPE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Non Non Biyori",
-      "artist": "Ayane Sakura, Kana Asumi, Kotori Koiwai, Rie Murakawa",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -51,35 +51,6 @@
       "external_id": "309744"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "U",
-      "artist": "Belle & millennium parade",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "A Million Miles Away",
-      "artist": "Kaho Nakamura",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hashire! Jolie",
-      "artist": "Mitsuko Horie and The Tea Tea Neighbor Children's Chorus",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Futari de Hanbunko",
-      "artist": "Mitsuko Horie, The Mori no Ki Jidou Gasshou Dan and The Tea Tea Neighbor Children's Chours",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

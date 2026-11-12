@@ -1006,63 +1006,6 @@
       "external_id": "271459"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Happy Go Ducky!",
-      "artist": "the pillows",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tsubasa",
-      "artist": "saji",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Never Mind",
-      "artist": "flumpool",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Over",
-      "artist": "Yuma Uchida",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 3,
-      "title": "Hummingbird",
-      "artist": "BLUE ENCOUNT",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Hikari Sasu Hou e (光射す方へ)",
-      "artist": "Mamoru Miyano",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 4,
-      "title": "Rebirth",
-      "artist": "ACIDMAN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Taiyou Runner",
-      "artist": "Shougo Sakamoto",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

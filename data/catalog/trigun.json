@@ -328,49 +328,6 @@
       "external_id": "53"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Picaresque Hero",
-      "artist": "ano",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Stardust",
-      "artist": "FOMARE",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "TOMBI",
-      "artist": "Kvi Baba",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hoshi no Kuzu α",
-      "artist": "Salyu and haruka nakamura",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "H.T.",
-      "artist": "Tsuneo Imahori",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kaze wa Mirai ni Fuku (風は未来に吹く; The Wind Blows to the Future)",
-      "artist": "AKIMA & NEOS",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

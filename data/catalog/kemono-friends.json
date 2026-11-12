@@ -172,35 +172,6 @@
       "external_id": "200140"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Notteke~ Japari Beat (Get on Board! Japari Beat)",
-      "artist": "Dōbutsu Biscuits x PPP",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hoshi wo Tsunagete (Connecting stars)",
-      "artist": "Gothic x Luck",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yōkoso Japari Park e (Welcome to Japari Park)",
-      "artist": "Dōbutsu Biscuit x PPP",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Boku no Friend (My Friend)",
-      "artist": "Mewhan",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

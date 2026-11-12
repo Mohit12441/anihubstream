@@ -183,28 +183,6 @@
       "external_id": "241337"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Bokura dake no Shudaika (僕らだけの主題歌)",
-      "artist": "centimillimental",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kizuato",
-      "artist": "centimillimental",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Marutsuke",
-      "artist": "Given",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

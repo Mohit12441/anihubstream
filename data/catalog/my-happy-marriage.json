@@ -172,49 +172,6 @@
       "external_id": "352950"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Shiawase de Namida ga Deru no wa. (幸せで涙が出るのは。)",
-      "artist": "Riria.",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Prelude no Temae ni: ~for me&you~ (プレリュードの手前に 〜for me&you〜)",
-      "artist": "Kashitarō Itō",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Shiawase no Yakusoku (幸せな約束。)",
-      "artist": "Riria.",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tsukikage Okuri (月影おくり)",
-      "artist": "Kashitarō Itō",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Anata no Soba ni. (貴方の側に。)",
-      "artist": "Riria.",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Vita Philosophica (ヰタ・フィロソフィカ)",
-      "artist": "Kashitarō Itō",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

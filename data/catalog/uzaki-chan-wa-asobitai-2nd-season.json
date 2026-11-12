@@ -183,35 +183,6 @@
       "external_id": "296957"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ichigo Ichie Celebration",
-      "artist": "Kano to Uzaki-chan",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Happy Life",
-      "artist": "MKLNtic",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Nadamesukashi Negotiation (Negotiation",
-      "artist": "Comforting)",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kokoro Knock (ココロノック)",
-      "artist": "YuNi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

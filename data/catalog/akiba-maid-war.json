@@ -302,35 +302,6 @@
       "external_id": "335264"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Maid Daikaiten (メイド大回転; Great Maid Revolution)",
-      "artist": "all staff at Tontokoton",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Meido no Komoriuta (冥途の子守唄; Lullaby of the Underworld)",
-      "artist": "Ranko Mannen CV Rina Satō",
-      "episodes": "1-4, 6-11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Isshou Onna no Ko Sengen (一生女の子宣言☆; I Declare I'm a Girl for Life)",
-      "artist": "Ranko Mannen CV Rina Satō",
-      "episodes": "5"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Meido no Komoriuta (冥途の子守唄; Lullaby of the Underworld)",
-      "artist": "Nagomi Wahira CV Reina Kondō",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

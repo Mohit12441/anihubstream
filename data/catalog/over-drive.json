@@ -326,28 +326,6 @@
       "external_id": "32573"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "WINDER ~Boku wa Koko ni Iru~",
-      "artist": "Shonen Kamikaze",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Saihate no Parade",
-      "artist": "Merry",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Koi Suzumi",
-      "artist": "DEL",
-      "episodes": "14-26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

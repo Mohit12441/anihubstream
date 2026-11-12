@@ -518,35 +518,6 @@
       "external_id": "198809"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Akatsuki no Yona (暁のヨナ;Yona of the Dawn)",
-      "artist": "Kunihiko Ryo",
-      "episodes": "1-14"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yoru (夜; Night)",
-      "artist": "vistlip",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Akatsuki no Hana (暁の華; Flower of the Dawn)",
-      "artist": "Cyntia",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Akatsuki (暁;Dawn)",
-      "artist": "Akiko Shikata",
-      "episodes": "15-24"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

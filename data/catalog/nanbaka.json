@@ -341,35 +341,6 @@
       "external_id": "189399"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Rin! Rin! Hi! Hi! (ハシグチカナデリヤ)",
-      "artist": "Hashiguchikanaderiya",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Nanbaka Datsugoku Riron! (ナンバカ脱獄理論♪!)",
-      "artist": "Yuuto Uemura, Tetsuya Kakihara, Airu Shiozaki, Daiki Kobayashi, and Tomokazu Seki",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Rin! Rin! Hi! Hi!",
-      "artist": "Hashiguchikanaderiya hugs The Super Ball",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Nanbaka Datsugoku Riron♪! (Nanbaka Jailbreak Theory)",
-      "artist": "Yuuto Uemura, Tetsuya Kakihara, Airu Shiozaki, Daiki Kobayashi, and Tomokazu Seki",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

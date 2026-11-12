@@ -184,63 +184,6 @@
       "external_id": "76622"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "NOW!!!GAMBLE",
-      "artist": "Kana Asumi, Saki Fujita, & Eri Kitamura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Matsuge ni Lock (まつ毛にLOCK)",
-      "artist": "Jun Fukuyama, Daisuke Ono, & Hiroshi Kamiya",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "COOLISH WALK",
-      "artist": "Kana Asumi, Eri Kitamura and Saki Fujita",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Itsumo you ni LOVE & PEACE!! (いつものようにLOVE＆PEACE!!)",
-      "artist": "Jun Fukuyama, Daisuke Ono and Hiroshi Kamiya",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "SOMEONE ELSE",
-      "artist": "Kana Asumi, Saki Fujita and Eri Kitamura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "SOMEONE ELSE",
-      "artist": "Kana Asumi, Saki Fujita, and Eri Kitamura",
-      "episodes": "1, 13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Heart no Edge ni Idomu Mō Go to Heart Edge (ハートのエッジに挑もう Go to Heart Edge)",
-      "artist": "Jun Fukuyama, Daisuke Ono, and Hiroshi Kamiya",
-      "episodes": "2-8, 10-12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Golden Day (ゴールデン・デイ)",
-      "artist": "Saki Fujita",
-      "episodes": "9"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -186,56 +186,6 @@
       "external_id": "166554"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sakura no Ato (all quartets lead to the?) (桜のあと(all quartets lead to the?);After the Cherry Blossoms)",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": "1-8,10-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tsukiyomi (ツキヨミ;Moon-Reading)",
-      "artist": "phatmans after school",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "kid, I like quartet",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hello hello hello",
-      "artist": "SUEMITSU and THE SUEMITH",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "JUST TUNE",
-      "artist": "savage genius",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Nagareboshi (ナガレボシ; Shooting Star)",
-      "artist": "ROUND TABLE featuring Nino",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Kid, I like quartet",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": "9"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

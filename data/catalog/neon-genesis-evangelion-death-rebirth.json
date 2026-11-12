@@ -51,21 +51,6 @@
       "external_id": "1121"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kanon D-dur (Death ending)",
-      "artist": "Johann Pachelbel; arranged by Shiro Sagisu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Tamashii no Refrain (魂のルフラン; Soul's Refrain) (Rebirth ending)",
-      "artist": "Yoko Takahashi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

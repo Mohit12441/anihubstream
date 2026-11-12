@@ -51,35 +51,6 @@
       "external_id": "16487"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Cha-La Head-Cha-La",
-      "artist": "Hironobu Kageyama",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Eternal Sacrifice (instrumental)",
-      "artist": "Tendril [US Version]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Burning Fight -Nessen Ressen Chōgekisen- (バーニング・ファイト-熱戦・烈戦・超激戦-)",
-      "artist": "Hironobu Kageyama & Yuka",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Stained-Glass Windshield",
-      "artist": "El Gato [US Version]",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

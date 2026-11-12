@@ -50,35 +50,6 @@
       "external_id": "100554"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yasashisa no Riyū (優しさの理由)",
-      "artist": "ChouCho",
-      "episodes": "1-2, 4, 6-8, 10-11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Madoromi no Yakusoku (まどろみの約束)",
-      "artist": "Satomi Satou & Ai Kayano",
-      "episodes": "2-4, 6-11"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Mikansei Stride (未完成ストライド; Unfinished Stride)",
-      "artist": "Saori Kodama",
-      "episodes": "13-16, 18-20, 22"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kimi ni Matsuwaru Mystery (君にまつわるミステリー; Mystery Surrounding You)",
-      "artist": "Satomi Satou and Ai Kayano",
-      "episodes": "12-14, 16, 18, 20-22"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

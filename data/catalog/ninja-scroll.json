@@ -54,28 +54,6 @@
       "external_id": "13148"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Jubei's Theme",
-      "artist": "Kitaro and Peter McEvilley",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Shigure's Theme",
-      "artist": "Kitaro and Peter McEvilley",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Dare mo ga Tooku de Ballad o Kiite iru (誰もが遠くでバラードを聴いている)",
-      "artist": "Ryouhei Yamanashi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

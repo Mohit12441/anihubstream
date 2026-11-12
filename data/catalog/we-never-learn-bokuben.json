@@ -183,35 +183,6 @@
       "external_id": "257653"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Can now, Can now",
-      "artist": "Study",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hōkago no Liberty (Afterschool Liberty)",
-      "artist": "halca",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Seishun Seminar",
-      "artist": "Study",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Never Give It Up!!",
-      "artist": "Study",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

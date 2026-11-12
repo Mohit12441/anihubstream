@@ -39,35 +39,6 @@
     "romance"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Jinsei Endroll (人生エンドロール)",
-      "artist": "Ando",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ashita wa Ashita no Que Sera Sera! (あしたはあしたのけせらせら！)",
-      "artist": "MEISHOHIKOKAI",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Silent Minority",
-      "artist": "Kashitarō Itō",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "selfish",
-      "artist": "Riko Azuna",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

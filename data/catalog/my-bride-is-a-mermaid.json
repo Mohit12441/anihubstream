@@ -325,28 +325,6 @@
       "external_id": "32362"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Romantic summer",
-      "artist": "SUN&LUNAR",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ashita e no Hikari (明日への光)",
-      "artist": "Asuka Hinoi",
-      "episodes": "1-13,26"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Dan Dan Dan",
-      "artist": "SUN&LUNAR",
-      "episodes": "14-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

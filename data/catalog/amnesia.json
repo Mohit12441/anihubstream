@@ -175,28 +175,6 @@
       "external_id": "101584"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Zoetrope",
-      "artist": "Nagi Yanagi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Recall",
-      "artist": "Ray",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Shinshin no Wataridori",
-      "artist": "Nagi Yanagi",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -610,49 +610,6 @@
       "external_id": "9347"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Never Ever",
-      "artist": "Tsubasa Imai",
-      "episodes": "1-35"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Bokura",
-      "artist": "BAZRA",
-      "episodes": "1-14"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Doukasen",
-      "artist": "BAZRA",
-      "episodes": "36-52"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Nana Navigation",
-      "artist": "Nanase Hoshii",
-      "episodes": "15-32"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Here we go",
-      "artist": "Missile Innovation",
-      "episodes": "33-43"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "My Star",
-      "artist": "Mika Kikuchi",
-      "episodes": "44-52"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

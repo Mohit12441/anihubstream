@@ -3,7 +3,7 @@
   "title": "You and I Are Polar Opposites",
   "native": "正反対な君と僕",
   "year": 2026,
-  "rating": 8.3,
+  "rating": 8.2,
   "season": "Winter 2026",
   "kind": "TV",
   "status": "Finished",
@@ -317,35 +317,6 @@
       "external_id": "375575"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Nekojarashi (猫じゃらし)",
-      "artist": "7co",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Unmei no Kimi (運命の君)",
-      "artist": "Mega Shinnosuke",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Megane wo Hazushite (Lose the Frames)",
-      "artist": "Noa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Pure",
-      "artist": "PAS TASTA ft. Eriko Hashimoto",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

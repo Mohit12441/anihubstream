@@ -51,49 +51,6 @@
       "external_id": "247575"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Amy",
-      "artist": "Minori Chihara",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sincerely",
-      "artist": "TRUE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Michishirube",
-      "artist": "Minori Chihara",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sincerely",
-      "artist": "TRUE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Michishirube (Guidepost)",
-      "artist": "Minori Chihara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Believe in...",
-      "artist": "Aira Yuki",
-      "episodes": "9"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

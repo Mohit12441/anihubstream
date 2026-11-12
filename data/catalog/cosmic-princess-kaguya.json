@@ -53,28 +53,6 @@
       "external_id": "390253"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ex-Otogibanashi",
-      "artist": "Saori Hayami",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "ray Chō Kaguya-hime! Version (ray 超かぐや姫！Version)",
-      "artist": "Yūko Natsuyoshi and Saori Hayami",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Melt CPK! Remix (メルト CPK! Remix)",
-      "artist": "supercell feat. Yūko Natsuyoshi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

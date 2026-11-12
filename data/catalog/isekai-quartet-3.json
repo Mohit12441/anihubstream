@@ -39,28 +39,6 @@
     "slice-of-life"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Isekai Concerto (異世界こんちぇると)",
-      "artist": "Satoshi Hino, Jun Fukushima, Yūsuke Kobayashi, Aoi Yūki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi Iro, Boku Iro (君色、僕色)",
-      "artist": "Konomi Suzuki, Kashitarō Itō",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "melting days",
-      "artist": "Mayu Maeshima",
-      "episodes": "7"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

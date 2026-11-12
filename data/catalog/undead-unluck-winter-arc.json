@@ -52,35 +52,6 @@
       "external_id": "371168"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "01",
-      "artist": "Ziyoou-vachi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "know me...",
-      "artist": "Kairi Yagi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Love Call",
-      "artist": "Shiyui",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kono Ai ni Kanau Mon wa Nai",
-      "artist": "OKAMOTO'S",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

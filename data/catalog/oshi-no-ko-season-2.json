@@ -343,49 +343,6 @@
       "external_id": "369601"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "TEST ME",
-      "artist": "CHANMINA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Serenade (セレナーデ)",
-      "artist": "natori",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Fatale",
-      "artist": "GEMN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Burning",
-      "artist": "hitsujibungaku",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Idol (アイドル)",
-      "artist": "YOASOBI",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mephisto (メフィスト)",
-      "artist": "Queen Bee",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

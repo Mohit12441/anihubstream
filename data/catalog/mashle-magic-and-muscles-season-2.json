@@ -172,35 +172,6 @@
       "external_id": "353258"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Bling-Bang-Bang-Born",
-      "artist": "Creepy Nuts",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tokyo's Way",
-      "artist": "Shiritsu Ebisu Chugaku",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Knock Out",
-      "artist": "Taiiku Okazaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Creampuff Funk",
-      "artist": "Philosophy no Dance",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

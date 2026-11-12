@@ -304,35 +304,6 @@
       "external_id": "358230"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sleep Walking Orchestra",
-      "artist": "BUMP OF CHICKEN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Party!!",
-      "artist": "Ryoku Oushoku Shakai",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Unmei (Destiny)",
-      "artist": "sumika",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kirakira no Hai (Glittering Ashes)",
-      "artist": "Regal Lily",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

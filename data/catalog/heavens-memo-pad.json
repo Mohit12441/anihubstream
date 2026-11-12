@@ -4,13 +4,13 @@
   "native": "神様のメモ帳",
   "year": 2011,
   "rating": 7.1,
-  "season": "Year 2011",
+  "season": "Summer 2011",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/10/6ad48e6a4e1a627ba023ef56-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/10/6ad48e6a4e1a627ba023ef56-landscape.jpg",
-  "accent": "#ffc247",
-  "synopsis": "Narumi Fujishima isn't your typical high school student. He's never really fit in and has become increasingly more isolated from his fellow classmates. But he's not alone, and when Ayaka, the sole member of the Gardening Club, introduces him to the reclusive girl who lives above the ramen shop, Narumi enters a whole new secret world. Alice is a NEET, someone who is Not Employed, being Educated or in Training, but as Narumi quickly discovers, that doesn't mean that she does nothing all day. \n\n\nIn between tending to her small army of stuffed bears, Alice is an expert hacker and a very exclusive private detective. To his surprise, Narumi finds himself drafted as one of the strange-but-elite team of associates that Alice has assembled from her NEET acquaintances. Together they'll battle gangs, thieves, murderers, and drug lords. And in the middle of it all, Narumi will find his life changing forever! \n\n\n(Source: Sentai Filmworks) \n\n\n\nNote: The first episode aired with a runtime of ~48 minutes as opposed to the standard 24 minute long episode.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx10568-QZbLhgMAQC76.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10568-QZbLhgMAQC76.jpg",
+  "accent": "#5dc9f1",
+  "synopsis": "Narumi Fujishima isn't your typical high school student. He's never really fit in and has become increasingly more isolated from his fellow classmates. But he's not alone, and when Ayaka, the sole member of the Gardening Club, introduces him to the reclusive girl who lives above the ramen shop, Narumi enters a whole new secret world. Alice is a NEET, someone who is Not Employed, being Educated or in Training, but as Narumi quickly discovers, that doesn't mean that she does nothing all day. \n\nIn between tending to her small army of stuffed bears, Alice is an expert hacker and a very exclusive private detective. To his surprise, Narumi finds himself drafted as one of the strange-but-elite team of associates that Alice has assembled from her NEET acquaintances. Together they'll battle gangs, thieves, murderers, and drug lords. And in the middle of it all, Narumi will find his life changing forever! \n\n(Source: Sentai Filmworks) \n\nNote: The first episode aired with a runtime of ~48 minutes as opposed to the standard 24 minute long episode.",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 12,
   "added_at": null,
-  "search_text": "heaven s memo pad 神様のメモ帳",
+  "search_text": "heaven s memo pad 神様のメモ帳 tv finished",
   "genres": [
     "mystery"
   ],
@@ -170,28 +170,6 @@
       "external_id": "94254"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kawaru Mirai (カワルミライ)",
-      "artist": "Choucho",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Colorado Bulldog",
-      "artist": "MR. BIG",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Asunaro (あすなろ)",
-      "artist": "Kenichi Suzumura",
-      "episodes": "2-12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

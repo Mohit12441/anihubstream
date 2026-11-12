@@ -172,35 +172,6 @@
       "external_id": "301704"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ao to Kirameki",
-      "artist": "Spira Spica",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kawaii Kaiwai",
-      "artist": "PiKi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sansan Days",
-      "artist": "Spira Spica",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Koi no Yukue",
-      "artist": "Akari Akase",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

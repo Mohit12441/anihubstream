@@ -184,56 +184,6 @@
       "external_id": "199938"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Boku wa Boku de atte (僕は僕であって)",
-      "artist": "angela x fripside",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "The Birth",
-      "artist": "Mamoru Miyano",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "innocence",
-      "artist": "Lamp in Terren",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yoru wa Nemureru kai? (夜は眠れるかい?;Can You Sleep at Night?)",
-      "artist": "flumpool",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "How Close You Are",
-      "artist": "Mamoru Miyano",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yoru wa Nemureru kai? (夜は眠れるかい?;Can You Sleep at Night?)",
-      "artist": "flumpool",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "The end of escape",
-      "artist": "fripSide x angela",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -172,21 +172,6 @@
       "external_id": "285030"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Theater of Life",
-      "artist": "Konomi Suzuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kioku no Hakobune",
-      "artist": "Kashitaro Ito",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

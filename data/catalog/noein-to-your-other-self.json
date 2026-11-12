@@ -306,35 +306,6 @@
       "external_id": "12799"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Idea",
-      "artist": "eufonius",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Idea",
-      "artist": "eufonius",
-      "episodes": "2-23"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yoake no Ashioto ( 夜明けの足音; The Footsteps of Dawn)",
-      "artist": "solua",
-      "episodes": "1-23"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yoake no Ashioto",
-      "artist": "solua",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

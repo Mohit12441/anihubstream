@@ -4,12 +4,12 @@
   "native": "小鳥遊六花・改 ~劇場版 中二病でも恋がしたい!~",
   "year": 2013,
   "rating": 7.2,
-  "season": "Year 2013",
+  "season": "Fall 2013",
   "kind": "Movie",
   "status": "Finished",
-  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19021-4Z0vCkzH3Vmb.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n19021-Zl1nxv8zJkHV.jpg",
-  "accent": "#2ee6a8",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx19021-4Z0vCkzH3Vmb.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19021-4Z0vCkzH3Vmb.jpg",
+  "accent": "#e45078",
   "synopsis": "Summary of the first season of the show, as seen from Rikka's perspective with new elements.",
   "rank": null,
   "trend_rank": null,
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 1,
   "added_at": null,
-  "search_text": "love chunibyo other delusions rikka version 小鳥遊六花 改 劇場版 中二病て も恋か したい",
+  "search_text": "love chunibyo other delusions rikka version 小鳥遊六花 改 劇場版 中二病て も恋か したい movie finished",
   "genres": [
     "comedy",
     "drama",
@@ -52,49 +52,6 @@
       "external_id": "108277"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 0,
-      "title": "Kimi e",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 0,
-      "title": "Shikkoku ni Odoru Haou Bushi",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Voice",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Van!shment Th!s World",
-      "artist": "Black Raison d'être",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sparkling Daydream",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "INSIDE IDENTITY",
-      "artist": "Black Raison d'être",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

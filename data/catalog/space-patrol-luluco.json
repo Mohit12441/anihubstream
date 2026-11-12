@@ -185,42 +185,6 @@
       "external_id": "185119"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "CRYmax Doheijitsu (CRYまっくすド平日; CRYmax Ultra Ordinary Days)",
-      "artist": "Fujirokku （Kari）",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Pipo Password",
-      "artist": "TeddyLoid feat. Bonjour Suzuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Pipo Password",
-      "artist": "Teddyloid ft. Bonjour Suzuki",
-      "episodes": "1-11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Pipo Password Luluco on Silent Planet Remix",
-      "artist": "Teddyloid ft. Bonjour Suzuki",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "CRY MAX Do-Heijitsu (CRYまっくすド平日)",
-      "artist": "Fujirokyu",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

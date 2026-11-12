@@ -173,35 +173,6 @@
       "external_id": "73197"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Choose my love!",
-      "artist": "Minami Kuribayashi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mōsō Shōjo A (妄想少女A)",
-      "artist": "Yui Horie and Yukari Tamura",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Unreal Paradise (あんりある パラダイス)",
-      "artist": "Minami Kuribayashi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "One Way Ryō Omoi (ワンウェイ両想い)",
-      "artist": "Marina Inoue and Megumi Nakajima",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

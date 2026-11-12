@@ -172,35 +172,6 @@
       "external_id": "369757"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Unsung ballad",
-      "artist": "TRUE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "inclusion",
-      "artist": "Arika",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yōbigoe",
-      "artist": "Tei",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "blan_ (blank)",
-      "artist": "Arika",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

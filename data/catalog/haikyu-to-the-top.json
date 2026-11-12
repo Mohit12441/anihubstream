@@ -185,35 +185,6 @@
       "external_id": "274181"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Toppakō (Breach)",
-      "artist": "SUPER BEAVER",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "One Day",
-      "artist": "SPYAIR",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "PHOENIX",
-      "artist": "Burnout Syndromes",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kessen Spirit (決戦スピリット)",
-      "artist": "CHiCO with HoneyWorks",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

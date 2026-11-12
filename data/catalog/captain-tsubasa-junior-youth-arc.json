@@ -467,35 +467,6 @@
       "external_id": "357393"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "As One",
-      "artist": "Johnny's West",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Moete Hero (燃えてヒーロー)",
-      "artist": "Johnny's West",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Fantasista (ファンタジスタ)",
-      "artist": "WEST.",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 3,
-      "title": "Heart",
-      "artist": "WEST.",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

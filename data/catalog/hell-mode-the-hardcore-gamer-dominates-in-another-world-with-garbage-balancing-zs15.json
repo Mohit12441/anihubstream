@@ -291,35 +291,6 @@
       "external_id": "404008"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "○✕△□",
-      "artist": "Romanha Marshmallow",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Firetail",
-      "artist": "ChoQMay",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Haku (ハク)",
-      "artist": "Atarayo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sanctuary",
-      "artist": "Kaya",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

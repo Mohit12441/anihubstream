@@ -315,21 +315,6 @@
       "external_id": "45565"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "DIRTY",
-      "artist": "Nightmare",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kodoku no Hikari",
-      "artist": "Kagami Seira",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

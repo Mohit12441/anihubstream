@@ -319,35 +319,6 @@
       "external_id": "336762"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "yummy goodday",
-      "artist": "Cent Chihiro Chittiii",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "SALT AND PEPPER",
-      "artist": "Chelmico",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Zeitaku na Saji",
-      "artist": "Van de Shop",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Happy-go-Journey",
-      "artist": "Yūma Uchida",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

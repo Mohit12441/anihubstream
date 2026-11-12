@@ -3,14 +3,14 @@
   "title": "Mobile Suit Gundam Wing",
   "native": "新機動戦記ガンダムW",
   "year": 1995,
-  "rating": 7.5,
+  "rating": 7.1,
   "season": "Spring 1995",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/69/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/90-hhE4GDd5rx1G.jpg",
-  "accent": "#24d3ee",
-  "synopsis": "The United Earth Sphere Alliance is a powerful military organization that has ruled over Earth and space colonies with an iron fist for several decades. When the colonies proclaimed their opposition to this, their leader was assassinated. Now, in the year After Colony 195, bitter colonial rebels have launched \"Operation Meteor,\" sending five powerful mobile suits to Earth for vengeance. Built out of virtually indestructible material called Gundanium Alloy, these \"Gundams\" begin an assault against the Alliance and its sub organization OZ. One Gundam, whose pilot has taken the name of the slain colony leader Heero Yuy, is forced to make a crash landing into the ocean after an atmospheric battle against OZ's ace pilot Zechs Marquise. Upon coming ashore, he is found by Relena Peacecraft, daughter of a peace-seeking politician, who witnesses Heero's descent to Earth. Although neither of them realize it yet, this encounter will have a profound impact on both their lives, as well as those on Earth and in space colonies. [Written by MAL Rewrite]",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b90-umBjF3yaeIdo.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b90-umBjF3yaeIdo.png",
+  "accent": "#f1935d",
+  "synopsis": "Mankind has moved into space. Thousands of people live on giant orbiting space colonies called \"Sides.\" However, the Earth Government, which rules the colonies, is unjust and cruel. A group of revolutionaries build five robotic weapons called Gundams and plan to send them to Earth to begin their fight for independence. Piloted by five young men, these Gundams carry the colonists' hopes and dreams of freedom with them as they descend to Earth to begin Operation Meteor!\n\n(Source: Nozomi Entertainment)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -582,49 +582,6 @@
       "external_id": "2157"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Last Impression",
-      "artist": "TWO-MIX",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "White Reflection",
-      "artist": "TWO-MIX",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Gundam Wing",
-      "artist": "Giorgio Vanni [Italian version]",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Just Communication",
-      "artist": "TWO-MIX",
-      "episodes": "1-40"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "It's Just Love",
-      "artist": "Rumi Onishi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Rhythm Emotion",
-      "artist": "TWO-MIX",
-      "episodes": "41-49"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

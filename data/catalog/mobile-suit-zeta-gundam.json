@@ -589,63 +589,6 @@
       "external_id": "1996"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Metamorphoze",
-      "artist": "Gackt [Part I]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi ga Matteiru Kara (Remix ver.) (君が待っているから; Since You Are Waiting)",
-      "artist": "Gackt [Part I]",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Zeta - Toki wo Koete (Z・刻をこえて; Zeta - Transcending Times)",
-      "artist": "Mami Ayukawa",
-      "episodes": "1-24"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hoshizora no Believe (星空のBelieve; Believe in the Starry Sky)",
-      "artist": "Mami Ayukawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Mind Forest",
-      "artist": "Gackt [Part II]",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Mizu no Hoshi e Ai wo Komete (水の星へ愛をこめて;From an Aqueous Star with Love)",
-      "artist": "Hiroko Moriguchi",
-      "episodes": "25-50"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Love Letter",
-      "artist": "Gackt [Part III 1st ED Theme]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Dybbuk",
-      "artist": "Gackt [Part III 2nd ED Theme]",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

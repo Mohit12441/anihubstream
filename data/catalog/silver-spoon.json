@@ -160,35 +160,6 @@
       "external_id": "109725"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Life",
-      "artist": "Fujifabric",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Oto no Naru Hō e",
-      "artist": "Goose house",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kiss you",
-      "artist": "miwa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hello Especially",
-      "artist": "Sukima Switch",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

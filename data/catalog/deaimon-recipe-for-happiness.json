@@ -170,28 +170,6 @@
       "external_id": "302062"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sumire (Pansy)",
-      "artist": "Maaya Sakamoto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Koko ni Aru Yakusoku",
-      "artist": "Deaimon",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Orlando (オーランドー)",
-      "artist": "Nagomu Irino CV Nobunaga Shimazaki",
-      "episodes": "9"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

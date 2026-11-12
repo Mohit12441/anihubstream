@@ -324,42 +324,6 @@
       "external_id": "65377"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Zoku Mizu no Kuchi Taiyō-zoku (続・溝ノ口太陽族)",
-      "artist": "manzo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mizo no Kuchi Forever (溝の口Forever)",
-      "artist": "Kumahachi Morino",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sukidesu Kawasaki Ai no Machi (好きです かわさき 愛の街)",
-      "artist": "Yoshiko Higo",
-      "episodes": "7"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Mizu no Kuchi Taiyō-zoku (溝ノ口太陽族)",
-      "artist": "manzo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tori Dango Nabe (鶏ダンゴ鍋)",
-      "artist": "Kumahachi Morino",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -315,35 +315,6 @@
       "external_id": "163173"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "ANNIVERSARY",
-      "artist": "SID",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Eden (エデン)",
-      "artist": "Aqua Timez",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Hikari",
-      "artist": "ViViD",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "With You / With Me",
-      "artist": "9nine",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -70,1469 +70,6 @@
     "created_at": "2026-11-06 04:37:48"
   },
   {
-    "anime_id": "gintama-silver-soul-arc-second-half-war",
-    "related_id": "gintama-silver-soul-arc",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-silver-soul-arc-second-half-war",
-    "related_id": "gintama-silver-soul-arc-second-half-war-16uy",
-    "relation_type": "sequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-silver-soul-arc",
-    "related_id": "gintama-silver-soul-arc-second-half-war",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-silver-soul-arc",
-    "related_id": "gintama-silver-soul-arc-second-half-war-16uy",
-    "relation_type": "sequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-silver-soul-arc-second-half-war-16uy",
-    "related_id": "gintama-silver-soul-arc-second-half-war",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-silver-soul-arc-second-half-war-16uy",
-    "related_id": "gintama-silver-soul-arc",
-    "relation_type": "prequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "tales-of-wedding-rings",
-    "related_id": "tales-of-wedding-rings-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "tales-of-wedding-rings-season-2",
-    "related_id": "tales-of-wedding-rings",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "puella-magi-madoka-magica",
-    "related_id": "puella-magi-madoka-magica-the-movie-part-1-beginnings",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "puella-magi-madoka-magica",
-    "related_id": "puella-magi-madoka-magica-the-movie-rebellion",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "puella-magi-madoka-magica",
-    "related_id": "puella-magi-madoka-magica-the-movie-walpurgisnacht-rising",
-    "relation_type": "movie",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "puella-magi-madoka-magica-the-movie-part-1-beginnings",
-    "related_id": "puella-magi-madoka-magica",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "puella-magi-madoka-magica-the-movie-part-1-beginnings",
-    "related_id": "puella-magi-madoka-magica-the-movie-rebellion",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "puella-magi-madoka-magica-the-movie-part-1-beginnings",
-    "related_id": "puella-magi-madoka-magica-the-movie-walpurgisnacht-rising",
-    "relation_type": "movie",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "puella-magi-madoka-magica-the-movie-rebellion",
-    "related_id": "puella-magi-madoka-magica",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "puella-magi-madoka-magica-the-movie-rebellion",
-    "related_id": "puella-magi-madoka-magica-the-movie-part-1-beginnings",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "puella-magi-madoka-magica-the-movie-rebellion",
-    "related_id": "puella-magi-madoka-magica-the-movie-walpurgisnacht-rising",
-    "relation_type": "movie",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "puella-magi-madoka-magica-the-movie-walpurgisnacht-rising",
-    "related_id": "puella-magi-madoka-magica",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "puella-magi-madoka-magica-the-movie-walpurgisnacht-rising",
-    "related_id": "puella-magi-madoka-magica-the-movie-part-1-beginnings",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "puella-magi-madoka-magica-the-movie-walpurgisnacht-rising",
-    "related_id": "puella-magi-madoka-magica-the-movie-rebellion",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "berserk-the-golden-age-arc-i-the-egg-of-the-king",
-    "related_id": "berserk-the-golden-age-arc-ii-the-battle-for-doldrey",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "berserk-the-golden-age-arc-i-the-egg-of-the-king",
-    "related_id": "berserk-the-golden-age-arc-iii-the-advent",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "berserk-the-golden-age-arc-ii-the-battle-for-doldrey",
-    "related_id": "berserk-the-golden-age-arc-i-the-egg-of-the-king",
-    "relation_type": "movie",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "berserk-the-golden-age-arc-ii-the-battle-for-doldrey",
-    "related_id": "berserk-the-golden-age-arc-iii-the-advent",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "berserk-the-golden-age-arc-iii-the-advent",
-    "related_id": "berserk-the-golden-age-arc-i-the-egg-of-the-king",
-    "relation_type": "movie",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "berserk-the-golden-age-arc-iii-the-advent",
-    "related_id": "berserk-the-golden-age-arc-ii-the-battle-for-doldrey",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto",
-    "related_id": "naruto-the-movie-1-ninja-clash-in-the-land-of-snow",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto",
-    "related_id": "naruto-the-movie-ninja-clash-in-the-land-of-snow",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto",
-    "related_id": "naruto-the-movie-legend-of-the-stone-of-gelel",
-    "relation_type": "movie",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-the-movie-1-ninja-clash-in-the-land-of-snow",
-    "related_id": "naruto",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-the-movie-1-ninja-clash-in-the-land-of-snow",
-    "related_id": "naruto-the-movie-ninja-clash-in-the-land-of-snow",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-the-movie-1-ninja-clash-in-the-land-of-snow",
-    "related_id": "naruto-the-movie-legend-of-the-stone-of-gelel",
-    "relation_type": "movie",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-the-movie-ninja-clash-in-the-land-of-snow",
-    "related_id": "naruto",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-the-movie-ninja-clash-in-the-land-of-snow",
-    "related_id": "naruto-the-movie-1-ninja-clash-in-the-land-of-snow",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-the-movie-ninja-clash-in-the-land-of-snow",
-    "related_id": "naruto-the-movie-legend-of-the-stone-of-gelel",
-    "relation_type": "movie",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-the-movie-legend-of-the-stone-of-gelel",
-    "related_id": "naruto",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-the-movie-legend-of-the-stone-of-gelel",
-    "related_id": "naruto-the-movie-1-ninja-clash-in-the-land-of-snow",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-the-movie-legend-of-the-stone-of-gelel",
-    "related_id": "naruto-the-movie-ninja-clash-in-the-land-of-snow",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "the-most-heretical-last-boss-queen-from-villainess-to-savior",
-    "related_id": "the-most-heretical-last-boss-queen-from-villainess-to-savior-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "the-most-heretical-last-boss-queen-from-villainess-to-savior-season-2",
-    "related_id": "the-most-heretical-last-boss-queen-from-villainess-to-savior",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "clevatess",
-    "related_id": "clevatess-season-2-1j2w",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "clevatess",
-    "related_id": "clevatess-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "clevatess-season-2-1j2w",
-    "related_id": "clevatess",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "clevatess-season-2-1j2w",
-    "related_id": "clevatess-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "clevatess-season-2",
-    "related_id": "clevatess",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "clevatess-season-2",
-    "related_id": "clevatess-season-2-1j2w",
-    "relation_type": "prequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "yuruyuri",
-    "related_id": "yuruyuri-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "yuruyuri-season-2",
-    "related_id": "yuruyuri",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "sasaki-and-peeps",
-    "related_id": "sasaki-and-peeps-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "sasaki-and-peeps-season-2",
-    "related_id": "sasaki-and-peeps",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "beastars",
-    "related_id": "beastars-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "beastars",
-    "related_id": "beastars-final-season",
-    "relation_type": "sequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "beastars",
-    "related_id": "beastars-final-season-part-1",
-    "relation_type": "sequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "beastars-season-2",
-    "related_id": "beastars",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "beastars-season-2",
-    "related_id": "beastars-final-season",
-    "relation_type": "sequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "beastars-season-2",
-    "related_id": "beastars-final-season-part-1",
-    "relation_type": "sequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "beastars-final-season",
-    "related_id": "beastars",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "beastars-final-season",
-    "related_id": "beastars-season-2",
-    "relation_type": "prequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "beastars-final-season",
-    "related_id": "beastars-final-season-part-1",
-    "relation_type": "sequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "beastars-final-season-part-1",
-    "related_id": "beastars",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "beastars-final-season-part-1",
-    "related_id": "beastars-season-2",
-    "relation_type": "prequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "beastars-final-season-part-1",
-    "related_id": "beastars-final-season",
-    "relation_type": "prequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "ascendance-of-a-bookworm-adopted-daughter-of-an-archduke-e16u",
-    "related_id": "ascendance-of-a-bookworm-adopted-daughter-of-an-archduke",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "ascendance-of-a-bookworm-adopted-daughter-of-an-archduke",
-    "related_id": "ascendance-of-a-bookworm-adopted-daughter-of-an-archduke-e16u",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama",
-    "related_id": "gintama-the-movie-1bt2",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama",
-    "related_id": "gintama-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama",
-    "related_id": "gintama-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama",
-    "related_id": "gintama-season-2-part-2",
-    "relation_type": "sequel",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama",
-    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama",
-    "related_id": "gintama-season-3",
-    "relation_type": "sequel",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama",
-    "related_id": "gintama-season-5",
-    "relation_type": "sequel",
-    "chronology_order": 7,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama",
-    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "relation_type": "movie",
-    "chronology_order": 8,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-1bt2",
-    "related_id": "gintama",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-1bt2",
-    "related_id": "gintama-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-1bt2",
-    "related_id": "gintama-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-1bt2",
-    "related_id": "gintama-season-2-part-2",
-    "relation_type": "sequel",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-1bt2",
-    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-1bt2",
-    "related_id": "gintama-season-3",
-    "relation_type": "sequel",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-1bt2",
-    "related_id": "gintama-season-5",
-    "relation_type": "sequel",
-    "chronology_order": 7,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-1bt2",
-    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "relation_type": "movie",
-    "chronology_order": 8,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie",
-    "related_id": "gintama",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie",
-    "related_id": "gintama-the-movie-1bt2",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie",
-    "related_id": "gintama-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie",
-    "related_id": "gintama-season-2-part-2",
-    "relation_type": "sequel",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie",
-    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie",
-    "related_id": "gintama-season-3",
-    "relation_type": "sequel",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie",
-    "related_id": "gintama-season-5",
-    "relation_type": "sequel",
-    "chronology_order": 7,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie",
-    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "relation_type": "movie",
-    "chronology_order": 8,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2",
-    "related_id": "gintama",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2",
-    "related_id": "gintama-the-movie-1bt2",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2",
-    "related_id": "gintama-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2",
-    "related_id": "gintama-season-2-part-2",
-    "relation_type": "sequel",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2",
-    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2",
-    "related_id": "gintama-season-3",
-    "relation_type": "sequel",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2",
-    "related_id": "gintama-season-5",
-    "relation_type": "sequel",
-    "chronology_order": 7,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2",
-    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "relation_type": "movie",
-    "chronology_order": 8,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2-part-2",
-    "related_id": "gintama",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2-part-2",
-    "related_id": "gintama-the-movie-1bt2",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2-part-2",
-    "related_id": "gintama-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2-part-2",
-    "related_id": "gintama-season-2",
-    "relation_type": "prequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2-part-2",
-    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2-part-2",
-    "related_id": "gintama-season-3",
-    "relation_type": "sequel",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2-part-2",
-    "related_id": "gintama-season-5",
-    "relation_type": "sequel",
-    "chronology_order": 7,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-2-part-2",
-    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "relation_type": "movie",
-    "chronology_order": 8,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "related_id": "gintama",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "related_id": "gintama-the-movie-1bt2",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "related_id": "gintama-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "related_id": "gintama-season-2",
-    "relation_type": "prequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "related_id": "gintama-season-2-part-2",
-    "relation_type": "prequel",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "related_id": "gintama-season-3",
-    "relation_type": "sequel",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "related_id": "gintama-season-5",
-    "relation_type": "sequel",
-    "chronology_order": 7,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "relation_type": "movie",
-    "chronology_order": 8,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-3",
-    "related_id": "gintama",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-3",
-    "related_id": "gintama-the-movie-1bt2",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-3",
-    "related_id": "gintama-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-3",
-    "related_id": "gintama-season-2",
-    "relation_type": "prequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-3",
-    "related_id": "gintama-season-2-part-2",
-    "relation_type": "prequel",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-3",
-    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-3",
-    "related_id": "gintama-season-5",
-    "relation_type": "sequel",
-    "chronology_order": 7,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-3",
-    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "relation_type": "movie",
-    "chronology_order": 8,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-5",
-    "related_id": "gintama",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-5",
-    "related_id": "gintama-the-movie-1bt2",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-5",
-    "related_id": "gintama-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-5",
-    "related_id": "gintama-season-2",
-    "relation_type": "prequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-5",
-    "related_id": "gintama-season-2-part-2",
-    "relation_type": "prequel",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-5",
-    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-5",
-    "related_id": "gintama-season-3",
-    "relation_type": "prequel",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-season-5",
-    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "relation_type": "movie",
-    "chronology_order": 8,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "related_id": "gintama",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "related_id": "gintama-the-movie-1bt2",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "related_id": "gintama-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "related_id": "gintama-season-2",
-    "relation_type": "prequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "related_id": "gintama-season-2-part-2",
-    "relation_type": "prequel",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "related_id": "gintama-season-3",
-    "relation_type": "prequel",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
-    "related_id": "gintama-season-5",
-    "relation_type": "prequel",
-    "chronology_order": 7,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "laid-back-camp",
-    "related_id": "laid-back-camp-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "laid-back-camp",
-    "related_id": "laid-back-camp-season-3-93w1",
-    "relation_type": "sequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "laid-back-camp",
-    "related_id": "laid-back-camp-season-3",
-    "relation_type": "sequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "laid-back-camp-season-2",
-    "related_id": "laid-back-camp",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "laid-back-camp-season-2",
-    "related_id": "laid-back-camp-season-3-93w1",
-    "relation_type": "sequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "laid-back-camp-season-2",
-    "related_id": "laid-back-camp-season-3",
-    "relation_type": "sequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "laid-back-camp-season-3-93w1",
-    "related_id": "laid-back-camp",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "laid-back-camp-season-3-93w1",
-    "related_id": "laid-back-camp-season-2",
-    "relation_type": "prequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "laid-back-camp-season-3-93w1",
-    "related_id": "laid-back-camp-season-3",
-    "relation_type": "sequel",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "laid-back-camp-season-3",
-    "related_id": "laid-back-camp",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "laid-back-camp-season-3",
-    "related_id": "laid-back-camp-season-2",
-    "relation_type": "prequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "laid-back-camp-season-3",
-    "related_id": "laid-back-camp-season-3-93w1",
-    "relation_type": "prequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "let-this-grieving-soul-retire",
-    "related_id": "let-this-grieving-soul-retire-cour-2-175u",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "let-this-grieving-soul-retire",
-    "related_id": "let-this-grieving-soul-retire-cour-2",
-    "relation_type": "sequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "let-this-grieving-soul-retire-cour-2-175u",
-    "related_id": "let-this-grieving-soul-retire",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "let-this-grieving-soul-retire-cour-2-175u",
-    "related_id": "let-this-grieving-soul-retire-cour-2",
-    "relation_type": "sequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "let-this-grieving-soul-retire-cour-2",
-    "related_id": "let-this-grieving-soul-retire",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "let-this-grieving-soul-retire-cour-2",
-    "related_id": "let-this-grieving-soul-retire-cour-2-175u",
-    "relation_type": "prequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "boruto-naruto-the-movie",
-    "related_id": "boruto-naruto-the-movie-the-day-naruto-became-hokage",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "boruto-naruto-the-movie-the-day-naruto-became-hokage",
-    "related_id": "boruto-naruto-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "jujutsu-kaisen",
-    "related_id": "jujutsu-kaisen-0",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "jujutsu-kaisen",
-    "related_id": "jujutsu-kaisen-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "jujutsu-kaisen-0",
-    "related_id": "jujutsu-kaisen",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "jujutsu-kaisen-0",
-    "related_id": "jujutsu-kaisen-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "jujutsu-kaisen-season-2",
-    "related_id": "jujutsu-kaisen",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "jujutsu-kaisen-season-2",
-    "related_id": "jujutsu-kaisen-0",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "solo-leveling",
-    "related_id": "solo-leveling-season-2-arise-from-the-shadow",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "solo-leveling-season-2-arise-from-the-shadow",
-    "related_id": "solo-leveling",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "one-piece",
-    "related_id": "one-piece-the-movie-the-dead-end-adventure",
-    "relation_type": "movie",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "one-piece-the-movie-the-dead-end-adventure",
-    "related_id": "one-piece",
-    "relation_type": "prequel",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie",
-    "related_id": "naruto-shippuden",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie",
-    "related_id": "naruto-shippuden-the-movie-the-will-of-fire",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie",
-    "related_id": "naruto-shippuden-the-movie-4-the-lost-tower",
-    "relation_type": "movie",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie",
-    "related_id": "naruto-shippuden-the-movie-5-blood-prison",
-    "relation_type": "movie",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie",
-    "related_id": "naruto-shippuden-the-movie-6-road-to-ninja",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie",
-    "related_id": "naruto-shippuden-the-movie-7-the-last",
-    "relation_type": "movie",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden",
-    "related_id": "naruto-shippuden-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden",
-    "related_id": "naruto-shippuden-the-movie-the-will-of-fire",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden",
-    "related_id": "naruto-shippuden-the-movie-4-the-lost-tower",
-    "relation_type": "movie",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden",
-    "related_id": "naruto-shippuden-the-movie-5-blood-prison",
-    "relation_type": "movie",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden",
-    "related_id": "naruto-shippuden-the-movie-6-road-to-ninja",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden",
-    "related_id": "naruto-shippuden-the-movie-7-the-last",
-    "relation_type": "movie",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-the-will-of-fire",
-    "related_id": "naruto-shippuden-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-the-will-of-fire",
-    "related_id": "naruto-shippuden",
-    "relation_type": "prequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-the-will-of-fire",
-    "related_id": "naruto-shippuden-the-movie-4-the-lost-tower",
-    "relation_type": "movie",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-the-will-of-fire",
-    "related_id": "naruto-shippuden-the-movie-5-blood-prison",
-    "relation_type": "movie",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-the-will-of-fire",
-    "related_id": "naruto-shippuden-the-movie-6-road-to-ninja",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-the-will-of-fire",
-    "related_id": "naruto-shippuden-the-movie-7-the-last",
-    "relation_type": "movie",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-4-the-lost-tower",
-    "related_id": "naruto-shippuden-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-4-the-lost-tower",
-    "related_id": "naruto-shippuden",
-    "relation_type": "prequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-4-the-lost-tower",
-    "related_id": "naruto-shippuden-the-movie-the-will-of-fire",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-4-the-lost-tower",
-    "related_id": "naruto-shippuden-the-movie-5-blood-prison",
-    "relation_type": "movie",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-4-the-lost-tower",
-    "related_id": "naruto-shippuden-the-movie-6-road-to-ninja",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-4-the-lost-tower",
-    "related_id": "naruto-shippuden-the-movie-7-the-last",
-    "relation_type": "movie",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-5-blood-prison",
-    "related_id": "naruto-shippuden-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-5-blood-prison",
-    "related_id": "naruto-shippuden",
-    "relation_type": "prequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-5-blood-prison",
-    "related_id": "naruto-shippuden-the-movie-the-will-of-fire",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-5-blood-prison",
-    "related_id": "naruto-shippuden-the-movie-4-the-lost-tower",
-    "relation_type": "movie",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-5-blood-prison",
-    "related_id": "naruto-shippuden-the-movie-6-road-to-ninja",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-5-blood-prison",
-    "related_id": "naruto-shippuden-the-movie-7-the-last",
-    "relation_type": "movie",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-6-road-to-ninja",
-    "related_id": "naruto-shippuden-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-6-road-to-ninja",
-    "related_id": "naruto-shippuden",
-    "relation_type": "prequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-6-road-to-ninja",
-    "related_id": "naruto-shippuden-the-movie-the-will-of-fire",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-6-road-to-ninja",
-    "related_id": "naruto-shippuden-the-movie-4-the-lost-tower",
-    "relation_type": "movie",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-6-road-to-ninja",
-    "related_id": "naruto-shippuden-the-movie-5-blood-prison",
-    "relation_type": "movie",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-6-road-to-ninja",
-    "related_id": "naruto-shippuden-the-movie-7-the-last",
-    "relation_type": "movie",
-    "chronology_order": 6,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-7-the-last",
-    "related_id": "naruto-shippuden-the-movie",
-    "relation_type": "movie",
-    "chronology_order": 0,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-7-the-last",
-    "related_id": "naruto-shippuden",
-    "relation_type": "prequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-7-the-last",
-    "related_id": "naruto-shippuden-the-movie-the-will-of-fire",
-    "relation_type": "movie",
-    "chronology_order": 2,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-7-the-last",
-    "related_id": "naruto-shippuden-the-movie-4-the-lost-tower",
-    "relation_type": "movie",
-    "chronology_order": 3,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-7-the-last",
-    "related_id": "naruto-shippuden-the-movie-5-blood-prison",
-    "relation_type": "movie",
-    "chronology_order": 4,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "naruto-shippuden-the-movie-7-the-last",
-    "related_id": "naruto-shippuden-the-movie-6-road-to-ninja",
-    "relation_type": "movie",
-    "chronology_order": 5,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
-    "anime_id": "black-clover",
-    "related_id": "black-clover-season-2",
-    "relation_type": "sequel",
-    "chronology_order": 1,
-    "created_at": "2026-11-07 00:57:29"
-  },
-  {
     "anime_id": "black-clover-season-2",
     "related_id": "black-clover",
     "relation_type": "prequel",
@@ -13676,5 +12213,1888 @@
     "relation_type": "movie",
     "chronology_order": 2018,
     "created_at": "2026-11-07 00:57:29"
+  },
+  {
+    "anime_id": "gintama-silver-soul-arc-second-half-war",
+    "related_id": "gintama-silver-soul-arc",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:31"
+  },
+  {
+    "anime_id": "gintama-silver-soul-arc-second-half-war",
+    "related_id": "gintama-silver-soul-arc-second-half-war-16uy",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:31"
+  },
+  {
+    "anime_id": "gintama-silver-soul-arc",
+    "related_id": "gintama-silver-soul-arc-second-half-war",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:31"
+  },
+  {
+    "anime_id": "gintama-silver-soul-arc",
+    "related_id": "gintama-silver-soul-arc-second-half-war-16uy",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:32"
+  },
+  {
+    "anime_id": "gintama-silver-soul-arc-second-half-war-16uy",
+    "related_id": "gintama-silver-soul-arc-second-half-war",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:32"
+  },
+  {
+    "anime_id": "gintama-silver-soul-arc-second-half-war-16uy",
+    "related_id": "gintama-silver-soul-arc",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:32"
+  },
+  {
+    "anime_id": "tales-of-wedding-rings",
+    "related_id": "tales-of-wedding-rings-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:33"
+  },
+  {
+    "anime_id": "tales-of-wedding-rings-season-2",
+    "related_id": "tales-of-wedding-rings",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:33"
+  },
+  {
+    "anime_id": "puella-magi-madoka-magica",
+    "related_id": "puella-magi-madoka-magica-the-movie-part-1-beginnings",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:33"
+  },
+  {
+    "anime_id": "puella-magi-madoka-magica",
+    "related_id": "puella-magi-madoka-magica-the-movie-rebellion",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:34"
+  },
+  {
+    "anime_id": "puella-magi-madoka-magica",
+    "related_id": "puella-magi-madoka-magica-the-movie-walpurgisnacht-rising",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:44:34"
+  },
+  {
+    "anime_id": "puella-magi-madoka-magica-the-movie-part-1-beginnings",
+    "related_id": "puella-magi-madoka-magica",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:34"
+  },
+  {
+    "anime_id": "puella-magi-madoka-magica-the-movie-part-1-beginnings",
+    "related_id": "puella-magi-madoka-magica-the-movie-rebellion",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:35"
+  },
+  {
+    "anime_id": "puella-magi-madoka-magica-the-movie-part-1-beginnings",
+    "related_id": "puella-magi-madoka-magica-the-movie-walpurgisnacht-rising",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:44:35"
+  },
+  {
+    "anime_id": "puella-magi-madoka-magica-the-movie-rebellion",
+    "related_id": "puella-magi-madoka-magica",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:35"
+  },
+  {
+    "anime_id": "puella-magi-madoka-magica-the-movie-rebellion",
+    "related_id": "puella-magi-madoka-magica-the-movie-part-1-beginnings",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:36"
+  },
+  {
+    "anime_id": "puella-magi-madoka-magica-the-movie-rebellion",
+    "related_id": "puella-magi-madoka-magica-the-movie-walpurgisnacht-rising",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:44:36"
+  },
+  {
+    "anime_id": "puella-magi-madoka-magica-the-movie-walpurgisnacht-rising",
+    "related_id": "puella-magi-madoka-magica",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:36"
+  },
+  {
+    "anime_id": "puella-magi-madoka-magica-the-movie-walpurgisnacht-rising",
+    "related_id": "puella-magi-madoka-magica-the-movie-part-1-beginnings",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:37"
+  },
+  {
+    "anime_id": "puella-magi-madoka-magica-the-movie-walpurgisnacht-rising",
+    "related_id": "puella-magi-madoka-magica-the-movie-rebellion",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:37"
+  },
+  {
+    "anime_id": "berserk-the-golden-age-arc-i-the-egg-of-the-king",
+    "related_id": "berserk-the-golden-age-arc-ii-the-battle-for-doldrey",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:37"
+  },
+  {
+    "anime_id": "berserk-the-golden-age-arc-i-the-egg-of-the-king",
+    "related_id": "berserk-the-golden-age-arc-iii-the-advent",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:38"
+  },
+  {
+    "anime_id": "berserk-the-golden-age-arc-ii-the-battle-for-doldrey",
+    "related_id": "berserk-the-golden-age-arc-i-the-egg-of-the-king",
+    "relation_type": "movie",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:38"
+  },
+  {
+    "anime_id": "berserk-the-golden-age-arc-ii-the-battle-for-doldrey",
+    "related_id": "berserk-the-golden-age-arc-iii-the-advent",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:38"
+  },
+  {
+    "anime_id": "berserk-the-golden-age-arc-iii-the-advent",
+    "related_id": "berserk-the-golden-age-arc-i-the-egg-of-the-king",
+    "relation_type": "movie",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:39"
+  },
+  {
+    "anime_id": "berserk-the-golden-age-arc-iii-the-advent",
+    "related_id": "berserk-the-golden-age-arc-ii-the-battle-for-doldrey",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:39"
+  },
+  {
+    "anime_id": "naruto",
+    "related_id": "naruto-the-movie-1-ninja-clash-in-the-land-of-snow",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:39"
+  },
+  {
+    "anime_id": "naruto",
+    "related_id": "naruto-the-movie-ninja-clash-in-the-land-of-snow",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:40"
+  },
+  {
+    "anime_id": "naruto",
+    "related_id": "naruto-the-movie-legend-of-the-stone-of-gelel",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:44:40"
+  },
+  {
+    "anime_id": "naruto-the-movie-1-ninja-clash-in-the-land-of-snow",
+    "related_id": "naruto",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:40"
+  },
+  {
+    "anime_id": "naruto-the-movie-1-ninja-clash-in-the-land-of-snow",
+    "related_id": "naruto-the-movie-ninja-clash-in-the-land-of-snow",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:41"
+  },
+  {
+    "anime_id": "naruto-the-movie-1-ninja-clash-in-the-land-of-snow",
+    "related_id": "naruto-the-movie-legend-of-the-stone-of-gelel",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:44:41"
+  },
+  {
+    "anime_id": "naruto-the-movie-ninja-clash-in-the-land-of-snow",
+    "related_id": "naruto",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:41"
+  },
+  {
+    "anime_id": "naruto-the-movie-ninja-clash-in-the-land-of-snow",
+    "related_id": "naruto-the-movie-1-ninja-clash-in-the-land-of-snow",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:42"
+  },
+  {
+    "anime_id": "naruto-the-movie-ninja-clash-in-the-land-of-snow",
+    "related_id": "naruto-the-movie-legend-of-the-stone-of-gelel",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:44:42"
+  },
+  {
+    "anime_id": "naruto-the-movie-legend-of-the-stone-of-gelel",
+    "related_id": "naruto",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:42"
+  },
+  {
+    "anime_id": "naruto-the-movie-legend-of-the-stone-of-gelel",
+    "related_id": "naruto-the-movie-1-ninja-clash-in-the-land-of-snow",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:43"
+  },
+  {
+    "anime_id": "naruto-the-movie-legend-of-the-stone-of-gelel",
+    "related_id": "naruto-the-movie-ninja-clash-in-the-land-of-snow",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:43"
+  },
+  {
+    "anime_id": "the-most-heretical-last-boss-queen-from-villainess-to-savior",
+    "related_id": "the-most-heretical-last-boss-queen-from-villainess-to-savior-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:43"
+  },
+  {
+    "anime_id": "the-most-heretical-last-boss-queen-from-villainess-to-savior-season-2",
+    "related_id": "the-most-heretical-last-boss-queen-from-villainess-to-savior",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:44"
+  },
+  {
+    "anime_id": "clevatess",
+    "related_id": "clevatess-season-2-1j2w",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:44"
+  },
+  {
+    "anime_id": "clevatess",
+    "related_id": "clevatess-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:45"
+  },
+  {
+    "anime_id": "clevatess-season-2-1j2w",
+    "related_id": "clevatess",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:45"
+  },
+  {
+    "anime_id": "clevatess-season-2-1j2w",
+    "related_id": "clevatess-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:45"
+  },
+  {
+    "anime_id": "clevatess-season-2",
+    "related_id": "clevatess",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:46"
+  },
+  {
+    "anime_id": "clevatess-season-2",
+    "related_id": "clevatess-season-2-1j2w",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:46"
+  },
+  {
+    "anime_id": "yuruyuri",
+    "related_id": "yuruyuri-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:46"
+  },
+  {
+    "anime_id": "yuruyuri-season-2",
+    "related_id": "yuruyuri",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:47"
+  },
+  {
+    "anime_id": "sasaki-and-peeps",
+    "related_id": "sasaki-and-peeps-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:47"
+  },
+  {
+    "anime_id": "sasaki-and-peeps-season-2",
+    "related_id": "sasaki-and-peeps",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:47"
+  },
+  {
+    "anime_id": "beastars",
+    "related_id": "beastars-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:48"
+  },
+  {
+    "anime_id": "beastars",
+    "related_id": "beastars-final-season",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:48"
+  },
+  {
+    "anime_id": "beastars",
+    "related_id": "beastars-final-season-part-1",
+    "relation_type": "sequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:44:48"
+  },
+  {
+    "anime_id": "beastars-season-2",
+    "related_id": "beastars",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:49"
+  },
+  {
+    "anime_id": "beastars-season-2",
+    "related_id": "beastars-final-season",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:49"
+  },
+  {
+    "anime_id": "beastars-season-2",
+    "related_id": "beastars-final-season-part-1",
+    "relation_type": "sequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:44:49"
+  },
+  {
+    "anime_id": "beastars-final-season",
+    "related_id": "beastars",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:50"
+  },
+  {
+    "anime_id": "beastars-final-season",
+    "related_id": "beastars-season-2",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:50"
+  },
+  {
+    "anime_id": "beastars-final-season",
+    "related_id": "beastars-final-season-part-1",
+    "relation_type": "sequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:44:51"
+  },
+  {
+    "anime_id": "beastars-final-season-part-1",
+    "related_id": "beastars",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:51"
+  },
+  {
+    "anime_id": "beastars-final-season-part-1",
+    "related_id": "beastars-season-2",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:51"
+  },
+  {
+    "anime_id": "beastars-final-season-part-1",
+    "related_id": "beastars-final-season",
+    "relation_type": "prequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:52"
+  },
+  {
+    "anime_id": "ascendance-of-a-bookworm-adopted-daughter-of-an-archduke-e16u",
+    "related_id": "ascendance-of-a-bookworm-adopted-daughter-of-an-archduke",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:52"
+  },
+  {
+    "anime_id": "ascendance-of-a-bookworm-adopted-daughter-of-an-archduke",
+    "related_id": "ascendance-of-a-bookworm-adopted-daughter-of-an-archduke-e16u",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:52"
+  },
+  {
+    "anime_id": "gintama",
+    "related_id": "gintama-the-movie-1bt2",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:53"
+  },
+  {
+    "anime_id": "gintama",
+    "related_id": "gintama-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:53"
+  },
+  {
+    "anime_id": "gintama",
+    "related_id": "gintama-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:44:53"
+  },
+  {
+    "anime_id": "gintama",
+    "related_id": "gintama-season-2-part-2",
+    "relation_type": "sequel",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:44:54"
+  },
+  {
+    "anime_id": "gintama",
+    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:44:54"
+  },
+  {
+    "anime_id": "gintama",
+    "related_id": "gintama-season-3",
+    "relation_type": "sequel",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:44:54"
+  },
+  {
+    "anime_id": "gintama",
+    "related_id": "gintama-season-5",
+    "relation_type": "sequel",
+    "chronology_order": 7,
+    "created_at": "2026-11-08 02:44:55"
+  },
+  {
+    "anime_id": "gintama",
+    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "relation_type": "movie",
+    "chronology_order": 8,
+    "created_at": "2026-11-08 02:44:55"
+  },
+  {
+    "anime_id": "gintama-the-movie-1bt2",
+    "related_id": "gintama",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:55"
+  },
+  {
+    "anime_id": "gintama-the-movie-1bt2",
+    "related_id": "gintama-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:44:56"
+  },
+  {
+    "anime_id": "gintama-the-movie-1bt2",
+    "related_id": "gintama-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:44:56"
+  },
+  {
+    "anime_id": "gintama-the-movie-1bt2",
+    "related_id": "gintama-season-2-part-2",
+    "relation_type": "sequel",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:44:56"
+  },
+  {
+    "anime_id": "gintama-the-movie-1bt2",
+    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:44:57"
+  },
+  {
+    "anime_id": "gintama-the-movie-1bt2",
+    "related_id": "gintama-season-3",
+    "relation_type": "sequel",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:44:57"
+  },
+  {
+    "anime_id": "gintama-the-movie-1bt2",
+    "related_id": "gintama-season-5",
+    "relation_type": "sequel",
+    "chronology_order": 7,
+    "created_at": "2026-11-08 02:44:57"
+  },
+  {
+    "anime_id": "gintama-the-movie-1bt2",
+    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "relation_type": "movie",
+    "chronology_order": 8,
+    "created_at": "2026-11-08 02:44:58"
+  },
+  {
+    "anime_id": "gintama-the-movie",
+    "related_id": "gintama",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:44:58"
+  },
+  {
+    "anime_id": "gintama-the-movie",
+    "related_id": "gintama-the-movie-1bt2",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:44:59"
+  },
+  {
+    "anime_id": "gintama-the-movie",
+    "related_id": "gintama-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:44:59"
+  },
+  {
+    "anime_id": "gintama-the-movie",
+    "related_id": "gintama-season-2-part-2",
+    "relation_type": "sequel",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:44:59"
+  },
+  {
+    "anime_id": "gintama-the-movie",
+    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:45:00"
+  },
+  {
+    "anime_id": "gintama-the-movie",
+    "related_id": "gintama-season-3",
+    "relation_type": "sequel",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:45:00"
+  },
+  {
+    "anime_id": "gintama-the-movie",
+    "related_id": "gintama-season-5",
+    "relation_type": "sequel",
+    "chronology_order": 7,
+    "created_at": "2026-11-08 02:45:00"
+  },
+  {
+    "anime_id": "gintama-the-movie",
+    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "relation_type": "movie",
+    "chronology_order": 8,
+    "created_at": "2026-11-08 02:45:01"
+  },
+  {
+    "anime_id": "gintama-season-2",
+    "related_id": "gintama",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:01"
+  },
+  {
+    "anime_id": "gintama-season-2",
+    "related_id": "gintama-the-movie-1bt2",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:01"
+  },
+  {
+    "anime_id": "gintama-season-2",
+    "related_id": "gintama-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:02"
+  },
+  {
+    "anime_id": "gintama-season-2",
+    "related_id": "gintama-season-2-part-2",
+    "relation_type": "sequel",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:45:02"
+  },
+  {
+    "anime_id": "gintama-season-2",
+    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:45:02"
+  },
+  {
+    "anime_id": "gintama-season-2",
+    "related_id": "gintama-season-3",
+    "relation_type": "sequel",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:45:03"
+  },
+  {
+    "anime_id": "gintama-season-2",
+    "related_id": "gintama-season-5",
+    "relation_type": "sequel",
+    "chronology_order": 7,
+    "created_at": "2026-11-08 02:45:03"
+  },
+  {
+    "anime_id": "gintama-season-2",
+    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "relation_type": "movie",
+    "chronology_order": 8,
+    "created_at": "2026-11-08 02:45:03"
+  },
+  {
+    "anime_id": "gintama-season-2-part-2",
+    "related_id": "gintama",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:04"
+  },
+  {
+    "anime_id": "gintama-season-2-part-2",
+    "related_id": "gintama-the-movie-1bt2",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:04"
+  },
+  {
+    "anime_id": "gintama-season-2-part-2",
+    "related_id": "gintama-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:04"
+  },
+  {
+    "anime_id": "gintama-season-2-part-2",
+    "related_id": "gintama-season-2",
+    "relation_type": "prequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:05"
+  },
+  {
+    "anime_id": "gintama-season-2-part-2",
+    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:45:05"
+  },
+  {
+    "anime_id": "gintama-season-2-part-2",
+    "related_id": "gintama-season-3",
+    "relation_type": "sequel",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:45:05"
+  },
+  {
+    "anime_id": "gintama-season-2-part-2",
+    "related_id": "gintama-season-5",
+    "relation_type": "sequel",
+    "chronology_order": 7,
+    "created_at": "2026-11-08 02:45:06"
+  },
+  {
+    "anime_id": "gintama-season-2-part-2",
+    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "relation_type": "movie",
+    "chronology_order": 8,
+    "created_at": "2026-11-08 02:45:06"
+  },
+  {
+    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "related_id": "gintama",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:07"
+  },
+  {
+    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "related_id": "gintama-the-movie-1bt2",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:07"
+  },
+  {
+    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "related_id": "gintama-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:07"
+  },
+  {
+    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "related_id": "gintama-season-2",
+    "relation_type": "prequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:08"
+  },
+  {
+    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "related_id": "gintama-season-2-part-2",
+    "relation_type": "prequel",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:45:08"
+  },
+  {
+    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "related_id": "gintama-season-3",
+    "relation_type": "sequel",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:45:08"
+  },
+  {
+    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "related_id": "gintama-season-5",
+    "relation_type": "sequel",
+    "chronology_order": 7,
+    "created_at": "2026-11-08 02:45:09"
+  },
+  {
+    "anime_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "relation_type": "movie",
+    "chronology_order": 8,
+    "created_at": "2026-11-08 02:45:09"
+  },
+  {
+    "anime_id": "gintama-season-3",
+    "related_id": "gintama",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:09"
+  },
+  {
+    "anime_id": "gintama-season-3",
+    "related_id": "gintama-the-movie-1bt2",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:10"
+  },
+  {
+    "anime_id": "gintama-season-3",
+    "related_id": "gintama-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:10"
+  },
+  {
+    "anime_id": "gintama-season-3",
+    "related_id": "gintama-season-2",
+    "relation_type": "prequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:10"
+  },
+  {
+    "anime_id": "gintama-season-3",
+    "related_id": "gintama-season-2-part-2",
+    "relation_type": "prequel",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:45:11"
+  },
+  {
+    "anime_id": "gintama-season-3",
+    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:45:11"
+  },
+  {
+    "anime_id": "gintama-season-3",
+    "related_id": "gintama-season-5",
+    "relation_type": "sequel",
+    "chronology_order": 7,
+    "created_at": "2026-11-08 02:45:11"
+  },
+  {
+    "anime_id": "gintama-season-3",
+    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "relation_type": "movie",
+    "chronology_order": 8,
+    "created_at": "2026-11-08 02:45:12"
+  },
+  {
+    "anime_id": "gintama-season-5",
+    "related_id": "gintama",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:12"
+  },
+  {
+    "anime_id": "gintama-season-5",
+    "related_id": "gintama-the-movie-1bt2",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:12"
+  },
+  {
+    "anime_id": "gintama-season-5",
+    "related_id": "gintama-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:13"
+  },
+  {
+    "anime_id": "gintama-season-5",
+    "related_id": "gintama-season-2",
+    "relation_type": "prequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:13"
+  },
+  {
+    "anime_id": "gintama-season-5",
+    "related_id": "gintama-season-2-part-2",
+    "relation_type": "prequel",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:45:14"
+  },
+  {
+    "anime_id": "gintama-season-5",
+    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:45:14"
+  },
+  {
+    "anime_id": "gintama-season-5",
+    "related_id": "gintama-season-3",
+    "relation_type": "prequel",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:45:14"
+  },
+  {
+    "anime_id": "gintama-season-5",
+    "related_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "relation_type": "movie",
+    "chronology_order": 8,
+    "created_at": "2026-11-08 02:45:15"
+  },
+  {
+    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "related_id": "gintama",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:15"
+  },
+  {
+    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "related_id": "gintama-the-movie-1bt2",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:15"
+  },
+  {
+    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "related_id": "gintama-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:16"
+  },
+  {
+    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "related_id": "gintama-season-2",
+    "relation_type": "prequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:16"
+  },
+  {
+    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "related_id": "gintama-season-2-part-2",
+    "relation_type": "prequel",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:45:16"
+  },
+  {
+    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "related_id": "gintama-the-movie-the-final-chapter-be-forever-yorozuya",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:45:17"
+  },
+  {
+    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "related_id": "gintama-season-3",
+    "relation_type": "prequel",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:45:17"
+  },
+  {
+    "anime_id": "gintama-the-movie-2026-yoshiwara-in-flames",
+    "related_id": "gintama-season-5",
+    "relation_type": "prequel",
+    "chronology_order": 7,
+    "created_at": "2026-11-08 02:45:17"
+  },
+  {
+    "anime_id": "laid-back-camp",
+    "related_id": "laid-back-camp-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:18"
+  },
+  {
+    "anime_id": "laid-back-camp",
+    "related_id": "laid-back-camp-season-3-93w1",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:18"
+  },
+  {
+    "anime_id": "laid-back-camp",
+    "related_id": "laid-back-camp-season-3",
+    "relation_type": "sequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:18"
+  },
+  {
+    "anime_id": "laid-back-camp-season-2",
+    "related_id": "laid-back-camp",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:19"
+  },
+  {
+    "anime_id": "laid-back-camp-season-2",
+    "related_id": "laid-back-camp-season-3-93w1",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:19"
+  },
+  {
+    "anime_id": "laid-back-camp-season-2",
+    "related_id": "laid-back-camp-season-3",
+    "relation_type": "sequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:19"
+  },
+  {
+    "anime_id": "laid-back-camp-season-3-93w1",
+    "related_id": "laid-back-camp",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:20"
+  },
+  {
+    "anime_id": "laid-back-camp-season-3-93w1",
+    "related_id": "laid-back-camp-season-2",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:20"
+  },
+  {
+    "anime_id": "laid-back-camp-season-3-93w1",
+    "related_id": "laid-back-camp-season-3",
+    "relation_type": "sequel",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:21"
+  },
+  {
+    "anime_id": "laid-back-camp-season-3",
+    "related_id": "laid-back-camp",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:21"
+  },
+  {
+    "anime_id": "laid-back-camp-season-3",
+    "related_id": "laid-back-camp-season-2",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:21"
+  },
+  {
+    "anime_id": "laid-back-camp-season-3",
+    "related_id": "laid-back-camp-season-3-93w1",
+    "relation_type": "prequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:22"
+  },
+  {
+    "anime_id": "let-this-grieving-soul-retire",
+    "related_id": "let-this-grieving-soul-retire-cour-2-175u",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:22"
+  },
+  {
+    "anime_id": "let-this-grieving-soul-retire",
+    "related_id": "let-this-grieving-soul-retire-cour-2",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:22"
+  },
+  {
+    "anime_id": "let-this-grieving-soul-retire-cour-2-175u",
+    "related_id": "let-this-grieving-soul-retire",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:23"
+  },
+  {
+    "anime_id": "let-this-grieving-soul-retire-cour-2-175u",
+    "related_id": "let-this-grieving-soul-retire-cour-2",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:23"
+  },
+  {
+    "anime_id": "let-this-grieving-soul-retire-cour-2",
+    "related_id": "let-this-grieving-soul-retire",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:23"
+  },
+  {
+    "anime_id": "let-this-grieving-soul-retire-cour-2",
+    "related_id": "let-this-grieving-soul-retire-cour-2-175u",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:24"
+  },
+  {
+    "anime_id": "boruto-naruto-the-movie",
+    "related_id": "boruto-naruto-the-movie-the-day-naruto-became-hokage",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:24"
+  },
+  {
+    "anime_id": "boruto-naruto-the-movie-the-day-naruto-became-hokage",
+    "related_id": "boruto-naruto-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:24"
+  },
+  {
+    "anime_id": "jujutsu-kaisen",
+    "related_id": "jujutsu-kaisen-0",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:25"
+  },
+  {
+    "anime_id": "jujutsu-kaisen",
+    "related_id": "jujutsu-kaisen-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:25"
+  },
+  {
+    "anime_id": "jujutsu-kaisen-0",
+    "related_id": "jujutsu-kaisen",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:25"
+  },
+  {
+    "anime_id": "jujutsu-kaisen-0",
+    "related_id": "jujutsu-kaisen-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:26"
+  },
+  {
+    "anime_id": "jujutsu-kaisen-season-2",
+    "related_id": "jujutsu-kaisen",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:26"
+  },
+  {
+    "anime_id": "jujutsu-kaisen-season-2",
+    "related_id": "jujutsu-kaisen-0",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:26"
+  },
+  {
+    "anime_id": "solo-leveling",
+    "related_id": "solo-leveling-season-2-arise-from-the-shadow",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:27"
+  },
+  {
+    "anime_id": "solo-leveling-season-2-arise-from-the-shadow",
+    "related_id": "solo-leveling",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:27"
+  },
+  {
+    "anime_id": "one-piece",
+    "related_id": "one-piece-the-movie-the-dead-end-adventure",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:27"
+  },
+  {
+    "anime_id": "one-piece-the-movie-the-dead-end-adventure",
+    "related_id": "one-piece",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:28"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie",
+    "related_id": "naruto-shippuden",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:28"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie",
+    "related_id": "naruto-shippuden-the-movie-the-will-of-fire",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:28"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie",
+    "related_id": "naruto-shippuden-the-movie-4-the-lost-tower",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:29"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie",
+    "related_id": "naruto-shippuden-the-movie-5-blood-prison",
+    "relation_type": "movie",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:45:29"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie",
+    "related_id": "naruto-shippuden-the-movie-6-road-to-ninja",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:45:29"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie",
+    "related_id": "naruto-shippuden-the-movie-7-the-last",
+    "relation_type": "movie",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:45:30"
+  },
+  {
+    "anime_id": "naruto-shippuden",
+    "related_id": "naruto-shippuden-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:30"
+  },
+  {
+    "anime_id": "naruto-shippuden",
+    "related_id": "naruto-shippuden-the-movie-the-will-of-fire",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:31"
+  },
+  {
+    "anime_id": "naruto-shippuden",
+    "related_id": "naruto-shippuden-the-movie-4-the-lost-tower",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:31"
+  },
+  {
+    "anime_id": "naruto-shippuden",
+    "related_id": "naruto-shippuden-the-movie-5-blood-prison",
+    "relation_type": "movie",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:45:31"
+  },
+  {
+    "anime_id": "naruto-shippuden",
+    "related_id": "naruto-shippuden-the-movie-6-road-to-ninja",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:45:32"
+  },
+  {
+    "anime_id": "naruto-shippuden",
+    "related_id": "naruto-shippuden-the-movie-7-the-last",
+    "relation_type": "movie",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:45:32"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-the-will-of-fire",
+    "related_id": "naruto-shippuden-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:32"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-the-will-of-fire",
+    "related_id": "naruto-shippuden",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:33"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-the-will-of-fire",
+    "related_id": "naruto-shippuden-the-movie-4-the-lost-tower",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:33"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-the-will-of-fire",
+    "related_id": "naruto-shippuden-the-movie-5-blood-prison",
+    "relation_type": "movie",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:45:33"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-the-will-of-fire",
+    "related_id": "naruto-shippuden-the-movie-6-road-to-ninja",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:45:34"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-the-will-of-fire",
+    "related_id": "naruto-shippuden-the-movie-7-the-last",
+    "relation_type": "movie",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:45:34"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-4-the-lost-tower",
+    "related_id": "naruto-shippuden-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:34"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-4-the-lost-tower",
+    "related_id": "naruto-shippuden",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:35"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-4-the-lost-tower",
+    "related_id": "naruto-shippuden-the-movie-the-will-of-fire",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:35"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-4-the-lost-tower",
+    "related_id": "naruto-shippuden-the-movie-5-blood-prison",
+    "relation_type": "movie",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:45:35"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-4-the-lost-tower",
+    "related_id": "naruto-shippuden-the-movie-6-road-to-ninja",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:45:36"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-4-the-lost-tower",
+    "related_id": "naruto-shippuden-the-movie-7-the-last",
+    "relation_type": "movie",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:45:36"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-5-blood-prison",
+    "related_id": "naruto-shippuden-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:36"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-5-blood-prison",
+    "related_id": "naruto-shippuden",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:37"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-5-blood-prison",
+    "related_id": "naruto-shippuden-the-movie-the-will-of-fire",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:37"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-5-blood-prison",
+    "related_id": "naruto-shippuden-the-movie-4-the-lost-tower",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:38"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-5-blood-prison",
+    "related_id": "naruto-shippuden-the-movie-6-road-to-ninja",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:45:38"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-5-blood-prison",
+    "related_id": "naruto-shippuden-the-movie-7-the-last",
+    "relation_type": "movie",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:45:38"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-6-road-to-ninja",
+    "related_id": "naruto-shippuden-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:39"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-6-road-to-ninja",
+    "related_id": "naruto-shippuden",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:39"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-6-road-to-ninja",
+    "related_id": "naruto-shippuden-the-movie-the-will-of-fire",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:39"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-6-road-to-ninja",
+    "related_id": "naruto-shippuden-the-movie-4-the-lost-tower",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:40"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-6-road-to-ninja",
+    "related_id": "naruto-shippuden-the-movie-5-blood-prison",
+    "relation_type": "movie",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:45:40"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-6-road-to-ninja",
+    "related_id": "naruto-shippuden-the-movie-7-the-last",
+    "relation_type": "movie",
+    "chronology_order": 6,
+    "created_at": "2026-11-08 02:45:40"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-7-the-last",
+    "related_id": "naruto-shippuden-the-movie",
+    "relation_type": "movie",
+    "chronology_order": 0,
+    "created_at": "2026-11-08 02:45:41"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-7-the-last",
+    "related_id": "naruto-shippuden",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:41"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-7-the-last",
+    "related_id": "naruto-shippuden-the-movie-the-will-of-fire",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-08 02:45:41"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-7-the-last",
+    "related_id": "naruto-shippuden-the-movie-4-the-lost-tower",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-08 02:45:42"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-7-the-last",
+    "related_id": "naruto-shippuden-the-movie-5-blood-prison",
+    "relation_type": "movie",
+    "chronology_order": 4,
+    "created_at": "2026-11-08 02:45:42"
+  },
+  {
+    "anime_id": "naruto-shippuden-the-movie-7-the-last",
+    "related_id": "naruto-shippuden-the-movie-6-road-to-ninja",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-08 02:45:42"
+  },
+  {
+    "anime_id": "black-clover",
+    "related_id": "black-clover-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08 02:45:43"
+  },
+  {
+    "anime_id": "mushi-shi-the-next-passage-2",
+    "related_id": "mushi-shi-next-passage-part-2",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08T06:53:21.690Z"
+  },
+  {
+    "anime_id": "mushi-shi-next-passage-part-2",
+    "related_id": "mushi-shi-the-next-passage-2",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08T06:53:21.690Z"
+  },
+  {
+    "anime_id": "free-dive-to-the-future-10gi",
+    "related_id": "free-dive-to-the-future",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08T06:53:21.690Z"
+  },
+  {
+    "anime_id": "free-dive-to-the-future",
+    "related_id": "free-dive-to-the-future-10gi",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08T06:53:21.690Z"
+  },
+  {
+    "anime_id": "tamons-b-side",
+    "related_id": "tamons-b-side-15e5",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08T06:53:21.690Z"
+  },
+  {
+    "anime_id": "tamons-b-side-15e5",
+    "related_id": "tamons-b-side",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08T06:53:21.690Z"
+  },
+  {
+    "anime_id": "lupin-the-3rd",
+    "related_id": "lupin-iii",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08T06:53:21.690Z"
+  },
+  {
+    "anime_id": "lupin-iii",
+    "related_id": "lupin-the-3rd",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08T06:53:21.690Z"
+  },
+  {
+    "anime_id": "lupin-iii",
+    "related_id": "lupin-the-third-part-6",
+    "relation_type": "sequel",
+    "chronology_order": 2,
+    "created_at": "2026-11-08T06:53:21.690Z"
+  },
+  {
+    "anime_id": "lupin-the-third-part-6",
+    "related_id": "lupin-iii",
+    "relation_type": "prequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08T06:53:21.690Z"
+  },
+  {
+    "anime_id": "is-the-order-a-rabbit",
+    "related_id": "is-the-order-a-rabbit-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08T14:06:21.883Z"
+  },
+  {
+    "anime_id": "is-the-order-a-rabbit-season-2",
+    "related_id": "is-the-order-a-rabbit",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08T14:06:21.883Z"
+  },
+  {
+    "anime_id": "the-testament-of-sister-new-devil",
+    "related_id": "the-testament-of-sister-new-devil-tojo-basaras-hard-sweet-daily-life",
+    "relation_type": "sequel",
+    "chronology_order": 2015,
+    "created_at": "2026-11-08T14:06:21.883Z"
+  },
+  {
+    "anime_id": "the-testament-of-sister-new-devil-tojo-basaras-hard-sweet-daily-life",
+    "related_id": "the-testament-of-sister-new-devil",
+    "relation_type": "sequel",
+    "chronology_order": 2015,
+    "created_at": "2026-11-08T14:06:21.883Z"
+  },
+  {
+    "anime_id": "scissor-seven-season-2",
+    "related_id": "scissor-seven-season-3",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08T18:49:36.568Z"
+  },
+  {
+    "anime_id": "scissor-seven-season-3",
+    "related_id": "scissor-seven-season-2",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08T18:49:36.568Z"
+  },
+  {
+    "anime_id": "ef-a-tale-of-memories-ghq8",
+    "related_id": "ef-a-tale-of-memories",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-08T18:49:36.568Z"
+  },
+  {
+    "anime_id": "ef-a-tale-of-memories",
+    "related_id": "ef-a-tale-of-memories-ghq8",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-08T18:49:36.568Z"
+  },
+  {
+    "anime_id": "haganai-next",
+    "related_id": "haganai-add-on-disc",
+    "relation_type": "prequel",
+    "chronology_order": 2012,
+    "created_at": "2026-11-08T18:49:36.568Z"
+  },
+  {
+    "anime_id": "haganai-add-on-disc",
+    "related_id": "haganai-next",
+    "relation_type": "sequel",
+    "chronology_order": 2013,
+    "created_at": "2026-11-08T18:49:36.568Z"
+  },
+  {
+    "anime_id": "the-demon-girl-next-door",
+    "related_id": "the-demon-girl-next-door-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-09T02:11:11.330Z"
+  },
+  {
+    "anime_id": "the-demon-girl-next-door-season-2",
+    "related_id": "the-demon-girl-next-door",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-09T02:11:11.330Z"
+  },
+  {
+    "anime_id": "mushi-shi-the-next-passage-2",
+    "related_id": "mushi-shi-the-next-passage-special-path-of-thorns",
+    "relation_type": "sequel",
+    "chronology_order": 2014,
+    "created_at": "2026-11-09T02:11:11.330Z"
+  },
+  {
+    "anime_id": "mushi-shi-the-next-passage-special-path-of-thorns",
+    "related_id": "mushi-shi-the-next-passage-2",
+    "relation_type": "sequel",
+    "chronology_order": 2014,
+    "created_at": "2026-11-09T02:11:11.330Z"
+  },
+  {
+    "anime_id": "strike-the-blood-iii",
+    "related_id": "strike-the-blood-iv",
+    "relation_type": "sequel",
+    "chronology_order": 2020,
+    "created_at": "2026-11-09T02:11:11.330Z"
+  },
+  {
+    "anime_id": "strike-the-blood-iv",
+    "related_id": "strike-the-blood-iii",
+    "relation_type": "prequel",
+    "chronology_order": 2018,
+    "created_at": "2026-11-09T02:11:11.330Z"
+  },
+  {
+    "anime_id": "uq-holder",
+    "related_id": "negima",
+    "relation_type": "prequel",
+    "chronology_order": 2005,
+    "created_at": "2026-11-09T02:11:11.330Z"
+  },
+  {
+    "anime_id": "negima",
+    "related_id": "uq-holder",
+    "relation_type": "sequel",
+    "chronology_order": 2017,
+    "created_at": "2026-11-09T02:11:11.330Z"
+  },
+  {
+    "anime_id": "pokemon",
+    "related_id": "pokemon-arceus-and-the-jewel-of-life",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-the-movie-2000",
+    "related_id": "pokemon-arceus-and-the-jewel-of-life",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-the-movie-04-celebi-voice-of-the-forest",
+    "related_id": "pokemon-arceus-and-the-jewel-of-life",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-arceus-and-the-jewel-of-life",
+    "related_id": "pokemon",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-arceus-and-the-jewel-of-life",
+    "related_id": "pokemon-the-movie-2000",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-arceus-and-the-jewel-of-life",
+    "related_id": "pokemon-the-movie-04-celebi-voice-of-the-forest",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-arceus-and-the-jewel-of-life",
+    "related_id": "pokemon-the-movie-black-victini-and-reshiram",
+    "relation_type": "movie",
+    "chronology_order": 4,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-arceus-and-the-jewel-of-life",
+    "related_id": "pokemon-the-movie-kyurem-vs-the-sword-of-justice",
+    "relation_type": "movie",
+    "chronology_order": 5,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-arceus-and-the-jewel-of-life",
+    "related_id": "pokemon-the-movie-genesect-and-the-legend-awakened",
+    "relation_type": "movie",
+    "chronology_order": 6,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-arceus-and-the-jewel-of-life",
+    "related_id": "pokemon-the-movie-diancie-and-the-cocoon-of-destruction",
+    "relation_type": "movie",
+    "chronology_order": 7,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-arceus-and-the-jewel-of-life",
+    "related_id": "pokemon-the-movie-hoopa-and-the-clash-of-ages",
+    "relation_type": "movie",
+    "chronology_order": 8,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-arceus-and-the-jewel-of-life",
+    "related_id": "pokemon-the-movie-i-choose-you",
+    "relation_type": "movie",
+    "chronology_order": 9,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-arceus-and-the-jewel-of-life",
+    "related_id": "pokemon-the-movie-the-power-of-us",
+    "relation_type": "movie",
+    "chronology_order": 10,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-arceus-and-the-jewel-of-life",
+    "related_id": "pokemon-the-movie-secrets-of-the-jungle",
+    "relation_type": "movie",
+    "chronology_order": 11,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-the-movie-black-victini-and-reshiram",
+    "related_id": "pokemon-arceus-and-the-jewel-of-life",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-the-movie-kyurem-vs-the-sword-of-justice",
+    "related_id": "pokemon-arceus-and-the-jewel-of-life",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-the-movie-genesect-and-the-legend-awakened",
+    "related_id": "pokemon-arceus-and-the-jewel-of-life",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-the-movie-diancie-and-the-cocoon-of-destruction",
+    "related_id": "pokemon-arceus-and-the-jewel-of-life",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-the-movie-hoopa-and-the-clash-of-ages",
+    "related_id": "pokemon-arceus-and-the-jewel-of-life",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-the-movie-i-choose-you",
+    "related_id": "pokemon-arceus-and-the-jewel-of-life",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-the-movie-the-power-of-us",
+    "related_id": "pokemon-arceus-and-the-jewel-of-life",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "pokemon-the-movie-secrets-of-the-jungle",
+    "related_id": "pokemon-arceus-and-the-jewel-of-life",
+    "relation_type": "movie",
+    "chronology_order": 3,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "high-school-dxd-new-ova-oppai-tsutsumimasu",
+    "related_id": "high-school-dxd-new-oppai-tsutsumimasu",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "high-school-dxd-new-oppai-tsutsumimasu",
+    "related_id": "high-school-dxd-new-ova-oppai-tsutsumimasu",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-09T14:09:59.201Z"
+  },
+  {
+    "anime_id": "sugar-apple-fairy-tale",
+    "related_id": "sugar-apple-fairy-tale-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-10T02:19:16.674Z"
+  },
+  {
+    "anime_id": "sugar-apple-fairy-tale-season-2",
+    "related_id": "sugar-apple-fairy-tale",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-10T02:19:16.674Z"
+  },
+  {
+    "anime_id": "persona-3-the-movie-1-spring-of-birth",
+    "related_id": "persona-3-the-movie-2-midsummer-knights-dream",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-10T02:19:16.674Z"
+  },
+  {
+    "anime_id": "persona-3-the-movie-2-midsummer-knights-dream",
+    "related_id": "persona-3-the-movie-1-spring-of-birth",
+    "relation_type": "movie",
+    "chronology_order": 0,
+    "created_at": "2026-11-10T02:19:16.674Z"
+  },
+  {
+    "anime_id": "persona-3-the-movie-2-midsummer-knights-dream",
+    "related_id": "persona-3-the-movie-4-winter-of-rebirth",
+    "relation_type": "movie",
+    "chronology_order": 2,
+    "created_at": "2026-11-10T02:19:16.674Z"
+  },
+  {
+    "anime_id": "persona-3-the-movie-4-winter-of-rebirth",
+    "related_id": "persona-3-the-movie-2-midsummer-knights-dream",
+    "relation_type": "movie",
+    "chronology_order": 1,
+    "created_at": "2026-11-10T02:19:16.674Z"
+  },
+  {
+    "anime_id": "blue-orchestra",
+    "related_id": "ao-no-orchestra-season-2",
+    "relation_type": "sequel",
+    "chronology_order": 1,
+    "created_at": "2026-11-10T02:19:16.674Z"
+  },
+  {
+    "anime_id": "ao-no-orchestra-season-2",
+    "related_id": "blue-orchestra",
+    "relation_type": "prequel",
+    "chronology_order": 0,
+    "created_at": "2026-11-10T02:19:16.674Z"
   }
 ]

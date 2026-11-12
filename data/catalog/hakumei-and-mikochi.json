@@ -171,28 +171,6 @@
       "external_id": "235235"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "urar",
-      "artist": "Chima",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Harvest Moon Night",
-      "artist": "Shino Shimoji & Aoi Yūki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Minasoko no Rizumu (水底のリズム; Rhythm of the River Bottom)",
-      "artist": "Aoi Yūki",
-      "episodes": "9"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

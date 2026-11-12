@@ -3,14 +3,14 @@
   "title": "Kabaneri of the Iron Fortress: The Battle of Unato",
   "native": "甲鉄城のカバネリ 〜海門決戦〜",
   "year": 2019,
-  "rating": 7.7,
+  "rating": 7.5,
   "season": "Spring 2019",
   "kind": "Movie",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/13470/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/97918-HTuF09Gmj81U.jpg",
-  "accent": "#ff9420",
-  "synopsis": "The film will take place half a year after the story of the original television anime series. Director Tetsuro Araki stated that the film isn't a spinoff but a sequel. The official website for the anime lists the film as the \"middle volume.\" (Source: ANN)",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97918-6qQO87YaHde2.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97918-6qQO87YaHde2.jpg",
+  "accent": "#50d6e4",
+  "synopsis": "The film follows a battle between humans and Kabaneri at Haikou Station on the coast of the Sea of Japan, half a year after the story of the original television anime series.\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -42,14 +42,6 @@
     "supernatural"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sakaseyasakase (咲かせや咲かせ)",
-      "artist": "EGOIST",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

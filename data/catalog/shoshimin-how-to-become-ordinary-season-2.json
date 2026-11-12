@@ -171,35 +171,6 @@
       "external_id": "381494"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kaseijin (火星人; Martian)",
-      "artist": "yorushika",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "SugaRiddle",
-      "artist": "Nagi Yanagi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sweet Memory (スイートメモリー)",
-      "artist": "Eve",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Itokenai (意解けない)",
-      "artist": "ammo",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -150,28 +150,6 @@
       "external_id": "111960"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Koko",
-      "artist": "Pan Tamura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Shissou Ginga (疾走銀河)",
-      "artist": "TEPPAN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Koko (ココ;Here)",
-      "artist": "Pan Tamura",
-      "episodes": "10"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

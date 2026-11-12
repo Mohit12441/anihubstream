@@ -1,16 +1,16 @@
 {
   "id": "mf-ghost",
-  "title": "MF Ghost",
-  "native": "MF Ghost",
+  "title": "MF GHOST",
+  "native": "MFゴースト",
   "year": 2023,
-  "rating": 7.6,
-  "season": "Year 2023",
+  "rating": 7.4,
+  "season": "Fall 2023",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/68fb2853a7ef02e7e6131bdc-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/68fb2853a7ef02e7e6131bdc-landscape.webp",
-  "accent": "#8b5cf6",
-  "synopsis": "As electric vehicles dominate everyday life in the 2020s, interest in traditional combustion engine cars is maintained through a motorsports series known as the MFG. Hundreds of ambitious drivers, with a staggering 30 million viewers online, fiercely compete for a spot in the Godly Fifteen—the leading 15 racers—and a chance at the grand prize of 100 million yen. Among these individuals aiming for the top is 19-year-old Kanata Rivington.\n\nHaving attended a famous racing school in England, Kanata sets his sights on the upcoming MFG tournament and enrolls in the competition under the alias \"Kanata Katagiri.\" In comparison to his opponents' flashy vehicles, Kanata's Toyota 86 GT, passed down from a former MFG contestant, puts him at a considerable disadvantage. Kanata receives guidance from a Godly Fifteen member, but he still treats the MFG as only a stepping stone for his true goal: locating his estranged father. Meanwhile, Kanata's appearance sends shockwaves through the scene as his driving style eerily resembles that of a once legendary racer.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx143327-6gv1QzquNg2o.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx143327-6gv1QzquNg2o.png",
+  "accent": "#1af1f1",
+  "synopsis": "202X A.D., a future beyond Initial D. \n\nSelf-driving cars are in widespread use in Japan, and public roadways are used for auto racing. In such an era, a race called MFG has become popular around the globe. Porsche, Ferrari, Lamborghini… Participants are invited to race with their fastest cars. One such participant, a British racing school graduate, Kanata Rivington, returns to Japan to achieve his goal. \n\n(Source: Crunchyroll)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 12,
   "added_at": null,
-  "search_text": "mf ghost mf ghost",
+  "search_text": "mf ghost mfコ ースト tv finished",
   "genres": [
     "drama"
   ],
@@ -170,63 +170,6 @@
       "external_id": "357581"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "TIMELESS POWER feat. MOTSU",
-      "artist": "Yū Serizawa",
-      "episodes": "25-29, 33-36"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yokan no Tochū Prod. ☆Taku Takahashi (m-flo) (予感の途中)",
-      "artist": "Himika Akaneya",
-      "episodes": "25-29, 31-33, 35"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "ROCK ME KISS ME feat. MOTSU",
-      "artist": "Yū Serizawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Side U (Prod. AmPm)",
-      "artist": "Himika Akaneya",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "JUNGLE FIRE feat. MOTSU",
-      "artist": "Yū Serizawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Stereo Sunset (Prod. AmPm)",
-      "artist": "Himika Akaneya",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Ready to Go",
-      "artist": "Mega NRG Man",
-      "episodes": "34"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "TIMELESS POWER feat. MOTSU",
-      "artist": "Yū Serizawa",
-      "episodes": "37"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -1,0 +1,55 @@
+{
+  "id": "good-bye-dragon-life",
+  "title": "Good Bye, Dragon Life",
+  "native": "さようなら竜生、こんにちは人生",
+  "year": 2024,
+  "rating": 6.2,
+  "season": "Fall 2024",
+  "kind": "TV",
+  "status": "Finished",
+  "art": "https://media.kitsu.app/anime/48619/poster_image/large-64f03ac578a532fd123e9a96d87e3281.jpeg",
+  "key_art": "https://media.kitsu.app/anime/48619/cover_image/large-244618239334821d3025a0fa3f82e459.jpeg",
+  "accent": "#e45d5d",
+  "synopsis": "Long ago, the most ancient of divine dragons was slain by a human. The mighty dragon accepted its death when suddenly, it was reborn as Dolan, a man who lives in a quiet village. While spending another peaceful day toiling in the fields, he meets Celina, a half-human, half-snake creature looking for a partner. The unlikely duo become friends, but challenges lie ahead that threaten their new bond.\n\n(Source: Cunchyroll)",
+  "rank": null,
+  "trend_rank": null,
+  "alt_seasons": [],
+  "sched_day": null,
+  "sched_day_label": null,
+  "sched_date": null,
+  "sched_time": null,
+  "sched_season": null,
+  "sched_episode": null,
+  "sched_sub_at": null,
+  "sched_dub_at": null,
+  "source_ids": {
+    "anilist": 176053,
+    "mal": 58445,
+    "kitsu": 48619
+  },
+  "skip_key_id": null,
+  "skip_key_space": null,
+  "episode_total": 12,
+  "added_at": "2026-11-08 11:58:46",
+  "search_text": "good bye dragon life さようなら竜生 こんにちは人生 tv finished",
+  "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "title": "Episode 1",
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx176053-HfPo4pUm6Ktg.jpg",
+      "synopsis": "",
+      "airdate": null,
+      "markers": [],
+      "external_id": null
+    }
+  ],
+  "themes": [],
+  "relations": []
+}

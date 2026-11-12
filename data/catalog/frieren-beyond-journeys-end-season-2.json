@@ -150,49 +150,6 @@
       "external_id": "376824"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "lulu.",
-      "artist": "Mrs. GREEN APPLE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "The Story of Us",
-      "artist": "milet",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yūsha (Hero)",
-      "artist": "YOASOBI",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Anytime Anywhere",
-      "artist": "milet",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "bliss (TV Special Ending)",
-      "artist": "milet",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Haru (Sunny)",
-      "artist": "yorushika",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

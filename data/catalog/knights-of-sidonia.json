@@ -1,16 +1,16 @@
 {
   "id": "knights-of-sidonia",
   "title": "Knights of Sidonia",
-  "native": "Sidonia no Kishi",
+  "native": "シドニアの騎士",
   "year": 2014,
-  "rating": 7.6,
-  "season": "Year 2014",
+  "rating": 7.3,
+  "season": "Spring 2014",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/694d96d6d8ec52ea8880dba1-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/694d96d6d8ec52ea8880dba1-landscape.webp",
-  "accent": "#ff9420",
-  "synopsis": "After destroying Earth many years ago, the alien race Gauna has been pursuing the remnants of humanity—which, having narrowly escaped, fled across the galaxy in a number of giant seed ships. In the year 3394, Nagate Tanikaze surfaces from his lifelong seclusion deep beneath the seed ship Sidonia in search of food on the upper levels, only to find himself dragged into events unfolding without his knowledge.\n\nWhen the Gauna begin their assault on Sidonia, it's up to Tanikaze—with the help of his fellow soldiers and friends Shizuka Hoshijiro, Izana Shinatose, and Yuhata Midorikawa—to defend humanity's last hope for survival, and defeat their alien foes. Sidonia no Kishi follows Tanikaze as he discovers the world that has been above him his entire life, and becomes the hero Sidonia needs.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx19775-h4Fc1q5qsGfP.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19775-h4Fc1q5qsGfP.png",
+  "accent": "#e4aea1",
+  "synopsis": "It's been a thousand years since the Gauna, a strange alien race with no known method of communication, destroyed the solar system. A portion of humanity managed to escape using enormous \"seed ships\" like the Sidonia, which have allowed them to maintain the population while drifting through space. Nagate Tanikaze is a young man who has been raised deep in the bowels of the ship. When he goes into training to pilot the huge robotic weapons known as Gardes, Nagate is entrusted with piloting the legendary unit known as Tsugumori. Nagate and his fellow pilots put their lives on the line against the Gauna, in the ultimate battle for the survival of humanity!\n\n(Source: AniDB)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 12,
   "added_at": null,
-  "search_text": "knights of sidonia sidonia no kishi",
+  "search_text": "knights of sidonia シト ニアの騎士 tv finished",
   "genres": [
     "action",
     "fantasy",
@@ -172,63 +172,6 @@
       "external_id": "115089"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hikari no Disco",
-      "artist": "CAPSULE",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ai, Hito Kakera (愛、ひと欠片)",
-      "artist": "angela",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kishi Kōshinkyoku (騎士行進曲; Knight March)",
-      "artist": "angela",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hitosuji no Hikari (一筋の光明; Ray of Light)",
-      "artist": "CustomiZ",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Requiem",
-      "artist": "CustomiZ",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sidonia",
-      "artist": "Angela",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tenohira -Show-",
-      "artist": "Eri Kitamura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Sidonia",
-      "artist": "Angela",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -3,7 +3,7 @@
   "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
   "native": "どうも、好きな人に惚れ薬を依頼された魔女です。",
   "year": 2026,
-  "rating": 7.2,
+  "rating": 7.3,
   "season": "Fall 2026",
   "kind": "TV",
   "status": "Ongoing",
@@ -16,10 +16,10 @@
   "alt_seasons": [],
   "sched_day": 1,
   "sched_day_label": "MON",
-  "sched_date": "Nov 9",
+  "sched_date": "Nov 16",
   "sched_time": "12:30",
   "sched_season": "Fall 2026",
-  "sched_episode": 6,
+  "sched_episode": 7,
   "sched_sub_at": null,
   "sched_dub_at": 1789389000000,
   "source_ids": {
@@ -83,21 +83,6 @@
       "external_id": null
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kanawanai, (かなわない、)",
-      "artist": "centimillimental",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mada Uso ni Naranai (まだ嘘にならない)",
-      "artist": "Reini",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -3,7 +3,7 @@
   "title": "Baka and Test - Summon the Beasts 2",
   "native": "バカとテストと召喚獣 にっ！",
   "year": 2011,
-  "rating": 7.3,
+  "rating": 7.4,
   "season": "Summer 2011",
   "kind": "TV",
   "status": "Finished",
@@ -183,35 +183,6 @@
       "external_id": "84034"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kimi + Nazo + Watashi de JUMP!! (君＋謎＋私でJUMP!!)",
-      "artist": "Larval Stage Plannning",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Eureka Baby (エウレカベイビー)",
-      "artist": "Natsuko Aso",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Baka to Koshitsu to Kodoku Han (バカと個室と孤独飯;An Idiot & His Room & Dinner Alone)",
-      "artist": "milktub",
-      "episodes": "7"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Hi-Ho!!",
-      "artist": "milktub",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

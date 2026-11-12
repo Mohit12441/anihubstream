@@ -51,35 +51,6 @@
       "external_id": "239776"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Mr. Cool",
-      "artist": "Amazons & Lotus Juice",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Angel Night- Tenshi no Iru Basho (Angel Night ~天使のいる場所~)",
-      "artist": "Psy-S",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Get Wild",
-      "artist": "TM Network",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Still Love Her- Ushinawareta Fūkei (スティル・ラブ・ハー 失われた風景)",
-      "artist": "TM Network",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

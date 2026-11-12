@@ -108,28 +108,6 @@
       "external_id": "190679"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Egao no Kimi e (エガオノキミへ)",
-      "artist": "Suzuko Mimori",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tomodachi (ともだち; Friends)",
-      "artist": "Suzuko Mimori, Kana Hanazawa, Yumiri Hanamori",
-      "episodes": "1-3,5"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Tamashii (たましい; Spirit)",
-      "artist": "Yumiri Hanamori",
-      "episodes": "4"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

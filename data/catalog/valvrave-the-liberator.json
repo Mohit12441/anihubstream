@@ -3,14 +3,14 @@
   "title": "Valvrave the Liberator",
   "native": "革命機ヴァルヴレイヴ",
   "year": 2013,
-  "rating": 7,
+  "rating": 6.7,
   "season": "Spring 2013",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/7487/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16668-7kiygsBfIXKm.jpg",
-  "accent": "#ff3d8b",
-  "synopsis": "By the 71st year of the True Calendar, humanity has expanded its reach to the stars. The nations of JIOR, ARUS, and Dorssia have set up colonies made of individual modules in space, each serving to house more than half of mankind. Yet, war is still being waged between ARUS and Dorssia, each looking for a way to break the stalemate in their favor, and the key to victory happens to be nestled within a lone JIOR-controlled module.Kakumeiki Valvrave opens with an average day in the life of Haruto Tokishima being turned upside down as Dorssia launches an invasion of the Sakimori Academy, hoping to claim the secret weapons that lay hidden within it—the powerful combat machines known as the Valvraves. To liberate their home, Haruto and four others sacrifice their humanity and bear the curse of the Valvraves, becoming undying immortals that can steal the body of others. Together, with the aid of L-elf, a genius-strategist and traitor to Dorssia, they’ll spark a revolution that will change the world.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16668-ShG8DE2t0ryW.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16668-ShG8DE2t0ryW.png",
+  "accent": "#e45d6b",
+  "synopsis": "True Calendar (T.C.) 71 - A new age where 70% of the human population lives in space thanks to the development of \"Dyson Sphere\", a city in space.\n\nThe world is divided into two main powers: The Dorssia Military Pact Federation, a power which grew out of a military alliance, and the Atlantic Rim United States (ARUS), which grew in power as it expanded its trade agreements. The minor nation of JIOR has declared neutrality between these two forces and maintains its peace through economic prosperity.\n\nWithin the JIOR's Sphere, Haruto Tokishima lived an ordinary life as a high school student in the division known as \"Module 77\"—until the Dorssian military begins their sudden invasion!\n\nBut the whole world will be shaken when Haruto meets the mysterious humanoid weapon, Valvrave!\n\n(Source: Aniplex USA)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -171,49 +171,6 @@
       "external_id": "105092"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kakumei Dualism (革命デュアリズム;Revolution Dualism)",
-      "artist": "Nana Mizuki x T.M.Revolution",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "REALISM",
-      "artist": "ELISA",
-      "episodes": "14-18"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Preserved Roses",
-      "artist": "Nana Mizuki x T.M.Revolution",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Boku Janai (僕じゃない; It's Not Me)",
-      "artist": "angela",
-      "episodes": "2-6"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Akai Memories wo Anata ni (赤いメモリーズをあなたに;I Give These Red Memories to You)",
-      "artist": "Momoko Kanade",
-      "episodes": "19-23"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Soba ni Iru yo (そばにいるよ)",
-      "artist": "ELISA",
-      "episodes": "7-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

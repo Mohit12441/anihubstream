@@ -172,21 +172,6 @@
       "external_id": "99669"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tsurezure Monochrome (徒然モノクローム)",
-      "artist": "FUJIFABRIC",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sora mo Toberu Hazu (空も飛べるはず)",
-      "artist": "sayonara ponytail",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -160,35 +160,6 @@
       "external_id": "45699"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Wake Up",
-      "artist": "ClariS",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Saikin (サイキン)",
-      "artist": "Hiiragi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Curriculum (カリキュラム)",
-      "artist": "Sarasa Ifu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Rocket",
-      "artist": "POLYSICS",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

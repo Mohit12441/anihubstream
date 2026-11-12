@@ -184,35 +184,6 @@
       "external_id": "175986"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Harumodoki (春擬き;Pseudo-Spring)",
-      "artist": "Nagi Yanagi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Everyday World -Ballade Arrange- Yui Solo Ver. (エブリデイワールド -Ballade Arrange- Yui Solo Ver.)",
-      "artist": "Nao Toyama",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Everyday World -Ballade Arrange- Yukino Solo Ver. (エブリデイワールド -Ballade Arrange- Yukino Solo Ver.)",
-      "artist": "Saori Hayami",
-      "episodes": "07"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Everyday World (エブリデイワールド)",
-      "artist": "Saori Hayami & Nao Tōyama",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

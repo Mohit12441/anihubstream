@@ -3,7 +3,7 @@
   "title": "Overlord: The Undead King",
   "native": "劇場版総集編 オーバーロード 不死者の王",
   "year": 2017,
-  "rating": 7.4,
+  "rating": 7.5,
   "season": "Winter 2017",
   "kind": "Movie",
   "status": "Finished",
@@ -51,14 +51,6 @@
       "external_id": "189400"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Crazy Scary Holy Fantasy",
-      "artist": "MYTH&ROID",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

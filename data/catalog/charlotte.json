@@ -185,42 +185,6 @@
       "external_id": "178107"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Bravely You",
-      "artist": "Lia",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yake Ochinai Tsubasa (灼け落ちない翼; The Wings that Won't Be Burned Down)",
-      "artist": "Aoi Tada",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Wakakusa no Charlotte",
-      "artist": "Kumiko Kaori",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mayflower",
-      "artist": "Kumiko Kaori",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Rakuen Made (楽園まで; To Paradise)",
-      "artist": "How-Low-Hello",
-      "episodes": "3-4"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -95,35 +95,6 @@
       "external_id": "21735"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Combat",
-      "artist": "RZA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Number One Samurai",
-      "artist": "RZA",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Afro Theme",
-      "artist": "RZA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Afro Outro",
-      "artist": "RZA",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

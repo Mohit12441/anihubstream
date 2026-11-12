@@ -417,28 +417,6 @@
       "external_id": "18237"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sailor Star Song (セーラースターソング)",
-      "artist": "Kae Hanazawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kaze mo Sora mo Kitto… (風も空もきっと…)",
-      "artist": "Arisa Mizuki",
-      "episodes": "1-33"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Moonlight Densetsu (ムーンライト伝説)",
-      "artist": "Moon Lips",
-      "episodes": "34"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

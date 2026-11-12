@@ -173,35 +173,6 @@
       "external_id": "229835"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kyoumen no Nami",
-      "artist": "YURiKA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kirameku Hamabe (煌めく浜辺 ; Glittering Shore)",
-      "artist": "Yuiko Oohara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "liquescimus",
-      "artist": "Tomoyo Kurosawa",
-      "episodes": "8"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Kyoumen no Nami [Orchestra Ver.] (鏡面の波[Orchestra Ver.]; Waves On the Mirror's Surface)",
-      "artist": "YURiKA",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

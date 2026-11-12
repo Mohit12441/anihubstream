@@ -313,21 +313,6 @@
       "external_id": "200547"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Cadence",
-      "artist": "Takaaki Natsushiro",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Now or Never (ナウオアネバー)",
-      "artist": "Yūsuke Saeki",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

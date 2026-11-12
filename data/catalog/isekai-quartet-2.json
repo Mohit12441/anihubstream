@@ -172,28 +172,6 @@
       "external_id": "267264"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Isekai Showtime",
-      "artist": "Satoshi Hino, Jun Fukushima, Yuusuke Kobayashi, Aoi Yuuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ponkotsu! Isekai Theater",
-      "artist": "Sumire Uesaka, Rie Takahashi, Inori Minase, Saori Hayami",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "sweet pass",
-      "artist": "Riko Azuna",
-      "episodes": "5"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

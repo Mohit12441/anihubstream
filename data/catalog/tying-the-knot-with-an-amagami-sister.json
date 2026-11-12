@@ -305,35 +305,6 @@
       "external_id": "347160"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yawaku Koishite ~Zutto Bokura de Iraremasu you ni~ (やわく恋して～ずっと僕らでいられますように～)",
-      "artist": "Momoiro Clover Z",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi ni Koi o Musunde (君に恋を結んで)",
-      "artist": "Amagami Sisters [Sumire Uesaka, Kaede Hondo, Shion Wakayama]",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Pray Pray Pray",
-      "artist": "Sumire Uesaka, Kaede Hondo, Shion Wakayama",
-      "episodes": "14-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kami-sama no Iu Toori!",
-      "artist": "≠ME",
-      "episodes": "14-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

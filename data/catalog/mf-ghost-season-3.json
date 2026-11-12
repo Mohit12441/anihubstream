@@ -37,63 +37,6 @@
     "action"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "TIMELESS POWER feat. MOTSU",
-      "artist": "Yū Serizawa",
-      "episodes": "25-29, 33-36"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yokan no Tochū Prod. ☆Taku Takahashi (m-flo) (予感の途中)",
-      "artist": "Himika Akaneya",
-      "episodes": "25-29, 31-33, 35"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "ROCK ME KISS ME feat. MOTSU",
-      "artist": "Yū Serizawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Side U (Prod. AmPm)",
-      "artist": "Himika Akaneya",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "JUNGLE FIRE feat. MOTSU",
-      "artist": "Yū Serizawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Stereo Sunset (Prod. AmPm)",
-      "artist": "Himika Akaneya",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Ready to Go",
-      "artist": "Mega NRG Man",
-      "episodes": "34"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "TIMELESS POWER feat. MOTSU",
-      "artist": "Yū Serizawa",
-      "episodes": "37"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

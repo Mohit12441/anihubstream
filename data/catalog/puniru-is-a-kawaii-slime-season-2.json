@@ -173,28 +173,6 @@
       "external_id": "387129"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Brun-Brun",
-      "artist": "Yū Sasahara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ao to Natsu (青と夏)",
-      "artist": "Yū Sasahara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Show (唱)",
-      "artist": "Yu Sasahara",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

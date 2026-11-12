@@ -108,21 +108,6 @@
       "external_id": "208222"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hanakotoba (ハナコトバ)",
-      "artist": "Haruka Terui, Suzuko Mimori, Yumi Uchida, Tomoyo Kurosawa, Juri Nagatsuma & Kana Hanazawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yuusha-tachi no Lullaby",
-      "artist": "Haruka Terui, Suzuko Mimori, Yumi Uchiyama, Tomoyo Kurosawa, Juri Nagatsuma, and Kana Hanazawa",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

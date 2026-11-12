@@ -1,7 +1,7 @@
 {
   "id": "detective-conan-magician-of-the-silver-sky",
   "title": "Detective Conan: Magician of the Silver Sky",
-  "native": "名探偵コナン 銀翼の奇術師[マジシャン]",
+  "native": "名探偵コナン 銀翼の奇術師(マジシャン)",
   "year": 2004,
   "rating": 7.8,
   "season": "Spring 2004",
@@ -50,14 +50,6 @@
       "external_id": "22546"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Dream x Dream",
-      "artist": "Rina Aiuchi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -327,35 +327,6 @@
       "external_id": "28067"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Secret Ambition",
-      "artist": "Nana Mizuki",
-      "episodes": "1-17"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hoshizora no Spica",
-      "artist": "Yukari Tamura",
-      "episodes": "1-14"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Massive Wonders",
-      "artist": "Nana Mizuki",
-      "episodes": "18-26"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Beautiful Amulet",
-      "artist": "Yukari Tamura",
-      "episodes": "15-26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

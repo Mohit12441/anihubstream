@@ -1,16 +1,16 @@
 {
   "id": "tiger-bunny",
   "title": "Tiger & Bunny",
-  "native": "Tiger & Bunny",
+  "native": "TIGER & BUNNY",
   "year": 2011,
-  "rating": 7.8,
-  "season": "Year 2011",
+  "rating": 7.6,
+  "season": "Spring 2011",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/6932bbe83505fa91f3a6fd54-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/6932bbe83505fa91f3a6fd54-landscape.webp",
-  "accent": "#ff3d8b",
-  "synopsis": "In Stern Bild City, those with special abilities are called NEXT, and can use their powers for good or bad. A unique organized group of NEXT appear regularly on Hero TV, where they chase down evildoers to bring limelight to their sponsors and earn Hero Points in the hopes of becoming the next King of Heroes.\n\nKotetsu T. Kaburagi, known as \"Wild Tiger,\" is a veteran hero whose performance has been dwindling as of late, partially due to his inability to cooperate with other heroes. After a disappointing season in which most of the other heroes far outperformed Tiger, he is paired up with a brand new hero who identifies himself by his real name—Barnaby Brooks Jr.\n\nBarnaby, nicknamed \"Bunny\" by his frivolous new partner, quickly makes it clear that the two could not be more different. Though they mix as well as oil and water, Tiger and Bunny must learn to work together, both for the sake of their careers and to face the looming threats within Stern Bild.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx9941-ixTUsgXCg2AI.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9941-ixTUsgXCg2AI.jpg",
+  "accent": "#f15dbb",
+  "synopsis": "Sternbild City is home to people called \"Next,\" who use their special abilities to protect the people as superheroes. These heroes solve cases and save lives so they can wear sponsor logos or acquire \"hero points.\" Their activities are documented on the popular program \"Hero TV,\" which picks the \"King of Heroes\" in a yearly ranking. The veteran hero Wild Tiger has always preferred to work alone, but now he's been assigned the rookie Barnaby Brooks Jr., who has a different perspective on being a superhero.\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 25,
   "added_at": null,
-  "search_text": "tiger bunny tiger bunny",
+  "search_text": "tiger bunny tiger bunny tv finished",
   "genres": [
     "action",
     "comedy",
@@ -315,84 +315,6 @@
       "external_id": "164488"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "kaleido proud fiesta",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "AIDA",
-      "artist": "ano",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Nemesis (ネメシス)",
-      "artist": "NOVELS",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "harmonized finale",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Earth Diver",
-      "artist": "NOVELS",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Linear Blue wo Kikinagara",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Orion wo nazoru (オリオンをなぞる)",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "hoshi no sumika (星のすみか)",
-      "artist": "Aobozu",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Pilot",
-      "artist": "Taichi Mukai",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Missing Link",
-      "artist": "NOVELS",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Mind Game (マインドゲーム)",
-      "artist": "珠妃 Tamaki",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

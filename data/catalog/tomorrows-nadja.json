@@ -590,21 +590,6 @@
       "external_id": "30577"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Nadja!!",
-      "artist": "Minako Honda",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Que Sera, Sera",
-      "artist": "Ami Koshimizu",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

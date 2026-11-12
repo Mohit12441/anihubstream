@@ -173,42 +173,6 @@
       "external_id": "178255"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Friend Shitai (ふ・れ・ん・ど・し・た・い; I Want to be Friends)",
-      "artist": "Gakuen Seikatsubu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Harmonize Clover ( ハーモナイズ・クローバー )",
-      "artist": "Maon Kurosaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "We took each other's hand",
-      "artist": "Kaori Sawada",
-      "episodes": "4"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "After Glow (アフターグロウ)",
-      "artist": "Maon Kurosaki",
-      "episodes": "6-8,10-11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Friend Shitai (ふ・れ・ん・ど・し・た・い; I Want to be Friends)",
-      "artist": "Gakuen Seikatsubu",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

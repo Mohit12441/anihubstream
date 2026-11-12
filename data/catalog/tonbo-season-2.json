@@ -181,35 +181,6 @@
       "external_id": "370106"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Seven pieces",
-      "artist": "Sacra e sole",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kachitaku Nacchatta ne",
-      "artist": "TOKYO GROOVE JYOSHI",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Habatake",
-      "artist": "Sacra e sole",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Let's Swing",
-      "artist": "TOKYO GROOVE JYOSHI featuring Rika Hayashi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

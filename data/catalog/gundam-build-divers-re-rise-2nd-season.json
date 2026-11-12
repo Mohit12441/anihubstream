@@ -182,56 +182,6 @@
       "external_id": "278936"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hatena",
-      "artist": "Penguin Research",
-      "episodes": "14-21, 23-24, 26"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Twinkle",
-      "artist": "Spira Spica",
-      "episodes": "14-19, 22-25"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Re:RISE (リライズ)",
-      "artist": "Spira Spica",
-      "episodes": "1-12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "MAGIC TIME",
-      "artist": "SudannaYuzuYully",
-      "episodes": "1-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Heartful (ハートフル)",
-      "artist": "Spira Spica",
-      "episodes": "20-21"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Re:RISE (リライズ)",
-      "artist": "Spira Spica",
-      "episodes": "13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Re:RISE (リライズ)",
-      "artist": "Spira Spica",
-      "episodes": "26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

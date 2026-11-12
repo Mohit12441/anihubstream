@@ -51,35 +51,6 @@
       "external_id": "115387"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "I swear",
-      "artist": "sweet ARMS",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Last Promise",
-      "artist": "Yamazaki Erii",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Trust in you",
-      "artist": "sweet ARMS",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Day to Story",
-      "artist": "Kaori Sadohara",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -313,49 +313,6 @@
       "external_id": "107581"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Natsuzora (夏空)",
-      "artist": "Galileo Galilei",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Shisō Densha (思想電車)",
-      "artist": "CureaL",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Dramatic (ドラマチック)",
-      "artist": "Base Ball Bear",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Medaka no Mita Niji (メダカの見た虹)",
-      "artist": "Kozue Takada",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Seishun Line (青春ライン)",
-      "artist": "Ikimonogakari",
-      "episodes": "14-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Arigatou (ありがとう)",
-      "artist": "SunSet Swish",
-      "episodes": "14-25"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

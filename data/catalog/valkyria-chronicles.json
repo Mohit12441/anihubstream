@@ -325,49 +325,6 @@
       "external_id": "69092"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ashita e no Kizuna",
-      "artist": "HIMEKA",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Asu e no kizuna",
-      "artist": "HIMEKA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ano Kaze ni Notte",
-      "artist": "pe’zmoku",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Kanashimi Rensa",
-      "artist": "MARIA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Hitotsu no Negai",
-      "artist": "Hikari Inoue",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "BRIGHTEST MORNING",
-      "artist": "Hikari Inoue with 7th Squad",
-      "episodes": "26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

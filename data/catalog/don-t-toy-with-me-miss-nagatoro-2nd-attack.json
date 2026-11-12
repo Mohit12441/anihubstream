@@ -43,8 +43,8 @@
     {
       "n": 1,
       "title": "Episode 1",
-      "runtime": "—",
-      "runtime_seconds": 0,
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
       "thumb": "",
       "synopsis": "",
       "airdate": null,
@@ -54,8 +54,8 @@
     {
       "n": 2,
       "title": "Episode 2",
-      "runtime": "—",
-      "runtime_seconds": 0,
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
       "thumb": "",
       "synopsis": "",
       "airdate": null,
@@ -65,8 +65,8 @@
     {
       "n": 3,
       "title": "Episode 3",
-      "runtime": "—",
-      "runtime_seconds": 0,
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
       "thumb": "",
       "synopsis": "",
       "airdate": null,
@@ -76,8 +76,8 @@
     {
       "n": 4,
       "title": "Episode 4",
-      "runtime": "—",
-      "runtime_seconds": 0,
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
       "thumb": "",
       "synopsis": "",
       "airdate": null,
@@ -87,8 +87,8 @@
     {
       "n": 5,
       "title": "Episode 5",
-      "runtime": "—",
-      "runtime_seconds": 0,
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
       "thumb": "",
       "synopsis": "",
       "airdate": null,
@@ -98,8 +98,8 @@
     {
       "n": 6,
       "title": "Episode 6",
-      "runtime": "—",
-      "runtime_seconds": 0,
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
       "thumb": "",
       "synopsis": "",
       "airdate": null,
@@ -109,8 +109,8 @@
     {
       "n": 7,
       "title": "Episode 7",
-      "runtime": "—",
-      "runtime_seconds": 0,
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
       "thumb": "",
       "synopsis": "",
       "airdate": null,
@@ -120,8 +120,8 @@
     {
       "n": 8,
       "title": "Episode 8",
-      "runtime": "—",
-      "runtime_seconds": 0,
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
       "thumb": "",
       "synopsis": "",
       "airdate": null,
@@ -131,8 +131,8 @@
     {
       "n": 9,
       "title": "Episode 9",
-      "runtime": "—",
-      "runtime_seconds": 0,
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
       "thumb": "",
       "synopsis": "",
       "airdate": null,
@@ -142,8 +142,8 @@
     {
       "n": 10,
       "title": "Episode 10",
-      "runtime": "—",
-      "runtime_seconds": 0,
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
       "thumb": "",
       "synopsis": "",
       "airdate": null,
@@ -153,8 +153,8 @@
     {
       "n": 11,
       "title": "Episode 11",
-      "runtime": "—",
-      "runtime_seconds": 0,
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
       "thumb": "",
       "synopsis": "",
       "airdate": null,
@@ -164,8 +164,8 @@
     {
       "n": 12,
       "title": "Episode 12",
-      "runtime": "—",
-      "runtime_seconds": 0,
+      "runtime": "24:00",
+      "runtime_seconds": 1440,
       "thumb": "",
       "synopsis": "",
       "airdate": null,
@@ -173,21 +173,6 @@
       "external_id": "325437"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "LOVE CRAZY",
-      "artist": "Sumire Uesaka",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "MY SADISTIC ADOLESCENCE♡",
-      "artist": "Sumire Uesaka, Mikako Komatsu, Aina Suzuki, & Shiori Izawa",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

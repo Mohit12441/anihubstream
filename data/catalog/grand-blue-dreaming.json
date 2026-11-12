@@ -171,56 +171,6 @@
       "external_id": "244692"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Natsuko (夏子)",
-      "artist": "FUNKY MONKEY BΛBY'S",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hadaka no Mermaid (裸のマーメード)",
-      "artist": "MAMESHiBA NO TAiGUN",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Seishun Towa (Eternal Youth)",
-      "artist": "Shōnan no Kaze with Atarashii Gakkō!",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hadaka de Dotsukiai feat. May'n",
-      "artist": "SEAMO",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Grand Blue",
-      "artist": "Shōnan no Kaze",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Konpeki no al Fine",
-      "artist": "Izu no Kaze",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Konpeki no al Fine ~Kaya Mizuki ver.~",
-      "artist": "Nana Mizuki",
-      "episodes": "11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

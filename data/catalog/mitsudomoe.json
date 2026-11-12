@@ -182,63 +182,6 @@
       "external_id": "78792"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Honki Sentai Gachiranger (本気戦隊ガチレンジャー)",
-      "artist": "Masaaki Endoh",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mata Ashita (またあした)",
-      "artist": "Masaaki Endoh",
-      "episodes": "1"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Mittsu Kazoete Daishūgō! (みっつ数えて大集合!)",
-      "artist": "Ayahi Takagaki, Satomi Akesaka and Haruka Tomatsu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yume-iro no Koi (夢色の恋)",
-      "artist": "Saori Atsumi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Waga Na wa Shōgakusei (わが名は小学生)",
-      "artist": "Ayahi Takagaki, Satomi Akesaka, and Haruka Tomatsu",
-      "episodes": "2-7"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Randoseling (ランドセリング☆)",
-      "artist": "Nomiko",
-      "episodes": "2-3, 5-6, 8"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Nearer, My God, to Thee—Mittsuko Edition (Nearer, My God, to Thee～三つ子edition～)",
-      "artist": "[uncredited]",
-      "episodes": "4"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "<i>L'Arlésienne Suite No. 2</i>, Fourth Movement: Farandole (Finale) (「アルルの女」第2組曲より～ファランドール～（終演部）)",
-      "artist": "[uncredited]",
-      "episodes": "7"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

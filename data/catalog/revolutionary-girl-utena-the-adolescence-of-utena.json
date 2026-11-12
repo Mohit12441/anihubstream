@@ -52,42 +52,6 @@
       "external_id": "9806"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Rinbu - Revolution (−輪舞−revolution)",
-      "artist": "Masami Okui",
-      "episodes": "1-38"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "truth",
-      "artist": "Luca Yumi",
-      "episodes": "1-24"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Fiancé ni Naritai",
-      "artist": "Mitsuhiro Oikawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Virtual Star Hasseigaku (バーチャルスター発生学)",
-      "artist": "Maki Kamiya",
-      "episodes": "25-38"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Rose & release",
-      "artist": "Masami Okui",
-      "episodes": "39"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

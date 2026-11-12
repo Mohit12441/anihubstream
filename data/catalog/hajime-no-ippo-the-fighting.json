@@ -1597,49 +1597,6 @@
       "external_id": "6800"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Under Star",
-      "artist": "Shocking Lemon",
-      "episodes": "1-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yūzora no Kamihikōki",
-      "artist": "Naoya Mori",
-      "episodes": "1-25"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Inner Light",
-      "artist": "Shocking Lemon",
-      "episodes": "26-52"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "360°",
-      "artist": "Mori Naoya",
-      "episodes": "26-52,75"
-    },
-    {
-      "kind": "OP",
-      "sequence": 3,
-      "title": "Tumbling Dice",
-      "artist": "Tsuneo Imahori",
-      "episodes": "53-76"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Eternal Loop",
-      "artist": "Saber Tiger",
-      "episodes": "53-74,76"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

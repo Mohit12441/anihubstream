@@ -580,35 +580,6 @@
       "external_id": "78892"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tomorrow Song ~Ashita no Uta~ for the Movie",
-      "artist": "Mayu Kudou with the Heartcatch Cures",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Alright! Heartcatch Precure!",
-      "artist": "Aya Ikeda",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Heartcatch Paradise! (ハートキャッチ☆パラダイス！)",
-      "artist": "Mayu Kudō",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Song of Tomorrow (あしたのうた)",
-      "artist": "Mayu Kudou",
-      "episodes": "25-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

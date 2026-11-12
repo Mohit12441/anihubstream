@@ -298,42 +298,6 @@
       "external_id": "353987"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hajimete wa Zenbu Kimi ga Ii (はじめては全部君がいい)",
-      "artist": "Koe ni Naranai yo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Magical Love (マジカルラブ)",
-      "artist": "Chiaki Kobayashi & Ryota Suzuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Magical Love (Kurosawa Kokoro no Koedada More ver.) (マジカルラブ（黒沢心の声だだ漏れVer）)",
-      "artist": "Chiaki Kobayashi & Ryota Suzuki",
-      "episodes": "3"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Magical Love (Kurosawa Solo Piano ver.) (マジカルラブ（黒沢ソロ ピアノVer）)",
-      "artist": "Ryota Suzuki",
-      "episodes": "5, 9"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Magical Love (Adachi Solo Guitar ver.) (マジカルラブ（安達ソロ ギターVer）)",
-      "artist": "Chiaki Kobayashi",
-      "episodes": "7, 11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

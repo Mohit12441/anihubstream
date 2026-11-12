@@ -7,10 +7,10 @@
   "season": "Fall 2025",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/49931/poster_image/medium-1c5682d077474e876eb8baafbca0cc49.jpeg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/183385-tK0LdiABACjw.jpg",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx183385-f1TgnttLckBT.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx183385-f1TgnttLckBT.jpg",
   "accent": "#3b82ff",
-  "synopsis": "“I’ve come to eat you.” So softly utters the mermaid Shiori as she emerges from the sea and takes high school girl Hinako by the hand. Hinako lives alone in a town by the sea and possesses an unusually delicious body that is irresistible to nearby monsters. To ensure that she matures to the best condition, Shiori seeks to protect Hinako—all so that someday, she can devour every piece of her. What will become of Hinako’s feelings as this looming unjust death closes in on her…? (Source: Yen Press)",
+  "synopsis": "Hinako lives alone by the sea, quietly drifting through life after losing her family years ago. One day, a mermaid named Shiori saves her from a monster and says she’s come to eat her—just not yet. Until then, Shiori will stay by her side and keep her safe. In that moment, a deep hope swells in Hinako: Maybe this girl can finally grant her the ending she’s been waiting for.\n\n(Source: Crunchyroll)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -183,35 +183,6 @@
       "external_id": "387756"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "nie (Sacrifice)",
-      "artist": "Yoshino",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "LiLy",
-      "artist": "Reina Ueda",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Taiyō, natte age yokka?♡",
-      "artist": "Fairouz Ai",
-      "episodes": "4"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "LiLy [Another ver.] (リリィ［Another ver.］)",
-      "artist": "Yui Ishikawa",
-      "episodes": "11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

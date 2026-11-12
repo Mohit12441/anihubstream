@@ -52,49 +52,6 @@
       "external_id": "117027"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "A Tender Moon Tempo",
-      "artist": "Kairi Yagi",
-      "episodes": "3"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sing My Pleasure",
-      "artist": "Kairi Yagi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ending Theme",
-      "artist": "MONACO",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ensemble for Polaris",
-      "artist": "Rikka",
-      "episodes": "3"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Galaxy Anthem",
-      "artist": "Kairi Yagi",
-      "episodes": "7"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Ensemble for Polaris",
-      "artist": "Rikka and Noa",
-      "episodes": "4"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

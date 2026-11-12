@@ -151,21 +151,6 @@
       "external_id": "171099"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "ENAMEL",
-      "artist": "SID",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aoki Tsuki Michite",
-      "artist": "AKIRA",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

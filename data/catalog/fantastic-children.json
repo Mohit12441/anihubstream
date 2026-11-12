@@ -329,35 +329,6 @@
       "external_id": "9881"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Voyage",
-      "artist": "Inori",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mizu no Madoromi (水のまどろみ)",
-      "artist": "ORIGA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Mizu no Madaromi (Russian Version)",
-      "artist": "ORIGA",
-      "episodes": "16-18"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Voyage (Full Version)",
-      "artist": "Inori",
-      "episodes": "26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

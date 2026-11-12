@@ -326,28 +326,6 @@
       "external_id": "38379"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Prism",
-      "artist": "BAISER",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Wake Up",
-      "artist": "Chisato",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Silent Moon",
-      "artist": "Ellemo [eps 20-26]",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

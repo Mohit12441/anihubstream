@@ -240,42 +240,6 @@
       "external_id": "187746"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "ever free",
-      "artist": "hide with Spread Beaver",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kami Iro Awase (カミイロアワセ)",
-      "artist": "binaria",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Zettai Kibō Birthday (絶対希望バースデー;The Birthday of Absolute Hope)",
-      "artist": "Megumi Ogata",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "DEAD OR LIE",
-      "artist": "Maon Kurosaki feat. TRUSTRICK",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Recall THE END",
-      "artist": "TRUSTRICK",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

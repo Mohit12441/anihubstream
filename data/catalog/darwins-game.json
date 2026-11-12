@@ -161,21 +161,6 @@
       "external_id": "274021"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "CHAIN",
-      "artist": "ASCA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Alive",
-      "artist": "Mashiro Ayano",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

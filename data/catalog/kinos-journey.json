@@ -185,35 +185,6 @@
       "external_id": "161078"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "here and there",
-      "artist": "Nagi Yanagi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Satō-dama no Tsuki (砂糖玉の月)",
-      "artist": "Nagi Yanagi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "All the Way",
-      "artist": "Mikuni Shimokawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "The Beautiful World",
-      "artist": "Ai Maeda",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

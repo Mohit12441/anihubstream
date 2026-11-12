@@ -514,63 +514,6 @@
       "external_id": "14717"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Moonlight Densetsu",
-      "artist": "DALI",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sailor Moon Theme",
-      "artist": "Nicole Price and Brynne Price [Pioneer English edited & uncut versions]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Moon Revenge",
-      "artist": "Peach Hips",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "The Power of Love",
-      "artist": "Jennifer Cihi [Pioneer English edited version]",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Moonlight Densetsu",
-      "artist": "DALI",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sailor Moon Theme",
-      "artist": "Nicole Price and Brynne Price [DiC English Version]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Otome no Policy",
-      "artist": "Yoko Ishida",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sailor Moon Theme (Reprise)",
-      "artist": "Nicole Price and Brynne Price [DiC English Version]",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

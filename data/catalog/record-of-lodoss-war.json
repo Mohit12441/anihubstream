@@ -186,35 +186,6 @@
       "external_id": "5075"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kiseki no Umi (奇跡の海; Sea of Miracles)",
-      "artist": "Maaya Sakamoto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hikari no Suashi (光のすあし; Foot of Light)",
-      "artist": "Chie Ishibashi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Adèsso e Fortuna ~Honō to Eien~ (Adèsso e Fortuna~炎と永遠~; Fire and Eternity)",
-      "artist": "Sherry",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kaze no Fantasia (風のファンタジア; Fantasia of the Wind)",
-      "artist": "Sherry",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

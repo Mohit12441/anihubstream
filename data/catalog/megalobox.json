@@ -183,49 +183,6 @@
       "external_id": "242656"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "The theme of the NOMAD",
-      "artist": "mabanua",
-      "episodes": "2-4, 6-10, 12-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "El Canto del Colibri",
-      "artist": "mabanua",
-      "episodes": "1-12"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Bite",
-      "artist": "LEO Imai",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kakatte koi yo (かかってこいよ; Come to Me)",
-      "artist": "Emi Nakamura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Rise Up / Diamond in the Sky",
-      "artist": "Lyn Inaizumi",
-      "episodes": "13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "The Ending",
-      "artist": "mabanua",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

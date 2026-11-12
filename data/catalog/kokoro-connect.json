@@ -10,7 +10,7 @@
   "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11887-ypZTwcRqopiL.jpg",
   "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11887-ypZTwcRqopiL.jpg",
   "accent": "#e4a150",
-  "synopsis": "The five members of the Cultural Research Club - Taichi Yaegashi, Iori Nagase, Himeko Inaba, Yui Kiriyama, and Yoshifumi Aoki - encounter a bizarre phenomenon one day when Aoki and Yui switch bodies without warning. The same begins to happen to the other club members, throwing their daily lives into disarray.\n\n\r\nAt first the five students find some amusement amidst the confusion, but this unwarranted connection also exposes the painful scars hidden within their hearts. As their calm lives are shattered, the relationships between the five students also begin to change...\n\n\r\n(Source: Crunchyroll, edited)",
+  "synopsis": "The five members of the Cultural Research Club - Taichi Yaegashi, Iori Nagase, Himeko Inaba, Yui Kiriyama, and Yoshifumi Aoki - encounter a bizarre phenomenon one day when Aoki and Yui switch bodies without warning. The same begins to happen to the other club members, throwing their daily lives into disarray.\n\n\nAt first the five students find some amusement amidst the confusion, but this unwarranted connection also exposes the painful scars hidden within their hearts. As their calm lives are shattered, the relationships between the five students also begin to change...\n\n\n(Source: Crunchyroll, edited)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -184,56 +184,6 @@
       "external_id": "166137"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Paradigm (パラダイム Paradaimu)",
-      "artist": "eufonius",
-      "episodes": "1-10"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kokoro no Kara",
-      "artist": "Team. Nekokan [Neko] feat. Junca Amaoto",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Kimochi Signal (キモチシグナル Kimochi Shigunaru)",
-      "artist": "Sayuri Horishita",
-      "episodes": "1-10"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Cry Out",
-      "artist": "Team. Nekokan [Neko] feat. Atsuko",
-      "episodes": "6-"
-    },
-    {
-      "kind": "OP",
-      "sequence": 3,
-      "title": "Kimi Rhythm (キミリズム Kimi Rizumu)",
-      "artist": "Masaki Imai",
-      "episodes": "12-17"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Salvage",
-      "artist": "Team. Nekokan [Neko] feat. Rekka Katakiri",
-      "episodes": "11-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "I scream Chocolatl",
-      "artist": "Team.Nekokan [Neko] featuring. Lia",
-      "episodes": "14-17"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

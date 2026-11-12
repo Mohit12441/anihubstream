@@ -3,14 +3,14 @@
   "title": "Love Live! Sunshine!! Season 2",
   "native": "ラブライブ！サンシャイン!! 2nd Season",
   "year": 2017,
-  "rating": 7.6,
+  "rating": 7.5,
   "season": "Fall 2017",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/13299/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/98349-PT5hOWDQJzqo.jpg",
-  "accent": "#ff3d8b",
-  "synopsis": "Second season of Love Live! Sunshine!!.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx98349-kj4hp8iNSzLr.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx98349-kj4hp8iNSzLr.jpg",
+  "accent": "#43a1f1",
+  "synopsis": "After failing in the preliminary tournament of the previous Love Live, the members of Aqours have rededicated themselves to succeeding both as idols and as saviors of their school, making sure their home will never be taken away. But Mari learns some terrible news about their upcoming school open house event and it seems like all of their efforts will be for naught. Chika and her friends must find some way to preserve their school and carry on as idols. Either way, it looks like they'll need a miracle to get through this, fortunately, from µ's to Aqours, miracles are what idols do best.\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -182,168 +182,6 @@
       "external_id": "307131"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Bokura no Hashittekita Michi wa... (僕らの走ってきた道は…)",
-      "artist": "Aqours",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Next SPARKLING!!",
-      "artist": "Aqours",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Mirai no Bokura wa Shitteru yo",
-      "artist": "Aqours",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
-      "artist": "Anju Inami, Rikako Aida & Shuka Saitou",
-      "episodes": "1"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Aozora Jumping Heart (青空Jumping Heart)",
-      "artist": "Aqours",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimeta yo Hand in Hand (決めたよHand in Hand)",
-      "artist": "Anju Inami, Rikako Aida & Shuka Saitou",
-      "episodes": "1"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Aozora Jumping Heart (青空Jumping Heart)",
-      "artist": "Aqours",
-      "episodes": "13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
-      "artist": "Aqours",
-      "episodes": "2,7"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
-      "artist": "Chika Takami",
-      "episodes": "2"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Kimi no Kokoro wa Kagayaiteru kai? (君のこころは輝いてるかい？)",
-      "artist": "Aqours",
-      "episodes": "3"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
-      "artist": "Aqours",
-      "episodes": "3,12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
-      "artist": "Arisa Komiya",
-      "episodes": "4"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
-      "artist": "Kanako Takatsuki & Ai Furihata",
-      "episodes": "4"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
-      "artist": "Rikako Aida & Aika Kobayashi",
-      "episodes": "5"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
-      "artist": "Aika Kobayashi",
-      "episodes": "5"
-    },
-    {
-      "kind": "ED",
-      "sequence": 6,
-      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
-      "artist": "Ai Furihata, Aika Kobayashi & Kanako Takatsuki",
-      "episodes": "8"
-    },
-    {
-      "kind": "ED",
-      "sequence": 6,
-      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
-      "artist": "Nanaka Suwa, Arisa Komiya & Aina Suzuki",
-      "episodes": "6"
-    },
-    {
-      "kind": "ED",
-      "sequence": 7,
-      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
-      "artist": "Nanaka Suwa, Arisa Komiya & Aina Suzuki",
-      "episodes": "10"
-    },
-    {
-      "kind": "ED",
-      "sequence": 7,
-      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
-      "artist": "Aika Kobayashi, Kanako Takatsuki & Ai Furihata",
-      "episodes": "7"
-    },
-    {
-      "kind": "ED",
-      "sequence": 8,
-      "title": "Yuuki wa Doko ni? Kimi no Mune ni! (勇気はどこに？君の胸に！)",
-      "artist": "Aqours & Supporting characters",
-      "episodes": "11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 8,
-      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
-      "artist": "Anju Inami, Rikako Aida, Shuka Saitou, Aika Kobayashi, Kanako Takatsuki & Ai Furihata",
-      "episodes": "8"
-    },
-    {
-      "kind": "ED",
-      "sequence": 9,
-      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
-      "artist": "Anju Inami & Rikako Aida",
-      "episodes": "10"
-    },
-    {
-      "kind": "ED",
-      "sequence": 10,
-      "title": "Yume Kataru yori Yume Utaou (ユメ語るよりユメ歌おう)",
-      "artist": "Shuka Saitou",
-      "episodes": "11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -49,7 +49,14 @@
       "thumb": "https://media.kitsu.app/episode/373696/thumbnail/medium-ef888e22f8f206f155987e94cc7ccd73.jpeg",
       "synopsis": "Six months have passed since the release of B-Komachi's music video, and lots of things have changed. (Source: Crunchyroll)",
       "airdate": "2026-01-14",
-      "markers": [],
+      "markers": [
+        {
+          "kind": "outro",
+          "start": 1340,
+          "end": 1430,
+          "label": "Ending"
+        }
+      ],
       "external_id": "373696"
     },
     {
@@ -163,49 +170,6 @@
       "external_id": "373706"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "TEST ME",
-      "artist": "CHANMINA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Serenade (セレナーデ)",
-      "artist": "natori",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Fatale",
-      "artist": "GEMN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Burning",
-      "artist": "hitsujibungaku",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Idol (アイドル)",
-      "artist": "YOASOBI",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mephisto (メフィスト)",
-      "artist": "Queen Bee",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

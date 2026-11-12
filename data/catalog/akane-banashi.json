@@ -37,21 +37,6 @@
     "drama"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hitotarashi (人誑し / ひとたらし)",
-      "artist": "Keisuke Kuwata",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "AKANE On My Mind ~ Manjū Kowai (AKANE On My Mind〜饅頭こわい)",
-      "artist": "Keisuke Kuwata",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

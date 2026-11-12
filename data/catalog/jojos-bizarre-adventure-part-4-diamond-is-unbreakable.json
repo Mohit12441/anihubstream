@@ -471,42 +471,6 @@
       "external_id": "184681"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Crazy Noisy Bizarre Town",
-      "artist": "THE DU",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "I Want You",
-      "artist": "Savage Garden",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Crazy Noisy Bizarre Town ~EDM arrange ver.~",
-      "artist": "THE DU",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 3,
-      "title": "chase",
-      "artist": "batta",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 4,
-      "title": "Great Days",
-      "artist": "Karen Aoki & Daisuke Hasegawa",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

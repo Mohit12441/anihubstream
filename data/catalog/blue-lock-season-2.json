@@ -193,49 +193,6 @@
       "external_id": "347508"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Boujaku no Charisma",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "One",
-      "artist": "Snow Man",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Chaos ga Kiwamaru (カオスが極まる)",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": "2-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "WINNER",
-      "artist": "Shugo Nakamura",
-      "episodes": "2-12"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Judgement",
-      "artist": "ASH DA HERO",
-      "episodes": "14-22,24"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Numbness like a ginger",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": "15-23"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

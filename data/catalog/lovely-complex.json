@@ -304,35 +304,6 @@
       "external_id": "31367"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kimi + Boku = Love? (キミ+ボク=Love?)",
-      "artist": "Tegomass",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kiss ~ Kaerimichi no Love Song (キッス～帰り道のラブソング)",
-      "artist": "Tegomass",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Hey! Say!",
-      "artist": "Hey! Say! 7",
-      "episodes": "14-24"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "BON BON",
-      "artist": "Hey! Say! 7",
-      "episodes": "14-24"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

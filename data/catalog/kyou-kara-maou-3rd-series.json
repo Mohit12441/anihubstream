@@ -470,56 +470,6 @@
       "external_id": "165180"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sekai yo Warae (世界よ笑え)",
-      "artist": "Jungo Yoshida with M-Tone",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Going",
-      "artist": "Jungo Yoshida",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Romantic Morning (ロマンチック・モーニング)",
-      "artist": "The Stand Up",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hitsuyou no Poketto (秘密のポケット)",
-      "artist": "The Stand Up",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hateshinaku Tooi Sora ni (果てしなく遠い空に)",
-      "artist": "The Stand Up",
-      "episodes": "1-78"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Suteki na Shiawase (ステキな幸せ)",
-      "artist": "The Stand Up",
-      "episodes": "1-39"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Arigatō— (ありがとう〜)",
-      "artist": "BON'z",
-      "episodes": "40-78"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

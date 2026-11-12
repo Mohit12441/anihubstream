@@ -172,42 +172,6 @@
       "external_id": "8658"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Silhouette of a Breeze - Celtic version",
-      "artist": "Kunihiko Ryo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Silhouette of a Breeze - Celtic version",
-      "artist": "Kunihiko Ryo",
-      "episodes": "1"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Silhouette of a Breeze",
-      "artist": "Kunihiko Ryo",
-      "episodes": "1-11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Menuet for EMMA",
-      "artist": "Tokyo Recorder Orchestra",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Rondo of Lily bell",
-      "artist": "Kunihiko Ryo",
-      "episodes": "2-12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

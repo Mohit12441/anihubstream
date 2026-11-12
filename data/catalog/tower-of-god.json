@@ -187,49 +187,6 @@
       "external_id": "277929"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "NIGHT",
-      "artist": "Stray Kids",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Falling Up",
-      "artist": "Stray Kids",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "RISE UP",
-      "artist": "NiziU",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "BELIEVE",
-      "artist": "NiziU",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "TOP",
-      "artist": "Stray Kids",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "SLUMP",
-      "artist": "Stray Kids",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -171,42 +171,6 @@
       "external_id": "160037"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "disarm dreamer",
-      "artist": "Aki Misato",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Clubhouse Sandwich (クラブハウスサンド)",
-      "artist": "Yuumao",
-      "episodes": "1,2,4-6,8,10-12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Ai (あい)",
-      "artist": "Saori Atsumi",
-      "episodes": "3"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Biidama (びいだま)",
-      "artist": "Saori Atsumi",
-      "episodes": "7"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Clubhouse Sandwich (クラブハウスサンド) Instrumental Version",
-      "artist": "Yuumao",
-      "episodes": "9"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -290,56 +290,6 @@
       "external_id": "274030"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Welcome to Chaos (Welcome トゥ 混沌)",
-      "artist": "[K]NoW_NAME:Ayaka Tachibana",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Who am I?",
-      "artist": "[K]NoW_NAME:Ayaka Tachibana & NIKIIE",
-      "episodes": "1-2,7"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Night SURFING",
-      "artist": "[K]NoW_NAME:Ayaka Tachibana",
-      "episodes": "3-4"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "D.D.D.D.",
-      "artist": "[K]NoW_NAME:NIKIIE",
-      "episodes": "5-6"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Strange Meat Pie",
-      "artist": "[K]NoW_NAME:Ayaka Tachibana & NIKIIE",
-      "episodes": "8-9"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "SECONDs FLY",
-      "artist": "[K]NoW_NAME:NIKIIE",
-      "episodes": "10-11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 6,
-      "title": "404",
-      "artist": "[K]NoW_NAME:NIKIIE & AIJ",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

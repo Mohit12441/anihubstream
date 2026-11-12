@@ -588,63 +588,6 @@
       "external_id": "376039"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Wonderful Precure! evolution!! (わんだふるぷりきゅあ！evolution!!)",
-      "artist": "Chihaya Yoshitake",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Happy≒Future",
-      "artist": "Moeha Nochimoto and Chihaya Yoshitake",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Wonderful Precure! evolution!! (わんだふるぷりきゅあ！evolution!!)",
-      "artist": "Chihaya Yoshitake",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "FUN☆FUN☆Wonderful DAYS! (FUN☆FUN☆わんだふるDAYS！)",
-      "artist": "Ami Ishii and Moeha Nochimoto",
-      "episodes": "1-22"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Happiness Evolu~tion♡ ~Komugi & Iroha Ver.~ (しあわせえぼりゅ～しょん♡ ～こむぎ＆いろはVer.～)",
-      "artist": "Ami Ishii and Moeha Nochimoto",
-      "episodes": "23, 25, 27, 29, 31, 35, 37, 39, 41, 43, 45, 47, 49"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Happiness Evolu~tion♡ ~Yuki & Mayu Ver.~ (しあわせえぼりゅ～しょん♡ ～ユキ＆まゆVer.～)",
-      "artist": "Ami Ishii and Moeha Nochimoto",
-      "episodes": "24, 26, 28, 30, 32, 36, 38, 40, 42, 44, 46, 48"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Happy≒Future",
-      "artist": "Moeha Nochimoto and Chihaya Yoshitake",
-      "episodes": "33-34"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "Wonderful Smile",
-      "artist": "Ami Ishii",
-      "episodes": "50"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

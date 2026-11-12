@@ -217,63 +217,6 @@
       "external_id": "371517"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Unending Wish",
-      "artist": "Void_Chords feat. MindaRyn",
-      "episodes": "1-9"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "The other story",
-      "artist": "DOBERMAN INFINITY",
-      "episodes": "1-9"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Daylight",
-      "artist": "MindaRyn",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Gedou Sanka (Heretical Hymn)",
-      "artist": "FantasticYouth",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "FLARE",
-      "artist": "Void_Chords feat. LIO",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hajime no Uta (First Song)",
-      "artist": "DracoVirgo",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Compass",
-      "artist": "Void_Chords feat. MindaRyn",
-      "episodes": "10-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Metamorphosis",
-      "artist": "iScream",
-      "episodes": "10-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -184,35 +184,6 @@
       "external_id": "407267"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "FLASHBULB",
-      "artist": "Omoinotake",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hanataba (花束)",
-      "artist": "Omoinotake",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Adrena (アドレナ)",
-      "artist": "YOASOBI",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "BABY",
-      "artist": "YOASOBI",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

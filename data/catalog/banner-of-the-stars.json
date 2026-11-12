@@ -183,28 +183,6 @@
       "external_id": "9548"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tenohira no Yume",
-      "artist": "Emiko Shiratori",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Farewell to My Love",
-      "artist": "Ayako Kawasumi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Pink",
-      "artist": "YUAMU",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

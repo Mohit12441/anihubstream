@@ -319,49 +319,6 @@
       "external_id": "331529"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "QUEEN",
-      "artist": "LiSA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "An'ya no Dancer (闇夜のダンサー -Dancer in the Dark Night)",
-      "artist": "-otoha-",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Broken Games",
-      "artist": "FZMZ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ace",
-      "artist": "CHiCO",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Danger Danger",
-      "artist": "FZMZ ft. icy",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Gajumaru ~Heaven in the Rain~",
-      "artist": "ReoNa",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

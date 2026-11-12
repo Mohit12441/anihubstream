@@ -175,28 +175,6 @@
       "external_id": "324517"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "1",
-      "artist": "MOB CHOIR",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Cobalt",
-      "artist": "MOB CHOIR",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Exist",
-      "artist": "MOB CHOIR",
-      "episodes": "4, 6"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

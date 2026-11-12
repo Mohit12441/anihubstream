@@ -184,28 +184,6 @@
       "external_id": "256255"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "17 Sai",
-      "artist": "Haruka to Miyuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "color capsule",
-      "artist": "Nagi Yanagi",
-      "episodes": "13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mimei no Kimi to Hakumei no Mahō",
-      "artist": "Nagi Yanagi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

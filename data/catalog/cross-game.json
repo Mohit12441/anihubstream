@@ -590,49 +590,6 @@
       "external_id": "71200"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Summer Rain",
-      "artist": "Kobukuro",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Koi Kogarete Mita Yume (恋焦がれて見た夢)",
-      "artist": "Ayaka",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Orange Days (オレンジDays)",
-      "artist": "SQUAREHOOD",
-      "episodes": "14-26"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Moeru you na Koi ja Nai Kedo (燃えるような恋じゃないけど)",
-      "artist": "Tsuru",
-      "episodes": "27-39"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Rehearsal (リハーサル)",
-      "artist": "Natsuko Kondo",
-      "episodes": "40-49"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "Koi Suru Otome (恋スル乙女)",
-      "artist": "Natsuko Kondo",
-      "episodes": "50"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

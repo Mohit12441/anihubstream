@@ -3,14 +3,14 @@
   "title": "Yuki Yuna is a Hero",
   "native": "結城友奈は勇者である",
   "year": 2014,
-  "rating": 7.3,
+  "rating": 7.2,
   "season": "Fall 2014",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/8638/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20800-KpoJB6tGnj2V.jpg",
-  "accent": "#a24bff",
-  "synopsis": "In her everyday life, Yuuna Yuuki is a hero. As proof, she is in her middle school's Hero Club, where she does her best to help others and bring a smile to everyone's face. But Yuuna, always up to any task, is about to become an even bigger hero. Mysterious destructive forces called Vertexes begin threatening the world she loves, and the Hero Club is called upon by a strange phone app to save it. Along with her best friend Mimori Tougou, as well as sisters Fuu and Itsuki Inubouzaki, they must transform into magical girls in order to battle the Vertexes. In between studying and putting on shows for kids, Yuuna and the Hero Club must fight for the very existence of their world and face the harsh truths behind their own powers, all the while discovering what it truly means to be a hero. [Written by MAL Rewrite]",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20800-7IAW762FbSFU.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20800-7IAW762FbSFU.png",
+  "accent": "#e47850",
+  "synopsis": "Yuuna Yuuki is an ordinary second-year middle school student. She gets up in the morning, gets ready for school, goes to classes, participates in club activities, and has fun with her friends. But there is one extraordinary thing about Yuuki — she belongs to the “Brave Hero Club.” What does the Brave Hero Club do? Who is the mysterious being called “Vertex?” Yuuki Yuuna and her friends’ story takes place in Year 300, Era of the Gods.\n\n(Source: Ponycan USA)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -177,70 +177,6 @@
       "external_id": "149121"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ashita no Hana-tachi",
-      "artist": "Sanshuu Chuugaku Yuusha-bu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Chiheisen no Mukou e",
-      "artist": "Sanshuu Chuugaku Yuusha-bu",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hanakotoba (ハナコトバ)",
-      "artist": "Haruka Terui, Suzuko Mimori, Yumi Uchida, Tomoyo Kurosawa, Juri Nagatsuma & Kana Hanazawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yuusha-tachi no Lullaby",
-      "artist": "Haruka Terui, Suzuko Mimori, Yumi Uchiyama, Tomoyo Kurosawa, Juri Nagatsuma, and Kana Hanazawa",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Egao no Kimi e (エガオノキミへ)",
-      "artist": "Suzuko Mimori",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tomodachi (ともだち; Friends)",
-      "artist": "Suzuko Mimori, Kana Hanazawa, Yumiri Hanamori",
-      "episodes": "1-3,5"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hoshi to Hana (ホシトハナ; Stars & Flowers)",
-      "artist": "Haruka Terui, Suzuko Mimori, Tomoyo Kurosawa, Yumi Uchiyama",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aurora Days",
-      "artist": "Haruka Terui, Suzuko Mimori, Tomoyo Kurosawa, Yumi Uchiyama",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Tamashii (たましい; Spirit)",
-      "artist": "Yumiri Hanamori",
-      "episodes": "4"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

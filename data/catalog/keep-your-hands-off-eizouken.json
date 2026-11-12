@@ -172,21 +172,6 @@
       "external_id": "277001"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Easy Breezy",
-      "artist": "chelmico",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Namae no Nai Ao (A Nameless Blue)",
-      "artist": "Kami-sama, Boku wa Kizuite Shimatta",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

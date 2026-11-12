@@ -171,28 +171,6 @@
       "external_id": "250709"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Super Big Love!",
-      "artist": "Tenrogun",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "BAD SURPRISE",
-      "artist": "Tenrou-gun",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Heart Kaki Mawashite Ageru♡",
-      "artist": "Miharu Hanai",
-      "episodes": "7"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -128,35 +128,6 @@
       "external_id": "268642"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Synthetic Sympathy",
-      "artist": "Who-ya Extended",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "red strand",
-      "artist": "Cö shu Nie",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Q-vism",
-      "artist": "Who-ya Extended",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "bullet",
-      "artist": "Cö shu Nie",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

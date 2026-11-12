@@ -271,21 +271,6 @@
       "external_id": "362175"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "AIZO",
-      "artist": "King Gnu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yoake no Uta",
-      "artist": "jo0ji",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

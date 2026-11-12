@@ -1,16 +1,16 @@
 {
   "id": "gugure-kokkuri-san",
-  "title": "GUGURE! KOKKURI-SAN",
-  "native": "Gugure! Kokkuri-san",
+  "title": "Gugure! Kokkuri-san",
+  "native": "繰繰れ!コックリさん",
   "year": 2014,
-  "rating": 7.6,
-  "season": "Year 2014",
+  "rating": 7.2,
+  "season": "Fall 2014",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/69649b990284e5fe616e6aa8-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/69649b990284e5fe616e6aa8-landscape.webp",
-  "accent": "#8b5cf6",
-  "synopsis": "Gugure! Kokkuri-san is an eccentric comedy centered around the self-proclaimed doll, Kohina Ichimatsu. Her uneventful life goes from plain to absurd when she summons a fox spirit by the name of Kokkuri-san. But contrary to popular belief, he is not the omniscient, answer-granting spirit from the legend anymore. The loss of believers in modern society has rendered him powerless.\n\nUpon meeting the bizarre girl who summoned him, Kokkuri-san is shocked to discover that Kohina not only lives alone, but survives on just cup ramen! Filled with concern for the young girl, he takes it upon himself to ensure that Kohina has proper meals and lives a decent life. Thus begin Kokkuri-san's less-than-hopeful endeavors and their peculiar life together.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20656-QL6CP1rtkTPj.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20656-QL6CP1rtkTPj.png",
+  "accent": "#506be4",
+  "synopsis": "The original manga revolves around Kohina, a little girl who ends up summoning by a Kokkuri-san, a lower-ranking ghost in Japanese folklore. The Kokkuri-san she calls ends up being a white-haired handsome, young man. Although he had intended to merely haunt her at first, he becomes worried about her terrible eating habit of cup ramen for every meal, so he decides to haunt her in order to protect her.\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 12,
   "added_at": null,
-  "search_text": "gugure kokkuri san gugure kokkuri san",
+  "search_text": "gugure kokkuri san 繰繰れ コックリさん tv finished",
   "genres": [
     "comedy",
     "supernatural"
@@ -171,28 +171,6 @@
       "external_id": "160340"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Welcome!! DISCO Kemokemoke (Welcome!!DISCOけもけもけ)",
-      "artist": "Daisuke Ono, Takahiro Sakurai, & Jouji Nakata",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "This Merry-Go-Round Song",
-      "artist": "Atsushi Suemitsu",
-      "episodes": "2-11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Welcome!! DISCO Kemokemoke (Welcome!!DISCOけもけもけ)",
-      "artist": "Daisuke Ono, Takahiro Sakurai, Jouji Nakata",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

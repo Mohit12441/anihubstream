@@ -16,10 +16,10 @@
   "alt_seasons": [],
   "sched_day": 6,
   "sched_day_label": "SAT",
-  "sched_date": "Nov 7",
+  "sched_date": "Nov 14",
   "sched_time": "15:30",
   "sched_season": "Fall 2026",
-  "sched_episode": 6,
+  "sched_episode": 7,
   "sched_sub_at": null,
   "sched_dub_at": 1794070800000,
   "source_ids": {
@@ -83,21 +83,6 @@
       "external_id": null
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kaze no Naka wa Hashirukkya nai! (風の中は走るっきゃないっ！)",
-      "artist": "Sangatsu no Phantasia",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Pi (ぴ)",
-      "artist": "Akari Nanawo",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -1,16 +1,16 @@
 {
   "id": "high-school-dxd-new-oppai-tsutsumimasu",
-  "title": "High School DxD New: Oppai, Tsutsumimasu!",
-  "native": "ハイスクールD×D NEW OVA おっぱい、包みます！",
+  "title": "High School DxD NEW OVA Oppai, Tsutsumimasu!",
+  "native": "ハイスクールDxD NEW OVA おっぱい、包みます！",
   "year": 2015,
-  "rating": 7.3,
-  "season": "Year 2015",
+  "rating": 6.9,
+  "season": "Winter 2015",
   "kind": "OVA",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/6aa02fb10dd03e03a92d045b-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/6aa02fb10dd03e03a92d045b-landscape.webp",
-  "accent": "#2f7bff",
-  "synopsis": "Unaired anime episode bundled with the limited edition of High School DxD DX.1.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21103-iVibYXQ4Z4UF.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21103-iVibYXQ4Z4UF.jpg",
+  "accent": "#e4505d",
+  "synopsis": "Unaired anime episode bundled the limited edition High School D×D DX.1 Blu-ray.",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 1,
   "added_at": null,
-  "search_text": "high school dxd new oppai tsutsumimasu ハイスクールd d new ova おっは い 包みます high school dxd new ova",
+  "search_text": "high school dxd new ova oppai tsutsumimasu ハイスクールdxd new ova おっは い 包みます ova finished",
   "genres": [
     "comedy",
     "fantasy"
@@ -50,35 +50,6 @@
       "external_id": "173895"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sympathy",
-      "artist": "Larval Stage Planning",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Houteishiki wa Kotaenai (方程式は答えない)",
-      "artist": "Occult Kenkyuubu Girls",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Gekijouron (激情論)",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Lovely ♥ Devil (らぶりぃ♥でびる)",
-      "artist": "Occult Kenkyuubu Girls",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

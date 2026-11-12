@@ -306,35 +306,6 @@
       "external_id": "101059"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Spirit Inspiration",
-      "artist": "Nothing's Carved in Stone",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "happy endings",
-      "artist": "Kana Hanazawa",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Daisuki na noni (Even though I love you)",
-      "artist": "Kylee",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Bokutachi no Uta (Our Song)",
-      "artist": "Sako Tomohisa",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -172,21 +172,6 @@
       "external_id": "352874"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "One Room Adventure",
-      "artist": "MADKID",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mirai=Teleport",
-      "artist": "Nenne",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

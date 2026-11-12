@@ -10,7 +10,7 @@
   "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx3927-PtFPKRrcDFeM.png",
   "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx3927-PtFPKRrcDFeM.png",
   "accent": "#1a436b",
-  "synopsis": "Four years have passed since the final battle between Celestial Being and the UN Forces. Humanity, having established the Earth Sphere Federation, forms an independent security preservation force, A-Laws, separate from the formal Federation army to further unify nations and the will of mankind. But the reality was the inhumane oppression of misuse of powers, doctrines, and ideologies in the name of unity.\n\n\r\nSaji Crossroad has followed the path to becoming a space engineer to keep his promise to Louise Halevy, who in turn was compelled to become involved in Federation government reform and joined A-Laws as a mobile suit pilot during the four-year gap.\n\n\r\nMeanwhile, Setsuna F. Seiei, having survived the climactic battle four years ago, witnessed a change in the world due to the actions of Celestial Being. With the defeat of Alejandro Corner, he dreamed of a peaceful world without conflict; but before his own eyes was the reality of the continuing strain on peace, the oppression caused by A-Laws. He decides once more to fight with Gundam, the power with the potential to change the world.\n\n\r\n(Source: Wikipedia)",
+  "synopsis": "Four years have passed since the final battle between Celestial Being and the UN Forces. Humanity, having established the Earth Sphere Federation, forms an independent security preservation force, A-Laws, separate from the formal Federation army to further unify nations and the will of mankind. But the reality was the inhumane oppression of misuse of powers, doctrines, and ideologies in the name of unity.\n\n\nSaji Crossroad has followed the path to becoming a space engineer to keep his promise to Louise Halevy, who in turn was compelled to become involved in Federation government reform and joined A-Laws as a mobile suit pilot during the four-year gap.\n\n\nMeanwhile, Setsuna F. Seiei, having survived the climactic battle four years ago, witnessed a change in the world due to the actions of Celestial Being. With the defeat of Alejandro Corner, he dreamed of a peaceful world without conflict; but before his own eyes was the reality of the continuing strain on peace, the oppression caused by A-Laws. He decides once more to fight with Gundam, the power with the potential to change the world.\n\n\n(Source: Wikipedia)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -315,56 +315,6 @@
       "external_id": "56643"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hakanaku mo Towa no Kanashi (儚くも永久のカナシ; Fleeting and Everlasting Sorrow)",
-      "artist": "UVERworld",
-      "episodes": "2-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hakanaku mo Towa no Kanashi (儚くも永久のカナシ; Fleeting and Everlasting Sorrow)",
-      "artist": "UVERworld",
-      "episodes": "1"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Namida no Mukou (泪のムコウ; Across from the Tears)",
-      "artist": "Stereopony",
-      "episodes": "14-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Prototype",
-      "artist": "Chiaki Ishikawa",
-      "episodes": "2-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "TOMORROW",
-      "artist": "Ayumi Tsunematsu",
-      "episodes": "14"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "trust you",
-      "artist": "Yuna Ito",
-      "episodes": "15-24"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "DAYBREAK'S BELL",
-      "artist": "L'arc~en~Ciel",
-      "episodes": "25"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

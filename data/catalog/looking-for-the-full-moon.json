@@ -613,49 +613,6 @@
       "external_id": "3117"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "I ♥ U",
-      "artist": "THE*SCANTY",
-      "episodes": "1-26"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "New Future",
-      "artist": "Changin' My Life",
-      "episodes": "01-06,52"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Rock'n Roll Princess",
-      "artist": "THE*SCANTY",
-      "episodes": "27-52"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "My self",
-      "artist": "Changin' My Life",
-      "episodes": "07-26"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Eternal Snow",
-      "artist": "Changin' My Life",
-      "episodes": "27-42"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Love Chronicle",
-      "artist": "Changin' My Life",
-      "episodes": "43-51"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

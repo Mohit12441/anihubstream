@@ -3,14 +3,14 @@
   "title": "Casshern Sins",
   "native": "キャシャーンSins",
   "year": 2008,
-  "rating": 7.5,
+  "rating": 7.4,
   "season": "Fall 2008",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/3872/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/4981-lMta9qbqmkq3.png",
-  "accent": "#ffc247",
-  "synopsis": "In the distant future, where cyborgs and humans struggle to survive after the war which destroyed the world, a being in white suit awakens. His name is Casshern and he remembers nothing of his own past. In barren and dark dystopian world, where every being alive seems to hate his existence and the evil from his past wants him dead, Casshern, haunted by the flashes of his past memories has to survive and figure out who or what exactly he is and how he got to where he is now. But he does not know that he might not like the horrible truth of the past, hidden deep inside his mind... Created as an intended reboot of Casshern franchise.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx4981-V6MbMiJUqdvP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4981-V6MbMiJUqdvP.jpg",
+  "accent": "#a1355d",
+  "synopsis": "In the distant future, where cyborgs and humans struggle to survive after the war which destroyed the world, a being in white suit awakens. His name is Casshern and he remembers nothing of his own past. \n\nIn barren and dark dystopian world, where every being alive seems to hate his existence and the evil from his past wants him dead, Casshern, haunted by the flashes of his past memories has to survive and figure out who or what exactly he is and how he got to where he is now. But he does not know that he might not like the horrible truth of the past, hidden deep inside his mind...\n\nCreated as an intended reboot of Casshern franchise.",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -304,63 +304,6 @@
       "external_id": "65305"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Aoi Hana (青い花)",
-      "artist": "Color Bottle",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Blue Flower",
-      "artist": "Color Bottle",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Reason",
-      "artist": "K∧N∧",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Aoi Kage 「蒼い影」",
-      "artist": "Otoyakichiemon'Ju",
-      "episodes": "13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Blue Shadow",
-      "artist": "Otoyakichiemon'Ju",
-      "episodes": "13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Hikari to Kage「光と影」",
-      "artist": "Shinji Kuno",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Light and Shadow",
-      "artist": "Shinji Kuno",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "A Path",
-      "artist": "Nami Miyahara",
-      "episodes": "24"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

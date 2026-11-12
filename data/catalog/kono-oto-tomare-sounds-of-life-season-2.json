@@ -1,16 +1,16 @@
 {
   "id": "kono-oto-tomare-sounds-of-life-season-2",
   "title": "Kono Oto Tomare!: Sounds of Life Season 2",
-  "native": "Kono Oto Tomare! Part 2",
+  "native": "この音とまれ！2",
   "year": 2019,
-  "rating": 8.4,
-  "season": "Year 2019",
+  "rating": 8.3,
+  "season": "Fall 2019",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/693c6d7fb002072580ba3479-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/693c6d7fb002072580ba3479-landscape.webp",
-  "accent": "#ff3d8b",
-  "synopsis": "The Tokise High School Koto Club has courageously pushed through their fractured and unsynchronized performance at the Kanto Region Traditional Japanese Music Festival. Club members Chika Kudou, Satowa Houzuki, Takezou Kurata, Hiro Kurusu, Kouta Mizuhara, Saneyasu Adachi, and Michitaka Sakai are devastated to learn the negative results of their performance, leaving them crushed. Nonetheless, the group recognizes their potential and enthusiastically agree to collectively sharpen their skills, improve their flaws, and develop higher caliber playing to succeed in the upcoming national qualifiers in winter.\n\nWith the help of their now willing club advisor Suzuka Takinami, the group's goal gradually becomes achievable as they begin to grasp the foundations of good music and refine their koto-playing abilities, with the suggestion of performing more often to gain what they lack most—experience.\n\nHowever, as their journey to nationals is underway, the koto club members face challenges that obstruct their focus and progress. Not only does the threat of other powerhouse schools and musicians remain, but the high school issues of budding romance and soon-to-be-graduating seniors also begin to push the limits of the determined group of teenagers and the future of the koto club.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx108891-RTZQkwjWsFi9.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108891-RTZQkwjWsFi9.jpg",
+  "accent": "#d6e45d",
+  "synopsis": "Despite their best efforts during the Kanto Region Music Festival, the Koto Club is hit with the harsh reality of their poor performance. In the face of disappointment, they still decide to hone their skills and set sight on their next target.",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 13,
   "added_at": null,
-  "search_text": "kono oto tomare sounds of life season 2 kono oto tomare part 2",
+  "search_text": "kono oto tomare sounds of life season 2 この音とまれ 2 tv finished",
   "genres": [
     "drama",
     "romance",
@@ -183,35 +183,6 @@
       "external_id": "270659"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Harmony",
-      "artist": "Shouta Aoi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Rainbow",
-      "artist": "Yuma Uchida",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tone",
-      "artist": "Shōta Aoi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Speechless",
-      "artist": "Yūma Uchida",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

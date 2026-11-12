@@ -150,28 +150,6 @@
       "external_id": "327713"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hoshi no Runway",
-      "artist": "Kocho",
-      "episodes": "1, 3-9"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Chiisana Tenohira",
-      "artist": "kotringo",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Tonosaman no Uta",
-      "artist": "Enri Yamada",
-      "episodes": "2"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

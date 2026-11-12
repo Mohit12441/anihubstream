@@ -303,28 +303,6 @@
       "external_id": "387506"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Let's Go!! Rider Kick (レッツゴー!! ライダーキック)",
-      "artist": "Hiroshi Fujioka and Male Harmony",
-      "episodes": "1,13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "One More Time (ワンモアタイム)",
-      "artist": "TeddyLoid feat. Ryoji Tokito",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Wanna be",
-      "artist": "TeddyLoid feat. Shigeru Matsuzaki and TOPHAMHAT-KYO",
-      "episodes": "2-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

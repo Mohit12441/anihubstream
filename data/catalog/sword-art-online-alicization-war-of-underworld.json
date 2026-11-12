@@ -177,49 +177,6 @@
       "external_id": "260590"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Meaning the start",
-      "artist": "Ai Kayano",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "ANIMA",
-      "artist": "ReoNa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "I will...",
-      "artist": "Eir Aoi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Blazing the future",
-      "artist": "Yoshitsugu Matsuoka, Nobunaga Shimazaki, Ai Kayano",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Resolution",
-      "artist": "Haruka Tomatsu",
-      "episodes": "1-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "unlasting",
-      "artist": "LiSA",
-      "episodes": "1-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

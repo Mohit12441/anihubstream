@@ -185,35 +185,6 @@
       "external_id": "161470"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Theme From Lupin III 2015",
-      "artist": "You & Explosion Band",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Arrivederci---Italia---",
-      "artist": "You & Explosion Band",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Lupin Trois 2018",
-      "artist": "Yuji Ohno & Lupintic Six",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Seine no Kaze ni... (Adieu)",
-      "artist": "Miyuki Sawashiro",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

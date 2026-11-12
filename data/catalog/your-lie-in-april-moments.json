@@ -49,35 +49,6 @@
       "external_id": "158539"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hikaru Nara (光るなら;If It Will Shine)",
-      "artist": "goose house",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kirameki (キラメキ;Sparkle)",
-      "artist": "wacci",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Nanairo Symphony (七色シンフォニー;Seven-Colored Symphony)",
-      "artist": "Coala Mode",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Orange (オレンジ)",
-      "artist": "7!!",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

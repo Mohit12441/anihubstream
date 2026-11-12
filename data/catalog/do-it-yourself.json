@@ -4,13 +4,13 @@
   "native": "Do It Yourself!! -どぅー・いっと・ゆあせるふ-",
   "year": 2022,
   "rating": 7.4,
-  "season": "Year 2022",
+  "season": "Fall 2022",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/10/6ad32197a79c62b971a88903-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/10/6ad32197a79c62b971a88903-landscape.jpg",
-  "accent": "#ff1f4a",
-  "synopsis": "Building furniture and friendships have a lot in common. Intention, effort, and hard work are needed for both crafts. This is a story of girls in a DIY club building both as they carve out their futures. None of it comes easy, but that doesn’t stop any of ’em. Furniture, friendships, and the future—they’re building it all with their own hands! \n\n\n\n(Source: Crunchyroll)",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx131516-kLB37ISBeOX0.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx131516-kLB37ISBeOX0.jpg",
+  "accent": "#d6e478",
+  "synopsis": "Building furniture and friendships have a lot in common. Intention, effort, and hard work are needed for both crafts. This is a story of girls in a DIY club building both as they carve out their futures. None of it comes easy, but that doesn’t stop any of ’em. Furniture, friendships, and the future—they’re building it all with their own hands! \n\n(Source: Crunchyroll)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 12,
   "added_at": null,
-  "search_text": "do it yourself do it yourself と ぅー いっと ゆあせるふ",
+  "search_text": "do it yourself do it yourself と ぅー いっと ゆあせるふ tv finished",
   "genres": [
     "slice-of-life"
   ],
@@ -170,21 +170,6 @@
       "external_id": "308569"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Dokidoki Idea wo Yoroshiku!",
-      "artist": "Katajo DIY-bu!!",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tsuzuku Hanashi",
-      "artist": "Konomi Inagaki & Kana Ichinose",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

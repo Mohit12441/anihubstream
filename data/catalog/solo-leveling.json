@@ -330,35 +330,6 @@
       "external_id": "346891"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "ReawakeR",
-      "artist": "LiSA feat. Felix of Stray Kids",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "UN-APEX",
-      "artist": "TK from Ling Tosite Sigure",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "LEveL",
-      "artist": "SawanoHiroyuki[nZk]:TOMORROW X TOGETHER",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "request",
-      "artist": "krage",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

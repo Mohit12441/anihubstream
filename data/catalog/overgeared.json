@@ -16,10 +16,10 @@
   "alt_seasons": [],
   "sched_day": 7,
   "sched_day_label": "SUN",
-  "sched_date": "Nov 8",
+  "sched_date": "Nov 15",
   "sched_time": "14:30",
   "sched_season": "Fall 2026",
-  "sched_episode": 7,
+  "sched_episode": 8,
   "sched_sub_at": null,
   "sched_dub_at": 1794148260000,
   "source_ids": {
@@ -118,23 +118,32 @@
         }
       ],
       "external_id": "cloud-sync"
-    }
-  ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "SATISFY",
-      "artist": "Re:name",
-      "episodes": null
     },
     {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ray of Emotion",
-      "artist": "TAO",
-      "episodes": null
+      "n": 7,
+      "title": "Episode 7",
+      "runtime": "24m",
+      "runtime_seconds": 1440,
+      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg",
+      "synopsis": "Sin Yeong-U (a.k.a. Grid), an unlucky man in life and a low-level player in the popular VR game “Satisfy,” finds a powerful item that earns him a rare legendary class title: “Pagma’s Successor.” He’s now a skilled blacksmith who can forge unique weapons and equip the game’s most powerful gear. Grid resolves to use his new abilities to achieve fame and fortune, but as his very existence begins to stir up trouble in Satisfy, he realizes that life as a legend may be more than he bargained for….\n\n(Source: Tapas, edited)\n\nNote: Tempal: Item no Chikara is streaming a week in advance of the TV broadcast on Prime Video and Crunchyroll beginning September 27th, 2026. Regular broadcasting began on October 2nd, 2026.",
+      "airdate": null,
+      "markers": [
+        {
+          "kind": "intro",
+          "start": 39,
+          "end": 129,
+          "label": "Opening"
+        },
+        {
+          "kind": "outro",
+          "start": 1331,
+          "end": 1419,
+          "label": "Ending"
+        }
+      ],
+      "external_id": "cloud-sync"
     }
   ],
+  "themes": [],
   "relations": []
 }

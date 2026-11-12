@@ -303,35 +303,6 @@
       "external_id": "200906"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "10% roll, 10% romance",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Maybe the next waltz",
-      "artist": "Mikako Komatsu",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Invisible Sensation",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Swing heart direction",
-      "artist": "Mikako Komatsu",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

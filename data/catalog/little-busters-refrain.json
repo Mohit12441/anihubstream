@@ -183,56 +183,6 @@
       "external_id": "171311"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Boys be Smile",
-      "artist": "Suzuyu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi to no Nakushi Mono (君とのなくしもの;The Thing I Lost With You)",
-      "artist": "Ayaka Kitazawa",
-      "episodes": "1-2,4-5,7"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Song for friends",
-      "artist": "Rita",
-      "episodes": "3,8-9"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Hanabi",
-      "artist": "Lia",
-      "episodes": "6"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Boys be Smile",
-      "artist": "Suzuyu",
-      "episodes": "10"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "Haruka Kanata (遥か彼方;Far Beyond)",
-      "artist": "Rita",
-      "episodes": "11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 6,
-      "title": "Little Busters! -Little Jumper Ver.-",
-      "artist": "Rita",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

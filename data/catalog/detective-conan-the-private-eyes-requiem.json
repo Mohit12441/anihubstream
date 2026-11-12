@@ -1,7 +1,7 @@
 {
   "id": "detective-conan-the-private-eyes-requiem",
   "title": "Detective Conan: The Private Eyes' Requiem",
-  "native": "名探偵コナン　探偵たちの鎮魂歌[レクイエム]",
+  "native": "名探偵コナン 探偵たちの鎮魂歌(レクイエム)",
   "year": 2006,
   "rating": 7.8,
   "season": "Spring 2006",
@@ -49,14 +49,6 @@
       "external_id": "24104"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yuruginai mono hitotsu",
-      "artist": "B'z",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

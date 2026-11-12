@@ -283,63 +283,6 @@
       "external_id": "187781"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Flag o Tatero (フラッグを立てろ)",
-      "artist": "YUKI",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kafune (カフネ)",
-      "artist": "Brian the Sun",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Answer (アンサー)",
-      "artist": "BUMP OF CHICKEN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Fighter",
-      "artist": "BUMP OF CHICKEN",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Haru ga Kite Bokura (春が来てぼくら)",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "I AM STANDING",
-      "artist": "RUANN",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Sayōnara Bystander (さよならバイスタンダー)",
-      "artist": "YUKI",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "orion",
-      "artist": "Kenshi Yonezu",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -182,35 +182,6 @@
       "external_id": "21489"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Chikyugi",
-      "artist": "Yumi Matsuzawa",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Pegasus Fantasy",
-      "artist": "Make-Up",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi to Onaji Aozora",
-      "artist": "Yumi Matsuzawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Eien Blue",
-      "artist": "Make-Up",
-      "episodes": "1"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -183,28 +183,6 @@
       "external_id": "105911"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Die Hollen Polizei",
-      "artist": "Juriano Hagiwara, Koji Watanabe, Tsukasa Matsubara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Glitter I.C.",
-      "artist": "Vienna Inferno Symphony Orchestra",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Gruss Elise von mir",
-      "artist": "Juriano Hagiwara, Koji Watanabe, Tsukasa Matsubara, Yuka",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

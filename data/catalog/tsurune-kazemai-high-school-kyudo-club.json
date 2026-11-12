@@ -182,35 +182,6 @@
       "external_id": "256414"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "℃/Shirushi [Tsurune-ban] (℃ / しるし【ツルネ盤】)",
-      "artist": "Luck Life",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hitominaka",
-      "artist": "Tei",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Naru",
-      "artist": "Luck Life",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Orange-iro (The Color Orange)",
-      "artist": "ChouCho",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

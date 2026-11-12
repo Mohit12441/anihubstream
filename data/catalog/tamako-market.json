@@ -173,28 +173,6 @@
       "external_id": "102500"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Dramatic Market Ride (ドラマチックマーケットライド)",
-      "artist": "Aya Suzaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Neguse (ねぐせ)",
-      "artist": "Aya Suzaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Koi no Uta (恋の歌)",
-      "artist": "Dynamite Beans",
-      "episodes": "9"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

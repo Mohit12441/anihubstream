@@ -315,49 +315,6 @@
       "external_id": "94774"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "COLORFUL",
-      "artist": "99RadioService",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hitomebore (Love at First Sight)",
-      "artist": "Band Harassment",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "STAR",
-      "artist": "99RadioService",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Akanezora",
-      "artist": "Asami Seto",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "YOUTHFUL",
-      "artist": "99RadioService",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Soshite Ima (そしていま)",
-      "artist": "Asami Seto",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

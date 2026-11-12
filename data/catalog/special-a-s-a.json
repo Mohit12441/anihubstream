@@ -10,7 +10,7 @@
   "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx3470-L3BUDBujYi7G.jpg",
   "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx3470-L3BUDBujYi7G.jpg",
   "accent": "#5dc9e4",
-  "synopsis": "Hikari Hanazono has always been second to Kei Takishima. When they were six years old, their pro-wrestling loving fathers introduced them to each other. Assuming that she was the best in wrestling, young Hikari challenged Kei to a wrestling match only to be thoroughly defeated by him. \n\n\r\nEver since that fateful incident, Hikari swore to beat Kei in school grades, sporting events - anything. To do this, she has enrolled in the same school as Kei since elementary. Now she attends Hakusenkan, an ultra elite school, that costs her carpenter father a lot of money. \n\n\r\nHikari and Kei are the top two students in the school, with Kei holding firmly to that number one position. While Hikari considers Kei to be a rival and important friend, she is completely unaware that Kei loves her. The story primarily focuses on Hikari and her constant attempts to defeat her one and only rival, Kei, and how she finds love in their rivalry.",
+  "synopsis": "Hikari Hanazono has always been second to Kei Takishima. When they were six years old, their pro-wrestling loving fathers introduced them to each other. Assuming that she was the best in wrestling, young Hikari challenged Kei to a wrestling match only to be thoroughly defeated by him. \n\n\nEver since that fateful incident, Hikari swore to beat Kei in school grades, sporting events - anything. To do this, she has enrolled in the same school as Kei since elementary. Now she attends Hakusenkan, an ultra elite school, that costs her carpenter father a lot of money. \n\n\nHikari and Kei are the top two students in the school, with Kei holding firmly to that number one position. While Hikari considers Kei to be a rival and important friend, she is completely unaware that Kei loves her. The story primarily focuses on Hikari and her constant attempts to defeat her one and only rival, Kei, and how she finds love in their rivalry.",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -305,35 +305,6 @@
       "external_id": "51507"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Special Days",
-      "artist": "Yuko Goto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hidamari no Gate (陽だまりのゲート)",
-      "artist": "Jun Fukuyama, Hiro Shimono, Tsubasa Yonaga & Kazuma Horie",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Gorgeous 4U",
-      "artist": "Jun Fukuyama, Hiro Shimono, Tsubasa Yonaga, Kazuma Horie",
-      "episodes": "13-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Special☆Gyutto Good luck! 「スペシャル☆ギュッとGood luck!」",
-      "artist": "Yuko Goto, Hitomi Nabatame, Ayahi Takagaki",
-      "episodes": "13-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

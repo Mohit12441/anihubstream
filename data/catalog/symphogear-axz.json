@@ -183,49 +183,6 @@
       "external_id": "209170"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "TESTAMENT",
-      "artist": "Nana Mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Futurism",
-      "artist": "Ayahi Takagaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Senritsu Sorority",
-      "artist": "Yoshino Nanjo, Ai Kayano & Yoko Hikasa",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Axia no Kaze",
-      "artist": "Aoi Yuki, Mizuki Nana, Ayahi Takagaki, Yoshino Nanjo, Ai Kayano & Yoko Hikasa",
-      "episodes": "6"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "TESTAMENT",
-      "artist": "Nana Mizuki",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "Nijiiro no Flügel",
-      "artist": "Aoi Yuki, Mizuki Nana, Ayahi Takagaki, Yoshino Nanjo, Ai Kayano & Yoko Hikasa",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

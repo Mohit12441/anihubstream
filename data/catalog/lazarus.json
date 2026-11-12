@@ -183,28 +183,6 @@
       "external_id": "354549"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Vortex",
-      "artist": "Kamasi Washington",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Dark Will Fall",
-      "artist": "Bonobo featuring Jacob Lusk",
-      "episodes": "13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Lazarus",
-      "artist": "The Boo Radleys",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

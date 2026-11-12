@@ -1,16 +1,16 @@
 {
   "id": "psycho-pass-3-first-inspector",
-  "title": "Psycho-Pass 3: First Inspector",
-  "native": "Psycho-Pass 3: First Inspector",
+  "title": "PSYCHO-PASS 3: First Inspector",
+  "native": "PSYCHO-PASS サイコパス 3 FIRST INSPECTOR",
   "year": 2020,
-  "rating": 7.8,
-  "season": "Year 2020",
+  "rating": 7.7,
+  "season": "Spring 2020",
   "kind": "ONA",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/696e90f10496c18def9bc132-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/696e90f10496c18def9bc132-landscape.webp",
-  "accent": "#ff1f4a",
-  "synopsis": "Inspectors Arata Shindou and Mikhail Kei Ignatov have uncovered a dangerous conspiracy. The Sybil System, the ultimate judge of human character in Japan, is being undermined by a criminal syndicate that is amassing wealth and power in the shadows.\n\nNow, Bifrost agent Kouichi Azusawa launches a direct assault upon the Criminal Investigation Department (CID) by occupying its headquarters and taking Inspector Shindou and everyone with him hostage. CID Unit 01 supervisor, along with Chief Mika Shimotsuki and former unit members Shinya Kougami and Nobuchika Ginoza, face the task of reclaiming the building and saving everyone inside.\n\nAlongside the hostage situation and Azusawa's demands for Tokyo governor Karina Komiya's resignation, there is a sinister plot hatching in the background—a secret plan that will force Inspector Shindou to confront not only Azusawa but also his own past. These events slowly bring him closer to unshrouding the mystery that has eluded him and his best friend, Ignatov, for many years.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx113917-lmW1flyIYU78.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113917-lmW1flyIYU78.png",
+  "accent": "#f11a1a",
+  "synopsis": "Tokyo, 2120. In a society overseen by the Sibyl System, Inspectors Arata Shindo and Kei Mikhail Ignatov of CID Unit One clash over truth and justice. Koichi Azusawa, the mastermind behind a string of crimes, sets his sights on the CID itself and launches an assault on the Public Safety Bureau Building. Unit One is in peril like never before—a case that will try Arata and Kei’s loyalties.\n\nNotes: \n\n- The three episodes were given a limited run in theaters as one film, and received a simultaneous release on Amazon Prime.\n\n(Source: Amazon)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 3,
   "added_at": null,
-  "search_text": "psycho pass 3 first inspector psycho pass 3 first inspector",
+  "search_text": "psycho pass 3 first inspector psycho pass サイコハ ス 3 first inspector ona finished",
   "genres": [
     "action",
     "mystery",
@@ -73,21 +73,6 @@
       "external_id": "353882"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Synthetic Sympathy",
-      "artist": "Who-ya Extended",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "red strand",
-      "artist": "Cö shu Nie",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -55,21 +55,6 @@
       "external_id": "98048"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Aria",
-      "artist": "Susumu Hirasawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "breakthrough",
-      "artist": "Kaname Kawabata",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

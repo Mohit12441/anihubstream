@@ -171,28 +171,6 @@
       "external_id": "265256"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tenkū Cafeteria",
-      "artist": "Petit Rabbit's",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Nakayoshi! Maru! Nakayoshi! (なかよし！○！なかよし！)",
-      "artist": "Chimame-tai",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Yume < Utsutsu → Happy Time",
-      "artist": "Petit Rabbit's",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

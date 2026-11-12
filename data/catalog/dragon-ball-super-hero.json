@@ -7,10 +7,10 @@
   "season": "Spring 2022",
   "kind": "Movie",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/44544/poster_image/medium-abb1d742a4185e58c632b831d8b91c19.jpeg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/133898-MYeTtAsD6KjA.jpg",
-  "accent": "#ff3d8b",
-  "synopsis": "The Red Ribbon Army was once destroyed by Son Goku. Individuals, who carry on its spirit, have created the ultimate Androids, Gamma 1 and Gamma 2. These two Androids call themselves “Super Heroes”. They start attacking Piccolo and Gohan… What is the New Red Ribbon Army's objective? In the face of approaching danger, it is time to awaken, Super Hero! (Source: Crunchyroll)",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx133898-KdQ7fWTG06n4.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx133898-KdQ7fWTG06n4.png",
+  "accent": "#e4ae0d",
+  "synopsis": "The Red Ribbon Army was once destroyed by Son Goku. Individuals, who carry on its spirit, have created the ultimate Androids, Gamma 1 and Gamma 2. These two Androids call themselves \"Super Heroes\". They start attacking Piccolo and Gohan…What is the New Red Ribbon Army's objective? In the face of approaching danger, it is time to awaken, Super Hero!\n\n(Source: Crunchyroll)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -53,112 +53,6 @@
       "external_id": "305716"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "ONOGAMI (オノガミ)",
-      "artist": "MEGATERA･ZERO",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kan Peki No Peki (完璧のペキ)",
-      "artist": "VK Blanka",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Chōzetsu Dynamic! (超絶☆ダイナミック!; Excellent Dynamic!)",
-      "artist": "Kazuya Yoshii",
-      "episodes": "1-76"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hello Hello Hello (ハローハローハロー)",
-      "artist": "Good Morning America",
-      "episodes": "1-12"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Genkai Toppa × Survivor (限界突破×サバイバー)",
-      "artist": "Kiyoshi Hikawa",
-      "episodes": "77-131"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Starring Star (スターリングスター)",
-      "artist": "KEYTALK",
-      "episodes": "13-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Usubeni (薄紅; Light Pink)",
-      "artist": "LACCO TOWER",
-      "episodes": "26-36"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Forever Dreaming",
-      "artist": "Czecho No Republic",
-      "episodes": "37-49"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "Yoka Yoka Dance (よかよかダンス Yoka Yoka Dansu)",
-      "artist": "BATTEN SHOW JO TAI",
-      "episodes": "50-59"
-    },
-    {
-      "kind": "ED",
-      "sequence": 6,
-      "title": "Chahan MUSIC (炒飯MUSIC)",
-      "artist": "Arukara",
-      "episodes": "60-72"
-    },
-    {
-      "kind": "ED",
-      "sequence": 7,
-      "title": "Aku no Tenshi to Seigi no Akuma (悪の天使と正義の悪魔; Evil Angel and Devil of Justice)",
-      "artist": "THE COLLECTORS",
-      "episodes": "73-83"
-    },
-    {
-      "kind": "ED",
-      "sequence": 8,
-      "title": "Boogie Back",
-      "artist": "Miyu Inoue",
-      "episodes": "84-96"
-    },
-    {
-      "kind": "ED",
-      "sequence": 9,
-      "title": "Haruka",
-      "artist": "Lacco Tower",
-      "episodes": "97-108"
-    },
-    {
-      "kind": "ED",
-      "sequence": 10,
-      "title": "70cm Shihou no Madoke",
-      "artist": "ROTTENGRAFFTY",
-      "episodes": "109-121"
-    },
-    {
-      "kind": "ED",
-      "sequence": 11,
-      "title": "LAGRIMA",
-      "artist": "ONEPIXCEL",
-      "episodes": "122-131"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

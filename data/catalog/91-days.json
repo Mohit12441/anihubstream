@@ -172,21 +172,6 @@
       "external_id": "241380"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Signal",
-      "artist": "TK",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Rain or Shine",
-      "artist": "ELISA",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

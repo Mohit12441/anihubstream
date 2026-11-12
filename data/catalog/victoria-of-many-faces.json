@@ -40,21 +40,6 @@
     "romance"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Isshin (一進)",
-      "artist": "Haku.",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "En no Tsuki (縁のつき)",
-      "artist": "KI_EN",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -317,35 +317,6 @@
       "external_id": "98682"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Moshimo no Hanashi",
-      "artist": "nano.RIPE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "♪Pride on Everyday（プライド・オン・エブリデイ)",
-      "artist": "Sphere",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "23:40",
-      "artist": "Hyadain feat. Base Ball Bear",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Yume Sketch",
-      "artist": "JAM Project",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

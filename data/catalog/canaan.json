@@ -3,14 +3,14 @@
   "title": "Canaan",
   "native": "カナン",
   "year": 2009,
-  "rating": 7.2,
+  "rating": 7.1,
   "season": "Summer 2009",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/4072/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/5356-HhX084YNmr86.jpg",
-  "accent": "#2ee6a8",
-  "synopsis": "Oosawa Maria is a Japanese photographer currently working in Shanghai, China. Along with her partner Mino, she searches for potential newsworthy stories throughout the city. When strange events occur at a local festival, Maria and Mino immediately investigate. Quickly, the two are immersed in a battle between unknown masked men and a strange, white-haired woman. Just when Maria is about to be caught in the crossfire, an old friend by the name of Canaan appears and helps Maria escape. But a sinister plot over a deadly virus soon develops, and Canaan learns she must confront her past if she wants any chance at stopping the perpetrator and saving her friends. [Written by MAL Rewrite]",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx5356-RRwXlRIIYe7g.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5356-RRwXlRIIYe7g.png",
+  "accent": "#e4c9a1",
+  "synopsis": "Oosawa Maria is a Japanese photographer currently working in Shanghai, China. Along with her partner Mino, she searches for potential newsworthy stories throughout the city. When strange events occur at a local festival, Maria and Mino immediately investigate. Quickly, the two are immersed in a battle between unknown masked men and a strange, white-haired woman. Just when Maria is about to be caught in the crossfire, an old friend by the name of Canaan appears and helps Maria escape. But a sinister plot over a deadly virus soon develops, and Canaan learns she must confront her past if she wants any chance at stopping the perpetrator and saving her friends.",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -182,21 +182,6 @@
       "external_id": "68209"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "mind as Judgment",
-      "artist": "Faylan",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "My heaven",
-      "artist": "Annabel",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

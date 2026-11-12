@@ -320,49 +320,6 @@
       "external_id": "279813"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Andante ni Koi o Shite!",
-      "artist": "angela",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Andante ni Koi o Shite!",
-      "artist": "angela",
-      "episodes": "1"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Shōjo no Route wa Hitotsu Janai! (The Girl's Routes Are Not Only One)",
-      "artist": "angela",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Bad End",
-      "artist": "Shouta Aoi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "give me ♡ me",
-      "artist": "Shouta Aoi",
-      "episodes": "2-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Shōjo no Route wa Hitotsu Janai! (The Girl's Routes Are Not Only One)",
-      "artist": "angela",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

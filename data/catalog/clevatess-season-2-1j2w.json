@@ -185,35 +185,6 @@
       "external_id": "387187"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Foreshadow",
-      "artist": "Mayu Maeshima",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Awake Anew",
-      "artist": "MYTH & ROID",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ruler",
-      "artist": "Mayu Maeshima",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Destiny",
-      "artist": "Ellie Goulding",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

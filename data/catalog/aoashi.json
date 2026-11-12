@@ -604,35 +604,6 @@
       "external_id": "330243"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Mushin Hakusū (Innocent Beat Count)",
-      "artist": "Alexandros",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Blue Diary",
-      "artist": "Rinne",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Presence",
-      "artist": "Superfly",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Calla Lily no Koibumi",
-      "artist": "KAMI WA SAIKORO WO FURANAI",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

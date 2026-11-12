@@ -138,35 +138,6 @@
       "external_id": "380772"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Cold Night",
-      "artist": "HANA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Rookies",
-      "artist": "Conton Candy",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Bow and Arrow",
-      "artist": "Kenshi Yonezu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Atashi no Dress (アタシのドレス; My Dress)",
-      "artist": "Neguse.",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -53,21 +53,6 @@
       "external_id": "361413"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "IRIS OUT",
-      "artist": "Kenshi Yonezu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "JANE DOE",
-      "artist": "Kenshi Yonezu & Hikaru Utada",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

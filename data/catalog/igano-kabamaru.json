@@ -304,21 +304,6 @@
       "external_id": "42674"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Circus Game",
-      "artist": "Sugar",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Suimasen My Love",
-      "artist": "Sugar",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

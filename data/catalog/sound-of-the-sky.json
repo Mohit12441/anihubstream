@@ -4,13 +4,13 @@
   "native": "ソ・ラ・ノ・ヲ・ト",
   "year": 2010,
   "rating": 7.4,
-  "season": "Year 2010",
+  "season": "Winter 2010",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/10/6ac73fd5d71a3065e4d43994-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/10/6ac73fd5d71a3065e4d43994-landscape.jpg",
-  "accent": "#24d3ee",
-  "synopsis": "In a lonely corner of the world, on the edge of No Man&rsquo;s Land, sits Clocktower Fortress. It&rsquo;s home to the 1121st Platoon of the Helvetian Army, and their newest member is a 15-year-old volunteer named Kanata Sorami, who enlisted to learn how to play the bugle. When she was a child, Kanata was saved by a beautiful soldier and found inspiration in the clear, golden sound of her trumpet. From that day forward, Kanata decided music would be her life. \n\n\nAs the other platoon members train her how to be a bugler and a soldier, Kanata's enduring optimism will inspire them to look for happiness and beauty, even in a world haunted by war.\n\n\n(Source: Right Stuf, Inc.)",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6802-MmsfM8KAgZuR.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6802-MmsfM8KAgZuR.jpg",
+  "accent": "#a17835",
+  "synopsis": "In a lonely corner of the world, on the edge of No Man’s Land, sits Clocktower Fortress. It’s home to the 1121st Platoon of the Helvetian Army, and their newest member is a 15-year-old volunteer named Kanata Sorami, who enlisted to learn how to play the bugle. When she was a child, Kanata was saved by a beautiful soldier and found inspiration in the clear, golden sound of her trumpet. From that day forward, Kanata decided music would be her life. \n\nAs the other platoon members train her how to be a bugler and a soldier, Kanata's enduring optimism will inspire them to look for happiness and beauty, even in a world haunted by war.\n\n(Source: Right Stuf, Inc.)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 12,
   "added_at": null,
-  "search_text": "sound of the sky ソ ラ ノ ヲ ト",
+  "search_text": "sound of the sky ソ ラ ノ ヲ ト tv finished",
   "genres": [
     "sci-fi",
     "slice-of-life"
@@ -171,21 +171,6 @@
       "external_id": "164048"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hikari no Senritsu",
-      "artist": "Kalafina",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Girls, Be Ambitious.",
-      "artist": "Haruka Tomatsu",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

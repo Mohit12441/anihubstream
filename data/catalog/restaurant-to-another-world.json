@@ -330,35 +330,6 @@
       "external_id": "308153"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Onnaji Kimochi",
-      "artist": "Kiyono Yasuno",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Samenai Mahō",
-      "artist": "Nao Tōyama",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "One In A Billion",
-      "artist": "Wake Up, May'n!",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Chiisana Hitotsubu (ちいさなひとつぶ; A Small Grain)",
-      "artist": "Kiyono Yasuno",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

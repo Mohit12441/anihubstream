@@ -3,14 +3,14 @@
   "title": "Date A Live: Date to Date",
   "native": "デート・ア・ライブ DATE TO DATE",
   "year": 2013,
-  "rating": 7.3,
+  "rating": 7,
   "season": "Fall 2013",
-  "kind": "TV",
+  "kind": "OVA",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/7839/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n17641-FG1ApLpAYoyw.jpg",
-  "accent": "#ffc247",
-  "synopsis": "Bundled with the 9th volume of the original novel, it is the unaired 13th episode of the TV series.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx17641-q5VVIoHcFZAZ.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx17641-q5VVIoHcFZAZ.jpg",
+  "accent": "#f15d93",
+  "synopsis": "While Tohka experiments with the new cellphone she got from Kotori, Origami approaches Shidou and demands a date with him. Unable to refuse, Shidou is assisted by the Fraxinus crew to ensure that their date becomes a total failure but all his attempts to ditch her are futile...\n\nSome time later, Shidou has a date in the arcade with Tohka and when he asks to take a picture with her, she refuses and enters the photo cabin by herself instead, giving him a picture of hers that she claims is for his eyes only...\n\n(Source: Wikipedia, edited)\n\nNote: Unaired 13th episode of the TV series bundled with the ninth volume of the original light novel.",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -31,7 +31,7 @@
   "skip_key_space": "mal",
   "episode_total": 1,
   "added_at": "2026-11-06 16:34:11",
-  "search_text": "date a live date to date テ ート ア ライフ date to date tv finished",
+  "search_text": "date a live date to date テ ート ア ライフ date to date ova finished",
   "genres": [
     "comedy",
     "romance",
@@ -50,112 +50,6 @@
       "external_id": "109803"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Paradoxes",
-      "artist": "Miyu Tomita",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hitohira",
-      "artist": "sweet ARMS",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "OveR",
-      "artist": "Miyu Tomita",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "S.O.S.",
-      "artist": "sweet ARMS",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "I swear",
-      "artist": "sweet ARMS",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Last Promise",
-      "artist": "Yamazaki Erii",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Go☆Summer Girl (Go☆サマーガール)",
-      "artist": "Minori Chihara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Invisible Date",
-      "artist": "sweet ARMS",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Trust in you",
-      "artist": "sweet ARMS",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Day to Story",
-      "artist": "Kaori Sadohara",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Date A Live (デート・ア・ライブ)",
-      "artist": "sweet ARMS",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Save the World",
-      "artist": "Iori Nomizu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hatsukoi Winding Road",
-      "artist": "Kayoko Tsumita, Risako Murai and Midori Tsukimiya",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "SAVE MY HEART",
-      "artist": "Iori Nomizu",
-      "episodes": "3, 7"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Strawberry Rain (ストロベリーレイン)",
-      "artist": "Iori Nomizu",
-      "episodes": "5"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

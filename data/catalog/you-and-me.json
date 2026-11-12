@@ -184,35 +184,6 @@
       "external_id": "163714"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Zutto (Forever)",
-      "artist": "Tomohisa Sakō",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi to Boku no Banka (Elegy of You and I)",
-      "artist": "Yū Sakai",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Bye Bye (バイバイ)",
-      "artist": "7!!",
-      "episodes": "1-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Nakimushi. (なきむし。; Crybaby.)",
-      "artist": "Miku Sawai",
-      "episodes": "1-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

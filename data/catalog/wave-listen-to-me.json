@@ -172,21 +172,6 @@
       "external_id": "279330"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "aranami",
-      "artist": "tacica",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "pride",
-      "artist": "Harumi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -97,35 +97,6 @@
       "external_id": "4817"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Arkan",
-      "artist": "Holy Raz",
-      "episodes": "1,5"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Life Song",
-      "artist": "Yen Chang with Holy Raz",
-      "episodes": "2"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Yanyan",
-      "artist": "Yuuka Nanri",
-      "episodes": "3"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Forest Song",
-      "artist": "Kuniaki Haishima",
-      "episodes": "4"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

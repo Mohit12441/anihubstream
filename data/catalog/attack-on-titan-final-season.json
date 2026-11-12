@@ -503,35 +503,6 @@
       "external_id": "271709"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Saigo no Kyojin (最後の巨人; The Last Titan)",
-      "artist": "Linked Horizon [Online episode version]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Itterasshai (いってらっしゃい; See You Later)",
-      "artist": "Ai Higuchi [Online episode version]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "UNDER THE TREE",
-      "artist": "SiM [TV special version]",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "To You in 2,000... or... 20,000 Years From Now (二千年… 若しくは… 二万年後の君へ・・・)",
-      "artist": "Linked Horizon [TV special version]",
-      "episodes": "2"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -182,28 +182,6 @@
       "external_id": "101167"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Shiawase☆High Tension↑↑ (Happiness High Tension)",
-      "artist": "Rina Satou, Marina Inoue, and Minori Chihara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kyūsekkin Lucky DAYS (Fast-Approaching Lucky Days)",
-      "artist": "Rina Satou, Marina Inoue, and Minori Chihara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Christmas no Yoru (クリスマスの夜;Christmas Night)",
-      "artist": "Daisuke Ono",
-      "episodes": "11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -172,28 +172,6 @@
       "external_id": "163465"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Paradise Lost",
-      "artist": "Minori Chihara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yume no Ashioto ga Kikoeru",
-      "artist": "Kaoru Mizuhara",
-      "episodes": "2,4-11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Paradise Lost",
-      "artist": "Minori Chihara",
-      "episodes": "3,12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

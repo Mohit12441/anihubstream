@@ -273,42 +273,6 @@
       "external_id": "199685"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "glory days",
-      "artist": "Luna Haruna",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Stella Breeze (ステラブリーズ)",
-      "artist": "Luna Haruna",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sakura-Iro Diary (桜色ダイアリー; Sakura-Colored Diary)",
-      "artist": "Moso Calibration",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kimiiro Signal (君色シグナル)",
-      "artist": "Luna Haruna",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Colorful. (カラフル。)",
-      "artist": "Miku Sawai",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

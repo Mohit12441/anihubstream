@@ -591,56 +591,6 @@
       "external_id": "2350"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "AFTER ALL",
-      "artist": "Donna Burke",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "AFTER ALL",
-      "artist": "Donna Burke",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Turn A Turn",
-      "artist": "Hideki Saijou",
-      "episodes": "2-38"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aura",
-      "artist": "Shinji Tanimura",
-      "episodes": "1-15,17-40"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Century Color",
-      "artist": "RAY GUNS",
-      "episodes": "39-50"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Tsuki No Mayu (月の繭; The Moon's Cocoon)",
-      "artist": "Aki Okui",
-      "episodes": "41-49"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Kagirinaki Tabiji (限りなき旅路; The Endless Journey)",
-      "artist": "Aki Okui",
-      "episodes": "50"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

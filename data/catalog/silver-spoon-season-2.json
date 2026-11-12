@@ -1,16 +1,16 @@
 {
   "id": "silver-spoon-season-2",
   "title": "Silver Spoon Season 2",
-  "native": "Gin no Saji 2nd Season",
+  "native": "銀の匙 2",
   "year": 2014,
-  "rating": 8.3,
-  "season": "Year 2014",
+  "rating": 8.1,
+  "season": "Winter 2014",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/6911bb451a8ff5f7cb2d4f3a-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/6911bb451a8ff5f7cb2d4f3a-landscape.webp",
-  "accent": "#2f7bff",
-  "synopsis": "Now accustomed to his life at Ooezo Agricultural High School, Yuugo Hachiken explores the deeper aspects of what school life really means. As Hachiken learns more about himself and earns the skills necessary for his everyday tasks, he is even offered the position of the Equestrian Club's vice-president. The new semester brings a variety of agricultural dilemmas and personal conflicts, but, nevertheless, Hachiken perseveres in order to discover his dream and continue working together with his friends.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx19363-7DZw204Dlzw1.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19363-7DZw204Dlzw1.png",
+  "accent": "#1a86d6",
+  "synopsis": "As the new semester begins at Ooezo Agricultural High School, Hachiken is now used to the tough lifestyle of a rural, agricultural high school. While Hachiken still wonders what he will do in the future, he continues to discover both the harsh and the beautiful realities of the countryside.\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 11,
   "added_at": null,
-  "search_text": "silver spoon season 2 gin no saji 2nd season silver spoon 2nd season",
+  "search_text": "silver spoon season 2 銀の匙 2 tv finished",
   "genres": [
     "comedy",
     "drama",
@@ -161,35 +161,6 @@
       "external_id": "113294"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Life",
-      "artist": "Fujifabric",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Oto no Naru Hō e",
-      "artist": "Goose house",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kiss you",
-      "artist": "miwa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hello Especially",
-      "artist": "Sukima Switch",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -175,21 +175,6 @@
       "external_id": "354319"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kill the Noise",
-      "artist": "SPYAIR",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kill the Noise",
-      "artist": "SPYAIR",
-      "episodes": "2, 4, 7-8, 11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

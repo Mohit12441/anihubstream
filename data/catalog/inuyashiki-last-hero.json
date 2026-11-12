@@ -162,21 +162,6 @@
       "external_id": "227314"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "My Hero",
-      "artist": "MAN WITH A MISSION",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ai wo Oshiete kureta Kimi e",
-      "artist": "Qaijff",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

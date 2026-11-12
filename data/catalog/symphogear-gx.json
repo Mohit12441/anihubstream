@@ -183,28 +183,6 @@
       "external_id": "170838"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Exterminate",
-      "artist": "Nana Mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Glorious Break",
-      "artist": "Nana Mizuki",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Rebirth-day",
-      "artist": "Ayahi Takagaki",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

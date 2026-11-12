@@ -3,14 +3,14 @@
   "title": "Kakegurui",
   "native": "賭ケグルイ",
   "year": 2017,
-  "rating": 7.4,
+  "rating": 7,
   "season": "Summer 2017",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/13252/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/98314-gwgiHiJOj2ls.jpg",
-  "accent": "#ff1f4a",
-  "synopsis": "Hyakkaou Private Academy. An institution for the privileged with a very peculiar curriculum. You see, when you're the sons and daughters of the wealthiest of the wealthy, it's not athletic prowess or book smarts that keep you ahead. It's reading your opponent, the art of the deal. What better way to hone those skills than with a rigorous curriculum of gambling? At Hyakkaou Private Academy, the winners live like kings, and the losers are put through the wringer. But when Yumeko Jabami enrolls, she's gonna teach these kids what a high roller really looks like! (Source: Yen Press)",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b98314-TSJykxVwCCQN.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b98314-TSJykxVwCCQN.jpg",
+  "accent": "#e44328",
+  "synopsis": "During daylight hours, an exclusive, elite private school prepares its illustrious students for careers in business, politics, and high society. But when darkness falls, the halls of this esteemed establishment transform into an underground gambling den where bright-eyed youngsters learn the timeless art of bluffing, backdoor dealings and social manipulation. In this school for the rich and elite, money is power, and the tyrant of the betting books rules with an iron fist. So when the beautiful Yumeko Jabami upsets the academy hierarchy with her voracious appetite for the thrill of the gamble, the entire student body mobilizes to send her house of cards tumbling down.\n\n(Source: Sentai Filmworks)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -172,56 +172,6 @@
       "external_id": "200606"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sono Otome Musou (ソノ乙女ム双)",
-      "artist": "Tomohisa Ishikawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Queens Bluff",
-      "artist": "i☆Ris",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kono Yubi Tomare",
-      "artist": "JUNNA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "AlegriA",
-      "artist": "D-Selections",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Deal with devil",
-      "artist": "Tia",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Koi no Russian Roulette (恋のロシアンルーレット; Russian Roulette of Love)",
-      "artist": "Saori Hayami and Yū Serizawa",
-      "episodes": "9"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "LAYon-theLINE",
-      "artist": "D-Selections",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

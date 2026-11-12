@@ -324,35 +324,6 @@
       "external_id": "250765"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "flash",
-      "artist": "sora tob sakana",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Unknown World Map",
-      "artist": "Etsuko Yakushimaru",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "New Stranger",
-      "artist": "sora tob sakana",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hōkago Distraction (Afterschool Distraction)",
-      "artist": "Etsuko Yakushimaru",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

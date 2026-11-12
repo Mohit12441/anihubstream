@@ -305,28 +305,6 @@
       "external_id": "107530"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Through the Night",
-      "artist": "Masahiko Arimachi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hiru no Tsuki",
-      "artist": "Arai Akino",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Tsuki no Ie",
-      "artist": "Arai Akino",
-      "episodes": "14-26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

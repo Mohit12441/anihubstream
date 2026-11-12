@@ -283,28 +283,6 @@
       "external_id": "933"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Guardian Angel",
-      "artist": "by Juno Reactor",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tsuki no Uta (Song of the Moon)",
-      "artist": "Gackt",
-      "episodes": "1-21"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Walking Through the Empty Age",
-      "artist": "Yoko Ishida",
-      "episodes": "22"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

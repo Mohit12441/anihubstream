@@ -327,35 +327,6 @@
       "external_id": "373128"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Beat the odds",
-      "artist": "&TEAM",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Unbelievable (アンビリーバブル)",
-      "artist": "Klang Ruler",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "over the top",
-      "artist": "Hiroji Miyamoto",
-      "episodes": "14-26"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "EGOIST",
-      "artist": "imase",
-      "episodes": "14-26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

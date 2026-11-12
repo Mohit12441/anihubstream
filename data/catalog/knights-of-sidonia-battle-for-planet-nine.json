@@ -172,35 +172,6 @@
       "external_id": "170878"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kishi Kōshinkyoku (騎士行進曲; Knight March)",
-      "artist": "angela",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hitosuji no Hikari (一筋の光明; Ray of Light)",
-      "artist": "CustomiZ",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Requiem",
-      "artist": "CustomiZ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Sidonia",
-      "artist": "Angela",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

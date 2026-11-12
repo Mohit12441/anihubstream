@@ -613,56 +613,6 @@
       "external_id": "287865"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "White Noise",
-      "artist": "Official Hige DANdism",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Say My Name",
-      "artist": "HEY-SMITH",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "White Noise",
-      "artist": "Official Hige DANdism",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kizutsukedo, Aishiteru",
-      "artist": "TUYU",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Cry Baby",
-      "artist": "Official HIGE DANdism",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Koko de Iki o Shite",
-      "artist": "eill",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Tokyo Wonder (トーキョーワンダー。)",
-      "artist": "Nakimushi",
-      "episodes": "13-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

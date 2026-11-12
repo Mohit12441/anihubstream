@@ -186,28 +186,6 @@
       "external_id": "190154"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Serendipity",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "FLIP FLAP FLIP FLAP",
-      "artist": "TO-MAS feat. Chima",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Find the Wind",
-      "artist": "ZAQ",
-      "episodes": "11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

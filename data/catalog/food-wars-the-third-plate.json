@@ -170,35 +170,6 @@
       "external_id": "230356"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Symbol",
-      "artist": "Luck Life",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Atoria",
-      "artist": "Fo'xTails",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Braver",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kyokyojitsujitsu (虚虚実実; Fictitious Fact)",
-      "artist": "nano.RIPE",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

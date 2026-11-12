@@ -323,42 +323,6 @@
       "external_id": "325525"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Binetsuma",
-      "artist": "ZUTOMAYO",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Twilight",
-      "artist": "shallm",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hanarenai Kyori (Inseparable Distance)",
-      "artist": "TrySail",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "AHAREN HEART",
-      "artist": "Inori Minase",
-      "episodes": "3"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kyori-Kan (A Sense of Distance)",
-      "artist": "HaKoniwalily",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

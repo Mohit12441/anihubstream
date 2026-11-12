@@ -62,56 +62,6 @@
       "external_id": "86899"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kimi + Nazo + Watashi de JUMP!! (君＋謎＋私でJUMP!!)",
-      "artist": "Larval Stage Plannning",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Eureka Baby (エウレカベイビー)",
-      "artist": "Natsuko Aso",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Perfect-area complete!",
-      "artist": "Natsuko Aso",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Baka Go Home (バカ・ゴー・ホーム)",
-      "artist": "milktub and Baka Test All Stars [chorus; Hiro Shimono, Hitomi Harada, Kaori Mizuhashi, Emiri Katō, Tatsuhisa Suzuki, Kōki Miyata, and Tomomi Isomura]",
-      "episodes": "1-6, 10-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Baka to Koshitsu to Kodoku Han (バカと個室と孤独飯;An Idiot & His Room & Dinner Alone)",
-      "artist": "milktub",
-      "episodes": "7"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Hare Tokidoki Egao (晴れときどき笑顔)",
-      "artist": "Hitomi Harada, Kaori Mizuhashi, Emiri Katou and Tomomi Isomura",
-      "episodes": "7-9"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Hi-Ho!!",
-      "artist": "milktub",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

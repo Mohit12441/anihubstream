@@ -41,35 +41,6 @@
     "supernatural"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tobu Toki (Time to Fly)",
-      "artist": "Vaundy",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tobō yo (Let's Fly)",
-      "artist": "yama",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "back shot",
-      "artist": "Masanori Otoda",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kujaku (孔雀)",
-      "artist": "Kei Sugawara",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -210,49 +210,6 @@
       "external_id": "65864"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "staple stable",
-      "artist": "Chiwa Saito",
-      "episodes": "2,6-7,11-12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi no Shiranai Monogatari (君の知らない物語)",
-      "artist": "supercell",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Kaerimichi (帰り道)",
-      "artist": "Emiri Katou",
-      "episodes": "4"
-    },
-    {
-      "kind": "OP",
-      "sequence": 3,
-      "title": "ambivalent world",
-      "artist": "Miyuki Sawashiro",
-      "episodes": "8"
-    },
-    {
-      "kind": "OP",
-      "sequence": 4,
-      "title": "Renai Circulation (恋愛サーキュレーション)",
-      "artist": "Kana Hanazawa",
-      "episodes": "10"
-    },
-    {
-      "kind": "OP",
-      "sequence": 5,
-      "title": "sugar sweet nightmare",
-      "artist": "Yui Horie",
-      "episodes": "14-15"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

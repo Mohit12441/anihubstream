@@ -52,35 +52,6 @@
       "external_id": "90030"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "CHOIR JAIL",
-      "artist": "Konomi Suzuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "CHOIR JAIL",
-      "artist": "Konomi Suzuki",
-      "episodes": "1, 12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Calendrier (カランドリエ)",
-      "artist": "Aki Okui",
-      "episodes": "2-10, 13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Calendrier (カランドリエ; Calendar)",
-      "artist": "Yumi Hara",
-      "episodes": "11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -10,7 +10,7 @@
   "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx15315-mvKPcy8Z2QkB.jpg",
   "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx15315-mvKPcy8Z2QkB.jpg",
   "accent": "#78e435",
-  "synopsis": "Izayoi Sakamaki, Asuka Kudou, and You Kasugabe have tremendous psychic powers and are bored with the regular world. An envelope arrives for each person, and when each opens their envelope, they are stunned to see the scenery around them change to a world they had never encountered before. They've been summoned by the Black Rabbit to help the community \"No Name\" to overthrow the Devil King.\n\n\r\n(Source: Crunchyroll)",
+  "synopsis": "Izayoi Sakamaki, Asuka Kudou, and You Kasugabe have tremendous psychic powers and are bored with the regular world. An envelope arrives for each person, and when each opens their envelope, they are stunned to see the scenery around them change to a world they had never encountered before. They've been summoned by the Black Rabbit to help the community \"No Name\" to overthrow the Devil King.\n\n\n(Source: Crunchyroll)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -151,28 +151,6 @@
       "external_id": "164427"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Black + White",
-      "artist": "Iori Nomizu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "To Be Continued?",
-      "artist": "Kaori Sadohara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Bokutachi no Seiza (ぼくたちの星座)",
-      "artist": "Sadohara Kaori",
-      "episodes": "10"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

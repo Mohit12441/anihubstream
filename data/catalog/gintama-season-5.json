@@ -180,35 +180,6 @@
       "external_id": "200446"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "VS.",
-      "artist": "Blue Encount",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hankō Seimei (Opposition Proclamation)",
-      "artist": "Ayumikurikamaki",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Katte ni My Soul",
-      "artist": "DISH//",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Hana Ichi Monme",
-      "artist": "Burnout Syndromes",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

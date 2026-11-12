@@ -307,35 +307,6 @@
       "external_id": "361298"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Daybreak",
-      "artist": "Sizuk",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "any if",
-      "artist": "Akari Kitō",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Lover's Eye",
-      "artist": "Sizuk",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kokoro no Naka (In the Heart)",
-      "artist": "AliA",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

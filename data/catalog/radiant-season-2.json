@@ -272,35 +272,6 @@
       "external_id": "268764"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Naraku",
-      "artist": "Halo at Yojohan",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Chitto mo Shiranakatta (I Did Not Know at All)",
-      "artist": "Emi Nakamura",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Utopia",
-      "artist": "04 Limited Sazabys",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Radiant",
-      "artist": "Polkadot Stingray",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

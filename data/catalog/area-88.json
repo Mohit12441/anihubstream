@@ -74,56 +74,6 @@
       "external_id": "23839"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Mission (Fuga)",
-      "artist": "angels",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Dance in the Battlefield",
-      "artist": "Keiko Terada",
-      "episodes": "1-8"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "How Far to Paradise",
-      "artist": "Derek Jackson",
-      "episodes": "1-2"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kanashimi no Destiny (悲しみのＤＥＳＴＩＮＹ)",
-      "artist": "Mio",
-      "episodes": "2"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Dance in the Battlefield (English Version)",
-      "artist": "Keiko Terada",
-      "episodes": "9-12"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Suna no Illusion (砂漠のイリュージョン)",
-      "artist": "Shima Kitahara",
-      "episodes": "3"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "So Long My Love",
-      "artist": "Shima Kitahara",
-      "episodes": "3"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

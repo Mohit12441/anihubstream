@@ -172,35 +172,6 @@
       "external_id": "176073"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "fake town baby",
-      "artist": "Unison Square Garden",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Step Up Love (ステップアップLOVE)",
-      "artist": "DAOKO x Yasuyuki Okamura",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hello, world!",
-      "artist": "Bump of Chicken",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sugar Song to Bitter Step",
-      "artist": "UNISON SQUARE GARDEN",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

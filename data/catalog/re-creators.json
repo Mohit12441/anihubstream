@@ -283,42 +283,6 @@
       "external_id": "199794"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "gravityWall",
-      "artist": "SawanoHiroyuki[nZk]: Tielle & Gemie",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "NewLook",
-      "artist": "Mashiro Ayano",
-      "episodes": "1-11"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "shØut",
-      "artist": "SawanoHiroyuki[nZk]:Tielle & Gemie",
-      "episodes": "14-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "world Étude",
-      "artist": "Aki Toyosaki",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Rubicon (ルビコン)",
-      "artist": "Sangatsu no Phantasia",
-      "episodes": "13-26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

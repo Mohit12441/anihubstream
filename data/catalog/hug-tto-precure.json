@@ -580,42 +580,6 @@
       "external_id": "259178"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "We can!! Hugtto! Precure",
-      "artist": "Kanako Miyamoto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hugtto! Mirai Dreamer",
-      "artist": "Rie Hikisaka, Rina Hon'izumi, & Yui Ogura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kimi to Tomodachi (キミとともだち)",
-      "artist": "Yukari Tamura & Nao Tamura",
-      "episodes": "18"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "DANZEN! Futari wa Precure ~ yuiitsu muni no hikari-tachi ~ (DANZEN! ふたりはプリキュア〜唯一無二の光たち〜)",
-      "artist": "Mayumi Gojo",
-      "episodes": "22, 36,37"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Hugtto!, Yell For You (HUGっと!YELL FOR YOU)",
-      "artist": "Rie Hikisaka, Rina Hon'izumi, Yui Ogura, Yukari Tamura & Nao Tamura",
-      "episodes": "23-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

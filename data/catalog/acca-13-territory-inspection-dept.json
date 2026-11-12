@@ -172,35 +172,6 @@
       "external_id": "200013"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Our Place",
-      "artist": "ONE III NOTES",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Shadow and Truth",
-      "artist": "ONE III NOTES",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Pale Moon ga Yureteru (The Pale Moon Sways)",
-      "artist": "Aira Yuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Our Place",
-      "artist": "ONE III NOTES",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

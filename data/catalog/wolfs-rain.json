@@ -329,56 +329,6 @@
       "external_id": "107491"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Stray",
-      "artist": "Steve Conte",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Gravity",
-      "artist": "Maaya Sakamoto",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Stray",
-      "artist": "Steve Conte",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Gravity",
-      "artist": "Maaya Sakamoto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Stray",
-      "artist": "Steve Conte",
-      "episodes": "30"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tell Me What the Rain Knows",
-      "artist": "Maaya Sakamoto",
-      "episodes": "26"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Stray",
-      "artist": "Steve Conte",
-      "episodes": "30"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

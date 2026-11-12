@@ -37,28 +37,6 @@
     "drama"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Amadeus",
-      "artist": "Galileo Galilei",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Cantabile",
-      "artist": "Novelbright",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yuusari no Canon feat. 'Yuika' (夕さりのカノン feat.『ユイカ』)",
-      "artist": "Soshina",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -327,28 +327,6 @@
       "external_id": "3716"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tenshi no Yubikiri (Angel's Pledge)",
-      "artist": "Fukuda Mai",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yume no Naka e",
-      "artist": "Enomoto Atsuko and Suzuki Chihiro",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kaze Hiita Yoru",
-      "artist": "Yuki Watanabe & Maria Yamamoto",
-      "episodes": "25"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

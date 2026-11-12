@@ -317,28 +317,6 @@
       "external_id": "324144"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kaze no Oto Sae Kikoenai",
-      "artist": "JUNNA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Houkou",
-      "artist": "Ryouta Suzuki & Natsuki Hanae",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Houkou",
-      "artist": "Natsuki Hanae",
-      "episodes": "10"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

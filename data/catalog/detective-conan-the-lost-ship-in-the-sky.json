@@ -1,7 +1,7 @@
 {
   "id": "detective-conan-the-lost-ship-in-the-sky",
   "title": "Detective Conan: The Lost Ship in the Sky",
-  "native": "名探偵コナン 天空の難破船",
+  "native": "名探偵コナン 天空の難破船(ロスト・シップ)",
   "year": 2010,
   "rating": 7.8,
   "season": "Spring 2010",
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 1,
   "added_at": null,
-  "search_text": "detective conan the lost ship in the sky 名探偵コナン 天空の難破船 movie finished",
+  "search_text": "detective conan the lost ship in the sky 名探偵コナン 天空の難破船 ロスト シッフ movie finished",
   "genres": [
     "action",
     "mystery"
@@ -50,14 +50,6 @@
       "external_id": "74023"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Over Drive",
-      "artist": "Garnet Crow",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -106,35 +106,6 @@
       "external_id": "12253"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "I'm a Pioneer (English)",
-      "artist": "Sharyn Scott",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "ぼくはもっとパイオニア (<i>Boku wa Motto PAIONIA</i>; I'm a Pioneer)",
-      "artist": "Chisa Yokoyama",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "The Lonely Moon (English)",
-      "artist": "Scottie Haskell",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "月のTRAGEDY (<i>Tsuki no Tragedy</i>; The Lonely Moon)",
-      "artist": "Ai Orikasa",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

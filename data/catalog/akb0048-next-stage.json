@@ -182,63 +182,6 @@
       "external_id": "171779"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Aruji Naki Sono Koe",
-      "artist": "NO NAME",
-      "episodes": "2-7,9-12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kono Namida wo Kimi ni Sasagu",
-      "artist": "NO NAME",
-      "episodes": "1-2,5-12"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kibou ni Tsuite",
-      "artist": "No Name",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Niji no Ressha (虹の列車)",
-      "artist": "AKB48",
-      "episodes": "13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yume wa Nando Demo Umarekawaru",
-      "artist": "No Name",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kibou ni Tsuite",
-      "artist": "NO NAME",
-      "episodes": "3"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Sasae (AKB0048 ver.)",
-      "artist": "BOUNCEBACK",
-      "episodes": "4"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Aruji Naki Sono Koe",
-      "artist": "NO NAME",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

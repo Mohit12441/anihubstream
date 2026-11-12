@@ -3,14 +3,14 @@
   "title": "Kakegurui Twin",
   "native": "賭ケグルイ双",
   "year": 2022,
-  "rating": 7.4,
+  "rating": 7.1,
   "season": "Summer 2022",
-  "kind": "TV",
+  "kind": "ONA",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/45471/poster_image/medium-8883358abf2fa429af6aa797c5afc1fa.jpeg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/141351-PyKKjZJJ5gVC.jpg",
-  "accent": "#8b5cf6",
-  "synopsis": "At an elite academy where social status is determined by gambling skills, students must put everything on the line to beat the odds - without mercy. (Source: Netflix)",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx141351-47JtghppCwMu.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx141351-47JtghppCwMu.png",
+  "accent": "#2828fe",
+  "synopsis": "As a first-year student of the renowned Hyakkaou Private Academy, Mary Saotome knows her future is set for a one-way cruise to the top...\n\nThat is, until an encounter with an old-classmate-turned-housepet throws the newbie princess into the world of gambling! Can a normal girl like Mary make friends and survive debtless through only wit and luck? Find out in this prequel to the mega-popular Kakegurui!\n\n(Source: Yen Press)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -31,7 +31,7 @@
   "skip_key_space": "mal",
   "episode_total": 6,
   "added_at": "2026-11-06 17:14:17",
-  "search_text": "kakegurui twin 賭ケク ルイ双 tv finished",
+  "search_text": "kakegurui twin 賭ケク ルイ双 ona finished",
   "genres": [
     "drama",
     "mystery"
@@ -104,21 +104,6 @@
       "external_id": "330112"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sono Otome Musou (ソノ乙女ム双)",
-      "artist": "Tomohisa Ishikawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Queens Bluff",
-      "artist": "i☆Ris",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

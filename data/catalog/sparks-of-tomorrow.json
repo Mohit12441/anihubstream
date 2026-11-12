@@ -39,21 +39,6 @@
     "romance"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Eureka Evrika",
-      "artist": "Luna Goami",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Soarin'",
-      "artist": "Ginger Root",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

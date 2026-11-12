@@ -174,21 +174,6 @@
       "external_id": "304081"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Entertainment",
-      "artist": "Mili",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kasumi no Mukō e (To the Other Side of the Mist)",
-      "artist": "Yuki Nakashima",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

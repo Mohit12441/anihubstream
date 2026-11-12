@@ -284,35 +284,6 @@
       "external_id": "362087"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "PINK BLOOD",
-      "artist": "Hikaru Utada",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Roots",
-      "artist": "-",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "PINK BLOOD",
-      "artist": "Hikaru Utada",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mediator",
-      "artist": "Masashi Hamauzu",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

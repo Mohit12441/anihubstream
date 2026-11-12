@@ -38,21 +38,6 @@
     "romance"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hitohira (ひとひら)",
-      "artist": "Motohiro Hata",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hikari (光)",
-      "artist": "Yui Sakurai",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

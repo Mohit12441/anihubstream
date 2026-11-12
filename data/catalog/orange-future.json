@@ -53,35 +53,6 @@
       "external_id": "189284"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Mirai (未来;Future)",
-      "artist": "Kobukuro",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hikari no Hahen (光の破片;Fragments of Light)",
-      "artist": "Yū Takahashi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hikari no Hahen (光の破片)",
-      "artist": "Yū Takahashi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mirai (未来)",
-      "artist": "Kobukuro",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

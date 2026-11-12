@@ -162,42 +162,6 @@
       "external_id": "392160"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "¬Ersterbend",
-      "artist": "-",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Inori (祈り)",
-      "artist": "Chiai Fujikawa",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "¬Ersterbend (Not Ersterbend)",
-      "artist": "LIN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Inori (祈り)",
-      "artist": "Chiai Fujikawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Whatever Will Be, Will Be (Que Sera, Sera)",
-      "artist": "Doris Day",
-      "episodes": "1"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

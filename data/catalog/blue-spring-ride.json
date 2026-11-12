@@ -10,7 +10,7 @@
   "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20596-fJdMHV8xRMgY.png",
   "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20596-fJdMHV8xRMgY.png",
   "accent": "#5da1e4",
-  "synopsis": "Yoshioka Futaba has a few reasons why she wants to \"reset\" her image & life as a new high school student. Because she's cute, she was ostracized by her female friends in junior high, and because of a misunderstanding, she couldn't get her feeling across to the one boy she has ever liked, Tanaka-kun.\r\n\r\nNow in high school, she is determined to be as unladylike as possible so that her friends won't be jealous of her. While living her life this way contentedly, she meets Tanaka-kun again, but he now goes under the name of Mabuchi Kou. He tells her that he felt the same way as she did when they were younger, but now things can never be the same again. Will Futaba be able to continue her love that never even started from three years ago?",
+  "synopsis": "Yoshioka Futaba has a few reasons why she wants to \"reset\" her image & life as a new high school student. Because she's cute, she was ostracized by her female friends in junior high, and because of a misunderstanding, she couldn't get her feeling across to the one boy she has ever liked, Tanaka-kun.\n\nNow in high school, she is determined to be as unladylike as possible so that her friends won't be jealous of her. While living her life this way contentedly, she meets Tanaka-kun again, but he now goes under the name of Mabuchi Kou. He tells her that he felt the same way as she did when they were younger, but now things can never be the same again. Will Futaba be able to continue her love that never even started from three years ago?",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -175,21 +175,6 @@
       "external_id": "115779"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sekai wa Koi ni Ochiteiru (世界は恋に落ちている)",
-      "artist": "CHiCO with HoneyWorks",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Burū (ブルー;Blue)",
-      "artist": "Fujifabric",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -205,56 +205,6 @@
       "external_id": "277288"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "DiSCOVER the FUTURE",
-      "artist": "IDOLiSH7",
-      "episodes": "2-10, 12, 13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Silver Sky",
-      "artist": "Re:vale",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Mirai Notes wo Kanadete (ミライノーツを奏でて)",
-      "artist": "Re:vale",
-      "episodes": "2-4, 6-9, 11-14"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "DESTINY",
-      "artist": "TRIGGER",
-      "episodes": "5"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "It's ALL-for you-",
-      "artist": "Yuki",
-      "episodes": "10"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "Last Dimension",
-      "artist": "TRIGGER",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 6,
-      "title": "DiSCOVER THE FUTURE",
-      "artist": "IDOLiSH7",
-      "episodes": "15"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

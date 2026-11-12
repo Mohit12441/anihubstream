@@ -170,42 +170,6 @@
       "external_id": "270465"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Bloomin'",
-      "artist": "Uesaka Sumire",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Longing for!",
-      "artist": "Emi Nitta",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mahiruiro Siesta",
-      "artist": "Yui Sakakibara",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "graphite/diamond",
-      "artist": "May'n",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hikari no Michishirube (Guiding Light)",
-      "artist": "Kano",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

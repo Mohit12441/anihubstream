@@ -304,35 +304,6 @@
       "external_id": "160161"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "X-encounter",
-      "artist": "Maon Kurosaki",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi ga Emu Yuugure",
-      "artist": "Yoshino Nanjou",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "～Outgrow～",
-      "artist": "Gero",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Break a spell",
-      "artist": "Mami Kawada",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

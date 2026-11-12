@@ -311,49 +311,6 @@
       "external_id": "181798"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sono Koe ga Chizu ni Naru (その声が地図になる;Your Voice Becomes a Map)",
-      "artist": "Saori Hayami",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Page~Kimi to Tsuzuru Monogatari (ページ～君と綴る物語～;Page~The Story I Weave with You)",
-      "artist": "eyelis",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yasashii Kibō (やさしい希望;Gentle Hope)",
-      "artist": "Saori Hayami",
-      "episodes": "12"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yasashii Kibō (やさしい希望;Gentle Hope)",
-      "artist": "Saori Hayami",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yasashii Kibō (やさしい希望;Gentle Hope)",
-      "artist": "Saori Hayami",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kizuna ni Nosete (絆にのせて;Placing on Bonds)",
-      "artist": "eyelis",
-      "episodes": "2-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

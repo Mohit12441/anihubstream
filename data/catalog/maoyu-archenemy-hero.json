@@ -232,28 +232,6 @@
       "external_id": "101416"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Mukaikaze (向かい風; Headwind)",
-      "artist": "YOHKO",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Eramoreseramoru",
-      "artist": "Tokyo Shōnen Shōjo Gasshō-tai",
-      "episodes": "9.5"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Unknown Vision",
-      "artist": "Akino Arai",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

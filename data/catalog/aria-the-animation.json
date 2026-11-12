@@ -1,15 +1,15 @@
 {
   "id": "aria-the-animation",
-  "title": "Aria the Animation",
-  "native": "Aria the Animation",
+  "title": "ARIA The ANIMATION",
+  "native": "ARIA The ANIMATION",
   "year": 2005,
-  "rating": 7.7,
-  "season": "Year 2005",
+  "rating": 7.6,
+  "season": "Fall 2005",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/694f829fd4efbeeee15abda1-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/694f829fd4efbeeee15abda1-landscape.webp",
-  "accent": "#2ee6a8",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx477-CdKPHW7rGbUP.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx477-CdKPHW7rGbUP.png",
+  "accent": "#5093c9",
   "synopsis": "Drift peacefully into Neo Venezia, a city on the planet Aqua (formerly known as Mars). By the 24th century, humans have found a way to colonize the previously uninhabitable planet. As futuristic as that sounds, Neo Venezia is still teeming with rustic beauty; gondolas on wide canals and waterways are the main mode of transportation. The city itself is a faithful replication of Manhome's (the planet formerly known as Earth) Venice.\n\nTo make sure that residents and tourists alike get the most from Neo Venezia's many wonders, companies offering guided tours via gondola were formed, one of which is named Aria Company.\n\nThis is the workplace of Akari Mizunashi, a free spirited teenager from Manhome who is now a novice Undine (the title given to tour guides). Join Akari as she becomes intimately acquainted with other Undine, tourists, Neo Venezia's residents, and even the city itself, learning many valuable life lessons along the way, such as the wonderful truth that there are such things as manmade miracles.",
   "rank": null,
   "trend_rank": null,
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 13,
   "added_at": null,
-  "search_text": "aria the animation aria the animation",
+  "search_text": "aria the animation aria the animation tv finished",
   "genres": [
     "fantasy",
     "sci-fi",
@@ -183,35 +183,6 @@
       "external_id": "10172"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Undine (ウンディーネ)",
-      "artist": "Yui Makino",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Rainbow",
-      "artist": "ROUND TABLE feat. Nino",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Undine -forest mix- (ウンディーネ -forest mix-)",
-      "artist": "Yui Makino",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Rainbow -acoustic ver.-",
-      "artist": "ROUND TABLE feat. Nino",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

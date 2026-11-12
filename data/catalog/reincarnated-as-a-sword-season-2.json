@@ -95,35 +95,6 @@
       "external_id": "cloud-sync"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "DREAM OF BUTTERFLY",
-      "artist": "FZMZ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Baribari Buddy (バリバリBuddy)",
-      "artist": "Hanabie.",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Reincarnated as a Sword (転生したら剣でした; Tensei Shitara Ken Deshita)",
-      "artist": "Kishida Kyōdan & The Akeboshi Rockets",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "more＜STRONGLY",
-      "artist": "Maon Kurosaki",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

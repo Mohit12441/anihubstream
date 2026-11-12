@@ -183,21 +183,6 @@
       "external_id": "99121"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Oato ga Yoroshikutte... Yo! (お後がよろしくって…よ!; The Next Person is Ready... So!)",
-      "artist": "Ayane Sakura, Kotori Koiwai, Nozomi Yamamoto, Saori Goto, Yoshino Nanjou",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Nippon Egao Hyakkei (ニッポン笑顔百景; 100 Famous Views on Japan's Smiles)",
-      "artist": "Momoiro Clover Z",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

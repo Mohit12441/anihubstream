@@ -315,21 +315,6 @@
       "external_id": "101138"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "STAR",
-      "artist": "99RadioService",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Akanezora",
-      "artist": "Asami Seto",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

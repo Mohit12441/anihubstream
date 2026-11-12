@@ -171,35 +171,6 @@
       "external_id": "89911"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sekai no Hate ni Kimi ga Itemo (世界の果てに君がいても)",
-      "artist": "Shuhei Kita",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aikotoba (アイコトバ)",
-      "artist": "Sakura Merry-Men",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sekai de Ichiban Koishiteru",
-      "artist": "Shuhei Kita",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ashita, Boku wa Kimi ni Ai ni Yuku",
-      "artist": "Wakaba",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

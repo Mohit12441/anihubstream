@@ -173,35 +173,6 @@
       "external_id": "34645"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Katsubō (渇望)",
-      "artist": "AiNA THE END",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Love Sick",
-      "artist": "Aina The End",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kagen no Tsuki",
-      "artist": "Ryōta Komatsu and Charlie Kōsei",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Natsu no Hana",
-      "artist": "JUJU",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

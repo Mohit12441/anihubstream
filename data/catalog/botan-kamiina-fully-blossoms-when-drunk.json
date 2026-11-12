@@ -38,63 +38,6 @@
     "slice-of-life"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Mebuku Toki (芽吹くとき)",
-      "artist": "yonige",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kanjō Glass (感情グラス)",
-      "artist": "Botan Kamiina",
-      "episodes": "1, 12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kanjō Glass (感情グラス)",
-      "artist": "Yaeka Kitamori",
-      "episodes": "2, 7"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Kanjō Glass (感情グラス)",
-      "artist": "Kanade Gujō",
-      "episodes": "3, 9"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Kanjō Glass (感情グラス)",
-      "artist": "Akane Yusa",
-      "episodes": "4"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "Kanjō Glass (感情グラス)",
-      "artist": "Ibuki Tomino",
-      "episodes": "5, 11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 6,
-      "title": "Kanjō Glass (感情グラス)",
-      "artist": "Chang Chin-Lan",
-      "episodes": "6, 8"
-    },
-    {
-      "kind": "ED",
-      "sequence": 7,
-      "title": "Akaneiro no Yūhi (茜色の夕日)",
-      "artist": "Fujifabric",
-      "episodes": "10"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

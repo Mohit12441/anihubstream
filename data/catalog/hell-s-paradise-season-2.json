@@ -328,35 +328,6 @@
       "external_id": "353315"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kasuka na Hana (かすかなはな)",
-      "artist": "Tatsuya Kitani feat. BABYMETAL",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "PERSONAL",
-      "artist": "QUEEN BEE",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "WORK",
-      "artist": "millenium parade ✕ Ringo Sheena",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kamihitoe (紙一重)",
-      "artist": "Uru",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -316,35 +316,6 @@
       "external_id": "364776"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Story",
-      "artist": "Da-iCE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tomo yo Koko de Sayonara da",
-      "artist": "Boku ga Mitakatta Aozora",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Endless Happy-Ending",
-      "artist": "THE RAMPAGE from EXILE TRIBE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "ties",
-      "artist": "Emi Noda",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -160,63 +160,6 @@
       "external_id": "284494"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "DYING WISH",
-      "artist": "Tasuku Hatanaka",
-      "episodes": "1"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "ALPHA",
-      "artist": "Stereo Dive Foundation",
-      "episodes": "1"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "TWISTED HEARTS",
-      "artist": "Tasuku Hatanaka",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "OMEGA",
-      "artist": "STEREO DIVE FOUNDATION",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "DYING WISH",
-      "artist": "Tasuku Hatanaka",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "ALPHA",
-      "artist": "STEREO DIVE FOUNDATION",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "TWISTED HEARTS",
-      "artist": "Tasuku Hatanaka",
-      "episodes": "2"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "OMEGA",
-      "artist": "Stereo Dive Foundation",
-      "episodes": "2"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

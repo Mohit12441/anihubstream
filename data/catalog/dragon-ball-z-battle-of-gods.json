@@ -55,21 +55,6 @@
       "external_id": "101420"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Cha-La Head-Cha-La",
-      "artist": "Flow",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Cha-La Head-Cha-La",
-      "artist": "Flow",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

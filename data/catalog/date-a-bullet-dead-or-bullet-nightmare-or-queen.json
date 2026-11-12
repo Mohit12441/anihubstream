@@ -51,28 +51,6 @@
       "external_id": "271128"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Infermata",
-      "artist": "Go Sakabe",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Only wish",
-      "artist": "Luiza",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Precious",
-      "artist": "RinamooN",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

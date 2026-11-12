@@ -181,35 +181,6 @@
       "external_id": "387776"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Saku (咲く)",
-      "artist": "Cider Girl",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Doko ni mo Ikenai mama (どこにもいけないまま)",
-      "artist": "Aruma",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Liar",
-      "artist": "Kucci",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kagerō",
-      "artist": "Cider Girl",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

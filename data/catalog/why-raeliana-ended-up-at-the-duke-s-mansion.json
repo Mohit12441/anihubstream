@@ -173,28 +173,6 @@
       "external_id": "331293"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "SURVIVE",
-      "artist": "MindaRyn",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Always and Forever",
-      "artist": "SERRA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Fireworks",
-      "artist": "MindaRyn",
-      "episodes": "6"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

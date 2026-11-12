@@ -39,28 +39,6 @@
     "sci-fi"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Bake no Kawa",
-      "artist": "MAISONdes feat. Kobo Kanaeru, Kasane Teto, Giga & Teddyloid",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Loo% Who%",
-      "artist": "Ling Tosite Sigure",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Floor Killer",
-      "artist": "Umeda Cypher",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

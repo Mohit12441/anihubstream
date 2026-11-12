@@ -514,49 +514,6 @@
       "external_id": "6108"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Driver's High",
-      "artist": "L'Arc~en~Ciel",
-      "episodes": "01-16"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Last Piece",
-      "artist": "Kirari",
-      "episodes": "01-16"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Hitori No Yoru",
-      "artist": "Porno Graffiti",
-      "episodes": "17-43"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Shizuku",
-      "artist": "Miwaku Okuda",
-      "episodes": "17-33"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Cherished Memories",
-      "artist": "Hong Kong Knife",
-      "episodes": "34-43"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Driver's High",
-      "artist": "L'Arc~en~Ciel",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

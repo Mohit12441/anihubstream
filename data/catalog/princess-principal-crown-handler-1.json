@@ -51,35 +51,6 @@
       "external_id": "243453"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "LIES and TIES",
-      "artist": "Void_Chords feat. Yui Mugino",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Nowhere Land",
-      "artist": "Akira Sekine, Aoi Koga, Akari Kageyama, Nozomi Furuki, & Yō Taichi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "The Other Side of the Wall",
-      "artist": "Void_Chords feat.MARU",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "A Page of My Story",
-      "artist": "Akari Kageyama, Akira Sekine, Ayaka Imamura, Nozomi Furuki, & Yō Taichi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

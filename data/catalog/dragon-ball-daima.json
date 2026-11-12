@@ -259,28 +259,6 @@
       "external_id": "370645"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Jaka Jaan (ジャカ☆ジャ～ン)",
-      "artist": "Zedd ft. C&K",
-      "episodes": "2-19"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Jaka Jaan (ジャカ☆ジャ～ン)",
-      "artist": "Zedd feat. C&K.",
-      "episodes": "1, 20"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "NAKAMA",
-      "artist": "Zedd ft. AI",
-      "episodes": "2-19"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -170,35 +170,6 @@
       "external_id": "247943"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Umi e",
-      "artist": "Kai Ichinose",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hajimari no Basho",
-      "artist": "Rie Murakawa",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Umi e",
-      "artist": "Kai Ichinose",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kaeru Basho ga Aru to iu koto (帰る場所があるということ)",
-      "artist": "Aoi Yūki",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

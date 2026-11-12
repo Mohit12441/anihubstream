@@ -3,14 +3,14 @@
   "title": "Fate/kaleid liner Prisma☆Illya 3rei!!",
   "native": "Fate/kaleid liner プリズマ☆イリヤ ドライ!!",
   "year": 2016,
-  "rating": 7.5,
+  "rating": 7.3,
   "season": "Summer 2016",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/11438/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21379-a3qpVhkekzks.jpg",
-  "accent": "#ff1f4a",
-  "synopsis": "Illya and the gang have finished their battle against the heroic spirit residing in the eighth class card. They're back in vacation mode again, looking to make the most of what they have left of summer break. But their hopes get crushed in the blink of an eye. An all-too-unrealistic silhouette appears before them when they go to investigate the strange event at Mount Enzou. After a short skirmish, the entire space ends up being warped. Illya wakes up in a wintry Fuyuki City... in a parallel world. This is the world where Miyu was born and raised. (Source: ANN)",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21379-RDJgELNOIGDS.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21379-RDJgELNOIGDS.png",
+  "accent": "#a1aee4",
+  "synopsis": "Illya and the gang have finished their battle against the heroic spirit residing in the eighth class card. They're back in vacation mode again, looking to make the most of what they have left of summer break. But their hopes get crushed in the blink of an eye. An all-too-unrealistic silhouette appears before them when they go to investigate the strange event at Mount Enzō. After a short skirmish, the entire space ends up being warped. Illya wakes up in a wintry Fuyuki City... in a parallel world. This is the world where Miyu was born and raised.\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -175,21 +175,6 @@
       "external_id": "187321"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Asterism",
-      "artist": "ChouCho",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "WHIMSICAL WAYWARD WISH",
-      "artist": "TECHNOBOYS PULCRAFT GREEN-FUND feat. Yumeha Kōda",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

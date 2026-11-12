@@ -16,10 +16,10 @@
   "alt_seasons": [],
   "sched_day": 7,
   "sched_day_label": "SUN",
-  "sched_date": "Nov 8",
+  "sched_date": "Nov 15",
   "sched_time": "14:16",
   "sched_season": "Fall 2026",
-  "sched_episode": 5,
+  "sched_episode": 6,
   "sched_sub_at": null,
   "sched_dub_at": 1794153600000,
   "source_ids": {
@@ -249,21 +249,6 @@
       "external_id": "cloud-sync"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "ONOGAMI (オノガミ)",
-      "artist": "MEGATERA･ZERO",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kan Peki No Peki (完璧のペキ)",
-      "artist": "VK Blanka",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

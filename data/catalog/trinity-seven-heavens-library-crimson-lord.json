@@ -3,14 +3,14 @@
   "title": "Trinity Seven: Heavens Library & Crimson Lord",
   "native": "劇場版トリニティセブン -天空図書館と真紅の魔王",
   "year": 2019,
-  "rating": 7.4,
+  "rating": 7.1,
   "season": "Winter 2019",
   "kind": "Movie",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/42057/poster_image/medium-738cad7f519f3d8d4391431a3ad1b289.jpeg",
-  "key_art": "https://media.kitsu.app/anime/cover_images/42057/original.png",
-  "accent": "#ff9420",
-  "synopsis": "Bringing back Arata, Lilith and the rest of the Trinity Seven to face off against the greatest enemy in the history of the team; Lilith's own father, the strongest Demon Lord, who challenges Arata, now a Demon Lord candidate herself.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx103631-LUdp603NQ36A.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx103631-LUdp603NQ36A.jpg",
+  "accent": "#284378",
+  "synopsis": "Arata, Lilith and the rest of the Trinity Seven ace off against their greatest enemy; Lilith's own father, who is revealed to be the strongest Demon Lord. He challenges Arata who is now a Demon Lord candidate.\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -53,56 +53,6 @@
       "external_id": "258260"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Last Proof",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Seven Doors",
-      "artist": "ZAQ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "BEAUTIFUL≒SENTENCE",
-      "artist": "Magus Two",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "SHaVaDaVa in AMAZING♪",
-      "artist": "YuiLevi♡",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "TRINITY×SEVENTH+HEAVEN",
-      "artist": "Security Politti",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "ReSTART THE WORLD",
-      "artist": "TWINKle MAGIC",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "CREATION ReCREATION",
-      "artist": "BibleArt",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -39,21 +39,6 @@
     "romance"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sunny",
-      "artist": "milet",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hōkiboshi (ホウキボシ)",
-      "artist": "Rokudenashi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

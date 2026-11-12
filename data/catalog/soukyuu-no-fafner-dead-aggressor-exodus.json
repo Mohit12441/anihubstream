@@ -182,35 +182,6 @@
       "external_id": "105170"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "DEAD OR ALIVE",
-      "artist": "angela",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Horizon (ホライズン)",
-      "artist": "angela",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Exist (イグジスト)",
-      "artist": "Angela",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "An'ya Kōro (暗夜航路; Dark Night Route)",
-      "artist": "Angela",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

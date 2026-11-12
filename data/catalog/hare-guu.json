@@ -324,35 +324,6 @@
       "external_id": "163077"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Love Tropicana Deluxe",
-      "artist": "Sister Mayo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Fun Fun and Shout",
-      "artist": "Sister Mayo",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Love Tropicana",
-      "artist": "Sister Mayo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ohashi",
-      "artist": "0930 [Okusama]",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

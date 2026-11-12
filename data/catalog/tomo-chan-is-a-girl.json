@@ -327,28 +327,6 @@
       "external_id": "337845"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kurae! Telepathy",
-      "artist": "Maharajan",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "yurukuru＊love",
-      "artist": "Rie Takahashi, Rina Hidaka, and Sally Amaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Jiribaki_love",
-      "artist": "Jun'ichirō Kubota [Kaito Ishikawa], Kōsuke Misaki [Kōhei Amasaki], Tatsumi Tanabe [Yoshitsugu Matsuoka]",
-      "episodes": "10"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

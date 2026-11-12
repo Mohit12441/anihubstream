@@ -304,28 +304,6 @@
       "external_id": "83641"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Destin Histoire",
-      "artist": "yoshiki*lisa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Resuscitated Hope",
-      "artist": "Lisa Komine",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "unity",
-      "artist": "Lisa Komine",
-      "episodes": "13-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

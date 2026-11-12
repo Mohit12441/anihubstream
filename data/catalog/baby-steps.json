@@ -313,35 +313,6 @@
       "external_id": "113036"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Believe in yourself",
-      "artist": "Mao Abe",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yume no Tsuzuki (ベイビーステップ 第2シリーズ)",
-      "artist": "Ganbare! Victory",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Believe in Yourself",
-      "artist": "Mao Abe",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Baby Steps (ベイビーステップ)",
-      "artist": "Babyraids",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

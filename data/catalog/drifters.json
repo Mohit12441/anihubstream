@@ -173,42 +173,6 @@
       "external_id": "187238"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Gospel of the Throttle (Kyouhon REMIX ver.)",
-      "artist": "Minutes Til Midnight",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "VERMILLION",
-      "artist": "Maon Kurosaki",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Gospel of the Throttle (Kyouhon REMIX ver.)",
-      "artist": "Minutes Til Midnight",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Vermillion",
-      "artist": "Maon Kurosaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Rurou no Zakuro (流浪の柘榴; Pomegranate for a Wanderer)",
-      "artist": "Yasushi Ishii",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

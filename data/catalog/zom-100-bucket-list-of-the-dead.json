@@ -174,21 +174,6 @@
       "external_id": "340089"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Song of the Dead",
-      "artist": "KANA-BOON",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Happiness of the Dead",
-      "artist": "Shiyui",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

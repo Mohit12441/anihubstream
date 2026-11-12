@@ -172,28 +172,6 @@
       "external_id": "250526"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Watashi-tachi wa Mou Butai no Ue",
-      "artist": "Starlight Kukugumi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hoshi no Dialogue (Stellar Dialogue)",
-      "artist": "Starlight Kukugumi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Fly Me to the Star",
-      "artist": "Starlight Kuku-gumi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

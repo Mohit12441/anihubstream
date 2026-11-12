@@ -1162,49 +1162,6 @@
       "external_id": "168226"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kodomo no Kimochi (こどものきもち; Child's Feelings)",
-      "artist": "Chisa Yokohama",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "7 O'Clock News",
-      "artist": "Tokio",
-      "episodes": "1-44"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Panic",
-      "artist": "Still Small Voice",
-      "episodes": "1-39"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Ultra Relax",
-      "artist": "Tomoe Shinohara",
-      "episodes": "45-102"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "DAIJO-BU",
-      "artist": "Tomoko Hikita",
-      "episodes": "40-74"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Pinch ~Love Me Deeper~",
-      "artist": "Rina Chinen",
-      "episodes": "75-102"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

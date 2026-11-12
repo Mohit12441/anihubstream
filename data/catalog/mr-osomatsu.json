@@ -1,16 +1,16 @@
 {
   "id": "mr-osomatsu",
   "title": "Mr. Osomatsu",
-  "native": "Osomatsu-san",
+  "native": "おそ松さん",
   "year": 2015,
-  "rating": 7.9,
-  "season": "Year 2015",
+  "rating": 7.5,
+  "season": "Fall 2015",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/692c1e6553755d883a676478-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/692c1e6553755d883a676478-landscape.webp",
-  "accent": "#3b82ff",
-  "synopsis": "The majority of the Matsuno household is comprised of six identical siblings: self-centered leader Osomatsu, manly Karamatsu, voice of reason Choromatsu, cynical Ichimatsu, hyperactive Juushimatsu, and lovable Todomatsu. Despite each one of them being over the age of 20, they are incredibly lazy and have absolutely no motivation to get a job, choosing to live as NEETs instead. In the rare occurrence that they try to look for employment and are somehow able to land an interview, their unique personalities generally lead to their swift rejection.\n\nFrom trying to pick up girlfriends to finding the perfect job, the daily activities of the Matsuno brothers are never dull as they go on all sorts of crazy, and often downright bizarre, adventures. Though they desperately search for a way to improve their social standing, it won't be possible if they can't survive the various challenges that come with being sextuplets!",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21261-jLm2IGonsEzU.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21261-jLm2IGonsEzU.jpg",
+  "accent": "#ffc943",
+  "synopsis": "The Matsuno sextuplets (leader Osomatsu, wannabe tough guy Karamatsu, straight man Choromatsu, cynical Ichimatsu, cheerfully stupid Jyushimatsu and lovable spoiled Todomatsu) are now in their 20s, still living together in the same house as NEETs. Their neighbors still include such eccentric characters as fish market idol Totoko, loud bucktoothed troublemaker Iyami, tiny rival Chiba, wacky inventor Dekapan, and giant mouthed glutton Dayon.\n\nJoin the Matsuno siblings as they overcome mundane hurdles in their daily lives, such as finding employment, figure out who should pay the bar bill, and who should get the extra pastry!",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 25,
   "added_at": null,
-  "search_text": "mr osomatsu osomatsu san",
+  "search_text": "mr osomatsu おそ松さん tv finished",
   "genres": [
     "comedy",
     "slice-of-life"
@@ -314,112 +314,6 @@
       "external_id": "184350"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Osomatsu-san no Bomba Sheeh!",
-      "artist": "DA PUMP",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "バディ (Buddy)",
-      "artist": "Hitomi from Atarayo & the Osomatsu sextuplets",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "nice to NEET you!",
-      "artist": "AŌP",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Max Charm Faces ~彼女は最高!!!!!!~ トト子 Type A",
-      "artist": "Shuta Sueyoshi ft. Totoko, Nyaa & Sextuplets",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kimishi Ayauku mo Chikau yore (君氏危うくも近うよれ)",
-      "artist": "AŌP",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Iyami Ondo (イヤミ音頭)",
-      "artist": "Kenichi Suzumura",
-      "episodes": "6"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Let's Go! Muttsu Go! ~6-Shoku no Niji~ (レッツゴー！ムッツゴー！～6色の虹～)",
-      "artist": "ROOTS66 Party with the 6 Matsuno Brothers",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hanamaru Pippi wa Yoiko Dake (The Hanamaru Whistle Is Only For Good Kids)",
-      "artist": "AŌP",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Six Same Faces ~Kon'ya wa Saikō! (SIX SAME FACES ～今夜は最高!!!!!!～)",
-      "artist": "Kenichi Suzumura, Takahiro Sakurai, Yuichi Nakamura, Hiroshi Kamiya, Jun Fukuyama, Daisuke Ono, & Miyu Irino",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Mutsugo no Tamashii Nayuta Made (６つ子の魂ナユタまで)",
-      "artist": "AŌP",
-      "episodes": "14-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Amazing Intelligence ~Kuzu wa Saiko!~ (Amazing Intelligence ~クズは最高!~)",
-      "artist": "Riceballs & Osomatsu-san all-stars",
-      "episodes": "14-25"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Maboroshi Wink (Illusion Wink)",
-      "artist": "AŌP & AŌP Zero",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Otona ÷6 × Kodomo × 6",
-      "artist": "The Osomatsu-sans",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Zenryoku Batankyū (全力バタンキュー)",
-      "artist": "AŌP",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "SIX SHAME FACES ~Kon'ya mo Saikō~!!!!!! (SIX SHAME FACES ～今夜も最高!!!!!!～)",
-      "artist": "Aya Endo, Kenichi Suzumura, Takahiro Sakurai, Yuichi Nakamura, Hiroshi Kamiya, Jun Fukuyama, Daisuke Ono, & Miyu Irino",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

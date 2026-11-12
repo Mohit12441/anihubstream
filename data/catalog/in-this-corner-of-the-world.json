@@ -50,28 +50,6 @@
       "external_id": "101626"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kanashikute Yarikirenai (悲しくてやりきれない)",
-      "artist": "kotringo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tanpopo (たんぽぽ)",
-      "artist": "kotringo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Suzu-san",
-      "artist": "kotringo",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

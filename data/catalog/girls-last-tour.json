@@ -304,28 +304,6 @@
       "external_id": "269185"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ugoku, ugoku",
-      "artist": "Inori Minase & Yurika Kubo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "More One Night",
-      "artist": "Inori Minase & Yurika Kubo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Amadare no Uta (雨だれの歌; Song of Raindrops)",
-      "artist": "Inori Minase & Yurika Kubo",
-      "episodes": "5, 12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

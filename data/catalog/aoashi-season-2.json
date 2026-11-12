@@ -3,7 +3,7 @@
   "title": "Aoashi Season 2",
   "native": "アオアシ 第2期",
   "year": 2026,
-  "rating": 8,
+  "rating": 8.1,
   "season": "Fall 2026",
   "kind": "TV",
   "status": "Ongoing",
@@ -16,10 +16,10 @@
   "alt_seasons": [],
   "sched_day": 7,
   "sched_day_label": "SUN",
-  "sched_date": "Nov 8",
+  "sched_date": "Nov 15",
   "sched_time": "08:00",
   "sched_season": "Fall 2026",
-  "sched_episode": 6,
+  "sched_episode": 7,
   "sched_sub_at": null,
   "sched_dub_at": 1793811600000,
   "source_ids": {
@@ -301,35 +301,6 @@
       "external_id": "cloud-sync"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Mushin Hakusū (Innocent Beat Count)",
-      "artist": "Alexandros",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Blue Diary",
-      "artist": "Rinne",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Presence",
-      "artist": "Superfly",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Calla Lily no Koibumi",
-      "artist": "KAMI WA SAIKORO WO FURANAI",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

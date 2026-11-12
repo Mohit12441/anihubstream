@@ -326,28 +326,6 @@
       "external_id": "163944"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yakusoku wa Iranai (約束はいらない; No Need for Promises)",
-      "artist": "Maaya Sakamoto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Mystic Eyes",
-      "artist": "Hiroki Wada",
-      "episodes": "1-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "ザ・ストーリー・オブ・エスカフローネ~エンド・タイトル (The Story of Escaflowne ~ End Title)",
-      "artist": "Yoko Kanno",
-      "episodes": "26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

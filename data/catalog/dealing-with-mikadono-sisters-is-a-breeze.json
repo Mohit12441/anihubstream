@@ -171,35 +171,6 @@
       "external_id": "370064"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kimi ni Fusawashii Kiseki (君にふさわしい奇跡)",
-      "artist": "Nichiyōbi no MAISONdes",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aimai Graffiti (曖昧グラフィティ)",
-      "artist": "Kazuki Mikadono",
-      "episodes": "2, 5-6"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "One Road",
-      "artist": "Niko Mikadono",
-      "episodes": "3, 7-8"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Sunrise Prism",
-      "artist": "Miwa Mikadono",
-      "episodes": "4, 9-11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

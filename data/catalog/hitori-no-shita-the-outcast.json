@@ -305,21 +305,6 @@
       "external_id": "186746"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Arcadia",
-      "artist": "Lilith",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "In the Dawn",
-      "artist": "Affective Synergy",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -172,35 +172,6 @@
       "external_id": "159132"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "There Is a Reason",
-      "artist": "Konomi Suzuki",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "This game",
-      "artist": "Konomi Suzuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Oración",
-      "artist": "Ai Kayano",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Onegai Snyaiper (おねがい☆すにゃいぱー;Please, Sniper, Meow!)",
-      "artist": "Miyuki Sawashiro",
-      "episodes": "11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

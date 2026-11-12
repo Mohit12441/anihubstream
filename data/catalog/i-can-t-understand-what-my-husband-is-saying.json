@@ -184,28 +184,6 @@
       "external_id": "148984"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yuruganu Futari ~Ai no Sanka~ (ゆるがぬふたり～愛の讃歌～)",
-      "artist": "Kenichi Suzumura & Yukari Tamura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ii Kagen ni Shite, Anata (いいかげんにして、あなた;Cut It Out, Dear)",
-      "artist": "Yukari Tamura & Kenichi Suzumura",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Ii Kagen ni Shite, Anata (Acoustic ver.) (いいかげんにして、あなた Acoustic ver.;Cut It Out, Dear)",
-      "artist": "Yukari Tamura & Kenichi Suzumura",
-      "episodes": "8"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

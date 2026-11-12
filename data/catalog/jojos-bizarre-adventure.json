@@ -4,12 +4,12 @@
   "native": "ジョジョの奇妙な冒険",
   "year": 1993,
   "rating": 7.3,
-  "season": "Year 1993",
+  "season": "Fall 1993",
   "kind": "OVA",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/6a9fcec70dd03e03a9104882-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/6a9fcec70dd03e03a9104882-landscape.jpg",
-  "accent": "#ff9420",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx666-kYzXvKlUbeMP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx666-kYzXvKlUbeMP.jpg",
+  "accent": "#e4d635",
   "synopsis": "Kujo Jotaro is a normal, popular Japanese high-schooler, until he thinks that he is possessed by a spirit, and locks himself in prison. After seeing his grandfather, Joseph Joestar, and fighting Joseph's friend Muhammad Abdul, Jotaro learns that the \"Spirit\" is actually Star Platinum, his Stand, or fighting energy given a semi-solid form. Later, his mother gains a Stand, and becomes sick. Jotaro learns that it is because the vampire Dio Brando has been revived 100 years after his defeat to Jonathan Joestar, Jotaro's great-great-grandfather. Jotaro decides to join Joseph and Abdul in a trip to Egypt to defeat Dio once and for all.",
   "rank": null,
   "trend_rank": null,
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 6,
   "added_at": null,
-  "search_text": "jojo s bizarre adventure シ ョシ ョの奇妙な冒険",
+  "search_text": "jojo s bizarre adventure シ ョシ ョの奇妙な冒険 ova finished",
   "genres": [
     "action",
     "adventure",
@@ -108,175 +108,6 @@
       "external_id": "13618"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Stone Ocean",
-      "artist": "ichigo from Kishida Kyōdan & The Akeboshi Rockets",
-      "episodes": "2-24"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Distant Dreamer",
-      "artist": "Duffy",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Fighting Gold",
-      "artist": "Coda",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Freek'n You",
-      "artist": "Jodeci",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Crazy Noisy Bizarre Town",
-      "artist": "THE DU",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "I Want You",
-      "artist": "Savage Garden",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "JoJo - Sono Chi no Kioku ~end of THE WORLD~ (ジョジョ 〜その血の記憶～end of THE WORLD～)",
-      "artist": "JO☆STARS～TOMMY, Coda, JIN～",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Last Train Home",
-      "artist": "Pat Metheny Group",
-      "episodes": "25-26, 28-35, 38-"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "STAND PROUD",
-      "artist": "Jin Hashimoto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Walk Like an Egyptian",
-      "artist": "The Bangles",
-      "episodes": "3-"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "JoJo - Sono Chi no Sadame (ジョジョ 〜その血の運命〜)",
-      "artist": "Hiroaki Tommy Tominaga",
-      "episodes": "2-9"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Roundabout",
-      "artist": "Yes",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Voodoo Kingdom",
-      "artist": "SOUL'd OUT",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Dio's Dervish",
-      "artist": "Marco D'Ambrosio [eps 2-6]",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Heaven's falling down",
-      "artist": "sana from sajou no hana",
-      "episodes": "25-38"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Roundabout",
-      "artist": "Yes",
-      "episodes": "38"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Uragirimono no Requiem (裏切り者のレクイエム)",
-      "artist": "Daisuke Hasegawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Modern Crusaders",
-      "artist": "Enigma",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Crazy Noisy Bizarre Town ~EDM arrange ver.~",
-      "artist": "THE DU",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Akuyaku Kyōsōkyoku ~Oingo to Boingo~ (アク役◇協奏曲～オインゴとボインゴ～; Villain Concerto~Oingo & Boingo~)",
-      "artist": "Makoto Yasumura & Motoko Kumai",
-      "episodes": "27"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Bloody Stream",
-      "artist": "Coda",
-      "episodes": "11-26"
-    },
-    {
-      "kind": "OP",
-      "sequence": 3,
-      "title": "chase",
-      "artist": "batta",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Akuyaku Kyōsōkyoku ~ Horu Hoosu to Boingo~ (アク役◇協奏曲～ホル・ホースとボインゴ～; Villain Concerto~Hol Horse & Boingo~)",
-      "artist": "Hidenobu Kiuchi & Motoko Kumai",
-      "episodes": "36-37"
-    },
-    {
-      "kind": "OP",
-      "sequence": 4,
-      "title": "Great Days",
-      "artist": "Karen Aoki & Daisuke Hasegawa",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

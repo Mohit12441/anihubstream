@@ -584,35 +584,6 @@
       "external_id": "255211"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Catch up, latency",
-      "artist": "Unison Square Garden",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Reset",
-      "artist": "Taichi Mukai",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Kaze Tsuyoku, Kimi Atsuku. (風強く、君熱く。)",
-      "artist": "Q-MHz feat. Mitsuhiro Hidaka a.k.a. SKY-HI",
-      "episodes": "12-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Michi (道)",
-      "artist": "Taichi Mukai",
-      "episodes": "12-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

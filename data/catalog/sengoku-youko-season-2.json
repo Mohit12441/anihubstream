@@ -183,42 +183,6 @@
       "external_id": "355640"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "KATAWARA",
-      "artist": "STEREO DIVE FOUNDATION",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yoru no Sui (夜の隨)",
-      "artist": "Hiroki Nanami",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "HIBANA",
-      "artist": "MindaRyn",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yuuyami no Uta",
-      "artist": "KEIKO",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Banri Ikkū (万里一空)",
-      "artist": "Rainy",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

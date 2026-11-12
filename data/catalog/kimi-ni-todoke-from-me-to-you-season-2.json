@@ -52,35 +52,6 @@
       "external_id": "91500"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sawakaze (爽風)",
-      "artist": "Tomofumi Tanizawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi ni Todoke...",
-      "artist": "MAY'S",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kimi ni Todoke (きみにとどけ)",
-      "artist": "Tomofumi Tanizawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kataomoi (片想い)",
-      "artist": "Chara",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

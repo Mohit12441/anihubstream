@@ -39,21 +39,6 @@
     "romance"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Petals feat. Kase",
-      "artist": "Orangestar",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hana Ikada feat. Kase",
-      "artist": "Orangestar",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

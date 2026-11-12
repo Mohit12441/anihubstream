@@ -170,21 +170,6 @@
       "external_id": "357344"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tailwind",
-      "artist": "Kanae",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Good Luck",
-      "artist": "Tasuku Hatanaka",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

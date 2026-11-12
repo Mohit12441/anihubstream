@@ -313,28 +313,6 @@
       "external_id": "373692"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kaiju (怪獣)",
-      "artist": "Sakanaction",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aporia",
-      "artist": "yorushika",
-      "episodes": "2-15"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Hebi",
-      "artist": "yorushika",
-      "episodes": "16-25"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

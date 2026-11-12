@@ -319,35 +319,6 @@
       "external_id": "185467"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sakaseyasakase (咲かせや咲かせ)",
-      "artist": "EGOIST",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "KABENERI OF THE IRON FORTRESS",
-      "artist": "EGOIST",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Grenzlinie",
-      "artist": "Cyua",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "ninelie",
-      "artist": "Aimer × chelly",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

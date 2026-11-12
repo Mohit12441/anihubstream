@@ -175,35 +175,6 @@
       "external_id": "300069"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Stone Ocean",
-      "artist": "ichigo from Kishida Kyōdan & The Akeboshi Rockets",
-      "episodes": "2-24"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Distant Dreamer",
-      "artist": "Duffy",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Heaven's falling down",
-      "artist": "sana from sajou no hana",
-      "episodes": "25-38"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Roundabout",
-      "artist": "Yes",
-      "episodes": "38"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

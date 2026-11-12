@@ -305,63 +305,6 @@
       "external_id": "258864"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kaen (Fire)",
-      "artist": "Ziyoou-vachi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sayonaragokko",
-      "artist": "amazarashi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Creamsoda Melonsoda",
-      "artist": "GO-BANG'S",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Dororon Enma-kun (ドロロンえん魔くん)",
-      "artist": "Chinatsu Nakayama",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yōkai ni Go-Yōjin (妖怪にご用心)",
-      "artist": "Chinatsu Nakayama",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Dororo no Uta",
-      "artist": "Toshiko Fujita",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Dororo",
-      "artist": "ASIAN KUNG-FU GENERATION",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Yamiyo",
-      "artist": "Eve",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

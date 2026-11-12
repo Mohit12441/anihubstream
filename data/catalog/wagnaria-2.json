@@ -1,16 +1,16 @@
 {
   "id": "wagnaria-2",
   "title": "Wagnaria!!2",
-  "native": "Working'!!",
+  "native": "WORKING'!!",
   "year": 2011,
-  "rating": 7.8,
-  "season": "Year 2011",
+  "rating": 7.6,
+  "season": "Fall 2011",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/692ea0ac0f7f80b39236b5d6-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/692ea0ac0f7f80b39236b5d6-landscape.webp",
-  "accent": "#8b5cf6",
-  "synopsis": "The exciting antics of Wagnaria return as more ridiculous incidents occur, friendships are deepened, and new feelings are discovered. In addition to Souta Takanashi and his wacky co-workers, more eccentric personalities join the family restaurant: Haruna, Hyougo Otoo's missing wife, who has a habit of getting hopelessly lost through the sewer system; Kirio Yamada, Aoi's older brother, who is able to withstand Mahiru Inami's deadly punches; and twins Youhei and Mitsuki Mashiba, Kyouko Shirafuji's juniors who do not get along.\n\nAbsurdity, romance, and hilarity are all on the menu for the Wagnaria family restaurant!",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx10521-dx9L5dLNJXun.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10521-dx9L5dLNJXun.jpg",
+  "accent": "#fea150",
+  "synopsis": "Life goes on at the Wagnaria family restaurant as its peculiar employees try to provide a good service despite their individual eccentricities.\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 13,
   "added_at": null,
-  "search_text": "wagnaria 2 working",
+  "search_text": "wagnaria 2 working tv finished",
   "genres": [
     "comedy",
     "slice-of-life"
@@ -182,21 +182,6 @@
       "external_id": "94060"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "COOLISH WALK",
-      "artist": "Kana Asumi, Eri Kitamura and Saki Fujita",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Itsumo you ni LOVE & PEACE!! (いつものようにLOVE＆PEACE!!)",
-      "artist": "Jun Fukuyama, Daisuke Ono and Hiroshi Kamiya",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

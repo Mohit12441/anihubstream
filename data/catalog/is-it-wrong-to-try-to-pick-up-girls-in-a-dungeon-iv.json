@@ -166,35 +166,6 @@
       "external_id": "297335"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Shikō (Visual Purple)",
-      "artist": "Saori Hayami",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kirikizu (Gash)",
-      "artist": "sajou no hana",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tentō",
-      "artist": "sajou no hana",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Guide",
-      "artist": "Saori Hayami",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

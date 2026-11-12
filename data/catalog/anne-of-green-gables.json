@@ -589,21 +589,6 @@
       "external_id": "7554"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kikoeru kashira",
-      "artist": "Ritsuko Ohwada",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Samenai Yume",
-      "artist": "Ritsuko Ohwada",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -471,35 +471,6 @@
       "external_id": "257960"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Fighting Gold",
-      "artist": "Coda",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Freek'n You",
-      "artist": "Jodeci",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Uragirimono no Requiem (裏切り者のレクイエム)",
-      "artist": "Daisuke Hasegawa",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Modern Crusaders",
-      "artist": "Enigma",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -325,21 +325,6 @@
       "external_id": "1094"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Rashinban",
-      "artist": "AUDIO RULEZ",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kimi wo Miteiru",
-      "artist": "BEGIN",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

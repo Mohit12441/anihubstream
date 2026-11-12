@@ -304,35 +304,6 @@
       "external_id": "237247"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "found & lost",
-      "artist": "Survive Said The Prophet",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Prayer X",
-      "artist": "King Gnu",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "FREEDOM",
-      "artist": "BLUE ENCOUNT",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "RED",
-      "artist": "Survive Said the Prophet",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

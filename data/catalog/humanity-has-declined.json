@@ -172,21 +172,6 @@
       "external_id": "161213"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Real World",
-      "artist": "nano.RIPE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yume no Naka no Watashi no Yume (ユメのなかノわたしのユメ;My Dreams Inside of My Dreams)",
-      "artist": "Masumi Itou",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

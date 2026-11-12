@@ -381,49 +381,6 @@
       "external_id": "38575"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Daydream Romance",
-      "artist": "Shigeru Matsuzaki",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Drive / Driven",
-      "artist": "Yello [Manga UK English Version]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Drive / Driven",
-      "artist": "Yello [Manga UK English Version]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Stay",
-      "artist": "Eve",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Cobra",
-      "artist": "Yoko Maeno",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Secret Desire",
-      "artist": "Yoko Maeno",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

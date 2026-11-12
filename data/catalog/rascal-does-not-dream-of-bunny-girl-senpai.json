@@ -185,56 +185,6 @@
       "external_id": "256619"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Kimi no Sei (Your Fault)",
-      "artist": "The Peggies",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Fukashigi no Karte (Mysterious Chart)",
-      "artist": "Asami Seto, Inori Minase, Maaya Uchida, Nao Tōyama, & Yurika Kubo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Fukashigi no Karte (Mysterious Chart) Mai Sakurajima solo ver.",
-      "artist": "Asami Seto",
-      "episodes": "02-03"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Fukashigi no Karte (Mysterious Chart) Tomoe Koga solo ver.",
-      "artist": "Nao Toyama",
-      "episodes": "4-5"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Fukashigi no Karte (Mysterious Chart) Rio Futaba solo ver.",
-      "artist": "Atsumi Tanezaki",
-      "episodes": "7-8"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Fukashigi no Karte (Mysterious Chart) Nodoka Toyohama solo ver.",
-      "artist": "Maaya Uchida",
-      "episodes": "9-10"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "Fukashigi no Karte (Mysterious Chart) Kaede Azusagawa solo ver.",
-      "artist": "Yurika Kubo",
-      "episodes": "11-12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

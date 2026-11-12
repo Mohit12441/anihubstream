@@ -643,28 +643,6 @@
       "external_id": "1569"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sarabai! (See You Adieu!)",
-      "artist": "Tomoko Kaneda",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Soramimi Cake (空耳ケーキ; Cake of Mishearing)",
-      "artist": "Oranges & Lemons",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Raspberry Heaven",
-      "artist": "Oranges & Lemons",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

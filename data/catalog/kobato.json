@@ -305,35 +305,6 @@
       "external_id": "69837"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Magic Number (マジックナンバー)",
-      "artist": "Maaya Sakamoto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Jellyfish's Confession (ジェリーフィッシュの告白)",
-      "artist": "Megumi Nakajima",
-      "episodes": "1-19"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Watashi ni Dekiru Koto",
-      "artist": "Megumi Nakajima",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Ashita Kuru Hi (あした来る日)",
-      "artist": "Kana Hanazawa",
-      "episodes": "24"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

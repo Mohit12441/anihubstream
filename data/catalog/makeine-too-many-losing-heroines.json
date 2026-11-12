@@ -172,35 +172,6 @@
       "external_id": "361263"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tsuyogaru Girl feat. Mossa (NECRY TALKIE) (つよがるガール feat. もっさ（ネクライトーキー）)",
-      "artist": "BOTCHI BOROMARU",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "LOVE2000",
-      "artist": "Hikaru Tohno",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "CRAZY FOR YOU",
-      "artist": "Lemon Yakishio [Shion Wakayama]",
-      "episodes": "5-7"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "feel my soul",
-      "artist": "Chika Komari [Momoka Terasawa]",
-      "episodes": "8-11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

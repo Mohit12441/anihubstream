@@ -304,63 +304,6 @@
       "external_id": "264124"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "River",
-      "artist": "Anonymouz",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Without Love",
-      "artist": "LMYK",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "MUKANJYO",
-      "artist": "Survive Said the Prophet",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Torches",
-      "artist": "Aimer",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Paradox",
-      "artist": "Survive Said the Prophet",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Ember",
-      "artist": "haju:harmonics",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Dark Crow",
-      "artist": "MAN WITH A MISSION",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Drown",
-      "artist": "milet",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

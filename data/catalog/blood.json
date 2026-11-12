@@ -592,63 +592,6 @@
       "external_id": "167895"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "青空のナミダ (Aozora no Namida)",
-      "artist": "Hitomi Takahashi",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "語り継ぐこと (Kataritsugu koto)",
-      "artist": "Chitose Hajime",
-      "episodes": "1-13,50"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "SEASON’S CALL",
-      "artist": "HYDE",
-      "episodes": "14-25"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "CRY NO MORE",
-      "artist": "Mika Nakashima",
-      "episodes": "14-25"
-    },
-    {
-      "kind": "OP",
-      "sequence": 3,
-      "title": "Colors of the Heart",
-      "artist": "UVERworld",
-      "episodes": "26-38"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "This Love",
-      "artist": "Angela Aki",
-      "episodes": "26-38"
-    },
-    {
-      "kind": "OP",
-      "sequence": 4,
-      "title": "雷音 (Raion)",
-      "artist": "Jinn",
-      "episodes": "39-50"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Brand New Map",
-      "artist": "K",
-      "episodes": "39-49"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

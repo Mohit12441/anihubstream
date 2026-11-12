@@ -3,7 +3,7 @@
   "title": "Mobile Suit Gundam Hathaway",
   "native": "機動戦士ガンダム 閃光のハサウェイ",
   "year": 2021,
-  "rating": 7.8,
+  "rating": 7.9,
   "season": "Spring 2021",
   "kind": "Movie",
   "status": "Finished",
@@ -51,35 +51,6 @@
       "external_id": "305482"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Snooze",
-      "artist": "SZA",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sweet Child o’ Mine",
-      "artist": "Guns N’ Roses",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Möbius",
-      "artist": "mpi, Laco and Benjamin",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Senkou",
-      "artist": "[Alexandros]",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

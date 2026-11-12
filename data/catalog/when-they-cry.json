@@ -537,49 +537,6 @@
       "external_id": "17316"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Super scription of data",
-      "artist": "Eiko Shimamiya",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Manazashi",
-      "artist": "anNina",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Naraku no Hana (奈落の花)",
-      "artist": "Eiko Shimamiya",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Taishō a (対象 a)",
-      "artist": "anNina",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Higurashi no Naku Koro ni (ひぐらしのなく頃に)",
-      "artist": "Eiko Shimamiya",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "why, or why not",
-      "artist": "Hiroyuki Oshima feat. Rekka Katakiri",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

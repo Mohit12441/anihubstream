@@ -1,16 +1,16 @@
 {
   "id": "symphogear",
   "title": "Symphogear",
-  "native": "Senki Zesshou Symphogear",
+  "native": "戦姫絶唱シンフォギア",
   "year": 2012,
-  "rating": 7,
-  "season": "Year 2012",
+  "rating": 6.9,
+  "season": "Winter 2012",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/69130c5a648ed2adf0d39c0f-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/69130c5a648ed2adf0d39c0f-landscape.webp",
-  "accent": "#8b5cf6",
-  "synopsis": "Tsubasa Kazanari and Kanade Amou—the idol duo known as Zwei Wing—use their songs to power ancient weapons known as \"symphogears\" to combat a deadly alien race called the \"Noise.\" While the general public is aware of the Noise's existence, knowledge of the symphogears are kept a secret. When the Noise attack one of Zwei Wing's concerts, Kanade sacrifices herself to protect a young girl named Hibiki Tachibana, leaving Tsubasa devastated and a fragment of her symphogear embedded within Hibiki.\n\nTwo years pass and Hibiki is once again dragged into a Noise attack. While rescuing a young girl who has been left behind during the evacuation, she awakens the power of Kanade's symphogear lying within her. Although Tsubasa still grieves over the loss of Kanade, both girls must now learn to work together using their powers to defend humanity against the Noise.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11751-CNf1IlrvzbEa.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11751-CNf1IlrvzbEa.png",
+  "accent": "#e48650",
+  "synopsis": "With the coming of spring, Hibiki Tachibana and Miku Kohinata start their first year in high school school at the prestigious Lydian Music Academy. That their idol, the singer Tsubasa Kazanari, also attends Lydian is just an added bonus. Neither of them know that their lives are about to change forever. Neither of them know that the first, awakening beat is almost upon them.\n\n(Source: Rightstuf)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 13,
   "added_at": null,
-  "search_text": "symphogear senki zesshou symphogear",
+  "search_text": "symphogear 戦姫絶唱シンフォキ ア tv finished",
   "genres": [
     "action",
     "drama",
@@ -183,161 +183,6 @@
       "external_id": "97393"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "METANOIA",
-      "artist": "Nana Mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Lasting Song",
-      "artist": "Ayahi Takagaki",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "TESTAMENT",
-      "artist": "Nana Mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Futurism",
-      "artist": "Ayahi Takagaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Senritsu Sorority",
-      "artist": "Yoshino Nanjo, Ai Kayano & Yoko Hikasa",
-      "episodes": "1"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Exterminate",
-      "artist": "Nana Mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Glorious Break",
-      "artist": "Nana Mizuki",
-      "episodes": "1"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Vitalization",
-      "artist": "Nana Mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ressou Yari - Gungnir (烈槍・ガングニール; Fierce Spear - Gungnir)",
-      "artist": "Yōko Hikasa",
-      "episodes": "1"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Synchrogazer",
-      "artist": "Nana Mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Meteor Light",
-      "artist": "Ayahi Takagaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Rebirth-day",
-      "artist": "Ayahi Takagaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Next Destination",
-      "artist": "Ayahi Takagaki",
-      "episodes": "2-11"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Meteor Light",
-      "artist": "Ayahi Takagaki",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Gekishou - Gungnir (撃槍・ガングニール;Attacking Spear: Gungnir)",
-      "artist": "Aoi Yuki",
-      "episodes": "4"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Axia no Kaze",
-      "artist": "Aoi Yuki, Mizuki Nana, Ayahi Takagaki, Yoshino Nanjo, Ai Kayano & Yoko Hikasa",
-      "episodes": "6"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Vitalization",
-      "artist": "Nana Mizuki",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Synchrogazer",
-      "artist": "Nana Mizuki",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "TESTAMENT",
-      "artist": "Nana Mizuki",
-      "episodes": "12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Nijiiro no Flugel (虹色のフリューゲル;The Rainbow-Colored Flugel)",
-      "artist": "Aoi Yūki, Nana Mizuki, Ayahi Takagaki, Yōko Hikasa, Yoshino Nanjou, Ai Kayano, Minami Takayama",
-      "episodes": "13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "Gyakkou no Flugel (逆光のフリューゲル; The Flugel of Backlight)",
-      "artist": "Mizuki Nana & Minami Takayama",
-      "episodes": "13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 5,
-      "title": "Nijiiro no Flügel",
-      "artist": "Aoi Yuki, Mizuki Nana, Ayahi Takagaki, Yoshino Nanjo, Ai Kayano & Yoko Hikasa",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

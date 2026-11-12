@@ -267,28 +267,6 @@
       "external_id": "199638"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "DEAREST DROP",
-      "artist": "Azusa Tadokoro",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "From (フロム)",
-      "artist": "TRUE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "CINEMA (キネマ)",
-      "artist": "TRUE",
-      "episodes": "6"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

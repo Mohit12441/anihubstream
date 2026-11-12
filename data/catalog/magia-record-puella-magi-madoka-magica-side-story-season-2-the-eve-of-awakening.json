@@ -127,42 +127,6 @@
       "external_id": "292593"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Careless (ケアレス)",
-      "artist": "ClariS",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Lapis",
-      "artist": "TrySail",
-      "episodes": "2-8"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Gomakashi (Deception)",
-      "artist": "TrySail",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Alicia",
-      "artist": "Claris",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Niguredo (二グレド)",
-      "artist": "Sito",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

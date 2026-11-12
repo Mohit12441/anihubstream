@@ -183,35 +183,6 @@
       "external_id": "264182"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Harmony",
-      "artist": "Shouta Aoi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Rainbow",
-      "artist": "Yuma Uchida",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tone",
-      "artist": "Shōta Aoi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Speechless",
-      "artist": "Yūma Uchida",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -245,42 +245,6 @@
       "external_id": "375498"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Method",
-      "artist": "Kroi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Dandelion",
-      "artist": "go!go!vanillas",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hashire Sakamoto",
-      "artist": "Vaundy",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Futsuu",
-      "artist": "Conton Candy",
-      "episodes": "1-6, 8-11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Somebody help us",
-      "artist": "Vaundy",
-      "episodes": "7"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

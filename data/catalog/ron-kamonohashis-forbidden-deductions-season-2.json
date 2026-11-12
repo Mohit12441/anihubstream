@@ -182,35 +182,6 @@
       "external_id": "373139"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Feedback wo Narashite",
-      "artist": "Humbreaders",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Labyrinth",
-      "artist": "hockrockb",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ikenai fool magic",
-      "artist": "UNISON SQAURE GARDEN",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Lip Sync",
-      "artist": "hockrockb",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

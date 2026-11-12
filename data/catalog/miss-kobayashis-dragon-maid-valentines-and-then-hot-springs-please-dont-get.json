@@ -52,49 +52,6 @@
       "external_id": "226195"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Namida no Parade (Tearful Parade)",
-      "artist": "fhána",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Ai no Supreme",
-      "artist": "fhána",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Maid with Dragons♥",
-      "artist": "Super Chorogons",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Aozora no Rhapsody (青空のラプソディ; Rhapsody of the Blue Sky)",
-      "artist": "fhána",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ishukan Communication (イシュカン・コミュニケーション)",
-      "artist": "Choro-gonzu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Ishukan Relationship",
-      "artist": "Yūki Kuwahara",
-      "episodes": "3"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

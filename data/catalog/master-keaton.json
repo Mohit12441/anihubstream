@@ -304,63 +304,6 @@
       "external_id": "22531"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Opening Theme",
-      "artist": "Kuniaki Haishima",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Railtown",
-      "artist": "Kuniaki Haishima",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "A Sigh",
-      "artist": "KneuKid Romance",
-      "episodes": "25-26"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Opening Theme",
-      "artist": "Kuniaki Haishima",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Railtown",
-      "artist": "Kuniaki Haishima",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "eternal wind",
-      "artist": "BLÜE",
-      "episodes": "1-13"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "From Beginning",
-      "artist": "Kuniaki Haishima",
-      "episodes": "27-39"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "A Sigh",
-      "artist": "KneuKid Romance",
-      "episodes": "14-24"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -325,35 +325,6 @@
       "external_id": "31065"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "gravitation",
-      "artist": "angela",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Azurite",
-      "artist": "Tae Urakabe",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Azurite ~ for luster star Deianera",
-      "artist": "Yui Ishikawa",
-      "episodes": "15"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Azurite ~True grace~",
-      "artist": "Tae Urakabe",
-      "episodes": "26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

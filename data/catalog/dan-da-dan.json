@@ -175,35 +175,6 @@
       "external_id": "365109"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "On The Way (革命道中; Kakumei Dōchū)",
-      "artist": "AiNA THE END",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Doukashiteru (Something's Wrong with Them)",
-      "artist": "WurtS",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Otonoke (オトノケ)",
-      "artist": "Creepy Nuts",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "TAIDADA",
-      "artist": "ZUTOMAYO",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

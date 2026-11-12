@@ -276,35 +276,6 @@
       "external_id": "326229"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Setsuna no Chikai (feat. Yuzaki Tsukasa) (刹那の誓い（feat. 由崎司）)",
-      "artist": "Neko Hacker",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yoru no Katasumi (夜のかたすみ)",
-      "artist": "Tsukasa Yuzaki [Akari Kitō]",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Koi no Uta (feat. Tsukasa Tsukuyomi)",
-      "artist": "Akari Kitō",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tsuki to Hoshizora",
-      "artist": "KanoeRana",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

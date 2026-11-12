@@ -51,49 +51,6 @@
       "external_id": "18159"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Cha-La Head-Cha-La",
-      "artist": "Hironobu Kageyama",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Dragon Ball Z Theme",
-      "artist": "Andy Baylor [US Version]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Aoi Kaze no HOPE",
-      "artist": "Hironobu Kageyama",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Closing Theme",
-      "artist": "Mark Menza [US Version]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Goku Is Falling",
-      "artist": "Bruce Faulconer [US Version - broadcast edit]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Through Her Eyes",
-      "artist": "Dream Theater [US Version]",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

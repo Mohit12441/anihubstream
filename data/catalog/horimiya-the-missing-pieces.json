@@ -183,28 +183,6 @@
       "external_id": "350849"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Shiawase",
-      "artist": "Omoinotake",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "URL",
-      "artist": "Ami Sakaguchi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Dokuro Ninja Konoha (ドクロニンジャコノハ)",
-      "artist": "Reina Kondo and Jun Fukuyma",
-      "episodes": "7"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

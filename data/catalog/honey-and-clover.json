@@ -1,16 +1,16 @@
 {
   "id": "honey-and-clover",
   "title": "Honey and Clover",
-  "native": "Hachimitsu to Clover",
+  "native": "ハチミツとクローバー",
   "year": 2005,
-  "rating": 8,
-  "season": "Year 2005",
+  "rating": 7.6,
+  "season": "Spring 2005",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/69118bbdf17493c040f3c9eb-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/69118bbdf17493c040f3c9eb-landscape.webp",
-  "accent": "#24d3ee",
-  "synopsis": "Yuuta Takemoto, a sophomore at an arts college, shares a cheap apartment with two seniors—the eccentric Shinobu Morita, who keeps failing to graduate due to his absenteeism, and the sensible Takumi Mayama, who acts as a proper senior to Takemoto, often looking out for him.\n\nTakemoto had not given much thought to his future until one fine spring day, when he meets the endearing Hagumi Hanamoto and falls in love at first sight. Incredibly gifted in the arts, Hagumi enrolls in Takemoto's university and soon befriends the popular pottery student Ayumi Yamada. Ayumi is already well acquainted with the three flatmates and secretly harbors deep feelings for one of them.\n\nHachimitsu to Clover is a heartwarming tale of youth, love, soul-searching, and self-discovery, intricately woven through the complex relationships between five dear friends.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16-S9k8qahNXoYP.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16-S9k8qahNXoYP.jpg",
+  "accent": "#aee486",
+  "synopsis": "Takemoto Yuuta, Mayama Takumi, and Morita Shinobu are college students who share the small apartment. Even though they live in poverty, the three of them are able to obtain pleasure through small things in life. The story follows these characters' life stories as poor college students, as well as their love lives when a short but talented 18 year old girl called Hanamoto Hagumi appears.\n\n(Source: Anime News Network)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 24,
   "added_at": null,
-  "search_text": "honey and clover hachimitsu to clover",
+  "search_text": "honey and clover ハチミツとクローハ ー tv finished",
   "genres": [
     "comedy",
     "drama",
@@ -305,56 +305,6 @@
       "external_id": "300"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Fugainaiya (ふがいないや)",
-      "artist": "YUKI",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Split (スプリット)",
-      "artist": "SuneoHair",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Dramatic",
-      "artist": "YUKI",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Waltz",
-      "artist": "SuneoHair",
-      "episodes": "01-12,24"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Fugainaiya",
-      "artist": "YUKI",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Mistake",
-      "artist": "THE BAND HAS NO NAME",
-      "episodes": "13-23"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Split",
-      "artist": "Suneohair",
-      "episodes": "25-36"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

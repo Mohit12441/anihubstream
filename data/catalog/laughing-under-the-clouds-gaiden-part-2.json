@@ -49,28 +49,6 @@
       "external_id": "251361"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Biran no Kaze (毘藍ノ風)",
-      "artist": "Ryūji Aoki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "ATTITUDE TO LIFE",
-      "artist": "Galneryus",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Ruten no Yō (流転ノ陽)",
-      "artist": "Ryūji Aoki",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

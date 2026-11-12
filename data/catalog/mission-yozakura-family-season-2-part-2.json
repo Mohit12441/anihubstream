@@ -16,10 +16,10 @@
   "alt_seasons": [],
   "sched_day": 7,
   "sched_day_label": "SUN",
-  "sched_date": "Nov 8",
+  "sched_date": "Nov 15",
   "sched_time": "08:00",
   "sched_season": "Fall 2026",
-  "sched_episode": 5,
+  "sched_episode": 6,
   "sched_sub_at": null,
   "sched_dub_at": 1783670400000,
   "source_ids": {
@@ -73,91 +73,6 @@
       "external_id": null
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Forever Song (フォーエバーソング)",
-      "artist": "Humbreaders",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "I'm still breathing",
-      "artist": "KID PHENOMENON",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "What's 'KAZOKU'",
-      "artist": "Sakurazaka46",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Shalala",
-      "artist": "Pilaf Seijin",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Unmei-chan (Fate)",
-      "artist": "Ikimono-gakari",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "fam!",
-      "artist": "CHiCO",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "E☆Secrets (E☆シークレッツ)",
-      "artist": "ZOOM FLICKER",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Feel so Easy!",
-      "artist": "Momoi Haruko",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Secret Operation",
-      "artist": "fripSide feat. Yoshino Nanjo",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kekkon Koushinkyoku",
-      "artist": "ASOBI Doumei",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Feel so Easy! ビリビリver.",
-      "artist": "Momoi, Haruko",
-      "episodes": "3,4,5,8,10"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Kimi kara no Kiseki (きみからの奇跡)",
-      "artist": "Inamura, Yuna",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

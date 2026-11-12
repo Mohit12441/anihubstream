@@ -305,49 +305,6 @@
       "external_id": "24454"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Last regrets",
-      "artist": "Ayana",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kaze no Tadori Tsuku Basho (風の辿り着く場所; The Place Where the Wind Arrives)",
-      "artist": "Ayana",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Flower",
-      "artist": "Miho Fujiwara",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "florescence",
-      "artist": "Miho Fujiwara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "flower",
-      "artist": "Miho Fujiwara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kaze no Tadori Tsuku Basho (風の辿り着く場所; The Place Where the Wind Arrives)",
-      "artist": "Ayana",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

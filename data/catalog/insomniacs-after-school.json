@@ -182,28 +182,6 @@
       "external_id": "346548"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Itsu Aetara (いつ逢えたら; When Do We Meet?)",
-      "artist": "aiko",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Lapse",
-      "artist": "Homecomings",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Hertz (ヘルツ)",
-      "artist": "Homecomings",
-      "episodes": "7"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

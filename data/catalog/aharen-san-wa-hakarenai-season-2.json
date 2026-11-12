@@ -3,7 +3,7 @@
   "title": "Aharen-san wa Hakarenai Season 2",
   "native": "阿波連さんははかれない season2",
   "year": 2025,
-  "rating": 7.4,
+  "rating": 7.5,
   "season": "Spring 2025",
   "kind": "TV",
   "status": "Finished",
@@ -172,42 +172,6 @@
       "external_id": "371320"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Binetsuma",
-      "artist": "ZUTOMAYO",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Twilight",
-      "artist": "shallm",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hanarenai Kyori (Inseparable Distance)",
-      "artist": "TrySail",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "AHAREN HEART",
-      "artist": "Inori Minase",
-      "episodes": "3"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Kyori-Kan (A Sense of Distance)",
-      "artist": "HaKoniwalily",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

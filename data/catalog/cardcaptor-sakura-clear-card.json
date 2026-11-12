@@ -283,42 +283,6 @@
       "external_id": "232116"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "CLEAR",
-      "artist": "Maaya Sakamoto",
-      "episodes": "1-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Jewelry",
-      "artist": "Saori Hayami",
-      "episodes": "1-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yakusoku no Sora (約束の空; The Promised Sky)",
-      "artist": "Junko Iwao",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Rocket Beat",
-      "artist": "Kiyono Yasuno",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Rewind",
-      "artist": "Minori Suzuki",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

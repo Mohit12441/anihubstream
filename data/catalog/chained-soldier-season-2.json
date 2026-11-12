@@ -41,42 +41,6 @@
     "romance"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Hikari yo, Boku ni. (光よ、僕に。)",
-      "artist": "Akari Kitō",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Cipher Cipher",
-      "artist": "Kana Hanazawa",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Yume no Ito",
-      "artist": "Akari Kitou",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "CHA∞IN",
-      "artist": "Maaya Uchida",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "LOVE LOVE Beam (LOVE LOVE ビーム)",
-      "artist": "Maaya Uchida",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

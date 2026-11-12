@@ -182,63 +182,6 @@
       "external_id": "177073"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "ReCoda",
-      "artist": "TRUE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Neiro no Kanata",
-      "artist": "Kitauji Quartet",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Blast!",
-      "artist": "TRUE",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Soundscape (サウンドスケープ)",
-      "artist": "TRUE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Vivace!",
-      "artist": "Kitauji Quartet",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "DREAM SOLISTER",
-      "artist": "TRUE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Tutti! (トゥッティ!)",
-      "artist": "Tomoyo Kurosawa, Ayaka Asai, Chika Anzai, & Moe Toyota",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Dream Solister (Wind Orchestra Ver.)",
-      "artist": "???",
-      "episodes": "13"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

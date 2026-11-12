@@ -162,35 +162,6 @@
       "external_id": "90720"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Circle Game",
-      "artist": "Galileo Galilei",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Aoi Shiori (青い栞; Blue Bookmark)",
-      "artist": "Galileo Galilei",
-      "episodes": "1-10"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Secret Base - Kimi ga Kureta Mono (10 years after Ver.) (secret base 〜君がくれたもの〜 [10 years after Ver.])",
-      "artist": "Ai Kayano, Haruka Tomatsu, and Saori Hayami",
-      "episodes": "1-10"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Aoi Shiori (青い栞; Blue Bookmark)",
-      "artist": "Galileo Galilei",
-      "episodes": "11"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

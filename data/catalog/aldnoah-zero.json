@@ -256,63 +256,6 @@
       "external_id": "115596"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "&Z",
-      "artist": "SawanoHiroyuki[nZk]:mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "&Z -English ver.-",
-      "artist": "SawanoHiroyuki[nZk]:mizuki",
-      "episodes": "1"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "heavenly blue",
-      "artist": "Kalafina",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "A/Z",
-      "artist": "SawanoHiroyuki[nZk]:mizuki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "GENESIS",
-      "artist": "Eir Aoi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "aLIEz",
-      "artist": "SawanoHiroyuki[nZk]:mizuki",
-      "episodes": "4,7-8,10-11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Harmonious",
-      "artist": "Sora Amamiya",
-      "episodes": "11"
-    },
-    {
-      "kind": "ED",
-      "sequence": 4,
-      "title": "heavenly blue",
-      "artist": "Kalafina",
-      "episodes": "12"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

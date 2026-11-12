@@ -171,42 +171,6 @@
       "external_id": "100430"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "UNDER/SHAFT",
-      "artist": "Maon Kurosaki",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Laterality",
-      "artist": "Nagi Yanagi",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Borderland",
-      "artist": "Mami Kawada",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Ambivalentidea",
-      "artist": "Nagi Yanagi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Shiroku Yawaraka na Hana",
-      "artist": "Nagi Yanagi",
-      "episodes": "4"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

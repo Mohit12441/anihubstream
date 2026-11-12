@@ -304,35 +304,6 @@
       "external_id": "162450"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sand Mission",
-      "artist": "Hideaki Takatori and ZETKI",
-      "episodes": "1-12"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sunabouzu Ekaki Uta (How to Draw Sunabouzu)",
-      "artist": "Hideaki Takatori",
-      "episodes": "1-12"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "DESTINY OF THE DESERT",
-      "artist": "YUKA",
-      "episodes": "13-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Shinkirou (Mirage)",
-      "artist": "YUKA",
-      "episodes": "12-"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

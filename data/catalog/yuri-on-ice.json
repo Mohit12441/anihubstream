@@ -171,21 +171,6 @@
       "external_id": "190422"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "History Maker",
-      "artist": "Dean Fujioka",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "You Only Live Once",
-      "artist": "Wataru Hatano",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

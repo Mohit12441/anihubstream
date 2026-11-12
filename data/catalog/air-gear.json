@@ -314,28 +314,6 @@
       "external_id": "13709"
     }
   ],
-  "themes": [
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Forest walker",
-      "artist": "a flood of circle",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Chain",
-      "artist": "Back-on",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sky-2-High",
-      "artist": "skankfunk",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

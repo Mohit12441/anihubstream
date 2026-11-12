@@ -3,14 +3,14 @@
   "title": "ORESUKI: Are you the only one who loves me?: Our Playball / Our End Run / Our Game",
   "native": "俺を好きなのはお前だけかよ～俺たちのゲームセット～",
   "year": 2020,
-  "rating": 7.6,
+  "rating": 7.3,
   "season": "Summer 2020",
-  "kind": "TV",
+  "kind": "OVA",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/poster_images/42915/medium.jpg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/114195-op9SJ1D86eNI.jpg",
-  "accent": "#ff1f4a",
-  "synopsis": "The story will center on the protagonist Joro, an ordinary male high school student, and Hose, a \"perfect human\" who can do anything. (Source: ANN)",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx114195-3h9rxnFnNkzw.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114195-3h9rxnFnNkzw.png",
+  "accent": "#e4bb93",
+  "synopsis": "Hose is the ultimate romantic comedy protagonist, who is more talented and better than me at everything. Hose and I are going to battle over Pansy at the fateful regional tournament finals. While Nishikizuta and Toshobu high schools go head-to-head in a baseball match, I’m going to battle Hose in a popularity contest. Yes, I’m going to fight fair and square…Psych! Of course not! The odds are overwhelmingly against me, so I’m going to play dirty! Mwahahaha! I know that Hose is going to follow the rules to the tee, so I’m going to do the exact opposite…Huh? What did you say? There are some new rules? Wait a sec!\n\nWhy are all the rules in favor of the other guy? Himawari, Cosmos, Asunaro! Why did you betray me? Crap…I have no one on my side…The rules are all twisted…So, I have no shame in using all my dirty tricks so everyone can see!\n\n(Source: Crunchyroll)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -33,7 +33,7 @@
   "skip_key_space": "mal",
   "episode_total": 1,
   "added_at": "2026-11-06 16:15:41",
-  "search_text": "oresuki are you the only one who loves me our playball our end run our game 俺を好きなのはお前た けかよ 俺たちのケ ームセット tv finished",
+  "search_text": "oresuki are you the only one who loves me our playball our end run our game 俺を好きなのはお前た けかよ 俺たちのケ ームセット ova finished",
   "genres": [
     "comedy",
     "drama",
@@ -53,21 +53,6 @@
       "external_id": "273031"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Papapa",
-      "artist": "Shuka Saitō",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hanakotoba",
-      "artist": "Haruka Tomatsu, Haruka Shiraishi, & Sachika Misawa",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

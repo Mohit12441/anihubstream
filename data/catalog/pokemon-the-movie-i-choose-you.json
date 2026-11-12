@@ -51,35 +51,6 @@
       "external_id": "202904"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Aim to Be a Pokémon Master -20th Anniversary- (Mezase Pokémon Master -20th Anniversary- めざせポケモンマスター -20th Anniversary-)",
-      "artist": "Rica Matsumoto",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Pokémon Theme (Gotta Catch 'Em All)",
-      "artist": "Ben Dixon [English Version]",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "I Choose You",
-      "artist": "Haven Paschall",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Oración no Theme ~Tomo ni Arukou~ (Oración Theme: Walk Together)",
-      "artist": "Asuca Hayashi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

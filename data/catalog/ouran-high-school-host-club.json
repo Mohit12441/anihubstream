@@ -327,35 +327,6 @@
       "external_id": "15724"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sakura Kiss (English Version)",
-      "artist": "Kristine Sa",
-      "episodes": "1-26"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sakura kiss",
-      "artist": "Chieko Kawabe",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Shissou",
-      "artist": "LAST ALLIANCE",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Sprint (English Version",
-      "artist": "Justin Houston",
-      "episodes": "1-26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

@@ -1,16 +1,16 @@
 {
   "id": "utawarerumono",
   "title": "Utawarerumono",
-  "native": "Utawarerumono",
+  "native": "うたわれるもの",
   "year": 2006,
-  "rating": 7.6,
-  "season": "Year 2006",
+  "rating": 7.3,
+  "season": "Spring 2006",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/69596f9a7c08f1fe102cf6af-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/69596f9a7c08f1fe102cf6af-landscape.webp",
-  "accent": "#3b82ff",
-  "synopsis": "An injured man is found in the woods by a girl named Eruruu, and everything about him is mysterious. Without knowledge of his past nor even his own name, he is welcomed to Eruruu's home and is given the name Hakuoro by her grandmother, and younger sister, Aruruu. While the inhabitants of the village have large ears and tails, Hakuoro's defining physical trait is quite different as he has neither ears nor tail, but only a mask that he cannot remove.\n\nSoon after he becomes a part of the villagers' lives, a revolution against the tyrannical emperor of the land begins, and the conflict finds its way to his new home. Hakuoro must do whatever he can to save the people and the village that he has come to love, all while uncovering the mysteries that shroud his past.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx856-lawtNdvqvgwd.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx856-lawtNdvqvgwd.png",
+  "accent": "#e46b35",
+  "synopsis": "Everything about him is shrouded in mystery. The mask he can't remove. The past he can't unravel. And the very survival of the people who have chosen him as their leader. But what Hakuoro does know is this: he was gravely injured and left for dead in a forest. A kind young girl named Eluluu found him and nursed him back to health. He was welcomed into a barren land where strange creatures roam, an angry god seeks vengeance, an oppressive government slaughters the innocent, and a bloody war looms on the horizon. Will the masked hero liberate the people who saved him? Can he unlock the memories that elude him? Or will he remain a stranger even to himself? \n\n(Source: Funimation)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 26,
   "added_at": null,
-  "search_text": "utawarerumono utawarerumono",
+  "search_text": "utawarerumono うたわれるもの tv finished",
   "genres": [
     "action",
     "drama",
@@ -327,84 +327,6 @@
       "external_id": "13659"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "人なんだ",
-      "artist": "Suara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "百日草",
-      "artist": "Suara",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Fuantei na Kamisama (不安定な神様; Insecure God)",
-      "artist": "Suara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yumekaotsutsuka (ユメウツツカ; Feeling as if in a Dream)",
-      "artist": "Suara",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "adamant faith",
-      "artist": "Suara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Yume no Tsuzuki (夢のつづき)",
-      "artist": "Rena Uehara",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Musouka (夢想歌)",
-      "artist": "Suara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Madoromi no Rinne (まどろみの輪廻)",
-      "artist": "Eri Kawai",
-      "episodes": "1-25"
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Ten Kakeru Hoshi (天かける星; Star Hanging in the Heavens)",
-      "artist": "Suara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Hoshi Kudaru Sora Aogimite (星降る空仰ぎ見て; Looking Up at a Sky Full of Stars)",
-      "artist": "Suara",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Kimi ga Tame (キミガタメ)",
-      "artist": "Suara",
-      "episodes": "26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

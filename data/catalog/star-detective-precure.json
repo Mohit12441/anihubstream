@@ -16,10 +16,10 @@
   "alt_seasons": [],
   "sched_day": 6,
   "sched_day_label": "SAT",
-  "sched_date": "Nov 7",
+  "sched_date": "Nov 14",
   "sched_time": "23:30",
   "sched_season": "Fall 2026",
-  "sched_episode": 40,
+  "sched_episode": 41,
   "sched_sub_at": null,
   "sched_dub_at": 1768174200000,
   "source_ids": {
@@ -467,35 +467,6 @@
       "external_id": null
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "The Hint In The Heart! Star Detective Precure! (ハートにヒント！名探偵プリキュア！)",
-      "artist": "Ami Ishii",
-      "episodes": "1-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Why? Mystery?! ANSWER (なぜ？謎？！ANSWER)",
-      "artist": "Akane Kumada and Yūka Masui",
-      "episodes": "1-28"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "I'll Know Someday☆I'm Sure We'll Meet (いつかわかる☆きっとあえる)",
-      "artist": "Akane Kumada and Yūka Masui",
-      "episodes": "29-33, 36-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "FIRST PRISM",
-      "artist": "Yūka Masui and Chihaya Yoshitake",
-      "episodes": "34-35"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

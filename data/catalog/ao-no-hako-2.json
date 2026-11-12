@@ -18,10 +18,10 @@
   ],
   "sched_day": 7,
   "sched_day_label": "SUN",
-  "sched_date": "Nov 8",
+  "sched_date": "Nov 15",
   "sched_time": "07:30",
   "sched_season": "Fall 2026",
-  "sched_episode": 5,
+  "sched_episode": 6,
   "sched_sub_at": null,
   "sched_dub_at": 1791100800000,
   "source_ids": {
@@ -315,49 +315,6 @@
       "external_id": "cloud-sync"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Anata no Hana no Iro (あなたの花の色)",
-      "artist": "aiko",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "blue in",
-      "artist": "elsewhere kikou",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Same Blue",
-      "artist": "Official HIGE DANdism",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Teenage Blue",
-      "artist": "Eve",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 2,
-      "title": "Goodbye",
-      "artist": "Macaroni Enpitsu",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Contrast",
-      "artist": "TOMOO",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

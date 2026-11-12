@@ -327,28 +327,6 @@
       "external_id": "8177"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Dive in the Sky",
-      "artist": "Mikio Sakai",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Wonderful Life",
-      "artist": "Mikio Sakai",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "PLANETES",
-      "artist": "Hitomi",
-      "episodes": "26"
-    }
-  ],
+  "themes": [],
   "relations": []
 }

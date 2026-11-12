@@ -3,14 +3,14 @@
   "title": "Though I Am an Inept Villainess",
   "native": "ふつつかな悪女ではございますが ~雛宮蝶鼠とりかえ伝~",
   "year": 2026,
-  "rating": 8.3,
+  "rating": 8.1,
   "season": "Summer 2026",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://media.kitsu.app/anime/49689/poster_image/medium-5d70ed778ecd9f4fd11725dc3eeecf03.jpeg",
-  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/188139-pS4GAV0Am2Wi.jpg",
-  "accent": "#ff3d8b",
-  "synopsis": "As maidens from the Five Clans battle for the Crown Prince’s heart, jealous Keigetsu uses forbidden magic to swap bodies with the beloved Reirin. Switching places does not guarantee happiness for Keigetsu with her new body's ill health leaving her hanging on the verge of death. Meanwhile, Reirin, now wearing the face of a scorned outcast, must answer for Keigetsu’s crimes in a dangerous trial. The unlikely pair become increasingly entangled in each other’s lives and they will need to work together to survive after discovering the dark conspiracies brewing beneath the palace's genial surface. To confront the deadly threats lurking in the shadows, Reirin must embrace her new identity and defy their expectations of the court's inept villainess. (Source: Crunchyroll)",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx188139-1qIJfWxym8FX.jpg",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx188139-1qIJfWxym8FX.jpg",
+  "accent": "#0d86fe",
+  "synopsis": "As maidens from the Five Clans battle for the Crown Prince’s heart, jealous Keigetsu uses forbidden magic to swap bodies with the beloved Reirin. Switching places does not guarantee happiness for Keigetsu with her new body's ill health leaving her hanging on the verge of death. Meanwhile, Reirin, now wearing the face of a scorned outcast, must answer for Keigetsu’s crimes in a dangerous trial.\n\nThe unlikely pair become increasingly entangled in each other’s lives and they will need to work together to survive after discovering the dark conspiracies brewing beneath the palace's genial surface. To confront the deadly threats lurking in the shadows, Reirin must embrace her new identity and defy their expectations of the court's inept villainess.\n\n(Source: Crunchyroll)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [
@@ -162,21 +162,6 @@
       "external_id": "379439"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Sunny",
-      "artist": "milet",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hōkiboshi (ホウキボシ)",
-      "artist": "Rokudenashi",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

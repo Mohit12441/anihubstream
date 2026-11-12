@@ -38,21 +38,6 @@
     "romance"
   ],
   "episodes": [],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Tsuki ni Mukatte Ute (月に向かって撃て; Attack Toward the Moon)",
-      "artist": "Suisei Hoshimachi",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Koe no Kiseki (声の軌跡; Trails of Voices)",
-      "artist": "Soala",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

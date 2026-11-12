@@ -326,35 +326,6 @@
       "external_id": "40730"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Takarajima (宝島; Treasure Island)",
-      "artist": "Yoshito Machida",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Chiisana Funanori (小さな船乗り; A Little Seaman)",
-      "artist": "Yoshito Machida",
-      "episodes": null
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Takarajima (宝島; Treasure Island)",
-      "artist": "Yoshito Machida",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Chiisana Funanori (小さな船乗り; A Little Seaman)",
-      "artist": "Yoshito Machida",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

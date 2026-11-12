@@ -170,21 +170,6 @@
       "external_id": "366505"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "Lilac",
-      "artist": "Mrs. Green Apple",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Wasurena Uta",
-      "artist": "Macaroni Enpitsu",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

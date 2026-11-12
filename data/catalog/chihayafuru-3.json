@@ -1,16 +1,16 @@
 {
   "id": "chihayafuru-3",
   "title": "Chihayafuru 3",
-  "native": "Chihayafuru 3",
+  "native": "ちはやふる 3",
   "year": 2019,
   "rating": 8.5,
-  "season": "Year 2019",
+  "season": "Fall 2019",
   "kind": "TV",
   "status": "Finished",
-  "art": "https://animehot.cc/storage/media/2026/09/6908579485a2b17f1b6015aa-poster.jpg",
-  "key_art": "https://animehot.cc/storage/media/2026/09/6908579485a2b17f1b6015aa-landscape.webp",
-  "accent": "#24d3ee",
-  "synopsis": "Winning the high school team tournament was a great accomplishment for the Mizusawa members. Each of them has made great strides in improving themselves, and the victory symbolizes how far they have come. But after accomplishing one goal, their individual aims are within reach. Chihaya Ayase has her sights set on Shinobu Wakamiya and the title of Queen, and now that Taichi Mashima has made it into Class A, he can finally compete against Arata Wataya. Everyone in Mizusawa wants to get better, and there is no telling what the future holds if they keep trying.",
+  "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101215-8TTRNAYJnPMW.png",
+  "key_art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101215-8TTRNAYJnPMW.png",
+  "accent": "#e4436b",
+  "synopsis": "They may have just won their most coveted karuta tournament, but members of the Mizusawa karuta team still have a long way to go. Each member chases their dreams, and with a win under their collective belt, those dreams are closer in reach than ever. Chihaya Ayase is determined to challenge Wakamiya Shinobu and win the title of Queen, and Taichi Mashima is ready to take on Arata Wataya now that he’s made it into the most elite of karuta players — but an unexpected revelation will deal these karuta players a hand none of them saw coming.\n\n(Source: Sentai Filmworks)",
   "rank": null,
   "trend_rank": null,
   "alt_seasons": [],
@@ -32,7 +32,7 @@
   "skip_key_space": "mal",
   "episode_total": 24,
   "added_at": null,
-  "search_text": "chihayafuru 3 chihayafuru 3",
+  "search_text": "chihayafuru 3 ちはやふる 3 tv finished",
   "genres": [
     "drama",
     "romance",
@@ -304,21 +304,6 @@
       "external_id": "241459"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "COLORFUL",
-      "artist": "99RadioService",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Hitomebore (Love at First Sight)",
-      "artist": "Band Harassment",
-      "episodes": null
-    }
-  ],
+  "themes": [],
   "relations": []
 }

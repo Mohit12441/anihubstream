@@ -305,49 +305,6 @@
       "external_id": "116788"
     }
   ],
-  "themes": [
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "JoJo - Sono Chi no Kioku ~end of THE WORLD~ (ジョジョ 〜その血の記憶～end of THE WORLD～)",
-      "artist": "JO☆STARS～TOMMY, Coda, JIN～",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Last Train Home",
-      "artist": "Pat Metheny Group",
-      "episodes": "25-26, 28-35, 38-"
-    },
-    {
-      "kind": "OP",
-      "sequence": 1,
-      "title": "STAND PROUD",
-      "artist": "Jin Hashimoto",
-      "episodes": null
-    },
-    {
-      "kind": "ED",
-      "sequence": 1,
-      "title": "Walk Like an Egyptian",
-      "artist": "The Bangles",
-      "episodes": "3-"
-    },
-    {
-      "kind": "ED",
-      "sequence": 2,
-      "title": "Akuyaku Kyōsōkyoku ~Oingo to Boingo~ (アク役◇協奏曲～オインゴとボインゴ～; Villain Concerto~Oingo & Boingo~)",
-      "artist": "Makoto Yasumura & Motoko Kumai",
-      "episodes": "27"
-    },
-    {
-      "kind": "ED",
-      "sequence": 3,
-      "title": "Akuyaku Kyōsōkyoku ~ Horu Hoosu to Boingo~ (アク役◇協奏曲～ホル・ホースとボインゴ～; Villain Concerto~Hol Horse & Boingo~)",
-      "artist": "Hidenobu Kiuchi & Motoko Kumai",
-      "episodes": "36-37"
-    }
-  ],
+  "themes": [],
   "relations": []
 }
