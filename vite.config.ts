@@ -13,6 +13,7 @@ export default defineConfig(({ command, mode }) => ({
   plugins: [react()],
   build: {
     target: 'es2022',
+    chunkSizeWarningLimit: 700,
     cssCodeSplit: true,
     rollupOptions: {
       output: {
